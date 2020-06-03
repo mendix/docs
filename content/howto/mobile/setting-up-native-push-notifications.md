@@ -2,7 +2,7 @@
 title: "Set Up Remote Notifications"
 parent: "native-mobile"
 menu_order: 8
-description: Learn how to set up remote push notifications for native apps.
+description: Learn how to set up remote push notifications for native mobile apps.
 tags: ["mobile", "push notification", "remote", "push", "notification"]
 ---
 
@@ -18,11 +18,11 @@ Native remote push notifications have the more capabilities than hybrid push not
 
 Follow the sections below to complete these three tasks and enable native remote push notifications. After you have completed this document, see [How To Use Native Push Notifications](/howto/mobile/native-remote-notifications) for instructions on implementing native push notifications.
 
-If you want to use local push notifications with the Make It Native app, the only step you have to perform is [Setting up Firebase Cloud Messaging Service (#firebase-setup)
+If you want to use local push notifications with the Make It Native app, the only step you have to perform is [Setting up Firebase Cloud Messaging Service](#firebase-setup)
 
 {{% alert type="info" %}}
 
-Remote notifications will not work in the iOS Simulator app.
+Remote notifications will not work in XCode's Simulator. For iOS, notifications only work on physical devices.
 
 {{% /alert %}}
 
@@ -35,7 +35,7 @@ Remote notifications will not work in the iOS Simulator app.
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Learn the basics of [Git](https://www.atlassian.com/git)
-* Complete [How to Deploy Your First Mendix Native App](deploying-native-app) through the end of the *Preparing Your Project* section. Once you finish those sections, you will have a generated a GitHub repository with all the files you will need.
+* Complete [How to Deploy Your First Mendix Native Mobile App](deploying-native-app) through the end of the *Preparing Your Project* section. Once you finish those sections, you will have a generated a GitHub repository with all the files you will need.
 
 ## 3 Setting up Firebase Cloud Messaging Service {#firebase-setup}
 
@@ -127,21 +127,26 @@ android:launchMode="singleTop"
 
 ```
 <application ...>
-<receiver android:name="io.invertase.firebase.notifications.RNFirebaseNotificationReceiver"/>
-<receiver android:enabled="true" android:exported="true"  android:name="io.invertase.firebase.notifications.RNFirebaseNotificationsRebootReceiver">
+ <receiver android:name="io.invertase.firebase.notifications.RNFirebaseNotificationReceiver"/>
+ <receiver android:enabled="true" android:exported="true"  android:name="io.invertase.firebase.notifications.RNFirebaseNotificationsRebootReceiver">
   <intent-filter>
     <action android:name="android.intent.action.BOOT_COMPLETED"/>
     <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
     <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
     <category android:name="android.intent.category.DEFAULT" />
   </intent-filter>
-</receiver>
+ </receiver>
+ <service android:name="io.invertase.firebase.messaging.RNFirebaseMessagingService">
+  <intent-filter>
+   <action android:name="com.google.firebase.MESSAGING_EVENT" />
+  </intent-filter>
+ </service>
 </application>
 ```
 
 ![AndroidManifestChanges](attachments/native-remote-push/androidManifestXml.png)
 
-Congratulations, you finished setting up customizations for your custom native app! To implement remote push notifications on a test device, see [How to Use Remote Notifications](native-remote-notifications).
+Congratulations, you finished setting up customizations for your custom native mobile app! To implement remote push notifications on a test device, see [How to Use Remote Notifications](native-remote-notifications).
 
 ## 5 Read More
 

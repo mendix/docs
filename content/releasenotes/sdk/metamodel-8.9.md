@@ -7,91 +7,91 @@ parent: "metamodel-8"
 
 **Release date: April 30th, 2020**
 
-## DomainModels
+### DomainModels
 
-### NoGeneralization (Element)
+#### NoGeneralization (Element)
 
 * We introduced the `key` property for the remote key.
 
-### EntityKey (Element)
+#### EntityKey (Element)
 
 * We introduced this element for the (remote) key of an entity.
 
-### EntityKeyPart (Element)
+#### EntityKeyPart (Element)
 
 * We introduced this element for a part of the (remote) key of an entity.
 
-## Microflows
+### Microflows
 
-### CloseFormAction (Element)
+#### CloseFormAction (Element)
 
 * We introduced the `numberOfPages` property.
 
-### WorkflowCallAction, SetWorkflowActivityOutcomeAction & OpenUserTaskAction (Elements)
+#### WorkflowCallAction, SetWorkflowActivityOutcomeAction & OpenUserTaskAction (Elements)
 
 * We introduced these elements.
 
-## Rest
+### Rest
 
-### ConsumedODataService (ModelUnit)
+#### ConsumedODataService (ModelUnit)
 
 * We added the public `entities` property.
 
-### ODataEntity (Element)
+#### ODataEntity (Element)
 
 * We added this public element.
 * We deleted the `keyNames` property.
 * We introduced the `key` property for the key of the OData entity.
 
-### ODataKey (Element)
+#### ODataKey (Element)
 
 * We introduced this element for the key of an OData entity.
 
-### ODataKeyPart (Element)
+#### ODataKeyPart (Element)
 
 * We introduced this element for a part of the key of an OData entity.
 
-## Navigation
+### Navigation
 
-### OfflineEntityConfig (Element)
+#### OfflineEntityConfig (Element)
 
 * We introduced the `downloadMode` property.
 * We deleted the `shouldDownload` property.
 
-## Pages
+### Pages
 
-### ClosePageClientAction (Element)
+#### ClosePageClientAction (Element)
 
 * We introduced the `numberOfPages` property.
 
-## Workflows
+### Workflows
 
-### Workflow (ModelUnit)
+#### Workflow (ModelUnit)
 
 * We deleted the `context` property.
 * We introduced the `contextEntity`, `title`, and `description` properties.
 * We added the public `activities` property.
 
-### WorkflowActivityOutcome (Element)
+#### WorkflowActivityOutcome (Element)
 
 * We added this public element.
 * We added the public `name` property.
 
-### WorkflowActivity (Element)
+#### WorkflowActivity (Element)
 
 * We added this public element.
 * We introduced the `name` property.
 * We added the public `possibleOutcomes` property.
 
-### StartWorkflowActivity (Element)
+#### StartWorkflowActivity (Element)
 
 * We added this public element.
 
-### EndWorkflowActivity (Element)
+#### EndWorkflowActivity (Element)
 
 * We added this public element.
 
-### UserTask (Element)
+#### UserTask (Element)
 
 * We added this public element.
 * We deleted the `taskCaption` and `taskDescription` properties.

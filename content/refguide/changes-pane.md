@@ -111,7 +111,7 @@ The columns on the left side of the grid will vary based on what toggle button i
 The left side of the grid contains the following columns when **Show Conflicts** toggle is enabled:
 
 * **Element** – the name of the modified element
-* **Merge end** – the status of the incoming change on another development line
+* **Theirs** – the status of the incoming change on another development line
 * **Mine** – indicates the status of the change on the current development line
 
 	![Conflict Grid](attachments/changes-pane/conflict-grid.png)
@@ -123,32 +123,28 @@ The left side of the grid contains the following columns when **Show Changes in 
 
 	![Conflict Grid](attachments/changes-pane/changes-in-mine-grid.png)
 
-The left side of the grid contains the following columns when **Show Changes in mine** toggle is enabled:
+The left side of the grid contains the following columns when **Show Changes in theirs** toggle is enabled:
 
 * **Element** – the name of the modified element
-* **Merge end** – indicates the status of the change on the other development line
+* **Theirs** – indicates the status of the change on the other development line
 
 	![Conflict Grid](attachments/changes-pane/changes-in-merge-end-grid.png)
 	
 
-The columns on the grid on the right will vary depending on what kind of conficting element is selected on the left side.
+The columns on the grid on the right will vary depending on what kind of conflicting element is selected on the left side.
 
 If the selected item on the left side is a conflict that resulted in both sides changing the same element, then the following columns will be displayed on the right side of the grid:
 
 * **Property** – the property that was modified
-* **Merge start** – the original property value
-* **Merge end** – the change to the property that was made on the other development line
+* **Original** – the original property value
+* **Theirs** – the change to the property that was made on the other development line
 * **Mine** – the change to the property that was made on the current development line
-
-	![Rigth Grid](attachments/changes-pane/conflict-grid-right-side-modification-modification.png)
 
 If the selected item on the left side is a conflict that resulted in one side changing an element and the other side deleting it, then the following columns will be displayed on the right side of the grid:
 
 * **Property** – the property that was modified
-* **Merge start** – the original property value
+* **Theirs** – the original property value
 * **Mine** – the change to the property that was made on the current development line
-
-	![Right Grid](attachments/changes-pane/conflict-grid-right-side-deletion-modification.png)
 
 ##  5 Read More
 

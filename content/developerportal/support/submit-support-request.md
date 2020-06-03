@@ -176,7 +176,7 @@ The ticket can have the following statuses:
 
 ## 8 Submitting a Feature Request
 
-On the [Mendix Idea Forum](https://forum.mendix.com/ideaforum/), Mendix captures ideas and requests from customers and developers in the Mendix community. Each quarter, this forum is treated as a short-list of the top features that the Mendix community supports via topics with the most upvotes.
+On the [Mendix Idea Forum](https://forum.mendix.com/ideaforum/), Mendix captures ideas and requests from customers and developers in the Mendix community. Each quarter, the Mendix Idea Forum is treated as a short-list of the top features that the Mendix community supports via topics with the most upvotes.
 
 ## 9 Read More
 

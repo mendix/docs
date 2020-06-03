@@ -14,7 +14,7 @@ The [LDAP Provisioning Agent](https://appstore.home.mendix.com/link/app/1218/) m
 
 Registering and off-boarding users on the Mendix Platform manually requires time and effort. This application takes care of these tasks automatically based on your directory service (for example, Active Directory) or other identity providers providing an LDAP interface.
 
-### 1.2 Requirements
+### 1.2 Prerequisites
 
 * A free Mendix Cloud slot (or an on-premises equivalent)
 * Possibility to connect to the Directory Service using the LDAP

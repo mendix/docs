@@ -78,7 +78,7 @@ Clicking the question icon in the Developer Portal brings up the options Mendix 
 * **Check the Documentation** – click this to go to the [Mendix Documentation](https://docs.mendix.com/)
 * **Contact Mendix Support** – click this to go to [Mendix Support](https://support.mendix.com/hc/en-us)
 
-## 11 Document Categories
+## 11 Guide Categories
 
 The *Developer Portal Guide* is divided into the following categories:
 

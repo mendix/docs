@@ -14,7 +14,7 @@ This tutorial will teach you to configure and test remote notifications. Remote 
 
 If you want to use push notifications with custom apps which created with native builder, make sure you have completed the following prerequisite:
 
-* Complete [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app) through the end of the *Making Your First Build* section
+* Complete [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app) through the end of the *Making Your First Build* section
 
 ## 3 Setting Up Your Mendix Project
 
@@ -78,7 +78,7 @@ To set up a notification widget, do the following:
     
 ### 3.3 Synchronizing Unused Entities
 
-Studio Pro uses smart data syncing, meaning if an entity has not been retrieved on the native side, it will not be available in the native app. This situation will not occur often, since most Mendix native apps do retrieve entities which you want to show. For more information, see the [Synchronization](/refguide/offline-first#synchronization) section of the *Offline-First Reference Guide*.
+Studio Pro uses smart data syncing, meaning if an entity has not been retrieved on the native side, it will not be available in the native mobile app. This situation will not occur often, since most Mendix native mobile apps do retrieve entities which you want to show. For more information, see the [Synchronization](/refguide/offline-first#synchronization) section of the *Offline-First Reference Guide*.
 
 Currently your app does not retrieve any notifications in any of its pages. Fix this by doing the following:
 

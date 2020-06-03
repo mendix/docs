@@ -79,10 +79,10 @@ The table below shows the differences between the capabilities for apps deployed
 
 ## 4 Licensing Mendix for Private Cloud{#licensing}
 
-Mendix for Private Cloud is a premium offering from Mendix, and you will need an additional license to use it for production applications. This **Operator license** allows you to manage Mendix apps in your cluster through the Mendix Operator and, optionally, the Mendix Gateway Agent. You will need one license for each production cluster you want to manage.
+Mendix for Private Cloud is a premium offering from Mendix, and you will need an additional license to use it for your applications. This **Operator license** allows you to manage Mendix apps in your cluster through the Mendix Operator and, optionally, the Mendix Gateway Agent. You will need one license for each namespace you want to manage.
 
-You can run the Mendix Operator in trial mode for evaluation and development purposes. When the Operator is running in trial mode, it will stop managing an environment thirty days after the environment was created. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment. 
+You can run the Mendix Operator in trial mode for evaluation purposes. When the Operator is running in trial mode, it will stop managing an environment thirty days after the environment was created. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment. 
 
-The Operator license is independent of a Mendix Runtime license which removes trial restrictions from a Mendix App itself. You will need both licenses to manage and run a production application through Mendix for Private Cloud.
+The Operator license is independent of a Mendix Runtime license which removes trial restrictions from a Mendix App itself. You will need both licenses to manage and run an application through Mendix for Private Cloud.
 
 You can get an Operator license from [Mendix Support](https://support.mendix.com), together with instructions on how to configure it.

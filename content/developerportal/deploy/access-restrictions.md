@@ -51,20 +51,20 @@ To change the name of a certificate profile, click the **Edit** icon next to the
 Upload your CA from a file in *.pem* format by clicking the **Upload Certificate Authority** button. Alternatively, click **Enter Manually** to open an editor where you can paste your CA.
 
 {{% alert type="info" %}}
-Your CA can contain a single root certificate with multiple intermediate certificates.
+Your CA must contain a single root certificate and can have multiple intermediate certificates.
 {{% /alert %}}
 
-Once the CA is uploaded, you will see a tree containing the root certificate and any intermediate certificates included in the CA.
+Once the CA is uploaded, you will see a tree containing the root certificate and any intermediate certificates included in the CA. When you upload a CA, the last certificate in the CA will be selected by default.
 
 ![](attachments/accessrestrict/ca-profile.png)
 
-Select the check box next to each certificate you want to use. Lower-level (intermediate) certificates will be selected automatically. If there are several branches, you can select certificates from each branch individually.
+Select the check box next to each certificate you want to use. 
 
-{{% alert type="info" %}}
-By default the last certificate in the CA will be selected.
+{{% alert type="warning" %}}
+If you do not select any certificates then all the certificates will be valid.
 {{% /alert %}}
 
-Click **Save** to save the current certificate profile. At least one certificate must be selected before you can successfully save your profile.
+Click **Save** to save the current certificate profile.
 
 #### 2.1.3 Specifying IP Ranges
 

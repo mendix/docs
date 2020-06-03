@@ -101,5 +101,5 @@ For more detailed instructions on debugging a native mobile app, see [Debug Nati
 ## 4 Read More
 
 * [How to Build Pluggable Widgets](../extensibility/pluggable-widgets)
-* [Native Styling Reference Guide](/refguide/native-styling-refguide)
+* [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide)
 * [How to Debug Native Mobile Apps (Advanced)](native-debug)

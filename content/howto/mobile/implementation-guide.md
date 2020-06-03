@@ -81,9 +81,9 @@ If your project already has an AfterStartup microflow configured, it is recommen
 
 Add the **PushNotifications_Administration** page to the project navigation, so it can be reached after you deploy your app. This page contains three tabs:
 
-* **Pending Messages** – shows all the messages that are queued either because they were sent using the QueueMessage action or because previous attempts to send them failed
-* **Devices** – contains a list of all the devices registered with the application and is useful for testing purposes
-* **Configuration** – configures your application so that it can reach the respective services (APNs and FCM) later on
+* **Pending Messages** — shows all the messages that are queued either because they were sent using the QueueMessage action or because previous attempts to send them failed
+* **Devices** — contains a list of all the devices registered with the application and is useful for testing purposes
+* **Configuration** — configures your application so that it can reach the respective services (APNs and FCM) later on
 
 {{% alert type="warning" %}}
 

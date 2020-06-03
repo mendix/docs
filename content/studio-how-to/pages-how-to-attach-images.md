@@ -2,7 +2,7 @@
 title: "Enable End-Users to Attach Images"
 category: "Pages"
 description: "Describes how to configure image uploader in Mendix Studio."
-menu_order: 50
+menu_order: 60
 tags: ["studio", "pages", "image", "image uploader", "attachment", "attach image"]
 ---
 
@@ -95,9 +95,9 @@ Follow the steps below:
 
 8. In the button properties, click the **Entity** property.
 
-9. In the **Select Entity** dialog box, choose the **Receipt** entity and click **Select**:
+9. In the **Select Entity** dialog box, choose the **Receipt** entity over **Receipt_Report** association (*Receipt_Report/Receipt*) and click **Select**: 
 
-    {{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/select-image-entity.png){{% /image_container %}}
+    {{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/image-report-association.png){{% /image_container %}}
 
 10. In the button properties, click **Page**.
 
@@ -139,7 +139,7 @@ After users attach the images, it would be nice to display their attachments and
 3. Open list view properties and do the following:
 
     1. Click the **Entity** property.
-    2. In the **Select Entity** dialog box, choose **Receipt** and click **Select**. As you placed the list view *inside* the data view, the list will display only receipts attached to a particular report (instead of all receipts uploaded to your app):
+    2. In the **Select Entity** dialog box, choose the **Select Entity** dialog box, choose the **Receipt** entity over **Receipt_Report** association (*Receipt_Report/Receipt*) and click **Select**:
 
     	{{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/image-report-association.png){{% /image_container %}}
 

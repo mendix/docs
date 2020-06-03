@@ -17,7 +17,7 @@ The Runtime Server is launched on a cloud platform, executes microflows, and con
 
 The Mendix Client is started by the end-user. This can be within a web browser, or on another supported device. If it is in online mode, it starts a session with the Runtime Server which may or may not require authentication. The Runtime Server records the session details in the database so that the Mendix Client can make requests. The Mendix Client is described in more detail in [Mendix Client](mendix-client).
 
-The end-user interacts with the Mendix Client which then makes requests to the Runtime Server to process data or perform server-side functions (for example, microflows). At the end of the request, all state (including uncommitted data) is passed back to the Mendix Client. You can find more details of how this communication takes place in [SIG–Mendix Performance Subjects](sig-mendix-performance-subjects-explanation).
+The end-user interacts with the Mendix Client which then makes requests to the Runtime Server to process data or perform server-side functions (for example, microflows). At the end of the request, all state (including uncommitted data) is passed back to the Mendix Client. You can find more details of how this communication takes place in [Communication Patterns in the Mendix Runtime](communication-patterns).
 
 Passing state from the Runtime Server to the Mendix Client enables the Runtime Server to be stateless, which means that any Runtime Server instance can respond to a request from the Mendix Client. A load balancer decides which Runtime Server instance will respond to a request. When an end-user session ends, the Runtime Server removes references to that session.
 
@@ -103,4 +103,4 @@ Links to available API documentation such as WSDLs for published web services ar
 * [Monitoring Mendix Runtime](monitoring-mendix-runtime) – describes the Mendix Runtime monitoring actions that are supported (such as [state statistics](monitoring-mendix-runtime#state) and [thread stack traces](monitoring-mendix-runtime#thread)).
 * [Objects & Caching](objects-and-caching) – presents details on what happens when objects are loaded from the database, cached, retrieved, changed, and committed
 * [Mendix Runtime & Java](runtime-java) – explains some of the basic concepts of Java in Mendix
-* [SIG–Mendix Performance Subjects](sig-mendix-performance-subjects-explanation) – outlines the communication patterns used by the Mendix runtime
+* [Communication Patterns in the Mendix Runtime](communication-patterns) – outlines the communication patterns used by the Mendix runtime

@@ -119,7 +119,7 @@ To add these restrictions, follow the instructions below:
 
 	Explaining the code:
 
-	* The property `disabled` in an input element will behave according to the HTML's specifications – it will not respond to user actions, cannot be focused, is removed from the tab order, and will not fire any events
+	* The property `disabled` in an input element will behave according to the HTML's specifications — it will not respond to user actions, cannot be focused, is removed from the tab order, and will not fire any events
 
 5. When you select **Never** for your TextBox widget's `Editable` property in Mendix Studio Pro, the widget will function like this: 
 
@@ -210,7 +210,7 @@ This section will teach you to add validation to your TextBox widget. Using micr
 
 	Explaining the code:
 
-	* React nodes each require a root element – to create a non-rendering element and group the container elements, a `Fragment` can be used
+	* React nodes each require a root element — to create a non-rendering element and group the container elements, a `Fragment` can be used
 	* When there is no error the validation will be empty, the `Alert` will not show, and the component will return `null`
 
 	Now, your widget will show validation feedback from its microflow:
@@ -264,8 +264,8 @@ Validation can come from a modeled microflow or nanoflow, but can also be widget
 	Explaining the code:
 
 	* The `componentDidMount` is a lifecycle method of the React component, and is only called once
-	* The custom validator is registered to the attribute, and is called after each `setValue` call – the new value is only accepted when the validator returns no string
-	* When the validator returns an error message, it will passed to the attribute, and a re-render is triggered – the standard `this.props.textAttribute.validation` will get the message and display it in the same way as the validation feedback
+	* The custom validator is registered to the attribute, and is called after each `setValue` call — the new value is only accepted when the validator returns no string
+	* When the validator returns an error message, it will passed to the attribute, and a re-render is triggered — the standard `this.props.textAttribute.validation` will get the message and display it in the same way as the validation feedback
 
 3. When entering text and removing all characters, the following error is shown:
 
@@ -413,7 +413,7 @@ Until now the components did not keep any state. Each keystroke passed through t
 	* The `componentDidUpdate` function is a React lifecycle function that is called before rendering, directly after an update of the properties
 	* The state `editedValue` will be empty until the input value is changed by the user 
 	* The `setState` function will update the state and will re-render the component (in the rendering, the new value is taken from `editedValue`)
-	* The `onBlur` function will set the new value in the attribute through the container component – the state is reset, and the new value is received by an update of the attribute (which will propagate as a new property value)
+	* The `onBlur` function will set the new value in the attribute through the container component — the state is reset, and the new value is received by an update of the attribute (which will propagate as a new property value)
 	* The `onLeave` function will set the value. The `setValue` function will automatically call the onChange action, as this is connected with the XML configuration
 
 
@@ -514,8 +514,8 @@ To make the input widget more accessible for people using screen readers, you wi
 
 	Explaining the code:
 
-	* The `Label` component provided by the platform has a `for` attribute which will have a reference to the widget's ID – you must set the ID for the screen reader, so that it can link the label to the `this` input
-	* The `Label` component will have an ID `<widgetid>-label` – you must link the input's `aria-labelledby` to the ID of the label
+	* The `Label` component provided by the platform has a `for` attribute which will have a reference to the widget's ID — you must set the ID for the screen reader, so that it can link the label to the `this` input
+	* The `Label` component will have an ID `<widgetid>-label` — you must link the input's `aria-labelledby` to the ID of the label
 
 You have now made your widget compatible with screen readers. If a screen reader is describing your app aloud, it will list the widget elements to the user.
 

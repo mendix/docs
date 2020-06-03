@@ -54,7 +54,7 @@ The log level defines the severity of the log message. In the [Studio Pro Consol
 This property is only available in microflows.
 {{% /alert %}}
 
-The log node name is a microflow expression that defines the source of the log message. For example, if you log messages are from an email module, the log node name could be *Email module*.
+The log node name is a microflow expression that defines the source of the log message. For example, if you log messages from an email module, the log node name could be *Email module*. Use your own log node names as this avoids confusion with messages from the Mendix runtime which are written to the Mendix log nodes. The Mendix log nodes are listed in the [Default Mendix Log Nodes](logging#mendix-nodes) section of *Logging*.
 
 {{% alert type="info" %}}
 It is advised to use a [constant](constants) for the log node name. This prevents errors when entering the node name and makes it easier to change the log node name afterwards.

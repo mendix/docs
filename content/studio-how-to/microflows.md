@@ -1,7 +1,6 @@
 ---
 title: "Microflows"
 description: "A landing page for Studio how-to's on microflows."
-menu_order: 30
 tags: ["studio", "microflow", "how-to"]
 ---
 

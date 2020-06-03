@@ -211,5 +211,5 @@ The design property above was renamed from **my Dropdown Propery** to **My Dropd
 ## 7 Read More
 
 * [How to Style Your Mendix App](/howto/mobile/how-to-use-native-styling)
-* [Native Styling Reference Guide](/refguide/native-styling-refguide)
+* [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide)
 * [How to Extend Design Properties to Customize Your Studio Experience](/howto/front-end/extend-design-properties-to-customize)

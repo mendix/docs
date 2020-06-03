@@ -26,7 +26,7 @@ You can perform the actions described below via the buttons on your app project'
 
 Every Sprint contains a number of stories that describe specific functionality to be implemented, built, or fixed. The size of each story can be indicated by allocating it a number of Story points.
 
-To add a new story, click **New story** and fill in some details, including what your story is about and what type of story it is. The **Labels** you add in the new story can be reused in other stories (see [Using Labels](#label) for more details).
+To add a new story, click **New story** and fill in some details, including what your story is about and what type of story it is.
 
 ![](attachments/stories/story-example.png)
 
@@ -38,31 +38,33 @@ To add a new Sprint, click **New sprint** and fill in some details, including th
 
 ### 2.3 Moving a Story {#moving}
 
-To move a story, select the story, click **Move to**, then select the Sprint to which the story should be moved:
+To move a story, select one or more stories, click **Move**, then select the Sprint to which the selected stories should be moved:
 
-![](attachments/stories/move-to.png)
+![](attachments/stories/move-story-to-sprint.png)
 
-### 2.4 Using Labels {#label}
+### 2.4 Assigning Labels {#label}
 
-To add a label to a story or create a new label, use the options under **Label**:
+To assign a label, select one or more stories, click **Assign label**, then select the Label that should be added to the selected stories:
 
-![](attachments/stories/label.png)
+![](attachments/stories/assign-label.png)
 
 You can also perform various actions to [manage labels](#manage-labels).
+
+
+## 3 Sprint Actions
+
+### 2.5 Complete Active Sprint
+
+Open the dropdown menu on the sprint marked **Active sprint** and click **Complete sprint** to complete it. Note that you cannot undo this action and all stories within the sprint have to be marked **Done** before you are able to complete a Sprint.
+
+![](attachments/stories/complete-active-sprint.png)
 
 ## 3 More Actions
 
 Using the **More** button, you can perform the actions described below.
 
-### 3.1 Complete Current Sprint
 
-Click **Complete current sprint** to complete a Sprint. Note that all stories have to be marked **Done** before you are able to complete a Sprint.
-
-You will receive this confirmation message, so make sure you are able to confirm completion!
-
-![](attachments/stories/complete-verify.png)
-
-### 3.2 Import / Export {#import-export}
+### 3.1 Import / Export {#import-export}
 
 Click **Import / Export** to import stories from or export stories to Excel:
 
@@ -80,7 +82,7 @@ When editing stories in Excel, follow these guidelines:
 * To reorder an item, adjust the depth by adding or removing the plus signs (make sure they stay consistent with every item being the same or 1 level deeper than the item above it)
 * To remove an item, replace its depth with a single minus sign (make sure that any tasks associated with it are either moved or are also removed)
 
-### 3.3 Manage Labels {#manage-labels}
+### 3.2 Manage Labels {#manage-labels}
 
 Click **Manage labels** to open a page where you can list and manage your labels:
 
@@ -93,12 +95,21 @@ Click **Manage labels** to open a page where you can list and manage your labels
 | Merge Label | allows you to merge the selected label into another label.<br/>All stories which have the selected label are labeled with the other label and the selected label is deleted. |
 | Remove Label | allows you to remove the selected label from any stories to which it has been applied.<br/>The label is then deleted. |
 
+### 3.3 Completed Sprints
+
+Click **Completed Sprints** to open an overview of sprints that have been completed. On this page you can perform the following actions:
+
+* **Search** - search sprints based on their id or title
+* **Edit** - edit the selected sprint
+* **View Stories** - view the stories of selected sprint
+* **Add Story** - add a story to the selected sprint
+* **Delete** - delete the selected sprint and its stories
+
+![](attachments/stories/completed-sprints.png)
+
 ### 3.4 History {#history}
 
-Click **History** to view the history of collaboration actions for the app. On this page, you can click the following:
-
-* **Show related story** – presents the details of the story
-* **Revert change** – reverts changes
+Click **History** to view the history of collaboration actions for the app project. On this page, you can see what change was made, who performed it and when it occured.  the following **Show item** – presents the details of the story
 
 ![](attachments/stories/history.png)
 
@@ -210,7 +221,7 @@ Changing the status of a story or updating story points automatically synchroniz
 
 For more information on how to change the status of your story, see the [Changing the Status of a Story or a Task](/refguide/stories-pane#changing-status) section in *Stories Pane*.  
 
-## 5 New UI Option (Beta) {#beta}
+## 5 Old UI Option {#old-ui}
 
 A redesigned Stories UI has been introduced in a [beta version](/releasenotes/beta-features/). To switch to the new version, click **Enable new UI**: 
 

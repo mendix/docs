@@ -76,7 +76,7 @@ There are two options to ensure that the language is changed:
     * sign out and sign in again
     * use their browser's refresh command
 2. Force Mendix to reload the page – for example by doing the following:
-    1. Add the platform supported widget [HTML/ JavaScript Snippet](https://appstore.home.mendix.com/link/app/56/) to your app.
+    1. Add the platform supported widget [HTML / JavaScript Snippet](https://appstore.home.mendix.com/link/app/56/) to your app.
     2. Create a pop-up page.
     3. Place the HTMLSnippet widget on the pop-up page.
     4. Add the **JavaScript** content `mx.reloadWithState();` to the widget.
@@ -86,7 +86,7 @@ There are two options to ensure that the language is changed:
 
 ## 5 Read More
 
-There is a working example of adding a translation in [How to Translate Your App Content](/howto/collaboration-requirements-management/translate-your-app-content)
+There is a worked example of adding a translation in [How to Translate Your App Content](/howto/collaboration-requirements-management/translate-your-app-content)
 
 See also [How To Use Translatable Validation Messages](/howto/logic-business-rules/translatable-validation-messages) for information on translating validation messages.
 

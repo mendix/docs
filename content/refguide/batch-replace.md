@@ -15,7 +15,7 @@ There are a number of reasons that you may wish to do this:
 * If all occurrences of a piece of text are identical, you only need to enter the translation once — this saves time and improves consistency
 * If you find better wording for a common label or text, you can change them all at once with a single command
 
-![](attachments/language/batch_replace.png)
+![](attachments/language/batch-replace.png)
 
 ## 2 Using Batch Replace
 

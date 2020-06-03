@@ -7,19 +7,32 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-Delivering your Mendix app in multiple languages is an important capability for reaching a wide audience. Using translatable texts (for example, labels, button names, menu items) that are tracked and stored in your app project, you can quickly make your app multilingual and translate the content from English to many other languages.
+Delivering your Mendix app in multiple languages is an important capability for reaching a wide audience. Most of the text that the end-user sees are stored as translatable texts (for example, labels, button names, menu items). Using the language features of Mendix, you can quickly make your app multilingual and translate the content to many other languages.
 
 **This how-to will teach you how to do the following:**
 
-* Set the development language
-* Import and export translations
-* Configure language operations
-* Perform batch replacement and batch translation
+* Add a new language to your app
+* Change the working language
+* Translate individual items of text
+* Translate multiple items of text in one operation
+* Change multiple items of text in one operation
+* Copy a translation from one language to another
 
-## 2 Adding App Project Languages
+It is assumed that you know the basics of creating new apps and editing them.
 
-The app project language is the main language of the app when it is run. There must be a default app project language, and **English, United States** is the app project language set automatically by default. You can add as many languages as you like by following these steps:
+## 2 Creating a Sample App
 
+To demonstrate working with languages, you will create a new app from the blank app template. You will add some text to this app, as an example, but the app you create is to demonstrate the language features of Mendix and is not intended to be run.
+
+When you work on an app there must be at least one language set, and one language must be set as the default app project language. This is the language which will be displayed when an end-user has no language selected, or when your app does not support their selected language.
+
+When you create an app from a Mendix template, there is one language, **English, United States**, which is set to be the default language.
+
+To create your app, do the following:
+
+1. Create a new app using the 
+
+## 3 Adding App Project Languages
 1.  In the **Project Explorer**, open the app project's **Settings** and go to the **Languages** tab.
 
 	![](attachments/Translating+Your+App+Content/01_project_settings.png)

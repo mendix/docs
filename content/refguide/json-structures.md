@@ -23,8 +23,6 @@ When you paste or modify the JSON snippet, it is automatically checked for valid
 
 You cannot press "OK" without making the JSON valid.
 
-JSON snippets with `:`, `^`, or `|` in property names are currently not supported.
-
 {{% /alert %}}
 
 ### 1.2 Format

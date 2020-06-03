@@ -13,7 +13,7 @@ A Mendix application needs, as a minumum, a database to run. In this example you
 
 If the application makes use of FileDocument or FileImage entities, a storage service needs to be attached as well. See [Mendix System Requirements](/refguide/system-requirements) for supported external storage services. In this how-to you use a node-bound storage volume as an example. For more information, see [Architecture Overview](#architecture), below.
 
-This how-to uses [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/), which is a way to run Kubernetes locally. Many of the operations you perform on Minikube are the same as those on a hosted environment and it provides a low-level entry to Kubernetes. For more information, see [Picking the Right Solution](https://v1-13.docs.kubernetes.io/docs/setup/pick-right-solution/) on the Kubernetes documentation site.
+This how-to uses [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/), which is a way to run Kubernetes locally. Many of the operations you perform on Minikube are the same as those on a hosted environment and it provides a low-level entry to Kubernetes. For more information, see [Installing Kubernetes with Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/) on the Kubernetes documentation site.
 
 For more details on Kubernetes, see the [Kubernetes Documentation](https://kubernetes.io/docs/home/) site.
 

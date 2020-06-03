@@ -167,7 +167,7 @@ Properties of type decimal are represented as a number input in Studio Pro. They
 | `key`          | Yes      | String         | See [key](#key) |
 | `defaultValue` | Yes      | Integer        | Default value for the property                                                                                                                                      |
 
-#### 2.3.2 Studio Pro UI
+#### 2.4.2 Studio Pro UI
 
 When the property is defined as follows:
 
@@ -228,7 +228,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 3.1 Icon {#icon}
 
-Properties of type icon allows a user to configure an icon similar to one used by a [button](/refguide/button-properties#icon). It is passed as `DynamicValue<IconValue>` prop to a client component.
+Properties of type icon allows a user to configure an icon similar to one used by a [button](/refguide/button-properties#icon). It is passed as `DynamicValue<IconValue>` prop to a client component. For more information, see the [IconValue](client-apis-for-pluggable-widgets#icon-value) section of *Client APIs Available to Pluggable Widgets*.
 
 {{% alert type="info" %}}
 This property type was introduced in Mendix 8.1.
@@ -258,18 +258,18 @@ Then the Studio Pro UI for the component appears like this:
 
 ### 3.2 Image {#image}
 
-Image allows a user to configure a static image from an [image collection](/refguide/image-collection). It also allows a user to configure an image from an object that is a specialization of **System.Image**. It is passed as DynamicValue [ImageValue](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#imagevalue) prop to a client component. See the [Images Reference Guide](/refguide/images) for more information about supported image formats.
+Image allows a user to configure a static image from an [image collection](/refguide/image-collection). It also allows a user to configure an image from an object that is a specialization of **System.Image**. It is passed as an `DynamicValue<ImageValue>` prop to a client component (for more information, see the [ImageValue](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#imagevalue) section of *Client APIs Available to Pluggable Widgets*). See the [Images Reference Guide](/refguide/images) for more information about supported image formats.
 
 {{% alert type="info" %}}
 This property type was introduced in Mendix 8.1. Support for dynamic images was introduced in Mendix [8.4.0](/releasenotes/studio-pro/8.4).
 {{% /alert %}}
 
 {{% alert type="info" %}}
-Support for SVG images in native apps was introduced in Mendix [8.4.0](/releasenotes/studio-pro/8.4).
+Support for SVG images in native mobile apps was introduced in Mendix [8.4.0](/releasenotes/studio-pro/8.4).
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-GIF images are not supported in native apps on Android devices.
+GIF images are not supported in native mobile apps on Android devices.
 {{% /alert %}}
 
 #### 3.2.1 XML Attributes
@@ -408,7 +408,7 @@ The TextTemplate property allows a user to configure translatable text template 
 
 #### 4.2.2 XML Elements
 
-`<translations>` — Allows to set a default value for text templates for different languages using `<translation>` elements with a `lang` attribute representing [ISO 639](https://en.wikipedia.org/wiki/ISO_639) code of the language. Available languages are listed in the [Languages Tab](/refguide/project-settings#4-languages-tab) in Studio Pro.
+`<translations>` — Allows a user to set a default value for text templates for different languages using `<translation>` elements with a `lang` attribute representing [ISO 639](https://en.wikipedia.org/wiki/ISO_639) code of the language. Available languages are listed in the [Languages Tab](/refguide/project-settings#4-languages-tab) in Studio Pro.
 
 #### 4.2.3 Studio Pro UI
 
@@ -432,14 +432,23 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.3 Action{#action}
 
-The action property type allows a user to configure an action to do things like calling nanoflows, saving changes, and opening pages. The client component will receive `ActionValue` representing it, or `undefined` when the **Do nothing** action was selected.
+The action property type allows a user to configure an action which can do things like call nanoflows, save changes, and open pages.
+
+If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the client will receive an `ActionValue` representing the action or `undefined` if the **Do nothing** action was selected.
+
+When a `dataSource` attribute is specified and configured by the user it is passed as a function that expects an `ObjectItem` and returns an `ActionValue`: `(item: ObjectItem) => ActionValue`. For more information, see the [Datasource](#datasource) section below.
+
+{{% alert type="info" %}}
+Support for the `dataSource` attribute was introduced in Mendix 8.9.
+{{% /alert %}}
 
 #### 4.3.1 XML Attributes
 
-| Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
-| ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`     | Yes      | String         | Must be `action`                                                                                                                                                     |
-| `key`      | Yes      | String         | See [key](#key) |
+| Attribute  | Required   | Attribute Type | Description                                                                                                                                                          |
+| ------------ | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`       | Yes      | String         | Must be `action`                                                                                                                                                     |
+| `key`        | Yes      | String         | See [key](#key) |
+| `dataSource` | No       | Property Path  | Specifies path to a [`datasource`](#datasource) property linked to this action's property |
 
 #### 4.3.2 Studio Pro UI
 
@@ -458,7 +467,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.4 Attribute{#attribute}
 
-The attribute property type allows a widget to work directly with entities' attributes, both reading and writing attributes. Depending on the widget's purposes, a widget should define attribute types it supports. The client component will receive `EditableValue<T>` where `T` depends on a `<attributeType>` configured.
+The attribute property type allows a widget to work directly with entities' attributes, both reading and writing attributes. Depending on the widget's purposes, a widget should define attribute types it supports. The client component will receive `EditableValue<T>` where `T` depends on a `<attributeType>` configured. For more information, see the [EditableValue](client-apis-for-pluggable-widgets#editable-value) section of *Client APIs Available to Pluggable Widgets*. 
 
 #### 4.4.1 XML 
 
@@ -639,7 +648,7 @@ Label property allows a pluggable widget to have labeling functionality similar 
 
 ### 5.2 Name {#name}
 
-Every widget have a name by default. This property can be used to control position of the widget name input. If this property is not specified, input will be placed in **Common** tab. A widget’s name is also used for locating it during [automated tests](/howto/integration/selenium-support). For that purpose in web apps, a widget name is automatically appended to a `class` prop a component receives, and in native apps is passed as a separate `name` prop.
+Every widget have a name by default. This property can be used to control position of the widget name input. If this property is not specified, input will be placed in **Common** tab. A widget’s name is also used for locating it during [automated tests](/howto/integration/selenium-support). For that purpose in web apps, a widget name is automatically appended to a `class` prop a component receives, and in native mobile apps is passed as a separate `name` prop.
 
 ```xml
 <systemProperty key="Name"/>

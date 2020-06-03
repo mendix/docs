@@ -8,7 +8,7 @@ tags: ["mobile", "push notification", "local", "push", "notification"]
 
 ## 1 Introduction
 
-This how-to will teach you to build local notifications for native applications. Local notifications will only allow you to schedule and send notifications confined to one mobile device. These notifications do not use an internet connection. One use of a local notification might be an alarm app which sends a notification after an amount of time has elapsed.
+This how-to will teach you to build local notifications for native mobile applications. Local notifications will only allow you to schedule and send notifications confined to one mobile device. These notifications do not use an internet connection. One use of a local notification might be an alarm app which sends a notification after an amount of time has elapsed.
 
 **This how-to will teach you how to do the following:**
 
@@ -23,7 +23,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install the [Make It Native](/refguide/getting-the-make-it-native-app) app on your mobile device
 
 {{% alert type="info" %}}
-To use push notifications with apps created with the Native Builder, make sure you have completed [How To Deploy Your First Mendix Native App](deploying-native-app) and [How to Set up Native Push Notifications](setting-up-native-push-notifications)
+To use push notifications with apps created with the Native Builder, make sure you have completed [How To Deploy Your First Mendix Native Mobile App](deploying-native-app) and [How to Set up Native Push Notifications](setting-up-native-push-notifications)
 {{% /alert %}}
 
 

@@ -69,11 +69,13 @@ To create a published web service, follow these steps:
 To create the functionality to expose, follow these steps:
 
 1. Create a microflow that retrieves and returns a list of customers from the database (for details on how to create a microflow, see [How to Create Your First Microflow: Hello World!](../logic-business-rules/create-your-first-microflow-hello-world)).
-2. To make the microflow more exciting, add two input parameters to dynamically set the range settings of the retrieve action. Configure the range options of the retrieve action like this:
+2.  To make the microflow more exciting, add two input parameters to dynamically set the range settings of the retrieve action. Configure the range options of the retrieve action like this:
 
     ![](attachments/18448728/18581709.png)
 
-    <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/083d4d13-b438-4980-b0ba-90d9a3f59f40/getcustomers?embed=true" allowfullscreen=""></iframe>
+	Reference this microflow:
+	
+	![](attachments/18448728/model.jpg)
 
 ## <a name="6"></a>6 Publishing a Microflow
 
@@ -157,7 +159,6 @@ When exposing a web service, consider the following things:
 * [How to Export XML Documents](export-xml-documents)
 * [How to Import Excel Documents](importing-excel-documents)
 * [How to Enable Selenium Support](selenium-support)
-* [How to Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [How to Import XML Documents](importing-xml-documents)
 * [How to Consume a REST Service](consume-a-rest-service)
 * [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)

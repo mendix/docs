@@ -54,13 +54,7 @@ You can also perform various actions to [manage labels](#manage-labels).
 
 Using the **More** button, you can perform the actions described below.
 
-### 3.1 Delete Selection
-
-Click **Delete selection** to delete the selected story or stories:
-
-![](attachments/stories/delete-selection.png)
-
-### 3.2 Complete Current Sprint
+### 3.1 Complete Current Sprint
 
 Click **Complete current sprint** to complete a Sprint. Note that all stories have to be marked **Done** before you are able to complete a Sprint.
 
@@ -68,7 +62,7 @@ You will receive this confirmation message, so make sure you are able to confirm
 
 ![](attachments/stories/complete-verify.png)
 
-### 3.3 Import / Export {#import-export}
+### 3.2 Import / Export {#import-export}
 
 Click **Import / Export** to import stories from or export stories to Excel:
 
@@ -86,7 +80,7 @@ When editing stories in Excel, follow these guidelines:
 * To reorder an item, adjust the depth by adding or removing the plus signs (make sure they stay consistent with every item being the same or 1 level deeper than the item above it)
 * To remove an item, replace its depth with a single minus sign (make sure that any tasks associated with it are either moved or are also removed)
 
-### 3.4 Manage Labels {#manage-labels}
+### 3.3 Manage Labels {#manage-labels}
 
 Click **Manage labels** to open a page where you can list and manage your labels:
 
@@ -99,19 +93,7 @@ Click **Manage labels** to open a page where you can list and manage your labels
 | Merge Label | allows you to merge the selected label into another label.<br/>All stories which have the selected label are labeled with the other label and the selected label is deleted. |
 | Remove Label | allows you to remove the selected label from any stories to which it has been applied.<br/>The label is then deleted. |
 
-### 3.5 Manage Story Template
-
-Click **Manage story template** to create and edit the default tasks that can be added to every new story in your app project:
-
-![](attachments/stories/default-task.png)
-
-To enable these default tasks, select the **Add default tasks based on story template** check box when [creating a new story](#new-story).
-
-{{% alert type="info" %}}
-Only team members with sufficient rights can manage story templates.
-{{% /alert %}}
-
-### 3.6 History {#history}
+### 3.4 History {#history}
 
 Click **History** to view the history of collaboration actions for the app. On this page, you can click the following:
 
@@ -164,15 +146,23 @@ To add a task to the story, follow these steps:
 
 3. Click **Post task** to save the new task for the story.
 
-{{% alert type="info" %}}
-You can also add sub-tasks to tasks, which will create a nested structure of stories with tasks.
-{{% /alert %}}
-
 After you have completed the task, check the box:
 
 ![](attachments/stories/complete-task.png)
 
-### 4.3 Moving Stories  {#moving-stories}
+### 4.3 Deleting a Story or Task {#deleting}
+
+To delete a story or a task, click the trash can icon below the title of the story/task. After you confirm the deletion, the story/task will be removed from the system permanently.
+
+If you delete a story, its tasks will be deleted as well.
+
+If you delete a story that is linked to a feedback item, you will be asked to choose to reopen or unlink the feedback item:
+
+![](attachments/stories/delete-linked-story.png)
+
+Reopening the feedback item will revert it to the [Open](/developerportal/collaborate/feedback#stages) status. To unlink the feedback item means it will remain in the [Accepted](/developerportal/collaborate/feedback#stages) status. Either way, the story will be deleted.
+
+### 4.3 Moving Stories {#moving-stories}
 
 If you need to reorder stories or move a story to a different Sprint, there are three ways to do this:
 
@@ -187,7 +177,7 @@ If you need to reorder stories or move a story to a different Sprint, there are 
 3. Select the story and use the **Move to** button to select the new Sprint (for details on this method, see the [Moving a Story](#moving) section).
 
 {{% alert type="info" %}}
-Moving a story will move any tasks and sub-tasks as well.
+Moving a story will move the tasks as well.
 {{% /alert %}}
 
 ### 4.4 Managing Stories in Mendix Studio Pro 
@@ -239,10 +229,11 @@ This is the main page of new UI:
 	* **Archived Sprints** – opens a page where sprints that have been completed are archived
 	* **History** – opens the [History](#history) page
 
-When you select a story, you can perform the following actions (these actions support multi-selection of stories):
+When you select a story, you can perform the following actions (these actions support multi-selection of stories, except for the **Clone** action):
 
-![](attachments/stories/story-context-menu.png)
+![](attachments/stories/story-context-menu.jpg)
 
+* **Clone** – click this to duplicate a selected user story and its tasks, story points, status, and labels into a new user story; this can enable utilizing a user story as a template
 * **Move** –  click this to move a story to another sprint
 * **Assign Label** – click this to assign existing labels to a story
 * **Delete** – click this to delete a story

@@ -14,7 +14,7 @@ To go directly to the desired element of your app project in the Developer Porta
 * Find the App ID, Story ID, and Feedback Item Number for your app
 * Create deep links for your app, story, and feedback item
 
-## 2 Getting the AppID, storyID, & feedbackItemNr
+## 2 Getting the AppID, storyID & feedbackItemNr {#id}
 
 To create a deep link, you need the App ID, Story ID, or Feedback Item Nr for the desired element in the Developer Portal.
 

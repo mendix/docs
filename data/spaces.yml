@@ -10,12 +10,12 @@ apidocs-mxsdk:
     - "API Documentation"
     - "Mendix Platform SDK"
 addons:
-  space: "Add-on Guides"
+  space: "Quality Add-ons Guide"
   priority: false
   menu_categories:
-    - "ATS Guide"
-    - "APD Guide"
-    - "AQM Guide"
+    - "ATS"
+    - "APD"
+    - "AQM"
 howto6:
   space: "Mendix 6 How-to's"
   priority: false
@@ -117,7 +117,7 @@ releasenotes:
     - "App Store"
     - "Mobile"
     - "SDKs"
-    - "Add-ons"
+    - "Quality Add-ons"
     - "Mendix Beta Features"
 developerportal:
   space: "Developer Portal Guide"
@@ -150,6 +150,14 @@ studio:
     - "Theme Customizer"
     - "Settings"
     - "Starting With Your Own Data"
+studio-how-to:
+  space: "Studio 8 How-to's"
+  priority: false
+  menu_categories:
+    - "Pages"
+    - "Domain Model"
+    - "Microflows"
+    - "Security"
 studio7:
   space: "Mendix 7 Studio Guide"
   priority: false

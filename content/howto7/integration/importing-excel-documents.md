@@ -277,7 +277,6 @@ Once you have completed an Excel template you can export the template for exampl
 * [Importing Excel Documents](importing-excel-documents)
 * [How to Expose a Web Service](expose-a-web-service)
 * [Selenium Support](selenium-support)
-* [How to Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [How to Import XML Documents](importing-xml-documents)
 * [How to Consume a REST Service](consume-a-rest-service)
 * [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)

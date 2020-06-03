@@ -1,7 +1,7 @@
 ---
 title: "SAP Logging Connector"
 category: "SAP"
-menu_order: 48
+menu_order: 49
 description: "The connector which formats logs for the Kibana dashboard"
 tags: ["SAP", "Kibana", "Log", "json"]
 ---

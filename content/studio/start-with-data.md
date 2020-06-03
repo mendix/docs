@@ -63,7 +63,9 @@ Download this Excel spreadsheet example to check how data is normalized there: [
 
 When you create your app, a page where you can upload your spreadsheet is opened. Drag and drop your spreadsheet on the page or browse your files and choose the one you would like to import.
 
-<img src="attachments/start-with-data/drag-and-drop.png" style="zoom:67%;" />
+{{% image_container width="300" %}}
+![](attachments/start-with-data/drag-and-drop.png)
+{{% /image_container %}}
 
 {{% alert type="info" %}}
 
@@ -104,7 +106,9 @@ The columns which have associations cannot be deselected for the import, you nee
 
 To review a list of associations and unselect the ones that you do not want to be created, click **Manage Relations**. In the **Manage Relations** pop-up window, you can see which table and column will be used to create an association **from** and which will be used to create an association **to**. A column with unique data is the one the association goes **to**. 
 
-<img src="attachments/start-with-data/manage-relations.png" style="zoom:80%;" />
+{{% image_container width="400" %}}
+![](attachments/start-with-data/manage-relations.png)
+{{% /image_container %}}
 
 For example, in the image above you can see that an association will be created from the **MarketingDocs** entity to the **Contributors** entity. This association was discovered through the column **Responsible** in **MarketingDocs** and the column **Name** in **Contributors**.  As a result, when data is imported the **MarketingDocs** entity will not have **Responsible** as an attribute, instead it will have an association to the **Contributors** entity and will get data from this entity through the association.
 

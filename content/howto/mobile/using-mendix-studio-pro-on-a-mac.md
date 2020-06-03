@@ -1,14 +1,14 @@
 ---
-title: "Work with Parallels"
+title: "Build Native Mobile Apps with Parallels"
 parent: "native-mobile"
 menu_order: 20
-description: "This how-to will allow you to start making Mendix native apps on your Mac device."
+description: "This how-to will allow you to start making Mendix native mobile apps on your Mac device."
 tags: ["Native", "Parallels", "Mac", "Mobile"]
 ---
 
 ## 1 Introduction
 
-Using Parallels, you can run Mendix Studio Pro on your Mac device using a Windows virtual machine. To start making Mendix native apps on your Mac, follow this how-to.
+Using Parallels, you can run Mendix Studio Pro on your Mac device using a Windows virtual machine. To start making Mendix native mobile apps on your Mac, follow this how-to.
 
 **This how-to will teach you how to do the following:**
 
@@ -93,4 +93,4 @@ For information on how to change to your app and then see that change on your de
 ## 6 Read More
 
 * [Get Started with Native Mobile](getting-started-with-native-mobile)
-* [Style Your Mendix Native App](how-to-use-native-styling)
+* [Style Your Mendix Native Mobile App](how-to-use-native-styling)

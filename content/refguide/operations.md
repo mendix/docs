@@ -61,7 +61,7 @@ The CountCarsAndHp operation. It takes a non-optional list of Vehicle as a param
 
 {{% /alert %}}{{% alert type="info" %}}
 
-![](attachments/microflows-and-nanoflows/918221.png)
+![](attachments/16713701/918221.png)
 
 The microflow attached to the CountCarsAndHp operation. It takes a list of objects of the entity Vehicle as input and returns an object that holds the number of cars and the total amount of horsepower of those cars.
 

@@ -82,7 +82,8 @@ spec:
     customConfiguration: |-
       {
         "ScheduledEventExecution": "SPECIFIED",
-        "MyScheduledEvents": "MyFirstModule.MyScheduledEvent"
+        "MyScheduledEvents": "MyFirstModule.MyScheduledEvent",
+        "MicroflowConstants":"{\"MyFirstModule.Constant\":\"1234\",\"Atlas_UI_Resources.Atlas_UI_Resources_Version\":\"2.5.4\"}"
       }
 ```
 
@@ -109,7 +110,64 @@ You need to make the following changes:
     * `"License.EnvironmentName":"{environment name}"`
 
     {{% alert type="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/project-security). {{% /alert %}}
-* **jettyOptions** and **customConfiguration**: – if you have any custom Mendix Runtime parameters, they need to be added to this section — options for the Mendix runtime have to be provided in JSON format — see the examples in the CR for the correct format
+* **jettyOptions** and **customConfiguration**: – if you have any custom Mendix Runtime parameters, they need to be added to this section — options for the Mendix runtime have to be provided in JSON format — see the examples in the CR for the correct format and the information below for more information on [setting app constants](#set-app-constants) and [configuring scheduled events](#configure-scheduled-events)
+
+#### 3.2.1 Setting App Constants{#set-app-constants}
+
+To set constant values, first create a key-value JSON with values for each constant.
+
+The constant name is equal to `{module-name}.{constant-name}` where {module-name} is the name of the Mendix app module containing the constant,
+and {constant-name} is the name of the constant. The constant name will also be visible in the constant properties (UnitTesting.RemoteApiEnabled in this example):
+
+![](attachments/private-cloud-operator/constant-name.png)
+
+For example, to set the `MyFirstModule.Constant` constant to `1234` and `MyModule.AnotherConstant` to `MyValue`, create the following JSON:
+```json
+{"MyFirstModule.Constant":"1234","MyModule.AnotherConstant":"true"}
+```
+
+Next, convert this JSON into a string by escaping it (in particular, replacing all `"` characters with `\"`) and use it as the **MicroflowConstants** value in **customConfiguration**. For example:
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: MendixApp
+metadata:
+  name: example-mendixapp
+spec:
+  runtime:
+    # Add the MicroflowConstants value here
+    customConfiguration: |-
+      {
+        "MicroflowConstants":"{\"MyFirstModule.Constant\":\"1234\",\"MyModule.AnotherConstant\":\"true\"}"
+      }
+```
+
+#### 3.2.2 Configuring Scheduled Events{#configure-scheduled-events}
+
+To disable execution of all scheduled events, set the **ScheduledEventExecution** value to `NONE` in **customConfiguration**.
+
+To enable execution of all scheduled events, set the **ScheduledEventExecution** value to `ALL` in **customConfiguration**.
+
+To enable execution for specific scheduled events, set the **ScheduledEventExecution** value to `SPECIFIED` in **customConfiguration**.
+Specify which events should be enabled by listing their full names in the **MyScheduledEvents** value in **customConfiguration**.
+
+For example, to enable the execution of event `EventOne` in module `MyFirstModule` and event `EventTwo` in `MySecondModule`,
+set the **MyScheduledEvents** value to `MyFirstModule.EventOne,MySecondModule.EventTwo`:
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: MendixApp
+metadata:
+  name: example-mendixapp
+spec:
+  runtime:
+    customConfiguration: |-
+      {
+        "ScheduledEventExecution":"SPECIFIED",
+        "MyScheduledEvents":"MyFirstModule.EventOne,MySecondModule.EventTwo"
+      }
+```
+
+The **MyScheduledEvents** value should be removed from **customConfiguration** if **ScheduledEventExecution** is set to `ALL` or `NONE`.
 
 ### 3.3 Building and Deploying Your App
 

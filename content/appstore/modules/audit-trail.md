@@ -10,7 +10,7 @@ tags: ["app store", "app store component", "audit trail", "log", "platform suppo
 
 The [Audit Trail](https://appstore.home.mendix.com/link/app/138/) module creates a log history for the changes made to objects in your Mendix application.
 
-### 1.1 Typical Usage Scenarios
+### 1.1 Typical Use Cases
 
 This module keeps keep track of what changes are made in your Mendix application as well as when, by whom, and how much.
 

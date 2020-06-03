@@ -108,4 +108,3 @@ Make sure the names of the databases aren't the same or make a copy of your own 
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)
 *   [Starting your own repository](starting-your-own-repository)
 *   [Version Control](/refguide/version-control)
-*   [How to Use the Feedback Widget](/developerportal/collaborate/use-feedback-widget)

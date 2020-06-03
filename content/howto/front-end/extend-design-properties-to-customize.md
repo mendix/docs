@@ -21,10 +21,10 @@ You can find the design properties inside the *settings.json* or *settings-nativ
 
 The example below shows the design properties of a `"Button"`. 
 
-* `"name"` – the name of the design property
-* `"type"` – the type of the design property (for example, `Dropdown` or `Toggle`)
-* `"description"` – a brief explanation of the design property
-* `"options"` – the array of options that shows the name and CSS class specified in the Sass files for Atlas UI
+* `"name"` — the name of the design property
+* `"type"` — the type of the design property (for example, `Dropdown` or `Toggle`)
+* `"description"` — a brief explanation of the design property
+* `"options"` — the array of options that shows the name and CSS class specified in the Sass files for Atlas UI
 
 ![](attachments/howto/extend_settings.png)
 

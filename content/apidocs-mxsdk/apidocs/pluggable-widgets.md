@@ -1,6 +1,7 @@
 ---
 title: "Pluggable Widgets API"
 category: "API Documentation"
+menu_order: 8
 description: A guide for understanding pluggable widgets.
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 ---
@@ -73,7 +74,7 @@ A widget package file is just a ZIP archive containing the following things:
 * A *package.xml* file describing the whole package
 * A widget definition XML file, preferably located in *{widgetName}.xml* where `widdgetName` is the last part of widget [ID](#widget-id)
 * A client component of a widget located, for example, in  `com/mendix/widget/MyProgressCircle.js` for a widget with the ID `com.mendix.widget.MyProgressCircle`
-* Optionally, a widget rendering for Studio and Studio Pro’s Design mode located in *{widgetDefinitionXmlName}.webmodeler.js*
+* Optionally, a widget preview for Studio and Studio Pro’s Design mode located in *{widgetDefinitionXmlName}.editorPreview.js*
 * Optionally, some widget-related resources, preferably located next to the file which contains the client component
 	* Note that all CSS files you add, except the one located in the `lib` sub-directory, will automatically be loaded in an app via the widget
 

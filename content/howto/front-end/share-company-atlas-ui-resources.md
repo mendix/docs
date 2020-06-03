@@ -32,8 +32,8 @@ The Mendix App Store is a great way to share UI resources throughout your compan
 
 There are two important options to keep in mind when uploading a UI resources module:
 
-* **Publish to** – this option lets you share the UI resources in a private App Store (company-only) or with the public audience (the entire Mendix community)
-* **Category** – choose the **UI Resources** category to make the module available as a UI resources module
+* **Publish to** — this option lets you share the UI resources in a private App Store (company-only) or with the public audience (the entire Mendix community)
+* **Category** — choose the **UI Resources** category to make the module available as a UI resources module
 
 ![](attachments/howto/sharing_appstore_addcontent.png)
 
@@ -69,10 +69,10 @@ Now that you have created a company app template, the next step is to share it w
 
 There are four important options to keep in mind when uploading your company app template:
 
-* **Publish to** – this option must be set to **Private App Store**
-* **Category** – select the **Create New App**
-* **Sub category** – select the **Starter Apps** sub-category to make the app available as a template in the "create new app flow" for the Mendix Platform
-* **Impressions** – impressions contain the images that are shown when creating a new app in the Mendix Platform
+* **Publish to** — this option must be set to **Private App Store**
+* **Category** — select the **Create New App**
+* **Sub category** — select the **Starter Apps** sub-category to make the app available as a template in the "create new app flow" for the Mendix Platform
+* **Impressions** — impressions contain the images that are shown when creating a new app in the Mendix Platform
 
 ![](attachments/howto/sharing_appstore_addcontent_starterapp.png)
 

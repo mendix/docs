@@ -2,15 +2,15 @@
 title: "Native Styling"
 parent: "native-mobile"
 menu_order: 20
-description: "This reference guide will contextualize the style elements Mendix uses in native apps, as well as explain the classes and style properties of Mendix’s widgets."
+description: "This reference guide will contextualize the style elements Mendix uses in native mobile apps, as well as explain the classes and style properties of Mendix’s widgets."
 tags: ["Native", "Class", "Design", "Property", "Style", "Widget", "studio pro"]
 ---
 
 ## 1 Introduction
 
-This reference guide will contextualize the style elements Mendix uses in native apps, as well as explain the classes and style properties of Mendix’s widgets. To learn the basics of native styling, you can consult [Native Styling](/howto/mobile/native-styling) and then follow the [Style Your Mendix Native App](/howto/mobile/how-to-use-native-styling) how-to.
+This reference guide will contextualize the style elements Mendix uses in native mobile apps, as well as explain the classes and style properties of Mendix’s widgets. To learn the basics of native styling, you can consult [Native Styling](/howto/mobile/native-styling) and then follow the [Style Your Mendix Native Mobile App](/howto/mobile/how-to-use-native-styling) how-to.
 
-Mendix apps use layouts to dictate how pages can look and function. For native apps specifically, you can use a native layout to easily integrate navigation and settings optimized for native functionality. For more information on layouts, see [Layout](layout).
+Mendix apps use layouts to dictate how pages can look and function. For native mobile apps specifically, you can use a native layout to easily integrate navigation and settings optimized for native functionality. For more information on layouts, see [Layout](layout).
 
 To keep widgets responsive, Mendix apps use Flexbox. Using Flexbox, a component can set the layout of its child components. This allows your app to retain a consistent layout across multiple form factors. For more information on layout, see React Native’s [Flexbox documentation](https://reactnative.dev/docs/flexbox).
 
@@ -83,7 +83,7 @@ Data widgets are essential to many Mendix apps. These widgets will allow your us
 
 The data view widget shows the contents of one data object. For more information about this widget, see [Data View](data-view).This widget has no user interface, so it does not support any styling.
 
-### 3.2 List View Widget
+### 3.2 List View Widget {#list-view}
 
 The list view shows a list of objects arranged vertically or horizontally. For more information about this widget, see [List View](list-view). This is not the default list view, but how a list view widget could look in an app:
 
@@ -538,7 +538,7 @@ The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties |  |
+| `container` | This has all ViewStyle properties. |  |
 | `indicator` | `color` | This is the color of the indicator (this defaults to `gray`). |
 | `indicator` | `size` | Possible values for indicator are `large` and `small` (this defaults to `large`). |
 
@@ -548,7 +548,27 @@ The default class to style all activity indicators is named `com_mendix_widget_n
 
 The app events widget allows you to set actions when your app’s network status is changed, and can let you set limits on action calls. This widget has no user interface so does not support any styling.
 
-### 11.3 Badge
+### 11.3 Background Image
+
+The background image widget enables layering one or more widgets on top of an image.
+
+The widget’s style properties are as follows:
+
+```javascript
+<container>
+	<image />
+</container>
+```
+
+| Element | Style Properties    | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties. |  |
+| `image` | This has all ImageStyle properties. |  |
+| `image` | `svgColor` | Property to set the color of an SVG image (this defaults to `black`). |
+
+The default class to style all background images is named `com_mendix_widget_native_backgroundimage_BackgroundImage`.
+
+### 11.4 Badge
 
 The badge widget displays text or values as a badge. This is how a badge widget could look in an app:
 
@@ -569,7 +589,7 @@ The widget’s style properties are as follows:
 
 The default class to style all badges is named `com_mendix_widget_native_badge_Badge`.
 
-### 11.4 Barcode Scanner
+### 11.5 Barcode Scanner
 
 The barcode scanner widget allows your app to scan barcodes and QR codes. This widget renders a camera view in a styleable container.
 
@@ -579,7 +599,7 @@ The barcode scanner widget allows your app to scan barcodes and QR codes. This w
 
 The default class to style all barcode scanner widgets is named `com_mendix_widget_native_barcodescanner_BarcodeScanner`.
 
-### 11.5 Feedback
+### 11.6 Feedback
 
 The feedback widget allows users to give direct feedback. This is how a feedback widget could look in an app:
 
@@ -611,7 +631,7 @@ The widget’s style properties are as follows:
 
 The default class to style all feedback widgets is named `com_mendix_widget_native_feedback_Feedback`. 
 
-### 11.6 Floating Action Button
+### 11.7 Floating Action Button
 
 The floating action button widget lets you customize the appearance and functionality of floating action buttons. The widget’s style properties are as follows:
 
@@ -630,7 +650,7 @@ The floating action button widget lets you customize the appearance and function
 
 The default class to style all floating actions buttons is named `com_mendix_widget_native_floatingactionbutton_FloatingActionButton`.
 
-### 11.7 Maps
+### 11.8 Maps
 
 The maps widget supports various digital map providers. This is how a maps widget could look in an app:
 
@@ -648,11 +668,11 @@ The widget’s style properties are as follows:
 
 The default class to style all map widgets is named `com_mendix_widget_native_maps_Maps`.
 
-### 11.8 Notifications
+### 11.9 Notifications
 
 The notifications widget lets you display a custom message in your app. This widget has no user interface so does not support any styling.
 
-### 11.9 Progress Bar
+### 11.10 Progress Bar
 
 The progress bar widget shows percentage of progress. This is how a progress bar widget could look in an app:
 
@@ -676,7 +696,7 @@ The widget’s style properties are as follows:
 
 The default class to style all progress bars is named `com_mendix_widget_native_progressbar_ProgressBar`.
 
-### 11.10 Progress Circle
+### 11.11 Progress Circle
 
 The progress circle widget displays progress in a circle using positive or negative values. This is how a progress circle widget could look in an app:
 
@@ -705,7 +725,7 @@ The widget’s style properties are as follows:
 
 The default class to style all progress circles is named `com_mendix_widget_native_progresscircle_ProgressCircle`.
 
-### 11.11 QR Code
+### 11.12 QR Code
 
 The QR code widget generates a QR code based on a value, which a user can then scan. This is how a QR code widget could look in an app:
 
@@ -728,7 +748,7 @@ The widget’s style properties are as follows:
 
 The default class to style all QR codes is named `com_mendix_widget_native_qrcode_QRCode`.
 
-### 11.12 Range Slider {#range-slider}
+### 11.13 Range Slider {#range-slider}
 
 The range slider widget allows you to change a range of values using a slider with maximum and minimum bound values. This is how a range slider widget could look in an app:
 
@@ -762,7 +782,7 @@ The widget’s style properties are as follows:
 
 The default class to style all range slider inputs is named `com_mendix_widget_native_rangeslider_RangeSlider`.
 
-### 11.13 Safe Area View
+### 11.14 Safe Area View
 
 The safe area view widget prevents content from being rendered in unwanted areas, such as behind rounded screen corners or notches. This widget is only supported on iOS apps. Note that `container` styling will only be applied to the safe area.
 
@@ -778,7 +798,7 @@ The widget’s style properties are as follows:
 
 The default class to style all safe area views is named `com_mendix_widget_native_safeareaview_SafeAreaView`.
 
-### 11.14 Slider
+### 11.15 Slider
 
 The slider widget simply allows you to change a number value using a slider. This is how a slider widget could look in an app:
 
@@ -788,7 +808,7 @@ This widget supports the same style properties as the [range slider] (#range-sli
 
 The default class to style all slider inputs is named `com_mendix_widget_native_slider_Slider`.
 
-### 11.15 Ratings
+### 11.16 Ratings
 
 The ratings widget allows users to rate an object from 0 to 5. This is how a ratings widget could look in an app:
 
@@ -817,7 +837,7 @@ The widget’s style properties are as follows:
 
 The default class to style all rating inputs is named `com_mendix_widget_native_rating_Rating`.
 
-### 11.16 Toggle Buttons
+### 11.17 Toggle Buttons
 
 The toggle buttons widget allows you to set an enumeration attribute. This is how a toggle buttons widget could look in an app:
 
@@ -853,7 +873,7 @@ The widget’s style properties are as follows:
 
 The default class to style all toggle buttons is named `com_mendix_widget_native_togglebuttons_ToggleButtons`.
 
-### 11.17 Video Player
+### 11.18 Video Player
 
 The video player widget allows you to play video based on a URL, and is limited to MP4 only. This is how a video player widget could look in an app:
 
@@ -870,7 +890,7 @@ The widget’s style properties are as follows:
 
 The default class to style all video players is named `com_mendix_widget_native_videoplayer_VideoPlayer`.
 
-### 11.18 Web View
+### 11.19 Web View
 
 The web view widget allows you to embed static or dynamic websites in your app. The widget’s style properties are as follows:
 
@@ -882,7 +902,7 @@ The web view widget allows you to embed static or dynamic websites in your app. 
 
 The default class to style all web views is named `com_mendix_widget_native_webview_WebView`. 
 
-### 11.19 Animation
+### 11.20 Animation
 
 The animation widget allows you to animate a container. You can make the content wiggle, move, change size, and more.
 
@@ -900,7 +920,7 @@ The widget’s style properties are as follows:
 
 The default class to style all animation widgets is named `com_mendix_widget_native_animation_Animation`.
 
-### 11.20 Introduction Screen
+### 11.21 Introduction Screen
 
 This introduction screen widget displays paginated contents you can swipe through, and offers buttons on each page to proceed or go back:
 
@@ -968,7 +988,7 @@ The widget’s style properties are as follows:
 
 The default class to style all into screen widgets is named `com_mendix_widget_native_animation_Animation`.
 
-### 11.21 List View Swipe
+### 11.22 List View Swipe
 
 The list view swipe widget can make a list view interactive by adding swipe gestures and extra buttons in the background behind a list item:
 
@@ -1000,7 +1020,7 @@ The widget’s style properties are as follows:
 
 The default class to style all animation widgets is named `com_mendix_widget_native_listviewswipe_ListViewSwipe`.
 
-### 11.22 Bottom Sheet
+### 11.23 Bottom Sheet
 
 The bottom sheet widget creates a set of options while blocking interaction with the rest of the screen or a draggable surface anchored to the bottom of the screen. There are two customizable variations:
 
@@ -1038,8 +1058,129 @@ The widget’s style properties are as follows:
 
 The default class to style all bottom sheet widgets is named `com_mendix_widget_native_bottomsheet_BottomSheet`.
 
+### 11.23 Popup Menu
+
+The popup menu widget allows you to show a context menu exactly where the user taps.
+
+The widget’s style properties are as follows:
+
+```xml
+</container>
+</buttonContainer>
+<basic>
+    </containerStyle>
+    </dividerColor>
+    <itemStyle>
+        </ellipsizeMode>
+        </defaultStyle>
+        </primaryStyle>
+        </dangerStyle>
+        </customStyle>
+    </itemStyle>
+</basic>
+```
+
+A main object has four objects.
+
+| Element                    | Style Properties | Description                                                                                                      |
+| ----------------------------| --- | ---------------------------------------------------------------------------------------------------------------- |
+| basic      | BasicItemStyle |Styles items.                                                                                                   |
+| buttonContainer | This has all ViewStyle properties. | Styles the wrapper view of triggerer since there could be multiple elements, and it has to be wrapped in a view. |
+| container       | This has all ViewStyle properties. | Styles the wrapper view around the whole menu.                                                                  |
+
+#### BasicItemStyle
+
+| Element                   | Style Properties |  Description                                      |
+| ---------------------------| ---- | ------------------------------------------------ |
+| containerStyle | This has all ViewStyle properties. | Styles the wrapper container around a basic item. |
+| itemStyle | ItemStyle      | Styles the basic items.                         |
+| dividerColor | `string`      | Styles the divider color.                         |
+
+#### ItemStyle
+
+| Element                | Style Properties                     | Description                                                                                      |
+| ----------------------------------------| ----- | ------------------------------------------------------------------------------------------------ |
+| ellipsizeMode | `head`, `middle`, `tail`, or `clip` | Styles how the text will be clipped if its too long. |
+| defaultStyle |  This has all TextStyle properties.                | Styles all basic menu items which have the `default` style selected.                                 |
+| primaryStyle |  This has all TextStyle properties.                | Styles all basic menu items which have the `primary` style selected.                                 |
+| dangerStyle |  This has all TextStyle properties.                 | Styles all basic menu items which have the `danger` style selected.                                  |
+| customStyle |  This has all TextStyle properties.                 | Styles all basic menu items which have the `custom` style selected.                                  |
+
+The default class to style all popup menus is named `com_mendix_widget_native_popupmenu_PopupMenu`.
+
+### 11.24 Carousel
+
+The carousel widget allows you to show swipeable items in a carousel.
+
+The widget’s style properties are as follows:
+
+```xml
+</container>
+<cardLayout>
+    </slideItem>
+    </inactiveSlideItem>
+    </indicator>
+    <pagination>
+        </container>
+        </dotStyle>
+        </inactiveDotStyle>
+        </dotContainerStyle>
+        </text>
+    </pagination>
+</cardLayout>
+<fullWidthLayout>
+    </slideItem>
+    </inactiveSlideItem>
+    </indicator>
+    <pagination>
+        </container>
+        </dotStyle>
+        </inactiveDotStyle>
+        </dotContainerStyle>
+        </text>
+    </pagination>
+</fullWidthLayout>
+```
+
+Main object has to have three objects called `container`, `cardLayout`, and `fullWidthLayout`. `cardLayout` and `fullWidthLayout` will be applied automatically depending on selected layout in widget properties.
+
+```
+export myCarouselStyle = {
+    container: ViewStyle  //
+    cardLayout: ...LayoutStyle,
+    fullWidthLayout: ...LayoutStyle
+}
+```
+
+| Element                | Style Properties                               | Description                                                                                    |
+| -----------------------|-------------------------------- | ---------------------------------------------------------------------------------------------- |
+| container | This has all ViewStyle properties.                                   | Styles the view surrounding the carousel widget. For best results, make sure to give a fixed `height`.                             |
+| cardLayout | LayoutStyle | Styles the carousel when the layout is set to card  |
+| fullWidthLayout | LayoutStyle                             | Styles the carousel when the layout is set to full width.                 |
+
+#### LayoutStyle
+
+| Element                | Style Properties                               | Description                                                                                    |
+| -----------------------|-------------------------------- | ---------------------------------------------------------------------------------------------- |
+| slideItem | This has all ViewStyle properties.                                   | Styles the view surrounding each slide, including inactive slides.                             |
+| inactiveSlideItem | `opacity: number, scale: number` | `inactiveSlideOpacity` and `inactiveSlideScale`, will allow inactive slides smaller and faded. |
+| indicator | `color: string`                             | Styles the loading indicator which will be shown while the carousel is loading.                 |
+| pagination | Pagination                                 | Styles pagination container, dots, active dots, and text.                                        |
+
+#### Pagination
+
+| Element | Style Properties                                                                         | Description                                                                                                    |
+| ---------|------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
+| container | This has all ViewStyle properties.                                                              | Styles the main view around pagination, regardless of text or dot.                                             |
+| dotStyle | All ViewStyle properties + `color: string`                                              | Styles all the pagination dots.                                                                                |
+| inactiveDotStyle|  All ViewStyle properties + `opacity: number; scale: number; color: string` | Additional styles for inactive dots. Will be merged with `dotStyle`.                                             |
+| dotContainerStyle | This has all ViewStyle properties.                                                      | Styles the view around individual pagination dots.                                                              |
+| text | This has all TextStyle properties.                                                                   | Will be applied when there are more than five elements in carousel, in which case pagination buttons become text like **1/5**. |
+
+The default class to style all popup menus is named `com_mendix_widget_native_carousel_Carousel`.
+
 ## 12 Read More
 
-* [Style Your Mendix Native App](/howto/mobile/how-to-use-native-styling)
-* [Implement Native Styling](/howto/mobile/native-styling)
+* [How to Style Your Mendix Native Mobile App](/howto/mobile/how-to-use-native-styling)
+* [How to Implement Native Mobile Styling](/howto/mobile/native-styling)
 * [Design Properties Documentation](/apidocs-mxsdk/apidocs/design-properties)

@@ -77,7 +77,7 @@ In this chapter you will learn how to create a microflow test. To create a new m
     ![](attachments/18448633/18580355.png)
 4.  Create a microflow **Promote**.
 
-    <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/d5d6ad4f-bcc8-4ce8-a999-a86370bc6ffe/promote?embed=true" allowfullscreen=""></iframe>
+	![](attachments/18448633/promote.jpg)
 
 ### 3.2 Create a unit test
 
@@ -111,21 +111,17 @@ In this chapter you will learn how to create a microflow test. To create a new m
 25.   Enter **true** as return value.
 26.   Click OK.
 27.   The microflow should look like the model below:
-      <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/93a3546c-df5e-4b7d-9dc8-447a9f24432f/unittest-promote-employee-to-junior?embed=true"></iframe>
+      
+	![](attachments/18448633/promotetojunior.jpg)
 
 28.   Create three more test microflows as shown below:
 
-      **Test_PromoteEmployeeToMedior**
+	![](attachments/18448633/promotetomedior.jpg)
 
-      <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/a609f474-dd8c-4315-84fb-1056256ca3fc/unittest-promote-employee-to-medior?embed=true"></iframe>
+	![](attachments/18448633/promotetosenior.jpg)
+	
+	![](attachments/18448633/stillsenior.jpg)
 
-      **Test_PromoteEmployeeToSenior**
-
-      <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/f247e678-1738-416a-8e6a-77dfdb2cf392/unittest-promote-employee-to-senior?embed=true"></iframe>
-
-      **Test_PromoteEmployeeWhenAlreadySenior**
-
-      <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/44d6c6be-d35c-403d-ad2f-d89398956a07/unittest-promote-employee-when-already-senior?embed=true"></iframe>
 29.   Run the project locally.
 30.   Go to `http://localhost:8080/index.html`.
 31.   Click on **UnitTestOverview** in the navigation. **MyFirstModule** will be shown in the list with modules that contain one or more testcases.

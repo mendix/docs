@@ -2,7 +2,7 @@
 title: "Conditional Visibility Section"
 parent: "page-editor-widgets"
 description: "Describes the Conditional Visibility section in widgets properties in Mendix Studio."
-menu_order: 80
+menu_order: 30
 tags: ["studio", "page editor", "widgets", "on click action", "events"]
 ---
 
@@ -13,15 +13,14 @@ The **Conditional Visibility** section in widget properties allows you to show a
 * [An attribute value of a widget](#attribute-based)
 * [User roles in your app](#role-based) 
 
-For example, you have a web shop and you do not want to bother users with filling in the same address twice when the delivery address matches the billing address. You would like to show fields to fill the billing address in only when a user unchecks the **Is billing address the same as the delivery address?** option. In this case you can make the billing address fields visible based on an *attribute value*: the field will be displayed only when the *BillingAddressSame* is unticked (set to *false*):
+For example, you have a web shop and you do not want to bother users with filling in the same address twice when the delivery address matches the billing address. You would like to show fields to fill the billing address in only when a user unchecks the **Billing address is the same as delivery address** option (which is checked by default). In this case you can make the billing address fields visible based on an *attribute value*: the field will be displayed only when the *BillingAddressSame* is unticked (set to *false*):
 
 ![](attachments/page-editor-widgets-visibility-section/attribute-based-example.png)
 
 You can also show a widget to a certain *user role* only. For example, you can show a widget showing salary amounts only to Finance Managers. 
 
-To see which widgets that have conditional visibility configured, click the **Highlight conditional items** option in the top-left corner of a page:
-
-<img src="attachments/page-editor-widgets-visibility-section/highlight-conditional-items.png" style="zoom:50%;" />
+To see which widgets that have conditional visibility configured, click the eye icon is the **Show** option in the top-left corner of a page:
+![](attachments/page-editor-widgets-visibility-section/highlight-conditional-items.png)
 
 ## 2 Conditional Visibility Properties
 
@@ -49,7 +48,9 @@ This property is shown only when an attribute in the [Attribute-Based](#attribut
 
 For example, you would like to show a special offer price only for customers with the **Gold** grade. Select *Grade* in the **Attribute-Based** property and *Gold* in as the **Attribute Value**:
 
-<img src="attachments/page-editor-widgets-visibility-section/attribute-based-visibility.png" style="zoom:60%;" />
+{{% image_container width="300" %}}
+![](attachments/page-editor-widgets-visibility-section/attribute-based-visibility.png)
+{{% /image_container %}}
 
 ### 2.3 Role-Based {#role-based}
 
@@ -65,7 +66,9 @@ You can only configure role-based conditional visibility when security is enable
 
 The **Roles** property is only shown when the [Role-Based](#role-based) property is enabled and shows a list of roles available in your app. Select the roles that you would like to make a widget visible for. For example, in a taxi booking app, you would like to show a taxi driver rating to customers and administrators, but hide it from taxi drivers:
 
-<img src="attachments/page-editor-widgets-visibility-section/role-based-visbility.png" style="zoom:60%;" />
+{{% image_container width="300" %}}
+![](attachments/page-editor-widgets-visibility-section/role-based-visbility.png)
+{{% /image_container %}}
 
 ## 3 Performing Basic Functions
 
@@ -77,12 +80,13 @@ To configure attribute-based visibility, do the following:
 
 2. In **Conditional Visibility** section, click the **Attribute-Based** property:
 
-    <img src="attachments/page-editor-widgets-visibility-section/attribute-based-property.png" style="zoom:60%;" />
+    {{% image_container width="300" %}}![](attachments/page-editor-widgets-visibility-section/attribute-based-property.png){{% /image_container %}}
 
 3. In the **Select Attribute** dialog box, select an attribute of the Boolean or enumeration type and click **Select**.
 
 4. The **Attribute Values** property is now displayed in properties. Untick the values that does not meet the conditions you would like to set:
-    <img src="attachments/page-editor-widgets-visibility-section/attribute-values.png" style="zoom:60%;" /> 
+
+    {{% image_container width="300" %}}![](attachments/page-editor-widgets-visibility-section/attribute-values.png){{% /image_container %}} 
 
 Attribute-based conditional visibility is set for the widget.
 
@@ -96,7 +100,7 @@ To disable attribute-based visibility, follow the steps below:
 
 3. In the **Select Attribute** dialog box, click **Clear**:
 
-    <img src="attachments/page-editor-widgets-visibility-section/clear-attribute-based-visibility.png" style="zoom:50%;" />
+    {{% image_container width="400" %}}![](attachments/page-editor-widgets-visibility-section/clear-attribute-based-visibility.png){{% /image_container %}}
 
 The attribute-based conditional visibility is cleared for the widget. 
 
@@ -110,7 +114,7 @@ To configure role-based conditional visibility, do the following:
 
 3. A list of roles available in your app is displayed in the **Roles** property. Untick the roles who would like to hide the widget from:
 
-    <img src="attachments/page-editor-widgets-visibility-section/role-based-example.png" style="zoom:60%;" /> 
+    {{% image_container width="300" %}}![](attachments/page-editor-widgets-visibility-section/role-based-example.png){{% /image_container %}} 
     
 
 Role-based conditional visibility is set for the widget.

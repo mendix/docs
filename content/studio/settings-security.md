@@ -153,7 +153,7 @@ There are two ways to set access for specific pages/microflows in your app:
 
 	![](attachments/settings-security/permissions-section.png)
 
-## 4 Demo Users
+## 4 Demo Users {#demo-users}
 
 Demo users are a demonstration of each user role existing in your app. You can use demo users to review how your app looks like for each user role. For more technical information, see [Demo Users](/refguide/demo-users). 
 
@@ -197,7 +197,9 @@ If you have created a new user role on the **Roles and Permissions** page, you n
 
 When you try to publish your app, you may be notified that upgrade of the service that secures your app is required first:
 
-<img src="attachments/settings-security/upgrade.png" alt="Upgrade Required" style="zoom:50%;" />
+{{% image_container width="300" %}}
+![Upgrade Required](attachments/settings-security/upgrade.png)
+{{% /image_container %}}
 
 A special service makes it possible to manage your app users. As of April 1st, 2020 we are replacing the current service with an improved one. This upgrade will be done automatically for you when you click **Auto-Upgrade**. 
 
@@ -205,7 +207,7 @@ No need to worry if you do not auto-upgrade, your app will still be secured and 
 
 If the automatic upgrade fails, this means, the service was customized in Studio Pro, and only manual upgrade in Studio Pro is possible in this case. 
 
-If the auto-upgrade detects that the service was customized in Studio Pro by a team member, you will be notified that a manual upgrade in Studio Pro should be performed first. For more technical information on how to upgrade the service in Studio Pro, see [Upgrading to MendixSSO from AppCloudServices](/developerportal/deploy/upgrading-to-mendix-sso-from-acs).
+If the auto-upgrade detects that the service was customized in Studio Pro by a team member, you will be notified that a manual upgrade in Studio Pro should be performed first. For more technical information on how to upgrade the service in Studio Pro, see [Upgrading to Mendix SSO from AppCloudServices](/developerportal/deploy/upgrading-to-mendix-sso-from-acs).
 
 ## 7 Read More
 

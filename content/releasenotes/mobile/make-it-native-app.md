@@ -9,14 +9,45 @@ tags: ["Native", "Android", "iOS", "Apple", "Android"]
 
 For more information on the Make It Native app, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app).
 
-You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp).
+You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](/refguide/getting-the-make-it-native-app#direct-links).
+
+## Android 2.1.0 / iOS 2.1.0
+
+**Release date: May 15th, 2020**
+
+### New Features
+
+From Mendix Studio Pro 8.10 and above, the responsibility of deciding when to synchronize is returned to the client. This allows for faster reloads and syncing behavior that aligns better with that of release apps. The behavior for Mendix Studio Pro 8.9 remains unchanged. 
+
+## Android 2.0.1 / iOS 2.0.0
+
+**Release date: April 30th, 2020**
+
+### Fixes
+
+* We fixed an issue on Android where scanning a QR code would falsely trigger the unsupported Studio Pro version dialog and refuse to load the app.
+
+## Android 2.0.0 / iOS 2.0.0 {#two-zero-zero}
+
+**Release date: April 28th, 2020**
+
+{{% alert type="info" %}}
+Due to upgrades to our dependencies, neither version of Make It Native 2.0.0 is backwards compatible with versions older than Studio Pro 8.9. To keep working with older versions of Studio Pro, install a version from [the archive](/refguide/getting-the-make-it-native-app#direct-links). 
+{{% /alert %}}
+
+### New Features
+
+* We added support for all new Mendix Studio Pro 8.9 features. 
+* On iOS the Atlas UI sample app has been updated to showcase all the new features of the platform.
 
 ## Android 1.3.0 / iOS 1.3.0
 
 **Release date: April 1st, 2020**
 
 {{% alert type="info" %}}
-If you are working in Mendix Studio Pro 8.8 or higher, you must update your Make It Native app to this version.
+If you are working in Mendix Studio Pro 8.8 or higher, you must update your Make It Native app to this version. 
+
+For older versions of Studio Pro please install the appropriate legacy app [here](/refguide/getting-the-make-it-native-app#direct-links).
 {{% /alert %}}
 	
 ### New Features

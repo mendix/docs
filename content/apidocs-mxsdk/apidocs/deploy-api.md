@@ -1,6 +1,7 @@
 ---
 title: "Deploy API"
 category: "API Documentation"
+menu_order: 4
 description: "APIs which can be used to deploy Mendix apps to licensed nodes"
 tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -579,7 +580,7 @@ Content-Disposition: form-data; name="calc_1.0.0.45.mda"
 
 Curl example:
 ```bash
-curl -v -F "file=@%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.45.mda"  -X POST -H "Mendix-Username: richard.ford51@example.com" -H "Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6" "https://deploy.mendix.com/api/1/calc/packages/upload"
+curl -v -F "file=@%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.45.mda"  -X POST -H "Mendix-Username: richard.ford51@example.com" -H "Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6" "https://deploy.mendix.com/api/1/apps/calc/packages/upload"
 ```
 
 #### 3.10.3 Output

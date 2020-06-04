@@ -89,8 +89,8 @@ kubectl -n $OPERATOR_NAMESPACE patch operatorconfiguration mendix-operator-confi
 Set the type to `on-demand` for all Storage Plans:
 
 ```shell
-kubectl get storageplan --no-headers=true -o name | sed -e 's/.*\///g' | \
-  xargs -I {} kubectl patch storageplan {} --type=merge -p '{"spec":{"type":"on-demand"}}'
+kubectl -n $OPERATOR_NAMESPACE get storageplan --no-headers=true -o name | sed -e 's/.*\///g' | \
+  xargs -I {} kubectl -n $OPERATOR_NAMESPACE patch storageplan {} --type=merge -p '{"spec":{"type":"on-demand"}}'
 ```
 
 ### Start the Mendix Operator

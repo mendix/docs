@@ -10,7 +10,7 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
-### June 5th, 2020
+### June 8th, 2020
 
 #### Mendix for Private Cloud — Mendix Operator v1.1.0
 

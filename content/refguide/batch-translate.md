@@ -54,7 +54,7 @@ In **Translation**, type new text that you want to use instead of the existing t
 
 If you have two texts which are identical in the source language but different in the translation language, you will have to review and change these individually. This is not very common but imagine, for example, you have used `Order Lines` to both *describe the lines on an order* and to *label a button which sorts some lines*. See [Working in the Currently Selected Language](tranlatable-texts#selected-language) in *Language Menu* to find how to change individual texts.
 
-## 3 Exporting & Importing Text
+## 3 Exporting & Importing Text{#export-import}
 
 If you want to translate a language outside Studio Pro, you can export the translatable texts to the Microsoft Excel (*.xlsx*) format, make changes, and then import the changes from the updated Excel file.
 

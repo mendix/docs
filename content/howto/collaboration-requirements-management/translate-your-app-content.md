@@ -61,9 +61,87 @@ To add an additional language, do the following:
 
 You will see that the default language is still *English, United States* which is what you want the end-user to see if they do not choose Russian as their language.
 
-**XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
+## 3 Changing the Current Language
 
-## 3 Changing the Development Language {#changingthedevelopmentlanguage}
+The current language is the language where any text you enter is stored. You can see which language is the current language at the status bar at the bottom right of the Studio Pro window.
+
+To change your current language to Russian, do the following:
+
+1. Click the language indicator in the status bar.
+2. Click **Russian, Russia** to make that your current language.
+	![Change the current language](attachments/translate-your-app-content/change-language.png)
+
+If you do further development later on, you will need to remember to change back to your default language so that any new text is recorded there and not in a translated dictionary.
+
+## 4 Translating an Individual Piece of Text
+
+Now that your current language is Russian, you can translate some of the texts into that language
+
+1. Open the **Home_Web** page in Studio Pro.
+	You will see that untranslated texts appear in the default language (English, United States) between angle brackets `<>`.
+2. Enter your translation for the two text items on the page
+	![Home page with translated text](attachments/translate-your-app-content/placeholder.png)
+
+You have now added a translation for these two pieces of text.
+
+## 5 Using Batch Translate
+
+You could translate each piece of text individually. However, there are texts which appear multiple times, for example **Save**, **Edit**, and **New**.
+
+Mendix offers you a way to add a translation for all occurrences of a text at once.
+
+### 5.1 Translating Multiple Texts
+
+To translate multiple occurrences and multiple texts from the default language, English, to Russian in a single operation, do the following.
+
+1. Select the menu option **Language > Batch Translate…**.
+2. Select *English, United States* as the **Source language** and *Russian, Russia* as the **Destination language**.
+	![Select English and Russian as source and destination languages](attachments/translate-your-app-content/batch-translate-languages.png)
+3. Click **OK**.
+	You initially want to work just on your module, rather than everything.
+4. Click **Select…** next to **Documents/modules**. This will currently be set to *(all).
+5. Check only the module **MyFirstModule** to restrict batch translation to this module.
+	![Select only MyFirstModule](attachments/translate-your-app-content/batch-translate-myfirstmodule.png)
+6. Click **OK**.
+	You can now see all the translatable texts in your module. The individual translations you made in the previous section are shown in the *Russian, Russia* column. The **#** column shows the number of times 
+	![Translatable texts in MyFirstModule](attachments/translate-your-app-content/placeholder.png)
+7. 
+### 5.2 Dealing With More Complex Translations
+
+Translate a single text in original language with multiple texts in new language – need a good example
+
+## 6 Replacing Text in Current Language
+
+Batch replace – replacing with a better text
+For example changing multiple occurrences to be title case
+
+## 7 Copying to a New Language
+
+add Belarusian and then copy all the Russian into that to demonstrate that you could use it as a starter
+
+## 8 Other Considerations
+
+Now you know how to make translations of translatable texts, there are a couple of other things you may wish to investigate.
+
+### 8.1 Completeness
+
+You will probably want to know that you haven't missed any text that should have been translated, and it is a big task to go through your app manually and check every piece of text.
+
+Mendix provides you with a completeness check for your languages. You can set this by editing the language in **Language Settings**. You will then receive warnings about all text which has not been translated into that language. There is always a completeness check for the default language.
+
+For more information, see [Advanced Language Settings](/refguide/language-settings#advanced) in the *Language Settings* reference guide.
+
+### 8.2 Sharing Translations With Other Apps
+
+You have seen how you can create translations easily and even copy your new translation to a new language in the current app.
+
+But what if you have several apps and want to add Russian to all of them. You might be happy to translate your own modules from scratch, but you won't want to translate the system module, administration module, and Atlas UI all over again as they don't change and you already have perfect translations for these.
+
+Mendix allows you to export a translation to an Excel file, either for the whole app or just selected modules. You can then import this translation to another app and have your translation available to you.
+
+For more information, see [Exporting & Importing Text](/refguide/batch-translate#export-import) in the *Batch Translate* reference guide.
+
+**XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
 
 The development language is the language used to define translatable texts as you develop your app in Studio Pro. For example, if you select **Dutch, Netherlands** as the development language, any labels that you type during the development of your app in Studio Pro will be added to your app project's Dutch dictionary. The Dutch translation of your app will be seen by users of your app who set Dutch as their preferred language in their profile (if they do not specify a preferred language, the app project default language will be used).
 

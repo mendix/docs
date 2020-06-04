@@ -50,7 +50,7 @@ The **Caption** property defines a text that will be shown on the sidebar toggle
 
 #### 2.3.3 Tooltip
 
-The **Tooltip** property determines a text end-users will see in the tooltip that appears when they hover over the sidebar toggle. The tooltip text is translatable. For more information on translatable texts, see [Translatable Texts](translatable-texts). If the tooltip is not specified, no tooltip will be shown when hovering over the sidebar toggle.
+The **Tooltip** property determines a text end-users will see in the tooltip that appears when they hover over the sidebar toggle. The tooltip text is translatable. For more information on translatable texts, see [Language Menu](translatable-texts). If the tooltip is not specified, no tooltip will be shown when hovering over the sidebar toggle.
 
 #### 2.3.4 Icon {#icon}
 

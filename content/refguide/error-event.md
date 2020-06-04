@@ -6,7 +6,7 @@ tags: ["studio pro", "error event", "event"]
 ---
 
 {{% alert type="info" %}}
-This activity can only be used in microflows, not in nanoflows.
+This event can only be used in **Microflows**.
 {{% /alert %}}
 
 ## 1 Introduction

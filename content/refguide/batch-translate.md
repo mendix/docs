@@ -52,7 +52,7 @@ In **Translation**, type new text that you want to use instead of the existing t
 
 ![](attachments/language/batch-translate-translate.png)
 
-If you have two texts which are identical in the source language but different in the translation language, you will have to review and change these individually. This is not very common but imagine, for example, you have used `Order Lines` to both *describe the lines on an order* and to *label a button which sorts some lines*. See [Working in the Currently Selected Language](tranlatable-texts#selected-language) in *Language Menu* to find how to change individual texts.
+If you have two texts which are identical in the source language but different in the translation language, you will have to review and change these individually. This is not very common but imagine, for example, you have used `Order Lines` to both *describe the lines on an order* and to *label a button which sorts some lines*. See [Working in the Currently Selected Language](translatable-texts#selected-language) in *Language Menu* to find how to change individual texts.
 
 ## 3 Exporting & Importing Text
 

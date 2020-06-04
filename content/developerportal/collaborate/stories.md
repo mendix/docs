@@ -32,6 +32,8 @@ Here, you should fill in some details, including the name of the Sprint or relea
 
 [**ADD TABLE WITH FIELDS**]
 
+[**ADJUST WIDTH OF ALL SCREENSHOTS**] 
+
 ### 2.2 Creating a New Story
 
 Each Sprint contains a number of stories that describe the specific functionality to be implemented, built, or fixed. The size of each story can be indicated by allocating it a number of Story points.
@@ -92,6 +94,11 @@ When you select a history item and click **Show item**, the details of the story
 
 ## TO INCORPORATE
 
+-footnote on moving nested issues
+-if you delete a story, it's totally gone
+-prohject history: includes stories, could include feedback items, etc.
+-story details: add in
+-next 1-2 weeks
 
 When you select a story, you can perform the following actions (these actions support multi-selection of stories, except for the **Clone** action):
 

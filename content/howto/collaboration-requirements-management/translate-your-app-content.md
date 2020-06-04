@@ -40,7 +40,7 @@ To create your app, do the following:
 5. Ensure both entities are selected and click **OK**.
 	This will generate some pages containing text for you to translate.
 6. Open the page **Product_NewEdit** and add a new **Button** widget.
-7. Label the new button **Order**. Ignore any warnings about the setup of this button.
+7. Label the new button **Order**. This button will be used to allow the end-user to order the product they are viewing. Ignore any warnings about the setup of this button.
 	![Product New Edit page with an Order button](attachments/translate-your-app-content/order-button.png)
 8. Open the page **Home_Web** and put some text into the title and subtitle.
 	![Product New Edit page with an Order button](attachments/translate-your-app-content/home-page-text.png)
@@ -80,13 +80,13 @@ Now that your current language is Russian, you can translate some of the texts i
 1. Open the **Home_Web** page in Studio Pro.
 	You will see that untranslated texts appear in the default language (English, United States) between angle brackets `<>`.
 2. Enter your translation for the two text items on the page
-	![Home page with translated text](attachments/translate-your-app-content/placeholder.png)
+	![Home page with translated text](attachments/translate-your-app-content/home-page-russian.png)
 
 You have now added a translation for these two pieces of text.
 
 ## 5 Using Batch Translate
 
-You could translate each piece of text individually. However, there are texts which appear multiple times, for example **Save**, **Edit**, and **New**.
+You could translate each piece of text individually. However, there are texts which appear multiple times, for example **Cancel**, **Delete**, and **Edit**.
 
 Mendix offers you a way to add a translation for all occurrences of a text at once.
 
@@ -104,11 +104,33 @@ To translate multiple occurrences and multiple texts from the default language, 
 	![Select only MyFirstModule](attachments/translate-your-app-content/batch-translate-myfirstmodule.png)
 6. Click **OK**.
 	You can now see all the translatable texts in your module. The individual translations you made in the previous section are shown in the *Russian, Russia* column. The **#** column shows the number of times 
-	![Translatable texts in MyFirstModule](attachments/translate-your-app-content/placeholder.png)
-7. 
+	![Translatable texts in MyFirstModule](attachments/translate-your-app-content/batch-translate-initial.png)
+7. Enter translations in the destination language (**Russian, Russia**) column for a few terms: **Cancel**, **Delete**, and **Edit** for example.
+	![Translate Cancel, Delete, and Edit into Russian](attachments/translate-your-app-content/batch-translate-cancel-delete-edit.png)
+8. Click **Translate** to save the current translations.
+9. **Close** the batch translate dialog and look at the page **Product_NewEdit**. You will see that these terms now have Russian translations.
+	![Product New Edit page showing the cancel button translated into Russian](attachments/translate-your-app-content/product-new-edit-partial-translation.png)
+
 ### 5.2 Dealing With More Complex Translations
 
-Translate a single text in original language with multiple texts in new language – need a good example
+Sometimes a single word in the source language does not have a single translation in the destination language.
+
+Follow the steps below to see how to deal with this situation.
+
+1. Follow steps **1** through **6** in the previous section to again see a list of texts in your module which can be translated from English, United States to Russian, Russia.
+2. Type *Order* in the **Source text contains** field.
+3. Click the translatable text `Order`. You can see that there are three places that this text is used, and they are listed at the bottom of the dialog box.
+	![All source texts containing the word 'order' with the locations of the text 'order' shown](attachments/translate-your-app-content/batch-translate-order.png)
+	One of the locations of the text `Order` is an action button on the Product_NewEdit page. This was the button we added above whose purpose is to allow the end-user to order the product.
+4. Double-click on the **Action button …** object to confirm that this is the button we were planning to use to order the product.
+	![Order button on Product New Edit page](attachments/translate-your-app-content/product-new-edit-order.png)
+
+The text `Order` is being used to refer to the Order entity, but also the command to order a product. In Russian these are two different words.
+
+To solve this issue, you can do the following:
+
+1. 
+
 
 ## 6 Replacing Text in Current Language
 

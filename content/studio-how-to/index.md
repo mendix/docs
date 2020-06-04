@@ -20,3 +20,4 @@ The *Studio 8 How-to's* are divided into the following categories:
 * [Pages](pages) – focuses on building various page patterns, such as building a form or a list, as well configuring different functionality, for example, filtering data in a list 
 * [Domain Model](domain-model) – explains how to configure a domain model and its elements
 * [Microflows](microflows) – focuses on configuring various microflow elements and activities, such as configuring a decision
+* [Security](security) – explains how to secure your app and add user roles to it

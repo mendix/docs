@@ -20,7 +20,8 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
     * Use different root certificates for each path
         {{% alert type="info" %}}Existing configurations will not be changed and environments can be restarted safely.<br/><br/>To migrate to the new ARPs, you must remove **all** existing ARPs and replace them with *clones* that you have edited using the latest Developer Portal.<br/>In other words **Clone** the existing ARPs, **Edit** the CAs, and **Apply** the new ARPs to all paths.{{% /alert %}}
         For more information see [How To Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions).
-    
+        
+    You will need to redeploy your app in order to apply the new ARP(s).
 
 ### May 1st, 2020
 

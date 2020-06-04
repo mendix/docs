@@ -38,13 +38,16 @@ kubectl -n $OPERATOR_NAMESPACE scale deployment mendix-operator --replicas=0
 
 ### Upgrading CRDs
 
+Run the following command to upgrade to the latest version of CRDs:
+
 ```shell
-# TODO: WRITE ME
+kubectl apply -f https://installergen.private-cloud.api.mendix.com/privatecloud/crds/v1
 ```
 
 ### Upgrading the Mendix Operator Deployment
 
 Run the following command to switch to the Mendix Operator version 1.1.0:
+
 ```shell
 kubectl -n $OPERATOR_NAMESPACE patch deployment mendix-operator -p \
   '{"spec":{"template":{"spec":{"containers":[{"name":"mendix-operator","image":"quay.io/digital_ecosystems/mendix-operator:1.1.0"}]}}}}'

@@ -1,5 +1,5 @@
 ---
-title: "Test the Implementation"
+title: "Test the Push Notifications Implementation"
 parent: "push-notifications"
 menu_order: 60
 tags: ["mobile", "push notification"]

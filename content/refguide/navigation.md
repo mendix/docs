@@ -127,16 +127,13 @@ Allows for changing the [profile type](navigation).
 
 This deletes the profile. If [menu widgets](menu-widgets) are still referring to the profile, errors will appear. It is possible to undo the deletion of a profile.
 
-#### 4.3.2 Sync configuration
+#### 4.3.2 Sync Configuration {#customize}
 
 Only available on profiles supporting offline synchronization.
 
-This opens the **Customize offline synchronziation** dialog which is used for overriding offline synchronization settings for specific entities. For each entity the download setting is shown. A default is automatically determined by analyzing the model, but can be overridden in which case the setting will appear in boldface. The download settings are one of the following:
+This opens the **Customize offline synchronziation** dialog box that is used for overriding offline synchronization settings for specific entities. For each entity the download setting is shown. A default is automatically determined by analyzing the model, but can be overridden in which case the setting will appear in boldface. For more details on the settings and when to use them, see the [Offline-First Reference Guide](offline-first#customizable-synchronization).
 
-* All objects – download all objects of this entity type
-* By XPath – download only those objects matching the specified [XPath constraint](xpath-constraints) 
-* Nothing – download none of the objects of this entity type
-  ![](attachments/navigation/customize-offline-synchronization.png)
+![](attachments/navigation/customize-offline-synchronization.png)
 
 ## 5 Read More
 

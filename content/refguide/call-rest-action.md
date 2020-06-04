@@ -176,7 +176,7 @@ See [String Template](#string-template), above, for more information on construc
 
 These are the options in the drop-down menu for handling the response:
 
-* **Apply import mapping** – if the response is JSON or XML, it can be transformed directly into objects using an [import mapping](import-mappings). The fields that you can choose here are described in the [Import Mapping action](import-mapping-action)
+* **Apply import mapping** – if the response is JSON or XML, it can be transformed directly into objects using an [import mapping](import-mappings); the fields that you can choose here are described in the [Import Mapping action](import-mapping-action)
 * **Store in an HTTP response** – any successful HTTP response can be stored directly in an [HttpResponse](http-request-and-response-entities#http-response) object, and the [$latestHttpResponse](#latesthttpresponse) variable is also updated
 * **Store in a file document** – if the response contains binary content (for example, a PDF), it can be stored in an object of an entity type which inherits from `System.FileDocument`
 * **Store in a string** – if the response is a string (for example, CSV), it can be stored directly in a string variable
@@ -197,6 +197,8 @@ If HTTP response status code is not successful (for example, `[4xx]` or `[5xx]`)
 {{% alert type="warning" %}}
 You should always add an error handler for a [call REST service](/refguide/call-rest-action) action.
 {{% /alert %}}
+
+#### 5.3.1 $latestHttpResponse Object {#latesthttpresponse}
 
 The `$latestHttpResponse` object is of the [HttpResponse](http-request-and-response-entities#http-response) type. It is created by the **Call REST service** action. However, its `Content` attribute will be left empty in most cases to minimize memory usage.
 

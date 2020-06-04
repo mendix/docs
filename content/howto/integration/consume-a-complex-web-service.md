@@ -143,7 +143,6 @@ To configure the web service call, follow these steps:
 * [Import Excel Documents](importing-excel-documents)
 * [Expose a Web Service](expose-a-web-service)
 * [Use Selenium Support](selenium-support)
-* [Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [Import XML Documents](importing-xml-documents)
 * [Consume a REST Service](consume-a-rest-service)
 * [Expose Data to BI tools Using OData](exposing-data-to-bi-tools-using-odata)

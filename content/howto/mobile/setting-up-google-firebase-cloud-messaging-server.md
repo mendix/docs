@@ -58,7 +58,7 @@ To create a project, do the following:
 
 Before you add an app to FCM, you must retrieve your app's bundle ID. Its location depends on your type of your mobile app.
 
-For a native app, your bundle ID will be what you specify for the `--application-id` parameter. You can find this ID later in your generated GitHub repo:
+For a native mobile app, your bundle ID will be what you specify for the `--application-id` parameter. You can find this ID later in your generated GitHub repo:
 
 * For Android, open *android/app/build.gradle* and consult **applicationId** to find your ID 
 * For iOS, open *ios/Config/config.xcconfig* and consult **BUNDLE_IDENTIFIER** to find your ID

@@ -25,7 +25,7 @@ Using this widget for Mendix [hybrid mobile](/refguide/hybrid-mobile) applicatio
 * Closes the current page so that when a back or close action is performed on the next page, the app is closed
 * Shows the page upon device information retrievable
 
-### 1.2 Typical Usage Scenarios
+### 1.2 Typical Use Cases
 
 #### 1.2.1 Device-Based Settings
 

@@ -10,7 +10,7 @@ tags: ["Deployment", "On premises", "Environment"]
 
 When designing your server architecture, there are an infinite number of possibilities for how you can set up your environment. There is no right or wrong configuration, because it all depends on your security, availability, and performance requirements.
 
-The options below are just a few examples of the most commonly used architecture setups. The Mendix cloud uses a (more complex) architecture based on hosting with a separate database server (for details, see [3.2 Hosting with a Separate Database Server (Option 2)](#Option2)) without a separate file server and with a proxy server to redirect traffic to the correct environment.
+The options below are just a few examples of the most commonly used architecture setups. The Mendix cloud uses a (more complex) architecture based on hosting with a separate database server (for details, see [Hosting with a Separate Database Server (Option 2)](#Option2)) without a separate file server and with a proxy server to redirect traffic to the correct environment.
 
 **This how-to will teach you how to do the following:**
 

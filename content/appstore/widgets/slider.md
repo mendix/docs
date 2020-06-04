@@ -21,7 +21,9 @@ The [Slider](https://appstore.home.mendix.com/link/app/48786/) widget can be use
 
 For a demo app project that has been deployed with this widget, see [here](https://slider.mxapps.io/).
 
-## 2 Properties
+## 2 Configuration
+
+The following properties must be configured:
 
 * **Value attribute** – the selected value on the slider
 * **Range minimum attribute** – the attribute that contains the minimum slider value; if not provided, **Default minimum value** is used
@@ -61,4 +63,4 @@ We are actively maintaining this widget. Please report any issues or suggestions
 
 ## 5 Read More
 
-* [Native Styling](https://docs.mendix.com/refguide/native-styling-refguide)
+* [Native Mobile Styling Reference Guide](https://docs.mendix.com/refguide/native-styling-refguide)

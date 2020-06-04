@@ -1,14 +1,14 @@
 ---
-title: "Debug Native Apps (Advanced)"
+title: "Debug Native Mobile Apps (Advanced)"
 parent: "native-mobile"
 menu_order: 40
-description: A how-to for debugging native app projects using the Make It Native app.
+description: A how-to for debugging native mobile app projects using the Make It Native app.
 tags: ["native", "mobile", "debug", "Make It Native"]
 ---
 
 ## 1 Introduction
 
-When changing your native app or designing a custom widget, you may need to debug your implementation. The Make It Native app exposes a developer mode which supports debugging native apps for expert developers. Using Google Chrome is recommended for this, as it starts automatically during debugging.
+When changing your native mobile app or designing a custom widget, you may need to debug your implementation. The Make It Native app exposes a developer mode which supports debugging native mobile apps for expert developers. Using Google Chrome is recommended for this, as it starts automatically during debugging.
 
 ## 2 Debugging Your Native App
 
@@ -62,4 +62,4 @@ After running `react-devtools` you will see the React developer tools GUI. To us
 
 * [Get Started with Native Mobile](getting-started-with-native-mobile)
 * [Debug a Mobile App with Mendix](debug-a-mobile-app)
-* [Work with Parallels](using-mendix-studio-pro-on-a-mac)
+* [Build Native Mobile Apps with Parallels](using-mendix-studio-pro-on-a-mac)

@@ -25,7 +25,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Importing the PushNotifications Module from the App Store
 
-The [Push Notifications Connector module](https://appstore.home.mendix.com/link/app/3003/) is published in the Mendix App Store. To import it into your project, click **App Store** in the top right of Modeler, which will open the App Store in a new tab. Search for "Push Notifications Connector" and click the title of the result:
+The [Push Notifications Connector module](/appstore/modules/push-notifications) is published in the Mendix App Store. To import it into your project, click **App Store** in the top right of Modeler, which will open the App Store in a new tab. Search for "Push Notifications Connector" and click the title of the result:
 
 ![](attachments/19955732/20218020.png)
 
@@ -43,7 +43,7 @@ The PushNotifications module has two dependencies:
 
  * [Encryption](/appstore/modules/encryption) module
  * [Community Commons Function Library](/appstore/modules/community-commons-function-library)
- 
+
 To include these dependencies, download them from the App Store in a way similar to how you installed the PushNotifications module. While importing, you may get a pop-up window with information about overwriting project files, which you can confirm by clicking **OK**.
 
 {{% alert type="info" %}}
@@ -74,9 +74,10 @@ Please do not remove the button with the caption **Device Registration reference
 
 The PushNotifications module contains a microflow named **AfterStartup_PushNotifications** that will start the APNs connector for you. Call this microflow from your **AfterStartup** microflow.
 
-If your project already has a microflow set to execute after startup, we suggest to change your startup microflow to a new microflow, from where you call both after startup microflows.
+If your project already has a microflow set to execute after startup, we suggest to change your startup microflow to a new microflow, from where you call both after startup microflows. Reference the microflow below:
 
-<iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/02c590e5-f8bf-4f0e-90d6-3719390ee863/onstartupacsandpushnotifications?embed=true" allowfullscreen=""></iframe>
+![](attachments/19955732/after-startup-microflow.png)
+
 
 ## 7 Setting Up the Administration Pages {#setting}
 

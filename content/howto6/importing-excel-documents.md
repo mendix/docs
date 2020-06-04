@@ -232,7 +232,6 @@ Once you have completed an Excel template you can export the template for exampl
 *   [Importing Excel Documents](importing-excel-documents)
 *   [Exposing a web service](expose-a-web-service)
 *   [Selenium Support](selenium-support)
-*   [Synchronizing user accounts using the LDAP module](synchronizing-user-accounts-using-the-ldap-module)
 *   [Importing XML documents](importing-xml-documents)
 *   [Consuming a REST Service](consume-a-rest-service)
 *   [Export to CSV button](/refguide6/export-to-csv-button)

@@ -25,6 +25,5 @@ We want to create a large network of Mendix apps, so let's start integrating!
 * [Version a REST Service](version-rest-service) – teaches you when and how to use different versions of the same REST service published at the same time as well as deprecate old versions
 * [Expose a Web Service](expose-a-web-service) – details creating a web service and publishing a microflow as a web service operation
 * [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata) – presents details on creating a published OData service with resources, adding an OData server to Tableau and Excel, combining resources in Tableau, and creating custom queries
-* [Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module) – teaches you how to synchronize user data from your company's LDAP-compatible identity manager to your Mendix app
 * [Configure Selenium Support](selenium-support) – shows you how to use naming conventions and avoid pitfalls that will help you in using Selenium
 

@@ -242,7 +242,7 @@ Documents used to support integration should have the prefixes listed below.
 |-------------------------------------------|--------|
 | Import mapping                            | ImM\_  |
 | Export mapping                            | ExM\_  |
-| XML schema                                | XSD\_  |
+| XML schema definition                     | XSD\_  |
 | JSON structure                            | JSON\_ |
 | Deeplink                                  | Dl\_   |
 

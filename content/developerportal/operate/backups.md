@@ -10,9 +10,7 @@ tags: ["Operate", "App", "Developer Portal", "Backup"]
 
 Backups are created every night or on-demand, as described in the [Backups](#backups) section, below.
 
-Backups in the Mendix Cloud have two parts: the database and file documents. A full backup of the database is made each time, while file documents are backed up incrementally. 
-
-You can also buy a replication/failover add-on to enable incremental backups with a 15 minute interval for both the database and file documents.
+Backups in the Mendix Cloud have two parts: the database and file documents. A full backup of the database is made each time, while file documents are backed up incrementally.
 
 ## 2 Creation and Retention Schedules
 

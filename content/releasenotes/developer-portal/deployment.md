@@ -10,6 +10,19 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### June 4th, 2020
+
+#### Mendix Cloud **v4**
+
+* We introduced a new graph in the **Trends** metrics for Mendix Cloud v4. This shows the **database burst balance**. See [Database Burst Balance](/developerportal/operate/trends-v4#Trends-dbmxdatabaseburstbalance) in the *Trends in Mendix Cloud v4* document for more information.
+* In Mendix Cloud v4 we introduced changes to the Access Restriction Profile (ARP) Certificate Authorities (CAs). These changes allow you to:
+    * Have stricter access restrictions by allowing the selection of intermediate certificates instead of the root
+    * Use different root certificates for each path
+        {{% alert type="info" %}}Existing configurations will not be changed and environments can be restarted safely.<br/><br/>To migrate to the new ARPs, you must remove **all** existing ARPs and replace them with *clones* that you have edited using the latest Developer Portal.<br/>In other words **Clone** the existing ARPs, **Edit** the CAs, and **Apply** the new ARPs to all paths.{{% /alert %}}
+        For more information see [How To Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions).
+
+    You will need to redeploy your app in order to apply the new ARP(s).
+
 ### May 1st, 2020
 
 #### Mendix Cloud Dedicated

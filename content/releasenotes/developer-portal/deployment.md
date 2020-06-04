@@ -9,6 +9,7 @@ tags: ["deployment", "cloud environment", "Mendix Cloud", "SAP", "SAP Cloud", "I
 These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), other [deployment](/developerportal/deploy/) options, and app [operations](/developerportal/operate/). For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deployment options, see [Mendix Status](https://status.mendix.com/).
 
 ## 2020
+
 ### June TODO, 2020
 
 TODO: fix versions and dates
@@ -17,21 +18,19 @@ TODO: fix versions and dates
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-v1.1.0).
 
-TODO: update list
-
-* a
-* b
-* c
+* Mendix apps are now running as Kubernetes Deployments instead of StatefulSets. This will allow to use rolling updates, reducing downtime. In addition, this helps avoid situations when a StatefulSet might become stuck and stop processing any changes.
+* We are now allow to set Kubernetes resource requirements in addition to resource limits. Apps no longer require the maximum amount of CPU and memory, improving utilization of cluster resources.
+* We improved the default liveness and readiness probe configuration.
+* We have added a port to enable monitoring of Mendix apps with Prometheus.
+* We have added an option to make a storage plan dedicated so that it can be used by only one environment.
+* We have added support for Microsoft SQL server and Azure SQL databases.
+* We have fixed a regression which prevented Private Cloud to install when using kubectl 1.18.
 
 #### Mendix for Private Cloud — Mendix Gateway Agent v1.1.0
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#agent-v1.1.0).
 
-TODO: update list
-
-* a
-* b
-* c
+* We have improved reliability of event processing and cluster authentication.
 
 ### June 4th, 2020
 

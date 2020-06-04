@@ -1459,5 +1459,5 @@ The developer needs to have the class names memorized to apply a certain group b
 
 * [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets)
 * [How to Implement Native Mobile Styling](/howto/mobile/native-styling)
-* [Native Styling Reference Guide](/refguide/native-styling-refguide)
+* [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide)
 * [How to Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)

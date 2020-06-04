@@ -162,6 +162,8 @@ For more information, see [Custom Domains](custom-domains).
 
 In this tab you can manage custom access restriction profiles. These profiles can combine IP range filters and client certificate verification. Access restriction profiles can be applied to path-based access restrictions in specific environments of the application.
 
+For more information on setting up access restriction profiles, see [Restrict Access for Incoming Requests](access-restrictions)
+
 ## 5 Read More 
 
 * [Deploy and Manage](/developerportal/deploy)

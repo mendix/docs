@@ -8,7 +8,7 @@ tags: ["Register", "Private Cloud", "Cluster"]
 
 ## 1 Introduction
 
-To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to register a cluster in the Mendix Developer Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Agent** in your OpenShift context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
+To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to register a cluster in the Mendix Developer Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Gateway Agent** in your OpenShift context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
 
 ![](attachments/private-cloud-cluster/mx4pc-architecture.png)
 
@@ -66,7 +66,7 @@ To register a cluster in your OpenShift context, you need the following:
 
 You will see the details of the cluster you are registering on a screen with two scripts.
 
-The first script is the installation script which will install the Mendix operator and Mendix agent in your cluster. Once that is done, you can run the second script which allows you to configure your cluster.
+The first script is the installation script which will install the Mendix operator and Mendix Gateway Agent in your cluster. Once that is done, you can run the second script which allows you to configure your cluster.
 
 ![](attachments/private-cloud-cluster/image8.png)
 
@@ -119,7 +119,7 @@ The installation is successful if the response ends with **Installation Successf
 
 ![](attachments/private-cloud-cluster/image13.png)
 
-The Mendix operator and Mendix agent are now installed on your platform. If you look at the project resources in the OpenShift console, you can see the mendix-operator resource.
+The Mendix operator and Mendix Gateway Agent are now installed on your platform. If you look at the project resources in the OpenShift console, you can see the mendix-operator resource.
 
 ![](attachments/private-cloud-cluster/image14.png)
 

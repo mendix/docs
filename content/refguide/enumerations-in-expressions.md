@@ -10,7 +10,7 @@ Enumerations are referenced by <modulename>.<enumerationname>.<enumerationvalue>
 
 For example, you have a module called *OrderProcessing*, in which an enumeration *Status* is defined with two possible values: *started* and *completed*. 
 
-For example, to set the value of an attribute in a change list, object, or variable activitiy to "completed", use the following input:
+To set the value of an attribute in a change list, object, or variable activity to *completed*, use the following input:
 
 ```java
 OrderProcessing.Status.completed
@@ -31,13 +31,11 @@ The `getCaption` function takes an enumeration value and returns the caption of 
 
 ### 2.1 Input Parameters
 
-*   an enumeration value
-    Type: any enumeration
+As an input parameter you can use an enumeration value of any enumeration.
 
 ### 2.2 Output
 
-The caption of the enumeration value in the current language.
-Type: String
+The expression will return a string: the caption of the enumeration value in the current language. 
 
 ### 2.3 Example
 
@@ -55,17 +53,15 @@ Gouden
 
 ## 3 getKey
 
-The `getKey` function takes an enumeration value and returns the key (called Name in Studio Pro) of this value. The key is the technical name for the enumeration value and is language independent. For more information, see [Enumerations](enumerations).
+The `getKey` function takes an enumeration value and returns the key (called *Name* in Studio Pro) of this value. The key is the technical name for the enumeration value and is language independent. For more information, see [Enumerations](enumerations).
 
 ### 3.1 Input Parameters
 
-*   an enumeration value
-    Type: any enumeration
+As an input parameter you can use an enumeration value of any enumeration.
 
 ### 3.2 Output
 
-The key/name of the enumeration value
-Type: String
+The expression will return a string: the key (name) of the enumeration value in the current language.  
 
 ### 3.3 Example
 

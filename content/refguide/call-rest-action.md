@@ -198,14 +198,6 @@ If HTTP response status code is not successful (for example, `[4xx]` or `[5xx]`)
 You should always add an error handler for a [call REST service](/refguide/call-rest-action) action.
 {{% /alert %}}
 
-#### 5.3.1 $latestHttpResponse Object {#latesthttpresponse}
-
-The `$latestHttpResponse` object is of the [HttpResponse](http-request-and-response-entities#http-response) type. It is created by the **Call REST service** action. However, its `Content` attribute will be left empty in most cases to minimize memory usage.
-
-When the **Store message body in $latestHttpResponse variable** option is selected, `$latestHttpResponse/Content` will be filled with the response body. This might contain some useful information provided by the server (for example, why the authentication is rejected).
-
-The Content attribute of $latestHttpResponse will also be filled if **Response handling** is **Store in an HTTP response** and the call succeeded.
-
 ## 8 Common Section{#common}
 
 {{% snippet file="refguide/microflow-common-section-link.md" %}}

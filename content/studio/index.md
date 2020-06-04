@@ -22,7 +22,7 @@ Studio enables you to do the following:
 * Visually model the interactions and flow control of an application
 * Leverage your enterprise design language to create engaging apps that conform to company standards beyond branding and theming 
 
-## 2 Document Categories
+## 2 Guide Categories
 
 The *Studio 8 Guide* is divided into the following categories:
 

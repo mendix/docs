@@ -24,4 +24,4 @@ Use the [Atlas UI Reference & Custom Styling](https://appstore.home.mendix.com/l
 After installing this theme in your app project, run your app locally and do the following:
 
 * To view the app in a phone wrapper, add `/index-phone-preview.html` after your app's URL 
-* To view the app in a table wrapper, add `/index-tablet-preview.html` after your app's URL 
+* To view the app in a tablet wrapper, add `/index-tablet-preview.html` after your app's URL 

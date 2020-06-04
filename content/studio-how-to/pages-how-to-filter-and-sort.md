@@ -2,7 +2,7 @@
 title: "Filter and Sort Items in a List"
 category: "Pages"
 description: "Describes how to filter and sort items in a list in Mendix Studio."
-menu_order: 40
+menu_order: 50
 tags: ["studio", "pages", "list", "how to", "filter", "sort"]
 ---
 

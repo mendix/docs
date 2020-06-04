@@ -1,16 +1,16 @@
 ---
-title: "Native Styling"
+title: "Native Mobile Styling"
 parent: "native-mobile"
 menu_order: 20
-description: "This reference guide will contextualize the style elements Mendix uses in native apps, as well as explain the classes and style properties of Mendix’s widgets."
+description: "This reference guide will contextualize the style elements Mendix uses in native mobile apps, as well as explain the classes and style properties of Mendix’s widgets."
 tags: ["Native", "Class", "Design", "Property", "Style", "Widget", "studio pro"]
 ---
 
 ## 1 Introduction
 
-This reference guide will contextualize the style elements Mendix uses in native apps, as well as explain the classes and style properties of Mendix’s widgets. To learn the basics of native styling, you can consult [Native Styling](/howto/mobile/native-styling) and then follow the [Style Your Mendix Native App](/howto/mobile/how-to-use-native-styling) how-to.
+This reference guide will contextualize the style elements Mendix uses in native mobile apps, as well as explain the classes and style properties of Mendix’s widgets. To learn the basics of native styling, you can consult [How to Implement Native Mobile Styling](/howto/mobile/native-styling) and then follow [How to Style Your Mendix Native Mobile App](/howto/mobile/how-to-use-native-styling).
 
-Mendix apps use layouts to dictate how pages can look and function. For native apps specifically, you can use a native layout to easily integrate navigation and settings optimized for native functionality. For more information on layouts, see [Layout](layout).
+Mendix apps use layouts to dictate how pages can look and function. For native mobile apps specifically, you can use a native layout to easily integrate navigation and settings optimized for native functionality. For more information on layouts, see [Layout](layout).
 
 To keep widgets responsive, Mendix apps use Flexbox. Using Flexbox, a component can set the layout of its child components. This allows your app to retain a consistent layout across multiple form factors. For more information on layout, see React Native’s [Flexbox documentation](https://reactnative.dev/docs/flexbox).
 
@@ -73,7 +73,7 @@ export const com_mendix_widget_native_badge_Badge = (Badge = {
 });
 ```
 
-For more information on creating your own classes, see the [Creating Your Own Classes](/howto/mobile/how-to-use-native-styling#6-creating-your-own-classes) section in *How To Use Native Styling*. That document also shows how to use custom classes as design properties.
+For more information on creating your own classes, see the [Creating Your Own Classes](/howto/mobile/how-to-use-native-styling#6-creating-your-own-classes) section in *Style Your Mendix Native Mobile App*. That document also shows how to use custom classes as design properties.
 
 ## 3  Data Widgets {#understanding-data-widgets}
 
@@ -1181,6 +1181,6 @@ The default class to style all popup menus is named `com_mendix_widget_native_ca
 
 ## 12 Read More
 
-* [Style Your Mendix Native App](/howto/mobile/how-to-use-native-styling)
-* [Implement Native Styling](/howto/mobile/native-styling)
+* [How to Style Your Mendix Native Mobile App](/howto/mobile/how-to-use-native-styling)
+* [How to Implement Native Mobile Styling](/howto/mobile/native-styling)
 * [Design Properties Documentation](/apidocs-mxsdk/apidocs/design-properties)

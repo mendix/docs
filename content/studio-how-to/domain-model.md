@@ -1,7 +1,6 @@
 ---
 title: "Domain Model"
 description: "A landing page for Studio how-to's on the domain model."
-menu_order: 20
 tags: ["studio", "domain model", "how-to"]
 ---
 

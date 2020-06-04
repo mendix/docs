@@ -15,14 +15,14 @@ The [Microflow Timer](https://appstore.home.mendix.com/link/app/27/) widget can 
 * Update a grid or object after a certain amount of time (for example, a message inbox)
 * Close a page with a message automatically after 10 seconds
 * Automatically make backup copies while the user is still editing an object
-* Open a page and directly trigger validation errors (to achieve this, set **Interval (in ms)** to *0*, **Execute once** to **Yes**, and **Start at once** to **Yes** – see [Properties](#properties) below)
+* Open a page and directly trigger validation errors (to achieve this, set **Interval (in ms)** to *0*, **Execute once** to **Yes**, and **Start at once** to **Yes** – see [Configuration](#configuration) below)
 
 ### 1.2 Features
 
 * Add timed behavior to your application
 * Run a microflow or nanoflow
 
-## 2 Configuration
+## 2 Configuration {#configuration}
 
 The widget requires a data view or template grid context. This object will be sent as an argument to the invoked microflow or nanoflow.
 

@@ -8,35 +8,35 @@ tags: ["native", "mobile", "deploy", "appcenter", "local"]
 
 ## 1 Introduction
 
-While the Native Builder CLI is an easy way to get started with Mendix Native Apps; sometimes you might find yourself in situations were due to connectivity or policies using Native Builder might not be possible.
+While the Native Builder command-line interface (CLI) is is the standard way to build Mendix native mobile apps, certain conditions such as limited internet connectivity might prevent you from using the Native Builder CLI. In those situations, you can build your apps locally without an internet connection.
 
-Mendix Native Apps, are first and foremost React Native (RN) apps and follow the same rules as any other React Native app:
+Mendix native mobile apps are first and foremost React Native (RN) apps and follow the same rules as other RN apps:
 
-- The JS code and static assets need to be bundled together for RN to use
-- The bundled code and assets are put into a React Native Template that represents an iOS and Android app
+* The JS code and static assets need to be bundled together for RN to use
+* The bundled code and assets are put into a React Native Template that represents an iOS and Android app
 
-In similar fashion in Mendix:
+In a similar fashion, MXBuild and the Mendix Native Template folow these rules:
 
-- Using MXBuild the JS code and static assets are bundled together
-- The bundled code and assets are put into the Mendix Native Template that represents an iOS and Android app
+* When using MXBuild, the JS code and static assets are bundled together
+* The bundled code and assets are put into the Mendix Native Template that [represents an iOS and Android app](better verb for represents? provides a foundation for both an iOS and Android version of your app)
 
 ## 2 Prerequisites {#prerequisites}
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-- Have Mac OSX machine ready
-- XCode & Cocoapods installed
-- Android SDK and platform tools installed
-- Node and NPM installed
-- Have the latest Native Builder CLI
+* Have Mac OSX machine ready
+* XCode & Cocoapods installed
+* Android SDK and platform tools installed
+* Node and NPM installed
+* Have the latest Native Builder CLI
 
-## 3 Get Native Template
+## 3 Get the Native Template
 
-Native Template is the base for building native apps with Mendix. In essence, it is a React Native template, with the extra dependencies and configurations required to run your Mendix App.
+The Native Template is the base for building native apps with Mendix. In essence, it is a React Native template, with the extra dependencies and configurations required to run your Mendix App.
 
 Native Template is versioned against Mendix Studio Pro meaning, the Studio Pro version used to create your Mendix App dictates which version of Native Template is compatible. For example when using Native Builder this is handled internally using the `--mendix-version` flag.
 
-#### Finding out the correct version of Native Template
+#### 3.1 Determine Which Native Template Version to Use
 
 1. Find out the version of Studio Pro you are using.
 

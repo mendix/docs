@@ -22,98 +22,116 @@ You can also manage the progress of tasks and Sprints from within Mendix Studio 
 
 The sections below describe the main actions to be performed on the **Stories** page.
 
-### 2.1 Creating a New Sprint
+### 2.1 Creating a New Sprint {#new-sprint}
 
 Click **New Sprint** to open the **Edit Sprint** dialog box:
 
+{{% image_container width="400" %}}
 ![](attachments/stories/new-sprint.jpg)
+{{% /image_container %}}
 
-Here, you should fill in some details, including the name of the Sprint or release and where it should be located in the structure of your **Stories** page.
+You should fill in the following details:
 
-[**ADD TABLE WITH FIELDS**]
-
-[**ADJUST WIDTH OF ALL SCREENSHOTS**] 
+| Field | Description |
+| --- | --- |
+| Name | The name of the Sprint. |
+| Sprint comes after | Where the Sprint should be located in the structure of your **Stories** page |
+| Duration (in weeks) | How many weeks the Sprint should last. |
+| Start date | The start date of the Sprint. This will be set automatically for right after the previous Sprint ends, unless the **Custom start date** box is checked and a start date is entered manually. |
 
 ### 2.2 Creating a New Story
 
-Each Sprint contains a number of stories that describe the specific functionality to be implemented, built, or fixed. The size of each story can be indicated by allocating it a number of Story points.
+Each Sprint contains a number of stories that describe the specific functionality to be implemented, built, or fixed. Click **New Story** to open the **New Story** dialog box:
 
-Click **New Story** to open the **New Story** dialog box:
-
+{{% image_container width="400" %}}
 ![](attachments/stories/new-story.jpg)
+{{% /image_container %}}
 
-Here, you should fill in some details, including what the **Story type** is (**Feature** or **Bug**) and the number of **Story points**.
+You should fill in the following details:
 
-[**ADD TABLE WITH FIELDS**]
+| Field | Description |
+| --- | --- |
+| Title |  The title of the story. |
+| Description | A description of the story.  |
+| Story type | Select whether the story describes a **Feature** or **Bug**. |
+| Story points | The size of the story. |
+| Create story in | The Sprint in which the story should be started. The default is **Backlog**. |
+| Story status | Select **To-do** (default), **Running**, or **Done**.  |
+
+You can also create a story from within a [new Sprint](#new-sprint):
+
+{{% image_container width="550" %}}
+![](attachments/stories/new-story-from-sprint.jpg)
+{{% /image_container %}}
 
 ### 2.3 More Actions
 
-Click **More** to access the following options:
-	* **Import / Export to Excel** – opens the [Import / Export to Excel](#import-export) page
-	* **Manage Labels** – opens a page where you can add or remove a label at the project level; for details, see the [Managing Labels](#managing-labels) section below
-	* **Completed Sprints** – opens a page where sprints that have been completed are archived; for details, see the [Completed Sprints](#completed-sprints) section below
-	* **History** – opens the **Project History** page; for details, see the [History](#history) section below
+Click **More** to access the following options::
+
+* **Import / Export to Excel** – opens the [Import / Export to Excel](#import-export) page
+* **Manage Labels** – opens a page where you can mangage labels at the app project level; for details, see the [Managing Labels](#managing-labels) section below
+* **Completed Sprints** – opens a page where completed sprints are archived; for details, see the [Completed Sprints](#completed-sprints) section below
+* **History** – opens the **Project History** page; for details, see the [History](#history) section below
 
 ### 2.3.1 Managing Labels {#managing-labels}
 
-Click **Manage labels** to open a page where you can list and manage your labels:
+The **Manage labels** page is where you can add or remove your labels:
 
+{{% image_container width="550" %}}
 ![](attachments/stories/labels.png)
+{{% /image_container %}}
 
-| Button | Description |
-| --- | --- |
-| New Label | allows you to create a new label and allows you to assign a color to it.<br/>You can also create a new label by typing a new label name when you are creating a story. |
-| Configure Label | allows you to change the name and/or color of an existing label. |
-| Merge Label | allows you to merge the selected label into another label.<br/>All stories which have the selected label are labeled with the other label and the selected label is deleted. |
-| Remove Label | allows you to remove the selected label from any stories to which it has been applied.<br/>The label is then deleted. |
+The following buttons are available:
+
+* **New Label** – enables creating a new label and allows you to assign a color to it.<br/>You can also create a new label by typing a new label name when you are creating a story.
+* **Configure Label** – enables changing the name and/or color of an existing label.
+* **Merge Label** – enables merging the selected label into another label.<br/>All stories which have the selected label are labeled with the other label and the selected label is deleted.
+* **Remove Label** – enables removing the selected label from any stories to which it has been applied.<br/>The label is then deleted.
 
 ### 2.3.2 Completed Sprints {#completed-sprints}
 
-Click **Completed Sprints** to open an overview of Sprints that have been completed. On this page you can perform the following actions:
+The **Completed Sprints** page presents an overview of Sprints that have been completed and archived:
 
-* **Search** – search sprints based on their id or title
-* **Edit** – edit the selected sprint
-* **View Stories** – view the stories of selected sprint
-* **Add Story** – add a story to the selected sprint
-* **Delete** – delete the selected sprint and its stories
-
+{{% image_container width="550" %}}
 ![](attachments/stories/completed-sprints.jpg)
+{{% /image_container %}}
+
+The following buttons are available:
+
+* **Search** – enables searching Sprints based on their ID or title
+* **Edit** – enables editing the selected Sprint
+* **View Stories** – enables viewing the stories of the selected Sprint
+* **Add Story** – enables adding a story to the selected Sprint
+* **Delete** – enables deleting the selected Sprint and its stories
 
 ### 2.3.4 History {#history}
 
-Click **History** to view the **Project History** of collaboration actions for the app project. On this page, you can see what change was made, who performed it, and when it occurred.
+The **Project History** page presents the collaboration actions for the app project. On this page, you can see what change was made, who performed it, and when it occurred.
 
+{{% image_container width="550" %}}
 ![](attachments/stories/history.jpg)
+{{% /image_container %}}
 
-When you select a history item and click **Show item**, the details of the story will be presented: 
+When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](feedback) will be presented.
 
 ## 3 Story Actions
 
-
-
-
-## TO INCORPORATE
-
--footnote on moving nested issues
--if you delete a story, it's totally gone
--prohject history: includes stories, could include feedback items, etc.
--story details: add in
--next 1-2 weeks
-
-When you select a story, you can perform the following actions (these actions support multi-selection of stories, except for the **Clone** action):
+When you select a story, you can perform the following actions:
 
 ![](attachments/stories/story-context-menu.jpg)
 
-* **Clone** – click this to duplicate a selected user story and its tasks, story points, status, and labels into a new user story; this can enable utilizing a user story as a template
-* **Move** –  click this to move a story to another sprint
-* **Assign Label** – click this to assign existing labels to a story
-* **Delete** – click this to delete a story
+* **Clone** – enables duplicating a selected story and its tasks, story points, status, and labels into a new user story; this can enable utilizing a user story as a template
+* **Move** –  enables moving a story to another sprint
+* **Assign Label** – enables assigning existing labels to a story
+* **Delete** – enables deleting a story
+
+{{% alert type="info" %}}
+These actions support multi-selection of stories, except for the **Clone** action.
+{{% /alert %}}
+
+### 3.1 Accessing Story Details  {#accessing-details}
 
 When you click a story title, the **Story Details** page opens. The functionality on this page can be navigated according to the [Story Details](#accessing-details) section above.
-
-#### Accessing Story Details {#accessing-details}
-
-Select a story and click **Details** (below the story title) to open the **Story Details** page. 
 
 {{% image_container width="500" %}}
 ![](attachments/stories/story-details.png)
@@ -121,7 +139,7 @@ Select a story and click **Details** (below the story title) to open the **Story
 
 On this page, you can perform a number of actions:
 
-* View the details such as **Type** and date **Created**
+* View details such as **Type** and date **Created**
 * Click **Edit** to edit the **Title**, **Description**, **Story type**, **Story points**, **Status**, and **Labels** of the story as well as see the history of edits made to the story
 * See the story's **Status** and click to update it (the available statuses are **To-do**, **Running**, and **Done**)
 * View the **Sprint** that contains the story as well as move the story via **Move to Sprint** (for details, see the [Moving Stories](#moving-stories) section below)
@@ -135,7 +153,14 @@ Also on this page, you can access the following tabs:
 * **Feedback** – here you can see the feedback item linked to the story (for details, see the [Adding a Feedback Item to Your Backlog](feedback#adding) section of *Feedback Management*)
 * **Revisions** –  on this tab, you can see the committed revision of the app project that is linked to the story (which is configured in the [Related stories](/refguide/commit-dialog#stories) tab of the **Commit** dialog box in Studio Pro)
 
+## TO INCORPORATE
 
+### Notes 
+
+-footnote on moving nested stories
+-if you delete a story, it's totally gone
+-story details: add in
+-next 1-2 weeks
 
 ## OLD TO INCLUDE
 
@@ -256,7 +281,7 @@ There are various actions you can perform when managing stories. These are descr
 
 #### 6.3.1 Accessing Story Details {#accessing-details}
 
-For details, see the [Accessing Story Details](#accessing-details) section above.
+Select a story and click **Details** (below the story title) to open the **Story Details** page. For more information, see the [Accessing Story Details](#accessing-details) section above.
 
 #### 6.3.2 Adding Tasks to a Story {#adding}
 

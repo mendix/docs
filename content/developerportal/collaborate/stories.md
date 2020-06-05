@@ -30,16 +30,16 @@ Click **New Sprint** to open the **Edit Sprint** dialog box:
 ![](attachments/stories/new-sprint.jpg)
 {{% /image_container %}}
 
-You should fill in the following details:
+Fill in the following details:
 
-| Field | Description |
-| --- | --- |
-| Name | The name of the Sprint. |
-| Sprint comes after | Where the Sprint should be located in the structure of your **Stories** page |
-| Duration (in weeks) | How many weeks the Sprint should last. |
-| Start date | The start date of the Sprint. This will be set automatically for right after the previous Sprint ends, unless the **Custom start date** box is checked and a start date is entered manually. |
+* **Name** – the name of the Sprint
+* **Sprint comes after** –  where the Sprint should be located in the structure of your **Stories** page
+* **Duration (in weeks)** –  how many weeks the Sprint should last
+* **Start date** – the start date of the Sprint; this will be set automatically for right after the previous Sprint ends, unless the **Custom start date** box is checked and a start date is entered manually.
 
-### 2.2 Creating a New Story
+For more information on Sprints, see the [Sprint Actions](#story-actions) section below.
+
+### 2.2 Creating a New Story {#new-story}
 
 Each Sprint contains a number of stories that describe the specific functionality to be implemented, built, or fixed. Click **New Story** to open the **New Story** dialog box:
 
@@ -47,22 +47,22 @@ Each Sprint contains a number of stories that describe the specific functionalit
 ![](attachments/stories/new-story.jpg)
 {{% /image_container %}}
 
-You should fill in the following details:
+Fill in the following details:
 
-| Field | Description |
-| --- | --- |
-| Title |  The title of the story. |
-| Description | A description of the story.  |
-| Story type | Select whether the story describes a **Feature** or **Bug**. |
-| Story points | The size of the story. |
-| Create story in | The Sprint in which the story should be started. The default is **Backlog**. |
-| Story status | Select **To-do** (default), **Running**, or **Done**.  |
+* **Title** – the title of the story
+* **Descriptio** – a description of the story
+* **Story type** – select whether the story describes a **Feature** or **Bug**
+* **Story points** – the size of the story
+* **Create story in** – the Sprint in which the story should be started; the default is **Backlog**
+* **Story status** – select **To-do** (default), **Running**, or **Done**
 
-You can also create a story from within a [new Sprint](#new-sprint):
+You can also create a story via the [Add a story](#sprint-actions) button for Sprint or from within a new Sprint by clicking **Add a new story**:
 
 {{% image_container width="550" %}}
 ![](attachments/stories/new-story-from-sprint.jpg)
 {{% /image_container %}}
+
+For more information on stories, see the [Story Actions](#story-actions) section below.
 
 ### 2.3 More Actions
 
@@ -114,7 +114,18 @@ The **Project History** page presents the collaboration actions for the app proj
 
 When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](feedback) will be presented.
 
-## 3 Story Actions
+## 3 Sprint Actions {#sprint-actions}
+
+For each Sprint, the following options are provided ia a menu button on the right:
+
+![](attachments/stories/sprint-options.jpg)
+
+* **Complete Sprint** (only available for the Sprint identified as a **Active Sprint**) – enables completing the Sprint, which will move it to the [Completed Sprints](completed-sprints) page
+* **Add a story** – enables adding a [new story](#new-story) 
+* **Edit** – opens the [Edit Sprint](#new-sprint) dialog box
+* **Delete** – delete the Sprint
+
+## 4 Story Actions {#story-actions}
 
 When you select a story, you can perform the following actions:
 
@@ -123,13 +134,13 @@ When you select a story, you can perform the following actions:
 * **Clone** – enables duplicating a selected story and its tasks, story points, status, and labels into a new user story; this can enable utilizing a user story as a template
 * **Move** –  enables moving a story to another sprint
 * **Assign Label** – enables assigning existing labels to a story
-* **Delete** – enables deleting a story
+* **Delete** – enables deleting a story (note that if you delete a story, it is gone forever)
 
 {{% alert type="info" %}}
 These actions support multi-selection of stories, except for the **Clone** action.
 {{% /alert %}}
 
-### 3.1 Accessing Story Details  {#accessing-details}
+### 4.1 Accessing Story Details  {#accessing-details}
 
 When you click a story title, the **Story Details** page opens. The functionality on this page can be navigated according to the [Story Details](#accessing-details) section above.
 
@@ -141,26 +152,64 @@ On this page, you can perform a number of actions:
 
 * View details such as **Type** and date **Created**
 * Click **Edit** to edit the **Title**, **Description**, **Story type**, **Story points**, **Status**, and **Labels** of the story as well as see the history of edits made to the story
-* See the story's **Status** and click to update it (the available statuses are **To-do**, **Running**, and **Done**)
-* View the **Sprint** that contains the story as well as move the story via **Move to Sprint** (for details, see the [Moving Stories](#moving-stories) section below)
+* See the story's **Status** and click to update it (available statuses are **To-do**, **Running**, and **Done**)
+* View the **Sprint** that contains the story as well as move the story via **Move to Sprint** (for details, see the [Moving Stories](#move-stories) section below)
 * Click **Move to another app** to move the story to a different app project's backlog
-* Click **View history** to view the history of changes to the story (for more information, see the [History](#history) section above)
+* Click **View history** to view the history of changes to the story
 
 Also on this page, you can access the following tabs:
 
-* **Comments** – on this tab, you can view and add comments about the story to collaborate with your App Team
-* **Tasks** – you can see the tasks that were added to the story here (for more information, see the [Adding Tasks to a Story](#adding) section below)
+* **Tasks** – you can see the tasks that were added to the story here (for more information, see the [Adding a  Task to a Story](#adding-task) section below)
+* * **Comments** – on this tab, you can view and add comments about the story to collaborate with your App Team
 * **Feedback** – here you can see the feedback item linked to the story (for details, see the [Adding a Feedback Item to Your Backlog](feedback#adding) section of *Feedback Management*)
 * **Revisions** –  on this tab, you can see the committed revision of the app project that is linked to the story (which is configured in the [Related stories](/refguide/commit-dialog#stories) tab of the **Commit** dialog box in Studio Pro)
 
-## TO INCORPORATE
+### 4.1.2 Moving a Story {#move-stories}
 
-### Notes 
+If you need to reorder stories or move a story to a different Sprint, there are three ways to do this:
 
--footnote on moving nested stories
--if you delete a story, it's totally gone
--story details: add in
--next 1-2 weeks
+* Select the story and use the **Move** button to select the new Sprint from the **Move Stories** dialog box
+
+	![](attachments/stories/move-story-move-button.jpg)
+
+* Select the story and drag it to the desired Sprint location:
+
+	![](attachments/stories/move-story-drag-new.jpg)
+
+* Click the story title to open the **Story Details** page, where you can select the Sprint to which you want to move the story from the **Move To Sprint** drop-down menu:
+
+	![](attachments/stories/move-story-details.png)
+	
+{{% alert type="info" %}}
+Moving a story will move the tasks as well.
+{{% /alert %}}
+
+### 4.1.3 Adding a  Task to a Story {#adding-task}
+
+To add a task to a story, access the [story detaisl](#accessing-details) page and on the **Tasks** tab, click **Add**. This will open the **Edit Task** dialog box:
+
+{{% image_container width="500" %}}
+![](attachments/stories/edit-task.jpg)
+{{% /image_container %}}
+
+Fill in the following details:
+
+* **Title** – the title of the task
+* **Description** – the description of the task
+
+Once saved, the number of tasks appears under the story on the main **Stories** page:
+
+{{% image_container width="500" %}}
+![](attachments/stories/story-task.jpg)
+{{% /image_container %}}
+
+Clicking the number will bring you back to the **Tasks** tab of the story details.
+
+## TO DO
+
+-footnote on moving nested stories (tasks?) (encourage them for release notes to move tasks into individual stories?)
+-review all anchors
+-review all old UI, cut down where possible, maybe delete all screesnhots already
 
 ## OLD TO INCLUDE
 
@@ -319,15 +368,12 @@ Reopening the feedback item will revert it to the [Open](/developerportal/collab
 
 If you need to reorder stories or move a story to a different Sprint, there are three ways to do this:
 
-1.  Select the story and drag it to the desired Sprint location:
+*  Select the story and drag it to the desired Sprint location:
 
 	![](attachments/stories/move-story-drag.png)
 
-2.  Click **Details** for the story you want to move to another Sprint, and on the **Story Details** page, select the Sprint to which you want to move the story from the **Move To Sprint** drop-down menu:
-
-	![](attachments/stories/move-story-details.png)
-	
-3. Select the story and use the **Move to** button to select the new Sprint (for details on this method, see the [Moving a Story](#moving) section).
+*  Click **Details** for the story you want to move to another Sprint, and on the **Story Details** page, select the Sprint to which you want to move the story from the **Move To Sprint** drop-down menu:
+* Select the story and use the **Move to** button to select the new Sprint (for details on this method, see the [Moving a Story](#moving) section).
 
 {{% alert type="info" %}}
 Moving a story will move the tasks as well.

@@ -111,7 +111,7 @@ The StatefulSets should be cleaned up manually as documented in the [Cleanup pha
 
 {{% /alert %}}
 
-#### 2.1.7 Cleanup phase{#cleanup-phase}
+#### 2.1.7 Cleanup Phase{#cleanup-phase}
 
 Delete StatefulSets from the Namespace where the Operator was installed:
 

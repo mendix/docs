@@ -24,35 +24,29 @@ In a similar fashion, MXBuild and the Mendix Native Template folow these rules:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have Mac OSX machine ready
-* XCode & Cocoapods installed
-* Android SDK and platform tools installed
-* Node and NPM installed
+* Have a Mac OS X machine 
+* Install XCode and CocoaPods 
+* Install Android SDK and platform tools
+* Install Node and NPM 
 * Have the latest Native Builder CLI
 
 ## 3 Get the Native Template
 
-The Native Template is the base for building native apps with Mendix. In essence, it is a React Native template, with the extra dependencies and configurations required to run your Mendix App.
+The Native Template is the base for building native apps with Mendix. In essence, it is a React Native template with the extra dependencies and configurations required to run your Mendix app.
 
-Native Template is versioned against Mendix Studio Pro meaning, the Studio Pro version used to create your Mendix App dictates which version of Native Template is compatible. For example when using Native Builder this is handled internally using the `--mendix-version` flag.
+The Native Template is versioned against Mendix Studio Pro. This means the Studio Pro version you use to create your Mendix app dictates which version of Native Template you should use. When using the Native Builder this is handled internally using the `--mendix-version` flag.
 
 #### 3.1 Determine Which Native Template Version to Use
 
-1. Find out the version of Studio Pro you are using.
-
+1. Note which version of Studio Pro you are using.
 2. Navigate to the [Native Template GitHub repository](github.com/mendix/native-template).
+3. At the root of your project, open the *mendix_version.json* JSON file.
 
-3. Open the `mendix_version.json` JSON file found at the root of the project.
+The keys of the dictionary represent the Mendix Studio Pro version, the min and max values the minimum and maximum Native Template version supported. In the case of Mendix Studio Pro 8.9.x, you could choose any Native Template version from 4.0.0 to the latest. Ideally you should choose the most recent supported version.
 
-   The keys of the dictionary represent the Mendix Studio Pro version, the min and max values the minimum and maximum Native Template version supported.
+{{% image_container width="200" %}}![iOS output](attachments/native-build-locally/mendix-version.png){{% /image_container %}}
 
-   In the case of Mendix Studio Pro 8.9.x, we could choose any version from 4.0.0 to the latest.
-
-   Ideally we would choose the max supported.
-
-   {{% image_container width="200" %}}![iOS output](attachments/native-build-locally/mendix-version.png){{% /image_container %}}
-
-### 3.1 With Git installed
+#### 3.1.1 With Git installed
 
 1. Use `git@github.com:mendix/native-template.git` or `https://github.com/mendix/native-template.git` to clone the project locally. Run:
 
@@ -60,7 +54,7 @@ Native Template is versioned against Mendix Studio Pro meaning, the Studio Pro v
 
 2. Run `npm i && cd ios && pod install` to install the required dependencies.
 
-### 3.2 Without Git
+#### 3.1.2 Without Git
 
 1. Navigate to the [Native Template releases](github.com/mendix/native-template/releases).
 

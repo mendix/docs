@@ -27,7 +27,7 @@ Menus are composed of menu items. Menu items can contain a number sub-items. Men
 
 A menu item or a sub-item has the following general properties:
 
-* Caption – the caption is the text that will appear in the [menu widget](menu-widgets). Caption is a translatable text. (For more information, see [Translatable Texts](translatable-texts).)
+* Caption – the caption is the text that will appear in the [menu widget](menu-widgets). Caption is a translatable text. (For more information, see [Language Menu](translatable-texts).)
 
 * Icon – you can select a glyphicon (a character in a special font that stays sharp while scaling) or an image that will appear next to or above the caption in the [menu widget](menu-widgets)
 

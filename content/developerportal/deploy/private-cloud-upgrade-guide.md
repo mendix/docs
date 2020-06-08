@@ -101,7 +101,17 @@ To start the updated version of the Mendix Operator, run:
 kubectl -n $OPERATOR_NAMESPACE scale deployment mendix-operator --replicas=1
 ```
 
-#### 2.1.7 Cleanup Steps
+{{% alert type="warning" %}}
+
+Starting the Operator will create Deployments for all your apps.
+All network traffic will be routed to the new Deployments - causing a restart of all your apps managed by that Operator.
+These Deployments will be created in addition to StatefulSets created by the previous version of the Operator.
+
+The StatefulSets should be cleaned up manually as documented in the [Cleanup phase](#2-1-7-cleanup-phase) section.
+
+{{% /alert %}}
+
+#### 2.1.7 Cleanup phase
 
 Delete StatefulSets from the Namespace where the Operator was installed:
 

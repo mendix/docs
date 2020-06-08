@@ -48,29 +48,24 @@ The keys of the dictionary represent the Mendix Studio Pro version, the min and 
 
 #### 3.1.1 With Git installed
 
-1. Use `git@github.com:mendix/native-template.git` or `https://github.com/mendix/native-template.git` to clone the project locally. Run:
-
-   `git clone --single-branch --branch <release/version-number> <repo-url>`
-
+1. Use `git@github.com:mendix/native-template.git` or `https://github.com/mendix/native-template.git` to clone the project locally. 
+2. Run the following command: `git clone --single-branch --branch <release/version-number> <repo-url>`.
 2. Run `npm i && cd ios && pod install` to install the required dependencies.
 
 #### 3.1.2 Without Git
 
 1. Navigate to the [Native Template releases](github.com/mendix/native-template/releases).
-
-2. Scroll to the version your want to download.
-
+2. Scroll to the version you want to download.
 3. Select the source code binary to download a copy of the code.
 
    {{% image_container width="250" %}}![iOS output](attachments/native-build-locally/github-assets.png){{% /image_container %}}
 
 4. Unzip the file.
-
-5. Run ``npm i && cd ios && pod install` to install the required dependencies.
+5. Run `npm i && cd ios && pod install` to install the required dependencies.
 
 ## 4 Bundle your Mendix App
 
-For bundling your resources Native Builder supports an offline command that runs MXBuild and generates the required bundle and assets.
+For bundling your resources, the Native Builder supports an offline command that runs MXBuild and generates the required bundle and assets.
 
 1. Run
 

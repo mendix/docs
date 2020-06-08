@@ -38,8 +38,7 @@ The following steps will teach you to build a pluggable input widget, and show y
 
 ### 3.1 Creating a Test Project{#creating-a-test-project}
 
-1. Open Mendix Studio Pro and create a new test project by selecting **File > New Project** from the top menu bar and then **Blank App**..
-
+1. Open Mendix Studio Pro and create a new test project by selecting **File > New Project** from the top menu bar and then **Blank App**.
 2. Create a test case for the new widget:<br />
 	a. In the domain model of **MyFirstModule**, add a new entity.<br />
 	b. Add a new attribute of type **String**.<br />

@@ -1,6 +1,6 @@
 ---
 title: "Developer Portal Guide"
-description: "A description of the sections in the Developer Portal and links to more detail"
+description: "Describes the sections of the Mendix Developer Portal and links to more detailed documents in the guide."
 tags: ["Mendix", "Developer Portal", "Platform Services", "Buzz", "Apps", "People", "Community", "App Store", "Academy", "Forum", "Docs"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.

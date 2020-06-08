@@ -40,13 +40,6 @@ The following steps will teach you to build a pluggable input widget, and show y
 
 1. Open Mendix Studio Pro and create a new test project by selecting **File > New Project** from the top menu bar and then **Blank App**..
 
-	Optionally you may remove all unused custom widgets to optimize the debugging process. Select **Project > Show Project Directory in Explorer** from the Mendix Studio Pro menu and open the **widgets** folder. Then, delete all the files in this folder. 
-
-	To resolve the errors this incurs:<br />
-	a. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to refresh your app.<br />
-	b. Double-click the errors in the bottom menu to see their locations.<br />
-	c. Delete the widgets those errors bring you to.
-
 2. Create a test case for the new widget:<br />
 	a. In the domain model of **MyFirstModule**, add a new entity.<br />
 	b. Add a new attribute of type **String**.<br />

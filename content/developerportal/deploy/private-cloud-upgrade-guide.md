@@ -103,15 +103,15 @@ kubectl -n $OPERATOR_NAMESPACE scale deployment mendix-operator --replicas=1
 
 {{% alert type="warning" %}}
 
-Starting the Operator will create Deployments for all your apps.
-All network traffic will be routed to the new Deployments - causing a restart of all your apps managed by that Operator.
-These Deployments will be created in addition to StatefulSets created by the previous version of the Operator.
+Starting the Operator will create deployments for all your apps.
+All network traffic will be routed to the new deployments - causing a restart of all your apps managed by that Operator.
+These deployments will be created in addition to StatefulSets created by the previous version of the Operator.
 
-The StatefulSets should be cleaned up manually as documented in the [Cleanup phase](#2-1-7-cleanup-phase) section.
+The StatefulSets should be cleaned up manually as documented in the [Cleanup phase](#cleanup-phase) section.
 
 {{% /alert %}}
 
-#### 2.1.7 Cleanup phase
+#### 2.1.7 Cleanup phase{#cleanup-phase}
 
 Delete StatefulSets from the Namespace where the Operator was installed:
 
@@ -119,7 +119,7 @@ Delete StatefulSets from the Namespace where the Operator was installed:
 kubectl -n $OPERATOR_NAMESPACE delete --all statefulsets
 ```
 
-These StatefulSets will be replaced with Deployments when the new version of the Operator is started.
+These StatefulSets were replaced with deployments when the new version of the Operator was started.
 
 ### 2.2 Upgrading to Mendix Gateway Agent v1.1.0{#agent-v1.1.0}
 

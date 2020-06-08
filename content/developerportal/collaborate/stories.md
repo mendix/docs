@@ -68,10 +68,28 @@ For more information on stories, see the [Story Actions](#story-actions) section
 
 Click **More** to access the following options::
 
-* **Import / Export to Excel** – opens the [Import / Export to Excel](#import-export) page
-* **Manage Labels** – opens a page where you can mangage labels at the app project level; for details, see the [Managing Labels](#managing-labels) section below
+* **Import / Export to Excel** – opens the **Import / Export to Excel** page; for details, see the [Importing & Exporting to Excel](#import-export) section below
+* **Manage Labels** – opens a page where you can manage labels at the app project level; for details, see the [Managing Labels](#managing-labels) section below
 * **Completed Sprints** – opens a page where completed sprints are archived; for details, see the [Completed Sprints](#completed-sprints) section below
 * **History** – opens the **Project History** page; for details, see the [History](#history) section below
+
+### 2.3.1 Importing & Exporting to Excel {#import-export}
+
+After you click **Import / Export**, you will be asked what you want to do:
+
+![](attachments/stories/import-export.png)
+
+In Mendix, you can export stories from your app project at any time. If you select **Export a single sprint to Excel**, you can select just the stories in one Sprint and export these to Excel to work on.
+
+You can also **Export all stories to Excel** and even **Export all stories to Excel (including completed sprints)**.
+
+If you select **Updates stories from Excel**, you can use an an Excel sheet from a previous export as a template for the import. The Developer Portal recognizes existing items by using the **ID** column. The imported content will become stories for your app project.
+
+When editing stories in Excel, follow these guidelines:
+
+* To add a new story or task,  add a new line on the correct position and enter the item's name
+* To reorder an item, adjust the depth by adding or removing the plus signs (make sure they stay consistent with every item being the same or 1 level deeper than the item above it)
+* To remove an item, replace its depth with a single minus sign (make sure that any tasks associated with it are either moved or are also removed)
 
 ### 2.3.1 Managing Labels {#managing-labels}
 
@@ -116,12 +134,12 @@ When you select a history item and click **Show item**, the details of the story
 
 ## 3 Sprint Actions {#sprint-actions}
 
-For each Sprint, the following options are provided ia a menu button on the right:
+For each Sprint, the following options are provided via the menu button on the right:
 
 ![](attachments/stories/sprint-options.jpg)
 
-* **Complete Sprint** (only available for the Sprint identified as a **Active Sprint**) – enables completing the Sprint, which will move it to the [Completed Sprints](completed-sprints) page
-* **Add a story** – enables adding a [new story](#new-story) 
+* **Complete Sprint** (only available for the Sprint identified as a **Active Sprint**) – enables completing the Sprint, which will move it to the [Completed Sprints](#completed-sprints) page
+* **Add a story** – enables creating a [new story](#new-story) 
 * **Edit** – opens the [Edit Sprint](#new-sprint) dialog box
 * **Delete** – delete the Sprint
 
@@ -140,9 +158,9 @@ When you select a story, you can perform the following actions:
 These actions support multi-selection of stories, except for the **Clone** action.
 {{% /alert %}}
 
-### 4.1 Accessing Story Details  {#accessing-details}
+### 4.1 Accessing Story Details  {#story-details}
 
-When you click a story title, the **Story Details** page opens. The functionality on this page can be navigated according to the [Story Details](#accessing-details) section above.
+When you click a story title, the **Story Details** page opens:
 
 {{% image_container width="500" %}}
 ![](attachments/stories/story-details.png)
@@ -170,7 +188,8 @@ If you need to reorder stories or move a story to a different Sprint, there are 
 
 * Select the story and use the **Move** button to select the new Sprint from the **Move Stories** dialog box
 
-	![](attachments/stories/move-story-move-button.jpg)
+	{{% image_container width="500" %}}![](attachments/stories/move-story-move-button.jpg)
+	{{% /image_container %}}
 
 * Select the story and drag it to the desired Sprint location:
 
@@ -180,13 +199,14 @@ If you need to reorder stories or move a story to a different Sprint, there are 
 
 	![](attachments/stories/move-story-details.png)
 	
+
 {{% alert type="info" %}}
 Moving a story will move the tasks as well.
 {{% /alert %}}
 
-### 4.1.3 Adding a  Task to a Story {#adding-task}
+### 4.1.3 Adding a Task to a Story {#adding-task}
 
-To add a task to a story, access the [story detaisl](#accessing-details) page and on the **Tasks** tab, click **Add**. This will open the **Edit Task** dialog box:
+To add a task to a story, access the [story details](#story-details) page and on the **Tasks** tab, click **Add**. This will open the **Edit Task** dialog box:
 
 {{% image_container width="500" %}}
 ![](attachments/stories/edit-task.jpg)
@@ -204,14 +224,6 @@ Once saved, the number of tasks appears under the story on the main **Stories** 
 {{% /image_container %}}
 
 Clicking the number will bring you back to the **Tasks** tab of the story details.
-
-## TO DO
-
--footnote on moving nested stories (tasks?) (encourage them for release notes to move tasks into individual stories?)
--review all anchors
--review all old UI, cut down where possible, maybe delete all screesnhots already
-
-## OLD TO INCLUDE
 
 ## 5 Managing Stories in Mendix Studio Pro 
 
@@ -243,43 +255,29 @@ Changing the status of a story or updating story points automatically synchroniz
 
 For more information on how to change the status of your story, see the [Changing the Status of a Story or a Task](/refguide/stories-pane#changing-status) section in *Stories Pane*.
 
-## 6 Old UI {#old}
+## 6 Old Stories UI {#old}
 
 To switch to the old version of the UI, click **Disable new UI**: 
 
-![](attachments/stories/enable-new-ui.png)
+![](attachments/stories/disable-new-ui.jpg)
 
-### 6.1 Actions
+### 6.1 Main Actions
 
-You can perform the actions described below via the buttons on your app project's **Stories** page.
-
-#### 6.1.1 Creating a New Story {#new-story}
-
-Every Sprint contains a number of stories that describe specific functionality to be implemented, built, or fixed. The size of each story can be indicated by allocating it a number of Story points.
+#### 6.1.1 Creating a New Story
 
 To add a new story, click **New story** and fill in some details, including what your story is about and what type of story it is. The **Labels** you add in the new story can be reused in other stories (see [Using Labels](#label) for more details).
 
-![](attachments/stories/story-example.png)
-
-#### 6.1.2 Creating a New Sprint {#sprint}
+#### 6.1.2 Creating a New Sprint
 
 To add a new Sprint, click **New sprint** and fill in some details, including the name of the Sprint or release and where it should be located in the structure of your **Stories** page.
 
-![](attachments/stories/sprint-example.png)
+#### 6.1.3 Moving a Story
 
-#### 6.1.3 Moving a Story {#moving}
+To move a story, select the story, click **Move to**, then select the Sprint to which the story should be moved.
 
-To move a story, select the story, click **Move to**, then select the Sprint to which the story should be moved:
+#### 6.1.4 Using Labels
 
-![](attachments/stories/move-to.png)
-
-#### 6.1.4 Using Labels {#label}
-
-To add a label to a story or create a new label, use the options under **Label**:
-
-![](attachments/stories/label.png)
-
-You can also perform various actions to [manage labels](#manage-labels).
+To add a label to a story or create a new label, use the options under **Label**. You can also perform various actions to [manage labels](#manage-labels).
 
 ### 6.2 More Actions
 
@@ -287,52 +285,32 @@ Using the **More** button, you can perform the actions described below.
 
 #### 6.2.1 Complete Current Sprint
 
-Click **Complete current sprint** to complete a Sprint. Note that all stories have to be marked **Done** before you are able to complete a Sprint.
+Click **Complete current sprint** to complete a Sprint. Note that all stories have to be marked **Done** before you are able to complete a Sprint. You will receive a confirmation message, so make sure you are able to confirm completion!
 
-You will receive this confirmation message, so make sure you are able to confirm completion!
+#### 6.2.2 Import / Export
 
-![](attachments/stories/complete-verify.png)
+For details, see the [Importing & Exporting to Excel](#import-export) section above.
 
-#### 6.2.2 Import / Export {#import-export}
-
-Click **Import / Export** to import stories from or export stories to Excel:
-
-![](attachments/stories/import-export.png)
-
-In Mendix, you can export stories from your app project at any time. If you select **Export a single sprint to Excel**, you can select just the stories in one Sprint and export these to Excel to work on.
-
-You can also **Export all stories to Excel** and even **Export all stories to Excel (including completed sprints)**.
-
-If you select **Updates stories from Excel**, you can use an an Excel sheet from a previous export as a template for the import. The Developer Portal recognizes existing items by using the **ID** column. The imported content will become stories for your app project.
-
-When editing stories in Excel, follow these guidelines:
-
-* To add a new story or task,  add a new line on the correct position and enter the item's name
-* To reorder an item, adjust the depth by adding or removing the plus signs (make sure they stay consistent with every item being the same or 1 level deeper than the item above it)
-* To remove an item, replace its depth with a single minus sign (make sure that any tasks associated with it are either moved or are also removed)
-
-#### 6.2.3 Manage Labels {#manage-labels}
+#### 6.2.3 Manage Labels
 
 For details, see the [Managing Labels](#managing-labels) section above.
 
-#### 6.2.4 History {#history}
+#### 6.2.4 History
 
 Click **History** to view the history of collaboration actions for the app. On this page, you can click the following:
 
 * **Show related story** – presents the details of the story
 * **Revert change** – reverts changes
 
-![](attachments/stories/history.png)
-
 ### 6.3 Managing Stories
 
 There are various actions you can perform when managing stories. These are described below.
 
-#### 6.3.1 Accessing Story Details {#accessing-details}
+#### 6.3.1 Accessing Story Details
 
-Select a story and click **Details** (below the story title) to open the **Story Details** page. For more information, see the [Accessing Story Details](#accessing-details) section above.
+Select a story and click **Details** (below the story title) to open the **Story Details** page. For more information, see the [Accessing Story Details](#story-details) section above.
 
-#### 6.3.2 Adding Tasks to a Story {#adding}
+#### 6.3.2 Adding Tasks to a Story
 
 Stories of the *Feature* type can be translated into tasks that need to be completed to finish the story.
 
@@ -342,29 +320,22 @@ To add a task to the story, follow these steps:
 
 	![](attachments/stories/add-task.png)
 
-2.  Add a title and description for your task:
-
-	![](attachments/stories/add-task-description.png)
-
+2.  Add a title and description for your task.
 3. Click **Post task** to save the new task for the story.
 
 After you have completed the task, check the box:
 
 ![](attachments/stories/complete-task.png)
 
-#### 6.3.3 Deleting a Story or Task {#deleting}
+#### 6.3.3 Deleting a Story or Task
 
 To delete a story or a task, click the trash can icon below the title of the story/task. After you confirm the deletion, the story/task will be removed from the system permanently.
 
 If you delete a story, its tasks will be deleted as well.
 
-If you delete a story that is linked to a feedback item, you will be asked to choose to reopen or unlink the feedback item:
+If you delete a story that is linked to a feedback item, you will be asked to choose to reopen or unlink the feedback item. Reopening the feedback item will revert it to the [Open](/developerportal/collaborate/feedback#stages) status. To unlink the feedback item means it will remain in the [Accepted](/developerportal/collaborate/feedback#stages) status. Either way, the story will be deleted.
 
-![](attachments/stories/delete-linked-story.png)
-
-Reopening the feedback item will revert it to the [Open](/developerportal/collaborate/feedback#stages) status. To unlink the feedback item means it will remain in the [Accepted](/developerportal/collaborate/feedback#stages) status. Either way, the story will be deleted.
-
-#### 6.3.4 Moving Stories {#moving-stories}
+#### 6.3.4 Moving Stories
 
 If you need to reorder stories or move a story to a different Sprint, there are three ways to do this:
 

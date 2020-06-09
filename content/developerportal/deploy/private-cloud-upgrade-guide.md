@@ -12,7 +12,7 @@ This document describes how an existing installation of Mendix for Private Cloud
 
 ## 2 Upgrade steps
 
-### 2.1 Upgrading to Mendix Operator v1.1.0{#operator-v1.1.0}
+### 2.1 Upgrading to Mendix Operator v1.1.0{#operator-latest}
 
 This process will take about 15 to 30 minutes.
 During the upgrade process, the Mendix Operator will have to be stopped and will not process any changes.
@@ -121,7 +121,7 @@ kubectl -n $OPERATOR_NAMESPACE delete --all statefulsets
 
 These StatefulSets were replaced with deployments when the new version of the Operator was started.
 
-### 2.2 Upgrading to Mendix Gateway Agent v1.1.0{#agent-v1.1.0}
+### 2.2 Upgrading to Mendix Gateway Agent v1.1.1{#agent-latest}
 
 {{% alert type="info" %}}
 
@@ -131,11 +131,11 @@ Upgrading the Mendix Gateway Agent is only possible if the cluster was originall
 
 {{% /alert %}}
 
-Before upgrading to the Mendix Gateway Agent v1.1.0, first [upgrade](#operator-v1.1.0) the Mendix Operator to version v1.1.0
+Before upgrading to the Mendix Gateway Agent v1.1.1, first [upgrade](#operator-latest) the Mendix Operator to version v1.1.0
 and set the `OPERATOR_NAMESPACE` variable in your Bash terminal as described above.
 
-Run the following command to switch to the Mendix Operator version 1.1.0:
+Run the following command to switch to the Mendix Agent version 1.1.1:
 ```shell
 kubectl -n $OPERATOR_NAMESPACE patch deployment mendix-agent -p \
-  '{"spec":{"template":{"spec":{"containers":[{"name":"mendix-agent","image":"quay.io/digital_ecosystems/kubernetes-agent:1.1.0"}]}}}}'
+  '{"spec":{"template":{"spec":{"containers":[{"name":"mendix-agent","image":"quay.io/digital_ecosystems/kubernetes-agent:1.1.1"}]}}}}'
 ```

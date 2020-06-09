@@ -226,7 +226,7 @@ The **Create object** event creates a new object. The following properties are s
 The **Save changes** event commits all changes made on the page. The following properties are specific for this event:
 
 * **Close page** – specifies whether the current page should be closed.
-* **Sync automatically** –  specifies whether synchronization should happen when the save button is clicked for a Mendix application running in an offline profile. When an object is saved in a Mendix application running in an offline profile it is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](offline-first). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [syncing it](offline-first#synchronization).
+* **Auto synchronize** –  specifies whether synchronization should happen when the save button is clicked for a Mendix application running in an offline profile. When an object is saved in a Mendix application running in an offline profile it is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](offline-first). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [syncing it](offline-first#synchronization).
 
 ### 3.8 Cancel Changes {#cancel-changes}
 

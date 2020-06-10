@@ -83,13 +83,14 @@ To set up a working directory for your script, follow these steps:
     ```json
     "dependencies": {
       "@types/when": "^2.4.33",
-      "mendixmodelsdk": "~4.25.0",
+      "mendixmodelsdk": "~4.32.0",
       "mendixplatformsdk": "~4.1.1",
       "when": "^3.7.8"
     }
     ```
 
     When a new major or minor version of the Mendix SDK is released (as in, 1.0.0 to 2.0.0 or 1.0.0 to 1.1.0) and you run `npm update` in your project folder, the `~` in front of the version number makes sure that installed version of the SDK won't be upgraded automatically. Only patch releases (as in, 1.0.1) of the SDK will be automatically upgraded, otherwise your script could inadvertently be broken. You may, of course, edit the dependency by hand yourself.
+    Change to "mendixmodelsdk": "~4.32.0" to use Mendix Studio Pro 8.9.0. For other modeler versions, have a look at the [release notes](https://docs.mendix.com/releasenotes/sdk/model-sdk-4). 
 
 4.  Save your changes and then execute the following to install the dependencies:
 

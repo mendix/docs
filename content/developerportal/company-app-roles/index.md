@@ -66,7 +66,7 @@ When you view the details for a specific app, you will see the two roles respons
 
 These app roles are described below.
 
-### 3.1 App Contact
+### 3.1 App Contact {#app-contact}
 
 The App Contact is visible to regular users and is the go-to person for questions related to the app. If you build your own app, you will automatically become the App Contact and you will have the Scrum Master role as an [App Team role](#app-team-roles). 
 

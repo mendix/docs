@@ -10,6 +10,14 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### June 11th, 2020
+
+#### Mendix for Private Cloud
+
+* We have separated the creation of the namespace and the cluster in order to align with Kubernetes concepts. As a consequence, there is now an additional namespace details page. The Mendix Operator and Mendix Gateway Agent will be deployed to each namespace.
+* We now allow you to set Kubernetes resource *requirements* in addition to resource *limits*. Apps no longer require the maximum amount of CPU and memory, improving utilization of cluster resources.
+* We have improved the reliability of updating the current environment status in the Developer Portal.
+
 ### June 10th, 2020
 
 #### Mendix for Private Cloud — Mendix Gateway Agent v1.1.1

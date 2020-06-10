@@ -43,19 +43,11 @@ The **Run** menu contains actions for deploying and monitoring your app, such as
 
 ## 7 Version Control Menu {#version-control}
 
-In the **Version Control** menu, you can view and/or manipulate settings on the version control. More information on the **Version Control** menu, see [Version Control Menu](version-control-menu).
+In the **Version Control** menu, you can view and/or manipulate settings on the version control. For more information on the **Version Control** menu, see [Version Control Menu](version-control-menu).
 
 ## 8 Language Menu {#language}
 
-| Menu Item | Description | Shortcut Key |
-| --- | --- | --- |
-| **Current Language** | Displays the current language of your app project and allows you to make another language the current language. | |
-| **Select Previous Language** | Makes the previous language of your app project the current language. | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd> |
-| **Select Next Language** | Makes the next language of your app project the current language. | <kbd>Ctrl</kbd>+<kbd>L</kbd> |
-| **Language Settings** | Opens the **Project Settings** dialog box to the **Languages** tab so that you can adjust the language configuration of the app project. | |
-| **Batch Replace** | Opens a dialog box in which you can correct texts within one language. This is useful for checking whether the texts presented to the user are consistent. |   |
-| **Batch Translate** | Opens a dialog box in which you can quickly translate many texts from one language to another. |   |
-| **Language Operations** | Opens a dialog box in which you can copy, move, swap, or delete all the translations in a given language for selected modules. |   |
+In the **Language** menu, you can add alternative languages to your app so that end-users can see the app in their preferred language. You can also make batch changes to identical texts, even if you are only working in one language. For more information on the **Language** menu, see [Language Menu](translatable-texts).
 
 ## 9 Help Menu {#help}
 

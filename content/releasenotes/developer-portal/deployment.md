@@ -10,6 +10,47 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### June 10th, 2020
+
+#### Mendix for Private Cloud — Mendix Gateway Agent v1.1.1
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#agent-latest).
+
+* We have fixed a regression which caused unusually high CPU usage.
+
+### June 8th, 2020
+
+#### Mendix for Private Cloud — Mendix Operator v1.1.0
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+
+* Mendix apps now run as Kubernetes Deployments instead of StatefulSets. This will allow you to use rolling updates, reducing downtime. In addition, this helps avoid situations where a StatefulSet might become stuck and stop processing any changes.
+* We now allow you to set Kubernetes resource requirements in addition to resource limits. Apps no longer require the maximum amount of CPU and memory, improving utilization of cluster resources.
+* We improved the default health check configuration by adjusting the default Kubernetes liveness and readiness probe configuration. Kubernetes will now be much quicker in detecting that an environment has started and is ready to serve requests. In addition, the Kubernetes liveness probe will start with a delay to give a Mendix app some time to start and perform migrations.
+* We have added a port to enable monitoring of Mendix apps with Prometheus.
+* We have added an option to make a storage plan dedicated so that it can be used by only one environment.
+* We have added support for Microsoft SQL server and Azure SQL databases.
+* We have fixed a regression which prevented Private Cloud installing when using kubectl version 1.18.
+
+#### Mendix for Private Cloud — Mendix Gateway Agent v1.1.0
+
+To upgrade an existing installation of Private Cloud to the latest version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#agent-latest).
+
+* We have improved the reliability of event processing and cluster authentication.
+
+### June 4th, 2020
+
+#### Mendix Cloud **v4**
+
+* We introduced a new graph in the **Trends** metrics for Mendix Cloud v4. This shows the **database burst balance**. See [Database Burst Balance](/developerportal/operate/trends-v4#Trends-dbmxdatabaseburstbalance) in the *Trends in Mendix Cloud v4* document for more information.
+* In Mendix Cloud v4 we introduced changes to the Access Restriction Profile (ARP) Certificate Authorities (CAs). These changes allow you to:
+    * Have stricter access restrictions by allowing the selection of intermediate certificates instead of the root
+    * Use different root certificates for each path
+        {{% alert type="info" %}}Existing configurations will not be changed and environments can be restarted safely.<br/><br/>To migrate to the new ARPs, you must remove **all** existing ARPs and replace them with *clones* that you have edited using the latest Developer Portal.<br/>In other words **Clone** the existing ARPs, **Edit** the CAs, and **Apply** the new ARPs to all paths.{{% /alert %}}
+        For more information see [How To Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions).
+
+    You will need to redeploy your app in order to apply the new ARP(s).
+
 ### May 1st, 2020
 
 #### Mendix Cloud Dedicated

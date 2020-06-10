@@ -41,4 +41,4 @@ When publishing an app to mobile app stores, add in this custom Phonegap/Cordova
 
 ## 4 Read More
 
-* [Native Styling](https://docs.mendix.com/refguide/native-styling-refguide#10-4-barcode-scanner)
+* [Native Mobile Styling Reference Guide](https://docs.mendix.com/refguide/native-styling-refguide#10-4-barcode-scanner)

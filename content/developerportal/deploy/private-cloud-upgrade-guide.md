@@ -131,7 +131,7 @@ Upgrading the Mendix Gateway Agent is only possible if the cluster was originall
 
 {{% /alert %}}
 
-Before upgrading to the Mendix Gateway Agent v1.1.1, first [upgrade](#operator-latest) the Mendix Operator to version v1.1.0
+Before upgrading to the Mendix Gateway Agent v1.1.1, first [upgrade](#operator-latest) the Mendix Operator to version v1.1.1
 and set the `OPERATOR_NAMESPACE` variable in your Bash terminal as described above.
 
 Run the following command to switch to the Mendix Agent version 1.1.1:

@@ -13,6 +13,19 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2020
 
+### June 15th, 2020
+
+#### Improvements
+
+* We improved performance on story-related actions such as drag-and-drop and status changes on large projects with many deleted items.
+* We renamed the default **End-user** project role to **Guest** to better distinguish project roles from app user roles.
+* We removed the list appearance of the **My Company's Apps** page.
+
+#### Fixes 
+
+* We fixed a bug where the background would not displayed properly on mobile browsers.
+* We fixed a bug where changes to the story title or description would be saved when pressing the cancel button.
+
 ### May 27th, 2020
 
 #### Improvements

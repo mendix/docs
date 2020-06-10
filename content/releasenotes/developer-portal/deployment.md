@@ -10,11 +10,19 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### June 10th, 2020
+
+#### Mendix for Private Cloud — Mendix Gateway Agent v1.1.1
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#agent-latest).
+
+* We have fixed a regression which caused unusually high CPU usage.
+
 ### June 8th, 2020
 
 #### Mendix for Private Cloud — Mendix Operator v1.1.0
 
-To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-v1.1.0).
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
 
 * Mendix apps now run as Kubernetes Deployments instead of StatefulSets. This will allow you to use rolling updates, reducing downtime. In addition, this helps avoid situations where a StatefulSet might become stuck and stop processing any changes.
 * We now allow you to set Kubernetes resource requirements in addition to resource limits. Apps no longer require the maximum amount of CPU and memory, improving utilization of cluster resources.
@@ -26,7 +34,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 #### Mendix for Private Cloud — Mendix Gateway Agent v1.1.0
 
-To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#agent-v1.1.0).
+To upgrade an existing installation of Private Cloud to the latest version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#agent-latest).
 
 * We have improved the reliability of event processing and cluster authentication.
 

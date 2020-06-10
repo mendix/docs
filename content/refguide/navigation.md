@@ -127,7 +127,7 @@ Allows for changing the [profile type](navigation).
 
 This deletes the profile. If [menu widgets](menu-widgets) are still referring to the profile, errors will appear. It is possible to undo the deletion of a profile.
 
-#### 4.3.2 Synchronize Configuration {#customize}
+#### 4.3.2 Synchronization Configuration {#customize}
 
 Only available on profiles supporting offline synchronization.
 

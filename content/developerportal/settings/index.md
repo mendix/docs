@@ -31,7 +31,7 @@ The **App Team** tab lets you view and delete the team members that are currentl
 
 * Application Operator
 * Business Engineer
-* End-User
+* Guest
 * Performance Engineer
 * Product Owner
 * Scrum Master

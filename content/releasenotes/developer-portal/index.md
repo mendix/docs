@@ -20,7 +20,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 * The [new Stories UI](/developerportal/collaborate/stories) has been improved with various sections. The [old Stories UI](/developerportal/collaborate/stories#old) will be made unavailable.  We encourage you to turn your tasks that are still available in the old Stories UI into new stories before the old UI is inaccessible.
 * We improved performance on story-related actions such as drag-and-drop and status changes on large app projects with many deleted items.
 * We renamed the default **End-User** App Team role to [Guest](/developerportal/company-app-roles/index#app-team-roles) to better distinguish App Team roles from app user roles.
-* We removed the list appearance of the **My Company's Apps** page.
+* We removed the list appearance of the [My Company's Apps](/developerportal/apps-list/#my-company-apps) page.
 
 #### Fixes 
 

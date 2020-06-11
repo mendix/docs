@@ -3,14 +3,14 @@ title: "Mobile Features"
 category: "Widgets"
 description: "Describes the configuration and usage of the Mobile Features widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "mobile feature", "spinner", "transitions", "status bar", "platform support"]
-draft: true
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
 The [Mobile Features](https://appstore.home.mendix.com/link/app/48902/) widget can be placed in a page layout and used in [hybrid mobile](/refguide/hybrid-mobile) applications.
 
-### 1.1 Typical Usage Scenarios
+### 1.1 Typical Use Cases
 
 The widget is designed to be dropped on your master mobile page template. It overrides functions in the Mendix UI code to hook into Cordova plugins. The features below (with the exception of custom body classes) can be switched on and off.
 

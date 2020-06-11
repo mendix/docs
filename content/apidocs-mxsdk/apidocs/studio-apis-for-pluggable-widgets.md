@@ -12,7 +12,7 @@ This guide explains the APIs offered by Mendix Studio and Studio Pro so you can 
 
 In contrast, [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets) is meant for pluggable widget development once your app project is running in the client. This guide's APIs are available in Mendix 8.0.0 and higher.
 
-## 2 Values API
+## 2 Values API {#values}
 
 The values API passes the values configured for a pluggable widget's properties. These values will be passed in a JavaScript object, where the property's `key` is used as the object property.
 
@@ -39,7 +39,7 @@ Static property types are exposed with their configured value as a JavaScript va
 
 For `enumeration` properties, the currently selected option's `key` will be used as the value.
 
-### 2.2 Icon
+### 2.2 Icon {#icon}
 
 This property appears as follows:
 
@@ -78,7 +78,7 @@ by Studio and Studio Pro's Design mode. It will be an empty string value if no i
 
 For the `"dynamic"` type, `entity` is available. It represents the entity where the selected image's data is stored. It will be an empty string value if no entity has been selected.
 
-### 2.4 Widgets
+### 2.4 Widgets {#widgets}
 
 This property appears as follows:
 
@@ -119,40 +119,7 @@ Description: {EventDescription}
 
 ### 2.7 Action
 
-This property appears as follows:
-
-```
-type ActionProperty = {
-    type: string;
-    params: { [key: string]: any }
-}
-```
-
-Actions are passed as an object that will contain a `type` field identifying what action has been selected, and a
-`params` field that contains an object with additional information (where applicable).
-
-The possible types and their parameters are as follows:
-
-* `NoClientAction`: the 'Do nothing' action
-* `PageClientAction`: the 'Show a page' action
-    * `params.page`: the selected page's name
-* `MicroflowClientAction`: the 'Call a microflow' action
-    * `params.microflow`: the selected microflow's name
-* `NanoflowClientAction`: the 'Call a nanoflow' action
-    * `params.nanoflow`: the selected nanoflow's name
-* `OpenLinkClientAction`: the 'Open link' action
-    * `params.linkType`: the type of link (can be "Web", "Email", "Call", or "Text")
-    * `params.isDynamic`: whether or not the link value is based on an attribute (`true`) or static (`false`)
-    * `params.value`: when dynamic, this contains the name of the selected attribute (otherwise, this contains
-    the value for the link)
-* `CreateObjectClientAction`: the 'Create object' action
-    * `params.objectType`: the name of the entity to be created
-    * `params.page`: the name of the selected edit page
-* `SaveChangesClientAction`: the 'Save changes' action
-* `CancelChangesClientAction`: the 'Cancel changes' action
-* `ClosePageClientAction`: the 'Close page' action
-* `SignOutClientAction`: the 'Sign out' action
-* `DeleteClientAction`: the 'Delete' action
+When an action is set, an empty object `{}` is passed to indicate that an action has been set. When no client action is set, the passed value will be `null`.
 
 ### 2.8 Attribute
 
@@ -165,8 +132,7 @@ Here are a few examples:
 
 ### 2.9 Object
 
-Sub-object properties will be passed as an `array` of values. For each configured sub-object, an entry with all
-values will be passed.
+Object properties are passed as an `array` of JavaScript objects. For each configured sub-object, an object will be passed with all the sub-object's properties. These properties are available by their `key`, with values as described throughout the [Values API](#values) section.
 
 ### 2.10 File
 
@@ -183,7 +149,7 @@ It is possible to create a preview for pluggable widgets that will be rendered i
 as well as Studio Pro's Design Mode.
 
 Add the module by adding a file to your custom widget with the same name as your `xml` file as well as the suffix
-`.webmodeler.js`. For example, a widget named `TextBox.xml` would have the preview module `TextBox.webmodeler.js`.
+`.editorPreview.js`. For example, a widget named `TextBox.xml` would have the preview module `TextBox.editorPreview.js`.
 
 This preview module is expected to be a CommonJS module, exporting the following functions using the `exports` object.
 
@@ -199,29 +165,25 @@ It is possible to require the following modules:
 
 ### 3.2 Preview Export
 
-The `preview` export is expected to be a `class` or `function` representing a `React` component. This component, the values object (see [Values API](#2-values-api)), and the following properties will be rendered along with the values as properties:
+The `preview` export is expected to be a `class` or `function` representing a `React` component. This component, the values object (see the [Values API](#values) section above), and the following properties will be rendered along with the values as properties:
 
 * `readOnly` (`boolean`): `true` if the widget is read-only (for example, if it is configured to be so due to the `Editability`
   system property, or if it is inside a read-only data view)
 * `className` (`string`): the classes from the system, which will include manually configured classes through the `class`
   property in Studio Pro, and the classes resulting from configured design properties
 * `style` (`string`): a string representation of the styles as entered in the `style` property in Studio Pro
-* `styleObj` (`React.CSSProperties`): a parsed variant of `style` in the format as how React components expect their
-  `style` attribute
 
-Assuming a pluggable widget with a string property `content` and an `integer` property `padding`, the following shows a simple preview component:
+Assuming a pluggable widget with the string properties `content` and `style`, the following shows a simple preview component:
 
 ```tsx
 type Props = {
     content: string;
-    padding: number;
+    style: string;
     className: string;
-    styleObj: React.CSSProperties;
 }
 
 export const preview: React.FC<Props> = (props) => (
-    <div className={`my-pw-container ${props.className}`}
-         style={{ ...props.styleObj, padding: props.padding }}>
+    <div className={`my-pw-container ${props.className}`} style={props.style}>
         {props.content}
     </div>
 );
@@ -229,7 +191,7 @@ export const preview: React.FC<Props> = (props) => (
 
 #### 3.2.1 Using a Widgets Property
 
-A [Widgets Property](#2-4-widgets) contains a `renderer` field that allows its content to be rendered when filled, or shows an empty drop-zone when empty inside the preview. It requires a single, empty, DOM node as a child in which to render the contents:
+A [Widgets Property](#widgets) contains a `renderer` field that allows its content to be rendered when filled, or shows an empty drop-zone when empty inside the preview. It requires a single, empty, DOM node as a child in which to render the contents:
 
 ```tsx
 type Props = {
@@ -250,7 +212,7 @@ export const preview: React.FC<Props> = (props) => {
 
 #### 3.2.2 Using an Icon Property
 
-The preview module provides a component to preview an [icon property](#2-2-icon) in the same way as the
+The preview module provides a component to preview an [icon property](#icon) in the same way as the
 `Icon` component in the client would. This component can be imported from `"mendix/components/web/Icon"` and accepts
 the `IconProperty` as `icon` parameter.
 

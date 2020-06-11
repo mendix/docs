@@ -51,7 +51,7 @@ To create a new widget, follow these steps:
 
     ![](attachments/18448565/18579932.png)
 
-    The name of the widget is very important, as this name is the name used in Mendix. Using the [CamelCase](http://en.wikipedia.org/wiki/CamelCase) naming convention is strongly recommended. Each new widget should have an author, version number, copyright, license, package name, widget name, and path defined before you can click **OK**. The location directory must also exist.
+    The name of the widget is very important, as this name is the name used in Mendix. Using the [UpperCamelCase](http://en.wikipedia.org/wiki/CamelCase) naming convention is strongly recommended. Each new widget should have an author, version number, copyright, license, package name, widget name, and path defined before you can click **OK**. The location directory must also exist.
 
     These are some details on the settings:
 
@@ -143,5 +143,5 @@ These are some interesting books and articles you can read to dive into the sour
 
 * Custom Mendix widgets are based on DOJO widgets – for more information, see this blog post: 
 [Writing Your Own Widget](http://dojotoolkit.org/reference-guide/1.10/quickstart/writingWidgets.html)
-* To communicate with Mendix, you need to use the Mendix JavaScript Client API – for more information, see the [Mendix Client API Documentation](https://apidocs.mendix.com/7/client/)
+* To communicate with Mendix, you need to use the Mendix JavaScript Client API – for more information, see the [Mendix Client API Documentation](https://apidocs.rnd.mendix.com/7/client/index.html)
 * This is a nice book that helps you understand what JavaScript is all about: [Learning JavaScript Design Patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/)

@@ -27,7 +27,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install Native Builder 3.0.0 or higher
 * Install Mendix Studio Pro 8.4 or higher
-* Complete [How to Deploy your First Mendix Native App](/howto/mobile/deploying-native-app)
+* Complete [How to Deploy your First Mendix Native Mobile App](/howto/mobile/deploying-native-app)
 * Complete at least one successful build using Native Builder v3.0.0 and Native Template v2.0.0
 * Install your app on a test device or emulator
 * Read the [Offline First Reference Guide](/refguide/offline-first)
@@ -171,7 +171,7 @@ Using a modification of `rollout-percentage` you can make builds optional. To do
 native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory false
 ```
 
-Instead of the mandatory update dialog window, you app's users should now be greeted with a optional dialog window. This window will allow them to choose to install the update or not. 
+Instead of the mandatory update pop-up window, you app's users should now be greeted with a optional pop-up window. This window will allow them to choose to install the update or not. 
 
 ## 8 Preserving your Model's Integrity 
 
@@ -194,7 +194,7 @@ This issue is independent from OTA updates and specific to offline apps. Your of
 
 ## 9 Read More
 
-* [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app)
+* [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app)
 * [Native Builder Reference Guide](/refguide/native-builder)
 * [Offline First Reference Guide](/refguide/offline-first)
 * [Codepush Introduction](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/)

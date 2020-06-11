@@ -47,7 +47,7 @@ In many cases you want users with different roles to see different home pages. T
 5.  Select a user role to create a new setting. In this case, we select **Administrator**.
     ![](attachments/18448703/18581306.png)
 6.  Click **Select**.
-7.  Select the role-based home page and click on **Select target**.
+7.  Select the role-based home page and click **Select target**.
     ![](attachments/18448703/18581305.png)
 8.  Select the page _Account_Overview _and click **Select**.
     ![](attachments/18448703/18581304.png)

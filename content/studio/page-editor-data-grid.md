@@ -24,6 +24,7 @@ Data grid contains the following properties:
 * [Search](#grid-search)
 * [Events](#grid-events)
 * [Control Bar](#grid-control-bar)
+* [Conditional Visibility](#visibility)
 * [Design](#grid-design-section)
 
 ### 2.1 Data Source {#grid-data-source}
@@ -232,7 +233,11 @@ The **Events** section properties are described in the table below:
 | **On Click Action Trigger**                      | Determines how the action selected in the **On Click Action** property is triggered. Possible values of this property are the following: <ul><li>**Double-click** – a double click triggers the selected on-click action</li><li>**Single-click** – a single click triggers the selected on-click action. Single-click cannot be used in combination with **Single selection** mode (see below)</ul> |
 | **Selection Mode** <a name="selection-mode"></a> | Determines the way an end-user selects item in the data grid. Possible values of this property are the following: <ul><li>**No selection** – the user cannot select items</li><li>**Single selection** –  the user can select one item at a time by clicking it</li><li>**Always one selection** – the user can select one item at a time by clicking it, however, the user cannot deselect an item (by default the first item will be selected)</li><li>**Multi-selection** – the user can select multiple items by clicking the first one and holding the <kbd>Ctrl</kbd> key while clicking other items. Simply clicking an item will deselect all items and make the clicked item the selection.</li><li>**One-click multi-selection** – the user can select multiple items by simply clicking them.</li></ul> |
 
-### 2.7 Design {#grid-design-section}
+### 2.7 Conditional Visibility {#visibility}
+
+{{% snippet file="studio/visibility-section-link.md" %}}
+
+### 2.8 Design {#grid-design-section}
 
 For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 

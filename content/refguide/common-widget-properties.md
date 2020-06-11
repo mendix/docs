@@ -79,14 +79,22 @@ The attribute can be one of the following:
 
 1. An attribute of the entity of the data container that contains the widget.
 
-2. An attribute of an entity associated with the data container entity by following one or more associations of type reference through the domain model.
+2. An attribute of the entity of any enclosing data container that contains the widget. Available since Mendix 8.8.
 
-In the first case we say the widget is connected to an **attribute** and in the second case to an **attribute path**.
+3. An attribute of an entity associated with the data container entity by following one or more associations of type reference through the domain model.
+
+In the first two cases we say the widget is connected to an **attribute** and in the third case to an **attribute path**.
 
 {{% alert type="info" %}}
 In Mendix 8.0, an input widget connected to an **attribute path** must be read-only. Studio Pro will check this for you.
+{{% /alert %}}
 
+{{% alert type="info" %}}
 In Mendix 8.1 and above, you can edit attributes presented in input widgets over a path.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+In Mendix 8.8 and above, you can edit attributes of any enclosing data container including grandparent data containers.
 {{% /alert %}}
 
 #### 3.1.2 Association Input Widgets
@@ -302,7 +310,7 @@ Default: *(none)*
 
 ### 7.2 Message
 
-This property determines the message that is shown to the user if widget validation is enabled and has failed. This is a translatable text (for more information, see [Translatable Texts](translatable-texts)).
+This property determines the message that is shown to the user if widget validation is enabled and has failed. This is a translatable text (for more information, see [Language Menu](translatable-texts)).
 
 For example, if an address field is required, the validation message for the text box of the address could be something like, `The address is required.`
 

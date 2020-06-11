@@ -39,8 +39,6 @@ There are a few other differences between the way you develop and deploy apps in
 
 * In Mendix Cloud v4, the debugger is always active, and does not have to be activated – the **Show Debugger Information** button shows the credentials to connect Mendix Studio Pro to the debugger
     {{% alert type="info" %}}You can only use the debugger if your app is scaled to a single instance.{{% /alert %}}
-* In Mendix Cloud v4, the Java security manager is no longer enabled
-    * In Cloud Foundry, short-lived containers ensure standardization and apps are completely isolated from the management network, so the Java security manager is not needed to enforce standardization and act as an additional security layer
 * In Mendix Cloud v4, the number of permitted database connections is tied to the RAM of the database environment, rather than being static.
     * The limit is roughly 100 connections per GB of database RAM – the defaults are perfectly fine for most situations, but you can use the Mendix Runtime settings **ConnectionPoolingMaxActive** and **ConnectionPoolingMaxIdle** to tweak the number of database connections that the Mendix Runtime will set up for each runtime instance.
 * In Mendix Cloud v4, there are some circumstances in which your app can run out of file connections
@@ -50,8 +48,8 @@ There are a few other differences between the way you develop and deploy apps in
     * Application CPU alerts are not sent
     * Archived logs can only be downloaded, not viewed in the browser
     * The database status is not visible on the node details screen
-* Mendix Cloud v4 only supports TLS 1.2 for incoming requests
-    * If you have external clients connecting _to_ your application running in the Mendix Cloud, these clients have to support TLS 1.2 to be able to make a successful connection
+* Mendix Cloud v4 only supports TLS 1.2 or above for incoming requests
+    * If you have external clients connecting _to_ your application running in the Mendix Cloud, these clients have to support TLS 1.2 or above to be able to make a successful connection
 
 ## 4 Migrating the App
 

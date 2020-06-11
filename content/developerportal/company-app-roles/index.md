@@ -33,8 +33,8 @@ To view the Company Contact, follow these steps:
 1. Go to the [Developer Portal](http://home.mendix.com) and in the top-right corner, click your avatar and select **My Profile**:
 
     ![](attachments/show-profile.png)
-2. Below your name, click your the name of your company.
-3. Below **Contact**, you can see the Company Contact:
+2. Below your name, click your company name.
+3. Below **Contact**, the Company Contact is displayed:
 
     ![](attachments/company-contact.png)
 
@@ -66,7 +66,7 @@ When you view the details for a specific app, you will see the two roles respons
 
 These app roles are described below.
 
-### 3.1 App Contact
+### 3.1 App Contact {#app-contact}
 
 The App Contact is visible to regular users and is the go-to person for questions related to the app. If you build your own app, you will automatically become the App Contact and you will have the Scrum Master role as an [App Team role](#app-team-roles). 
 

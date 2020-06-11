@@ -52,7 +52,7 @@ To update the language settings in Studio Pro, go to **Language > Language Opera
 
 ![](attachments/Translating+Your+App+Content/language_operations.png)
 
-In the **Selection** section of the dialog window, you can select the documents and modules that you want to update. The columns of languages for which there are items but which are not included in the app project are gray.
+In the **Selection** section of the dialog box, you can select the documents and modules that you want to update. The columns of languages for which there are items but which are not included in the app project are gray.
 
 In the **Operation** section of the dialog box, there are four language operation options, which are described below.
 
@@ -78,7 +78,7 @@ There may be some text in your app that occurs in more than one place, so before
 To search for phrases that look similar and replace them as a batch, follow these steps:
 
 1. Go to **Language** > **Batch Replace**.
-2. In the **Source text contains** field of the **Batch replace** dialog window, enter the word you want to search for.
+2. In the **Source text contains** field of the **Batch replace** dialog box, enter the word you want to search for.
 3.  The results will appear in the table with the column headers **Text** and **Replace with** (as in the example image below, in which "Schedule" is being searched).
 
 	![](attachments/Translating+Your+App+Content/08_batch_replace_2.png)
@@ -92,7 +92,7 @@ To translate a label, follow these steps:
 1. Select the desired development language from the language drop-down menu in Studio Pro toolbar (which displays "English, United States" by default). Words in your app project will be automatically translated if they are in the library.
 2. Words that have not been automatically translated (that is, those words that are in angle brackets) must be manually translated one-by-one or through batch translation (see below).
 
-### 4.3 Performing Batch Translation
+### 4.3 Performing Batch Translation {#batch-translate}
 
 Instead of going through the pages and translating labels one-by-one, it's much more efficient to use the batch translate option.
 

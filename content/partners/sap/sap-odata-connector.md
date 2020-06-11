@@ -100,10 +100,6 @@ This domain model generally works in the same way as a Mendix domain model, with
 * Every object is based on an entity which is a specialization of the ComplexType, FunctionParameters, or OdataObject entity. The OdataObject entity adds a **meta_objectURI** string, which is the URI of the object and can be used in entity manipulation actions, and a **meta_etag** string that identifies a state of the object. This is used by the OData service when you try to change data to check if it has been changed since it was retrieved by your app.
 * Many objects have attributes which end in …Deferred. These contain URIs which will return a list of objects of an entity type which is associated with the current object. For example: in the domain model above, the **Product** entity contains an attribute **ToSupplierDeferred**. This will contain a URI which can be used to return the **BusinessPartner** associated with the current **Product** object via the **ToSupplier_Product_BusinessPartner** association.
 
-{{% alert type="info" %}}
-If you are using the *SAP Destination Service* to identify the endpoint of your SAP OData Service, you will need to edit the strings from the  meta_objectURI and …Deferred attributes as they will already contain an endpoint in addition to the object references.
-{{% /alert %}}
-
 #### 2.3.2 OData Connector for SAP Solutions Domain Model<a name='ConnectorDM'></a>
 
 In addition to the SAP Service Domain Model, there is a domain model which is used internally by the OData Connector for SAP solutions to control the connection between your Mendix app and the SAP back-end. The domain model consists of entities and their relationships represented by associations.
@@ -211,7 +207,7 @@ This produces the GET request `https://sapes5.sapdevcenter.com/sap/opu/odata/iwb
 The Create operation creates a new object in the SAP back-end system using the OData service. The object is described by an entity in the SAP service domain model.
 
 {{% alert type="info" %}}
-This Create is not the same as the Mendix **Create Object** action. The OData Connector for SAP solutions Create will commit the object to the SAP back-end system and it cannot be rolled back. If you decide later that you do not want this object you must delete it using its key.
+This Create is not the same as the Mendix **Create object** action. The OData Connector for SAP solutions Create will commit the object to the SAP back-end system and it cannot be rolled back. If you decide later that you do not want this object you must delete it using its key.
 {{% /alert %}}
 
 ![](attachments/sap-odata-connector/create-params.png)
@@ -244,7 +240,7 @@ For example, this connector can be used to create a product using the **GWSAMPLE
 
 `GWSAMPLE_BASIC.EntitySetNames.ProductSet` is the name of the Product collection listed in the EntitySetNames enumeration of the SAP Service Data Model.
 
-The **Odata object** is an object of entity type **Product**. This can be created, by using, for example, the **Create Object** action.
+The **Odata object** is an object of entity type **Product**. This can be created, by using, for example, the **Create object** action.
 
  You will need to pass authentication using **Request Parameters** and the **Add basic authentication** action described in [Helper Actions](#HelperActions), below.
 
@@ -621,7 +617,7 @@ This is the name that you give the result of your Activity. This can be used lat
 * [Data Types](/refguide/data-types)
 * [Domain Model](/refguide/domain-model)
 * [Entities](/refguide/entities)
-* [How to Use App Store Content](/developerportal/app-store/app-store-content)
+* [How to Use App Store Content](/appstore/general/app-store-content)
 * [How to Use the OData Connector for SAP Solutions](/partners/sap/use-sap-odata-connector)
 * [How to Use the OData Model Creator for SAP Solutions](/partners/sap/use-sap-odata-model-creator)
 * [SAP Cloud Connector](sap-cloud-connector)

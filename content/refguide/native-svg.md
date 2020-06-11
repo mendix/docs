@@ -8,7 +8,7 @@ tags: ["native", "svg", "images", "mobile", "vector", "vector graphics"]
 
 ## 1 Introduction
 
-When building a native application, you may want to use vector images for icons or other illustrations. For this purpose, you can use Scalable Vector Graphics (SVGs). This reference guide will provide guidance for working with SVGs in native apps.
+When building a native mobile application, you may want to use vector images for icons or other illustrations. For this purpose, you can use Scalable Vector Graphics (SVGs). This reference guide will provide guidance for working with SVGs in native mobile apps.
 
 ## 2 Optimizing SVGs {#optimizing}
 
@@ -18,7 +18,7 @@ To optimize your SVGs, you can either run them through an online tool such as [S
 
 ## 3 Unsupported Elements
 
-SVGs can contain several kinds of elements. However, not all of them are supported in native apps. Unsupported elements will have no effect and should be removed. The following SVG elements are *not* supported for native mobile apps:
+SVGs can contain several kinds of elements. However, not all of them are supported in native mobile apps. Unsupported elements will have no effect and should be removed. The following SVG elements are *not* supported for native mobile apps:
 
 * Complex gradients
 * Animations 
@@ -53,7 +53,7 @@ Here is how an SVG with the `fill` property looks:
 
 ### 4.1 Coloring SVG Icons
 
-Icons can only be set for buttons and bottom bar items. When you integrate an SVG icon into a button or bottom bar item, you will have to set the SVG's color yourself. When using an app which employs Atlas UI, by default the colors are all white. For more information on styling, see the [Native Styling reference guide](/refguide/native-styling-refguide).
+Icons can only be set for buttons and bottom bar items. When you integrate an SVG icon into a button or bottom bar item, you will have to set the SVG's color yourself. When using an app which employs Atlas UI, by default the colors are all white. For more information on styling, see the [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide).
 
 For example, the following code:
 

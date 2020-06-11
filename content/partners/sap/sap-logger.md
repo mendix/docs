@@ -1,7 +1,7 @@
 ---
 title: "SAP Logging Connector"
 category: "SAP"
-menu_order: 48
+menu_order: 49
 description: "The connector which formats logs for the Kibana dashboard"
 tags: ["SAP", "Kibana", "Log", "json"]
 ---
@@ -22,7 +22,7 @@ In addition, the Connector supports multiline log messages.
 
 ## 2 Getting the SAP Logging Connector
 
-To use the SAP Logging Connector, you need to import it into your app from the App Store. For more information on importing modules from the App Store, see [Use App Store Content](/developerportal/app-store/app-store-content).
+To use the SAP Logging Connector, you need to import it into your app from the App Store. For more information on importing modules from the App Store, see [How to Use App Store Content](/appstore/general/app-store-content).
 
 The SAP Logging Connector is available here: [https://appstore.home.mendix.com/link/app/110219/](https://appstore.home.mendix.com/link/app/110219/).
 

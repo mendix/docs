@@ -3,14 +3,14 @@ title: "Mx Model Reflection"
 category: "Modules"
 description: "Describes the configuration and usage of the Mx Model Reflection module, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "mx model reflection", "token configuration", "platform support"]
-draft: true
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
 The [Mx Model Reflection](https://appstore.home.mendix.com/link/app/69/) module can be used to show the reflection of the configuration in your domain model. The module creates an object for each entity, attribute, and reference.
 
-### 1.1 Typical Usage Scenarios
+### 1.1 Typical Use Cases
 
 The typical usage scenario is selecting and showing entities from your domain model to use for another configuration. 
 
@@ -24,7 +24,7 @@ If you have a large app project, the synchronization will take much longer.
 
 ### 2.1 Token Configuration
 
-The token configuration used in the [E-mail Module with Templates](https://appstore.home.mendix.com/link/app/259/) now also allows you to specify the display pattern. This allows you to configure how the attributes are shown rather than relying on the defaults of the module.
+The token configuration used in the [Email with Templates](/appstore/modules/email-with-templates) module now also allows you to specify the display pattern. This allows you to configure how the attributes are shown rather than relying on the defaults of the module.
 
 The display pattern in the token is optional. If you do not specify a value, the module will use the original behavior. 
 

@@ -3,7 +3,7 @@ title: "URL Redirector"
 category: "Widgets"
 description: "Describes the configuration and usage of the URL Redirector widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "url redirector", "url", "static", "dynamic", "platform support"]
-draft: true
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -20,9 +20,9 @@ The [URL Redirector](https://appstore.home.mendix.com/link/app/113/) widget enab
 * Open a redirect URL in a new browser window or in the current window
 * Combine a prefix URL with a dynamic URL part
 
-## 2 Properties
+## 2 Configuration
 
-### 2.1 Data Source
+The following data source properties must be configured:
 
 * **URL(prefix)** – the URL to redirect to (for example, `http://www.mendix.com`)
 * **URL Attribute** – the attribute containing a URL value to redirect to (for example, ` http://www.mendix.com`; you can also combine with the prefix value and add a value to it like `/learn`)

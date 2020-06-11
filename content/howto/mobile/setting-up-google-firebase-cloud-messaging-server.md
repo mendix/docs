@@ -7,7 +7,7 @@ tags: ["mobile", "push notification", "google", "firebase", "server"]
 
 ## 1 Introduction
 
-You can use Google's Firebase Cloud Messaging (FCM) service to send push notifications to both Android as well as iOS. In order to send push notifications using FCM from this module, you need to set up a Firebase account with FCM enabled. To register for FCM and configure the service in the app, perform the steps below.
+You can use Google's Firebase Cloud Messaging (FCM) service to send push notifications to both Android as well as iOS. In order to send push notifications using FCM from the Push Notifications Connector module, you must set up a Firebase account with FCM enabled. This tutorial will teach you how to register for FCM and configure the service in your app.
 
 ## 2 Prerequisites
 
@@ -23,41 +23,78 @@ There are two possible scenarios: you can create a new FCM project, or you can u
 
 To prevent the degraded reliability of push notifications delivery, you should migrate existing GCM projects to FCM and upgrade credentials if needed.
 
-#### 3.1.1 Signing In to the Developers Console
+#### 3.1.1 Sign in to the Developer's Console
 
-Open up the [Firebase developers console](https://console.firebase.google.com/) and sign in with your Google ID.
+Open the [Firebase developer's console](https://console.firebase.google.com/) and sign in with your Google ID.
 
 #### 3.1.2 Importing the Project
 
-In the Firebase console, select **Import Google Project**. Select your GCM project from the list of existing projects, select a region, and click **Add Firebase**.
+To import your project, do the following:
 
-![](attachments/Setting+up+Google+Firebase+Cloud+Messaging+Server/Add_Firebase_to_a_Google_Project.png)
+1. In the Firebase console, select **Import Google Project**. 
+1. Select your GCM project from the list of existing projects, select a region, and click **Add Firebase**:
 
-From here, continue with [Configuring APNs Credentials](#configuring) below.
+  ![](attachments/Setting+up+Google+Firebase+Cloud+Messaging+Server/Add_Firebase_to_a_Google_Project.png)
+
+With that done, continue with [Configuring APNs Credentials](#configuring) below.
 
 ### 3.2 Creating a New FCM Project
 
-#### 3.2.1 Signing In to the Developers Console
+#### 3.2.1 Sign in to the Developers Console
 
 Open up the [Firebase developers console](https://console.firebase.google.com/) and sign in with your Google ID.
 
 #### 3.2.2 Creating the Project
 
-Click **Create new project** and fill in the project name and region for your application. Then click **Create**.
+To create a project, do the following:
 
-![](attachments/Setting+up+Google+Firebase+Cloud+Messaging+Server/Create_Firebase_Project.png)
+1. Click **Create new project**.
+1. Fill in your application's project name and region. 
+1.  Click **Create**"
 
-## 4 Configuring APNs Credentials (Optional) {#configuring}
+	![](attachments/Setting+up+Google+Firebase+Cloud+Messaging+Server/Create_Firebase_Project.png)
 
-If you wish to send push notifications to iOS devices through FCM, you will need to configure your APNs credentials. To do so, click in the top-left corner of the screen and select **Project settings**.
+## 4 Adding an Android or iOS App {#native-apps}
 
-Navigate to the **Cloud messaging** tab.
+Before you add an app to FCM, you must retrieve your app's bundle ID. Its location depends on your type of your mobile app.
 
-![](attachments/push_notifications_cloud_messaging.png)
+For a native mobile app, your bundle ID will be what you specify for the `--application-id` parameter. You can find this ID later in your generated GitHub repo:
 
-On this tab, upload either your APNs key or your APNs certificate(s).
+* For Android, open *android/app/build.gradle* and consult **applicationId** to find your ID 
+* For iOS, open *ios/Config/config.xcconfig* and consult **BUNDLE_IDENTIFIER** to find your ID
 
-## 5 Setting Up a Service Account
+For a hybrid app, you can find this ID in your Project Dashboard. Click **Deploy**, then **Mobile App**. Your ID is listed as **App Identifier**:
+
+![](attachments/push-server/firebase/hybrid_app_identifier.png)
+
+Do the following to add your app to FCM:
+
+1.  Click the **Project Overview** cogwheel and select **Project settings**:
+
+	![](attachments/push-server/firebase/project_settings.png)
+
+1.  Go to the **General** tab and click **Add app**:
+
+	![](attachments/push-server/firebase/add_app.png)
+
+1.  Select Android and, fill in the bundle_id, and skip the rest of the steps: 
+
+	![](attachments/push-server/firebase/android_setup.png)
+
+Bundle id must be matching with your package id. Make sure to repeat this step for IOS aswell.
+
+## 5 Configuring APNs Credentials (Optional) {#configuring}
+
+If you wish to send push notifications to iOS devices through FCM, you will need to configure your APNs credentials:
+
+1. Click in the top-left corner of the screen and select **Project settings**.
+1.  Navigate to the **Cloud messaging** tab:
+
+	![](attachments/push_notifications_cloud_messaging.png)
+
+1. On this tab, upload either your APNs key or your APNs certificate(s). For more information on APN SSL certificates, see [How to Set up the Apple Push Notification Server](setting-up-apple-push-notification-server).
+
+## 6 Setting Up a Service Account
 
 In the top-left corner of the screen, click the cogwheel and select **Project settings**. Then navigate to the **Service accounts** tab.
 
@@ -67,9 +104,9 @@ On this page, press **Generate new private key**. Store the resulting file in a 
 
 The file you just created gives API access to all available Firebase services for your app. If you want a more restrictive service account, click **Manage all service accounts** in the top-right of the screen, then create a service account that is restricted to using the Cloud Messaging functionality.
 
-## 6 Downloading the Google Services Config Files {#downloading-the-google-services-config-files}
+## 7 Downloading the Google Services Config Files {#downloading-the-google-services-config-files}
 
-In addition to the back-end configuration set up in the previous steps, you will need additional files that will be bundled as part of your mobile application. To obtain these, again click the cogwheel in the top-left of the screen and select **Project settings**. Then navigate to the **General** tab.
+In addition to the back-end configuration set up in the previous steps, you will need additional files that will be bundled as part of your mobile application. To obtain these, again click the cogwheel in the top-left of the screen and select **Project settings**. Then navigate to the **General** tab:
 
 ![](attachments/push_notifications_platforms.png)
 
@@ -79,53 +116,8 @@ The list at the bottom shows the Android and iOS applications that you have conf
 Only create an iOS application in your Firebase project when you plan on using FCM for sending push notifications to iOS devices. If you plan on keeping using APNS to send push notifications to iOS devices, you do not have to create an iOS application in your Firebase project, and you do not have to download a *GoogleService-Info.plist* config file.
 {{% /alert %}}
 
-## 7 Building Your Mobile Application
-
-If your app supports push notifications, you are now required to set up a Firebase account for your app and include Google service description files (*google-services.json* and *GoogleService-Info.plist*) in your hybrid app.
-
-As a result of this, Mendix hybrid apps that employ push notifications can no longer be built directly using the Phonegap Build flow in the Mendix Developer Portal. Instead, you will need to prepare the hybrid app package locally. You can use the generated hybrid app package to build your Android and iOS apps locally, or upload them to Phonegap Build manually.
-
-To build the hybrid app package, follow these steps:
-
-1.  Open your app in the Developer Portal and under **DEPLOY** in the left sidebar menu, click **Mobile App**.
-2.  Make sure the **Push Notifications** permission is checked under **Permissions**.
-3.  Click **Publish for Mobile App Stores**:
-
-    ![](attachments/implement-sso/download-hybrid-app-package-step1.png)
-    
-4.  Select **Do it yourself** and then click **Download Customizable Package**:
-
-    ![](attachments/implement-sso/download-hybrid-app-package-step2.png)
-
-    This package you just downloaded is a customizable hybrid app package for your specific Mendix app. You can make changes to it, build a new PhoneGap Build package, and then upload it to PhoneGap Build to create the binaries (for example, APK for Android and IPA for iOS). To better understand the structure of what you just downloaded, see the **Folder Structure** section in the [Mendix PhoneGap Build App Template documentation](https://github.com/mendix/hybrid-app-template#folder-structure).
-
-5.  Unzip the hybrid app package.
-6.  Copy and paste the *google-services.json* and *GoogleService-Info.plist* config files you downloaded before into the `config` folder.
-    {{% alert type="warning" %}} Only paste the *GoogleService-Info.plist* config file when you plan on using FCM for sending push notifications to iOS devices. If you plan on keeping using APNS to send push notifications to iOS devices, do not paste the *GoogleService-Info.plist* config file.{{% /alert %}}
-7.  Create the PhoneGap Build package by following the instructions in the [Through Uploading to PhoneGap Build](https://github.com/mendix/hybrid-app-template#through-uploading-to-phonegap-build) section of the *Mendix PhoneGap Build App Template* documentation. Be sure to read the **Prerequisites** and **Build on PhoneGap** sections of this documentation as well. This is an overview of the steps:<br />
-    a. Install the latest stable version of [Node.js](https://nodejs.org/en/download/).<br />
-    b. In the unzipped hybrid app package folder, execute `npm install`.<br />
-    c. In the same folder execute `npm run package`.<br />
-8.  Create an APK or iOS package from the PhoneGap Build package. You can upload the new PhoneGap Build package (in the **dist** folder) to PhoneGap to build the APK or iOS binary.
-
-    ![](attachments/implement-sso/build.phonegap.com.png)
-
-## 8 Configuring FCM in Your Application
-
-Open your Mendix application, sign in as an Admin, and open the **PushNotifications_Administration** page. Scroll to the FCM section and create or edit a configuration. 
-
-Configure FCM as follows:
-
-* Select the **Enabled** checkbox
-* Choose a name for the new configuration
-* Enter your Firebase project ID (find this on the Firebase console website)
-* Upload the private key you downloaded earlier when you created a service account
-
-{{% alert type="warning" %}}
-Make sure the **Encryption.EncryptionKey** constant has a valid value before you start the application. If the value is not set, the private key will not be stored correctly, and you will get a `NullPointerException` error when you try to send a notification to FCM. If you get the `NullPointerException` error, please double-check the value of the **Encryption.EncryptionKey** constant, restart your app, and upload the private key again.
-{{% /alert %}}
-
-## 9 Read More
+## 8 Read More
 
 * [Implement Push Notifications](implementation-guide)
-* [Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
+* [Set Up Hybrid Push Notifications](setting-up-hybrid-push-notifications)
+* [Set Up Remote Notifications](setting-up-native-push-notifications)

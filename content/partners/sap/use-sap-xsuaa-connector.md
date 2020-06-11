@@ -39,7 +39,7 @@ The SAP app may already have the XSUAA Connector for SAP Cloud Platform installe
 
 If the XSUAA Connector for SAP Cloud Platform is not already in your project, download it from the App Store. It can be found here: [XSUAA Connector for SAP Cloud Platform](https://appstore.home.mendix.com/link/app/78091/).
 
-For more information, see [How to Use App Store Content](/developerportal/app-store/app-store-content).
+For more information, see [How to Use App Store Content](/appstore/general/app-store-content).
 
 ## 4 Using the Connector
 
@@ -105,6 +105,8 @@ An alternative to adding the SSO login button to the landing page of your app is
 
 {{% alert type="info" %}}
 Note that this will only work if you are running your app on SAP Cloud Platform.
+
+Because users will be automatically redirected to XSUAA after signing out of the application, this could cause them to be signed in again.
 {{% /alert %}}
 
 To accomplish this, follow these steps:
@@ -239,8 +241,8 @@ You can picture the authentication as shown below:
 
 ## 6 Read More
 
-* [Create a Secure App](/howto/security/create-a-secure-app)
-* [Use App Store Content](/developerportal/app-store/app-store-content)
+* [How to Create a Secure App](/howto/security/create-a-secure-app)
+* [How to Use App Store Content](/appstore/general/app-store-content)
 * [Project Security](/refguide/project-security)
 * [XSUAA Connector for SAP Cloud Platform](https://appstore.home.mendix.com/link/app/78091/)
 * [XSUAA Connector for SAP Cloud Platform](/partners/sap/sap-xsuaa-connector) (documentation)

@@ -1,5 +1,5 @@
 ---
-title: "Style Your Mendix Native App"
+title: "Style Your Mendix Native Mobile App"
 parent: "native-styling"
 menu_order: 30
 description: A how-to for styling your first Mendix Native App.
@@ -9,7 +9,7 @@ tags: ["styling", "design", "classes", "native"]
 
 ## 1 Introduction
 
-With Mendix 8, you have the capacity to alter design properties with Mendix Studio Pro. Furthermore, because all native mobile styling is written in JavaScript, you have new ways of applying your styling customizations. For more details on native styling, class names, and widget styling, see [Native Styling](/refguide/native-styling-refguide).
+With Mendix 8, you have the capacity to alter design properties with Mendix Studio Pro. Furthermore, because all native mobile styling is written in JavaScript, you have new ways of applying your styling customizations. For more details on native styling, class names, and widget styling, see the [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide).
 
 ## 2 Prerequisites 
 
@@ -61,7 +61,7 @@ Classes are groups of styling properties which define how certain elements of yo
 
 1. Place a second button widget on your app's home page.
 2. Run your app to view your button.
-3. Select the button widget, and then click on the **Properties** panel. Under **Common** you will see the button's **Class** field.
+3. Select the button widget, and then click the **Properties** panel. Under **Common** you will see the button's **Class** field.
 4.  Type *btnSuccess* into the **Class** field:
 
 	![class field](attachments/how-to-use-native-styling/btn-success.png)
@@ -111,7 +111,7 @@ When you have specific design requirements, you will need to build custom classe
 	}
 	```
 	
-	To alter a class on your own, consult [Native Styling](/refguide/native-styling-refguide) to understand widget structures.
+	To alter a class on your own, consult the [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide) to understand widget structures.
 
 6. Now you will edit the code you pasted. Apply a transparent background color to customize the the default button widget:
 
@@ -179,7 +179,7 @@ Congratulations! By completing this how-to, you have learned how to alter a styl
 
 ## 8 Read More
 
-* [Implement Native Styling](native-styling)
-* [Native Styling](/refguide/native-styling-refguide)
+* [How to Implement Native Mobile Styling](native-styling)
+* [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide)
 * [Mendix Atlas UI](../front-end/atlas-ui)
-* [Get Started with Native Mobile](getting-started-with-native-mobile)
+* [How to Get Started with Native Mobile](getting-started-with-native-mobile)

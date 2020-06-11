@@ -19,7 +19,7 @@ The following frameworks are automatically installed (if necessary):
 
 * Microsoft .NET Framework 4.7.2
 * Microsoft Visual C++ 2010 SP1 Redistributable Package
-* Microsoft Visual C++ 2013 Redistributable Package
+* Microsoft Visual C++ 2015 Redistributable Package
 * AdoptOpenJDK 11 or Oracle JDK 11 (the former is installed automatically as of [Mendix 8.0.0](/releasenotes/studio-pro/8.0#800) if you do not have any JDK 11 installed) 
 
 {{% alert type="info" %}}
@@ -95,11 +95,11 @@ Current support:
 
 * [IBM DB2](db2) 11.1 for Linux, Unix, and Windows
 * [MariaDB](mysql) 5.5, 10.1, 10.2, 10.3
-* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server) 2016, 2017
+* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server) 2016, 2017, 2019
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017) v12 compatibility mode 130 or higher
 * [MySQL](mysql) 5.7, 8.0
-* [Oracle Database](oracle) 12c Release 2
-* PostgreSQL 9.5, 9.6, 10, 11
+* [Oracle Database](oracle) 12c Release 2, 18, 19
+* PostgreSQL 9.5, 9.6, 10, 11, 12
 * [SAP HANA](saphana) 2.00.040.00.1545918182
 
 {{% alert type="warning" %}}

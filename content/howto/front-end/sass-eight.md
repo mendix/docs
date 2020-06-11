@@ -47,16 +47,17 @@ To prepare your app project, follow these steps:
 	![](attachments/set-up-sass/unpack.png)
 
 	After you have unpacked the *Gulp.zip* into your app project folder, you can remove the *zip* file.
-3.  Open **Windows PowerShell**:
+3.  Open **Windows PowerShell** as an administrator:
 
 	![](attachments/set-up-sass/powershell.png)
 
-4.  Copy the address as text from your main project folder and paste it into Powershell:
+4.  Copy the address as text from your main project folder and paste it into Powershell (your project folder cannot contain spaces):
 
 	![](attachments/set-up-sass/copy.png)
 
 5.  Provide the directory for your app project folder in PowerShell: `cd ‘directory for your app project folder’`
-6.  Write `npm install` or use `npm install gulp-cli -g`:
+6.  Adjust permissions by writing `Set-ExecutionPolicy -ExecutionPolicy ByPass -Scope CurrentUser` then pressing <kbd>Enter</kbd> .
+7.  Write `npm install` or use `npm install gulp-cli -g` with your app running locally on Studio Pro:
 
 	![](attachments/set-up-sass/write-install.png)
 
@@ -65,13 +66,13 @@ To prepare your app project, follow these steps:
 	{{% alert type="info" %}}You should do this for each new app project! That way, you will not have to repeat the installation step whenever you reopen the app project and Powershell.
 	{{% /alert %}}
 
-7.  Write `gulp dev`. Your screen should then look like this:
+8.  Write `gulp dev`. Your screen should then look like this:
 
 	![](attachments/set-up-sass/gulp-dev.png)
 
 	At this point, you are ready to start working with Sass.
 
-8.  You also need to add the following selected items into the ignore list of TortoiseSVN for each new app project (or else your app project will take too long to commit a change) :
+9.  You also need to add the following selected items into the ignore list of TortoiseSVN for each new app project (or else your app project will take too long to commit a change). You will only have to do this *once* when you set it up for your project:
 
 	![](attachments/set-up-sass/selected-ignore.png)
 
@@ -82,10 +83,10 @@ To prepare your app project, follow these steps:
 	You will receive a confirmation when the items have been added to the ignore list. You can also double-check via TortoiseSVN:
 
 	![](attachments/set-up-sass/check-ignore.png)
-	
+
 	If you need to remove an item from the ignore list, right-click it and select **TortoiseSVN** > **Remove from ignore list**.
 
-9.  Open your app project in Studio Pro, then click **Run Locally** and **View**.
+10.  Open your app project in Studio Pro, then click **Run Locally** and **View**.
 
 ## 4  Setting Up Your Sass Files
 
@@ -132,7 +133,7 @@ To import all the sub-folders and files you have created, write this:
 \@import "base/login";
 ```
 
-After you import everything, you are finally ready to Sass! 
+After you import everything, you are finally ready to Sass!
 
 ## 5 Working with Sass
 
@@ -148,14 +149,14 @@ color: green;
 }
 ```
 
-To implement this in your app project, open the project in Mendix Studio Pro. You can find the defined class names in almost every element (for example, titles and subtitles). In this example, double-click the title **Event App** in Studio Pro, and you can see that the name has the standard class name for Studio Pro. 
+To implement this in your app project, open the project in Mendix Studio Pro. You can find the defined class names in almost every element (for example, titles and subtitles). In this example, double-click the title **Event App** in Studio Pro, and you can see that the name has the standard class name for Studio Pro.
 
 ![](attachments/set-up-sass/class-name.png)
 
-You can remove **spacing-outer-bottom-medium**, as that is a variable that contains defined styling code. If you do not remove this, you will probably have trouble later in the app project if you, for example, want to position your title somewhere else. 
+You can remove **spacing-outer-bottom-medium**, as that is a variable that contains defined styling code. If you do not remove this, you will probably have trouble later in the app project if you, for example, want to position your title somewhere else.
 
 {{% alert type="info" %}}
-The inline styling is used in this example. That is because the inline styling will always overrule your code in VSC. 
+The inline styling is used in this example. That is because the inline styling will always overrule your code in VSC.
 {{% /alert %}}
 
 ### 5.1 Seeing Your Changes
@@ -183,7 +184,6 @@ Practice the routine above a few times and you will master it in no time. In add
 * Make sure Powershell is working properly, or else your code will not be registered Studio Pro
 * Use the following to install gulp for each new project:
 	* `npm install`
-	* `npm install dev`
 	* `npm install gulp-cli -g`
 	* If the commands above do not work, you can also use `npm run dev`, though keep in mind you are not installing the gulp
 * Make sure the app project is running locally in Studio Pro (you will not be able to see your changes if the app is not running)

@@ -113,7 +113,7 @@ To create a custom widget with Adobe Brackets, follow these steps:
 
     ![](attachments/18448564/18579879.png)
 
-    The name of the widget is very important, because it will be used in Mendix. Using the CamelCase naming convention is recommended (for more information, see [http://en.wikipedia.org/wiki/CamelCase](http://en.wikipedia.org/wiki/CamelCase)). Each new widget should have at least the author, version number, copyright, license, package name, widget name, and path defined before you can click **Continue**. The location directory must also exist, and you must have access rights to the folder. 
+    The name of the widget is very important, because it will be used in Mendix. Using the UpperCamelCase naming convention is recommended (for more information, see [http://en.wikipedia.org/wiki/CamelCase](http://en.wikipedia.org/wiki/CamelCase)). Each new widget should have at least the author, version number, copyright, license, package name, widget name, and path defined before you can click **Continue**. The location directory must also exist, and you must have access rights to the folder. 
 
     These are the additional naming guidelines about the settings:
 
@@ -613,7 +613,7 @@ postCreate : function () {
 ...
 ```
 
-Our postCreate function uses a DOM function from the [Mendix Client API](http://apidocs.mendix.com/5/client/). However, if possible, use the functions provided by DOJO. DOM functions in the Mendix API are mainly for handling browser incompatibilities. This function adds the text stored in the `messageString` variable, which is passed into the widget through our XML, to your widget's `domNode`.
+Our postCreate function uses a DOM function from the [Mendix Client API](http://apidocs.rnd.mendix.com/5/client/index.html). However, if possible, use the functions provided by DOJO. DOM functions in the Mendix API are mainly for handling browser incompatibilities. This function adds the text stored in the `messageString` variable, which is passed into the widget through our XML, to your widget's `domNode`.
 
 ```js
 postCreate: function(){
@@ -718,7 +718,7 @@ Mendix custom widgets are based on DOJO widgets. For more information, see this 
 
 ### 8.2 The Mendix Client API 6.0
 
-To communicate with Mendix, you need to use the Mendix JavaScript Client API. For details, see the [Mendix 6 Client API](https://apidocs.mendix.com/6/client/).
+To communicate with Mendix, you need to use the Mendix JavaScript Client API. For details, see the [Mendix 6 Client API](https://apidocs.rnd.mendix.com/6/client/index.html).
 
 ### 8.3 Learning JavaScript Design Patterns
 

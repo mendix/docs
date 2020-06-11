@@ -3,14 +3,14 @@ title: "Radio Button List"
 category: "Widgets"
 description: "Describes the configuration and usage of the Radio Button List widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "radio button list", "platform support"]
-draft: true
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
 The [Radio Button List](https://appstore.home.mendix.com/link/app/20/) widget enables rendering an attribute or association as a radio button list. The widget is used with enumeration values, Boolean values, and references, and it is a useful replacement for the default drop-down menu or reference selector widget.
 
-### 1.1 Typical Usage Scenarios
+### 1.1 Typical Use Cases
 
 Visualize all the possible options in your user interface, instead of just forcing your end-user to open a drop-down menu to view all available options.
 

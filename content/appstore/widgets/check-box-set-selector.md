@@ -3,7 +3,7 @@ title: "Check Box Set Selector"
 category: "Widgets"
 description: "Describes the configuration and usage of the Check Box Set Selector widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "check box set selector", "check box", "platform support"]
-draft: true
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -45,4 +45,4 @@ The [Check Box Set Selector](https://appstore.home.mendix.com/link/app/121/) wid
 
 ## 3 Read More
 
-* [Check Box Set Selector (ATS)](https://docs.mendix.com/addons/ats-addon/rg-one-checkbox-set-selector)
+* [Check Box Set Selector (ATS)](/addons/ats-addon/rg-one-checkbox-set-selector)

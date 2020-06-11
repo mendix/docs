@@ -87,6 +87,12 @@ When you set the Java heap setting to 'Custom', you can specify the amount of he
 
 ### Emulate cloud security
 
+{{% alert type="info" %}}
+
+Since March 18th 2020, this setting in no longer needed and will have no effect.
+
+{{% /alert %}}
+
 Projects hosted in the Mendix Cloud have to adhere to much stricter security policies than hosting it on your own server. Turning on this switch emulates that behavior. A security policy will be enforced, which will allow you to test your Java actions and verify that they will also run in the cloud.
 
 ### Extra JVM parameters

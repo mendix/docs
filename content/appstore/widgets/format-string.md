@@ -3,14 +3,14 @@ title: "Format String"
 category: "Widgets"
 description: "Describes the configuration and usage of the Format String widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "format string", "platform support"]
-draft: true
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
 The [Format String](https://appstore.home.mendix.com/link/app/264/) widget adds a user-defined string to your page, taking object attributes as input parameters.
 
-### 1.1 Typical Usage Scenarios
+### 1.1 Typical Use Cases
 
 Use this widget to display multiple attributes as a single string.
 

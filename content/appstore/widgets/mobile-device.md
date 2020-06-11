@@ -3,7 +3,7 @@ title: "Mobile Device"
 category: "Widgets"
 description: "Describes the configuration and usage of the Mobile Device widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "mobile device", "cordova", "phonegap", "platform support"]
-draft: true
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -25,7 +25,7 @@ Using this widget for Mendix [hybrid mobile](/refguide/hybrid-mobile) applicatio
 * Closes the current page so that when a back or close action is performed on the next page, the app is closed
 * Shows the page upon device information retrievable
 
-### 1.2 Typical Usage Scenarios
+### 1.2 Typical Use Cases
 
 #### 1.2.1 Device-Based Settings
 

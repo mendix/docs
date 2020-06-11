@@ -5,7 +5,47 @@ tags: ["app store", "connector", "module", "add on", "widget"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes made to the [Mendix App Store](/developerportal/app-store/).
+These release notes cover changes made to the [Mendix App Store](/appstore/index).
+
+## 2020
+
+### May 27th, 2020
+
+#### Fix
+
+As of Studio Pro version [8.10.0](../studio-pro/8.10#1400), you are able to download private content in the App Store again. This is not possible for Studio Pro versions 8.7–8.9.
+
+### May 6th, 2020
+
+#### Improvement
+
+You can now download previous versions of App Store components from the [Mendix App Store](https://appstore.home.mendix.com/). This can be done in the **All versions** tab on the component's [details page](/appstore/general/app-store-overview#details). This can be used as a workaround for not being able to download private content from the App Store available in older versions of Studio Pro/Desktop Modeler due to the [security issue](#private-fix) described below.
+
+#### Fix
+
+As of Studio Pro version [8.6.4](../studio-pro/8.6#private-content), you are able to download private content in the App Store again. This is possible for Studio Pro version 8.6.4 and all further 8.6.x versions. It is not possible for Studio Pro versions below 8.6.4.
+
+### May 4th, 2020
+
+#### Fix
+
+As of Desktop Modeler version [7.23.14](../studio-pro/7.23#private), you are able to download private content in the App Store again. This is possible for Desktop Modeler version 7.23.14 and all further 7.23.x versions. It is not possible for Desktop Modeler versions below 7.23.14.
+
+### April 7th, 2020
+
+#### Security Fix Needed for App Store in Studio Pro/Desktop Modeler {#private-fix}
+
+Downloading [private content](/appstore/general/share-app-store-content#private-app-store) from the App Store available in Studio Pro/Desktop Modeler has been temporarily disabled due to a security vulnerability.
+
+You will be able to download private content from the App Store available in Studio Pro/Desktop Modeler again once a fix is released in a future [8.x](../studio-pro/8), [8.6.x](../studio-pro/8.6), and [7.23.x](../studio-pro/7.23) release. This functionality will then only be available in those specific versions with the fix and subsequent versions. This functionality will not be available again for the App Store in Desktop Modeler version [6](../studio-pro/6).
+
+You can continue downloading the latest version of private App Store content from the [Company Content](/appstore/general/app-store-overview#company-content) page in the [Mendix App Store](https://appstore.home.mendix.com/) and use it in the respective versions of Studio Pro/Desktop Modeler.
+
+### February 26th, 2020
+
+#### Improvement
+
+We have updated the single sign-on functionality in the App Store to use the latest [Mendix SSO](/developerportal/deploy/mendix-sso). Now, the first time you visit any App Store page requiring authentication, you will see a screen asking you to authorize access to your Mendix account. Click **Authorize** to continue.
 
 ## 2019
 
@@ -15,35 +55,35 @@ These release notes cover changes made to the [Mendix App Store](/developerporta
 
 We are invested in maintaining Mendix App Store content to make it easier for you to find and use the widgets and modules that you need. To that end, we have cleaned up old App Store content where Mendix support is no longer possible and changed the support level from **Platform support** to **Community support**.
 
-For more information on these support levels, see [App Store Content Support](/developerportal/app-store/app-store-content-support).
+For more information on these support levels, see [App Store Content Support](/appstore/general/app-store-content-support).
 
 ### November 6th, 2019
 
 #### Improvement
 
-You can now subscribe to receive emails when new versions of your [favorite](/developerportal/app-store/app-store-overview#favorites) App Store content are published.
+You can now subscribe to receive emails when new versions of your [favorite](/appstore/general/app-store-overview#favorites) App Store content are published.
 
 ### October 23rd, 2019
 
 #### New Features
 
-You can now create [user groups](/developerportal/app-store/app-store-overview#user-groups) for your company and assign your company’s App Store content to different groups. Management of user group content is restricted to only the members of the group. You can also add [guest](/developerportal/app-store/app-store-overview#guests) users to these groups and allow them to download selected private company content.
+You can now create [user groups](/appstore/general/app-store-overview#user-groups) for your company and assign your company’s App Store content to different groups. Management of user group content is restricted to only the members of the group. You can also add [guest](/appstore/general/app-store-overview#guests) users to these groups and allow them to download selected private company content.
 
-The former App Store **Content Managers** and **External Downloaders** groups have been removed. Members of these groups have been migrated to a new temporary user group called **Migrated Data**. Former “content managers” have been added as user group [members] (/developerportal/app-store/app-store-overview#members), and former “external downloaders” have been added as [guests](/developerportal/app-store/app-store-overview#guests).
+The former App Store **Content Managers** and **External Downloaders** groups have been removed. Members of these groups have been migrated to a new temporary user group called **Migrated Data**. Former “content managers” have been added as user group [members] (/appstore/general/app-store-overview#members), and former “external downloaders” have been added as [guests](/appstore/general/app-store-overview#guests).
 
-Content that was marked as **Protected** as well as content marked as **Shared with Others** has been migrated to the [Content](/developerportal/app-store/app-store-overview#content) tab of the Migrated Data user group. This makes all “externally shared” content protected for that user group.
+Content that was marked as **Protected** as well as content marked as **Shared with Others** has been migrated to the [Content](/appstore/general/app-store-overview#content) tab of the Migrated Data user group. This makes all “externally shared” content protected for that user group.
 
 ### October 1st, 2019
 
 #### Improvement
 
-We now display the UUID of an App Store component in the [Additional Info](/developerportal/app-store/app-store-overview#additional-info) section of its details page. This allows you to specify the `TemplateUUID` when calling the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*.
+We now display the UUID of an App Store component in the [Additional Info](/appstore/general/app-store-overview#additional-info) section of its details page. This allows you to specify the `TemplateUUID` when calling the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*.
 
 ### September 11th, 2019
 
 #### Improvement
 
-We added the flexibility to label your App Store content with a [custom version number](/developerportal/app-store/share-app-store-content#updating).
+We added the flexibility to label your App Store content with a [custom version number](/appstore/general/share-app-store-content#updating).
 
 {{% alert type="info" %}}This is based on an [upvoted idea from Andreas Blaesius](https://forum.mendixcloud.com/link/ideas/1324) submitted to the [Mendix Idea Forum](https://forum.mendixcloud.com/index4.html). Thanks, Andreas!{{% /alert %}}
 

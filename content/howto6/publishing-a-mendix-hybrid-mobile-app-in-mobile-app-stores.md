@@ -3,7 +3,7 @@ title: "Publishing a Mendix Hybrid Mobile App in Mobile App Stores"
 category: "Mobile"
 tags: []
 ---
-Once you have developed your Mendix Mobile App, you want to make it available as an app for mobile platforms such as Apple's iOS, Google Android and Windows Phone. We provide the possibility to produce a platform-specific native app for your Mendix Apps under the Publish section of the Mendix Developer Portal.
+Once you have developed your Mendix Mobile App, you want to make it available as an app for mobile platforms such as Apple's iOS, Google Android and Windows Phone. We provide the possibility to produce a platform-specific native mobile app for your Mendix Apps under the Publish section of the Mendix Developer Portal.
 
 The hybrid mobile app publishing process is based on Adobe PhoneGap. Manually using Adobe PhoneGap is very tedious. You need both a Microsoft Windows machine and an Apple Mac machine, and they need to be set up with correctly configured development environments. Instead, we have integrated the [Adobe PhoneGap Build](https://build.phonegap.com/) service into Mendix to take this burden away and provide support to automatically build the required hybrid mobile packages. Instead of worrying about technical details, you can focus on the essential: rapidly developing an app to support your business processes.
 
@@ -107,7 +107,7 @@ You can now deploy your app to your test device. An easy way to do this is with 
 1.  Open iTunes and connect your iOS device to your computer.
 
     ![](attachments/18448693/18581203.png)
-2.  At the top right, click on the device selector to show the contents of your device.
+2.  At the top right, click the device selector to show the contents of your device.
 3.  Click "Apps" to show available and installed apps.
     ![](attachments/18448693/18581202.png)
 4.  Open the menu in the top left corner of the iTunes window.

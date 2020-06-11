@@ -7,7 +7,7 @@ tags: ["web service", "integration", "consume"]
 
 ## 1 Introduction
 
-This how-to explains how to consume a (third-party) web service with which you can integrate your Mendix application and reuse functionality and data from other applications. Web services are the preferred way of integrating a Mendix application with external systems. They can be used to retrieve data, send updates, and perform operations. In Mendix, calling a web service is something you do in a microflow using the Call Web Service action.
+This how-to explains how to consume a (third-party) web service with which you can integrate your Mendix application and reuse functionality and data from other applications. Web services are the preferred way of integrating a Mendix application with external systems. They can be used to retrieve data, send updates, and perform operations. In Mendix, calling a web service is something you do in a microflow using the call web service action.
 
 **This how-to will teach you how to do the following:**
 
@@ -104,13 +104,13 @@ To configure the web service call, follow these steps:
 
     {{% /alert %}}
 
-2. If you are creating your own microflow, add the Call Web Service activity to the microflow. For details on how to add activities to microflows, see [Activities](/refguide/activities) in the *Studio Pro Guide*.
-3. Double-click the activity to open the **Call Web Service** wizard and in the **Operation** section, click **Select...** for **Operation**.
+2. If you are creating your own microflow, add the call web service activity to the microflow. For details on how to add activities to microflows, see [Activities](/refguide/activities) in the *Studio Pro Guide*.
+3. Double-click the activity to open the **Call Web Service** properties editor and in the **Operation** section, click **Select...** for **Operation**.
 4. This opens the **Select Web Service Operation** dialog box, where you can choose the operation for this web service call:
 
     ![](attachments/consume-complex/18581777.png)
 
-5. On the **SOAP Request Body** tab of the **Call Web Service** wizard, you can configure the SOAP body, which contains the parameters needed to execute the web service request. The **Simple**, **Export Mapping**, and **Custom** options enable choosing the type of SOAP body to use. Click **Edit value** to change the domain-to-XML mapping or the variables from the microflow used as input arguments.
+5. On the **SOAP Request Body** tab of the **Call Web Service** properties editor, you can configure the SOAP body, which contains the parameters needed to execute the web service request. The **Simple**, **Export Mapping**, and **Custom** options enable choosing the type of SOAP body to use. Click **Edit value** to change the domain-to-XML mapping or the variables from the microflow used as input arguments.
     * Use the **Simple** option if the imported web service requires only primitive arguments:
 
         ![](attachments/consume-complex/18581791.png)
@@ -120,11 +120,11 @@ To configure the web service call, follow these steps:
 
         ![](attachments/consume-complex/18581792.png)
 
-6. On the **HTTP Headers** tab in the **Call Web Service** wizard, you can enter authentication information using the **Edit** button if the Mendix Runtime should use this before calling the web service:
+6. On the **HTTP Headers** tab in the **Call Web Service** properties editor, you can enter authentication information using the **Edit** button if the Mendix Runtime should use this before calling the web service:
 
     ![](attachments/consume-complex/18581793.png)
 
-7. On the **SOAP Response** tab of the **Call Web Service** wizard, you can configure the handling of the return from the web service call:
+7. On the **SOAP Response** tab of the **Call Web Service** properties editor, you can configure the handling of the return from the web service call:
     * If the return is a complex XML structure, you can select the **Mapping** and use an XML-to-domain mapping to map the XML elements to the domain model entities:
 
         ![](attachments/consume-complex/18581790.png)
@@ -143,7 +143,6 @@ To configure the web service call, follow these steps:
 * [Import Excel Documents](importing-excel-documents)
 * [Expose a Web Service](expose-a-web-service)
 * [Use Selenium Support](selenium-support)
-* [Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [Import XML Documents](importing-xml-documents)
 * [Consume a REST Service](consume-a-rest-service)
 * [Expose Data to BI tools Using OData](exposing-data-to-bi-tools-using-odata)

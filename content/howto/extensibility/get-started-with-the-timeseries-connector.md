@@ -25,7 +25,7 @@ When looking at the IoT trend recently, one hundred sensors that send data each 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have Mendix Studio Pro installed (download [here](https://appstore.home.mendix.com/link/modeler/))
-* Have the Community Commons Function Library in your project (download [here](https://appstore.home.mendix.com/link/app/170/Mendix/Community-Commons-Function-Library)
+* Have the [Community Commons Function Library](/appstore/modules/community-commons-function-library) in your app project
 
 ## 3 Sign Up for the TimeSeries Connector
 
@@ -95,10 +95,9 @@ You start the implementation by creating an asset object in a page, or directly 
 
   ![](attachments/how-to-get-started-with-the-timeseries-connector/CreateAsset.png)
 
-After having set the **Asset name**, we trigger some validation, call the **Create asset** action, and save the **Asset ID** for later references.
+After having set the **Asset name**, we trigger some validation, call the **Create asset** action, and save the **Asset ID** for later references. Reference the microflow below:
 
-<iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/12613211-22be-4c65-aac9-bb7d821ed99e/timeseries-connector-create-asset?embed=true'></iframe>
-You can find this microflow in the *TimerSeriesConnector* module under **1. Assets > CreateAsset > IVK_CreateAsset**.
+![](attachments/how-to-get-started-with-the-timeseries-connector/create-asset-microflow.png)
 
 ### 5.2 Creating a Channel
 
@@ -119,10 +118,9 @@ In our example implementation we have created a page with a *Channel* object, on
 
 ![](attachments/how-to-get-started-with-the-timeseries-connector/CreateChannel.png)
 
-After having set the necessary attributes and associations, we trigger some validation and call the **Add channel** action. This action will return a Boolean, specifying if the action was successful.
+After having set the necessary attributes and associations, we trigger some validation and call the **Add channel** action. This action will return a Boolean, specifying if the action was successful. Reference the microflow below:
 
-<iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/d0dc163e-9741-4efc-986e-00bcbbf86ce7/timeseries-connector-create-channel?embed=true'></iframe>
-You can find this microflow in the *TimerSeriesConnector* module under **2. Channels > AddChannel > IVK_AddChannel**.
+![](attachments/how-to-get-started-with-the-timeseries-connector/create-channel-microflow.png)
 
 ### 5.3 Storing Measurement(s)
 
@@ -143,10 +141,9 @@ In our example implementation we have created a page with a *measurement* object
 
 ![](attachments/how-to-get-started-with-the-timeseries-connector/StoreMeasurement.png)
 
-After having set the necessary attributes and associations, we trigger some validation and call the **Store measurement** action. This action will return a Boolean, which is not used. 
+After having set the necessary attributes and associations, we trigger some validation and call the **Store measurement** action. This action will return a Boolean, which is not used. Reference the microflow below:
 
-<iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/ab003bd9-159a-4b76-8fbe-42512951c28b/timeseries-connector-store-measurement?embed=true'></iframe>
-You can find this microflow in the *TimerSeriesConnector* module under **3. Measurements > StoreMeasurements > IVK_StoreMeasurement**.
+![](attachments/how-to-get-started-with-the-timeseries-connector/store-measurement-microflow.png)
 
 ### 5.4 Aggregating Your Data
 
@@ -167,10 +164,9 @@ In our example implementation we have created a page with an *AggregateSearch* o
 
 ![](attachments/how-to-get-started-with-the-timeseries-connector/AggregateSearch.png)
 
-After having set the necessary attributes and associations, we trigger some validation, prepare the data, and call the **Aggregate between timestamps** action. This action will return a list of your type parameter, *AggregateSearchResult*. This list contains an aggregation of the channel data by the aggregation period specified. For example: From March 1st up to March 10th, you will receive a list of your total electricity usage per day. This means your list will hold 10 objects.
+After having set the necessary attributes and associations, we trigger some validation, prepare the data, and call the **Aggregate between timestamps** action. This action will return a list of your type parameter, *AggregateSearchResult*. This list contains an aggregation of the channel data by the aggregation period specified. For example: From March 1st up to March 10th, you will receive a list of your total electricity usage per day. This means your list will hold 10 objects. Reference the microflow below:
 
-<iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/9d9055e4-4301-4ee4-8ef9-fdcbcd05079e/timeseries-connector-get-aggregations?embed=true'></iframe>
-You can find this microflow in the *TimerSeriesConnector* module under **4. Aggregations > GetAggregations > IVK_GetAggregations**.
+![](attachments/how-to-get-started-with-the-timeseries-connector/get-aggregations-microflow.png)
 
 ## 6 Conclusion
 

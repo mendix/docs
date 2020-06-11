@@ -1,82 +1,88 @@
 ---
 title: "Add Date Function Calls"
 parent: "expressions"
-tags: ["studio pro"]
+tags: ["studio pro", "expressions", "add date function"]
 ---
 
 ## 1 Introduction
 
-This is a reference for adding a time unit to a date. 
+Add date function calls adds a time unit to a specific date and returns a modified value. 
 
-The first input can be either a new dateTime (depicted in all examples), a variable of type **Date and time**, or an attribute of a domain entity of type **Date and time**.
+The first input can be either a new **Date and time** (used in the examples below), a variable of type **Date and time**, or an attribute of a domain model entity of type **Date and time**.
 
 ## 2 addMilliseconds
 
-Add a number of milliseconds to a date.
+The `addMilliseconds` function adds a specified number of milliseconds to a date.
 
 ### 2.1 Input Parameters
 
+Use the following input parameters:
+
 * Initial date
 	Type: Date and time
-* The amount of milliseconds to be added
+* The number of milliseconds to be added
     Type: Integer
 
 ### 2.2 Output
 
-A result of type **Date and time** that corresponds to the initial date plus x milliseconds.
+The expression will result in a Date and time value that is the sum of the *initial date* and *N milliseconds*. 
 
-{{% alert type="info" %}}
+### 2.3 Example
+
+If you type in the following input:
 
 ```java
 addMilliseconds(dateTime(2007, 1, 1, 1, 1, 1), 1400)
 
 ```
 
-results in a datetime that corresponds to
+The output is:
 
 ```java
 "Mon Jan 01 01:01:02:400 CET 2007"
 
 ```
 
-{{% /alert %}}
-
 ## 3 addSeconds
 
-Add a number of seconds to a date.
+The `addSeconds` function adds a specified number of seconds to a date.
 
 ### 3.1 Input Parameters
 
+Use the following input parameters:
+
 *   Initial date
     Type: Date and time
-*   The amount of seconds to be added
+*   The number of seconds to be added
     Type: Integer
 
 ### 3.2 Output
 
-A result of type **Date and time** that corresponds to the initial date plus x seconds.
+The expression will result in a Date and time value that is the sum of the *initial date* and *N seconds*. 
 
-{{% alert type="info" %}}
+### 3.3 Example
+
+If you type in the following input:
 
 ```java
 addSeconds(dateTime(2007, 1, 1, 1, 1, 1), 2)
 
 ```
 
-results in a datetime that corresponds to
+The output is:
 
 ```java
 "Mon Jan 01 01:01:03 CET 2007"
 
 ```
 
-{{% /alert %}}
-
 ## 4 addMinutes
 
-Add a number of minutes to a date.
+The `addMinutes` function adds a number of minutes to a date.
 
 ### 4.1 Input Parameters
+
+Use the following input parameters:
 
 *   Initial date
     Type: Date and time
@@ -85,29 +91,31 @@ Add a number of minutes to a date.
 
 ### 4.2 Output
 
-A result of type **Date and time** that corresponds to the initial date plus x minutes.
+The expression will result in a Date and time value that is the sum of the *initial date* and *N minutes*. 
 
-{{% alert type="info" %}}
+### 4.3 Example
+
+If you type in the following input:
 
 ```java
 addMinutes(dateTime(2007, 1, 1, 1, 1, 1), 3)
 
 ```
 
-results in a datetime that corresponds to
+The output is:
 
 ```java
 "Mon Jan 01 01:04:01 CET 2007"
 
 ```
 
-{{% /alert %}}
-
 ## 5 addHours
 
-Add a number of hours to a date.
+The `addHours` function adds a number of hours to a date.
 
 ### 5.1 Input Parameters
+
+Use the following input parameters:
 
 *   Initial date
     Type: Date and time
@@ -116,29 +124,31 @@ Add a number of hours to a date.
 
 ### 5.2 Output
 
-A result of type **Date and time** that corresponds to the initial date plus x hours.
+The expression will result in a Date and time value that is the sum of the *initial date* and *N hours*.
 
-{{% alert type="info" %}}
+### 5.3 Example
+
+If you type in the following input: 
 
 ```java
 addHours(dateTime(2007, 1, 1, 1, 1, 1), 25)
 
 ```
 
-results in a datetime that corresponds to
+The output is:
 
 ```java
 "Mon Jan 02 02:01:01 CET 2007"
 
 ```
 
-{{% /alert %}}
-
 ## 6 addDays[UTC]
 
-Add a number of days to a date. `addDays` uses the server's calendar and `addDaysUTC` uses the UTC calendar.
+The `addDaysUTC` function adds a number of days to a date. `addDays` uses the server's calendar and `addDaysUTC` uses the UTC calendar.
 
 ### 6.1 Input Parameters
+
+Use the following input parameters:
 
 *   Initial date
     Type: Date and time
@@ -147,29 +157,31 @@ Add a number of days to a date. `addDays` uses the server's calendar and `addDay
 
 ### 6.2 Output
 
-A result of type **Date and time** that corresponds to the initial date plus x days.
+The expression will result in a Date and time value that is the sum of the *initial date* and *N days*.
 
-{{% alert type="info" %}}
+### 6.3 Example
+
+If you type in the following input: 
 
 ```java
 addDays(dateTime(2007, 1, 1, 1, 1, 1), 3)
 
 ```
 
-results in a datetime that corresponds to
+The output is:
 
 ```java
 "Mon Jan 04 01:01:01 CET 2007"
 
 ```
 
-{{% /alert %}}
-
 ## 7 addWeeks[UTC]
 
-Add a number of weeks to a date. `addWeeks` uses the server's calendar and `addWeeksUTC` uses the UTC calendar.
+The `addWeeksUTC` function adds a number of weeks to a date using the UTC calendar as opposed to  `addWeeks` which uses the server's one. 
 
 ### 7.1 Input Parameters
+
+Use the following input parameters:
 
 *   Initial date
     Type: Date and time
@@ -178,29 +190,31 @@ Add a number of weeks to a date. `addWeeks` uses the server's calendar and `addW
 
 ### 7.2 Output
 
-A result of type **Date and time** that corresponds to the initial date plus x weeks.
+The expression will result in a Date and time value that is the sum of the *initial date* and *N weeks*.
 
-{{% alert type="info" %}}
+### 7.3 Example
+
+If you type in the following input: 
 
 ```java
 addWeeks(dateTime(2007, 1, 1, 1, 1, 1), 2)
 
 ```
 
-results in a datetime that corresponds to
+The output is:
 
 ```java
 "Mon Jan 15 01:01:01 CET 2007"
 
 ```
 
-{{% /alert %}}
-
 ## 8 addMonths[UTC]
 
-Add a number of months to a date. `addMonths` uses the server's calendar and `addMonthsUTC` uses the UTC calendar.
+The `addMonthsUTC` function adds a number of months to a date using the UTC calendar as opposed to  `addMonths` which uses the server's one.
 
 ### 8.1 Input Parameters
+
+Use the following input parameters:
 
 *   Initial date
     Type: Date and time
@@ -209,29 +223,31 @@ Add a number of months to a date. `addMonths` uses the server's calendar and `ad
 
 ### 8.2 Output
 
-A result of type **Date and time** that corresponds to the initial date plus x months.
+The expression will result in a Date and time value that is the sum of the *initial date* and *N months*.
 
-{{% alert type="info" %}}
+### 8.3 Example
+
+If you type in the following input: 
 
 ```java
 addMonths(dateTime(2007, 1, 1, 1, 1, 1), 13)
 
 ```
 
-results in a datetime that corresponds to
+The output is:
 
 ```java
 "Mon Feb 01 01:01:01 CET 2008"
 
 ```
 
-{{% /alert %}}
-
 ## 9 addYears[UTC]
 
-Add a number of years to a date. `addYears` uses the server's calendar and `addYearsUTC` uses the UTC calendar.
+The `addYearsUTC` function adds a number of years to a date using the UTC calendar as opposed to  `addYears` which uses the server's one.
 
 ### 9.1 Input Parameters
+
+Use the following input parameters:
 
 *   Initial date
     Type: Date and time
@@ -240,34 +256,38 @@ Add a number of years to a date. `addYears` uses the server's calendar and `addY
 
 ### 9.2 Output
 
-A result of type **Date and time** that corresponds to the initial date plus x years.
+The expression will result in a Date and time value that is the sum of the *initial date* and *N years*.
 
-{{% alert type="info" %}}
+### 9.3 Example
+
+If you type in the following input: 
 
 ```java
 addYears(dateTime(2007, 1, 1, 1, 1, 1), 11)
 
 ```
 
-results in a datetime that corresponds to
+The output is:
 
 ```java
 "Mon Jan 01 01:01:01 CET 2018"
 
 ```
 
-{{% /alert %}}{{% alert type="warning" %}}
+## 10 Passing Values of the Long Type
 
-It's also possible to pass Long values to different Add date function calls:
+It is possible to pass values of the Long type to different **Add date function** calls:
+
+If you type in the following input:
 
 ```java
 addSeconds(dateTime(1970, 1, 1, 0, 0, 0), (long)(2147483647 + 100))
 ```
 
-results in a datetime that corresponds to
+The output is:
 
 ```java
 "Tue Jan 19 04:15:47 CET 2038"
 ```
 
-{{% /alert %}}
+

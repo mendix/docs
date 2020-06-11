@@ -7,52 +7,52 @@ parent: "metamodel-8"
 
 **Release date: January 29th, 2020**
 
-## Microflows
+### Microflows
 
-### StringTemplateParameterValue (Element)
+#### StringTemplateParameterValue (Element)
 
 * We deleted the `template` property. Use `TypedTemplate` instead.
 * We introduced the `typedTemplate` property.
 
-### TypedTemplate, TypedTemplateArgument & PrimitiveTypedTemplateArgument (Elements)
+#### TypedTemplate, TypedTemplateArgument & PrimitiveTypedTemplateArgument (Elements)
 
 * We introduced these elements.
 
-## Settings
+### Settings
 
-### ModelerSettings (Element)
+#### ModelerSettings (Element)
 
 * We introduced the `actionActivityDefaultColors` property.
 
-### ActionActivityDefaultColor (Element)
+#### ActionActivityDefaultColor (Element)
 
 * We introduced this element.
 
-## Rest
+### Rest
 
-### ConsumedODataService (ModelUnit)
+#### ConsumedODataService (ModelUnit)
 
 * We introduced the `metadataReferences` property for a metadata file.
 * We introduced the `oDataVersion` property for the OData version of the service.
 
-### MetadataReference (Element)
+#### MetadataReference (Element)
 
 * We introduced this element for the referenced metadata file.
 
-## Pages
+### Pages
 
-### StaticImageViewer (Element)
-
-* We introduced the `alternativeText` property.
-
-### DynamicImageViewer (Element)
+#### StaticImageViewer (Element)
 
 * We introduced the `alternativeText` property.
 
-### RetrievalQuery (Element)
+#### DynamicImageViewer (Element)
+
+* We introduced the `alternativeText` property.
+
+#### RetrievalQuery (Element)
 
 * We introduced the `parameters` property.
 
-### RetrievalQueryParameter (Element)
+#### RetrievalQueryParameter (Element)
 
 * We introduced this element.

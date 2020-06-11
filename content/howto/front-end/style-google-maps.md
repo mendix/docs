@@ -19,7 +19,7 @@ Google Maps is a very powerful addition to your applications. You can use it to 
 
 Before you start this how-to, please make sure you have completed the following prerequisites.
 
-*   Have the latest version of the [Google Maps](https://appstore.home.mendix.com/link/app/48911/) widget in your app
+*   Have the latest version of the [Google Maps](/appstore/widgets/google-maps) widget in your app
 
 {{% alert type="warning" %}}
 These instructions are for the Google Maps widget which you can download from the App Store. The Google Maps widget within the Atlas UI template has different options.
@@ -50,9 +50,9 @@ In this chapter I will explain how you can add styling to the Google Maps widget
 
 Choosing an existing style sheet from a large library that fits your application will save you a lot of time. Here is a community website where new styles are uploaded on a regular basis: [https://snazzymaps.com/](https://snazzymaps.com/).
 
-1.  On the website click on **Explore:**
+1.  On the website click **Explore:**
     ![](attachments/19202780/19398959.png)
-2.  Explore the styles to find one that matches your application and click on it:
+2.  Explore the styles to find one that matches your application and click it:
     ![](attachments/19202780/19398960.png)
 3.  On the lefthand pane you will see the style array:
     ![](attachments/19202780/19398961.png)
@@ -74,7 +74,7 @@ Choosing an existing style sheet from a large library that fits your application
 
 Supporting communities is cool. Therefore I will also show you how to upload your own custom style array to the website.
 
-1.  Go-to Snazzymaps and click on **Create.**
+1.  Go-to Snazzymaps and click **Create.**
     **![](attachments/19202780/19398964.png)** 
 2.  Now you will see the same sort of handy quick style method that Mendix provides at [https://ux.mendix.com/theme-creator.html](https://ux.mendix.com/theme-creator.html).
     ![](attachments/19202780/19398965.png) 

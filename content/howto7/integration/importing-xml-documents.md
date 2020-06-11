@@ -150,7 +150,6 @@ To import the XML file, follow these steps:
 * [How to Export XML Documents](export-xml-documents)
 * [How to Expose a Web Service](expose-a-web-service)
 * [How to Handle Selenium Support](selenium-support)
-* [How to Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [How to Consume a REST Service](consume-a-rest-service)
 * [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
 * [Exporting to a CSV Button](/refguide7/export-to-csv-button)

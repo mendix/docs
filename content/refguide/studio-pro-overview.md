@@ -10,21 +10,61 @@ tags: ["Studio Pro"]
 
 ## 1 Introduction
 
-Mendix Studio Pro is the tool for creating, viewing, and editing your Mendix applications. A Mendix app is called a [project](project) in Studio Pro. A project consists of many documents that are grouped in [modules](modules) and folders. There are some project-level settings, but the core of the functionality is inside the modules. Examples of documents are [project settings](project-settings), [domain models](domain-model), [pages](pages), and [microflows](microflows). One Studio Pro instance can have only one project open at a time, but you can open two Studio Pro instances when necessary.
+Mendix Studio Pro is a tool for creating, viewing, and editing your Mendix applications. A Mendix app is called a [project](project) in Studio Pro.  
 
-This documentation describes the graphical user interface of Studio Pro. The rest of the documentation follows the structure of the project explorer.
+One Studio Pro instance can have only one project open at a time, but you can open two Studio Pro instances when necessary.
 
 {{% alert type="info" %}}
-Press <kbd>F1</kbd> while in Studio Pro to quickly jump to the right page in the documentation.
+When Studio Pro is open, press <kbd>F1</kbd> to quickly jump to documentation.
 {{% /alert %}}
 
-## 2 Document Tabs {#documents}
+This document describes the user interface of Mendix Studio Pro:
+
+<img src="attachments/studio-pro-overview/studio-pro-diagram.png" alt="Studio Pro Diagram"  />
+
+## 2 Top Bar
+
+The Studio Pro top bar contains the following items:
+
+* [Menus](#menus) 
+* [Buttons to run and view your app](#run-and-view)
+* [Links to the Developer Portal and App Store](#links) 
+
+### 2.1 Menus {#menus}
+
+In the Studio Pro top bar, you can see several menus, such as [Edit](edit-menu), [View](view-menu), and [Version Control](version-control-menu). Each menu contains menu items that allow you to perform various actions, for example, to [create a deployment package](create-deployment-package-dialog), set [preferences](preferences-dialog), or view the [Errors](errors-pane) pane. 
+
+For more information on menus, see [Menus](menus). 
+
+### 2.2 Run and View App {#run-and-view}
+
+You can deploy your app by clicking the **Run** or **Run locally** buttons. To view your deployed app, click the **View** button. 
+
+For more information on deployment in Mendix, see [Deployment](/developerportal/deploy).
+
+For more information on deploying your app and versioning it, see  the [Versioning a Project Deployed to the Cloud](using-version-control-in-studio-pro#versioning-project) section in *Using Version Control in Studio Pro*. 
+
+### 2.3 Links to the Developer Portal and App Store {#links}
+
+You can find links to the [Developer Portal](/developerportal/index) and [App Store](/appstore/index) in the top-right corner of Studio Pro . Your account is displayed next to these buttons if you are signed in. 
+
+Click the account name to navigate to your apps, the Developer Portal, your profile, or to sign out. 
+
+## 3 Project Structure
+
+A project consists of individual files (*documents*) and settings that are grouped in folders and [modules](modules). The complete structure of your project can be viewed in the [Project Explorer](project-explorer). 
+
+## 4 Working Area
+
+A working area is a current document tab that you work in. The working area and its settings differs depending on an editor (for example, pages, microflows, domain model editors) and type of the document.  
+
+### 4.1 Document Tabs {#documents}
 
 The documents you view and edit are shown in tabs. 
 
 {{% alert type="info" %}}
 
-Note that this section describes documents in the working area, not panes that you can open and position around the working area. For more information on behavior of panes, see the [Layout of Panes](view-menu#layout-of-panes) section in *View Menu*.
+This section describes documents in the working area, not panes that you can open and position around the working area. For more information on behavior of panes, see the [Layout of Panes](view-menu#layout-of-panes) section in *View Menu*.
 
 {{% /alert %}}
 
@@ -34,15 +74,21 @@ You can have a number of tabs open, just like in a modern web browser. They can 
 
 Each document has its own save state, history, and future, so undo and redo actions are unlimited.
 
-## 3 Menus 
+## 5 Dockable Panes
 
-In the Studio Pro top bar, you can see several menus, such as [Edit](edit-menu), [View](view-menu), or [Version Control](version-control-menu) menus. Each menu contains menu items that allow you to perform various actions, for example, to [create a deployment package](create-deployment-package-dialog), set [preferences](preferences-dialog), or view the [Errors](errors-pane) pane. 
+Dockable panes can be positioned around the working area and contain various elements and settings. For example, you can view list of errors, configure properties of a specific document or an element, view toolbox. Panes are opened via [Menus](menus).
 
-For more information on menus, see [Menus](menus). 
+## 6 Status Bar
 
-## 4 Shortcut Keys
+At the bottom of the Studio Pro main window pane is a status bar.
 
-### 4.1 General Shortcut Keys
+On the left is the current status of Studio Pro.
+
+On the right is the currently selected language. If you have set up multiple languages in your app you can change the currently selected language by clicking here. For more information see [Language Menu](translatable-texts).
+
+## 7 Shortcut Keys
+
+### 7.1 General Shortcut Keys
 
 In the main window pane, <kbd>Ctrl</kbd> + <kbd>Tab</kbd> can be used to navigate between all open documents. Other shortcut keys that can be used in the main window pane can be found next to their relevant menu item in  [Menus](menus).
 
@@ -63,7 +109,7 @@ In most edit grids (such as the list of attributes in the entity properties), th
 | <kbd>Enter</kbd> | Edits the currently selected item. |
 | <kbd>Delete</kbd> | Deletes the currently selected item(s). |
 
-### 4.2 Domain Model Editor Shortcut Keys
+### 7.2 Domain Model Editor Shortcut Keys
 
 The following shortcut keys are available in the domain model editor:
 
@@ -73,7 +119,7 @@ The following shortcut keys are available in the domain model editor:
 | <kbd>Ctrl</kbd> + <kbd>A</kbd> | Selects all entities. |
 | <kbd>Esc</kbd> | Clears selection. |
 
-### 4.3 Page Editor Shortcut Keys
+### 7.3 Page Editor Shortcut Keys
 
 The following shortcut keys are available in the page editor:
 
@@ -84,7 +130,7 @@ The following shortcut keys are available in the page editor:
 | <kbd>Enter</kbd> | Edits the properties of the currently selected object in a dialog box. |
 | <kbd>F2</kbd> | Edits the caption of a label or button inline on the page. You can also just start typing a letter or a digit and the caption will be replaced by what you type. |
 
-### 4.4 Microflow Editor Shortcut Keys
+### 7.4 Microflow Editor Shortcut Keys
 
 The following shortcut keys are available in the microflow editor:
 
@@ -99,7 +145,7 @@ The following shortcut keys are available in the microflow editor:
 | <kbd>Shift</kbd> when resizing an activity | When resizing the entity, by holding <kbd>Shift</kbd> , the microflow component will stay centered at its current position and will expand equally in all directions. |
 | <kbd>Ctrl</kbd> when selecting multiple activities | When pressing the <kbd>Ctrl</kbd>, you can select additional microflow components. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 
-### 4.5 Microflow Debugger Shortcut Keys {#debugger-shortcuts}
+### 7.5 Microflow Debugger Shortcut Keys {#debugger-shortcuts}
 
 The following shortcut keys are available for the the microflow debugger:
 
@@ -109,3 +155,19 @@ The following shortcut keys are available for the the microflow debugger:
 | <kbd>Alt</kbd> + <kbd>F6</kbd> | *Step over* – moves the debugger to the next step in the same microflow. |
 | <kbd>Alt</kbd> + <kbd>F7</kbd> | *Step out* – instructs the debugger to leave the sub-microflow or loop.  |
 | <kbd>Alt</kbd> + <kbd>F8</kbd> | *Continue* – instructs the debugger to continue until it reaches another breakpoint. |
+
+### 7.6 Language Shortcut Keys
+
+The following shortcut keys control the currently selected language:
+
+| Key | Description |
+| --- | --- |
+| <kbd>Ctrl</kbd> + <kbd>L</kbd> | Choose the next language in the list of languages chosen in **Language Settings…**. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd> | Choose the previous language in the list of languages chosen in **Language Settings…**. |
+
+## 8 Read More
+
+* [Project Explorer](project-explorer)
+* [Menus](menus)
+
+  

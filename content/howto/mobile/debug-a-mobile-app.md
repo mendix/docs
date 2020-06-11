@@ -21,7 +21,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Ensure that you have a network utilities tool on your mobile device (I use [PingTools](https://play.google.com/store/apps/details?id=ua.com.streamsoft.pingtools) on Android, and [NetworkPing Lite](https://itunes.apple.com/us/app/network-ping-lite/id289967115?mt=8) on iOS) in order to ensure connectivity between your device and your computer
 * Ensure that you have an Adobe ID that you can use to sign in to PhoneGap Build ([https://build.phonegap.com/apps](https://build.phonegap.com/apps))
-* Acquire a paid Apple Developer Membership – see [Apple Membership](https://developer.apple.com/support/membership/) for more details
+* Acquire a paid Apple Developer Membership — see [Apple Membership](https://developer.apple.com/support/membership/) for more details
 
 ## 3 Mendix and PhoneGap <a name="MendixAndPhonegap"></a>
 
@@ -78,7 +78,7 @@ Since Mendix Studio Pro only runs on Mendix, you need to make sure that your vir
 
 ### 4.2 PhoneGap Configuration
 
-You can use PhoneGap Build to build the native application and tell it to initialize based on this new URL, rather than the default. Follow these steps to download a package, update it, and upload it to PhoneGap Build:
+You can use PhoneGap Build to build the native mobile application and tell it to initialize based on this new URL, rather than the default. Follow these steps to download a package, update it, and upload it to PhoneGap Build:
 
 1. Go to home.mendix.com and open your app.
 2. Go to the **Mobile App** page.
@@ -174,7 +174,7 @@ In order to build (and debug) a Mendix iOS app, you need to ensure that you have
 
       ![apple-10](./attachments/debug-a-mobile-app/apple-10.png)
 
-9. Right-click on the certificate in the list of certificates and select **Export**:
+9. Right-click the certificate in the list of certificates and select **Export**:
 
       ![apple-11](./attachments/debug-a-mobile-app/apple-11.png)
 
@@ -232,7 +232,7 @@ In order to build (and debug) a Mendix iOS app, you need to ensure that you have
 
 ### 5.2 Phonegap Configuration <a name="PhonegapConfiguration"></a>
 
-You can use PhoneGap Build to build the native application and tell it to initialize based on this new URL, rather than the default. Follow these steps to change the PhoneGap Build
+You can use PhoneGap Build to build the native mobile application and tell it to initialize based on this new URL, rather than the default. Follow these steps to change the PhoneGap Build
 
 1. Go to **home.mendix.com** and open your app.
 2. Navigate to the **Mobile App** page, listed under Deploy.
@@ -344,7 +344,7 @@ Follow these steps to test your computer's connection to your device:
 
 ### 6.2 PhoneGap Configuration
 
-You can use PhoneGap Build to build the native application and tell it to intialize based on this new URL, rather than the default. Follow these steps to create a new configuration:
+You can use PhoneGap Build to build the native mobile application and tell it to intialize based on this new URL, rather than the default. Follow these steps to create a new configuration:
 
 1. Go to **home.mendix.com** and open your app.
 2. Navigate to the **Mobile App** page under Deploy.

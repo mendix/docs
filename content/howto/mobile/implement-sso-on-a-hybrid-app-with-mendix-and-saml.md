@@ -23,7 +23,7 @@ The implementation described in this how-to will not work when you have enabled 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a [PhoneGap Build account](https://build.phonegap.com/)
-* Be familiar with how the [SAML](https://appstore.home.mendix.com/link/app/1174/) module works
+* Be familiar with how the [SAML](/appstore/modules/saml) module works
 * Read [How to Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * Read [Building a Mobile App with Mendix](https://www.mendix.com/blog/building-mobile-app-mendix/)
 
@@ -89,7 +89,7 @@ MxApp.onConfigReady(function(config) {
             samlWindow.executeScript({
                 code: "window.location.href;"
             }, function(href) {
-                if (href[0].indexOf(window.mx.remoteUrl) == 0 && href[0].indexOf("SSO") == -1) {
+                if (href[0].toLowerCase().indexOf(window.mx.remoteUrl.toLowerCase()) == 0 && href[0].indexOf("SSO") == -1) {
                     samlWindow.executeScript({
                         code: "document.cookie;"
                     }, function(values) {

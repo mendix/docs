@@ -30,7 +30,7 @@ The following custom settings can be configured:
 | ApplicationRootUrl | Can be used within Java Actions to get the public location of the application. Useful when the HOST header is not available, for example when including a URL to the application when sending e-mails from a scheduled event. | In Mendix Cloud, https://\[domain\].mendixcloud.com |
 | ScheduledEventExecution | Specify which scheduled events should be executed. Choices are 'ALL', 'NONE' or 'SPECIFIED'. In case of 'SPECIFIED' enumerate the scheduled events using the 'MyScheduledEvents' configuration option described below. | NONE |
 | MyScheduledEvents | A comma-separated string with the names of the events. Please don't forget the name of the module. A name can be CRM.UpdateCustomerStatistics. |   |
-| PersistentSessions | Defines whether sessions will be persisted in the database or not. When sessions are persisted, statistics will be made about logged-in users. When the Runtime server restarts, sessions still exist and users don't have to sign in again. However, making sessions persistent can have a negative influence on the speed of the application: the value can be true or false. | true |
+| PersistentSessions | Defines whether sessions will be persisted in the database or not. When sessions are persisted, statistics will be made about logged-in users. When the Runtime server restarts, sessions still exist and users don't have to sign in again. In a clustered environment you must have persistent sessions. The only exception is for on-premises installations which have implemented sticky sessions. The value can be true or false. | true |
 | TrackWebServiceUserLastLogin | Defines whether to update the web service user's 'LastLogin' field on each login. When this happens a database update query has to be sent and this can have performance consequences on heavy load systems. When this setting is set to false, no database interaction is necessary. | true |
 | JavaKeyStorePassword | Password for the default Java keystore. | changeit |
 | CACertificates | Comma separated list of paths to Authority Certificates. |   |
@@ -39,9 +39,9 @@ The following custom settings can be configured:
 | ClientCertificateUsages | Only use this when<br/>1. You have multiple client certificates, and<br/>2. You want to configure specific certificates for specific servers.<br/> This setting defines which service must use which client certificate. The value of this setting must be a comma-separated list of key/value items. A key/value item must be specified as `"identifier": "path to certificate"`.<br/>For web services, use the imported web service name as the identifier.<br/>For REST services, use the host name of the remote server as the identifier.<br/>Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces (`{ }`). For example: ![](attachments/Custom+Settings/code_snippet.png) |  |
 | NoClientCertificateUsages | Comma-separated list of host names or imported web service names that should never be contacted using a client certificate. |  |
 | SessionTimeout | Defines after how much time session becomes invalid (in milliseconds). After that timeout a session becomes applicable for removal. The session won't be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 |
-| http.client.MaxConnectionsPerRoute | The [maximum number of connections for a route](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnPerRoute(int)) for Call REST and Call Web Service actions. | 2 |
-| http.client.MaxConnectionsTotal | The [maximum number of connections allowed across all routes](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnTotal(int)) for Call REST and Call Web Service actions. | 20 |
-| http.client.CleanupAfterSeconds | For Call REST and Call Web Service actions, the first request to a new host wil create an HTTP client that will handle subsequent requests. When there are no new requests to the host for the specified time, the HTTP client will be cleaned up. Default Value: 12 * 60 * 60 (12 hours). A value of 0 means no cleanup. |
+| http.client.MaxConnectionsPerRoute | The [maximum number of connections for a route](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnPerRoute(int)) for call REST service and call web service activities. | 2 |
+| http.client.MaxConnectionsTotal | The [maximum number of connections allowed across all routes](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnTotal(int)) for the call REST service and call web service activities. | 20 |
+| http.client.CleanupAfterSeconds | For the call REST service and call web service activities, the first request to a new host wil create an HTTP client that will handle subsequent requests. When there are no new requests to the host for the specified time, the HTTP client will be cleaned up. Default Value: 12 * 60 * 60 (12 hours). A value of 0 means no cleanup. |
 | ClusterManagerActionInterval | The interval (in milliseconds) used for performing all cluster manager actions. These actions include, unblocking users, and removing invalid sessions. If nothing is specified the interval is half the SessionTimeout. | 300000 |
 | com.mendix.core.StorageService | Defines which storage service module will be used. The storage service module takes care of storing the actual files associated with 'System.FileDocument' objects, such as uploaded files. Possible values are 'com.mendix.storage.localfilesystem', 'com.mendix.storage.s3', 'com.mendix.storage.azure', and 'com.mendix.storage.swift'. | com.mendix.storage.localfilesystem |
 | com.mendix.storage.PerformDeleteFromStorage | Defines whether a delete of a Mendix file document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it is also used as a backup service. | true |
@@ -151,21 +151,20 @@ These settings can be used to store files using the Microsoft Azure blob storage
 
 | Name | Description | Default Value |
 | --- | --- | --- |
-| com.mendix.core.StorageService | Has to be set to 'com.mendix.storage.azure' to select Azure as the storage service |   |
-| com.mendix.storage.azure.AccountName | Account name to authenticate with the azure blob storage service |   |
-| com.mendix.storage.azure.AccountKey | Account key to authenticate with the azure blob storage service |   |
-| com.mendix.storage.azure.SharedAccessSignature | Provides delegated access to resources in your storage account. [Shared Access Signature](https://docs.microsoft.com/en-us/azure/storage/common/storage-dotnet-shared-access-signature-part-1)|   |
-| com.mendix.storage.azure.BlobEndpoint |Set the blob endpoint. This setting is required when authenticate by SharedAccessSignature is used|   |
-| com.mendix.storage.azure.Container | Name of the container containing the blob. The container is created if it does not exist yet. |   |
-| com.mendix.storage.azure.ParallelismFactor | Maximum number of parallel multi-part file uploads / downloads. We advise you not to change this setting unless you experience slow file transfers for large files. Choosing larger values will lead to higher memory usage. | 5 |
-|com.mendix.storage.azure.UseHttps| For enabling or disabling secure connections using HTTPS. Can be `true` or `false`. | `true` |
+| com.mendix.core.StorageService | Has to be set to *com.mendix.storage.azure* to select Azure as the storage service. |   |
+| com.mendix.storage.azure.AccountName | Account name to authenticate with the Azure blob storage service. |   |
+| com.mendix.storage.azure.AccountKey | Account key to authenticate with the Azure blob storage service. |   |
+| com.mendix.storage.azure.SharedAccessSignature | Provides delegated access to resources in your storage account. For more information, see [Shared Access Signature on docs.microsoft.com](https://docs.microsoft.com/en-us/azure/storage/common/storage-dotnet-shared-access-signature-part-1). |   |
+| com.mendix.storage.azure.BlobEndpoint | Set the blob endpoint. This setting is required when authentication by SharedAccessSignature is used. |   |
+| com.mendix.storage.azure.Container | Name of the container containing the blob. |   |
+| com.mendix.storage.azure.CreateContainerIfNotExists | Indicates whether to check if the container exists, and creates it if it does not exist. This setting was introduced in Studio Pro [8.7.0](/releasenotes/studio-pro/8.7#870). | `true` |
+| com.mendix.storage.azure.ParallelismFactor | Maximum number of parallel multi-part file uploads/downloads. We advise not changing this setting unless you experience slow file transfers for large files. Choosing larger values will lead to higher memory usage. | 5 |
+| com.mendix.storage.azure.UseHttps| For enabling or disabling secure connections using HTTPS. Can be `true` or `false`. | `true` |
 | com.mendix.storage.azure.TimeoutIntervalInMs | Sets the amount of time (in milliseconds) to allow a call to the storage service to complete. For more information, see the [Azure libraries](https://azure.github.io/azure-sdk-for-java/storage.html). | No timeout |
 | com.mendix.storage.azure.MaximumExecutionTimeInMs | Sets the maximum execution time (in milliseconds) to use when making this request. For more information, see the [Azure libraries](https://azure.github.io/azure-sdk-for-java/storage.html). | No maximum time |
 
 {{% alert type="warning" %}}
-
 Azure blob storage's default connection protocol is HTTPS in order to encourage secure connections by default. This is a highly recommended best practice (for more information, see [Configure Azure Storage Connection Strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)). This should now be transparent, unless you use custom domain names (for details, see [Require Secure Transfer](https://docs.microsoft.com/en-us/azure/storage/common/storage-require-secure-transfer)). In that case, you should use the `UseHttps` setting above to revert to the previous default behavior and disable HTTPS.
-
 {{% /alert %}}
 
 ## 8 IBM Cloud (Bluemix) Object Storage Settings
@@ -201,6 +200,7 @@ The settings below influence the behavior of the Mendix web client.
 | com.mendix.webui.HybridAppLoginTimeOut | Determines how many minutes your token will remain valid before re-authenticating using your full credentials. This setting defaults to -1, which is equal to no timeout. | -1 |
 | com.mendix.webui.FeedbackSizeWarningThreshold | A warning is logged when the feedback size exceeds the threshold. Feedback is sent from server to client to instruct (for example, to refresh objects or to open a page). They are serialized as "instructions" in the server response. If there are too many instructions, this can have performance implications, as they all have to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 5000 |
 | com.mendix.webui.StateSizeWarningThreshold | A warning is logged when the state size exceeds the threshold. The state consists of changes in objects and of objects not committed to the database (yet). If there is too much state, this will have performance implications, as the whole state has to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 100 |
+| com.mendix.webui.CommittedObjectsThreshold | The threshold controls how much data is sent back to the client after executing a microflow. By default, we send back full objects when they are changed or committed. When this threshold is reached, only object GUIDs are sent back instead so that the client knows about the changes while the amount of data sent over the network is reduced. The client will then retrieve the objects later on, if needed. | 100 |
 
 ## 10 Proxy Settings
 

@@ -23,13 +23,25 @@ In the **Administrator** tab the following properties are available:
 
 The user name is used to sign into the application as the Administrator.
 
-Default: *MxAdmin*
+Default: *MxAdmin* 
+
+{{% alert type="info" %}}
+Since this is general knowledge, it is safer to change this to a custom user name.
+{{% /alert %}}
 
 ### 2.2 Password {#password}
 
 The password is used to sign into the application as the Administrator. Click **Show password** to see the password. 
 
 Default: *1*
+
+{{% alert type="info" %}}
+This password is only used when Mendix is running locally. You can change the password for your other [environments](/developerportal/deploy/environments-details) in the Developer Portal.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+Since this is general knowledge, it is safer to change this to a custom password.
+{{% /alert %}}
 
 ### 2.3 User Role {#user-role}
 

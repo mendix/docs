@@ -1,5 +1,5 @@
 ---
-title: "ATS Guide"
+title: "ATS"
 ---
 
 ## 1 Introduction

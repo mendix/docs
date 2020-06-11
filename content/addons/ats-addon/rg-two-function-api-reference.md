@@ -2476,7 +2476,7 @@ Perform mouse clicks, scrolling and hover, as well as focus on web elements and 
 | [Click Coordinates](#ClickCoordinates) | Clicks on the given point on the page, described by X and Y Offset. If no reference element is given, the upper left corner of the page is used as point of origin for calculating the desired point. Otherwise the upper left corner of the reference element is used. |
 | [Send Enter](#SendEnter) | Simulates pressing Enter in element, after waiting for any mendix activities to finish."). |
 | [Send Keys](#SendKeys) | Simulates typing Text into a web element, after waiting for any mendix activities to finish. |
-| [Doubleclick](#Doubleclick) | Performs a double-click on a web element. |
+| [Doubleclick](#Doubleclick) | Performs a double-click a web element. |
 | [Focus and Clear Element Value](#FocusAndClearElementValue) | Sets an input element to an empty string, after waiting for mendix activities to finish. |
 | [Focus WebElement](#FocusWebElement) | Focuses the web element and then waits for Mendix activities. |
 | [Click/Doubleclick](#ClickDoubleclick) | Performs a click or double-click and waits for Mendix activities. |
@@ -2600,7 +2600,7 @@ Doubleclick
 
 #### Description
 
-Performs a double-click on a web element.
+Performs a double-click a web element.
 
 #### Input Parameters
 

@@ -78,8 +78,8 @@ Mapping documents rely heavily on two windows. If they are not visible in the Mo
 *   Right mouse click, "Go to Entity". Open the Domain Model that contains the entity and jumps to the entity.
 *   Right mouse click, "Collapse All". Hides all the children of the mapping element, so you can keep overview in large mappings.
 *   Right mouse click, "Expand All". Expands all children of the mapping element; all underlying elements become visible.
-*   Left mouse click on "-" icon (below mapping element). Makes underlying elements invisible.
-*   Left mouse, click on "+" icon (below mapping element). Makes underlying elements visible again.
+*   Left mouse click "-" icon (below mapping element). Makes underlying elements invisible.
+*   Left mouse, click "+" icon (below mapping element). Makes underlying elements visible again.
 
 ## Properties
 

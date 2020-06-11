@@ -73,7 +73,7 @@ After you have updated your app, you are able to instantly view it in your brows
 
 ### 4.1 Viewing Your App in a Browser 
 
-To view your app in a browser in the currently selected view mode (Phone, Tablet, or Responsive), click **View app** in the **Your app is running** dialog window.
+To view your app in a browser in the currently selected view mode (Phone, Tablet, or Responsive), click **View app** in the **Your app is running** dialog box.
 
 To select a different preview mode, click the drop-down menu on the **View app** button.![Preview Modes](attachments/publishing-app/view-app-drop-down.png)
 

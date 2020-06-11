@@ -24,7 +24,7 @@ The SLA for your company is available upon request. Please contact [Mendix Suppo
 
 ## 2 Finding Your Answers
 
-We expect that many questions and issues can be solved by reading the Mendix [documentation](https://docs.mendix.com) and by exploring the [forum](https://forum.mendix.com). If you can’t find the answer to your question in one of these locations, you can submit a question, incident, or change request with Mendix Support. We will act as the focal point for issues on Mendix Studio and Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com). We will forward the issue to the second and third line if necessary.
+We expect that many questions and issues can be solved by reading the [Mendix Documentation](https://docs.mendix.com) and by exploring the [Mendix Forum](https://forum.mendix.com). If you can’t find the answer to your question in one of these locations, you can submit a question, incident, or change request with Mendix Support. We will act as the focal point for issues on Mendix Studio and Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com). We will forward the issue to the second and third line if necessary.
 
 ## 3 Feature Requests
 
@@ -59,7 +59,7 @@ It is very important to read these alerts carefully and to act upon them, as the
 
 ### 5.3 Training
 
-We expect your support team to be trained and certified on Studio Pro and the Developer Portal so that they can interpret and analyze alerts, graphs, and logs in the Developer Portal. For more information, please check our available [training courses](https://gettingstarted.mendixcloud.com/link/classroom) and [expert webinars](https://gettingstarted.mendixcloud.com/link/webinar) or contact the Mendix Academy (<academy@mendix.com>).
+We expect your support team to be trained and certified on Studio Pro and the Developer Portal so that they can interpret and analyze alerts, graphs, and logs in the Developer Portal. For more information, please check our available [classroom courses](https://gettingstarted.mendixcloud.com/link/classroom) and [expert webinars](https://gettingstarted.mendixcloud.com/link/webinar) or contact the Mendix Academy (<academy@mendix.com>).
 
 ## 6 Platform Status
 

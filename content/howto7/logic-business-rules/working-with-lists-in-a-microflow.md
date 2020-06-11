@@ -208,7 +208,7 @@ In the previous section you iterated over a list to add the value of single obje
     ![](attachments/18448686/18581059.png)
 
 4.  Click **OK**.
-5.  Double click on the message activity and replace the `$CalculatedTotalPrice` variable in the **Parameters** expression with the `$SumTotalPrice` variable.
+5.  Double click the message activity and replace the `$CalculatedTotalPrice` variable in the **Parameters** expression with the `$SumTotalPrice` variable.
     
     ![](attachments/18448686/18581055.png)
 

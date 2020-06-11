@@ -51,7 +51,7 @@ An enumeration has the following properties:
 
 Enumeration value properties are described below:
 
-* **Caption** – the caption of an enumeration value is the text that the end-user sees for this enumeration value. This is a translatable text. For more information, see [Translatable Texts](translatable-texts). 
+* **Caption** – the caption of an enumeration value is the text that the end-user sees for this enumeration value. This is a translatable text. For more information, see [Language Menu](translatable-texts). 
 
 * **Name** – the name of an enumeration value is a technical name of the value which is used to refer to the enumeration value in your project.
 

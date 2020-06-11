@@ -1,23 +1,23 @@
 ---
-title: "Deploy Your First Mendix Native App"
+title: "Deploy Your First Mendix Native Mobile App"
 parent: "native-mobile"
 menu_order: 70
-description: Describes how to deploy your first Mendix Native App with the Native Builder.
+description: Describes how to deploy your first Mendix native mobile app with the Native Builder.
 tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
 ---
 
 ## 1 Introduction
 
-This tutorial will teach you how to go from a blank slate to an app running on a device.
+This how-to will teach you how to go from a blank slate to an app running on a device.
 
 Every Native Builder project has configurations. These configurations are useful for preparing your app, and then creating builds on App Center and GitHub respectively. Configurations are also critical for making updates to apps already delivered to production devices. For more information on the Native Builder's capabilities, see the [Native Builder Reference Guide](/refguide/native-builder).
 
-## 2 Prerequisites
+## 2 Prerequisites {#prerequisites}
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Read [How to Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile) to see how to create, style and debug an application with Mendix Studio Pro
-* Deploy your native app to the cloud via Studio Pro and have the cloud address of your deployed application available
+* Deploy your native mobile app to the cloud via Studio Pro and have the cloud address of your deployed application available
 * Learn how to use Windows' command line interface (CLI) program `cmd`
 * Install [Java JDK 11](https://adoptopenjdk.net/) (if you have Studio Pro installed, you should already have JDK 11 in *C:\Program Files\AdoptOpenJDK*)
 * Download the Native Builder [executable](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) to a folder of your preference and extract all contents
@@ -39,6 +39,10 @@ If you plan to deploy your app for testing on an Android device, make sure you h
 ## 3 Getting Your Tokens
 
 To use the Native Builder, you will first need to get tokens to authenticate with GitHub and App Center. If you already have tokens for your GitHub and App Center, you do not need to repeat these sections.
+
+{{% alert type="info" %}}
+The Native Builder needs to communicate with GitHub and App Center. Therefore, make sure your firewall permissions do not restrict the Native Builder.
+{{% /alert %}}
 
 ### 3.1 GitHub Token {#github-token}
 
@@ -64,8 +68,12 @@ To use the Native Builder, you will first need to get tokens to authenticate wit
 The native builder uses the `prepare` command as well as a line of parameters in your CLI to specify the details of your build. Below is an example of a `prepare` command with a complete set of parameters:
 
 ```bash
-native-builder.exe prepare --project-name CoolApp --java-home "C:\Program Files\Java\jdk-11.0.3" --project-path "Y:\Documents\Mendix\CoolApp\CoolApp.mpr" --mxbuild-path "C:\Program Files\Mendix\8.3.0.61600\modeler\mxbuild.exe" --github-access-token b609183aa226a8c2d962700be7a387bd7776e986 --appcenter-api-token 440725eb1311ddfced62894a4d23fc90843370c7 --appcenter-organization "cool-organization" --runtime-url "https://coolapp.mendixcloud.com" --app-name "My Cool App" --app-identifier com.mendix.coolapp --mendix-version "8.5.0"
+native-builder.exe prepare --project-name CoolApp --java-home "C:\Program Files\Java\jdk-11.0.3" --project-path "Y:\Documents\Mendix\CoolApp\CoolApp.mpr" --mxbuild-path "C:\Program Files\Mendix\8.6.0.715\modeler\mxbuild.exe" --github-access-token b609183aa226a8c2d962700be7a387bd7776e986 --appcenter-api-token 440725eb1311ddfced62894a4d23fc90843370c7 --appcenter-organization "cool-organization" --runtime-url "https://coolapp.mendixcloud.com" --app-name "My Cool App" --app-identifier "com.mendix.coolapp" --mendix-version "8.6.0"
 ```
+
+{{% alert type="info" %}}
+To be valid, the `app-identifier` needs to be lower-case with no special characters.
+{{% /alert %}}
 
 The `prepare` command  does the following:
 
@@ -131,7 +139,7 @@ Now it is time for you to make your own first build:
 
 This command does the following:
 
-* Generates a JavaScript deployment bundle and images of the Native App from Studio pro
+* Generates a JavaScript deployment bundle and images of the native mobile app from Studio Pro
 * Creates a new build branch on GitHub and starts a build process on App Center
 
 If your `build` command fails citing version conflicts on Java classes, try the following:
@@ -146,6 +154,10 @@ If your `build` command fails citing version conflicts on Java classes, try the 
 By default, App Center builds are unsigned and cannot be released on the Google Play Store or the Apple App Store. To release your apps, you must provide your signature keys to App Center. Signature keys prove the authenticity of your app and prevent forgeries. For more information to how to acquire these keys, see the [Managing App Signing Keys Reference Guide](/refguide/managing-app-signing-keys). 
 
 For Android, if you do not intend to publish your app to the Google Play Store, you can skip this section. For iOS, this step prepares an already installable iOS App Store Package (*.ipa*). Without this section's instructions, an unsigned version of an iOS app (*.xcarchive*) would need to be signed manually using Xcode in order to deploy on a device or in the App Store.
+
+{{% alert type="info" %}}
+Currently, the Native Builder is not able to copy signing keys from one branch to another. Therefore you must set up signing for each branch you want to release. When you build with the Native Builder, the build number provided is used to create a new branch with the format **{build/#number}**. When ready to release, set up signing for the build number branch you decided according to this documentation and rebuild with the Native Builder using the branch's build number.
+{{% /alert %}}
 
 To sign your app using App Center, do the following:
 
@@ -285,7 +297,7 @@ You can skip this section if you completed [Signing a Build](#signing-a-build). 
 
 In order to deploy the *nativeTemplate.xcarchive* on a device or on the App Store, an Apple developer account and a development team is required. If one is available, do the following:
 
-1. Using an Xcode version below 11, double-click on the *nativeTemplate.xcarchive* file and it should open with the built-in *Application Loader* software.
+1. Using an Xcode version below 11, double-click the *nativeTemplate.xcarchive* file and it should open with the built-in *Application Loader* software.
 
 2.  Click the *Distribute App* button to start the local signing flow.:
 
@@ -317,7 +329,7 @@ In order to deploy the *nativeTemplate.xcarchive* on a device or on the App Stor
 
 #### 6.2.2 Installing on a Device
 
-You can now deploy your app to your device. An easy way to do this is with Apple iTunes.
+You can now deploy your app to your device. An easy way to do this is with Apple's iTunes program.
 
 To install the *ipa* on your device, follow these steps:
 
@@ -331,7 +343,76 @@ To install the *ipa* on your device, follow these steps:
 5. Your app will show up in the list of apps. Click the **Install** button next to your app.
 6. Click **Apply** at the bottom of the screen to execute the actual installation.
 
-#### 6.2.3 Uploading to the Apple App Store
+#### 6.2.3 Distributing for iOS Tablets
+
+When you try to build an app for tablets, your app will run as a phone app in a scaled mode optimized for tablet form factors. Please note, however, that Apple has far stricter rules for releasing tablet apps. For example, they require the app to behave well in any possible rotation or resolution. This means that when making a Mendix app for iOS tablets you should take extra care to style your app correctly so it is not rejected. 
+
+There are two ways to enable tablet mode:
+
+* If you are working with a Mac and are familiar with Git you can use XCode
+* You can directly do the changes in the appropriate files using GitHub's page
+
+##### 6.2.3.1 Use XCode on a Mac
+
+By default, building for tablets is disabled in XCode. Do the following to enable tablet settings:
+
+1. Select the following options in your XCode workspace:<br />
+	a. **iPad**: this enables tablet mode. By default, if tablet mode in enabled you also have to support any possible orientation.<br />
+	b. **Portrait**.<br />
+	c. **Landscape Left**.<br />
+	d. **Landscape Right.**<br />
+	e.  **Requires full screen**: Mendix requires this because full-screen orientations are easier on Mendix developers than smaller side-by-side forms.
+
+	{{% image_container width="300" %}}![select tablet options](attachments/deploying-native-app/tablet-workspace.png){{% /image_container %}}
+
+1. Commit these changes to your project's master branch so consecutive builds have the tablet settings enabled.
+
+##### 6.2.3.2 Directly Change the Files on GitHub
+
+First, navigate to your project's repository. This should be `www.github.com/<your github username>/<the given project name>`. Then do the following to enable tablet mode:
+
+1. Using the **Find file** functionality, find and open *project.pbxproj*:
+
+	![find file toolbar](attachments/deploying-native-app/github-find-file.png)
+
+1.  Click the edit icon:
+
+	![find file toolbar](attachments/deploying-native-app/github-edit-file.png)
+
+1. Change both instances of `TARGET_DEVICE_FAMILY = “1”;` to `TARGET_DEVICE_FAMILY = “1,2";`.
+1.  Commit these changes.
+1. Using the **Find file** functionality again, find and open *info.plist*.
+1.  Click the edit icon, then change the code like so: 
+
+	a. Before the final `</dict>` line, add this key:<br />
+	
+	```
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	```
+	
+	b. Change this code:<br />
+	
+	```
+		<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+</array>
+	```
+	
+	to the following:<br />
+	
+	```
+		<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	```
+1. Commit these changes.
+
+#### 6.2.4 Uploading to the Apple App Store
 
 To upload your app to the iOS App Store, follow these instructions (to continue, you must have completed the [Signing a Build](#signing-a-build) section above and recieved a build signed for the Apple Store):
 

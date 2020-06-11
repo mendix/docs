@@ -62,5 +62,5 @@ The caption describes what happens in this element.
 
 * [Microflows](microflows)
 * [Microflow Expressions](microflows-expressions)
-* [Configure a  Decision](microflows-how-to-configure-decision) 
+* [Configure a  Decision](/studio-how-to/microflows-how-to-configure-decision) 
 

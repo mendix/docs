@@ -13,7 +13,37 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2020
 
+### May 27th, 2020
+
+#### Improvements
+
+* When you [delete a story or task](/developerportal/collaborate/stories#deleting) on the [Stories](/developerportal/collaborate/stories) page, it is now irreversibly removed from the system.
+* We removed the ability to revert story-related changes in an app project's history.
+* We removed the ability to delete several stories at once on the **Stories** page.
+* We simplified story maintenance by preventing nested tasks.
+* We removed the read-only permission on the stories board to bring the Developer Portal in line with industry standards.
+* We made small improvements in the look and feel of the Developer Portal.
+
+#### Fixes
+
+* We fixed a bug where the calendar icon on date/time input fields was not displayed properly.
+* We fixed a bug where the star icon on your [favorite app projects](/developerportal/apps-list/#favoriting) was not displayed properly.
+
+### May 22nd, 2020
+
+#### Improvements
+
+* The [Stories](/developerportal/collaborate/stories) template functionality has been replaced with the **Clone** functionality in the [new UI option (beta)](/developerportal/collaborate/stories#beta).
+
+### May 7th, 2020
+
+#### Improvements
+
+* We added a new story action called **Clone** to the new beta UI. For more information, see the [New UI Option (Beta)](/developerportal/collaborate/stories#beta) section of *Stories*.
+
 ### February 21st, 2020
+
+#### Improvements
 
 * We fixed an issue where [favorited apps](/developerportal/apps-list/#favoriting) still showed up in the favorites view on the [My Apps](/developerportal/apps-list/) page after being deleted.
 * We made performance improvements to the **My Apps** page.
@@ -74,7 +104,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 #### Improvements
 
 * We fixed an issue that would prevent users from inviting email addresses that contain capital letters.
-* We fixed an issue that occassionally triggered an error message during signup.
+* We fixed an issue that occasionally triggered an error message during signup.
 * We made various small performance improvements on the Developer Portal.
 
 ### September 19th, 2019
@@ -82,7 +112,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 #### Launchpad Removal & App User Management Update
 
 * We removed the old launchpad page, as we have moved to a new SSO architecture. The old URL `launchpad.mendix.com` now links to your [My Apps](/developerportal/apps-list/) page.
-* We moved the app user management functionality of the launchpad to the **General** app settings in the Developer Portal. For more information, see the [Managing App Users](/developerportal/settings/general-settings#managing-app-users) section of *How to Manage General App Settings*.
+* We moved the App User management functionality of the launchpad to the **General** app settings in the Developer Portal. For more information, see the [Managing App Users](/developerportal/settings/general-settings#managing-app-users) section of *How to Manage General App Settings*.
 
 ### August 9th, 2019
 
@@ -145,7 +175,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Feedback & Support
 
-* We removed the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) from the Developer Portal. If you want to report an issue or ask a question, please submit a ticket at [Mendix Support](https://support.mendix.com).
+* We removed the [Mendix Feedback](/appstore/widgets/mendix-feedback) widget from the Developer Portal. If you want to report an issue or ask a question, please submit a ticket at [Mendix Support](https://support.mendix.com).
 
 ### January 3rd, 2019
 
@@ -367,7 +397,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 #### Fixes
 
 * A story in a completed Sprint no longer disappears when you open the details view.
-* The Mendix Feedback Widget now supports reporting feedback from pages with very long URLs.
+* The Mendix Feedback widget now supports reporting feedback from pages with very long URLs.
 
 ### June 7th, 2017
 

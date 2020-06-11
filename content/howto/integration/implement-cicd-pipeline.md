@@ -16,8 +16,8 @@ Before starting this how-to, make sure you are familiar with the following:
 
 * CICD
 * Using REST services
-* [Mendix Unit Testing module](https://appstore.home.mendix.com/link/app/390/) (only if used in your application)
-* [Mendix Application Test Suite](/addons/ats-addon/) (only if used in your application)
+* [Unit Testing](/appstore/modules/unit-testing) (only if used in your application)
+* [Application Test Suite](/addons/ats-addon/) (only if used in your application)
 
 ## 3 The Pipeline
 
@@ -97,7 +97,7 @@ The sections below show you how to execute unit and ATS (UI) tests remotely. The
 
 #### 3.4.1 Unit Tests
 
-One way of doing unit tests in a Mendix app is by using the [Unit Testing module](https://appstore.home.mendix.com/link/app/390/) available from the Mendix App Store. This module already [exposes an API to execute remote calls](https://appstore.home.mendix.com/link/app/390/#running-unit-tests-through-the-remote-api).
+One way of doing unit tests in a Mendix app is by using the [Unit Testing](/appstore/modules/unit-testing) module available from the Mendix App Store. This module already exposes an API to execute remote calls.
 
 First, you need to start the tests.
 

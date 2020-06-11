@@ -3,7 +3,7 @@ title: "Slider"
 category: "Widgets"
 description: "Describes the configuration and usage of the Slider widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "slider", "bound", "platform support"]
-draft: true
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -21,7 +21,9 @@ The [Slider](https://appstore.home.mendix.com/link/app/48786/) widget can be use
 
 For a demo app project that has been deployed with this widget, see [here](https://slider.mxapps.io/).
 
-## 2 Properties
+## 2 Configuration
+
+The following properties must be configured:
 
 * **Value attribute** – the selected value on the slider
 * **Range minimum attribute** – the attribute that contains the minimum slider value; if not provided, **Default minimum value** is used
@@ -61,4 +63,4 @@ We are actively maintaining this widget. Please report any issues or suggestions
 
 ## 5 Read More
 
-* [Native Styling](https://docs.mendix.com/refguide/native-styling-refguide)
+* [Native Mobile Styling Reference Guide](https://docs.mendix.com/refguide/native-styling-refguide)

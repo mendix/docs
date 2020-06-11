@@ -474,7 +474,7 @@ Next you will allow the Mendix developer to alter the header caption of your wid
 Do these final steps to sync and run your app:
 
 1. In Studio Pro press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to sync your app with the changes you made to **src/GroupBox.xml**. 
-2. An error will tell you to update your widget. Right-click on the Group Box widget and select **Update widget**. 
+2. An error will tell you to update your widget. Right-click the Group Box widget and select **Update widget**. 
 3. Double-click the same widget and you will now see your new property. 
 4. Fill in some caption text, click **OK**, and rerun your app locally to see your caption text in the app:
 
@@ -744,7 +744,7 @@ Now make it possible to expand or collapse the group box:
 	};
 	```
 
-8. Verify in the Make It Native app that you can expand and collapse the group box by tapping your widget's header.
+8. Verify in the Make it Native app that you can expand and collapse the group box by tapping your widget's header.
 
 #### 3.3.6 Adding an Expand and Collapse Icon Property
 
@@ -1458,6 +1458,6 @@ The developer needs to have the class names memorized to apply a certain group b
 ## 4 Read More
 
 * [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets)
-* [How to Implement Native Styling](/howto/mobile/native-styling)
-* [Native Styling Reference Guide](/refguide/native-styling-refguide)
+* [How to Implement Native Mobile Styling](/howto/mobile/native-styling)
+* [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide)
 * [How to Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)

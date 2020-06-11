@@ -3,14 +3,14 @@ title: "Document Viewer"
 category: "Widgets"
 description: "Describes the configuration and usage of the Document Viewer widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "document viewer", "platform support"]
-draft: true
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
 The [Document Viewer](https://appstore.home.mendix.com/link/app/12/) widget enables embedding and viewing any `System.FileDocument` object inside a page. By using microflows or the file downloader in Studio Pro, documents can be opened as downloaded or inside a new window. And with this widget, files can be opened inside data views.
 
-### 1.1 Typical Usage Scenarios
+### 1.1 Typical Use Cases
 
 With this widget, you can display uploaded images, PDFs, or office documents on your app pages.
 

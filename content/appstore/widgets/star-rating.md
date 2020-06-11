@@ -3,7 +3,7 @@ title: "Star Rating"
 category: "Widgets"
 description: "Describes the configuration and usage of the Star Rating widget, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "widget", "star rating", "star", "glyphicon", "platform support"]
-draft: true
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -50,9 +50,13 @@ For the **Rate** entity access rules, the **User** should be able to only write 
 
 ![](attachments/star-rating/star-rating3.png)
 
-When creating a new rating, its important to use the current user's previous rating as the initial rate value. Use the [Rate Me](https://modelshare.mendix.com/models/d7ece331-49d4-4464-a2e2-ea75528a0367/rate-me) microflow for the custom rate-me button.
+When creating a new rating, its important to use the current user's previous rating as the initial rate value. Use a microflow like on the example below for the custom rate-me button:
 
-The calculation of the average rate is done by adding a [Calculate Average Rate](https://modelshare.mendix.com/models/d27114b6-e2fb-4d79-aa39-8c60a6477ca8/calculate-average-rate) microflow to the after-commit and after-delete event handlers in the domain model.
+![Rate Me](attachments/star-rating/rate-me-microflow.png)
+
+To calculate the average rate, add a microflow like the one in the example below to the after-commit and after-delete event handlers in the domain model:
+
+![Calculate Average Rate](attachments/star-rating/calculate-average-rate.png)
 
 ## 3 Developing This App Store Component
 

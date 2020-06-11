@@ -4,7 +4,7 @@ category: "Settings"
 description: "Describes security and roles and permissions in Mendix Studio."
 menu_order: 10
 tags: ["studio", "security", "roles and permissions"]
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.#The anchor <upgrade> below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Introduction 
@@ -73,7 +73,11 @@ The **Roles and Permissions** screen consist of three tabs:
 
 The **Roles** tab lists all roles and indicates the number of pages and microflows these roles can access. 
 
-The **Page Access** and **Microflow Access** tabs contain a table where all pages/microflows are listed in rows, and all roles are placed in columns. You can decide which pages and microflows a particular role can access: tick/untick the box per document to grant/restrict access for it. To select/deselect all documents click on the **More Options** icon next to the user role.
+The **Page Access** and **Microflow Access** tabs contain a table where all pages/microflows are listed in rows, and all roles are placed in columns. 
+
+You can allow only certain roles to access a page or microflow: select the appropriate box to grant access for a role to a page or microflow. 
+
+To select/deselect all pages or microflows click the ellipsis icon next to the user role.
 
 As a result, you will get a matrix specific for each role. 
 
@@ -149,7 +153,7 @@ There are two ways to set access for specific pages/microflows in your app:
 
 	![](attachments/settings-security/permissions-section.png)
 
-## 4 Demo Users
+## 4 Demo Users {#demo-users}
 
 Demo users are a demonstration of each user role existing in your app. You can use demo users to review how your app looks like for each user role. For more technical information, see [Demo Users](/refguide/demo-users). 
 
@@ -189,7 +193,23 @@ People invited to join your App Team in the Developer Portal are not added as Ap
 If you have created a new user role on the **Roles and Permissions** page, you need to publish the app first to be able to see and assign this role in the Developer Portal.
 {{% /alert %}}
 
-## 6 Read More
+## 6 Auto-Upgrade to the New Service {#upgrade}
+
+When you try to publish your app, you may be notified that upgrade of the service that secures your app is required first:
+
+{{% image_container width="300" %}}
+![Upgrade Required](attachments/settings-security/upgrade.png)
+{{% /image_container %}}
+
+A special service makes it possible to manage your app users. As of April 1st, 2020 we are replacing the current service with an improved one. This upgrade will be done automatically for you when you click **Auto-Upgrade**. 
+
+No need to worry if you do not auto-upgrade, your app will still be secured and running, however, you will not be able to publish a newer version of your app until you upgrade. 
+
+If the automatic upgrade fails, this means, the service was customized in Studio Pro, and only manual upgrade in Studio Pro is possible in this case. 
+
+If the auto-upgrade detects that the service was customized in Studio Pro by a team member, you will be notified that a manual upgrade in Studio Pro should be performed first. For more technical information on how to upgrade the service in Studio Pro, see [Upgrading to Mendix SSO from AppCloudServices](/developerportal/deploy/upgrading-to-mendix-sso-from-acs).
+
+## 7 Read More
 
 * [Security](/refguide/security)
 * [Model Changes When Security Is Enabled in Studio](/refguide/studio-security-enabled)

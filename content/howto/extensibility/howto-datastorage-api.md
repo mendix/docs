@@ -37,7 +37,7 @@ For more information on calling Java actions from a microflow, see [Java Actions
 
 The goal is to create a microflow action where a user can specify an Xpath expression and which result entities are expected. The action will execute the XPath statement and return the resulting list of objects.
 
-In practice, this is not a very useful microflow action as you can already do this with the standard Retrieve action in Mendix Studio Pro. The goal, however, is to illustrate how you can use the Xpath Java API.
+In practice, this is not a very useful microflow action as you can already do this with the standard retrieve action in Mendix Studio Pro. The goal, however, is to illustrate how you can use the Xpath Java API.
 
 The Java action needs the following parameters:
 
@@ -55,7 +55,7 @@ Finally, you should define how you want to display the microflow in the microflo
 
 ![](attachments/dsapi/image007.png)
 
-The implementation of this Java action is pretty straight forward; you can use the [Core.retrieveXPathQuery](https://apidocs.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) API to execute your Xpath expression and return a list of Mendix objects.
+The implementation of this Java action is pretty straight forward; you can use the [Core.retrieveXPathQuery](https://apidocs.rnd.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) API to execute your Xpath expression and return a list of Mendix objects.
 
 The implementation also validates that the list returned contains objects of the entity specified.
 
@@ -141,7 +141,7 @@ The microflow to execute the Java action is similar to the previous example, but
 
 ![](attachments/dsapi/image042.png)
 
-Below is the Java code to get the Dataset OQL, execute the OQL, and retrieve the Objects. You use the [Core.createOQLTextGetRequestFromDataSet](https://apidocs.mendix.com/7/runtime/com/mendix/core/Core.html#createOQLTextGetRequestFromDataSet-java.lang.String-) method to get the OQL query of the Dataset specified.
+Below is the Java code to get the Dataset OQL, execute the OQL, and retrieve the Objects. You use the [Core.createOQLTextGetRequestFromDataSet](https://apidocs.rnd.mendix.com/7/runtime/com/mendix/core/Core.html#createOQLTextGetRequestFromDataSet-java.lang.String-) method to get the OQL query of the Dataset specified.
 
 ![](attachments/dsapi/image043.png)
 

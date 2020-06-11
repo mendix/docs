@@ -26,7 +26,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 ## 3 Setting Up
 
-In this section, we will walk through all the steps to configure New Relic so that it can be used for application performance monitoring of your Mendix application.
+In this section, we will walk through all the steps to configure New Relic so that it can be used for the [application performance diagnostics](/addons/apd-addon/index) of your Mendix application.
 
 ## 3.1 Setting up New Relic (On-Premises Only)
 

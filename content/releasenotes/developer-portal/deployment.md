@@ -10,11 +10,116 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
-### Future change – from February 24th, 2020
+### June 10th, 2020
+
+#### Mendix for Private Cloud — Mendix Gateway Agent v1.1.1
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#agent-latest).
+
+* We have fixed a regression which caused unusually high CPU usage.
+
+### June 8th, 2020
+
+#### Mendix for Private Cloud — Mendix Operator v1.1.0
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+
+* Mendix apps now run as Kubernetes Deployments instead of StatefulSets. This will allow you to use rolling updates, reducing downtime. In addition, this helps avoid situations where a StatefulSet might become stuck and stop processing any changes.
+* We now allow you to set Kubernetes resource requirements in addition to resource limits. Apps no longer require the maximum amount of CPU and memory, improving utilization of cluster resources.
+* We improved the default health check configuration by adjusting the default Kubernetes liveness and readiness probe configuration. Kubernetes will now be much quicker in detecting that an environment has started and is ready to serve requests. In addition, the Kubernetes liveness probe will start with a delay to give a Mendix app some time to start and perform migrations.
+* We have added a port to enable monitoring of Mendix apps with Prometheus.
+* We have added an option to make a storage plan dedicated so that it can be used by only one environment.
+* We have added support for Microsoft SQL server and Azure SQL databases.
+* We have fixed a regression which prevented Private Cloud installing when using kubectl version 1.18.
+
+#### Mendix for Private Cloud — Mendix Gateway Agent v1.1.0
+
+To upgrade an existing installation of Private Cloud to the latest version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#agent-latest).
+
+* We have improved the reliability of event processing and cluster authentication.
+
+### June 4th, 2020
+
+#### Mendix Cloud **v4**
+
+* We introduced a new graph in the **Trends** metrics for Mendix Cloud v4. This shows the **database burst balance**. See [Database Burst Balance](/developerportal/operate/trends-v4#Trends-dbmxdatabaseburstbalance) in the *Trends in Mendix Cloud v4* document for more information.
+* In Mendix Cloud v4 we introduced changes to the Access Restriction Profile (ARP) Certificate Authorities (CAs). These changes allow you to:
+    * Have stricter access restrictions by allowing the selection of intermediate certificates instead of the root
+    * Use different root certificates for each path
+        {{% alert type="info" %}}Existing configurations will not be changed and environments can be restarted safely.<br/><br/>To migrate to the new ARPs, you must remove **all** existing ARPs and replace them with *clones* that you have edited using the latest Developer Portal.<br/>In other words **Clone** the existing ARPs, **Edit** the CAs, and **Apply** the new ARPs to all paths.{{% /alert %}}
+        For more information see [How To Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions).
+
+    You will need to redeploy your app in order to apply the new ARP(s).
+
+### May 1st, 2020
+
+#### Mendix Cloud Dedicated
+
+* For [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-capabilities/mendix-cloud-overview#mendix-cloud-vpc), we have added the ability to whitelist outgoing IP addresses.
+
+### April 24th, 2020
+
+#### SAP Cloud Platform Deployment
+
+* We have added an easy-to-use autoscaler configurator to allow you to easily create JSON configuration files for the **Application Autoscaler** on SAP Cloud Platform. See [Application Autoscaler for SAP Cloud Platform](/partners/sap/sap-autoscaler) for more information.
+    * There is currently an issue with how the JSON is uploaded. We are working on a fix for this but, in the meantime, please check the workaround in the documentation to ensure that the JSON is uploaded.
+
+### March 26th, 2020
+
+#### SAP Cloud Platform Deployment
+
+* We have added support for deploying to the Azure Netherlands region of SAP Cloud Platform.
+    * **Object storage is only supported in the Azure Netherlands region for  Mendix version 8.7.0 and above**
+* We have added a log of all deployment activities which are carried out on your SAP environments to the environments page of apps which are deployed to SAP Cloud Platform.
+* We have added the ability to specify a custom URL (e.g. `appname.subdomain.domain.com`) where the user will be redirected after signing on using XSUAA, instead of being redirected to the generated URL (e.g. `appname.cfapps.eu10.hana.ondemand.com`) of the app.
+
+### March 24th, 2020
+
+#### Mendix for Private Cloud — Mendix Operator v1.0.1
+
+* We have added an additional field to the `MendixApp` CR which will allows the Developer Portal to display the latest state of environments.
+* We have improved compatibility with popular container image registries (such as Azure Container Registry). The build process can now recognize that the container image already has the necessary base layers, and avoids downloading them again, saving time and network traffic.
+
+#### Mendix for Private Cloud — Mendix Gateway Agent v1.0.1
+
+* We have improved the reliability of sending environment statuses to the Developer Portal.
+
+### March 23rd, 2020
+
+#### Mendix for Private Cloud
+
+* We fixed an issue where users could not accept invitations to join a cluster.
+* We fixed an issue were the first time an app was deployed no replicas were started, meaning that it was still in a stopped state. Now all apps will have one replica started when they are deployed for the first time.
+
+### March 17th, 2020
+
+#### Mendix Clouds
+
+* We have updated the environment details and backups screens for Mendix Clouds to show a more precise region, and the location of the secondary backup.
+
+### March 4th, 2020
+
+#### Mendix for Private Cloud
+
+* You can now deploy Mendix apps easily to Kubernetes-based platforms. We currently support Red Hat OpenShift, Amazon Web Services Elastic Kubernetes Service (AWS-EKS), and Amazon Web Services Azure Kubernetes Service (AWS-AKS). This involves deploying a Mendix Operator to your cluster to manage the Mendix requests. For more information see the [Private Cloud](/developerportal/deploy/private-cloud) documentation.
+
+### March 2nd, 2020
+
+#### Mendix Cloud Backups
+
+* Restoring data on the Mendix Cloud now takes place asynchronously. This means the following:
+    * You can continue working in the Developer Portal while your backup is restored
+    * You will be unable to stop or start your app while the backup is being restored
+    * Your environment details page will display a message while the backup is being restored
+    * The environment activity log will indicate when the restore has completed
+* New Deploy API calls have been added. These will be added to the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) documentation shortly.
+* You will now be warned that you cannot restore a file-only backup to Mendix Cloud. You can only restore backups which include the database.
+
+### February 27th, 2020
 
 #### TLSv1.3 Support for Mendix Cloud (All Regions)
 
-* Starting on February 24th, we will roll out TLSv1.3 support to Mendix Cloud v4 and Mendix Cloud v3. TLSv1.3 improves the speed and security of HTTPS connections. We expect to complete this work by February 27th.
+* Mendix Cloud v4 and Mendix Cloud v3 now support TLSv1.3. TLSv1.3 improves the speed and security of HTTPS connections.
 
 ### February 17th, 2020
 
@@ -181,7 +286,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Mendix Cloud Improvements
 
-* We redesigned the app user management page of the Developer Portal for Mendix Cloud environments which are enabled for single sign-on (SSO).
+* We redesigned the App User management page of the Developer Portal for Mendix Cloud environments which are enabled for single sign-on (SSO).
 
 ### May 13th, 2019
 
@@ -730,7 +835,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 ### April 1st, 2017
 
-* We added list backups/download backup operations to the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api#3-15-list-environment-backups).
+* We added list backups/download backup operations to the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
 * We fixed the status page link in alert emails.
 * We updated the **Security** link from the Deploy/Operate tabs. It now goes to the same page on all pages in the platform.
 * We fixed an issue where the Free Apps backups page was very slow or resulted in an error in some cases.
@@ -753,7 +858,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Improvement
 
-* We introduced a new setting in **Node Security**, you can now configure **Monitoring Permissions** separately from **Transport Permissions**. Immediately after this change, we granted all users that had **Transport Permissions** on an environment the **Monitoring Permissions** there as well. From now on, a **Technical Contact** can configure these settings for everyone in the team separately. While we introduced this setting, we revisited the layout of the **Node Security** screen, you now have a simpler interface to change the permissions en each environment.
+* We introduced a new setting in **Node Security**, you can now configure **Monitoring Permissions** separately from **Transport Permissions**. Immediately after this change, we granted all users that had **Transport Permissions** on an environment the **Monitoring Permissions** there as well. From now on, a **Technical Contact** can configure these settings for everyone in the team separately. While we introduced this setting, we revisited the layout of the **Node Security** screen, you now have a simpler interface to change the permissions for each environment.
 
 ### February 20th, 2017
 

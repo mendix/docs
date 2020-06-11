@@ -1,6 +1,7 @@
 ---
 title: "User Management API"
 category: "API Documentation"
+menu_order: 13
 ---
 
 ## 1 Introduction
@@ -117,7 +118,7 @@ Retrieves a user account's OpenID based on its email address.
 
 ```http
  HTTP Method: GET
- URL: https://platform.mendix.com/api/1/users/by-email/<emailAddress>
+ URL: https://usermanagement.mendix.com/legacy-api/1/users/by-email/<emailAddress>
 ```
 
 #### 4.2.1 Can Be Invoked By
@@ -133,8 +134,8 @@ Company Manager, Member Manager
 #### 4.3.2 Example
 
 ```http
-GET /api/1/users/by-email/johndoe3%40example.com HTTP/1.1
-Host: platform.mendix.com
+GET /legacy-api/1/users/by-email/johndoe3%40example.com HTTP/1.1
+Host: usermanagement.mendix.com
 Content-Type: application/json
 Mendix-Username:janedoe@example.com
 Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
@@ -160,7 +161,7 @@ Retrieves the OpenIDs of all users in your company.
 
 ```http
 HTTP Method: GET
- URL: https://platform.mendix.com/api/1/users
+ URL: https://usermanagement.mendix.com/legacy-api/1/users
 ```
 
 #### 4.4.1 Can Be Invoked By
@@ -178,8 +179,8 @@ Company Manager, Member Manager
 ##### 4.4.2.2 Example
 
 ```http
-GET /api/1/users HTTP/1.1
-Host: platform.mendix.com
+GET /legacy-api/1/users HTTP/1.1
+Host: usermanagement.mendix.com
 Content-Type: application/json
 Mendix-Username:janedoe@example.com
 Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
@@ -222,7 +223,7 @@ Creates a new user account in your company. This is only allowed if the requesti
 
 ```http
  HTTP Method: POST
- URL: https://platform.mendix.com/api/1/users
+ URL: https://usermanagement.mendix.com/legacy-api/1/users
 ```
 
 #### 4.5.1 Can Be Invoked By
@@ -244,8 +245,8 @@ A JSON object with the following keys:
 ##### 4.5.2.2 Example
 
 ```http
-POST /api/1/users HTTP/1.1
-Host: platform.mendix.com
+POST /legacy-api/1/users HTTP/1.1
+Host: usermanagement.mendix.com
 Content-Type: application/json
 Mendix-Username: janedoe@example.com
 Mendix-ApiKey: 87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
@@ -269,7 +270,7 @@ A JSON object with a two key-value pairs; _openId_ containing the OpenID for the
 ```json
 {
     "openId" : "https://mxid2.mendixcloud.com/mxid2/id?id=bdddd12c-cc93-4600-82e4-88baa5314y79",
-    "getUrl" : "https://platform.mendix.com/api/1/users/by-email/johndoe3@example.com"
+    "getUrl" : "https://usermanagement.mendix.com/legacy-api/1/users/by-email/johndoe3@example.com"
 }
 ```
 
@@ -279,7 +280,7 @@ Activate/deactivate a user account in your company. Deactivating a user means th
 
 ```http
  HTTP Method: PUT
- URL: https://platform.mendix.com/api/1/users/<openId>
+ URL: https://usermanagement.mendix.com/legacy-api/1/users/<openId>
 ```
 
 #### 4.6.1 Can Be Invoked By
@@ -301,8 +302,8 @@ A JSON object with keys:
 ##### 4.6.2.3 Example
 
 ```http
-POST /api/1/users/https%3A%2F%2Fmxid2.mendix.dev%2Fmxid2%2Fid%3Fid%3D51b54074-a66c-4337-8488-aac89bf47a2d HTTP/1.1
-Host: platform.mendix.com
+POST /legacy-api/1/users/https%3A%2F%2Fmxid2.mendix.dev%2Fmxid2%2Fid%3Fid%3D51b54074-a66c-4337-8488-aac89bf47a2d HTTP/1.1
+Host: usermanagement.mendix.com
 Content-Type: application/json
 Mendix-Username:janedoe@example.com
 Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
@@ -323,7 +324,7 @@ Retrieves a security group based on its UUID.
 
 ```http
 HTTP Method: GET
-URL: https://platform.mendix.com/api/1/groups/<securityGroupUuid>
+URL: https://usermanagement.mendix.com/legacy-api/1/groups/<securityGroupUuid>
 ```
 
 #### 4.7.1 Can Be Invoked By
@@ -339,8 +340,8 @@ Company Manager, Member Manager
 ##### 4.7.2.2 Example
 
 ```http
-GET /api/1/groups/86a2558b-b63b-4c76-a056-018d9eb8f1b9 HTTP/1.1
-Host: platform.mendix.com
+GET /legacy-api/1/groups/86a2558b-b63b-4c76-a056-018d9eb8f1b9 HTTP/1.1
+Host: usermanagement.mendix.com
 Content-Type: application/json
 Mendix-Username:janedoe@example.com
 Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
@@ -377,7 +378,7 @@ Retrieves a security group based on its name.
 
 ```http
  HTTP Method: GET
- URL: https://platform.mendix.com/api/1/groups/by-name/<securityGroupName>
+ URL: https://usermanagement.mendix.com/legacy-api/1/groups/by-name/<securityGroupName>
 ```
 
 #### 4.8.1 Can Be Invoked By
@@ -394,8 +395,8 @@ Company Manager, Member Manager
 
 ```http
 
-GET /api/1/groups/RnD HTTP/1.1
-Host: platform.mendix.com
+GET /legacy-api/1/groups/RnD HTTP/1.1
+Host: usermanagement.mendix.com
 Content-Type: application/json
 Mendix-Username:janedoe@example.com
 Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
@@ -432,7 +433,7 @@ Retrieves all security groups which exist in a company.
 
 ```http
 HTTP Method: GET
-URL: https://platform.mendix.com/api/1/groups
+URL: https://usermanagement.mendix.com/legacy-api/1/groups
 ```
 
 #### 4.9.1 Can Be Invoked By
@@ -450,8 +451,8 @@ Company Manager, Member Manager
 ##### 4.9.2.2 Example
 
 ```http
-GET /api/1/groups?limit=2 HTTP/1.1
-Host: platform.mendix.com
+GET /legacy-api/1/groups?limit=2 HTTP/1.1
+Host: usermanagement.mendix.com
 Content-Type: application/json
 Mendix-Username:janedoe@example.com
 Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
@@ -501,7 +502,7 @@ Retrieves all users that are a member of a certain security group.
 
 ```http
 HTTP Method: GET
-URL: https://platform.mendix.com/api/1/groups/<securityGroupUuid>/users
+URL: https://usermanagement.mendix.com/legacy-api/1/groups/<securityGroupUuid>/users
 ```
 
 #### 4.10.1 Can Be Invoked By
@@ -524,8 +525,8 @@ Company Manager, Member Manager
 
 ```http
 
-GET /api/1/groups/86a2558b-b63b-4c76-a056-018d9eb8f1b9/users?limit=10 HTTP/1.1
-Host: platform.mendix.com
+GET /legacy-api/1/groups/86a2558b-b63b-4c76-a056-018d9eb8f1b9/users?limit=10 HTTP/1.1
+Host: usermanagement.mendix.com
 Content-Type: application/json
 Mendix-Username:janedoe@example.com
 Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
@@ -559,7 +560,7 @@ Creates a security group in your company.
 
 ```http
  HTTP Method: POST
- URL: https://platform.mendix.com/api/1/groups
+ URL: https://usermanagement.mendix.com/legacy-api/1/groups
 ```
 
 #### 4.11.1 Can Be Invoked By
@@ -579,8 +580,8 @@ A JSON object with the following keys:
 ##### 4.11.2.2 Example
 
 ```http
-POST /api/1/groups HTTP/1.1
-Host: platform.mendix.com
+POST /legacy-api/1/groups HTTP/1.1
+Host: usermanagement.mendix.com
 Content-Type: application/json
 Mendix-Username:janedoe@example.com
 Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
@@ -601,7 +602,7 @@ JSON object with two key-value pairs; _uuid_ containing the UUID of the security
 ```json
 {
     "uuid": "a552a41b-5b30-41000-bab7-ad102eacd653",
-    "getUrl" : "https://platform.mendix.com/api/1/groups/a552a41b-5b30-41000-bab7-ad102eacd653"
+    "getUrl" : "https://usermanagement.mendix.com/legacy-api/1/groups/a552a41b-5b30-41000-bab7-ad102eacd653"
 }
 ```
 
@@ -611,7 +612,7 @@ Updates a security group in your company.
 
 ```http
  HTTP Method: PUT
- URL: https://platform.mendix.com/api/1/groups/<securityGroupUuid>
+ URL: https://usermanagement.mendix.com/legacy-api/1/groups/<securityGroupUuid>
 ```
 
 #### 4.12.1 Can Be Invoked By
@@ -635,8 +636,8 @@ A JSON object with the following keys:
 ##### 4.12.2.3 Example
 
 ```http
-PUT /api/1/groups/a552a41b-5b30-41000-bab7-ad102eacd653 HTTP/1.1
-Host: platform.mendix.com
+PUT /legacy-api/1/groups/a552a41b-5b30-41000-bab7-ad102eacd653 HTTP/1.1
+Host: usermanagement.mendix.com
 Content-Type: application/json
 Mendix-Username:janedoe@example.com
 Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
@@ -658,7 +659,7 @@ Deletes a security group from your company.
 
 ```http
  HTTP Method: DELETE
- URL: https://platform.mendix.com/api/1/groups/<securityGroupUuid>
+ URL: https://usermanagement.mendix.com/legacy-api/1/groups/<securityGroupUuid>
 ```
 
 #### 4.13.1 Can Be Invoked By
@@ -675,8 +676,8 @@ Company Manager
 
 ```http
 
-DELETE /api/1/groups/a552a41b-5b30-41000-bab7-ad102eacd653 HTTP/1.1
-Host: platform.mendix.com
+DELETE /legacy-api/1/groups/a552a41b-5b30-41000-bab7-ad102eacd653 HTTP/1.1
+Host: usermanagement.mendix.com
 Content-Type: application/json
 Mendix-Username:janedoe@example.com
 Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
@@ -693,7 +694,7 @@ Adds a user account from your company to the specified security group.
 
 ```http
 HTTP Method: POST
-URL: https://platform.mendix.com/api/1/groups/<securityGroupUuid>/users
+URL: https://usermanagement.mendix.com/legacy-api/1/groups/<securityGroupUuid>/users
 ```
 
 #### 4.14.1 Can Be Invoked By
@@ -714,8 +715,8 @@ A JSON object with one key:
 ##### 4.14.2.3 Example
 
 ```http
-POST /api/1/groups/a552a41b-5b30-41000-bab7-ad102eacd653/users HTTP/1.1
-Host: platform.mendix.com
+POST /legacy-api/1/groups/a552a41b-5b30-41000-bab7-ad102eacd653/users HTTP/1.1
+Host: usermanagement.mendix.com
 Content-Type: application/json
 Mendix-Username:janedoe@example.com
 Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
@@ -736,7 +737,7 @@ Remove the specified user account from the security group.
 
 ```http
  HTTP Method: DELETE
- URL: https://platform.mendix.com/api/1/groups/<securityGroupUuid>/users/<openId>
+ URL: https://usermanagement.mendix.com/legacy-api/1/groups/<securityGroupUuid>/users/<openId>
 ```
 
 #### 4.15.1 Can Be Invoked By
@@ -754,8 +755,8 @@ Company Manager, Members Manager
 
 ```http
 
-DELETE /api/1/groups/a552a41b-5b30-41000-bab7-ad102eacd653/users/https%3A%2F%2Fmxid2.mendix.dev%2Fmxid2%2Fid%3Fid%3Ddaba46fc-692c-4622-adb4-981fcfb0dec9 HTTP/1.1
-Host: platform.mendix.com
+DELETE /legacy-api/1/groups/a552a41b-5b30-41000-bab7-ad102eacd653/users/https%3A%2F%2Fmxid2.mendix.dev%2Fmxid2%2Fid%3Fid%3Ddaba46fc-692c-4622-adb4-981fcfb0dec9 HTTP/1.1
+Host: usermanagement.mendix.com
 Content-Type: application/json
 Mendix-Username:janedoe@example.com
 Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7

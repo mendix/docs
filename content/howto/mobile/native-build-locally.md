@@ -38,6 +38,8 @@ The Native Template is versioned against Mendix Studio Pro. This means the Studi
 
 #### 3.1 Determine Which Native Template Version to Use
 
+To determine which version of the Native Template you should use, do the following:
+
 1. Note which version of Studio Pro you are using.
 1. Navigate to the [Native Template GitHub repository](github.com/mendix/native-template).
 1. At the root of your project, open the *mendix_version.json* JSON file.
@@ -46,13 +48,19 @@ The keys of the dictionary represent the Mendix Studio Pro version, the **min** 
 
 {{% image_container width="200" %}}![iOS output](attachments/native-build-locally/mendix-version.png){{% /image_container %}}
 
+How you should proceed depends on if you have Git installed or not.
+
 #### 3.1.1 With Git installed
+
+If you have Git installed, do the following:
 
 1. Use `git@github.com:mendix/native-template.git` or `https://github.com/mendix/native-template.git` to clone the project locally. 
 1. Run the following command: `git clone --single-branch --branch <release/version-number> <repo-url>`.
 1. Run `npm i && cd ios && pod install` to install the required dependencies.
 
 #### 3.1.2 Without Git
+
+If you do not have Git installed, do the following:
 
 1. Navigate to the [Native Template releases](github.com/mendix/native-template/releases).
 1. Scroll to the version you want to download.

@@ -89,7 +89,7 @@ To set up a working directory for your script, follow these steps:
     }
     ```
 
-    When a new major version of the Mendix SDK is released (as in, 1.0.0 to 2.0.0) and you run `npm update` in your project folder, the `^` in front of the version number makes sure that installed version of the SDK won't be upgraded automatically. Only minor and patch releases (as in, 1.1.1) of the SDK will be automatically upgraded, otherwise your script could inadvertently be broken. You may, of course, edit the dependency by hand yourself.
+    When a new major version of the Mendix SDK is released (as in, 1.0.0 to 2.0.0) and you run `npm update` in your project folder, the `^` in front of the version number makes sure that the installed version of the SDK will not be upgraded automatically. Only minor and patch releases (as in, 1.1.1) of the SDK will be automatically upgraded; otherwise, your script could inadvertently be broken. You may, of course, edit the dependency by hand yourself.
 
 4.  Save your changes and then execute the following to install the dependencies:
 

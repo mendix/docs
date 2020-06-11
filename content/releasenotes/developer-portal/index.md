@@ -13,12 +13,6 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2020
 
-### ______, 2020
-
-#### Improvements
-
-* The [new Stories UI](/developerportal/collaborate/stories) has been improved with various sections. The [old Stories UI](/developerportal/collaborate/stories#old) will be made unavailable.  We encourage you to turn your tasks that are still available in the old Stories UI into new stories before the old UI is inaccessible.
-
 ### May 27th, 2020
 
 #### Improvements

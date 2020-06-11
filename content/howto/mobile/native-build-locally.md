@@ -1,8 +1,8 @@
 ---
-title: "Build Your First Mendix Native App Locally"
+title: "Build Your First Mendix Native Mobile App Locally"
 parent: "native-mobile"
 menu_order: 70
-description: Describes how to build your first Mendix Native App locally.
+description: Describes how to build your first Mendix native mobile app locally.
 tags: ["native", "mobile", "deploy", "appcenter", "local"]
 ---
 
@@ -32,7 +32,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Get the Native Template
 
-The Native Template is the base for building native apps with Mendix. In essence, it is a React Native template with the extra dependencies and configurations required to run your Mendix app.
+The Native Template is the base for building native mobile apps with Mendix. In essence, it is a React Native template with the extra dependencies and configurations required to run your Mendix app.
 
 The Native Template is versioned against Mendix Studio Pro. This means the Studio Pro version you use to create your Mendix app dictates which version of Native Template you should use. When using the Native Builder this is handled internally using the `--mendix-version` flag.
 
@@ -98,7 +98,7 @@ Now you have completed the basic setup of the Native Template with the latest bu
 
 ## 4 Adding or Removing Dependencies
 
-Mendix Native apps [todo: correct?]() is build on top of React Native. Therefore, any React Native module can be added and used in a project. The same rules apply as with any React Native project.
+Mendix native mobile apps [todo: correct?]() are build on top of React Native. Therefore, any React Native module can be added and used in a project. The same rules apply as with any React Native project.
 
 ### 4.1 For Native Templates v4.0.0 and Above
 

@@ -23,6 +23,10 @@ SAP HANA does not support unlimited strings or strings with a specified length g
 
 See also [Case-Sensitive Database Behavior](case-sensitive-database-behavior).
 
+{{% alert type="warning" %}}
+In versions of Mendix below 8.11.0, string comparisons in SAP HANA were case sensitive.
+{{% /alert %}}
+
 ### 3.2 Sorting, Grouping & Aggregating
 
 It is not possible to sort, group, or use aggregate functions such as `count()` on unlimited strings or strings with a specified length greater than 5000 characters. This is because such long or unlimited strings are implemented with the data type CLOB. Consider decreasing the length of the string attribute or removing it from data grids.  

@@ -108,14 +108,14 @@ Now you have completed the basic setup of the Native Template with the latest bu
 
 Mendix native mobile apps [todo: correct?]() are build on top of React Native. Therefore, any React Native module can be added and used in a project. The same rules apply as with any React Native project.
 
-### 4.1 For Native Templates v4.0.0 and Above
+### 4.1 Adding Dependencies For Native Templates v4.0.0 and Above
 
-From Native Template v4.0.0 and above Mendix supports RN 0.6.x and therefore auto-linking. [Need some intro to the instrucitons below here]()
+From Native Template v4.0.0 and above Mendix supports RN 0.6.x and therefore auto-linking. [Need some intro to the instructions below here]()
 
 1. Add the dependency to the root *package.json* of your Native Template using `npm i -s <dependency name>`.
 1. If the dependency supports auto-linking when `npm install` is run it will automatically add itself correctly to the Android and iOS project. If the dependency does not support auto-linking or requires more configuration, follow its documentation to add the required entries manually.
 
-### 4.2 For Native Templates Below v4.0.0
+### 4.2 Adding Dependencies For Native Templates Below v4.0.0
 
 Native Template versions below v4.0.0 do not support React Native's auto-linking. Therefore always follow the manual steps of the dependency to add it to the Android and iOS projects respectively.
 
@@ -123,10 +123,14 @@ Native Template versions below v4.0.0 do not support React Native's auto-linking
 
 #### 4.3.1 Dependencies Which Support Auto-Linking
 
+To remove dependencies which support auto-linking, do the following:
+
 1. Remove the dependency entry from the *package.json* file.
 1. Run `npm i`.
 
 #### 4.3.2 Dependencies Which Do Not Support Auto-Linking
+
+To remove dependencies which do not support auto-linking, do the following:
 
 1. Remove the dependency's entry from the *package.json* file.
 1. Remove the dependency's entry from the *ios/Podfile* file.

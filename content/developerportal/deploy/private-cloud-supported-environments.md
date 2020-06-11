@@ -1,5 +1,5 @@
 ---
-title: "Supported providers"
+title: "Supported Providers"
 parent: "private-cloud"
 description: "Describes which providers are supported by Mendix for Private Cloud"
 menu_order: 50
@@ -9,13 +9,13 @@ tags: ["Private Cloud", "Cluster", "Operator", "Deploy", "Provider", "Registry",
 ## 1 Introduction
 
 Mendix for Private Cloud depends on external services to deploy and run Mendix apps.
-This document covers which providers and services are confirmed to be supported by the Mendix Operator.
+This document covers which providers and services are officially supported by the Mendix Operator.
 
-## 2 Kubernetes cluster types
+## 2 Kubernetes Cluster Types
 
-### 2.1 Supported cluster types
+### 2.1 Supported Cluster Types
 
-We currently support deploying into the following Kubernetes cluster types:
+We currently support deploying to the following Kubernetes cluster types:
 
 * [Amazon Elastic Kubernetes Service](https://aws.amazon.com/eks/)
 * [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/)
@@ -24,53 +24,53 @@ We currently support deploying into the following Kubernetes cluster types:
 * [k3s](https://k3s.io/)
 * [minikube](https://minikube.sigs.k8s.io/docs/)
 
-### 2.2 Cluster requirements
+### 2.2 Cluster Requirements
 
 To install the Mendix Operator, the cluster administrator will need permissions to
 * Create Custom Resource Definitions
 * Create roles in the target namespace or project
 * Create role bindings in the target namespace or project
 
-The cluster should have at least 2 CPU and 2 GB memory available; this is enough to run one simple app.
+The cluster should have at least 2 CPUs and 2 GB memory available; this is enough to run one simple app.
 
 In OpenShift, this requires the cluster administrator to have a `system:admin` role.
 
-### 2.3 Unsupported cluster types
+### 2.3 Unsupported Cluster Types
 
-It's not possible to use Mendix for Private Cloud in [OpenShift Online](https://www.openshift.com/products/online/) because OpenShift Online doesn't allow to install Custom Resource Definitions.
+It is not possible to use Mendix for Private Cloud in [OpenShift Online](https://www.openshift.com/products/online/) because OpenShift Online doesn't allow the installation of Custom Resource Definitions.
 
-## 3 Container registries
+## 3 Container Registries
 
 {{% alert type="info" %}}
 The cluster should be configured to be able to pull images from the registry.
 If the registry requires authentication, this can be done by creating a `docker-registry` type secret and attaching it to the `default` ServiceAccount, or configuring cluster-wide registry authentication.
 {{% /alert %}}
 
-### 3.1 Local registry
+### 3.1 Local Registry
 
-Local, self-hosted registry is supported for non-production use with bring-your-own infrastructure clusters:
+A local, self-hosted, registry is supported for non-production use with bring-your-own infrastructure clusters:
 
 * MicroK8s
 * k3s
 * minikube
 
-To use a local registry, it should be available from Kubernetes pods (for pushing images) and by the cluster itself (for pulling images). In most cases, the push URL and pull URLs will be different.
+To use a local registry, it should be available from Kubernetes pods (for pushing images) and from the cluster itself (for pulling images). In most cases, the push URL and pull URL will be different.
 
-It's possible to have username/password authentication or to push without authentication.
+It is possible to have username/password authentication or to push without authentication.
 
-### 3.2 Externally hosted registry
+### 3.2 Externally Hosted Registry
 
-Externally hosted registries are supported if they allow username/password authentication. For example, this includes:
+Externally hosted registries are supported if they allow username/password authentication. This includes:
 
 * [Docker Hub](https://hub.docker.com/)
 * [quay.io](https://quay.io/)
 * [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/)
 
-When using Azure Container Registry in combination with Azure Combination Service, it's possible to set up [native authentication](https://docs.microsoft.com/en-us/azure/aks/cluster-container-registry-integration#create-a-new-aks-cluster-with-acr-integration) for pulling images from ACR.
+When using Azure Container Registry (ACR) in combination with Azure Combination Service, it is possible to set up [native authentication](https://docs.microsoft.com/en-us/azure/aks/cluster-container-registry-integration#create-a-new-aks-cluster-with-acr-integration) for pulling images from ACR.
 
-### 3.3 OpenShift image registry
+### 3.3 OpenShift Image Registry
 
-The local image registry can be used in an OpenShift cluster. It's not possible to use an OpenShift registry in a non-OpenShift cluster.
+The local image registry can be used in an OpenShift cluster. It is not possible to use an OpenShift registry in a non-OpenShift cluster.
 
 Image pull authentication will be configured out of the box.
 
@@ -79,30 +79,28 @@ The push URL should be set to `<registry ip>:5000` where `<registry ip>` can be 
 
 The OpenShift registry should be installed and enabled for use.
 
-### 3.4 Amazon Elastic Container Registry
+### 3.4 Amazon Elastic Container Registry(ECR)
 
-[Amazon ECR](https://aws.amazon.com/ecr/) can only be used together with EKS clusters. 
+[Amazon ECR](https://aws.amazon.com/ecr/) can only be used together with Elastic Kubernetes Service (EKS) clusters. 
 
-To use an ECR registry, the Mendix Operator will need an IAM account with permissions to push and pull images.
+To use an ECR registry, the Mendix Operator will need an AWS Identity and Access Management (IAM) account with permissions to push and pull images.
 
 The EKS cluster should be configured so that it can [pull images from ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_EKS.html).
 
 ## 4 Databases
 
-### 4.1 Ephemeral database
+### 4.1 Ephemeral Database
 
 The ephemeral database plan uses an in-memory database running directly in a Mendix Runtime container.
 It doesn't require any external database or provider and is great for quick tests or apps that don't require any file storage.
 
 {{% alert type="info" %}}
 An app using an ephemeral database will lose all data if its environment is stopped or restarted.
+
+An app with an ephemeral database cannot have more than one replica. Only the first (master) replica will be able to start.
 {{% /alert %}}
 
-{{% alert type="info" %}}
-An app with an ephemeral database cannot have 2 or more replicas. Only the first (master) replica will be able to start.
-{{% /alert %}}
-
-### 4.2 Standard PostgreSQL database
+### 4.2 Standard PostgreSQL Database
 
 The following standard PostgreSQL databases are confirmed to be supported:
 

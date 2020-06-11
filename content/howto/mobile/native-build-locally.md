@@ -44,7 +44,7 @@ To determine which version of the Native Template you should use, do the followi
 1. Navigate to the [Native Template GitHub repository](github.com/mendix/native-template).
 1. At the root of your project, open the *mendix_version.json* JSON file.
 
-The keys of the dictionary represent the Mendix Studio Pro version, the **min** and **max** values are the the minimum and maximum Native Template versions supported. In the case of Mendix Studio Pro 8.9.x, you could choose any Native Template version from 4.0.0 to the latest. Ideally you should choose the most recent supported version.
+The keys of the dictionary represent the Mendix Studio Pro version. The `min` and `max` values are the the minimum and maximum Native Template versions supported. In the case of Mendix Studio Pro 8.9.x, you could choose any Native Template version from 4.0.0 to the latest. Ideally you should choose the most recent supported version.
 
 {{% image_container width="200" %}}![iOS output](attachments/native-build-locally/mendix-version.png){{% /image_container %}}
 
@@ -92,15 +92,15 @@ For bundling your resources, the Native Builder supports an offline command that
 
    {{% image_container width="250" %}}![iOS output](attachments/native-build-locally/ios-output.png){{% /image_container %}}
 
-1. Move the folder's content to `{your Native Template root}/ios/Bundle`.
+1. Move the folder's content to *{your Native Template root}/ios/Bundle*.
 1. Unzip the Android binary. The folder structure should be the following:
 
    {{% image_container width="250" %}}![iOS output](attachments/native-build-locally/android-output.png){{% /image_container %}}
 
-1. Move the folder's content to `{your Native Template root}/android/app/src/main`. Choose to ovewrite if requested to do so.
-1. Open `{your Native Template root}/android/app/src/main/res/raw/runtime_url` using a text editor.
+1. Move the folder's content to *{your Native Template root}/android/app/src/main*. Choose to ovewrite if requested to do so.
+1. Open *{your Native Template root}/android/app/src/main/res/raw/runtime_url* using a text editor.
 1. Replace the URL with the correct URL for your runtime.
-1. Open `{your Native Template root}/ios/Config/config.xcconfig`, then replace the value of `RUNTIME_URL=` with the correct URL for your runtime.
+1. Open *{your Native Template root}/ios/Config/config.xcconfig*, then replace the value of `RUNTIME_URL=` with the correct URL for your runtime.
 
 Now you have completed the basic setup of the Native Template with the latest bundle and assets of your Mendix project. 
 
@@ -134,14 +134,14 @@ To remove dependencies which do not support auto-linking, do the following:
 
 1. Remove the dependency's entry from the *package.json* file.
 1. Remove the dependency's entry from the *ios/Podfile* file.
-1. Remove the dependency's `include` and `project` entries from the `android/setting.gradle`. For example, to remove the Firebase module remove the following: 
+1. Remove the dependency's `include` and `project` entries from the *android/setting.gradle*. For example, to remove the Firebase module remove the following: 
 
    ```
    include ':react-native-firebase' 
    project(':react-native-firebase').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-firebase/android')
    ```
 
-1. Remove the dependency's `implementation` entry in the `android/app/build.gradle`. For example, to remove the Firebase module remove the following:
+1. Remove the dependency's `implementation` entry in the *android/app/build.gradle*. For example, to remove the Firebase module remove the following:
 
    ```
     implementation project(":react-native-firebase")

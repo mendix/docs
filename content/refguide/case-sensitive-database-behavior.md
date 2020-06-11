@@ -82,7 +82,7 @@ This table presents the default case sensitivity by different database types:
 | DB2               | S              | S¹          | S                    |
 | MARIADB & MYSQL   | C              | C           | C                    |
 | ORACLE            | C¹             | C           | I                    |
-| SAP HANA          | S¹             | S¹          | I                    |
+| SAP HANA          | S¹             | S¹          | I²                    |
 | SQL SERVER        | C              | C           | C                    |
 
 Where the letters have the following meaning:
@@ -92,3 +92,4 @@ Where the letters have the following meaning:
 * **I** – Case insensitive
 
 ¹Operation not supported on strings of unlimited length.
+²From Mendix version 8.11.0

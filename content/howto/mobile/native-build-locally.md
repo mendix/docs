@@ -34,7 +34,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 The Native Template is the base for building native mobile apps with Mendix. In essence, it is a React Native template with the extra dependencies and configurations required to run your Mendix app.
 
-The Native Template is versioned against Mendix Studio Pro. This means the Studio Pro version you use to create your Mendix app dictates which version of Native Template you should use. When using the Native Builder this is handled internally using the `--mendix-version` flag.
+The Native Template is versioned against Mendix Studio Pro. This means the Studio Pro version you use to create your Mendix app dictates which version of the Native Template you should use. When using the Native Builder this is handled internally using the `--mendix-version` flag.
 
 #### 3.1 Determine Which Native Template Version to Use
 

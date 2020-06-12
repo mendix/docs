@@ -17,7 +17,7 @@ This document covers which providers and services are officially supported by th
 
 We currently support deploying to the following Kubernetes cluster types:
 
-* [Amazon Elastic Kubernetes Service](https://aws.amazon.com/eks/)
+* [Amazon Elastic Kubernetes Service](https://aws.amazon.com/eks/) (EKS)
 * [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/)
 * [Red Hat OpenShift Container Platform](https://www.openshift.com/) (versions 4 and 3.11)
 * [MicroK8s](https://microk8s.io/)
@@ -26,14 +26,15 @@ We currently support deploying to the following Kubernetes cluster types:
 
 ### 2.2 Cluster Requirements
 
-To install the Mendix Operator, the cluster administrator will need permissions to
+To install the Mendix Operator, the cluster administrator will need permissions to do the following:
+
 * Create Custom Resource Definitions
 * Create roles in the target namespace or project
 * Create role bindings in the target namespace or project
 
-The cluster should have at least 2 CPUs and 2 GB memory available; this is enough to run one simple app.
+The cluster should have at least 2 CPUs and 2 GB memory available. This is enough to run one simple app.
 
-In OpenShift, this requires the cluster administrator to have a `system:admin` role.
+In OpenShift, the cluster administrator must have a `system:admin` role.
 
 ### 2.3 Unsupported Cluster Types
 
@@ -43,18 +44,19 @@ It is not possible to use Mendix for Private Cloud in [OpenShift Online](https:/
 
 {{% alert type="info" %}}
 The cluster should be configured to be able to pull images from the registry.
+
 If the registry requires authentication, this can be done by creating a `docker-registry` type secret and attaching it to the `default` ServiceAccount, or configuring cluster-wide registry authentication.
 {{% /alert %}}
 
 ### 3.1 Local Registry
 
-A local, self-hosted, registry is supported for non-production use with bring-your-own infrastructure clusters:
+A local, self-hosted, registry is supported for non-production use with the following bring-your-own infrastructure clusters:
 
 * MicroK8s
 * k3s
 * minikube
 
-To use a local registry, it should be available from Kubernetes pods (for pushing images) and from the cluster itself (for pulling images). In most cases, the push URL and pull URL will be different.
+To use a local registry, it must be available from Kubernetes pods (for pushing images) and from the cluster itself (for pulling images). In most cases, the push URL and pull URL will be different.
 
 It is possible to have username/password authentication or to push without authentication.
 
@@ -64,9 +66,9 @@ Externally hosted registries are supported if they allow username/password authe
 
 * [Docker Hub](https://hub.docker.com/)
 * [quay.io](https://quay.io/)
-* [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/)
+* [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/) (ACR)
 
-When using Azure Container Registry (ACR) in combination with Azure Combination Service, it is possible to set up [native authentication](https://docs.microsoft.com/en-us/azure/aks/cluster-container-registry-integration#create-a-new-aks-cluster-with-acr-integration) for pulling images from ACR.
+When using ACR in combination with Azure Combination Service, it is possible to set up [native authentication](https://docs.microsoft.com/en-us/azure/aks/cluster-container-registry-integration#create-a-new-aks-cluster-with-acr-integration) for pulling images from ACR.
 
 ### 3.3 OpenShift Image Registry
 
@@ -77,11 +79,11 @@ Image pull authentication will be configured out of the box.
 For an OpenShift 3 registry, the pull URL should be set to `docker-registry.default.svc:5000`.
 The push URL should be set to `<registry ip>:5000` where `<registry ip>` can be obtained by running `oc get svc docker-registry -n default`.
 
-The OpenShift registry should be installed and enabled for use.
+The OpenShift registry must be installed and enabled for use.
 
 ### 3.4 Amazon Elastic Container Registry(ECR)
 
-[Amazon ECR](https://aws.amazon.com/ecr/) can only be used together with Elastic Kubernetes Service (EKS) clusters. 
+[Amazon ECR](https://aws.amazon.com/ecr/) can only be used together with EKS clusters. 
 
 To use an ECR registry, the Mendix Operator will need an AWS Identity and Access Management (IAM) account with permissions to push and pull images.
 
@@ -102,7 +104,7 @@ An app with an ephemeral database cannot have more than one replica. Only the fi
 
 ### 4.2 Standard PostgreSQL Database
 
-The following standard PostgreSQL databases are confirmed to be supported:
+The following standard PostgreSQL databases are supported:
 
 * PostgreSQL 9.6
 * PostgreSQL 10
@@ -116,7 +118,7 @@ The following managed PostgreSQL databases are supported:
 
 Amazon PostgreSQL instances require additional firewall configuration to allow connections from the Kubernetes cluster.
 
-Some managed Postgres databases might have restrictions or require additional configuration.
+Some managed PostgreSQL databases might have restrictions or require additional configuration.
 
 [Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/services/postgresql/) is not supported at the moment.
 
@@ -132,7 +134,7 @@ These features are currently not supported:
 
 ### 4.3 Microsoft SQL Server
 
-The following Microsoft SQL Server editions are confirmed to be supported:
+The following Microsoft SQL Server editions are supported:
 
 * SQL Server 2017
 
@@ -164,7 +166,7 @@ An app using an ephemeral file storage will lose all files if its environment is
 
 ### 5.2 MinIO
 
-The latest version of [MinIO](https://min.io/) is supported if it's running in server mode.
+The latest version of [MinIO](https://min.io/) is supported if it is running in server mode.
 
 {{% alert type="info" %}}
 An admin account is required with permissions to create and delete users, policies and buckets.
@@ -181,7 +183,7 @@ MinIO Gateway is not supported since running MinIO in gateway mode disables the 
 [Amazon S3](https://aws.amazon.com/s3/) is supported.
 
 {{% alert type="info" %}}
-For every Mendix app environment, a new bucket, IAM user and inline policy will be created so that the app can only access its bucket.
+For every Mendix app environment, a new bucket, IAM user and inline policy will be created so that the app can only access its own bucket.
 {{% /alert %}}
 
 To use S3, the Mendix Operator will need an IAM account with the following policy so that it can create a new IAM user and bucket for each Mendix app environment:
@@ -243,10 +245,10 @@ We currently support the following ingress controllers:
 * [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/)
 * [Traefik 1.7](https://containo.us/traefik/)
 
-For ingress, it's possible to configure the following:
+For ingress, it is possible to do the following:
 * Turn TLS on and off
 * Provide a domain name (e.g. mendix.example.com)
-* Ingress annotations
+* Add ingress annotations
 
 For each environment, the URL will be automatically generated based on the domain name.
 For example, if the domain name is set to mendix.example.com, then apps will have URLs such as myapp1-dev.mendix.example.com, myapp1-prod.mendix.example.com and so on.

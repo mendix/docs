@@ -13,28 +13,27 @@ This how-to leads you step-by-step through the process of packaging your Mendix 
 
 You require the following before you can build hybrid mobile packages of your apps:
 
-*   A Mendix App with mobile support running in the Mendix Cloud, either in a Free App or on a licensed cloud node.
+*   A Mendix App with mobile support running in the Mendix Cloud, either in a free app or on a licensed cloud node.
 *   An account for Adobe PhoneGap Build. [Create one for free here](https://build.phonegap.com/plans/free-adobeid).
 *   An iOS device (iPhone or iPad) so that you can test the produced iOS package.
-
 *   An iOS deployment certificate for which your test device is activated. You need both a ".p12" certificate file and a ".mobileprovision" profile file.   [Find out how to obtain app signing keys](/refguide6/managing-app-signing-keys) .
 *   Apple iTunes installed on your computer, so that you can deploy the produced iOS package on your test device.
 
 ## 2\. Starting the packaging process
 
-Before starting, make sure you have a Mendix App with mobile support enabled running in the Mendix Cloud, either in a Free App or in a licensed cloud node.
+Before starting, make sure you have a Mendix App with mobile support enabled running in the Mendix Cloud, either in a free app or in a licensed cloud node. If you require an app to test with, set up the [Event App](https://appstore.home.mendix.com/link/app/36793/) from the Mendix App Store as a free app to try out its mobile features.
 
 First, open the "Publish for Mobile App Stores" page in the Mendix Developer Portal:
 
 1. Open the Mendix Developer Portal.
 2. Go to the project of the Mendix App that you want to publish.
-3.  Go to the **Publish** tab.
+3. Go to the **Publish** tab.
 4. Click **Publish for Mobile App Stores**.
 
     You are shown the "Publish App for Mobile App Stores" page. Here, you need to set up some options for your hybrid mobile app:
 5. Use the **Edit** button on the **App Info** tab to set up the correct settings for your app:
-    * Fill in the name that your app will have in the App Stores and on the device, (for example, "Company Expenses")
-    * Set the unique "App Identifier" for your app, (for example, "com.example.CompanyExpenses")
+    * Fill in the name that your app will have in the App Stores and on the device
+    * Set the unique "App Identifier" for your app, (for example, "com.example.{YourAppName}")
 
     Both the name and the app identifier should correspond to the ones you have set up in your Apple certificate.
 6. Select the platforms that you want to support in the right sidebar. This how-to assumes that you choose at least iOS.

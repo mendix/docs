@@ -41,7 +41,7 @@ The debugger supports only debugging of single-instance environments. Multi-inst
 
 #### 3.1.1 Obtain Debugging Credentials from Mendix cloud
 
-Normally when your application is in the Mendix cloud:
+When your application is in the Mendix cloud:
 
 1. Open your app in the [Developer Portal](https://home.mendix.com).
 
@@ -71,9 +71,9 @@ If your application is on the SAP S/4 HANA cloud, you will need to set the passw
 
 3. Click on the button 'Add variable' and add 'DEBUGGER_PASSWORD' and the password. Both are case-sensitive.
 
-4. Restart your application.
+    ![SAP Cockpit showing user-provided variables](attachments/debug-microflows-remotely/debugger-settings-saps4hana.png)
 
-   ![](attachments/debug-microflows-remotely/debugger-settings-saps4hana.png)
+4. Restart your application.
 
 ### 3.2 How to Enable Cloud Debugging in Studio Pro
 

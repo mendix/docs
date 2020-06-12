@@ -223,7 +223,7 @@ To use S3, the Mendix Operator will need an IAM account with the following polic
 ## 6 Networking
 
 {{% alert type="info" %}}
-DNS, load balancing and the ingress controller should be configured separately, on a cluster-wide scope.
+DNS, load balancing and the ingress controller should be configured first for the whole Kubernetes cluster.
 Mendix for Private Cloud will use the existing ingress controller.
 {{% /alert %}}
 

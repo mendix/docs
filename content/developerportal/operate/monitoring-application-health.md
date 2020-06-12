@@ -114,6 +114,14 @@ Warning Threshold | Not used.
 Critical Threshold | Database has less than 20% freeable memory.
 First actions to take | Inspect the trends for **Database Node Operating System Memory** for anomalies and correlate those with application behaviour. Resolve by either stopping a runaway process or ordering more memory.
 
+Database IOPS Burst Balance | |
+:---|:---|
+Description | Track the available IOPS burst balance credit for the database belonging to the application.
+Example message | Database has 10% IOPS burst balance.
+Warning Threshold | Not used.
+Critical Threshold | Database has 20% IOPS burst balance.
+First actions to take | Inspect the trends for **Database IOPS Burst Balance** for anomalies and correlate those with application behaviour.
+
 Health Check | |
 :---|:---|
 Description | Each application can define a health check microflow. This microflow is called every 10 seconds by the Mendix Runtime to determine if the application is still healthy. This can be used to check for application-specific health indicators.

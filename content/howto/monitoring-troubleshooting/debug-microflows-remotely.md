@@ -67,7 +67,7 @@ If your application is on the SAP S/4 HANA cloud, you will need to set the passw
 
 1. Log in to the SAP Cockpit and go to your application's settings page.
 
-2. Go to your application -> Security -> User-Provided Variables
+2. Go to your application -> User-Provided Variables
 
 3. Click on the button 'Add variable' and add 'DEBUGGER_PASSWORD' and the password. Both are case-sensitive.
 

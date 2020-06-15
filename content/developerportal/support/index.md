@@ -86,8 +86,9 @@ Mendix supports the current major release and the two prior major releases (and 
 
 With our Multi-Cloud strategy, Mendix allows the apps that you build to be deployed in any Cloud. This can be in the [Mendix Public Cloud](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy), Mendix Dedicated Cloud, [Mendix Private Cloud](https://docs.mendix.com/developerportal/deploy/private-cloud), [SAP Cloud Platform](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform) and also in other on-premises and Cloud architectures. 
 
-The full stack is depicted below where components can be Mendix supported, not supported by Mendix (customer’s component) or supported by a Mendix Partner/3rd party. 
+The full stack is depicted below where components can be Mendix supported, not supported by Mendix (customer’s component) or supported by a Mendix Partner/3rd party.
 
+<!-- TABLE BELOW CONVERTED TO HTML SO THAT FIRST COLUMN CAN BE WIDER
 | | Public Cloud | Cloud Dedi&shy;cated | Private Cloud - Con&shy;nected | Private Cloud - Stand&shy;alone | SAP Cloud Platform | Cloud Foundry/ Docker & Kuber&shy;netes | Tradi&shy;tional |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Appli&shy;cation** | | | | | | | |
@@ -101,6 +102,147 @@ The full stack is depicted below where components can be Mendix supported, not s
 | **Contain&shy;er Platform/ OS/ Java/ Web Server** | Mendix | Mendix | | | Mendix Partner | | |
 | **Infra&shy;structure** | Mendix | Mendix | | | Mendix Partner | | |
 | **Database/ File Storage/ Network** | Mendix | Mendix | | | Mendix Partner | | |
+-->
+
+<table>
+<thead>
+<tr>
+<!-- Width added to first column -->
+<th class="has-expand" width=25%><div class="expand-table"><i class="glyphicon glyphicon-fullscreen"></i></div></th>
+<th>Public Cloud</th>
+<th>Cloud Dedi­cated</th>
+<th>Private Cloud - Con­nected</th>
+<th>Private Cloud - Stand­alone</th>
+<th>SAP Cloud Plat&shy;form</th>
+<th>Cloud Foundry/ Docker &amp; Kuber­netes</th>
+<th>Tradi­tional</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>Appli­cation</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><strong>Platform Support­ed App Store content</strong></td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td>Mendix</td>
+</tr>
+
+<tr>
+<td><strong>Commun­ity Support­ed App Store content</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><strong>Runtime</strong></td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td>Mendix</td>
+</tr>
+
+<tr>
+<td><strong>Deploy­ment Pipe­line</strong></td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><strong>Logs/ Metrics</strong></td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td></td>
+<td></td>
+<td>Mendix Partner</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><strong>Appli­cation Opera­tion</strong></td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><strong>Buildpack</strong></td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td>Mendix</td>
+</tr>
+
+<tr>
+<td><strong>Contain­er Platform/ OS/ Java/ Web Server</strong></td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td></td>
+<td></td>
+<td>Mendix Partner</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><strong>Infra­structure</strong></td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td></td>
+<td></td>
+<td>Mendix Partner</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><strong>Database/ File Storage/ Network</strong></td>
+<td>Mendix</td>
+<td>Mendix</td>
+<td></td>
+<td></td>
+<td>Mendix Partner</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 
 ### 9.1 Mendix Public and Dedicated Cloud
 The Mendix Public and Dedicated Cloud are an integrated part of the Mendix Platform and are therefore fully supported as described in the SLA. 

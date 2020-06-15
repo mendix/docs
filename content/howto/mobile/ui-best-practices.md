@@ -33,7 +33,7 @@ Which roles and staff make up your development team depends on the type of apps 
 In apps where custom UX or UI is more important (for example B2C and B2B apps) the following combinations are often employed:
 
 * **UI design + UX design** — This configuration is often used if an in-house UX team is used or a design agency is hired.
-* **UI design + UX design + Front-end development** — UX or UI experts that also have the skills to implement their designs and UX are key for this configuration (for example, several people in Mendix Expert Services are of these type).
+* **UI design + UX design + Front-end development** — UX or UI experts that also have the skills to implement their designs and UX are key for this configuration. For example, several people in Mendix Expert Services are of these type.
 * **Mendix development + Front-end development** — A Mendix developer who knows how to implement styling, but does have to the skills to create the design.
 
 ## 3 Process
@@ -52,11 +52,11 @@ This UI kit will be the input for creating the Mendix theme and related componen
 
 ### 3.2 Translate the UI Kit to Mendix Theme and Components
 
-The front-end developer can translate the UI kit to a Mendix theme and standard layouts, as well as building blocks, and page templates.
+The front-end developer can translate the UI kit to a Mendix theme and standard layouts, as well as building blocks and page templates.
 
 #### 3.2.1 Set Up Main Theme Settings
 
-The goal of configuring the theme setting is to create a quickly implement the look and feel of your app or company branding. Mendix comes ready with a highly configurable theme which gives you a head start in creating your app's overall look and feel. Configuring the theme settings inside your app's *theme/styles/native/app/custom-variables.js* file.
+The goal of configuring the theme setting is to quickly implement the look and feel of your app or company branding. Mendix comes ready with a highly-configurable theme which gives you a head start in creating your app's overall look and feel. Configuring the theme settings inside your app's *theme/styles/native/app/custom-variables.js* file.
 
 #### 3.2.2 Configure Design Properties {#configure-design-props}
 
@@ -64,7 +64,7 @@ The goal of design properties is to enable developers to implement design withou
 
 By default Mendix has a default set of design properties which enable developers to build pages with several options. We advise you to change, add, or remove design properties according to your variations in the UI kit.
 
-For example, Mendix offers a set of button variants (default, secondary, warning, success, and danger). However, during your design you can choose to just have a default and a secondary variant. Choices like this are a part of UI design. It is up to people in UI and front-end design roles to determine how much freedom a Mendix developer should have.
+For example, Mendix offers a set of button variants (default, secondary, warning, success, and danger). However, during your design process you can choose to just have a default and a secondary variant. Choices like this are a part of UI design. It is up to people in UI and front-end design roles to determine how much freedom a Mendix developer should have.
 
 The design properties are located in *theme/settings-native.json*, and more information be found in the [Design Properties API Documentation](/apidocs-mxsdk/apidocs/design-properties).
 
@@ -74,7 +74,7 @@ The default Atlas theme comes pre-bundled with a set of layouts. If these do not
 
 #### 3.2.4 Create Building Blocks for Common UI Structures
 
-Apps often have multiple instances of patterns on pages or more complex UI patterns. For these cases it is useful to create building blocks so that Mendix developers can easily apply common patterns. In building blocks, you can use custom class names in order to be more specific. For that properties that developers should be able to change in building blocks, use design properties as much as possible.
+Apps often have multiple instances of patterns on pages or more complex UI patterns. For these cases it is useful to create building blocks so that other Mendix developers can easily apply common patterns. In building blocks, you can use custom class names in order to be more specific. For that properties that developers should be able to change in building blocks, use design properties as much as possible.
 
 #### 3.2.5 Create Page Templates for Common Page Structures**
 
@@ -100,7 +100,7 @@ Try to avoid custom styling. Instead, use the available design properties as muc
 
 ### 4.2 Plan to Reuse as Much as Possible
 
-A common pitfall is to start directly implementing directly from designs without thinking about reuse. While implementing directly can make sense for small apps, this practice risks creating several custom classes, spawning more variations of components which can slow down development, and can create significant technical debt.
+A common pitfall is to start directly implementing directly from designs without thinking about reuse. While implementing directly can make sense for small apps, this practice risks creating several custom classes, spawning more variations of components which can slow down development, and creating significant technical debt.
 
 Try to avoid very specific class names. Very specific class names are often only used once, although the styles are probably used at least a few times. Combine and rewrite classes where possible. This will keep the theme clean and simple, and makes it easier to create design properties and enable Mendix developers.
 
@@ -120,7 +120,7 @@ The default Mendix theme is a complete theme which serves as a good source of ex
 
 ### 4.6 Keep Styling Maintainable
 
-It is an common pitfall to keep adding classes to a single file. However, this will make the file more difficult to maintain. Here some best practices for keeping styling maintainable:
+It is a common pitfall to keep adding classes to a single file. However, this will make the file more difficult to maintain. Here some best practices for keeping styling maintainable:
 
 * Apply clear, descriptive, and consistent names in styling — add comments when needed
 * Use variables as much as possible for consistency and easy updating

@@ -78,7 +78,7 @@ If you do further development later on, you will need to remember to change back
 
 ## 5 Translating an Individual Piece of Text
 
-Now that your current language is Russian, you can translate some of the texts into that language
+Now that your current language is Russian, you can translate some of the texts into that language.
 
 1. Open the **Home_Web** page in Studio Pro.
 
@@ -127,7 +127,7 @@ Follow the steps below to see how to deal with this situation.
 2. Type *Order* in the **Source text contains** field.
 3. Click the translatable text `Order`. You can see that there are three places that this text is used, and they are listed at the bottom of the dialog box.
 	![All source texts containing the word 'order' with the locations of the text 'order' shown](attachments/translate-your-app-content/batch-translate-order.png)
-	One of the locations of the text `Order` is an action button on the Product_NewEdit page. This was the button we added above whose purpose is to allow the end-user to order the product.
+	One of the locations of the text `Order` is an action button on the **Product_NewEdit** page. This was the button we added above whose purpose is to allow the end-user to order the product.
 4. Double-click on the **Action button …** object to confirm that this is the button we were planning to use to order the product.
 	![Order button on Product New Edit page](attachments/translate-your-app-content/product-new-edit-order.png)
 

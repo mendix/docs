@@ -87,7 +87,7 @@ Mendix supports the current major release and the two prior major releases (and 
 
 ## 9 Support for Different Deployment Strategies{#support-by-strategy}
 
-With our Multi-Cloud strategy, Mendix allows the apps that you build to be deployed in any Cloud. This can be in the [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy), Mendix Dedicated Cloud, [Mendix Private Cloud](developerportal/deploy/private-cloud), [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform), or in other on-premises and Cloud architectures.
+With our Multi-Cloud strategy, Mendix allows the apps that you build to be deployed in any Cloud. This can be in the [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy), Mendix Dedicated Cloud, [Mendix Private Cloud](/developerportal/deploy/private-cloud), [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform), or in other on-premises and Cloud architectures.
 
 The full stack is depicted in the table below. This indicates which components are **Mendix** supported, or supported by a **Mendix Partner** or 3rd party. If no support is indicated, then you will need to arrange support of this component yourself. Each of the components is described in more detail in [Components of the Mendix Stack](#components), below.
 

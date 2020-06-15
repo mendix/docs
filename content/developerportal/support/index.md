@@ -1,6 +1,6 @@
 ---
 title: "Mendix Support"
-description: "Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed"
+description: ""
 tags: ["Support", "SLA", "Gold", "Platinum"]
 ---
 

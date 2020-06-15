@@ -8,7 +8,7 @@ tags: ["ux", "native", "mobile", "ui"]
 
 ## 1 Introduction
 
-This document discusses how Mendix Platform users can build a native mobile app's UI. Other topics like testing and distributing are not discussed here. The guidelines in this document are general advice and can be adjusted to better suit use cases and specific situations.
+This document discusses how Mendix Platform users can build a native mobile app's user interface (UI). Other topics like testing and distributing are not discussed here. The guidelines in this document are a general advice and can be adjusted to better suit use cases and specific situations.
 
 ## 2 Roles
 
@@ -33,8 +33,8 @@ Which roles and staff make up your development team depends on the type of apps 
 In apps where custom UX or UI is more important (for example B2C and B2B apps) the following combinations are often employed:
 
 * **UI design + UX design** — This configuration is often used if an in-house UX team is used or a design agency is hired.
-* **UI design + UX design + Front-end development** — UX or UI experts that also have the skills to implement their designs and UX are key for this configuration. For example, several people in Mendix Expert Services are of these type.
-* **Mendix development + Front-end development** — This configuration is common when there is a Mendix developer who knows how to implement styling, but does not have to the skills to create the design.
+* **UI design + UX design + Front-end development** — UX or UI experts that also have the skills to implement their designs and UX are key for this configuration (for example, several people in Mendix Expert Services are of these type).
+* **Mendix development + Front-end development** — A Mendix developer who knows how to implement styling, but does have to the skills to create the design.
 
 ## 3 Process
 
@@ -46,7 +46,7 @@ To learn about building a Mendix native mobile app's UI, consult the sections be
 
 ### 3.1 Create App Designs Using a UI Kit
 
-By designing a set of re-usable components including variations, a UI Designer can create a UI kit that can be used to design pages. This includes settings like the brand colors, typography, spacing settings, and the UI components (for example buttons and inputs) including variations. Designers frequently use the [Sketch](https://www.sketch.com/) tool to complete these tasks with satisfying results.
+By designing a set of re-usable components including variations, a UI designer can create a UI kit that can be used to design pages. This includes settings like the brand colors, typography, spacing settings, and the UI components (for example buttons and inputs) including variations. Designers frequently use the [Sketch](https://www.sketch.com/) tool to complete these tasks with satisfying results.
 
 This UI kit will be the input for creating the Mendix theme and related components. Therefore it helps to have Mendix and front-end knowledge to align what is available already in Mendix and what is needed for the designs..
 
@@ -62,7 +62,7 @@ The goal of configuring the theme setting is to create a quickly implement the l
 
 The goal of design properties is to enable developers to implement design without having to know custom class names or write custom styling. This is a very important step in enabling developers.
 
-By default Mendix has a default set of design properties which enable developers to build pages with several options.We advise you to change, add, or remove design properties according to your variations in the UI Kit.
+By default Mendix has a default set of design properties which enable developers to build pages with several options.We advise you to change, add, or remove design properties according to your variations in the UI kit.
 
 For example, Mendix offers a set of button variants (default, secondary, warning, success, and danger). However, during your design you can choose to just have a default and a secondary variant. Choices like this are a part of UI design. It is up to people in UI and front-end design roles to determine how much freedom a Mendix developer should have.
 
@@ -82,7 +82,7 @@ Similar to buildings blocks, developers can create standard page templates so th
 
 ### 3.3 Implement Your UI Using Theme and Content
 
-A Mendix developer can build an app's interface based on that app's theme, design properties, layouts, building block, and page templates. When missing capabilities make it difficult to build the pages as designed, it is good to iterate on the UI Kit, theme, or available content. In certain cases it can be good to apply specific styling as explained in the next section.
+A Mendix developer can build an app's interface based on that app's theme, design properties, layouts, building block, and page templates. When missing capabilities make it difficult to build the pages as designed, it is good to iterate on the UI kit, theme, or available content. In certain cases it can be good to apply specific styling as explained in the next section.
 
 ### 3.4 Implement App or Use-Case Specific Styling
 

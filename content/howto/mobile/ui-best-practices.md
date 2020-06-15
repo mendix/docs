@@ -46,7 +46,7 @@ To learn about building a Mendix native mobile app's UI, consult the sections be
 
 ### 3.1 Create App Designs Using a UI Kit
 
-By designing a set of re-usable components including variations, a UI designer can create a UI kit that can be used to design pages. This includes settings like the brand colors, typography, spacing settings, and the UI components (for example buttons and inputs) including variations. Designers frequently use the [Sketch](https://www.sketch.com/) tool to complete these tasks with satisfying results.
+By designing a set of reusable components including variations, a UI designer can create a UI kit that can be used to design pages. This includes settings like the brand colors, typography, spacing settings, and the UI components (for example buttons and inputs) including variations. Designers frequently use the [Sketch](https://www.sketch.com/) tool to complete these tasks with satisfying results.
 
 This UI kit will be the input for creating the Mendix theme and related components. Therefore it helps to have Mendix and front-end knowledge to align what is available already in Mendix and what is needed for the designs..
 
@@ -62,7 +62,7 @@ The goal of configuring the theme setting is to create a quickly implement the l
 
 The goal of design properties is to enable developers to implement design without having to know custom class names or write custom styling. This is a very important step in enabling developers.
 
-By default Mendix has a default set of design properties which enable developers to build pages with several options.We advise you to change, add, or remove design properties according to your variations in the UI kit.
+By default Mendix has a default set of design properties which enable developers to build pages with several options. We advise you to change, add, or remove design properties according to your variations in the UI kit.
 
 For example, Mendix offers a set of button variants (default, secondary, warning, success, and danger). However, during your design you can choose to just have a default and a secondary variant. Choices like this are a part of UI design. It is up to people in UI and front-end design roles to determine how much freedom a Mendix developer should have.
 
@@ -74,7 +74,7 @@ The default Atlas theme comes pre-bundled with a set of layouts. If these do not
 
 #### 3.2.4 Create Building Blocks for Common UI Structures
 
-Apps often have reoccurring patterns on pages or more complex UI patterns. For these cases it is useful to create building blocks so that Mendix developers can easily apply reoccuring patterns. In building blocks, you can use custom class names in order to be more specific. For that properties that developers should be able to change in building blocks, use design properties as much as possible.
+Apps often have multiple instances of patterns on pages or more complex UI patterns. For these cases it is useful to create building blocks so that Mendix developers can easily apply common patterns. In building blocks, you can use custom class names in order to be more specific. For that properties that developers should be able to change in building blocks, use design properties as much as possible.
 
 #### 3.2.5 Create Page Templates for Common Page Structures**
 
@@ -106,7 +106,7 @@ Try to avoid very specific class names. Very specific class names are often only
 
 ### 4.3 Never Change Something in the Core Folder
 
-By changing styling in the **core** folder you risk incurring errors the next time you update update Atlas. Updating Atlas might also be more difficult. 
+By changing styling in the **core** folder you risk incurring errors the next time you update Atlas. Updating Atlas might also be more difficult. 
 
 A large part of your app's overall styling can be changed in `theme/styles/native/app/custom-variables.js`. However, if more changes are needed you could extend a widget’s default styling or define the default styling yourself. For more information, see [How to Extend Design Properties to Customize Your Studio Experience](/howto/front-end/extend-design-properties-to-customize).
 

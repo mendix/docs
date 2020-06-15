@@ -1,6 +1,6 @@
 ---
 title: "Implement Best Practices for UX Design"
-parent: "ux-ui-best-practices"
+category: "Front-End"
 menu_order: 10
 tags: ["ux", "ui", "ux designer", "user experience", "design", "menu", "button", "typography", "card", "Front-End"]
 ---

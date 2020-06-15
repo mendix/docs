@@ -112,7 +112,7 @@ A large part of your app's overall styling can be changed in `theme/styles/nativ
 
 ### 4.4 Favor Design Properties Over Including Properties
 
-Avoid including properties which can be set with design properties. By being careful with your properties, your apps will be easier for other developers to understand and change. For example, if you make a certain element always have a margin there is a change that this will not fit in certain designs. However, a the developer could easily set a margin using design properties. One particularly useful approach is providing a default spacing this will cover 90% of cases, and give the developer the option to overwrite it using design properties. [todo: note to self, check this section against Paper. I made a lot of changes.]()
+Avoid including properties which can be set with design properties. By being careful with your properties, your apps will be easier for other developers to understand and change. For example, if you make a certain element always have a margin there is a chance that this will not fit in certain designs. However, a developer could easily set a margin using design properties. One particularly useful approach is providing a default spacing this will cover 90% of cases, and give the developer the option to overwrite it using design properties. [todo: note to self, check this section against Paper. I made a lot of changes.]()
 
 ### 4.5 Study the Core Styling 
 

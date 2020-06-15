@@ -73,11 +73,13 @@ Click **More** to access the following options::
 * **Completed Sprints** – opens a page where completed sprints are archived; for details, see the [Completed Sprints](#completed-sprints) section below
 * **History** – opens the **Project History** page; for details, see the [History](#history) section below
 
-### 2.3.1 Importing & Exporting to Excel {#import-export}
+#### 2.3.1 Importing & Exporting to Excel {#import-export}
 
 After you click **Import / Export**, you will be asked what you want to do:
 
+{{% image_container width="400" %}}
 ![](attachments/stories/import-export.png)
+{{% /image_container %}}
 
 In Mendix, you can export stories from your app project at any time. If you select **Export a single sprint to Excel**, you can select just the stories in one Sprint and export these to Excel to work on.
 
@@ -88,10 +90,10 @@ If you select **Updates stories from Excel**, you can use an an Excel sheet from
 When editing stories in Excel, follow these guidelines:
 
 * To add a new story or task,  add a new line on the correct position and enter the item's name
-* To reorder an item, adjust the depth by adding or removing the plus signs (make sure they stay consistent with every item being the same or 1 level deeper than the item above it)
+* To reorder an item, adjust the depth by adding or removing the plus signs (make sure they stay consistent with every item being the same or one level deeper than the item above it)
 * To remove an item, replace its depth with a single minus sign (make sure that any tasks associated with it are either moved or are also removed)
 
-### 2.3.1 Managing Labels {#managing-labels}
+#### 2.3.2 Managing Labels {#managing-labels}
 
 The **Manage labels** page is where you can add or remove your labels:
 
@@ -106,7 +108,7 @@ The following buttons are available:
 * **Merge Label** – enables merging the selected label into another label.<br/>All stories which have the selected label are labeled with the other label and the selected label is deleted.
 * **Remove Label** – enables removing the selected label from any stories to which it has been applied.<br/>The label is then deleted.
 
-### 2.3.2 Completed Sprints {#completed-sprints}
+#### 2.3.3 Completed Sprints {#completed-sprints}
 
 The **Completed Sprints** page presents an overview of Sprints that have been completed and archived:
 
@@ -122,7 +124,7 @@ The following buttons are available:
 * **Add Story** – enables adding a story to the selected Sprint
 * **Delete** – enables deleting the selected Sprint and its stories
 
-### 2.3.4 History {#history}
+#### 2.3.4 History {#history}
 
 The **Project History** page presents the collaboration actions for the app project. On this page, you can see what change was made, who performed it, and when it occurred.
 
@@ -182,7 +184,7 @@ Also on this page, you can access the following tabs:
 * **Feedback** – here you can see the feedback item linked to the story (for details, see the [Adding a Feedback Item to Your Backlog](feedback#adding) section of *Feedback Management*)
 * **Revisions** –  on this tab, you can see the committed revision of the app project that is linked to the story (which is configured in the [Related stories](/refguide/commit-dialog#stories) tab of the **Commit** dialog box in Studio Pro)
 
-### 4.1.2 Moving a Story {#move-stories}
+### 4.2 Moving a Story {#move-stories}
 
 If you need to reorder stories or move a story to a different Sprint, there are three ways to do this:
 
@@ -204,7 +206,7 @@ If you need to reorder stories or move a story to a different Sprint, there are 
 Moving a story will move the tasks as well.
 {{% /alert %}}
 
-### 4.1.3 Adding a Task to a Story {#adding-task}
+### 4.3 Adding a Task to a Story {#adding-task}
 
 To add a task to a story, access the [story details](#story-details) page and on the **Tasks** tab, click **Add**. This will open the **Edit Task** dialog box:
 

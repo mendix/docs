@@ -182,7 +182,7 @@ To add a new row, do the following:
 
 2. Right-click and select **Insert row above** or **Insert row below**:
 
-   ![Adding a New Row](attachments/container-widgets/adding-row.png)
+    ![Adding a New Row](attachments/container-widgets/adding-row.png)
 
 3. Select a column layout (how many columns should be in a row and what weight columns should have).
 

@@ -2,7 +2,7 @@
 title: "Native Mobile"
 category: "Mobile"
 menu_order: 1
-tags: ["mobile", "native"]
+tags: ["mobile", "native", "iOS", "Android"]
 ---
 
 ## 1 Introduction

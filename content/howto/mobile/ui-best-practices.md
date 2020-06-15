@@ -34,7 +34,7 @@ In apps where custom UX or UI is more important (for example B2C and B2B apps) t
 
 * **UI design + UX design** — This configuration is often used if an in-house UX team is used or a design agency is hired.
 * **UI design + UX design + Front-end development** — UX or UI experts that also have the skills to implement their designs and UX are key for this configuration. For example, several people in Mendix Expert Services are of these type.
-* **Mendix development + Front-end development** — A Mendix developer who knows how to implement styling, but does not have the “feeling” to create something beautiful.
+* **Mendix development + Front-end development** — This configuration is common when there is a Mendix developer who knows how to implement styling, but does not have to the skills to create the design.
 
 ## 3 Process
 
@@ -44,7 +44,7 @@ One could compare building Mendix to building lego. Give a maker a set of generi
 
 To learn about building a Mendix native mobile app's UI, consult the sections below. Be sure to see the [Configure Design Properties](#configure-design-props) section below for key information on implementing design easily.
 
-### 3.1. Create App Designs Using a UI Kit
+### 3.1 Create App Designs Using a UI Kit
 
 By designing a set of re-usable components including variations, a UI Designer can create a UI kit that can be used to design pages. This includes settings like the brand colors, typography, spacing settings, and the UI components (for example buttons and inputs) including variations. Designers frequently use the [Sketch](https://www.sketch.com/) tool to complete these tasks with satisfying results.
 
@@ -78,7 +78,7 @@ Apps often have reoccurring patterns on pages or more complex UI patterns. For t
 
 #### 3.2.5 Create Page Templates for Common Page Structures**
 
-Similar to buildings blocks, you can create standard page templates so that other developers can easily implement a type of page.
+Similar to buildings blocks, developers can create standard page templates so that other developers can easily implement a common type of page.
 
 ### 3.3 Implement Your UI Using Theme and Content
 
@@ -106,7 +106,7 @@ Try to avoid very specific class names. Very specific class names are often only
 
 ### 4.3 Never Change Something in the Core Folder
 
-By changing styling in your app's **core** folder you risk incurring errors the next time you update update Atlas. Updating Atlas might also be more difficult. 
+By changing styling in the **core** folder you risk incurring errors the next time you update update Atlas. Updating Atlas might also be more difficult. 
 
 A large part of your app's overall styling can be changed in `theme/styles/native/app/custom-variables.js`. However, if more changes are needed you could extend a widget’s default styling or define the default styling yourself. For more information, see [How to Extend Design Properties to Customize Your Studio Experience](/howto/front-end/extend-design-properties-to-customize).
 

@@ -10,6 +10,14 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### June 16th, 2020
+
+#### Mendix Cloud **v4**
+
+* We introduced new alerts for Mendix Cloud v4.
+    * Database IOPS Burst Balance, based on the graph [Database Burst Balance](/developerportal/operate/trends-v4#Trends-dbmxdatabaseburstbalance)
+    * Database Freeable Memory, based on the graph [Database Node Operating System Memory](/developerportal/operate/trends-v4#a-name-trends-dbmemory-a-5-5-database-node-operating-system-memory)
+
 ### June 10th, 2020
 
 #### Mendix for Private Cloud — Mendix Gateway Agent v1.1.1

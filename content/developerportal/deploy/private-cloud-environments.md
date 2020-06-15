@@ -8,8 +8,6 @@ tags: ["Environments", "Private Cloud", "Cluster", "Best Practices"]
 
 ## 1 Introduction
 
-{{% todo %}}[Should we mention multiple namespaces per cluster, or leave that until later?]{{% /todo %}}
-
 With Mendix for Private Cloud, you have more control over where the environments you need for your Mendix app are created. You can decide whether a cluster contains one namespace or several, whether a namespace contains one environment or several, and whether those environments are all for the same app, or for several.
 
 ![Example of distributing environments in different clusters](attachments/private-cloud/mx4pc-environments-minimal.png)
@@ -18,7 +16,7 @@ This document discusses the recommended ways of configuring environments for Pri
 
 ## 2 Licensing Overview
 
-Each Namespace you create in your Private Cloud to create environments for Mendix apps requires a copy of the Mendix Operator and (optionally) the Mendix Gateway Agent.
+You need a copy of the Mendix Operator and (optionally) the Mendix Gateway Agent for each Namespace you create in your Private Cloud to create environments for Mendix apps.
 
 Each of these Namespaces will therefore require a license for the Mendix Operator for anything other than limited evaluation purposes. This will have an impact on the cost of different configurations of environments.
 
@@ -58,3 +56,13 @@ There are multiple ways you can do this, depending on your requirements. Example
 * Separate namespaces for each business function
 
 ![Example of fine-grained configuration of environments](attachments/private-cloud/mx4pc-environments-fine-grained.png)
+
+The advantages of this approach are:
+
+* You can set security for each namespace, so you can have separate security for different business functions, or for your test and acceptance namespaces
+* You have better monitoring of the platform resources used by each environment
+
+The disadvantage is:
+
+* Every additional namespace and cluster will have to be managed individually
+* You will need additional Mendix Operator licenses

@@ -40,7 +40,7 @@ In apps where custom UX or UI is more important (for example B2C and B2B apps) t
 
 At Mendix we strongly believe in enabling other developers as they grow to scale and speed up development. In general there are more Mendix developers than UI or UX designers. Therefore, when building a mobile app it is important that a UI or UX designer can enable Mendix developers as much as possible to speed up development.
 
-One could compare building Mendix to building lego. Give a maker a set of generic blocks that can be combined, and they can build anything. If they needed to constantly go to the store to get more blocks, their building would be slow and hampered.
+One could compare building with Mendix to building with toy blocks. Give a maker a set of generic blocks that can be combined, and they can build anything. However if they constantly need to buy new types of specific blocks,  their building would be slow and hampered.
 
 To learn about building a Mendix native mobile app's UI, consult the sections below. Be sure to see the [Configure Design Properties](#configure-design-props) section below for key information on implementing design easily.
 

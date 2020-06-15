@@ -1,7 +1,7 @@
 ---
 title: "Implement Best Practices for Native Mobile App UI"
 parent: "native-mobile"
-menu_order: 44
+menu_order: 45
 description: "This document will teach you how to build a native mobile app's UI."
 tags: ["ux", "native", "mobile", "ui"]
 ---

@@ -104,7 +104,7 @@ Role | Explanation
 ------------ | -------------
 Application Operator | An App Team member who does not actively develop the app, but is responsible for operations on the app's cloud node. 
 Business Engineer | An App Team member who contributes to the development of the app. 
-End-user | A user of the app who should have insight into the backlog but does not actively participate in development (for example, a stakeholder). 
+Guest | A user of the app who should have insight into the backlog but does not actively participate in development (for example, a stakeholder). 
 Product Owner | The product owner of the Scrum team who is responsible for managing the app's backlog.
 Scrum Master | The Scrum Master of the Agile App Team. In addition to contributing to development, the Scrum Master manages all the settings within the app. If you create a new app, you will automatically become the Scrum Master.
 

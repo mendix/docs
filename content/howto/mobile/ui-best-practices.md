@@ -131,4 +131,4 @@ It is an common pitfall to keep adding classes to a single file. However, this w
 ## 5 Read More
 
 * [Native Styling Reference Guide](/refguide/native-styling-refguide)
-* [How to Style Your Mendix Native Mobile App](/howto/mobile/how-to-use-native-styling)
+* [Style Your Mendix Native Mobile App](/howto/mobile/how-to-use-native-styling)

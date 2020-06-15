@@ -61,13 +61,13 @@ When your application is in the Mendix cloud:
 
 You will need to provide these credentials to Studio Pro to connect the debugger to the app running in the cloud.
 
-#### 3.1.2 Obtain Debugging Credentials from SAP S/4 HANA cloud
+#### 3.1.2 Obtain Debugging Credentials from SAP S/4 HANA Cloud
 
 If your application is on the SAP S/4 HANA cloud, you will need to set the password in the SAP Cockpit:
 
 1. Log in to the SAP Cockpit and go to your application's settings page.
 
-2. Go to your application -> User-Provided Variables
+2. Go to your application > User-Provided Variables.
 
 3. Click on the button 'Add variable' and add 'DEBUGGER_PASSWORD' and the password. Both are case-sensitive.
 
@@ -84,7 +84,6 @@ If you do cannot connect the debugger, then you do not have sufficient permissio
 {{% /alert %}}
 
 1. Open the **Connect Debugger** dialog box – you can do this in two ways within Studio Pro:
-
 
     * Go to the **Run** menu and select **Connect Debugger…**:
 

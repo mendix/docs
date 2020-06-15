@@ -55,7 +55,7 @@ Note that these roles are only checked when the microflow is executed from the c
 
 {{% /alert %}}
 
-## 4 Entity Access
+## 4 Entity Access {#entity-access}
 
 **Entity Access** defines for each module role whether users with this role are authorized to **Create**, **Read**, **Write** and/or **Delete** objects of the entity. You can also write an XPath constraint to restrict the set of objects to which the access rule applies.
 

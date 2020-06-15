@@ -26,7 +26,15 @@ The following frameworks are automatically installed (if necessary):
 You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in Studio Pro.
 {{% /alert %}}
 
-### 2.1 TortoiseSVN
+### 2.1 Firewall Settings
+
+Studio Pro needs access to the following URLs in order to work. If your firewall is currently blocking these, you will need to whitelist them.
+
+* `*.mendix.com`
+* `*.mendixcloud.com`
+* `*.teamserver.sprintr.com`
+
+### 2.2 TortoiseSVN
 
 If you want to use TortoiseSVN in combination with Studio Pro, download the latest version from the [TortoiseSVN](https://tortoisesvn.net/) website.
 

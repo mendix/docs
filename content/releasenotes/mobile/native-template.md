@@ -26,14 +26,14 @@ For more information on native mobile app development, see the [native-template 
 
 ### Fixes
 
-* We removed the complimentary libraries for the camera module that were added with the 4.0.0 release and that made Firebase a mandatory dependency when any camera functionality was used by iOS.
+* We removed the complementary libraries for the camera functionality that were added with the 4.0.0 release and that made Firebase a mandatory dependency when any camera functionality was used by iOS.
 
 ## 4.0.0
 
 **Release date: Apr 29, 2020**
 
 {{% alert type="info" %}}
-Update to 4.1.0 or later if you are using the camera module to avoid crashes if Firebase is not enabled for your project.
+Update to 4.1.0 or later if you are using the camera functionality to avoid crashes if Firebase is not enabled for your project.
 {{% /alert %}}
 
 This is the release supporting Studio Pro 8.9 and onwards. This release includes a major upgrade of the included dependencies which renders it incompatible with previous versions of Studio Pro.

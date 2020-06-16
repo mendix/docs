@@ -22,12 +22,11 @@ For more information on native mobile app development, see the [native-template 
 
 ### Improvements
 
-Prior to 8.10, Custom Developer Apps had to do a full session data request with each reload, slowing down the developer experience tremendously.
-From 8.10 onwards the client is able to tell when and what to sync. This behavior should emulate incremental syncs better and more consistently.
+* Prior to 8.10, custom developer apps had to do a full session data request with each reload, slowing down the developer experience tremendously. From 8.10 and above the client is able to determine when and what to sync. This behavior should emulate incremental syncs better and more consistently.
 
 ### Fixes
 
-* We removed the complimentary libraries for the Camera module that were added with the 4.0.0 release and that made Firebase a mandatory dependency when any camera functionality was used of iOS.
+* We removed the complimentary libraries for the camera module that were added with the 4.0.0 release and that made Firebase a mandatory dependency when any camera functionality was used by iOS.
 
 ## 4.0.0
 

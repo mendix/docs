@@ -12,15 +12,13 @@ With Mendix for Private Cloud, you have more control over where the environments
 
 ![Example of distributing environments in different clusters](attachments/private-cloud/mx4pc-environments-minimal.png)
 
-This document discusses the recommended ways of configuring environments for Private Cloud clusters and the licensing impact.
+This document discusses the recommended ways of configuring environments for Private Cloud clusters and the licensing requirements.
 
 ## 2 Licensing Overview
 
 You need a copy of the Mendix Operator and (optionally) the Mendix Gateway Agent for each Namespace you create in your Private Cloud to create environments for Mendix apps.
 
-Each of these Namespaces will therefore require a license for the Mendix Operator for anything other than limited evaluation purposes. This will have an impact on the cost of different configurations of environments.
-
-This is in addition to any licenses you have for your Mendix app.
+You will require a license to use the Mendix Operator within your company for anything other than limited evaluation purposes. This is in addition to any licenses you have for your Mendix app.
 
 ## 3 Production Environments
 
@@ -38,7 +36,7 @@ There are two possible ways to set up your non-production (for example test and 
 
 ### 4.1 Minimal
 
-In the minimal configuration, all non-production environments are put into a single namespaces. This has the benefit of simplicity and is also cost-effective as only one Mendix Operator license is required to cover all test and acceptance environments. As these are not production environments it is expected that they will not have a large volume of data or users, and that the test data does not require any special security.
+In the minimal configuration, all non-production environments are put into a single namespaces. This has the benefit of simplicity. As these are not production environments it is expected that they will not have a large volume of data or users, and that the test data does not require any special security.
 
 ![Example of minimal configuration of environments where all non-production environments are created in a single namespace](attachments/private-cloud/mx4pc-environments-minimal.png)
 
@@ -65,4 +63,3 @@ The advantages of this approach are:
 The disadvantage is:
 
 * Every additional namespace and cluster will have to be managed individually
-* You will need additional Mendix Operator licenses

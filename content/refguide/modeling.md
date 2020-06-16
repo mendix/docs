@@ -15,8 +15,6 @@ For more introductory information, see [Studio Pro Overview](studio-pro-overview
 
 ## 2 Main Documents in This Category
 
-The following documents provide important information about modeling your app and using Studio Pro:
-
 * [Project Explorer](project-explorer) – presents information on structuring your project, including important details on [security](security)
 * [Domain Model](domain-model) – contains information on creating and maintaining the data model for your app
 * [Pages](pages) – gives information on creating and configuring pages, as well as various elements on them

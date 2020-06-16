@@ -15,7 +15,7 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 #### Mendix Cloud **v4**
 
 * We introduced new alerts for Mendix Cloud v4.
-    * Database IOPS Burst Balance, based on the graph [Database Burst Balance](/developerportal/operate/trends-v4#Trends-dbmxdatabaseburstbalance)
+    * Database IOPS Burst Balance, based on the graph [Database IOPS Burst Balance](/developerportal/operate/trends-v4#Trends-dbmxdatabaseburstbalance)
     * Database Freeable Memory, based on the graph [Database Node Operating System Memory](/developerportal/operate/trends-v4#a-name-trends-dbmemory-a-5-5-database-node-operating-system-memory)
 
 ### June 10th, 2020

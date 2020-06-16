@@ -70,13 +70,13 @@ The design properties are located in *theme/settings-native.json*, and more info
 
 #### 3.2.3 Create the App Layouts
 
-The default Atlas theme comes pre-bundled with a set of layouts. If these do not fit your app’s design, you can create or customize the layouts and name them accordingly.
+The default Atlas theme comes pre-bundled with a set of layouts. If these do not fit your app’s design, you can create or customize the layouts and name them accordingly. Do not change the supplied layouts. Either create a separate module with the custom layouts, page templates, and building blocks or create your own [UI resources module](/howto/front-end/create-company-atlas-ui-resources#4-moving-from-local-to-atlas-ui-resources).
 
 #### 3.2.4 Create Building Blocks for Common UI Structures
 
 Apps often have multiple instances of patterns on pages or more complex UI patterns. For these cases it is useful to create building blocks so that other Mendix developers can easily apply common patterns. In building blocks, you can use custom class names in order to be more specific. For that properties that developers should be able to change in building blocks, use design properties as much as possible.
 
-#### 3.2.5 Create Page Templates for Common Page Structures**
+#### 3.2.5 Create Page Templates for Common Page Structures
 
 Similar to buildings blocks, developers can create standard page templates so that other developers can easily implement a common type of page.
 
@@ -126,7 +126,11 @@ It is a common pitfall to keep adding classes to a single file. However, this wi
 * Use variables as much as possible for consistency and easy updating
 * Combine and reuse parts of classes by using the spread operator `…`
 * Split the styling in logical parts, group related styles together, and split them into separate files if those groups become too large — if you have multiple custom styling files, use *theme/styles/native/app/custom.js* to import all those files (this will make updating easier, as customizations are only in the *app* folder)
+* *Custom.js* should not contain classes — only `export * from …*` statements to include classes from other files
 * Put the styling for building blocks and page templates in *theme/styles/native/ui_resources/{YOUR_PROJECT_OR_MODULE_NAME}* and include it in *theme/styles/native/main.js*
+* Create separate folders in the app folder for the generic company styling and app specific styling (this enables re-use and consistency between apps)
+* Always think about reuse; that common class you just created may be useful in other apps as well. Consider adding them to your company theme
+
 
 ## 5 Read More
 

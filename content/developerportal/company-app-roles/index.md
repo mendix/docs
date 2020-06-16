@@ -112,6 +112,6 @@ For details on how to manage App Team roles, see the [Editing App Team Roles](ma
 
 ## 5 Main Documents in This Category
 
-* [Manage Company & App Roles](manage-roles) –  describes how to add a Company Admin, change the various contacts for the app project, and edit the App Team roles
+* [Manage Company & App Roles](manage-roles) – describes how to add a Company Admin, change the various contacts for the app project, and edit the App Team roles
 * [Company Admin Settings](companyadmin-settings) – explains how to access and configure Company Admin settings for the company, users, apps, and nodes
 * [Technical Contact](technical-contact) – describes the role of the Technical Contact within the Mendix Cloud

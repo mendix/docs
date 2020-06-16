@@ -153,8 +153,8 @@ Imagine your business has several products, and you want to send one product to 
 
 Below you will learn the following:
 
-* How to show a push notification to a user if their app is in the background — when a user taps it, they will be brought to a product page
-* How to show a small view to a user if their app is in the foreground — when a user taps the button in the animation, they will be brought to a product page
+* How to show a push notification to a user if their app is in the background—when a user taps it, they will be brought to a product page
+* How to show a small view to a user if their app is in the foreground—when a user taps the button in the animation, they will be brought to a product page
 
 ### 4.1 Push Notifications for an App in the Background
 

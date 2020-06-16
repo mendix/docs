@@ -16,10 +16,10 @@ Every entry in the Mendix database has an unique ID. If you want to pass an obje
 
 You will create the following things to send data to pages:
 
-* **Two entities** — *TestEntity* to test how to show particular object, and *Notification* to help pass data to your page
-* **One page** — *DetailTestEntity* which will be shown on tapping a notification
-* **One microflow** — *DS_TestEntity* to create dummy data for testing
-* **Three nanoflows** — *DS_Notification* to create a dummy notification object, *ACT_PassGUIDToNotification* to pass a GUID, and *On_tapNotification* to process data from your notification
+* **Two entities** – *TestEntity* to test how to show particular object, and *Notification* to help pass data to your page
+* **One page** – *DetailTestEntity* which will be shown on tapping a notification
+* **One microflow** – *DS_TestEntity* to create dummy data for testing
+* **Three nanoflows** – *DS_Notification* to create a dummy notification object, *ACT_PassGUIDToNotification* to pass a GUID, and *On_tapNotification* to process data from your notification
 
 ## 2 Prerequisites
 

@@ -32,11 +32,11 @@ There may circumstances when you prefer a separate cluster for each production e
 
 ## 4 Non-production Environments
 
-There are two possible ways to set up your non-production (for example test and acceptance) environments
+There are two possible ways to set up your non-production (for example test and acceptance) environments:
 
 ### 4.1 Minimal
 
-In the minimal configuration, all non-production environments are put into a single namespaces. This has the benefit of simplicity. As these are not production environments it is expected that they will not have a large volume of data or users, and that the test data does not require any special security.
+In the minimal configuration, all non-production environments are put into a single namespace. This has the benefit of simplicity. As these are not production environments it is expected that they will not have a large volume of data or users, and that the test data does not require any special security.
 
 ![Example of minimal configuration of environments where all non-production environments are created in a single namespace](attachments/private-cloud/mx4pc-environments-minimal.png)
 

@@ -237,7 +237,7 @@ To manage stories in Studio Pro, follow these steps:
 
 1. Open your app project in Studio Pro by clicking **Edit App** > **Edit in Mendix Studio Pro**:
 
-	{{% image_container width="400" %}}![](attachments/edit-app.png)
+	{{% image_container width="300" %}}![](attachments/edit-app.png)
 	{{% /image_container %}}
 
 2. Open the **Stories** pane:

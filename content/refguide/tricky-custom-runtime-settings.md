@@ -70,6 +70,10 @@ The settings below are used to define the database connection pooling behavior. 
 | `ConnectionPoolingMaxIdle` | Sets the cap on the number of "idle" instances in the pool. | 50 |
 | `ConnectionPoolingMinIdle` | Sets the minimum number of objects allowed in the pool before the evictor thread (if active) spawns new objects. Note that no objects are created when `numActive` + `numIdle` >= `maxActive`.  This setting has no effect if the idle object evictor is disabled (meaning, if `timeBetweenEvictionRunsMillis` <= 0). | 0 |
 
+{{% alert type="info" %}}
+If you change these settings, you will need to restart your app to apply the changes.
+{{% /alert %}}
+
 When changing the `ConnectionPoolingMaxIdle` and `ConnectionPoolingMinIdle` settings, consider the following points:
 
 * More idle connections means more memory usage

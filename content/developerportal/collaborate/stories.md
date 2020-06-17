@@ -50,7 +50,7 @@ Each Sprint contains a number of stories that describe the specific functionalit
 Fill in the following details:
 
 * **Title** – the title of the story
-* **Descriptio** – a description of the story
+* **Description** – a description of the story
 * **Story type** – select whether the story describes a **Feature** or **Bug**
 * **Story points** – the size of the story
 * **Create story in** – the Sprint in which the story should be started; the default is **Backlog**

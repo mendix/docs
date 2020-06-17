@@ -280,7 +280,7 @@ To add a new Sprint, click **New sprint** and fill in some details, including th
 
 To move a story, select the story, click **Move to**, then select the Sprint to which the story should be moved.
 
-#### 6.1.4 Using Labels
+#### 6.1.4 Using Labels{#label}
 
 To add a label to a story or create a new label, use the options under **Label**. You can also perform various actions to [manage labels](#manage-labels).
 
@@ -296,7 +296,7 @@ Click **Complete current sprint** to complete a Sprint. Note that all stories ha
 
 For details, see the [Importing & Exporting to Excel](#import-export) section above.
 
-#### 6.2.3 Manage Labels
+#### 6.2.3 Manage Labels{#manage-labels}
 
 For details, see the [Managing Labels](#managing-labels) section above.
 
@@ -315,7 +315,7 @@ There are various actions you can perform when managing stories. These are descr
 
 Select a story and click **Details** (below the story title) to open the **Story Details** page. For more information, see the [Accessing Story Details](#story-details) section above.
 
-#### 6.3.2 Adding Tasks to a Story
+#### 6.3.2 Adding Tasks to a Story{#adding}
 
 Stories of the *Feature* type can be translated into tasks that need to be completed to finish the story. To add a task to the story, follow these steps:
 
@@ -347,7 +347,7 @@ If you need to reorder stories or move a story to a different Sprint, there are 
 	![](attachments/stories/move-story-drag.png)
 
 *  Click **Details** for the story you want to move to another Sprint, and on the **Story Details** page, select the Sprint to which you want to move the story from the **Move To Sprint** drop-down menu
-* Select the story and use the **Move to** button to select the new Sprint (for details on this method, see the [Moving a Story](#moving) section)
+* Select the story and use the **Move to** button to select the new Sprint (for details on this method, see the [Moving a Story](#move-stories) section)
 
 {{% alert type="info" %}}
 Moving a story will move the tasks as well.

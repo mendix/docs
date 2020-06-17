@@ -12,5 +12,5 @@ The rapid evolution of standards like HTML and the wide adoption of frameworks t
 
 ## 2 Main Documents in This Category
 
-* [Hybrid Mobile](hybrid-mobile)
-* [Native Mobile](native-mobile)
+* [Hybrid Mobile](hybrid-mobile) – describes how to build web applications that run inside containers
+* [Native Mobile](native-mobile) – describes how to build fully native mobile apps

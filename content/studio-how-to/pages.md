@@ -14,15 +14,9 @@ For more general guidelines on how to create a page, drag and drop elements on i
 ## 2 Documents in This Category
 
 * [Configure a Form and Show Items Related to It](pages-how-to-configure-form)
-
 * [Set Fields as Read-Only or Required](pages-how-to-set-validation-and-editability)
-
 * [Show Fields Only When Certain Conditions Are Met](pages-how-to-set-visibility)
-
 * [Configure a List and View List Item Details](pages-how-to-configure-list)
-
 * [Filter and Sort Items in a List](pages-how-to-filter-and-sort)
-
 * [Enable End-Users to Attach Images](pages-how-to-attach-images)
-
 * [Configure File Upload and Download](pages-how-to-attach-files)

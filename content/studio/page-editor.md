@@ -226,6 +226,6 @@ For example, if you click **Layout**—which is the layout that you choose when 
 {{% image_container width="300" %}}![](attachments/page-editor/layout.png)
 {{% /image_container %}}
 
-## 7 Read More
+## 7 Main Documents in This Category
 
-* [Widgets](page-editor-widgets)
+* [Widgets](page-editor-widgets) – describes different type of widgets

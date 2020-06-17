@@ -10,7 +10,7 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
-### June 12th, 2020
+### June 17th, 2020
 
 #### Mendix Cloud **v3**
 

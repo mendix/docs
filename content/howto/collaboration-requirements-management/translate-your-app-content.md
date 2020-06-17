@@ -24,9 +24,7 @@ It is assumed that you know the basics of creating new apps and editing them.
 
 To demonstrate working with languages, you will create a new app from the blank app template. You will add some text to this app, as an example, but the app you create is to demonstrate the language features of Mendix and is not intended to be run.
 
-When you work on an app there must be at least one language set, and one language must be set as the default app project language. This is the language which will be displayed when an end-user has no language selected, or when your app does not support their selected language.
-
-When you create an app from a Mendix template, there is one language, **English, United States**, which is set to be the default language.
+When you create an app from a Mendix template, there is one language, **English, United States**, which is set to be the default language. This is the language which will be displayed when an end-user has no language selected, or when your app does not support their selected language.
 
 To create your app, do the following:
 
@@ -38,7 +36,7 @@ To create your app, do the following:
 		![Domain model for How To](attachments/translate-your-app-content/domain-model.png)
 4. Right-click one of the entities and select **Generate overview pages…**
 5. Ensure both entities are selected and click **OK**.
-
+	![Options selected for Generate Pages](attachments/translate-your-app-content/generate-pages.png)
 	This will generate some pages containing text for you to translate.
 6. Open the page **Product_NewEdit** and add a new **Button** widget.
 7. Label the new button **Order**. This button will be used to allow the end-user to order the product they are viewing. Ignore any warnings about the setup of this button.
@@ -74,7 +72,9 @@ To change your current language to Russian, do the following:
 2. Click **Russian, Russia** to make that your current language.
 	![Change the current language](attachments/translate-your-app-content/change-language.png)
 
+{{% alert type="info" %}}
 If you do further development later on, you will need to remember to change back to your default language so that any new text is recorded there and not in a translated dictionary.
+{{% /alert %}}
 
 ## 5 Translating an Individual Piece of Text
 

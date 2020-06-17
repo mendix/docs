@@ -37,7 +37,7 @@ Fill in the following details:
 * **Duration (in weeks)** –  how many weeks the Sprint should last
 * **Start date** – the start date of the Sprint; this will be set automatically for right after the previous Sprint ends, unless the **Custom start date** box is checked and a start date is entered manually.
 
-For more information on Sprints, see the [Sprint Actions](#story-actions) section below.
+For more information on Sprints, see the [Sprint Actions](#sprint-actions) section below.
 
 ### 2.2 Creating a New Story {#new-story}
 
@@ -56,7 +56,7 @@ Fill in the following details:
 * **Create story in** – the Sprint in which the story should be started; the default is **Backlog**
 * **Story status** – select **To-do** (default), **Running**, or **Done**
 
-You can also create a story via the [Add a story](#sprint-actions) button for Sprint or from within a new Sprint by clicking **Add a new story**:
+You can also create a story via the [New Story](#new-story) button for Sprint or from within a new Sprint by clicking **Add a new story**:
 
 {{% image_container width="550" %}}
 ![](attachments/stories/new-story-from-sprint.jpg)
@@ -143,7 +143,7 @@ For each Sprint, the following options are provided via the menu button on the r
 {{% /image_container %}}
 
 * **Complete Sprint** (only available for the Sprint identified as a **Active Sprint**) – enables completing the Sprint, which will move it to the [Completed Sprints](#completed-sprints) page
-* **Add a story** – enables creating a [new story](#new-story) 
+* **New Story** – enables [creating a new story](#new-story) 
 * **Edit** – opens the [Edit Sprint](#new-sprint) dialog box
 * **Delete** – delete the Sprint
 

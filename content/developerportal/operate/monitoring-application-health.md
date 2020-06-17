@@ -3,7 +3,7 @@ title: "Alerts"
 category: "Operations"
 menu_order: 20
 description: "This page describes how to monitor the application health."
-tags: ["Monitoring","Mendix Cloud","Developer Portal","Performance","Health"]
+tags: ["Monitoring","Mendix Cloud","Developer Portal","Performance","Health", "Database IOPS Burst Balance", "Database Freeable Memory"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

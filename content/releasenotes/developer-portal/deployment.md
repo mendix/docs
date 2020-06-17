@@ -10,6 +10,14 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### June 17th, 2020
+
+#### Mendix Cloud **v3**
+
+* We fixed an issue where manual backups on Mendix Cloud v3 did not correctly update the status in the Developer Portal when they completed. (Tickets 97485, 97573, 97577, 97748, 97819, & 98313)
+* We fixed an issue where some valid certificate authorities could not be uploaded. (Tickets 98150 & 100271)
+* We made some changes to the Mendix Cloud v3 [Trends](/developerportal/operate/trends) graphs.
+
 ### June 16th, 2020
 
 #### Mendix Cloud **v4**

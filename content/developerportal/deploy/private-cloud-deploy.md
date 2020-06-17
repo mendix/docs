@@ -472,36 +472,6 @@ This section covers an issue which can arise where Mendix cannot recover automat
 
 Under some circumstances changes in the status of the environment and its apps will not be updated automatically. To ensure you are seeing the current status, you may need to click the **Refresh** button on the screen (not the browser page refresh button).
 
-### 7.2 Agent Connection Status Not up to Date
-
-Under certain conditions, the status of an environment in the Portal might become outdated and not reflect the environment state in the namespace. The Agent needs to be restarted to force it to resend the latest environment state to the Portal.
-
-You need to run the following command in the namespace where the Mendix Operator is deployed:
-
-#### 7.2.1 OpenShift
-
-First go to the namespace using the command `oc config set-context --current --namespace={namespace}`, using the name of your namespace.
-
-Now run the following command.
-
-```bash
-oc scale deployment mendix-agent --replicas=0 && \
-sleep 200 && \
-oc scale deployment mendix-agent --replicas=1
-
-```
-#### 7.2.2 Kubernetes
-
-First go to the namespace using the command `kubectl config set-context --current --namespace={namespace}`, using the name of your namespace.
-
-Now run the following command.
-
-```bash
-kubectl scale deployment mendix-agent --replicas=0 && \
-sleep 200 && \
-kubectl scale deployment mendix-agent --replicas=1
-```
-
 ## 8 How the Operator Deploys Your App {#how-operator-deploys}
 
 The Mendix Operator is another app within your private cloud namespace. It is triggered when you provide a CR file. The process looks like this:

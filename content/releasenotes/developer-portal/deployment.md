@@ -10,6 +10,18 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### June 19th, 2020
+
+#### Mendix for Private Cloud — Mendix Operator v1.1.1
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+
+* We fixed an issue which incorrectly marked dedicated Storage Plans as being in use.
+* We changed the way the Operator updates Kubernetes Deployments to prevent a situation where two different versions of a Mendix application are running at the same moment.
+* We have added support for Azure PostgreSQL databases.
+* We have added support for using an existing JDBC database schema. This database can only be used by one environment and cannot be shared between environments.
+* We have added support for using an existing Azure Blob Storage Container or S3 bucket. Such a storage plan can be dedicated to one environment, or can be shared between multiple environments, with all environments using the same credentials.
+
 ### June 18th, 2020
 
 #### Mendix for Private Cloud

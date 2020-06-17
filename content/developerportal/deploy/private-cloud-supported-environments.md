@@ -76,6 +76,8 @@ The local image registry can be used in an OpenShift cluster. It is not possible
 
 Image pull authentication will be configured out of the box.
 
+OpenShift 4 registries doesn't need any configuration and will be configured automatically.
+
 For an OpenShift 3 registry, the pull URL should be set to `docker-registry.default.svc:5000`.
 The push URL should be set to `<registry ip>:5000` where `<registry ip>` can be obtained by running `oc get svc docker-registry -n default`.
 
@@ -115,12 +117,13 @@ The following managed PostgreSQL databases are supported:
 
 * [Amazon RDS for PostgreSQL](https://aws.amazon.com/rds/postgresql/) 
 * [Amazon Aurora PostgreSQL](https://aws.amazon.com/rds/aurora/)
+* [Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/services/postgresql/).
 
 Amazon PostgreSQL instances require additional firewall configuration to allow connections from the Kubernetes cluster.
 
-Some managed PostgreSQL databases might have restrictions or require additional configuration.
+Azure PostgreSQL databases require additional firewall configuration and SSL to be disabled to allow connections from the Kubernetes cluster.
 
-[Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/services/postgresql/) is not supported at the moment.
+Some managed PostgreSQL databases might have restrictions or require additional configuration.
 
 {{% alert type="info" %}}
 To use a PostgreSQL database, the Mendix Operator requires a master account with permissions to create new users and databases.
@@ -129,6 +132,7 @@ For every Mendix app environment, a new database schema and user (role) will be 
 {{% /alert %}}
 
 These features are currently not supported:
+
 * SSL/TLS
 * Custom CAs for SSL/TLS
 
@@ -151,6 +155,14 @@ Some managed SQL Server databases might have restrictions or require additional 
 To use a SQL Server database, the Mendix Operator requires a master account with permissions to create new users and databases.
 
 For every Mendix app environment, a new database, user and login will be created so that the app can only access its own data.
+{{% /alert %}}
+
+### 4.4 Dedicated JDBC database
+
+This allows to use an existing database (schema) [database configuration parameters](/refguide/custom-settings) directly as supported by the Mendix Runtime.
+
+{{% alert type="info" %}}
+A dedicated JDBC database cannot be used by more than one Mendix app.
 {{% /alert %}}
 
 ## 5 File storage
@@ -181,6 +193,8 @@ MinIO Gateway is not supported since running MinIO in gateway mode disables the 
 ### 5.3 Amazon S3
 
 [Amazon S3](https://aws.amazon.com/s3/) is supported.
+
+#### 5.3.1 Amazon S3 (create on-demand)
 
 {{% alert type="info" %}}
 For every Mendix app environment, a new bucket, IAM user and inline policy will be created so that the app can only access its own bucket.
@@ -219,6 +233,20 @@ To use S3, the Mendix Operator will need an IAM account with the following polic
     ]
 }
 ```
+
+### 5.3.2 Amazon S3 (existing bucket)
+
+The Mendix Operator can access an existing S3 bucket, with an existing IAM account access and secret key.
+
+{{% alert type="info" %}}
+
+If such Storage Plan is shared by multiple environments, all environments using that Storage Plan be using the same Access and Secret keys and will have identical permissions.
+
+Each environment will be writing into its own directory inside the bucket.
+
+To avoid compromising security, this type of plan should not be allowed to be used by multiple environments.
+
+{{% /alert %}}
 
 ## 6 Networking
 

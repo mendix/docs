@@ -191,7 +191,35 @@ You can return to this initial question from any of the other questions by choos
 If the plan already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, which will now have the new configuration.
 {{% /alert %}}
 
+{{% alert type="info" %}}
+To connect to an Azure PostgreSQL server, the _Enforce SSL connection_ option has to be disabled and the Kubernetes cluster should be added to the list of allowed hosts in the firewall. For the database name, use `postgres`.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+To connect to an Amazon RDS database, the VPC and firewall should be configured to allow connections to the database from the Kubernetes cluster.
+{{% /alert %}}
+
 **Ephemeral** will enable you to quickly set up your environment and deploy your app, but any data you store in the database will be lost when you restart your environment.
+
+**SQL Server** will enable you to enter the values to configure a Microsoft SQL Server database. You will need to provide all the information about your SQL Server database such as plan name, host, port, database, user, and password. 
+
+{{% alert type="info" %}}
+For Azure SQL databases, additional parameters are required to specify the database elastic pool name, tier, service objective and maximum size.
+{{% /alert %}}
+
+**Dedicated JDBC** will enable you to enter the [database configuration parameters](/refguide/custom-settings) for an existing database directly as supported by the Mendix Runtime.
+
+{{% alert type="info" %}}
+A dedicated JDBC database cannot be used by more than one Mendix app.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+If the plan already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, which will now have the new configuration.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.1.0 or later.
+{{% /alert %}}
 
 #### 3.4.3 Pick a storage type
 
@@ -199,7 +227,7 @@ If the plan already exists you will receive an error that it cannot be created. 
 
 **Minio** will connect to a [MinIO](https://min.io/product/overview) S3-compatible object storage. You will need to provide all the information about your MinIO storage such as endpoint, access key, and secret key. The MinIO server needs to be a full-featured MinIO server and not a [MinIO Gateway](https://github.com/minio/minio/tree/master/docs/gateway).
 
-**Amazon S3** will connect to an AWS account to create S3 buckets and associated IAM accounts. Each app will receive a dedicated S3 bucket and an IAM account which only has access to that specific S3 bucket. You will need to provide all the information about your Amazon S3 storage such as plan name, region, access key, and secret key. The associated IAM account needs to have the following IAM policy (replace `<account_id>` with your AWS account number):
+**Amazon S3 (on-demand)** will connect to an AWS account to create S3 buckets and associated IAM accounts. Each app will receive a dedicated S3 bucket and an IAM account which only has access to that specific S3 bucket. You will need to provide all the information about your Amazon S3 storage such as plan name, region, access key, and secret key. The associated IAM account needs to have the following IAM policy (replace `<account_id>` with your AWS account number):
 ```json
 {
     "Version": "2012-10-17",
@@ -234,6 +262,64 @@ If the plan already exists you will receive an error that it cannot be created. 
 
 {{% alert type="info" %}}
 If the plan already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, which will now have the new configuration.
+{{% /alert %}}
+
+**Amazon S3 (existing bucket)** will connect to an existing S3 bucket with the provided IAM account access key and secret keys. All apps app will use the same S3 bucket and an IAM account. You will need to provide all the information about your Amazon S3 storage such as plan name, endpoint, access key, and secret key. The associated IAM account needs to have the following IAM policy (replace `<bucket_name>` with the your S3 bucket name):
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:AbortMultipartUpload",
+        "s3:DeleteObject",
+        "s3:GetObject",
+        "s3:ListMultipartUploadParts",
+        "s3:PutObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::<bucket_name>/*"
+      ]
+    }
+  ]
+}
+```
+
+{{% alert type="info" %}}
+If such Storage Plan is shared by multiple environments, all environments using that Storage Plan be using the same Access and Secret keys and will have identical permissions.
+
+Each environment will be writing into its own directory inside the bucket.
+
+To avoid compromising security, this type of plan should not be allowed to be used by multiple environments.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+If the plan already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, which will now have the new configuration.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.1.0 or later.
+{{% /alert %}}
+
+**Azure Blob storage Container (existing)** will connect to an existing Azure Blob storage Container with the provided storage account name and key. All apps app will use the same Container bucket and account credentials. You will need to provide all the information about your Amazon S3 storage such as plan name, account name, account key, and container name.
+
+{{% alert type="info" %}}
+
+If such Storage Plan is shared by multiple environments, all environments using that Storage Plan be using the same account name and account keys keys and will have identical permissions.
+
+All apps using this storage plan will write into the same Azure Blob storage Container into its root directory.
+
+To avoid compromising security, this type of plan should not be allowed to be used by multiple environments.
+
+{{% /alert %}}
+
+{{% alert type="info" %}}
+If the plan already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, which will now have the new configuration.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.1.0 or later.
 {{% /alert %}}
 
 **Ephemeral** will enable you to quickly set up your environment and deploy your app, but any data objects you store will be lost when you restart your environment.
@@ -462,32 +548,6 @@ This section covers an issue which can arise where Mendix cannot recover automat
 ### 6.1 Status Reporting
 
 Under some circumstances changes in the status of the cluster, namespaces, and environments will not be updated automatically. To ensure you are seeing the current status, you may need to click the **Refresh** button on the screen (not the browser page refresh button).
-
-### 6.2 Agent Connection Status Not up to Date
-
-The namespace status may show as `Waiting for Connection`, even though the Agent is actually connected to the namespace. The Agent needs to be restarted to force it to reconnect.
-
-Run the following command in the namespace where the Mendix Operator is deployed:
-
-#### 6.2.1 OpenShift
-
-First go to the namespace using the command `oc config set-context --current --namespace={namespace}`, using the name of your namespace.
-
-```bash
-oc scale deployment mendix-agent --replicas=0 && \
-sleep 200 && \
-oc scale deployment mendix-agent --replicas=1
-
-```
-#### 6.2.2 Kubernetes
-
-First go to the namespace using the command `kubectl config set-context --current --namespace={namespace}`, using the name of your namespace.
-
-```bash
-kubectl scale deployment mendix-agent --replicas=0 && \
-sleep 200 && \
-kubectl scale deployment mendix-agent --replicas=1
-```
 
 ## 7 Containerized Mendix App Architecture{#containerized-architecture}
 

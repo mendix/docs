@@ -19,6 +19,7 @@ To open the **Settings**, click the gear icon at the left menu bar.
 
 ![](attachments/settings/settings-icon.png)
 
-## 2 Read More
+## 2 Main Documents in This Category
 
-* [General Info](general)
+* [Security, Roles & Permissions](settings-security) – describes security in Mendix Studio, user roles and permissions for them
+* [Widget Overview](settings-widget-overview) – describes settings for Mendix App Store and local widgets in your app

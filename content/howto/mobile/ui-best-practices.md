@@ -18,11 +18,11 @@ When building a native application, different roles are needed for app developme
 
 For most apps, development teams should include the following roles in their overall configuration:
 
-* **Mendix development** — Building the domain model, pages, logic, integrations, and overall flow of the app. This is the most common and available role.
-* **Front-end development** — Implementing the styling or the theme of the app as created in the designs.
-* **UI design** — Designing the user interface, for example how the screens and components look, and determining the theme colors, typography, spacing, and borders.
-* **UX design** — Designing the user experience (such as the flow of the app), determining which use cases to support, and deciding how certain functions should work.
-* **Widget development (optional)** — Building new widgets to provide new interaction patterns or UI components that are not offered out of the box by Mendix or available though the Mendix App Store.
+* **Mendix development** – Building the domain model, pages, logic, integrations, and overall flow of the app. This is the most common and available role.
+* **Front-end development** – Implementing the styling or the theme of the app as created in the designs.
+* **UI design** – Designing the user interface, for example how the screens and components look, and determining the theme colors, typography, spacing, and borders.
+* **UX design** – Designing the user experience (such as the flow of the app), determining which use cases to support, and deciding how certain functions should work.
+* **Widget development (optional)** – Building new widgets to provide new interaction patterns or UI components that are not offered out of the box by Mendix or available though the Mendix App Store.
 
 As mentioned above, not all projects require five different persons each handling one of these roles. Different team configurations are common.
 
@@ -32,9 +32,9 @@ Which roles and staff make up your development team depends on the type of apps 
 
 In apps where custom UX or UI is more important (for example B2C and B2B apps) the following combinations are often employed:
 
-* **UI design + UX design** — This configuration is often used if an in-house UX team is used or a design agency is hired.
-* **UI design + UX design + Front-end development** — UX or UI experts that also have the skills to implement their designs and UX are key for this configuration. For example, several people in Mendix Expert Services are of these type.
-* **Mendix development + Front-end development** — A Mendix developer who knows how to implement styling, but does have to the skills to create the design.
+* **UI design + UX design** – This configuration is often used if an in-house UX team is used or a design agency is hired.
+* **UI design + UX design + Front-end development** – UX or UI experts that also have the skills to implement their designs and UX are key for this configuration. For example, several people in Mendix Expert Services are of these type.
+* **Mendix development + Front-end development** – A Mendix developer who knows how to implement styling, but does have to the skills to create the design.
 
 ## 3 Process
 
@@ -122,11 +122,11 @@ The default Mendix theme is a complete theme which serves as a good source of ex
 
 It is a common pitfall to keep adding classes to a single file. However, this will make the file more difficult to maintain. Here some best practices for keeping styling maintainable:
 
-* Apply clear, descriptive, and consistent names in styling — add comments when needed
+* Apply clear, descriptive, and consistent names in styling—add comments when needed
 * Use variables as much as possible for consistency and easy updating
 * Combine and reuse parts of classes by using the spread operator `…`
-* Split the styling in logical parts, group related styles together, and split them into separate files if those groups become too large — if you have multiple custom styling files, use *theme/styles/native/app/custom.js* to import all those files (this will make updating easier, as customizations are only in the *app* folder)
-* *Custom.js* should not contain classes — only `export * from …*` statements to include classes from other files
+* Split the styling in logical parts, group related styles together, and split them into separate files if those groups become too large—if you have multiple custom styling files, use *theme/styles/native/app/custom.js* to import all those files (this will make updating easier, as customizations are only in the *app* folder)
+* *Custom.js* should not contain classes—only `export * from …*` statements to include classes from other files
 * Put the styling for building blocks and page templates in *theme/styles/native/ui_resources/{YOUR_PROJECT_OR_MODULE_NAME}* and include it in *theme/styles/native/main.js*
 * Create separate folders in the app folder for the generic company styling and app specific styling (this enables re-use and consistency between apps)
 * Always think about reuse; that common class you just created may be useful in other apps as well. Consider adding them to your company theme

@@ -276,7 +276,7 @@ To add a new story, click **New story** and fill in some details, including what
 
 To add a new Sprint, click **New sprint** and fill in some details, including the name of the Sprint or release and where it should be located in the structure of your **Stories** page.
 
-#### 6.1.3 Moving a Story
+#### 6.1.3 Moving a Story{#moving-a-story}
 
 To move a story, select the story, click **Move to**, then select the Sprint to which the story should be moved.
 
@@ -330,7 +330,7 @@ After you have completed the task, check the box:
 
 ![](attachments/stories/complete-task.png)
 
-#### 6.3.3 Deleting a Story or Task
+#### 6.3.3 Deleting a Story or Task{#deleting}
 
 To delete a story or a task, click the trash can icon below the title of the story/task. After you confirm the deletion, the story/task will be removed from the system permanently.
 
@@ -347,7 +347,7 @@ If you need to reorder stories or move a story to a different Sprint, there are 
 	![](attachments/stories/move-story-drag.png)
 
 *  Click **Details** for the story you want to move to another Sprint, and on the **Story Details** page, select the Sprint to which you want to move the story from the **Move To Sprint** drop-down menu
-* Select the story and use the **Move to** button to select the new Sprint (for details on this method, see the [Moving a Story](#move-stories) section)
+* Select the story and use the **Move to** button to select the new Sprint (for details on this method, see the [Moving a Story](#moving-a-story) section)
 
 {{% alert type="info" %}}
 Moving a story will move the tasks as well.

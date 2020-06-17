@@ -166,8 +166,8 @@ Mind the following characteristics when using cut/copy/paste:
 * You cannot copy/paste pages or microflows, only elements of a page or a microflow 
 * You cannot cut/copy/paste from Studio to Studio Pro or vice versa
 
-## 9 Read More
+## 9 Main Documents in This Category
 
-* [Domain Model](domain-models)
-* [Microflows](microflows)
-* [Pages](page-editor)
+* [Collaborative Development in Studio](general-collaborative-development) – provides you with information on how team members work together on one project in Mendix Studio Pro and Mendix Studio 
+
+* [Studio Ranges & Mendix Versions](general-versions) – explains how Studio version correlates to the Mendix version

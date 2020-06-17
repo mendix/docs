@@ -219,9 +219,10 @@ When configuring the activities of microflows you will notice icons above or und
 | Commit without events | ![Commit Without Events Icon](attachments/microflows/commit-with-no-events-icon.png) | Indicates that the object will be committed but without events. This means that the object will be saved in the database, but event handlers will not be triggered. For more information on event handlers, see [Event Handlers](/refguide/event-handlers) in the *Studio Pro Guide* |
 | Refresh in Client     | ![Refresh in Client Icon](attachments/microflows/refresh-in-client-icon.png) | Indicates that the result of the activity will be displayed to an end-user. |
 
-## 11 Read More
+## 11 Main Documents in This Category
 
-* [General Info](general)
-* [Decision](microflows-decision)
-* [Microflow Expressions](microflows-expressions)
-* [Set & Change a Value for Different Activities in the Microflows](microflows-setting-and-changing-value)
+* [Mendix Assist](mx-assist) – describes an artificial intelligence-powered agent that helps you configure microflows
+* [Decision](microflows-decision) – explains what a decision is and describes its properties
+* [Loop](microflows-loop) – explains what a loop is and describes its properties
+* [Microflow Expressions](microflows-expressions) – explains how to use microflow expressions
+* [Set & Change a Value for Different Activities in the Microflows](microflows-setting-and-changing-value) – explains how to set or/and change a value for microflow activities

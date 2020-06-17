@@ -41,4 +41,7 @@ To {do this task}, follow these steps:
 
 ## 4 Read More
 
-{Add links to related documents and blog posts. Contextualize necessary third-party links in the above sections, as they should not be put here.}
+* {Link 1}
+* {Link2} – {an explanation when necessary especially if this is a third-party link}
+
+{Make sure this section contains a bulleted list only with explanations where necessary. Do not just repeat cross-references you used throughout the document, but list useful supplementary links here.}

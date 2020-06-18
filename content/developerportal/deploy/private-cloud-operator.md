@@ -8,7 +8,7 @@ tags: ["Deploy", "Private Cloud", "Environment", "Operator", "CI/CD", "CLI"]
 
 ## 1 Introduction
 
-Once you have the Mendix Operator installed in your Kubernetes Red Hat OpenShift, AWS-EKS, or AKS cluster (see [Registering a Private Cloud Cluster](private-cloud-cluster)), you can use it to control the deployment of your Mendix app using Mendix Custom Resources (CRs). The Mendix operator then creates the app container and builds the app inside the cluster, together with all the resources the app needs.
+Once you have the Mendix Operator installed in a namespace of your Kubernetes Red Hat OpenShift, AWS-EKS, or AKS cluster (see [Creating a Private Cloud Cluster](private-cloud-cluster)), you can use it to control the deployment of your Mendix app using Mendix Custom Resources (CRs). The Mendix operator then creates the app container and builds the app inside the namespace, together with all the resources the app needs.
 
 This document explains how to provide the CRs through the console or command line for a standalone cluster. This enables you to automate your deployment processes and perform deployments from behind a firewall which would prevent access to the Mendix Developer Portal.
 
@@ -31,7 +31,7 @@ Follow the instructions below to deploy your app.
 
 ### 3.1 Creating a Deployment Package
 
-Create a deployment package (.mda) file from your app. It is this which is picked up by the CR configuration and deployed in a container to your cluster.
+Create a deployment package (.mda) file from your app. It is this which is picked up by the CR configuration and deployed in a container to your namespace.
 
 You can obtain the deployment package in a number of ways:
 
@@ -90,7 +90,7 @@ spec:
 You need to make the following changes:
 
 * **name**: – You can deploy multiple apps in one project/namespace — the app name in the CR doesn't have to match the app name in the mda but must be unique in the project — see [Reserved Names for Mendix Apps](#reserved-names), below, for restrictions on naming your app
-* **database/storage**: – ensure that these have the correct **servicePlan** — they have to have the same names that you registered in the cluster
+* **database/storage**: – ensure that these have the correct **servicePlan** — they have to have the same names that you registered in the namespace
 * **mendixRuntimeVersion**: – the full runtime version which matches the mda, including the build number
 * **sourceURL**: – the location of the deployment package, this must be accessible from your cluster without any authentication
 * **appURL**: – the endpoint where you can connect to your running app — this is optional, and if it is supplied it must be a URL which is supported by your platform
@@ -194,7 +194,7 @@ kubectl apply -f {File containing the CR} -n {namespace where app is being deplo
 
 To build and deploy your app using the OpenShift CLI, do the following:
 
-1.  Paste the OpenShift login command into Bash as described in the first few steps of the [Signing in to Open Shift](private-cloud-cluster#openshift-signin) section of *Registering a Private Cloud Cluster*.
+1.  Paste the OpenShift login command into Bash as described in the first few steps of the [Signing in to Open Shift](private-cloud-cluster#openshift-signin) section of *Creating a Private Cloud Cluster*.
 2.  Switch to the project where you've deployed the Mendix Operator using the command`oc project {my-project}` where {my-project} is the name of the project where the Mendix Operator is deployed.
 3.  Paste the following command into Bash:
 

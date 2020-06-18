@@ -1,34 +1,34 @@
 ---
-title: "Registering a Private Cloud Cluster"
+title: "Creating a Private Cloud Cluster"
 parent: "private-cloud"
-description: "Describes the processes for registering a Private Cloud cluster in the Mendix Developer Portal"
+description: "Describes the processes for creating a Private Cloud cluster in the Mendix Developer Portal"
 menu_order: 10
-tags: ["Register", "Private Cloud", "Cluster"]
+tags: ["Create", "Private Cloud", "Cluster", "Namespace"]
 ---
 
 ## 1 Introduction
 
-To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to register a cluster in the Mendix Developer Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Gateway Agent** in your OpenShift context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
+To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to create a cluster and add at least one namespace in the Mendix Developer Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Gateway Agent** in your OpenShift context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
 
 ![](attachments/private-cloud-cluster/mx4pc-architecture.png)
 
 This document explains how to set up the cluster in Mendix.
 
-Once you have registered your cluster, you can invite additional team members who can then create or view environments in which their apps are deployed, depending on the rights you give them. For more information on the relationship between Mendix environments and Kubernetes clusters, see [Containerized Mendix App Architecture](#containerized-architecture), below.
+Once you have created your namespace, you can invite additional team members who can then create or view environments in which their apps are deployed, depending on the rights you give them. For more information on the relationship between Mendix environments, Kubernetes namespaces, and Kubernetes clusters, see [Containerized Mendix App Architecture](#containerized-architecture), below.
 
-## 2 Prerequisites for Registering a Cluster
+## 2 Prerequisites for Creating a Cluster
 
-To register a cluster in your OpenShift context, you need the following:
+To create a cluster in your OpenShift context, you need the following:
 
 * A Kubernetes platform or OpenShift version 3.11 or above
-* Administration account for your platform
-* **OpenShift CLI** installation (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the Red Hat OpenShift website for more information) if you are creating clusters on OpenShift
-* **Kubectl** installation if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
+* An administration account for your platform
+* **OpenShift CLI** installed (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the Red Hat OpenShift website for more information) if you are creating clusters on OpenShift
+* **Kubectl** installed if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
 * **Bash** (Bourne-again shell) for your machine. If you are running on Windows, you can use something like [**Windows Subsystem for Linux (WSL)**](https://docs.microsoft.com/en-us/windows/wsl/faq) or the **Git Bash emulator** that comes with [git for windows](https://gitforwindows.org/).
 
-## 3 Registering a Cluster
+## 3 Creating a Cluster and Namespace
 
-### 3.1 Obtaining the Script
+### 3.1 Creating a Cluster
 
 1. Click **Cloud Settings** on the **Settings** page of your Mendix app.
     
@@ -46,35 +46,53 @@ To register a cluster in your OpenShift context, you need the following:
 
     ![](attachments/private-cloud-cluster/image5.png)
 
-5. Click **Register Cluster**. 
+5. Click **Create Cluster**. 
 
     ![](attachments/private-cloud-cluster/image6.png)
 
 6. Enter the following information:
     
-  1. **Name** – The name you want to give the cluster you are registering.
+  1. **Name** – The name you want to give the cluster you are creating.
   
-  2. **Namespace** – this is the namespace in your platform.
+  2. **Type** – choose the correct type for your cluster.
+
+  3. **Description** – an optional description of the cluster which will be displayed under the cluster name in the cluster manager.
+
+7. Click **Create**.
+
+    ![](attachments/private-cloud-cluster/create-cluster.png)
+
+### 3.2 Adding a Namespace
+
+You now need to add a namespace to your cluster. Your cluster can contain several namespaces, see [Containerized Mendix App Architecture](#containerized-architecture), below for more information.
+
+To add a namespace, do the following:
+
+1. Click **Add Namespace**.
+
+    ![](attachments/private-cloud-cluster/empty-cluster.png)
+
+2. Enter the following details:
+
+  1. **Namespace** – this is the namespace in your platform. This must conform to the namespace naming conventions of the cluster: all lowercase with hyphens allowed within the name.
   
-  3. **Type** – choose the correct type for your cluster.
+  2. **Installation type** – if you want to [create environments and deploy your app from the Mendix Developer Portal](private-cloud-deploy), choose **Connected**, but if you only want to [control your deployments through the Mendix Operator using the CLI](private-cloud-operator), choose **Standalone**.
 
-  4. **Installation type** – if you want to [create environments and deploy your app from the Mendix Developer Portal](private-cloud-deploy), choose **Connected**, but if you only want to [control your deployments through the Mendix Operator using the CLI](private-cloud-operator), choose **Standalone**.
+3. Click **Done** to create the namespace.
 
-        ![](attachments/private-cloud-cluster/image7.png)
+![](attachments/private-cloud-cluster/add-namespace.png)
 
-7. Click **Done**.
+You will see the details of the namespace you are adding on a screen with two scripts.
 
-You will see the details of the cluster you are registering on a screen with two scripts.
+The first script is the installation script which will install the Mendix operator and Mendix agent in your namespace. Once that is done, you can run the second script which allows you to configure your namespace.
 
-The first script is the installation script which will install the Mendix operator and Mendix Gateway Agent in your cluster. Once that is done, you can run the second script which allows you to configure your cluster.
+![](attachments/private-cloud-cluster/namespace-scripts.png)
 
-![](attachments/private-cloud-cluster/image8.png)
+### 3.3 Running the Installation Script
 
-### 3.2 Running the Installation Script
+You will need to have administrator rights to your private cloud platform. This means you will have to log in before you run the installation script.
 
-You will need to have administrator rights to your private cloud platform. This means you will have to log in before you run the installation script. 
-
-#### 3.2.1 Signing in to OpenShift{#openshift-signin}
+#### 3.3.1 Signing in to OpenShift{#openshift-signin}
 
 These instructions are for the OpenShift platform; a similar process will be required for other platforms.
 
@@ -100,7 +118,7 @@ You can do this as follows:
 
 6. Paste the command into Bash and press Enter.
 
-#### 3.2.2 Executing the Installation Script
+#### 3.3.2 Executing the Installation Script
 
 To execute the installation script, do the following:
 
@@ -123,11 +141,11 @@ The Mendix operator and Mendix Gateway Agent are now installed on your platform.
 
 ![](attachments/private-cloud-cluster/image14.png)
 
-You can always find the installation script again in the **Installation** tab for your cluster in the cluster manager.
+You can always find the installation script again in the **Installation** tab for your namespace in the cluster manager.
 
-### 3.3 Running the Reconfiguration Script{#reconfiguration-script}
+### 3.4 Running the Reconfiguration Script{#reconfiguration-script}
 
-Before you deploy an app to your namespace, you will need to configure a number of services namely:
+Before you deploy an app to your namespace, you will need to configure a number of services, namely:
 
 * database
 * file storage
@@ -145,7 +163,7 @@ Mendix provides you with a script which will configure these initially, and can 
 
 The script will ask you a series of questions. Type the number corresponding to your choice, or enter the value required.
 
-#### 3.3.1 What do you want to do?
+#### 3.4.1 What do you want to do?
 
 ![](attachments/private-cloud-cluster/image16.png)
 
@@ -159,11 +177,11 @@ Choose **2** if you have a configuration already but want to reconfigure part of
 * Registry
 * Proxy
 
-When you reconfigure your cluster with databases or storage, you will add new services in addition to any services which are already set up. These plans are then added to the Developer Portal and can be used when creating environments for an app, unless you specifically deactivate them.
+When you reconfigure your namespace with databases or storage, you will add new services in addition to any services which are already set up. These plans are then added to the Developer Portal and can be used when creating environments for an app, unless you specifically deactivate them.
 
 You can return to this initial question from any of the other questions by choosing the option **Go back to the start** where it is available.
 
-#### 3.3.2 Pick a database type
+#### 3.4.2 Pick a database type
 
 ![](attachments/private-cloud-cluster/image17.png)
 
@@ -175,7 +193,7 @@ If the plan already exists you will receive an error that it cannot be created. 
 
 **Ephemeral** will enable you to quickly set up your environment and deploy your app, but any data you store in the database will be lost when you restart your environment.
 
-#### 3.3.3 Pick a storage type
+#### 3.4.3 Pick a storage type
 
 ![](attachments/private-cloud-cluster/image18.png)
 
@@ -220,7 +238,7 @@ If the plan already exists you will receive an error that it cannot be created. 
 
 **Ephemeral** will enable you to quickly set up your environment and deploy your app, but any data objects you store will be lost when you restart your environment.
 
-#### 3.3.4 Pick an ingress type
+#### 3.4.4 Pick an ingress type
 
 ![](attachments/private-cloud-cluster/image19.png)
 
@@ -230,7 +248,7 @@ If the plan already exists you will receive an error that it cannot be created. 
 
 Both forms of ingress can have TLS enabled or disabled.
 
-#### 3.3.5 Pick a registry type
+#### 3.4.5 Pick a registry type
 
 ![](attachments/private-cloud-cluster/image20.png)
 
@@ -242,33 +260,48 @@ You can choose one of the following registry types. OpenShift registries can onl
 * Generic registry with authentication (this should either be *Public* or should have image pull secrets enabled).
 * Generic registry without authentication
 
-#### 3.3.6 Do you want to configure the proxy
+#### 3.4.6 Do you want to configure the proxy
 
 ![](attachments/private-cloud-cluster/image21.png)
 
-Choose **Yes** if a proxy is required to access the public internet from the cluster; you will be asked for the proxy configuration details.
+Choose **Yes** if a proxy is required to access the public internet from the namespace; you will be asked for the proxy configuration details.
 
-### 3.4 Confirming Cluster Configuration
+### 3.5 Confirming Namespace Configuration
 
-When the cluster is configured correctly, its status will become **Connected**. You may need to click the **Refresh** button if the screen does not update automatically.
+When the namespace is configured correctly, its status will become **Connected**. You may need to click the **Refresh** button if the screen does not update automatically.
 
 ![](attachments/private-cloud-cluster/image22.png)
 
 ## 4 Cluster Management
 
-Once it is configured, you can manage your cluster through the Developer Portal.
+Once it is configured, you can manage your cluster and namespaces through the Developer Portal.
 
-1. Go to the Cluster Manager page by clicking **Cluster Manager** in the **Apps** menu.
+### 4.1 Cluster Overview
 
-    ![](attachments/private-cloud-cluster/image23.png)
+Go to the Cluster Manager page by clicking **Cluster Manager** in the **Apps** menu.
 
-    From this page you can see a summary of your clusters with an indication of their status and how long they have been running (uptime).
+![](attachments/private-cloud-cluster/image23.png)
 
-2. Click the tile of the cluster you want to manage.
+From this page you can see a summary of your clusters with all their namespaces and an indication of the namespace status and how long it has been running (runtime).
 
-    ![](attachments/private-cloud-cluster/image24.png)
+#### 4.1.1 Managing the Cluster
 
-On the cluster management page, there are a number of tabs which allow you to manage aspects of your cluster:
+Here you can perform the following actions on the entire cluster:
+
+* Delete the cluster by clicking the delete icon
+* Rename the cluster or edit its description by clicking the edit icon
+
+{{% alert type="info" %}}
+When you delete a cluster, this removes the cluster from the Developer Portal. However, it will not remove the cluster from your platform. You will need to explicitly delete the cluster using the tools provided by your platform.
+{{% /alert %}}
+
+#### 4.1.2 Managing a Namespace
+
+You can also manage a namespace in the cluster.
+
+Click the **Details** button for the namespace you want to manage.
+
+On the namespace management page, there are a number of tabs which allow you to manage aspects of your namespace :
 
 * Apps
 * Members
@@ -278,27 +311,29 @@ On the cluster management page, there are a number of tabs which allow you to ma
 
 See the sections below for more information.
 
-You can also delete your cluster from the cluster manager by clicking the delete icon in the top right.
+You can also delete your namespace from the cluster manager by clicking the delete icon in the top right.
 
 ![](attachments/private-cloud-cluster/image25.png)
 
-When you delete a cluster, this removes the cluster from the Developer Portal. However, it will not remove the namespace from your platform. You will need to explicitly delete the cluster using the tools provided by your platform.
+If there are any environments associated with the namespace, you cannot delete the namespace until the environments associated with it are deleted.
 
-If there are any environments associated with the cluster, you cannot delete the cluster until the environments associated with it are deleted.
+When you delete a namespace, this removes the namespace from the cluster in the Developer Portal. However, it will not remove the namespace from your platform. You will need to explicitly delete the namespace using the tools provided by your platform.
 
 ![](attachments/private-cloud-cluster/image26.png)
 
-### 4.1 Apps
+### 4.2 Apps
 
-The **Apps** tab of the cluster manager page lists all the apps which are deployed to this cluster.
+The **Apps** tab of namespace details in the cluster manager page lists all the apps which are deployed to this namespace.
+
+{{% todo %}}[Check this and all other images for consistent cluster/namespace/environment/app names]{{% /todo %}}
 
 ![](attachments/private-cloud-cluster/image27.png)
 
 Click **Details** to go to the **Environment Details** page for that app.
 
-### 4.2 Members
+### 4.3 Members
 
-By default, the cluster manager, who registered the cluster in Mendix, has full administration rights to the cluster. These are:
+By default, the cluster manager, who created the cluster in Mendix, has full administration rights to the cluster and its namespaces. These administration rights are:
 
 * Manage Environment – user can create and delete environments, and start and stop the application
 * Deploy App – user can deploy a new app to the environment or start and stop existing apps
@@ -311,14 +346,19 @@ By default, the cluster manager, who registered the cluster in Mendix, has full 
 * Manage App Backups
 
 {{% alert type="info" %}}
-Only the person who registered the cluster can add, activate, or deactivate plans, invite and manage users, and set up operating URLs for the cluster.
+In addition, only the person who created the cluster can do the following:
+
+* add and delete namespaces
+* add, activate, or deactivate plans
+* invite and manage users
+* and set up operating URLs for the namespace
 {{% /alert %}}
 
-The **Members** tab allows you to manage the list of members of the cluster and control what rights they have.
+The **Members** tab allows you to manage the list of members of the namespace and control what rights they have.
 
-#### 4.2.1 Adding Members
+#### 4.3.1 Adding Members
 
-You can invite additional members to the cluster, and configure their role depending on what they should be allowed to do.
+You can invite additional members to the namespace, and configure their role depending on what they should be allowed to do.
 
 1. The **Members** tab displays a list of current members (if any).
 
@@ -338,11 +378,11 @@ You can invite additional members to the cluster, and configure their role depen
     
     ![](attachments/private-cloud-cluster/image29.png)
 
-6. The user will receive an email and will be required to follow a link to confirm that they want to join this cluster. They will need to be logged in to Mendix when they follow the confirmation link.
+6. The user will receive an email and will be required to follow a link to confirm that they want to join this namespace. They will need to be logged in to Mendix when they follow the confirmation link.
 
     {{% alert type="warning" %}}There is currently an issue where users cannot accept an invite if they have not first visited the cluster manager page. The workaround is first to go to the cluster manager page [https://privatecloud.mendixcloud.com/](https://privatecloud.mendixcloud.com/) and then go to the URL send in the invitation email.{{% /alert %}}
 
-#### 4.2.2 Editing & Removing Members
+#### 4.3.2 Editing & Removing Members
 
 You can change the access rights for, or completely remove, existing members.
 
@@ -356,7 +396,7 @@ You can change the access rights for, or completely remove, existing members.
         
     ![](attachments/private-cloud-cluster/image30.png)
 
-### 4.3 Operate{#operate}
+### 4.4 Operate{#operate}
 
 The **Operate** tab allows you to add a set of links which are used when users request a page from the Operate category for their app in the Developer Portal, as shown below.
 
@@ -371,37 +411,37 @@ The following pages can be configured:
 
 The specification of these pages is optional.
 
-Open the **Operate** tab, enter the URLs relevant to your cluster, and click **Save** for each one.
+Open the **Operate** tab, enter the URLs relevant to your namespace, and click **Save** for each one.
 
 ![](attachments/private-cloud-cluster/image32.png)
 
-### 4.4 Plans
+### 4.5 Plans
 
-The **Plans** tab shows you the database and storage plans which are currently configured for your cluster.
+The **Plans** tab shows you the database and storage plans which are currently configured for your namespace.
 
 ![](attachments/private-cloud-cluster/image33.png)
 
 From this tab you can perform the following action:
 
-#### 4.4.1 Add a Plan
+#### 4.5.1 Add a Plan
 
-Click **Add** and you will be able to enter the name of an existing plan and add it to the plans linked to this cluster. You should only use this when adding plans using the cluster Reconfiguration Script fails to add them correctly.
+Click **Add** and you will be able to enter the name of an existing plan and add it to the plans linked to this namespace. You should only use this when adding plans using the namespace Reconfiguration Script fails to add them correctly.
 
 ![](attachments/private-cloud-cluster/image34.png)
 
-#### 4.4.2 Deactivate a Plan
+#### 4.5.2 Deactivate a Plan
 
 Click **Deactivate** next to the name of the plan you wish to deactivate. You cannot remove plans from within the cluster manager, but you can deactivate them to ensure that developers cannot create environments using the plan. Any environments currently using the plan will not be affected by this setting.
 
-#### 4.4.3 Activate a Plan
+#### 4.5.3 Activate a Plan
 
 Click **Activate** next to the name of the plan you wish to activate. The plan can then be used by developers when they create an environment to deploy their apps.
 
-### 4.5 Installation
+### 4.6 Installation
 
-The **Installation** tab shows you the installation script and configuration script which you used to create the cluster, together with the parameters which are used to configure the agent.
+The **Installation** tab shows you the installation script and configuration script which you used to create the namespace, together with the parameters which are used to configure the agent.
 
-You can use the **Reconfiguration Script** to change the configuration of your cluster by pasting it into a bash shell as described in [Running the Reconfiguration Script](#reconfiguration-script), above.
+You can use the **Reconfiguration Script** to change the configuration of your namespace by pasting it into a bash shell as described in [Running the Reconfiguration Script](#reconfiguration-script), above.
 
 You can also copy the installation and reconfiguration scripts to retain in your own code repository, if you wish.
 
@@ -421,15 +461,17 @@ This section covers an issue which can arise where Mendix cannot recover automat
 
 ### 6.1 Status Reporting
 
-Under some circumstances changes in the status of the cluster and its environments will not be updated automatically. To ensure you are seeing the current status, you may need to click the **Refresh** button on the screen (not the browser page refresh button).
+Under some circumstances changes in the status of the cluster, namespaces, and environments will not be updated automatically. To ensure you are seeing the current status, you may need to click the **Refresh** button on the screen (not the browser page refresh button).
 
 ### 6.2 Agent Connection Status Not up to Date
 
-The Cluster status may show as `Waiting for Connection`, even though the Agent is actually connected to the cluster. The Agent needs to be restarted to force it to reconnect.
+The namespace status may show as `Waiting for Connection`, even though the Agent is actually connected to the namespace. The Agent needs to be restarted to force it to reconnect.
 
 Run the following command in the namespace where the Mendix Operator is deployed:
 
 #### 6.2.1 OpenShift
+
+First go to the namespace using the command `oc config set-context --current --namespace={namespace}`, using the name of your namespace.
 
 ```bash
 oc scale deployment mendix-agent --replicas=0 && \
@@ -439,6 +481,8 @@ oc scale deployment mendix-agent --replicas=1
 ```
 #### 6.2.2 Kubernetes
 
+First go to the namespace using the command `kubectl config set-context --current --namespace={namespace}`, using the name of your namespace.
+
 ```bash
 kubectl scale deployment mendix-agent --replicas=0 && \
 sleep 200 && \
@@ -447,8 +491,8 @@ kubectl scale deployment mendix-agent --replicas=1
 
 ## 7 Containerized Mendix App Architecture{#containerized-architecture}
 
-Within your cluster you can run one, or several, Mendix apps. Each app runs in a namespace. You can see the relationship between the Mendix environments and the Kubernetes namespaces in the image below.
+Within your cluster you can run one, or several, Mendix apps. Each app runs in an environment, and each environment is in a namespace. You can see the relationship between the Mendix environments and the Kubernetes namespaces in the image below.
 
 ![](attachments/private-cloud-cluster/mx4pc-containerized-architecture.png)
 
-Because you can run several Mendix apps in the same cluster, each app must have a unique name. In addition, the app cannot have the same name as the Mendix tools used to deploy the app. See Deploy an app to Private Cloud for more information.
+Because you can run several Mendix apps in the same namespace, each app must have a unique name. In addition, the app cannot have the same name as the Mendix tools used to deploy the app. See Deploy an app to Private Cloud for more information.

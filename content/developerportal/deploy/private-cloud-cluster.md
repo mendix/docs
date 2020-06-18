@@ -380,8 +380,6 @@ You can invite additional members to the namespace, and configure their role dep
 
 6. The user will receive an email and will be required to follow a link to confirm that they want to join this namespace. They will need to be logged in to Mendix when they follow the confirmation link.
 
-    {{% alert type="warning" %}}There is currently an issue where users cannot accept an invite if they have not first visited the cluster manager page. The workaround is first to go to the cluster manager page [https://privatecloud.mendixcloud.com/](https://privatecloud.mendixcloud.com/) and then go to the URL send in the invitation email.{{% /alert %}}
-
 #### 4.3.2 Editing & Removing Members
 
 You can change the access rights for, or completely remove, existing members.

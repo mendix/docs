@@ -181,6 +181,10 @@ When you reconfigure your namespace with databases or storage, you will add new 
 
 You can return to this initial question from any of the other questions by choosing the option **Go back to the start** where it is available.
 
+{{% alert type="info" %}}
+At the moment, the configuration script does not validate input values. Configuration can be verified by deploying by deploying a sample app.
+{{% /alert %}}
+
 #### 3.4.2 Pick a database type
 
 ![](attachments/private-cloud-cluster/image17.png)
@@ -188,7 +192,7 @@ You can return to this initial question from any of the other questions by choos
 **Postgres** will enable you to enter the values to configure a PostgreSQL database. You will need to provide all the information about your PostgreSQL database such as plan name, host, port, database, user, and password.
 
 {{% alert type="info" %}}
-If the plan already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, which will now have the new configuration.
+If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, which will now have the new configuration.
 {{% /alert %}}
 
 {{% alert type="info" %}}
@@ -201,7 +205,15 @@ To connect to an Amazon RDS database, the VPC and firewall should be configured 
 
 **Ephemeral** will enable you to quickly set up your environment and deploy your app, but any data you store in the database will be lost when you restart your environment.
 
-**SQL Server** will enable you to enter the values to configure a Microsoft SQL Server database. You will need to provide all the information about your SQL Server database such as plan name, host, port, database, user, and password. 
+**SQL Server** will enable you to enter the values to configure a Microsoft SQL Server database. You will need to provide all the information about your SQL Server database such as plan name, host, port, user, and password. 
+
+{{% alert type="info" %}}
+If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, which will now have the new configuration.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+To connect to an Azure PostgreSQL server, the Kubernetes cluster should be added to the list of allowed hosts in the firewall.
+{{% /alert %}}
 
 {{% alert type="info" %}}
 For Azure SQL databases, additional parameters are required to specify the database elastic pool name, tier, service objective and maximum size.
@@ -214,7 +226,11 @@ A dedicated JDBC database cannot be used by more than one Mendix app.
 {{% /alert %}}
 
 {{% alert type="info" %}}
-If the plan already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, which will now have the new configuration.
+Configuration parameters will not validated and will be provided to the Mendix app as-is. If the arguments are not valid or there's an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, which will now have the new configuration.
 {{% /alert %}}
 
 {{% alert type="info" %}}
@@ -227,7 +243,7 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide)
 
 **Minio** will connect to a [MinIO](https://min.io/product/overview) S3-compatible object storage. You will need to provide all the information about your MinIO storage such as endpoint, access key, and secret key. The MinIO server needs to be a full-featured MinIO server and not a [MinIO Gateway](https://github.com/minio/minio/tree/master/docs/gateway).
 
-**Amazon S3 (on-demand)** will connect to an AWS account to create S3 buckets and associated IAM accounts. Each app will receive a dedicated S3 bucket and an IAM account which only has access to that specific S3 bucket. You will need to provide all the information about your Amazon S3 storage such as plan name, region, access key, and secret key. The associated IAM account needs to have the following IAM policy (replace `<account_id>` with your AWS account number):
+**S3 (create on-demand)** will connect to an AWS account to create S3 buckets and associated IAM accounts. Each app will receive a dedicated S3 bucket and an IAM account which only has access to that specific S3 bucket. You will need to provide all the information about your Amazon S3 storage such as plan name, region, access key, and secret key. The associated IAM account needs to have the following IAM policy (replace `<account_id>` with your AWS account number):
 ```json
 {
     "Version": "2012-10-17",
@@ -261,10 +277,10 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide)
 ```
 
 {{% alert type="info" %}}
-If the plan already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, which will now have the new configuration.
+If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, which will now have the new configuration.
 {{% /alert %}}
 
-**Amazon S3 (existing bucket)** will connect to an existing S3 bucket with the provided IAM account access key and secret keys. All apps app will use the same S3 bucket and an IAM account. You will need to provide all the information about your Amazon S3 storage such as plan name, endpoint, access key, and secret key. The associated IAM account needs to have the following IAM policy (replace `<bucket_name>` with the your S3 bucket name):
+**S3 (existing bucket)** will connect to an existing S3 bucket with the provided IAM account access key and secret keys. All apps will use the same S3 bucket and an IAM account. You will need to provide all the information about your Amazon S3 storage such as plan name, endpoint, access key, and secret key. The associated IAM account needs to have the following IAM policy (replace `<bucket_name>` with the your S3 bucket name):
 ```json
 {
   "Version": "2012-10-17",
@@ -287,35 +303,42 @@ If the plan already exists you will receive an error that it cannot be created. 
 ```
 
 {{% alert type="info" %}}
-If such Storage Plan is shared by multiple environments, all environments using that Storage Plan be using the same Access and Secret keys and will have identical permissions.
-
-Each environment will be writing into its own directory inside the bucket.
-
-To avoid compromising security, this type of plan should not be allowed to be used by multiple environments.
+Configuration parameters will not validated and will be provided to the Mendix app as-is. If the arguments are not valid or there's an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
 {{% /alert %}}
 
 {{% alert type="info" %}}
-If the plan already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, which will now have the new configuration.
+
+If you select _Yes_ to the _Can this storage be used by multiple environments?_ question, all environments using that Storage Plan will be using the same Access and Secret keys and will have identical permissions. 
+Each app will be writing into its own directory inside the bucket.
+
+To avoid compromising security, answer _No_ to the _Can this storage be used by multiple environments?_ question. This way, only one app will be able to use this Storage Plan, and attaching another app to the same storage plan will not be possible.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, which will now have the new configuration.
 {{% /alert %}}
 
 {{% alert type="info" %}}
 To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.1.0 or later.
 {{% /alert %}}
 
-**Azure Blob storage Container (existing)** will connect to an existing Azure Blob storage Container with the provided storage account name and key. All apps app will use the same Container bucket and account credentials. You will need to provide all the information about your Amazon S3 storage such as plan name, account name, account key, and container name.
+**Azure Blob storage Container (existing)** will connect to an existing Azure Blob storage Container with the provided storage account name and key. All apps will use the same Container bucket and account credentials. You will need to provide all the information about your Azure Blob storage such as plan name, account name, account key, and container name.
+
+{{% alert type="info" %}}
+Configuration parameters will not validated and will be provided to the Mendix app as-is. If the arguments are not valid or there's an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
+{{% /alert %}}
 
 {{% alert type="info" %}}
 
-If such Storage Plan is shared by multiple environments, all environments using that Storage Plan be using the same account name and account keys keys and will have identical permissions.
+If you select _Yes_ to the _Can this storage be used by multiple environments?_ question, all environments using that Storage Plan will be using the same account name and account keys keys and will have identical permissions.
+All apps using will write into the same Azure Blob storage Container into its root directory.
 
-All apps using this storage plan will write into the same Azure Blob storage Container into its root directory.
-
-To avoid compromising security, this type of plan should not be allowed to be used by multiple environments.
+To avoid compromising security, answer _No_ to the _Can this storage be used by multiple environments?_ question. This way, only one app will be able to use this Storage Plan, and attaching another app to the same storage plan will not be possible.
 
 {{% /alert %}}
 
 {{% alert type="info" %}}
-If the plan already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, which will now have the new configuration.
+If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, which will now have the new configuration.
 {{% /alert %}}
 
 {{% alert type="info" %}}

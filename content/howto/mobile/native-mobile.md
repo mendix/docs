@@ -2,7 +2,7 @@
 title: "Native Mobile"
 category: "Mobile"
 menu_order: 1
-tags: ["mobile", "native"]
+tags: ["mobile", "native", "iOS", "Android"]
 ---
 
 ## 1 Introduction
@@ -19,6 +19,7 @@ You build Mendix native mobile apps the same way you build web or hybrid apps. Y
 * [Use Local Notifications](local-notif-parent)
 * [Build Native Mobile Apps with Parallels](using-mendix-studio-pro-on-a-mac)
 * [Implement Native Mobile Styling](native-styling)
+* [Implement Best Practices for Native Mobile App UI](ui-best-practices)
 * [Debug Native Mobile Apps (Advanced)](native-debug)
 * [Deploy Your First Mendix Native Mobile App](deploying-native-app)
 * [Use Local Notifications](local-notif-parent)

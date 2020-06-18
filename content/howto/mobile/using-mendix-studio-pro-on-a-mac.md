@@ -48,7 +48,7 @@ To configure your Windows virtual machine to work with Mendix Studio Pro, follow
 
 	{{% image_container width="450" %}}![network tab](attachments/using-mendix-studio-pro-on-a-mac/parallels-preferences-no-ports.png){{% /image_container %}}
 
-8.  Click the **+** button and add two ports — one for 8080 and one for 8083, both forwarded to your Windows virtual machine (the 8083 port is only necessary for developing native mobile apps):
+8.  Click the **+** button and add two ports: one for 8080 and one for 8083, both forwarded to your Windows virtual machine (the 8083 port is only necessary for developing native mobile apps):
 
 	{{% image_container width="450" %}}![plus button](attachments/using-mendix-studio-pro-on-a-mac/port-setup.png){{% /image_container %}}
 

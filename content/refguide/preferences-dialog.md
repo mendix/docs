@@ -1,7 +1,7 @@
 ---
 title: "Preferences"
 parent: "edit-menu"
-tags: ["studio pro"]
+tags: ["studio pro", "preferences", "edit menu"]
 ---
 
 ## 1 Introduction
@@ -83,9 +83,13 @@ The **New features** tab allows you to turn new features on and off. These are f
 You need to restart Studio Pro for changes to these settings to take effect.
 {{% /alert %}}
 
-#### 5.1 Enable Data Hub and Virtual Entities [Beta feature] {#enable-data-hub-pane}
+#### 5.1 Enable Data Hub and Virtual Entities (Beta Feature) {#enable-data-hub-pane}
 
-With this option, you can enable the [Data Hub](data-hub-pane) pane and virtual entities.
+{{% alert type="info" %}}
+The documentation in this section describes a new feature that is still in [beta](releasenotes/beta-features).
+{{% /alert %}}
+
+With this option, you can enable the [Data Hub pane](data-hub-pane) and [virtual entities](entities#virtual-entities).
 
 Default: *disabled*
 

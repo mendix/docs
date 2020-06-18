@@ -8,25 +8,25 @@ tags: ["Deploy", "Private Cloud", "Environment"]
 
 ## 1 Introduction
 
-To deploy apps to your private cloud cluster (for example to Red Hat OpenShift or AWS-EKS), the cluster needs to be registered in the Mendix Developer Portal. This creates a link between the Mendix Developer Portal and the cluster. See [Registering a Private Cloud Cluster](private-cloud-cluster) for instructions on how to do this.
+To deploy apps to your private cloud cluster (for example to Red Hat OpenShift or AWS-EKS), the cluster needs to be registered in the Mendix Developer Portal. This creates a link between the Mendix Developer Portal and the cluster. See [Creating a Private Cloud Cluster](private-cloud-cluster) for instructions on how to do this.
 
-Once the cluster has been registered, team members with *Deploy App* rights can create environments and deploy an app.
+Once the cluster has been registered, and a namespace created, team members with *Deploy App* rights can create environments and deploy an app.
 
 This document explains how to use the Mendix Developer Portal to deploy the app.
 
-Alternatively, you can provide the CRs through the console or command line for a standalone cluster. This is described in [Using Command Line to Deploy a Mendix App to a Private Cloud Cluster](private-cloud-operator).
+Alternatively, you can provide the CRs through the console or command line for a namespace in a standalone cluster. This is described in [Using Command Line to Deploy a Mendix App to a Private Cloud Cluster](private-cloud-operator).
 
-Within your cluster you can run one, or several, Mendix apps. Each app runs in a namespace. You can see the relationship between the Mendix environments and the Kubernetes namespaces in the image below.
+Within your namespace you can run one, or several, Mendix apps. You can see the relationship between the Mendix environments and the Kubernetes namespaces in the image below.
 
 ![](attachments/private-cloud-deploy/mx4pc-containerized-architecture.png)
 
-Because you can run several Mendix apps in the same cluster, each app must have a unique name. In addition, the app cannot have the same name as the Mendix tools used to deploy the app. See the section [Reserved Names for Mendix Apps](#reserved-names), below.
+Because you can run several Mendix apps in the same namespace, each app must have a unique name. In addition, the app cannot have the same name as the Mendix tools used to deploy the app. See the section [Reserved Names for Mendix Apps](#reserved-names), below.
 
 ##  2 Prerequisites for Deploying an App
 
 To deploy an app to your private cloud platform, you need the following:
 
-* A Mendix account with **Deploy App** rights to an existing Cluster – see [Registering a Private Cloud Cluster](private-cloud-cluster) for more information on setting up clusters and adding members
+* A Mendix account with **Deploy App** rights to an existing Cluster – see [Registering a Private Cloud Cluster](private-cloud-cluster) for more information on setting up clusters and namespaces and adding members
 * Mendix Studio Pro version 7.23.3 (build 48173) or above
 * A Mendix app created with the version of Studio Pro you are using.
 
@@ -63,7 +63,7 @@ First you need to create an environment:
 
 2. Enter **Environment Name**, the name for the environment. The environment name can only contain lowercase letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production.
 
-3. Use the drop-down **Select Cluster** to select an existing cluster. You will see all clusters of which you are a member.
+3. Use the drop-down **Select Namespace** to select an existing namespace. You will see all namespaces of which you are a member.
 
 4. Select the **Purpose**.
     
@@ -78,21 +78,22 @@ First you need to create an environment:
 
 6. Select **Core Resources**.
 
-    There are four pre-defined sets of resources, **Tiny**, **Small**, **Medium**, and **Large**. Choosing these will set the **CPU** and **Memory** values automatically.
+    For core resources, there are two sets of values. The **Request** value is the amount of core resources which are initially requested. The **Limit** value is the maximum amount of resource that the environment can use.
 
-    | **Name** | **CPU cores**    | **Memory (Gb)**   |
-    | -------- | ---------------- | ----------------- |
-    | Tiny     | 0.25             | 0.5               |
-    | Small    | 1                | 1                 |
-    | Medium   | 2                | 2                 |
-    | Large    | 3                | 3                 |
-    | Custom   | own choice, should be at least 0.25 | own choice, should be at least 0.5GB |
+    There are three pre-defined sets of resources, **Small**, **Medium**, and **Large**. Choosing these will set the **CPU** and **Memory** values automatically.
 
-    Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**.
+    | **Name** | **CPU cores**: Limit | **Memory (Gb)**: Limit | **CPU cores**: Request | **Memory (Gb)**: Request |
+    | --- | --- | --- | --- | --- |
+    | Small | 1 | 0.5 | 0.1 | 0.5 |
+    | Medium | 2 | 2 | 1 | 1 |
+    | Large | 4 | 4 | 2 | 2 |
+    | Custom | own choice | own choice | own choice | own choice |
 
-7. Select a **Database plan** from the list of plans set up in the cluster.
+    Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**. Ensure that these values are the same or greater than the values for a *Small* enviroment, otherwise you may run into problems running your app.
 
-8. Select a **Storage plan** from the list of plans set up in the cluster.
+7. Select a **Database plan** from the list of plans set up in the namespace.
+
+8. Select a **Storage plan** from the list of plans set up in the namespace.
     
     ![](attachments/private-cloud-deploy/image7.png)
 
@@ -305,7 +306,7 @@ This button contains a list of actions which you can perform quickly on the envi
 
 * **Start Application** (only shown if app is stopped) – allows you to start a stopped application
 * **Transport Package** – allows you to deploy the deployment package in the current environment to another environment within the app project, or to redeploy it in the current environment
-* **Environment Logs** – takes you to the log page defined by the cluster manager when they registered the cluster
+* **Environment Logs** – takes you to the log page defined by the cluster manager when they registered the namespace
 * **Model Options** – allows you to change the running of scheduled events and the values of constants for your app by taking you to the **Model Options** tab of the **Environment Details** page
 * **Stop Application** (only shown if at least one replica is running) — stops the application by reducing the number of replicas to zero
 **Delete Environment** – this deletes the environment (see [Current Limitations](#limitations), below, for additional details about what is deleted) — you will be asked to confirm this action
@@ -411,7 +412,11 @@ All names beginning **mendix-** are reserved for use by the Mendix Operator.
 
 All names beginning **openshift-** are reserved for use by OpenShift if you are deploying to an OpenShift cluster.
 
-### 6.2 Deleting the Cluster
+### 6.2 Deleting Your App
+
+Delete all environments before you delete an app. If you delete an app which has existing private cloud environments, you will not be able to reach the environments through the Developer Portal.
+
+### 6.3 Deleting the Cluster
 
 Delete all the environments from the Mendix Developer Portal before you delete the namespace from your Kubernetes cluster. If you do not do this, the database and file storage will not be removed from the environment.
 
@@ -433,7 +438,7 @@ kubectl get storageinstance -n {namespace}
 
 Both commands should return an empty list.
 
-### 6.2.1 Deleting StorageInstance CRs
+### 6.3.1 Deleting StorageInstance CRs
 
 If the Operator fails to deprovision an app's database or file storage, the `*-database` or `*-file` Pod will fail with an Error state:
 
@@ -455,7 +460,7 @@ This will also delete the failed Pod.
 
 After manually removing the StorageInstance, you'll need to manually clean up any resources associated with it, such as the database, S3 bucket or associated AWS IAM account.
 
-### 6.3 App Security and Production
+### 6.4 App Security and Production
 
 If you attempt to deploy an app with security not set to production into a production environment you will not get an error, however the deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
 
@@ -469,7 +474,7 @@ Under some circumstances changes in the status of the environment and its apps w
 
 ### 7.2 Agent Connection Status Not up to Date
 
-Under certain conditions, the status of an environment in the Portal might become outdated and not reflect the environment state in the cluster. The Agent needs to be restarted to force it to resend the latest environment state to the Portal.
+Under certain conditions, the status of an environment in the Portal might become outdated and not reflect the environment state in the namespace. The Agent needs to be restarted to force it to resend the latest environment state to the Portal.
 
 You need to run the following command in the namespace where the Mendix Operator is deployed:
 
@@ -499,7 +504,7 @@ kubectl scale deployment mendix-agent --replicas=1
 
 ## 8 How the Operator Deploys Your App {#how-operator-deploys}
 
-The Mendix Operator is another app within your private cloud cluster. It is triggered when you provide a CR file. The process looks like this:
+The Mendix Operator is another app within your private cloud namespace. It is triggered when you provide a CR file. The process looks like this:
 
 ![](attachments/private-cloud-deploy/mx4pc-operator-deploy.png)
 
@@ -513,4 +518,4 @@ The Mendix Operator CR is processed by the Mendix Operator into four steps:
 
 4. The OpenShift Route CR is created – this sets up a route to the app.
 
-The Runtime CR is now complete, and the Runtime Controller uses the CR to pull the Docker image from the Image Registry and deploy it to an App Container in the OpenShift Cluster.
+The Runtime CR is now complete, and the Runtime Controller uses the CR to pull the Docker image from the Image Registry and deploy it to an App Container in the OpenShift namespace.

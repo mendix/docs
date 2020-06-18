@@ -28,7 +28,7 @@ Mendix for Private Cloud is a premium offering from Mendix, and there are additi
 
 ### 1.1 Registering Your Cluster
 
-The first step is to register your private cloud cluster in the Developer Portal. For more information see [Registering a Private Cloud Cluster](private-cloud-cluster).
+The first step is to register your private cloud cluster in the Developer Portal. For more information see [Creating a Private Cloud Cluster](private-cloud-cluster).
 
 This activity needs to be done by a systems administrator who has administration rights to the platform where the cluster is being created.
 

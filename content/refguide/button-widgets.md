@@ -10,7 +10,7 @@ tags: ["studio pro", "button widgets", "buttons", "widget"]
 
 Button widgets perform an action when clicked. They can be rendered as a button or as a hyperlink. Button widgets can be divided into the following ones:
 
-* **Action Button**– a general name for a button that performs a certain action. You can assign an action yourself or you can select a button with a preconfigured action, such as: 
+* **Action Button** – a general name for a button that performs a certain action. You can assign an action yourself or you can select a button with a preconfigured action, such as: 
   * Call microflow button
   * Call nanoflow button
   * Open page button

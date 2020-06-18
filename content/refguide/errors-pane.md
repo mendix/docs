@@ -14,7 +14,10 @@ When a consistency check is not met, Studio Pro will notify you about this on th
 
 ![Errors Pane](attachments/errors-pane/errors-pane.png)
 
-To display the **Errors** pane, open the menu option **View > Error list**.
+To display the **Errors** pane, there are two options:
+
+* Right-click the element with the highlighted error and select **Found error** > **Go to Error List**
+* Open the menu option **View > Error List**
 
 ## 2 Types of Messages {#message-types}
 

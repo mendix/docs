@@ -2,7 +2,7 @@
 title: "Translate Your App Content"
 category: "Collaboration"
 menu_order: 50
-tags: ["studio pro"]
+tags: ["studio pro", "translate app", "batch translate", "translate"]
 ---
 
 ## 1 Introduction

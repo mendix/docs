@@ -29,6 +29,7 @@ You will need to take the following into account when planning to migrate to Men
 * Your app needs to be on a supported version of Mendix, that is **Mendix version 6.0 or above**
 * If you are using Mendix 7, you might want to split long-running scheduled events into smaller chunks, using a queueing system like the Amazon SQS connector to spread the work out over multiple instances
 * If you use a mail server from your app, you will need to use a third-party email provider – for more information, see [Sending Email](sending-email)
+* If you use an FTP server in your app, you will need to use a third-party FTP provider 
 * If you are currently using a VPN to secure your app, you will have to use one of the recommended methods discussed in [Securing Outgoing Connections from Your Application](securing-outgoing-connections-from-your-application) instead.
 
 To make the most of the features of Mendix Cloud v4, we recommend that your apps are built as [12-factor apps](https://12factor.net/).

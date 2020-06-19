@@ -23,7 +23,7 @@ These are the available charts:
 
 ### 1.1 Demo App Project
 
-For a demo app project that has been deployed with these widgets, see [here](https://charts102.mxapps.io).
+For a demo app project that has been deployed with these widgets, see [here](https://charts102-sandbox.mxapps.io/p/home).
 
 ## 2 Basic Configuration
 

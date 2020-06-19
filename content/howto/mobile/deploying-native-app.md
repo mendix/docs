@@ -11,6 +11,7 @@ tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
 This how-to will teach you how to go from a blank slate to an app running on a device.
 
 Every Native Builder project has configurations. These configurations are useful for preparing your app, and then creating builds on App Center and GitHub respectively. Configurations are also critical for making updates to apps already delivered to production devices. For more information on the Native Builder's capabilities, see the [Native Builder Reference Guide](/refguide/native-builder).
+The native build-process will use your local application, create a repository on Github, have AppCentre use the Github-repo, build the apk and then download the resulting apk to your local storage.    
 
 ## 2 Prerequisites {#prerequisites}
 
@@ -24,6 +25,8 @@ Before starting this how-to, make sure you have completed the following prerequi
  * Use v1.0.0 with Mendix 8.0
  * Use v2.0.0 with Mendix 8.1.0 and above
  * Use v3.0.0 with Mendix 8.3.0 and above
+* A Github account. A personal account will do, but better is a company account.
+* An AppCentre.ms account. A personal account will do, but better is a paid company account, certainly if you will be building and deploying regularly.
 
 ### 2.1 Platform-Specific Prerequisites
 
@@ -113,6 +116,7 @@ To address the warning, complete the following steps (you must do them for both 
 If you run into errors while running the `prepare` command, try running your CLI as an administrator.
 {{% /alert %}}
 
+{{% alert type="info" %}} A free account might run out of build hours (4 hours/month). This is per organization, so a workaround is to add another organization with another github-access-token. {{% /alert %}}
 You have successfully prepared your app, and in the next section will make a build from it.
 
 ## 5 Making Your First Build {#first-build}

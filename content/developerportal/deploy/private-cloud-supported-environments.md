@@ -76,7 +76,7 @@ The local image registry can be used in an OpenShift cluster. It is not possible
 
 Image pull authentication will be configured out of the box.
 
-OpenShift 4 registries doesn't need any configuration and will be configured automatically.
+OpenShift 4 registries don't need any configuration and will be configured automatically.
 
 For an OpenShift 3 registry, the pull URL should be set to `docker-registry.default.svc:5000`.
 The push URL should be set to `<registry ip>:5000` where `<registry ip>` can be obtained by running `oc get svc docker-registry -n default`.
@@ -159,7 +159,7 @@ For every Mendix app environment, a new database, user and login will be created
 
 ### 4.4 Dedicated JDBC database
 
-This allows to use an existing database (schema) [database configuration parameters](/refguide/custom-settings) directly as supported by the Mendix Runtime.
+This allows you to use an existing database (schema) [database configuration parameters](/refguide/custom-settings) directly as supported by the Mendix Runtime.
 
 {{% alert type="info" %}}
 A dedicated JDBC database cannot be used by more than one Mendix app.
@@ -240,11 +240,11 @@ The Mendix Operator can access an existing S3 bucket, with an existing IAM accou
 
 {{% alert type="info" %}}
 
-If such Storage Plan is shared by multiple environments, all environments using that Storage Plan be using the same Access and Secret keys and will have identical permissions.
+If such a Storage Plan is shared by multiple environments, all environments using that Storage Plan be using the same Access and Secret keys and will have identical permissions.
 
 Each environment will be writing into its own directory inside the bucket.
 
-To avoid compromising security, this type of plan should not be allowed to be used by multiple environments.
+To avoid compromising security, this type of plan should not be used by multiple environments.
 
 {{% /alert %}}
 

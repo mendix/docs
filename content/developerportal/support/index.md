@@ -184,7 +184,7 @@ The full stack is depicted in the table below. This indicates which components a
 <td>Mendix</td>
 <td></td>
 <td></td>
-<td>Mendix Partner</td>
+<td>Mendix Partner¹</td>
 <td></td>
 <td></td>
 </tr>
@@ -217,7 +217,7 @@ The full stack is depicted in the table below. This indicates which components a
 <td>Mendix</td>
 <td></td>
 <td></td>
-<td>Mendix Partner</td>
+<td>Mendix Partner¹</td>
 <td></td>
 <td></td>
 </tr>
@@ -228,7 +228,7 @@ The full stack is depicted in the table below. This indicates which components a
 <td>Mendix</td>
 <td></td>
 <td></td>
-<td>Mendix Partner</td>
+<td>Mendix Partner¹</td>
 <td></td>
 <td></td>
 </tr>
@@ -239,33 +239,47 @@ The full stack is depicted in the table below. This indicates which components a
 <td>Mendix</td>
 <td></td>
 <td></td>
-<td>Mendix Partner</td>
+<td>Mendix Partner¹</td>
 <td></td>
 <td></td>
 </tr>
 </tbody>
 </table>
 
+¹Support will go through SAP Support
+
+In the diagrams below, the following colors are used:
+
+{{% image_container width="50%" %}}
+![](attachments/index-mendix-support/legend.png)
+{{% /image_container %}}
+
 ### 9.1 Mendix Public and Dedicated Cloud
 
 The Mendix Public and Dedicated Clouds are an integrated part of the Mendix Platform and are therefore fully supported as described in the SLA.
 Mendix Support has access to app health, logs, graphs and monitoring.
 
+{{% image_container width="75%" %}}
 ![](attachments/index-mendix-support/mendix-cloud.png)
+{{% /image_container %}}
 
 ### 9.2 Mendix for Private Cloud
 
 Mendix for Private Cloud is based on the Kubernetes-Native Operator Framework. You can check the supported Kubernetes platforms in our [Private Cloud](/developerportal/deploy/private-cloud) documentation. Check our [System Requirements](/refguide/system-requirements) for other supported components like database and storage. The Mendix Gateway Agent and Mendix Operator are supported by Mendix.
 Mendix Support does not have access to app health, logs, graphs and monitoring. If you run into issues or want to ask a question on these supported components, please always provide relevant logs, data, and your own analysis that explains why you suspect the issue is caused by one of our supported components.
 
+{{% image_container width="75%" %}}
 ![](attachments/index-mendix-support/private-cloud.png)
+{{% /image_container %}}
 
 ### 9.3 SAP Cloud Platform
 
 Mendix provides an integration with the SAP Cloud Foundry environment of SAP Cloud Platform. Mendix applications are built to run on SAP Cloud Platform using the Mendix Cloud Foundry buildpack. Please check out the supported components in [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform).
 Mendix Support does not have access to app health, logs, graphs and monitoring. If you run into issues or want to ask a question on these supported components, please always provide relevant logs, data, and your own analysis that explains why you suspect the issue is caused by one of our supported components
 
+{{% image_container width="40%" %}}
 ![](attachments/index-mendix-support/sap-cloud-platform.png)
+{{% /image_container %}}
 
 ### 9.4 Cloud Foundry / Docker & Kubernetes / traditional architectures
 
@@ -275,7 +289,9 @@ Check our [System Requirements](/refguide/system-requirements) for the supported
 
 Mendix Support does not have access to app health, logs, graphs and monitoring. If you run into issues or want to ask a question on these supported components, please always provide relevant logs, data and your own analysis that explains why you suspect the issue is caused by one of our supported components.
 
+{{% image_container width="75%" %}}
 ![](attachments/index-mendix-support/on-premises.png)
+{{% /image_container %}}
 
 ## 10 Components of the Mendix Stack{#components}
 
@@ -342,7 +358,7 @@ Please read all about the Mendix Runtime in [Mendix Runtime](/refguide/runtime).
 
 Mendix Support needs application logs to diagnose this component. Because Mendix has no control over the context in which the runtime is run, outside of the Mendix Public Cloud and Cloud Dedicated, you will have to demonstrate that the bug is in the supported component by showing the behavior independently from the context in which you are using it.
 
-### 10.9 App Store omponents
+### 10.9 App Store Components
 
 Platform-supported App Store content refers to all App Store content marked as platform-supported in the Mendix App Store. Community-supported App Store content includes all App Store content not marked as platform-supported in the Mendix App Store
 

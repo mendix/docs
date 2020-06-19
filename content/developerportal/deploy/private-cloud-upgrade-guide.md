@@ -147,7 +147,7 @@ These StatefulSets were replaced with deployments when the new version of the Op
 
 This procedure can only be used to upgrade from Mendix Operator v1.1.* to the latest version.
 
-To upgrade from Mendix Operator v1.0.* to the latest version, follow the [upgrade guide](#from-operator-1.0.x).
+To upgrade from Mendix Operator v1.0.* to the latest version, follow the [upgrade guide](#from-operator-1.0.x) above.
 
 {{% /alert %}}
 

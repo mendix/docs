@@ -28,17 +28,17 @@ The collaborative development process between Studio Pro and Studio consists of 
 
     ![Collaborative Development Enabled Notification](attachments/collaborative-development/collaborative-development-enabled-notification.png)
 
-3. Studio Pro creates a local working copy that the Studio Pro user works on. To get changes from the Team Server the user needs to click **Update** (the latest revision is then retrieved from the Team Server, containing commits from other Studio Pro users and the latest changes from Studio).
+3. Studio Pro creates a local working copy that the Studio Pro user works on. 
 
-4. After the Studio Pro user clicks **Update**, the latest changes from Studio are committed automatically to the Team Server before Studio Pro receives the update from it. The latest revision from the Team Server is merged into Studio Pro's local working copy. 
+4. To get changes from the Team Server the user needs to click **Update**. When the Studio Pro user clicks **Update**, the latest changes from *Studio* are committed automatically to the Team Server before Studio Pro receives the update from it. The latest revision from the Team Server containing the latest *Studio* changes is merged into Studio Pro's local working copy. 
 
-5.  The Studio Pro user works on the project and, once the user finishes some functionality (for example, fixes a bug or creates a new feature), they click **Commit**. The user enters a commit message and confirms it. This triggers the same process as during an update (described in step 4), and the Studio Pro working copy is updated with the latest revision from the Team Server.
+5. The Studio Pro user works on the project and, once the user finishes some functionality (for example, fixes a bug or creates a new feature), they click **Commit**. The user enters a commit message and confirms it. This triggers the same process as during an update (described in step 4), and the Studio Pro working copy is updated with the latest revision from the Team Server.
 
-    There are two possible outcomes of this merge:<br/>
+   There are two possible outcomes of this merge:<br/>
 
-    a.   There are no conflicts, the Studio Pro user changes are committed to the Team  Server. Afterwards Studio gets the latest revision from the Team Server and is unlocked; the Studio Pro user changes are visible to Studio users. Other Studio Pro users will get the changes once they do an update. <br/>
+   a.   There are no conflicts, the Studio Pro user changes are committed to the Team  Server. Afterwards Studio gets the latest revision from the Team Server and is unlocked; the Studio Pro user changes are visible to Studio users. Other Studio Pro users will get the changes once they do an update. <br/>
 
-    b. There are conflicts, the Studio Pro commit process is stopped. Studio is unlocked without getting changes from the Studio Pro user. The Studio Pro user needs to resolve the merge conflicts first to before being able to do a commit again.
+   b. There are conflicts, the Studio Pro commit process is stopped. Studio is unlocked without getting changes from the Studio Pro user. The Studio Pro user needs to resolve the merge conflicts first to before being able to do a commit again.
 
 {{% alert type="info" %}}
 

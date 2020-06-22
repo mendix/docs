@@ -436,8 +436,6 @@ When you delete a namespace, this removes the namespace from the cluster in the 
 
 The **Apps** tab of namespace details in the cluster manager page lists all the apps which are deployed to this namespace.
 
-{{% todo %}}[Check this and all other images for consistent cluster/namespace/environment/app names]{{% /todo %}}
-
 ![](attachments/private-cloud-cluster/image27.png)
 
 Click **Details** to go to the **Environment Details** page for that app.

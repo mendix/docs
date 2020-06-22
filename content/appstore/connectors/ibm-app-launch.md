@@ -12,7 +12,7 @@ The [IBM App Launch](https://appstore.home.mendix.com/link/app/106382/) connecto
 
 ### 1.1 Typical Usage Scenario
 
-The IBM App Launch service enables app owners to launch features to mobile apps at speed and measure impact by controlling the targeted audience. App owners can work with developers to define KPIs for the features, measure the impact, and make feature rollout and rollback decisions based on real-time feedback. This service also enables testing multiple variants of app features, UI elements, and messages and making decisions based on feedback.
+The IBM App Launch service enables you to launch features to mobile apps at speed and measure impact by controlling the targeted audience. App owners can work with developers to define KPIs for the features, measure the impact, and make feature rollout and rollback decisions based on real-time feedback. This service also enables testing multiple variants of app features, UI elements, and messages and making decisions based on feedback.
 
 ### 1.2 Features
 

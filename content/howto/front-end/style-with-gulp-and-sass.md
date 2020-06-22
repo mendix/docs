@@ -11,6 +11,8 @@ tags: ["gulp", "sass", "ux", "front end"]
 This how-to is based on the blog post [How Do I Start Styling In Mendix (Gulp & Sass)](https://medium.com/@jasonteunissen/how-do-i-start-styling-in-mendix-gulp-sass-6b37ddaf8de6) by Jason Teunissen, UX Consultant at [Appronto](https://developer.mendixcloud.com/link/partnerprofile/8870).
 {{% /alert %}}
 
+For the majority of styling needs, you can use Mendix's styling tool: Calypso. For more information, see [How to Use Calypso](/howto/front-end/calypso). However, certain users who prefer Gulp may find this document useful.
+
 You can use [Gulp](https://gulpjs.com/) to watch the files for any changes you make when styling with Sass. Gulp triggers auto-refresh by default so that your changes are immediately visible in the browser.
 
 **This how-to will teach you how to do the following:**

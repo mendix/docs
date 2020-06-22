@@ -10,6 +10,39 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### June 22nd, 2020
+
+#### Mendix for Private Cloud — Mendix Operator v1.2.0
+
+We released a new version of the Mendix for Private Cloud Operator.
+
+* We have added support for offline licenses.
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+
+### June 19th, 2020
+
+#### Mendix for Private Cloud — Mendix Operator v1.1.1
+
+We released a new version of the Mendix for Private Cloud Operator.
+
+* We fixed an issue which incorrectly marked dedicated Storage Plans as being in use.
+* We changed the way the Operator updates Kubernetes Deployments to prevent a situation where two different versions of a Mendix application are running at the same moment.
+* We have added support for Azure PostgreSQL databases.
+* We have added support for using an existing JDBC database schema. This database can only be used by one environment and cannot be shared between environments.
+* We have added support for using an existing Azure Blob Storage Container or S3 bucket. Such a storage plan can be dedicated to one environment, or can be shared between multiple environments, with all environments using the same credentials.
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+
+### June 18th, 2020
+
+#### Mendix for Private Cloud
+
+* We have separated the creation of the namespace and the cluster in order to align with Kubernetes concepts. As a consequence, there is now an additional namespace details page. The Mendix Operator and Mendix Gateway Agent will be deployed to each namespace.
+* We now allow you to set Kubernetes resource *requirements* in addition to resource *limits*. Apps no longer require the maximum amount of CPU and memory, improving utilization of cluster resources.
+* We have replaced the **Tiny** plan with a **Small** plan in the core resources.
+* We have improved the reliability of updating the current environment status in the Developer Portal.
+
 ### June 17th, 2020
 
 #### Mendix Cloud **v3**

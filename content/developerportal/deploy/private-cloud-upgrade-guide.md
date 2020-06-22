@@ -10,15 +10,11 @@ tags: ["Upgrade", "Private Cloud", "Cluster", "Operator", "Deploy"]
 
 This document describes how an existing installation of Mendix for Private Cloud can be upgraded to the latest version.
 
-## 2 Upgrade steps
+Both the Mendix Operator and Mendix Agent should be upgraded at the same time.
 
-### 2.1 Upgrading to Mendix Operator v1.1.0{#operator-latest}
+## 2 Upgrading to Mendix Operator v1.2.0{#operator-latest}
 
-This process will take about 15 to 30 minutes.
-During the upgrade process, the Mendix Operator will have to be stopped and will not process any changes.
-Apps and Environments managed by the Operator will keep running during this process and will be restarted in the cleanup step.
-
-#### 2.1.1 Preparation
+### 2.1 Preparation
 
 Open a Bash-compatible terminal and set the target namespace where the Operator is currently installed:
 
@@ -28,7 +24,31 @@ OPERATOR_NAMESPACE={namespace where the Mendix Operator is installed}
 
 All the following commands require the `OPERATOR_NAMESPACE` variable to be set. When opening a new terminal, re-run this command again.
 
-#### 2.1.2 Stop the Operator
+Check the current version of the Operator by running the following command:
+
+```shell
+kubectl -n $OPERATOR_NAMESPACE get deployment mendix-operator -o=jsonpath='{.spec.template.spec.containers[].image}' 
+```
+
+* If the image name looks similar to `quay.io/digital_ecosystems/mendix-operator:1.1.{NUMBER}`, follow the upgrade guide from [Mendix Operator v1.1.*](#from-operator-1.1.x).
+
+* If the image name looks similar to `quay.io/digital_ecosystems/mendix-operator:1.0.{NUMBER}`, follow the upgrade guide from [Mendix Operator v1.0.*](#from-operator-1.0.x).
+
+### 2.2 Upgrading from Mendix Operator v1.0.*{#from-operator-1.0.x}
+
+{{% alert type="warning" %}}
+
+This procedure is only required when upgrading from Mendix Operator v1.0.* to the latest version.
+
+To upgrade from Mendix Operator v1.1.* to the latest version, follow the [simplified upgrade guide](#from-operator-1.1.x).
+
+{{% /alert %}}
+
+This process will take about 15 to 30 minutes.
+During the upgrade process, the Mendix Operator will have to be stopped and will not process any changes.
+Apps and Environments managed by the Operator will keep running during this process and will be restarted in the cleanup step.
+
+#### 2.2.1 Stop the Operator
 
 To stop the Operator, run the following command:
 
@@ -36,24 +56,26 @@ To stop the Operator, run the following command:
 kubectl -n $OPERATOR_NAMESPACE scale deployment mendix-operator --replicas=0
 ```
 
-#### 2.1.3 Upgrading the CRDs
+#### 2.2.2 Upgrading the Custom Resource Definitions
 
-Run the following command to upgrade to the latest version of CRDs:
+Run the following command to upgrade to the latest version of the Custom Resource Definitions for the Mendix Operator:
 
 ```shell
 kubectl apply -f https://installergen.private-cloud.api.mendix.com/privatecloud/crds/v1
 ```
 
-#### 2.1.4 Upgrading the Mendix Operator Deployment
+[Custom Resource Definitions](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) allow to manage Mendix pplications with Kubernetes APIs and tools such as `kubectl` and `oc`.
 
-Run the following command to switch to Mendix Operator version 1.1.0:
+#### 2.2.3 Upgrading the Mendix Operator Deployment
+
+Run the following command to switch to Mendix Operator version 1.2.0:
 
 ```shell
 kubectl -n $OPERATOR_NAMESPACE patch deployment mendix-operator -p \
-  '{"spec":{"template":{"spec":{"containers":[{"name":"mendix-operator","image":"quay.io/digital_ecosystems/mendix-operator:1.1.0"}]}}}}'
+  '{"spec":{"template":{"spec":{"containers":[{"name":"mendix-operator","image":"quay.io/digital_ecosystems/mendix-operator:1.2.0"}]}}}}'
 ```
 
-#### 2.1.5 Updating the Mendix Operator Configuration
+#### 2.2.4 Updating the Mendix Operator Configuration
 
 Run the following commands to switch to the latest component versions:
 
@@ -93,7 +115,7 @@ kubectl -n $OPERATOR_NAMESPACE get storageplan --no-headers=true -o name | sed -
   xargs -I {} kubectl -n $OPERATOR_NAMESPACE patch storageplan {} --type=merge -p '{"spec":{"type":"on-demand"}}'
 ```
 
-#### 2.1.6 Start the Mendix Operator
+#### 2.2.5 Start the Mendix Operator
 
 To start the updated version of the Mendix Operator, run:
 
@@ -111,7 +133,7 @@ The StatefulSets should be cleaned up manually as documented in the [Cleanup pha
 
 {{% /alert %}}
 
-#### 2.1.7 Cleanup Phase{#cleanup-phase}
+#### 2.2.6 Cleanup Phase{#cleanup-phase}
 
 Delete StatefulSets from the Namespace where the Operator was installed:
 
@@ -121,7 +143,40 @@ kubectl -n $OPERATOR_NAMESPACE delete --all statefulsets
 
 These StatefulSets were replaced with deployments when the new version of the Operator was started.
 
-### 2.2 Upgrading to Mendix Gateway Agent v1.1.1{#agent-latest}
+### 2.3 Upgrading from Mendix Operator v1.1.*{#from-operator-1.1.x}
+
+{{% alert type="warning" %}}
+
+This procedure can only be used to upgrade from Mendix Operator v1.1.* to the latest version.
+
+To upgrade from Mendix Operator v1.0.* to the latest version, follow the [upgrade guide](#from-operator-1.0.x) above.
+
+{{% /alert %}}
+
+This process will take a few minutes.
+During the upgrade process, the Mendix Operator will be restarted.
+Apps and Environments managed by the Operator will be restarted after the upgrade process is completed.
+
+#### 2.3.1 Upgrading the Custom Resource Definitions
+
+Run the following command to upgrade to the latest version of the Custom Resource Definitions for the Mendix Operator:
+
+```shell
+kubectl apply -f https://installergen.private-cloud.api.mendix.com/privatecloud/crds/v1
+```
+
+[Custom Resource Definitions](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) allow to manage Mendix pplications with Kubernetes APIs and tools such as `kubectl` and `oc`.
+
+#### 2.3.2 Upgrading the Mendix Operator Deployment
+
+Run the following command to switch to Mendix Operator version 1.2.0:
+
+```shell
+kubectl -n $OPERATOR_NAMESPACE patch deployment mendix-operator -p \
+  '{"spec":{"template":{"spec":{"containers":[{"name":"mendix-operator","image":"quay.io/digital_ecosystems/mendix-operator:1.2.0"}]}}}}'
+```
+
+## 3 Upgrading to Mendix Gateway Agent v1.1.1{#agent-latest}
 
 {{% alert type="info" %}}
 
@@ -131,7 +186,7 @@ Upgrading the Mendix Gateway Agent is only possible if the cluster was originall
 
 {{% /alert %}}
 
-Before upgrading to the Mendix Gateway Agent v1.1.1, first [upgrade](#operator-latest) the Mendix Operator to version v1.1.1
+Before upgrading to the Mendix Gateway Agent v1.1.1, first [upgrade](#operator-latest) the Mendix Operator to the latest version
 and set the `OPERATOR_NAMESPACE` variable in your Bash terminal as described above.
 
 Run the following command to switch to the Mendix Agent version 1.1.1:

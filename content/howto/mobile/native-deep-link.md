@@ -13,8 +13,8 @@ While URLs typically open websites, they can also open an installed app on your 
 A URL is constructed of these parts (everything after **path** is defined as a detail):
 
 ```txt
-username       host      port
-┌────┴───┐ ┌──────┴──────┐ ┌┴┐
+username       host           port
+┌────┴───┐ ┌──────┴──────┐      ┌┴┐
 https://john.doe@www.example.com:123/forum/questions/?tag=networking&order=newest#top
 └─┬─┘   └───────────┬──────────────┘└───────┬───────┘ └───────────┬─────────────┘ └┬┘
 scheme          authority                  path                 query           hash

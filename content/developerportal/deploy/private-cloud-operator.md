@@ -100,7 +100,7 @@ You need to make the following changes:
 * **mxAdminPassword**: – here you can change the password for the MxAdmin user — if you leave this empty, the password will be the one set in the Mendix model
 * **dtapmode**: – For development of the app, for example acceptance testing, choose **D**, for production deployment, select **P**
 
-    if you select production, then you will need to provide a **Subscription Secret** to ensure that your app runs as a licensed app — see [Free Apps](mendix-cloud-deploy#free-app) in *Mendix Cloud* for the differences between free/test apps and licensed apps
+    If you select production, then you will need to provide a **Subscription Secret** to ensure that your app runs as a licensed app — see [Free Apps](mendix-cloud-deploy#free-app) in *Mendix Cloud* for the differences between free/test apps and licensed apps
     
     the subscription secret needs to be supplied via the **customConfiguration** using the following values:
 
@@ -110,6 +110,23 @@ You need to make the following changes:
     * `"License.EnvironmentName":"{environment name}"`
 
     {{% alert type="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/project-security). {{% /alert %}}
+
+    If you have an offline license, you cannot provide it through **customConfiguration**. You will need to configure it by adding a **runtimeLicense** section within the **runtime** section and setting **LicenseId** and **LicenseKey** to the values received from Mendix Support:
+
+    ```yaml
+    apiVersion: privatecloud.mendix.com/v1alpha1
+    kind: MendixApp
+    metadata:
+      name: example-mendixapp
+    spec:
+      runtime:
+        # add this section to the existing runtime configuration
+        runtimeLicense: # Mendix Runtime License configuration
+          type: offline # Set to offline
+          id: LicenseId # Offline LicenseId (UUID) value provided by Mendix Support
+          key: LicenseKey # Offline LicenseKey value provided by Mendix Support
+    ```
+
 * **jettyOptions** and **customConfiguration**: – if you have any custom Mendix Runtime parameters, they need to be added to this section — options for the Mendix runtime have to be provided in JSON format — see the examples in the CR for the correct format and the information below for more information on [setting app constants](#set-app-constants) and [configuring scheduled events](#configure-scheduled-events)
 
 #### 3.2.1 Setting App Constants{#set-app-constants}

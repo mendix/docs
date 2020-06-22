@@ -2,7 +2,7 @@
 title: "Migrate Your Mendix Database"
 category: "Data Models"
 menu_order: 7
-tags: ["database", "migrate", "postgresql", "export", "import"]
+tags: ["database", "migrate", "PostgreSQL", "export", "import"]
 ---
 
 ## 1 Introduction
@@ -115,6 +115,78 @@ To import a PostgreSQL database using the downloaded database file, refer to eit
 
 ### 5.2 Migrating a PostgreSQL Database To a Non-PostgreSQL Database
 
+Below is general guidance on how to migrate a PostgreSQL database to a different database. There is a special section for the case of migrating a PostgreSQL database being used by a Mendix application running on SAP Cloud Platform.
+
+#### 5.2.1 General Guidance
+
 The source database is a PostgreSQL database with the downloaded database from the Mendix cloud. The target non-PostgreSQL database should be completely empty, as in, it should not contain any tables. In the Mendix project the active configuration in Settings should point to the target database, and you should add the Custom configuration settings for the source PostgreSQL database as explained above in the overview.
 
 Having configured the Mendix project, just run the application locally and it will automatically migrate the database schema and all the data from the source database to the target database. You should always validate it first by viewing the application in a browser.
+
+#### 5.2.2 Migrating to SAP HANA on SAP Cloud Platform
+
+If you have a Mendix application running on SAP Cloud Platform with PostgreSQL as the database service and want to migrate the database to SAP HANA, you will need to take some extra steps to migrate the existing data.
+
+To do this, perform the following steps:
+
+1.	Sign in to the SAP Cloud Platform Cloud Foundry environment (containing the PostgreSQL service) using Cloud Foundry command line.
+2.	Get the PostgreSQL service instance details from env variables of the application.
+
+cf env {application-name}
+
+From the VCAP_SERVICES list, note down the value of highlighted properties from PostgreSQL service as shown below:
+
+"postgresql": [
+   {
+    "binding_name": null,
+    "credentials": {
+     "dbname": "e5a264f5e83582a4da47c14a5655a319",
+     "end_points": [
+      {
+       "host": "10.11.88.77",
+       "network_id": "SF",
+       "port": 5432
+      },
+      {
+       "host": "10.11.88.72",
+       "network_id": "SF",
+       "port": 5432
+      },
+      {
+       "host": "10.11.88.73",
+       "network_id": "SF",
+       "port": 5432
+      }
+     ],
+     "hostname": "10.11.88.77",
+     "password": "4aceed32e1e7e30da6508f9525312e39",
+     "port": "5432",
+     "read_url": "jdbc:postgresql://10.11.88.72,10.11.88.73/e5a264f5e83582a4da47c14a5655a319?targetServerType=preferSlave\u0026loadBalanceHosts=true",
+     "uri": "postgres://8ba7d889ac2d3b1fbae9c3a088f38816:4aceed32e1e7e30da6508f9525312e39@10.11.88.77:5432/e5a264f5e83582a4da47c14a5655a319",
+     "username": "8ba7d889ac2d3b1fbae9c3a088f38816",
+     "write_url": "jdbc:postgresql://10.11.88.72,10.11.88.73/e5a264f5e83582a4da47c14a5655a319?targetServerType=master"
+    },
+    "instance_name": "LearnNow-Training-Management_learn-now_2PhEn",
+    "label": "postgresql",
+    "name": "LearnNow-Training-Management_learn-now_2PhEn",
+    "plan": "v9.6-tiny",
+    "provider": null,
+    "syslog_drain_url": null,
+    "tags": [
+     "postgresql",
+     "relational"
+    ],
+    "volume_mounts": []
+
+3.	Create an environment having SAP HANA as database service on SAP Cloud foundry using Mendix Cloud portal (Heimdal). Deploy the mda, but do not start the application.
+4.	Login using command line into the new cloud foundry environment (with SAP HANA database).
+5.	Go to command line set following runtime properties in the SAP HANA environment. Properties values will be from the PostgreSQL instance values highlighted above.
+
+cf set-env {app_name} MXRUNTIME_SourceDatabaseType POSTGRESQL
+cf set-env {app_name}  MXRUNTIME_SourceDatabaseHost {hostname}:{port}
+cf set-env {app_name} MXRUNTIME_SourceDatabaseName {dbname}
+cf set-env {app_name}  MXRUNTIME_SourceDatabaseUserName {username}
+cf set-env {app_name}  MXRUNTIME_SourceDatabasePassword {password}
+
+6.	Start application either from cloud portal or command line. 
+7.	Once the application is started, verify data in the application.

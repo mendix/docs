@@ -111,7 +111,7 @@ You need to make the following changes:
 
     {{% alert type="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/project-security). {{% /alert %}}
 
-    If you have an offline license, you cannot provide it through **customConfiguration**. You will need to configure it by adding a **runtimeLicense** section within the **runtime** section and set **LicenseId** and **LicenseKey** to the values received from Mendix Support:
+    If you have an offline license, you cannot provide it through **customConfiguration**. You will need to configure it by adding a **runtimeLicense** section within the **runtime** section and setting **LicenseId** and **LicenseKey** to the values received from Mendix Support:
 
     ```yaml
     apiVersion: privatecloud.mendix.com/v1alpha1

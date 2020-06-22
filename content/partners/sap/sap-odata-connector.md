@@ -611,7 +611,11 @@ This is the type of data which will be returned from the action. There are three
 
 This is the name that you give the result of your Activity. This can be used later in the Microflow to drive logic or to return data. Mendix will suggest a name for you, but you can change it if you want to.
 
-## 5 Read More
+## 5 Troubleshooting
+
+If you have issues using the OData Connector for SAP Solutions, there is a troubleshooting guide, [Troubleshoot OData Connector for SAP Solutions](sap-troubleshoot-odata-connector).
+
+## 6 Read More
 
 * [Attributes](/refguide/attributes)
 * [Data Types](/refguide/data-types)

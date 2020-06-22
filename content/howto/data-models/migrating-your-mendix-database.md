@@ -16,13 +16,13 @@ This document explains how to migrate the data in an existing Mendix database to
 * Upload an exported PostgreSQL database to the Mendix cloud
 * Export a Mendix cloud database
 * Import into an on-premise PostgreSQL database
-* Migrate a PostgreSQL database to a non-PostgreSQL database
+* Migrate a PostgreSQL database to a non-PostgreSQL database, including migrating a PostgreSQL database to SAP HANA
 
 ## 2 Overview
 
 You can copy all the data from any Mendix-supported database management system to any other Mendix-supported database management system. For example you can copy demo, test, and production databases from built-in to PostgreSQL, and from PostgreSQL to built-in. You can also migrate production data from SQL Server or Oracle (on-premises) to PostgreSQL in our cloud.
 
-To do this, start your app on the database you would like to copy the data to. This database should already exist and should be totally empty. To let Mendix know from which database all data should be copied, you have to set some custom configuration settings. These custom settings define the type of the source database, the host name, the user name and password, etc.
+To do this, start your app on the database you would like to copy the data to. This database should already exist and should be totally empty. To let Mendix know from which database all data should be copied, you have to set some custom configuration settings. These custom settings identify the source database and give Mendix the authentication required to access it.
 
 The most commonly used custom settings for database migration are:
 
@@ -46,7 +46,7 @@ These settings can be configured as follows:
 
 * m2ee-tools – add the custom settings to the mxruntime section (for more information, see [Full Documented m2ee](https://github.com/mendix/m2ee-tools/blob/develop/examples/full-documented-m2ee.yaml))
 
-You can migrate databases using either Studio Pro, the Service Console, or m2ee-tools. The Service Console gives you the advantage of seeing a progress bar during the copy process, which is handy if you copy a lot of data which takes a long time to execute.
+You can migrate databases using Studio Pro, the Service Console, or m2ee-tools. The Service Console gives you the advantage of seeing a progress bar during the copy process, which is handy if you copy a lot of data which takes a long time to execute.
 
 {{% alert type="info" %}}
 Database migration is handled by Mendix as a normal database synchronization phase during the start-up process of an app. As a consequence, it is possible that during the start-up process you will get to see messages like ‘The database has to be synchronized’ or you will see an empty message. In the future, tools like the Service Console and m2ee-tools will recognize this phase better and give more appropriate messages. However, these tools already correctly handle the database migration.
@@ -129,64 +129,34 @@ If you have a Mendix application running on SAP Cloud Platform with PostgreSQL a
 
 To do this, perform the following steps:
 
-1.	Sign in to the SAP Cloud Platform Cloud Foundry environment (containing the PostgreSQL service) using Cloud Foundry command line.
-2.	Get the PostgreSQL service instance details from env variables of the application.
+1. Sign in to the SAP Cloud Platform Cloud Foundry environment (containing the PostgreSQL service) using the Cloud Foundry command line.
+2. Get the PostgreSQL service instance details from the environment variables of the application using the following command:
 
-cf env {application-name}
+	`cf env {application-name}`
 
-From the VCAP_SERVICES list, note down the value of highlighted properties from PostgreSQL service as shown below:
+3. Inspect the **VCAP_SERVICES** list, and note down the values of the following properties in the `postgresql` service:
+	* `dbname` – `{dbname}`
+	* `hostname` – `{hostname}`
+	* `password` – `{password}`
+	* `port` – `{port}`
+	* `username` – `{username}`
 
-"postgresql": [
-   {
-    "binding_name": null,
-    "credentials": {
-     "dbname": "e5a264f5e83582a4da47c14a5655a319",
-     "end_points": [
-      {
-       "host": "10.11.88.77",
-       "network_id": "SF",
-       "port": 5432
-      },
-      {
-       "host": "10.11.88.72",
-       "network_id": "SF",
-       "port": 5432
-      },
-      {
-       "host": "10.11.88.73",
-       "network_id": "SF",
-       "port": 5432
-      }
-     ],
-     "hostname": "10.11.88.77",
-     "password": "4aceed32e1e7e30da6508f9525312e39",
-     "port": "5432",
-     "read_url": "jdbc:postgresql://10.11.88.72,10.11.88.73/e5a264f5e83582a4da47c14a5655a319?targetServerType=preferSlave\u0026loadBalanceHosts=true",
-     "uri": "postgres://8ba7d889ac2d3b1fbae9c3a088f38816:4aceed32e1e7e30da6508f9525312e39@10.11.88.77:5432/e5a264f5e83582a4da47c14a5655a319",
-     "username": "8ba7d889ac2d3b1fbae9c3a088f38816",
-     "write_url": "jdbc:postgresql://10.11.88.72,10.11.88.73/e5a264f5e83582a4da47c14a5655a319?targetServerType=master"
-    },
-    "instance_name": "LearnNow-Training-Management_learn-now_2PhEn",
-    "label": "postgresql",
-    "name": "LearnNow-Training-Management_learn-now_2PhEn",
-    "plan": "v9.6-tiny",
-    "provider": null,
-    "syslog_drain_url": null,
-    "tags": [
-     "postgresql",
-     "relational"
-    ],
-    "volume_mounts": []
+ 	as shown in the highlighted image below:
+	
+	![](attachments/migrating/sap-postgres-config.png)
 
-3.	Create an environment having SAP HANA as database service on SAP Cloud foundry using Mendix Cloud portal (Heimdal). Deploy the mda, but do not start the application.
-4.	Login using command line into the new cloud foundry environment (with SAP HANA database).
-5.	Go to command line set following runtime properties in the SAP HANA environment. Properties values will be from the PostgreSQL instance values highlighted above.
+4. Create an environment using the SAP HANA database service using Mendix Developer Portal.
+5. Deploy the mda, but **do not start the application**.
+6. Sign in to the SAP Cloud Platform Cloud Foundry environment (containing the SAP HANA service) using the Cloud Foundry command line.
+7. Set the following runtime properties in the SAP HANA environment using the command line. Use the values from the PostgreSQL instance values you noted above.
 
-cf set-env {app_name} MXRUNTIME_SourceDatabaseType POSTGRESQL
-cf set-env {app_name}  MXRUNTIME_SourceDatabaseHost {hostname}:{port}
-cf set-env {app_name} MXRUNTIME_SourceDatabaseName {dbname}
-cf set-env {app_name}  MXRUNTIME_SourceDatabaseUserName {username}
-cf set-env {app_name}  MXRUNTIME_SourceDatabasePassword {password}
+	```bash
+	cf set-env {application-name} MXRUNTIME_SourceDatabaseType POSTGRESQL
+	cf set-env {application-name}  MXRUNTIME_SourceDatabaseHost {hostname}:{port}
+	cf set-env {application-name} MXRUNTIME_SourceDatabaseName {dbname}
+	cf set-env {application-name}  MXRUNTIME_SourceDatabaseUserName {username}
+	cf set-env {application-name}  MXRUNTIME_SourceDatabasePassword {password}
+	```
 
-6.	Start application either from cloud portal or command line. 
-7.	Once the application is started, verify data in the application.
+8. Start the application either from the Developer Portal or the command line. 
+9. Once the application is started, verify the data in the application.

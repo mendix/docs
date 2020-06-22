@@ -56,13 +56,15 @@ To stop the Operator, run the following command:
 kubectl -n $OPERATOR_NAMESPACE scale deployment mendix-operator --replicas=0
 ```
 
-#### 2.2.2 Upgrading the CRDs
+#### 2.2.2 Upgrading the Custom Resource Definitions
 
-Run the following command to upgrade to the latest version of CRDs:
+Run the following command to upgrade to the latest version of the Custom Resource Definitions for the Mendix Operator:
 
 ```shell
 kubectl apply -f https://installergen.private-cloud.api.mendix.com/privatecloud/crds/v1
 ```
+
+[Custom Resource Definitions](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) allow to manage Mendix pplications with Kubernetes APIs and tools such as `kubectl` and `oc`.
 
 #### 2.2.3 Upgrading the Mendix Operator Deployment
 
@@ -155,13 +157,15 @@ This process will take a few minutes.
 During the upgrade process, the Mendix Operator will be restarted.
 Apps and Environments managed by the Operator will be restarted after the upgrade process is completed.
 
-#### 2.3.1 Upgrading the CRDs
+#### 2.3.1 Upgrading the Custom Resource Definitions
 
-Run the following command to upgrade to the latest version of CRDs:
+Run the following command to upgrade to the latest version of the Custom Resource Definitions for the Mendix Operator:
 
 ```shell
 kubectl apply -f https://installergen.private-cloud.api.mendix.com/privatecloud/crds/v1
 ```
+
+[Custom Resource Definitions](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) allow to manage Mendix pplications with Kubernetes APIs and tools such as `kubectl` and `oc`.
 
 #### 2.3.2 Upgrading the Mendix Operator Deployment
 

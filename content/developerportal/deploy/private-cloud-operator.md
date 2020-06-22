@@ -110,6 +110,24 @@ You need to make the following changes:
     * `"License.EnvironmentName":"{environment name}"`
 
     {{% alert type="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/project-security). {{% /alert %}}
+
+    if you have an offline license, instead of providing it through **customConfiguration**, you will need to configure it by adding a **runtimeLicense** section under **runtime**, replacing **LicenseId** and **LicenseKey** with values received from Mendix Support:
+
+    ```yaml
+    apiVersion: privatecloud.mendix.com/v1alpha1
+    kind: MendixApp
+    metadata:
+      name: example-mendixapp
+    spec:
+      runtime:
+        # add this section to the existing runtime configuration
+        runtimeLicense: # Mendix Runtime License configuration
+          type: offline # Set to offline
+          id: LicenseId # Offline LicenseId (UUID) value provided by Mendix Support
+          key: LicenseKey # Offline LicenseKey value provided by Mendix Support
+    ```
+
+* **runtimeLicense**: - by uncommenting this section and 
 * **jettyOptions** and **customConfiguration**: – if you have any custom Mendix Runtime parameters, they need to be added to this section — options for the Mendix runtime have to be provided in JSON format — see the examples in the CR for the correct format and the information below for more information on [setting app constants](#set-app-constants) and [configuring scheduled events](#configure-scheduled-events)
 
 #### 3.2.1 Setting App Constants{#set-app-constants}

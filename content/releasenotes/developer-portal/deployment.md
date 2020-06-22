@@ -10,6 +10,16 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### June 22nd, 2020
+
+#### Mendix for Private Cloud — Mendix Operator v1.2.0
+
+We released a new version of the Mendix for Private Cloud Operator.
+
+* We have added support for offline licenses.
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+
 ### June 19th, 2020
 
 #### Mendix for Private Cloud — Mendix Operator v1.1.1

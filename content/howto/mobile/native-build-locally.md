@@ -1,9 +1,9 @@
 ---
-title: "Build Your First Mendix Native Mobile App Locally"
+title: "Build a Mendix Native Mobile App Locally"
 parent: "native-mobile"
 menu_order: 70
 description: Describes how to build your first Mendix native mobile app locally.
-tags: ["native", "mobile", "deploy", "appcenter", "local"]
+tags: ["native", "mobile", "build", "local", "xcode", "android studio"]
 ---
 
 ## 1 Introduction
@@ -18,7 +18,7 @@ Mendix native mobile apps are first and foremost React Native (RN) apps and foll
 In a similar fashion, MXBuild and the Mendix Native Template folow these rules:
 
 * When using MXBuild, the JS code and static assets are bundled together
-* The bundled code and assets are put into the Mendix Native Template that [represents an iOS and Android app](better verb for represents? provides a foundation for both an iOS and Android version of your app)
+* The bundled code and assets are put into the Mendix Native Template that provides a foundation for both an iOS and Android version of your app.
 
 ## 2 Prerequisites {#prerequisites}
 
@@ -48,17 +48,17 @@ The keys of the dictionary represent the Mendix Studio Pro version. The `min` an
 
 {{% image_container width="200" %}}![iOS output](attachments/native-build-locally/mendix-version.png){{% /image_container %}}
 
-How you should proceed depends on if you have Git installed or not.
+There is no best way of getting a copy of the Native Template. In the following sections we provide 2 possible ways for getting the needed version.
 
-#### 3.1.1 With Git installed
+#### 3.1.1 Get the Native Template using the Git CLI
 
 If you have Git installed, do the following:
 
 1. Use `git@github.com:mendix/native-template.git` or `https://github.com/mendix/native-template.git` to clone the project locally. 
-1. Run the following command: `git clone --single-branch --branch <release/version-number> <repo-url>`.
+1. Run the following command: `git clone --single-branch --branch release/<major-version-number> <repo-url>`.
 1. Run `npm i && cd ios && pod install` to install the required dependencies.
 
-#### 3.1.2 Without Git
+#### 3.1.2 Get the Native Template by downloading the source code from GitHub
 
 If you do not have Git installed, do the following:
 
@@ -143,6 +143,8 @@ As with the Android Build Variants the iOS app makes us of Build Targets to swit
 
 ## 5 Adding or Removing Dependencies
 
+At some point you will want to enhance your project with native pluggable widgets and functionality that will require the inclusion of React Native modules and libraries.
+
 Mendix native mobile apps are build on top of React Native. Therefore, any React Native module can be added and used in a project. The same rules apply as with any React Native project.
 
 ### 5.1 Adding Dependencies For Native Templates v4.0.0 and Above
@@ -156,16 +158,18 @@ From Native Template v4.0.0 and above Mendix supports RN 0.6.x and therefore aut
 
 Native Template versions below v4.0.0 do not support React Native's auto-linking. Therefore always follow the manual steps of the dependency to add it to the Android and iOS projects respectively.
 
-### 5.3 Removing Dependencies
+## 6 Removing Dependencies
 
-#### 5.3.1 Dependencies Which Support Auto-Linking
+As the requirements of a project might change, so do the required Native modules and libraries. To avoid bloating your app with libraries that aren't needed consider removing unused libraries. For now this is not automated and requires a bit consideration in identifying any unused libraries.
+
+### 6.1 Removing Dependencies Which Support Auto-Linking for v4.0.0 and Above
 
 To remove dependencies which support auto-linking, do the following:
 
 1. Remove the dependency entry from the *package.json* file.
 1. Run `npm i`.
 
-#### 5.3.2 Dependencies Which Do Not Support Auto-Linking
+### 6.2 Dependencies Which Do Not Support Auto-Linking or for v.3.x and Bellow
 
 To remove dependencies which do not support auto-linking, do the following:
 

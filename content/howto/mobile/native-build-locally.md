@@ -104,31 +104,68 @@ For bundling your resources, the Native Builder supports an offline command that
 
 Now you have completed the basic setup of the Native Template with the latest bundle and assets of your Mendix project. 
 
-## 4 Adding or Removing Dependencies
 
-Mendix native mobile apps [todo: correct?]() are build on top of React Native. Therefore, any React Native module can be added and used in a project. The same rules apply as with any React Native project.
+With that we have completed the basic setup of Native Template with the latest bundle and assets of the Mendix project.
 
-### 4.1 Adding Dependencies For Native Templates v4.0.0 and Above
+## 4 Building your Native Project
 
-From Native Template v4.0.0 and above Mendix supports RN 0.6.x and therefore auto-linking. [Need some intro to the instructions below here]()
+To build your project you can open the project with Android Studio or XCode for the Android and iOS project respectively and build as normally.
+
+More advance use cases as for CI pipelines can make use of Gradle or xcodebuild to build the apps using the command line.
+
+### 4.1 Build the Android app using Android Studio
+
+1. Run npm install in the project root to install the required dependencies.
+1. Open Android studio.
+1. Select the `<Native Template root>/android` as the entry point for the project.
+1. After synchronizing the project you android studio should look something like that:
+   ![Android Studio](attachments/native-build-locally/as-home.png)
+
+Mendix Native Apps make use of Build Variants to build a release apps or the Custom Developer App. Build Variants is a Gradle build system concept for sharing the same codebase but delivering different experiences.
+1. Choose the appstoreDebug variant to be able to build and test your app on an Emulator or connected device.
+   ![Android Build Varients](attachments/native-build-locally/as-build-variants.png)
+1. After a short time the project should be synchronized and the play button should be selectable. Select a device or create a device from the drop down and press the play button to build and install your app on the device.
+   ![Android Build Toolbar](attachments/native-build-locally/as-start-build.png)
+
+### 4.2 Build the iOS app using XCode
+
+1. If not ran yet, run npm install in the project root to install the required dependencies
+1. Change directory by running `cd ios` and run `pod install` to install the iOS dependencies.
+
+   The iOS project is using CocoaPods for its dependency management if you do not yet have the CocoaPods dependency manager installed on your machine see the [official documentation](https://cocoapods.org/#install) on how to set it up.
+1. Open the `*.xcodeworkspace` file using XCode
+1. Navigate to **Signing and Capabilities** and choose your Team from the drop down.
+   ![XCode Build Toolbar](attachments/native-build-locally/xc-setup-team.png)
+
+As with the Android Build Variants the iOS app makes us of Build Targets to switch between building the Custom Developer App or the release app.
+1. From the drop down choose nativeTemplate and the device you would like to run the app on and press the play button to start a build for your app.
+   ![XCode Build Toolbar](attachments/native-build-locally/xc-start-build.png)
+
+## 5 Adding or Removing Dependencies
+
+Mendix native mobile apps are build on top of React Native. Therefore, any React Native module can be added and used in a project. The same rules apply as with any React Native project.
+
+### 5.1 Adding Dependencies For Native Templates v4.0.0 and Above
+
+From Native Template v4.0.0 and above Mendix supports RN 0.6.x and therefore auto-linking. Auto linking is a React Native mechanism that allows React Native to link the native dependencies defined in the *package.json* file automatically with the native projects.
 
 1. Add the dependency to the root *package.json* of your Native Template using `npm i -s <dependency name>`.
 1. If the dependency supports auto-linking when `npm install` is run it will automatically add itself correctly to the Android and iOS project. If the dependency does not support auto-linking or requires more configuration, follow its documentation to add the required entries manually.
 
-### 4.2 Adding Dependencies For Native Templates Below v4.0.0
+### 5.2 Adding Dependencies For Native Templates Below v4.0.0
 
 Native Template versions below v4.0.0 do not support React Native's auto-linking. Therefore always follow the manual steps of the dependency to add it to the Android and iOS projects respectively.
 
-### 4.3 Removing Dependencies
+### 5.3 Removing Dependencies
 
-#### 4.3.1 Dependencies Which Support Auto-Linking
+#### 5.3.1 Dependencies Which Support Auto-Linking
 
 To remove dependencies which support auto-linking, do the following:
 
 1. Remove the dependency entry from the *package.json* file.
 1. Run `npm i`.
 
-#### 4.3.2 Dependencies Which Do Not Support Auto-Linking
+#### 5.3.2 Dependencies Which Do Not Support Auto-Linking
 
 To remove dependencies which do not support auto-linking, do the following:
 
@@ -137,7 +174,7 @@ To remove dependencies which do not support auto-linking, do the following:
 1. Remove the dependency's `include` and `project` entries from the *android/setting.gradle*. For example, to remove the Firebase module remove the following: 
 
    ```
-   include ':react-native-firebase' 
+   include ':react-native-firebase'
    project(':react-native-firebase').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-firebase/android')
    ```
 

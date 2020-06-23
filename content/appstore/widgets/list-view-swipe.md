@@ -91,7 +91,6 @@ To contribute to the development of this widget, follow these steps:
 	* [npm](https://www.npmjs.com/)
 	* [webpack-cli](https://www.npmjs.com/package/webpack-cli)
 	* [grunt-cli](https://github.com/gruntjs/grunt-cli)
-
 2. Fork and clone the [mendixlabs/listview-swipe](https://github.com/mendixlabs/listview-swipe.git) repository. The code is in Typescript.
 3. Set up the development environment by running `npm install`.
 4. Create a folder named *dist* in the project root.

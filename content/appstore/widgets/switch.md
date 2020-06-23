@@ -37,7 +37,6 @@ To contribute to the development of this widget, follow these steps:
 	* [webpack-cli](https://www.npmjs.com/package/webpack-cli)
 	* [grunt-cli](https://github.com/gruntjs/grunt-cli)
 	* [karma cli](https://www.npmjs.com/package/karma-cli)
-
 2. Fork and clone the [mendixlabs/boolean-slider](https://github.com/mendixlabs/boolean-slider.git) repository. The code is in Typescript.
 3. Set up the development environment by running `npm install`.
 4. Create a folder named *dist* in the project root.

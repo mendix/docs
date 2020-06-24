@@ -8,9 +8,9 @@ tags: ["native", "mobile", "build", "local", "xcode", "android studio"]
 
 ## 1 Introduction
 
-While the Native Builder command-line interface (CLI) is is the standard way to build Mendix native mobile apps, certain conditions such as limited internet connectivity might prevent you from using the Native Builder CLI. In those situations, you can build your apps locally without an internet connection.
+While the Native Builder command-line interface (CLI) is is the standard way to build Mendix native mobile apps, certain conditions such as limited internet connectivity might prevent you from using the Native Builder CLI. In those situations, you can build your apps locally without an internet connection. Follow the sections below through [Building Your Native App Project](#building-app-project) to complete your builds. To go beyond those instructions, see [Adding Dependencies](#adding-dependencies) and [Removing Dependencies](#removing-dependencies) sections below. These will allow you to further customize your local builds.
 
-Mendix native mobile apps are first and foremost React Native (RN) apps and follow the same rules as other RN apps:
+Mendix native mobile apps are first and foremost React Native (RN) apps which follow the same rules as other RN apps:
 
 * The JS code and static assets need to be bundled together for RN to use
 * The bundled code and assets are put into a React Native Template that represents an iOS and Android app
@@ -30,13 +30,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install Node and NPM 
 * Have the latest Native Builder CLI
 
-## 3 Get the Native Template
+## 3 Getting the Native Template
 
 The Native Template is the base for building native mobile apps with Mendix. In essence, it is a React Native template with the extra dependencies and configurations required to run your Mendix app.
 
 The Native Template is versioned against Mendix Studio Pro. This means the Studio Pro version you use to create your Mendix app dictates which version of the Native Template you should use. When using the Native Builder this is handled internally using the `--mendix-version` flag.
 
-#### 3.1 Determine Which Native Template Version to Use
+#### 3.1 Determining Which Native Template Version to Use
 
 To determine which version of the Native Template you should use, do the following:
 
@@ -50,7 +50,7 @@ The keys of the dictionary represent the Mendix Studio Pro version. The `min` an
 
 There is no best way of getting a copy of the Native Template. In the following sections we provide 2 possible ways for getting the needed version.
 
-#### 3.1.1 Get the Native Template using the Git CLI
+#### 3.1.1 Getting the Native Template using the Git CLI
 
 If you have Git installed, do the following:
 
@@ -108,7 +108,7 @@ For bundling your resources, the Native Builder supports an offline command that
 
 With that the basic setup of a Native Template with the latest bundle and assets of the Mendix project is complete.
 
-## 5 Building your Native Project
+## 5 Building your Native Mobile App Project {#building-app-project}
 
 Now that the Native Template is ready and includes the app's bundle, resources and runtime URL configuration, it can be build into a native app.
 
@@ -148,7 +148,7 @@ As with the Android Build Variants the iOS app makes us of Build Targets to swit
 
 After the build succeeds the app should be running on the selected device and connected to the runtime provided via the runtime URL provided. 
 
-## 6 Adding Dependencies
+## 6 Adding Dependencies {#adding-dependencies}
 
 At some point you will want to enhance your project with native pluggable widgets and functionality that will require the inclusion of React Native modules and libraries.
 
@@ -165,7 +165,7 @@ From Native Template v4.0.0 and above Mendix supports RN 0.6.x and therefore aut
 
 Native Template versions below v4.0.0 do not support React Native's auto-linking. Therefore always follow the manual steps of the dependency to add it to the Android and iOS projects respectively.
 
-## 7 Removing Dependencies
+## 7 Removing Dependencies {#removing-dependencies}
 
 As the requirements of a project might change, so do the required Native modules and libraries. To avoid bloating your app with libraries that aren't needed consider removing unused libraries. For now this is not automated and requires a bit consideration in identifying any unused libraries.
 

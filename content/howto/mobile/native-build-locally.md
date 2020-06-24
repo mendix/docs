@@ -71,9 +71,13 @@ If you do not have Git installed, do the following:
 1. Unzip the file.
 1. Run `npm i && cd ios && pod install` to install the required dependencies.
 
+Now, with a copy of Native template checked out and made ready, you can continue in bundling the Mendix App and moving into the Native Template to be compiled into your native app. 
+
 ## 4 Bundle your Mendix App
 
-For bundling your resources, the Native Builder supports an offline command that runs MXBuild and generates the required bundle and assets. To bundle your app, do the following:
+Bundling is the process of packaging everything you created in Mendix Studio Pro and making it ready to be compiled into your native app. Bundling in the case of a React Native app and hence a Mendix Native App, includes transpiling the business logic and layout of your app into a Javascript bundle and gathering all your static resources into the correct folder structure. 
+
+For bundling your resources, the Native Builder supports an offline command that runs MXBuild, a headless version of Mendix Studio's app compiler and generates the required bundle and assets. To bundle your app, do the following:
 
 1. Run the following command:
 
@@ -102,18 +106,19 @@ For bundling your resources, the Native Builder supports an offline command that
 1. Replace the URL with the correct URL for your runtime.
 1. Open *{your Native Template root}/ios/Config/config.xcconfig*, then replace the value of `RUNTIME_URL=` with the correct URL for your runtime.
 
-Now you have completed the basic setup of the Native Template with the latest bundle and assets of your Mendix project. 
+With that the basic setup of a Native Template with the latest bundle and assets of the Mendix project is complete.
 
+## 5 Building your Native Project
 
-With that we have completed the basic setup of Native Template with the latest bundle and assets of the Mendix project.
-
-## 4 Building your Native Project
+Now that the Native Template is ready and includes the app's bundle, resources and runtime URL configuration, it can be build into a native app.
 
 To build your project you can open the project with Android Studio or XCode for the Android and iOS project respectively and build as normally.
 
 More advance use cases as for CI pipelines can make use of Gradle or xcodebuild to build the apps using the command line.
 
-### 4.1 Build the Android app using Android Studio
+Here we outline the basic steps to get an app up and running on an emulator or device using the respective IDEs.
+
+### 5.1 Build the Android app using Android Studio
 
 1. Run npm install in the project root to install the required dependencies.
 1. Open Android studio.
@@ -127,7 +132,7 @@ Mendix Native Apps make use of Build Variants to build a release apps or the Cus
 1. After a short time the project should be synchronized and the play button should be selectable. Select a device or create a device from the drop down and press the play button to build and install your app on the device.
    ![Android Build Toolbar](attachments/native-build-locally/as-start-build.png)
 
-### 4.2 Build the iOS app using XCode
+### 5.2 Build the iOS app using XCode
 
 1. If not ran yet, run npm install in the project root to install the required dependencies
 1. Change directory by running `cd ios` and run `pod install` to install the iOS dependencies.
@@ -141,35 +146,37 @@ As with the Android Build Variants the iOS app makes us of Build Targets to swit
 1. From the drop down choose nativeTemplate and the device you would like to run the app on and press the play button to start a build for your app.
    ![XCode Build Toolbar](attachments/native-build-locally/xc-start-build.png)
 
-## 5 Adding or Removing Dependencies
+After the build succeeds the app should be running on the selected device and connected to the runtime provided via the runtime URL provided. 
+
+## 6 Adding Dependencies
 
 At some point you will want to enhance your project with native pluggable widgets and functionality that will require the inclusion of React Native modules and libraries.
 
 Mendix native mobile apps are build on top of React Native. Therefore, any React Native module can be added and used in a project. The same rules apply as with any React Native project.
 
-### 5.1 Adding Dependencies For Native Templates v4.0.0 and Above
+### 6.1 Adding Dependencies For Native Templates v4.0.0 and Above
 
 From Native Template v4.0.0 and above Mendix supports RN 0.6.x and therefore auto-linking. Auto linking is a React Native mechanism that allows React Native to link the native dependencies defined in the *package.json* file automatically with the native projects.
 
 1. Add the dependency to the root *package.json* of your Native Template using `npm i -s <dependency name>`.
 1. If the dependency supports auto-linking when `npm install` is run it will automatically add itself correctly to the Android and iOS project. If the dependency does not support auto-linking or requires more configuration, follow its documentation to add the required entries manually.
 
-### 5.2 Adding Dependencies For Native Templates Below v4.0.0
+### 6.2 Adding Dependencies For Native Templates Below v4.0.0
 
 Native Template versions below v4.0.0 do not support React Native's auto-linking. Therefore always follow the manual steps of the dependency to add it to the Android and iOS projects respectively.
 
-## 6 Removing Dependencies
+## 7 Removing Dependencies
 
 As the requirements of a project might change, so do the required Native modules and libraries. To avoid bloating your app with libraries that aren't needed consider removing unused libraries. For now this is not automated and requires a bit consideration in identifying any unused libraries.
 
-### 6.1 Removing Dependencies Which Support Auto-Linking for v4.0.0 and Above
+### 7.1 Removing Dependencies Which Support Auto-Linking for v4.0.0 and Above
 
 To remove dependencies which support auto-linking, do the following:
 
 1. Remove the dependency entry from the *package.json* file.
 1. Run `npm i`.
 
-### 6.2 Dependencies Which Do Not Support Auto-Linking or for v.3.x and Bellow
+### 7.2 Dependencies Which Do Not Support Auto-Linking or for v.3.x and Bellow
 
 To remove dependencies which do not support auto-linking, do the following:
 

@@ -11,6 +11,18 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](/refguide/getting-the-make-it-native-app#direct-links).
 
+## Android 2.1.0 / iOS 2.2.0
+
+**Release date: June 24th, 2020**
+
+### New Features
+
+A new showcase app was added to iOS. The Native Banking App showcases a fully functional banking app made fully in Mendix.
+
+### Fixes
+
+* We fixed an issue on iOS that was causing the viewport to not resize correctly when the orientation of the app was changing.
+
 ## Android 2.1.0 / iOS 2.1.0
 
 **Release date: May 15th, 2020**

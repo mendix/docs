@@ -71,13 +71,13 @@ If you do not have Git installed, do the following:
 1. Unzip the file.
 1. Run `npm i && cd ios && pod install` to install the required dependencies.
 
-Now, with a copy of Native template checked out and made ready, you can continue in bundling the Mendix App and moving into the Native Template to be compiled into your native app. 
+Now that you have a copy of the Native Template checked out and ready you can continue bundling the Mendix App and moving into the Native Template to be compiled into your native app. 
 
 ## 4 Bundle your Mendix App
 
-Bundling is the process of packaging everything you created in Mendix Studio Pro and making it ready to be compiled into your native app. Bundling in the case of a React Native app and hence a Mendix Native App, includes transpiling the business logic and layout of your app into a Javascript bundle and gathering all your static resources into the correct folder structure. 
+Bundling is the process of packaging everything you created in Studio Pro and making that package ready to be compiled into your native mobile app. Bundling in the case of a React Native app, and hence a Mendix Native App, includes transpiling the business logic and layout of your app into a JavaScript bundle and gathering all your static resources into the correct folder structure. 
 
-For bundling your resources, the Native Builder supports an offline command that runs MXBuild, a headless version of Mendix Studio's app compiler and generates the required bundle and assets. To bundle your app, do the following:
+For bundling your resources, the Native Builder supports an offline command that runs MXBuild (a headless version of Mendix Studio's app compiler) and generates the required bundle and assets. To bundle your app, do the following:
 
 1. Run the following command:
 
@@ -106,17 +106,17 @@ For bundling your resources, the Native Builder supports an offline command that
 1. Replace the URL with the correct URL for your runtime.
 1. Open *{your Native Template root}/ios/Config/config.xcconfig*, then replace the value of `RUNTIME_URL=` with the correct URL for your runtime.
 
-With that the basic setup of a Native Template with the latest bundle and assets of the Mendix project is complete.
+Congratualtions, you have successfully completed the basic setup of a Native Template with the latest bundle and assets of your Mendix app project.
 
 ## 5 Building your Native Mobile App Project {#building-app-project}
 
-Now that the Native Template is ready and includes the app's bundle, resources and runtime URL configuration, it can be build into a native app.
+Now that the Native Template is ready and includes the app's bundle, resources, and runtime URL configuration, it can be built into a native app.
 
 To build your project you can open the project with Android Studio or XCode for the Android and iOS project respectively and build as normally.
 
 More advance use cases as for CI pipelines can make use of Gradle or xcodebuild to build the apps using the command line.
 
-Here we outline the basic steps to get an app up and running on an emulator or device using the respective IDEs.
+In the sections below you can see the basic steps to get an app up and running on an emulator or device using Android or iOS IDEs.
 
 ### 5.1 Build the Android app using Android Studio
 
@@ -146,7 +146,7 @@ As with the Android Build Variants the iOS app makes us of Build Targets to swit
 1. From the drop down choose nativeTemplate and the device you would like to run the app on and press the play button to start a build for your app.
    ![XCode Build Toolbar](attachments/native-build-locally/xc-start-build.png)
 
-After the build succeeds the app should be running on the selected device and connected to the runtime provided via the runtime URL provided. 
+After the build succeeds the app should be running on the selected device and connected to the runtime using the runtime URL you provided. 
 
 ## 6 Adding Dependencies {#adding-dependencies}
 

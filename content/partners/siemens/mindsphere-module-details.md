@@ -150,7 +150,7 @@ The JSON should contain the following information:
 * appCopyright – app owner’s name and year of publication
 * links – links to additional information about the app
 
-More information on the structure and content of this JSON object, together with sample JSON, can be found in [App Information](https://developer.mindsphere.io/resources/osbar/resources-osbar-getting-started.html#app-information), on the MindSphere developer site.
+More information on the structure and content of this JSON object, together with sample JSON, can be found in [App Information](https://design.mindsphere.io/osbar/get-started.html#app-information), on the MindSphere developer site.
 
 ## 4 MindSphere Theme Pack{#msthemepack}
 

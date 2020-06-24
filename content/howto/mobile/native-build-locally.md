@@ -8,7 +8,7 @@ tags: ["native", "mobile", "build", "local", "xcode", "android studio"]
 
 ## 1 Introduction
 
-While the Native Builder command-line interface (CLI) is is the standard way to build Mendix native mobile apps, certain conditions such as limited internet connectivity might prevent you from using the Native Builder CLI. In those situations, you can build your apps locally without an internet connection. This document will provide a general overview of the steps you must take to finish a local build. If your use case does not specifically require local building, please build your app using [How to Deploy Your First Mendix Native Mobile App](deploying-native-app).
+While the Native Builder command-line interface (CLI) is the standard way to build Mendix native mobile apps, certain conditions such as limited internet connectivity might prevent you from using the Native Builder CLI. In those situations, you can build your apps locally without an internet connection. This document will provide a general overview of the steps you must take to finish a local build. If your use case does not specifically require local building, please build your app using [How to Deploy Your First Mendix Native Mobile App](deploying-native-app).
 
 Follow the sections below through [Building Your Native App Project](#building-app-project) to complete your builds. To go beyond those instructions, see [Adding Dependencies](#adding-dependencies) and [Removing Dependencies](#removing-dependencies) sections below. These sections will allow you to further customize your local builds.
 
@@ -17,7 +17,7 @@ To understand the local build process, it is important to grasp a few basic conc
 * The JS code and static assets need to be bundled together for RN to use
 * The bundled code and assets are put into a React Native Template that represents an iOS and Android app
 
-In a similar fashion, MXBuild and the Mendix Native Template folow these rules:
+In a similar fashion, MXBuild and the Mendix Native Template follow these rules:
 
 * When using MXBuild, the JS code and static assets are bundled together
 * The bundled code and assets are put into the Mendix Native Template that provides a foundation for both an iOS and Android version of your app
@@ -52,7 +52,7 @@ To determine which version of the Native Template you should use, do the followi
 1. Navigate to the [Native Template GitHub repository](github.com/mendix/native-template).
 1. At the root of your project, open the *mendix_version.json* JSON file.
 
-The keys of the dictionary represent the Mendix Studio Pro version. The `min` and `max` values are the the minimum and maximum Native Template versions supported. In the case of Mendix Studio Pro 8.9.x, you could choose any Native Template version from 4.0.0 to the latest. Ideally you should choose the most recent supported version.
+The keys of the dictionary represent the Mendix Studio Pro version. The `min` and `max` values are the minimum and maximum Native Template versions supported. In the case of Mendix Studio Pro 8.9.x, you could choose any Native Template version from 4.0.0 to the latest. Ideally you should choose the most recent supported version.
 
 {{% image_container width="200" %}}![iOS output](attachments/native-build-locally/mendix-version.png){{% /image_container %}}
 
@@ -92,7 +92,7 @@ For bundling your resources, the Native Builder supports an offline command that
    ```native-builder.exe bundle --project-name "CoolApp" --output-path "C:\bundles" --project-path "<absolute-path>" --java-home "<absolute-path>" --mxbuild-path "<absolute-path>"
    ```
 
-   The ouput path can be any location files could go. This command will do the following:
+   The output path can be any location files could go. This command will do the following:
 
    * Run MXBuild against your project to generate the required bundle and assets
    * Zip the output
@@ -109,7 +109,7 @@ For bundling your resources, the Native Builder supports an offline command that
 
    {{% image_container width="250" %}}![iOS output](attachments/native-build-locally/android-output.png){{% /image_container %}}
 
-1. Move the folder's content to *{your Native Template root}/android/app/src/main*. Choose to ovewrite if requested to do so.
+1. Move the folder's content to *{your Native Template root}/android/app/src/main*. Choose to overwrite if requested to do so.
 1. Open *{your Native Template root}/android/app/src/main/res/raw/runtime_url* using a text editor.
 1. Replace the URL with the correct URL for your runtime.
 1. Open *{your Native Template root}/ios/Config/config.xcconfig*, then replace the value of `RUNTIME_URL=` with the correct URL for your runtime.
@@ -127,13 +127,13 @@ In the sections below you can see the basic steps to get an app up and running o
 1. Run npm install in the project root to install the required dependencies.
 1. Open Android Studio.
 1. Select the `<Native Template root>/android` as the entry point for the project.
-1. After synchronizing the project you android studio should look something like this:
+1. After synchronizing the project your Android Studio should look something like this:
 
    ![Android Studio](attachments/native-build-locally/as-home.png)
 
-Mendix Native Apps make use of Build Variants to build a release apps or the Custom Developer App. Build Variants is a Gradle build system concept for sharing the same codebase but delivering different experiences:
+   Mendix native mobile apps make use of **Build Variants** to build a release app or a custom developer app. The idea of **Build Variants** is a Gradle build system concept for sharing the same codebase but delivering different experiences.
 
-1. Choose the appstoreDebug variant to be able to build and test your app on an emulator or connected device:
+1. Choose the **appstoreDebug** variant to be able to build and test your app on an emulator or connected device:
 
    ![Android Build Varients](attachments/native-build-locally/as-build-variants.png)
    
@@ -141,20 +141,21 @@ Mendix Native Apps make use of Build Variants to build a release apps or the Cus
 
    ![Android Build Toolbar](attachments/native-build-locally/as-start-build.png)
 
-### 5.2 Build an iOS App with XCode
+### 5.2 Building an iOS App with XCode
 
 1. If you have not ran it yet, run `npm install` in the project root to install the required dependencies.
 1. Change directory by running `cd ios` and run `pod install` to install the iOS dependencies.
 
-The iOS project is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see CocoaPods [documentation](https://cocoapods.org/#install).
+   The iOS project is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see CocoaPods [documentation](https://cocoapods.org/#install).
 
-1. Open the `*.xcodeworkspace` file using XCode
-1. Navigate to **Signing and Capabilities** and choose your Team from the drop down.
+1. Open *.xcodeworkspace* using XCode.
+1. Navigate to **Signing and Capabilities** and choose your **Team** from the drop-down menu:
+
    ![XCode Build Toolbar](attachments/native-build-locally/xc-setup-team.png)
 
-As with the Android Build Variants the iOS app makes us of Build Targets to switch between building the Custom Developer App or the release app.
+   As with the Android **Build Variants** the iOS app makes use of **Build Targets** to switch between building a custom developer app or a release app.
 
-1. From the dropdown menu choose **nativeTemplate** and the device you would like to run the app on and click the play button to start a build for your app:
+1. From the drop-down menu choose **nativeTemplate** and the device you would like to run the app on, then click the play button to start a build for your app:
 
    ![XCode Build Toolbar](attachments/native-build-locally/xc-start-build.png)
 
@@ -168,18 +169,18 @@ Mendix native mobile apps are build on top of React Native. Therefore, any React
 
 ### 6.1 Adding Dependencies For Native Templates v4.0.0 and Above
 
-From Native Template v4.0.0 and above Mendix supports RN 0.6.x and therefore auto-linking. Auto linking is a React Native mechanism that allows React Native to link the native dependencies defined in the *package.json* file automatically with the native projects.
+From Native Template v4.0.0 and above Mendix supports RN 0.6.x and therefore auto-linking. Auto linking is a React Native mechanism that allows React Native to link the native dependencies defined in the *package.json* file automatically with the native projects. To add dependencies for Native Template v4.0.0 and above, do the following:
 
 1. Add the dependency to the root *package.json* of your Native Template using `npm i -s <dependency name>`.
 1. If the dependency supports auto-linking when `npm install` is run it will automatically add itself correctly to the Android and iOS project. If the dependency does not support auto-linking or requires more configuration, follow its documentation to add the required entries manually.
 
 ### 6.2 Adding Dependencies For Native Templates Below v4.0.0
 
-Native Template versions below v4.0.0 do not support React Native's auto-linking. Therefore always follow the manual steps of the dependency to add it to the Android and iOS projects respectively.
+Native Template versions below v4.0.0 do not support React Native's auto-linking. Therefore always follow the manual steps of the dependency to add it to the Android and iOS projects.
 
 ## 7 Removing Dependencies {#removing-dependencies}
 
-As the requirements of a project might change, so do the required Native modules and libraries. To avoid bloating your app with libraries that aren't needed consider removing unused libraries. For now this is not automated and requires a bit consideration in identifying any unused libraries.
+As the requirements of a project might change, so do the required native modules and libraries. To avoid bloating your app with unnecessary libraries, consider removing unused libraries. This process is not currently automated and requires a bit of consideration when identifying any unused libraries.
 
 ### 7.1 Removing Dependencies Which Support Auto-Linking for v4.0.0 and Above
 

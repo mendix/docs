@@ -17,11 +17,11 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 
 ### New Features
 
-A new showcase app was added to iOS. The Native Banking App showcases a fully functional banking app made fully in Mendix.
+* A new showcase app was added to the iOS Make It Native app: The Native Banking app. The Native Banking app showcases a fully functional banking app made entirely in Mendix.
 
 ### Fixes
 
-* We fixed an issue on iOS that was causing the viewport to not resize correctly when the orientation of the app was changing.
+* We fixed an issue on iOS that was causing the viewport to not resize correctly when the app's orientation was changing.
 
 ## Android 2.1.0 / iOS 2.1.0
 

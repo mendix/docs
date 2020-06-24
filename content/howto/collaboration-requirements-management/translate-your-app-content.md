@@ -7,7 +7,7 @@ tags: ["studio pro", "translate app", "batch translate", "translate"]
 
 ## 1 Introduction
 
-Delivering your Mendix app in multiple languages is an important capability for reaching a wide audience. Most of the text that the end-user sees are stored as translatable texts (for example, labels, button names, menu items). Using the language features of Mendix, you can quickly make your app multilingual and translate the content to many other languages.
+Delivering your Mendix app in multiple languages is an important capability for reaching a wide audience. Most of the text that the end-user sees is stored as translatable texts (for example, labels, button names, and menu items). Using the language features of Mendix, you can quickly make your app multilingual and translate the content to many other languages.
 
 **This how-to will teach you how to do the following:**
 
@@ -24,17 +24,17 @@ It is assumed that you know the basics of creating new apps and editing them.
 
 To demonstrate working with languages, you will create a new app from the blank app template. You will add some text to this app, as an example, but the app you create is to demonstrate the language features of Mendix and is not intended to be run.
 
-When you create an app from a Mendix template, there is one language, **English, United States**, which is set to be the default language. This is the language which will be displayed when an end-user has no language selected, or when your app does not support their selected language.
+When you create an app from a Mendix template, there is one language available. This is **English, United States**, which you will usually set to be the default language. This is the language which will be displayed when an end-user has no language selected, or when your app does not support their selected language.
 
 To create your app, do the following:
 
-1. Create a new app using the **Blank App** template.
-2. Open the app in Studio Pro (images here are from Studio Pro version 8.10)
+1. Create a new app using the **Blank App** template. If given the option, leave the default language as **English, United States**.
+2. Open the app in Studio Pro (images here are from Studio Pro version 8.10).
 3. Create a domain model in MyFirstModule with two entities:
 	* **Order** with the integer attribute **OrderNumber**
 	* **Product** with the string attribute **ProductName**
 		![Domain model for How To](attachments/translate-your-app-content/domain-model.png)
-4. Right-click one of the entities and select **Generate overview pages…**
+4. Right-click one of the entities and select **Generate overview pages…**.
 5. Ensure both entities are selected and click **OK**.
 	![Options selected for Generate Pages](attachments/translate-your-app-content/generate-pages.png)
 	This will generate some pages containing text for you to translate.
@@ -96,7 +96,7 @@ Mendix offers you a way to add a translation for all occurrences of a text at on
 
 ### 6.1 Translating Multiple Texts
 
-To translate multiple occurrences and multiple texts from the default language, English, to Russian in a single operation, do the following.
+To translate multiple occurrences and multiple texts from the default language, English, to Russian in a single operation, do the following:
 
 1. Select the menu option **Language > Batch Translate…**.
 2. Select *English, United States* as the **Source language** and *Russian, Russia* as the **Destination language**.
@@ -123,7 +123,7 @@ Sometimes a single word in the source language does not have a single translatio
 
 Follow the steps below to see how to deal with this situation.
 
-1. Follow steps **1** through **6** in the previous section to again see a list of texts in your module which can be translated from English, United States to Russian, Russia.
+1. Follow steps **1** through **6** in the previous section to again see a list of texts in your module which can be translated from *English, United States* to *Russian, Russia*.
 2. Type *Order* in the **Source text contains** field.
 3. Click the translatable text `Order`. You can see that there are three places that this text is used, and they are listed at the bottom of the dialog box.
 	![All source texts containing the word 'order' with the locations of the text 'order' shown](attachments/translate-your-app-content/batch-translate-order.png)

@@ -8,9 +8,11 @@ tags: ["native", "mobile", "build", "local", "xcode", "android studio"]
 
 ## 1 Introduction
 
-While the Native Builder command-line interface (CLI) is is the standard way to build Mendix native mobile apps, certain conditions such as limited internet connectivity might prevent you from using the Native Builder CLI. In those situations, you can build your apps locally without an internet connection. Follow the sections below through [Building Your Native App Project](#building-app-project) to complete your builds. To go beyond those instructions, see [Adding Dependencies](#adding-dependencies) and [Removing Dependencies](#removing-dependencies) sections below. These will allow you to further customize your local builds.
+While the Native Builder command-line interface (CLI) is is the standard way to build Mendix native mobile apps, certain conditions such as limited internet connectivity might prevent you from using the Native Builder CLI. In those situations, you can build your apps locally without an internet connection. This document will provide a general overview of the steps you must take to finish a local build. If your use case does not specifically require local building, please build your app using [How to Deploy Your First Mendix Native Mobile App](deploying-native-app).
 
-Mendix native mobile apps are first and foremost React Native (RN) apps which follow the same rules as other RN apps:
+Follow the sections below through [Building Your Native App Project](#building-app-project) to complete your builds. To go beyond those instructions, see [Adding Dependencies](#adding-dependencies) and [Removing Dependencies](#removing-dependencies) sections below. These sections will allow you to further customize your local builds.
+
+To understand the local build process, it is important to grasp a few basic concepts. Mendix native mobile apps are first and foremost React Native (RN) apps which follow the same rules as other RN apps:
 
 * The JS code and static assets need to be bundled together for RN to use
 * The bundled code and assets are put into a React Native Template that represents an iOS and Android app
@@ -18,23 +20,29 @@ Mendix native mobile apps are first and foremost React Native (RN) apps which fo
 In a similar fashion, MXBuild and the Mendix Native Template folow these rules:
 
 * When using MXBuild, the JS code and static assets are bundled together
-* The bundled code and assets are put into the Mendix Native Template that provides a foundation for both an iOS and Android version of your app.
+* The bundled code and assets are put into the Mendix Native Template that provides a foundation for both an iOS and Android version of your app
 
 ## 2 Prerequisites {#prerequisites}
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have a Mac OS X machine 
-* Install XCode and CocoaPods 
-* Install Android SDK and platform tools
 * Install Node and NPM 
 * Have the latest Native Builder CLI
+
+For iOS builds:
+
+* Have a Mac OS X machine 
+* Install XCode and CocoaPods 
+
+For Android Builds:
+
+* Install Android SDK and platform tools
 
 ## 3 Getting the Native Template
 
 The Native Template is the base for building native mobile apps with Mendix. In essence, it is a React Native template with the extra dependencies and configurations required to run your Mendix app.
 
-The Native Template is versioned against Mendix Studio Pro. This means the Studio Pro version you use to create your Mendix app dictates which version of the Native Template you should use. When using the Native Builder this is handled internally using the `--mendix-version` flag.
+The Native Template is versioned against Mendix Studio Pro. This means the Studio Pro version you use to create your Mendix app dictates which version of the Native Template you should use. When using the Native Builder this is handled internally using the `--mendix-version` parameter. For more information on parameters, see the [Expanded Parameter Explanations](/refguide/native-builder#parameters) section of the *Native Builder Reference Guide*.
 
 #### 3.1 Determining Which Native Template Version to Use
 
@@ -48,19 +56,19 @@ The keys of the dictionary represent the Mendix Studio Pro version. The `min` an
 
 {{% image_container width="200" %}}![iOS output](attachments/native-build-locally/mendix-version.png){{% /image_container %}}
 
-There is no best way of getting a copy of the Native Template. In the following sections we provide 2 possible ways for getting the needed version.
+There is no best way of getting a copy of the Native Template. In the following sections we provide two ways to get the version you need.
 
-#### 3.1.1 Getting the Native Template using the Git CLI
+#### 3.1.1 Getting the Native Template Using the Git CLI
 
-If you have Git installed, do the following:
+This method is useful if you have Git installed. To get the Native Template, do the following:
 
 1. Use `git@github.com:mendix/native-template.git` or `https://github.com/mendix/native-template.git` to clone the project locally. 
 1. Run the following command: `git clone --single-branch --branch release/<major-version-number> <repo-url>`.
 1. Run `npm i && cd ios && pod install` to install the required dependencies.
 
-#### 3.1.2 Get the Native Template by downloading the source code from GitHub
+#### 3.1.2 Getting the Native Template by Downloading the Source Code from GitHub
 
-If you do not have Git installed, do the following:
+This method is useful if you do not have Git installed. To get the Native Template, do the following:
 
 1. Navigate to the [Native Template releases](github.com/mendix/native-template/releases).
 1. Scroll to the version you want to download.
@@ -71,9 +79,9 @@ If you do not have Git installed, do the following:
 1. Unzip the file.
 1. Run `npm i && cd ios && pod install` to install the required dependencies.
 
-Now that you have a copy of the Native Template checked out and ready you can continue bundling the Mendix App and moving into the Native Template to be compiled into your native app. 
+Now that you have a copy of the Native Template checked out and ready you can continue bundling your Mendix app and moving into the Native Template to be compiled into your native app. 
 
-## 4 Bundle your Mendix App
+## 4 Bundling Your Mendix App
 
 Bundling is the process of packaging everything you created in Studio Pro and making that package ready to be compiled into your native mobile app. Bundling in the case of a React Native app, and hence a Mendix Native App, includes transpiling the business logic and layout of your app into a JavaScript bundle and gathering all your static resources into the correct folder structure. 
 
@@ -106,44 +114,48 @@ For bundling your resources, the Native Builder supports an offline command that
 1. Replace the URL with the correct URL for your runtime.
 1. Open *{your Native Template root}/ios/Config/config.xcconfig*, then replace the value of `RUNTIME_URL=` with the correct URL for your runtime.
 
-Congratualtions, you have successfully completed the basic setup of a Native Template with the latest bundle and assets of your Mendix app project.
+Congratulations! You have successfully completed the basic setup of a Native Template with the latest bundle and assets of your Mendix app project.
 
 ## 5 Building your Native Mobile App Project {#building-app-project}
 
-Now that the Native Template is ready and includes the app's bundle, resources, and runtime URL configuration, it can be built into a native app.
-
-To build your project you can open the project with Android Studio or XCode for the Android and iOS project respectively and build as normally.
-
-More advance use cases as for CI pipelines can make use of Gradle or xcodebuild to build the apps using the command line.
+Now that the Native Template is ready and includes the app's bundle, resources, and runtime URL configuration, it can be built into a native app. To build your project you can open the project with Android Studio or XCode for the Android and iOS project respectively, and then build as normal. More advanced use cases, such as apps for continuous integration pipelines, can make use of Gradle or xcodebuild to build the apps using command line.
 
 In the sections below you can see the basic steps to get an app up and running on an emulator or device using Android or iOS IDEs.
 
-### 5.1 Build the Android app using Android Studio
+### 5.1 Building an Android App with Android Studio
 
 1. Run npm install in the project root to install the required dependencies.
-1. Open Android studio.
+1. Open Android Studio.
 1. Select the `<Native Template root>/android` as the entry point for the project.
-1. After synchronizing the project you android studio should look something like that:
+1. After synchronizing the project you android studio should look something like this:
+
    ![Android Studio](attachments/native-build-locally/as-home.png)
 
-Mendix Native Apps make use of Build Variants to build a release apps or the Custom Developer App. Build Variants is a Gradle build system concept for sharing the same codebase but delivering different experiences.
-1. Choose the appstoreDebug variant to be able to build and test your app on an Emulator or connected device.
+Mendix Native Apps make use of Build Variants to build a release apps or the Custom Developer App. Build Variants is a Gradle build system concept for sharing the same codebase but delivering different experiences:
+
+1. Choose the appstoreDebug variant to be able to build and test your app on an emulator or connected device:
+
    ![Android Build Varients](attachments/native-build-locally/as-build-variants.png)
-1. After a short time the project should be synchronized and the play button should be selectable. Select a device or create a device from the drop down and press the play button to build and install your app on the device.
+   
+1. After a short time the project should be synchronized and the play button should be selectable. Select a device or create a device from the drop-down menu and click the play button to build and install your app on the device:
+
    ![Android Build Toolbar](attachments/native-build-locally/as-start-build.png)
 
-### 5.2 Build the iOS app using XCode
+### 5.2 Build an iOS App with XCode
 
-1. If not ran yet, run npm install in the project root to install the required dependencies
+1. If you have not ran it yet, run `npm install` in the project root to install the required dependencies.
 1. Change directory by running `cd ios` and run `pod install` to install the iOS dependencies.
 
-   The iOS project is using CocoaPods for its dependency management if you do not yet have the CocoaPods dependency manager installed on your machine see the [official documentation](https://cocoapods.org/#install) on how to set it up.
+The iOS project is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see CocoaPods [documentation](https://cocoapods.org/#install).
+
 1. Open the `*.xcodeworkspace` file using XCode
 1. Navigate to **Signing and Capabilities** and choose your Team from the drop down.
    ![XCode Build Toolbar](attachments/native-build-locally/xc-setup-team.png)
 
 As with the Android Build Variants the iOS app makes us of Build Targets to switch between building the Custom Developer App or the release app.
-1. From the drop down choose nativeTemplate and the device you would like to run the app on and press the play button to start a build for your app.
+
+1. From the dropdown menu choose **nativeTemplate** and the device you would like to run the app on and click the play button to start a build for your app:
+
    ![XCode Build Toolbar](attachments/native-build-locally/xc-start-build.png)
 
 After the build succeeds the app should be running on the selected device and connected to the runtime using the runtime URL you provided. 

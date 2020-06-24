@@ -79,7 +79,7 @@ This method is useful if you do not have Git installed. To get the Native Templa
 1. Unzip the file.
 1. Run `npm i && cd ios && pod install` to install the required dependencies.
 
-Now that you have a copy of the Native Template checked out and ready you can continue bundling your Mendix app and moving into the Native Template to be compiled into your native app. 
+Now that you have a copy of the Native Template checked out and ready, you can bundle your Mendix app project, move it into the Native Template folder, and compile everything together to produce your native app.
 
 ## 4 Bundling Your Mendix App
 

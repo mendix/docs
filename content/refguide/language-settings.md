@@ -35,7 +35,7 @@ You can add as many languages as you like from the list of supported languages b
 
 Most languages will be added with an empty dictionary, although some translations have already been set up in the Dutch dictionary.
 
-## 4 Advanced Language Settings
+## 4 Advanced Language Settings{#advanced}
 
 You can set each language in your app to have additional settings.
 

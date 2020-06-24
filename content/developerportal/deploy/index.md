@@ -47,11 +47,23 @@ If you create your app from an SAP app template, the Developer Portal will lead 
 
 For more information, see [SAP Cloud Platform](sap-cloud-platform).
 
-## 6 Cloud Foundry
+## 6 Siemens MindSphere
+
+You can deploy your app to MindSphere, the cloud-based, open IoT operating system from Siemens. Here you can leverage the information held within MindSphere and share your app with selected MindSphere tenants.
+
+To find out how to do this, read [Siemens MindSphere](deploying-to-mindsphere).
+
+## 7 Private Cloud
+
+Mendix for Private Cloud allows you to deploy and manage your Mendix apps in a Kubernetes private cloud cluster.
+
+The instructions for doing this are in [Private Cloud}(private-cloud).
+
+## 8 Cloud Foundry
 
 From within Studio Pro, you can deploy directly to Cloud Foundry-based platforms. To get started, see [Cloud Foundry](cloud-foundry-deploy) and the [Cloud Foundry Mendix Buildpack](https://github.com/mendix/cf-mendix-buildpack).
 
-## 7 Docker & Kubernetes
+## 9 Docker & Kubernetes
 
 Mendix can be deployed in a Docker container to provide highly scalable solutions and automated delivery pipelines (CI/CD).
 
@@ -59,12 +71,27 @@ Instructions for using the buildpack are described in [How to Build a Docker Ima
 
 The Docker buildpack is available at [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack).
 
-## 8 Azure
+## 10 Azure
 
 Deploying to Azure is possible from the [Azure Marketplace](https://azure.microsoft.com/en-us/marketplace/partners/mendix/mendix-pro/). 
 
 For details on how to deploy, see [Azure](azure-deploy).
 
-## 9 On-Premises
+## 11 On-Premises
 
 To learn how to deploy your Mendix application on premises, see [How to Deploy Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows) and [Unix Deployment](unix-like).
+
+## 12 Main Documents in This Category
+
+* [General](general) – information which applies to deployments in many different environments
+* [Mendix Cloud](mendix-cloud-deploy) – how to deploy to, and configure, the Mendix Cloud
+* [IBM Cloud](ibm-cloud) – how to deploy to the IBM Cloud
+* [SAP Cloud Platform](sap-cloud-platform) – how to deploy to SAP Cloud Platform
+* [Siemens MindSphere](deploying-to-mindsphere) – how to deploy to Siemens MindSphere
+* [Private Cloud](private-cloud) – how to deploy to a supported private cloud through the Developer Portal
+* [Cloud Foundry](cloud-foundry-deploy) – how to deploy to a Cloud Foundry-based platform
+* [Docker](docker-deploy) – how to deploy directly in a Docker container
+* [Azure](azure-deploy) – how to deploy to Azure using the Azure Marketplace
+* [On-Premises](on-premises-design) – how to deploy on premises using Microsoft Windows or Un*x
+* [Mobile App](mobileapp) – how to publish your mobile app
+* [App Services](app-services) – how to publish to the Mendix App Store

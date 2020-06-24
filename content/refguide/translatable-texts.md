@@ -86,10 +86,7 @@ There are two options to ensure that the language is changed:
 
 ## 5 Read More
 
-There is a worked example of adding a translation in [How to Translate Your App Content](/howto/collaboration-requirements-management/translate-your-app-content)
-
-See also [How To Use Translatable Validation Messages](/howto/logic-business-rules/translatable-validation-messages) for information on translating validation messages.
-
-For more explanations and ideas for refreshing the page when the language is changed see the Mendix forum question [Change language by clicking a link](https://forum.mendixcloud.com/link/questions/91821).
-
-Switching languages for anonymous users is also discussed in the Mendix Forum. For example in this question: [Anonymous User Journey](https://forum.mendixcloud.com/link/questions/91676).
+* [How to Translate Your App Content](/howto/collaboration-requirements-management/translate-your-app-content) – a worked example of adding a translation 
+* [How To Use Translatable Validation Messages](/howto/logic-business-rules/translatable-validation-messages)
+* [Change language by clicking a link](https://forum.mendixcloud.com/link/questions/91821) – explanations and ideas on the Mendix forum for refreshing the page when the language is changed
+* [Anonymous User Journey](https://forum.mendixcloud.com/link/questions/91676) – a discussion on the Mendix forum about switching languages for anonymous end-users

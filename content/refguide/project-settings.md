@@ -203,6 +203,8 @@ The way web services are called has been optimized, which means you can use cust
 
 ## 4 Languages Tab
 
+For more information about using different languages in your app, see [Language Menu](translatable-texts).
+
 ### 4.1 Default Language
 
 The default language indicates the language that is used when a user has not chosen a language. The default language is also used as a fall-back language when a certain text is not translated to another language.

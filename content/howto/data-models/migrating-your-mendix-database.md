@@ -49,7 +49,7 @@ These settings can be configured as follows:
 You can migrate databases using Studio Pro, the Service Console, or m2ee-tools. The Service Console gives you the advantage of seeing a progress bar during the copy process, which is handy if you copy a lot of data which takes a long time to execute.
 
 {{% alert type="info" %}}
-Database migration is handled by Mendix as a normal database synchronization phase during the start-up process of an app. As a consequence, it is possible that during the start-up process you will get to see messages like ‘The database has to be synchronized’ or you will see an empty message. You can ignore these messages — the database migration will be performed.
+Database migration is handled by Mendix as a normal database synchronization phase during the start-up process of an app. When using m2ee-tools, it is possible that during the start-up process you will get to see messages like ‘The database has to be synchronized’ or you will see an empty message. You can ignore these messages — the database migration will be performed.
 {{% /alert %}}
 
 {{% alert type="warning" %}}

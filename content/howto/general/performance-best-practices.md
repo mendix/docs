@@ -14,7 +14,7 @@ This document collects Mendix application performance best practices in the form
 
 {{% /alert %}}
 
-## Remove Unused Calculated Attributes {#p1b}
+## Remove unused calculated attributes {#p1b}
 
 For an object that has calculated attributes, each time that object is changed or retrieved from storage, it’s calculated attributes are computed by calling a microflow. If the logic behind calculated attributes retrieves other objects or executes Integration activities, it will cause an extra load (and delay) on the system when the outcome of the logic doesn't matter at that moment. Creating calculated attributes always affect performance, so decide if this is worth it for what you are using the calculated attribute for
 

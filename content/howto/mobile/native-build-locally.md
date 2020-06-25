@@ -212,3 +212,7 @@ To remove dependencies which do not support auto-linking, do the following:
    ```
 
 1. Remove any custom code included in the iOS or Android project.
+
+## 8 Read More
+
+* [How to Create a Custom Developer App](how-to-devapps)

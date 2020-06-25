@@ -100,9 +100,9 @@ For bundling your resources, the Native Builder supports an offline command that
 
 The output path can be any location files could go. This command will do the following:
 
-	1. Run MXBuild against your project to generate the required bundle and assets.
-	1. Zip the output.
-	1. Move the zipped bundle and assets to the `--output-path`.
+1. Run MXBuild against your project to generate the required bundle and assets.
+1. Zip the output.
+1. Move the zipped bundle and assets to the `--output-path`.
 
 When completed you should have two zipped binaries: one for Android and one for iOS. Continue by doing the following:
 

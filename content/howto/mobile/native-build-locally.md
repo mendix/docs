@@ -8,7 +8,7 @@ tags: ["native", "mobile", "build", "local", "xcode", "android studio"]
 
 ## 1 Introduction
 
-While the Native Builder command-line interface (CLI) is the standard way to build Mendix native mobile apps, certain conditions such as limited internet connectivity might prevent you from using the Native Builder CLI. In those situations, you can build your apps locally without an internet connection. This document will provide a general overview of the steps you must take to finish a local build. If your use case does not specifically require local building, please build your app using [How to Deploy Your First Mendix Native Mobile App](deploying-native-app).
+By default when building your native mobile app binaries, Mendix uses [Visual Studio App Center](https://appcenter.ms/sign-in?original_url=%2Fapps) as a service so that users can build without having to install tools like XCode or Android Studio. However, there are cases when using App Center is not allowed or possible. In those situations, you can build your apps locally without an internet connection.
 
 Follow the sections below through [Building Your Native App Project](#building-app-project) to complete your builds. To go beyond those instructions, see [Adding Dependencies](#adding-dependencies) and [Removing Dependencies](#removing-dependencies) sections below. These sections will allow you to further customize your local builds.
 
@@ -26,17 +26,20 @@ In a similar fashion, MXBuild and the Mendix Native Template follow these rules:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install Node and NPM 
-* Have the latest Native Builder CLI
+* Install [Node and NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+* Download the Native Builder [executable](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) to a folder of your preference and extract all contents
+   * Use v1.0.0 with Mendix 8.0
+   * Use v2.0.0 with Mendix 8.1.0 and above
+   * Use v3.0.0 with Mendix 8.3.0 and above
 
 For iOS builds:
 
 * Have a Mac OS X machine 
-* Install XCode and CocoaPods 
+* Install [XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) 
 
 For Android Builds:
 
-* Install Android SDK and platform tools
+* Install [Android SDK](https://developer.android.com/studio) and [platform tools](https://developer.android.com/studio/releases/platform-tools)
 
 ## 3 Getting the Native Template
 

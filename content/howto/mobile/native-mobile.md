@@ -26,4 +26,4 @@ You build Mendix native mobile apps the same way you build web or hybrid apps. Y
 * [Create a Custom Developer App](how-to-devapps)
 * [Set Up Deep Links in Native Mobile Apps](native-deep-link)
 * [Troubleshoot Common Native Mobile Issues](common-issues)
-
+* [Build a Mendix Native Mobile App Locally](native-build-locally)

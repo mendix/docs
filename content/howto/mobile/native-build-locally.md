@@ -98,13 +98,13 @@ For bundling your resources, the Native Builder supports an offline command that
 	native-builder.exe bundle --project-name "CoolApp" --output-path "C:\bundles" --project-path "<absolute-path>" --java-home "<absolute-path>" --mxbuild-path "<absolute-path>"
 	```
 
-	The output path can be any location files could go. This command will do the following:<br/>
+The output path can be any location files could go. This command will do the following:
 
-		1. Run MXBuild against your project to generate the required bundle and assets.<br/>
-		1. Zip the output.<br/>
-		1. Move the zipped bundle and assets to the `--output-path`.<br/>
+	1. Run MXBuild against your project to generate the required bundle and assets.
+	1. Zip the output.
+	1. Move the zipped bundle and assets to the `--output-path`.
 
-	When completed you should have two zipped binaries: one for Android and one for iOS. Continue by doing the following:
+When completed you should have two zipped binaries: one for Android and one for iOS. Continue by doing the following:
 
 1.  Unzip the iOS binary. The folder structure should be the following:
 

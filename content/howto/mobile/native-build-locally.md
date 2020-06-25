@@ -55,9 +55,11 @@ To determine which version of the Native Template you should use, do the followi
 1. Navigate to the [Native Template GitHub repository](https://github.com/mendix/native-template).
 1. At the root of your project, open the *mendix_version.json* JSON file.
 
-The keys of the dictionary represent the Mendix Studio Pro version. The `min` and `max` values are the minimum and maximum Native Template versions supported. In the case of Mendix Studio Pro 8.9.x, you could choose any Native Template version from 4.0.0 to the latest. Ideally you should choose the most recent supported version.
+The keys of the dictionary represent the Mendix Studio Pro version. The `min` and `max` values are the minimum and maximum Native Template versions supported: 
 
 {{% image_container width="200" %}}![iOS output](attachments/native-build-locally/mendix-version.png){{% /image_container %}}
+
+In the case of Mendix Studio Pro 8.9.x, you could choose any Native Template version from 4.0.0 to the latest. Ideally you should choose the most recent supported version
 
 There is no best way of getting a copy of the Native Template. In the following sections we provide two ways to get the version you need.
 
@@ -75,9 +77,9 @@ This method is useful if you do not have Git installed. To get the Native Templa
 
 1. Navigate to the [Native Template releases](https://github.com/mendix/native-template/releases).
 1. Scroll to the version you want to download.
-1. Select the source code binary to download a copy of the code.
+1.  Select the source code binary to download a copy of the code:
 
-   {{% image_container width="250" %}}![iOS output](attachments/native-build-locally/github-assets.png){{% /image_container %}}
+	{{% image_container width="250" %}}![iOS output](attachments/native-build-locally/github-assets.png){{% /image_container %}}
 
 1. Unzip the file.
 1. Run `npm i && cd ios && pod install` to install the required dependencies.
@@ -92,14 +94,15 @@ For bundling your resources, the Native Builder supports an offline command that
 
 1. Run the following command:
 
-   ```native-builder.exe bundle --project-name "CoolApp" --output-path "C:\bundles" --project-path "<absolute-path>" --java-home "<absolute-path>" --mxbuild-path "<absolute-path>"
-   ```
+	```
+	native-builder.exe bundle --project-name "CoolApp" --output-path "C:\bundles" --project-path "<absolute-path>" --java-home "<absolute-path>" --mxbuild-path "<absolute-path>"
+	```
 
-   The output path can be any location files could go. This command will do the following:
+	The output path can be any location files could go. This command will do the following:<br/>
 
-   * Run MXBuild against your project to generate the required bundle and assets
-   * Zip the output
-   * Move the zipped bundle and assets to the `--output-path`
+	1. Run MXBuild against your project to generate the required bundle and assets.<br/>
+	1. Zip the output.<br/>
+	1. Move the zipped bundle and assets to the `--output-path`.<br/>
 
    When completed you should have two zipped binaries: one for Android and one for iOS.
 
@@ -119,7 +122,7 @@ For bundling your resources, the Native Builder supports an offline command that
 
 Congratulations! You have successfully completed the basic setup of a Native Template with the latest bundle and assets of your Mendix app project.
 
-## 5 Building your Native Mobile App Project {#building-app-project}
+## 5 Building your Native Mobile App Project{#building-app-project}
 
 Now that the Native Template is ready and includes the app's bundle, resources, and runtime URL configuration, it can be built into a native app. To build your project you can open the project with Android Studio or XCode for the Android and iOS project respectively, and then build as normal. More advanced use cases, such as apps for continuous integration pipelines, can make use of Gradle or xcodebuild to build the apps using command line.
 
@@ -164,7 +167,7 @@ In the sections below you can see the basic steps to get an app up and running o
 
 After the build succeeds the app should be running on the selected device and connected to the runtime using the runtime URL you provided. 
 
-## 6 Adding Dependencies {#adding-dependencies}
+## 6 Adding Dependencies{#adding-dependencies}
 
 At some point you will want to enhance your project with native pluggable widgets and functionality that will require the inclusion of React Native modules and libraries.
 
@@ -181,7 +184,7 @@ From Native Template v4.0.0 and above Mendix supports RN 0.6.x and therefore aut
 
 Native Template versions below v4.0.0 do not support React Native's auto-linking. Therefore always follow the manual steps of the dependency to add it to the Android and iOS projects.
 
-## 7 Removing Dependencies {#removing-dependencies}
+## 7 Removing Dependencies{#removing-dependencies}
 
 As the requirements of a project might change, so do the required native modules and libraries. To avoid bloating your app with unnecessary libraries, consider removing unused libraries. This process is not currently automated and requires a bit of consideration when identifying any unused libraries.
 
@@ -200,16 +203,16 @@ To remove dependencies which do not support auto-linking, do the following:
 1. Remove the dependency's entry from the *ios/Podfile* file.
 1. Remove the dependency's `include` and `project` entries from the *android/setting.gradle*. For example, to remove the Firebase module remove the following: 
 
-   ```
-   include ':react-native-firebase'
-   project(':react-native-firebase').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-firebase/android')
-   ```
+	```
+	include ':react-native-firebase'
+	project(':react-native-firebase').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-firebase/android')
+	```
 
 1. Remove the dependency's `implementation` entry in the *android/app/build.gradle*. For example, to remove the Firebase module remove the following:
 
-   ```
-    implementation project(":react-native-firebase")
-   ```
+	```
+	implementation project(":react-native-firebase")
+	```
 
 1. Remove any custom code included in the iOS or Android project.
 

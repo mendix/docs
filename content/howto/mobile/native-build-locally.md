@@ -108,12 +108,12 @@ When completed you should have two zipped binaries: one for Android and one for 
 
 1.  Unzip the iOS binary. The folder structure should be the following:
 
-   {{% image_container width="250" %}}![iOS output](attachments/native-build-locally/ios-output.png){{% /image_container %}}
+	{{% image_container width="250" %}}![iOS output](attachments/native-build-locally/ios-output.png){{% /image_container %}}
 
 1. Move the folder's content to *{your Native Template root}/ios/Bundle*.
 1.  Unzip the Android binary. The folder structure should be the following:
 
-   {{% image_container width="250" %}}![iOS output](attachments/native-build-locally/android-output.png){{% /image_container %}}
+	{{% image_container width="250" %}}![iOS output](attachments/native-build-locally/android-output.png){{% /image_container %}}
 
 1. Move the folder's content to *{your Native Template root}/android/app/src/main*. Choose to overwrite if requested to do so.
 1. Open *{your Native Template root}/android/app/src/main/res/raw/runtime_url* using a text editor.

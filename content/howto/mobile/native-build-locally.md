@@ -100,11 +100,11 @@ For bundling your resources, the Native Builder supports an offline command that
 
 	The output path can be any location files could go. This command will do the following:<br/>
 
-	1. Run MXBuild against your project to generate the required bundle and assets.<br/>
-	1. Zip the output.<br/>
-	1. Move the zipped bundle and assets to the `--output-path`.<br/>
+		1. Run MXBuild against your project to generate the required bundle and assets.<br/>
+		1. Zip the output.<br/>
+		1. Move the zipped bundle and assets to the `--output-path`.<br/>
 
-   When completed you should have two zipped binaries: one for Android and one for iOS.
+	When completed you should have two zipped binaries: one for Android and one for iOS. Continue by doing the following:
 
 1. Unzip the iOS binary. The folder structure should be the following:
 
@@ -135,35 +135,35 @@ In the sections below you can see the basic steps to get an app up and running o
 1. Select the `<Native Template root>/android` as the entry point for the project.
 1. After synchronizing the project your Android Studio should look something like this:
 
-   ![Android Studio](attachments/native-build-locally/as-home.png)
+	{{% image_container width="350" %}}![Android Studio](attachments/native-build-locally/as-home.png){{% /image_container %}}
 
    Mendix native mobile apps make use of **Build Variants** to build a release app or a custom developer app. The idea of **Build Variants** is a Gradle build system concept for sharing the same codebase but delivering different experiences.
 
 1. Choose the **appstoreDebug** variant to be able to build and test your app on an emulator or connected device:
 
-   ![Android Build Varients](attachments/native-build-locally/as-build-variants.png)
+	{{% image_container width="350" %}}![Android Build Varients](attachments/native-build-locally/as-build-variants.png){{% /image_container %}}
    
 1. After a short time the project should be synchronized and the play button should be selectable. Select a device or create a device from the drop-down menu and click the play button to build and install your app on the device:
 
-   ![Android Build Toolbar](attachments/native-build-locally/as-start-build.png)
+	{{% image_container width="250" %}}![Android Build Toolbar](attachments/native-build-locally/as-start-build.png){{% /image_container %}}
 
 ### 5.2 Building an iOS App with XCode
 
 1. If you have not ran it yet, run `npm install` in the project root to install the required dependencies.
 1. Change directory by running `cd ios` and run `pod install` to install the iOS dependencies.
 
-   The iOS project is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see CocoaPods [documentation](https://cocoapods.org/#install).
+	The iOS project is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see CocoaPods [documentation](https://cocoapods.org/#install).
 
 1. Open *.xcodeworkspace* using XCode.
 1. Navigate to **Signing and Capabilities** and choose your **Team** from the drop-down menu:
 
-   ![XCode Build Toolbar](attachments/native-build-locally/xc-setup-team.png)
+	{{% image_container width="350" %}}![XCode Build Toolbar](attachments/native-build-locally/xc-setup-team.png){{% /image_container %}}
 
-   As with the Android **Build Variants** the iOS app makes use of **Build Targets** to switch between building a custom developer app or a release app.
+	As with the Android **Build Variants** the iOS app makes use of **Build Targets** to switch between building a custom developer app or a release app.
 
 1. From the drop-down menu choose **nativeTemplate** and the device you would like to run the app on, then click the play button to start a build for your app:
 
-   ![XCode Build Toolbar](attachments/native-build-locally/xc-start-build.png)
+	{{% image_container width="250" %}}![XCode Build Toolbar](attachments/native-build-locally/xc-start-build.png){{% /image_container %}}
 
 After the build succeeds the app should be running on the selected device and connected to the runtime using the runtime URL you provided. 
 

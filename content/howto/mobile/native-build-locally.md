@@ -106,12 +106,12 @@ For bundling your resources, the Native Builder supports an offline command that
 
 	When completed you should have two zipped binaries: one for Android and one for iOS. Continue by doing the following:
 
-1. Unzip the iOS binary. The folder structure should be the following:
+1.  Unzip the iOS binary. The folder structure should be the following:
 
    {{% image_container width="250" %}}![iOS output](attachments/native-build-locally/ios-output.png){{% /image_container %}}
 
 1. Move the folder's content to *{your Native Template root}/ios/Bundle*.
-1. Unzip the Android binary. The folder structure should be the following:
+1.  Unzip the Android binary. The folder structure should be the following:
 
    {{% image_container width="250" %}}![iOS output](attachments/native-build-locally/android-output.png){{% /image_container %}}
 
@@ -195,7 +195,7 @@ To remove dependencies which support auto-linking, do the following:
 1. Remove the dependency entry from the *package.json* file.
 1. Run `npm i`.
 
-### 7.2 Dependencies Which Do Not Support Auto-Linking or for v.3.x and Bellow
+### 7.2 Removing Dependencies Which Do Not Support Auto-Linking or for v.3.x and Bellow
 
 To remove dependencies which do not support auto-linking, do the following:
 

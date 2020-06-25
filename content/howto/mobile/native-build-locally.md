@@ -47,12 +47,12 @@ The Native Template is the base for building native mobile apps with Mendix. In 
 
 The Native Template is versioned against Mendix Studio Pro. This means the Studio Pro version you use to create your Mendix app dictates which version of the Native Template you should use. When using the Native Builder this is handled internally using the `--mendix-version` parameter. For more information on parameters, see the [Expanded Parameter Explanations](/refguide/native-builder#parameters) section of the *Native Builder Reference Guide*.
 
-#### 3.1 Determining Which Native Template Version to Use
+### 3.1 Determining Which Native Template Version to Use
 
 To determine which version of the Native Template you should use, do the following:
 
 1. Note which version of Studio Pro you are using.
-1. Navigate to the [Native Template GitHub repository](github.com/mendix/native-template).
+1. Navigate to the [Native Template GitHub repository](www.github.com/mendix/native-template).
 1. At the root of your project, open the *mendix_version.json* JSON file.
 
 The keys of the dictionary represent the Mendix Studio Pro version. The `min` and `max` values are the minimum and maximum Native Template versions supported. In the case of Mendix Studio Pro 8.9.x, you could choose any Native Template version from 4.0.0 to the latest. Ideally you should choose the most recent supported version.
@@ -73,7 +73,7 @@ This method is useful if you have Git installed. To get the Native Template, do 
 
 This method is useful if you do not have Git installed. To get the Native Template, do the following:
 
-1. Navigate to the [Native Template releases](github.com/mendix/native-template/releases).
+1. Navigate to the [Native Template releases](www.github.com/mendix/native-template/releases).
 1. Scroll to the version you want to download.
 1. Select the source code binary to download a copy of the code.
 

@@ -13,7 +13,6 @@ The service console creates a backup of the project files, this allows you to re
 1.  You can update the application by clicking on the button ‘Update app’. ![Step 1, Start the update process](attachments/updating-a-mendix-app/18580701.png)
 
 2.  The 'Update App' popup that appears shows you the information of the current active software version. The number of the App version shows the release number of the versioned deployment package. This is the release that is currently running on this server.
-    The installed Mendix versions list shows all the Runtime versions that are available on the server. The Runtime version that is used by the current installation is marked by the green check box.  
 
     ![Step 2, Release details and overview of all server versions](attachments/updating-a-mendix-app/18580702.png)
 

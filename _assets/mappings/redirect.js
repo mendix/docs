@@ -538,7 +538,15 @@ module.exports = {
       to: "/refguide/row-document-template"
     },
 	{
+      from: "/refguide8/row-(document-template)",
+      to: "/refguide/row-document-template"
+    },
+	{
       from: "/refguide8/Table+(document+template",
+      to: "/refguide/table-document-template"
+    },
+	{
+      from: "/refguide8/table-(document-template",
       to: "/refguide/table-document-template"
     },
 	{
@@ -554,7 +562,15 @@ module.exports = {
       to: "/refguide/static-image-document-template"
     },
 	{
+      from: "/refguide8/static-image-(document-template)",
+      to: "/refguide/static-image-document-template"
+    },
+	{
       from: "/refguide8/Title+(document+template)",
+      to: "/refguide/title-document-template"
+    },
+	{
+      from: "/refguide8/title-(document-template)",
       to: "/refguide/title-document-template"
     },
 	{
@@ -562,7 +578,15 @@ module.exports = {
       to: "/refguide/static-label-document-template"
     },
 	{
+      from: "/refguide8/static-label-(document-template)",
+      to: "/refguide/static-label-document-template"
+    },
+	{
       from: "/refguide8/Page+Break+(document+template)",
+      to: "/refguide/page-break-document-template"
+    },
+	{
+      from: "/refguide8/page-break-(document-template)",
       to: "/refguide/page-break-document-template"
     },
 	{
@@ -570,7 +594,15 @@ module.exports = {
       to: "/refguide/line-break-document-template"
     },
 	{
+      from: "/refguide8/line-break-(document-template)",
+      to: "/refguide/line-break-document-template"
+    },
+	{
       from: "/refguide8/Header+(document+template)",
+      to: "/refguide/header-document-template"
+    },
+	{
+      from: "/refguide8/header-(document-template)",
       to: "/refguide/header-document-template"
     },
 	{
@@ -578,11 +610,23 @@ module.exports = {
       to: "/refguide/footer-document-template"
     },
 	{
+      from: "/refguide8/footer-(document-template)",
+      to: "/refguide/footer-document-template"
+    },
+	{
       from: "/refguide8/Dynamic+label+(document+template)",
       to: "/refguide/dynamic-label-document-template"
     },
 	{
+      from: "/refguide8/dynamic-label-(document-template)",
+      to: "/refguide/dynamic-label-document-template"
+    },
+	{
       from: "/refguide8/Template+Grid+(document+template)",
+      to: "/refguide/template-grid-document-template"
+    },
+	{
+      from: "/refguide8/template-grid-(document-template)",
       to: "/refguide/template-grid-document-template"
     },
 	{
@@ -602,7 +646,15 @@ module.exports = {
       to: "/refguide/dynamic-image-document-template"
     },
 	{
+      from: "/refguide8/dynamic-image-(document-template)",
+      to: "/refguide/dynamic-image-document-template"
+    },
+	{
       from: "/refguide8/Data+View+(document+template)",
+      to: "/refguide/data-view-document-template"
+    },
+	{
+      from: "/refguide8/data-view-(document-template)",
       to: "/refguide/data-view-document-template"
     },
 	{
@@ -614,88 +666,117 @@ module.exports = {
       to: "/refguide/tab-container"
     },
 	{
-		from: "/refguide8/action-button",
-      to: "/refguide/button-properties"
+	  from: "/refguide8/action-button",
+      to: "/refguide/button-widgets"
     },
 	{
-		from: "/refguide8/drop-down-button",
-      to: "/refguide/button-properties"
+	  from: "/refguide8/drop-down-button",
+      to: "/refguide/button-widgets"
     },
 	{
-		from: "/refguide8/image-property",
-      to: "/refguide/button-properties"
+	  from: "/refguide8/image-property",
+      to: "/refguide/image"
     },
 	{
-		from: "/refguide8/grid-action-button",
+	  from: "/refguide8/grid-action-button",
       to: "/refguide/control-bar"
     },
 	{
-		from: "/refguide8/remove-button",
+	  from: "/refguide8/remove-button",
       to: "/refguide/control-bar"
     },
 	{
-		from: "/refguide8/select-button",
+	  from: "/refguide8/select-button",
       to: "/refguide/control-bar"
     },
 	{
-		from: "/refguide8/add-button",
+	  from: "/refguide8/add-button",
       to: "/refguide/control-bar"
     },
 	{
-		from: "/refguide8/deselect-all-button",
+	  from: "/refguide8/deselect-all-button",
       to: "/refguide/control-bar"
     },
 	{
-		from: "/refguide8/export-to-csv-button",
+	  from: "/refguide8/export-to-csv-button",
       to: "/refguide/control-bar"
     },
 	{
-		from: "/refguide8/export-to-excel-button",
+	 from: "/refguide8/export-to-excel-button",
       to: "/refguide/control-bar"
     },
 	{
-		from: "/refguide8/grid-new-button",
+	  from: "/refguide8/grid-new-button",
       to: "/refguide/control-bar"
     },
 	{
-		from: "/refguide8/search-button",
+	  from: "/refguide8/search-button",
       to: "/refguide/control-bar"
     },
 	{
-		from: "/refguide8/select-all-button",
+	  from: "/refguide8/select-all-button",
       to: "/refguide/control-bar"
     },
 	{
-		from: "/refguide8/comparison-search-field",
+	  from: "/refguide8/comparison-search-field",
       to: "/refguide/search-bar"
     },
 	{
-		from: "/refguide8/drop-down-search-field",
+	  from: "/refguide8/drop-down-search-field",
       to: "/refguide/search-bar"
     },
 	{
-		from: "/refguide8/range-search-field",
+	  from: "/refguide8/range-search-field",
       to: "/refguide/search-bar"
     },
     {
       from: "/refguide8/opening-pages",
-        to: "/refguide/pages"
-      },
+      to: "/refguide/on-click-event"
+    },
     {
       from: "/refguide8/starting-microflows",
-        to: "/refguide/on-click-event"
-      },
-	  {
+      to: "/refguide/on-click-event"
+    },
+	{
       from: "/refguide8/app-settings-dialog",
-        to: "/refguide/new-project"
-      },
-  	  {
+      to: "/refguide/new-project"
+    },
+  	{
       from: "/refguide8/annotation-flow",
-        to: "/refguide/annotation"
-      },
-  
-  
- 
+      to: "/refguide/annotation"
+    },
+	{
+      from: "/refguide8/close-form",
+      to: "/refguide/close-page"
+    },
+	{
+      from: "/refguide8/columns-(document-template)",
+      to: "/refguide/columns-document-template"
+    },
+	{
+      from: "/refguide8/consumed-odata-services",
+      to: "/refguide/published-odata-services"
+    },
+	{
+      from: "/refguide8/data-grid-(document-template)",
+      to: "/refguide/data-grid-document-template"
+    },
+	{
+      from: "/refguide8/module-role",
+      to: "/refguide/module-security"
+    },
+	{
+      from: "/refguide8/page-template",
+      to: "/refguide/page-templates"
+    },
+	{
+      from: "/refguide8/user-role",
+      to: "/refguide/user-roles"
+    },
+ 	{
+      from: "/refguide8/link-button",
+      to: "/refguide/button-widgets"
+    },
     /****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/
@@ -866,7 +947,11 @@ module.exports = {
 	{
       from: "/refguide7/Document+Templates",
       to: "/refguide7/document-templates"
-    },	
+    },
+	{
+      from: "/refguide7/link-button",
+        to: "/refguide/action-button"
+    },
 	/****************************************************
      * From Desktop Modeler version 6 (permanent)
      ****************************************************/

@@ -17,11 +17,11 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Improvements
 
-* We implemented the second increment in renaming the default 'End-user' project role to 'Guest'
+* We implemented the second increment in renaming the default **End-user** App Team role to [Guest](/developerportal/company-app-roles/index#app-team-roles).
 
 #### Fixes
 
-* We fixed an issue where it was possible to change the end date of a closed sprint
+* We fixed an issue where it was possible to change the end date of a closed Sprint.
 
 ### June 15th, 2020
 

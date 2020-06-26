@@ -26,7 +26,7 @@ In a similar fashion, MXBuild and the Mendix Native Template follow these rules:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install [Node and NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+* Install [Node and NPM](https://nodejs.org/en/download/)
 * Download the Native Builder [executable](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) to a folder of your preference and extract all contents
    * Use v1.0.0 with Mendix 8.0
    * Use v2.0.0 with Mendix 8.1.0 and above

@@ -950,7 +950,7 @@ module.exports = {
     },
 	{
       from: "/refguide7/link-button",
-        to: "/refguide/action-button"
+        to: "/refguide7/action-button"
     },
 	/****************************************************
      * From Desktop Modeler version 6 (permanent)

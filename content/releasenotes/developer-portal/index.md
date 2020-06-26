@@ -13,6 +13,16 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2020
 
+### June 28th, 2020
+
+#### Improvements
+
+* We implemented the second increment in renaming the default 'End-user' project role to 'Guest'
+
+#### Fixes
+
+* We fixed an issue where it was possible to change the end date of a closed sprint
+
 ### June 15th, 2020
 
 #### Improvements

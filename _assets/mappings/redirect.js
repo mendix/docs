@@ -546,6 +546,10 @@ module.exports = {
       to: "/refguide/cell-document-template"
     },
 	{
+      from: "/refguide8/cell-(document-template)",
+      to: "/refguide/cell-document-template"
+    },
+	{
       from: "/refguide8/Static+Image+(document+template)",
       to: "/refguide/static-image-document-template"
     },
@@ -685,7 +689,13 @@ module.exports = {
       from: "/refguide8/app-settings-dialog",
         to: "/refguide/new-project"
       },
+  	  {
+      from: "/refguide8/annotation-flow",
+        to: "/refguide/annotation"
+      },
   
+  
+ 
     /****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/

@@ -75,7 +75,7 @@ This list is currently incomplete and is being worked on.
 | MicroflowEngine | Log messages related to microflow execution, e.g. which microflow / microflow action is being executed and errors that occur during the execution. |
 | ModelStore | |
 | Module | Logs messages for modules that are loaded on-demand in the core runtime like the microflow-engine. |
-| ObjectManagement | |
+| ObjectManagement | Logs errors relating to attempts to make associations to non-existent object |
 | OData Publish | Log messages related to published OData services. |
 | QueryParser | Logs messages related to the parsing or interpretation of XPath and OQL queries. |
 | REST Publish | Log messages related to published REST services. |

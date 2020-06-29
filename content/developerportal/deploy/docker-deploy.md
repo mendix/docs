@@ -40,7 +40,7 @@ To build the Docker image, follow these steps:
 7.  Execute the following command:
 
     ```bash
-    docker build --build-arg BUILD_PATH="<relative-mendix-project-location>" -t <image name>
+    docker build --build-arg BUILD_PATH="<relative-mendix-project-location>" -t <image name> .
     ```
 
     ![](attachments/docker-deploy/build-image.png)

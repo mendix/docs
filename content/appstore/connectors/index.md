@@ -12,5 +12,6 @@ When you download these connector modules, they will go into the **Project** > *
 
 ## 2 Main Documents in This Category
 
-* [Database Connector](database-connector) – incorporates your external data directly in your Mendix app
+* [AWS IoT](aws-iot) – enables connecting to IoT devices and data on AWS IoT
+* [Database](database-connector) – incorporates your external data directly in your Mendix app
 * [IBM App Launch](ibm-app-launch) – enables connecting to IBM App Launch to then perform A/B testing, release new features, and monitor metrics

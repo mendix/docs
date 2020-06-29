@@ -1,14 +1,14 @@
 ---
-title: "Database Connector"
+title: "Database"
 category: "Connectors"
-description: "Describes the configuration and usage of the Database Connector, which is available in the Mendix App Store."
+description: "Describes the configuration and usage of the Database connector, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "database connector", "jdbc", "hikari", "query" ]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
 
-Use the [Database Connector](https://appstore.home.mendix.com/link/app/2888/) to incorporate your external data directly in your Mendix application. This connector enables seamlessly connecting to external databases without being limited in your choice of database or SQL dialect.
+Use the [Database](https://appstore.home.mendix.com/link/app/2888/) connector to incorporate your external data directly in your Mendix application. This connector enables seamlessly connecting to external databases without being limited in your choice of database or SQL dialect.
 
 This document focuses on executing an SQL `SELECT` query and SQL statements on external relational databases.
 

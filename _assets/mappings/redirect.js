@@ -1,44 +1,10 @@
 module.exports = {
   "redirect": [
 	/****************************************************
-     * POTENTIALLY TEMPORARY REDIRECTS
-     ****************************************************/
-	/****************************************************
-     * From Studio(potentially temporary until the support of old bundles stops, mapped)
-     ****************************************************/
-	{
-      from: "/refguide/web-modeler/domain-models-association-properties-wm",
-      to: "/studio/domain-models-association-properties"
-    },
-	{
-      from: "/refguide/web-modeler",
-      to: "/studio/"
-    },
-	{
-      from: "/refguide/web-modeler/microflows-wm",
-      to: "/studio/microflows"
-    },
-	{
-      from: "/refguide/web-modeler/microflows-expressions-wm",
-      to: "/studio/microflows-expressions"
-    },
-	{
-      from: "/refguide/web-modeler/app-settings-wm",
-      to: "/studio/settings-widget-overview"
-    },	
-    {
-      from: "/howto/sap/use-sap-odata-model-creator",
-      to: "/partners/sap/use-sap-odata-model-creator"
-    },	
-    {
-      from: "/refguide/siemens/mindsphere-module-details",
-      to: "/partners/siemens/mindsphere-module-details"
-    },
-	/****************************************************
-     * PERMANENT REDIRECTS
+     * PERMANENT REDIRECTS FOR DOCUMENTS
      ****************************************************/
 	 /****************************************************
-     * Documents (permanent, unmapped) 
+     * Documentation Site (permanent, unmapped) 
      ****************************************************/
     {
       from: "/docs/Overview",
@@ -146,52 +112,9 @@ module.exports = {
       from: "/deployment/mendixcloud/sending-email",
       to: "/developerportal/deploy/sending-email"
     },
-	/****************************************************
-     * From the Developer Portal (permanent, mapped) 
-     ****************************************************/
 	{
-      from: "/developerportal/settings/technical-contact",
-      to: "/developerportal/company-app-roles/technical-contact"
-    }, 
-    {
-      from: "/developerportal/general/technical-contact",
-      to: "/developerportal/company-app-roles/technical-contact"
-    },	 
-	{
-      from: "/deployment/mendixcloud/certificates",
-      to: "/developerportal/deploy/certificates"
-    },
-	{
-      from: "/refguide/certificates",
-      to: "/developerportal/deploy/certificates"
-    },
-	{
-      from: "/mendixcloud/monitoring-application-health",
-      to: "/developerportal/operate/monitoring-application-health"
-    },
-	{
-      from: "/developerportal/howto/deploying-to-the-cloud",
-      to: "/developerportal/deploy/mendix-cloud-deploy"
-    },
-	{
-      from: "/deployment/on-premises/deploy-mendix-on-microsoft-windows",
-      to: "/developerportal/deploy/deploy-mendix-on-microsoft-windows"
-    },
-	{
-      from: "/deployment/on-premises",
-      to: "/developerportal/deploy/on-premises-design"
-    },
-	{
-      from: "/developerportal/community-tools/the-mendix-job-board",
-      to: "/developerportal/community-tools/mendix-job-board"
-    },
-	{
-      from: "/refguide/publish-packages-to-mobile-stores",
-      to: "/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores"
-    },
-	{
-      from: "/refguide/team-server",
-      to: "/developerportal/develop/team-server"
+      from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
+      to: "/developerportal/deploy/cloud-foundry-deploy"
     },
 	/****************************************************
      * App Store Guide (permanent, mapped & unmapped) 
@@ -221,213 +144,40 @@ module.exports = {
       to: "/appstore/general/share-app-store-content"
     },
     /****************************************************
-     * From the App Store (permanent, mapped)
+     * Add-on Guides (permanent, mapped)
      ****************************************************/
 	{
-	  from: "/community/app-store/use-app-store-content-in-the-modeler",
-	  to: "/appstore/general/app-store-content"
+	  from: "/addons/apm-addon/",
+	  to: "/addons/apd-addon/"
+	},
+		{
+	  from: "/apm/installation-guide",
+	  to: "/addons/apd-addon/ig-two"
+	},
+	{
+      from: "/apm/reference-guide/rg-2/reference-guide-2",
+      to: "/addons/apd-addon/rg-two-apm"
     },
 	{
-      from: "/developerportal/app-store/use-app-store-content-in-the-modeler",
-      to: "/appstore/general/app-store-content"
+	  from: "~*\\\/aqm\\\/",
+	  to: "/addons/aqm-addon/index",
+	  exact: true
     },
 	{
-      from: "/howto50/Contributing+to+a+GitHub+repository",
-      to: "/howto/collaboration-requirements-management/contribute-to-a-github-repository"
+	  from: "~*\\\/apm\\\/",
+	  to: "/addons/apd-addon/index",
+	  exact: true
     },
 	{
-      from: "/howto/collaboration-project-management/contribute-to-a-github-repository",
-      to: "/howto/collaboration-requirements-management/contribute-to-a-github-repository"
-    },
-	{
-      from: "/howto/ux/create-a-custom-theme-with-the-mendix-ui-framework",
-      to: "/howto/front-end/atlas-ui"
-    },
-	{
-      from: "/howto/front-end/create-a-custom-theme-with-the-mendix-ui-framework",
-      to: "/howto/front-end/atlas-ui"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/",
-      to: "/releasenotes/studio-pro/"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/8.0",
-      to: "/releasenotes/studio-pro/8.0"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.23",
-      to: "/releasenotes/studio-pro/7.23"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.22",
-      to: "/releasenotes/studio-pro/7.22"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.21",
-      to: "/releasenotes/studio-pro/7.21"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.20",
-      to: "/releasenotes/studio-pro/7.20"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.19",
-      to: "/releasenotes/studio-pro/7.19"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.18",
-      to: "/releasenotes/studio-pro/7.18"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.17",
-      to: "/releasenotes/studio-pro/7.17"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.16",
-      to: "/releasenotes/studio-pro/7.16"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.15",
-      to: "/releasenotes/studio-pro/7.15"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.14",
-      to: "/releasenotes/studio-pro/7.14"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.13",
-      to: "/releasenotes/studio-pro/7.13"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.12",
-      to: "/releasenotes/studio-pro/7.12"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.11",
-      to: "/releasenotes/studio-pro/7.11"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.10",
-      to: "/releasenotes/studio-pro/7.10"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.9",
-      to: "/releasenotes/studio-pro/7.9"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.8",
-      to: "/releasenotes/studio-pro/7.8"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.7",
-      to: "/releasenotes/studio-pro/7.7"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.6",
-      to: "/releasenotes/studio-pro/7.6"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.5",
-      to: "/releasenotes/studio-pro/7.5"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.4",
-      to: "/releasenotes/studio-pro/7.4"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.3",
-      to: "/releasenotes/studio-pro/7.3"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.2",
-      to: "/releasenotes/studio-pro/7.2"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.1",
-      to: "/releasenotes/studio-pro/7.1"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/7.0",
-      to: "/releasenotes/studio-pro/7.0"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/6.10",
-      to: "/releasenotes/studio-pro/6.10"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/6.9",
-      to: "/releasenotes/studio-pro/6.9"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/6.8",
-      to: "/releasenotes/studio-pro/6.8"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/6.7",
-      to: "/releasenotes/studio-pro/6.7"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/6.6",
-      to: "/releasenotes/studio-pro/6.6"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/6.5",
-      to: "/releasenotes/studio-pro/6.5"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/6.4",
-      to: "/releasenotes/studio-pro/6.4"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/6.3",
-      to: "/releasenotes/studio-pro/6.3"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/6.2",
-      to: "/releasenotes/studio-pro/6.2"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/6.1",
-      to: "/releasenotes/studio-pro/6.1"
-    },
-	{
-      from: "/releasenotes/desktop-modeler/6.0",
-      to: "/releasenotes/studio-pro/6.0"
+	  from: "~*\\\/ats\\\/",
+	  to: "/addons/ats-addon/index",
+	  exact: true
     },
 	/****************************************************
-     * From the Support Portal (permanent, mapped) 
-     ****************************************************/
-	{
-      from: "/community/app-store-content-support",
-      to: "/appstore/general/app-store-content-support"
-    },
-	{
-      from: "/mendixcloud/custom-domains",
-      to: "/developerportal/deploy/custom-domains"
-    },
-	{
-      from: "/developerportal/howto/how-to-link-app-to-node",
-      to: "/developerportal/deploy/licensing-apps"
-    },
-	{
-      from: "/developerportal/howto/how-to-link-a-different-app-to-a-node",
-      to: "/developerportal/deploy/licensing-apps"
-    },
-	{
-      from: "/developerportal/support/new-app-request-template",
-      to: "/developerportal/support/new-app-node-request-template"
-    },
-	{
-      from: "/developerportal/support/export-a-project-package",
-      to: "/refguide/export-project-package-dialog"
-    },
-	{
-      from: "/developerportal/support/change-affected-apps",
-      to: "/developerportal/support/prepare-your-project"
-    },
+     * PERMANENT REDIRECTS FROM PRODUCTS
+     ****************************************************/	
 	/****************************************************
-     * From Studio Pro version 8 (permanent as backups, mapped)
+     * From Studio Pro version 8 (permanent, mapped)
      ****************************************************/
 	{
       from: "/refguide8/modeler",
@@ -502,10 +252,6 @@ module.exports = {
       to: "/refguide/decision"
 	},
 	{
-      from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
-      to: "/developerportal/deploy/cloud-foundry-deploy"
-    },
-	{
       from: "/refguide8/menu-item",
       to: "/refguide/menu"
     },
@@ -538,7 +284,15 @@ module.exports = {
       to: "/refguide/row-document-template"
     },
 	{
+      from: "/refguide8/row-(document-template)",
+      to: "/refguide/row-document-template"
+    },
+	{
       from: "/refguide8/Table+(document+template",
+      to: "/refguide/table-document-template"
+    },
+	{
+      from: "/refguide8/table-(document-template)",
       to: "/refguide/table-document-template"
     },
 	{
@@ -546,7 +300,15 @@ module.exports = {
       to: "/refguide/cell-document-template"
     },
 	{
+      from: "/refguide8/cell-(document-template)",
+      to: "/refguide/cell-document-template"
+    },
+	{
       from: "/refguide8/Static+Image+(document+template)",
+      to: "/refguide/static-image-document-template"
+    },
+	{
+      from: "/refguide8/static-image-(document-template)",
       to: "/refguide/static-image-document-template"
     },
 	{
@@ -554,7 +316,15 @@ module.exports = {
       to: "/refguide/title-document-template"
     },
 	{
+      from: "/refguide8/title-(document-template)",
+      to: "/refguide/title-document-template"
+    },
+	{
       from: "/refguide8/Static+label+(document+template)",
+      to: "/refguide/static-label-document-template"
+    },
+	{
+      from: "/refguide8/static-label-(document-template)",
       to: "/refguide/static-label-document-template"
     },
 	{
@@ -562,7 +332,15 @@ module.exports = {
       to: "/refguide/page-break-document-template"
     },
 	{
+      from: "/refguide8/page-break-(document-template)",
+      to: "/refguide/page-break-document-template"
+    },
+	{
       from: "/refguide8/Line+Break+(document+template)",
+      to: "/refguide/line-break-document-template"
+    },
+	{
+      from: "/refguide8/line-break-(document-template)",
       to: "/refguide/line-break-document-template"
     },
 	{
@@ -570,7 +348,15 @@ module.exports = {
       to: "/refguide/header-document-template"
     },
 	{
+      from: "/refguide8/header-(document-template)",
+      to: "/refguide/header-document-template"
+    },
+	{
       from: "/refguide8/Footer+(document+template)",
+      to: "/refguide/footer-document-template"
+    },
+	{
+      from: "/refguide8/footer-(document-template)",
       to: "/refguide/footer-document-template"
     },
 	{
@@ -578,7 +364,15 @@ module.exports = {
       to: "/refguide/dynamic-label-document-template"
     },
 	{
+      from: "/refguide8/dynamic-label-(document-template)",
+      to: "/refguide/dynamic-label-document-template"
+    },
+	{
       from: "/refguide8/Template+Grid+(document+template)",
+      to: "/refguide/template-grid-document-template"
+    },
+	{
+      from: "/refguide8/template-grid-(document-template)",
       to: "/refguide/template-grid-document-template"
     },
 	{
@@ -598,7 +392,15 @@ module.exports = {
       to: "/refguide/dynamic-image-document-template"
     },
 	{
+      from: "/refguide8/dynamic-image-(document-template)",
+      to: "/refguide/dynamic-image-document-template"
+    },
+	{
       from: "/refguide8/Data+View+(document+template)",
+      to: "/refguide/data-view-document-template"
+    },
+	{
+      from: "/refguide8/data-view-(document-template)",
       to: "/refguide/data-view-document-template"
     },
 	{
@@ -610,82 +412,121 @@ module.exports = {
       to: "/refguide/tab-container"
     },
 	{
-		from: "/refguide8/action-button",
-      to: "/refguide/button-properties"
+	  from: "/refguide8/action-button",
+      to: "/refguide/button-widgets"
     },
 	{
-		from: "/refguide8/drop-down-button",
-      to: "/refguide/button-properties"
+	  from: "/refguide8/drop-down-button",
+      to: "/refguide/button-widgets"
     },
 	{
-		from: "/refguide8/image-property",
-      to: "/refguide/button-properties"
+	  from: "/refguide8/image-property",
+      to: "/refguide/image"
     },
 	{
-		from: "/refguide8/grid-action-button",
+	  from: "/refguide8/grid-action-button",
       to: "/refguide/control-bar"
     },
 	{
-		from: "/refguide8/remove-button",
+	  from: "/refguide8/remove-button",
       to: "/refguide/control-bar"
     },
 	{
-		from: "/refguide8/select-button",
+	  from: "/refguide8/select-button",
       to: "/refguide/control-bar"
     },
 	{
-		from: "/refguide8/add-button",
+	  from: "/refguide8/add-button",
       to: "/refguide/control-bar"
     },
 	{
-		from: "/refguide8/deselect-all-button",
+	  from: "/refguide8/deselect-all-button",
       to: "/refguide/control-bar"
     },
 	{
-		from: "/refguide8/export-to-csv-button",
+	  from: "/refguide8/export-to-csv-button",
       to: "/refguide/control-bar"
     },
 	{
-		from: "/refguide8/export-to-excel-button",
+	 from: "/refguide8/export-to-excel-button",
       to: "/refguide/control-bar"
     },
 	{
-		from: "/refguide8/grid-new-button",
+	  from: "/refguide8/grid-new-button",
       to: "/refguide/control-bar"
     },
 	{
-		from: "/refguide8/search-button",
+	  from: "/refguide8/search-button",
       to: "/refguide/control-bar"
     },
 	{
-		from: "/refguide8/select-all-button",
+	  from: "/refguide8/select-all-button",
       to: "/refguide/control-bar"
     },
 	{
-		from: "/refguide8/comparison-search-field",
+	  from: "/refguide8/comparison-search-field",
       to: "/refguide/search-bar"
     },
 	{
-		from: "/refguide8/drop-down-search-field",
+	  from: "/refguide8/drop-down-search-field",
       to: "/refguide/search-bar"
     },
 	{
-		from: "/refguide8/range-search-field",
+	  from: "/refguide8/range-search-field",
       to: "/refguide/search-bar"
     },
     {
       from: "/refguide8/opening-pages",
-        to: "/refguide/pages"
-      },
+      to: "/refguide/on-click-event"
+    },
     {
       from: "/refguide8/starting-microflows",
-        to: "/refguide/on-click-event"
-      },
-	  {
+      to: "/refguide/on-click-event"
+    },
+	{
       from: "/refguide8/app-settings-dialog",
-        to: "/refguide/new-project"
-      },
-  
+      to: "/refguide/new-project"
+    },
+  	{
+      from: "/refguide8/annotation-flow",
+      to: "/refguide/annotation"
+    },
+	{
+      from: "/refguide8/close-form",
+      to: "/refguide/close-page"
+    },
+	{
+      from: "/refguide8/columns-(document-template)",
+      to: "/refguide/columns-document-template"
+    },
+	{
+      from: "/refguide8/consumed-odata-services",
+      to: "/refguide/published-odata-services"
+    },
+	{
+      from: "/refguide8/data-grid-(document-template)",
+      to: "/refguide/data-grid-document-template"
+    },
+	{
+      from: "/refguide8/module-role",
+      to: "/refguide/module-security"
+    },
+	{
+      from: "/refguide8/page-template",
+      to: "/refguide/page-templates"
+    },
+	{
+      from: "/refguide8/user-role",
+      to: "/refguide/user-roles"
+    },
+ 	{
+      from: "/refguide8/link-button",
+      to: "/refguide/button-widgets"
+    },
+	{
+      from: "/refguide8/sign-out-button",
+      to: "/refguide/button-widgets"
+    },
     /****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/
@@ -856,7 +697,15 @@ module.exports = {
 	{
       from: "/refguide7/Document+Templates",
       to: "/refguide7/document-templates"
-    },	
+    },
+	{
+      from: "/refguide7/link-button",
+      to: "/refguide7/action-button"
+    },
+	{
+      from: "/refguide7/sign-out-button",
+      to: "/refguide7/button-widgets"
+    },
 	/****************************************************
      * From Desktop Modeler version 6 (permanent)
      ****************************************************/
@@ -2526,34 +2375,491 @@ module.exports = {
       to: "/howto6/solving-load-and-import-errors"
     },
 	/****************************************************
-     * Add-on Guides (permanent, mapped)
+     * From Model SDK API (permanent, mapped)
+     ****************************************************/	
+	{
+      from: "/refguide/action-button",
+      to: "/refguide/button-widgets"
+    },
+	{
+      from: "/refguide/add-button",
+      to: "/refguide/control-bar"
+    },
+	{
+      from: "/refguide/annotation-flow",
+      to: "/refguide/annotation"
+    },
+	{
+      from: "/refguide/cell-(document-template)",
+      to: "/refguide/cell-document-template"
+    },
+	{
+      from: "/refguide/close-form",
+      to: "/refguide/close-page"
+    },
+	{
+      from: "/refguide/columns-(document-template)",
+      to: "/refguide/columns-document-template"
+    },
+	{
+      from: "/refguide/comparison-search-field",
+      to: "/refguide/search-bar"
+    },
+	{
+      from: "/refguide/consumed-odata-services",
+      to: "/refguide/published-odata-services"
+    },
+	{
+      from: "/refguide/data-grid-(document-template)",
+      to: "/refguide/data-grid-document-template"
+    },
+	{
+      from: "/refguide/data-view-(document-template)",
+      to: "/refguide/data-view-document-template"
+    },
+	{
+      from: "/refguide/deselect-all-button",
+      to: "/refguide/control-bar"
+    },
+	{
+      from: "/refguide/drop-down-button",
+      to: "/refguide/button-widgets"
+    },
+	{
+      from: "/refguide/drop-down-search-field",
+      to: "/refguide/search-bar"
+    },
+	{
+      from: "/refguide/drop-down-widget",
+      to: "/refguide/drop-down"
+    },
+	{
+      from: "/refguide/dynamic-image-(document-template)",
+      to: "/refguide/dynamic-image-document-template"
+    },
+	{
+      from: "/refguide/dynamic-label-(document-template)",
+      to: "/refguide/dynamic-label-document-template"
+    },
+	{
+      from: "/refguide/enumeration-values",
+      to: "/refguide/enumerations"
+    },
+	{
+      from: "/refguide/exclusive-split",
+      to: "/refguide/decisions"
+    },
+	{
+      from: "/refguide/export-to-csv-button",
+      to: "/refguide/control-bar"
+    },
+	{
+      from: "/refguide/export-to-excel-button",
+      to: "/refguide/control-bar"
+    },
+	{
+      from: "/refguide/footer-(document-template)",
+      to: "/refguide/footer-document-template"
+    },
+	{
+      from: "/refguide/grid-action-button",
+      to: "/refguide/control-bar"
+    },
+	{
+      from: "/refguide/grid-new-button",
+      to: "/refguide/control-bar"
+    },
+	{
+      from: "/refguide/header-(document-template)",
+      to: "/refguide/header-document-template"
+    },
+	{
+      from: "/refguide/horizontal-split-pane",
+      to: "/refguide/scroll-container"
+    },
+	{
+      from: "/refguide/image-property",
+      to: "/refguide/image"
+    },
+	{
+      from: "/refguide/inheritance-split",
+      to: "/refguide/object-type-decision"
+    },
+	{
+      from: "/refguide/line-break-(document-template)",
+      to: "/refguide/line-break-document-template"
+    },
+	{
+      from: "/refguide/menu-item",
+      to: "/refguide/menu"
+    },
+	{
+      from: "/refguide/microflow-expressions",
+      to: "/refguide/expressions"
+    },
+	{
+      from: "/refguide/module-role",
+      to: "/refguide/module-security"
+    },
+	{
+      from: "/refguide/opening-pages",
+      to: "/refguide/on-click-event"
+    },
+	{
+      from: "/refguide/page-break-(document-template)",
+      to: "/refguide/page-break-document-template"
+    },
+	{
+      from: "/refguide/page-template",
+      to: "/refguide/page-templates"
+    },
+	{
+      from: "/refguide/range-search-field",
+      to: "/refguide/search-bar"
+    },
+	{
+      from: "/refguide/remove-button",
+      to: "/refguide/control-bar"
+    },
+	{
+      from: "/refguide/row-(document-template)",
+      to: "/refguide/row-document-template"
+    },
+	{
+      from: "/refguide/search-button",
+      to: "/refguide/control-bar"
+    },
+	{
+      from: "/refguide/select-all-button",
+      to: "/refguide/control-bar"
+    },
+	{
+      from: "/refguide/select-button",
+      to: "/refguide/control-bar"
+    },
+	{
+      from: "/refguide/starting-microflows",
+      to: "/refguide/on-click-event"
+    },
+	{
+      from: "/refguide/static-image-(document-template)",
+      to: "/refguide/static-image-document-template"
+    },
+	{
+      from: "/refguide/static-label-(document-template)",
+      to: "/refguide/static-label-document-template"
+    },
+	{
+      from: "/refguide/tab-page",
+      to: "/refguide/tab-container"
+    },
+	{
+      from: "/refguide/table-(document-template)",
+      to: "/refguide/table-document-template"
+    },
+	{
+      from: "/refguide/template-grid-(document-template)",
+      to: "/refguide/template-grid-document-template"
+    },
+	{
+      from: "/refguide/title-(document-template)",
+      to: "/refguide/title-document-template"
+    },
+	{
+      from: "/refguide/user-role",
+      to: "/refguide/user-roles"
+    },
+	{
+      from: "/refguide/sign-out-button",
+      to: "/refguide/button-widgets"
+    },
+	{
+      from: "/refguide/vertical-split-pane",
+      to: "/refguide/scroll-container"
+    },	
+	/****************************************************
+     * From Studio (potentially temporary until the support of old bundles stops, mapped)
      ****************************************************/
 	{
-	  from: "/addons/apm-addon/",
-	  to: "/addons/apd-addon/"
-	},
-		{
-	  from: "/apm/installation-guide",
-	  to: "/addons/apd-addon/ig-two"
-	},
-	{
-      from: "/apm/reference-guide/rg-2/reference-guide-2",
-      to: "/addons/apd-addon/rg-two-apm"
+      from: "/refguide/web-modeler/domain-models-association-properties-wm",
+      to: "/studio/domain-models-association-properties"
     },
 	{
-	  from: "~*\\\/aqm\\\/",
-	  to: "/addons/aqm-addon/index",
-	  exact: true
+      from: "/refguide/web-modeler",
+      to: "/studio/"
     },
 	{
-	  from: "~*\\\/apm\\\/",
-	  to: "/addons/apd-addon/index",
-	  exact: true
+      from: "/refguide/web-modeler/microflows-wm",
+      to: "/studio/microflows"
     },
 	{
-	  from: "~*\\\/ats\\\/",
-	  to: "/addons/ats-addon/index",
-	  exact: true
+      from: "/refguide/web-modeler/microflows-expressions-wm",
+      to: "/studio/microflows-expressions"
+    },
+	{
+      from: "/refguide/web-modeler/app-settings-wm",
+      to: "/studio/settings-widget-overview"
+    },	
+    {
+      from: "/howto/sap/use-sap-odata-model-creator",
+      to: "/partners/sap/use-sap-odata-model-creator"
+    },	
+    {
+      from: "/refguide/siemens/mindsphere-module-details",
+      to: "/partners/siemens/mindsphere-module-details"
+    },
+	/****************************************************
+     * From the Developer Portal (permanent, mapped) 
+     ****************************************************/
+	{
+      from: "/developerportal/settings/technical-contact",
+      to: "/developerportal/company-app-roles/technical-contact"
+    }, 
+    {
+      from: "/developerportal/general/technical-contact",
+      to: "/developerportal/company-app-roles/technical-contact"
+    },	 
+	{
+      from: "/deployment/mendixcloud/certificates",
+      to: "/developerportal/deploy/certificates"
+    },
+	{
+      from: "/refguide/certificates",
+      to: "/developerportal/deploy/certificates"
+    },
+	{
+      from: "/mendixcloud/monitoring-application-health",
+      to: "/developerportal/operate/monitoring-application-health"
+    },
+	{
+      from: "/developerportal/howto/deploying-to-the-cloud",
+      to: "/developerportal/deploy/mendix-cloud-deploy"
+    },
+	{
+      from: "/deployment/on-premises/deploy-mendix-on-microsoft-windows",
+      to: "/developerportal/deploy/deploy-mendix-on-microsoft-windows"
+    },
+	{
+      from: "/deployment/on-premises",
+      to: "/developerportal/deploy/on-premises-design"
+    },
+	{
+      from: "/developerportal/community-tools/the-mendix-job-board",
+      to: "/developerportal/community-tools/mendix-job-board"
+    },
+	{
+      from: "/refguide/publish-packages-to-mobile-stores",
+      to: "/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores"
+    },
+	{
+      from: "/refguide/team-server",
+      to: "/developerportal/develop/team-server"
+    },
+	/****************************************************
+     * From the App Store (permanent, mapped)
+     ****************************************************/
+	{
+	  from: "/community/app-store/use-app-store-content-in-the-modeler",
+	  to: "/appstore/general/app-store-content"
+    },
+	{
+      from: "/developerportal/app-store/use-app-store-content-in-the-modeler",
+      to: "/appstore/general/app-store-content"
+    },
+	{
+      from: "/howto50/Contributing+to+a+GitHub+repository",
+      to: "/howto/collaboration-requirements-management/contribute-to-a-github-repository"
+    },
+	{
+      from: "/howto/collaboration-project-management/contribute-to-a-github-repository",
+      to: "/howto/collaboration-requirements-management/contribute-to-a-github-repository"
+    },
+	{
+      from: "/howto/ux/create-a-custom-theme-with-the-mendix-ui-framework",
+      to: "/howto/front-end/atlas-ui"
+    },
+	{
+      from: "/howto/front-end/create-a-custom-theme-with-the-mendix-ui-framework",
+      to: "/howto/front-end/atlas-ui"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/",
+      to: "/releasenotes/studio-pro/"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/8.0",
+      to: "/releasenotes/studio-pro/8.0"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.23",
+      to: "/releasenotes/studio-pro/7.23"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.22",
+      to: "/releasenotes/studio-pro/7.22"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.21",
+      to: "/releasenotes/studio-pro/7.21"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.20",
+      to: "/releasenotes/studio-pro/7.20"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.19",
+      to: "/releasenotes/studio-pro/7.19"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.18",
+      to: "/releasenotes/studio-pro/7.18"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.17",
+      to: "/releasenotes/studio-pro/7.17"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.16",
+      to: "/releasenotes/studio-pro/7.16"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.15",
+      to: "/releasenotes/studio-pro/7.15"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.14",
+      to: "/releasenotes/studio-pro/7.14"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.13",
+      to: "/releasenotes/studio-pro/7.13"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.12",
+      to: "/releasenotes/studio-pro/7.12"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.11",
+      to: "/releasenotes/studio-pro/7.11"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.10",
+      to: "/releasenotes/studio-pro/7.10"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.9",
+      to: "/releasenotes/studio-pro/7.9"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.8",
+      to: "/releasenotes/studio-pro/7.8"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.7",
+      to: "/releasenotes/studio-pro/7.7"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.6",
+      to: "/releasenotes/studio-pro/7.6"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.5",
+      to: "/releasenotes/studio-pro/7.5"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.4",
+      to: "/releasenotes/studio-pro/7.4"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.3",
+      to: "/releasenotes/studio-pro/7.3"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.2",
+      to: "/releasenotes/studio-pro/7.2"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.1",
+      to: "/releasenotes/studio-pro/7.1"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.0",
+      to: "/releasenotes/studio-pro/7.0"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.10",
+      to: "/releasenotes/studio-pro/6.10"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.9",
+      to: "/releasenotes/studio-pro/6.9"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.8",
+      to: "/releasenotes/studio-pro/6.8"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.7",
+      to: "/releasenotes/studio-pro/6.7"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.6",
+      to: "/releasenotes/studio-pro/6.6"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.5",
+      to: "/releasenotes/studio-pro/6.5"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.4",
+      to: "/releasenotes/studio-pro/6.4"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.3",
+      to: "/releasenotes/studio-pro/6.3"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.2",
+      to: "/releasenotes/studio-pro/6.2"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.1",
+      to: "/releasenotes/studio-pro/6.1"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.0",
+      to: "/releasenotes/studio-pro/6.0"
+    },
+	/****************************************************
+     * From the Support Portal (permanent, mapped) 
+     ****************************************************/
+	{
+      from: "/community/app-store-content-support",
+      to: "/appstore/general/app-store-content-support"
+    },
+	{
+      from: "/mendixcloud/custom-domains",
+      to: "/developerportal/deploy/custom-domains"
+    },
+	{
+      from: "/developerportal/howto/how-to-link-app-to-node",
+      to: "/developerportal/deploy/licensing-apps"
+    },
+	{
+      from: "/developerportal/howto/how-to-link-a-different-app-to-a-node",
+      to: "/developerportal/deploy/licensing-apps"
+    },
+	{
+      from: "/developerportal/support/new-app-request-template",
+      to: "/developerportal/support/new-app-node-request-template"
+    },
+	{
+      from: "/developerportal/support/export-a-project-package",
+      to: "/refguide/export-project-package-dialog"
+    },
+	{
+      from: "/developerportal/support/change-affected-apps",
+      to: "/developerportal/support/prepare-your-project"
     },
   ]
 }

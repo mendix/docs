@@ -13,7 +13,7 @@ The [Box](https://appstore.home.mendix.com/link/app/40977/) connector provides a
 ## 2 Installation
 
 1. Download this connector as well as the [Community Commons Function Library](../modules/community-commons-function-library) and [Deep Link](../modules/deep-link) modules into your app project.
-2. In order to use this connector, you must have an acccount on the Box developer site of box, so go to [BoxDEV](https://developer.box.com/) and click **Log in** > **Sign up** in the upper-right corner of the page.
+2. In order to use this connector, you must have an account on the Box developer site of box, so go to [BoxDEV](https://developer.box.com/) and click **Log in** > **Sign up** in the upper-right corner of the page.
 3. Fill in the form with your credentials and submit.
 4. Validate your account via an email, which will then give you access to the dashboard of your Box account.
 5. To allow the connector access to your account, you must enable the two-factor authentication via the **Security** tab.
@@ -32,7 +32,7 @@ The [Box](https://appstore.home.mendix.com/link/app/40977/) connector provides a
 	For more information on generating an RSA keypair, see [JWT Auth](https://docs.box.com/docs/app-auth#section-1-generating-an-rsa-keypair).
 
 9. Click **Add Public key** and then copy the contents of *boxmendixappdes.pub*.
-10. Open and run the Mendix Box connector via your app project.
+10. Run your app project to access the Box connector.
 11. To connect your Box app to the connector, click **Box Applications** in the navigation bar on the left side of the connector: 
 
 	![](attachments/box/navigation.jpg)
@@ -51,80 +51,159 @@ The [Box](https://appstore.home.mendix.com/link/app/40977/) connector provides a
 
 	![](attachments/box/box-account.jpg)
 
-Congrats! You are now able to use the different features in the connector to make your own personal app and control your Box account.
+17. In the **BoxConnector** module in your app project, use the **BoxApplication_Overview** page as an admin user to configure the Box connector for your application.
+18. Use the **BoxAccounts_Overview** page to associate Box accounts to Mendix accounts via the  token provided by the corresponding type of Box account (user or service).
+19. Make sure the **BoxApplication** entity is set with the same **redirect_URL** as you set above for your Box app.
+20. Configure the Deep Link module as follows:
 
+	![](attachments/box/call-microflow.jpg)
 
+Congrats! You are now able to use the different [features](#features) in the connector to make your own personal app and control your Box account.
 
-In the BoxConnector module, use the ```BoxApplication_Overview``` page as an admin user to configure your Box connectors in your application.
+## 3 Features {#features}
 
-Use ```BoxAccounts_Overview``` page to associate Box accounts to Mendix
-    accounts, using the  *token* provided by the corresponding type of
-    Box account (user or service).
+The connector has the available features described below.
 
-In the project, make sure that BoxApplication entity is set with the same      redirect url.
+### 3.1 Authentication Management
 
-Configure the *DeepLink* module as follow:
+These actions are available in **Authentication**:
 
-![](documentation/resources/step08_mendix_deeplink_config.jpg)
+* **GetToken**
+* **GetTokenServiceAccount**
+* **RefreshToken**
+* **RevokeToken**
 
+### 3.2 Collaboration Management
 
-## 3 Features
+These actions are available in **Collaboration**:
 
-### Authentication
-* Get token
-* Get token service accounts
-* Refresh token
-* Revoke token
+* **CreateCollaboration** – used to add a collaboration for a single user or a single group to a file or folder; either an email address, user ID, or group ID can be used to create the collaboration.
+	* **BoxItem** (required) – the item to which the collaboration will be added; this can be a BoxFile or a BoxFolder; `_id` and `_type` attributes are required
+	* **BoxUser** – the Box user added as a collaborator; can describe a group or a single user; the login (email address) is used only for single user
+	* **CollaborationRole** – the role applied to the BoxUser collaborator
+	* **Notify** (optional) – determines if the user (or all the users in the group) should receive email notification of the collaboration
+	* **CanViewPath** – viewing the path collaborations allows the invitee to see the entire ancestral path to the associated folder
+* **Delete collaboration** – used to delete a single collaboration
+	* **BoxCollaboration** (required) – the `_id` attribute is required
+* **GetCollaboration** – used to get information about a single collaboration
+	* **BoxCollaboration** (required) – the `_id` attribute is required
+	* **Fields** (optional) – attributes to include in the response
+	* **PendingStatus** – set to true to retrieve only the pending collaborations, set to false to retrieve all collaborations
+* **PendingCollaborations** – used to retrieve all the pending collaboration invites for a user
+	* **Fields** (optional) – attribute(s) to include in the response
+* **UpdateCollaboration** – used to edit an existing collaboration
+	* **BoxCollaboration** (required) – the `_id` attribute is required
+	* **UpdateRole** (optional) – the access level of this collaboration
+	* **UpdateStatus** – whether this collaboration has been accepted; this can be set to accepted or rejected by the `accessible_by` user if the status is pending
+	* **UpdateExpiresAt** – the time in the future when this collaboration will expire
+	* **UpdateCanViewPath** – whether the **CanViewPath** collaboration feature is enabled
 
-### Collaboration Management
-* [Create collaboration](documentation/feature_documentation/Collaboration/CreateCollaboration.md)
-* [Delete collaboration](documentation/feature_documentation/Collaboration/DeleteCollaboration.md)  
-* [Get collaboration](documentation/feature_documentation/Collaboration/GetCollaboration.md)  
-* [Pending collaborations](documentation/feature_documentation/Collaboration/PendingCollaborations.md)  
-* [Update collaboration](documentation/feature_documentation/Collaboration/UpdateCollaboration.md)  
+### 3.3 File Management
 
-### File Management
-* [Copy file](documentation/feature_documentation/File/CopyFile.md)  
-* [Create file Shared Link](documentation/feature_documentation/File/CreateFileSharedLink.md)
-* [Delete file](documentation/feature_documentation/File/DeleteFile.md)
-* [Delete old version](documentation/feature_documentation/File/DeleteOldVersion.md)
-* [Download file](documentation/feature_documentation/File/DownloadFile.md)
-* [Get embed link](documentation/feature_documentation/File/GetEmbedLink.md)
-* [Get file collaborations](documentation/feature_documentation/File/GetFileCollaborations.md)
-* [Get file comments](documentation/feature_documentation/File/GetFileComments.md)
-* [Get file info](documentation/feature_documentation/File/GetFileInfo.md)
-* [Get file tasks](documentation/feature_documentation/File/GetFileTasks.md)
-* [Get thumbnail](documentation/feature_documentation/File/GetThumbnail.md)
-* [Get trashed file](documentation/feature_documentation/File/GetTrashedFile.md)
-* [Lock and unlock](documentation/feature_documentation/File/LockAndUnlock.md)
-* [Permanently delete file](documentation/feature_documentation/File/PermanentlyDeleteFile.md)
-* [Preflight check](documentation/feature_documentation/File/PreflightCheck.md)
-* [Promote version](documentation/feature_documentation/File/PromoteVersion.md)
-* [Restore file](documentation/feature_documentation/File/RestoreFile.md)
-* [Update file info](documentation/feature_documentation/File/UpdateFileInfo.md)
-* [Upload file](documentation/feature_documentation/File/UploadFile.md)
-* [Upload file version](documentation/feature_documentation/File/UploadFileVersion.md)
-* [View versions](documentation/feature_documentation/File/ViewVersions.md)
+These actions are available in **File**:
 
-### Folder Management
-* [Copy folder](documentation/feature_documentation/Folder/CopyFolder.md)
-* [Create folder](documentation/feature_documentation/Folder/CreateFolder.md)
-* [Create folder shared link](documentation/feature_documentation/Folder/CreateFolderSharedLink.md)
-* [Delete folder](documentation/feature_documentation/Folder/DeleteFolder.md)
-* [Get folder collaborations](documentation/feature_documentation/Folder/GetFolderCollaborations.md)
-* [Get folder info](documentation/feature_documentation/Folder/GetFolderInfo.md)
-* [Get folder items](documentation/feature_documentation/Folder/GetFolderItems.md)
-* [Get trashed folder](documentation/feature_documentation/Folder/GetTrashedFolder.md)
-* [Get trashed items](documentation/feature_documentation/Folder/GetTrashedItems.md)
-* [Permanently delete folder](documentation/feature_documentation/Folder/PermanentlyDeleteFolder.md)
-* [Restore folder](documentation/feature_documentation/Folder/RestoreFolder.md)
-* [Update folder](documentation/feature_documentation/Folder/UpdateFolder.md)
+* **CopyFile** – copies a file to another folder; the original version of the file will not be altered
+	* **BoxFile** (required) – the source file to copy; the `_id` attribute is required
+	* **DestBoxFolder** – the folder representing the new location of the file; the `_id` attribute is required
+	* **Version** (optional) – an optional file version ID if you want to copy a specific file version
+	* **Name** – an optional new name for the file
+* **CreateFileSharedLink** – creates a shared link for this particular folder; in order to disable a shared link, set the **SharedLink** parameter to empty
+	* **BoxFolder** (required) – the folder for which to create a SharedLink; the `_id` attribute is required
+	* **SharedLink** – an object representing this item's shared link and associated permissions
+	* **Access** – the level of access required for this shared link; can be Open, Company, Collaborators, or Null to get the default share level
+	* **Unshared_at** – the day when this link should be disabled
+	* **Password** – requires a password before viewing a shared link
+	* **Permissions** – the set of permissions that apply to this link
+	* **Effective_access** – the access level set by the enterprise administrator; this will override any previous access levels set for the shared link and prevent any less-restrictive access levels to be set
+* **DeleteFile** – discards a file to the trash
+	* **BoxFile** (required) – the file to delete; the `_id` attribute is required
+	* **IfMatchEtag** (optional) – the e-tag of the file; if-match the header to prevent race conditions
+* **DeleteOldVersion** – discards a specific file version to the trash
+	* **BoxFile** (required) – the `_id` attribute is required
+	* **Version** – the version ID to discard
+	* **IfMatchEtag** (optional) – the e-tag field of the file object
+* **DownloadFile** – retrieves the actual data of the file; an optional version parameter can be set to download a previous version of the file
+	* **BoxFile** (required) – the file to delete; the `_id attribute` is required
+	* **Version** (optional) – the version of the file
+* **GetEmbedLink** – retrieves an expiring URL for creating an embedded preview session; the URL will expire after 60 seconds, and the preview session will expire after 60 minutes
+* **GetFileCollaborations** – gets a list of all the collaborations on a file (meaning, all the users that have access to that folder)
+	* **BoxFile** (required) – the file to request; the `_id` attribute is required
+	* **Limit** (optional) – the maximum number of items to return in a page; the default is 100, and the max is 1000
+	* **Offset** – the item at which to begin the response
+	* **Fields** – the attribute(s) to include in the response
+* **GetFileComments** – retrieves the comments on a particular file (if any exist)
+	* **BoxFile** (required) – the `_id` attribute is required
+	* **Fields** (optional) – attribute(s) to include in the response
+* **GetFileInfo** – retrieves the metadata about a file
+	* **BoxFile** (required) – the file to retrieve metadata about; the `_id` attribute is required
+* **GetFileTasks** – retrieves all the tasks for the given file
+	* **BoxFile** (required) – the `_id` attribute is required
+* **GetThumbnail** – retrieves a thumbnail or smaller image representation of this file; the sizes of 32x32, 64x64, 128x128, and 256x256 can be returned in the *.png* format, and sizes of 32x32, 94x94, 160x160, and 320x320 can be returned in the *.jpg* format; thumbnails can be generated for image and video file formats
+	* **BoxFile** (required) – the `_id` attribute is required
+	* **Format** – the expected format for the thumbnail
+	* **MinSize** (optional) – the minimum size of the thumbnail
+	* **MaxSize** (optional) – the maximum size of the thumbnail
+* **GetTrashedFile** – retrieves a file that has been moved to the trash; a 404 error will be returned if the file is not in the trash
+	* **BoxFile** (required) – the file to retrieve; the `_id` attribute is required
+* **LockAndUnlock** – locks and unlocks files
+	* **BoxFile** (required) – the file to lock/unlock; the `_id` attribute is required
+	* **Lock** – the lock properties; the `_type` attribute is required and cannot be empty; the others attributes are optional
+* **PermanentlyDeleteFile** – permanently deletes a file that is in the trash so that the item will no longer exist in Box; this action cannot be undone
+	* **BoxFile** (required) – the file to delete; the `_id` attribute is required
+* **PreflightCheck** – verifies that a file will be accepted by Box before you send all the bytes over the wire; can be used for both first-time uploads and uploading new versions of an existing file (via */files/[id]/content*); preflight checks verify all permissions as if the file was actually uploaded, including folder upload permission, file name collisions, file size caps, folder and file name restrictions, and folder and account storage quota
+	* **BoxFile** (required) – the `name` attribute is required
+	* **BoxFolder** –  the `_id` attribute is required
+* **PromoteVersion** – if there are previous versions of this file, this method can be used to promote one of the older versions to the top of the stack; this actually mints a copy of the old version and puts it on top of the version's stack; the file will have the exact same contents, the same SHA1/etag, and the same name as the original; other properties such as comments do not get updated to their former values
+	* **BoxFile** (required) – the file to update; the `_id` attribute is required
+	* **Version** – the ID of the `file_version` that you want to make current
+* **RestoreFile** – restores an item that has been moved to the trash; the default behavior is to restore the item to the folder it was in before it was moved to the trash; if that parent folder no longer exists or if there is now an item with the same name in that parent folder, the new parent folder and/or new name will need to be included in the request
+	* **BoxFile** (required) – the file to restore; the `_id` attribute is required
+	* **Name** (optional) – the new name for this item
+	* **DestBoxFolder** – the new parent folder for this item; the `_id` attribute is required
+* **UpdateFileInfo** – updates individual or multiple fields in the file object, including renaming the file, changing its description, and creating a shared link for the file; to move a file, change the ID of its parent folder
+	* **BoxFile** (required) – the file to update
+	* **UpdateName** (optional, but at least one of them must be specified) – the new name
+	* **UpdateDescription** – the new description 
+	* **UpdateParentFolder** – the folder where you want to move the file
+	* **UpdateSharedLink** – the SharedLink to update with its new attributes 
+	* **UpdateTags** – all the tags attached to this file
+* **UploadFile** – uses the uploads to allow users to add a new file
+	* **FileToUpload** (required) – the file to upload to Box; the `name` attribute is required
+	* **BoxFolder** – the destination Box folder; the `_id` attribute is required
+* **UploadFileVersion** – uploads a new version of an existing file in a user's account; the file name on Box will remain the same as the previous version; to update the file's name, you can specify a new name for the file
+	* **Required BoxFile** (required) – the `_id` attribute is required; optionally, the `name` attribute of the BoxFile has to be set if the name of the file must be updated
+	* **FileToUpload** – the new version of the file to upload
+* **ViewVersions** – if there are previous versions of this file, this method can be used to retrieve information about the older versions
+	* **BoxFile** (required) – the `_id` attribute is required
+	* **Fields** (optional) – the attribute(s) to include in the response
 
-### Metadata Management
-* [Create metadata on file](documentation/feature_documentation/Metadata/CreateMetadataOnFile.md)
-* [Delete metadata on file](documentation/feature_documentation/Metadata/DeleteMetadataOnFile.md)
-* [Get metadata on file](documentation/feature_documentation/Metadata/GetMetadataOnFile.md)
-* [Update metadata on file](documentation/feature_documentation/Metadata/UpdateMetadataOnFile.md)
+### 3.4 Folder Management
+
+These actions are available in **Folder**:
+
+* **CopyFolder** – creates a copy of a folder in another folder; the original version of the folder will not be altered
+	* **SrcBoxFolder** (required) – the source folder to copy; the `_id` attribute is required
+	* **DestBoxFolder** – the destination folder for the copy; the `_id` attribute is required
+	* **NewName** (optional) – the new name of the folder to be copied
+* **CreateFolder** – 
+* **CreateFolderSharedLink** – 
+* **DeleteFolder** – 
+* **GetFolderCollaborations** – 
+* **GetFolderInfo** – 
+* **GetTrashedFolder** – 
+* **GetTrashedItems** – 
+* **PermanentlyDeleteFolder** – 
+* **RestoreFolder** – 
+* **UpdateFolder** – 
+
+### 3.5 Metadata Management
+
+These actions are available in **Metadata**:
+
+* **CreateMetadataOnFile** – 
+* **DeleteMetadataOnFile** – 
+* **GetMetadataOnFile** – 
+* **UpdateMetadataOnFile** – 
 
 ## 4 Developing This App Store Component
 

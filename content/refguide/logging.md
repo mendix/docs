@@ -76,9 +76,9 @@ This list is currently incomplete and is being worked on.
 | ModelStore | |
 | Module | Logs messages for modules that are loaded on-demand in the core runtime like the microflow-engine. |
 | ObjectManagement | |
-| ODataConsume | |
+| OData Publish | Log messages related to published OData services. |
 | QueryParser | Logs messages related to the parsing or interpretation of XPath and OQL queries. |
-| REST Publish | |
+| REST Publish | Log messages related to published REST services. |
 | RequestStatistics | |
 | Services | |
 | StorageAzure | Logs messages related to file handling if you are using Azure system as your file store. |

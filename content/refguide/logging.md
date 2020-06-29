@@ -70,7 +70,7 @@ This list is currently incomplete and is being worked on.
 | Jetty | Logs messages from the internal Jetty webserver that handles HTTP requests between the runtime and the outside world. |
 | LocalFileSystemStore | Logs messages related to file handling if you are using local file system as your file store. |
 | Logging | Logs messages related to the logging framework used by Mendix. |
-| M2EE | |
+| M2EE | Log messages from the administration interface with the runtime |
 | MicroflowDebugger | Log messages related to the status of the microflow debugger, e.g. connection status, incoming and outgoing requests, etc. |
 | MicroflowEngine | Log messages related to microflow execution, e.g. which microflow / microflow action is being executed and errors that occur during the execution. |
 | ModelStore | |
@@ -84,7 +84,7 @@ This list is currently incomplete and is being worked on.
 | StorageAzure | Logs messages related to file handling if you are using Azure system as your file store. |
 | StorageS3 | Logs messages related to file handling if you are using Amazon S3 system as your file store. |
 | StorageSwift | |
-| WebServices | |
+| WebServices | Traces SOAP call request and response contents. |
 | WebUI | |
 
 ### 3.2 JSON{#json}

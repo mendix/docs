@@ -265,7 +265,11 @@ Each tab has the following properties:
 	{{% image_container width="300" %}}![](attachments/page-editor-widgets-structure/tab-properties.png)
 	{{% /image_container %}}
 
-## 7 Read More
+## 7 Snippet Overview {#snippet}
+
+
+
+## 8 Read More
 
 * [Pages](page-editor) 
 * [Widgets](page-editor-widgets)

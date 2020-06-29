@@ -292,7 +292,7 @@ module.exports = {
       to: "/refguide/table-document-template"
     },
 	{
-      from: "/refguide8/table-(document-template",
+      from: "/refguide8/table-(document-template)",
       to: "/refguide/table-document-template"
     },
 	{
@@ -2373,6 +2373,13 @@ module.exports = {
     {
       from: "/howto6/Solving+Load+and+Import+Errors",
       to: "/howto6/solving-load-and-import-errors"
+    },
+	/****************************************************
+     * From Model SDK API (permanent, mapped)
+     ****************************************************/	
+	{
+      from: "/refguide/action-button",
+      to: "/refguide/button-widgets"
     },
 	/****************************************************
      * From Studio (potentially temporary until the support of old bundles stops, mapped)

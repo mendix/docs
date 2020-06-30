@@ -281,8 +281,8 @@ Snippets define reusable interface parts and are created in Studio Pro. By using
 
 In Studio, you can call (use) snippets on your pages, but you cannot create, change, or delete them. For more information on snippets in Studio Pro, see [Snippet](/refguide/snippet).
 
-{{% alert type="note" %}}
-The **Snippet** widget is not displayed if your app project does not contain any snippets in Studio Pro. 
+{{% alert type="info" %}}
+The **Snippet** widget is not displayed if your app project does not contain any snippets. 
 {{% /alert %}}
 
 To call a snippet and add it to your page, do the following:

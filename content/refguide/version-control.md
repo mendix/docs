@@ -50,10 +50,10 @@ If any of the differences cannot be applied, then there is a [conflict](#conflic
 
 ### 2.6 Conflict {#conflict}
 
-A conflict occurs when two versions of the app cannot be combined automatically. This happens when the same document has been changed in a Studio Pro working copy and a committed [revision](#revision) and these changes cannot be reconciled. Examples are the following:
+A conflict occurs when two versions of the app cannot be combined automatically. This happens when the same document has been changed in a Studio Pro working copy and a committed [revision](#revision) and these changes cannot be reconciled. These are some examples:
 
-* the properties of a widget are changed in the revision and the working copy but to different settings
-* a document is moved or deleted in the revision but has been changed in a different way in the working copy.
+* The properties of a widget are changed in the revision and the working copy but to different settings
+* A document is moved or deleted in the revision but has been changed in a different way in the working copy
 
 When a conflict occurs, a developer has to intervene to decide how it should be resolved before it can be committed to the Team Server as a new revision.
 
@@ -190,10 +190,10 @@ In Mendix each revision within a [repository](#repository) is given a unique ver
 
 You may have a branch line which will continue independently and never need to be combined with any other development lines. For example, you may create a branch for a particular release of your app and only ever use it to fix bugs in that release.
 
-On the other hand, you may want to add the features from one branch line into another development line. Two cases for doing this are:
+On the other hand, you may want to add the features from one branch line into another development line. These are two cases for doing this:
 
-* you develop new features in a branch line and want to include them in your main development line
-* you want to take advantage of a bug fix which was made on another branch line
+* You develop new features in a branch line and want to include them in your main development line
+* You want to take advantage of a bug fix which was made on another branch line
 
 You can merge a specific revision of a branch line into your current [working copy](#working-copy). If, for example, you were working on the main line updated to revision 6, you can [merge](#merge) revision 5 from another branch line into your working copy. Then you can commit the result to create revision 7. If you want to merge several different committed changes from a branch, you will need to select a range of revisions which includes all the changes.
 

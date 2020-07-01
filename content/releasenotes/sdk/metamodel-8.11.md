@@ -5,7 +5,7 @@ parent: "metamodel-8"
 
 ## 8.11.0
 
-**Release date: July 1st, 2020**
+**Release date: June 30th, 2020**
 
 ### DomainModels
 

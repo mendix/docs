@@ -2566,10 +2566,6 @@ module.exports = {
       to: "/refguide/title-document-template"
     },
 	{
-      from: "/refguide/user-role",
-      to: "/refguide/user-roles"
-    },
-	{
       from: "/refguide/sign-out-button",
       to: "/refguide/button-widgets"
     },

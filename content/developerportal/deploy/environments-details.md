@@ -52,7 +52,7 @@ On the right side of the screen, you can find the following action buttons:
 * **Start/Stop Application**
 * **Clear Environment** *(only visible if your application is stopped)* – this clears, after confirmation, all data from your database and file storage, and removes your app from this environment — you should do this if you want to deploy a different app to this environment, it is not necessary if you are restoring a backup of the same app
 * **Show Logged in Users** 
-* **Change Admin Password**
+* **Change Admin Password** – this changes the password for the local app user `MxAdmin` — the new password is applied immediately, without the need for a restart and will also force the MxAdmin user to pick up any new roles assigned in the app deployment package (see []())
 
 #### 2.1.1 Logging and Debugging in Mendix Cloud v4
 

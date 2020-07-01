@@ -27,7 +27,7 @@ parent: "metamodel-8"
 
 * We introduced this model unit.
 * We introduced the `description` property for a multi-line description of the remote source.
-* We introduced the  `catalogUrl` property for the URL to a page that gives more information about the remote source.
+* We introduced the `catalogUrl` property for the URL to a page that gives more information about the remote source.
 * We introduced the `icon` property for a custom icon of the source document.
 
 ### Microflows

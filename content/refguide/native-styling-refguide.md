@@ -296,7 +296,7 @@ A drop-down is an input widget that can be used to display and edit enumeration 
 
 Since Studio version 8.11, the drop-down widget has a new style property called `useUniformDesign: boolean` which enables the uniform design in both platforms.
 
-The widget’s render hierarchy is as follows for non-uniform widgets:
+The widget’s render hierarchy is as follows for non-uniform:
 
 ```xml
 <container>
@@ -315,7 +315,7 @@ The widget’s render hierarchy is as follows for non-uniform widgets:
 </picker>
 ```
 
-The widget’s render hierarchy is as follows for uniform widgets:
+The widget’s render hierarchy is as follows for uniform:
 
 ```xml
 <container>

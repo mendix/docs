@@ -294,13 +294,9 @@ The default class to style all text areas is named `TextArea`.
 
 A drop-down is an input widget that can be used to display and edit enumeration attributes.
 
-Since Studio version 8.11 dropdown widget now has a new style property called `useUniformDesign: boolean` which enables the uniform design in both platforms.
+Since Studio version 8.11, the drop-down widget has a new style property called `useUniformDesign: boolean` which enables the uniform design in both platforms.
 
-This is how non-uniform(Old) and uniform(New) design drop-down widget could look in IOS and Android app:
-
-<<<<<<<<<<<<<<<<<<<<<HERE WILL BE THE GIF>>>>>>>>>>>>>>>>>>>>>>
-
-The widget’s render hierarchy is as follows for non-uniform:
+The widget’s render hierarchy is as follows for non-uniform widgets:
 
 ```xml
 <container>
@@ -319,7 +315,7 @@ The widget’s render hierarchy is as follows for non-uniform:
 </picker>
 ```
 
-The widget’s render hierarchy is as follows for uniform:
+The widget’s render hierarchy is as follows for uniform widgets:
 
 ```xml
 <container>

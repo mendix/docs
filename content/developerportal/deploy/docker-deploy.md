@@ -30,28 +30,35 @@ To build the Docker image, follow these steps:
 
 1. Install Docker on your computer.
 2. Restart the computer to ensure that you have been granted access to Docker.
-3. Unzip the buildpack in a location of your choice.
-4. Open the **Command Prompt** and navigate to the buildpack folder. 
-5. Open an app project in Studio Pro and in the top menu, select **Project** > **Show project directory in Explorer**:
+3. Unzip the buildpack into a location of your choice.
+4. Open the **Command Prompt** and navigate to the folder where you unzipped the buildpack. 
+5. Open your app project in Studio Pro and select the menu option **Project** -> **Show project directory in Explorer**:
 
     ![](attachments/docker-deploy/create-deployment-package.png)
 
-6. Copy the project folder to the unzipped docker build folder. The project folder needs to be on the same level as the Docker file. The Docker build is not allowed to access files outside the context of the Docker build location.
+6. Copy the project folder and all its subfolders to the unzipped docker build folder. The project folder needs to be in the same folder as the Docker file, otherwise Docker cannot access it.
 7.  Execute the following command:
 
     ```bash
-    docker build --build-arg BUILD_PATH="<relative-mendix-project-location>" -t <image name> .
+    docker build --build-arg BUILD_PATH="{relative-mendix-project-location}" -t {image name} .
     ```
+
+    **{relative-mendix-project-location}** is the BUILD_PATH which indicates where the application model is located. It is the directory where your .MPR file is located after you copied the project into the docker build folder. If you do not specify it, it defaults to `./project`.
+
+    A successful build will resemble the output shown below:
 
     ![](attachments/docker-deploy/build-image.png)
 
+{{% alert type="info" %}}
+You can find much more information and links to relevant Docker documentation in the [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack) GitHub repository.
+{{% /alert %}}
+
 ## 4 Pushing the Image
 
-A new Docker image has been created with the name you gave it. You can see the image by using the command `docker images`.
+A new Docker image has been created with the name (`{image name}`) you gave it. You can see the image by using the command `docker images`.
 
-Next, you need to push the image to a registry. This can be a public registry or your own. To push it to your own registry, use the command `docker push <image name>`.
+Next, you need to push the image to a registry. This can be a public registry or your own. To push it to your own registry, use the command `docker push {image name}`.
 
 ## 5 Read More
 
 * [How to Run a Mendix Docker Image](run-mendix-docker-image)
-* [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack)

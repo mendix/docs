@@ -101,15 +101,11 @@ parent: "metamodel-8"
 
 * We introduced the `caption` property.
 
-#### CallMicroflowTask (Element)
-
-* We introduced this element.
-
 #### UserTask (Element)
 
 * We introduced the `userSource` property.
 * We deleted the `userRole` property.
 
-#### UserSource & XPathBasedUserSource (Elements)
+#### CallMicroflowTask, UserSource & XPathBasedUserSource (Elements)
 
 * We introduced these elements.

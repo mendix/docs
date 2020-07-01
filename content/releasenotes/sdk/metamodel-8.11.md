@@ -16,11 +16,11 @@ parent: "metamodel-8"
 #### RemoteEntitySourceDocument (ModelUnit)
 
 * We introduced this model unit.
-* We added the public 'icon' property.
+* We added the public `icon` property.
 
 #### AssociationBase (Element)
 
-* We introduced the 'capabilities' property for what an association is capable of.
+* We introduced the `capabilities` property for what an association is capable of.
 
 #### AssociationCapabilities (Element)
 
@@ -30,18 +30,18 @@ parent: "metamodel-8"
 
 #### CloseFormAction (Element)
 
-* We introduced the 'numberOfPagesToClose' property.
-* We deleted the 'numberOfPages' property.
+* We introduced the `numberOfPagesToClose` property.
+* We deleted the `numberOfPages` property.
 
 #### ShowPageAction (Element)
 
-* We introduced the 'numberOfPagesToClose' property.
+* We introduced the `numberOfPagesToClose` property.
 
 ### Settings
 
 #### WorkflowsProjectSettingsPart (Element)
 
-* We introduced the 'userEntity' property.
+* We introduced the `userEntity` property.
 
 ### Kafka
 
@@ -57,13 +57,13 @@ parent: "metamodel-8"
 
 #### ConsumedODataService (ModelUnit)
 
-* We introduced the 'applicationId' property for the application ID of the published service that is being consumed.
-* We deleted the 'entities' property. All information is now in the sources.
+* We introduced the `applicationId` property for the application ID of the published service that is being consumed.
+* We deleted the `entities` property. All information is now in the sources.
 
 #### ODataRemoteEntitySource (Element) {#odataremoteentitysource}
 
-* We introduced the 'entitySet' property for the entity set.
-* We introduced the 'key' property for the entity's key.
+* We introduced the `entitySet` property for the entity set.
+* We introduced the `key` property for the entity's key.
 
 #### ODataEntity (Element)
 
@@ -81,25 +81,25 @@ parent: "metamodel-8"
 
 #### PageClientAction (Element)
 
-* We introduced the 'numberOfPagesToClose' property.
+* We introduced the `numberOfPagesToClose` property.
 
 #### CreateObjectClientAction (Element)
 
-* We introduced the 'numberOfPagesToClose' property.
+* We introduced the `numberOfPagesToClose` property.
 
 #### RetrievalQuery (Element)
 
-* We introduced the 'usedAttributes' property.
+* We introduced the `usedAttributes` property.
 
 ### Workflows
 
 #### Workflow (ModelUnit)
 
-* We introduced the 'subject' and 'overviewPage' properties.
+* We introduced the `subject` and `overviewPage` properties.
 
 #### WorkflowTaskOutcome (Element)
 
-* We introduced the 'caption' property.
+* We introduced the `caption` property.
 
 #### CallMicroflowTask (Element)
 

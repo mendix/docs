@@ -17,7 +17,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Have sufficient rights on the DBMS (for details, see [3 Permissions](#Permissions))
 * Make sure the following points are true:
-    * The Mendix database is maintained using maintanance plans as described in [How to Set Up Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
+    * The Mendix database is maintained using maintenance plans as described in [How to Set Up Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
     * A valid database backup file exists for the Mendix database
     * Valid transaction log files exist for the Mendix database
 
@@ -42,11 +42,7 @@ To restore the database, follow these steps:
 6. In the **Restore plan** section of the **General** page, leave the default as **To the last backup taken** or click **Timeline** to access the **Backup Timeline** dialog box where you can manually select a point in time to stop the recovery action.
 7. In the **Backup sets to restore** grid, select the backups to restore. This grid displays the backups available for the specified location. By default, a recovery plan is suggested. To override the suggested recovery plan, change the selections in the grid. Backups that depend on the restoration of an earlier backup are automatically deselected when the earlier backup is deselected.
 
-    {{% alert type="info" %}}
-
-    Optionally, click "Files" in the "Select a page" pane to access the "Files" dialog box. From here, you can restore the database to a new location by specifying a new restore destination for each file in the "Restore the database files as" grid.
-
-    {{% /alert %}}
+    {{% alert type="info" %}}Optionally, click "Files" in the "Select a page" pane to access the "Files" dialog box. From here, you can restore the database to a new location by specifying a new restore destination for each file in the "Restore the database files as" grid.{{% /alert %}}
 
 8. To view or select the advanced options, in the **Restore options** panel on the **Options** page you can select any of the following options if appropriate for your situation:
     * **WITH** options (not required):

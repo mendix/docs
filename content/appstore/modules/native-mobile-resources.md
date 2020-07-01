@@ -6,16 +6,6 @@ tags: ["app store", "app store component", "native mobile resources", "native wi
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-<!-- Put this wherever you would like your player to appear -->
-<img
-  style="width: 100%; margin: auto; display: block;"
-  class="vidyard-player-embed"
-  src="https://play.vidyard.com/rRjwcUkyy2CRYdgGGhak7C.jpg"
-  data-uuid="rRjwcUkyy2CRYdgGGhak7C"
-  data-v="4"
-  data-type="inline"
-/>
-
 ## 1 Introduction
 
 The [Native Mobile Resources](https://appstore.home.mendix.com/link/app/109513/) module is a bundle of Mendix Platform-supported widgets and nanoflow actions for building native mobile and hybrid applications. For more information on styling widgets, see the [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide).

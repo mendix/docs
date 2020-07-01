@@ -1,164 +1,115 @@
-# Metamodel Release Notes for version 8.11.0
+---
+title: "8.11"
+parent: "metamodel-8"
+---
 
-## DomainModels
+## 8.11.0
 
-### MaterializedRemoteEntitySource (Element)
-* Introduced; 
+**Release date: July 7th, 2020**
 
+### DomainModels
 
-### RemoteEntitySourceDocument (ModelUnit)
+#### MaterializedRemoteEntitySource (Element)
 
+* We introduced this element.
 
-#### Property 'icon'
-* Added public
+#### RemoteEntitySourceDocument (ModelUnit)
 
-### AssociationBase (Element)
+* We introduced this model unit.
+* We added the public 'icon' property.
 
+#### AssociationBase (Element)
 
-#### Property 'capabilities'
-* Introduced; "What an association is capable of"
+* We introduced the 'capabilities' property for what an association is capable of.
 
-### AssociationCapabilities (Element)
-* Introduced; "What an association is capable of"
+#### AssociationCapabilities (Element)
 
+* We introduced this element for what an association is capable of.
 
-## Microflows
+### Microflows
 
-### CloseFormAction (Element)
+#### CloseFormAction (Element)
 
+* We introduced the 'numberOfPagesToClose' property.
+* We deleted the 'numberOfPages' property.
 
-#### Property 'numberOfPages'
-* Deleted; 
+#### ShowPageAction (Element)
 
-#### Property 'numberOfPagesToClose'
-* Introduced; 
+* We introduced the 'numberOfPagesToClose' property.
 
-### ShowPageAction (Element)
+### Settings
 
+#### WorkflowsProjectSettingsPart (Element)
 
-#### Property 'numberOfPagesToClose'
-* Introduced; 
+* We introduced the 'userEntity' property.
 
-## Settings
+### Kafka
 
-### WorkflowsProjectSettingsPart (Element)
+#### ConsumedKafkaService (ModelUnit)
 
+* We introduced this model unit.
 
-#### Property 'userEntity'
-* Introduced; 
+#### KafkaEntity, KafkaNavigationProperty, KafkaAttribute, KafkaRemoteEntitySource & KafkaMappedValue (Elements)
 
-## Kafka
+* We introduced these elements.
 
-### ConsumedKafkaService (ModelUnit)
-* Introduced; 
+### Rest
 
+#### ConsumedODataService (ModelUnit)
 
-### KafkaEntity (Element)
-* Introduced; 
+* We introduced the 'applicationId' property for the application ID of the published service that is being consumed.
+* We deleted the 'entities' property. All information is now in the sources.
 
+#### ODataRemoteEntitySource (Element) {#odataremoteentitysource}
 
-### KafkaNavigationProperty (Element)
-* Introduced; 
+* We introduced the 'entitySet' property for the entity set.
+* We introduced the 'key' property for the entity's key.
 
+#### ODataEntity (Element)
 
-### KafkaAttribute (Element)
-* Introduced; 
+* We deleted this element. The [ODataRemoteEntitySource](#odataremoteentitysource) element is now used instead.
 
+#### ODataNavigationProperty (Element)
 
-### KafkaRemoteEntitySource (Element)
-* Introduced; 
+* We deleted this element. The `ODataRemoteAssociationSource` element is used instead.
 
+#### ODataAttribute (Element)
 
-### KafkaMappedValue (Element)
-* Introduced; 
+* We deleted this element. The `ODataMappedValue` element is used instead.
 
+### Pages
 
-## Rest
+#### PageClientAction (Element)
 
-### ConsumedODataService (ModelUnit)
+* We introduced the 'numberOfPagesToClose' property.
 
+#### CreateObjectClientAction (Element)
 
-#### Property 'applicationId'
-* Introduced; "The application id of the published service that is being consumed"
+* We introduced the 'numberOfPagesToClose' property.
 
-#### Property 'entities'
-* Deleted; "All information is now in sources"
+#### RetrievalQuery (Element)
 
-### ODataRemoteEntitySource (Element)
+* We introduced the 'usedAttributes' property.
 
+### Workflows
 
-#### Property 'entitySet'
-* Introduced; "The entity set"
+#### Workflow (ModelUnit)
 
-#### Property 'key'
-* Introduced; "The entity's key"
+* We introduced the 'subject' and 'overviewPage' properties.
 
-### ODataEntity (Element)
-* Deleted; "ODataRemoteEntitySource is used instead"
+#### WorkflowTaskOutcome (Element)
 
+* We introduced the 'caption' property.
 
-### ODataNavigationProperty (Element)
-* Deleted; "ODataRemoteAssociationSource is used instead"
+#### CallMicroflowTask (Element)
 
+* We introduced this element.
 
-### ODataAttribute (Element)
-* Deleted; "ODataMappedValue is used instead"
+#### UserTask (Element)
 
+* We introduced the `userSource` property.
+* We deleted the `userRole` property.
 
-## Pages
+#### UserSource & XPathBasedUserSource (Elements)
 
-### PageClientAction (Element)
-
-
-#### Property 'numberOfPagesToClose'
-* Introduced; 
-
-### CreateObjectClientAction (Element)
-
-
-#### Property 'numberOfPagesToClose'
-* Introduced; 
-
-### RetrievalQuery (Element)
-
-
-#### Property 'usedAttributes'
-* Introduced; 
-
-## Workflows
-
-### Workflow (ModelUnit)
-
-
-#### Property 'subject'
-* Introduced; 
-
-#### Property 'overviewPage'
-* Introduced; 
-
-### WorkflowTaskOutcome (Element)
-
-
-#### Property 'caption'
-* Introduced; 
-
-### CallMicroflowTask (Element)
-* Introduced; 
-
-
-### UserTask (Element)
-
-
-#### Property 'userRole'
-* Deleted; 
-
-#### Property 'userSource'
-* Introduced; 
-
-### UserSource (Element)
-* Introduced; 
-
-
-### XPathBasedUserSource (Element)
-* Introduced; 
-
+* We introduced these elements.

@@ -44,7 +44,7 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
 
 At the bottom of the page there are three overview sections. These are described below in the [Overviews](#overviews) section.
 
-### 2.1 Actions
+### 2.1 Actions{#actions}
 
 On the right side of the screen, you can find the following action buttons:
 
@@ -52,7 +52,7 @@ On the right side of the screen, you can find the following action buttons:
 * **Start/Stop Application**
 * **Clear Environment** *(only visible if your application is stopped)* – this clears, after confirmation, all data from your database and file storage, and removes your app from this environment — you should do this if you want to deploy a different app to this environment, it is not necessary if you are restoring a backup of the same app
 * **Show Logged in Users** 
-* **Change Admin Password** – this changes the password for the local app user `MxAdmin` — the new password is applied immediately, without the need for a restart and will also force the MxAdmin user to pick up any new roles assigned in the app deployment package (see []())
+* **Change Admin Password** – this changes the password for the local [administrator](/refguide/administrator) account — the new password is applied immediately, without the need for a restart and will also force the administrator to pick up any new roles assigned in the app deployment package — see the [User Role](/refguide/administrator#user-role) section of *Administrator* for more information
 
 #### 2.1.1 Logging and Debugging in Mendix Cloud v4
 

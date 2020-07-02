@@ -69,10 +69,16 @@ This method is useful if you have Git installed. To get the Native Template, do 
 
 1. Use `git@github.com:mendix/native-template.git` or `https://github.com/mendix/native-template.git` to clone the project locally. 
 1. Run the following command: `git clone --single-branch --branch release/<major-version-number> <repo-url>`.
+
+The final step differs based on your machine:
+
+For a Windows machine building an Android app, do the following: 
+
 1. Run `npm i`  to install the required dependencies.
-	
-	- If building the iOS app on a Mac OS X machine, to install the iOS dependencies, run: 	
-		`cd ios && pod install`
+
+For a Mac OS X machine building an iOS app, do the following:
+
+1. Run `cd ios && pod install` to install the required dependencies.
 
 #### 3.1.2 Getting the Native Template by Downloading the Source Code from GitHub
 

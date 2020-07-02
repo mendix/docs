@@ -2658,5 +2658,84 @@ module.exports = {
       from: "/developerportal/support/change-affected-apps",
       to: "/developerportal/support/prepare-your-project"
     },
+	/****************************************************
+     * From Model SDK API (permanent, mapped)
+     ****************************************************/	
+	{
+      from: "/refguide7/cell-(document-template)",
+      to: "/refguide/cell-document-template"
+    },
+	{
+      from: "/refguide7/close-form",
+      to: "/refguide/close-page"
+    },
+	{
+      from: "/refguide7/columns-(document-template)",
+      to: "/refguide/columns-document-template"
+    },
+	{
+      from: "/refguide7/consumed-odata-services",
+      to: "/refguide/published-odata-services"
+    },
+	{
+      from: "/refguide7/data-grid-(document-template)",
+      to: "/refguide/data-grid-document-template"
+    },
+	{
+      from: "/refguide7/data-view-(document-template)",
+      to: "/refguide/data-view-document-template"
+    },
+	{
+      from: "/refguide7/dynamic-image-(document-template)",
+      to: "/refguide/dynamic-image-document-template"
+    },
+	{
+      from: "/refguide7/dynamic-label-(document-template)",
+      to: "/refguide/dynamic-label-document-template"
+    },
+	{
+      from: "/refguide7/footer-(document-template)",
+      to: "/refguide/footer-document-template"
+    },
+	{
+      from: "/refguide7/header-(document-template)",
+      to: "/refguide/header-document-template"
+    },
+	{
+      from: "/refguide7/line-break-(document-template)",
+      to: "/refguide/line-break-document-template"
+    },
+	{
+      from: "/refguide7/page-break-(document-template)",
+      to: "/refguide/page-break-document-template"
+    },
+	{
+      from: "/refguide7/page-template",
+      to: "/refguide/page-templates"
+    },
+	{
+      from: "/refguide7/row-(document-template)",
+      to: "/refguide/row-document-template"
+    },
+	{
+      from: "/refguide7/static-image-(document-template)",
+      to: "/refguide/static-image-document-template"
+    },
+	{
+      from: "/refguide7/static-label-(document-template)",
+      to: "/refguide/static-label-document-template"
+    },
+	{
+      from: "/refguide7/table-(document-template)",
+      to: "/refguide/table-document-template"
+    },
+	{
+      from: "/refguide7/template-grid-(document-template)",
+      to: "/refguide/template-grid-document-template"
+    },
+	{
+      from: "/refguide7/title-(document-template)",
+      to: "/refguide/title-document-template"
+    },
   ]
 }

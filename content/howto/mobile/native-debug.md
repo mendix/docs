@@ -39,7 +39,27 @@ If the status remains at **Waiting**, use the reload command (pictured above) to
 
 Your browser's debugging tools should be pointing to your app project. Now, you can debug your app like you would any other web app. 
 
-Outside of Chrome, other tools can help you debug Mendix apps (such as React Developer Tools). Regardless of which tool you use, remember that Mendix uses a different port (8083) than a default React Native installation would (8080).
+Other tools can help you debug Mendix apps, such as the [Using React Developer Tools](#rn-dev) section below. Regardless of which tool you use, remember that Mendix uses a different port (8083) than a default React Native installation would (8080).
+
+### 2.1 Using React Developer Tools{#rn-dev}
+
+React Developer Tools is an extension for [Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/) browers which will allow you to see investigate the way your native page is rendering, adjust things like spacing in a live editor, and inspect the state and props of your pluggable and native widgets. You can consult Facebook's [official documentation](https://github.com/facebook/react/tree/master/packages/react-devtools) for extra information, but this document will teach you the basics of using React DevTools.
+
+To install React Developer Tools, do the following:
+
+1. Open your CLI and run NPX (an executable runner for NPM) with this code: `npx react-devtools@^3`. The `@^3` ensures compatibility with Mendix's React Native version.
+
+#### 2.1.1 Debugging with a Simulator
+
+Open your native app in your simulator of choice then do the following:
+
+1. Select **Enable dev mode** on your native app.
+2. Run `npx react-devtools@^3`.
+3.  React Developer Tools will launch and connect to your simulator. You can now inspect and modify the React Native elements the same way you could modify HTML elements in Chrome:
+
+	[PICTURE HERE]()
+
+#### 2.1.2 Debugging with the Make It Native App
 
 ## 3 Debugging Your Styling
 

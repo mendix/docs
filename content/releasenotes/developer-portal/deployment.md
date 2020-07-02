@@ -12,15 +12,15 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ### July 2nd, 2020
 
-#### Fix
+#### Mendix Cloud **v4**
 
-We have changed the way that the *unused java heap* metric is calculated to make the data more accurate.
-This also fixes the issue where this metric could have a negative value (tickets: [92998](https://mendixsupport.zendesk.com/agent/tickets/92998), [93241](https://mendixsupport.zendesk.com/agent/tickets/93241), [93725](https://mendixsupport.zendesk.com/agent/tickets/93725), [94560](https://mendixsupport.zendesk.com/agent/tickets/94560), [99308](https://mendixsupport.zendesk.com/agent/tickets/99308), [99979](https://mendixsupport.zendesk.com/agent/tickets/99979), [100086](https://mendixsupport.zendesk.com/agent/tickets/100086), [101004](https://mendixsupport.zendesk.com/agent/tickets/101004), [101429](https://mendixsupport.zendesk.com/agent/tickets/101429), [102260](https://mendixsupport.zendesk.com/agent/tickets/102260), [103225](https://mendixsupport.zendesk.com/agent/tickets/103225)).
+* We have changed the way that the *unused java heap* metric is calculated to make the data more accurate.
+	* This also fixes the issue where this metric could have a negative value (tickets: 92998, 93241, 93725, 94560, 99308, 99979, 100086, 101004, 101429, 102260, & 103225).
 
 This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
- * as **unused** in [JVM Object Heap](/developerportal/operate/trends-v4#a-name-trends-appmxruntimejvmheap-a-4-4-jvm-object-heap)
- * as **unused java heap** in [JVM Process Memory Usage](/developerportal/operate/trends-v4#a-name-trends-appmxruntimejvmprocessmemory-a-4-5-jvm-process-memory-usage)
+* as **unused** in [JVM Object Heap](/developerportal/operate/trends-v4#a-name-trends-appmxruntimejvmheap-a-4-4-jvm-object-heap)
+* as **unused java heap** in [JVM Process Memory Usage](/developerportal/operate/trends-v4#a-name-trends-appmxruntimejvmprocessmemory-a-4-5-jvm-process-memory-usage)
 
 {{% alert type="info" %}}This change will take effect the next time you deploy your application.{{% /alert %}}
 

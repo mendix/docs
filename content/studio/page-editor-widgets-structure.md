@@ -274,12 +274,14 @@ Each tab has the following properties:
 
 ## 7 Snippet Overview {#snippet}
 
-Snippets define reusable interface parts and are created in Studio Pro. By using snippets you can make changes in fewer places when you modify the interface. For example, you can create a snippet with a customer form, which you can use on several pages, but then change it in one place only:
+Snippets define reusable elements of pages and are created in Studio Pro. By using snippets you can make changes in fewer places when you modify pages. 
+
+For example, your team member in Studio Pro has created a snippet and added a customer form to it turning this form into a reusable page element. You can use this snippet on your pages in Studio too:
 
 {{% image_container width="500" %}}![](attachments/page-editor-widgets-structure/snippet-example.jpg)
 {{% /image_container %}}
 
-In Studio, you can call (use) snippets on your pages, but you cannot create, change, or delete them. For more information on snippets in Studio Pro, see [Snippet](/refguide/snippet).
+While you can call (use) snippets on your pages in Studio, you cannot create, change, or delete them. For more information on snippets in Studio Pro, see [Snippet](/refguide/snippet).
 
 {{% alert type="info" %}}
 The **Snippet** widget is not displayed if your app project does not contain any snippets. 

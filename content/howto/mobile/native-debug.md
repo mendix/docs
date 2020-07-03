@@ -49,13 +49,13 @@ To install React Developer Tools, do the following:
 
 1. Open your CLI and run NPX (an executable runner for NPM) with this code: `npx react-devtools@^3`. The `@^3` ensures compatibility with Mendix's React Native version.
 
-#### 2.1.1 Debugging with a Simulator
+#### 2.1.1 Debugging with iOS Simulator
 
-Open your native app in your simulator of choice then do the following:
+Open your native app in iOS Simulator and then do the following:
 
 1. Select **Enable dev mode** on your native app.
 2. Run `npx react-devtools@^3`.
-3.  React Developer Tools will launch and connect to your simulator. You can now inspect and modify the React Native elements the same way you could modify HTML elements in Chrome:
+3.  React Developer Tools will launch and connect to Simulator. You can now inspect and modify the React Native elements the same way you could modify HTML elements in Chrome:
 
 	{{% image_container width="350" %}}![debug simulator](attachments/native-debug/simulator-rn-dev.png){{% /image_container %}}
 

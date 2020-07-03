@@ -89,11 +89,11 @@ To commit your changes, click the **Commit** button in the **Changes** dock, or 
 
 ![Commit Button](attachments/using-version-control-in-studio-pro/commit-button.png)
 
-In general, it is a good idea to commit after implementing one feature or fixing one bug. By committing often, your work is integrated with the work of others regularly. The benefits of committing often include:
+In general, it is a good idea to commit after implementing one feature or fixing one bug. By committing often, your work is integrated with the work of others regularly. The benefits of committing include the following:
 
-* if any conflicts arise the changes are still fresh in your mind
-* revisions are easier to understand
-* if you ever need to revert something, you can revert a small chunk of work
+* If any conflicts arise, the changes are still fresh in your mind
+* Revisions are easier to understand
+* If you ever need to revert something, you can revert a small chunk of work
 
 Committing results in a new revision in the repository. You can add the following information in Studio Pro when you perform a commit, and this will be attached to the newly created revision:
 
@@ -104,10 +104,10 @@ Committing results in a new revision in the repository. You can add the followin
 
 Studio Pro also attaches some information automatically:
 
-*   The person who committed (the *author*)
-*   The date and time of the commit
-*   The list of changed documents, folders, and modules along with the type of the change (for example *modify* or *add*)
-*   The version of Studio Pro that was used to commit
+* The person who committed (the *author*)
+* The date and time of the commit
+* The list of changed documents, folders, and modules along with the type of the change (for example *modify* or *add*)
+* The version of Studio Pro that was used to commit
 
 If you also changed Java source code, added widgets or made other changes that affect files other than the project file you will see a **Changes on disk** tab page that shows you what disk changes you are about to commit.
 

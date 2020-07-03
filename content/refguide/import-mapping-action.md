@@ -1,5 +1,5 @@
 ---
-title: "Import With Mapping"
+title: "Import with Mapping"
 parent: "integration-activities"
 tags: ["studio pro", "import xml", "import with mapping", "import mapping", "integration activity"]
 menu_order: 30

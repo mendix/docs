@@ -26,7 +26,7 @@ There are some important points to understand when you want to deactivate or act
 
 * Only Free Apps can be deactivated
 * A deactivated app still exists in the company, but it is invisible to regular users (because only a Company Admin can activate an inactive app)
-* Licensed apps with a node can only be offboarded by Mendix Support (to offboard an app, you must submit a [Mendix Support](https://support.mendix.com/hc/en-us) request)
+* Licensed apps with a node can only be offboarded by Mendix Support – to offboard an app, you must submit an [Offboarding](https://offboard.mendix.com/) request
 
 To deactivate or activate an app as a Company Admin, follow these steps:
 

@@ -1065,19 +1065,20 @@ The popup menu widget allows you to show a context menu exactly where the user t
 The widget’s style properties are as follows:
 
 ```xml
-</container>
-</buttonContainer>
+<container/>
+<buttonContainer/>
+<itemRippleColor/>
 <basic>
-    </containerStyle>
-    </dividerColor>
+    <containerStyle/>
+    <dividerColor/>
     <itemStyle>
-        </ellipsizeMode>
-        </defaultStyle>
-        </primaryStyle>
-        </dangerStyle>
-        </customStyle>
+        <ellipsizeMode/>
+        <defaultStyle/>
+        <primaryStyle/>
+        <dangerStyle/>
+        <customStyle/>
     </itemStyle>
-</basic>
+<basic/>
 ```
 
 A main object has four objects.
@@ -1087,6 +1088,7 @@ A main object has four objects.
 | basic      | BasicItemStyle |Styles items.                                                                                                   |
 | buttonContainer | This has all ViewStyle properties. | Styles the wrapper view of triggerer since there could be multiple elements, and it has to be wrapped in a view. |
 | container       | This has all ViewStyle properties. | Styles the wrapper view around the whole menu.                                                                  |
+| itemRippleColor    | `string` | Styles the ripple color for both simple and custom menu items         |
 
 #### BasicItemStyle
 

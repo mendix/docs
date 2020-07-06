@@ -106,9 +106,10 @@ If you end up with autocommitted objects, it is always because of a modeling err
 
 During commit the the following will occur:
 
-* Events: For explicitly committed objects all before and after events are executed, and if any before-rollback event returns false, an exception can be thrown
+* Events: For *explicitly committed* objects all before and after events are executed, and if any before-rollback event returns false, an exception can be thrown
 	* If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior
 	* Changes made prior to the commit will be kept
+		{{% alert type="warning" %}}Before and after events are not executed for autocommitted objects.{{% /alert %}}
 * Database: there is an insert or update query executed both for explicitly committed objects and auto committed objects
 	* Depending on the object state, the platform will do an insert for objects with the state **Instantiated** and an update for all other states
 * Result: an object with the state Instantiated will be inserted into the database, and an object with any other state will be updated

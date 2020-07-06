@@ -7,7 +7,7 @@ tags: ["studio", "navigation", "how to", "navigation bar"]
 
 ## 1 Introduction
 
-This how-to explains . 
+This how-to explains how to configure a menu for your app. It will show you how to configure menu items and sub-items to create the navigation for your app.  
 
 **This how-to will teach you how to do the following:**
 
@@ -18,9 +18,11 @@ This how-to describes the following use case:
 
 You would like to configure a navigation bar for your app. You have four pages that you would like to add to it:
 
-* Employees – a page which lists all employees in your company and should be a home page
-* Employee_Details – gives details on the selected employee, should be a sub-item of the Employee menu item
-* New_Employee – a page for creating a new employee 
+* **Employees** – a page which lists all employees in your company and should be a home page
+* **New_Employee** – a page for creating a new employee 
+* **Job_Details** – contains a list with such details as employee's position, department, income; should be a menu sub-item of the **Employee_Details** menu item
+* **Personal_Info** – contains a list with personal employee information, such as full name, emergency contacts, address; should be a menu sub-item of the **Employee_Details** menu item
+* **Documents** – contains a list with employee files, such as employment contract, medical insurance; should be a menu sub-item of the **Employee_Details** menu item
 
 ## 2 Prerequisites
 
@@ -32,81 +34,93 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Creating Menu Items and Sub-Items
 
-### Creating a Menu Item for the Employees Page {#employees-page}
+### 3.1 Setting the Employees Page as the Home Page {#employees-page}
 
-To create a menu item for the Employees page, do the following:
+Currently the **Home_web** page is set as the home page for your app. However, you would like to set the **Employees** page as the home page instead. Do the following:
 
-1. Click the **Navigation Document** icon in the left menu bar to open the **Navigation**. Be default, you have a Home menu item there.
+1. Click the **Navigation Document** icon in the left menu bar to open the **Navigation**. 
 
-2. Click a plus at the bottom of the navigation tree to create a menu item:
+2. Select the **Home** menu item, go to its properties and do the following:
 
-    ![Adding New Menu Item](attachments/navigation-how-to-configure/adding-menu-item.png)
-
-3. Go to the new menu item properties and do the following:
-
-    1.  In the **On Click Action** property, select **Page**.
-      
-    2.  Click the **Page** property to select the page that the menu item will open:
-      
-        ![Menu Item Properties](attachments/navigation-how-to-configure/menu-item-properties.png)
-      
+    1.  Click the **Page** property to change the page that is currently set as home page:
+    
+        ![Home Page Properties](attachments/navigation-how-to-configure/home-page-properties.png)
+    
     3. In the **Select Page** dialog box, choose **Employees** and click **Select**. 
 
        ![Select Page Dialog Box](attachments/navigation-how-to-configure/select-page-dialog.png)
 
-   4. In the **Caption** property, delete the *Navigation item* caption and type in *Employees*. 
-
-    5. Click the **Icon** property to set the icon for the menu item.
-
-    6. In the Select icon dialog box, search for the *user* icon, choose it, and click **Select**:
-
-       ![Select Icon](attachments/navigation-how-to-configure/select-icon.png)
-
-   
-   Good job! You have added a new menu item to your navigation.
-   
-### Creating Menu Item for the New Employee Page
+### 3.2 Creating Menu Item for the New Employee Page
 
 The **New_Employee** page contains a form with the details of the new employee, this means that it contains a data view that expects an *Employee* object. Thus, when creating a menu item for it, you need to pass this object.
 
-   To create the menu item for the **New_Employee** page, do the following:
+To create the menu item for the **New_Employee** page, do the following:
 
-   1. Repeat steps 1-3 of the [Creating a Menu Item for the Employees Page](#employees-page) section to add a new menu item, set its on-click action to *Page*, and to choose the *New_Employee* page.
-   
-   2. In properties, toggle the **Create Object** option to pass the *Employee* object to the page.
-   
-   3. Click the **Entity** property to set the needed entity.
-   
-      ![Create Object](attachments/navigation-how-to-configure/create-object.png)
-   
-   4. In the **Select Entity** dialog box, choose **Employee** and click  **Select**.
-   
-   5. Repeat step 4 of the [Creating a Menu Item for the Employees Page](#employees-page) section and rename the navigation item to *New Employee*.
-   
-   6. Repeat steps 5-6 of the [Creating a Menu Item for the Employees Page](#employees-page) section and choose the *plus* icon for the **New_Employee** menu item. 
+1. Click a plus at the bottom of the navigation tree to create a menu item:
 
-   You have configured the new menu item that will pass an object to the page.
+    ![](attachments/navigation-how-to-configure/adding-menu-item.png)
 
-   ### Create a Menu Sub-Item for the Employee_Details Page
+2. Open the new menu item properties and do the following:
 
-The **Employee_Details** page can be opened from the **Employees** page, so you would like to make it a sub-item of the **Employees** menu item. The Employee_Details page contain a form (a data view), which means this page expects an *Employee* object. Thus, when creating a menu item for it, you need to pass this object to a page. 
+    1.  Toggle the **Create Object** option to pass the *Employee* object to the page.
+        
+    2. Click the **Entity** property to set the needed entity.
 
-To create the menu sub-item for the **Employee_Details** page, do the following:
+        ![Create Object](attachments/navigation-how-to-configure/create-object.png)
 
-   1. Click the **Navigation Document** icon in the left menu bar to open the **Navigation**. 
+    1. In the **Select Entity** dialog box, choose **Employee** and click **Select**.
 
-2. Click a plus *next to* the **Employees** menu item to create a sub-item for it:
+    2. Click the **Page** property.
 
-   ![Adding Menu Sub-Item](attachments/navigation-how-to-configure/adding-menu-sub-item.png)
+    5. In the **Select Page** dialog box, choose **New_Employee** page and click **Select**:
 
-   3. Repeat steps 2-3 of the [Creating a Menu Item for the Employees Page](#employees-page) section to add a new menu item, set its on-click action to *Page*, and to choose the *Employee_Details* page.
+         ![Select New Employee Page](attachments/navigation-how-to-configure/select-new-employee-page.png)
 
-   4. In properties, toggle the **Create Object** option to pass the *Employee* object to the page.
+    6. In the **Caption** property, delete the *Navigation item* caption and type in *New Employee*. 
+    
+    7. Click the **Icon** property to set the icon for the menu item.
+    
+    8. In the **Select icon** dialog box, search for the *plus* icon and click **Select**:
+    
+         ![Select Plus Icon](attachments/navigation-how-to-configure/plus-icon.png)
 
-   5. Click the **Entity** property to set the needed entity.
+Good job! You have added a menu item for the **NewEmployee** page to your navigation:
 
-   6. In the **Select Entity** dialog box, choose **Employee** and click  **Select**.
+![New Menu Item Created](attachments/navigation-how-to-configure/new-menu-item-created.png)
 
-   7. Repeat step 4 of the [Creating a Menu Item for the Employees Page](#employees-page) section and rename the navigation item to *Employee Details*.
+   ### 3.3 Create a Menu Item for the Employee_Details Page and Configuring Its Sub-Items
 
-   8. Repeat steps 5-6 of the [Creating a Menu Item for the Employees Page](#employees-page) section and choose the *user* icon for the **New_Employee** menu item. 
+You would like to place **Job_Details**, **Personal_Info**, and **Documents** pages under one menu-item named **Employee Details**, which means that they will be opened by menu sub-items. 
+
+First, you need to create the menu-item that will encompass three menu sub-items. Do the following:
+
+1. Click a plus at the bottom of the navigation tree to create a menu item.
+
+2. Open the new menu item properties and do the following:
+
+    1. In the **Caption** property, delete the *Navigation item* caption and type in *Employee Details*. 
+    2. Click the **Icon** property to set the icon for the menu item.
+    3. In the **Select icon** dialog box, search for the *user* icon and click **Select**.
+
+3. Click a plus *next to* the **Employee Details** menu item to create a sub-item for it:
+
+         ![Creating Menu Sub-Item](attachments/navigation-how-to-configure/creating-menu-sub-item.png)
+
+      3. Open sub-item's properties and do the following:
+         1. Click the **Page** property.
+         3. In the **Select Page** dialog box, choose **Job_Details** page and click **Select**.
+         4. In the **Caption** property, delete the *Navigation item* caption and type in *Job Details*. 
+      4. Repeat steps 1-3 to create a menu sub-item to open the **Personal_Info** page and name this sub-item *Personal Info*.  
+      5. Repeat steps 1-3 to create a menu sub-item to open the **Documents** page and name this sub-item *Documents*. 
+      6. The order of sub-items looks the following way now: **Documents**, **Personal Info**, **Job Details**. Drag and drop them to rearrange the order in the following way: **Job Details**, **Personal Info**, **Documents**.  
+
+      You have configured the sub-menu items for the **Employee Details** menu item.
+
+Congratulations! You created and configured navigation for your app:
+
+![Configured Navigation](attachments/navigation-how-to-configure/configured-navigation.png)
+
+[Preview your app](/studio/publishing-app) to see how the navigation displays:
+
+![Previewed Navigation](attachments/navigation-how-to-configure/navigation-previewed.png)
+

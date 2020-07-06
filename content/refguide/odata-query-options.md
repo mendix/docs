@@ -24,9 +24,11 @@ A single object can be retrieved by passing the object identifier in the URI. Fo
 
 ### 2.3 Retrieving Associated Objects
 
-Associated objects can be retrieved by passing the `$expand` query parameter. For example: `/odata/myservice/Exployees?$expand=Cars,Address/City`
+Associated objects can be retrieved by passing the `$expand` query parameter. For example: `/odata/myservice/Exployees?$expand=Cars,Address/City`.
 
-Note: the `$expand` feature was introduced in Studio Pro [8.11.0](/releasenotes/studio-pro/8.11#8110).
+{{% alert type="info" %}}
+The `$expand` feature was introduced in Studio Pro [8.11.0](/releasenotes/studio-pro/8.11#8110).
+{{% /alert %}}
 
 ## 3 Counting the Number of Objects
 
@@ -64,7 +66,6 @@ We support the following comparison operators:
 | lt | less than | `/Employees?$filter=Age lt 15` |
 | ge | greater than or equal to | `/Employees?$filter=Age ge 15` |
 | le | less than or equal to | `/Employees?$filter=Age le 15` |
-
 
 ### 4.3 Arithmetic Operators
 

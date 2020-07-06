@@ -14,7 +14,11 @@ Mendix strives to make building and running native mobile apps as simple as poss
 
 To troubleshoot issues related to the [Make it Native](/refguide/getting-the-make-it-native-app) app, see the sections below.
 
-### 2.1 Error: Unable to Load Script
+### 2.1 Port Issues
+
+We recommend keeping the **Runtime port** in **Project Settings** > **Edit** on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
+
+### 2.2 Error: Unable to Load Script
 
 Depending on your device settings and network characteristics, the Make it Native app can fail to connect to the runtime. If so, the Make it Native app can show the following error messages:
 

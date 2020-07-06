@@ -39,7 +39,38 @@ If the status remains at **Waiting**, use the reload command (pictured above) to
 
 Your browser's debugging tools should be pointing to your app project. Now, you can debug your app like you would any other web app. 
 
-Outside of Chrome, other tools can help you debug Mendix apps (such as React Developer Tools). Regardless of which tool you use, remember that Mendix uses a different port (8083) than a default React Native installation would (8080).
+Other tools can help you debug Mendix apps, such as the [Using React Developer Tools](#rn-dev) section below. Regardless of which tool you use, remember that Mendix uses a different port (8083) than a default React Native installation would (8080).
+
+### 2.1 Using React Developer Tools{#rn-dev}
+
+React Developer Tools is an extension for [Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/) browsers which will allow you to see investigate the way your native page is rendering, adjust things like spacing in a live editor, and inspect the state and props of your pluggable and native widgets. You can consult Facebook's [official documentation](https://github.com/facebook/react/tree/master/packages/react-devtools) for extra information, but this document will teach you the basics of using React Developer Tools.
+
+To install React Developer Tools, do the following:
+
+1. Open your CLI and run NPX (an executable runner for NPM) with this code: `npx react-devtools@^3`. The `@^3` ensures compatibility with Mendix's React Native version.
+
+#### 2.1.1 Debugging with iOS Simulator
+
+Open your native app in iOS Simulator and then do the following:
+
+1. Select **Enable dev mode** on your native app.
+2. Run `npx react-devtools@^3`.
+3.  React Developer Tools will launch and connect to Simulator. You can now inspect and modify the React Native elements the same way you could modify HTML elements in Chrome:
+
+	{{% image_container width="350" %}}![debug simulator](attachments/native-debug/simulator-rn-dev.png){{% /image_container %}}
+
+#### 2.1.2 Debugging with the Make It Native App
+
+To use the Make It Native app with React Developer Tools, do the following: 
+
+1. Connect your mobile device to your laptop with a USB cord.
+2. Run `adb devices` to ensure your device is listed.
+3. Start your native app on your device with **Enable dev mode** selected.
+4. Run `npx react-devtools@^3`.
+5. Run `adb reverse tcp:8097 tcp:8097` to allow the applet to interact  with your device.
+6. React Developer Tools will launch and connect to your device. You can now inspect and modify the React Native elements the same way you could modify HTML elements in Chrome:
+
+	{{% image_container width="350" %}}![debug min app](attachments/native-debug/min-app-rn-devtools.png){{% /image_container %}}
 
 ## 3 Debugging Your Styling
 

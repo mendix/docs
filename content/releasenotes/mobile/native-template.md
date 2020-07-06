@@ -14,7 +14,7 @@ For more information on native mobile app development, see the [native-template 
 
 ### Improvements
 
-* We added an error message to iOS for when the Bundle or the Runtime URL is missing.
+* We added an error message to iOS for when the bundle or the runtime URL is missing.
 
 ### Fixes
 

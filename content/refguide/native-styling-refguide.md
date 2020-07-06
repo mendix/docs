@@ -1088,7 +1088,7 @@ A main object has four objects.
 | basic      | BasicItemStyle |Styles items.                                                                                                   |
 | buttonContainer | This has all ViewStyle properties. | Styles the wrapper view of triggerer since there could be multiple elements, and it has to be wrapped in a view. |
 | container       | This has all ViewStyle properties. | Styles the wrapper view around the whole menu.                                                                  |
-| itemRippleColor    | `string` | Styles the ripple color for both simple and custom menu items         |
+| itemRippleColor    | `string` | Styles the ripple color for both simple and custom menu items.         |
 
 #### BasicItemStyle
 

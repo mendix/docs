@@ -43,21 +43,25 @@ Other tools can help you debug Mendix apps, such as the [Using React Developer T
 
 ### 2.1 Using React Developer Tools{#rn-dev}
 
-React Developer Tools is an extension for [Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/) browsers which will allow you to see investigate the way your native page is rendering, adjust things like spacing in a live editor, and inspect the state and props of your pluggable and native widgets. You can consult Facebook's [official documentation](https://github.com/facebook/react/tree/master/packages/react-devtools) for extra information, but this document will teach you the basics of using React Developer Tools.
+React Developer Tools is [an app](https://github.com/facebook/react/tree/master/packages/react-devtools) which will allow you to see investigate the way your native page is rendering, adjust things like spacing in a live editor, and inspect the state and props of your pluggable and native widgets. To proceed, you must also have [Node and NPM](https://nodejs.org/en/download/) installed.
+
+You can consult Facebook's [official documentation](https://reactnative.dev/docs/debugging) for extra information, but this document will teach you the basics of using React Developer Tools. 
 
 To install React Developer Tools, do the following:
 
 1. Open your CLI and run NPX (an executable runner for NPM) with this code: `npx react-devtools@^3`. The `@^3` ensures compatibility with Mendix's React Native version.
 
-#### 2.1.1 Debugging with iOS Simulator
+#### 2.1.1 Debugging with iOS Simulator and Android Emulators
 
-Open your native app in iOS Simulator and then do the following:
+Open your native app in iOS Simulator or Android emulator and then do the following:
 
 1. Select **Enable dev mode** on your native app.
 2. Run `npx react-devtools@^3`.
 3.  React Developer Tools will launch and connect to Simulator. You can now inspect and modify the React Native elements the same way you could modify HTML elements in Chrome:
 
 	{{% image_container width="350" %}}![debug simulator](attachments/native-debug/simulator-rn-dev.png){{% /image_container %}}
+	
+4. In the Make It Native App, use a three-finger tap to **Toggle Element Inspector** and enable enhanced inspection capabilities.
 
 #### 2.1.2 Debugging with the Make It Native App
 

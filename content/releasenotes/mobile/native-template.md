@@ -8,6 +8,19 @@ description: "Native Template release notes."
 
 For more information on native mobile app development, see the [native-template repository](https://github.com/mendix/native-template/) and [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app) .
 
+## 4.2.0
+
+**Release date: June 24, 2020**
+
+### Improvements
+
+* We added an error message to iOS for when the Bundle or the Runtime URL is missing.
+
+### Fixes
+
+* Mitigated a Gradle Java out of memory issue when building on App Center due to App Center's recent changes.
+* Fixed an issue with styling Text Fields on Android when both a margin and height was defined.
+
 ## 4.1.1
 
 **Release date: June 15, 2020**

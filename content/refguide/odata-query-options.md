@@ -26,6 +26,8 @@ A single object can be retrieved by passing the object identifier in the URI. Fo
 
 Associated objects can be retrieved by passing the `$expand` query parameter. For example: `/odata/myservice/Exployees?$expand=Cars,Address/City`
 
+Note: the `$expand` feature was introduced in Studio Pro [8.11.0](/releasenotes/studio-pro/8.11#8110).
+
 ## 3 Counting the Number of Objects
 
 ### 3.1 Retrieving a Count of Objects

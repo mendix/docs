@@ -140,7 +140,6 @@ The output is:
 0.3
 ```
 
-
 ## 6 floor
 
 Rounds down to an integer (returns the largest integer which is less than or equal to the input).
@@ -270,6 +269,24 @@ The output is of type Decimal:
 
 Calculation of 'pow' with a decimal exponent might be less accurate, as the standard Java libraries do not support these calculations with high precision. Use a specialized library in a custom Java action if high precision is required for this case.
 
+### 8.4 (square) root
+
+To get the square root of a decimal, use 0.5 at the second parameter:
+
+```java
+pow(16, 0.5) results in 4
+```
+
+Or, use a division for a specific root:
+
+```java
+pow(27, 1:3) results in 3
+```
+
+```java
+pow(16, 1:4) results in 2
+```
+
 ## 9 abs
 
 Calculates the absolute value of a number (ie not negative).
@@ -295,7 +312,7 @@ If you type in the negative value as an input:
 abs(-5)
 ```
 
-or if you type in the positive value: 
+Or, if you type in the positive value: 
 
 ```java
 abs(5)

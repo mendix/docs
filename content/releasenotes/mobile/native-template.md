@@ -18,8 +18,8 @@ For more information on native mobile app development, see the [native-template 
 
 ### Fixes
 
-* Mitigated a Gradle Java out of memory issue when building on App Center due to App Center's recent changes.
-* Fixed an issue with styling Text Fields on Android when both a margin and height was defined.
+* We mitigated a Gradle Java out-of-memory issue when building on App Center due to App Center's recent changes.
+* We fixed an issue with styling Text Fields on Android when both a margin and height were defined.
 
 ## 4.1.1
 

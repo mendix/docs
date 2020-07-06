@@ -138,7 +138,6 @@ The output is:
 0.3
 ```
 
-
 ## 6 floor
 
 Rounds down to an integer (returns the largest integer which is less than or equal to the input).
@@ -270,13 +269,13 @@ Calculation of 'pow' with a decimal exponent might be less accurate, as the stan
 
 ### 8.4 (square) root
 
-To get the square root of a decimal, use 0.5 at the second parameter.
+To get the square root of a decimal, use 0.5 at the second parameter:
 
 ```java
 pow(16, 0.5) results in 4
 ```
 
-Or use a division for a specific root:
+Or, use a division for a specific root:
 
 ```java
 pow(27, 1:3) results in 3
@@ -311,7 +310,7 @@ If you type in the negative value as an input:
 abs(-5)
 ```
 
-or if you type in the positive value: 
+Or, if you type in the positive value: 
 
 ```java
 abs(5)

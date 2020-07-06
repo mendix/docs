@@ -6,7 +6,9 @@ tags: ["studio pro", "mathematical function call", "mathematical function", "exp
 
 ## 1 Introduction
 
-Mathematical function calls include various mathematical operations with numbers, such as returning the largest value or rounding a number up. 
+Mathematical function calls include a limited number of mathematical operations with numbers, such as returning the largest value or rounding a number up. 
+
+If you need more elaborate functions (such as the square root, sin, cos, tan, numberOfPermutations, factorial, or fibonacciNumber), then consider using the community-supported [Math Module](https://appstore.home.mendix.com/link/app/112522/) available in the Mendix App Store.
 
 ## 2 max
 

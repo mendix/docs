@@ -22,6 +22,10 @@ All objects can be retrieved by specifying the URI. For example: `/odata/myservi
 
 A single object can be retrieved by passing the object identifier in the URI. For example: `/odata/myservice/myresource(8444249301330581)`.
 
+### 2.3 Retrieving Associated Objects
+
+Associated objects can be retrieved by passing the `$expand` query parameter. For example: `/odata/myservice/Exployees?$expand=Cars,Address/City`
+
 ## 3 Counting the Number of Objects
 
 ### 3.1 Retrieving a Count of Objects

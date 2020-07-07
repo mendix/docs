@@ -213,7 +213,7 @@ export interface ListValue {
 
 When a `datasource` property with `isList="true"` is configured for a widget, the client component gets a list of objects represented as a `ListValue`. This type allows detailed access to a data source, and enables control over the limit and offset of items represented in the list.
 
-However it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`widgets`](property-types-pluggable-widgets#widgets). The `dataSource` attribute on that property should reference a `datasource` property.
+However it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`attribute`](property-types-pluggable-widgets#attribute) or [`widgets`](property-types-pluggable-widgets#widgets). The `dataSource` attribute on that property should reference a `datasource` property.
 
 For clarity, consider the following example using `ListValue` together with the `widgets` property type. When the `widgets` property named `myWidgets` is configured to be tied to a `datasource` named `myDataSource`, the client component props appear as follows:
 
@@ -229,6 +229,22 @@ Because of the above configurations, the client component may render every insta
 ```ts
 this.props.myDataSource.items.map(i => this.props.myWidgets(i));
 ```
+
+Similarly an property of type `attribute` with a linked datasource is represented in the client component as folows:
+
+```ts
+interface MyListWidgetsProps {
+    myDataSource: ListValue;
+    myStringAttribute: (i: ObjectItem) => EditableValue<string>;
+}
+```
+
+Notice that `myStringAttribute` is a function that returns an [`EditableValue`](#editable-value). In order to get the value an item from `ListValue` should be supplied. For example:
+
+```
+this.props.myDataSource.items.map(i => this.props.myStringAttribute(i)); // returns an array of EditableValues
+```
+
 
 ## 5 Exposed Modules
 

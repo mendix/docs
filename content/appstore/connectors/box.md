@@ -203,14 +203,17 @@ These actions are available in **Folder**:
 	* **BoxFolder** (required) – the folder to delete; the `_id` attribute is required
 	* **Limit** (optional) – the maximum number of items to return in a page; the default is 100 and the max is 1000
 	* **Offset** – the item at which to begin the response
-	* **Fields** – the attribute(s) to include in the response
-* **GetFolderInfo** – 
+	* **Fields** (optional) – the attribute(s) to include in the response
+* **GetFolderInfo** – retrieves the full information about a folder, including when it was last updated and the files and folders contained in it; the root folder of a Box account is always represented by the ID `0`
+	* **BoxFolder** (required) – the `_id` attribute is required
+* **GetTrashedFolder** – retrieves a folder that has been moved to the trash; a 404 will be returned if the folder is not in the trash
+	* **BoxFolder** (required) – the folder to retrieve; the `_id` attribute is required
+	* **Fields** (optional) – the attribute(s) to include in the response
+* **GetTrashedItems** – retrieves the files and/or folders that have been moved to the trash
+	* **Limit:  The maximum number of items to return
+	* **Offset: The item at which to begin the response
+	* **Fields: Attribute(s) to include in the response
 
-
-* **GetTrashedFolder** – 
-
-
-* **GetTrashedItems** – 
 
 
 * **PermanentlyDeleteFolder** – 

@@ -44,9 +44,7 @@ The OData Model Creator for SAP solutions is an app in the App Store. Search for
 The OData Model Creator for SAP solutions is not currently available in the App Store within Studio Pro. It can only be run in a browser.
 {{% /alert %}}
 
-1. Open the [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/).
-
-You will be asked how you want to generate your model.
+Open the [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/), where you will be asked how you want to generate your model:
 
 ![](attachments/use-sap-odata-model-creator/model-creator-wizard-1.png)
 

@@ -10,6 +10,15 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### July 8th, 2020
+
+#### Mendix Cloud Fixes
+
+* We resolved an issue where deactivated users were still shown in the [Node Permissions](/developerportal/deploy/node-permissions) tab of the Security page for an app. (Tickets 90744 95319, 97722, 98474, 99978, 100493, 101595, 103007, and 103549)
+* We resolved an issue where you could not change the role of the inbuild administrator account for apps deployed to the cloud. (Tickets 87013 and 87805)
+    {{% alert type="info" %}}You will still need to change the password of the administrator account for the new role to be assigned to the administrator. See the [User Role](/refguide/administrator#user-role) section of *Administrator* for more information{{% /alert %}}
+* We resolved an issue where an incorrect debugger password could be displayed for Mendix Cloud **v4** when the **Show Debugger Information** button was clicked on the Environment Details page. (Ticket 99469)
+
 ### July 2nd, 2020
 
 #### Mendix Cloud **v4**

@@ -314,3 +314,34 @@ The default tokens pages in the MendixSS module are created using snippets.
 ![List of snippets which manipulate tokens in Mendix SSO](attachments/mendix-sso/token-snippets.png)
 
 You can use these snippets to create your own token administration pages. Look at the pages in the default administration module for ideas on how they can be used.
+
+## 7 MendixSSO Constants{#constants}
+
+You can see the constants used by MendixSSO in the [Model Options Tab](environments-details#model-options) of the Environment Details page for your app in the Developer Portal.
+
+It is possible to change these values and the new values will be applied when your app is restarted.
+
+{{% alert type="info" %}}
+The new values are not kept in all circumstances. If you redeploy your app, the new values will be overwritten by the values which are set in your model.
+
+It is recommended that you set the required values in Studio (Pro) rather than override them in the Developer Portal.
+{{% /alert %}}
+
+The constants you can see, are:
+
+* MendixSSO.AuthRequestExpiryDurationInMinutes 
+* MendixSSO.ConsentToDeleteIncompatibleUsers 
+* MendixSSO.DeleteTokenBatchSize 
+* MendixSSO.EncryptionPrefix 
+* MendixSSO.EnvironmentUUID 
+* MendixSSO.IndexPage 
+* MendixSSO.LogNode 
+* MendixSSO.OpenIdConnectDiscoveryPath 
+* MendixSSO.OpenIdConnectProvider 
+
+{{% alert type="warning" %}}
+Do not change the following constants using this mechanism. Using values other than the original will cause your app to fail.
+
+* MendixSSO.EnvironmentUUID 
+
+{{% /alert %}}

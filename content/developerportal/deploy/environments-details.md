@@ -180,7 +180,7 @@ You can also set **Mask** to **Yes**. This replaces the **Current value** and th
 You have to restart your application before the changes will be made.
 {{% /alert %}}
 
-For more information, see [Constants](/refguide/constants).
+For more information, see [Constants](/refguide/constants). For more information about the constants used by Mendix SSO, see [MendixSSO Constants](mendix-sso#constants) in the *Mendix Single Sign-On* documentation.
 
 ## 4 Network Tab
 

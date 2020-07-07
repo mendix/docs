@@ -110,7 +110,7 @@ These actions are available in **File**:
 * **CreateFileSharedLink** – creates a shared link for this particular folder; in order to disable a shared link, set the **SharedLink** parameter to empty
 	* **BoxFolder** (required) – the folder for which to create a SharedLink; the `_id` attribute is required
 	* **SharedLink** – an object representing this item's shared link and associated permissions
-	* **Access** – the level of access required for this shared link; can be Open, Company, Collaborators, or Null to get the default share level
+	* **Access** – the level of access required for this shared link; can be `Open`, `Company`, `Collaborators`, or `Null` to get the default share level
 	* **Unshared_at** – the day when this link should be disabled
 	* **Password** – requires a password before viewing a shared link
 	* **Permissions** – the set of permissions that apply to this link
@@ -210,19 +210,25 @@ These actions are available in **Folder**:
 	* **BoxFolder** (required) – the folder to retrieve; the `_id` attribute is required
 	* **Fields** (optional) – the attribute(s) to include in the response
 * **GetTrashedItems** – retrieves the files and/or folders that have been moved to the trash
-	* **Limit:  The maximum number of items to return
-	* **Offset: The item at which to begin the response
-	* **Fields: Attribute(s) to include in the response
+	* **Limit** (optional) – the maximum number of items to return
+	* **Offset** (optional) – the item at which to begin the response
+	* **Fields** (optional) – the attribute(s) to include in the response
+* **PermanentlyDeleteFolder** – permanently deletes a folder that is in the trash, which means the item will no longer exist in Box; this action cannot be undone.
+	* **BoxFolder** (required) – the folder to delete; the `_id` attribute is required
+* **RestoreFolder** – restores an item that has been moved to the trash; the default behavior is to restore the item to the folder it was in before it was moved to the trash; if that parent folder no longer exists or if there is now an item with the same name in that parent folder, the new parent folder and/or new name will need to be included in the request
+	* **BoxFolder** (required) – the folder to restore; the `_id` attribute is required
+	* **Name** (optional) – the new name for this item
+	* **DestBoxFolder** – the new parent folder for this item; the `_id` attribute is required
+* **UpdateFolder** – updates information about the folder; yo move a folder, update the ID of its parent; to enable an email address that can be used to upload files to this folder, update **FolderUploadEmail**
+	* **BoxFolder** (required) – the folder to update; the `_id` attribute is required
+	* **UpdateName** (optional, but at least one optional parameter must be specified) – the new name 
+	* **UpdateDescription** (optional, but at least one optional parameter must be specified) – the new description 
+	* **UpdateParentFolder** (optional, but at least one optional parameter must be specified) –the folder where to move the file 
+	* **UpdateSharedLink** (optional, but at least one optional parameter must be specified) – the shared link to update with its new attributes 
+	* **UpdateFolderUploadEmail** (optional, but at least one optional parameter must be specified) – the folder upload email to update with its new attributes 
+	* **UpdateSyncState** (optional, but at least one optional parameter must be specified) – determines whether Box Sync clients will sync this folder; values of `synced` or `not_synced` can be sent, while `partially_synced` may also be returned
+	* **UpdateTags** (optional, but at least one optional parameter must be specified) – all the tags attached to this folder
 
-
-
-* **PermanentlyDeleteFolder** – 
-
-
-* **RestoreFolder** – 
-
-
-* **UpdateFolder** – 
 
 ### 3.5 Metadata Management
 

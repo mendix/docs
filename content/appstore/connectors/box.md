@@ -165,13 +165,13 @@ These actions are available in **File**:
 	* **UpdateName** (optional, but at least one of them must be specified) – the new name
 	* **UpdateDescription** – the new description 
 	* **UpdateParentFolder** – the folder where you want to move the file
-	* **UpdateSharedLink** – the SharedLink to update with its new attributes 
+	* **UpdateSharedLink** – the shared link to update with its new attributes 
 	* **UpdateTags** – all the tags attached to this file
 * **UploadFile** – uses the uploads to allow users to add a new file
 	* **FileToUpload** (required) – the file to upload to Box; the `name` attribute is required
 	* **BoxFolder** – the destination Box folder; the `_id` attribute is required
 * **UploadFileVersion** – uploads a new version of an existing file in a user's account; the file name on Box will remain the same as the previous version; to update the file's name, you can specify a new name for the file
-	* **Required BoxFile** (required) – the `_id` attribute is required; optionally, the `name` attribute of the BoxFile has to be set if the name of the file must be updated
+	* **BoxFile** (required) – the `_id` attribute is required; optionally, the `name` attribute of the BoxFile has to be set if the name of the file must be updated
 	* **FileToUpload** – the new version of the file to upload
 * **ViewVersions** – if there are previous versions of this file, this method can be used to retrieve information about the older versions
 	* **BoxFile** (required) – the `_id` attribute is required
@@ -185,15 +185,40 @@ These actions are available in **Folder**:
 	* **SrcBoxFolder** (required) – the source folder to copy; the `_id` attribute is required
 	* **DestBoxFolder** – the destination folder for the copy; the `_id` attribute is required
 	* **NewName** (optional) – the new name of the folder to be copied
-* **CreateFolder** – 
-* **CreateFolderSharedLink** – 
-* **DeleteFolder** – 
-* **GetFolderCollaborations** – 
+* **CreateFolder** – create a new empty folder inside the specified parent folder
+	* **FolderName** (required) – the desired name for the folder
+	* **BoxFolder** – the parent folder; the `_id` attribute is required
+* **CreateFolderSharedLink** – creates a shared link for this particular folder; in order to disable a shared link, set the **SharedLink** parameter to empty
+	* **BoxFolder** (required) – the folder for which to create a shared link; the `_id` attribute is required
+	* **SharedLink** – an object representing this item's shared link and associated permissions
+	* **Access** – the level of access required for this shared link; can be open, company, collaborators, or null to get the default share level
+	* **Unshared_at** – the day on which the link should be disabled
+	* **Password** – sets requiring a password before viewing a shared link
+	* **Permissions** – sets the permissions that apply to this link
+	* **Effective_access** – the access level set by the enterprise administrator; this will override any previous access levels set for the shared link and prevent any less-restrictive access levels from being set
+* **DeleteFolder** – deletes a folder; a recursive parameter must be included in order to delete folders that have items inside of them
+	* **BoxFolder** (required) – the folder to delete; the `_id` attribute is required
+	* **Recursive** – sets Whether to delete this folder if it has items inside of it
+* **GetFolderCollaborations** – gets a list of all the collaborations on a folder (meaning, all of the users that have access to that folder)
+	* **BoxFolder** (required) – the folder to delete; the `_id` attribute is required
+	* **Limit** (optional) – the maximum number of items to return in a page; the default is 100 and the max is 1000
+	* **Offset** – the item at which to begin the response
+	* **Fields** – the attribute(s) to include in the response
 * **GetFolderInfo** – 
+
+
 * **GetTrashedFolder** – 
+
+
 * **GetTrashedItems** – 
+
+
 * **PermanentlyDeleteFolder** – 
+
+
 * **RestoreFolder** – 
+
+
 * **UpdateFolder** – 
 
 ### 3.5 Metadata Management

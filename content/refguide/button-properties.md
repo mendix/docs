@@ -134,7 +134,7 @@ The **Button style** property applies a predefined styling to the button. Possib
 
 #### 2.4.7 Disabled During Action
 
-This property is only shown when **Call a microflow** or **Call a nanoflow** is selected as the [on-click event](on-click-event). The **Disabled during action** disables the button until the action is completed or failed.
+This property is only shown when **Call a microflow** or **Call a nanoflow** is selected as the [on-click event](on-click-event). Selecting **Disabled during action** disables the button until the action is completed or failed.
 
 Default: *true*
 

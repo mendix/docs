@@ -28,6 +28,10 @@ On click event is common for many widgets, for example, an image, buttons, a lis
 
 The **On click** property specifies what [action](#actions) is executed when a user click a widget.
 
+#### 2.1.1 Disabled During Action
+
+This property is only shown when **Call a microflow** or **Call a nanoflow** is selected as an on click event. The **Disabled during action** disables the button until the action is completed or failed.
+
 ### 2.2 On Change{#on-change}
 
 The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.

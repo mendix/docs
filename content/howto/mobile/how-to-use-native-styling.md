@@ -31,10 +31,7 @@ These resources let you style your app with a wide variety of interface parts. H
 
 	![button](attachments/how-to-use-native-styling/button-one.png)
 
-2.  Click **Run Locally** and then click **View** to see your app. The button will be blue with white text, which is its default styling:
-
-	![default button](attachments/how-to-use-native-styling/default-button.png)
-
+2.  Click **Run Locally** and then click **View** to see your app. The button will be blue with white text, which is its default styling.
 3. Open *theme/styles/native/app/custom-variables.js* using your IDE of choice.
 4. Change the `brand.primary` from **#0595DB** to *rosybrown*:
 

@@ -130,7 +130,7 @@ The settings described below influence the behavior of the Amazon S3 Storage Ser
 | **com.mendix.storage.s3.ConnectionTimeout** | Sets the amount of time to wait (in milliseconds) when initially establishing a connection before giving up and timing out. A value of `0` means infinity and is not recommended. For more information, see the [AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setConnectionTimeout-int-). | 10.000 (10 seconds) |
 | **com.mendix.storage.s3.SocketTimeout** | Sets the amount of time to wait (in milliseconds) for data to be transferred over an established, open connection before the connection times out and is closed.  A value of `0` means infinity and is not recommended. For more information, see the [AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setSocketTimeout-int-). | 50.000 (50 seconds) |
 | **com.mendix.storage.s3.RequestTimeout** | Sets the amount of time to wait (in milliseconds) for the request to complete before giving up and timing out. A value of `0` means no timeout. For more information, see [the AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setRequestTimeout-int-). | 0 (no timeout) |
-| **com.mendix.storage.s3.UseCACertificates** | Sets this value to true to use the configured [CA Certificates](#ca-certificates) for the connection to the S3 service. | false |
+| **com.mendix.storage.s3.UseCACertificates** | Sets this value to true to use the configured [CACertificates](#ca-certificates) for the connection to the S3 service. | false |
 
 ## 6 Microsoft Azure SQL
 

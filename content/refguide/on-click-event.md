@@ -36,11 +36,11 @@ This property is only shown when **Call a microflow** or **Call a nanoflow** is 
 
 The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
-### 2.3 On Enter{#on-enter}
+### 2.3 On Enter {#on-enter}
 
 The on-enter property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
 
-### 2.4 On Leave{#on-leave}
+### 2.4 On Leave {#on-leave}
 
 The on-leave property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
 
@@ -94,7 +94,7 @@ Therefore, it is not recommended to change entities/attributes on the current pa
 
 The following settings are specific for this event:
 
-#### 3.3.1 Microflow{#microflow}
+#### 3.3.1 Microflow {#microflow}
 
 The [microflow](microflow) that should be executed.
 
@@ -260,7 +260,3 @@ The **Sign out** event signs the currently signed-in user out. When no user is s
 
 * [Pages](pages)
 * [Page](page)
-
-
-
-

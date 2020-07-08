@@ -368,8 +368,11 @@ You can choose one of the following registry types. OpenShift registries can onl
 * OpenShift 3 Registry
 * OpenShift 4 Registry
 * Amazon Elastic Container Registry (AWS ECR)
-* Generic registry with authentication (this should either be *Public* or should have image pull secrets enabled).
+* Generic registry with authentication (most registries such as Azure Container Registry, quay.io, Docker Hub and others)
 * Generic registry without authentication
+* Existing docker-registry secret
+
+In addition, for generic registries the configuration script will ask if the credentials should be added to imagePullSecrets in the default ServiceAccount. This will configure image pulls so that Kubernetes can download app images built by the Mendix Operator.
 
 #### 3.4.6 Do you want to configure the proxy
 

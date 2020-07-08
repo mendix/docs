@@ -26,6 +26,10 @@ The following frameworks are automatically installed (if necessary):
 You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in Studio Pro.
 {{% /alert %}}
 
+{{% alert type="warning" %}}
+Please note the limitation that the database viewer built into Studio Pro does not work with JDK 11.06 or 11.07.
+{{% /alert %}}
+
 ### 2.1 Firewall Settings
 
 Studio Pro needs access to the following URLs in order to work. If your firewall is currently blocking these, you will need to whitelist them.

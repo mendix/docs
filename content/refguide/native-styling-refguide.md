@@ -1128,7 +1128,7 @@ A main object has four objects.
 | Element                | Style Properties                     | Description                                                                                      |
 | ----------------------------------------| ----- | ------------------------------------------------------------------------------------------------ |
 | ellipsizeMode | `head`, `middle`, `tail`, or `clip` | Styles how the text will be clipped if its too long. |
-| rippleColor | `string`      | Styles the color of touch feedback when item is clicked. Works for both IOS and Android platforms. |
+| rippleColor | `string`      | Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms. |
 | defaultStyle |  This has all TextStyle properties.                | Styles all basic menu items which have the `default` style selected.                                 |
 | primaryStyle |  This has all TextStyle properties.                | Styles all basic menu items which have the `primary` style selected.                                 |
 | dangerStyle |  This has all TextStyle properties.                 | Styles all basic menu items which have the `danger` style selected.                                  |
@@ -1140,7 +1140,7 @@ A main object has four objects.
 | Element                   | Style Properties |  Description                                      |
 | ---------------------------| ---- | ------------------------------------------------ |
 | containerStyle | This has all ViewStyle properties. | Styles the wrapper container around a custom item. |
-| itemStyle | `rippleColor: string`      | Styles the color of touch feedback when item is clicked. Works for both IOS and Android platforms. |
+| itemStyle | `rippleColor: string`      | Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms. |
 | dividerColor | `string`      | Styles the divider color.                         |
 
 The default class to style all popup menus is named `com_mendix_widget_native_popupmenu_PopupMenu`.

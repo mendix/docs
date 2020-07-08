@@ -40,8 +40,7 @@ String functions are **case insensitive** as they are implemented using the `ILI
 
 ### 2.3 DB2
 
-**Case sensitive** for sorting, comparing, and in string functions.
-They cannot be configured.
+All operations are **case sensitive**. They cannot be configured.
 
 Does not support sorting on string attributes of unlimited length.
 
@@ -64,8 +63,6 @@ String functions are implemented by converting all letters to uppercase using th
 
 ### 2.6 SAP HANA
 
-All operations are **case sensitive**.
-
 Does not support sorting or comparison on string attributes of unlimited length.
 
 ### 2.7 SQL SERVER
@@ -85,7 +82,7 @@ This table presents the default case sensitivity by different database types:
 | DB2               | S              | S¹          | S                    |
 | MARIADB & MYSQL   | C              | C           | C                    |
 | ORACLE            | C¹             | C           | I                    |
-| SAP HANA          | S¹             | S¹          | S                    |
+| SAP HANA          | S¹             | S¹          | I²                    |
 | SQL SERVER        | C              | C           | C                    |
 
 Where the letters have the following meaning:
@@ -95,3 +92,4 @@ Where the letters have the following meaning:
 * **I** – Case insensitive
 
 ¹Operation not supported on strings of unlimited length.
+²From Mendix version 8.11.0

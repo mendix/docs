@@ -27,7 +27,7 @@ You can choose which JDK is used for building and running locally via the **Edit
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-Please note the limitation that the database viewer built into Studio Pro does not work with JDK 11.06 or 11.07.
+Please note the limitation that the database viewer built into Studio Pro (as described in [How to Share the Development Database](/howto/collaboration-requirements-management/sharing-the-development-database)) does not work with JDK 11.06 or 11.07.
 {{% /alert %}}
 
 ### 2.1 Firewall Settings

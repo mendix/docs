@@ -19,18 +19,18 @@ Events specify actions which can be triggered when the end-user interacts with a
 
 ### 2.1 On Click {#on-click}
 
-An **On click** event specifies an event that is executed when a user clicks a widget. Often **On click** property is a part of the **Events** section in properties. For example, you can specify that when a user clicks a customer's profile image, the page with this customer's details will open:
+An **On click** event specifies an event that is executed when a user clicks a widget. Often the **On click** property is a part of the **Events** section in properties. For example, you can specify that when a user clicks a customer's profile image, the page with this customer's details will open:
 
 {{% image_container width="350" %}}![](attachments/on-click-event/on-click-event-example.png)
 {{% /image_container %}}
 
-On click event is common for many widgets, for example, an image, buttons, a list view. 
+An on-click event is common for many widgets (for example, image, buttons, list view). 
 
 The **On click** property specifies what [action](#actions) is executed when a user click a widget.
 
 #### 2.1.1 Disabled During Action
 
-This property is only shown when **Call a microflow** or **Call a nanoflow** is selected as an on click event. The **Disabled during action** disables the button until the action is completed or failed.
+This property is only shown when **Call a microflow** or **Call a nanoflow** is selected as the on-click event. The **Disabled during action** disables the button until the action is completed or failed.
 
 ### 2.2 On Change{#on-change}
 

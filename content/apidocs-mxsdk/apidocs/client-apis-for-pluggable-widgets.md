@@ -230,7 +230,7 @@ Because of the above configurations, the client component may render every insta
 this.props.myDataSource.items.map(i => this.props.myWidgets(i));
 ```
 
-Similarly an property of type `attribute` with a linked datasource is represented in the client component as folows:
+Similarly a property of type `attribute` with a linked datasource is represented in the client component as follows:
 
 ```ts
 interface MyListWidgetsProps {
@@ -239,7 +239,7 @@ interface MyListWidgetsProps {
 }
 ```
 
-Notice that `myStringAttribute` is a function that returns an [`EditableValue`](#editable-value). In order to get the value an item from `ListValue` should be supplied. For example:
+Note that `myStringAttribute` is a function that returns an [`EditableValue`](#editable-value). In order to get the value, an item from `ListValue` should be supplied. See this code for an example:
 
 ```
 this.props.myDataSource.items.map(i => this.props.myStringAttribute(i)); // returns an array of EditableValues

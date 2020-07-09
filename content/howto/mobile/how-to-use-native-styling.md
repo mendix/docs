@@ -14,7 +14,8 @@ With Mendix 8, you have the capacity to alter design properties with Mendix Stud
 ## 2 Prerequisites 
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
-* Create a Mendix app based on the Quickstarter App template by following the [Creating a New App Project Based on the Quickstart App](getting-started-with-native-mobile#quickstartapp) section of *Get Started with Native Mobile*
+* Create a Mendix app based on the Native Mobile Quickstarter App template by following the [Creating a New App Project Based on the Quickstart App](getting-started-with-native-mobile#quickstartapp) section of *Get Started with Native Mobile*
+* Download the Make It Native app on your mobile device via either the [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp) store or the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181) so you can text your app and see your styling changes
 
 ### 3 Customizing the Quickstart App
 
@@ -27,14 +28,12 @@ The [Native Mobile Quickstart](https://appstore.home.mendix.com/link/app/109511/
 
 These resources let you style your app with a wide variety of interface parts. However, you can customize them further by following these steps:
 
+1. On your **Home_Native** home page, delete the **Intro screen** content.
 1.  Place a button widget on your app's home page:
 
 	![button](attachments/how-to-use-native-styling/button-one.png)
 
-2.  Click **Run Locally** and then click **View** to see your app. The button will be white with blue text, which is its default styling:
-
-	![default button](attachments/how-to-use-native-styling/default-button.png)
-
+2.  Click **Run Locally** and then click **View** to see your app. The button will be blue with white text, which is its default styling.
 3. Open *theme/styles/native/app/custom-variables.js* using your IDE of choice.
 4. Change the `brand.primary` from **#0595DB** to *rosybrown*:
 
@@ -53,7 +52,7 @@ These resources let you style your app with a wide variety of interface parts. H
 
 	![rosybrown button](attachments/how-to-use-native-styling/brand-primary-rosybrown.png)
 
-	You have successfully altered a default button to look rosy brown.
+	You have successfully altered a default button to look rosy brown These screenshots employ the Make It Native app's [Dark Mode](/releasenotes/mobile/make-it-native-app#new-features-5).
 
 ## 4 Classes
 

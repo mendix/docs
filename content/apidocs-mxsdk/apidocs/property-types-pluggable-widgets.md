@@ -467,16 +467,25 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.4 Attribute{#attribute}
 
-The attribute property type allows a widget to work directly with entities' attributes, both reading and writing attributes. Depending on the widget's purposes, a widget should define attribute types it supports. The client component will receive `EditableValue<T>` where `T` depends on a `<attributeType>` configured. For more information, see the [EditableValue](client-apis-for-pluggable-widgets#editable-value) section of *Client APIs Available to Pluggable Widgets*. 
+The attribute property type allows a widget to work directly with entities' attributes, both reading and writing attributes. Depending on the widget's purposes, a widget should define attribute types it supports. 
+
+If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the client will receive an `EditableValue<T>` where `T` depends on a configured `<attributeType>`. For more information, see the [EditableValue](client-apis-for-pluggable-widgets#editable-value) section of *Client APIs Available to Pluggable Widgets*.
+
+When a `dataSource` attribute is specified and configured by the user it is passed as a function that expects an `ObjectItem` and returns an `EditableValue<T>`: `(item: ObjectItem) => EditableValue<T>`. For more information, see the [Datasource](#datasource) section below.
+
+{{% alert type="info" %}}
+Support for the `dataSource` attribute was introduced in Mendix 8.12.
+{{% /alert %}}
 
 #### 4.4.1 XML 
 
-| Attribute  | Required | Attribute Type | Description                                                  |
-| ---------- | -------- | -------------- | ------------------------------------------------------------ |
-| `type`     | Yes      | String         | Must be `attribute`                                          |
-| `key`      | Yes      | String         | See [key](#key) |
-| `onChange` | No       | Property Path  | The path to an Action property that will be executed by Mendix platform when value is changed by the widget |
-| `required` | No       | Boolean        | This decides if the property must be specified by the user, `true` by default |
+| Attribute    | Required | Attribute Type | Description                                                  |
+| ------------ | -------- | -------------- | ------------------------------------------------------------ |
+| `type`       | Yes      | String         | Must be `attribute`                                          |
+| `key`        | Yes      | String         | See [key](#key) |
+| `onChange`   | No       | Property Path  | The path to an Action property that will be executed by the Mendix Platform when the value is changed by the widget |
+| `required`   | No       | Boolean        | Decides if the property must be specified by the user, `true` by default |
+| `dataSource` | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this attribute property |
 
 #### 4.4.2 XML Elements
 
@@ -594,7 +603,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.7 Datasource {#datasource}
 
-The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](client-apis-for-pluggable-widgets#listvalue) and may be used with the [`widgets`](#widgets) property. See [Data Sources](https://docs.mendix.com/refguide/data-sources#list-widgets) for available data source types.
+The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](client-apis-for-pluggable-widgets#listvalue) and may be used with [`action`](#action), [`attribute`](#attribute) and [`widgets`](#widgets) properties. See [Data Sources](https://docs.mendix.com/refguide/data-sources#list-widgets) for available data source types.
 
 {{% alert type="info" %}}
 Support for the datasource property type was introduced in Mendix 8.7.

@@ -103,10 +103,6 @@ Default: *No*
 
 ### 4.7 Proxy Configuration
 
-{{% alert type="info" %}}
-This feature is only available when you have configured web service calls to use the (optimized) implementation in the [project's runtime settings](project-settings).
-{{% /alert %}}
-
 In almost all cases, you can ignore this setting. **Use project settings** is a good default value.
 
 If desired, you can configure whether to use a proxy for the request. These are the choices:

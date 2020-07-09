@@ -292,27 +292,17 @@ The default class to style all text areas is named `TextArea`.
 
 ### 6.3 Drop-Down {#drop-down}
 
-A drop-down is an input widget that can be used to display and edit enumeration attributes. 
+A drop-down is an input widget that can be used to display and edit enumeration attributes.
 
-This is how a drop-down widget could look in an iOS app: 
+Since Studio version 8.11, the drop-down widget has a new style property called `useUniformDesign: boolean` which enables the uniform design in both platforms.
 
-{{% image_container width="300" %}}![drop down ios](attachments/native-styling-refguide/drop-down-ios.png){{% /image_container %}}
-
-This is how a drop-down widget could look in an Android app:
-
-{{% image_container width="300" %}}![drop down android](attachments/native-styling-refguide/drop-down-android.png){{% /image_container %}}
-
-The widget’s style properties are as follows:
+The widget’s render hierarchy is as follows for non-uniform:
 
 ```xml
 <container>
 	<label>Drop down enumeration</label>
 	<value>Content invalid</value>
 	<validationMessage>Validation feedback enumeration</validationMessage>
-</container>
-<container>
-	<label>Drop down enumeration</label>
-	<value></value>
 </container>
 <picker>
 	<pickerBackdropIOS/>
@@ -325,19 +315,48 @@ The widget’s style properties are as follows:
 </picker>
 ```
 
+The widget’s render hierarchy is as follows for uniform:
+
+```xml
+<container>
+	<label>Drop down enumeration</label>
+    <valueContainer>
+        <value>First</value>
+    </valueContainer>
+	<validationMessage>Validation feedback enumeration</validationMessage>
+</container>
+<menuWrapper>
+	<selectedItemContainer>
+		<selectedItem>First</selectedItem>    <= Selected
+	</selectedItemContainer>
+    <itemContainer>
+        <item>Second</item>
+    </itemContainer>
+    <itemContainer>
+        <item>Third</item>
+    </itemContainer>
+</menuWrapper>
+```
+
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |  |
 | `label` | This has all TextStyle properties. | |
 | `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
 | `pickerIOS` | This has all ViewStyle properties. |  |
-| `pickerItemIOS` | This has all TextStyle properties. |   |
 | `pickerBackdropIOS` | This has all ViewStyle properties. |   |
-| `pickerTopIOS` | This has all ViewStyle properties. |  |
-| `value`  | This has all TextStyle properties. | |
-| `validationMessage` | This has all TextStyle properties. |    |
+| `pickerTopIOS` | This has all ViewStyle properties. |   |
+| `validationMessage` | This has all TextStyle properties. | Styles the validation message (with Studio version 8.11)|
+| `value`  | This has all TextStyle properties  | Styles the value button which toggle's dropdown and PickerIOS items. If placeholder is selected, placeholderTextColor will be applied |
+| `useUniformDesign` | `boolean` | Enables new uniformDesign (with Studio version 8.11) |
+| `value`  | `placeholderTextColor: string` | If placeholder is selected, placeholderTextColor will be applied (with Studio version 8.11)|
+| `valueContainer` | This has all ViewStyle properties & rippleColor | Styles the value button's container (with Studio version 8.11)|
+| `menuWrapper` | This has all ViewStyle properties | Styles the wrapper view surrounding all the menu items (with Studio version 8.11)|
+| `itemContainer` | This has all ViewStyle properties | Styles all the item containers in dropdown menu including selected item container (with Studio version 8.11)|
+| `item` | This has all TextStlye properties | Styles all the items in dropdown menu including selected item (with Studio version 8.11)|
+| `selectedItem` | This has all TextStlye properties | Styles the selected item in dropdown menu (with Studio version 8.11)|
+| `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio version 8.11)|
 
-The default class to style all drop-down inputs is named `DropDown`.
 
 ### 6.4 Check Box 
 
@@ -1065,28 +1084,36 @@ The popup menu widget allows you to show a context menu exactly where the user t
 The widget’s style properties are as follows:
 
 ```xml
-</container>
-</buttonContainer>
+<container/>
+<buttonContainer/>
+<custom>
+	<containerStyle/>
+	<itemStyle>
+		</rippleColor>
+	</itemStyle>
+</custom>
 <basic>
-    </containerStyle>
-    </dividerColor>
+    <containerStyle/>
+    <dividerColor/>
     <itemStyle>
-        </ellipsizeMode>
-        </defaultStyle>
-        </primaryStyle>
-        </dangerStyle>
-        </customStyle>
+        <ellipsizeMode/>
+	</rippleColor>
+        <defaultStyle/>
+        <primaryStyle/>
+        <dangerStyle/>
+        <customStyle/>
     </itemStyle>
-</basic>
+<basic/>
 ```
 
 A main object has four objects.
 
 | Element                    | Style Properties | Description                                                                                                      |
 | ----------------------------| --- | ---------------------------------------------------------------------------------------------------------------- |
-| basic      | BasicItemStyle |Styles items.                                                                                                   |
+| basic      | BasicItemStyle |Styles basic items.                                                                                                   |
+| custom      | CustomItemStyle |Styles custom items.                                                                                                   |
 | buttonContainer | This has all ViewStyle properties. | Styles the wrapper view of triggerer since there could be multiple elements, and it has to be wrapped in a view. |
-| container       | This has all ViewStyle properties. | Styles the wrapper view around the whole menu.                                                                  |
+| container       | This has all ViewStyle properties. | Styles the wrapper view around the whole menu.     |
 
 #### BasicItemStyle
 
@@ -1101,10 +1128,20 @@ A main object has four objects.
 | Element                | Style Properties                     | Description                                                                                      |
 | ----------------------------------------| ----- | ------------------------------------------------------------------------------------------------ |
 | ellipsizeMode | `head`, `middle`, `tail`, or `clip` | Styles how the text will be clipped if its too long. |
+| rippleColor | `string`      | Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms. |
 | defaultStyle |  This has all TextStyle properties.                | Styles all basic menu items which have the `default` style selected.                                 |
 | primaryStyle |  This has all TextStyle properties.                | Styles all basic menu items which have the `primary` style selected.                                 |
 | dangerStyle |  This has all TextStyle properties.                 | Styles all basic menu items which have the `danger` style selected.                                  |
 | customStyle |  This has all TextStyle properties.                 | Styles all basic menu items which have the `custom` style selected.                                  |
+
+
+#### CustomItemStyle
+
+| Element                   | Style Properties |  Description                                      |
+| ---------------------------| ---- | ------------------------------------------------ |
+| containerStyle | This has all ViewStyle properties. | Styles the wrapper container around a custom item. |
+| itemStyle | `rippleColor: string`      | Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms. |
+| dividerColor | `string`      | Styles the divider color.                         |
 
 The default class to style all popup menus is named `com_mendix_widget_native_popupmenu_PopupMenu`.
 

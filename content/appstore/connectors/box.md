@@ -221,39 +221,51 @@ These actions are available in **Folder**:
 	* **DestBoxFolder** – the new parent folder for this item; the `_id` attribute is required
 * **UpdateFolder** – updates information about the folder; yo move a folder, update the ID of its parent; to enable an email address that can be used to upload files to this folder, update **FolderUploadEmail**
 	* **BoxFolder** (required) – the folder to update; the `_id` attribute is required
-	* **UpdateName** (optional, but at least one optional parameter must be specified) – the new name 
-	* **UpdateDescription** (optional, but at least one optional parameter must be specified) – the new description 
-	* **UpdateParentFolder** (optional, but at least one optional parameter must be specified) –the folder where to move the file 
-	* **UpdateSharedLink** (optional, but at least one optional parameter must be specified) – the shared link to update with its new attributes 
-	* **UpdateFolderUploadEmail** (optional, but at least one optional parameter must be specified) – the folder upload email to update with its new attributes 
-	* **UpdateSyncState** (optional, but at least one optional parameter must be specified) – determines whether Box Sync clients will sync this folder; values of `synced` or `not_synced` can be sent, while `partially_synced` may also be returned
-	* **UpdateTags** (optional, but at least one optional parameter must be specified) – all the tags attached to this folder
-
+	* The following attributes are optional, but at least one should be specified: 
+		* **UpdateName** – the new name 
+		* **UpdateDescription** – the new description 
+		* **UpdateParentFolder** – the folder where to move the file 
+		* **UpdateSharedLink** – the shared link to update with its new attributes 
+		* **UpdateFolderUploadEmail** – the folder upload email to update with its new attributes 
+		* **UpdateSyncState** – determines whether Box Sync clients will sync this folder; values of `synced` or `not_synced` can be sent, while `partially_synced` may also be returned
+		* **UpdateTags** – all the tags attached to this folder
 
 ### 3.5 Metadata Management
 
 These actions are available in **Metadata**:
 
-* **CreateMetadataOnFile** – 
-* **DeleteMetadataOnFile** – 
-* **GetMetadataOnFile** – 
-* **UpdateMetadataOnFile** – 
+* **CreateMetadataOnFile** – creates the metadata template instance for a corresponding Box file; when creating metadata, only values that adhere to the metadata template schema will be accepted
+	* **BoxFolder** (required) – the `_id` attribute is required
+	* **MetadataValues** – the custom value(s) defined by a user or application
+	* **Scope** – the scope of the object
+	* **BoxTemplate** – the template to use; the `templateKey` attribute is required; at least 1 `MetadataValue` must be provided with the type and corresponding value
+* **DeleteMetadataOnFile** – deletes the template instance
+	* **BoxFolder** (required) – the `_id` attribute is required
+	* **Scope** – the scope of the template
+	* **BoxTemplate** – the `templateKey` attribute is required
+* **GetMetadataOnFile** – retrieves the metadata template instance for a corresponding Box file
+	* **BoxFile** (required) – the `_id` attribute is required
+	* **BoxTemplate** – the `templateKey` attribute is required
+	* **Scope** – the scope
+* **UpdateMetadataOnFile** – updates the template instance; updates can be either add, replace, remove , test, move, or copy; the template instance can only be updated if the template instance already exists; when editing metadata, only values that adhere to the metadata template schema will be accepted; the update is applied atomically; if any errors occur during the application of the update operations, the metadata instance remains unchanged
+	* **BoxFile** (required) – the `_id` attribute is required
+	* **Scope** – the scope of the object
+	* **BoxTemplate** – the template to use; the `templateKey` attribute is required; at least 1 `MetadataValue` must be provided with the type and corresponding value
+	* **UpdateMetadataList** – the list of changes to apply; the `UpdateMetadata` objects must be set as follows:
+		* **Operation** – the operation to apply
+		* TypeMetadata** – the type of the metadata 
+		* Key** – the key name of the metadata 
+		* StrValue/FloatValue/DateValue** – the corresponding value to be set or tested; required for `add`, `replace`, and `test` operations; for `add`, if the value already exists, then the previous value will be overwritten by the new value; for `replace`, the metadata value must exist before replacing; for `test`, the value of the existing metadata instance must match the specified value
+	* **FromBoxMetadata** – the key to the `Metadata` source; this value is required only in case of `move` or `copy` operations
 
 ## 4 Developing This App Store Component
 
-Contributions are welcomed:
+This connector was built with the Eclipse IDE Neon.
 
-1. open an issue about your topic
-1. fork, make a branch named starting with the issue number you are resolving and make a pull request to the master branch
-1. please add some tests for feature changes
+We use [SemVer](http://semver.org/) for versioning.
 
-### Build Details
+To contribute to the development of this connector, follow these steps:
 
-This was built with the following:
-
-* Mendix Modeler 6.10.3
-* Eclipse IDE Neon
-
-### Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/mendix/IBM-Watson-Connector-Kit/tags).
+1. Open an issue about your topic in [mendix / BoxConnector](https://github.com/mendix/BoxConnector).
+2. Fork the repo, then make a branch that you name starting with the issue number you are resolving, then make a pull request to the master branch.
+3. Add some tests for feature changes.

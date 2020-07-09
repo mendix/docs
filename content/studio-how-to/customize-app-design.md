@@ -1,5 +1,5 @@
 ---
-title: "Configure a Navigation Bar"
+title: "Customize the Design of Your App"
 category: "Navigation Document"
 description: "This how-to describes the process of configuring a navigation bar in Mendix Studio."
 tags: ["studio", "navigation", "how to", "navigation bar"]

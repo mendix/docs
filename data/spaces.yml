@@ -155,7 +155,7 @@ studio-how-to:
   priority: false
   menu_categories:
     - "Pages"
-    - "Navigation"
+    - "Navigation Document"
     - "Domain Model"
     - "Microflows"
     - "Security"

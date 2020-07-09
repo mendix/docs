@@ -9,7 +9,7 @@ tags: ["app store", "app store component", "widget", "accessibility helper", "a1
 
 ## 1 Introduction
 
-The [Accessibility Helper](https://appstore.home.mendix.com/link/app/47784/) widget allows adding list of HTML properties to elements in the HTML page.carousel.
+The [Accessibility Helper](https://appstore.home.mendix.com/link/app/47784/) widget allows a user to add a list of HTML properties to elements in the HTML `page.carousel`.
 
 ### 1.1 Features
 
@@ -20,20 +20,20 @@ The [Accessibility Helper](https://appstore.home.mendix.com/link/app/47784/) wid
 
 ## 2 Usage
 
-The widget acts like a container and alters the elements inside it. In order to change an elements HTML attributes do the following:
+The widget acts like a container and alters the elements inside it. In order to change elements, HTML attributes act in ways described in the sections below.
 
-### 2.1 Drag-in the widget
+### 2.1 Drag-In the Widget
 
-Since Accessibility Helper is a containment widget it will try to change the widgets inside. Thus user must drag and drop the necessary widgets wants to change.
+Since Accessibility Helper is a containment widget it will try to change the widgets inside it. Thus the user must drag and drop the necessary widgets which they want to change.
 
-### 2.2 Specify the target selector
+### 2.2 Specify the Target Selector
 
-Target selector is a basic CSS selector and more information can be found [here](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors).
+Target selector is a basic CSS selector, and more information can be found [here](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors).
 
-### 2.2 Add new accessibility properties
+### 2.2 Add New Accessibility Properties
 
-Every HTML attribute consists of a "name" and a "value". User can add any attribute via filling the HTML attributes list. However following attribute names are not allowed since it will interfere with mendix's core mechanism: ["class", "style", "widgetid", "data-mendix-id"].
+Every HTML attribute consists of a "name" and a "value". The user can add any attribute via filling the HTML attributes list. However, the following attribute names are not allowed since they will interfere with Mendix's core mechanism: ["class", "style", "widgetid", "data-mendix-id"].
 
-After selecting a "name" for the attribute, user can determine what kind of value the attribute will get via "Source Type" ("Text" or "Expression"). Text can be used for static value, Expression can be used for dynamic values. 
+After selecting a "name" for the attribute, the user can determine what kind of value the attribute will get via "Source Type" ("Text" or "Expression"). Text can be used for static values, while Expression can be used for dynamic values. 
 
-User may be able to select on which circumstances this HTML attribute must be set or not via "Condition".
+The user may can select how this HTML attribute can be set via "Condition".

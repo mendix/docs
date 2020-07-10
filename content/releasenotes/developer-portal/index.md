@@ -17,7 +17,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Improvements
 
-* We increased the performance on opening the buzz page :awyeah:.
+* We increased the performance on opening the buzz page.
 * We changed the default avatar of a user profile from the Mendix logo to an industry standard user-icon.
 
 #### Fixes

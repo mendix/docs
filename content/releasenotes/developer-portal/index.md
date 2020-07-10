@@ -13,6 +13,17 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2020
 
+### July 13th, 2020
+
+#### Improvements
+
+* We increased the performance on opening the buzz page :awyeah:.
+* We changed the default avatar of a user profile from the Mendix logo to an industry standard user-icon.
+
+#### Fixes
+
+* We fixed a bug where, under certain circumstances, the "View App" was disabled even though it should have been enabled.
+
 ### June 28th, 2020
 
 #### Improvements

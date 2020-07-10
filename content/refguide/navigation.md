@@ -91,6 +91,10 @@ A profile can be added with the **Add navigation profile** button. Only one prof
 
 This specifies the application title. This title is shown in the title bar of the browser.
 
+#### 4.1.2 Application Icon
+
+This specifies the application icon. This icon is shown in the title bar and bookmarks of the browser. It can only be set in the Responsive profile, but will also be used by the other browser profiles.
+
 ### 4.2 Home Pages
 
 #### 4.2.1 Default Home Page

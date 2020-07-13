@@ -8,7 +8,7 @@ tags: ["studio pro", "regular expressions", "regular expression"]
 
 ## 1 Introduction
 
-A regular expression describes a set of criteria that a string can match. In the [validation rules](validation-rules) of an entity a regular expression can be used to validate whether an attribute of type String matches these criteria.
+A regular expression resource document is used in the [validation rules](validation-rules) of an entity to describe a set of criteria that a string must match.
 
 A regular expression has the properties described below.
 
@@ -22,7 +22,7 @@ The name can be used to refer to the regular expression from a [validation rule]
 
 This is for documentation purpose only; it is not visible in the end-user application that you are modeling.
 
-## 3 Expression
+## 3 Expression{#expression}
 
 The expression defines the criteria that a string should be checked against in a [formal, internationally standardized regular expression language](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html).
 
@@ -40,6 +40,8 @@ These are the criteria:
 * Between the digits and the letters there can be a space, as expressed by the subexpression which consists of a space and a question mark; the question mark indicates that the space is optional
 
 {{% /alert %}}
+
+The following sections give a summary of regular expressions that can be used in Mendix. This description also applies to regular expression strings used in functions such as *isMatch()*.
 
 ### 3.1 Subexpressions
 
@@ -92,5 +94,5 @@ The following quantifiers can be used:
 
 ## 4 Read More
 
-* [Class Pattern](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#matches-java.lang.String-java.lang.CharSequence-)
-* [Using Regular Expressions in Java](http://www.regular-expressions.info/java.html)
+* [Class Pattern](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#matches-java.lang.String-java.lang.CharSequence-) – information from the Oracle Java SE documentation
+* [Using Regular Expressions in Java](http://www.regular-expressions.info/java.html)  – information about regular expressions in Java from the *Regular-Expressions.info* website

@@ -31,7 +31,7 @@ An overview of the operators which can be used in expressions is shown below.
 
 ### 1.2 Regular Expressions
 
-For details on regular expressions, sub-expressions, and quantifiers, see [Regular Expressions](regular-expressions).
+[Regular Expression](regular-expressions) resource documents cannot be used in expressions. However, the format of regular expressions, sub-expressions, and quantifiers used in regular expression strings used within expressions are the same as those described in the [Expression](regular-expressions#expression) section of *Regular Expressions*.
 
 ## 2 Unary Expressions
 

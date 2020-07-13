@@ -11,7 +11,7 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 ## 2020
 
 
-### July ???th, 2020
+### July 15th, 2020
 
 #### Mendix for Private Cloud — Mendix Operator v1.3.0 and Mendix Gateway Agent v1.2.0
 

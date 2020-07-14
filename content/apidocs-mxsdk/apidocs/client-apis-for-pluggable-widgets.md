@@ -257,7 +257,7 @@ This allows the client component to access attribute values on individual items 
 export type ListAttributeValue = (item: ObjectItem) => EditableValue<AttributeValue>;
 ```
 
-In order to work with the attribute value of a particular item of a `ListValue` first an instance of `ActionValue` should be obtained by calling `ListAttributeValue` with the item. See an example below.
+In order to work with the attribute value of a particular item of a `ListValue` first an instance of `EditableValue` should be obtained by calling `ListAttributeValue` with the item. See an example below.
 
 
 Assuming widget properties are confgured as follows:
@@ -269,7 +269,7 @@ interface MyListWidgetsProps {
 }
 ```
 
-The following code sample shows how to get an `EditableValue` that represents an value of an attribute of the first element from the `myDataSource`.
+The following code sample shows how to get an `EditableValue` that represents a read-only value of an attribute of the first element from the `myDataSource`.
 
 ```ts
 const attributeValue = this.props.myDataSource.myAttributeOnDatasource(this.props.myDataSource.item[0]);
@@ -279,7 +279,7 @@ Note: in this code sample checks of status of `myDataSource` and availability of
 
 
 ### 4.9 ListWidgetValue {#listwidgetvalue}
-`ListWidgetValue` represents an [widget property](property-types-pluggable-widgets#widgets) that is linked to a data source. 
+`ListWidgetValue` represents a [widget property](property-types-pluggable-widgets#widgets) that is linked to a data source. 
 This allows the client component to render child widgets with items from a `ListValue`.
 `ListWidgetValue` is a function and its definition is as follows:
 

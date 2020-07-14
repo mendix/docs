@@ -15,22 +15,22 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 #### Mendix for Private Cloud — Mendix Operator v1.3.0 and Mendix Gateway Agent v1.2.0
 
-* We introduced support for configuring environment variables and Java options of a Mendix application running in Private Cloud.
+* We introduced support for configuring environment variables and Java options for a Mendix application running in Private Cloud.
 * We added support for using registry credentials from an existing .dockerconfigjson secret.
-* We now provide an option configure image pull secrets when using a Generic registry with authentication. When using an external generic registry such as Azure Container Registry, Docker Hub or quay.io, it's no longer required to configure image pull secrets manually - this will be done by the (re)configuration script.
-* We have updated all images to be based on the latest ubi8 image to include the latest security patches.
+* We now provide an option to configure image pull secrets when using a Generic registry with authentication. When using an external generic registry, such as Azure Container Registry, Docker Hub or quay.io, you no longer need to configure image pull secrets manually - this will be done by the (re)configuration script.
+* We have updated all images to be based on the latest ubi8 image so that they include the latest security patches.
 * We have fixed an issue where changing the App URL in OpenShift resulted in an exception.
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
 
 #### Mendix for Private Cloud Portal
 
-* We have added supoort for configuring Custom Runtime Settings, Environment Variables and Java Options. This feature requres the Mendix Operator and Gateway Agent to be upgraded to the latest version.
-* We have added support for customizing the App URL. This feature requres the Mendix Operator to be upgraded to the latest version.
-* We have added support for Dedicated storage plans which can only be used by one Environment at a time. This feature requres the Mendix Operator and Gateway Agent to be upgraded to the latest version.
-* It's now possible to deploy an MDA which was built more than one week ago.
-* We improved the way how the Admin Password is updated.
-* We have fixed multiple issues when the UI was not showing information or was showing outdated information.
+* We have added support for configuring Custom Runtime Settings, Environment Variables and Java Options. This feature requires the Mendix Operator and Gateway Agent to be upgraded to the latest version.
+* We have added support for customizing the App URL. This feature requires the Mendix Operator to be upgraded to the latest version.
+* We have added support for dedicated storage plans which can only be used by one environment at a time. This feature requires the Mendix Operator and Gateway Agent to be upgraded to the latest version.
+* It is now possible to deploy an MDA which was built more than one week ago.
+* We improved the way that the Admin Password is updated.
+* We have fixed multiple issues where the UI was not showing information or was showing outdated information.
 
 ### July 8th, 2020
 

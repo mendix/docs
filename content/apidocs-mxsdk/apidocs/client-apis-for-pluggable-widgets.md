@@ -171,6 +171,7 @@ In practice, `WebIcon` and `NativeIcon` are usually passed to a `Icon` component
 ```ts
 export interface WebImage {
     readonly uri: string;
+    readonly name: string;
     readonly altText?: string;
 }
 export type NativeImage = Readonly<ImageURISource | string | number>;

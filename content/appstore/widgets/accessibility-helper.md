@@ -1,4 +1,3 @@
-
 ---
 title: "Accessibility Helper"
 category: "Widgets"

@@ -186,6 +186,7 @@ export type ImageValue = WebImage | NativeImage;
 ```ts
 export interface FileValue {
     uri: string;
+    name: string;
 }
 ```
 

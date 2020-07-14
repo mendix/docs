@@ -6,27 +6,32 @@ tags: ["studio", "theme customizer", "how to", "customize", "design"]
 
 ## 1 Introduction
 
-This how-to explains how to configure a menu bar for your app such as creating menu items and sub-items. 
+This how-to explains how to customize your app and use your company's logo, change its colors, fonts, adjust header sizes. 
 
 **This how-to will teach you how to do the following:**
 
 * Upload your company logo
 * Customize colors of widgets in your app
 * Customize your topbar, sidebar, and backgrounds
-* Change fonts
+* Change fonts and headers
 
 This how-to describes the following use case: 
 
-You would like to customize your app design.
+You would like to customize your app design and apply the following changes to it:
+
+* Use your company's logo and adjust its size
+* Use colors based on your company's logo for different elements in your app
+* Change colors of topbar, sidebar, and background
+* Change the font of your app and make headings larger
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Familiarize yourself with Theme Customizer terms. For more information, see [Theme Customizer](/studio/theme-customizer). 
+* Familiarize yourself with the Theme Customizer. For more information, see [Theme Customizer](/studio/theme-customizer). 
 * Familiarize yourself with page terms. For more information, see [Pages](/studio/page-editor). 
 
-## 3 Uploading Your Company Logo
+## 3 Uploading Your Company Logo 
 
 To upload a logo, do the following:
 
@@ -102,7 +107,32 @@ Do the following:
 
 7. To change the background of your app to very light grey, click the **Defaults** setting in the **Background** section and choose fill in the HEX color code `F5F5F5`.
 
+8. Click **Save** in the top-right corner to implement your changes.
+
 Great job! You customized your topbar, sidebar, logo size, and the background color.
 
 ## 6 Changing Fonts and Customizing Headers
 
+The **Typography** section of the Theme Customizer allows you to manage text elements in your app, such as page headers or text in widgets. To change the fonts and customize headers, do the following:
+
+1. Open the Theme Customizer.
+
+2. In the **Typography** section, click the **Base Font Family** and change it to **Bitter**. 
+
+3. To make the font of such elements as text widget larger, change **Base Font Size** from *14* to *16*.
+
+4.  As you would like to make all headers larger too, do the following:
+
+    1. Set **H1 Size** to 40.
+
+    2. Set **H2 Size** to 35.
+
+    3. Set **H3 Size** to 30.
+
+    4. Set **H4 Size** to 22:
+
+        ![Header Size](attachments/theme-customizer-how-to-customize-design/header-size.png)
+
+5. In the top-right corner, select **Page View** to see how your changes are applied to pages.
+
+6. Click **Save** in the top-right corner to implement your changes.

@@ -339,10 +339,10 @@ To send a push notification to all users, use the **SendMessageToUsers** Java ac
 ## 7 Trouble shooting
 | Issue | Cause | Solution |
 |-----|----|-----|
-| Sending a message causes a **SenderId mismatch** error | Your native mobile app did register the device within your Mendix applications but not registerd with Firebase. | Build our own native app and make sure you add the google-services.json file |
-| Mendix Runtime exception on JavaAction 'DecryptString': **Key should not be empty** | The module depends on the Encryption modules, which requires an key | Set the constant **EncryptionKey** in the module **Encryption** with a key exactly *16 characters* |
-| Building the app Reamcenter trowsn an error: **Execution failed for task ':app:processDevDebugGoogleServices'. > No matching client found for package name 'com.mendix.myapp.testlocal.developerapp'** | The google-services.json contains a package name this one should match with the Native builder package name | Add an app with the correct package name to Firebase and update google-services.json to you GitHub repository |
-| Error sending message **Error reading credentials from stream, 'type' field not specified. at PushNotifications.SendFCMMessages (JavaAction : 'GetFCMAccessToken')** | A wrong private key file was uploaded | Upload the correct file or generate a new private key in Firebase and upload it |
+| Sending a message causes a **SenderId mismatch** error | Your native mobile app did register the device within your Mendix applications but not registerd with Firebase. | [Build our own native app](setting-up-native-push-notifications#auto-changes) and make sure you add the google-services.json file |
+| Mendix Runtime exception on JavaAction 'DecryptString': **Key should not be empty** | The module depends on the Encryption modules, which requires an key | [Set the constant](native-remote-notifications#3-1-installing-your-module) **EncryptionKey** in the module **Encryption** with a key exactly *16 characters* |
+| Building the app Reamcenter trowsn an error: **Execution failed for task ':app:processDevDebugGoogleServices'. > No matching client found for package name 'com.mendix.myapp.testlocal.developerapp'** | The google-services.json contains a package identifier this one should match with the Native builder package name | [Add an app](setting-up-google-firebase-cloud-messaging-server#native-apps) with the correct package identifier to Firebase and update the google-services.json in you GitHub repository |
+| Error sending message **Error reading credentials from stream, 'type' field not specified. at PushNotifications.SendFCMMessages (JavaAction : 'GetFCMAccessToken')** | A wrong private key file was uploaded | Upload the correct file or [generate a new private key](setting-up-google-firebase-cloud-messaging-server#6-setting-up-a-service-account) in Firebase and upload it |
 
 ## 8 Read More
 

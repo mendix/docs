@@ -41,14 +41,14 @@ This process will take:
 * about 15 to 30 minutes when upgrading from Mendix Operator v1.0.\*
 * about 5 to 10 minutes when upgrading from Mendix Operator v1.1.\* and v1.2.\*.
 
-Some upgrade steps are optional and are only required when upgrading from older versions of the Mendix Operator. These steps have a notice indicating when the step should be skipped.
+Some upgrade steps are only required when upgrading from older versions of the Mendix Operator. There is a notice on these steps indicating which upgrade paths they apply to and for which paths the step should be skipped.
 
 During the upgrade process, the Mendix Operator will have to be stopped and will not process any changes.
 Apps and Environments managed by the Operator will keep running during this process and will be restarted in the cleanup step.
 
 #### 2.2.1 Stop the Operator
 
-To stop the Operator, run the following command:
+Stop the Operator, by running the following command:
 
 ```shell
 kubectl -n $OPERATOR_NAMESPACE scale deployment mendix-operator --replicas=0
@@ -66,7 +66,7 @@ Run the following command to upgrade to the latest version of the Custom Resourc
 kubectl apply -f https://installergen.private-cloud.api.mendix.com/privatecloud/crds/v1
 ```
 
-[Custom Resource Definitions](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) allow to manage Mendix pplications with Kubernetes APIs and tools such as `kubectl` and `oc`.
+[Custom Resource Definitions](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) allow Mendix applications to be managed with Kubernetes APIs and tools such as `kubectl` and `oc`.
 
 #### 2.2.3 Upgrading the Mendix Operator Deployment
 
@@ -149,7 +149,7 @@ Follow this step when upgrading from Mendix Operator v1.2.\*, v1.1.\* and v1.0.\
 It can be skipped if the Mendix Operator is not configured to use OpenShift Routes for incoming network traffic.
 {{% /alert %}}
 
-To enable changing the App URL in OpenShift Routes, the `mendix-operator` role needs to have `update` permissions for OpenShift Routes.
+To enable changing the App URL in OpenShift Routes, you need to perform this step to add the `update` permission to the `mendix-operator` role.
 
 Search for the `mendix-operator` Role in the OpenShift web console and open if for editing, or run the following command to start editing the `mendix-operator` Role:
 

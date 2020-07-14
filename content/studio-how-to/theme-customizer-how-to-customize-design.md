@@ -11,7 +11,8 @@ This how-to explains how to configure a menu bar for your app such as creating m
 **This how-to will teach you how to do the following:**
 
 * Upload your company logo
-* Customize colors of your app interface
+* Customize colors of widgets in your app
+* Customize your topbar, sidebar, and backgrounds
 * Change fonts
 
 This how-to describes the following use case: 
@@ -45,7 +46,7 @@ To upload a logo, do the following:
 
 The logo of your app has changed.
 
-## Changing Your App Colors
+## 4 Changing Your App Colors
 
 You can customize your app colors in the **Brand Colors** section. Once you uploaded the logo, a color palette is generated based on the logo colors. You can then select **Logo Colors** in color-pickers of different settings.
 
@@ -76,5 +77,32 @@ To customize your app colors, do the following:
 
 Good job! You changed the colors in your app. 
 
-## Customizing Topbar, Sidebar,and Backgrounds
+## 5 Customizing Topbar, Sidebar,and Backgrounds
+
+You can change the way your app layout looks by changing the colors and fonts of your topbar, sidebar, and backgroungs.
+
+Do the following:
+
+1.  Open the Theme Customizer.
+
+2.  In the **UI Customization** section >**Topbar**, click **Background** and choose color numbered *5* in **Logo Colors**.  
+
+3.  In the top-right corner, select **Page View** to see how your changes are applied to pages. You can see that the topbar is light-blue now. 
+
+4. Click the **Border** setting and fill in the HEX color code `#989393`. You can see that the border of the topbar is grey now.
+
+   ![Topbar Colors](attachments/theme-customizer-how-to-customize-design/topbar-colors.png)
+
+5.  To change the logo size, do the following:
+
+   1. Click the **Logo Width** setting and change it from 30 PX to 100 PX.
+   2.  Click the **Logo Height** setting and change it from 30 PX to 100 PX.
+
+6. As you would like to change make your sidebar background deep-blue, click **Background** in the **Sidebar** section and fill in the HEX color code `#0D3A7A`.
+
+7. To change the background of your app to very light grey, click the **Defaults** setting in the **Background** section and choose fill in the HEX color code `F5F5F5`.
+
+Great job! You customized your topbar, sidebar, logo size, and the background color.
+
+## 6 Changing Fonts and Customizing Headers
 

@@ -220,14 +220,9 @@ For Mendix Cloud v3, only *X-Frame-Options* is supported. For Mendix Cloud v4 th
 | Content-Security-Policy | allows web site administrators to control resources the user agent is allowed to load for a given page | a string value<br/>*for more information see the W3C recommendation [Content Security Policy Level 2](https://www.w3.org/TR/CSP2/)* |
 | Referrer-Policy | governs which referrer information should be included with requests made | |
 | X-Content-Type-Options | indicate that the MIME types advertised in the Content-Type headers should not be changed and be followed | |
-| X-Frame-Options | indicates whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>` or `<object>` | The default is not to allow apps to be rendered inside frames. <br/> This was the value set previously to prevent embedding in an IFrame <br/> See important note <sup><small>[1]</small></sup> below. |
+| X-Frame-Options | indicates whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>` or `<object>` | The default is not to allow apps to be rendered inside frames. <br/> This was the value set previously to prevent embedding in an IFrame <br/> See [Running Your App in an Iframe](#iframe), below, for information about running your app inside an iframe. |
 | X-Permitted-Cross-Domain-Policies | specifies whether this page can load resources from a different domain | |
 | X-XSS-Protection | stops pages from loading when they detect reflected cross-site scripting (XSS) attacks | |
-
-{{% alert type="warning" %}}
-<sup><small>[1]</small></sup>Modern browsers are introducing additional security to ensure that iframes are only allowed when they are from the same domain as the main page. To avoid this issue when you are using custom domain names and want to embed the app in an iframe, ensure that the app you want to embed is part of the same domain. For example, if your page is mainpage.domain.name, then the app embedded in the iframe should be appname.domain.name.
-{{% /alert %}}
-
 
 There are three types of value for these headers:
 
@@ -246,6 +241,31 @@ There are three types of value for these headers:
 The changes to the headers will be implemented when the app is redeployed.
 
 Additional information can be found in the Mozilla developer guide [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
+
+#### 4.2.1 Running Your App in an Iframe{#iframe}
+
+Most browsers have additional security to ensure that iframes are only allowed when they are from the same domain as the main page. The defaults for these vary by browser version. This security is controlled through SameSite cookies. You can find a good explanation of SameSite cookes in [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) on the *web.dev* website.
+
+##### 4.2.1.1 Using Custom Domains
+
+To avoid security issues when you want to embed the app in an iframe, we recommend that you use [custom domains](custom-domains) to ensure that the app you want to embed is part of the same domain. For example, if your page is mainpage.domain.name, then the app embedded in the iframe should be appname.domain.name.
+
+##### 4.2.1.2 Applying a Different SameSite Setting
+
+From **Mendix version 8.12**, you can control the value of SameSite in your cookies. The default for all cookies is `SameSite=None`, which means that they can be used in an iframe. You can change this value in the `com.mendix.core.SameSiteCookies` [custom runtime setting](#custom-runtime-settings) if you want to add restrictions to apps running outside iframes.
+
+For **Mendix versions below 8.12** there was no SameSite value set on cookies and the behavior is dependent on the browser default. To ensure that cookies can be used within iframes, you can set the custom runtime variable `SAMESITE_COOKIE_PRE_MX812` to `true` in [custom environment variables](#custom-environment-variables), which will set `SameSite=None` for all your cookies.
+
+{{% alert type="warning" %}}
+The SAMESITE_COOKIE_PRE_MX812 setting will only be implemented the next time your app is deployed.
+{{% /alert %}}
+
+##### 4.2.1.3 Using Custom Sign In Pages
+
+If you use a custom sign in page, your **index.html** will probably set the `originURI` cookie. If your Mendix app runs within an iframe, this cookie needs to be set with the `SameSite=None` and `Secure` attributes.
+
+To do this, find all the places in your theme folder where this cookie is set. It will look like `document.cookie = "originURI=/login.html"`.
+Change this to add the required attributes. For example, `document.cookie = "originURI=/login.html; SameSite=None; Secure"`.
 
 ### 4.3 Outgoing Connections Whitelisting (Mendix Cloud Dedicated){#connection-whitelist}
 
@@ -345,7 +365,7 @@ On this tab, you can add **Custom Runtime Settings** and **Custom Environment Va
 
 ![](attachments/environments-details/runtime.png)   
 
-### 6.1 Custom Runtime Settings
+### 6.1 Custom Runtime Settings{#custom-runtime-settings}
 
 Use the Custom Runtime Settings section to perform the following actions:
 
@@ -382,7 +402,7 @@ The Mendix Cloud uses runtime settings to configure the included systems for log
 * `TempPath`
 * `WebServiceClientCertificates`
 
-### 6.2 Custom Environment Variables
+### 6.2 Custom Environment Variables{#custom-environment-variables}
 
 Use the Custom Environment Variables to **add**, **Edit**, or **Delete** an environment variable.
 

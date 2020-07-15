@@ -363,13 +363,27 @@ Both forms of ingress can have TLS enabled or disabled.
 
 ![](attachments/private-cloud-cluster/image20.png)
 
+Selecting a registry type and configuring its credentials will configure the destination registry used by Mendix for Private Cloud to build images.
+Images are pulled from this registry by Kubernetes, bypassing the Mendix Operator.
+
 You can choose one of the following registry types. OpenShift registries can only be used for clusters on the OpenShift platform. AWS ECR can only be used for AWS EKS clusters. For some of these registries you may need to supply additional information such as the pull URL, push URL, name, and secret.
 
 * OpenShift 3 Registry
 * OpenShift 4 Registry
 * Amazon Elastic Container Registry (AWS ECR)
-* Generic registry with authentication (this should either be *Public* or should have image pull secrets enabled).
-* Generic registry without authentication
+* Generic registry with authentication – this supports most registries, for example Azure Container Registry, quay.io, or Docker Hub
+* Generic registry without authentication – this can be used for basic, self-hosted registries such as the ones included with Minikube and MicroK8s
+* Existing docker-registry secret
+
+**Additional Information**
+
+For **OpenShift 3** and **OpenShift 4** registries, the default image pull credentials from the `default` ServiceAccount will be used. No additional configuration steps are required to enable image pulls in OpenShift.
+
+For **Generic registry…** options, the reconfiguration script will ask if the credentials should be added to `imagePullSecrets` in the `default` ServiceAccount. If you answer **Yes**, the reconfiguration script will add image pull credentials to the `default` ServiceAccount - no additional image pull configuration is required. If you want to configure the image pull separately, choose **No**.
+
+For **Amazon Elastic Container Registry**, you will need to configure registry authentication separately through [IAM roles](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_EKS.html).
+
+When choosing the **Existing docker-registry secret**, you will need to add this secret to the `default` ServiceAccount manually, or provide registry authentication configuration in another way (depending on which registry authentication options the Kubernetes cluster vendor is offering).
 
 #### 3.4.6 Do you want to configure the proxy
 

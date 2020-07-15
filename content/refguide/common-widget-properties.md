@@ -10,17 +10,17 @@ tags: ["studio pro", "widget properties", "properties", "common", "widget"]
 
 These are properties that are shared by many elements in the page editor, such as a page or widgets. For a complete list of properties, take a look at the relevant element.
 
-## 2 Accessibility Section {#accessibility-properties}
+## 2 Accessibility Properties and Widgets {#accessibility-properties}
 
-### 2.1 Screen reader caption ###
+### 2.1 Screen Reader Caption 
 
-The screen reader caption property allows to provide useful information to be announced by screen readers when 'Show label' is set to false in an input widget.
+The **Screen reader caption** property allows information to be read by screen readers when **Show label** is set to **No** in an input widget.
 
-{{% alert type="info" %}}Screen reader caption is not supported on native mobile pages.{{% /alert %}}
+{{% alert type="info" %}}The **Screen reader caption** property is not supported on native mobile pages.{{% /alert %}}
 
-#### 2.1.1 Screen reader caption Input Widgets ####
+#### 2.1.1 Screen Reader Caption Input Widgets 
 
-With the following widgets, the Screen reader caption can be set:
+The **Screen reader caption** property can be set on the following widgets:
 
 *   [Text Box](text-box)
 *   [Text Area](text-area)

@@ -14,7 +14,23 @@ These are properties that are shared by many elements in the page editor, such a
 
 ### 2.1 Screen reader caption ###
 
-The screen reader caption property allows to provide useful information to be announced by screen readers when 'Show label' is set to false.
+The screen reader caption property allows to provide useful information to be announced by screen readers when 'Show label' is set to false in an input widget.
+
+{{% alert type="info" %}}Screen reader caption is not supported on native mobile pages.{{% /alert %}}
+
+#### 2.1.1 Screen reader caption Input Widgets ####
+
+With the following widgets, the Screen reader caption can be set:
+
+*   [Text Box](text-box)
+*   [Text Area](text-area)
+*   [Drop-down](drop-down)
+*   [Check Box](check-box)
+*   [Radio Buttons](radio-buttons)
+*   [Date Picker](date-picker)
+*   [File Input](file-input)
+*   [Reference Selector](reference-selector)
+*   [Input Reference Set Selector](input-reference-set-selector)
 
 ## 3 Common Section {#common-properties}
 

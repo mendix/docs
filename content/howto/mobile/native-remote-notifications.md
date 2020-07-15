@@ -336,14 +336,15 @@ Every user is allowed to have more than one device. When sending push notificati
 
 To send a push notification to all users, use the **SendMessageToUsers** Java action.
 
-## 7 Trouble shooting
+## 7 Troubleshoot Notification Issues
+
 | Issue | Cause | Solution |
 |-----|----|-----|
-| Sending a message causes a **SenderId mismatch** error or **403: Forbidden** | Your native mobile app did register the device within your Mendix applications but not registered with Firebase | [Build our own native app](setting-up-native-push-notifications#auto-changes) and make sure you add the google-services.json file |
-| Sending a message causes a **Request contains an invalid argument** error or **400: Bad Request** | Your Project ID does not match with the project_id in the private key json file | Upload the correct file or [generate a new private key](setting-up-google-firebase-cloud-messaging-server#6-setting-up-a-service-account) in Firebase and upload it |
-| Mendix Runtime exception on JavaAction 'DecryptString': **Key should not be empty** | This module depends on the Encryption module, which requires a key | [Set the constant](native-remote-notifications#3-1-installing-your-module) **EncryptionKey** in the module **Encryption** with a key exactly *16 characters* |
-| Building the app Teamcenter trows an error: **Execution failed for task ':app:processDevDebugGoogleServices'. > No matching client found for package name 'com.mendix.myapp.testlocal.developerapp'** | The google-services.json contains an package_name this should match with the Native app package identifier. Please note the native builder adds **.devleoperapp** at the end of the package name for dev apps | [Add an app](setting-up-google-firebase-cloud-messaging-server#native-apps) with the correct package identifier to Firebase and update the google-services.json in your GitHub repository |
-| Error sending message **Error reading credentials from stream, 'type' field not specified. at PushNotifications.SendFCMMessages (JavaAction : 'GetFCMAccessToken')** | A wrong private key file was uploaded | Upload the correct file or [generate a new private key](setting-up-google-firebase-cloud-messaging-server#6-setting-up-a-service-account) in Firebase and upload it |
+| Sending a message causes a **SenderId mismatch** error or **403: Forbidden**. | Your native mobile app registered the device within your Mendix applications, but not with Firebase. | Follow the [Implementing Push Changes With the Native Builder](#auto-changes) section and make sure you add the *google-services.json* file. |
+| Sending a message causes a **Request contains an invalid argument** error or **400: Bad Request**. | Your **Project ID** does not match the **project_id** in your private key *json* file. | Upload the correct file or [generate a new private key](setting-up-google-firebase-cloud-messaging-server#6-setting-up-a-service-account) in Firebase and upload it. |
+| Mendix Runtime exception on JavaAction 'DecryptString': **Key should not be empty**. | This module depends on the **Encryption** module, which requires a key. | [Set the constant](native-remote-notifications#3-1-installing-your-module) **EncryptionKey** in the **Encryption** module with a key of exactly 16 characters. |
+| Building the Teamcenter app throws an error: **Execution failed for task ':app:processDevDebugGoogleServices'. > No matching client found for package name 'com.mendix.myapp.testlocal.developerapp'**. | The *google-services.json* file contains a **package_name** which should match the Native Builder package identifier. Please note the native builder adds **.devleoperapp** at the end of the package name for dev apps. | [Add an app](setting-up-google-firebase-cloud-messaging-server#native-apps) with the correct package identifier to Firebase and update the *google-services.json* in your GitHub repository. |
+| Error sending message: **Error reading credentials from stream, 'type' field not specified. at PushNotifications.SendFCMMessages (JavaAction : 'GetFCMAccessToken')** | The wrong private key file was uploaded. | Upload the correct file or [generate a new private key](setting-up-google-firebase-cloud-messaging-server#6-setting-up-a-service-account) in Firebase and upload it. |
 
 ## 8 Read More
 

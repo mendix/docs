@@ -89,7 +89,7 @@ The on enter key press event property specifies an action that will be executed 
 
 #### 2.5.5 On Input Event
 
-The on input event property specifies an action that will be executed when the input (visible characters) of the text box changes. "Note that the valu" By configuring the additional action delay property, which appears when selecting an action, the amount of action executions can be regulated. When an input change occurs during the delay time of a previous input change, the execution of the action with the previous change will be dismissed.
+The on input event property specifies an action that will be executed when the input (specifically the visible characters) of the text box changes. By configuring the additional action delay property which appears when selecting an action, you can regulate the amount of action executions. When an input change occurs during the delay time of a previous input change, the execution of the action with the previous change will be dismissed.
 
 {{% snippet file="refguide/events-section-link.md" %}}
 

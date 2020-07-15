@@ -6,7 +6,50 @@ toc-level: 1
 description: "Native Template release notes."
 ---
 
-For more information on native mobile app development, see the [native-template repository](https://github.com/mendix/native-template/) and [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app) .
+For more information on native mobile app development, see the [native-template repository](https://github.com/mendix/native-template/) and [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app) .
+
+## 4.2.0
+
+**Release date: June 24, 2020**
+
+### Improvements
+
+* We added an error message to iOS for when the bundle or the runtime URL is missing.
+
+### Fixes
+
+* We mitigated a Gradle Java out-of-memory issue when building on App Center due to App Center's recent changes.
+* We fixed an issue with styling Text Fields on Android when both a margin and height were defined.
+
+## 4.1.1
+
+**Release date: June 15, 2020**
+
+### Fixes
+
+* We fixed an issue on iOS where the root view will not resize correctly when device orientation is enabled.
+
+## 4.1.0
+
+**Release date: May 25, 2020**
+
+### Improvements
+
+* Prior to 8.10, custom developer apps had to do a full session data request with each reload, slowing down the developer experience tremendously. From 8.10 and above the client is able to determine when and what to sync. This behavior should emulate incremental syncs better and more consistently.
+
+### Fixes
+
+* We removed the complementary libraries for the camera functionality that were added with the 4.0.0 release and that made Firebase a mandatory dependency when any camera functionality was used by iOS.
+
+## 4.0.0
+
+**Release date: Apr 29, 2020**
+
+{{% alert type="info" %}}
+Update to 4.1.0 or later if you are using the camera functionality to avoid crashes if Firebase is not enabled for your project.
+{{% /alert %}}
+
+This is the release supporting Studio Pro 8.9 and onwards. This release includes a major upgrade of the included dependencies which renders it incompatible with previous versions of Studio Pro.
 
 ## 3.2.0
 

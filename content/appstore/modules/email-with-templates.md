@@ -10,7 +10,7 @@ tags: ["app store", "app store component", "email with templates", "token", "pla
 
 The [Email with Templates](https://appstore.home.mendix.com/link/app/259/) module lets you send emails with templates. Email templates can be managed with the possibility of using tokens. With the tokens available in the email template, the attributes and references of an object are filled in automatically and correctly.
 
-### 1.1 Typical Usage Scenarios
+### 1.1 Typical Use Cases
 
 The typical usage scenario is sending emails with a template system and using tokens to handle all of your outgoing standard emails.
 
@@ -23,7 +23,7 @@ The typical usage scenario is sending emails with a template system and using to
 
 #### 1.2.2 Java Libraries
 
-* *commons-codec-1.10.jar*
+* *commons-codec-1.14.jar*
 * *commons-email-1.4.0.jar*
 * *javax.mail-1.6.0.jar*
 

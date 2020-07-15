@@ -8,13 +8,17 @@ tags: ["native", "mobile", "developer", "troubleshoot", "app"]
 
 ## 1 Introduction
 
-Mendix strives to make building and running native apps as simple as possible. But because some complexity is inherent in making apps, problems can come up. If you are having issues while building or running native mobile apps, please consult the sections below to see if your issue has already been solved.
+Mendix strives to make building and running native mobile apps as simple as possible. But because some complexity is inherent in making apps, problems can come up. If you are having issues while building or running native mobile apps, please consult the sections below to see if your issue has already been solved.
 
 ## 2 Make It Native App
 
 To troubleshoot issues related to the [Make it Native](/refguide/getting-the-make-it-native-app) app, see the sections below.
 
-### 2.1 Error: Unable to Load Script
+### 2.1 Port Issues
+
+We recommend keeping the **Runtime port** in **Project Settings** > **Edit** on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
+
+### 2.2 Error: Unable to Load Script
 
 Depending on your device settings and network characteristics, the Make it Native app can fail to connect to the runtime. If so, the Make it Native app can show the following error messages:
 
@@ -42,5 +46,5 @@ These failures are often caused by the Windows Defender firewall. In such cases,
 
 ## 3 Read More
 
-* [How to Debug Native Apps (Advanced)](native-debug)
+* [How to Debug Native Mobile Apps (Advanced)](native-debug)
 * [Native Builder Reference Guide](/refguide/native-builder)

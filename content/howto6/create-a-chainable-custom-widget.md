@@ -149,7 +149,7 @@ Let's take a closer look at what is inside the Mendix test project and why it is
 
 This microflow will create an AppFlow for a particular logged-in App User. If there is already an AppFlow entity created for a user, it will return that AppFlow.
 
-<iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/ce3baab8-b611-4423-a049-d467db0d775c/chainable-custom-widget-project-creating-the-appflow-entity.?embed=true"></iframe>
+![](attachments/create-chainable/one.jpg)
 
 We use this in the data view where the chainable widgets are located:
 
@@ -157,29 +157,41 @@ We use this in the data view where the chainable widgets are located:
 
 Each time a chainable widget wants to save a setting on the AppFlow entity, it triggers a microflow. This allows you to perform extra steps before a setting is actually available to other (custom) widgets and the Mendix app. The widgets that select Coachwork and Color will use the following microflow:
 
-<iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/bf677fa2-2fdb-4bf2-9b6b-9b045c6493af/chainable-custom-widget-project-commit-the-appflow-entity.?embed=true"></iframe>
+![](attachments/create-chainable/two.jpg)
 
 There is an exception for the chainable widget that handles the Car selection. Selecting a Car will require a reset of the selection of Coachwork and Color. That is why this widget has another microflow configured for that:
 
-<iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/21462015-51cb-461c-91b8-743cd0e5f926/chainable-custom-widget-project-commit-the-appflow-entity-and-reset-its-associations?embed=true"></iframe>
+![](attachments/create-chainable/three.jpg)
 
 ### 7.2 Getting Lists of Entities for Car, Coachwork, and Color
 
 The following microflows are configured at each chainable custom widget to retrieve a list of the entities it needs to show:
 
-<iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/e54716bc-efbd-4bd5-ab44-5856605985e1/chainable-custom-widget-project-get-a-list-of-cars?embed=true"></iframe><iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/2296c444-2903-4757-8e9c-28a72d93586e/chainable-custom-widget-project-get-a-list-of-coachworks-from-a-selected-car?embed=true"></iframe><iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/f9506cda-a192-4ad3-8670-6d4cc46ed586/chainable-custom-widget-project-get-a-list-of-colors-attached-to-a-car.?embed=true"></iframe>
+![](attachments/create-chainable/four.jpg)
+
+![](attachments/create-chainable/five.jpg)
+
+![](attachments/create-chainable/six.jpg)
 
 ### 7.3 Saving Images for Car, Coachwork, and Color
 
 The following microflows will create the images for each Car, Coachwork, and CarColor entity:
 
-<iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/3e145efd-ab14-4068-9e1a-5916bb2df250/chainable-custom-widget-project-a-car-color-after-create-microflow.?embed=true"></iframe><iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/659e028c-46ad-47ed-98fa-53a26f6e9533/chainable-custom-widget-project-a-car-after-create-microflow.?embed=true"></iframe><iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/465b2355-2466-4d3e-8a0b-c291729edbc9/chainable-custom-widget-project-a-coachwork-after-create-microflow.?embed=true"></iframe>
+![](attachments/create-chainable/seven.jpg)
+
+![](attachments/create-chainable/eight.jpg)
+
+![](attachments/create-chainable/nine.jpg)
 
 ### 7.4 Deleting Images for Car, Coachwork, and Color
 
 The following three microflows will delete the images for each Car, Coachwork, and CarColor entity:
 
-<iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/cc02e4c8-b5db-418f-bf33-35752c3f956a/chainable-custom-widget-project-a-car-color-before-delete-microflow.?embed=true"></iframe><iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/bb7addc1-9cf1-4fdb-ae92-eddfded7b182/chainable-custom-widget-project-a-car-before-delete-microflow.?embed=true"></iframe><iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/8065e6d8-fc42-465e-9e56-0330250d34e9/chainable-custom-widget-project-a-coachwork-before-delete-microflow.?embed=true"></iframe>
+![](attachments/create-chainable/ten.jpg)
+
+![](attachments/create-chainable/eleven.jpg)
+
+![](attachments/create-chainable/twelve.jpg)
 
 ### 7.5 Important Guideline for Creating Custom Widgets
 

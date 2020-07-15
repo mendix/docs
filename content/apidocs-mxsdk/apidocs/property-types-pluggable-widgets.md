@@ -228,7 +228,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 3.1 Icon {#icon}
 
-Properties of type icon allows a user to configure an icon similar to one used by a [button](/refguide/button-properties#icon). It is passed as `DynamicValue<IconValue>` prop to a client component.
+Properties of type icon allows a user to configure an icon similar to one used by a [button](/refguide/button-properties#icon). It is passed as `DynamicValue<IconValue>` prop to a client component. For more information, see the [IconValue](client-apis-for-pluggable-widgets#icon-value) section of *Client APIs Available to Pluggable Widgets*.
 
 {{% alert type="info" %}}
 This property type was introduced in Mendix 8.1.
@@ -258,18 +258,18 @@ Then the Studio Pro UI for the component appears like this:
 
 ### 3.2 Image {#image}
 
-Image allows a user to configure a static image from an [image collection](/refguide/image-collection). It also allows a user to configure an image from an object that is a specialization of **System.Image**. It is passed as DynamicValue [ImageValue](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#imagevalue) prop to a client component. See the [Images Reference Guide](/refguide/images) for more information about supported image formats.
+Image allows a user to configure a static image from an [image collection](/refguide/image-collection). It also allows a user to configure an image from an object that is a specialization of **System.Image**. It is passed as an `DynamicValue<ImageValue>` prop to a client component (for more information, see the [ImageValue](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#imagevalue) section of *Client APIs Available to Pluggable Widgets*). See the [Images Reference Guide](/refguide/images) for more information about supported image formats.
 
 {{% alert type="info" %}}
 This property type was introduced in Mendix 8.1. Support for dynamic images was introduced in Mendix [8.4.0](/releasenotes/studio-pro/8.4).
 {{% /alert %}}
 
 {{% alert type="info" %}}
-Support for SVG images in native apps was introduced in Mendix [8.4.0](/releasenotes/studio-pro/8.4).
+Support for SVG images in native mobile apps was introduced in Mendix [8.4.0](/releasenotes/studio-pro/8.4).
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-GIF images are not supported in native apps on Android devices.
+GIF images are not supported in native mobile apps on Android devices.
 {{% /alert %}}
 
 #### 3.2.1 XML Attributes
@@ -467,16 +467,25 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.4 Attribute{#attribute}
 
-The attribute property type allows a widget to work directly with entities' attributes, both reading and writing attributes. Depending on the widget's purposes, a widget should define attribute types it supports. The client component will receive `EditableValue<T>` where `T` depends on a `<attributeType>` configured.
+The attribute property type allows a widget to work directly with entities' attributes, both reading and writing attributes. Depending on the widget's purposes, a widget should define attribute types it supports. 
+
+If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the client will receive an `EditableValue<T>` where `T` depends on a configured `<attributeType>`. For more information, see the [EditableValue](client-apis-for-pluggable-widgets#editable-value) section of *Client APIs Available to Pluggable Widgets*.
+
+When a `dataSource` attribute is specified and configured by the user it is passed as a function that expects an `ObjectItem` and returns an `EditableValue<T>`: `(item: ObjectItem) => EditableValue<T>`. For more information, see the [Datasource](#datasource) section below.
+
+{{% alert type="info" %}}
+Support for the `dataSource` attribute was introduced in Mendix 8.12.
+{{% /alert %}}
 
 #### 4.4.1 XML 
 
-| Attribute  | Required | Attribute Type | Description                                                  |
-| ---------- | -------- | -------------- | ------------------------------------------------------------ |
-| `type`     | Yes      | String         | Must be `attribute`                                          |
-| `key`      | Yes      | String         | See [key](#key) |
-| `onChange` | No       | Property Path  | The path to an Action property that will be executed by Mendix platform when value is changed by the widget |
-| `required` | No       | Boolean        | This decides if the property must be specified by the user, `true` by default |
+| Attribute    | Required | Attribute Type | Description                                                  |
+| ------------ | -------- | -------------- | ------------------------------------------------------------ |
+| `type`       | Yes      | String         | Must be `attribute`                                          |
+| `key`        | Yes      | String         | See [key](#key) |
+| `onChange`   | No       | Property Path  | The path to an Action property that will be executed by the Mendix Platform when the value is changed by the widget |
+| `required`   | No       | Boolean        | Decides if the property must be specified by the user, `true` by default |
+| `dataSource` | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this attribute property |
 
 #### 4.4.2 XML Elements
 
@@ -594,7 +603,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.7 Datasource {#datasource}
 
-The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](client-apis-for-pluggable-widgets#listvalue) and may be used with the [`widgets`](#widgets) property. See [Data Sources](https://docs.mendix.com/refguide/data-sources#list-widgets) for available data source types.
+The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](client-apis-for-pluggable-widgets#listvalue) and may be used with [`action`](#action), [`attribute`](#attribute) and [`widgets`](#widgets) properties. See [Data Sources](https://docs.mendix.com/refguide/data-sources#list-widgets) for available data source types.
 
 {{% alert type="info" %}}
 Support for the datasource property type was introduced in Mendix 8.7.
@@ -648,7 +657,7 @@ Label property allows a pluggable widget to have labeling functionality similar 
 
 ### 5.2 Name {#name}
 
-Every widget have a name by default. This property can be used to control position of the widget name input. If this property is not specified, input will be placed in **Common** tab. A widget’s name is also used for locating it during [automated tests](/howto/integration/selenium-support). For that purpose in web apps, a widget name is automatically appended to a `class` prop a component receives, and in native apps is passed as a separate `name` prop.
+Every widget have a name by default. This property can be used to control position of the widget name input. If this property is not specified, input will be placed in **Common** tab. A widget’s name is also used for locating it during [automated tests](/howto/integration/selenium-support). For that purpose in web apps, a widget name is automatically appended to a `class` prop a component receives, and in native mobile apps is passed as a separate `name` prop.
 
 ```xml
 <systemProperty key="Name"/>

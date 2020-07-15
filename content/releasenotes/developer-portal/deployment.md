@@ -10,6 +10,121 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### July 8th, 2020
+
+#### Mendix Cloud Fixes
+
+* We resolved an issue where deactivated users were still shown in the [Node Permissions](/developerportal/deploy/node-permissions) tab of the Security page for an app. (Tickets 90744 95319, 97722, 98474, 99978, 100493, 101595, 103007, and 103549)
+* We resolved an issue where you could not change the role of the inbuilt administrator account for apps deployed to the cloud. (Tickets 87013 and 87605)
+    {{% alert type="info" %}}You will still need to change the password of the administrator account for the new role to be assigned to the administrator. See the [User Role](/refguide/administrator#user-role) section of *Administrator* for more information{{% /alert %}}
+* We resolved an issue where an incorrect debugger password could be displayed for Mendix Cloud **v4** when the **Show Debugger Information** button was clicked on the Environment Details page. (Ticket 99469)
+
+### July 2nd, 2020
+
+#### Mendix Cloud **v4**
+
+* We have changed the way that the *unused java heap* metric is calculated to make the data more accurate.
+	* This also fixes the issue where this metric could have a negative value (tickets: 92998, 93241, 93725, 94560, 99308, 99979, 100086, 101004, 101429, 102260, & 103225).
+
+This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
+
+* as **unused** in [JVM Object Heap](/developerportal/operate/trends-v4#a-name-trends-appmxruntimejvmheap-a-4-4-jvm-object-heap)
+* as **unused java heap** in [JVM Process Memory Usage](/developerportal/operate/trends-v4#a-name-trends-appmxruntimejvmprocessmemory-a-4-5-jvm-process-memory-usage)
+
+{{% alert type="info" %}}This change will take effect the next time you deploy your application.{{% /alert %}}
+
+{{% alert type="warning" %}}You may see a large increase in the size of the unused java heap metric when this change is applied. This is a consequence of the new calculation and not a change in the memory usage of your app.{{% /alert %}}
+
+### June 22nd, 2020
+
+#### Mendix for Private Cloud — Mendix Operator v1.2.0
+
+We released a new version of the Mendix for Private Cloud Operator.
+
+* We have added support for offline licenses.
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+
+### June 19th, 2020
+
+#### Mendix for Private Cloud — Mendix Operator v1.1.1
+
+We released a new version of the Mendix for Private Cloud Operator.
+
+* We fixed an issue which incorrectly marked dedicated Storage Plans as being in use.
+* We changed the way the Operator updates Kubernetes Deployments to prevent a situation where two different versions of a Mendix application are running at the same moment.
+* We have added support for Azure PostgreSQL databases.
+* We have added support for using an existing JDBC database schema. This database can only be used by one environment and cannot be shared between environments.
+* We have added support for using an existing Azure Blob Storage Container or S3 bucket. Such a storage plan can be dedicated to one environment, or can be shared between multiple environments, with all environments using the same credentials.
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+
+### June 18th, 2020
+
+#### Mendix for Private Cloud
+
+* We have separated the creation of the namespace and the cluster in order to align with Kubernetes concepts. As a consequence, there is now an additional namespace details page. The Mendix Operator and Mendix Gateway Agent will be deployed to each namespace.
+* We now allow you to set Kubernetes resource *requirements* in addition to resource *limits*. Apps no longer require the maximum amount of CPU and memory, improving utilization of cluster resources.
+* We have replaced the **Tiny** plan with a **Small** plan in the core resources.
+* We have improved the reliability of updating the current environment status in the Developer Portal.
+
+### June 17th, 2020
+
+#### Mendix Cloud **v3**
+
+* We fixed an issue where manual backups on Mendix Cloud v3 did not correctly update the status in the Developer Portal when they completed. (Tickets 97485, 97573, 97577, 97748, 97819, & 98313)
+* We fixed an issue where some valid certificate authorities could not be uploaded. (Tickets 98150 & 100271)
+* We made some changes to the Mendix Cloud v3 [Trends](/developerportal/operate/trends) graphs.
+
+### June 16th, 2020
+
+#### Mendix Cloud **v4**
+
+* We introduced new alerts for Mendix Cloud v4.
+    * Database IOPS Burst Balance, based on the graph [Database IOPS Burst Balance](/developerportal/operate/trends-v4#Trends-dbmxdatabaseburstbalance)
+    * Database Freeable Memory, based on the graph [Database Node Operating System Memory](/developerportal/operate/trends-v4#a-name-trends-dbmemory-a-5-5-database-node-operating-system-memory)
+
+### June 10th, 2020
+
+#### Mendix for Private Cloud — Mendix Gateway Agent v1.1.1
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#agent-latest).
+
+* We have fixed a regression which caused unusually high CPU usage.
+
+### June 8th, 2020
+
+#### Mendix for Private Cloud — Mendix Operator v1.1.0
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+
+* Mendix apps now run as Kubernetes Deployments instead of StatefulSets. This will allow you to use rolling updates, reducing downtime. In addition, this helps avoid situations where a StatefulSet might become stuck and stop processing any changes.
+* We now allow you to set Kubernetes resource requirements in addition to resource limits. Apps no longer require the maximum amount of CPU and memory, improving utilization of cluster resources.
+* We improved the default health check configuration by adjusting the default Kubernetes liveness and readiness probe configuration. Kubernetes will now be much quicker in detecting that an environment has started and is ready to serve requests. In addition, the Kubernetes liveness probe will start with a delay to give a Mendix app some time to start and perform migrations.
+* We have added a port to enable monitoring of Mendix apps with Prometheus.
+* We have added an option to make a storage plan dedicated so that it can be used by only one environment.
+* We have added support for Microsoft SQL server and Azure SQL databases.
+* We have fixed a regression which prevented Private Cloud installing when using kubectl version 1.18.
+
+#### Mendix for Private Cloud — Mendix Gateway Agent v1.1.0
+
+To upgrade an existing installation of Private Cloud to the latest version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#agent-latest).
+
+* We have improved the reliability of event processing and cluster authentication.
+
+### June 4th, 2020
+
+#### Mendix Cloud **v4**
+
+* We introduced a new graph in the **Trends** metrics for Mendix Cloud v4. This shows the **database burst balance**. See [Database Burst Balance](/developerportal/operate/trends-v4#Trends-dbmxdatabaseburstbalance) in the *Trends in Mendix Cloud v4* document for more information.
+* In Mendix Cloud v4 we introduced changes to the Access Restriction Profile (ARP) Certificate Authorities (CAs). These changes allow you to:
+    * Have stricter access restrictions by allowing the selection of intermediate certificates instead of the root
+    * Use different root certificates for each path
+        {{% alert type="info" %}}Existing configurations will not be changed and environments can be restarted safely.<br/><br/>To migrate to the new ARPs, you must remove **all** existing ARPs and replace them with *clones* that you have edited using the latest Developer Portal.<br/>In other words **Clone** the existing ARPs, **Edit** the CAs, and **Apply** the new ARPs to all paths.{{% /alert %}}
+        For more information see [How To Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions).
+
+    You will need to redeploy your app in order to apply the new ARP(s).
+
 ### May 1st, 2020
 
 #### Mendix Cloud Dedicated

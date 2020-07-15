@@ -4,6 +4,8 @@ parent: "ar-parent"
 menu_order: 20
 description: "In this how-to you will learn to build Mendix applications for the first generation Hololens."
 tags: ["AR", "VR", "Hololens", "mixed reality"]
+nosearch: true
+disable_sitemap: true
 ---
 
 ## 1 Introduction
@@ -42,9 +44,9 @@ This how-to will teach you to build Mendix applications for the first generation
 
 ###  4.1 Markers
 
-First, you will configure your pages in the Mendix Module. To do this, your project needs to be running. You will begin by generating markers. While trackers are specifically used for mobile (for more information on trackers, see the [ARImageTracker section](get-started-ar#ar-tracker) of *How to Get Started with AR*), markers are slightly more defined in their requirements. Markers are specifically used for HoloLens, and appear more as QR codes. 
+First, you will configure your pages in the Mendix Module. To do this, your project needs to be running. You will begin by generating markers. While trackers are specifically used for mobile (for more information on trackers, see the [ARImageTracker section](get-started-ar#ar-tracker) of *How to Get Started with AR*), markers are slightly more defined in their requirements. Markers are specifically used for HoloLens, and appear more as QR codes.
 
-The markers determine the placement of the pages. The HoloLens scans the markers, and through this configuration will know which page goes with which marker. 
+The markers determine the placement of the pages. The HoloLens scans the markers, and through this configuration will know which page goes with which marker.
 
 To create the markers, complete the following steps:
 
@@ -139,28 +141,28 @@ To run your app on a HoloLens, follow these steps:
 
 	{{% image_container width="300" %}}![](attachments/build-hololens/install-bundle.png){{% /image_container %}}
 
-	Optionally, if you receive the following error, you will need to install some extra packages: 
+	Optionally, if you receive the following error, you will need to install some extra packages:
 
-	```	
+	```
 	“Windows cannot install package HoloLensMendixApplication_1.0.7.0_x86__pzq3xp76mxafg because this package depends on a framework that could not be found. Provide the framework "Microsoft.NET.CoreRuntime.1.1" published by "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US", with neutral or x86 processor architecture and minimum version 1.1.27004.0, along with this package to install. The frameworks with name "Microsoft.NET.CoreRuntime.1.1" currently installed are: {} Failure text: Package failed updates, dependency or conflict validation. (0x80073cf3)”
 	```
 
 To fix the error, follow these steps:
 
 1. Select **Allow me to select framework packages** and then click **Next**:
-	
+
 	{{% image_container width="300" %}}![](attachments/build-hololens/allow-me.png){{% /image_container %}}
-	
+
 1. Select **Choose File**, and in the build folder, navigate to **Dependencies/x86**:
-	
+
 	{{% image_container width="300" %}}![](attachments/build-hololens/dependencies.png){{% /image_container %}}
-	
+
 1. Add both *.appx* files to **Dependencies/x86**:
-	
+
 	{{% image_container width="300" %}}![](attachments/build-hololens/add-dependencies.png){{% /image_container %}}
-	
+
 1. With both these dependencies and your *.msixbundle*  selected, click **Install**:
-	
+
 	{{% image_container width="300" %}}![](attachments/build-hololens/install-dependencies.png){{% /image_container %}}
 
 You can now check for your Mendix app and see the results of your installations:
@@ -177,7 +179,7 @@ You can now check for your Mendix app and see the results of your installations:
 
 	{{% image_container width="300" %}}![](attachments/build-hololens/fetch-configs.png){{% /image_container %}}
 
-1. When you are ready to start the 3D environment, click **Go**. 
+1. When you are ready to start the 3D environment, click **Go**.
 1. When the 3D environment is loaded after the Mendix logo splash screen, you will see a message: **Longpress to start scanning for webviews**. To start scanning for markers, look at the markers, and then Tap and hold them.
 1. You should see a blue square with the text **Scanning** underneath:
 

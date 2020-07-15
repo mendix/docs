@@ -32,6 +32,10 @@ When **Show suggestions for system variables** is checked, Mendix Assist will in
 
 The **Auto-check delay** is the number of milliseconds that Studio Pro waits after a change, before starting the consistency checks. Increase this setting for large projects if Studio Pro responses slowly after changes.
 
+#### 2.3.2 Highlight Shown Errors and Warnings in the Editor
+
+When **Highlight shown errors and warnings in the editor** is checked, the errors and warnings which are currently shown in the Error List (as determined by the **Errors** and **Warnings** toggle buttons and the suppression rules) will be highlighted on the affected elements in the editor.
+
 ### 2.4 Deployment
 
 #### 2.4.1 JDK directory

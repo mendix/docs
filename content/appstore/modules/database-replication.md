@@ -10,7 +10,7 @@ tags: ["app store", "app store component", "database replication", "platform sup
 
 You can use the [Database Replication](https://appstore.home.mendix.com/link/app/160/) module to import data from existing databases into your Mendix application. You can configure how to map each table, column, and relation to your Mendix domain model. Complex mappings over multiple table joins are also possible. You can configured in the client or from Java.
 
-### 1.1 Typical Usage Scenarios
+### 1.1 Typical Use Cases
 
 * Convert an existing database to a Mendix domain model
 * Synchronize your application with a database used by another application

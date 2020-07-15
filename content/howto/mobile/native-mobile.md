@@ -2,7 +2,7 @@
 title: "Native Mobile"
 category: "Mobile"
 menu_order: 1
-tags: ["mobile", "native"]
+tags: ["mobile", "native", "iOS", "Android"]
 ---
 
 ## 1 Introduction
@@ -17,12 +17,13 @@ You build Mendix native mobile apps the same way you build web or hybrid apps. Y
 * [Set Up Remote Notifications](setting-up-native-push-notifications)
 * [Use Remote Notifications](native-remote-notifications)
 * [Use Local Notifications](local-notif-parent)
-* [Work with Parallels](using-mendix-studio-pro-on-a-mac)
-* [Implement Native Styling](native-styling)
-* [Debug Native Apps (Advanced)](native-debug)
-* [Deploy Your First Mendix Native App](deploying-native-app)
+* [Build Native Mobile Apps with Parallels](using-mendix-studio-pro-on-a-mac)
+* [Implement Native Mobile Styling](native-styling)
+* [Implement Best Practices for Native Mobile App UI](ui-best-practices)
+* [Debug Native Mobile Apps (Advanced)](native-debug)
+* [Deploy Your First Mendix Native Mobile App](deploying-native-app)
 * [Use Local Notifications](local-notif-parent)
 * [Create a Custom Developer App](how-to-devapps)
-* [Set Up Deep Links in Native Apps](native-deep-link)
+* [Set Up Deep Links in Native Mobile Apps](native-deep-link)
 * [Troubleshoot Common Native Mobile Issues](common-issues)
-
+* [Build a Mendix Native Mobile App Locally](native-build-locally)

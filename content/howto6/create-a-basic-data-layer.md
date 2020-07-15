@@ -8,7 +8,7 @@ tags: []
 
 This how-to explains how you can create a basic data layer for your application with Mendix. Each application can have multiple modules, and each module has its own domain model. All the domain models together define the data layer of the application. 
 
-The domain model consists of entities and associations. An entity is the blueprint for an object in your application, like "Customer" or "Order." Associations define the relation between two entities. As soon as you deploy the application, Mendix takes care of the underlying database for you. This means that you won't have to create tables and write queries yourself.
+The domain model consists of entities and associations. An entity is the blueprint for an object in your application, like "Customer" or "Order." Associations define the relation between two entities. As soon as you deploy the app, Mendix takes care of the underlying database for you. This means that you won't have to create tables and write queries yourself.
 
 **After using this how-to, you will know how to do the following:**
 

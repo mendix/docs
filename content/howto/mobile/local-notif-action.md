@@ -45,7 +45,7 @@ In this section you will learn to show a page when a user taps a notification.
 
 13. Navigate back to your **ACT_CreateAndSendNotification** nanoflow. 
 
-In **ACT_CreateAndSendNotification** you will set up the logic for tapping a notification which brings you to a page. This process requires you set up a string variable. However, because this string variable will never be used with other variables — it will only be used for internal notification functionality — you will not set it up by dragging and dropping a create variable activity like you did before. You will set it up with an expression.
+In **ACT_CreateAndSendNotification** you will set up the logic for tapping a notification which brings you to a page. This process requires you set up a string variable. However, because this string variable will never be used with other variables—it will only be used for internal notification functionality—you will not set it up by dragging and dropping a create variable activity like you did before. You will set it up with an expression.
 
 1.  Double-click your **Display Notification** activity:
 

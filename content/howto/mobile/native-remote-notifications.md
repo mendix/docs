@@ -14,7 +14,7 @@ This tutorial will teach you to configure and test remote notifications. Remote 
 
 If you want to use push notifications with custom apps which created with native builder, make sure you have completed the following prerequisite:
 
-* Complete [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app) through the end of the *Making Your First Build* section
+* Complete [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app) through the end of the *Making Your First Build* section
 
 ## 3 Setting Up Your Mendix Project
 
@@ -39,7 +39,7 @@ To install your module, do the following:
 
 	{{% image_container width="300" %}}![Capabilities](attachments/native-remote-push/modeler/setEncryption.png){{% /image_container %}}
 
-1. Add the [Push Notifications Connector](https://appstore.home.mendix.com/link/app/3003/) module to your app project.
+1. Add the [Push Notifications Connector](/appstore/modules/push-notifications) module to your app project.
 
 ### 3.2 Setting Up a Notification Widget
 
@@ -78,7 +78,7 @@ To set up a notification widget, do the following:
     
 ### 3.3 Synchronizing Unused Entities
 
-Studio Pro uses smart data syncing, meaning if an entity has not been retrieved on the native side, it will not be available in the native app. This situation will not occur often, since most Mendix native apps do retrieve entities which you want to show. For more information, see the [Synchronization](/refguide/offline-first#synchronization) section of the *Offline-First Reference Guide*.
+Studio Pro uses smart data syncing, meaning if an entity has not been retrieved on the native side, it will not be available in the native mobile app. This situation will not occur often, since most Mendix native mobile apps do retrieve entities which you want to show. For more information, see the [Synchronization](/refguide/offline-first#synchronization) section of the *Offline-First Reference Guide*.
 
 Currently your app does not retrieve any notifications in any of its pages. Fix this by doing the following:
 
@@ -153,8 +153,8 @@ Imagine your business has several products, and you want to send one product to 
 
 Below you will learn the following:
 
-* How to show a push notification to a user if their app is in the background — when a user taps it, they will be brought to a product page
-* How to show a small view to a user if their app is in the foreground — when a user taps the button in the animation, they will be brought to a product page
+* How to show a push notification to a user if their app is in the background—when a user taps it, they will be brought to a product page
+* How to show a small view to a user if their app is in the foreground—when a user taps the button in the animation, they will be brought to a product page
 
 ### 4.1 Push Notifications for an App in the Background
 

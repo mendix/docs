@@ -24,11 +24,11 @@ Alongside the props that correspond to the properties specified in widget defini
 
 ### 3.1 Name 
 
-In Mendix Studio and Mendix Studio Pro, every widget must have a name configured. The primary usage of a widget name is to make its component identifiable in the client so that it can be targeted using [Selenium](/howto/integration/selenium-support) or Appium test automation. In web apps, the Mendix platform automatically adds the class `mx-name-{widgetName}` to a widget so that no extra action from a component developer is required. Unfortunately, this solution is not possible for [native apps](/howto/mobile/native-mobile). For native apps a component developer must manually pass a given `string` `name` prop to an underlying React Native [testID](https://facebook.github.io/react-native/docs/view#testid).
+In Mendix Studio and Mendix Studio Pro, every widget must have a name configured. The primary usage of a widget name is to make its component identifiable in the client so that it can be targeted using [Selenium](/howto/integration/selenium-support) or Appium test automation. In web apps, the Mendix platform automatically adds the class `mx-name-{widgetName}` to a widget so that no extra action from a component developer is required. Unfortunately, this solution is not possible for [native mobile apps](/howto/mobile/native-mobile). For native mobile apps a component developer must manually pass a given `string` `name` prop to an underlying React Native [testID](https://facebook.github.io/react-native/docs/view#testid).
 
 ### 3.2 Class
 
-A user can specify multiple classes for every widget. They can do this either directly by configuring a [class](/refguide/common-widget-properties#class) property in the Studios, or by using design properties. In web apps, the Mendix platform creates a CSS class string from the configuration and passes it as a `string` `class` prop to every client component. Unfortunately, React Native does not have similar support for classes. Therefore in native apps a component will not receive `class` prop, but a `style` prop instead.
+A user can specify multiple classes for every widget. They can do this either directly by configuring a [class](/refguide/common-widget-properties#class) property in the Studios, or by using design properties. In web apps, the Mendix platform creates a CSS class string from the configuration and passes it as a `string` `class` prop to every client component. Unfortunately, React Native does not have similar support for classes. Therefore in native mobile apps a component will not receive `class` prop, but a `style` prop instead.
 
 ### 3.3 Style
 
@@ -137,7 +137,7 @@ There is a way to use more the convenient `displayValue`  and `setTextValue` whi
 
 The optional field `universe` is used to indicate the set of all possible values that can be passed to a `setValue` if a set is limited. Currently, `universe` is provided only when the edited attribute is of the Boolean or enumeration [types](/refguide/attributes#type).
 
-### 4.4 IconValue
+### 4.4 IconValue {#icon-value}
 
 `DynamicValue<IconValue>` is used to represent icons: small pictograms in the Mendix platform. Those can be static or dynamic file- or font-based images. An icon can only be configured through an [icon](property-types-pluggable-widgets#attribute) property. `IconValue` is defined as follows:
 
@@ -213,7 +213,7 @@ export interface ListValue {
 
 When a `datasource` property with `isList="true"` is configured for a widget, the client component gets a list of objects represented as a `ListValue`. This type allows detailed access to a data source, and enables control over the limit and offset of items represented in the list.
 
-However it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`widgets`](property-types-pluggable-widgets#widgets). The `dataSource` attribute on that property should reference a `datasource` property.
+However it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`attribute`](property-types-pluggable-widgets#attribute) or [`widgets`](property-types-pluggable-widgets#widgets). The `dataSource` attribute on that property should reference a `datasource` property.
 
 For clarity, consider the following example using `ListValue` together with the `widgets` property type. When the `widgets` property named `myWidgets` is configured to be tied to a `datasource` named `myDataSource`, the client component props appear as follows:
 
@@ -229,6 +229,22 @@ Because of the above configurations, the client component may render every insta
 ```ts
 this.props.myDataSource.items.map(i => this.props.myWidgets(i));
 ```
+
+Similarly a property of type `attribute` with a linked datasource is represented in the client component as follows:
+
+```ts
+interface MyListWidgetsProps {
+    myDataSource: ListValue;
+    myStringAttribute: (i: ObjectItem) => EditableValue<string>;
+}
+```
+
+Note that `myStringAttribute` is a function that returns an [`EditableValue`](#editable-value). In order to get the value, an item from `ListValue` should be supplied. See this code for an example:
+
+```
+this.props.myDataSource.items.map(i => this.props.myStringAttribute(i)); // returns an array of EditableValues
+```
+
 
 ## 5 Exposed Modules
 

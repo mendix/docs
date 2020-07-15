@@ -27,6 +27,6 @@ This is the variable name for the result of the cast. It can be used by all acti
 
 ## 3 Example
 
-For an example, see [SUB question cast example](https://modelshare.mendix.com/models/5f80169c-9833-4574-b472-71a21e480d19/sub-question-cast-example).
+For example, there are three specializations of the **Question** object. Only an object of the specialized type **MultipleChoiceQuestion** needs to have some special actions performed on it. These will be done in a sub-microflow which has as the input type **MultipleChoiceQuestion**. Since an object of the type **Question** cannot get passed to the sub-microflow, the object first needs to be cast to the object type **MultipleChoiceQuestion**.
 
-In this example, there are three specializations of the **Question** object. Only an object of the specialized type **MultipleChoiceQuestion** performs some special actions, which will be done in a sub-microflow which has as the input type **MultipleChoiceQuestion**. Since an object of the type **Question** cannot get passed to the sub-microflow, the object first needs to get casted to the object type **MultipleChoiceQuestion**.
+![](attachments/819203/cast-example.png)

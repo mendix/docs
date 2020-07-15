@@ -11,6 +11,26 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](/refguide/getting-the-make-it-native-app#direct-links).
 
+## Android 2.1.0 / iOS 2.2.0
+
+**Release date: June 24th, 2020**
+
+### New Features
+
+* We added a new showcase app to the iOS Make It Native app: The Native Banking app. The Native Banking app showcases a fully functional banking app made entirely in Mendix.
+
+### Fixes
+
+* We fixed an issue on iOS that was causing the viewport to not resize correctly when the app's orientation was changing.
+
+## Android 2.1.0 / iOS 2.1.0
+
+**Release date: May 15th, 2020**
+
+### New Features
+
+From Mendix Studio Pro 8.10 and above, the responsibility of deciding when to synchronize is returned to the client. This allows for faster reloads and syncing behavior that aligns better with that of release apps. The behavior for Mendix Studio Pro 8.9 remains unchanged. 
+
 ## Android 2.0.1 / iOS 2.0.0
 
 **Release date: April 30th, 2020**

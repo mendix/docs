@@ -48,5 +48,4 @@ To submit changes, follow these guidelines:
 * [Stories](/developerportal/collaborate/stories)
 * [Start Your Own Repository](starting-your-own-repository)
 * [Version Control](/refguide/version-control)
-* [Use the Feedback Widget](/developerportal/collaborate/use-feedback-widget)
 * [Share the Development Database](sharing-the-development-database)

@@ -3,14 +3,13 @@ title: "Module Security"
 parent: "security"
 menu_order: 20
 tags: ["studio pro", "module security", "security", "module"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
 
 {{% alert type="info" %}}
-
 For more general information on security, see [Security](security).
-
 {{% /alert %}}
 
 Within a module you can define module roles and specify security settings for pages, microflows, entities, and datasets.
@@ -21,9 +20,8 @@ A module role defines a set of access permissions that you can assign to a user.
 
 A module role has the following properties:
 
-* **Name** – the name of a module role. End-users do not see the names of module roles, if they create or view user accounts, they only see the names of user roles.
-
-*  **Documentation** – the documentation of a module role is there only for the convenience of Studio Pro users, it is not displayed to the end-users.
+* **Name** – the name of a module role; end-users do not see the names of module roles, if they create or view user accounts, they only see the names of user roles
+*  **Documentation** – the documentation of a module role is there only for the convenience of Studio Pro users, it is not displayed to the end-users
 
     ![](attachments/module-security/module-roles-tab.png)
 
@@ -50,12 +48,10 @@ The **Microflow access** tab is displayed as a matrix showing microflows and mod
 For each combination you can indicate whether or not the module role has access to the microflow. You can also edit this information in a [microflow](microflow) using the **Allowed roles** property.
 
 {{% alert type="info" %}}
-
 Note that these roles are only checked when the microflow is executed from the client. A microflow is always allowed to call another microflow and these roles are not checked then.
-
 {{% /alert %}}
 
-## 4 Entity Access
+## 4 Entity Access {#entity-access}
 
 **Entity Access** defines for each module role whether users with this role are authorized to **Create**, **Read**, **Write** and/or **Delete** objects of the entity. You can also write an XPath constraint to restrict the set of objects to which the access rule applies.
 
@@ -98,10 +94,8 @@ The **REST Access** tab is visible only when the service has the security set to
 | No access | Users with this module role have no access to the data set. |
 
 {{% alert type="info" %}}
-
 The constraints are defined in the parameter definitions of the data set. Whether they apply is defined in the **Data Set Access**.
 The ranges are defined in the parameters of the data set. Whether values in these ranges are allowed is defined in the **Data Set Access**.
-
 {{% /alert %}}
 
 ## 8 Read More

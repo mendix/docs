@@ -67,7 +67,7 @@ Conditional visibility settings can determine whether or not the list view is vi
 
 The data view is a central component in Mendix applications. The data view typically contains input widgets, like text boxes with labels. In more complex screens, a data view can contain tab controls per topic, and data views and data grids for related objects.
 
-If a `noEntityMessage` is specified, a data view that receives no source data will show this message instead of its content. Otherwise, the data view will show its static content and disabled input widgets. This property is a translatable text. See [Translatable Texts](/refguide/translatable-texts).
+If a `noEntityMessage` is specified, a data view that receives no source data will show this message instead of its content. Otherwise, the data view will show its static content and disabled input widgets. This property is a translatable text. See [Language Menu](/refguide/translatable-texts).
 
 The control bar of the data view can have the following buttons: save, cancel, close, and microflow. A typical data view has a save and a cancel button. If it is not editable, a close button is sufficient. Microflow buttons trigger custom microflows that have been defined in the model.
 
@@ -142,7 +142,7 @@ Studio Pro Guide | Model SDK API Docs
 --- | --- 
 [Button Widgets](/refguide/button-widgets) | [Button](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.button.html)
 [Button Properties](/refguide/button-properties) | [ButtonStyle](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.buttonstyle.html)
-[Translatable Texts](/refguide/translatable-texts) | [RenderType](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.rendertype.html)
+[Language Menu](/refguide/translatable-texts) | [RenderType](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.rendertype.html)
 | [Icon](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.icon.html)
 | [Text](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/texts.text.html)
 | [ClientTemplate](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.clienttemplate.html)

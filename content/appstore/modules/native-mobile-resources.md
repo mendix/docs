@@ -8,7 +8,27 @@ tags: ["app store", "app store component", "native mobile resources", "native wi
 
 ## 1 Introduction
 
-The [Native Mobile Resources](https://appstore.home.mendix.com/link/app/109513/) module is a bundle of Mendix Platform-supported widgets and nanoflow actions for building native mobile and hybrid applications. For more information on styling widgets, see the [Native Styling Reference Guide](/refguide/native-styling-refguide).
+The [Native Mobile Resources](https://appstore.home.mendix.com/link/app/109513/) module is a bundle of Mendix Platform-supported widgets and nanoflow actions for building native mobile and hybrid applications. For more information on styling widgets, see the [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide).
+
+For excellent deep-dive demonstrations of how to use these native mobile widgets, check out the videos below on the [Carousel](#carousel) and [Popup Menu](#popup-menu) widgets:
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/2Mzw7r4zLuyrvDcP1bhz4j.jpg"
+  data-uuid="2Mzw7r4zLuyrvDcP1bhz4j"
+  data-v="4"
+  data-type="inline"
+/>
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/wBDgxvFKGwFYkyxKhpHVLT.jpg"
+  data-uuid="wBDgxvFKGwFYkyxKhpHVLT"
+  data-v="4"
+  data-type="inline"
+/>
 
 ## 2 Native Widgets
 
@@ -23,7 +43,7 @@ These are the native widgets included in these resources along with links to the
 | [Badge](https://github.com/mendix/widgets-resources/blob/master/packages-native/badge) | Displays text or a value as a badge. |
 | [Barcode Scanner](https://github.com/mendix/widgets-resources/blob/master/packages-native/barcode-scanner) | Scans barcode and QR code values. |
 | [Bottom Sheet](https://github.com/mendix/widgets-resources/blob/master/packages-native/bottom-sheet) | Creates a set of options while blocking interaction with the rest of the screen or a draggable surface anchored to the bottom of the screen. |
-| [Carousel](https://github.com/mendix/widgets-resources/tree/master/packages-native/carousel) | Creates a carousel that can be swiped with free modeling. |
+| <a name="carousel"></a>[Carousel](https://github.com/mendix/widgets-resources/tree/master/packages-native/carousel) | Creates a carousel that can be swiped with free modeling. |
 | [Color Picker](https://github.com/mendix/widgets-resources/blob/master/packages-native/color-picker) | Allows the app end-user to select colors. |
 | [Feedback](https://github.com/mendix/widgets-resources/blob/master/packages-native/feedback) | Allows the app end-user to submit feedback directly into the app project. |
 | [Floating Action Button](https://github.com/mendix/widgets-resources/blob/master/packages-native/floating-action-button) | Displays a circular floating icon button. |
@@ -31,7 +51,7 @@ These are the native widgets included in these resources along with links to the
 | [List View Swipe](https://github.com/mendix/widgets-resources/blob/master/packages-native/listview-swipe) | Shows controls on swipe for an interactive list view. |
 | [Maps](https://github.com/mendix/widgets-resources/blob/master/packages-native/maps) | Shows locations on an interactive map. |
 | [Notifications](https://github.com/mendix/widgets-resources/blob/master/packages-native/notifications) | Triggers actions based on incoming notifications. |
-| [Popup Menu](https://github.com/mendix/widgets-resources/blob/master/packages-native/popup-menu) | Displays a context menu exactly where the user taps. |
+| <a name="popup-menu"></a>[Popup Menu](https://github.com/mendix/widgets-resources/blob/master/packages-native/popup-menu) | Displays a context menu exactly where the user taps. |
 | [Progress Bar](https://github.com/mendix/widgets-resources/blob/master/packages-native/progress-bar) | Displays progress in a horizontal bar. |
 | [Progress Circle](https://github.com/mendix/widgets-resources/blob/master/packages-native/progress-circle) | Displays progress in a circle with enclosed text. |
 | [QR Code](https://github.com/mendix/widgets-resources/blob/master/packages-native/qr-code) | Displays a QR code based on a value. |

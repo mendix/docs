@@ -687,7 +687,7 @@ The WatsonServiceConfig entity has the following attributes:
 The enumeration **WatsonServiceConfigType** contains a *Name* which reflects the VCAP value referring to the service. In some cases this is different from the current name of the service (for example the *Assistant* service uses the VCAP name *conversation*). The current name of the service is shown in the *Caption* of the enumeration.
 {{% /alert %}}
 
-## 9 Known Issues
+## 9 Limitations
 
 * Some Watson services are not available in every region.
 

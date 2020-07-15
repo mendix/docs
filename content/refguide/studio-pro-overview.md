@@ -76,11 +76,19 @@ Each document has its own save state, history, and future, so undo and redo acti
 
 ## 5 Dockable Panes
 
-Dockable panes can be positioned around the working area and contain various elements and settings. For example, you can view list of errors, configure properties of a specific document or an element, view toolbox. Panes are opened via [Menus](menus). 
+Dockable panes can be positioned around the working area and contain various elements and settings. For example, you can view list of errors, configure properties of a specific document or an element, view toolbox. Panes are opened via [Menus](menus).
 
-## 6 Shortcut Keys
+## 6 Status Bar
 
-### 6.1 General Shortcut Keys
+At the bottom of the Studio Pro main window pane is a status bar.
+
+On the left is the current status of Studio Pro.
+
+On the right is the currently selected language. If you have set up multiple languages in your app you can change the currently selected language by clicking here. For more information see [Language Menu](translatable-texts).
+
+## 7 Shortcut Keys
+
+### 7.1 General Shortcut Keys
 
 In the main window pane, <kbd>Ctrl</kbd> + <kbd>Tab</kbd> can be used to navigate between all open documents. Other shortcut keys that can be used in the main window pane can be found next to their relevant menu item in  [Menus](menus).
 
@@ -101,7 +109,7 @@ In most edit grids (such as the list of attributes in the entity properties), th
 | <kbd>Enter</kbd> | Edits the currently selected item. |
 | <kbd>Delete</kbd> | Deletes the currently selected item(s). |
 
-### 6.2 Domain Model Editor Shortcut Keys
+### 7.2 Domain Model Editor Shortcut Keys
 
 The following shortcut keys are available in the domain model editor:
 
@@ -111,7 +119,7 @@ The following shortcut keys are available in the domain model editor:
 | <kbd>Ctrl</kbd> + <kbd>A</kbd> | Selects all entities. |
 | <kbd>Esc</kbd> | Clears selection. |
 
-### 6.3 Page Editor Shortcut Keys
+### 7.3 Page Editor Shortcut Keys
 
 The following shortcut keys are available in the page editor:
 
@@ -122,7 +130,7 @@ The following shortcut keys are available in the page editor:
 | <kbd>Enter</kbd> | Edits the properties of the currently selected object in a dialog box. |
 | <kbd>F2</kbd> | Edits the caption of a label or button inline on the page. You can also just start typing a letter or a digit and the caption will be replaced by what you type. |
 
-### 6.4 Microflow Editor Shortcut Keys
+### 7.4 Microflow Editor Shortcut Keys
 
 The following shortcut keys are available in the microflow editor:
 
@@ -137,7 +145,7 @@ The following shortcut keys are available in the microflow editor:
 | <kbd>Shift</kbd> when resizing an activity | When resizing the entity, by holding <kbd>Shift</kbd> , the microflow component will stay centered at its current position and will expand equally in all directions. |
 | <kbd>Ctrl</kbd> when selecting multiple activities | When pressing the <kbd>Ctrl</kbd>, you can select additional microflow components. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 
-### 6.5 Microflow Debugger Shortcut Keys {#debugger-shortcuts}
+### 7.5 Microflow Debugger Shortcut Keys {#debugger-shortcuts}
 
 The following shortcut keys are available for the the microflow debugger:
 
@@ -148,7 +156,16 @@ The following shortcut keys are available for the the microflow debugger:
 | <kbd>Alt</kbd> + <kbd>F7</kbd> | *Step out* – instructs the debugger to leave the sub-microflow or loop.  |
 | <kbd>Alt</kbd> + <kbd>F8</kbd> | *Continue* – instructs the debugger to continue until it reaches another breakpoint. |
 
-## 7 Read More
+### 7.6 Language Shortcut Keys
+
+The following shortcut keys control the currently selected language:
+
+| Key | Description |
+| --- | --- |
+| <kbd>Ctrl</kbd> + <kbd>L</kbd> | Choose the next language in the list of languages chosen in **Language Settings…**. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd> | Choose the previous language in the list of languages chosen in **Language Settings…**. |
+
+## 8 Read More
 
 * [Project Explorer](project-explorer)
 * [Menus](menus)

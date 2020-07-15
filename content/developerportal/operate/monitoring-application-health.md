@@ -3,7 +3,7 @@ title: "Alerts"
 category: "Operations"
 menu_order: 20
 description: "This page describes how to monitor the application health."
-tags: ["Monitoring","Mendix Cloud","Developer Portal","Performance","Health"]
+tags: ["Monitoring","Mendix Cloud","Developer Portal","Performance","Health", "Database IOPS Burst Balance", "Database Freeable Memory"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -74,6 +74,14 @@ Warning Threshold | Memory utilization is between 75% and 85%. |
 Critical Threshold | memory utilization is higher than 85%.
 First actions to take | Inspect the trends for **Application node operating system memory** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
 
+Application Server Memory | |
+:---|:---|
+Description | Track the amount of free RAM on the application server. The *flapping status* indicates how frequently the memory level drops and then recovers to acceptable value. |
+Example message | WARNING: 140MB RAM free<br/>**Flapping Status** Service is not stable. Flapping percentage: 20% |
+Warning Threshold | Free RAM between 50MB and 150MB |
+Critical Threshold | Free RAM less than 50MB |
+First actions to take | Review the flapping status to see how often this has occurred. Review your app's memory use to see if it can use less RAM. You may need to upgrade the app node memory so you don't reach the warning alert limit. |
+
 Critical Logs | |
 :---|:---|
 Description | The CRITICAL log level is reserved for issuing messages in rare cases where the application may not be able to function reliably anymore. For example, there is a chance of data corruption when the application continues to be running. Internal JVM errors are logged to this level. Out of memory errors (which are JVM errors) must be treated as harmful for the stability and integrity of your Mendix application process.
@@ -97,6 +105,22 @@ Example message | Database has less than 5% free space.
 Warning Threshold | Database has less than 25% and more than 10% free space available. 
 Critical Threshold | Database has less than 10% free space available.
 First actions to take | Check if there is a sudden increase or a slow increase over time. Resolve by either stopping a runaway process, removing old data, or ordering more storage.
+
+Database Freeable Memory | |
+:---|:---|
+Description | Track the amount of freeable memory for the database belonging to the application.
+Example message | Database has less than 10% freeable memory.
+Warning Threshold | Not used.
+Critical Threshold | Database has less than 20% freeable memory.
+First actions to take | Inspect the trends graph **Database Node Operating System Memory** for anomalies and correlate those with application behavior. Resolve by either stopping a runaway process or ordering more memory.
+
+Database IOPS Burst Balance | |
+:---|:---|
+Description | Track the available IOPS burst balance credit for the database belonging to the application.
+Example message | Database has 10% IOPS burst balance.
+Warning Threshold | Not used.
+Critical Threshold | Database has 20% IOPS burst balance.
+First actions to take | Inspect the trends graph **Database IOPS Burst Balance** for anomalies and correlate those with application behavior.
 
 Health Check | |
 :---|:---|
@@ -135,6 +159,14 @@ First actions to take | Check the log files and application metrics for a possib
 Mendix Cloud v3 also has a number of alerting categories and thresholds. These differ from those in Mendix Cloud v4 and so are documented in this separate section.Again, any category that does not display as *OK* needs to be investigated.
 
 ### 4.1 Application Status
+
+Application Server Memory | |
+:---|:---|
+Description | Track the amount of free RAM on the application server. The *flapping status* indicates how frequently the memory level drops and then recovers to acceptable value. |
+Example message | WARNING: 140MB RAM free<br/>**Flapping Status** Service is not stable. Flapping percentage: 20% |
+Warning Threshold | Free RAM between 50MB and 150MB |
+Critical Threshold | Free RAM less than 50MB |
+First actions to take | Review the flapping status to see how often this has occurred. Review your app's memory use to see if it can use less RAM. You may need to upgrade the app node memory so you don't reach the warning alert limit. |
 
 CPU | |
 :---|:---|

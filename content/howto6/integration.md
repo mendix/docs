@@ -17,6 +17,5 @@ We want to create a large network of Mendix apps, so start integrating!
 * [How to Import XML Documents](importing-xml-documents)
 * [How to Export XML Documents](export-xml-documents)
 * [How to Import Excel Documents](importing-excel-documents)
-* [How to Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [How to Configure Selenium Support](selenium-support)
 * [How to Integrate a Legacy System into a Mendix App](integrating-a-legacy-system-into-a-mendix-app)

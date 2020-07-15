@@ -1,17 +1,21 @@
 ---
 title: "If Expressions"
 parent: "expressions"
-tags: ["studio pro"]
+tags: ["studio pro", "if expression", "expression", "if statement", "expressions"]
 ---
 
-If expressions can be used to define conditional actions in expressions. The correct syntax is as follows:
+## 1 Introduction
+
+If expressions can be used to define conditional actions in expressions. The correct syntax is the following:
 
 if _`<condition>`_ then _`<a value>`_ else _`<other value>`_
 
-Using the following statement as the expression of a change variable action for a string value:
+## 2 Example
+
+Using the following statement as the expression of a Change variable activity for a string value:
 
 ```java
 if 7 > 6 then "correct" else "incorrect"
 ```
 
-will set the value of the variable to "correct".
+will set the value of the variable to `correct`.

@@ -13,11 +13,72 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2020
 
+### July 13th, 2020
+
+#### Improvements
+
+* We increased the performance on opening the buzz page.
+* We changed the default avatar of a user profile from the Mendix logo to an industry standard user-icon.
+
+#### Fixes
+
+* We fixed a bug where, under certain circumstances, the "View App" was disabled even though it should have been enabled.
+
+### June 28th, 2020
+
+#### Improvements
+
+* We implemented the second increment in renaming the default **End-user** App Team role to [Guest](/developerportal/company-app-roles/index#app-team-roles).
+
+#### Fixes
+
+* We fixed an issue where it was possible to change the end date of a closed Sprint.
+
+### June 15th, 2020
+
+#### Improvements
+
+* The [new Stories UI](/developerportal/collaborate/stories) has been improved with various sections. The [old Stories UI](/developerportal/collaborate/stories#old) will be made unavailable soon. We encourage you to turn your tasks that are still available in the old Stories UI into new stories before the old UI is inaccessible.
+* We improved performance on story-related actions such as drag-and-drop and status changes on large app projects with many deleted items.
+* We renamed the default **End-User** App Team role to [Guest](/developerportal/company-app-roles/index#app-team-roles) to better distinguish App Team roles from app user roles.
+* We removed the list appearance of the [My Company's Apps](/developerportal/apps-list/#my-company-apps) page.
+
+#### Fixes 
+
+* We fixed a bug where the background did not display properly on mobile browsers.
+* We fixed a bug where changes to a story title or description were saved when clicking **Cancel**.
+
+### May 27th, 2020
+
+#### Improvements
+
+* When you [delete a story or task](/developerportal/collaborate/stories#deleting) on the [Stories](/developerportal/collaborate/stories) page, it is now irreversibly removed from the system.
+* We removed the ability to revert story-related changes in an app project's history.
+* We removed the ability to delete several stories at once on the **Stories** page.
+* We simplified story maintenance by preventing nested tasks.
+* We removed the read-only permission on the stories board to bring the Developer Portal in line with industry standards.
+* We made small improvements in the look and feel of the Developer Portal.
+
+#### Fixes
+
+* We fixed a bug where the calendar icon on date/time input fields was not displayed properly.
+* We fixed a bug where the star icon on your [favorite app projects](/developerportal/apps-list/#favoriting) was not displayed properly.
+
+### May 22nd, 2020
+
+#### Improvements
+
+* The [Stories](/developerportal/collaborate/stories) template functionality has been replaced with the **Clone** functionality in the [new UI option (beta)](/developerportal/collaborate/stories#story-actions).
+
 ### May 7th, 2020
 
-* We added a new story action called **Clone** to the new beta UI. For more information, see the [New UI Option (Beta)](/developerportal/collaborate/stories#beta) section of *Stories*.
+#### Improvements
+
+* We added a new story action called **Clone** to the new beta UI. For more information, see the [New UI Option (Beta)](/developerportal/collaborate/stories#story-actions) section of *Stories*.
 
 ### February 21st, 2020
+
+#### Improvements
 
 * We fixed an issue where [favorited apps](/developerportal/apps-list/#favoriting) still showed up in the favorites view on the [My Apps](/developerportal/apps-list/) page after being deleted.
 * We made performance improvements to the **My Apps** page.
@@ -47,13 +108,13 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Improvements
 
-* We made some minor improvements to the style of the [Stories](/developerportal/collaborate/stories#beta) beta version. This release fixes issues regarding batch actions.
+* We made some minor improvements to the style of the [Stories](/developerportal/collaborate/stories#story-actions) beta version. This release fixes issues regarding batch actions.
 
 ### December 13th, 2019 
 
 #### Improvements
 
-* We redesigned the [Stories](/developerportal/collaborate/stories#beta) page with a brand new UI and improved stability. The new UI can be accessed by clicking **Enable new UI**. This is a [beta version](/releasenotes/beta-features/).
+* We redesigned the [Stories](/developerportal/collaborate/stories#story-actions) page with a brand new UI and improved stability. The new UI can be accessed by clicking **Enable new UI**. This is a [beta version](/releasenotes/beta-features/).
 
 ### December 5th, 2019
 
@@ -149,7 +210,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Feedback & Support
 
-* We removed the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) from the Developer Portal. If you want to report an issue or ask a question, please submit a ticket at [Mendix Support](https://support.mendix.com).
+* We removed the [Mendix Feedback](/appstore/widgets/mendix-feedback) widget from the Developer Portal. If you want to report an issue or ask a question, please submit a ticket at [Mendix Support](https://support.mendix.com).
 
 ### January 3rd, 2019
 
@@ -371,7 +432,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 #### Fixes
 
 * A story in a completed Sprint no longer disappears when you open the details view.
-* The Mendix Feedback Widget now supports reporting feedback from pages with very long URLs.
+* The Mendix Feedback widget now supports reporting feedback from pages with very long URLs.
 
 ### June 7th, 2017
 

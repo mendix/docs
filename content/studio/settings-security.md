@@ -153,7 +153,7 @@ There are two ways to set access for specific pages/microflows in your app:
 
 	![](attachments/settings-security/permissions-section.png)
 
-## 4 Demo Users
+## 4 Demo Users {#demo-users}
 
 Demo users are a demonstration of each user role existing in your app. You can use demo users to review how your app looks like for each user role. For more technical information, see [Demo Users](/refguide/demo-users). 
 
@@ -207,7 +207,7 @@ No need to worry if you do not auto-upgrade, your app will still be secured and 
 
 If the automatic upgrade fails, this means, the service was customized in Studio Pro, and only manual upgrade in Studio Pro is possible in this case. 
 
-If the auto-upgrade detects that the service was customized in Studio Pro by a team member, you will be notified that a manual upgrade in Studio Pro should be performed first. For more technical information on how to upgrade the service in Studio Pro, see [Upgrading to MendixSSO from AppCloudServices](/developerportal/deploy/upgrading-to-mendix-sso-from-acs).
+If the auto-upgrade detects that the service was customized in Studio Pro by a team member, you will be notified that a manual upgrade in Studio Pro should be performed first. For more technical information on how to upgrade the service in Studio Pro, see [Upgrading to Mendix SSO from AppCloudServices](/developerportal/deploy/upgrading-to-mendix-sso-from-acs).
 
 ## 7 Read More
 

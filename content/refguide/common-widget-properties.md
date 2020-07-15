@@ -310,7 +310,7 @@ Default: *(none)*
 
 ### 7.2 Message
 
-This property determines the message that is shown to the user if widget validation is enabled and has failed. This is a translatable text (for more information, see [Translatable Texts](translatable-texts)).
+This property determines the message that is shown to the user if widget validation is enabled and has failed. This is a translatable text (for more information, see [Language Menu](translatable-texts)).
 
 For example, if an address field is required, the validation message for the text box of the address could be something like, `The address is required.`
 

@@ -15,6 +15,8 @@ Named items in the microflow (for example objects, lists, or variables) can be c
 
 Attributes and associations of objects are accessed using a slash (for example, the Name attribute of the customer object is referred to as `$customer/Name`, and the CRM.Customer_Order association of the customer object is referred to as `$customer/CRM.Customer_Order`).
 
+Starting with Studio Pro [8.10.0](/releasenotes/studio-pro/8.10#8100), attributes of associated objects can be accessed using multiple slashes (for example, the `Number` attribute of a single associated `CRM.Order` is referred to as `$customer/CRM.Customer_Order/CRM.Order/Number`).
+
 Expressions can contain several operations which are applied using standard algebraic rules for precedence and associativity (for example, `1 + 2 + 3`). Brackets can be used to change the precedence and associativity, or for clarity.
 
 ### 1.1 Example
@@ -29,7 +31,7 @@ An overview of the operators which can be used in expressions is shown below.
 
 ### 1.2 Regular Expressions
 
-For details on regular expressions, sub-expressions, and quantifiers, see [Regular Expressions](regular-expressions).
+[Regular Expression](regular-expressions) resource documents cannot be used in expressions. However, the format of regular expressions, sub-expressions, and quantifiers used in regular expression strings used within expressions are the same as those described in the [Expression](regular-expressions#expression) section of *Regular Expressions*.
 
 ## 2 Unary Expressions
 

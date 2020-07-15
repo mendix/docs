@@ -81,7 +81,7 @@ This differs from the [On change](#on-change) property in that the event will al
 
 #### 2.6.1 Empty Option Caption
 
-Empty option caption is the text that is shown for the empty option in the drop-down shown to the end-user. This is a translatable text. For more details, see [Translatable Texts](translatable-texts).
+Empty option caption is the text that is shown for the empty option in the drop-down shown to the end-user. This is a translatable text. For more details, see [Language Menu](translatable-texts).
 
 Adding a caption for the empty option improves the user experience of your application. It also helps end-users using a screen-reader to operate the application easily.
 

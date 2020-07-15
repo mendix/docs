@@ -223,7 +223,7 @@ In this section, you can view feedback submitted on the following:
 * Apps of which you are an App Team member
 * Your company’s apps of which you are not an App Team member
 
-When you click **Details** for feedback on an app of which you are an App Team member, you can manage the feedback. For details on how to do this, see [Feedback](/developerportal/collaborate/feedback).
+When you click **Details** for feedback on an app of which you are an App Team member, you can manage the feedback. For details on how to do this, see [Feedback Management](/developerportal/collaborate/feedback).
 
 ### 9.4 Team Server
 
@@ -338,6 +338,10 @@ The Mendix Platform stores certain personal information about you. To view this 
 Mendix has been tracking these data changes since November, 2018.
 {{% /alert %}}
 
-## 11 Main Document in This Category
+## 11 Point Penalties
+
+Abusing the Mendix Forum, App Store, point system, or other community tools is not allowed. Any such action can result in a point penalty. Mendix reserves the right to penalize a user who bypasses or games the system without informing them.
+
+## 12 Main Document in This Category
 
 * [OAuth & Scopes](oauth-scopes) – provides introductory information on how OAuth and scopes work as well as details on scopes generated in the Developer Portal

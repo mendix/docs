@@ -164,5 +164,4 @@ In this section you will create logic to import customers stored in a [XML docum
 *   [Importing Excel Documents](importing-excel-documents)
 *   [Exposing a web service](expose-a-web-service)
 *   [Selenium Support](selenium-support)
-*   [Synchronizing user accounts using the LDAP module](synchronizing-user-accounts-using-the-ldap-module)
 *   [Consuming a REST Service](consume-a-rest-service)

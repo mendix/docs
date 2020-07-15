@@ -143,7 +143,7 @@ To enable more control over the target architecture, use the following variants:
 **Release date: January 6th, 2019**
 
 {{% alert type="warning" %}}
-As of April 11th, 2019, Google will drop support for sending push notifications through their Google Cloud Messaging (GCM) service. By that time, all clients will need to have migrated to the new Firebase Cloud Messaging (FCM) service. The move from GCM to FCM impacts Mendix apps that employ push notifications through the Mendix [Push Notifications Connector](https://appstore.home.mendix.com/link/app/3003/). Please read the notes below for upgrade instructions
+As of April 11th, 2019, Google will drop support for sending push notifications through their Google Cloud Messaging (GCM) service. By that time, all clients will need to have migrated to the new Firebase Cloud Messaging (FCM) service. The move from GCM to FCM impacts Mendix apps that employ push notifications through the Mendix [Push Notifications Connector](/appstore/modules/push-notifications) module. Please read the notes below for upgrade instructions
 {{% /alert %}}
 
 #### Push Notifications

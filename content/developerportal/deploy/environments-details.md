@@ -246,6 +246,10 @@ Additional information can be found in the Mozilla developer guide [HTTP headers
 
 Most browsers have additional security to ensure that iframes are only allowed when they are from the same domain as the main page. The defaults for these vary by browser version. This security is controlled through SameSite cookies. You can find a good explanation of SameSite cookes in [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) on the *web.dev* website.
 
+{{% alert type="info" %}}
+There can be additional issues when using cookies in iframes for end-users using the **Safari** browser. Resolving these issues is outside the control of Mendix.
+{{% /alert %}}
+
 ##### 4.2.1.1 Using Custom Domains
 
 To avoid security issues when you want to embed the app in an iframe, we recommend that you use [custom domains](custom-domains) to ensure that the app you want to embed is part of the same domain. For example, if your page is mainpage.domain.name, then the app embedded in the iframe should be appname.domain.name.

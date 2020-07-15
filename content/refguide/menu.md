@@ -31,7 +31,9 @@ A menu item or a sub-item has the following general properties:
 
 * Icon – you can select a glyphicon (a character in a special font that stays sharp while scaling) or an image that will appear next to or above the caption in the [menu widget](menu-widgets)
 
-* Target –  the target of a menu item is a page or a microflow that will be opened when the item is clicked. A menu item that has sub-items cannot have a target.
+* Alternative text - you can define an alternative text if the caption is not provided. It will allows screen readers to announce a description for an icon.
+
+* On click –  action to be performed when the item is clicked. A menu item that has sub-items cannot have an on click event.
 
   {{% alert type="info" %}}To open a page with a data view on it from a menu item, set a microflow that first retrieves an object for the data view and then opens the page as a target.
 

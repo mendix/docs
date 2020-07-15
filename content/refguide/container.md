@@ -30,13 +30,13 @@ Container properties consist of the following sections:
 * [Events](#events)
 * [Visibility](#visibility)
 
-### 2.1 Accessibility Section {#accessibility}
+### 2.1 Accessibility {#accessibility}
 
-#### 2.1.1 Hide for screen readers ####
+#### 2.1.1 Hide for Screen Readers 
 
-Specifies weather or not to hide the container from screen readers.
+This property specifies whether to hide the container from screen readers or not.
 
-{{% alert type="info" %}} The container should not have any focusable element inside like Input Widgets, Links or Buttons. Otherwise it will still be announced by screen readers.
+{{% alert type="info" %}} The container should not have any focusable elements inside such as input widgets, links, or buttons. These elements will cause the container to be announced by screen readers.
 {{% /alert %}}
 
 ### 2.2 Common Section {#common}
@@ -72,7 +72,7 @@ The **Render mode** determines which HTML5 tag will be used to show the containe
 
 #### 2.5.1 On-Click {#on-click}	
 
-The **On-click** property specifies the action that will be executed when the user clicks the container (either with with the mouse pointer or by pressing the <kbd>Enter</kbd> or <kbd>Space</kbd> key when the container is in focus).
+The **On-click** property specifies the action that will be executed when the user clicks the container (either with with their mouse cursor or by pressing the <kbd>Enter</kbd> or <kbd>Space</kbd> keys when the container is in focus).
 
 {{% snippet file="refguide/events-section-link.md" %}}
 

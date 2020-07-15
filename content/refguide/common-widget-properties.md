@@ -14,9 +14,9 @@ These are properties that are shared by many elements in the page editor, such a
 
 ### 2.1 Screen Reader Caption 
 
-The **Screen reader caption** property allows information to be read by screen readers when **Show label** is set to **No** in an input widget.
+The Screen reader caption property allows information to be read by screen readers when **Show label** is set to **No** in an input widget.
 
-{{% alert type="info" %}}The **Screen reader caption** property is not supported on native mobile pages.{{% /alert %}}
+{{% alert type="info" %}}The Screen reader caption property is not supported on native mobile pages.{{% /alert %}}
 
 #### 2.1.1 Screen Reader Caption Input Widgets 
 

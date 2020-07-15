@@ -28,7 +28,7 @@ The **Screen reader caption** property can be set on the following widgets:
 *   [Check Box](check-box)
 *   [Radio Buttons](radio-buttons)
 *   [Date Picker](date-picker)
-*   [File Input](file-input)
+*   [File Manager](file-manager)
 *   [Reference Selector](reference-selector)
 *   [Input Reference Set Selector](input-reference-set-selector)
 

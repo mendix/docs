@@ -46,10 +46,7 @@ Text box properties consist of the following sections:
 
 ### 2.1 Accessibility Section{#common}
 
-#### 2.1.1 Screen reader caption ####
-The screen reader caption property allows to provide useful information to be announced by screen readers when 'Show label' is set to false.
-
-#### 2.1.2 Autocomplete ####
+#### 2.1.1 Autocomplete ####
 The autocomplete property specifies whether or not a text box should have autocomplete enabled. The autocomplete attribute also improves the browser's ability to pre-populate fields with user-preferred values. For more information see [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/#input-purposes)
 
 ### 2.2 Common Section{#common}

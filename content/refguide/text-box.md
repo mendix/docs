@@ -46,8 +46,9 @@ Text box properties consist of the following sections:
 
 ### 2.1 Accessibility Section{#common}
 
-#### 2.1.1 Autocomplete ####
-The autocomplete property specifies whether or not a text box should have autocomplete enabled. The autocomplete attribute also improves the browser's ability to pre-populate fields with user-preferred values. For more information see [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/#input-purposes)
+#### 2.1.1 Autocomplete 
+
+The autocomplete property specifies if a text box should have autocomplete enabled. The autocomplete attribute also improves the browser's ability to pre-populate fields with user-preferred values. For more information on how this helps you comply with accessibility guidelines, see the [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/#input-purposes)
 
 ### 2.2 Common Section{#common}
 

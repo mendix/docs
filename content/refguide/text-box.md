@@ -87,6 +87,12 @@ The on enter key press event property specifies an action that will be executed 
 
 {{% snippet file="refguide/events-section-link.md" %}}
 
+#### 2.5.5 On Input Event
+
+The on input event property specifies an action that will be executed when the input (visible characters) of the text box changes. "Note that the valu" By configuring the additional action delay property, which appears when selecting an action, the amount of action executions can be regulated. When an input change occurs during the delay time of a previous input change, the execution of the action with the previous change will be dismissed.
+
+{{% snippet file="refguide/events-section-link.md" %}}
+
 ### 2.6 Formatting Section{#formatting}
 
 The formatting section applies only to the way that numeric attributes are displayed. These are attributes of the following data types:

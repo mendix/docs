@@ -1,7 +1,7 @@
 ---
 title: "Use Remote Notifications"
-parent: "native-mobile"
-menu_order: 9
+parent: "notifications"
+menu_order: 20
 description: Learn to set up native push notifications with the Native builder.
 tags: ["mobile", "push notification", "remote", "push", "notification"]
 ---

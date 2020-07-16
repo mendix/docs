@@ -1,7 +1,7 @@
 ---
 title: "Use Local Notifications"
-parent: "native-mobile"
-menu_order: 10
+parent: "notifications"
+menu_order: 30
 description: Tutorials for setting up local push notifications which do not use an internet connection.
 tags: ["mobile", "push notification", "local", "push", "notification"]
 ---

@@ -42,11 +42,11 @@ It is not possible to use Mendix for Private Cloud in [OpenShift Online](https:/
 
 ## 3 Container Registries
 
-{{% alert type="info" %}}
-The cluster should be configured to be able to pull images from the registry.
+Mendix for Private Cloud builds container images for every app and pushes them to the registry. It needs credentials to access the registry and permissions to push images into the registry.
 
-If the registry requires authentication, this can be done by creating a `docker-registry` type secret and attaching it to the `default` ServiceAccount, or configuring cluster-wide registry authentication.
-{{% /alert %}}
+Images are pulled from the registry by Kubernetes, not by Mendix for Private Cloud.
+The configuration script for Mendix for Private Cloud can configure Kubernetes image pull secrets and use the same credentials it uses for pushing images (for all registries except EKS).
+For large-scale or enterprise deployments, it may be better to configure image pulls on a cluster-wide level, or to configure separate, read-only image pull credentials.
 
 ### 3.1 Local Registry
 

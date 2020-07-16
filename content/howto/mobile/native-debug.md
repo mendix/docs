@@ -1,6 +1,6 @@
 ---
 title: "Debug Native Mobile Apps (Advanced)"
-parent: "native-mobile"
+parent: "build-native-apps"
 menu_order: 40
 description: A how-to for debugging native mobile app projects using the Make It Native app.
 tags: ["native", "mobile", "debug", "Make It Native"]

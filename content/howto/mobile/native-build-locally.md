@@ -1,7 +1,7 @@
 ---
 title: "Build a Mendix Native Mobile App Locally"
-parent: "native-mobile"
-menu_order: 70
+parent: "build-native-apps"
+menu_order: 30
 description: Describes how to build your first Mendix native mobile app locally.
 tags: ["native", "mobile", "build", "local", "xcode", "android studio"]
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Deploy Your First Mendix Native Mobile App"
-parent: "native-mobile"
-menu_order: 70
+parent: "build-native-apps"
+menu_order: 10
 description: Describes how to deploy your first Mendix native mobile app with the Native Builder.
 tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Configure a Domain Model"
-category: "Domain Model"
 description: "This how-to describes the process of configuring the domain model in Mendix Studio."
+menu_order: 30
 tags: ["studio", "domain model", "decision", "domain model"]
 ---
 

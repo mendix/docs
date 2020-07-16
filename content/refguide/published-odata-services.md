@@ -112,7 +112,34 @@ The allowed roles define which [module role](module-security#module-role) a user
 Web service users cannot access OData services.
 {{% /alert %}}
 
-## 4 Runtime Considerations
+## 4 Properties
+
+In the properties pane of the published OData service you can edit some of the properties that you can also set in the *General* tab, such as *Service name*, *Version*, and *Namespace*.
+
+This section describes the additional properties that you can set.
+
+### 4.1 Documentation
+
+Here you can describe the purpose of the service. It's intended for other people
+working on this project.
+
+### 4.2 Replace illegal XML characters
+
+Some special characters cannot be used in XML. If your data contains these
+characters, the client will get an error. If you set this setting to *Yes*,
+those illegal characters are replaced by the DEL character, and the client will
+not get an error. However, the data that the client receives will not be exactly
+how you have it in your database, because these characters have been replaced.
+
+Default value: *No*
+
+This property is available in Studio Pro 8.12.0 and later.
+
+### 4.3 Public documentation
+
+You can write a *summary* and a *description* indended for people using the service.
+
+## 5 Runtime Considerations
 
 Once your OData-enabled app is running, an overview of exposed OData resources is available on the root URL followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/` You can copy and paste the links into for instance Excel to establish a link between your OData resources and Excel.
 

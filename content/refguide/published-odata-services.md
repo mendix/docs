@@ -120,24 +120,24 @@ This section describes the additional properties that you can set.
 
 ### 4.1 Documentation
 
-Here you can describe the purpose of the service. It's intended for other people
-working on this project.
+Here you can describe the purpose of the service. This is intended for other people
+working on this project and is not available to users of the OData service.
 
-### 4.2 Replace illegal XML characters
+### 4.2 Replace Illegal XML Characters
 
 Some special characters cannot be used in XML. If your data contains these
 characters, the client will get an error. If you set this setting to *Yes*,
 those illegal characters are replaced by the DEL character, and the client will
 not get an error. However, the data that the client receives will not be exactly
-how you have it in your database, because these characters have been replaced.
+what is stored in your database, because these characters have been replaced.
 
 Default value: *No*
 
 This property is available in Studio Pro 8.12.0 and later.
 
-### 4.3 Public documentation
+### 4.3 Public Documentation
 
-You can write a *summary* and a *description* indended for people using the service.
+You can write a *summary* and a *description* intended for people using the service.
 
 ## 5 Runtime Considerations
 

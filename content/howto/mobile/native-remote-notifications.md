@@ -1,5 +1,5 @@
 ---
-title: "Use Remote Notifications"
+title: "Use Push Notifications"
 parent: "notifications"
 menu_order: 20
 description: Learn to set up native push notifications with the Native builder.
@@ -8,7 +8,7 @@ tags: ["mobile", "push notification", "remote", "push", "notification"]
 
 ## 1 Introduction
 
-This tutorial will teach you to configure and test remote notifications. Remote notifications only work with apps created through the Native Builder. You cannot send notifications to an app inside the Make it Native app.
+This tutorial will teach you to configure and test push notifications (also known as remote notifications). Push notifications only work with apps created through the Native Builder. You cannot send notifications to an app inside the Make it Native app.
 
 ## 2 Prerequisites
 
@@ -112,7 +112,7 @@ Deploy your project and open your administration page in a web browser. Then, do
 
     {{% image_container width="300" %}}![Firebase Project ID](attachments/native-remote-push/modeler/firebase-project-id.png){{% /image_container %}}
 
-1.  Upload your private key (which you got in the [Setting up Firebase Cloud Messaging Service](setting-up-native-push-notifications#firebase-setup) section of *How to Set up Remote Notifications*:
+1.  Upload your private key (which you got in the [Setting up Firebase Cloud Messaging Service](setting-up-native-push-notifications#firebase-setup) section of *How to Set Up Push Notifications*:
 
     {{% image_container width="300" %}}![FCMConfig](attachments/native-remote-push/modeler/FCMConfig.png){{% /image_container %}}
 

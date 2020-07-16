@@ -1,5 +1,5 @@
 ---
-title: "Set Up Remote Notifications"
+title: "Set Up Push Notifications"
 parent: "notifications"
 menu_order: 10
 description: Learn how to set up remote push notifications for native mobile apps.
@@ -8,7 +8,7 @@ tags: ["mobile", "push notification", "remote", "push", "notification"]
 
 ## 1 Introduction
 
-Remote push notifications allow you to remotely trigger small text messages, sounds, and more on your users' devices. For more information on notifications, see Apple's [APNs Overview](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) or Google's [Notifications Overview](https://developer.android.com/guide/topics/ui/notifiers/notifications).
+Push notifications (also known as remote notifications) allow you to remotely trigger small text messages, sounds, and more on your users' devices. For more information on notifications, see Apple's [APNs Overview](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) or Google's [Notifications Overview](https://developer.android.com/guide/topics/ui/notifiers/notifications).
 
 Native remote push notifications have the more capabilities than hybrid push notifications. Native push notifications also require a unique setup method:
 
@@ -22,7 +22,7 @@ If you want to use local push notifications with the Make It Native app, the onl
 
 {{% alert type="info" %}}
 
-Remote notifications will not work in XCode's Simulator. For iOS, notifications only work on physical devices.
+Push notifications will not work in XCode's Simulator. For iOS, notifications only work on physical devices.
 
 {{% /alert %}}
 
@@ -146,7 +146,7 @@ android:launchMode="singleTop"
 
 ![AndroidManifestChanges](attachments/native-remote-push/androidManifestXml.png)
 
-Congratulations, you finished setting up customizations for your custom native mobile app! To implement remote push notifications on a test device, see [How to Use Remote Notifications](native-remote-notifications).
+Congratulations, you finished setting up customizations for your custom native mobile app! To implement remote push notifications on a test device, see [How to Use Push Notifications](native-remote-notifications).
 
 ## 5 Read More
 

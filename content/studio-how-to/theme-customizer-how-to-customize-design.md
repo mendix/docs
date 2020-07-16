@@ -21,8 +21,8 @@ You would like to customize your app design and apply the following changes to i
 
 * Use your company's logo and adjust its size
 * Use colors based on your company's logo for different elements in your app
-* Change colors of topbar, sidebar, and background
-* Change the font of your app and make headings larger
+* Change colors of topbar, sidebar, and backgrounds
+* Change the font of your app and make headers larger
 
 ## 2 Prerequisites
 
@@ -35,7 +35,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To upload a logo, do the following:
 
-1. Open the **Theme Customizer**.
+1. Click the paintbrush icon in the left menu bar to open the **Theme Customizer**.
 
 2. In the **Upload Logo** section, click **Select File**.
 
@@ -49,42 +49,45 @@ To upload a logo, do the following:
 
 5. Click **Save** in the top-left corner to save changes.
 
-The logo of your app has changed.
+Good job! You have uploaded your company's logo.
 
 ## 4 Changing Your App Colors
 
-You can customize your app colors in the **Brand Colors** section. Once you uploaded the logo, a color palette is generated based on the logo colors. You can then select **Logo Colors** in color-pickers of different settings.
+You can customize your app colors in the **Brand Colors** section. Once you uploaded the logo, a color palette is generated based on the logo colors. 
 
 To customize your app colors, do the following:
 
-1. In the **Brand Colors** section, click the **Default** option and select a color marked as *1* in **Logo Colors**:
+1. Click the paintbrush icon in the left menu bar to open the **Theme Customizer**.
+
+2. In the **Brand Colors** section, click the **Default** option and select a color marked as *1* in **Logo Colors**:
 
     ![Implementing Logo Colors, Default Option](attachments/theme-customizer-how-to-customize-design/implementing-logo-colors-default.png)
 
-2. Click the **Primary** option and select a color marked as *3* in **Logo Colors**:
+3. Click the **Primary** option and select a color marked as *3* in **Logo Colors**:
 
     ![Implementing Logo Colors, Primary Option](attachments/theme-customizer-how-to-customize-design/implementing-logo-colors-primary.png)
 
-3. In the top-right corner, select **Page View** to see how your changes are applied to pages. The colors that you have changed are applied to widgets that have the **Style** property, for example, buttons and texts. 
+4. In the top-right corner, select **Page View** to see how your changes are applied to pages. The colors you have changed are applied to widgets that have the **Style** property, for example, buttons and texts. 
 
     ![Page View](attachments/theme-customizer-how-to-customize-design/page-view.png)
 
-4. Select different pages in the top bar to make sure you like how new colors are implemented on all pages of your app:
+5. Select different pages in the top bar to make sure you like how new colors are implemented on all pages of your app:
 
     ![Select Pages](attachments/theme-customizer-how-to-customize-design/selecting-pages.png)
 
-5. In the **Brand Colors** section, click the **Info** option and fill in the HEX color code `#B056EF`:
+6. In the **Brand Colors** section, click the **Info** option and fill in the HEX color code `#B056EF`:
 
     ![Using Color Code](attachments/theme-customizer-how-to-customize-design/hex-color-code.png)
 
-6. Repeat step 4 to make sure the color fits all pages in your app.
-7. Click **Save** in the top-right corner to implement your changes.
+7. Repeat step 5 to make sure the color fits all pages in your app.
 
-Good job! You changed the colors in your app. 
+8. Click **Save** in the top-right corner to implement your changes.
 
-## 5 Customizing Topbar, Sidebar,and Backgrounds
+You have changed the colors in your app. 
 
-You can change the way your app layout looks by changing the colors and fonts of your topbar, sidebar, and backgroungs.
+## 5 Customizing Top Bar, Sidebar, and Backgrounds
+
+You can change the way your app layout looks by changing the colors and fonts of your top bar, sidebar, and backgrounds.
 
 Do the following:
 
@@ -92,9 +95,9 @@ Do the following:
 
 2.  In the **UI Customization** section >**Topbar**, click **Background** and choose color numbered *5* in **Logo Colors**.  
 
-3.  In the top-right corner, select **Page View** to see how your changes are applied to pages. You can see that the topbar is light-blue now. 
+3.  In the top-right corner, select **Page View** to see how your changes are applied to pages. You can see that the top bar is light-blue now. 
 
-4. Click the **Border** setting and fill in the HEX color code `#989393`. You can see that the border of the topbar is grey now.
+4. Click the **Border** setting and fill in the HEX color code `#989393`. You can see that the border of the top bar is grey now.
 
    ![Topbar Colors](attachments/theme-customizer-how-to-customize-design/topbar-colors.png)
 
@@ -103,23 +106,23 @@ Do the following:
    1. Click the **Logo Width** setting and change it from 30 PX to 100 PX.
    2.  Click the **Logo Height** setting and change it from 30 PX to 100 PX.
 
-6. As you would like to change make your sidebar background deep-blue, click **Background** in the **Sidebar** section and fill in the HEX color code `#0D3A7A`.
+6. To change make your sidebar background deep-blue, click **Background** in the **Sidebar** section and fill in the HEX color code `#0D3A7A`.
 
 7. To change the background of your app to very light grey, click the **Defaults** setting in the **Background** section and choose fill in the HEX color code `F5F5F5`.
 
 8. Click **Save** in the top-right corner to implement your changes.
 
-Great job! You customized your topbar, sidebar, logo size, and the background color.
+Great job! You customized your top bar, sidebar, logo size, and the background color.
 
 ## 6 Changing Fonts and Customizing Headers
 
-The **Typography** section of the Theme Customizer allows you to manage text elements in your app, such as page headers or text in widgets. To change the fonts and customize headers, do the following:
+The **Typography** section of the **Theme Customizer** allows you to manage text elements in your app, such as page headers or text in widgets. To change the fonts and customize headers, do the following:
 
-1. Open the Theme Customizer.
+1. Open the **Theme Customizer**.
 
 2. In the **Typography** section, click the **Base Font Family** and change it to **Bitter**. 
 
-3. To make the font of such elements as text widget larger, change **Base Font Size** from *14* to *16*.
+3. To make the font of basic elements (such as a text in widgets) larger, change **Base Font Size** from *14* to *16*.
 
 4.  As you would like to make all headers larger too, do the following:
 
@@ -136,3 +139,5 @@ The **Typography** section of the Theme Customizer allows you to manage text ele
 5. In the top-right corner, select **Page View** to see how your changes are applied to pages.
 
 6. Click **Save** in the top-right corner to implement your changes.
+
+Congratulations! You have customized the style of your app. You can now [preview your app](/studio/publishing-app) to test now the changes look like.  

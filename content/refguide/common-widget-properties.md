@@ -10,7 +10,7 @@ tags: ["studio pro", "widget properties", "properties", "common", "widget"]
 
 These are properties that are shared by many elements in the page editor, such as a page or widgets. For a complete list of properties, take a look at the relevant element.
 
-## 2 Accessibility Properties and Widgets {#accessibility-properties}
+## 2 Accessibility Properties and Widgets{#accessibility-properties}
 
 ### 2.1 Screen Reader Caption 
 
@@ -32,11 +32,11 @@ The **Screen reader caption** property can be set on the following widgets:
 *   [Reference Selector](reference-selector)
 *   [Input Reference Set Selector](input-reference-set-selector)
 
-## 3 Common Section {#common-properties}
+## 3 Common Section{#common-properties}
 
 ![Common Section](attachments/common-widget-properties/common-section.png)
 
-### 3.1 Name {#name}
+### 3.1 Name{#name}
 
 The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class `mx-name-{NAME}`, which can be useful for [Selenium testing](/howto7/integration/selenium-support).
 
@@ -48,41 +48,37 @@ Default: *0*
 
 {{% alert type="info" %}}Tab index is not supported on native mobile pages.{{% /alert %}}
 
-### 3.3 Class {#class}
+### 3.3 Class{#class}
 
 The class property allows you to specify one or more cascading style sheet (CSS) classes for the widget. The classes should be separated by a space. The classes will be applied to the widget in the browser and the widget will get the corresponding styling. The classes should be classes in the theme that is used in the project. It overrules the default styling of the widget.
 
-Styling is applied in the following order:<br />
-<br />
-1) the default styling defined by the theme the project uses<br />
-2) the `Class` property of the widget<br />
-3) the `Style` property of the widget.
+Styling is applied in the following order:
+
+1. The default styling defined by the theme the project uses.
+2. The `Class` property of the widget.
+3. The `Style` property of the widget.
 
 You can see which widgets in a page have styling applied via the class or style property by clicking the <strong>Show styles</strong> button.
 
 ![](attachments/common-widget-properties/show-styles.png)
 
-### 3.4 Style {#style}
+### 3.4 Style{#style}
 
-The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied *after* the class. For example:<br />
-<br />
-<code>background-color:lightblue; color:red;</code><br />
-<br />
-will result in red text on a blue background:
+The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied *after* the class. For example, `>background-color:lightblue; color:red;` will result in red text on a blue background:
 
 ![](attachments/common-widget-properties/style-example.png)
 
 You can see which widgets in a page have styling applied via the style or class property by clicking the <strong>Show styles</strong> button.
 
-### 3.5 Documentation {#documentation}
+### 3.5 Documentation{#documentation}
 
 Some widgets, for example snippets and building blocks, have a **Documentation** property which can be used to store developer documentation. This can be used to explain to other developers how to use these widgets. End-users will never see this documentation.
 
-## 4 Data Source Section {#data-source}
+## 4 Data Source Section{#data-source}
 
 ![Data Source Section](attachments/common-widget-properties/data-source-section.png)
 
-### 4.1 Attribute (Path)
+### 4.1 Attribute(Path)
 
 This property identifies an attribute which is used in an input widget.
 
@@ -100,9 +96,7 @@ With the following widgets, the Attribute (Path) specifies the attribute which i
 The attribute can be one of the following:
 
 1. An attribute of the entity of the data container that contains the widget.
-
 2. An attribute of the entity of any enclosing data container that contains the widget. Available since Mendix 8.8.
-
 3. An attribute of an entity associated with the data container entity by following one or more associations of type reference through the domain model.
 
 In the first two cases we say the widget is connected to an **attribute** and in the third case to an **attribute path**.
@@ -356,11 +350,11 @@ The widget can be made visible only if the object of the data container that con
 
 A practical example would be a web shop in which the user must submit both billing and delivery information. In this case, you might not wish to bother the user with a second set of address input fields unless they indicate that the billing address and delivery address are not the same. You can accomplish this by making the delivery address fields conditionally visible based on the Boolean attribute `SameBillingAndDeliveryAddress`.
 
-##### Based on Attribute Value {#visibility-based-on-attribute-value}
+##### 9.1.1.1 Based on Attribute Value{#visibility-based-on-attribute-value}
 
 When selected, this shows the widget while a particular attribute has a certain value. Only Boolean and enumeration attributes can be used for this purpose.
 
-##### Based on Expression {#visibility-based-on-expression}
+##### 9.1.1.2 Based on Expression{#visibility-based-on-expression}
 
 When selected, this shows the widget while a provided [expression](expressions) evaluates to true. The object of the containing data container is available inside an expression as a `$currentObject` variable. In Mendix 8.1 and above, the expression can access objects of all the data containers enclosing that data container widget. These objects are available under the name of the widget they originate from (for example, `$dataView1`).
 

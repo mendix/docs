@@ -105,7 +105,7 @@ The Community Commons container project contains a variety of predesigned unit t
 * `IsStringSimplified` – This determines whether a string can be further simplified by removing diacritics.
 * `RandomString` – This generates a random alphanumeric string of the desired length.
 * `RandomHash` – This generates a random hash perfectly to use as a random unique identifier.
-* `RegexReplaceAll` – This performs a regular expression replace, which is identical to the microflow expression function `replaceAll`. (DEPRECATED)
+* `RegexReplaceAll` – This performs a regular expression replace, which is identical to the microflow expression function `replaceAll`.
 * `RegexQuote` – This escapes a string value so that it can be used literally with Mendix built-in `regex` replacement functions (for example, so the `$` sign is not interpreted as a back reference to a match).
 * `StringLeftPad` – This pads a string on the left to a certain length.
 * `StringRightPad` – This pads a string on the right to a certain length.

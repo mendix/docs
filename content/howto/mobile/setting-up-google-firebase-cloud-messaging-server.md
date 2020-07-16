@@ -120,4 +120,4 @@ Only create an iOS application in your Firebase project when you plan on using F
 
 * [Implement Push Notifications](implementation-guide)
 * [Set Up Hybrid Push Notifications](setting-up-hybrid-push-notifications)
-* [Set Up Remote Notifications](setting-up-native-push-notifications)
+* [Set Up Push Notifications](setting-up-native-push-notifications)

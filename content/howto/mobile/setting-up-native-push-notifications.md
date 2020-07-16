@@ -1,7 +1,7 @@
 ---
 title: "Set Up Remote Notifications"
-parent: "native-mobile"
-menu_order: 8
+parent: "notifications"
+menu_order: 10
 description: Learn how to set up remote push notifications for native mobile apps.
 tags: ["mobile", "push notification", "remote", "push", "notification"]
 ---

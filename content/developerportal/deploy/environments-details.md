@@ -247,7 +247,7 @@ Additional information can be found in the Mozilla developer guide [HTTP headers
 Most browsers have additional security to ensure that iframes are only allowed when they are from the same domain as the main page. The defaults for these vary by browser version. This security is controlled through SameSite cookies. You can find a good explanation of SameSite cookes in [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) on the *web.dev* website.
 
 {{% alert type="info" %}}
-There can be additional issues when using cookies in iframes for end-users using the **Safari** browser. Resolving these issues is outside the control of Mendix.
+There can be additional issues when using cookies in iframes for end-users using the **Safari** browser. Resolving these issues is outside the control of Mendix. See the [Full Third-Party Cookie Blocking and More](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) blog post on *Webkit.org* for more information.
 {{% /alert %}}
 
 ##### 4.2.1.1 Using Custom Domains

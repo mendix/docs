@@ -44,7 +44,7 @@ Text box properties consist of the following sections:
 * [Validation](#validation)
 * [Visibility](#visibility)
 
-### 2.1 Accessibility Section{#common}
+### 2.1 Accessibility Section{#accessibility}
 
 #### 2.1.1 Autocomplete 
 

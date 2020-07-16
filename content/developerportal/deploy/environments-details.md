@@ -209,7 +209,7 @@ For more information, see [Certificates](certificates) and [Custom Domains](cust
 HTTP Headers allows you to set the values of selected HTTP response headers. These allow the server to pass additional information with the response which the browser will interpret to control the behavior of your Mendix app.
 
 {{% alert type="info" %}}
-This replaces the option to prevent embedding your app in an IFrame with more flexible options to set HTTP Headers.
+This replaces the option to prevent embedding your app in an iframe with more flexible options to set HTTP Headers.
 {{% /alert %}}
 
 For Mendix Cloud v3, only *X-Frame-Options* is supported. For Mendix Cloud v4 the HTTP headers which are supported in the Developer Portal are:
@@ -220,7 +220,7 @@ For Mendix Cloud v3, only *X-Frame-Options* is supported. For Mendix Cloud v4 th
 | Content-Security-Policy | allows web site administrators to control resources the user agent is allowed to load for a given page | a string value<br/>*for more information see the W3C recommendation [Content Security Policy Level 2](https://www.w3.org/TR/CSP2/)* |
 | Referrer-Policy | governs which referrer information should be included with requests made | |
 | X-Content-Type-Options | indicate that the MIME types advertised in the Content-Type headers should not be changed and be followed | |
-| X-Frame-Options | indicates whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>` or `<object>` | The default is not to allow apps to be rendered inside frames. <br/> This was the value set previously to prevent embedding in an IFrame <br/> See [Running Your App in an Iframe](#iframe), below, for information about running your app inside an iframe. |
+| X-Frame-Options | indicates whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>` or `<object>` | The default is not to allow apps to be rendered inside frames. <br/> This was the value set previously to prevent embedding in an iframe <br/> See [Running Your App in an Iframe](#iframe), below, for information about running your app inside an iframe. |
 | X-Permitted-Cross-Domain-Policies | specifies whether this page can load resources from a different domain | |
 | X-XSS-Protection | stops pages from loading when they detect reflected cross-site scripting (XSS) attacks | |
 

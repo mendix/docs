@@ -19,11 +19,11 @@ Takes a string and parses it. If it fails and a default value is specified, it r
 
 Use the following input parameters:
 
-*   a date
+*   Date
     Type: String
-*   a format
+*   Format
     Type: String
-*   a default value (**optional**)
+*   Default value (**optional**)
     Type: Date and time
 
 #### 2.2 Output
@@ -33,28 +33,31 @@ Type: Date and time
 
 #### 2.3 Examples
 
-If you type in the following input:
+The examples below illustrate which value the expression returns:
 
-```java
-parseDateTime('2015-05-21', 'yyyy-MM-dd')
-```
+* If you type in the following input:
 
-the output is:
+    ```java
+    parseDateTime('2015-05-21', 'yyyy-MM-dd')
+    ```
 
-```java
-The date May 21st, 2015\. The time will be 12 o'clock at night because it is not specified.
-```
-If you type in the following input:
+    the output is:
 
-```java
-parseDateTime('noDateTime', 'dd-MM-yyyy', dateTime(2007))
-```
+    ```java
+    The date May 21st, 2015\. The time will be 12 o'clock at night  because it is not specified.
+    ```
+    
+* If you type in the following input:
 
-the output is:
+    ```java
+    parseDateTime('noDateTime', 'dd-MM-yyyy', dateTime(2007))
+    ```
 
-```java
-'Mon Jan 01 00:00:00 CET 2007'
-```
+    the output is:
+
+    ```java
+    'Mon Jan 01 00:00:00 CET 2007'
+    ```
 
 ## 3 formatDateTime[UTC]
 

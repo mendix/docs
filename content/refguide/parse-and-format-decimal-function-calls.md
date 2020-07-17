@@ -71,41 +71,43 @@ A string representation of the decimal in the format specified by the `format` p
 
 #### 3.2.1 Microflow Examples
 
-If you type in the following input:
+The examples below illustrate which value the expression returns:
 
-```java
-formatDecimal(1234.56, '#,###.#')
-```
+* If you type in the following input:
 
-the output is (depending on the language settings):
+    ```java
+    formatDecimal(1234.56, '#,###.#')
+    ```
 
-```java
-'1,234.5' or '1.234,5'
-```
+    the output is (depending on the language settings):
 
-If you type in the following input:
+    ```java
+    '1,234.5' or '1.234,5'
+    ```
 
-```java
-formatDecimal(1234.56, '¤ #,##0.00')
-```
+* If you type in the following input:
 
-the output is (depending on language settings):
+    ```java
+    formatDecimal(1234.56, '¤ #,##0.00')
+    ```
 
-```java
-'€ 1.234,50' or '$ 1,234.50'
-```
+    the output is (depending on language settings):
 
-If you type in the following input:
+    ```java
+    '€ 1.234,50' or '$ 1,234.50'
+    ```
 
-```java
-formatDecimal(0.56, '% ##0')
-```
+* If you type in the following input:
 
-the output is
+    ```java
+    formatDecimal(0.56, '% ##0')
+    ```
 
-```java
-'% 56' 
-```
+    the output is
+
+    ```java
+    '% 56' 
+    ```
 
 #### 3.2.2 Nanoflow Examples
 

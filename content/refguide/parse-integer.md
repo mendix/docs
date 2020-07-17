@@ -1,46 +1,57 @@
 ---
 title: "Parse Integer"
 parent: "expressions"
-tags: ["studio pro"]
+description: "Describes the function for parsing integer from strings in Mendix."
+tags: ["studio pro", "expressions", "parse", "integer"]
 ---
 
+## 1 Introduction
 
-Try to convert a string to an integer.
+This document describes functions that converts a string to an integer.
 
-## parseInteger
+## 2 parseInteger
 
-Take a string and try to parse it to an integer.
+Takes a string and parses it to an integer.
 
-### Input parameters
+### 2.1 Input Parameters
+
+Use the following input parameters:
 
 *   The string to parse
     Type: String
 *   (Optional) Default value
     Type: Integer
 
-### Output
+### 2.2 Output
 
 The integer, if it's possible to parse it from the string. If it's not a valid parsable string, the default value will be returned. If no default value is provided, an error will occur.
+
 Type: Integer
 
-```java
-parseInteger('42')
-```
+### 2.3 Examples
 
-returns:
+The examples below illustrate which value the expression returns:
 
-```java
-42
-```
+* If you type in the following input:
 
-with default value:
+    ```java
+    parseInteger('42')
+    ```
 
-```java
-parseInteger('not_an_integer', 42)
-```
+    the output is:
 
-returns:
+    ```java
+    42
+    ```
 
-```java
-42
-```
+* If you type in the following input:
+
+    ```java
+    parseInteger('not_an_integer', 42)
+    ```
+
+    the output is:
+
+    ```java
+    42
+    ```

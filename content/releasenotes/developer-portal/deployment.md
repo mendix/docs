@@ -10,6 +10,12 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### July 22nd, 2020
+
+#### Mendix Cloud
+
+* We fixed an issue where trends graphs were not being updated with the latest data. (Ticket 102400)
+
 ### July 16th, 2020
 
 #### Mendix Cloud

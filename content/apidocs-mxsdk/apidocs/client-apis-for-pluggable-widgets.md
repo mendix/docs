@@ -189,7 +189,7 @@ export interface FileValue {
 }
 ```
 
-### 4.6 ListValue{#listvalue}
+### 4.7 ListValue{#listvalue}
 
 `ListValue` is used to represent a list of objects for the [datasource](property-types-pluggable-widgets#datasource) property.
 
@@ -216,7 +216,7 @@ When a `datasource` property with `isList="true"` is configured for a widget, th
 However it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`attribute`](property-types-pluggable-widgets#attribute), [`action`](property-types-pluggable-widgets#action) or [`widgets`](property-types-pluggable-widgets#widgets).
 
 
-### 4.7 ListActionValue {#listactionvalue}
+### 4.8 ListActionValue {#listactionvalue}
 
 `ListActionValue` represents actions that may be applied to items from `ListValue`. The `ListActionValue` is a function and its definition is as follows:
 
@@ -247,11 +247,10 @@ actionOnFirstItem.execute();
 Note: in this code sample checks of status of `myDataSource` and availability of items are omited for simplicity. See [ActionValue section](#actionvalue) for more information about usage of `ActionValue`.
 
 
-### 4.8 ListAttributeValue {#listattributevalue}
+### 4.9 ListAttributeValue {#listattributevalue}
 
-`ListAttributeValue` represent an [attribute property](property-types-pluggable-widgets#attribute) that is linked to a data source.
-This allows the client component to access attribute values on individual items from a `ListValue`. 
-`ListAttributeValue` is a function and its definition is as follows:
+`ListAttributeValue` represents an [attribute property](property-types-pluggable-widgets#attribute) that is linked to a data source.
+This allows the client component to access attribute values on individual items from a `ListValue`. `ListAttributeValue` is a function and its definition is as follows:
 
 ```ts
 export type ListAttributeValue = (item: ObjectItem) => EditableValue<AttributeValue>;
@@ -278,7 +277,8 @@ const attributeValue = this.props.myDataSource.myAttributeOnDatasource(this.prop
 Note: in this code sample checks of status of `myDataSource` and availability of items are omited for simplicity. See [EditableValue section](#editablevalue) for more information about usage of `EditableValue`.
 
 
-### 4.9 ListWidgetValue {#listwidgetvalue}
+### 4.10 ListWidgetValue {#listwidgetvalue}
+
 `ListWidgetValue` represents a [widget property](property-types-pluggable-widgets#widgets) that is linked to a data source. 
 This allows the client component to render child widgets with items from a `ListValue`.
 `ListWidgetValue` is a function and its definition is as follows:

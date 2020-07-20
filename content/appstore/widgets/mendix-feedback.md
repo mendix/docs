@@ -7,7 +7,7 @@ tags: ["app store", "app store component", "widget", "feedback", "platform suppo
 ---
 
 {{% alert type="info" %}}
-We are deprecating outdated versions of Feedback widget in order to provide consistent and optimized experience. As of 1st of Septembeer 2020, Feedback widget version 5.1.3 or lower will be removed and stop to function in your app. Please always keep your Feedback widget up-to-date to ensure best experience for your users.
+We are deprecating outdated versions of Feedback widget in order to provide consistent and optimized experience. As of 1st of October 2020, we will end support Feedback widget version 5 or below. Please always keep your Feedback widget up-to-date to ensure best experience for your users.
 {{% /alert %}}
 
 ## 1 Introduction

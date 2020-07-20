@@ -19,12 +19,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Downloading Mendix Studio Pro
 
-Mendix Studio Pro can be installed on your machine with a Windows exectuable file. This executable can be downloaded from the Mendix App Store. Follow these steps to download Mendix Studio Pro:
+Mendix Studio Pro can be installed on your machine with a Windows executable file. This executable file can be downloaded from the Mendix App Store. Follow these steps to download Mendix Studio Pro:
 
 1. Go to the Studio Pro download page in the [Mendix App Store](https://appstore.home.mendix.com/link/modeler/).
-2.  Click **Download** to download the latest Mendix Studio Pro.
+2.  Click the **Download** button in the top-right corner to download the latest Mendix Studio Pro.
 
-	![](attachments/install/1.jpg)
 
 ## 4 Installing Mendix Studio Pro {#install}
 

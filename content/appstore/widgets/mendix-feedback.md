@@ -6,6 +6,10 @@ tags: ["app store", "app store component", "widget", "feedback", "platform suppo
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}
+We are deprecating outdated versions of the Mendix Feedback widget to provide consistent and optimized experience. As of October 1st, 2020, we will end support for Mendix Feedback widget version 5 or below. Please always keep your Feedback widget up-to-date to ensure best experience for your users.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The [Mendix Feedback](https://appstore.home.mendix.com/link/app/199/) widget allows end-users of your application to directly submit feedback into your app project. The feedback widget is fully integrated with the [Feedback](/developerportal/collaborate/feedback) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/collaborate/stories) to improve your app.

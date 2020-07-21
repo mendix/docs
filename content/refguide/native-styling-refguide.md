@@ -164,6 +164,37 @@ The page title widget shows the title of the page on which it is used. This can 
 
 The default class to style all page titles is named `PageTitle`.
 
+### 4.4 Layout Grid
+
+The layout grid widget can be used to structure the content on your page. You are able to create rows and columns which you can configure to have fixed or dynamic sizing.
+
+The widget’s style properties are divided over 3 objects. `LayoutGrid`, `row` and `col`.
+
+The main `LayoutGrid`:
+```xml
+<container></container>
+```
+
+The `row`:
+```xml
+<container></container>
+```
+
+The `col`:
+```xml
+<container></container>
+```
+
+The resulting DOM looks as follows:
+```xml
+<container>
+	<row>
+		<col></col>
+	</row>
+</container>
+```
+
+
 ## 5 Container Widgets
 
 Container widgets are a set of tools that allow you to provide structure for your page’s content. There is also a specific widget called container widget detailed below. For more information on these widgets, see [Container Widgets](container-widgets).

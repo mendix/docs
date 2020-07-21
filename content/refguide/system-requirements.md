@@ -143,20 +143,15 @@ For server-based installations, the following storage types mounted by the OS ar
 
 ## 10 Browsers {#browsers}
 
-### 10.1 Desktop Browsers
+### 10.1 Web Apps
 
-* Google Chrome
-* Mozilla Firefox 
-* Apple Safari
-* Microsoft Edge
+* Google Chrome (latest stable desktop and Android versions)
+* Mozilla Firefox (latest stable desktop version)
+* Apple Safari (latest stable desktop version and latest version for each of [supported iOS](#mobileos) verions)
+* Microsoft Edge (latest stable desktop version)
 * Microsoft Internet Explorer 11
 
-### 10.2 Mobile Browsers
-
-* iOS 12 and above (Safari)
-* Android 5.0 and above
-
-### 10.3 Hybrid Preview
+### 10.2 Hybrid Preview
 
 Using a hybrid preview is not the same as using an emulator. A hybrid preview only shows a resized view of an app to give an impression of what that app might look like on a mobile device. Some hybrid app functionality will not be supported in this browser view. Full tests always need to be done on a device or emulator. Offline apps can only be previewed in Google Chrome.
 

@@ -244,8 +244,7 @@ const actionOnFirstItem = this.props.myDataSource.myListAction(this.props.myData
 actionOnFirstItem.execute();
 ```
 
-Note: in this code sample checks of status of `myDataSource` and availability of items are omited for simplicity. See [ActionValue section](#actionvalue) for more information about usage of `ActionValue`.
-
+In this code sample, checks of status `myDataSource` and availability of items are omitted for simplicity. See [ActionValue section](#actionvalue) for more information about usage of `ActionValue`.
 
 ### 4.9 ListAttributeValue {#listattributevalue}
 

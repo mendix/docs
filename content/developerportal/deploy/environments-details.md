@@ -416,7 +416,7 @@ Unlike the Custom Runtime Settings, the variables you add have to be chosen from
 * **DD_LOG_LEVEL** – the log level of logging sent to Datadog
 * **DATABASE_CONNECTION_PARAMS** – Additional JDBC parameters for PostgreSQL databases, see the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack) for more information
 * **APPMETRICS_TARGET** – setting this enables business events to be sent to a different monitoring solution from the technical events
-* **SAMESITE_COOKIE_PRE_MX812** – set `SameSite=None;Secure` for all cookies coming from the Mendix runtime, as described [here](https://docs.mendix.com/developerportal/deploy/environments-details#iframe)
+* **SAMESITE_COOKIE_PRE_MX812** – set `SameSite=None;Secure` for all cookies coming from the Mendix runtime, as described in the [Running Your App in an Iframe](environments-details#iframe) section of *Environment Details*
 
 ## 7 Maintenance Tab
 

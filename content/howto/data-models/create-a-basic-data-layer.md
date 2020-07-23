@@ -129,6 +129,8 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 
 	![](attachments/18448745/18582208.png)
 
+Delete behavior is working on runtime level, not on the database. That means delete cascades as well as delte prevention will apply, even if the associated object is not committed.
+
 ## 8 Read More
 
 * [Work with Images & Files](working-with-images-and-files)

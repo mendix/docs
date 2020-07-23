@@ -10,6 +10,12 @@ tags: ["studio pro", "studio", "collaborative development", "sync"]
 
 Collaborative development is the process of sharing app model changes when a team of more than one person is working on the app. Collaborative development allows the team members to work together on one project in Mendix Studio Pro and Mendix Studio, and easily synchronize changes using [version control](version-control). Studio Pro can be used to work on different branches of an app, while Studio can be enabled for one of these branches. 
 
+{{% alert type="info" %}}
+
+If you get a **No Development Line Selected** message when opening your app in Studio, make sure you enable a development line for it. For more information, see [Enabling Studio for a Development Line](#active-branch).
+
+{{% /alert %}}
+
 {{% alert type="warning" %}}
 
 Collaborative development is enabled by default for new apps created via the Developer Portal. If you are upgrading your project from Mendix 7 to 8, make sure you have followed the steps in [Moving from Desktop Modeler Version 7 to Studio Pro 8](moving-from-7-to-8). 

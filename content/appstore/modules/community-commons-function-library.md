@@ -12,7 +12,7 @@ The [Community Commons Function Library](https://appstore.home.mendix.com/link/a
 
 ## 2 Usage
 
-All the functions in this package can be invoked using a [Java action call](/refguide/java-action-call) in a microflow or from your own Java code by calling `communitycommons.<Action Folder>.<Action name>;` (for example, `commonitycommons.StringUtils.hash("Mendix", 20);`).
+All the functions in this package can be invoked using a [Java action call](/refguide/java-action-call) in a microflow or from your own Java code by calling `communitycommons.<Action Folder>.<Action name>;` (for example, `communitycommons.StringUtils.hash("Mendix", 20);`).
 
 The module contains one constant: `CommunityCommons.MergeMultiplePdfs_MaxAtOnce`. This is used in the `MergeMultiplePdfs` Java action to restrict the number of PDFs processed at the same time. The default restriction is 10 files at once for Mendix Cloud v4-compatibility. If you need to merge more than 10 files, increase the number here. Setting the value to `<= 0` means unlimited.
 

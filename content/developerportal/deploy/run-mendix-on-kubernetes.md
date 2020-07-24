@@ -37,7 +37,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install Minikube
     * With Minikube, a local cluster can be created that is convenient for exploring Kubernetes (if you have an account for one of the cloud providers and you choose to use that, this step can be skipped)
     * Install Minikube based on the instructions provided in [Install Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
-
+    
 The how-to is based on working with a Unix-like system. The commands for Windows may be slightly different.
 
 ## 3 Architecture Overview{#architecture}
@@ -66,6 +66,14 @@ To access your Mendix applications inside a pod from outside of the Kubernetes, 
 
 ### 4.1 Deploying the PostgreSQL Database
 
+Once Minikube is running you'll need to configure your local environment to use the Docker daemon using the following command:
+
+```
+eval ($minikube docker-env)
+```
+
+You'll need to build your image in Minikube if you haven't done so yet. See [Docker](https://docs.mendix.com/developerportal/deploy/docker-deploy) for the steps to do this.
+
 The first step is deploying our database. For Minikube, an external folder to persist the data outside of the database pod is used.
 
 {{% alert type="info" %}}
@@ -77,12 +85,15 @@ For simplicity and compatibility with ```minikube```, we mount a folder from the
 Here is the definition of the `postgres-deployment.yaml` database component:
 
 ```
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: postgres
 spec:
   replicas: 1
+   selector:
+   matchLabels:
+     app: postgres
   template:
     metadata:
       labels:
@@ -147,6 +158,12 @@ This is the expected output:
 2017-09-14 08:34:37.538 UTC [1] LOG:  database system is ready to accept connections
 ```
 
+The host and port values will be needed to deploy the application. To get these we execute the following command:
+
+```
+$ kubectl get service postgres
+```
+
 Windows users need to execute this inline command first to get the pod name and the logs:
 
 ```
@@ -160,7 +177,7 @@ pods/posgres-whSsHA
 
 With the database running, we can deploy our application. We'll be using a sample Docker container with a Mendix app published in [hub.docker.com](https://hub.docker.com/r/mendix/sample-app-kubernetes/). To create a new Docker container for your Mendix app, see the description on the [docker-mendix-buildpack](https://github.com/mendix/docker-mendix-buildpack).
 
-Before deploying the app, we'll create some secrets so that sensitive information for the application doesn't need to be in our *yaml* file. The secret file has to be applied only once to the cluster, and the values will be kept there. For information on all of the options, see [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
+Before deploying the app, we'll create some secrets so that sensitive information for the application doesn't need to be in our *yaml* file. The secret file has to be applied only once to the cluster, and the values will be kept there. For information on all of the options, see [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/). 
 
 `mendix-app-secrets.yaml`:
 
@@ -177,6 +194,8 @@ data:
   license-id: YOUR_LICENSE_ID
 ```
 
+See [Run a Mendix Docker Image](https://docs.mendix.com/developerportal/deploy/run-mendix-docker-image) for expected value formats.
+
 To create the secret in Kubernetes we execute the following command:
 
 ```
@@ -188,7 +207,7 @@ Once the database service and the secrets are created, you can create the applic
 `mendix-app.yaml`:
 
 ```
-apiVersion: apps/v1beta2
+apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mendix-k8s-stateful
@@ -208,6 +227,7 @@ spec:
       containers:
         - name: mendix-app
           image: mendix/sample-app-kubernetes:v2
+          imagePullPolicy: Never
           ports:
             - containerPort: 8080
           volumeMounts:

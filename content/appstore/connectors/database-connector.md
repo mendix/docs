@@ -73,7 +73,7 @@ These are the results of the actions:
 * [MySQL](https://dev.mysql.com/downloads/connector/j/)
 * [Oracle Database](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html)
 * [OrientDB](https://orientdb.org/)
-* [PostgreSQL](https://orientdb.org/)
+* [PostgreSQL](https://jdbc.postgresql.org/download.html)
 * [Presto](https://prestodb.github.io/docs/current/installation/jdbc.html)
 * [SQLite](https://bitbucket.org/xerial/sqlite-jdbc/downloads/)
 

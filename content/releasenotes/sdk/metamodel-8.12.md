@@ -1,127 +1,138 @@
-# Metamodel Release Notes for version 8.12.0
+---
+title: "8.12"
+parent: "metamodel-8"
+---
 
-## DomainModels
+## 8.12.0
 
-### Entity (Element)
+**Release date: July 21st, 2020**
 
+### DomainModels
 
-#### Property 'capabilities'
+#### Entity (Element)
+
+##### Property 'capabilities'
+
 * Introduced; "What an entity is capable of"
 
-### EntityCapabilities (Element)
+#### EntityCapabilities (Element)
+
 * Introduced; "What an entity is capable of"
 
+### Kafka
 
-## Kafka
+#### ConsumedKafkaService (ModelUnit)
 
-### ConsumedKafkaService (ModelUnit)
+##### Property 'serviceFeed'
 
-
-#### Property 'serviceFeed'
 * Introduced; 
 
-#### Property 'entities'
+##### Property 'entities'
+
 * Deleted; 
 
-### KafkaRemoteEntitySource (Element)
+#### KafkaRemoteEntitySource (Element)
 
+##### Property 'topicName'
 
-#### Property 'topicName'
 * Introduced; 
 
-### KafkaEntity (Element)
+#### KafkaEntity (Element)
+
 * Deleted; 
 
+#### KafkaNavigationProperty (Element)
 
-### KafkaNavigationProperty (Element)
 * Deleted; 
 
+#### KafkaAttribute (Element)
 
-### KafkaAttribute (Element)
 * Deleted; 
 
+### Rest
 
-## Rest
+#### PublishedODataService (ModelUnit)
 
-### PublishedODataService (ModelUnit)
+##### Property 'replaceIllegalChars'
 
-
-#### Property 'replaceIllegalChars'
 * Introduced; "Allows export of content with illegal characters to XML by replacing them"
 
-### ConsumedODataService (ModelUnit)
+#### ConsumedODataService (ModelUnit)
 
+##### Property 'applicationId'
 
-#### Property 'applicationId'
 * Added public
 
-## Menus
+### Menus
 
-### MenuItem (Element)
+#### MenuItem (Element)
 
+##### Property 'alternativeText'
 
-#### Property 'alternativeText'
 * Introduced; 
 
-## Navigation
+### Navigation
 
-### NavigationProfile (Element)
+#### NavigationProfile (Element)
 
+##### Property 'applicationTitle'
 
-#### Property 'applicationTitle'
 * Deleted; "Use property 'appTitle' instead"
 
-#### Property 'appTitle'
+##### Property 'appTitle'
+
 * Introduced; 
 
-#### Property 'appIcon'
+##### Property 'appIcon'
+
 * Introduced; 
 
-## Pages
+### Pages
 
-### ClientAction (Element)
+#### ClientAction (Element)
 
+##### Property 'disabledDuringExecution'
 
-#### Property 'disabledDuringExecution'
 * Introduced; 
 
-### PageSettings (Element)
+#### PageSettings (Element)
 
+##### Property 'formTitle'
 
-#### Property 'formTitle'
 * Deleted; 
 
-#### Property 'titleOverride'
+##### Property 'titleOverride'
+
 * Introduced; 
 
-### DivContainer (Element)
+#### DivContainer (Element)
 
+##### Property 'screenReaderHidden'
 
-#### Property 'screenReaderHidden'
 * Introduced; 
 
-### TextBox (Element)
+#### TextBox (Element)
 
+##### Property 'autocompletePurpose'
 
-#### Property 'autocompletePurpose'
 * Introduced; 
 
-### InputWidget (Element)
+#### InputWidget (Element)
 
+##### Property 'screenReaderLabel'
 
-#### Property 'screenReaderLabel'
 * Introduced; 
 
-### ActionButton (Element)
+#### ActionButton (Element)
 
+##### Property 'disabledDuringAction'
 
-#### Property 'disabledDuringAction'
 * Deleted; 
 
-## Workflows
+### Workflows
 
-### WorkflowActivity (Element)
+#### WorkflowActivity (Element)
 
+##### Property 'caption'
 
-#### Property 'caption'
 * Added public

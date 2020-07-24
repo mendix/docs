@@ -71,7 +71,7 @@ Client activities can be used to have the web client of your application perform
 | [![show home page](attachments/activities/show-home-page.png)](show-home-page) | [Show home page](show-home-page) *(only in microflows)* | Navigates to the home page for the current user. |
 | [![show message](attachments/activities/show-message.png)](show-message) | [Show message](show-message) | Allows you to show a blocking or non-blocking message to the user that calls the microflow in which this activity is used. |
 | [![show page](attachments/activities/show-page.png)](show-page) | [Show page](show-page) | Allows you to show a page to the user that calls the microflow in which this activity is used. |
-| [![synchronize to device](attachments/activities/synchronize-to-device.png)](synchronize-to-device) | [Synchronize to device](synchronize-to-device) *(only in microflows)* | Can be used to selectively sync one or more objects or lists to a device and store them in the offline database. |
+| [![synchronize to device](attachments/activities/synchronize-to-device.png)](synchronize-to-device) | [Synchronize to device](synchronize-to-device) *(only in microflows)* | Can be used to selectively synchronize one or more objects or lists to a device and store them in the offline database. |
 | [![synchronize](attachments/activities/synchronize.png)](synchronize) | [Synchronize](synchronize)  *(only in nanoflows)* | Synchronizes data. |
 | [![validation feedback](attachments/activities/validation-feedback.png)](validation-feedback) | [Validation feedback](validation-feedback) | Allows you to display a red text below a widget that displays an attribute or association. |
 

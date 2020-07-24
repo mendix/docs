@@ -11,128 +11,79 @@ parent: "metamodel-8"
 
 #### Entity (Element)
 
-##### Property 'capabilities'
-
-* Introduced; "What an entity is capable of"
+* We introduced the `capabilities` property for what an entity is capable of.
 
 #### EntityCapabilities (Element)
 
-* Introduced; "What an entity is capable of"
+* We introduced this element for what an entity is capable of.
 
 ### Kafka
 
 #### ConsumedKafkaService (ModelUnit)
 
-##### Property 'serviceFeed'
-
-* Introduced; 
-
-##### Property 'entities'
-
-* Deleted; 
+* We introduced the `serviceFeed` property.
+* We deleted the `entities` property.
 
 #### KafkaRemoteEntitySource (Element)
 
-##### Property 'topicName'
+* We introduced the `topicName` property.
 
-* Introduced; 
+#### KafkaEntity, KafkaNavigationProperty & KafkaAttribute (Elements)
 
-#### KafkaEntity (Element)
-
-* Deleted; 
-
-#### KafkaNavigationProperty (Element)
-
-* Deleted; 
-
-#### KafkaAttribute (Element)
-
-* Deleted; 
+* We deleted these elements.
 
 ### Rest
 
 #### PublishedODataService (ModelUnit)
 
-##### Property 'replaceIllegalChars'
-
-* Introduced; "Allows export of content with illegal characters to XML by replacing them"
+* We introduced the `replaceIllegalChars` property, which allows for the export of content with illegal characters to XML by replacing them.
 
 #### ConsumedODataService (ModelUnit)
 
-##### Property 'applicationId'
-
-* Added public
+* We added the public `applicationId` property.
 
 ### Menus
 
 #### MenuItem (Element)
 
-##### Property 'alternativeText'
-
-* Introduced; 
+* We introduced the `alternativeText` property.
 
 ### Navigation
 
 #### NavigationProfile (Element)
 
-##### Property 'applicationTitle'
-
-* Deleted; "Use property 'appTitle' instead"
-
-##### Property 'appTitle'
-
-* Introduced; 
-
-##### Property 'appIcon'
-
-* Introduced; 
+* We introduced the `appTitle` and `appIcon` properties.
+* We deleted the `applicationTitle` property. Use the `appTitle` property instead.
 
 ### Pages
 
 #### ClientAction (Element)
 
-##### Property 'disabledDuringExecution'
-
-* Introduced; 
+* We introduced the `disabledDuringExecution` property.
 
 #### PageSettings (Element)
 
-##### Property 'formTitle'
-
-* Deleted; 
-
-##### Property 'titleOverride'
-
-* Introduced; 
+* We introduced the `titleOverride` property.
+* We deleted the `formTitle` property.
 
 #### DivContainer (Element)
 
-##### Property 'screenReaderHidden'
-
-* Introduced; 
+* We introduced the `screenReaderHidden` property.
 
 #### TextBox (Element)
 
-##### Property 'autocompletePurpose'
-
-* Introduced; 
+* We introduced the `autocompletePurpose` property.
 
 #### InputWidget (Element)
 
-##### Property 'screenReaderLabel'
-
-* Introduced; 
+* We introduced the `screenReaderLabel` property.
 
 #### ActionButton (Element)
 
-##### Property 'disabledDuringAction'
-
-* Deleted; 
+We deleted the `disabledDuringAction` property.
 
 ### Workflows
 
 #### WorkflowActivity (Element)
 
-##### Property 'caption'
-
-* Added public
+* We added the public `caption` property.

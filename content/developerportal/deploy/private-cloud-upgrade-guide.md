@@ -41,7 +41,7 @@ kubectl -n $OPERATOR_NAMESPACE get deployment mendix-operator -o=jsonpath='{.spe
 This process will take:
 
 * about 15 to 30 minutes when upgrading from Mendix Operator v1.0.\*
-* about 5 minutes when upgrading from Mendix Operator v1.1.\*, v1.2.\* and v1.3.\*.
+* about 5 minutes when upgrading from Mendix Operator v1.1.\*, v1.2.\*, and v1.3.\*.
 
 Some upgrade steps are only required when upgrading from older versions of the Mendix Operator. There is a notice on these steps indicating which upgrade paths they apply to and for which paths the step should be skipped.
 
@@ -59,7 +59,7 @@ kubectl -n $OPERATOR_NAMESPACE scale deployment mendix-operator --replicas=0
 #### 2.2.2 Upgrading the Custom Resource Definitions
 
 {{% alert type="info" %}}
-Follow this step when upgrading from Mendix Operator v1.3.\*, v1.2.\*, v1.1.\* and v1.0.\*.
+Follow this step when upgrading from Mendix Operator v1.3.\*, v1.2.\*, v1.1.\*, and v1.0.\*.
 {{% /alert %}}
 
 Run the following command to upgrade to the latest version of the Custom Resource Definitions for the Mendix Operator:
@@ -127,10 +127,10 @@ kubectl -n $OPERATOR_NAMESPACE get storageplan --no-headers=true -o name | sed -
   xargs -I {} kubectl -n $OPERATOR_NAMESPACE patch storageplan {} --type=merge -p '{"spec":{"type":"on-demand"}}'
 ```
 
-##### 2.2.4.2 Updating the Mendix Operator Configuration (from versions v1.1.\*, v1.2.\* and v1.3.\*){#update-configuration-v1.1.0}
+##### 2.2.4.2 Updating the Mendix Operator Configuration (from versions v1.1.\*, v1.2.\*, and v1.3.\*){#update-configuration-v1.1.0}
 
 {{% alert type="info" %}}
-Follow this step only when upgrading from Mendix Operator v1.1.*, v1.2.\* and v1.3.\*.
+Follow this step only when upgrading from Mendix Operator v1.1.\*, v1.2.\*, and v1.3.\*.
 {{% /alert %}}
 
 Run the following commands to switch to the latest component versions:
@@ -146,7 +146,7 @@ kubectl -n $OPERATOR_NAMESPACE patch operatorconfiguration mendix-operator-confi
 #### 2.2.5 Update the Kubernetes Role
 
 {{% alert type="info" %}}
-Follow this step when upgrading from Mendix Operator v1.2.\*, v1.1.\* and v1.0.\*.
+Follow this step when upgrading from Mendix Operator v1.2.\*, v1.1.\*, and v1.0.\*.
 
 It can be skipped if the Mendix Operator is not configured to use OpenShift Routes for incoming network traffic.
 {{% /alert %}}

@@ -12,7 +12,7 @@ This document describes how an existing installation of Mendix for Private Cloud
 
 Both the Mendix Operator and Mendix Agent should be upgraded at the same time.
 
-## 2 Upgrading to Mendix Operator v1.3.0{#operator-latest}
+## 2 Upgrading to Mendix Operator v1.4.0{#operator-latest}
 
 ### 2.1 Preparation
 
@@ -30,6 +30,8 @@ Check the current version of the Operator by running the following command:
 kubectl -n $OPERATOR_NAMESPACE get deployment mendix-operator -o=jsonpath='{.spec.template.spec.containers[].image}' 
 ```
 
+* If the image name looks similar to `quay.io/digital_ecosystems/mendix-operator:1.3.{NUMBER}`, follow only the steps for upgrading from Mendix Operator v1.3.\*.
+
 * If the image name looks similar to `quay.io/digital_ecosystems/mendix-operator:1.2.{NUMBER}`, follow only the steps for upgrading from Mendix Operator v1.2.\*.
 
 * If the image name looks similar to `quay.io/digital_ecosystems/mendix-operator:1.1.{NUMBER}`, follow only the steps for upgrading from Mendix Operator v1.1.\*.
@@ -39,7 +41,7 @@ kubectl -n $OPERATOR_NAMESPACE get deployment mendix-operator -o=jsonpath='{.spe
 This process will take:
 
 * about 15 to 30 minutes when upgrading from Mendix Operator v1.0.\*
-* about 5 to 10 minutes when upgrading from Mendix Operator v1.1.\* and v1.2.\*.
+* about 5 minutes when upgrading from Mendix Operator v1.1.\*, v1.2.\*, and v1.3.\*.
 
 Some upgrade steps are only required when upgrading from older versions of the Mendix Operator. There is a notice on these steps indicating which upgrade paths they apply to and for which paths the step should be skipped.
 
@@ -57,7 +59,7 @@ kubectl -n $OPERATOR_NAMESPACE scale deployment mendix-operator --replicas=0
 #### 2.2.2 Upgrading the Custom Resource Definitions
 
 {{% alert type="info" %}}
-Follow this step when upgrading from Mendix Operator v1.2.\*, v1.1.\* and v1.0.\*.
+Follow this step when upgrading from Mendix Operator v1.3.\*, v1.2.\*, v1.1.\*, and v1.0.\*.
 {{% /alert %}}
 
 Run the following command to upgrade to the latest version of the Custom Resource Definitions for the Mendix Operator:
@@ -70,11 +72,11 @@ kubectl apply -f https://installergen.private-cloud.api.mendix.com/privatecloud/
 
 #### 2.2.3 Upgrading the Mendix Operator Deployment
 
-Run the following command to switch to Mendix Operator version 1.3.0:
+Run the following command to switch to Mendix Operator version 1.4.0:
 
 ```shell
 kubectl -n $OPERATOR_NAMESPACE patch deployment mendix-operator -p \
-  '{"spec":{"template":{"spec":{"containers":[{"name":"mendix-operator","image":"quay.io/digital_ecosystems/mendix-operator:1.3.0"}]}}}}'
+  '{"spec":{"template":{"spec":{"containers":[{"name":"mendix-operator","image":"quay.io/digital_ecosystems/mendix-operator:1.4.0"}]}}}}'
 ```
 
 #### 2.2.4 Updating the Mendix Operator Configuration
@@ -91,7 +93,7 @@ Run the following commands to switch to the latest component versions:
 ```shell
 kubectl -n $OPERATOR_NAMESPACE patch operatorconfiguration mendix-operator-configuration --type merge -p \
 '{"spec":{
-    "sidecarImage":"quay.io/digital_ecosystems/mx-m2ee-sidecar:1.2.0",
+    "sidecarImage":"quay.io/digital_ecosystems/mx-m2ee-sidecar:1.3.0",
     "metricsSidecarImage":"quay.io/digital_ecosystems/mx-m2ee-metrics:1.1.0",
     "builderImage":"quay.io/digital_ecosystems/image-builder:ingvar-rhel",
     "buildRuntimeBaseImage":"index.docker.io/mendix/runtime-base:{{.MxRuntimeVersion}}-rhel",
@@ -125,10 +127,10 @@ kubectl -n $OPERATOR_NAMESPACE get storageplan --no-headers=true -o name | sed -
   xargs -I {} kubectl -n $OPERATOR_NAMESPACE patch storageplan {} --type=merge -p '{"spec":{"type":"on-demand"}}'
 ```
 
-##### 2.2.4.2 Updating the Mendix Operator Configuration (from versions v1.1.\* and v1.2.\*){#update-configuration-v1.1.0}
+##### 2.2.4.2 Updating the Mendix Operator Configuration (from versions v1.1.\*, v1.2.\*, and v1.3.\*){#update-configuration-v1.1.0}
 
 {{% alert type="info" %}}
-Follow this step only when upgrading from Mendix Operator v1.1.* and v1.2.\*.
+Follow this step only when upgrading from Mendix Operator v1.1.\*, v1.2.\*, and v1.3.\*.
 {{% /alert %}}
 
 Run the following commands to switch to the latest component versions:
@@ -136,7 +138,7 @@ Run the following commands to switch to the latest component versions:
 ```shell
 kubectl -n $OPERATOR_NAMESPACE patch operatorconfiguration mendix-operator-configuration --type merge -p \
 '{"spec":{
-    "sidecarImage":"quay.io/digital_ecosystems/mx-m2ee-sidecar:1.2.0",
+    "sidecarImage":"quay.io/digital_ecosystems/mx-m2ee-sidecar:1.3.0",
     "metricsSidecarImage":"quay.io/digital_ecosystems/mx-m2ee-metrics:1.1.0"
 }}'
 ```
@@ -144,7 +146,7 @@ kubectl -n $OPERATOR_NAMESPACE patch operatorconfiguration mendix-operator-confi
 #### 2.2.5 Update the Kubernetes Role
 
 {{% alert type="info" %}}
-Follow this step when upgrading from Mendix Operator v1.2.\*, v1.1.\* and v1.0.\*.
+Follow this step when upgrading from Mendix Operator v1.2.\*, v1.1.\*, and v1.0.\*.
 
 It can be skipped if the Mendix Operator is not configured to use OpenShift Routes for incoming network traffic.
 {{% /alert %}}
@@ -225,7 +227,7 @@ kubectl -n $OPERATOR_NAMESPACE delete --all statefulsets
 
 These StatefulSets were replaced with deployments when the new version of the Operator was started.
 
-## 3 Upgrading to Mendix Gateway Agent v1.2.0{#agent-latest}
+## 3 Upgrading to Mendix Gateway Agent v1.3.0{#agent-latest}
 
 {{% alert type="info" %}}
 
@@ -235,11 +237,11 @@ Upgrading the Mendix Gateway Agent is only possible if the cluster was originall
 
 {{% /alert %}}
 
-Before upgrading to the Mendix Gateway Agent v1.2.0, first [upgrade](#operator-latest) the Mendix Operator to the latest version
+Before upgrading to the Mendix Gateway Agent v1.3.0, first [upgrade](#operator-latest) the Mendix Operator to the latest version
 and set the `OPERATOR_NAMESPACE` variable in your Bash terminal as described above.
 
-Run the following command to switch to the Mendix Agent version 1.2.0:
+Run the following command to switch to the Mendix Agent version 1.3.0:
 ```shell
 kubectl -n $OPERATOR_NAMESPACE patch deployment mendix-agent -p \
-  '{"spec":{"template":{"spec":{"containers":[{"name":"mendix-agent","image":"quay.io/digital_ecosystems/kubernetes-agent:1.2.0"}]}}}}'
+  '{"spec":{"template":{"spec":{"containers":[{"name":"mendix-agent","image":"quay.io/digital_ecosystems/kubernetes-agent:1.3.0"}]}}}}'
 ```

@@ -7,7 +7,7 @@ tags: ["domain model", "association", "inheritance", "one-to-one", "generalizati
 
 ## 1 Introduction
 
-Sometimes, you want to add information to an entity which is used in a different module, perhaps a module which is imported from the app store. You do not want to customize the entity as this will prevent you from getting updated versions of the module. At other times, you may want to add additional information to some objects of an entity but not to others. For these cases there are two methods you can use: **generalization** (or *inheritance* as it is often called) or **associated entities**.
+Sometimes, you want to add information to an entity which is used in a different module, perhaps a module which is imported from the Mendix App Store. You do not want to customize the entity as this will prevent you from getting updated versions of the module. At other times, you may want to add additional information to some objects of an entity but not to others. For these cases there are two methods you can use: **generalization** (or *inheritance* as it is often called) or **associated entities**.
 
 Mendix developers have to choose on a daily basis whether or not they want to use inheritance or associations. One example which occurs in most projects is deciding how you want to set up your users. Are you going to keep using the already available Account entity in the Administration module? Or are you going to work with separate entities with a one-to-one association to the user account? Or are you going to add (multiple) entities that inherit from **System.User**? In this case, it would be bad practice to add additional information directly to the System.User entity and, in fact, Mendix prevents you from doing so.
 

@@ -57,7 +57,7 @@ To set up a notification widget, do the following:
 
     {{% image_container width="300" %}}![NotificationEntity](attachments/native-remote-push/modeler/NotificationEntity.png){{% /image_container %}}
    
-	For `Production` and `Demo` security levels, please make sure to grant the **Create** access role for all users for this entity since it will be used for triggering actions correctly. 
+	For `Production` and `Demo` security levels, please make sure to grant the **Create** access rule to all users for this entity since it will be used for triggering actions correctly. 
 
 1. Create a new *DS_Notification* nanoflow which creates a **NativeNotification** entity object and then returns it:
 

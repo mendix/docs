@@ -23,7 +23,7 @@ In some cases, encryption and authentication on connections is unnecessary. In t
 
 ### Scenario 2 - TLS/HTTPS
 
-This is the most common scenario. The client app verifies the server certificate for the backend service and sets up an encrypted connection. Trust is verified via the chain of trust to a Certificate Authority in the client's trust store.
+This is the most common scenario. The client app verifies the server certificate for the backend service and sets up an encrypted connection. Trust is verified via the chain of trust to a certificate authority in the client's trust store.
 
 Using encryption, data sent and received over the connection cannot be decoded if it is intercepted by other parties, so to authenticate the client, a username/password or token can be used with, for example, HTTP headers. This can be used for services that natively support TLS.
 

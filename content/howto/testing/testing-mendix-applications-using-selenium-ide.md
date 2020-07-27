@@ -33,7 +33,7 @@ All images, names, and steps in this how-to are based on these versions. When us
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-This how-to uses the Company Expenses app template for an example scenario. However, this app templateis no longer platform-supported by Mendix. Therefore, sections using this app template can only be used as reference and not as sections that can be completed step-by-step.
+This how-to uses the Company Expenses app template for an example scenario. However, this app template is no longer platform-supported by Mendix. Therefore, sections using this app template can only be used as reference and not as sections that can be completed step-by-step.
 {{% /alert %}}
 
 ## 3 Installing & Running the Company Expenses App

@@ -102,9 +102,9 @@ There are two ways that the device can build the packages:
 ### 4.1 Building It in the Cloud
 
 {{% alert type="info" %}}
-Building in the cloud uses the PhoneGap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. As a result, as of April 30th 2020, iOS apps built through the platform or using the PhoneGap Build service are not being accepted on Apple's App Store.
+Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. As a result, as of April 30th 2020, hybrid iOS apps built through the platform or using the PhoneGap Build service are not being accepted on Apple's App Store.
 
-If you wish to build your iOS app, continue with either the [Doing It Yourself](#doing-it-yourself) section for remote building or [Building Your iOS App Locally](#building-ios-locally) for local building.
+If you wish to build your hybrid iOS app, continue with either the [Doing It Yourself](#doing-it-yourself) section for remote building or [Building Your iOS App Locally](#building-ios-locally) for local building.
 {{% /alert %}}
 
 After selecting the **Build in the cloud** option and choosing the correct environment, you are ready to start the PhoneGap build.

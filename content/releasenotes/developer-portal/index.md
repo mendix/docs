@@ -13,6 +13,10 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2020
 
+### July 27th, 2020
+
+* We fixed a bug where under certain circumstances email notifications on feedback issues were not sent.
+
 ### July 13th, 2020
 
 #### Improvements

@@ -164,7 +164,11 @@ For security reasons, Guava was upgraded to version 27 in version 7.4.0 of this 
 * *guava-27.0-jre.jar*
 * *owasp-java-html-sanitizer-20181114.1.jar*
 
-## 6 Read More
+## 6 Limitations
+
+* [Generalizations](/refguide/generalization-and-association) are not supported
+
+## 7 Read More
 
 * [How to Implement Community Best Practices for App Performance](https://docs.mendix.com/howto/general/community-best-practices-for-app-performance)
 * [How to Implement Best Practices for App Security](https://docs.mendix.com/howto/security/best-practices-security)

@@ -136,7 +136,7 @@ spec:
   ports:
     - port: 5432
   selector:
-    service: postgres
+    app: postgres
 ```
 
 To create all the mentioned components, use the following:

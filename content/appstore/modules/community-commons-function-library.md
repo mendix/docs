@@ -75,13 +75,13 @@ The Community Commons container project contains a variety of predesigned unit t
 
 ### 4.7 ORM
 
-* `CommitWithoutEvents` – Commits an object but without events.
-* `Clone` – Clones the objects.
-* `DeepClone` – Clones the objects, their associations, and their referred objects.
-* `GetGUID` – Teturns the global unique identifier (GUID) or the ID of an object.
-* `GetOriginalValueAsString` – Returns the original value of an object member, that is, the last committed value.
-* `GetTypeAsString` – Returns the actual type of an entity. Useful as an alternative way to split upon inheritance or as input for other functions in this module.
-* `MemberHasChanged` – Checks whether a member has changed since the last commit. This is useful in combination with `GetOriginalValueAsString`.
+* `CommitWithoutEvents` – This commits an object but without events.
+* `Clone` – This clones the objects.
+* <a name="deepclone"></a>`DeepClone` – This clones the objects, their associations, and their referred objects.
+* `GetGUID` – This returns the global unique identifier (GUID) or the ID of an object.
+* `GetOriginalValueAsString` – This returns the original value of an object member, that is, the last committed value.
+* `GetTypeAsString` – This returns the actual type of an entity. Useful as an alternative way to split upon inheritance or as input for other functions in this module.
+* `MemberHasChanged` – This checks whether a member has changed since the last commit. This is useful in combination with `GetOriginalValueAsString`.
 * `RefreshClass` – This refreshes a certain domain object in the client. This is useful for enforcing a data grid to refresh, for example.
 * `refreshClassByObject` – This refreshes a certain class via the domain object type in the client. This is useful for enforcing a data grid to refresh, for example.
 * `getLastChangedByUser` – This returns the user that last changed an object as `System.User`.
@@ -166,7 +166,7 @@ For security reasons, Guava was upgraded to version 27 in version 7.4.0 of this 
 
 ## 6 Limitations
 
-* [Generalizations](/refguide/generalization-and-association) are not supported
+* [Generalizations](/refguide/generalization-and-association) are not supported (specifically in the [DeepClone](#deepclone) function)
 
 ## 7 Read More
 

@@ -244,7 +244,7 @@ Additional information can be found in the Mozilla developer guide [HTTP headers
 
 #### 4.2.1 Running Your App in an Iframe{#iframe}
 
-Most browsers have additional security to ensure that iframes are only allowed when they are from the same domain as the main page. The defaults for these vary by browser version. This security is controlled through SameSite cookies. You can find a good explanation of SameSite cookes in [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) on the *web.dev* website.
+Most browsers have additional security to ensure that iframes are only allowed when they are from the same domain as the main page. The defaults for these vary by browser version. This security is controlled through SameSite cookies. You can find a good explanation of SameSite cookies in [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) on the *web.dev* website.
 
 {{% alert type="info" %}}
 There can be additional issues when using cookies in iframes for end-users using the **Safari** browser. Resolving these issues is outside the control of Mendix. See the [Full Third-Party Cookie Blocking and More](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) blog post on *Webkit.org* for more information.
@@ -416,7 +416,7 @@ Unlike the Custom Runtime Settings, the variables you add have to be chosen from
 * **DD_LOG_LEVEL** – the log level of logging sent to Datadog
 * **DATABASE_CONNECTION_PARAMS** – Additional JDBC parameters for PostgreSQL databases, see the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack) for more information
 * **APPMETRICS_TARGET** – setting this enables business events to be sent to a different monitoring solution from the technical events
-* **SAMESITE_COOKIE_PRE_MX812** – set `SameSite=None;Secure` for all cookies coming from the Mendix runtime, as described in the [Running Your App in an Iframe](environments-details#iframe) section of *Environment Details*
+* **SAMESITE_COOKIE_PRE_MX812** – set `SameSite=None;Secure` for all cookies coming from the Mendix runtime, as described in the [Running Your App in an Iframe](#iframe) section
 
 ## 7 Maintenance Tab
 

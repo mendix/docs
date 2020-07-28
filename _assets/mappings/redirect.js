@@ -21,6 +21,10 @@ module.exports = {
       from: "/refguide/mindsphere/mindsphere-module-details",
       to: "/partners/siemens/mindsphere-module-details"
     },
+	{
+      from: "/refguide/customizing-phonegap-build-packages",
+      to: "/howto/mobile/hybrid-mobile/customizing-phonegap-build-packages"
+    },
 	/****************************************************
      * Reference Guide version 7 (permanent, unmapped)
      ****************************************************/	

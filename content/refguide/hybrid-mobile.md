@@ -13,7 +13,6 @@ Mendix hybrid apps are web applications wrapped inside native app containers. Th
 
 * [Configuring Hybrid Mobile Apps To Run Offline](configuring-hybrid-mobile-apps-to-run-offline)
 * [Customizing Hybrid Mobile Apps](customizing-hybrid-mobile-apps)
-* [Customizing PhoneGap Build Packages](customizing-phonegap-build-packages)
 * [Developing Hybrid Mobile Apps](developing-hybrid-mobile-apps)
 * [Managing App Signing Keys](managing-app-signing-keys)
 * [Packaging Hybrid Mobile Apps](packaging-hybrid-mobile-apps)

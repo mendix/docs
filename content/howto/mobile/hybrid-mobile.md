@@ -18,3 +18,4 @@ A Mendix hybrid app is a web application which runs inside a container that can 
 * [Debug a Mobile App with Mendix](debug-a-mobile-app)
 * [Deploy Your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
 * [Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
+* [Build Hybrid Apps](build-hybrid-apps)

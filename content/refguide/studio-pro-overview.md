@@ -36,7 +36,7 @@ In the Studio Pro top bar, you can see several menus, such as [Edit](edit-menu),
 
 For more information on menus, see [Menus](menus). 
 
-### 2.2 Run and View App {#run-and-view}
+### 2.2 Run & View App {#run-and-view}
 
 You can deploy your app by clicking the **Run** or **Run locally** buttons. To view your deployed app, click the **View** button. 
 
@@ -44,11 +44,11 @@ For more information on deployment in Mendix, see [Deployment](/developerportal/
 
 For more information on deploying your app and versioning it, see  the [Versioning a Project Deployed to the Cloud](using-version-control-in-studio-pro#versioning-project) section in *Using Version Control in Studio Pro*. 
 
-### 2.3 Links to the Developer Portal and App Store {#links}
+### 2.3 Links to Developer Portal & App Store {#links}
 
-You can find links to the [Developer Portal](/developerportal/index) and [App Store](/appstore/index) in the top-right corner of Studio Pro . Your account is displayed next to these buttons if you are signed in. 
+You can find links to the [Developer Portal](/developerportal/index) and [App Store](/appstore/index) in the top-right corner of Studio Pro.
 
-Click the account name to navigate to your apps, the Developer Portal, your profile, or to sign out. 
+Your account is displayed next to these buttons if you are signed in. Click the account name to navigate to your apps, the Developer Portal, your profile, or to sign out. 
 
 ## 3 Project Structure
 

@@ -376,7 +376,13 @@ This allows you to change the password for the local admin user in your app with
 
 ##### 5.1.3.5 Delete Environment
 
-This deletes the environment (see [Current Limitations](#limitations), below, for additional details about what is deleted) — you will be asked to confirm this action.
+This deletes the environment — you will be asked to confirm this action.
+
+If the cluster is standalone, or the Mendix Gateway Agent is not connected for some other reason, you can still delete the environment information in the Developer Portal. However, the actual environment will not be deleted and you will have to do this manually.
+
+If the environment cannot be deleted, you will receive a warning, but can go ahead and remove it from the Developer Portal.
+
+![](attachments/private-cloud-deploy/delete-environment.png)
 
 ##### 5.1.3.6 Change Purpose
 
@@ -404,6 +410,22 @@ To toggle any scheduled events, select the scheduled event you want to enable or
 
 To change any constants, select the constant you want to edit and then click **Edit**.
 
+### 5.3 Runtime Tab
+
+On the Runtime tab, you can change various runtime settings for your app environment. For more details of these, see the [Runtime Tab](environments-details#runtime-tab) section of *Environment Details*.
+
+![](attachments/private-cloud-deploy/runtime-tab.png)
+
+{{% alert type="info" %}}
+Some setting on the Runtime tab may work differently when used in Mendix for Private Cloud from how they work in the Mendix Cloud.
+{{% /alert %}}
+
+### 5.4 Log Levels Tab
+
+On the Log Levels tab, you can change the log levels which are used for the log nodes in your app. For more details of these, see the [Log Levels Tab](environments-details#log-levels) section of *Environment Details*.
+
+![](attachments/private-cloud-deploy/log-levels-tab.png)
+
 ## 6 Current Limitations{#limitations}
 
 ### 6.1 Reserved Names for Mendix Apps{#reserved-names}
@@ -417,8 +439,6 @@ All names beginning **openshift-** are reserved for use by OpenShift if you are 
 Delete all environments before you delete an app. If you delete an app which has existing private cloud environments, you will not be able to reach the environments through the Developer Portal.
 
 ### 6.3 Deleting the Cluster
-
-Delete all the environments from the Mendix Developer Portal before you delete the namespace from your Kubernetes cluster. If you do not do this, the database and file storage will not be removed from the environment.
 
 If the cluster is running in standalone mode, you need to delete all `MendixApp` CRs.
 

@@ -10,6 +10,16 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### July 29th, 2020
+
+#### Mendix for Private Cloud Portal
+
+* We now allow you to delete a namespace which contains environments – this will also delete the environments.
+* We now allow you to delete environment information from the Developer Portal when the environment itself cannot be found by the Mendix Gateway Agent.
+* We now allow you to change log levels for your apps' log nodes from the Developer Portal.
+* We fixed an issue where you could not delete a deployment package if it was broken.
+* We now send an email to users when their permissions are changed, or when they are removed from a namespace.
+
 ### July 27th, 2020
 
 #### Mendix for Private Cloud — Mendix Operator v1.4.0 and Mendix Gateway Agent v1.3.0

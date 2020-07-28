@@ -6,8 +6,8 @@ tags: ["mobile", "app store", "phonegap"]
 ---
 ## 1 Introduction
 
-{{% alert type="info" %}}
-Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. As a result, as of April 30th 2020, hybrid iOS apps built through the platform or using the PhoneGap Build service are not being accepted on Apple's App Store.
+{{% alert type="warning" %}}
+Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. PhoneGap does not allow you to create  iOS 13 builds, but the Apple App Store requires builds be iOS 13 or higher. As a result, as of April 30th 2020, hybrid iOS apps built through the platform or using the PhoneGap Build service are not being accepted on Apple's App Store. 
 
 If you wish to build your hybrid iOS app, continue with section [Doing It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) or [Building Your iOS App Locally](/developerportal/deploy/mobileapp#building-ios-locally), respectively.
 {{% /alert %}}

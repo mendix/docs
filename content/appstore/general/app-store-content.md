@@ -38,7 +38,7 @@ To download content from the App Store via Studio Pro, follow these steps:
 
 	![](attachments/app-store-content/18582345.png)
     
-	{{% alert type="warning" %}} Search results for App Store content done in Studio Pro may differ from those done in the [online App Store](app-store-overview) due to sync issues.
+	{{% alert type="warning" %}}Results for App Store content searches done in Studio Pro may differ from those done in the [online App Store](app-store-overview) due to sync issues.
 	{{% /alert %}}
 
 5.  Click the title of the item or **Read more** to view the item details:

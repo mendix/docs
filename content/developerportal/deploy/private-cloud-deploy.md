@@ -417,7 +417,7 @@ On the Runtime tab, you can change various runtime settings for your app environ
 ![](attachments/private-cloud-deploy/runtime-tab.png)
 
 {{% alert type="info" %}}
-Some setting on the Runtime tab may work differently when used in Mendix for Private Cloud from how they work in the Mendix Cloud.
+When you use some settings on the Runtime tab for Mendix for Private Cloud they may work differently from how they work in the Mendix Cloud.
 {{% /alert %}}
 
 ### 5.4 Log Levels Tab

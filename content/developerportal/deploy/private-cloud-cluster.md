@@ -519,6 +519,8 @@ You can change the access rights for, or completely remove, existing members.
         
     ![](attachments/private-cloud-cluster/image30.png)
 
+When you edit or remove a member, they will receive an email informing them of the changes.
+
 ### 4.4 Operate{#operate}
 
 The **Operate** tab allows you to add a set of links which are used when users request a page from the Operate category for their app in the Developer Portal, as shown below.

@@ -34,9 +34,13 @@ To download content from the App Store via Studio Pro, follow these steps:
 
     ![](attachments/app-store-content/toolbar.png)
 
-4. On the App Store overview page, you find a project or component to use in your app. Use the **Search** bar to find a specific project or component. You can also filter the content with the **Categories** in order to get a general view of what is available to download.
+4.  On the App Store overview page, you find a project or component to use in your app. Use the **Search** bar to find a specific project or component. You can also filter the content with the **Categories** in order to get a general view of what is available to download.
 
     ![](attachments/app-store-content/18582345.png)
+    
+    {{% alert type="warning" %}}
+    Search results for App Store content done in Studio Pro may differ from those done in the [online App Store](app-store-overview) due to sync issues.
+    {{% /alert %}}
 
 5. Click the title of the item or **Read more** to view the item details:
 

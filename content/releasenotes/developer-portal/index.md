@@ -13,6 +13,12 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2020
 
+### July 28th, 2020
+
+#### Fixes
+
+* We fixed an issue where email notifications on [feedback](/developerportal/collaborate/feedback) items were not sent under certain circumstances.
+
 ### July 13th, 2020
 
 #### Improvements

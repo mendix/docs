@@ -15,7 +15,7 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 #### Mendix for Private Cloud Portal
 
 * We now allow you to delete a namespace which contains environments. For a connected namespace, this will also delete the environments.
-* We now allow you to delete environment information from the Developer Portal when the environment itself cannot be found by the Mendix Gateway Agent.
+* We now allow you to delete environment information from the Developer Portal when the portal is unable to connect to the cluster via the Mendix Gateway Agent.
 * We now allow you to change log levels from the Developer Portal for your apps' log nodes.
 * We fixed an issue where you could not delete a deployment package if it was broken.
 * We now send an email to users when their permissions are changed, or when they are removed from a namespace.

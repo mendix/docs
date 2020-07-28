@@ -30,21 +30,20 @@ To download content from the App Store via Studio Pro, follow these steps:
 
 1. Open Studio Pro and sign in with your Mendix credentials.
 2. Open the project in which you would like to install a component.
-3. Click the App Store icon in the top menu bar to open it in Studio Pro:
+3.  Click the App Store icon in the top menu bar to open it in Studio Pro:
 
-    ![](attachments/app-store-content/toolbar.png)
+	![](attachments/app-store-content/toolbar.png)
 
 4.  On the App Store overview page, you find a project or component to use in your app. Use the **Search** bar to find a specific project or component. You can also filter the content with the **Categories** in order to get a general view of what is available to download.
 
-    ![](attachments/app-store-content/18582345.png)
+	![](attachments/app-store-content/18582345.png)
     
-    {{% alert type="warning" %}}
-    Search results for App Store content done in Studio Pro may differ from those done in the [online App Store](app-store-overview) due to sync issues.
-    {{% /alert %}}
+	{{% alert type="warning" %}} Search results for App Store content done in Studio Pro may differ from those done in the [online App Store](app-store-overview) due to sync issues.
+	{{% /alert %}}
 
-5. Click the title of the item or **Read more** to view the item details:
+5.  Click the title of the item or **Read more** to view the item details:
 
-    ![](attachments/app-store-content/item_details.png)
+	![](attachments/app-store-content/item_details.png)
 
 6. When you have found the App Store component you want to download into your app, click **Download**:
     * A project will be created on your hard-drive and will be opened in Studio Pro

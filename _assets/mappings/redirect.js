@@ -23,7 +23,7 @@ module.exports = {
     },
 	{
       from: "/refguide/customizing-phonegap-build-packages",
-      to: "/howto/mobile/hybrid-mobile/customizing-phonegap-build-packages"
+      to: "/howto/mobile/customizing-phonegap-build-packages"
     },
 	/****************************************************
      * Reference Guide version 7 (permanent, unmapped)

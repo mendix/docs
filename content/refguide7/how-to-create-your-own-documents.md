@@ -136,17 +136,7 @@ This is the resulting document:
 
 In this example, you retrieved the **OrderLine** information via the **Entity (path)** data source. An alternative way of doing this would be to use a microflow that returns objects for the list presentation. If you do this, make sure to add the correct user role(s) to the microflows that are being used as data source microflows within the document template.
 
-## 5 Alternative Ways of Creating Documents<a name="Alternative"></a>
-
-In addition to out-of-the-box Mendix functions, there are two other ways of generating documents with your Mendix app.
-
-### 5.1 App Store Module
-
-In the Mendix App Store, [Document generation 4 Mendix](https://appstore.home.mendix.com/link/app/2026/) is available.
-
-For more information on this way of working, see [Document Generation for Mendix, Finally](http://www.appronto.nl/over-appronto/blog/word-merging-for-mendix-finally).
-
-### 5.2 Java API
+## 5 Alternative Way of Creating Documents<a name="Alternative"></a>
 
 The other way to generate documents is via a Java API called IText. This Java library is free to use.
 

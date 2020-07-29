@@ -20,7 +20,7 @@ Before we start, we recommend you first read the following two Mendix Reference 
 
 Before you start producing a document with Mendix, it is advisable to make a draft version of the document you want to produce. You can sketch something on a piece of paper or ask your customer to provide you with an example. Either way, it is good to have in mind what you want to achieve.
 
-Using your desired document, you can choose a strategy for producing it. Mendix offers numerous options for producing documents using the out-of-the-box document template functionality, but you may find that the Mendix features are not sufficient to generate your document. Don’t worry. For alternative ways of producing documents with Mendix, see [5 Alternative Ways of Creating Documents](#Alternative).
+Using your desired document, you can choose a strategy for producing it. Mendix offers numerous options for producing documents using the out-of-the-box document template functionality, but you may find that the Mendix features are not sufficient to generate your document. Don’t worry. For an alternative way of producing documents with Mendix, see [Alternative Way of Creating Documents](#Alternative).
 
 For our example, we’ve concluded that the Mendix functionality does suffice. So, let’s have a look at how this works with an example.
 

@@ -121,9 +121,7 @@ You can place the widget on any form in your app project, but it needs to be pla
 
 #### 2.2.2 Configuring the Widget {#configuring}
 
-You can configure the widget for certain actions in your app project (for example, to allow screenshots, to hide the Mendix logo, and to hide the **Share** button). All the configuration properties are explained on the various tabs of the properties dialog box for the widget:
-
-![](attachments/feedback/widget-properties.png)
+You can configure the widget for certain actions in your app project (for example, to allow screenshots, to hide the Mendix logo, and to hide the **Share** button). All the configuration properties are explained on the various tabs of the properties dialog box for the widget.
 
 The feedback feature requires the following properties to be set:
 
@@ -138,7 +136,7 @@ For the best user experience, your are strongly encouraged to apply Mendix SSO t
 
 The result should look like this:
 
-![](attachments/feedback/authentication.png)
+![](attachments/feedback/authentication.jpg)
 
 {{% alert type="info" %}}
 If Mendix SSO is applied and the above **MendixSSO Authentication** settings are configured correctly, the end-user can leave feedback without having to enter their name and email address. If you are not using the Mendix SSO module and are using other SSO solutions instead, you should configure the settings in the **Custom Authentication** tab. In this tab, you can provide a microflow that should return a valid user name and email when the end-user is signed in with your authentication solution. The Feedback widget will then go directly into feedback mode. If the end-user is not signed in (meaning, the **User Object Provider** microflow returns an empty user name or an invalid email address), the end-user will have to manually enter their name and email address when they leave feedback.

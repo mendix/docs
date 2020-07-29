@@ -243,6 +243,10 @@ Your certificate is signed by the certificate authority (CA). They sign your cer
 
 To reach the root certificate, you have to link your certificate via the intermediate certificate chain, which is usually just one intermediate certificate. Occasionally a CA requires more than one intermediate certificate. You do not need to provide the root certificate, as every web browser has it in its trusted keystore.
 
+### 8.3 How Do I Get my SAML Metadata or CommunityCommons.GetApplicationUrl to Use the Custom URL?
+
+For certain use cases, it's important for the Mendix runtime to know the public URL of your applications. This is most commonly needed when your app generates links back to itself. To tell the runtime where it lives, set the ApplicationRootUrl [custom runtime setting](https://docs.mendix.com/refguide/custom-settings#2-general-settings). To set a custom runtime setting, follow guide [here](/developerportal/deploy/environments-details#custom-runtime-settings).
+
 ## 9 Read More
 
 * [Certificates](certificates)

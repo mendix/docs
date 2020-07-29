@@ -273,7 +273,7 @@ The following code sample shows how to get an `EditableValue` that represents a 
 const attributeValue = this.props.myDataSource.myAttributeOnDatasource(this.props.myDataSource.item[0]);
 ```
 
-Note: in this code sample checks of status of `myDataSource` and availability of items are omited for simplicity. See [EditableValue section](#editablevalue) for more information about usage of `EditableValue`.
+Note: in this code sample checks of status of `myDataSource` and availability of items are omited for simplicity. See [EditableValue section](#editable-value) for more information about usage of `EditableValue`.
 
 
 ### 4.10 ListWidgetValue {#listwidgetvalue}

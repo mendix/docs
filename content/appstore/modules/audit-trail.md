@@ -43,7 +43,7 @@ Finally, add the **LogOverviewSnippet** snippet to a page in a custom module.
 
 ## 3 Changing Audit Behavior
 
-Changing the audit behavior is easily done by altering the values of the following microflow constants (if no value is set, the default is used):
+Changing the audit behavior is easily done by altering the values of the microflow constants below (for module version 7.6.0 and above; please note that if no value is set, the default is used) or the default values of the **Configuration** entity in the module's domain model (for module version 7.5.0 and below):
 
 * **IncludeOnlyChangedAttributes** (default: false) – This determines if the module should create a log line for every single member every time it initiates the Audit, or if it should only log the changed members.
 * **LogAllMembersOnCreate** (default: true) – This property only affects the scenario when **IncludeOnlyChangedAttributes** is **false**. This indicates if the application will create a log line for all attributes when the record is created.

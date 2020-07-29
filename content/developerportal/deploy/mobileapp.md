@@ -177,7 +177,8 @@ This process is shorter than using XCode but might require more work to understa
 ##### 4.3.2.2 Building iOS using XCode
 
 Using XCode can be easier than the Cordova CLI due to XCode's friendly visual interface. To build your app using XCode do the following: 
-1. Under **/build/platforms/ios/** open the `.xcworkspace` file by double-clicking it. Xcode should open with the project loaded:
+
+1.  Under **/build/platforms/ios/** open the `.xcworkspace` file by double-clicking it. Xcode should open with the project loaded:
 
     ![Opening XCWorkspace](attachments/mobileapp/xc-workspace.png)
 

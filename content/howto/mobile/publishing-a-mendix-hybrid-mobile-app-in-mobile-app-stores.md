@@ -1,15 +1,15 @@
 ---
 title: "Publish a Mendix Hybrid Mobile App in Mobile App Stores"
-parent: "hybrid-mobile"
-menu_order: 60
+parent: "build-hybrid-apps"
+menu_order: 20
 tags: ["mobile", "app store", "phonegap"]
 ---
 ## 1 Introduction
 
-{{% alert type="info" %}}
-Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. As a result, as of April 30th 2020, hybrid iOS apps built through the platform or using the PhoneGap Build service are not being accepted on Apple's App Store.
+{{% alert type="warning" %}}
+Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. PhoneGap does not allow you to create  iOS 13 builds, but the Apple App Store requires builds be iOS 13 or higher. As a result, as of April 30th 2020, hybrid iOS apps built through the platform or using the PhoneGap Build service are not being accepted on Apple's App Store. To publishing your iOS app in the Apple App Store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
 
-If you wish to build your hybrid iOS app, continue with section [Doing It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) or [Building Your iOS App Locally](/developerportal/deploy/mobileapp#building-ios-locally), respectively.
+If you wish to build your hybrid iOS app without publishing it in the Apple App Store, see the [Doing It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) and [Building Your iOS App Locally](/developerportal/deploy/mobileapp#building-ios-locally) sections of the *Mobile App Developer Portal Guide*.
 {{% /alert %}}
 
 Once you have finished developing a Mendix hybrid mobile application, you will want to make it available as an app for mobile platforms such as Apple iOS and Google Android. We make it possible to produce platform-specific installation packages. For more details on deploying platform-specific installation packages, see [Mobile App](/developerportal/deploy/mobileapp).
@@ -92,7 +92,7 @@ If you do not upload any images, the default Mendix-branded images that are show
 	* For apps using [Flexible Environments](/developerportal/deploy/mendix-cloud-deploy#flexible-environments) you will be able to select the environment from a drop-down list of environments.
 	
 10. Leave the default choice of how to build the package **Build Mobile App Store packages for me by sending the build configuration to Adobe PhoneGap Build** selected. 
-	You can use the alternative option to manually download a PhoneGap Build package, which you can then inspect, modify, and upload manually to Adobe PhoneGap Build (for more information, see [Customizing PhoneGap Build Packages](/refguide/customizing-phonegap-build-packages)). This is unnecessary in most scenarios.
+	You can use the alternative option to manually download a PhoneGap Build package, which you can then inspect, modify, and upload manually to Adobe PhoneGap Build (for more information, see [Customizing PhoneGap Build Packages](/howto/mobile/customizing-phonegap-build-packages)). This is unnecessary in most scenarios.
 11. Before proceeding, you must link your PhoneGap account to your Mendix account. Start the hybrid mobile app package building process by clicking **Start PhoneGap Build job**, which will initiate the building process:
 
 	![phonegap authorization](attachments/publishing-a-hybrid-app/phonegap-authorization-dialog.png)

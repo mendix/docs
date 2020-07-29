@@ -121,7 +121,7 @@ After selecting the **Do it yourself** option and choosing the correct environme
 
 In the `/dist` folder, you'll find a pre-compiled Adobe PhoneGap Build package for your app. You can upload this package directly to the PhoneGap Build service to obtain platform-specific app packages. Those packages can then be published in the app stores.
 
-You can freely customize the generated package to enable, for example, additional PhoneGap/Cordova plugins or add additional resources to your app. For more information, see [Customizing PhoneGap Build Packages](/refguide/customizing-phonegap-build-packages).
+You can freely customize the generated package to enable, for example, additional PhoneGap/Cordova plugins or add additional resources to your app. For more information, see [Customizing PhoneGap Build Packages](/howto/mobile/customizing-phonegap-build-packages).
 
 For detailed instructions, see the [hybrid-app-template GitHub repository](https://github.com/mendix/hybrid-app-template).
 
@@ -218,7 +218,6 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 
 ## 6 Read More
 
-* [Customizing PhoneGap Build Packages](/refguide/customizing-phonegap-build-packages)
 * [Deploy and Manage](/developerportal/deploy)
 * [Offline](/refguide/offline-first)
 * [How to Publish a Mendix Hybrid Mobile App in App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)

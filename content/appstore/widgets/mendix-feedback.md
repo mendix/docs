@@ -132,7 +132,7 @@ The feedback feature requires the following properties to be set:
 
 For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the [Mendix SSO](/appstore/modules/mendix-sso) module to version 8.2.1 or above of the Mendix Feedback widget. For version 8.1.0 or above of the widget, you need to set the following:
 
-*  **MendixSSO Authentication** tab > **Decrypted Token Entity** – select the entity **DecryptedToken** from Mendix SSO module
+*  **MendixSSO Authentication** tab > **Decrypted Token Entity** – select the entity **DecryptedToken** from the Mendix SSO module
 *  **MendixSSO Authentication** tab > **Decrypted Token Value** – after selecting **Decrypted Token Entity**, select the **Value** attribute from it
 *  **MendixSSO Authentication** tab > **ID token provider** – select the **DS_GetCurrentIdToken** microflow from the Mendix SSO module
 
@@ -141,7 +141,7 @@ The result should look like this:
 ![](attachments/feedback/authentication.png)
 
 {{% alert type="info" %}}
-If Mendix SSO is applied and the above **MendixSSO Authentication** settings are configured correctly, the end-user can leave feedback without having to enter their name and email address. If you donot use MendixSSO and use other SSO solutions, you should configure the settings in **Custom Authentication** tab. In this tab you can provide a microflow that returns Username and Email. When end-user is signed in with your authentication solution, this microflow should return valid username and email. Then Feedback widget will go directly into **Feedback Mode**. If the end-user is not signed in (i.e. **User Object Provider** microflow returns an empty username or an invalid email address), the end-user will have to manually enter their name and email address when they leave feedback.
+If Mendix SSO is applied and the above **MendixSSO Authentication** settings are configured correctly, the end-user can leave feedback without having to enter their name and email address. If you are not using the Mendix SSO module and are using other SSO solutions instead, you should configure the settings in **Custom Authentication** tab. In this tab, you can provide a microflow that should return a valid user name and email when the end-user is signed in with your authentication solution. The Feedback widget will then go directly into **Feedback Mode**. If the end-user is not signed in (meaning, the **User Object Provider** microflow returns an empty user name or an invalid email address), the end-user will have to manually enter their name and email address when they leave feedback.
 {{% /alert %}}
 
 The [app switcher](#app-switcher) feature requires the [Mendix SSO](/appstore/modules/mendix-sso) module to be implemented and the following property to be set:

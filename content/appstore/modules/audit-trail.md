@@ -43,7 +43,7 @@ Finally, add the **LogOverviewSnippet** snippet to a page in a custom module.
 
 ## 3 Changing Audit Behavior
 
-Changing the audit behavior is easily done by altering the values of the microflow constants below (for module version 7.6.0 and above; please note that if no value is set, the default is used) or the default values of the **Configuration** entity in the module's domain model (for module version 7.5.0 and below):
+Changing the audit behavior is easily done by altering the values of the constants below (for module version 7.6.0 and above; please note that if no value is set, the default is used) or the default values of the **Configuration** entity in the module's domain model (for module version 7.5.0 and below):
 
 * **IncludeOnlyChangedAttributes** (default: false) – This determines if the module should create a log line for every single member every time it initiates the Audit, or if it should only log the changed members.
 * **LogAllMembersOnCreate** (default: true) – This property only affects the scenario when **IncludeOnlyChangedAttributes** is **false**. This indicates if the application will create a log line for all attributes when the record is created.
@@ -51,5 +51,5 @@ Changing the audit behavior is easily done by altering the values of the microfl
 * **CreateLogObjectWithoutMemberChanges** (default: false) – If none of the members have been changed, this property determines whether a commit will still generate a log record populated only with the `changed date` and `changed by` fields.
 * **LogLineDateFormat** (default: MM/dd/yyyy) – When auditing date fields, the module will format the date as a string. This determines the notation for all the dates in the audit trail. This also uses the same tokens in a microflow.
 * **LogServerTimeZoneDateNotation** (default: true) – This determines if the date should be audited in the **ServerTimeZone**. If both the session time zone and **ServerTimeZone** are enabled, you will see two dates in the audit overview.
-* **ServerTimeZone** (default: Etc/UTC) – This the time zone in which the server time zone  is printed. This will be a static time zone and should match the notation as used in Java (for an example, see [TimeZones in Java](http://stackoverflow.com/questions/1694885/timezones-in-java)).
-* **LogSessionTimeZoneDateNotation** (default: true) – This determines if the date should be audited in the session time zone of the user that makes the change. If both the session time zone and the UTC time zone are enabled, you will see two dates in the audit overview.
+* **ServerTimeZone** (default: Etc/UTC) – This the time zone in which the server time zone is printed. This will be a static time zone and should match the notation as used in Java (for an example, see [TimeZones in Java](http://stackoverflow.com/questions/1694885/timezones-in-java)).
+* **LogSessionTimeZoneDateNotation** (default: true) – This determines if the date should be audited in the session time zone of the user that makes the change. If both the session time zone and the server time zone are enabled, you will see two dates in the audit overview.

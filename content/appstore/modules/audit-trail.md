@@ -17,7 +17,7 @@ This module keeps keep track of what changes are made in your Mendix application
 ### 1.2 Features
 
 * Keep track of objects that are created, changed, or deleted
-* Only save changes made on an object that has the `AuditTrail.AudittrailSuperClass` as a superclass and where the commit is done with event (this could be a performance risk for apps with too many entities or records)
+* Only save changes made on an object that has the `AuditTrail.AudittrailSuperClass` as a superclass and where the commit is done with an event (this could be a performance risk for apps with too many entities or records)
 * Add a commit event which analysis and save the changes
 * Log the complete state of the entity (all attributes) or only the changed attributes by modifying a constant
 
@@ -35,7 +35,7 @@ Finally, add the **LogOverviewSnippet** snippet to a page in a custom module.
 
 ### 2.2 Inheritance
 
-For this option, all the objects you want to log need to have the **AuditTrail.AudittrailSuperClass** as a superclass (note that this is not possible for subclasses of the **System.User** object. The module will then automatically log all the changes on the create, commit, and delete events.
+For this option, all the objects you want to log need to have the **AuditTrail.AudittrailSuperClass** as a superclass (note that this is not possible for subclasses of the **System.User** object). The module will then automatically log all the changes on the create, commit, and delete events.
 
 Next, configure the **LogOnlyChangedAttributes** constant for whether you want to log all the attributes or just the changes.
 
@@ -43,7 +43,7 @@ Finally, add the **LogOverviewSnippet** snippet to a page in a custom module.
 
 ## 3 Changing Audit Behavior
 
-Changing the audit behavior is easily done by altering the values of the following microflow constants. If no value is set, the default is used.
+Changing the audit behavior is easily done by altering the values of the following microflow constants (if no value is set, the default is used):
 
 * **IncludeOnlyChangedAttributes** (default: false) – This determines if the module should create a log line for every single member every time it initiates the Audit, or if it should only log the changed members.
 * **LogAllMembersOnCreate** (default: true) – This property only affects the scenario when **IncludeOnlyChangedAttributes** is **false**. This indicates if the application will create a log line for all attributes when the record is created.

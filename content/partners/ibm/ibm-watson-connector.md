@@ -233,7 +233,7 @@ Note that the voice chosen should match the language of the **Text**. There is n
 This is an object of type AudioFormats_TextToSpeech which specifies the format of the audio data which is returned as the spoken text.
 
 {{% alert type="info" %}}
-All formats except BASIC and RAW can be played back in a Mendix app using the [Audio Video Playback widget](https://appstore.home.mendix.com/link/app/932/) available in the App Store.
+All formats except BASIC and RAW can be played back in a Mendix app using the community-supported [Audio Video Playback](https://appstore.home.mendix.com/link/app/932/) widget available in the App Store.
 {{% /alert %}}
 
 ### 4.6 Variable (Speech)

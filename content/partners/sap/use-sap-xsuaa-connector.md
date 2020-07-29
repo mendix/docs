@@ -244,6 +244,5 @@ You can picture the authentication as shown below:
 * [How to Create a Secure App](/howto/security/create-a-secure-app)
 * [How to Use App Store Content](/appstore/general/app-store-content)
 * [Project Security](/refguide/project-security)
-* [XSUAA Connector for SAP Cloud Platform](https://appstore.home.mendix.com/link/app/78091/)
 * [XSUAA Connector for SAP Cloud Platform](/partners/sap/sap-xsuaa-connector) (documentation)
 * [SAP Cloud Platform cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts)

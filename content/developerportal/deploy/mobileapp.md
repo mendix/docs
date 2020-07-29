@@ -125,9 +125,11 @@ You can freely customize the generated package to enable, for example, additiona
 
 For detailed instructions, see the [hybrid-app-template GitHub repository](https://github.com/mendix/hybrid-app-template).
 
+For more context on building hybrid apps in the cloud, as well as other options for iOS apps, see [How to Build Hybrid Apps](/howto/mobile/build-hybrid-apps).
+
 To generate the Android Google Play package, go to [Build.PhoneGap.com](https://build.phonegap.com/).
 
-For iOS please follow the instrcutions bellow.
+For iOS please follow the instrcutions below.
 
 ### 4.3 Building Your iOS App Locally {#building-ios-locally}
 

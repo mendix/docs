@@ -10,6 +10,12 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### July 30th, 2020
+
+#### Mendix Cloud
+
+* We fixed an issue where users did not see changes they made to node permissions. (Tickets 104154 and 104642)
+
 ### July 29th, 2020
 
 #### Mendix for Private Cloud Portal

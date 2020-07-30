@@ -143,7 +143,7 @@ For server-based installations, the following storage types mounted by the OS ar
 
 ## 10 Browsers {#browsers}
 
-### 10.1 Desktop Browsers
+### 10.1 Browsers
 
 * Google Chrome (latest stable desktop and Android versions)
 * Mozilla Firefox (latest stable desktop version)

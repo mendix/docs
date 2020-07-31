@@ -3,7 +3,7 @@ title: "Non-Persistable Objects & Garbage Collecting"
 parent: "runtime-java"
 menu_order: 1
 description: "This page will explain the life cycle of both persistable and non-persistable objects, and how they flow through the platform memory."
-tags: ["persistable", "non-persistable", "objects", "garbage", "collecing"]
+tags: ["persistable", "non-persistable", "objects", "garbage", "collecting"]
 ---
 
 ## 1 Introduction
@@ -30,7 +30,17 @@ The Mendix Client has a garbage collector. This garbage collector will automatic
 
 ### 3.1 Exceptional Cases
 
-When non-persistable objects are associated to the current user or to the current session, they (including the non-persistable objects they associate) are not garbage collected. As such, this can function as a way for objects to survive requests, although this should be used with care as it can easily lead to a growing state.
+#### 3.1.1 Objects Associated with Current User or Session
+
+When non-persistable objects are associated to the current user or to the current session, they (and any non-persistable objects associated with them) are not garbage collected. As such, this can function as a way for objects to survive requests, although this should be used with care as it can easily lead to a growing state.
+
+#### 3.1.2 Objects Which Are Parameters of Web Pages
+
+Objects which are the parameter of a page which is closed in a web browser are only garbage collected after five new pages have been opened. This means that the end-user can use the back button in their browser (a limited number of times) and still see the same page they saw before, even if the parameter is non-persistable.
+
+{{% alert type="info" %}}
+This is not relevant in mobile apps as pages are not closed in the same way, and always remain alive.
+{{% /alert %}}
 
 ## 4 Tracking State Growth
 

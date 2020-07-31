@@ -143,38 +143,31 @@ For server-based installations, the following storage types mounted by the OS ar
 
 ## 10 Browsers {#browsers}
 
-### 10.1 Desktop Browsers
-
-* Google Chrome
-* Mozilla Firefox 
-* Apple Safari
-* Microsoft Edge
+* Google Chrome (latest stable desktop and Android versions)
+* Mozilla Firefox (latest stable desktop version)
+* Apple Safari (latest stable desktop version and latest version for each [supported iOS](#mobileos) verion)
+* Microsoft Edge (latest stable desktop version)
 * Microsoft Internet Explorer 11
 
-### 10.2 Mobile Browsers
-
-* iOS 12 and above (Safari)
-* Android 5.0 and above
-
-### 10.3 Hybrid Preview
+## 11 Hybrid Preview
 
 Using a hybrid preview is not the same as using an emulator. A hybrid preview only shows a resized view of an app to give an impression of what that app might look like on a mobile device. Some hybrid app functionality will not be supported in this browser view. Full tests always need to be done on a device or emulator. Offline apps can only be previewed in Google Chrome.
 
-## 11 Mobile Operating Systems {#mobileos}
+## 12 Mobile Operating Systems {#mobileos}
 
 For Mendix apps and the [Mendix Mobile app](getting-the-mendix-app):
 
 * iOS 12 and above
 * Android 5.0 and above
 
-## 12 MxBuild {#mxbuild}
+## 13 MxBuild {#mxbuild}
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](mxbuild).
 
 * Mono v5.20.x or .NET v4.7.2
 * JDK 11
 
-## 13 mx Command-Line Tool {#mxtool}
+## 14 mx Command-Line Tool {#mxtool}
 
 The **mx** command-line tool is a Windows and Linux command-line tool that can be used to do useful things with your Mendix app project. For more information, see [mx Command-Line Tool](mx-command-line-tool).
 

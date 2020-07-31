@@ -33,7 +33,7 @@ Unused calculated attributes serve no meaningful purpose in the project and can 
 1. Delete the unused calculated attribute.
 2. OR Start using the calculated attribute.
 
-### More about
+### References
 
 1. Calculated attributes : https://docs.mendix.com/refguide/attributes
 
@@ -56,7 +56,38 @@ Committing lists of objects has these benefits compared to individual commits:
 1. Within a loop, change Commit option of a Create/Change Object activity from No and make sure created/changed objects are available in a list
 2. Commit the list after the loop when the iteration has finished or when number of objects in the list reaches 1000 to avoid excessive memory usage.
 
-### More about
+### References
 
-1. Change Object Activity properties https://docs.mendix.com/refguide/change-object
-2. Commit Activity properties https://docs.mendix.com/refguide/committing-objects
+1. Change Object Activity properties : https://docs.mendix.com/refguide/change-object
+2. Commit Activity properties : https://docs.mendix.com/refguide/committing-objects
+
+## Mendix Best Practice: Convert eligible Microflows to Nanoflows {#m2}
+
+Nanoflows are executed directly on the end user's device or browser. This makes them ideal for offline usage. In contrast, Microflows run in the runtime server and hence involve usage of network traffic. Converting an eligible Microflow to a Nanoflow can help avoid communication over networks and significantly boost app performance.
+
+There are things to consider before one can convert a Microflow to a Nanoflow:
+
+- Ensure that the Microflow falls into one or more of the following categories:
+    - Microflow has logic meant for offline applications.
+    - Microflow has logic for online applications but does not involve any database related actions like a committing Create Object, Commit, Retrieve and Rollback. This is the best practice for Nanoflows.
+    - Microflow has at-most one database related action. (Not the best practice)
+- Ensure that the Microflow contains Nanoflow compatible activities. Nanoflow supported activities are marked clearly in this reference document: https://docs.mendix.com/refguide/activities
+- Ensure that the Microflow expressions do not contain the following variables : $latestSoapFault, $latestHttpResponse, $currentSession, $currentUser, $currentDeviceType. These are not supported by Nanoflows.
+- As Nanoflows are executed in the context of the current user, ensure that the Microflow has only operations for which the current user is authorized. Otherwise the converted Nanoflow will fail.
+
+### Suggested resolution steps
+
+1. Create a new Nanoflow. Right click on the module and select **Add Nanoflow**.
+![](attachments/performance-best-practices/add_nanoflow.png)
+2. Replicate the same logic from the Microflow. The new nanfolow must look almost identical to the old microflow. 
+![](attachments/performance-best-practices/converted_nanoflow.png)
+3. Check usages of the Microflow by right clicking on the micrfolow and select **Find usages**. Replace all uses with the newly created Nanoflow.
+![](attachments/performance-best-practices/find_usages.png)
+4. Delete the unused Microflow. Do this by selecting the microflow and pressing delete. Or right click and select **Delete** 
+![](attachments/performance-best-practices/delete_microflow.png)
+
+### References
+
+- When to use Nanoflows https://docs.mendix.com/refguide/nanoflows#2-when-to-use-nanoflows
+- Nanoflow and Microflow differences https://docs.mendix.com/refguide/nanoflows#3-differences-from-microflows
+- Find Nanoflow supported activities here : https://docs.mendix.com/refguide/activities

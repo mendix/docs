@@ -14,7 +14,7 @@ This document collects Mendix application performance best practices in the form
 
 {{% /alert %}}
 
-## Remove unused calculated attributes {#p1b}
+## Remove unused calculated attributes {#SA002}
 
 For an object that has calculated attributes, each time that object is changed or retrieved from storage, it’s calculated attributes are computed by calling a microflow. If the logic behind calculated attributes retrieves other objects or executes Integration activities, it will cause an extra load (and delay) on the system when the outcome of the logic doesn't matter at that moment. Creating calculated attributes always affect performance, so decide if this is worth it for what you are using the calculated attribute for
 
@@ -37,7 +37,7 @@ Unused calculated attributes serve no meaningful purpose in the project and can 
 
 1. Calculated attributes : https://docs.mendix.com/refguide/attributes
 
-## Avoid committing objects inside a loop {#m1}
+## Avoid committing objects inside a loop {#SA004 and #SA005}
 
 In a microflow, Mendix objects can be persisted to the database with three actions: Create Object Activity, Change Object Activity, and Commit Activity. For objects that are created or changed in a loop, it is not advisable to commit them immediately in the loop, as this comes with an unnecessary performance overhead. Instead, better performance can be achieved by performing a batch commit of several created/changed objects with Commit Activity outside of the loop to reduce database, application, and network overhead.
 
@@ -61,7 +61,7 @@ Committing lists of objects has these benefits compared to individual commits:
 1. Change Object Activity properties : https://docs.mendix.com/refguide/change-object
 2. Commit Activity properties : https://docs.mendix.com/refguide/committing-objects
 
-## Mendix Best Practice: Convert eligible Microflows to Nanoflows {#m2}
+## Mendix Best Practice: Convert eligible Microflows to Nanoflows {#SA006}
 
 Nanoflows are executed directly on the end user's device or browser. This makes them ideal for offline usage. In contrast, Microflows run in the runtime server and hence involve usage of network traffic. Converting an eligible Microflow to a Nanoflow can help avoid communication over networks and significantly boost app performance.
 

@@ -58,7 +58,7 @@ This scenario is identical to scenario 4, with one exception: your app includes 
 {{% alert type="warning" %}}
 VPN is not supported at all in Mendix Cloud V4.
 
-VPN is deprecated in Mendix Cloud V3. Although you can still set it up, you will not receive support from Mendix for a VPN in Mendix Cloud V3, or for deployments to other clouds.
+VPN is deprecated in Mendix Cloud V3. Although you can still set it up, you will not receive support from Mendix for a VPN in Mendix Cloud V3, or for using VPN in deployments to other clouds.
 {{% /alert %}}
 
 Many companies use a Virtual Private Network (VPN) to secure network connections between their own offices and data centers and other companies.

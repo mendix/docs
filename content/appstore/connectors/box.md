@@ -260,9 +260,7 @@ These actions are available in **Metadata**:
 
 ## 4 Developing This App Store Component
 
-This connector was built with the Eclipse IDE Neon.
-
-We use [SemVer](http://semver.org/) for versioning.
+This connector was built with the Eclipse IDE Neon, and [SemVer](http://semver.org/) is used for versioning.
 
 To contribute to the development of this connector, follow these steps:
 

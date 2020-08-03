@@ -253,9 +253,9 @@ These actions are available in **Metadata**:
 	* **BoxTemplate** – the template to use; the `templateKey` attribute is required; at least 1 `MetadataValue` must be provided with the type and corresponding value
 	* **UpdateMetadataList** – the list of changes to apply; the `UpdateMetadata` objects must be set as follows:
 		* **Operation** – the operation to apply
-		* TypeMetadata** – the type of the metadata 
-		* Key** – the key name of the metadata 
-		* StrValue/FloatValue/DateValue** – the corresponding value to be set or tested; required for `add`, `replace`, and `test` operations; for `add`, if the value already exists, then the previous value will be overwritten by the new value; for `replace`, the metadata value must exist before replacing; for `test`, the value of the existing metadata instance must match the specified value
+		* **TypeMetadata** – the type of the metadata 
+		* **Key** – the key name of the metadata 
+		* **StrValue/FloatValue/DateValue** – the corresponding value to be set or tested; required for `add`, `replace`, and `test` operations; for `add`, if the value already exists, then the previous value will be overwritten by the new value; for `replace`, the metadata value must exist before replacing; for `test`, the value of the existing metadata instance must match the specified value
 	* **FromBoxMetadata** – the key to the `Metadata` source; this value is required only in case of `move` or `copy` operations
 
 ## 4 Developing This App Store Component

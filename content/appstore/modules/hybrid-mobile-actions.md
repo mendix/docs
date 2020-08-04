@@ -45,7 +45,9 @@ Next, add the following snippet to the custom Phonegap/Cordova configuration:
 
 Note that the standard *config.xml* template already includes `cordova-plugin-contacts`, but due to a permission structure change for Android 9 that causes a crash on saving, it has to be replaced by the following snippet:
 
-`<plugin name="cordova-plugin-contacts" spec="https://github.com/mendixlabs/cordova-plugin-contacts.git#3.0.2" />`
+```
+<plugin name="cordova-plugin-contacts" spec="https://github.com/mendixlabs/cordova-plugin-contacts.git#3.0.2" />
+```
 
 {{% alert type="info" %}}
 Please note that the above plugins are not available in the in standard [Mendix](/refguide/getting-the-mendix-app) mobile app and can only be tested with a custom built mobile app.

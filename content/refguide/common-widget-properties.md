@@ -147,7 +147,8 @@ The editable property indicates whether the end-user will be able to change the 
 
 | Value       | Description                                                  |
 | ----------- | ------------------------------------------------------------ |
-| Default *(default)*    | The value is editable if security allows it (as in, if the user that is signed in has write access to the selected attribute). |
+| Default     | The value is editable if security allows it (as in, if the user that is signed in has write access to the selected attribute). *(Default value for widgets outside a snippet)* |
+| Inherited from snippet call | Set to `Default` or `Never` by the containing data container of the snippet call. *(Default value for widgets inside a snippet)* |
 | Never       | The value is never editable.                                 |
 | Conditionally | The value is editable if the specified condition holds (see below). |
 

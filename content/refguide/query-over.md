@@ -130,8 +130,9 @@ public class RetrieveAsAssociatedWithB extends CustomJavaAction<java.util.List<I
 	}
 }
 ```
-In order to access the Mendix domain ("Main.Generalization_Specialization"), you will have to add the following import to the top of the Java Action in order to prevent a compile error ("Symbol not found"):
-```
-import com.mendix.core.Core;
-```
-When setting the `Reverse` Boolean to true and using the `Specialization` object as the input, the returned list will contain all the Generalizations associated to the Specialization.
+
+{{% alert type="info" %}}
+Be sure to import `com.mendix.core.Core` so you are able to execute `Core.retrieveByPath(..)` in this code snippet.
+{{% /alert %}}
+
+When setting the `Reverse` Boolean to true and using the `Specialization` object as the input, the returned list will contain all the generalizations associated to the specialization.

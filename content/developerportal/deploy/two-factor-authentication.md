@@ -3,33 +3,43 @@ title: "Two-Factor Authentication"
 parent: "general"
 menu_order: 20
 description: "What is Two-Factor Authentication and how to set up and change it."
-tags: ["Authenticator","Developer Portal","Cloud","Permissions", "Google", "2FA", "Two-factor authentication"]
+tags: ["Authenticator","Developer Portal","Cloud","Permissions", "Google", "2FA", "Two-factor authentication", "SMS"]
 ---
 
 ## 1 Introduction
 
-In the **Deploy** and **Operate** categories of the [Developer Portal](http://home.mendix.com), there are several operations that require  **Two-Factor Authentication**. In addition, Technical Contacts are required to use 2FA with their Mendix account when they access licensed cloud node details, specifically for transporting MDA files (deployment archives) to the production environment.
+In the **Deploy** and **Operate** categories of the [Developer Portal](http://home.mendix.com), there are several operations that require **Two-Factor Authentication** (2FA). In addition, Technical Contacts are required to use 2FA with their Mendix account when they access licensed cloud node details, specifically for transporting MDA files (deployment archives) to the production environment.
 
 This document describes the purpose and the functionality of two-factor authentication.
 
-
 ## 2 The Purpose
 
-2FA adds a second authentication mechanism in addition to your password. It is an extra layer of authentication to allow you to perform sensitive activities on Mendix Cloud nodes, such as deploying packages and handling production data.
+2FA adds a second authentication mechanism in addition to your password. It is an extra layer of authentication to allow you to perform sensitive activities on Mendix Cloud nodes, such as deploying packages and handling production data. It means that you need to have access to your mobile phone as well as an active session in the Mendix Developer Portal.
+
+Actions which require 2FA are indicated by a padlock symbol.
 
 ![](attachments/two-factor-authentication/production.png)
 
-For more information, see [Google Authentication](https://www.google.com/landing/2step/#tab=how-it-protects).
+After successfully performing 2FA, your browser session is authorized for the next eight hours.
+
+![](attachments/two-factor-authentication/information.png)
 
 ## 3 How It Works
 
+There are two methods of performing 2FA. You can either ask Mendix to send an SMS containing an authentication code
+
+### 3.1 SMS Authentication
+
+### 3.2 Google Authenticator
+
 Before performing an operation on the production environment, you will be required to provide the authentication code.
+
+
+For more information, see [Google Authentication](https://www.google.com/landing/2step/#tab=how-it-protects).
 
 ![](attachments/two-factor-authentication/google.png)
 
-After entering the authentication code, your browser session is authorized for the next eight hours.
 
-![](attachments/two-factor-authentication/information.png)
 
 ## 4 Setting Up & Disabling
 
@@ -57,7 +67,7 @@ You can re-activate 2FA by triggering any action that requires 2FA on your produ
 
 After you have set up your authentication method, you cannot change the authentication method yourself. Only [Mendix Support](https://support.mendix.com) is able to disable the current authentication method. After the authentication method has been disabled, it can be set to a different method.
 
-For example, if you want to change your authentication method from **SMS Authentication** to **Google Authentication**, submit a [Mendix support request](https://support.mendix.com/hc/en-us/requests/new) citing **Reset Authenticator**.
+For example, if you want to change your authentication method from **SMS Authentication** to **Google Authentication**, submit a [Mendix support request](https://support.mendix.com/hc/en-us/requests/new) citing **Standard change: Reset Google authenticator**.
 
 ## 6 Technical Contact
 

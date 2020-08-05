@@ -20,44 +20,65 @@ Actions which require 2FA are indicated by a padlock symbol.
 
 ![](attachments/two-factor-authentication/production.png)
 
+
+
+## 3 How It Works
+
+There are two methods of performing 2FA. You can either ask Mendix to send an SMS containing an authentication code, or you can enable Google Authenticator.
+
+Once it is set up, you will receive an authentication code via your chosen route and will need to provide this to the Developer Portal.
+
 After successfully performing 2FA, your browser session is authorized for the next eight hours.
 
 ![](attachments/two-factor-authentication/information.png)
 
-## 3 How It Works
+To set it up, you first need to perform an action which required 2FA, such as **Transport to Production** on the **Environments** page of your app.
 
-There are two methods of performing 2FA. You can either ask Mendix to send an SMS containing an authentication code
+Choose one of the two options and follow the relevant instructions, below.
+
+![](attachments/two-factor-authentication/sms-or-google.png)
 
 ### 3.1 SMS Authentication
 
+For SMS authentication, you will need to have a phone number connected to a device which can receive SMS messages, such as a mobile phone.
+
+If you have chosen the SMS option, the first time you need to perform 2FA you will be asked for the phone number to which SMS messages can be sent.
+
+1. Click **Use SMS** in the dialog box that opens when you use 2FA for the first time.
+2. Enter your phone number and click **Validate**.
+
+    ![](attachments/two-factor-authentication/setup-sms.png)
+
+3. Enter the authentication code which is sent as an SMS to your device.
+
+    ![](attachments/two-factor-authentication/enter-sms.png)
+
+In future you will need to ask Mendix to send an SMS to your phone.
+
+![](attachments/two-factor-authentication/authentication-sms.png)
+
+You will need to enter the authentication code from the SMS message to unlock 2FA.
+
 ### 3.2 Google Authenticator
 
-Before performing an operation on the production environment, you will be required to provide the authentication code.
+For more information on how Google Authenticator works, see Google's own documentation on [Google Authentication](https://www.google.com/landing/2step/#tab=how-it-protects).
 
+1. Click **Use Google Authenticator** in the dialog box that opens when you use 2FA for the first time.
+2. Install and open the **Google Authenticator** app on your smartphone.
+3. Select **Set up account** on the main page.
+4. Select **Scan a barcode** or **Enter provided key**.
+5. Scan the barcode or enter the six-digit time-based code.
+6. Once Google Authenticator is set up you will be asked to confirm by entering the Google Authenticator code.
 
-For more information, see [Google Authentication](https://www.google.com/landing/2step/#tab=how-it-protects).
+    ![](attachments/two-factor-authentication/authenticator.png)
+
+Your account is now secured with 2FA and ready to use.
+
+In future, You will get a six-digit number that expires every minute. You will need to enter that number to validate your account every time you performing an operation on the production environment.
 
 ![](attachments/two-factor-authentication/google.png)
 
-
-
-## 4 Setting Up & Disabling
-
-To transport your deployment package into the production environment, follow these steps:
-
-1. In your app project, go to the **Deploy** tab.
-3. Click **Deploy** below the package you want to deploy.
-4. In the **Environments** section click **Transport to Production** for the deployment package you want to transfer from your test environment to acceptance and then to production.
-5. Click **Use Google Authenticator** in the dialog box that opens. Note that the installation screens are different per smartphone type. The following steps are based on an Android phone.
-6. Open the **Google Authenticator** app on your smartphone.
-7. Select **Set up account** on the main page.
-8. Select **Scan a barcode** or **Enter provided key**.
-9. Scan the barcode or enter the six-digit time-based code.
-10. Once Google Authenticator is set up you will be asked to confirm by entering the Google Authenticator code.
-
-  ![](attachments/two-factor-authentication/authenticator.png)
-
-Your account is now secured with 2FA and ready to use. You will get a six-digit number that expires every minute. You will need to enter that number to validate your account every time you access production.
+## 4 Changing your Device or Phone Number
 
 If you change your device or phone number, you must contact [Mendix Support](https://support.mendix.com/hc/en-us) to disable the authenticator on your Mendix account.
 

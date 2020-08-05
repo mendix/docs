@@ -164,13 +164,16 @@ The host and port values will be needed to deploy the application. To get these 
 $ kubectl get service postgres-service
 ```
 
-Windows users need to execute this inline command first to get the pod name and the logs:
+Windows users need to execute these inline commands first to get the pod name
 
 ```bash
-# kubectl get pods -lapp=postgres -o name
-pods/posgres-whSsHA
+kubectl get pods -lapp=postgres -o name
+```
 
-# kubectl logs <name>
+and use the pod name to retrieve the logs:
+
+```bash
+kubectl logs <name>
 ```
 
 ### 4.2 Deploying the Application{#deploy}

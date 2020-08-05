@@ -41,9 +41,7 @@ Configure the features on the following tabs:
 
 ![](attachments/video-player/dimensions.jpg)
 
-
-
-### Phonegap/Cordova configuration
+### 2.1 Phonegap/Cordova Configuration
 
 If your are developing a Hybrid Mobile App, please add these line through your Sprint in Mobile App -> Custom
 Phonegap/Cordova configuration These lines are required to allow the access to YouTube, Vimeo, Dailymotion videos and

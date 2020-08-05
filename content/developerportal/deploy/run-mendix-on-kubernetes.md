@@ -69,7 +69,7 @@ To access your Mendix applications inside a pod from outside of the Kubernetes, 
 Once Minikube is running you'll need to configure your local environment to use the Docker daemon using the following command:
 
 ```bash
-$minikube docker-env
+minikube docker-env
 ```
 
 You'll need to build your image in Minikube if you haven't done so yet. See [Docker](https://docs.mendix.com/developerportal/deploy/docker-deploy) for the steps to do this.
@@ -161,7 +161,7 @@ This is the expected output:
 The host and port values will be needed to deploy the application. To get these we execute the following command:
 
 ```bash
-$ kubectl get service postgres-service
+kubectl get service postgres-service
 ```
 
 Windows users need to execute these inline commands first to get the pod name
@@ -208,7 +208,7 @@ See [Run a Mendix Docker Image](https://docs.mendix.com/developerportal/deploy/r
 To create the secrets in Kubernetes we execute the following command:
 
 ```bash
-$ kubectl create -f mendix-app-secrets.yaml
+kubectl create -f mendix-app-secrets.yaml
 ```
 
 Once the database service and the secrets are created, you can create the application, which is defined in the file below.

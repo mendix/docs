@@ -63,7 +63,7 @@ The permissions that can be enabled/disabled:
 Some functionality might not be available when you disable these permissions (for example, your app will not be able to use the camera widget when you disable it).
 {{% /alert %}}
 
-### 2.4 Custom Phonegap/Cordova Configuration
+### 2.4 Custom Phonegap/Cordova Configuration {#custom}
 
 You can specify additional Phonegap/Cordova settings and plugins by adding an XML snippet below. This snippet will be inserted at the bottom of the configuration file.
 

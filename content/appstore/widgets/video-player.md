@@ -33,7 +33,7 @@ For a demo app project that has been deployed with this widget, see [here](https
 Place the widget inside or outside a context of an object that has a value attribute. If you do not place the widget
 inside a context, you need to provide a static URL; otherwise, the player will not render.
 
-Configure the features on the following tabs:
+Configure the following properties:
 
 ![](attachments/video-player/general.jpg)
 
@@ -43,9 +43,7 @@ Configure the features on the following tabs:
 
 ### 2.1 Phonegap/Cordova Configuration
 
-If your are developing a Hybrid Mobile App, please add these line through your Sprint in Mobile App -> Custom
-Phonegap/Cordova configuration These lines are required to allow the access to YouTube, Vimeo, Dailymotion videos and
-Mp4 extensions. Noembed.com is the API we use to request the Video Sizes to calculate Aspect Ratio.
+If your are building a hybrid mobile app, you need to add the following lines to enable access to YouTube, Vimeo, and Dailymotion videos as well as MP4 extensions through your Sprint in the Developer Portal > **Mobile App** > [Custom Phonegap/Cordova Configuration](/developerportal/deploy/mobileapp#custom):
 
 ```xml
 <allow-navigation href="*://*youtube.com/*" />
@@ -57,6 +55,6 @@ Mp4 extensions. Noembed.com is the API we use to request the Video Sizes to calc
 <allow-navigation href="*://*.mp4" />
 ```
 
-
-
-
+{{% alert type="info" %}}
+[Noembed](https://noembed.com/) is the API used to request video sizes in order to calculate aspect ratios.
+{{% /alert %}}

@@ -19,7 +19,7 @@ In the example below, an image uploader is placed in a nested data view (the *Pr
 
 An example of image uploader properties is represented in the image below:
 
-{{% image_container width="350" %}}![Image Uploader Properties](attachments/file-widgets/image-uploader-properties.png)
+{{% image_container width="250" %}}![Image Uploader Properties](attachments/file-widgets/image-uploader-properties.png)
 {{% /image_container %}}
 
 Image uploader properties consist of the following sections:
@@ -73,4 +73,4 @@ If a file with an extension that is not allowed is selected, a [system text](sys
 
 * [Page](page)
 * [File Widgets](file-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

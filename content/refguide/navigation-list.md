@@ -22,7 +22,7 @@ For example, clicking one row can open a page, clicking another one can execute 
 
 An example of navigation list properties is represented in the image below:
 
-{{% image_container width="350" %}}![Navigation List Properties](attachments/container-widgets/navigation-list-properties.png)
+{{% image_container width="300" %}}![Navigation List Properties](attachments/container-widgets/navigation-list-properties.png)
 {{% /image_container %}}
 
 Navigation list properties consist of the following sections:
@@ -67,4 +67,4 @@ Microflows set as an on click event for a navigation list item have no **Executi
 
 * [Page](page)
 * [Container Widgets](container-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

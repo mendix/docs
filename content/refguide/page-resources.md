@@ -26,7 +26,7 @@ To add a resource document, do the following:
 
     ![](attachments/page-resources/project-explorer-page-resources.png)
 
-2. In the **Page Resources** category, select the document you would like to add to your project.
+2. Select the document you would like to add to your project.
 
 ## 3 Read More
 

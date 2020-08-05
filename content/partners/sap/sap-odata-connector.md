@@ -23,7 +23,7 @@ OData Connector for SAP solutions only supports SAP OData Gateway Services which
 
 If you are new to the OData Connector for SAP solutions, you can try it out by following our how-to: [How to Use the OData Connector](/partners/sap/use-sap-odata-connector). This reference assumes that you know the details of the SAP OData service you want to use.
 
-When running the Mendix application on SAP Cloud Platform, you can choose to use the SAP Destination Service to gain access to your on-premises SAP instance. The SAP Destination Service can be configured to invoke the SAP Connectivity Service in SAP Cloud Platform to find a route to your OData service residing on-premises. This route is configured from the SAP Cloud Connector running as an agent in your on-premises SAP back-end. If no route is configured, the OData Connector for SAP solutions will route requests to the public OData service. For more information, see the [SAP Destination Service](sap-destination-service) documentation and the [OData Connector for SAP solutions](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) in the Mendix App Store.
+When running the Mendix application on SAP Cloud Platform, you can choose to use the SAP Destination Service to gain access to your on-premises SAP instance. The SAP Destination Service can be configured to invoke the SAP Connectivity Service in SAP Cloud Platform to find a route to your OData service residing on-premises. This route is configured from the SAP Cloud Connector running as an agent in your on-premises SAP back-end. If no route is configured, the OData Connector for SAP solutions will route requests to the public OData service. For more information, see the [SAP Destination Service](sap-destination-service) documentation and the [OData Connector for SAP Solutions](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector).
 
 {{% alert type="info" %}}
 The SAP Destination Service replaces the SAP Cloud Connector flag which was used in previous version of the OData Connector for SAP solutions
@@ -99,10 +99,6 @@ This domain model generally works in the same way as a Mendix domain model, with
 
 * Every object is based on an entity which is a specialization of the ComplexType, FunctionParameters, or OdataObject entity. The OdataObject entity adds a **meta_objectURI** string, which is the URI of the object and can be used in entity manipulation actions, and a **meta_etag** string that identifies a state of the object. This is used by the OData service when you try to change data to check if it has been changed since it was retrieved by your app.
 * Many objects have attributes which end in …Deferred. These contain URIs which will return a list of objects of an entity type which is associated with the current object. For example: in the domain model above, the **Product** entity contains an attribute **ToSupplierDeferred**. This will contain a URI which can be used to return the **BusinessPartner** associated with the current **Product** object via the **ToSupplier_Product_BusinessPartner** association.
-
-{{% alert type="info" %}}
-If you are using the *SAP Destination Service* to identify the endpoint of your SAP OData Service, you will need to edit the strings from the  meta_objectURI and …Deferred attributes as they will already contain an endpoint in addition to the object references.
-{{% /alert %}}
 
 #### 2.3.2 OData Connector for SAP Solutions Domain Model<a name='ConnectorDM'></a>
 
@@ -211,7 +207,7 @@ This produces the GET request `https://sapes5.sapdevcenter.com/sap/opu/odata/iwb
 The Create operation creates a new object in the SAP back-end system using the OData service. The object is described by an entity in the SAP service domain model.
 
 {{% alert type="info" %}}
-This Create is not the same as the Mendix **Create Object** action. The OData Connector for SAP solutions Create will commit the object to the SAP back-end system and it cannot be rolled back. If you decide later that you do not want this object you must delete it using its key.
+This Create is not the same as the Mendix **Create object** action. The OData Connector for SAP solutions Create will commit the object to the SAP back-end system and it cannot be rolled back. If you decide later that you do not want this object you must delete it using its key.
 {{% /alert %}}
 
 ![](attachments/sap-odata-connector/create-params.png)
@@ -244,7 +240,7 @@ For example, this connector can be used to create a product using the **GWSAMPLE
 
 `GWSAMPLE_BASIC.EntitySetNames.ProductSet` is the name of the Product collection listed in the EntitySetNames enumeration of the SAP Service Data Model.
 
-The **Odata object** is an object of entity type **Product**. This can be created, by using, for example, the **Create Object** action.
+The **Odata object** is an object of entity type **Product**. This can be created, by using, for example, the **Create object** action.
 
  You will need to pass authentication using **Request Parameters** and the **Add basic authentication** action described in [Helper Actions](#HelperActions), below.
 
@@ -413,7 +409,7 @@ Every action of the OData Connector for SAP solutions will ask for a set of para
 
 ![](attachments/sap-odata-connector/actionparameters-sapodataconnector.png)
 
-The parameters can be entered using the drop down, clicking the **Edit** or **Select…** buttons, or typing directly into a text field.
+The parameters can be entered using the drop-down, clicking the **Edit** or **Select…** buttons, or typing directly into a text field.
 
 Within the edit box, you can type your parameter. As is standard in Mendix, certain characters (for example [@ $ .]) will trigger a pop-up window to help you select the right values. This can also be triggered using <kbd>Ctrl</kbd>+<kbd>Space</kbd>. Typing while this pop-up window is open will filter the list of possibilities. For example, you can type (the beginning of) _entitysetnames_ and the pop-up window will allow you to select the collection of entity set names which you want.
 
@@ -615,18 +611,21 @@ This is the type of data which will be returned from the action. There are three
 
 This is the name that you give the result of your Activity. This can be used later in the Microflow to drive logic or to return data. Mendix will suggest a name for you, but you can change it if you want to.
 
-## 5 Read More
+## 5 Troubleshooting
+
+If you have issues using the OData Connector for SAP Solutions, there is a troubleshooting guide, [Troubleshoot OData Connector for SAP Solutions](sap-troubleshoot-odata-connector).
+
+## 6 Read More
 
 * [Attributes](/refguide/attributes)
 * [Data Types](/refguide/data-types)
 * [Domain Model](/refguide/domain-model)
 * [Entities](/refguide/entities)
-* [How to Use App Store Content](/developerportal/app-store/app-store-content)
+* [How to Use App Store Content](/appstore/general/app-store-content)
 * [How to Use the OData Connector for SAP Solutions](/partners/sap/use-sap-odata-connector)
 * [How to Use the OData Model Creator for SAP Solutions](/partners/sap/use-sap-odata-model-creator)
 * [SAP Cloud Connector](sap-cloud-connector)
 * [SAP Help Portal](https://help.sap.com)
-* [OData Connector for SAP Solutions](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector)
 * [OData Model Creator for SAP Solutions](https://sapodatamodelcreator.mendixcloud.com/)
 * [SAP Data Models](sap-data-models)
 * [OData Query Options](/refguide/odata-query-options)

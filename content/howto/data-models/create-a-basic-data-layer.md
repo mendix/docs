@@ -68,7 +68,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 
 To add enumerations, follow these steps:
 
-1. Right-click the module and select **Add** > **Enumeration**.
+1. Right-click the module and select **Add other** > **Enumeration**.
 2. Enter *OrderStatus* for the **Name** and click **OK**.
 3.  Click **New** to add a new enumeration value:
 
@@ -128,6 +128,11 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 *  To configure the delete prevention, select the **Delete 'Customer' object only if it is not associated with 'Order' object(s)** in the **On delete of 'Customer' object** section; this means that a customer can only be deleted if no orders refer to this customer, and the **Error message** will be shown to a user that tries to delete a customer that has orders:
 
 	![](attachments/18448745/18582208.png)
+
+{{% alert type="info" %}}
+Delete behavior includes objects which are in memory. This means that delete cascades and delete prevention will apply, even if the associated object has not been committed.
+{{% /alert %}}
+
 
 ## 8 Read More
 

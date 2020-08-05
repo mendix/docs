@@ -3,7 +3,7 @@ title: "Use Over the Air Updates"
 parent: "native-mobile"
 menu_order: 71
 description: A tutorial for pushing over the air updates (OTA).
-tags: ["native", "mobile", "ota", "native-builder", "over the air"]
+tags: ["native", "mobile", "ota", "native-builder", "over the air", "update"]
 ---
 
 ## 1 Introduction
@@ -27,7 +27,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install Native Builder 3.0.0 or higher
 * Install Mendix Studio Pro 8.4 or higher
-* Complete [How to Deploy your First Mendix Native App](/howto/mobile/deploying-native-app)
+* Complete [How to Deploy your First Mendix Native Mobile App](/howto/mobile/deploying-native-app)
 * Complete at least one successful build using Native Builder v3.0.0 and Native Template v2.0.0
 * Install your app on a test device or emulator
 * Read the [Offline First Reference Guide](/refguide/offline-first)
@@ -52,7 +52,7 @@ It is good practice to *always* redeploy your Mendix App before pushing a new ov
 If you have made any changes directly to your iOS or Android project, you will have to fully redeploy you app to the app stores for the changes to take effect. OTA updates do not suffice, and a full release is required, in the following cases: 
 
 * The initial release of your app
-* You fundamentally changed your app's functionality (this is a App Store limitation, and will require a re-release and re-review of your app by Apple — your app might be removed if you do not comply)
+* You fundamentally changed your app's functionality (this is a App Store limitation, and will require a re-release and re-review of your app by Apple—your app might be removed if you do not comply)
 * A new native module has been added
 * The app has been renamed
 * The app's launcher icons have been changed
@@ -171,7 +171,7 @@ Using a modification of `rollout-percentage` you can make builds optional. To do
 native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory false
 ```
 
-Instead of the mandatory update dialog window, you app's users should now be greeted with a optional dialog window. This window will allow them to choose to install the update or not. 
+Instead of the mandatory update pop-up window, you app's users should now be greeted with a optional pop-up window. This window will allow them to choose to install the update or not. 
 
 ## 8 Preserving your Model's Integrity 
 
@@ -194,7 +194,7 @@ This issue is independent from OTA updates and specific to offline apps. Your of
 
 ## 9 Read More
 
-* [How to Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app)
+* [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app)
 * [Native Builder Reference Guide](/refguide/native-builder)
 * [Offline First Reference Guide](/refguide/offline-first)
 * [Codepush Introduction](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/)

@@ -1,7 +1,7 @@
 ---
 title: "Button Properties"
 parent: "button-widgets"
-tags: ["studio pro", "button", "button widget", "action button", "drop down button"]
+tags: ["studio pro", "button", "action button", "drop-down button", "button widget", "image property"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -13,7 +13,7 @@ A button can perform various actions such as calling a microflow or nanoflow or 
 
 An example of button properties is represented in the image below:
 
-{{% image_container width="280" %}}![Button Properties](attachments/button-widgets/button-properties.png)
+{{% image_container width="250" %}}![Button Properties](attachments/button-widgets/button-properties.png)
 {{% /image_container %}}
 
 Button properties consist of the following sections:
@@ -73,11 +73,11 @@ To add parameters, do the following:
 
 2. Double-click the **Caption** setting in the button widget properties.
 
-3.  In the **Edit Caption** dialog window > **Parameters** section click **New**:
+3.  In the **Edit Caption** dialog box > **Parameters** section click **New**:
 
     ![Adding New Parameter](attachments/button-widgets/new-parameter.png)
 
-4. In the **Edit Template Parameter** dialog window, click **Select**, choose an attribute and confirm your choice.
+4. In the **Edit Template Parameter** dialog box, click **Select**, choose an attribute and confirm your choice.
 
 5. In the **Caption** setting, write the text you would like to display and type **Index** of the parameter you would like to include. In the example below, to include a name of your customer , you need to use indexes {1} for the *Name* attribute:  
 
@@ -99,7 +99,7 @@ In addition to adding new parameters, you can perform the following actions on p
 
 #### 2.4.3 Tooltip
 
-The **Tooltip** property determines a text end-users will see in the tooltip that appears when they hover over the button. The tooltip text is translatable. For more information on translatable texts, see [Translatable Texts](translatable-texts). If the tooltip is not specified, no tooltip will be shown when hovering over the button.
+The **Tooltip** property determines a text end-users will see in the tooltip that appears when they hover over the button. The tooltip text is translatable. For more information on translatable texts, see [Language Menu](translatable-texts). If the tooltip is not specified, no tooltip will be shown when hovering over the button.
 
 #### 2.4.4 Icon {#icon}
 
@@ -132,9 +132,9 @@ The **Button style** property applies a predefined styling to the button. Possib
 * Warning
 * Danger
 
-#### 2.4.7 Disable During Action
+#### 2.4.7 Disabled During Action
 
-This property is only shown when **Call a microflow** is selected as an on click event. For more information on click events, see [On Click Event & Events Section](on-click-event). The **Disable during action** disables the button until the action is completed or failed.
+This property is only shown when **Call a microflow** or **Call a nanoflow** is selected as the [on-click event](on-click-event). Selecting **Disabled during action** disables the button until the action is completed or failed.
 
 Default: *true*
 
@@ -172,16 +172,16 @@ To add items to a drop-down buttons, do the following:
 
 1. Double-click the **Items** setting in the button widget properties.
 
-2.  In the **Edit Items** dialog window, click **New**:
+2.  In the **Edit Items** dialog box, click **New**:
 
     ![Adding New Item](attachments/button-widgets/adding-new-item.png)
 
-3. In the **Edit Drop Down Button** Item dialog window, do the following:
+3. In the **Edit Drop-down Button** Item dialog box, do the following:
    1. Specify the caption for the item.
    2. Select an image (icon) to be displayed for this item.
    3. Select an on-click event to be performed when the end-user clicks this item.
    4. Click **OK**.
-4. In the **Edit Items** dialog window, click **OK** to save your changes and add new item. 
+4. In the **Edit Items** dialog box, click **OK** to save your changes and add new item. 
   
 
 
@@ -193,7 +193,7 @@ To add items to a drop-down buttons, do the following:
 
 * [Page](page)
 * [Button Widgets](button-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)
 * [On Click Event & Events Section](on-click-event)
 
 

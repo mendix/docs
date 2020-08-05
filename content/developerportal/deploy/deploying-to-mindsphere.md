@@ -45,7 +45,7 @@ To deploy your app to MindSphere you need the following prerequisites.
 
 You must customize your app to allow it to be deployed to MindSphere, registered via the MindSphere Developer Cockpit, and shown in the launchpad. This is done through MindSphere customization modules. There are two ways to include the customization you need in your app.
 
-### 3.1 Option A: Using the MindSphere Starter App
+### 3.1 Option A: Using the MindSphere App Template
 
 The **MindSphere Starter Application** in the Mendix App Store contains all the modules and styling which you need to create an app you want to deploy to MindSphere.
 
@@ -75,7 +75,7 @@ Open Studio Pro (version 7.22.2 or above) and follow these steps:
 
 ### 3.2 Option B: Customizing an Existing App{#existingapp}
 
-If you have an existing app which was not based on the MindSphere starter app, you must import the required customization. The three modules which must be imported are:
+If you have an existing app which was not based on the MindSphere app template, you must import the required customization. The three modules which must be imported are:
 
 * MindSphere SSO from the Mendix App Store here: [Siemens MindSphere SSO](https://appstore.home.mendix.com/link/app/108805/)
 
@@ -351,7 +351,7 @@ To create a new app in the MindSphere launchpad, do the following:
       connect-src 'self' 'unsafe-inline' *;
       ```
 
-      {{% alert type="info" %}}These content security policy (CSP) settings are needed to ensure that the MindSphere OS Bar and the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) are loaded correctly. You may need to set additional CSP settings if you make additional calls to other domains (for example, if you use Google maps from maps.googleapi.com).{{% /alert %}}
+      {{% alert type="info" %}}These content security policy (CSP) settings are needed to ensure that the MindSphere OS Bar and the [Mendix Feedback](/appstore/widgets/mendix-feedback) widget are loaded correctly. You may need to set additional CSP settings if you make additional calls to other domains (for example, if you use Google maps from maps.googleapi.com).{{% /alert %}}
 
       ![](attachments/deploying-to-mindsphere/image14.png)
 
@@ -373,7 +373,7 @@ To set up the appropriate scopes in MindSphere, do the following:
     ![](attachments/deploying-to-mindsphere/image15.png)
 
 {{% alert type="info" %}}
-If you are using the starter app, you should create two scopes, *user* and *admin*.
+If you are using the app template, you should create two scopes, *user* and *admin*.
 {{% /alert %}}
 
 For an explanation of the relationship between Mendix roles and MindSphere roles, see section [Roles & Scopes](/partners/siemens/mindsphere-module-details#rolesscopes) in *MindSphere Module Details*.

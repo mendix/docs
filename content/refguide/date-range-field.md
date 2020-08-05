@@ -17,7 +17,7 @@ To add a date range field, right-click the widget and choose **Add field** from 
 
 An example of date range field properties is represented in the image below:
 
-{{% image_container width="250" %}}![Date range field in structure mode](attachments/report-widgets/date-range-field-properties.png)
+{{% image_container width="300" %}}![Date range field in structure mode](attachments/report-widgets/date-range-field-properties.png)
 {{% /image_container %}}
 
 Date range field properties have only a [General](#general) section.
@@ -38,7 +38,7 @@ The **Label** property specifies the text that is displayed beside the date rang
 | Quarter<sup><small>[2]</small></sup> | Allows the end-user to select a quarter of the year. | 2019 > 2 | 1 April 2019 to 30 June 2019 |
 | Month<sup><small>[2]</small></sup> | Allows the end-user to select a month of the year. | 2019 > May | 1 May 2019 to 31 May 2019 |
 | Week<sup><small>[2]</small></sup> | Allows the end-user to select a week of the year. | 2019 > Week 19 | 5 May 2019 to 12 May 2019 |
-| Period<sup><small>[2]</small></sup> | Allows the end-user to select one of the following periods: last&nbsp;week, this&nbsp;week, next&nbsp;week, last&nbsp;month, this&nbsp;month, next&nbsp;month, last&nbsp;quarter, this&nbsp;quarter, next&nbsp;quarter. | | |
+| Period<sup><small>[2]</small></sup> | *The Period date range field is being deprecated. It is recommended that you use one of the other types of date range field.*  | | |
 
 | **Notes** |
 | --- |

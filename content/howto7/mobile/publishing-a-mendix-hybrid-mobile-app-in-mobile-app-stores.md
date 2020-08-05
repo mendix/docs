@@ -6,7 +6,7 @@ tags: ["mobile", "app store", "phonegap"]
 ---
 ## 1 Introduction
 
-Once you have finished developing a Mendix mobile application, you will want to make it available as an app for mobile platforms such as Apple iOS and Google Android. We make it possible to produce platform-specific native apps. For more details on deploying platform-specific apps, see [Mobile App](/developerportal/deploy/mobileapp).
+Once you have finished developing a Mendix mobile application, you will want to make it available as an app for mobile platforms such as Apple iOS and Google Android. We make it possible to produce platform-specific native mobile apps. For more details on deploying platform-specific apps, see [Mobile App](/developerportal/deploy/mobileapp).
 
 The hybrid mobile app publishing process is based on Adobe PhoneGap. We have integrated the [Adobe PhoneGap Build](https://build.phonegap.com/) service into Mendix to provide support for automatically building the required hybrid mobile packages. Instead of worrying about technical details, you can focus on what matters most: rapidly developing an app to support your business processes.
 
@@ -22,7 +22,7 @@ The hybrid mobile app publishing process is based on Adobe PhoneGap. We have int
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a Mendix app with mobile support running in the Mendix Cloud, either as a free app or on a licensed cloud node
-	* If you require an app to test with, set up the [Company Expenses](https://appstore.home.mendix.com/link/app/240/) app from the Mendix App Store as a free app to try out its mobile features 
+	* If you require an app to test with, set up the [Event App](https://appstore.home.mendix.com/link/app/36793/) from the Mendix App Store as a free app to try out its mobile features 
 * Have an account for Adobe PhoneGap Build (you can create one for free [here](https://build.phonegap.com/plans/free-adobeid))
 * Have an iOS device (iPhone or iPad) for testing the iOS package that will be produced
 * Have an iOS deployment certificate and a provisioning file for which your test device is activated
@@ -86,7 +86,7 @@ For publishing to a specific platform, see the subsequent sections of this how-t
 Apple provides general information on [publishing an iOS app in the Apple App Store](https://developer.apple.com/programs/ios/distribute.html). Before uploading your app, make sure to check the [App Review Guidelines](https://developer.apple.com/app-store/review/) to make sure your app will be accepted. An Apple Developer Account is required. If you do not have one, [register as an Apple Developer](https://developer.apple.com/register/index.action).
 
 1. Click the **Signing Keys** tab, and under **iOS**, click **add a key**. 
-2. A pop-up window will prompt you to upload a certificate file and a provisioning profile file. You can get those files from Apple. The certificate is the *.p12* file, and the provisioning profile is the *.mobileprovision* file. For more information, see [Managing App Signing Keys](/refguide7/managing-app-signing-keys).
+2. A pop-up window will prompt you to upload a certificate file and a provisioning profile file. You can get those files from Apple. The certificate is the *.p12* file, and the provisioning profile is the *.mobileprovision* file. For more information, see the [Managing App Signing Keys Reference Guide](/refguide7/managing-app-signing-keys).
 3. Give the key a title that you can easily recognize, and upload the files.
 4. Before using the key, it must be unlocked with the passphrase that was set up for the key. Click the lock with the yellow background on the same row as the key and enter the passphrase. As the pop-up window states, the key can now be used for builds for the period of an hour. After an hour, the passphrase needs to be entered again for security reasons.
 5. Now you are ready to configure the app. Click **Apps** at the top of the page to go to an overview showing your apps. Click  your app's name or logo to go to the details of the app.

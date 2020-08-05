@@ -120,7 +120,7 @@ Default: *False*
 
 #### 3.3.8 Default Button Trigger
 
-The default button can be triggered by a single or a double click on a row.
+The default button can be triggered by a single or a double click a row.
 
 | Value | Description |
 | --- | --- |
@@ -149,4 +149,4 @@ To perform actions on a template grid, select it on a page and right-click it. T
 * [Page](page)
 * [Data Widgets](data-widgets)
 * [Data Sources](data-sources)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

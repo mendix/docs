@@ -56,7 +56,7 @@ To make a call to *Plotly API images* REST end point, follow these steps:
 
     ![Configured microflow](attachments/charts/plotly-api/charts-call-rest-button.png)
 
-1. Right click on the button, select to **Go to on click microflow...**.
+1. Right click the button, select to **Go to on click microflow...**.
 
 1. Build the microflow as shown below.
 

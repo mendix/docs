@@ -1,6 +1,7 @@
 ---
 title: "Authentication"
 category: "API Documentation"
+menu_order: 1
 description: "How to retrieve and use authentication keys for Mendix APIs"
 tags: ["API", "API Key", "Authentication"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

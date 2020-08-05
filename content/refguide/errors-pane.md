@@ -1,7 +1,7 @@
 ---
 title: "Errors Pane"
-category: "App Modeling"
-menu_order: 25
+parent: view-menu
+menu_order: 40
 description: "Describes the Errors pane in Mendix Studio Pro."
 tags: ["Studio Pro", "errors", "error list", "errors pane"]
 ---
@@ -10,11 +10,14 @@ tags: ["Studio Pro", "errors", "error list", "errors pane"]
 
 To make sure that your app is always consistent and properly built, Studio Pro does consistency checks when you build your app. 
 
-When a consistency check is not met, Studio Pro will notify you about this on the **Errors** pane:
+When a consistency check is not met, Studio Pro will notify you about this on the **Errors** pane. The errors and warnings in pages, microflows, domain models, and document templates will be highlighted: 
 
 ![Errors Pane](attachments/errors-pane/errors-pane.png)
 
-To display the **Errors** pane, open the menu option **View > Error list**.
+To display the **Errors** pane, there are two options:
+
+* Right-click the element with the highlighted error and select **Found error** > **Go to Error List**
+* Open the menu option **View > Error List**
 
 ## 2 Types of Messages {#message-types}
 

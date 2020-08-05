@@ -76,32 +76,32 @@ The following steps describe how to add test steps manually to your test case. Y
     ![](attachments/ht-one-create-a-test-case/open-application-input-parameter.png)
   
     This will open the **Edit Input Value** dialog box.
-9. Select **Global Constant**.
-10. Select **Application URL**.
-11. Click **Save**:
+8. Select **Global Constant**.
+9. Select **Application URL**.
+10. Click **Save**:
 
     ![](attachments/ht-one-create-a-test-case/open-app-input-value.png)
 
     ATS now uses the application URL you selected in the **Run Configuration** application.
     
-12.  After opening the application, you must log in. ATS has a standard login action for logging in to a Mendix application that you must use, which is the [login](rg-one-login) action. The login page of the company expenses app looks like this:
+11. After opening the application, you must log in. ATS has a standard login action for logging in to a Mendix application that you must use, which is the [login](rg-one-login) action. The login page of the company expenses app looks like this:
 
     ![](attachments/ht-one-create-a-test-case/comp-app-login-page.png)
 
-13. Inside your test case, click **Add** again and add the **Login** action:
+12. Inside your test case, click **Add** again and add the **Login** action:
 
     ![](attachments/ht-one-create-a-test-case/add-login.png)
 
-14. Double-click the **Username** input parameter and add the username. 
-15. Double-click the **Password** input parameter and add the password:
+13. Double-click the **Username** input parameter and add the username. 
+14. Double-click the **Password** input parameter and add the password:
 
     ![](attachments/ht-one-create-a-test-case/login-input-parameters.png)
 
-16. After you log in to the Company Expenses app, you will see the home page. To create a new expense, you must click the **New Expense** button in the app. This means that ATS must click the button. To get the information you need, open the ATS Helper and hover over the **New Expense** button while holding <kbd>Ctrl</kbd>. 
+15. After you log in to the Company Expenses app, you will see the home page. To create a new expense, you must click the **New Expense** button in the app. This means that ATS must click the button. To get the information you need, open the ATS Helper and hover over the **New Expense** button while holding <kbd>Ctrl</kbd>. 
 
     ![](attachments/ht-one-create-a-test-case/helper-new-expense-button.png)
 
-17. ATS has an action that clicks a widget, which is the [Click Widget](rg-one-click-widget) action. Inside your test case, click **Add** again and add the **Click Widget** action.
+16. ATS has an action that clicks a widget, which is the [Click Widget](rg-one-click-widget) action. Inside your test case, click **Add** again and add the **Click Widget** action.
 
     ![](attachments/ht-one-create-a-test-case/click-widget-new-expense.png)
 
@@ -243,7 +243,7 @@ To add test steps using the ATS Recorder, follow these steps:
 
     ![](attachments/ht-one-create-a-test-case/new-expense-dialog-action-input-parameters-recorder.png)
 
-15.  For the logout, you can choose to keep the recorded click on the **Sign Out** button or replace it with the **Logout** action.
+15.  For the logout, you can choose to keep the recorded click the **Sign Out** button or replace it with the **Logout** action.
 16.  The last thing to do is to clarify to ATS what you are testing. This is done by setting the **Call Type** of your test steps to one of the following:
   
     * **Setup** for all the steps that you must perform to get to the test situation

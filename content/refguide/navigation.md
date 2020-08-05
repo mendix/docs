@@ -61,6 +61,8 @@ All the users accessing the Mendix app from a browser on a phone will automatica
 
 A Mendix app can be installed on a phone as a native application which has the benefit of a more responsive UI. The app will also be [offline-first](offline-first), which means all the data is stored on the phone and only synchronized with the server on request.
 
+You are required to enable anonymous users in your project's security settings and include anonymous user roles on native login pages. This is because there is no built-in login screen in the native profile; login pages are modeled as regular native pages. 
+
 ## 3 Redirection to Profiles {#redirection}
 
 Mendix Runtime automatically redirects users to the home page of the appropriate device type based on the device they are using. This happens by examining the `User-Agent` string that is sent by the device. The default configuration for this redirection is as follows:
@@ -88,6 +90,10 @@ A profile can be added with the **Add navigation profile** button. Only one prof
 #### 4.1.1 Application Title
 
 This specifies the application title. This title is shown in the title bar of the browser.
+
+#### 4.1.2 Application Icon
+
+This specifies the application icon. This icon is shown in the title bar and bookmarks of the browser. It can only be set in the Responsive profile, but will also be used by the other browser profiles.
 
 ### 4.2 Home Pages
 
@@ -125,16 +131,13 @@ Allows for changing the [profile type](navigation).
 
 This deletes the profile. If [menu widgets](menu-widgets) are still referring to the profile, errors will appear. It is possible to undo the deletion of a profile.
 
-#### 4.3.2 Sync configuration
+#### 4.3.2 Synchronization Configuration {#customize}
 
 Only available on profiles supporting offline synchronization.
 
-This opens the **Customize offline synchronziation** dialog which is used for overriding offline synchronization settings for specific entities. For each entity the download setting is shown. A default is automatically determined by analyzing the model, but can be overridden in which case the setting will appear in boldface. The download settings are one of the following:
+This opens the **Customize offline synchronization** dialog box that is used for overriding offline synchronization settings for specific entities. For each entity the download setting is shown. A default is automatically determined by analyzing the model, but can be overridden in which case the setting will appear in boldface. For more details on the settings and when to use them, see the [Offline-First Reference Guide](offline-first#customizable-synchronization).
 
-* All objects – download all objects of this entity type
-* By XPath – download only those objects matching the specified [XPath constraint](xpath-constraints) 
-* Nothing – download none of the objects of this entity type
-  ![](attachments/navigation/customize-offline-synchronization.png)
+![](attachments/navigation/customize-offline-synchronization.png)
 
 ## 5 Read More
 

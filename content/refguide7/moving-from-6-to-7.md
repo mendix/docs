@@ -100,7 +100,7 @@ The `System.Statistics` entity has been removed from the **System** module, as t
 
 ### 4.8 Client API Changes
 
-The semantics have changed for `MxObject.get` and `mx.parser.parseValue`. They now return a value of an appropriate type (for example, `Big` for numbers, numbers for dates) instead of always returning a string. For more details, see [Class: mendix/lib/MxObject](https://apidocs.mendix.com/7/client/mendix_lib_MxObject.html#get).
+The semantics have changed for `MxObject.get` and `mx.parser.parseValue`. They now return a value of an appropriate type (for example, `Big` for numbers, numbers for dates) instead of always returning a string. For more details, see [Class: mendix/lib/MxObject](https://apidocs.rnd.mendix.com/7/client/mendix_lib_MxObject.html#get).
 
 Support for `dojo.require` has been dropped. It never worked in hybrid apps, and we have now made it official. Write your custom widgets in the AMD style, as described in [App Store Widget Boilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate).
 

@@ -6,26 +6,34 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-Functions for calculating the differences between two dates.
+Between date function calls calculate the differences between two dates.
 
 ## 2 millisecondsBetween
+
+The `millisecondsBetween` function calculates the difference between the input values in milliseconds.
+
+### 2.1 Input Parameters
+
+Use the following input parameters:
 
 *   First date
     Type: Date and time
 *   Second date
     Type: Date and time
 
-### 2.1 Output
+### 2.2 Output
 
-Returns the difference between the two dates, as a Decimal, measured in milliseconds.
+The expression will return the difference between the two dates, as a Decimal, measured in milliseconds.
 
-For example:
+### 2.3 Example
+
+If you type in the following input:
 
 ```java
 millisecondsBetween(dateTime(2007, 1, 1, 1, 1, 1), dateTime(2007,1,1,1,1,3))
 ```
 
-results in
+The output is:
 
 ```java
 2000
@@ -33,22 +41,30 @@ results in
 
 ## 3 secondsBetween
 
+The `secondsBetween` function calculates the difference between the input values in seconds.
+
+### 3.1 Input Parameters
+
+Use the following input parameters:
+
 *   First date
     Type: Date and time
 *   Second date
     Type: Date and time
 
-### 3.1 Output
+### 3.2 Output
 
-Returns the difference between the two dates, as a Decimal, measured in seconds.
+The expression will return difference between the two dates, as a Decimal, measured in seconds.
 
-For example:
+### 3.3 Example
+
+If you type in the following input:
 
 ```java
 secondsBetween(dateTime(2007, 1, 1, 1, 1, 1), dateTime(2007,1,1,1,2,3))
 ```
 
-results in
+The output is:
 
 ```java
 62
@@ -56,22 +72,30 @@ results in
 
 ## 4 minutesBetween
 
+The `minutesBetween` function calculates the difference between the input values in minutes.
+
+### 4.1 Input Parameters
+
+Use the following input parameters:
+
 *   First date
     Type: Date and time
 *   Second date
     Type: Date and time
 
-### 4.1 Output
+### 4.2 Output
 
-Returns the difference between the two dates, as a Decimal, measured in minutes.
+The expression will return the difference between the two dates, as a Decimal, measured in minutes.
 
-For example:
+### 4.3 Example
+
+If you type in the following input:
 
 ```java
 minutesBetween(dateTime(2007, 1, 1, 1, 2, 1), dateTime(2007,1,1,1,1,1))
 ```
 
-results in
+The output is:
 
 ```java
 1
@@ -79,22 +103,30 @@ results in
 
 ## 5 hoursBetween
 
+The `hoursBetween` function calculates the difference between the input values in hours.
+
+### 5.1 Input Parameters
+
+Use the following input parameters:
+
 *   First date
     Type: Date and time
 *   Second date
     Type: Date and time
 
-### 5.1 Output
+### 5.2 Output
 
-Returns the difference between the two dates, as a Decimal, measured in hours.
+The expression will return the difference between the two dates, as a Decimal, measured in hours.
 
-For example:
+### 5.3 Example
+
+If you type in the following input:
 
 ```java
 hoursBetween(dateTime(2007, 1, 1, 3, 31, 1), dateTime(2007,1,1,1,1,1))
 ```
 
-results in
+The output is:
 
 ```java
 2.5
@@ -102,22 +134,30 @@ results in
 
 ## 6 daysBetween
 
+The `daysBetween` function calculates the difference between the input values in days.
+
+### 6.1 Input Parameters
+
+Use the following input parameters:
+
 *   First date
     Type: Date and time
 *   Second date
     Type: Date and time
 
-### 6.1 Output
+### 6.2 Output
 
-Returns the difference between the two dates as a positive Decimal measured in days. Time is taken into consideration, so comparing `date-x 0:00` with `date-x 06:00` will result in `0.25000000`.
+The expression will return the difference between the two dates as a positive Decimal measured in days. Time is taken into consideration, so comparing `date-x 0:00` with `date-x 06:00` will result in `0.25000000`.
 
-For example:
+### 6.3 Example
+
+If you type in the following input:
 
 ```java
 daysBetween(dateTime(2007, 2, 13, 1, 1, 1), dateTime(2007,1,1,1,1,1))
 ```
 
-results in
+The output is:
 
 ```java
 43
@@ -125,22 +165,30 @@ results in
 
 ## 7 weeksBetween
 
+The `weeksBetween` function calculates the difference between the input values in weeks.
+
+### 7.1 Input Parameters
+
+Use the following input parameters:
+
 *   First date
     Type: Date and time
 *   Second date
     Type: Date and time
 
-### 7.1 Output
+### 7.2 Output
 
-Returns the difference between the two dates, as a Decimal, measured in weeks.
+The expression will return the difference between the two dates, as a Decimal, measured in weeks.
 
-For example:
+### 7.3 Example
+
+If you type in the following input:
 
 ```java
 weeksBetween(dateTime(2007, 1, 9, 1, 1, 1), dateTime(2007,1,1,1,1,1))
 ```
 
-results in 8 days divided by 7 days in a week:
+The output results in 8 days divided by 7 days in a week:
 
 ```java
 1.1428571428571428

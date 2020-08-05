@@ -55,7 +55,7 @@ Another way of adding test steps to a test case is to use the recorder by clicki
 
 The details of a test step open by clicking the test step. For more information, see [Test Step](rg-two-test-step).
 
-To add a new step above or below an existing test step, click **Add above** or **Add below**, or click on the red record icon, to add a new step by using the recorder. These buttons appear if you hover over an existing test step.
+To add a new step above or below an existing test step, click **Add above** or **Add below**, or click the red record icon, to add a new step by using the recorder. These buttons appear if you hover over an existing test step.
 
 ### 3.1 Copying, Pasting, Deleting, and  Extracting an Action
 

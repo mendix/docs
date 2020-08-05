@@ -1,6 +1,7 @@
 ---
 title: "Simple Menu Bar"
 parent: "menu-widgets"
+menu_order: 2
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -9,7 +10,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A simple menu bar shows menu items of a [navigation profile](navigation#profiles) or in a [menu](menu) document in the form of a horizontal or vertical bar. These items are determined by the [**Menu source**](#menu-source) and are either configured in the **[Navigation](navigation)** or a **[Menu](menu)**.
+A simple menu bar shows menu items of a [navigation profile](navigation#profiles) or in a [menu](menu) document in the form of a horizontal or vertical bar. These items are determined by the [Menu source](#menu-source) and are either configured in the [Navigation](navigation) or a [Menu](menu).
 
 Sub-items of menu items are not displayed by this widgets, that means the menu structure can only have one level. For more information on menu items and their properties, see [Menu](menu).
 
@@ -19,7 +20,7 @@ Sub-items of menu items are not displayed by this widgets, that means the menu s
 
 An example of a simple menu bar properties is represented in the image below:
 
-{{% image_container width="350" %}}![Simple Menu Bar Properties](attachments/menu-widgets/simple-menu-bar-properties.png)
+{{% image_container width="300" %}}![Simple Menu Bar Properties](attachments/menu-widgets/simple-menu-bar-properties.png)
 {{% /image_container %}}
 
 Menu bar properties consist of the following sections:
@@ -44,7 +45,7 @@ The items that are shown in the menu widget are determined by the **Menu source*
 
 | Value              | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
-| Project navigation  *(default)* | The menu items are taken from one of the profiles defined in the [**Navigation**](navigation). |
+| Project navigation  *(default)* | The menu items are taken from one of the profiles defined in the [Navigation](navigation). |
 | Menu document      | The menu items are taken from a [menu](menu) document.       |
 
 #### 2.3.2 Profile 
@@ -70,4 +71,4 @@ This property determines how the simple menu bar is laid out.
 
 * [Page](page)
 * [Menu Widgets](menu-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

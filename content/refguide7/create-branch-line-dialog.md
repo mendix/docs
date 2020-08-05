@@ -36,3 +36,7 @@ Select from which revision of the selected branch line you want to create anothe
 ## 7 Branch Name
 
 Enter a name of the new branch line. Since branch line names must be unique, the existing branch lines are shown so that you do not accidentally create a branch line twice.
+
+{{% alert type="warning" %}}
+Branch names cannot include special characters (for example, `@`, `$`, `#`). 
+{{% /alert %}}

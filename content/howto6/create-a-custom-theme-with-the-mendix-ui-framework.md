@@ -71,7 +71,7 @@ To configure Scout, follow these steps:
 
 In this section, you are going to create a custom theme based on the [Amazon](https://www.amazon.com/) website.
 
-### 6.1 Changing the the Color-Primary to Modify the Topbar and Buttons
+### 6.1 Changing the Color-Primary to Modify the Topbar and Buttons
 
 ![](attachments/18448711/18581480.jpg)
 

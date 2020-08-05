@@ -2,7 +2,7 @@
 title: "Search Bar"
 parent: "grids"
 menu_order: 40
-tags: ["studio pro", "search bar", "grid"]
+tags: ["studio pro", "search bar", "comparison search field", "drop down search field", "range search field", "grid"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -50,9 +50,15 @@ However, there are additional properties that are described in the sections belo
 
 #### 3.1.1 Custom Date Format
 
-**Custom date format** is only available when you select an attribute of *Date and Time* type in the [**Attribute (path)**](#attribute-path) property. This property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally. The **Format example** will show you a date example. 
+**Custom date format** is only available when you select an attribute of *Date and Time* type in the [**Attribute (path)**](#attribute-path) property. This property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally. The **Format example** will show you a date example.
 
- {{% snippet file="refguide/custom-date-format-tokens.md" %}} 
+{{% alert type="info" %}}
+
+Search input formatting must be an exact day. Custom date formatting is not limited.
+
+{{% /alert %}}
+
+{{% snippet file="refguide/custom-date-format-tokens.md" %}}
 
 #### 3.1.2 Placeholder Text
 
@@ -95,16 +101,16 @@ This property is available for **Comparison** and **Drop-down** search fields.
 
 The value entered by the end user (or the default value in the case of hidden and read-only search fields) is compared to the value of the attribute of each of the objects in the grid. If the match succeeds, the object will be part of the search result. There are different ways in which the attribute value and the entered value can be compared. In the third column below you see the type of search field for which the comparison operator is allowed.
 
-| Value            | Description                                                  | Search field types                      |
-| ---------------- | ------------------------------------------------------------ | --------------------------------------- |
-| Contains         | Does the attribute value contain the entered value?          | Text (attribute must be of type String) |
-| Starts with      | Does the attribute value start with the entered value?       | Text (attribute must be of type String) |
-| Greater          | Is the attribute value greater than the entered value?       | Text, Date                              |
-| Greater or equal | Is the attribute value greater than or equal to the entered value? | Text, Date                              |
-| Equal  *(default)*            | Is the attribute value the same as the entered value?        | Text, Date, Drop-down                   |
-| Not equal        | Is the attribute value not the same as the entered value?    | Text, Date, Drop-down                   |
-| Smaller or equal | Is the attribute value smaller than or equal to the entered value? | Text, Date                              |
-| Smaller          | Is the attribute value smaller than the entered value?       | Text, Date                              |
+| Value            | Description                                                  | Search Field Types                      | Date Input Query          |
+| ---------------- | ------------------------------------------------------------ | --------------------------------------- | ------------------------- |
+| Contains         | Does the attribute value contain the entered value?          | Text (attribute must be of type String) |                           |
+| Starts with      | Does the attribute value start with the entered value?       | Text (attribute must be of type String) |                           |
+| Greater          | Is the attribute value greater than the entered value?       | Text, Date                              | > date + 1 day            |
+| Greater or equal | Is the attribute value greater than or equal to the entered value? | Text, Date                        | > date                    |
+| Equal *(default)*| Is the attribute value the same as the entered value?        | Text, Date, Drop-down                   | >= date and < date + 1 day|
+| Not equal        | Is the attribute value not the same as the entered value?    | Text, Date, Drop-down                   | != date                   |
+| Smaller or equal | Is the attribute value smaller than or equal to the entered value? | Text, Date                        | < date + 1 day             |
+| Smaller          | Is the attribute value smaller than the entered value?       | Text, Date                              | < date                    |
 
 {{% alert type="info" %}}
 
@@ -122,7 +128,7 @@ It is possible to search on date attributes using equality. What happens with th
 | [%CurrentDateTime%]   | Search field shows the current date. Represents a 24 hour date range starting at the _current time_. |      | Search between August 4, <current time> and August 5, <current time> |
 | [%BeginOfCurrentDay%] | Search field shows the current date. Represents a 24 hour date range starting at midnight of the specified date. |      | Search between August 4, 0:00 - August 5, 0:00               |
 
-#### 3.3 Allow Multi-Select
+### 3.3 Allow Multi-Select
 
 {{% alert type="info" %}}
 
@@ -132,7 +138,7 @@ This property is available for **Drop-down** search fields.
 
 If this property is set to 'Yes', the resulting drop-down allows you to select multiple values instead of just one. When searching all records match for which the corresponding attribute is equal to one of the selected values. For example, you can search for all orders with status 'Submitted' or 'In progress'.
 
-#### 3.4 XPath Constraint
+### 3.4 XPath Constraint
 
 {{% alert type="info" %}}
 
@@ -149,7 +155,7 @@ Let us say you have a grid showing bicycles. In the domain model the bicycle has
 
 {{% /alert %}}
 
-#### 3.5 Sort Order
+### 3.5 Sort Order
 
 {{% alert type="info" %}}
 
@@ -161,7 +167,7 @@ The sort order specifies the order in which the items in the drop-down search fi
 
 Default: *No sort order*
 
-#### 3.6 Lower Bound
+### 3.6 Lower Bound
 
 {{% alert type="info" %}}
 
@@ -171,7 +177,7 @@ This property is available for **Range** search fields.
 
 This attribute (path) determines the lower bound of the range.
 
-#### 3.7 Lower Bound Operator
+### 3.7 Lower Bound Operator
 
 {{% alert type="info" %}}
 
@@ -183,7 +189,7 @@ The lower bound operator determines whether the comparison with the lower bound 
 
 Default: *Greater*
 
-#### 3.8 Upper Bound
+### 3.8 Upper Bound
 
 {{% alert type="info" %}}
 
@@ -193,7 +199,7 @@ This property is available for **Range** search fields.
 
 This attribute (path) determines the upper bound of the range.
 
-#### 3.9 Upper Bound Operator
+### 3.9 Upper Bound Operator
 
 {{% alert type="info" %}}
 

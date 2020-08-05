@@ -80,11 +80,15 @@ Properties available in the **General** section are described in the table below
 | Render Mode | Defines the way the button will be shown to the end-user. Possible options are the following: <ul><li>Button  *(default)*  – the widget will be rendered as a button</li><li>Link – the widget will be rendered as a hyperlink</li></ul> |
 | Style       | Applies a predefined styling to the button. Possible options are the following: <ul><li>Default <em>(default for all buttons except **Save Changes**)</em></li><li>Inverse</li><li>Primary</li><li>Info</li><li>Success <em>(default for the **Save Changes** button)</em></li><li>Warning</li><li>Danger</li></ul>The color for each style depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer](theme-customizer). |
 
-## 4 Design Section
+## 4 Conditional Visibility
+
+{{% snippet file="studio/visibility-section-link.md" %}}
+
+## 5 Design Section
 
 For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 
-## 5 Read More
+## 6 Read More
 
 * [Pages](page-editor) 
 * [Widgets](page-editor-widgets)

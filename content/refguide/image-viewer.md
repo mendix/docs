@@ -17,7 +17,7 @@ An image viewer must be placed in a data view or a template grid.
 
 An example of image viewer properties is represented in the image below:
 
-{{% image_container width="350" %}}![Image Viewer Properties](attachments/file-widgets/image-viewer-properties.png)
+{{% image_container width="250" %}}![Image Viewer Properties](attachments/file-widgets/image-viewer-properties.png)
 {{% /image_container %}}
 
 Image viewer properties consist of the following sections:
@@ -107,4 +107,4 @@ Default: *Thumbnail*
 
 * [Page](page)
 * [File Widgets](file-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

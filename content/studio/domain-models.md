@@ -4,7 +4,7 @@ description: "Describes the domain models in Mendix Studio."
 menu_order: 20
 tags: ["studio", "domain model"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#The anchor <entity-types> below is mapped, so it should not be removed or changed.
+#The anchor entity-types below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -43,7 +43,7 @@ The **Auto Arrange** option in the top-left corner groups and aligns entities by
 The domain model can contain the following components:
 
 * [Entity](#entity-types) – represents a class of real-world objects; entities can have attributes
- 	* [Attribute](#attributes) – describes and/or identify the entity
+    * [Attribute](#attributes) – describes and/or identify the entity
 * [Association](#associations) – describes a relation between entities
 
 ### 2.1 Entities and Their Types {#entity-types}
@@ -62,27 +62,27 @@ Entities have the following properties:
 
 * **General** properties define the name of the entity and its [persistability](/refguide/persistability):
 
-  * **Name** – defines the name of the entity
+    * **Name** – defines the name of the entity
 
-  * **Persistable** – defines whether objects of the entity are stored in the database (for more information on persistability, see [Persistability](/refguide/persistability) in the *Studio Pro Guide*)
+    * **Persistable** – defines whether objects of the entity are stored in the database (for more information on persistability, see [Persistability](/refguide/persistability) in the *Studio Pro Guide*)
 
-		![General Properties of an Entity](attachments/domain-models/entity-general-properties.png)
+    ![General Properties of an Entity](attachments/domain-models/entity-general-properties.png)
 
-*  **Stored Information** properties define whether the information about the entity is stored in the database. If the information is stored, it can be retrieved afterwards and can be used in [page filters](filters). For example, you can add a filter and show only objects that were created by the current user. 
+* **Stored Information** properties define whether the information about the entity is stored in the database. If the information is stored, it can be retrieved afterwards and can be used in [page filters](filters). For example, you can add a filter and show only objects that were created by the current user. 
 
-  	You can toggle the following properties: 
+    You can toggle the following properties: 
 
-  	* **Store 'Created by'** – when enabled, the user who created the entity is stored in the database
+    * **Store 'Created by'** – when enabled, the user who created the entity is stored in the database
 
-  	* **Store 'Creation Date'** – when enabled, the date and time when the entity was created is stored in the database
+    * **Store 'Creation Date'** – when enabled, the date and time when the entity was created is stored in the database
 
-	* **Store 'Last Changed by'**– when enabled, the user who was the last to make changes to the entity is stored in the database
+    * **Store 'Last Changed by'**– when enabled, the user who was the last to make changes to the entity is stored in the database
 
-	* **Store 'Last Changed Date'** – when enabled, the date and time when the entity was last changed is stored in the database
+    * **Store 'Last Changed Date'** – when enabled, the date and time when the entity was last changed is stored in the database
 
-		![Stored Information Properties of an Entity](attachments/domain-models/entity-stored-info.png)
-	
-		{{% alert type="info" %}}You cannot toggle **Stored Information** properties for Image and File entities.{{% /alert %}}
+        ![Stored Information Properties of an Entity](attachments/domain-models/entity-stored-info.png)
+
+        {{% alert type="info" %}}You cannot toggle **Stored Information** properties for Image and File entities.{{% /alert %}}
 
 ### 2.3 Attributes {#attributes}
 
@@ -118,7 +118,7 @@ The new entity is added to the domain model.
 {{% image_container width="250" %}}![](attachments/domain-models/new-entity.png)
 {{% /image_container %}}
 
-### 3.1 Adding New Image or File Entities
+### 3.1 Adding New Image or File Entities {#adding-image-or-file-entities}
 
 While adding new entities from the **Toolbox** works for all types of entities, you can use a specific way of adding image and file entities to your domain model.
 
@@ -130,13 +130,13 @@ To create a new image/file entity with an association automatically, follow the 
 
 2. Click **New attribute** button.
 
-3.  In the **Create New Attribute** dialog window, click **Add image or file** in the bottom-right corner:
+3.  In the **Create New Attribute** dialog box, click **Add image or file** in the bottom-right corner:
 
     ![Add Image or File](attachments/domain-models/add-image-or-file.png)
 
-4. In the **Image and Files** dialog window, select the type or entity (image or file).
+4. In the **Image and Files** dialog box, select the type or entity (image or file).
 
-5. In the **Create New Image/File Entity** dialog window, specify the name of the special entity and click **Create**. 
+5. In the **Create New Image/File Entity** dialog box, specify the name of the special entity and click **Create**. 
 
 The new image or file entity is created with default *Name* and *Size* attributes and the association to the entity that you selected in the first step:
 ![Image Entity Example](attachments/domain-models/image-entity-example.png)
@@ -205,7 +205,7 @@ You can manage the following properties of an entity:
 
 * [Persistability](/refguide/persistability) of the entity
 
-	![](attachments/domain-models/entity-properties.png)
+    ![](attachments/domain-models/entity-properties.png)
 
 To change the entity properties, click the entity in the domain model. The **Properties** tab for the selected entity is displayed automatically. 
 
@@ -213,10 +213,10 @@ To change the entity properties, click the entity in the domain model. The **Pro
 
 You can manage the following properties of an attribute:
 
-*   The **Name** of the attribute
-*   The [Type](domain-models-attributes)  of the attribute
+* The **Name** of the attribute
+* The [Type](domain-models-attributes)  of the attribute
 
-	![](attachments/domain-models/attribute-properties.png)
+    ![](attachments/domain-models/attribute-properties.png)
 
 To change the attribute properties, click the attribute in the domain model. The **Properties** tab for the selected attribute is displayed automatically. 
 
@@ -269,7 +269,8 @@ You cannot delete *Name* and *Size* attributes of image and file entities.
 
 {{% /alert %}}
 
-## 8 Read More
+## 8 Main Documents in This Category
 
-* [Attributes](domain-models-attributes)
-* [Associations](domain-models-association-properties) 
+* [Attributes](domain-models-attributes) – describes attributes and their types
+* [Associations](domain-models-association-properties) – describes associations and their properties
+* [Enumeration](domain-models-enumeration) – explains what an enumeration is and how to use it

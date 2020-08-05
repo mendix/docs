@@ -1,10 +1,16 @@
 ---
 title: "Publish a Mendix Hybrid Mobile App in Mobile App Stores"
-parent: "hybrid-mobile"
-menu_order: 60
+parent: "build-hybrid-apps"
+menu_order: 20
 tags: ["mobile", "app store", "phonegap"]
 ---
 ## 1 Introduction
+
+{{% alert type="warning" %}}
+Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. PhoneGap does not allow you to create  iOS 13 builds, but the Apple App Store requires builds be iOS 13 or higher. As a result, as of April 30th 2020, hybrid iOS apps built using the PhoneGap Build service are not being accepted on Apple's App Store. To publish your iOS app in the Apple App Store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
+
+If you wish to build your hybrid iOS app without publishing it in the Apple App Store, see the [Doing It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) and [Building Your iOS App Locally](/developerportal/deploy/mobileapp#building-ios-locally) sections of the *Mobile App Developer Portal Guide*.
+{{% /alert %}}
 
 Once you have finished developing a Mendix hybrid mobile application, you will want to make it available as an app for mobile platforms such as Apple iOS and Google Android. We make it possible to produce platform-specific installation packages. For more details on deploying platform-specific installation packages, see [Mobile App](/developerportal/deploy/mobileapp).
 
@@ -46,6 +52,10 @@ The video below shows how to build a PhoneGap app in the cloud. After showing yo
 
 ## 4 Starting the Packaging Process{#starting-the-packaging-process}
 
+{{% alert type="info" %}}
+Building hybrid apps in the cloud uses the Phonegap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. As a result, as of April 30th 2020, hybrid iOS apps built through the platform or via the Phonegap Build service are not being accepted on Apple's App Store. To address this, please follow the guide on building your hybrid iOS apps locally [here](/developerportal/deploy/mobileapp#building-ios-locally).
+{{% /alert %}}
+
 To start the packaging process, follow these steps:
 
 1. Open the [Developer Portal](https://sprintr.home.mendix.com/).
@@ -67,7 +77,9 @@ To start the packaging process, follow these steps:
 
 7. Optionally, upload custom-branded app icons and splash screens under the tabs for the different platforms. You can find those tabs next to the **App Info** tab.
 
-{{% alert type="info" %}}If you do not upload any images, the default Mendix-branded images that are shown will continue to be used.{{% /alert %}}
+{{% alert type="info" %}}
+If you do not upload any images, the default Mendix-branded images that are shown will continue to be used.
+{{% /alert %}}
 
 8. Click the green **Publish for Mobile App Stores** button. You will be presented with the **Build Mobile App Store Packages** page:
 
@@ -80,7 +92,7 @@ To start the packaging process, follow these steps:
 	* For apps using [Flexible Environments](/developerportal/deploy/mendix-cloud-deploy#flexible-environments) you will be able to select the environment from a drop-down list of environments.
 	
 10. Leave the default choice of how to build the package **Build Mobile App Store packages for me by sending the build configuration to Adobe PhoneGap Build** selected. 
-	You can use the alternative option to manually download a PhoneGap Build package, which you can then inspect, modify, and upload manually to Adobe PhoneGap Build (for more information, see [Customizing PhoneGap Build Packages](/refguide/customizing-phonegap-build-packages)). This is unnecessary in most scenarios.
+	You can use the alternative option to manually download a PhoneGap Build package, which you can then inspect, modify, and upload manually to Adobe PhoneGap Build (for more information, see [Customizing PhoneGap Build Packages](/howto/mobile/customizing-phonegap-build-packages)). This is unnecessary in most scenarios.
 11. Before proceeding, you must link your PhoneGap account to your Mendix account. Start the hybrid mobile app package building process by clicking **Start PhoneGap Build job**, which will initiate the building process:
 
 	![phonegap authorization](attachments/publishing-a-hybrid-app/phonegap-authorization-dialog.png)
@@ -89,7 +101,9 @@ To start the packaging process, follow these steps:
 	a. To build for the authorization, click **Authorize use of Adobe PhoneGap Build**, after which you will be temporarily redirected to the website of your Adobe PhoneGap Build. <br/>
 13. Choose **Yes** on the Adobe PhoneGap Build service page to allow the start of building jobs using your account. You will then be redirected back to the Mendix Developer Portal.
 
-{{% alert type="warning" %}}If you choose **No**, you will be redirected back to the Developer Portal and you will not be able to publish your app.{{% /alert %}}
+{{% alert type="warning" %}}
+If you choose **No**, you will be redirected back to the Developer Portal and you will not be able to publish your app.
+{{% /alert %}}
 
 After you have been redirected back to the Mendix Developer Portal, the packaging process will continue and you will have to set up your app's signing keys.
 
@@ -122,7 +136,7 @@ Apple provides general information on [publishing an iOS app in the Apple App St
 
 	![add a key](attachments/publishing-a-hybrid-app/add-a-key.png)
 
-3. A dialog box will prompt you to upload a certificate file and a provisioning profile file. You can get those files from Apple. The certificate is the *.p12* file, and the provisioning profile is the *.mobileprovision* file. For more information, see [Managing App Signing Keys](/refguide/managing-app-signing-keys).
+3. A dialog box will prompt you to upload a certificate file and a provisioning profile file. You can get those files from Apple. The certificate is the *.p12* file, and the provisioning profile is the *.mobileprovision* file. For more information, see the [Managing App Signing Keys Reference Guide](/refguide/managing-app-signing-keys).
 3. Give the key a title that you can easily recognize, and upload the files.
 4.  Click the lock with the yellow background on the same row as your key and enter a passphrase. The key can now be used for builds for the period of an hour. After an hour, the passphrase needs to be entered again:
 

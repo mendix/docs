@@ -24,7 +24,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Set Row Cell Value               | DataGrid                         | Set the cell value for a particular column in a data grid row. |
 | Set Simple Checkbox Set Selector Value | Simple Checkbox Set Selector | Checks/clears the check box found by a given entity attribute value. |
 | Set Value¹ | Standard widgets: TextBox, TextArea, DropDown, RadioButton, DatePicker², ReferenceSelector, SearchInput Text, SearchInput DropDown.<br /> App Store widgets: OnChange Inputbox, BooleanSlider, Bootstrap Wysiwyg Editor (Bootstrap RTE), CK Editor For Mendix, Input Reference Selector, Radiobutton List, Switch³, AutoComplete. | Sets the value of all supported widgets. |
-| Set Value (by index) | Drop Down, Reference Selector, Search Input Drop Down | Sets the value of all supported drop-down widgets by index. |
+| Set Value (by index) | Drop-Down, Reference Selector, Search Input Drop-Down | Sets the value of all supported drop-down widgets by index. |
 
 ¹  Since ATS version 2.9.4 the Set Value function will unfocus the widget after setting the value and wait for any on change / on leave microflows to finish before proceeding with the next steps in a test case.<br />
 ² The date/time format depends on the device type. For *mobile* devices, the date/time should be formatted in the ISO 8601 standard (meaning, `yyyy-MM-ddTHH:mm` for date and time, `yyyy-MM-dd` for date, or `HH:mm` for just time). Seconds should be omitted. For *desktop* devices, the string should be formatted so as to match the date/time picker format. This format is locale-dependent (for example, for the US, the format is `MM/dd/yyyy, hh:mm a`).

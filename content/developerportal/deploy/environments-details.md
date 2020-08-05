@@ -4,6 +4,7 @@ parent: "mendix-cloud-deploy"
 menu_order: 7
 description: "Describes the environmental details of your app and how to manage the environment."
 tags: ["Deploy","App","Environment","Developer Portal"]
+#The anchor #connection-whitelist below is mapped from the Developer Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -33,7 +34,7 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
 * **Environment ID** – the unique identifier of this environment
 * **Custom domains** – the custom domains of the app
 * **Java Version** – Oracle version 1.8 or AdoptOpenJDK version 8
-* **Studio Target** – whether this environment is the one where apps will be deployed from Studio - see [Studio Deployment Settings](studio-deployment-settings) for more information
+* **Mendix Studio Target** – whether this environment is the one where apps will be deployed from Mendix Studio - see [Studio Deployment Settings](studio-deployment-settings) for more information
 * **Plan** – (*Cloud v4 only*) the type of plan covered by this license
 * **Instances** – (*Cloud v4 only*) A summary of the number and memory allocation of *instances* of this environment: see [Scaling...](#scaling) for more information
 * **Database Status** – (*Cloud v3 only*) this is **Running** by default
@@ -43,14 +44,15 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
 
 At the bottom of the page there are three overview sections. These are described below in the [Overviews](#overviews) section.
 
-### 2.1 Actions
+### 2.1 Actions{#actions}
 
 On the right side of the screen, you can find the following action buttons:
 
-* **Restart Application**
+* **Restart Application** – this stops the running application and starts it again — this is necessary to apply new constant values or scheduled events to the environment
 * **Start/Stop Application**
-* **Show Logged in Users**
-* **Change Admin Password**
+* **Clear Environment** *(only visible if your application is stopped)* – this clears, after confirmation, all data from your database and file storage, and removes your app from this environment — you should do this if you want to deploy a different app to this environment, it is not necessary if you are restoring a backup of the same app
+* **Show Logged in Users** 
+* **Change Admin Password** – this changes the password for the inbuilt [administrator](/refguide/administrator) account — the new password is applied immediately, without the need for a restart and will also force the administrator to pick up any new roles assigned in the app deployment package — see the [User Role](/refguide/administrator#user-role) section of *Administrator* for more information
 
 #### 2.1.1 Logging and Debugging in Mendix Cloud v4
 
@@ -59,7 +61,7 @@ On the right side of the screen, you can find the following action buttons:
 In Mendix Cloud v4 environments, you have two additional action buttons:
 
 * **View Live Log**
-* **Show debugger information** to show the settings to connect the debugger in Studio Pro to your app. For Mendix Cloud v4, the debugger is *always* enabled.
+* **Show debugger information** – shows the settings needed to connect the debugger in Studio Pro to your app — for Mendix Cloud v4, the debugger is *always* enabled
 
 #### 2.1.2 Logging and Debugging in Mendix Cloud v3
 
@@ -68,7 +70,7 @@ In Mendix Cloud v4 environments, you have two additional action buttons:
 In Mendix Cloud v3 environments, you have two additional action buttons:
 
 * **View Current Log**
-* **Enable/Disable Debugging** to enable or disable the debugger option. For more information about enabling the debugger, see [How to Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely)
+* **Enable/Disable Debugging** – enables or disables the debugger option — for more information about enabling the debugger, see [How to Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely)
 
 ### 2.2 Naming of Environments – Flexible Environments in Mendix Cloud v4{#naming}
 
@@ -166,10 +168,16 @@ In this section, you can view the configured constants. Constants are used to de
 
 To fill in a new value, select the constant and click **Edit**.
 
+Here you can type a **New value**.
+
+You can also set **Mask** to **Yes**. This replaces the **Current value** and the **New value** with asterisks on all screens in the Developer Portal. You will also get asterisks if you export the constants to Excel. This means that you can keep your constants secret from users who do not have edit rights.
+
+{{% image_container width="50%" %}}
+![Edit Constants Pop-up window](attachments/environments-details/edit-constant.png)
+{{% /image_container %}}
+
 {{% alert type="info" %}}
-
 You have to restart your application before the changes will be made.
-
 {{% /alert %}}
 
 For more information, see [Constants](/refguide/constants).
@@ -201,7 +209,7 @@ For more information, see [Certificates](certificates) and [Custom Domains](cust
 HTTP Headers allows you to set the values of selected HTTP response headers. These allow the server to pass additional information with the response which the browser will interpret to control the behavior of your Mendix app.
 
 {{% alert type="info" %}}
-This replaces the option to prevent embedding your app in an IFrame with more flexible options to set HTTP Headers.
+This replaces the option to prevent embedding your app in an iframe with more flexible options to set HTTP Headers.
 {{% /alert %}}
 
 For Mendix Cloud v3, only *X-Frame-Options* is supported. For Mendix Cloud v4 the HTTP headers which are supported in the Developer Portal are:
@@ -212,17 +220,17 @@ For Mendix Cloud v3, only *X-Frame-Options* is supported. For Mendix Cloud v4 th
 | Content-Security-Policy | allows web site administrators to control resources the user agent is allowed to load for a given page | a string value<br/>*for more information see the W3C recommendation [Content Security Policy Level 2](https://www.w3.org/TR/CSP2/)* |
 | Referrer-Policy | governs which referrer information should be included with requests made | |
 | X-Content-Type-Options | indicate that the MIME types advertised in the Content-Type headers should not be changed and be followed | |
-| X-Frame-Options | indicates whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>` or `<object>` | This was the value set previously to prevent embedding in an IFrame |
+| X-Frame-Options | indicates whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>` or `<object>` | The default is not to allow apps to be rendered inside frames. <br/> This was the value set previously to prevent embedding in an iframe <br/> See [Running Your App in an Iframe](#iframe), below, for information about running your app inside an iframe. |
 | X-Permitted-Cross-Domain-Policies | specifies whether this page can load resources from a different domain | |
 | X-XSS-Protection | stops pages from loading when they detect reflected cross-site scripting (XSS) attacks | |
 
 There are three types of value for these headers:
 
-*  Choose a value from a dropdown
+*  Choose a value from a drop-down
 
     ![](attachments/environments-details/http-header-dropdown.png)
 
-*  Choose a value from a dropdown and specify a URL
+*  Choose a value from a drop-down and specify a URL
 
     ![](attachments/environments-details/http-header-url.png)
 
@@ -234,7 +242,75 @@ The changes to the headers will be implemented when the app is redeployed.
 
 Additional information can be found in the Mozilla developer guide [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
 
-### 4.3 Path-Based Access Restrictions
+#### 4.2.1 Running Your App in an Iframe{#iframe}
+
+Most browsers have additional security to ensure that iframes are only allowed when they are from the same domain as the main page. The defaults for these vary by browser version. This security is controlled through SameSite cookies. You can find a good explanation of SameSite cookies in [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) on the *web.dev* website.
+
+{{% alert type="info" %}}
+There can be additional issues when using cookies in iframes for end-users using the **Safari** browser. Resolving these issues is outside the control of Mendix. See the [Full Third-Party Cookie Blocking and More](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) blog post on *Webkit.org* for more information.
+{{% /alert %}}
+
+##### 4.2.1.1 Using Custom Domains
+
+To avoid security issues when you want to embed the app in an iframe, we recommend that you use [custom domains](custom-domains) to ensure that the app you want to embed is part of the same domain. For example, if your page is mainpage.domain.name, then the app embedded in the iframe should be appname.domain.name.
+
+##### 4.2.1.2 Applying a Different SameSite Setting
+
+From **Mendix version 8.12**, you can control the value of SameSite in your cookies. The default for all cookies is `SameSite=None`, which means that they can be used in an iframe. You can change this value in the `com.mendix.core.SameSiteCookies` [custom runtime setting](#custom-runtime-settings) if you want to add restrictions to apps running outside iframes.
+
+For **Mendix versions below 8.12** there was no SameSite value set on cookies and the behavior is dependent on the browser default. To ensure that cookies can be used within iframes, you can set the custom environment variable `SAMESITE_COOKIE_PRE_MX812` to `true` in [custom environment variables](#custom-environment-variables), which will set `SameSite=None; Secure;` for all your cookies.
+
+{{% alert type="warning" %}}
+The SAMESITE_COOKIE_PRE_MX812 setting will only be implemented the next time your app is deployed.
+{{% /alert %}}
+
+##### 4.2.1.3 Using Custom Sign In Pages
+
+If you use a custom sign in page, your **index.html** will probably set the `originURI` cookie. If your Mendix app runs within an iframe, this cookie needs to be set with the `SameSite=None` and `Secure` attributes.
+
+To do this, find all the places in your theme folder where this cookie is set. It will look like `document.cookie = "originURI=/login.html"`.
+Change this to add the required attributes. For example, `document.cookie = "originURI=/login.html" + (window.location.protocol === "https:" ? ";SameSite=None;Secure" : "")`.
+
+### 4.3 Outgoing Connections Whitelisting (Mendix Cloud Dedicated){#connection-whitelist}
+
+If you are deploying your apps to [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-capabilities/mendix-cloud-overview#mendix-cloud-vpc), all outgoing IP addresses will be allowed by default.
+
+If you uncheck the **Allow all outgoing connections** option, you can define which IP addresses and ports can be used for outgoing connections in this section.
+
+You can add or edit a number of different IP address and port combinations. Any ranges which have already been set up will be listed here. You can do the following:
+
+* Select **Allow all outgoing connections** to remove any restrictions, or deselect it to impose restrictions
+* Click **New** to add a new range
+* Select an existing range and click **Edit** to edit an existing range
+* Select an existing range and click **Delete** to delete an existing range (you will be asked to confirm that you want to delete this range)
+
+#### 4.3.1 Managing a Whitelist Range
+
+For each range where you define whitelisted IP addresses and ports, you can enter the following information:
+
+![](attachments/environments-details/whitelist.png)
+
+* **Name** – A name to identify this range
+* **IP** – An inclusive range of whitelisted IP addresses in IPv4 format. All the IP addresses must be in a public range, see [Valid IP Ranges](#valid-ip), below. All addresses between the **Start** address and the **End** address will be whitelisted, including the start and end addresses. If you only want to whitelist a single address, make the start and end addresses the same
+* **Port** – An inclusive range of ports which will be whitelisted for the IP range above. You can use several whitelist entries if you want to whitelist different port ranges for the same IP range
+* **Protocol** – You can specify whether the whitelisting is for **TCP**, **UDP**, or **ALL** traffic
+* **Description** – an optional description of this IP range, for example which API it supports
+
+Click **Save** to save your range. The new values will be applied within a few minutes without needing an app restart.
+
+#### 4.3.2 Valid IP Ranges{#valid-ip}
+
+IP Addresses must be within the following ranges:
+
+| IP Start | IP End |
+| --- | --- |
+| 0.0.0.0 | 9.255.255.255 |
+| 11.0.0.0 | 169.253.255.255 |
+| 169.255.0.0 | 172.15.255.255 |
+| 172.32.0.0 | 192.167.255.255 |
+| 192.169.0.0 | 255.255.255.255 |
+
+### 4.4 Path-Based Access Restrictions
 
 You can restrict access to your application by means of Client Certificates or IP ranges.
 
@@ -257,19 +333,18 @@ You can **Delete** a path or you can **Add** and **Edit** a path with the follow
 
 For more information, see [How to Restrict Access for Incoming Requests](access-restrictions).
 
-### 4.4 Outgoing Connections Certificates
+### 4.5 Outgoing Connections Certificates
 
 Add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format). These will be used when your application initiates SSL/TLS connections.
 
-## 5 Log Levels Tab
+## 5 Log Levels Tab{#log-levels}
 
 ![](attachments/environments-details/loglevels-tab.png)   
 
-Log levels are used to distinguish the log messages and to highlight the highest priority ones so that they can receive the immediate intervention they require.
+Log levels are used to distinguish the log messages and to highlight the highest priority ones so that they can receive the immediate intervention they require. Note that custom log nodes appear in the list only after a message has been logged to them. See [Log Message](/refguide/log-message#log-node-name) for more information.
 
 On this tab, you can perform the following actions:
 
-* Retrieve the current log levels by clicking **Refresh**
 * Change the log level type by clicking the specific level
 * Click **Set all to INFO** to revert all the changes
 
@@ -294,7 +369,7 @@ On this tab, you can add **Custom Runtime Settings** and **Custom Environment Va
 
 ![](attachments/environments-details/runtime.png)   
 
-### 6.1 Custom Runtime Settings
+### 6.1 Custom Runtime Settings{#custom-runtime-settings}
 
 Use the Custom Runtime Settings section to perform the following actions:
 
@@ -331,7 +406,7 @@ The Mendix Cloud uses runtime settings to configure the included systems for log
 * `TempPath`
 * `WebServiceClientCertificates`
 
-### 6.2 Custom Environment Variables
+### 6.2 Custom Environment Variables{#custom-environment-variables}
 
 Use the Custom Environment Variables to **add**, **Edit**, or **Delete** an environment variable.
 
@@ -340,7 +415,8 @@ Unlike the Custom Runtime Settings, the variables you add have to be chosen from
 * **DD_API_KEY** – the API key used with Datadog
 * **DD_LOG_LEVEL** – the log level of logging sent to Datadog
 * **DATABASE_CONNECTION_PARAMS** – Additional JDBC parameters for PostgreSQL databases, see the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack) for more information
-* **APPMETRICS_TARGET** – setting this enables business events to be sent to a different monitoring solution from the technical events 
+* **APPMETRICS_TARGET** – setting this enables business events to be sent to a different monitoring solution from the technical events
+* **SAMESITE_COOKIE_PRE_MX812** – set `SameSite=None;Secure` for all cookies coming from the Mendix runtime, as described in the [Running Your App in an Iframe](#iframe) section
 
 ## 7 Maintenance Tab
 

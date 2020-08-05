@@ -15,7 +15,7 @@ Here are two examples to explain the definition.
 
 ### 2.1 Example 1
 
-You have a test case that creates a new expense in the company expenses app. It creates the new expense using a random number in the **Amount** field and a random string for the **Description** field. 
+You have a test case that creates a new expense in a company expenses app. It creates the new expense using a random number in the **Amount** field and a random string for the **Description** field. 
 
 These are the fields in the app:
 

@@ -1,14 +1,14 @@
 ---
-title: "Work with Parallels"
-parent: "native-mobile"
+title: "Build Native Mobile Apps with Parallels"
+parent: "build-native-apps"
 menu_order: 20
-description: "This how-to will allow you to start making Mendix native apps on your Mac device."
+description: "This how-to will allow you to start making Mendix native mobile apps on your Mac device."
 tags: ["Native", "Parallels", "Mac", "Mobile"]
 ---
 
 ## 1 Introduction
 
-Using Parallels, you can run Mendix Studio Pro on your Mac device using a Windows virtual machine. To start making Mendix native apps on your Mac, follow this how-to.
+Using Parallels, you can run Mendix Studio Pro on your Mac device using a Windows virtual machine. To start making Mendix native mobile apps on your Mac, follow this how-to.
 
 **This how-to will teach you how to do the following:**
 
@@ -20,7 +20,7 @@ Using Parallels, you can run Mendix Studio Pro on your Mac device using a Window
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install [Parallels](https://www.parallels.com/products/desktop/), install Windows when prompted by Parallels, and create a Windows virtual machine
+* Install [Parallels Desktop Pro Edition](https://www.parallels.com/products/desktop/pro/), install Windows when prompted by Parallels, and create a Windows virtual machine (Parallels Desktop Pro Edition is necessary for Mendix's network features to work)
 * Install Mendix Studio Pro on your Windows virtual machine
 
 ## 3 Configuring Your Windows Virtual Machine for Mendix Studio Pro
@@ -38,6 +38,7 @@ To configure your Windows virtual machine to work with Mendix Studio Pro, follow
 
 4. Make sure **Source** is set to **Shared Network**.
 5. Make sure that both the **Inbound** bandwidth and **Outbound** bandwidth show **unlimited**.
+
 	If this is not the case, either enable **Network Conditioner** and set it to a profile that does not limit bandwidth, or click the **Options** tab then the **Optimization** pane and set **Resource usage** to **No limit**.
 6.  In the Parallels drop-down menu, select **Preferences**:
 
@@ -47,7 +48,7 @@ To configure your Windows virtual machine to work with Mendix Studio Pro, follow
 
 	{{% image_container width="450" %}}![network tab](attachments/using-mendix-studio-pro-on-a-mac/parallels-preferences-no-ports.png){{% /image_container %}}
 
-8.  Click the **+** button and add two ports — one for 8080 and one for 8083, both forwarded to your Windows virtual machine (the 8083 port is only necessary for developing native mobile apps):
+8.  Click the **+** button and add two ports: one for 8080 and one for 8083, both forwarded to your Windows virtual machine (the 8083 port is only necessary for developing native mobile apps):
 
 	{{% image_container width="450" %}}![plus button](attachments/using-mendix-studio-pro-on-a-mac/port-setup.png){{% /image_container %}}
 
@@ -92,4 +93,4 @@ For information on how to change to your app and then see that change on your de
 ## 6 Read More
 
 * [Get Started with Native Mobile](getting-started-with-native-mobile)
-* [Style Your Mendix Native App](how-to-use-native-styling)
+* [Style Your Mendix Native Mobile App](how-to-use-native-styling)

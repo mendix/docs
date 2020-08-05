@@ -19,7 +19,7 @@ This how-to will walk you through the steps needed to implement push notificatio
 
 ## 2 Importing the PushNotifications Module from the App Store
 
-The [Push Notifications Connector module](https://appstore.home.mendix.com/link/app/3003/) is published in the Mendix App Store. To import it into your project, click **App Store** in the top right of Mendix Studio Pro, which will open the App Store in a new tab. Search for "Push Notifications Connector" and click the title of the result:
+The [Push Notifications Connector](/appstore/modules/push-notifications) module is published in the Mendix App Store. To import it into your project, click **App Store** in the top right of Mendix Studio Pro, which will open the App Store in a new tab. Search for "Push Notifications Connector" and click the title of the result:
 
 ![](attachments/19955732/20218020.png)
 
@@ -33,16 +33,18 @@ The Push Notifications Connector assumes that the mobile app and the "back-end" 
 
 ## 3 Installing Module Dependencies
 
-The PushNotifications module has two dependencies:
+The PushNotifications module has the following dependencies:
 
- * [Encryption module](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption)
- * [The Community Commons module](https://appstore.home.mendix.com/link/app/170/)
+ * [Encryption](/appstore/modules/encryption)
+ * [Community Commons Function Library](/appstore/modules/community-commons-function-library)
+ * [Nanoflow Commons](https://appstore.home.mendix.com/link/app/109515/)
+ * [Native Mobile Resources](/appstore/modules/native-mobile-resources)
 
 To include these dependencies, download them from the App Store in a way similar to how you installed the PushNotifications module. While importing, you may get a pop-up window with information about overwriting project files, which you can confirm by clicking **OK**.
 
 {{% alert type="info" %}}
 
-If your project is using an older version of the [Encryption module](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption), it might trigger an error for referencing a non-existent layout. You can fix this by assigning the master layout of the **Encryption.ResponsiveLayout_Certificate** layout to another layout (please note that in this specific use case, it is not important which layout is used). This does not apply to version 1.3.1 and above.
+If your project is using an older version of the [Encryption](/appstore/modules/encryption) module, it might trigger an error for referencing a non-existent layout. You can fix this by assigning the master layout of the **Encryption.ResponsiveLayout_Certificate** layout to another layout (please note that in this specific use case, it is not important which layout is used). This does not apply to version 1.3.1 and above.
 
 ![](attachments/19955732/20217886.jpg)
 
@@ -73,7 +75,8 @@ If your project already has an AfterStartup microflow configured, it is recommen
 * create a new microflow, from which you will call both the existing AfterStartup microflow and the AfterStartup_PushNotifications microflow, and then set this as the AfterStartup microflow for your app
 * add a new action to the existing AfterStartup microflow to run the AfterStartup_PushNotifications microflow
 
-<iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/02c590e5-f8bf-4f0e-90d6-3719390ee863/onstartupacsandpushnotifications?embed=true" allowfullscreen=""></iframe>
+![On start push microflow](attachments/19955732/on-app-startup.png)
+
 ## 6 Setting Up the Administration Pages {#setting}
 
 Add the **PushNotifications_Administration** page to the project navigation, so it can be reached after you deploy your app. This page contains three tabs:
@@ -107,9 +110,22 @@ Make sure that the `Encryption.EncryptionKey` constant has a value before you st
 
 {{% /alert %}}
 
-## 9 Setting Up Access to APNs and/or FCM
+## 9 Setting Up Access to APNs or FCM
 
-Set up access to APNs and/or FCM and configure them in your application. Please note that starting with FCM is recommended, because it is significantly less complicated than setting up APNs. You can return to this step later on to set up APNs.
+Below are instructions for setting up access to APNs or FCM and configuring them in your application. We recommend starting with FCM, because it is significantly less complicated than setting up APNs. You can return to this section later to set up APNs.
+
+Open your Mendix app, sign in as an **Admin**, and open the **PushNotifications_Administration** page. Scroll to the **FCM** section and create or edit a configuration. 
+
+Configure FCM as follows:
+
+1. Select the **Enabled** checkbox.
+2. Enter a name for the new configuration.
+3. Enter your Firebase project ID (located on the [Firebase console](https://console.firebase.google.com/) website).
+4. Upload your private key (which you downloaded when you created a service account).
+
+{{% alert type="warning" %}}
+Make sure the **Encryption.EncryptionKey** constant has a valid value before you start the application. If the value is not set, the private key will not be stored correctly and you will get a **NullPointerException** error when you try to send a notification to FCM. If you get the **NullPointerException** error, please double-check the value of the **Encryption.EncryptionKey** constant, restart your app, and upload the private key again.
+{{% /alert %}}
 
 For more details, see [How to Set Up the Apple Push Notification Server](setting-up-apple-push-notification-server) and [How to Set Up the Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server).
 
@@ -124,4 +140,4 @@ Please note that a free PhoneGap Build account is limited to a single applicatio
 ## 11 Read More
 
 * [Microflows](/refguide/microflows)
-* [Test the Implementation](testing-the-implementation)
+* [Test the Push Notifications Implementation](testing-the-implementation)

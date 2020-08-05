@@ -19,7 +19,7 @@ It must be placed inside a data view connected to the entity System.FileDocument
 
 An example of file manager properties is represented in the image below:
 
-{{% image_container width="350" %}}![File Manager Properties](attachments/file-widgets/file-manager-properties.png)
+{{% image_container width="250" %}}![File Manager Properties](attachments/file-widgets/file-manager-properties.png)
 {{% /image_container %}}
 
 File manager properties consist of the following sections:
@@ -86,5 +86,5 @@ Default: *False*
 
 * [Page](page)
 * [File Widgets](file-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)
 * [System Texts](system-texts)

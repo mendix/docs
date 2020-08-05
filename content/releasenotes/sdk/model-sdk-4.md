@@ -4,19 +4,73 @@ parent: "model-sdk"
 #When updating, remember to update the Latest Mendix Releases file
 ---
 
-These are the release notes for the [Model SDK](/apidocs-mxsdk/mxsdk/) version 4.
+## 4.37.0 {#437}
+
+**Release date: July 21st, 2020**
+
+* We added support for Mendix [8.12.0](../studio-pro/8).
+* We added support for Mendix Metamodel [8.12.0](metamodel-8.12).
+
+## 4.36.0 {#436}
+
+**Release date: June 30th, 2020**
+
+* We added support for Mendix [8.11.0](../studio-pro/8.11).
+* We added support for Mendix Metamodel [8.11.0](metamodel-8.11).
+
+## 4.35.0 {#435}
+
+**Release date: May 26th, 2020**
+
+* We added support for Mendix [8.10.0](../studio-pro/8.10).
+* We added support for Mendix Metamodel [8.10.0](metamodel-8.10).
+
+## 4.32.0 {#432}
+
+**Release date: April 30th, 2020**
+
+* We added support for Mendix [8.9.0](../studio-pro/8.9).
+* We added support for Mendix Metamodel [8.9.0](metamodel-8.9).
+
+## 4.31.0 {#431}
+
+**Release date: March 27th, 2020**
+
+* We added support for Mendix [8.8.0](../studio-pro/8.8).
+* We added support for Mendix Metamodel [8.8.0](metamodel-8.8).
+
+## 4.30.0 {#430}
+
+**Release date: February 25th, 2020**
+
+* We added support for Mendix [8.7.0](../studio-pro/8.7).
+* We added support for Mendix Metamodel [8.7.0](metamodel-8.7).
+
+## 4.29.0 {#429}
+
+**Release date: January 29th, 2020**
+
+* We added support for Mendix [8.6.0](../studio-pro/8.6).
+* We added support for Mendix Metamodel [8.6.0](metamodel-8.6).
+
+## 4.28.0 {#428}
+
+**Release date: December 13th, 2019**
+
+* We added support for Mendix [8.5.0](../studio-pro/8).
+* We added support for Mendix Metamodel [8.5.0](metamodel-8.5).
 
 ## 4.27.1 {#4271}
 
 **Release date: November 29th, 2019**
 
-* We restored the original behavior of `exportMpk` (for providing the raw response body when `outFilePath` is empty), which had beeen changed in [4.26.0](#426).
+* We restored the original behavior of `exportMpk` (for providing the raw response body when `outFilePath` is empty), which had been changed in [4.26.0](#426).
 
 ## 4.27.0 {#427}
 
 **Release date: November 22nd, 2019**
 
-* We added support for Mendix [8.4.0](../studio-pro/8).
+* We added support for Mendix [8.4.0](../studio-pro/8.4).
 * We added support for Mendix Metamodel [8.4.0](metamodel-8.4).
 
 ## 4.26.0 {#426}

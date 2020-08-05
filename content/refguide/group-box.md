@@ -18,7 +18,7 @@ A group box can be used to visually group related widgets together. Group boxes 
 
 An example of group box properties is represented in the image below:
 
-{{% image_container width="350" %}}![Group Box Properties](attachments/container-widgets/group-box-properties.png)
+{{% image_container width="300" %}}![Group Box Properties](attachments/container-widgets/group-box-properties.png)
 {{% /image_container %}}
 
 Group box properties consist of the following sections:
@@ -64,6 +64,6 @@ Possible values of this property are the following:
 
 * [Page](page)
 * [Container Widgets](container-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)
 
 

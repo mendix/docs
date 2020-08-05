@@ -4,6 +4,8 @@ parent: "data-storage"
 menu_order: 30
 ---
 
+## 1 Introduction
+
 To ease the development and deployment improvements of an application, data validation was handled in the Mendix Runtime before Mendix 7. This meant that older data could remain in the database unchanged, even if newer versions of your domain model would add more strict validation rules.
 
 Mendix 7 focuses on stateless clustering, a higher number of concurrent users, and above load applications. For efficiency reasons, some data validation will be handled by the application database. This means that data in your database will always have to comply with your validation rules, even if you make these validations more strict after the data has been created.
@@ -17,7 +19,7 @@ The following rules will also be validated in the database as of Mendix 7:
 
 A migration toolkit is available to help you fix any inconsistencies between data in your database and validation rules defined in your model.
 
-## Unique Attributes
+## 2 Unique Attributes
 
 In previous versions of Mendix, you could change an entity and add a unique validation rule on an attribute without affecting the current data. For example, you could indicate in your domain model that an insurance number should be unique for a person in the database because you wanted to use it to uniquely identify someone.
 
@@ -49,7 +51,7 @@ These unique validation related inconcistency errors may be simply resolved by m
 
 ![](attachments/datastorage/unique-validation-rule-resolved.png)
 
-## Unique Associations
+## 3 Unique Associations
 
 A comparable situation occurs for associations. Consider the following example:
 
@@ -65,6 +67,12 @@ From Mendix 7.3, we enforce that existing association data in the database also 
 
 We enforce this new stricter association on existing data in order to avoid easily overlooked mistakes that result in returning only a single address per person (where in fact they still have multiple addresses in the database). The Mendix Platform consistently returned the same address each run, but other addresses would be dormant entries in the database.
 
-## Help with Migration
+## 4 Help with Migration
 
-To help with migrating your old data, Mendix has developed a migration toolkit for Mendix 6 and Mendix 7. For details on this, please contact [Mendix Support](http://support.mendix.com).
+To help with migrating your old data, Mendix has developed a migration toolkit for Mendix 6 and Mendix 7.
+
+{{% alert type="warning" %}}
+The MigrationToolkit is designed for applications using PostgreSQL databases only.
+{{% /alert %}}
+
+For more details, contact [Mendix Support](http://support.mendix.com).

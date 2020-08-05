@@ -104,7 +104,7 @@ During the login process, MindSphere application scopes are mapped to Mendix rol
 
 ![Diagram showing relationship between different roles and scopes in Mendix and MindSphere](attachments/mindsphere-module-details/roles-and-scopes.png)
 
-The mapping in the starter app is:
+The mapping in the app template is:
 
 | **MindSphere application scope** | **is mapped to Mendix User role** |
 | -------------------------------- | --------------------------------- |
@@ -127,7 +127,7 @@ You can see how the MindSphere OS Bar Integration works in [MindSphere OS Bar](h
 
 The MindSphereOSBarConfig module provides a constant **OSBarURL** for specifying the OS Bar URL. See [getting the MindSphere OS Bar](https://design.mindsphere.io/osbar/introduction.html#tab1anchor0) for a list of available URL locations.
 
-The MindSphereOSBarConfig module creates an endpoint which is used by the MindSphere OS Bar to provide tenant context and information about the application. The MindSphereOSBarConfig module is included in the MindSphere starter app, or can be downloaded from the Mendix App Store here: [MindSphere OS Bar Connector](https://appstore.home.mendix.com/link/app/108804/).
+The MindSphereOSBarConfig module creates an endpoint which is used by the MindSphere OS Bar to provide tenant context and information about the application. The MindSphereOSBarConfig module is included in the MindSphere app template, or can be downloaded from the Mendix App Store here: [MindSphere OS Bar Connector](https://appstore.home.mendix.com/link/app/108804/).
 
 {{% alert type="info" %}}
 The MindSphere OS Bar Connector also needs the MindSphere Theme Pack, or manual configuration of the index.html file, in order to work. See [Customizing an Existing App](/developerportal/deploy/deploying-to-mindsphere#existingapp) in *Siemens MindSphere – deploy* and [index.html Changes](#indexhtmlchanges), below, for more information.
@@ -150,7 +150,7 @@ The JSON should contain the following information:
 * appCopyright – app owner’s name and year of publication
 * links – links to additional information about the app
 
-More information on the structure and content of this JSON object, together with sample JSON, can be found in [App Information](https://developer.mindsphere.io/resources/osbar/resources-osbar-getting-started.html#app-information), on the MindSphere developer site.
+More information on the structure and content of this JSON object, together with sample JSON, can be found in [App Information](https://design.mindsphere.io/osbar/get-started.html#app-information), on the MindSphere developer site.
 
 ## 4 MindSphere Theme Pack{#msthemepack}
 
@@ -170,9 +170,9 @@ See also section [MindSphere Icons](/partners/siemens/mindsphere-development-con
 
 ### 4.2 index.html Changes{#indexhtmlchanges}
 
-The MindSphere starter app, example app, and Theme Pack have an updated `index.html` file to allow integration with MindSphere.
+The MindSphere app template, example app, and Theme Pack have an updated `index.html` file to allow integration with MindSphere.
 
-If you are developing your app from a different starter app you can make these three changes manually. See the [index.html](#indexhtml) section, below, for details of the changes you need to make.
+If you are developing your app from a different app template you can make these three changes manually. See the [index.html](#indexhtml) section, below, for details of the changes you need to make.
 
 The changes are required to support:
 
@@ -184,13 +184,13 @@ The `index.html` file can be found in the /theme folder of your project app.
 
 ### 4.3 mindspherelogin.html
 
-The MindSphere starter app, example app, and Theme Pack have a `mindspherelogin.html` file which replaces the standard Mendix `login.html` file to allow SSO integration with MindSphere. This can be found in the /theme folder of your project app.
+The MindSphere app template, example app, and Theme Pack have a `mindspherelogin.html` file which replaces the standard Mendix `login.html` file to allow SSO integration with MindSphere. This can be found in the /theme folder of your project app.
 
 If this file is not in your /theme folder, you can create it following the instructions in the [mindspherelogin.html](#mindspherelogin) section, below, or by importing the MindSphere_UI_Resources theme pack.
 
 #### Error Pages
 
-These error pages are included in the MindSphere starter app, example app, and Theme Pack. This section explains why they are there.
+These error pages are included in the MindSphere app template, example app, and Theme Pack. This section explains why they are there.
 
 ### 4.4  Permission Denied Page
 
@@ -208,7 +208,7 @@ The *CockpitApplicationName does not match MindSphere token* page will be shown 
 
 ### 5.1 index.html{#indexhtml}
 
-Various changes have been made to the standard Mendix index.html file to ensure compatibility with MindSphere. These are supplied by default in the MindSphere starter app, example app, and Theme Pack.
+Various changes have been made to the standard Mendix index.html file to ensure compatibility with MindSphere. These are supplied by default in the MindSphere app template, example app, and Theme Pack.
 
 The index.html file is located in the /theme folder of your app project.
 
@@ -375,7 +375,7 @@ For the OS Bar to work correctly in your Mendix app, the following script has to
 
 ### 5.2 mindspherelogin.html{#mindspherelogin}
 
-A new login file `mindspherelogin.html` is needed to support MindSphere SSO. This is supplied by default in the MindSphere starter app, example app, and Theme Pack.
+A new login file `mindspherelogin.html` is needed to support MindSphere SSO. This is supplied by default in the MindSphere app template, example app, and Theme Pack.
 
 The `mindspherelogin.html` file is located in the /theme folder of your app project.
 

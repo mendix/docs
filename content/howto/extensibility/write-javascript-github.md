@@ -1,13 +1,14 @@
 ---
 title: "Build JavaScript Actions: Part 2 (Advanced)"
 parent: "build-javascript-actions"
+menu_order: 20
 description: "This advanced how-to will teach you to make a JavaScript action which can search for GitHub users."
 tags: ["widget", "search", "GitHub", "JavaScript", "API", "JavaScript-API"]
 ---
 
 ## 1 Introduction
 
-Mendix has made nanoflows even more powerful with pluggable nanoflow actions – called JavaScript actions – in Mendix 8. [How to Build JavaScript Actions: Part 1 (Basic)](write-javascript-actions) shows you how to create a JavaScript TextToSpeech action, expose it as a nanoflow action, and then use it in a demo. In this advanced how-to you will learn to call a REST service, use a generic return type, and make an API to enhance the power of your JavaScript actions.
+Mendix has made nanoflows even more powerful with pluggable nanoflow actions — called JavaScript actions — in Mendix 8. [How to Build JavaScript Actions: Part 1 (Basic)](write-javascript-actions) shows you how to create a JavaScript TextToSpeech action, expose it as a nanoflow action, and then use it in a demo. In this advanced how-to you will learn to call a REST service, use a generic return type, and make an API to enhance the power of your JavaScript actions.
 
 **This how-to will teach you how to do the following:**
 
@@ -25,7 +26,7 @@ Mendix has made nanoflows even more powerful with pluggable nanoflow actions –
 In [Creating a "Search GitHub User" JavaScript Action](#create-a-search) below, you will make an API which allows you to search for GitHub users. Before continuing, you can do the following to practice your API skills: 
 
 * Learn how the GitHub API works using the [GitHub developer documentation](https://developer.github.com/v3/search/#search-users)
-* Use test tooling to see how the GitHub API in action – an HTTP GET request of the URL `https://api.github.com/search/users?q=test` will result in a JSON response which you should study
+* Use test tooling to see how the GitHub API in action — an HTTP GET request of the URL `https://api.github.com/search/users?q=test` will result in a JSON response which you should study
 
 ## 3 Downloading the Project Package
 
@@ -288,8 +289,8 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
 	![list display](attachments/jsactions-advanced/variable-display.png)
 
-18. To edit your **Change Object** activity, do the following: <br/>
-	a. Double-click your **Change Object** activity. <br/>
+18. To edit your **Change object** activity, do the following: <br/>
+	a. Double-click your **Change object** activity. <br/>
 	b. Select **GithubSearch(HowTo.GithubSearch)** from the **Object** drop-down menu. <br/>
 	c. Click **Action** > **New**. <br/>
 	d. Select **HowTo.GithubSearch_GithubUser(ListofHowTo.GithubUser)** from the **Member** drop-down menu. <br/>
@@ -297,7 +298,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
 	![edit change](attachments/jsactions-advanced/edit-change-item.png)
 	
-	f. Your finished **Change Object** action will look like this:
+	f. Your finished **Change object** action will look like this:
 	
 	![change object](attachments/jsactions-advanced/change-object-final.png)
 
@@ -314,7 +315,7 @@ Congratulations! Using the power of JavaScript actions, your app can search for 
 ## 5 Read More
 
 * [Build JavaScript Actions: Part 1 (Basic)](write-javascript-actions)
-* [Mendix Client API](https://apidocs.mendix.com/8/client/)
+* [Mendix Client API](https://apidocs.rnd.mendix.com/8/client/index.html)
 * [JavaScript Actions](/refguide/javascript-actions)
 * JavaScript Resources
 	* [JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)

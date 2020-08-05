@@ -57,7 +57,7 @@ To import module packages, follow these steps:
 
 1. Right-click your project in the **Project Explorer** and select **Import Module Package**.
 
-    ![](attachments/18448739/18582115.png)
+    ![](attachments/18448739/import-package.png)
 
 2. Select your Mendix module package file and click **Open**. The **Import Module** dialog box will open.
 
@@ -154,7 +154,7 @@ To import widgets, follow these steps:
 
 ### 2.5 Importing Content from the App Store
 
-To learn more about importing content from the App Store, see [Use App Store Content](/developerportal/app-store/app-store-content).
+To learn more about importing content from the App Store, see [How to Use App Store Content](/appstore/general/app-store-content).
 
 ## 3 Exporting Objects
 
@@ -219,7 +219,6 @@ Mendix module documents can be exported as a Mendix package (*.mpk*) file.
 * [Import Excel Documents](importing-excel-documents)
 * [Expose a Web Service](expose-a-web-service)
 * [Configure Selenium Support](selenium-support)
-* [Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [Import XML Documents](importing-xml-documents)
 * [Consume a REST Service](consume-a-rest-service)
 * [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)

@@ -10,7 +10,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A **reference set selector** is used to allow the end-user to display or select the value(s) of a many-to-many (reference set) [association](association-properties) by selecting the associated object(s).
+A **reference set selector** is used to allow the end-user to display or select the value(s) of a many-to-many (reference set) [association](associations) by selecting the associated object(s).
 
 A reference set selector must be placed in a [data widget](data-widgets).
 
@@ -37,11 +37,15 @@ The reference set selector looks a lot like a [data grid](data-grid) and consequ
 *   The **Add** button adds an association to an existing object. You will need to specify the page which opens when you want to add a new association. For more information, see [Add Button](control-bar#add-button).
 *   The **Remove** button removes the association to an object, but does not change or delete the object itself
 
+{{% alert type="info" %}}
+You must explicitly commit the object in the data view containing your reference set selector to save the association changes. This can be done, for example, by having a **Save** button for the object in the data view (as shown for the *Customer* entity in the picture above).
+{{% /alert %}}
+
 ## 2 Properties
 
 An example of reference set selector properties is represented in the image below:
 
-{{% image_container width="400" %}}![](attachments/reference-set-selector/reference-set-selector-properties.png)
+{{% image_container width="250" %}}![](attachments/reference-set-selector/reference-set-selector-properties.png)
 {{% /image_container %}}
 
 Reference set selector properties consist of the following sections:
@@ -162,7 +166,7 @@ Possible values:
 
 #### 2.5.10 Default Button Trigger
 
-The default button can be triggered by a single or a double click on a row.
+The default button can be triggered by a single or a double click a row.
 
 | Value | Description |
 | --- | --- |

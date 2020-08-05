@@ -21,7 +21,8 @@ When **Microflow** is selected as the data source, this is regarded as "indirect
 
 In this scenario, you have a data grid that needs to display a list of potential orders based on the order type:
 
-![Microflow Data Source for a Data Grid](attachments/data-widgets/data-grid-microflow-source.jpg)
+{{% image_container width="400" %}}![Microflow Data Source for a Data Grid](attachments/data-widgets/data-grid-microflow-source.jpg)
+{{% /image_container %}}
 
 If the **OrderType** of the **Order** entity is set to **Cars**, then the data grid should display all the **Products** for which the Boolean **Motorized** is set to true. If the **OrderType** is **Bicycles**, only objects for which **Motorized** is set to false need be shown. Finally, if **OrderType** is empty, the data grid should remain empty.
 

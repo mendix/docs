@@ -20,7 +20,7 @@ Using controls provided by the data grid you can browse, search, and edit those 
 A data grid contains the following components: 
 
 1. [Search bar](search-bar) – allows end-users to search for objects in the data grid
-2. [Search bar](search-bar) – allows end-users to search for objects in the data grid
+2. [Control bar](control-bar) – allows you to control the objects displayed in the data grid by means of buttons
 3. [Sort bar](sort-bar) – allows end-users to sort items in the data grid 
 4.  [Grid Columns](columns) – allows end-users to set properties for a data grid column
 	![](attachments/data-widgets/data-grid-components.png)
@@ -111,7 +111,7 @@ Default: *False*
 
 #### 3.3.7 <a name="dbt"></a>Default Button Trigger
 
-The default button can be triggered by a single or a double click on a row.
+The default button can be triggered by a single or a double click a row.
 
 | Value | Description |
 | --- | --- |
@@ -145,5 +145,5 @@ To perform actions on a data grid, select it on a page and right-click it. The l
 * [Page](page)
 * [Data Widgets](data-widgets)
 * [Data Sources](data-sources)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)
 * [Grid Columns](columns) 

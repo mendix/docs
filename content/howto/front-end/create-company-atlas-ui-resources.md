@@ -33,11 +33,11 @@ Name the page template you want to create, then select your layout type. **Respo
 
 The page template is now a new document type in the module with its own icon. In the page templates **Properties** pane, there are some properties important for the template:
 
-* **Display name** – the name of the page template, which will be shown in the **Create page** dialog box
-* **Image** – the page template preview image, which will be shown in the **Create page** dialog box
-* **Show when** – there are three options for when to show the page template: **Creating new pages** (default), **Generating edit pages**, and **Generating select pages**
-* **Layout type** – the layout type is needed to categorize the page as suitable for a responsive, tablet, phone, or pop-up type
-* **Preview layout** – the default layout that will be used when creating the page template
+* **Display name** — the name of the page template, which will be shown in the **Create page** dialog box
+* **Image** — the page template preview image, which will be shown in the **Create page** dialog box
+* **Show when** — there are three options for when to show the page template: **Creating new pages** (default), **Generating edit pages**, and **Generating select pages**
+* **Layout type** — the layout type is needed to categorize the page as suitable for a responsive, tablet, phone, or pop-up type
+* **Preview layout** — the default layout that will be used when creating the page template
 
 ![](attachments/howto/creating_page_template_properties.png)
 
@@ -63,8 +63,8 @@ Name the building block you want to create:
 
 The building block is now a new document type in the module with its own icon. In the building block **Properties** pane, there are two properties important for the building block:
 
-* **Display name** – the name of the building block that will show in the **Toolbox** pane of Studio Pro
-* **Image** – the building block preview image that will be shown in the **Toolbox** pane of Studio Pro
+* **Display name** — the name of the building block that will show in the **Toolbox** pane of Studio Pro
+* **Image** — the building block preview image that will be shown in the **Toolbox** pane of Studio Pro
 
 ![](attachments/howto/creating_bb_properties.png)
 

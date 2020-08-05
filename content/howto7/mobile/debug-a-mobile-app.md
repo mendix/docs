@@ -148,7 +148,7 @@ You can now take advantage of all the debugging tools you know and love with Men
 In order to build (and debug) a Mendix iOS app, you need to ensure that you have the right setup in your Apple Developer Account. You'll need a Developer Provisioning Profile that includes your device ID and a Signing Certificate. If you already have an iOS Development provisioning profile, you can continue with [5.2 PhoneGap Configuration](#PhonegapConfiguration). Follow these steps to set up an iOS provisioning profile:
 
 1. Go to [developer.apple.com](https://developer.apple.com/) and log in to your account.
-2. Click **Certificates, IDs & Profiles** in the left-hand navigation.
+2. Click **Certificates, IDs & Profiles** in the left-side navigation.
 3. Click the `+` button to create a new certificate.
 4. Select **iOS Development** and click **Continue**.
 
@@ -174,7 +174,7 @@ In order to build (and debug) a Mendix iOS app, you need to ensure that you have
 
       ![apple-10](./attachments/debug-a-mobile-app/apple-10.png)
 
-9. Right-click on the certificate in the list of certificates and select **Export**.
+9. Right-click the certificate in the list of certificates and select **Export**.
 
       ![apple-11](./attachments/debug-a-mobile-app/apple-11.png)
 

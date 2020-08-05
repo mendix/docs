@@ -32,7 +32,7 @@ Once you are a team member, providing you have been given a role with sufficient
 
 1. Choose **Open project...** in Studio Pro.
 2. Select *Mendix Team Server* as for **Where is your App stored?**.
-3. Choose your app from the **Team Server App** dropdown.
+3. Choose your app from the **Team Server App** drop-down.
 4. Change the **Project directory**, or leave the default suggested by Studio Pro.
 5. Click **Create app**.
 
@@ -71,11 +71,11 @@ There is only room for one icon and if a document is both modified and moved it 
 
 For example, say that the microflow *ChangePassword* has been modified. Also a new folder called 'Flows' was added and all microflows were moved inside this folder. In the screenshot you can see that the folders and modules containing changes are depicted with a yellow icon, and the microflows which have been moved have a blue icon. This helps you to quickly see where in the project the changes are.
 
-![](attachments/using-version-control-in-studio-pro/2018-02-21_13-27-21.png)
+![](attachments/using-version-control-in-studio-pro/project-explorer-documents.png)
 
 You can see the same information in the **Changes** dock. In this case there is an entry for each *change* to an item. If a document is both modified and moved there are *two* lines for that document. The dock also shows items that were deleted, something the project explorer cannot do.
 
-![](attachments/using-version-control-in-studio-pro/2018-02-21_13-41-50.png)
+![](attachments/using-version-control-in-studio-pro/changes-pane.png)
 
 {{% alert type="info" %}}
 When you successfully commit your project, this becomes the new original and all the change information is removed from the project explorer and the changes dock.
@@ -89,11 +89,11 @@ To commit your changes, click the **Commit** button in the **Changes** dock, or 
 
 ![Commit Button](attachments/using-version-control-in-studio-pro/commit-button.png)
 
-In general, it is a good idea to commit after implementing one feature or fixing one bug. By committing often, your work is integrated with the work of others regularly. The benefits of committing often include:
+In general, it is a good idea to commit after implementing one feature or fixing one bug. By committing often, your work is integrated with the work of others regularly. The benefits of committing include the following:
 
-* if any conflicts arise the changes are still fresh in your mind
-* revisions are easier to understand
-* if you ever need to revert something, you can revert a small chunk of work
+* If any conflicts arise, the changes are still fresh in your mind
+* Revisions are easier to understand
+* If you ever need to revert something, you can revert a small chunk of work
 
 Committing results in a new revision in the repository. You can add the following information in Studio Pro when you perform a commit, and this will be attached to the newly created revision:
 
@@ -104,10 +104,10 @@ Committing results in a new revision in the repository. You can add the followin
 
 Studio Pro also attaches some information automatically:
 
-*   The person who committed (the *author*)
-*   The date and time of the commit
-*   The list of changed documents, folders, and modules along with the type of the change (for example *modify* or *add*)
-*   The version of Studio Pro that was used to commit
+* The person who committed (the *author*)
+* The date and time of the commit
+* The list of changed documents, folders, and modules along with the type of the change (for example *modify* or *add*)
+* The version of Studio Pro that was used to commit
 
 If you also changed Java source code, added widgets or made other changes that affect files other than the project file you will see a **Changes on disk** tab page that shows you what disk changes you are about to commit.
 
@@ -131,7 +131,7 @@ If your team is committing often you will have to update often. Frequent updatin
 
 ### 4.4 History {#history}
 
-The *history* of the project is a list of all revisions that have been committed. To view the history of the project, click the **History** button in the **Changes** dock, or choose the **Project > More Versioning > History...** menu item.
+The *history* of the project is a list of all revisions that have been committed. To view the history of the project, click the **History** button in the **Changes** dock, or choose the **Version Control** > **History** menu item.
 
 ![History Button](attachments/using-version-control-in-studio-pro/history-button.png)
 
@@ -174,7 +174,7 @@ For each *document* you can decide whether to accept the conflicted elements whi
 
 This decision applies to all the conflicts in the document; you cannot choose your version for some conflicted changes but their changes for others. Non-conflicting changes will be merged as normal.
 
-Ensure you are viewing changes for the whole project in the **Changes** dock, select the document which is conflicted, and use the required option from the **Tasks** dropdown.
+Ensure you are viewing changes for the whole project in the **Changes** dock, select the document which is conflicted, and use the required option from the **Tasks** drop-down.
 
 ![Resolving a conflict using the changes dock](attachments/using-version-control-in-studio-pro/resolve-document-conflict.png)
 
@@ -182,7 +182,7 @@ For example, if you deleted a data view in a page and another person changes som
 
 Resolving a conflict will make the conflict go away but the document may, of course, still be marked as changed if there are changes to commit.
 
-## 6.2 Resolving a Project Conflict
+### 6.2 Resolving a Project Conflict
 
 Project conflicts are conflicts are conflicts at the level of the project. There are two cause for project conflicts:
 
@@ -214,7 +214,7 @@ It is often convenient to have more than one development line. For example, one 
 If you want to add some functionality to a deployed application or you want to fix a bug in it, you can do so without interfering with other development.
 
 1. Determine the version of the deployed application. This information is in the Developer Portal. Alternatively, you can find the version in the *metadata.json* file in the **model** subfolder of your deployment package (mda) archive. For example, `"ModelVersion": "1.0.0.16"`
-2. Choose **Project > More Versioning > Manage Branch Lines...** and create a branch based on the tag with the that version number as its name.
+2. Choose **Version Control > Manage Branch Lines...** and create a branch based on the tag with the that version number as its name.
 
     ![](attachments/using-version-control-in-studio-pro/create-from-tag.png)
 
@@ -232,7 +232,7 @@ Of course, not all maintenance fixes need to be merged to the main line. Sometim
 
 Another reason for creating a branch is to develop a big new feature without interfering with other development. This gives you the freedom to commit a half-implemented feature, possibly even with errors, while other people can still commit and update on the main line. Without using a branch line, you would have to constantly make sure that your project is error free and does not break other parts of the system.
 
-Firstly, select **Project > More Versioning > Manage Branch Lines...** and create a branch from a revision of the main line.
+Firstly, select **Version Control > Manage Branch Lines...** and create a branch from a revision of the main line.
 
 ![](attachments/using-version-control-in-studio-pro/2018-02-28_13-50-39.png)
 
@@ -241,7 +241,7 @@ Now work on the branch until the feature is done and commit the completed work.
 When you want to merge the whole branch back to the main line to integrate the feature there. Do the following:
 
 1. Open the main line.
-2. Choose **Project > More Versioning > Merge changes here**.
+2. Choose **Version Control > Merge changes here**.
 3. Choose **Merge feature branch**.
 
     ![](attachments/using-version-control-in-studio-pro/2018-02-28_14-05-23.png)
@@ -258,9 +258,9 @@ You can delete the branch after merging it back, if you want.
 
 Development lines other than the main line are called branch lines. Our advice would be to develop new features in the *main line* and to use *branch lines* for fixing bugs in versions that have been deployed. This is the scenario Studio Pro makes easy but other scenarios for more complex projects are supported as well.
 
-You can create branch lines from the Branch Line Manager which you can find at **Project > More Versioning > Manage Branch Lines...**.
+You can create branch lines from the Branch Line Manager which you can find at **Version Control > Manage Branch Lines...**.
 
-![](attachments/using-version-control-in-studio-pro/2018-02-21_14-16-20.png)
+![](attachments/using-version-control-in-studio-pro/create-branch-line.png)
 
 #### 7.2.2 Merging
 
@@ -268,25 +268,39 @@ If you have multiple development lines, you sometimes want to port changes from 
 
 Merging is always done while you have a working copy open. The merge will result in extra local changes in that working copy. It is advisable to commit local changes first before merging extra changes into a working copy. Otherwise, the uncommitted local changes and the changes caused by the merge will be combined and it is very hard to untangle them if you are unhappy with the merge. Studio Pro will warn you if you have uncommitted changes.
 
-Choose **Project > More Versioning > Merge Changes Here**.
-
-Choose the appropriate *type of merge*, for example **Port fix**.
+Select **Version Control > Merge Changes Here**, then select the appropriate type of merge (for example, **Port fix**).
 
 ![](attachments/using-version-control-in-studio-pro/2018-02-21_14-19-47.png)
 
-You can merge either a single revision, or a whole range of revisions, from one development line to another. If a branch line represents a big new feature that you want to integrate completely into the main line, you can merge all the revisions of the branch.
+You can merge a single revision or a whole range of revisions from one development line to another. If a branch line represents a big new feature that you want to integrate completely into the main line, you can merge all the revisions of the branch.
 
 #### 7.2.3 Reverse Merging
 
 Reverting changes works for changes that have not been committed yet. Changes that have been committed can never be deleted. However, you can apply the changes 'in reverse' and commit that. This feature is called 'Reverse merging' in Studio Pro.
 
-Choose **Project > More Versioning > Reverse Merge Changes...**
+Choose **Version Control > Reverse Merge Changes...**
 
 ![](attachments/using-version-control-in-studio-pro/revert-committed-changes.png)
 
 After a reverse merge the project will look like the changes never happened; if you 'reverse merge' the adding of a page, the page will be deleted locally. Just like when you are doing a normal merge, conflicts can arise. In the example, if later commits change the added page, the reverse merge will result in a conflict. After resolving any problems, you can commit the results to the repository.
 
-## 8 Versioning a Project Deployed to the Cloud
+#### 7.2.4 Replacing the Main Line with a Branch Line
+
+There are two methods for fully replacing your main line with a branch line.
+
+The first method is to merge the entire branch line into the main line, essentially replacing the main line contents with the branch line contents). This works as long as the branch line is up to date with the main line (to avoid conflicts. To do this, follow these steps:
+
+1. Select **Version Control > Merge Changes Here** > **Merge feature branch**.
+2. Select the branch to merge into the main line.
+
+The second method should be used if the first method is not possible for some reason and you want to "overwrite" the main line with your branch line. For this method, you must follow these steps:
+
+1. Check out both the main line and the branch line locally.
+2. Overwrite all the files in the main line project directory with those of the branch line (except for the *.svn* directory).
+3. Commit your changes using Studio Pro. 
+4. Reopen the main line project in Studio Pro only after overwriting the files.
+
+## 8 Versioning a Project Deployed to the Cloud {#versioning-project}
 
 ### 8.1 Deploying Locally
 
@@ -294,7 +308,7 @@ While developing you can deploy and run your app on your local machine by using 
 
 ### 8.2 Deploying Your Working Copy
 
-When you deploy to the cloud, you can choose to use the version of the app stored on your local machine, the *working copy* and deploy that to the default environment. If you are using the Mendix Cloud, or other partner cloud (SAP Cloud Platform, for example), choose the menu item **Run > Run** to commit the version of the app stored on your local machine and deploy that to the default environment.
+When you deploy to the cloud, you can choose to use the version of the app stored on your local machine, the *working copy* and deploy that to the default environment. If you are using the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), or other partner cloud (SAP Cloud Platform, for example), choose the menu item **Run > Run** to commit the version of the app stored on your local machine and deploy that to the default environment.
 
 ### 8.3 Choosing a Specific Development Line and Revision
 
@@ -349,3 +363,14 @@ Make sure you use the SVN export feature of TortoiseSVN if you are copying a dir
 If you delete a file from your project, Studio Pro will automatically also delete it from the Team Server.
 
 If you want to delete a whole directory, you will have to use the delete command of TortoiseSVN. You can execute this command by right-clicking the directory and choosing 'TortoiseSVN > Delete'.
+
+### 9.4 Branching & Deploying
+
+If you perform branching outside of Studio Pro, you will not be able to immediately deploy to Mendix Cloud. That is because Studio Pro adds metadata about the Mendix version of your app project to each revision when you commit or create a branch, which is needed by the Mendix Cloud deployment. Branching outside of Studio Pro means that metadata is missing from your branch, thus your app cannot successfully be deployed.
+
+To fix this, make a small commit on your branch in Studio Pro (for example, changing a documentation field). Studio Pro will then add the metadata that Mendix Cloud deployment requires, and you will be able to deploy your app.
+
+## 10 Read More
+
+* [Advanced Branching and Merging Strategies](https://www.mendix.com/blog/advanced-branching-merging-strategies-part-1-2/)
+

@@ -37,8 +37,8 @@ The following custom settings can be configured:
 | ClusterManagerActionInterval | The interval (in milliseconds) used for performing all cluster manager actions. These actions include, unblocking users, and removing invalid sessions. If nothing is specified the interval is half the SessionTimeout. | 300000 |
 | com.mendix.core.StorageService | Defines which storage service module will be used. The storage service module takes care of storing the actual files asssociated with 'System.FileDocument' objects, such as uploaded files. Possible values are 'com.mendix.storage.localfilesystem' and 'com.mendix.storage.s3'. From Mendix 6.6 onwards 'com.mendix.storage.azure' is also available. | com.mendix.storage.localfilesystem |
 | com.mendix.core.SessionIdCookieName | Defines the name of the cookie value which represents the session id. Can be useful to change when running in a container which assumes a certain name for the session cookie (e.g. Pivotal assumes 'JSESSIONID' as session cookie name). | XASSESSIONID |
-| com.mendix.core.localfilesystem.cleaning.isEnabled | **Warning: This is an experimental feature that will be replaced in the near future. This feature should not be used in production.** Enables the scheduled task to clean orphan files from the local file system. Orphan files are files in the uploaded file directory (see UploadedFilesPath setting above) which do not have a corresponding database entry. Because there is no deterministic approach to distinguish between application files and other files, it's important to avoid placing non application files in the uploaded file directory, otherwise they may be deleted as well. This setting can only be used in Mendix 6.5 and later releases. | false |
-| com.mendix.core.localfilesystem.cleaning.time | Defines the hour of the day to trigger the scheduled task to clean orphan files from the local file system. Accepted values are in the range of 1 to 24\. The default value is 24 which triggers the task at midnight. In order to avoid running many of such tasks on different instances at the same time, the exact start time can be delayed up to 30 minutes. Because this can be a memory intensive operation, it's important to configure this value such that the task runs at the low pick of the application. This setting can only be used in Mendix 6.5 and later releases. | 24 |
+| com.mendix.core.localfilesystem.cleaning.isEnabled | **Warning: This experimental feature is only available in Mendix versions 6.5.0 through 6.10.3. This feature should not be used in production.** Enables the scheduled task to clean orphan files from the local file system. Orphan files are files in the uploaded file directory (see UploadedFilesPath setting above) which do not have a corresponding database entry. Because there is no deterministic approach to distinguish between application files and other files, it's important to avoid placing non application files in the uploaded file directory, otherwise they may be deleted as well. | false |
+| com.mendix.core.localfilesystem.cleaning.time | Defines the hour of the day to trigger the scheduled task to clean orphan files from the local file system. Accepted values are in the range of 1 to 24\. The default value is 24 which triggers the task at midnight. In order to avoid running many of such tasks on different instances at the same time, the exact start time can be delayed up to 30 minutes. Because this can be a memory intensive operation, it's important to configure this value such that the task runs at the low pick of the application. This setting can only be used in Mendix versions 6.5.0 through 6.10.3 | 24 |
 
 ## 3 Log File Settings
 
@@ -214,8 +214,10 @@ This parameter specifies the number of threads the thread pool can assign to exe
 
 The default value should be more than enough for most use cases. If your application experiences extremely high load and it runs out of threads you can try to increase this number.
 
+{{% alert type="info" %}}
+It is important to note that you can deplete the thread pool with long-running microflows. If each available thread is busy executing a long-running microflow, then other microflows will be "starved" and will not start to execute until the long-running microflows are finished. These microflows may even experience time-outs before they start executing or exhaust the number of available connections.
+{{% /alert %}}
+
 {{% alert type="success" %}}
-
 If you want to inspect the configuration being used, you can set the system or config property 'akka.log-config-on-start' to 'on'. This will then print the complete configuration at INFO level when the actor system is started.
-
 {{% /alert %}}

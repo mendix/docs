@@ -167,7 +167,7 @@ For more information see the MindSphere documentation [Roles & Scopes for Applic
 
 The **PumpAssetExample** module within the app uses the *MindSphere Asset Management Connector* and MindSphere APIs, via Mendix native REST, to create and view time series information for an asset.
 
-This is based on a standard Mendix starter app. It also has additional modules which are required for integrating with and deploying to MindSphere. These additional modules are:
+This is based on a standard Mendix app template. It also has additional modules which are required for integrating with and deploying to MindSphere. These additional modules are:
 
 * MindSphere SSO
 * MindSphere Theme Pack

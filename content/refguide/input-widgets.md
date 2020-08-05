@@ -16,7 +16,7 @@ For example, the input widgets can be placed inside a [data view](data-view):
 
 ![Data view containing widgets](attachments/input-widgets/data-view.png)
 
-There are several different input widgets, these are used for different [data types](data-types) and for different types of [association](association-properties). The input widgets category contains the following widgets:
+There are several different input widgets, these are used for different [data types](data-types) and for different types of [association](associations). The input widgets category contains the following widgets:
 
 *   [Text Box](text-box) – displays and, optionally, allows the end-user to add or edit text data from a *numeric* or *string-like* attribute:
 
@@ -26,7 +26,7 @@ There are several different input widgets, these are used for different [data ty
 
     ![Text area containing notes attribute](attachments/input-widgets/text-area.png)
 
-*   [Drop Down](drop-down) – shows the current value of and, optionally, allows end-users to pick an option from a list of options in an *enumeration* attribute:
+*   [Drop-Down](drop-down) – shows the current value of and, optionally, allows end-users to pick an option from a list of options in an *enumeration* attribute:
 
     ![Drop down containing region attribute](attachments/input-widgets/drop-down.png)
 

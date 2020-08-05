@@ -112,13 +112,13 @@ returns:
 or, with a third parameter:
 
 ```java
-substring('thisismystring', 6,2)
+substring('mendixapp', 6,3)
 ```
 
 returns:
 
 ```java
-'my'
+'app'
 ```
 
 ## find
@@ -368,9 +368,13 @@ Checks to see if a string matches a given regular expression.
 * Regular expression to match
     * Type: string
 
+{{% alert type="info" %}}
+The regular expression must be provided as a string. Although it uses the same format for regular expressions, you cannot use a [regular expression](regular-expressions) resource document in this function.
+{{% /alert %}}
+
 {{% alert type="warning" %}}
 
-Please note that this function call uses a [regular expression](regular-expressions) language provided by the current platform:
+Please note that this function call uses the regular expression language provided by the current platform:
 
 * When used inside a [microflow](microflow) – Java's regular expressions (for details, see [Class Pattern documentation](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html))
 * When used in the client – JavaScript's regular expressions (for details, see [Regular Expressions documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))
@@ -414,14 +418,18 @@ Replaces all occurrences of a regular expression with another string.
 
 * The string to search in
     * Type: string
-* The regular expression to match (if you want to search for a literal string, enclose it between \G and \E. For example, `\GPaul S. Mueller\E` will search for the string `Paul S. Mueller`, without interpreting the dot as a wildcard)
+* The regular expression to match; if you want to search for a literal string, enclose it between `\Q` and `\E` (for example, `\QPaul S. Mueller\E` will search for the string `Paul S. Mueller`, without interpreting the dot as a wildcard)
     * Type: string
 * The string to be substituted for each match (this does not support backreferences, substitutions, or captures)
     * Type: string
 
+{{% alert type="info" %}}
+The regular expression must be provided as a string. Although it uses the same format for regular expressions, you cannot use a [regular expression](regular-expressions) resource document in this function.
+{{% /alert %}}
+
 {{% alert type="warning" %}}
 
-Please note that this function call uses a [regular expression](regular-expressions) language provided by the current platform:
+Please note that this function call uses the regular expression language provided by the current platform:
 
 * When used inside [microflows](microflows) – Java's regular expressions (for details, see [Class Pattern](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html))
 * When used in the client – JavaScript's regular expressions (for details, see [Regular Expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))
@@ -465,13 +473,17 @@ Replaces the first occurrence of the regular expression with a replacement strin
 * The string to search in
     * Type: string
 * The regular expression to match
-    * Type: string (if you want to search for a literal string, enclose it between \G and \E. For example, `\GPaul S. Mueller\E` will search for the string `Paul S. Mueller`, without interpreting the dot as a wildcard)
+    * Type: string; if you want to search for a literal string, enclose it between `\Q` and `\E` (for example, `\QPaul S. Mueller\E` will search for the string `Paul S. Mueller`, without interpreting the dot as a wildcard)
 * The string to be substituted for the first match (this does not support backreferences, substitutions, or captures)
     * Type: string
 
+{{% alert type="info" %}}
+The regular expression must be provided as a string. Although it uses the same format for regular expressions, you cannot use a [regular expression](regular-expressions) resource document in this function.
+{{% /alert %}}
+
 {{% alert type="warning" %}}
 
-Please note that this function call uses a [regular expression](regular-expressions) language provided by the current platform:
+Please note that this function call uses the regular expression language provided by the current platform:
 
 * When used inside a [microflow](microflow) – Java's regular expressions (for details, see [Class Pattern documentation](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html))
 * When used in the client – JavaScript's regular expressions (for details, see [Regular Expressions documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))

@@ -13,9 +13,7 @@ An association describes a relation between entities. In the domain model, an as
 In Mendix Studio, associations have the following properties:
 
 * [Name](#name)
-
 * [Multiplicity](#multiplicity)
-
 *  [Delete behavior](#delete-behavior)
 
    {{% image_container width="300" %}}![](attachments/domain-models-association-properties/association-properties.png)
@@ -45,7 +43,11 @@ Multiplicity shows the owner and the direction of association if the association
 {{% image_container width="400" %}}![](attachments/domain-models-association-properties/association-domainmodel.png)
 {{% /image_container %}}
 
-You can swap the direction of the multiplicity if its type is one-to-many or many-to-many. In this case you will change the owner of association. 
+You can swap the direction of the multiplicity if its type is one-to-many or many-to-many. In this case you will change the owner of association.
+
+{{% alert type="info" %}}
+For more details on the reasoning underlying associations, ownership, and multiplicity, see the [Introduction](/refguide/associations#intro) section of *Associations* in the *Studio Pro Guide*.
+{{% /alert %}}
 
 ## 4 Delete Behavior {#delete-behavior}
 

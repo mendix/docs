@@ -2,7 +2,7 @@
 title: "Control Bar"
 parent: "grids"
 menu_order: 30
-tags: ["studio pro", "control bar", "data grid", "template grid", "reference set selector", "control bar buttons"]
+tags: ["studio pro", "control bar", "add button", "deselect all button", "export to csv button", "grid action button", "grid new button", "remove button", "search button", "select button", "select all button", "data grid", "template grid", "reference set selector", "control bar buttons"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

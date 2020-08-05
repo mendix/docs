@@ -7,7 +7,7 @@ tags: ["database connector", SQL", "database", "external database", "integration
 
 ## 1 Introduction
 
-The Mendix Platform offers many ways to integrate with external data, but integrating with external databases has not been a seamless experience until now. The [Database Connector](https://appstore.home.mendix.com/link/app/2888/) can be used to seamlessly connect to external databases without limiting you in your choice of database or SQL dialect, thus enabling you to incorporate external data directly in your Mendix application. Two actions are available via the connector: [Execute statement](#statement) and **Execute query**.
+The Mendix Platform offers many ways to integrate with external data, but integrating with external databases has not been a seamless experience until now. The [Database Connector](/appstore/connectors/database-connector) can be used to seamlessly connect to external databases without limiting you in your choice of database or SQL dialect, thus enabling you to incorporate external data directly in your Mendix application. Two actions are available via the connector: [Execute statement](#statement) and **Execute query**.
 
 The **Execute statement** action provides a consistent environment for Mendix app projects to perform an arbitrary SQL statement on relational external databases. A Java database connectivity (JDBC) API is used when this Java action attempts to connect with a relational database for which a JDBC driver exists.
 

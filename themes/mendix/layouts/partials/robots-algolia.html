@@ -1,4 +1,4 @@
-{{- $sitemap := index .Page.Params "sitemap" -}}
+{{- $disableSitemap := index .Page.Params "disable_sitemap" -}}
 {{- $noindex := index .Page.Params "noindex" -}}
 {{- $intercom := index .Site.Params "intercom" -}}
 {{- $liveId := index $intercom "live_id" -}}
@@ -6,7 +6,7 @@
 {{- $env := getenv "HUGO_ENV" -}}
 {{- if eq $env "production" -}}
   <!-- BUILD: PRODUCTION -->
-  {{- if not (eq $sitemap false) -}}
+  {{- if not (eq $disableSitemap true) -}}
     {{- if not (eq $noindex true) -}}
   <meta name="ROBOTS" content="INDEX, FOLLOW">
     {{- else -}}

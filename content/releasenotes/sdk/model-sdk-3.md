@@ -3,8 +3,6 @@ title: "3"
 parent: "model-sdk"
 ---
 
-These are the release notes for the Model SDK version 3.
-
 ## 3.3.0
 
 **Release date: April 13th, 2017**

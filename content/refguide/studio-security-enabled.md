@@ -16,10 +16,10 @@ Users can enable security from Studio. While the Studio user simply clicks the *
 When security is enabled, a number of checks and changes are done at several levels.
 
 1. Studio checks if security is enabled. If security is set to **Prototype/demo** or **Production**, the process stops. If security is off, steps described below are executed. 
-2. The [MendixSSO](/developerportal/deploy/mendix-sso) module is set up if the project does not have it yet (for more information on this process, see the [Modules Set Up](#module-set-up) section). If the MendixSSO module has been already installed for this project, the process stops. 
+2. The [Mendix SSO](/appstore/modules/mendix-sso) module is set up if the project does not have it yet (for more information on this process, see the [Modules Set Up](#module-set-up) section). If the Mendix SSO module has been already installed for this project, the process stops. 
 3. Studio does checks and changes (if necessary) to [demo users](demo-users) , [module roles](module-security) , and [user roles](user-roles) (for more information on this process, see the [Module Roles and Demo Users Set Up](#module-roles-and-demo-users) section).
 4. Studio sets access rules for entities (and their attributes and associations), if entities do not have access rules yet (for more information on this process, see the [Entity Access Set Up](#entity-access) section).
-5. Studio checks if the *login.html* file exists, backs it up, and replaces it with a new version. Also, Studio checks if *index.html* exists, it searches for `document.cookie = "originURI=/login.html";` and replaces it with `document.cookie = "originURI=/openid/login";` (for more information on this process, see the [Files Set Up](#files-set-up) section).
+5. Studio checks if the *login.html* file exists, backs it up, and replaces it with a new version (for more information on this process, see the [File Set Up](#file-set-up) section).
 6. Studio does checks and changes (if necessary) at the [Project Security](project-security) level (for more information on this process, see the [Project Security Level Set Up](#project-security-level) section).
 
 {{% alert type="info" %}}
@@ -34,8 +34,8 @@ When security is enabled in Studio, the Mendix SSO module is set up. This module
 
 To enable single sign-on the following checks and changes are performed:
 
-1. The Mendix SSO startup microflow ( MendixSSO.MendixSSO_AfterStartup ) is created. For more information on possible outcomes of this process, see the [Project Security Level Set Up](#project-security-level) section.
-2. *index.html* and *login.html* files are checked and changed if necessary. For more information, see the [Files Set Up](#files-set-up) section.
+1. The Mendix SSO startup microflow (MendixSSO.MendixSSO_AfterStartup) is created. For more information on possible outcomes of this process, see the [Project Security Level Set Up](#project-security-level) section.
+2. *login.html* file is checked and changed if necessary. For more information, see the [File Set Up](#file-set-up) section.
 
 The Mendix SSO module also adds user management to your app. With user management you can manage app users.
 
@@ -108,15 +108,13 @@ If you copy-paste an entity, the access rules of the original entity are copied 
 
 {{% /alert %}}
 
-## 6 Files Set Up {#files-set-up}
+## 6 File Set Up {#file-set-up}
 
-As the last stage, Studio applies the following changes to *index.html* and *login.html* files in your project:
+As the last stage, Studio applies the changes *login.html* file in your project. 
 
-1. If the *login.html* file exist, Studio backs it up in the same folder under the name *login_backup_year-month-day_hour-minute.html*, indicating the date and time of the backup. Studio also creates a new file under the name *login.html* 
+If the *login.html* file exist, Studio backs it up in the same folder under the name *login_backup_year-month-day_hour-minute.html*, indicating the date and time of the backup. Studio also creates a new file under the name *login.html* 
 
-    If the *login.html* file does not exist, Studio creates it under the name *login.html* 
-
-2. In the*index.html* file, Studio replaces `document.cookie = "originURI=/login.html";` with `document.cookie = "originURI=/openid/login";`.
+If the *login.html* file does not exist, Studio creates it under the name *login.html* 
 
 This procedure enables single sign-on and allows existing users to automatically sign in to your app using their Mendix accounts. 
 
@@ -138,7 +136,7 @@ On the **Project** level, Studio does the following:
 
 Studio Pro security settings are compatible with Studio (that means that roles and permissions can be edited in Studio), when all of the following criteria are met:
 
-* The MendixSSO module has been installed
+* The Mendix SSO module has been installed
 * The security level has been be set to production
 * Demo users have been enabled
 * Demo users must have the correct name: identical to the project role name, but with the *demo_* prefix (for example, demo_user)

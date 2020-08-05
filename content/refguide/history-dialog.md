@@ -1,11 +1,12 @@
 ---
 title: "History"
-parent: "dialogs"
+parent: "version-control-menu"
+menu_order: 50
 tags: ["studio pro"]
 ---
 ## 1 Introduction
 
-Use the **History** dialog to look at all the changes that have been committed to a development line of a project. The dialog is also used when selecting a revision: to merge from, to create a branch line of or to create a deployment archive of.
+Use the **History** dialog box to look at all the changes that have been committed to a development line of an app project. This dialog box is also used when selecting a revision to merge from, create a branch line off of, or create a deployment archive of.
 
 ![](attachments/history-dialog/history-dialog.png)
 
@@ -13,12 +14,12 @@ Use the **History** dialog to look at all the changes that have been committed t
 
 Each line in the grid represents a revision in the repository. For each revision the following information is shown:
 
-*   Revision number – the number of the revision in the repository. Revision numbers do not have to be consecutive if there is also activity in other development lines. Revision numbers are unique for a whole repository.
-*   Changes – a visual summary of the changes in the selected revision. It shows whether there are model changes, disk changes and whether there was a change in Studio Pro version that was used to commit the revision (green arrow up). Hover over this column to get a textual summary.
-*   Author – the person who committed this revision.
-*   Date – the date of the commit.
-*   Time – the time of the commit.
-*   Message – the user entered message of the commit. If the message is long, you can more easily read it in the Message tab page below.
+* **Revision** number – the number of the revision in the repository. Revision numbers do not have to be consecutive if there is also activity in other development lines. Revision numbers are unique for a whole repository.
+* **Changes** – a visual summary of the changes in the selected revision. It shows whether there are model changes, disk changes and whether there was a change in Studio Pro version that was used to commit the revision (green arrow up). Hover over this column to get a textual summary.
+* **Author** – the person who committed this revision.
+* **Date** – the date of the commit.
+* **Time** – the time of the commit.
+* **Message** – the user entered message of the commit. If the message is long, you can more easily read it in the Message tab page below.
 
 By selecting a revision in this grid, the tab pages below it will be filled with information about this revision.
 
@@ -40,4 +41,5 @@ This tab page shows a list of the files that were changed on disk. You see wheth
 
 ## 7 Read More
 
-* [Dialog Boxes](dialogs)
+* [Version Control](version-control)
+* [Stories Pane](stories-pane)

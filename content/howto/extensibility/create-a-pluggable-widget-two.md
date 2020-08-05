@@ -40,7 +40,7 @@ Right now the input is editable for any user at all times. However, the input sh
 
 To add these restrictions, follow the instructions below:
 
-1. In *TextBox.xml* add the system property for [`Editability`](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#editability) inside the `propertyGroup` of `Data source` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in the Mendix Studios): 
+1. In *TextBox.xml* add the [system property](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#editability)  for `Editability` inside the `propertyGroup` of `Data source` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in the Mendix Studios): 
 
 	```xml
 	<propertyGroup caption="Editability">
@@ -48,8 +48,8 @@ To add these restrictions, follow the instructions below:
 	</propertyGroup>
 	```
 
-2.  Run `npm run build` to update the widget, when viewing in the Studio Pro, Editability property can been seen:
-
+2. Run `npm run build` to update the widget. When viewing in Studio Pro, the `Editability` property can been seen here:
+	
 	{{% image_container width="500" %}}![Editability studio pro](attachments/pluggable-part-two/editability-property-studio-pro.png){{% /image_container %}}
 
 3. Now add read-only functionality to your widget. In *TextBox.tsx*, replace the `render` function with the code below to check if the input should be disabled and pass it to in the `TextInput` component:
@@ -119,9 +119,9 @@ To add these restrictions, follow the instructions below:
 
 	Explaining the code:
 
-	* The property `disabled` in an input element will behave according to the HTML's specifications – it will not respond to user actions, cannot be focused, is removed from the tab order, and will not fire any events
+	* The property `disabled` in an input element will behave according to the HTML's specifications — it will not respond to user actions, cannot be focused, is removed from the tab order, and will not fire any events
 
-5.  When you select **Never** for your TextBox widget's `Editable` property in Mendix Studio Pro, the widget will function like this: 
+5. When you select **Never** for your TextBox widget's `Editable` property in Mendix Studio Pro, the widget will function like this: 
 
 	{{% image_container width="500" %}}![editable never result](attachments/pluggable-part-two/settonever.png){{% /image_container %}}
 
@@ -139,12 +139,12 @@ This section will teach you to add validation to your TextBox widget. Using micr
 
 	Before moving forward, go back to your app's **Home** page, double-click your validation button, and name it *Show validation feedback*.
 
-2. Open your *Validation_Microflow* and drop a **Validation feedback** client activity onto your microflow: 
+2. Open your *Validation_Microflow* and drop a **Validation feedback** activity onto your microflow: 
 
 	{{% image_container width="500" %}}![validation feedback client activity](attachments/pluggable-part-two/addingvalidation.png){{% /image_container %}}
 
-	To define your validation feedback client activity:<br />
-	a. Double-click the **Validation feedback** client activity.<br />
+	To define your validation feedback activity:<br />
+	a. Double-click the **Validation feedback** activity.<br />
 	b. Set **Variable** to **Entity (MyFirstModule Entity)**.<br />
 	c. Set **Member** to **Attribute**, and type *Validation feedback from a microflow* into **Template**.<br />
 	d. Click **OK**.<br />
@@ -210,7 +210,7 @@ This section will teach you to add validation to your TextBox widget. Using micr
 
 	Explaining the code:
 
-	* React nodes each require a root element – to create a non-rendering element and group the container elements, a `Fragment` can be used
+	* React nodes each require a root element — to create a non-rendering element and group the container elements, a `Fragment` can be used
 	* When there is no error the validation will be empty, the `Alert` will not show, and the component will return `null`
 
 	Now, your widget will show validation feedback from its microflow:
@@ -219,7 +219,7 @@ This section will teach you to add validation to your TextBox widget. Using micr
 
 ### 3.3 Customizing Validation
 
-Validation can come from a modeled microflow or nanoflow, but can also be widget specific. For this sample you will learn to implement a custom, required (text template)[/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#texttemplate] message which will show when the input is empty.
+Validation can come from a modeled microflow or nanoflow, but can also be widget specific. For this sample you will learn to implement a custom, required [text template](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#texttemplate) message which will show when the input is empty.
 
 
 1. In *TextBox.xml*, add the `requiredMessage` property inside the `propertyGroup` of `Data source`:
@@ -264,10 +264,10 @@ Validation can come from a modeled microflow or nanoflow, but can also be widget
 	Explaining the code:
 
 	* The `componentDidMount` is a lifecycle method of the React component, and is only called once
-	* The custom validator is registered to the attribute, and is called after each `setValue` call – the new value is only accepted when the validator returns no string
-	* When the validator returns an error message, it will passed to the attribute, and a re-render is triggered – the standard `this.props.textAttribute.validation` will get the message and display it in the same way as the validation feedback
+	* The custom validator is registered to the attribute, and is called after each `setValue` call — the new value is only accepted when the validator returns no string
+	* When the validator returns an error message, it will passed to the attribute, and a re-render is triggered — the standard `this.props.textAttribute.validation` will get the message and display it in the same way as the validation feedback
 
-3.  When entering text and removing all characters, the following error is shown:
+3. When entering text and removing all characters, the following error is shown:
 
 	{{% image_container width="500" %}}![no character error](attachments/pluggable-part-two/nocharerror.png){{% /image_container %}}
 
@@ -413,7 +413,7 @@ Until now the components did not keep any state. Each keystroke passed through t
 	* The `componentDidUpdate` function is a React lifecycle function that is called before rendering, directly after an update of the properties
 	* The state `editedValue` will be empty until the input value is changed by the user 
 	* The `setState` function will update the state and will re-render the component (in the rendering, the new value is taken from `editedValue`)
-	* The `onBlur` function will set the new value in the attribute through the container component – the state is reset, and the new value is received by an update of the attribute (which will propagate as a new property value)
+	* The `onBlur` function will set the new value in the attribute through the container component — the state is reset, and the new value is received by an update of the attribute (which will propagate as a new property value)
 	* The `onLeave` function will set the value. The `setValue` function will automatically call the onChange action, as this is connected with the XML configuration
 
 
@@ -514,8 +514,8 @@ To make the input widget more accessible for people using screen readers, you wi
 
 	Explaining the code:
 
-	* The `Label` component provided by the platform has a `for` attribute which will have a reference to the widget's ID – you must set the ID for the screen reader, so that it can link the label to the `this` input
-	* The `Label` component will have an ID `<widgetid>-label` – you must link the input's `aria-labelledby` to the ID of the label
+	* The `Label` component provided by the platform has a `for` attribute which will have a reference to the widget's ID — you must set the ID for the screen reader, so that it can link the label to the `this` input
+	* The `Label` component will have an ID `<widgetid>-label` — you must link the input's `aria-labelledby` to the ID of the label
 
 You have now made your widget compatible with screen readers. If a screen reader is describing your app aloud, it will list the widget elements to the user.
 
@@ -523,7 +523,7 @@ You have now made your widget compatible with screen readers. If a screen reader
 
 To easily view changes to your widget while in Mendix Studio or Mendix Studio Pro's design mode, you can add preview functionality to your TextBox widget. Note that the properties received in preview mode will be slightly different than at the runtime level.
 
-To add preview mode functionality, create a new file *src/TextBox.webmodeler.tsx* and add this code to it:
+To add preview mode functionality, create a new file *src/TextBox.editorPreview.tsx* and add this code to it:
 
 ```tsx
 import { Component, createElement, ReactNode } from "react";
@@ -551,9 +551,9 @@ Explaining the code:
 
 ### 3.7 Grouping and System Properties
 
-All pluggable web widgets will automatically benefit from the `Visibilty` property, which can be used to set a widget's [conditional visibility](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#visibility). Within the *widget.xml*, [property groups](/apidocs-mxsdk/apidocs/pluggable-widgets#property-groups) can be used to move a property to a specific tab or place them in a grouping. The first level group is used for the tabs, while the second level group is used for the group boxes within. 
+All pluggable widgets will automatically benefit from the `Visibility` property, which can be used to set the [conditional visibility](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#visibility) of a widget. Within *widget.xml*, property groups can be used to move a property to a specific tab or place properties in a group. For more detailed information on property groups, see the (Property Groups)[/apidocs-mxsdk/apidocs/pluggable-widgets#property-groups] section of the *Pluggable Widgets API Documentation*.
 
-Reorganize the `properties` section in *TextBox.xml* to make the properties look like the core text box properties:
+To apply this knowledge, reorganize the `properties` section in *TextBox.xml* to make the properties look like the core text box properties (which you can see after double-clicking the widget):
 
 ```xml
 <properties>
@@ -601,8 +601,9 @@ Reorganize the `properties` section in *TextBox.xml* to make the properties look
 </properties>
 ```
 
-{{% image_container width="500" %}}![property dialog Studio Pro](attachments/pluggable-part-two/property-grouping-studio-pro.png){{% /image_container %}}
+Your code alterations will produce the following result:
 
+	{{% image_container width="500" %}}![property dialog Studio Pro](attachments/pluggable-part-two/property-grouping-studio-pro.png){{% /image_container %}}
 
 ## 4 Read More
 

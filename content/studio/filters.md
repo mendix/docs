@@ -9,37 +9,45 @@ tags: ["studio", "microflow", "filter", "filters", "filtering", "data", "data fi
 
 In Mendix Studio, you can filter data in pages and microflows.
 
-*In a microflow*, you can filter the retrieved data by creating filters for the **Retrieve** activity. To add a filter objects should be retrieved from the database.
+*In a microflow*, you can filter the retrieved data by creating filters for the **Retrieve** activity. To add a filter objects should be retrieved from the database:
 
+{{% image_container width="300" %}}
 ![](attachments/filters/retrieve-from-database.png)
+{{% /image_container %}}
 
-*In a page*, you can add a filter to a list view and a data grid. The data source of the list view or the data grid should be **Database**. 
+*In a page*, you can add a filter to a list view or a data grid. Mind that the data source of the list view or the data grid should be **Database**: 
 
+{{% image_container width="300" %}}
 ![](attachments/filters/page-database.jpg)
+{{% /image_container %}}
 
-A filter consists of conditions and groups. A *condition* is an expression that restricts the retrieved data. For example, you can retrieve all customers that do not have an email filled out.
+## 2 Conditions and Groups
+
+A filter consists of conditions and groups. 
+
+A *condition* is an expression that restricts the retrieved data. For example, you can retrieve all customers who do not have an email filled out.
 
 ![](attachments/filters/filter-condition.png)
 
-*Groups* are sets of conditions that are connected with `and`  or `or` logic.
-
-When you have more than one condition, `and` and `or` operators are used. For conditions, operators define if all (`and` operator) or only one of conditions (`or` operator) should be met. In the example below all three conditions should be satisfied the data to be retrieved.
+When you have more than one condition, `and` and `or` operators are used. For *conditions*, operators define if all (`and` operator) or only one of conditions (`or` operator) should be met. In the example below all three conditions should be satisfied for the data to be retrieved:
 
 ![](attachments/filters/and-operator-in-conditions.png)
 
-For groups, operators define the following:
+*Groups* are sets of conditions that are connected with `and`  or `or` logic.
+
+For *groups*, operators define the following:
 
 * `and` – all groups of conditions should be met 
 * `or` – only one (or more) of the groups of conditions should be met when filtering the data
 
-In the example below, only program items that meet the following conditions are retrieved in two cases:
+In the example below, only program items that meet the following conditions are retrieved:
 
 * If the full name is empty, the description is filled in, and email contains "mendix.com"
 * If the full name is empty, the description is filled in, and email contains "siemens.com"
 
 ![](attachments/filters/operators-between-groups.png)
 
-## 2 Operators
+## 3 Operators Used in Conditions
 
 While `and` and `or` operators are used between conditions and groups, other operators are used to define the condition itself.  
 
@@ -61,7 +69,7 @@ Available operators depend on the attribute type you have selected in the left p
 | greater than or equal to | the value of the attribute data should equal or exceed the given value | CustomerNumber greater than or equal to 10 |
 | in same quarter as       | the value (a date) of the attribute data falls into the same quarter of the year as the given value | Last Changed Date in same quarter as Today |
 
-## 3 Creating a New Filter
+## 4 Creating a New Filter
 
 To create a new filter, do the following:
 
@@ -73,7 +81,7 @@ To create a new filter, do the following:
 
 2. Click the **Filter** field.
 
-    ![](attachments/filters/filter-field.png)
+    {{% image_container width="300" %}}![](attachments/filters/filter-field.png){{% /image_container %}}
 
 3. In the **Add Filter** dialog box, specify the attribute/association on the left first, as operators depend on the type of attribute that you have chosen. For example, if you choose *Date and Time* attribute type, you will be able to select the **in same quarter as** operator, while this operator is unavailable for other attribute types. 
 
@@ -81,7 +89,7 @@ To create a new filter, do the following:
 
 4. Select an operator and a value on the right. 
 
-    The value on the right can be a literal value that you type in (only available for string, long, integer, decimal, and autonumber attribute types ) or it can be an attribute/association/value that you choose from the drop-down list. The options in the drop-down list depend on the left attribute/association. 
+    The value on the right can be a literal value that you type in (only available for string, long, integer, decimal, and autonumber attribute types), or it can be an attribute, association, or value you choose from the drop-down list. The options in the drop-down list depend on the left attribute/association. 
 
     ![](attachments/filters/list-of-options.png)
 
@@ -92,7 +100,7 @@ To create a new filter, do the following:
     ![](attachments/filters/add-new-condition.png)<br/>
 
     b. If needed, change the `and` operator to `or` operator clicking the drop-down arrow. <br/>
-    c.   If you want to change the order of conditions, click the icon on the left (appears when you hover over it) and drag it.<br/>
+    c.  If you want to change the order of conditions, click the icon on the left (appears when you hover over it) and drag it.<br/>
 
     ![](attachments/filters/change-order.png)<br/>
 
@@ -108,7 +116,7 @@ To create a new filter, do the following:
 
 The new filter is added. In the properties, you can see the total amount of conditions in the filter.
 
-## 4 Deleting a Filter
+## 5 Deleting a Filter
 
 To delete a filter, do the following:
 
@@ -125,10 +133,10 @@ To delete a filter, do the following:
 All conditions in the filter are deleted.
 
 {{% alert type="info" %}}
-If you want to delete just one condition and not all of them, click the trash bin icon on the right. 
+If you want to delete just one condition and not all of them, click the trash can icon on the right. 
 {{% /alert %}}
 
-## 5 Read More
+## 6 Read More
 
 * [Microflows](microflows)
 * [Pages](page-editor)

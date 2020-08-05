@@ -22,7 +22,7 @@ Before you can manage your IBM Cloud environment using the Developer Portal, you
 
 1. You have an existing app which has never been deployed on IBM Cloud and you want to change the cloud settings. See [Change Cloud Settings](#ChangeCloudSettings).
 
-2. You are creating a new app from an IBM starter app. See [New IBM App](#NewIBMApp).
+2. You are creating a new app from an IBM app template. See [New IBM App](#NewIBMApp).
 
 ### 2.1 Change Cloud Settings{#ChangeCloudSettings}
 
@@ -42,11 +42,7 @@ Click **Getting Started** and then continue with [Set Up Region](#SetUpRegion).
 
 ### 2.2 New IBM App{#NewIBMApp}
 
-In this scenario, you choose a Mendix starter app from the **IBM Apps** tab.
-
-![](attachments/ibm-cloud/ibm-starter-apps.png)
-
-Select the starter app you want and give it a name.
+In this scenario, you choose a Mendix app template for IBM and give it a name.
 
 Once the app has been created you can continue with [Set Up Region](#SetUpRegion).
 

@@ -52,16 +52,16 @@ In this chapter you will set up the unit testing module and run the example test
 15.  Go to `http://localhost:8080/index.html`.
 16.  Click on **UnitTestOverview** in the navigation.
     ![](attachments/18448633/18580341.png)
-    At the left side 2 buttons are shown. When you click on the Run all button, all unit tests will be executed. When you click on the Reset button, the status of all tests will change to not executed (question mark icon). Beneath the buttons all modules which contains unit tests are shown. In this case UnitTesting is the only module which contains unit tests. When you click on UnitTesting, all unit tests of this module are shown.
+    At the left side 2 buttons are shown. When you click the Run all button, all unit tests will be executed. When you click the Reset button, the status of all tests will change to not executed (question mark icon). Beneath the buttons all modules which contains unit tests are shown. In this case UnitTesting is the only module which contains unit tests. When you click UnitTesting, all unit tests of this module are shown.
     If you want to save all changes made in the microflow to the database, you need to uncheck the checkbox 'Rollback microflow tests after execution'. Keep the checkbox checked if you want to rollback all changes.
-    At the right side the unit tests of the selected module are shown. In this example five unit tests are shown. When you click on the Run all button, all unit tests of the selected module will be executed. When you click on the play button next to a unit test, only that unit test will be executed.
+    At the right side the unit tests of the selected module are shown. In this example five unit tests are shown. When you click the Run all button, all unit tests of the selected module will be executed. When you click the play button next to a unit test, only that unit test will be executed.
 17.  Click on the play button of **UnitTesting.Test_ValidUnitTest**.
     ![](attachments/18448633/18580359.png)
     The color of the testcase will change to green if it passed.
     ![](attachments/18448633/18580358.png)
     And to red if the test case fails.
     ![](attachments/18448633/18580357.png)
-18.  Double click on **UnitTesting.TestValidUnitTest**.
+18.  Double click **UnitTesting.TestValidUnitTest**.
     ![](attachments/18448633/18580340.png) In this overview you will see the date and time of the last run, the result (success or failed), the latest, reported step and the result message.
 
 ## 3\. Create a microflow test
@@ -77,7 +77,7 @@ In this chapter you will learn how to create a microflow test. To create a new m
     ![](attachments/18448633/18580355.png)
 4.  Create a microflow **Promote**.
 
-    <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/d5d6ad4f-bcc8-4ce8-a999-a86370bc6ffe/promote?embed=true" allowfullscreen=""></iframe>
+	![](attachments/18448633/promote.jpg)
 
 ### 3.2 Create a unit test
 
@@ -106,26 +106,22 @@ In this chapter you will learn how to create a microflow test. To create a new m
 20.   Select microflow _UnitTesting.ReportStep_.
 21.   Set the argument of parameter **Message** to _'Employee promoted'_.
 22.   Click OK.
-23.   Double-click on the **End event**.
+23.   Double-click the **End event**.
 24.   Select **Boolean** as return type.
 25.   Enter **true** as return value.
 26.   Click OK.
 27.   The microflow should look like the model below:
-      <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/93a3546c-df5e-4b7d-9dc8-447a9f24432f/unittest-promote-employee-to-junior?embed=true"></iframe>
+      
+	![](attachments/18448633/promotetojunior.jpg)
 
 28.   Create three more test microflows as shown below:
 
-      **Test_PromoteEmployeeToMedior**
+	![](attachments/18448633/promotetomedior.jpg)
 
-      <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/a609f474-dd8c-4315-84fb-1056256ca3fc/unittest-promote-employee-to-medior?embed=true"></iframe>
+	![](attachments/18448633/promotetosenior.jpg)
+	
+	![](attachments/18448633/stillsenior.jpg)
 
-      **Test_PromoteEmployeeToSenior**
-
-      <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/f247e678-1738-416a-8e6a-77dfdb2cf392/unittest-promote-employee-to-senior?embed=true"></iframe>
-
-      **Test_PromoteEmployeeWhenAlreadySenior**
-
-      <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/44d6c6be-d35c-403d-ad2f-d89398956a07/unittest-promote-employee-when-already-senior?embed=true"></iframe>
 29.   Run the project locally.
 30.   Go to `http://localhost:8080/index.html`.
 31.   Click on **UnitTestOverview** in the navigation. **MyFirstModule** will be shown in the list with modules that contain one or more testcases.

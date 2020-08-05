@@ -29,7 +29,7 @@ To replace the default Save button with a custom one, follow these steps:
     ![](attachments/18448679/18580990.png)
 
 2. Right-click the **Save** button and remove it by selecting **Delete**.
-3. Right-click the drop zone under the **Cancel**, select **Add widget**, and then select **Call microflow button**.
+3. Right-click the drop-zone under the **Cancel**, select **Add widget**, and then select **Call microflow button**.
 4.  In the **Select Microflow** dialog box, click **New** to create a new microflow called **Customer_Save**.
 
     ![](attachments/18448679/customer-save.png)

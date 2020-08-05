@@ -1,5 +1,5 @@
 ---
-title: "Implement Native Styling"
+title: "Implement Native Mobile Styling"
 parent: "native-mobile"
 menu_order: 30
 description: General information for native styling in Mendix.
@@ -8,7 +8,7 @@ tags: ["styling", "design", "native"]
 
 ## 1 Introduction
 
-With Mendix 8, you can build native apps with custom styling in Mendix Studio Pro. Styling native mobile apps uses JavaScript style sheets, which are new to Mendix Studio Pro. Consult the guidelines below for information on theme folder structure, classes, and design properties.
+With Mendix 8, you can build native mobile apps with custom styling in Mendix Studio Pro. Styling native mobile apps uses JavaScript style sheets, which are new to Mendix Studio Pro. Consult the guidelines below for information on theme folder structure, classes, and design properties.
 
 ## 2 Theme Folder Structure
 
@@ -17,8 +17,8 @@ For each app project, styling is stored in the **theme/styles** folder. From the
 These folders have strict protocols:
 
 * Users should only add or change styling in the **app** folder 
-* The **app** folder has two files: *custom.js* and *custom-variables.js* – when changing the styling, always copy the variable you want to change from *native/core/variables.js*  to *native/app/custom-variables.js*
-* The *custom-variables.js* file will overwrite the *variables.js* file – do not change anything in the **core** folder directly, as this makes updating Atlas more difficult
+* The **app** folder has two files: *custom.js* and *custom-variables.js*—when changing the styling, always copy the variable you want to change from *native/core/variables.js*  to *native/app/custom-variables.js*
+* The *custom-variables.js* file will overwrite the *variables.js* file—do not change anything in the **core** folder directly, as this makes updating Atlas more difficult
 * Any variables you want to change or add should be put in *custom-variables.js* 
 * Any classes you want to change or add should be put in *custom.js*
 
@@ -34,7 +34,7 @@ In **native/ui_resources** you will find resource package styling. Here you can 
 
 ## 3 Classes
 
-Default class names – which are the class names set by Mendix Studio Pro – will always be named in Pascal case. All other classes will be in camel case. This keeps changes to default widget styles clear.
+Default class names—which are the class names set by Mendix Studio Pro—will always be named in Pascal case. All other classes will be in lowerCamelCase. This keeps changes to default widget styles clear.
 
 ## 4 Design Properties
 

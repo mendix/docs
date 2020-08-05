@@ -3,13 +3,14 @@ title: "Mendix Forum"
 category: "Community Tools"
 description: "Describes the Mendix Forum, where the Mendix community can ask and answer questions as well as post ideas for how to improve the Mendix Platform."
 menu_order: 10
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Mendix Forum](https://forum.mendixcloud.com/index3.html) is where the Mendix community comes together to help each other with questions and answers and to propose ideas for improving the Mendix Platform.
+The [Mendix Forum](https://forum.mendixcloud.com) is where the Mendix community comes together to help each other with questions and answers and to propose ideas for improving the Mendix Platform.
 
-The forum is closely integrated with the [Mendix Profile](../mendix-profile/index) so that Mendix community members can see all the interesting and useful information about who is participating in the Mendix Forum. If someone clicks your name anywhere on the Mendix Forum, your Mendix Profile will open, so make sure you [set your profile to public](../mendix-profile/index#public) so everyone can see your details and progress!
+The Mendix Forum is closely integrated with the [Mendix Profile](../mendix-profile/index) so that Mendix community members can see all the interesting and useful information about who is participating in the Mendix Forum. If someone clicks your name anywhere on the Mendix Forum, your Mendix Profile will open, so make sure you [set your profile to public](../mendix-profile/index#public) so everyone can see your details and progress!
 
 There are two tabs available in the Mendix Forum: **Questions** and **Ideas**. On each tab, you can see the **Top contributors**, which lists the five Mendix community developers who have the most Mendix Forum points in the last 30 days.
 
@@ -53,7 +54,7 @@ The **Sort by** drop-down menu at the top of the screen has three options for so
 
 #### 2.1.2 Searching {#Searching}
 
-In addition to sorting, you can search the entire forum (both for questions and ideas) by clicking the search icon in the upper-right corner of the screen and entering keywords into **Search Mendix**.
+In addition to sorting, you can search the entire Mendix Forum (both for questions and ideas) by clicking the search icon in the upper-right corner of the screen and entering keywords into **Search Mendix**.
 
 Notice the following search details:
 
@@ -139,7 +140,7 @@ To ask your own question on the Mendix Forum, follow these steps:
 	{{% image_container width="500" %}}![](attachments/mendix-forum/questions_ask_screen.png)
 	{{% /image_container %}}
 
-	* The **Title** of your question (remember, this is how forum users will first see your question, so make the title descriptive and interesting)
+	* The **Title** of your question (which is how Mendix Forum users will first see your question, so make the title descriptive and interesting)
 	* The text of your question (add all the details about your question to make it searchable and so other users can answer it; consider including steps to reproduce the issue)
 	* The **Mendix version** on which you encountered the issue you have a question about
 	* The **Category** that reflects your question (for example, **Connectors**, **Databases**, **Security**)
@@ -244,7 +245,7 @@ To submit your own idea to the idea forum, follow these steps:
 	{{% image_container width="500" %}}![](attachments/mendix-forum/ideas_submit_screen.png)
 	{{% /image_container %}}
 
-	* The **Title** of your idea (this is how forum users will first see your idea, so make the title descriptive and interesting)
+	* The **Title** of your idea (which is how Mendix Forum users will first see your idea, so make the title descriptive and interesting)
 	* The text of your idea (add all the details about your idea to make it searchable and so other users can vote and comment on it)
 	* The **Category** that reflects your idea (for example, **App Store**, **Connectors**, **Microflows**)
 	* The **Tag(s)** that reflect your idea (which other users can use to filter their searches)

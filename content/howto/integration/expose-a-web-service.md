@@ -73,7 +73,9 @@ To create the functionality to expose, follow these steps:
 
     ![](attachments/18448728/18581709.png)
 
-    <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/083d4d13-b438-4980-b0ba-90d9a3f59f40/getcustomers?embed=true" allowfullscreen=""></iframe>
+	Reference this microflow:
+    
+    ![](attachments/18448728/model.jpg)
 
 ## <a name="6"></a>6 Publishing a Microflow
 
@@ -157,7 +159,6 @@ When exposing a web service, consider the following things:
 * [Export XML Documents](export-xml-documents)
 * [Import Excel Documents](importing-excel-documents)
 * [Enable Selenium Support](selenium-support)
-* [Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [Import XML Documents](importing-xml-documents)
 * [Consume a REST Service](consume-a-rest-service)
 * [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)

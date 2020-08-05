@@ -24,7 +24,7 @@ It is not the aim of this document to explain how to configure destinations. For
 
 ## 3 Including SAP Destination Services in your App
 
-Although you can use the SAP Destination Service on its own, the main use within Mendix is as part of the OData Connector for SAP solutions. Therefore, to include the SAP Destination Service in your app, download the OData Connector for SAP solutions from the the App Store here: [OData Connector for SAP solutions](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector).
+Although you can use the SAP Destination Service on its own, the main use within Mendix is as part of the OData Connector for SAP solutions. Therefore, to include the SAP Destination Service in your app, download the OData Connector for SAP solutions from the the App Store here: [OData Connector for SAP solutions](https://appstore.home.mendix.com/link/app/74525/).
 
 ## 4 Get Destination Action
 
@@ -39,12 +39,6 @@ The **Get Destination** action properties look like this:
 **Destination** is a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform cockpit.
 
 **Variable** is the name of the object of type *SAPODataConnector.Destination* where the details of the destination will be stored.
-
-{{% alert type="warning" %}}
-Owing to an issue with the current version of SAP Destination Services (OData Connector for SAP solutions version 4.0.2) the Destination entity is not always populated correctly.
-
-If you are using proxy type **OnPremise** and **NOT using PrincipalPropagation** for authentication, you will need to use the GetCloudConnectorInfo JAVA action (in **App Store modules > SAPODataConnector > USE_ME > helpers**) to fetch a CloudConnectorInfo object. This will contain data for your ProxyHost, ProxyPort, and SapConnectivityAuthentication (ProxyBearerToken).
-{{% /alert %}}
 
 ## 5 Destination Entity
 

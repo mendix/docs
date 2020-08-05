@@ -56,11 +56,17 @@ The admin port will by default only allow connections from the local host. In ca
 
 Choose a strong password to protect the administrative interface running on the admin TCP port. Set this password to a long random string (when using the Windows Service Console, this is automatically done.) It is not used manually anywhere, and it is only used in the background by administrative tools like m2ee-tools and the Windows Service Console to be able to connect back to the Mendix application after it has been started for administrative tasks.
 
-## 9 Do Not Connect to a Production Database Using Studio Pro
+## 9 Setting Security Headers
+
+When running on-premises, no HTTP headers are set automatically. You will need to decide which HTTP headers you need to set for your app.
+
+For example, Content Security Policy (CSP) is not enabled for you. There is no direct impact of not implementing CSP for your app. However, if it is vulnerable to a Cross-site Scripting attack CSP can prevent successful exploitation of that vulnerability. It is recommended that you add the HTTP header `Content-Security-Policy` and set the value to `default-src 'none'; img-src 'self'; script-src 'self' {URL}; style-src 'self'`.
+
+## 10 Do Not Connect to a Production Database Using Studio Pro
 
 **Never** use Mendix Studio Pro to directly connect to a *production* database (for example, by using an SSH tunnel to the database or Studio Pro on a Windows server). Because Studio Pro is always running in development mode, it will instantaneously reset the password of the "admin user," which is defined in Studio Pro, to its development default. This likely means there will be an "MxAdmin" user with a password set to "1" (or this account will be created when it does not exist).
 
-## 10 Read More
+## 11 Read More
 
 * [How to Restore a SQL Server Database](restoring-a-sql-server-database)
 * [How to Troubleshoot an SQL Server](troubleshooting-sql-server)

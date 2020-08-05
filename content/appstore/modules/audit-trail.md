@@ -1,16 +1,16 @@
 ---
 title: "Audit Trail"
 category: "Modules"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the Audit Trail module, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "audit trail", "log", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
 The [Audit Trail](https://appstore.home.mendix.com/link/app/138/) module creates a log history for the changes made to objects in your Mendix application.
 
-### 1.1 Typical Usage Scenarios
+### 1.1 Typical Use Cases
 
 This module keeps keep track of what changes are made in your Mendix application as well as when, by whom, and how much.
 

@@ -11,7 +11,7 @@ Data storage is the data foundation of the Mendix runtime. Data storage does the
 * Handles security transparently and effectively
 
 ### Supported database servers
-* [IBM DB2](db2) 11.1
+* [IBM DB2](db2) 11.1 for Linux, Unix, and Windows
 * [MariaDB](mysql) 5.5, 10.0
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server) 2008, 2008 R2, 2012, 2014, 2016
 * [MySQL](mysql) 5.5, 5.6

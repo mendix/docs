@@ -8,7 +8,7 @@ tags: ["app store", "app store component", "nanoflow", "nanoflow commons", "plat
 
 ## 1 Introduction
 
-This module contains the following commonly used nanoflow actions that are usable across web, hybrid mobile, and native mobile apps:
+The [Nanoflow Commons](https://appstore.home.mendix.com/link/app/109515/) module contains the following commonly used nanoflow actions that are usable across web, hybrid mobile, and native mobile apps:
 
 | Category            | Action                       |
 | :------------------ | :--------------------------- |

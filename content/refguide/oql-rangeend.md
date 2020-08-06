@@ -18,7 +18,7 @@ RANGEEND ( $range )
 
 ## 2 Example
 
-`RANGEBEGIN` and `RANGEEND` are OQL functions that use a parameter, and OQL parameters are only available in datasets (which are used for generating a report). When you create a page and add a report that has a dataset, you can use `RANGEBEGIN` and `RANGEEND` in that dataset.
+[RANGEBEGIN](oql-rangebegin) and `RANGEEND` are OQL functions that use a parameter, and OQL parameters are only available in datasets (which are used for generating a report). When you create a page and add a report that has a dataset, you can use `RANGEBEGIN` and `RANGEEND` in that dataset.
 
 This is an example of using a range in OQL, where `$range` is set to last week, which will give you all the customers born in the last week:
 

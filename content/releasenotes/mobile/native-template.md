@@ -8,6 +8,17 @@ description: "Native Template release notes."
 
 For more information on native mobile app development, see the [native-template repository](https://github.com/mendix/native-template/) and [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app) .
 
+## 5.0.0
+
+**Release date: August 7, 2020**
+
+Mendix Studio Pro 8.12.1 introduces better splash screen support for Native Apps. As the new functionality requires new native dependencies the changes are not backward compatible with previous Mendix Studio versions. 
+
+### Improvements
+In the first implementation, splash screens were static resources controlled by the native side of the app. While good enough in simple cases; they are inadequate for longer syncing sessions; where the splash screen could toggle off too soon.
+
+With the new implementation, splash screens are fully togglable via the client. That means that the client has full control over the splash screen. That translates to better on/off timing and less missed frames for longer syncing sessions.
+
 ## 4.2.0
 
 **Release date: June 24, 2020**

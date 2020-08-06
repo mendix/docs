@@ -22,24 +22,27 @@ Before starting with this how-to, make sure you have completed the following pre
    
     ![](attachments/18448745/18582175.png)
 
-## 3 Creating the Overview & Detail Pages automagically
+## 3 Creating Overview & Detail Pages Automatically
 
-1. In the domain model, rightclick on entity Customer and select 'Generate overview pages'. 
-2. Mark both entities
-3. Click OK.
+To create the overview and detail pages for your data structure, follow these steps:
 
-There you go, easy does it! For each entity an overview page and a detail page has been generated.
-Also, an Entity_Menu has been created and added to each overview page.
+1. In the domain model, right-click the **Customer** entity and select **Generate overview pages**. 
+2. Select both entities in the **Generate pages** dialog box.
+3. Click **OK**.
 
-NB. Mendix can do even more of the work for you if you create an Excel-spreadsheet having two tabs. One containing header and data for Customer and one containing header and data for Order. Go to new.mendix.com, click "App from a spreadsheet" and upload your Excel-spreadsheet. 
+And there you go! For each entity, an overview page and a detail page is generated. Also, an **Entity_Menu** snippet is created and added to each overview page.
 
-## 4 Creating the pages manually
+{{% alert type="info" %}}
+Mendix can do even more of the work for you if you create an Excel spreadsheet with two tabs (one for the header and data for **Customer** and the other for the header and data for **Order**). When you are creating a new app, select **App from a spreadsheet** and upload your Excel spreadsheet.
+{{% /alert %}}
 
-For a better understanding of Mendix Studio Pro, this howto also describes the manual steps to create the pages.
+## 4 Creating Overview & Detail Pages Manually
 
-### 4a Creating an Overview Page
+For a better understanding of Mendix Studio Pro, this section describes the manual steps for creating these pages.
 
-To create a new overview page and add it to your project, follow these steps:
+### 4.1 Creating the Overview Page
+
+To create a new overview page and add it to your app project, follow these steps:
 
 1. Right-click the module and select **Add** > **Page**.
 2. Click **Responsive**.
@@ -70,7 +73,9 @@ You should now have an overview page with a data grid like this:
 
 ![](attachments/18448704/18581330.png)
 
-### 4b Creating a Detail Page manually
+### 4.1 Creating the Detail Page
+
+To create a new detail page manually, follow these steps:
 
 1.  Right-click **New** on the data grid on the overview page and select **Generate page**.
 2.  Select **PopupLayout** as the **Navigation layout**.
@@ -86,7 +91,7 @@ You should now have an overview page with a data grid like this:
 
     ![](attachments/18448704/18581325.png)
 
-## 5 Navigation and Security
+## 5 Navigation & Security
 
 1. Now create a navigation item for your overview page to start using it. For details on how to set up the navigation structure, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure).
 2. If you switched on security for this application, you need to configure page access on both the overview and detail pages. For more information on configuring page access, see [How to Create a Secure App](../security/create-a-secure-app).

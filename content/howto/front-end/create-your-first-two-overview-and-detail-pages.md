@@ -93,8 +93,9 @@ To create a new detail page manually, follow these steps:
 
 ## 5 Navigation & Security
 
-1. Now create a navigation item for your overview page to start using it. For details on how to set up the navigation structure, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure).
-2. If you switched on security for this application, you need to configure page access on both the overview and detail pages. For more information on configuring page access, see [How to Create a Secure App](../security/create-a-secure-app).
+Now create a navigation item for your overview page to start using it. For details on how to set up the navigation structure, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure).
+
+If you switched on security for this application, you also need to configure page access on both the overview and detail pages. For more information, see [How to Create a Secure App](../security/create-a-secure-app).
 
 ## 6 Read More
 

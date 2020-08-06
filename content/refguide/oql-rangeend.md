@@ -26,6 +26,7 @@ This is an example of using a range in OQL, where `$range` is set to last week, 
 select FirstName as First, LastName as Last, Name as Name, Birthday as BDay, CustomerType as Type from Sales.Customer
 where Birthday IN ($rangeLastWeek)
 ```
+
 This example uses the `RANGEEND` function in the where-clause, which will give you all the customers born since the end of last week:
 
 ```java

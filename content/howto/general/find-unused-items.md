@@ -19,9 +19,7 @@ In this how-to, you will learn how you can find unused items within your model.
 
     ![](attachments/find-unused-items/18581609.png)
 
-3. Click o**Find**.
-
-4. The results will show up in the **Find Results** pane.
+3. Click **Find**, and the results will show up in the **Find Results** pane.
 
 You can filter the results by clicking on the 'Show all' button on the top-right of the result table. To learn more about filtering the find results, please have a look at the How-To: Filter a result set.
 

@@ -8,7 +8,7 @@ tags: ["app store", "app store component", "platform support", "hybrid mobile", 
 
 ## 1 Introduction
 
-This module contains the following nanoflow actions that can be used for hybrid mobile applications:
+The [Hybrid Mobile Actions](https://appstore.home.mendix.com/link/app/112063/) module contains the following nanoflow actions that can be used for hybrid mobile applications:
 
 | Category            | Action                                |
 | :------------------ | :------------------------------------ |

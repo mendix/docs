@@ -145,7 +145,7 @@ For server-based installations, the following storage types mounted by the OS ar
 
 * Google Chrome (latest stable desktop and Android versions)
 * Mozilla Firefox (latest stable desktop version)
-* Apple Safari (latest stable desktop version and latest version for each [supported iOS](#mobileos) verion)
+* Apple Safari (latest stable desktop version and latest version for each [supported iOS](#mobileos) version)
 * Microsoft Edge (latest stable desktop version)
 * Microsoft Internet Explorer 11
 

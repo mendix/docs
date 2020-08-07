@@ -14,7 +14,7 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 #### Mendix Cloud
 
-* We fixed an issue where some customers did not receive an SMS for two-factor authentication. (Ticket 104252)
+* We fixed an issue where some customers did not receive an SMS for two-factor authentication. (Ticket 104252) 
 
 ### July 30th, 2020
 

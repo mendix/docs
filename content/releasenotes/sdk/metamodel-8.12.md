@@ -17,21 +17,6 @@ parent: "metamodel-8"
 
 * We introduced this element for what an entity is capable of.
 
-### Kafka
-
-#### ConsumedKafkaService (ModelUnit)
-
-* We introduced the `serviceFeed` property.
-* We deleted the `entities` property.
-
-#### KafkaRemoteEntitySource (Element)
-
-* We introduced the `topicName` property.
-
-#### KafkaEntity, KafkaNavigationProperty & KafkaAttribute (Elements)
-
-* We deleted these elements.
-
 ### Rest
 
 #### PublishedODataService (ModelUnit)

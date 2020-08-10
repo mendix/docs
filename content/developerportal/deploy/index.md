@@ -57,7 +57,7 @@ To find out how to do this, read [Siemens MindSphere](deploying-to-mindsphere).
 
 Mendix for Private Cloud allows you to deploy and manage your Mendix apps in a Kubernetes private cloud cluster.
 
-The instructions for doing this are in [Private Cloud}(private-cloud).
+The instructions for doing this are in [Private Cloud](private-cloud).
 
 ## 8 Cloud Foundry
 

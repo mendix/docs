@@ -56,6 +56,8 @@ To set up a notification widget, do the following:
 1. Create an entity called *NativeNotification* in your domain model with one `objectGUID` field:
 
     {{% image_container width="300" %}}![NotificationEntity](attachments/native-remote-push/modeler/NotificationEntity.png){{% /image_container %}}
+   
+	For `Production` and `Demo` security levels, please make sure to grant the **Create** access rule to all users for this entity since it will be used for triggering actions correctly. 
 
 1. Create a new *DS_Notification* nanoflow which creates a **NativeNotification** entity object and then returns it:
 
@@ -336,7 +338,17 @@ Every user is allowed to have more than one device. When sending push notificati
 
 To send a push notification to all users, use the **SendMessageToUsers** Java action.
 
-## 7 Read More
+## 7 Troubleshoot Notification Issues
+
+| Issue | Cause | Solution |
+|-----|----|-----|
+| Sending a message causes a **SenderId mismatch** error or **403: Forbidden**. | Your native mobile app registered the device within your Mendix applications, but not with Firebase. | Follow the [Implementing Push Changes With the Native Builder](setting-up-native-push-notifications#auto-changes) section in *How To Set Up Push Notifications* and make sure you add the *google-services.json* file. |
+| Sending a message causes a **Request contains an invalid argument** error or **400: Bad Request**. | Your **Project ID** does not match the **project_id** in your private key *json* file. | Upload the correct file or [generate a new private key](setting-up-google-firebase-cloud-messaging-server#6-setting-up-a-service-account) in Firebase and upload it. |
+| Mendix Runtime exception on JavaAction 'DecryptString': **Key should not be empty**. | This module depends on the **Encryption** module, which requires a key. | [Set the constant](native-remote-notifications#3-1-installing-your-module) **EncryptionKey** in the **Encryption** module with a key of exactly 16 characters. |
+| Building the Teamcenter app throws an error: **Execution failed for task ':app:processDevDebugGoogleServices'. > No matching client found for package name 'com.mendix.myapp.testlocal.developerapp'**. | The *google-services.json* file contains a **package_name** which should match the Native Builder package identifier. Please note the native builder adds **.devleoperapp** at the end of the package name for dev apps. | [Add an app](setting-up-google-firebase-cloud-messaging-server#native-apps) with the correct package identifier to Firebase and update the *google-services.json* in your GitHub repository. |
+| Error sending message: **Error reading credentials from stream, 'type' field not specified. at PushNotifications.SendFCMMessages (JavaAction : 'GetFCMAccessToken')**. | The wrong private key file was uploaded. | Upload the correct file or [generate a new private key](setting-up-google-firebase-cloud-messaging-server#6-setting-up-a-service-account) in Firebase and upload it. |
+
+## 8 Read More
 
 * [Use Local Notifications](local-notif-parent)
 * [Set Up the Google Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server)

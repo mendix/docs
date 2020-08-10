@@ -32,7 +32,7 @@ To download a backup of a Free App, follow these steps:
 3. Click **Backups** under the **Operate** category.
 4. Select the backup you want to download and click **Download Backup**.
 
-    ![](attachments/download-a-backup/backupoptions.jpg)
+    ![](attachments/download-a-backup/backupoptions-free.png)
 
 5. Select the backup type **Full Snapshot**, **Database Only**, or **Files Only**
 

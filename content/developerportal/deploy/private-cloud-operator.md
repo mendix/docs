@@ -72,6 +72,9 @@ spec:
     logAutosubscribeLevel: INFO # Default logging level
     mxAdminPassword: V2VsYzBtZSE= # base64 encoded password for MendixAdmin user. In this example, 'Welc0me!'; can be left empty keep password unchanged
     dtapMode: P # Security & runtime mode: P for production, D for development
+    logLevels: # Optional, can be omitted : set custom log levels for specific nodes
+      NodeOne: CRITICAL
+      NodeTwo: DEBUG
     # Mendix Runtime Jetty options, in JSON format; validated and applied by the mx-m2ee-sidecar container
     jettyOptions: |-
       {
@@ -137,6 +140,7 @@ You need to make the following changes:
           key: LicenseKey # Offline LicenseKey value provided by Mendix Support
     ```
 
+* **logLevels**: – set custom logging levels for specific log nodes in your app — valid values are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
 * **jettyOptions** and **customConfiguration**: – if you have any custom Mendix Runtime parameters, they need to be added to this section — options for the Mendix runtime have to be provided in JSON format — see the examples in the CR for the correct format and the information below for more information on [setting app constants](#set-app-constants) and [configuring scheduled events](#configure-scheduled-events)
 * **environmentVariables**: - set the environment variables for the Mendix app container, and JVM arguments through the `JAVA_TOOL_OPTIONS` environment variable
 

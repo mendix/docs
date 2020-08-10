@@ -23,19 +23,33 @@ An example of container properties is represented in the image below:
 
 Container properties consist of the following sections:
 
-* [General](#general)
-* [Visibility](#visibility)
+* [Accessibility](#accessibility)
 * [Common](#common)
+* [Design Properties](#design-properties)
+* [General](#general)
 * [Events](#events)
-* Design Properties
+* [Visibility](#visibility)
 
-### 2.1 Common Section {#common}
+### 2.1 Accessibility {#accessibility}
+
+#### 2.1.1 Hide for Screen Readers 
+
+This property specifies whether to hide the container from screen readers or not.
+
+{{% alert type="info" %}} The container should not have any focusable elements inside such as input widgets, links, or buttons. These elements will cause the container to be announced by screen readers.
+{{% /alert %}}
+
+### 2.2 Common Section {#common}
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 2.2 General Section {#general}
+### 2.3 Design Properties Section{#design-properties}
 
-#### 2.2.1 Render Mode
+{{% snippet file="refguide/design-section-link.md" %}} 
+
+### 2.4 General Section {#general}
+
+#### 2.4.1 Render Mode
 
 The **Render mode** determines which HTML5 tag will be used to show the container in the web browser. 
 
@@ -54,17 +68,17 @@ The **Render mode** determines which HTML5 tag will be used to show the containe
 
 {{% alert type="info" %}}Render mode is not supported on native mobile pages.{{% /alert %}}
 
-### 2.3 Visibility Section {#visibility}
+### 2.5 Events Section {#events}	
+
+#### 2.5.1 On-Click {#on-click}	
+
+The **On-click** property specifies the action that will be executed when the user clicks the container (either with with their mouse cursor or by pressing the <kbd>Enter</kbd> or <kbd>Space</kbd> keys when the container is in focus).
+
+{{% snippet file="refguide/events-section-link.md" %}}
+
+### 2.6 Visibility Section {#visibility}
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
-
-### 2.4 Events Section {#events}	
-
-#### 2.4.1 On-Click {#on-click}	
-
-The **On-click** property specifies the action that will be executed when the user clicks the container (either with with the mouse pointer or by pressing the <kbd>Enter</kbd> or <kbd>Space</kbd> key when the container is in focus).
-
-{{% snippet file="refguide/events-section-link.md" %}}	
 
 ## 4 Read More
 

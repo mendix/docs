@@ -32,10 +32,11 @@ The [Hybrid Mobile Actions](https://appstore.home.mendix.com/link/app/112063/) m
 ## 2 Dependencies
 
 The actions above are dependent on Cordova phonegap plugins. Most dependencies are already provided in the standard template. When building your [hybrid mobile app](/refguide/getting-the-mendix-app), make sure you add and enable the dependencies by first enabling in **Permissions** by selecting the following:
-	* Calendar
-	* Camera
-	* Photo Library
-	* Contacts
+
+* Calendar
+* Camera
+* Photo Library
+* Contacts
 
 Next, add the following snippet to the custom Phonegap/Cordova configuration:
 

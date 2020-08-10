@@ -39,17 +39,3 @@ The following headers are set by the Mendix Cloud. If any of these are present i
 | **SSL-Client-S-DN**                         | `CN=Hans van Kranenburg,OU=RnD,O=Mendix,C=NL`                | The Subject DN string of the client certificate for an established TLS connection according to [RFC 2253](https://tools.ietf.org/html/rfc2253). |
 
 There may be additional headers set by the Mendix Cloud, which are not documented in the list above. The presence of these headers, and the values they have, must not be relied on. They are for internal use only and are not subject to the deprecation handling described below.
-
-### 2.3 Deprecated request headers inserted by the Mendix Cloud
-
-The following headers are set by the Mendix Cloud, but are deprecated and will be removed in the future.
-
-| Header name                 | Example value(s)                                     | Description                                                  | Stage 1: Deprecation | Stage 2: Invalidation | Stage 3: Removal |
-| --------------------------- | ---------------------------------------------------- | ------------------------------------------------------------ | -------------------- | --------------------- | ---------------- |
-| **X-Client-Certificate**    | `/C=NL/O=Mendix/OU=RnD/CN=Hans van Kranenburg`       | OpenSSL style formatted Subject DN string of the client certificate for an established TLS connection. | June 15, 2019 | August 1, 2019 | October 1, 2019 |
-
-Deprecating and removing a request header is a process consisting of several stages:
-
-* Stage 1: Deprecation. The dates on which stage 2 and 3 will be executed are communicated. The announcement will be documented in the [Deployment Portal Release Notes](/releasenotes/developer-portal/deployment).
-* Stage 2: Invalidation. The header value will be forced to an invalid value. All running customer applications that still rely on this header will experience problems.
-* Stage 3: Removal. The header is not set or overwritten by the Mendix Cloud any more. This also means that any value for it can now be set by the HTTP client.

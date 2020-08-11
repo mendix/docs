@@ -13,6 +13,17 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2020
 
+### August 11th, 2020
+
+#### Improvements
+
+* We made some small performance improvement
+
+#### Fixes
+
+* We placed a deprecation warning in a file hosted by the Developer Portal that is used in old versions of the [Feedback Widget](/appstore/widgets/mendix-feedback)
+* We fixed an issue where you could move a user story to a different sprint without specifying the target sprint
+
 ### July 28th, 2020
 
 #### Fixes

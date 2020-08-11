@@ -15,12 +15,12 @@ Takes a string and parses it to an integer.
 
 ### 2.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   The string to parse
-    Type: String
-*   (Optional) Default value
-    Type: Integer
+| Value                        | Type    |
+| ---------------------------- | ------- |
+| The string to parse          | String  |
+| Default value **(optional)** | Integer |
 
 ### 2.2 Output
 

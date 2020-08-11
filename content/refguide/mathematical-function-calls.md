@@ -16,11 +16,12 @@ Returns the largest value from the specified arguments.
 
 ### 2.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-* Two or more values 
-
-  Type: all values should be either of type Date and time or of a numeric type (Integer/Long or Decimal)
+| Value              | Type                                   |
+| ------------------ | -------------------------------------- |
+| Two or more values | Numeric type (Integer/Long or Decimal) |
+| Two or more values | Date and time                          |
 
 ### 2.2 Output
 
@@ -44,13 +45,14 @@ The output is a decimal:
 
 Returns the smallest value from the specified arguments.
 
-### 3.1 Input
+### 3.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-* Two or more values
-
-  Type: all values should be either of type Date and time or of a numeric type (Integer/Long, Decimal)
+| Value              | Type                                   |
+| ------------------ | -------------------------------------- |
+| Two or more values | Numeric type (Integer/Long or Decimal) |
+| Two or more values | Date and time                          |
 
 ### 3.2 Output
 
@@ -74,15 +76,14 @@ The output is a decimal:
 
 Rounds a number to a certain precision.
 
-### 4.1 Input
+### 4.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   a number
-    Type: Integer/Long, Decimal
-
-*   a precision (optional) 
-    Type: Integer/Long
+| Value                  | Type                  |
+| ---------------------- | --------------------- |
+| A number               | Integer/Long, Decimal |
+| A precision (optional) | Integer/Long          |
 
 ### 4.2 Output
 
@@ -144,12 +145,13 @@ The output is:
 
 Rounds down to an integer (returns the largest integer which is less than or equal to the input).
 
-### 6.1 Input
+### 6.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   a number
-    Type: Integer/Long, Decimal
+| Value    | Type                  |
+| -------- | --------------------- |
+| A number | Integer/Long, Decimal |
 
 ### 6.2 Output
 
@@ -185,12 +187,13 @@ The output is:
 
 Rounds up to an integer (returns the smallest integer which is greater than or equal to the input).
 
-### 7.1 Input
+### 7.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   a number
-    Type: Integer/Long, Decimal
+| Value    | Type                  |
+| -------- | --------------------- |
+| A number | Integer/Long, Decimal |
 
 ### 7.2 Output
 
@@ -226,14 +229,14 @@ The output is:
 
 Calculates the exponent of a number to a certain power.
 
-### 8.1 Input
+### 8.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   a number 
-    Type: Integer/Long, Decimal
-*   a power 
-    Type: Integer/Long, Decimal
+| Value    | Type                  |
+| -------- | --------------------- |
+| A number | Integer/Long, Decimal |
+| A power  | Integer/Long, Decimal |
 
 ### 8.2 Output
 
@@ -273,30 +276,26 @@ Calculation of 'pow' with a decimal exponent might be less accurate, as the stan
 
 To get the square root of a decimal, use 0.5 at the second parameter:
 
-```java
-pow(16, 0.5) results in 4
-```
+* `pow(16, 0.5)` results in `4`
+
 
 Or, use a division for a specific root:
 
-```java
-pow(27, 1:3) results in 3
-```
+* `pow(27, 1:3)` results in `3`
 
-```java
-pow(16, 1:4) results in 2
-```
+* `pow(16, 1:4)` results in `2`
 
 ## 9 abs
 
-Calculates the absolute value of a number (ie not negative).
+Calculates the absolute value of a number (i.e. not negative).
 
-### 9.1 Input
+### 9.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   a number
-    Type: Integer/Long, Decimal
+| Value    | Type                  |
+| -------- | --------------------- |
+| A number | Integer/Long, Decimal |
 
 ### 9.2 Output
 

@@ -16,12 +16,12 @@ The `addMilliseconds` function adds a specified number of milliseconds to a date
 
 ### 2.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-* Initial date
-	Type: Date and time
-* The number of milliseconds to be added
-    Type: Integer
+| Value                                  | Type          |
+| -------------------------------------- | ------------- |
+| Initial date                           | Date and time |
+| The number of milliseconds to be added | Integer       |
 
 ### 2.2 Output
 
@@ -49,12 +49,12 @@ The `addSeconds` function adds a specified number of seconds to a date.
 
 ### 3.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   Initial date
-    Type: Date and time
-*   The number of seconds to be added
-    Type: Integer
+| Value                             | Type          |
+| --------------------------------- | ------------- |
+| Initial date                      | Date and time |
+| The number of seconds to be added | Integer       |
 
 ### 3.2 Output
 
@@ -82,12 +82,12 @@ The `addMinutes` function adds a number of minutes to a date.
 
 ### 4.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   Initial date
-    Type: Date and time
-*   The amount of minutes to be added
-    Type: Integer
+| Value                             | Type          |
+| --------------------------------- | ------------- |
+| Initial date                      | Date and time |
+| The number of minutes to be added | Integer       |
 
 ### 4.2 Output
 
@@ -115,12 +115,12 @@ The `addHours` function adds a number of hours to a date.
 
 ### 5.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   Initial date
-    Type: Date and time
-*   The amount of hours to be added
-    Type: Integer
+| Value                           | Type          |
+| ------------------------------- | ------------- |
+| Initial date                    | Date and time |
+| The number of hours to be added | Integer       |
 
 ### 5.2 Output
 
@@ -148,12 +148,12 @@ The `addDaysUTC` function adds a number of days to a date. `addDays` uses the se
 
 ### 6.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   Initial date
-    Type: Date and time
-*   The amount of days to be added
-    Type: Integer
+| Value                          | Type          |
+| ------------------------------ | ------------- |
+| Initial date                   | Date and time |
+| The number of days to be added | Integer       |
 
 ### 6.2 Output
 
@@ -181,12 +181,12 @@ The `addWeeksUTC` function adds a number of weeks to a date using the UTC calend
 
 ### 7.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   Initial date
-    Type: Date and time
-*   The amount of weeks to be added
-    Type: Integer
+| Value                           | Type          |
+| ------------------------------- | ------------- |
+| Initial date                    | Date and time |
+| The number of weeks to be added | Integer       |
 
 ### 7.2 Output
 
@@ -214,12 +214,12 @@ The `addMonthsUTC` function adds a number of months to a date using the UTC cale
 
 ### 8.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   Initial date
-    Type: Date and time
-*   The amount of months to be added
-    Type: Integer
+| Value                            | Type          |
+| -------------------------------- | ------------- |
+| Initial date                     | Date and time |
+| The number of months to be added | Integer       |
 
 ### 8.2 Output
 
@@ -247,12 +247,12 @@ The `addYearsUTC` function adds a number of years to a date using the UTC calend
 
 ### 9.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   Initial date
-    Type: Date and time
-*   The amount of years to be added
-    Type: Integer
+| Value                           | Type          |
+| ------------------------------- | ------------- |
+| Initial date                    | Date and time |
+| The number of years to be added | Integer       |
 
 ### 9.2 Output
 

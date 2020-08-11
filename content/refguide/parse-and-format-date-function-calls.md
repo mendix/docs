@@ -15,23 +15,22 @@ For details on all pattern possibilities, see [Class SimpleDateFormat](https://d
 
 Takes a string and parses it. If it fails and a default value is specified, it returns the default value. Otherwise, an error occurs. The function `parseDateTime` uses the user's timezone and `parseDateTimeUTC` uses the UTC calendar.
 
-#### 2.1 Input Parameters
+### 2.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   Date
-    Type: String
-*   Format
-    Type: String
-*   Default value (**optional**)
-    Type: Date and time
+| Value                        | Type                                                         |
+| ---------------------------- | ------------------------------------------------------------ |
+| Date                         | A string which contains the textual representation of a date, i.e. `dd/mm/yyyy` , `mm/dd/yyyy`, etc. |
+| Format                       | String                                                       |
+| Default value (**optional**) | Date and time                                                |
 
-#### 2.2 Output
+### 2.2 Output
 
 The parsed date, or the default value if a date could not be parsed.
 Type: Date and time
 
-#### 2.3 Examples
+### 2.3 Example
 
 The examples below illustrate which value the expression returns:
 
@@ -61,18 +60,20 @@ The examples below illustrate which value the expression returns:
 
 ## 3 formatDateTime[UTC]
 
-Converts the datetime to a string, formatted according to the format parameter. Without the format parameter, a standard format is used. The function `formatDateTime` uses the users calendar and `formatDateTimeUTC` uses the UTC calendar.
+Converts the DateTime to a string, formatted according to the format parameter. Without the format parameter, a standard format is used. The function `formatDateTime` uses the users calendar and `formatDateTimeUTC` uses the UTC calendar.
 
 ### 3.1 Input Parameters
 
-*   a date
-    Type: Date and time
-*   a format (**optional**)
-    Type: String
+Input parameters are described in the table below:
+
+| Value                 | Type          |
+| --------------------- | ------------- |
+| Date                  | Date and time |
+| Format (**optional**) | String        |
 
 ### 3.2 Output
 
-A formatted representation of the datetime.
+A formatted representation of the dateTime.
 Type: String
 
 ### 3.4 Examples
@@ -99,14 +100,17 @@ formatDateTime($object/Date1,'yyyy-MM-dd') + 'T' + formatDateTime($object/Date1,
 
 Converts the time part of datetime to a string in a standard format. `formatTime` uses the users calendar and `formatTimeUTC` uses the UTC calendar.
 
-### 4.1 Input parameters
+### 4.1 Input Parameters
 
-*   a date
-    Type: Date and time
+Input parameters are described in the table below:
+
+| Value | Type          |
+| ----- | ------------- |
+| Date  | Date and time |
 
 ### 4.2 Output
 
-A formatted representation of the time part of the datetime value.
+A formatted representation of the time part of the dateTime value.
 Type: String
 
 ### 4.3 Example
@@ -125,16 +129,19 @@ the output is:
 
 ## 5 formatDate[UTC]
 
-Converts the date part of datetime to a string in a standard format. `formatDate` uses the users calendar and `formatDateUTC` uses the UTC calendar.
+Converts the date part of dateTime to a string in a standard format. `formatDate` uses the users calendar and `formatDateUTC` uses the UTC calendar.
 
-### 5.1 Input parameters
+### 5.1 Input Parameters
 
-*   a date
-    Type: Date and time
+Input parameters are described in the table below:
+
+| Value | Type          |
+| ----- | ------------- |
+| Date  | Date and time |
 
 ### 5.2 Output
 
-A formatted representation of the date part of the datetime value.
+A formatted representation of the date part of the dateTime value.
 Type: String
 
 ### 5.3 Example

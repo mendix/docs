@@ -15,11 +15,13 @@ This expression determines whether the first value is less than the second value
 
 ### 2.1 Input Parameters
 
-The values can be any of the following types, but the two values should be in the same category (for example, if one is numeric, the other should be numeric too):
+Possible values are described in the table below, but the two values should be in the same category (for example, if one is numeric, the other should be numeric too):
 
-*   String
-*   Numeric (Integer/Long, Decimal)
-*   Date and time
+| Value      | Type                            |
+| ---------- | ------------------------------- |
+| Two values | String                          |
+| Two values | Numeric (Integer/Long, Decimal) |
+| Two values | Date and time                   |
 
 ### 2.2 Output
 

@@ -32,7 +32,7 @@ For excellent deep-dive demonstrations of how to use these native mobile widgets
 
 ## 2 Native Widgets
 
-These are the native widgets included in these resources along with links to the GitHub repositories where they are stored:
+These are the native widgets included in these resources along with links to the GitHub repositories where they are stored (with further documentation as necessary):
 
 | Widget | Description |
 | --- | --- |

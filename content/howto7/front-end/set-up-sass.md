@@ -49,7 +49,7 @@ To prepare your app project, follow these steps:
 
 	![](attachments/set-up-sass/powershell.png)
 
-4.  Copy the address as text from your main project folder and paste it into Powershell (your project folder cannot contain spaces):
+4.  Copy the address as text from your main project folder and paste it into Powershell (your project folder cannot contain spaces and should not be too long):
 
 	![](attachments/set-up-sass/copy.png)
 

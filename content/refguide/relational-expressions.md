@@ -15,13 +15,17 @@ This expression determines whether the first value is less than the second value
 
 ### 2.1 Input Parameters
 
-Possible values are described in the table below, but the two values should be in the same category (for example, if one is numeric, the other should be numeric too):
+Possible values are described in the table below: 
 
 | Value      | Type                            |
 | ---------- | ------------------------------- |
 | Two values | String                          |
 | Two values | Numeric (Integer/Long, Decimal) |
 | Two values | Date and time                   |
+
+{{% alert type="info" %}}
+The two values should be in the same category (for example, if one is numeric, the other should be numeric too).
+{{% /alert %}}
 
 ### 2.2 Output
 
@@ -46,11 +50,17 @@ This expression determines whether the first value is greater than the second va
 
 ### 3.2 Input Parameters
 
-The values be any of the following types, but the two values should be in the same category (for example, if one is numeric, the other should be numeric too):
+Possible values are described in the table below: 
 
-*   String
-*   Numeric (Integer/Long, Decimal)
-*   Date and time
+| Value      | Type                            |
+| ---------- | ------------------------------- |
+| Two values | String                          |
+| Two values | Numeric (Integer/Long, Decimal) |
+| Two values | Date and time                   |
+
+{{% alert type="info" %}}
+The two values should be in the same category (for example, if one is numeric, the other should be numeric too).
+{{% /alert %}}
 
 ### 3.3 Output
 
@@ -75,11 +85,17 @@ This expression determines whether the first value is less than or equal to the 
 
 ### 4.1 Input Parameters
 
-The values be any of the following types, but the two values should be in the same category (for example, if one is numeric, the other should be numeric too):
+Possible values are described in the table below: 
 
-*   String
-*   Numeric (Integer/Long, Decimal)
-*   Date and time
+| Value      | Type                            |
+| ---------- | ------------------------------- |
+| Two values | String                          |
+| Two values | Numeric (Integer/Long, Decimal) |
+| Two values | Date and time                   |
+
+{{% alert type="info" %}}
+The two values should be in the same category (for example, if one is numeric, the other should be numeric too).
+{{% /alert %}}
 
 ### 4.2 Output
 
@@ -120,11 +136,17 @@ Result is of type Boolean.
 
 ### 5.1 Input Parameters
 
-The values be any of the following types, but the two values should be in the same category (for example, if one is numeric, the other should be numeric too):
+Possible values are described in the table below: 
 
-*   String
-*   Numeric (Integer/Long, Decimal)
-*   Date and time
+| Value      | Type                            |
+| ---------- | ------------------------------- |
+| Two values | String                          |
+| Two values | Numeric (Integer/Long, Decimal) |
+| Two values | Date and time                   |
+
+{{% alert type="info" %}}
+The two values should be in the same category (for example, if one is numeric, the other should be numeric too).
+{{% /alert %}}
 
 ### 5.2 Output
 
@@ -150,12 +172,18 @@ This expression determines whether the two values are equal.
 
 ### 6.1 Input Parameters
 
-The values be any of the following types, but the two values should be in the same category (for example, if one is numeric, the other should be numeric too):
+Possible values are described in the table below: 
 
-*   String
-*   Numeric (Integer/Long, Decimal)
-*   Date and time
-*   Domain entity; equality is checked based on the ID of the object
+| Value      | Type                                                         |
+| ---------- | ------------------------------------------------------------ |
+| Two values | String                                                       |
+| Two values | Numeric (Integer/Long, Decimal)                              |
+| Two values | Date and time                                                |
+| Two values | Domain entity; equality is checked based on the ID of the object |
+
+{{% alert type="info" %}}
+The two values should be in the same category (for example, if one is numeric, the other should be numeric too).
+{{% /alert %}}
 
 ### 6.2 Output
 
@@ -197,10 +225,18 @@ Determines whether the two values are not equal.
 
 The values be any of the following types, but the two values should be in the same category (e.g. both numbers):
 
-*   String
-*   Numeric (Integer/Long, Decimal)
-*   Date and time
-*   Object; equality is checked based on the ID of the object.
+Possible values are described in the table below: 
+
+| Value      | Type                                                      |
+| ---------- | --------------------------------------------------------- |
+| Two values | String                                                    |
+| Two values | Numeric (Integer/Long, Decimal)                           |
+| Two values | Date and time                                             |
+| Two values | Object; equality is checked based on the ID of the object |
+
+{{% alert type="info" %}}
+The two values should be in the same category (for example, if one is numeric, the other should be numeric too).
+{{% /alert %}}
 
 ### 7.2 Output 
 

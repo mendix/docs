@@ -15,9 +15,11 @@ Checks if an object is empty.
 
 ### 2.1 Input Parameters
 
-An object.
+Input parameters are described in the table below:
 
-Type: Any type of object.
+| Value     | Type               |
+| --------- | ------------------ |
+| An object | Any type of object |
 
 ### 2.2 Output
 
@@ -43,9 +45,11 @@ The same holds for when $object1 is a variable (such as Integer, String, etc).
 
 ### 3.1 Input Parameters
 
-A member (attribute or association) of an object.
+Input parameters are described in the table below:
 
-Type: Any type of member.
+| Value                                            | Type               |
+| ------------------------------------------------ | ------------------ |
+| A member (attribute or association) of an object | Any type of member |
 
 ### 3.2. Output
 
@@ -74,37 +78,39 @@ Checks whether an object is new.
 
 ### 4.1 Input Parameters
 
-An object.
+Input parameters are described in the table below:
 
-Type: Any type of object.
+| Value     | Type               |
+| --------- | ------------------ |
+| An object | Any type of object |
 
 ### 4.2 Output
 
-The output depends on whether the object is created but not commited yet.
+The output depends on whether the object is new (created but not yet committed). Note this only holds when this function is called on a created object. When the object is retrieved from the database `isNew` will always be false.
 
 Type: Boolean.
 
 ### 4.3 Example
 
-For example, you have the following input:
+An example of an input can be the following:
 
 ```java
 isNew($object1)
 ```
 
-The output depends on whether the object is new (created but not yet committed). Note this only holds when this function is called on a created object. When the object is retrieved from the database isNew will always be false.
-
 ## 5 Checking Whether an Object Is Synced<a name="synced"></a>
 
 {{% alert type="info" %}}
-This function is available only in expressions for [conditional visibility or editability](common-widget-properties), as only they are evaluated client-side.
+This function is available only in expressions for [conditional visibility or editability](common-widget-properties), as only they are evaluated on client side.
 {{% /alert %}}
 
 ### 5.1 Input Parameters
 
-An object.
+Input parameters are described in the table below:
 
-Type: Any type of object.
+| Value     | Type               |
+| --------- | ------------------ |
+| An object | Any type of object |
 
 ### 5.2 Output
 
@@ -113,6 +119,8 @@ Returns whether the changes done to the object [offline](offline-first) have bee
 Type: Boolean.
 
 ### 5.3 Example
+
+An example of an input can be the following:
 
 ```java
 isSynced($currentObject)

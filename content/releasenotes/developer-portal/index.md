@@ -17,12 +17,12 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Improvements
 
-* We made some small performance improvement
+* We made some small performance improvements.
 
 #### Fixes
 
-* We placed a deprecation warning in a file hosted by the Developer Portal that is used in old versions of the [Feedback Widget](/appstore/widgets/mendix-feedback)
-* We fixed an issue where you could move a user story to a different sprint without specifying the target sprint
+* We placed a deprecation warning in a file hosted by the Developer Portal that is used in old versions of the [Mendix Feedback](/appstore/widgets/mendix-feedback#below) widget. As of October 1st, 2020, we will end support for Mendix Feedback widget version 5 or below. Please always keep your Feedback widget up-to-date to ensure the best experience for your users.
+* We fixed an issue where you could move a user story to a different Sprint without specifying the target Sprint.
 
 ### July 28th, 2020
 

@@ -58,7 +58,7 @@ Once the CA is uploaded, you will see a tree containing the root certificate and
 
 ![](attachments/accessrestrict/ca-profile.png)
 
-Select the check box next to each intermediate or root certificate you want to use. Client certificates will be accepted if they are signed by any checked certificate. If more than one certificate in a branch is checked (for example the root certificate and an intermediate certificate) the client certificate will only be accepted if it is signed by *both* certificates.
+Select the check box next to each intermediate or root certificate you want to use. Client certificates will be accepted if they are signed by any checked certificate. If more than one certificate in a branch is checked (for example the root certificate and an intermediate certificate) the client certificate will be accepted if it is signed by any of the checked certificates.
 
 {{% alert type="warning" %}}
 If you do not select any certificates then all the certificates will be valid.

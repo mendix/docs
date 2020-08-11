@@ -7,7 +7,7 @@ tags: ["app store", "app store component", "widget", "feedback", "platform suppo
 ---
 
 {{% alert type="warning" %}}
-We are deprecating outdated versions of the Mendix Feedback widget to provide consistent and optimized experience. As of October 1st, 2020, we will end support for Mendix Feedback widget version 5 or below. Please always keep your Feedback widget up-to-date to ensure best experience for your users.
+We are deprecating outdated versions of the Mendix Feedback widget to provide consistent and optimized experience. As of October 1st, 2020, we will end support for Mendix Feedback widget version 5 or below. Please always keep your Feedback widget up-to-date to ensure the best experience for your users.
 {{% /alert %}}
 
 ## 1 Introduction

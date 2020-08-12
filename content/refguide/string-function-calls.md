@@ -482,6 +482,8 @@ Replaces all occurrences of a regular expression with another string.
 
 ### 13.1 Input Parameters
 
+Input parameters are described in the table below:
+
 | Value                                                        | Type   |
 | ------------------------------------------------------------ | ------ |
 | The string to search in                                      | String |
@@ -533,18 +535,19 @@ And the output is that there are no matches for the input:
 'this is a string with no numbers thrown in'
 ```
 
-## replaceFirst
+## 14 replaceFirst
 
 Replaces the first occurrence of the regular expression with a replacement string.
 
-### Input Parameters
+### 14.1 Input Parameters
 
-* The string to search in
-    * Type: string
-* The regular expression to match
-    * Type: string; if you want to search for a literal string, enclose it between `\Q` and `\E` (for example, `\QPaul S. Mueller\E` will search for the string `Paul S. Mueller`, without interpreting the dot as a wildcard)
-* The string to be substituted for the first match (this does not support backreferences, substitutions, or captures)
-    * Type: string
+Input parameters are described in the table below:
+
+| Value                                                        | Type   |
+| ------------------------------------------------------------ | ------ |
+| The string to search in                                      | String |
+| The regular expression to match; if you want to search for a literal string, enclose it between `\Q` and `\E` (for example, `\QPaul S. Mueller\E` will search for the string `Paul S. Mueller`, without interpreting the dot as a wildcard) | String |
+| The string to be substituted for each match (this does not support backreferences, substitutions, or captures) | String |
 
 {{% alert type="info" %}}
 The regular expression must be provided as a string. Although it uses the same format for regular expressions, you cannot use a [regular expression](regular-expressions) resource document in this function.
@@ -559,66 +562,78 @@ Please note that this function call uses the regular expression language provide
 
 {{% /alert %}}
 
-### Output
+### 13.2 Output
 
 The original string, with the first occurrence of the regular expression replaced by the replacement string. If the regular expression does not occur in the string, the original is returned.
 
-* Type: string
+Type: string
+
+### 13.3 Example
+
+If you type in the following input:
 
 ```java
 replaceFirst('this is a string with 75 some numbers 234 thrown in', '([0-9])', 'NUMBER')
 ```
 
-returns:
+The output is:
 
 ```java
 'this is a string with NUMBER5 some numbers 234 thrown in'
 ```
 
-## String Concatenation ( + )
+## 15 String Concatenation ( + )
 
 The `+` operator can be used to concatenate two strings or a string and a number.
 
-### Input Parameters
+### 15.1 Input Parameters
 
-* First parameter
-    * Type: string, integer/long, decimal
-* Second parameter
-    * Type: string, integer/long, decimal
+Input parameters are described in the table below:
+
+| Value            | Type                          |
+| ---------------- | ----------------------------- |
+| First parameter  | String, integer/long, decimal |
+| Second parameter | String, integer/long, decimal |
+
+{{% alert type="info" %}}
 
 At least one of the parameters must be of type string.
 
-### Output
+{{% /alert %}}
+
+### 15.2 Output
 
 A new string that is the literal concatenation of the two input parameters.
 
-* Type: string
+Type: string
 
-To combine two strings:
+### Example
+
+An example of an input to combine two strings can be the following:
 
 ```java
 'foo' + 'bar'
 ```
 
-returns:
+The output is:
 
 ```java
 'foobar'
 ```
 
-To combine a string and a number:
+An example of an input to combine a string and a number can be the following:
 
 ```java
 4.73 + ' kilometers'
 ```
 
-returns:
+The output is:
 
 ```java
 '4.73 kilometers'
 ```
 
-## <a name="urlEncode"></a>urlEncode
+## 16 urlEncode {#urlEncode}
 
 Converts a string to be used in a URL. This function is useful when you want to use the string as part of the URL.
 
@@ -628,43 +643,57 @@ For example:
 'http://google.com/search?q=' + urlEncode($myQuery)
 ```
 
-### Input Parameters
+### 16.1 Input Parameters
 
-* String to convert
-* Type: string
+Input parameters are described in the table below:
 
-### Output
+| Value             | Type   |
+| ----------------- | ------ |
+| String to convert | String |
+
+### 16.2 Output
 
 The string, URL-encoded.
+
+### 16.3 Example
+
+If you type in the following input:
 
 ```java
 urlEncode('Hello, world!')
 ```
 
-returns:
+The output is:
 
 ```java
 'Hello%2C+world%21'
 ```
 
-## urlDecode
+## 17 urlDecode
 
 Converts a string back from a URL. The opposite of [urlEncode](#urlEncode).
 
-### Input Parameters
+### 17.1 Input Parameters
 
-* A URL-encoded string to convert
-* Type: string
+Input parameters are described in the table below:
 
-### Output
+| Value                           | Type   |
+| ------------------------------- | ------ |
+| A URL-encoded string to convert | String |
+
+### 17.2 Output
 
 The string, URL-decoded.
+
+### 17.3 Example
+
+If you type in the following input:
 
 ```java
 urlDecode('Hello%2C+world%21')
 ```
 
-returns:
+The output is:
 
 ```java
 'Hello, world!'

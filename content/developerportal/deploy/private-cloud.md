@@ -69,7 +69,7 @@ The table below shows the differences between the capabilities for apps deployed
 
 | Capability | Mendix Cloud | Mx4PC Connected | Mx4PC Standalone |
 | --- | --- | --- | --- |
-| Environment provisioning | Fully automated | Provisioned with an existing PostgreSQL server and S3 bucket | Provisioned with an existing PostgreSQL server and S3 bucket |
+| Environment provisioning | Fully automated | Provisioned with database and blob storage provided by the customer | Provisioned with database and blob storage provided by the customer|
 | Environment configuration<br/>*For example, constants and scheduled event* | Mendix Developer Portal | Mendix Developer Portal | Custom Resources via Mendix Operator |
 | Mendix app/deployment package deployment | Mendix Developer Portal, Studio Pro, & Studio | Mendix Developer Portal & Studio Pro | Custom Resources via Mendix Operator<br/>*normally combined in a CI/CD pipeline* |
 | Backup and restore | Mendix Developer Portal | Services supplied by the database server and file storage used | Services supplied by the database server and file storage used |

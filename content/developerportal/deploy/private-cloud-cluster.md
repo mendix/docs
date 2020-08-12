@@ -440,11 +440,13 @@ You can also delete your namespace from the cluster manager by clicking the dele
 
 ![](attachments/private-cloud-cluster/image25.png)
 
-If there are any environments associated with the namespace, you cannot delete the namespace until the environments associated with it are deleted.
-
 When you delete a namespace, this removes the namespace from the cluster in the Developer Portal. However, it will not remove the namespace from your platform. You will need to explicitly delete the namespace using the tools provided by your platform.
 
-![](attachments/private-cloud-cluster/image26.png)
+If you attempt to delete a namespace which contains environments, you will be warned that the environments will also be deleted. 
+
+![](attachments/private-cloud-cluster/delete-namespace-and-env.png)
+
+If the namespace is connected, then the environments will be removed from the namespace automatically. If it is not connected, you will need to remove the environments manually.
 
 ### 4.2 Apps
 
@@ -516,6 +518,8 @@ You can change the access rights for, or completely remove, existing members.
   2. Click **Remove member** to remove this member completely. You will be asked to confirm this action.
         
     ![](attachments/private-cloud-cluster/image30.png)
+
+When you edit or remove a member, they will receive an email informing them of the changes.
 
 ### 4.4 Operate{#operate}
 

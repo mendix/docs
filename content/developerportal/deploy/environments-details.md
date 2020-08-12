@@ -34,7 +34,7 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
 * **Environment ID** – the unique identifier of this environment
 * **Custom domains** – the custom domains of the app
 * **Java Version** – Oracle version 1.8 or AdoptOpenJDK version 8
-* **Studio Target** – whether this environment is the one where apps will be deployed from Studio - see [Studio Deployment Settings](studio-deployment-settings) for more information
+* **Mendix Studio Target** – whether this environment is the one where apps will be deployed from Mendix Studio - see [Studio Deployment Settings](studio-deployment-settings) for more information
 * **Plan** – (*Cloud v4 only*) the type of plan covered by this license
 * **Instances** – (*Cloud v4 only*) A summary of the number and memory allocation of *instances* of this environment: see [Scaling...](#scaling) for more information
 * **Database Status** – (*Cloud v3 only*) this is **Running** by default
@@ -244,7 +244,7 @@ Additional information can be found in the Mozilla developer guide [HTTP headers
 
 #### 4.2.1 Running Your App in an Iframe{#iframe}
 
-Most browsers have additional security to ensure that iframes are only allowed when they are from the same domain as the main page. The defaults for these vary by browser version. This security is controlled through SameSite cookies. You can find a good explanation of SameSite cookes in [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) on the *web.dev* website.
+Most browsers have additional security to ensure that iframes are only allowed when they are from the same domain as the main page. The defaults for these vary by browser version. This security is controlled through SameSite cookies. You can find a good explanation of SameSite cookies in [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) on the *web.dev* website.
 
 {{% alert type="info" %}}
 There can be additional issues when using cookies in iframes for end-users using the **Safari** browser. Resolving these issues is outside the control of Mendix. See the [Full Third-Party Cookie Blocking and More](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) blog post on *Webkit.org* for more information.
@@ -258,7 +258,7 @@ To avoid security issues when you want to embed the app in an iframe, we recomme
 
 From **Mendix version 8.12**, you can control the value of SameSite in your cookies. The default for all cookies is `SameSite=None`, which means that they can be used in an iframe. You can change this value in the `com.mendix.core.SameSiteCookies` [custom runtime setting](#custom-runtime-settings) if you want to add restrictions to apps running outside iframes.
 
-For **Mendix versions below 8.12** there was no SameSite value set on cookies and the behavior is dependent on the browser default. To ensure that cookies can be used within iframes, you can set the custom runtime variable `SAMESITE_COOKIE_PRE_MX812` to `true` in [custom environment variables](#custom-environment-variables), which will set `SameSite=None; Secure;` for all your cookies.
+For **Mendix versions below 8.12** there was no SameSite value set on cookies and the behavior is dependent on the browser default. To ensure that cookies can be used within iframes, you can set the custom environment variable `SAMESITE_COOKIE_PRE_MX812` to `true` in [custom environment variables](#custom-environment-variables), which will set `SameSite=None; Secure;` for all your cookies.
 
 {{% alert type="warning" %}}
 The SAMESITE_COOKIE_PRE_MX812 setting will only be implemented the next time your app is deployed.
@@ -269,7 +269,7 @@ The SAMESITE_COOKIE_PRE_MX812 setting will only be implemented the next time you
 If you use a custom sign in page, your **index.html** will probably set the `originURI` cookie. If your Mendix app runs within an iframe, this cookie needs to be set with the `SameSite=None` and `Secure` attributes.
 
 To do this, find all the places in your theme folder where this cookie is set. It will look like `document.cookie = "originURI=/login.html"`.
-Change this to add the required attributes. For example, `document.cookie = "originURI=/login.html; SameSite=None; Secure"`.
+Change this to add the required attributes. For example, `document.cookie = "originURI=/login.html" + (window.location.protocol === "https:" ? ";SameSite=None;Secure" : "")`.
 
 ### 4.3 Outgoing Connections Whitelisting (Mendix Cloud Dedicated){#connection-whitelist}
 
@@ -415,7 +415,8 @@ Unlike the Custom Runtime Settings, the variables you add have to be chosen from
 * **DD_API_KEY** – the API key used with Datadog
 * **DD_LOG_LEVEL** – the log level of logging sent to Datadog
 * **DATABASE_CONNECTION_PARAMS** – Additional JDBC parameters for PostgreSQL databases, see the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack) for more information
-* **APPMETRICS_TARGET** – setting this enables business events to be sent to a different monitoring solution from the technical events 
+* **APPMETRICS_TARGET** – setting this enables business events to be sent to a different monitoring solution from the technical events
+* **SAMESITE_COOKIE_PRE_MX812** – set `SameSite=None;Secure` for all cookies coming from the Mendix runtime, as described in the [Running Your App in an Iframe](#iframe) section
 
 ## 7 Maintenance Tab
 

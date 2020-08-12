@@ -35,7 +35,7 @@ Design apps that look good and scale in all situations without losing an intuiti
 
 ## 2 Design Elements
 
-Our UI library is fully integrated into tMendix Studio. After choosing a navigation layout in Mendix Studio, you can find page templates, building blocks, and widgets directly in your **Toolbox**. These UI elements form the foundation of your app.
+Our UI library is fully integrated into Mendix Studio. After choosing a navigation layout in Mendix Studio, you can find page templates, building blocks, and widgets directly in your **Toolbox**. These UI elements form the foundation of your app.
 
 ![](attachments/howto/designelements.png)
 

@@ -296,7 +296,7 @@ Then the Studio Pro UI for the component appears like this:
 
 ### 3.3 Widgets {#widgets}
 
-The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component if a `dataSource` attribute is not specified or if an attribute is specified, but the data source is not configured by the user. Otherwise it is passed as a function that expects an `ObjectItem` and returns a `ReactNode`: `(item: ObjectItem) => ReactNode`. For more information, see the [Datasource](#datasource) section below.
+The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component if a `dataSource` attribute is not specified or if an attribute is specified, but the data source is not configured by the user. Otherwise it is passed as a [`ListWidgetValue`](client-apis-for-pluggable-widgets#listwidgetvalue). For more information, see the [Datasource](#datasource) section below.
 
 {{% alert type="info" %}}
 This property type was introduced in Mendix 8.3.
@@ -436,7 +436,7 @@ The action property type allows a user to configure an action which can do thing
 
 If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the client will receive an `ActionValue` representing the action or `undefined` if the **Do nothing** action was selected.
 
-When a `dataSource` attribute is specified and configured by the user it is passed as a function that expects an `ObjectItem` and returns an `ActionValue`: `(item: ObjectItem) => ActionValue`. For more information, see the [Datasource](#datasource) section below.
+When a `dataSource` attribute is specified and configured by the user it is passed as a [`ListActionValue`](client-apis-for-pluggable-widgets#listactionvalue). For more information, see the [Datasource](#datasource) section below.
 
 {{% alert type="info" %}}
 Support for the `dataSource` attribute was introduced in Mendix 8.9.
@@ -471,7 +471,7 @@ The attribute property type allows a widget to work directly with entities' attr
 
 If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the client will receive an `EditableValue<T>` where `T` depends on a configured `<attributeType>`. For more information, see the [EditableValue](client-apis-for-pluggable-widgets#editable-value) section of *Client APIs Available to Pluggable Widgets*.
 
-When a `dataSource` attribute is specified and configured by the user it is passed as a function that expects an `ObjectItem` and returns an `EditableValue<T>`: `(item: ObjectItem) => EditableValue<T>`. For more information, see the [Datasource](#datasource) section below.
+When a `dataSource` attribute is specified and configured by the user it is passed as a [`ListAttributeValue`](client-apis-for-pluggable-widgets#listattributevalue). For more information, see the [Datasource](#datasource) section below.
 
 {{% alert type="info" %}}
 Support for the `dataSource` attribute was introduced in Mendix 8.12.

@@ -14,12 +14,12 @@ Multiplies two numbers.
 
 ### 2.1 Input parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   First number
-    Type: Integer/Long, Decimal
-*   Second number
-    Type: Integer/Long, Decimal
+| Value         | Type                  |
+| ------------- | --------------------- |
+| First number  | Integer/Long, Decimal |
+| Second number | Integer/Long, Decimal |
 
 ### 2.2 Output
 
@@ -47,12 +47,12 @@ Divides two numbers. You can use either the `div` or colon ( ``:`` ) syntax, as 
 
 ### 3.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   First number
-    Type: Integer/Long, Decimal
-*   Second number
-    Type: Integer/Long, Decimal
+| Value         | Type                  |
+| ------------- | --------------------- |
+| First number  | Integer/Long, Decimal |
+| Second number | Integer/Long, Decimal |
 
 ### 3.2 Output
 
@@ -134,12 +134,12 @@ Calculates the remainder of the division of one number by another. In other word
 
 ### 4.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   First number
-    Type: Integer/Long, Decimal
-*   Second number
-    Type: Integer/Long, Decimal
+| Value         | Type                  |
+| ------------- | --------------------- |
+| First number  | Integer/Long, Decimal |
+| Second number | Integer/Long, Decimal |
 
 ### 4.2 Output
 
@@ -168,12 +168,12 @@ For more information, see [String function calls](string-function-calls).
 
 ### 5.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   First number
-    Type: Integer/Long, Decimal
-*   Second number
-    Type: Integer/Long, Decimal
+| Value         | Type                  |
+| ------------- | --------------------- |
+| First number  | Integer/Long, Decimal |
+| Second number | Integer/Long, Decimal |
 
 ### 5.2 Output
 
@@ -201,12 +201,12 @@ Subtracts the second input from the first.
 
 ### 6.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   First number
-    Type: Integer/Long, Decimal
-*   Second number
-    Type: Integer/Long, Decimal
+| Value         | Type                  |
+| ------------- | --------------------- |
+| First number  | Integer/Long, Decimal |
+| Second number | Integer/Long, Decimal |
 
 ### 6.2 Output
 

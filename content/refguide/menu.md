@@ -27,15 +27,12 @@ Menus are composed of menu items. Menu items can contain a number sub-items. Men
 
 A menu item or a sub-item has the following general properties:
 
-* Caption – the caption is the text that will appear in the [menu widget](menu-widgets). Caption is a translatable text. (For more information, see [Language Menu](translatable-texts).)
+* Caption – The caption is the text that will appear in the [menu widget](menu-widgets). Caption is a translatable text. (For more information, see [Language Menu](translatable-texts).)
+* Icon – You can select a glyphicon (a character in a special font that stays sharp while scaling) or an image that will appear next to or above the caption in the [menu widget](menu-widgets).
+* Alternative text - You can specify alternative text if a caption is not provided. This will allow screen readers to announce a description for an icon.
+* On click – Action to be performed when the item is clicked. A menu item that has sub-items cannot have an on click event.
 
-* Icon – you can select a glyphicon (a character in a special font that stays sharp while scaling) or an image that will appear next to or above the caption in the [menu widget](menu-widgets)
-
-* Target –  the target of a menu item is a page or a microflow that will be opened when the item is clicked. A menu item that has sub-items cannot have a target.
-
-  {{% alert type="info" %}}To open a page with a data view on it from a menu item, set a microflow that first retrieves an object for the data view and then opens the page as a target.
-
-  {{% /alert %}}
+{{% alert type="info" %}}To open a page with a data view on it from a menu item, set a microflow that first retrieves an object for the data view and then opens the page as a target.{{% /alert %}}
 
 ## 3 Read More
 

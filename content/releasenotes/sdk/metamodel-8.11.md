@@ -9,10 +9,6 @@ parent: "metamodel-8"
 
 ### DomainModels
 
-#### MaterializedRemoteEntitySource (Element)
-
-* We introduced this element.
-
 #### RemoteEntitySourceDocument (ModelUnit)
 
 * We introduced this model unit.
@@ -42,16 +38,6 @@ parent: "metamodel-8"
 #### WorkflowsProjectSettingsPart (Element)
 
 * We introduced the `userEntity` property.
-
-### Kafka
-
-#### ConsumedKafkaService (ModelUnit)
-
-* We introduced this model unit.
-
-#### KafkaEntity, KafkaNavigationProperty, KafkaAttribute, KafkaRemoteEntitySource & KafkaMappedValue (Elements)
-
-* We introduced these elements.
 
 ### Rest
 

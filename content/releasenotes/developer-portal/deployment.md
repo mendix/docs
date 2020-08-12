@@ -10,6 +10,43 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### August 7th, 2020
+
+#### Mendix Cloud
+
+* We fixed an issue where some customers did not receive an SMS for two-factor authentication. (Ticket 104252) 
+
+### July 30th, 2020
+
+#### Mendix Cloud
+
+* We fixed an issue where users did not see changes they made to node permissions. (Tickets 104154 and 104642)
+
+### July 29th, 2020
+
+#### Mendix for Private Cloud Portal
+
+* We now allow you to delete a namespace which contains environments. For a connected namespace, this will also delete the environments.
+* We now allow you to delete environment information from the Developer Portal when the portal is unable to connect to the cluster via the Mendix Gateway Agent.
+* We now allow you to change log levels from the Developer Portal for your apps' log nodes.
+* We fixed an issue where you could not delete a deployment package if it was broken.
+* We now send an email to users when their permissions are changed, or when they are removed from a namespace.
+
+### July 27th, 2020
+
+#### Mendix for Private Cloud — Mendix Operator v1.4.0 and Mendix Gateway Agent v1.3.0
+
+* We have improved compatibility with annotations and other attributes modified by ingress controllers. Mendix Operator will no longer delete annotations and attributes it doesn't recognize.
+* We have added an option to specify log levels for every log node.
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+
+### July 22nd, 2020
+
+#### Mendix Cloud
+
+* We fixed an issue where trends graphs were not being updated with the latest data. (Ticket 102400)
+
 ### July 16th, 2020
 
 #### Mendix Cloud
@@ -297,6 +334,12 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
     * Workaround – Choose the **Details** for the **Production** environment again and you will be taken to the correct environment.
 
 * When you attempt to open an **OPERATE** or **DEPLOY** page in the Developer Portal, you may see a login page. You will need to force a refresh of your page, or clear your browser cache, in order to access the page.
+
+### October 1st, 2019
+
+#### Mendix Cloud
+
+* The `X-Client-Certificate` request header has been removed. You can use the `SSL-Client-S-DN` header instead. See [Mendix Cloud HTTP Request Headers](/developerportal/deploy/mendix-cloud-request-headers) for more information.
 
 ### September 27th, 2019
 

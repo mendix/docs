@@ -95,11 +95,11 @@ With this property, you can change the way the paging bar is shown.
 | Yes (without total count) | The paging bar is shown (except for the **Go to last page** button). Also, the total count of objects is not shown, as page numbers are shown instead. |
 | No | The paging buttons are not shown. |
 
+Default: *Yes (with total count)*
+
 {{% alert type="warning" %}}
 Hiding the control bar also hides the paging buttons. For details, see [Show Control Bar Buttons](#show-control-bar).
 {{% /alert %}}
-
-Default: *Yes (with total count)*
 
 #### 3.3.4 Number of Rows {#number-of-rows}
 

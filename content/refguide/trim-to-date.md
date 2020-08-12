@@ -16,15 +16,17 @@ This function is used to trim the date to seconds, rounding off all milliseconds
 
 Input parameters are described in the table below:
 
-| Value                           | Type          |
-| ------------------------------- | ------------- |
-| The date that should be trimmed | Date and time |
+| Value                            | Type          |
+| -------------------------------- | ------------- |
+| The date that should be trimmed. | Date and time |
 
 ### 2.2 Output
 
-The output is the same date, but rounded down to seconds.
+The output is described in the table below:
 
-Type: Date and time
+| Value                                       | Type          |
+| ------------------------------------------- | ------------- |
+| The same date, but rounded down to seconds. | Date and time |
 
 ### 2.3 Example
 
@@ -48,15 +50,17 @@ This function is used to trim the date to minutes, rounding off all (milli)secon
 
 Input parameters are described in the table below:
 
-| Value                           | Type          |
-| ------------------------------- | ------------- |
-| The date that should be trimmed | Date and time |
+| Value                            | Type          |
+| -------------------------------- | ------------- |
+| The date that should be trimmed. | Date and time |
 
 ### 3.2 Output
 
-The output is the same date, but rounded down to minutes.
+The output is described in the table below:
 
-Type: Date and time
+| Value                                       | Type          |
+| ------------------------------------------- | ------------- |
+| The same date, but rounded down to minutes. | Date and time |
 
 ### 3.3 Example
 
@@ -82,15 +86,17 @@ This function is used to trim the date to hours, rounding off all minutes to zer
 
 Input parameters are described in the table below:
 
-| Value                           | Type          |
-| ------------------------------- | ------------- |
-| The date that should be trimmed | Date and time |
+| Value                            | Type          |
+| -------------------------------- | ------------- |
+| The date that should be trimmed. | Date and time |
 
 ### 4.2 Output
 
-The output is the same date, but rounded down to hours.
+The output is described in the table below:
 
-Type: Date and time
+| Value                                     | Type          |
+| ----------------------------------------- | ------------- |
+| The same date, but rounded down to hours. | Date and time |
 
 ### 4.3 Example
 
@@ -116,15 +122,17 @@ This function is used to trim the date to days, rounding off all hours to zero.
 
 Input parameters are described in the table below:
 
-| Value                           | Type          |
-| ------------------------------- | ------------- |
-| The date that should be trimmed | Date and time |
+| Value                            | Type          |
+| -------------------------------- | ------------- |
+| The date that should be trimmed. | Date and time |
 
 ### 5.2 Output
 
-The output is the same date, but rounded down to days.
+The output is described in the table below:
 
-Type: Date and time
+| Value                                    | Type          |
+| ---------------------------------------- | ------------- |
+| The same date, but rounded down to days. | Date and time |
 
 ### 5.3 Example
 
@@ -150,15 +158,17 @@ This function is used to trim the date to months, rounding off all days to zero.
 
 Input parameters are described in the table below:
 
-| Value                           | Type          |
-| ------------------------------- | ------------- |
-| The date that should be trimmed | Date and time |
+| Value                            | Type          |
+| -------------------------------- | ------------- |
+| The date that should be trimmed. | Date and time |
 
 ### 6.2 Output
 
-The output is the same date, but rounded down to months.
+The output is described in the table below:
 
-Type: Date and time
+| Value                                      | Type          |
+| ------------------------------------------ | ------------- |
+| The same date, but rounded down to months. | Date and time |
 
 ### 6.3 Example
 
@@ -184,15 +194,17 @@ This function is used to trim the date to years, rounding off all months and day
 
 Input parameters are described in the table below:
 
-| Value                           | Type          |
-| ------------------------------- | ------------- |
-| The date that should be trimmed | Date and time |
+| Value                            | Type          |
+| -------------------------------- | ------------- |
+| The date that should be trimmed. | Date and time |
 
 ### 7.2 Output
 
-The output is the same date, but rounded down to years.
+The output is described in the table below:
 
-Type: Date and time
+| Value                                     | Type          |
+| ----------------------------------------- | ------------- |
+| The same date, but rounded down to years. | Date and time |
 
 ### 7.3 Example
 

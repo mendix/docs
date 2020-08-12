@@ -23,9 +23,11 @@ Input parameters are described in the table below:
 
 ### 2.2 Output
 
-Returns whether the object is empty.
+The output is described in the table below:
 
-Type: Boolean.
+| Value                                | Type    |
+| ------------------------------------ | ------- |
+| Returns whether the object is empty. | Boolean |
 
 ### 2.3 Example
 
@@ -53,9 +55,11 @@ Input parameters are described in the table below:
 
 ### 3.2. Output
 
-Whether the attribute is empty.
+The output is described in the table below:
 
-Type: Boolean.
+| Value                                   | Type    |
+| --------------------------------------- | ------- |
+| Returns whether the attribute is empty. | Boolean |
 
 ### 3.3 Examples
 
@@ -86,9 +90,11 @@ Input parameters are described in the table below:
 
 ### 4.2 Output
 
-The output depends on whether the object is new (created but not yet committed). Note this only holds when this function is called on a created object. When the object is retrieved from the database `isNew` will always be false.
+The output is described in the table below:
 
-Type: Boolean.
+| Value                                                        | Type    |
+| ------------------------------------------------------------ | ------- |
+| The output depends on whether the object is new (created but not yet committed). Note this only holds when this function is called on a created object. When the object is retrieved from the database `isNew` will always be `false`. | Boolean |
 
 ### 4.3 Example
 
@@ -98,11 +104,9 @@ An example of an input can be the following:
 isNew($object1)
 ```
 
-## 5 Checking Whether an Object Is Synced<a name="synced"></a>
+## 5 Checking Whether an Object Is Synced {#synced}
 
-{{% alert type="info" %}}
 This function is available only in expressions for [conditional visibility or editability](common-widget-properties), as only they are evaluated on client side.
-{{% /alert %}}
 
 ### 5.1 Input Parameters
 
@@ -114,9 +118,11 @@ Input parameters are described in the table below:
 
 ### 5.2 Output
 
-Returns whether the changes done to the object [offline](offline-first) have been synchronized to the runtime database. In web profiles and [hybrid profiles](navigation#hybrid-profiles) without offline support, this always returns `true`.
+The output is described in the table below:
 
-Type: Boolean.
+| Value                                                        | Type    |
+| ------------------------------------------------------------ | ------- |
+| Returns whether the changes done to the object [offline](offline-first) have been synchronized to the runtime database. In web profiles and [hybrid profiles](navigation#hybrid-profiles) without offline support, this always returns `true`. | Boolean |
 
 ### 5.3 Example
 

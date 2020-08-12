@@ -29,7 +29,11 @@ The two values should be in the same category (for example, if one is numeric, t
 
 ### 2.2 Output
 
-The output is of type Boolean.
+The output is described in the table below:
+
+| Value              | Type    |
+| ------------------ | ------- |
+| `True` or `False`. | Boolean |
 
 ### 2.3 Example
 
@@ -64,7 +68,11 @@ The two values should be in the same category (for example, if one is numeric, t
 
 ### 3.3 Output
 
-The output is of type Boolean.
+The output is described in the table below:
+
+| Value              | Type    |
+| ------------------ | ------- |
+| `True` or `False`. | Boolean |
 
 ### 3.4 Example
 
@@ -99,7 +107,11 @@ The two values should be in the same category (for example, if one is numeric, t
 
 ### 4.2 Output
 
-The output is of type Boolean.
+The output is described in the table below:
+
+| Value              | Type    |
+| ------------------ | ------- |
+| `True` or `False`. | Boolean |
 
 ### 4.3 Examples
 
@@ -150,7 +162,11 @@ The two values should be in the same category (for example, if one is numeric, t
 
 ### 5.2 Output
 
-The output is of type Boolean.
+The output is described in the table below:
+
+| Value              | Type    |
+| ------------------ | ------- |
+| `True` or `False`. | Boolean |
 
 ### 5.3 Example
 
@@ -187,7 +203,11 @@ The two values should be in the same category (for example, if one is numeric, t
 
 ### 6.2 Output
 
-The output is of type Boolean.
+The output is described in the table below:
+
+| Value              | Type    |
+| ------------------ | ------- |
+| `True` or `False`. | Boolean |
 
 ### 6.3 Examples
 
@@ -240,7 +260,11 @@ The two values should be in the same category (for example, if one is numeric, t
 
 ### 7.2 Output 
 
-The output is of type Boolean.
+The output is described in the table below:
+
+| Value              | Type    |
+| ------------------ | ------- |
+| `True` or `False`. | Boolean |
 
 ### 7.3 Example
 

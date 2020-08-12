@@ -26,7 +26,11 @@ Input parameters are described in the table below:
 
 ### 2.2 Output
 
-The output is the same string, but all lowercase.
+The output is described in the table below:
+
+| Value                               | Type   |
+| ----------------------------------- | ------ |
+| The same string, but all lowercase. | String |
 
 ### 2.3 Example
 
@@ -56,7 +60,11 @@ Input parameters are described in the table below:
 
 ### 3.2 Output
 
-The output is the same string.
+The output is described in the table below:
+
+| Value                               | Type   |
+| ----------------------------------- | ------ |
+| The same string, but all uppercase. | String |
 
 ### 3.3 Example
 
@@ -86,9 +94,11 @@ Input parameters are described in the table below:
 
 ### 4.2 Output
 
-* Length of the string
+The output is described in the table below:
 
-  Type: integer
+| Value                | Type    |
+| -------------------- | ------- |
+| Length of the string | Integer |
 
 ### 4.3 Example
 
@@ -120,7 +130,11 @@ Input parameters are described in the table below:
 
 ### 5.2 Output
 
-A part of the original string, starting at the start position with a length equal to the desired length. If no desired length is specified, will return a substring starting at the start position and ending at the end of the string.
+The output is described in the table below:
+
+| Value                                                        | Type   |
+| ------------------------------------------------------------ | ------ |
+| A part of the original string, starting at the start position with a length equal to the desired length. If no desired length is specified, will return a substring starting at the start position and ending at the end of the string. | String |
 
 ### 5.3 Example
 
@@ -164,9 +178,11 @@ Input parameters are described in the table below:
 
 ### 6.2 Output
 
-The first location of the substring in the original string. Will return `'-1'` if the substring does not occur at all in the original string.
+The output is described in the table below:
 
-Type: integer
+| Value                                                        | Type    |
+| ------------------------------------------------------------ | ------- |
+| The first location of the substring in the original string. Will return `'-1'` if the substring does not occur at all in the original string. | Integer |
 
 ### 6.3 Example
 
@@ -222,9 +238,11 @@ Input parameters are described in the table below:
 
 ### 7.2 Output
 
-The first location of the substring in the original string. Will return `'-1'` if the substring does not occur at all in the original string.
+The output is described in the table below:
 
-Type: Integer
+| Value                                                        | Type    |
+| ------------------------------------------------------------ | ------- |
+| The first location of the substring in the original string. Will return `'-1'` if the substring does not occur at all in the original string. | Integer |
 
 ### 7.3 Example
 
@@ -303,9 +321,11 @@ Input parameters are described in the table below:
 
 ### 8.2 Output
 
-Whether the original string contains the substring.
+The output is described in the table below:
 
-Type: Boolean
+| Value                                               | Type    |
+| --------------------------------------------------- | ------- |
+| Whether the original string contains the substring. | Boolean |
 
 ### 8.3 Example
 
@@ -336,9 +356,11 @@ Input parameters are described in the table below:
 
 ### 9.2 Output
 
-Whether the original string starts with the substring.
+The output is described in the table below:
 
-Type: Boolean
+| Value                                                  | Type    |
+| ------------------------------------------------------ | ------- |
+| Whether the original string starts with the substring. | Boolean |
 
 ### 9.3 Example
 
@@ -369,9 +391,11 @@ Input parameters are described in the table below:
 
 ### 10.2 Output
 
-Whether the original string ends with the substring.
+The output is described in the table below:
 
-Type: Boolean
+| Value                                                | Type    |
+| ---------------------------------------------------- | ------- |
+| Whether the original string ends with the substring. | Boolean |
 
 ### 10.3 Example
 
@@ -401,9 +425,11 @@ Input parameters are described in the table below:
 
 ### 11.2 Output
 
-Same string but without spaces at the beginning and end.
+The output is described in the table below:
 
-Type: string
+| Value                                                    | Type   |
+| -------------------------------------------------------- | ------ |
+| Same string but without spaces at the beginning and end. | String |
 
 ### 11.3 Example
 
@@ -447,9 +473,11 @@ Please note that this function call uses the regular expression language provide
 
 ### 12.2 Output
 
-Whether the string matches or not.
+The output is described in the table below:
 
-Type: Boolean
+| Value                              | Type    |
+| ---------------------------------- | ------- |
+| Whether the string matches or not. | Boolean |
 
 ### 12.3 Example
 
@@ -505,9 +533,11 @@ Please note that this function call uses the regular expression language provide
 
 ### 13.2 Output
 
-The original string, with all occurrences of the regular expression replaced by the replacement string. If the regular expression does not occur in the string, the original is returned.
+The output is described in the table below:
 
-Type: string
+| Value                                                        | Type   |
+| ------------------------------------------------------------ | ------ |
+| The original string, with all occurrences of the regular expression replaced by the replacement string. If the regular expression does not occur in the string, the original is returned. | String |
 
 ### 13.3 Example
 
@@ -562,13 +592,15 @@ Please note that this function call uses the regular expression language provide
 
 {{% /alert %}}
 
-### 13.2 Output
+### 14.2 Output
 
-The original string, with the first occurrence of the regular expression replaced by the replacement string. If the regular expression does not occur in the string, the original is returned.
+The output is described in the table below:
 
-Type: string
+| Value                                                        | Type   |
+| ------------------------------------------------------------ | ------ |
+| The original string, with the first occurrence of the regular expression replaced by the replacement string. If the regular expression does not occur in the string, the original is returned. | String |
 
-### 13.3 Example
+### 14.3 Example
 
 If you type in the following input:
 
@@ -603,11 +635,13 @@ At least one of the parameters must be of type string.
 
 ### 15.2 Output
 
-A new string that is the literal concatenation of the two input parameters.
+The output is described in the table below:
 
-Type: string
+| Value                                                        | Type   |
+| ------------------------------------------------------------ | ------ |
+| A new string that is the literal concatenation of the two input parameters. | String |
 
-### Example
+### 15.3 Example
 
 An example of an input to combine two strings can be the following:
 
@@ -653,7 +687,11 @@ Input parameters are described in the table below:
 
 ### 16.2 Output
 
-The string, URL-encoded.
+The output is described in the table below:
+
+| Value                    | Type   |
+| ------------------------ | ------ |
+| The string, URL-encoded. | String |
 
 ### 16.3 Example
 
@@ -683,7 +721,11 @@ Input parameters are described in the table below:
 
 ### 17.2 Output
 
-The string, URL-decoded.
+The output is described in the table below:
+
+| Value                    | Type   |
+| ------------------------ | ------ |
+| The string, URL-decoded. | String |
 
 ### 17.3 Example
 

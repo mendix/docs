@@ -25,7 +25,11 @@ Input parameters are described in the table below:
 
 ### 2.2 Output
 
-Returns the largest value from the specified arguments. If the arguments are of type Date and time, the result will also be of type Date and time. If the arguments are numeric, the result will be of the most precise type. For example, if both an Integer/Long and a Decimal argument are specified, the result will be of type Decimal.
+The output is described in the table below:
+
+| Value                                           | Type                                                         |
+| ----------------------------------------------- | ------------------------------------------------------------ |
+| The largest value from the specified arguments. | If the arguments are of type Date and time, the result will also be of type Date and time. <br />If the arguments are numeric, the result will be of the most precise type. <br />For example, if both an Integer/Long and a Decimal argument are specified, the result will be of type Decimal. |
 
 ### 2.3 Example
 
@@ -56,7 +60,11 @@ Input parameters are described in the table below:
 
 ### 3.2 Output
 
-Returns the smallest value from the specified arguments. If the arguments are of type Date and time, the result will also be of type Date and time. If the arguments are numeric, the result will be of the most precise type. For example, if both an Integer/Long and a Decimal argument are specified, the result will be of type Decimal.
+The output is described in the table below:
+
+| Value                                            | Type                                                         |
+| ------------------------------------------------ | ------------------------------------------------------------ |
+| The smallest value from the specified arguments. | If the arguments are of type Date and time, the result will also be of type Date and time. <br />If the arguments are numeric, the result will be of the most precise type. <br />For example, if both an Integer/Long and a Decimal argument are specified, the result will be of type Decimal. |
 
 ### 3.3 Example
 
@@ -125,7 +133,11 @@ Generates a random number >= 0.0 and < 1.0
 
 ### 5.1 Output
 
-The output is a random number of a decimal type between 0.0 and 1.0
+The output is described in the table below:
+
+| Value                                                  | Type    |
+| ------------------------------------------------------ | ------- |
+| A random number of a decimal type between 0.0 and 1.0. | Decimal |
 
 ### 5.2 Example
 
@@ -155,7 +167,11 @@ Input parameters are described in the table below:
 
 ### 6.2 Output
 
-The input value rounded down to the nearest integer.
+The output is described in the table below:
+
+| Value                                                | Type    |
+| ---------------------------------------------------- | ------- |
+| The input value rounded down to the nearest integer. | Integer |
 
 ### 6.3 Example
 
@@ -197,7 +213,11 @@ Input parameters are described in the table below:
 
 ### 7.2 Output
 
-The input value rounded up to the nearest integer.
+The output is described in the table below:
+
+| Value                                              | Type    |
+| -------------------------------------------------- | ------- |
+| The input value rounded up to the nearest integer. | Integer |
 
 ### 7.3 Example
 
@@ -240,9 +260,11 @@ Input parameters are described in the table below:
 
 ### 8.2 Output
 
-The number to the power, as in, n^p. The result will be of the most precise type necessary.
+The output is described in the table below:
 
-Type: Integer/Long or Decimal
+| Value                                                        | Type                    |
+| ------------------------------------------------------------ | ----------------------- |
+| The number to the power, as in, n^p. The result will be of the most precise type necessary. | Integer/Long or Decimal |
 
 ### 8.3 Example
 
@@ -299,9 +321,11 @@ Input parameters are described in the table below:
 
 ### 9.2 Output
 
-The absolute value of the input, which is never negative. Corresponds to taking the square and then the positive square root.
+The output is described in the table below:
 
-Type: Integer/Long or Decimal
+| Value                                                        | Type                    |
+| ------------------------------------------------------------ | ----------------------- |
+| The absolute value of the input, which is never negative. Corresponds to taking the square and then the positive square root. | Integer/Long or Decimal |
 
 ### 9.3 Example
 

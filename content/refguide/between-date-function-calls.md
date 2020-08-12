@@ -23,7 +23,11 @@ Input parameters are described in the table below:
 
 ### 2.2 Output
 
-The expression will return the difference between the two dates, as a Decimal, measured in milliseconds.
+The output is described in the table below:
+
+| Value                                                        | Type    |
+| ------------------------------------------------------------ | ------- |
+| The difference between the two dates measured in milliseconds | Decimal |
 
 ### 2.3 Example
 
@@ -54,7 +58,11 @@ Input parameters are described in the table below:
 
 ### 3.2 Output
 
-The expression will return difference between the two dates, as a Decimal, measured in seconds.
+The output is described in the table below:
+
+| Value                                                     | Type    |
+| --------------------------------------------------------- | ------- |
+| The difference between the two dates measured in seconds. | Decimal |
 
 ### 3.3 Example
 
@@ -85,7 +93,11 @@ Input parameters are described in the table below:
 
 ### 4.2 Output
 
-The expression will return the difference between the two dates, as a Decimal, measured in minutes.
+The output is described in the table below:
+
+| Value                                                     | Type    |
+| --------------------------------------------------------- | ------- |
+| The difference between the two dates measured in minutes. | Decimal |
 
 ### 4.3 Example
 
@@ -116,7 +128,11 @@ Input parameters are described in the table below:
 
 ### 5.2 Output
 
-The expression will return the difference between the two dates, as a Decimal, measured in hours.
+The output is described in the table below:
+
+| Value                                                   | Type    |
+| ------------------------------------------------------- | ------- |
+| The difference between the two dates measured in hours. | Decimal |
 
 ### 5.3 Example
 
@@ -147,7 +163,11 @@ Input parameters are described in the table below:
 
 ### 6.2 Output
 
-The expression will return the difference between the two dates as a positive Decimal measured in days. Time is taken into consideration, so comparing `date-x 0:00` with `date-x 06:00` will result in `0.25000000`.
+The output is described in the table below:
+
+| Value                                                        | Type             |
+| ------------------------------------------------------------ | ---------------- |
+| The difference between the two dates as a positive Decimal measured in days. Time is taken into consideration, so comparing `date-x 0:00` with `date-x 06:00` will result in `0.25000000`. | Positive decimal |
 
 ### 6.3 Example
 
@@ -178,7 +198,11 @@ Input parameters are described in the table below:
 
 ### 7.2 Output
 
-The expression will return the difference between the two dates, as a Decimal, measured in weeks.
+The output is described in the table below:
+
+| Value                                                   | Type    |
+| ------------------------------------------------------- | ------- |
+| The difference between the two dates measured in weeks. | Decimal |
 
 ### 7.3 Example
 

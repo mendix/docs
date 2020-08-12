@@ -27,8 +27,11 @@ Input parameters are described in the table below:
 
 ### 2.2 Output
 
-The parsed date, or the default value if a date could not be parsed.
-Type: Date and time
+The output is described in the table below:
+
+| Value                                                        | Type          |
+| ------------------------------------------------------------ | ------------- |
+| The parsed date or the default value if a date could not be parsed. | Date and time |
 
 ### 2.3 Example
 
@@ -73,10 +76,13 @@ Input parameters are described in the table below:
 
 ### 3.2 Output
 
-A formatted representation of the dateTime.
-Type: String
+The output is described in the table below:
 
-### 3.4 Examples
+| Value                                       | Type   |
+| ------------------------------------------- | ------ |
+| A formatted representation of the dateTime. | String |
+
+### 3.4 Example
 
 If you type in the following input:
 
@@ -110,8 +116,11 @@ Input parameters are described in the table below:
 
 ### 4.2 Output
 
-A formatted representation of the time part of the dateTime value.
-Type: String
+The output is described in the table below:
+
+| Value                                                        | Type   |
+| ------------------------------------------------------------ | ------ |
+| A formatted representation of the time part of the dateTime value. | String |
 
 ### 4.3 Example
 
@@ -141,8 +150,11 @@ Input parameters are described in the table below:
 
 ### 5.2 Output
 
-A formatted representation of the date part of the dateTime value.
-Type: String
+The output is described in the table below:
+
+| Value                                                        | Type   |
+| ------------------------------------------------------------ | ------ |
+| A formatted representation of the date part of the dateTime value. | String |
 
 ### 5.3 Example
 

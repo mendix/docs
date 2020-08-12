@@ -6,7 +6,7 @@ tags: ["studio pro", "expression", "enumeration", "expressions"]
 
 ## 1 Introduction
 
-Enumerations are referenced by <modulename>.<enumerationname>.<enumerationvalue>
+Enumerations are referenced by `<modulename>.<enumerationname>.<enumerationvalue>`.
 
 For example, you have a module called *OrderProcessing*, in which an enumeration *Status* is defined with two possible values: *started* and *completed*. 
 
@@ -35,7 +35,11 @@ As an input parameter you can use an enumeration value of any enumeration.
 
 ### 2.2 Output
 
-The expression will return a string: the caption of the enumeration value in the current language. 
+The output is described in the table below:
+
+| Value                                                        | Type   |
+| ------------------------------------------------------------ | ------ |
+| The caption of the enumeration value in the current language. | String |
 
 ### 2.3 Example
 
@@ -61,7 +65,11 @@ As an input parameter you can use an enumeration value of any enumeration.
 
 ### 3.2 Output
 
-The expression will return a string: the key (name) of the enumeration value in the current language.  
+The output is described in the table below:
+
+| Value                                                        | Type   |
+| ------------------------------------------------------------ | ------ |
+| The key (name) of the enumeration value in the current language. | String |
 
 ### 3.3 Example
 

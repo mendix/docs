@@ -25,7 +25,11 @@ Input parameters are described in the table below:
 
 ### 2.2 Output
 
-The expression will result in a Date and time value that is the sum of the *initial date* and *N milliseconds*. 
+The output is described in the table below:
+
+| Value                                                        | Type          |
+| ------------------------------------------------------------ | ------------- |
+| A Date and time value that is the sum of the *initial date* and *N milliseconds*. | Date and time |
 
 ### 2.3 Example
 
@@ -58,7 +62,11 @@ Input parameters are described in the table below:
 
 ### 3.2 Output
 
-The expression will result in a Date and time value that is the sum of the *initial date* and *N seconds*. 
+The output is described in the table below:
+
+| Value                                                        | Type          |
+| ------------------------------------------------------------ | ------------- |
+| A Date and time value that is the sum of the *initial date* and *N seconds*. | Date and time |
 
 ### 3.3 Example
 
@@ -91,7 +99,11 @@ Input parameters are described in the table below:
 
 ### 4.2 Output
 
-The expression will result in a Date and time value that is the sum of the *initial date* and *N minutes*. 
+The output is described in the table below:
+
+| Value                                                        | Type          |
+| ------------------------------------------------------------ | ------------- |
+| A Date and time value that is the sum of the *initial date* and *N minutes*. | Date and time |
 
 ### 4.3 Example
 
@@ -124,7 +136,11 @@ Input parameters are described in the table below:
 
 ### 5.2 Output
 
-The expression will result in a Date and time value that is the sum of the *initial date* and *N hours*.
+The output is described in the table below:
+
+| Value                                                        | Type          |
+| ------------------------------------------------------------ | ------------- |
+| A Date and time value that is the sum of the *initial date* and *N hours*. | Date and time |
 
 ### 5.3 Example
 
@@ -157,7 +173,11 @@ Input parameters are described in the table below:
 
 ### 6.2 Output
 
-The expression will result in a Date and time value that is the sum of the *initial date* and *N days*.
+The output is described in the table below:
+
+| Value                                                        | Type          |
+| ------------------------------------------------------------ | ------------- |
+| A Date and time value that is the sum of the *initial date* and *N days.* | Date and time |
 
 ### 6.3 Example
 
@@ -190,7 +210,11 @@ Input parameters are described in the table below:
 
 ### 7.2 Output
 
-The expression will result in a Date and time value that is the sum of the *initial date* and *N weeks*.
+The output is described in the table below:
+
+| Value                                                        | Type          |
+| ------------------------------------------------------------ | ------------- |
+| A Date and time value that is the sum of the *initial date* and *N weeks.* | Date and time |
 
 ### 7.3 Example
 
@@ -223,7 +247,11 @@ Input parameters are described in the table below:
 
 ### 8.2 Output
 
-The expression will result in a Date and time value that is the sum of the *initial date* and *N months*.
+The output is described in the table below:
+
+| Value                                                        | Type          |
+| ------------------------------------------------------------ | ------------- |
+| A Date and time value that is the sum of the *initial date* and *N months.* | Date and time |
 
 ### 8.3 Example
 
@@ -256,7 +284,11 @@ Input parameters are described in the table below:
 
 ### 9.2 Output
 
-The expression will result in a Date and time value that is the sum of the *initial date* and *N years*.
+The output is described in the table below:
+
+| Value                                                        | Type          |
+| ------------------------------------------------------------ | ------------- |
+| A Date and time value that is the sum of the *initial date* and *N years.* | Date and time |
 
 ### 9.3 Example
 

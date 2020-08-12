@@ -1,8 +1,6 @@
----
 title: "Parse & Format Decimal Function Calls"
 parent: "expressions"
 tags: ["studio pro", "expression", "parsing", "formatting"]
----
 
 ## 1 Introduction
 
@@ -24,7 +22,11 @@ Input parameters are described in the table below:
 
 ### 2.2 Output
 
-The output is a decimal value that matches the inputted string value. If the value cannot be parsed (meaning, it does not match the format parameter or contains illegal characters), the default value will be returned. If no default value is provided, an error occurs.
+The output is described in the table below:
+
+| Value                                                        | Type    |
+| ------------------------------------------------------------ | ------- |
+| The output is a decimal value that matches the inputted string value. If the value cannot be parsed (meaning, it does not match the format parameter or contains illegal characters), the default value will be returned. If no default value is provided, an error occurs. | Decimal |
 
 ### 2.3 Example
 
@@ -63,7 +65,11 @@ In nanoflows, this function only takes a single parameter described below:
 
 ### 3.2 Output
 
-A string representation of the decimal in the format specified by the `format` parameter. The type of the output is string.
+The output is described in the table below:
+
+| Value                                                        | Type   |
+| ------------------------------------------------------------ | ------ |
+| A string representation of the decimal in the format specified by the `format` parameter. | String |
 
 ### 3.3 Microflow Examples
 

@@ -71,9 +71,7 @@ The database and XPath sources retrieve objects from the database and supports s
 This property indicates whether the control bar will be visible in the end-user interface. The control bar also includes the paging buttons.
 
 {{% alert type="warning" %}}
-
 Even if the control bar is invisible there can still be a default button that is triggered by (double) clicking a row. See the property 'Default button trigger' and [grid buttons](control-bar) for more information.
-
 {{% /alert %}}
 
 Default: *True*
@@ -81,7 +79,7 @@ Default: *True*
 #### 3.3.2 Show Paging Buttons {#show-paging-buttons}
 
 {{% alert type="warning" %}}
-This property is not available since Mendix 8.13. Use [Show Paging Bar](#show-paging-bar) property instead.
+This property is not available in Mendix 8.13 and above. Use the [Show Paging Bar](#show-paging-bar) property instead.
 {{% /alert %}}
 
 This property indicates with the buttons to page through the information in the grid are visible. Only hide these buttons if you are sure that there will never be more objects than the number of rows of the grid. Note that hiding the control bar also hides the paging buttons.
@@ -91,22 +89,22 @@ Default: *True*
 #### 3.3.3 Show Paging Bar {#show-paging-bar}
 
 {{% alert type="info" %}}
-This property is introduced in Mendix 8.13. It replaces [Show Paging Buttons](#show-paging-buttons) property.
+This property was introduced in Mendix 8.13. It replaces the [Show Paging Buttons](#show-paging-buttons) property.
 {{% /alert %}}
 
-With this property you can change the way paging bar is shown.
+With this property, you can change the way the paging bar is shown.
 
 | Value | Description |
 | --- | --- |
-| Yes (with total count) *(default)* | Paging bar is shown including "go to last page" button and total count of objects. |
-| Yes (without total count)          | Paging bar is shown, except "got to last page" button. Also total count of objects is not shown, page numbers are shown instead. |
-| No                                 | Paging buttons are not shown. |
-
-{{% alert type="warning" %}}
-Hiding the control bar also hides the paging buttons. See [Show Control Bar](#show-control-bar) property.
-{{% /alert %}}
+| Yes (with total count) | The paging bar is shown, including the **Go to last page** button and the total count of objects. |
+| Yes (without total count) | The paging bar is shown (except for the **Go to last page** button). Also, the total count of objects is not shown, as page numbers are shown instead. |
+| No | The paging buttons are not shown. |
 
 Default: *Yes (with total count)*
+
+{{% alert type="warning" %}}
+Hiding the control bar also hides the paging buttons. For details, see [Show Control Bar](#show-control-bar).
+{{% /alert %}}
 
 #### 3.3.4 Number of Rows {#number-of-rows}
 

@@ -48,7 +48,7 @@ Click **Create** to create a new certificate profile, or select an existing prof
 
 To change the name of a certificate profile, click the **Edit** icon next to the name and enter the new name.
 
-Upload your CA from a file in *.pem* format by clicking the **Upload Certificate Authority** button. Alternatively, click **Enter Manually** to open an editor where you can paste your CA.
+Upload your CA from a file in *.pem* format by clicking **Upload Certificate Authority**. Alternatively, click **Enter Manually** to open an editor where you can paste your CA.
 
 {{% alert type="info" %}}
 Your CA must contain a single root certificate and can have multiple intermediate certificates.

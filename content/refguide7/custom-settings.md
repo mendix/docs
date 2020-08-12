@@ -71,6 +71,8 @@ The settings below influence the behavior of the log files. These settings can o
 | OracleServiceName | Defines the SERVICE_NAME when you have a connection with an Oracle DBMS. |   |
 | ReadCommittedSnapshot | Defines whether the READ_COMMITTED_SNAPSHOT option of Microsoft SQL Server must be enabled or not. See for more information: [Using Snapshot Isolation](http://msdn.microsoft.com/en-us/library/tcbchxcb(VS.80).aspx). The value can be true or false. | true |
 | DataStorage.EnableDiagnostics | This setting can be used to generate a uniqueness constraint violation report. | false |
+| UseNetworkTimeout | This setting is applied to PostgreSQL and DB2. It affects the timeout mechanism used when reserving new ids for Mendix objects. If set to true, the socket level request timeout is used. In that case, the request timeout is handled within the operating system. If set to false, the timeout is handled by Mendix runtime. For other databases, timeouts are always handled by Mendix runtime. | true |
+| JdbcLoginTimeout | This setting defines the database connection establishment time in milliseconds. | 5000 |
 
 ### 4.2 Connection Pooling
 

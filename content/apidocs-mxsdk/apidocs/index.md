@@ -48,8 +48,6 @@ For details, see [Feedback API](feedback-api).
 
 With this API, you can retrieve the [user roles](/refguide/user-roles) of your application users so you can grant them specific access levels to the application.
 
-This is part of the [AppCloudServices](https://appstore.home.mendix.com/link/app/934/) module.
-
 For details, see [Permissions API](permissions-api).
 
 ## 9 Pluggable Widgets API

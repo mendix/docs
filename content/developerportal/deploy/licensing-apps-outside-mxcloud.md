@@ -68,7 +68,7 @@ To license a MindSphere app, you need to provide your *License ID* and *License 
 
 To license a Mendix app on Mendix for Private Cloud, you need to supply a *Subscription Secret* which is linked to your app. See below for how it can be added to either a Connected or Standalone cluster.
 
-In addition to the licenses for your apps, you will also need to license the Mendix Operator which helps deploy your app to a Private Cloud environment. For information on the Mendix Operator license, see [Licensing Mendix for Private Cloud](http://localhost:4000/developerportal/deploy/private-cloud#licensing).
+In addition to the licenses for your apps, you will also need to license the Mendix Operator which helps deploy your app to a Private Cloud environment. For information on the Mendix Operator license, see [Licensing Mendix for Private Cloud](private-cloud#licensing).
 
 #### 3.4.1 Mendix for Private Cloud Connected
 

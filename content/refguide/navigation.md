@@ -91,6 +91,10 @@ A profile can be added with the **Add navigation profile** button. Only one prof
 
 This specifies the application title. This title is shown in the title bar of the browser.
 
+#### 4.1.2 Application Icon
+
+This specifies the application icon. This icon is shown in the title bar and bookmarks of the browser. It can only be set in the Responsive profile, but will also be used by the other browser profiles.
+
 ### 4.2 Home Pages
 
 #### 4.2.1 Default Home Page
@@ -127,11 +131,11 @@ Allows for changing the [profile type](navigation).
 
 This deletes the profile. If [menu widgets](menu-widgets) are still referring to the profile, errors will appear. It is possible to undo the deletion of a profile.
 
-#### 4.3.2 Sync Configuration {#customize}
+#### 4.3.2 Synchronization Configuration {#customize}
 
 Only available on profiles supporting offline synchronization.
 
-This opens the **Customize offline synchronziation** dialog box that is used for overriding offline synchronization settings for specific entities. For each entity the download setting is shown. A default is automatically determined by analyzing the model, but can be overridden in which case the setting will appear in boldface. For more details on the settings and when to use them, see the [Offline-First Reference Guide](offline-first#customizable-synchronization).
+This opens the **Customize offline synchronization** dialog box that is used for overriding offline synchronization settings for specific entities. For each entity the download setting is shown. A default is automatically determined by analyzing the model, but can be overridden in which case the setting will appear in boldface. For more details on the settings and when to use them, see the [Offline-First Reference Guide](offline-first#customizable-synchronization).
 
 ![](attachments/navigation/customize-offline-synchronization.png)
 

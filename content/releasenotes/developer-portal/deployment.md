@@ -10,6 +10,71 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### August 7th, 2020
+
+#### Mendix Cloud
+
+* We fixed an issue where some customers did not receive an SMS for two-factor authentication. (Ticket 104252) 
+
+### July 30th, 2020
+
+#### Mendix Cloud
+
+* We fixed an issue where users did not see changes they made to node permissions. (Tickets 104154 and 104642)
+
+### July 29th, 2020
+
+#### Mendix for Private Cloud Portal
+
+* We now allow you to delete a namespace which contains environments. For a connected namespace, this will also delete the environments.
+* We now allow you to delete environment information from the Developer Portal when the portal is unable to connect to the cluster via the Mendix Gateway Agent.
+* We now allow you to change log levels from the Developer Portal for your apps' log nodes.
+* We fixed an issue where you could not delete a deployment package if it was broken.
+* We now send an email to users when their permissions are changed, or when they are removed from a namespace.
+
+### July 27th, 2020
+
+#### Mendix for Private Cloud — Mendix Operator v1.4.0 and Mendix Gateway Agent v1.3.0
+
+* We have improved compatibility with annotations and other attributes modified by ingress controllers. Mendix Operator will no longer delete annotations and attributes it doesn't recognize.
+* We have added an option to specify log levels for every log node.
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+
+### July 22nd, 2020
+
+#### Mendix Cloud
+
+* We fixed an issue where trends graphs were not being updated with the latest data. (Ticket 102400)
+
+### July 16th, 2020
+
+#### Mendix Cloud
+
+* We added the ability to set the `SameSite` value on cookies to `None` for existing apps. This enables apps to run in iframes in browsers where the default SameSite setting for cookies is `Lax` or `Strict`. (Tickets 97187, 97190, 97699, 97701, 97900, and 98507)
+    *  This is implemented through the `SAMESITE_COOKIE_PRE_MX812` custom environment variable. For more information see [Running Your App in an Iframe](/developerportal/deploy/environments-details#iframe) in the *Environment Details* documentation.
+
+### July 15th, 2020
+
+#### Mendix for Private Cloud — Mendix Operator v1.3.0 and Mendix Gateway Agent v1.2.0
+
+* We introduced support for configuring environment variables and Java options for a Mendix application running in Private Cloud.
+* We added support for using registry credentials from an existing .dockerconfigjson secret.
+* We now provide an option to configure image pull secrets when using a Generic registry with authentication. When using an external generic registry, such as Azure Container Registry, Docker Hub or quay.io, you no longer need to configure image pull secrets manually - this will be done by the (re)configuration script.
+* We have updated all images to be based on the latest ubi8 image so that they include the latest security patches.
+* We have fixed an issue where changing the App URL in OpenShift resulted in an exception.
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+
+#### Mendix for Private Cloud Portal
+
+* We have added support for configuring Custom Runtime Settings, Environment Variables and Java Options. This feature requires the Mendix Operator and Gateway Agent to be upgraded to the latest version.
+* We have added support for customizing the App URL. This feature requires the Mendix Operator to be upgraded to the latest version.
+* We have added support for dedicated storage plans which can only be used by one environment at a time. This feature requires the Mendix Operator and Gateway Agent to be upgraded to the latest version.
+* It is now possible to deploy an MDA which was built more than one week ago.
+* We improved the way that the Admin Password is updated.
+* We have fixed multiple issues where the UI was not showing information or was showing outdated information.
+
 ### July 8th, 2020
 
 #### Mendix Cloud Fixes
@@ -269,6 +334,12 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
     * Workaround – Choose the **Details** for the **Production** environment again and you will be taken to the correct environment.
 
 * When you attempt to open an **OPERATE** or **DEPLOY** page in the Developer Portal, you may see a login page. You will need to force a refresh of your page, or clear your browser cache, in order to access the page.
+
+### October 1st, 2019
+
+#### Mendix Cloud
+
+* The `X-Client-Certificate` request header has been removed. You can use the `SSL-Client-S-DN` header instead. See [Mendix Cloud HTTP Request Headers](/developerportal/deploy/mendix-cloud-request-headers) for more information.
 
 ### September 27th, 2019
 

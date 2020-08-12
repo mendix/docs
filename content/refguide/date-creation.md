@@ -12,7 +12,7 @@ This function does not accept parameters, only fixed values. To create a date us
 
 ## 2 Values
 
-These functions takes between one and six input values in the following order:
+These functions take between one and six input values in the following order:
 
 1. years (type: integer, four digits and greater than 1799)
 2. months (type: integer, between 1 and 12)

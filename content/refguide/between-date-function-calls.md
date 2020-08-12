@@ -14,16 +14,20 @@ The `millisecondsBetween` function calculates the difference between the input v
 
 ### 2.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   First date
-    Type: Date and time
-*   Second date
-    Type: Date and time
+| Value       | Type          |
+| ----------- | ------------- |
+| First date  | Date and time |
+| Second date | Date and time |
 
 ### 2.2 Output
 
-The expression will return the difference between the two dates, as a Decimal, measured in milliseconds.
+The output is described in the table below:
+
+| Value                                                        | Type    |
+| ------------------------------------------------------------ | ------- |
+| The difference between the two dates measured in milliseconds | Decimal |
 
 ### 2.3 Example
 
@@ -45,16 +49,20 @@ The `secondsBetween` function calculates the difference between the input values
 
 ### 3.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   First date
-    Type: Date and time
-*   Second date
-    Type: Date and time
+| Value       | Type          |
+| ----------- | ------------- |
+| First date  | Date and time |
+| Second date | Date and time |
 
 ### 3.2 Output
 
-The expression will return difference between the two dates, as a Decimal, measured in seconds.
+The output is described in the table below:
+
+| Value                                                     | Type    |
+| --------------------------------------------------------- | ------- |
+| The difference between the two dates measured in seconds. | Decimal |
 
 ### 3.3 Example
 
@@ -76,16 +84,20 @@ The `minutesBetween` function calculates the difference between the input values
 
 ### 4.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   First date
-    Type: Date and time
-*   Second date
-    Type: Date and time
+| Value       | Type          |
+| ----------- | ------------- |
+| First date  | Date and time |
+| Second date | Date and time |
 
 ### 4.2 Output
 
-The expression will return the difference between the two dates, as a Decimal, measured in minutes.
+The output is described in the table below:
+
+| Value                                                     | Type    |
+| --------------------------------------------------------- | ------- |
+| The difference between the two dates measured in minutes. | Decimal |
 
 ### 4.3 Example
 
@@ -107,16 +119,20 @@ The `hoursBetween` function calculates the difference between the input values i
 
 ### 5.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   First date
-    Type: Date and time
-*   Second date
-    Type: Date and time
+| Value       | Type          |
+| ----------- | ------------- |
+| First date  | Date and time |
+| Second date | Date and time |
 
 ### 5.2 Output
 
-The expression will return the difference between the two dates, as a Decimal, measured in hours.
+The output is described in the table below:
+
+| Value                                                   | Type    |
+| ------------------------------------------------------- | ------- |
+| The difference between the two dates measured in hours. | Decimal |
 
 ### 5.3 Example
 
@@ -138,16 +154,20 @@ The `daysBetween` function calculates the difference between the input values in
 
 ### 6.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   First date
-    Type: Date and time
-*   Second date
-    Type: Date and time
+| Value       | Type          |
+| ----------- | ------------- |
+| First date  | Date and time |
+| Second date | Date and time |
 
 ### 6.2 Output
 
-The expression will return the difference between the two dates as a positive Decimal measured in days. Time is taken into consideration, so comparing `date-x 0:00` with `date-x 06:00` will result in `0.25000000`.
+The output is described in the table below:
+
+| Value                                                        | Type             |
+| ------------------------------------------------------------ | ---------------- |
+| The difference between the two dates as a positive Decimal measured in days. Time is taken into consideration, so comparing `date-x 0:00` with `date-x 06:00` will result in `0.25000000`. | Positive decimal |
 
 ### 6.3 Example
 
@@ -169,16 +189,20 @@ The `weeksBetween` function calculates the difference between the input values i
 
 ### 7.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   First date
-    Type: Date and time
-*   Second date
-    Type: Date and time
+| Value       | Type          |
+| ----------- | ------------- |
+| First date  | Date and time |
+| Second date | Date and time |
 
 ### 7.2 Output
 
-The expression will return the difference between the two dates, as a Decimal, measured in weeks.
+The output is described in the table below:
+
+| Value                                                   | Type    |
+| ------------------------------------------------------- | ------- |
+| The difference between the two dates measured in weeks. | Decimal |
 
 ### 7.3 Example
 

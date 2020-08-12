@@ -16,16 +16,20 @@ The `addMilliseconds` function adds a specified number of milliseconds to a date
 
 ### 2.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-* Initial date
-	Type: Date and time
-* The number of milliseconds to be added
-    Type: Integer
+| Value                                  | Type          |
+| -------------------------------------- | ------------- |
+| Initial date                           | Date and time |
+| The number of milliseconds to be added | Integer       |
 
 ### 2.2 Output
 
-The expression will result in a Date and time value that is the sum of the *initial date* and *N milliseconds*. 
+The output is described in the table below:
+
+| Value                                                        | Type          |
+| ------------------------------------------------------------ | ------------- |
+| A Date and time value that is the sum of the *initial date* and *N milliseconds*. | Date and time |
 
 ### 2.3 Example
 
@@ -49,16 +53,20 @@ The `addSeconds` function adds a specified number of seconds to a date.
 
 ### 3.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   Initial date
-    Type: Date and time
-*   The number of seconds to be added
-    Type: Integer
+| Value                             | Type          |
+| --------------------------------- | ------------- |
+| Initial date                      | Date and time |
+| The number of seconds to be added | Integer       |
 
 ### 3.2 Output
 
-The expression will result in a Date and time value that is the sum of the *initial date* and *N seconds*. 
+The output is described in the table below:
+
+| Value                                                        | Type          |
+| ------------------------------------------------------------ | ------------- |
+| A Date and time value that is the sum of the *initial date* and *N seconds*. | Date and time |
 
 ### 3.3 Example
 
@@ -82,16 +90,20 @@ The `addMinutes` function adds a number of minutes to a date.
 
 ### 4.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   Initial date
-    Type: Date and time
-*   The amount of minutes to be added
-    Type: Integer
+| Value                             | Type          |
+| --------------------------------- | ------------- |
+| Initial date                      | Date and time |
+| The number of minutes to be added | Integer       |
 
 ### 4.2 Output
 
-The expression will result in a Date and time value that is the sum of the *initial date* and *N minutes*. 
+The output is described in the table below:
+
+| Value                                                        | Type          |
+| ------------------------------------------------------------ | ------------- |
+| A Date and time value that is the sum of the *initial date* and *N minutes*. | Date and time |
 
 ### 4.3 Example
 
@@ -115,16 +127,20 @@ The `addHours` function adds a number of hours to a date.
 
 ### 5.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   Initial date
-    Type: Date and time
-*   The amount of hours to be added
-    Type: Integer
+| Value                           | Type          |
+| ------------------------------- | ------------- |
+| Initial date                    | Date and time |
+| The number of hours to be added | Integer       |
 
 ### 5.2 Output
 
-The expression will result in a Date and time value that is the sum of the *initial date* and *N hours*.
+The output is described in the table below:
+
+| Value                                                        | Type          |
+| ------------------------------------------------------------ | ------------- |
+| A Date and time value that is the sum of the *initial date* and *N hours*. | Date and time |
 
 ### 5.3 Example
 
@@ -148,16 +164,20 @@ The `addDaysUTC` function adds a number of days to a date. `addDays` uses the se
 
 ### 6.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   Initial date
-    Type: Date and time
-*   The amount of days to be added
-    Type: Integer
+| Value                          | Type          |
+| ------------------------------ | ------------- |
+| Initial date                   | Date and time |
+| The number of days to be added | Integer       |
 
 ### 6.2 Output
 
-The expression will result in a Date and time value that is the sum of the *initial date* and *N days*.
+The output is described in the table below:
+
+| Value                                                        | Type          |
+| ------------------------------------------------------------ | ------------- |
+| A Date and time value that is the sum of the *initial date* and *N days.* | Date and time |
 
 ### 6.3 Example
 
@@ -181,16 +201,20 @@ The `addWeeksUTC` function adds a number of weeks to a date using the UTC calend
 
 ### 7.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   Initial date
-    Type: Date and time
-*   The amount of weeks to be added
-    Type: Integer
+| Value                           | Type          |
+| ------------------------------- | ------------- |
+| Initial date                    | Date and time |
+| The number of weeks to be added | Integer       |
 
 ### 7.2 Output
 
-The expression will result in a Date and time value that is the sum of the *initial date* and *N weeks*.
+The output is described in the table below:
+
+| Value                                                        | Type          |
+| ------------------------------------------------------------ | ------------- |
+| A Date and time value that is the sum of the *initial date* and *N weeks.* | Date and time |
 
 ### 7.3 Example
 
@@ -214,16 +238,20 @@ The `addMonthsUTC` function adds a number of months to a date using the UTC cale
 
 ### 8.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   Initial date
-    Type: Date and time
-*   The amount of months to be added
-    Type: Integer
+| Value                            | Type          |
+| -------------------------------- | ------------- |
+| Initial date                     | Date and time |
+| The number of months to be added | Integer       |
 
 ### 8.2 Output
 
-The expression will result in a Date and time value that is the sum of the *initial date* and *N months*.
+The output is described in the table below:
+
+| Value                                                        | Type          |
+| ------------------------------------------------------------ | ------------- |
+| A Date and time value that is the sum of the *initial date* and *N months.* | Date and time |
 
 ### 8.3 Example
 
@@ -247,16 +275,20 @@ The `addYearsUTC` function adds a number of years to a date using the UTC calend
 
 ### 9.1 Input Parameters
 
-Use the following input parameters:
+Input parameters are described in the table below:
 
-*   Initial date
-    Type: Date and time
-*   The amount of years to be added
-    Type: Integer
+| Value                           | Type          |
+| ------------------------------- | ------------- |
+| Initial date                    | Date and time |
+| The number of years to be added | Integer       |
 
 ### 9.2 Output
 
-The expression will result in a Date and time value that is the sum of the *initial date* and *N years*.
+The output is described in the table below:
+
+| Value                                                        | Type          |
+| ------------------------------------------------------------ | ------------- |
+| A Date and time value that is the sum of the *initial date* and *N years.* | Date and time |
 
 ### 9.3 Example
 

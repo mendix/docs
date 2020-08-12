@@ -1,46 +1,59 @@
 ---
 title: "Parse Integer"
 parent: "expressions"
-tags: ["studio pro"]
+description: "Describes the function for parsing integer from strings in Mendix."
+tags: ["studio pro", "expressions", "parse", "integer"]
 ---
 
+## 1 Introduction
 
-Try to convert a string to an integer.
+This document describes functions that converts a string to an integer.
 
-## parseInteger
+## 2 parseInteger
 
-Take a string and try to parse it to an integer.
+Takes a string and parses it to an integer.
 
-### Input parameters
+### 2.1 Input Parameters
 
-*   The string to parse
-    Type: String
-*   (Optional) Default value
-    Type: Integer
+Input parameters are described in the table below:
 
-### Output
+| Value                        | Type    |
+| ---------------------------- | ------- |
+| The string to parse          | String  |
+| Default value **(optional)** | Integer |
 
-The integer, if it's possible to parse it from the string. If it's not a valid parsable string, the default value will be returned. If no default value is provided, an error will occur.
-Type: Integer
+### 2.2 Output
 
-```java
-parseInteger('42')
-```
+The output is described in the table below:
 
-returns:
+| Value                                                        | Type    |
+| ------------------------------------------------------------ | ------- |
+| An integer if it is possible to parse it from the string. If it is not a valid parsable string, the default value will be returned. If no default value is provided, an error will occur. | Integer |
 
-```java
-42
-```
+### 2.3 Examples
 
-with default value:
+The examples below illustrate which value the expression returns:
 
-```java
-parseInteger('not_an_integer', 42)
-```
+* If you type in the following input:
 
-returns:
+    ```java
+    parseInteger('42')
+    ```
 
-```java
-42
-```
+    the output is:
+
+    ```java
+    42
+    ```
+
+* If you type in the following input:
+
+    ```java
+    parseInteger('not_an_integer', 42)
+    ```
+
+    the output is:
+
+    ```java
+    42
+    ```

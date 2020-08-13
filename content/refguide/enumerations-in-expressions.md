@@ -44,7 +44,7 @@ The output is described in the table below:
 
 ### 2.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 getCaption($Customer/Grade)
@@ -74,7 +74,7 @@ The output is described in the table below:
 
 ### 3.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 getKey($Customer/Grade)

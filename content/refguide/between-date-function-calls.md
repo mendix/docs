@@ -15,7 +15,7 @@ The `millisecondsBetween` function calculates the difference between the input v
 
 ### 2.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value       | Type          |
 | ----------- | ------------- |
@@ -32,7 +32,7 @@ The output is described in the table below:
 
 ### 2.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 millisecondsBetween(dateTime(2007, 1, 1, 1, 1, 1), dateTime(2007,1,1,1,1,3))
@@ -50,7 +50,7 @@ The `secondsBetween` function calculates the difference between the input values
 
 ### 3.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value       | Type          |
 | ----------- | ------------- |
@@ -67,7 +67,7 @@ The output is described in the table below:
 
 ### 3.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 secondsBetween(dateTime(2007, 1, 1, 1, 1, 1), dateTime(2007,1,1,1,2,3))
@@ -85,7 +85,7 @@ The `minutesBetween` function calculates the difference between the input values
 
 ### 4.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value       | Type          |
 | ----------- | ------------- |
@@ -102,7 +102,7 @@ The output is described in the table below:
 
 ### 4.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 minutesBetween(dateTime(2007, 1, 1, 1, 2, 1), dateTime(2007,1,1,1,1,1))
@@ -120,7 +120,7 @@ The `hoursBetween` function calculates the difference between the input values i
 
 ### 5.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value       | Type          |
 | ----------- | ------------- |
@@ -137,7 +137,7 @@ The output is described in the table below:
 
 ### 5.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 hoursBetween(dateTime(2007, 1, 1, 3, 31, 1), dateTime(2007,1,1,1,1,1))
@@ -155,7 +155,7 @@ The `daysBetween` function calculates the difference between the input values in
 
 ### 6.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value       | Type          |
 | ----------- | ------------- |
@@ -172,7 +172,7 @@ The output is described in the table below:
 
 ### 6.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 daysBetween(dateTime(2007, 2, 13, 1, 1, 1), dateTime(2007,1,1,1,1,1))
@@ -190,7 +190,7 @@ The `weeksBetween` function calculates the difference between the input values i
 
 ### 7.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value       | Type          |
 | ----------- | ------------- |
@@ -207,7 +207,7 @@ The output is described in the table below:
 
 ### 7.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 weeksBetween(dateTime(2007, 1, 9, 1, 1, 1), dateTime(2007,1,1,1,1,1))

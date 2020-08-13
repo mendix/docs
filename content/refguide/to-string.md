@@ -17,7 +17,7 @@ If you need full control over the output format, consider using the data type sp
 
 ### 2.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                                         | Type                                                         |
 | --------------------------------------------- | ------------------------------------------------------------ |
@@ -25,7 +25,7 @@ Input parameters are described in the table below:
 
 ### 2.2 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 toString(1.4)

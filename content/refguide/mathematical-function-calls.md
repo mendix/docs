@@ -7,7 +7,7 @@ tags: ["studio pro", "mathematical function call", "mathematical function", "exp
 
 ## 1 Introduction
 
-Mathematical function calls include a limited number of mathematical operations with numbers, such as returning the largest value or rounding a number up. 
+Mathematical function calls include a limited number of mathematical operations on numbers, such as returning the largest value or rounding a number up. 
 
 If you need more elaborate functions (such as the square root, sin, cos, tan, numberOfPermutations, factorial, or fibonacciNumber), then consider using the community-supported [Math](https://appstore.home.mendix.com/link/app/112522/) module available in the Mendix App Store.
 
@@ -17,12 +17,11 @@ Returns the largest value from the specified arguments.
 
 ### 2.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value              | Type                                   |
 | ------------------ | -------------------------------------- |
-| Two or more values | Numeric type (Integer/Long or Decimal) |
-| Two or more values | Date and time                          |
+| Two or more values | All numeric type (Integer/Long or Decimal) or all Date and time                          |
 
 ### 2.2 Output
 
@@ -34,7 +33,7 @@ The output is described in the table below:
 
 ### 2.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 max(5, 1, 5, 6.7)
@@ -52,12 +51,11 @@ Returns the smallest value from the specified arguments.
 
 ### 3.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value              | Type                                   |
 | ------------------ | -------------------------------------- |
-| Two or more values | Numeric type (Integer/Long or Decimal) |
-| Two or more values | Date and time                          |
+| Two or more values | All numeric type (Integer/Long or Decimal) or all Date and time                          |
 
 ### 3.2 Output
 
@@ -69,7 +67,7 @@ The output is described in the table below:
 
 ### 3.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 min(5, 1, 5, 6.7)
@@ -87,7 +85,7 @@ Rounds a number to a certain precision.
 
 ### 4.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                  | Type                  |
 | ---------------------- | --------------------- |
@@ -104,7 +102,7 @@ The second optional parameter determines the precision of the rounding. The defa
 
 ### 4.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 round(3.5)
@@ -142,7 +140,7 @@ The output is described in the table below:
 
 ### 5.2 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 random()
@@ -160,7 +158,7 @@ Rounds down to an integer (returns the largest integer which is less than or equ
 
 ### 6.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value    | Type                  |
 | -------- | --------------------- |
@@ -176,7 +174,7 @@ The output is described in the table below:
 
 ### 6.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 floor(3.9)
@@ -206,7 +204,7 @@ Rounds up to an integer (returns the smallest integer which is greater than or e
 
 ### 7.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value    | Type                  |
 | -------- | --------------------- |
@@ -222,7 +220,7 @@ The output is described in the table below:
 
 ### 7.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 ceil(3.2)
@@ -248,11 +246,11 @@ The output is:
 
 ## 8 pow
 
-Calculates the exponent of a number to a certain power.
+Raises a number to a certain power.
 
 ### 8.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value    | Type                  |
 | -------- | --------------------- |
@@ -269,7 +267,7 @@ The output is described in the table below:
 
 ### 8.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 pow(2, 3)
@@ -293,11 +291,11 @@ The output is of type Decimal:
 15.625
 ```
 
-Calculation of 'pow' with a decimal exponent might be less accurate, as the standard Java libraries do not support these calculations with high precision. Use a specialized library in a custom Java action if high precision is required for this case.
+Calculation of 'pow' with a decimal power might be less accurate, as the standard Java libraries do not support these calculations with high precision. Use a specialized library in a custom Java action if high precision is required for this case.
 
 ### 8.4 (square) root
 
-To get the square root of a decimal, use 0.5 at the second parameter:
+To get the square root of a decimal, use 0.5 as the second parameter:
 
 * `pow(16, 0.5)` results in `4`
 
@@ -314,7 +312,7 @@ Calculates the absolute value of a number (i.e. not negative).
 
 ### 9.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value    | Type                  |
 | -------- | --------------------- |

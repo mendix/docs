@@ -8,7 +8,7 @@ tags: ["studio pro", "special checks", "special check", "expressions"]
 
 ## 1 Introduction
 
-This documents describes special checks in expressions, such as checking whether an object is empty, new, is synched. 
+This documents describes special checks in expressions, such as checking whether an object is empty, new, is synced. 
 
 ## 2 Checking for an Empty Object
 
@@ -16,7 +16,7 @@ Checks if an object is empty.
 
 ### 2.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value     | Type               |
 | --------- | ------------------ |
@@ -32,7 +32,7 @@ The output is described in the table below:
 
 ### 2.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 $object1 = empty
@@ -48,7 +48,7 @@ The same holds for when $object1 is a variable (such as Integer, String, etc).
 
 ### 3.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                                            | Type               |
 | ------------------------------------------------ | ------------------ |
@@ -83,7 +83,7 @@ Checks whether an object is new.
 
 ### 4.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value     | Type               |
 | --------- | ------------------ |
@@ -111,7 +111,7 @@ This function is available only in expressions for [conditional visibility or ed
 
 ### 5.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value     | Type               |
 | --------- | ------------------ |

@@ -1,6 +1,7 @@
 ---
 title: "Parse & Format Decimal Function Calls"
 parent: "expressions"
+menu_order: 150
 tags: ["studio pro", "expression", "parsing", "formatting"]
 ---
 

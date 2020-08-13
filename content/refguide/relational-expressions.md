@@ -1,6 +1,7 @@
 ---
 title: "Relational Expressions"
 parent: "expressions"
+menu_order: 30
 description: "Describes relational expressions in Mendix."
 tags: ["studio pro", "relational expression", "expressions"]
 ---

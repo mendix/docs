@@ -1,6 +1,7 @@
 ---
 title: "Trim to Date"
 parent: "expressions"
+menu_order: 120
 tags: ["studio pro", "trim to date", "expression", "expressions"]
 ---
 

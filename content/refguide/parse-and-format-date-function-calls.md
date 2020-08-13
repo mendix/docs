@@ -1,6 +1,7 @@
 ---
 title: "Parse & Format Date Function Calls"
 parent: "expressions"
+menu_order: 160
 description: "Describes the functions for parsing datetimes from strings using a specified pattern or producing a string from a datetime in Mendix."
 tags: ["studio pro", "expressions", "parsing", "formatting"]
 ---

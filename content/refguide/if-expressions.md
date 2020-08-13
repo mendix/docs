@@ -1,6 +1,7 @@
 ---
 title: "If Expressions"
 parent: "expressions"
+menu_order: 60
 tags: ["studio pro", "if expression", "expression", "if statement", "expressions"]
 ---
 

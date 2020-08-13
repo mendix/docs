@@ -1,6 +1,7 @@
 ---
 title: "Mathematical Function Calls"
 parent: "expressions"
+menu_order: 70
 tags: ["studio pro", "mathematical function call", "mathematical function", "expressions"]
 ---
 

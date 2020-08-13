@@ -1,6 +1,7 @@
 ---
 title: "Arithmetic Expressions"
 parent: "expressions"
+menu_order: 20
 tags: ["studio pro", "expressions", "arithmetic expressions"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Special Checks"
 parent: "expressions"
+menu_order: 40
 description: "Describes special checks in expressions in Mendix."
 tags: ["studio pro", "special checks", "special check", "expressions"]
 ---

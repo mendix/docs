@@ -1,6 +1,7 @@
 ---
 title: "Parse Integer"
 parent: "expressions"
+menu_order: 140
 description: "Describes the function for parsing integer from strings in Mendix."
 tags: ["studio pro", "expressions", "parse", "integer"]
 ---

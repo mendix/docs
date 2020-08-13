@@ -1,6 +1,7 @@
 ---
 title: "Boolean Expressions"
 parent: "expressions"
+menu_order: 50
 tags: ["studio pro", "expression", "expressions", "Boolean"]
 ---
 

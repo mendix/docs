@@ -1,7 +1,8 @@
 ---
 title: "Between Date Function Calls"
 parent: "expressions"
-tags: ["studio pro"]
+menu_order: 100
+tags: ["studio pro", "between date function calls", "expression", "expressions"]
 ---
 
 ## 1 Introduction

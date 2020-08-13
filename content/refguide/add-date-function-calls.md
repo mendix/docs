@@ -6,9 +6,9 @@ tags: ["studio pro", "expressions", "add date function"]
 
 ## 1 Introduction
 
-Add date function calls adds a time unit to a specific date and returns a modified value. 
+Add date function calls add a time period to a date and time and return the modified value. 
 
-The first input can be either a new **Date and time** (used in the examples below), a variable of type **Date and time**, or an attribute of a domain model entity of type **Date and time**.
+The first input can be an attribute of a domain model entity of type **Date and time**, a variable of type **Date and time**, or a **Date and time** value created using a [Date Creation](date-creation) function.
 
 ## 2 addMilliseconds
 

@@ -11,7 +11,7 @@ This document describes functions that are used to parse datetimes from strings 
 
 For details on all pattern possibilities, see [Class SimpleDateFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/SimpleDateFormat.html). 
 
-## 2 parseDateTime[UTC]
+## 2 parseDateTime[UTC] {#parsedatetime-utc}
 
 Takes a string and parses it. If it fails and a default value is specified, it returns the default value. Otherwise, an error occurs. The function `parseDateTime` uses the user's timezone and `parseDateTimeUTC` uses the UTC calendar.
 

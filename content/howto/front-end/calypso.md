@@ -1,7 +1,7 @@
 ---
 title: "Use Calypso"
-category: "Front-End"
-menu_order: 9
+parent: "customize-styling"
+menu_order: 10
 tags: ["Atlas", "UI", "UX", "Calypso", "styling", "CSS"]
 description: "This document will teach you to use Calypso, a tool which improves the way you edit styling."
 ---

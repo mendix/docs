@@ -64,7 +64,7 @@ Once the page is created, you can customize it.
 
 ## 6 Customizing Your Theme
 
-The [Theme Customizer](/studio/theme-customizer) allows you to customize your app in Mendix Studio. For more information on how you can style your app with it, see [Theme Customizer](/studio/theme-customizer) in the *Studio Guide*. To make your theme customization as easy as possible, see [Use Calypso](calypso).
+The [Theme Customizer](/studio/theme-customizer) allows you to customize your app in Mendix Studio. For more information on how you can style your app with it, see [Theme Customizer](/studio/theme-customizer) in the *Studio Guide*. To make your theme customization as easy as possible, see [How to Customize Your Styling Using Calypso](calypso).
 
 ## 7 Read More
 

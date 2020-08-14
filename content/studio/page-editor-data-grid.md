@@ -157,7 +157,10 @@ The control bar allows you to control the objects displayed in the data grid by 
 
 The **Control Bar** section properties are described below: 
 
-*  **Show Paging Controls** –  indicates if the buttons for paging through the data grid are visible. Hide these buttons if you are sure that the data grid will contain only one page
+*  **Show Paging Controls** – indicates if the buttons for paging through the data grid are visible to the end-user.
+  * **Yes (with total count)** - paging buttons are shown, including the **Go to last page** button and the total count of objects
+  * **Yes (without total count)** - paging buttons are shown (except for the **Go to last page** button). Also, the total count of objects is not shown, as page numbers are shown instead
+  * **No** - The paging buttons are not shown. Hide the buttons if you are sure that the data grid will contain only one page
 
     ![](attachments/page-editor-data-grid/control-bar-show-paging-controls.png)
 

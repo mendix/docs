@@ -13,7 +13,7 @@ The **File** menu allows you to manage documents and projects, for example, to c
 {{% image_container width="300" %}}![File Menu](attachments/file-menu/file-menu.png)
 {{% /image_container %}}
 
-## 2 Menu Items Overview
+## 2 Menu Items Overview {#overview}
 
 The **File** menu items are described in the table below:
 

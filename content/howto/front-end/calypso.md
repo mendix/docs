@@ -1,5 +1,5 @@
 ---
-title: "Use Calypso"
+title: "Customize Styling Using Calypso"
 parent: "customize-styling"
 menu_order: 10
 tags: ["Atlas", "UI", "UX", "Calypso", "styling", "CSS"]

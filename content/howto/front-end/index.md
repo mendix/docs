@@ -10,6 +10,7 @@ Looking to create great user experiences and a user-friendly graphical user inte
 ## 2 Main Documents in This Category
 
 * [Atlas UI](atlas-ui) – introduces you to the Mendix Atlas UI design framework
+* [Use Calypso](calypso) – explains Calypso, a GUI styling tool which helps you customize your Mendix app's styling quckly and easily 
 * [Implement Best Practices for UX Design](ux-best-practices) – presents best practices written by a UX Designer for contributing to the app development process
 * [Configure Your Theme](configuring-your-theme) – explains how to configure the styling of your page in Studio Pro and Studio
 * [Use the Charts Widgets](charts-tutorials) – these how-to's will help you create and fine-tune your chart widgets

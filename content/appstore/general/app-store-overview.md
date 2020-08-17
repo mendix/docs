@@ -8,25 +8,39 @@ tags: ["app store", "widget", "connector", "module", "partner"]
 
 ## 1 Introduction
 
+{{% alert type="info" %}}
+As the Mendix App Store is being updated into a dynamic and fully functioning Mendix Marketplace, some pages will refer to "App Store" and some to "Marketplace."
+{{% /alert %}}
+
+{{% todo %}}[**Verify wording above**]{{% /todo %}}
+
 The [Mendix App Store](https://appstore.home.mendix.com/index3.html) is a vibrant marketplace containing complete sample apps that can be used right away as well as various add-ons (connectors, widgets, and modules) that can be used to build custom apps more quickly. In the Mendix App Store, you can browse all the content, get what you need, and share the content you have created.
 
 This document describes the different sections of the Mendix App Store.
 
 ## 2 App Store Home Page
 
-The home page of the Mendix App Store presents various content categories:
+The home page of the Mendix App Store has three main tabs at the top:
 
-![](attachments/app-store-overview/home_page.png)
+* **Discoiver**
+* **My Marketplace**
+* **{Your company's private App Store page}**
+
+![](attachments/app-store-overview/home-page.jpg)
+
+It also presents various content categories:
 
 Category | Description
---- | ---
-[Connectors](../connectors/index), **Mobile**, [Widgets](../widgets/index), [Modules](../modules/index), [Themes](../themes/index), **App Services**, **Add-on Examples**, **Sample Apps** | Add-on categories and sub-categories available in the sidebar menu (for example, **Internet-of-Things** and **Authentication**). 
-**Featured** | The most important and useful App Store content as determined by Mendix (think of it as a "staff picks" section). 
-**New content** | The most recently uploaded content. 
-**Recent updates** | The most recently updated content. 
-**Most popular** | Content that has been downloaded the most in the past seven days. 
-**Reviews** | The most recent content reviews along with the author and date of the review. Clicking the name of the review author will bring you to their [Mendix Profile](/developerportal/mendix-profile/index). Clicking the title of an App Store component will allow you to see the details of what was reviewed. 
-**Top App Store contributors** | The top 10 App Store contributors of the last 30 days. Clicking the name of the developer will bring you to their Mendix Profile. Clicking **View full leaderboard** will take you to the [Mendix Leaderboards](https://developer.mendixcloud.com/link/topappstore30).
+| --- | --- |
+| Get Studio Pro | --- |
+| Layouts | --- |
+| Create New App | --- |
+| Modules | --- |
+| Solutions | --- |
+| Widgets | --- |
+| Themes | --- |
+| Tags | --- |
+| Ratings | --- |
 
 ## 3 Add-On Details Page {#details}
 

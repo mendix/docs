@@ -9,29 +9,33 @@ tags: ["studio pro", "expressions", "microflow expressions"]
 
 ## 1 Introduction
 
-Expressions can for example be used to change a member of an object based on logic. 
+Expressions changes a value based on a function or combination of functions. 
 
-Named items in the microflow (for example objects, lists, or variables) can be called in an expression by inserting the name of the item and adding a dollar sign (for example,  `$customer` could refers to an object named `customer`).
+Named items in the microflow (for example, objects, lists, or variables) can be called in an expression by inserting the name of the item and adding a dollar sign (for example,  `$customer` could refers to an object named `customer`).
 
-Attributes and associations of objects are accessed using a slash (for example, the Name attribute of the customer object is referred to as `$customer/Name`, and the CRM.Customer_Order association of the customer object is referred to as `$customer/CRM.Customer_Order`).
+Attributes and associations of objects are accessed using a slash (for example, the **Name** attribute of the customer object is referred to as `$customer/Name`, and the **CRM.Customer_Order** association of the customer object is referred to as `$customer/CRM.Customer_Order`).
 
-Starting with Studio Pro [8.10.0](/releasenotes/studio-pro/8.10#8100), attributes of associated objects can be accessed using multiple slashes (for example, the `Number` attribute of a single associated `CRM.Order` is referred to as `$customer/CRM.Customer_Order/CRM.Order/Number`).
+Starting from Studio Pro [8.10.0](/releasenotes/studio-pro/8.10#8100), attributes of associated objects can be accessed using multiple slashes (for example, the **Number** attribute of a single associated **CRM.Order** is referred to as `$customer/CRM.Customer_Order/CRM.Order/Number`).
 
-Expressions can contain several operations which are applied using standard algebraic rules for precedence and associativity (for example, `1 + 2 + 3`). Brackets can be used to change the precedence and associativity, or for clarity.
+You can combine functions in an expression. In this case, you can use brackets to determine the priority and associativity of calculations. For example, the **SellingPrice** is being calculated based on the default **Price** and **Discount** attributes:
+
+```
+$CurrentPrice/Price - (($CurrentPrice/Price **div** 100) * $OrderLine/Discount)
+```
+
+Arithmetic functions (subtraction, dividing, and multiplying) are being combined here.
 
 ### 1.1 Example
 
-As an example, imagine an object called **package** with two attributes: `weight` (decimal) and `shippingCosts` (decimal). The rule is that, if the weight of a package is less than one kilogram, there are no shipping costs. Otherwise, the shipping costs are €5.00. The expression for changing the `shippingCosts` attribute is:
+For example, you have an object called **package** with two attributes: `weight` (decimal) and `shippingCosts` (decimal). If the weight of a package is less than one kilogram, there are no shipping costs. Otherwise, the shipping costs are €5.00. The expression for changing the `shippingCosts` attribute is:
 
 ```
 if $package/weight < 1.00 then 0.00 else 5.00`
 ```
 
-An overview of the operators which can be used in expressions is shown below.
-
 ### 1.2 Regular Expressions
 
-[Regular Expression](regular-expressions) resource documents cannot be used in expressions. However, the format of regular expressions, sub-expressions, and quantifiers used in regular expression strings used within expressions are the same as those described in the [Expression](regular-expressions#expression) section of *Regular Expressions*.
+[Regular Expression](regular-expressions) resource documents cannot be used in expressions. However, the format of regular expressions, sub-expressions, and quantifiers used in regular expression strings is the same as the ones described in the [Expression](regular-expressions#expression) section of *Regular Expressions*.
 
 ## 2 Unary Expressions
 
@@ -150,12 +154,12 @@ See [To String](to-string) for details.
 
 See [Parse Integer](parse-integer) for details.
 
-## 16 Parse/Format Decimal Function Calls
+## 16 Parse & Format Decimal Function Calls
 
 * [`parseDecimal`](parse-and-format-decimal-function-calls) – converts a string to a decimal
 * [`formatDecimal`](parse-and-format-decimal-function-calls) – converts a decimal to a string
 
-## 17 Parse/Format Date Function Calls
+## 17 Parse & Format Date Function Calls
 
 * [`parseDateTime[UTC]`](parse-and-format-date-function-calls) – converts a string to a date value
 * [`formatDateTime[UTC]`](parse-and-format-date-function-calls) – converts a date value to a string

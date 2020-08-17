@@ -1,13 +1,14 @@
 ---
 title: "Parse Integer"
 parent: "expressions"
+menu_order: 140
 description: "Describes the function for parsing integer from strings in Mendix."
 tags: ["studio pro", "expressions", "parse", "integer"]
 ---
 
 ## 1 Introduction
 
-This document describes functions that converts a string to an integer.
+This document describes functions that convert a string to an integer.
 
 ## 2 parseInteger
 
@@ -15,7 +16,7 @@ Takes a string and parses it to an integer.
 
 ### 2.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                        | Type    |
 | ---------------------------- | ------- |
@@ -28,13 +29,13 @@ The output is described in the table below:
 
 | Value                                                        | Type    |
 | ------------------------------------------------------------ | ------- |
-| An integer if it is possible to parse it from the string. If it is not a valid parsable string, the default value will be returned. If no default value is provided, an error will occur. | Integer |
+| An integer if it is possible to parse it from the string. If  the string cannot be parsed to an integer, the default value will be returned. If no default value is provided, an error will occur. | Integer |
 
 ### 2.3 Examples
 
 The examples below illustrate which value the expression returns:
 
-* If you type in the following input:
+* If you use the following input:
 
     ```java
     parseInteger('42')
@@ -46,7 +47,7 @@ The examples below illustrate which value the expression returns:
     42
     ```
 
-* If you type in the following input:
+* If you use the following input:
 
     ```java
     parseInteger('not_an_integer', 42)

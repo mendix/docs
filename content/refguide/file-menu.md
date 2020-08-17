@@ -13,13 +13,13 @@ The **File** menu allows you to manage documents and projects, for example, to c
 {{% image_container width="300" %}}![File Menu](attachments/file-menu/file-menu.png)
 {{% /image_container %}}
 
-## 2 Menu Items Overview
+## 2 Menu Items Overview {#overview}
 
 The **File** menu items are described in the table below:
 
 | Menu Item                  | Description                                                  | Shortcut Key                                      |
 | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------- |
-| **New Document**           | Creates a new document within the project that is currently open. You can choose the name, location and type of the document. | <kbd>Ctrl</kbd> + <kbd>N</kbd>                    |
+| **New Document**           | Creates a new document within the app project currently open. You can choose the name, location, and type of document. | <kbd>Ctrl</kbd> + <kbd>N</kbd>                    |
 | **New Project**            | Creates a new single-developer project. A single-developer project is simply a file (with the extension *.mpr* , which stands for "Mendix project") that is stored in the local file system. For more information on the **New Project** menu item and its settings, see [New Project](new-project). | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd> |
 | **Open Project**           | Opens an existing single-developer project (*.mpr*) or a project package (*.mpk*). See **New Project** above for information on single-developer projects. For more information on the **Open Project** menu item, see [Open Project](open-app-dialog). | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> |
 | **Recent Projects**        | Shows a list of recently opened projects for quick opening.  |                                                   |

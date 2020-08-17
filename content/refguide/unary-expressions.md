@@ -1,6 +1,7 @@
 ---
 title: "Unary Expressions"
 parent: "expressions"
+menu_order: 10
 tags: ["studio pro", "unary expression", "expression", "expressions"]
 ---
 

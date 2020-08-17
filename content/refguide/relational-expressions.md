@@ -1,6 +1,7 @@
 ---
 title: "Relational Expressions"
 parent: "expressions"
+menu_order: 30
 description: "Describes relational expressions in Mendix."
 tags: ["studio pro", "relational expression", "expressions"]
 ---
@@ -37,7 +38,7 @@ The output is described in the table below:
 
 ### 2.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 4<3
@@ -76,7 +77,7 @@ The output is described in the table below:
 
 ### 3.4 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 4>3
@@ -117,7 +118,7 @@ The output is described in the table below:
 
 The examples below illustrate which value the expression returns:
 
-* If you type in the following input:
+* If you use the following input:
 
     ```java
     6<=3
@@ -129,7 +130,7 @@ The examples below illustrate which value the expression returns:
     False
     ```
 
-* If you type in the following input:
+* If you use the following input:
 
     ```java
     3<=3
@@ -144,7 +145,6 @@ The examples below illustrate which value the expression returns:
 ## 5 Greater Than or Equal To ( >= )
 
 Determines whether the first value is greater than or equal to the second.
-Result is of type Boolean. 
 
 ### 5.1 Input Parameters
 
@@ -170,7 +170,7 @@ The output is described in the table below:
 
 ### 5.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 4>=3
@@ -213,7 +213,7 @@ The output is described in the table below:
 
 The examples below illustrate which value the expression returns:
 
-* If you type in the following input:
+* If you use the following input:
 
     ```java
     "mystring" = "myotherstring"
@@ -225,7 +225,7 @@ The examples below illustrate which value the expression returns:
     False
     ```
 
-* If you type in the following input:
+* If you use the following input:
 
     ```java
     dateTime(2007) = dateTime(2007)
@@ -268,7 +268,7 @@ The output is described in the table below:
 
 ### 7.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 "mystring" != "mystring"

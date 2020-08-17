@@ -66,7 +66,7 @@ The editable property indicates whether the data view as a whole is editable or 
 | Value   | Description                                                  |
 | ------- | ------------------------------------------------------------ |
 | Yes     | The data view is editable: each widget is determined to be editable based on its own editable property (default value for data views outside a snippet). |
-| Inherited from snippet call | Set to `Yes` or `No` by the containing data container of the snippet call (default value for data views inside a snippet). |
+| Inherited from snippet call | Set to **Yes** or **No** by the containing data container of the snippet call (default value for data views inside a snippet). |
 | No      | The data view is not editable: no widget inside the data view will be editable.|
 
 #### 3.4.2 Read-Only Style

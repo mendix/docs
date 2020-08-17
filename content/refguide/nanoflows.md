@@ -98,7 +98,7 @@ Decisions deal with making choices and merging different paths.
 
 ### 4.4 Activities{#activities}
 
-[Activities](activities) are the actions that are executed in a microflow:
+[Activities](activities) are the actions that are executed in a nanoflow:
 
 ![Activity](attachments/microflows-and-nanoflows/activity.png)
 
@@ -108,15 +108,15 @@ A [loop](loop) is used to iterate over a list of objects:
 
 ![Loop](attachments/microflows-and-nanoflows/loop.png)
 
-For every object the flow inside the loop is executed. A loop activity can contain all elements used in microflows, with the exception of start and end events. 
+For every object the flow inside the loop is executed. A loop activity can contain all elements used in nanoflow, with the exception of start and end events. 
 
 ### 4.6 Parameter {#parameter}
 
-A [parameter](parameter) is data that serves as input for the microflow. 
+A [parameter](parameter) is data that serves as input for the nanoflow. 
 
 ![Parameter](attachments/microflows-and-nanoflows/parameter.png)
 
-Parameters are filled at the location from where the microflow is triggered.
+Parameters are filled at the location from where the nanoflow is triggered.
 
 ### 4.7 Annotation {#annotation}
 

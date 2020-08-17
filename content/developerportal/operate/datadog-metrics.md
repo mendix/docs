@@ -39,7 +39,7 @@ The metrics from your app's environment are supplied in the following namespaces
 * datadog  – metrics on datadog usage
 * jmx – metrics from the Mendix runtime
 * jvm – metrics from the Java virtual machine in which the Mendix runtime runs
-* postgresql – database metrics specific to PostgreSQL databases
+* postgresql – database metrics specific to PostgreSQL databases (see the Datadog [Postgres](https://docs.datadoghq.com/integrations/postgres/) documentation)
 * synthetics – metrics specifically labelled as coming from tests (see the Datadog documentation [Synthetics](https://docs.datadoghq.com/synthetics/))
 * system – metrics from the base system running on the platform or PaaS (see the Datadog documentation [System Check](https://docs.datadoghq.com/integrations/system/))
 

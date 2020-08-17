@@ -1,22 +1,23 @@
 ---
 title: "Boolean Expressions"
 parent: "expressions"
+menu_order: 50
 tags: ["studio pro", "expression", "expressions", "Boolean"]
 ---
 
 ## 1 Introduction
 
-Boolean expressions can be used to perform logical operations that is either true or false.
+Boolean expressions can be used to perform logical operations that return either true or false.
 
 ## 2 and
 
-`and` operator checks two Boolean expressions and only returns `true` if both of the expressions are true.
+The `and` operator checks two Boolean expressions and only returns `true` if both of the expressions are true.
 
 ### 2.1 Examples
 
 The examples below illustrate which value the expression returns:
 
-* If you type in the following input:
+* If you use the following input:
 
 	```java
 	(6 > 4) and (3 < 5)
@@ -24,7 +25,7 @@ The examples below illustrate which value the expression returns:
 
 	The output is `true` because both of the expressions are `true`.
 
-* If you type in the following input:
+* If you use the following input:
 
 	```java
 	('hello' = 'hallo') and (3 < 5)
@@ -34,7 +35,7 @@ The examples below illustrate which value the expression returns:
 
 ## 3 or
 
-`or` operator combines two Boolean expressions, and returns `true` if at least one of the expressions is true.
+The `or` operator combines two Boolean expressions, and returns `true` if at least one of the expressions is true.
 
 ### 3.1 Examples
 
@@ -42,7 +43,7 @@ The examples below illustrate which value the expression returns:
 
 * You have a entity called *product* that has the *price* attribute of the integer type. The *price* attribute equals 3, and you have another attribute called *recommendedPrice* that equals 2. 
 
-	If you type in the following input:
+	If you use the following input:
 
 	```java
 	($product/price < $product/recommendedPrice : 2) or ($product/price 	> 0)
@@ -50,7 +51,7 @@ The examples below illustrate which value the expression returns:
 
 	The expression will return `true` because at least one of the 	expressions is true (the second one). Note that the expression would 	still return `true` if both statements had been true.
 
-* If you type in the following input: 
+* If you use the following input: 
 
 	```java
 	('hello' = 'nothello') or ('byebye' = 'stillnotbyebye')
@@ -60,7 +61,7 @@ The examples below illustrate which value the expression returns:
 
 ## 4 not
 
-`not` operator negates the specified Boolean expression.
+The `not` operator negates the specified Boolean expression.
 
 ### 4.1 Input
 
@@ -74,7 +75,7 @@ Returns the negation of the specified expression. If the expression evaluates to
 
 The examples below illustrate which value the expression returns:
 
-* If you type in the following input:
+* If you use the following input:
 
 	```java
 	not('hello' = 'hallo')
@@ -84,7 +85,7 @@ The examples below illustrate which value the expression returns:
 	The expression will return `true` .
 
 
-* If you type in the following input:
+* If you use the following input:
 
 	```java
 	not(true)

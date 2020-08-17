@@ -1,7 +1,7 @@
 ---
-title: "Use Calypso"
-parent: "atlas-ui"
-menu_order: 70
+title: "Customize Styling Using Calypso"
+parent: "customize-styling"
+menu_order: 10
 tags: ["Atlas", "UI", "UX", "Calypso", "styling", "CSS"]
 description: "This document will teach you to use Calypso, a tool which improves the way you edit styling."
 ---

@@ -60,7 +60,11 @@ Congratulations! You have successfully configured port forwarding to enable test
 
 ## 4 Viewing Your App on Your Testing Device
 
-Whenever you create or open a Mendix app in Mendix Studio Pro, be sure to do so from a mapped drive instead of a network drive:
+{{% alert type="warning" %}}
+Whenever you create or open a Mendix app in Mendix Studio Pro, be sure to do so from a mapped drive instead of a network drive.
+{{% /alert %}}
+
+Read the tips and steps below to view your app on your testing device:
 
 * Correct mapped drives will always have a letter at the start of their file location:
 

@@ -95,13 +95,16 @@ After running `react-devtools` you will see the React developer tools GUI. To us
 
 ## 4 Debugging the OS Logs
 
-When your app is crashing or the logging in the Studio Pro is incomplete, you might want to dive into the log files of the operating systems. You have two options:
-a. You could start the app from [XCode or Android Studio](/howto/mobile/native-build-locally#building-app-project) which will give you more information and allows you to set breakpoint and inspect variable values. This approach is a bit more cumbersome setup. 
-b. Get the log files directly from you device
+When your Mendix app is crashing or the logging in Mendix Studio Pro is incomplete, you might want to dive into your operating system's log files for information. There are 2 options:
+
+1. You could start the app in [XCode or Android Studio](/howto/mobile/native-build-locally#building-app-project), either of which will give you more information and allow you to set breakpoint and inspect variable values. This approach is a bit more cumbersome. 
+1. Get the log files directly from your device.
+
+The first approach is fairly self-explanatory. For information on getting log files directly from your device, however, see below.
 
 ### 4.1 Using Android Logcat
 
-The Android Debug Bridge (ADB) can get the logs via command line (specifically logcat) by following these steps:
+The Android Debug Bridge (ADB) can get the log files via command line (specifically logcat) by following these steps:
 
 1.  Set up your phone:<br />
 	a. If not already, enable **Developer Mode** by opening **Settings** > **System** and tap 7 times om the **Build Number**.<br />

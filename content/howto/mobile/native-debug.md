@@ -93,35 +93,35 @@ After running `react-devtools` you will see the React developer tools GUI. To us
 4. Tap any styled element in your app (like a text element) to see its style information on your device and inspect and debug it in your React developer tools GUI.
 5. Shake your device and tap **Toggle Element Inspector** to turn off the inspector off.
 
-## 4 Debug the OS Logs
+## 4 Debugging the OS Logs
 
 When your app is crashing or the logging in the Studio Pro is incomplete, you might want to dive into the log files of the operating systems. You have two options:
 a. You could start the app from [XCode or Android Studio](/howto/mobile/native-build-locally#building-app-project) which will give you more information and allows you to set breakpoint and inspect variable values. This approach is a bit more cumbersome setup. 
 b. Get the log files directly from you device
 
-### 4.1 Android logcat
+### 4.1 Using Android Logcat
 
-The Android Debug Bridge (adb) can get the logs via the command line by following these steps:
-1. Setup your phone:
-   1. If not already, enable the "Developer Mode", Open in the settings menu the **System** options and click 7 times om the **Build Number**.
-   1. In the Settings menu open the **Developer Options**.
-   1. Enable **USB Debugging**.
-1. Download [Latest Android Tools](https://dl.google.com/android/repository/platform-tools-latest-windows.zip) for windows
-1. Unzip the files in a working directly, for example `C:\adb`.
+The Android Debug Bridge (ADB) can get the logs via command line (specifically logcat) by following these steps:
+
+1.  Set up your phone:<br />
+	a. If not already, enable **Developer Mode** by opening **Settings** > **System** and tap 7 times om the **Build Number**.<br />
+	b. In **Settings** open the **Developer Options**.<br />
+	c. Enable **USB Debugging**.
+1. Download the [Latest Android Tools](https://dl.google.com/android/repository/platform-tools-latest-windows.zip) for Windows.
+1. Unzip the files in a working directory, for example **C:\adb**.
 1. Open a command line tool the in the working directory.
 1. Execute the command `adb.exe start`.
-1. Connect your phone via USB, and Accept the **Allow USB debugging?** dialog on your phone.
-1. Execute the command `adb logcat > output.txt`. All output will be written in the output.txt file.
-1. Open your Mendix App and do the actions that you want to debug.
-1. Stop the log capturing in the command line tool with the key `Ctr` + `C`.
-1. Open in a text editor the *output.txt* file.
-1. Search for you issue.
+1. Connect your phone via USB, then accept the **Allow USB debugging?** dialog box on your phone.
+1. Execute the command `adb logcat > output.txt`. All output will be written in *output.txt*.
+1. Open your Mendix app and implement the actions that you want to debug.
+1. Stop the log capturing in your command line tool by pressing <kbd>Ctrl</kbd> + <kbd>C</kbd>.
+1. Open *output.txt* in a text editor.
+1. Search for your issue.
 
-For more detailed steps how to setup adb, or how to set it up in other operating systems see [Install ADB](https://www.xda-developers.com/install-adb-windows-macos-linux/)
+For more detailed steps how to set up ADB, see [Install ADB](https://www.xda-developers.com/install-adb-windows-macos-linux/). To learn more about ADB in general, see [Command ADB](https://developer.android.com/studio/command-line/adb).
 
 ## 5 Read More
+
 * [Get Started with Native Mobile](getting-started-with-native-mobile)
 * [Debug a Mobile App with Mendix](debug-a-mobile-app)
 * [Build Native Mobile Apps with Parallels](using-mendix-studio-pro-on-a-mac)
-* [Install ADB](https://www.xda-developers.com/install-adb-windows-macos-linux/)
-* [Command ADB](https://developer.android.com/studio/command-line/adb)

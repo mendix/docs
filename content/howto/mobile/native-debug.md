@@ -100,7 +100,7 @@ When your Mendix app is crashing or the logging in Mendix Studio Pro is incomple
 1. You could start the app in [XCode or Android Studio](/howto/mobile/native-build-locally#building-app-project), either of which will give you more information and allow you to set breakpoint and inspect variable values. This approach is a bit more cumbersome. 
 1. Get the log files directly from your device.
 
-The first approach is fairly self-explanatory. For information on getting log files directly from your device, however, see below.
+The first approach is self-explanatory. For information on getting log files directly from your device, however, see below.
 
 ### 4.1 Using Android Logcat
 

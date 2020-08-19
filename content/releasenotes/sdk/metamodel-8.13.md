@@ -1,142 +1,77 @@
-# Metamodel Release Notes for version 8.13.0
+---
+title: "8.13"
+parent: "metamodel-8"
+---
 
-## DomainModels
+## 8.13.0
 
-### Attribute (Element)
+**Release date: August 19th, 2020**
 
+### DomainModels
 
-#### Property 'capabilities'
-* Introduced; "What an attribute is capable of"
+#### Attribute (Element)
 
-### AttributeCapabilities (Element)
-* Introduced; "What an attribute is capable of"
+* We introduced the `capabilities` property to describe what an attribute is capable of.
 
+#### AttributeCapabilities (Element)
 
-## Projects
+* We introduced this element to describe what an attribute is capable of.
 
-### Module (StructuralUnit)
+### Projects
 
+#### Module (StructuralUnit)
 
-#### Property 'appStorePackageId'
-* Introduced; 
+* We introduced  the `appStorePackageId` property.
 
-## Rest
+### Rest
 
-### ConsumedODataService (ModelUnit)
+#### ConsumedODataService (ModelUnit)
 
+* We introduced the `versionApiMockResults` property to mock results for the Version API.
 
-#### Property 'versionApiMockResults'
-* Introduced; "Mock results for the Version API"
+### Pages
 
-## Pages
+#### TemplateType, RegularPageTemplateType, EditPageTemplateType & SelectPageTemplateType (Elements)
 
-### TemplateType (Element)
-* Introduced; 
+* We introduced these elements.
 
+#### PageTemplate (ModelUnit)
 
-### RegularPageTemplateType (Element)
-* Introduced; 
+* We introduced the `templateType` property.
+* We deleted the `type` property. Use the `templateType` property instead.
 
+#### TemplatePlaceholder (Element)
 
-### EditPageTemplateType (Element)
-* Introduced; 
+* We introduced this element.
 
+#### Appearance (Element)
 
-### SelectPageTemplateType (Element)
-* Introduced; 
+* We introduced the `dynamicClasses` property.
 
+#### Grid (Element)
 
-### PageTemplate (ModelUnit)
+* We introduced the `showPagingBar` property.
+* We deleted the `isPagingEnabled` property. Use property the `showPagingBar` property instead.
 
+#### TabPage (Element)
 
-#### Property 'type'
-* Deleted; "Use templateType instead"
+* We introduced the `badge` property.
 
-#### Property 'templateType'
-* Introduced; 
+#### WorkflowTemplateType, UserTaskTemplateType, WorkflowOverviewTemplateType, CallWorkflowClientAction, OpenUserTaskClientAction, OpenWorkflowClientAction & SetTaskOutcomeClientAction (Elements)
 
-### TemplatePlaceholder (Element)
-* Introduced; 
+* We introduced these elements.
 
+### Workflows
 
-### Appearance (Element)
+#### Workflow (ModelUnit)
 
+* We introduced the `dueDate` property.
 
-#### Property 'dynamicClasses'
-* Introduced; 
+#### EnumerationValueOutcomeValue, BooleanOutcomeValue, ExclusiveSplitActivity & CallWorkflowActivity (Elements)
 
-### Grid (Element)
+* We introduced these elements.
 
+#### UserTask (Element)
 
-#### Property 'isPagingEnabled'
-* Deleted; "Use property 'showPagingBar' instead"
-
-#### Property 'showPagingBar'
-* Introduced; 
-
-### TabPage (Element)
-
-
-#### Property 'badge'
-* Introduced; 
-
-### WorkflowTemplateType (Element)
-* Introduced; 
-
-
-### UserTaskTemplateType (Element)
-* Introduced; 
-
-
-### WorkflowOverviewTemplateType (Element)
-* Introduced; 
-
-
-### CallWorkflowClientAction (Element)
-* Introduced; 
-
-
-### OpenUserTaskClientAction (Element)
-* Introduced; 
-
-
-### OpenWorkflowClientAction (Element)
-* Introduced; 
-
-
-### SetTaskOutcomeClientAction (Element)
-* Introduced; 
-
-
-## Workflows
-
-### Workflow (ModelUnit)
-
-
-#### Property 'dueDate'
-* Introduced; 
-
-### EnumerationValueOutcomeValue (Element)
-* Introduced; 
-
-
-### BooleanOutcomeValue (Element)
-* Introduced; 
-
-
-### ExclusiveSplitActivity (Element)
-* Introduced; 
-
-
-### CallWorkflowActivity (Element)
-* Introduced; 
-
-
-### UserTask (Element)
-
-
-#### Property 'page'
-* Added public
-
-#### Property 'dueDate'
-* Introduced; 
+* We added the public `page` property.
+* We introduced the `dueDate` property.

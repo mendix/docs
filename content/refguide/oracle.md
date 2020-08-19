@@ -25,9 +25,9 @@ It is not possible to sort, group, or use aggregate functions such as `count()` 
 
 Selecting DISTINCT attributes of the string type with a size greater than 2000 characters is not supported by Mendix due to a known Oracle limitation of selecting DISTINCT columns with a CLOB data type. If you run into this limitation, you may encounter an exception in the logs with a message like this: **Error Msg = ORA-06502: PL/SQL: numeric or value error: character string buffer too small**.
 
-## 3 Required Roles
+## 3 Required Privileges
 
-The Mendix runtime will require the following roles to set up and maintain the Mendix database on Oracle:
+The Mendix runtime will require a user with roles with the following privileges to set up and maintain the Mendix database on Oracle:
 
 * create tables
 * drop tables

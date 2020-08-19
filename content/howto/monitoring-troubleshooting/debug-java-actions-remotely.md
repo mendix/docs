@@ -13,13 +13,9 @@ To debug the Java actions used in a Mendix microflow, you need to make some conf
 * Edit the server configuration
 * Configure remote debugging
 
-## 2 Prerequisites
+## 2 Editing the Server Configuration with Extra JVM Parameters
 
-None.
-
-## 3 Editing the Server Configuration with Extra JVM Parameters
-
-In this section, you will learn how to configure the security at the prototype/demo level. Be aware that this level of security is only applicable for development/demo purposes. This level is available for the quick development of demo applications. It simulates security without the more complex configuration of data access. When deploying to the Mendix cloud, production security is mandatory.
+In this section, you will learn how to configure the security at the [Prototype / demo](../security/create-a-secure-app#prototype) level. Be aware that this level of security is only applicable for development/demo purposes. This level is available for the quick development of demo applications. It simulates security without the more complex configuration of data access. When deploying to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), setting [Production](../security/create-a-secure-app#production) security is mandatory.
 
 To edit the server configuration with extra JVM parameters, follow these steps:
 
@@ -31,7 +27,7 @@ To edit the server configuration with extra JVM parameters, follow these steps:
 
 4. Next, start your application in Mendix.
 
-## 4 Configuring Remote Debugging
+## 3 Configuring Remote Debugging
 
 In your Java IDE, you need to configure remote debugging. This screenshot shows the configuration in IntelliJ:
 
@@ -50,16 +46,12 @@ In eclipse it is
 6. Be sure your current project is under 'project', change the port to 5005 (see the JVM-parameters)
 7. Press 'debug'
 
-## 5 Read More
+## 4 Read More
 
 * [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [Clear Warning Messages in Mendix](clear-warning-messages)
 * [Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
-* [Monitor Mendix using JMX](monitoring-mendix-using-jmx)
-* [Log Levels](log-levels)
+* [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
+* [Set Log Levels](log-levels)
 * [Debug Microflows](debug-microflows)
 * [Debug Java Actions](debug-java-actions)
-* [Debug Microflows Remotely](debug-microflows-remotely)
-* [Get Started with Nexus Maven Repository Manager](http://www.andrejkoelewijn.com/blog/2010/03/09/getting-started-with-nexus-maven-repository-manager/)
-* [Use Eclipse to Debug Your Tomcat Web Application](http://www.andrejkoelewijn.com/blog/2003/10/23/using-eclipse-to-debug-your-tomcat-web-application/)
-* [Profile Mendix Using JProfiler](http://www.andrejkoelewijn.com/blog/2014/01/15/profiling-mendix-using-jprofiler/)

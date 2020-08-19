@@ -51,7 +51,7 @@ parent: "metamodel-8"
 #### Grid (Element)
 
 * We introduced the `showPagingBar` property.
-* We deleted the `isPagingEnabled` property. Use property the `showPagingBar` property instead.
+* We deleted the `isPagingEnabled` property. Use the `showPagingBar` property instead.
 
 #### TabPage (Element)
 
@@ -67,11 +67,11 @@ parent: "metamodel-8"
 
 * We introduced the `dueDate` property.
 
-#### EnumerationValueOutcomeValue, BooleanOutcomeValue, ExclusiveSplitActivity & CallWorkflowActivity (Elements)
-
-* We introduced these elements.
-
 #### UserTask (Element)
 
 * We added the public `page` property.
 * We introduced the `dueDate` property.
+
+#### EnumerationValueOutcomeValue, BooleanOutcomeValue, ExclusiveSplitActivity & CallWorkflowActivity (Elements)
+
+* We introduced these elements.

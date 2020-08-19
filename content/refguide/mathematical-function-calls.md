@@ -1,14 +1,15 @@
 ---
 title: "Mathematical Function Calls"
 parent: "expressions"
+menu_order: 70
 tags: ["studio pro", "mathematical function call", "mathematical function", "expressions"]
 ---
 
 ## 1 Introduction
 
-Mathematical function calls include a limited number of mathematical operations with numbers, such as returning the largest value or rounding a number up. 
+Mathematical function calls include a limited number of mathematical operations on numbers, such as returning the largest value or rounding a number up. 
 
-If you need more elaborate functions (such as the square root, sin, cos, tan, numberOfPermutations, factorial, or fibonacciNumber), then consider using the community-supported [Math Module](https://appstore.home.mendix.com/link/app/112522/) available in the Mendix App Store.
+If you need more elaborate functions (such as the square root, sin, cos, tan, numberOfPermutations, factorial, or fibonacciNumber), then consider using the community-supported [Math](https://appstore.home.mendix.com/link/app/112522/) module available in the Mendix App Store.
 
 ## 2 max
 
@@ -16,19 +17,23 @@ Returns the largest value from the specified arguments.
 
 ### 2.1 Input Parameters
 
-Use the following input parameters:
+The input parameters are described in the table below:
 
-* Two or more values 
-
-  Type: all values should be either of type Date and time or of a numeric type (Integer/Long or Decimal)
+| Value              | Type                                   |
+| ------------------ | -------------------------------------- |
+| Two or more values | All numeric type (Integer/Long or Decimal) or all Date and time                          |
 
 ### 2.2 Output
 
-Returns the largest value from the specified arguments. If the arguments are of type Date and time, the result will also be of type Date and time. If the arguments are numeric, the result will be of the most precise type. For example, if both an Integer/Long and a Decimal argument are specified, the result will be of type Decimal.
+The output is described in the table below:
+
+| Value                                           | Type                                                         |
+| ----------------------------------------------- | ------------------------------------------------------------ |
+| The largest value from the specified arguments. | If the arguments are of type Date and time, the result will also be of type Date and time. <br />If the arguments are numeric, the result will be of the most precise type. <br />For example, if both an Integer/Long and a Decimal argument are specified, the result will be of type Decimal. |
 
 ### 2.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 max(5, 1, 5, 6.7)
@@ -44,21 +49,25 @@ The output is a decimal:
 
 Returns the smallest value from the specified arguments.
 
-### 3.1 Input
+### 3.1 Input Parameters
 
-Use the following input parameters:
+The input parameters are described in the table below:
 
-* Two or more values
-
-  Type: all values should be either of type Date and time or of a numeric type (Integer/Long, Decimal)
+| Value              | Type                                   |
+| ------------------ | -------------------------------------- |
+| Two or more values | All numeric type (Integer/Long or Decimal) or all Date and time                          |
 
 ### 3.2 Output
 
-Returns the smallest value from the specified arguments. If the arguments are of type Date and time, the result will also be of type Date and time. If the arguments are numeric, the result will be of the most precise type. For example, if both an Integer/Long and a Decimal argument are specified, the result will be of type Decimal.
+The output is described in the table below:
+
+| Value                                            | Type                                                         |
+| ------------------------------------------------ | ------------------------------------------------------------ |
+| The smallest value from the specified arguments. | If the arguments are of type Date and time, the result will also be of type Date and time. <br />If the arguments are numeric, the result will be of the most precise type. <br />For example, if both an Integer/Long and a Decimal argument are specified, the result will be of type Decimal. |
 
 ### 3.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 min(5, 1, 5, 6.7)
@@ -74,15 +83,14 @@ The output is a decimal:
 
 Rounds a number to a certain precision.
 
-### 4.1 Input
+### 4.1 Input Parameters
 
-Use the following input parameters:
+The input parameters are described in the table below:
 
-*   a number
-    Type: Integer/Long, Decimal
-
-*   a precision (optional) 
-    Type: Integer/Long
+| Value                  | Type                  |
+| ---------------------- | --------------------- |
+| A number               | Integer/Long, Decimal |
+| A precision (optional) | Integer/Long          |
 
 ### 4.2 Output
 
@@ -94,7 +102,7 @@ The second optional parameter determines the precision of the rounding. The defa
 
 ### 4.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 round(3.5)
@@ -124,11 +132,15 @@ Generates a random number >= 0.0 and < 1.0
 
 ### 5.1 Output
 
-The output is a random number of a decimal type between 0.0 and 1.0
+The output is described in the table below:
+
+| Value                                                  | Type    |
+| ------------------------------------------------------ | ------- |
+| A random number of a decimal type between 0.0 and 1.0. | Decimal |
 
 ### 5.2 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 random()
@@ -144,20 +156,25 @@ The output is:
 
 Rounds down to an integer (returns the largest integer which is less than or equal to the input).
 
-### 6.1 Input
+### 6.1 Input Parameters
 
-Use the following input parameters:
+The input parameters are described in the table below:
 
-*   a number
-    Type: Integer/Long, Decimal
+| Value    | Type                  |
+| -------- | --------------------- |
+| A number | Integer/Long, Decimal |
 
 ### 6.2 Output
 
-The input value rounded down to the nearest integer.
+The output is described in the table below:
+
+| Value                                                | Type    |
+| ---------------------------------------------------- | ------- |
+| The input value rounded down to the nearest integer. | Integer |
 
 ### 6.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 floor(3.9)
@@ -185,20 +202,25 @@ The output is:
 
 Rounds up to an integer (returns the smallest integer which is greater than or equal to the input).
 
-### 7.1 Input
+### 7.1 Input Parameters
 
-Use the following input parameters:
+The input parameters are described in the table below:
 
-*   a number
-    Type: Integer/Long, Decimal
+| Value    | Type                  |
+| -------- | --------------------- |
+| A number | Integer/Long, Decimal |
 
 ### 7.2 Output
 
-The input value rounded up to the nearest integer.
+The output is described in the table below:
+
+| Value                                              | Type    |
+| -------------------------------------------------- | ------- |
+| The input value rounded up to the nearest integer. | Integer |
 
 ### 7.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 ceil(3.2)
@@ -224,26 +246,28 @@ The output is:
 
 ## 8 pow
 
-Calculates the exponent of a number to a certain power.
+Raises a number to a certain power.
 
-### 8.1 Input
+### 8.1 Input Parameters
 
-Use the following input parameters:
+The input parameters are described in the table below:
 
-*   a number 
-    Type: Integer/Long, Decimal
-*   a power 
-    Type: Integer/Long, Decimal
+| Value    | Type                  |
+| -------- | --------------------- |
+| A number | Integer/Long, Decimal |
+| A power  | Integer/Long, Decimal |
 
 ### 8.2 Output
 
-The number to the power, as in, n^p. The result will be of the most precise type necessary.
+The output is described in the table below:
 
-Type: Integer/Long or Decimal
+| Value                                                        | Type                    |
+| ------------------------------------------------------------ | ----------------------- |
+| The number to the power, as in, n^p. The result will be of the most precise type necessary. | Integer/Long or Decimal |
 
 ### 8.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 pow(2, 3)
@@ -267,42 +291,40 @@ The output is of type Decimal:
 15.625
 ```
 
-Calculation of 'pow' with a decimal exponent might be less accurate, as the standard Java libraries do not support these calculations with high precision. Use a specialized library in a custom Java action if high precision is required for this case.
+Calculation of 'pow' with a decimal power might be less accurate, as the standard Java libraries do not support these calculations with high precision. Use a specialized library in a custom Java action if high precision is required for this case.
 
 ### 8.4 (square) root
 
-To get the square root of a decimal, use 0.5 at the second parameter:
+To get the square root of a decimal, use 0.5 as the second parameter:
 
-```java
-pow(16, 0.5) results in 4
-```
+* `pow(16, 0.5)` results in `4`
+
 
 Or, use a division for a specific root:
 
-```java
-pow(27, 1:3) results in 3
-```
+* `pow(27, 1:3)` results in `3`
 
-```java
-pow(16, 1:4) results in 2
-```
+* `pow(16, 1:4)` results in `2`
 
 ## 9 abs
 
-Calculates the absolute value of a number (ie not negative).
+Calculates the absolute value of a number (i.e. not negative).
 
-### 9.1 Input
+### 9.1 Input Parameters
 
-Use the following input parameters:
+The input parameters are described in the table below:
 
-*   a number
-    Type: Integer/Long, Decimal
+| Value    | Type                  |
+| -------- | --------------------- |
+| A number | Integer/Long, Decimal |
 
 ### 9.2 Output
 
-The absolute value of the input, which is never negative. Corresponds to taking the square and then the positive square root.
+The output is described in the table below:
 
-Type: Integer/Long or Decimal
+| Value                                                        | Type                    |
+| ------------------------------------------------------------ | ----------------------- |
+| The absolute value of the input, which is never negative. Corresponds to taking the square and then the positive square root. | Integer/Long or Decimal |
 
 ### 9.3 Example
 

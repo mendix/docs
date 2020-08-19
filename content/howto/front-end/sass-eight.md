@@ -8,7 +8,9 @@ tags: ["gulp", "sass", "ux", "front end"]
 
 ## 1  Introduction
 
+{{% alert type="info" %}}
 Styling in a Mendix app project is easy to do once you get the hang of it. For the majority of styling needs, you can use Mendix's styling tool: Calypso. For more information, see [How to Use Calypso](/howto/front-end/calypso).
+{{% /alert %}}
 
 However, using Gulp and Sass can be better for certain users. If you already use a Gulp service worker in your development workflow, you may wish to style you Mendix app using Gulp and Sass instead of Calypso.
 
@@ -51,7 +53,7 @@ To prepare your app project, follow these steps:
 
 	![](attachments/set-up-sass/powershell.png)
 
-4.  Copy the address as text from your main project folder and paste it into Powershell (your project folder cannot contain spaces):
+4.  Copy the address as text from your main project folder and paste it into Powershell (your project folder cannot contain spaces and should not be too long):
 
 	![](attachments/set-up-sass/copy.png)
 

@@ -19,24 +19,28 @@ Events specify actions which can be triggered when the end-user interacts with a
 
 ### 2.1 On Click {#on-click}
 
-An **On click** event specifies an event that is executed when a user clicks a widget. Often **On click** property is a part of the **Events** section in properties. For example, you can specify that when a user clicks a customer's profile image, the page with this customer's details will open:
+An **On click** event specifies an event that is executed when a user clicks a widget. Often the **On click** property is a part of the **Events** section in properties. For example, you can specify that when a user clicks a customer's profile image, the page with this customer's details will open:
 
 {{% image_container width="350" %}}![](attachments/on-click-event/on-click-event-example.png)
 {{% /image_container %}}
 
-On click event is common for many widgets, for example, an image, buttons, a list view. 
+An on-click event is common for many widgets (for example, image, buttons, list view). 
 
 The **On click** property specifies what [action](#actions) is executed when a user click a widget.
+
+#### 2.1.1 Disabled During Action
+
+This property is only shown when **Call a microflow** or **Call a nanoflow** is selected as the on-click event. Selecting **Disabled during action** disables the button until the action is completed or failed.
 
 ### 2.2 On Change{#on-change}
 
 The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
-### 2.3 On Enter{#on-enter}
+### 2.3 On Enter {#on-enter}
 
 The on-enter property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
 
-### 2.4 On Leave{#on-leave}
+### 2.4 On Leave {#on-leave}
 
 The on-leave property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
 
@@ -90,7 +94,7 @@ Therefore, it is not recommended to change entities/attributes on the current pa
 
 The following settings are specific for this event:
 
-#### 3.3.1 Microflow{#microflow}
+#### 3.3.1 Microflow {#microflow}
 
 The [microflow](microflow) that should be executed.
 
@@ -226,7 +230,7 @@ The **Create object** event creates a new object. The following properties are s
 The **Save changes** event commits all changes made on the page. The following properties are specific for this event:
 
 * **Close page** – specifies whether the current page should be closed.
-* **Sync automatically** –  specifies whether synchronization should happen when the save button is clicked for a Mendix application running in an offline profile. When an object is saved in a Mendix application running in an offline profile it is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](offline-first). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [syncing it](offline-first#synchronization).
+* **Auto-synchronize** –  specifies whether synchronization should happen when the save button is clicked for a Mendix application running in an offline profile. When an object is saved in a Mendix application running in an offline profile it is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](offline-first). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [syncing it](offline-first#synchronization).
 
 ### 3.8 Cancel Changes {#cancel-changes}
 
@@ -256,7 +260,3 @@ The **Sign out** event signs the currently signed-in user out. When no user is s
 
 * [Pages](pages)
 * [Page](page)
-
-
-
-

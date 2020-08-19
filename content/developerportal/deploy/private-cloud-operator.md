@@ -72,12 +72,25 @@ spec:
     logAutosubscribeLevel: INFO # Default logging level
     mxAdminPassword: V2VsYzBtZSE= # base64 encoded password for MendixAdmin user. In this example, 'Welc0me!'; can be left empty keep password unchanged
     dtapMode: P # Security & runtime mode: P for production, D for development
+    logLevels: # Optional, can be omitted : set custom log levels for specific nodes
+      NodeOne: CRITICAL
+      NodeTwo: DEBUG
     # Mendix Runtime Jetty options, in JSON format; validated and applied by the mx-m2ee-sidecar container
     jettyOptions: |-
       {
         "max_form_content_size": 10485760,
         "use_blocking_connector": false
       }
+    environmentVariables: # Optional, can be omitted : set environment variables for the Mendix Runtime container
+      - name: MY_ENVIRONMENT_VARIABLE # name of the environment variable
+        value: debug # value of the environment variable
+        # valueFrom can be used instead of value to load values from a Secret:
+        #valueFrom:
+        #  secretKeyRef:
+        #    name: proxy-secret
+        #    key: java-proxy-secret
+      - name: JAVA_TOOL_OPTIONS # name of the environment variable
+        value: -Dhttp.proxyHost=10.0.0.100 -Dhttp.proxyPort=8080 -Dhttps.proxyHost=10.0.0.100 -Dhttps.proxyPort=8443 -Dhttp.nonProxyHosts="localhost|host.example.com"
     # All custom Mendix Runtime parameters go here, in JSON format; validated and applied by the mx-m2ee-sidecar container
     customConfiguration: |-
       {
@@ -127,7 +140,9 @@ You need to make the following changes:
           key: LicenseKey # Offline LicenseKey value provided by Mendix Support
     ```
 
+* **logLevels**: – set custom logging levels for specific log nodes in your app — valid values are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
 * **jettyOptions** and **customConfiguration**: – if you have any custom Mendix Runtime parameters, they need to be added to this section — options for the Mendix runtime have to be provided in JSON format — see the examples in the CR for the correct format and the information below for more information on [setting app constants](#set-app-constants) and [configuring scheduled events](#configure-scheduled-events)
+* **environmentVariables**: - set the environment variables for the Mendix app container, and JVM arguments through the `JAVA_TOOL_OPTIONS` environment variable
 
 #### 3.2.1 Setting App Constants{#set-app-constants}
 

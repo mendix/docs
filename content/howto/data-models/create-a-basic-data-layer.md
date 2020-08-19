@@ -129,6 +129,11 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 
 	![](attachments/18448745/18582208.png)
 
+{{% alert type="info" %}}
+Delete behavior includes objects which are in memory. This means that delete cascades and delete prevention will apply, even if the associated object has not been committed.
+{{% /alert %}}
+
+
 ## 8 Read More
 
 * [Work with Images & Files](working-with-images-and-files)

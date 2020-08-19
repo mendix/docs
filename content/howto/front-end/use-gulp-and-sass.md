@@ -1,9 +1,13 @@
 ---
-title: "Use Gulp & Sass"
-category: "Front-End"
-menu_order: 45
+title: "Customize Styling Using Gulp"
+parent: "customize-styling"
+menu_order: 30
 tags: ["gulp", "sass", "ux", "front end"]
 ---
+
+{{% alert type="info" %}}
+Mendix recommends the Calypso GUI styling tool for most users. For more information, see [Customize Your Styling Using Calypso](calypso).
+{{% /alert %}}
 
 To use Gulp and Sass in your Mendix app project, start with [How to Set Up Gulp & Sass](sass-eight).
 

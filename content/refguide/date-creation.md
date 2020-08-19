@@ -1,6 +1,7 @@
 ---
 title: "Date Creation"
 parent: "expressions"
+menu_order: 90
 tags: ["studio pro", "expression", "date creation", "expressions"]
 ---
 
@@ -8,11 +9,11 @@ tags: ["studio pro", "expression", "date creation", "expressions"]
 
 Dates can be created with the `dateTime` and `dateTimeUTC` functions. The difference between them is that  `dateTime` uses the calendar of the session used in the function call, and `dateTimeUTC` uses the UTC calendar. The system session runs as UTC by default, except for scheduled events, which can be configured in the [Scheduled Event Time Zone](project-settings#scheduled) section of **Project Settings**.
 
-This function does not accept parameters, only fixed values. To create a date using parameters, use the [parseDateTime](parse-and-format-date-function-calls#parsedatetime-utc) function.
+This function does not accept variable or attribute parameters, only fixed values. To create a date using parameters, use the [parseDateTime](parse-and-format-date-function-calls#parsedatetime-utc) function.
 
 ## 2 Values
 
-These functions takes between one and six input values in the following order:
+These functions take between one and six input values in the following order:
 
 1. years (type: integer, four digits and greater than 1799)
 2. months (type: integer, between 1 and 12)

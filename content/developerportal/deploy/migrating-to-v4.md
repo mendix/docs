@@ -18,6 +18,7 @@ This how-to explains how to migrate your app from a Mendix Cloud v3 node to a Me
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
+* Ensure that your app is on a supported version of Mendix, that is **Mendix version 6.0 or above**, otherwise the migration will fail – see [Moving from Modeler Version 5 to 6](/refguide6/moving-from-5-to-6) for help if your app is on a version of Mendix below 6.0
 * Have a [Mendix Cloud](mendix-cloud-deploy) v4 node available (to request a licensed v4 Cloud Node, contact your Customer Success Manager (CSM))
 * Have the [Technical Contact](/developerportal/company-app-roles/technical-contact) role for both your existing v3 and available v4 Cloud Nodes
 * Create two new temporary Free Apps without Free App environments – instructions for unlinking a Free App from its environment are here: [Licensing Mendix Cloud Apps](licensing-apps#unlink)
@@ -26,7 +27,6 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 You will need to take the following into account when planning to migrate to Mendix Cloud v4:
 
-* Your app needs to be on a supported version of Mendix, that is **Mendix version 6.0 or above**
 * If you are using Mendix 7, you might want to split long-running scheduled events into smaller chunks, using a queueing system like the Amazon SQS connector to spread the work out over multiple instances
 * If you use a mail server from your app, you will need to use a third-party email provider – for more information, see [Sending Email](sending-email)
 * If you use an FTP server in your app, you will need to use a third-party FTP provider 

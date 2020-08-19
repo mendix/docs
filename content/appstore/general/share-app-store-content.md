@@ -151,16 +151,16 @@ To add content to the App Store, follow these steps:
 		* The **Configuration** steps and details
 		* Any **Known bugs**
 		* Any **Frequently Asked Questions**
-
+	
 	{{% image_container width="450" %}}![](attachments/share-app-store-content/add_content_5.png){{% /image_container %}}
-
+	
 	The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links.
-
+	
 	You can attach images to your documentation in one of two ways:
-
+	
 	* Drag the image from file explorer to the editor (this will upload your image)
 	* Click the Image button in the editor tools and enter a URL which points to an image
-
+	
 	Uploaded images cannot be resized, but linked images can.
 
 9. Note that there is nothing for you to do on the **Statistics** and **All versions** tabs. The **Statistics** tab will chart the downloads of your content over time. The **All versions** tab will list the various versions of your content that have been updated.
@@ -172,7 +172,11 @@ To add content to the App Store, follow these steps:
 	* **Apache V2** (for more information, see [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0))<br />
 	* **GNU General Public License, version 3** (for more information, see [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html))<br />
 	* **Mendix EULA** (for more information, see [Mendix Terms of Use](https://www.mendix.com/terms-of-use/))<br />
-* **MIT** (for more information, see [MIT License](https://opensource.org/licenses/MIT))<br />
+	* **MindSphere Development License Agreement**
+	* **MIT** (for more information, see [MIT License](https://opensource.org/licenses/MIT))<br />
+	* **SDISW Development License Agreement for Mendix Sample Apps**<br />
+	* **SDISW End-User License Agreement for Mendix Connectors and Widgets** (for more information, see [SDISW End-User License Agreement for Mendix Connectors and Widgets](https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdownload.industrysoftware.automation.siemens.com%2Fdownload-n.php%2Fteamcenter%2Fproduct_updates%2FTools%2FSDISW_End_User_License_Agreement_for_Mendix_Connectors_and_Widgets.pdf&data=02%7C01%7CFranklin.van.Buren%40mendix.com%7C708ea4b805a84531748308d732d3a744%7Cb4e3c78d8e3b46d8bc565540da23ba4d%7C0%7C1%7C637033756945444067&sdata=v%2BlmAO9hgXjgnuiDdwGZt%2BGdx2wAWaw5MaW3OwpDtr0%3D&reserved=0))<br />
+	* **SDISW End-User License Agreement for Mendix Sample Apps** (for more information, see [SDISW End-User License Agreement for Mendix Sample Apps](https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdownload.industrysoftware.automation.siemens.com%2Fdownload-n.php%2Fteamcenter%2Fproduct_updates%2FTools%2FSDISW_End_User_License_Agreement_for_Mendix_Sample_Apps.pdf&data=02%7C01%7CFranklin.van.Buren%40mendix.com%7C708ea4b805a84531748308d732d3a744%7Cb4e3c78d8e3b46d8bc565540da23ba4d%7C0%7C1%7C637033756945454059&sdata=ImjO46zjjVbPdQjq30Htyz5PlTWOcVpt5noPQ7UUiP4%3D&reserved=0))<br />
 	
 	{{% image_container width="300" %}}![](attachments/share-app-store-content/add_content_8.png){{% /image_container %}}
 	

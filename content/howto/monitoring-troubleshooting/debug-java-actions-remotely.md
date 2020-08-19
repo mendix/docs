@@ -19,13 +19,13 @@ In this section, you will learn how to configure the security at the [Prototype 
 
 To edit the server configuration with extra JVM parameters, follow these steps:
 
-1. Open the project settings.
-2. Edit the configuration.
-3. Go to the **Server** tab on the **Edit Configuration** editor and add the following line to the **Extra JVM parameters** field: `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005`
+1. Open the [Project Settings](/refguide/project-settings).
+2. Edit the configuration on the **Configurations** tab.
+3.  Go to the **Server** tab of the configuration, add the following line to the **Extra JVM parameters** field: `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005`
 
     ![](attachments/18448579/18580063.png)
 
-4. Next, start your application in Mendix.
+4. Run your application.
 
 ## 3 Configuring Remote Debugging
 

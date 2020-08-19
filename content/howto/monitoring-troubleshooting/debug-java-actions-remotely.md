@@ -41,6 +41,15 @@ In your Java IDE, you need to configure remote debugging. This screenshot shows 
 2. Place some breakpoints in your Java code.
 3. Start debugging.
 
+In eclipse it is
+1. Open the project in Eclipse
+2. Open the menu with the bug icon or the 'run' menu
+3. 'Debug Configurations...'
+4. In the left bar select 'Remote Java Application' 
+5. Right-click 'New' 
+6. Be sure your current project is under 'project', change the port to 5005 (see the JVM-parameters)
+7. Press 'debug'
+
 ## 5 Read More
 
 * [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)

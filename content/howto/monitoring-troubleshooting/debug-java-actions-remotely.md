@@ -23,28 +23,31 @@ To edit the server configuration with extra JVM parameters, follow these steps:
 2. Edit the configuration on the **Configurations** tab.
 3.  Go to the **Server** tab of the configuration, add the following line to the **Extra JVM parameters** field: `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005`
 
-    ![](attachments/18448579/18580063.png)
+    ![](attachments/debug-java-actions-remotely/18580063.png)
 
 4. Run your application.
 
 ## 3 Configuring Remote Debugging
 
-In your Java IDE, you need to configure remote debugging. This screenshot shows the configuration in IntelliJ:
+In your Java IDE, you need to configure remote debugging.
 
-![Mendix Intellij remote debugging](http://www.andrejkoelewijn.com/blog/images/2014/01/mx-java-debug/intellij_rundebug_configurations.png)
+To configure IntelliJ, follow these steps:
 
-1. Start the debugger.
+1. Start the **Debugger**.
 2. Place some breakpoints in your Java code.
 3. Start debugging.
 
-In eclipse it is
-1. Open the project in Eclipse
-2. Open the menu with the bug icon or the 'run' menu
-3. 'Debug Configurations...'
-4. In the left bar select 'Remote Java Application' 
-5. Right-click 'New' 
-6. Be sure your current project is under 'project', change the port to 5005 (see the JVM-parameters)
-7. Press 'debug'
+![](attachments/debug-java-actions-remotely/intellij_rundebug_configurations.png)
+
+To configure Eclipse, follow these steps:
+
+1. Open the project in Eclipse.
+2. Open the menu with the bug icon or the **Run** menu.
+3. Select **Debug Configurations**.
+4. In the left menu bar, select **Remote Java Application**.
+5. Right-click **New**.
+6. Be sure your current project is under **Project**, and change the port to 5005 (view the JVM parameters).
+7. Click **Debug**.
 
 ## 4 Read More
 
@@ -52,6 +55,4 @@ In eclipse it is
 * [Clear Warning Messages in Mendix](clear-warning-messages)
 * [Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
 * [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
-* [Set Log Levels](log-levels)
-* [Debug Microflows](debug-microflows)
 * [Debug Java Actions](debug-java-actions)

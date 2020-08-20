@@ -29,7 +29,7 @@ To exit the preview environment, click **Close Preview** in the top-right corner
 
 ![](attachments/publishing-app/close-preview.jpg)
 
-You cannot preview your app if it has [consistency errors](consistency-errors). You will be notified when this is the case, and you will need to fix errors first to preview your app.
+You cannot preview your app if it has [consistency errors](consistency-errors). You will be notified if there are, and you need to fix errors first to preview your app.
 
 Previewing your app does not change the published app. Also, the preview environment has a separate database from the published app, that means you can create your own test data without polluting the data in the published application.
 
@@ -43,7 +43,7 @@ The app preview is your personal preview of the app. Hence, only users logged in
 
 ## 3 Publishing Your App {#publishing-your-app}
 
-When you publish your app, you deploy it to a cloud environment. A cloud environment is a location in the cloud that can host your app, and deployment is a process to put the latest version of your app in that location. For more technical information, see [Environments](/developerportal/deploy/environments) in *Developer Portal Guide*.
+When you publish your app, you deploy it to a cloud environment. A cloud environment is a location in the cloud that can host your app, and deployment is a process to put the latest version of your app in that location. For more technical information, see [Environments](/developerportal/deploy/environments) in the *Developer Portal Guide*.
 
 By default all apps created in Mendix Studio are Free Apps. A Free App is a complete deployment environment in the Mendix Cloud with some limitations. You can upgrade your Free App to a licensed app. The main differences between a Free App and a licensed app are described in the table below: 
 
@@ -59,7 +59,7 @@ To publish your application, follow these steps:
 1. Click **Publish** in the top menu bar of Studio (the dialog box with your app status will open). 
 2.  Once your cloud environment has been set up, you will see the **Update** button. Click it to push the latest changes from Studio to the published app or to publish the app for the first time. 
 
-    ![Publishing and Updating Your App](attachments/publishing-app/publish-and-update-buttons.png)
+    ![Publishing and Updating Your App](attachments/publishing-app/publish-and-update-buttons.jpg)
 
 {{% alert type="info" %}}
 
@@ -75,7 +75,9 @@ After you have updated your app, you are able to instantly view it in your brows
 
 To view your app in a browser in the currently selected view mode (Phone, Tablet, or Responsive), click **View app** in the **Your app is running** dialog box.
 
-To select a different preview mode, click the drop-down menu on the **View app** button.![Preview Modes](attachments/publishing-app/view-app-drop-down.png)
+To select a different preview mode, click the drop-down menu on the **View app** button.
+
+![Preview Modes](attachments/publishing-app/view-app-drop-down.png)
 
 ### 4.2 Viewing your App on a Mobile Device
 
@@ -83,13 +85,13 @@ To view your app on a mobile device, follow these steps:
 
 1.  Click **View on mobile device**.
 
-    ![View on Mobile Device Option](attachments/publishing-app/view-on-mobile-device.png)
+    ![View on Mobile Device Option](attachments/publishing-app/view-on-mobile-device.jpg)
 
 2. Scan the QR-code with your mobile device or open the link in your mobile device.
 
 ## 5 Possible Statuses When Publishing Your App
 
-The process of your app publishing starts the moment you click the **Update** button. For more information on how to publish your app, see section [2 Publishing Your App](#publishing-your-app). 
+The process of your app publishing starts the moment you click the **Update** button. For more information on how to publish your app, see the  [Publishing Your App](#publishing-your-app) section. 
 
 You may see different statuses in dialog box when your app is publishing (when clicking **Publish** > **Update**). The statuses can be divided into the following groups:
 
@@ -114,22 +116,15 @@ The list below shows you the examples of the environment statuses you may see (n
 
     ![Updating Your App Status](attachments/publishing-app/updating-your-app.png)
 
-    {{%alert type="info" %}}It is possible that you see "Your app has failed to set up". This can happen during deployment, please wait until the process is completed.
+* **Your app has failed to set up** – it is possible to see such a message during deployment, please wait until the process is completed.
 
-   ![Your App Has Failed to Set Up Status](attachments/publishing-app/updating-your-app-failed-to-set-up.png)
-  {{% /alert %}}
+    ![Your App Has Failed to Set Up Status](attachments/publishing-app/updating-your-app-failed-to-set-up.png)
 
-Deployment statuses are divided into the following ones:
 
-1.  If your project does not have [consistency errors](consistency-errors), your application will be deployed and the dialog box with the information on the last deployment highlighted in green will be opened.  
+When your app is successfully deployed, the dialog box with the information on the last deployment highlighted in green will be opened:  
 
-	![Your App Has Consistency Errors](attachments/publishing-app/your-app-is-running-no-errors.png)
+![Deployed Successfully](attachments/publishing-app/your-app-is-running-no-errors.jpg)
 
-2.  If your app has [consistency errors](consistency-errors), you need to fix them first and then click the **Update** button again. If you do not click the **Update** button after solving consistency errors and click **View app**, the last successfully deployed version of your app will open without the recent changes. 
-
-	![Last Publish Has Consistency Errors](attachments/publishing-app/app-has-errors.png)
-
-For more information on how to view consistency errors and to fix them , see [Checks](checks) and [Consistency Errors](consistency-errors). 
 
 ## 6 Retrieving Your App Status {#retrieving-app-status}
 
@@ -139,7 +134,7 @@ Before the deployment can start, Studio needs to get the environment status from
 
 Once the status is retrieved, you will normally see **Your app is running** dialog box upon clicking **Publish**.
 
-![](attachments/publishing-app/your-app-is-running.png)
+![](attachments/publishing-app/your-app-is-running.jpg)
 
 However, Studio may fail to get your environment status. This can happen when there is no deployment environment; technically it means that the app has been unlinked from one environment and is not linked to another environment yet. In this case you will not be able to publish. 
 
@@ -153,7 +148,7 @@ Studio can fail to get your environment status in the following cases:
 
 	![Deploy Failed, No Environment for Studio](attachments/publishing-app/no-environment.png)
 
-For more technical information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings) in *Developer Portal Guide*. 
+For more technical information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings) in the *Developer Portal Guide*. 
 
 ## 7 Read More
 

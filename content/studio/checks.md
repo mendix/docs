@@ -7,23 +7,22 @@ tags: ["studio", "app viewing", "checks", "errors", "consistency errors"]
 
 ## 1 Introduction 
 
-When [previewing or publishing your app](publishing-app#publishing-your-app), Mendix Studio checks your app on [consistency errors](consistency-errors). If there are any, the app cannot be published, and you see the **Checks** button goes red with the number of errors indicated.
+Mendix Studio checks your app on [consistency errors](consistency-errors) in real-time. If there are errors, you see the **Checks** button goes red with the number of errors indicated and elements causing the errors are highlighted.
 
 ![](attachments/checks/checks-button.png)
 
+{{% alert type="info" %}}
+You cannot [preview or publish your app](publishing-app) until you fix the errors. 
+{{% /alert %}}
+
 ## 2 Viewing Checks and Interacting with the Checks Panel {#viewing-checks}
 
-To display checks for your app and view the faulty elements in it, you can do the following:
+If your app has consistency errors, the **Checks** button will have the red border and the number of the errors will be indicated on the button. To display checks for your app and view the faulty elements in it, you can do the following:
 
-1. Click **Preview** or **Publish** > **Update** in the top-right of Studio. 
-
-    ![](attachments/checks/publish-update.png)
-
-3.  If your app has consistency errors, the **Checks** button will have red border, the number of the errors will be indicated on the button, and a warning will be displayed. 
+1. Click the **Checks** button or press <kbd>C</kbd> to open the **Checks** panel:
 
     ![](attachments/checks/checks-button-red.png)
 
-4.  Click the **Checks** button, the warning or press <kbd>C</kbd> to view all checks. 
     The panel with the list of checks appears at the bottom of the screen. For more information on the **Checks** panel, see the [Checks Panel Overview](#checks-panel-overview) section.
 
     ![](attachments/checks/checks-panel.png)
@@ -32,11 +31,11 @@ To display checks for your app and view the faulty elements in it, you can do th
 
 5. To close the panel, either click the close button in the top-right corner of the panel, or click **Checks** in the top-right corner of Studio. 
 
-You can also sort the order which errors are displayed in by clicking the column header in the panel. Thus, you can sort errors in ascending or descending order by **Message**, **Code**, **Module**, **Document**, or **Element**. For more information on items displayed in the **Checks** panel, see the [Checks Panel Overview](#checks-panel-overview) section. 
+To sort the errors, click the column header in the panel. Thus, you can sort errors in ascending or descending order by **Message**, **Code**, **Module**, **Document**, or **Element**. For more information on items displayed in the **Checks** panel, see the [Checks Panel Overview](#checks-panel-overview) section. 
 
 {{% alert type="info" %}}
 
-If there are no consistency errors, the app will be published, and the **Checks** panel will be empty. 
+If there are no consistency errors, the **Checks** panel will be empty. 
 
 {{% /alert %}}
 
@@ -44,13 +43,7 @@ If there are no consistency errors, the app will be published, and the **Checks*
 
 ### {#checks-panel-overview}
 
-The **Checks** panel is represented as a table and shows you a list of consistence errors that prevent your app from functioning in a correct way and being published (for example, if you do not specify an entity for the data view, your app cannot function correctly). For more information on consistency errors, see [Consistency Errors](consistency-errors). 
-
-{{% alert type="info" %}}
-
-The **Checks** panel is only refreshed after a user clicks **Preview** or **Publish**>**Update**, it is not refreshed in real-time.
-
-{{% /alert %}}
+The **Checks** panel is represented as a table and shows you a list of consistence errors. This prevents your app from functioning in an incorrect way and being published (for example, if you do not specify an entity for the data view, your app cannot function correctly). For more information on consistency errors, see [Consistency Errors](consistency-errors). 
 
 The items displayed in the table of the **Checks** panel are described below. 
 

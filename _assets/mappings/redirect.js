@@ -2458,7 +2458,7 @@ module.exports = {
     },
 	{
       from: "/releasenotes/studio/8.0-and-above",
-      to: "/releasenotes/studio"
+      to: "/releasenotes/studio/"
     },
 	/****************************************************
      * From the App Store (permanent, mapped)

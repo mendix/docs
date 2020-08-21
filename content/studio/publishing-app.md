@@ -23,11 +23,11 @@ Your app will now get built and launched in a preview environment, and will appe
 
 You can preview your app in the Phone, Tablet, and Responsive (Desktop) mode. Click the corresponding icon to change the mode.
 
-![](attachments/publishing-app/preview-modes.jpg)
+![Preview Modes](attachments/publishing-app/preview-modes.jpg)
 
 To exit the preview environment, click **Close Preview** in the top-right corner of the screen.
 
-![](attachments/publishing-app/close-preview.jpg)
+![Close Preview](attachments/publishing-app/close-preview.jpg)
 
 You cannot preview your app if it has [consistency errors](consistency-errors). You will be notified if there are, and you need to fix errors first to preview your app.
 
@@ -110,7 +110,7 @@ The list below shows you the examples of the environment statuses you may see (n
 
 *  **Your app is running** – your application has been published
 
-    ![](attachments/publishing-app/your-app-is-running-env-status.png)
+    ![Your app is running](attachments/publishing-app/your-app-is-running-env-status.png)
 
 *  **Updating your app** – your application is the process of deployment
 
@@ -130,11 +130,11 @@ When your app is successfully deployed, the dialog box with the information on t
 
 Before the deployment can start, Studio needs to get the environment status from the cloud. Thus, when you click the **Publish** button, you may see the dialog box "Retrieving app environment status", meaning that Studio is getting the status of the deployed application from the cloud. 
 
-![Retrieving App Environment Status](attachments/publishing-app/retrieving-app-status.png)
+![Retrieving App Environment Status](attachments/publishing-app/retrieving-app-status.jpg)
 
 Once the status is retrieved, you will normally see **Your app is running** dialog box upon clicking **Publish**.
 
-![](attachments/publishing-app/your-app-is-running.jpg)
+![Your app is running](attachments/publishing-app/your-app-is-running.jpg)
 
 However, Studio may fail to get your environment status. This can happen when there is no deployment environment; technically it means that the app has been unlinked from one environment and is not linked to another environment yet. In this case you will not be able to publish. 
 
@@ -142,7 +142,7 @@ Studio can fail to get your environment status in the following cases:
 
 *  Your app was a Free App, was unlinked from the Free App environment, but was not upgraded to the licensed app (for more information on Free Apps and licensed apps, see section [2 Publishing Your App](#publishing-your-app)) 
 
-	![Failing to Get App Environment Status](attachments/publishing-app/unlinked-app.png)
+	![Failing to Get App Environment Status](attachments/publishing-app/unlinked-app.jpg)
 
 *  Your app is a licensed app, and no environment has been set for the Studio deployment by a [Technical Contact](/developerportal/company-app-roles/technical-contact):
 

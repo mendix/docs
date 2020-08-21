@@ -14,7 +14,7 @@ As the Mendix App Store is being updated into a dynamic and fully functioning Me
 
 {{% todo %}}[**Verify wording above**]{{% /todo %}}
 
-The [Mendix App Store](https://appstore.home.mendix.com/index3.html) is a vibrant marketplace containing complete sample apps that can be used right away as well as various add-ons (connectors, widgets, and modules) that can be used to build custom apps more quickly. In the Mendix App Store, you can browse all the content, get what you need, and share the content you have created.
+The [Mendix App Store](https://appstore.home.mendix.com/index3.html) is a vibrant marketplace containing complete sample apps that can be used right away as well as various components (connectors, widgets, and modules) that can be used to build custom apps more quickly. In the Mendix App Store, you can browse all the content, get what you need, and share the content you have created.
 
 This document describes the different sections of the Mendix App Store.
 
@@ -22,35 +22,45 @@ This document describes the different sections of the Mendix App Store.
 
 The home page of the Mendix App Store has three main tabs at the top:
 
-* **Discoiver**
-* **My Marketplace**
-* **{Your company's private App Store page}**
+* **Discover** – the home page, where you can browse various component categories and filter what is displayed
+* **My Marketplace** – click this to go to [My App Store](#my-app-store}
+* **{Your company's private App Store page}** – 
+
+{{% todo %}}[**Add cross-references above**]{{% /todo %}}
 
 ![](attachments/app-store-overview/home-page.jpg)
 
 It also presents various content categories:
 
-Category | Description
+| Category | Description |
 | --- | --- |
-| Get Studio Pro | --- |
-| Layouts | --- |
-| Create New App | --- |
-| Modules | --- |
-| Solutions | --- |
-| Widgets | --- |
-| Themes | --- |
-| Tags | --- |
-| Ratings | --- |
+| Get Studio Pro | All the versions of [Studio Pro](/releasenotes/studio-pro/) available for download. |
+| Layouts | Layouts available for download. |
+| Create New App | Click this to select a app template for your new app project. |
+| [Modules](/appstore/modules/) | These elements enable new functionality with accompanying domain models and security options. |
+| Solutions | Fully-formed solutions for apps you can immediately start using. |
+| [Widgets](/appstore/widgets/) | Single user-interface elements that can be configured, such as containers, drop-down menus, and buttons. |
+| [Themes](/appstore/themes/) | Styling options for your apps that you can apply for different elements and devices. |
 
-## 3 Add-On Details Page {#details}
+{{% todo %}}[**Finish describing: Layouts (differentiate from Themes); Solutions**]{{% /todo %}}
 
-Clicking an App Store component in a menu will bring you to the component's details page. The details page presents the sections described below.
+The following filter options are also available:
+
+* **Tags**
+* **Ratings**
+* **Pricing plan**
+
+{{% todo %}}[**Review filter options available on home page versus category page; Pricing plan available?**]{{% /todo %}}
+
+## 3 Component Details Page {#details}
+
+Clicking an App Store component tile will bring you to the component's details page with the sections described below.
 
 ### 3.1 Header
 
 ![](attachments/app-store-overview/content_detail_1.png)
 
-The header for each add-on presents the following details:
+The header for each component presents the following details:
 
 * The **Name** and **Category** of the component
 * The review average (in stars) and the number of reviews
@@ -66,7 +76,7 @@ The header for each add-on presents the following details:
 
 ### 3.2 Tabs
 
-The details page for each add-on and app presents the following item information tabs:
+The details page for each and app presents the following item information tabs:
 
 *  **Overview** tab – contains following sections:
 	* **Description** – a description of the component
@@ -125,7 +135,7 @@ In the **Developer Info** section, you can see the following information:
 * The company for which the developer works
 	* Clicking the company name will bring you to the company's [Partner Profile](/developerportal/community-tools/how-to-set-up-your-partner-profile)
 
-## 4 My App Store
+## 4 My App Store {#my-app-store}
 
 ### 4.1 Dashboard {#dashboard}
 
@@ -175,6 +185,10 @@ This page contains drafts of App Store content you have started:
 Click the name of an App Store component to be taken to the [DRAFT](share-app-store-content#adding) page, where you can continue editing the component details.
 
 Click **Delete** to delete a draft.
+
+Click **Withdraw** to withdraw the content from the review process after you have [submitted it for approval](share-app-store-content#status) . This will return the content to the draft state.
+
+{{% todo %}}[**Verify the Withdraw option is available here and not on page with Submit for approval (see cross-reference above; verify name of button**]{{% /todo %}}
 
 ### 4.4 Shared with Me {#shared-with-me}
 

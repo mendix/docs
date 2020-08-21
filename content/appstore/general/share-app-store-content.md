@@ -151,16 +151,16 @@ To add content to the App Store, follow these steps:
 		* The **Configuration** steps and details
 		* Any **Known bugs**
 		* Any **Frequently Asked Questions**
-
+	
 	{{% image_container width="450" %}}![](attachments/share-app-store-content/add_content_5.png){{% /image_container %}}
-
+	
 	The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links.
-
+	
 	You can attach images to your documentation in one of two ways:
-
+	
 	* Drag the image from file explorer to the editor (this will upload your image)
 	* Click the Image button in the editor tools and enter a URL which points to an image
-
+	
 	Uploaded images cannot be resized, but linked images can.
 
 9. Note that there is nothing for you to do on the **Statistics** and **All versions** tabs. The **Statistics** tab will chart the downloads of your content over time. The **All versions** tab will list the various versions of your content that have been updated.
@@ -187,12 +187,14 @@ To add content to the App Store, follow these steps:
 
 	{{% image_container width="350" %}}![](attachments/share-app-store-content/add_content_6.png){{% /image_container %}}
 
-	In this section, you can do the following:
+	<a name="status"></a>In this section, you can do the following:
 
 	* In the **Status** section, if applicable, click the **error(s)** link  bring up the **Warning** pop-up window that lists the information you need enter or fix before you submit the content
 	* Click **Back** to go to the list of content drafts in the **My App Store** tab
 	* Click **Edit** to continue editing the content information
 	* Click **Submit for approval** to submit your App Store content for approval at Mendix
+
+{{% todo %}}[**Verify the Withdraw option should not be documented here**]{{% /todo %}}
 
 ## 5 Updating Existing App Store Content {#updating}
 

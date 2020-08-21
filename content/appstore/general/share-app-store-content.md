@@ -179,6 +179,7 @@ To add content to the App Store, follow these steps:
 	* **SDISW End-User License Agreement for Mendix Sample Apps** (for more information, see [SDISW End-User License Agreement for Mendix Sample Apps](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Sample_Apps.pdf))<br />
 	
 	You can request other license types to be added as **License** options by clicking the **Feedback** button on the right side of the App Store screen.
+
 11. After entering the information for your content, you can click one of these buttons in the middle of the screen:
 
 	{{% image_container width="300" %}}![](attachments/share-app-store-content/add_content_7.png){{% /image_container %}}

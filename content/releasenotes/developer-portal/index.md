@@ -17,11 +17,11 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Improvements
 
-* we reintroduced the read-only authorisation for user-story overview
+* We reintroduced the read-only authorization for the [user story](/developerportal/collaborate/stories) overview.
 
 #### Fixes
 
-* we fixed an issue where under certain circumstances email notifications were not sent on story comment updates
+* We fixed an issue where, under certain circumstances, email notifications were not sent on [story comment](/developerportal/collaborate/stories#story-details) updates.
 
 ### August 11th, 2020
 

@@ -13,6 +13,16 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2020
 
+### August 25th, 2020
+
+#### Improvements
+
+* we reintroduced the read-only authorisation for user-story overview
+
+#### Fixes
+
+* we fixed an issue where under certain circumstances email notifications were not sent on story comment updates
+
 ### August 11th, 2020
 
 #### Improvements

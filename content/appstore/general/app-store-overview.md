@@ -54,18 +54,19 @@ The following filter options are also available:
 
 ## 3 Component Details Page {#details}
 
-Clicking an App Store component tile will bring you to the component's details page with the sections described below.
+Clicking the tile of an App Store component will bring you to its details page with the sections described below.
 
-### 3.1 Header
+### 3.1 Header & Usage
 
-![](attachments/app-store-overview/content_detail_1.png)
+![](attachments/app-store-overview/content_detail_1.jpg)
 
 The header for each component presents the following details:
 
-* The **Name** and **Category** of the component
+* The name and category of the component
 * The review average (in stars) and the number of reviews
 * The number of times the component has been downloaded
-* <a name="favorite-heart"></a>A heart for favoriting the component (so it will appear in your list of favorites on the [Dashboard](#dashboard) and on the [Favorites](#favorites) page)
+* <a name="saved"></a>The **Add to saved** button which, when clicked, will add the component to the list on the [Dashboard](#dashboard) and [Saved](#saved-components) pages)
+* The **Share** button, which allows you to share the component to your networks
 * The following buttons (depending on the type of component and what the developer added to share):
 	* **Preview** – click this to preview more information or a demo about the component
 		* This is only available if the developer has included a demo URL when sharing the component (for details on sharing components, see [How to Share App Store Content](share-app-store-content))
@@ -73,6 +74,32 @@ The header for each component presents the following details:
 	* **Download** – click this to download the component
 		* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotion)
 		* The best practice is to download a component from the App Store that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded App Store content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
+
+{{% todo %}}[**Update screenshot of component details**]{{% /todo %}}
+
+{{% todo %}}[**Verify "Add to saved" definition, cross-references, terms/labels**]{{% /todo %}}
+
+{{% todo %}}[**Verify "Share" definition**]{{% /todo %}}
+
+{{% todo %}}[**Verify three buttons still available**]{{% /todo %}}
+
+{{% todo %}}[**Add cross-reference to section on using App Store directly in Studio Pro**]{{% /todo %}}
+
+<a name="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
+
+* The latest **Version** number of the component
+* The Studio Pro version that the component **Requires** to work
+
+{{% todo %}}[**Verify that below will still be part of this section; especially UUID, which is linked to in section 3.1.1 of Project API**]{{% /todo %}}
+
+* When the component was **Published**
+* The type of **License** for the component
+* The type of support Mendix offers for the component (for more information, see [App Store Content Support](app-store-content-support))
+* The **URL** for the component page that you can copy and share
+* The **UUID** of the component; if the component is part of the **Getting Started** category of App Store content, this UUID can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*
+* A **View on GitHub** link, which will take you to the GitHub source files of the component
+
+# OLD
 
 ### 3.2 Tabs
 
@@ -102,24 +129,6 @@ The details page for each and app presents the following item information tabs:
 *  **Group members** tab – if this App Store component is assigned to a [user group](#user-groups), this tab lists the [user group members](#members) (who are the users that can manage the component)
 
 	![](attachments/app-store-overview/content_detail_9.png)
-
-### 3.3 Additional Info Section {#additional-info}
-
-{{% image_container width="300" %}}
-![](attachments/app-store-overview/content_detail_2.png)
-{{% /image_container %}}
-
-In the **Additional Info** section, you can see the following information (depending on the type of component):
-
-* The **Latest version** number of the component
-* The Studio Pro version that the component **Requires** to work
-* When the component was **Published**
-* The type of **License** for the component
-* The type of support Mendix offers for the component (for more information, see [App Store Content Support](app-store-content-support))
-* The **URL** for the component page that you can copy and share
-* The **UUID** of the component; if the component is part of the **Getting Started** category of App Store content, this UUID can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*
-* A **View on GitHub** link, which will take you to the GitHub source files of the component
-* A link to the documentation on how to install the App Store component
 
 ### 3.4 Developer Info Section
 
@@ -208,9 +217,9 @@ This page presents a history of notifications on content you have contributed to
 
 ![](attachments/app-store-overview/notifications.png)
 
-### 4.7 Favorites {#favorites}
+### 4.7 Saved {#saved-components}
 
-This page presents the App Store content you have [favorited](#favorite-heart):
+This page presents the App Store content you have [favorited](#saved):
 
 ![](attachments/app-store-overview/favorites.png)
 

@@ -118,7 +118,7 @@ The list below shows you the examples of the environment statuses you may see (n
 
 * **Your app has failed to set up** – it is possible to see such a message during deployment, please wait until the process is completed.
 
-    ![Your App Has Failed to Set Up Status](attachments/publishing-app/updating-your-app-failed-to-set-up.png)
+    ![Your App Has Failed to Set Up Status](attachments/publishing-app/updating-your-app-failed-to-set-up.jpg)
 
 
 When your app is successfully deployed, the dialog box with the information on the last deployment highlighted in green will be opened:  
@@ -146,7 +146,7 @@ Studio can fail to get your environment status in the following cases:
 
 *  Your app is a licensed app, and no environment has been set for the Studio deployment by a [Technical Contact](/developerportal/company-app-roles/technical-contact):
 
-	![Deploy Failed, No Environment for Studio](attachments/publishing-app/no-environment.png)
+	![Deploy Failed, No Environment for Studio](attachments/publishing-app/no-environment.jpg)
 
 For more technical information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings) in the *Developer Portal Guide*. 
 

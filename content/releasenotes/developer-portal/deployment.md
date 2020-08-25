@@ -10,6 +10,14 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### August 26th, 2020
+
+#### Mendix Cloud
+
+* We have improved the error handling and feedback of scale app functionality for Mendix Cloud v4. (Ticket 103304) 
+* We fixed an issue where some customers were not able to access deploy APIs. (Ticket 103241)
+* We fixed an issue where some customers were unable to manually add certificates to Access Restriction Profile. (Ticket 102615)
+
 ### August 7th, 2020
 
 #### Mendix Cloud

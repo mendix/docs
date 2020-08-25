@@ -71,8 +71,7 @@ Depending on the use-case, more fine-grained synchronization controls might be r
 * **Nothing (clear data)** — do not download any objects automatically, but do clear the data stored in the database for this entity when performing a synchronization (this can be useful in cases where the objects should only be uploaded, for example a `Feedback` entity)
 * **Nothing (preserve data)** — do not download any objects automatically, and do not clear the data stored in the database for this entity when performing a synchronization  (this can be useful in cases where you want have full control over the download phase and should be used in combination with the [Synchronize to device](synchronize-to-device) activity)
 
-If you have custom widgets or JavaScript acclear
-tions which use an entity that cannot be detected by Studio Pro in your offline-first profile (because its only used in the code), you can use customizable synchronization to include such entities.
+If you have custom widgets or JavaScript actions which use an entity that cannot be detected by Studio Pro in your offline-first profile (because its only used in the code), you can use customizable synchronization to include such entities.
 
 {{% image_container width="450" %}}![custom synchronization](attachments/offline-first/custom-sync.png){{% /image_container %}}
 

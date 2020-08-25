@@ -42,7 +42,7 @@ We expect that many questions and issues can be solved by reading the [Mendix do
 
 ## 3 Feature Requests
 
-We would like to invite you to an important channel where you can provide feature requests to Mendix: the [Mendix Idea Forum](https://forum.mendix.com/link/ideas/). Any customer can post a feature request that can be reviewed, expanded on, and voted on by other members of the Mendix Community. Based on this feedback, every quarter we will determine which features have the most value according to our customers, and we will implement them.
+We would like to invite you to an important channel where you can provide feature requests to Mendix: the [Mendix Idea Forum](https://forum.mendix.com/link/ideas/). Any customer can post a feature request that can be reviewed, expanded on, and voted on by other members of the Mendix community. Based on this feedback, every quarter we will determine which features have the most value according to our customers, and we will implement them.
 For more details about the idea forum, see [Mendix Forum](/developerportal/community-tools/mendix-forum).
 
 ## 4 Accessing Mendix Support
@@ -56,7 +56,7 @@ Mendix supports the Mendix Platform, and we expect you to support the applicatio
 * Developing code on your behalf
 * Debugging or troubleshooting your applications
 * Analyzing and troubleshooting the health and performance of your applications or your infrastructure, except when we suspect an underlying issue exists in the Mendix Platform
-* Troubleshooting Mendix Community-developed components from the Mendix App Store
+* Troubleshooting Mendix community-developed components from the Mendix App Store
 
 See [Support for Different Deployment Strategies](#support-by-strategy), below, for more information.
 

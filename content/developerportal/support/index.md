@@ -38,7 +38,7 @@ Please contact [Mendix Support](https://support.mendix.com/) or your Customer Su
 
 ## 2 Finding Your Answers
 
-We expect that many questions and issues can be solved by reading the [Mendix documentation](https://docs.mendix.com/) and by exploring the [forum](https://forum.mendix.com/). If you can’t find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio and Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
+We expect that many questions and issues can be solved by reading the [Mendix Documentation](https://docs.mendix.com/) and by exploring the [Mendix Forum](https://forum.mendix.com/). If you cannot find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio and Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
 
 ## 3 Feature Requests
 
@@ -48,7 +48,7 @@ For more details, see [Mendix Forum](/developerportal/community-tools/mendix-for
 
 ## 4 Accessing Mendix Support
 
-You can access the Mendix Support team through the [Mendix Support Portal](https://support.mendix.com/), via email (support@mendix.com), or by phone (phone numbers are listed in the Support Portal). Please note that critical tickets always need to be accompanied by a phone call to speed up the triage of the issue. In the Support Portal, you can check the status of your personal tickets, check all the submitted tickets for your applications, and provide updates on them.
+You can access the Mendix Support team through the [Mendix Support Portal](https://support.mendix.com/), via email (`support@mendix.com`), or by phone (phone numbers are listed in the Support Portal). Please note that critical tickets always need to be accompanied by a phone call to speed up the triage of the issue. In the Support Portal, you can check the status of your personal tickets, check all the submitted tickets for your applications, and provide updates on them.
 
 ## 5 What We Expect from You
 

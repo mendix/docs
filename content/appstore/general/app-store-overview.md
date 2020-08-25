@@ -23,10 +23,8 @@ This document describes the different sections of the Mendix App Store.
 The home page of the Mendix App Store has three main tabs at the top:
 
 * **Discover** – the home page, where you can browse various component categories and filter what is displayed
-* **My Marketplace** – click this to go to [My App Store](#my-app-store}
-* **{Your company's private App Store page}** – 
-
-{{% todo %}}[**Add cross-references above**]{{% /todo %}}
+* **My Marketplace** – click this to go to [My App Store](#my-app-store)
+* **Your company's private App Store page** – click this to go to your [company's App Store](#company-content)
 
 ![](attachments/app-store-overview/home-page.jpg)
 
@@ -68,12 +66,10 @@ The header for each component presents the following details:
 * <a name="saved"></a>The **Add to saved** button which, when clicked, will add the component to the list on the [Dashboard](#dashboard) and [Saved](#saved-components) pages)
 * The **Share** button, which allows you to share the component to your networks
 * The following buttons (depending on the type of component and what the developer added to share):
-	* **Preview** – click this to preview more information or a demo about the component
-		* This is only available if the developer has included a demo URL when sharing the component (for details on sharing components, see [How to Share App Store Content](share-app-store-content))
-	* **Open** – click this to open a supplementary page for the component
 	* **Download** – click this to download the component
 		* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotion)
 		* The best practice is to download a component from the App Store that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded App Store content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
+	* **Try for Free** – click this to subscribe to a free trial of the paid [platform-supported](app-store-content-support#category) component
 
 {{% todo %}}[**Update screenshot of component details**]{{% /todo %}}
 
@@ -81,7 +77,7 @@ The header for each component presents the following details:
 
 {{% todo %}}[**Verify "Share" definition**]{{% /todo %}}
 
-{{% todo %}}[**Verify three buttons still available**]{{% /todo %}}
+{{% todo %}}[**Verify "Try for Free" definition and when it's available; verify that "Preview" and "Open" buttons will no longer be available [if still available, get definitions from current doc**]{{% /todo %}}
 
 {{% todo %}}[**Add cross-reference to section on using App Store directly in Studio Pro**]{{% /todo %}}
 
@@ -89,6 +85,10 @@ The header for each component presents the following details:
 
 * The latest **Version** number of the component
 * The Studio Pro version that the component **Requires** to work
+
+The **Developers** section presents the names of the developers who last updated the component, with links to their [Mendix Profile](/developerportal/mendix-profile/).
+
+{{% todo %}}[**Verify definition of what developers are included and that link goes to Mendix Profile**]{{% /todo %}}
 
 {{% todo %}}[**Verify that below will still be part of this section; especially UUID, which is linked to in section 3.1.1 of Project API**]{{% /todo %}}
 
@@ -99,51 +99,29 @@ The header for each component presents the following details:
 * The **UUID** of the component; if the component is part of the **Getting Started** category of App Store content, this UUID can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*
 * A **View on GitHub** link, which will take you to the GitHub source files of the component
 
-# OLD
-
 ### 3.2 Tabs
 
-The details page for each and app presents the following item information tabs:
+The details page for each component presents the following item information tabs:
 
 *  **Overview** tab – contains following sections:
 	* **Description** – a description of the component
 	* **Screenshots** – screenshots of the component
 	* **User Reviews** – user reviews of the component; to leave a review for the component, click **Add Review** – a section will open where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page)
 
-	![](attachments/app-store-overview/content_detail_5.png)
+	![](attachments/app-store-overview/content_detail_5.jpg)
+
+{{% todo %}}[**Verify can still add screenshots**]{{% /todo %}}
 
 *  **Documentation** tab – can include details on typical use cases, features and limitations, dependencies, installation and configuration, and frequently asked questions; [platform-supported](app-store-content-support#category) components are documented in the various categories of this *App Store Guide*:
 
-	![](attachments/app-store-overview/content_detail_6.png)
+	![](attachments/app-store-overview/content_detail_6.jpg)
 
 	* Clicking **Edit documentation** will open a text editor where you can edit the App Store component's documentation
 
-*  **Statistics** tab –  charts the downloads of the component over time:
+*  **Releases** tab – lists all the versions (updates) of the component, any of which can be downloaded by clicking **Download**:
 
-	![](attachments/app-store-overview/content_detail_7.png)
-
-*  **All versions** tab – lists all the versions (updates) of the component, any of which can be downloaded by clicking **Download**:
-
-	![](attachments/app-store-overview/content_detail_8.png)
+	![](attachments/app-store-overview/content_detail_8.jpg)
 	
-*  **Group members** tab – if this App Store component is assigned to a [user group](#user-groups), this tab lists the [user group members](#members) (who are the users that can manage the component)
-
-	![](attachments/app-store-overview/content_detail_9.png)
-
-### 3.4 Developer Info Section
-
-{{% image_container width="350" %}}
-![](attachments/app-store-overview/content_detail_3.png)
-{{% /image_container %}}
-
-In the **Developer Info** section, you can see the following information:
-
-* The name, job title, and Mendix level of the App Store content's developer
-	* Clicking the developer name will bring you to their [Mendix Profile](/developerportal/mendix-profile/index)
-* The numbers for **Added items**, **Updated items**, and **Reviews added** in the Mendix App Store
-* The company for which the developer works
-	* Clicking the company name will bring you to the company's [Partner Profile](/developerportal/community-tools/how-to-set-up-your-partner-profile)
-
 ## 4 My App Store {#my-app-store}
 
 ### 4.1 Dashboard {#dashboard}

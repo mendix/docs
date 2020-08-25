@@ -35,7 +35,7 @@ These are some situations in which to consider using this technique:
 
 In this section, you will learn how to retrieve data from a legacy system using REST and integrate the data into your application.
 
-For this how-to, we will use the publicly available Google Books API (for details, see [Google Books APIs Getting Started](https://developers.google.com/books/docs/v1/getting_started). We will construct our example around this data model. Each legacy system will have a different JSON structure based on internal data models. This example will return a collection of books using a given author search parameter. To use this API, users must collect an API key (as outlined in [Google Books APIs Acquiring and Using an API Key](https://developers.google.com/books/docs/v1/using?csw=1#APIKey)). The response structure of this particular API is as follows:
+For this how-to, we will use the publicly available Google Books API (for details, see [Google Books APIs Getting Started](https://developers.google.com/books/docs/v1/getting_started)). We will construct our example around this data model. Each legacy system will have a different JSON structure based on internal data models. This example will return a collection of books using a given author search parameter. To use this API, users must collect an API key (as outlined in [Google Books APIs Acquiring and Using an API Key](https://developers.google.com/books/docs/v1/using?csw=1#APIKey)). The response structure of this particular API is as follows:
 
 1. The API we will use has a JSON structure.
 2.  Construct the appropriate data model for this JSON.
@@ -87,13 +87,7 @@ For further documentation and to see the GitHub project for REST services, see t
 
 ## 4 Read More
 
+* [Consume a REST Service](consume-a-rest-service)
 * [Consume a Complex Web Service](consume-a-complex-web-service)
 * [Consume a Simple Web Service](consume-a-simple-web-service)
-* [Export XML Documents](export-xml-documents)
-* [Import Excel Documents](importing-excel-documents)
 * [Expose a Web Service](expose-a-web-service)
-* [Configure Selenium Support](selenium-support)
-* [Import XML Documents](importing-xml-documents)
-* [Consume a REST Service](consume-a-rest-service)
-* [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
-* [Extending Salesforce with Mendix, an Alternative to Force.com](https://www.mendix.com/blog/extending-salesforce-mendix-alternative-force-com/)

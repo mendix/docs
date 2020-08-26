@@ -5,7 +5,7 @@ tags: ["runtime", "runtime server", "mendix client", "cluster leader"]
 
 ## 1 Introduction
 
-The runtime is effectively an interpreter which ‘runs’ a Mendix model and serves pages to the user.
+The Mendix Runtime is effectively an interpreter which "runs" a Mendix model and serves pages to the user.
 
 Each patch version of Mendix comes with its own version of the runtime which implements the features which are available in that version of Mendix. For example, runtimes for Mendix 8.4.1 and 8.4.2 are different and can only run Mendix apps built for that version.
 

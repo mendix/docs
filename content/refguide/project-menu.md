@@ -67,7 +67,7 @@ For more information on settings displayed on the Create Deployment Package dial
 
 The **Clean Deployment Directory** option cleans the deployment directory.
 
-## 8 Deploy to Licensed Cloud Node
+## 8 Deploy to Licensed Cloud Node {#deploy}
 
 The **Deploy to Licensed Cloud Node** option deploys the latest committed revision of a Team Server project to the associated Mendix Cloud node.
 

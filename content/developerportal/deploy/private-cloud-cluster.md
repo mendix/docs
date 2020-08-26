@@ -68,7 +68,7 @@ You now need to add a namespace to your cluster. Your cluster can contain severa
 
 To add a namespace, do the following:
 
-1. Click **Add Details**:
+1. Click **Details**:
 
     ![](attachments/private-cloud-cluster/empty-cluster.PNG)
 	

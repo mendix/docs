@@ -48,7 +48,7 @@ To create a cluster in your OpenShift context, you need the following:
 
 5. Click **Create Cluster**. 
 
-    ![](attachments/private-cloud-cluster/image6.png)
+    ![](attachments/private-cloud-cluster/image6.PNG)
 
 6. Enter the following information:
     
@@ -68,17 +68,21 @@ You now need to add a namespace to your cluster. Your cluster can contain severa
 
 To add a namespace, do the following:
 
-1. Click **Add Namespace**.
+1. Click **Add Details**.
 
-    ![](attachments/private-cloud-cluster/empty-cluster.png)
+    ![](attachments/private-cloud-cluster/empty-cluster.PNG)
+	
+2. Click on Add Namespace	
+	
+    ![](attachments/private-cloud-cluster/namespace-details.PNG)
 
-2. Enter the following details:
+3. Enter the following details:
 
   1. **Namespace** – this is the namespace in your platform. This must conform to the namespace naming conventions of the cluster: all lowercase with hyphens allowed within the name.
   
   2. **Installation type** – if you want to [create environments and deploy your app from the Mendix Developer Portal](private-cloud-deploy), choose **Connected**, but if you only want to [control your deployments through the Mendix Operator using the CLI](private-cloud-operator), choose **Standalone**.
 
-3. Click **Done** to create the namespace.
+4. Click **Done** to create the namespace.
 
 ![](attachments/private-cloud-cluster/add-namespace.png)
 
@@ -415,6 +419,49 @@ Here you can perform the following actions on the entire cluster:
 
 * Delete the cluster by clicking the delete icon
 * Rename the cluster or edit its description by clicking the edit icon
+* Invite another Cluster Manager
+
+{{% alert type="info" %}}
+Please note that the added cluster manager wont be able to manage/operate on the environments created in the namespace for which they have been added as a cluster manager. They need to be added as a member of the namespace if they want to manage environments in the namespaces
+{{% /alert %}}
+
+You can also see all the activities logged and the namespace level.
+
+For Clusters level, you can see below activity logs by clicking on Actity in Cluster Overview page:
+
+* When a cluster has been added
+* When a cluster description is added
+* When name of the cluster is changed
+* When cluster description is changed
+
+![](attachments/private-cloud-cluster/cluster-activity-logs.PNG)
+
+For namespace level, you can see below activity logs
+
+* When a namespace has been added
+* When a namespace has been deleted
+* When a cluster manager has been added
+* When a cluster manager invitation is removed
+* When a cluster manager accepts the invitation
+* When a cluster manager is removed from the cluster
+* When a new database plan is added in a namespace
+* When a database plan is deactivated
+* When a new storage plan is added in a namespace
+* When a storage plan is deactivated
+* When Metrics/Alerts/Logs/Backups URLs are added in the namespace
+* When Metrics/Alerts/Logs/Backups URLs are removed from the namespace
+* When Metrics/Alerts/Logs/Backups URLs are changed in the namespace
+* When a user is invited as a namespace member
+* When a user invitation for namespace member is removed
+* When a user accepts the invitation as a namespace member
+* When a user is removed as a namespace member
+* When user's permission is changed in the namespace
+
+![](attachments/private-cloud-cluster/namespace-activity-logs.PNG)
+
+{{% alert type="info" %}}
+When you add a cluster manager, the person will have all the access which a cluster manager will have such as access to existing namespaces, adding namespace, adding a member, changing the permissions of the cluster member, deleting another cluster manager.
+{{% /alert %}}
 
 {{% alert type="info" %}}
 When you delete a cluster, this removes the cluster from the Developer Portal. However, it will not remove the cluster from your platform. You will need to explicitly delete the cluster using the tools provided by your platform.
@@ -440,13 +487,11 @@ You can also delete your namespace from the cluster manager by clicking the dele
 
 ![](attachments/private-cloud-cluster/image25.png)
 
+If there are any environments associated with the namespace, you cannot delete the namespace until the environments associated with it are deleted.
+
 When you delete a namespace, this removes the namespace from the cluster in the Developer Portal. However, it will not remove the namespace from your platform. You will need to explicitly delete the namespace using the tools provided by your platform.
 
-If you attempt to delete a namespace which contains environments, you will be warned that the environments will also be deleted. 
-
-![](attachments/private-cloud-cluster/delete-namespace-and-env.png)
-
-If the namespace is connected, then the environments will be removed from the namespace automatically. If it is not connected, you will need to remove the environments manually.
+![](attachments/private-cloud-cluster/image26.png)
 
 ### 4.2 Apps
 
@@ -471,7 +516,7 @@ By default, the cluster manager, who created the cluster in Mendix, has full adm
 * Manage App Backups
 
 {{% alert type="info" %}}
-In addition, only the person who created the cluster can do the following:
+In addition, only the person who created the cluster or added as a cluster manager can do the following:
 
 * add and delete namespaces
 * add, activate, or deactivate plans
@@ -517,9 +562,7 @@ You can change the access rights for, or completely remove, existing members.
     
   2. Click **Remove member** to remove this member completely. You will be asked to confirm this action.
         
-    ![](attachments/private-cloud-cluster/image30.png)
-
-When you edit or remove a member, they will receive an email informing them of the changes.
+    ![](attachments/private-cloud-cluster/image30.PNG)
 
 ### 4.4 Operate{#operate}
 

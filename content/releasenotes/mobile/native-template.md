@@ -8,6 +8,22 @@ description: "Native Template release notes."
 
 For more information on native mobile app development, see the [native-template repository](https://github.com/mendix/native-template/) and [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app) .
 
+## 5.0.1
+
+**Release date: August 26, 2020**
+
+As of August 2020 Google Play requires apps to be build targetting SDK 29. This version of the Native Template complies with these requirements.
+
+**More info**: https://support.google.com/googleplay/android-developer/answer/113469#targetsdk
+
+## 4.2.1
+
+**Release date: August 26, 2020**
+
+As of August 2020 Google Play requires apps to be build targetting SDK 29. This version of the Native Template complies with these requirements for Mendix Studio Pro versions from 8.9.0 up to 8.12.0.
+
+**More info**: https://support.google.com/googleplay/android-developer/answer/113469#targetsdk
+
 ## 5.0.0
 
 **Release date: August 7, 2020**

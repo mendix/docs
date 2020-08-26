@@ -26,7 +26,7 @@ To create a cluster in your OpenShift context, you need the following:
 * **Kubectl** installed if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
 * **Bash** (Bourne-again shell) for your machine. If you are running on Windows, you can use something like [**Windows Subsystem for Linux (WSL)**](https://docs.microsoft.com/en-us/windows/wsl/faq) or the **Git Bash emulator** that comes with [git for windows](https://gitforwindows.org/).
 
-## 3 Creating a Cluster and Namespace
+## 3 Creating a Cluster & Namespace
 
 ### 3.1 Creating a Cluster
 
@@ -92,7 +92,7 @@ The first script is the installation script which will install the Mendix operat
 
 You will need to have administrator rights to your private cloud platform. This means you will have to log in before you run the installation script.
 
-#### 3.3.1 Signing in to OpenShift{#openshift-signin}
+#### 3.3.1 Signing in to OpenShift {#openshift-signin}
 
 These instructions are for the OpenShift platform; a similar process will be required for other platforms.
 
@@ -143,7 +143,7 @@ The Mendix operator and Mendix Gateway Agent are now installed on your platform.
 
 You can always find the installation script again in the **Installation** tab for your namespace in the cluster manager.
 
-### 3.4 Running the Reconfiguration Script{#reconfiguration-script}
+### 3.4 Running the Reconfiguration Script {#reconfiguration-script}
 
 Before you deploy an app to your namespace, you will need to configure a number of services, namely:
 
@@ -163,7 +163,7 @@ Mendix provides you with a script which will configure these initially, and can 
 
 The script will ask you a series of questions. Type the number corresponding to your choice, or enter the value required.
 
-#### 3.4.1 What do you want to do?
+#### 3.4.1 What Do You Want to Do?
 
 ![](attachments/private-cloud-cluster/image16.png)
 
@@ -185,7 +185,7 @@ You can return to this initial question from any of the other questions by choos
 The configuration script does not currently validate input values. Configuration can be verified by deploying a sample app.
 {{% /alert %}}
 
-#### 3.4.2 Pick a database type
+#### 3.4.2 Pick a Database Type
 
 ![](attachments/private-cloud-cluster/image17.png)
 
@@ -237,7 +237,7 @@ If the plan name already exists you will receive an error that it cannot be crea
 To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.1.0 or later.
 {{% /alert %}}
 
-#### 3.4.3 Pick a storage type
+#### 3.4.3 Pick a Storage Type
 
 ![](attachments/private-cloud-cluster/image18.png)
 
@@ -349,7 +349,7 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide)
 
 **Ephemeral** will enable you to quickly set up your environment and deploy your app, but any data objects you store will be lost when you restart your environment.
 
-#### 3.4.4 Pick an ingress type
+#### 3.4.4 Pick an Ingress Type
 
 ![](attachments/private-cloud-cluster/image19.png)
 
@@ -359,7 +359,7 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide)
 
 Both forms of ingress can have TLS enabled or disabled.
 
-#### 3.4.5 Pick a registry type
+#### 3.4.5 Pick a Registry Type
 
 ![](attachments/private-cloud-cluster/image20.png)
 
@@ -385,7 +385,7 @@ For **Amazon Elastic Container Registry**, you will need to configure registry a
 
 When choosing the **Existing docker-registry secret**, you will need to add this secret to the `default` ServiceAccount manually, or provide registry authentication configuration in another way (depending on which registry authentication options the Kubernetes cluster vendor is offering).
 
-#### 3.4.6 Do you want to configure the proxy
+#### 3.4.6 Do You Want to Configure the Proxy?
 
 ![](attachments/private-cloud-cluster/image21.png)
 
@@ -401,7 +401,7 @@ When the namespace is configured correctly, its status will become **Connected**
 
 Once it is configured, you can manage your cluster and namespaces through the Developer Portal.
 
-### 4.1 Cluster Overview
+### 4.1 Cluster Overview {#overview}
 
 Go to the Cluster Manager page by clicking **Cluster Manager** in the **Apps** menu.
 
@@ -521,7 +521,7 @@ You can change the access rights for, or completely remove, existing members.
 
 When you edit or remove a member, they will receive an email informing them of the changes.
 
-### 4.4 Operate{#operate}
+### 4.4 Operate {#operate}
 
 The **Operate** tab allows you to add a set of links which are used when users request a page from the Operate category for their app in the Developer Portal, as shown below.
 
@@ -548,17 +548,17 @@ The **Plans** tab shows you the database and storage plans which are currently c
 
 From this tab you can perform the following action:
 
-#### 4.5.1 Add a Plan
+#### 4.5.1 Adding a Plan
 
 Click **Add** and you will be able to enter the name of an existing plan and add it to the plans linked to this namespace. You should only use this when adding plans using the namespace Reconfiguration Script fails to add them correctly.
 
 ![](attachments/private-cloud-cluster/image34.png)
 
-#### 4.5.2 Deactivate a Plan
+#### 4.5.2 Deactivating a Plan
 
 Click **Deactivate** next to the name of the plan you wish to deactivate. You cannot remove plans from within the cluster manager, but you can deactivate them to ensure that developers cannot create environments using the plan. Any environments currently using the plan will not be affected by this setting.
 
-#### 4.5.3 Activate a Plan
+#### 4.5.3 Activating a Plan
 
 Click **Activate** next to the name of the plan you wish to activate. The plan can then be used by developers when they create an environment to deploy their apps.
 
@@ -572,7 +572,7 @@ You can also copy the installation and reconfiguration scripts to retain in your
 
 ## 5 Current Limitations
 
-### 5.1 Storage provisioning
+### 5.1 Storage Provisioning
 
 If the Operator fails to provision or deprovision storage (a database or file storage), it will not retry the operation. If there is a failed `*-database` or `*-file` pod, you'll need to do the following:
 
@@ -588,7 +588,7 @@ This section covers an issue which can arise where Mendix cannot recover automat
 
 Under some circumstances changes in the status of the cluster, namespaces, and environments will not be updated automatically. To ensure you are seeing the current status, you may need to click the **Refresh** button on the screen (not the browser page refresh button).
 
-## 7 Containerized Mendix App Architecture{#containerized-architecture}
+## 7 Containerized Mendix App Architecture {#containerized-architecture}
 
 Within your cluster you can run one, or several, Mendix apps. Each app runs in an environment, and each environment is in a namespace. You can see the relationship between the Mendix environments and the Kubernetes namespaces in the image below.
 

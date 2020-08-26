@@ -7,19 +7,19 @@ tags: ["object", "session", "architecture", "stateless", "runtime"]
 
 ## 1 Introduction
 
-Mendix has a completely stateless architecture. All the application state that was kept in the Mendix Runtime in earlier versions is now kept by the Mendix Client in the browser. By “state,” we mean non-persistable entities (NPEs) and persistable entities that have not yet been committed to the database.
+Mendix has a completely stateless architecture. All the application state that was kept in the Mendix Runtime in earlier versions is now kept by the Mendix Client in the browser. By *state* we mean non-persistable entities (NPEs) and persistable entities that have not yet been committed to the database.
 
 This new approach has important advantages, such as the ability to easily scale the app horizontally. However, there are also some new things to keep in mind when developing for this new architecture, in order to prevent performance degradation of the Mendix Client.
 
 ## 2 Overview
 
-The stateless architecture means that all temporary objects are stored in the Mendix Client (browser), instead of in the Mendix Runtime. However, since the objects are used in microflows, the Mendix Runtime will need them to be able to execute a microflow. For this reason, the state is transferred by the browser to the server when a request is sent.
+The stateless architecture means that all temporary objects are stored in the Mendix Client (browser) instead of the Mendix Runtime. However, since the objects are used in microflows, the Mendix Runtime will need them to be able to execute a microflow. For this reason, the state is transferred by the browser to the server when a request is sent.
 
 The Mendix Client that runs in the browser determines which objects are relevant for the current page and microflows you want to execute. It does this based on the possibility of retrieving objects from the microflow parameters by following the relations from that object. Only objects that can be retrieved are transferred to the server to optimize performance. However, since there are many flexible ways to retrieve objects, Mendix must be conservative in this. There will often be more objects sent than are strictly necessary to be able to execute a microflow.
 
 After a microflow has run, any new objects or updates to existing objects that were made are returned to the Mendix Client. The Mendix Client can then update its state and refresh any objects on the current page if necessary. This is only done for NPEs and for persistable objects that are on the current page.
 
-The following diagram shows the flow of objects in the new architecture in detail:
+The following diagram shows the flow of objects in detail:
 
 ![](attachments/minimize-number-of-objects-in-session/object_flow.png)
 
@@ -27,9 +27,9 @@ The following diagram shows the flow of objects in the new architecture in detai
 
 Because all the objects necessary for a microflow are transferred between the Mendix Client and server for each request, the network traffic will grow when more objects are used at the same time. This can become a bottleneck, especially on mobile devices.
 
-That is why the primary best practice for app performance is to minimize the number of in-use objects in your session. By "in-use objects," we mean non-persistable objects and uncommitted persistable objects.
+That is why the primary best practice for app performance is to minimize the number of in-use objects in your session. By *in-use objects* we mean non-persistable objects and uncommitted persistable objects.
 
-It is not possible to eliminate the need for in-use objects entirely, unless you want your app to be completely read-only. However, there are several common ways to inadvertently create more objects than necessary. The rest of this document presents wyas to reduce the number of in-use objects.
+It is not possible to eliminate the need for in-use objects entirely, unless you want your app to be completely read-only. However, there are several common ways to inadvertently create more objects than necessary. The rest of this document presents ways to reduce the number of in-use objects.
 
 ## 4 Changed Objects
 
@@ -51,7 +51,7 @@ In other words, by reducing the number of requests during which objects are not 
 
 ### 5.1 Scenario
 
-If an object is used during a workflow that spans multiple pages but is not displayed on every one of those pages, the Mendix Client could incorrectly determine that the object is not necessary anymore. This situation can also happen if you allow users to navigate backwards through a workflow using the **Close** button or a browser's **Back** button. In that case, the objects on the page that was previously displayed might have been removed already.
+If an object is used during a flow that spans multiple pages but is not displayed on every one of those pages, the Mendix Client could incorrectly determine that the object is not necessary anymore. This situation can also happen if you allow users to navigate backwards through a flow using the **Close** button or a browser's **Back** button. In that case, the objects on the page that was previously displayed might have been removed already.
 
 ### 5.2 Tip
 
@@ -75,7 +75,7 @@ There is a drawback here as well: since the objects will never be removed, they 
 
 ### 6.1 Scenario
 
-When dealing with web- or app-service integrations, you will often use non-persistable entities to model requests and responses. For more complex integrations, this can quickly become a complex domain model with a lot of entities. When calling the service, many objects can be created. There are often cases where developers map an entire web service response to a large domain model, only to use a small part of the message in a microflow.
+When dealing with web or app-service integrations, you will often use non-persistable entities to model requests and responses. For more complex integrations, this can quickly become a complex domain model with a lot of entities. When calling the service, many objects can be created. There are often cases where developers map an entire web service response to a large domain model, only to use a small part of the message in a microflow.
 
 Building an integration as described above will cause all objects that are created to be sent to the Mendix Client as well.
 

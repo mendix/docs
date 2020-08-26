@@ -48,7 +48,7 @@ To create a cluster in your OpenShift context, you need the following:
 
 5. Click **Create Cluster**. 
 
-    ![](attachments/private-cloud-cluster/image6.PNG)
+    ![](attachments/private-cloud-cluster/image6.png)
 
 6. Enter the following information:
     
@@ -68,19 +68,17 @@ You now need to add a namespace to your cluster. Your cluster can contain severa
 
 To add a namespace, do the following:
 
-1. Click **Add Details**.
+1. Click **Add Details**:
 
-    ![](attachments/private-cloud-cluster/empty-cluster.PNG)
+    ![](attachments/private-cloud-cluster/empty-cluster.png)
 	
-2. Click on Add Namespace	
+2. Click **Add Namespace**:
 	
-    ![](attachments/private-cloud-cluster/namespace-details.PNG)
+    ![](attachments/private-cloud-cluster/namespace-details.png)
 
 3. Enter the following details:
-
-  1. **Namespace** – this is the namespace in your platform. This must conform to the namespace naming conventions of the cluster: all lowercase with hyphens allowed within the name.
-  
-  2. **Installation type** – if you want to [create environments and deploy your app from the Mendix Developer Portal](private-cloud-deploy), choose **Connected**, but if you only want to [control your deployments through the Mendix Operator using the CLI](private-cloud-operator), choose **Standalone**.
+	* **Namespace** – this is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name
+	* **Installation type** – if you want to [create environments and deploy your app from the Mendix Developer Portal](private-cloud-deploy), choose **Connected**, but if you only want to [control your deployments through the Mendix Operator using the CLI](private-cloud-operator), choose **Standalone**
 
 4. Click **Done** to create the namespace.
 
@@ -419,22 +417,22 @@ Here you can perform the following actions on the entire cluster:
 
 * Delete the cluster by clicking the delete icon
 * Rename the cluster or edit its description by clicking the edit icon
-* Invite another Cluster Manager
+* Invite another cluster manager
 
 {{% alert type="info" %}}
-Please note that the added cluster manager wont be able to manage/operate on the environments created in the namespace for which they have been added as a cluster manager. They need to be added as a member of the namespace if they want to manage environments in the namespaces
+Please note that the added cluster manager will not be able to manage/operate on the environments created in the namespace for which they have been added as a cluster manager. They need to be added as a member of the namespace if they want to manage environments in the namespaces.
 {{% /alert %}}
 
 You can also see all the activities logged and the namespace level.
 
-For Clusters level, you can see below activity logs by clicking on Actity in Cluster Overview page:
+For the clusters level, you can see the activity logs below by clicking **Actity** in the [cluster overview](#overview) page:
 
 * When a cluster has been added
 * When a cluster description is added
 * When name of the cluster is changed
 * When cluster description is changed
 
-![](attachments/private-cloud-cluster/cluster-activity-logs.PNG)
+![](attachments/private-cloud-cluster/cluster-activity-logs.png)
 
 For namespace level, you can see below activity logs
 
@@ -457,10 +455,10 @@ For namespace level, you can see below activity logs
 * When a user is removed as a namespace member
 * When user's permission is changed in the namespace
 
-![](attachments/private-cloud-cluster/namespace-activity-logs.PNG)
+![](attachments/private-cloud-cluster/namespace-activity-logs.png)
 
 {{% alert type="info" %}}
-When you add a cluster manager, the person will have all the access which a cluster manager will have such as access to existing namespaces, adding namespace, adding a member, changing the permissions of the cluster member, deleting another cluster manager.
+When you add a cluster manager, the user will have all the access which a cluster manager will have, such as access to existing namespaces and abilities to add a namespace, add a member, change the permissions of the cluster member, and delete another cluster manager.
 {{% /alert %}}
 
 {{% alert type="info" %}}
@@ -515,14 +513,12 @@ By default, the cluster manager, who created the cluster in Mendix, has full adm
 * View App Metrics
 * Manage App Backups
 
-{{% alert type="info" %}}
-In addition, only the person who created the cluster or added as a cluster manager can do the following:
+In addition, only the person who created the cluster or was added as a cluster manager can do the following:
 
-* add and delete namespaces
-* add, activate, or deactivate plans
-* invite and manage users
-* and set up operating URLs for the namespace
-{{% /alert %}}
+* Add and delete namespaces
+* Add, activate, or deactivate plans
+* Invite and manage users
+* Set up operating URLs for the namespace
 
 The **Members** tab allows you to manage the list of members of the namespace and control what rights they have.
 
@@ -562,7 +558,7 @@ You can change the access rights for, or completely remove, existing members.
     
   2. Click **Remove member** to remove this member completely. You will be asked to confirm this action.
         
-    ![](attachments/private-cloud-cluster/image30.PNG)
+    ![](attachments/private-cloud-cluster/image30.png)
 
 ### 4.4 Operate{#operate}
 

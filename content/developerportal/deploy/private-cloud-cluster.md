@@ -425,7 +425,7 @@ Please note that the added cluster manager will not be able to manage/operate on
 
 You can also see all the activities logged and the namespace level.
 
-For the clusters level, you can see the activity logs below by clicking **Actity** in the [cluster overview](#overview) page:
+<a name="actvity-logs"></a>For the clusters level, you can see the activity logs below by clicking **Actity** in the [cluster overview](#overview) page:
 
 * When a cluster has been added
 * When a cluster description is added

@@ -70,11 +70,11 @@ To add a namespace, do the following:
 
 1. Click **Add Details**:
 
-    ![](attachments/private-cloud-cluster/empty-cluster.png)
+    ![](attachments/private-cloud-cluster/empty-cluster.PNG)
 	
 2. Click **Add Namespace**:
 	
-    ![](attachments/private-cloud-cluster/namespace-details.png)
+    ![](attachments/private-cloud-cluster/namespace-details.PNG)
 
 3. Enter the following details:
 	* **Namespace** – this is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name
@@ -432,7 +432,7 @@ You can also see all the activities logged and the namespace level.
 * When name of the cluster is changed
 * When cluster description is changed
 
-![](attachments/private-cloud-cluster/cluster-activity-logs.png)
+![](attachments/private-cloud-cluster/cluster-activity-logs.PNG)
 
 For namespace level, you can see below activity logs
 
@@ -455,7 +455,7 @@ For namespace level, you can see below activity logs
 * When a user is removed as a namespace member
 * When user's permission is changed in the namespace
 
-![](attachments/private-cloud-cluster/namespace-activity-logs.png)
+![](attachments/private-cloud-cluster/namespace-activity-logs.PNG)
 
 {{% alert type="info" %}}
 When you add a cluster manager, the user will have all the access which a cluster manager will have, such as access to existing namespaces and abilities to add a namespace, add a member, change the permissions of the cluster member, and delete another cluster manager.
@@ -558,7 +558,7 @@ You can change the access rights for, or completely remove, existing members.
     
   2. Click **Remove member** to remove this member completely. You will be asked to confirm this action.
         
-    ![](attachments/private-cloud-cluster/image30.png)
+    ![](attachments/private-cloud-cluster/image30.PNG)
 
 ### 4.4 Operate {#operate}
 

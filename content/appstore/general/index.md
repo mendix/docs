@@ -5,7 +5,7 @@ description: "Presents details on using, sharing, and getting support on Mendix 
 
 ## 1 Introduction
 
-Mendix delivers a robust platform for the rapid development of apps. To make your development move even more quickly, you can use content from the App Store. In addition to downloading content from the App Store, you can upload items you have developed to share and help the whole Mendix community.
+Mendix delivers a robust platform for the rapid development of apps. To make your development move even more quickly, you can use content from the App Store. In addition to downloading content from the App Store, you can upload components you have developed to share and help the whole Mendix community.
 
 ## 2 Main Documents in This Category
 

@@ -122,6 +122,8 @@ The details page for each component presents the following item information tabs
 
 	![](attachments/app-store-overview/content_detail_8.jpg)
 	
+{{% todo %}}[**Verify no other tabs**]{{% /todo %}}
+	
 ## 4 My App Store {#my-app-store}
 
 ### 4.1 Dashboard {#dashboard}

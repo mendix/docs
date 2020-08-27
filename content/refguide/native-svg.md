@@ -51,7 +51,7 @@ Here is how an SVG with the `fill` property looks:
 
 ![after](attachments/native-svg/after.png)
 
-You can check the list of allowed style properties at ![react-native-svg](https://github.com/react-native-community/react-native-svg#common-props) repository.
+You can check the list of allowed style properties at the [react-native-svg](https://github.com/react-native-community/react-native-svg#common-props) repository.
 
 ### 4.1 Coloring SVG Icons
 

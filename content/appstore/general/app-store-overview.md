@@ -18,7 +18,7 @@ The [Mendix App Store](https://appstore.home.mendix.com/index3.html) is a vibran
 
 This document describes the different sections of the Mendix App Store.
 
-## 2 App Store Home Page
+## 2 App Store Home Page {#home}
 
 The home page of the Mendix App Store has three main tabs at the top:
 
@@ -33,14 +33,14 @@ It also presents various content categories:
 | Category | Description |
 | --- | --- |
 | Get Studio Pro | All the versions of [Studio Pro](/releasenotes/studio-pro/) available for download. |
-| Layouts | Layouts available for download. |
+| [Layouts](/refguide/layout) | Start building your app based on a layout that is ready to use with commons structures and widgets. |
 | Create New App | Click this to select a app template for your new app project. |
 | [Modules](/appstore/modules/) | These elements enable new functionality with accompanying domain models and security options. |
 | Solutions | Fully-formed solutions for apps you can immediately start using. |
 | [Widgets](/appstore/widgets/) | Single user-interface elements that can be configured, such as containers, drop-down menus, and buttons. |
 | [Themes](/appstore/themes/) | Styling options for your apps that you can apply for different elements and devices. |
 
-{{% todo %}}[**Finish describing: Layouts (differentiate from Themes); Solutions**]{{% /todo %}}
+{{% todo %}}[**Finish describing: Solutions**]{{% /todo %}}
 
 The following filter options are also available:
 
@@ -122,6 +122,7 @@ The details page for each component presents the following item information tabs
 
 	![](attachments/app-store-overview/content_detail_8.jpg)
 	
+
 {{% todo %}}[**Verify no other tabs**]{{% /todo %}}
 	
 ## 4 My App Store {#my-app-store}

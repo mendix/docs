@@ -85,34 +85,46 @@ To add content to the App Store, follow these steps:
 
 	![](attachments/share-app-store-content/add-content-button.jpg)
 
-2.  Select the type of content you would like to publish. The following categories are available:
+2.  Select the type of content you would like to publish. The categories available correspond to the content categories available on the [App Store homepage](app-store-overview#home):
 
-	* **Layouts**
-	* Create New App
-	* Modules
-	* Solutions
-	* Widgets
-	* Themes
-	* API
-	* Widgets with Pricing
+	![](attachments/share-app-store-content/categories.jpg)
 
+3.  Depending on the category you selected, you may be asked to select a sub-category for your component, for example:
 
+	![](attachments/share-app-store-content/sub-categories.jpg)
+	
+4.  Select the location where you want to publish your component:
 
-# OLD
-
-## Adding New App Store Content
-
-
-
-2.  <a name="two"></a>The **DRAFT** page will open, where you need to select the purpose of your contribution:
-
-	* **Share** – components that can be downloaded using Studio Pro – if you select this option, continue to [step #3](#three) below
-	* **Promote** – a way to advertise a component or solution while not making it downloadable – if you select this option, continue to [step #4](#four) below
-
+	* **Public Marketplace (all Mendix users)** – your component will be available to the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
+	* <a name="private-app-store"></a>**Private Marketplace (your company only)** – your content will receive the **Company only** label and be available only via your [Company's App Store](app-store-overview#company-content); selected private content of a user group can also be made available to [user group guests](app-store-overview#guests) for download; this content will not be reviewed by Mendix
+	
+	![](attachments/share-app-store-content/public-private.jpg)
+	
 	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change this setting by updating the App Store component later.
 	{{% /alert %}}
 
-3.  <a name="three"></a>When adding Studio Pro content, select **your content source**:
+5. The **General** page will open, where you need to provide information about your component. The information you entered above is pre-filled on this page. Enter the following details:<br />
+	a. Enter a **Name** for your content.<br />
+	b. Enter a **Description** of your content (for example, "Node control is an native Android app that gives a system administrator access to the Mendix Cloud nodes being administered. From the app, the status of the different environments within a node can be monitored and an environment can be started or stopped.")<br />
+	c. Select the **Studio Pro Version** on which you built the content.<br />
+	d. Select the type of **License** you want applied to your app (if applicable):<br />
+	
+	* **Apache V2** (for more information, see [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0))<br />
+	* **GNU General Public License, version 3** (for more information, see [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html))<br />
+	* **Mendix EULA** (for more information, see [Mendix Terms of Use](https://www.mendix.com/terms-of-use/))<br />
+	* **MindSphere Development License Agreement**
+	* **MIT** (for more information, see [MIT License](https://opensource.org/licenses/MIT))<br />
+	* **SDISW Development License Agreement for Mendix Sample Apps**<br />
+	* **SDISW End-User License Agreement for Mendix Connectors and Widgets** (for more information, see [SDISW End-User License Agreement for Mendix Connectors and Widgets](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Connectors_and_Widgets.pdf))<br />
+	* **SDISW End-User License Agreement for Mendix Sample Apps** (for more information, see [SDISW End-User License Agreement for Mendix Sample Apps](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Sample_Apps.pdf))<br />
+	
+	You can request other license types to be added as **License** options by clicking the **Feedback** button on the right side of the App Store screen.
+	
+	{{% todo %}}[**Verify if select license from drop-down or if have to write in; that all license types/descriptions are there; also if clicking Feedback is still valid**]{{% /todo %}}
+	
+	* Click **Upload an Image** to upload images/screenshots of the content from your computer
+
+6. On the **Package** page, select your content source:
 
 	* If you select **Select from GitHub**, follow these steps:<br />
 		a. Select the type of GitHub profile (**Organisation** or **User**) where the content is stored.<br />
@@ -136,16 +148,19 @@ To add content to the App Store, follow these steps:
 		{{% image_container width="400" %}}![](attachments/share-app-store-content/add_content_2.png)
 		{{% /image_container %}}
 
-4.  <a name="four"></a>In the **Publish to** drop-down menu, select the location where you want to publish your content:
+# OLD
 
-	* **Public App Store (visible for anyone)** – your content will be available to every developer in the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
-	* <a name="private-app-store"></a>**Private App Store (visible for your company)** – your content will receive the **Company only** label and be available only to the developers in your company; selected private content of a user group can also be made available to [user group guests](app-store-overview#guests) for download; this content will not be reviewed by Mendix
-	
+## Adding New App Store Content
+
+2.  <a name="two"></a>The **DRAFT** page will open, where you need to select the purpose of your contribution:
+
+	* **Share** – components that can be downloaded using Studio Pro – if you select this option, continue to [step #3](#three) below
+	* **Promote** – a way to advertise a component or solution while not making it downloadable – if you select this option, continue to [step #4](#four) below
+
 	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change this setting by updating the App Store component later.
 	{{% /alert %}}
 
 6.  <a name="edit"></a>In the bottom half of the **DRAFT** screen, do the following:<br />
-	a. Enter a **Name** for your content.<br />
 	b. Select a category for your content from the **Category** drop-down menu (for example, **Connectors**).<br />
 	c. If you have published a demo using your content, enter the **Demo URL**.<br />
 	d. Click **Upload Image** to upload an image for your app.<br />
@@ -154,8 +169,6 @@ To add content to the App Store, follow these steps:
 
 7.  On the **Overview** tab in the bottom half of the **Share your content** screen, you can do the following:
 
-	* Enter an overview **Description** of your content (for example, "Node control is an native Android app that gives a system administrator access to the Mendix Cloud nodes being administered. From the app, the status of the different environments within a node can be monitored and an environment can be started or stopped.")
-	* Upload screenshots by clicking **Add screenshots** and selecting images of the content from your computer
 	* Upload a video by clicking **Add video** and selecting a video that demonstrates using the content from your computer
 
 7. <a name="doc-tab"></a>On the **Documentation** tab, you can write or edit the documentation that should accompany your app in the editor. You are only able to edit the documentation of your own and your company's content. Note that this is only applicable when the **Use GitHub README for documentation** check box is not checked.
@@ -185,19 +198,6 @@ To add content to the App Store, follow these steps:
 9. Note that there is nothing for you to do on the **Statistics** and **All versions** tabs. The **Statistics** tab will chart the downloads of your content over time. The **All versions** tab will list the various versions of your content that have been updated.
 10. <a name="version-details"></a>In the **Version Details** section on the bottom-right of the screen, do the following:<br />
 	a. Check the **Beta version** check-box if the content is in beta.<br />
-	b. Select the **Mendix Studio Pro version** on which you built the content.<br />
-	c. Select the type of **License** you want applied to your app (if applicable):<br />
-	
-	* **Apache V2** (for more information, see [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0))<br />
-	* **GNU General Public License, version 3** (for more information, see [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html))<br />
-	* **Mendix EULA** (for more information, see [Mendix Terms of Use](https://www.mendix.com/terms-of-use/))<br />
-	* **MindSphere Development License Agreement**
-	* **MIT** (for more information, see [MIT License](https://opensource.org/licenses/MIT))<br />
-	* **SDISW Development License Agreement for Mendix Sample Apps**<br />
-	* **SDISW End-User License Agreement for Mendix Connectors and Widgets** (for more information, see [SDISW End-User License Agreement for Mendix Connectors and Widgets](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Connectors_and_Widgets.pdf))<br />
-	* **SDISW End-User License Agreement for Mendix Sample Apps** (for more information, see [SDISW End-User License Agreement for Mendix Sample Apps](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Sample_Apps.pdf))<br />
-	
-	You can request other license types to be added as **License** options by clicking the **Feedback** button on the right side of the App Store screen.
 
 11. After entering the information for your content, you can click one of these buttons in the middle of the screen:
 

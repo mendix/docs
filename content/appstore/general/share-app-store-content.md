@@ -83,7 +83,26 @@ To add content to the App Store, follow these steps:
 
 1.  Click **Add content** in the top-right corner of the App Store home screen:
 
-	![](attachments/share-app-store-content/add_content_button.png)
+	![](attachments/share-app-store-content/add-content-button.jpg)
+
+2.  Select the type of content you would like to publish. The following categories are available:
+
+	* **Layouts**
+	* Create New App
+	* Modules
+	* Solutions
+	* Widgets
+	* Themes
+	* API
+	* Widgets with Pricing
+
+
+
+# OLD
+
+## Adding New App Store Content
+
+
 
 2.  <a name="two"></a>The **DRAFT** page will open, where you need to select the purpose of your contribution:
 
@@ -197,9 +216,13 @@ To add content to the App Store, follow these steps:
 	* Click **Edit** to continue editing the content information
 	* Click **Submit for approval** to submit your App Store content for approval at Mendix
 
+<<<<<<< Updated upstream
 {{% todo %}}[**Verify the Withdraw option should not be documented here**]{{% /todo %}}
 
 ## 5 Updating Existing App Store Content {#updating}
+=======
+## Updating Existing App Store Content {#updating}
+>>>>>>> Stashed changes
 
 {{% alert type="info" %}}
 If an existing App Store component is assigned to a [user group](app-store-overview#user-groups) as specific user group [content](app-store-overview#content), you can only update the component if you are a member of that group.
@@ -227,7 +250,7 @@ To update content that has already been published, follow these steps:
 	
 	For descriptions of the other fields, see the [version details step above](#version-details).
 
-## 6 Read More
+## Read More
 
 * [App Store Overview](app-store-overview)
 * [How to Use App Store Content in Studio Pro](app-store-content)

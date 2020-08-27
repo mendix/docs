@@ -10,6 +10,6 @@ Mendix delivers a robust platform for the rapid development of apps. To make you
 ## 2 Main Documents in This Category
 
 * [App Store Overview](app-store-overview) – presents an overview of all the details included with the content in the Mendix App Store
-* [Use App Store Content](app-store-content) – describes how to download and install content from the App Store via Studio Pro
+* [Use App Store Content in Studio Pro](app-store-content) – describes how to download and install content from the App Store via Studio Pro
 * [Share App Store Content](share-app-store-content) – shows you how to add new content to share in the Mendix App Store as well as edit existing content
 * [App Store Content Support](app-store-content-support) – presents the different levels of Mendix support for App Store content

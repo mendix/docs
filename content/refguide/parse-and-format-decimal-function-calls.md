@@ -1,6 +1,9 @@
+---
 title: "Parse & Format Decimal Function Calls"
 parent: "expressions"
+menu_order: 150
 tags: ["studio pro", "expression", "parsing", "formatting"]
+---
 
 ## 1 Introduction
 
@@ -12,7 +15,7 @@ Parses a string value to a decimal value. Takes optional parameters for the form
 
 ### 2.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                                                        | Type             |
 | ------------------------------------------------------------ | ---------------- |
@@ -26,7 +29,7 @@ The output is described in the table below:
 
 | Value                                                        | Type    |
 | ------------------------------------------------------------ | ------- |
-| The output is a decimal value that matches the inputted string value. If the value cannot be parsed (meaning, it does not match the format parameter or contains illegal characters), the default value will be returned. If no default value is provided, an error occurs. | Decimal |
+| The output is a decimal value that matches the supplied string value. If the value cannot be parsed (meaning, it does not match the format parameter or contains illegal characters), the default value will be returned. If no default value is provided, an error occurs. | Decimal |
 
 ### 2.3 Example
 
@@ -47,7 +50,7 @@ The functionality of formatDecimal depends on whether it is used in a microflow 
 
 #### 3.1.1 Input Parameters in Microflows
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                                                        | Type    |
 | ------------------------------------------------------------ | ------- |
@@ -75,7 +78,7 @@ The output is described in the table below:
 
 The examples below illustrate which value the expression returns:
 
-* If you type in the following input:
+* If you use the following input:
 
     ```java
     formatDecimal(1234.56, '#,###.#')
@@ -87,7 +90,7 @@ The examples below illustrate which value the expression returns:
     '1,234.5' or '1.234,5'
     ```
 
-* If you type in the following input:
+* If you use the following input:
 
     ```java
     formatDecimal(1234.56, '¤ #,##0.00')
@@ -99,7 +102,7 @@ The examples below illustrate which value the expression returns:
     '€ 1.234,50' or '$ 1,234.50'
     ```
 
-* If you type in the following input:
+* If you use the following input:
 
     ```java
     formatDecimal(0.56, '% ##0')

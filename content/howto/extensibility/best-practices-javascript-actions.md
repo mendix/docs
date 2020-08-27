@@ -62,7 +62,7 @@ function TextToSpeech(text) {
         // Reject when the parameter is set to 'empty' the value will be undefined 
         return Promise.reject("The Text parameter is required");
     }
-    if (text.trim() !== "") {
+    if (text.trim() === "") {
         // Reject when the text is an empty string ""
         return Promise.reject("The Text parameter can not be empty");
     }

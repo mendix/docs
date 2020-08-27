@@ -1,6 +1,7 @@
 ---
 title: "Trim to Date"
 parent: "expressions"
+menu_order: 120
 tags: ["studio pro", "trim to date", "expression", "expressions"]
 ---
 
@@ -14,7 +15,7 @@ This function is used to trim the date to seconds, rounding off all milliseconds
 
 ### 2.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                            | Type          |
 | -------------------------------- | ------------- |
@@ -48,7 +49,7 @@ This function is used to trim the date to minutes, rounding off all (milli)secon
 
 ### 3.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                            | Type          |
 | -------------------------------- | ------------- |
@@ -84,7 +85,7 @@ This function is used to trim the date to hours, rounding off all minutes to zer
 
 ### 4.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                            | Type          |
 | -------------------------------- | ------------- |
@@ -120,7 +121,7 @@ This function is used to trim the date to days, rounding off all hours to zero.
 
 ### 5.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                            | Type          |
 | -------------------------------- | ------------- |
@@ -156,7 +157,7 @@ This function is used to trim the date to months, rounding off all days to zero.
 
 ### 6.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                            | Type          |
 | -------------------------------- | ------------- |
@@ -192,7 +193,7 @@ This function is used to trim the date to years, rounding off all months and day
 
 ### 7.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                            | Type          |
 | -------------------------------- | ------------- |

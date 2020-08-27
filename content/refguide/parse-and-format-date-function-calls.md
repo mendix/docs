@@ -1,23 +1,24 @@
 ---
 title: "Parse & Format Date Function Calls"
 parent: "expressions"
-description: "Describes the functions for parsing datetimes from strings using a specified pattern or producing a string from a datetime in Mendix."
+menu_order: 160
+description: "Describes the functions for parsing Date and time values from strings using a specified pattern or producing a string from a Date and time value in Mendix."
 tags: ["studio pro", "expressions", "parsing", "formatting"]
 ---
 
 ## 1 Introduction 
 
-This document describes functions that are used to parse datetimes from strings using a specified pattern, or to produce a string from a datetime.
+This document describes functions that are used to parse Date and time values from strings using a specified pattern, or to produce a string from a Date and time value.
 
 For details on all pattern possibilities, see [Class SimpleDateFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/SimpleDateFormat.html). 
 
-## 2 parseDateTime[UTC]
+## 2 parseDateTime[UTC] {#parsedatetime-utc}
 
 Takes a string and parses it. If it fails and a default value is specified, it returns the default value. Otherwise, an error occurs. The function `parseDateTime` uses the user's timezone and `parseDateTimeUTC` uses the UTC calendar.
 
 ### 2.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                        | Type                                                         |
 | ---------------------------- | ------------------------------------------------------------ |
@@ -37,7 +38,7 @@ The output is described in the table below:
 
 The examples below illustrate which value the expression returns:
 
-* If you type in the following input:
+* If you use the following input:
 
     ```java
     parseDateTime('2015-05-21', 'yyyy-MM-dd')
@@ -49,7 +50,7 @@ The examples below illustrate which value the expression returns:
     The date May 21st, 2015\. The time will be 12 o'clock at night  because it is not specified.
     ```
     
-* If you type in the following input:
+* If you use the following input:
 
     ```java
     parseDateTime('noDateTime', 'dd-MM-yyyy', dateTime(2007))
@@ -63,11 +64,11 @@ The examples below illustrate which value the expression returns:
 
 ## 3 formatDateTime[UTC]
 
-Converts the DateTime to a string, formatted according to the format parameter. Without the format parameter, a standard format is used. The function `formatDateTime` uses the users calendar and `formatDateTimeUTC` uses the UTC calendar.
+Converts the Date and time value to a string, formatted according to the format parameter. Without the format parameter, a standard format is used. The function `formatDateTime` uses the users calendar and `formatDateTimeUTC` uses the UTC calendar.
 
 ### 3.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value                 | Type          |
 | --------------------- | ------------- |
@@ -80,11 +81,11 @@ The output is described in the table below:
 
 | Value                                       | Type   |
 | ------------------------------------------- | ------ |
-| A formatted representation of the dateTime. | String |
+| A formatted representation of the Date and time value. | String |
 
 ### 3.4 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 formatDateTime($object/Date1,'EEE, d MMM yyyy HH:mm:ss Z')
@@ -104,11 +105,11 @@ formatDateTime($object/Date1,'yyyy-MM-dd') + 'T' + formatDateTime($object/Date1,
 
 ## 4 formatTime[UTC]
 
-Converts the time part of datetime to a string in a standard format. `formatTime` uses the users calendar and `formatTimeUTC` uses the UTC calendar.
+Converts the time part of Date and time value to a string in a standard format. `formatTime` uses the users calendar and `formatTimeUTC` uses the UTC calendar.
 
 ### 4.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value | Type          |
 | ----- | ------------- |
@@ -120,11 +121,11 @@ The output is described in the table below:
 
 | Value                                                        | Type   |
 | ------------------------------------------------------------ | ------ |
-| A formatted representation of the time part of the dateTime value. | String |
+| A formatted representation of the time part of the Date and time value. | String |
 
 ### 4.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 formatTime(dateTime(1974, 7, 2, 9, 50, 10))
@@ -138,11 +139,11 @@ the output is:
 
 ## 5 formatDate[UTC]
 
-Converts the date part of dateTime to a string in a standard format. `formatDate` uses the users calendar and `formatDateUTC` uses the UTC calendar.
+Converts the date part of Date and time value to a string in a standard format. `formatDate` uses the users calendar and `formatDateUTC` uses the UTC calendar.
 
 ### 5.1 Input Parameters
 
-Input parameters are described in the table below:
+The input parameters are described in the table below:
 
 | Value | Type          |
 | ----- | ------------- |
@@ -154,11 +155,11 @@ The output is described in the table below:
 
 | Value                                                        | Type   |
 | ------------------------------------------------------------ | ------ |
-| A formatted representation of the date part of the dateTime value. | String |
+| A formatted representation of the date part of the Date and time value. | String |
 
 ### 5.3 Example
 
-If you type in the following input:
+If you use the following input:
 
 ```java
 formatDate(dateTime(1974, 7, 2, 9, 50, 10))

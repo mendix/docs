@@ -113,9 +113,9 @@ releasenotes:
   menu_categories:
     - "Studio Pro"
     - "Studio"
+    - "Mobile"
     - "Developer Portal"
     - "App Store"
-    - "Mobile"
     - "SDKs"
     - "Quality Add-ons"
     - "Mendix Beta Features"

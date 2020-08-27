@@ -216,13 +216,9 @@ To add content to the App Store, follow these steps:
 	* Click **Edit** to continue editing the content information
 	* Click **Submit for approval** to submit your App Store content for approval at Mendix
 
-<<<<<<< Updated upstream
 {{% todo %}}[**Verify the Withdraw option should not be documented here**]{{% /todo %}}
 
-## 5 Updating Existing App Store Content {#updating}
-=======
 ## Updating Existing App Store Content {#updating}
->>>>>>> Stashed changes
 
 {{% alert type="info" %}}
 If an existing App Store component is assigned to a [user group](app-store-overview#user-groups) as specific user group [content](app-store-overview#content), you can only update the component if you are a member of that group.

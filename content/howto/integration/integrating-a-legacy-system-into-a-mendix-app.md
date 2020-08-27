@@ -21,7 +21,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Know how to create domain models (for details, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
 * Know how to create overview and detail pages (for details, see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages))
 * Know how to create microflows (for details, see [How to Build Your First Microflow: Hello world!](../logic-business-rules/create-your-first-microflow-hello-world))
-* Understand the concepts behind REST and web services (for more information, see [Consuming Your First REST Service](http://www.mendix.com/blog/consuming-first-rest-service/) and [How to Consume a Complex Web Service](consume-a-complex-web-service))
+* Understand the concepts behind REST and web services (for more information, see [How to Consume a Complex Web Service](consume-a-complex-web-service))
     * Creating an exposed REST service on top of your legacy system is beyond the scope of this tutorial; for instructions on how to accomplish this, refer to the configuration of your non-Mendix Platform
 
 ## 3 Interacting with a Legacy System Using REST
@@ -35,7 +35,7 @@ These are some situations in which to consider using this technique:
 
 In this section, you will learn how to retrieve data from a legacy system using REST and integrate the data into your application.
 
-For this how-to, we will use the publicly available Google Books API (for details, see [Google Books APIs Getting Started](https://developers.google.com/books/docs/v1/getting_started). We will construct our example around this data model. Each legacy system will have a different JSON structure based on internal data models. This example will return a collection of books using a given author search parameter. To use this API, users must collect an API key (as outlined in [Google Books APIs Acquiring and Using an API Key](https://developers.google.com/books/docs/v1/using?csw=1#APIKey)). The response structure of this particular API is as follows:
+For this how-to, we will use the publicly available Google Books API (for details, see [Google Books APIs Getting Started](https://developers.google.com/books/docs/v1/getting_started)). We will construct our example around this data model. Each legacy system will have a different JSON structure based on internal data models. This example will return a collection of books using a given author search parameter. To use this API, users must collect an API key (as outlined in [Google Books APIs Acquiring and Using an API Key](https://developers.google.com/books/docs/v1/using?csw=1#APIKey)). The response structure of this particular API is as follows:
 
 1. The API we will use has a JSON structure.
 2.  Construct the appropriate data model for this JSON.
@@ -87,13 +87,7 @@ For further documentation and to see the GitHub project for REST services, see t
 
 ## 4 Read More
 
+* [Consume a REST Service](consume-a-rest-service)
 * [Consume a Complex Web Service](consume-a-complex-web-service)
 * [Consume a Simple Web Service](consume-a-simple-web-service)
-* [Export XML Documents](export-xml-documents)
-* [Import Excel Documents](importing-excel-documents)
 * [Expose a Web Service](expose-a-web-service)
-* [Configure Selenium Support](selenium-support)
-* [Import XML Documents](importing-xml-documents)
-* [Consume a REST Service](consume-a-rest-service)
-* [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
-* [Extending Salesforce with Mendix, an Alternative to Force.com](https://www.mendix.com/blog/extending-salesforce-mendix-alternative-force-com/)

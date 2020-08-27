@@ -61,7 +61,7 @@ To see the results of this how-to, you must set up a test project with test data
   
     ![](attachments/18448705/18581373.png)
 
-## 4 Setting the Security Level to Prototype/Demo
+## 4 Setting the Security Level to Prototype/Demo {#prototype}
 
 In this part of the how-to, you will learn how to configure the security at the prototype/demo level. Be aware that this level of security is only applicable for development/demo purposes. This level is available for the quick development of demo applications. It simulates security without the more complex configuration of data access. When deploying to the Mendix cloud, production security is mandatory.
 
@@ -148,7 +148,7 @@ To configure the page and microflow access of a module, follow these steps:
 7. Sign out and back in in with these users (add a **Sign out** button to your app if necessary).
 8. Test the differences in your application.
 
-## 5 Setting the Security Level to Production
+## 5 Setting the Security Level to Production {#production}
 
 In this section of the how-to, you will configure the security at the production level. At this level, all security settings must be configured. In addition to prototype/demo security, you have to configure the entity (data) access. Production security is mandatory when deploying to the Mendix cloud.
 

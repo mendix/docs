@@ -17,7 +17,7 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 * We improved the error handling and feedback of scale app functionality for Mendix Cloud v4. (Ticket 103304) 
 * We fixed an issue where some customers were not able to access the [Deploy APIs](/apidocs-mxsdk/apidocs/deploy-api). (Ticket 103241)
 * We fixed an issue where some customers were unable to manually add certificates to [access restriction profiles](/developerportal/deploy/environments#asp). (Ticket 102615)
-* We have modified the [Deploy to Licensed Cloud Node](/refguide/project-menu#deploy) flow in Mendix Studio Pro. It is now only possible to deploy Mendix Cloud v4 applications which have a [Mendix Studio Target](/developerportal/deploy/studio-deployment-settings#target) set. Please note that you will get an error message if you deploy from Studio Pro when no **Mendix Studio Target** is set.
+* We have modified the [Deploy to Licensed Cloud Node](/refguide/project-menu#deploy) flow in Mendix Studio Pro. It is now only possible to deploy Mendix Cloud v4 applications which have a [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings#target) set. Please note that you will get an error message if you deploy from Studio Pro when no **Mendix Studios Target** is set.
 
 ### August 7th, 2020
 

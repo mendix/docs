@@ -30,7 +30,7 @@ You can see if your app has the Mendix SSO module, and which version it has, by 
 
 ![](attachments/mendix-sso/mxsso-app-store-module.png)
 
-If your app does not have the Mendix SSO module, it is available from the Mendix App Store [here](https://appstore.home.mendix.com/link/app/111349/). Follow the instructions in [How to Use App Store Content](/appstore/general/app-store-content) to import it into your app and then follow the instructions in [Setting Up Mendix Single Sign-On](#setting-up), below.
+If your app does not have the Mendix SSO module, it is available from the Mendix App Store [here](https://appstore.home.mendix.com/link/app/111349/). Follow the instructions in [How to Use App Store Content in Studio Pro](/appstore/general/app-store-content) to import it into your app and then follow the instructions in [Setting Up Mendix Single Sign-On](#setting-up), below.
 
 If you need a newer version of the Mendix SSO module (for example, to use a new feature), then it is also available from the App Store via the same link.
 

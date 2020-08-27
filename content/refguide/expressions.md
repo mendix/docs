@@ -11,7 +11,7 @@ tags: ["studio pro", "expressions", "microflow expressions"]
 
 Expressions changes a value based on a function or combination of functions. 
 
-Named items in the microflow (for example, objects, lists, or variables) can be called in an expression by inserting the name of the item and adding a dollar sign (for example,  `$customer` could refers to an object named `customer`).
+Named items in the microflow (for example, objects, lists, or variables) can be called in an expression by inserting the name of the item and adding a dollar sign (for example,  `$customer` could refer to an object named `customer`).
 
 Attributes and associations of objects are accessed using a slash (for example, the **Name** attribute of the customer object is referred to as `$customer/Name`, and the **CRM.Customer_Order** association of the customer object is referred to as `$customer/CRM.Customer_Order`).
 

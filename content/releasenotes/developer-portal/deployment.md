@@ -10,6 +10,15 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### August 28th, 2020
+
+#### Mendix Cloud
+
+* We have fixed issues related to [Deploy to Licensed Cloud Node](/refguide/project-menu#deploy) flow in Mendix Studio Pro.
+	* We have rolled back the restriction for Mendix Cloud v3 applications [Deploy to Licensed Cloud Node](/refguide/project-menu#deploy) flow in Mendix Studio Pro.
+	* We  have improved error messages for Mendix Cloud V4 applications if you deploy from Studio Pro when no [Mendix Studio Target](/developerportal/deploy/studio-deployment-settings#target) set or you do not have sufficient privileges to deploy on studios target.
+	* We have fixed an issue where some customers were able to login with the "Demo User" to studios target. Please note that you have to unset studios target and redeploy to the affected environment.The Target can be set after redeploying. (Ticket 106312)
+
 ### August 26th, 2020
 
 #### Mendix Cloud

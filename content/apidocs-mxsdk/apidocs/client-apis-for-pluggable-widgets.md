@@ -174,7 +174,7 @@ export interface WebImage {
     readonly name: string;
     readonly altText?: string;
 }
-export type NativeImage = Readonly<ImageURISource | string | number>;
+export type NativeImage = Readonly<ImageURISource & { name?: string; } | string | number>;
 export type ImageValue = WebImage | NativeImage;
 ```
 

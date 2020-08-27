@@ -51,6 +51,8 @@ Here is how an SVG with the `fill` property looks:
 
 ![after](attachments/native-svg/after.png)
 
+You can check the list of allowed style properties at ![react-native-svg](https://github.com/react-native-community/react-native-svg#common-props) repository.
+
 ### 4.1 Coloring SVG Icons
 
 Icons can only be set for buttons and bottom bar items. When you integrate an SVG icon into a button or bottom bar item, you will have to set the SVG's color yourself. When using an app which employs Atlas UI, by default the colors are all white. For more information on styling, see the [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide).

@@ -39,7 +39,7 @@ The SAP app may already have the XSUAA Connector for SAP Cloud Platform installe
 
 If the XSUAA Connector for SAP Cloud Platform is not already in your project, download it from the App Store. It can be found here: [XSUAA Connector for SAP Cloud Platform](https://appstore.home.mendix.com/link/app/78091/).
 
-For more information, see [How to Use App Store Content](/appstore/general/app-store-content).
+For more information, see [How to Use App Store Content in Studio Pro](/appstore/general/app-store-content).
 
 ## 4 Using the Connector
 
@@ -242,7 +242,7 @@ You can picture the authentication as shown below:
 ## 6 Read More
 
 * [How to Create a Secure App](/howto/security/create-a-secure-app)
-* [How to Use App Store Content](/appstore/general/app-store-content)
+* [How to Use App Store Content in Studio Pro](/appstore/general/app-store-content)
 * [Project Security](/refguide/project-security)
 * [XSUAA Connector for SAP Cloud Platform](/partners/sap/sap-xsuaa-connector) (documentation)
 * [SAP Cloud Platform cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts)

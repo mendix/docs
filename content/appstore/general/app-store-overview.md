@@ -270,6 +270,6 @@ To delete a group, a Company Admin can click **Delete Group**.
 
 ## 6 Read More
 
-* [How to Use App Store Content](app-store-content)
+* [How to Use App Store Content in Studio Pro](app-store-content)
 * [How to Share App Store Content](share-app-store-content)
 * [App Store Content Support](app-store-content-support)

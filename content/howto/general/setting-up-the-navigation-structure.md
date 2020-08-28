@@ -2,100 +2,123 @@
 title: "Set Up the Navigation Structure"
 category: "General Info"
 menu_order: 3
-tags: ["studio pro"]
+tags: ["studio pro", "navigation", "menu", "how to"]
 ---
-Once you've created some pages you want to give users the ability to access them. The easiest way to do this is by using a navigation menu. The navigation editor of Studio Pro allows you define navigation menus for desktop, tablet and phone interfaces. It also allows you to define which page is shown as a default home page depending on the user role.
+## 1 Introduction
 
-## 1 Preparation
+Once you created some pages you want to give users the ability to access them. For this you need to create a navigation menu. The navigation editor of Studio Pro allows you define navigation menus for different type of interfaces, for example, for desktop, tablet, and phone interfaces. It also allows you to define which page is shown as a default home page depending on the user role.
+
+## 2 Prerequisites
 
 Before starting this how-to make sure you have completed the following prerequisites:
 
 *   [Creating a basic data layer](../data-models/create-a-basic-data-layer)
 *   [Creating your first two Overview and Detail pages](../front-end/create-your-first-two-overview-and-detail-pages)
 
-## 2 Setting a Default Home Page {#home}
+## 3 Setting a Default Home Page {#home}
 
-This section will explain how to set the default home page. Please note that this setting is overridden by the role based home page if you decide to configure that.
+This section will explain how to set the default home page. 
+
+{{% alert type="info" %}}
+
+Note that this setting is overridden by the role based home page if you decide to configure that.
+
+{{% /alert %}}
+
+Do the following:
+
+1.  Open **Project** > **Navigation**.
+
+    ![](attachments/setting-up-the-navigation-structure/open-navigation.jpg)
+
+2. Some navigation profiles are open in a tab by default, for example, the **Responsive** one. To open the other navigation profiles, do the following:
+
+    1. Click **Add navigation profile**, select the profile type depending on the type of device you are working on:
+
+       ![](attachments/setting-up-the-navigation-structure/add-navigation-profile.jpg)
+
+    2. Click **OK**.
+
+3. In **Home pages** > **Default home page**, click **Select**.
+
+4. Select the page you want to use as default home page. The example below uses *Homepage_Web*:
+
+   ![](attachments/setting-up-the-navigation-structure/select-home-page.jpg)
+
+5. Click **Select**.
+
+{{% alert type="info" %}}You can also select a microflow as default home page. Make sure that the microflow contains a *Show Form* activity, otherwise the user will not see anything.{{% /alert %}}
+
+Now every time a user signs in to the application, the selected page/microflow is shown/triggered.
+
+## 4 Setting a Role-Based Home Page
+
+In many cases you want users with different roles to see different home pages. You can use role-based home pages for this. You do not need to configure home pages for every role, because the default home page works as a fall-back mechanism. This section will explain how to set role-based home pages. Follow the steps below:
 
 1.  Open the **Navigation** editor.
+2.  Open the profile type depending on the device interface you are working on. 
+3.  In **Home pages** > **Role-based home pages**, click **Edit**.
+4.  In the **Role-based home pages** dialog box, click **New**.
+5.  Select a user role to create a new setting, for example, **Administrator**:
 
-    ![](attachments/18448703/18581313.png)
-
-    ![](attachments/18448703/18581311.png)
-
-2.  Select either **Responsive**, **Tablet browser**, or **Phone browser** navigation, depending on the device interface you're working on.
-3.  Next to **Home pages** > **Default home page**, click **Select**.
-4.  Select the page you want to use as default home page. In this case, we use _Homepage._
-
-    ![](attachments/18448703/18581309.png)
-
-5.  Click **Select**.
-
-    {{% alert type="info" %}}You can also select a microflow as default home page. Make sure that the microflow contains a 'Show Form' activity, otherwise the user won't see anything.{{% /alert %}}
-
-    Now every time a user signs in to the application, the selected page/microflow is shown/triggered.
-
-## <a name="Setupthenavigationstructure-Settherolebasedhomepage" rel="nofollow"></a>3 Setting a Role Based Home Page
-
-In many cases you want users with different roles to see different home pages. This can be easily achieved with Mendix by use of Role-based home pages. You don't need to configure home pages for every role, because the default home page works as a fall-back mechanism. This section will explain how to set role based home pages.
-
-1.  Open the **Navigation** editor.
-2.  Select either **Responsive**, **Tablet browser**, or **Phone browser** navigation, depending on the device interface you're working on.
-3.  Next to **Home pages** > **Role-based home pages**, click **Edit**.
-4.  In the **Role-based home pages** wizard, click **New**.
-5.  Select a user role to create a new setting. In this case, we select **Administrator**.
-
-    ![](attachments/18448703/18581306.png)
+    ![](attachments/setting-up-the-navigation-structure/select-user-role.png)
 
 6.  Click **Select**.
-7.  Select the role and click **Select target**.
+7.  After you have selected the user role, click the **Select target** button.
 
-    ![](attachments/18448703/18581305.png)
+    ![](attachments/setting-up-the-navigation-structure/select-target.png)
 
-8.  Select the page **Account_Overview** and click **Select**.
+8.  Select the home page for selected user role, for example, **Account_Overview**:
 
-    ![](attachments/18448703/18581304.png)
+    ![](attachments/setting-up-the-navigation-structure/select-page.png)
 
-    Now every time a user with the **Administrator** user role signs in to the application, the corresponding page 'Account_Overview' is shown. Users with different roles will be redirected to the default home page.
+9. Click **Select**.
 
-## <a name="Setupthenavigationstructure-Createmenuitems" rel="nofollow"></a>4 Creating menu items
+Now every time a user with the **Administrator** user role signs in to the application, the corresponding page 'Account_Overview' is shown. Users with different roles will be redirected to the default home page.
 
-This section will explain how to create menu items.
+## 5 Creating Menu Items
+
+You can create menu items for your navigation. Do the following:
 
 1.  Open the **Navigation** editor.
-2.  Select either **Responsive**, **Tablet browser**, or **Phone browser** navigation, depending on the device interface you're working on.
-3.  Locate the **Menu** section.
-4.  Click **New item** to create a top level menu item. You can also select an existing menu item and click **New subitem** to create a sub-menu item.
-5.  Enter a **caption**. In this case, enter _Customer Overview_.
-6.  Select a page or microflow as target. In this case, we select the page _CustomerOverview.
+2.  Open the profile type depending on the device interface you are working on. 
+3.  In the **Menu** section, click **New item** to create a top level menu item. 
+5.  Enter a **Caption** for your menu item. In the example, the menu item is named *Customer Overview* after a page this menu item will open.
+6.  Select a page or microflow as target:
 
-    ![](attachments/18448703/18581302.png)
+    ![](attachments/setting-up-the-navigation-structure/new-menu-item.png)
 
-7.  Save the menu item by clicking **OK**.
+7.  Click **OK** to save the menu item.
 
-    In the overview of menu items you can see the caption of the menu item, the target form or microflow and which user role is needed to be able to see the menu item. The user roles are derived from the page and microflow access settings in the security model. You can restructure the menu by dragging and dropping menu items.
+In the overview of menu items you can see the name of the menu item, the target page or microflow and the user role is needed to be able to see the menu item. The user roles are derived from the page and microflow access settings. You can restructure the menu by dragging and dropping menu items.
 
-## <a name="Setupthenavigationstructure-Addnavigationmenutopages" rel="nofollow"></a>5 Adding navigation menu to pages
+## 6 Adding Navigation Menu to Pages
 
-Now that you've created a menu structure it's time to start using it on pages.
+Now that you have created a menu structure it is time to start using it on pages. Do the following:
 
-1.  Open a page in the **Page Editor**.
+1. Open a page.
+
 2.  Click **Add widget** and select **Menu bar**:
 
-    ![](attachments/18448703/18581316.png)
+    ![](attachments/setting-up-the-navigation-structure/select-menu-bar.png)
 
-3.  Click once in an empty place holder on the page to insert the widget.
+3.  Select a place on the page to add the widget.
 
-    ![](attachments/18448703/18581315.png)
+    ![](attachments/setting-up-the-navigation-structure/add-widget.png)
 
-4.  Double click the widget to open its properties.
-5.  Select **Project navigation** as menu source. This is the navigation structure defined in the navigation editor. You can also add additional menu structures by use of menu documents and use them instead.
-6.  Select **Desktop**, **Tablet**, or **Phone** as menu, depending on the device interface you're working on.
-7.  Click **OK** to save the properties. The menu widget is now showing the navigation items created in the navigation editor.
+4. Open the **Properties** pane.
 
-    To prevent repeating the previous steps for every page in your project,  supports something called layouts. With layouts you can define a base structure for pages in your project. In a layout you can define where the menu should be rendered and you can simply reuse that layout for the desired pages. You can find out how to use layouts in the following document: [How to Use Layouts and Snippets](../front-end/layouts-and-snippets).
+5. In General > **Menu source**, select **Project navigation**. This is the navigation structure defined in the navigation editor. (You can also add additional menu structures using menu documents.)
 
-## 6 Read More
+    ![](attachments/setting-up-the-navigation-structure/menu-bar-properties.jpg)
+
+6. In **Profile**, select the profile type depending on the device type. **Responsive** is selected by default.  
+
+The menu widget is now showing the navigation items created in the navigation editor.
+
+To prevent repeating the previous steps for every page in your project,  you can use a layout. With layouts you can define a base structure for pages in your project. You can define where the menu should be rendered and you can simply reuse that layout for all or several pages. For more information on how to use layouts, see [How to Use Layouts and Snippets](../front-end/layouts-and-snippets).
+
+## 7 Read More
 
 * [Atlas UI](/howto/front-end/atlas-ui)
 * [Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages)

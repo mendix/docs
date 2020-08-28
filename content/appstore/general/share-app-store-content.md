@@ -123,8 +123,14 @@ To add content to the App Store, follow these steps:
 	
 	{{% todo %}}[**Verify if select license from drop-down or if have to write in; that all license types/descriptions are there; also if clicking Feedback is still valid**]{{% /todo %}}
 	
+	![](attachments/share-app-store-content/general.jpg)
+	
 6. Click **Upload an Image** to upload an icon for the component
-7. On each page of the upload flow, you can click **Save Draft** to save the details you have entered so far as a draft (which you can then access via the **My Drafts** button in the top-right of the page), or you can click **Save & Continue** to go to the next page of the upload flow.
+7.  On each page of the upload flow, click one of the following buttons:
+
+	* **Save Draft** to save the details you have entered so far as a draft to the [Drafts](app-store-overview#drafts) page of your App Store (which you can access via the **My Drafts** button in the top-right of the page and the )
+	* **Save & Continue** to go to the next page of the upload flow
+
 8.  On the **Package** page, select your content source:
 
 	* After clicking **Select from GitHub**, follow the steps on the dialog box for copying the link of the release you want to import
@@ -132,43 +138,13 @@ To add content to the App Store, follow these steps:
 		* When you are finished, click **OK**
 	* After clicking **Manual upload**, follow the steps on the dialog box for uploading the package source file
 		* When you are finished, click **Save**
-9. If this is the first version of the component you are uploading, the version number in the **Version** section of the **Package** page will be automatically set to **1.0.0**. You can enter **Release Notes** for the component in the box provided describing what is new in that release.
+9.  If this is the first version of the component you are uploading, the version number in the **Version** section of the **Package** page will be automatically set to **1.0.0**. You can enter **Release Notes** for the component in the box provided describing what is new in that release.
 
-{{% todo %}}[**Verify step above for versioning**]{{% /todo %}}
+	{{% todo %}}[**Verify step above for versioning**]{{% /todo %}}
 
-10. On the **Enable** page, enter **Documentation**
+	![](attachments/share-app-store-content/package.jpg)
 
-
-
-
-
-
-
-
-# OLD
-
-## Adding New App Store Content
-
-2.  <a name="two"></a>The **DRAFT** page will open, where you need to select the purpose of your contribution:
-
-	* **Share** – components that can be downloaded using Studio Pro – if you select this option, continue to [step #3](#three) below
-	* **Promote** – a way to advertise a component or solution while not making it downloadable – if you select this option, continue to [step #4](#four) below
-
-	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change this setting by updating the App Store component later.
-	{{% /alert %}}
-
-6.  <a name="edit"></a>In the bottom half of the **DRAFT** screen, do the following:<br />
-	b. Select a category for your content from the **Category** drop-down menu (for example, **Connectors**).<br />
-	c. If you have published a demo using your content, enter the **Demo URL**.<br />
-	d. Click **Upload Image** to upload an image for your app.<br />
-
-	![](attachments/share-app-store-content/add_content_3.png)
-
-7.  On the **Overview** tab in the bottom half of the **Share your content** screen, you can do the following:
-
-	* Upload a video by clicking **Add video** and selecting a video that demonstrates using the content from your computer
-
-7. <a name="doc-tab"></a>On the **Documentation** tab, you can write or edit the documentation that should accompany your app in the editor. You are only able to edit the documentation of your own and your company's content. Note that this is only applicable when the **Use GitHub README for documentation** check box is not checked.
+10. On the **Enable** page, you can enter details on requirements and configuration for your component in the **Documentation**. Note that this documentation option is only avaiable when the **Import Documentation** box has not been checked. Follow the template for the recommended content:
 
 	* The documentation template includes the following sections that you must fill out in order to submit your content:
 		* An extended **Description** of the content
@@ -180,40 +156,30 @@ To add content to the App Store, follow these steps:
 		* The **Configuration** steps and details
 		* Any **Known bugs**
 		* Any **Frequently Asked Questions**
-	
-	{{% image_container width="450" %}}![](attachments/share-app-store-content/add_content_5.png){{% /image_container %}}
-	
+
+	{{% todo %}}[**Verify template is used and that section descriptions above are still accurate**]{{% /todo %}}
+
 	The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links.
-	
-	You can attach images to your documentation in one of two ways:
-	
+
+	You can attach images to your documentation in one of two ways (uploaded images cannot be resized, but linked images can):
+
 	* Drag the image from file explorer to the editor (this will upload your image)
 	* Click the Image button in the editor tools and enter a URL which points to an image
+
+11. You can also do the following on this page:
+	* Click **Add Screenshot** to select images of the component (especially for configuration) from your computer and upload them – this is required for submitting a new component
+	* Click **Add Video** to select a video that demonstrates using the component from your computer
+	* Add a link to a **Demo** application that is accessible for seeing how the component is used
+
+	![](attachments/share-app-store-content/enable.jpg)
+
+12. Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
+
+	![](attachments/share-app-store-content/publish.jpg)
 	
-	Uploaded images cannot be resized, but linked images can.
+After you click **Publish Content**, your draft will be reviewed by Mendix within approximately 5 working days before it is visible in the App Store.
 
-9. Note that there is nothing for you to do on the **Statistics** and **All versions** tabs. The **Statistics** tab will chart the downloads of your content over time. The **All versions** tab will list the various versions of your content that have been updated.
-10. <a name="version-details"></a>In the **Version Details** section on the bottom-right of the screen, do the following:<br />
-	a. Check the **Beta version** check-box if the content is in beta.<br />
-
-11. After entering the information for your content, you can click one of these buttons in the middle of the screen:
-
-	{{% image_container width="300" %}}![](attachments/share-app-store-content/add_content_7.png){{% /image_container %}}
-
-	* Click **Cancel** to cancel your changes to the content information
-	* Click **Delete Draft** to delete the draft of the content information you are working on
-	* Click **Save draft** to save the draft of the content information, which will open the **Draft version** section at the top of the screen:
-
-	{{% image_container width="350" %}}![](attachments/share-app-store-content/add_content_6.png){{% /image_container %}}
-
-	<a name="status"></a>In this section, you can do the following:
-
-	* In the **Status** section, if applicable, click the **error(s)** link  bring up the **Warning** pop-up window that lists the information you need enter or fix before you submit the content
-	* Click **Back** to go to the list of content drafts in the **My App Store** tab
-	* Click **Edit** to continue editing the content information
-	* Click **Submit for approval** to submit your App Store content for approval at Mendix
-
-{{% todo %}}[**Verify the Withdraw option should not be documented here**]{{% /todo %}}
+# OLD: REVIEW BELOW FOR USAGE
 
 ## Updating Existing App Store Content {#updating}
 

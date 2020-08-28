@@ -103,7 +103,8 @@ To add content to the App Store, follow these steps:
 	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change this setting by updating the App Store component later.
 	{{% /alert %}}
 
-5. The **General** page will open, where you need to provide information about your component. The information you entered above is pre-filled on this page. Enter the following details:<br />
+5.  The **General** page will open, where you need to provide information about your component. The information you entered above is pre-filled on this page. Enter the following details:<br />
+
 	a. Enter a **Name** for your content.<br />
 	b. Enter a **Description** of your content (for example, "Node control is an native Android app that gives a system administrator access to the Mendix Cloud nodes being administered. From the app, the status of the different environments within a node can be monitored and an environment can be started or stopped.")<br />
 	c. Select the **Studio Pro Version** on which you built the content.<br />
@@ -122,31 +123,27 @@ To add content to the App Store, follow these steps:
 	
 	{{% todo %}}[**Verify if select license from drop-down or if have to write in; that all license types/descriptions are there; also if clicking Feedback is still valid**]{{% /todo %}}
 	
-	* Click **Upload an Image** to upload images/screenshots of the content from your computer
+6. Click **Upload an Image** to upload an icon for the component
+7. On each page of the upload flow, you can click **Save Draft** to save the details you have entered so far as a draft (which you can then access via the **My Drafts** button in the top-right of the page), or you can click **Save & Continue** to go to the next page of the upload flow.
+8.  On the **Package** page, select your content source:
 
-6. On the **Package** page, select your content source:
+	* After clicking **Select from GitHub**, follow the steps on the dialog box for copying the link of the release you want to import
+		* To include the repo's *README.md* file on the component's [Documentation](#doc-tab) tab, make sure you have checked the **Import Documentation** box 
+		* When you are finished, click **OK**
+	* After clicking **Manual upload**, follow the steps on the dialog box for uploading the package source file
+		* When you are finished, click **Save**
+9. If this is the first version of the component you are uploading, the version number in the **Version** section of the **Package** page will be automatically set to **1.0.0**. You can enter **Release Notes** for the component in the box provided describing what is new in that release.
 
-	* If you select **Select from GitHub**, follow these steps:<br />
-		a. Select the type of GitHub profile (**Organisation** or **User**) where the content is stored.<br />
-		b. Enter the **GitHub profile name**.<br />
-		c. Click **Check** to confirm that this profile is publicly available in GitHub.<br />
-		d. Select the **GitHub repo** from which the content will be uploaded by clicking **Select**. The system will crawl all of the projects for that GitHub profile and present the Mendix package file (*.mpk*) options to you in a pop-up window.<br/>
-		e. Click **Select** on this window when you find the correct *.mpk* file name.<br />
-		f. Select the **release** by clicking **Select**. If there are various releases of the *.mpk* file available, the system will present them to you in a pop-up window. When you find the correct release, click **Select** on this window.<br />
-		g. Check the **Use GitHub README for documentation** check box if you want the repo's *README.md* file to be included on the App Store component's [Documentation tab](#doc-tab). This is useful for including nicely formatted documentation with screenshots for your App Store component.<br />
-		{{% alert type="info" %}}The **Release notes** section is only available for updating a new version of the content (for details see the  [Updating Existing App Store Content](#updating) section below).{{% /alert %}}<br />
+{{% todo %}}[**Verify step above for versioning**]{{% /todo %}}
 
-		{{% image_container width="400" %}}![](attachments/share-app-store-content/add_content_1.png)
-		{{% /image_container %}}
+10. On the **Enable** page, enter **Documentation**
 
-	* If you select **Manual upload**, follow these steps:<br />
-		a. Select the **Source file** by clicking **Upload**.<br />
-		b. On the **Upload source file** pop-up window, click **Browse** to browse the source files on your computer.<br/>
-		c. Select your source file, and click **Save**.<br />
-		d. Enter the **Release notes** that describe your manually uploaded content.<br />
 
-		{{% image_container width="400" %}}![](attachments/share-app-store-content/add_content_2.png)
-		{{% /image_container %}}
+
+
+
+
+
 
 # OLD
 

@@ -45,7 +45,7 @@ This microflow creates a new story in the specified sprint and returns the ID of
 | ApiKey | String | The API Key the application uses to access the Stories API for this project.
 | Description | String | Description of the story (optional) 
 | Name | String | Name of the new story. 
-| Points | Enumeration StoryPoints | Number of story points. If left empty will be set to 1\. (_1/_2/_3/_5/_8/_13/_20/_/40/_100, optional)
+| Points | Enumeration StoryPoints | Number of story points. If left empty will be set to 1\. (_1/_2/_3/_5/_8/_13/_20/_40/_100, optional)
 | ProjectID | String | The ID of the project. 
 | SprintID | Integer/Long | The ID of the sprint. 
 | StoryType | Enumeration StoryType | The type of the story (Feature or Bug) 
@@ -147,7 +147,7 @@ This microflow updates a story with modified information. Parameters:
 | Description | String | Description of the story (optional) 
 | Name | String | Name of the story. 
 | ParentSprintID | Integer/Long | The ID of the sprint the story is in. 
-| Points | Enumeration StoryPoints | Number of story points. (_1/_2/_3/_5/_8/_13/_20/_/40/_100) 
+| Points | Enumeration StoryPoints | Number of story points. (_1/_2/_3/_5/_8/_13/_20/_40/_100) 
 | ProjectID | String | The ID of the project. 
 | Status | Enumeration BacklogState | Status of the story, (Open/Started/Done)
 | StoryID | Integer/Long | ID of the Story 

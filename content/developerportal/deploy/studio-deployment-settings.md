@@ -3,7 +3,7 @@ title: "Studio Deployment Settings"
 parent: "mendix-cloud-deploy"
 menu_order: 10
 description: "Describes how to set deployment for Mendix Studio."
-tags: ["node","developer portal","deploy", "Studio", "settings", "target", "Mendix Studio Target"]
+tags: ["node","developer portal","deploy", "Studio", "settings", "target", "Mendix Studios Target"]
 ---
 
 ## 1 Introduction
@@ -26,7 +26,7 @@ To select the environment for Studio, do the following:
 
     ![Details of an Environment in the Developer Portal](attachments/studio-deployment-settings/developer-portal-environments-details.png)
 
-3.  <a name="target"></a>In the **General** tab, select **Mendix Studio Target** and click **Change**:
+3.  <a name="target"></a>In the **General** tab, select **Mendix Studios Target** and click **Change**:
 
     ![](attachments/studio-deployment-settings/developer-portal-web-modeler-target.png) <br/>
 

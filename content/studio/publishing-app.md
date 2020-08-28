@@ -7,13 +7,13 @@ tags: ["studio", "deployment", "publishing", "app publishing", "deploy", "deploy
 
 ## 1 Introduction
 
-In Mendix Studio, the **Preview** allows you to experience how your app will look like for end-users and business stakeholders when it is published. In this way, you will use the preview mode to verify your own changes while developing your app. This is an opportunity to test your app logic, design, and behavior: since end-users cannot access the preview environment, you can fill your app with various test data that is not visible to end-users. Also, the preview allows you to switch between different user roles in your app and test your app from the perspective of each role. For more information on testing your user roles, see [Demo Users](setting-security#demo-users) in *Security, Roles & Permissions*.
+In Mendix Studio, the **Preview** allows you to experience how your app will look like for end-users and business stakeholders when it is published. In this way, you will use the preview mode to verify your own changes while developing your app. This is an opportunity to test your app logic, design, and behavior: since end-users cannot access the preview environment, you can fill your app with various test data. Also, the preview allows you to switch between different user roles in your app (when [security](setting-security) is enable) and test your app from the perspective of each role. For more information on testing your user roles, see [Demo Users](setting-security#demo-users) in *Security, Roles & Permissions*.
 
 **Publishing** means getting your app up and running in a cloud environment to make it available for the end-users. When the app is ready to be shared with end-users, you need to publish it. At a later stage, when you add new features and improve your app, you need to publish your app to make these changes available to your users.  
 
 ## 2 Previewing Your App
 
-The app preview shows you what your app will look like after it is published. Previewing your app does not change the published app. Also, the preview environment has a separate database from the published app, that means you can create your own test data without polluting the data in the published application.
+The app preview shows you what your app will look like for end-users. Previewing your app does not change the published app. Also, the preview environment has a separate database from the published app, that means you can create your own test data without polluting the data in the published application.
 
 To preview your app, click **Preview** in the top-right corner of Studio. 
 
@@ -41,7 +41,7 @@ The app preview is your personal preview of the app. Hence, only users logged in
 
 ## 3 Publishing Your App {#publishing-your-app}
 
-Published app is the real app that your end-users will access and use. When you publish your app, you deploy it to a cloud environment. A cloud environment is a location in the cloud that can host your app, and deployment is a process to put the latest version of your app in that location. For more technical information, see [Environments](/developerportal/deploy/environments) in the *Developer Portal Guide*.
+Published app is the real app that you and your end-users will access and use. When you publish your app, you deploy it to a cloud environment. A cloud environment is a location in the cloud that can host your app, and deployment is a process to put the latest version of your app in that location. For more technical information, see [Environments](/developerportal/deploy/environments) in the *Developer Portal Guide*.
 
 To publish your application, follow these steps:
 
@@ -67,7 +67,7 @@ By default all apps created in Mendix Studio are Free Apps. A Free App is a comp
 
 ## 4 Viewing Your App
 
-After you have updated your app, you are able to instantly view it in your browser or on a mobile device. 
+After you have updated your app, you are able to instantly view it in your browser or on a mobile device. You can also invite users to your app. For more information on user roles and managing users, see the [Managing App Users](settings-security#managing-app-users) section in *Security, Roles & Permissions*. 
 
 ### 4.1 Viewing Your App in a Browser 
 

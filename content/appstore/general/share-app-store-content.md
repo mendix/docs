@@ -176,12 +176,10 @@ To add content to the App Store, follow these steps:
 12. Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
 
 	![](attachments/share-app-store-content/publish.jpg)
-	
+
 After you click **Publish Content**, your draft will be reviewed by Mendix within approximately 5 working days before it is visible in the App Store.
 
-# OLD: REVIEW BELOW FOR USAGE
-
-## Updating Existing App Store Content {#updating}
+## 5 Updating Existing App Store Content {#updating}
 
 {{% alert type="info" %}}
 If an existing App Store component is assigned to a [user group](app-store-overview#user-groups) as specific user group [content](app-store-overview#content), you can only update the component if you are a member of that group.
@@ -189,27 +187,22 @@ If an existing App Store component is assigned to a [user group](app-store-overv
 
 To update content that has already been published, follow these steps:
 
-1. Go to the information page for the content you want to update (for example, by selecting **Published** on the **My App Store** tab and finding an app you want to update).
-2.  Click **Create new draft version**:
-	
-	![](attachments/share-app-store-content/update_content_1.png)
+1. Go to the information page for the content you want to update (for example, by selecting [My Content](/appstore/general/app-store-overview#content) in **My Marketplace/App Store**, finding the component you want to update, then clicking **Manage**).
+2.  Click **Create new draft version**.
 	
 	{{% alert type="info" %}}Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated. If there is a draft version in progress, click **View draft** to see it.
 	{{% /alert %}}
 
-3. On the **DRAFT** page, you can edit the content details (as described in the [Adding New App Store Content](#adding) section above).
-4.  In the **Version Details** section, you must select the **Update type** so that the content is saved as a new version:
+3. You can edit all component details, as described in the [Adding New App Store Content](#adding) section above.
+4.  In the **Version** section of the **Package** page, update the **Major**, **Minor**, and **Patch** numbers so that the component is saved as a new version:
 
 	* **Major update** – a large change (which will save the content from version 5.0 to version 6.0, for example)
-	* **Minor update** – a medium-sized change (which will save the content from version 6.0 to version 6.1.0, for example)
+	* **Minor update** – a medium-sized change (which will save the content from version 6.0.0 to version 6.1.0, for example)
 	* **Patch** – a small change (which will save the content from 6.1.0 to 6.1.1, for example)
-	* **Custom** – your own version number (which allows you to add minor or patch updates to previous major versions, or to skip versions rather than having to increment by 1; note that custom versioning is only available if there has been a version 1.0.0)
 
-	{{% image_container width="350" %}}![](attachments/share-app-store-content/update_content_2.png){{% /image_container %}}
-	
 	For descriptions of the other fields, see the [version details step above](#version-details).
 
-## Read More
+## 6 Read More
 
 * [App Store Overview](app-store-overview)
 * [How to Use App Store Content in Studio Pro](app-store-content)

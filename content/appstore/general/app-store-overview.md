@@ -24,7 +24,8 @@ The home page of the Mendix App Store has three main tabs at the top:
 
 * **Discover** – the home page, where you can browse various component categories and filter what is displayed
 * **My Marketplace** – click this to go to [My App Store](#my-app-store)
-* **Your company's private App Store page** – click this to go to your [company's App Store](#company-content)
+* **{Your company's private App Store page}** – click this to go to your [company's App Store](#company-content)
+* **My Subscriptions** – click this to go to your [Subscriptions](#subscriptions) page
 
 ![](attachments/app-store-overview/home-page.jpg)
 
@@ -69,7 +70,7 @@ The header for each component presents the following details:
 	* **Download** – click this to download the component
 		* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotion)
 		* The best practice is to download a component from the App Store that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded App Store content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
-	* **Try for Free** – click this to subscribe to a free trial of the paid [platform-supported](app-store-content-support#category) component
+	* **Try for Free** – click this to [subscribe](#subscriptions) to a free trial of the paid [platform-supported](app-store-content-support#category) component
 
 {{% todo %}}[**Update screenshot of component details**]{{% /todo %}}
 
@@ -122,7 +123,6 @@ The details page for each component presents the following item information tabs
 
 	![](attachments/app-store-overview/content_detail_8.jpg)
 	
-
 {{% todo %}}[**Verify no other tabs**]{{% /todo %}}
 	
 ## 4 My App Store {#my-app-store}
@@ -286,7 +286,17 @@ On this tab, you can enter a **Name** and **Description** for the user group.
 
 To delete a group, a Company Admin can click **Delete Group**.
 
-## 6 Read More
+## 6 My Subscriptions {#subscriptions}
+
+This page lists the **Product** (for example, **3D Visualization**), **Type** (for example, **App Service**), **Plan**, and **Expiration** of your subscriptions.
+
+{{% todo %}}[**Need more info here; add hyperlinks to examples as available**]{{% /todo %}}
+
+Click **Manage App Services** to go to a page where you can manage the app services to which you have subscribed. There, you will **create and manage binding keys**.
+
+{{% todo %}}[**Need more info here**]{{% /todo %}}
+
+## 7 Read More
 
 * [How to Use App Store Content in Studio Pro](app-store-content)
 * [How to Share App Store Content](share-app-store-content)

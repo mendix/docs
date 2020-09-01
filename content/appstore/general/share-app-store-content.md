@@ -205,7 +205,7 @@ If an existing App Store component is assigned to a [user group](app-store-overv
 
 To update content that has already been published, follow these steps:
 
-1. Go to the information page for the content you want to update (for example, by selecting **Published** on the **My App Store** tab and finding an app you want to update).
+1. Go to the information page for the content you want to update (for example, by selecting [My Content](/appstore/general/app-store-overview#content) in **My App Store** and finding the component you want to update).
 2.  Click **Create new draft version**:
 	
 	![](attachments/share-app-store-content/update_content_1.png)

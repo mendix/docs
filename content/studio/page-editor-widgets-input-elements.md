@@ -55,7 +55,7 @@ A date picker has a specific [Format](#format) section.
 This option is only available for **Text Box**, **Text Area**, **Radio Buttons**, **Check Box**, and **Drop-Down** widgets.
 {{% /alert %}}
 
-The **Type** option allows you to quickly change the type of one input element to a similar one: **Text box** <-> **Text area**; **Radio buttons** <-> **Check box** <-> **Drop down**:
+The **Type** option allows you to quickly change the type of one input element to a similar one: you can change a **Text Box** to a **Text Area** and vice versa, and change **Radio Buttons** to a **Check Box** or a **Drop-Down** and vice versa:
 
 ![Type Option](attachments/page-editor-widgets-input-elements/input-widget-type.jpg)
 

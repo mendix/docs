@@ -187,7 +187,7 @@ If an existing App Store component is assigned to a [user group](app-store-overv
 
 To update content that has already been published, follow these steps:
 
-1. Go to the information page for the content you want to update (for example, by selecting [My Content](/appstore/general/app-store-overview#content) in **My Marketplace/App Store**, finding the component you want to update, then clicking **Manage**).
+1. Find the component you want to update (for example, by selecting [My Content](/appstore/general/app-store-overview#content) in **My Marketplace/App Store** and then clicking **Manage** for the component, or going straight to the [component details](app-store-overview#details) page).
 2.  Click **Create new draft version**.
 	
 	{{% alert type="info" %}}Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated. If there is a draft version in progress, click **View draft** to see it.
@@ -200,7 +200,7 @@ To update content that has already been published, follow these steps:
 	* **Minor update** – a medium-sized change (which will save the content from version 6.0.0 to version 6.1.0, for example)
 	* **Patch** – a small change (which will save the content from 6.1.0 to 6.1.1, for example)
 
-	For descriptions of the other fields, see the [version details step above](#version-details).
+5. On the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
 
 ## 6 Read More
 

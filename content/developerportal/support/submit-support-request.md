@@ -62,20 +62,20 @@ To submit a request with Mendix Support, follow these steps:
 	* **Non-Standard Change** – any other changes not covered by other issues above
   
 3. Fill in the fields for the issue type you selected.
-4. When you select **Request for Information** or **Incident**, you are then requested to select the related **Component** for the issue. The correct component will allow Mendix Support to help you more effectively. In some cases, you can also select the related **Subcomponent** for your issue. Selecting the related sub-component is not required, but will help Mendix Support help you more quickly and accurately. There are two main options when selecting the related component:
- 	* **App** – Select one of the App components when you have issues with designing, developing, building, deploying, or operating one of your own apps, built on the Mendix platform
-		* **App - Development** – issues or questions regarding developing your app, for example with your domain model, widgets, or logic
-		* **App - Deployment** – issues or questions regarding deploying your app, for example when the app can’t be deployed, or won't start
-		* **App - Operations** – issues or questions regarding running a deployed app, for example when the app crashes, or shows errors in the log
-		* **App - Add-on** – issues or questions regarding one of the Mendix Add-ons, such as APD, AQM or ATS
-		* **App - Managed Service** - issues or questions regarding one of the Mendix Managed Services
-		* **App - Other** – any other issues or questions regarding your own app that you are developing on the Mendix platform
+4.  When you select **Request for Information** or **Incident**, you then have to select the related **Component** for the issue. The correct component will allow Mendix Support to help you more effectively. In some cases, you can also select the related **Subcomponent** for your issue. Selecting the related sub-component is not required, but it will allow Mendix Support to help you more quickly and accurately. There are two main options for the related component:
+ 	* **App** – select this component and one of the sub-components below when you have issues with designing, developing, building, deploying, or operating one of your own apps built on the Mendix Platform
+		* **App - Development** – issues/questions regarding developing your app (for example, with your [domain model](/refguide/domain-model), [widgets](/refguide/data-widgets), or [logic](/refguide/application-logic))
+		* **App - Deployment** – issues/questions regarding deploying your app (for example, when the app cannot be [deployed](/developerportal/deploy/) or will not start)
+		* **App - Operations** – issues/questions regarding running a deployed app (for example, when the app crashes or shows errors in the [log](/developerportal/operate/logs))
+		* **App - Add-on** – issues/questions regarding one of the Mendix add-ons (such as [ATS](/addons/ats-addon/), [APD](/addons/apd-addon/), or [AQM](/addons/aqm-addon/))
+		* **App - Managed Service** - issues/questions regarding one of the Mendix Managed Services
+		* **App - Other** – any other issue/question regarding your own app that you are developing on the Mendix platform
  	* **Developer Platform** – Select one of the Developer Platform components when you have issues with the Mendix platform itself
-		* **Developer Platform - Account** – issues or questions regarding your Mendix account, for example when you have difficulties creating an account or signing in
-		* **Developer Platform - Sprintr** – issues or questions regarding Sprintr, for example when you can’t create a story, or start a sprint
-		* **Developer Platform - Academy** – issues or questions regarding the Mendix Academy, for example when you a learning path can’t be opened, or you can’t find the attachments required for a module
-		* **Developer Platform - Forum** – issues or questions regarding the Mendix Forum, for example when you can’t create a new question, or add an answer 
-		* **Developer Platform - Cloud Portal** – issues or questions regarding the Cloud Portal, for example when you can’t view your log files, or scale your environment
+		* **Developer Platform - Account** – issues/questions regarding your Mendix account, for example when you have difficulties creating an account or signing in
+		* **Developer Platform - Sprintr** – issues/questions regarding Sprintr, for example when you can’t create a story, or start a sprint
+		* **Developer Platform - Academy** – issues/questions regarding the Mendix Academy, for example when you a learning path can’t be opened, or you can’t find the attachments required for a module
+		* **Developer Platform - Forum** – issues/questions regarding the Mendix Forum, for example when you can’t create a new question, or add an answer 
+		* **Developer Platform - Cloud Portal** – issues/questions regarding the Cloud Portal, for example when you can’t view your log files, or scale your environment
 		* **Developer Platform - Other** – any other issues or questions regarding the Mendix platform itself
 5. Please make sure all your attachments finished uploading before clicking **Next**.
 6.  After clicking **Next**, the Mendix Support Portal will suggest relevant documentation for you to read before you submit the request. Based on a complexity check, recommendations might be skipped to improve your experience. This complexity check takes your ticket priority and other factors into consideration.

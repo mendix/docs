@@ -62,11 +62,28 @@ To submit a request with Mendix Support, follow these steps:
 	* **Non-Standard Change** – any other changes not covered by other issues above
   
 3. Fill in the fields for the issue type you selected.
-4. When you enter the **Subject** of the request, the Mendix Support Portal will suggest relevant documentation for you to read before you submit the request:
+4. When you select to create **Request for Information** or **Incident** issue, you will be requested to select the related *component* for the issue. Selecting the correct component will allow Mendix Support in helping you more effective. In some cases, you can also select the related *subcomponent* for your issue. Selecting the related subcomponent is not required but will help Mendix Support help you more quickly and accurately.
+There are two main options when selecting the related component:
+ * **App** - Select one of the App components when you have issues with designing, developing, building, deploying, or operating one of your own apps, built on the Mendix platform
+	* **App - Development** - issues or questions regarding developing your app, for example with your domain model, widgets, or logic
+	* **App - Deployment** - issues or questions regarding deploying your app, for example when the app can’t be deployed, or won't start
+	* **App - Operations** - issues or questions regarding running a deployed app, for example when the app crashes, or shows errors in the log
+	* **App - Add-on** - issues or questions regarding one of the Mendix Add-ons, such as APD, AQM or ATS
+	* **App - Managed Service** - issues or questions regarding one of the Mendix Managed Services
+	* **App - Other** - any other issues or questions regarding your own app that you are developing on the Mendix platform
+ * **Developer Platform** - Select one of the Developer Platform components when you have issues with the Mendix platform itself
+	* **Developer Platform - Account** - issues or questions regarding your Mendix account, for example when you have difficulties creating an account or signing in
+	* **Developer Platform - Sprintr** - issues or questions regarding Sprintr, for example when you can’t create a story, or start a sprint
+	* **Developer Platform - Academy** - issues or questions regarding the Mendix Academy, for example when you a learning path can’t be opened, or you can’t find the attachments required for a module
+	* **Developer Platform - Forum** - issues or questions regarding the Mendix Forum, for example when you can’t create a new question, or add an answer 
+	* **Developer Platform - Cloud Portal** - issues or questions regarding the Cloud Portal, for example when you can’t view your log files, or scale your environment
+	* **Developer Platform - Other** - any other issues or questions regarding the Mendix platform itself
+5. Please make sure all your attachments finished uploading _before_ clicking **Next**.
+6. After clicking **Next**, the Mendix Support Portal will suggest relevant documentation for you to read before you submit the request. Based on a complexity check, recommendations might be skipped to improve your experience. This complexity check takes your ticket priority and other factors into consideration.
 
-	![](attachments/submit/suggestions.png)
+	![](attachments/submit/recommendations.png)
 
-If investigating the documentation and searching the [Mendix Forum](https://forum.mendixcloud.com/index4.html) does not help you solve your issue, you can submit the Mendix Support request.
+If investigating the documentation and searching the [Mendix Forum](https://forum.mendixcloud.com/index4.html) does not help you solve your issue, you can submit the Mendix Support request.	
 
 ## 4 Request Priority {#request-priority}
 

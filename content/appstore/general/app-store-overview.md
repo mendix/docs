@@ -87,15 +87,21 @@ The header for each component presents the following details:
 * The latest **Version** number of the component
 * The Studio Pro version that the component **Requires** to work
 
+The **Publisher** section presents the name of the company who created the component as well as the **Date** when the component was first published.
+
+{{% todo %}}[**Verify Publisher section**]{{% /todo %}}
+
 The **Developers** section presents the names of the developers who last updated the component, with links to their [Mendix Profile](/developerportal/mendix-profile/).
 
 {{% todo %}}[**Verify definition of what developers are included and that link goes to Mendix Profile**]{{% /todo %}}
 
+The **Support** section presents the type of support Mendix offers for the component, which is further described in [App Store Content Support](app-store-content-support).
+
+---
+
 {{% todo %}}[**Verify that below will still be part of this section; especially UUID, which is linked to in section 3.1.1 of Project API**]{{% /todo %}}
 
-* When the component was **Published**
 * The type of **License** for the component
-* The type of support Mendix offers for the component (for more information, see [App Store Content Support](app-store-content-support))
 * The **URL** for the component page that you can copy and share
 * The **UUID** of the component; if the component is part of the **Getting Started** category of App Store content, this UUID can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*
 * A **View on GitHub** link, which will take you to the GitHub source files of the component
@@ -123,6 +129,7 @@ The details page for each component presents the following item information tabs
 
 	![](attachments/app-store-overview/content_detail_8.jpg)
 	
+
 {{% todo %}}[**Verify no other tabs**]{{% /todo %}}
 	
 ## 4 My App Store {#my-app-store}

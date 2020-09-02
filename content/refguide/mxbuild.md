@@ -27,7 +27,7 @@ So, the MxBuild for Mendix version 8.1.2 would be found at [https://cdn.mendix.c
 
 You can extract the files using your favorite archival tool, such as [7-Zip](https://www.7-zip.org/).
 
-The system requirements for MxBuild are documented here: [System Requirements](system-requirements#mxbuild).
+For details on the system requirements for MxBuild, see [System Requirements](system-requirements#mxbuild).
 
 ## 2 Command Line
 

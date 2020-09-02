@@ -6,7 +6,7 @@ tags: ["studio", "theme customizer", "how to", "customize", "design"]
 
 ## 1 Introduction
 
-This how-to explains how to customize your app and use your company's logo, change its colors, fonts, adjust header sizes. 
+This how-to explains how to customize your app in Mendix Studio and use your company's logo, change its colors, fonts, adjust header sizes. 
 
 **This how-to will teach you how to do the following:**
 
@@ -17,12 +17,7 @@ This how-to explains how to customize your app and use your company's logo, chan
 
 This how-to describes the following use case: 
 
-You would like to customize your app design and apply the following changes to it:
-
-* Use your company's logo and adjust its size
-* Use colors based on your company's logo for different elements in your app
-* Change colors of topbar, sidebar, and backgrounds
-* Change the font of your app and make headers larger
+You would like to customize your app design: upload company's logo, change colors of your app, change the font, and make headings larger. 
 
 ## 2 Prerequisites
 
@@ -47,7 +42,13 @@ To upload a logo, do the following:
 
    ![Logo Preview](attachments/theme-customizer-how-to-customize-design/logo-preview.png)
 
-5. Click **Save** in the top-left corner to save changes.
+5. In the **UI Customization** section, make the logo larger: set the **Logo Width** and **Logo Height** to 40 PX.
+
+6. In the top-right corner, select **Page View** to check how your logo looks on pages. 
+
+7. Click **Save** in the top-left corner to save changes:
+
+    ![Page View button](attachments/theme-customizer-how-to-customize-design/page-view-button.png)
 
 Good job! You have uploaded your company's logo.
 

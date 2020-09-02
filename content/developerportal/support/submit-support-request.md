@@ -61,12 +61,29 @@ To submit a request with Mendix Support, follow these steps:
 	* **Standard Change** – other changes which can be made on the platform, but for which you do not have access
 	* **Non-Standard Change** – any other changes not covered by other issues above
   
-3. Fill in the fields for the issue type you selected.
-4. When you enter the **Subject** of the request, the Mendix Support Portal will suggest relevant documentation for you to read before you submit the request:
+3. Fill in the fields for the issue type you selected, including [Priority](#request-priority).
+4.  When you select **Request for Information** or **Incident**, you then have to select the **Related Component** for the issue. The correct component will allow Mendix Support to help you more effectively. In some cases, you can also select the **Related Sub-Component** for your issue. Selecting the related sub-component is not required, but it will allow Mendix Support to help you more quickly and accurately. There are two main options for the related component:
+	* **App** – select one of these components when you have issues with designing, developing, building, deploying, or operating one of your own apps built on the Mendix Platform:
+		* **App - Development** – issues/questions regarding developing your app (for example, with your [domain model](/refguide/domain-model), [widgets](/refguide/data-widgets), or [logic](/refguide/application-logic))
+		* **App - Deployment** – issues/questions regarding deploying your app (for example, when the app cannot be [deployed](/developerportal/deploy/) or will not start)
+		* **App - Operations** – issues/questions regarding running a deployed app (for example, when the app crashes or shows errors in the [log](/developerportal/operate/logs))
+		* **App - Add-on** – issues/questions regarding one of the Mendix add-ons (such as [ATS](/addons/ats-addon/), [APD](/addons/apd-addon/), or [AQM](/addons/aqm-addon/))
+		* **App - Managed Service** - issues/questions regarding one of the Mendix managed services
+		* **App - Other** – any other issues/questions regarding your own app that you are developing on the Mendix Platform
+	* **Developer Platform** – select one of these components when you have issues with the Mendix Platform itself:
+		* **Developer Platform - Account** – issues/questions regarding your Mendix account (for example, when you have difficulties creating an account or signing in)
+		* **Developer Platform - Sprintr** – issues/questions regarding the [Developer Portal](/developerportal/index) (for example, when you cannot create a [story](/developerportal/collaborate/stories) or start a Sprint)
+		* **Developer Platform - Academy** – issues/questions regarding the [Mendix Academy](https://gettingstarted.mendixcloud.com/link/home) (for example, when you cannot open a learning path or you cannot find the attachments required for a module)
+		* **Developer Platform - Forum** – issues/questions regarding the [Mendix Forum](https://forum.mendixcloud.com/index3.html) (for example, when you cannot create a new question or add an answer)
+		* **Developer Platform - Cloud Portal** – issues/questions regarding [deploying in the Developer Portal](/developerportal/deploy/) (for example, when you cannot view your [log](/developerportal/operate/logs) files or [scale](/developerportal/deploy/scale-environment) your environment)
+		* **Developer Platform - Other** – any other issues/questions regarding the Mendix Platform itself
+5. Make sure all your attachments have finished uploading before clicking **Next**.
 
-	![](attachments/submit/suggestions.png)
+The Mendix Support Portal will first suggest relevant documentation for you to read before you submit a request. Based on a complexity check, recommendations might be skipped to improve your experience. This complexity check takes your request priority and other factors into consideration.
 
-If investigating the documentation and searching the [Mendix Forum](https://forum.mendixcloud.com/index4.html) does not help you solve your issue, you can submit the Mendix Support request.
+![](attachments/submit/recommendations.png)
+
+If investigating the documentation and searching the [Mendix Forum](https://forum.mendixcloud.com/index4.html) does not help you solve your issue, you can submit the Mendix Support request.	
 
 ## 4 Request Priority {#request-priority}
 

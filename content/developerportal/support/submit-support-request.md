@@ -63,14 +63,14 @@ To submit a request with Mendix Support, follow these steps:
   
 3. Fill in the fields for the issue type you selected, including [Priority](#request-priority).
 4.  When you select **Request for Information** or **Incident**, you then have to select the **Related Component** for the issue. The correct component will allow Mendix Support to help you more effectively. In some cases, you can also select the **Related Sub-Component** for your issue. Selecting the related sub-component is not required, but it will allow Mendix Support to help you more quickly and accurately. There are two main options for the related component:
- 	* **App** – select one of these components when you have issues with designing, developing, building, deploying, or operating one of your own apps built on the Mendix Platform:
+	* **App** – select one of these components when you have issues with designing, developing, building, deploying, or operating one of your own apps built on the Mendix Platform:
 		* **App - Development** – issues/questions regarding developing your app (for example, with your [domain model](/refguide/domain-model), [widgets](/refguide/data-widgets), or [logic](/refguide/application-logic))
 		* **App - Deployment** – issues/questions regarding deploying your app (for example, when the app cannot be [deployed](/developerportal/deploy/) or will not start)
 		* **App - Operations** – issues/questions regarding running a deployed app (for example, when the app crashes or shows errors in the [log](/developerportal/operate/logs))
 		* **App - Add-on** – issues/questions regarding one of the Mendix add-ons (such as [ATS](/addons/ats-addon/), [APD](/addons/apd-addon/), or [AQM](/addons/aqm-addon/))
 		* **App - Managed Service** - issues/questions regarding one of the Mendix managed services
 		* **App - Other** – any other issues/questions regarding your own app that you are developing on the Mendix Platform
- 	* **Developer Platform** – select one of these components when you have issues with the Mendix Platform itself:
+	* **Developer Platform** – select one of these components when you have issues with the Mendix Platform itself:
 		* **Developer Platform - Account** – issues/questions regarding your Mendix account (for example, when you have difficulties creating an account or signing in)
 		* **Developer Platform - Sprintr** – issues/questions regarding the [Developer Portal](/developerportal/index) (for example, when you cannot create a [story](/developerportal/collaborate/stories) or start a Sprint)
 		* **Developer Platform - Academy** – issues/questions regarding the [Mendix Academy](https://gettingstarted.mendixcloud.com/link/home) (for example, when you cannot open a learning path or you cannot find the attachments required for a module)

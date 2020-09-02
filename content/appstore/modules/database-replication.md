@@ -199,15 +199,20 @@ There are a number of settings that control the behavior of the table mapping as
 
 You can put a constraint on the rows that are imported from the database. Here, you can insert a custom SQL constraint that will be appended as a `WHERE` clause to all queries. This means that any database rows that do not satisfy this constraint will be ignored by the replication module.
 
+This feature is deprecated and might be removed in a future version. We recommend configuring constraints using **Import calls** instead.
+
 ### 7.2 Print Statistics & Not Found Messages
 
 These control which kinds of messages are printed on the application console.
 
 ### 7.3 Remove Unsynced Objects
 
-This option causes objects that are not found in the imported database to be removed from your Mendix database. In other words, objects that are in your Mendix database that do not correspond to any imported database rows (anymore) are deleted. You can use this option if, for example, you want to mirror any changes to a target database and not just import new data.
+This option defines what to do to objects in your Mendix database with no corresponding entry in the imported database. There are three options:
+* **Nothing** - nothing is done to Mendix objects, whether they have corresponding entries or not. This is the default
+* **Track changes** - keep track of which objects were synchronized, but do not remove them if they have no corresponding entries in the imported database
+* **Remove unchanged objects** - keep track of which objects were synchronized and remove those with no corresponding entries in the imported database. You can use this option if, for example, you want to mirror any changes to a target database and not just import new data.
 
-This functionality requires your Mendix objects to have an integer attribute that is used to keep track of which objects to remove. You can specify which attribute to use for this in the selector marked **Attribute**. This attribute must not be used by your application in any other way, because this will cause unexpected results. Also, note that objects created by your application (as in, not imported) will be removed on the next import if this option is used.
+This functionality requires your Mendix objects to have an integer attribute that is used to keep track of which objects to remove. If you select **Track changes** or **Remove unchanged objects** an extra field to select this integer attribute will appear. This tracking attribute must not be used by your application in any other way, as this may cause unexpected results. Also, note that objects created by your application (as in, not imported) will be removed on the next import if the option **Remove unchanged objects** is used.
 
 ### 7.4 Mode
 

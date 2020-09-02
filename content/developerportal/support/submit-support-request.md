@@ -61,7 +61,7 @@ To submit a request with Mendix Support, follow these steps:
 	* **Standard Change** – other changes which can be made on the platform, but for which you do not have access
 	* **Non-Standard Change** – any other changes not covered by other issues above
   
-3. Fill in the fields for the issue type you selected.
+3. Fill in the fields for the issue type you selected, including [Priority](#request-priority).
 4.  When you select **Request for Information** or **Incident**, you then have to select the **Related Component** for the issue. The correct component will allow Mendix Support to help you more effectively. In some cases, you can also select the **Related Sub-Component** for your issue. Selecting the related sub-component is not required, but it will allow Mendix Support to help you more quickly and accurately. There are two main options for the related component:
  	* **App** – select one of these components when you have issues with designing, developing, building, deploying, or operating one of your own apps built on the Mendix Platform:
 		* **App - Development** – issues/questions regarding developing your app (for example, with your [domain model](/refguide/domain-model), [widgets](/refguide/data-widgets), or [logic](/refguide/application-logic))

@@ -44,9 +44,7 @@ To upload a logo, do the following:
 
 5. In the **UI Customization** section, make the logo larger: set the **Logo Width** and **Logo Height** to 40 PX.
 
-6. In the top-right corner, select **Page View** to check how your logo looks on pages. 
-
-7. Click **Save** in the top-left corner to save changes:
+6. In the top-right corner, select **Page View** to check how your logo looks on pages:
 
     ![Page View button](attachments/theme-customizer-how-to-customize-design/page-view-button.png)
 
@@ -76,7 +74,7 @@ To customize your app colors, do the following:
 
     ![Select Pages](attachments/theme-customizer-how-to-customize-design/selecting-pages.png)
 
-6. In the **Brand Colors** section, click the **Info** option and fill in the HEX color code `#B056EF`:
+6. In the **Brand Colors** section, use an advanced way of choosing the color by filling in the HEX or RGB code of a color that are usually provided by the designers. Click the **Info** option and fill in the HEX color code `#B056EF`:
 
     ![Using Color Code](attachments/theme-customizer-how-to-customize-design/hex-color-code.png)
 

@@ -138,8 +138,8 @@ Run the following commands to switch to the latest component versions:
 ```shell
 kubectl -n $OPERATOR_NAMESPACE patch operatorconfiguration mendix-operator-configuration --type merge -p \
 '{"spec":{
-    "sidecarImage":"quay.io/digital_ecosystems/mx-m2ee-sidecar:1.3.0",
-    "metricsSidecarImage":"quay.io/digital_ecosystems/mx-m2ee-metrics:1.1.0"
+    "sidecarImage":"private-cloud.registry.mendix.com/mx-m2ee-sidecar:1.3.0",
+    "metricsSidecarImage":"private-cloud.registry.mendix.com/mx-m2ee-metrics:1.1.0"
 }}'
 ```
 
@@ -243,5 +243,5 @@ and set the `OPERATOR_NAMESPACE` variable in your Bash terminal as described abo
 Run the following command to switch to the Mendix Agent version 1.3.0:
 ```shell
 kubectl -n $OPERATOR_NAMESPACE patch deployment mendix-agent -p \
-  '{"spec":{"template":{"spec":{"containers":[{"name":"mendix-agent","image":"quay.io/digital_ecosystems/kubernetes-agent:1.3.0"}]}}}}'
+  '{"spec":{"template":{"spec":{"containers":[{"name":"mendix-agent","image":"private-cloud.registry.mendix.com/kubernetes-agent:1.3.0"}]}}}}'
 ```

@@ -68,19 +68,20 @@ To submit a request with Mendix Support, follow these steps:
 		* **App - Deployment** – issues/questions regarding deploying your app (for example, when the app cannot be [deployed](/developerportal/deploy/) or will not start)
 		* **App - Operations** – issues/questions regarding running a deployed app (for example, when the app crashes or shows errors in the [log](/developerportal/operate/logs))
 		* **App - Add-on** – issues/questions regarding one of the Mendix add-ons (such as [ATS](/addons/ats-addon/), [APD](/addons/apd-addon/), or [AQM](/addons/aqm-addon/))
-		* **App - Managed Service** - issues/questions regarding one of the Mendix Managed Services
-		* **App - Other** – any other issue/question regarding your own app that you are developing on the Mendix platform
- 	* **Developer Platform** – Select one of the Developer Platform components when you have issues with the Mendix platform itself
-		* **Developer Platform - Account** – issues/questions regarding your Mendix account, for example when you have difficulties creating an account or signing in
-		* **Developer Platform - Sprintr** – issues/questions regarding Sprintr, for example when you can’t create a story, or start a sprint
-		* **Developer Platform - Academy** – issues/questions regarding the Mendix Academy, for example when you a learning path can’t be opened, or you can’t find the attachments required for a module
-		* **Developer Platform - Forum** – issues/questions regarding the Mendix Forum, for example when you can’t create a new question, or add an answer 
-		* **Developer Platform - Cloud Portal** – issues/questions regarding the Cloud Portal, for example when you can’t view your log files, or scale your environment
-		* **Developer Platform - Other** – any other issues or questions regarding the Mendix platform itself
-5. Please make sure all your attachments finished uploading before clicking **Next**.
-6.  After clicking **Next**, the Mendix Support Portal will suggest relevant documentation for you to read before you submit the request. Based on a complexity check, recommendations might be skipped to improve your experience. This complexity check takes your ticket priority and other factors into consideration.
+		* **App - Managed Service** - issues/questions regarding one of the Mendix managed services
+		* **App - Other** – any other issues/questions regarding your own app that you are developing on the Mendix Platform
+ 	* **Developer Platform** – select this component and one of the sub-components below when you have issues with the Mendix Platform itself
+		* **Developer Platform - Account** – issues/questions regarding your Mendix account (for example, when you have difficulties creating an account or signing in)
+		* **Developer Platform - Sprintr** – issues/questions regarding the [Developer Portal](/developerportal/index) (for example, when you cannot create a [story](/developerportal/collaborate/stories) or start a Sprint)
+		* **Developer Platform - Academy** – issues/questions regarding the [Mendix Academy](https://gettingstarted.mendixcloud.com/link/home) (for example, when you cannot open a learning path or you cannot find the attachments required for a module)
+		* **Developer Platform - Forum** – issues/questions regarding the [Mendix Forum](https://forum.mendixcloud.com/index3.html) (for example, when you cannot create a new question or add an answer)
+		* **Developer Platform - Cloud Portal** – issues/questions regarding [deploying in the Developer Portal](/developerportal/deploy/) (for example, when you cannot view your [log](/developerportal/operate/logs) files or [scale](/developerportal/deploy/scale-environment) your environment)
+		* **Developer Platform - Other** – any other issues/questions regarding the Mendix Platform itself
+5. Make sure all your attachments have finished uploading before clicking **Next**.
 
-	![](attachments/submit/recommendations.png)
+The Mendix Support Portal will first suggest relevant documentation for you to read before you submit a request. Based on a complexity check, recommendations might be skipped to improve your experience. This complexity check takes your request priority and other factors into consideration.
+
+![](attachments/submit/recommendations.png)
 
 If investigating the documentation and searching the [Mendix Forum](https://forum.mendixcloud.com/index4.html) does not help you solve your issue, you can submit the Mendix Support request.	
 

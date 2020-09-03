@@ -8,7 +8,15 @@ tags: ["runtime", "runtime server", "stateless", "database", "java", "microflows
 
 ## 1 Introduction
 
-The Mendix Runtime supports registering custom web socket endpoints using the `javax.websocket` API. Specifically, there is a method `Core.addWebSocketEndpoint(String path, Endpoint endpoint)` that can be used to register an instance of `javax.websocket.Endpoint` to respond to web socket requests on the given path
+The Mendix Runtime supports registering custom web socket endpoints using the `javax.websocket` API.
+
+All you need to do is to use the method `Core.addWebSocketEndpoint(String path, Endpoint endpoint)` to register an instance of `javax.websocket.Endpoint` to respond to web socket requests on the given path.
+
+{{% alert type="info" %}}
+Similar to `Core#addRequestHandler`, adding a web socket end point only happens on the 'current' cluster node. It is therefore a good practice to call it in an **After Startup** microflow.
+{{% /alert %}}
+
+Below is an example of how to register a websocket in your Mendix app.
 
 ## 2 Example
 
@@ -59,13 +67,7 @@ public class TestEndpoint extends Endpoint {
 }
 ```
 
-If this endpoint is registered by calling
-`Core.addWebSocketEndpoint("/my-endpoint", new websockets.TestEndpoint());`
-then the following functionality is available at `ws://.../my-endpoint`.
+If this endpoint is registered by calling `Core.addWebSocketEndpoint("/my-endpoint", new websockets.TestEndpoint());` then the following functionality is available at `ws://.../my-endpoint`.
 
-1. When a connection is established, the server will send the message `socket opened`
-2. If the client send the message `test message`, the server responds with `test response` and closes the web socket.
-
-## 3 Clusters
-
-Similar to `Core#addRequestHandler`, adding adding a web socket end point only happens on the 'current' cluster node. It is therefore a good practise to call it in an 'after-start-microflow'.
+* When a connection is established, the server will send the message `socket opened`
+* If the client send the message `test message`, the server responds with `test response` and closes the web socket.

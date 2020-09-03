@@ -40,7 +40,8 @@ String functions are **case insensitive** as they are implemented using the `ILI
 
 ### 2.3 DB2
 
-All operations are **case sensitive**. They cannot be configured.
+**Case sensitive** for sorting and comparing, except if collation is configured to case insensitive.
+For more information, see our guide on [Making DB2 Case-Insensitive](db2#4-making-db2-case-insensitive).
 
 Does not support sorting on string attributes of unlimited length.
 
@@ -79,7 +80,7 @@ This table presents the default case sensitivity by different database types:
 |------------------:|:--------------:|:-----------:|:--------------------:|
 | HSQLDB            | I              | I           | I                    |
 | POSTGRESQL        | S              | S           | I                    |
-| DB2               | S              | S¹          | S                    |
+| DB2               | S              | S¹          | I³                    |
 | MARIADB & MYSQL   | C              | C           | C                    |
 | ORACLE            | C¹             | C           | I                    |
 | SAP HANA          | S¹             | S¹          | I²                    |
@@ -93,3 +94,4 @@ Where the letters have the following meaning:
 
 ¹Operation not supported on strings of unlimited length.
 ²From Mendix version 8.11.0
+³From Mendix version 8.14.0

@@ -55,7 +55,7 @@ The class property allows you to specify one or more cascading style sheet (CSS)
 Styling is applied in the following order:
 
 1. The default styling defined by the theme the project uses.
-2. The `Class` property of the widget.
+2. The `Class` combined with `Dynamic classes` properties of the widget.
 3. The `Style` property of the widget.
 
 You can see which widgets in a page have styling applied via the class or style property by clicking the <strong>Show styles</strong> button.
@@ -68,9 +68,20 @@ The style property allows you to specify additional CSS styling. If a class is a
 
 ![](attachments/common-widget-properties/style-example.png)
 
+### 3.5 Dynamic classes{#dynamicclasses}
+
+The dynamic classes property allows you to specify one or more cascading stylesheet (CSS) classes like the class property, but based on an [expression](expressions.md). This allows you
+to dynamically construct classes based on data from an enclosing data container. The dynamic classes constructed in the expression are appended to the classes defined in the [`Class`](#class) property.
+
+![](attachments/common-widget-properties/dynamic-classes.png)
+
+{{% alert type="info" %}}
+The **dynamic classes** property was introduced in Mendix 8.14.
+{{% /alert %}}
+
 You can see which widgets in a page have styling applied via the style or class property by clicking the <strong>Show styles</strong> button.
 
-### 3.5 Documentation{#documentation}
+### 3.6 Documentation{#documentation}
 
 Some widgets, for example snippets and building blocks, have a **Documentation** property which can be used to store developer documentation. This can be used to explain to other developers how to use these widgets. End-users will never see this documentation.
 

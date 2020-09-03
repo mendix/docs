@@ -3,7 +3,7 @@ title: "WebSockets"
 category: "Mendix Runtime"
 description: "A description of how to use websockets in the Mendix Runtime"
 # menu_order: 99
-tags: ["runtime", "runtime server", "stateless", "database", "java", "microflows"]
+tags: ["runtime", "web socket", "endpoint", "java"]
 ---
 
 ## 1 Introduction

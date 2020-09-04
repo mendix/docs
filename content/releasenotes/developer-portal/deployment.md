@@ -10,15 +10,15 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
-### August ___, 2020
+### September 7th, 2020
 
 #### Mendix for Private Cloud Portal
 
-* We added a feature to add a cluster manager for an existing cluster.
-* We added [activity logs](/developerportal/deploy/private-cloud-cluster#actvity-logs) on the cluster and namespace levels.
+* We added a feature to add additional cluster managers to an existing cluster.
+* We added [activity logs](/developerportal/deploy/private-cloud-cluster#actvity-logs) at the cluster and namespace levels.
 * Email notifications will now be sent when a user is added/removed as a cluster manager.
-* We made changes in the [cluster overview](/developerportal/deploy/private-cloud-cluster#overview) to accommodate the activity logs.
-* We fixed a bug where recreating an environment with the same name showed previous feedback.
+* We made changes to the [cluster overview](/developerportal/deploy/private-cloud-cluster#overview) to accommodate the activity logs.
+* We fixed a bug where creating an environment with a name that had been used before showed the state of the old environment before it was removed.
 
 ### August 28th, 2020
 

@@ -19,6 +19,7 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 * Email notifications will now be sent when a user is added/removed as a cluster manager.
 * We made changes to the [cluster overview](/developerportal/deploy/private-cloud-cluster#overview) to accommodate the activity logs.
 * We fixed a bug where creating an environment with a name that had been used before showed the state of the old environment before it was removed.
+* We updated security in the Developer Portal. (Ticket 106263)
 
 ### August 28th, 2020
 

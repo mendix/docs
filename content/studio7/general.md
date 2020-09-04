@@ -21,17 +21,15 @@ You can open Mendix Studio [via Developer Portal](#opening-studio-via-dev-portal
 
 ### 2.1 Opening Studio via Developer Portal {#opening-studio-via-dev-portal}
 
-You can edit an app in Mendix Studio by opening your app in the [Developer Portal](https://home.mendix.com) and clicking **Edit in Studio**. 
+You can edit an app in Mendix Studio by opening your app in [Developer Portal](https://home.mendix.com) and clicking **Edit in Studio**. 
 
 ![](attachments/general/edit-app.jpg)
 
-The drop-down menu on the **Edit App** button is only available for **Free Apps**. For more information on what Free Apps are, see the [Free App](/developerportal/deploy/mendix-cloud-deploy#free-app) section in *Mendix Cloud*.
+The **Edit App** button is only available for **Free Apps**. For more information on what Free Apps are, see the [Free App](/developerportal/deploy/mendix-cloud-deploy#free-app) section in *Mendix Cloud*.
 
-[**UPDATE ABOVE**]
+[**VERIFY & UPDATE ABOVE**]
 
-If you do not see **Edit in Studio**, go to [Developer Portal Settings](../../developerportal/settings) and enable Studio. Note that only Scrum Masters or custom **App Team roles** with the **App Settings** permission are allowed to enable Studio.
-
-[**UPDATE ABOVE**]
+If you do not see **Edit in Studio**, go to [General Settings](/developerportal/settings/general-settings) in the Developer Portal and [enable Studio](/developerportal/settings/general-settings#web).
 
 ### 2.2 Opening Studio via Studio Pro
 
@@ -42,7 +40,6 @@ You can also open your app in Studio via Studio Pro. Do the following:
 2.  Click the globe icon in the top right corner (only available if Studio is enabled).
 
     ![](attachments/general/globe-icon.png)
-
 
 The app opens in Studio.
 

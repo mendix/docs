@@ -23,7 +23,7 @@ You can open Mendix Studio [via the Developer Portal](#opening-studio-via-dev-po
 
 You can edit an app in Mendix Studio by opening your app in the [Developer Portal](https://home.mendix.com) and clicking **Edit App** or choosing the **Edit in Mendix Studio** option in the drop-down menu of the **Edit App** button. 
 
-{{% image_container width="350" %}}![](attachments/general/edit-app-button.png)
+{{% image_container width="350" %}}![](attachments/general/edit-app.jpg)
 {{% /image_container %}}
 
 {{% alert type="warning" %}}

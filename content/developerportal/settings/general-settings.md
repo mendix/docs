@@ -23,8 +23,6 @@ The **General** settings page presents an overview of your app project with the 
 
 The sections below describe the actions you can perform on this page.
 
-[**VERIFY & UPDATE SCREENSHOT ABOVE FOR Mendix Studio SECTION**]
-
 ## 2 Mendix Studio {#web}
 
 In the **Mendix Studio** section, you can see whether Studio is enabled for the app. 

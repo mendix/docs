@@ -181,6 +181,7 @@ If you have a custom domain which you want to transfer to your v4 deployment, yo
         The two certificate request options are shown below:
         ![](attachments/migrating-to-v4/tls-certificates.png)
 * When you start the app on the v4 cloud, it can take some time for the DNS servers on the web to register the new target URL and redirect your custom domain name to it — therefore you must set the TTL value to 300 seconds to speed up this process, if your TTL setting has a longer duration. This should be done some days in advance to ensure the setting is propagated to all DNS servers.
+
     For example, if you have a TTL of 24 hours, it will take 24 hours before the new domain will be active in the DNS. Customers who visit the custom domain through the browser will not end up at the Mendix Cloud v4 environment until 24 hours have passed. You should therefore check the TTL value a week or so before migration and change it to around 300 seconds (this is the default value we recommend).
 
 You can find further information about setting up custom domains in [Custom Domains](custom-domains).

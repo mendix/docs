@@ -17,32 +17,21 @@ The picture below shows the components of Studio's interface:
 
 ## 2 Opening Studio
 
-You can open Mendix Studio [via the Developer Portal](#opening-studio-via-dev-portal) or [via Studio Pro](#opening-via-studio-pro). 
+You can open Mendix Studio [via Developer Portal](#opening-studio-via-dev-portal) or [via Studio Pro](#opening-via-studio-pro). 
 
-### 2.1 Opening Studio via the Developer Portal {#opening-studio-via-dev-portal}
+### 2.1 Opening Studio via Developer Portal {#opening-studio-via-dev-portal}
 
 You can edit an app in Mendix Studio by opening your app in the [Developer Portal](https://home.mendix.com) and clicking **Edit in Studio**. 
 
 ![](attachments/general/edit-app.jpg)
 
-{{% alert type="warning" %}}
+The drop-down menu on the **Edit App** button is only available for **Free Apps**. For more information on what Free Apps are, see the [Free App](/developerportal/deploy/mendix-cloud-deploy#free-app) section in *Mendix Cloud*.
 
-The drop-down menu on the **Edit App** button is only available for **Free Apps**. For more information on what Free Apps are, see the [Free App](/developerportal/deploy/mendix-cloud-deploy#free-app) section in *Mendix Cloud*.  
+[**UPDATE ABOVE**]
 
-Some apps are not suitable for Studio. The following ones are not suitable to run in Studio:<br />
+If you do not see **Edit in Studio**, go to [Developer Portal Settings](../../developerportal/settings) and enable Studio. Note that only Scrum Masters or custom **App Team roles** with the **App Settings** permission are allowed to enable Studio.
 
-* Apps below **Mendix 7.5** version<br />
-* Apps that are not based on the Atlas UI framework
-
-{{% /alert %}}
-
-When Studio is not enabled, you can click **Edit App** > **Settings**. For more information on how to enable Studio, see [Developer Portal Settings](../../developerportal/settings).
-
-![](attachments/general/not-enabled.png)
-
-{{% alert type="info" %}}
-Only Scrum Masters or custom **App Team roles** with the **App Settings** permission are allowed to enable Studio.
-{{% /alert %}}    
+[**UPDATE ABOVE**]
 
 ### 2.2 Opening Studio via Studio Pro {#opening-via-studio-pro}
 

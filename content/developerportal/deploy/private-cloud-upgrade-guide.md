@@ -30,13 +30,13 @@ Check the current version of the Operator by running the following command:
 kubectl -n $OPERATOR_NAMESPACE get deployment mendix-operator -o=jsonpath='{.spec.template.spec.containers[].image}' 
 ```
 
-* If the image name looks similar to `quay.io/digital_ecosystems/mendix-operator:1.3.{NUMBER}`, follow only the steps for upgrading from Mendix Operator v1.3.\*.
+* If the image name looks similar to `private-cloud.registry.mendix.com/mendix-operator:1.3.{NUMBER}`, follow only the steps for upgrading from Mendix Operator v1.3.\*.
 
-* If the image name looks similar to `quay.io/digital_ecosystems/mendix-operator:1.2.{NUMBER}`, follow only the steps for upgrading from Mendix Operator v1.2.\*.
+* If the image name looks similar to `private-cloud.registry.mendix.com/mendix-operator:1.2.{NUMBER}`, follow only the steps for upgrading from Mendix Operator v1.2.\*.
 
-* If the image name looks similar to `quay.io/digital_ecosystems/mendix-operator:1.1.{NUMBER}`, follow only the steps for upgrading from Mendix Operator v1.1.\*.
+* If the image name looks similar to `private-cloud.registry.mendix.com/mendix-operator:1.1.{NUMBER}`, follow only the steps for upgrading from Mendix Operator v1.1.\*.
 
-* If the image name looks similar to `quay.io/digital_ecosystems/mendix-operator:1.0.{NUMBER}`, follow only the steps for upgrading from Mendix Operator v1.0.\*.
+* If the image name looks similar to `private-cloud.registry.mendix.com/mendix-operator:1.0.{NUMBER}`, follow only the steps for upgrading from Mendix Operator v1.0.\*.
 
 This process will take:
 
@@ -76,7 +76,7 @@ Run the following command to switch to Mendix Operator version 1.4.0:
 
 ```shell
 kubectl -n $OPERATOR_NAMESPACE patch deployment mendix-operator -p \
-  '{"spec":{"template":{"spec":{"containers":[{"name":"mendix-operator","image":"quay.io/digital_ecosystems/mendix-operator:1.4.0"}]}}}}'
+  '{"spec":{"template":{"spec":{"containers":[{"name":"mendix-operator","image":"private-cloud.registry.mendix.com/mendix-operator:1.4.0"}]}}}}'
 ```
 
 #### 2.2.4 Updating the Mendix Operator Configuration
@@ -93,10 +93,10 @@ Run the following commands to switch to the latest component versions:
 ```shell
 kubectl -n $OPERATOR_NAMESPACE patch operatorconfiguration mendix-operator-configuration --type merge -p \
 '{"spec":{
-    "sidecarImage":"quay.io/digital_ecosystems/mx-m2ee-sidecar:1.3.0",
-    "metricsSidecarImage":"quay.io/digital_ecosystems/mx-m2ee-metrics:1.1.0",
-    "builderImage":"quay.io/digital_ecosystems/image-builder:ingvar-rhel",
-    "buildRuntimeBaseImage":"index.docker.io/mendix/runtime-base:{{.MxRuntimeVersion}}-rhel",
+    "sidecarImage":"private-cloud.registry.mendix.com/mx-m2ee-sidecar:1.3.0",
+    "metricsSidecarImage":"private-cloud.registry.mendix.com/mx-m2ee-metrics:1.1.0",
+    "builderImage":"private-cloud.registry.mendix.com/image-builder:ingvar-rhel",
+    "buildRuntimeBaseImage":"private-cloud.registry.mendix.com/runtime-base:{{.MxRuntimeVersion}}-rhel",
     "dockerfile":null
 }}'
 ```
@@ -138,8 +138,8 @@ Run the following commands to switch to the latest component versions:
 ```shell
 kubectl -n $OPERATOR_NAMESPACE patch operatorconfiguration mendix-operator-configuration --type merge -p \
 '{"spec":{
-    "sidecarImage":"quay.io/digital_ecosystems/mx-m2ee-sidecar:1.3.0",
-    "metricsSidecarImage":"quay.io/digital_ecosystems/mx-m2ee-metrics:1.1.0"
+    "sidecarImage":"private-cloud.registry.mendix.com/mx-m2ee-sidecar:1.3.0",
+    "metricsSidecarImage":"private-cloud.registry.mendix.com/mx-m2ee-metrics:1.1.0"
 }}'
 ```
 
@@ -243,5 +243,5 @@ and set the `OPERATOR_NAMESPACE` variable in your Bash terminal as described abo
 Run the following command to switch to the Mendix Agent version 1.3.0:
 ```shell
 kubectl -n $OPERATOR_NAMESPACE patch deployment mendix-agent -p \
-  '{"spec":{"template":{"spec":{"containers":[{"name":"mendix-agent","image":"quay.io/digital_ecosystems/kubernetes-agent:1.3.0"}]}}}}'
+  '{"spec":{"template":{"spec":{"containers":[{"name":"mendix-agent","image":"private-cloud.registry.mendix.com/kubernetes-agent:1.3.0"}]}}}}'
 ```

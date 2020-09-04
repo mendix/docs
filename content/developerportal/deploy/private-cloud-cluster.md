@@ -46,7 +46,7 @@ To create a cluster in your OpenShift context, you need the following:
 
     ![](attachments/private-cloud-cluster/image5.png)
 
-5. Click **Create Cluster**. 
+5. Click **Register Cluster**. 
 
     ![](attachments/private-cloud-cluster/image6.png)
 
@@ -399,7 +399,7 @@ When the namespace is configured correctly, its status will become **Connected**
 
 ![](attachments/private-cloud-cluster/image22.png)
 
-## 4 Cluster Management
+## 4 Cluster and Namespace Management
 
 Once it is configured, you can manage your cluster and namespaces through the Developer Portal.
 
@@ -419,13 +419,7 @@ Here you can perform the following actions on the entire cluster:
 * Rename the cluster or edit its description by clicking the edit icon
 * Invite another cluster manager
 
-{{% alert type="info" %}}
-Please note that the added cluster manager will not be able to manage/operate on the environments created in the namespace for which they have been added as a cluster manager. They need to be added as a member of the namespace if they want to manage environments in the namespaces.
-{{% /alert %}}
-
-You can also see all the activities logged and the namespace level.
-
-<a name="actvity-logs"></a>For the clusters level, you can see the activity logs below by clicking **Actity** in the [cluster overview](#overview) page:
+<a name="actvity-logs"></a>You can also see the activities logged for all you clusters by clicking **Activity** in the [cluster overview](#overview) page. This shows the following:
 
 * When a cluster has been added
 * When a cluster description is added
@@ -434,40 +428,22 @@ You can also see all the activities logged and the namespace level.
 
 ![](attachments/private-cloud-cluster/cluster-activity-logs.PNG)
 
-For namespace level, you can see below activity logs
-
-* When a namespace has been added
-* When a namespace has been deleted
-* When a cluster manager has been added
-* When a cluster manager invitation is removed
-* When a cluster manager accepts the invitation
-* When a cluster manager is removed from the cluster
-* When a new database plan is added in a namespace
-* When a database plan is deactivated
-* When a new storage plan is added in a namespace
-* When a storage plan is deactivated
-* When Metrics/Alerts/Logs/Backups URLs are added in the namespace
-* When Metrics/Alerts/Logs/Backups URLs are removed from the namespace
-* When Metrics/Alerts/Logs/Backups URLs are changed in the namespace
-* When a user is invited as a namespace member
-* When a user invitation for namespace member is removed
-* When a user accepts the invitation as a namespace member
-* When a user is removed as a namespace member
-* When user's permission is changed in the namespace
-
-![](attachments/private-cloud-cluster/namespace-activity-logs.PNG)
-
 {{% alert type="info" %}}
-When you add a cluster manager, the user will have all the access which a cluster manager will have, such as access to existing namespaces and abilities to add a namespace, add a member, change the permissions of the cluster member, and delete another cluster manager.
+When you add a cluster manager, the user will have most of the access which the original cluster manager had, such as the abilities to add a namespace, add a member, change the permissions of the cluster member, and delete another cluster manager. 
+
+The only limitations are that:
+
+* an added cluster manager will not be able to operate on or manage the environments created in the namespaces which are already in the cluster — they need to be added as a member of the namespace if they want to manage environments in the namespaces
+* cluster managers who are added to the cluster cannot remove the cluster manager who created the cluster
 {{% /alert %}}
 
 {{% alert type="info" %}}
 When you delete a cluster, this removes the cluster from the Developer Portal. However, it will not remove the cluster from your platform. You will need to explicitly delete the cluster using the tools provided by your platform.
 {{% /alert %}}
 
-#### 4.1.2 Managing a Namespace
+### 4.2 Namespace Management
 
-You can also manage a namespace in the cluster.
+If you are a member of a namespace, you can also manage a namespace in the cluster.
 
 Click the **Details** button for the namespace you want to manage.
 
@@ -491,19 +467,56 @@ When you delete a namespace, this removes the namespace from the cluster in the 
 
 ![](attachments/private-cloud-cluster/image26.png)
 
-### 4.2 Apps
+You can also see an activity log containing the following information for all namespaces within the cluster:
+
+* When a namespace has been added
+* When a namespace has been deleted
+* When a cluster manager has been added
+* When a cluster manager invitation is removed
+* When a cluster manager accepts the invitation
+* When a cluster manager is removed from the cluster
+* When a new database plan is added in a namespace
+* When a database plan is deactivated
+* When a new storage plan is added in a namespace
+* When a storage plan is deactivated
+* When Metrics/Alerts/Logs/Backups URLs are added in the namespace
+* When Metrics/Alerts/Logs/Backups URLs are removed from the namespace
+* When Metrics/Alerts/Logs/Backups URLs are changed in the namespace
+* When a user is invited as a namespace member
+* When a user invitation for namespace member is removed
+* When a user accepts the invitation as a namespace member
+* When a user is removed as a namespace member
+* When user's permission is changed in the namespace
+
+![](attachments/private-cloud-cluster/namespace-activity-logs.PNG)
+
+#### 4.2.1 Apps
 
 The **Apps** tab of namespace details in the cluster manager page lists all the apps which are deployed to this namespace.
 
 ![](attachments/private-cloud-cluster/image27.png)
 
-Click **Details** to go to the **Environment Details** page for that app.
+If you are a team member of the app, click **Details** to go to the *Environment Details* page for that app.
 
-### 4.3 Members
+{{% alert type="info" %}}
+You can only see the environment details of an app if you are a member of the app team with the appropriate authorization.
+{{% /alert %}}
 
-By default, the cluster manager, who created the cluster in Mendix, has full administration rights to the cluster and its namespaces. These administration rights are:
+#### 4.2.2 Members
 
-* Manage Environment – user can create and delete environments, and start and stop the application
+By default, the cluster manager, who created the cluster in Mendix, and anyone added as a cluster manager has full administration rights to the cluster and its namespaces. These administration rights are:
+
+* Add and delete namespaces
+* Add, activate, or deactivate plans
+* Invite and manage users
+
+The following rights are available to the cluster creator, and members of a namespace with appropriate authorization:
+
+* Set up operating URLs for the namespace
+* View all environments in the namespace
+* Manage own environments – user can create and manage an environment in any namespace in the cluster
+
+The following actions require the appropriate access to the namespace **and** access to the app environment as a team member with appropriate authorization:
 * Deploy App – user can deploy a new app to the environment or start and stop existing apps
 * Scale App – user can change the number of replicas
 * Edit App Constants
@@ -513,16 +526,9 @@ By default, the cluster manager, who created the cluster in Mendix, has full adm
 * View App Metrics
 * Manage App Backups
 
-In addition, only the person who created the cluster or was added as a cluster manager can do the following:
-
-* Add and delete namespaces
-* Add, activate, or deactivate plans
-* Invite and manage users
-* Set up operating URLs for the namespace
-
 The **Members** tab allows you to manage the list of members of the namespace and control what rights they have.
 
-#### 4.3.1 Adding Members
+##### 4.2.2.1 Adding Members
 
 You can invite additional members to the namespace, and configure their role depending on what they should be allowed to do.
 
@@ -546,7 +552,7 @@ You can invite additional members to the namespace, and configure their role dep
 
 6. The user will receive an email and will be required to follow a link to confirm that they want to join this namespace. They will need to be logged in to Mendix when they follow the confirmation link.
 
-#### 4.3.2 Editing & Removing Members
+##### 4.2.2.2 Editing & Removing Members
 
 You can change the access rights for, or completely remove, existing members.
 
@@ -560,7 +566,7 @@ You can change the access rights for, or completely remove, existing members.
         
     ![](attachments/private-cloud-cluster/image30.PNG)
 
-### 4.4 Operate {#operate}
+#### 4.2.3 Operate {#operate}
 
 The **Operate** tab allows you to add a set of links which are used when users request a page from the Operate category for their app in the Developer Portal, as shown below.
 
@@ -579,7 +585,7 @@ Open the **Operate** tab, enter the URLs relevant to your namespace, and click *
 
 ![](attachments/private-cloud-cluster/image32.png)
 
-### 4.5 Plans
+#### 4.2.4 Plans
 
 The **Plans** tab shows you the database and storage plans which are currently configured for your namespace.
 
@@ -587,21 +593,21 @@ The **Plans** tab shows you the database and storage plans which are currently c
 
 From this tab you can perform the following action:
 
-#### 4.5.1 Adding a Plan
+##### 4.2.4.1 Adding a Plan
 
 Click **Add** and you will be able to enter the name of an existing plan and add it to the plans linked to this namespace. You should only use this when adding plans using the namespace Reconfiguration Script fails to add them correctly.
 
 ![](attachments/private-cloud-cluster/image34.png)
 
-#### 4.5.2 Deactivating a Plan
+##### 4.2.4.2 Deactivating a Plan
 
 Click **Deactivate** next to the name of the plan you wish to deactivate. You cannot remove plans from within the cluster manager, but you can deactivate them to ensure that developers cannot create environments using the plan. Any environments currently using the plan will not be affected by this setting.
 
-#### 4.5.3 Activating a Plan
+##### 4.2.4.3 Activating a Plan
 
 Click **Activate** next to the name of the plan you wish to activate. The plan can then be used by developers when they create an environment to deploy their apps.
 
-### 4.6 Installation
+#### 4.2.5 Installation
 
 The **Installation** tab shows you the installation script and configuration script which you used to create the namespace, together with the parameters which are used to configure the agent.
 

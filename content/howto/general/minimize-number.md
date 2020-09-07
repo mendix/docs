@@ -87,7 +87,7 @@ By minimizing the number and size of the objects that are created, you reduce th
 
 ### 6.3 Tip 2
 
-In some cases, there will be objects that are necessary for a microflow to function, but that are not shown on any page in the app. In that case, they will still be sent to the Mendix Client, since Mendix cannot always determine if they will not be used by widgets and such. For that reason, you shoulld delete non-persistable objects as soon as they are no longer necessary.
+In some cases, there will be objects that are necessary for a microflow to function, but that are not shown on any page in the app. In that case, they will still be sent to the Mendix Client, since Mendix cannot always determine if they will not be used by widgets and such. For that reason, you should delete non-persistable objects as soon as they are no longer necessary.
 
 This goes especially for microflows related to integrations: as soon as the message has been sent, or the response has been processed, you should remove the objects related to the call. Of course, you should keep the objects that are subsequently displayed on a page. A useful way to easily remove everything related to a service call is to apply delete behavior in your domain model.
 
@@ -95,13 +95,13 @@ This goes especially for microflows related to integrations: as soon as the mess
 
 ### 7.1 Scenario
 
-Be careful when using non-persistable objects in layouts. Since layouts can be used for many pages in your app, objects in layouts can be on the screen for a long time. If you use non-persistable objects here, they will be sent back and forth between the  Mendix Client and Mendix Runtime very often, since they are always available.
+Be careful when using non-persistable objects in layouts. Since layouts can be used for many pages in your app, objects in layouts can be on the screen for a long time. If you use non-persistable objects here, they will be sent back and forth between the Mendix Client and Mendix Runtime very often, since they are always available.
 
 ### 7.2 Tip
 
 To deal with the above scenario, do not use non-persistable objects in layouts.
 
-This will reduce the number of in-use objects. The same goes for non-persistable objects that are not directly used in a layout, but have a reference to objects in a layout. Since they can be retrieved via the object in the layout, they will live as long as that object. This too should be avoided.
+This will reduce the number of in-use objects. The same goes for non-persistable objects that are not directly used in a layout, but have a reference to objects in a layout. Since they can be retrieved via the object in the layout, they will live as long as that object. This should be avoided too.
 
 ## 8 Summary
 

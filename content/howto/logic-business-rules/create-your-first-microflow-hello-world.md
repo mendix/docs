@@ -2,7 +2,7 @@
 title: "Create Your First Microflow: Hello World!"
 category: "Logic & Business Rules"
 menu_order: 1
-tags: ["microflow"]
+tags: ["how-to", "microflow", "create microflow"]
 ---
 
 ## 1 Introduction
@@ -14,7 +14,7 @@ Mendix uses visual models called microflows to define the logic of your applicat
 * Create a menu item
 * Create and edit a microflow
 
-## <a name="CreatingaMenuItem"></a>2 Creating a Menu Item
+## 2 Creating a Menu Item {#creating-menu-item}
 
 Microflows can be triggered in many different ways (for details, see [Trigger Logic Using Microflows](triggering-logic-using-microflows)). For this how-to, you'll be using a menu item to trigger the new microflow.
 
@@ -41,7 +41,7 @@ To create a menu item, follow these steps:
 
 To edit the new microflow, follow these steps:
 
-1.  Open the new microflow by right-clicking the new menu item created in [2 Creating a Menu Item](#CreatingaMenuItem) and selecting **Go to target** from the context menu:
+1.  Open the new microflow by right-clicking the new menu item created in [2 Creating a Menu Item](#creating-menu-item) and selecting **Go to target** from the context menu:
 
     ![](attachments/18448678/18580975.png)
 
@@ -49,7 +49,7 @@ To edit the new microflow, follow these steps:
 
     ![](attachments/18448678/18580974.png)
 
-2.  Open the **Toolbox** in the bottom-right corner of Studio Pro:
+2.  Open the **Toolbox**:
     
     ![](attachments/18448678/18580967.png)
 

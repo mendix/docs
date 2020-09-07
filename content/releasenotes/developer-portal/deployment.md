@@ -21,6 +21,12 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 * We fixed a bug where creating an environment with a name that had been used before showed the state of the old environment before it was removed.
 * We updated security in the Developer Portal. (Ticket 106263)
 
+### September 4th, 2020
+
+#### Mendix Cloud
+
+* We have added *used storage space* to the Database Node Disk Usage graph in Mendix Cloud v4. See [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4#Trends-dbdfabs) for more information.
+
 ### August 28th, 2020
 
 #### Mendix Cloud
@@ -34,7 +40,7 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 #### Mendix Cloud
 
-* We improved the error handling and feedback of scale app functionality for Mendix Cloud v4. (Ticket 103304) 
+* We improved the error handling and feedback of the scale app functionality for Mendix Cloud v4. (Ticket 103304) 
 * We fixed an issue where some customers were not able to access the [Deploy APIs](/apidocs-mxsdk/apidocs/deploy-api). (Ticket 103241)
 * We fixed an issue where some customers were unable to manually add certificates to [access restriction profiles](/developerportal/deploy/environments#asp). (Ticket 102615)
 * We have modified the [Deploy to Licensed Cloud Node](/refguide/project-menu#deploy) flow in Mendix Studio Pro. It is now only possible to deploy Mendix Cloud v4 applications which have a [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings#target) set. Please note that you will get an error message if you deploy from Studio Pro when no **Mendix Studios Target** is set.

@@ -34,7 +34,7 @@ In this case, the size of *LOGPRIMARY* must be increased.
 For more detailed information, see [DB2 SQL error: SQLCODE: -964, SQLSTATE: 57011, SQLERRMC: null](http://www-01.ibm.com/support/docview.wss?uid=swg21298630) on the *IBM Support* pages and 
 [SQL0964C – The transaction log for the database is full](http://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.messages.sql.doc/doc/msql00964c.html) in the *SQL messages* section of the *IBM Knowledge Center*.
 
-## 4 Making DB2 Case-Insensitive
+## 4 Making DB2 Case-Insensitive {#making}
 
 When applying sort on string column values that have mixed letter cases, DB2 will also take into account the letter cases. However, such situations can be avoided if the DB2 database is created with a collation that is case insensitive.
 

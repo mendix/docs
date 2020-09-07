@@ -46,6 +46,25 @@ Once the app has been created you can continue with [Set Up Region](#SetUpRegion
 
 You are now prompted with an SAP Cloud Platform login screen. Select the region where your SAP Cloud Platform is located.
 
+{{% alert type="info" %}}
+Currently supported regions are:
+
+* Australia (Sydney) 
+* AWS Japan 
+* AWS Singapore 
+* Azure Japan 
+* Azure Singapore 
+* Azure US East (VA) 
+* Azure US West (WA) 
+* Canada (Montreal) 
+* Europe (Frankfurt) 
+* Europe (Netherlands) 
+* US Central (IA) Beta 
+* US East (VA)
+
+Please contact Mendix support if you have a requirement for an additional region.
+{{% /alert %}}
+
 Make sure that you have enough quota in this region for your organization to run a Mendix app. You will need enough quota to create the following:
 
 * Database

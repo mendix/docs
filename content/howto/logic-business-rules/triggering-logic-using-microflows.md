@@ -2,33 +2,33 @@
 title: "Trigger Logic Using Microflows"
 category: "Logic & Business Rules"
 menu_order: 2
-tags: ["microflow", "logic"]
+tags: ["microflow","how-to", "logic"]
 ---
 
 ## 1 Introduction
 
-To add custom logic to your Mendix application you can use microflows. Microflows can be triggered in various ways, as in, buttons, input fields, scheduled events, and more. This how-to will teach you how to configure the properties and settings of a microflow button placed on a grid or reference set selector. You will start with adding the microflow button to the right widget. Next you will need to configure the right properties and settings of the microflow button. 
+To add custom logic to your Mendix application you can use microflows. Microflows can be triggered in various ways, as in buttons, input fields, scheduled events, and more. This how-to will teach you how to configure the properties and settings of a microflow button placed on a grid or reference set selector. You will start with adding the microflow button to the right widget. Next you will need to configure the right properties and settings of the microflow button. 
 
 ## 2 Prerequisites
 
-Before starting this how-to make sure you complete the following prerequisites:
+Before starting this how-to make sure you complete the following how-to's:
 
-*   [Creating a basic data layer](../data-models/create-a-basic-data-layer)
-*   [Creating your first two Overview and Detail pages](../front-end/create-your-first-two-overview-and-detail-pages)
+*   [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer)
+*   [How to Creating Your First Two Overview and Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages)
 
 ## 3 Triggering Logic Using a Page Button
 
-In this exercise you will add a microflow button to a grid or a reference set selector and configure it. In this example you will add the button to the Datagrid widget, but this way the settings of the button will apply to the reference set selector and all the grid widgets.
+In this how-to, you will add a button to a data grid and configure it. However, the same settings of the button can be applied to a reference set selector and other grid widgets.
 
 ### 3.1 Adding a Button to a Data Grid
 
 1.  Open you project in Mendix Studio Pro.
-2.  Open page with a **Datagrid**.
-3.  Select the **menu bar** of the Datagrid.
+2.  Open a page with a **Data grid**.
+3.  Select the **menu bar** of the Data grid.
 4.  Right click the menu bar.
 5.  Select **Add button** > **Action**:
 
-    ![](attachments/18448675/18580943.png)
+    ![](attachments/triggering-logic-using-microflows/add-button.png)
 
 6. Double-click the new button and enter *Microflow* for the button's **Caption**. The **Microflow** button will be visible on the menu bar of the data grid.
 
@@ -40,45 +40,39 @@ At the moment there is only a button with no microflow behind it yet. In this ex
 
 1.  Double-click the **Microflow** button to open its properties.
 
-    ![](attachments/18448675/18580941.png)
+    ![](attachments/triggering-logic-using-microflows/button-properties.png)
 
 2. In the **Edit Action Button** dialog box that opens, the first property to configure is the one that converts the action button into a button that calls a microflow. Go to **Events** > **On click** and select **Call a microflow**. This will open the **Select Microflow** dialog box, where you can specify the microflow that is executed when the button is clicked.
 3. For the purposes of this how-to, you will create a new microflow. Click **New** to create this microflow, and keep the name as **Microflow**.
 
-    ![](attachments/18448675/add.png)
+    ![](attachments/triggering-logic-using-microflows/add-microflow.png)
 
 4. Back in the **Edit Action Button** dialog box, you can set the following parameters:
 
-    | Property | Description |
-    | --- | --- |
-    | **Caption** | This property indicates what text will be shown on this button. This is a translatable text. |
-    | **Tooltip** | This property indicates what text will be displayed when users mouse over the button. |
-    | **Icon** | This property indicates which image will be shown in front of the caption of the trigger. |
-    | **Button style** | This property indicates the style of the button. |
-    | **Is default button** | This property indicates whether this button is the default button of the grid or reference set selector. A grid or reference set selector can only have one default button. The default button is triggered when clicking or double clicking a row. Whether a click or a double click triggers it depends on the 'default button trigger' property of the [Data grid](/refguide/data-grid), [Template grid](/refguide/template-grid) or [Reference set selector](/refguide/reference-set-selector). ![](attachments/18448675/18580939.png) |
-    | **Visible** | By default, whether or not an element is displayed in the browser is determined by how the page is designed and the user's roles within the application. However, the page can be configured to hide the element unless a certain condition is met. **Attribute**: When checked, this setting hides the widget unless the value of a particular attribute has a certain value. Only Boolean and enumeration attributes can be assigned to this purpose. **Ignore security**: Check this box if you want the microflow button to be visible even if security says it should be hidden. |
-    | **Name** | This property specifies the name of the microflow in the page builderClass: The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget. |
-    | **Style** | The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class. |
-
-    {{% alert type="warning" %}}The styling is applied in the following order: 1) Default styling defined by the theme the project uses, 2) the 'Class' property of the widget, 3) the 'Style' property of the widget.
-    {{% /alert %}}
-
+    1. 
+    
 5. Click **OK** to save the properties.
 
 ### 3.3 Configuring the Microflow Settings
 
 The microflow button has been added to the grid and the properties have been set. With the properties you can customize the appearance of the microflow button, in this section you are going to set the 'on click settings', which you can use to customize which parameters to pass to the microflow, whether to show a progress bar and more.
 
-1.  **Right click** the microflow button.
+1. **Right click** the microflow button.
+
 2.  Select **Edit microflow settings**.
 
-    ![](attachments/18448675/18580938.png)
+    ![](attachments/triggering-logic-using-microflows/edit-microflow-settings.png)
 
-    The **Microflow Settings** window opens with five sections.
+    The **Microflow Settings** window opens.
     
-    ![](attachments/18448675/18580937.png)
+    ![](attachments/triggering-logic-using-microflows/microflow-settings.png)
 
-3. Configure the sections described below, and then click **OK**.
+3. Configure the following settings:
+
+    4. 
+
+
+Congratulations! You have configured a button that will trigger a microflow. 
 
 #### 3.3.1 Microflow Section
 

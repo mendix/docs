@@ -1,5 +1,5 @@
 ---
-title: "Create Your First Microflow: Hello World!"
+title: "Create Your First Microflow: Hello World"
 category: "Logic & Business Rules"
 menu_order: 1
 tags: ["how-to", "microflow", "create microflow"]
@@ -14,56 +14,79 @@ Mendix uses visual models called microflows to define the logic of your applicat
 * Create a menu item
 * Create and edit a microflow
 
+## 2 Prerequisites
+
+Before starting this how-to, make sure you have completed the following prerequisites:
+
+* Familiarize yourself with microflow terms. For more information, see [Microflows](/refguide/microflows). 
+
 ## 2 Creating a Menu Item {#creating-menu-item}
 
-Microflows can be triggered in many different ways (for details, see [Trigger Logic Using Microflows](triggering-logic-using-microflows)). For this how-to, you'll be using a menu item to trigger the new microflow.
+You will create a menu item that will trigger a microflow and show the **Hello World** message to the end-users. 
+
+Microflows can be triggered in many different ways (for details, see [Trigger Logic Using Microflows](triggering-logic-using-microflows)). For this how-to, you will use a menu item to trigger the new microflow.
 
 To create a menu item, follow these steps:
 
-1.  Open the **Navigation** editor, add a menu item in the desktop navigation settings, and enter the caption of *Hello World*:
+1.  Open the **Navigation** editor.
 
-    ![](attachments/18448678/18580978.png)
+2. In the **Responsive** tab > the **Menu** section, click **New Item**:
 
-2.  Click **Select...** in the **Target** section of the **New Menu Item** dialog box to open the **Select Navigation Target** pop-up window:
+   ![](attachments/create-your-first-microflow-hello-world/new-menu-item.jpg)
 
-3.  For **On click**, select **Call a microflow**:
+3. In the **New Menu Item** dialog box, set the **Caption** to *Hello World*:
 
-    ![](attachments/18448678/18580977.png)
+   ![](attachments/create-your-first-microflow-hello-world/caption.png)
 
-4.  In the **Select Microflow** dialog box, select a microflow and then click **New**:
+4. For **On click**, select **Call a microflow**:
 
-    ![](attachments/18448678/microflow.png)
+   ![](attachments/create-your-first-microflow-hello-world/call-microflow.png)
 
-5. Enter *HelloWorld* for the **Name** of the new microflow.
-6. Save the new menu item by clicking **OK**.
+5. In the **Select Microflow** dialog box, select a microflow and then click **New**:
+
+   ![](attachments/create-your-first-microflow-hello-world/new-microflow.png)
+
+6. Enter *HelloWorld* for the **Name** of the new microflow.
+
+7. Save the new menu item by clicking **OK**.
+
+You have created the menu item that will trigger the **Hello World** microflow. 
 
 ## 3 Editing the New Microflow
 
+The new microflow is now empty and needs to be configured to show the message to the end-users.
+
 To edit the new microflow, follow these steps:
 
-1.  Open the new microflow by right-clicking the new menu item created in [2 Creating a Menu Item](#creating-menu-item) and selecting **Go to target** from the context menu:
+1.  Open the **Hello World** microflow by right-clicking the new menu item created in the [Creating a Menu Item](#creating-menu-item) section above and selecting **Go to target** from the context menu:
 
-    ![](attachments/18448678/18580975.png)
+    ![](attachments/create-your-first-microflow-hello-world/go-to-target.png)
 
     You will see an empty microflow like this:
 
-    ![](attachments/18448678/18580974.png)
+    ![](attachments/create-your-first-microflow-hello-world/created-microflow.png)
 
-2.  Open the **Toolbox**:
+2.  Open the **Toolbox** and search for the **Show message** activity:
     
-    ![](attachments/18448678/18580967.png)
+    ![](attachments/create-your-first-microflow-hello-world/toolbox.png)
 
-3.  Drag a **Show message** action from the **Toolbox** to the line between the green start even and red end event, which will insert a show message activity:
+3.  Drag the **Show message** activity from the **Toolbox** to the flow between the start event and end event, which will insert a show message activity:
 
-    ![](attachments/18448678/18580972.png)
+    ![](attachments/create-your-first-microflow-hello-world/show-message-activity.png)
 
-4. Double-click the message activity to open the **Show Message** properties editor.
+4. Double-click the message activity to open the **Show Message** properties.
+
 5.  Enter *Hello World* for the **Template** value and click **OK**:
 
-    ![](attachments/18448678/18580970.png)
+    ![](attachments/create-your-first-microflow-hello-world/show-message-properties.png)
 
-6.  Click **Run Locally** and then **View** to see the application in your default browser.
-7. Locate the new navigation item in the menu bar and click it to see the message.
+6. Click **Run Locally** and then **View** to see the application in your default browser.
+
+7. Click the **Hello World** menu item in the menu bar to see the message:
+
+   ![](attachments/create-your-first-microflow-hello-world/hello-world-message.png)
+
+Congratulations! You have created the menu item that triggers the microflow and shows the **Hello World** message to your end-users! 
 
 ## 4 Read More
 

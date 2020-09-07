@@ -286,3 +286,22 @@ The value set in **replicas** will only be applied once the runtime status is **
 Names beginning **mendix-** cannot be used for your own apps as they are reserved for use by the Mendix Operator.
 
 All names beginning **openshift-** are reserved for use by OpenShift if you are deploying to an OpenShift cluster.
+
+### 4.2 ApplicationRootURL needs to be set manually
+
+In some cases, your Mendix app will need to know its own URL - for example when using SSO or sending emails.
+
+For this to work properly, you need to set the [ApplicationRootURL variable](https://docs.mendix.com/refguide/custom-settings#2-general-settings) in `customConfiguration` to the app's URL. For example: 
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: MendixApp
+metadata:
+  name: example-mendixapp
+spec:
+  runtime:
+    # Add the ApplicationRootURL value here
+    customConfiguration: |-
+      {
+        "ApplicationRootURL": "https://myapp1-dev.mendix.example.com"
+      }
+```

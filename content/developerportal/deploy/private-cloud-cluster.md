@@ -165,6 +165,26 @@ Mendix provides you with a script which will configure these initially, and can 
 
 The script will ask you a series of questions. Type the number corresponding to your choice, or enter the value required.
 
+{{% alert type="info" %}}
+
+If you update the configuration and your namespace already has existing Mendix environments, restart the Mendix Operator to fully apply the configuration changes (replace `{namespace}` with the namespace where the Operator is installed):
+
+For OpenShift:
+
+```shell
+oc -n {namespace} scale deployment mendix-operator --replicas=0
+oc -n {namespace} scale deployment mendix-operator --replicas=1
+```
+
+For OpenShift:
+
+```shell
+kubectl -n {namespace} scale deployment mendix-operator --replicas=0
+kubectl -n {namespace} scale deployment mendix-operator --replicas=1
+```
+
+{{% /alert %}}
+
 #### 3.4.1 What Do You Want to Do?
 
 ![](attachments/private-cloud-cluster/image16.png)
@@ -624,6 +644,32 @@ If the Operator fails to provision or deprovision storage (a database or file st
 1. Check the failed pod logs for the error message.
 2. Troubleshoot and fix the cause of this error.
 3. Delete the failed pod to retry the process again.
+
+### 5.2 Restart required when switching between Ingress and OpenShift Route {#restart-after-changing-network-cr}
+
+Starting from Mendix Operator version v1.5.0, the Operator will monitor only one network resource type: Ingress or OpenShift route.
+
+If you switch between Ingress and OpenShift Route, you'll need to restart the Mendix Operator so that it can monitor the right network resource (replace `{namespace}` with the namespace where the Operator is installed):
+
+For OpenShift:
+
+```shell
+oc -n {namespace} scale deployment mendix-operator --replicas=0
+oc -n {namespace} scale deployment mendix-operator --replicas=1
+```
+
+For OpenShift:
+
+```shell
+kubectl -n {namespace} scale deployment mendix-operator --replicas=0
+kubectl -n {namespace} scale deployment mendix-operator --replicas=1
+```
+
+### 5.3 Crashlooping mendix-operator deployment in a new installation
+
+When Mendix for Private Cloud is installed for the first time into a new namespace, the `mendix-operator` deployment will be crashlooping.
+
+This behavior is expected and the `mendix-operator` deployment should start normally after the the Operator is fully configured.
 
 ## 6 Troubleshooting
 

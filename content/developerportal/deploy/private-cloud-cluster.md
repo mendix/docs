@@ -70,7 +70,7 @@ To add a namespace, do the following:
 
 1. Click **Details**:
 
-    ![](attachments/private-cloud-cluster/empty-cluster.PNG)
+    ![](attachments/private-cloud-cluster/empty-cluster.png)
 	
 2. Click **Add Namespace**:
 	
@@ -564,7 +564,7 @@ You can change the access rights for, or completely remove, existing members.
     
   2. Click **Remove member** to remove this member completely. You will be asked to confirm this action.
         
-    ![](attachments/private-cloud-cluster/image30.PNG)
+    ![](attachments/private-cloud-cluster/image30.png)
 
 #### 4.2.3 Operate {#operate}
 

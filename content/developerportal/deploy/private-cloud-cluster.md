@@ -381,6 +381,10 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide)
 
 Both forms of ingress can have TLS enabled or disabled.
 
+{{% alert type="info" %}}
+When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
+{{% /alert %}}
+
 #### 3.4.5 Pick a Registry Type
 
 ![](attachments/private-cloud-cluster/image20.png)
@@ -418,6 +422,84 @@ Choose **Yes** if a proxy is required to access the public internet from the nam
 When the namespace is configured correctly, its status will become **Connected**. You may need to click the **Refresh** button if the screen does not update automatically.
 
 ![](attachments/private-cloud-cluster/image22.png)
+
+### 3.6 Advanced Operator configuration
+
+Some advanced configuration options of the Mendix Operator are not yet available in the Reconfiguration script.
+These options can be changed by editing the `OperatorConfiguration` Custom Resource directly in Kubernetes.
+
+To start editing the `OperatorConfiguration`, run (replace `{namespace}` with the namespace where the Operator is installed):
+
+For OpenShift:
+
+```shell
+oc -n {namespace} edit operatorconfiguration mendix-operator-configuration
+```
+
+For Kubernetes:
+
+```shell
+kubectl -n {namespace} edit operatorconfiguration mendix-operator-configuration
+```
+
+The OperatorConfiguration contains the following user-editable options:
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+spec:
+  # Endpoint (Network) configuration
+  endpoint:
+    # Endpoint type: ingress or openshiftRoute
+    type: ingress
+    # Ingress configuration: used only when type is set to ingress
+    ingress:
+      # Optional, can be ommited: annotations which should be applied to all Ingress Resources
+      annotations:
+        # default annotation: allow uploads of files up 500 MB in the NGINX Ingress Controller
+        nginx.ingress.kubernetes.io/proxy-body-size: 500m
+        # example: use the specified cert-manager ClusterIssuer to generate TLS certificates with Let's Encrypt
+        cert-manager.io/cluster-issuer: staging-issuer
+      # App URLs will be generated ad subdomains of this domain, unless an app is using a custom appURL
+      domain: mendix.example.com
+      # Enable or disable TLS
+      enableTLS: true
+      # Optional: name of a kubernetes.io/tls Secret containing the TLS certificate
+      # This example is a template which lets cert-manager to generate a unique certificate for each app
+      tlsSecretName: '{{.Name}}-tls'
+    # OpenShift Route configuration: used only when type is set to openshiftRoute
+    openshiftRoute:
+      # Optional, can be ommited: annotations which should be applied to all Ingress Resources
+      annotations:
+        # example: use HSTS headers
+        haproxy.router.openshift.io/hsts_header: max-age=31536000;includeSubDomains;preload
+      # Optional: App URLs will be generated ad subdomains of this domain, unless an app is using a custom appURL
+      domain: mendix.example.com
+      # Enable or disable TLS
+      enableTLS: true
+      # Optional: name of a kubernetes.io/tls Secret containing the TLS certificate
+      # This example is the name of an existing Secret, which should be a wildcard matching subdomains of the domain name
+      tlsSecretName: 'mendixapps-tls'
+```
+
+{{% alert type="danger" %}}
+Adjusting options options which are not listed here can cause the Mendix Operator to configure environments incorrectly. Making a backup before applying any changes is strongly recommended.
+{{% /alert %}}
+
+You can change the following options:
+
+* **type**: – select the Endpoint type, possible options are `ingress` and `openshiftRoute`; this parameter is also configured through the **Reconfiguration Script**
+* **ingress**: - specify the Ingress configuration, required when **type** is set to `ingress`
+* **openshiftRoute**: - specify the OpenShift Route configuration, required when **type** is set to `openshiftRoute`
+* **annotations**: - optional, can be used to specify the Ingress or OpenShift Route annotations
+* **domain**: - optional for `openshiftRoute`, required for `ingress`, used to generate the app domain in case no app URL is specified; if left empty when using OpenShift Routes, the default OpenShift `apps` domain will be used; this parameter is also configured through the **Reconfiguration Script**
+* **enableTLS**: - allows to enable or disable TLS for the Mendix App's Ingress or OpenShift Route
+* **tlsSecretName**: - optional name of a `kubernetes.io/tls` Secret containing the TLS certificate, can be a template: `{{.Name}}` will be replaced with the name of the `MendixApp` CR; if left empty, the default TLS certificate from the Ingress Controller or OpenShift Router will be used
+
+
+{{% alert type="info" %}}
+When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
+{{% /alert %}}
 
 ## 4 Cluster and Namespace Management
 
@@ -647,7 +729,7 @@ If the Operator fails to provision or deprovision storage (a database or file st
 
 ### 5.2 Restart required when switching between Ingress and OpenShift Route {#restart-after-changing-network-cr}
 
-Starting from Mendix Operator version v1.5.0, the Operator will monitor only one network resource type: Ingress or OpenShift route.
+Starting from Mendix Operator version 1.5.0, the Operator will monitor only one network resource type: Ingress or OpenShift route.
 
 If you switch between Ingress and OpenShift Route, you'll need to restart the Mendix Operator so that it can monitor the right network resource (replace `{namespace}` with the namespace where the Operator is installed):
 
@@ -658,7 +740,7 @@ oc -n {namespace} scale deployment mendix-operator --replicas=0
 oc -n {namespace} scale deployment mendix-operator --replicas=1
 ```
 
-For OpenShift:
+For Kubernetes:
 
 ```shell
 kubectl -n {namespace} scale deployment mendix-operator --replicas=0

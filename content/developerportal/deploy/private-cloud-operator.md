@@ -52,10 +52,8 @@ metadata:
   name: example-mendixapp
 spec:
   database: # Specification of Database CR
-    serviceClass: mendix-database
     servicePlan: dev
   storage: # Specification of Storage CR
-    serviceClass: mendix-storage
     servicePlan: dev
   mendixRuntimeVersion: 7.23.3.48173 # Mendix version to use for placeholder runtime image
   sourceURL: https://example.com/example-app.mda # URL of App's source MDA or MPK

@@ -58,6 +58,21 @@ spec:
   mendixRuntimeVersion: 7.23.3.48173 # Mendix version to use for placeholder runtime image
   sourceURL: https://example.com/example-app.mda # URL of App's source MDA or MPK
   appURL: example-mendixapp.k8s-cluster.example.com # URL to access the app
+  tls: # Optional, can be ommitted : set a custom TLS configuration, overriding the default Operator Configuration
+    # Enable or disable TLS the app
+    enableTLS: true
+    # Optional: name of an existing kubernetes.io/tls Secret containing the TLS certificate
+    secretName: example-mendixapp-cert
+    # Optional: TLS certificate value (tls.crt)
+    certificate: |-
+      -----BEGIN CERTIFICATE-----
+      [...]
+      -----END CERTIFICATE-----
+    # Optional: TLS key value (tls.key)
+    key: |-
+      -----BEGIN PRIVATE KEY-----
+      [...]
+      -----END PRIVATE KEY-----
   replicas: 1 # Number of replicas, set to 0 to stop all replicas
   resources: # Optional, can be omitted : set resources for Mendix Runtime container 
     limits: # Upper limit - process will be stopped if it tries to use more
@@ -105,6 +120,10 @@ You need to make the following changes:
 * **mendixRuntimeVersion**: – the full runtime version which matches the mda, including the build number
 * **sourceURL**: – the location of the deployment package, this must be accessible from your cluster without any authentication
 * **appURL**: – the endpoint where you can connect to your running app — this is optional, and if it is supplied it must be a URL which is supported by your platform
+* **tls**: – the TLS configuration — this is optional, and if it is supplied it will override the default Mendix Operator network configuration
+* **enableTLS**: - allows to enable or disable TLS for the Mendix App's Ingress or OpenShift Route
+* **secretName**: - optional name of a `kubernetes.io/tls` Secret containing the TLS certificate, and must exist; if left empty, the default TLS certificate from the Ingress Controller or OpenShift Router will be used; cannot be used together with **certificate** and **key**
+* **certificate** and **key**: provide the `tls.crt` and `tls.key` values directly (not recommended for production environments); cannot be used together with **secretName**
 * **replicas**: – by default one replica will be started when you deploy your app
 * **resources**: – here you can change the minimum and maximum container resources your app requires
 * **logAutosubscribeLevel**: – change the default logging level for your app, the standard level is INFO — possibilities are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`

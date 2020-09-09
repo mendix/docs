@@ -14,14 +14,14 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 #### Mendix for Private Cloud — Mendix Operator v1.5.0 and Mendix Gateway Agent v1.4.0
 
-* We added an option to configure TLS options per-environment, overriding the default namespace settings
-* OpenShift Routes now support all features which were previously only available in Ingress Endpoints
-* We now only monitor the selected Endpoint type (OpenShift Routes or Ingess), no longer resulting in an error message when starting the Operator in a non-OpenShift cluster
-* We've added several features which make possible to use [cert-manager](https://cert-manager.io/) with Ingress - to have TLS certificates generated on-demand
+* We added an option to configure TLS options per environment, overriding the default namespace settings
+* OpenShift Routes now support all features which were previously only available in Ingress endpoints
+* We now only monitor the selected endpoint type (OpenShift Routes or Ingess), removing an error message which appeared when starting the operator in a non-OpenShift cluster
+* We have added several features which make it possible to use [cert-manager](https://cert-manager.io/) with Ingress — this allows you to have TLS certificates generated on-demand
 * We added an option to specify an environment's TLS certificate, or load it from a Kubernetes secret
-* When TLS is enabled, Mendix for Private Cloud Portal will now display the App URL with an https:// schema
+* When TLS is enabled, Mendix for Private Cloud Portal will now display the App URL with an https:// prefix
 * We have fixed an issue with connecting to PostgreSQL with TLS and will use encryption by default
-* We have fixed an issue with an incorrect _failed to create role_ error message for PostgreSQL Databases, which in some cases was caused by connection issues
+* We have fixed an issue with an incorrect _failed to create role_ error message for PostgreSQL databases, which in some cases was caused by connection issues
 * We have improved logging and status messages when the Mendix Operator is provisioning Minio storage or building images
 * We are introducing a new `private-cloud.registry.mendix.com` container registry which is intended to become the official Mendix for Private Cloud registry and eventually replace the `quay.io/digital_ecosystems` and the `mendix/runtime-base` Docker Hub repositories
 

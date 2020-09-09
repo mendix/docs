@@ -38,7 +38,7 @@ To select the target environment, do the following:
 4. In the **Select Studio Target** dialog box, click the drop-down menu and select the environment. 
 5. Click **Save**.
 
-You have selected the target environment for Studio and Studio Pro. 
+You have selected the target environment and can now deploy your app to that environment from either Studio or Studio Pro. 
 
 ## 3 Read More
 

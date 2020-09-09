@@ -49,7 +49,7 @@ Default: *5*
 
 #### 2.3.2 Allowed Extensions {#allowed-extensions}
 
-You can specify file extensions that users are allowed to upload. If no extension is specified, all file extensions are allowed. Separate multiple extensions by a semi-colon, e.g. `txt;doc`
+You can specify file extensions that users are allowed to upload. If no extension is specified, all file extensions are allowed. Separate multiple extensions by a semi-colon (for example, `txt;doc`).
 
 If a file with an extension that is not allowed is selected, a [system text](system-texts) for **File manager/image viewer** > **Error: incorrect file extension** will be shown below the file manager.
 
@@ -57,7 +57,7 @@ If a file with an extension that is not allowed is selected, a [system text](sys
 
 **Thumbnail width** determines the width of the generated thumbnail in pixels. However, the aspect ratio of the image will remain the same during thumbnail generation.
 
-####2.3.4 Thumbnail Height
+#### 2.3.4 Thumbnail Height
 
 **Thumbnail height** determines the height of the generated thumbnail in pixels. However, the aspect ratio of the image will remain the same during thumbnail generation.
 

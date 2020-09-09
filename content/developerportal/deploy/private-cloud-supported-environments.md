@@ -25,9 +25,9 @@ We currently support deploying to the following Kubernetes cluster types:
 * [minikube](https://minikube.sigs.k8s.io/docs/)
 
 {{% alert type="warning" %}}
-Only Kubernetes versions 1.13-1.18 are officially supported.
+Only Kubernetes versions 1.13 through 1.18 are officially supported.
 
-Mendix for Private Cloud has not been evaluated to support Kubernetes 1.19 and later versions.
+Mendix for Private Cloud has not been evaluated against Kubernetes 1.19 and later versions.
 {{% /alert %}}
 
 ### 2.2 Cluster Requirements
@@ -275,10 +275,10 @@ The following configuration options are available in OpenShift:
 
 * Turn TLS on and off
 * Add route annotations
-* Provide name of an existing TLS certificate secret to use - instead of the default router certificate
-* Provide a custom domain name (e.g. mendix.example.com) to use - instead of the default OpenShift route domain
+* Provide the name of an existing TLS certificate secret to use instead of the default router certificate
+* Provide a custom domain name (e.g. mendix.example.com) to use instead of the default OpenShift route domain
 
-It's also possible to provide a custom TLS configuration for individual environments, overriding the default configuration (only available in **Standalone** Mendix Operator installations):
+It is also possible to provide a custom TLS configuration for individual environments, overriding the default configuration (only available in **Standalone** Mendix Operator installations):
 
 * Turn TLS on and off
 * Specify the name of an existing TLS certificate secret to use
@@ -295,7 +295,7 @@ For ingress, it is possible to do the following:
 
 * Turn TLS on and off
 * Add ingress annotations
-* Provide name of an existing TLS secret to use
+* Provide the name of an existing TLS secret to use
 * Provide a domain name (e.g. mendix.example.com)
 
 For each environment, the URL will be automatically generated based on the domain name.
@@ -303,7 +303,7 @@ For example, if the domain name is set to mendix.example.com, then apps will hav
 
 The DNS server should be configured to route all subdomains (the `*` subdomain, e.g. *.mendix.example.com) to the ingress/load balancer.
 
-It's also possible to provide a custom TLS configuration for individual environments, overriding the default configuration (only available in **Standalone** Mendix Operator installations):
+It is also possible to provide a custom TLS configuration for individual environments, overriding the default configuration (only available in **Standalone** Mendix Operator installations):
 
 * Turn TLS on and off
 * Specify the name of an existing TLS certificate secret to use
@@ -311,6 +311,6 @@ It's also possible to provide a custom TLS configuration for individual environm
 
 There are multiple ways of managing TLS certificates:
 
-* The Ingress controller can have a default certificate with a wildcard domain (e.g. *.mendix.example.com). For Ingress controllers which support for [Let's Encrypt](https://letsencrypt.org/), the Ingress controller can also request and manage TLS certificates automatically.
+* The Ingress controller can have a default certificate with a wildcard domain (e.g. *.mendix.example.com*). For Ingress controllers which support for [Let's Encrypt](https://letsencrypt.org/), the Ingress controller can also request and manage TLS certificates automatically.
 * Providing a TLS certificate secret for each environment.
 * Using [cert-manager](https://cert-manager.io/) or a similar solution by using Ingress annotations. This service can be used to automatically request TLS certificates and create secrets for the Ingress controller.

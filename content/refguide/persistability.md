@@ -13,7 +13,7 @@ Persistable entities are colored blue in the domain model. Non-persistable entit
 
 ![Picture of a persistable and a non-persistable entity](attachments/domain-model/persistable-vs-non-persistable.png)
 
-## 2 Persistable Entities
+## 2 Persistable Entities {#persistable}
 
 When an entity is declared persistable, a database table is created for the entity.
 
@@ -25,7 +25,7 @@ Usually, a rollback reverts changes in memory since the last commit.
 
 However, performing a rollback on persistable autocommitted objects or objects with the state "NEW" deletes the row corresponding with this object from the database table for the associated entity. See [Object Activities](object-activities) for more information about autocommitted objects.
 
-## 3 Non-Persistable Entities
+## 3 Non-Persistable Entities {#non-persistable}
 
 Non-persistable entities are stored in the runtime memory and never get committed to the database. Therefore, they have no table in the database.
 

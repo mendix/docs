@@ -47,7 +47,7 @@ Image uploader properties consist of the following sections:
 
 Default: *5*
 
-#### 2.3.2 Allowed Extensions
+#### 2.3.2 Allowed Extensions {#allowed-extensions}
 
 You can specify file extensions that users are allowed to upload. If no extension is specified, all file extensions are allowed. Separate multiple extensions by a semi-colon, e.g. `txt;doc`
 

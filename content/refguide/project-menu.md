@@ -47,7 +47,13 @@ Shortcut key: <kbd>F4</kbd>
 
 ## 4 Show Project Directory in Explorer
 
-The **Show Project Directory in Explorer** option shows the directory that contains the project file (*.mpr*) and other assets such as resources and Java actions in Windows Explorer
+The **Show Project Directory in Explorer** option shows the directory that contains the project file (*.mpr*) and other assets such as resources and Java actions in Windows Explorer. By default, the directory is located in the **MyDocuments** section.
+
+The following directories in the project directory are useful for customizing the app style and adding custom widgets and Java actions:
+
+* **theme** – stores the *.css* files that can be used to style the application
+* **javasource** – stores the JavaScript actions
+* **widgets** – stores the widgets
 
 ## 5 Deploy for Eclipse
 

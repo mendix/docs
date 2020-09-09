@@ -425,10 +425,10 @@ When the namespace is configured correctly, its status will become **Connected**
 
 ### 3.6 Advanced Operator configuration
 
-Some advanced configuration options of the Mendix Operator are not yet available in the Reconfiguration script.
-These options can be changed by editing the `OperatorConfiguration` Custom Resource directly in Kubernetes.
+Some advanced configuration options of the Mendix Operator are not yet available in the reconfiguration script.
+These options can be changed by editing the `OperatorConfiguration` custom resource directly in Kubernetes.
 
-To start editing the `OperatorConfiguration`, run (replace `{namespace}` with the namespace where the Operator is installed):
+To start editing the `OperatorConfiguration`, use the following commands (replace `{namespace}` with the namespace where the operator is installed):
 
 For OpenShift:
 
@@ -462,11 +462,11 @@ spec:
         nginx.ingress.kubernetes.io/proxy-body-size: 500m
         # example: use the specified cert-manager ClusterIssuer to generate TLS certificates with Let's Encrypt
         cert-manager.io/cluster-issuer: staging-issuer
-      # App URLs will be generated ad subdomains of this domain, unless an app is using a custom appURL
+      # App URLs will be generated for subdomains of this domain, unless an app is using a custom appURL
       domain: mendix.example.com
       # Enable or disable TLS
       enableTLS: true
-      # Optional: name of a kubernetes.io/tls Secret containing the TLS certificate
+      # Optional: name of a kubernetes.io/tls secret containing the TLS certificate
       # This example is a template which lets cert-manager to generate a unique certificate for each app
       tlsSecretName: '{{.Name}}-tls'
 ```
@@ -487,17 +487,17 @@ spec:
       annotations:
         # example: use HSTS headers
         haproxy.router.openshift.io/hsts_header: max-age=31536000;includeSubDomains;preload
-      # Optional: App URLs will be generated ad subdomains of this domain, unless an app is using a custom appURL
+      # Optional: App URLs will be generated for subdomains of this domain, unless an app is using a custom appURL
       domain: mendix.example.com
       # Enable or disable TLS
       enableTLS: true
-      # Optional: name of a kubernetes.io/tls Secret containing the TLS certificate
-      # This example is the name of an existing Secret, which should be a wildcard matching subdomains of the domain name
+      # Optional: name of a kubernetes.io/tls secret containing the TLS certificate
+      # This example is the name of an existing secret, which should be a wildcard matching subdomains of the domain name
       tlsSecretName: 'mendixapps-tls'
 ```
 
-{{% alert type="danger" %}}
-Adjusting options options which are not listed here can cause the Mendix Operator to configure environments incorrectly. Making a backup before applying any changes is strongly recommended.
+{{% alert type="warning" %}}
+Adjusting options which are not listed here can cause the Mendix Operator to configure environments incorrectly. Making a backup before applying any changes is strongly recommended.
 {{% /alert %}}
 
 You can change the following options:
@@ -507,8 +507,8 @@ You can change the following options:
 * **openshiftRoute**: - specify the OpenShift Route configuration, required when **type** is set to `openshiftRoute`
 * **annotations**: - optional, can be used to specify the Ingress or OpenShift Route annotations
 * **domain**: - optional for `openshiftRoute`, required for `ingress`, used to generate the app domain in case no app URL is specified; if left empty when using OpenShift Routes, the default OpenShift `apps` domain will be used; this parameter is also configured through the **Reconfiguration Script**
-* **enableTLS**: - allows to enable or disable TLS for the Mendix App's Ingress or OpenShift Route
-* **tlsSecretName**: - optional name of a `kubernetes.io/tls` Secret containing the TLS certificate, can be a template: `{{.Name}}` will be replaced with the name of the `MendixApp` CR; if left empty, the default TLS certificate from the Ingress Controller or OpenShift Router will be used
+* **enableTLS**: - allows you to enable or disable TLS for the Mendix App's Ingress or OpenShift Route
+* **tlsSecretName**: - optional name of a `kubernetes.io/tls` secret containing the TLS certificate, can be a template: `{{.Name}}` will be replaced with the name of the `MendixApp` CR; if left empty, the default TLS certificate from the Ingress Controller or OpenShift Router will be used
 
 
 {{% alert type="info" %}}
@@ -741,11 +741,11 @@ If the Operator fails to provision or deprovision storage (a database or file st
 2. Troubleshoot and fix the cause of this error.
 3. Delete the failed pod to retry the process again.
 
-### 5.2 Restart required when switching between Ingress and OpenShift Route {#restart-after-changing-network-cr}
+### 5.2 Restart Required When Switching Between Ingress and OpenShift Route {#restart-after-changing-network-cr}
 
-Starting from Mendix Operator version 1.5.0, the Operator will monitor only one network resource type: Ingress or OpenShift route.
+Starting with Mendix Operator version 1.5.0, the operator will monitor only one network resource type: Ingress or OpenShift route.
 
-If you switch between Ingress and OpenShift Route, you'll need to restart the Mendix Operator so that it can monitor the right network resource (replace `{namespace}` with the namespace where the Operator is installed):
+If you switch between Ingress and OpenShift Route, you will need to restart the Mendix Operator so that it can monitor the right network resource (replace `{namespace}` with the namespace where the Operator is installed). This can be done as follows:
 
 For OpenShift:
 
@@ -761,11 +761,11 @@ kubectl -n {namespace} scale deployment mendix-operator --replicas=0
 kubectl -n {namespace} scale deployment mendix-operator --replicas=1
 ```
 
-### 5.3 Crashlooping mendix-operator deployment in a new installation
+### 5.3 Crashlooping mendix-operator Deployment in a New Installation
 
 When Mendix for Private Cloud is installed for the first time into a new namespace, the `mendix-operator` deployment will be crashlooping.
 
-This behavior is expected and the `mendix-operator` deployment should start normally after the the Operator is fully configured.
+This behavior is expected and the `mendix-operator` deployment should start normally after the the operator is fully configured.
 
 ## 6 Troubleshooting
 

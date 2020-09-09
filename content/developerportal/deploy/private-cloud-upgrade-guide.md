@@ -32,14 +32,14 @@ kubectl -n $OPERATOR_NAMESPACE get deployment mendix-operator -o=jsonpath='{.spe
 
 The image name will look similar to `private-cloud.registry.mendix.com/mendix-operator:{VERSION}` or `quay.io/digital_ecosystems/mendix-operator:{VERSION}`.
 
-Follow the steps only applicable for your currently installed version of the Mendix Operator.
+Only follow the steps applicable to your currently installed version of the Mendix Operator.
 
 For example, if the image name is `quay.io/digital_ecosystems/mendix-operator:1.3.0`, follow only the steps for upgrading from Mendix Operator 1.3.\*.
 
 This process will take:
 
 * about 15 to 30 minutes when upgrading from Mendix Operator 1.0.\*
-* about 10 minutes when upgrading from Mendix Operator 1.1.\*, 1.2.\*, 1.3.\* and 1.4.\*.
+* about 10 minutes when upgrading from Mendix Operator 1.1.\*, 1.2.\*, 1.3.\*, and 1.4.\*.
 
 Some upgrade steps are only required when upgrading from older versions of the Mendix Operator. There is a notice on these steps indicating which upgrade paths they apply to and for which paths the step should be skipped.
 
@@ -57,7 +57,7 @@ kubectl -n $OPERATOR_NAMESPACE scale deployment mendix-operator --replicas=0
 #### 2.2.2 Upgrading the Custom Resource Definitions
 
 {{% alert type="info" %}}
-Follow this step when upgrading from Mendix Operator versions 1.0.\*, 1.1.\*, 1.2.\*, 1.3.\* and 1.4.\*.
+Follow this step when upgrading from Mendix Operator versions 1.0.\*, 1.1.\*, 1.2.\*, 1.3.\*, and 1.4.\*.
 {{% /alert %}}
 
 Run the following command to upgrade to the latest version of the Custom Resource Definitions for the Mendix Operator:
@@ -125,10 +125,10 @@ kubectl -n $OPERATOR_NAMESPACE get storageplan --no-headers=true -o name | sed -
   xargs -I {} kubectl -n $OPERATOR_NAMESPACE patch storageplan {} --type=merge -p '{"spec":{"type":"on-demand"}}'
 ```
 
-##### 2.2.4.2 Updating the Mendix Operator Configuration (from versions 1.1.\*, 1.2.\*, 1.3.\* and 1.4.\*){#update-configuration-1.1.0}
+##### 2.2.4.2 Updating the Mendix Operator Configuration (from versions 1.1.\*, 1.2.\*, 1.3.\*, and 1.4.\*){#update-configuration-1.1.0}
 
 {{% alert type="info" %}}
-Follow this step only when upgrading from Mendix Operator 1.1.\*, 1.2.\*, 1.3.\* and 1.4.\*.
+Follow this step only when upgrading from Mendix Operator 1.1.\*, 1.2.\*, 1.3.\*, and 1.4.\*.
 {{% /alert %}}
 
 Run the following commands to switch to the latest component versions:
@@ -192,7 +192,7 @@ Save the role to apply the changes.
 #### 2.2.6 Update the Storage Plan image repository
 
 {{% alert type="info" %}}
-Follow this step only when upgrading from Mendix Operator 1.1.\*, 1.2.\*, 1.3.\* and 1.4.\*.
+Only follow this step when upgrading from Mendix Operator 1.1.\*, 1.2.\*, 1.3.\*, and 1.4.\*.
 {{% /alert %}}
 
 To switch from the `quay.io/digital_ecosystems` image repository to the new `private-cloud.registry.mendix.com` repository, run the following command:
@@ -203,7 +203,7 @@ kubectl -n $OPERATOR_NAMESPACE get storageplan -o yaml | \
     kubectl -n $OPERATOR_NAMESPACE apply -f -
 ```
 
-Or alternatively, you can manually replace the image in all Storage Plans by running:
+Alternatively, you can manually replace the image in all Storage Plans by running:
 
 ```shell
 kubectl -n $OPERATOR_NAMESPACE edit storageplan

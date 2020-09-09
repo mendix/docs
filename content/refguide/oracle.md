@@ -27,10 +27,16 @@ Selecting DISTINCT attributes of the string type with a size greater than 2000 c
 
 ## 3 Required Privileges
 
-The Mendix Runtime will require a user with roles with the following privileges to set up and maintain the Mendix database on Oracle:
+The following are the minimum privileges that have to be set for access to your Oracle DB: 
 
 * Create tables
+
 * Drop tables
+
 * Create indexes
+
 * Create sequences
+
 * Create, read, update, and delete data
+
+These are the requirements for a Mendix Database. The Database Administrator can specify the other access and permissions that are necessary to access the data.  

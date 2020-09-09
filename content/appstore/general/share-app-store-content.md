@@ -175,10 +175,11 @@ To add content to the App Store, follow these steps:
 	* [Mendix EULA](https://www.mendix.com/terms-of-use/)<br />
 	* [MindSphere Development License Agreement](https://siemens.mindsphere.io/en/terms)<br />
 	* [MIT](https://opensource.org/licenses/MIT)<br />
-	* SDISW Development License Agreement for Mendix Sample Apps<br />
-	* [SDISW End-User License Agreement for Mendix Connectors and Widgets](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Connectors_and_Widgets.pdf)<br />
 	* [SDISW End-User License Agreement for Mendix Sample Apps](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Sample_Apps.pdf)<br />
-	
+	* SDISW Development License Agreement for Mendix Sample Apps EXTERNAL<br />
+	* [SDISW End-User License Agreement for Mendix Connectors and Widgets](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Connectors_and_Widgets.pdf)<br />
+	* SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL<br />
+
 	You can request other license types to be added as **License** options by clicking the **Feedback** button on the right side of the App Store screen.
 
 10. After entering the information for your content, you can click one of these buttons in the middle of the screen:

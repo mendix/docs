@@ -45,16 +45,10 @@ Published app is the real app that you and your end-users will access and use. W
 
 To publish your application, follow these steps:
 
-1. Click **Publish** in the top menu bar of Studio (the dialog box with your app status will open). 
-2.  Once your cloud environment has been set up, you will see the **Update** button. Click it to push the latest changes from Studio to the published app or to publish the app for the first time. 
+1. Click **Publish** in the top menu bar of Studio. 
+2.  In the **Publish your app** pop-up message, click the **Publish** button it to push the latest changes from Studio to the published app or to publish the app for the first time. 
 
-    ![Publishing and Updating Your App](attachments/publishing-app/publish-and-update-buttons.jpg)
-
-{{% alert type="info" %}}
-
-If Studio is not able to retrieve the status of your environment yet, you will not see the **Update** button. For more information, see [Retrieving Your App Status](#retrieving-app-status) section. 
-
-{{% /alert %}}
+    ![Publishing and Updating Your App](attachments/publishing-app/publish-button.jpg)
 
 By default all apps created in Mendix Studio are Free Apps. A Free App is a complete deployment environment in the Mendix Cloud with some limitations. You can upgrade your Free App to a licensed app. The main differences between a Free App and a licensed app are described in the table below: 
 
@@ -67,25 +61,24 @@ By default all apps created in Mendix Studio are Free Apps. A Free App is a comp
 
 ## 4 Viewing Your App
 
-After you have updated your app, you are able to instantly view it in your browser or on a mobile device. You can also invite users to your app. For more information on user roles and managing users, see the [Managing App Users](settings-security#managing-app-users) section in *Security, Roles & Permissions*. 
+After you have published your app, you are able to instantly view it in your browser or on a mobile device. You can also invite users to your app. For more information on user roles and managing users, see the [Managing App Users](settings-security#managing-app-users) section in *Security, Roles & Permissions*. 
 
 ### 4.1 Viewing Your App in a Browser 
 
-To view your app in a browser in the currently selected view mode (Phone, Tablet, or Responsive), click **View app** in the **Your app is running** dialog box.
-
-To select a different preview mode, click the drop-down menu on the **View app** button.
-
-![Preview Modes](attachments/publishing-app/view-app-drop-down.png)
+To view your app in a browser in the currently selected view mode (Phone, Tablet, or Responsive), click the link in the **View app** pop-up message.
 
 ### 4.2 Viewing your App on a Mobile Device
 
 To view your app on a mobile device, follow these steps:
 
-1.  Click **View on mobile device**.
+1.  Click **Publish** button in the top-right corner.
+
+2. In the **Publish your app** pop-up message, click **View current app**.
+
+3. Scan the QR code to view your app on your mobile device: 
 
     ![View on Mobile Device Option](attachments/publishing-app/view-on-mobile-device.jpg)
 
-2. Scan the QR-code with your mobile device or open the link in your mobile device.
 
 ## 5 Possible Statuses When Publishing Your App
 

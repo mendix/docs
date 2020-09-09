@@ -15,7 +15,6 @@ This how-to explains how you can find your way in an app project in Studio Pro. 
 2.  Right-click a menu item and select **Go to target**. Studio Pro now opens the corresponding target of the menu item, in this case a page.
     ![](attachments/find-your-way/18581619.png)
 3.  Now right-click any of the buttons in the data grid and select **Go to microflow**. Mendix Studio Pro opens the corresponding microflow.
-    ![](attachments/find-your-way/18581618.png)
 4.  Right click any of the activities in the Microflow and select 'Go to entity'. Mendix Studio Pro now opens the corresponding domain model.
     ![](attachments/find-your-way/18581617.png)
 

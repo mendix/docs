@@ -308,6 +308,10 @@ If you receive an error trying to start the app, please refer to the [App Will N
 
 Click **Change Admin Password** to change the password for the administrator account (by default, MxAdmin) in your Mendix app.
 
+{{% alert type="warning" %}}
+The new password will not come into effect until you stop and start your environment.
+{{% /alert %}}
+
 #### 7.1.3 View Recent Log
 
 Click **View Recent Log** to see recent events written to the log.

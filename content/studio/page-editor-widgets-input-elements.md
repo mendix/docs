@@ -77,7 +77,7 @@ The **Type** option allows you to quickly change the type of one input element t
 
 The **General** section has common properties for every input element, but may also contain specific ones. 
 
-#### 3.3.1 Show Label
+#### 3.3.1 Show Label {#show-label}
 
 Enable this property if you want to show a label (name) of a widget to the end-user. *This property is enabled by default.*
 

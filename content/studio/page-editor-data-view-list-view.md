@@ -12,14 +12,14 @@ A *data view* is a starting point for showing the contents of one object on a pa
 
 For example, if you want to fill out the information on each customer, a data view is the best way to do that.
 
-{{% image_container width="400" %}}![](attachments/page-editor-data-view-list-view/data-view-example.png)
+{{% image_container width="300" %}}![](attachments/page-editor-data-view-list-view/data-view-example.png)
 {{% /image_container %}}
 
 In more complex templates, a data view can contain other data views for related objects, for example, showing customer details and showing customer payment status, if these are modeled as two different entities. 
 
 A *list view* is a starting point for showing a list of objects. For example, if you want to display a list of all customers, use a list view. 
 
-{{% image_container width="400" %}}![](attachments/page-editor-data-view-list-view/list-view-example.png)
+{{% image_container width="300" %}}![](attachments/page-editor-data-view-list-view/list-view-example.png)
 {{% /image_container %}}
 
 A data view and list view belong to the **Data Container** category of widgets. For more information on different widget categories, see [Widgets](page-editor-widgets). 
@@ -29,12 +29,16 @@ A data view and list view belong to the **Data Container** category of widgets. 
 Data view consists of the following properties:
 
 * [Data Source](#data-source-data-view)
+
 * [General](#general-section-data-view)
+
 * [Conditional Visibility](#visibility-data-view)
+
 * [Design](#design-section-data-view)
 
-{{% image_container width="300" %}}![](attachments/page-editor-data-view-list-view/data-view-properties.png)
-{{% /image_container %}}
+    
+    
+    {{% image_container width="250" %}}![](attachments/page-editor-data-view-list-view/data-view-properties.png){{% /image_container %}}
 
 ### 2.1 Data Source Section {#data-source-data-view} 
 
@@ -48,10 +52,14 @@ The data source determines which object will be shown in the data view. For gene
 
 ### 2.2 General Section {#general-section-data-view}
 
-In the **General** section, you can enable/disable the following options:
+The **General** section properties of are described in the table below:
 
-* **Read-Only** (disabled by default) – when enabled, all [input elements](page-editor-widgets-input-elements) (for example, a text area, a check box) in the data view will be in read-only mode
-* **Show Footer** (enabled by default) – a footer is an area at the bottom of the document, usually containing information common for all pages, such as copyrights  
+| General Section Property           | Description                                                  |
+| ---------------------------------- | ------------------------------------------------------------ |
+| Form Orientation                   | Determines the position of the [input element labels](page-editor-widgets-input-elements#show-label) inside the data view. You can choose the following orientation: <ul><li>**Horizontal** – the labels will be placed next to the input elements</li><li>**Vertical** – the labels will be placed above the input widgets</li></ul> Note that a data view with a vertical orientation cannot be placed inside a data view with a horizontal orientation. In that case, the form will be rendered horizontally. |
+| Read-Only *(disabled by default)*  | When enabled, all [input elements](page-editor-widgets-input-elements) (for example, a text area, a check box) in the data view will be in read-only mode. |
+| Show Footer *(enabled by default)* | A footer is an area at the bottom of the document, usually containing information common for all pages, such as copyrights. |
+
 
 ### 2.3 Conditional Visibility {#visibility-data-view}
 
@@ -70,8 +78,7 @@ List view consists of the following properties:
 * [Conditional Visibility](#visibility-list-view)
 * [Design](#design-section-list-view)
 
-{{% image_container width="300" %}}![](attachments/page-editor-data-view-list-view/list-view-properties.png)
-{{% /image_container %}}
+    {{% image_container width="250" %}}![](attachments/page-editor-data-view-list-view/list-view-properties.png){{% /image_container %}}
 
 ### 3.1 Data Source Section {#data-source-list-view}
 

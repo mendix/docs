@@ -456,7 +456,7 @@ spec:
     type: ingress
     # Ingress configuration: used only when type is set to ingress
     ingress:
-      # Optional, can be ommited: annotations which should be applied to all Ingress Resources
+      # Optional, can be omitted: annotations which should be applied to all Ingress Resources
       annotations:
         # default annotation: allow uploads of files up 500 MB in the NGINX Ingress Controller
         nginx.ingress.kubernetes.io/proxy-body-size: 500m
@@ -483,7 +483,7 @@ spec:
     type: openshiftRoute
     # OpenShift Route configuration: used only when type is set to openshiftRoute
     openshiftRoute:
-      # Optional, can be ommited: annotations which should be applied to all Ingress Resources
+      # Optional, can be omitted: annotations which should be applied to all Ingress Resources
       annotations:
         # example: use HSTS headers
         haproxy.router.openshift.io/hsts_header: max-age=31536000;includeSubDomains;preload

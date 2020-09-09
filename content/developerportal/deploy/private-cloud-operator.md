@@ -58,10 +58,10 @@ spec:
   mendixRuntimeVersion: 7.23.3.48173 # Mendix version to use for placeholder runtime image
   sourceURL: https://example.com/example-app.mda # URL of App's source MDA or MPK
   appURL: example-mendixapp.k8s-cluster.example.com # URL to access the app
-  tls: # Optional, can be ommitted : set a custom TLS configuration, overriding the default Operator Configuration
-    # Enable or disable TLS the app
+  tls: # Optional, can be omitted : set a custom TLS configuration, overriding the default operator configuration
+    # Enable or disable TLS for the app
     enableTLS: true
-    # Optional: name of an existing kubernetes.io/tls Secret containing the TLS certificate
+    # Optional: name of an existing kubernetes.io/tls secret containing the TLS certificate
     secretName: example-mendixapp-cert
     # Optional: TLS certificate value (tls.crt)
     certificate: |-
@@ -116,19 +116,19 @@ spec:
 You need to make the following changes:
 
 * **name**: – You can deploy multiple apps in one project/namespace — the app name in the CR doesn't have to match the app name in the mda but must be unique in the project — see [Reserved Names for Mendix Apps](#reserved-names), below, for restrictions on naming your app
-* **database/storage**: – ensure that these have the correct **servicePlan** — they have to have the same names that you registered in the namespace
-* **mendixRuntimeVersion**: – the full runtime version which matches the mda, including the build number
-* **sourceURL**: – the location of the deployment package, this must be accessible from your cluster without any authentication
-* **appURL**: – the endpoint where you can connect to your running app — this is optional, and if it is supplied it must be a URL which is supported by your platform
-* **tls**: – the TLS configuration — this is optional, and if it is supplied it will override the default Mendix Operator network configuration
-* **enableTLS**: - allows to enable or disable TLS for the Mendix App's Ingress or OpenShift Route
-* **secretName**: - optional name of a `kubernetes.io/tls` Secret containing the TLS certificate, and must exist; if left empty, the default TLS certificate from the Ingress Controller or OpenShift Router will be used; cannot be used together with **certificate** and **key**
-* **certificate** and **key**: provide the `tls.crt` and `tls.key` values directly (not recommended for production environments); cannot be used together with **secretName**
-* **replicas**: – by default one replica will be started when you deploy your app
-* **resources**: – here you can change the minimum and maximum container resources your app requires
-* **logAutosubscribeLevel**: – change the default logging level for your app, the standard level is INFO — possibilities are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
-* **mxAdminPassword**: – here you can change the password for the MxAdmin user — if you leave this empty, the password will be the one set in the Mendix model
-* **dtapmode**: – For development of the app, for example acceptance testing, choose **D**, for production deployment, select **P**
+* **database/storage** – ensure that these have the correct **servicePlan** — they have to have the same names that you registered in the namespace
+* **mendixRuntimeVersion** – the full runtime version which matches the mda, including the build number
+* **sourceURL** – the location of the deployment package, this must be accessible from your cluster without any authentication
+* **appURL** – the endpoint where you can connect to your running app — this is optional, and if it is supplied it must be a URL which is supported by your platform
+* **tls** – the TLS configuration — this is optional, and if it is supplied it will override the default Mendix Operator network configuration
+* **enableTLS** - allows you to enable or disable TLS for the Mendix app's Ingress or OpenShift Route
+* **secretName** - optional name of a `kubernetes.io/tls` secret, which must exist, containing the TLS certificate — if left empty, the default TLS certificate from the Ingress Controller or OpenShift Router will be used — cannot be used together with **certificate** and **key**
+* **certificate** and **key** – provide the `tls.crt` and `tls.key` values directly (not recommended for production environments) — cannot be used together with **secretName**
+* **replicas** – by default one replica will be started when you deploy your app
+* **resources** – change the minimum and maximum container resources your app requires
+* **logAutosubscribeLevel** – change the default logging level for your app, the standard level is INFO — possibilities are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
+* **mxAdminPassword** – here you can change the password for the MxAdmin user — if you leave this empty, the password will be the one set in the Mendix model
+* **dtapmode** – for development of the app, for example acceptance testing, choose **D**, for production deployment, select **P**
 
     If you select production, then you will need to provide a **Subscription Secret** to ensure that your app runs as a licensed app — see [Free Apps](mendix-cloud-deploy#free-app) in *Mendix Cloud* for the differences between free/test apps and licensed apps
     
@@ -304,7 +304,7 @@ Names beginning **mendix-** cannot be used for your own apps as they are reserve
 
 All names beginning **openshift-** are reserved for use by OpenShift if you are deploying to an OpenShift cluster.
 
-### 4.2 ApplicationRootURL needs to be set manually
+### 4.2 ApplicationRootURL Needs to be Set Manually
 
 In some cases, your Mendix app will need to know its own URL - for example when using SSO or sending emails.
 
@@ -324,7 +324,7 @@ spec:
 ```
 
 {{% alert type="info" %}}
-If you change `appURL`, you should also update the `ApplicationRootURL` value as well.
+If you change `appURL`, you should also update the `ApplicationRootURL` value.
 
-Note that the `appURL` is a domain name (without a schema or path), while `ApplicationRootURL` should be a HTTP URL with an http:// or https:// schema.
+Note that the `appURL` is a domain name (without a schema or path), while `ApplicationRootURL` should be a HTTP URL with an http:// or https:// prefix.
 {{% /alert %}}

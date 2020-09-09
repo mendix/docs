@@ -496,6 +496,10 @@ To add this setting:
 2. Switching to the **Runtime** tab
 3. Add a **Custom Runtime Setting**: use `ApplicationRootURL` as the **Setting** name and the URL you copied from **App URL** as the **New value**
 
+{{% alert type="info" %}}
+If you change **App URL** in the **General** tab, you should also update the `ApplicationRootURL` value as well.
+{{% /alert %}}
+
 ## 7 Troubleshooting
 
 This section covers an issue which can arise where Mendix cannot recover automatically and manual intervention may be required.

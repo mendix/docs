@@ -140,6 +140,8 @@ For every Mendix app environment, a new database schema and user (role) will be 
 {{% alert type="info" %}}
 TLS is supported, and preferred if the PostgreSQL supports it.
 
+Mendix for Private Cloud will first try to connect with TLS enabled; if the server doesn't support TLS, the Mendix Operator will retry connecting without TLS.
+
 To ensure compatibility with all PostgreSQL databases (including ones with self-signed certificates), all TLS CAs are trusted by default.
 {{% /alert %}}
 

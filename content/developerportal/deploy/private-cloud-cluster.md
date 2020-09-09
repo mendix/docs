@@ -176,7 +176,7 @@ oc -n {namespace} scale deployment mendix-operator --replicas=0
 oc -n {namespace} scale deployment mendix-operator --replicas=1
 ```
 
-For OpenShift:
+For Kubernetes:
 
 ```shell
 kubectl -n {namespace} scale deployment mendix-operator --replicas=0
@@ -444,6 +444,8 @@ kubectl -n {namespace} edit operatorconfiguration mendix-operator-configuration
 
 The OperatorConfiguration contains the following user-editable options:
 
+When using **Ingress** for network endpoints:
+
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
 kind: OperatorConfiguration
@@ -467,6 +469,18 @@ spec:
       # Optional: name of a kubernetes.io/tls Secret containing the TLS certificate
       # This example is a template which lets cert-manager to generate a unique certificate for each app
       tlsSecretName: '{{.Name}}-tls'
+```
+
+When using **OpenShift Routes** for network endpoints:
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+spec:
+  # Endpoint (Network) configuration
+  endpoint:
+    # Endpoint type: ingress or openshiftRoute
+    type: openshiftRoute
     # OpenShift Route configuration: used only when type is set to openshiftRoute
     openshiftRoute:
       # Optional, can be ommited: annotations which should be applied to all Ingress Resources

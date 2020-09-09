@@ -322,3 +322,9 @@ spec:
         "ApplicationRootURL": "https://myapp1-dev.mendix.example.com"
       }
 ```
+
+{{% alert type="info" %}}
+If you change `appURL`, you should also update the `ApplicationRootURL` value as well.
+
+Note that the `appURL` is a domain name (without a schema or path), while `ApplicationRootURL` should be a HTTP URL with an http:// or https:// schema.
+{{% /alert %}}

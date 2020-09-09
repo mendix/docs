@@ -171,7 +171,20 @@ To change the App URL (if you are not using a custom domain) you will need to co
 
 ### 4.6 Changing a Custom Domain
 
-If you have a custom domain set up, you will need to change this. Instructions for doing this are here: [Custom Domains](custom-domains).
+If you have a custom domain which you want to transfer to your v4 deployment, you will need to bear the following information in mind.
+
+* The CNAME configuration in the DNS provider needs to have the following format: `{customdomain}.cname.mendix.net`
+* If you own the private key for your existing custom domain name, you can reuse it for your v4 deployment
+    * For a TLS certificate you uploaded yourself, you will have the private key
+    * If you made a certificate request to Mendix, the private key will be stored in the Mendix Secure Keystore and you will need to ask Mendix Support to arrange for the certificate to be migrated to v4
+    
+        The two certificate request options are shown below:
+        ![](attachments/migrating-to-v4/tls-certificates.png)
+* When you start the app on the v4 cloud, it can take some time for the DNS servers on the web to register the new target URL and redirect your custom domain name to it — therefore you must set the TTL value to 300 seconds to speed up this process, if your TTL setting has a longer duration. This should be done some days in advance to ensure the setting is propagated to all DNS servers.
+
+    For example, if you have a TTL of 24 hours, it will take 24 hours before the new domain will be active in the DNS. Customers who visit the custom domain through the browser will not end up at the Mendix Cloud v4 environment until 24 hours have passed. You should therefore check the TTL value a week or so before migration and change it to around 300 seconds (this is the default value we recommend).
+
+You can find further information about setting up custom domains in [Custom Domains](custom-domains).
 
 ### 4.7 Offboarding the v3 Node
 

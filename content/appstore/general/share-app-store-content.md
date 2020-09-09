@@ -125,7 +125,7 @@ To add content to the App Store, follow these steps:
 	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change this setting by updating the App Store component later.
 	{{% /alert %}}
 
-6.  <a name="edit"></a>In the bottom half of the **DRAFT** screen, do the following:<br />
+5.  <a name="edit"></a>In the bottom half of the **DRAFT** screen, do the following:<br />
 	a. Enter a **Name** for your content.<br />
 	b. Select a category for your content from the **Category** drop-down menu (for example, **Connectors**).<br />
 	c. If you have published a demo using your content, enter the **Demo URL**.<br />
@@ -133,7 +133,7 @@ To add content to the App Store, follow these steps:
 
 	![](attachments/share-app-store-content/add_content_3.png)
 
-7.  On the **Overview** tab in the bottom half of the **Share your content** screen, you can do the following:
+6.  On the **Overview** tab in the bottom half of the **Share your content** screen, you can do the following:
 
 	* Enter an overview **Description** of your content (for example, "Node control is an native Android app that gives a system administrator access to the Mendix Cloud nodes being administered. From the app, the status of the different environments within a node can be monitored and an environment can be started or stopped.")
 	* Upload screenshots by clicking **Add screenshots** and selecting images of the content from your computer
@@ -163,24 +163,26 @@ To add content to the App Store, follow these steps:
 	
 	Uploaded images cannot be resized, but linked images can.
 
-9. Note that there is nothing for you to do on the **Statistics** and **All versions** tabs. The **Statistics** tab will chart the downloads of your content over time. The **All versions** tab will list the various versions of your content that have been updated.
-10. <a name="version-details"></a>In the **Version Details** section on the bottom-right of the screen, do the following:<br />
+8. Note that there is nothing for you to do on the **Statistics** and **All versions** tabs. The **Statistics** tab will chart the downloads of your content over time. The **All versions** tab will list the various versions of your content that have been updated.
+9. <a name="version-details"></a>In the **Version Details** section on the bottom-right of the screen, do the following:<br />
+
 	a. Check the **Beta version** check-box if the content is in beta.<br />
 	b. Select the **Mendix Studio Pro version** on which you built the content.<br />
 	c. Select the type of **License** you want applied to your app (if applicable):<br />
 	
-	* **Apache V2** (for more information, see [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0))<br />
-	* **GNU General Public License, version 3** (for more information, see [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html))<br />
-	* **Mendix EULA** (for more information, see [Mendix Terms of Use](https://www.mendix.com/terms-of-use/))<br />
-	* **MindSphere Development License Agreement**
-	* **MIT** (for more information, see [MIT License](https://opensource.org/licenses/MIT))<br />
-	* **SDISW Development License Agreement for Mendix Sample Apps**<br />
-	* **SDISW End-User License Agreement for Mendix Connectors and Widgets** (for more information, see [SDISW End-User License Agreement for Mendix Connectors and Widgets](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Connectors_and_Widgets.pdf))<br />
-	* **SDISW End-User License Agreement for Mendix Sample Apps** (for more information, see [SDISW End-User License Agreement for Mendix Sample Apps](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Sample_Apps.pdf))<br />
+	* [Apache V2](https://www.apache.org/licenses/LICENSE-2.0)<br />
+	* [GNU General Public License, version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)<br />
+	* [Mendix EULA](https://www.mendix.com/terms-of-use/)<br />
+	* [MindSphere Development License Agreement](https://siemens.mindsphere.io/en/terms)<br />
+	* [MIT](https://opensource.org/licenses/MIT)<br />
+	* SDISW Development License Agreement for Mendix Sample Apps EXTERNAL<br />
+	* [SDISW End-User License Agreement for Mendix Connectors and Widgets](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Connectors_and_Widgets.pdf)<br />
+	* [SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Connectors_and_Widgets_EXTERNAL.pdf)<br />
+	* [SDISW End-User License Agreement for Mendix Sample Apps](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Sample_Apps.pdf)<br />
 	
 	You can request other license types to be added as **License** options by clicking the **Feedback** button on the right side of the App Store screen.
 
-11. After entering the information for your content, you can click one of these buttons in the middle of the screen:
+10. After entering the information for your content, you can click one of these buttons in the middle of the screen:
 
 	{{% image_container width="300" %}}![](attachments/share-app-store-content/add_content_7.png){{% /image_container %}}
 

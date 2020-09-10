@@ -12,13 +12,7 @@ While URLs typically open websites, they can also open an installed app on your 
 
 A URL is constructed of these parts (everything after **path** is defined as a detail):
 
-```txt
-        username      host       port
-        ┌──┴───┐ ┌──────┴──────┐ ┌┴┐
-https://john.doe@www.example.com:123/forum/questions/?tag=networking&order=newest#top
-└─┬─┘   └───────────┬──────────────┘└───────┬───────┘ └───────────┬─────────────┘ └┬┘
-scheme          authority                  path                 query            hash
-```
+![url details](attachments/native-deep-link/url-parts.png)
 
 You can also register the handling of a normal weblink beginning with `http://` or `https://`. However this requires some more work for iOS, and is not covered in this tutorial. For iOS see [Universal Links: Make the Connection](https://www.raywenderlich.com/6080-universal-links-make-the-connection) by Owen L. Brown. Android does allow for both types of weblink handling out of the box, as shown in the [For Android Apps](#for-android) section below. 
 

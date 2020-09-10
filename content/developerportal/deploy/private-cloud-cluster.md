@@ -165,6 +165,26 @@ Mendix provides you with a script which will configure these initially, and can 
 
 The script will ask you a series of questions. Type the number corresponding to your choice, or enter the value required.
 
+{{% alert type="info" %}}
+
+If you update the configuration and your namespace already has existing Mendix environments, restart the Mendix Operator to fully apply the configuration changes (replace `{namespace}` with the namespace where the Operator is installed):
+
+For OpenShift:
+
+```shell
+oc -n {namespace} scale deployment mendix-operator --replicas=0
+oc -n {namespace} scale deployment mendix-operator --replicas=1
+```
+
+For Kubernetes:
+
+```shell
+kubectl -n {namespace} scale deployment mendix-operator --replicas=0
+kubectl -n {namespace} scale deployment mendix-operator --replicas=1
+```
+
+{{% /alert %}}
+
 #### 3.4.1 What Do You Want to Do?
 
 ![](attachments/private-cloud-cluster/image16.png)
@@ -361,6 +381,10 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide)
 
 Both forms of ingress can have TLS enabled or disabled.
 
+{{% alert type="info" %}}
+When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
+{{% /alert %}}
+
 #### 3.4.5 Pick a Registry Type
 
 ![](attachments/private-cloud-cluster/image20.png)
@@ -398,6 +422,98 @@ Choose **Yes** if a proxy is required to access the public internet from the nam
 When the namespace is configured correctly, its status will become **Connected**. You may need to click the **Refresh** button if the screen does not update automatically.
 
 ![](attachments/private-cloud-cluster/image22.png)
+
+### 3.6 Advanced Operator configuration
+
+Some advanced configuration options of the Mendix Operator are not yet available in the reconfiguration script.
+These options can be changed by editing the `OperatorConfiguration` custom resource directly in Kubernetes.
+
+To start editing the `OperatorConfiguration`, use the following commands (replace `{namespace}` with the namespace where the operator is installed):
+
+For OpenShift:
+
+```shell
+oc -n {namespace} edit operatorconfiguration mendix-operator-configuration
+```
+
+For Kubernetes:
+
+```shell
+kubectl -n {namespace} edit operatorconfiguration mendix-operator-configuration
+```
+
+The OperatorConfiguration contains the following user-editable options:
+
+When using **Ingress** for network endpoints:
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+spec:
+  # Endpoint (Network) configuration
+  endpoint:
+    # Endpoint type: ingress or openshiftRoute
+    type: ingress
+    # Ingress configuration: used only when type is set to ingress
+    ingress:
+      # Optional, can be omitted: annotations which should be applied to all Ingress Resources
+      annotations:
+        # default annotation: allow uploads of files up 500 MB in the NGINX Ingress Controller
+        nginx.ingress.kubernetes.io/proxy-body-size: 500m
+        # example: use the specified cert-manager ClusterIssuer to generate TLS certificates with Let's Encrypt
+        cert-manager.io/cluster-issuer: staging-issuer
+      # App URLs will be generated for subdomains of this domain, unless an app is using a custom appURL
+      domain: mendix.example.com
+      # Enable or disable TLS
+      enableTLS: true
+      # Optional: name of a kubernetes.io/tls secret containing the TLS certificate
+      # This example is a template which lets cert-manager to generate a unique certificate for each app
+      tlsSecretName: '{{.Name}}-tls'
+```
+
+When using **OpenShift Routes** for network endpoints:
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+spec:
+  # Endpoint (Network) configuration
+  endpoint:
+    # Endpoint type: ingress or openshiftRoute
+    type: openshiftRoute
+    # OpenShift Route configuration: used only when type is set to openshiftRoute
+    openshiftRoute:
+      # Optional, can be omitted: annotations which should be applied to all Ingress Resources
+      annotations:
+        # example: use HSTS headers
+        haproxy.router.openshift.io/hsts_header: max-age=31536000;includeSubDomains;preload
+      # Optional: App URLs will be generated for subdomains of this domain, unless an app is using a custom appURL
+      domain: mendix.example.com
+      # Enable or disable TLS
+      enableTLS: true
+      # Optional: name of a kubernetes.io/tls secret containing the TLS certificate
+      # This example is the name of an existing secret, which should be a wildcard matching subdomains of the domain name
+      tlsSecretName: 'mendixapps-tls'
+```
+
+{{% alert type="warning" %}}
+Adjusting options which are not listed here can cause the Mendix Operator to configure environments incorrectly. Making a backup before applying any changes is strongly recommended.
+{{% /alert %}}
+
+You can change the following options:
+
+* **type**: – select the Endpoint type, possible options are `ingress` and `openshiftRoute`; this parameter is also configured through the **Reconfiguration Script**
+* **ingress**: - specify the Ingress configuration, required when **type** is set to `ingress`
+* **openshiftRoute**: - specify the OpenShift Route configuration, required when **type** is set to `openshiftRoute`
+* **annotations**: - optional, can be used to specify the Ingress or OpenShift Route annotations
+* **domain**: - optional for `openshiftRoute`, required for `ingress`, used to generate the app domain in case no app URL is specified; if left empty when using OpenShift Routes, the default OpenShift `apps` domain will be used; this parameter is also configured through the **Reconfiguration Script**
+* **enableTLS**: - allows you to enable or disable TLS for the Mendix App's Ingress or OpenShift Route
+* **tlsSecretName**: - optional name of a `kubernetes.io/tls` secret containing the TLS certificate, can be a template: `{{.Name}}` will be replaced with the name of the `MendixApp` CR; if left empty, the default TLS certificate from the Ingress Controller or OpenShift Router will be used
+
+
+{{% alert type="info" %}}
+When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
+{{% /alert %}}
 
 ## 4 Cluster and Namespace Management
 
@@ -624,6 +740,32 @@ If the Operator fails to provision or deprovision storage (a database or file st
 1. Check the failed pod logs for the error message.
 2. Troubleshoot and fix the cause of this error.
 3. Delete the failed pod to retry the process again.
+
+### 5.2 Restart Required When Switching Between Ingress and OpenShift Route {#restart-after-changing-network-cr}
+
+Starting with Mendix Operator version 1.5.0, the operator will monitor only one network resource type: Ingress or OpenShift route.
+
+If you switch between Ingress and OpenShift Route, you will need to restart the Mendix Operator so that it can monitor the right network resource (replace `{namespace}` with the namespace where the Operator is installed). This can be done as follows:
+
+For OpenShift:
+
+```shell
+oc -n {namespace} scale deployment mendix-operator --replicas=0
+oc -n {namespace} scale deployment mendix-operator --replicas=1
+```
+
+For Kubernetes:
+
+```shell
+kubectl -n {namespace} scale deployment mendix-operator --replicas=0
+kubectl -n {namespace} scale deployment mendix-operator --replicas=1
+```
+
+### 5.3 Crashlooping mendix-operator Deployment in a New Installation
+
+When Mendix for Private Cloud is installed for the first time into a new namespace, the `mendix-operator` deployment will be crashlooping.
+
+This behavior is expected and the `mendix-operator` deployment should start normally after the the operator is fully configured.
 
 ## 6 Troubleshooting
 

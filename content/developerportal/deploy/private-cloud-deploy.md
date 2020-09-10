@@ -484,6 +484,22 @@ After manually removing the StorageInstance, you'll need to manually clean up an
 
 If you attempt to deploy an app with security not set to production into a production environment you will not get an error, however the deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
 
+### 6.5 ApplicationRootURL Needs to be Set Manually
+
+In some cases, your Mendix app will need to know its own URL - for example when using SSO or sending emails.
+
+For this to work properly, you need to set the [ApplicationRootURL](/refguide/custom-settings#2-general-settings) **Custom Runtime Setting** in the **Runtime** tab to the app's URL.
+
+To add this setting:
+
+1. Copy the **App URL** value from the **General** tab.
+2. Switch to the **Runtime** tab.
+3. Add a **Custom Runtime Setting**: use `ApplicationRootURL` as the **Setting** name and the URL you copied from **App URL** as the **New value**.
+
+{{% alert type="info" %}}
+If you change **App URL** in the **General** tab, you should update the `ApplicationRootURL` value as well.
+{{% /alert %}}
+
 ## 7 Troubleshooting
 
 This section covers an issue which can arise where Mendix cannot recover automatically and manual intervention may be required.

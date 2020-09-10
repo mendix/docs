@@ -322,6 +322,7 @@ The widget’s style properties are structured as follows:
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties.   |   |
+| `containerDisabled` | Same properties as `container` | Overrides `container` styles if the text box is non-editable. |
 | `input` | This has all TextStyle properties. |  |
 | `input` | `autoCapitalize` | This automatically capitalizes certain characters when the user types:<br><br>* `characters`: capitalizes all characters<br>* `words`: capitalizes the first letter of each word<br>* `sentences`: capitalizes the first letter of each sentence (default)<br>* `none`: capitalizes nothing |
 | `input` | `placeholderTextColor` | This is the text color of the placeholder string. |
@@ -331,6 +332,7 @@ The widget’s style properties are structured as follows:
 | `inputDisabled` | Same properties as `input` | Overrides `input` styles if the text box is non-editable. |
 | `label` | This has all TextStyle properties |   |
 | `label` | `numberOfLines` | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (defaults to 1). |
+| `labelDisabled` | Same properties as `label` | Overrides `label` styles if the text box is non-editable. |
 | `validationMessage` | This has all TextStyle properties.   |    |
 
 The default class to style all text boxes is named `TextBox`.

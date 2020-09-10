@@ -68,18 +68,17 @@ The style property allows you to specify additional CSS styling. If a class is a
 
 ![](attachments/common-widget-properties/style-example.png)
 
-### 3.5 Dynamic classes{#dynamicclasses}
+### 3.5 Dynamic Classes{#dynamicclasses}
 
-The dynamic classes property allows you to specify one or more cascading stylesheet (CSS) classes like the class property, but based on an [expression](expressions.md). This allows you
-to dynamically construct classes based on data from an enclosing data container. The dynamic classes constructed in the expression are appended to the classes defined in the [`Class`](#class) property.
+The dynamic classes property allows you to specify one or more cascading stylesheet (CSS) class like the class property, but based on an [expression](expressions.md). This allows you to dynamically construct classes based on data from an enclosing data container. The dynamic classes constructed in the expression are appended to the classes defined in the [`Class`](#class) property.
 
 ![](attachments/common-widget-properties/dynamic-classes.png)
 
 {{% alert type="info" %}}
-The **dynamic classes** property was introduced in Mendix 8.14.
+The dynamic classes property was introduced in Mendix Studio Pro v8.14.
 {{% /alert %}}
 
-You can see which widgets in a page have styling applied via the style or class property by clicking the <strong>Show styles</strong> button.
+You can see which widgets in a page have styling applied via the style or class property by clicking the **Show styles** button.
 
 ### 3.6 Documentation{#documentation}
 

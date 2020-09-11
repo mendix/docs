@@ -8,7 +8,7 @@ tags: ["node","developer portal","deploy", "Studio", "settings", "target", "Mend
 
 ## 1 Introduction
 
-If you have a licensed app in Mendix Cloud v4, you need to select a target environment where Mendix Studio and Mendix Studio Pro will deploy your app when you click **Publish** (for Studio) or **Run** (for Studio Pro). For more information on licensed apps and environments, see [Mendix Cloud](mendix-cloud-deploy) and [Environments](environments).
+If you have a licensed app in Mendix Cloud v4 which you want to deploy directly to an environment, you need to select a target environment where Mendix Studio and Mendix Studio Pro will deploy your app when you click **Publish** (for Studio) or **Run** (for Studio Pro). For more information on licensed apps and environments, see [Mendix Cloud](mendix-cloud-deploy) and [Environments](environments).
 
 {{% alert type="info" %}}
 By default the target environment is not selected. Thus, when you try to publish, you will get a warning message in Studio, or an error message in Studio Pro. For more information, see [Previewing & Publishing Your App](/studio/publishing-app) in the *Studio Guide* or [Run Menu](/refguide/run-menu) in the *Studio Pro Guide*.
@@ -17,8 +17,9 @@ When you deploy from Mendix Studio Pro, the deployment will also restart the tar
 {{% /alert %}}
 
 If you do not want to set a target environment, you can deploy from Studio Pro by first adding the MDA to the **Deployment Package Repository**. Either:
-* [Create a Deployment Package](/refguide/create-deployment-package-dialog) from the **Project** menu in Studio Pro and then uploading it using the [Environments](environments) page
-* [Commit](/refguide/commit-dialog) the current version of your app and then choosing **Create a Package from Team Server** on the Environments page
+
+* [Create a Deployment Package](/refguide/create-deployment-package-dialog) from the **Project** menu in Studio Pro and then upload it using the [Environments](environments) page
+* [Commit](/refguide/commit-dialog) the current version of your app and then choose **Create a Package from Team Server** on the Environments page
 
 Once you have your MDA in the **Deployment Package Repository** you can deploy it from within the Developer Portal.
 

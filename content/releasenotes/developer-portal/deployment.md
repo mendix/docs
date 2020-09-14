@@ -10,11 +10,11 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
-### Future change – from December 1st, 2020
+### September 14th, 2020
 
-#### Deprecation HTTPS SSL/TLS weak ciphers
+#### Mendix Cloud V4 - Deprecation of HTTPS SSL/TLS weak ciphers from **December 1st, 2020**
 
-To improve the security of the HTTPS connections made to apps in Mendix Cloud v4 we enabled TLSv1.3 in February this year. Since then more than 50% of the requests to Cloud v4 apps have been served over TLSv1.3.
+To improve the security of the HTTPS connections made to apps in Mendix Cloud v4 we [enabled TLSv1.3 in February this year](#tls-v1_3). Since then more than 50% of the requests to Cloud v4 apps have been served over TLSv1.3.
 
 To further improve the security of the HTTPS connections to apps in Mendix Cloud v4 we are deprecating and stopping support for block ciphers. Block ciphers are considered weak.
 
@@ -53,6 +53,12 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
 * `TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256`
 * `TLS_DHE_RSA_WITH_AES_256_GCM_SHA384`
 * `TLS_DHE_RSA_WITH_AES_128_GCM_SHA256`
+
+### September 14th, 2020
+
+#### Mendix for Private Cloud
+
+* We resolved an issue where deployment of a new MDA to an environment set the constant values to the defaults in the MDA rather than applying the values set through the environment's [Model Options](/developerportal/deploy/private-cloud-deploy#environment-details). (Ticket 106933)
 
 ### September 9th, 2020
 
@@ -350,7 +356,7 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 * New Deploy API calls have been added. These will be added to the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) documentation shortly.
 * You will now be warned that you cannot restore a file-only backup to Mendix Cloud. You can only restore backups which include the database.
 
-### February 27th, 2020
+### February 27th, 2020{#tls-v1_3}
 
 #### TLSv1.3 Support for Mendix Cloud (All Regions)
 

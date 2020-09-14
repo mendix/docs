@@ -11,7 +11,7 @@ This how-to explains how to configure a menu bar for your app such as creating m
 
 **This how-to will teach you how to do the following:**
 
-* Change a page which is set as home page
+* Setting a page as home page
 * Create new menu bar items and sub-items
 
 This how-to describes the following use case: 

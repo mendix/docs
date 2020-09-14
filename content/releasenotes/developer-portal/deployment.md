@@ -10,6 +10,13 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+
+### September 14th, 2020
+
+#### Mendix for Private Cloud
+
+* We resolved an issue where deployment of a new MDA to an environment set the constant values to the defaults in the MDA rather than applying the values set through the environment's [Model Options](/developerportal/deploy/private-cloud-deploy#environment-details). (Ticket 106933)
+
 ### September 9th, 2020
 
 #### Mendix for Private Cloud — Mendix Operator v1.5.0 and Mendix Gateway Agent v1.4.0

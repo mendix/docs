@@ -70,7 +70,7 @@ The style property allows you to specify additional CSS styling. If a class is a
 
 ### 3.5 Dynamic Classes{#dynamicclasses}
 
-The dynamic classes property allows you to specify one or more cascading stylesheet (CSS) class like the class property, but based on an [expression](expressions.md). This allows you to dynamically construct classes based on data from an enclosing data container. The dynamic classes constructed in the expression are appended to the classes defined in the [`Class`](#class) property.
+The dynamic classes property allows you to specify one or more cascading stylesheet (CSS) class like the class property, but based on an [expression](expressions). This allows you to dynamically construct classes based on data from an enclosing data container. The dynamic classes constructed in the expression are appended to the classes defined in the [`Class`](#class) property.
 
 ![](attachments/common-widget-properties/dynamic-classes.png)
 

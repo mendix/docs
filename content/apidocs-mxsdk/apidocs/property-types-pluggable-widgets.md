@@ -355,9 +355,9 @@ then the Studio Pro UI for the component appears like this:
 
 The expression property allows a user to configure an [expression](/refguide/expressions).
 
-If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the client will receive a `DynamicValue<T>` where `T` depends on a return type of the expression.
+If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the client will receive a `DynamicValue<T>` where `T` depends on the expression's return type.
 
-When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListExpressionValue<T>`](client-apis-for-pluggable-widgets#listexpressionvalue) where `T` depends on a return type of the expression. For more information, see the [Datasource](#datasource) section below.
+When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListExpressionValue<T>`](client-apis-for-pluggable-widgets#listexpressionvalue) where `T` depends on the expression's return type. For more information, see the [Datasource](#datasource) section below.
 
 {{% alert type="info" %}}
 Support for the `dataSource` attribute was introduced in Mendix 8.14.
@@ -403,7 +403,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.2 TextTemplate{#texttemplate}
 
-The TextTemplate property allows a user to configure translatable text template similar to the [Caption](/refguide/text#caption) of a text widget.
+The TextTemplate property allows a user to configure a translatable text template similar to the [Caption](/refguide/text#caption) of a text widget.
 
 If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the interpolated string will be passed to the client component as `DynamicValue<string>`.
 
@@ -420,7 +420,7 @@ Support for the `dataSource` attribute was introduced in Mendix 8.14.
 | ------------ | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`       | Yes      | String         | Must be `textTemplate`                                                                                                                                               |
 | `key`        | Yes      | String         | See [key](#key) |
-| `multiline`  | No       | Boolean        | `true` to enable multiline input in the Studio, `false` otherwise.                                                                                                   |
+| `multiline`  | No       | Boolean        | `true` to enable multiline input in the Studio, `false` otherwise                                                                                                   |
 | `required`   | No       | Boolean        | Whether the property must be specified by the user, `true` by default                                                                                                |
 | `dataSource` | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this text template property |
 

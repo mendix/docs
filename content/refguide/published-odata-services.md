@@ -141,6 +141,8 @@ You can write a *summary* and a *description* intended for people using the serv
 
 ## 5 Runtime Considerations
 
+### 5.1 General
+
 Once your OData-enabled app is running, an overview of exposed OData resources is available on the root URL followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/` You can copy and paste the links into for instance Excel to establish a link between your OData resources and Excel.
 
 {{% alert type="warning" %}}
@@ -152,3 +154,9 @@ For details on how to filter the OData response, refer to [OData Query Options](
 For details on how Mendix attributes are represented in OData, refer to [OData Representation](odata-representation).
 
 When exposing entities through OData, the entities are retrieved from the Mendix database in a streaming fashion, to avoid out-of-memory errors in the Mendix Runtime.
+
+### 5.2 On-Premises Deployments
+
+Some on-premises servers, in particular those using Microsoft IIS, will strip the host header from requests. This means that your OData service and documentation will be published on an unexpected URL.
+
+To resolve this issue, you will need to ensure your server preserves host headers. See the section [Preserving the Host Header](/developerportal/deploy/deploy-mendix-on-microsoft-windows#preserve-header) in the *Microsoft Windows* deployment documentation.

@@ -37,7 +37,7 @@ A [resource](published-odata-resource) is a network-accessible data object repre
 
 You can choose how you want to represent associations. For more information, see the [Associations](odata-representation#associations) section of *OData Representation*.
 
-### 3.2 Security
+### 3.2 Security {#security}
 
 You can configure security for the OData service when [Project Security](project-security) is enabled.
 

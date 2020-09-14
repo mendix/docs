@@ -10,6 +10,49 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### September 14th, 2020
+
+#### Mendix Cloud V4 Announcement - Deprecation of HTTPS SSL/TLS weak ciphers from **December 1st, 2020**
+
+To improve the security of the HTTPS connections made to apps in Mendix Cloud v4 we [enabled TLSv1.3 in February this year](#tls-v1_3). Since then more than 50% of the requests to Cloud v4 apps have been served over TLSv1.3.
+
+To further improve the security of the HTTPS connections to apps in Mendix Cloud v4 we are deprecating and stopping support for block ciphers. Block ciphers are considered weak.
+
+**On December 1st, 2020**, we will stop technical support for **TLSv1.2 Block ciphers (CBC)** for HTTPS connections to apps in **Mendix Cloud v4**.
+
+**What this means for your Mendix apps**
+
+Stopping support for TLSv1.2 Block ciphers (CBC) means that old clients will not be able to connect to your Mendix app any more.
+
+Some examples of clients which will no longer be supported are:
+
+* Java 7 (Mendix 5)
+* Internet Explorer version 11 on Windows 7
+* Internet Explorer version 11 on Windows 8.1
+* Safari before version 9 on OS X 10.11
+* Safari before version 9 on iOS 9
+
+**Test your clients**
+
+You can test whether your client (browser or integrating client) will be able to connect to your app after December 1st, 2020, by going to [tls-check.mendix.com](https://tls-check.mendix.com/).
+
+**What we continue to support (expert details)**
+
+SSL/TLS ciphers that are still supported for HTTPS connections after December 1st, 2020:
+
+**TLSv1.3**
+
+* `TLS_AES_128_GCM_SHA256`
+* `TLS_AES_256_GCM_SHA384`
+* `TLS_CHACHA20_POLY1305_SHA256`
+
+**TLSv1.2**
+
+* `TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384`
+* `TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256`
+* `TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256`
+* `TLS_DHE_RSA_WITH_AES_256_GCM_SHA384`
+* `TLS_DHE_RSA_WITH_AES_128_GCM_SHA256`
 
 ### September 14th, 2020
 
@@ -313,7 +356,7 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 * New Deploy API calls have been added. These will be added to the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) documentation shortly.
 * You will now be warned that you cannot restore a file-only backup to Mendix Cloud. You can only restore backups which include the database.
 
-### February 27th, 2020
+### February 27th, 2020{#tls-v1_3}
 
 #### TLSv1.3 Support for Mendix Cloud (All Regions)
 

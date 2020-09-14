@@ -8,10 +8,10 @@ tags: ["node","developer portal","deploy", "Studio", "settings", "target", "Mend
 
 ## 1 Introduction
 
-If you have a licensed app in Mendix Cloud v4 which you want to deploy directly to an environment, you need to select a target environment where Mendix Studio and Mendix Studio Pro will deploy your app when you click **Publish** (for Studio) or **Run** (for Studio Pro). For more information on licensed apps and environments, see [Mendix Cloud](mendix-cloud-deploy) and [Environments](environments).
+If you have a licensed app in Mendix Cloud v4 which you want to deploy directly to an environment, you need to select a target environment where Mendix Studio and Mendix Studio Pro will deploy your app when you click **Publish** (for Studio) or **Deploy to Licensed Cloud Node** (for Studio Pro). For more information on licensed apps and environments, see [Mendix Cloud](mendix-cloud-deploy) and [Environments](environments).
 
 {{% alert type="info" %}}
-By default the target environment is not selected. Thus, when you try to publish, you will get a warning message in Studio, or an error message in Studio Pro. For more information, see [Previewing & Publishing Your App](/studio/publishing-app) in the *Studio Guide* or [Run Menu](/refguide/run-menu) in the *Studio Pro Guide*.
+By default the target environment is not selected. Thus, when you try to publish, you will get a warning message in Studio, or an error message in Studio Pro. For more information, see [Previewing & Publishing Your App](/studio/publishing-app) in the *Studio Guide* or [Deploy to the Cloud](/refguide/deploy-to-the-cloud-dialog) in the *Studio Pro Guide*.
 
 When you deploy from Mendix Studio Pro, the deployment will also restart the target environment.
 {{% /alert %}}

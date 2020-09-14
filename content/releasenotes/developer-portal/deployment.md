@@ -12,7 +12,7 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ### September 14th, 2020
 
-#### Mendix Cloud V4 - Deprecation of HTTPS SSL/TLS weak ciphers from **December 1st, 2020**
+#### Mendix Cloud V4 Announcement - Deprecation of HTTPS SSL/TLS weak ciphers from **December 1st, 2020**
 
 To improve the security of the HTTPS connections made to apps in Mendix Cloud v4 we [enabled TLSv1.3 in February this year](#tls-v1_3). Since then more than 50% of the requests to Cloud v4 apps have been served over TLSv1.3.
 
@@ -22,7 +22,7 @@ To further improve the security of the HTTPS connections to apps in Mendix Cloud
 
 **What this means for your Mendix apps**
 
-Stopping support for TLSv1.2 Block ciphers (CBC) means that old clients will not be able to connect to your Mendix app anymore.
+Stopping support for TLSv1.2 Block ciphers (CBC) means that old clients will not be able to connect to your Mendix app any more.
 
 Some examples of clients which will no longer be supported are:
 
@@ -34,7 +34,7 @@ Some examples of clients which will no longer be supported are:
 
 **Test your clients**
 
-You can test whether your client (browser or integrating client) will be able to connect to your app after December 1st, 2020, by going to [tls-check.mendix.com](https://tls-check.mendix.com/)
+You can test whether your client (browser or integrating client) will be able to connect to your app after December 1st, 2020, by going to [tls-check.mendix.com](https://tls-check.mendix.com/).
 
 **What we continue to support (expert details)**
 

@@ -307,8 +307,7 @@ this.props.myDataSource.items.map(i => this.props.myWidgets(i));
 
 ### 4.11 ListExpressionValue {#listexpressionvalue}
 
-`ListExpressionValue` represents an [expression property](property-types-pluggable-widgets#expression) or a [text template property](property-types-pluggable-widgets#texttemplate) that is linked to a data source.
-This allows the client component to access expression or text template values for individual items from a `ListValue`. `ListExpressionValue` is a function and its definition is as follows:
+`ListExpressionValue` represents an [expression property](property-types-pluggable-widgets#expression) or [text template property](property-types-pluggable-widgets#texttemplate) that is linked to a data source. This allows the client component to access expression or text template values for individual items from a `ListValue`. `ListExpressionValue` is a function and its definition is as follows:
 
 ```ts
 export type ListExpressionValue<T extends AttributeValue> = (item: ObjectItem) => DynamicValue<T>;
@@ -316,8 +315,7 @@ export type ListExpressionValue<T extends AttributeValue> = (item: ObjectItem) =
 
 The type `<T>` depends on the return type as configured for the expression property. For a text template property, this type is always `string`.
 
-In order to work with the expression or text template value of a particular item of a `ListValue` first an instance of `DynamicValue` should be obtained by calling `ListExpressionValue` with the item. See an example below.
-
+In order to work with the expression or text template value of a particular item of a `ListValue`, first an instance of `DynamicValue` should be obtained by calling `ListExpressionValue` with the item. See an example below.
 
 Assuming widget properties are configured as follows (with an expression of type `boolean`):
 

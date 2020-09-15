@@ -103,32 +103,28 @@ To add content to the App Store, follow these steps:
 	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change this setting by updating the App Store component later.
 	{{% /alert %}}
 
-<<<<<<< HEAD
 5.  The **General** page will open, where you need to provide information about your component. The information you entered above is pre-filled on this page. Enter the following details:<br />
-
-=======
-5.  <a name="edit"></a>In the bottom half of the **DRAFT** screen, do the following:<br />
->>>>>>> development
 	a. Enter a **Name** for your content.<br />
 	b. Enter a **Description** of your content (for example, "Node control is an native Android app that gives a system administrator access to the Mendix Cloud nodes being administered. From the app, the status of the different environments within a node can be monitored and an environment can be started or stopped.")<br />
 	c. Select the **Studio Pro Version** on which you built the content.<br />
 	d. Select the type of **License** you want applied to your app (if applicable):<br />
-	
-	* **Apache V2** (for more information, see [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0))<br />
-	* **GNU General Public License, version 3** (for more information, see [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html))<br />
-	* **Mendix EULA** (for more information, see [Mendix Terms of Use](https://www.mendix.com/terms-of-use/))<br />
-	* **MindSphere Development License Agreement**
-	* **MIT** (for more information, see [MIT License](https://opensource.org/licenses/MIT))<br />
-	* **SDISW Development License Agreement for Mendix Sample Apps**<br />
-	* **SDISW End-User License Agreement for Mendix Connectors and Widgets** (for more information, see [SDISW End-User License Agreement for Mendix Connectors and Widgets](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Connectors_and_Widgets.pdf))<br />
-	* **SDISW End-User License Agreement for Mendix Sample Apps** (for more information, see [SDISW End-User License Agreement for Mendix Sample Apps](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Sample_Apps.pdf))<br />
-	
+
+	* [Apache V2](https://www.apache.org/licenses/LICENSE-2.0)<br />
+	* [GNU General Public License, version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)<br />
+	* [Mendix EULA](https://www.mendix.com/terms-of-use/)<br />
+	* [MindSphere Development License Agreement](https://siemens.mindsphere.io/en/terms)<br />
+	* [MIT](https://opensource.org/licenses/MIT)<br />
+	* [SDISW Development License Agreement for Mendix Sample Apps EXTERNAL](https://diswlogin.siemens.com/login?state=g6Fo2SBHWTQ5ZWdjLUs3Znpia3dDLXR5cXJpLTd6S0VrTmpuYaN0aWTZIEtmSzh0VHZIX3NTekVOSmJxYVMzUkpyczdIZ3RWQnVno2NpZNkgRGwzckYzM25QNXlUM3BmeUpjVmlVOUtoUmRkbGN5VDI&client=Dl3rF33nP5yT3pfyJcViU9KhRddlcyT2&protocol=samlp)<br />
+	* [SDISW End-User License Agreement for Mendix Connectors and Widgets](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Connectors_and_Widgets.pdf)<br />
+	* [SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Connectors_and_Widgets_EXTERNAL.pdf)<br />
+	* [SDISW End-User License Agreement for Mendix Sample Apps](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Sample_Apps.pdf)
+
 	You can request other license types to be added as **License** options by clicking the **Feedback** button on the right side of the App Store screen.
 	
 	{{% todo %}}[**Verify if select license from drop-down or if have to write in; that all license types/descriptions are there; also if clicking Feedback is still valid**]{{% /todo %}}
 	
 	![](attachments/share-app-store-content/general.jpg)
-	
+
 6. Click **Upload an Image** to upload an icon for the component
 7.  On each page of the upload flow, click one of the following buttons:
 
@@ -137,22 +133,18 @@ To add content to the App Store, follow these steps:
 
 8.  On the **Package** page, select your content source:
 
-<<<<<<< HEAD
-	* After clicking **Select from GitHub**, follow the steps on the dialog box for copying the link of the release you want to import
+	* If you need to click **Select from GitHub**, follow the steps on the dialog box for copying the link of the release you want to import
 		* To include the repo's *README.md* file on the component's [Documentation](#doc-tab) tab, make sure you have checked the **Import Documentation** box 
 		* When you are finished, click **OK**
-	* After clicking **Manual upload**, follow the steps on the dialog box for uploading the package source file
+	* If you need to click **Manual upload**, follow the steps on the dialog box for uploading the package source file
 		* When you are finished, click **Save**
 9.  If this is the first version of the component you are uploading, the version number in the **Version** section of the **Package** page will be automatically set to **1.0.0**. You can enter **Release Notes** for the component in the box provided describing what is new in that release.
-=======
-6.  On the **Overview** tab in the bottom half of the **Share your content** screen, you can do the following:
->>>>>>> development
 
 	{{% todo %}}[**Verify step above for versioning**]{{% /todo %}}
-
+	
 	![](attachments/share-app-store-content/package.jpg)
 
-10. On the **Enable** page, you can enter details on requirements and configuration for your component in the **Documentation**. Note that this documentation option is only avaiable when the **Import Documentation** box has not been checked. Follow the template for the recommended content:
+10. On the **Enable** page, you can enter details on requirements and configuration for your component in the **Documentation**. Note that this documentation option is only available when the **Import Documentation** box has not been checked. Follow the template for the recommended content:
 
 	* The documentation template includes the following sections that you must fill out in order to submit your content:
 		* An extended **Description** of the content
@@ -169,33 +161,10 @@ To add content to the App Store, follow these steps:
 
 	The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links.
 
-<<<<<<< HEAD
 	You can attach images to your documentation in one of two ways (uploaded images cannot be resized, but linked images can):
 
 	* Drag the image from file explorer to the editor (this will upload your image)
 	* Click the Image button in the editor tools and enter a URL which points to an image
-=======
-8. Note that there is nothing for you to do on the **Statistics** and **All versions** tabs. The **Statistics** tab will chart the downloads of your content over time. The **All versions** tab will list the various versions of your content that have been updated.
-9. <a name="version-details"></a>In the **Version Details** section on the bottom-right of the screen, do the following:<br />
-
-	a. Check the **Beta version** check-box if the content is in beta.<br />
-	b. Select the **Mendix Studio Pro version** on which you built the content.<br />
-	c. Select the type of **License** you want applied to your app (if applicable):<br />
-	
-	* [Apache V2](https://www.apache.org/licenses/LICENSE-2.0)<br />
-	* [GNU General Public License, version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)<br />
-	* [Mendix EULA](https://www.mendix.com/terms-of-use/)<br />
-	* [MindSphere Development License Agreement](https://siemens.mindsphere.io/en/terms)<br />
-	* [MIT](https://opensource.org/licenses/MIT)<br />
-	* [SDISW Development License Agreement for Mendix Sample Apps EXTERNAL](https://diswlogin.siemens.com/login?state=g6Fo2SBHWTQ5ZWdjLUs3Znpia3dDLXR5cXJpLTd6S0VrTmpuYaN0aWTZIEtmSzh0VHZIX3NTekVOSmJxYVMzUkpyczdIZ3RWQnVno2NpZNkgRGwzckYzM25QNXlUM3BmeUpjVmlVOUtoUmRkbGN5VDI&client=Dl3rF33nP5yT3pfyJcViU9KhRddlcyT2&protocol=samlp)<br />
-	* [SDISW End-User License Agreement for Mendix Connectors and Widgets](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Connectors_and_Widgets.pdf)<br />
-	* [SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Connectors_and_Widgets_EXTERNAL.pdf)<br />
-	* [SDISW End-User License Agreement for Mendix Sample Apps](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Sample_Apps.pdf)
-	
-	You can request other license types to be added as **License** options by clicking the **Feedback** button on the right side of the App Store screen.
-
-10. After entering the information for your content, you can click one of these buttons in the middle of the screen:
->>>>>>> development
 
 11. You can also do the following on this page:
 	* Click **Add Screenshot** to select images of the component (especially for configuration) from your computer and upload them – this is required for submitting a new component
@@ -218,16 +187,12 @@ If an existing App Store component is assigned to a [user group](app-store-overv
 
 To update content that has already been published, follow these steps:
 
-<<<<<<< HEAD
 1. Find the component you want to update (for example, by selecting [My Content](/appstore/general/app-store-overview#content) in **My Marketplace/App Store** and then clicking **Manage** for the component, or going straight to the [component details](app-store-overview#details) page).
+
+	{{% todo %}}[**Verify what is available on component details page for managing; add screenshot**]{{% /todo %}}
+
 2.  Click **Create new draft version**.
-=======
-1. Go to the information page for the content you want to update (for example, by selecting [My Content](/appstore/general/app-store-overview#content) in **My App Store** and finding the component you want to update).
-2.  Click **Create new draft version**:
-	
-	![](attachments/share-app-store-content/update_content_1.png)
->>>>>>> development
-	
+
 	{{% alert type="info" %}}Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated. If there is a draft version in progress, click **View draft** to see it.
 	{{% /alert %}}
 

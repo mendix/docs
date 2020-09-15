@@ -10,6 +10,16 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### September 15th, 2020
+
+#### Mendix Cloud
+
+We fixed an issue where some customers were getting JVM heap size out of memory errors for applications with a Studio target set. (Tickets 106848, 106966)
+
+{{% alert type="info" %}}
+You must restart the affected environment to apply this fix.
+{{% /alert %}} 
+
 ### September 14th, 2020
 
 #### Mendix Cloud V4 Announcement - Deprecation of HTTPS SSL/TLS weak ciphers from **December 1st, 2020**

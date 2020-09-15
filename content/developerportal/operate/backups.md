@@ -118,5 +118,5 @@ At the bottom of the screen, you can click **Delete** to delete this particular 
 * [How to Create a Backup](create-backup)
 * [How to Download a Backup](download-backup)
 * [How to Restore a Backup](restore-backup)
-* [How to Restore a Backup Locally](database-size-reduction)
+* [How to Restore a Backup Locally](restore-backup-locally)
 * [Database Size Reduction](database-size-reduction)

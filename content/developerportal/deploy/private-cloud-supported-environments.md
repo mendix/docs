@@ -24,6 +24,12 @@ We currently support deploying to the following Kubernetes cluster types:
 * [k3s](https://k3s.io/)
 * [minikube](https://minikube.sigs.k8s.io/docs/)
 
+{{% alert type="warning" %}}
+Only Kubernetes versions 1.13 through 1.18 are officially supported.
+
+Mendix for Private Cloud has not been evaluated against Kubernetes 1.19 and later versions.
+{{% /alert %}}
+
 ### 2.2 Cluster Requirements
 
 To install the Mendix Operator, the cluster administrator will need permissions to do the following:
@@ -121,7 +127,7 @@ The following managed PostgreSQL databases are supported:
 
 Amazon PostgreSQL instances require additional firewall configuration to allow connections from the Kubernetes cluster.
 
-Azure PostgreSQL databases require additional firewall configuration and SSL to be disabled to allow connections from the Kubernetes cluster.
+Azure PostgreSQL databases require additional firewall configuration to allow connections from the Kubernetes cluster.
 
 Some managed PostgreSQL databases might have restrictions or require additional configuration.
 
@@ -131,10 +137,13 @@ To use a PostgreSQL database, the Mendix Operator requires a master account with
 For every Mendix app environment, a new database schema and user (role) will be created so that the app can only access its own data.
 {{% /alert %}}
 
-These features are currently not supported:
+{{% alert type="info" %}}
+TLS is supported, and preferred if the PostgreSQL supports it.
 
-* SSL/TLS
-* Custom CAs for SSL/TLS
+Mendix for Private Cloud will first try to connect with TLS enabled; if the server doesn't support TLS, the Mendix Operator will retry connecting without TLS.
+
+To ensure compatibility with all PostgreSQL databases (including ones with self-signed certificates), all TLS CAs are trusted by default.
+{{% /alert %}}
 
 ### 4.3 Microsoft SQL Server
 
@@ -262,9 +271,18 @@ OpenShift routes are supported only in OpenShift.
 The only configuration option currently supported is turning TLS on or off.
 When TLS is turned on, `Edge` termination will be used, with automatic redirection from HTTP to HTTPS.
 
-{{% alert type="info" %}}
-Custom TLS certificates are not supported - the default router certificate will be used.
-{{% /alert %}}
+The following configuration options are available in OpenShift:
+
+* Turn TLS on and off
+* Add route annotations
+* Provide the name of an existing TLS certificate secret to use instead of the default router certificate
+* Provide a custom domain name (e.g. mendix.example.com) to use instead of the default OpenShift route domain
+
+It is also possible to provide a custom TLS configuration for individual environments, overriding the default configuration (only available in **Standalone** Mendix Operator installations):
+
+* Turn TLS on and off
+* Specify the name of an existing TLS certificate secret to use
+* Provide the TLS Certificate and Private Key values directly in the environment specification
 
 ### 6.2 Ingress
 
@@ -274,13 +292,25 @@ We currently support the following ingress controllers:
 * [Traefik 1.7](https://containo.us/traefik/)
 
 For ingress, it is possible to do the following:
+
 * Turn TLS on and off
-* Provide a domain name (e.g. mendix.example.com)
 * Add ingress annotations
+* Provide the name of an existing TLS secret to use
+* Provide a domain name (e.g. mendix.example.com)
 
 For each environment, the URL will be automatically generated based on the domain name.
 For example, if the domain name is set to mendix.example.com, then apps will have URLs such as myapp1-dev.mendix.example.com, myapp1-prod.mendix.example.com and so on.
 
 The DNS server should be configured to route all subdomains (the `*` subdomain, e.g. *.mendix.example.com) to the ingress/load balancer.
 
-For TLS, the ingress should have a default certificate with a wildcard domain (e.g. *.mendix.example.com).
+It is also possible to provide a custom TLS configuration for individual environments, overriding the default configuration (only available in **Standalone** Mendix Operator installations):
+
+* Turn TLS on and off
+* Specify the name of an existing TLS certificate secret to use
+* Provide the TLS Certificate and Private Key values directly in the environment specification
+
+There are multiple ways of managing TLS certificates:
+
+* The Ingress controller can have a default certificate with a wildcard domain (e.g. *.mendix.example.com*). For Ingress controllers which support for [Let's Encrypt](https://letsencrypt.org/), the Ingress controller can also request and manage TLS certificates automatically.
+* Providing a TLS certificate secret for each environment.
+* Using [cert-manager](https://cert-manager.io/) or a similar solution by using Ingress annotations. This service can be used to automatically request TLS certificates and create secrets for the Ingress controller.

@@ -46,6 +46,25 @@ Once the app has been created you can continue with [Set Up Region](#SetUpRegion
 
 You are now prompted with an SAP Cloud Platform login screen. Select the region where your SAP Cloud Platform is located.
 
+{{% alert type="info" %}}
+Currently supported regions are:
+
+* Australia (Sydney) 
+* AWS Japan 
+* AWS Singapore 
+* Azure Japan 
+* Azure Singapore 
+* Azure US East (VA) 
+* Azure US West (WA) 
+* Canada (Montreal) 
+* Europe (Frankfurt) 
+* Europe (Netherlands) 
+* US Central (IA) Beta 
+* US East (VA)
+
+Please contact Mendix support if you have a requirement for an additional region.
+{{% /alert %}}
+
 Make sure that you have enough quota in this region for your organization to run a Mendix app. You will need enough quota to create the following:
 
 * Database
@@ -289,6 +308,10 @@ If you receive an error trying to start the app, please refer to the [App Will N
 
 Click **Change Admin Password** to change the password for the administrator account (by default, MxAdmin) in your Mendix app.
 
+{{% alert type="warning" %}}
+The new password will not come into effect until you stop and start your environment.
+{{% /alert %}}
+
 #### 7.1.3 View Recent Log
 
 Click **View Recent Log** to see recent events written to the log.
@@ -472,7 +495,7 @@ There are also some differences in the way that Mendix can be used with SAP HANA
 
 SAP HANA works in a different way to PostgreSQL.
 
-If you select an SAP HANA database, an SAP HANA *schema* service will be added to your space and when you deploy your app it will be bound to the SAP HANA schema service. This schema service defines access to a separate SAP Cloud Platform, SAP HANA service, which also needs to be running in the same space as your app.
+If you select an SAP HANA database, an SAP HANA *schema* service will be added to your space and when you deploy your app it will be bound to the SAP HANA schema service. This schema service defines access to a separate SAP Cloud Platform, SAP HANA service, which also needs to be made available to the space of your app using the service preferences.
 
 {{% alert type="warning" %}}
 Please bear the following in mind when using SAP HANA as your Mendix database:

@@ -114,7 +114,7 @@ These headers are added to the HTTP request header. Each custom header is a pair
 
 ## 6 Request Tab {#request}
 
-![](attachments/integration-activities/response-tab.png)
+![](attachments/integration-activities/request-tab.png)
 
 The sections below describe the options in the drop-down menu for generating the request.
 

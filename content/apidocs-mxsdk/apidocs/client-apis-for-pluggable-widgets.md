@@ -272,7 +272,7 @@ interface MyListWidgetsProps {
 The following code sample shows how to get an `EditableValue` that represents a read-only value of an attribute of the first element from the `myDataSource`.
 
 ```ts
-const attributeValue = this.props.myDataSource.myAttributeOnDatasource(this.props.myDataSource.item[0]);
+const attributeValue = this.props.myDataSource.myAttributeOnDatasource(this.props.myDataSource.items[0]);
 ```
 
 Note: in this code sample checks of status of `myDataSource` and availability of items are omited for simplicity. See [EditableValue section](#editable-value) for more information about usage of `EditableValue`.

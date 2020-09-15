@@ -8,9 +8,9 @@ tags: ["studio", "consistency errors", "checks", "errors"]
 
 ## 1 Introduction 
 
-To make sure that your app is always properly built, Mendix Studio does several consistency [checks](checks) when publishing your app. When a consistency check is not met, Studio will notify you about this via consistency errors on the **Checks** panel. For more information on how to view the consistency errors, see the [Viewing Checks for Your App and Interacting with the Checks Panel](checks#viewing-checks) section in *Checks*. 
+To make sure that your app is always properly built, Mendix Studio does several consistency [checks](checks). When a consistency check is not met, Studio will notify you about this via the **Checks** panel. For more information on how to view the consistency errors, see the [Viewing Checks for Your App and Interacting with the Checks Panel](checks#viewing-checks) section in *Checks*. 
 
-Errors need to be solved before your app can be published. An example of a consistency error is when you do not specify the entity property of a data view on a page. 
+Errors need to be solved before your app can be previewed or published. An example of a consistency error is when you do not specify the entity property of a data view on a page. 
 
 ![](attachments/consistency-errors/data-view-no-entity.png)
 

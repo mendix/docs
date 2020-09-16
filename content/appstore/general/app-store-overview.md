@@ -47,9 +47,6 @@ The following filter options are also available:
 
 * **Tags**
 * **Ratings**
-* **Pricing plan**
-
-{{% todo %}}[**MEETING: Review filter options available on home page versus category page; Pricing plan available?**]{{% /todo %}}
 
 ## 3 Component Details Page {#details}
 

@@ -157,8 +157,6 @@ To add content to the App Store, follow these steps:
 		* Any **Known bugs**
 		* Any **Frequently Asked Questions**
 
-	{{% todo %}}[**MEETING: Verify template is used and that section descriptions above are still accurate**]{{% /todo %}}
-
 	The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links.
 
 	You can attach images to your documentation in one of two ways (uploaded images cannot be resized, but linked images can):
@@ -166,12 +164,11 @@ To add content to the App Store, follow these steps:
 	* Drag the image from file explorer to the editor (this will upload your image)
 	* Click the Image button in the editor tools and enter a URL which points to an image
 
-11. You can also do the following on this page:
-	* Click **Add Screenshot** to select images of the component (especially for configuration) from your computer and upload them – this is required for submitting a new component
-	* Click **Add Video** to select a video that demonstrates using the component from your computer
-	* Add a link to a **Demo** application that is accessible for seeing how the component is used
+11. Click **Add Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
 
 	![](attachments/share-app-store-content/enable.jpg)
+	
+	{{% todo %}}[**Update screenshot for documentation box and add-options**]{{% /todo %}}
 
 12. Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
 
@@ -196,14 +193,14 @@ To update content that has already been published, follow these steps:
 	{{% alert type="info" %}}Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be started. If there is a draft version in progress, click **View draft** on the page where you manage the component in order to see the draft.
 	{{% /alert %}}
 
-3. You can edit all component details, as described in the [Adding New App Store Content](#adding) section above.
-4.  In the **Version** section of the **Package** page, update the **Major**, **Minor**, and **Patch** numbers so that the component is saved as a new version:
+2. You can edit all component details, as described in the [Adding New App Store Content](#adding) section above.
+3.  In the **Version** section of the **Package** page, update the **Major**, **Minor**, and **Patch** numbers so that the component is saved as a new version:
 
 	* **Major update** – a large change (which will save the content from version 5.0 to version 6.0, for example)
 	* **Minor update** – a medium-sized change (which will save the content from version 6.0.0 to version 6.1.0, for example)
 	* **Patch** – a small change (which will save the content from 6.1.0 to 6.1.1, for example)
 
-5. On the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
+4.  On the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
 
 	{{% todo %}}[**PULL REQUEST: please verify steps above**]{{% /todo %}}
 

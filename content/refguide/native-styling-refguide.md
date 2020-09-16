@@ -1258,6 +1258,46 @@ export myCarouselStyle = {
 
 The default class to style all popup menus is named `com_mendix_widget_native_carousel_Carousel`.
 
+
+### 11.25 Signature {#signature}
+
+The Signature widget allows you to draw and save a signature.
+
+The widget’s style properties are structured as follows:
+
+```xml
+<container>
+    <signature/>
+    <buttonWrapper>
+        <Button>
+            <Caption>Clear</Caption>
+        </Button>
+        <Button>
+            <Caption>Save</Caption>
+        </Button>
+    </buttonWrapper>
+</container>
+```
+
+| Element | Style Properties    | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties.   |   |
+| `container` | `penColor` | This will change the color of the stroke. |
+| `buttonWrapper` | This has all ViewStyle properties. |
+| `buttonClearContainer` | This has all ViewStyle properties. |
+| `buttonClearContainer` | `rippleColor` | This will change the color of the ripple on Android.  |
+| `buttonClearContainer` | `activeOpacity` | This will change the opacity when touch is active on iOS.  |
+| `buttonClearContainer` | `underlayColor` | This will change the underlay color when touch is active on iOS.  |
+| `buttonClearCaption` | This has all TextStyle properties. |
+| `buttonSaveContainer` | This has all ViewStyle properties. |
+| `buttonSaveContainer` | `rippleColor` | This will change the color of the ripple on Android.  |
+| `buttonSaveContainer` | `activeOpacity` | This will change the opacity when touch is active on iOS.  |
+| `buttonSaveContainer` | `underlayColor` | This will change the underlay color when touch is active on iOS.  |
+| `buttonSaveCaption` | This has all TextStyle properties. |
+
+The default class to style all text boxes is named `com_mendix_widget_native_signature_Signature`.
+
+
 ## 12 Read More
 
 * [How to Style Your Mendix Native Mobile App](/howto/mobile/how-to-use-native-styling)

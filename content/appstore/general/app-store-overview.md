@@ -9,10 +9,10 @@ tags: ["app store", "widget", "connector", "module", "partner"]
 ## 1 Introduction
 
 {{% alert type="info" %}}
-As the Mendix App Store is being updated into a dynamic and fully functioning Mendix Marketplace, some pages will refer to "App Store" and some to "Marketplace."
+As the Mendix App Store is being updated into a dynamic and fully functioning Mendix Marketplace, some documentation pages will refer to "App Store" and some to "Marketplace."
 {{% /alert %}}
 
-{{% todo %}}[**Verify wording above**]{{% /todo %}}
+{{% todo %}}[**MEETING: Verify wording above**]{{% /todo %}}
 
 The [Mendix App Store](https://appstore.home.mendix.com/index3.html) is a vibrant marketplace containing complete sample apps that can be used right away as well as various components (connectors, widgets, and modules) that can be used to build custom apps more quickly. In the Mendix App Store, you can browse all the content, get what you need, and share the content you have created.
 
@@ -41,7 +41,7 @@ It also presents various content categories:
 | [Widgets](/appstore/widgets/) | Single user-interface elements that can be configured, such as containers, drop-down menus, and buttons. |
 | [Themes](/appstore/themes/) | Styling options for your apps that you can apply for different elements and devices. |
 
-{{% todo %}}[**Finish describing: Solutions**]{{% /todo %}}
+{{% todo %}}[**MEETING: Finish describing Solutions**]{{% /todo %}}
 
 The following filter options are also available:
 
@@ -49,7 +49,7 @@ The following filter options are also available:
 * **Ratings**
 * **Pricing plan**
 
-{{% todo %}}[**Review filter options available on home page versus category page; Pricing plan available?**]{{% /todo %}}
+{{% todo %}}[**MEETING: Review filter options available on home page versus category page; Pricing plan available?**]{{% /todo %}}
 
 ## 3 Component Details Page {#details}
 
@@ -64,44 +64,40 @@ The header for each component presents the following details:
 * The name and category of the component
 * The review average (in stars) and the number of reviews
 * The number of times the component has been downloaded
-* <a name="saved"></a>The **Add to saved** button which, when clicked, will add the component to the list on the [Dashboard](#dashboard) and [Saved](#saved-components) pages)
+* <a name="saved"></a>The **Add to Saved** button which, when clicked, will add the component to the list on the [Dashboard](#dashboard) and [Saved](#saved-components) pages
 * The **Share** button, which allows you to share the component to your networks
 * The following buttons (depending on the type of component and what the developer added to share):
 	* **Download** – click this to download the component
-		* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotion)
+		* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
 		* The best practice is to download a component from the App Store that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded App Store content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
 	* **Try for Free** – click this to [subscribe](#subscriptions) to a free trial of the paid [platform-supported](app-store-content-support#category) component
 
-{{% todo %}}[**Update screenshot of component details**]{{% /todo %}}
+{{% todo %}}[**MEETING: Verify "Add to saved" definition, cross-references, terms/labels**]{{% /todo %}}
 
-{{% todo %}}[**Verify "Add to saved" definition, cross-references, terms/labels**]{{% /todo %}}
+{{% todo %}}[**MEETING: Verify "Share" definition**]{{% /todo %}}
 
-{{% todo %}}[**Verify "Share" definition**]{{% /todo %}}
-
-{{% todo %}}[**Verify "Try for Free" definition and when it's available; verify that "Preview" and "Open" buttons will no longer be available [if still available, get definitions from current doc**]{{% /todo %}}
-
-{{% todo %}}[**Add cross-reference to section on using App Store directly in Studio Pro**]{{% /todo %}}
+{{% todo %}}[**MEETING: Verify "Try for Free" definition and when it's available; verify that "Preview" and "Open" buttons will no longer be available [if still available, get definitions from current doc**]{{% /todo %}}
 
 <a name="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
 
 * The latest **Version** number of the component
 * The Studio Pro version that the component **Requires** to work
+* The type of **License** for the component
 
 The **Publisher** section presents the name of the company who created the component as well as the **Date** when the component was first published.
 
-{{% todo %}}[**Verify Publisher section**]{{% /todo %}}
+{{% todo %}}[**MEETING: Verify Publisher section; what happens when you click company name?**]{{% /todo %}}
 
 The **Developers** section presents the names of the developers who last updated the component, with links to their [Mendix Profile](/developerportal/mendix-profile/).
 
-{{% todo %}}[**Verify definition of what developers are included and that link goes to Mendix Profile**]{{% /todo %}}
+{{% todo %}}[**MEETING: Verify definition of what developers are included and that link goes to Mendix Profile**]{{% /todo %}}
 
-The **Support** section presents the type of support Mendix offers for the component, which is further described in [App Store Content Support](app-store-content-support).
+The **Support** section presents the category of support Mendix offers for the component (for details on categories, see [App Store Content Support](app-store-content-support)).
 
 ---
 
-{{% todo %}}[**Verify that below will still be part of this section; especially UUID, which is linked to in section 3.1.1 of Project API**]{{% /todo %}}
+{{% todo %}}[**MEETING:Verify if below will still be part of this section; especially UUID, which is linked to in section 3.1.1 of Project API**]{{% /todo %}}
 
-* The type of **License** for the component
 * The **URL** for the component page that you can copy and share
 * The **UUID** of the component; if the component is part of the **Getting Started** category of App Store content, this UUID can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*
 * A **View on GitHub** link, which will take you to the GitHub source files of the component
@@ -110,27 +106,26 @@ The **Support** section presents the type of support Mendix offers for the compo
 
 The details page for each component presents the following item information tabs:
 
-*  **Overview** tab – contains following sections:
+*  **Overview** tab – contains the following sections:
 	* **Description** – a description of the component
 	* **Screenshots** – screenshots of the component
 	* **User Reviews** – user reviews of the component; to leave a review for the component, click **Add Review** – a section will open where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page)
 
-	![](attachments/app-store-overview/content_detail_5.jpg)
-
-{{% todo %}}[**Verify can still add screenshots**]{{% /todo %}}
+	{{% todo %}}[**MEETING: Verify can still add screenshots**]{{% /todo %}}
 
 *  **Documentation** tab – can include details on typical use cases, features and limitations, dependencies, installation and configuration, and frequently asked questions; [platform-supported](app-store-content-support#category) components are documented in the various categories of this *App Store Guide*:
 
 	![](attachments/app-store-overview/content_detail_6.jpg)
+	
+	{{% todo %}}[**Update screenshot for component with documentation**]{{% /todo %}}
 
 	* Clicking **Edit documentation** will open a text editor where you can edit the App Store component's documentation
 
 *  **Releases** tab – lists all the versions (updates) of the component, any of which can be downloaded by clicking **Download**:
 
 	![](attachments/app-store-overview/content_detail_8.jpg)
-	
 
-{{% todo %}}[**Verify no other tabs**]{{% /todo %}}
+{{% todo %}}[**MEETING: Verify no other tabs**]{{% /todo %}}
 	
 ## 4 My App Store {#my-app-store}
 
@@ -185,7 +180,7 @@ Click **Delete** to delete a draft.
 
 Click **Withdraw** to withdraw the content from the review process after you have [submitted it for approval](share-app-store-content#status) . This will return the content to the draft state.
 
-{{% todo %}}[**Verify the Withdraw option is available here and not on page with Submit for approval (see cross-reference above; verify name of button**]{{% /todo %}}
+{{% todo %}}[**MEETING: Verify the Withdraw option is available here and not on page with Submit for approval (see cross-reference above; verify name of button**]{{% /todo %}}
 
 ### 4.4 Shared with Me {#shared-with-me}
 
@@ -297,11 +292,13 @@ To delete a group, a Company Admin can click **Delete Group**.
 
 This page lists the **Product** (for example, **3D Visualization**), **Type** (for example, **App Service**), **Plan**, and **Expiration** of your subscriptions.
 
-{{% todo %}}[**Need more info here; add hyperlinks to examples as available**]{{% /todo %}}
+{{% todo %}}[**MEETING: verify description above, add more info and cross-references as available**]{{% /todo %}}
 
-Click **Manage App Services** to go to a page where you can manage the app services to which you have subscribed. There, you will **create and manage binding keys**.
+![](attachments/app-store-overview/subscriptions.jpg)
 
-{{% todo %}}[**Need more info here**]{{% /todo %}}
+Click **Manage App Services** to go to the page where you can manage the app services to which you have subscribed. There, you will **create and manage binding keys**.
+
+{{% todo %}}[**MEETING: Need more info here**]{{% /todo %}}
 
 ## 7 Read More
 

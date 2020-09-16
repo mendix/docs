@@ -121,7 +121,7 @@ To add content to the App Store, follow these steps:
 
 	You can request other license types to be added as **License** options by clicking the **Feedback** button on the right side of the App Store screen.
 	
-	{{% todo %}}[**Verify if select license from drop-down or if have to write in; that all license types/descriptions are there; also if clicking Feedback is still valid**]{{% /todo %}}
+	{{% todo %}}[**MEETING: verify if clicking Feedback is still valid**]{{% /todo %}}
 	
 	![](attachments/share-app-store-content/general.jpg)
 
@@ -157,7 +157,7 @@ To add content to the App Store, follow these steps:
 		* Any **Known bugs**
 		* Any **Frequently Asked Questions**
 
-	{{% todo %}}[**Verify template is used and that section descriptions above are still accurate**]{{% /todo %}}
+	{{% todo %}}[**MEETING: Verify template is used and that section descriptions above are still accurate**]{{% /todo %}}
 
 	The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links.
 
@@ -187,13 +187,13 @@ If an existing App Store component is assigned to a [user group](app-store-overv
 
 To update content that has already been published, follow these steps:
 
-1. Find the component you want to update (for example, by selecting [My Content](/appstore/general/app-store-overview#content) in **My Marketplace/App Store** and then clicking **Manage** for the component, or going straight to the [component details](app-store-overview#details) page).
+1.  Find the component you want to update by doing one of the following:
+	* Clcik **My Marketplace** > [My Content](/appstore/general/app-store-overview#content) and then click **Manage** for the component to update
+	* Go to the [component details](app-store-overview#details) page and click **Create new draft version**
 
-	{{% todo %}}[**Verify what is available on component details page for managing; add screenshot**]{{% /todo %}}
+	{{% todo %}}[**MEETING: "Create new draft version" button still available on component details page?; add screenshot**]{{% /todo %}}
 
-2.  Click **Create new draft version**.
-
-	{{% alert type="info" %}}Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated. If there is a draft version in progress, click **View draft** to see it.
+	{{% alert type="info" %}}Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be started. If there is a draft version in progress, click **View draft** on the page where you manage the component in order to see the draft.
 	{{% /alert %}}
 
 3. You can edit all component details, as described in the [Adding New App Store Content](#adding) section above.
@@ -204,6 +204,8 @@ To update content that has already been published, follow these steps:
 	* **Patch** – a small change (which will save the content from 6.1.0 to 6.1.1, for example)
 
 5. On the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
+
+	{{% todo %}}[**PULL REQUEST: please verify steps above**]{{% /todo %}}
 
 ## 6 Read More
 

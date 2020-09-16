@@ -9,10 +9,8 @@ tags: ["app store", "widget", "connector", "module", "partner"]
 ## 1 Introduction
 
 {{% alert type="info" %}}
-As the Mendix App Store is being updated into a dynamic and fully functioning Mendix Marketplace, some documentation pages will refer to "App Store" and some to "Marketplace."
+As the Mendix App Store is being updated into a dynamic and fully functioning Mendix Marketplace, some documentation pages will refer to "App Store" and some to "Marketplace." The URLs will also be updated during this conversion.
 {{% /alert %}}
-
-{{% todo %}}[**MEETING: Verify wording above**]{{% /todo %}}
 
 The [Mendix App Store](https://appstore.home.mendix.com/index3.html) is a vibrant marketplace containing complete sample apps that can be used right away as well as various components (connectors, widgets, and modules) that can be used to build custom apps more quickly. In the Mendix App Store, you can browse all the content, get what you need, and share the content you have created.
 
@@ -41,7 +39,7 @@ It also presents various content categories:
 | [Widgets](/appstore/widgets/) | Single user-interface elements that can be configured, such as containers, drop-down menus, and buttons. |
 | [Themes](/appstore/themes/) | Styling options for your apps that you can apply for different elements and devices. |
 
-{{% todo %}}[**MEETING: Finish describing Solutions**]{{% /todo %}}
+{{% todo %}}[**Update Solutions description**]{{% /todo %}}
 
 The following filter options are also available:
 
@@ -62,18 +60,14 @@ The header for each component presents the following details:
 * The review average (in stars) and the number of reviews
 * The number of times the component has been downloaded
 * <a name="saved"></a>The **Add to Saved** button which, when clicked, will add the component to the list on the [Dashboard](#dashboard) and [Saved](#saved-components) pages
-* The **Share** button, which allows you to share the component to your networks
+* The **Share** button, which allows you to copy the URL of the component and share it to your networks
 * The following buttons (depending on the type of component and what the developer added to share):
 	* **Download** – click this to download the component
 		* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
 		* The best practice is to download a component from the App Store that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded App Store content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
 	* **Try for Free** – click this to [subscribe](#subscriptions) to a free trial of the paid [platform-supported](app-store-content-support#category) component
 
-{{% todo %}}[**MEETING: Verify "Add to saved" definition, cross-references, terms/labels**]{{% /todo %}}
-
-{{% todo %}}[**MEETING: Verify "Share" definition**]{{% /todo %}}
-
-{{% todo %}}[**MEETING: Verify "Try for Free" definition and when it's available; verify that "Preview" and "Open" buttons will no longer be available [if still available, get definitions from current doc**]{{% /todo %}}
+{{% todo %}}[**Update "Try for Free" definition**]{{% /todo %}}
 
 <a name="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
 
@@ -83,21 +77,20 @@ The header for each component presents the following details:
 
 The **Publisher** section presents the name of the company who created the component as well as the **Date** when the component was first published.
 
-{{% todo %}}[**MEETING: Verify Publisher section; what happens when you click company name?**]{{% /todo %}}
+{{% todo %}}[** Verify what happens when you click company name?**]{{% /todo %}}
 
-The **Developers** section presents the names of the developers who last updated the component, with links to their [Mendix Profile](/developerportal/mendix-profile/).
-
-{{% todo %}}[**MEETING: Verify definition of what developers are included and that link goes to Mendix Profile**]{{% /todo %}}
+The **Developers** section presents the names of the developers who most recently updated the component, with links to their [Mendix Profile](/developerportal/mendix-profile/).
 
 The **Support** section presents the category of support Mendix offers for the component (for details on categories, see [App Store Content Support](app-store-content-support)).
 
 ---
 
-{{% todo %}}[**MEETING:Verify if below will still be part of this section; especially UUID, which is linked to in section 3.1.1 of Project API**]{{% /todo %}}
+**UPDATE**:
 
-* The **URL** for the component page that you can copy and share
-* The **UUID** of the component; if the component is part of the **Getting Started** category of App Store content, this UUID can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*
 * A **View on GitHub** link, which will take you to the GitHub source files of the component
+* 	-Will show on right with link
+* The **UUID** of the component; if the component is part of the **Getting Started** category of App Store content, this UUID can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*
+* 	-Visible in Releases tab
 
 ### 3.2 Tabs
 
@@ -107,9 +100,6 @@ The details page for each component presents the following item information tabs
 	* **Description** – a description of the component
 	* **Screenshots** – screenshots of the component
 	* **User Reviews** – user reviews of the component; to leave a review for the component, click **Add Review** – a section will open where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page)
-
-	{{% todo %}}[**MEETING: Verify can still add screenshots**]{{% /todo %}}
-
 *  **Documentation** tab – can include details on typical use cases, features and limitations, dependencies, installation and configuration, and frequently asked questions; [platform-supported](app-store-content-support#category) components are documented in the various categories of this *App Store Guide*:
 
 	![](attachments/app-store-overview/content_detail_6.jpg)
@@ -122,8 +112,6 @@ The details page for each component presents the following item information tabs
 
 	![](attachments/app-store-overview/content_detail_8.jpg)
 
-{{% todo %}}[**MEETING: Verify no other tabs**]{{% /todo %}}
-	
 ## 4 My App Store {#my-app-store}
 
 ### 4.1 Dashboard {#dashboard}
@@ -176,8 +164,6 @@ Click the name of an App Store component to be taken to the [DRAFT](share-app-st
 Click **Delete** to delete a draft.
 
 Click **Withdraw** to withdraw the content from the review process after you have [submitted it for approval](share-app-store-content#status) . This will return the content to the draft state.
-
-{{% todo %}}[**MEETING: Verify the Withdraw option is available here and not on page with Submit for approval (see cross-reference above; verify name of button**]{{% /todo %}}
 
 ### 4.4 Shared with Me {#shared-with-me}
 

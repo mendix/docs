@@ -119,10 +119,6 @@ To add content to the App Store, follow these steps:
 	* [SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Connectors_and_Widgets_EXTERNAL.pdf)<br />
 	* [SDISW End-User License Agreement for Mendix Sample Apps](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Sample_Apps.pdf)
 
-	You can request other license types to be added as **License** options by clicking the **Feedback** button on the right side of the App Store screen.
-	
-	{{% todo %}}[**MEETING: verify if clicking Feedback is still valid**]{{% /todo %}}
-	
 	![](attachments/share-app-store-content/general.jpg)
 
 6. Click **Upload an Image** to upload an icon for the component
@@ -138,6 +134,7 @@ To add content to the App Store, follow these steps:
 		* When you are finished, click **OK**
 	* If you need to click **Manual upload**, follow the steps on the dialog box for uploading the package source file
 		* When you are finished, click **Save**
+
 9.  If this is the first version of the component you are uploading, the version number in the **Version** section of the **Package** page will be automatically set to **1.0.0**. You can enter **Release Notes** for the component in the box provided describing what is new in that release.
 
 	{{% todo %}}[**Verify step above for versioning**]{{% /todo %}}
@@ -188,7 +185,7 @@ To update content that has already been published, follow these steps:
 	* Clcik **My Marketplace** > [My Content](/appstore/general/app-store-overview#content) and then click **Manage** for the component to update
 	* Go to the [component details](app-store-overview#details) page and click **Create new draft version**
 
-	{{% todo %}}[**MEETING: "Create new draft version" button still available on component details page?; add screenshot**]{{% /todo %}}
+	{{% todo %}}[**No more "Create new draft version" button available on component details page**]{{% /todo %}}
 
 	{{% alert type="info" %}}Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be started. If there is a draft version in progress, click **View draft** on the page where you manage the component in order to see the draft.
 	{{% /alert %}}

@@ -10,20 +10,17 @@ tags: ["Build", "Deploy", "deployment package", "command-line", "studio pro"]
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package from a Mendix Project.
 
-The version of MxBuild which you need is dependent on the version of the Mendix model you want to build. You can find the correct MxBuild download at a link with the format `https://cdn.mendix.com/runtime/mxbuild-{mxversion}.tar.gz`.
+The version of MxBuild which you need is dependent on the version of the Mendix model you want to build. You can find your correct MxBuild by entering this URL into a browser and replacing `mxversion` with your own, full Mendix version number: `https://cdn.mendix.com/runtime/mxbuild-{mxversion}.tar.gz`.
 
 {{% alert type="info" %}}
 
-A build number is included in the version, and this has to be included in the link path. For example:
+A build number is included in the version, and this has to be included in the link path mentioned above — for example`8.12.1.3458` is the 3458 build of the 8.12.1 Studio Pro release.
 
-* 8.1.2
-* 8.1.2.40272
+You can find the build number in path of your Mendix installation (for example if your installation looks like this `C:\Program Files\Mendix\8.12.1.3458`, use this URL to get your files: https://cdn.mendix.com/runtime/mxbuild-8.12.1.3458.tar.gz).
 
-You can find the build number in path of your Mendix installation (for example `C:\Program Files\Mendix\8.1.2.40272`).
+Any public version of Studio Pro in this  [Studio Pro Releases List](https://appstore.mendix.com/link/modelers/) will allow you to download MxBuild files. If you experience trouble downloading files, make sure your build is listed there.
 
 {{% /alert %}}
-
-So, the MxBuild for Mendix version 8.1.2 would be found at [https://cdn.mendix.com/runtime/mxbuild-8.1.2.40272.tar.gz](https://cdn.mendix.com/runtime/mxbuild-8.1.2.40272.tar.gz).
 
 You can extract the files using your favorite archival tool, such as [7-Zip](https://www.7-zip.org/).
 

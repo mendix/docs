@@ -1,7 +1,7 @@
 ---
 title: "Configure a Navigation Bar"
-category: "Navigation Document"
 description: "This how-to describes the process of configuring a navigation bar in Mendix Studio."
+menu_order: 15
 tags: ["studio", "navigation", "how to", "navigation bar"]
 ---
 
@@ -19,10 +19,18 @@ This how-to describes the following use case:
 You would like to configure a menu bar for your app. You have several pages that you would like to add to it:
 
 * **Employees** – a page which lists all employees in your company and should be a home page
+
 * **New_Employee** – a page for creating a new employee 
+
 * **Job_Details** – contains a list with such details as employee's position, department, income; you would like to keep this page together with other two pages listed below under one menu item called  **Employee_Details** 
+
 * **Personal_Info** – contains a list with personal employee information, such as full name, emergency contacts, address; should be a menu sub-item of the **Employee_Details** menu item
+
 * **Documents** – contains a list with employee files, such as employment contract, medical insurance; should be a menu sub-item of the **Employee_Details** menu item
+
+The configured menu bar will look the following way:
+
+![Configured Menu](attachments/navigation-how-to-configure/navigation-previewed.png)
 
 You also have a page called **Home_web** that is set as a home page by default. Your navigation document currently looks the following way:
 
@@ -44,17 +52,21 @@ Currently the **Home_web** page is set as the home page for your app. However, y
 
 1. Click the **Navigation Document** icon in the left menu bar. 
 
-2. Select the **Home** menu item, go to its properties and do the following:
+2. Select the **Home** menu item:
+
+    ![Default Navigation](attachments/navigation-how-to-configure/navigation-default.png) 
+    
+3. Open its properties. The property **Set as Homepage** is enabled by default for the **Home** menu item. You need to change the page that is currently selected in properties for it. Do the following:
 
     1.  Click the **Page** property to change the page that is currently set as home page:
-    
+
         ![Home Page Properties](attachments/navigation-how-to-configure/home-page-properties.png)
-    
+
     3. In the **Select Page** dialog box, choose **Employees** and click **Select**. 
 
         ![Select Page Dialog Box](attachments/navigation-how-to-configure/select-page-dialog.png)
 
-Now the **Employees** page is the new how page for your app.
+You change the page that was selected as the home page by default and set the **Employees** page as the new how page for your app.
 
 ### 3.2 Creating Menu Item for the New Employee Page
 
@@ -95,6 +107,9 @@ To create the menu item for the **New_Employee** page, do the following:
 Good job! You have added a menu item for the **New Employee** page to your navigation:
 
 ![New Menu Item Created](attachments/navigation-how-to-configure/new-menu-item-created.png)
+
+[Preview your app](/studio/publishing-app) to see how the menu items look like:
+![Previewed Menu Items](attachments/navigation-how-to-configure/previewed-menu-items.png)
 
 ### 3.3 Create a Menu Item for the Employee_Details Page and Configuring Its Sub-Items
 
@@ -138,7 +153,7 @@ Congratulations! You created and configured navigation for your app:
 
 ![Configured Navigation](attachments/navigation-how-to-configure/configured-navigation.png)
 
-[Preview your app](/studio/publishing-app) to see how the navigation displays:
+In Studio, the navigation is build in all starter apps either as a side bar or the top bar. [Preview your app](/studio/publishing-app) to see how the navigation displays:
 
 ![Previewed Navigation](attachments/navigation-how-to-configure/navigation-previewed.png)
 

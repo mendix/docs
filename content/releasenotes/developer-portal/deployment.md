@@ -10,9 +10,17 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### September 21st, 2020
+
+#### Mendix Cloud v4
+
+* We have added the ability for Technical Contacts to download the activity log from an environment.
+* We have split the **Edit App** button into two separate buttons: **Edit in Studio** and **Edit in Studio Pro**.
+* We removed the ability to build PhoneGap hybrid applications through the Developer Portal. The PhoneGap Build service is removed by Adobe on 1 October, so this action would have failed after this date. You can still build your hybrid app locally.
+
 ### September 17th, 2020
 
-#### Mendix Cloud 
+#### Mendix Cloud v4
 
 * We improved the way that the SSL/TLS connection is established to the database instance in Mendix Cloud **v4**. Now the application will verify that the Subject Alternative Name attribute(s) or the Common Name attribute of the database server certificate is matched against the database host name.
 

@@ -10,6 +10,14 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### September 17th, 2020
+
+#### Mendix Cloud 
+
+* We improved the way that the SSL/TLS connection is established to the database instance in Mendix Cloud **v4**. Now the application will verify that the Subject Alternative Name attribute(s) or the Common Name attribute of the database server certificate is matched against the database host name.
+
+{{% alert type="info" %}}This change will take effect the next time you deploy your application.{{% /alert %}}
+
 ### September 15th, 2020
 
 #### Mendix Cloud

@@ -1261,7 +1261,8 @@ The default class to style all popup menus is named `com_mendix_widget_native_ca
 
 ### 11.25 Signature {#signature}
 
-The Signature widget allows you to draw and save a signature. THe signature widget looks like this: 
+The signature widget allows you to draw and save a signature. THe signature widget looks like this: 
+
 {{% image_container width="350" %}}![signature](attachments/native-styling-refguide/signature.png){{% /image_container %}}
 
 The widget’s style properties are structured as follows:
@@ -1297,7 +1298,6 @@ The widget’s style properties are structured as follows:
 | `buttonSaveCaption` | This has all TextStyle properties. |
 
 The default class to style all text boxes is named `com_mendix_widget_native_signature_Signature`.
-
 
 ## 12 Read More
 

@@ -165,6 +165,8 @@ To add content to the App Store, follow these steps:
 
 	![](attachments/share-app-store-content/enable.jpg)
 	
+	You can also optionally add a **Video** and **Demo**.
+	
 	{{% todo %}}[**Update screenshot for documentation box and add-options**]{{% /todo %}}
 
 12. Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
@@ -181,11 +183,7 @@ If an existing App Store component is assigned to a [user group](app-store-overv
 
 To update content that has already been published, follow these steps:
 
-1.  Find the component you want to update by doing one of the following:
-	* Clcik **My Marketplace** > [My Content](/appstore/general/app-store-overview#content) and then click **Manage** for the component to update
-	* Go to the [component details](app-store-overview#details) page and click **Create new draft version**
-
-	{{% todo %}}[**No more "Create new draft version" button available on component details page**]{{% /todo %}}
+1.  Find the component clicking **My Marketplace** > [My Content](/appstore/general/app-store-overview#content) and then **Manage** for the component to update
 
 	{{% alert type="info" %}}Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be started. If there is a draft version in progress, click **View draft** on the page where you manage the component in order to see the draft.
 	{{% /alert %}}

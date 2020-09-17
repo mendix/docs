@@ -36,15 +36,20 @@ It also presents various content categories:
 | Create New App | Click this to select a app template for your new app project. |
 | [Modules](/appstore/modules/) | These elements enable new functionality with accompanying domain models and security options. |
 | Solutions | Fully-formed solutions for apps you can immediately start using. |
+| App Services | -- |
 | [Widgets](/appstore/widgets/) | Single user-interface elements that can be configured, such as containers, drop-down menus, and buttons. |
 | [Themes](/appstore/themes/) | Styling options for your apps that you can apply for different elements and devices. |
 
-{{% todo %}}[**Update Solutions description**]{{% /todo %}}
+{{% todo %}}[**Update Solutions description; verify App Services will be there and add description.**]{{% /todo %}}
 
 The following filter options are also available:
 
 * **Tags**
 * **Ratings**
+
+Some components have the **Premium** label, which means they are paid [platform-supported](app-store-content-support#category) components to which you can [subscribe](#subscriptions).
+
+{{% todo %}}[**Verify "Premium" definition**]{{% /todo %}}
 
 ## 3 Component Details Page {#details}
 
@@ -61,19 +66,23 @@ The header for each component presents the following details:
 * The number of times the component has been downloaded
 * <a name="saved"></a>The **Add to Saved** button which, when clicked, will add the component to the list on the [Dashboard](#dashboard) and [Saved](#saved-components) pages
 * The **Share** button, which allows you to copy the URL of the component and share it to your networks
-* The following buttons (depending on the type of component and what the developer added to share):
+* The following buttons, depending on the category of component and what the developer has added to share:
 	* **Download** – click this to download the component
 		* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
 		* The best practice is to download a component from the App Store that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded App Store content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
+	* **Subscribe** – click this to [subscribe](#subscriptions) to a paid [platform-supported](app-store-content-support#category) app service
 	* **Try for Free** – click this to [subscribe](#subscriptions) to a free trial of the paid [platform-supported](app-store-content-support#category) component
 
-{{% todo %}}[**Update "Try for Free" definition**]{{% /todo %}}
+	{{% todo %}}[**Verify "Subscribe" and "Try for Free" definitions**]{{% /todo %}}
 
 <a name="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
 
 * The latest **Version** number of the component
 * The Studio Pro version that the component **Requires** to work
 * The type of **License** for the component
+* A **View on GitHub** link, which will take you to the GitHub source files of the component
+
+{{% todo %}}[**Verify "View on GitHub" link position and update screenshot to reflect**]{{% /todo %}}
 
 The **Publisher** section presents the name of the company who created the component as well as the **Date** when the component was first published.
 
@@ -83,24 +92,16 @@ The **Developers** section presents the names of the developers who most recentl
 
 The **Support** section presents the category of support Mendix offers for the component (for details on categories, see [App Store Content Support](app-store-content-support)).
 
----
-
-**UPDATE**:
-
-* A **View on GitHub** link, which will take you to the GitHub source files of the component
-* 	-Will show on right with link
-* The **UUID** of the component; if the component is part of the **Getting Started** category of App Store content, this UUID can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*
-* 	-Visible in Releases tab
 
 ### 3.2 Tabs
 
-The details page for each component presents the following item information tabs:
+The details page for a component presents the following item information tabs:
 
-*  **Overview** tab – contains the following sections:
+*  **Overview** – contains the following sections:
 	* **Description** – a description of the component
 	* **Screenshots** – screenshots of the component
 	* **User Reviews** – user reviews of the component; to leave a review for the component, click **Add Review** – a section will open where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page)
-*  **Documentation** tab – can include details on typical use cases, features and limitations, dependencies, installation and configuration, and frequently asked questions; [platform-supported](app-store-content-support#category) components are documented in the various categories of this *App Store Guide*:
+*  **Documentation** – can include details on typical use cases, features and limitations, dependencies, installation and configuration, and frequently asked questions; [platform-supported](app-store-content-support#category) components are documented in the various categories of this *App Store Guide*:
 
 	![](attachments/app-store-overview/content_detail_6.jpg)
 	
@@ -108,10 +109,16 @@ The details page for each component presents the following item information tabs
 
 	* Clicking **Edit documentation** will open a text editor where you can edit the App Store component's documentation
 
-*  **Releases** tab – lists all the versions (updates) of the component, any of which can be downloaded by clicking **Download**:
+* **Pricing**  – lists the pricing options (only for paid components)
+
+	![](attachments/app-store-overview/content_detail_7.jpg)
+	
+	{{% todo %}}[**Verify definition above**]{{% /todo %}}
+
+* **Releases** – lists all the versions of the component (any of which can be downloaded by clicking **Download**) along with details like the **Framework version** and the **UUID** (which can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*): 
 
 	![](attachments/app-store-overview/content_detail_8.jpg)
-
+	
 ## 4 My App Store {#my-app-store}
 
 ### 4.1 Dashboard {#dashboard}
@@ -164,6 +171,8 @@ Click the name of an App Store component to be taken to the [DRAFT](share-app-st
 Click **Delete** to delete a draft.
 
 Click **Withdraw** to withdraw the content from the review process after you have [submitted it for approval](share-app-store-content#status) . This will return the content to the draft state.
+
+{{% todo %}}[**Update screenshot to have Withdraw button**]{{% /todo %}}
 
 ### 4.4 Shared with Me {#shared-with-me}
 
@@ -275,13 +284,13 @@ To delete a group, a Company Admin can click **Delete Group**.
 
 This page lists the **Product** (for example, **3D Visualization**), **Type** (for example, **App Service**), **Plan**, and **Expiration** of your subscriptions.
 
-{{% todo %}}[**MEETING: verify description above, add more info and cross-references as available**]{{% /todo %}}
+{{% todo %}}[**Verify description above, add more info and cross-references as available**]{{% /todo %}}
 
 ![](attachments/app-store-overview/subscriptions.jpg)
 
 Click **Manage App Services** to go to the page where you can manage the app services to which you have subscribed. There, you will **create and manage binding keys**.
 
-{{% todo %}}[**MEETING: Need more info here**]{{% /todo %}}
+{{% todo %}}[**Need more info here**]{{% /todo %}}
 
 ## 7 Read More
 

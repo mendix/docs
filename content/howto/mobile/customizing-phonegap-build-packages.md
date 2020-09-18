@@ -24,4 +24,4 @@ To download the PhoneGap package, publish your app for mobile app stores through
 
 ## 3 Customizing the PhoneGap Package
 
-You can customize the PhoneGap package to suit your use case. Once you have customized your app according to your needs, you can [what goes here??](/broken/link)
+You can customize the PhoneGap package to suit your use case. Once you have customized your app according to your needs, you can build your app locally by following the [Building your iOS App Locally](/developerportal/deploy/mobileapp#building-ios-locally) or [Building Your Android App Locally](fill-broken-link-monday) sections of the *Mobile App Guide*. 

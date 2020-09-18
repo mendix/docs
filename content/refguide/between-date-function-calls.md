@@ -219,9 +219,9 @@ The output results in 8 days divided by 7 days in a week:
 1.1428571428571428
 ```
 
-## 8 monthsBetween
+## 8 calendarMonthsBetween
 
-The `monthsBetween` function calculates the difference between the input values in months. Time will be ignored.
+The `calendarMonthsBetween` function calculates the difference between the input values in months. Time will be ignored.
 
 ### 8.1 Input Parameters
 
@@ -245,7 +245,7 @@ The output is described in the table below:
 If you use the following input:
 
 ```java
-monthsBetween(dateTime(2007, 1, 1, 10, 1, 1), dateTime(2007, 8, 1, 1, 1, 1))
+calendarMonthsBetween(dateTime(2007, 1, 1, 10, 1, 1), dateTime(2007, 8, 1, 1, 1, 1))
 ```
 
 The output results in the amount of months between the two dates:
@@ -254,9 +254,9 @@ The output results in the amount of months between the two dates:
 7
 ```
 
-## 9 yearsBetween
+## 9 calendarYearsBetween
 
-The `yearsBetween` function calculates the difference between the input values in years. Time will be ignored.
+The `calendarYearsBetween` function calculates the difference between the input values in years. Time will be ignored.
 
 ### 9.1 Input Parameters
 
@@ -280,7 +280,7 @@ The output is described in the table below:
 If you use the following input:
 
 ```java
-yearsBetween(dateTime(2007, 1, 1, 10, 1, 1), dateTime(2017, 1, 1, 1, 1, 1))
+calendarYearsBetween(dateTime(2007, 1, 1, 10, 1, 1), dateTime(2017, 1, 1, 1, 1, 1))
 ```
 
 The output results in the amount of years between the two dates:

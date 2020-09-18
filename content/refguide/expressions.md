@@ -117,8 +117,8 @@ if $package/weight < 1.00 then 0.00 else 5.00`
 * [`hoursBetween`](between-date-function-calls) – the hours between two dates
 * [`daysBetween`](between-date-function-calls) – the days between two dates
 * [`weeksBetween`](between-date-function-calls) – the weeks between two dates
-* [`monthsBetween`](between-date-function-calls) - the months between two dates
-* [`yearsBetween`](between-date-function-calls) - the years between two dates
+* [`calendarMonthsBetween`](between-date-function-calls) - the months between two dates
+* [`calendarYearsBetween`](between-date-function-calls) - the years between two dates
 
 ## 12 Add Date Function Calls
 

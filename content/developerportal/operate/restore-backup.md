@@ -124,7 +124,7 @@ This contains the *db.backup* file. This is a PostgreSQL dump file created using
 {{% alert type="warning" %}}
 If the dump does not use the *custom format* then the restore will fail.
 
-The dump must be created with pg_dump version 9.6.17 or below. If it is created with a later version, then the restore will fail.
+The dump must be created with pg_dump version 9.6.17 or below. If it is created with a later version, then the upload will fail.
 {{% /alert %}}
 
 ### tree folder

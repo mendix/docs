@@ -20,7 +20,7 @@ It is convenient to have an Apple Mac available, but it is not a requirement. Yo
 
 ### 2.1 On Apple Macs
 
-If you have an Apple Mac available, see the Apple developer documentation on [certificate management](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html) for information on how to obtain an iOS signing certificate and distribution profile. Next, see the Apple documentation on [how to create the required distribution profile](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html). Finally, check the end of this section for information on how to [upload the signing key files to Adobe PhoneGap Build](managing-app-signing-keys).
+If you have an Apple Mac available, see the Apple developer documentation on [certificate management](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html) for information on how to obtain an iOS signing certificate and distribution profile. Next, see the Apple documentation on [how to create the required distribution profile](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html). Finally, check the end of this section for information on how to [upload the signing key files to Adobe PhoneGap Build](managing-app-signing-keys#uploading-keys).
 
 ### 2.2 On Other Platforms
 
@@ -54,7 +54,7 @@ The resulting *ios.csr* file must be uploaded to the Apple Developer Member Cent
 
 Once you have the certificate file, you need to obtain a distribution profile. The Apple Developer Member Center allows you to define an app identifier, a test device, and finally a distribution profile. For more information, check the Apple documentation on how to [maintain identifiers, devices and profiles](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html).
 
-### 2.4 Uploading the Key to Adobe PhoneGap Build
+### 2.4 Uploading the Key to Adobe PhoneGap Build {#uploading-keys}
 
 Once you have downloaded the signing certificate (a *.cer* file), you need to convert the signing certificate from a *.cer* to a *.p12*. Use OpenSSL with the following steps:
 

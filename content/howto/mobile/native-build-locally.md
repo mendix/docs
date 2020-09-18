@@ -9,7 +9,7 @@ tags: ["native", "mobile", "build", "local", "xcode", "android studio"]
 ## 1 Introduction
 
 {{% alert type="warning" %}}
-Due to funamental changes in how XCode 12, Mendix Native Apps cannot be build currently using XCode 12. Use XCode 11.7 to build instead.
+Due to fundamental changes in XCode 12, Mendix native mobile apps cannot be built using XCode 12. Use XCode 11.7 to build instead.
 {{% /alert %}}
 
 By default when building your native mobile app binaries, Mendix uses [Visual Studio App Center](https://appcenter.ms/sign-in?original_url=%2Fapps) as a service so that users can build without having to install tools like XCode or Android Studio. However, there are cases when using App Center is not allowed or possible. In those situations, you can build your apps locally without an internet connection.

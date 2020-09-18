@@ -9,9 +9,11 @@ tags: ["mobile", "app store", "phonegap"]
 ## 1 Introduction
 
 {{% alert type="warning" %}}
-Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. PhoneGap does not allow you to create  iOS 13 builds, but the Apple App Store requires builds be iOS 13 or higher. As a result, as of April 30th 2020, it is not possible to build hybrid iOS or Android apps. To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
+Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible. 
 
-If you wish to build your hybrid app without publishing it in an app Store, see the [Doing It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) section of the *Mobile App Developer Portal Guide*.
+If you wish to build your hybrid app without publishing it in an app Store, see the [Doing It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) section of the *Mobile App Developer Portal Guide*. Under that section are instructions for building [iOS](/developerportal/deploy/mobileapp#building-ios-locally) and Android apps locally.
+
+To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
 {{% /alert %}}
 
 The Mendix Platform integrates with the Adobe PhoneGap Build service to provide you with hybrid mobile apps that are ready to be installed on your devices or published to mobile app stores. One step in the integration is the creation of a PhoneGap package, and automatic upload of it to PhoneGap Build. We put a generic runtime into the package and configure it for your specific app. For most Mendix Apps, this is sufficient and convenient.

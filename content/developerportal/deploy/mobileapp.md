@@ -90,9 +90,9 @@ On the right side of the screen, you can choose which operating system you want 
 
 When you are ready to build, click **Publish for Mobile App Stores**.
 
-This wizard will guide you through the process of creating app packages for the Apple App Store and Google Play Store. These packages can be built using Adobe's PhoneGap Build service. The resulting mobile apps can then access native functionality such as the geo location service and the camera.
+This wizard will guide you through the process of creating app packages for the Apple App Store and Google Play Store. The resulting mobile apps can then access native functionality such as the geo location service and the camera.
 
-You need an account for Adobe PhoneGap Build and for the app stores in which you want to publish your app.
+You need an account for Adobe PhoneGap Build and for the app stores in which you want to publish your app. 
 
 There are two ways that the device can build the packages:
 
@@ -102,18 +102,12 @@ There are two ways that the device can build the packages:
 ### 4.1 Building It in the Cloud
 
 {{% alert type="warning" %}}
-Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. PhoneGap does not allow you to create  iOS 13 builds, but the Apple App Store requires builds be iOS 13 or higher. As a result, as of April 30th 2020, hybrid iOS apps built using the PhoneGap Build service are not being accepted on Apple's App Store. To publish your iOS app in the Apple App Store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
+Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible. 
 
-If you wish to build your hybrid iOS app without publishing it in the Apple App Store,  continue with either the [Doing It Yourself](#doing-it-yourself) section for remote building or [Building Your iOS App Locally](#building-ios-locally) for local building.
+To build a hybrid app and publish it, see the [Doing It Yourself](#doing-it-yourself) section below for remote building or the [Building Your iOS App Locally](#building-ios-locally) and [Building Your Android App Locally](fill-broken-link-soon) sections for local building.
+
+To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
 {{% /alert %}}
-
-After selecting the **Build in the cloud** option and choosing the correct environment, you are ready to start the PhoneGap build.
-
-When you click **Start PhoneGap Build job**, Mendix will generate an Adobe PhoneGap Build package and send it to the PhoneGap Build service on your behalf. You might be required to authorize this request using an Adobe PhoneGap Build account.
-
-As soon as the build job has completed, the platform-specific packages will be ready for download.
-
-Please note that an Adobe PhoneGap Build account is required to continue. Create [an account](https://build.phonegap.com/plans) if you do not have one already.
 
 ### 4.2 Doing It Yourself {#doing-it-yourself}
 

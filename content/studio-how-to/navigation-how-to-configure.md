@@ -7,7 +7,7 @@ tags: ["studio", "navigation", "how to", "navigation bar"]
 
 ## 1 Introduction
 
-This how-to explains how to configure a menu bar for your app such as creating menu items and sub-items. 
+This how-to explains how to configure a navigation bar for your app such as creating menu items and sub-items. 
 
 **This how-to will teach you how to do the following:**
 
@@ -16,9 +16,19 @@ This how-to explains how to configure a menu bar for your app such as creating m
 
 This how-to describes the following use case: 
 
-You would like to configure a menu bar for your app. You have several pages that you would like to add to it:
+You would like to configure a menu bar for your app. 
 
-* **Employees** – a page which lists all employees in your company and should be a home page
+In Studio, the navigation bar is build in most page templates and is available on pages either as a sidebar or top bar. The configured menu bar will look the following way:
+
+![Configured Menu](attachments/navigation-how-to-configure/navigation-previewed.png)
+
+Currently you have a page called **Home_web** that is set as a home page by default. Your navigation document currently looks the following way:
+
+![Navigation Default](attachments/navigation-how-to-configure/navigation-default.png)
+
+You have several pages that you would like to add to the navigation:
+
+* **Employees** – a page that lists all employees in your company and should be a home page
 
 * **New_Employee** – a page for creating a new employee 
 
@@ -27,14 +37,6 @@ You would like to configure a menu bar for your app. You have several pages that
 * **Personal_Info** – contains a list with personal employee information, such as full name, emergency contacts, address; should be a menu sub-item of the **Employee_Details** menu item
 
 * **Documents** – contains a list with employee files, such as employment contract, medical insurance; should be a menu sub-item of the **Employee_Details** menu item
-
-The configured menu bar will look the following way:
-
-![Configured Menu](attachments/navigation-how-to-configure/navigation-previewed.png)
-
-You also have a page called **Home_web** that is set as a home page by default. Your navigation document currently looks the following way:
-
-![Navigation Default](attachments/navigation-how-to-configure/navigation-default.png)
 
 ## 2 Prerequisites
 
@@ -66,7 +68,7 @@ Currently the **Home_web** page is set as the home page for your app. However, y
 
         ![Select Page Dialog Box](attachments/navigation-how-to-configure/select-page-dialog.png)
 
-You change the page that was selected as the home page by default and set the **Employees** page as the new how page for your app.
+You have changed the page that was selected as the home page by default and set the **Employees** page as the new home page for your app.
 
 ### 3.2 Creating Menu Item for the New Employee Page
 
@@ -76,7 +78,7 @@ To create the menu item for the **New_Employee** page, do the following:
 
 1. Click a plus at the bottom of the navigation tree to create a menu item:
 
-    ![Adding Menu Item](attachments/navigation-how-to-configure/adding-menu-item.png)
+    {{% image_container width="350" %}}![Adding Menu Item](attachments/navigation-how-to-configure/adding-menu-item.png){{% /image_container %}}
 
 2. Open the new menu item properties and do the following:
 
@@ -108,14 +110,14 @@ Good job! You have added a menu item for the **New Employee** page to your navig
 
 ![New Menu Item Created](attachments/navigation-how-to-configure/new-menu-item-created.png)
 
-[Preview your app](/studio/publishing-app) to see how the menu items look like:
+Click **Preview** in the top-right corner to [preview your app](/studio/publishing-app) and test how the navigation menu looks like:
 ![Previewed Menu Items](attachments/navigation-how-to-configure/previewed-menu-items.png)
 
 ### 3.3 Create a Menu Item for the Employee_Details Page and Configuring Its Sub-Items
 
 You would like to place **Job_Details**, **Personal_Info**, and **Documents** pages under one menu-item named **Employee Details**, which means that they will be opened by menu sub-items. 
 
-First, you need to create the menu-item that will encompass three menu sub-items. Do the following:
+First, you need to create the menu item that will encompass three menu sub-items. Do the following:
 
 1. Click a plus at the bottom of the navigation tree to create a menu item.
 
@@ -153,7 +155,7 @@ Congratulations! You created and configured navigation for your app:
 
 ![Configured Navigation](attachments/navigation-how-to-configure/configured-navigation.png)
 
-In Studio, the navigation is build in all starter apps either as a side bar or the top bar. [Preview your app](/studio/publishing-app) to see how the navigation displays:
+[Preview your app](/studio/publishing-app) to see how the navigation menu is displayed:
 
 ![Previewed Navigation](attachments/navigation-how-to-configure/navigation-previewed.png)
 

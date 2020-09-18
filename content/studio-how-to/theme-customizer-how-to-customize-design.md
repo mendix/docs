@@ -12,7 +12,7 @@ This how-to explains how to customize your app in Mendix Studio and use your com
 
 * Upload your company logo
 * Customize colors of widgets in your app
-* Customize your topbar, sidebar, and backgrounds
+* Customize your top bar, sidebar, and backgrounds
 * Change fonts and headers
 
 This how-to describes the following use case: 
@@ -34,13 +34,13 @@ To upload a logo, do the following:
 
 2. In the **Upload Logo** section, click **Select File**.
 
-   ![Select File for Logo](attachments/theme-customizer-how-to-customize-design/select-logo.png)
+    ![Select File for Logo](attachments/theme-customizer-how-to-customize-design/select-logo.png)
 
 3. In the dialog box, select the image with your company logo.
 
 4. Check out the selected image uploaded and shown in the preview:
 
-   ![Logo Preview](attachments/theme-customizer-how-to-customize-design/logo-preview.png)
+    ![Logo Preview](attachments/theme-customizer-how-to-customize-design/logo-preview.png)
 
 5. In the **UI Customization** section, make the logo larger: set the **Logo Width** and **Logo Height** to 40 PX.
 
@@ -98,12 +98,12 @@ Do the following:
 
 4. Click the **Border** setting and fill in the HEX color code `#989393`. You can see that the border of the top bar is grey now.
 
-   ![Topbar Colors](attachments/theme-customizer-how-to-customize-design/topbar-colors.png)
+    ![Topbar Colors](attachments/theme-customizer-how-to-customize-design/topbar-colors.png)
 
 5.  To change the logo size, do the following:
 
-   1. Click the **Logo Width** setting and change it from 30 PX to 100 PX.
-   2.  Click the **Logo Height** setting and change it from 30 PX to 100 PX.
+    1. Click the **Logo Width** setting and change it from 30 PX to 100 PX.
+    2.  Click the **Logo Height** setting and change it from 30 PX to 100 PX.
 
 6. To change make your sidebar background deep-blue, click **Background** in the **Sidebar** section and fill in the HEX color code `#0D3A7A`.
 

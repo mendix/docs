@@ -51,11 +51,8 @@ Building hybrid apps in the cloud uses the Phonegap Build service from Adobe. Un
 To start the packaging process, follow these steps:
 
 1. Open the [Developer Portal](https://sprintr.home.mendix.com/).
-
 2. Go to the project of the Mendix app that you want to publish.
-
 3. Go to the **Deploy > Mobile app** entry in the side menu of the project.
-
 4. You will be shown the **Publish App for Mobile App Stores** page, where you need to set up some options for your hybrid mobile app.
 
    ![mobile app page](attachments/publishing-a-hybrid-app/mobile-app-page.png)
@@ -66,7 +63,6 @@ To start the packaging process, follow these steps:
    c. If your app does not employ push notifications, disable the **Push Notifications** permission by clearing its check box.
 
 6. Select the platforms that you want to support.
-
 7. Optionally, upload custom-branded app icons and splash screens under the tabs for the different platforms. You can find those tabs next to the **App Info** tab.
 
 {{% alert type="info" %}}
@@ -84,20 +80,13 @@ If you do not upload any images, the default Mendix-branded images that are show
 	* For apps using [Flexible Environments](/developerportal/deploy/mendix-cloud-deploy#flexible-environments) you will be able to select the environment from a drop-down list of environments.
 	
 10. Leave the default choice of how to build the package **Build Mobile App Store packages for me by sending the build configuration to Adobe PhoneGap Build** selected. 
-	You can use the alternative option to manually download a PhoneGap Build package, which you can then inspect, modify, and upload manually to Adobe PhoneGap Build (for more information, see [Customizing PhoneGap Build Packages](/howto/mobile/customizing-phonegap-build-packages)). This is unnecessary in most scenarios.
-11. Before proceeding, you must link your PhoneGap account to your Mendix account. Start the hybrid mobile app package building process by clicking **Start PhoneGap Build job**, which will initiate the building process:
+	You can use the alternate option to manually download a PhoneGap Build package, which you can then inspect, modify, and upload manually to Adobe PhoneGap Build (for more information, see [Customizing PhoneGap Build Packages](/howto/mobile/customizing-phonegap-build-packages)). This is unnecessary in most scenarios.
 
-	![phonegap authorization](attachments/publishing-a-hybrid-app/phonegap-authorization-dialog.png)
+You can freely customize the generated package to enable, for example, additional PhoneGap/Cordova plugins or add additional resources to your app. For more information, see [Customizing PhoneGap Build Packages](/howto/mobile/customizing-phonegap-build-packages).
 
-12. The first time you start this process, you will need to authorize the Mendix Developer Portal to act on your behalf with the Adobe PhoneGap Build service. In PhoneGap Build, you will be presented with a dialog box asking if you want to start the redirect to Adobe PhoneGap. <br/>
-	a. To build for the authorization, click **Authorize use of Adobe PhoneGap Build**, after which you will be temporarily redirected to the website of your Adobe PhoneGap Build. <br/>
-13. Choose **Yes** on the Adobe PhoneGap Build service page to allow the start of building jobs using your account. You will then be redirected back to the Mendix Developer Portal.
+For detailed instructions, see the [hybrid-app-template GitHub repository](https://github.com/mendix/hybrid-app-template).
 
-{{% alert type="warning" %}}
-If you choose **No**, you will be redirected back to the Developer Portal and you will not be able to publish your app.
-{{% /alert %}}
-
-After you have been redirected back to the Mendix Developer Portal, the packaging process will continue and you will have to set up your app's signing keys.
+For more context on building hybrid apps in the cloud, as well as other options for iOS apps, see [How to Build Hybrid Apps](/howto/mobile/build-hybrid-apps).
 
 ## 4 Setting Up App Signing Keys
 

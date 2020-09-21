@@ -113,14 +113,9 @@ To publish your app in an app store, we recommend you build native iOS apps inst
 
 After selecting the **Do it yourself** option and choosing the correct environment, click **Download a customizable package**. The package contains all your settings, icons, and splash screens. It allows you to easily make changes, create local builds, run on emulators, and upload to the PhoneGap Build service.
 
-You can freely customize the generated package to enable, for example, additional PhoneGap/Cordova plugins or add additional resources to your app. For more information, see [Customizing PhoneGap Build Packages](/howto/mobile/customizing-phonegap-build-packages).
+For iOS please follow the instructions in [Building Your iOS App Locally](#building-ios-locally) below.
 
-For detailed instructions, see the [hybrid-app-template GitHub repository](https://github.com/mendix/hybrid-app-template).
-
-For more context on building hybrid apps in the cloud, as well as other options for iOS apps, see [How to Build Hybrid Apps](/howto/mobile/build-hybrid-apps).
-
-For iOS please follow the instructions in section 4.3 below.
-For Android please follow the instructions in section 4.4 below.
+For Android please follow the instructions in [Building Your Android App Locally](#building-android-locally) below.
 
 ### 4.3 Building Your iOS App Locally {#building-ios-locally}
 

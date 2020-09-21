@@ -10,7 +10,7 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
-### September 21st, 2020
+### September 22nd, 2020
 
 #### Mendix Cloud v4
 

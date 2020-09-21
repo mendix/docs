@@ -74,13 +74,38 @@ The on change event property specifies an action that will be executed when the 
 
 {{% snippet file="refguide/events-section-link.md" %}}
 
-#### 2.6.2 On Enter Event
+#### 2.6.2 On Change Behaviour
+
+On Change Behaviour property let the users select how "on change" is handled via following options in the modeler:
+
+##### When user leaves input field (Default)
+
+This option will work as previous versions of mendix. Textbox will apply changes when:
+
+Value is not the same as previously saved value in the DB and
+
+- On Enter key pressed: This will trigger On Change and On Enter key press events.
+- Blurred: This will trigger On Change and On Leave events.
+
+This means that there is no way for users to trigger on change event while typing. This brings to us the second option.
+
+##### While user is entering data
+
+This option will introduce the new behaviour to textbox widget. Textbox will save changes when the value is not the same as previously saved value in the DB and if last change made was after configured `Apply after (ms)` miliseconds.
+
+When `While user is entering data`, users now can adjust one more property called `Apply after (ms)` (described above). This will reduce the amount of the calls  made for on change event, thus improving performance of the app on demand.
+
+This way users now be able to trigger on change event while the users are typing.
+
+{{% snippet file="refguide/events-section-link.md" %}}
+
+#### 2.6.3 On Enter Event
 
 The on enter event property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
 
 {{% snippet file="refguide/events-section-link.md" %}}
 
-#### 2.6.3 On Leave Event
+#### 2.6.4 On Leave Event
 
 The on leave event property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
 
@@ -88,7 +113,7 @@ This differs from the [On change](#on-change) property in that the event will al
 
 {{% snippet file="refguide/events-section-link.md" %}}
 
-#### 2.6.4 On Enter Key Press Event
+#### 2.6.5 On Enter Key Press Event
 
 The on enter key press event property specifies an action that will be executed when the focus is inside the widget  and the <kbd>Enter</kbd> key is pressed. In a web application the widget will keep focus after the action gets executed.
 

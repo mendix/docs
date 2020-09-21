@@ -148,8 +148,8 @@ There are two possible ways to build your apps: the Cordova CLI or XCode. The Co
 This process is shorter than using XCode but might require more work to understand why a build fails. To build using the Cordova CLI, do the following:
 
 1. Run `npm run build -- ios --release --device --codeSignIdentity="iPhone Developer" --developmentTeam="<your-teams-id>"`. This combination of commands does the following:
-   _ Starts a release build that will create binaries for a physical device
-   _ Uses the code sign identity "iPhone Developer" for signing \* Looks up the provisioning files and certificates using the provided Apple Developer's team id
+   * Starts a release build that will create binaries for a physical device
+   * Uses the code sign identity "iPhone Developer" for signing \* Looks up the provisioning files and certificates using the provided Apple Developer's team id
    1.1 Optionally, if you wish to build for an emulator and do a debug build use the following command instead: `npm run build -- ios --debug --emulator`.
 1. When the build succeeds the generated _IPA_ file can be found in _/build/platforms/ios/build_. That folder should have the following file structure(if you did a build for an emulator an _.app_ file will be available):
 
@@ -216,16 +216,15 @@ To prepare your project for building, follow these instructions:
    * Packages the Cordova app for deployment.
    * Adds the iOS platform to Cordova.
 
-### 4.4.2 Setup environmmetal variables
+### 4.4.2 Set Up Environmmetal Variables
 
-To be able to run the commands to build locally, you will need to setup some required environmental variables for your system.
-These can be set temporary for the current command line session or globaly for your system. These are:
+To be able to run the commands to build locally, you will need to set up some required environmental variables for your system. These can be set to temporary for the current command line session or globally for your system. The variables are the following:
 
-* ANDROID_SDK_ROOT, pointing to the installation folder of the Android SDK
-* JAVA_HOME, ponting to the JDK 1.8 root directory
-* GRADLE_HOME, pointing to a valid Gradle distribution directory
+* **ANDROID_SDK_ROOT**, pointing to the installation folder of the Android *SDK*
+* **JAVA_HOME**, ponting to the JDK 1.8 root directory
+* **GRADLE_HOME**, pointing to a valid Gradle distribution directory
 
-For the purpose of this guide we will be setting the commands temporary for each of the commands.
+For the purpose of this guide we will be setting the commands to temporary for each of the commands.
 
 ### 4.4.3 Building Your Prepared Project
 
@@ -235,15 +234,14 @@ There are two possible ways to build your apps: the Cordova CLI or Android Studi
 
 The command to build your project locally for release is `npm run build -- android --release`.
 
-1. Run the following command:
-
-   **On Mac OSX, as a single command run:**
+1. Run the following command:<br />
+  a. **On Mac OSX, as a single command run:**<br />
 
    ```
    PATH="\$PATH:/Users/<username>/.gradle/wrapper/dists/gradle-5.1.1-all/97z1ksx6lirer3kbvdnh7jtjg/gradle-5.1.1/bin" JAVA_HOME=`/usr/libexec/java_home -v 1.8\` npm run build -- android --release -- --keystore=<keystore-path> --storePassword=<keystore-password> --alias=<keystore-alias> --password=<certificate-password>
    ```
 
-   **On Windows, in a command line as separate commands run:**
+  b. **On Windows, in a command line as separate commands run:**<br />
 
    ```
    set PATH=%PATH%;C:\path-to-gradle-distribution
@@ -255,38 +253,43 @@ The command to build your project locally for release is `npm run build -- andro
 
    This command adds the gradle binary to the path, switches the JAVA JDK to be 1.8 and runs the build release command to generated a signed APK.
 
-1. When the build succeeds the generated APK file can be found in `/build/platform/android/app/release`.
+1. When the build succeeds the generated *APK* file can be found in `/build/platform/android/app/release`:
 
-![Final folder structure](attachments/mobileapp/folder-final-android.png)
+  ![Final folder structure](attachments/mobileapp/folder-final-android.png)
 
 #### 4.4.3.2 Building Android Using Android Studio
 
 Using Android Studio can be easier than the Cordova CLI due to Android Studio's friendly visual interface. To build your app using Android Studio do the following:
 
 1. Start Android Studio:
+
    ![Android Studio Welcome Screen](attachments/mobileapp/android-studio-welcome.png)
 
-1. Open an existing Android studio Project and select your projects android folder.
-   For example `/Downloads/phonegap/build/platform/android`:
+1. Open an existing Android Studio project and select your projects android folder, for example **/Downloads/phonegap/build/platform/android**:
+
    ![Android Studio Open Folder](attachments/mobileapp/android-studio-open-folder.png)
 
 1. Wait for Android Studio to finish syncing your project.
 
 1. Select the build menu and `Generate Signed Bundle / APK`:
+
    ![Android Studio Build Menu](attachments/mobileapp/android-studio-build-menu.png)
 
-1. Select the APK checkbox:
+1. Select the *APK* checkbox:
+
    ![Android Studio Sign Wizard Step 1](attachments/mobileapp/android-studio-sign-wizard-1.png)
 
-1. Select your Android Keystore and complete the form with the correct keystore password, alias and password.
+1. Select your Android keystore and complete the form with the correct keystore password, alias, and password.
+
    ![Android Studio Sign Wizard Step 2](attachments/mobileapp/android-studio-sign-wizard-2.png)
 
-1. Select the destination folder for the APK, build variant release, V1 and V2 Signature versions:
+1. Select the destination folder for the *APK*, build variant release, V1 and V2 Signature versions:
+
    ![Android Studio Sign Wizard Step 3](attachments/mobileapp/android-studio-sign-wizard-3.png)
 
-1. Click finish
+1. Click **Finish**.
 
-You APK should now be generated and signed using Android Studio. The resulting APK can be found in the output folder selected and can be uploaded via the Google Play Console for further processing.
+You *APK* should now be generated and signed using Android Studio. The resulting *APK* can be found in the output folder selected and can be uploaded via the Google Play Console for further processing.
 
 ## 5 Read More
 

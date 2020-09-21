@@ -115,8 +115,6 @@ After selecting the **Do it yourself** option and choosing the correct environme
 
 For iOS please follow the instructions in [Building Your iOS App Locally](#building-ios-locally) below.
 
-For Android please follow the instructions in [Building Your Android App Locally](#building-android-locally) below.
-
 ### 4.3 Building Your iOS App Locally {#building-ios-locally}
 
 **Prerequisites:**
@@ -199,14 +197,9 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 
     ![Distribute Options](attachments/mobileapp/distribute-options.png)
 
-### 4.4 Building Your Android App Locally {#building-android-locally}
+## 5 Read More
 
-ToDo
-
-## 6 Read More
-
-* [Deploy and Manage](/developerportal/deploy)
-* [Offline](/refguide/offline-first)
+* [Deploy and Manage Guide](/developerportal/deploy)
+* [Offline Reference Guide](/refguide/offline-first)
 * [How to Publish a Mendix Hybrid Mobile App in App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
-* [Adobe PhoneGap Build](https://build.phonegap.com/)
 * [Apache Cordova PhoneGap Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)

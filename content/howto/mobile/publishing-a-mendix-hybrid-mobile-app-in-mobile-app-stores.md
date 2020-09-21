@@ -12,6 +12,8 @@ Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Be
 To build a hybrid app and publish it, see the [Doing It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) section of the *Mobile App Developer Portal Guide*. Under that section are instructions for building [iOS](/developerportal/deploy/mobileapp#building-ios-locally) and [Android](/developerportal/deploy/mobileapp#building-ios-locally) apps locally.
 
 To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
+
+This document will be updated with instructions soon.
 {{% /alert %}}
 
 Once you have finished developing a Mendix hybrid mobile application, you will want to make it available as an app for mobile platforms such as Apple iOS and Google Android. We make it possible to produce platform-specific installation packages. For more details on deploying platform-specific installation packages, see [Mobile App](/developerportal/deploy/mobileapp).
@@ -29,7 +31,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Have a Mendix app with mobile support running in the Mendix Cloud, either as a Free App or on a licensed cloud node
 	* If you require an app to test with, set up the [Event App](https://appstore.home.mendix.com/link/app/36793/) from the Mendix App Store as a Free App to try out its mobile features 
-* Have an account for Adobe PhoneGap Build (you can create one for free [here](https://build.phonegap.com/plans/free-adobeid)) [todo:should this prerec just be deleted?]()
+* Have an account for Adobe PhoneGap Build (you can create one for free [here](https://build.phonegap.com/plans/free-adobeid))
 
 To publish your app in the Apple App Store, do the following:
 
@@ -43,10 +45,6 @@ To publish your app in the Google Play store, do the following:
 * Have an Android device for testing the APK package that will be produced
 
 ## 3 Starting the Packaging Process{#starting-the-packaging-process}
-
-{{% alert type="info" %}}
-Building hybrid apps in the cloud uses the Phonegap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. As a result, as of April 30th 2020, hybrid iOS apps built through the platform or via the Phonegap Build service are not being accepted on Apple's App Store. To address this, please follow these guides on building your hybrid [iOS](/developerportal/deploy/mobileapp#building-ios-locally) and [Android](/developerportal/deploy/mobileapp#building-android-locally) apps locally.
-{{% /alert %}}
 
 To start the packaging process, follow these steps:
 

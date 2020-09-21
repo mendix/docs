@@ -102,9 +102,11 @@ This wizard will guide you through the process of creating local build app packa
 
 ### 4.1 Doing It Yourself {#doing-it-yourself}
 
-After selecting the **Do it yourself** option and choosing the correct environment, click **Download a customizable package**. The package contains all your settings, icons, and splash screens. It allows you to easily make changes, create local builds, run on emulators, and upload to the PhoneGap Build service.
+Once you begin the app buliding wizard and choose the correct environment, click **Download a customizable package**. The package contains all your settings, icons, and splash screens. It allows you to easily make changes, create local builds, run on emulators, and upload to the PhoneGap Build service.
 
 For iOS please follow the instructions in [Building Your iOS App Locally](#building-ios-locally) below.
+
+For Android please follow the instructions in [Building Your iOS App Locally](#building-android-locally) below.
 
 ### 4.2 Building Your iOS App Locally {#building-ios-locally}
 

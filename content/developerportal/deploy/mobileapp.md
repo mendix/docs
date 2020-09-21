@@ -92,7 +92,7 @@ When you are ready to build, click **Publish for Mobile App Stores**.
 
 This wizard will guide you through the process of creating app packages for the Apple App Store and Google Play Store. The resulting mobile apps can then access native functionality such as the geo location service and the camera.
 
-You need an account for Adobe PhoneGap Build and for the app stores in which you want to publish your app. 
+You need an account for Adobe PhoneGap Build and for the app stores in which you want to publish your app.
 
 There are two ways that the device can build the packages:
 
@@ -102,7 +102,7 @@ There are two ways that the device can build the packages:
 ### 4.1 Building It in the Cloud
 
 {{% alert type="warning" %}}
-Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible. 
+Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible.
 
 To build a hybrid app and publish it, see the [Doing It Yourself](#doing-it-yourself) section below for remote building or the [Building Your iOS App Locally](#building-ios-locally) and [Building Your Android App Locally](fill-broken-link-soon) sections for local building.
 
@@ -130,10 +130,10 @@ For iOS please follow the instructions in [Building Your iOS App Locally](#build
 To prepare your project for building, follow these instructions:
 
 1. Open a terminal window and change directory into the unzipped package folder, for example **cd /Downloads/phonegap** if it is in your Downloads folder.
-1. Run `npm i && npm run package && npm run platform:ios`. This combination of commands does the following: 
-    * Installs all required dependencies.
-    * Packages the Cordova app for deployment.
-    * Adds the iOS platform to Cordova.
+1. Run `npm i && npm run package && npm run platform:ios`. This combination of commands does the following:
+   * Installs all required dependencies.
+   * Packages the Cordova app for deployment.
+   * Adds the iOS platform to Cordova.
 
 #### 4.3.2 Building Your Prepared Project
 
@@ -148,54 +148,148 @@ There are two possible ways to build your apps: the Cordova CLI or XCode. The Co
 This process is shorter than using XCode but might require more work to understand why a build fails. To build using the Cordova CLI, do the following:
 
 1. Run `npm run build -- ios --release --device --codeSignIdentity="iPhone Developer" --developmentTeam="<your-teams-id>"`. This combination of commands does the following:
-    * Starts a release build that will create binaries for a physical device
-    * Uses the code sign identity "iPhone Developer" for signing
-    * Looks up the provisioning files and certificates using the provided Apple Developer's team id
-1.1 Optionally, if you wish to build for an emulator and do a debug build use the following command instead: `npm run build -- ios --debug --emulator`.
-1. When the build succeeds the generated *IPA* file can be found in */build/platforms/ios/build*. That folder should have the following file structure(if you did a build for an emulator an *.app* file will be available):
-   
-    ![Signing screen correctly configured](attachments/mobileapp/folder-final.png)
-    
+   * Starts a release build that will create binaries for a physical device
+   * Uses the code sign identity "iPhone Developer" for signing \* Looks up the provisioning files and certificates using the provided Apple Developer's team id
+   1.1 Optionally, if you wish to build for an emulator and do a debug build use the following command instead: `npm run build -- ios --debug --emulator`.
+1. When the build succeeds the generated _IPA_ file can be found in _/build/platforms/ios/build_. That folder should have the following file structure(if you did a build for an emulator an _.app_ file will be available):
+
+   ![Signing screen correctly configured](attachments/mobileapp/folder-final.png)
+
 1. The IPA generated can be now uploaded to Testflight for further testing. If you wish to do so, continue with the [Upload tools](https://help.apple.com/app-store-connect/#/dev82a6a9d79) section, on the App Store documenation.
 
 ##### 4.3.2.2 Building iOS using XCode
 
-Using XCode can be easier than the Cordova CLI due to XCode's friendly visual interface. To build your app using XCode do the following: 
+Using XCode can be easier than the Cordova CLI due to XCode's friendly visual interface. To build your app using XCode do the following:
 
 1.  Under **/build/platforms/ios/** open the `.xcworkspace` file by double-clicking it. Xcode should open with the project loaded:
 
     ![Opening XCWorkspace](attachments/mobileapp/xc-workspace.png)
 
-1. Select the root element from the tree view in the left-side panel:
-   
+1.  Select the root element from the tree view in the left-side panel:
+
     ![Selecting the root element](attachments/mobileapp/root-element.png)
 
-1. The screen should change to the following view. If it does not, select the item under **Targets** on the left panel not the item under **Project** and select the tab **Signing & Certificates**:
+1.  The screen should change to the following view. If it does not, select the item under **Targets** on the left panel not the item under **Project** and select the tab **Signing & Certificates**:
 
     ![Signing screen with errors](attachments/mobileapp/setup-signing-wrong.png)
 
-1. Both **Debug** and **Release** might have been configured for **Automatically manage signing**. Clear both check boxes to switch to manual signing. The screen should change to the following:
+1.  Both **Debug** and **Release** might have been configured for **Automatically manage signing**. Clear both check boxes to switch to manual signing. The screen should change to the following:
 
     ![Signing screen correctly configured](attachments/mobileapp/setup-signing-correct.png)
 
-1. Enable **Automatically manage signing** again.
-1. Select a **Team** using the drop-down menu. If you have not yet signed in with your credentials, XCode will prompt you to do so.
-1. When configured correctly all errors should be gone.
-1. Make sure you select the target to be your app's build target and designate **Generic iOS Device** as a device:
+1.  Enable **Automatically manage signing** again.
+1.  Select a **Team** using the drop-down menu. If you have not yet signed in with your credentials, XCode will prompt you to do so.
+1.  When configured correctly all errors should be gone.
+1.  Make sure you select the target to be your app's build target and designate **Generic iOS Device** as a device:
 
     ![Signing screen correctly configured](attachments/mobileapp/target-device.png)
 
-1. Select **Product** and then **Archive** from the menu bar:
+1.  Select **Product** and then **Archive** from the menu bar:
 
     ![Archiving](attachments/mobileapp/archiving.png)
 
-1. After the process finishes successfully the **Organizer** view will come up. Your app should be selected and your latest **Archive** visible. You can always open the organizer yourself through XCode's **Window** menu:
+1.  After the process finishes successfully the **Organizer** view will come up. Your app should be selected and your latest **Archive** visible. You can always open the organizer yourself through XCode's **Window** menu:
 
     ![Organizer](attachments/mobileapp/organizer.png)
 
-1. You can now use the **Distribute App** button to distribute your app to the appstore or archive it for local distribution:
+1.  You can now use the **Distribute App** button to distribute your app to the appstore or archive it for local distribution:
 
     ![Distribute Options](attachments/mobileapp/distribute-options.png)
+
+## 4.4 Building Your Android App Locally {#building-android-locally}
+
+**Prerequisites:**
+
+* Install [AndroidStudio](https://developer.android.com/studio)
+* Install [NodeJS LTS](https://nodejs.org/en/download/) using the all-in-one installation option
+* Install JDK 1.8
+* Create a keystore using [generating-a-keystore](/refguide/managing-app-signing-keys#3-1-generating-a-keystore)
+* Download **Do it yourself** package from Cloud Portal and unzip it in a known location
+
+#### 4.4.1 Prepare Your Project for Building
+
+To prepare your project for building, follow these instructions:
+
+1. Open a terminal window and change directory into the unzipped package folder, for example **cd /Downloads/phonegap** if it is in your Downloads folder.
+1. Run `npm i && npm run package && npm run platform:ios`. This combination of commands does the following:
+   * Installs all required dependencies.
+   * Packages the Cordova app for deployment.
+   * Adds the iOS platform to Cordova.
+
+### 4.4.2 Set Up Environmmetal Variables
+
+To be able to run the commands to build locally, you will need to set up some required environmental variables for your system. These can be set to temporary for the current command line session or globally for your system. The variables are the following:
+
+* **ANDROID_SDK_ROOT**, pointing to the installation folder of the Android *SDK*
+* **JAVA_HOME**, ponting to the JDK 1.8 root directory
+* **GRADLE_HOME**, pointing to a valid Gradle distribution directory
+
+For the purpose of this guide we will be setting the commands to temporary for each of the commands.
+
+### 4.4.3 Building Your Prepared Project
+
+There are two possible ways to build your apps: the Cordova CLI or Android Studio. The Cordova CLI is faster and allows Cordova to fully control the your project's configuration. Android Studio is more involved, but Android Studio's UI makes it easier to detect problems in the project. You can use whichever works best for your case.
+
+#### 4.4.3.1 Building Android Using the Cordova CLI
+
+The command to build your project locally for release is `npm run build -- android --release`.
+
+1. Run the following command:<br />
+  a. **On Mac OSX, as a single command run:**<br />
+
+   ```
+   PATH="\$PATH:/Users/<username>/.gradle/wrapper/dists/gradle-5.1.1-all/97z1ksx6lirer3kbvdnh7jtjg/gradle-5.1.1/bin" JAVA_HOME=`/usr/libexec/java_home -v 1.8\` npm run build -- android --release -- --keystore=<keystore-path> --storePassword=<keystore-password> --alias=<keystore-alias> --password=<certificate-password>
+   ```
+
+  b. **On Windows, in a command line as separate commands run:**<br />
+
+   ```
+   set PATH=%PATH%;C:\path-to-gradle-distribution
+
+   set JAVA_HOME=C:\path-to-jdk-1.8-directory
+
+   npm run build -- android --release -- --keystore=<keystore-path> --storePassword=<keystore-password> --alias=<keystore-alias> --password=<certificate-password>
+   ```
+
+   This command adds the gradle binary to the path, switches the JAVA JDK to be 1.8 and runs the build release command to generated a signed APK.
+
+1. When the build succeeds the generated *APK* file can be found in `/build/platform/android/app/release`:
+
+  ![Final folder structure](attachments/mobileapp/folder-final-android.png)
+
+#### 4.4.3.2 Building Android Using Android Studio
+
+Using Android Studio can be easier than the Cordova CLI due to Android Studio's friendly visual interface. To build your app using Android Studio do the following:
+
+1. Start Android Studio:
+
+   ![Android Studio Welcome Screen](attachments/mobileapp/android-studio-welcome.png)
+
+1. Open an existing Android Studio project and select your projects android folder, for example **/Downloads/phonegap/build/platform/android**:
+
+   ![Android Studio Open Folder](attachments/mobileapp/android-studio-open-folder.png)
+
+1. Wait for Android Studio to finish syncing your project.
+
+1. Select the build menu and `Generate Signed Bundle / APK`:
+
+   ![Android Studio Build Menu](attachments/mobileapp/android-studio-build-menu.png)
+
+1. Select the *APK* checkbox:
+
+   ![Android Studio Sign Wizard Step 1](attachments/mobileapp/android-studio-sign-wizard-1.png)
+
+1. Select your Android keystore and complete the form with the correct keystore password, alias, and password.
+
+   ![Android Studio Sign Wizard Step 2](attachments/mobileapp/android-studio-sign-wizard-2.png)
+
+1. Select the destination folder for the *APK*, build variant release, V1 and V2 Signature versions:
+
+   ![Android Studio Sign Wizard Step 3](attachments/mobileapp/android-studio-sign-wizard-3.png)
+
+1. Click **Finish**.
+
+You *APK* should now be generated and signed using Android Studio. The resulting *APK* can be found in the output folder selected and can be uploaded via the Google Play Console for further processing.
 
 ## 5 Read More
 

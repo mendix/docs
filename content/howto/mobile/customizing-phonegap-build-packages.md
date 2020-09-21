@@ -1,5 +1,5 @@
 ---
-title: "Customizing PhoneGap Build Packages"
+title: "Customizing Local Build Packages"
 parent: "build-hybrid-apps"
 menu_order: 30
 tags: ["mobile", "app store", "phonegap"]

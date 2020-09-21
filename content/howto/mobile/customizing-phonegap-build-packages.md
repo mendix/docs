@@ -16,10 +16,10 @@ To build a hybrid app and publish it, see the [Doing It Yourself](/developerport
 To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
 {{% /alert %}}
 
-## 2 Downloading the Do It Yourself Package
+## 2 Downloading the Local Build Package {#download-local-package}
 
-To download the **Do It Yourself**  package, publish your app for mobile app stores through the Developer Portal. At the **Build Mobile App Store Packages** page, under **How should the device packages be built?**, choose the non-default option **I will manage the build process manually myself**. Click the green button to download the **Do it yourself** package. 
+To download the local build  package, publish your app for mobile app stores through the Developer Portal. At the **Build Mobile App Store Packages** page, under **How should the device packages be built?**, choose the non-default option **I will manage the build process manually myself**. Click the green button to download the local build package. 
 
-## 3 Customizing the Do It Yourself Package
+## 3 Customizing the Local Build Package
 
-You can customize the **Do It Yourself** package to suit your use case. Once you have customized your app according to your needs, you can build your app locally using the Cordova CLI or XCode by following the [Building Your iOS App Locally](/developerportal/deploy/mobileapp#building-ios-locally) or [Building Your Android App Locally](/developerportal/deploy/mobileapp#buliding-android-locally) section of the *Mobile App Guide*. 
+You can customize the local build package to suit your use case. Once you have customized your app according to your needs, you can build your app locally using the Cordova CLI or XCode by following the [Building Your iOS App Locally](/developerportal/deploy/mobileapp#building-ios-locally) or [Building Your Android App Locally](/developerportal/deploy/mobileapp#buliding-android-locally) section of the *Mobile App Guide*. 

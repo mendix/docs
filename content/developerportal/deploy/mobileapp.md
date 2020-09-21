@@ -16,6 +16,14 @@ This page is divided into three tabs:
 * **iOS**
 * **Android**
 
+{{% alert type="warning" %}}
+Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible.
+
+To build a hybrid app and publish it, see the [Doing It Yourself](#doing-it-yourself) section below for remote building or the [Building Your iOS App Locally](#building-ios-locally) and [Building Your Android App Locally](#buliding-android-locally) sections for local building.
+
+To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
+{{% /alert %}}
+
 ## 2 App Info
 
 In this tab, you can find the following sections:
@@ -90,42 +98,25 @@ On the right side of the screen, you can choose which operating system you want 
 
 When you are ready to build, click **Publish for Mobile App Stores**.
 
-This wizard will guide you through the process of creating app packages for the Apple App Store and Google Play Store. The resulting mobile apps can then access native functionality such as the geo location service and the camera.
+This wizard will guide you through the process of creating local build app packages which can be published in  the Apple App Store and Google Play Store. The resulting mobile apps can then access native functionality such as the geo location service and the camera.
 
-You need an account for Adobe PhoneGap Build and for the app stores in which you want to publish your app.
-
-There are two ways that the device can build the packages:
-
-* **Build it in the cloud**
-* **Do it yourself**
-
-### 4.1 Building It in the Cloud
-
-{{% alert type="warning" %}}
-Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible.
-
-To build a hybrid app and publish it, see the [Doing It Yourself](#doing-it-yourself) section below for remote building or the [Building Your iOS App Locally](#building-ios-locally) and [Building Your Android App Locally](#buliding-android-locally) sections for local building.
-
-To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
-{{% /alert %}}
-
-### 4.2 Doing It Yourself {#doing-it-yourself}
+### 4.1 Doing It Yourself {#doing-it-yourself}
 
 After selecting the **Do it yourself** option and choosing the correct environment, click **Download a customizable package**. The package contains all your settings, icons, and splash screens. It allows you to easily make changes, create local builds, run on emulators, and upload to the PhoneGap Build service.
 
 For iOS please follow the instructions in [Building Your iOS App Locally](#building-ios-locally) below.
 
-### 4.3 Building Your iOS App Locally {#building-ios-locally}
+### 4.2 Building Your iOS App Locally {#building-ios-locally}
 
 **Prerequisites:**
 
 * A Mac OSX machine
 * Install [NodeJS LTS](https://nodejs.org/en/download/) using the all-in-one installation option
-* Download **Do it yourself** package from Cloud Portal and unzip it in a known location
+* Download your [local build package](/howto/mobile/customizing-phonegap-build-packages#download-local-package) from Cloud Portal and unzip it in a known location
 * Register for an [Apple Developer Account](https://developer.apple.com/register/index.action)
 * Install [XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and its command-line tools
 
-#### 4.3.1 Prepare Your Project for Building
+#### 4.2.1 Prepare Your Project for Building
 
 To prepare your project for building, follow these instructions:
 
@@ -135,11 +126,11 @@ To prepare your project for building, follow these instructions:
    * Packages the Cordova app for deployment.
    * Adds the iOS platform to Cordova.
 
-#### 4.3.2 Building Your Prepared Project
+#### 4.2.2 Building Your Prepared Project
 
 There are two possible ways to build your apps: the Cordova CLI or XCode. The Cordova CLI is faster and allows Cordova to fully control the your project's configuration. XCode is more involved, but XCode's UI makes it easier to detect problems in the project. You can use whichever works best for your case.
 
-##### 4.3.2.1 Building iOS Using the Cordova CLI
+##### 4.2.2.1 Building iOS Using the Cordova CLI
 
 **Prerequsites:**
 
@@ -157,7 +148,7 @@ This process is shorter than using XCode but might require more work to understa
 
 1. The IPA generated can be now uploaded to Testflight for further testing. If you wish to do so, continue with the [Upload tools](https://help.apple.com/app-store-connect/#/dev82a6a9d79) section, on the App Store documenation.
 
-##### 4.3.2.2 Building iOS using XCode
+##### 4.2.2.2 Building iOS using XCode
 
 Using XCode can be easier than the Cordova CLI due to XCode's friendly visual interface. To build your app using XCode do the following:
 
@@ -196,7 +187,7 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 
     ![Distribute Options](attachments/mobileapp/distribute-options.png)
 
-### 4.4 Building Your Android App Locally {#building-android-locally}
+### 4.3 Building Your Android App Locally {#building-android-locally}
 
 **Prerequisites:**
 
@@ -204,9 +195,9 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 * Install [NodeJS LTS](https://nodejs.org/en/download/) using the all-in-one installation option
 * Install JDK 1.8
 * Create a keystore using [generating-a-keystore](/refguide/managing-app-signing-keys#3-1-generating-a-keystore)
-* Download **Do it yourself** package from Cloud Portal and unzip it in a known location
+* Download the [local build package](/howto/mobile/customizing-phonegap-build-packages#download-local-package) from Cloud Portal and unzip it in a known location
 
-#### 4.4.1 Prepare Your Project for Building
+#### 4.3.1 Prepare Your Project for Building
 
 To prepare your project for building, follow these instructions:
 
@@ -216,7 +207,7 @@ To prepare your project for building, follow these instructions:
    * Packages the Cordova app for deployment.
    * Adds the iOS platform to Cordova.
 
-#### 4.4.2 Set Up Environmmetal Variables
+#### 4.3.2 Set Up Environmmetal Variables
 
 To be able to run the commands to build locally, you will need to set up some required environmental variables for your system. These can be set to temporary for the current command line session or globally for your system. The variables are the following:
 
@@ -226,11 +217,11 @@ To be able to run the commands to build locally, you will need to set up some re
 
 For the purpose of this guide we will be setting the commands to temporary for each of the commands.
 
-#### 4.4.3 Building Your Prepared Project
+#### 4.3.3 Building Your Prepared Project
 
 There are two possible ways to build your apps: the Cordova CLI or Android Studio. The Cordova CLI is faster and allows Cordova to fully control the your project's configuration. Android Studio is more involved, but Android Studio's UI makes it easier to detect problems in the project. You can use whichever works best for your case.
 
-##### 4.4.3.1 Building Android Using the Cordova CLI
+##### 4.3.3.1 Building Android Using the Cordova CLI
 
 The command to build your project locally for release is `npm run build -- android --release`.
 

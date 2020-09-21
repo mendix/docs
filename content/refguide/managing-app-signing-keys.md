@@ -12,9 +12,13 @@ To create a mobile app, you need platform-specific app signing keys. A mobile ap
 
 Depending on which platforms you want to target, you will need to create the required signing keys. The following sections describe (per platform) how to create those keys.
 
+{{% alert type="warning" %}} Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible.
+
+The parts of this document mentioning PhoneGap Build will be updated with instructions soon. {{% /alert %}}
+
 ## 2 iOS{#ios}
 
-Unfortunately, signing keys is always required for iOS app deployment, even if you just want to test the app on your personal device and do not want to publish to the Apple App Store. This section describes how to create the required files.
+Unfortunately, signing keys are always required for iOS app deployment, even if you just want to test the app on your personal device and do not want to publish to the Apple App Store. This section describes how to create the required files.
 
 It is convenient to have an Apple Mac available, but it is not a requirement. You do always need an Apple Developer Account.
 

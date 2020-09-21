@@ -202,5 +202,5 @@ The video below shows how to build a PhoneGap app in the cloud. After showing yo
 ## 8 Read More
 
 * [Deploy your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
-* [Debug a Mobile App with Mendix](debug-a-mobile-app)
+* [Debug a Hybrid Mobile App](debug-a-mobile-app)
 * [Include Push Notifications](push-notifications)

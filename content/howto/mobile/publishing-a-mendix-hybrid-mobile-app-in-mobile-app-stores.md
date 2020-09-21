@@ -235,5 +235,5 @@ Follow the steps in Google's [Prepare & roll out releases](https://support.googl
 ## 8 Read More
 
 * [Deploy your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
-* [Debug a Mobile App with Mendix](debug-a-mobile-app)
+* [Debug a Hybrid Mobile App](debug-a-mobile-app)
 * [Include Push Notifications](push-notifications)

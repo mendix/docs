@@ -9,7 +9,7 @@ tags: ["mobile", "app store", "phonegap"]
 {{% alert type="warning" %}}
 Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible. 
 
-To build a hybrid app and publish it, see the [Doing It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) section of the *Mobile App Developer Portal Guide*. Under that section are instructions for building [iOS](/developerportal/deploy/mobileapp#building-ios-locally) and [Android](fill-broken-link-soon) apps locally.
+To build a hybrid app and publish it, see the [Doing It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) section of the *Mobile App Developer Portal Guide*. Under that section are instructions for building [iOS](/developerportal/deploy/mobileapp#building-ios-locally) and [Android](/developerportal/deploy/mobileapp#building-ios-locally) apps locally.
 
 To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
 {{% /alert %}}
@@ -45,7 +45,7 @@ To publish your app in the Google Play store, do the following:
 ## 3 Starting the Packaging Process{#starting-the-packaging-process}
 
 {{% alert type="info" %}}
-Building hybrid apps in the cloud uses the Phonegap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. As a result, as of April 30th 2020, hybrid iOS apps built through the platform or via the Phonegap Build service are not being accepted on Apple's App Store. To address this, please follow the guide on building your hybrid iOS apps locally [here](/developerportal/deploy/mobileapp#building-ios-locally).
+Building hybrid apps in the cloud uses the Phonegap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. As a result, as of April 30th 2020, hybrid iOS apps built through the platform or via the Phonegap Build service are not being accepted on Apple's App Store. To address this, please follow these guides on building your hybrid [iOS](/developerportal/deploy/mobileapp#building-ios-locally) and [Android](/developerportal/deploy/mobileapp#building-android-locally) apps locally.
 {{% /alert %}}
 
 To start the packaging process, follow these steps:

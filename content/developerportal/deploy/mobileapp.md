@@ -104,7 +104,7 @@ There are two ways that the device can build the packages:
 {{% alert type="warning" %}}
 Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible.
 
-To build a hybrid app and publish it, see the [Doing It Yourself](#doing-it-yourself) section below for remote building or the [Building Your iOS App Locally](#building-ios-locally) and [Building Your Android App Locally](fill-broken-link-soon) sections for local building.
+To build a hybrid app and publish it, see the [Doing It Yourself](#doing-it-yourself) section below for remote building or the [Building Your iOS App Locally](#building-ios-locally) and [Building Your Android App Locally](#buliding-android-locally) sections for local building.
 
 To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
 {{% /alert %}}
@@ -196,7 +196,7 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 
     ![Distribute Options](attachments/mobileapp/distribute-options.png)
 
-## 4.4 Building Your Android App Locally {#building-android-locally}
+### 4.4 Building Your Android App Locally {#building-android-locally}
 
 **Prerequisites:**
 
@@ -216,7 +216,7 @@ To prepare your project for building, follow these instructions:
    * Packages the Cordova app for deployment.
    * Adds the iOS platform to Cordova.
 
-### 4.4.2 Set Up Environmmetal Variables
+#### 4.4.2 Set Up Environmmetal Variables
 
 To be able to run the commands to build locally, you will need to set up some required environmental variables for your system. These can be set to temporary for the current command line session or globally for your system. The variables are the following:
 
@@ -226,16 +226,16 @@ To be able to run the commands to build locally, you will need to set up some re
 
 For the purpose of this guide we will be setting the commands to temporary for each of the commands.
 
-### 4.4.3 Building Your Prepared Project
+#### 4.4.3 Building Your Prepared Project
 
 There are two possible ways to build your apps: the Cordova CLI or Android Studio. The Cordova CLI is faster and allows Cordova to fully control the your project's configuration. Android Studio is more involved, but Android Studio's UI makes it easier to detect problems in the project. You can use whichever works best for your case.
 
-#### 4.4.3.1 Building Android Using the Cordova CLI
+##### 4.4.3.1 Building Android Using the Cordova CLI
 
 The command to build your project locally for release is `npm run build -- android --release`.
 
 1. Run the following command:<br />
-  a. **On Mac OSX, as a single command run:**<br />
+    a. **On Mac OSX, as a single command run:**<br />
 
    ```
    PATH="\$PATH:/Users/<username>/.gradle/wrapper/dists/gradle-5.1.1-all/97z1ksx6lirer3kbvdnh7jtjg/gradle-5.1.1/bin" JAVA_HOME=`/usr/libexec/java_home -v 1.8\` npm run build -- android --release -- --keystore=<keystore-path> --storePassword=<keystore-password> --alias=<keystore-alias> --password=<certificate-password>

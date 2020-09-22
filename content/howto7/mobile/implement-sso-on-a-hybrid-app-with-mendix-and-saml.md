@@ -174,5 +174,5 @@ The last thing to do is to check the **Enable mobile authentication token** box 
 
 * [How to Deploy Your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
 * [How to Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
-* [How to Debug a Mobile App with Mendix](debug-a-mobile-app)
+* [How to Debug a Hybrid Mobile App](debug-a-mobile-app)
 * [Building a Mobile App with Mendix](https://www.mendix.com/blog/building-mobile-app-mendix/)

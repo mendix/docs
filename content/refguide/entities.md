@@ -65,7 +65,9 @@ An entity can be a more specialized version of a general entity. This means that
 
 The generalization specifies the entity from which a specific entity derives its properties (attributes, associations, events, and other properties). It is used when entities have common attributes and can be generalized using a super entity. In object oriented programming (OOP) the generic term for generalization and specialization is called **inheritance**.
 
-One important use of this feature is to derive functionality from the System module, for example, images from the entity `Image` and files from the entity `FileDocument`. 
+When an entity that has a specialization is retrieved, for example in a data grid or in a microflow, specializations of that entity are included in the result. When a specialization is retrieved, its generalizations are not included in the result. Using the previous example, if `Vehicle` is retrieved, the resulting set will contain objects of types `Vehicle` and `Car`. If `Car` is retrieved, only objects of `Car` are included in the result set.
+
+One important use of this feature is to derive functionality from the System module, for example, images from the entity `Image` and files from the entity `FileDocument`.
 
 For example, this property can be used in a situation where, you have an entity 'Student' and an entity 'Professor' which have some generic properties. They both have a name, telephone number and email address and can be a member of one or more courses. Both entities are *generalized* in the entity 'Member'. Conversely, this means that the entity 'Member' is *specialized* in the entities 'Student' and 'Professor'.
 

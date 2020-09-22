@@ -11,3 +11,5 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 ### _______, 2020
 
+**To do: link to blog that will be released**
+

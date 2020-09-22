@@ -150,6 +150,7 @@ studio:
     - "Theme Customizer"
     - "Settings"
     - "Starting With Your Own Data"
+    - "Data Hub in Studio"
 studio-how-to:
   space: "Studio 8 How-to's"
   priority: false

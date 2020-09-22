@@ -240,9 +240,9 @@ The command to build your project locally for release is `npm run build -- andro
 	```
 	set PATH=%PATH%;C:\path-to-gradle-distribution
 
-   set JAVA_HOME=C:\path-to-jdk-1.8-directory
+	set JAVA_HOME=C:\path-to-jdk-1.8-directory
 
-   npm run build -- android --release -- --keystore=<keystore-path> --storePassword=<keystore-password> --alias=<keystore-alias> --password=<certificate-password>
+	npm run build -- android --release -- --keystore=<keystore-path> --storePassword=<keystore-password> --alias=<keystore-alias> --password=<certificate-password>
 	```
 
 	This command adds the gradle binary to the path, switches the JAVA *JDK* to be 1.8, and runs the build release command to generate a signed *APK*.

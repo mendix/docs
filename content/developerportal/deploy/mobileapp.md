@@ -31,7 +31,7 @@ In this tab, you can find the following sections:
 * **General settings**
 * **Profile settings**
 * **Permissions**
-* **Custom Phonegap/Cordova configuration**
+* **Custom Cordova configuration**
 
 ### 2.1 General Settings
 
@@ -71,11 +71,11 @@ The permissions that can be enabled/disabled:
 Some functionality might not be available when you disable these permissions (for example, your app will not be able to use the camera widget when you disable it).
 {{% /alert %}}
 
-### 2.4 Custom Phonegap/Cordova Configuration {#custom}
+### 2.4 Custom Cordova Configuration {#custom}
 
-You can specify additional Phonegap/Cordova settings and plugins by adding an XML snippet below. This snippet will be inserted at the bottom of the configuration file.
+You can specify additional Cordova settings and plugins by adding an XML snippet below. This snippet will be inserted at the bottom of the configuration file.
 
-For an overview of available elements and settings, refer to [Apache Cordova Phonegap Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/).
+For an overview of available elements and settings, refer to [Apache Cordova Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/).
 
 ## 3 iOS & Android
 
@@ -102,7 +102,7 @@ This wizard will guide you through the process of creating local build app packa
 
 ### 4.1 Doing It Yourself {#doing-it-yourself}
 
-Once you begin the app buliding wizard and choose the correct environment, click **Download a customizable package**. The package contains all your settings, icons, and splash screens. It allows you to easily make changes, create local builds, run on emulators, and upload to the PhoneGap Build service.
+Once you begin the app buliding wizard and choose the correct environment, click **Download a customizable package**. The package contains all your settings, icons, and splash screens. It allows you to easily make changes, create local builds, and run on emulators.
 
 For iOS please follow the instructions in [Building Your iOS App Locally](#building-ios-locally) below.
 
@@ -122,7 +122,7 @@ For Android please follow the instructions in [Building Your iOS App Locally](#b
 
 To prepare your project for building, follow these instructions:
 
-1. Open a terminal window and change directory into the unzipped package folder, for example **cd /Downloads/phonegap** if it is in your Downloads folder.
+1. Open a terminal window and change directory into the unzipped package folder, for example **cd /Downloads/localbuild** if it is in your Downloads folder.
 1. Run `npm i && npm run package && npm run platform:ios`. This combination of commands does the following:
    * Installs all required dependencies.
    * Packages the Cordova app for deployment.
@@ -203,7 +203,7 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 
 To prepare your project for building, follow these instructions:
 
-1. Open a terminal window and change directory into the unzipped package folder, for example **cd /Downloads/phonegap** if it is in your **Downloads** folder.
+1. Open a terminal window and change directory into the unzipped package folder, for example **cd /Downloads/localbuild** if it is in your **Downloads** folder.
 1. Run `npm i && npm run package && npm run platform:ios`. This combination of commands does the following:
    * Installs all required dependencies
    * Packages the Cordova app for deployment
@@ -259,7 +259,7 @@ Using Android Studio can be easier than the Cordova CLI due to Android Studio's 
 
 	{{% image_container width="400" %}}![Android Studio Welcome Screen](attachments/mobileapp/android-studio-welcome.png){{% /image_container %}}
 
-1. Open an existing Android Studio project and select your project's Android folder, for example **/Downloads/phonegap/build/platform/android**:
+1. Open an existing Android Studio project and select your project's Android folder, for example **/Downloads/localbuild/build/platform/android**:
 
 	{{% image_container width="400" %}}![Android Studio Open Folder](attachments/mobileapp/android-studio-open-folder.png){{% /image_container %}}
 
@@ -289,4 +289,4 @@ You *APK* should now be generated and signed using Android Studio. The resulting
 * [Deploy and Manage Guide](/developerportal/deploy)
 * [Offline Reference Guide](/refguide/offline-first)
 * [How to Publish a Mendix Hybrid Mobile App in App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
-* [Apache Cordova PhoneGap Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)
+* [Apache Cordova Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)

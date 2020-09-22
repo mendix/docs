@@ -46,7 +46,7 @@ A tab container contains one or more tab pages where you place widgets. For exam
 
 Default: *False*
 
-#### 3.1.2 Refresh on Show
+#### 3.1.2 Refresh on Show {#refresh}
 
 **Refresh on show** indicates whether the contents of the tab page should be refreshed when the tab page is shown. Set this property to *No* if you know that nothing will affect the information on the tab page.
 

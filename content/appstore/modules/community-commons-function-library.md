@@ -77,7 +77,7 @@ The Community Commons container project contains a variety of predesigned unit t
 
 * `CommitWithoutEvents` – This commits an object but without events.
 * `Clone` – This clones the objects.
-* <a name="deepclone"></a>`DeepClone` – This clones the objects, their associations, and their referred objects.
+* <a name="deepclone"></a>`DeepClone` – This clones the objects, their associations, and their referred objects.<a href="#6-limitations" title="Also check out the limitations section">*</a>
 * `GetGUID` – This returns the global unique identifier (GUID) or the ID of an object.
 * `GetOriginalValueAsString` – This returns the original value of an object member, that is, the last committed value.
 * `GetTypeAsString` – This returns the actual type of an entity. Useful as an alternative way to split upon inheritance or as input for other functions in this module.

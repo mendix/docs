@@ -227,7 +227,7 @@ There are two possible ways to build your apps: the Cordova CLI or Android Studi
 
 The command to build your project locally for release is `npm run build -- android --release`.
 
-1. Run the following command:
+1.  Run the following command:
    
 	a. **On Mac OSX, as a single command run:**<br />
 
@@ -245,7 +245,7 @@ The command to build your project locally for release is `npm run build -- andro
    npm run build -- android --release -- --keystore=<keystore-path> --storePassword=<keystore-password> --alias=<keystore-alias> --password=<certificate-password>
 	```
 
-   This command adds the gradle binary to the path, switches the JAVA *JDK* to be 1.8, and runs the build release command to generate a signed *APK*.
+	This command adds the gradle binary to the path, switches the JAVA *JDK* to be 1.8, and runs the build release command to generate a signed *APK*.
 
 1. When the build succeeds the generated *APK* file can be found in **/build/platform/android/app/release**:
 

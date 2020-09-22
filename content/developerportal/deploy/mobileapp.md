@@ -203,21 +203,21 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 
 To prepare your project for building, follow these instructions:
 
-1. Open a terminal window and change directory into the unzipped package folder, for example **cd /Downloads/phonegap** if it is in your Downloads folder.
+1. Open a terminal window and change directory into the unzipped package folder, for example **cd /Downloads/phonegap** if it is in your **Downloads** folder.
 1. Run `npm i && npm run package && npm run platform:ios`. This combination of commands does the following:
-   * Installs all required dependencies.
-   * Packages the Cordova app for deployment.
-   * Adds the iOS platform to Cordova.
+   * Installs all required dependencies
+   * Packages the Cordova app for deployment
+   * Adds the iOS platform to Cordova
 
-#### 4.3.2 Set Up Environmmetal Variables
+#### 4.3.2 Set Up Environmental Variables
 
 To be able to run the commands to build locally, you will need to set up some required environmental variables for your system. These can be set to temporary for the current command line session or globally for your system. The variables are the following:
 
 * **ANDROID_SDK_ROOT**, pointing to the installation folder of the Android *SDK*
-* **JAVA_HOME**, ponting to the JDK 1.8 root directory
+* **JAVA_HOME**, pointing to the *JDK* 1.8 root directory
 * **GRADLE_HOME**, pointing to a valid Gradle distribution directory
 
-For the purpose of this guide we will be setting the commands to temporary for each of the commands.
+During this guide you will set the commands to temporary for each of the commands.
 
 #### 4.3.3 Building Your Prepared Project
 
@@ -227,26 +227,27 @@ There are two possible ways to build your apps: the Cordova CLI or Android Studi
 
 The command to build your project locally for release is `npm run build -- android --release`.
 
-1. Run the following command:<br />
-    a. **On Mac OSX, as a single command run:**<br />
+1. Run the following command:
+    
+	a. **On Mac OSX, as a single command run:**<br />
 
-   ```
-   PATH="\$PATH:/Users/<username>/.gradle/wrapper/dists/gradle-5.1.1-all/97z1ksx6lirer3kbvdnh7jtjg/gradle-5.1.1/bin" JAVA_HOME=`/usr/libexec/java_home -v 1.8\` npm run build -- android --release -- --keystore=<keystore-path> --storePassword=<keystore-password> --alias=<keystore-alias> --password=<certificate-password>
-   ```
+	```
+	PATH="\$PATH:/Users/<username>/.gradle/wrapper/dists/gradle-5.1.1-all/97z1ksx6lirer3kbvdnh7jtjg/gradle-5.1.1/bin" JAVA_HOME=`/usr/libexec/java_home -v 1.8\` npm run build -- android --release -- --keystore=<keystore-path> --storePassword=<keystore-password> --alias=<keystore-alias> --password=<certificate-password>
+	```
 
-  b. **On Windows, in a command line as separate commands run:**<br />
+	b. **On Windows, in a command line as separate commands run:**<br />
 
-   ```
-   set PATH=%PATH%;C:\path-to-gradle-distribution
+	```
+	set PATH=%PATH%;C:\path-to-gradle-distribution
 
    set JAVA_HOME=C:\path-to-jdk-1.8-directory
 
    npm run build -- android --release -- --keystore=<keystore-path> --storePassword=<keystore-password> --alias=<keystore-alias> --password=<certificate-password>
-   ```
+	```
 
-   This command adds the gradle binary to the path, switches the JAVA JDK to be 1.8 and runs the build release command to generated a signed APK.
+   This command adds the gradle binary to the path, switches the JAVA *JDK* to be 1.8, and runs the build release command to generate a signed *APK*.
 
-1. When the build succeeds the generated *APK* file can be found in `/build/platform/android/app/release`:
+1. When the build succeeds the generated *APK* file can be found in **/build/platform/android/app/release**:
 
   ![Final folder structure](attachments/mobileapp/folder-final-android.png)
 
@@ -258,13 +259,12 @@ Using Android Studio can be easier than the Cordova CLI due to Android Studio's 
 
    ![Android Studio Welcome Screen](attachments/mobileapp/android-studio-welcome.png)
 
-1. Open an existing Android Studio project and select your projects android folder, for example **/Downloads/phonegap/build/platform/android**:
+1. Open an existing Android Studio project and select your project's Android folder, for example **/Downloads/phonegap/build/platform/android**:
 
    ![Android Studio Open Folder](attachments/mobileapp/android-studio-open-folder.png)
 
 1. Wait for Android Studio to finish syncing your project.
-
-1. Select the build menu and `Generate Signed Bundle / APK`:
+1. Click the **Build** > **Generate Signed Bundle / APK**:
 
    ![Android Studio Build Menu](attachments/mobileapp/android-studio-build-menu.png)
 
@@ -272,11 +272,11 @@ Using Android Studio can be easier than the Cordova CLI due to Android Studio's 
 
    ![Android Studio Sign Wizard Step 1](attachments/mobileapp/android-studio-sign-wizard-1.png)
 
-1. Select your Android keystore and complete the form with the correct keystore password, alias, and password.
+1. Select your Android keystore and complete the form with the correct keystore password, alias, and password:
 
    ![Android Studio Sign Wizard Step 2](attachments/mobileapp/android-studio-sign-wizard-2.png)
 
-1. Select the destination folder for the *APK*, build variant release, V1 and V2 Signature versions:
+1. Select the destination folder for the *APK*, **Build Variant** release, and **V1 and V2 Signature** versions:
 
    ![Android Studio Sign Wizard Step 3](attachments/mobileapp/android-studio-sign-wizard-3.png)
 

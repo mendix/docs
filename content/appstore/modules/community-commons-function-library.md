@@ -77,7 +77,7 @@ The Community Commons container project contains a variety of predesigned unit t
 
 * `CommitWithoutEvents` – This commits an object but without events.
 * `Clone` – This clones the objects.
-* <a name="deepclone"></a>`DeepClone` – This clones the objects, their associations, and their referred objects.<a href="#6-limitations" title="Also check out the limitations section">*</a>
+* <a name="deepclone"></a>`DeepClone` – This clones the objects, their associations, and their referred objects. For more information, see the [Limitations](#limitations) section below.
 * `GetGUID` – This returns the global unique identifier (GUID) or the ID of an object.
 * `GetOriginalValueAsString` – This returns the original value of an object member, that is, the last committed value.
 * `GetTypeAsString` – This returns the actual type of an entity. Useful as an alternative way to split upon inheritance or as input for other functions in this module.
@@ -164,7 +164,7 @@ For security reasons, Guava was upgraded to version 27 in version 7.4.0 of this 
 * *guava-27.0-jre.jar*
 * *owasp-java-html-sanitizer-20181114.1.jar*
 
-## 6 Limitations
+## 6 Limitations {#limitations}
 
 * [Generalizations](/refguide/generalization-and-association) are not supported (specifically in the [DeepClone](#deepclone) function)
 

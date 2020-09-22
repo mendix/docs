@@ -95,7 +95,7 @@ If your app supports push notifications, you are now required to set up a Fireba
 
 You will need to prepare the hybrid app package locally. You can use the generated hybrid app package to build your Android and iOS apps locally.
 
-To build the hybrid app package, follow [these steps](developerportal/deploy/mobileapp#publish) depending on your platforms until you have the build packages you need. Then, do the following:
+To build the hybrid app package, follow [these steps](/developerportal/deploy/mobileapp#publish) depending on your platforms until you have the build packages you need. Then, do the following:
 
 1.  Unzip the hybrid app package.
 2.  Copy and paste the *google-services.json* and *GoogleService-Info.plist* config files you downloaded before into the `config` folder.

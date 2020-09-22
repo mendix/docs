@@ -1,34 +1,38 @@
 ---
 title: "3D Viewer"
-#category: "Modules"
-#parent: "Enter the parent document filename of this document if necessary (for example,"design-the-architecture"); if there is a category,remove this parent line"
-#menu_order: Enter the position of the document in the category or under the parent; number by 10 (for first), 20, 30, etc. for easy ordering of other documents in the future if necessary; don't add brackets or quotation marks; if no number is added,the system will add an extremely high number to order the documents, which means that if you only want a document to appear at the top, you only have to add "10" to that specific document, you don't have to order all the other documents in the category/under the parent
-#description: "3D Viewer enables Mendix developers to build 3D Visualization capability into their solutions. 3D Viewer module is a  bundle of 3D widgets, nanoflows, microflow, java actions and other APIs. By using 3D Viewer to Mendix app,  User can view and operate the model, navigate model product structure tree, and perform advanced operations like make measurement and sectioning."
-#tags: ["3DVisualization", "CAD", "app store", "app store component", "platform support"]
+category: "App Services"
+tags: ["3d visualization", "cad", "app store", "marketplace", "component", "platform support"]
 ---
+
 ## 1 Introduction
 
-The [3DViewer(app store link not available yet)](https://??) module lets you upload, visualize and operate on 3D JT files in your web applications. The module contains Java actions, JavaScript actions, domain models, nanoflows, microflows and a set of 3D widgets that enable you build app to work with 3D models (JT format) . The module includes whole functionalities and integrations that can be very helpful when you are building your own 3D applications. All you need to do is drag and drop items and configure them. This module does the heavylifting job for you so you don't have to build 3D rendering engine from scratch.
+The 3D Viewer app service lets you upload, visualize, and operate on 3D JT files in your web applications. The app service contains Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of 3D widgets that enable you build apps to work with 3D models via the JT format. The app service includes whole functionalities and integrations that can be very helpful when you are building your own 3D applications. All you need to do is drag and drop items and configure them. 
+
+This app service does the heavy-lifting for you so you do not have to build a 3D-rendering engine from scratch.
+
+{{% todo %}}[Add link to component]{{% /todo %}}
 
 ### 1.1 Typical Use Cases
 
-You can use the module when you want to upload, store and visualize 3D JT models in your application, and perform some basic operations such us navigating model product structure tree, Product Manufacturing Information(PMI) tree, sectioning.
+You can use this app service when you want to upload, store, and visualize 3D JT models in your application. You can perform some basic operations, such us navigating the model product structure tree, the **Product Manufacturing Information** (PMI) tree, and sectioning.
+
+{{% todo %}}[Add cross-reference to PMI section?]{{% /todo %}}
 
 ### 1.2 Features
 
- The module enables you to do the following:
+This app service enables you to do the following:
 
-- Display 3D model (currently support JT format)
-- Quick intuitive controls to navigate a product structure
-- Zoom, rotate, fit all, pan
-- Ability to turn parts on and off
-- Display PMI
-- Ability to select and deselect parts
-- Display Model Views
-- Loading models from Mendix File Storage
-- Display part/assembly properties
-- Create 3D cross sections
-- Examine your model from preset viewing angles
+* Display 3D model (currently support JT format)
+* Quick intuitive controls to navigate a product structure
+* Zoom, rotate, fit all, pan
+* Ability to turn parts on and off
+* Display PMI
+* Ability to select and deselect parts
+* Display Model Views
+* Loading models from Mendix File Storage
+* Display part/assembly properties
+* Create 3D cross sections
+* Examine your model from preset viewing angles
   
 ### 1.3 Limitations
 
@@ -48,40 +52,44 @@ If your app does not have the **3DViewer** module, it is available from the Mend
 
 ## 4 Configuration
 
-### 4.1 Initializing the 3DViewer Module on App Startup
+### 4.1 Initializing the 3D Viewer App Service on App Startup
 
-To automatically start this  module, create a **Startup** microflow, add the **Viewer3D/USE_ME/VisServerAction** java action to the microflow, set return type as `Boolean` ,value as `true`.  
-![startupmicroflow](attachments/3d-viewer/startupmicroflow.jpg)  
+To automatically start this  module, create a **Startup** microflow, add the **Viewer3D/USE_ME/VisServerAction** java action to the microflow, set return type as `Boolean` ,value as `true`.
+
+![startupmicroflow](attachments/3d-viewer/startupmicroflow.jpg)
+
 **Startup** microflow needs to be set as the After Startup step (via **Project** > **Settings** > **Server** > **Afterstartup**).
 
 ![afterStartup](attachments/3d-viewer/afterStartup.jpg)
+
 More details on **After Startup** can be found [here](.project-settings.md#after-startup).
 
 ## 5 3D Widgets
 
-These are 3D widgets bundled in this module.
-| Widget                           | Description                                                                                                                                                                                       |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Container3D                      | A special container widget that provides shared context for other 3DViewer widgets                                                                                                                |
-| PMI Tree                         | Provides hierarchical tree display of a model's product manufacturing information, model views and design groups.                                                                                 |
-| PS Tree                          | Provides hierarchical classification of the items which form a product.                                                                                                                           |
-| PS Tree Table                    | A configurable tree table to display model attributes of your choice.                                                                                                                             |
-| Sectioning                       | Allows user to create section cut on the model                                                                                                                                                    |
-| Tool bar item camera mode        | Provides ability to control the appearance of surface objects displayed in the view, The option determine whether surface objects are represented on the display by facet geometry, edge geometry |
-| Tool bar item camera orientation | Allows you to view model from different camera orientation                                                                                                                                        |
-| Tool bar item explode slider     | The explode slider allows you to create an exploded view of your assembly                                                                                                                         |
-| Tool bar item fit all            | Allows user to fit all the model parts in the viewer.                                                                                                                                             |
-| Tool bar item render mode        | Allows user to toggle between different model render mode                                                                                                                                         |
-| Tool bar item selection mode     | Provides capability to select on model part, edge, face,body.                                                                                                                                     |
-| Uploader                         | Enables user to upload their own model to be viewed in browser or the app.                                                                                                                        |
-| Viewer                           | Provides viewing window of your 3D Model when you open a model, zoom, rotate, pan                                                                                                                 |
+These are 3D widgets bundled in this module
 
-## 6 Using 3DViewer  
+| Widget | Description |                                                                                                                                                                                      
+| --- | --- |
+| Container3D | A special container widget that provides a shared context for other 3D Viewer widgets. |                                                                                                            
+| PMI Tree | Provides hierarchical tree display of a model's product manufacturing information, model views and design groups. |                                                                                 
+| PS Tree | Provides hierarchical classification of the items which form a product. |                                                                                                                           
+| PS Tree Table | A configurable tree table to display model attributes of your choice. |                                                                                                                             
+| Sectioning | Allows user to create section cut on the model. |                                                                                                                                                    
+| Tool bar item camera mode | Provides ability to control the appearance of surface objects displayed in the view, The option determine whether surface objects are represented on the display by facet geometry, edge geometry. |
+| Tool bar item camera orientation | Allows you to view model from different camera orientation. |                                                                                                                                        
+| Tool bar item explode slider | The explode slider allows you to create an exploded view of your assembly. |                                                                                                                         
+| Tool bar item fit all | Allows user to fit all the model parts in the viewer. |                                                                                                                                           
+| Tool bar item render mode | Allows user to toggle between different model render mode. |                                                                                                                                         
+| Tool bar item selection mode | Provides capability to select on model part, edge, face,body. |                                                                                                                                     
+| Uploader | Enables user to upload their own model to be viewed in browser or the app. |                                                                                                                       
+| Viewer | Provides viewing window of your 3D Model when you open a model, zoom, rotate, pan.|                                                                                                                 
+
+## 6 Using 3D Viewer  
 
 3DViewer mainly provides a set of widgets to visualize JT models and a set of nanoflows, java actions to bring in the data.
 Given that you start from a blank app template in Mendix Studio Pro, you can follow the instructions below to visualize your local JT model quickly.
 
-### 6.1.1 To upload 3D JT model in browser and view right away
+### 6.1.1 Uploading & Viewing a 3D JT Model in Your Browser
 
 For **Viewer** widget to visualize a JT model, two data source attributes should be set: `Model ID` and `Model Souce Type`. To enable upload 3D JT model and visualize directly on the page, a set of `ModelID` and `Model source type` should be returned by **Uploader** widget and set to that of **Viewer** widget.  
 
@@ -102,7 +110,7 @@ Follow these steps:
 Run Locally, you can now upload JT file and view directly in the browser.
 ![runlocally-uploadandview](attachments/3d-viewer/runlocally-uploadandview.jpg)
 
-### 6.1.2 Display model loading progress with Mendix native **Progress Bar** widget
+### 6.1.2 Displaying Model Loading Progress with Progress Bar widget
 
 While you are uploading or loading a model, user may want to know the uploading and loading progress information.  
 To get uploading progress: in **Uploader** widget property,uploading progress can be obtained via `Progress percentage`:
@@ -123,19 +131,19 @@ Run locally, you will be able to see real-time model loading progress.
 
 To display upload loading progress, the approach is similar.
 
-6.1.3  More 3D functionalities
+#### 6.1.3 Utilizing More 3D Functionality
 
 Add more 3D widgets to the page to enable more 3D functionalities, you can arrange the layout of them as to your need. For example:  
 ![structuremode-more3dwidgets](attachments/3d-viewer/structuremode-more3dwidgets.jpg)
 In design mode,  
 ![designMode-more3dwidgets](attachments/3d-viewer/designMode-more3dwidgets.jpg)
 
-### 6.2 Manage uploaded models
+### 6.2 Managing Uploaded Models
 
 In previous use case, you can only visualize the model you upload.
 Usually you will also need to manage the models that are uploaded and stored in the data storage. 3DViewer provides **GetModelList** and **DeleteModel** nanoflows to help you build model data management functionality into your app.
 
-### 6.2.1 Build model list
+### 6.2.1 Building a Model List
 
 Mendix native **ListView** widget can be used to display the model list.
 
@@ -148,7 +156,7 @@ Follow these steps:
 5. Fill in the list item with the information you are interested in.
 ![openmodelpopUp-listview](attachments/3d-viewer/openmodelpopUp-listview.jpg)
 
-### 6.2.2 Open Model from Model list
+### 6.2.2 Opening a Model from the Model List
 
 Once you have the model list, you may want to click to select a model from the list and view the model. As **Viewer** widget expects `ModelId` and `Model Source Type`  to visualize a model, such information of selected model need to be passed to the **Viewer** widget. Since each list item is a `ModelDocument` object and this object contains various information of the selected model, including `ModelId` and `Model Source Type`, we need to pass this object to **Viewer** widget.
 
@@ -165,7 +173,7 @@ Open Model Popup page:
 Run locally, you will get a simple model list, where you can select which model to open and visualize it at home page viewer:
 ![openmodellistpopup-demo](attachments/3d-viewer/openmodellistpopup-demo.jpg)
 
-### 6.2.3 Delete model
+### 6.2.3 Deleting a Model
 
 There might be some models that you don't want in the database. You can delete them too. 3DViewer module provides **DeleteModelFromMendix** microflow to achieve this.
 
@@ -180,7 +188,7 @@ Follow these steps to delete model from database:
 
 Now you are able to get a list of model, select on list item to open a model and delete model.
 
-### 6.3 Handle Viewer events
+### 6.3 Handling Viewer Events
 
 Multiple events can be picked up by **Viewer** widget and can used to build your customized event handling logic.
 Mainly 3 types of events can be picked on **Viewer** Widget:
@@ -189,7 +197,6 @@ Mainly 3 types of events can be picked on **Viewer** Widget:
 **OnError**: By selecting one attribute to set OnError event, you can pick up error exposed by Viewer.  
 **On Progress Change**: By selecting one attribute to setProgress value to, you can get the current loading status and loading percentage of model, product structure tree, PMI tree.
 
-## 7. Load and visualize model from Teamcenter
+## 7 Loading & Visualizing a Model from Teamcenter
 
 JT models from other data sources can also be visualized. Specifically, if you would like to load and visualize models from Teamcenter, you can use a combination of this **3DViewer** module and another module [**3DViewer for Teamcenter**](./3d-viewer-for-teamcenter.md) to achieve this.
-

@@ -15,7 +15,7 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 #### Mendix Cloud v4
 
 * We have added the ability for Technical Contacts to download the activity log from an environment.
-* On the **Environments** page have split the *Edit App* button into two separate buttons: **Edit in Studio** and **Edit in Studio Pro**.
+* On the **Environments** page we have split the *Edit App* button into two separate buttons: **Edit in Studio** and **Edit in Studio Pro**.
 * We removed the ability to build PhoneGap hybrid applications through the Developer Portal. The PhoneGap Build service is removed by Adobe on 1 October, so this action would have failed after this date. You can still build your hybrid app locally.
 * We resolved an issue where transports which failed were not reported correctly to the customer. (Ticket 106033)
 * We resolved an issue where memory could not be scaled above 16GiB even though 32GiB was available. (Ticket 101035)

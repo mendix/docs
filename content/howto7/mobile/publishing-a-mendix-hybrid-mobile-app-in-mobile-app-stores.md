@@ -8,6 +8,16 @@ tags: ["mobile", "app store", "phonegap"]
 
 Once you have finished developing a Mendix mobile application, you will want to make it available as an app for mobile platforms such as Apple iOS and Google Android. We make it possible to produce platform-specific native mobile apps. For more details on deploying platform-specific apps, see [Mobile App](/developerportal/deploy/mobileapp).
 
+{{% alert type="warning" %}}
+Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible. 
+
+To build a hybrid app and publish it, see the [Doing It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) section of the *Mobile App Developer Portal Guide*. Under that section are instructions for building [iOS](/developerportal/deploy/mobileapp#building-ios-locally) and [Android](/developerportal/deploy/mobileapp#building-ios-locally) apps locally.
+
+To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
+
+The PhoneGap build portions of this document will be updated with new instructions soon.
+{{% /alert %}}
+
 The hybrid mobile app publishing process is based on Adobe PhoneGap. We have integrated the [Adobe PhoneGap Build](https://build.phonegap.com/) service into Mendix to provide support for automatically building the required hybrid mobile packages. Instead of worrying about technical details, you can focus on what matters most: rapidly developing an app to support your business processes.
 
 **This how-to will teach you how to do the following:**

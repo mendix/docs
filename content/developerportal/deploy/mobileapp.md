@@ -156,38 +156,38 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 
 1.  Under **/build/platforms/ios/** open the `.xcworkspace` file by double-clicking it. Xcode should open with the project loaded:
 
-    ![Opening XCWorkspace](attachments/mobileapp/xc-workspace.png)
+    {{% image_container width="400" %}}![Opening XCWorkspace](attachments/mobileapp/xc-workspace.png){{% /image_container %}}
 
 1.  Select the root element from the tree view in the left-side panel:
 
-    ![Selecting the root element](attachments/mobileapp/root-element.png)
+    {{% image_container width="400" %}}![Selecting the root element](attachments/mobileapp/root-element.png){{% /image_container %}}
 
 1.  The screen should change to the following view. If it does not, select the item under **Targets** on the left panel not the item under **Project** and select the tab **Signing & Certificates**:
 
-    ![Signing screen with errors](attachments/mobileapp/setup-signing-wrong.png)
+    {{% image_container width="400" %}}![Signing screen with errors](attachments/mobileapp/setup-signing-wrong.png){{% /image_container %}}
 
 1.  Both **Debug** and **Release** might have been configured for **Automatically manage signing**. Clear both check boxes to switch to manual signing. The screen should change to the following:
 
-    ![Signing screen correctly configured](attachments/mobileapp/setup-signing-correct.png)
+    {{% image_container width="400" %}}![Signing screen correctly configured](attachments/mobileapp/setup-signing-correct.png){{% /image_container %}}
 
 1.  Enable **Automatically manage signing** again.
 1.  Select a **Team** using the drop-down menu. If you have not yet signed in with your credentials, XCode will prompt you to do so.
 1.  When configured correctly all errors should be gone.
 1.  Make sure you select the target to be your app's build target and designate **Generic iOS Device** as a device:
 
-    ![Signing screen correctly configured](attachments/mobileapp/target-device.png)
+    {{% image_container width="400" %}}![Signing screen correctly configured](attachments/mobileapp/target-device.png){{% /image_container %}}
 
 1.  Select **Product** and then **Archive** from the menu bar:
 
-    ![Archiving](attachments/mobileapp/archiving.png)
+    {{% image_container width="400" %}}![Archiving](attachments/mobileapp/archiving.png){{% /image_container %}}
 
 1.  After the process finishes successfully the **Organizer** view will come up. Your app should be selected and your latest **Archive** visible. You can always open the organizer yourself through XCode's **Window** menu:
 
-    ![Organizer](attachments/mobileapp/organizer.png)
+    {{% image_container width="400" %}}![Organizer](attachments/mobileapp/organizer.png){{% /image_container %}}
 
 1.  You can now use the **Distribute App** button to distribute your app to the appstore or archive it for local distribution:
 
-    ![Distribute Options](attachments/mobileapp/distribute-options.png)
+    {{% image_container width="400" %}}![Distribute Options](attachments/mobileapp/distribute-options.png){{% /image_container %}}
 
 ### 4.3 Building Your Android App Locally {#building-android-locally}
 
@@ -228,7 +228,7 @@ There are two possible ways to build your apps: the Cordova CLI or Android Studi
 The command to build your project locally for release is `npm run build -- android --release`.
 
 1. Run the following command:
-    
+   
 	a. **On Mac OSX, as a single command run:**<br />
 
 	```
@@ -249,7 +249,7 @@ The command to build your project locally for release is `npm run build -- andro
 
 1. When the build succeeds the generated *APK* file can be found in **/build/platform/android/app/release**:
 
-  ![Final folder structure](attachments/mobileapp/folder-final-android.png)
+	{{% image_container width="400" %}}![Final folder structure](attachments/mobileapp/folder-final-android.png){{% /image_container %}}
 
 #### 4.4.3.2 Building Android Using Android Studio
 
@@ -257,28 +257,28 @@ Using Android Studio can be easier than the Cordova CLI due to Android Studio's 
 
 1. Start Android Studio:
 
-   ![Android Studio Welcome Screen](attachments/mobileapp/android-studio-welcome.png)
+	{{% image_container width="400" %}}![Android Studio Welcome Screen](attachments/mobileapp/android-studio-welcome.png){{% /image_container %}}
 
 1. Open an existing Android Studio project and select your project's Android folder, for example **/Downloads/phonegap/build/platform/android**:
 
-   ![Android Studio Open Folder](attachments/mobileapp/android-studio-open-folder.png)
+	{{% image_container width="400" %}}![Android Studio Open Folder](attachments/mobileapp/android-studio-open-folder.png){{% /image_container %}}
 
 1. Wait for Android Studio to finish syncing your project.
 1. Click the **Build** > **Generate Signed Bundle / APK**:
 
-   ![Android Studio Build Menu](attachments/mobileapp/android-studio-build-menu.png)
+	{{% image_container width="400" %}}![Android Studio Build Menu](attachments/mobileapp/android-studio-build-menu.png){{% /image_container %}}
 
 1. Select the *APK* checkbox:
 
-   ![Android Studio Sign Wizard Step 1](attachments/mobileapp/android-studio-sign-wizard-1.png)
+	{{% image_container width="400" %}}![Android Studio Sign Wizard Step 1](attachments/mobileapp/android-studio-sign-wizard-1.png){{% /image_container %}}
 
 1. Select your Android keystore and complete the form with the correct keystore password, alias, and password:
 
-   ![Android Studio Sign Wizard Step 2](attachments/mobileapp/android-studio-sign-wizard-2.png)
+	{{% image_container width="400" %}}![Android Studio Sign Wizard Step 2](attachments/mobileapp/android-studio-sign-wizard-2.png){{% /image_container %}}
 
 1. Select the destination folder for the *APK*, **Build Variant** release, and **V1 and V2 Signature** versions:
 
-   ![Android Studio Sign Wizard Step 3](attachments/mobileapp/android-studio-sign-wizard-3.png)
+	{{% image_container width="400" %}}![Android Studio Sign Wizard Step 3](attachments/mobileapp/android-studio-sign-wizard-3.png){{% /image_container %}}
 
 1. Click **Finish**.
 

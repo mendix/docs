@@ -22,26 +22,26 @@ You can use this app service when you want to upload, store, and visualize 3D JT
 
 This app service enables you to do the following:
 
-* Display 3D model (currently support JT format)
-* Quick intuitive controls to navigate a product structure
-* Zoom, rotate, fit all, pan
-* Ability to turn parts on and off
+* Display a 3D model (the JT format is currently supported)
+* Use quick intuitive controls to navigate product structure
+* Zoom, rotate, fit all, and pan
+* Turn parts on and off
 * Display PMI
-* Ability to select and deselect parts
-* Display Model Views
-* Loading models from Mendix File Storage
+* Select and clear selection of parts
+* Display model views
+* Load models from Mendix file storage
 * Display part/assembly properties
-* Create 3D cross sections
+* Create 3D cross-sections
 * Examine your model from preset viewing angles
   
 ### 1.3 Limitations
 
-3D Viewer module includes a few 3D widgets, there are some limitations on how these widgets should be placed:
+The 3D Viewer app service includes a few 3D widgets. These are the limitations on how these widgets should be placed:
 
-1. **Container3D** widget acts as a context sharing container for other 3D widgets, therefore every other 3D widgets need to be put inside **Container3D** widget. If 3D widgets are placed outside of **Container3D** widget, developer will see error on **Design Mode**.
-2. One **Container3D** widget can only contain one **Viewer** widget. If multiple **Viewer** widgets are placed inside a **Container3D** widget, developer will see error message on **Design Mode**.  
+* The **Container3D** widget acts as a context-sharing container for other 3D widgets. Therefore, every other 3D widget needs to be put inside the Container3D widget. If 3D widgets are placed outside of the Container3D widget, you will see error in [Design mode](/refguide/page#design-mode).
+* One **Container3D** widget can only contain one **Viewer** widget. If multiple Viewer widgets are placed inside a Container3D widget, you will see error message in [Design mode](/refguide/page#design-mode).
 
-Currently only JT models with version starting from 9 are supported.
+Currently, only JT models with version 9 and above are supported.
 
 ## 2 Installation
 

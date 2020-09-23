@@ -146,15 +146,19 @@ To display the upload loading progress, the steps are similar.
 
 #### 6.1.3 Utilizing More 3D Functionality
 
-Add more 3D widgets to the page to enable more 3D functionalities, you can arrange the layout of them as to your need. For example:  
+You can add more 3D widgets to the page to enable more 3D functionalities and arrange the layout of them as to your need. For example:  
+
 ![structuremode-more3dwidgets](attachments/3d-viewer/structuremode-more3dwidgets.jpg)
-In design mode,  
-![designMode-more3dwidgets](attachments/3d-viewer/designMode-more3dwidgets.jpg)
+
+This is the example in design mode:
+
+![designMode-more3dwidgets](attachments/3d-viewer/designmode-more3dwidgets.jpg)
 
 ### 6.2 Managing Uploaded Models
 
-In previous use case, you can only visualize the model you upload.
-Usually you will also need to manage the models that are uploaded and stored in the data storage. 3DViewer provides **GetModelList** and **DeleteModel** nanoflows to help you build model data management functionality into your app.
+In the previous use case, you can only visualize the model you upload.
+
+Usually you will also need to manage the models that are uploaded and stored in the data storage. 3D Viewer provides the **GetModelList** and **DeleteModel** nanoflows to help you build model data management functionality into your app.
 
 ### 6.2.1 Building a Model List
 

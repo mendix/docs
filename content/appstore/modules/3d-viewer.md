@@ -45,7 +45,7 @@ Currently, only JT models with version 9 and above are supported.
 
 ## 2 Installation
 
-Follow the instructions in [How to Use App Store Content in Studio Pro](app-store-content) to import the app service into your app.
+Follow the instructions in [How to Use App Store Content in Studio Pro](../general/app-store-content) to import the app service into your app.
 
 After importing, you need map the **Administrator** and **User** [module roles](/refguide/module-security#module-role) of the installed modules to the applicable [user roles](/refguide/user-roles) in your app.
 
@@ -170,7 +170,7 @@ The Mendix native [list view](/refguide/list-view) can be used to display the mo
 4. As **GetModelListFromMendix** requires a **Pagination** parameter input, wrap the list view with a data view. Then, create a nanoflow called *CreatePaginationObject* nanoflow and set that nanoflow as the list view's **Data Source**.
 5.  Fill in the list item with the information you are interested in:
 
-  ![openmodelpopUp-listview](attachments/3d-viewer/openmodelpopUp-listview.jpg)
+  ![openmodelpopUp-listview](attachments/3d-viewer/openmodelpopup-listview.jpg)
 
 ### 6.2.2 Opening a Model from the Model List
 
@@ -184,7 +184,7 @@ Follow these steps for configuration:
   
   This is the model pop-up page:  
   
-  ![openmodelpopUp-pageobject](attachments/3d-viewer/openmodelpopUp-pageobject.jpg)
+  ![openmodelpopUp-pageobject](attachments/3d-viewer/openmodelpopup-pageobject.jpg)
   
 2.  Set the **On click** action of the model list item, then change the **ModelDocument** object with which the **PageObject** is associated to return the value so that home page can be refreshed on a **PageObject** change:
 

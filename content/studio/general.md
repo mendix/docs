@@ -55,7 +55,6 @@ You can also open your app in Studio via Studio Pro. Do the following:
 
     ![](attachments/general/globe-icon.png)
 
-
 The app opens in Studio.
 
 ## 3 Upgrading Studio
@@ -81,9 +80,7 @@ After opening Studio, the home page of the app opens.
 You can change the view of your page to different views by clicking the corresponding icons:
 
 * Mobile
-
 * Tablet
-
 * Responsive (Desktop) 
 
   {{% image_container width="350" %}}![](attachments/general/view.png)
@@ -115,7 +112,7 @@ The top right menu of Studio consists of the **Toolbox**, **Properties** , and *
 
 <img src="attachments/general/toolbox-properties-buzz.png"  />
 
-The **Toolbox**, **Properties** , and **Buzz** tabs are describes in the table below:
+The **Toolbox**, **Properties** , and **Buzz** tabs are described in the table below:
 
 | Tab          | Description                                                  |
 | ------------ | ------------------------------------------------------------ |

@@ -162,58 +162,71 @@ Usually you will also need to manage the models that are uploaded and stored in 
 
 ### 6.2.1 Building a Model List
 
-Mendix native **ListView** widget can be used to display the model list.
+The Mendix native [list view](/refguide/list-view) can be used to display the model list by following these steps:
 
-Follow these steps:
+1. Use the **View3D/USER_ME/GetModelListFromMendix** nanoflow or copy it to your app module. A list of **ModelDocument** objects will be returned after calling the nanoflow.
+2. Add a [pop-up page](/refguide/page-properties#pop-up) to display the model list via a button click or another event of your choice.
+3. Place a list view in the page and set the **GetModelListFromMendix** nanoflow as the **Data Source**.
+4. As **GetModelListFromMendix** requires a **Pagination** parameter input, wrap the list view with a data view. Then, create a nanoflow called *CreatePaginationObject* nanoflow and set that nanoflow as the list view's **Data Source**.
+5.  Fill in the list item with the information you are interested in:
 
-1. Use **View3D/USER_ME/GetModelListFromMendix**  nanoflow or copy it to your app module. A list of `ModelDocument` objects will be returned after calling the nanoflow.
-2. Add a popup page to display model list on button click or other event of your choice.
-3. Place a **ListView** widget in Popup page, set nanoflow **GetModelListFromMendix** as Data Source.
-4. As **GetModelListFromMendix** requires a `Pagination` parameter input, wrap the **ListView** widget with a **DataView** widget, create a **CreatePaginationObject** nanoflow, set **CreatePaginationObject** nanoflow as List view's  data source.
-5. Fill in the list item with the information you are interested in.
-![openmodelpopUp-listview](attachments/3d-viewer/openmodelpopUp-listview.jpg)
+  ![openmodelpopUp-listview](attachments/3d-viewer/openmodelpopUp-listview.jpg)
 
 ### 6.2.2 Opening a Model from the Model List
 
-Once you have the model list, you may want to click to select a model from the list and view the model. As **Viewer** widget expects `ModelId` and `Model Source Type`  to visualize a model, such information of selected model need to be passed to the **Viewer** widget. Since each list item is a `ModelDocument` object and this object contains various information of the selected model, including `ModelId` and `Model Source Type`, we need to pass this object to **Viewer** widget.
+Once you have the model list, you may want to click to select a model from the list and view the model. As the **Viewer** widget expects **ModelId** and **Model Source Type** to visualize a model, such information of the selected model needs to be passed to the **Viewer** widget. Since each list item is a **ModelDocument** object and this object contains various pieces of information about the selected model (including **ModelId** and **Model Source Type**), you need to pass this object to the **Viewer** widget.
 
-Follow these steps:
+Follow these steps for configuration:
 
-1. Define `On click` action of List View so as to pass selected model to viewer widget that is present in another page, thus selected model can be loaded into the viewer. An example approach is to create an entity that is associated with `ModelDocument` entity defined in Viewer3D module Domain Model. Make the object a shared object between the page viewer is in and the model list page. I n this example, create a `PageObject`:  
-Home page:  
-![homepage-pageobject](attachments/3d-viewer/homepage-pageobject.jpg)
-Open Model Popup page:  
-![openmodelpopUp-pageobject](attachments/3d-viewer/openmodelpopUp-pageobject.jpg)
-2. Set OnClick action of model list item, change the `ModelDocument` object `PageObject` is associated with, return the value so that Home page can be refreshed on PageObject change.
-![openselectedmodel-nanoflow](attachments/3d-viewer/openselectedmodel-nanoflow.jpg)
+1.  Define the **On click** action for the list view so as to pass the selected model to the **Viewer** widget that is present in another page (so the selected model can be loaded into the viewer). An example approach is to create an entity that is associated with the **ModelDocument** entity defined in the **Viewer3D** module's domain model. Make the object a shared object between the page the **Viewer** is in and the model list page. In this example, you are creating a **PageObject** with this home page: 
 
-Run locally, you will get a simple model list, where you can select which model to open and visualize it at home page viewer:
+  ![homepage-pageobject](attachments/3d-viewer/homepage-pageobject.jpg)
+  
+  This is the model pop-up page:  
+  
+  ![openmodelpopUp-pageobject](attachments/3d-viewer/openmodelpopUp-pageobject.jpg)
+  
+2.  Set the **On click** action of the model list item, then change the **ModelDocument** object with which the **PageObject** is associated to return the value so that home page can be refreshed on a **PageObject** change:
+
+  ![openselectedmodel-nanoflow](attachments/3d-viewer/openselectedmodel-nanoflow.jpg)
+
+Run your app locally. You will get a simple model list where you can select which model to open and visualize it with the home-page viewer:
+
 ![openmodellistpopup-demo](attachments/3d-viewer/openmodellistpopup-demo.jpg)
 
 ### 6.2.3 Deleting a Model
 
-There might be some models that you don't want in the database. You can delete them too. 3DViewer module provides **DeleteModelFromMendix** microflow to achieve this.
+There might be some models that you do not want in the database, so you can delete these too. The 3D Viewer app service provides the **DeleteModelFromMendix** microflow to achieve this.
 
-Follow these steps to delete model from database:
+Follow these steps to delete a model from the database:
 
-1. Use  **Viewer3D/USE_M3/DeleteModelFromMendix** microflow directly or copy it to your app module.
-2. For model list item, add a **Delete** button
-![deletemodel-deletebutton](attachments/3d-viewer/deletemodel-deletebutton.jpg)
-1. Create a nanoflow **DeleteModel**, set `ModelDocument` as input parameter, call **Viewer3D/USE_M3/DeleteModelFromMendix** microflow and commit the `ModelDocument`.
-![deletemodel-nanoflow](attachments/3d-viewer/deletemodel-nanoflow.jpg)
-4. Set `On click` event of **Delete** button to **DeleteModel** nanoflow.
+1. Use the **Viewer3D/USE_M3/DeleteModelFromMendix** microflow directly or copy it to one of your app modules.
+2.  For a model list item, add a **Delete** button:
 
-Now you are able to get a list of model, select on list item to open a model and delete model.
+  ![deletemodel-deletebutton](attachments/3d-viewer/deletemodel-deletebutton.jpg)
+  
+3.  Create a nanoflow called *DeleteModel* and set **ModelDocument** as the input parameter. Then, call the **Viewer3D/USE_M3/DeleteModelFromMendix** microflow and commit the **ModelDocument**:
+
+  ![deletemodel-nanoflow](attachments/3d-viewer/deletemodel-nanoflow.jpg)
+  
+4. Set the **On click** event of the **Delete** button to the **DeleteModel** nanoflow.
+
+Now you are able to get a list of models, select a list item to open a model, and delete the model.
 
 ### 6.3 Handling Viewer Events
 
-Multiple events can be picked up by **Viewer** widget and can used to build your customized event handling logic.
-Mainly 3 types of events can be picked on **Viewer** Widget:
+Multiple events can be picked up by the **Viewer** widget and can used to build your customized event handling logic.
+
+There are three main types of events that can be picked up on the **Viewer** widget:
+
 ![viewer-viewerevents](attachments/3d-viewer/viewer-viewerevents.jpg)
-**On Selection Change**:By selecting one attribute to set SelectionSet, you can get information of selected part.  
-**OnError**: By selecting one attribute to set OnError event, you can pick up error exposed by Viewer.  
-**On Progress Change**: By selecting one attribute to setProgress value to, you can get the current loading status and loading percentage of model, product structure tree, PMI tree.
+
+* **On Selection Change** – by selecting one attribute to set **SelectionSet**, you can get information on the selected part
+* **OnError** – by selecting one attribute to set the **On error** event, you can pick up an error exposed by the **Viewer**
+* **On Progress Change** – by selecting one attribute for the **setProgress** value, you can get the current loading status and the loading percentage of the model, product structure tree, and PMI tree
 
 ## 7 Loading & Visualizing a Model from Teamcenter
 
-JT models from other data sources can also be visualized. Specifically, if you would like to load and visualize models from Teamcenter, you can use a combination of this **3DViewer** module and another module [**3DViewer for Teamcenter**](./3d-viewer-for-teamcenter.md) to achieve this.
+JT models from other data sources can also be visualized. Specifically, if you would like to load and visualize models from Teamcenter, you can use a combination of this 3D Viewer app service with the 3D Viewer for Teamcenter to achieve this.
+
+{{% todo %}}[Add link to 3D Viewer for Teamcenter doc when available]{{% /todo %}}

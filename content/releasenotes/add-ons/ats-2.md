@@ -6,7 +6,6 @@ menu_order: 10
 
 These are the release notes for Mendix Application Test Suite version 2:
 
-* [2.21](ats-2.21)
 * [2.20](ats-2.20)
 * [2.19](ats-2.19)
 * [2.18](ats-2.18)

@@ -9,7 +9,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 ## 2020
 
-### _______, 2020
+### September 29th, 2020
 
 **To do: link to blog that will be released**
 

@@ -58,8 +58,6 @@ To make this process even faster and skip one click, we added the option to run 
 
 * When starting a test, the view no longer goes to the **Test Runs** page but to the **Results** page for that specific test instead.
 * The **Results** page received a new progress indicator that shows how many of the tests are passed, failed, or not executed.
-<!-- * Last but not least, the results page will now be updated during the execution as new information comes in.
-The updates include the status and result of test steps as well as any new test steps that have been started. -->
 
 ### Other Changes
 

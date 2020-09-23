@@ -45,91 +45,104 @@ Currently, only JT models with version 9 and above are supported.
 
 ## 2 Installation
 
-If your app does not have the **3DViewer** module, it is available from the Mendix App Store [link not available yet](httpt://???).Follow the instructions in [How to Use App Store Content inStudio Pro](https://docs.mendix.com/appstore/generalapp-store-content) to import it into your app.
+Follow the instructions in [How to Use App Store Content in Studio Pro](app-store-content) to import the app service into your app.
 
-1. Import the **3DViewer** module into your app project.
-2. Map `Administrator` and `User` module role of installed modules to the applicable user roles in your app.
+After importing, you need map the **Administrator** and **User** [module roles](/refguide/module-security#module-role) of the installed modules to the applicable [user roles](/refguide/user-roles) in your app.
 
 ## 4 Configuration
 
 ### 4.1 Initializing the 3D Viewer App Service on App Startup
 
-To automatically start this  module, create a **Startup** microflow, add the **Viewer3D/USE_ME/VisServerAction** java action to the microflow, set return type as `Boolean` ,value as `true`.
+To automatically start this app service, create a **Startup** microflow, add the **Viewer3D/USE_ME/VisServerAction** Java Action to the microflow, the set return type as **Boolean** with a **Value** of **true**.
 
 ![startupmicroflow](attachments/3d-viewer/startupmicroflow.jpg)
 
-**Startup** microflow needs to be set as the After Startup step (via **Project** > **Settings** > **Server** > **Afterstartup**).
+This microflow needs to be set as the after-startup step via **Project Settings** > **Runtime** > [After startup](/refguide/project-settings#after-startup):
 
-![afterStartup](attachments/3d-viewer/afterStartup.jpg)
-
-More details on **After Startup** can be found [here](.project-settings.md#after-startup).
+![afterStartup](attachments/3d-viewer/afterstartup.jpg)
 
 ## 5 3D Widgets
 
-These are 3D widgets bundled in this module
+These are the 3D widgets bundled in this module:
 
 | Widget | Description |                                                                                                                                                                                      
 | --- | --- |
 | Container3D | A special container widget that provides a shared context for other 3D Viewer widgets. |                                                                                                            
-| PMI Tree | Provides hierarchical tree display of a model's product manufacturing information, model views and design groups. |                                                                                 
-| PS Tree | Provides hierarchical classification of the items which form a product. |                                                                                                                           
-| PS Tree Table | A configurable tree table to display model attributes of your choice. |                                                                                                                             
-| Sectioning | Allows user to create section cut on the model. |                                                                                                                                                    
-| Tool bar item camera mode | Provides ability to control the appearance of surface objects displayed in the view, The option determine whether surface objects are represented on the display by facet geometry, edge geometry. |
-| Tool bar item camera orientation | Allows you to view model from different camera orientation. |                                                                                                                                        
-| Tool bar item explode slider | The explode slider allows you to create an exploded view of your assembly. |                                                                                                                         
-| Tool bar item fit all | Allows user to fit all the model parts in the viewer. |                                                                                                                                           
-| Tool bar item render mode | Allows user to toggle between different model render mode. |                                                                                                                                         
-| Tool bar item selection mode | Provides capability to select on model part, edge, face,body. |                                                                                                                                     
-| Uploader | Enables user to upload their own model to be viewed in browser or the app. |                                                                                                                       
-| Viewer | Provides viewing window of your 3D Model when you open a model, zoom, rotate, pan.|                                                                                                                 
+| PMI Tree | Provides a hierarchical tree display of a model's product manufacturing information, model views, and design groups. |                                                                                 
+| PS Tree | Provides a hierarchical classification of the items that form a product. |                                                                                                                           
+| PS Tree Table | A configurable tree table to display the model attributes of your choice. |                                                                                                                             
+| Sectioning | Allows you to create a section cut on the model. |                                                                                                                                                    
+| Tool bar item camera mode | Provides the ability to control the appearance of surface objects displayed in the view. The option determines whether surface objects are represented on the display by facet geometry or edge geometry. |
+| Tool bar item camera orientation | Allows you to view the model from different camera orientations. |                                                                                                                                        
+| Tool bar item explode slider | Allows you to create an exploded view of your assembly. |                                                                                                                         
+| Tool bar item fit all | Allows you to fit all the model parts in the viewer. |                                                                                                                                           
+| Tool bar item render mode | Allows you to toggle between different model render modes. |                                                                                                                                         
+| Tool bar item selection mode | Provides cthe apability to select a model part, edge, face, and body. |                                                                                                                                     
+| Uploader | Enables you to upload your own model to be viewed in a browser or the app. |                                                                                                                       
+| Viewer | Provides a viewing window of your 3D model when you open a model and zoom, rotate, or pan.|                                                                                                                 
 
 ## 6 Using 3D Viewer  
 
-3DViewer mainly provides a set of widgets to visualize JT models and a set of nanoflows, java actions to bring in the data.
+3D Viewer mainly provides a set of widgets to visualize JT models and a set of nanoflows and Java Actions to bring in the data.
+
 Given that you start from a blank app template in Mendix Studio Pro, you can follow the instructions below to visualize your local JT model quickly.
 
 ### 6.1.1 Uploading & Viewing a 3D JT Model in Your Browser
 
-For **Viewer** widget to visualize a JT model, two data source attributes should be set: `Model ID` and `Model Souce Type`. To enable upload 3D JT model and visualize directly on the page, a set of `ModelID` and `Model source type` should be returned by **Uploader** widget and set to that of **Viewer** widget.  
+For the **Viewer** widget to visualize a JT model, two data source attributes should be set: **Model ID** and **Model source type**. To enable uploading 3D JT models and visualizing them directly on the page, a set of these attributes should be returned by the **Uploader** widget and set to that of the **Viewer** widget.  
 
-Follow these steps:
+Follow these steps to configure this visualization:
 
 1. Place a **Container3D** widget on a page.
-2. Put **Uploader** widget and **Viewer** widget into **Container3D** widget, give them a layout.
-3. Set a fixed height of **Viewer** widget. Toggle to Design Mode to see the preview.
-4. Create an entity called **UploadedModel** in app module Domain Model.
-5. Wrap **Uploader** widget and **Viewer** widget inside a new **DataView** widget.
-6. Create a nanoflow **CreatedUploadedModel** and set this as data source of **DataView** widget.
-7. Create two attributes for **UploadedModel** entity. Set them to receive value returned from **Uploader**'s `Data source` and `UploadModelId`  respectively.
- ![uploader-uploadedmodelinfo](attachments/3d-viewer/uploader-uploadedmodelinfo.jpg)
-8. Set Data Source attributes of **Viewer** widget: set `Model ID` to `UploadedModelID`and `Model Source Type` to `Mendix`.
-![viewer-datasourceuploaded](attachments/3d-viewer/viewer-datasourceuploaded.jpg)
-9. Set the `Automatically load parts` to `Yes`, which allows to load the model automatically upon successful upload.
-![viewer-autoloadparts](attachments/3d-viewer/viewer-autoloadparts.jpg)
-Run Locally, you can now upload JT file and view directly in the browser.
+2. Put the **Uploader** widget and **Viewer** widget into the **Container3D** widget and give them a layout.
+3. Set a fixed height of the **Viewer** widget (toggle to **Design mode** to see the preview).
+4. Create an entity called **UploadedModel** in your app module's domain model.
+5. Wrap the **Uploader** and **Viewer** widgets inside a new [data view](/refguide/data-view).
+6. Create a nanoflow, call it *CreatedUploadedModel*, and set this as data source of the data view.
+7.  Create two attributes for the **UploadedModel** entity. Set them to receive the value returned from the **Uploader**'s **Data source** and **UploadModelId**:
+
+  ![uploader-uploadedmodelinfo](attachments/3d-viewer/uploader-uploadedmodelinfo.jpg)
+
+8.  Set the data source attributes of the **Viewer** widget by setting **Model ID** to **UploadedModelID** and **Model Source Type** to **Mendix**:
+
+  ![viewer-datasourceuploaded](attachments/3d-viewer/viewer-datasourceuploaded.jpg)
+
+9.  Set **Automatically load parts** to **Yes**, which enables loading the model automatically upon successful upload:
+
+  ![viewer-autoloadparts](attachments/3d-viewer/viewer-autoloadparts.jpg)
+  
+Run your app project locally. You can now upload a JT file and view it directly in the browser:
+
 ![runlocally-uploadandview](attachments/3d-viewer/runlocally-uploadandview.jpg)
 
-### 6.1.2 Displaying Model Loading Progress with Progress Bar widget
+### 6.1.2 Displaying Model Loading Progress with Progress Bar Widget
 
-While you are uploading or loading a model, user may want to know the uploading and loading progress information.  
-To get uploading progress: in **Uploader** widget property,uploading progress can be obtained via `Progress percentage`:
-![uploader-uploadedstatus](attachments/3d-viewer/uploader-uploadedstatus.jpg)  
-To get loading progress: in **Viewer**  widget property, loading progress can be obtained via attributes `Progress status` and `Progress percentage`.  
+When the end-user is uploading or loading a model, they may want to know the uploading and loading progress.
 
-Follow these steps to display model loading progress:
+Uploading progress in the **Uploader** widget can be obtained via the **Progress percentage** property:
 
-1. Create an entity **PageObject**, add a `Decimal` type attribute `LoadingProgress` with default value = 0, as **Progress bar** widget expects a decimal value.
-2. Create a nanoflow called `createPageObject`, return `PageObject` object.  
-3. Wrap **Container3D** with a **Data view** widget, set the Data Source of the Data view widget to `createPageObject` nanoflow.  
-4. Set the value of attribute `LoadingProgress` by setting the `Progress percentage` in **Viewer** widget property.
-![viewer-progresspercentage](attachments/3d-viewer/viewer-progresspercentage.jpg)
-5. Add **Progress Bar** to the page, set  `PageObjectLoadingProgress` as the `Progress Attribute`.
-![progressbar-progressattribute](attachments/3d-viewer/Progressbar-progressattribute.jpg)  
-Run locally, you will be able to see real-time model loading progress.
+![uploader-uploadedstatus](attachments/3d-viewer/uploader-uploadedstatus.jpg)
+
+Loading progress in the **Viewer** widget can be obtained via the **Progress status** and **Progress percentage** attributes. 
+
+Follow these steps to display the model loading progress:
+
+1. Create an entity called *PageObject*, add decimal type attribute called *LoadingProgress* with a default value of `= 0` (as the **Progress bar** widget expects a decimal value).
+2. Create a nanoflow called *createPageObject* that returns a **PageObject** object.  
+3. Wrap **Container3D** with a data view and set the **Data Source** of the data view to the **createPageObject** nanoflow.  
+4.  Set the value of the **LoadingProgress** attribute by setting the **Progress percentage** property:
+
+  ![viewer-progresspercentage](attachments/3d-viewer/viewer-progresspercentage.jpg)
+  
+5.  Add the **Progress Bar** to the page and set **PageObjectLoadingProgress** as the **Progress Attribute**:
+
+  ![progressbar-progressattribute](attachments/3d-viewer/progressbar-progressattribute.jpg)  
+  
+Run your app locally. You can see the real-time model loading progress:
+
 ![runlocally-loadingprogress](attachments/3d-viewer/runlocally-loadingprogress.jpg)
 
-To display upload loading progress, the approach is similar.
+To display the upload loading progress, the steps are similar.
 
 #### 6.1.3 Utilizing More 3D Functionality
 

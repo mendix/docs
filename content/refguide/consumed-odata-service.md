@@ -1,7 +1,7 @@
 ---
 title: "Consumed OData Service"
-parent: ""consumed-odata-services"
-menu-order: 10
+parent: "consumed-odata-services"
+menu_order: 10
 tags: ["studio pro", "data hub", "odata service", "consumed odata service"]
 ---
 

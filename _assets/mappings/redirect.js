@@ -2410,7 +2410,7 @@ module.exports = {
       to: "/partners/siemens/mindsphere-module-details"
     },
 	/****************************************************
-     * From the Developer Portal (permanent, mapped) 
+     * From Developer Portal (permanent, mapped) 
      ****************************************************/
 	{
       from: "/developerportal/settings/technical-contact",
@@ -2460,6 +2460,17 @@ module.exports = {
       from: "/releasenotes/studio/8.0-and-above",
       to: "/releasenotes/studio/"
     },
+	/****************************************************
+     * From Data Hub (permanent, mapped) 
+     ****************************************************/
+	{
+  	   from: "/data-hub/data-hub-catalog/use-data-catalog",
+   	   to: "/data-hub/general/share-data",
+  	},
+	{
+  	   from: "/data-hub/data-catalog/",
+	   to: "/data-hub/data-hub-catalog/"
+  	},
 	/****************************************************
      * From the App Store (permanent, mapped)
      ****************************************************/

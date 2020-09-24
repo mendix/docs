@@ -129,7 +129,9 @@ Follow these steps:
 6. Create a **OpenSelectedModel** nanoflow and set it as On Click action of List View.  This nanoflow enables update `ModelDocument` associated with `PageObject` and returns updated `PageObject`. Every time user click on a model list item, `PageObject` will be updated, homepage where viewer is in will be updated to newly selected model.
 ![teamcenter-openselectedmodel](attachments/3d-viewer-for-teamcenter/teamcenter-openselectedmodel.jpg)
 
-There are other scenario to visualize a model, you can choose other ways to do this. Key idea is to pass valid `ModelId` and `Model Source Type` to the **Viewer** widget.
+Run locally, you will be able to view the selected model.
+
+There are other ways to visualize a model. Key idea is to pass valid `ModelId` and `Model Source Type` to the **Viewer** widget.
 
 ## 7 Read More
 * {3D Viewer for Teamcenter Academy learning path link}

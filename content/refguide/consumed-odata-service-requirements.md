@@ -50,16 +50,16 @@ Attributes marked as `FC_KeepInContent=false` cannot be used.
 
 Attribute types have to be primitive (not complex, collections or enumerations). The types of the attributes in your app will be based on the types of the attributes in the OData metadata, as given in the following table:
 
-OData Type                     | Mendix Type
----                            | ---
-Binary                         | Binary (but see 2.4)
-Boolean                        | Boolean <sup><small>[1]</small></sup> 
-Byte, SByte, Int16, Int32      | Integer
-DateTime, DateTimeOffset, Time | Date/time
-Decimal, Double, Single        | Decimal <sup><small>[2]</small></sup> 
-Int64                          | Long
-String, Guid                   | String
-(Other)                        | (Ignored)
+| OData Type | Mendix Type |
+| --- | --- |
+| Binary                         | Binary (but see 2.4) |
+| Boolean                        | Boolean <sup><small>[1]</small></sup> |
+| Byte, SByte, Int16, Int32      | Integer |
+| DateTime, DateTimeOffset, Time | Date/time |
+| Decimal, Double, Single        | Decimal <sup><small>[2]</small></sup> |
+| Int64                          | Long |
+| String, Guid                   | String |
+| (Other)                        | (Ignored) |
 
 {{% alert type="warning" %}}
 When the OData endpoint contains operations, these are not imported in the consumed OData service. You can use a [Call REST service](call-rest-action) activity to call these operations.

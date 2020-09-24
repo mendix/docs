@@ -162,6 +162,7 @@ It is possible to require the following modules:
 
 * The react libraries `"react"`, `"react-dom"`, `"react-dom-factories"`, and `"prop-types"`
 * An `Icon` component that can be used to render icon properties: `"mendix/components/web/Icon"`
+* A `Selectable` component that can be used to define what it selectable in preview: `"mendix/preview/Selectable"`
 
 ### 3.2 Preview Export
 
@@ -229,6 +230,43 @@ export const preview: React.FC<Props> = (props) => (
         <div className="my-pw-content">…</div>
     </div>
 );
+```
+
+#### 3.2.3 Using the Selectable Component
+
+The preview module provides a component to define that an object is selectable in the preview. This component can be imported from "mendix/preview/Selectable" and accepts an item from an `object` list property as `object` parameter, and has an optional `caption` parameter.
+
+In this example we define a simplified representation of the types for clarity, in reality you would import those types from `"../typings/TruckWidgetProps"`, where `TruckWidget` is the name of your widget.
+
+```tsx
+import { Selectable } from "mendix/preview/Selectable";
+
+type TruckDriversType = {
+    name: string;
+    age: number;
+    isExperienced: boolean;
+}
+
+type TruckWidgetPreviewProps = {
+    truckDrivers: TruckDriversType[];
+}
+
+export const preview: React.FC<TruckWidgetPreviewProps> = (props) => (
+    <div className="my-pw-container">
+        {props.truckDrivers.map((truckDriver, i) => (
+            <Selectable
+                object={truckDriver}
+                caption={truckDriver.isExperienced ? "Awesome truck driver" : undefined}
+                key={`truck_driver_${i}`}
+            >
+                <div className="my-pw-truck-driver">
+                    <div>Name: {truckDriver.name}</div>
+                    <div>Age: {truckDriver.age}</div>
+                </div>
+            </Selectable>
+        ))}
+    </div>
+)
 ```
 
 ### 3.3 The GetPreviewCss Export

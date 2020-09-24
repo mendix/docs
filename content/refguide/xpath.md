@@ -2,7 +2,7 @@
 title: "XPath"
 category: "App Modeling"
 menu_order: 90
-description: "Describes how the XPath query langauge is used in Mendix by presenting functions and examples."
+description: "Describes how the XPath query language is used in Mendix by presenting functions and examples."
 tags: ["studio pro"]
 ---
 
@@ -48,8 +48,6 @@ The number of possible constraints on a single query is unlimited. For more info
 Element D of a query is optional and specifies an attribute of the retrieved entity. This option is rarely used in Studio Pro itself as all data is stored in objects, making it cumbersome and needlessly complicated to deal with a list of single attribute. However, various Java actions have use of such lists. Also, this functionality can be used in conjunction with Part A to create aggregates of certain attributes easily.
 
 Element A of a query is optional and specifies an aggregation. Element A can be one of the following functions: [avg](xpath-avg), [count](xpath-count), [max](xpath-max), [min](xpath-min) and [sum](xpath-sum). With the exception of 'count', each of these functions require that a particular attribute is specified in element D.
-
-The exception to these basic guidelines is the ID query. See [XPath id](xpath-id) for more information.
 
 ## 3 Tokens
 

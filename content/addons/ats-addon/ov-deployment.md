@@ -42,29 +42,35 @@ The AUT is the deployed Mendix application that you want to test.
 
 There is one standard deployment option in addition to three alternative options. The standard option is recommended, since it is optimized in terms of setup, ease of use, maintenance, and features.
 
-### 3.1 Standard
+### 3.1 Standard {#standard}
 
-![Standard Option](attachments/ov-deployment/deploymentoption_standard.png)
+![Standard Option](attachments/ov-deployment/standard-option.jpg)
 
 The standard option is highly recommended for all customers. It supports all current and future features, is easy to set up, is maintenance-free, and gets the best support.
 
-### 3.2 Public App On-Premises
+### 3.2 SaaS Selenium Provider
+
+![SaaS Selenium Option](attachments/ov-deployment/deploymentoption_standard.png)
+
+This option is very similar to the [standard option](#standard) described above with the difference that it uses a SaaS Selenium Provider instead of the built-in ATSelenium. Use this option only if there is a specific SaaS-provided feature that is not available with ATSelenium.
+
+### 3.3 Public App On-Premises
 
 ![Public app on-premise](attachments/ov-deployment/deploymentoption_alternative1.png)
 
 This option is meant for customers who run their app on premises. Since the app runs on premises, it is protected from external access via a firewall. In order to allow the Selenium Runner to access the app, you have to configure your firewall.
 
-### 3.3 Private App On-Premises
+### 3.4 Private App On-Premises
 
 ![Private app on-premise](attachments/ov-deployment/deploymentoption_alternative2.png)
 
 This option is meant for customers who run their app on premises and who don't want to open their firewall for the Selenium Runner. In order to enable communication between the Selenium Runner and your local application, you have to deploy a Selenium Saas Agent in your local network. This agent will establish a VPN tunnel to your Selenium Service Provider and route all traffic between the Selenium Runner and your application.
 
-### 3.4 Customer-Hosted Selenium
+### 3.5 Customer-Hosted Selenium
 
 ![Customer hosted Selenium](attachments/ov-deployment/deploymentoption_alternative3.png)
 
-This option is meant for customers who run their app on premises and who also want to run their own Selenium Runner. The challenging part of this option is that the customer needs to set up, maintain, and operate its own Selenium Runner.
+This option is meant for customers who run their app on premises and who also want to run their own Selenium Runner. The challenging part of this option is that the customer needs to set up, maintain, and operate its own Selenium Runner. Because of the large effort this requires, this option should only be a last resort if no other option fits your use case.
 
 {{% alert type="warning" %}}
 Selenium is an open-source third-party component and there is no active support from Mendix.
@@ -82,17 +88,17 @@ Before you pick your option, you need to be aware of the differences. The follow
 
 ### 4.1 Features
 
-Feature                       | Standard       | Public App On-Premises        | Private App On-Premises      | Customer-Hosted Selenium
------------------------------ | -------------- | ----------------------------- | ----------------------------- | -----------------------------
-Test Automation               | ![][green] Yes | ![][green] Yes                | ![][green] Yes                | ![][green] Yes
-Test Recording                | ![][green] Yes | ![][green] Yes                | ![][green] Yes                | ![][green] Yes
-OS Selection                  | ![][green] Yes | ![][green] Yes                | ![][green] Yes                | ![][red] No
-Responsive Testing            | ![][green] Yes | ![][green] Yes                | ![][green] Yes                | ![][red] No
-Multiple Browsers<sup>1</sup> | ![][green] All | ![][green] All                | ![][green] All                | ![][grey] Limited<sup>3</sup>
-Mobile Testing<sup>2</sup>    | ![][green] Yes | ![][green] Yes                | ![][green] Yes                | ![][red] No
-Mendix Platform Integration   | ![][green] All | ![][grey] Limited<sup>4</sup> | ![][grey] Limited<sup>4</sup> | ![][grey] Limited<sup>4</sup>
-Live View & Video<sup>2</sup> | ![][green] Yes | ![][green] Yes                | ![][green] Yes                | ![][red] No
-Future Proof<sup>5</sup>      | ![][green] Yes | ![][green] Yes                | ![][green] Yes                | ![][red] No
+Feature                       | Standard          | SaaS Selenium Provider | Public App On-Premises        | Private App On-Premises       | Customer-Hosted Selenium
+----------------------------- | ----------------- | ---------------------- | ----------------------------- | ----------------------------- | -----------------------------
+Test Automation               | ![][green] Yes    | ![][green] Yes         | ![][green] Yes                | ![][green] Yes                | ![][green] Yes
+Test Recording                | ![][green] Yes    | ![][green] Yes         | ![][green] Yes                | ![][green] Yes                | ![][green] Yes
+OS Selection                  | ![][red] No       | ![][green] Yes         | ![][green] Yes                | ![][green] Yes                | ![][red] No
+Responsive Testing            | ![][green] Yes    | ![][green] Yes         | ![][green] Yes                | ![][green] Yes                | ![][red] No
+Multiple Browsers<sup>1</sup> | ![][grey] Limited | ![][green] All         | ![][green] All                | ![][green] All                | ![][grey] Limited<sup>3</sup>
+Mobile Testing<sup>2</sup>    | ![][red] No       | ![][green] Yes         | ![][green] Yes                | ![][green] Yes                | ![][red] No
+Mendix Platform Integration   | ![][green] All    | ![][green] All         | ![][grey] Limited<sup>4</sup> | ![][grey] Limited<sup>4</sup> | ![][grey] Limited<sup>4</sup>
+Live View & Video<sup>2</sup> | ![][green] Yes    | ![][green] Yes         | ![][green] Yes                | ![][green] Yes                | ![][red] No
+Future Proof<sup>5</sup>      | ![][green] Yes    | ![][green] Yes         | ![][green] Yes                | ![][green] Yes                | ![][red] No
 
 <sup>1</sup> Only if supported by ATS.<br />
 <sup>2</sup> Feature not available yet.<br />
@@ -104,13 +110,13 @@ Future Proof<sup>5</sup>      | ![][green] Yes | ![][green] Yes                |
 
 The following matrix compares the efforts for setup and maintenance of the different options.
 
-Aspect                                | Standard                   | Public App On-Premises     | Private App On-Premises     | Customer-Hosted Selenium
-------------------------------------- | ---------------------------| -------------------------- | --------------------------- | ---------------------------------
-Firewall Setup                        | ![][green] None**          | ![][red] Required          | ![][green] None<sup>1</sup> | ![][red] Required
-Selenium<sup>2</sup> Runner Setup     | ![][green] No<sup>3</sup>  | ![][green] No<sup>3</sup>  | ![][green] No<sup>3</sup>   | ![][red] Customer responsibility
-Selenium<sup>2</sup> SaaS Agent Setup | ![][green] No<sup>4</sup>  | ![][green] No<sup>4</sup>  | ![][red] Yes                | ![][green] No<sup>4</sup>
-Selenium<sup>2</sup> Maintenance      | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup>  | ![][red] Customer responsibility
-Selenium<sup>2</sup> Support          | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup>  | ![][red] No
+Aspect                                | Standard                   | SaaS Selenium Provider     | Public App On-Premises     | Private App On-Premises     | Customer-Hosted Selenium
+------------------------------------- | ---------------------------| -------------------------- | -------------------------- | ----------------------------| ----------------------------
+Firewall Setup                        | ![][green] No              | ![][green] None<sup>1</sup>| ![][red] Required          | ![][green] None<sup>1</sup> | ![][red] Required
+Selenium<sup>2</sup> Runner Setup     | ![][green] No<sup>3</sup>  | ![][green] No<sup>3</sup>  | ![][green] No<sup>3</sup>  | ![][green] No<sup>3</sup>   | ![][red] Customer responsibility
+Selenium<sup>2</sup> SaaS Agent Setup | ![][green] No              | ![][green] No<sup>4</sup>  | ![][green] No<sup>4</sup>  | ![][red] Yes                | ![][green] No<sup>4</sup>
+Selenium<sup>2</sup> Maintenance      | ![][green] No              | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup>  | ![][red] Customer responsibility
+Selenium<sup>2</sup> Support          | ![][green] No              | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup>  | ![][red] No
 
 <sup>1</sup> A Selenium SaaS Agent with VPN is used to surpass the company network firewall.<br />
 <sup>2</sup> Selenium is an open-source third-party component that is not maintained/supported by Mendix.<br />
@@ -124,6 +130,7 @@ ATS does not support the uploading of files in every situation. This table prese
 | Selenium Setup | Uploading Your Own File | Uploading a File | Uploading Possible? |
 | :-------------- | :---------------------- | :--------------- | :------------------ |
 | Local Selenium Server (Docker) | ![](attachments/ov-deployment/grey.png) Limited<sup>1</sup> | ![](attachments/ov-deployment/green.png) Yes | ![](attachments/ov-deployment/green.png) Yes |
+| ATSelenium | ![](attachments/ov-deployment/red.png) No | ![](attachments/ov-deployment/red.png) No | ![](attachments/ov-deployment/red.png) No |
 | BrowserStack (SaaS) | ![](attachments/ov-deployment/red.png) No | ![](attachments/ov-deployment/green.png) Yes | ![](attachments/ov-deployment/green.png) Yes |
 | SauceLabs (SaaS) | ![](attachments/ov-deployment/red.png) No | ![](attachments/ov-deployment/red.png) No | ![](attachments/ov-deployment/red.png) No |
 | Selenium SaaS Agent | ![](attachments/ov-deployment/grey.png) Limited<sup>2</sup> | ![](attachments/ov-deployment/green.png) Yes | ![](attachments/ov-deployment/green.png) Yes |

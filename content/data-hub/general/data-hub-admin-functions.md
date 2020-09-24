@@ -54,7 +54,7 @@ A user who publishes an OData service is the technical owner of the service and 
 
 The *Data Hub Guide* is divided into the following categories:
 
-* [How to Share Data Between Apps using Data Hub Catalog](use-data-hub-to-share-data-between-apps)
+* [How to Share Data Between Apps Using Mendix Data Hub](share-data)
 * [Data Hub Catalog](data-hub-catalog/index)
-* [Data Hub Landscape](use-data-hub-landscape)
+* [Data Hub Landscape](../data-hub-landscape/index)
 

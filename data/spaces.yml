@@ -192,6 +192,13 @@ appstore:
     - "Widgets"
     - "Modules"
     - "Themes"
+data-hub:
+  space: "Data Hub Guide"
+  priority: false
+  menu_categories:
+    - "General Info"
+    - "Data Hub Catalog"
+    - "Data Hub Landscape"
 product-naming:
   space: "Mendix Product Naming Guide"
   priority: false

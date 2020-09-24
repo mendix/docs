@@ -12,7 +12,7 @@ tags: ["data hub", "data hub catalog", "data hub landscape"]
 
 [Mendix Data Hub](https://hub.mendix.com) is a product for integrating app development with the data available from the many applications in an organization. It is the central hub in an organization for find and connecting to the relevant shared datasets. It also ensures consistency in the data used throughout the organization. Data Hub enables reliable data sources to be managed centrally from one point and for users to connect to them through it. 
 
-Follow the journey for building an app using available entities from the [Data Hub](https://hub.mendix.com) home page, or try building a quick app by following [How to Share Data Between Apps using Data Hub Catalog](.\beta-version-use-data-hub-toshare-data-between-apps).
+Follow the journey for building an app using available entities from the [Data Hub](https://hub.mendix.com) home page, or try building a quick app by following [How to Share Data Between Apps Using Mendix Data Hub](.\beta-version-use-data-hub-toshare-data-between-apps).
 
 ## 2 Overview of Mendix Data Hub
 
@@ -26,7 +26,7 @@ Mendix Data Hub has components to enable the flexible sharing of entities. The f
 4. Consume exposed entities connecting to the shared data in Studio Pro to create new apps. 
 5. Upon deployment of an app in Studio Pro, registered services are updated in the Data Hub Catalog to show published dependencies and consumed dependencies, and a connection is established to the shared data sources.
 6. The consuming application directly connects to the source system (as defined in the published service metadata) to use the data associated with the consumed entity.
-7. The [Data Hub Landscape](../use-data-hub-landscape) enables users to see the dependencies between components and the relevance of data and to ascertain data lineage.
+7. The [Data Hub Landscape](../data-hub-landscape/index) enables users to see the dependencies between components and the relevance of data and to ascertain data lineage.
 
 ## 3 Roles in Data Hub
 
@@ -85,7 +85,7 @@ A user who publishes an OData service is the technical owner of the service and 
 
 The *Data Hub Guide* is divided into the following categories:
 
-* [How to Share Data Between Apps using Data Hub Catalog](use-data-hub-to-share-data-between-apps)
+* [How to Share Data Between Apps Using Mendix Data Hub](share-data)
 * [Data Hub Catalog](data-hub-catalog/index)
-* [Data Hub Landscape](use-data-hub-landscape)
+* [Data Hub Landscape](data-hub-landscape/index)
 

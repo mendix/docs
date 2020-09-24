@@ -242,7 +242,7 @@ To update a published OData service, follow these steps:
 6. Make the changes to the service, taking care when removing entities, attributes, and associations that may be consumed by other apps.
 7. Deploy the app to register the services in the Data Hub Catalog. If you have kept the previous version, both services will now be registered.
 8. In the Data Hub Catalog, curate the new service and add tags and further descriptions as necessary. 
-9. Inform consuming apps of the changes. You can see all apps that are consuming previous versions of the service in the Data Hub Catalog and also the visual network of dependencies in the [Data Hub Landscape](../use-data-hub-landscape). Use the **Business Owner** and **Technical Owner** links to make contact with the users.
+9. Inform consuming apps of the changes. You can see all apps that are consuming previous versions of the service in the Data Hub Catalog and also the visual network of dependencies in the [Data Hub Landscape](../../data-hub-landscape/index). Use the **Business Owner** and **Technical Owner** links to make contact with the users.
 10. For major changes, and when a new service is published that will replace an existing one, provide deprecation notices to all consuming apps if they have to change to the new version within a certain length of time if the previous version is going to become inactive.
 11. It is good practice to remove old (unused services) from your app by deleting them in the **Project Explorer** only when you are sure that they are no longer being consumed by any other apps. You can verify this by looking in [Mendix Data Hub](https://hub.mendix.com/) and searching for the service in the **Catalog** or checking out the network of dependencies in Data Hub **Landscape**. 
 

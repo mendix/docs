@@ -14,7 +14,7 @@ tags: ["data hub", "data hub catalog"]
 
 The Data Hub Catalog is the core of Mendix Data Hub for finding the shared registered assets that are made available through OData services published in an organization. It enables a single data source to be consistently used in several apps, ensuring that they will all be using the latest set of data maintained in the source. These registered assets are curated in the Data Hub Catalog to ensure that they are exposed to the relevant users and can be found easily.
 
-The Data Hub Catalog functionality is enhanced by the [Data Hub Landscape](../use-data-hub-landscape), which enables the networks of shared data and resources to be graphically represented in a network of relationships between apps and services. This integration enables different views of the registered assets to show, at a glance, popular apps and the network of dependancies between apps and services. 
+The Data Hub Catalog functionality is enhanced by the [Data Hub Landscape](../../data-hub-landscape/index), which enables the networks of shared data and resources to be graphically represented in a network of relationships between apps and services. This integration enables different views of the registered assets to show, at a glance, popular apps and the network of dependancies between apps and services. 
 
 ## 2 Using the Data Home Home Screen {#data-hub-home}
 
@@ -34,7 +34,7 @@ From the Data Hub Home page, you can navigate to the following tabs:
 From the Data Hub Home page, you can do the following:
 
 * **Search** –  search for registered services and entities using the **Search** box or clicking the suggested **Tags**
-* **Register a new service** – manually register non-Mendix OData v4 services in the Data Hub Catalog (for further details, see the [Manually Registering OData v4 Services](registration-of-data-assets#registration-form) section of *Registering Data in the Data Hub Catalog*)
+* **Register a new service** – manually register non-Mendix OData v4 services in the Data Hub Catalog (for further details, see the [Manually Registering OData v4 Services](register#registration-form) section of *Registering Data in the Data Hub Catalog*)
 * **Most popular services** – view directly the most popular services being consumed and the datasets that are available through these services
 
 ## 3 Using the Data Hub Catalog
@@ -59,8 +59,8 @@ If you want to make the data from your app available to others, you can provide 
 
 OData services can be registered in the Data Hub Catalog in two ways:
 
-* In Mendix Studio Pro, entities are exposed in a [published OData service](/refguide/published-odata-services), and upon deployment of the app to an environment, the service is automatically registered in the Data Hub Catalog. For details on publishing OData services in Studio Pro, see the [Publishing an OData Service in Studio Pro to Register Entities](registration-of-data-assets#odataservice-reg) section of *Registering Data in the Data Hub Catalog*.
-* OData v4 services originating from non-Mendix sources can be [registered manually through a new service](registration-of-data-assets#registration-form). For further details on registration in the Data Hub Catalog and using  manual registration, see [Making Data Available in the Data Hub Catalog](registration-of-data-assets).
+* In Mendix Studio Pro, entities are exposed in a [published OData service](/refguide/published-odata-services), and upon deployment of the app to an environment, the service is automatically registered in the Data Hub Catalog. For details on publishing OData services in Studio Pro, see the [Publishing an OData Service in Studio Pro to Register Entities](register#odataservice-reg) section of *Registering Data in the Data Hub Catalog*.
+* OData v4 services originating from non-Mendix sources can be [registered manually through a new service](register#registration-form). For further details on registration in the Data Hub Catalog and using  manual registration, see [Making Data Available in the Data Hub Catalog](register).
 
 {{% todo %}}[**AD: unclear where that last cross-reference is supposed to go - clarify link text and anchor usage**]{{% /todo %}}
 
@@ -99,6 +99,6 @@ The information available for registered services and exposed elements includes 
 
 * [Finding Shared Entities in Your Organization](search) – describes search and asset details
 * [Using Entities Shared Through the Data Hub Catalog](consume) – gives general information on consuming registered entities
-* [Registering Data in the Data Hub Catalog](registration-of-data-assets) – describes how to register OData services in the Data Hub Catalog through Studio Pro and manually register non-Mendix services
+* [Registering Data in the Data Hub Catalog](register) – describes how to register OData services in the Data Hub Catalog through Studio Pro and manually register non-Mendix services
 * [Curating Registered Assets](curate) – describes the curate functions for managing assets
 * [Security and Controlling Access to Information](security) – describes access to entities and security

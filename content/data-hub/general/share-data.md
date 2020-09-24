@@ -160,7 +160,7 @@ The **{yourname}CustomerODataService** from your app is now registered in the Da
 
 {{% todo %}}[**AD: "Curating" needs a cross-reference link, otherwise wil break the build**]{{% /todo %}}
 
-For more details on searching in the Data Hub Catalog and the **Search Details** screen, see [How to Search in the Data Hub Catalog](../data-catalog/search). You can also explore registered services in the Data Hub Landscape. For more information, see [How to Use the Data Hub Landscape](../data-landscape/use-data-hub-landscape).
+For more details on searching in the Data Hub Catalog and the **Search Details** screen, see [How to Search in the Data Hub Catalog](../data-catalog/search). You can also explore registered services in the Data Hub Landscape. For more information, see [How to Use the Data Hub Landscape](../data-landscape/../data-hub-landscape/index).
 
 ## 7 Using the Customer Entity in Another App
 
@@ -233,7 +233,7 @@ You can now see your new apps in your organization's Data Hub Landscape.
 
 You will now learn how to do the following:
 
-* Use and understand the [Data Hub Landscape](.\use-data-hub-landscape) for locating sources of data
+* Use and understand the [Data Hub Landscape](.\../data-hub-landscape/index) for locating sources of data
 * View the dependencies between deployed apps and the direction of the dependencies in your Data Hub Landscape 
 
 You can view the two apps that you have created in the Data Hub Landscape and see the associations by following these steps:

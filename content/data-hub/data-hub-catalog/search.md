@@ -26,7 +26,7 @@ The [search details](#search-details) screen for a registered service, entity, o
 
 The OData service document contains the data that is registered in the Data Hub Catalog. The contract of the published service (the *$metadata* document) contains the details of what is exposed in the service and further links to the metadata of the entities exposed in the service for attributes, associations, types, and accessibility. The published OData service that is registered is shown in search details. 
 
-For details on creating a published OData service in Studio Pro, see [Registering Data in the Data Hub Catalog](registration-of-data-assets).
+For details on creating a published OData service in Studio Pro, see [Registering Data in the Data Hub Catalog](register).
 
 ### 2.2 Versions 
 
@@ -153,7 +153,7 @@ The number of items satisfying the search criteria (search string plus filters) 
 
 If no search string is specified, all registered services will be listed in the search results in the above order showing the first five entities for each service.
 
-When an item in the search results is selected, the **Catalog** tab will show the **Search details** and the **Landscape** tab will show the network of connections and dependencies of the selected item in the [Data Hub Landscape](../use-data-hub-landscape).
+When an item in the search results is selected, the **Catalog** tab will show the **Search details** and the **Landscape** tab will show the network of connections and dependencies of the selected item in the [Data Hub Landscape](../../data-hub-landscape/index).
 
 {{% alert type="info" %}}
 In Studio Pro, searching the Data Hub Catalog through the **Data Hub** pane requires use of the wildcard `*` for an empty search. It is not possible to use the wildcard in combination with other characters. The wildcard can also be used in the Data Hub Catalog search but it is not necessary. 

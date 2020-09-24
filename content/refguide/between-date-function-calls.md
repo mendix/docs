@@ -221,7 +221,7 @@ The output results in 8 days divided by 7 days in a week:
 
 ## 8 calendarMonthsBetween
 
-The `calendarMonthsBetween` function calculates the difference between the input values in months. Time will be ignored. The dates are assumed to be in the user's local timezone.
+The `calendarMonthsBetween` function calculates the difference between the input values in months. Time will be ignored. The dates are assumed to be in the end-user's local time zone.
 
 ### 8.1 Input Parameters
 
@@ -256,7 +256,7 @@ The output results in the amount of months between the two dates:
 
 ## 9 calendarYearsBetween
 
-The `calendarYearsBetween` function calculates the difference between the input values in years. Time will be ignored. The dates are assumed to be in the user's local timezone.
+The `calendarYearsBetween` function calculates the difference between the input values in years. Time will be ignored. The dates are assumed to be in the end-user's local time zone.
 
 ### 9.1 Input Parameters
 

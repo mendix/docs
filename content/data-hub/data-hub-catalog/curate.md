@@ -1,5 +1,5 @@
 ---
-title: "Curate—Maintaining Registered Assets"
+title: "Curate Registered Assets"
 category: "Data Hub Catalog"
 description: "Describes curating functions in the Data Hub Catalog"
 menu_order: 80

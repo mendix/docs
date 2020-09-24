@@ -1,5 +1,5 @@
 ---
-title: "Register—Publishing Data Assets to the Data Hub"
+title: "Register Data Assets"
 category: "Data Hub Catalog"
 description: "Registering data services in the Data Hub Catalog."
 menu_order: 50

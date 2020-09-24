@@ -1,1 +1,0 @@
-Note: all work on this documentation has been moved to GitHub, please continue work there, as no changes in this repo will be incorporated.

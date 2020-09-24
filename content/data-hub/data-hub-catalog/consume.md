@@ -1,5 +1,5 @@
 ---
-title: "Consume—Using Shared Data through the Data Hub Catalog"
+title: "Consume Registered Assets"
 category: "Data Hub Catalog"
 description: "Using entities from the Mendix Data Hub Catalog in general."
 menu_order: 45

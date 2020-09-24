@@ -1,5 +1,5 @@
 ---
-title: "Search—Finding Registered Assets in the Data Hub Catalog"
+title: "Search for Registered Assets"
 description: "Introduces the processes and properties of the Mendix Data Hub Catalog."
 tags: ["data hub", "data hub catalog"]
 ---

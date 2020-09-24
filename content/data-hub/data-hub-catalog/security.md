@@ -1,5 +1,5 @@
 ---
-title: "Data Accessibility an Security"
+title: "Data Accessibility and Security"
 category: "Data Hub Catalog"
 description: "Describes how security is implemented in the Mendix Data Hub Catalog."
 menu_order: 70

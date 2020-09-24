@@ -96,5 +96,5 @@ If you right-click a consumed entity and **Go to entity**, the domain model will
 ##  5 Read More
 
 * [Data Hub Catalog](/data-hub/data-hub-catalog)
-* [Adding External Entities to a Project](external-entitie.md#adding-external-entities)
-* [Using Registered Services and Entities in Your App](/data-hub/data-hub-catalog/consume.md#consumingservicesentities)
+* [External Entities](external-entities)
+* [How to Consume Registered Assets](/data-hub/data-hub-catalog/consume)

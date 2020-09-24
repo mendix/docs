@@ -14,7 +14,7 @@ tags: ["data hub", "data hub catalog", "consume", "external entities", "asset", 
 
 The Data Hub Catalog is a catalog of OData services exposing entities that you can use in your apps. This means that new apps can be built by using these shared entities from your organization to provide access to the data they connect to. In Mendix Studio Pro, these exposed entities are added as *external entities* through the [Data Hub pane](/refguide/data-hub-pane). The integrated Data Hub Catalog [search](search) functionality in Studio Pro is available to find suitable entities to use in your apps. 
 
-This document provides general information and guidelines on consumed entities in apps. For details on using shared entities in Studio Pro, see [Using External Entities in Studio Pro](/refguide/external?).
+This document provides general information and guidelines on consumed entities in apps. For details on using shared entities in Studio Pro, see [External Entities](/refguide/external-entities) in the *Studio Pro Guide*.
 
 {{% todo %}}[**AD: the above cross-reference needs to be set, otherwise it will break the build**]{{% /todo %}}
 
@@ -32,7 +32,7 @@ The following sections summarize important points when using OData services and 
 
 The published OData service document (the API) is included in the module definition (in Studio Pro) and contains the metadata for linking to the data for the entities exposed in the service.
 
-When a new version of the OData service for an external entity is registered in the Data Hub Catalog, the consumed OData service will have to be updated in the consuming app to make use of the new features that the new version brings. For more details on updating a consumed service see [Updating a consumed Service](refguide/consumed-odata-service#updating).
+When a new version of the OData service for an external entity is registered in the Data Hub Catalog, the consumed OData service will have to be updated in the consuming app to make use of the new features that the new version brings. For more details on updating a consumed service see the [Updating or Switching a Consumed OData Service](/refguide/consumed-odata-service#updating) section of *Consumed OData Service*.
 
 {{% alert type="info" %}}
 This is not compulsory, and users can continue to use an older version of a service unless the new version was deployed to the same service endpoint as the previous version. In Studio Pro, new versions of a service are indicated and users can choose to **Update** the service, or **Switch** to another version of the service deployed to another endpoint.

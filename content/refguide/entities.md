@@ -56,7 +56,7 @@ An external entity connects to shared assets through the [Data Hub Catalog](/dat
 
 When entities from the Data Hub Catalog are consumed in an app module, it is possible to make local changes to the entity that only affect how the data is used and presented in the local app. 
 
-For more information on external entities in your app project, see [External Entities](external entities). For more information on using registered OData services, see [Consuming from the Data Hub](data-hub/data-hub-catalog/consume).
+For more information on external entities in your app project, see [External Entities](external-entities). For more information on using registered OData services, see [How to Consume Registered Assets](/data-hub/data-hub-catalog/consume) in the *Data Hub Guide*.
 
 {{% alert type="info" %}}
 Compared to local entities, external entities have a limited number of properties that can be edited locally, many of which are read-only, as they are defined in the originating app.

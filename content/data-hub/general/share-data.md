@@ -94,7 +94,7 @@ The following steps take you through creating an OData service for your app to e
 
 2.  In the domain model, right-click the **Customer** entity and select **Expose as OData resource**.
 
-	![](./data-hub-catalog/attachments/registration/expose-as-odata-resource.png)
+	![](./data-hub-catalog/attachments/register/expose-as-odata-resource.png)
 
 3.  In the **Select Published OData Service ** dialog box, select the **MyFirstModule** > **APIs** folder and click **New** to add a new OData service. Call this published OData service *{yourname}CustomerODataService* and press **OK**. 
 

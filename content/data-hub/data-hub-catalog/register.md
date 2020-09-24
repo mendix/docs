@@ -76,11 +76,11 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 
 1.  In the [domain model](/refguide/domain-model), right-click the entity to be exposed and from the menu select **Expose as OData resource**:
 
-	![](attachments/registration/expose-as-odata-resource.png)
+	![](attachments/register/expose-as-odata-resource.png)
 
 2.  In the **Select Published OData Service** dialog box, select the folder in the module that you want to use to organize your APIs, and click **New** to add a new OData service to that folder:
 
-	![](../attachments/share-data/select-published-odata-service.png)
+	![](attachments/register/select-published-odata-service.png)
 
 3. Enter a meaningful name that indicates the entities and data that are going to be exposed for the published OData service and click **OK**.
 4.  The OData service document is added to the module, and the **Edit published resource** dialog box is displayed for the selected entity. The information in this will form the metadata definition for the entity:
@@ -106,17 +106,17 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 
 	When **Entity_3** is added to the service which has an association to **Entity_2**, you will see that **Entity_3** has listed that it has "**1 association** and there is a further prompt **Would you like to publish the other side of this association as well** with the name of the association showing the entities being connected.
 
-	![](attachments/registration/publish-association.jpg)
+	![](attachments/register/publish-association.jpg)
 	
 	{{% todo %}}[**AD: missing attachment, which will break the build - please add**]{{% /todo %}}
 
 	Click **Yes** and the association for **Entity-2** is now updated to "**1 association**":
 
-	![](attachments/registration/publish-association-2.png)
+	![](attachments/register/publish-association-2.png)
 
 7.  Add a **Summary** and **Description** of the service In the **Properties** pane: 
 
-	![](attachments/registration/publish-service-description.png)
+	![](attachments/register/publish-service-description.png)
 
 	{{% alert type="info" %}}The description will be included in the published service metadata file and displayed for the service in the Data Hub Catalog.  If no description is available, then the **Summary** will be used.
 	{{% /alert %}}
@@ -142,7 +142,7 @@ The **Version** number that is assigned to a service is significant – it forms
 
 ### 4.1 General Tab
 
-![](attachments/registration/odata-service-page-general.png)
+![](attachments/register/odata-service-page-general.png)
 
 {{% todo %}}[**AD: intro sentence needed here - what are we looking at in the bulleted list below?**]{{% /todo %}}
 
@@ -162,7 +162,7 @@ The **Version** number that is assigned to a service is significant – it forms
 	* **Attributes and associations** – this column shows the attributes and association for the selected entity
 	* **Change** – click this to display the **Select Attributes and associations** dialog box for the selected entity: 
 
-	![](attachments/registration/select-attributes-associations.png)
+	![](attachments/register/select-attributes-associations.png)
 
 	You can specify which attributes you want to include for the service, customize the **Exposed names** of the attributes and associations for the OData service.
 
@@ -175,7 +175,7 @@ For further details, see [Published OData Resource](/refguide/published-odata-re
 
 In the **Settings** tab, you can set configurations of associations between entities, the export location of the service, and the metadata file. You can also specify access to the entities exposed: 
 
-![](attachments/registration/odata-service-page-settings.png)
+![](attachments/register/odata-service-page-settings.png)
 
 #### 4.2.1 Configuration
 
@@ -242,7 +242,7 @@ To update a published OData service, follow these steps:
 6. Make the changes to the service, taking care when removing entities, attributes, and associations that may be consumed by other apps.
 7. Deploy the app to register the services in the Data Hub Catalog. If you have kept the previous version, both services will now be registered.
 8. In the Data Hub Catalog, curate the new service and add tags and further descriptions as necessary. 
-9. Inform consuming apps of the changes. You can see all apps that are consuming previous versions of the service in the Data Hub Catalog and also the visual network of dependencies in the [Data Hub Landscape](../../data-hub-landscape/index). Use the **Business Owner** and **Technical Owner** links to make contact with the users.
+9. Inform consuming apps of the changes. You can see all apps that are consuming previous versions of the service in the Data Hub Catalog and also the visual network of dependencies in the [Data Hub Landscape](../data-hub-landscape/index). Use the **Business Owner** and **Technical Owner** links to make contact with the users.
 10. For major changes, and when a new service is published that will replace an existing one, provide deprecation notices to all consuming apps if they have to change to the new version within a certain length of time if the previous version is going to become inactive.
 11. It is good practice to remove old (unused services) from your app by deleting them in the **Project Explorer** only when you are sure that they are no longer being consumed by any other apps. You can verify this by looking in [Mendix Data Hub](https://hub.mendix.com/) and searching for the service in the **Catalog** or checking out the network of dependencies in Data Hub **Landscape**. 
 
@@ -272,11 +272,11 @@ To register the service, follow these steps:
 
 1.  On the [Data Hub home page](../index), click **Register new service** to display the **Application and Environment Form**.
 
-	![](attachments/registration/register-form-home-page.png)
+	![](attachments/register/register-form-home-page.png)
 
 2.  Enter the details of the app from which the OData v4 service was issued. This information will be displayed in the **Service Details** in the Data Hub Catalog and provide the link to the app.
 
-	![](attachments/registration/old-register-service-form-details.png)
+	![](attachments/register/old-register-service-form-details.png)
 
 3.  Specify the details of the **Application**:
 
@@ -308,16 +308,16 @@ To register the service, follow these steps:
 
 {{% todo %}}[**AD: intro content needed**]{{% /todo %}}
 
-![](attachments/registration/old-register-service-form-contract.png)
+![](attachments/register/old-register-service-form-contract.png)
 
 1. Browse and upload the *.zip* file of the OData v4 service you want to register and click **Validate zip file**.
 2.  The file will be validated, and the OData schemas that are available will be listed:
 
-	![](attachments/registration/old-register-service-form-schema.png)
+	![](attachments/register/old-register-service-form-schema.png)
 
 3.  You can examine the schemas by clicking **+** to display the schema: 
 
-	![](attachments/registration/old-register-service-form-schema-display.png)
+	![](attachments/register/old-register-service-form-schema-display.png)
 
 4.  Select the primary schema from the list that defines the service by checking the box.
 
@@ -330,7 +330,7 @@ To register the service, follow these steps:
 
 In the final step of the manual registration process, use the **Service Details** screen to specify further details that will be displayed in **Service metadata** pane: 
 
-![](attachments/registration/old-register-service-form-end-details.png)
+![](attachments/register/old-register-service-form-end-details.png)
 
 1. In **Service Name**, enter the name of the OData service.
 2.  n **Service Version**, enter the version number for the service.
@@ -344,7 +344,7 @@ In the final step of the manual registration process, use the **Service Details*
 6. When all the information has been completed, click **Save your service**. 
 7. The contracts will be interpreted and the service registered in the Data Hub Catalog. On successful registration, you will be informed:
 
-   ![](attachments/registration/old-register-successful.png) 
+   ![](attachments/register/old-register-successful.png) 
 
 The service is now registered in the Data Hub Catalog.
 
@@ -373,7 +373,7 @@ There are two different initial steps depending on whether you are registering a
 
 Now click **Next Step** to proceed to specifying Environment.
 
-![](attachments/registration/register-service-form-application.png)
+![](attachments/register/register-service-form-application.png)
 
 - [ ] This following is the new registration form
 
@@ -400,7 +400,7 @@ Enter the details of the app that you want to register.
 
 Now click **Next Step** to proceed to specifying Environment.
 
-![](attachments/registration/register-service-form-application.png)
+![](attachments/register/register-service-form-application.png)
 
 ### 7.2 Environment 
 
@@ -417,7 +417,7 @@ Specify the environment details for the app.
 
 Click **Next Step** to proceed to **Contract**.
 
-![](attachments/registration/register-service-form-environment.png)
+![](attachments/register/register-service-form-environment.png)
 
 ### 7.3 Upload OData Contract
 
@@ -429,13 +429,13 @@ If the contract upload was not successful it is possible to upload a new contrac
 
  When the upload validation is successful, click **Next Step** to proceed to **Schema.**
 
-![](attachments/registration/register-service-form-contract.png)
+![](attachments/register/register-service-form-contract.png)
 
 ### 7.4 Schema
 
 For the OData contract that you have uploaded in **Contract**, if there are several schemas defined, select the primary schema (which will be previewed in the right window) that will be used for the service definition in the Data Hub Catalog.
 
-![](attachments/registration/register-service-form-schema.png)
+![](attachments/register/register-service-form-schema.png)
 
 {{% alert type="info" %}}When there are several schemas, these contracts may all be necessary. The primary contract imports information from the other contracts that are included to form the full specification of the service.
 {{% /alert %}}
@@ -467,9 +467,9 @@ In this final step in the manual registration process, the **Details** screen is
 5. **Service Description ** – Enter a description of the service that will be displayed for the **Asset Details**
 6. **Tags **– Tags can be used to organise a service and make it discoverable for specific users. A tag can be added by typing and pressing enter or space. 
 
-![](attachments/registration/register-service-form-details.png)
+![](attachments/register/register-service-form-details.png)
 
-![](attachments/registration/register-service-form-security.png)
+![](attachments/register/register-service-form-security.png)
 
 {{% todo %}}[**IG: The above form was also in the Register Baseline doc. Verify what is implemented.**]{{% /todo %}}
 

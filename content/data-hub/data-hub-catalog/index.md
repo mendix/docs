@@ -14,7 +14,7 @@ tags: ["data hub", "data hub catalog"]
 
 The Data Hub Catalog is the core of Mendix Data Hub for finding the shared registered assets that are made available through OData services published in an organization. It enables a single data source to be consistently used in several apps, ensuring that they will all be using the latest set of data maintained in the source. These registered assets are curated in the Data Hub Catalog to ensure that they are exposed to the relevant users and can be found easily.
 
-The Data Hub Catalog functionality is enhanced by the [Data Hub Landscape](../../data-hub-landscape/index), which enables the networks of shared data and resources to be graphically represented in a network of relationships between apps and services. This integration enables different views of the registered assets to show, at a glance, popular apps and the network of dependancies between apps and services. 
+The Data Hub Catalog functionality is enhanced by the [Data Hub Landscape](../data-hub-landscape/index), which enables the networks of shared data and resources to be graphically represented in a network of relationships between apps and services. This integration enables different views of the registered assets to show, at a glance, popular apps and the network of dependancies between apps and services. 
 
 ## 2 Using the Data Home Home Screen {#data-hub-home}
 
@@ -22,14 +22,14 @@ From the [Data Hub Home](https://hub.mendix.com) home page, you can carry out th
 
 {{% todo %}}[**AD: verify cross-reference**]{{% /todo %}}
 
-![data hub home](./attachments/share-data/data-hub-home.png)
+{{% todo %}}[**AD: screenshot missing for data-hub-home - add new one**]{{% /todo %}}
 
 {{% todo %}}[**AD: add proper image file or delete above, which will break the build**]{{% /todo %}}
 
 From the Data Hub Home page, you can navigate to the following tabs:
 
 * **Catalog** –  search for registered services, entities, and attributes in the search pane and search details page
-* **Landscape** – gain a graphical view of the organization's available services and exposed entities showing consuming and publishing dependencies (for further details, see [Data Hub Landscape](data-hub-landscape).
+* **Landscape** – gain a graphical view of the organization's available services and exposed entities showing consuming and publishing dependencies (for further details, see [Data Hub Landscape](../data-hub-landscape/index).
 
 From the Data Hub Home page, you can do the following:
 

@@ -66,7 +66,7 @@ For more flexible HTTP request headers, you can select a microflow that returns 
 {{% /alert %}}
 
 {{% alert type="info" %}}
-Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For further information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](data-hub/data-hub-catalog/security.md#httpheadervalidation) in the *Data Hub Guide*.
+Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For further information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](data-hub/data-hub-catalog/security#httpheadervalidation) in the *Data Hub Guide*.
 {{% /alert %}}
 
 ## 3 Metadata Tab {#metadata}

@@ -199,7 +199,7 @@ If you use the following input:
 dateTimeToEpoch(dateTime(1974, 7, 2, 9, 50, 10))
 ```
 
-the output is:
+The output is:
 
 ```java
 141990610000
@@ -233,7 +233,7 @@ If you use the following input:
 epochToDateTime(141990610000)
 ```
 
-the output is:
+The output is:
 
 ```java
 dateTime(1974, 7, 2, 9, 50, 10)

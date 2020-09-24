@@ -1,8 +1,8 @@
 ---
 title: "Consume Registered Assets"
 category: "Data Hub Catalog"
+menu_order: 20
 description: "Using entities from the Mendix Data Hub Catalog in general."
-menu_order: 45
 tags: ["data hub", "data hub catalog", "consume", "external entities", "asset", "entities", data hub pane", "studio pro"]
 ---
 

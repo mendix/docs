@@ -1,8 +1,8 @@
 ---
 title: "Register Data Assets"
 category: "Data Hub Catalog"
+menu_order: 30
 description: "Registering data services in the Data Hub Catalog."
-menu_order: 50
 tags: ["data hub", "data hub catalog", "register", "registration form", "data hub catalog api"]
 ---
 

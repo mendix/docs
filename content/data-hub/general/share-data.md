@@ -152,7 +152,7 @@ The **{yourname}CustomerODataService** from your app is now registered in the Da
 	
 	{{% todo %}}[**AD: we write for "you" over "the user"; add cross-references to these roles of "owner," "curator," "Data Hub Admin"**]{{% /todo %}}
 
-5. The **Curation Bar** enables you to edit details of the registered service and also set the **Discoverability** to other users. By default, services registered through a Studio Pro deployment will be set to **Discoverable**.  For further details about curating services, see [Curating](??).
+5. The **Curation Bar** enables you to edit details of the registered service and also set the **Discoverability** to other users. By default, services registered through a Studio Pro deployment will be set to **Discoverable**.  For further details about curating services, see [How to Curate Registered Assets](../data-hub-catalog/curate).
 
 {{% todo %}}[**AD: steps 4 and 5 are not really steps in which the user has to do something - they can be pulled out of the numbered list and added as additional info below**]{{% /todo %}}
 

@@ -29,12 +29,10 @@ The rows in the table are CDs. The type of the two rows is *CD* and this is the 
 
 The entity type defines how the data is handled and there are two types:
 
-1. [Persistable entity](#persistable-entity) 
+* [Persistable entity](#persistable-entity) 
+* [Non-persistable entity](#non-persistable-entity)
 
-2. [Non-persistable entity](#non-persistable-entity)
-
-    ![](attachments/domain-model/type-of-entities.jpg)
-
+![](attachments/domain-model/type-of-entities.jpg)
 
 ### 2.1 Persistable Entity {#persistable-entity}
 

@@ -1,7 +1,8 @@
 ---
 title: "Share Data Between Apps Using Mendix Data Hub"
+category: "General Info"
 description: "A how-to for creating a Mendix app in Studio Pro, using the Data Hub Catalog, and creating a new app using external entities from the data-originating app."
-tags: ["data hub catalog", "data hub", "external entities", "landscape" "published odata service"]
+tags: ["data hub catalog", "data hub", "external entities", "landscape", "published odata service"]
 ---
 
 {{% todo %}}[EC: PM suggests posting a link to the Hallo World run through that users can play before doing this how-to.  Is this necessary? The animated How to will have to be updated to show beta functionality . It could also be the "Tour" on the welcome pages]{{% /todo %}}

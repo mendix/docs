@@ -36,11 +36,11 @@ Associations have the following properties:
 
 The name used to refer to the association. For example, in forms or microflows.
 
-### 2.3 Documentation {#documentation}
+### 2.2 Documentation {#documentation}
 
 You can write notes and documentation in the **Documentation** property.
 
-### 2.4 Multiplicity {#multiplicity}
+### 2.3 Multiplicity {#multiplicity}
 
 Multiplicity can be of the following types:
 
@@ -52,7 +52,7 @@ Multiplicity can be of the following types:
 
 For more information about association types, see the [Type](association-member-properties#type) section in *Association Tab Properties*, and for information on ownership, see the [Owner](association-member-properties#owner) section in *Association Tab Properties*.
 
-### 2.5 Navigability {#navigability}
+### 2.4 Navigability {#navigability}
 
 | Navigability | Meaning | Equivalent of |
 | --- | --- | --- |
@@ -63,7 +63,7 @@ This corresponds to the **Owner** property for **Reference sets**. See the [Owne
 
 Despite it's name, navigability is usually only important when adding or changing associations. Making one object owner of an association does not prevent you reading the association from the non-owner end.
 
-### 2.6 Delete Behavior {#delete-behavior}
+### 2.5 Delete Behavior {#delete-behavior}
 
 | Value | Description |
 | --- | --- |

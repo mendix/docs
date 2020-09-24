@@ -19,7 +19,7 @@ The Data Hub Admin for the current release of Data Hub is assigned by [Mendix Su
 
 This how-to describes how Mendix Data Hub Admin can assign the curator role to users.
 
-{{% todo %}}[this will, of course, change to Mendix Company Admin with an x-ref to [Company and App Roles](/refguide/company-app-roles/) when this implemented]{{% /todo %}}
+{{% todo %}}[this will, of course, change to Mendix Company Admin with an x-ref to [Company & App Roles](/developerportal/company-app-roles) when this implemented]{{% /todo %}}
 
 ## 2 Adding a Curator
 
@@ -50,12 +50,3 @@ Data Hub users can do the following:
 {{% alert type="info" %}}
 A user who publishes an OData service is the technical owner of the service and thereby has a [Data Hub Curator](#curator) role over their own services. If they have registered services which are not published and are non-discoverable, only they will be able to find and consume these services. 
 {{% /alert %}}
-
-## 4 Guide Categories
-
-The *Data Hub Guide* is divided into the following categories:
-
-* [How to Share Data Between Apps Using Mendix Data Hub](share-data)
-* [Data Hub Catalog](data-hub-catalog/index)
-* [Data Hub Landscape](../data-hub-landscape/index)
-

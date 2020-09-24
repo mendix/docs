@@ -153,7 +153,7 @@ The number of items satisfying the search criteria (search string plus filters) 
 
 If no search string is specified, all registered services will be listed in the search results in the above order showing the first five entities for each service.
 
-When an item in the search results is selected, the **Catalog** tab will show the **Search details** and the **Landscape** tab will show the network of connections and dependencies of the selected item in the [Data Hub Landscape](../../data-hub-landscape/index).
+When an item in the search results is selected, the **Catalog** tab will show the **Search details** and the **Landscape** tab will show the network of connections and dependencies of the selected item in the [Data Hub Landscape](../data-hub-landscape/index).
 
 {{% alert type="info" %}}
 In Studio Pro, searching the Data Hub Catalog through the **Data Hub** pane requires use of the wildcard `*` for an empty search. It is not possible to use the wildcard in combination with other characters. The wildcard can also be used in the Data Hub Catalog search but it is not necessary. 

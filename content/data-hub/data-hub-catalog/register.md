@@ -85,7 +85,7 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 3. Enter a meaningful name that indicates the entities and data that are going to be exposed for the published OData service and click **OK**.
 4.  The OData service document is added to the module, and the **Edit published resource** dialog box is displayed for the selected entity. The information in this will form the metadata definition for the entity:
 
-	![](../attachments/share-data/edit-published-resource-box.png)
+	![](attachments/register/edit-published-resource-box.png)
 
 	* **Entity** – the name and module of the entity
 		* **Select** – click to display list of entities available in the module and select another entity to expose
@@ -106,10 +106,8 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 
 	When **Entity_3** is added to the service which has an association to **Entity_2**, you will see that **Entity_3** has listed that it has "**1 association** and there is a further prompt **Would you like to publish the other side of this association as well** with the name of the association showing the entities being connected.
 
-	![](attachments/register/publish-association.jpg)
+	![](attachments/register/publish-association.png)
 	
-	{{% todo %}}[**AD: missing attachment, which will break the build - please add**]{{% /todo %}}
-
 	Click **Yes** and the association for **Entity-2** is now updated to "**1 association**":
 
 	![](attachments/register/publish-association-2.png)

@@ -28,7 +28,7 @@ This how-to shows you how to share data between apps using the Mendix Data Hub.
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install Studio Pro version [8.14.0 or above](appstore.home.mendix.com/link/modelers/)
+* Install Studio Pro version [8.14.0 or above](https://appstore.home.mendix.com/link/modelers/)
 
 {{% todo %}}[**AD: verify it should be 8.14.0 before publication**]{{% /todo %}}
 
@@ -94,7 +94,7 @@ The following steps take you through creating an OData service for your app to e
 
 2.  In the domain model, right-click the **Customer** entity and select **Expose as OData resource**.
 
-	![](./data-hub-catalog/attachments/register/expose-as-odata-resource.png)
+	![](attachments/share-data/expose-as-odata-resource.png)
 
 3.  In the **Select Published OData Service ** dialog box, select the **MyFirstModule** > **APIs** folder and click **New** to add a new OData service. Call this published OData service *{yourname}CustomerODataService* and press **OK**. 
 
@@ -141,9 +141,7 @@ The **{yourname}CustomerODataService** from your app is now registered in the Da
 
 1.  Go to [Mendix Data Hub](https://hub.mendix.com/):
 
-	![data hub home](attachments/share-data/data-hub-home.png)
-	
-	{{% todo %}}[**AD: screenshot file missing**]{{% /todo %}}
+	{{% todo %}}[**AD: screenshot file missing for data-hub-home - need to add**]{{% /todo %}}
 
 2.  In the search field, enter the search term *customer*. All services and entities that satisfy this search string will be displayed in the **Search Results** pane in the **Search Details** screen.
 3. From the search results, find the service that you published and select it. Full details will be displayed in the **Search Details** screen and the **Service Metadata** pane on the right. This information was defined in the OData service document in Studio Pro. 
@@ -161,7 +159,7 @@ The **{yourname}CustomerODataService** from your app is now registered in the Da
 
 {{% todo %}}[**AD: "Curating" needs a cross-reference link, otherwise wil break the build**]{{% /todo %}}
 
-For more details on searching in the Data Hub Catalog and the **Search Details** screen, see [How to Search in the Data Hub Catalog](../data-catalog/search). You can also explore registered services in the Data Hub Landscape. For more information, see [How to Use the Data Hub Landscape](../data-landscape/../data-hub-landscape/index).
+For more details on searching in the Data Hub Catalog and the **Search Details** screen, see [How to Search in the Data Hub Catalog](../data-hub-catalog/search). You can also explore registered services in the Data Hub Landscape. For more information, see [How to Use the Data Hub Landscape](../data-landscape/../data-hub-landscape/index).
 
 ## 7 Using the Customer Entity in Another App
 
@@ -172,7 +170,7 @@ You are now going to create a new app and consume the data you have added to the
 3. The search results will be listed in the **Data Hub** pane showing all the hits satisfying this search string. You will note that the app that you have created is not listed.
 4.  By default, search in the **Data Hub** pane will show hits for services in production environments. The app that we have deployed in this how-to was deplyed to the Mendix Cloud for Free Apps. To include this non-production environment in your search, click the **Filter** icon next to the search area:  
 
-	![Filter Icon](attachments/data-hub-in-studio-pro/filter-icon.png)
+	![Filter Icon](attachments/share-data/filter-icon.png)
 
 5.  Click **Show development environments**. The search results will now show all hits in all environments including the **{yourname}CustomerOData_service** which is available in the Mendix Free App environment.
 
@@ -182,7 +180,8 @@ You are now going to create a new app and consume the data you have added to the
 
 	{{% alert type="info" %}}Entities that are used in an app from the **Data Hub** pane are called external entities. They are displayed as purple containers in the domain model, and they display the name of the OData service name from which they are being consumed.{{% /alert %}}
 
-	{{% alert type="info" %}}The properties of external entities will differ from other kinds of entities in that the properties defining the data in the publishing app cannot be changed in the consuming app. For further information on external entities, see [entities/external entity](x-ref){{% /alert %}}
+	{{% alert type="info" %}}The properties of external entities will differ from other kinds of entities in that the properties defining the data in the publishing app cannot be changed in the consuming app. For further information on external entities, see [External Entities](/refguide/external-entities) in the *Studio Pro Guide*. 
+	{{% /alert %}}
 	
 	{{% todo %}}[**AD: Cross-reference needed above, otherwise will break the build**]{{% /todo %}}
 
@@ -234,7 +233,7 @@ You can now see your new apps in your organization's Data Hub Landscape.
 
 You will now learn how to do the following:
 
-* Use and understand the [Data Hub Landscape](.\../data-hub-landscape/index) for locating sources of data
+* Use and understand the [Data Hub Landscape](../data-hub-landscape/index) for locating sources of data
 * View the dependencies between deployed apps and the direction of the dependencies in your Data Hub Landscape 
 
 You can view the two apps that you have created in the Data Hub Landscape and see the associations by following these steps:

@@ -8,7 +8,7 @@ tags: ["data hub catalog", "data hub", "virtual entities", "landscape", "publish
 
 ## 1 Introduction
 
-The Data Hub Landscape presents a graphical view of the registered OData services in your Data Hub. It provides a landscape visualization of items registered in the [Data Hub Catalog](data-hub-catalog/index) in which the nodes are the runtime instances of applications (or, more specifically, the deployments of apps in specific environments). All public services that are issued with Data Hub are also shown in the Landscape.
+The Data Hub Landscape presents a graphical view of the registered OData services in your Data Hub. It provides a landscape visualization of items registered in the [Data Hub Catalog](../data-hub-catalog/index) in which the nodes are the runtime instances of applications (or, more specifically, the deployments of apps in specific environments). All public services that are issued with Data Hub are also shown in the Landscape.
 
 {{% todo %}}[**AD: Standardize if "Landscape" should be capitalized when not used with "Data Hub"**]{{% /todo %}}
 

@@ -21,9 +21,17 @@ The domain model editor uses the following symbols to help visualize attribute p
 | ![](attachments/domain-model/917593.png) | This attribute has one or more validation rules. |
 | ![](attachments/domain-model/917592.png) | This attribute has a microflow that calculates the value of the attribute. |
 
+{{% alert type="info" %}}
+Attributes for external entities are specified in the **External Entity Properties**. These attributes are defined in the originating app and the only local changes that can be applied to these entities is a local name and description. For further information see [external entity Attributes](external-entities#attributes).
+{{% /alert %}}
+
 ## 2 Properties
 
-You can add attributes to an entity from the [entity dialog box](entities#dialog-box). You can also edit them from this dialog box, or by double-clicking on the attribute name in the domain model.
+You can add attributes to an entity from the [entity properties dialog box](entities#dialog-box). You can also edit them from this dialog box, or by double-clicking the attribute name in the domain model.
+
+{{% alert type="info" %}}
+You can **Add** new attributes to [external entities](external-entities#attributes), **Edit** some of the attribute properties, or **Delete** them. However, the changes will only apply locally, and the values in the originating app will not be affected. For more information on operations on attributes of external entities, see the [Attributes](external-entities#attributes) section of *External Entities*.
+{{% /alert %}}
 
 An example of the attribute properties is represented in the image below:
 
@@ -35,21 +43,21 @@ Attribute properties consist of the following sections:
 * [Type](#type)
 * [Value](#value)
 
-### 2.1 Common Section{#common}
+### 2.1 Common Section {#common}
 
 #### 2.1.1 Name
 
-The **name** property specifies the name of the attribute. This name is used to refer to the attribute in forms, microflows, queries, constraints, and so forth.
+The **Name** property specifies the name of the attribute. This name is used to refer to the attribute in forms, microflows, queries, constraints, and so forth.
 
 {{% alert type="warning" %}}
 If you delete an attribute in your entity and then create a new attribute with the same name, Mendix will consider it a new and different attribute. This means that upon deployment the old column will be dropped, including its data. Then a new, empty, column with the same name will be created.
 {{% /alert %}}
 
-#### 2.1.2 Documentation
+#### 2.1.3 Documentation
 
 This allows you to describe aspects of the entity which may be useful to you or other team members when using the entity within the app.
 
-### 2.2 Type Section{#type}
+### 2.2 Type Section {#type}
 
 #### 2.2.1 Type
 
@@ -136,7 +144,7 @@ The 'Max length' property specifies the number of characters that can be stored 
 
 Default: *200*
 
-### 2.3 Value Section{#value}
+### 2.3 Value Section {#value}
 
 #### 2.3.1 Value
 

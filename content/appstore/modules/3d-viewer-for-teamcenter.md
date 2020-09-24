@@ -120,17 +120,16 @@ Follow these steps:
 ![teamcenter-pageobject](attachments/3d-viewer-for-teamcenter/teamcenter-pageobject.jpg)
 2. On home page, wrap main area with a **Data view** widget, create a **createPageObject** nanoflow which creates a default `PageObject` object and returns it. Set this nanoflow as data source of newly created Data View widget.
 3. On home page, add another **Data View** widget within previous **Data View** widget, set the data source type of the Data View widget to `context`, this way you can access to the `ModelDocument` object associated with `PageObject`.
-![teamcenter-homepagedataviews ](attachments/3d-viewer-for-teamcenter/teamcenter-homepagedataviews.jpg) 
+![teamcenter-homepagedataviews ](attachments/3d-viewer-for-teamcenter/teamcenter-homepagedataviews.jpg)
 
 4. Find 3D widgets in toolbox, add to the inner **Data View** widget. Now you can set the `ModelId` and `Model Source Type` Viewer widget needs.
 ![teamcenter-setviewermodelid ](attachments/3d-viewer-for-teamcenter/teamcenter-setviewermodelid.jpg)  
-5.  dddd
-6.  ddd
+5. On Open TC model popup page, add an outmost **Data view** widget, select `context` as its data source type, and select `PageObject`.
+![teamcenter-popuppageobject](attachments/3d-viewer-for-teamcenter/teamcenter-popuppageobject.jpg)
+6. Create a **OpenSelectedModel** nanoflow and set it as On Click action of List View.  This nanoflow enables update `ModelDocument` associated with `PageObject` and returns updated `PageObject`. Every time user click on a model list item, `PageObject` will be updated, homepage where viewer is in will be updated to newly selected model.
+![teamcenter-openselectedmodel](attachments/3d-viewer-for-teamcenter/teamcenter-openselectedmodel.jpg)
+
 There are other scenario to visualize a model, you can choose other ways to do this. Key idea is to pass valid `ModelId` and `Model Source Type` to the **Viewer** widget.
 
-### 6.4 Set Revision rules
-
 ## 7 Read More
-* {Link 1}
-* {Link2} – {an explanation when necessary especially if this is a third-party link}
-{Make sure this section contains a bulleted list only with explanations where necessary.Do not just repeat cross-references you used throughout the document, but list useful supplementary links here.}
+* {3D Viewer for Teamcenter Academy learning path link}

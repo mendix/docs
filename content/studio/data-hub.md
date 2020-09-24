@@ -52,7 +52,7 @@ When you [preview your app](publishing-app), you will see data from the external
 
 The **Data Hub** tab of the **Select Entity** dialog box shows you a list of services that expands to a list of entities available for your organization:
 
-![Data Hub Section Diagram](attachments/data-hub/data-hub-section-diagram.png)
+![Data Hub Section Diagram](attachments/data-hub/data-hub-tab-diagram.png)
 
 In the **Data Hub** tab, you can do the following:
 
@@ -67,7 +67,7 @@ In the **Data Hub** tab, you can do the following:
     
 * **View services used by your project** – services that are already used in your project are marked with a green check-mark.
 
-* **Update services** – when a new version of the service is available, you can update it. However, it is best to check out the changes made to the service in the Data Hub Catalog first. 
+* **Update services** – when a new version of the service is available, you can update it. However, it is best to check out the changes made to the service in the Data Hub Catalog first by clicking **Show Changes**. 
 
     ![Service Update](attachments/data-hub/service-update.png)
 
@@ -99,7 +99,7 @@ In the **Data Hub** tab, you can do the following:
 
 External entities are colored *purple* in the domain model:
 
-![External Entity](attachments/data-hub/virtual-entity.png)
+![External Entity](attachments/data-hub/external-entity.png)
 
 When you add external entities to your app, it is possible to make local changes to the entity, such as change its name. However, these changes are limited and will only apply to your app. Most of the properties of external entities are read-only as they are defined in the source app (this ensures that you will not accidently change the data in the source app):
 
@@ -123,7 +123,7 @@ If you add two entities from the same service that have an association in the so
 
 You can create and edit associations only between a local entity and an external one. However, the association should always point **to** the external entity and not **from** it. That is why creating many-to-many associations between local and external entities is not possible.
 
-For example, you can create an association from a local entity **Employee** to an external entity **Office**:
+For example, you can create an association from a local entity **Order** to an external entity **Customer**:
 
 ![External Association Example](attachments/data-hub/association-example.png)
 

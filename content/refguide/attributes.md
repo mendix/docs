@@ -22,7 +22,7 @@ The domain model editor uses the following symbols to help visualize attribute p
 | ![](attachments/domain-model/917592.png) | This attribute has a microflow that calculates the value of the attribute. |
 
 {{% alert type="info" %}}
-Attributes for external entities are specified in the **External Entity Properties**. These attributes are defined in the originating app and the only local changes that can be applied to these entities is a local name and description. For further information see [external entity Attributes](external-entities#attributes).
+Attributes for external entities are specified in the **External Entity Properties**. These attributes are defined in the originating app and the only local changes that can be applied to these entities is a local name and description. For further information see the [Attributes](external-entities#attributes) section of *External Entities*.
 {{% /alert %}}
 
 ## 2 Properties

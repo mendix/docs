@@ -8,14 +8,14 @@ tags: ["data hub", "Data Hub Admin", "curator"]
 
 {{% todo %}}[this doc will describe how to assign and change roles in the Data Hub]{{% /todo %}}
 
+{{% todo %}}[**AD: this doc repeats info from the Data Hub Guide index for "Data Hub Users" - shouldn't all Admin, Curator, and user info be moved from the space index to this page?**]{{% /todo %}}
+
 ## 1 Introduction
 
 The Mendix Data Hub Adminstrator can perform admin functions for the Data Hub such as assigning the curator roles from the **Data Hub Admin** page.
 
 {{% alert type="info" %}}
-
 The Data Hub Admin for the current release of Data Hub is assigned by [Mendix Support](https://support.mendix.com/hc/en-us): please contact your support representative.
-
 {{% /alert %}}
 
 This how-to describes how Mendix Data Hub Admin can assign the curator role to users.
@@ -34,7 +34,7 @@ Users with the curator role can perform the following functions:
 * Ensure the discoverability of their entities by the relevant users
 * Enrich the metadata of registered services and entities by adding additional information such as – for example descriptions, tags, and contact information
 
-### 3.3 Data Hub Users
+## 3 Data Hub Users
 
 The typical Mendix user is able to use the Data Hub Catalog to search and use registered services. Users can also register new services through published OData services, and as owners, users are able to have curation rights over their OData services.
 

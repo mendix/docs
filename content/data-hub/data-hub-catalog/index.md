@@ -39,6 +39,8 @@ Users can find shared data by searching the Data Hub Catalog. The [search](searc
 
 The Data Hub Catalog search functionality is integrated into Mendix Studio Pro through the [Data Hub pane](/refguide/data-hub-pane) for finding registered services and entities to use when developing apps.
 
+For more details, see [How to Search for Registered Assets](search).
+
 ### 3.2 Consume – Using Registered Entities
 
 Services and their exposed entities registered in the Data Hub Catalog can be accessed in Mendix Studio Pro to [build apps](/refguide/modeling). These external sources of data are represented in the domain model as external entities which can be used with regular entities, with the difference that external entities connect to data that is maintained externally and therefore can only be consumed.
@@ -62,7 +64,7 @@ OData services can be registered in the Data Hub Catalog in two ways:
 
 Registered services can be curated in the Data Hub Catalog to ensure that they are discoverable by the relevant users. Findability of registered assets can be enhanced by adding tags and descriptions to the services.
 
-For details, see [How to Curate Registered Assets](curate).
+For more details, see [How to Curate Registered Assets](curate).
 
 {{% todo %}}[IG:GM -  Manage versions is not a curation task, this is part of the app/API lifecycle. Other curation tasks (beautifying display names for example) are not part of the public beta - review]{{% /todo %}}
 

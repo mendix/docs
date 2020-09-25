@@ -4,10 +4,6 @@ description: "This guide describes the Mendix Data Hub Catalog along with the se
 tags: ["data hub", "data hub catalog", "data hub landscape"]
 ---
 
-{{% todo %}}[**From Andrej: "I think we should mention, or include the how-to with the hello world video on the data hub started page. This video illustrates the core user journey our users need to understand: https://www.dropbox.com/s/2m8vom6qntyd0io/DataHubVirtualEntities-HelloWorldDemo.mp4?dl=0**]{{% /todo %}}
-
-{{% todo %}}[**AD: Is the above still worth considering, when Studio Pro 8.8 was used in the demo and probably quite a bit else has changed? If you want to use a demo video, it should be fully up-to-date with better production, not from the development period**]{{% /todo %}}
-
 ## 1 Introduction
 
 [Mendix Data Hub](https://hub.mendix.com) is a product for integrating app development with the data available from the many applications in an organization. It is the central hub in an organization for find and connecting to the relevant shared datasets. It also ensures consistency in the data used throughout the organization. Data Hub enables reliable data sources to be managed centrally from one point and for users to connect to them through it. 

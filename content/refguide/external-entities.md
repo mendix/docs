@@ -1,7 +1,7 @@
 ---
 title: "External Entities"
-parent: "entities"
-menu_order: 25
+parent: "domain-model"
+menu_order: 15
 tags: ["domain model", "entity", "entities", "attribute", "external entities", "even handler", "access rule", "studio pro", "consumed OData Service"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

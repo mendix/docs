@@ -94,7 +94,7 @@ If you click the **Entity** icon on the consume line, the names of the entities 
 
 ![](attachments/use-landscape/consume-arrow-entitites-list.png)
 
-### 3 Example Landscape Network {#example-landscape}
+## 3 Example Landscape Network {#example-landscape}
 
 This example shows a complex network of apps and services from different sources (Mendix and Team Center) that are connected. The example illustrates the "flow of data" principle of the Landscape representation for the individual service and consuming app.  However, this example also illustrates a possible exception when viewed over the whole network: The selected app (**SuperCyclingApp**) consumes from a service (**CyclingServicePublishedby…**) that is published by an app (**ConsumpingApp2**) that consumes the selected service (**CyclingService1.0.0**).
 

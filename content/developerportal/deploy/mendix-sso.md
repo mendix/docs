@@ -177,7 +177,7 @@ Your app is now configured to use Mendix Single Sign-on when it is deployed to t
 
 ## 5 Customizing Mendix SSO {#customizing}
 
-The [Mendix SSO module](/appstore/modules/mendix-sso) comes with a default implementation of end-user administration. The default administration module is sufficient for most apps. However, you can create your own administration module if you want to do things in a different way.
+The [Mendix SSO module](/appstore/modules/mendix-sso) comes with a default implementation of end-user administration. This default end-user administration is sufficient for most apps. However, you can create your own administration module if you want to do things in a different way.
 
 There are two ways you can modify the Mendix SSO module. You can use snippets from the App Store module Mendix SSO in your pages, or you can modify the Mendix SSO module in any way you like to support your end-user administration requirements.
 
@@ -309,8 +309,8 @@ The page can be used for troubleshooting – the end-user can see the creation a
 
 ### 6.2 Displaying Tokens using Snippets
 
-The default tokens pages in the MendixSS module are created using snippets.
+The default tokens pages in the MendixSSO module are created using snippets.
 
 ![List of snippets which manipulate tokens in Mendix SSO](attachments/mendix-sso/token-snippets.png)
 
-You can use these snippets to create your own token administration pages. Look at the pages in the default administration module for ideas on how they can be used.
+You can use these snippets to create your own token administration pages. Look at the pages in the **Pages** subfolder of the **Default Implementation** folder in the Mendix SSO module for ideas on how they can be used.

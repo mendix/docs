@@ -53,7 +53,11 @@ You will use these later to complete your work with the Native Builder and with 
 
 After you create your app using the Native Builder's `prepare` command, the Native Builder will create iOS and Android source code. To enable push notifications, you will customize these platforms' source code files. The easiest way for your to customize these source code files is to follow the [Implementing Push Changes With the Native Builder](#auto-changes) section below. If you wish to implement the changes manually, please skip to section [Manually Implementing Changes](#manually-implementing-changes) section further below. 
 
-Choose one of these sections and complete *only* that section before moving on to [Customizing the Android Manifest File](#customize-android-manifest).
+Choose one of these sections and complete *only* that section. Then, if you're developing for Android, complete [Customizing the Android Manifest File](#customize-android-manifest).
+
+{{% alert type="info" %}}
+To summarize the above, you must complete either the automatic flow [Implementing Push Changes With the Native Builder](#auto-changes) or the manual flow [Manually Implementing Changes](#manually-implementing-changes). After completing *one* of those, complete [Customizing the Android Manifest File](#customize-android-manifest) if you are developing for Android.
+{{% /alert %}}
 
 ### 4.1 Implementing Push Changes With the Native Builder {#auto-changes}
 

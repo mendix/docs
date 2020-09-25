@@ -10,6 +10,102 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### September 22nd, 2020
+
+#### Mendix Cloud v4
+
+* We have added the ability for Technical Contacts to download the activity log from an environment.
+* On some of the Developer Portal pages (*Environments*, *Mobile App*, *App Services*, *Metrics*, *Alerts*, *Logs*, *Backups*, and the *Node Permissions* tab of *Security*) we have split the **Edit App** button into two separate buttons: **Edit in Studio** and **Edit in Studio Pro**.
+* We removed the ability to build PhoneGap hybrid applications through the Developer Portal. The PhoneGap Build service is removed by Adobe on 1 October, so this action would have failed after this date. You can still build your hybrid app locally.
+* We resolved an issue where transports which failed were not reported correctly to the customer. (Ticket 106033)
+* We resolved an issue where memory could not be scaled above 16GiB even though 32GiB was available. (Ticket 101035)
+* We resolved an issue where the documentation field was empty when editing a constant in the Developer Portal, even though there was documentation in the model. To see the documentation, you will need to redeploy your app. (Tickets 78758, 78958, 79212, 79359, 92954, 93107, and 100756)
+
+### September 17th, 2020
+
+#### Mendix Cloud v4
+
+* We improved the way that the SSL/TLS connection is established to the database instance in Mendix Cloud **v4**. Now the application will verify that the Subject Alternative Name attribute(s) or the Common Name attribute of the database server certificate is matched against the database host name.
+
+{{% alert type="info" %}}This change will take effect the next time you deploy your application.{{% /alert %}}
+
+### September 15th, 2020
+
+#### Mendix Cloud
+
+We fixed an issue where some customers were getting JVM heap size out of memory errors for applications with a Studio target set. (Tickets 106848, 106966)
+
+{{% alert type="info" %}}
+You must restart the affected environment to apply this fix.
+{{% /alert %}} 
+
+### September 14th, 2020
+
+#### Mendix Cloud V4 Announcement - Deprecation of HTTPS SSL/TLS weak ciphers from **December 1st, 2020**
+
+To improve the security of the HTTPS connections made to apps in Mendix Cloud v4 we [enabled TLSv1.3 in February this year](#tls-v1_3). Since then more than 50% of the requests to Cloud v4 apps have been served over TLSv1.3.
+
+To further improve the security of the HTTPS connections to apps in Mendix Cloud v4 we are deprecating and stopping support for block ciphers. Block ciphers are considered weak.
+
+**On December 1st, 2020**, we will stop technical support for **TLSv1.2 Block ciphers (CBC)** for HTTPS connections to apps in **Mendix Cloud v4**.
+
+**What this means for your Mendix apps**
+
+Stopping support for TLSv1.2 Block ciphers (CBC) means that old clients will not be able to connect to your Mendix app any more.
+
+Some examples of clients which will no longer be supported are:
+
+* Java 7 (Mendix 5)
+* Internet Explorer version 11 on Windows 7
+* Internet Explorer version 11 on Windows 8.1
+* Safari before version 9 on OS X 10.11
+* Safari before version 9 on iOS 9
+
+**Test your clients**
+
+You can test whether your client (browser or integrating client) will be able to connect to your app after December 1st, 2020, by going to [tls-check.mendix.com](https://tls-check.mendix.com/).
+
+**What we continue to support (expert details)**
+
+SSL/TLS ciphers that are still supported for HTTPS connections after December 1st, 2020:
+
+**TLSv1.3**
+
+* `TLS_AES_128_GCM_SHA256`
+* `TLS_AES_256_GCM_SHA384`
+* `TLS_CHACHA20_POLY1305_SHA256`
+
+**TLSv1.2**
+
+* `TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384`
+* `TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256`
+* `TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256`
+* `TLS_DHE_RSA_WITH_AES_256_GCM_SHA384`
+* `TLS_DHE_RSA_WITH_AES_128_GCM_SHA256`
+
+### September 14th, 2020
+
+#### Mendix for Private Cloud
+
+* We resolved an issue where deployment of a new MDA to an environment set the constant values to the defaults in the MDA rather than applying the values set through the environment's [Model Options](/developerportal/deploy/private-cloud-deploy#environment-details). (Ticket 106933)
+
+### September 9th, 2020
+
+#### Mendix for Private Cloud — Mendix Operator v1.5.0 and Mendix Gateway Agent v1.4.0
+
+* We added an option to configure TLS options per environment, overriding the default namespace settings.
+* OpenShift Routes now support all features which were previously only available in Ingress endpoints.
+* We now only monitor the selected endpoint type (OpenShift Routes or Ingess), removing an error message which appeared when starting the operator in a non-OpenShift cluster.
+* We have added several features which make it possible to use [cert-manager](https://cert-manager.io/) with Ingress — this allows you to have TLS certificates generated on-demand.
+* We added an option to specify an environment's TLS certificate, or load it from a Kubernetes secret.
+* When TLS is enabled, Mendix for Private Cloud Portal will now display the App URL with an https:// prefix.
+* We have fixed an issue with connecting to PostgreSQL with TLS and will use encryption by default. (Ticket 106308)
+* We have fixed an issue with an incorrect _failed to create role_ error message for PostgreSQL databases, which in some cases was caused by connection issues.
+* We have improved logging and status messages when the Mendix Operator is provisioning Minio storage or building images.
+* We are introducing a new `private-cloud.registry.mendix.com` container registry which is intended to become the official Mendix for Private Cloud registry and eventually replace the `quay.io/digital_ecosystems` and the `mendix/runtime-base` Docker Hub repositories.
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+
 ### September 7th, 2020
 
 #### Mendix for Private Cloud Portal
@@ -43,7 +139,7 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 * We improved the error handling and feedback of the scale app functionality for Mendix Cloud v4. (Ticket 103304) 
 * We fixed an issue where some customers were not able to access the [Deploy APIs](/apidocs-mxsdk/apidocs/deploy-api). (Ticket 103241)
 * We fixed an issue where some customers were unable to manually add certificates to [access restriction profiles](/developerportal/deploy/environments#asp). (Ticket 102615)
-* We have modified the [Deploy to Licensed Cloud Node](/refguide/project-menu#deploy) flow in Mendix Studio Pro. It is now only possible to deploy Mendix Cloud v4 applications which have a [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings#target) set. Please note that you will get an error message if you deploy from Studio Pro when no **Mendix Studios Target** is set.
+* We have modified the [Deploy to Licensed Cloud Node](/refguide/project-menu#deploy) flow in Mendix Studio Pro. When **Deploy to Licensed Cloud Node** is selected in Mendix Studio Pro, your application will automatically be deployed to the *Mendix Studios Target* environment of your licensed node. This deployment will include a restart of that environment. It is now only possible to deploy Mendix Cloud v4 applications which have a [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings#target) set. Please note that you will get an error message if you deploy from Studio Pro when no **Mendix Studios Target** is set.
 
 ### August 7th, 2020
 
@@ -289,7 +385,7 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 * New Deploy API calls have been added. These will be added to the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) documentation shortly.
 * You will now be warned that you cannot restore a file-only backup to Mendix Cloud. You can only restore backups which include the database.
 
-### February 27th, 2020
+### February 27th, 2020{#tls-v1_3}
 
 #### TLSv1.3 Support for Mendix Cloud (All Regions)
 
@@ -1045,4 +1141,3 @@ In some cases, you may still experience false positives for the runtime heartbea
 #### Improvement
 
 * We removed static information from the log lines in Mendix Cloud v3. Every line before contained `tr10000` and `127.0.0.1`. We removed these fields as they were useless.
-

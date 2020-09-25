@@ -155,9 +155,11 @@ studio-how-to:
   priority: false
   menu_categories:
     - "Pages"
+    - "Configure a Navigation Bar"
     - "Configure a Domain Model"
     - "Secure Your App and Configure Access to Its Functionality"
     - "Microflows"
+    - "Customize the Design of Your App"
 studio7:
   space: "Mendix 7 Studio Guide"
   priority: false

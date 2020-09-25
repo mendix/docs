@@ -21,3 +21,4 @@ The *Studio 8 How-to's* are divided into the following categories:
 * [How to Configure a Domain Model](domain-model-how-to-configure) – explains how to configure a domain model and its elements
 * [How to Secure Your App and Configure Access to Its Functionality](security-how-to-configure-roles) – explains how to secure you app and create different user roles
 * [Microflows](microflows) – focuses on configuring various microflow elements and activities, such as configuring a decision
+* [How to Customize the Design of Your App](theme-customizer-how-to-customize-design) – explains you how to change the design of your app in the **Theme Customizer**

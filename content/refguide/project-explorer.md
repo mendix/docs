@@ -1,7 +1,7 @@
 ---
 title: "Project Explorer"
 parent: view-menu
-menu_order: 80
+menu_order: 40
 tags: ["studio pro", "project explorer"]
 ---
 

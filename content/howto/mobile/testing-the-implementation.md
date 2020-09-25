@@ -51,4 +51,4 @@ If you saw the notification, congratulations! By following this document, you ha
 ## 5 Read More
 
 * [Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
-* [Debug a Mobile App with Mendix](debug-a-mobile-app)
+* [Debug a Hybrid Mobile App](debug-a-mobile-app)

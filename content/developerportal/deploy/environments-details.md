@@ -246,14 +246,11 @@ Additional information can be found in the Mozilla developer guide [HTTP headers
 
 A number of non-configurable response headers are added automatically by Mendix and the deployment environment. These are listed below.
 
-The Mendix buildpack adds the following response headers:
-
-* cache-control
-* strict-transport-security
-
-Cloud Foundry adds the response header:
-
-* x-vcap-request-id
+| Response Header | Added in |
+| --- | --- |
+| cache-control| the buildpack for index.html and login.html — the Mendix Runtime for other pages |
+| strict-transport-security | TLS terminating webservers - this is set to `max-age=31536000` |
+| x-vcap-request-id | Cloud Foundry to track requests through CF |
 
 #### 4.2.2 Running Your App in an Iframe{#iframe}
 

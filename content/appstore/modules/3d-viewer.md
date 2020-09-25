@@ -127,7 +127,7 @@ Follow these steps to display the model loading progress:
 
 1. Create an entity called *PageObject*, add decimal type attribute called *LoadingProgress* with a default value of `= 0` (as the **Progress bar** widget expects a decimal value).
 2. Create a nanoflow called *createPageObject* that returns a **PageObject** object.  
-3. Wrap **Container3D** with a data view and set the **Data Source** of the data view to the **createPageObject** nanoflow.  
+3. Wrap **Container3D** with a data view and set the **Data source** of the data view to the **createPageObject** nanoflow.  
 4.  Set the value of the **LoadingProgress** attribute by setting the **Progress percentage** property:
 
   ![viewer-progresspercentage](attachments/3d-viewer/viewer-progresspercentage.jpg)
@@ -164,8 +164,8 @@ The Mendix native [list view](/refguide/list-view) can be used to display the mo
 
 1. Use the **View3D/USER_ME/GetModelListFromMendix** nanoflow or copy it to your app module. A list of **ModelDocument** objects will be returned after calling the nanoflow.
 2. Add a [pop-up page](/refguide/page-properties#pop-up) to display the model list via a button click or another event of your choice.
-3. Place a list view in the page and set the **GetModelListFromMendix** nanoflow as the **Data Source**.
-4. As **GetModelListFromMendix** requires a **Pagination** parameter input, wrap the list view with a data view. Then, create a nanoflow called *CreatePaginationObject* nanoflow and set that nanoflow as the list view's **Data Source**.
+3. Place a list view in the page and set the **GetModelListFromMendix** nanoflow as the **Data source**.
+4. As **GetModelListFromMendix** requires a **Pagination** parameter input, wrap the list view with a data view. Then, create a nanoflow called *CreatePaginationObject* nanoflow and set that nanoflow as the list view's **Data source**.
 5.  Fill in the list item with the information you are interested in:
 
   ![openmodelpopUp-listview](attachments/3d-viewer/openmodelpopup-listview.jpg)

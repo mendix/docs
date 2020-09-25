@@ -1,55 +1,58 @@
 ---
 title: "3D Viewer for Teamcenter"
-#category: "Modules"
-#parent: "Enter the parent document filename of this document if necessary (for example,"design-the-architecture"); if there is a category, remove this parent line"
-#menu_order: Enter the position of the document in the category or under the parent;number by 10 (for first), 20, 30, etc. for easy ordering of other documents in the future if necessary; don't add brackets or quotation marks; if no number is added, the system will add an extremely high number to order the documents, which means that if you only want a document to appear at the top, you only have to add "10" to that specific document,you don't have to order all the other documents in the category/under the parent
-#description: "3D Viewer For Teamcenter  module is an add-on module to 3D Viewer module, it adds additional functionality to enable developer to fetch JT model from Teamcenter instance and visualize them using existing 3D Viewer module widgets. 
-#tags: ["3DVisualization", "3D Viewer", "CAD", "app store", "app store component","platform support","Teamcenter"]
+category: "App Services"
+description: "3D Viewer for Teamcenter is an add-on module for the 3D Viewer app service. It adds additional functionality to enable fetching a JT model from a Teamcenter instance and visualizit it using existing 3D Viewer widgets. 
+#tags: ["3d visualization", "3d viewer", "cad", "app store", "marketplace", "component","platform support","teamcenter"]
 ---
 ## 1 Introduction
 
-The [3D Viewer For Teamcenter(link currently N/A)](https://appstore.home.mendix.com/link/app114764/) module lets you connect to Teamcenter instance, visualize and operate on 3D JT models. It provides nanoflows, micro-flows that enable you to find and fetch JT model from Teamcenter.
+The 3D Viewer for Teamcenter app service lets you connect to a Teamcenter instance and then visualize and operate on 3D JT models. It provides nanoflows and microflows that enable you to find and fetch a JT model from Teamcenter.
 
 ### 1.1 Typical Use Cases
 
-You can use this module to search and fetch JT models that are stored in Teamcenter instance and use 3D Viewer widgets included in [**3D Viewer** (link not available yet)](http:xx) module to visualize the fetched models. Once the model is fetched, you can perform some basic operations such us navigating model product structure tree, PMI Tree, sectioning and much more, which is enabled by **3D Viewer** out-of-the-box tools. Using this **3D Viewer For Teamcenter** module alone won't be enough to visualize the 3D model.
+You can use this app service to search and fetch JT models that are stored in a Teamcenter instance and use [3D Viewer](3d-viewer) widgets to visualize the fetched models. Once a model is fetched, you can perform some basic operations, such us navigating the model product structure tree and PMI tree, sectioning, and many more operations enabled by the 3D Viewer out-of-the-box tools. 
+
+{{% alert type="warning" %}}
+Using this app service alone will not be enough to visualize a 3D model.
+{{% /alert %}}
 
 ### 1.2 Features
 
-The module enables you to do the following:
+This app servcice enables doing the following:
 
-- Log in Teamcenter instance
-- Search  models from Teamcenter
-- Get model by setting Revision Rules
-- Visualize and perform operations on model when used with **3D Viewer** module
+* Log in to a Teamcenter instance
+* Search  models from Teamcenter
+* Get a model by setting revision rules
+* Visualize and perform operations on model when used with 3D Viewer app service
 
 ### 1.3 Dependencies
 
-If you want to visualize models stored in Teamcenter, you will also need to import **Teamcenter Connector** module and **3D Viewer** module:
+If you want to visualize models stored in Teamcenter, you will also need to import the following components into your app project:
 
-- [Teamcenter Connector](https://appstore.home.mendix.com/link/app111627/) module v2.1.0  is required for 3DViewer module to connect and load model from Teamcenter.
-- [3DViewer module(link currently not available yet)](https://dxxxxx) provides out-of-box widgets and domain model entities needed to visualize a JT model.
+* [3D Viewer](3d-viewer) app service – this component provides out-of-the-box widgets and the domain model entities needed to visualize a JT model
+* [Teamcenter](https://appstore.home.mendix.com/link/app/111627/) connector – this component is required for the 3D Viewer app service to connect and load the model from Teamcenter
 
 ### 1.4 Limitations
 
-To visualize model from Teamcenter, limitation is similar to that of **3DViewer**, please refer to [3D Viewer limitations](3d-viewer.md#limitations)
+To visualize a model from Teamcenter, the limitations are similar to those of 3D Viewer. For details, see the [Limitations](3d-viewer#limitations) section of *3D Viewer*.
 
 ## 2 Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Make sure you have the following prerequisites:
 
-- Have Mendix Studio Pro v8.13.1 or above installed
-- A living Teamcenter instance (need `Teamcenter host address`, `Teamcenter FMS url` to configure the Teamcenter instance)
-- Teamcenter account, it's better to have both admin user account and non-admin user account.
+* [Studio Pro 8.13.1](https://appstore.home.mendix.com/link/modelers/) or above installed
+* A living Teamcenter instance (need `Teamcenter host address` and `Teamcenter FMS url` to configure the Teamcenter instance)
+* A Teamcenter account (it is better to have both an admin user account and a non-admin user account)
 
 ## 3 Installation
 
-To visualize a model fetched from Teamcenter instance, some modules below are needed. Follow the instructions in [How to Use App Store Content in Studio Pro](https://docs.mendix.com/appstore/general/app-store-content) to import modules into your app.
+To visualize a model fetched from a Teamcenter instance, you need to import the components below into your app project. Follow the instructions in [How to Use App Store Content in Studio Pro](../general/app-store-content) to import these components:
 
-1. Download and import the [3D Viewer(link N/A yet)](http:xx) module into your app project.
-2. Download and import [Teamcenter Connector](https://appstore.home.mendix.com/link/app111627/) module v2.1.0 into your app project
-3. Download [3D Viewer For Teamcenter(link currently N/A)](https://appstore.home.mendix.com/link/app114764/) module and import into your app project
-4. Map **Administrator** and **User** module role of installed modules to the applicable user roles in your app.
+* 3D Viewer for Teamcenter
+* [3D Viewer](3d-viewer) app service
+* [Teamcenter](https://appstore.home.mendix.com/link/app/111627/) connector (v2.1.0 or above) 
+
+After importing, you need map the **Administrator** and **User** [module roles](/refguide/module-security#module-role) of the installed components to the applicable [user roles](/refguide/user-roles) in your app.
 
 ## 4 Configuration
 

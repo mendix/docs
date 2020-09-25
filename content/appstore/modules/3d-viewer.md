@@ -34,7 +34,7 @@ This app service enables you to do the following:
 * Create 3D cross-sections
 * Examine your model from preset viewing angles
   
-### 1.3 Limitations
+### 1.3 Limitations {#limitations}
 
 The 3D Viewer app service includes a few 3D widgets. These are the limitations on how these widgets should be placed:
 

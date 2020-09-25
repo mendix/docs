@@ -8,8 +8,6 @@ tags: ["data hub", "data hub catalog", "consume", "external entities", "asset", 
 
 {{% todo %}}[**IG: search through doc for [title?]() and intsert correct x-ref and further verify all other links**]{{% /todo %}}
 
-{{% todo %}}[**AD: title needs to be finalized - do not need two gerunds, nor a dash - should either be "Consuming..." or "Using..."; probably don't even need "Through the Data Hub Catalog," as the user is in the "Catalog" category, so that should be obvious - so, for example, "Consuming Shared Entities" ?**]{{% /todo %}}
-
 ## 1 Introduction
 
 The Data Hub Catalog is a catalog of OData services exposing entities that you can use in your apps. This means that new apps can be built by using these shared entities from your organization to provide access to the data they connect to. In Mendix Studio Pro, these exposed entities are added as *external entities* through the [Data Hub pane](/refguide/data-hub-pane). The integrated Data Hub Catalog [search](search) functionality in Studio Pro is available to find suitable entities to use in your apps. 
@@ -36,17 +34,13 @@ When a new version of the OData service for an external entity is registered in 
 
 {{% alert type="info" %}}
 This is not compulsory, and users can continue to use an older version of a service unless the new version was deployed to the same service endpoint as the previous version. In Studio Pro, new versions of a service are indicated and users can choose to **Update** the service, or **Switch** to another version of the service deployed to another endpoint.
-
 {{% /alert %}}
 
 {{% alert type="info" %}}
-
- It is good practice that publishers of a service serve a notice of deprecation on a service version that will be replaced with a new service that may contain breaking changes which would cause the consuming app to fail. In this case the updated service should be deployed to a new service endpoint. In this case, in Studio Pro, users will get the option to **Switch** to the new version. 
+It is good practice that publishers of a service serve a notice of deprecation on a service version that will be replaced with a new service that may contain breaking changes which would cause the consuming app to fail. In this case the updated service should be deployed to a new service endpoint. In this case, in Studio Pro, users will get the option to **Switch** to the new version. 
 {{% /alert %}}
 
 {{% todo %}}[Not sure about the value of this here - it is full of shoulds and recommendations - these should move to ]{{% /todo %}}
-
-{{% todo %}}[**AD: the above cross-reference needs to be fixed, otherwise it will break the build**]{{% /todo %}}
 
 ### 2.2 Consumed (External) Entities
 

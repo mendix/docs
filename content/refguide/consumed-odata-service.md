@@ -9,7 +9,7 @@ tags: ["studio pro", "data hub", "odata service", "consumed odata service"]
 
 ## 1 Introduction
 
-When an external entity is used in a project module through the **Data Hub** pane, a consumed OData service document is added displaying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.  
+When an external entity is used in a project module through the [Data Hub pane](data-hub-pane) , a consumed OData service document is added displaying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.  Through this document you ca
 
 ## 2 Connection
 

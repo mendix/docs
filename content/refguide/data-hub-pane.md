@@ -27,11 +27,8 @@ In the domain model, the Data Hub pane is used to search the Data Hub Catalog fo
 The following functionality is available in the pane:
 
 * [Search](#search) – Enter a search string of alphanumeric characters to find a service, entity, or attribute in the Data Hub Catalog. Entities can be dragged from the search results into your domain model as external entities.
-
 * [Filter](#search) – By default, the search will search for services in production environments. Click the **Filter** icon to include non-production environments in the search.
-
 * [Search results](#viewing) – The items satisfying the search string will show the service name, service version, environment that the service was deployed to, and the entities in the service. Services and the entities that are currently being used in the current domain model are indicated with a green check-mark in the search results. You can drag entities from the search results into the domain model and use them as a data source for your app project.
-
 *   [View services consumed by your project](#viewing) – When no search string is specified, the consumed entities will be displayed for the project:
 
 ![Project Section](attachments/data-hub-pane/project-section.png)
@@ -52,26 +49,23 @@ By default, the search is restricted to apps and services deployed to a producti
 
 {{% todo %}}[8.14 graphic]{{% /todo %}}
 
-## 3 Viewing Search Results  {#viewing}
+## 3 Viewing Search Results {#viewing}
 
 For all items satisfying the search string, the following information is displayed:
 
 * Service name
-
 *  An icon indicating the source of the service (Mendix, SAP, Siemens Teamcenter, or another non-Mendix app)
 
   {{% todo %}}[list the icon types]{{% /todo %}}
 
 * Service version
-
 *  The name of the environment that the service is deployed to (for non-production environments)
 
   {{% alert type="info" %}}By default, search results will show deployments to production environments which will not be named in the search results. Only the names of non-production environments will be displayed.{{% /alert %}}
 
-* blue arrow????? Update 
+  {{% todo %}}[Blue arrow????? Update]{{% /todo %}}
 
 * Green check-mark if the service or entity is already consumed by the project
-
 *  Information icon to view further information on the service and to go directly to the **Service Details** page in the Data Hub Catalog: 
 
   ![Data Hub Pane Information](attachments/data-hub-pane/data-hub-pane-info.png)
@@ -85,9 +79,7 @@ If you right-click a consumed service, you can do the following:
   * **View in Data Hub Catalog** – click this to go to the **Service Details** page in the Data Hub Catalog
   * **Go to connection settings** – click this to open the [consumed OData service](consumed-odata-service) document
 
-If you right-click an entity in the list and select **View in Data Hub Catalog**, you will go to the **[Entity Details]** page in the Data Hub Catalog.
-
-{{% todo %}}[**AD: can you cross-reference "Entity Details" to the DHG?**]{{% /todo %}}
+If you right-click an entity in the list and select **View in Data Hub Catalog**, you will go to the entity details page in the [Data Hub Catalog](/data-hub/data-hub-catalog/index).
 
 If you right-click a consumed entity and **Go to entity**, the domain model will be opened.
 

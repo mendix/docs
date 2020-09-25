@@ -75,7 +75,7 @@ Entity properties consist of the following sections:
 * [System members](#system-members)
 
 {{% alert type="info" %}}
-For more information, see the [Properties of External Entities](external-entities#properties) section of *External Entities*.
+For more information, see the [Properties](external-entities#properties) section of *External Entities*.
 {{% /alert %}}
 
 ### 3.1 Access Rules Section {#access-rules}

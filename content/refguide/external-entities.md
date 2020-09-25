@@ -38,7 +38,7 @@ To add an external entity to your project, do the following:
 	![Virtual Entity Example](attachments/data-hub-pane/virtual-entity-example.png)
 
 {{% alert type="info" %}}
-If you drag an entity that is associated with an entity already in your domain model from the same service, the association will be made between the entities. For more information on associations between external entities, see [Associations](#three).
+If you drag an entity that is associated with an entity already in your domain model from the same service, the association will be made between the entities. For more information on associations between external entities, see [Associations](#properties).
 {{% /alert %}}
 
 When an external entity is added to the domain model, two documents will be added in the **Project Explorer**: the **Consumed OData Service** document containing the metadata for the consumed entity, and the **OData Location** of the dataset. For more information, see [Consumed OData Service](consumed-odata-service). 

@@ -81,7 +81,7 @@ To get data from Teamcenter, the end-user needs to be authenticated and authoriz
 Follow these steps to build this login:
 
 1. Add a **Login** [button](/refguide/button-widgets) to a page in your app.
-2. Set the **On click** action to the **TcConnector/Published/APIs/Login/ExexuteAdminLogin** microflow.
+2. Set the **On click** action to the **TcConnector** > **Published** > **APIs** > **Login** > **ExexuteAdminLogin** microflow.
 3.  Run your app locally. When you click **Login**, you will be shown the Teamcenter Admin page where you can add, edit, and manage the Teamcenter instance that you want to connect to by providing the **Teamcenter Host Address** and **Teamcenter FMS URL** and set the instance to **Active**:
 
  ![teamcenter-configuration](attachments/3d-viewer-for-teamcenter/teamcenter-configuration.jpg)
@@ -91,14 +91,14 @@ Follow these steps to build this login:
  ![teamcenter-teamcenterlogin](attachments/3d-viewer-for-teamcenter/teamcenter-teamcenterlogin.jpg)
 
 {{% alert type="info" %}}
-The above is an example Teamcenter login flow. There are other Teamcenter login APIs provided in **TcConnector/Published/APIs/Login**, and you can choose how to use them based on your needs.
+The above is an example Teamcenter login flow. There are other Teamcenter login APIs provided in **TcConnector** > **Published** > **APIs** > **Login**, and you can choose how to use them based on your needs.
 {{% /alert %}}
 
 ### 5.2 Getting a List of Corresponding Models from Teamcenter
 
-The **SearchTC** nanoflow in the 3D Viewer For Teamcenter app service enables setting search criteria and fetching a model list. This nanoflow will first check if an active Teamcenter user session is live and then perform the search, so logging in is essential before performing the model search. A list of **ModelDocument** objects will be returned as a result of this nanoflow; therefore, the nanoflow can be set as the data source of a [list view](/refguide/list-view). Additionally, by using **3dViewer_TC/USER_ME/SetRevisionRule**, you can apply specific revision rules to the search and get different model data returned.
+The **SearchTC** nanoflow in the 3D Viewer For Teamcenter app service enables setting search criteria and fetching a model list. This nanoflow will first check if an active Teamcenter user session is live and then perform the search, so logging in is essential before performing the model search. A list of **ModelDocument** objects will be returned as a result of this nanoflow; therefore, the nanoflow can be set as the data source of a [list view](/refguide/list-view). Additionally, by using **3dViewer_TC** > **USER_ME** > **SetRevisionRule**, you can apply specific revision rules to the search and get different model data returned.
 
-Follow these steps:
+Follow these steps to get the list:
 
 1. Create an **Open TC model** button and add to page.
 2. Set **On Click** action of the button to show a pop up page.

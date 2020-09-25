@@ -58,39 +58,45 @@ After importing, you need map the **Administrator** and **User** [module roles](
 
 To automatically start this app service, create a **Startup** microflow, add **Viewer3D/USE_ME/VisServerAction** and **Viewer3D_TC/USE_ME/VisServerAction_TC** Java actions to the microflow, then set the return type as Boolean with a **Value** of **true**.
 
-This microflow needs to be set as the after-startup step via **Project Settings** > **Runtime** > **After startup**:
+You need to set this microflow as the after-startup step via **Project Settings** > **Runtime** > **After startup**.
+
+Finally, double-click the **Visualization Server** Java action and make sure **Http endpoint** is set as `@Viewer3D.HttpEndpoint`:
 
 ![teamcenter-startupflow](attachments/3d-viewer-for-teamcenter/teamcenter-startupflow.jpg)
-
-Finally, double-click the **Visualization Server** Java action and make sure **Http endpoint** is set as `@Viewer3D.HttpEndpoint`.
 
 ## 5 Using 3D Viewer For Teamcenter
 
-**3DViewer** module provides a set of widgets to visualize JT models and a set of nanoflows, java actions to bring in the data stored in Mendix File Storage. 
-**Teamcenter Connector** module provides a full-scale apis for you to interact with Teamcenter instance.  
-While **3D Viewer For Teamcenter** acts as intermediate layer in between above 2 modules.  it mainly utilize apis provided by **Teamcenter Connector** and provides nanoflows, java actions, microflows to get JT format model data from Teamcenter instance.  
-In conclusion,to visualize and operate on the JT model from 
-Teamcenter, use 3D widgets that are included in **3DViewer** module to visualize the data obtained from  **3D Viewer For Teamcenter** is the approach.  
+The 3D Viewer app service provides a set of widgets to visualize JT models as well as a set of nanoflows and Java actions to bring in the data stored in Mendix file storage. Meanwhile, the Teamcenter connector module provides full-scale APIs for you to interact with a Teamcenter instance.  
+
+The 3D Viewer for Teamcenter app service acts as an intermediate layer between the two components above. It mainly utilizes the APIs provided by the Teamcenter connector and provides nanoflows, Java actions, and microflows to get JT-format model data from the Teamcenter instance.  
+
+To visualize and operate on the JT model from Teamcenter, use the 3D widgets that are included in the 3D Viewer app service to visualize the data obtained from the 3D Viewer for Teamcenter.
+
 ![teamcenter-startupflow](attachments/3d-viewer-for-teamcenter/teamcenter-startupflow.jpg)
 
-### 5.1 Reuse Teamcenter Login APIs to get access to Teamcenter instance data
+### 5.1 Reusing Teamcenter Login APIs to Get Access to Teamcenter Instance Data
 
-To get data from Teamcenter, user needs to be authenticated and authorized. **Teamcenter connector** module provides both Admin Login logic and User login logic for app makers, you can find them in `TcConnector/Published/APIs/Login` folder in the App Store Modules section. Since we are building app to enable user to fetch data from Teamcenter and visualize it in the app. We will need to build a login for user, so that user can enter their Teamcenter username and password to access Teamcenter data.
+To get data from Teamcenter, the end-user needs to be authenticated and authorized. The Teamcenter connector provides both admin login logic and user login logic in the **App Store Modules** > **TcConnector** > **Published** > **APIs** > **Login** folder. Since you are building an app to enable the end-user to fetch data from Teamcenter and visualize it in the app, you will need to build a login for the end-user so that they can enter their Teamcenter user name and password to access the Teamcenter data.
 
-Follow these steps:
+Follow these steps to build this login:
 
-1. Add a **Login** button to a page.
-2. Set the **OnClick** action to microflow  `TcConnector/Published/APIs/Login/ExexuteAdminLogin`
-3. Run locally, when you click **Login**, you will be shown Teamcenter Admin page where you can add/edit/manage Teamcenter instance that you want to connect to by providing `Teamcenter host address`, `Teamcenter FMS URL` and set it `Active`.
-![teamcenter-configuration](attachments/3d-viewer-for-teamcenter/teamcenter-configuration.jpg)
-4. Return to `Login`, you will be able to enter your Teamcenter Account to login Teamcenter instance that you configured and set alive.
-![teamcenter-teamcenterlogin](attachments/3d-viewer-for-teamcenter/teamcenter-teamcenterlogin.jpg)
+1. Add a **Login** [button](/refguide/button-widgets) to a page in your app.
+2. Set the **On click** action to the **TcConnector/Published/APIs/Login/ExexuteAdminLogin** microflow.
+3.  Run your app locally. When you click **Login**, you will be shown the Teamcenter Admin page where you can add, edit, and manage the Teamcenter instance that you want to connect to by providing the **Teamcenter Host Address** and **Teamcenter FMS URL** and set the instance to **Active**:
 
-This is an example Teamcenter Login flow.There are other Teamcenter Login APIs provided in **TcConnector/Published/APIs/Login**, you can choose how to use them based on your need.
+ ![teamcenter-configuration](attachments/3d-viewer-for-teamcenter/teamcenter-configuration.jpg)
+ 
+4.  Return to THE **Login**, where you can enter your Teamcenter account to log in to the Teamcenter instance that you configured and set to active:
 
-### 5.2 Search and get a list of corresponding model from Teamcenter
+ ![teamcenter-teamcenterlogin](attachments/3d-viewer-for-teamcenter/teamcenter-teamcenterlogin.jpg)
 
-**SearchTC** nanoflow in **3D Viewer For Teamcenter** module enables you to set search criteria and fetch model list. **SearchTC** nanoflow will first check if an active Teamcenter user session is alive, and then perform the search, so Login is essential before performing the model search. A list of `ModelDocument` objects will be returned as a result of **SearchTC** nanoflow, therefore the **SearchTC** nanoflow can be set as data source of a **ListView** widget. Additionally, by using **3dViewer_TC/USER_ME/SetRevisionRule**, you can apply specific Revision Rules to the search, and get different model data returned.
+{{% alert type="info" %}}
+The above is an example Teamcenter login flow. There are other Teamcenter login APIs provided in **TcConnector/Published/APIs/Login**, and you can choose how to use them based on your needs.
+{{% /alert %}}
+
+### 5.2 Getting a List of Corresponding Models from Teamcenter
+
+The **SearchTC** nanoflow in the 3D Viewer For Teamcenter app service enables setting search criteria and fetching a model list. This nanoflow will first check if an active Teamcenter user session is live and then perform the search, so logging in is essential before performing the model search. A list of **ModelDocument** objects will be returned as a result of this nanoflow; therefore, the nanoflow can be set as the data source of a [list view](/refguide/list-view). Additionally, by using **3dViewer_TC/USER_ME/SetRevisionRule**, you can apply specific revision rules to the search and get different model data returned.
 
 Follow these steps:
 

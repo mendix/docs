@@ -115,16 +115,21 @@ Follow these steps to get the list:
  And when the end-user clicks the **Search** button, the change needs to be synchronized for List view widget to refresh the list. 
 ![teamcenter-searchsync](attachments/3d-viewer-for-teamcenter/teamcenter-searchsync.jpg)
 
-7. In the console, there's error saying that `Pagination` and `TCModelParamArray` parameters are missing for **SearchTC** nanoflow input, you need to fix this. `Pagination` is an entity defined in **Viewer3D/Domain Model**, by setting values of its attribute, you can get a paginated model list. Now let's just use the default setting, which is all in one page.  
- `TCModelParamArray` is an entity defined in **Viewer3D_TC/Domain Model**, it defines a set of attributes where you can set revision rule  and return different model data based on these revision rules. Now let's just use its default revision rule.  
-Since we are missing these two input parameters for **SearchTC** nanoflow, we can wrap it with two **DataView** widgets, with **Data View** have nanoflow that returns `Pagination` object and `TCModelParamArray` object set as data source, respectively.
-![teamcenter-wrapdataviews](attachments/3d-viewer-for-teamcenter/teamcenter-wrapdataviews.jpg)  
-Run locally, Login TC and then Open TC Model pop up, try to type in a item name (model name) and search, you will see a list of model that contain the entered item name.
-![teamcenter-samplesearch](attachments/3d-viewer-for-teamcenter/teamcenter-samplesearch.jpg)
+7.  In the [console](/refguide/view-menu#console), there will be an error stating that the **Pagination** and **TCModelParamArray** parameters are missing for the **SearchTC** nanoflow input, so you need to fix this.
+ * **Pagination** is an entity defined in the **Viewer3D**'s domain mode, so by setting values of its attribute, you can get a paginated model list. For now, just use the default setting, which is all in one page.  
+ * **TCModelParamArray** is an entity defined in the **Viewer3D_TC**'s domain model. It defines a set of attributes where you can set revision rules and return different model data based on these revision rules. For now, just use its default revision rule.
+ 
+ Since you are missing these two input parameters for the **SearchTC** nanoflow, wrap it with two data views, with one data view including the nanoflow that returns the **Pagination** object and the **TCModelParamArray** object set as the **Data Source** for the other nanoflow.
+ 
+ ![teamcenter-wrapdataviews](attachments/3d-viewer-for-teamcenter/teamcenter-wrapdataviews.jpg)  
 
-### 5.3 Open Model from Model list
+8.  Run your app locally. Then log in to Teamcenter and open the the Teamcenter model pop-up window. Type in a model name and search. You will see a list of models that contain the entered item name.
 
-Now that you are able to get a list of model, you may want to visualize these models, for models to be visualized, it needs 3D widgets that are part of 3D Viewer module.  `ModelDocument` object contains attributes (most importantly, `ModelId` and `Model Source Type`) that are needed to identify and visualize a model in 3D widgets.
+ ![teamcenter-samplesearch](attachments/3d-viewer-for-teamcenter/teamcenter-samplesearch.jpg)
+
+### 5.3 Opening a Model from the Model list
+
+Now that you are able to get a list of models, you may want to visualize these models. For the models to be visualized, it needs 3D widgets that are part of 3D Viewer module.  `ModelDocument` object contains attributes (most importantly, `ModelId` and `Model Source Type`) that are needed to identify and visualize a model in 3D widgets.
 As Viewer Widget needs `Model ID` and `Model Source Type` to visualize a model, you will need to pass `ModelDocument` object to the Viewer Widget.
 
 Since you've built a model list pop up, one scenario is to click to select a list item on pop up page, return the **ModelDocument** object to home page to be visualized there.

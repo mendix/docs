@@ -31,8 +31,6 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install Studio Pro version [8.14.0 or above](https://appstore.home.mendix.com/link/modelers/)
 
-{{% todo %}}[**AD: verify it should be 8.14.0 before publication**]{{% /todo %}}
-
 ## 3 Accessing the Data Hub Catalog
 
 You can explore the services and entities giving access to shared data in your organization in the [Data Hub Catalog](https://hub.mendix.com/).
@@ -150,15 +148,13 @@ The **{yourname}CustomerODataService** from your app is now registered in the Da
 
 	![data hub home](attachments/share-data/search-details-screen.png)
 	
-	{{% todo %}}[**AD: we write for "you" over "the user"; add cross-references to these roles of "owner," "curator," "Data Hub Admin"**]{{% /todo %}}
+	{{% todo %}}[**AD: add cross-references to these roles of "owner," "curator," "Data Hub Admin"**]{{% /todo %}}
 
 5. The **Curation Bar** enables you to edit details of the registered service and also set the **Discoverability** to other users. By default, services registered through a Studio Pro deployment will be set to **Discoverable**.  For further details about curating services, see [How to Curate Registered Assets](../data-hub-catalog/curate).
 
 {{% todo %}}[**AD: steps 4 and 5 are not really steps in which the user has to do something - they can be pulled out of the numbered list and added as additional info below**]{{% /todo %}}
 
 {{% todo %}}[**AD: is "Curation Bar" in the Data Hub UI? If not, it should not be capitalized or bolded.**]{{% /todo %}}
-
-{{% todo %}}[**AD: "Curating" needs a cross-reference link, otherwise wil break the build**]{{% /todo %}}
 
 For more details on searching in the Data Hub Catalog and the **Search Details** screen, see [How to Search in the Data Hub Catalog](../data-hub-catalog/search). You can also explore registered services in the Data Hub Landscape. For more information, see [How to Use the Data Hub Landscape](../data-landscape/../data-hub-landscape/index).
 
@@ -184,8 +180,6 @@ You are now going to create a new app and consume the data you have added to the
 	{{% alert type="info" %}}The properties of external entities will differ from other kinds of entities in that the properties defining the data in the publishing app cannot be changed in the consuming app. For further information on external entities, see [External Entities](/refguide/external-entities) in the *Studio Pro Guide*. 
 	{{% /alert %}}
 	
-	{{% todo %}}[**AD: Cross-reference needed above, otherwise will break the build**]{{% /todo %}}
-
 7.  In the **Data Hub Pane**, if you click the information icon for the consumed service, you will see further information about the service as it is registered in the Data Hub Catalog. You can also click **View in Data Hub Catalog** to go to the **Service Details** screen in the Data Hub Catalog.
 
 	{{% todo %}}[**EC: add x-ref**]{{% /todo %}}

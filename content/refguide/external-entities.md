@@ -24,7 +24,7 @@ External entities are added to the domain model through the [Data Hub pane](data
 
 For more information on adding external entites from the **Data Hub** pane see [Adding External Entities](#adding-external-entities).
 
-## 2 Adding an External Entity to a Project{#adding-external-entities}
+## 2 Adding an External Entity to a Project {#adding-external-entities}
 
 To add an external entity to your project, do the following:
 

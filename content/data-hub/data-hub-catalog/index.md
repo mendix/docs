@@ -59,7 +59,7 @@ If you want to make the data from your app available to others, you can provide 
 
 OData services can be registered in the Data Hub Catalog in two ways:
 
-* In Mendix Studio Pro, entities are exposed in a [published OData service](/refguide/published-odata-services), and upon deployment of the app to an environment, the service is automatically registered in the Data Hub Catalog. For details on publishing OData services in Studio Pro, see the [Publishing an OData Service in Studio Pro to Register Entities](register#odataservice-reg) section of *Registering Data in the Data Hub Catalog*.
+* In Mendix Studio Pro, entities are exposed in a [published OData service](/refguide/published-odata-services), and upon deployment of the app to an environment, the service is automatically registered in the Data Hub Catalog. For details on publishing OData services in Studio Pro, see the [Publishing an OData Service in Studio Pro to Register Entities](register#odata-service-reg) section of *Registering Data in the Data Hub Catalog*.
 * OData v4 services originating from non-Mendix sources can be [registered manually through a new service](register#registration-form). For further details on registration in the Data Hub Catalog and using  manual registration, see [Making Data Available in the Data Hub Catalog](register).
 
 {{% todo %}}[**AD: unclear where that last cross-reference is supposed to go - clarify link text and anchor usage**]{{% /todo %}}

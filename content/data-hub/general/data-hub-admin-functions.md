@@ -22,9 +22,7 @@ This how-to describes how Mendix Data Hub Admin can assign the curator role to u
 
 {{% todo %}}[this will, of course, change to Mendix Company Admin with an x-ref to [Company & App Roles](/developerportal/company-app-roles) when this implemented]{{% /todo %}}
 
-## 2 Adding a Curator
-
-### {#curator}
+## 2 Adding a Curator {#curator}
 
 The Data Hub Curator curates registered assets in the Data Hub Catalog to enrich the information on registered assets and maintain assets. 
 

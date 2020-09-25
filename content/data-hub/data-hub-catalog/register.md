@@ -188,7 +188,7 @@ This section contains the following properties:
 
 #### 4.2.3 Security
 
-This section will be displayed if [project security](/refguide/project-security) is enabled. For further details, see [Security](/refguide/published-odata-services#3-2-security) section of *Published OData Services*.
+This section will be displayed if [project security](/refguide/project-security) is enabled. For further details, see [Security](/refguide/published-odata-services#security) section of *Published OData Services*.
 
 This section contains the following properties:
 

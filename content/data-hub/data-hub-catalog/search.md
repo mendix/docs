@@ -112,7 +112,7 @@ Any of the above actions will take you to the **Search** screen, which is descri
 
 ## 4 The Search Screen {#search-tab}
 
-The **Search** screen is divided into the [Search](#search-pane) pane, the [Search Details](#search-details) page, and the [Service Metadata](#metatada) panel.
+The **Search** screen is divided into the [Search](#search-pane) pane, the [Search Details](#search-details) page, and the [Service Metadata](#metadata) panel.
 
 {{% todo %}}[**AD: capitalization/bolding of these terms should be made consistent through all DHG documentation based on whether these appear as UI labels. If they do not - and it does not appear that they do in the screenshot below - they should be neither capitalized nor bolded.?**]{{% todo %}}
 

@@ -100,15 +100,19 @@ The **SearchTC** nanoflow in the 3D Viewer For Teamcenter app service enables se
 
 Follow these steps to get the list:
 
-1. Create an **Open TC model** button and add to page.
-2. Set **On Click** action of the button to show a pop up page.
-3. Add a **ListView** widget to the pop up page, set the Data Source as **Viewer3D_TC/USE_ME/SearchTC**.
-4. Wrap **ListView** with a **Data View** widget, as **SearchTC** nanoflow requires a **SearchCriteria** object as input parameter. Create a simple nanoflow **cerateSearchCriteria** which create a default **SearchCriteria** object and returns it as result. Set the Data Source of **Data View** to **cerateSearchCriteria** nanoflow.
-5. Add search text box and search button to allow user to type in item name(model name) and perform search.
-![teamcenter-tcmodellist](attachments/3d-viewer-for-teamcenter/teamcenter-tcmodellist.jpg)
-6. To achieve showing model list on **Search** button click, input parameter of **SearchTC** nanoflow **SearchCriteria** object needs to be updated on button click, so when user type in model name in text box, the model name should be saved to `TCItemName` attribute of **SearchCriteria** object.
-![teamcenter-textboxchange](attachments/3d-viewer-for-teamcenter/teamcenter-textboxchange.jpg)
-and when user click on **Search** button, the change needs to be synchronized for List view widget to refresh the list. 
+1. Create an **Open TC model** button and add it to a page in your app
+2. Set the **On click** action of the button to show a [pop-up page](/refguide/page-properties#pop-up).
+3. Add a list view to the pop-up page and set the **Data Source** to **Viewer3D_TC/USE_ME/SearchTC**.
+4. Wrap the list view with a [data view](/refguide/data-view), as the **SearchTC** nanoflow requires a **SearchCriteria** object as the input parameter. So, then create a simple nanoflow named *createSearchCriteria* that creates a default **SearchCriteria** object and returns it as result. Set the **Data Source** of the data view to this new nanoflow.
+5.  Add a [text box](/refguide/text-box) and **Search** button to allow user to type in an item name (as in, a model name) and perform a search:
+
+ ![teamcenter-tcmodellist](attachments/3d-viewer-for-teamcenter/teamcenter-tcmodellist.jpg)
+
+6.  To enable showing the model list via the **Search** button click, the input parameter of the **SearchTC** nanoflow's **SearchCriteria** object needs to be updated on a button click. So, when end-user types in a model name in the text box, the model name should be saved to the **TCItemName** attribute of the **SearchCriteria** object:
+
+ ![teamcenter-textboxchange](attachments/3d-viewer-for-teamcenter/teamcenter-textboxchange.jpg)
+ 
+ And when the end-user clicks the **Search** button, the change needs to be synchronized for List view widget to refresh the list. 
 ![teamcenter-searchsync](attachments/3d-viewer-for-teamcenter/teamcenter-searchsync.jpg)
 
 7. In the console, there's error saying that `Pagination` and `TCModelParamArray` parameters are missing for **SearchTC** nanoflow input, you need to fix this. `Pagination` is an entity defined in **Viewer3D/Domain Model**, by setting values of its attribute, you can get a paginated model list. Now let's just use the default setting, which is all in one page.  

@@ -69,11 +69,15 @@ This is the pattern from which the arguments are derived that are passed to the 
 * `{0}` – this is replaced with the name of the original file before the arguments are passed to the file comparison program
 * `{1}` – this is replaced with the name of the changed file before the arguments are passed to the file comparison program
 
+### 4.2 Subversion
+
 #### 4.2.1 Enable Private Version Control {#enable}
 
 Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/develop/team-server), but in another Subversion server to which you have access. This will allow you to specify the location of the app on the Subversion server when opening, downloading, or uploading the app.
 
-### 4.3 Proxy Server
+## 5 Advanced Tab
+
+### 5.1 Proxy Server
 
 Sometimes the computer running Studio Pro cannot access the internet directly, but has to connect to a proxy server that requires authentication. If this is the case, then these settings can be used to specify the user name and password to connect to the proxy server.
 

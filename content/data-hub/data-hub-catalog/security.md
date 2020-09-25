@@ -16,16 +16,11 @@ This security level determines which end-users of the apps will have access to t
 
 For further information, see the [Security](https://docs.mendix.com/refguide/published-odata-services#3-2-security) section in *Published OData Services*.
 
-Security is determined by the identification protocols of the organization and applied to all access to the data via Mendix apps. This how-to shows an example of applying [custom HTTP header validation](#http-header-validation).
-
-{{% todo %}}[**AD: is this a how-to? If so, the intro needs to follow the template. If not, change the sentence with "how-to" above to something like: "For more information, see the [Using Custom HTTP Header Validation for Published Entities](#http-header-validation) section below."**]{{% /todo %}} 
-
+Security is determined by the identification protocols of the organization and applied to all access to the data via Mendix apps. This page shows an example of applying [custom HTTP header validation](#http-header-validation).
 
 ## 2 OData Security for Shared Data Entities
 
-For Mendix apps that publish entities and those that consume shared entities in their apps as [external entities](), the following details apply:
-
-{{% todo %}}[**AD: add cross-reference above, or that will break the build**]{{% /todo %}} 
+For Mendix apps that publish entities and those that consume shared entities in their apps as [external entities](/refguide/external-entities), the following details apply:
 
 * The security for the OData-based service is defined in the publishing app – at the project, module, and entity level
 *  The security that is defined at the module level will apply to the OData services that are published from the module and enforced when the entities from the service are used in a consuming app when end-users try to access the data
@@ -74,8 +69,6 @@ The following steps describe how the security proposal is set with
 [ADFS](https://docs.microsoft.com/en-us/windows-server/identity/active-directory-federation-services) and the [SAML](/appstore/modules/saml) Mendix App Store module:
 
 ![](attachments/security/federation-with-ADFS-SAML-schematic.png)
-
-{{% todo %}}[**AD: a diagram like this needs to be fully verified by the PM and then sent to Design so they can redesign it and bring it in line with Mendix standards - please request from Jeroen**]{{% /todo %}}
 
 {{% todo %}}[**IG: PM approves - this is in progress**]{{% /todo %}}
 

@@ -99,7 +99,7 @@ The **Edit Attribute** box can be used for specifying a local name for the attri
   * **Type** – the **Type** and **Length** of the attribute as defined in the originating app 
 * **Documentation** – a description for the attribute that is displayed for users of the current app
 
-### 2.3 Associations {#external-association}
+### {#external-association} 2.3 Associations
 
 This tab will show associations that the external entity has with other entities exposed in the same service.
 

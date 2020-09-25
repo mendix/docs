@@ -10,11 +10,11 @@ tags: ["domain model", "entity", "entities", "attribute", "external entities", "
 
 ## 1 Introduction
 
-External entities connect to external datasets that are made available through [Mendix Data Hub](/data-hub/index). These entities are displayed as *purple* entity containers in the domain model. 
+External entities connect to shared datasets that are made available through [Mendix Data Hub](/data-hub/index). These entities are displayed as *purple* entity containers in the domain model. 
 
 {{% alert type="info" %}}
 
-Mendix Data Hub is a premium product and only accessible to users that have a license.
+A license is required to use Mendix Data Hub and connect to external data sources in your app.
 
 {{% /alert %}}
 

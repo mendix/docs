@@ -112,13 +112,17 @@ Click the **Properties** tab for the consumed OData service which displayes the 
 
 ### 4.3 Updating or Switching a Consumed OData Service {#updating}
 
-When you add an external entity to your project, you are consuming the entity from a specific version of a service (the service endpoint), deployed to a given environment. This is the unique endpoint that will be consumed and where the metadata for the service is retrieved, which in turn defines the consumed entity. The consumed OData service document provides this information.
+When you add an external entity to your project, you are consuming the entity from a specific version of a service (the service endpoint), deployed to a given environment. The consumed OData service document contains this information and thus defines the location where the metadata for the service can be retrieved. Studio pro will retrieve the information it requires for consumed external entities from this endpoint.
+
+When a published OData service is updated, the publisher can specify if the new service version is deployed to the same endpoint so that users who are consuming the service will have access to the latest service metadata. In this case, in Studio Pro, the consumed OData service would have to be **Updated** to the new contract published to the endpoint. 
+
+Alternatively, an OData service can be published to a different endpoint so that it would appear as a different asset in the Data Hub Catalog, which would require that users wuld have to **Switch** to consuming the service from the different  endpoint. 
 
 #### 4.3.1 Major and Minor Service Versions
 
-It is important that the publishers of the services use a strict versioning system, for example semantic numbering, when issuing updates to their apps. The service versioning should clearly indicate the level and severity of the changes that have been made when a service is updated according to the following guidelines: 
+It is important that the publishers of the services use a strict versioning system, for example semantic numbering, when issuing updates to their apps. We recommend that the service version should clearly indicate the level and severity of the changes that have been made when a service is updated and deployed according to the following guidelines: 
 
-* *Major* service updates (for example, when entities or attributes are removed, or input parameters are required) which would be incompatible for the consuming apps and result in the consuming app "breaking". When a major change has been made to a published service we recommend that the service is deployed to a different endpoint (with the service version number clearly indicating that there has been a major change). In this case this service will be registered in the Data Hub Catalog as a different service, and show up in the search results as a separate asset. 
+* *Major* service updates (for example, when entities or attributes are removed, or input parameters are required) which would be incompatible for the consuming apps and result in the consuming app "breaking". When a major change has been made to a published service we recommend that the service is deployed to a different endpoint (with the service version number clearly indicating that there has been a major change). In this case this service will be registered in the Data Hub Catalog as a different service, and show up in the search results as a separate asset. Using semantic number, a major change would be indicated with an ***
 * *Minor* service updates (for example,  additional fields are added to the service or new operations included) which would not break apps that consumed the previous versions. Minor service updates can be deployed to the same service endpoints, thereby ensuring that all consuming apps consume the latest version of the service. 
 
 In the **Data Hub** pane,  a *minor* update that is available for a consumed service  is indicated with an "update" arrow for the service. This means that the service can be **Updated** in the **Consumed OData Service** screen.
@@ -131,7 +135,7 @@ If the same service has been deployed to a different service endpoint, indicatin
 
 #### 4.3.2 Services Deployed to Multiple Environments
 
-When a published OData services is deployed to multiple environments, each deployment will  be to a different endpoints and therefore be shown in the search results in the **Data Hub** pane separately. In the following example, the consumed **OrderManagementService** version **1.0.0** deployed to a production environment is consumed in app. However, there is also a deployment of the same service deployed to the **Acceptance** environment:
+When a published OData services is deployed to multiple environments, each deployment will  be to a different endpoint and therefore be shown as separate items in the search results of the **Data Hub** pane. In the following example, the consumed **OrderManagementService** version **1.0.0** deployed to a production environment is consumed in the app. However,  the same service is deployed to the **Acceptance** environment:
 
 ![major change environment](attachments/consumed-odata-service/consume-major-service-update.png)
 
@@ -141,7 +145,7 @@ To consume the service deployed to the **Acceptance environment**, follow these 
 
 	![major change environment](attachments/consumed-odata-service/update-switch.png)
 
-2. On the **Switch** dialog box, select from the drop-down list the service that you want to now consume from and click **Switch**: 
+2. On the **Switch** dialog box, select from the drop-down list the service that you want to consume from and click **Switch**: 
 
 	![major change environment](attachments/consumed-odata-service/switch-environment.png)
 

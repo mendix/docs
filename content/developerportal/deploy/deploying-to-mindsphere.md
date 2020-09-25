@@ -12,7 +12,7 @@ tags: ["MindSphere", "deploy", "cloud foundry", "launchpad", "scopes", "roles", 
 
 MindSphere is the cloud-based, open IoT operating system from Siemens that lets you connect your machines and physical infrastructure to the digital world. It lets you harness big data from billions of intelligent devices, enabling you to uncover transformational insights across your entire business.
 
-This documentation is meant for Mendix developers who want to deploy a Mendix app to the MindSphere Platform.
+This documentation is meant for Mendix developers who want to deploy, register and run a Mendix app on MindSphere.
 
 {{% alert type="info" %}}
 You can create Mendix apps which make MindSphere API calls, but which are deployed to a cloud outside MindSphere. However, you will then need to handle user credentials yourself.
@@ -33,17 +33,24 @@ To help you with your first MindSphere apps, there is also an example app which 
 
 ## 2 Prerequisites{#prerequisites}
 
-To deploy your app to MindSphere you need the following prerequisites.
+To deploy and to register your app within MindSphere you need the following prerequisites.
 
-* A MindSphere user account on a developer tenant
+* A MindSphere user account on a **Developer** or a **Start for Free** tenant
+* A MindSphere developer role: either `mdsp:core:Developer` or `mdsp:core:DeveloperAdmin` - already granted on Start for Free tenants.
 * [Mendix Studio Pro](https://appstore.home.mendix.com/index3.html)
-* The Cloud Foundry Command Line Interface (CF CLI) – this can be downloaded from [https://github.com/cloudfoundry/cli](https://github.com/cloudfoundry/cli)
-* A Cloud Foundry role which allows you to push applications, such as `SpaceDeveloper` (help in setting up Cloud Foundry users can be found in the MindSphere [Cloud Foundry How Tos](https://developer.mindsphere.io/paas/paas-cloudfoundry-howtos.html))
-* A MindSphere developer role: either `mdsp:core:Developer` or `mdsp:core:DeveloperAdmin`
+* The Cloud Foundry Command Line Interface (CF CLI) – this can be downloaded from [https:/
+
+Additional required if deploy and run the Mendix app on MindSphere Cloud Foundry
+
+* [Cloud Foundry Command Line Interface (CF CLI)](https://github.com/cloudfoundry/cli)
+* A Cloud Foundry role which allows you to push apps, such as `SpaceDeveloper`
+Additional required if deploy and run as self host app e.g. on Mendix Cloud
+
+* [Outbound Traffic Upgrade](https://www.dex.siemens.com/mindsphere/mindaccess/outbound-traffic-upgrade) - already included on Start for Free tenants.
 
 ## 3 Including Required MindSphere Modules
 
-You must customize your app to allow it to be deployed to MindSphere, registered via the MindSphere Developer Cockpit, and shown in the launchpad. This is done through MindSphere customization modules. There are two ways to include the customization you need in your app.
+You must customize your app to allow it to be deployed, registered and shown in the launchpad. This is done through MindSphere customization modules. There are two ways to include the customization you need in your app.
 
 ### 3.1 Option A: Using the MindSphere App Template
 
@@ -176,13 +183,25 @@ Change the JSON to contain appropriate values for the following information:
 
 More information on the structure and content of this JSON object, together with sample JSON, can be found in [App Information](https://design.mindsphere.io/osbar/get-started.html#app-information), on the MindSphere developer site.
 
-## 5 Deploying Your App to MindSphere
+## 5 Deploying Your App
 
-### 5.1 Pushing to Cloud Foundry
+A Mendix based application for MindSphere can be deployed to Mendix or to MindSphere. Deploying to Mendix is quiet easy and is the preferred option as you than also can use the **Auto Registration** process. Please note, **Auto Registration** process is only available on region Europe 1.
+
+### 5.1 Option A: Deploy with Mendix Studio to the Mendix Cloud
+
+Just hit the Run Button in Mendix Studio Pro.
+
+![Deploy to Mendix](attachments/deploying-to-mindsphere/runMendixApp.png)
+
+Once your app is deployed you can automatically register the app at your MindSphere tenant.
+
+### 5.2 Option B: Creating a Mendix Deployment Package and deploy it to MindSphere Cloud Foundry
+
+#### 5.2.1 Pushing to Cloud Foundry
 
 Before you continue, ensure you have fulfilled the prerequisites described in the section [Prerequisites](#prerequisites) and configured the MindSphere modules as described in the section [Configuring the Modules](#configure-modules), above.
 
-#### 5.1.1 Creating a Mendix Deployment Package
+##### 5.2.1.1 Creating a Mendix Deployment Package
 
 To create a Mendix deployment package from your app, do the following:
 
@@ -201,7 +220,7 @@ Your deployment package will be created, and its location displayed in an inform
 By default, the deployment package will be created in the *releases* folder of your project.
 {{% /alert %}}
 
-#### 5.1.2 Deploying the Application to Cloud Foundry using CF CLI
+##### 5.2.1.2 Deploying the Application to Cloud Foundry using CF CLI
 
 To deploy your deployment package, do the following:
 
@@ -264,7 +283,7 @@ To deploy your deployment package, do the following:
 
     For example: `cf push -p "myapp.mda"`
 
-#### 5.1.3 Cloud Foundry Stack
+##### 5.2.1.3 Cloud Foundry Stack
 
 You should always use the latest available Cloud Foundry stack. The latest stack in MindSphere is `cflinuxfs3`. Apps pushed to MindSphere will use this stack.
 
@@ -290,17 +309,58 @@ cf app {app_name}
 
 For more information about Cloud Foundry stacks on MindSphere, see [How Can I Find the Stack my App is using?](https://developer.mindsphere.io/paas/paas-cloudfoundry-howtos.html#how-can-i-find-the-stack-my-app-is-using) in *Cloud Foundry How Tos* on the *MindSphere Developer* site.
 
-#### 5.1.4 Troubleshooting
+#### 5.2.1.4 Troubleshooting
 
 If you have issues with deploying your app to Cloud Foundry, you can find additional information in [Running a Cloud Foundry-Hosted Application – for Java Developers](https://developer.mindsphere.io/howto/howto-cf-running-app.html). Note that this is not written from the point of view of a Mendix developer, so some information may not be relevant.
 
 Ensure that you have configured your proxy settings if these are required.
 
-### 5.2 Setting up MindSphere Launchpad{#launchpad}
+### 5.3 Setting up MindSphere Launchpad{#launchpad}
+You have to register your application to be working and appearing on the MindSphere Launchpad. If you have deployed your application to Mendix you have both of the following two options (where Option A is preferred). Deployed to MindSphere you have to register manually via the Developer Cockpit (Option B). Please note, Auto Registration process is only available on region Europe 1.
 
-#### 5.2.1 Creating a New Application
+#### 5.3.1 Option A: Use the Auto Registration process - recommended if your app is deployed to the Mendix Cloud
 
-To create a new app in the MindSphere launchpad, do the following:
+In order to start the **Auto Registration** process just hit the view Button in Mendix Studio Pro once your app is deployed to the Mendix Cloud. Your default browser will open and your app is starting the process.
+
+![AutoRegistrationExplanation](attachments/deploying-to-mindsphere/AutoRegistrationExplanation.png)
+
+Hit the button **Start Auto Registration**. The process now tries to figure out on which tenant your app shall be registered. Therefore you have to login:
+
+![Login to Siemens Digital Industry Software](attachments/deploying-to-mindsphere/WebKeyLogin.png)
+
+{{% alert type="info" %}}
+In case that you have more then one tenant on Mindsphere you will get a list of tenants. Choose the tenant where you want to register your app.
+
+In case that you have only one tenant on MindSphere, the process will automatically select this tenant for you.
+{{% /alert %}}
+
+Give a name and internal name and optional a description in order to register your app.
+
+![AutoRegistrationNameAndDescription](attachments/deploying-to-mindsphere/AutoRegistrationNameAndDescription.png)
+
+In case you are on a **Developer** tenant you also have to select at least one application role which will be assigned to your account automatically.
+
+On a **Start for Free** tenant the **admin** role will be assigned automatically to your account.
+
+Hit **Register** to start the registration process on your tenant. After a few seconds, a summary page is shown and you are able to navigate directly to your app.
+
+![AutoRegistrationSummary](attachments/deploying-to-mindsphere/AutoRegistrationSummary.png)
+
+{{% alert type="info" %}}
+The **Auto Registration** process is creating application roles and scopes for your app.
+
+If you are on a **Start for Free** tenant additional MindSphere API roles are assigned and your user is granted **admin** access to your app.
+
+If you are on a **Developer** tenant no additional MindSphere API roles are assigned. The granted access to your app is shown in the registration summary page.
+{{% /alert %}}
+
+Please note, for further adaption of your registration e.g. CSPs or additional roles, please use the Developer Cockpit.
+
+#### 5.3.2.1 Option B: Configuring the Mendix App in the Developer Cockpit
+
+##### 5.3.2.1 Creating a New Application
+
+To create manually a new app in the MindSphere launchpad, do the following:
 
 1.  Go to the **Developer Cockpit > Dashboard**.
 
@@ -361,7 +421,7 @@ To create a new app in the MindSphere launchpad, do the following:
 
     {{% alert type="info" %}}If the app has not been pushed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have pushed your app to Cloud Foundry.{{% /alert %}}
 
-#### 5.2.2 Setting Application Scopes in Developer Cockpit{#scopes}
+##### 5.3.2.2 Setting Application Scopes in Developer Cockpit{#scopes}
 
 To set up the appropriate scopes in MindSphere, do the following:
 
@@ -384,7 +444,7 @@ For an explanation of the relationship between Mendix roles and MindSphere roles
 You will also need to use the **Add Core Role** option to add *Core Roles* to your app if it makes calls to MindSphere. The ones you need to add will depend on which features of MindSphere you are using.
 {{% /alert %}}
 
-#### 5.2.3 Assigning User Roles
+##### 5.3.2.3 Assigning User Roles
 
 Once you have created the scopes for your app, you will need to assign them to the users who you want to have access to the app.
 

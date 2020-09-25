@@ -102,8 +102,8 @@ Follow these steps to get the list:
 
 1. Create an **Open TC model** button and add it to a page in your app
 2. Set the **On click** action of the button to show a [pop-up page](/refguide/page-properties#pop-up).
-3. Add a list view to the pop-up page and set the **Data Source** to **Viewer3D_TC/USE_ME/SearchTC**.
-4. Wrap the list view with a [data view](/refguide/data-view), as the **SearchTC** nanoflow requires a **SearchCriteria** object as the input parameter. So, then create a simple nanoflow named *createSearchCriteria* that creates a default **SearchCriteria** object and returns it as result. Set the **Data Source** of the data view to this new nanoflow.
+3. Add a list view to the pop-up page and set the **Data source** to **Viewer3D_TC/USE_ME/SearchTC**.
+4. Wrap the list view with a [data view](/refguide/data-view), as the **SearchTC** nanoflow requires a **SearchCriteria** object as the input parameter. So, then create a simple nanoflow named *createSearchCriteria* that creates a default **SearchCriteria** object and returns it as result. Set the **Data source** of the data view to this new nanoflow.
 5.  Add a [text box](/refguide/text-box) and **Search** button to allow user to type in an item name (as in, a model name) and perform a search:
 
  ![teamcenter-tcmodellist](attachments/3d-viewer-for-teamcenter/teamcenter-tcmodellist.jpg)
@@ -119,7 +119,7 @@ Follow these steps to get the list:
  * **Pagination** is an entity defined in the **Viewer3D**'s domain mode, so by setting values of its attribute, you can get a paginated model list. For now, just use the default setting, which is all in one page.  
  * **TCModelParamArray** is an entity defined in the **Viewer3D_TC**'s domain model. It defines a set of attributes where you can set revision rules and return different model data based on these revision rules. For now, just use its default revision rule.
  
- Since you are missing these two input parameters for the **SearchTC** nanoflow, wrap it with two data views, with one data view including the nanoflow that returns the **Pagination** object and the **TCModelParamArray** object set as the **Data Source** for the other nanoflow.
+ Since you are missing these two input parameters for the **SearchTC** nanoflow, wrap it with two data views, with one data view including the nanoflow that returns the **Pagination** object and the **TCModelParamArray** object set as the **Data source** for the other nanoflow.
  
  ![teamcenter-wrapdataviews](attachments/3d-viewer-for-teamcenter/teamcenter-wrapdataviews.jpg)  
 
@@ -129,20 +129,21 @@ Follow these steps to get the list:
 
 ### 5.3 Opening a Model from the Model list
 
-Now that you are able to get a list of models, you may want to visualize these models. For the models to be visualized, it needs 3D widgets that are part of 3D Viewer module.  `ModelDocument` object contains attributes (most importantly, `ModelId` and `Model Source Type`) that are needed to identify and visualize a model in 3D widgets.
-As Viewer Widget needs `Model ID` and `Model Source Type` to visualize a model, you will need to pass `ModelDocument` object to the Viewer Widget.
+Now that you are able to get a list of models, you may want to visualize these models. For the models to be visualized, the 3D widgets that are part of 3D Viewer are necessary. The **ModelDocument** object contains attributes (most importantly, **ModelId** and **Model Source Type**) that are needed to identify and visualize a model in the 3D widgets.
+As the 3D Viewer needs **Model ID** and **Model Source Type** to visualize a model, you will need to pass **ModelDocument** object to the 3D Viewer widget.
 
-Since you've built a model list pop up, one scenario is to click to select a list item on pop up page, return the **ModelDocument** object to home page to be visualized there.
+Since you built a model list pop-up page, one scenario is to click to select a list item on the pop-up page, and return the **ModelDocument** object to home page to be visualized there. Follow these steps to enable this:
 
-Follow these steps:
+1.  Add an entity called **PageObject** and associate it with the **ModelDocument** entity that is defined in **Viewer3D/Domain Model**.
 
-1. Add an entity `PageObject`, associate it with `ModelDocument` entity that is defined in **Viewer3D/Domain Model**.
-![teamcenter-pageobject](attachments/3d-viewer-for-teamcenter/teamcenter-pageobject.jpg)
-2. On home page, wrap main area with a **Data view** widget, create a **createPageObject** nanoflow which creates a default `PageObject` object and returns it. Set this nanoflow as data source of the Data View widget.
-3. On home page, add another **Data View** widget within previous **Data View** widget, set the data source type of the new Data View widget to `context`, this way you can access to the `ModelDocument` object associated with `PageObject`.
-![teamcenter-homepagedataviews ](attachments/3d-viewer-for-teamcenter/teamcenter-homepagedataviews.jpg)
+ ![teamcenter-pageobject](attachments/3d-viewer-for-teamcenter/teamcenter-pageobject.jpg)
 
-4. Find 3D widgets in toolbox, add to the inner **Data View** widget. Now you can access and set the `ModelId` and `Model Source Type` the Viewer widget needs.
+2. On your app's home page, wrap the main area with a data view, then create a nanowflow called *createPageObject* that creates a default **PageObject** object and returns it. Set this nanoflow as the **Data source** of the data view.
+3.  On home page, add another data view within the previous data view, and set the **Data source** of the new data view widget to **Context**. This way you can access the **ModelDocument** object associated with the **PageObject**:
+
+ ![teamcenter-homepagedataviews ](attachments/3d-viewer-for-teamcenter/teamcenter-homepagedataviews.jpg)
+
+4. Find the 3D widgets in the **Toolbox** and add them to the inner data view. Now you can access and set the `ModelId` and `Model Source Type` the Viewer widget needs.
 ![teamcenter-setviewermodelid ](attachments/3d-viewer-for-teamcenter/teamcenter-setviewermodelid.jpg)  
 5. On Open TC model popup page, add an outmost **Data view** widget, select `context` as its data source type, and select `PageObject`.
 ![teamcenter-popuppageobject](attachments/3d-viewer-for-teamcenter/teamcenter-popuppageobject.jpg)
@@ -153,7 +154,7 @@ Run locally, you will be able to view the selected model.
 
 There are other ways to visualize a model. Key idea is to pass valid `ModelId` and `Model Source Type` to the **Viewer** widget.
 
-### 5.4  Set custom Revision Rules
+### 5.4 Setting Custom Revision Rules
 
 **SearchTC** requires a **TCModelParamsArray** object as input parameter, it allows you to set specific revision rules you want to apply to a model and get the model data based on revision rules. If **TCModelParamsArray** is not specifically set, **SearchTC** will execute with default revision rules.
 

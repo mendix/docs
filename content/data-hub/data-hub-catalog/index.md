@@ -4,11 +4,7 @@ description: "Introduces the processes and properties of the Mendix Data Hub Cat
 tags: ["data hub", "data hub catalog"]
 ---
 
-{{% todo %}}[**IG: verify all x-refs**]{{% /todo %}}
-
-{{% todo %}}[after rel 0.26 all users have to upgrade to 8.13 any older versions will break.]{{% /todo %}}
-
-{{% todo %}}[What about public services that are issued with Data Hub?]{{% /todo %}}
+{{% todo %}}[verify all x-refs; after rel 0.26 all users have to upgrade to 8.13 any older versions will break; What about public services that are issued with Data Hub?]{{% /todo %}}
 
 ## 1 Introduction
 
@@ -60,7 +56,7 @@ OData services can be registered in the Data Hub Catalog in two ways:
 
 {{% todo %}}[IG:  The Data Hub Registration API is available to register OData Services to the Data Hub Catalog.   The deployment pipeline ensures that the app is only deployed if all dependencies are met. This API validates published dependencies and consumed dependencies and can  be used by 3rd party deployment tooling.]{{% /todo %}}
 
-{{% todo %}}[Out for 0.21 release]{{% todo %}}
+{{% todo %}}[Out for 0.21 release]{{% /todo %}
 
 ### 3.4 Curate—Maintaining Registered Assets
 

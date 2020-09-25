@@ -54,17 +54,17 @@ To visualize a model fetched from a Teamcenter instance, you need to import the 
 
 After importing, you need map the **Administrator** and **User** [module roles](/refguide/module-security#module-role) of the installed components to the applicable [user roles](/refguide/user-roles) in your app.
 
-## 4 Configuration
+## 4 Initializing on App Startup
 
-### 4.1 Initializing on App Startup
+To automatically start this app service, create a **Startup** microflow, add **Viewer3D/USE_ME/VisServerAction** and **Viewer3D_TC/USE_ME/VisServerAction_TC** Java actions to the microflow, then set the return type as Boolean with a **Value** of **true**.
 
-To automatically start this  module, create a **Startup** microflow, add **Viewer3D/USE_ME/VisServerAction** and **Viewer3D_TC/USE_ME/VisServerAction_TC** java action to the microflow, set return type as Boolean ,value as true. This **Startup** microflow needs to be set as the After Startup microflow (via **Project** >**Settings** > **Server** > **After startup**).
+This microflow needs to be set as the after-startup step via **Project Settings** > **Runtime** > **After startup**:
 
 ![teamcenter-startupflow](attachments/3d-viewer-for-teamcenter/teamcenter-startupflow.jpg)
 
-Double click **Visualization Server** java action, make sure **Http endpoint** is set as `@Viewer3D.HttpEndpoint`.
+Finally, double-click the **Visualization Server** Java action and make sure **Http endpoint** is set as `@Viewer3D.HttpEndpoint`.
 
-## 6 Using 3D Viewer For Teamcenter
+## 5 Using 3D Viewer For Teamcenter
 
 **3DViewer** module provides a set of widgets to visualize JT models and a set of nanoflows, java actions to bring in the data stored in Mendix File Storage. 
 **Teamcenter Connector** module provides a full-scale apis for you to interact with Teamcenter instance.  
@@ -73,7 +73,7 @@ In conclusion,to visualize and operate on the JT model from
 Teamcenter, use 3D widgets that are included in **3DViewer** module to visualize the data obtained from  **3D Viewer For Teamcenter** is the approach.  
 ![teamcenter-startupflow](attachments/3d-viewer-for-teamcenter/teamcenter-startupflow.jpg)
 
-### 6.1 Reuse Teamcenter Login APIs to get access to Teamcenter instance data
+### 5.1 Reuse Teamcenter Login APIs to get access to Teamcenter instance data
 
 To get data from Teamcenter, user needs to be authenticated and authorized. **Teamcenter connector** module provides both Admin Login logic and User login logic for app makers, you can find them in `TcConnector/Published/APIs/Login` folder in the App Store Modules section. Since we are building app to enable user to fetch data from Teamcenter and visualize it in the app. We will need to build a login for user, so that user can enter their Teamcenter username and password to access Teamcenter data.
 
@@ -88,7 +88,7 @@ Follow these steps:
 
 This is an example Teamcenter Login flow.There are other Teamcenter Login APIs provided in **TcConnector/Published/APIs/Login**, you can choose how to use them based on your need.
 
-### 6.2 Search and get a list of corresponding model from Teamcenter
+### 5.2 Search and get a list of corresponding model from Teamcenter
 
 **SearchTC** nanoflow in **3D Viewer For Teamcenter** module enables you to set search criteria and fetch model list. **SearchTC** nanoflow will first check if an active Teamcenter user session is alive, and then perform the search, so Login is essential before performing the model search. A list of `ModelDocument` objects will be returned as a result of **SearchTC** nanoflow, therefore the **SearchTC** nanoflow can be set as data source of a **ListView** widget. Additionally, by using **3dViewer_TC/USER_ME/SetRevisionRule**, you can apply specific Revision Rules to the search, and get different model data returned.
 
@@ -112,7 +112,7 @@ Since we are missing these two input parameters for **SearchTC** nanoflow, we ca
 Run locally, Login TC and then Open TC Model pop up, try to type in a item name (model name) and search, you will see a list of model that contain the entered item name.
 ![teamcenter-samplesearch](attachments/3d-viewer-for-teamcenter/teamcenter-samplesearch.jpg)
 
-### 6.3 Open Model from Model list
+### 5.3 Open Model from Model list
 
 Now that you are able to get a list of model, you may want to visualize these models, for models to be visualized, it needs 3D widgets that are part of 3D Viewer module.  `ModelDocument` object contains attributes (most importantly, `ModelId` and `Model Source Type`) that are needed to identify and visualize a model in 3D widgets.
 As Viewer Widget needs `Model ID` and `Model Source Type` to visualize a model, you will need to pass `ModelDocument` object to the Viewer Widget.
@@ -138,7 +138,7 @@ Run locally, you will be able to view the selected model.
 
 There are other ways to visualize a model. Key idea is to pass valid `ModelId` and `Model Source Type` to the **Viewer** widget.
 
-### 6.4  Set custom Revision Rules
+### 5.4  Set custom Revision Rules
 
 **SearchTC** requires a **TCModelParamsArray** object as input parameter, it allows you to set specific revision rules you want to apply to a model and get the model data based on revision rules. If **TCModelParamsArray** is not specifically set, **SearchTC** will execute with default revision rules.
 

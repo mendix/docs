@@ -95,11 +95,7 @@ Currently, the binary data can be accessed by Java actions only.
 
 ## 4 License Limitations
 
-Mendix Data Hub is a separately licensed product. The type of license that you have will determine the total number of objects that can be requested from a consumed OData service per day.
-
-{{% todo %}}[**AD: would be good to cross-reference a doc where licensing is discussed. Also, include how to contact Mendix in order to secure a license?**]{{% /todo %}}
-
-{{% todo %}}[The following text is not for users….  ]{{% /todo %}}
+Mendix Data Hub is a separately licensed product. The type of license that you have determines the total number of objects that can be requested from a consumed OData service *per day*.
 
 There are three main types of OData license restrictions:
 
@@ -107,4 +103,6 @@ There are three main types of OData license restrictions:
 * **Limited** – there is a specific limitation provided by the `limit` constraint
 * **Default** – if there is no information about the limit in the license, the total number is restrcited to 1000 OData objects per day
 
-The daily number of objects per day is reset at midnight in the timezone of the Mendix Runtime scheduler (which can be defined in the app [Project Settings](project-settings#scheduled)).
+The number of consumed objects per day is reset at midnight in the timezone of the Mendix Runtime scheduler (which can be defined in the app [Project Settings](project-settings#scheduled)).
+
+{{% todo %}}[**AD: would be good to cross-reference a doc where licensing is discussed. Also, include how to contact Mendix in order to secure a license?**]{{% /todo %}}

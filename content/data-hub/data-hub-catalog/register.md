@@ -16,7 +16,7 @@ All shareable entities can be registered in the Data Hub Catalog by exposing the
 * Structural metadata – what the data looks like
 * Descriptive metadata – information that indicates the applicability of using the asset for a particular app
 
-For Mendix apps, there is a deployment pipeline which registers OData v3 published services for entities that are to be exposed in an OData service. This means that in Studio Pro, upon deployment of an app (via **Run**), the OData v3 services are automatically registered in the Data Hub Catalog. For further information on deployment on the Mendix platform see [Deployment](/developerportal/deploy/) in the *Developer Portal Guide*.
+For Mendix apps, there is a deployment pipeline which registers OData v3 published services for entities that are to be exposed in an OData service. This means that in Studio Pro, upon deployment of an app (via **Run**), the OData v3 services are automatically registered in the Data Hub Catalog. For further information on deployment on the Mendix Platform, see [Deployment](/developerportal/deploy/) in the *Developer Portal Guide*.
 
 For non-Mendix apps (for example, from third-party public REST APIs), entities can be included in an OData v4 service and this can be manually registered through the [service registering](#registration-form) process.
 
@@ -32,9 +32,7 @@ This section provides advice and best practices when registering your services i
 
 ### 2.1 Data Sharing Policy
 
-App owners should refer to their Data Hub Admin and Data Hub curator to align with their organization's data registration policy and methods. This can include naming and grouping the entities that define specific data, access and security, and also issuing new versions of services.
-
-{{% todo %}}[**AD: add cross-references to Admin and Curator role info**]{{% /todo %}}
+App owners should refer to their [Data Hub Admin](../index#admin) and [Data Hub Curator](../index#curator) to align with their organization's data registration policy and methods. This can include naming and grouping the entities that define specific data, access and security, and also issuing new versions of services.
 
 Some entities may be published in several OData services as a way of grouping and publishing sets of data. Updating and maintenance has to be managed and maintained by the app owners.
 
@@ -44,9 +42,7 @@ User access rights to the entity and the associated data are published in the OD
 
 Services that are updated should be clearly documented and version numbers maintained and registered.
 
-It is a good practice to adopt a strict convention for versioning. For example, any revisions or changes made to a service that is deployed to the same location could be indicated using a semantic numbering convention and communicated to all apps consuming the service. This means that major version numbers are assigned for significant changes to the service (for example, removing entities or attributes, or requiring input parameters that would be incompatible for the consuming apps and would result in a break or failure). Minor version numbers can be assigned for revisions that would "not break" consuming apps (for example, adding new fields to the service or adding new operations), for which the clients will continue to work.
-
-{{% todo %}}[**AD: a lot of passive constructions here, whereas we try to speak to the user and use "you" more - can you rewrite some of these best practices to be more active?**]{{% /todo %}}
+It is a good practice to adopt a strict convention for versioning. For example, any revisions or changes made to a service that is deployed to the same location could be indicated using a semantic numbering convention and communicated to all apps consuming the service. This means that major version numbers are assigned for significant changes to the service (for example, removing entities or attributes, or requiring input parameters that would be incompatible for the consuming apps and would result in a break or failure). You can assign minor version numbers for revisions that will "not break" consuming apps (for example, when adding new fields to the service or adding new operations), for which the clients will continue to work.
 
 It is also good practice to expose major revisions to a new service. If the publisher wants to drop support for the old service, it can be deprecated, with a grace period for consumers to transfer to the replacement service and eventually remove it when there are no more connections to the old service. The consequences of changing the properties of a service with the same version when the service is being consumed by other apps is that the apps will break.
 
@@ -68,7 +64,7 @@ When selecting the entities to expose in a service, consider including associate
 
 ## 3 Publishing an OData Service in Studio Pro to Register Entities {#odata-service-reg}
 
-This section describes how to register entities from your Mendix app in the Data Hub Catalog in Studio Pro. For details on publishing an OData resource, see [Published OData Resource](/refguide/published-odata-resource).
+This section describes how to register entities from your Mendix app in the Data Hub Catalog in Studio Pro. For details on publishing an OData resource, see [Published OData Resource](/refguide/published-odata-resource) in the *Studio Pro Guide*.
 
 {{% alert type="info" %}}
 A published OData service is an API to your Mendix app. Some apps may have several published services exposing different combinations of entities. In Studio Pro, it is good practice to group them in a separate folder under each [module](/refguide/modules) to make location and maintenance easier.
@@ -188,7 +184,7 @@ This section contains the following properties:
 
 #### 4.2.3 Security
 
-This section will be displayed if [project security](/refguide/project-security) is enabled. For further details, see [Security](/refguide/published-odata-services#security) section of *Published OData Services*.
+This section will be displayed if [project security](/refguide/project-security) is enabled. For further details, see the [Security](/refguide/published-odata-services#security) section of *Published OData Services*.
 
 This section contains the following properties:
 
@@ -264,11 +260,11 @@ The documents making up the v4 OData service must be included in a *.zip* file. 
 If the v4 OData service document is only one file, this must also be saved as a *.zip* file, as the manual registration will only accept this file format.
 {{% /alert %}}
 
-### 7.2 Registering the Service – Application and Environment
+### 7.2 Registering the Service – Application and Environment {#new-service}
 
 To register the service, follow these steps:
 
-1.  On the [Data Hub home page](../index), click **Register new service** to display the **Application and Environment Form**.
+1.  On the [Data Hub Home](../index) page, click **Register new service** to display the **Application and Environment Form**.
 
 	![](attachments/register/register-form-home-page.png)
 

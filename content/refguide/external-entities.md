@@ -38,7 +38,7 @@ To add an external entity to your project, do the following:
 	![Virtual Entity Example](attachments/data-hub-pane/virtual-entity-example.png)
 
 {{% alert type="info" %}}
-If you drag an entity that is associated with an entity already in your domain model from the same service, the association will be made between the entities. For more information on associations between external entities, see [Associations](#three).
+If you drag an entity that is associated with an entity already in your domain model from the same service, the association will be made between the entities. For more information on associations between external entities, see [Associations](#properties).
 {{% /alert %}}
 
 When an external entity is added to the domain model, two documents will be added in the **Project Explorer**: the **Consumed OData Service** document containing the metadata for the consumed entity, and the **OData Location** of the dataset. For more information, see [Consumed OData Service](consumed-odata-service). 
@@ -46,7 +46,7 @@ When an external entity is added to the domain model, two documents will be adde
 In the **Project Section** of the **Data hub** pane the consumed entities that are in the current project will be listed. 
 
 {{% alert type="info" %}}
-If there is a newer version of a consumed service available in the Data Hub Catlog, this will be indicated in the **Data Hub** pane by ??? against the service name.  the For more information, see the [Updating a Consumed OData Service](consumed-odata-service#updating) section in *Consumed OData Service*.
+If there is a newer version of a consumed service available in the Data Hub Catlog, this will be indicated in the **Data Hub** pane by ??? against the service name.  the For more information, see the [Updating or Switching a Consumed OData Service](consumed-odata-service#updating) section in *Consumed OData Service*.
 {{% /alert %}}
 
 It is possible to make local changes to the properties of external entities that only affect how the data is used and presented in the consuming app. All other properties are defined in the source application and cannot be changed. When multiple external entities from the same OData service are used in a module or app project, associations between the entities (made in the source app) will automatically be made in the local module.
@@ -80,7 +80,7 @@ The [attributes](attributes) that have been exposed in the OData service for the
 The following operations can be done on the displayed attribute list:
 
 * **Add** – add attributes that were exposed in the OData service for the entity and were previously removed for this local instance
-* **Edit** – edit the selected attribute from the [Edit Attribute Form](#edit-attribute). 
+* **Edit** – edit the selected attribute from the [Edit Attribute](#edit-attribute) form
 
   {{% todo %}}[ insert screenshot of add Attribute form]{{% /todo %}}
 
@@ -99,7 +99,7 @@ The **Edit Attribute** box can be used for specifying a local name for the attri
   * **Type** – the **Type** and **Length** of the attribute as defined in the originating app 
 * **Documentation** – a description for the attribute that is displayed for users of the current app
 
-### 2.3 Associations {#three}
+### 2.3 Associations
 
 This tab will show associations that the external entity has with other entities exposed in the same service.
 

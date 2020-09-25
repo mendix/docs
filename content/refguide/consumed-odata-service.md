@@ -123,7 +123,8 @@ In the **Data Hub** pane,  a *minor* update that is available for a consumed ser
 
 {{% todo %}}[create minor and major services and add screenshot of the the update arrow in the DH pane]. %}}
 
-If the same service has been deployed to a different service endpoint, indicating a major update, the new service version will be shown in the **Data Hub** pane as a separate item and users can **Switch** to the new service from the **Consume OData** screen. 
+If the same service has been deployed to a different service endpoint, indicating a major update, the new service version will be shown in the **Data Hub** pane as a separate item and users can **Switch** to the new service from the **Consume OData** screen.
+
 {{% todo %}}[add screenshot of the the update arrow in the DH pane]. %}}
 
 #### 4.3.2 Services Deployed to Multiple Environments
@@ -149,4 +150,4 @@ To consume the service deployed to the **Acceptance environment**, follow these 
 ## 4 Read More
 
 * [Data Hub Pane](data-hub-pane)
-* [Consumed OData Service Properties](consumed-odata-service)
+* [Consumed OData Service](consumed-odata-service)

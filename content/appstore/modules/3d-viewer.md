@@ -55,7 +55,7 @@ To automatically start this app service, create a **Startup** microflow, add the
 
 ![startupmicroflow](attachments/3d-viewer/startupmicroflow.jpg)
 
-This microflow needs to be set as the after-startup step via **Project Settings** > **Runtime** > [After startup](/refguide/project-settings#after-startup):
+You need to set this microflow as the after-startup step via **Project Settings** > **Runtime** > [After startup](/refguide/project-settings#after-startup):
 
 ![afterStartup](attachments/3d-viewer/afterstartup.jpg)
 

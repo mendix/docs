@@ -97,11 +97,11 @@ Currently, the binary data can be accessed by Java actions only.
 
 Mendix Data Hub is a separately licensed product. The type of license that you have determines the total number of objects that can be requested from a consumed OData service *per day*.
 
-There are three main types of OData license restrictions:
+There are three main types of OData licenses:
 
-* **Unlimited** – there is no limitation on the number of OData objects
-* **Limited** – there is a specific limitation provided by the `limit` constraint
-* **Default** – if there is no information about the limit in the license, the total number is restrcited to 1000 OData objects per day
+* **Unlimited** – there is no limitation on the number of OData objects consumed from the service
+* **Limited** – a specific limitation has been set for your Data Hub license and this is specified by the `limit` constraint
+* **Default** – the default Data Hub license is set to 1000 OData objects per day
 
 The number of consumed objects per day is reset at midnight in the timezone of the Mendix Runtime scheduler (which can be defined in the app [Project Settings](project-settings#scheduled)).
 

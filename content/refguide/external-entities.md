@@ -93,10 +93,10 @@ The **Edit Attribute** box can be used for specifying a local name for the attri
 {{% todo %}}[ insert text and screenshot of add Attribute form]{{% /todo %}}. 
 
 * **General**
-  * **Name** – a local name for the attribute
-  * **Original Name** – this is a read-only value that displays the original name of the attribute as given in the originating app
-  * **Summary** – the description for the attribute in the originating app; to enter a local description, add this in the [Documentation tab](#documentation)
-  * **Type** – the **Type** and **Length** of the attribute as defined in the originating app 
+	* **Name** – a local name for the attribute
+	* **Original Name** – this is a read-only value that displays the original name of the attribute as given in the originating app
+	* **Summary** – the description for the attribute in the originating app; to enter a local description, add this in the [Documentation tab](#documentation)
+	* **Type** – the **Type** and **Length** of the attribute as defined in the originating app 
 * **Documentation** – a description for the attribute that is displayed for users of the current app
 
 ### 2.3 Associations

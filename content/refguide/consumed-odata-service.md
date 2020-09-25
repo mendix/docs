@@ -9,7 +9,7 @@ tags: ["studio pro", "data hub", "odata service", "consumed odata service"]
 
 ## 1 Introduction
 
-When an external entity is used in a project module through the [Data Hub pane](data-hub-pane) , a consumed OData service document is added displaying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.  Through this document you ca
+When an external entity is used in a project module through the [Data Hub pane](data-hub-pane) , a consumed OData service document is added displaying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.
 
 ## 2 Connection
 
@@ -42,9 +42,11 @@ Default value: *300 seconds*
 * **Override** – override the project-level settings for this action by specifying the host, port, user name, and password settings for the proxy
 *  **No proxy** – do not use a proxy for this service, even if there is a proxy configured at the project level
 
-  {{% alert type="info" %}}In most cases, this setting can be ignored, and the default **Use project settings** can be used.{{% /alert %}}
+{{% alert type="info" %}}
+In most cases, this setting can be ignored, and the default **Use project settings** can be used.
+{{% /alert %}}
 
-  {{% todo %}}[which project the current or the publishing??]{{% /todo %}}
+{{% todo %}}[which project the current or the publishing??]{{% /todo %}}
 
 ### 2.4 Authentication
 
@@ -106,7 +108,7 @@ Click the **Properties** tab for the consumed OData service which displayes the 
 * **Metadata** – the contents of the metadata file defining the service
 *  **OData version** – the OData version: Mendix supports consuming OData 3 and OData 4
 
-{{% todo %}}[consumed OData Service requirments document - waht are the differences between this and the virtual entities doc. %}}
+{{% todo %}}[consumed OData Service requirments document - waht are the differences between this and the virtual entities doc?]{{% /todo %}}
 
 ### 4.3 Updating or Switching a Consumed OData Service {#updating}
 
@@ -116,16 +118,16 @@ When you add an external entity to your project, you are consuming the entity fr
 
 It is important that the publishers of the services use a strict versioning system, for example semantic numbering, when issuing updates to their apps. The service versioning should clearly indicate the level and severity of the changes that have been made when a service is updated according to the following guidelines: 
 
-*  *Major* service updates (for example, when entities or attributes are removed, or input parameters are required) which would be incompatible for the consuming apps and result in the consuming app "breaking". When a major change has been made to a published service we recommend that the service is deployed to a different endpoint (with the service version number clearly indicating that there has been a major change). In this case this service will be registered in the Data Hub Catalog as a different service, and show up in the search results as a separate asset. 
+* *Major* service updates (for example, when entities or attributes are removed, or input parameters are required) which would be incompatible for the consuming apps and result in the consuming app "breaking". When a major change has been made to a published service we recommend that the service is deployed to a different endpoint (with the service version number clearly indicating that there has been a major change). In this case this service will be registered in the Data Hub Catalog as a different service, and show up in the search results as a separate asset. 
 * *Minor* service updates (for example,  additional fields are added to the service or new operations included) which would not break apps that consumed the previous versions. Minor service updates can be deployed to the same service endpoints, thereby ensuring that all consuming apps consume the latest version of the service. 
 
 In the **Data Hub** pane,  a *minor* update that is available for a consumed service  is indicated with an "update" arrow for the service. This means that the service can be **Updated** in the **Consumed OData Service** screen.
 
-{{% todo %}}[create minor and major services and add screenshot of the the update arrow in the DH pane]. %}}
+{{% todo %}}[create minor and major services and add screenshot of the the update arrow in the DH pane]{{% /todo %}}
 
 If the same service has been deployed to a different service endpoint, indicating a major update, the new service version will be shown in the **Data Hub** pane as a separate item and users can **Switch** to the new service from the **Consume OData** screen.
 
-{{% todo %}}[add screenshot of the the update arrow in the DH pane]. %}}
+{{% todo %}}[add screenshot of the the update arrow in the DH pane]{{% /todo %}}
 
 #### 4.3.2 Services Deployed to Multiple Environments
 
@@ -137,15 +139,15 @@ To consume the service deployed to the **Acceptance environment**, follow these 
 
 1. Click  **Update** > **Switch** on the **Consumed OData Service** screen: 
 
-   ![major change environment](attachments/consumed-odata-service/update-switch.png)
+	![major change environment](attachments/consumed-odata-service/update-switch.png)
 
 2. On the **Switch** dialog box, select from the drop-down list the service that you want to now consume from and click **Switch**: 
 
-   ![major change environment](attachments/consumed-odata-service/switch-environment.png)
+	![major change environment](attachments/consumed-odata-service/switch-environment.png)
 
 3. The consumed service will now be consumed from the new selected environment. The information on the **Consumed OData Service** screen will display the changed service details and the **Data Hub** pane will now show that you are consuming from the selected environment: 
 
-   ![major change environment dh pane](attachments/consumed-odata-service/switch-new-environment.png)
+	![major change environment dh pane](attachments/consumed-odata-service/switch-new-environment.png)
 
 ## 4 Read More
 

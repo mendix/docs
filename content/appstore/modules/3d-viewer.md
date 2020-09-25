@@ -49,11 +49,9 @@ Follow the instructions in [How to Use App Store Content in Studio Pro](../gener
 
 After importing, you need map the **Administrator** and **User** [module roles](/refguide/module-security#module-role) of the installed modules to the applicable [user roles](/refguide/user-roles) in your app.
 
-## 4 Configuration
+## 4 Initializing the 3D Viewer App Service on App Startup
 
-### 4.1 Initializing the 3D Viewer App Service on App Startup
-
-To automatically start this app service, create a **Startup** microflow, add the **Viewer3D/USE_ME/VisServerAction** Java action to the microflow, the set return type as **Boolean** with a **Value** of **true**.
+To automatically start this app service, create a **Startup** microflow, add the **Viewer3D/USE_ME/VisServerAction** Java action to the microflow, then set the return type as **Boolean** with a **Value** of **true**.
 
 ![startupmicroflow](attachments/3d-viewer/startupmicroflow.jpg)
 

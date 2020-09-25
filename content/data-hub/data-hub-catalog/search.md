@@ -6,13 +6,13 @@ description: "Introduces the processes and properties of the Mendix Data Hub Cat
 tags: ["data hub", "data hub catalog"]
 ---
 
-{{% todo %}}[PC-704 Discoverability]{{% todo %}}
+{{% todo %}}[PC-704 Discoverability]{{% /todo %}}
 
 ## 1 Introduction
 
 Finding the right data to use in your app is made easier by the Data Hub Catalog search functionality. The metadata for a registered service is displayed in the **Search Details** screen to help in identifying the correct data source to use to use in your app development. 
 
-{{% todo %}}[**AD: please verify that "Search Details" is in the UI to justify capitalizing/bolding; also add a cross-reference to doc where that screen is described more fully (if any).**]{{% todo %}}
+{{% todo %}}[AD: please verify that "Search Details" is in the UI to justify capitalizing/bolding; also add a cross-reference to doc where that screen is described more fully (if any).]{{% /todo %}}
 
 You can start searching from the **Data Hub** [Home](#data-hub-home) page or click the Data Hub [Catalog](#search-tab) tab to go to the **Search** pane and **Search Details** screen.
 
@@ -36,7 +36,7 @@ Every published OData service has a version number, and apps consuming from a se
 
 The [search details](#search-details) screen in the Data Hub Catalog will show all available versions of the service under **Usage** and the number of connections made to each service.
 
-{{% todo %}}[**AD: a screenshot of that Usage section may be useful.**]{{% todo %}}
+{{% todo %}}[AD: a screenshot of that Usage section may be useful.]{{% /todo %}}
 
 ### 2.3 Environments
 
@@ -52,9 +52,7 @@ It is possible to filter search in the Data Hub Catalog to the following environ
 * Non-production
 * Mendix Free App environment
 
-{{% todo %}}[are we allowed to talk about Sandbox, include the official term ]{{% todo %}}
-
-{{% todo %}}[**AD: cross-references to definitions/descriptions of environments above may be useful.**]{{% todo %}}
+{{% todo %}}[are we allowed to talk about Sandbox, include the official term; AD: cross-references to definitions/descriptions of environments above may be useful.]{{% /todo %}}
 
 ### 2.4 URLs 
 
@@ -110,7 +108,7 @@ Any of the above actions will take you to the **Search** screen, which is descri
 
 The **Search** screen is divided into the [Search](#search-pane) pane, the [Search Details](#search-details) page, and the [Service Metadata](#metadata) panel.
 
-{{% todo %}}[**AD: capitalization/bolding of these terms should be made consistent through all DHG documentation based on whether these appear as UI labels. If they do not - and it does not appear that they do in the screenshot below - they should be neither capitalized nor bolded.?**]{{% todo %}}
+{{% todo %}}[AD: capitalization/bolding of these terms should be made consistent through all DHG documentation based on whether these appear as UI labels. If they do not - and it does not appear that they do in the screenshot below - they should be neither capitalized nor bolded?]{{% /todo %}}
 
 ![](attachments/search/search-details-page.png)
 
@@ -130,7 +128,7 @@ Punctuation cannot be used as part of the search term.
 Search is case-blind.
 {{% /alert %}}
 
-{{% todo %}}[**AD: please explain "case-blind" in a clear non-metaphporic way that is more accessible.**]{{% todo %}}
+{{% todo %}}[please explain "case-blind" in a clear non-metaphporic way that is more accessible]{{% /todo %}}
 
 #### 4.1.2 Filters
 
@@ -147,7 +145,7 @@ The number of items satisfying the search criteria (search string plus filters) 
 * Closest match to the search string
 * Popularity of the service (number of connections)
 
-{{% todo %}}[???I also had alphabetically - will this happen??]{{% todo %}}
+{{% todo %}}[I also had alphabetically - will this happen??]{{% /todo %}}
 
 If no search string is specified, all registered services will be listed in the search results in the above order showing the first five entities for each service.
 
@@ -157,7 +155,7 @@ When an item in the search results is selected, the **Catalog** tab will show th
 In Studio Pro, searching the Data Hub Catalog through the **Data Hub** pane requires use of the wildcard `*` for an empty search. It is not possible to use the wildcard in combination with other characters. The wildcard can also be used in the Data Hub Catalog search but it is not necessary. 
 {{% /alert %}}
 
-I{{% todo %}}[???for 0.23 search order is not specified but this is the list that we want to work towards]{{% todo %}}
+{{% todo %}}[for 0.23 search order is not specified but this is the list that we want to work towards]{{% /todo %}}
 
 ### 4.2 Search Details {#search-details}
 
@@ -191,7 +189,7 @@ When an **Entity** is selected in the search results, details for the entity are
 * Clicking **Share Datasource** will copy the deep link of the entity (meaning, the entity endpoint) to the clipboard
 * **Entity Information**
 
-{{% todo %}}[**AD: please verify they have fixed the button name to "Share Data Source"**]{{% todo %}}
+{{% todo %}}[AD: please verify they have fixed the button name to "Share Data Source]{{% /todo %}}
 
 For every entity, the attributes exposed in the service are listed showing the attribute types and description.
 

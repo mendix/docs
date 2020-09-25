@@ -16,7 +16,7 @@ The Data Hub Catalog functionality is enhanced by the [Data Hub Landscape](../da
 
 From the [Data Hub Home](https://hub.mendix.com) home page, you can carry out the major functions of Data Hub.Data Hub is also integrated in Mendix Studio Pro to find and connect to shared data sources in your apps. For further details on using Data Hub in Studio Pro, see [Data Hub Pane](/refguide/data-hub-pane) in the *Studio Pro Guide*.
 
-{{% todo %}}[**AD: screenshot missing for data-hub-home - add new one**]{{% /todo %}}
+{{% todo %}}[AD: screenshot missing for data-hub-home - add new one]{{% /todo %}}
 
 From the Data Hub Home page, you can navigate to the following tabs:
 
@@ -56,7 +56,7 @@ OData services can be registered in the Data Hub Catalog in two ways:
 
 {{% todo %}}[IG:  The Data Hub Registration API is available to register OData Services to the Data Hub Catalog.   The deployment pipeline ensures that the app is only deployed if all dependencies are met. This API validates published dependencies and consumed dependencies and can  be used by 3rd party deployment tooling.]{{% /todo %}}
 
-{{% todo %}}[Out for 0.21 release]{{% /todo %}
+{{% todo %}}[Out for 0.21 release]{{% /todo %}}
 
 ### 3.4 Curate—Maintaining Registered Assets
 
@@ -64,7 +64,7 @@ Registered services can be curated in the Data Hub Catalog to ensure that they a
 
 For details, see [How to Curate Registered Assets](curate).
 
-{{% todo %}}[**IG:GM -  Manage versions is not a curation task, this is part of the app/API lifecycle. Other curation tasks (beautifying display names for example) are not part of the public beta - review **]{{% /todo %}}
+{{% todo %}}[IG:GM -  Manage versions is not a curation task, this is part of the app/API lifecycle. Other curation tasks (beautifying display names for example) are not part of the public beta - review]{{% /todo %}}
 
 ### 3.5 Data Accessibility and Data Security
 
@@ -72,7 +72,7 @@ Mendix Data Hub enables organizations to manage the data that is used. Security 
 
 For details on security and accessibility in the Data Hub Catalog and for registered services and entities, see [Data Accessibility and Security](security).
 
-{{% todo %}}[IG: x-ref to authentication in Publish OData Service in SP and see if there is much to refer to in the consuming sections for SP - if it is just repeat of what is said in the former then one x-ref suf ]{{% /todo %}}
+{{% todo %}}[IG: x-ref to authentication in Publish OData Service in SP and see if there is much to refer to in the consuming sections for SP - if it is just repeat of what is said in the former then one x-ref suf]{{% /todo %}}
 
 ## 4 Information Available in the Data Hub Catalog
 

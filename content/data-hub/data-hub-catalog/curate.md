@@ -59,7 +59,7 @@ When a service is set to **Not Discoverable**, it will not be visible to other u
 
 {{% alert type="info" %}}
 Non-discoverable services can only be found by owners of the service, curators, and Data Hub Admins in the Data Hub Catalog and Studio Pro.
-{% /alert %}}
+{{% /alert %}}
 
 {{% alert type="info" %}}
 When a service is set to **Not Discoverable**, neither the service nor the entities that are exposed by the service can be found by other users. However, there may be instances of the same entities being available through other services that are published in the Data Hub Catalog.

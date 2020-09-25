@@ -6,8 +6,6 @@ description: "Registering data services in the Data Hub Catalog."
 tags: ["data hub", "data hub catalog", "register", "registration form", "data hub catalog api"]
 ---
 
-{{% todo %}}[Not sure about this title - users can publish to an Odata service, but primary action here is  to register available data assets. ]{{% /todo %}}
-
 ## 1 Introduction
 
 All shareable entities can be registered in the Data Hub Catalog by exposing them in an OData service. The registration includes the following:
@@ -504,7 +502,7 @@ This table describes what happens in the Data Hub Catalog when using the API and
 | Delete | Environment is deleted.<br />Application remains. |
 | Update (if you have sufficient rights) | Updates the metadata of the corresponding environment. |
 
-{{% todo %}}[**IG: In table above — more specific description of Update else it is too generic and should be removed.**]{{% /todo %}} ]{{% todo %}}
+{{% todo %}}[**IG: In table above — more specific description of Update else it is too generic and should be removed.**]{{% /todo %}}
 
 {{% todo %}}[**IG: 9 Publishing to Data Hub Catalog from Team Center Services**]{{% /todo %}}
 

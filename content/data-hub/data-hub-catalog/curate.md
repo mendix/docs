@@ -19,11 +19,9 @@ Curation is the processes of maintaining registered services and enriching the m
 Users with curation rights for the Data Hub Catalog are as follows:
 
 * Business Owners and Technical Owners of a registered service – can curate their own services and find non-discoverable services that they own
-* Data Hub Curators and Data Hub Admins  – can curate and find all registered assets, discoverable and non-discoverable
+* [Data Hub Curators](../index#curator) and [Data Hub Admins]](../index#admin) – can curate and find all registered assets, discoverable and non-discoverable
 
 {{% todo %}}[**AD: where are the Business Owners and Technical Owners defined - both in the product and in the DHG?**]{{% /todo %}}
-
-{{% todo %}}[**AD: can you add a cross-reference for reading more about Curators and Admins?**]{{% /todo %}}
 
 {{% alert type="info" %}}
 Information that is added or changed during curation is stored in the Data Hub Catalog for that item. It will not be added to the OData service contract or metadata files or affect any of the values in the metadata files associated with the service or the datasets associated with the exposed entities. 
@@ -124,7 +122,7 @@ To edit the service metadata of a selected service, follow these steps:
 
 4.  Add a catalog description. This will be stored with the service details in the Catalog. 
 
-	{{% alert type="info" %}} If a **Catalog Description** has been given for a service, both descriptions will be registered with the service in the Catalog. If you have selected to display the **Contract Description**, the **Catalog Description** will be retained providing the option for curators to display this as desired.
+	{{% alert type="info" %}}If a **Catalog Description** has been given for a service, both descriptions will be registered with the service in the Catalog. If you have selected to display the **Contract Description**, the **Catalog Description** will be retained providing the option for curators to display this as desired.
 	{{% /alert %}}
 
    {{% todo %}}[will search also be performed on the hidden description???]{{% /todo %}}
@@ -143,7 +141,7 @@ Add tags to categorize a registered service and provide additional means for fin
 
 	![](attachments/curate/service-metadata-tags.png)
 
-3. To add or edit the tags, enter a tag string and press **Enter** or select one from the list of existing tags that are used in the Data Hub Catalog and displayed when you start typing in the **Tag** field. Tags can be made up of alphanumeric and underscore characters.  To separate multiple tags, use spaces.
+3. To add or edit the tags, enter a tag string and press **Enter** or select one from the list of existing tags that are used in the Data Hub Catalog and displayed when you start typing in the **Tag** field. Tags can be made up of alphanumeric and underscore characters. To separate multiple tags, use spaces.
 
 	{{% alert type="info" %}}Tags can only contain lower-case letters, numbers, and underscores. They must have a minimum of 2 characters. 
 	{{% /alert %}}

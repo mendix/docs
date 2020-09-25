@@ -16,10 +16,10 @@ In the Landscape, you to see at a glance the deployments of the apps publishing 
 
 * See popular apps in the Data Hub Landscape and the apps that consume data from them
 * See clearly the dependencies between consuming and publishing apps
-* See at a glance all the services published from an  app (deployed to a specific environment) and the entities that are exposed in the service.
+* See at a glance all the services published from an app (deployed to a specific environment) and the entities that are exposed in the service
 * Decide on the relevance of available entities by seeing the apps that they are consumed by
 * Ascertain the context of the data being shared by the network of nodes for a service and the deploying app
-* From the displayed network of dependencies, ascertain the differences between the services by seeing how the shared data is used.
+* From the displayed network of dependencies, ascertain the differences between the services by seeing how the shared data is used
 
 {{% todo %}}[**AD: "See" used three times and "acertain" twice - consider using some synomyms**]{{% /todo %}}
 
@@ -96,11 +96,9 @@ If you click the **Entity** icon on the consume line, the names of the entities 
 
 ### 3 Example Landscape Network {#example-landscape}
 
-This example shows a complex network of apps and services from different sources (Mendix and Team Center) that are connected. The example illustrates the "flow of data" principle of the Landscape representation for the individual service and consuming app.  However, this example also illustrates a possible exception when viewed over the whole network: The selected app (**SuperCyclingApp**) consumes from a service (**CyclingServicePublishedby…**) that is published by an app (**ConsumpingApp2**) that consumes the selected service (**CyclingService1.0.0**)! 
+This example shows a complex network of apps and services from different sources (Mendix and Team Center) that are connected. The example illustrates the "flow of data" principle of the Landscape representation for the individual service and consuming app.  However, this example also illustrates a possible exception when viewed over the whole network: The selected app (**SuperCyclingApp**) consumes from a service (**CyclingServicePublishedby…**) that is published by an app (**ConsumpingApp2**) that consumes the selected service (**CyclingService1.0.0**).
 
-In this example, when viewed over the whole network, it appears that the data flow is from the top of the Landscape to the bottom. However, that is because of the circularity of the connections! 
-
-{{% todo %}}[**AD: use of two exclamation points here seems unusual...**]{{% /todo %}}
+In this example, when viewed over the whole network, it appears that the data flow is from the top of the Landscape to the bottom. However, that is because of the circularity of the connections.
 
 ![](attachments/use-landscape/complex-example.png)
 

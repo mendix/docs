@@ -9,11 +9,11 @@ tags: ["studio pro", "data hub", "odata service", "consumed odata service"]
 
 ## 1 Introduction
 
-When an external entity is used in a project module, a consumed OData service document is added displaying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.  
+When an external entity is used in a project module through the **Data Hub** pane, a consumed OData service document is added displaying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.  
 
 ## 2 Connection
 
-The **Connection** tab displays the connection settings for the consumed OData service:
+The **Connection** tab displays the connection values for the consumed OData service:
 
 ![Connection Tab](attachments/consumed-odata-service/consumed-odata-doc-connection-tab.png)
 

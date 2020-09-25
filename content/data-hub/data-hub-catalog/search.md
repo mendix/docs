@@ -71,7 +71,7 @@ Tags help you to group services and entities and categorize them (for example, b
 * Add tags to the service as a curate function in the Data Hub Catalog after a service is registered by service owners and Data Hub Curators
 * Add different tags to the different versions of the same service, as they will be two separate entries in the catalog (this is also a way to make different version identifiable)
 * Add tags to a service because they also apply to the entities exposed in the service
-* Add tags during the manual registration of OData services using the [Register New Service form](?)
+* Add tags during the manual registration of OData services using the Register New Service form
 
 {{% todo %}}[**AD: cross-reference curate details and Data Hub Curator role definition?**]{{% todo %}}
 

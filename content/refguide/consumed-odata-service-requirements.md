@@ -11,7 +11,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-This document describes the requirements for an OData service which is going to be consumed. These are not further verified at runtime and expected to hold. If they are not met, an error may occur.
+This document describes the requirements for an OData service that is going to be consumed. These requirements are not further verified at runtime and expected to hold however, if they are not met may result in errors.
 
 {{% todo %}}[**AD: wondering if "requirements expected to hold" is clear enough here?**]]{{% /todo %}}
 
@@ -22,15 +22,15 @@ The requirements for a consumed OData service used in a Mendix app project are t
 * The OData service must be either an OData v3 service returning Atom XML, or an OData v4 service returning either Atom XML or JSON
 * It should support queries on the OData feed, including `$filter`, `$orderby`, `$top`, `$skip`, `$expand`, `$count` (or `$inlinecount`)
 
-## 3 Limitations on the Service
+## 3 Requirements on the Service Entites and Attributes
 
 This section describes the features of a consumed OData service that are supported in Mendix app projects. These features are checked before an external entity is used in the domain model.
 
-{{% todo %}}[Original text referred to an OData entity, but I have changed this to external entity. Iterate if this should refer specifically to "Odata" entities as opposed to other types that DH will eventually support]{{% /todo %}}
+{{% todo %}}[Further verify if the title of the section "limitiations …"  theOriginal text referred to an OData entity, but I have changed this to external entity. Iterate if this should refer specifically to "Odata" entities as opposed to other types that DH will eventually support]{{% /todo %}}
 
 ### 3.1 Entities
 
-A service may indicate that certain features are not supported by using vocabulary annotations. The following vocabulary annotations are recognized for entity sets:
+Vocabulary annotations can be used in a service to indicate features that are not supported. The following vocabulary annotations are recognized for entity sets:
 
 * **Countable** – marking an entity set as `Countable="false"` prevents the user from adding the entity to the project
 * **Filterable** – marking an entity set as `Filterable="false"` sets all proprties as non-filterable; marking properties as non-filterable in the `NonFilterableProperties` annotation prevents the user from adding these as attributes in the project
@@ -46,7 +46,11 @@ Furthermore, an entity can only be used if it is uniquely identifiable with a ke
 
 ### 3.2 Attributes
 
+{{% alert type="warning" %}}
+
 Attributes marked as `FC_KeepInContent=false` cannot be used.
+
+{{% /alert %}}
 
 Attribute types have to be primitive (not complex, collections or enumerations). The types of the attributes in your app will be based on the types of the attributes in the OData metadata, as given in the following table:
 
@@ -85,11 +89,11 @@ When you are consuming a Mendix OData endpoint, do not import both a generalizat
 
 The binary data format is supported in the form of *media entities*. When a media entity is dragged into the domain model, a corresponding external entity is created. The entity will have a `contents` attribute with the binary data.
 
-Currently, the binary data can be accessed by Java actions only.
+Currently, the binary data can only be accessed by Java actions.
 
-{{% todo %}}[Following to be finalized depending on final licensing decisions and also has to incorporate, trial and freemium users - also this section seems to be describing back-end limitations not user facing limitations. Only the first paragraph - edited is applicable  ]{{% /todo %}}
+{{% todo %}}[Following to be finalized depending on final licensing decisions and also has to incorporate, trial and freemium users -  ]{{% /todo %}}
 
-## 4 License Limitations
+## 4 Data Hub License Limitations
 
 Mendix Data Hub is a separately licensed product. The type of license that you have determines the total number of objects that can be requested from a consumed OData service *per day*.
 

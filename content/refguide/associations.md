@@ -11,7 +11,7 @@ tags: ["domain model", "association", "studio pro"]
 An association describes a relation between entities. In the domain model, an association is represented by a line or arrow between two entities.
 
 {{% alert type="info" %}}
-Associations between two external entities from the same data source are defined in the originating app and therefore automatically established when the entities are used in a model. For further details, see the [Associations](external-entities#external-association) section of *External Entities*.
+Associations between two external entities from the same data source are defined in the originating app and therefore automatically established when the entities are used in a model. For further details, see the [Associations](external-entities#three) section of *External Entities*.
 {{% /alert %}}
 
 ### 1.1 Ownership {#ownership}

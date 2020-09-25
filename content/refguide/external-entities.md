@@ -35,10 +35,10 @@ To add an external entity to your project, do the following:
 
 3.  Drag and drop the entity in the domain model. The entity and its attributes are then added to your app project:
 
-  ![Virtual Entity Example](attachments/data-hub-pane/virtual-entity-example.png)
+	![Virtual Entity Example](attachments/data-hub-pane/virtual-entity-example.png)
 
 {{% alert type="info" %}}
-If you drag an entity that is associated with an entity already in your domain model from the same service, the association will be made between the entities. For more information on associations between external entities, see [Associations](#external-association).
+If you drag an entity that is associated with an entity already in your domain model from the same service, the association will be made between the entities. For more information on associations between external entities, see [Associations](#three).
 {{% /alert %}}
 
 When an external entity is added to the domain model, two documents will be added in the **Project Explorer**: the **Consumed OData Service** document containing the metadata for the consumed entity, and the **OData Location** of the dataset. For more information, see [Consumed OData Service](consumed-odata-service). 
@@ -99,7 +99,7 @@ The **Edit Attribute** box can be used for specifying a local name for the attri
   * **Type** – the **Type** and **Length** of the attribute as defined in the originating app 
 * **Documentation** – a description for the attribute that is displayed for users of the current app
 
-### {#external-association} 2.3 Associations
+### 2.3 Associations {#three}
 
 This tab will show associations that the external entity has with other entities exposed in the same service.
 

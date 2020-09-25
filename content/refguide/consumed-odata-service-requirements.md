@@ -101,8 +101,6 @@ Mendix Data Hub is a separately licensed product. The type of license that you h
 
 {{% todo %}}[The following text is not for users….  ]{{% /todo %}}
 
-{{% todo %}}[**AD: should the below text be removed?**]{{% /todo %}}
-
 There are three main types of OData license restrictions:
 
 * **Unlimited** – there is no limitation on the number of OData objects

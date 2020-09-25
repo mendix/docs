@@ -8,37 +8,6 @@
 #### Property 'countable'
 * Added public
 
-### RemoteEntitySourceDocument (ModelUnit)
-
-
-#### Property 'endpointId'
-* Introduced; "The endpoint UUID"
-
-#### Property 'minimumMxVersion'
-* Introduced; "The minimum Mendix version this remote source requires"
-
-#### Property 'recommendedMxVersion'
-* Introduced; "The recommended Mendix version to use this remote source"
-
-#### Property 'environmentType'
-* Introduced; "A type to indicate a production service or not"
-
-## Kafka
-
-### ConsumedKafkaService (ModelUnit)
-
-
-#### Property 'serviceId'
-* Deleted; 
-
-### PublishedKafkaService (ModelUnit)
-* Introduced; 
-
-
-### PublishedKafkaResource (Element)
-* Introduced; 
-
-
 ## Rest
 
 ### ConsumedODataService (ModelUnit)

@@ -14,7 +14,7 @@ Security for an app can be defined at the app project-level, module-level, and e
 
 This security level determines which end-users of the apps will have access to the data represented by the entity. For example, an app developer in Mendix Studio Pro working in an HR department can use the **Employees** entity in the Data Hub Catalog in their application. The developer must have access to representative test datasets that are made available in a test or acceptance environment to properly develop the app. However, at runtime, they may not be able to see all the actual employee data if they do not have the correct access permissions. Similarly, end-users of the consuming app will only be able to see the data for which they have clearance.  HR managers using this app will be able to see more data from the same employee entity database according to their access clearance.
 
-For further information, see the [Security](https://docs.mendix.com/refguide/published-odata-services#3-2-security) section in *Published OData Services*.
+For further information, see the [Security](/refguide/published-odata-services#security) section in *Published OData Services*.
 
 Security is determined by the identification protocols of the organization and applied to all access to the data via Mendix apps. This page shows an example of applying [custom HTTP header validation](#http-header-validation).
 
@@ -25,7 +25,7 @@ For Mendix apps that publish entities and those that consume shared entities in 
 * The security for the OData-based service is defined in the publishing app – at the project, module, and entity level
 *  The security that is defined at the module level will apply to the OData services that are published from the module and enforced when the entities from the service are used in a consuming app when end-users try to access the data
 
-	{{% alert type="info" %}}The security for an OData service can only be set if the [project security](https://docs.mendix.com/refguide/project-security) is enabled.
+	{{% alert type="info" %}}The security for an OData service can only be set if the [project security](/refguide/project-security) is enabled.
 	{{% /alert %}}
 
 * Classification of the data associated with the entities is defined in the service metadata and shown in the **Service Metadata** pane of the **Search Details** screen. This is further discussed below.

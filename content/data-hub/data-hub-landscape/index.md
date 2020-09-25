@@ -31,7 +31,7 @@ You can access the Data Hub Landscape from the [Mendix Data Hub](https://hub.men
 
 A registered OData service includes the precise definition of the app, the environment it is deployed in, and the entities—that provide the link to the shared data—are defined as specific endpoints in the service. 
 
-The Landscape depiction of a service and its network will be such that it will show the "flow" of data  from the bottom of the display towards the top. Therefore, services that are consumed by an app will always be shown below it. Other applications that consume a selected service will always be displayed above it. A complex example of a network where this is illustrated is shown in the [example landscape network](#example-landscape).
+The Landscape depiction of a service and its network will be such that it will show the "flow" of data  from the bottom of the display towards the top. Therefore, services that are consumed by an app will always be shown below it. Other applications that consume a selected service will always be displayed above it. A complex example of a network where this is illustrated is shown in the [example landscape network](#example-landscape) below.
 
 ### 2.2 Navigating the Landscape
 

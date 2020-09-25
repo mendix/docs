@@ -16,7 +16,7 @@ Finding the right data to use in your app is made easier by the Data Hub Catalog
 
 You can start searching from the **Data Hub** [Home](#data-hub-home) page or click the Data Hub [Catalog](#search-tab) tab to go to the **Search** pane and **Search Details** screen.
 
-The [Data Hub](/refguide/data-hub-pane) pane in Studio Pro enables search in the Data Hub Catalog to use and connect to registered entities from your Mendix app.
+The [Data Hub pane](/refguide/data-hub-pane) in Studio Pro enables search in the Data Hub Catalog to use and connect to registered entities from your Mendix app.
 
 This page describes the search functionality of the Data Hub Catalog and the the information that is available.
 
@@ -28,7 +28,7 @@ The [search details](#search-details) screen for a registered service, entity, o
 
 The OData service document contains the data that is registered in the Data Hub Catalog. The contract of the published service (the *$metadata* document) contains the details of what is exposed in the service and further links to the metadata of the entities exposed in the service for attributes, associations, types, and accessibility. The published OData service that is registered is shown in search details. 
 
-For details on creating a published OData service in Studio Pro, see [Registering Data in the Data Hub Catalog](register).
+For details on creating a published OData service in Studio Pro, see [How to Register Data Assets](register).
 
 ### 2.2 Versions 
 
@@ -68,18 +68,14 @@ When a service is registered, by default it is "published" by being set to **Dis
 
 Tags help you to group services and entities and categorize them (for example, by department, process, or use). You can use tags to refine the search and filter search results in the Data Hub Catalog by doing the following:
 
-* Add tags to the service as a curate function in the Data Hub Catalog after a service is registered by service owners and Data Hub Curators
+* Add tags to the service as a curate function in the Data Hub Catalog after a service is registered by service owners and [Data Hub Curators](../index#curator)
 * Add different tags to the different versions of the same service, as they will be two separate entries in the catalog (this is also a way to make different version identifiable)
 * Add tags to a service because they also apply to the entities exposed in the service
-* Add tags during the manual registration of OData services using the Register New Service form
-
-{{% todo %}}[**AD: cross-reference curate details and Data Hub Curator role definition?**]{{% todo %}}
-
-{{% todo %}}[**AD: cross-reference Register New Service form, otherwise that missing link will break the build**]{{% todo %}}
+* Add tags during the manual registration of OData services using the [register new service](register#new-service) form
 
 ### 2.7 Description
 
-The description that is included as part of the published service metadata. This description can be further curated at the service, entity, and attribute level by Data Hub Curators to provide further details of the exposed entities and associated datasets.https://docs.mendix.com/data-hub/data-catalog/use-data-catalog/
+The description that is included as part of the published service metadata. This description can be further curated at the service, entity, and attribute level by Data Hub Curators to provide further details of the exposed entities and associated datasets.
 
 {{% alert type="info" %}}
 In Studio Pro, when publishing an OData service, it is possible to specify a summary of the service and a description. Only the description is included in the OData service contract document and displayed in the Data Hub Catalog.

@@ -16,13 +16,11 @@ This document provides general information and guidelines on consumed entities i
 
 {{% todo %}}[**AD: the above cross-reference needs to be set, otherwise it will break the build**]{{% /todo %}}
 
-For details on the security of the data sets that the shared entities connect to, and for defining access to the entities to specified user roles, see [Security and Controlling Access to Information](security).
+For details on the security of the data sets that the shared entities connect to, and for defining access to the entities to specified user roles, see [Data Accessibility and Security](security).
 
 ## 2 Using Registered Assets in your App {#consuming-services-entities}
 
-Shared data which is represented by the exposed entities regisered in the Data Hub Catalog can be added to your app in Studio Pro through the [Data Hub pane](/refguide/data-hub-pane). These entities are introduced into the domain model as  *external entities*. For more information, see [Using External Entities in Studio Pro]().
-
-{{% todo %}}[**AD: the above cross-reference needs to be set, otherwise it will break the build**]{{% /todo %}}
+Shared data which is represented by the exposed entities regisered in the Data Hub Catalog can be added to your app in Studio Pro through the [Data Hub pane](/refguide/data-hub-pane). These entities are introduced into the domain model as [external entities](/refguide/external-entities).
 
 The following sections summarize important points when using OData services and registered entities in your apps in Studio Pro.
 
@@ -48,7 +46,7 @@ When you use an external entity from a published OData service through the **Dat
 
 External entities are read-only, so it is not possible to change the structural values of attributes or associations between two external entities.
 
-When security is enabled for your app, you can define access rules for external entities just as you would for [persistable](/refguide/persistability#persistable) and [non-persistable](/refguide/persistability#non-persistable) entities. You can only define read access, and also access rules based on user roles (for more details, see [Security and Controlling Access to Informatio](security)).
+When security is enabled for your app, you can define access rules for external entities just as you would for [persistable](/refguide/persistability#persistable) and [non-persistable](/refguide/persistability#non-persistable) entities. You can only define read access, and also access rules based on user roles (for more details, see [Security and Controlling Access to Information](security)).
 
 You can associate external entities with local entities (both [persistable and non-persistable](/refguide/persistability). However, the external entity cannot be the owner of an association, which means that the association has to be from a local entity to the external entity in the domain model, and the value for the association [owner](/refguide/associations#ownership) must be set to **Default**.
 

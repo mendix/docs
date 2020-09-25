@@ -10,5 +10,5 @@ tags: ["data hub catalog", "data hub", "virtual entities", "landscape", "publish
 
 ## 2 Main Documents in This Category
 
-* How to Share Data
-* Data Hub Admin
+* [Share Data Between Apps Using Mendix Data Hub](share-data)
+* [Data Hub Admin Functions](data-hub-admin-functions)

@@ -54,7 +54,7 @@ Enable this setting to increase the speed at which a running application is upda
 
 This setting defines the default response to the question whether to automatically fill the contents of a data widget. This question is asked, for example, when dragging an Entity onto a Data View widget. When enabled, the pre-selected answer is **yes**; otherwise, it is **no**.
 
-## 4 Advanced Tab
+## 4 Version Control Tab
 
 ### 4.1 File Comparison
 
@@ -69,8 +69,6 @@ This is the pattern from which the arguments are derived that are passed to the 
 * `{0}` – this is replaced with the name of the original file before the arguments are passed to the file comparison program
 * `{1}` – this is replaced with the name of the changed file before the arguments are passed to the file comparison program
 
-### 4.2 Version Control
-
 #### 4.2.1 Enable Private Version Control {#enable}
 
 Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/develop/team-server), but in another Subversion server to which you have access. This will allow you to specify the location of the app on the Subversion server when opening, downloading, or uploading the app.
@@ -79,7 +77,7 @@ Select this option when you want to work on an app that is not stored in [Mendix
 
 Sometimes the computer running Studio Pro cannot access the internet directly, but has to connect to a proxy server that requires authentication. If this is the case, then these settings can be used to specify the user name and password to connect to the proxy server.
 
-## 5 New Features Tab {#new-features}
+## 6 New Features Tab {#new-features}
 
 The **New features** tab allows you to turn new features on and off. These are features which are being worked on but are either not yet developed sufficiently to remove the previous version, or which are currently optional.
 
@@ -87,31 +85,31 @@ The **New features** tab allows you to turn new features on and off. These are f
 You need to restart Studio Pro for changes to these settings to take effect.
 {{% /alert %}}
 
-### 5.1 New Version of the Changes Pane {#new-changes}
+### 6.1 New Version of the Changes Pane {#new-changes}
 
 With this option, you can enable the new version of the [Changes](changes-pane) pane. Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
 
 Default: *enabled*
 
-### 5.2 New Version of the Connector {#new-connector}
+### 6.2 New Version of the Connector {#new-connector}
 
 With this option, you can enable the new version of the [Connector](view-menu#connector). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
 
 Default: *disabled*
 
-### 5.3 New Version of the Project Explorer {#new-project-explorer}
+### 6.3 New Version of the Project Explorer {#new-project-explorer}
 
 With this option, you can enable the new version of the [Project Explorer](project-explorer). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
 
 Default: *enabled*
 
-### 5.4 New Version of the Toolbox {#new-toolbox}
+### 6.4 New Version of the Toolbox {#new-toolbox}
 
 With this option, you can enable the new version of the [Toolbox](/refguide/view-menu#toolbox). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
 
 Default: *enabled*
 
-## 6 Read More
+## 7 Read More
 
 * [Upload to Version Control Server](upload-to-version-control-dialog)
 * [How to Work with an On-Premises Version Control Server](/howto/collaboration-requirements-management/on-premises-svn-howto)

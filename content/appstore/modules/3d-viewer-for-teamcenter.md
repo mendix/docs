@@ -133,5 +133,15 @@ Run locally, you will be able to view the selected model.
 
 There are other ways to visualize a model. Key idea is to pass valid `ModelId` and `Model Source Type` to the **Viewer** widget.
 
-## 7 Read More
-* {3D Viewer for Teamcenter Academy learning path link}
+### 6.4  Set custom Revision Rules
+
+**SearchTC** requires a **TCModelParamsArray** object as input parameter, it allows you to set specific revision rules you want to apply to a model and get the model data based on revision rules. If **TCModelParamsArray** is not specifically set, **SearchTC** will execute with default revision rules.
+
+Follow these steps:
+
+1. Add a **Set revision rule** button to list item 
+2. Set nanoflow **Viewer3D_TC/USE_ME/SetRevisionRules** as button's On Click action 
+![teamcenter-setrevisionrules](attachments/3d-viewer-for-teamcenter/teamcenter-setrevisionrules.jpg)
+
+Run locally, you will be able to set  revision rule on the selected model and fetch modelo with needed information.
+![teamcenter-setrevisionpage](attachments/3d-viewer-for-teamcenter/teamcenter-setrevisionpage.jpg)

@@ -83,10 +83,6 @@ When you are consuming a Mendix OData endpoint, do not import both a generalizat
 
 ### 3.4 Binary Attributes
 
-{{% todo %}}[Is Media Entity in the "product guide" so that it can be capitalised? Originator capitalized this and Domain Model  ]{{% /todo %}}
-
-{{% todo %}}[**AD: "media entity" is not in the PNG, which generally means it should not be capitalized. First time hearing that term.]{{% /todo %}}
-
 The binary data format is supported in the form of *media entities*. When a media entity is dragged into the domain model, a corresponding external entity is created. The entity will have a `contents` attribute with the binary data.
 
 Currently, the binary data can be accessed by Java actions only.

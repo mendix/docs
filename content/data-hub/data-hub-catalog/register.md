@@ -264,7 +264,7 @@ The documents making up the v4 OData service must be included in a *.zip* file. 
 If the v4 OData service document is only one file, this must also be saved as a *.zip* file, as the manual registration will only accept this file format.
 {{% /alert %}}
 
-### 7.2 Registering the Service – Application and Environment
+### 7.2 Registering the Service – Application and Environment {#new-service}
 
 To register the service, follow these steps:
 

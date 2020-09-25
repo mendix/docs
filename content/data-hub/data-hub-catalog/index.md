@@ -20,11 +20,7 @@ The Data Hub Catalog functionality is enhanced by the [Data Hub Landscape](../da
 
 From the [Data Hub Home](https://hub.mendix.com) home page, you can carry out the major functions of Data Hub.Data Hub is also integrated in Mendix Studio Pro to find and connect to shared data sources in your apps. For further details on using Data Hub in Studio Pro, see [Data Hub Pane](/refguide/data-hub-pane) in the *Studio Pro Guide*.
 
-{{% todo %}}[**AD: verify cross-reference**]{{% /todo %}}
-
 {{% todo %}}[**AD: screenshot missing for data-hub-home - add new one**]{{% /todo %}}
-
-{{% todo %}}[**AD: add proper image file or delete above, which will break the build**]{{% /todo %}}
 
 From the Data Hub Home page, you can navigate to the following tabs:
 
@@ -61,8 +57,6 @@ OData services can be registered in the Data Hub Catalog in two ways:
 
 * In Mendix Studio Pro, entities are exposed in a [published OData service](/refguide/published-odata-services), and upon deployment of the app to an environment, the service is automatically registered in the Data Hub Catalog. For details on publishing OData services in Studio Pro, see the [Publishing an OData Service in Studio Pro to Register Entities](register#odata-service-reg) section of *Registering Data in the Data Hub Catalog*.
 * OData v4 services originating from non-Mendix sources can be [registered manually through a new service](register#registration-form). For further details on registration in the Data Hub Catalog and using  manual registration, see [Making Data Available in the Data Hub Catalog](register).
-
-{{% todo %}}[**AD: unclear where that last cross-reference is supposed to go - clarify link text and anchor usage**]{{% /todo %}}
 
 {{% todo %}}[IG:  The Data Hub Registration API is available to register OData Services to the Data Hub Catalog.   The deployment pipeline ensures that the app is only deployed if all dependencies are met. This API validates published dependencies and consumed dependencies and can  be used by 3rd party deployment tooling.]{{% /todo %}}
 

@@ -97,8 +97,6 @@ Click the **Properties** tab for the consumed OData service which displayes the 
 
 ![](attachments/consumed-odata-service/consumed-odata-service-doc-properties.png)
 
-{{% todo %}}[**AD: the above file is not in the attachments folder, please add or this will break the build**]{{% /todo %}}
-
 * **Entities** – the URL of the metadata defining the entities and associated datasets
 * **Documentation** – an additional description about this service for the current app project
 * **Service name** – the name of the published OData service that is consumed
@@ -147,8 +145,6 @@ To consume the service deployed to the **Acceptance environment**, follow these 
 3. The consumed service will now be consumed from the new selected environment. The information on the **Consumed OData Service** screen will display the changed service details and the **Data Hub** pane will now show that you are consuming from the selected environment: 
 
    ![major change environment dh pane](attachments/consumed-odata-service/switch-new-environment.png)
-
-
 
 ## 4 Read More
 

@@ -38,12 +38,12 @@ To deploy and to register your app within MindSphere you need the following prer
 * A MindSphere user account on a **Developer** or a **Start for Free** tenant
 * A MindSphere developer role: either `mdsp:core:Developer` or `mdsp:core:DeveloperAdmin` - already granted on Start for Free tenants.
 * [Mendix Studio Pro](https://appstore.home.mendix.com/index3.html)
-* The Cloud Foundry Command Line Interface (CF CLI) – this can be downloaded from [https:/
 
 Additional required if deploy and run the Mendix app on MindSphere Cloud Foundry
 
 * [Cloud Foundry Command Line Interface (CF CLI)](https://github.com/cloudfoundry/cli)
 * A Cloud Foundry role which allows you to push apps, such as `SpaceDeveloper`
+
 Additional required if deploy and run as self host app e.g. on Mendix Cloud
 
 * [Outbound Traffic Upgrade](https://www.dex.siemens.com/mindsphere/mindaccess/outbound-traffic-upgrade) - already included on Start for Free tenants.
@@ -334,7 +334,7 @@ In case that you have more then one tenant on Mindsphere you will get a list of 
 In case that you have only one tenant on MindSphere, the process will automatically select this tenant for you.
 {{% /alert %}}
 
-Give a name and internal name and optional a description in order to register your app.
+Give a name, internal name and optional a description in order to register your app.
 
 ![AutoRegistrationNameAndDescription](attachments/deploying-to-mindsphere/AutoRegistrationNameAndDescription.png)
 

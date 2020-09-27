@@ -23,7 +23,20 @@ The **Consumed OData Service** document that is added to the project displays th
 
 * Link to the **Service Details** in the **Data Hub Catalog** where you can see full service details that are registered
 
-* **Update/Switch**: you can update the consumed service contract to another version that has been detected in Data Hub and indicated You can **Update**  the current serive to a new service version (deployed to the same endpoint as the current consumed service) or **Switch** to the same service deployed to another endpoint (for example deployed to another environment or due to a new version with breaking changes that is saved to another endpoint) 
+* **Update/Switch**: you can update the consumed service contract to another version that has been detected in Data Hub for the same app and service. The button will show the following depending on what has been returned for the consumed contract in Data Hub:
+
+  * **Update**: if a new service contract has been detected at the same service endpoint which is different to the one that is currently used in the project (and shown in the **Consumed OData Service** document). This may be a new service version that has minor non-breaking changes to the previous version and therefore deployed by the publisher to the same service endpoint. 
+
+  * **Switch** : if other registered instances of the same-named service from the same app are available in the Data Hub which are deployed to different endpoint (for example to another environment or because of changes that would break existing apps consuming the previous version).
+
+    {{% alert type="info" %}}
+    Studio Pro will show the most relevant option (**Switch** or **Update**) after examining for service name, app and endpoint in the Data Hub Catalog. This will also be indicated in the Data Hub search pane for the consumed service with an update arrow. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document.
+    {{% /alert %}} 
+
+    {{% alert type="info" %}}
+    In the **Data Hub** pane consumed services that have an available **Update** will have an update arrow to indicate this:
+
+    ![update service dhpane](attachments/consumed-odata-service/data-hub-pane-update-available.png){{% /alert %}} 
 
   
 
@@ -161,7 +174,7 @@ In the **Data Hub** pane,  a *minor* update that is available for a consumed ser
 
 {{% todo %}}[create minor and major services and add screenshot of the the update arrow in the DH pane]{{% /todo %}}
 
-If the same service has been deployed to a different service endpoint, indicating a major update, the new service version will be shown in the **Data Hub** pane as a separate item and users can **Switch** to the new service from the **Consume OData** screen.
+If the same service has been deployed to a different service endpoint, indicating a major update, the new service version will be shown in the **Data Hub** pane as a separate item and users can **Switch** to the new service from the **Consume OData** screen: 
 
 ![update service dhpane](attachments/consumed-odata-service/data-hub-pane-update-available.png)
 

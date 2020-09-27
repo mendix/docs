@@ -93,9 +93,11 @@ Currently, the binary data can only be accessed by Java actions.
 
 {{% todo %}}[Following to be finalized depending on final licensing decisions and also has to incorporate, trial and freemium users -  ]{{% /todo %}}
 
-## 4 Data Hub License Limitations
+## 4 Data Hub License Limitations{#license-limitations}
 
 Mendix Data Hub is a separately licensed product. The type of license that you have determines the total number of objects that can be requested from a consumed OData service *per day*.
+
+Without a license, the app will retrieve up to 1000 records from the OData service per day. After that limit is exceeded, an error will occur when users try to retrieve more data.
 
 There are three main types of OData licenses:
 

@@ -3,7 +3,7 @@ title: "Consumed OData Services"
 parent: "integration"
 description: "Overview of consumed OData services for Studios"
 tags: ["studio pro"]
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#This file superseded .
 ---
 
 {{% todo %}}[edit further and add x-refs, and notify https://gitlab.rnd.mendix.com/integration/integration.wiki/-/blob/master/refguide/consumed-odata-services.md that this version is now the latest]{{% /todo %}}
@@ -12,21 +12,27 @@ tags: ["studio pro"]
 
 Data can be published from an app for use by other apps through [published OData services](published-odata-services). Consumed OData services can be used to integrate external data sources in apps through [Mendix Data Hub](/data-hub/index). 
 
-Mendix Data Hub enables integration of available data sources from the different sources in an organization into your Mendix apps.  OData services that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/index) expose entities that can be dragged and dropped into your domain model through the [Data Hub pane](data-hub-pane) as external entities. When these entities are used in an app project, the data that these entities connect to is retrieved from the consumed OData service document that is added to your project.
+Mendix Data Hub enables integration of available data sources from different sources in an organization into your Mendix apps.  OData services that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/index) expose entities that can be dragged and dropped into your domain model through the [Data Hub pane](data-hub-pane) as external entities. The OData service document that is added to your project provides the information for retrieving the metadata for the serviceand exposed entities.
 
 For further details on the consumed OData service document and updating consumed OData services in your project, see [Consumed OData Service](consumed-odata-service).
 
-{{% todo %}}[refine further and orient towards Data Hub.  ]{{% /todo %}}
+{{% alert type="info" %}}
+
+Mendix Data Hub is a licensed product. Using external entities to consume OData services requires a license and the type of license you have will defined how many data records can be consumed.   For further details see [Data Hub License Limitation](consumed-odata-service-requirements#license-limitations). To find out more about your Data Hub License contact [Menidx Support](https://support.mendix.com).
+
+{{% /alert %}}
 
 For details on the features that a published OData service must support as well as how the conversion from and to the Mendix data model works, see [Consumed OData Service Requirements](consumed-odata-service-requirements).
 
-{{% todo %}}[ This text needs to be added once the details on licesing are finalized. Consuming OData services requires a license. Without a license, the app will retrieve up to 1000 records from the OData service per day. After that limit is exceeded, an error will occur when users try to retrieve more data. ]{{% /todo %}}
+{{% todo %}}[ This text needs to be added once the details on licesing are finalized. ]{{% /todo %}}
 
 ## 2 OData Services and External Entities
 
 {{% todo %}}[ Consider moving this to External entities doc. or add x-ref . However, it is a summary and all the info is given elsewhere. Next iteration is to analyse all the available data and re-organize]{{% /todo %}}
 
-When an external entity from an OData service is used, the OData service is called and the data is returned. These entities have some limitations compared to persistent entities:
+When you retrieve data from an external entity from an OData service, the OData service is called and the data is returned.
+
+When an external entity is used in a project, the associated data set for the entity is retrieved through the OData service and returned. These entities have some limitations compared to persistent entities:
 
 * External entities are read-only
 * The aggregate functions (average, sum, maximum, minimum) cannot be used on external entities

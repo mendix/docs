@@ -18,9 +18,14 @@ The **Consumed OData Service** document that is added to the project displays th
 ![Connection Tab](attachments/consumed-odata-service/consumed-odata-doc-connection-tab.png)
 
 * Service Name and the icon for the source application of the originating app
+
 * Version number of the Consumed service
+
 * Link to the **Service Details** in the **Data Hub Catalog** where you can see full service details that are registered
-* **Switch** button which enables you to update
+
+* **Update/Switch**: you can update the consumed service contract to another version that has been detected in Data Hub and indicated You can **Update**  the current serive to a new service version (deployed to the same endpoint as the current consumed service) or **Switch** to the same service deployed to another endpoint (for example deployed to another environment or due to a new version with breaking changes that is saved to another endpoint) 
+
+  
 
 ### 2.1 Connection Tab
 
@@ -157,6 +162,10 @@ In the **Data Hub** pane,  a *minor* update that is available for a consumed ser
 {{% todo %}}[create minor and major services and add screenshot of the the update arrow in the DH pane]{{% /todo %}}
 
 If the same service has been deployed to a different service endpoint, indicating a major update, the new service version will be shown in the **Data Hub** pane as a separate item and users can **Switch** to the new service from the **Consume OData** screen.
+
+![update service dhpane](attachments/consumed-odata-service/data-hub-pane-update-available.png)
+
+![update service project-pane](attachments/consumed-odata-service/project-pane-update-available.png)
 
 {{% todo %}}[add screenshot of the the update arrow in the DH pane]{{% /todo %}}
 

@@ -73,8 +73,8 @@ For all items satisfying the search string, the following information is display
   ![Data Hub Pane updaten](attachments/data-hub-pane/data-hub-pane-update.png)
   
 * Information icon to view further information on the service and to go directly to the **Service Details** page in the Data Hub Catalog: 
-* 
-* ![Data Hub Pane Information](attachments/data-hub-pane/data-hub-pane-info.png)
+
+  ![Data Hub Pane Information](attachments/data-hub-pane/data-hub-pane-info.png)
 
   {{% todo %}}[**AD: can you cross-reference "Service Details" to the DHG?**]{{% /todo %}}
 

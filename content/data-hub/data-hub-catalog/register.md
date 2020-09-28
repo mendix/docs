@@ -96,13 +96,13 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 5. Click **OK** to see the [OData Service](#odata-service-general) page. If you want to publish several entities in the same service, add them here by clicking **Add** for the **Resources**.
 6.  If you add an entity that is associated with another entity that is exposed in the same OData service, you will be asked whether you want to include the association in the service definition. Click **Yes** and the association between the two entities will be included under **Attributes and associations**.
 
-	In the example illustrated below, you will see that for **Entity_2** under **Attributes and associations** there is currently "**0 association**". 
+	In the example illustrated below, you will see that for **Entity_2** under **Attributes and associations** there is currently **0 association**. 
 
-	When **Entity_3** is added to the service which has an association to **Entity_2**, you will see that **Entity_3** has listed that it has "**1 association** and there is a further prompt **Would you like to publish the other side of this association as well** with the name of the association showing the entities being connected.
+	When **Entity_3** is added to the service which has an association to **Entity_2**, you will see that **Entity_3** has listed that it has **1 association** and there is a further prompt **Would you like to publish the other side of this association as well** with the name of the association showing the entities being connected.
 
 	![](attachments/register/publish-association.png)
 	
-	Click **Yes** and the association for **Entity-2** is now updated to "**1 association**":
+	Click **Yes** and the association for **Entity-2** is now updated to **1 association**:
 
 	![](attachments/register/publish-association-2.png)
 
@@ -141,10 +141,7 @@ The **Version** number that is assigned to a service is significant – it forms
 * **Service Name** – the name of the service
 * **Version** – the version of the service
 * **Location** – the URL of the service metadata 
-* **Namespace** – the namespace or uniform resource identifier (URI) for the service (for further details, see [Namespace](https://en.wikipedia.org/wiki/XML_namespace)
-
-	{{% todo %}}[**AD: really necessary to cross-reference a Wikipedia page here?**]{{% /todo %}}
-
+* **Namespace** – the namespace or uniform resource identifier (URI) for the service (for further details, see [Namespace](https://en.wikipedia.org/wiki/XML_namespace))
 * **Resources** – the entities that are included in the service: 
 	* **Add**, **Edit**, **Delete** – click to add, edit, or remove an entity from the OData Service, respectively
 	* **Show** – click to see the entity in the domain model
@@ -325,7 +322,7 @@ In the final step of the manual registration process, use the **Service Details*
 ![](attachments/register/old-register-service-form-end-details.png)
 
 1. In **Service Name**, enter the name of the OData service.
-2.  n **Service Version**, enter the version number for the service.
+2.  In **Service Version**, enter the version number for the service.
 
 	{{% alert type="info" %}}When registering another version of a registered service, ensure that the version numbering indicates the degree of change between versions.
    {{% /alert %}}

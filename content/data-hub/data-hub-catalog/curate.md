@@ -19,7 +19,7 @@ Curation is the processes of maintaining registered services and enriching the m
 Users with curation rights for the Data Hub Catalog are as follows:
 
 * Business Owners and Technical Owners of a registered service – can curate their own services and find non-discoverable services that they own
-* [Data Hub Curators](../index#curator) and [Data Hub Admins]](../index#admin) – can curate and find all registered assets, discoverable and non-discoverable
+* [Data Hub Curators](../index#curator) and [Data Hub Admins](../index#admin) – can curate and find all registered assets, discoverable and non-discoverable
 
 {{% todo %}}[**AD: where are the Business Owners and Technical Owners defined - both in the product and in the DHG?**]{{% /todo %}}
 
@@ -94,10 +94,10 @@ To change the owners of the app of the selected service, follow these steps:
 
 	![](attachments/curate/edit-application-metadata.png)
 
-2.  The **Application Metadata** dialog box is displayed. You can set or change the  **Business Owner ** and  **Technical Owner ** from this page. They will be displayed in the **Service Metadata** panel in the **Search Details** screen.
+2.  The **Application Metadata** dialog box is displayed. You can set or change the  **Business Owner ** and  **Technical Owner** from this page. They will be displayed in the **Service Metadata** panel in the **Search Details** screen.
 
 	![](attachments/curate/application-meta-data.png)
-
+	
 3. Click **Back to…** to return to the **Service Details** screen.
 
 ### 4.2 Changing the Service Description
@@ -125,12 +125,12 @@ To edit the service metadata of a selected service, follow these steps:
 	{{% alert type="info" %}}If a **Catalog Description** has been given for a service, both descriptions will be registered with the service in the Catalog. If you have selected to display the **Contract Description**, the **Catalog Description** will be retained providing the option for curators to display this as desired.
 	{{% /alert %}}
 
-   {{% todo %}}[will search also be performed on the hidden description???]{{% /todo %}}
+	{{% todo %}}[will search also be performed on the hidden description???]{{% /todo %}}
 
 5.  Click **Save Changes** to save the changes that you have made to the **Edit Service Metadata** screen and return to the **Service Details** screen, which will now display the selected description.
 
 	{{% alert type="info" %}}If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. 
-    {{% /alert %}}
+	{{% /alert %}}
 
 ### 4.3 Adding or Editing Tags for a Service
 

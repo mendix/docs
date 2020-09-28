@@ -33,7 +33,6 @@ For Mendix apps that publish entities and those that consume shared entities in 
 	{{% todo %}}[**AD: verify that "Service Metadata" and "Search Details" are in the UI to justify capitalizing and bolding those terms; add cross-references to page/details on that pane and that screen; "This is further discussed below" is not an appropriate cross-reference - add a link to an anchored section and standardize: "For details, see..."**]{{% /todo %}} 
 
 * Through the identification protocols used for establishing the user identity, the security rules for the user in the publishing app are applied
-	
 	* On the Mendix Platform, this is [Mendix SSO](/developerportal/deploy/mendix-sso),  but it can also be the organization's identification protocol
 *  In the publishing app in Studio Pro, access can be defined at the entity level as follows:
 	* None

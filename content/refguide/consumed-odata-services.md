@@ -36,7 +36,7 @@ When an external entity is used in an app project, the associated dataset for th
 * External entities cannot be used in datasets
 * [XPath constraints](/refguide/xpath-constraints) in the access rules of external entities cannot be set
 
-Associations between external entities appear in the domain model. You can only use associations of which both sides are exposed.
+Associations between external entities appear in the domain model. You can only use associations where both sides are exposed.
 
 You can create associations between [persistable entities](persistability#persistable) and external entities. For those associations, the persistable entities need to be the owner.
 

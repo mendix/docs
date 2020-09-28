@@ -42,6 +42,6 @@ You can create associations between [persistable entities](persistability#persis
 
 ## 3 Runtime Considerations
 
-The service endpoint is called for every retrieval of consumed OData services, therefore, the data retrieval for consumed external entities may be slower than local persistable entities.
+The service endpoint is called for every retrieval of consumed OData services. Therefore, the data retrieval for consumed external entities may be slower than local persistable entities.
 
 {{% todo %}}[ what is the value of this? Here?]{{% /todo %}}

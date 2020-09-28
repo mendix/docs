@@ -130,24 +130,28 @@ Follow these steps to get the list:
 ### 5.3 Opening a Model from the Model list
 
 Now that you are able to get a list of models, you may want to visualize these models. For the models to be visualized, the 3D widgets that are part of 3D Viewer are necessary. The **ModelDocument** object contains attributes (most importantly, **ModelId** and **Model Source Type**) that are needed to identify and visualize a model in the 3D widgets.
-As the 3D Viewer needs **Model ID** and **Model Source Type** to visualize a model, you will need to pass **ModelDocument** object to the 3D Viewer widget.
+As the 3D Viewer needs **Model ID** and **Model Source Type** to visualize a model, you will need to pass the **ModelDocument** object to the 3D Viewer widget.
 
-Since you built a model list pop-up page, one scenario is to click to select a list item on the pop-up page, and return the **ModelDocument** object to home page to be visualized there. Follow these steps to enable this:
+Since you built a model list pop-up page, one scenario is to select a list item on the pop-up page, then return the **ModelDocument** object to then home page to be visualized there. Follow these steps to enable this:
 
-1.  Add an entity called **PageObject** and associate it with the **ModelDocument** entity that is defined in **Viewer3D/Domain Model**.
+1.  Add an entity called **PageObject** and associate it with the **ModelDocument** entity that is defined in **Viewer3D/Domain Model**:
 
  ![teamcenter-pageobject](attachments/3d-viewer-for-teamcenter/teamcenter-pageobject.jpg)
 
 2. On your app's home page, wrap the main area with a data view, then create a nanowflow called *createPageObject* that creates a default **PageObject** object and returns it. Set this nanoflow as the **Data source** of the data view.
-3.  On home page, add another data view within the previous data view, and set the **Data source** of the new data view widget to **Context**. This way you can access the **ModelDocument** object associated with the **PageObject**:
+3.  On the home page, add another data view within the previous data view, and set the **Data source** of the new data view to **Context**. This way you can access the **ModelDocument** object associated with the **PageObject**:
 
  ![teamcenter-homepagedataviews ](attachments/3d-viewer-for-teamcenter/teamcenter-homepagedataviews.jpg)
 
-4. Find the 3D widgets in the **Toolbox** and add them to the inner data view. Now you can access and set the `ModelId` and `Model Source Type` the Viewer widget needs.
-![teamcenter-setviewermodelid ](attachments/3d-viewer-for-teamcenter/teamcenter-setviewermodelid.jpg)  
-5. On Open TC model popup page, add an outmost **Data view** widget, select `context` as its data source type, and select `PageObject`.
-![teamcenter-popuppageobject](attachments/3d-viewer-for-teamcenter/teamcenter-popuppageobject.jpg)
-6. Create a **OpenSelectedModel** nanoflow and set it as On Click action of List View.  This nanoflow enables update `ModelDocument` associated with `PageObject` and returns updated `PageObject`. Every time user click on a model list item, `PageObject` will be updated, homepage where viewer is in will be updated to newly selected model.
+4. Find the 3D widgets in the **Toolbox** and add them to the inner data view. Now you can access and set the **ModelId** and **Model Source Type** that the 3D Viewer widget needs.
+
+ ![teamcenter-setviewermodelid ](attachments/3d-viewer-for-teamcenter/teamcenter-setviewermodelid.jpg)  
+
+5. On the open TC model pop-up page, add an outmost data view, select **Context** as its **Data source**, then select **PageObject**:
+
+ ![teamcenter-popuppageobject](attachments/3d-viewer-for-teamcenter/teamcenter-popuppageobject.jpg)
+ 
+6. Create a nanoflow called *OpenSelectedModel* nanoflow and set it as the **On click** action for the list view. This nanoflow enables updating the **ModelDocument** associated with the **PageObject** and returns an updated **PageObject**. Every time user click on a model list item, `PageObject` will be updated, homepage where viewer is in will be updated to newly selected model.
 ![teamcenter-openselectedmodel](attachments/3d-viewer-for-teamcenter/teamcenter-openselectedmodel.jpg)
 
 Run locally, you will be able to view the selected model.

@@ -18,7 +18,7 @@ This document describes the requirements for an OData service that is going to b
 The requirements for a consumed OData service used in a Mendix app project are the following: 
 
 * The OData service must be either an OData v3 service returning Atom XML, or an OData v4 service returning either Atom XML or JSON
-* It should support queries on the OData feed, including `$filter`, `$orderby`, `$top`, `$skip`, `$expand`, `$count` (or `$inlinecount`)
+* It should support queries on the OData feed, including `$filter`, `$orderby`, `$top`, `$skip`, `$expand`, and `$count` (or `$inlinecount`)
 
 ## 3 Requirements on the Service Entities and Attributes
 
@@ -105,4 +105,3 @@ The number of consumed objects per day is reset at midnight in the timezone of t
 {{% alert type="warning" %}}
 Contact your Mendix Company Admin, or Data Hub Admin to find out what type of license your organization has.
 {{% /alert %}}
-

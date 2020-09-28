@@ -62,7 +62,7 @@ Changes that are made to the properties of external entities are made only in th
 
 ### 2.1 General
 
-This tab displays the general properties of the external entity. Most values are defined in the originating app and they are displayed but are not editable. The values that can be edited will only apply to the local project:
+This tab displays the general properties of the external entity. The values that are defined in the originating app are displayed but but cannot be edited. The values that can be edited will only apply to the local project:
 
 ![External Entity Properties](attachments/external-entities/external-entity-properties.png)
 
@@ -78,18 +78,15 @@ The following operations can be done on the displayed attribute list:
 
 * **Add** – add attributes that were exposed in the OData service for the entity and were previously removed for this local instance
 * **Edit** – edit the selected attribute from the [Edit Attribute](#edit-attribute) form
-
-  {{% todo %}}[ insert screenshot of add Attribute form]{{% /todo %}}
-
 * **Remove** – remove an attribute from list 
 
 #### 2.2.1 Edit Attribute {#edit-attribute}
 
 The **Edit Attribute** box can be used for specifying a local name for the attribute and adding a local description.
 
-{{% todo %}}[ insert text and screenshot of add Attribute form]{{% /todo %}}. 
+![Edit attributes](attachments/external-entities/edit-attributes.png)
 
-* **General**
+* **General Tab **
 	* **Name** – a local name for the attribute
 	* **Original Name** – this is a read-only value that displays the original name of the attribute as given in the originating app
 	* **Summary** – the description for the attribute in the originating app; to enter a local description, add this in the [Documentation tab](#documentation)
@@ -98,9 +95,9 @@ The **Edit Attribute** box can be used for specifying a local name for the attri
 
 ### 2.3 Associations
 
-This tab will show associations that the external entity has with other entities exposed in the same service.
+This tab will show associations that the external entity has with other entities exposed in the same service and any local associations that have been made with local entities: 
 
-{{% todo %}}[edit this text and add screenshots.]{{% /todo %}}
+![Edit attributes](attachments/external-entities/external-entity-associations.png)
 
 You can **Add** and **Edit** associations to the external entity with a local entity. However, the association cannot be made *from* an external entity to a local entity: the local entity must be the owner of the association.
 
@@ -114,9 +111,9 @@ It is possible to **Remove** an association between two external entities in the
 If you want to connect two external entities that are not connected in the originating app, this is not possible as the relationship to the data cannot be influenced locally. However, consider adding a local entity and connect this local entity with both external entities. The local entity must be the owner of both associations, in this case.
 {{% /alert %}}
 
-### 2.3.1 Association Properties
+### 2.3.1 Associations
 
-{{% todo %}}[add preamble and add 8.14 screenshots.]{{% /todo %}}
+The **Association** tab for external entities displays the following values for all associations with the external entity—associations with local entities and associations with other external entities in the domain model from the same OData service that are exposed in the service:
 
 **Name** – name of the association
 **Type** – read-only for associations between two external entities
@@ -126,11 +123,11 @@ If you want to connect two external entities that are not connected in the origi
 An external entity cannot be the owner for an association between an external and a local entity.
 {{% /alert %}}
 
-{{% todo %}}[add preamble and add 8.14 screenshots.]{{% /todo %}}
+When you **Edit** an association between that is exposed for two entities exposed in the same OData service, the following properties are displayed and the only local change that can be name is the local Name:
 
-When you **Edit** an association, the following properties are available:
+![Edit external associations](attachments/external-entities/association-properties.png)
 
-* **Name** – name of the association in the originating app
+* **Name** – local name of the association
 * **Original Name** – name of the association given to it in the originating app 
 * **Summary** – read-only description of the association from the originating app
 * **Multiplicity** – read-only multiplicity values from the originating app

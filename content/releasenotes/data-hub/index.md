@@ -11,5 +11,6 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 ### September 29th, 2020
 
-**To do: link to blog that will be released**
+* Hello world! [Mendix Data Hub](https://hub.mendix.com) is now generally available. Please see the [Mendix Data Hub Guide](/data-hub/index) for more information.
 
+{{% todo %}}[Add a link to blog that will be released]{{% /todo %}}

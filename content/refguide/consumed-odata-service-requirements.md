@@ -48,7 +48,7 @@ Furthermore, an entity can only be used if it is uniquely identifiable with a ke
 Attributes marked as `FC_KeepInContent=false` cannot be used.
 {{% /alert %}}
 
-Attribute types have to be primitive (not complex, collections or enumerations). The types of the attributes in your app will be based on the types of the attributes in the OData metadata, as given in the following table:
+Attribute types have to be primitive (not complex, collections, or enumerations). The types of the attributes in your app will be based on the types of the attributes in the OData metadata, as given in the following table:
 
 | OData Type | Mendix Type |
 | --- | --- |

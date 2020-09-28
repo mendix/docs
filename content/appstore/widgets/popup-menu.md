@@ -29,4 +29,4 @@ If you want to use dynamic content, make sure to wrap the widget in a dataview a
 
 ## 3 Developing This App Store Component
 
-We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/popup-menu](https://github.com/mendixlabs/popup-menu/issues).
+We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendix/widgets-resources](https://github.com/mendix/widgets-resources/issues).

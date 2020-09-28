@@ -37,7 +37,7 @@ Finally, add the **LogOverviewSnippet** snippet to a page in a custom module.
 
 For this option, all the objects you want to log need to have the **AuditTrail.AudittrailSuperClass** as a superclass (note that this is not possible for subclasses of the **System.User** object). The module will then automatically log all the changes on the create, commit, and delete events.
 
-Next, configure the **LogOnlyChangedAttributes** constant for whether you want to log all the attributes or just the changes.
+Next, configure the **IncludeOnlyChangedAttributes** constant for whether you want to log all the attributes or just the changes.
 
 Finally, add the **LogOverviewSnippet** snippet to a page in a custom module.
 

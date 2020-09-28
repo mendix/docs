@@ -6,27 +6,29 @@ description: "Describes how-to create a Mendix app in Studio Pro which publishes
 tags: ["data hub catalog", "data hub", "external entities", "landscape", "published OData service" ,"how to", "consume"]
 ---
 
-{{% todo %}}[EC: PM suggests posting a link to the Hallo World run through that users can play before doing this how-to.  Is this necessary? The animated How to will have to be updated to show beta functionality . It could also be the "Tour" on the welcome pages]{{% /todo %}}
-
-{{% todo %}}[**AD: I believe a similar note to the one above is in the DHG index?**]{{% /todo %}}
-
 ## 1 Introduction
 
-This how-to shows you how to share data between apps using the Mendix Data Hub.
-
-{{% todo %}}[**AD: list of what the how-to will teach is good, but could use more substantial intro sentences relating to using Data Hub simply, vision, etc.**]{{% /todo %}}
-
-**This how-to will teach you how to do the following:**
+This how-to will demonstrate how easy it is to build apps using data from different sources using Mendix Data Hub. The steps will describe the following: 
 
 * Create a simple app in Studio Pro
+
 * Publish an entity from the app and register it in the Data Hub Catalog 
+
 * Use the Data Hub Catalog to explore the entities that are available in the organization 
+
 * Connect to the registered entity in a new app
+
 * Change data in the original app and see it updated in the consuming app
+
+* See the network of shared data in the Data Hub Landscape
+
+{{% alert type="info" %}}
+To use the Mendix Data Hub a license is required with also includes the integration of Data Hub in Studio Pro in order to consume shared data assets for building appps. 
+{{% /alert %}}
 
 ## 2 Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this how-to, make sure you have completed the following prerequisite:
 
 * Install Studio Pro version [8.14.0 or above](https://appstore.home.mendix.com/link/modelers/)
 
@@ -85,7 +87,7 @@ The following steps take you through creating an OData service for your app to e
 	The new **{yourname}CustomerODataService** is added to the module and the **Edit published resource** dialog box is displayed for the entity **Customer**. 
 
 	![](attachments/share-data/edit-published-resource-box.png)
-		
+	
 4.	Click **Select…** to take a look at the list of **Exposed attributes and associations**. You will see the list of attributes that you defined in the last section. When publishing an entity to an OData service you can select the attributes that you want to expose in the service from here.
 
 5.  Click **OK** twice to display the **OData Service** document. You will see the details of  the service that will be included in the service metadata files and be registered in the Data Hub Catalog. 

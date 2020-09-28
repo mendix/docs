@@ -151,27 +151,97 @@ The same service, deployed to a different environment will be to a different ser
 
 When you drag the **Customer** entity from **CustomerApi version 1.0.0** deployed to the **Acceptance** environment into your project, Studio Pro will retrieve the information it requires from the contract that is at the endpoint. 
 
-### 4.2 Update or Switch
+## 4.2 Major and Minor Service Versions
 
-When a new version of a published OData service is issued, the publisher can specify if the new service version is deployed to the same endpoint so that users who are consuming the service will have access to the latest service contract. In this case, in Studio Pro, the consumed OData service can be **Updated** to the new contract published to the same endpoint that is already being consumed. This will also be indicated in the **Data Hub** pane and the **Project** pane with the blue update arrow for the consumed service:
+It is important that the publishers of the services adopt a strict revision process for any changes they make to their published Odata services that are consumed by other users. 
+
+We recommend that a strict versioning system, for example semantic numbering, is used when issuing updates to services. The service version should clearly indicate the level and severity of the changes that have been made when a service is updated and deployed according to the following guidelines.
+
+#### 4.2.1 Minor Service Updates
+
+*Minor* service updates are, for example,  additional fields added to the service or new operations included which would not break any apps that consume the previous versions. 
+
+If semantic numbering is used then a minor/non-breaking change to a service can be indicated by an increase in the decimal part of the version number. For example, 1.0.11, 1.0.12, 1.1, 1.2. 
+
+Minor service updates can be deployed to the same service endpoints, thereby ensuring that all consuming apps consume the latest version of the service. 
+
+#### 4.2.2 Major Service Updates
+
+*Major* service updates are for example, when entities or attributes are removed, or input parameters are required, which would be incompatible for the consuming apps and result in the consuming app "breaking". 
+
+When a major change has been made to a published service we recommend that the service is deployed to a *different endpoint* with the new service version number clearly indicating that there has been a major change—with semantic numbering this would be an incremental increase  of a whole number. 
+
+In this case the new service will be registered in the Data Hub Catalog as a different service, and show up in the catalog as a separate asset. In the following example, there are 4 registered occurrences of the **OrderManagementService**: 
+
+![4 endpoints](attachments/consumed-odata-service/consume-major-service-update-version.png)
+
+There is a major service update indicated by the change in the version number from **1.0.0** to **2.0.0**. Further, both versions have also been deployed to the **Acceptance**.
+
+### 4.3 Update or Switch
+
+When minor and major updates to a consumed service are detected in Data Hub the following options are available in the **Consumed OData Service** screen.
+
+####  4.3.1. Update
+
+The **Update** option is available when a new minor version of a published OData service is issued, and deployed to the same endpoint as the previous version. Studio Pro will recognise that the contract at the endpoint is different to the one currently consumed in the project. 
+
+{{% alert type="info" %}}
+
+You can only **Update** services that are deployed to *production* environments. All services version changes and deployments to the same endpoint for non-production environments will have to be updated using  **Switch**.
+
+ {{% /alert %}}
+
+**Project Pane**
+
+In the **Project** pane this will be shown as follows: 
+
+![update service project-pane](attachments/consumed-odata-service/project-pane-update-available.png)
+
+- The service version that is *currently consumed* is shown (in this example **1.0.11**)
+- Blue **Update** - click to open the **Update Service** box and update the contract to the new one. Studio Pro will retrieve the new contract from Data Hub and this will be loaded for the project.
+- The list of entities that are consumed from the current service version which are shown by the green check-mark
+
+**Data Hub Search Results**
+
+In the **Data Hub** pane the search results for the same consumed service will show the following:
 
 ![update service dhpane](attachments/consumed-odata-service/data-hub-pane-update-available.png)
 
-Alternatively, an OData service may be published to a different endpoint or to a different environment which would mean that it will be registered as a different asset in the Data Hub Catalog. 
+- The version of the service that is now at the endpoint, **1.0.12**
 
-In the example given in the [Consuming from Service Endpoints]({#consume-service-endpoints) section above, if you are consuming the service from the **Acceptance** environment, the Consumed OData service screen will have the **Switch** button to enable you to select to consume the same service from the **Production**. 
+- Blue **Update** - click to open the **Update Service** box and update the contract to the new one. Studio Pro will retrieve the new contract from Data Hub and this will be loaded for the project.
 
-* 
+- The list of entities that are shown are the ones that were from the previous contract, including the consumed entities which are marked with a green check-mark. These entities are, however, greyed out, to indicate that they cannot be dragged into the domain model as they are from a previous version which is no longer available. The only option is to click **Update** to retrieve the updated OData Service. 
 
-In the **Data Hub** pane,  a *minor* update that is available for a consumed service  is indicated with an "update" arrow for the service. This means that the service can be **Updated** in the **Consumed OData Service** screen.
+{{% todo %}}[standarad colour screenshot to replace this after release]{{% /todo %}}
 
-{{% todo %}}[create minor and major services and add screenshot of the the update arrow in the DH pane]{{% /todo %}}
+**Update Service Dialog Box**
 
-If the same service has been deployed to a different service endpoint, indicating a major update, the new service version will be shown in the **Data Hub** pane as a separate item and users can **Switch** to the new service from the **Consume OData** screen: 
+When you click **Update** on the **Consumed OData Service** document or the update icon in the **Data Hub ** and **Project** panes, the **Update **dialog box is displayed.
+
+{{% todo %}}[standarad colour screenshot to replace this after release]{{% /todo %}}
+
+![update service dhpane](attachments/consumed-odata-service/update-service-dialog-box.png)
+
+The consumed Odata service that is currently consumed in the project (**1.0.11) ** is shown on the left, and you can click **Update** to retrieve the new contract from the Data Hub (**1.0.12**).
+
+#### 4.3.2. Switch
+
+When an OData service is published to a different endpoint or to a different environment this will mean that it will be registered as a different asset in the Data Hub Catalog. 
+
+In the example given in the [Consuming from Service Endpoints]({#consume-service-endpoints) section above, if you are consuming the service from the **Acceptance** environment, the Consumed OData service screen will display the **Switch** button to enable you to consume the same service from the **Production**. 
+
+{{% alert type="info" %}}
+
+You can only **Update** services that are deployed to *production* environments. All services version changes and deployments to the same endpoint for non-production environments will have to be updated using  **Switch**.
+
+ {{% /alert %}}
 
 
 
-![update service project-pane](attachments/consumed-odata-service/project-pane-update-available.png)
+
+
+
 
 {{% todo %}}[add screenshot of the the update arrow in the DH pane]{{% /todo %}}
 

@@ -172,9 +172,9 @@ Perform the following steps:
 
 6.  Find **{yourname}CustomerODataService** and drag the **Customer** entity from this service into the domain model for your app. The consumed service and entity will be shown in the **Data Hub** pane with a green check mark against them.
 
-	{{% alert type="info" %}}Entities that are used in an app from the **Data Hub** pane are called external entities. They are displayed as purple containers in the domain model, and they display the name of the OData service name from which they are being consumed.{{% /alert %}}
+	{{% alert type="info" %}}Entities that are used in an app from the **Data Hub** pane are called external entities. They are displayed as purple containers in the domain model, and the name of the OData service they are exposed in is displayed.{{% /alert %}}
 
-	{{% alert type="info" %}}The properties of external entities will differ from other kinds of entities in that the properties defining the data in the publishing app cannot be changed in the consuming app. For further information on external entities, see [External Entities](/refguide/external-entities) in the *Studio Pro Guide*. 
+	{{% alert type="info" %}}The properties of external entities are different from other kinds of entities because the properties that define the data in the publishing app cannot be changed in the consuming app. For further information on external entities, see [External Entities](/refguide/external-entities) in the *Studio Pro Guide*. 
 	{{% /alert %}}
 	
 7.  Click the information icon for the consumed service in the **Data Hub** Pane to see further information about the service as it is registered in the Data Hub Catalog. You can also click **View in Data Hub Catalog** to go to the service details screen in the Data Hub Catalog.
@@ -197,7 +197,7 @@ Perform the following steps:
 
 ## 7 Viewing the Shared Data in Your New App 
 
-To view the shared data in your new app, follow these steps:
+To view the consumed data in your new app, follow these steps:
 
 1. When the app has successfully been deployed, click **View** to open the app in the browser.
 2. Click **Customer Overview**.
@@ -205,10 +205,6 @@ To view the shared data in your new app, follow these steps:
 	The overview page displays the list of the customers that you entered in the **{yourname}CustomerServiceApp** app. 
 
 	{{% alert type="info" %}}As this page displays data shared from another app, there are no buttons for adding or changing this data.{{% /alert %}}
-
-{{% alert type="warning" %}}
-If you get an error in your CustomerActionsApp, it could be that your CustomerServiceApp has gone to sleep. This is because it is a sandbox app. If you want to see data from the service app, it needs to be running.
-{{% /alert %}}
 
 ## 8 Seeing Changes in Data in the Consuming App
 
@@ -245,7 +241,7 @@ You can view the two apps that you have created in the Data Hub Landscape and se
 
 	The service **{yourname}CustomerODataAPI** is linked by a solid line to the runtime instance of **{yourname}CustomerCustomerServiceApp** (shown as a square icon), which is deployed as a Free App.
 
-	The service is also linked by a dotted grey line to **{yourname}CustomerActionsApp** with an arrow that indicates that it is making a call to the service for data. If you click the entity icon on this consume line, the entities that are being consumed will be listed in the metadata panel.
+	The service is also linked by a dotted grey line to **{yourname}CustomerActionsApp** with an arrow that indicates that it is making a call to the service for data (or consuming data from it). If you click the entity icon on this consume line, the entities that are being consumed will be listed in the metadata panel.
 
 4. Click a node to see details of the selected item in the Data Hub Catalog metadata panel on the right. You can also click the **Search** tab to see full details in the **Search Details** screen.
 

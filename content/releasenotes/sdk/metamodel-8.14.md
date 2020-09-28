@@ -1,52 +1,37 @@
-# Metamodel Release Notes for version 8.14.0
+---
+title: "8.14"
+parent: "metamodel-8"
+---
 
-## DomainModels
+**Release date: September 21st, 2020** 
+ 
+### DomainModels
 
-### EntityCapabilities (Element)
+#### EntityCapabilities (Element)
 
+* We added the public `countable` property.
 
-#### Property 'countable'
-* Added public
+### Rest
 
-## Rest
+#### ConsumedODataService (ModelUnit)
 
-### ConsumedODataService (ModelUnit)
+* We introduced the `lastUpdated` property for when the OData service was last updated.
+* We deleted the `versionApiMockResults` property. Use the real payload from the Version API instead.
+* We deleted the `serviceId` property.
 
+### Pages
 
-#### Property 'versionApiMockResults'
-* Deleted; "Use real payload from the Version API"
+#### PageClientAction (Element)
 
-#### Property 'serviceId'
-* Deleted; 
+* We introduced the `numberOfPagesToClose2` property.
+* We deleted the `numberOfPagesToClose` property. Use the `numberOfPagesToClose2` property instead.
 
-#### Property 'lastUpdated'
-* Introduced; "When the ODataService was last updated"
+#### ClosePageClientAction (Element)
 
-## Pages
+* We introduced the `numberOfPagesToClose` property.
+* We deleted the `numberOfPages` property. Use the `numberOfPagesToClose` property instead.
 
-### PageClientAction (Element)
+#### CreateObjectClientAction (Element)
 
-
-#### Property 'numberOfPagesToClose'
-* Deleted; "Use property 'numberOfPagesToClose2' instead"
-
-#### Property 'numberOfPagesToClose2'
-* Introduced; 
-
-### ClosePageClientAction (Element)
-
-
-#### Property 'numberOfPages'
-* Deleted; "Use property 'numberOfPagesToClose' instead"
-
-#### Property 'numberOfPagesToClose'
-* Introduced; 
-
-### CreateObjectClientAction (Element)
-
-
-#### Property 'numberOfPagesToClose'
-* Deleted; "Use property 'numberOfPagesToClose2' instead"
-
-#### Property 'numberOfPagesToClose2'
-* Introduced; 
+* We introduced the `numberOfPagesToClose2` property.
+* We deleted the `numberOfPagesToClose` property. Use the `numberOfPagesToClose2` property instead.

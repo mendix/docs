@@ -157,20 +157,11 @@ When a new version of a published OData service is issued, the publisher can spe
 
 ![update service dhpane](attachments/consumed-odata-service/data-hub-pane-update-available.png)
 
-Alternatively, an OData service can be published to a different endpoint so that it would appear as a different asset in the Data Hub Catalog. 
+Alternatively, an OData service may be published to a different endpoint or to a different environment which would mean that it will be registered as a different asset in the Data Hub Catalog. 
 
-In the example given in the [consuming from Service Endpoints]({#consume-service-endpoints) section above, while developing an app, the service that is deplyed to **Acceptance** can be consumed and thus use the acceptance environment dataset. However, once development is completed, the user can consume the same service from the **Production** and thus connect to the production dataset. 
+In the example given in the [Consuming from Service Endpoints]({#consume-service-endpoints) section above, if you are consuming the service from the **Acceptance** environment, the Consumed OData service screen will have the **Switch** button to enable you to select to consume the same service from the **Production**. 
 
-In Studio Pro, this can be achieved simply by using **Switch** to consume the same service from the different endpoint. In this case 
-
-The **Consume OData Service** document **Update** button
-
-#### 4.3.1 Major and Minor Service Versions
-
-It is important that the publishers of the services use a strict versioning system, for example semantic numbering, when issuing updates to their apps. We recommend that the service version should clearly indicate the level and severity of the changes that have been made when a service is updated and deployed according to the following guidelines: 
-
-* *Major* service updates (for example, when entities or attributes are removed, or input parameters are required) which would be incompatible for the consuming apps and result in the consuming app "breaking". When a major change has been made to a published service we recommend that the service is deployed to a different endpoint (with the service version number clearly indicating that there has been a major change). In this case this service will be registered in the Data Hub Catalog as a different service, and show up in the search results as a separate asset. Using semantic number, a major change would be indicated with an ***
-* *Minor* service updates (for example,  additional fields are added to the service or new operations included) which would not break apps that consumed the previous versions. Minor service updates can be deployed to the same service endpoints, thereby ensuring that all consuming apps consume the latest version of the service. 
+* 
 
 In the **Data Hub** pane,  a *minor* update that is available for a consumed service  is indicated with an "update" arrow for the service. This means that the service can be **Updated** in the **Consumed OData Service** screen.
 

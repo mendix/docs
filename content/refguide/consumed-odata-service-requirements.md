@@ -20,19 +20,19 @@ The requirements for a consumed OData service used in a Mendix app project are t
 * The OData service must be either an OData v3 service returning Atom XML, or an OData v4 service returning either Atom XML or JSON
 * It should support queries on the OData feed, including `$filter`, `$orderby`, `$top`, `$skip`, `$expand`, `$count` (or `$inlinecount`)
 
-## 3 Requirements on the Service Entites and Attributes
+## 3 Requirements on the Service Entities and Attributes
 
 This section describes the features of a consumed OData service that are supported in Mendix app projects. These features are checked before an external entity is used in the domain model.
 
-{{% todo %}}[Further verify if the title of the section "limitiations …"  theOriginal text referred to an OData entity, but I have changed this to external entity. Iterate if this should refer specifically to "Odata" entities as opposed to other types that DH will eventually support]{{% /todo %}}
+{{% todo %}}[Further verify if the title of the section "limitations …"  theOriginal text referred to an OData entity, but I have changed this to external entity. Iterate if this should refer specifically to "Odata" entities as opposed to other types that DH will eventually support]{{% /todo %}}
 
 ### 3.1 Entities
 
 Vocabulary annotations can be used in a service to indicate features that are not supported. The following vocabulary annotations are recognized for entity sets:
 
 * **Countable** – marking an entity set as `Countable="false"` prevents the user from adding the entity to the project
-* **Filterable** – marking an entity set as `Filterable="false"` sets all proprties as non-filterable; marking properties as non-filterable in the `NonFilterableProperties` annotation prevents the user from adding these as attributes in the project
-* **Sortable** – marking an entity set as `Sortable="false"` sets all proprties as non-sortable; marking properties as non-sortable in the `NonSortableProperties` annotation prevents the user from adding these as attributes in the project
+* **Filterable** – marking an entity set as `Filterable="false"` sets all properties as non-filterable; marking properties as non-filterable in the `NonFilterableProperties` annotation prevents the user from adding these as attributes in the project
+* **Sortable** – marking an entity set as `Sortable="false"` sets all properties as non-sortable; marking properties as non-sortable in the `NonSortableProperties` annotation prevents the user from adding these as attributes in the project
 
 An entity can only be used when it is accessible through an entity set.
 
@@ -94,7 +94,7 @@ There are two types of Data Hub licenses currently available:
 * **Default** – the standard Data Hub license enables you to retrieve a total of 1000 OData objects per day for each runtime instance
 * **Unlimited** – there is no limitation on the number of OData objects that can be consumed
 
-{{% todo %}}[add following bullet when that limited type of license is sold - the setting is implemented in 8.14 but not marketed - also establish if the `constraint` is visible somewhere for users or only back-end setting. Include x-ref to licesing: Limited– a specific limitation has been set for your Data Hub license and this is specified by the `limit` constraint. ]{{% /todo %}}
+{{% todo %}}[add following bullet when that limited type of license is sold - the setting is implemented in 8.14 but not marketed - also establish if the `constraint` is visible somewhere for users or only back-end setting. Include x-ref to licensing: Limited– a specific limitation has been set for your Data Hub license and this is specified by the `limit` constraint. ]{{% /todo %}}
 
 {{% todo %}}[the following text was included in the source material but the directive for 8.14 is the above 2 bullets: Without a license, the app will retrieve up to 1000 records from the OData service per day.  Also Joost ]{{% /todo %}}
 

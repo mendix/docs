@@ -10,9 +10,9 @@ tags: ["studio Pro", "data hub", "data hub pane", "data hub catalog"]
 
 ## 1 Introduction 
 
-[Mendix Data Hub](/data-hub/index) enables integration of available data sources from the different sources in an organization into your Mendix apps. This means that new apps can be created using shared datasets that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/index). In Studio Pro, this is possible using the integrated functionality of Data Hub Catalog through the **Data Hub** pane.
+[Mendix Data Hub](/data-hub/index) enables integration of available data sources from the different applications in an organization into your Mendix apps. This means that new apps can be created using shared datasets that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/index). In Studio Pro, this is possible using the integrated functionality of Data Hub Catalog through the **Data Hub** pane.
 
-The **Data Hub** pane enables you to search the Data Hub Catalog and discover the data sources available for your organization. Via this pane you can add the entities that are exposed in the OData services registered in the Data Hub Catalog into your app's domain model, where they are known as [external entities](external-entities). These external entities provide access to the data associated with the entities which can be utlized in your app.
+The **Data Hub** pane enables you to search the Data Hub Catalog and discover the data sources available for your organization. Via this pane you can add the entities that are exposed in the OData services registered in the Data Hub Catalog into your app's domain model customer where they are known as [external entities](external-entities). These external entities provide access to the data associated with the entities which can be utlized in your app.
 
 Click  **View** > **Data Hub** to display the **Data Hub** pane:
 
@@ -29,9 +29,12 @@ The following functionality is available in the pane:
 * [Search](#search) – Enter a search string of alphanumeric characters to find a service, entity, or attribute in the Data Hub Catalog. Entities can be dragged from the search results into your domain model as external entities.
 * [Filter](#search) – By default, the search will search for services in production environments. Click the **Filter** icon to include non-production environments in the search.
 * [Search results](#viewing) – The items satisfying the search string will show the service name, service version, environment that the service was deployed to, and the entities in the service. Services and the entities that are currently being used in the current domain model are indicated with a green check-mark in the search results. You can drag entities from the search results into the domain model and use them as a data source for your app project.
-*   [View services consumed by your project](#viewing) – When no search string is specified, the consumed entities will be displayed for the project:
+
+When no search string has been specified, the **Project** pane displays the consumed services and the external entities used in the current project:
 
 ![Project Section](attachments/data-hub-pane/project-section.png)
+
+
 
 To add entities to your project model, see [Adding an External Entity to a Project](external-entities#adding-external-entities).
 
@@ -47,7 +50,7 @@ By default, the search is restricted to apps and services deployed to a producti
 
 ![Filter Icon](attachments/data-hub-pane/filter-icon.png)
 
-{{% todo %}}[8.14 graphic]{{% /todo %}}
+
 
 ## 3 Viewing Search Results {#viewing}
 

@@ -95,16 +95,22 @@ Currently, the binary data can only be accessed by Java actions.
 
 ## 4 Data Hub License Limitations{#license-limitations}
 
-Mendix Data Hub is a separately licensed product. The type of license that you have determines the total number of objects that can be requested from a consumed OData service *per day*.
+Mendix Data Hub is a separately licensed product. The type of license that you have determines the total number of data objects that can be requested from a consumed OData service *per day* for *each* runtime instance of an app.
 
-Without a license, the app will retrieve up to 1000 records from the OData service per day. After that limit is exceeded, an error will occur when users try to retrieve more data.
+There are two types of Data Hub licenses currently available:
 
-There are three main types of OData licenses:
+* **Default** – the standard Data Hub license enables you to retrieve a total of 1000 OData objects per day for each runtime instance
+* **Unlimited** – there is no limitation on the number of OData objects that can be consumed
 
-* **Unlimited** – there is no limitation on the number of OData objects consumed from the service
-* **Limited** – a specific limitation has been set for your Data Hub license and this is specified by the `limit` constraint
-* **Default** – the default Data Hub license is set to 1000 OData objects per day
+{{% todo %}}[add following bullet when that limited type of license is sold - the setting is implemented in 8.14 but not marketed - also establish if the `constraint` is visible somewhere for users or only back-end setting. Include x-ref to licesing: Limited– a specific limitation has been set for your Data Hub license and this is specified by the `limit` constraint. ]{{% /todo %}}
+
+{{% todo %}}[the following text was included in the source material but the directive for 8.14 is the above 2 bullets: Without a license, the app will retrieve up to 1000 records from the OData service per day. ]{{% /todo %}}
+
+ After that limit is exceeded, an error will occur when users try to retrieve more data.
 
 The number of consumed objects per day is reset at midnight in the timezone of the Mendix Runtime scheduler (which can be defined in the app [Project Settings](project-settings#scheduled)).
 
-{{% todo %}}[**AD: would be good to cross-reference a doc where licensing is discussed. Also, include how to contact Mendix in order to secure a license?**]{{% /todo %}}
+{{% alert type="warning" %}}
+Contact your Mendix Company Admin, or Data Hub Admin to find out what type of license your organization has.
+{{% /alert %}}
+

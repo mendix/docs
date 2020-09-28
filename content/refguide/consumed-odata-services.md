@@ -26,7 +26,7 @@ For details on the features that a published OData service must support and how 
 
 {{% todo %}}[ Consider moving this to External entities doc. or add x-ref . However, it is a summary and all the info is given elsewhere. Next iteration is to analyze all the available data and re-organize]{{% /todo %}}
 
-When you retrieve data from an external entity from an OData service, the OData service is called and the data is returned.
+When you use an OData service to retrieve data from an external entity, the OData service is called and the data is returned.
 
 When an external entity is used in an app project, the associated dataset for the entity is retrieved through the OData service and returned. These entities have some limitations compared to persistable entities:
 

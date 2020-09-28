@@ -1,9 +1,10 @@
 ---
-title: "External Entities"
-parent: "domain-model"
+title: "Data Hub Pane"
+parent: view-menu
 menu_order: 15
-tags: ["domain model", "entity", "entities", "attribute", "external entities", "even handler", "access rule", "studio pro", "consumed OData Service"]
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+description: "Describes the Data Hub pane in Mendix Studio Pro."
+tags: ["studio Pro", "data hub", "data hub pane", "data hub catalog"]
+
 ---
 
 {{% todo %}}[first draft after split from combined doc - therefore further editing/additiona required. Also for 8.14]{{% /todo %}}

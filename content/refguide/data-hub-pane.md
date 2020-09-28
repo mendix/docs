@@ -1,4 +1,11 @@
+---
+title: "Data Hub Pane"
+parent: "domain-model"
+menu_order: 15
+tags: ["domain model", "entity", "entities", "attribute", "external entities", "even handler", "access rule", "studio pro", "consumed OData Service"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 
+---
 
 {{% todo %}}[replace all graphics with 8.14 screens and improve on clarity of images]{{% /todo %}}
 
@@ -40,7 +47,7 @@ As you enter a search term, all the items in the Data Hub Catalog satisfying the
 The search strings must be a minimum of 3 alphanumeric characters. Punctuation cannot be used as part of the search term except for the `*` character to perform a wildcard search in the Data Hub Catalog. For further details, see [How to Search for Registered Assets](/data-hub/data-hub-catalog/search).
 {{% /alert %}}
 
-By default, the search is restricted to apps and services deployed to a production environment. To include non-production environments in the search, click the **Filter** icon and then **Show development environments**:
+By default, the search is restricted to apps and services deployed to a production environment. To include non-production environments in the search, click the **Filter** icon and check **Show development environments**:
 
 ![Filter Icon](attachments/data-hub-pane/filter-icon.png)
 
@@ -72,11 +79,9 @@ For all items satisfying the search string, the following information is display
   
   ![Data Hub Pane updaten](attachments/data-hub-pane/data-hub-pane-update.png)
   
-* Information icon to view further information on the service and to go directly to the **Service Details** page in the Data Hub Catalog: 
+* Information icon to view further information on the service and to go directly to the [Service Details](/data-hub/data-hub-catalog/search##search-details) screen in the Data Hub Catalog: 
 
   ![Data Hub Pane Information](attachments/data-hub-pane/data-hub-pane-info.png)
-
-  {{% todo %}}[**AD: can you cross-reference "Service Details" to the DHG?**]{{% /todo %}}
 
 If you right-click a consumed service, you can do the following:
 

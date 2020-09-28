@@ -30,7 +30,7 @@ The **Consumed OData Service** document that is added to the project displays th
   * **Switch** : shown if other registered instances of the same service  (the same name, from the same app) are available in Data Hub that are deployed to different endpoints (for example to another environment or because of changes that would break existing apps consuming the previous version).
 
     {{% alert type="info" %}}
-    Studio Pro will show the most relevant option (**Switch** or **Update**) after examining for service name, app and endpoint in the Data Hub Catalog. This will also be indicated in the Data Hub search pane for the consumed service with an update arrow. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document.
+    Studio Pro will show the most relevant option (**Switch** or **Update**) after examining the service name, app, and endpoint in the Data Hub Catalog. This will also be indicated in the Data Hub search pane for the consumed service with an update arrow. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document.
     {{% /alert %}} 
 
     {{% alert type="info" %}}

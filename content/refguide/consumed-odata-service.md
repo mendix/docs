@@ -44,7 +44,7 @@ The **Consumed OData Service** document that is added to the project displays th
 
 The **Connection** tab displays the connection values for the consumed OData service:
 
-### 2.1 Service URL {#service-url}
+### 2.2 Service URL {#service-url}
 
 The **Service URL** displays the URL of the service endpoint: 
 
@@ -55,13 +55,13 @@ The **Service URL** displays the URL of the service endpoint:
 
   ![Connection Tab](attachments/consumed-odata-service/consumed-service-constant.jpg)
 
-### 2.2 Timeout
+### 2.3 Timeout
 
 **Timeout** is the response time for fetching the data from the service endpoint. If the endpoint has not responded after the number of seconds in **Timeout (s)**, an exception will occur. If this happens during a microflow activity, the microflow will roll back or go into your custom [error handling](/howto/logic-business-rules/set-up-error-handling).
 
 Default value: *300 seconds*
 
-### 2.3 Proxy Configuration
+### 2.4 Proxy Configuration
 
 **Proxy configuration** allows you to configure whether to use a proxy for the request:
 
@@ -75,7 +75,7 @@ In most cases, this setting can be ignored, and the default **Use project settin
 
 {{% todo %}}[which project the current or the publishing??]{{% /todo %}}
 
-### 2.4 Authentication
+### 2.5 Authentication
 
 The **Use HTTP authentication** check box specifies if basic authentication should be used. If checked, you have to specify the following details:
 
@@ -84,7 +84,7 @@ The **Use HTTP authentication** check box specifies if basic authentication shou
 
 Besides basic authentication, you can use custom authentication. For more information, see the [HTTP Headers](#http-headers) section below.
 
-### 2.5 HTTP Headers {#http-headers}
+### 2.6 HTTP Headers {#http-headers}
 
 You can specify additional HTTP request headers to be passed to the endpoint in this list by clicking **Add**, **Edit**, or **Delete** for custom HTTP headers for authentication. Each custom header is a pair with a key and a value. 
 
@@ -135,7 +135,7 @@ Click the **Properties** tab for the consumed OData service which displayes the 
 * **Metadata** – the contents of the metadata file defining the service
 *  **OData version** – the OData version: Mendix supports consuming OData 3 and OData 4
 
-{{% todo %}}[ec-consumed OData Service requirments document - what are the differences between this and the virtual entities doc?]{{% /todo %}}
+{{% todo %}}[ec-consumed OData Service requirements document  what are the differences between this and the virtual entities doc?]{{% /todo %}}
 
 ## 4 Updating or Switching a Consumed OData Service {#updating}
 
@@ -183,7 +183,7 @@ When minor and major updates to a consumed service are detected in Data Hub the 
 
 ####  4.3.1. Update
 
-The **Update** option is available when a new minor version of a published OData service is issued, and deployed to the same endpoint as the previous version. Studio Pro will recognise that the contract at the endpoint is different to the one currently consumed in the project. 
+The **Update** option is available when a new minor version of a published OData service is issued, and deployed to the same endpoint as the previous version. Studio Pro will recognize that the contract at the endpoint is different to the one currently consumed in the project. 
 
 {{% alert type="info" %}}
 
@@ -211,9 +211,9 @@ In the **Data Hub** pane the search results for the same consumed service will s
 
 - Blue **Update** - click to open the **Update Service** box and update the contract to the new one. Studio Pro will retrieve the new contract from Data Hub and this will be loaded for the project.
 
-- The list of entities that are shown are the ones that were from the previous contract, including the consumed entities which are marked with a green check-mark. These entities are, however, greyed out, to indicate that they cannot be dragged into the domain model as they are from a previous version which is no longer available. The only option is to click **Update** to retrieve the updated OData Service. 
+- The list of entities that are shown are the ones that were from the previous contract, including the consumed entities which are marked with a green check-mark. These entities are, however, greyed out to indicate that they cannot be dragged into the domain model as they are from a previous version which is no longer available. The only option is to click **Update** to retrieve the updated OData Service. 
 
-{{% todo %}}[standarad colour screenshot to replace this after release]{{% /todo %}}
+{{% todo %}}[what is shown in the search results for a non-prod service which has a minor service update?? check with Paul/Faried after release and document further]{{% /todo %}}
 
 **Update Service Dialog Box**
 
@@ -237,17 +237,13 @@ You can only **Update** services that are deployed to *production* environments.
 
  {{% /alert %}}
 
+#### 4.3.3 Switching Consumed Services
 
+{{% todo %}}[change the example to changing to a major version rather than environment]{{% /todo %}}
 
+A published OData services that is deployed to multiple environments or is published with major service updates (and therefore deployed to a different endpoint) will be shown as separate items in the search results of the **Data Hub** pane. 
 
-
-
-
-{{% todo %}}[add screenshot of the the update arrow in the DH pane]{{% /todo %}}
-
-#### 4.3.2 Services Deployed to Multiple Environments
-
-When a published OData services is deployed to multiple environments, each deployment will  be to a different endpoint and therefore be shown as separate items in the search results of the **Data Hub** pane. In the following example, the consumed **OrderManagementService** version **1.0.0** deployed to a production environment is consumed in the app. However,  the same service is deployed to the **Acceptance** environment:
+In the following example, the consumed **OrderManagementService** version **1.0.0** deployed to a production environment is consumed in the app. However,  the same service is deployed to the **Acceptance** environment:
 
 ![major change environment](attachments/consumed-odata-service/consume-major-service-update.png)
 
@@ -257,13 +253,15 @@ To consume the service deployed to the **Acceptance environment**, follow these 
 
 	![major change environment](attachments/consumed-odata-service/update-switch.png)
 
-2. On the **Switch** dialog box, select from the drop-down list the service that you want to consume from and click **Switch**: 
+2. On the **Switch** dialog box, from the drop-down list, select the service that you want to consume from and click **Switch**: 
 
 	![major change environment](attachments/consumed-odata-service/switch-environment.png)
 
 3. The consumed service will now be consumed from the new selected environment. The information on the **Consumed OData Service** screen will display the changed service details and the **Data Hub** pane will now show that you are consuming from the selected environment: 
 
 	![major change environment dh pane](attachments/consumed-odata-service/switch-new-environment.png)
+
+{{% todo %}}[this is a bad example because the drop-down box should have shown version 2.0.0]{{% /todo %}}
 
 ## 4 Read More
 

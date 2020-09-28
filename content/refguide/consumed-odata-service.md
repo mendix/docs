@@ -51,7 +51,7 @@ The **Service URL** displays the URL of the service endpoint:
 * Click **Select** to select another [constant](/refguide/constants) for the service
 *  Click **Show** to display the **Constant** dialog box displaying the service URL or endpoint: 
 
-  {{% todo %}}[what does this do for the current consumed entities from the servcie - describe further]{{% /todo %}}
+  {{% todo %}}[what does this do for the current consumed entities from the service - describe further]{{% /todo %}}
 
   ![Connection Tab](attachments/consumed-odata-service/consumed-service-constant.jpg)
 
@@ -122,7 +122,7 @@ When you import the metadata, you can add virtual entities from the consumed ODa
 
 ### 3.2 Consumed OData Service Properties
 
-Click the **Properties** tab for the consumed OData service which displayes the properties that were defined for the OData service document and the following additional properties:
+Click the **Properties** tab for the consumed OData service which displays the properties that were defined for the OData service document and the following additional properties:
 
 ![](attachments/consumed-odata-service/consumed-odata-service-doc-properties.png)
 
@@ -219,7 +219,7 @@ In the **Data Hub** pane the search results for the same consumed service will s
 
 When you click **Update** on the **Consumed OData Service** document or the update icon in the **Data Hub ** and **Project** panes, the **Update **dialog box is displayed.
 
-{{% todo %}}[standarad colour screenshot to replace this after release]{{% /todo %}}
+{{% todo %}}[standard colour screenshot to replace this after release]{{% /todo %}}
 
 ![update service dhpane](attachments/consumed-odata-service/update-service-dialog-box.png)
 

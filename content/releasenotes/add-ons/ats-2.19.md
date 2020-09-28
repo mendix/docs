@@ -1,6 +1,6 @@
 ---
 title: "2.19"
-parent: "2"
+parent: "ats-2"
 ---
 
 ## 2.19

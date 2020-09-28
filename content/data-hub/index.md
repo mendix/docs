@@ -26,17 +26,27 @@ Mendix Data Hub has components to enable the flexible sharing of entities. The f
 
 ## 3 Roles in Data Hub
 
-In Mendix Data Hub, governance is the cornerstone. Curation of shared assets is essential for defining how the shared data assets can be used, identifying the relevance to end-users, ensuring that the resources can be found by the right users, and managing the accessibility, security and confidentiality levels of the shared data.
-
-{{% todo %}}[**AD: Is "end-user" used correctly above, meaning the end-user of an app built in Mendix, not just the user of the Mendix Platform/Data Hub? Also, the second sentence is quite long, with 4 clauses - consider breaking up?**]{{% /todo %}}
+In Mendix Data Hub, governance is the cornerstone. Curation of shared assets is essential for defining how the shared data assets can be used, identifying the relevance to users, ensuring that the resources can be found by the right users, and managing the accessibility, security and confidentiality levels of the shared data.
 
 This section describes the general Data Hub user as well as the assigned [Data Hub Admin](#admin) and [Data Hub Curator](#curator) roles.
 
-{{% todo %}}[**AD: Shouldn't the general user section come first?**]{{% /todo %}}
+### 3.1 Data Hub Users
 
-### 3.1 Data Hub Admin {#admin}
+The typical Mendix user is able to use the Data Hub Catalog to search and use registered services. Users can also register new services through published OData services, and as owners, users are able to have curation rights over their OData services.
 
-{{% todo %}}[**IG: pc197 - defines what these roles do**]{{% /todo %}}
+Data Hub users can do the following: 
+
+* Publish services and register them in the Data Hub Catalog from Studio Pro
+* Register published OData V4 Services for non-Mendix apps manually
+* Update the metadata such as descriptions, tags, and contact information of their own registered services
+* Owners can set the discoverability of their services, thereby publishing the service and the exposed entities for use by other users
+* See all the discoverable services and entities registered in their organization’s Data Hub Catalog and connect to the data by using the published entities as external entities in their apps in the Mendix Studios
+
+{{% alert type="info" %}}
+A user who publishes an OData service is the technical owner of the service and thereby has a [Data Hub Curator](#curator) role over their own services. If they have registered services which are not published and are non-discoverable, only they will be able to find and consume these services. 
+{{% /alert %}}
+
+### 3.2 Data Hub Admin {#admin}
 
 The Data Hub Admin role can carry out Data Hub operations and governance in collaboration with the organization's data stewards, security officers, and security architects. 
 
@@ -47,35 +57,19 @@ The Data Hub Admin can do the following:
 * Curate the Data Hub according to the organization's data governance policy
 * Access all the  registered assets in the Data Hub Catalog for the organization
 
-The Data Hub Admin for the current release of Data Hub is assigned by [Mendix Support](https://support.mendix.com/hc/en-us): please contact your support representative.
+The Data Hub Admin for the current release of Data Hub is assigned by [Mendix Support](https://support.mendix.com/hc/en-us): please contact your Mendix support contact.
 
-{{% todo %}}[**AD: What is the "support representative" to contact? Please verify how they should contact Support, whether they should file a Support request (and exactly which one), or contact their CSM.**]{{% /todo %}}
+### 3.3 Data Hub Curator {#curator}
 
-### 3.2 Data Hub Curator {#curator}
+The Data Hub Curator curates registered services in the Data Hub Catalog to ensure that registered services are visible to the relevant users and to enrich the information on registered assets. An organization can have several Data Hub Curators. 
 
-The Data Hub Curator curates registered services in the Data Hub Catalog to ensure that registered services are visible to the relevant users and to enrich the information on registered assets. 
-
-Curators are assigned by the the [Data Hub Admin](#admin) and an organization can have several Data Hub Curators.  That perform the following functions:
+Curators are assigned by the the [Data Hub Admin](#admin) and they perform the following functions:
 
 * Maintain registered OData services and manage versions
 * Ensure the discoverability of their entities by the relevant users
 * Enrich the metadata of registered services and entities – for example descriptions, tags, and contact information
 
-### 3.3 Data Hub Users
 
-The typical Mendix user is able to use the Data Hub Catalog to search and use registered services. Users can also register new services through published OData services, and as owners, users are able to have curation rights over their OData services.
-
-Data Hub users can do the following: 
-
-* Publish services and register them in the Data Hub Catalog from Studio Pro
-* Register published OData V4 Services for non-Mendix apps manually
-* Update the metadata such as descriptions, tags, and contact information of their own registered services
-	* In addition, owners can set the discoverability of their services, thereby publishing the service and the exposed entities for use by other users
-* See all the discoverable services and entities registered in their organization’s Data Hub Catalog and connect to the data by using the published entities as external entities in their apps in the Mendix Studios
-
-{{% alert type="info" %}}
-A user who publishes an OData service is the technical owner of the service and thereby has a [Data Hub Curator](#curator) role over their own services. If they have registered services which are not published and are non-discoverable, only they will be able to find and consume these services. 
-{{% /alert %}}
 
 ## 4 Guide Categories
 

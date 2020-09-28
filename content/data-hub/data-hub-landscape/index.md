@@ -77,8 +77,8 @@ For a service from a deployed app that is consumed by another deployed app—whe
 
 ![](attachments/use-landscape/dependencies.png)
 
-* **Solid gray line**: links an app and the services that have been published from the app in the specified environment. In the example, the selected app **MxAnniversery** has a published service, **AnniversaryService1.0.0**. 
-* **Broken gray line with an arrow (consume line)**: indicates that an app is consuming from a service to which it is linked. The direction of the dependency is indicated by the direction of the arrow, which indicates that the consuming app makes a call to the OData service for data from the publishing app – there is an arrow to the consuming app which is "pulling" the data.  The service will get the data for the endpoint that is consumed from the publishing app.
+* **Solid gray line** – This links an app and the services that have been published from the app in the specified environment. In the example, the selected app **MxAnniversery** has a published service, **AnniversaryService1.0.0**. 
+* **Broken gray line with an arrow (consume line)** – This indicates that an app is consuming from a service to which it is linked. The direction of the dependency is indicated by the direction of the arrow, which indicates that the consuming app makes a call to the OData service for data from the publishing app – there is an arrow to the consuming app which is "pulling" the data.  The service will get the data for the endpoint that is consumed from the publishing app.
 	* The app **MxAnniversery** consumes three entities through **ConcurExpenses 1.0.0**, which is published from **SAP Concur** in production.
 	* **MxAnniversery** consumes two entities through **BambooDataService 1.1.0**, which is published from the **Bamboo** app in production.
 

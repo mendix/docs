@@ -32,7 +32,7 @@ Users with the curator role can perform the following functions:
 
 * Maintain registered OData services and manage versions
 * Ensure the discoverability of their entities by the relevant users
-* Enrich the metadata of registered services and entities by adding additional information such as – for example descriptions, tags, and contact information
+* Enrich the metadata of registered services and entities by adding additional information (for example descriptions, tags, and contact information)
 
 ## 3 Data Hub Users
 

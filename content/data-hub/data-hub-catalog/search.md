@@ -169,7 +169,7 @@ When a service is selected, the full details of the service are displayed:
 
 * The name of the Service
 * The name of the environment to the app is deployed
-* The **Version ** number of the service
+* The **Version** number of the service
 * The number of connections (**Used in**)
 * A description of the entity as given in the service metadata or curated in the Data Hub Catalog
 * Clicking **Share Service** will copy the link to the service to the clipboard

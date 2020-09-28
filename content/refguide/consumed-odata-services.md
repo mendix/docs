@@ -34,7 +34,7 @@ When an external entity is used in an app project, the associated dataset for th
 * The aggregate functions (average, sum, maximum, minimum) cannot be used on external entities
 * There are certain limitations on XPath constraints for external entities (for instance, you cannot filter on an association between a persistable entity and an external entity)
 * External entities cannot be used in datasets
-* [XPath constraints](/refguide/xpath-constraints) in the access rules of external OData entities cannot be set
+* [XPath constraints](/refguide/xpath-constraints) in the access rules of external entities cannot be set
 
 Associations between external entities appear in the domain model. You can only use associations of which both sides are exposed.
 

@@ -60,7 +60,7 @@ OData services can be registered in the Data Hub Catalog in two ways:
 
 {{% todo %}}[Out for 0.21 release]{{% /todo %}}
 
-### 3.4 Curate—Maintaining Registered Assets
+### 3.4 Curate – Maintaining Registered Assets
 
 Registered services can be curated in the Data Hub Catalog to ensure that they are discoverable by the relevant users. Findability of registered assets can be enhanced by adding tags and descriptions to the services.
 

@@ -20,7 +20,7 @@ For further details on the consumed OData service document and updating consumed
 Mendix Data Hub is a licensed product. Using external entities to consume OData services requires a license, and the type of license you have will define how many data records can be consumed.  For further details, see the [Data Hub License Limitations](consumed-odata-service-requirements#license-limitations) section of *Consumed OData Service Requirements*. To find out more about your Data Hub license, contact [Mendix Support](https://support.mendix.com).
 {{% /alert %}}
 
-For details on the features that a published OData service must support as well as how the conversion from and to the Mendix data model works, see [Consumed OData Service Requirements](consumed-odata-service-requirements).
+For details on the features that a published OData service must support and how the conversion from and to the Mendix data model works, see [Consumed OData Service Requirements](consumed-odata-service-requirements).
 
 ## 2 OData Services and External Entities
 

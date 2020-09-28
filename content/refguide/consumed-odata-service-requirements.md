@@ -67,7 +67,7 @@ When the OData endpoint contains operations, these are not imported in the consu
 
 <sup><small>[1]</small></sup>: In Mendix, Booleans cannot be null. If the service returns null, the value will be false in Mendix.
 
-<sup><small>[2]</small></sup>: Decimal values outside of the range of a Mendix decimal are currently not supported. When the service returns a value outside of the range, there will be an error.
+<sup><small>[2]</small></sup>: Decimal values outside of the range of a [Mendix decimal](attributes#type) are currently not supported. If the service returns a value outside of the range, there will be an error.
 
 ### 3.3 Generalizations
 

@@ -23,9 +23,9 @@ In the Landscape, you to see at a glance the deployments of the apps publishing 
 
 {{% todo %}}[**AD: "See" used three times and "acertain" twice - consider using some synomyms**]{{% /todo %}}
 
-You can access the Data Hub Landscape from the [Mendix Data Hub](https://hub.mendix.com/) by clicking the **Landscape** tab.  
+You can access the Data Hub Landscape from the [Mendix Data Hub](https://hub.mendix.com/) by clicking the **Landscape** tab.
 
-## 2 The Data Hub Landscape in Detail
+## 2 Data Hub Landscape in Detail
 
 ### 2.1 Structure and Flow of Data
 
@@ -84,11 +84,11 @@ For a service from a deployed app that is consumed by another deployed app—whe
 
 The network of dependencies that is shown will show the selected item at the center of the Landscape view. 
 
-### 2.4 Node Details
+### 2.5 Node Details
 
 Clicking a node will display details of the node in the **Metadata** pane. You see further details in the **Search Details** screen by clicking the **Catalog** tab. Conversely, in the **Search Details** screen, you can click the **Landscape** tab to see the network of dependencies for the selected item. 
 
-### 2.5 Consumed Entities
+### 2.6 Consumed Entities
 
 If you click the **Entity** icon on the consume line, the names of the entities that are being consumed from the service will be shown in the right panel.
 

@@ -52,7 +52,7 @@ Attribute types have to be primitive (not complex, collections, or enumerations)
 
 | OData Type | Mendix Type |
 | --- | --- |
-| Binary                         | Binary (but see 2.4) |
+| Binary                         | Binary (but see 3.4) |
 | Boolean                        | Boolean <sup><small>[1]</small></sup> |
 | Byte, SByte, Int16, Int32      | Integer |
 | DateTime, DateTimeOffset, Time | Date/time |

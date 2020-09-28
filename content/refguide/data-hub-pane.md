@@ -1,9 +1,9 @@
 ---
 title: "Data Hub Pane"
-parent: "domain-model"
+parent: view-menu
 menu_order: 15
-tags: ["domain model", "entity", "entities", "attribute", "external entities", "even handler", "access rule", "studio pro", "consumed OData Service"]
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+description: "Describes the Data Hub pane in Mendix Studio Pro."
+tags: ["studio Pro", "data hub", "data hub pane", "data hub catalog"]
 
 ---
 
@@ -51,7 +51,9 @@ By default, the search is restricted to apps and services deployed to a producti
 
 ![Filter Icon](attachments/data-hub-pane/filter-icon.png)
 
-
+{{% alert type="info" %}}
+When the development environments setting is checked, all subsequent searches will include search in non-production environments. 
+{{% /alert %}}
 
 ## 3 Viewing Search Results {#viewing}
 
@@ -100,4 +102,5 @@ If you right-click a consumed entity and **Go to entity**, the domain model will
 
 * [Data Hub Catalog](/data-hub/data-hub-catalog)
 * [External Entities](external-entities)
+* [Consumed OData Service](consumed-odata-service.md)
 * [How to Consume Registered Assets](/data-hub/data-hub-catalog/consume)

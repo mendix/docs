@@ -229,7 +229,7 @@ The consumed Odata service that is currently consumed in the project (**1.0.11) 
 
 When an OData service is published to a different endpoint or to a different environment this will mean that it will be registered as a different asset in the Data Hub Catalog. 
 
-In the example given in the [Consuming from Service Endpoints]({#consume-service-endpoints) section above, if you are consuming the service from the **Acceptance** environment, the Consumed OData service screen will display the **Switch** button to enable you to consume the same service from the **Production**. 
+In the example given in the [Consuming from Service Endpoints](#consume-service-endpoints) section above, if you are consuming the service from the **Acceptance** environment, the Consumed OData service screen will display the **Switch** button to enable you to consume the same service from the **Production**. 
 
 {{% alert type="info" %}}
 

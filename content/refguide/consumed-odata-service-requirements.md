@@ -7,7 +7,7 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% todo %}}[edit further and add x-refs, and notify https://gitlab.rnd.mendix.com/integration/integration.wiki/-/blob/master/refguide/consumed-odata-services.md that this version is now the latest. Compare to information published in the DH guide for repetitions and add x-refs. Can this be integrated into intro doc?]{{% /todo %}}
+{{% todo %}}[Compare to information published in the DH guide for repetitions and add x-refs. Can this be integrated into intro doc?]{{% /todo %}}
 
 ## 1 Introduction
 
@@ -96,7 +96,7 @@ There are two types of Data Hub licenses currently available:
 
 {{% todo %}}[add following bullet when that limited type of license is sold - the setting is implemented in 8.14 but not marketed - also establish if the `constraint` is visible somewhere for users or only back-end setting. Include x-ref to licesing: Limited– a specific limitation has been set for your Data Hub license and this is specified by the `limit` constraint. ]{{% /todo %}}
 
-{{% todo %}}[the following text was included in the source material but the directive for 8.14 is the above 2 bullets: Without a license, the app will retrieve up to 1000 records from the OData service per day. ]{{% /todo %}}
+{{% todo %}}[the following text was included in the source material but the directive for 8.14 is the above 2 bullets: Without a license, the app will retrieve up to 1000 records from the OData service per day.  Also Joost ]{{% /todo %}}
 
  After that limit is exceeded, an error will occur when users try to retrieve more data.
 

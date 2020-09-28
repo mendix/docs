@@ -28,11 +28,10 @@ For Mendix apps that publish entities and those that consume shared entities in 
 	{{% alert type="info" %}}The security for an OData service can only be set if the [project security](/refguide/project-security) is enabled.
 	{{% /alert %}}
 
-* Classification of the data associated with the entities is defined in the service metadata and shown in the **Service Metadata** pane of the **Search Details** screen. This is further discussed below.
-
-	{{% todo %}}[**AD: verify that "Service Metadata" and "Search Details" are in the UI to justify capitalizing and bolding those terms; add cross-references to page/details on that pane and that screen; "This is further discussed below" is not an appropriate cross-reference - add a link to an anchored section and standardize: "For details, see..."**]{{% /todo %}} 
+* Classification of the data associated with the entities is defined in the service metadata and shown in the [Service Metadata](search#metadata) panel of the **Search Details** screen. This is further discussed below.
 
 * Through the identification protocols used for establishing the user identity, the security rules for the user in the publishing app are applied
+	
 	* On the Mendix Platform, this is [Mendix SSO](/developerportal/deploy/mendix-sso),  but it can also be the organization's identification protocol
 *  In the publishing app in Studio Pro, access can be defined at the entity level as follows:
 	* None
@@ -48,9 +47,7 @@ OData services registered in the Data Hub Catalog have the following classificat
 * **Public**  – data is available to all internal and external users
 * **Internal**  – data is restricted to the members of the organization
 
-The classification of the asset indicates the runtime security on the data and defines what application users are allowed to see and use when running their application.
-
-{{% todo %}}[**AD: "application" used twice above is a little confusing - is there another way to put that?**]{{% /todo %}} 
+The classification of the asset indicates the runtime security on the data and defines what users are allowed to see and use when running their application.
 
 The classification for a registered OData service is shown in the **Service Metadata** panel in the Data Hub Catalog. This classification applies to access to the data associated with the service or entity by end-users of the app that consumes the entity. 
 
@@ -58,18 +55,14 @@ The classification for a registered OData service is shown in the **Service Meta
 
 ## 4 Using Custom HTTP Header Validation for Published Entities {#http-header-validation}
 
-{{% todo %}}[**EC: To be further verified and graphics and screenshots replaced**]{{% /todo %}} 
-
-For an example of how to implement authentication using security assertion markup language (SAML) and Active Directory Federation Services (ADFS),  the following illustrates how to use a custom HTTP headers microflow and a custom HTTP validation microflow to generate, set, and validate authentication tokens.
-
-{{% todo %}}[**AD: what is "the following" referring to above? The following "steps"? The next sentence describes another "following." If the referent doesn't immediately follow "the following," use "below," as in, "the steps below." Please clarify.**]{{% /todo %}} 
+For an example of how to implement authentication using security assertion markup language (SAML) and Active Directory Federation Services (ADFS),  the following procedure illustrates how to use a custom HTTP headers microflow and a custom HTTP validation microflow to generate, set, and validate authentication tokens.
 
 The following steps describe how the security proposal is set with 
 [ADFS](https://docs.microsoft.com/en-us/windows-server/identity/active-directory-federation-services) and the [SAML](/appstore/modules/saml) Mendix App Store module:
 
 ![](attachments/security/federation-with-ADFS-SAML-schematic.png)
 
-{{% todo %}}[**IG: PM approves - this is in progress**]{{% /todo %}}
+{{% todo %}}[anida to generate a new one]{{% /todo %}}
 
 1. The app end-user logs into an app that uses external entities.
 2. The end-user is not yet authenticated, so the SAML module forwards the user to ADFS for authentication.

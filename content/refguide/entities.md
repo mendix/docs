@@ -44,6 +44,8 @@ Non-persistable entities are stored in the runtime memory and never get committe
 
 ### 2.3 External Entity {#external-entity}
 
+{{% todo %}}[AD: shouldn't this part be removed now that this is a separate doc parallel to and a child of Entities?]{{% /todo %}}
+
 {{% alert type="info" %}}
 Mendix Data Hub is a premium product and only accessible to users that have a license.
 {{% /alert %}}

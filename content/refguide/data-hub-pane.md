@@ -1,10 +1,4 @@
----
-title: "Data Hub Pane"
-parent: view-menu
-menu_order: 15
-description: "Describes the Data Hub pane in Mendix Studio Pro."
-tags: ["studio Pro", "data hub", "data hub pane", "data hub catalog"]
----
+
 
 {{% todo %}}[replace all graphics with 8.14 screens and improve on clarity of images]{{% /todo %}}
 
@@ -57,21 +51,30 @@ By default, the search is restricted to apps and services deployed to a producti
 For all items satisfying the search string, the following information is displayed:
 
 * Service name
-*  An icon indicating the source of the service (Mendix, SAP, Siemens Teamcenter, or another non-Mendix app)
+
+*  An icon indicating the source of the service (Mendix, SAP, Siemens Teamcenter, or other non-Mendix apps)
 
   {{% todo %}}[list the icon types]{{% /todo %}}
 
 * Service version
+
 *  The name of the environment that the service is deployed to (for non-production environments)
 
   {{% alert type="info" %}}By default, search results will show deployments to production environments which will not be named in the search results. Only the names of non-production environments will be displayed.{{% /alert %}}
 
-  {{% todo %}}[Blue arrow????? Update]{{% /todo %}}
-
 * Green check-mark if the service or entity is already consumed by the project
-*  Information icon to view further information on the service and to go directly to the **Service Details** page in the Data Hub Catalog: 
 
-  ![Data Hub Pane Information](attachments/data-hub-pane/data-hub-pane-info.png)
+*  Blue **Update Service** icon to indicate that there is a later version of the consumed service available in the Data Hub. Click to update the service that is consumed in the project to the contract that is now available
+
+  {{% alert type="info" %}}If there is an OData Service update available, then the entities that are listed are those that are available in the currently consumed OData service. These entities will be "grayed-out" to indicate that they can no longer be dragged into the domain model as the originial contract is no longer available in the Data Hub Catalog and a different version of the consumed OData service must be retrieved using the **Update** button. Once the service has been **Updated** then the entities will be available from the new version of the Consumed OData service. {{% /alert %}}
+
+  {{% alert type="info" %}}The version number that is shown for the OData service is the latest one that is available in the Data Hub Catalog—in the example below version 1.0.11 of **Theatre_service** is currently consumed in the project, but version **1.0.12** is now available in the Data Hub Catalog.{{% /alert %}}
+  
+  ![Data Hub Pane updaten](attachments/data-hub-pane/data-hub-pane-update.png)
+  
+* Information icon to view further information on the service and to go directly to the **Service Details** page in the Data Hub Catalog: 
+* 
+* ![Data Hub Pane Information](attachments/data-hub-pane/data-hub-pane-info.png)
 
   {{% todo %}}[**AD: can you cross-reference "Service Details" to the DHG?**]{{% /todo %}}
 

@@ -67,9 +67,14 @@ In the **Data Hub** tab, you can do the following:
     
 * **View services used by your project** – services that are already used in your project are marked with a green check-mark.
 
-* **Update services** – when a new version of the service is available, you can update it. However, it is best to check out the changes made to the service in the Data Hub Catalog first by clicking **Show Changes**. 
+* **Update services** – when a new version of the service is available, you can update it. However, it is best to check out the changes made to the service in the Data Hub Catalog first. 
 
-    ![Service Update](attachments/data-hub-in-studio/service-update.png)
+    ![Update Available](attachments/data-hub-in-studio/service-update.png)
+
+    Click the drop-down menu to choose the following options:
+
+    * **Update Now** – allows you to update the service to a new version.
+    * **Show Changes** – takes you to the Data Hub Catalog where you can check what has been changed in the service.  
 
 * **View external entities available within the service** – you can expand the service information to see which external entities are available.
 
@@ -91,9 +96,6 @@ In the **Data Hub** tab, you can do the following:
     
         ![Service Information](attachments/data-hub-in-studio/service-information.jpg)
 
-  
-
-  
 
 ## 3 External Entity Properties
 

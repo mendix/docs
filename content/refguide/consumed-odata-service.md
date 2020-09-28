@@ -11,32 +11,25 @@ tags: ["studio pro", "data hub", "odata service", "consumed odata service"]
 
 When an external entity is used in a project module through the [Data Hub pane](data-hub-pane) , a consumed OData service document is added specifying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.
 
-## 2 Consume OData Service screen
+## 2 Consume OData Service Screen
 
 The **Consumed OData Service** document that is added to the project displays the following information:
 
 ![Connection Tab](attachments/consumed-odata-service/consumed-odata-doc-connection-tab.png)
 
-* Service Name and the icon for the source application of the originating app
-
-* Version number of the Consumed service
-
-* Link to the **Service Details** in the **Data Hub Catalog** where you can see full service details that are registered
-
-* **Update/Switch**: you can update the consumed service contract to another version that has been detected in Data Hub for the same app and service. The button will show the following depending on what has been returned for the consumed contract in Data Hub:
-
-  * **Update**: displayed if a new service contract has been detected at the same service endpoint which is different to the one that is currently used in the project (and shown in the **Consumed OData Service** document). This may be a new service version that has minor non-breaking changes to the previous version and therefore deployed by the publisher to the same service endpoint. 
-
-  * **Switch** : shown if other registered instances of the same service  (the same name, from the same app) are available in Data Hub that are deployed to different endpoints (for example to another environment or because of changes that would break existing apps consuming the previous version).
-
-    {{% alert type="info" %}}
-    Studio Pro will show the most relevant option (**Switch** or **Update**) after examining for service name, app and endpoint in the Data Hub Catalog. This will also be indicated in the Data Hub search pane for the consumed service with an update arrow. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document.
-    {{% /alert %}} 
-
-    {{% alert type="info" %}}
-    In the **Data Hub** pane consumed services that have an available **Update** will have an update arrow to indicate this:
-
-    ![update service dhpane](attachments/consumed-odata-service/data-hub-pane-update-available.png){{% /alert %}} 
+* Service name and the icon for the source application of the originating app
+* Version number of the consumed service
+* A **View in Data Hub Catalog** link to the **Service Details** where you can see full service details that are registered
+* **Update/Switch** – you can update the consumed service contract to another version that has been detected in Data Hub for the same app and service; the button will show the following, depending on what has been returned for the consumed contract in Data Hub:
+	* **Update** – displayed if a new service contract has been detected at the same service endpoint that is different to the one that is currently used in the app project (and shown in the **Consumed OData Service** document); this may be a new service version that has minor non-breaking changes to the previous version and therefore deployed by the publisher to the same service endpoint
+	* **Switch** – shown if other registered instances of the same service  (the same name, from the same app) are available in Data Hub and are deployed to different endpoints (for example, to another environment, or because of changes that would break existing apps consuming the previous version)
+	
+	{{% alert type="info" %}}Studio Pro will show the most relevant option (**Switch** or **Update**) after examining for service name, app and endpoint in the Data Hub Catalog. This will also be indicated in the Data Hub search pane for the consumed service with an update arrow. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document.
+{{% /alert %}} 
+	
+	{{% alert type="info" %}}In the **Data Hub** pane consumed services that have an available **Update** will have an update arrow to indicate this:<br />
+	
+	![update service dhpane](attachments/consumed-odata-service/data-hub-pane-update-available.png){{% /alert %}} 
 
 ### 2.1 Connection Tab
 
@@ -139,13 +132,13 @@ Click the **Properties** tab for the consumed OData service which displayes the 
 
 ### 4.1 Consuming from Service Endpoints
 
-When you add an external entity to your project, you are consuming the entity from a specific version of a service (the *service endpoint*), deployed to a given environment. The metadata file or contract for the service is located at this endpoint. 
+When you add an external entity to your project, you are consuming the entity from a specific version of a service (the *service endpoint*) that is deployed to a given environment. The metadata file or contract for the service is located at this endpoint. 
 
-The same service, deployed to a different environment will be to a different service endpoint and this will be registered as a different asset in the Data Hub Catalog. In the following example, there are two endpoints for the **CustomerApi service version 1.1.0** which is deployed to the production environment and the **Acceptance** environment: 
+The same service deployed to a different environment will be to a different service endpoint, and this will be registered as a different asset in the Data Hub Catalog. In the following example, there are two endpoints for the **CustomerApi service version 1.1.0**, which is deployed to the production environment and the **Acceptance** environment: 
 
 ![2 endpoints](attachments/consumed-odata-service/same-service-different-endpoints.png)
 
-When you drag the **Customer** entity from **CustomerApi version 1.0.0** deployed to the **Acceptance** environment into your project, Studio Pro will retrieve the information it requires from the contract that is at the endpoint. This includes the information for consuming the dataset for **Customer**.
+When you drag the **Customer** entity from **CustomerApi version 1.0.0** deployed to the **Acceptance** environment into your app project, Studio Pro will retrieve the information it requires from the contract that is at the endpoint. This includes the information for consuming the dataset for **Customer**.
 
 ### 4.2 Update or Switch
 

@@ -1,7 +1,7 @@
 ---
 title: "Data Hub in Studio"
 description: "Describes the Data Hub Catalog usage in Mendix Studio."
-menu_order: 25
+menu_order: 110
 tags: ["studio", "data hub", "data hub catalog", "external entities"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -33,16 +33,16 @@ You can select external entities as a data source for data containers (a data vi
 3. In the **Select Entity** dialog box, you can search for external entities in the Data Hub Catalog and use them on your page. There are two ways to discover entities, you can do one of the following:
     1. **Search for a specific service or entity name** – enter a search term in the search field to find an entity you would like to add:
 
-        ![Searching for an Entity](attachments/data-hub/searching-for-entity.png)
+        ![Searching for an Entity](attachments/data-hub-in-studio/searching-for-entity.png)
         
     2. **Browse through available data** – click the **Data Hub** section and browse through available services and entities:
     
-        ![Selecting an Entity](attachments/data-hub/selecting-entity.png)
+        ![Selecting an Entity](attachments/data-hub-in-studio/selecting-entity.png)
 
 3. Click **Select**.
 
 The selected external entity will be added to your domain model automatically together with all integration and security settings. 
-![Domain Model](attachments/data-hub/domain-model-example.png)
+![Domain Model](attachments/data-hub-in-studio/domain-model-example.png)
 
 When you [publish your app](publishing-app), you can see that the data from the external entity is shown in your app. 
 
@@ -52,7 +52,7 @@ When you [preview your app](publishing-app), you will see data from the external
 
 The **Data Hub** tab of the **Select Entity** dialog box shows you a list of services that expands to a list of entities available for your organization:
 
-![Data Hub Section Diagram](attachments/data-hub/data-hub-tab-diagram.png)
+![Data Hub Section Diagram](attachments/data-hub-in-studio/data-hub-tab-diagram.png)
 
 In the **Data Hub** tab, you can do the following:
 
@@ -69,7 +69,7 @@ In the **Data Hub** tab, you can do the following:
 
 * **Update services** – when a new version of the service is available, you can update it. However, it is best to check out the changes made to the service in the Data Hub Catalog first by clicking **Show Changes**. 
 
-    ![Service Update](attachments/data-hub/service-update.png)
+    ![Service Update](attachments/data-hub-in-studio/service-update.png)
 
 * **View external entities available within the service** – you can expand the service information to see which external entities are available.
 
@@ -89,7 +89,7 @@ In the **Data Hub** tab, you can do the following:
     
     * **View in Data Hub Catalog** – a link to the Data Hub Catalog of your organization.
     
-        ![Service Information](attachments/data-hub/service-information.jpg)
+        ![Service Information](attachments/data-hub-in-studio/service-information.jpg)
 
   
 
@@ -99,17 +99,17 @@ In the **Data Hub** tab, you can do the following:
 
 External entities are colored *purple* in the domain model:
 
-![External Entity](attachments/data-hub/external-entity.png)
+![External Entity](attachments/data-hub-in-studio/external-entity.png)
 
 When you add external entities to your app, it is possible to make local changes to the entity, such as change its name. However, these changes are limited and will only apply to your app. Most of the properties of external entities are read-only as they are defined in the source app (this ensures that you will not accidently change the data in the source app):
 
-![External Entity Properties](attachments/data-hub/external-entity-properties.png)  
+![External Entity Properties](attachments/data-hub-in-studio/external-entity-properties.png)  
 
 ### 3.1 External Entity Attributes
 
 You can rename external entity attributes to better fit your app structure. It will still be the same attribute containing the same data, meaning that this change will be local to your app and not affect the source app. All other properties, except the **Name** property, are read-only. 
 
-![Properties of External Entity Attribute](attachments/data-hub/external-attribute-properties.png)
+![Properties of External Entity Attribute](attachments/data-hub-in-studio/external-attribute-properties.png)
 
 {{% alert type="info" %}}
 
@@ -125,7 +125,7 @@ You can create and edit associations only between a local entity and an external
 
 For example, you can create an association from a local entity **Order** to an external entity **Customer**:
 
-![External Association Example](attachments/data-hub/association-example.png)
+![External Association Example](attachments/data-hub-in-studio/association-example.png)
 
 You cannot change or delete this association. It is also not possible to create an association between two external entities that do not have an association in the source app. 
 

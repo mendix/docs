@@ -11,9 +11,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-This document describes the requirements for an OData service that is going to be consumed. These requirements are not further verified at runtime and expected to hold however, if they are not met may result in errors.
-
-{{% todo %}}[**AD: wondering if "requirements expected to hold" is clear enough here?**]]{{% /todo %}}
+This document describes the requirements for an OData service that is going to be consumed. These requirements are not further verified at runtime and expected to hold. If these requirements are not met, errors may result.
 
 ## 2 Requirements for a Consumed OData Service
 
@@ -47,9 +45,7 @@ Furthermore, an entity can only be used if it is uniquely identifiable with a ke
 ### 3.2 Attributes
 
 {{% alert type="warning" %}}
-
 Attributes marked as `FC_KeepInContent=false` cannot be used.
-
 {{% /alert %}}
 
 Attribute types have to be primitive (not complex, collections or enumerations). The types of the attributes in your app will be based on the types of the attributes in the OData metadata, as given in the following table:
@@ -93,7 +89,7 @@ Currently, the binary data can only be accessed by Java actions.
 
 {{% todo %}}[Following to be finalized depending on final licensing decisions and also has to incorporate, trial and freemium users -  ]{{% /todo %}}
 
-## 4 Data Hub License Limitations{#license-limitations}
+## 4 Data Hub License Limitations {#license-limitations}
 
 Mendix Data Hub is a separately licensed product. The type of license that you have determines the total number of data objects that can be requested from a consumed OData service *per day* for *each* runtime instance of an app.
 

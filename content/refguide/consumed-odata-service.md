@@ -38,8 +38,6 @@ The **Consumed OData Service** document that is added to the project displays th
 
     ![update service dhpane](attachments/consumed-odata-service/data-hub-pane-update-available.png){{% /alert %}} 
 
-  
-
 ### 2.1 Connection Tab
 
 The **Connection** tab displays the connection values for the consumed OData service:
@@ -147,15 +145,13 @@ The same service, deployed to a different environment will be to a different ser
 
 ![2 endpoints](attachments/consumed-odata-service/same-service-different-endpoints.png)
 
-
-
 When you drag the **Customer** entity from **CustomerApi version 1.0.0** deployed to the **Acceptance** environment into your project, Studio Pro will retrieve the information it requires from the contract that is at the endpoint. This includes the information for consuming the dataset for **Customer**.
 
 ### 4.2 Update or Switch
 
 When a new version of a published OData service is issued, the publisher can specify if the new service version is deployed to the same endpoint so that users who are consuming the service will have access to the latest service contract. In this case, in Studio Pro, the consumed OData service can be **Updated** to the new contract published to the same endpoint that is already being consumed. 
 
-Alternatively, an OData service can be published to a different endpoint so that it would appear as a different asset in the Data Hub Catalog. 
+Alternatively, you can publish an OData service to a different endpoint so that it would appear as a different asset in the Data Hub Catalog. 
 
 In the example given above, while developing an app, the service that is deplyed to **Acceptance** can be consumed and thus use the acceptance environment dataset. However, once development is completed, the user can consume the same service from the **Production** and thus connect to the production dataset. 
 
@@ -163,12 +159,12 @@ In Studio Pro, this can be achieved simply by using **Switch** to consume the sa
 
 The **Consume OData Service** document **Update** button
 
-#### 4.3.1 Major and Minor Service Versions
+#### 4.2.1 Major and Minor Service Versions
 
-It is important that the publishers of the services use a strict versioning system, for example semantic numbering, when issuing updates to their apps. We recommend that the service version should clearly indicate the level and severity of the changes that have been made when a service is updated and deployed according to the following guidelines: 
+It is important that the publishers of the services use a strict versioning system (for example, semantic numbering) when issuing updates to their apps. We recommend that the service version clearly indicates the level and severity of the changes that have been made when a service is updated and deployed according to the following guidelines: 
 
-* *Major* service updates (for example, when entities or attributes are removed, or input parameters are required) which would be incompatible for the consuming apps and result in the consuming app "breaking". When a major change has been made to a published service we recommend that the service is deployed to a different endpoint (with the service version number clearly indicating that there has been a major change). In this case this service will be registered in the Data Hub Catalog as a different service, and show up in the search results as a separate asset. Using semantic number, a major change would be indicated with an ***
-* *Minor* service updates (for example,  additional fields are added to the service or new operations included) which would not break apps that consumed the previous versions. Minor service updates can be deployed to the same service endpoints, thereby ensuring that all consuming apps consume the latest version of the service. 
+* *Major* service updates (for example, when entities or attributes are removed, or input parameters are required) will be incompatible for the consuming apps and result in the consuming app "breaking". When a major change has been made to a published service, we recommend that the service is deployed to a different endpoint (with the service version number clearly indicating that there has been a major change). In this case this service will be registered in the Data Hub Catalog as a different service and show up in the search results as a separate asset. Using semantic number, a major change would be indicated with an `*`.
+* *Minor* service updates (for example, additional fields are added to the service or new operations included) will not break the apps that consumed the previous versions. Minor service updates can be deployed to the same service endpoints, thereby ensuring that all consuming apps consume the latest version of the service. 
 
 In the **Data Hub** pane,  a *minor* update that is available for a consumed service  is indicated with an "update" arrow for the service. This means that the service can be **Updated** in the **Consumed OData Service** screen.
 
@@ -182,9 +178,9 @@ If the same service has been deployed to a different service endpoint, indicatin
 
 {{% todo %}}[add screenshot of the the update arrow in the DH pane]{{% /todo %}}
 
-#### 4.3.2 Services Deployed to Multiple Environments
+#### 4.2.2 Services Deployed to Multiple Environments
 
-When a published OData services is deployed to multiple environments, each deployment will  be to a different endpoint and therefore be shown as separate items in the search results of the **Data Hub** pane. In the following example, the consumed **OrderManagementService** version **1.0.0** deployed to a production environment is consumed in the app. However,  the same service is deployed to the **Acceptance** environment:
+When a published OData services is deployed to multiple environments, each deployment will  be to a different endpoint and therefore be shown as separate items in the search results of the **Data Hub** pane. In the following example, the consumed **OrderManagementService** version **1.0.0** deployed to a production environment is consumed in the app. However, see here for the same service is deployed to the **Acceptance** environment:
 
 ![major change environment](attachments/consumed-odata-service/consume-major-service-update.png)
 

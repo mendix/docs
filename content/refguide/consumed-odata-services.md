@@ -17,9 +17,7 @@ Mendix Data Hub enables integration of available data sources from different sou
 For further details on the consumed OData service document and updating consumed OData services in your project, see [Consumed OData Service](consumed-odata-service).
 
 {{% alert type="info" %}}
-
-Mendix Data Hub is a licensed product. Using external entities to consume OData services requires a license and the type of license you have will defined how many data records can be consumed.   For further details see [Data Hub License Limitation](consumed-odata-service-requirements#license-limitations). To find out more about your Data Hub License contact [Menidx Support](https://support.mendix.com).
-
+Mendix Data Hub is a licensed product. Using external entities to consume OData services requires a license, and the type of license you have will define how many data records can be consumed.  For further details, see the [Data Hub License Limitations](consumed-odata-service-requirements#license-limitations) section of *Consumed OData Service Requirements*. To find out more about your Data Hub license, contact [Menidx Support](https://support.mendix.com).
 {{% /alert %}}
 
 For details on the features that a published OData service must support as well as how the conversion from and to the Mendix data model works, see [Consumed OData Service Requirements](consumed-odata-service-requirements).
@@ -32,7 +30,7 @@ For details on the features that a published OData service must support as well 
 
 When you retrieve data from an external entity from an OData service, the OData service is called and the data is returned.
 
-When an external entity is used in a project, the associated data set for the entity is retrieved through the OData service and returned. These entities have some limitations compared to persistent entities:
+When an external entity is used in an app project, the associated dataset for the entity is retrieved through the OData service and returned. These entities have some limitations compared to persistable entities:
 
 * External entities are read-only
 * The aggregate functions (average, sum, maximum, minimum) cannot be used on external entities

@@ -65,7 +65,7 @@ Attribute types have to be primitive (not complex, collections, or enumerations)
 When the OData endpoint contains operations, these are not imported in the consumed OData service. You can use a [Call REST service](call-rest-action) activity to call these operations.
 {{% /alert %}}
 
-<sup><small>[1]</small></sup>: In Mendix, Booleans cannot be null. When the service returns null, the value will be false in Mendix.
+<sup><small>[1]</small></sup>: In Mendix, Booleans cannot be null. If the service returns null, the value will be false in Mendix.
 
 <sup><small>[2]</small></sup>: Decimal values outside of the range of a Mendix decimal are currently not supported. When the service returns a value outside of the range, there will be an error.
 

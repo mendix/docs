@@ -139,7 +139,7 @@ Click the **Properties** tab for the consumed OData service which displayes the 
 
 ## 4 Updating or Switching a Consumed OData Service {#updating}
 
-### 4.1 Consuming from Service Endpoints
+### 4.1 Consuming from Service Endpoints{#consume-service-endpoints}
 
 When you add an external entity to your project, you are consuming the entity from a specific version of a service (the *service endpoint*), deployed to a given environment. The metadata file or contract for the service is located at this endpoint. 
 
@@ -149,17 +149,19 @@ The same service, deployed to a different environment will be to a different ser
 
 
 
-When you drag the **Customer** entity from **CustomerApi version 1.0.0** deployed to the **Acceptance** environment into your project, Studio Pro will retrieve the information it requires from the contract that is at the endpoint. This includes the information for consuming the dataset for **Customer**.
+When you drag the **Customer** entity from **CustomerApi version 1.0.0** deployed to the **Acceptance** environment into your project, Studio Pro will retrieve the information it requires from the contract that is at the endpoint. 
 
 ### 4.2 Update or Switch
 
-When a new version of a published OData service is issued, the publisher can specify if the new service version is deployed to the same endpoint so that users who are consuming the service will have access to the latest service contract. In this case, in Studio Pro, the consumed OData service can be **Updated** to the new contract published to the same endpoint that is already being consumed. 
+When a new version of a published OData service is issued, the publisher can specify if the new service version is deployed to the same endpoint so that users who are consuming the service will have access to the latest service contract. In this case, in Studio Pro, the consumed OData service can be **Updated** to the new contract published to the same endpoint that is already being consumed. This will also be indicated in the **Data Hub** pane and the **Project** pane with the blue update arrow for the consumed service:
+
+![update service dhpane](attachments/consumed-odata-service/data-hub-pane-update-available.png)
 
 Alternatively, an OData service can be published to a different endpoint so that it would appear as a different asset in the Data Hub Catalog. 
 
-In the example given above, while developing an app, the service that is deplyed to **Acceptance** can be consumed and thus use the acceptance environment dataset. However, once development is completed, the user can consume the same service from the **Production** and thus connect to the production dataset. 
+In the example given in the [consuming from Service Endpoints]({#consume-service-endpoints) section above, while developing an app, the service that is deplyed to **Acceptance** can be consumed and thus use the acceptance environment dataset. However, once development is completed, the user can consume the same service from the **Production** and thus connect to the production dataset. 
 
-In Studio Pro, this can be achieved simply by using **Switch** to consume the same service from the different endpoint. 
+In Studio Pro, this can be achieved simply by using **Switch** to consume the same service from the different endpoint. In this case 
 
 The **Consume OData Service** document **Update** button
 
@@ -176,7 +178,7 @@ In the **Data Hub** pane,  a *minor* update that is available for a consumed ser
 
 If the same service has been deployed to a different service endpoint, indicating a major update, the new service version will be shown in the **Data Hub** pane as a separate item and users can **Switch** to the new service from the **Consume OData** screen: 
 
-![update service dhpane](attachments/consumed-odata-service/data-hub-pane-update-available.png)
+
 
 ![update service project-pane](attachments/consumed-odata-service/project-pane-update-available.png)
 

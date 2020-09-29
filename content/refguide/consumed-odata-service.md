@@ -20,16 +20,16 @@ The **Consumed OData Service** document that is added to the project displays th
 * Service name and the icon for the source application of the originating app
 * Version number of the consumed service
 * **View in Data Hub Catalog** link to the **Service Details** where you can see the full service details that are registered
-*  **Update/Switch** – you can update the consumed service contract to another version that has been detected in [Mendix Data Hub](/data-hub/index) for the same app and service; the button will show the following, depending on what has been returned for the consumed contract in Data Hub:
-	* **Update** – this button is displayed if a new service contract has been detected at the same service endpoint that is different to the one that is currently used in the app project (and shown in the **Consumed OData Service** document); this may be a new service version that has minor non-breaking changes to the previous version and therefore deployed by the publisher to the same service endpoint. 
-	* **Switch** – this button is shown if other registered instances of the same service (with the same name, from the same app) are available in Data Hub and are deployed to different endpoints (for example, to another environment or because of changes that would break existing apps consuming the previous version)
+* **Update/Switch** – you can update the consumed service contract to another version that has been detected in [Mendix Data Hub](/data-hub/index) for the same app and service; the button will show the following, depending on what has been returned for the consumed contract in Data Hub:
+	* **Update** – this button is displayed if a new service contract has been detected at the same service endpoint that is different to the one that is currently used in the app project (and shown in the **Consumed OData Service** document); this may be a new service version that has minor non-breaking changes to the previous version and therefore deployed by the publisher to the same service endpoint
+	*  **Switch** – this button is shown if other registered instances of the same service (with the same name, from the same app) are available in Data Hub and are deployed to different endpoints (for example, to another environment or because of changes that would break existing apps consuming the previous version)
 
 	{{% alert type="info" %}}Studio Pro will show the most relevant option (**Switch** or **Update**) after examining the service name, app, and endpoint in the Data Hub Catalog. This will also be indicated in the Data Hub search pane for the consumed service with an update arrow. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document.
 	{{% /alert %}} 
 
 	{{% alert type="info" %}}In the **Data Hub** pane consumed services that have an available **Update** will have an update arrow to indicate this:<br />
-
-    ![update service dhpane](attachments/consumed-odata-service/data-hub-pane-update-available.png){{% /alert %}} 
+	![update service dhpane](attachments/consumed-odata-service/data-hub-pane-update-available.png)
+	{{% /alert %}} 
 
 ### 2.1 Connection Tab
 

@@ -83,7 +83,7 @@ The number of requests per second is split up by request handlers. The key ones 
 * **xas/** lists general queries for data in data grids, sending changes to the server, and triggering the execution of microflows
 * **ws/** shows the number of web service calls that were done
 * **file** shows the number of file uploads and downloads
-* The **default** should not list any requests, because static content is directly served to the user by the front-facing web server, which is placed between the user and this application process
+* The **default** request handler handles all requests which are *not* handled by the standard request handlers (`/xas/`,`/file`, etc) or request handlers installed by the user application — requests handled by the default handler will usually be for the static resources of application (for example `/login.html` and `/mxui.js`).
 
 These are the commonly used types:
 

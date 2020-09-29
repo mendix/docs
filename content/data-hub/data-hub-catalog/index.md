@@ -10,18 +10,18 @@ The Data Hub Catalog is the core of Mendix Data Hub for finding the shared regis
 
 The Data Hub Catalog functionality is enhanced by the [Data Hub Landscape](../data-hub-landscape/index), which enables the networks of shared data and resources to be graphically represented in a network of relationships between apps and services. This integration enables different views of the registered assets to show, at a glance, popular apps and the network of dependencies between apps and services. 
 
-## 2 Using the Data Home Home Screen {#data-hub-home}
+## 2 Data Hub Screen {#data-hub-home}
 
-From the [Data Hub Home](https://hub.mendix.com) home page, you can carry out the major functions of Data Hub. Data Hub is also integrated in Mendix Studio Pro to find and connect to shared data sources in your apps. For further details on using Data Hub in Studio Pro, see [Data Hub Pane](/refguide/data-hub-pane) in the *Studio Pro Guide*.
+From the [Data Hub](https://hub.mendix.com) screen, you can carry out the major functions of Data Hub. Data Hub is also integrated in Mendix Studio Pro to find and connect to shared data sources in your apps. For further details on using Data Hub in Studio Pro, see [Data Hub Pane](/refguide/data-hub-pane) in the *Studio Pro Guide*.
 
 {{% todo %}}[AD: screenshot missing for data-hub-home - add new one]{{% /todo %}}
 
-From the Data Hub Home page, you can navigate to the following tabs:
+From the Data Hub screen, you can navigate to the following tabs:
 
 * **Catalog** –  search for registered services, entities, and attributes in the search pane and search details page
 * **Landscape** – gain a graphical view of the organization's available services and exposed entities showing consuming and publishing dependencies (for further details, see [Data Hub Landscape](../data-hub-landscape/index).
 
-From the Data Hub Home page, you can do the following:
+From the Data Hub screen, you can do the following:
 
 * **Search** –  search for registered services and entities using the **Search** box or clicking the suggested **Tags**
 * **Register a new service** – manually register non-Mendix OData v4 services in the Data Hub Catalog (for further details, see the [Manually Registering OData V4 Services](register#registration-form) section of *How to Register Data Assets*)

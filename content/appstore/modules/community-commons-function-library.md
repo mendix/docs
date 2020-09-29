@@ -166,7 +166,7 @@ For security reasons, Guava was upgraded to version 27 in version 7.4.0 of this 
 
 ## 6 Limitations {#limitations}
 
-* [Generalizations](/refguide/generalization-and-association) are not supported (specifically in the [Clone](#clone) and [DeepClone](#deepclone) function).
+* [Generalizations](/refguide/generalization-and-association) are not supported (specifically in the [Clone](#clone) and [DeepClone](#deepclone) functions).
 
 ## 7 Read More
 

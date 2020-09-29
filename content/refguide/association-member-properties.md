@@ -44,9 +44,7 @@ This property defines whether an association is a reference (single) or a refere
 | Reference set | Plural: an object of the owning entity refers to zero or more objects of the other entity. |
 
 {{% alert type="info" %}}
-
 The examples for this property are combined with the example of the owner property below.
-
 {{% /alert %}}
 
 ### 2.3 Owner {#owner}
@@ -62,6 +60,10 @@ Ownership is important as it defines two aspects of an association:
 
 * how cardinality (many or one) is controlled
 * where the association is recorded
+
+{{% alert type="info" %}}
+An external entity cannot be the owner for an association between a external and a local entity.
+{{% /alert %}}
 
 #### 2.3.1 Cardinality
 

@@ -124,7 +124,7 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 The app has to be deployed to the Mendix Cloud or to your organization's environment using **Run** for the service to be registered in the Data Hub Catalog.
 {{% /alert %}}
 
-## 4 OData Service Page {#odata-service-general}
+## 4 OData Service Screen {#odata-service-general}
 
 The OData service screen contains all the details that will be included in the OData service contract or *$metadata* file that will be registered in the Data Hub Catalog. Entities can be added and removed and changes to attributes and associations for included entities can also be made in this document.
 

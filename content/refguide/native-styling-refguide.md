@@ -480,6 +480,11 @@ The widget’s style properties are as follows:
 	<label>Drop down enumeration</label>
 	<value>Content invalid</value>
 	<validationMessage>Validation feedback enumeration</validationMessage>
+	<pickerBackdropIOS>iOS picker modal shadow container
+		<pickerIOS>iOS picker
+			<pickerTopIOS>iOS picker modal header</pickerTopIOS>
+		</pickerIOS>
+	</pickerBackdropIOS>
 </container>
 ```
 
@@ -498,6 +503,10 @@ The widget’s style properties are as follows:
 | `placeholder` | This has all TextStyle properties |   |
 | `placeholderDisabled` | This has all TextStyle properties | Overrides `placeholder` styles if the date picker is non-editable. |
 | `validationMessage` | This has all TextStyle properties |  |
+| `pickerBackdropIOS` | This has all ViewStyle properties |  |
+| `pickerIOS` | This has all ViewStyle properties |  |
+| `pickerIOS` | `color` |  |
+| `pickerTopIOS` | This has all ViewStyle properties |  |
 
 The default class to style all date picker inputs is named `DatePicker`.
 

@@ -18,7 +18,7 @@ This how-to will demonstrate how easy it is to build apps using data from differ
 * See the network of shared data in the Data Hub Landscape
 
 {{% alert type="info" %}}
-To use the Mendix Data Hub a license is required with also includes the integration of Data Hub in Studio Pro in order to consume shared data assets for building apps. 
+To use the Mendix Data Hub a license is required, with also includes the  integration of Data Hub in Studio Pro, in order to discover shared assets in you organization and consume the shared data for building apps.
 {{% /alert %}}
 
 ## 2 Prerequisites
@@ -119,14 +119,14 @@ The **{yourname}CustomerODataService** from your app is now registered in the Da
 
 1.  Go to [Mendix Data Hub](https://hub.mendix.com/):
 
-	![Data Hub home page](attachments/share-data/data-hub-home.png)
+	![Data Hub home](attachments/share-data/data-hub-home.png)
 
 2.  In the search field, enter the search term *customer*. All services and entities that satisfy this search string will be displayed in the **Search Results** pane in the **Search Details** screen.
 3. From the search results, find the service that you published and select it. Full details will be displayed in the **Search Details** screen and the service metadata pane on the right. This information was defined in the OData service document in Studio Pro. 
 
 	If you have curate permissions (meaning, you are the owner of a service, a curator, or a Data Hub Admin), you will also see the curation bar and you will see that it will show that "**You are the owner of the service**":
 
-	![data hub home](attachments/share-data/search-details-screen.png)
+	![data hub](attachments/share-data/search-details-screen.png)
 	
 	{{% todo %}}[**AD: add cross-references to these roles of "owner," "curator," "Data Hub Admin"**]{{% /todo %}}
 

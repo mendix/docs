@@ -56,7 +56,7 @@ When apps are being developed, ensure that there is a representative set of data
 
 Currently only [persistable](/refguide/persistability) entities can be exposed for sharing by another app. The data associated with the entity is used in the consuming app.
 
-{{% todo %}}[what are persistable entities known as in other systems? what is the characteristic of a persistable entity that makes it shareable]{{% /todo %}}
+{{% todo %}}[what are persisitable entties known as in other systems? what is the characteristic of a persistable entity that makes it shareable]{{% /todo %}}
 
 When selecting the entities to expose in a service, consider including associated entities so that the relationship between the data is also registered.
 
@@ -136,7 +136,7 @@ The **Version** number that is assigned to a service is significant – it forms
 
 ![](attachments/register/odata-service-page-general.png)
 
-The **General** tab contains all the details for the published metadata and the details of the entities that will be exposed in the service as follows:
+The **General** tab contains all the details for the published metadata and the details of the entitites that will be exposed in the service as follows:
 
 * **Service Name** – the name of the service
 * **Version** – the version of the service
@@ -215,14 +215,15 @@ To update a published OData service, follow these steps:
 
 1. Create a duplicate of the old service document to make your changes to by right-clicking in **Project Explorer** the OData service that you want to update and then clicking **Duplicate**. A copy of the service will be created. You can rename the new service by right-clicking and selecting **Rename**.
 3. Double-click this service to open the service document. You can now make the changes to the service.
-4. Indicate the level of the change to the service by changing the version number. We recommend that you follow semantic numbering to indicate the severity of the change. If you are making updates that would not break consuming apps then the version number can increment by the decimal number, or a major update that may break consuming apps would be indicated by an incremental increase in the integer.
-5. Append the **Description** (in the **Properties** pane) of the service to describe to all users the changes that have been made to the service.
-6. Make the changes to the service, taking care when removing entities, attributes, and associations that may be consumed by other apps.
-7. Deploy the app to register the services in the Data Hub Catalog. If you have kept the previous version, both services will now be registered.
+4. Indicate the level of the change to the service by changing the version number. We recommend that you follow semantic numbering to indicate the severity of the change. If you are making updates that would not break consuming apps, then the version number can be incremented after the decimal point. A major update that may break consuming apps would be indicated by an incremental increase in the integer.
+4. For a major update to the service, change the **Location** where the service will be deployed to, the *service endpoint*, to ensure that consuming apps will not be affected. Minor updates can be deployed to the same endpoint.
+5. Change the **Description** (in the **Properties** pane) of the service to describe to all users the changes that have been made to the service. 
+6. Make the changes to the service, taking care when removing entities, attributes, and associations. The guideline is removing exposed entities, attributes and association from a published service, this would have to be a major service update that is deployed to a different endpoint.
+7. Deploy the app to register the services in the Data Hub Catalog. If you have specified a different endpoint for the new service version, both versions of the service will now be registered.
 8. In the Data Hub Catalog, curate the new service and add tags and further descriptions as necessary. 
 9. Inform consuming apps of the changes. You can see all apps that are consuming previous versions of the service in the Data Hub Catalog and also the visual network of dependencies in the [Data Hub Landscape](../data-hub-landscape/index). Use the **Business Owner** and **Technical Owner** links to make contact with the users.
 10. For major changes, and when a new service is published that will replace an existing one, provide deprecation notices to all consuming apps if they have to change to the new version within a certain length of time if the previous version is going to become inactive.
-10. It is good practice to remove old (unused services) from your app by deleting them in the **Project Explorer** only when you are sure that they are no longer being consumed by any other apps. You can verify this by looking in [Mendix Data Hub](https://hub.mendix.com/) and searching for the service in the **Catalog** or checking out the network of dependencies in Data Hub **Landscape**. 
+11. It is good practice to remove old (unused services) from your app by deleting them in the **Project Explorer** only when you are sure that they are no longer being consumed by any other apps. You can verify this by looking in [Mendix Data Hub](https://hub.mendix.com/) and searching for the service in the **Catalog** or checking out the network of dependencies in Data Hub **Landscape**. 
 
 ## 7 Manually Registering OData V4 Services {#registration-form}
 
@@ -276,7 +277,7 @@ To register the service, follow these steps:
 		* **No** – click this for a new deployment to an environment
 	* **UUID**
 		* For an existing app registered in the Data Hub Catalog to this environment, paste the UUID here
-		* If you clicked **No** above for **Use Existing Environment**, the environment UUID is automatically generated
+		* If you clicked **No** above for **Use Existing Environment**, the enviroment UUID is automatically generated
 	* **Name** –  enter the name of the environment as it will be rendered in the catalog
 	* **Location** – enter the URL of the environment location
    
@@ -326,43 +327,4 @@ In the final step of the manual registration process, use the **Service Details*
 
 The service is now registered in the Data Hub Catalog.
 
-## 8 Using the Data Hub Catalog API to Register
 
-You can use the Data Hub Catalog API to create a registration gateway for connectable assets to register on or to create multiple contracts. The API supports the registration of OData v3 and OData v4 services. The form is used for registering new services and to update (to a different service version) previously registered services.
-
-{{% todo %}}[**AD: what is the URL for the API? Cross-reference needed.**]{{% /todo %}}
-
-{{% todo %}}[**IG: Any further info that I can include in this introductory text?**]{{% /todo %}}
-
-{{% todo %}}[**IG: The API is available as a Swagger spec and accessed ….**]{{% /todo %}}
-
-This table describes what happens in the Data Hub Catalog when using the API and there are actions in the Mendix Cloud:
-
-{{% todo %}}[**IG: Verify that the table is up-to-date**]{{% /todo %}}
-
-{{% todo %}}[**IG: Include a x-ref about Cloud Portal here.**]{{% /todo %}}
-
-{{% todo %}}[**IG: Edit text of table**]{{% /todo %}}
-
-{{% todo %}}[**IG: Is there too much information here? @SB felt this was the case. **]{{% /todo %}}
-
-| Action in Mendix Cloud | What Happens in Data Hub |
-| --- | --- |
-| Start application<br />Restart application | 1. The application is registered/updated in Mendix Data Hub.<br />2. The environment to which it is being deployed is registered/updated in the Data Hub Catalog.<br />3. If there are published OData v3 services, they will be registered/updated. The entities that are part of the service will get registered/updated and will then be searchable in Studio Pro.<br />4. If the application consumes OData v3 services that are already registered in the Data Hub Catalog, it will be registered that the application (deployed on a specific environment) is consuming these services. |
-| Clear environment | Consumption and publishing is cleared.<br />Application/service/data sources remain. |
-| Delete | Environment is deleted.<br />Application remains. |
-| Update (if you have sufficient rights) | Updates the metadata of the corresponding environment. |
-
-{{% todo %}}[**IG: In table above — more specific description of Update else it is too generic and should be removed.**]{{% /todo %}}
-
-{{% todo %}}[**IG: 9 Publishing to Data Hub Catalog from Team Center Services**]{{% /todo %}}
-
-{{% todo %}}[**IG: Necessary to write about this in the docs Andrej K. https://docs.mendix.com/partners/**]{{% /todo %}}
-
-{{% todo %}}[**IG: 10 Registration of Kafka Contracts**]{{% /todo %}}
-
-{{% todo %}}[**IG: Data Hub Broker Product Plan - Materialized Virtual Entities – Dropbox Paper: https://paper.dropbox.com/doc/Data-Hub-Broker-Product-Plan-Materialized-Virtual-Entities--AxywVV5XhXqrl4luKsnOVZTgAg-xNt38RqceWY8ofGQyEDFT**]{{% /todo %}}
-
-{{% todo %}}[**IG: DataBroker M2 - Single entity consume via ConsumedKafkaService – Dropbox Paper: https://paper.dropbox.com/doc/DataBroker-M2-Single-entity-consume-via-ConsumedKafkaService--AxyDMr72__kudHM35lNU2PN7Ag-oyqgMNwA22NVItfB2jKIX**]{{% /todo %}}
-
-{{% todo %}}[**IG: 11 Troubleshooting**]{{% /todo %}}

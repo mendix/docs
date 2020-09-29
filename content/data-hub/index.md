@@ -8,6 +8,10 @@ tags: ["data hub", "data hub catalog", "data hub landscape"]
 
 [Mendix Data Hub](https://hub.mendix.com) is a product for integrating app development with the data available from the many applications in an organization. It is the central hub in an organization for find and connecting to the relevant shared datasets. It also ensures consistency in the data used throughout the organization. Data Hub enables reliable data sources to be managed centrally from one point and for users to connect to them through it. 
 
+{{% alert type="info" %}}
+To use the Mendix Data Hub a license is required, with also includes the  integration of Data Hub in Studio Pro, in order to discover shared assets in you organization and consume the shared data for building apps.
+{{% /alert %}}
+
 Follow the journey for building an app using available entities from the [Data Hub](https://hub.mendix.com) home page, or try building a quick app by following [How to Share Data Between Apps Using Mendix Data Hub](general/share-data).
 
 ## 2 Overview of Mendix Data Hub

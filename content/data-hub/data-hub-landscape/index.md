@@ -4,44 +4,36 @@ description: "Describes using Data Hub Landscape to search for and look at regis
 tags: ["data hub catalog", "data hub", "virtual entities", "landscape", "published odata service"]
 ---
 
-{{% todo %}}[what about public services which are going to be issued with Data Hub>?]{{% /todo %}}
-
 ## 1 Introduction
 
-The Data Hub Landscape presents a graphical view of the registered OData services in your Data Hub. It provides a landscape visualization of items registered in the [Data Hub Catalog](../data-hub-catalog/index) in which the nodes are the runtime instances of applications (or, more specifically, the deployments of apps in specific environments). All public services that are issued with Data Hub are also shown in the Landscape.
+The Data Hub Landscape presents a graphical view of the registered OData services in your Data Hub. It provides a landscape visualization of items registered in the [Data Hub Catalog](../data-hub-catalog/index) and their releationships with apps that share the datasets that are registered. In the Data Hub Landscape, the nodes are the runtime instances of applications (or, more specifically, the deployments of apps in specific environments) and the published OData services from the apps.  All public services that are issued with Data Hub are also shown in the Landscape.
 
-{{% todo %}}[**AD: Standardize if "Landscape" should be capitalized when not used with "Data Hub"**]{{% /todo %}}
+In the Landscape, you will see, at a glance, the network of deployments of the apps publishing OData services and those consuming them. The Data Hub Landscape enhances the search experience of the Data Hub Catalog as follows: 
 
-In the Landscape, you to see at a glance the deployments of the apps publishing OData services and those consuming them in an environment. The Data Hub Landscape enhances the search experience of the Data Hub Catalog as follows: 
-
-* See popular apps in the Data Hub Landscape and the apps that consume data from them
-* See clearly the dependencies between consuming and publishing apps
-* See at a glance all the services published from an app (deployed to a specific environment) and the entities that are exposed in the service
+* Shows the popular apps in the Data Hub Landscape and the apps that consume data from them
+* Identify the dependencies between consuming and publishing apps
+* See all the services published from an app (deployed to a specific environment) and the entities that are exposed in the service
 * Decide on the relevance of available entities by seeing the apps that they are consumed by
-* Ascertain the context of the data being shared by the network of nodes for a service and the deploying app
+* Discover the context of the data being shared by the network of nodes for a service and the deploying app
 * From the displayed network of dependencies, ascertain the differences between the services by seeing how the shared data is used
 
-{{% todo %}}[**AD: "See" used three times and "ascertain" twice - consider using some synonyms**]{{% /todo %}}
-
-You can access the Data Hub Landscape from the [Mendix Data Hub](https://hub.mendix.com/) by clicking the **Landscape** tab.
+You can access the Data Hub Landscape from [Mendix Data Hub](https://hub.mendix.com/) by clicking the **Landscape** tab.
 
 ## 2 Data Hub Landscape in Detail
 
 ### 2.1 Structure and Flow of Data
 
-A registered OData service includes the precise definition of the app, the environment it is deployed in, and the entities—that provide the link to the shared data—are defined as specific endpoints in the service. 
+A registered OData service includes the precise definition of the app and the entities—that provide the link to the shared data. The service endpoint and the deployment to a specific environment is shown as a node on the Landscape. 
 
 The Landscape depiction of a service and its network will be such that it will show the "flow" of data  from the bottom of the display towards the top. Therefore, services that are consumed by an app will always be shown below it. Other applications that consume a selected service will always be displayed above it. A complex example of a network where this is illustrated is shown in the [example landscape network](#example-landscape) below.
 
 ### 2.2 Navigating the Landscape
 
-By default, the Data Hub **Search** pane is on the left of the Landscape screen. When a service is selected in the search results, the selected service is displayed in the center of the Landscape display, and its network of connections is shown. The selected service and the deploying app are highlighted with a blue outline  in the landscape view.
+By default, the Data Hub **Search** pane is on the left of the Landscape screen. When a service is selected in the search results, the selected service is displayed in the center with its network of connection. The selected service and the deploying app are highlighted with a blue outline.
 
 When you click any of the nodes or connections, the metadata pane on the right displays the details.
 
 To see the full details of the selected item, click the **Catalog** tab to display the **Search Details** screen in the Data Hub Catalog.
-
-{{% todo %}}[**AD: Is "Search Details" in the UI? If it is not, it should not be bolded or capitalized.**]{{% /todo %}}
 
 You can pan and zoom around the landscape using the mouse controls. It is also possible to "rearrange" the network of nodes by clicking a node and moving it.  The selected service will always remain centered. 
 
@@ -49,11 +41,7 @@ You can pan and zoom around the landscape using the mouse controls. It is also p
 
 ### 2.3 Nodes
 
-Registered apps and services are depicted in the Landscape as nodes from the definitions in the registered service metadata. The icons for each of these nodes identifies if it is a Mendix app, a Siemens Team Center app, or a non-Mendix app.
-
-{{% todo %}}[??verify that ultimately it will show he avatar for the app]{{% /todo %}}
-
-{{% todo %}}[**AD: "Siemens Team Center" should be cross-referenced - to App Store connector?**]{{% /todo %}}
+Registered apps and services are depicted in the Landscape as nodes from the definitions in the registered service metadata. The icons for each of these nodes identifies the application.
 
 #### 2.3.1 Service
 
@@ -83,6 +71,10 @@ For a service from a deployed app that is consumed by another deployed app—whe
 	* **MxAnniversery** consumes two entities through **BambooDataService 1.1.0**, which is published from the **Bamboo** app in production.
 
 The network of dependencies that is shown will show the selected item at the center of the Landscape view. 
+
+{{% alert type="info" %}}
+In the case when an app publishing a service also consumes from the same service, the line for the publishing dependency will be superimposed with the line for the consuming dependency. This will result in only a single dotted-gray line being displayed. The publishing link to between the service and the app can be seen in the Metadata panel where the name of the  
+{{% /alert %}}
 
 ### 2.5 Node Details
 

@@ -76,7 +76,7 @@ The Community Commons container project contains a variety of predesigned unit t
 ### 4.7 ORM
 
 * `CommitWithoutEvents` – This commits an object but without events.
-* `Clone` – This clones the objects.
+* <a name="clone"></a>`Clone` – This clones the objects.
 * <a name="deepclone"></a>`DeepClone` – This clones the objects, their associations, and their referred objects. For more information, see the [Limitations](#limitations) section below.
 * `GetGUID` – This returns the global unique identifier (GUID) or the ID of an object.
 * `GetOriginalValueAsString` – This returns the original value of an object member, that is, the last committed value.

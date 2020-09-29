@@ -81,7 +81,7 @@ For all items satisfying the search string, the following information is display
   
   ![Data Hub Pane updaten](attachments/data-hub-pane/data-hub-pane-update.png)
   
-* Information icon to view further information on the service and to go directly to the [Service Details](/data-hub/data-hub-catalog/search##search-details) screen in the Data Hub Catalog: 
+* Information icon to view further information on the service and to go directly to the [Service Details](/data-hub/data-hub-catalog/search#search-details) screen in the Data Hub Catalog: 
 
   ![Data Hub Pane Information](attachments/data-hub-pane/data-hub-pane-info.png)
 

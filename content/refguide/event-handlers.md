@@ -24,6 +24,8 @@ If the specified event is applied to a list of objects (if, for example, you are
 If your handler relies on the event having already been applied to another object in a list, you should loop through the list and apply the event to each object in turn.
 {{% /alert %}}
 
+{{% todo %}}[they do not see event handlers for external entities: should there be a general note indicating that this is the case? In my opinion, not becasue they will not see it on the external entity properties form]{{% /todo %}}
+
 For example, say your **Customer** entity has a **Postcode** attribute and you want to check that this is always valid. If there are multiple places where this can be changed, you can add a *Before Commit* event which calls a microflow **BCo_Customer_Postcode** which checks that the postcode is valid every time a Customer object is committed and prevents the object being committed if the postcode is invalid.
 
 ![Example of adding a before commit event handler to the Customer entity](attachments/domain-model/customer-event-handlers.png)

@@ -16,7 +16,7 @@ The **Data Hub** pane enables you to search the Data Hub Catalog and discover th
 
 Click  **View** > **Data Hub** to display the **Data Hub** pane:
 
-{{% image_container width="300" %}}![data-hub-pane](attachments/data-hub-pane/data-hub-pane-empty.png)
+![data-hub-pane](attachments/data-hub-pane/data-hub-pane-empty.png)
 
 ## 2 Data Hub Pane in the Domain Model
 

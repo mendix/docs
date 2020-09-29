@@ -29,9 +29,7 @@ For Mendix apps that publish entities and those that consume shared entities in 
 	{{% /alert %}}
 
 * Classification of the data associated with the entities is defined in the service metadata and shown in the [Service Metadata](search#metadata) panel of the **Search Details** screen. This is further discussed below.
-
 * Through the identification protocols used for establishing the user identity, the security rules for the user in the publishing app are applied
-	
 	* On the Mendix Platform, this is [Mendix SSO](/developerportal/deploy/mendix-sso),  but it can also be the organization's identification protocol
 *  In the publishing app in Studio Pro, access can be defined at the entity level as follows:
 	* None

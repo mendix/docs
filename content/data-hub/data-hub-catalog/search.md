@@ -81,7 +81,7 @@ In Studio Pro, when publishing an OData service, it is possible to specify a sum
 
 ### 2.8 Contacts for Registered Apps and Services  
 
-In the Data Hub Catalog, the search details for a service include a **Technical Owner** (for technical inquiries) and the **Business Owne**r who is responsible for the data sets. Both of these owners can curate their registered assets.
+In the Data Hub Catalog, the search details for a service include a **Technical Owner** (for technical inquiries) and the **Business Owner** who is responsible for the data sets. Both of these owners can curate their registered assets.
 
 ## 3 Searching in the Data Hub Catalog {#data-hub-home}
 
@@ -128,7 +128,7 @@ Punctuation cannot be used as part of the search term.
 Search is case-blind.
 {{% /alert %}}
 
-{{% todo %}}[please explain "case-blind" in a clear non-metaphporic way that is more accessible]{{% /todo %}}
+{{% todo %}}[please explain "case-blind" in a clear non-metaphoric way that is more accessible]{{% /todo %}}
 
 #### 4.1.2 Filters
 

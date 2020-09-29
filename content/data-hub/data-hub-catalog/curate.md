@@ -10,7 +10,7 @@ tags: ["data hub", "data hub catalog", "curate", "description", "services", "tag
 
 ## 1 Introduction
 
-{{% todo %}}[**Edescribe fully the curate screens]{{% /todo %}}
+{{% todo %}}[**Describe fully the curate screens]{{% /todo %}}
 
 Curation is the processes of maintaining registered services and enriching the metadata of registered assets in the Data Hub Catalog to provide further information about the services as well as the entities and attributes exposed in the services. You can add catalog descriptions and tags to supplement the registered metadata in order to categorize the shared data. A primary curate function is setting the **Discoverability** of registered assets, which determines which users can find them. 
 
@@ -160,7 +160,7 @@ Add tags to categorize a registered service and provide additional means for fin
 
 ## 5 Curating Entities and Attributes
 
-Entities and their exposed attributes can be curated to add **Catalog descriptions**. Catalog descriptions are stored in the Data Hub Catlog and it is possible to specify if the description provided in the service contract metadata or the Data Hub Catalog descriptions are displayed for the item.
+Entities and their exposed attributes can be curated to add **Catalog descriptions**. Catalog descriptions are stored in the Data Hub Catalog and it is possible to specify if the description provided in the service contract metadata or the Data Hub Catalog descriptions are displayed for the item.
 
 To change entity and attribute descriptions, follow these steps:
 

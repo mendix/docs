@@ -136,7 +136,7 @@ The **Version** number that is assigned to a service is significant – it forms
 
 ![](attachments/register/odata-service-page-general.png)
 
-{{% todo %}}[**AD: intro sentence needed here - what are we looking at in the bulleted list below?**]{{% /todo %}}
+The **General** tab contains all the details for the published metadata and the details of the entitites that will be exposed in the service as follows:
 
 * **Service Name** – the name of the service
 * **Version** – the version of the service
@@ -146,17 +146,15 @@ The **Version** number that is assigned to a service is significant – it forms
 	* **Add**, **Edit**, **Delete** – click to add, edit, or remove an entity from the OData Service, respectively
 	* **Show** – click to see the entity in the domain model
 
-	{{% todo %}}[EC: verify that it says **Remove** and not delete]{{% /todo %}}
-
 	* **Attributes and associations** – this column shows the attributes and association for the selected entity
-	* **Change** – click this to display the **Select Attributes and associations** dialog box for the selected entity: 
-
+* **Change** – click this to display the **Select Attributes and associations** dialog box for the selected entity: 
+	
 	![](attachments/register/select-attributes-associations.png)
 
 	You can specify which attributes you want to include for the service, customize the **Exposed names** of the attributes and associations for the OData service.
 
 	{{% alert type="info" %}}If you do not EXPLICITLY choose to expose the association of two associated entities, then this association will not be registered for the entities in the service.
-	{{% /alert %}}
+{{% /alert %}}
 
 For further details, see [Published OData Resource](/refguide/published-odata-resource).
 
@@ -208,22 +206,16 @@ When sharing entities through an OData service for use in other apps, it is impo
 For guidelines on when to update a published OData service and when to publish a new one, see the [OData Services and Version](#odata-service-version) section above.
 
 {{% alert type="info" %}}
-When a new version of a  service is published to replace an existing one, due notice has to be given to users if the preceding version is going to be deleted. A deprecation notice should be given to all apps consuming the service, and period of time when both services are available. 
+When a new version of a  service is published to replace an existing one, due notice has to be given to users if the preceding version is going to be deleted. A deprecation notice should be given to all apps consuming the service, and the period of time when both services are available. 
 {{% /alert %}}
-
-{{% todo %}}[**AD: a section should not start with a cross-reference and an alert - it is then quite unclear what the section is about for the reader. Also, isn't that alert just a duplication of step 10 below, thus positioned much too early in this section?**]{{% /todo %}}
 
 Registered OData services for Mendix apps can be updated in Studio Pro in the [OData service](#odata-service-general) document. You can access the **OData Service** page rom the **Project Explorer** in Studio Pro by double-clicking the published OData service document to be updated. 
-
-{{% alert type="info" %}}
-In the catalog, changing the name or version in the OData Service page will result in a new service that is published (with a new service endpoint and the corresponding endpoints for the exposed entities) and registered in the catalog. This means that in each environment to which you deploy your app, the new service or version with be available.  This also means that all  environments will still have the endpoints of the previous service or version. Note that the app (and published services) must be deployed to all environments for this "changed" service to be available.
-{{% /alert %}}
 
 {{% todo %}}[X-ref text on versioning in the index doc. and eventually to the dedicated doc. What happens if you change the name of a service in the OData service document — is the previous one still present in the app? the project explorer did not change ]{{% /todo %}}
 
 To update a published OData service, follow these steps:
 
-1. Decide if you are creating a minor update to a service or a major update that may break consuming apps if they were to upgrade to it, and designate a version number accordingly.
+1. Decide if you are creating a minor update to a service or a major update that may break consuming apps if they were to upgrade to it, and change the version number accordingly.
 2. Create a duplicate of the old service document to make your changes to by right-clicking in **Project Explorer** the OData service that you want to update and then clicking **Duplicate**. A copy of the service will be created. You can rename the new service by right-clicking and selecting **Rename**.
 3. Double-click this service to open the service document. You can now make the changes to the service.
 4. Indicate the level of the change by changing the version number.

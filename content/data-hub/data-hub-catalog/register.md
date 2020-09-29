@@ -211,21 +211,18 @@ When a new version of a  service is published to replace an existing one, due no
 
 Registered OData services for Mendix apps can be updated in Studio Pro in the [OData service](#odata-service-general) document. You can access the **OData Service** page rom the **Project Explorer** in Studio Pro by double-clicking the published OData service document to be updated. 
 
-{{% todo %}}[X-ref text on versioning in the index doc. and eventually to the dedicated doc. What happens if you change the name of a service in the OData service document — is the previous one still present in the app? the project explorer did not change ]{{% /todo %}}
-
 To update a published OData service, follow these steps:
 
-1. Decide if you are creating a minor update to a service or a major update that may break consuming apps if they were to upgrade to it, and change the version number accordingly.
-2. Create a duplicate of the old service document to make your changes to by right-clicking in **Project Explorer** the OData service that you want to update and then clicking **Duplicate**. A copy of the service will be created. You can rename the new service by right-clicking and selecting **Rename**.
+1. Create a duplicate of the old service document to make your changes to by right-clicking in **Project Explorer** the OData service that you want to update and then clicking **Duplicate**. A copy of the service will be created. You can rename the new service by right-clicking and selecting **Rename**.
 3. Double-click this service to open the service document. You can now make the changes to the service.
-4. Indicate the level of the change by changing the version number.
+4. Indicate the level of the change to the service by changing the version number. We recommend that you follow semantic numbering to indicate the severity of the change. If you are making updates that would not break consuming apps then the version number can increment by the decimal number, or a major update that may break consuming apps would be indicated by an incremental increase in the integer.
 5. Append the **Description** (in the **Properties** pane) of the service to describe to all users the changes that have been made to the service.
 6. Make the changes to the service, taking care when removing entities, attributes, and associations that may be consumed by other apps.
 7. Deploy the app to register the services in the Data Hub Catalog. If you have kept the previous version, both services will now be registered.
 8. In the Data Hub Catalog, curate the new service and add tags and further descriptions as necessary. 
 9. Inform consuming apps of the changes. You can see all apps that are consuming previous versions of the service in the Data Hub Catalog and also the visual network of dependencies in the [Data Hub Landscape](../data-hub-landscape/index). Use the **Business Owner** and **Technical Owner** links to make contact with the users.
 10. For major changes, and when a new service is published that will replace an existing one, provide deprecation notices to all consuming apps if they have to change to the new version within a certain length of time if the previous version is going to become inactive.
-11. It is good practice to remove old (unused services) from your app by deleting them in the **Project Explorer** only when you are sure that they are no longer being consumed by any other apps. You can verify this by looking in [Mendix Data Hub](https://hub.mendix.com/) and searching for the service in the **Catalog** or checking out the network of dependencies in Data Hub **Landscape**. 
+10. It is good practice to remove old (unused services) from your app by deleting them in the **Project Explorer** only when you are sure that they are no longer being consumed by any other apps. You can verify this by looking in [Mendix Data Hub](https://hub.mendix.com/) and searching for the service in the **Catalog** or checking out the network of dependencies in Data Hub **Landscape**. 
 
 ## 7 Manually Registering OData V4 Services {#registration-form}
 

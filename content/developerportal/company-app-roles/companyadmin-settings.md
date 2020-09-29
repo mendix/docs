@@ -43,7 +43,7 @@ The Company Admin can manage four categories of settings:
   * Activate, deactivate, and delete apps
   * Open the app and [node](nodes) details
   * View, edit, and add [App Team](/developerportal/collaborate/team) roles for the app
-  * Invite and manage App Team members (as long as the Company Admin is also a member of the particular App Team with [permissions for managing](/developerportal/settings/#app-team) that team) |
+  * Invite and manage App Team members (as long as the Company Admin is also a member of that particular App Team with [permissions for managing](/developerportal/settings/#app-team) that team) |
 * **Nodes**
   * View all company [nodes](nodes)
   * Open and view the node details

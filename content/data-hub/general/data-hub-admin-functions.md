@@ -10,7 +10,7 @@ tags: ["data hub", "Data Hub Admin", "curator"]
 
 ## 1 Introduction
 
-The Mendix Data Hub Adminstrator can perform admin functions for the Data Hub such as assigning the curator roles from the **Data Hub Admin** page.
+The Mendix Data Hub Administrator can perform admin functions for the Data Hub such as assigning the curator roles from the **Data Hub Admin** page.
 
 {{% alert type="info" %}}
 The Data Hub Admin for the current release of Data Hub is assigned by [Mendix Support](https://support.mendix.com/hc/en-us): please contact your support representative.
@@ -29,7 +29,7 @@ Curators can see and curate all registered assets in the Data Hub Catalog, inclu
 The Data Hub Admin can assign users to a Curator role by following these steps:
 
 1. From **Data Hub** screen, click the **Data Hub Admin** tab.
-2. The **Data Hub Admin** page will display the list of curators for the organisation.
+2. The **Data Hub Admin** page will display the list of curators for the organization.
 3. To add assign the curator role to a user, click **Add Curator**.
 4. From the list of users, check the user(s) that should have the curator role.
 

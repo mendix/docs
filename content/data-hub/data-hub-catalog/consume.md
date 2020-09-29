@@ -6,7 +6,7 @@ description: "Using entities from the Mendix Data Hub Catalog in general."
 tags: ["data hub", "data hub catalog", "consume", "external entities", "asset", "entities", data hub pane", "studio pro"]
 ---
 
-{{% todo %}}[**IG: search through doc for [title?]() and intsert correct x-ref and further verify all other links**]{{% /todo %}}
+{{% todo %}}[**IG: search through doc for [title?]() and insert correct x-ref and further verify all other links**]{{% /todo %}}
 
 ## 1 Introduction
 
@@ -20,7 +20,7 @@ For details on the security of the data sets that the shared entities connect to
 
 ## 2 Using Registered Assets in your App {#consuming-services-entities}
 
-Shared data which is represented by the exposed entities regisered in the Data Hub Catalog can be added to your app in Studio Pro through the [Data Hub pane](/refguide/data-hub-pane). These entities are introduced into the domain model as [external entities](/refguide/external-entities).
+Shared data which is represented by the exposed entities registered in the Data Hub Catalog can be added to your app in Studio Pro through the [Data Hub pane](/refguide/data-hub-pane). These entities are introduced into the domain model as [external entities](/refguide/external-entities).
 
 The following sections summarize important points when using OData services and registered entities in your apps in Studio Pro.
 

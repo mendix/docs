@@ -56,7 +56,7 @@ When apps are being developed, ensure that there is a representative set of data
 
 Currently only [persistable](/refguide/persistability) entities can be exposed for sharing by another app. The data associated with the entity is used in the consuming app.
 
-{{% todo %}}[what are persisitable entties known as in other systems? what is the characteristic of a persistable entity that makes it shareable]{{% /todo %}}
+{{% todo %}}[what are persistable entities known as in other systems? what is the characteristic of a persistable entity that makes it shareable]{{% /todo %}}
 
 When selecting the entities to expose in a service, consider including associated entities so that the relationship between the data is also registered.
 
@@ -136,7 +136,7 @@ The **Version** number that is assigned to a service is significant – it forms
 
 ![](attachments/register/odata-service-page-general.png)
 
-The **General** tab contains all the details for the published metadata and the details of the entitites that will be exposed in the service as follows:
+The **General** tab contains all the details for the published metadata and the details of the entities that will be exposed in the service as follows:
 
 * **Service Name** – the name of the service
 * **Version** – the version of the service
@@ -276,7 +276,7 @@ To register the service, follow these steps:
 		* **No** – click this for a new deployment to an environment
 	* **UUID**
 		* For an existing app registered in the Data Hub Catalog to this environment, paste the UUID here
-		* If you clicked **No** above for **Use Existing Environment**, the enviroment UUID is automatically generated
+		* If you clicked **No** above for **Use Existing Environment**, the environment UUID is automatically generated
 	* **Name** –  enter the name of the environment as it will be rendered in the catalog
 	* **Location** – enter the URL of the environment location
    

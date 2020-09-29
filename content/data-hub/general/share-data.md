@@ -18,7 +18,7 @@ This how-to will demonstrate how easy it is to build apps using data from differ
 * See the network of shared data in the Data Hub Landscape
 
 {{% alert type="info" %}}
-To use the Mendix Data Hub a license is required with also includes the integration of Data Hub in Studio Pro in order to consume shared data assets for building appps. 
+To use the Mendix Data Hub a license is required with also includes the integration of Data Hub in Studio Pro in order to consume shared data assets for building apps. 
 {{% /alert %}}
 
 ## 2 Prerequisites

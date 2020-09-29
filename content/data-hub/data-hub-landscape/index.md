@@ -21,7 +21,7 @@ In the Landscape, you to see at a glance the deployments of the apps publishing 
 * Ascertain the context of the data being shared by the network of nodes for a service and the deploying app
 * From the displayed network of dependencies, ascertain the differences between the services by seeing how the shared data is used
 
-{{% todo %}}[**AD: "See" used three times and "acertain" twice - consider using some synomyms**]{{% /todo %}}
+{{% todo %}}[**AD: "See" used three times and "ascertain" twice - consider using some synonyms**]{{% /todo %}}
 
 You can access the Data Hub Landscape from the [Mendix Data Hub](https://hub.mendix.com/) by clicking the **Landscape** tab.
 

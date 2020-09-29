@@ -8,7 +8,7 @@ tags: ["domain model", "entity", "entities", "attribute", "validation rule", "ev
 
 ## 1 Introduction
 
-An **entity** usually represents a class of real-world objects, such as customers, invoices, CDs, etc. An instance of an entity is called an object.
+An entity usually represents a class of real-world objects, such as customers, invoices, CDs, etc. An instance of an entity is called an object.
 
 For example, the object representing the CD 'Exodus' could be an instance of the entity 'CD'.
 
@@ -24,6 +24,10 @@ For example, you have a collection of CDs like the one in the table below:
 | Exodus | Bob Marley & The Wailers |
 
 The rows in the table are CDs. The type of the two rows is *CD* and this is the entity name. A specific CD like *How to Dismantle an Atomic Bomb* from the band *U2* is called an object of the entity *CD*. Characteristics like the title and artist are called attributes.
+
+{{% alert type="info" %}}
+This page presents information on Mendix entities. For information on external entities as used for Mendix Data Hub, see [External Entities](external-entities).
+{{% /alert %}}
 
 ## 2 Type of Entities {#entity-types}
 
@@ -45,6 +49,8 @@ Non-persistable entities are stored in the runtime memory and never get committe
 ### 3 External Entity {#external-entity}
 
 {{% todo %}}[what about Freemium users and those with inherited consumed OData services?]{{% /todo %}}
+
+{{% todo %}}[AD: this section should be removed since External Entities is another doc parallel to this and considered a totally different kind of entity, correct?]{{% /todo %}}
 
 An external entity represents and connects to shared data assets through the [Data Hub Catalog](/data-hub/data-hub-catalog). External entities are added to the domain model through the [Data Hub pane](data-hub-pane). These entities are displayed as purple entity containers in the domain model. 
 

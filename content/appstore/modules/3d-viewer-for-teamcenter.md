@@ -151,22 +151,27 @@ Since you built a model list pop-up page, one scenario is to select a list item 
 
  ![teamcenter-popuppageobject](attachments/3d-viewer-for-teamcenter/teamcenter-popuppageobject.jpg)
  
-6. Create a nanoflow called *OpenSelectedModel* nanoflow and set it as the **On click** action for the list view. This nanoflow enables updating the **ModelDocument** associated with the **PageObject** and returns an updated **PageObject**. Every time user click on a model list item, `PageObject` will be updated, homepage where viewer is in will be updated to newly selected model.
-![teamcenter-openselectedmodel](attachments/3d-viewer-for-teamcenter/teamcenter-openselectedmodel.jpg)
+6. Create a nanoflow called *OpenSelectedModel* and set it as the **On click** action for the list view. This nanoflow enables updating the **ModelDocument** associated with the **PageObject** and returns an updated **PageObject**. Every time the end-user clicks a model list item, **PageObject** will be updated, and the home page where the end-user is will be updated to the newly selected model.
 
-Run locally, you will be able to view the selected model.
+ ![teamcenter-openselectedmodel](attachments/3d-viewer-for-teamcenter/teamcenter-openselectedmodel.jpg)
 
-There are other ways to visualize a model. Key idea is to pass valid `ModelId` and `Model Source Type` to the **Viewer** widget.
+Run your app locally. You will be able to view the selected model.
+
+{{% alert type="info" %}}
+There are other ways to visualize a model. The key idea is to pass a valid **ModelId** and **Model Source Type** to the 3D Viewer widget.
+{{% /alert %}}
 
 ### 5.4 Setting Custom Revision Rules
 
-**SearchTC** requires a **TCModelParamsArray** object as input parameter, it allows you to set specific revision rules you want to apply to a model and get the model data based on revision rules. If **TCModelParamsArray** is not specifically set, **SearchTC** will execute with default revision rules.
+**SearchTC** requires a **TCModelParamsArray** object as an input parameter, which allows you to set the specific revision rules you want to apply to a model and get the model data based on these revision rules. If **TCModelParamsArray** is not specifically set, **SearchTC** will execute with the default revision rules.
 
-Follow these steps:
+Follow these steps to set custom revision rules:
 
-1. Add a **Set revision rule** button to list item 
-2. Set nanoflow **Viewer3D_TC/USE_ME/SetRevisionRules** as button's On Click action 
-![teamcenter-setrevisionrules](attachments/3d-viewer-for-teamcenter/teamcenter-setrevisionrules.jpg)
+1. Add a button called *Set revision rule* to a list item.
+2. Set the **Viewer3D_TC/USE_ME/SetRevisionRules** nanoflow as the button's **On click** action:
 
-Run locally, you will be able to set  revision rule on the selected model and fetch model with needed information.
+ ![teamcenter-setrevisionrules](attachments/3d-viewer-for-teamcenter/teamcenter-setrevisionrules.jpg)
+
+Run your app locally. You will be able to set a revision rule on the selected model and fetch the model with the needed information:
+
 ![teamcenter-setrevisionpage](attachments/3d-viewer-for-teamcenter/teamcenter-setrevisionpage.jpg)

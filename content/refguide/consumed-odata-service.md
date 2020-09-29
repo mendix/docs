@@ -140,7 +140,7 @@ The same service, deployed to a different environment will be to a different ser
 
 When you drag the **Customer** entity from **CustomerApi version 1.0.0** deployed to the **Acceptance** environment into your project, Studio Pro will retrieve the information it requires from the contract that is at the endpoint. 
 
-## 4.2 Major and Minor Service Versions
+### 4.2 Major and Minor Service Versions
 
 It is important that the publishers of the services adopt a strict revision process for any changes they make to their published Odata services that are consumed by other users. 
 
@@ -248,7 +248,7 @@ To consume the service deployed to the **Acceptance environment**, follow these 
 
 {{% todo %}}[this is a bad example because the drop-down box should have shown version 2.0.0]{{% /todo %}}
 
-## 4 Read More
+## 5 Read More
 
 * [Data Hub Pane](data-hub-pane)
 * [Consumed OData Service](consumed-odata-service)

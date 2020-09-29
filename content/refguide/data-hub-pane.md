@@ -4,7 +4,6 @@ parent: view-menu
 menu_order: 15
 description: "Describes the Data Hub pane in Mendix Studio Pro."
 tags: ["studio Pro", "data hub", "data hub pane", "data hub catalog"]
-
 ---
 
 {{% todo %}}[replace all graphics with 8.14 screens and improve on clarity of images]{{% /todo %}}
@@ -17,7 +16,7 @@ The **Data Hub** pane enables you to search the Data Hub Catalog and discover th
 
 Click  **View** > **Data Hub** to display the **Data Hub** pane:
 
-{{% image_container width="300" %}}![data-hub-pane](attachments/data-hub-pane/data-hub-pane-empty.png)
+![data-hub-pane](attachments/data-hub-pane/data-hub-pane-empty.png)
 
 ## 2 Data Hub Pane in the Domain Model
 
@@ -35,11 +34,9 @@ When no search string has been specified, the **Project** pane displays the cons
 
 ![Project Section](attachments/data-hub-pane/project-section.png)
 
-
-
 To add entities to your project model, see [Adding an External Entity to a Project](external-entities#adding-external-entities).
 
-## 2 Searching the Data Hub Catalog {#search}
+## 3 Searching the Data Hub Catalog {#search}
 
 As you enter a search term, all the items in the Data Hub Catalog satisfying the search string are listed in the search results. You can do a wildcard search by entering `*` in the search area.
 
@@ -55,42 +52,39 @@ By default, the search is restricted to apps and services deployed to a producti
 When the development environments setting is checked, all subsequent searches will include search in non-production environments. 
 {{% /alert %}}
 
-## 3 Viewing Search Results {#viewing}
+## 4 Viewing Search Results {#viewing}
 
 For all items satisfying the search string, the following information is displayed:
 
 * Service name
-
 *  An icon indicating the source of the service (Mendix, SAP, Siemens Teamcenter, or other non-Mendix apps)
 
-  {{% todo %}}[list the icon types]{{% /todo %}}
+	{{% todo %}}[list the icon types]{{% /todo %}}
 
 * Service version
-
 *  The name of the environment that the service is deployed to (for non-production environments)
 
-  {{% alert type="info" %}}By default, search results will show deployments to production environments which will not be named in the search results. Only the names of non-production environments will be displayed.{{% /alert %}}
+	{{% alert type="info" %}}By default, search results will show deployments to production environments which will not be named in the search results. Only the names of non-production environments will be displayed.{{% /alert %}}
 
 * Green check-mark if the service or entity is already consumed by the project
-
 *  Blue **Update Service** icon to indicate that there is a later version of the consumed service available in the Data Hub. Click to update the service that is consumed in the project to the contract that is now available
 
-  {{% alert type="info" %}}If there is an OData Service update available, then the entities that are listed are those that are available in the currently consumed OData service. These entities will be "grayed-out" to indicate that they can no longer be dragged into the domain model as the originial contract is no longer available in the Data Hub Catalog and a different version of the consumed OData service must be retrieved using the **Update** button. Once the service has been **Updated** then the entities will be available from the new version of the Consumed OData service. {{% /alert %}}
+	{{% alert type="info" %}}If there is an OData Service update available, then the entities that are listed are those that are available in the currently consumed OData service. These entities will be "grayed-out" to indicate that they can no longer be dragged into the domain model as the originial contract is no longer available in the Data Hub Catalog and a different version of the consumed OData service must be retrieved using the **Update** button. Once the service has been **Updated** then the entities will be available from the new version of the Consumed OData service. {{% /alert %}}
 
-  {{% alert type="info" %}}The version number that is shown for the OData service is the latest one that is available in the Data Hub Catalog—in the example below version 1.0.11 of **Theatre_service** is currently consumed in the project, but version **1.0.12** is now available in the Data Hub Catalog.{{% /alert %}}
+	{{% alert type="info" %}}The version number that is shown for the OData service is the latest one that is available in the Data Hub Catalog—in the example below version 1.0.11 of **Theatre_service** is currently consumed in the project, but version **1.0.12** is now available in the Data Hub Catalog.{{% /alert %}}
   
-  ![Data Hub Pane updaten](attachments/data-hub-pane/data-hub-pane-update.png)
+	![Data Hub Pane updaten](attachments/data-hub-pane/data-hub-pane-update.png)
   
-* Information icon to view further information on the service and to go directly to the [Service Details](/data-hub/data-hub-catalog/search##search-details) screen in the Data Hub Catalog: 
+*  Information icon to view further information on the service and to go directly to the [Service Details](/data-hub/data-hub-catalog/search#search-details) screen in the Data Hub Catalog: 
 
-  ![Data Hub Pane Information](attachments/data-hub-pane/data-hub-pane-info.png)
+	![Data Hub Pane Information](attachments/data-hub-pane/data-hub-pane-info.png)
 
 If you right-click a consumed service, you can do the following:
 
 ![info on a Service](attachments/data-hub-pane/data-hub-pane-menu.png)
 
-  * **View in Data Hub Catalog** – click this to go to the **Service Details** page in the Data Hub Catalog
-  * **Go to connection settings** – click this to open the [consumed OData service](consumed-odata-service) document
+* **View in Data Hub Catalog** – click this to go to the **Service Details** page in the Data Hub Catalog
+* **Go to connection settings** – click this to open the [consumed OData service](consumed-odata-service) document
 
 If you right-click an entity in the list and select **View in Data Hub Catalog**, you will go to the entity details page in the [Data Hub Catalog](/data-hub/data-hub-catalog/index).
 

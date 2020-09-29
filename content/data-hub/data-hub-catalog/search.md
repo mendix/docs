@@ -104,7 +104,7 @@ On the **Data Hub Home** page, you can search in the Data Hub Catalog in the fol
 
 Any of the above actions will take you to the **Search** screen, which is described below.
 
-## 4 The Search Screen {#search-tab}
+## 4 Search Screen {#search-tab}
 
 The **Search** screen is divided into the [Search](#search-pane) pane, the [Search Details](#search-details) page, and the [Service Metadata](#metadata) panel.
 

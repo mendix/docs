@@ -102,5 +102,5 @@ If you right-click a consumed entity and **Go to entity**, the domain model will
 
 * [Data Hub Catalog](/data-hub/data-hub-catalog)
 * [External Entities](external-entities)
-* [Consumed OData Service](consumed-odata-service.md)
+* [Consumed OData Service](consumed-odata-service)
 * [How to Consume Registered Assets](/data-hub/data-hub-catalog/consume)

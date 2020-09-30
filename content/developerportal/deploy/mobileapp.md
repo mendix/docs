@@ -106,7 +106,7 @@ Once you begin the app buliding wizard and choose the correct environment, click
 
 For iOS please follow the instructions in [Building Your iOS App Locally](#building-ios-locally) below.
 
-For Android please follow the instructions in [Building Your iOS App Locally](#building-android-locally) below.
+For Android please follow the instructions in [Building Your Android App Locally](#building-android-locally) below.
 
 ### 4.2 Building Your iOS App Locally {#building-ios-locally}
 

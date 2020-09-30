@@ -2455,11 +2455,7 @@ module.exports = {
 	{
       from: "/refguide/team-server",
       to: "/developerportal/develop/team-server"
-    },
-	{
-      from: "/releasenotes/studio/8.0-and-above",
-      to: "/releasenotes/studio/"
-    },
+    },	
 	/****************************************************
      * From Data Hub (permanent, mapped) 
      ****************************************************/

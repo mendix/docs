@@ -164,7 +164,7 @@ In this case the new service will be registered in the Data Hub Catalog as a dif
 
 ![4 endpoints](attachments/consumed-odata-service/consume-major-service-update-version.png)
 
-There is a major service update indicated by the change in the version number from **1.0.0** to **2.0.0**. Further, both versions have also been deployed to the **Acceptance**.
+There is a major service update indicated by the change in the version number from **1.0.0** to **2.0.0**. Further, both versions have also been deployed to the **Acceptance** which also results in separately registered assets in the Data Hub Catalog.
 
 ### 4.3 Update or Switch
 
@@ -198,7 +198,7 @@ In the **Data Hub** pane the search results for the same consumed service will s
 
 - Blue **Update** - click to open the **Update Service** box and update the contract to the new one. Studio Pro will retrieve the new contract from Data Hub and this will be loaded for the project.
 
-- The list of entities that are shown are the ones that were from the previous contract, including the consumed entities which are marked with a green check-mark. These entities are, however, greyed out to indicate that they cannot be dragged into the domain model as they are from a previous version which is no longer available. The only option is to click **Update** to retrieve the updated OData Service. 
+- The list of entities in this new version in the Data Hub are shown, including the locally consumed entities which are marked with a green check-mark. These entities are, however, greyed out to indicate that they cannot be dragged into the domain model as another contract is currently being consumed. The only option is to click **Update** to retrieve the updated OData Service. 
 
 {{% todo %}}[what is shown in the search results for a non-prod service which has a minor service update?? check with Paul/Faried after release and document further]{{% /todo %}}
 

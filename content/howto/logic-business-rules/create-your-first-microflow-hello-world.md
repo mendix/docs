@@ -32,19 +32,19 @@ To create a menu item, follow these steps:
 
 2. In the **Responsive** tab > the **Menu** section, click **New Item**:
 
-   ![](attachments/create-your-first-microflow-hello-world/new-menu-item.jpg)
+    ![](attachments/create-your-first-microflow-hello-world/new-menu-item.jpg)
 
 3. In the **New Menu Item** dialog box, set the **Caption** to *Hello World*:
 
-   ![](attachments/create-your-first-microflow-hello-world/caption.png)
+    ![](attachments/create-your-first-microflow-hello-world/caption.png)
 
 4. For **On click**, select **Call a microflow**:
 
-   ![](attachments/create-your-first-microflow-hello-world/call-microflow.png)
+    ![](attachments/create-your-first-microflow-hello-world/call-microflow.png)
 
 5. In the **Select Microflow** dialog box, select a microflow and then click **New**:
 
-   ![](attachments/create-your-first-microflow-hello-world/new-microflow.png)
+    ![](attachments/create-your-first-microflow-hello-world/new-microflow.png)
 
 6. Enter *HelloWorld* for the **Name** of the new microflow.
 
@@ -84,7 +84,7 @@ To edit the new microflow, follow these steps:
 
 7. Click the **Hello World** menu item in the menu bar to see the message:
 
-   ![](attachments/create-your-first-microflow-hello-world/hello-world-message.png)
+    ![](attachments/create-your-first-microflow-hello-world/hello-world-message.png)
 
 Congratulations! You have created the menu item that triggers the microflow and shows the **Hello World** message to your end-users! 
 

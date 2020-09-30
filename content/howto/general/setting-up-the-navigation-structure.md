@@ -43,7 +43,7 @@ Do the following:
 
 4. Select the page you want to use as the default home page. The example below uses *Homepage_Web*:
 
-   ![](attachments/setting-up-the-navigation-structure/select-home-page.jpg)
+    ![](attachments/setting-up-the-navigation-structure/select-home-page.jpg)
 
 5. Click **Select**.
 

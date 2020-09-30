@@ -31,15 +31,15 @@ If you made a simple and sound design of the app's domain models, consider the f
 * Minimize the use of reference set associations. Mendix retrieves the IDs (per row for a list retrieve) on every query. So, many references—and especially reference sets—cause extra queries and thus extra load on the database.
 * Consider archiving data if your volume grows too large and you do not need all the data all the time. You can even consider creating two identical entities, one with the data currently being used, and the other with all the data that is only used for reporting or other historic reasons.
 * Consider denormalizing the data, which means copying attribute values to other entities. This is so the data is not retrieved every time from the source. If data does not change a lot, this can save a lot of queries. However, you need to build the logic to keep the copied attributes in sync!
-* Don't use multiple levels of inheritance and too many specializations on entities that will contain a substantial amount of data, especially when you are using domain model XPath access on entities. This will generate complex queries adding XPaths for every specialization's security rules and, on a large dataset, will lead to slow queries. Consider the following alternatives:
+* Do not use multiple levels of inheritance and too many specializations on entities that will contain a substantial amount of data, especially when you are using domain model XPath access on entities. This will generate complex queries adding XPaths for every specialization's security rules and, on a large dataset, will lead to slow queries. Consider the following alternatives:
 	* Combine attributes in one entity and add an enumeration to determine its specialization.
 	* Add separate entities for specializations with a one-to-one relation. Depending on UI needs, this one-to-one relation might be a normal reference from specialization to generalization to save prefetching time.
 	* Add a non-persistable layer with inheritance that is populated by your business logic.
-* Don't use temporary associations on persistable entities. Use a non-persistable entity for your screen/UI logic here.
+* Do not use temporary associations on persistable entities. Use a non-persistable entity for your screen/UI logic here.
 
 ##  3 Index Best Practices
 
-Indexes is a topic with a long history of best practices from the database world. For Mendix apps, the following best practises apply:
+Indexes is a topic with a long history of best practices from the database world. For Mendix apps, the following best practices apply:
 
 * Create as many indexes as needed. Although every index takes up space and the `insert`, `update`, and `delete` statements will be a bit slower, your queries will benefit a lot.
 * Since Mendix will retrieve the object for you with all of its columns, your index is needed for two reasons. The first reason is to get the unique internal Mendix IDs fast. The second reason is for sorting.

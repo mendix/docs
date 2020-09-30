@@ -51,6 +51,8 @@ You have created a button that calls a microflow.
 
 ## 4 Recreating the Default Save Behavior
 
+You need to recreate the default Save behavior to customize it afterwards. Do the following:
+
 1.  Right-click the new **Microflow** button and select **Go to microflow** to open the new microflow. The microflow should look like the one below:
     
     ![](attachments/create-a-custom-save-button/created-microflow.png)

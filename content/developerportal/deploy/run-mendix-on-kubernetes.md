@@ -201,7 +201,7 @@ data:
   license-id: YOUR_LICENSE_ID
 ```
 
-YOUR-DATABASE-ENDPOINT will be in the form `postgres://mendix:mendix@255.255.255.255:5432/postgres` (for example, `postgres://mendix:mendix@172.17.0.3:5432/postgres`). You can find the correct IP address and port for your database endpoint using the command:
+YOUR-DATABASE-ENDPOINT will be in the form `postgres://mendix:mendix@255.255.255.255:5432/db0` (for example, `postgres://mendix:mendix@172.17.0.3:5432/db0`). You can find the correct IP address and port for your database endpoint using the command:
 
 ```bash
 kubectl get ep postgres-service

@@ -182,6 +182,10 @@ With the database running, we can deploy our application. We'll be using a sampl
 
 Before deploying the app, we'll create some secrets so that sensitive information for the application doesn't need to be in our *yaml* file. The secrets file has to be applied only once to the cluster, and the values will be kept there. For information on all of the options, see [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/). 
 
+{{% alert type="info" %}}
+The Secret values in the secrets file must be base64 encoded.
+{{% /alert %}}
+
 `mendix-app-secrets.yaml`:
 
 ```yml

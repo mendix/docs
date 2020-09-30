@@ -633,6 +633,7 @@ The following rights are available to the cluster creator, and members of a name
 * Manage own environments – user can create and manage an environment in any namespace in the cluster
 
 The following actions require the appropriate access to the namespace **and** access to the app environment as a team member with appropriate authorization:
+
 * Deploy App – user can deploy a new app to the environment or start and stop existing apps
 * Scale App – user can change the number of replicas
 * Edit App Constants

@@ -91,9 +91,9 @@ metadata:
   name: postgres
 spec:
   replicas: 1
-   selector:
-   matchLabels:
-     app: postgres
+  selector:
+    matchLabels:
+      app: postgres
   template:
     metadata:
       labels:

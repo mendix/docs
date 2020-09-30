@@ -83,13 +83,13 @@ For all items satisfying the search string, the following information is display
   
 * Information icon to view further information on the service and to go directly to the [Service Details](/data-hub/data-hub-catalog/search##search-details) screen in the Data Hub Catalog: 
 
-  {{% image_container width="400" %}}![Data Hub Pane Information](attachments/data-hub-pane/data-hub-pane-info.png)
+  {{% image_container width="250" %}}![Data Hub Pane Information](attachments/data-hub-pane/data-hub-pane-info.png)
   
   {{% /image_container %}}
 
 If you right-click a consumed service, you can do the following:
 
-![info on a Service](attachments/data-hub-pane/data-hub-pane-menu.png)
+{{% image_container width="250" %}}![info on a Service](attachments/data-hub-pane/data-hub-pane-menu.png){{% /image_container %}}
 
   * **View in Data Hub Catalog** – click this to go to the **Service Details** page in the Data Hub Catalog
   * **Go to connection settings** – click this to open the [consumed OData service](consumed-odata-service) document

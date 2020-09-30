@@ -61,7 +61,7 @@ Follow these steps to create a simple app in Studio Pro whose data you will use 
 
 ## 4 Publishing to the Data Hub Catalog
 
-You are going to register the **Customer** entity in the Data Hub Catalog. This means you will be providing access to the data that will be associated with this entity for use in other apps. To do this you have to expose the **Customer** entity in a published OData service in Studio Pro. OData v3 is a standard format that is used for registering services and the entities that are exposed in the service in the Data Hub Catalog.  
+You are going to register the **Customer** entity in the Data Hub Catalog. This means you will be providing access to the data that will be associated with this entity for use in other apps. To do this you have to expose the **Customer** entity in a published OData service in Studio Pro. OData V3 is a REST-based protocol  and a standard format that is used for registering services and the entities that are exposed in the service in the Data Hub Catalog.  
 
 When the app is deployed to the Mendix Cloud v4, the service is automatically registered in the Data Hub Catalog along with the exposed entity.
 
@@ -155,13 +155,13 @@ Perform the following steps:
 
 	The search results will be listed in the **Data Hub** pane showing all the services and entities satisfying this search string. You will note that the app that you have created is not listed.
 
-	By default, search in the **Data Hub** pane will only show services in production environments. The app that we have deployed in this how-to was deployed to the Mendix Cloud for Free Apps. 
+	By default, search in the **Data Hub** pane will only show services in production environments. The app that you have deployed in this how-to was deployed to the Mendix Cloud for Free Apps. 
 
 4. Click the **Filter** icon next to the search area to include this non-production environment in your search:  
 
 	![Filter Icon](attachments/share-data/filter-icon.png)
 
-5.  Click **Show development environments**. The search results will now show all items in all environments including the **{yourname}CustomerOData_service** which is available in the Mendix Free App environment.
+5.  Check **Show development environments**. The search results will now show results for all environments including the **{yourname}CustomerOData_service** which is available in the Mendix Free App environment (which is displayed as **Sandbox** in the example below):
 
 	![data hub pane](attachments/share-data/data-hub-pane.png)
 

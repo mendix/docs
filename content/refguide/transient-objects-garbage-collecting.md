@@ -85,7 +85,7 @@ When the request state exceeds the configured threshold, you can look at the fol
 * Too many objects are associated with the current session or user
 * Non-persistable objects are associated with an object shown in a widget in a layout (meaning that this object stays in use as long as this layout is shown, usually a long time)
 
-In order to find the root cause of this state size, you need to make a state overview dump using the developer tools in the client. This allows you to see the objects that are in the state and why they are not garbage collected.
+In order to find the root cause of this state size, you need to press <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>G</kbd> to make a state overview dump using the developer tools in the client. The results are shown in the browser console. This allows you to see the objects that are in the state and why they are not garbage collected.
 
 ## 5 Server-Side Memory Management
 
@@ -93,4 +93,5 @@ For every request to the Mendix Runtime — be it from the client or via web ser
 
 ## 6 Read More
 
-*   [Java Memory Usage](java-memory-usage)
+* Mendix blog [The art of state, Part 1: Introduction to the client state ](https://www.mendix.com/blog/the-art-of-state-part-1-introduction-to-the-client-state/)
+* [Java Memory Usage](java-memory-usage)

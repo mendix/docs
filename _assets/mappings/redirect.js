@@ -2463,6 +2463,14 @@ module.exports = {
 	/****************************************************
      * From Data Hub (permanent, mapped) 
      ****************************************************/
+	{
+  	   from: "/data-hub/data-hub-catalog/use-data-catalog",
+   	   to: "/data-hub/general/share-data",
+  	},
+	{
+  	   from: "/data-hub/data-catalog/",
+	   to: "/data-hub/data-hub-catalog/"
+  	},
 	/****************************************************
      * From the App Store (permanent, mapped)
      ****************************************************/

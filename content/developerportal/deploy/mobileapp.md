@@ -106,7 +106,7 @@ Once you begin the app buliding wizard and choose the correct environment, click
 
 For iOS please follow the instructions in [Building Your iOS App Locally](#building-ios-locally) below.
 
-For Android please follow the instructions in [Building Your iOS App Locally](#building-android-locally) below.
+For Android please follow the instructions in [Building Your Android App Locally](#building-android-locally) below.
 
 ### 4.2 Building Your iOS App Locally {#building-ios-locally}
 
@@ -204,10 +204,10 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 To prepare your project for building, follow these instructions:
 
 1. Open a terminal window and change directory into the unzipped package folder, for example **cd /Downloads/localbuild** if it is in your **Downloads** folder.
-1. Run `npm i && npm run package && npm run platform:ios`. This combination of commands does the following:
+1. Run `npm i && npm run package && npm run platform:android`. This combination of commands does the following:
    * Installs all required dependencies
    * Packages the Cordova app for deployment
-   * Adds the iOS platform to Cordova
+   * Adds the Android platform to Cordova
 
 #### 4.3.2 Set Up Environmental Variables
 

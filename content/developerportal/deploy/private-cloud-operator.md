@@ -304,11 +304,11 @@ Names beginning **mendix-** cannot be used for your own apps as they are reserve
 
 All names beginning **openshift-** are reserved for use by OpenShift if you are deploying to an OpenShift cluster.
 
-### 4.2 ApplicationRootURL Needs to be Set Manually
+### 4.2 ApplicationRootUrl Needs to be Set Manually
 
 In some cases, your Mendix app will need to know its own URL - for example when using SSO or sending emails.
 
-For this to work properly, you need to set the [ApplicationRootURL variable](https://docs.mendix.com/refguide/custom-settings#2-general-settings) in `customConfiguration` to the app's URL. For example: 
+For this to work properly, you need to set the [ApplicationRootUrl variable](https://docs.mendix.com/refguide/custom-settings#2-general-settings) in `customConfiguration` to the app's URL. For example: 
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
 kind: MendixApp
@@ -316,15 +316,15 @@ metadata:
   name: example-mendixapp
 spec:
   runtime:
-    # Add the ApplicationRootURL value here
+    # Add the ApplicationRootUrl value here
     customConfiguration: |-
       {
-        "ApplicationRootURL": "https://myapp1-dev.mendix.example.com"
+        "ApplicationRootUrl": "https://myapp1-dev.mendix.example.com"
       }
 ```
 
 {{% alert type="info" %}}
-If you change `appURL`, you should also update the `ApplicationRootURL` value.
+If you change `appURL`, you should also update the `ApplicationRootUrl` value.
 
-Note that the `appURL` is a domain name (without a schema or path), while `ApplicationRootURL` should be a HTTP URL with an http:// or https:// prefix.
+Note that the `appURL` is a domain name (without a schema or path), while `ApplicationRootUrl` should be a HTTP URL with an http:// or https:// prefix.
 {{% /alert %}}

@@ -11,12 +11,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 ### October 1st, 2020
 
-Using data from other applications used to be a complex activity, requiring thorough understanding of building integrations. 
+Using data from other applications used to be a complex activity requiring an in-depth understanding of building integrations. 
 
-No more! We are very proud to announce that [Mendix Data Hub](https://hub.mendix.com) is now generally available. Finding, understanding, and using data from other applications and services has never been this easy.
+No more! We are very proud to announce that [Mendix Data Hub][Mendix Data Hub](https://hub.mendix.com) is now generally available. Finding, understanding, and using data from other applications and services has never been this easy.
 
 Every organization has valuable data in different applications. With Mendix Data Hub you can use the data from different sources in your app without having to deal with complex integrations. All you need to do is just search for the data, add it to your domain model, and use it. 
 
-Curious how Data Hub can help you? The best place to start is the launch blog post: [Data Hub: The Low-Code Approach to Data Integration](http://www.mendix.com/blogs/data-hub-the-low-code-approach-to-data-integration).
+Want to know how it can help you? Check-out the launch blog post: [Data Hub: The Low-Code Approach to Data Integration](http://www.mendix.com/blogs/data-hub-the-low-code-approach-to-data-integration)!
 
-For more information, see the [Data Hub Guide](/data-hub/index) and [Data Hub in Studio](/studio/data-hub-in-studio).
+For even more information, please consult the documentation: [Mendix Data Hub Guide](/data-hub/index).

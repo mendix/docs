@@ -23,7 +23,7 @@ Click  **View** > **Data Hub** to display the **Data Hub** pane:
 
 In the domain model, the Data Hub pane is used to search the Data Hub Catalog for services and entities that can be dragged and used:
 
-![](attachments/data-hub-pane/data-hub-pane.png)
+{{% image_container width="300" %}}![](attachments/data-hub-pane/data-hub-pane.png){{% /image_container %}}
 
 The following functionality is available in the pane:
 
@@ -33,7 +33,7 @@ The following functionality is available in the pane:
 
 When no search string has been specified, the **Project** pane displays the consumed services and the external entities used in the current project:
 
-![Project Section](attachments/data-hub-pane/project-section.png)
+{{% image_container width="300" %}}![Project Section](attachments/data-hub-pane/project-section.png){{% /image_container %}}
 
 To add entities to your project model, see [Adding an External Entity to a Project](external-entities#adding-external-entities).
 
@@ -47,7 +47,7 @@ The search strings must be a minimum of 3 alphanumeric characters. Punctuation c
 
 By default, the search is restricted to apps and services deployed to a production environment. To include non-production environments in the search, click the **Filter** icon and check **Show development environments**:
 
-![Filter Icon](attachments/data-hub-pane/filter-icon.png)
+{{% image_container width="300" %}}![Filter Icon](attachments/data-hub-pane/filter-icon.png){{% /image_container %}}
 
 {{% alert type="info" %}}
 When the development environments setting is checked, all subsequent searches will include search in non-production environments. 

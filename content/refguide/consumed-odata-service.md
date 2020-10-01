@@ -70,8 +70,8 @@ In most cases, this setting can be ignored, and the default **Use project settin
 
 The **Use HTTP authentication** check box specifies if basic authentication should be used. If checked, you have to specify the following details:
 
-* **User name** – defines the user name that will be used to authenticate over HTTP
-* **Password** – defines the password that will be used to authenticate over HTTP
+* **User name** – defines the user name that will be used for authentication
+* **Password** – defines the password that will be used for authentication
 
 Besides basic authentication, you can use custom authentication. For more information, see the [HTTP Headers](#http-headers) section below.
 
@@ -99,6 +99,8 @@ In the **Metadata** tab, you can select a metadata file or use metadata obtained
 
 ### 3.1 Metadata Editor 
 
+The metadata editor allows to open OData contracts from a file or URL. When you already consumed a contract, you can use this editor to update your existing contract with a new version from file or URL.
+
 To open the **Metadata Editor**, click **Edit**. In the editor, you can specify a URL or file for the metadata:
 
 ![Metadata Editor](attachments/consumed-odata-service/metadata-editor.jpg)
@@ -109,7 +111,7 @@ The following settings are available:
 	* **URL** – click **Edit** to specify the URL for the metadata
 	* **File** – click **Browse** to select an XML metadata file
 
-When you import the metadata, you can add virtual entities from the consumed OData service in the [Data Hub Pane](data-hub-pane).
+When you import the metadata, you can add external entities from the consumed OData service in the [Data Hub Pane](data-hub-pane).
 
 ### 3.2 Consumed OData Service Properties
 
@@ -124,7 +126,7 @@ Click the **Properties** tab for the consumed OData service which displays the p
 * **Service ID** – the unique identifier of the service in the Data Hub Catalog
 * **Application ID** – the unique identifier of the application that the service was published from in the Data Hub Catalog
 * **Metadata** – the contents of the metadata file defining the service
-*  **OData version** – the OData version: Mendix supports consuming OData 3 and OData 4
+*  **OData version** – the OData version: can be OData 3 or OData 4
 
 {{% todo %}}[ec-consumed OData Service requirements document  what are the differences between this and the virtual entities doc?]{{% /todo %}}
 
@@ -172,7 +174,7 @@ When minor and major updates to a consumed service are detected in Data Hub the 
 
 ####  4.3.1. Update
 
-The **Update** option is available when a new minor version of a published OData service is issued, and deployed to the same endpoint as the previous version. Studio Pro will recognize that the contract at the endpoint is different to the one currently consumed in the project. 
+The **Update** option is available when a new version of a published OData service is issued, and deployed to the same endpoint as the previous version. Studio Pro will recognize that the contract at the endpoint is different to the one currently consumed in the project. After updating Studio Pro will have the same contract as the one that is available on the endpoint.
 
 {{% alert type="info" %}}
 You can only **Update** services that are deployed to *production* environments. All services version changes and deployments to the same endpoint for non-production environments will have to be updated using  **Switch**.
@@ -204,13 +206,13 @@ In the **Data Hub** pane the search results for the same consumed service will s
 
 #####  4.3.1.3 Update Service Dialog Box
 
-When you click **Update** on the **Consumed OData Service** document or the update icon in the **Data Hub ** and **Project** panes, the **Update **dialog box is displayed.
+When you click **Update** on the **Consumed OData Service** document or the update icon in the **Data Hub** and **Project** panes, the **Update** dialog box is displayed.
 
 {{% todo %}}[standard colour screenshot to replace this after release]{{% /todo %}}
 
 ![update service dhpane](attachments/consumed-odata-service/update-service-dialog-box.png)
 
-The consumed Odata service that is currently consumed in the project (**1.0.11) ** is shown on the left, and you can click **Update** to retrieve the new contract from the Data Hub (**1.0.12**).
+The consumed Odata service that is currently consumed in the project (**1.0.11**) is shown on the left, and you can click **Update** to retrieve the new contract from the Data Hub (**1.0.12**).
 
 #### 4.3.2. Switch
 

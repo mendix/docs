@@ -237,13 +237,9 @@ This section describes the sequence of steps to manually register a service in t
 New versions of previously registered services also have to be registered manually by following the steps below and specifying **Existing application** and **Existing environments**.
 {{% /alert %}}
 
-###  7.1 Preparing the V4 OData Service Documents
+###  7.1 Preparing the v4 OData Service Documents
 
-The documents making up the v4 OData service must be included in a *.zip* file. The files for an OData v4 service contract may comprise the base schema definition and additional associated schema documents to complete the full service definition. 
-
-{{% alert type="info" %}}
-If the v4 OData service document is only one file, this must also be saved as a *.zip* file, as the manual registration will only accept this file format.
-{{% /alert %}}
+The files for an OData v4 service contract may comprise the base schema definition and additional associated schema documents to complete the full service definition.  The files formats of the v4 OData Service contracts that are accepted are *.xml* (for a single file) and  *.zip* (when the contract is comprised of several files). 
 
 ### 7.2 Registering the Service – Application and Environment {#new-service}
 

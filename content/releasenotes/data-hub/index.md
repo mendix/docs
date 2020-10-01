@@ -19,4 +19,4 @@ Every organization has valuable data in different applications. With Mendix Data
 
 Want to know how it can help you? Check-out the launch blog post: [Data Hub: The Low-Code Approach to Data Integration](http://www.mendix.com/blogs/data-hub-the-low-code-approach-to-data-integration)!
 
-For even more information, please consult the documentation: [Mendix Data Hub Guide](/data-hub/index).
+For even more information, please consult the documentation: [Data Hub Guide](/data-hub/index).

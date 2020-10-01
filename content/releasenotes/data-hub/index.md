@@ -9,14 +9,14 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 ## 2020
 
-### September 29th, 2020
+### October 1st, 2020
 
-As of this release, [Mendix Data Hub](https://hub.mendix.com/) is available in [Mendix Studio Pro](/releasenotes/studio-pro/8.14).
+Using data from other applications used to be a complex activity requiring an in-depth understanding of building integrations. 
 
-Every organization has apps containing valuable data in different applications. With Mendix Data Hub, you can use data from different sources in your app without having to deal with complex integrations. All you need to do is search for the data, add it to your domain model, and use it. 
+No more! We are very proud to announce that [Mendix Data Hub](https://hub.mendix.com) is now generally available. Finding, understanding, and using data from other applications and services has never been this easy.
 
-If your organization has a [Data Hub license](/refguide/consumed-odata-service-requirements#license-limitations), you can search for external data sources in the [Data Hub pane](/refguide/data-hub-pane) in Studio Pro. From there, you can open the [Data Hub Catalog](/data-hub/data-hub-catalog/index) for more details on the data found and you can drag and drop the data on your domain model as [external entities](/refguide/external-entities). The resulting app will always show the latest version of the [consumed](/refguide/consumed-odata-services) external data.
+Every organization has valuable data in different applications. With Mendix Data Hub you can use the data from different sources in your app without having to deal with complex integrations. All you need to do is just search for the data, add it to your domain model, and use it. 
 
-For more information, see the [Data Hub Guide](/data-hub/index) and [Data Hub in Studio](/studio/data-hub-in-studio).
+Want to know how it can help you? Check-out the launch blog post: [Data Hub: The Low-Code Approach to Data Integration](http://www.mendix.com/blogs/data-hub-the-low-code-approach-to-data-integration)!
 
-{{% todo %}}[ Add link to blog: https://www.mendix.com/blog/]{{% /todo %}}
+For even more information, please consult the documentation: [Data Hub Guide](/data-hub/index).

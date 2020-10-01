@@ -17,13 +17,13 @@ The **Data Hub** pane enables you to search the Data Hub Catalog and discover th
 
 Click  **View** > **Data Hub** to display the **Data Hub** pane:
 
-{{% image_container width="300" %}}![data-hub-pane](attachments/data-hub-pane/data-hub-pane-empty.png)
+{{% image_container width="300" %}}![data-hub-pane](attachments/data-hub-pane/data-hub-pane-empty.png){{% /image_container %}}
 
 ## 2 Data Hub Pane in the Domain Model
 
 In the domain model, the Data Hub pane is used to search the Data Hub Catalog for services and entities that can be dragged and used:
 
-![](attachments/data-hub-pane/data-hub-pane.png)
+{{% image_container width="300" %}}![](attachments/data-hub-pane/data-hub-pane.png){{% /image_container %}}
 
 The following functionality is available in the pane:
 
@@ -33,13 +33,11 @@ The following functionality is available in the pane:
 
 When no search string has been specified, the **Project** pane displays the consumed services and the external entities used in the current project:
 
-![Project Section](attachments/data-hub-pane/project-section.png)
-
-
+{{% image_container width="300" %}}![Project Section](attachments/data-hub-pane/project-section.png){{% /image_container %}}
 
 To add entities to your project model, see [Adding an External Entity to a Project](external-entities#adding-external-entities).
 
-## 2 Searching the Data Hub Catalog {#search}
+## 3 Searching the Data Hub Catalog {#search}
 
 As you enter a search term, all the items in the Data Hub Catalog satisfying the search string are listed in the search results. You can do a wildcard search by entering `*` in the search area.
 
@@ -49,43 +47,38 @@ The search strings must be a minimum of 3 alphanumeric characters. Punctuation c
 
 By default, the search is restricted to apps and services deployed to a production environment. To include non-production environments in the search, click the **Filter** icon and check **Show development environments**:
 
-![Filter Icon](attachments/data-hub-pane/filter-icon.png)
+{{% image_container width="300" %}}![Filter Icon](attachments/data-hub-pane/filter-icon.png){{% /image_container %}}
 
 {{% alert type="info" %}}
 When the development environments setting is checked, all subsequent searches will include search in non-production environments. 
 {{% /alert %}}
 
-## 3 Viewing Search Results {#viewing}
+## 4 Viewing Search Results {#viewing}
 
 For all items satisfying the search string, the following information is displayed:
 
 * Service name
-
 *  An icon indicating the source of the service (Mendix, SAP, Siemens Teamcenter, or other non-Mendix apps)
 
-  {{% todo %}}[list the icon types]{{% /todo %}}
+	{{% todo %}}[list the icon types]{{% /todo %}}
 
 * Service version
-
 *  The name of the environment that the service is deployed to (for non-production environments)
 
-  {{% alert type="info" %}}By default, search results will show deployments to production environments which will not be named in the search results. Only the names of non-production environments will be displayed.{{% /alert %}}
+	{{% alert type="info" %}}By default, search results will show deployments to production environments which will not be named in the search results. Only the names of non-production environments will be displayed.{{% /alert %}}
 
 * Green check-mark if the service or entity is already consumed by the project
-
 *  Blue **Update Service** icon to indicate that there is a later version of the consumed service available in the Data Hub. Click to update the service that is consumed in the project to the contract that is now available
 
-  {{% alert type="info" %}}If there is an OData Service update available, then the entities that are listed are those that are available in the currently consumed OData service. These entities will be "grayed-out" to indicate that they can no longer be dragged into the domain model as the originial contract is no longer available in the Data Hub Catalog and a different version of the consumed OData service must be retrieved using the **Update** button. Once the service has been **Updated** then the entities will be available from the new version of the Consumed OData service. {{% /alert %}}
+	{{% alert type="info" %}}If there is an OData Service update available, then the entities that are listed are those that are available in the currently consumed OData service. These entities will be "grayed-out" to indicate that they can no longer be dragged into the domain model as the originial contract is no longer available in the Data Hub Catalog and a different version of the consumed OData service must be retrieved using the **Update** button. Once the service has been **Updated** then the entities will be available from the new version of the Consumed OData service. {{% /alert %}}
 
-  {{% alert type="info" %}}The version number that is shown for the OData service is the latest one that is available in the Data Hub Catalog—in the example below version 1.0.11 of **Theatre_service** is currently consumed in the project, but version **1.0.12** is now available in the Data Hub Catalog. The search results display the entities available in the new service (also showing one that is locally consumed) however they are greyed-out and cannot be selected until the local service is **Updated** to this one.{{% /alert %}}
+	{{% alert type="info" %}}The version number that is shown for the OData service is the latest one that is available in the Data Hub Catalog—in the example below version 1.0.11 of **Theatre_service** is currently consumed in the project, but version **1.0.12** is now available in the Data Hub Catalog. The search results display the entities available in the new service (also showing one that is locally consumed) however they are greyed-out and cannot be selected until the local service is **Updated** to this one.{{% /alert %}}
   
   ![Data Hub Pane updaten](attachments/data-hub-pane/data-hub-pane-update.png)
   
 * Information icon to view further information on the service and to go directly to the [Service Details](/data-hub/data-hub-catalog/search##search-details) screen in the Data Hub Catalog: 
 
-  {{% image_container width="250" %}}![Data Hub Pane Information](attachments/data-hub-pane/data-hub-pane-info.png)
-  
-  {{% /image_container %}}
+  {{% image_container width="250" %}}![Data Hub Pane Information](attachments/data-hub-pane/data-hub-pane-info.png){{% /image_container %}}
 
 If you right-click a consumed service, you can do the following:
 

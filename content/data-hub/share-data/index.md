@@ -1,7 +1,5 @@
 ---
-title: "Share Data Between Apps Using Mendix Data Hub"
-category: "General Info"
-menu_order: 10
+title: "Share Data Between Apps Using Data Hub"
 description: "Describes how-to create a Mendix app in Studio Pro which publishes a service to the Data Hub Catalog, and creating a second app which uses external entities from the first app."
 tags: ["data hub catalog", "data hub", "external entities", "landscape", "published OData service" ,"how to", "consume"]
 ---
@@ -56,7 +54,7 @@ Follow these steps to create a simple app in Studio Pro whose data you will use 
 8. From the **Project Explorer** drag **Customer_Overview** into the **Auto-fill** container under the "Welcome" banner.
 
 	You have now created a simple app with the entity **Customer** and a web page where you can add data and view and edit details for this entity. Go ahead and customize your Home page further by changing the banner text.
-
+	
 	![](attachments/share-data/customer-overview-home-page.png)
 
 ## 4 Publishing to the Data Hub Catalog
@@ -125,11 +123,11 @@ The **{yourname}CustomerODataService** from your app is now registered in the Da
 3. From the search results, find the service that you published and select it. Full details will be displayed in the **Search Details** screen and the service metadata pane on the right. This information was defined in the OData service document in Studio Pro. 
 
 	If you have curate permissions (meaning, you are the owner of a service, a curator, or a Data Hub Admin), you will also see the curation bar and you will see that it will show that "**You are the owner of the service**":
-
+	
 	![data hub](attachments/share-data/search-details-screen.png)
 	
 	{{% todo %}}[**AD: add cross-references to these roles of "owner," "curator," "Data Hub Admin"**]{{% /todo %}}
-
+	
 	The curation bar, highlighted in the image above, enables you to edit details of the registered service and also set the **Discoverability** to other users. By default, services registered through a Studio Pro deployment will be set to **Discoverable**.  For further details about curating services, see [How to Curate Registered Assets](../data-hub-catalog/curate).
 
 For more details on searching in the Data Hub Catalog and the **Search Details** screen, see [How to Search in the Data Hub Catalog](../data-hub-catalog/search). You can also explore registered services in the Data Hub Landscape. For more information, see [How to Use the Data Hub Landscape](../data-landscape/../data-hub-landscape/index).
@@ -144,17 +142,17 @@ Perform the following steps:
 2. Go to the domain model.
 
 	The **Data Hub** pane will be displayed on the right. 
-
+	
 	![data hub pane](attachments/share-data/data-hub-pane-empty.png)
-
+	
 	If you do not see the Data Hub pane, click  **View** > **Data Hub** to display the **Data Hub** pane. 
-
+	
 	![](attachments/share-data/view-data-hub.png)
 
 3. In the [Data Hub](/refguide/data-hub-pane) pane, enter the search string *customer*.
 
 	The search results will be listed in the **Data Hub** pane showing all the services and entities satisfying this search string. You will note that the app that you have created is not listed.
-
+	
 	By default, search in the **Data Hub** pane will only show services in production environments. The app that you have deployed in this how-to was deployed to the Mendix Cloud for Free Apps. 
 
 4. Click the **Filter** icon next to the search area to include this non-production environment in your search:  
@@ -198,7 +196,7 @@ To view the consumed data in your new app, follow these steps:
 2. Click **Customer Overview**.
 
 	The overview page displays the list of the customers that you entered in the **{yourname}CustomerServiceApp** app. 
-
+	
 	{{% alert type="info" %}}As this page displays data shared from another app, there are no buttons for adding or changing this data.{{% /alert %}}
 
 ## 8 Seeing Changes in Data in the Consuming App
@@ -231,11 +229,11 @@ You can view the two apps that you have created in the Data Hub Landscape and se
 3. Find your app using the search pane. Remember to use the filter to ensure you can see sandbox apps: 
 
 	![](attachments/share-data/landscape-full-screen.png)
-
+	
 	In the Data Hub Landscape registered services are shown as circles with the number of entities that have been exposed in the service.
-
+	
 	The service **{yourname}CustomerODataAPI** is linked by a solid line to the runtime instance of **{yourname}CustomerCustomerServiceApp** (shown as a square icon), which is deployed as a Free App.
-
+	
 	The service is also linked by a dotted grey line to **{yourname}CustomerActionsApp** with an arrow that indicates that it is making a call to the service for data (or consuming data from it). If you click the entity icon on this consume line, the entities that are being consumed will be listed in the metadata panel.
 
 4. Click a node to see details of the selected item in the Data Hub Catalog metadata panel on the right. You can also click the **Search** tab to see full details in the **Search Details** screen.

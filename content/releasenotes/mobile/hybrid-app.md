@@ -12,7 +12,25 @@ If you are using the advanced flow, you can get the latest version of the Hybrid
 
 For more information on hybrid mobile app development in Mendix, see the [Hybrid Mobile](/refguide/hybrid-mobile) section of the *Studio Pro 8 Guide* and the [Hybrid Mobile](/howto/mobile/hybrid-mobile) section of the *Studio Pro 8 How-to's*.
 
-## 2019
+## 2020
+
+### Hybrid App Base 5.0.0
+
+**Release date: April 15th, 2020**
+
+With this release we updated all PhoneGap dependencies to the latest supported versions to comply with the Apple App Store guidelines for the deprecated UIWebView dependency:
+
+* We updated Cordova and PhoneGap to 9.0.0
+* We updated the Android Engine to 8.1.0
+* We updated the iOS Engine to 5.1.1
+* We updated cordova-plugin-inappbrowser to 3.2.0
+* We updated the NativepageTransitions to use our internal fork
+
+### Hybrid App Base 4.1.10
+
+**Release date: February 4th, 2020**
+
+* We fixed an issue with Android 10 failing with secure storage.
 
 ### Hybrid App Base 4.1.9
 
@@ -20,6 +38,9 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 
 * We fixed an issue with race conditions in asynchronous hooks.
 * We introduced a new **onBeforeSynchonization** hook.
+
+
+## 2019
 
 ### Hybrid App Base 4.1.8
 
@@ -94,13 +115,13 @@ To enable more control over the target architecture, use the following variants:
 
 **Release date: January 28th, 2019**
 
-We fixed an issue on iOS where the app did not fill the entire screen after the keyboard was hidden.
+* We fixed an issue on iOS where the app did not fill the entire screen after the keyboard was hidden.
 
 ### Hybrid App Base 4.0.4
 
 **Release date: January 23rd, 2019**
 
-We fixed a mistake in the Google Services *.plist* file.
+* We fixed a mistake in the Google Services *.plist* file.
 
 ### Hybrid App Base 4.0.3
 
@@ -115,14 +136,14 @@ We fixed a mistake in the Google Services *.plist* file.
 
 **Release date: January 7th, 2019**
 
-The *build-extras.gradle* file was missing in the published npm package. We added it.
+* We added the *build-extras.gradle* file which was missing in the published npm package.
 
 ### Hybrid App Base 4.0.0 / Hybrid App Template 4.0.0
 
 **Release date: January 6th, 2019**
 
 {{% alert type="warning" %}}
-As of April 11th, 2019, Google will drop support for sending push notifications through their Google Cloud Messaging (GCM) service. By that time, all clients will need to have migrated to the new Firebase Cloud Messaging (FCM) service. The move from GCM to FCM impacts Mendix apps that employ push notifications through the Mendix [Push Notifications Connector](https://appstore.home.mendix.com/link/app/3003/). Please read the notes below for upgrade instructions
+As of April 11th, 2019, Google will drop support for sending push notifications through their Google Cloud Messaging (GCM) service. By that time, all clients will need to have migrated to the new Firebase Cloud Messaging (FCM) service. The move from GCM to FCM impacts Mendix apps that employ push notifications through the Mendix [Push Notifications Connector](/appstore/modules/push-notifications) module. Please read the notes below for upgrade instructions
 {{% /alert %}}
 
 #### Push Notifications
@@ -131,14 +152,14 @@ The latest release of the Mendix Push Notifications Connector supports FCM as th
 
 This upgrade of the hybrid app package includes an upgrade to v2 of the [Cordova Push Notifications plugin](https://github.com/phonegap/phonegap-plugin-push). As part of the plugin upgrade, some additional setup is required for push notifications (in connection with the Mendix Push Notifications Connector). Specifically, if your app supports push notifications, you are now required to set up a [Firebase](https://firebase.google.com/) account for your app and include Google service description files (*google-services.json* and *GoogleService-Info.plist*) in your hybrid app.
 
-As a result of this, Mendix hybrid apps that employ push notifications can no longer be built directly using the [Phonegap Build flow](/refguide7/customizing-phonegap-build-packages) in the Mendix Developer Portal. Instead, you will need to prepare the hybrid app package locally. You can use the generated hybrid app package to build your Android and iOS apps locally, or upload them to Phonegap Build manually.
+As a result of this, Mendix hybrid apps that employ push notifications can no longer be built directly using the Phonegap Build method. Instead, you will need to prepare the hybrid app package locally by following the [Do It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) section of the *Mobile App Guide*.
 
 If your app does not employ push notifications, you can still use the Phonegap Build workflow. Please make sure you clear the **Push Notifications** check box in the **Permissions** section of the **Deploy** > [Mobile App](/developerportal/deploy/mobileapp) page in the Developer Portal.
 
 #### Other Fixes
 
 * We improved how permission texts are configured in order to fix an issue with building iOS apps.
-* We added an exception to the navigation for `about:blank` in order to fix an issue with the [Google Maps](https://appstore.home.mendix.com/link/app/48911/) widget.
+* We added an exception to the navigation for `about:blank` in order to fix an issue with the [Google Maps](/appstore/widgets/google-maps) widget.
 
 ## 2018
 

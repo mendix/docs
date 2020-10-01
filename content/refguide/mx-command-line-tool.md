@@ -49,7 +49,7 @@ For `OUTPUT`, enter the output location for the converted results. Keep the foll
 * When `INPUT...` is a single file, `OUTPUT` can be a single file or directory; otherwise, `OUTPUT` must be a directory.
 * When using the `--in-place` option, the `INPUT...` folder will also be used as the `OUTPUT` folder, so you do not need to specify a separate `OUTPUT` folder
 
-#### 3.1.4 Examples
+#### 3.1.2 Examples
 
 | Example | Result |
 | --- | --- |
@@ -57,7 +57,7 @@ For `OUTPUT`, enter the output location for the converted results. Keep the foll
 | `mx convert C:\Mendix\App1.mpk C:\Mendix\App2.mpk C:\Mendix\ConvertedProjects\` | Converts the *App1.mpk* and *App2.mpk* app project packages that are in the *C:\Mendix\* folder and puts the results in the *C:\Mendix\ConvertedProjects\* folder. |
 | `mx convert --skip-error-check C:\Mendix\Packages\ C:\Mendix\ConvertedPackages\` | Converts all app project packages in the *C:\Mendix\Packages\* folder and outputs to the *C:\Mendix\ConvertedPackages\* folder without checking for errors. |
 
-#### 3.1.5 Return Codes 
+#### 3.1.3 Return Codes 
 
 | Exit Code | Description |
 | --- | --- |
@@ -66,6 +66,41 @@ For `OUTPUT`, enter the output location for the converted results. Keep the foll
 | 2 | There is something wrong with the command-line options. |
 | 3 | Converting the project(s) failed. |
 
-### 3.2 Undocumented Options
+### 3.2 `mx create-project`
+
+The `mx create-project` command creates a new app project in the Studio Pro version with which the tool was bundled. For example, if you are using the mx tool that came with Studio Pro version 8.1.0.58215, then `mx create project` will create a new app project in that version. 
+
+#### 3.2.1 Usage
+
+Use this command pattern: `mx create-project [OPTIONS] [TEMPLATE-MPK-FILE]`
+
+These are the `OPTIONS`:
+
+| Option | Default Value | Result |
+| --- | --- | --- |
+| `app-name` | App | Assigns the specified app name to the app project. |
+| `output-dir` | Current directory | The directory in which to create the project. |
+| `language-code` | Optional | The default language of the app project. |
+| `sprintr-app-id` | Optional | Associates the app project [feedback features](/developerportal/collaborate/feedback) with the provided [Developer Portal app project](/developerportal/apps-list/). |
+
+`TEMPLATE-MPK-FILE` is an optional path to a Mendix app project package (*.mpk*) file. If this argument is omitted, the app project is created with a default empty project template.
+
+#### 3.2.2 Examples
+
+| Example | Result |
+| --- | --- |
+| `mx create-project` | Creates an app project in the current folder using all the default parameters. |
+| `mx create-project --app-name "MyFirstApp" --output-dir "C:/Projects/MyFirstApp"` | Creates an app project named `MyFirstApp` in the *C:/Projects/MyFirstApp* folder using all the default parameters. |
+| `mx create-project "C:/Templates/ExpenseReportTemplate.mpk"` | Creates an app project with the default parameters from a template located at *C:/Templates/ExpenseReportTemplate.mpk*. |
+
+#### 3.2.3 Return Codes 
+
+| Exit Code | Description |
+| --- | --- |
+| 0 | The app project creation was successful. |
+| 1 | An internal error occurred. |
+| 2 | There is something wrong with the command-line options. |
+
+### 3.3 Undocumented Options
 
 The mx tool contains options that are not described in this document. Those are for internal Mendix usage and are not officially supported. This might change in the future, but these options can be used only at your own risk.

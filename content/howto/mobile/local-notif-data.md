@@ -16,17 +16,17 @@ Every entry in the Mendix database has an unique ID. If you want to pass an obje
 
 You will create the following things to send data to pages:
 
-* **Two entities** — *TestEntity* to test how to show particular object, and *Notification* to help pass data to your page
-* **One page** — *DetailTestEntity* which will be shown on tapping a notification
-* **One microflow** — *DS_TestEntity* to create dummy data for testing
-* **Three nanoflows** — *DS_Notification* to create a dummy notification object, *ACT_PassGUIDToNotification* to pass a GUID, and *On_tapNotification* to process data from your notification
+* **Two entities** – *TestEntity* to test how to show particular object, and *Notification* to help pass data to your page
+* **One page** – *DetailTestEntity* which will be shown on tapping a notification
+* **One microflow** – *DS_TestEntity* to create dummy data for testing
+* **Three nanoflows** – *DS_Notification* to create a dummy notification object, *ACT_PassGUIDToNotification* to pass a GUID, and *On_tapNotification* to process data from your notification
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Review the [basic differences](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) between local notifications and push notifications
-* Install the [Make it Native](/refguide/getting-the-make-it-native-app) app on your mobile device
+* Install the [Make It Native](/refguide/getting-the-make-it-native-app) app on your mobile device
 * Complete the preceding tutorials in this [Use Local Notifications](local-notif-parent) series
 
 ## 3 Sending Data to Pages
@@ -205,11 +205,11 @@ Good job! When a user taps a notification from the **Pass GUID to Notification**
 
 Next you are going to create a show page action for **ON_tapNotification**.
 
-1.  Drag and drop a **Show Page** action onto your nanoflow:
+1.  Drag a **Show Page** activity onto your nanoflow:
 
 	{{% image_container width="500" %}}![new show page](attachments/native-push/add-show-page.png){{% /image_container %}}
 
-2. Double-click the show page activity.
+2. Double-click the **Show Page** activity.
 
 3. From the **Object to pass** drop-down menu select **ReturnedObjectByGuid**.
 

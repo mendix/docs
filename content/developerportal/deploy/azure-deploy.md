@@ -82,7 +82,7 @@ The first thing to do when you want to run a Mendix app on Azure is to create a 
 
 15.  Click **Ok**.
 
-16.  A summary is shown, click on **Ok** to continue.
+16.  A summary is shown, click **Ok** to continue.
 
 17. The offer detail is shown. Click **Purchase** to create the instance.
 

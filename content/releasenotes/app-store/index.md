@@ -5,7 +5,47 @@ tags: ["app store", "connector", "module", "add on", "widget"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes made to the [Mendix App Store](/developerportal/app-store/).
+These release notes cover changes made to the [Mendix App Store](/appstore/index).
+
+## 2020
+
+### May 27th, 2020
+
+#### Fix
+
+As of Studio Pro version [8.10.0](../studio-pro/8.10#1400), you are able to download private content in the App Store again. This is not possible for Studio Pro versions 8.7–8.9.
+
+### May 6th, 2020
+
+#### Improvement
+
+You can now download previous versions of App Store components from the [Mendix App Store](https://appstore.home.mendix.com/). This can be done in the **All versions** tab on the component's [details page](/appstore/general/app-store-overview#details). This can be used as a workaround for not being able to download private content from the App Store available in older versions of Studio Pro/Desktop Modeler due to the [security issue](#private-fix) described below.
+
+#### Fix
+
+As of Studio Pro version [8.6.4](../studio-pro/8.6#private-content), you are able to download private content in the App Store again. This is possible for Studio Pro version 8.6.4 and all further 8.6.x versions. It is not possible for Studio Pro versions below 8.6.4.
+
+### May 4th, 2020
+
+#### Fix
+
+As of Desktop Modeler version [7.23.14](../studio-pro/7.23#private), you are able to download private content in the App Store again. This is possible for Desktop Modeler version 7.23.14 and all further 7.23.x versions. It is not possible for Desktop Modeler versions below 7.23.14.
+
+### April 7th, 2020
+
+#### Security Fix Needed for App Store in Studio Pro/Desktop Modeler {#private-fix}
+
+Downloading [private content](/appstore/general/share-app-store-content#private-app-store) from the App Store available in Studio Pro/Desktop Modeler has been temporarily disabled due to a security vulnerability.
+
+You will be able to download private content from the App Store available in Studio Pro/Desktop Modeler again once a fix is released in a future [8.x](../studio-pro/8), [8.6.x](../studio-pro/8.6), and [7.23.x](../studio-pro/7.23) release. This functionality will then only be available in those specific versions with the fix and subsequent versions. This functionality will not be available again for the App Store in Desktop Modeler version [6](../studio-pro/6).
+
+You can continue downloading the latest version of private App Store content from the [Company Content](/appstore/general/app-store-overview#company-content) page in the [Mendix App Store](https://appstore.home.mendix.com/) and use it in the respective versions of Studio Pro/Desktop Modeler.
+
+### February 26th, 2020
+
+#### Improvement
+
+We have updated the single sign-on functionality in the App Store to use the latest [Mendix SSO](/developerportal/deploy/mendix-sso). Now, the first time you visit any App Store page requiring authentication, you will see a screen asking you to authorize access to your Mendix account. Click **Authorize** to continue.
 
 ## 2019
 
@@ -15,35 +55,35 @@ These release notes cover changes made to the [Mendix App Store](/developerporta
 
 We are invested in maintaining Mendix App Store content to make it easier for you to find and use the widgets and modules that you need. To that end, we have cleaned up old App Store content where Mendix support is no longer possible and changed the support level from **Platform support** to **Community support**.
 
-For more information on these support levels, see [App Store Content Support](/developerportal/app-store/app-store-content-support).
+For more information on these support levels, see [App Store Content Support](/appstore/general/app-store-content-support).
 
 ### November 6th, 2019
 
 #### Improvement
 
-You can now subscribe to receive emails when new versions of your [favorite](/developerportal/app-store/app-store-overview#favorites) App Store content are published.
+You can now subscribe to receive emails when new versions of your [favorite](/appstore/general/app-store-overview#favorites) App Store content are published.
 
 ### October 23rd, 2019
 
 #### New Features
 
-You can now create [user groups](/developerportal/app-store/app-store-overview#user-groups) for your company and assign your company’s App Store content to different groups. Management of user group content is restricted to only the members of the group. You can also add [guest](/developerportal/app-store/app-store-overview#guests) users to these groups and allow them to download selected private company content.
+You can now create [user groups](/appstore/general/app-store-overview#user-groups) for your company and assign your company’s App Store content to different groups. Management of user group content is restricted to only the members of the group. You can also add [guest](/appstore/general/app-store-overview#guests) users to these groups and allow them to download selected private company content.
 
-The former App Store **Content Managers** and **External Downloaders** groups have been removed. Members of these groups have been migrated to a new temporary user group called **Migrated Data**. Former “content managers” have been added as user group [members] (/developerportal/app-store/app-store-overview#members), and former “external downloaders” have been added as [guests](/developerportal/app-store/app-store-overview#guests).
+The former App Store **Content Managers** and **External Downloaders** groups have been removed. Members of these groups have been migrated to a new temporary user group called **Migrated Data**. Former “content managers” have been added as user group [members] (/appstore/general/app-store-overview#members), and former “external downloaders” have been added as [guests](/appstore/general/app-store-overview#guests).
 
-Content that was marked as **Protected** as well as content marked as **Shared with Others** has been migrated to the [Content](/developerportal/app-store/app-store-overview#content) tab of the Migrated Data user group. This makes all “externally shared” content protected for that user group.
+Content that was marked as **Protected** as well as content marked as **Shared with Others** has been migrated to the [Content](/appstore/general/app-store-overview#content) tab of the Migrated Data user group. This makes all “externally shared” content protected for that user group.
 
 ### October 1st, 2019
 
 #### Improvement
 
-We now display the UUID of an App Store component in the [Additional Info](/developerportal/app-store/app-store-overview#additional-info) section of its details page. This allows you to specify the `TemplateUUID` when calling the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*.
+We now display the UUID of an App Store component in the [Additional Info](/appstore/general/app-store-overview#additional-info) section of its details page. This allows you to specify the `TemplateUUID` when calling the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*.
 
 ### September 11th, 2019
 
 #### Improvement
 
-We added the flexibility to label your App Store content with a [custom version number](/developerportal/app-store/share-app-store-content#updating).
+We added the flexibility to label your App Store content with a [custom version number](/appstore/general/share-app-store-content#updating).
 
 {{% alert type="info" %}}This is based on an [upvoted idea from Andreas Blaesius](https://forum.mendixcloud.com/link/ideas/1324) submitted to the [Mendix Idea Forum](https://forum.mendixcloud.com/index4.html). Thanks, Andreas!{{% /alert %}}
 
@@ -51,7 +91,7 @@ We added the flexibility to label your App Store content with a [custom version 
 
 #### SAP Connector Renaming
 
-We renamed all the SAP-related connectors and starter apps in the App Store to be consistent. The changes are:
+We renamed all the SAP-related connectors and app templates in the App Store to be consistent. The changes are:
 
  Type | Old Name | New Name |
  ----- | ----- | -----|
@@ -60,9 +100,9 @@ We renamed all the SAP-related connectors and starter apps in the App Store to b
  Connector | SAP Leonardo Machine Learning Foundation Connector | Connector for SAP Leonardo Machine Learning Foundation |
  Connector | SAP OData Connector | OData Connector for SAP solutions |
  Connector | SAP OData Model Creator | OData Model Creator for SAP solutions |
- Starter App | Fiori Blank | Blank App for SAP Fiori themed apps |
- Starter App | SAP Northwind OData | Northwind OData Service Master-Detail App for SAP solutions |
- Starter App | SAP Purchase Order Approval Tutorial | Purchase Order Approval Tutorial for SAP solutions |
+ App Template | Fiori Blank | Blank App for SAP Fiori themed apps |
+ App Template | SAP Northwind OData | Northwind OData Service Master-Detail App for SAP solutions |
+ App Template | SAP Purchase Order Approval Tutorial | Purchase Order Approval Tutorial for SAP solutions |
 
 ### August 26th, 2019
 
@@ -97,7 +137,7 @@ We added a component in the App Store which, when configured in your app, allows
 
 #### Improvements
 
-* We fixed the issue with selecting specific **Starter Apps** when creating a new app in Mendix Studio Pro (Desktop Modeler).
+* We fixed the issue with selecting specific app templates when creating a new app in Mendix Studio Pro (Desktop Modeler).
 * We fixed the problems with deep links for private apps.
 
 ### April 29th, 2019
@@ -122,7 +162,7 @@ We added a component in the App Store which, when configured in your app, allows
 
 * We released an upgraded version of the [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/), which supports IBM Watson SDK version 6.11.0 and adds additional microflow actions.
 * We released an upgraded version of the [IBM Watson Connector Suite Example Project](https://appstore.home.mendix.com/link/app/2880/), which includes the new IBM Watson Connector Suite.
-* We released an upgraded version of the IBM Watson Blank App starter app, which includes the new IBM Watson Connector Suite.
+* We released an upgraded version of the IBM Watson Blank App app template, which includes the new IBM Watson Connector Suite.
 * For more information see [IBM Watson Connector](https://docs.mendix.com/partners/ibm/ibm-watson-connector).
 
 ### January 21st, 2019
@@ -159,7 +199,7 @@ The SAP Leonardo Machine Learning Foundation Connector is available in the App S
 
 #### SAP Fiori Styling
 
-The existing SAP Blank starter app has been replaced by a new Fiori Blank starter app. This new Fiori Blank starter app has a new Fiori UI Package included. This is based on Atlas UI, which means that you can use either the Web Modeler or Desktop Modeler to build applications which give the Fiori UI experience.
+The existing SAP Blank app template has been replaced by a new Fiori Blank app template. This new Fiori Blank app template has a new Fiori UI Package included. This is based on Atlas UI, which means that you can use either the Web Modeler or Desktop Modeler to build applications which give the Fiori UI experience.
 
 #### Breaking Change
 

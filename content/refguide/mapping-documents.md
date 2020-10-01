@@ -11,11 +11,11 @@ Mapping documents are used to define how Mendix objects can be converted to and 
 
 ## 2 Import Mappings
 
-Import mappings are used to define how incoming XML or JSON is converted into Mendix objects, according to a specific XML schema or JSON structure. This is needed to be able to interpret data received from other systems. In Mendix there are three basic scenarios for converting Mendix objects to XML or JSON:
+Import mappings are used to define how incoming XML or JSON is converted into Mendix objects, according to a specific XML schema or JSON structure. This is needed to be able to interpret data received from other systems. In Mendix there are three basic scenarios for creating Mendix objects from XML or JSON:
 
-*   Receiving XML from a web service (defined in an [imported web service](consumed-web-service)) in a [Call Web Service Action](call-web-service-action) activity.
-*   Receiving XML or JSON from a call action [Call Rest Action](call-rest-action).
-*   Importing XML or JSON directly in an [Import from Mapping](import-mapping-action) action. 
+*   Receiving XML from a web service (defined in an [imported web service](consumed-web-service)) in a [call web service](call-web-service-action) activity.
+*   Receiving XML or JSON from a call action [call REST service](call-rest-action).
+*   Importing XML or JSON directly in an [import from mapping](import-mapping-action) action. 
 
 This is an example of an import mapping document that maps an **Order** from a web service to a **ReceivedOrder** entity:
 
@@ -27,8 +27,8 @@ For more details, see [Import Mappings](import-mappings).
 
 Export mappings are used to define how Mendix objects can be converted to XML according to a specific XML schema. This is needed to be able to send data to other systems in a format the other system can process. In Mendix there are two basic scenarios for converting Mendix objects to XML:
 
-*   Sending XML to a web service (defined in an [imported web service](consumed-web-service)) in a [Call Web Service Action](call-web-service-action) activity.
-*   Exporting XML directly in an [Export with Mapping](export-mapping-action) action. 
+*   Sending XML to a web service (defined in an [imported web service](consumed-web-service)) in a [call web service](call-web-service-action) activity.
+*   Exporting XML directly in an [export with mapping](export-mapping-action) action. 
 
 This is an example of an export mapping document:
 
@@ -48,9 +48,9 @@ To specify an import or export mapping, the user needs to do a number of things:
 
     If the schema is large, a subset of elements can be selected so you don't have to map all of them. This is explained in more detail in the [Select Elements](select--elements) section.
 
-3.  Click **OK**. A structure is created with placeholders for entities on the left-hand side, and the selected XSD elements on the right-hand side.
+3.  Click **OK**. A structure is created with placeholders for entities on the left, and the selected XSD elements on the right side.
 
-    It is possible to include a parameter entity in mapping documents. Mapping documents with a parameter entity need to be invoked (in a [Call Web Service Action](call-web-service-action) or [Export with Mapping](export-mapping-action) action) by passing a parameter of the configured type. Mapping documents without a parameter entity can be invoked without passing a parameter. For import mappings, a parameter entity can be included by dragging one onto the placeholder in the created structure using the Connector tool. Export mappings always need to have a parameter entity (the object that is being exported) and the mapped root element is used for this. In both cases, the parameter entity is depicted as a yellow arrow parameter symbol.
+    It is possible to include a parameter entity in mapping documents. Mapping documents with a parameter entity need to be invoked (in a [call web service](call-web-service-action) or [export with mapping](export-mapping-action) activity) by passing a parameter of the configured type. Mapping documents without a parameter entity can be invoked without passing a parameter. For import mappings, a parameter entity can be included by dragging one onto the placeholder in the created structure using the Connector tool. Export mappings always need to have a parameter entity (the object that is being exported) and the mapped root element is used for this. In both cases, the parameter entity is depicted as a yellow arrow parameter symbol.
 
 4.  Map the child elements of the schema. Entities can be obtained in four ways:
     
@@ -81,8 +81,8 @@ Mapping documents rely heavily on two windows. If they are not visible in Studio
 *   Right mouse click, "Go to Entity". Open the Domain Model that contains the entity and jumps to the entity.
 *   Right mouse click, "Collapse All". Hides all the children of the mapping element, so you can keep overview in large mappings.
 *   Right mouse click, "Expand All". Expands all children of the mapping element; all underlying elements become visible.
-*   Left mouse click on "-" icon (below mapping element). Makes underlying elements invisible.
-*   Left mouse, click on "+" icon (below mapping element). Makes underlying elements visible again.
+*   Left mouse click "-" icon (below mapping element). Makes underlying elements invisible.
+*   Left mouse, click "+" icon (below mapping element). Makes underlying elements visible again.
 
 ## 8 Properties
 

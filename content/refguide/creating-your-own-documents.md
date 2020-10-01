@@ -20,7 +20,7 @@ Before we start, we recommend you first read the following two pages:
 
 Before you start producing a document with Mendix, it is advisable to make a draft version of the document you want to produce. You can sketch something on a piece of paper or ask your customer to provide you with an example. Either way, it is good to have in mind what you want to achieve.
 
-Using your desired document, you can choose a strategy for producing it. Mendix offers numerous options for producing documents using the out-of-the-box document template functionality, but you may find that the Mendix features are not sufficient to generate your document. Don’t worry. For alternative ways of producing documents with Mendix, see [5 Alternative Ways of Creating Documents](#Alternative).
+Using your desired document, you can choose a strategy for producing it. Mendix offers numerous options for producing documents using the out-of-the-box document template functionality, but you may find that the Mendix features are not sufficient to generate your document. Don’t worry. For an alternative way of producing documents with Mendix, see [Alternative Way of Creating Documents](#Alternative).
 
 For our example, we’ve concluded that the Mendix functionality does suffice. So, let’s have a look at how this works with an example.
 
@@ -137,17 +137,7 @@ This is the resulting document:
 
 In this example, you retrieved the **OrderLine** information via the **Entity (path)** data source. An alternative way of doing this would be to use a microflow that returns objects for the list presentation. If you do this, make sure to add the correct user role(s) to the microflows that are being used as data source microflows within the document template.
 
-## 5 Alternative Ways of Creating Documents {#Alternative}
-
-In addition to out-of-the-box Mendix functions, there are two other ways of generating documents with your Mendix app.
-
-### 5.1 App Store Module
-
-In the Mendix App Store, [Document generation 4 Mendix](https://appstore.home.mendix.com/link/app/2026/) is available.
-
-For more information on this way of working, see [Document Generation for Mendix, Finally](http://www.appronto.nl/over-appronto/blog/word-merging-for-mendix-finally).
-
-### 5.2 Java API
+## 5 Alternative Way of Creating Documents {#Alternative}
 
 The other way to generate documents is via a Java API called IText. This Java library is free to use.
 

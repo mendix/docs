@@ -1,10 +1,9 @@
 ---
 title: "Community Commons Function Library"
 category: "Modules"
-description: " "
-tags: [ ]
-draft: true
-#README exists
+description: "Describes the configuration and usage of the Community Commons Function Library module, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "community commons function library", "community commons", "java action call", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -13,15 +12,15 @@ The [Community Commons Function Library](https://appstore.home.mendix.com/link/a
 
 ## 2 Usage
 
-All the functions in this package can be invoked using a [Java action call](/refguide/java-action-call) in a microflow or from your own Java code by calling `communitycommons.<Action Folder>.<Action name>;` (for example, `commonitycommons.StringUtils.hash("Mendix", 20);`).
+All the functions in this package can be invoked using a [Java action call](/refguide/java-action-call) in a microflow or from your own Java code by calling `communitycommons.<Action Folder>.<Action name>;` (for example, `communitycommons.StringUtils.hash("Mendix", 20);`).
 
 The module contains one constant: `CommunityCommons.MergeMultiplePdfs_MaxAtOnce`. This is used in the `MergeMultiplePdfs` Java action to restrict the number of PDFs processed at the same time. The default restriction is 10 files at once for Mendix Cloud v4-compatibility. If you need to merge more than 10 files, increase the number here. Setting the value to `<= 0` means unlimited.
 
 ## 3 Testing
 
-The Community Commons container project contains a variety of predesigned unit tests. To use these tests, download the [Unit Testing](https://appstore.home.mendix.com/link/app/390/) module from the Mendix App Store . This module has a dependency on the [ObjectHandling](https://appstore.home.mendix.com/link/app/37114/) module, so that module should also be imported to your app project if you want to run the tests.
+The Community Commons container project contains a variety of predesigned unit tests. To use these tests, download the [Unit Testing](/appstore/modules/unit-testing) module from the Mendix App Store . This module has a dependency on the [Object Handling](/appstore/modules/object-handling) module, so that module should also be imported to your app project if you want to run the tests.
 
-## 4 Function list
+## 4 Function List
 
 ### 4.1 Batches
 
@@ -76,13 +75,13 @@ The Community Commons container project contains a variety of predesigned unit t
 
 ### 4.7 ORM
 
-* `CommitWithoutEvents` – Commits an object but without events.
-* `Clone` – Clones the objects.
-* `DeepClone` – Clones the objects, their associations, and their referred objects.
-* `GetGUID` – Teturns the global unique identifier (GUID) or the ID of an object.
-* `GetOriginalValueAsString` – Returns the original value of an object member, that is, the last committed value.
-* `GetTypeAsString` – Returns the actual type of an entity. Useful as an alternative way to split upon inheritance or as input for other functions in this module.
-* `MemberHasChanged` – Checks whether a member has changed since the last commit. This is useful in combination with `GetOriginalValueAsString`.
+* `CommitWithoutEvents` – This commits an object but without events.
+* <a name="clone"></a>`Clone` – This clones the objects.
+* <a name="deepclone"></a>`DeepClone` – This clones the objects, their associations, and their referred objects. For more information, see the [Limitations](#limitations) section below.
+* `GetGUID` – This returns the global unique identifier (GUID) or the ID of an object.
+* `GetOriginalValueAsString` – This returns the original value of an object member, that is, the last committed value.
+* `GetTypeAsString` – This returns the actual type of an entity. Useful as an alternative way to split upon inheritance or as input for other functions in this module.
+* `MemberHasChanged` – This checks whether a member has changed since the last commit. This is useful in combination with `GetOriginalValueAsString`.
 * `RefreshClass` – This refreshes a certain domain object in the client. This is useful for enforcing a data grid to refresh, for example.
 * `refreshClassByObject` – This refreshes a certain class via the domain object type in the client. This is useful for enforcing a data grid to refresh, for example.
 * `getLastChangedByUser` – This returns the user that last changed an object as `System.User`.
@@ -106,7 +105,7 @@ The Community Commons container project contains a variety of predesigned unit t
 * `IsStringSimplified` – This determines whether a string can be further simplified by removing diacritics.
 * `RandomString` – This generates a random alphanumeric string of the desired length.
 * `RandomHash` – This generates a random hash perfectly to use as a random unique identifier.
-* `RegexReplaceAll` – This performs a regular expression replace, which is identical to the microflow expression function `replaceAll`. (DEPRECATED)
+* `RegexReplaceAll` – This performs a regular expression replace, which is identical to the microflow expression function `replaceAll`.
 * `RegexQuote` – This escapes a string value so that it can be used literally with Mendix built-in `regex` replacement functions (for example, so the `$` sign is not interpreted as a back reference to a match).
 * `StringLeftPad` – This pads a string on the left to a certain length.
 * `StringRightPad` – This pads a string on the right to a certain length.
@@ -165,7 +164,11 @@ For security reasons, Guava was upgraded to version 27 in version 7.4.0 of this 
 * *guava-27.0-jre.jar*
 * *owasp-java-html-sanitizer-20181114.1.jar*
 
-## 6 Read More
+## 6 Limitations {#limitations}
 
-* [How to Implement Community Best Practices for App Performance](/howto/general/community-best-practices-for-app-performance)
-* [How to Implement Best Practices for App Security](/howto/security/best-practices-security)
+* [Generalizations](/refguide/generalization-and-association) are not supported (specifically in the [Clone](#clone) and [DeepClone](#deepclone) functions).
+
+## 7 Read More
+
+* [How to Implement Community Best Practices for App Performance](https://docs.mendix.com/howto/general/community-best-practices-for-app-performance)
+* [How to Implement Best Practices for App Security](https://docs.mendix.com/howto/security/best-practices-security)

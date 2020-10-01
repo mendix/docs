@@ -38,7 +38,7 @@ Scaling out can be done using the Pivotal App Manager. Using the Pivotal App Man
 Mendix Runtime has the concept of a cluster leader. This is a single node within a Mendix Runtime cluster that performs cluster management activities. Those activities are:
 
 * `Session Expiration handling` - removing sessions after they have expired (not been used for a configured timespan)
-	* For version [7.23.4](/releasenotes/studio-pro/7.23#7234) and above – each node expires its sessions (after not having been used for a configured timespan) and removes the session persisted in the database; in exceptional cases (for example, a node crash), some sessions may not be removed from the database, in which case the cluster leader performs a clean-up of the sessions
+	* For version [7.23.4](/releasenotes/studio-pro/7.23#7234) and above – each node expires its sessions (after not having been used for a configured timespan) and the cluster leader removes the sessions persisted in the database; in exceptional cases (for example, a node crash), some sessions may not be removed from the database, in which case the cluster leader performs a clean-up of the sessions
 	* For version [7.23.3](/releasenotes/studio-pro/7.23#7233) and below – the cluster leader removes sessions after they have expired (having not been used for a configured timespan)
 * `Cluster node expiration handling` - removing cluster nodes after they have expired (not giving a heartbeat for a configured timespan)
 * `Background job expiration handling` - removing data about background jobs after the information has expired (older than a specific timespan)

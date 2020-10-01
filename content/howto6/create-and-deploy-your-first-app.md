@@ -28,14 +28,10 @@ With Mendix, you can manage requirements, build apps with version control, and d
 To manage your applications from idea to deployment, we use projects. To create a collaboration project, follow these steps:
 
 1. Go to [http://home.mendix.com/](http://home.mendix.com/).
-2. Click **CREATE NEW APP**.
-    ![](attachments/18448667/18580748.png) 
-3. You should now choose your starting point, so select **Blue Wave** as a theme: 
-    ![](attachments/18448667/18580751.png)
-4. Click **USE THIS THEME**:
-    ![](attachments/18448667/18580749.png) 
-5. Enter a name for your new app, then click **CREATE APP**:
-    ![](attachments/18448667/18580746.png)
+2. Click **CREATE APP**.
+3. You should now choose your starting point, so select **Blue Wave Theme** as a theme.
+4. Click **USE THIS THEME**.
+5. Enter a name for your new app, then click **CREATE APP**.
     
 You've created your first project! You can now invite co-workers, share ideas, manage requirements, and deploy and monitor your app. Version control is still empty, but we'll fix that in a later section. 
 
@@ -43,8 +39,7 @@ You've created your first project! You can now invite co-workers, share ideas, m
 
 To create a basic data layer, follow these steps:
 
-1. Click **Edit in Modeler** to open your project in the Modeler:
-    ![](attachments/18448667/18580744.png)
+1. Click **Edit in Modeler** to open your project in the Modeler.
 2. Expand the **MyFirstModule** module in the **Project Explorer** on the left side of the Modeler, and then double-click **Domain Model**, which will open the domain model document on the right side:
     ![](attachments/18448667/18580743.png) 
 3. Create this domain model:

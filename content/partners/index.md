@@ -1,7 +1,6 @@
 ---
 title: "Strategic Partners Guide"
 description: "Documentation for IBM, SAP, and Siemens widgets written and maintained by Mendix"
-notoc: true
 tags: ["strategic partners", "ibm", "sap", "siemens"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
@@ -10,7 +9,7 @@ tags: ["strategic partners", "ibm", "sap", "siemens"]
 
 The *Mendix Strategic Parters Guide* provides documentation on widgets written and maintained by Mendix which support integration with IBM, SAP, and Siemens cloud platforms and services.
 
-## 2 Document Categories
+## 2 Guide Categories
 
 The *Strategic Partners Guide* is divided into the following categories:
 

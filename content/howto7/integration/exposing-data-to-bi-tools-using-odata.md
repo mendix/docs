@@ -27,16 +27,20 @@ A reporting tool like Tableau or Excel can discover what data and functionality 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Open the [Company Expenses sample app](https://appstore.home.mendix.com/link/app/240/Mendix/Company-Expenses) from the Mendix App Store in the Modeler
-    * Add some expense reports to the app so that you have data to work with in this how-to
 * Install Excel 2013
 * Download and install [Tableau](http://www.tableau.com/) (you can use the trial version for 14 days)
+
+{{% alert type="warning" %}}
+This how-to uses the Company Expenses app template for an example scenario. However, this app templateis no longer platform-supported by Mendix. Therefore, sections using this app template can only be used as reference and not as sections that can be completed step-by-step.
+
+The how-to for Studio Pro 8 uses the Asset Manager app template and is supported. For more information, see [How to Expose Data to BI Tools Using OData](/howto/integration/exposing-data-to-bi-tools-using-odata) for Studio Pro 8.
+{{% /alert %}}
 
 ## 3 Creating a Published OData Service
 
 A published OData service can be used by third-party applications to read data from a Mendix application. In this chapter, you will create and configure such a service.
 
-1. Open the Modeler and add a new folder to the **Expenses** folder called **OData Services**.
+1. Open the Company Expenses app template in the Desktop Modeler and add a new folder to the **Expenses** folder called **OData Services**.
 2. Right-click the OData Service folder and select **Add** > **Published services** > **Published OData service**:
 
     ![](attachments/18448736/18582029.png)
@@ -226,7 +230,6 @@ These are some other query examples:
 * [How to Import Excel Documents](importing-excel-documents)
 * [How to Expose a Web Service](expose-a-web-service)
 * [How to Enable Selenium Support](selenium-support)
-* [How to Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [How to Import XML Documents](importing-xml-documents)
 * [How to Consume a REST Service](consume-a-rest-service)
 * [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)

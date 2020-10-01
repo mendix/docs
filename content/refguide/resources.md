@@ -3,6 +3,7 @@ title: "Resources"
 category: "App Modeling"
 menu_order: 50
 tags: ["studio pro", "resources"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
@@ -33,7 +34,7 @@ The **Resources** category contain various document types that can be used in di
 | [Enumeration](enumerations) | Domain model                           | Enumerations are used to define attributes of an enumeration type. |
 | [Dataset](data-sets) | Pages                                  | Datasets define the data shown in reporting widgets.        |
 | [Constant](constants) | Microflow expressions and Consumed web services | Constants are used to define configuration values.           |
-| [Regular expression](regular-expressions) | Domain model                           | Regular expressions define criteria that a string should match and are used in validation rules to identify whether a string attribute type matches these criteria. |
+| [Regular expression](regular-expressions) | Domain model                           | Regular expressions are used in validation rules to define criteria that a string should match to pass the validation. They cannot be used in other places which require regular expressions (for example, the *isMatch()* function). |
 | [Scheduled event](scheduled-events) | Microflows                     | Scheduled events let the runtime execute a microflow at a specific moment in time. |
 | [Document template](document-templates) | Microflows                             | Document template is used to format the document in a client and to download or print it. |
 

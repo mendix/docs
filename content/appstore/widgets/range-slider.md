@@ -1,9 +1,9 @@
 ---
 title: "Range Slider"
 category: "Widgets"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the Range Slider widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "range slider", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -58,7 +58,6 @@ To contribute to the development of this widget, follow these steps:
 	* [webpack-cli](https://www.npmjs.com/package/webpack-cli)
 	* [grunt-cli](https://github.com/gruntjs/grunt-cli)
 	* [karma-cli](https://www.npmjs.com/package/karma-cli)
-
 2. Fork and clone the [mendixlabs/range-slider](https://github.com/mendixlabs/range-slider.git) repository. The code is in Typescript. 
 3. Set up the development environment by running `npm install`.
 4. Create a folder named *dist* in the project root.

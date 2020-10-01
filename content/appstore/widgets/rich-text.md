@@ -1,9 +1,9 @@
 ---
 title: "Rich Text"
 category: "Widgets"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the Rich Text widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "rich text", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -34,8 +34,8 @@ The input and output is sanitized. All unsupported HTML tags and JavaScript is r
 	* `a` tag: `href`, `name`, `target`
 * Schemes: `http`, `https`, `ftp`, `mailto`
 
-{{% alert type="info" %}}To be fully secure, all user HTML input should be sanitized on the server side too. This could be done with the XSSSanitize action found in the Community Commons https://appstore.home.mendix.com/link/app/170/ When the option 'Sanitize content' is set to 'false' server side sanitating is required before showing any HTML content.
-Issues, suggestions and feature requests
+{{% alert type="info" %}}
+To be fully secure, all user HTML input should be sanitized on the server side too. This could be done with the XSSSanitize action found in the [Community Commons](/appstore/modules/community-commons-function-library). When the option 'Sanitize content' is set to 'false' server side sanitating is required before showing any HTML content.
 {{% /alert %}}
 
 ## 3 Usage
@@ -65,7 +65,7 @@ To contribute to the development of this widget, follow these steps:
 2. Fork and clone the [mendixlabs/rich-text](https://github.com/mendixlabs/rich-text.git) repository. The code is in Typescript.
 3. Set up the development environment by running `npm install`.
 4. Create a folder named *dist* in the project root.
-5. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*, or get the test project from [mendixlabs/rich-text](https://github.com/mendixlabs/rich-text/releases/latest)). Changes to the widget code will be automatically pushed to this test project.
+5. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*, or get the test project from [mendixlabs/rich-text](https://github.com/mendixlabs/rich-text/releases/latest). Changes to the widget code will be automatically pushed to this test project.
 6. To automatically compile, bundle, and push code changes to the running test project, run `grunt`.
 7. To run the project unit tests with code coverage (results can be found at `dist/testresults/coverage/index.html`), run: `npm test`.
 8. Run the unit test continuously during development via `karma start`.

@@ -38,7 +38,7 @@ The primary hosting locations are as follows:
 *   Mendix Cloud Asia Pacific: AWS Tokyo
 *   Mendix Cloud UK: AWS London
 
-Backups will always be stored in at least one external region, separate from the primary hosting location.
+Backups will always be stored in at least one secondary location, separate from the primary hosting location.
 
 Data will always be stored in the same political region for the following regions:
 
@@ -55,9 +55,9 @@ No, we do not. The Cloud Foundry API does not map one-to-one to our deployment o
 
 ## 5 How Do I Access the Underlying AWS Resources & How Can I Deploy in My AWS account?
 
-Mendix Cloud v4 runs in Mendix's own AWS account and you cannot interact with the AWS APIs directly via our credentials. We do not offer [VPC peering](http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide/Welcome.html) or VPC connections. All access to Mendix-hosted AWS resources (such as EC2, RDS, and S3) is done via our APIs, such as the [Database API](https://apidocs.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) and [FileDocument API](https://apidocs.mendix.com/7/runtime/com/mendix/core/Core.html#storeFileDocumentContent-com.mendix.systemwideinterfaces.core.IContext-com.mendix.systemwideinterfaces.core.IMendixObject-java.io.InputStream-) in Runtime, and the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) for cloud resources.
+Mendix Cloud v4 runs in Mendix's own AWS account and you cannot interact with the AWS APIs directly via our credentials. We do not offer [VPC peering](http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide/Welcome.html) or VPC connections. All access to Mendix-hosted AWS resources (such as EC2, RDS, and S3) is done via our APIs, such as the [Database API](https://apidocs.rnd.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) and [FileDocument API](https://apidocs.rnd.mendix.com/7/runtime/com/mendix/core/Core.html#storeFileDocumentContent-com.mendix.systemwideinterfaces.core.IContext-com.mendix.systemwideinterfaces.core.IMendixObject-java.io.InputStream-) in Runtime, and the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) for cloud resources.
 
-You can, however, launch services on your own AWS account, in the same region to minimize latency, and you can access those services via connectors in your app. The [AWS IoT Connector](https://appstore.home.mendix.com/link/app/2868/Mendix/AWS-IoT-Connector) from the Mendix App Store is a good example.
+You can, however, launch services on your own AWS account, in the same region to minimize latency, and you can access those services via connectors in your app. The [AWS IoT](/appstore/connectors/aws-iot) connector from the Mendix App Store is a good example.
 
 ## 6 There Is No Deployment in My Desired AWS Region, When Will Mendix Launch There?
 
@@ -71,6 +71,7 @@ There are a few other considerations to bear in mind when you are running in Men
 
 * The Amazon RDS maintenance window is not aligned with the Mendix Developer Portal maintenance window for an application
 * It is not possible to deploy a model (*.mda*) larger than 4GB when uncompressed or a model that contains approximately 64,000 or more files
+* You can't upload files bigger than 1GB to your app
 * To use the debugger, you need to scale down to one instance
 * Metrics for multi-instance nodes are not reported correctly – the information reported on the app's **Metrics** and **Alerts** pages only represents one instance of a multi-instance node
 * In some circumstances your app can run out of file connections as indicated by the following entry in the logfile: *com.amazonaws.http.AmazonHttpClient executeHelper Unable to execute HTTP request: Timeout waiting for connection from pool* — to resolve this:

@@ -166,7 +166,7 @@ There are two different sorts of conflict:
 
 Two changes in the same *document* that are really close to each other can cause a document conflict. For example, two people both change the properties of the same element on the page. The document will be marked as conflicted in the *Changes* dock. Conflicts have to be resolved before you can commit again.
 
-Double-click on a document to see which elements have conflicts. You can also see all the changes which have been made by you, and all the changes which were made by other people.
+Double-click a document to see which elements have conflicts. You can also see all the changes which have been made by you, and all the changes which were made by other people.
 
 ![Detailed document conflicts](attachments/modeler-core/document-changes.png)
 

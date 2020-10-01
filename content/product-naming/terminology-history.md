@@ -20,11 +20,7 @@ Guidelines for usage.
 
 This was used to described a large part of the functionality of the Developer Portal. The original idea of AppCloud can be found in this [press release](https://www.mendix.com/press/new-mendix-appcloud/). It is no longer used in describing the product.
 
-There are still some references to the (deprecated) [AppCloudServices](https://appstore.home.mendix.com/link/app/934/) module (which is named after the AppCloud concept). This is now replaced by the MendixSSO single sign-on module.
-
-{{% alert type="info" %}}
-Do not use. Use **Developer Portal** for AppCloud. Use specific SSO-related terminology if you are referring to the SSO capabilities.
-{{% /alert %}}
+This is now replaced by the [Mendix SSO](/appstore/modules/mendix-sso) module.
 
 ## Cloud Portal {#cloud-portal}
 
@@ -102,6 +98,12 @@ Replaced by [Mendix Runtime](other-terms#runtime).
 Replaced by [Mendix mobile app](other-terms#mendix-mobile-app).
 {{% /alert %}}
 
+## Mendix Model Share
+
+{{% alert type="info" %}}
+Deprecated March 31, 2020. No longer appears in documentation.
+{{% /alert %}}
+
 ## Mendix Online Platform, Mendix Platform Portal
 
 {{% alert type="info" %}}
@@ -126,6 +128,12 @@ Use [Free App](other-terms#free-app) or "Free App environment" as of Mendix 8.
 
 {{% alert type="info" %}}
 Replaced by [Developer Portal](main-product-names#devportal).
+{{% /alert %}}
+
+## starter app
+
+{{% alert type="info" %}}
+Replaced by [app template](other-terms#app-template) to reflect the create-new-app flow UI in the Developer Portal.
 {{% /alert %}}
 
 ## Web Modeler {#wm}

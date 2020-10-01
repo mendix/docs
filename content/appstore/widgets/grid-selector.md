@@ -1,9 +1,9 @@
 ---
 title: "Grid Selector"
 category: "Widgets"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the Grid Selector widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "grid selector", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -24,7 +24,7 @@ The on-change microflow should be set up to commit the object if a commit is req
 
 ## 3 Properties
 
-### 3.1 On Change Microflow
+### 3.1 On-Change Microflow
 
 This is the microflow executed when a check box or radio button is cleared. This receives the left entity as an input parameter.
 

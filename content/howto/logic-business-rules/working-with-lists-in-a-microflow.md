@@ -89,7 +89,7 @@ You should see a microflow like this:
 
 ## 4 Iterate Over a List of Objects
 
-In the previous section you retrieved a list of orders with the status 'Processing'. In this section you will iterate over this list and change the status of each object individually to 'Complete'. To do so you will use a 'Loop' to iterate over the 'OrderProcessingList' and use the 'Change object' activity to change the status of the order object.
+In the previous section you retrieved a list of orders with the status 'Processing'. In this section you will iterate over this list and change the status of each object individually to 'Complete'. To do so you will use a 'Loop' to iterate over the 'OrderProcessingList' and use the change object activity to change the status of the order object.
 
 1.  Open the **IVK_SetOrderToComplete** microflow created in the previous section.
   
@@ -99,11 +99,7 @@ In the previous section you retrieved a list of orders with the status 'Processi
 
 	![](attachments/18448686/18581086.png)
 
-	{{% alert type="info" %}}A loop is used to iterate over a list of objects. For each object the flow inside the loop is executed.
-
-	For each object the flow inside the loop is executed. The flow starts at the element that has no incoming sequence flows. A loop can contain all elements used in microflows, with the exception of start and stop events. Additionally, a loop (and only a loop) can contain break events and continue events.
-
-	The iterator, which looks the same as a parameter, represents the current object in the list for each iteration. Beneath it the name of the object is shown in black and the entity type of the object in blue. For more information, see [Loop](/refguide/loop).
+	{{% alert type="info" %}}A loop is used to iterate over a list of objects. For each object the flow inside the loop is executed. For each object the flow inside the loop is executed. The flow starts at the element that has no incoming sequence flows. A loop can contain all elements used in microflows, with the exception of start and stop events. Additionally, a loop (and only a loop) can contain break events and continue events. The iterator, which looks the same as a parameter, represents the current object in the list for each iteration. Beneath it the name of the object is shown in black and the entity type of the object in blue. For more information, see [Loop](/refguide/loop).
 	{{% /alert %}}
 
 3.  Double click the loop activity and select the **OrderList** to iterate over.
@@ -129,6 +125,10 @@ In the previous section you retrieved a list of orders with the status 'Processi
 9. Set **Commit** and **Refresh in Client** to **Yes** to commit your changes to the database and refresh your list in the client so your changes will be visible, then click **OK**. Your microflow should look like this:
 
     ![](attachments/18448686/18581076.png)
+    
+	Or, to optimize the number of commits, you can perform the commit outside of the loop. This way, there will be a single commit to the database instead of one per order:
+
+	![](attachments/8784287/working-with-lists-optimization.jpg)
 
 11. **Re-deploy** your application.
 12. Click the **Set Processing to Complete** button. The orders with status 'Processing' will now be changed to 'Complete'.
@@ -161,7 +161,7 @@ In the previous section you iterated over a filtered list of objects using a 'Lo
 
     ![](attachments/18448686/18581069.png)
 
-6.  Double click the **Change variable** activity to open its **properties** and set the following properties:<br>
+6.  Double click the **Change variable** activity to open its **Properties** and set the following properties:<br>
     a. For **Variable** select **CalculatedTotalPrice**.<br>
     b. For **Value** enter `$CalculatedTotalPrice + $IteratorOrder/TotalPrice`.<br>
 
@@ -204,7 +204,7 @@ In the previous section you iterated over a list to add the value of single obje
     ![](attachments/18448686/18581059.png)
 
 4.  Click **OK**.
-5.  Double click on the message activity and replace the `$CalculatedTotalPrice` variable in the **Parameters** expression with the `$SumTotalPrice` variable.
+5.  Double click the message activity and replace the `$CalculatedTotalPrice` variable in the **Parameters** expression with the `$SumTotalPrice` variable.
   
     ![](attachments/18448686/18581055.png)
 

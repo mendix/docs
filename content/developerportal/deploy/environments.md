@@ -142,6 +142,14 @@ There is no concept of staging, and you need to deploy your app directly to the 
 
 ![](attachments/environments/activity.png)
 
+If you are the [Technical Contact](/developerportal/company-app-roles/technical-contact) you can download a copy of the activity log as follows:
+
+1. Click **Download to CSV**.
+2. Choose the period for which you want to download log entries. If you choose **Custom Period** you will need to enter a valid period using **Start Date** and **End Date**.
+
+    ![](attachments/environments/download-activity-log.png)
+3. Click **Download**.
+
 {{% alert type="info" %}}
 Operations carried out by the Mendix Operations Desk are not currently logged on the activity log.
 
@@ -158,9 +166,11 @@ There is also a section with an overview of linked custom domains.
 
 For more information, see [Custom Domains](custom-domains).
 
-## 4 Access Restriction Profiles
+## 4 Access Restriction Profiles {#asp}
 
 In this tab you can manage custom access restriction profiles. These profiles can combine IP range filters and client certificate verification. Access restriction profiles can be applied to path-based access restrictions in specific environments of the application.
+
+For more information on setting up access restriction profiles, see [Restrict Access for Incoming Requests](access-restrictions)
 
 ## 5 Read More 
 

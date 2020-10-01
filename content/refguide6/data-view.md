@@ -33,7 +33,7 @@ The footer of the data view is the section at the bottom of the data view which 
 
 {{% alert type="info" %}}
 
-The data view control bar has been converted to a normal drop zone, and renamed to 'footer' in version 6.7.0\. See [Data view footer](data-view).
+The data view control bar has been converted to a normal drop-zone, and renamed to 'footer' in version 6.7.0\. See [Data view footer](data-view).
 
 {{% /alert %}}
 
@@ -97,7 +97,7 @@ _Default value:_ True
 
 {{% alert type="info" %}}
 
-The data view control bar has been converted to a normal drop zone, and renamed to 'footer' in version 6.7.0\. Use the [Show footer property](data-view) instead.
+The data view control bar has been converted to a normal drop-zone, and renamed to 'footer' in version 6.7.0\. Use the [Show footer property](data-view) instead.
 
 {{% /alert %}}
 

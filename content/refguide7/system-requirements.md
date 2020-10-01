@@ -61,12 +61,12 @@ The browser you use needs to have JavaScript turned on.
 ### 5.3 Database Server
 
 * [IBM DB2](db2) 11.1 for Linux, Unix, and Windows
-* [MariaDB](mysql) 5.5, 10.0, 10.1
-* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server) 2008, 2008 R2, 2012, 2014, 2016, 2017
+* [MariaDB](mysql) 10.1, 10.2, 10.3
+* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server) 2016, 2017, 2019
 * Azure SQL v12 (support is not independently verified and is available only through compatible versions of SQL Server)
-* [MySQL](mysql) 5.5, 5.6, 5.7
-* [Oracle Database](oracle) 11g Release 2, 12c Release 1
-* PostgreSQL 9.2, 9.3, 9.4, 9.5, 9.6, 10
+* [MySQL](mysql) 5.7, 8.0
+* [Oracle Database](oracle) 12c Release 2, 18, 19
+* PostgreSQL 9.5, 9.6, 10, 11, 12
 * [SAP HANA](saphana) 2.00.040.00.1545918182
 
 ### 5.4 Java

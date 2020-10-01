@@ -76,7 +76,7 @@ Indexes is a topic with a long history of best practices from the database world
 * Try to prevent multiple identical data sources, since they load the object multiple times.
 * Minimize conditional visibility.
 * Give the user feedback. If this takes more than a few seconds, provide a progress indication.
-* Do work asynchronously if the user does not have to wait for the result. For example, sending mails or updating other apps over an interface should never be something the user is waiting on in the UI. For running work asynchronously, there are options in the [Community Commons Function Library](https://appstore.home.mendix.com/link/app/170/) in the Mendix App Store to run microflows in the background or have a process queue to control the load and prevent peaks in background work.
+* Do work asynchronously if the user does not have to wait for the result. For example, sending mails or updating other apps over an interface should never be something the user is waiting on in the UI. For running work asynchronously, there are options in the [Community Commons Function Library](/appstore/modules/community-commons-function-library) in the Mendix App Store to run microflows in the background or have a process queue to control the load and prevent peaks in background work.
 
 ## 6 Infrastructure Best Practices
 

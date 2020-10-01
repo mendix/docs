@@ -7,16 +7,16 @@ tags: ["studio pro", "create branch line"]
 
 ## 1 Introduction
 
-Use the **Create Branch Line** dialog window to create a new [branch line](version-control#branches) via the **Branch Line Manager**:
+Use the **Create Branch Line** dialog box to create a new [branch line](version-control#branches) via the **Branch Line Manager**:
 
 ![](attachments/version-control-menu/create-branch-line.png)
 
-To view the **Create Branch Line** dialog window,  do the following:
+To view the **Create Branch Line** dialog box,  do the following:
 
 1. Open **Version Control** > **Manage Branch Lines**.
 2. In the **Branch Line Manager**, click **New**. 
 
-The **Create Branch Line** dialog window is displayed.
+The **Create Branch Line** dialog box is displayed.
 
 For more information on how to manage branch lines, see the [Managing Development Lines in Studio Pro](collaborative-development#managing-branches) section in *Collaborative Development* and [Branch Line Manager](branch-line-manager-dialog). For information on the version control, see [Version Control](version-control). 
 
@@ -48,7 +48,11 @@ Select from which tagged version you want to create a branch line. Every time yo
 
 ## 6 Branch Name
 
-Enter a name of the new branch line. 
+Enter a name of the new branch line.
+
+{{% alert type="warning" %}}
+Branch names cannot include special characters (for example, `@`, `$`, `#`). 
+{{% /alert %}}
 
 ## 7 Existing Branch Lines
 

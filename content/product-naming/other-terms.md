@@ -46,11 +46,9 @@ Always capitalize.
 
 ### app project {#app-project}
 
-"App" should be used instead of "project" as much as possible in the documentation. However, be aware of potential confusion here when referring to what the user works on for project management in the Developer Portal or accesses in Studio Pro. A "project" would include the app being developed itself as well as resources from the Developer Portal, deployment, Mendix Runtime, etc. Thus, "app" as something a Mendix user makes and an end-user uses cannot entirely replace "project" in the documentation.
+"App" should be used instead of "project" as much as possible (despite the fact that "project" is still used throughout Studio Pro). 
 
-{{% alert type="info" %}}
-Use "app project" to clarify project management-related tasks in the Developer Portal.
-{{% /alert %}}
+Use "app project" where necessary for clarification (for example, for project management-related tasks in the Developer Portal).
 
 {{% alert type="success" %}}
 Enter the email addresses of all the co-workers you want to invite to your app project.
@@ -58,7 +56,7 @@ Enter the email addresses of all the co-workers you want to invite to your app p
 
 ### App Store component
 
-This is the generic name of the individual add-on, widget, module, connector, starter app, etc. available in the Mendix App Store.
+This is the generic name of the individual add-on, widget, module, connector, app template, etc. available in the Mendix App Store.
 
 {{% alert type="info" %}}
 Do not use "App Store item."<br />
@@ -70,6 +68,19 @@ Use "App Store content" (and not "App Store components") to describe in general 
 
 {{% alert type="info" %}}
 Capitalize, because **Team** is capitalized in the Developer Portal UI.
+{{% /alert %}}
+
+### app template {#app-template}
+
+This is the term to use to reflect the create-new-app flow UI in the Developer Portal.
+
+There are two inconsistencies in other areas of the platform UI:
+
+* When creating a new company app template to add to the App Store as a component, you have to select **Starter Apps** as the **Sub category**
+* In the App Store, "sample apps" continues to be the menu item for app templates
+
+{{% alert type="info" %}}
+Do not use "starter app."
 {{% /alert %}}
 
 ### App User
@@ -120,6 +131,14 @@ Capitalize in all instances.
 
 {{% alert type="info" %}}
 Capitalize in all instances.
+{{% /alert %}}
+
+### Custom Developer App
+
+For a definition of this term, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps).
+
+{{% alert type="info" %}}
+Do not capitalize.
 {{% /alert %}}
 
 ### Deployment Package Repository
@@ -192,7 +211,7 @@ Capitalize in all instances.
 
 ### Mendix mobile app {#mendix-mobile-app}
 
-[Mendix](/refguide/getting-the-mendix-app) is the name for the mobile app available for developers to test hybrid mobile apps using PhoneGap.
+[Mendix](/refguide/getting-the-mendix-app) is the name for the mobile app available for developers to test hybrid mobile apps.
 
 {{% alert type="info" %}}
 This term replaces "Mendix Developer app" and "Mendix Mobile app" (which are not to be used in the product UI or documentation – for more information, see [Terminology History](terminology-history)).<br />
@@ -227,12 +246,6 @@ Do not capitalize "level."
 {{% /alert %}}
 
 ### Mendix Metamodel
-
-{{% alert type="info" %}}
-Capitalize in all instances.
-{{% /alert %}}
-
-### Mendix Model Share
 
 {{% alert type="info" %}}
 Capitalize in all instances.
@@ -324,6 +337,14 @@ Capitalize in all instances (to parallel "Team Server" and "Build Server").
 Spell with "Mx" abbreviation as one word.
 {{% /alert %}}
 
+### Native Builder
+
+{{% alert type="info" %}}
+Do not use "Native Oven".<br />
+<br />
+Capitalize in all instances.
+{{% /alert %}}
+
 ## O-Z
 
 ### on-premises
@@ -342,7 +363,7 @@ On-premises deployment needs specific security considerations.
 
 ### one-to-one & one-to-many associations
 
-For details on association properties, see [Associations & Their Properties](/refguide/association-properties). 
+For details on association properties, see [Association Properties](/refguide/association-properties). 
 
 {{% alert type="info" %}}
 Write as "one-to-one" and "one-to-many," not as "1-1" or "1-to-many."

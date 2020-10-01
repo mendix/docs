@@ -1,16 +1,16 @@
 ---
-title: "HTML /  JavaScript Snippet"
+title: "HTML/JavaScript Snippet"
 category: "Widgets"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the TML/JavaScript Snippet widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "html", "javascript", "snippet", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [HTML / JavaScript Snippet](https://appstore.home.mendix.com/link/app/56/) widget is useful for adding a piece of HTML or JavaScript to a page (for example, to embed a YouTube or Flash object). In addition, it can be used to enhance styling by adding arbitrary HTML elements.
+The [HTML/JavaScript Snippet](https://appstore.home.mendix.com/link/app/56/) widget is useful for adding a piece of HTML or JavaScript to a page (for example, to embed a YouTube or Flash object). In addition, it can be used to enhance styling by adding arbitrary HTML elements.
 
-### 1.1 Typical Usage Scenarios
+### 1.1 Typical Use Cases
 
 * Display a predefined HTML document
 * Load a Java applet
@@ -20,7 +20,7 @@ The [HTML / JavaScript Snippet](https://appstore.home.mendix.com/link/app/56/) w
 
 * Embed raw HTML
 * Embed raw JavaScript
-* Load external HTML / JS files
+* Load external HTML/JS files
 
 ## 2 Properties
 

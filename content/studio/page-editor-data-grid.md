@@ -24,6 +24,7 @@ Data grid contains the following properties:
 * [Search](#grid-search)
 * [Events](#grid-events)
 * [Control Bar](#grid-control-bar)
+* [Conditional Visibility](#visibility)
 * [Design](#grid-design-section)
 
 ### 2.1 Data Source {#grid-data-source}
@@ -156,10 +157,14 @@ The control bar allows you to control the objects displayed in the data grid by 
 
 The **Control Bar** section properties are described below: 
 
-*  **Show Paging Controls** –  indicates if the buttons for paging through the data grid are visible. Hide these buttons if you are sure that the data grid will contain only one page
-
-    ![](attachments/page-editor-data-grid/control-bar-show-paging-controls.png)
-
+*  **Show Paging Controls** – indicates if the buttons for paging through the data grid are visible to the end-user and has the following options:
+   
+    * **Yes (with total count)** – paging buttons are shown, including the **Go to last page** button and the total count of objects
+    * **Yes (without total count)** – paging buttons are shown except for the **Go to last page** button. Also, the total count of objects is not shown, as page numbers are shown instead
+    * **No** – The paging buttons are not shown. Hide the buttons if you are sure that the data grid will contain only one page
+  
+        ![Show Paging Controls](attachments/page-editor-data-grid/control-bar-show-paging-controls.png)
+    
 * **Show Buttons** – determines whether the buttons defined in the **Buttons** section are shown. If disabled, none of the buttons will be accessible in any way, other than the one designated as the **On Click Action**. For more information, see sections [2.5.1 Grid Action Button](#grid-action-button) and [2.6 Events](#grid-events)
 
 *  **Buttons** – lists buttons in the control bar. A button set as **On Click Action** in the **Events** section will be indicated as *On Click Action.* This means that even if buttons are hidden, when the end-user clicks or double clicks (depending on settings in the [Events](#grid-events) section) the grid item, the default button (action) will be triggered
@@ -232,7 +237,11 @@ The **Events** section properties are described in the table below:
 | **On Click Action Trigger**                      | Determines how the action selected in the **On Click Action** property is triggered. Possible values of this property are the following: <ul><li>**Double-click** – a double click triggers the selected on-click action</li><li>**Single-click** – a single click triggers the selected on-click action. Single-click cannot be used in combination with **Single selection** mode (see below)</ul> |
 | **Selection Mode** <a name="selection-mode"></a> | Determines the way an end-user selects item in the data grid. Possible values of this property are the following: <ul><li>**No selection** – the user cannot select items</li><li>**Single selection** –  the user can select one item at a time by clicking it</li><li>**Always one selection** – the user can select one item at a time by clicking it, however, the user cannot deselect an item (by default the first item will be selected)</li><li>**Multi-selection** – the user can select multiple items by clicking the first one and holding the <kbd>Ctrl</kbd> key while clicking other items. Simply clicking an item will deselect all items and make the clicked item the selection.</li><li>**One-click multi-selection** – the user can select multiple items by simply clicking them.</li></ul> |
 
-### 2.7 Design {#grid-design-section}
+### 2.7 Conditional Visibility {#visibility}
+
+{{% snippet file="studio/visibility-section-link.md" %}}
+
+### 2.8 Design {#grid-design-section}
 
 For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 

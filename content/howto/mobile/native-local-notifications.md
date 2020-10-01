@@ -8,7 +8,7 @@ tags: ["mobile", "push notification", "local", "push", "notification"]
 
 ## 1 Introduction
 
-This how-to will teach you to build local notifications for native applications. Local notifications will only allow you to schedule and send notifications confined to one mobile device. These notifications do not use an internet connection. One use of a local notification might be an alarm app which sends a notification after an amount of time has elapsed.
+This how-to will teach you to build local notifications for native mobile applications. Local notifications will only allow you to schedule and send notifications confined to one mobile device. These notifications do not use an internet connection. One use of a local notification might be an alarm app which sends a notification after an amount of time has elapsed.
 
 **This how-to will teach you how to do the following:**
 
@@ -20,7 +20,12 @@ This how-to will teach you to build local notifications for native applications.
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Review the [basic differences](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) between local notifications and push notifications
-* Install the [Make it Native](/refguide/getting-the-make-it-native-app) app on your mobile device
+* Install the [Make It Native](/refguide/getting-the-make-it-native-app) app on your mobile device
+
+{{% alert type="info" %}}
+To use push notifications with apps created with the Native Builder, make sure you have completed [How To Deploy Your First Mendix Native Mobile App](deploying-native-app) and [How to Set up Native Push Notifications](setting-up-native-push-notifications)
+{{% /alert %}}
+
 
 ## 3 Creating a Project and Configuring Notifications
 
@@ -32,10 +37,7 @@ Follow the instructions below to set up your first local notification:
 
 	![native mobile quickstart app](attachments/native-push/quickstart.png)
 
-4.  Click **Use this starting point**:
-
-	![use this starting point](attachments/native-push/starting-point.png)
-
+4.  Click **Use this starting point**.
 5.  Click **Create App** to close the dialog box:
 
 	{{% image_container width="500" %}}![app settings](attachments/native-push/app-settings.png){{% /image_container %}}

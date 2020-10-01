@@ -1,6 +1,7 @@
 ---
 title: "Webhooks"
 category: "API Documentation"
+menu_order: 14
 ---
 
 ## 1 Introduction
@@ -19,7 +20,7 @@ Every POST payload contains the following delivery information as part of the he
 
 ## 2 Sprints
 
-Webhook events are generated when a [sprint](/developerportal/collaborate/stories#sprint) is created or updated.
+Webhook events are generated when a [sprint](/developerportal/collaborate/stories#sprint-actions) is created or updated.
 
 The required event category subscription is **sprints**.
 

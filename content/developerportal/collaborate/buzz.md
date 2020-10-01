@@ -60,11 +60,17 @@ In App Buzz, you will only be communicating with App Team members.
 
 ### 2.1 Updating Your Status
 
-The easiest way to communicate with others in your company and on your team is by leaving comments in Buzz. Click **Update status** to leave a new message. You can also **Add** attachments to support the discussion with your colleagues or **Edit** one of your own previous messages.
+The easiest way to communicate with others in your company and on your team is by leaving comments in Buzz. Click **Update status** to leave a new message. You can also **Add** attachments to support the discussion with your colleagues or **Edit** one of your own previous messages. You can delete your message if it is no longer valid by clicking **Edit** > **Delete**. 
 
 ![](attachments/update-status.png)
 
 To continue a conversation, you can also **Comment** on an ongoing discussion and **Like** a message to show your support.
+
+In App Buzz, a comment can come from Mendix Studio and refer to a specific document (a page, microflow, navigation document, or the domain model). You can navigate to this document in Studio by clicking the corresponding button, such as **Show page** or **Show microflow**:
+
+![](attachments/show-document.png)
+
+For more information on making comments in Studio, see [Buzz](/studio/buzz).  
 
 ### 2.2 Starting a Poll
 

@@ -22,7 +22,7 @@ Before you can manage your SAP Cloud Platform using the Developer Portal, you wi
 
 1. You have an existing app which has never been deployed on the SAP Cloud Platform and you want to change the cloud settings. See [Change Cloud Settings](#ChangeCloudSettings).
 
-2. You are creating a new app from an SAP starter app. See [New SAP App](#NewSAPApp).
+2. You are creating a new app from an SAP app template. See [New SAP App](#NewSAPApp).
 
 ### 2.1 Change Cloud Settings{#ChangeCloudSettings}
 
@@ -38,17 +38,32 @@ Click **Getting Started** and then continue with [Set Up Region](#SetUpRegion).
 
 ### 2.2 New SAP App{#NewSAPApp}
 
-In this scenario, you choose a Mendix starter app from the **SAP Apps** tab.
-
-![](attachments/sap-cloud-platform/sap-starter-apps.png)
-
-Select the starter app you want and give it a name.
+In this scenario, you choose a Mendix app template for SAP **SAP Apps** tab and give it a name.
 
 Once the app has been created you can continue with [Set Up Region](#SetUpRegion).
 
 ### 2.3 Set Up Region{#SetUpRegion}
 
 You are now prompted with an SAP Cloud Platform login screen. Select the region where your SAP Cloud Platform is located.
+
+{{% alert type="info" %}}
+Currently supported regions are:
+
+* Australia (Sydney) 
+* AWS Japan 
+* AWS Singapore 
+* Azure Japan 
+* Azure Singapore 
+* Azure US East (VA) 
+* Azure US West (WA) 
+* Canada (Montreal) 
+* Europe (Frankfurt) 
+* Europe (Netherlands) 
+* US Central (IA) Beta 
+* US East (VA)
+
+Please contact Mendix support if you have a requirement for an additional region.
+{{% /alert %}}
 
 Make sure that you have enough quota in this region for your organization to run a Mendix app. You will need enough quota to create the following:
 
@@ -89,9 +104,17 @@ Your development environment is now configured and you can now develop your app.
 
 You can create several environments for your app. For example, you may have created a development environment, but you may want environments for test, acceptance, production, and so forth. Additionally, when you switch from another cloud you need to create at least one environment for your Mendix application.
 
-This is done from the **Environments** page of the Developer Portal:
+This is done from the **Environments** page of the Developer Portal.
 
 ![](attachments/sap-cloud-platform/environments-page.png)
+
+Your Environments page will show you the following:
+
+* a list of **deployment packages** for this app
+* a list of **environments** for this app
+* all the deployment **activities** which have been performed on this app
+
+To create a new environment, perform the following steps:
 
 1. Click **Add Environment** to start the wizard.
 
@@ -139,7 +162,9 @@ This is done from the **Environments** page of the Developer Portal:
 
     {{% alert type="info" %}}If you do not have a subscription secret, create a support ticket with Mendix Support and they will send you one.{{% /alert %}}
 
-11. Click **Next** to create the environment and finish the setup.
+11. If you want the user to be redirected to a custom URL after they have logged in using XSUAA then, optionally, add **Redirect URLs**. 
+
+12. Click **Next** to create the environment and finish the setup.
 
     ![](attachments/sap-cloud-platform/09-sap-env-3.png)
 
@@ -283,6 +308,10 @@ If you receive an error trying to start the app, please refer to the [App Will N
 
 Click **Change Admin Password** to change the password for the administrator account (by default, MxAdmin) in your Mendix app.
 
+{{% alert type="warning" %}}
+The new password will not come into effect until you stop and start your environment.
+{{% /alert %}}
+
 #### 7.1.3 View Recent Log
 
 Click **View Recent Log** to see recent events written to the log.
@@ -314,6 +343,10 @@ Use the **Memory per instance** slider to change the amount of memory allocated 
 Click **Scale Now** to apply the new settings. If the application is running, it will be stopped and restarted to apply the settings. If it is stopped it will not be started automatically; the new settings will be used the next time the application is started.
 
 Click **Reset** to return the values to what they were before the sliders were moved.
+
+{{% alert type="info" %}}
+You can also make use of the **Application Autoscaler** service on SAP Cloud Platform. Mendix provides assistance in setting up the parameters needed to configure application autoscaler. For more information see [Application Autoscaler for SAP Cloud Platform](/partners/sap/sap-autoscaler).
+{{% /alert %}}
 
 #### 7.1.7 Change License Subscription ID
 
@@ -378,6 +411,14 @@ To connect a service in the section **Available Services**
     ![](attachments/sap-cloud-platform/service-connect.png)
 
     The services you have selected will be added as **Services To Be Bound**. Now, you can upload JSON **File** with a configuration that will be applied to the service binding. 
+
+{{% alert type="info" %}}
+If you use the **Application Autoscaler** service on SAP Cloud Platform, Mendix can create a JSON file for you. See [Application Autoscaler for SAP Cloud Platform](/partners/sap/sap-autoscaler) for more information.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+If you use the **PostgreSQL on Amazon (AWS)** service on SAP Cloud Platform, Mendix can create a JSON file for you. See [PostgreSQL on Amazon (AWS) for SAP Cloud Platform](/partners/sap/sap-postgresql-on-aws) for more information.
+{{% /alert %}}
 
 To upload the JSON **File** for service binding, follow these steps:
 
@@ -452,21 +493,20 @@ There are also some differences in the way that Mendix can be used with SAP HANA
 
 #### 8.2.1 SAP HANA Configuration for Full Accounts
 
-SAP HANA works in a different way to PostgreSQL.
+To run a Mendix application on SAP Cloud Platform using Hana as database, there are two options. Both these options need to be set up in the SAP Cloud Platform Cockpit. The two options are:
 
-If you select an SAP HANA database, an SAP HANA *schema* service will be added to your space and when you deploy your app it will be bound to the PostgreSQL service. This schema service defines access to a separate SAP Cloud Platform, SAP HANA service, which also needs to be running in the same space as your app.
+* provision the Hana DB Service and make it available in your application space
+
+* provision SAP HANA Cloud and make this service available to your application space
+
+Once one of these services is available, you can use the SAP Cloud deployment functions of the Mendix SAP Developer Portal to deploy your app and use the **HANA_SCHEMA** service to bind your application to the provisioned service. The HANA_SCHEMA will create a separate schema on the HANA Database which isolates your application's data from other applications. In this way the HANA DB/Cloud Service will be shared across applications.
 
 {{% alert type="warning" %}}
 Please bear the following in mind when using SAP HANA as your Mendix database:
 
-* You must create and configure the SAP HANA *service* yourself in the SAP Cloud Platform cockpit. It is *not* created for you by the Mendix Developer Portal. The configuration of this service is not possible through the Mendix Developer Portal.
-
 * Do *not* attempt to add the SAP HANA *service* to your app. It is the SAP HANA *schema* which needs to be bound to your app.
 
 * Do *not* use the *Services* tab or the *SAP Cloud Platform Marketplace* to add **both a PostgreSQL database and an SAP HANA schema** to your app. If you do this it is not possible to predict which database your Mendix app will choose to bind.
-
-* Do *not* unbind the SAP HANA schema service from your environment: see [Services Tab](#binding-services), above, for more information on required services.
-
 {{% /alert %}}
 
 If you have issues with your app running on SAP HANA, you will need to use the SAP Cloud Platform cockpit to investigate. The Mendix Developer Portal does not have information on the status or configuration of the SAP HANA service.
@@ -474,10 +514,12 @@ If you have issues with your app running on SAP HANA, you will need to use the S
 #### 8.2.2 SAP HANA Configuration for Trial Accounts
 
 {{% alert type="info" %}}
-If you are using a trial account, the SAP HANA Schema is only available if your account was created after November 2019. If you have a trial account which was created before then, you will not be able to use the hanatrial-schema database.
+If you are using a trial account created before November 2019, the SAP HANA Schema may not be available.
+
+If you do not have the three **SAP HANA Schemas & HDI Containers (Trial)** services in your subaccount entitlements, you can add the services in the SAP Cloud Platform cockpit. Select **Entitlements** > **Configure Entitlements** > **Add Service Plans**, and choose the three **SAP HANA Schemas & HDI Containers (Trial)** services.
 {{% /alert %}}
 
-For trial accounts which support it, generally those created after November 2019, you can bind your Mendix app to a trial SAP HANA database. Just choose **hanatrial-schema** from the dropdown of supported databases.
+For trial accounts which have the **SAP HANA Schemas & HDI Containers (Trial)** services, you can bind your Mendix app to a trial SAP HANA database. Just choose **hanatrial-schema** from the drop-down of supported databases.
 
 ![](attachments/sap-cloud-platform/hanatrial-schema.png)
 

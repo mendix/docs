@@ -1,18 +1,18 @@
 ---
 title: "Unit Testing"
 category: "Modules"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the Unit Testing module, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "unit testing", "unit test", "test suite", "testing", "qa", "quality", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-Use the [Unit Testing](https://appstore.home.mendix.com/link/app/390/) module to  run Mendix and JUnit unit tests inside your app project.
+Use the [Unit Testing](https://appstore.home.mendix.com/link/app/390/) module to run Mendix and JUnit unit tests inside your app project.
 
 ### 1.1 Dependencies
 
-* [ObjectHandling](https://appstore.home.mendix.com/link/app/37114/) module
+* [Object Handling](/appstore/modules/object-handling)
 * *junit-4.11.jar*
 * *org.apache.commons.io-2.3.0.jar*
 * *org.apache.commons.lang3.jar*
@@ -26,8 +26,8 @@ Use the [Unit Testing](https://appstore.home.mendix.com/link/app/390/) module to
 3. Map the module role **TestRunner** to the applicable user roles in your app.
 4. Add the **UnitTestOverview** microflow to your navigation structure, or include the **UnitTestOverview** snippet on a custom page.
 5. The following steps are optional:
-	* Optional for including JUnit tests – set the **UnitTesting.FindJUnitTests** constant to true (take the the app project settings regarding cloud security into consideration)
-	* Optional for running remote unit tests via API:
+	* For including JUnit tests – set the **UnitTesting.FindJUnitTests** constant to true (take the the app project settings regarding cloud security into consideration)
+	* For running remote unit tests via API:
 		* Add the **Startup** flow to your app model's startup sequence
 		* Set the **UnitTesting.RemoteApiEnabled** constant to true and provide a password for **UnitTesting.RemoteApiPassword**
 		* When hosting in a cloud node or on-premises. open a request handler on the **unittests/** path
@@ -44,7 +44,7 @@ When a unit test has been run, additional details about the test result will app
 
 ## 4 Creating Unit Tests
 
-### 4.1 Creating a microflow unit tests
+### 4.1 Creating Microflow Unit Tests
 
 To create a new microflow test in a module, just add a microflow with a name that starts with **Test** or **UT** (case-insensitive). A test microflow should have no input arguments and either no result type, a Boolean result type, or a string result type. For string results, a non-empty string is interpreted as an error message. A microflow without a return type is considered to be successful as long as no exceptions are thrown.
 

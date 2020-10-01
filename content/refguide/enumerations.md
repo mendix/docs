@@ -21,9 +21,9 @@ To create a new enumeration, do the following:
 
     ![](attachments/enumerations/add-enumeration.png)
 
-2. In the **Add Enumeration** dialog window, fill out the name of the enumeration.
+2. In the **Add Enumeration** dialog box, fill out the name of the enumeration.
 
-3.  In the **Enumeration** dialog window, click **New** to create enumeration values:
+3.  In the **Enumeration** dialog box, click **New** to create enumeration values:
 
     a.  Fill out **Name** and **Caption** for an enumeration value. You can set **Image** for it if necessary. For more information on enumeration properties, see the [Enumeration Properties](#enum-properties) section. <br />
 
@@ -51,7 +51,7 @@ An enumeration has the following properties:
 
 Enumeration value properties are described below:
 
-* **Caption** – the caption of an enumeration value is the text that the end-user sees for this enumeration value. This is a translatable text. For more information, see [Translatable Texts](translatable-texts). 
+* **Caption** – the caption of an enumeration value is the text that the end-user sees for this enumeration value. This is a translatable text. For more information, see [Language Menu](translatable-texts). 
 
 * **Name** – the name of an enumeration value is a technical name of the value which is used to refer to the enumeration value in your project.
 

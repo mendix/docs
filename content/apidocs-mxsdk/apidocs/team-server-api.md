@@ -1,6 +1,7 @@
 ---
 title: "Team Server API"
 category: "API Documentation"
+menu_order: 12
 ---
 
 ## 1 Introduction
@@ -8,6 +9,10 @@ category: "API Documentation"
 The team server API allows you to retrieve the information (branches, revisions) of application models stored in our team server. You always access an application model via the context of an application (see the Deploy API for more information about retrieving applications and application identifiers).
 The image below provides a domain model representation of the concepts discussed below and how these are related:
 ![](attachments/131076/425989.png)
+
+{{% alert type="warning" %}}
+The team server API is only available to *licensed* apps which are running in a Mendix Cloud.
+{{% /alert %}}
 
 ## 2 Authentication
 

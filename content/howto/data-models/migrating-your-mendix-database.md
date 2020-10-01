@@ -2,7 +2,7 @@
 title: "Migrate Your Mendix Database"
 category: "Data Models"
 menu_order: 7
-tags: ["database", "migrate", "postgresql", "export", "import"]
+tags: ["database", "migrate", "PostgreSQL", "export", "import"]
 ---
 
 ## 1 Introduction
@@ -16,13 +16,13 @@ This document explains how to migrate the data in an existing Mendix database to
 * Upload an exported PostgreSQL database to the Mendix cloud
 * Export a Mendix cloud database
 * Import into an on-premise PostgreSQL database
-* Migrate a PostgreSQL database to a non-PostgreSQL database
+* Migrate a PostgreSQL database to a non-PostgreSQL database, including migrating a PostgreSQL database to SAP HANA
 
 ## 2 Overview
 
 You can copy all the data from any Mendix-supported database management system to any other Mendix-supported database management system. For example you can copy demo, test, and production databases from built-in to PostgreSQL, and from PostgreSQL to built-in. You can also migrate production data from SQL Server or Oracle (on-premises) to PostgreSQL in our cloud.
 
-To do this, start your app on the database you would like to copy the data to. This database should already exist and should be totally empty. To let Mendix know from which database all data should be copied, you have to set some custom configuration settings. These custom settings define the type of the source database, the host name, the user name and password, etc.
+To do this, start your app on the database you would like to copy the data to. This database should already exist and should be totally empty. To let Mendix know from which database all data should be copied, you have to set some custom configuration settings. These custom settings identify the source database and give Mendix the authentication required to access it.
 
 The most commonly used custom settings for database migration are:
 
@@ -46,10 +46,10 @@ These settings can be configured as follows:
 
 * m2ee-tools – add the custom settings to the mxruntime section (for more information, see [Full Documented m2ee](https://github.com/mendix/m2ee-tools/blob/develop/examples/full-documented-m2ee.yaml))
 
-You can migrate databases using either Studio Pro, the Service Console, or m2ee-tools. The Service Console gives you the advantage of seeing a progress bar during the copy process, which is handy if you copy a lot of data which takes a long time to execute.
+You can migrate databases using Studio Pro, the Service Console, or m2ee-tools. The Service Console gives you the advantage of seeing a progress bar during the copy process, which is handy if you copy a lot of data which takes a long time to execute.
 
 {{% alert type="info" %}}
-Database migration is handled by Mendix as a normal database synchronization phase during the start-up process of an app. As a consequence, it is possible that during the start-up process you will get to see messages like ‘The database has to be synchronized’ or you will see an empty message. In the future, tools like the Service Console and m2ee-tools will recognize this phase better and give more appropriate messages. However, these tools already correctly handle the database migration.
+Database migration is handled by Mendix as a normal database synchronization phase during the start-up process of an app. When using m2ee-tools, it is possible that during the start-up process you will get to see messages like ‘The database has to be synchronized’ or you will see an empty message. You can ignore these messages — the database migration will be performed.
 {{% /alert %}}
 
 {{% alert type="warning" %}}
@@ -107,7 +107,7 @@ Use Developer Portal to upload the migrated, exported database backup to the Men
 
 The same procedure can be used to export an existing Mendix cloud database, import it into an on-premises PostgreSQL source database and migrate that to an on-premises non-PostgreSQL target database.
 
-Export the Mendix cloud database via the Developer Portal. This can be accessed using the Nodes page in the Developer Portal: select your app and environment, click **Details**, click on the **Backup** tab, select an existing Backup from the list, and click the **Download Backup** button to download the database to your local file system using the Database URL shown in the dialogue. A fresh backup with recent data could also be created first using the **Create Backup** button.
+Export the Mendix cloud database via the Developer Portal. This can be accessed using the Nodes page in the Developer Portal: select your app and environment, click **Details**, click the **Backup** tab, select an existing Backup from the list, and click the **Download Backup** button to download the database to your local file system using the Database URL shown in the dialogue. A fresh backup with recent data could also be created first using the **Create Backup** button.
 
 ### 5.1 Importing into an On-premises PostgreSQL Database
 
@@ -115,6 +115,48 @@ To import a PostgreSQL database using the downloaded database file, refer to eit
 
 ### 5.2 Migrating a PostgreSQL Database To a Non-PostgreSQL Database
 
+Below is general guidance on how to migrate a PostgreSQL database to a different database. There is a special section for the case of migrating a PostgreSQL database being used by a Mendix application running on SAP Cloud Platform.
+
+#### 5.2.1 General Guidance
+
 The source database is a PostgreSQL database with the downloaded database from the Mendix cloud. The target non-PostgreSQL database should be completely empty, as in, it should not contain any tables. In the Mendix project the active configuration in Settings should point to the target database, and you should add the Custom configuration settings for the source PostgreSQL database as explained above in the overview.
 
 Having configured the Mendix project, just run the application locally and it will automatically migrate the database schema and all the data from the source database to the target database. You should always validate it first by viewing the application in a browser.
+
+#### 5.2.2 Migrating to SAP HANA on SAP Cloud Platform
+
+If you have a Mendix application running on SAP Cloud Platform with PostgreSQL as the database service and want to migrate the database to SAP HANA, you will need to take some extra steps to migrate the existing data.
+
+To do this, perform the following steps:
+
+1. Sign in to the SAP Cloud Platform Cloud Foundry environment (containing the PostgreSQL service) using the Cloud Foundry command line.
+2. Get the PostgreSQL service instance details from the environment variables of the application using the following command:
+
+	`cf env {application-name}`
+
+3. Inspect the **VCAP_SERVICES** list, and note down the values of the following properties in the `postgresql` service:
+	* `dbname` – `{dbname}`
+	* `hostname` – `{hostname}`
+	* `password` – `{password}`
+	* `port` – `{port}`
+	* `username` – `{username}`
+
+ 	as shown in the highlighted image below:
+	
+	![](attachments/migrating/sap-postgres-config.png)
+
+4. Create an environment using the SAP HANA database service using Mendix Developer Portal.
+5. Deploy the mda, but **do not start the application**.
+6. Sign in to the SAP Cloud Platform Cloud Foundry environment (containing the SAP HANA service) using the Cloud Foundry command line.
+7. Set the following runtime properties in the SAP HANA environment using the command line. Use the values from the PostgreSQL instance values you noted above.
+
+	```bash
+	cf set-env {application-name} MXRUNTIME_SourceDatabaseType POSTGRESQL
+	cf set-env {application-name}  MXRUNTIME_SourceDatabaseHost {hostname}:{port}
+	cf set-env {application-name} MXRUNTIME_SourceDatabaseName {dbname}
+	cf set-env {application-name}  MXRUNTIME_SourceDatabaseUserName {username}
+	cf set-env {application-name}  MXRUNTIME_SourceDatabasePassword {password}
+	```
+
+8. Start the application either from the Developer Portal or the command line. 
+9. Once the application is started, verify the data in the application.

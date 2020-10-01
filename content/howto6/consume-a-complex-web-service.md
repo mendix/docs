@@ -119,7 +119,6 @@ To configure the web service call, follow these steps:
 * [Importing Excel Documents](importing-excel-documents)
 * [Exposing a Web Service](expose-a-web-service)
 * [Selenium Support](selenium-support)
-* [Synchronizing User Accounts Using the LDAP Mmodule](synchronizing-user-accounts-using-the-ldap-module)
 * [Importing XML Documents](importing-xml-documents)
 * [Consuming a REST Service](consume-a-rest-service)
 

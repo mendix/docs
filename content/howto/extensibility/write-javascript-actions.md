@@ -1,13 +1,14 @@
 ---
 title: "Build JavaScript Actions: Part 1 (Basic)"
 parent: "build-javascript-actions"
+menu_order: 10
 description: "This how-to will teach you to create a JavaScript action."
 tags: ["widget", "TexttoSpeech", "SpeechtoText", "JavaScript", "API", "JavaScript-API"]
 ---
 
 ## 1 Introduction
 
-Mendix has made nanoflows even more powerful with pluggable nanoflow actions – called JavaScript actions – in Mendix 8. With JavaScript actions, the standard set of actions can be extended with new functionality. A JavaScript action is a reusable action based on JavaScript that runs in the client just like the nanoflow, and can use capabilities such as HTML5 browser functions, Cordova PhoneGap plugins, and React Native modules. JavaScript actions are similar to [Java actions](/refguide/java-actions), but run on the client instead of the server. To share them inside your organization, JavaScript actions can be distributed and downloaded through the private [Mendix App Store](https://appstore.home.mendix.com/index3.html).
+Mendix has made nanoflows even more powerful with pluggable nanoflow actions — called JavaScript actions — in Mendix 8. With JavaScript actions, the standard set of actions can be extended with new functionality. A JavaScript action is a reusable action based on JavaScript that runs in the client just like the nanoflow, and can use capabilities such as HTML5 browser functions, Cordova plugins, and React Native modules. JavaScript actions are similar to [Java actions](/refguide/java-actions), but run on the client instead of the server. To share them inside your organization, JavaScript actions can be distributed and downloaded through the private [Mendix App Store](https://appstore.home.mendix.com/index3.html).
 
 **This how-to will teach you how to do the following:**
 
@@ -24,7 +25,7 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 
 1.  Create a new **JavaScript action** in your Mendix project:
 
-	![add javascript action from drop down](attachments/write-javascript-actions/createanewjsaction.png)
+	![add javascript action from drop-down](attachments/write-javascript-actions/createanewjsaction.png)
 
 2.  Give it a descriptive name:
 
@@ -153,7 +154,7 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 * [Build JavaScript Actions: Part 2 (Advanced)](write-javascript-github)
 * [Implement Best Practices for JavaScript Actions](best-practices-javascript-actions)
 * [JavaScript Actions](/refguide/javascript-actions)
-* [Mendix Client API](https://apidocs.mendix.com/8/client/) 
+* [Mendix Client API](https://apidocs.rnd.mendix.com/8/client/index.html) 
 * JavaScript Resources:
 	* [JavaScript basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
 	* [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)

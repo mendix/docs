@@ -154,7 +154,7 @@ To import widgets, follow these steps:
 
 ### 2.5 Importing Content from the App Store
 
-To learn more about importing content from the App Store, see [Use App Store Content](/developerportal/app-store/app-store-content).
+To learn more about importing content from the App Store, see [Use App Store Content in Studio Pro](/appstore/general/app-store-content).
 
 ## 3 Exporting Objects
 
@@ -219,7 +219,6 @@ Mendix module documents can be exported as a Mendix package (*.mpk*) file.
 * [How to Import Excel Documents](importing-excel-documents)
 * [How to Expose a Web Service](expose-a-web-service)
 * [How to Configure Selenium Support](selenium-support)
-* [How to Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [How to Import XML Documents](importing-xml-documents)
 * [How to Consume a REST Service](consume-a-rest-service)
 * [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)

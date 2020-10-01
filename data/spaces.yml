@@ -10,12 +10,12 @@ apidocs-mxsdk:
     - "API Documentation"
     - "Mendix Platform SDK"
 addons:
-  space: "Add-on Guides"
+  space: "Quality Add-ons Guide"
   priority: false
   menu_categories:
-    - "ATS Guide"
-    - "APM Guide"
-    - "AQM Guide"
+    - "ATS"
+    - "APD"
+    - "AQM"
 howto6:
   space: "Mendix 6 How-to's"
   priority: false
@@ -113,11 +113,12 @@ releasenotes:
   menu_categories:
     - "Studio Pro"
     - "Studio"
-    - "Developer Portal"
-    - "App Store"
     - "Mobile"
+    - "Developer Portal"
+    - "Data Hub"
+    - "App Store"
     - "SDKs"
-    - "Add-ons"
+    - "Quality Add-ons"
     - "Mendix Beta Features"
 developerportal:
   space: "Developer Portal Guide"
@@ -132,7 +133,6 @@ developerportal:
     - "Operations"
     - "App Settings"
     - "Community Tools"
-    - "App Store"
     - "Mendix Support"
 studio:
   space: "Studio 8 Guide"
@@ -143,6 +143,7 @@ studio:
     - "Pages"
     - "Navigation Document"
     - "Microflows"
+    - "Buzz"
     - "Data Filters"
     - "Previewing & Publishing Your App"
     - "Checks"
@@ -150,6 +151,17 @@ studio:
     - "Theme Customizer"
     - "Settings"
     - "Starting With Your Own Data"
+    - "Data Hub in Studio"
+studio-how-to:
+  space: "Studio 8 How-to's"
+  priority: false
+  menu_categories:
+    - "Pages"
+    - "Configure a Navigation Bar"
+    - "Configure a Domain Model"
+    - "Secure Your App and Configure Access to Its Functionality"
+    - "Microflows"
+    - "Customize the Design of Your App"
 studio7:
   space: "Mendix 7 Studio Guide"
   priority: false
@@ -158,7 +170,7 @@ studio7:
     - "Domain Model"
     - "Pages"
     - "Navigation Document"
-    - "Microflows"
+    - "Microflows"    
     - "Data Filters"
     - "Previewing & Publishing Your App"
     - "Checks"
@@ -176,13 +188,19 @@ partners:
 appstore:
   space: "App Store Guide"
   priority: false
-  draft: true
   menu_categories:
-    - "Starter Apps"
+    - "General Info"
+    - "Connectors"
     - "Widgets"
     - "Modules"
-    - "Connectors"
     - "Themes"
+data-hub:
+  space: "Data Hub Guide"
+  priority: false
+  menu_categories:
+    - "General Info"
+    - "Data Hub Catalog"
+    - "Data Hub Landscape"
 product-naming:
   space: "Mendix Product Naming Guide"
   priority: false

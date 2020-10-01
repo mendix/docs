@@ -46,5 +46,4 @@ To submit changes, follow these guidelines:
 * [Managing Your Application Requirements with Mendix](/developerportal/collaborate/stories)
 * [Starting Your Own Repository](starting-your-own-repository)
 * [Using Team Server – Version Control](using-team-server-version-control)
-* [Gathering User Feedback](/developerportal/collaborate/use-feedback-widget)
 * [Sharing the Development Database](sharing-the-development-database)

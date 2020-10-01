@@ -37,12 +37,14 @@ If this option is enabled (**true** by default), Mendix analyzes every microflow
 
 If you experience an issue while running your app in which objects seem to be lost, this option can be disabled to resolve that issue. If this does resolve the issue, please file a bug report so that we can fix the issue in the platform.
 
-### 3.3 After Startup
+### 3.3 After Startup{#after-startup}
 
 Here you can select a microflow that is automatically executed immediately after the application has been started up.
 
 {{% alert type="warning" %}}
 There is a timeout of *11 minutes* on the after startup microflow. If your after startup microflow takes longer than 11 minutes your whole app will fail to start.
+
+After startup is designed to initialize the app and therefore runs *before* the app is able to respond to incoming service requests (for example, published REST services).
 {{% /alert %}}
 
 ### 3.4 Before Shutdown
@@ -90,7 +92,7 @@ This affects time zone-related operations, such as parsing and formatting dates 
 
 If you run on-premises, then you can select the time zone to which the server is set. However, please note that no guarantees are given for the whereabouts of application servers in the cloud.
 
-### 3.9 Hash Algorithm
+### 3.9 Hash Algorithm{#hash-algorithm}
 
 The hash algorithm is used to generate hash values for attributes of the **Hashed string** type, such as the password of a user. Mendix offers two recommended hashing algorithms:
 
@@ -201,6 +203,8 @@ The way web services are called has been optimized, which means you can use cust
 
 ## 4 Languages Tab
 
+For more information about using different languages in your app, see [Language Menu](translatable-texts).
+
 ### 4.1 Default Language
 
 The default language indicates the language that is used when a user has not chosen a language. The default language is also used as a fall-back language when a certain text is not translated to another language.
@@ -253,7 +257,7 @@ For background information, see [Transport Layer Security (TLS) Renegotiation Is
 
 {{% /alert %}}
 
-## 6 Theme
+## 6 Theme Tab
 
 ### 6.1 UI Resources Package
 
@@ -277,7 +281,7 @@ Switching from a ZIP file to a UI resources package is straightforward:
 
 3. Lastly, set the **Theme ZIP file** setting to **None**.
 
-## 7 Miscellaneous Tab
+## 7 Miscellaneous Tab {#miscellaneous}
 
 These settings determine the behavior of Studio Pro for this project. The settings apply to everyone that is working on this project.
 
@@ -287,6 +291,10 @@ When deploying to the cloud, custom widgets are bundled to optimize client-serve
 
 If this option is set, custom widgets will also be bundled locally. This mimics the production deployment, eliminating risk at the cost of start-up time.
 
-### 7.2 Suggest Lower-Case Names in Microflows
+### 7.2 Suggest Lower-Case Variable Names in Microflows
 
 When enabled, the names that Studio Pro suggests in microflows will start with a lower-case letter instead of an upper-case letter.
+
+### 7.3 Activity Default Colors
+
+This table allows you to select a default color for each microflow activity type that is available in your project. The selected color will be used as the background color for all microflow activities of that type in your project. It is possible to override this default value for individual activities in the microflow editor. If you change the default color for an activity type, and there are activities of that type present in the project that have an individual background color specified, a dialog will be shown that allows you to apply the new default color to these activities as well.

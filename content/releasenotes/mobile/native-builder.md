@@ -7,9 +7,24 @@ description: "Native Builder release notes."
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-The [Native Builder](/refguide/native-builder) is a command line input tool which helps you build your Mendix native app. After the Native Builder simplifies your build process, you can do what you want most: test and publish your app. The Native Builder uses MxBuild, GitHub, and App Center to simplify the app building process. 
+The [Native Builder](/refguide/native-builder) is a command line input tool which helps you build your Mendix native mobile app. After the Native Builder simplifies your build process, you can do what you want most: test and publish your app. The Native Builder uses MxBuild, GitHub, and App Center to simplify the app building process. 
 
-We are heavily invested in streamlining the experience of building your apps and are continuously improving upon the tool's capabilities. For more information on using the Native Builder, see [How To Deploy Your First Mendix Native App](/howto/mobile/deploying-native-app).
+We are heavily invested in streamlining the experience of building your apps and are continuously improving upon the tool's capabilities. For more information on using the Native Builder, see [How To Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app).
+
+## 3.2.0
+
+**Release date: February 5th, 2020**
+
+### Improvements
+
+* Custom developer apps are officially released. Using the `dev-app` command, you can build a smaller version of the Make It Native app tailored to your specific app's testing needs. A custom developer app is built against the sources, dependencies, and capabilities of the final release app. For more information, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps).
+* We have updated image functionality. With this improvement we were able to remove all extra dependencies and compress the CLI to a single executable.
+* We introduced new iOS-specific configuration commands. For more information, see [Native Builder](/refguide/native-builder).
+
+### Fixes
+
+* We fixed an issue with the OTA archiving algorithm that could make consecutive updates fail to install.
+* We fixed an issue with OTA on Android where resources might go missing after a successful update.
 
 ## 3.1.0
 
@@ -18,9 +33,7 @@ We are heavily invested in streamlining the experience of building your apps and
 ### Improvements
 
 * A few factors, such as third-party services' stability, might crash the Native Builder with no visible errors. To give you more information during such a crash, we introduced the global `--verbose` argument. If provided, the Native Builder will output an extended stack trace in case of an error.
-
 * To simplify custom builds we introduced the `bundle` command. With the `bundle` command, you can easily generate a JavaScript bundle without having to go through the whole build process. This command will generate an iOS or an Android JavaScript bundle and all the required assets, then output the bundle to the provided path.
-
 * As Mendix Studio Pro and the Native Builders mature, we will be introducing new dependencies or requirements that might not fare well with older versions. For this reason we introduced the mandatory `--mendix-version` arguments for the `regenerate` and `prepare` commands. When you provide the Studio Pro version your Mendix project is built with, the Native Builder knows to select the correct version of the Native Template when generating the project. Important to know, is that if an unknown version is provided native builder will use the latest available version for creating the repository. 
 
 ### Fixes
@@ -35,27 +48,26 @@ We are heavily invested in streamlining the experience of building your apps and
 
 ### Improvements
 
-This release marks a re-architecture of the Native Builder.
+* This release marks a re-architecture of the Native Builder. Its foremost improvements are the following:
+	* The Native Builder now has a more structured command API.
+	* The Native Builder now provides an upgrade path for your projects.
+	* The Native Builder now supplies better error messages.
 
-Improvements at a glance:
+#### Command API Improvements
 
-* More structured command API
-* An upgrade path for your projects
-* Better error messages
+* We reworked the command API for the Native Builder. We introduced two new commands: `prepare` and `build`. These commands separate the preparation configuration from your actual build. Specifically, preparation requires several pieces of app information during configuration, while the build process requires only a build number and a version number. To further simplify app building, we also introduced a new argument: `--project-name`. This argument allows for an explicit separation between a Mendix project and the app's name. When preparing a project with `prepare`, all configuration is cached locally. That means that building the command can look as simple as this: 
+	* `build --project-name "My Mendix Project" --app-version "1.0.0" --build-number 1`
+* Updating any of your configuration is still possible by calling this: 
+	* `prepare --project-name "My Mendix Project" --github-api-token "" <the arguments to update with new values>`
+* In addition, two new arguments have been added to the `build` command: `--platform` and `--skip-mxbuild`. The `--platform` argument allows the build for a specific platform, iOS or Android, while `--skip-mxbuild` allows you to skip the project's build. Skipping a build is useful in  the case of a successful MxBuild but a failed later step.
 
-We reworked the command API for the Native Builder. We introduced two new commands: `prepare` and `build`. These commands separate the preparation configuration from your actual build. Specifically, preparation requires several pieces of app information during configuration, while the build process requires only a build number and a version number. To further simplify app building, we also introduced a new argument: `--project-name`. This argument allows for an explicit separation between a Mendix project and the app's name. When preparing a project with `prepare`, all configuration is cached locally. That means that building the command can look as simple as this: 
+#### Upgrade Path Improvements
 
-`build --project-name "My Mendix Project" --app-version "1.0.0" --build-number 1`
+* We also developed a viable upgrade path for your repositories. Before, the Native Builder was unable to notify you of new versions of the Native Template. As part of new architecture, we initiated a versioning policy across the board. From now on, the Native Template is versioned. If you wish to update your project's repository, you can use the newly added `regenerate` command. The command does a graceful update of your repository and App Center configuration. Your current repository is renamed with a time stamp as a backup measure and a new one is created for you using the latest release of the Native Template while your App Center project's configurations are updated to support the new template.
 
-Updating any of your configuration is still possible by calling this: 
+#### Error Message Improvements
 
-`prepare --project-name "My Mendix Project" --github-api-token "" <the arguments to update with new values>`
-
-In addition, two new arguments have been added to the `build` command: `--platform` and `--skip-mxbuild`. The `--platform` argument allows the build for a specific platform, iOS or Android, while `--skip-mxbuild` allows you to skip the project's build. Skipping a build is useful in  the case of a successful MxBuild but a failed later step.
-
-We also developed a viable upgrade path for your repositories. Before, the Native Builder was unable to notify you of new versions of the Native Template. As part of new architecture, we initiated a versioning policy across the board. From now on, the Native Template is versioned. If you wish to update your project's repository, you can use the newly added `regenerate` command. The command does a graceful update of your repository and App Center configuration. Your current repository is renamed with a time stamp as a backup measure and a new one is created for you using the latest release of the Native Template while your App Center project's configurations are updated to support the new template.
-
-Finally, we worked on the error output of the Native Builder. We added error messages which had been missing and updated the ones that were lacking context.
+* Finally, we worked on the error output of the Native Builder. We added error messages which had been missing and updated the ones that were lacking context.
 
 ### Fixes
 
@@ -72,7 +84,7 @@ Finally, we worked on the error output of the Native Builder. We added error mes
 
 ### Breaking Changes
 
-This version only supports Mendix version 8.1.0 and upwards. If you have to stick with Mendix 8.0.0 please consider using Native Builder  v1.0.0.
+* This version only supports Mendix version 8.1.0 and upwards. If you have to stick with Mendix 8.0.0 please consider using Native Builder  v1.0.0.
 
 ### Known Issues
 
@@ -101,4 +113,4 @@ This version only supports Mendix version 8.1.0 and upwards. If you have to stic
 
 **Release date: August 1st, 2019**
 
-* Initial release of Native Builder.
+* This marks the initial release of the Native Builder.

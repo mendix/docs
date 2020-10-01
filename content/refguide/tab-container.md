@@ -13,7 +13,6 @@ Tab containers are used to show information categorized into tabs. This can be v
 
 ![Tab Container](attachments/container-widgets/tab-container.png)
 
-
 ## 2 Properties
 
 An example of tab container properties is represented in the image below:
@@ -39,7 +38,7 @@ Tab container properties consist of the following sections:
 
 A tab container contains one or more tab pages where you place widgets. For example, a tab page can contain a grid of orders.
 
-### 3.1 Tab Page Specific Properties
+### 3.1 Tab Page-Specific Properties
 
 #### 3.1.1 Default Tab Page
 
@@ -47,19 +46,18 @@ A tab container contains one or more tab pages where you place widgets. For exam
 
 Default: *False*
 
-#### 3.1.2 Refresh on Show
+#### 3.1.2 Refresh on Show {#refresh}
 
 **Refresh on show** indicates whether the contents of the tab page should be refreshed when the tab page is shown. Set this property to *No* if you know that nothing will affect the information on the tab page.
 
 Default: *True*
 
-{{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
+{{% alert type="info" %}}
+This property is not supported on native mobile pages.
+{{% /alert %}}
 
 ## 4 Read More
 
 * [Page](page)
 * [Container Widgets](container-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)
-
-
-

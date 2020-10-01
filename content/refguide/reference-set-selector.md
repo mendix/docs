@@ -10,7 +10,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A **reference set selector** is used to allow the end-user to display or select the value(s) of a many-to-many (reference set) [association](association-properties) by selecting the associated object(s).
+A **reference set selector** is used to allow the end-user to display or select the value(s) of a many-to-many (reference set) [association](associations) by selecting the associated object(s).
 
 A reference set selector must be placed in a [data widget](data-widgets).
 
@@ -72,7 +72,7 @@ There are three additional sets of properties which do not appear in the propert
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 2.2 Data Source Section{#data-source}
+### 2.2 Data Source Section {#data-source}
 
 {{% snippet file="refguide/data-source-section-link.md" %}}
 
@@ -82,68 +82,90 @@ The attribute path specifies which attribute(s) of an associated entity is shown
 You cannot currently use non-persistable entities in a reference set selector.
 {{% /alert %}}
 
-### 2.3 Design Properties Section{#design-properties}
+### 2.3 Design Properties Section {#design-properties}
 
 {{% snippet file="refguide/design-section-link.md" %}}
 
-### 2.4 Events Section{#events}
+### 2.4 Events Section {#events}
 
 The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
 {{% snippet file="refguide/events-section-link.md" %}}
 
-### 2.5 General Section{#general}
+### 2.5 General Section {#general}
 
-#### 2.5.1 Width unit
+#### 2.5.1 Width Unit {#width-unit}
 
 You can decide how to define the widths of the columns in the reference set selector. The possible values are:
 
 * Pixels – define the width in pixels
 * Percentage – define the width as a percentage of the width of the reference set selector widget
 
-#### 2.5.2 Column Widths
+#### 2.5.2 Column Widths {#column-widths}
 
 The column widths are defined as either percentages or pixels. The value for the columns are separated by semi-colons. For example a narrow column and a wide column could be defined as `20;80`. If the widths are defined in percentages, they have to add up to 100.
 
 If column widths are defined as percentages, you can also change the widths of columns by dragging the separating line between columns.
 
-#### 2.5.3 Number of Rows
+#### 2.5.3 Number of Rows {#number-of-rows}
 
 With this property you can change the number of rows that will be shown in one page. See also the property 'Show empty rows'.
 
 Default: *5*
 
-#### 2.5.4 Show Empty Rows
+#### 2.5.4 Show Empty Rows {#show-empty-rows}
 
 If you choose to show empty rows there will always be the grid that shows the same number of rows (see 'Number of rows') even if there are fewer objects to show on the page.
 
 Default: *False*
 
-#### 2.5.5 Tooltip page
+#### 2.5.5 Tooltip Page {#tooltip-page}
 
 A tooltip page is a page that appears when you hover your mouse over a row. The tooltip page must contain a data view on the same entity as the data grid.
 
 The tooltip will only be shown for the columns you specify. The default for each column is that the tooltip will _not_ appear. See [Grid Columns](columns) for more information.
 
-#### 2.5.6 Show Control Bar
+#### 2.5.6 Show Control Bar {#show-control-bar}
 
 This property indicates whether the control bar will be visible in the end-user interface. The control bar also includes the paging buttons. See [Control Bar](control-bar) for more information.
 
 {{% alert type="warning" %}}
-
 Even if the control bar is invisible there can still be a default button that is triggered by (double) clicking on a row. See the property 'Default button trigger' and [control bar](control-bar) for more information.
-
 {{% /alert %}}
 
 Default: *True*
 
-#### 2.5.7 Show Paging Buttons
+#### 2.5.7 Show Paging Buttons {#show-paging-buttons}
+
+{{% alert type="warning" %}}
+This property is not available in Mendix 8.13 and above. Use the [Show Paging Bar](#show-paging-bar) property instead.
+{{% /alert %}}
 
 This property indicates whether the buttons to page through the information in the grid are visible or not. Only hide these buttons if you are sure that there will never be more objects than the number of rows of the grid. Note that hiding the control bar also hides the paging buttons.
 
 Default: *True*
 
-#### 2.5.8 Selection Mode
+#### 2.5.8 Show Paging Bar {#show-paging-bar}
+
+{{% alert type="info" %}}
+This property was introduced in Mendix 8.13. It replaces the [Show Paging Buttons](#show-paging-buttons) property.
+{{% /alert %}}
+
+With this property, you can change the way the paging bar is shown.
+
+| Value | Description |
+| --- | --- |
+| Yes (with total count) | The paging bar is shown, including the **Go to last page** button and the total count of objects. |
+| Yes (without total count) | The paging bar is shown (except for the **Go to last page** button). Also, the total count of objects is not shown, as page numbers are shown instead. |
+| No | The paging buttons are not shown. |
+
+Default: *Yes (with total count)*
+
+{{% alert type="warning" %}}
+Hiding the control bar also hides the paging buttons. For details, see [Show Control Bar](#show-control-bar).
+{{% /alert %}}
+
+#### 2.5.9 Selection Mode {#selection-mode}
 
 The selection mode determines whether and how the user can select items in the reference set selector.
 
@@ -155,7 +177,7 @@ The selection mode determines whether and how the user can select items in the r
 | Multi-selection | The user can select multiple items by clicking the first one and holding the <kbd>Ctrl</kbd> key while clicking on other items. Clicking an item without the <kbd>Ctrl</kbd> key will deselect all other selected items and make the clicked item the selection. |
 | Simple multi-selection | The user can select multiple items by clicking on them in turn. |
 
-#### 2.5.9 Select first
+#### 2.5.10 Select First {#select-first}
 
 Specifies whether the first item should be selected by default when the reference set selector is first shown.
 
@@ -164,16 +186,16 @@ Possible values:
 * No *(default)* 
 * Yes
 
-#### 2.5.10 Default Button Trigger
+#### 2.5.11 Default Button Trigger {#default-button-trigger}
 
-The default button can be triggered by a single or a double click on a row.
+The default button can be triggered by a single or a double click a row.
 
 | Value | Description |
 | --- | --- |
 | Single click | A single click triggers the default button. This cannot be used in combination with allowing the user to select rows. |
 | Double click  *(default)* | A double click triggers the default button. |
 
-### 2.6 Selectable Objects Section{#selectable-objects}
+### 2.6 Selectable Objects Section {#selectable-objects}
 
 The properties in the Selectable objects section determine the objects from which the end user can make a selection.
 
@@ -188,13 +210,13 @@ For more information, see the [Selectable Objects Section](reference-selector#se
 You cannot use a microflow to define selectable objects in a reference set selector.
 {{% /alert %}}
 
-### 2.7 Visibility Section{#visibility}
+### 2.7 Visibility Section {#visibility}
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 
 ## 3 Read More
 
-*   [Data view](data-view)
-*   [Entities](entities)
-*   [Associations](associations)
+* [Data view](data-view)
+* [Entities](entities)
+* [Associations](associations)
 * [Control Bar](control-bar)

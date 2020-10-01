@@ -16,7 +16,6 @@ Rules are very similar to microflows; see the documentation on [Microflows](micr
 
 *   A rule can only be used in a decision
 *   The return type has to be Boolean or enumeration
-*   A rule has a different background in Studio Pro so that you can quickly spot whether you are working on a rule
 *   A rule cannot change data in the database; the actions to create, delete, change and rollback objects are not available in rules
 *   A rule cannot interact with the client; the actions to show or close forms, show messages, send validation feedback and download files are not available in rules
 *   A rule cannot call web services, generate documents or import XML

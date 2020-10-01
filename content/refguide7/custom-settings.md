@@ -71,6 +71,8 @@ The settings below influence the behavior of the log files. These settings can o
 | OracleServiceName | Defines the SERVICE_NAME when you have a connection with an Oracle DBMS. |   |
 | ReadCommittedSnapshot | Defines whether the READ_COMMITTED_SNAPSHOT option of Microsoft SQL Server must be enabled or not. See for more information: [Using Snapshot Isolation](http://msdn.microsoft.com/en-us/library/tcbchxcb(VS.80).aspx). The value can be true or false. | true |
 | DataStorage.EnableDiagnostics | This setting can be used to generate a uniqueness constraint violation report. | false |
+| UseNetworkTimeout | This setting is applied to PostgreSQL and DB2. It affects the timeout mechanism used when reserving new ids for Mendix objects. If set to true, the socket level request timeout is used. In that case, the request timeout is handled within the operating system. If set to false, the timeout is handled by Mendix runtime. For other databases, timeouts are always handled by Mendix runtime. | true |
+| JdbcLoginTimeout | This setting defines the database connection establishment time in milliseconds. | 5000 |
 
 ### 4.2 Connection Pooling
 
@@ -192,6 +194,7 @@ The following settings influence the behavior of the Mendix web client.
 | com.mendix.webui.HybridAppLoginTimeOut | Determines how many minutes your token will remain valid before re-authenticating using your full credentials. This setting defaults to -1, which is equal to no timeout. | -1 |
 | com.mendix.webui.FeedbackSizeWarningThreshold | Introduced in version 7.0. A warning is logged when the feedback size exceeds the threshold. Feedback is sent from server to client to instruct (for example, to refresh objects or to open a page). They are serialized as "instructions" in the server response. If there are too many instructions, this can have performance implications, as they all have to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 5000 |
 | com.mendix.webui.StateSizeWarningThreshold | Introduced in version 7.0. A warning is logged when the state size exceeds the threshold. The state consists of changes in objects and of objects not committed to the database (yet). If there is too much state, this will have performance implications, as the whole state has to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 100 |
+| com.mendix.webui.CommittedObjectsThreshold | The threshold controls how much data is sent back to the client after executing a microflow. By default, we send back full objects when they are changed or committed. When this threshold is reached, only object GUIDs are sent back instead so that the client knows about the changes while the amount of data sent over the network is reduced. The client will then retrieve the objects later on, if needed. | 100 |
 
 ## 10 Proxy Settings
 

@@ -1,6 +1,7 @@
 ---
 title: "Runtime API"
 category: "API Documentation"
+menu_order: 10
 tags: ["Runtime API", "API"]
 ---
 
@@ -10,6 +11,6 @@ Extend your application model using Java. All functionality and information from
 
 ## 2 Runtime API
 
-* [Mendix 8 Server Runtime API](https://apidocs.mendix.com/8/runtime/)
-* [Mendix 7 Server Runtime API](https://apidocs.mendix.com/7/runtime/)
-* [Mendix 6 Server Runtime API](https://apidocs.mendix.com/6/runtime/)
+* [Mendix 8 Server Runtime API](https://apidocs.rnd.mendix.com/8/runtime/index.html)
+* [Mendix 7 Server Runtime API](https://apidocs.rnd.mendix.com/7/runtime/index.html)
+* [Mendix 6 Server Runtime API](https://apidocs.rnd.mendix.com/6/runtime/index.html)

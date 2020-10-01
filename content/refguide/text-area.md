@@ -102,8 +102,6 @@ For example, if you use the counter message `You've used {1} characters of the {
 
 #### 2.6.4 Text Too Long Message
 
-{{% todo %}}[DOES THIS ACTUALLY DO ANYTHING - HOW CAN IT BE DISPLAYED?]{{% /todo %}}
-
 {{% alert type="info" %}}Text too long message is not supported on native mobile pages.{{% /alert %}}
 
 This is the text displayed when the number of typed characters is higher than the maximum allowed number of characters.

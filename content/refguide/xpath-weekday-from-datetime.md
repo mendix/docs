@@ -13,5 +13,5 @@ The `weekday-from-dateTime()` function extracts the day of the week (as a number
 This query returns all the logs where the day of the week in `DateAttribute` is 6 (Friday):
 
 ```java
-//Logging.Log[day-from-dateTime(DateAttribute) = 6]
+//Logging.Log[weekday-from-dateTime(DateAttribute) = 6]
 ```

@@ -18,6 +18,7 @@ This how-to explains how to migrate your app from a Mendix Cloud v3 node to a Me
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
+* Ensure that your app is on a supported version of Mendix, that is **Mendix version 6.0 or above**, otherwise the migration will fail – see [Moving from Modeler Version 5 to 6](/refguide6/moving-from-5-to-6) for help if your app is on a version of Mendix below 6.0
 * Have a [Mendix Cloud](mendix-cloud-deploy) v4 node available (to request a licensed v4 Cloud Node, contact your Customer Success Manager (CSM))
 * Have the [Technical Contact](/developerportal/company-app-roles/technical-contact) role for both your existing v3 and available v4 Cloud Nodes
 * Create two new temporary Free Apps without Free App environments – instructions for unlinking a Free App from its environment are here: [Licensing Mendix Cloud Apps](licensing-apps#unlink)
@@ -26,10 +27,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 You will need to take the following into account when planning to migrate to Mendix Cloud v4:
 
-* Your app needs to be on a supported version of Mendix, that is **Mendix version 6.0 or above**
 * If you are using Mendix 7, you might want to split long-running scheduled events into smaller chunks, using a queueing system like the Amazon SQS connector to spread the work out over multiple instances
 * If you use a mail server from your app, you will need to use a third-party email provider – for more information, see [Sending Email](sending-email)
-* If you are currently using a VPN to secure your app, you will have to use one of the recommended methods discussed in [Securing Outgoing Connections from Your Application](securing-outgoing-connections-from-your-application) instead.
+* If you use an FTP server in your app, you will need to use a third-party FTP provider 
+* If you are currently using a VPN to secure your app, you will have to use one of the recommended methods discussed in [Securing Outgoing Connections from Your Application](securing-outgoing-connections-from-your-application) instead
 
 To make the most of the features of Mendix Cloud v4, we recommend that your apps are built as [12-factor apps](https://12factor.net/).
 
@@ -39,8 +40,6 @@ There are a few other differences between the way you develop and deploy apps in
 
 * In Mendix Cloud v4, the debugger is always active, and does not have to be activated – the **Show Debugger Information** button shows the credentials to connect Mendix Studio Pro to the debugger
     {{% alert type="info" %}}You can only use the debugger if your app is scaled to a single instance.{{% /alert %}}
-* In Mendix Cloud v4, the Java security manager is no longer enabled
-    * In Cloud Foundry, short-lived containers ensure standardization and apps are completely isolated from the management network, so the Java security manager is not needed to enforce standardization and act as an additional security layer
 * In Mendix Cloud v4, the number of permitted database connections is tied to the RAM of the database environment, rather than being static.
     * The limit is roughly 100 connections per GB of database RAM – the defaults are perfectly fine for most situations, but you can use the Mendix Runtime settings **ConnectionPoolingMaxActive** and **ConnectionPoolingMaxIdle** to tweak the number of database connections that the Mendix Runtime will set up for each runtime instance.
 * In Mendix Cloud v4, there are some circumstances in which your app can run out of file connections
@@ -50,8 +49,8 @@ There are a few other differences between the way you develop and deploy apps in
     * Application CPU alerts are not sent
     * Archived logs can only be downloaded, not viewed in the browser
     * The database status is not visible on the node details screen
-* Mendix Cloud v4 only supports TLS 1.2 for incoming requests
-    * If you have external clients connecting _to_ your application running in the Mendix Cloud, these clients have to support TLS 1.2 to be able to make a successful connection
+* Mendix Cloud v4 only supports TLS 1.2 or above for incoming requests
+    * If you have external clients connecting _to_ your application running in the Mendix Cloud, these clients have to support TLS 1.2 or above to be able to make a successful connection
 
 ## 4 Migrating the App
 
@@ -172,7 +171,20 @@ To change the App URL (if you are not using a custom domain) you will need to co
 
 ### 4.6 Changing a Custom Domain
 
-If you have a custom domain set up, you will need to change this. Instructions for doing this are here: [Custom Domains](custom-domains).
+If you have a custom domain which you want to transfer to your v4 deployment, you will need to bear the following information in mind.
+
+* The CNAME configuration in the DNS provider needs to have the following format: `{customdomain}.cname.mendix.net`
+* If you own the private key for your existing custom domain name, you can reuse it for your v4 deployment
+    * For a TLS certificate you uploaded yourself, you will have the private key
+    * If you made a certificate request to Mendix, the private key will be stored in the Mendix Secure Keystore and you will need to ask Mendix Support to arrange for the certificate to be migrated to v4
+    
+        The two certificate request options are shown below:
+        ![](attachments/migrating-to-v4/tls-certificates.png)
+* When you start the app on the v4 cloud, it can take some time for the DNS servers on the web to register the new target URL and redirect your custom domain name to it — therefore you must set the TTL value to 300 seconds to speed up this process, if your TTL setting has a longer duration. This should be done some days in advance to ensure the setting is propagated to all DNS servers.
+
+    For example, if you have a TTL of 24 hours, it will take 24 hours before the new domain will be active in the DNS. Customers who visit the custom domain through the browser will not end up at the Mendix Cloud v4 environment until 24 hours have passed. You should therefore check the TTL value a week or so before migration and change it to around 300 seconds (this is the default value we recommend).
+
+You can find further information about setting up custom domains in [Custom Domains](custom-domains).
 
 ### 4.7 Offboarding the v3 Node
 

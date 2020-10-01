@@ -9,7 +9,7 @@ tags: ["Atlas", "UI", "UX", "user experience"]
 
 Mendix Atlas UI is the design framework that makes building elegant user experiences a rapid process. It was built upon three design principles: simplicity, harmony, and flexibility. Simplicity helps you focus on what is important. We’ve simplified the design process with readymade page templates, building blocks, and widgets that can be arranged and customized to suit your app. Our design elements are harmonious, bringing a unified aesthetic to your app landscape. Atlas UI is built to be fully responsive, ensuring quality across scale without losing functionality. 
 
-Visit the [Atlas UI site](https://atlas.mendix.com/) for detailed previews and descriptions of all Atlas UI elements, or see the Atlas UI Framework [GitHub repository](https://github.com/mendix/Atlas-UI-Framework). If you wish to customize your Mendix apps' styling, see [Use Calypso](calypso).
+Visit the [Atlas UI site](https://atlas.mendix.com/) for detailed previews and descriptions of all Atlas UI elements, or see the Atlas UI Framework [GitHub repository](https://github.com/mendix/Atlas-UI-Framework). If you wish to customize your Mendix apps' styling, see [How to Customize Your Styling Using Calypso](calypso).
 
 ### 1.1 Mendix Studio
 
@@ -35,7 +35,7 @@ Design apps that look good and scale in all situations without losing an intuiti
 
 ## 2 Design Elements
 
-Our UI library is fully integrated into tMendix Studio. After choosing a navigation layout in Mendix Studio, you can find page templates, building blocks, and widgets directly in your **Toolbox**. These UI elements form the foundation of your app.
+Our UI library is fully integrated into Mendix Studio. After choosing a navigation layout in Mendix Studio, you can find page templates, building blocks, and widgets directly in your **Toolbox**. These UI elements form the foundation of your app.
 
 ![](attachments/howto/designelements.png)
 
@@ -57,7 +57,7 @@ Widgets are small user interface elements (alerts, buttons, charts, etc.) used t
 
 **5** **Design Properties**
 
-You can further customize widgets by changing their design properties. Colors, text, and many other variables can be altered to make the widget what you need it to be.
+You can further customize widgets by changing their design properties. Colors, text, and many other variables can be altered to make the widget what you need it to be. 
 
 ## 3 Read More
 
@@ -68,4 +68,4 @@ You can further customize widgets by changing their design properties. Colors, t
 * [Create Custom Preview Images for Building Blocks & Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
 * [Extend Design Properties to Customize Your Studio Experience](extend-design-properties-to-customize)
 * [Troubleshooting Atlas UI Changes](/refguide/migration-atlas)
-* [Use Calypso](calypso)
+* [How to Customize Your Styling Using Calypso](calypso)

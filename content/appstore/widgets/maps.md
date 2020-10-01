@@ -1,12 +1,12 @@
 ---
 title: "Maps"
 category: "Widgets"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the Maps widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "maps", "google maps", "openstreetmap", "mapbox", "here maps", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## 1 Introduction {#intro}
 
 The [Maps](https://appstore.home.mendix.com/link/app/108261/) widget enables showing locations on maps. These are the available map types:
 
@@ -29,7 +29,7 @@ The [Maps](https://appstore.home.mendix.com/link/app/108261/) widget enables sho
 
 * Addresses are not supported
 * Context and static data sources are offline-capable with Mendix data, but you still need to be online to view the map
-* For all map types except OpenStreetMap, you need to have a token in order to view the map – you can get the tokens via the links to the map types listed above
+* For all map types except OpenStreetMap, you need to have a token in order to view the map – you can get the tokens via the links to the map types listed in the [Introduction](#intro) section above
 * Google maps uses [Google Maps API v3](https://cloud.google.com/maps-platform/), so the limitations from Google [Premium Plan Usage Rates and Limits](https://developers.google.com/maps/premium/usage-limits) apply
 
 ### 1.3 Demo App Project

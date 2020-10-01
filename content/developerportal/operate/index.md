@@ -53,3 +53,10 @@ On this page you can see and manage your backups in all environments where your 
 For details of managing your backups in the Mendix Cloud, see [Backups](backups).
 
 If your app is deployed to SAP Cloud Platform or IBM Cloud, this page will give you the option to go to the platform where your app is deployed. Here you will be able to manage your app's backups.
+
+## 3 Main Documents in This Category
+
+* [Metrics](metrics)
+* [Alerts](monitoring-application-health)
+* [Logs](logs)
+* [Backups](backups)

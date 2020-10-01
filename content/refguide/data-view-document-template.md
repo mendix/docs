@@ -11,7 +11,7 @@ The data view is used for showing the contents of exactly one object. If, for ex
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918139.png)
+![](attachments/document-templates/918139.png)
 
 A data view showing orderline information.
 

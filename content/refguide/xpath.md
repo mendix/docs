@@ -6,7 +6,7 @@ description: "Describes how the XPath query langauge is used in Mendix by presen
 tags: ["studio pro"]
 ---
 
-## 1 Overview of XPath
+## 1 Introduction
 
 Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations.
 
@@ -22,9 +22,7 @@ Examples of XPath queries are:
     Retrieve the average of the total prices of all paid orders.
 
 {{% alert type="warning" %}}
-
-In Studio Pro you do not write complete queries but only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']` you only write `[Name='Jansen']` in the context of a customer. In Java you do write whole queries including the double slashes and the entity name.
-
+In Studio Pro, you do not write complete queries, only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']`, you only need to write `[Name='Jansen']` in the context of a customer. In Java, you do need to write the whole queries, including the double slashes (`//`) and the entity name.
 {{% /alert %}}
 
 ## 2 XPath Elements
@@ -78,3 +76,10 @@ The following XPath functions are available:
 	* [not](xpath-not)
 	* [true](xpath-true)
 	* [false](xpath-false)
+	
+## 6 Example
+
+**How to find the right path to XPath**
+
+{{% youtube sdabUY-w4ZU %}}
+

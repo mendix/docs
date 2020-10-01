@@ -37,7 +37,7 @@ A [resource](published-odata-resource) is a network-accessible data object repre
 
 You can choose how you want to represent associations. For more information, see the [Associations](odata-representation#associations) section of *OData Representation*.
 
-### 3.2 Security
+### 3.2 Security {#security}
 
 You can configure security for the OData service when [Project Security](project-security) is enabled.
 
@@ -112,7 +112,36 @@ The allowed roles define which [module role](module-security#module-role) a user
 Web service users cannot access OData services.
 {{% /alert %}}
 
-## 4 Runtime Considerations
+## 4 Properties
+
+In the properties pane of the published OData service you can edit some of the properties that you can also set in the *General* tab, such as *Service name*, *Version*, and *Namespace*.
+
+This section describes the additional properties that you can set.
+
+### 4.1 Documentation
+
+Here you can describe the purpose of the service. This is intended for other people
+working on this project and is not available to users of the OData service.
+
+### 4.2 Replace Illegal XML Characters
+
+Some special characters cannot be used in XML. If your data contains these
+characters, the client will get an error. If you set this setting to *Yes*,
+those illegal characters are replaced by the DEL character, and the client will
+not get an error. However, the data that the client receives will not be exactly
+what is stored in your database, because these characters have been replaced.
+
+Default value: *No*
+
+This property is available in Studio Pro 8.12.0 and later.
+
+### 4.3 Public Documentation
+
+You can write a *summary* and a *description* intended for people using the service.
+
+## 5 Runtime Considerations
+
+### 5.1 General
 
 Once your OData-enabled app is running, an overview of exposed OData resources is available on the root URL followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/` You can copy and paste the links into for instance Excel to establish a link between your OData resources and Excel.
 
@@ -125,3 +154,9 @@ For details on how to filter the OData response, refer to [OData Query Options](
 For details on how Mendix attributes are represented in OData, refer to [OData Representation](odata-representation).
 
 When exposing entities through OData, the entities are retrieved from the Mendix database in a streaming fashion, to avoid out-of-memory errors in the Mendix Runtime.
+
+### 5.2 On-Premises Deployments
+
+Some on-premises servers, in particular those using Microsoft IIS, will strip the host header from requests. This means that your OData service and documentation will be published on an unexpected URL.
+
+To resolve this issue, you will need to ensure your server preserves host headers. See the section [Preserving the Host Header](/developerportal/deploy/deploy-mendix-on-microsoft-windows#preserve-header) in the *Microsoft Windows* deployment documentation.

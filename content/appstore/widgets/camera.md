@@ -1,14 +1,14 @@
 ---
 title: "Camera"
 category: "Widgets"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the Camera widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "camera", "ios", "android", "picture source", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Camera](https://appstore.home.mendix.com/link/app/1377/) widget enables PhoneGap native camera functionality within your Mendix mobile application.
+The [Camera](https://appstore.home.mendix.com/link/app/1377/) widget enables native camera functionality within your Mendix mobile application.
 
 ## 2 Compatibility
 

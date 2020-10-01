@@ -24,11 +24,11 @@ None.
 
 ### 3.1 Step 1 – Import the `PushNotifications` Module from the App Store
 
-The `PushNotifications` module is published in the Mendix App Store. To import it into your project, click on 'App Store' in the top right of Modeler. This will open the App Store in a new tab. Search for _Push Notifications Connector_ and click on the title of the result.
+The `PushNotifications` module is published in the Mendix App Store. To import it into your project, click 'App Store' in the top right of Modeler. This will open the App Store in a new tab. Search for _Push Notifications Connector_ and click the title of the result.
 
 ![](attachments/19955732/20218020.png)
 
-On the resulting page, click on the green `Download` button. Make sure that 'Add as a new module' is selected, and click OK.
+On the resulting page, click the green `Download` button. Make sure that 'Add as a new module' is selected, and click OK.
 
 ![](attachments/19955732/20217885.jpg)
 
@@ -36,11 +36,11 @@ On the resulting page, click on the green `Download` button. Make sure that 'Add
 
 The `PushNotifications` module has two dependencies; the `Encryption` module and the `Community Commons Function Library` module. Include both dependencies by downloading them from the App Store, similar to how you installed the `PushNotifications` module. While importing you may again get a dialog about overwriting project files, which you can confirm by clicking the `OK` button.
 
-If your project is using an older version of the [Encryption module](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption), it might trigger an error for referencing a non-existent layout. Fix it by assigning the master layout of the `Encryption.ResponsiveLayout_Certificate` layout to another layout (in this specific use case it is not really important which layout is used). This does not apply to version 1.3.1 and higher.
+If your project is using an older version of the [Encryption](/appstore/modules/encryption) module, it might trigger an error for referencing a non-existent layout. Fix it by assigning the master layout of the `Encryption.ResponsiveLayout_Certificate` layout to another layout (in this specific use case it is not really important which layout is used). This does not apply to version 1.3.1 and higher.
 
 ![](attachments/19955732/20217886.jpg)
 
-After importing the module and the dependencies, your error dock will inform you that entity access is out of date; double-click on the error, and then click on `Update security` at the top of the domain model pane to fix this error.
+After importing the module and the dependencies, your error dock will inform you that entity access is out of date; double-click the error, and then click `Update security` at the top of the domain model pane to fix this error.
 
 ### 3.3 Step 3 – Include the Push Notifications Snippet in the Application's Layouts
 
@@ -63,8 +63,10 @@ invisible to the user.
 
 The PushNotifications module contains a microflow named `AfterStartup_PushNotifications` which will start the connectors for FCM and APNs for you. Call this microflow from your AfterStartup microflow.
 
-If your project uses Mendix SSO, most likely the `AppCloudServices.StartAppCloudServices` microflow is set to execute after startup. Please refer to the [reference guide](/developerportal/deploy/integrate-with-mendix-sso) for details. We suggest to change your startup microflow to a new microflow, from where you call both after startup microflows.
-<iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/02c590e5-f8bf-4f0e-90d6-3719390ee863/onstartupacsandpushnotifications?embed=true" allowfullscreen=""></iframe>
+If your project already has a microflow set to execute after startup, we suggest to change your startup microflow to a new microflow, from where you call both after startup microflows. Reference the microflow below:
+
+![](attachments/19955732/after-startup-microflow.png)
+
 
 ### 3.5 Step 5 – Set up the Administration Pages
 

@@ -5,7 +5,7 @@ parent: "rg-one-input"
 
 ## 1 Description
 
-Sets the value of a dropdown by index, e.g. EnumSelect or ReferenceSelector
+Sets the value of a drop-down by index, e.g. EnumSelect or ReferenceSelector
 
 ## 2 Supported widgets
 

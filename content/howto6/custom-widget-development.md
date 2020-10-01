@@ -34,7 +34,7 @@ For details on the widget life cycle, reference this documentation:
 
  * [Writing Your Own Widget](http://dojotoolkit.org/reference-guide/1.10/quickstart/writingWidgets.html)
  * [dijit.\_WidgetBase](https://dojotoolkit.org/reference-guide/1.10/dijit/_WidgetBase.html)
- * [Tutorial: Widget Lifecycle](https://apidocs.mendix.com/6/client/tutorial-widget-lifecycle.html)
+ * [Tutorial: Widget Lifecycle](https://apidocs.rnd.mendix.com/6/client/tutorial-widget-lifecycle.html)
 
 ### 3.3 Widget Scaffolding
 
@@ -50,7 +50,7 @@ This tutorial presents the steps a Mendix widget will go through in its life cyc
 
 ### 3.5 Interacting with Mendix Runtime
 
-Widgets have the ability to get data from the Runtime, manipulate objects, show validations, and set references. This is done through the Client API. For the latest version of the this API, see [Client API](https://apidocs.mendix.com/6/client).
+Widgets have the ability to get data from the Runtime, manipulate objects, show validations, and set references. This is done through the Client API. For the latest version of the this API, see [Client API](https://apidocs.rnd.mendix.com/6/client).
 
 ### 3.6 Configuring the Widget in Mendix
 
@@ -80,4 +80,4 @@ By debugging your widgets, you will quickly learn where you make mistakes and ho
 
 ### 4.3 Ask the Community
 
-Within the Mendix Community of developers, there are plenty of widget developers. The [Mendix Forum](https://forum.mendixcloud.com/index3.html) is the place to go to when you have questions.
+Within the Mendix community of developers, there are plenty of widget developers. The [Mendix Forum](https://forum.mendixcloud.com) is the place to go to when you have questions.

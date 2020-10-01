@@ -9,7 +9,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows. You can call a Java action from a microflow using the [Java Action Call](java-action-call).
+With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows. You can call a Java action from a microflow using the [Java action call](java-action-call).
 
 {{% alert type="info" %}}
 Each Java action defined in Studio Pro corresponds to a file *{name of Java action}.java* in the subdirectory *javasource{module name}/actions* of the project directory.
@@ -29,7 +29,7 @@ A Java action has zero or more parameters. Parameters are the means by which you
 
 Each parameter has a name, type, category, and description. 
 
-Use categories to keep the parameters apart in the [Java Action Call](java-action-call). If you do not specify a category, the parameter will appear in the **Input** group.
+Use categories to keep the parameters apart in the [Java action call](java-action-call). If you do not specify a category, the parameter will appear in the **Input** group.
 
 See [Data Types](data-types) for the possible standard parameter types. When the type is an Object or List, you must also select its Entity type, which can be either a specific entity or a type parameter. The type parameter postpones the selection of the actual entity type until the Java action is used in a microflow. This allows your Java action to accept a (list of) Mendix object(s) of an arbitrary entity type.
 
@@ -58,13 +58,13 @@ The **Export mapping** parameter type allows you to pass an export mapping into 
 
 #### 2.2.5 String Template Type {#string-template-type}
 
-The **String template** parameter type allows you to pass a string template into a Java action. In the generated Java action template code, this type is represented as a [IStringTemplate](https://apidocs.mendix.com/8/runtime/com/mendix/systemwideinterfaces/javaactions/parameters/IStringTemplate.html)
+The **String template** parameter type allows you to pass a string template into a Java action. In the generated Java action template code, this type is represented as a `IStringTemplate`.
 
 The template can contain parameters that are written as a number between braces (for example, `{1}`). The first parameter has the number `1`, the second `2`, and so on.
 
 For each parameter in the template, define a microflow expression, the value of which will be inserted at the position of the parameter. 
 
-In the generated code, the [IStringTemplate](https://apidocs.mendix.com/8/runtime/com/mendix/systemwideinterfaces/javaactions/parameters/IStringTemplate.html) type provides methods for the evaluation of the passed string template using default or custom logic. 
+In the generated code, the `IStringTemplate` type provides methods for the evaluation of the passed string template using default or custom logic. 
 
 #### 2.2.6 Return Type
 

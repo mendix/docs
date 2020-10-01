@@ -1,18 +1,19 @@
 ---
 title: "Date Creation"
 parent: "expressions"
-tags: ["studio pro"]
+menu_order: 90
+tags: ["studio pro", "expression", "date creation", "expressions"]
 ---
 
 ## 1 Introduction
 
-Dates can be created with the `dateTime` and `dateTimeUTC` functions. The difference between the two is that `dateTime` uses the calendar of the session used in the function call, and `dateTimeUTC` uses the UTC calendar. The system session runs as UTC by default, except for scheduled events, which can be configured in the [Scheduled Event Time Zone](project-settings#scheduled) section of **Project Settings**.
+Dates can be created with the `dateTime` and `dateTimeUTC` functions. The difference between them is that  `dateTime` uses the calendar of the session used in the function call, and `dateTimeUTC` uses the UTC calendar. The system session runs as UTC by default, except for scheduled events, which can be configured in the [Scheduled Event Time Zone](project-settings#scheduled) section of **Project Settings**.
 
-This function does not accept parameters, only fixed values. To create a date using parameters, use the [parseDateTime](parse-and-format-date-function-calls#parsedatetime-utc) function.
+This function does not accept variable or attribute parameters, only fixed values. To create a date using parameters, use the [parseDateTime](parse-and-format-date-function-calls#parsedatetime-utc) function.
 
 ## 2 Values
 
-These functions takes between one and six input values.  These represent, in order:
+These functions take between one and six input values in the following order:
 
 1. years (type: integer, four digits and greater than 1799)
 2. months (type: integer, between 1 and 12)
@@ -21,74 +22,78 @@ These functions takes between one and six input values.  These represent, in ord
 5. minutes (type: integer, between 0 and 59)
 6. seconds (type: integer, between 0 and 59)
 
-One value:
+## 3 Examples
 
-```java
-dateTime(2007)
-```
+The examples below illustrate which value the expression returns:
 
-returns:
+* If you specify one value as an input: 
 
-```java
-"Mon Jan 01 00:00:00 CET 2007"
-```
+	```java
+	dateTime(2007)
+	```
 
-Two values:
+	The expression will return the following output:
 
-```java
-dateTime(2007, 1)
-```
+	```java
+	"Mon Jan 01 00:00:00 CET 2007"
+	```
 
-return:
+* If you specify two values as an input: 
 
-```java
-"Mon Jan 01 00:00:00 CET 2007"
-```
+	```java
+	dateTime(2007, 1)
+	```
 
-Three values:
+	The expression will return the following output:
 
-```java
-dateTime(2007, 1, 1)
-```
+	```java
+	"Mon Jan 01 00:00:00 CET 2007"
+	```
 
-return:
+* If you specify three values as an input: 
 
-```java
-"Mon Jan 01 00:00:00 CET 2007"
-```
+	```java
+	dateTime(2007, 1, 1)
+	```
 
-Four values:
+	The expression will return the following output:
 
-```java
-dateTime(2007, 1, 1, 1)
-```
+	```java
+	"Mon Jan 01 00:00:00 CET 2007"
+	```
 
-return:
+* If you specify four values as an input: 
 
-```java
-"Mon Jan 01 01:00:00 CET 2007"
-```
+	```java
+	dateTime(2007, 1, 1, 1)
+	```
 
-Five values:
+	The expression will return the following output:
 
-```java
-dateTime(2007, 1, 1, 1, 1)
-```
+	```java
+	"Mon Jan 01 01:00:00 CET 2007"
+	```
 
-return:
+* If you specify five values as an input: 
 
-```java
-"Mon Jan 01 01:01:00 CET 2007"
-```
+	```java
+	dateTime(2007, 1, 1, 1, 1)
+	```
 
-Six values:
+	The expression will return the following output:
 
-```java
-dateTime(2007, 1, 1, 1, 1, 1)
-```
+	```java
+	"Mon Jan 01 01:01:00 CET 2007"
+	```
 
-return:
+* If you specify six values as an input: 
 
-```java
-"Mon Jan 01 01:01:01 CET 2007"
-```
+	```java
+	dateTime(2007, 1, 1, 1, 1, 1)
+	```
+
+	The expression will return the following output:
+
+	```java
+	"Mon Jan 01 01:01:01 CET 2007"
+	```

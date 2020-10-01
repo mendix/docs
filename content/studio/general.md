@@ -55,7 +55,6 @@ You can also open your app in Studio via Studio Pro. Do the following:
 
     ![](attachments/general/globe-icon.png)
 
-
 The app opens in Studio.
 
 ## 3 Upgrading Studio
@@ -81,9 +80,7 @@ After opening Studio, the home page of the app opens.
 You can change the view of your page to different views by clicking the corresponding icons:
 
 * Mobile
-
 * Tablet
-
 * Responsive (Desktop) 
 
   {{% image_container width="350" %}}![](attachments/general/view.png)
@@ -113,15 +110,15 @@ All items of the left menu bar are described in the table below:
 
 The top right menu of Studio consists of the **Toolbox**, **Properties** , and **Buzz** tabs: 
 
-![](attachments/general/toolbox-properties-buzz.png)
+<img src="attachments/general/toolbox-properties-buzz.png"  />
 
-The **Toolbox**, **Properties** , and **Buzz** tabs are describes in the table below:
+The **Toolbox**, **Properties** , and **Buzz** tabs are described in the table below:
 
-| Tab        | Description                                                  |
-| ---------- | ------------------------------------------------------------ |
-| Toolbox    | Shows tools available for the current editor.                |
-| Properties | Shows the properties of the selected item.                   |
-| Buzz       | Allows an app development team to make comments to different pages, microflows, domain models, and layouts of Studio, and interact with each other. |
+| Tab          | Description                                                  |
+| ------------ | ------------------------------------------------------------ |
+| Toolbox      | Shows tools available for the current editor.                |
+| Properties   | Shows the properties of the selected item.                   |
+| [Buzz](buzz) | Allows an app development team to make comments to different pages, microflows, domain models, and layouts of Studio, and interact with each other. |
 
 ## 7 Top Menu Bar
 
@@ -139,21 +136,35 @@ The top menu bar items are described in the table below:
 | [Preview button](publishing-app) | Shows you what your app will look like after it is published |
 | [Publish button](publishing-app) | You can publish your app with this button. Click **Publish** > **Update** to publish the latest changes you made in Studio. For more information, see [Previewing & Publishing Your App](publishing-app) |
 | [Checks button](checks) | Displays consistency errors (if any) that prevent your app from being previewed and published. For more information on errors, see [Consistency Errors](consistency-errors).<br />You can also use <kbd>C</kbd> shortcut to view the **Checks** panel. |
-| Information icon | Here you can find following information:<ul><li>**About** – shows the information on the [Studio version and Mendix version](general-versions) </li><li>**Keyboard Shortcuts** – opens the list of shortcuts in Studio</li><li>**Take a Product Tour** – starts a  the guided product introduction tour and shows you around Studio</li><li>**Ask the Community** – a link to the [Mendix Forum](https://forum.mendixcloud.com/index4.html) where you can ask questions and explore the knowledge offered by the entire Mendix Community<li>**Check the  Documentation** – a link to the [Studio Guide](index)</li><li>**Contact Mendix Support** – a link to the [Mendix Support Portal](https://support.mendix.com/hc/en-us)<li>**Mendix Academy** – a link to the [Mendix Academy](https://gettingstarted.mendixcloud.com)</li><li>**Mendix Assist Is ON** – a setting that enables/disables [Mendix Assist](mx-assist)</li><li>**Edit in Studio Pro** – opens your app in Studio Pro</li></ul> |
+| Information icon | Here you can find following information:<ul><li>**About** – shows the information on the [Studio version and Mendix version](general-versions) </li><li>**Keyboard Shortcuts** – opens the list of shortcuts in Studio</li><li>**Take a Product Tour** – starts a  the guided product introduction tour and shows you around Studio</li><li>**Ask the Community** – a link to the [Mendix Forum](https://forum.mendixcloud.com/index4.html) where you can ask questions and explore the knowledge offered by the entire Mendix community<li>**Check the  Documentation** – a link to the [Studio Guide](index)</li><li>**Contact Mendix Support** – a link to the [Mendix Support Portal](https://support.mendix.com/hc/en-us)<li>**Mendix Academy** – a link to the [Mendix Academy](https://gettingstarted.mendixcloud.com)</li><li>**Mendix Assist Is ON** – a setting that enables/disables [Mendix Assist](mx-assist)</li><li>**Edit in Studio Pro** – opens your app in Studio Pro</li></ul> |
 
 ## 8 Cut/Copy/Paste Function 
 
-Cut/copy/paste function is available in all editors of Studio: pages, microflows, domain models, and navigation document. To cut/copy/paste you can use <kbd>Ctrl</kbd> + <kbd>Z</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Cmn</kbd> + <kbd>Z</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>. 
+You can copy and paste pages and microflows. You can also cut, copy, and paste separate elements such as widgets or microflow activities. 
+
+### 8.1 Copy/Paste Pages, Microflows, and Enumerations {#copy-paste-documents}
+
+Pages, microflows, and enumerations can be copied to clipboard and then pasted to a different Studio app. You can also copy and paste pages, microflows, and enumerations to the same app, however, there is the **Duplicate** option you can use for this purpose. For more information on how to copy, paste, or duplicate pages, microflows, and enumerations, see [Pages](page-editor), [Microflows](microflows), and [Enumerations](domain-models-enumeration) respectively.  
+
+Mind the following when copying and pasting pages, microflows, and enumerations:
+
+* You can copy/paste pages, microflows, and enumerations only to Studio apps that have the same Mendix version 
+* You can copy/paste pages, microflows, and enumerations only between instances of the same browser
+* You *cannot* copy/paste from Studio to Studio Pro or vice versa
+
+### 8.2 Cut/Copy/Paste Separate Elements
+
+Cut/copy/paste function is available in all editors of Studio: pages, microflows, domain models, and navigation document. To cut/copy/paste you can use <kbd>Ctrl</kbd> + <kbd>X</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Cmd</kbd> + <kbd>X</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>. 
 
 Mind the following characteristics when using cut/copy/paste:
 
 * You can cut/copy/paste elements within one editor; that means that you can cut/copy/paste elements within one page or to other pages in Studio, and copy microflow activities within one microflow or to other microflows
 * You can cut/copy/paste elements to different apps in Studio if they have the same Mendix version
 * You cannot copy/paste pages or microflows, only elements of a page or a microflow 
-* You cannot cut/copy/paste from Studio to Studio Pro
+* You cannot cut/copy/paste from Studio to Studio Pro or vice versa
 
-## 9 Read More
+## 9 Main Documents in This Category
 
-* [Domain Model](domain-models)
-* [Microflows](microflows)
-* [Pages](page-editor)
+* [Collaborative Development in Studio](general-collaborative-development) – provides you with information on how team members work together on one project in Mendix Studio Pro and Mendix Studio 
+
+* [Studio Ranges & Mendix Versions](general-versions) – explains how Studio version correlates to the Mendix version

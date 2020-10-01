@@ -11,7 +11,7 @@ The **Branch Line Manager** is used to manage [branch lines](version-control#bra
 
 ![Branch Line Manager](attachments/version-control-menu/branch-line-manager.png)
 
-To view the **Branch Line Manager** dialog window, open **Version Control** > **Manage Branch Lines**.
+To view the **Branch Line Manager** dialog box, open **Version Control** > **Manage Branch Lines**.
 
 A branch line allows independent development from other development lines. There are two main reasons for creating a branch line:
 1. To do maintenance development on a version of your app that is running in production. You can keep on developing in the main line while you fix issues in the branch line.

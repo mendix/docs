@@ -162,4 +162,4 @@ Additionally, the following APIs have had their arguments changed:
 *   mx.data.action
 *   mx.data.sizeOfXPathSet
 
-See the [API Docs](https://apidocs.mendix.com/6/client) for details.
+See the [API Docs](https://apidocs.rnd.mendix.com/6/client) for details.

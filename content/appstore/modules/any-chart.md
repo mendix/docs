@@ -1,26 +1,25 @@
 ---
 title: "Any Chart"
 category: "Modules"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the Any Chart module, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "any chart", "plotly.js", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
 
-The [Any Chart](https://appstore.home.mendix.com/link/app/106517/) module
+The [Any Chart](https://appstore.home.mendix.com/link/app/106517/) module contains chart types supported in [plotly.js version 1.47.4](https://www.npmjs.com/package/plotly.js/v/1.47.4).
 
-The supported chart types are limited to the chart types supported in Plotly.js version 1.47.4.
+Further documentation on usage can be found in the following pages locations:
 
-The AnyChart documentation can be found at https://github.com/mendixlabs/charts/blob/master/README.AnyChart.md
+* [How to Use Any Chart](/howto/front-end/charts-any-usage)
+* [Any Chart Cheat Sheet](/refguide/charts-any-cheat-sheet)
+* [Any Chart Building Blocks](/refguide/charts-any-building-blocks)
 
-Lists the most common chart type structure: https://github.com/mendixlabs/charts/blob/master/AnyChartCheatSheet.md
+For more details on configuration, see [Advanced Configuration Settings](https://github.com/mendixlabs/charts/blob/master/AdvancedCheatSheet.md).
 
-Configuration cheat sheet: https://github.com/mendixlabs/charts/blob/master/AdvancedCheatSheet.md
+## 2 Read More
 
-Inspiration for more chart types and usages: https://plot.ly/javascript/
+* [Plotly JavaScript Open Source Graphing Library](https://plot.ly/javascript/)
+* [JavaScript Figure Reference](https://plot.ly/javascript/reference)
 
-Full reference is found at https://plot.ly/javascript/reference
-
-
-https://docs.mendix.com/howto/front-end/charts-any-usage, https://docs.mendix.com/refguide/charts-any-building-bocks, https://docs.mendix.com/refguide/charts-any-cheat-sheet

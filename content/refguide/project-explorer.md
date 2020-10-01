@@ -1,7 +1,7 @@
 ---
 title: "Project Explorer"
 parent: view-menu
-menu_order: 80
+menu_order: 40
 tags: ["studio pro", "project explorer"]
 ---
 
@@ -15,7 +15,9 @@ The **Project Explorer** shows the complete structure of your project including 
 The **Project Explorer** consists of the following:
 
 * **Project** folder – contains settings and documents that apply to your project as a whole (for more information, see [Projects](project))
-* **Modules**  – contain settings and documents, such as pages, microflows, a domain model, that apply to this module (for more information, see [Modules](modules)) 
+* **Modules**  – contain settings, a domain model, and *documents* that apply to this module (for more information, see [Modules](modules)) 
+  * **Domain model** – a model that describes the information (or *data*) used by your application in an abstract way; one module can have one domain model only 
+  * **Document** – an individual file, for example, a [page](pages), [microflow](microflows), or a [scheduled event](scheduled-events). 
 
 ## 2 Performing Basic Functions
 
@@ -26,7 +28,7 @@ In the **Project Explorer**, you can do the following:
   * Expand a folder or open a document by pressing <kbd>Enter</kbd> 
   * Clear the filter query by pressing <kbd>Esc</kbd>
 * **Open the document** – double-click the document to open it
-* **Select the active document** – click the icon in the top-right corner of the **Project Explorer** to quickly view the active document in the **Project Explorer** tree. By default the active document is always selected so you can quickly see where the document you are editing is located. You can change this behavior in the **Edit** > **Preferences** dialog window.
+* **Select the active document** – click the icon in the top-right corner of the **Project Explorer** to quickly view the active document in the **Project Explorer** tree. By default the active document is always selected so you can quickly see where the document you are editing is located. You can change this behavior in the **Edit** > **Preferences** dialog box.
 * **Expand all documents** – click the plus icon in the top-left corner of the **Project Explorer** to expand all document and see the whole structure of your project
 * **Collapse all documents** – click the minus icon in the top-left corner of the **Project Explorer** to collapse all documents
 * **Expand or collapse an individual folder** – to expand/collapse documents in an individual folder click the plus/minus icon or double-click the folder 

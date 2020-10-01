@@ -28,7 +28,7 @@ To open a hybrid example app, follow these steps:
 
     ![](attachments/18448692/icon.png)
 
-2. Search for the **Company Expenses** app and click **Download**:
+2. Search for the **Asset Manager** app and click **Download**:
 
     ![](attachments/18448692/18581187.png)
 
@@ -36,7 +36,7 @@ To open a hybrid example app, follow these steps:
 
     ![](attachments/18448692/18581186.png) 
 
-    Studio Pro will notify you as soon as the application is deployed.
+    Studio Pro will notify you as soon as the application is deployed. While you wait, go to **Navigation**, click the **Hybrid phone app online** tab, and make sure your **Default home page** is set to **MyFirstModule.Dashboard**.
 4. Click the small arrow to open the **View App** menu and select **View Hybrid Mobile App**:
 
     ![](attachments/18448692/18581185.png) 
@@ -59,7 +59,7 @@ To open a hybrid example app, follow these steps:
 
 ## 4 Installing the App on Your Device
 
-If you want to install this application as a native app on your device, you can install it via iTunes or publish it to one of the mobile app stores. For details on how to achieve this, see [How to Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores).
+If you want to install this application as a native mobile app on your device, you can install it via iTunes or publish it to one of the mobile app stores. For details on how to achieve this, see [How to Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores).
 
 ## 5 Read More
 

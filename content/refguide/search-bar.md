@@ -50,9 +50,15 @@ However, there are additional properties that are described in the sections belo
 
 #### 3.1.1 Custom Date Format
 
-**Custom date format** is only available when you select an attribute of *Date and Time* type in the [**Attribute (path)**](#attribute-path) property. This property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally. The **Format example** will show you a date example. 
+**Custom date format** is only available when you select an attribute of *Date and Time* type in the [**Attribute (path)**](#attribute-path) property. This property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally. The **Format example** will show you a date example.
 
- {{% snippet file="refguide/custom-date-format-tokens.md" %}} 
+{{% alert type="info" %}}
+
+Search input formatting must be an exact day. Custom date formatting is not limited.
+
+{{% /alert %}}
+
+{{% snippet file="refguide/custom-date-format-tokens.md" %}}
 
 #### 3.1.2 Placeholder Text
 
@@ -95,16 +101,16 @@ This property is available for **Comparison** and **Drop-down** search fields.
 
 The value entered by the end user (or the default value in the case of hidden and read-only search fields) is compared to the value of the attribute of each of the objects in the grid. If the match succeeds, the object will be part of the search result. There are different ways in which the attribute value and the entered value can be compared. In the third column below you see the type of search field for which the comparison operator is allowed.
 
-| Value            | Description                                                  | Search field types                      |
-| ---------------- | ------------------------------------------------------------ | --------------------------------------- |
-| Contains         | Does the attribute value contain the entered value?          | Text (attribute must be of type String) |
-| Starts with      | Does the attribute value start with the entered value?       | Text (attribute must be of type String) |
-| Greater          | Is the attribute value greater than the entered value?       | Text, Date                              |
-| Greater or equal | Is the attribute value greater than or equal to the entered value? | Text, Date                              |
-| Equal  *(default)*            | Is the attribute value the same as the entered value?        | Text, Date, Drop-down                   |
-| Not equal        | Is the attribute value not the same as the entered value?    | Text, Date, Drop-down                   |
-| Smaller or equal | Is the attribute value smaller than or equal to the entered value? | Text, Date                              |
-| Smaller          | Is the attribute value smaller than the entered value?       | Text, Date                              |
+| Value            | Description                                                  | Search Field Types                      | Date Input Query          |
+| ---------------- | ------------------------------------------------------------ | --------------------------------------- | ------------------------- |
+| Contains         | Does the attribute value contain the entered value?          | Text (attribute must be of type String) |                           |
+| Starts with      | Does the attribute value start with the entered value?       | Text (attribute must be of type String) |                           |
+| Greater          | Is the attribute value greater than the entered value?       | Text, Date                              | > date + 1 day            |
+| Greater or equal | Is the attribute value greater than or equal to the entered value? | Text, Date                        | > date                    |
+| Equal *(default)*| Is the attribute value the same as the entered value?        | Text, Date, Drop-down                   | >= date and < date + 1 day|
+| Not equal        | Is the attribute value not the same as the entered value?    | Text, Date, Drop-down                   | != date                   |
+| Smaller or equal | Is the attribute value smaller than or equal to the entered value? | Text, Date                        | < date + 1 day             |
+| Smaller          | Is the attribute value smaller than the entered value?       | Text, Date                              | < date                    |
 
 {{% alert type="info" %}}
 

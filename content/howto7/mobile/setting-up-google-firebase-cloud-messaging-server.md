@@ -9,6 +9,16 @@ tags: ["mobile", "push notification", "google", "firebase", "server"]
 
 You can use Google's Firebase Cloud Messaging (FCM) service to send push notifications to both Android as well as iOS. In order to send push notifications using FCM from this module, you need to set up a Firebase account with FCM enabled. To register for FCM and configure the service in the app, perform the steps below.
 
+{{% alert type="warning" %}}
+Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible. 
+
+To build a hybrid app and publish it, see the [Doing It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) section of the *Mobile App Developer Portal Guide*. Under that section are instructions for building [iOS](/developerportal/deploy/mobileapp#building-ios-locally) and [Android](/developerportal/deploy/mobileapp#building-ios-locally) apps locally.
+
+To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
+
+The PhoneGap build portions of this document will be updated with new instructions soon.
+{{% /alert %}}
+
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
@@ -83,32 +93,18 @@ Only create an iOS application in your Firebase project when you plan on using F
 
 If your app supports push notifications, you are now required to set up a Firebase account for your app and include Google service description files (*google-services.json* and *GoogleService-Info.plist*) in your hybrid app.
 
-As a result of this, Mendix hybrid apps that employ push notifications can no longer be built directly using the Phonegap Build flow in the Mendix Developer Portal. Instead, you will need to prepare the hybrid app package locally. You can use the generated hybrid app package to build your Android and iOS apps locally, or upload them to Phonegap Build manually.
+You will need to prepare the hybrid app package locally. You can use the generated hybrid app package to build your Android and iOS apps locally.
 
-To build the hybrid app package, follow these steps:
+To build the hybrid app package, follow [these steps](/developerportal/deploy/mobileapp#publish) depending on your platforms until you have the build packages you need. Then, do the following:
 
-1.  Open your app in the Developer Portal and under **DEPLOY** in the left sidebar menu, click **Mobile App**.
-2.  Make sure the **Push Notifications** permission is checked under **Permissions**.
-3.  Click **Publish for Mobile App Stores**:
-
-    ![](attachments/implement-sso/download-hybrid-app-package-step1.png)
-    
-4.  Select **Do it yourself** and then click **Download Customizable Package**:
-
-    ![](attachments/implement-sso/download-hybrid-app-package-step2.png)
-
-    This package you just downloaded is a customizable hybrid app package for your specific Mendix app. You can make changes to it, build a new PhoneGap Build package, and then upload it to PhoneGap Build to create the binaries (for example, APK for Android and IPA for iOS). To better understand the structure of what you just downloaded, see the **Folder Structure** section in the [Mendix PhoneGap Build App Template documentation](https://github.com/mendix/hybrid-app-template#folder-structure).
-
-5.  Unzip the hybrid app package.
-6.  Copy and paste the *google-services.json* and *GoogleService-Info.plist* config files you downloaded before into the `config` folder.
+1.  Unzip the hybrid app package.
+2.  Copy and paste the *google-services.json* and *GoogleService-Info.plist* config files you downloaded before into the `config` folder.
     {{% alert type="warning" %}} Only paste the *GoogleService-Info.plist* config file when you plan on using FCM for sending push notifications to iOS devices. If you plan on keeping using APNS to send push notifications to iOS devices, do not paste the *GoogleService-Info.plist* config file.{{% /alert %}}
-7.  Create the PhoneGap Build package by following the instructions in the [Through Uploading to PhoneGap Build](https://github.com/mendix/hybrid-app-template#through-uploading-to-phonegap-build) section of the *Mendix PhoneGap Build App Template* documentation. Be sure to read the **Prerequisites** and **Build on PhoneGap** sections of this documentation as well. This is an overview of the steps:<br />
+3.  Create the PhoneGap Build package by following the instructions in the [Through Uploading to PhoneGap Build](https://github.com/mendix/hybrid-app-template#through-uploading-to-phonegap-build) section of the *Mendix PhoneGap Build App Template* documentation. Be sure to read the **Prerequisites** and **Build on PhoneGap** sections of this documentation as well. This is an overview of the steps:<br />
     a. Install the latest stable version of [Node.js](https://nodejs.org/en/download/).<br />
     b. In the hybrid app root folder, execute `npm install`.<br />
     c. In the hybrid app root folder execute `npm run package`.
-8.  Create an APK or iOS package from the PhoneGap Build package. You can upload the new PhoneGap Build package (in the **dist** folder) to PhoneGap to build the APK or iOS binary.
-
-    ![](attachments/implement-sso/build.phonegap.com.png)
+4.  Create an APK or iOS package from the local build package. 
 
 ## 8 Configuring FCM in Your Application
 

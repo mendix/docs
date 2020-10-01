@@ -37,7 +37,7 @@ When no search string has been specified, the **Project** pane displays the cons
 
 To add entities to your project model, see [Adding an External Entity to a Project](external-entities#adding-external-entities).
 
-## 2 Searching the Data Hub Catalog {#search}
+## 3 Searching the Data Hub Catalog {#search}
 
 As you enter a search term, all the items in the Data Hub Catalog satisfying the search string are listed in the search results. You can do a wildcard search by entering `*` in the search area.
 
@@ -53,7 +53,7 @@ By default, the search is restricted to apps and services deployed to a producti
 When the development environments setting is checked, all subsequent searches will include search in non-production environments. 
 {{% /alert %}}
 
-## 3 Viewing Search Results {#viewing}
+## 4 Viewing Search Results {#viewing}
 
 For all items satisfying the search string, the following information is displayed:
 

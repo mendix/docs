@@ -12,7 +12,7 @@ tags: ["data hub", "data hub catalog", "data hub landscape"]
 To use the Mendix Data Hub a license is required, with also includes the  integration of Data Hub in Studio Pro, in order to discover shared assets in you organization and consume the shared data for building apps.
 {{% /alert %}}
 
-Follow the journey for building an app using available entities from the [Data Hub](https://hub.mendix.com) home page, or try building a quick app by following [How to Share Data Between Apps Using Mendix Data Hub](general/share-data).
+Follow the journey for building an app using available entities from the [Data Hub](https://hub.mendix.com) home page, or try building a quick app by following [How to Share Data Between Apps Using Mendix Data Hub](share-data.index).
 
 ## 2 Overview of Mendix Data Hub
 

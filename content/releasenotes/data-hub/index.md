@@ -11,10 +11,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 ### October 1st, 2020
 
-Every organization has apps containing valuable data in different applications. With Mendix Data Hub, you can use data from different sources in your app without having to deal with complex integrations. All you need to do is search for the data, add it to your domain model, and use it. 
+Using data from other applications used to be a complex activity, requiring thorough understanding of building integrations. 
 
-If your organization has a [Data Hub license](/refguide/consumed-odata-service-requirements#license-limitations), you can search for external data sources in the [Data Hub pane](/refguide/data-hub-pane) in Studio Pro. From there, you can open the [Data Hub Catalog](/data-hub/data-hub-catalog/index) for more details on the data found and you can drag and drop the data on your domain model as [external entities](/refguide/external-entities). The resulting app will always show the latest version of the [consumed](/refguide/consumed-odata-services) external data.
+No more! We are very proud to announce that [Mendix Data Hub](https://hub.mendix.com) is now generally available. Finding, understanding, and using data from other applications and services has never been this easy.
+
+Every organization has valuable data in different applications. With Mendix Data Hub you can use the data from different sources in your app without having to deal with complex integrations. All you need to do is just search for the data, add it to your domain model, and use it. 
+
+{{% todo %}}[Add: Curious how it can help you? The best place to start is the launch blog: [Data Hub – the low code approach to data integration](http://www.mendix.com/blogs/data-hub-the-low-code-approach-to-data-integration)]{{% /todo %}}
 
 For more information, see the [Data Hub Guide](/data-hub/index) and [Data Hub in Studio](/studio/data-hub-in-studio).
-
-{{% todo %}}[ Add link to blog: https://www.mendix.com/blog/]{{% /todo %}}

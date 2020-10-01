@@ -9,9 +9,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 ## 2020
 
-### September 29th, 2020
-
-As of this release, [Mendix Data Hub](https://hub.mendix.com/) is available in [Mendix Studio Pro](/releasenotes/studio-pro/8.14).
+### October 1st, 2020
 
 Every organization has apps containing valuable data in different applications. With Mendix Data Hub, you can use data from different sources in your app without having to deal with complex integrations. All you need to do is search for the data, add it to your domain model, and use it. 
 

@@ -96,7 +96,6 @@ Congratulations! You have created a microflow and customized the **Save** button
 ## 6 Read More
 
 * [Define Access Rules Using XPath](define-access-rules-using-xpath)
-* [Trigger Logic Using Microflows](triggering-logic-using-microflows)
 * [Work With Lists in a Microflow](working-with-lists-in-a-microflow)
 * [Configure Error Handling](set-up-error-handling)
 * [Optimize Microflow Aggregates](optimizing-microflow-aggregates)

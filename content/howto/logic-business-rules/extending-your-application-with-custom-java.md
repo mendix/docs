@@ -172,7 +172,6 @@ If you get an `UnsupportedClassVersionError` when running your app, follow these
 ## 8 Read More
 
 * [Define Access Rules Using XPath](define-access-rules-using-xpath)
-* [Trigger Logic Using Microflows](triggering-logic-using-microflows)
 * [Create a Custom Save Button](create-a-custom-save-button)
 * [Work with Lists in a Microflow](working-with-lists-in-a-microflow)
 * [Optimize Retrieve Activities](optimizing-retrieve-activities)

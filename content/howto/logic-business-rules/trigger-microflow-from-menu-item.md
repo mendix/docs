@@ -1,5 +1,5 @@
 ---
-title: "Create Your First Microflow: Hello World"
+title: "Trigger a Microflow From a Menu Item"
 category: "Logic & Business Rules"
 menu_order: 1
 tags: ["how-to", "microflow", "create microflow"]
@@ -24,7 +24,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 You will create a menu item that will trigger a microflow and show the **Hello World** message to the end-users. 
 
-Microflows can be triggered in many different ways (for details, see [Trigger Logic Using Microflows](triggering-logic-using-microflows)). For this how-to, you will use a menu item to trigger the new microflow.
+Microflows can be triggered in many different ways. For this how-to, you will use a menu item to trigger the new microflow.
 
 To create a menu item, follow these steps:
 
@@ -32,19 +32,19 @@ To create a menu item, follow these steps:
 
 2. In the **Responsive** tab > the **Menu** section, click **New Item**:
 
-    ![](attachments/create-your-first-microflow-hello-world/new-menu-item.jpg)
+    ![](attachments/trigger-microflow-from-menu-item/new-menu-item.jpg)
 
 3. In the **New Menu Item** dialog box, set the **Caption** to *Hello World*:
 
-    ![](attachments/create-your-first-microflow-hello-world/caption.png)
+    ![](attachments/trigger-microflow-from-menu-item/caption.png)
 
 4. For **On click**, select **Call a microflow**:
 
-    ![](attachments/create-your-first-microflow-hello-world/call-microflow.png)
+    ![](attachments/trigger-microflow-from-menu-item/call-microflow.png)
 
 5. In the **Select Microflow** dialog box, select a microflow and then click **New**:
 
-    ![](attachments/create-your-first-microflow-hello-world/new-microflow.png)
+    ![](attachments/trigger-microflow-from-menu-item/new-microflow.png)
 
 6. Enter *HelloWorld* for the **Name** of the new microflow.
 
@@ -60,38 +60,37 @@ To edit the new microflow, follow these steps:
 
 1.  Open the **Hello World** microflow by right-clicking the new menu item created in the [Creating a Menu Item](#creating-menu-item) section above and selecting **Go to target** from the context menu:
 
-    ![](attachments/create-your-first-microflow-hello-world/go-to-target.png)
+    ![](attachments/trigger-microflow-from-menu-item/go-to-target.png)
 
     You will see an empty microflow like this:
 
-    ![](attachments/create-your-first-microflow-hello-world/created-microflow.png)
+    ![](attachments/trigger-microflow-from-menu-item/created-microflow.png)
 
 2.  Open the **Toolbox** and search for the **Show message** activity:
     
-    ![](attachments/create-your-first-microflow-hello-world/toolbox.png)
+    ![](attachments/trigger-microflow-from-menu-item/toolbox.png)
 
 3.  Drag the **Show message** activity from the **Toolbox** to the flow between the start event and end event, which will insert a show message activity:
 
-    ![](attachments/create-your-first-microflow-hello-world/show-message-activity.png)
+    ![](attachments/trigger-microflow-from-menu-item/show-message-activity.png)
 
 4. Double-click the message activity to open the **Show Message** properties.
 
 5.  Enter *Hello World* for the **Template** value and click **OK**:
 
-    ![](attachments/create-your-first-microflow-hello-world/show-message-properties.png)
+    ![](attachments/trigger-microflow-from-menu-item/show-message-properties.png)
 
 6. Click **Run Locally** and then **View** to see the application in your default browser.
 
 7. Click the **Hello World** menu item in the menu bar to see the message:
 
-    ![](attachments/create-your-first-microflow-hello-world/hello-world-message.png)
+    ![](attachments/trigger-microflow-from-menu-item/hello-world-message.png)
 
 Congratulations! You have created the menu item that triggers the microflow and shows the **Hello World** message to your end-users! 
 
 ## 4 Read More
 
 * [Define Access Rules Using XPath](define-access-rules-using-xpath)
-* [Trigger Logic Using Microflows](triggering-logic-using-microflows)
 * [Create a Custom Save Button](create-a-custom-save-button)
 * [Extend Your Application with Custom Java](extending-your-application-with-custom-java)
 * [Work with Lists in a Microflow](working-with-lists-in-a-microflow)

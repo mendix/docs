@@ -89,14 +89,14 @@ Currently, the binary data can only be accessed by Java actions.
 
 Mendix Data Hub is a separately licensed product. The type of license that you have determines the total number of data objects that can be requested from a consumed OData service *per day* for *each* runtime instance of an app.
 
-There are two types of Data Hub licenses currently available:
+There are two types of licenses currently available:
 
-* **Default** – the standard Data Hub license enables you to retrieve a total of 1000 OData objects per day for each runtime instance
-* **Unlimited** – there is no limitation on the number of OData objects that can be consumed
+* **Data Hub** – this is the *default* license with no limitation on the number of OData objects that can be consumed
+* **Freemium** – this enables you to retrieve a total of 1000 OData objects per day for each runtime instance
 
 {{% todo %}}[add following bullet when that limited type of license is sold - the setting is implemented in 8.14 but not marketed - also establish if the `constraint` is visible somewhere for users or only back-end setting. Include x-ref to licensing: Limited– a specific limitation has been set for your Data Hub license and this is specified by the `limit` constraint. ]{{% /todo %}}
 
-{{% todo %}}[the following text was included in the source material but the directive for 8.14 is the above 2 bullets: Without a license, the app will retrieve up to 1000 records from the OData service per day.  Also Joost ]{{% /todo %}}
+{{% todo %}}[the following text was included in the source material but the directive for 8.14 is the above 2 bullets: Without a license, the app will retrieve up to 1000 records from the OData service per day.  Also Joost V specified "limit" is deetermined by the object container on the page ]{{% /todo %}}
 
  After that limit is exceeded, an error will occur when users try to retrieve more data.
 

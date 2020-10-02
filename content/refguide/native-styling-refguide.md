@@ -248,6 +248,7 @@ This is how the widget’s code is structured:
 	<tabBar>
 		<tab>
 			<activeLabel>PAGE 1</activeLabel>
+			<badgeContainer><badgeCaption /></badgeContainer>
 		</tab>
 		<tab>
 			<label>PAGE 2</label>
@@ -273,6 +274,8 @@ The widget’s style properties are as follows:
 | `tab`       | This has all ViewStyle properties. |     |
 | `label`     | This has all TextStyle properties. |     |
 | `activeLabel`     | This has all TextStyle properties. |     |
+| `badgeContainer`  | This has all ViewStyle properties. |     |
+| `badgeCaption`    | This has all TextStyle properties. |     |
 
 The default class to style all tab containers is named `TabContainer`.
 

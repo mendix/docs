@@ -13,7 +13,7 @@ tags: ["studio Pro", "data hub", "data hub pane", "data hub catalog"]
 
 [Mendix Data Hub](/data-hub/index) enables integration of available data sources from the different applications in an organization into your Mendix apps. This means that new apps can be created using shared datasets that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/index). In Studio Pro, this is possible using the integrated functionality of Data Hub Catalog through the **Data Hub** pane.
 
-The **Data Hub** pane enables you to search the Data Hub Catalog and discover the data sources available for your organization. Via this pane you can add the entities that are exposed in the OData services registered in the Data Hub Catalog into your app's domain model customer where they are known as [external entities](external-entities). These external entities provide access to the data associated with the entities which can be utlized in your app.
+The **Data Hub** pane enables you to search the Data Hub Catalog and discover the data sources available for your organization. Via this pane you can add the entities that are exposed in the OData services registered in the Data Hub Catalog into your app's domain model customer where they are known as [external entities](external-entities). These external entities provide access to the data associated with the entities which can be utilized in your app.
 
 Click  **View** > **Data Hub** to display the **Data Hub** pane:
 

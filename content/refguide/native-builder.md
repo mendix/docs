@@ -5,6 +5,10 @@ menu_order: 70
 tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
 ---
 
+{{% alert type="warning" %}}
+Please update to Native Builder v3.2.1. Version 3.2.1 includes the fixes required to accomodate Github's transition of using **main** instead of **master** for naming the default branch for new repositories. 
+{{% /alert %}}
+
 ## 1 Introduction
 
 The Native Builder takes your Mendix project containing a native profile and packages a native mobile app for iOS and Android. To learn more about using the Native Builder, see [How to Deploy your First Mendix Native Mobile App](/howto/mobile/deploying-native-app).

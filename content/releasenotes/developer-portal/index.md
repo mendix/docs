@@ -13,6 +13,20 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2020
 
+### October 4th, 2020
+
+#### Improvements
+
+* We redesigned the [story details](/developerportal/collaborate/stories#story-details) page and made it available for public beta. You can use the new design when you enable the new story UI. Please note that it is currently not possible to add or manage labels. This will be implemented in a next iteration.
+* When you assign a task to a commit of your model, we now show the revision in the revision overview of story details. Clicking on the task mentioned, will bring you to the story details the task belongs to
+* We simplified the company settings page by removing some barely used attributes
+
+#### Fixes
+
+* We fixed an issue where the default avatar of the team member who committed a revision was not properly displayed in the revision overview of story details
+* We fixed an issue where company admin was no longer able to open the general settings of a project he/she was not a member of
+* We repaired a dead link to the documentation on the app users overview
+
 ### August 25th, 2020
 
 #### Improvements

@@ -28,7 +28,7 @@ Below the company name is a list of apps for which you are a team member. Clicki
 
 App Buzz is Buzz for a specific app. It is the landing page when you open that app project:
 
-![](attachments/app-buzz.png)
+![](attachments/app-buzz.jpg)
 
 You can see the size of your **Team** and your fellow App Team members on the right side of the page.
 

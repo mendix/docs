@@ -245,9 +245,9 @@ The files for an OData v4 service contract may comprise the base schema definiti
 
 To register the service, follow these steps:
 
-1.  On the [Data Hub Home](../index) page, click **Register new service** to display the **Application and Environment Form**.
+1.  On the [Data Hub](../index) screen, click **Register new service** to display the **Application and Environment Form**.
 
-	![](attachments/register/register-form-home-page.png)
+	![Data Hub screen](attachments/register/register-form-home-page.png)
 
 2.  Enter the details of the app from which the OData v4 service was issued. This information will be displayed in the **Service Details** in the Data Hub Catalog and provide the link to the app.
 

@@ -1,5 +1,5 @@
 ---
-title: "Share Data Between Apps Using Data Hub"
+title: "Share Data Between Apps"
 description: "Describes how-to create a Mendix app in Studio Pro which publishes a service to the Data Hub Catalog, and creating a second app which uses external entities from the first app."
 tags: ["data hub catalog", "data hub", "external entities", "landscape", "published OData service" ,"how to", "consume"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -118,7 +118,7 @@ The **{yourname}CustomerODataService** from your app is now registered in the Da
 
 1.  Go to [Mendix Data Hub](https://hub.mendix.com/):
 
-	![Data Hub home](attachments/share-data/data-hub-home.png)
+	![Data Hub screen](attachments/share-data/data-hub-home.png)
 
 2.  In the search field, enter the search term *customer*. All services and entities that satisfy this search string will be displayed in the **Search Results** pane in the **Search Details** screen.
 3. From the search results, find the service that you published and select it. Full details will be displayed in the **Search Details** screen and the service metadata pane on the right. This information was defined in the OData service document in Studio Pro. 

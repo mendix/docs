@@ -17,7 +17,7 @@ The picture below shows the components of Studio's interface:
 
 ## 2 Opening Studio
 
-You can open Mendix Studio [via Developer Portal](#opening-studio-via-dev-portal) or [via Studio Pro](#opening-via-studio-pro). 
+You can open Mendix Studio via [Developer Portal](#opening-studio-via-dev-portal) or [Studio Pro](#opening-via-studio-pro). 
 
 ### 2.1 Opening Studio via Developer Portal {#opening-studio-via-dev-portal}
 
@@ -32,10 +32,9 @@ If you do not see **Edit in Studio**, go to [General Settings](/developerportal/
 You can also open your app in Studio via Studio Pro. Do the following:
 
 1. In Studio Pro, open the project in that you want to view in Studio.
-
 2.  Click the globe icon in the top right corner (only available if Studio is enabled).
 
-    ![](attachments/general/globe-icon.png)
+	![](attachments/general/globe-icon.png)
 
 The app opens in Studio.
 

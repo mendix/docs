@@ -203,7 +203,7 @@ If you need to reorder stories or move a story to a different Sprint, there are 
 * Click the story title to open the **Story Details** page, then click **Move Story**:
 
 	![](attachments/stories/move-story-details.png)
-	
+
 {{% alert type="info" %}}
 Moving a story will move the tasks as well.
 {{% /alert %}}

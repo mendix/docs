@@ -26,7 +26,7 @@ The sections below describe the actions you can perform on this page.
 
 In the **Mendix Studio** section, you can see whether Studio is enabled for the app. 
 
-You can enable Studio if it has not been enabled yet by clicking **Enable Mendix Studio**:
+You can enable Studio if it has not been enabled yet by clicking **Enable Mendix Studio**.
 
 {{% alert type="info" %}}
 Only Scrum Masters or custom App Team roles with the **App Settings** permission are allowed to enable Studio.

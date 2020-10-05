@@ -14,8 +14,6 @@ The Data Hub Catalog is a catalog of OData services exposing entities that you c
 
 This document provides general information and guidelines on consumed entities in apps. For details on using shared entities in Studio Pro, see [External Entities](/refguide/external-entities) in the *Studio Pro Guide*.
 
-{{% todo %}}[**AD: the above cross-reference needs to be set, otherwise it will break the build**]{{% /todo %}}
-
 For details on the security of the data sets that the shared entities connect to, and for defining access to the entities to specified user roles, see [Data Accessibility and Security](security).
 
 ## 2 Using Registered Assets in your App {#consuming-services-entities}

@@ -21,9 +21,9 @@ Please update to Native Builder v3.2.1. Version 3.2.1 includes the fixes require
 
 ### Improvements
 
-This release accomodates GitHub's transition from using *master* to using *main* for naming the default branch of a new repository.
+This release addresses GitHub's transition from using **master** to using **main** as its default repository branch name.
 
-This release of the CLI is mandatory as new project's created with the CLI will fail at the repository creation step. 
+Using this CLI release is **mandatory**, as new projects created with the CLI will fail at the repository creation step for older CLI versions. 
 
 ## 3.2.0
 

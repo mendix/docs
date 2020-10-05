@@ -142,7 +142,7 @@ There is no concept of staging, and you need to deploy your app directly to the 
 
 ![](attachments/environments/activity.png)
 
-If you are the [Technical Contact](/developerportal/company-app-roles/technical-contact) you can download a copy of the activity log as follows:
+If you are the [Technical Contact](/developerportal/company-app-roles/technical-contact) you will see the **Download to CSV** button and can download a copy of the activity log as follows:
 
 1. Click **Download to CSV**.
 2. Choose the period for which you want to download log entries. If you choose **Custom Period** you will need to enter a valid period using **Start Date** and **End Date**.

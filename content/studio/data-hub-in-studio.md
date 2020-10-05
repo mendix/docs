@@ -33,11 +33,11 @@ You can select external entities as a data source for data containers (a data vi
 3. In the **Select Entity** dialog box, you can search for external entities in the Data Hub Catalog and use them on your page. There are two ways to discover entities, you can do one of the following:
     1. **Search for a specific service or entity name** – enter a search term in the search field to find an entity you would like to add:
 
-        ![Searching for an Entity](attachments/data-hub-in-studio/searching-for-entity.png)
+        {{% image_container width="400" %}}![Searching for an Entity](attachments/data-hub-in-studio/searching-for-entity.png){{% /image_container %}}
         
     2. **Browse through available data** – click the **Data Hub** section and browse through available services and entities:
     
-        ![Selecting an Entity](attachments/data-hub-in-studio/selecting-entity.png)
+        {{% image_container width="400" %}}![Selecting an Entity](attachments/data-hub-in-studio/selecting-entity.png){{% /image_container %}}
 
 3. Click **Select**.
 
@@ -69,7 +69,7 @@ In the **Data Hub** tab, you can do the following:
 
 * **Update services** – when a new version of the service is available, you can update it. However, it is best to check out the changes made to the service in the Data Hub Catalog first. 
 
-    ![Update Available](attachments/data-hub-in-studio/service-update.png)
+    {{% image_container width="500" %}}![Update Available](attachments/data-hub-in-studio/service-update.png){{% /image_container %}}
 
     Click the drop-down menu to choose the following options:
 
@@ -94,7 +94,7 @@ In the **Data Hub** tab, you can do the following:
     
     * **View in Data Hub Catalog** – a link to the Data Hub Catalog of your organization.
     
-        ![Service Information](attachments/data-hub-in-studio/service-information.jpg)
+        {{% image_container width="400" %}}![Service Information](attachments/data-hub-in-studio/service-information.jpg){{% /image_container %}}
 
 
 ## 3 External Entity Properties

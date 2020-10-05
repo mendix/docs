@@ -17,33 +17,15 @@ The picture below shows the components of Studio's interface:
 
 ## 2 Opening Studio
 
-You can open Mendix Studio [via the Developer Portal](#opening-studio-via-dev-portal) or [via Studio Pro](#opening-via-studio-pro). 
+You can open Mendix Studio [via Developer Portal](#opening-studio-via-dev-portal) or [via Studio Pro](#opening-via-studio-pro). 
 
-### 2.1 Opening Studio via the Developer Portal {#opening-studio-via-dev-portal}
+### 2.1 Opening Studio via Developer Portal {#opening-studio-via-dev-portal}
 
-You can edit an app in Mendix Studio by opening your app in the [Developer Portal](https://home.mendix.com) and clicking **Edit App** or choosing the **Edit in Mendix Studio** option in the drop-down menu of the **Edit App** button. 
+You can edit an app in Mendix Studio by opening your app in [Developer Portal](https://home.mendix.com) and clicking **Edit in Studio**:
 
-{{% image_container width="350" %}}![](attachments/general/edit-app-button.png)
-{{% /image_container %}}
+![](attachments/general/edit-app.jpg)
 
-{{% alert type="warning" %}}
-
-The drop-down menu on the **Edit App** button is only available for **Free Apps**. For more information on what Free Apps are, see the [Free App](/developerportal/deploy/mendix-cloud-deploy#free-app) section in *Mendix Cloud*.  
-
-Some apps are not suitable for Studio. The following ones are not suitable to run in Studio:<br />
-
-* Apps below **Mendix 7.5** version<br />
-* Apps that are not based on the Atlas UI framework
-
-{{% /alert %}}
-
-When Studio is not enabled, you can click **Edit App** > **Settings**. For more information on how to enable Studio, see [Developer Portal Settings](../../developerportal/settings).
-
-![](attachments/general/not-enabled.png)
-
-{{% alert type="info" %}}
-Only Scrum Masters or custom **App Team roles** with the **App Settings** permission are allowed to enable Studio.
-{{% /alert %}}    
+If you do not see **Edit in Studio**, go to [General Settings](/developerportal/settings/general-settings) in the Developer Portal and [enable Studio](/developerportal/settings/general-settings#web).
 
 ### 2.2 Opening Studio via Studio Pro {#opening-via-studio-pro}
 

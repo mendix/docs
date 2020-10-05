@@ -172,18 +172,18 @@ When you click a story title, the **Story Details** page opens:
 
 On this page, you can perform a number of actions:
 
-* Change the **Title** and **Description** by clicking on it
+* Change the **Title** or **Description** by clicking it
 * See the story's **Status** and click to update it (available statuses are **To-do**, **Running**, and **Done**)
 * Change the **Story points**
-* See, add, and manage the **Tasks** of the story. You can mark them as **Done** by checking the box in front of the task.
+* See, add, and manage the **Tasks** of the story (you can mark them as **Done** by checking the box in front of the task)
 * Leave a **Comment** on the story to collaborate with your App Team
 
-Also on this page, you can:
+You can also do this following on this page:
 
-* **Move** a story to a different project or sprint (for details, see the [Moving Stories](#move-stories) section below)
+* **Move** a story to a different app project or Sprint (for details, see the [Moving Stories](#move-stories) section below)
 * **Duplicate** a story and its tasks, story points, status, and labels into a new user story
-* See the **Feedback** this story is based on (if applicable) (for details, see the [Adding a Feedback Item to Your Backlog](feedback#adding) section of *Feedback Management*)
-* See the committed **Revisions** linked to the story (which is configured in the [Related stories](/refguide/commit-dialog#stories) tab of the **Commit** dialog box in Studio Pro)
+* See the **Feedback** on which this story is based (if applicable; for details, see the [Adding a Feedback Item to Your Backlog](feedback#adding) section of *Feedback Management*)
+* See the committed **Revisions** linked to the story (which are configured in the [Related stories](/refguide/commit-dialog#stories) tab of the **Commit** dialog box in Studio Pro)
 * Click **History** to view the history of changes to the story
 * **Delete** the story
 
@@ -200,11 +200,10 @@ If you need to reorder stories or move a story to a different Sprint, there are 
 
 	![](attachments/stories/move-story-drag-new.jpg)
 
-* Click the story title to open the **Story Details** page, and click on the **Move Story** button:
+* Click the story title to open the **Story Details** page, then click **Move Story**:
 
 	![](attachments/stories/move-story-details.png)
 	
-
 {{% alert type="info" %}}
 Moving a story will move the tasks as well.
 {{% /alert %}}

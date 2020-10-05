@@ -10,6 +10,12 @@ tags: ["studio pro", "studio", "collaborative development", "sync"]
 
 Collaborative development is the process of sharing app model changes when a team of more than one person is working on the app. Collaborative development allows the team members to work together on one project in Mendix Studio Pro and Mendix Studio, and easily synchronize changes using [version control](version-control). Studio Pro can be used to work on different branches of an app, while Studio can be enabled for one of these branches. 
 
+{{% alert type="info" %}}
+
+If you get a **No Development Line Selected** message when opening your app in Studio, make sure you enable a development line for it. For more information, see [Enabling Studio for a Development Line](#active-branch).
+
+{{% /alert %}}
+
 {{% alert type="warning" %}}
 
 Collaborative development is enabled by default for new apps created via the Developer Portal. If you are upgrading your project from Mendix 7 to 8, make sure you have followed the steps in [Moving from Desktop Modeler Version 7 to Studio Pro 8](moving-from-7-to-8). 
@@ -28,17 +34,17 @@ The collaborative development process between Studio Pro and Studio consists of 
 
     ![Collaborative Development Enabled Notification](attachments/collaborative-development/collaborative-development-enabled-notification.png)
 
-3. Studio Pro creates a local working copy that the Studio Pro user works on. To get changes from the Team Server the user needs to click **Update** (the latest revision is then retrieved from the Team Server, containing commits from other Studio Pro users and the latest changes from Studio).
+3. Studio Pro creates a local working copy that the Studio Pro user works on. 
 
-4. After the Studio Pro user clicks **Update**, the latest changes from Studio are committed automatically to the Team Server before Studio Pro receives the update from it. The latest revision from the Team Server is merged into Studio Pro's local working copy. 
+4. To get changes from the Team Server the user needs to click **Update**. When the Studio Pro user clicks **Update**, the latest changes from *Studio* are committed automatically to the Team Server before Studio Pro receives the update from it. The latest revision from the Team Server containing the latest *Studio* changes is merged into Studio Pro's local working copy. 
 
-5.  The Studio Pro user works on the project and, once the user finishes some functionality (for example, fixes a bug or creates a new feature), they click **Commit**. The user enters a commit message and confirms it. This triggers the same process as during an update (described in step 4), and the Studio Pro working copy is updated with the latest revision from the Team Server.
+5. The Studio Pro user works on the project and, once the user finishes some functionality (for example, fixes a bug or creates a new feature), they click **Commit**. The user enters a commit message and confirms it. This triggers the same process as during an update (described in step 4), and the Studio Pro working copy is updated with the latest revision from the Team Server.
 
-    There are two possible outcomes of this merge:<br/>
+   There are two possible outcomes of this merge:<br/>
 
-    a.   There are no conflicts, the Studio Pro user changes are committed to the Team  Server. Afterwards Studio gets the latest revision from the Team Server and is unlocked; the Studio Pro user changes are visible to Studio users. Other Studio Pro users will get the changes once they do an update. <br/>
+   a.   There are no conflicts, the Studio Pro user changes are committed to the Team  Server. Afterwards Studio gets the latest revision from the Team Server and is unlocked; the Studio Pro user changes are visible to Studio users. Other Studio Pro users will get the changes once they do an update. <br/>
 
-    b. There are conflicts, the Studio Pro commit process is stopped. Studio is unlocked without getting changes from the Studio Pro user. The Studio Pro user needs to resolve the merge conflicts first to before being able to do a commit again.
+   b. There are conflicts, the Studio Pro commit process is stopped. Studio is unlocked without getting changes from the Studio Pro user. The Studio Pro user needs to resolve the merge conflicts first to before being able to do a commit again.
 
 {{% alert type="info" %}}
 
@@ -64,13 +70,13 @@ To merge the latest changes stored in the Team Server (from both Studio users an
 
 ![Update Option](attachments/collaborative-development/update-button.png)
 
-### 4.2 Merging Latest Changes
+### 4.2 Committing Latest Changes
 
 To commit your latest project changes and make them available to other users, open **Changes** and click **Commit**. The process of deploying your app (when you click the **Run** button) will also trigger a commit. 
 
 {{% alert type="info" %}}
 
-We recommend you update your project and commit changes often to avoid multiple conflicts in your project. 
+We recommend you update your project and commit changes often to avoid multiple conflicts in your project.  
 
 {{% /alert %}}
 
@@ -80,13 +86,13 @@ Your changes will be sent to Studio automatically if there are no conflicts. For
 
 ### 4.3 Viewing History of Commits
 
-You can see all the changes committed to the current development line via **Project** > **More Versioning** > **History**
+You can see all the changes committed to the current development line via **Version Control** > **History**:
 
-![History Dialog Box](attachments/collaborative-development/history.png)
+![History Dialog Box](attachments/history-dialog/history-dialog.png)
 
 ## 5 Managing Development Lines in Studio Pro {#managing-branches}
 
-In Studio Pro, you can enable Studio for a development line (the main line or a branch line). You can also create and delete branch lines. 
+In Studio Pro, you can enable or disable Studio for a development line (the main line or a branch line). You can also create and delete branch lines. 
 
 For collaborative development you need to enable Studio for one of development lines. 
 
@@ -105,7 +111,7 @@ Whether Studio is enabled for a development line by default, depends on your pro
 
 To enable Studio for a development line or switch it to another development line, do the following: 
 
-1.  Click **Project** > **More Versioning** > **Manage Branch Lines**. In the **Branch Line Manager** dialog window, you can see that the development line that Studio is enabled for (if any) is marked with a globe icon in the first column.<br/> 
+1.  Click **Version Control** > **Manage Branch Lines**. In the **Branch Line Manager** dialog box, you can see that the development line that Studio is enabled for (if any) is marked with a globe icon in the first column.<br/> 
 
 	![Globe Icon in the Branch Line Manager](attachments/collaborative-development/globe-icon.png)<br/>
 
@@ -117,17 +123,37 @@ The development line for Studio has been selected.
 
 When you switch Studio to another development line, Studio gets locked for a few moments during this process, a pop-up dialog is shown to its users that the Studio Pro user is changing the line for Studio. All changes from Studio are committed to the current development line, and only after that is the line changed. 
 
+### 5.2 Disabling Studio for a Development Line
+
+If Studio is enabled for a development line, you can disable it. 
+
+ {{% alert type="info" %}}
+
+If you disable Studio for a development line it was enabled for and do not enable it for any other development line, you will not be able to use collaborative development.
+
+{{% /alert %}}
+
+To disable Studio, do the following:
+
+1. Select the branch that is enabled for Studio.
+
+2. Click the **Disable for Mendix Studio** button:
+
+   ![Disable for Mendix Studio](attachments/collaborative-development/disable-for-studio.png)
+
+Studio is disabled for your project.
+
 ### 5.2 Creating a New Branch Line
 
 To create a new branch line, do the following: 
 
-1. Click **Project** > **More Versioning** > **Manage Branch Lines**. 
+1. Click **Version Control** > **Manage Branch Lines**. 
 
-2.  In the **Branch Line Manager** dialog window, you see the list of existing development lines. Click **New** to create a branch line. <br/>
+2.  In the **Branch Line Manager** dialog box, you see the list of existing development lines. Click **New** to create a branch line. <br/>
 
     ![Creating New Branch](attachments/collaborative-development/creating-new-branch.png)<br/>
 
-3.  In the **Create Branch Line** dialog window, set the following: <br/>
+3.  In the **Create Branch Line** dialog box, set the following: <br/>
 
     a. What line you are creating a new line from: the main line, a branch line, or a tagged version. For more information on these concepts, see the [Concepts](version-control#concepts) section in *Version Control*. <br/> b. Select the revision, if needed. <br/>
 
@@ -143,9 +169,9 @@ You have created a new branch line.
 
 To delete a branch line, do the following:
 
-1. Click **Project** > **More Versioning** > **Manage Branch Lines**. 
+1. Click **Version Control** > **Manage Branch Lines**. 
 
-2.  In the **Branch Line Manager** dialog window, select the branch you would like to delete, click **Delete** and confirm deletion. 
+2.  In the **Branch Line Manager** dialog box, select the branch you would like to delete, click **Delete** and confirm deletion. 
 
 	![Deleting a Branch](attachments/collaborative-development/deleting-branch.png)
 

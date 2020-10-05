@@ -6,7 +6,7 @@ tags: ["xml", "widget"]
 
 ## 1 Requirements
 
-This document assumes you have a basic understanding of XML and Mendix Studio Pro. For more information on XML, visit [W3 Schools - XML](http://w3schools.com/xml/). To learn more about Mendix Studio Pro, watch the [Getting Started](https://gettingstarted.mendixcloud.com/index.html) videos.
+This document assumes you have a basic understanding of XML and Mendix Studio Pro. For more information on XML, visit [W3 Schools - XML](http://w3schools.com/xml/).
 
 ## 2 Start of the Widget XML
 
@@ -162,7 +162,7 @@ The EntityConstraint lets you put a constraint on either the entity you specify 
 
 The enumeration property has an extra required child element: a list of enumerationValues. An enumerationValue contains a **key** attribute and a **caption** within their tag.
 
-This presents the user with a dropdown list of options, based on the **captions** in Mendix Studio Pro. The **keys** will reach your widget's JavaScript as an enumeration.
+This presents the user with a drop-down list of options, based on the **captions** in Mendix Studio Pro. The **keys** will reach your widget's JavaScript as an enumeration.
 
 It requires a default value to be set, which should correspond with one of the enumerationValue keys.
 

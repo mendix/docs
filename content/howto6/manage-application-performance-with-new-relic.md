@@ -64,7 +64,7 @@ To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaag
 
 ### 3.2.3 Mendix Modeler (Development Mode Only)
 
-1. Open your Mendix application, and click on **Settings** in the **Project Explorer**:
+1. Open your Mendix application, and click **Settings** in the **Project Explorer**:
 
     ![](attachments/19202618/19398902.png)
 

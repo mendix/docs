@@ -1,9 +1,9 @@
 ---
 title: "Charts"
 category: "Widgets"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the Charts widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "chart", "line chart", "area chart", "column chart", "bar chart", "heat map", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -23,7 +23,7 @@ These are the available charts:
 
 ### 1.1 Demo App Project
 
-For a demo app project that has been deployed with these widgets, see [here](https://charts102.mxapps.io).
+For a demo app project that has been deployed with these widgets, see [here](https://charts102-sandbox.mxapps.io/p/home).
 
 ## 2 Basic Configuration
 
@@ -205,8 +205,9 @@ We are actively maintaining this widget. Please report any issues or suggestions
 
 ## 5 Read More
 
-* [How to Fine-Tune a Chart with Advanced Settings](https://docs.mendix.com/howto/front-end/charts-advanced-tuning)
-* [How to Create a Basic Chart](https://docs.mendix.com/howto/front-end/charts-basic-create)
-* [How to Use a Chart with a REST Data Source](https://docs.mendix.com/howto/front-end/charts-basic-rest)
-* [How to Create a Dynamic Series Chart](https://docs.mendix.com/howto/front-end/charts-dynamic-series)
-* [How to Use the Charts Theme](https://docs.mendix.com/howto/front-end/charts-theme)
+* [Charts Configuration](/refguide/charts-configuration)
+* [How to Fine-Tune a Chart with Advanced Settings](/howto/front-end/charts-advanced-tuning)
+* [How to Create a Basic Chart](/howto/front-end/charts-basic-create)
+* [How to Use a Chart with a REST Data Source](/howto/front-end/charts-basic-rest)
+* [How to Create a Dynamic Series Chart](/howto/front-end/charts-dynamic-series)
+* [How to Use the Charts Theme](/howto/front-end/charts-theme)

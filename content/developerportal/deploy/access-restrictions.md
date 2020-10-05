@@ -10,25 +10,105 @@ tags: ["incoming requests", "IP Range", "security", "paths", "URL", "certificate
 
 Your app is accessible over the internet - but you may not want everyone to be able to access it. By configuring access restrictions, you have fine-grained control over external access to your application.
 
-You can apply restrictions to the top level of the application URL (`/`), and also to more specific paths (for example, `/ws/` or `/odata/`). This allows you to, for example, open up web services without giving general users access to the app itself. Presets are available to simplify common requirements, such as allowing or denying all access. In addition, custom profiles can be created using IP range filters and a client certificate authority.
+You can apply restrictions to the top level of the application URL (`/`), and also to more specific paths (for example, `/ws/` or `/odata/`). This allows you to, for example, open up web services without giving general users access to the app itself. Presets are available to simplify common requirements, such as allowing or denying all access. In addition, custom profiles can be created using IP range filters and client certificate authorities (CAs).
 
-## 2 Access Restriction Profile Concepts
+## 2 Access Restriction Profiles
+
+You can specify a number of different access restriction profiles for your application. You can give each of these a name so that you can describe its purpose.
+
+Click **New** to create a new access restriction profile. Select an existing profile and click **Edit** to modify it, or **Delete** to delete it. You can also click **Clone** to make a copy of an existing profile.
+
+![](attachments/accessrestrict/access-restriction-profiles.png)
+
+See below for information on setting up access restriction profiles for Mendix Cloud [v4](#v4) and [v3](#v3).
 
 When configuring an access restriction profile, you need to bear the following things in mind:
 
 * Access restriction profiles are configured at the *application* level and they can be reused in all the environments (test, acceptance, production) of an app
+* Access restriction profiles can contain any number of IPv4 address ranges, client CAs, or both
+* If an access restriction profile contains *both IP address ranges and client CAs*, then any match on *either* the IP range *or* the client certificate will grant access
 
-* Access restriction profiles can contain any number of IPv4 and IPv6 address ranges, a client certificate authority, or both
+### 2.1 Access Restriction Profiles for Mendix Cloud V4{#v4}
 
-* If an access restriction profile contains *both IP address ranges and a client certificate authority*, then any match on *either* the IP range *or* the client certificate will grant access
+When you create a new access restriction profile, you will first be asked to enter the name of your profile.
 
-**Known Limitations**
+Once your profile has a name, or if you are editing an existing profile, you will see the access restriction profile editing page.
 
-* The IP range filter option is not available in Mendix Cloud *v3* environments hosted outside the Netherlands
+![](attachments/accessrestrict/v4-access-restriction-profile.png)
 
-* When using client certificate restrictions, the client certificate Certificate Authority (CA) in all active profiles must be identical (in other words, it is only possible to use a single CA for the entire application environment)
+Add IP ranges and certificate profiles as described below, then click **Save** to save the access restriction profile.
 
-* Only Root CA verification is supported. Any client certificate with a valid path to the Root CA will be allowed access. Certificate mapping is not supported.
+#### 2.1.1 Changing the Profile Name
+
+To change the name of your access restriction profile, click the **Edit icon** next to the name of the profile and enter the new name.
+
+#### 2.1.2 Specifying TLS Client Certificate Verification
+
+Click **Create** to create a new certificate profile, or select an existing profile and click **Edit**. If you are creating a new certificate profile, you will first be asked to enter the name of your profile. You can also delete an existing certificate profile by selecting a profile and clicking **Delete**.
+
+To change the name of a certificate profile, click the **Edit** icon next to the name and enter the new name.
+
+Upload your CA from a file in *.pem* format by clicking **Upload Certificate Authority**. Alternatively, click **Enter Manually** to open an editor where you can paste your CA.
+
+{{% alert type="info" %}}
+Your CA must contain a single root certificate and can have multiple intermediate certificates. It should not contain client certificates.
+{{% /alert %}}
+
+Once the CA is uploaded, you will see a tree containing the root certificate and any intermediate certificates included in the CA. When you upload a CA, the last certificate in the CA will be selected by default.
+
+![](attachments/accessrestrict/ca-profile.png)
+
+Select the check box next to each intermediate or root certificate you want to use. Client certificates will be accepted if they are signed by any checked certificate. If more than one certificate in a branch is checked (for example the root certificate and an intermediate certificate) the client certificate will be accepted if it is signed by any of the checked certificates.
+
+{{% alert type="warning" %}}
+If you do not select any certificates then all the certificates will be valid.
+{{% /alert %}}
+
+Click **Save** to save the current certificate profile.
+
+#### 2.1.3 Specifying IP Ranges
+
+You can specify a number of different IP ranges. Click **New** to add a new one, or use the **Edit** or **Delete** button to modify an existing IP range.
+
+For each IP range, you can specify a **Name** for the range, and a range of addresses. Mendix Cloud v4 supports only IPv4 addresses.
+
+![](attachments/accessrestrict/ip-range.png)
+
+### 2.2 Access Restriction Profiles for Mendix Cloud V3{#v3}
+
+For Mendix Cloud v3, you have fewer options for setting up an access restriction profile.
+
+![](attachments/accessrestrict/v3-access-restriction-profile.png)
+
+#### 2.2.1 Changing the Profile Name
+
+You can change the profile name by typing a new name into the **Description** field.
+
+#### 2.2.2 Specifying IP Ranges
+
+You can specify a number of different IP ranges. Click **New** to add a new one, or use the **Edit** or **Delete** button to modify an existing IP range.
+
+{{% alert type="warning" %}}
+The IP range filter option is not available in Mendix Cloud v3 environments hosted outside the Netherlands
+{{% /alert %}}
+
+For each IP range, you can specify a **Name** for the range, and a range of addresses. Mendix Cloud v3 supports both IPv4 or IPv6 format addresses.
+
+![](attachments/accessrestrict/ip-range.png)
+
+#### 2.2.3 Specifying TLS Client Certificate Verification
+
+{{% alert type="warning" %}}
+For Mendix Cloud v3, you can only specify one CA for your access restriction profile.
+
+The client certificate CA in all *active* profiles must be identical (in other words, it is only possible to use a single CA for the entire application environment).
+
+Only Root CA verification is supported. Any client certificate with a valid path to the Root CA will be allowed access. Certificate mapping is not supported.
+{{% /alert %}}
+
+Click **Upload** to upload a new client CA , or click **Edit** or **Delete** to modify the existing one.
+
+Copy and paste your CA into the editor. It is not possible to create the CA by uploading a file.
 
 ## 3 Applying a Restriction to an Application Environment
 
@@ -114,7 +194,7 @@ To add this additional access restriction profile, follow these steps:
 
 2. Create a **New** access restriction profile.
 
-3. **Upload** the certificate of the internal certificate authority that is used to sign the client certificates.
+3. **Upload** the certificate of the internal CA that is used to sign the client certificates.
 
     ![](attachments/accessrestrict/scenario2.png)
 

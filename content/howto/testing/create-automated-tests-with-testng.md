@@ -22,52 +22,32 @@ TestNG is a Java testing framework that can be used to drive Selenium. In this h
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Download and install [Eclipse](http://www.eclipse.org/downloads/)
-*  Download [Selenium Client & WebDriver](http://www.seleniumhq.org/download/):
-   ![](attachments/18448634/18580399.png) 
-* Open the [Company Expenses app](https://appstore.home.mendix.com/link/app/240/Mendix/Company-Expenses) in Studio Pro and run it locally
+* Download the [Selenium Client & WebDriver](http://www.seleniumhq.org/download/) for Java
+
+{{% alert type="warning" %}}
+This how-to uses the Company Expenses app template starting in the [Add the Third Test Method](#third) section for an example scenario. However, this app template is no longer platform-supported by Mendix. Therefore, sections using this app template can only be used as reference and not as sections that can be completed step-by-step.
+{{% /alert %}}
 
 ## 3 Creating a Java Project
 
 In this chapter you will install the TestNG plug-in and create a Java project in Eclipse including the TestNG and Selenium libraries:
 
-1.  Open Eclipse and select **Help** > **Eclipse Marketplace...**:
-  
-    ![](attachments/18448634/18580411.png)
+1.  Open Eclipse.
+2. Follow the instructions in the **Eclipse plug-in** > **Install from update site** section in [Downloading TestNG](https://testng.org/doc/download.html).
+3. Restart Eclipse for changes to take effect.
+4. Select **File** > **New** > **Java Project**.
+5. Enter *MyFirstTestNGProject* for the **Project name** and click **Next**.
+6. Select the **Libraries** tab and click **Add Library**.
+7. Select **TestNG** and click **Next**.
+8. Click **Finish** to set the default TestNG library to this project.
+9. Click **Add External JARs...** and navigate to where you saved the Selenium JAR files.
+10. Add all the JAR files inside the **selenium-[version]** and **libs** folders:
 
-2. In the **Find** section of the **Eclipse Marketplace** dialog box, enter *TestNG* and click **Go**. "TestNG for Eclipse" will be shown in the search results. 
-3.  Click **Install** to install the TestNG plug-in for Eclipse:
-  
-    ![](attachments/18448634/18580410.png)
+	![](attachments/18448634/18580403.png)
 
-4.  Click **Confirm** to confirm the features:
-  
-    ![](attachments/18448634/18580408.png)
+11. Click **Finish** to create the Java project. **MyFirstTestNGProject** will be shown in the **Package Explorer**:
 
-5.  Review the licenses and click **Finish**. The plug-in will be installed:
-  
-    ![](attachments/18448634/18580407.png)
-6. Restart Eclipse for changes to take effect.
-7.  Click the **New** icon:
-  
-    ![](attachments/18448634/18580406.png)
-
-8.  Select **Java Project** and click **Next**:
-
-    ![](attachments/18448634/18580404.png)
-
-9. Enter *MyFirstTestNGProject* as the project name and click **Next**.
-10. Select the **Libraries** tab.
-11. Click **Add Library...**.
-12. Select **TestNG** and click **Next**.
-13. Click **Finish** to set the default TestNG library to this project.
-14. Click **Add External JARs...** and navigate to where you saved the Selenium JAR files.
-15. Add all the JAR files inside the **selenium-[version]** and **libs** folders:
-
-    ![](attachments/18448634/18580403.png)
-
-16. Click **Finish** to create the Java project. **MyFirstTestNGProject** will be shown in the **Package Explorer**:
-
-    ![](attachments/18448634/18580401.png)
+	![](attachments/18448634/18580401.png)
 
 You are now done setting up your project!
 
@@ -226,14 +206,11 @@ This test method contains the following test steps:
 2. Enter _1_ as the password.
 3. Click the login button.
 
-### 5.6 Add the Third Test Method
+### 5.6 Add the Third Test Method {#third}
 
-Now that you are logged in, you will want to navigate to the **Expenses** tab. To add the third test method, follow these steps:
+To add the third test method, follow these steps:
 
-1.  Open , and in the **Project Explorer**, open the **Desktop_AdminMenu** page:
-  
-    ![](attachments/18448634/18580390.png)
-
+1.  Open your app project and in the **Project Explorer**, open the **ProgramDetail** page.
 2.  Select the **Expenses** tab:
   
     ![](attachments/18448634/18580389.png)
@@ -334,7 +311,7 @@ After you have created an expense, you will want to sign out. To add the fifth t
 
     This test method will click the element with the `mx-name-signOutButton1` class name.
 
-## <a name="RuntheTest"></a>6 Run the Test
+## 6 Run the Test {#RuntheTest}
 
 You are now ready to run the test. To run the test, follow these steps:
 

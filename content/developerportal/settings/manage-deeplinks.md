@@ -14,7 +14,7 @@ To go directly to the desired element of your app project in the Developer Porta
 * Find the App ID, Story ID, and Feedback Item Number for your app
 * Create deep links for your app, story, and feedback item
 
-## 2 Getting the AppID, storyID, & feedbackItemNr
+## 2 Getting the AppID, storyID & feedbackItemNr {#id}
 
 To create a deep link, you need the App ID, Story ID, or Feedback Item Nr for the desired element in the Developer Portal.
 
@@ -35,7 +35,7 @@ To create a deep link, you need the App ID, Story ID, or Feedback Item Nr for th
 If you want to provide links directly to a specific element in your app project in the Developer Portal, follow these steps:
 
 1. Paste the URL to the Developer in your browser's address bar (as in, `https://sprintr.home.mendix.com/` or `https://cloud.home.mendix.com/`).
-2. Paste the desired App ID, Story ID, or Feedback Item Number after the final slash.
+2. Paste the desired App ID, Environment ID, Story ID, or Feedback Item Number after the final slash.
 
 The following deep links can be used:
 
@@ -47,6 +47,7 @@ The following deep links can be used:
 * Environments for app: `https://cloud.home.mendix.com/link/deploy/<appID>`
 * Metrics for app: `https://cloud.home.mendix.com/link/metrics/<appID>`
 * Alerts for app: `https://cloud.home.mendix.com/link/monitor/<appID>`
+* Alerts for environment: `https://cloud.home.mendix.com/link/monitor/<appID>/<envID>`
 * Logs for app: `https://cloud.home.mendix.com/link/logs/<appID>`
 
 ## 4 Read More

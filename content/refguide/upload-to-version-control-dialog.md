@@ -1,6 +1,7 @@
 ---
 title: "Upload to Version Control Server"
-parent: "dialogs"
+parent: "version-control-menu"
+menu_order: 70
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -9,7 +10,7 @@ tags: ["studio pro"]
 
 Use this dialog box to upload an app that is not yet stored in a version control server.
 
-![Upload to Version Control Server… menu option](attachments/upload-to-version-control/upload-to-version-control-server.png)
+![Upload to Version Control Server menu option](attachments/upload-to-version-control/upload-to-version-control-server.png)
 
 ## 2 Location
 
@@ -22,7 +23,7 @@ You can create a new app on [Mendix Team Server](/developerportal/develop/team-s
 * Select **New Mendix Team Server**
 * Enter the name for the new Team Server project and repository in the **App name** field
 
-	![Enter App name for New mendix Team Server](attachments/upload-to-version-control/new-team-server-app.png)
+	![Enter App name for New Mendix Team Server](attachments/upload-to-version-control/new-team-server-app.png)
 
 ### 2.2 Existing Mendix Team Server
 

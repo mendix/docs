@@ -20,7 +20,7 @@ For example, the following text area allows the end-user to see, and set, the **
 
 An example of text area properties is represented in the image below:
 
-{{% image_container width="250" %}}![](attachments/text-area/text-area-properties.png)
+{{% image_container width="300" %}}![](attachments/text-area/text-area-properties.png)
 {{% /image_container %}}
 
 Text area properties consist of the following sections:
@@ -101,8 +101,6 @@ For example, if you use the counter message `You've used {1} characters of the {
 ![](attachments/text-area/counter-message.png)
 
 #### 2.6.4 Text Too Long Message
-
-{{% todo %}}[DOES THIS ACTUALLY DO ANYTHING - HOW CAN IT BE DISPLAYED?]{{% /todo %}}
 
 {{% alert type="info" %}}Text too long message is not supported on native mobile pages.{{% /alert %}}
 

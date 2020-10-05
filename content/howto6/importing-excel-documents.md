@@ -15,7 +15,7 @@ Before you continue, make sure that you know how to create:
 *   **Overview and detail pages** ([Creating your first two overview and detail pages](create-your-first-two-overview-and-detail-pages)).
 *   **Menu items** ([Setting Up the Navigation Structure](setting-up-the-navigation-structure)).
 *   **Microflows** ([Create your first Microflow: Hello World!](create-your-first-microflow-hello-world)
-*   **Add Appstore content** ([Use App Store Content](/developerportal/app-store/app-store-content)).
+*   **Add Appstore content** ([Use App Store Content in Studio Pro](/appstore/general/app-store-content)).
 *   **Secure applications** ([Creating a secure app](create-a-secure-app)).
 
 Follow these steps:
@@ -44,7 +44,7 @@ As an enumeration is used for the **OrderStatus** attribute, a microflow needs t
 
 ## 3 Use the application model meta data in the client
 
-In order to set up import templates for importing data, your application model meta data should be reflected in the client. This can be achieved by using [Mx Model reflection](https://appstore.home.mendix.com/link/app/69/Mendix/Mx-Model-reflection). In this part of the How-to you will learn to do so.
+In order to set up import templates for importing data, your application model meta data should be reflected in the client. This can be achieved by using [Mx Model reflection](/appstore/modules/model-reflection). In this part of the How-to you will learn to do so.
 
 1.  Click on **Run Locally** to start your application.
 
@@ -94,7 +94,7 @@ Based on the structure of the file you want to import, you will setup your templ
     For this example you will be using a simple Excel file, with just one sheet and columnheaders at the first row. If a more comprehensive Excel file is used you can change these values at the Sheet nr, Header row nr, and Import from row nr boxes.
 
     {{% /alert %}}
-9.  Under the **Connect columns to attributes** section, click on **New** to create a mapping from the Excel sheet column to the proper Mendix attribute.
+9.  Under the **Connect columns to attributes** section, click **New** to create a mapping from the Excel sheet column to the proper Mendix attribute.
     ![](attachments/18448735/18581964.png)
 
 10.  Add the column number, this should correspond with the column number from the value on the Excel file you want to map
@@ -232,7 +232,6 @@ Once you have completed an Excel template you can export the template for exampl
 *   [Importing Excel Documents](importing-excel-documents)
 *   [Exposing a web service](expose-a-web-service)
 *   [Selenium Support](selenium-support)
-*   [Synchronizing user accounts using the LDAP module](synchronizing-user-accounts-using-the-ldap-module)
 *   [Importing XML documents](importing-xml-documents)
 *   [Consuming a REST Service](consume-a-rest-service)
 *   [Export to CSV button](/refguide6/export-to-csv-button)

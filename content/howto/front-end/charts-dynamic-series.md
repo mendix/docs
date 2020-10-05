@@ -17,7 +17,7 @@ The charts widget provides a basic implementation of dynamic series. This allows
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Download the latest [Charts Widget](https://appstore.home.mendix.com/link/app/105695/) from the Mendix App Store
+* Download the latest [Charts Widget](/appstore/widgets/charts) from the Mendix App Store
 
 ## 3 Setting up Chart Data
 

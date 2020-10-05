@@ -2,6 +2,7 @@
 title: "Studio 8 Guide"
 tags: ["studio", "web modeler"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
 {{% alert type="warning" %}}
@@ -21,7 +22,7 @@ Studio enables you to do the following:
 * Visually model the interactions and flow control of an application
 * Leverage your enterprise design language to create engaging apps that conform to company standards beyond branding and theming 
 
-## 2 Document Categories
+## 2 Guide Categories
 
 The *Studio 8 Guide* is divided into the following categories:
 

@@ -1,9 +1,9 @@
 ---
 title: "List View Swipe"
 category: "Widgets"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the List View Swipe widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "list view swipe", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -91,11 +91,10 @@ To contribute to the development of this widget, follow these steps:
 	* [npm](https://www.npmjs.com/)
 	* [webpack-cli](https://www.npmjs.com/package/webpack-cli)
 	* [grunt-cli](https://github.com/gruntjs/grunt-cli)
-
 2. Fork and clone the [mendixlabs/listview-swipe](https://github.com/mendixlabs/listview-swipe.git) repository. The code is in Typescript.
 3. Set up the development environment by running `npm install`.
 4. Create a folder named *dist* in the project root.
-5. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*, or get the test project from [mendixlabs/listview-swipe releases](https://github.com/mendixlabs/listview-swipe/releases/latest)). Changes to the widget code will be automatically pushed to this test project.
+5. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*, or get the test project from [mendixlabs/listview-swipe releases](https://github.com/mendixlabs/listview-swipe/releases/latest). Changes to the widget code will be automatically pushed to this test project.
 6. To automatically compile, bundle, and push code changes to the running test project, run `grunt`.
 
 We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/listview-swipe](https://github.com/mendixlabs/listview-swipe/issues).

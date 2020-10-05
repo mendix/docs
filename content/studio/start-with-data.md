@@ -1,6 +1,7 @@
 ---
 title: "Starting With Your Own Data"
 description: "Describes how to import an Excel spreadsheet to your domain model in Mendix Studio."
+menu_order: 100
 tags: ["studio", "domain model", "excel import", "start with data", "data model"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -49,8 +50,12 @@ During the import process, spreadsheet data is analyzed and converted the follow
 
 2. Your columns are converted into attributes.
 
-3. The links between the worksheets are identified and can be converted into associations if all of the following conditions are met: <br/>
-   a. All values of one column in your spreadsheet are used in another column.<br/>b. The values of the other column are unique. <br/>c. The type of data in these columns is converted to string or enumeration attribute types. For more information on correspondence between Excel data types and attribute types, see the [Correspondence Between Excel Data Types and Attribute Types](#excel-type-attribute-type) section.<br/>
+3. The links between the worksheets are identified and can be converted into associations if all of the following conditions are met: 
+	
+    1. All values of one column in your spreadsheet are used in another column.
+    2. The values of the other column are unique. 
+    3. The type of data in these columns is converted to string or enumeration attribute types. For more information on correspondence between Excel data types and attribute types, see the [Correspondence Between Excel Data Types and Attribute Types](#excel-type-attribute-type) section.
+    
 
 Download this Excel spreadsheet example to check how data is normalized there: [Spreadsheet Example](attachments/start-with-data/Example.xlsx). You can also import it into an app and test how this spreadsheet is converted. For more information, see the [Importing a Spreadsheet](#importing-spreadsheet) section.
 
@@ -59,7 +64,8 @@ Download this Excel spreadsheet example to check how data is normalized there: [
 
 When you create your app, a page where you can upload your spreadsheet is opened. Drag and drop your spreadsheet on the page or browse your files and choose the one you would like to import.
 
-{{% image_container width="500" %}}![](attachments/start-with-data/drag-and-drop.png)
+{{% image_container width="300" %}}
+![](attachments/start-with-data/drag-and-drop.png)
 {{% /image_container %}}
 
 {{% alert type="info" %}}
@@ -88,10 +94,10 @@ In the table below, you can see how the Excel data corresponds to the attribute 
 
 #### 4.1.1 Previewing Associations
 
-After you upload the spreadsheet, worksheets that have relations (associations) are identified:  
+After you upload the spreadsheet, worksheets that have relations (associations) are identified. 
 
-{{% image_container width="400" %}}![](attachments/start-with-data/relations-identified.png)
-{{% /image_container %}}
+{{% alert type="info" %}}Associations are not identified if the data is converted to *Integer*. In this case you can either change the column type to *Text* in Excel, or change the type of both columns to *String* when previewing your data. For more information on how to change attribute types, see the [Managing Attribute Types](#managing-attribute-types) section.
+{{% /alert %}} 
 
 In the **Data Preview**, you can check the spreadsheet data before the actual import is completed. You can review tables and columns and untick the ones that you do not want to import. Tables that have relations (associations) detected are indicated with a link icon:
 
@@ -101,7 +107,9 @@ The columns which have associations cannot be deselected for the import, you nee
 
 To review a list of associations and unselect the ones that you do not want to be created, click **Manage Relations**. In the **Manage Relations** pop-up window, you can see which table and column will be used to create an association **from** and which will be used to create an association **to**. A column with unique data is the one the association goes **to**. 
 
+{{% image_container width="400" %}}
 ![](attachments/start-with-data/manage-relations.png)
+{{% /image_container %}}
 
 For example, in the image above you can see that an association will be created from the **MarketingDocs** entity to the **Contributors** entity. This association was discovered through the column **Responsible** in **MarketingDocs** and the column **Name** in **Contributors**.  As a result, when data is imported the **MarketingDocs** entity will not have **Responsible** as an attribute, instead it will have an association to the **Contributors** entity and will get data from this entity through the association.
 
@@ -111,7 +119,7 @@ A column can be used to create an association **from** it once only. If an assoc
 
 {{% /alert %}}
 
-#### 4.1.2 Managing Attribute Types
+#### 4.1.2 Managing Attribute Types {#managing-attribute-types}
 
 At the bottom of each column (that will be turned into an attribute) an attribute type is automatically identified and indicated. Click the drop-down menu to change the attribute type. For more information on how Excel data types correspond to attribute types, see [Correspondence between Excel Data Types and Attribute Types](#excel-type-attribute-type).
 

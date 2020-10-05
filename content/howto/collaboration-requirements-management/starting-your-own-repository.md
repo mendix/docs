@@ -7,7 +7,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-In this how-to, you will learn how to set up a GitHub repository. The repository will contain your development content and can be shared for others to contribute to an application or [App Store component](/developerportal/app-store/share-app-store-content).
+In this how-to, you will learn how to set up a GitHub repository. The repository will contain your development content and can be shared for others to contribute to an application or [App Store component](/appstore/general/share-app-store-content).
 
 ## 2 Preparation
 
@@ -16,7 +16,7 @@ In this how-to, you will learn how to set up a GitHub repository. The repository
 
 ## 3 Creating Your Repo
 
-First of all, your repo needs a name. You should use the same name that will be used for the item published in the [Mendix App Store](https://appstore.home.mendix.com/index3.html). Use normal CamelCase to replace the spaces (for example, *My first app* becomes *Mendix/MyFirstApp* on GitHub).
+First of all, your repo needs a name. You should use the same name that will be used for the item published in the [Mendix App Store](https://appstore.home.mendix.com/index3.html). Use UpperCamelCase to replace the spaces (for example, *My first app* becomes *Mendix/MyFirstApp* on GitHub).
 
 The description should say what the item does. This description can also be used in the Mendix App Store.
 

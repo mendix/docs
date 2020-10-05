@@ -24,7 +24,7 @@ The sections describe these options:
 
 ## 2 My Apps {#my-apps}
 
-You will see all the apps of which you are an [App Team](../collaborate/team) member.
+You will see all the apps of which you are an [App Team](../collaborate/team) member:
 
 ![Apps tiles](attachments/apps-tiles.png)
 

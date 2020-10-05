@@ -8,7 +8,7 @@ This is the reference guide for the widget XML.
 
 ## Requirements
 
-This reference guide assumes you have a basic understanding of XML and the Mendix Modeler. For more information on XML, visit [W3 Schools - XML](http://w3schools.com/xml/). To learn more about the Mendix Modeler, watch the [Getting Started](https://gettingstarted.mendixcloud.com/index.html) videos.
+This reference guide assumes you have a basic understanding of XML and the Mendix Modeler. For more information on XML, visit [W3 Schools - XML](http://w3schools.com/xml/).
 
 ## Start of the widget XML
 

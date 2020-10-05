@@ -64,7 +64,7 @@ To create a new page in Studio, do the following:
     {{% image_container width="400" %}}![](attachments/page-editor/new-page.png)
     {{% /image_container %}}
 
-3.  In the **Create new page** dialog window, fill out the title of the page, select a layout and a page template.  
+3.  In the **Create new page** dialog box, fill out the title of the page, select a layout and a page template.  
 
 	![](attachments/page-editor/create-new-page-dialog.png)
 
@@ -72,26 +72,64 @@ To create a new page in Studio, do the following:
 
 A new page is created.
 
-### 2.3 Deleting a Page
+### 2.3 Duplicating a Page
 
-To delete a page in Studio, do the following:
+To duplicate an existing page, do the following:
 
-1. Open the page you want to delete.
-2. Open the **Properties** tab.
-3.  Click **Delete** at the bottom of the **Properties** tab.
+1. Click the **Pages** icon in the left menu bar.
+
+2. In the side panel, click the ellipsis icon and select **Duplicate** in the drop-down menu:
+
+    {{% image_container width="400" %}}
+![Duplicate Page](attachments/page-editor/duplicate-page.png)
+{{% /image_container %}}
+
+The page is duplicated.
+
+### 2.4 Copying and Pasting a Page
+
+To copy and paste a page, do the following:
+
+1. Click the **Pages** icon in the left menu bar.
+
+2.  In the side panel, click the ellipsis icon and select **Copy to clipboard** in the drop-down menu:
+
+    {{% image_container width="400" %}}
+![Copying a Page](attachments/page-editor/copy-page.png)
+{{% /image_container %}}
+
+3. Open the Studio app where you want to paste the page and press <kbd>Ctrl</kbd> +<kbd>V</kbd> or <kbd>Cmd</kbd> +<kbd>V</kbd>. 
+
+Your page is pasted. For more information on copy/paste function in Studio, see the [Copy/Paste Pages, Microflows, and Enumerations](general#copy-paste-documents) section in *General Info*.
+
+### 2.5 Deleting a Page
+
+To delete a page in Studio, do one of the following:
+
+1. Open the page you want to delete and follow the steps below:
+    1. Open the **Properties** tab.
+    2. Click **Delete** at the bottom of the **Properties** tab.
 
     ![](attachments/page-editor/page-delete.png)
 
+2. Click the **Pages** icon in the left menu bar and do the following:
+
+    1. In the side panel, click the ellipsis icon and select **Delete** in the drop-down menu:
+
+		{{% image_container width="400" %}}
+![Delete Page](attachments/page-editor/delete-page.png)
+{{% /image_container %}}
+
 The selected page is deleted.
 
-### 2.4 Adding Elements on a Page
+### 2.6 Adding Elements on a Page {#adding-elements}
 
 To add elements on a page, do the following:
 
 1. In **Toolbox**, open the [Widgets](#widgets) tab or the [Building Blocks](#building-blocks) tab.
 2. Select an element you would like to add, drag and drop this element on a page. 
 
-### 2.5 Viewing Elements On a Page
+### 2.7 Viewing Elements On a Page
 
 There are two ways to view an element and its [properties](#page-editor-properties):
 
@@ -103,14 +141,18 @@ The selected element is indicated with an blue border. Additionally, if the elem
 {{% image_container width="400" %}}![](attachments/page-editor/input-widget-example.png)
 {{% /image_container %}}
 
-### 2.6 Deleting Elements from a Page
+### 2.8 Deleting Elements from a Page
 
 To delete an element from a page, do one of the following:
 
 * Select this element and press <kbd>Delete</kbd>
 * Open the **Properties** tab of this element and this click **Delete** at the bottom of the tab
 
-## 3 Breadcrumb {#breadcrumb}
+## 3 The Show Option
+
+Located in the top-left corner of a page, the **Show** option highlights items that have [conditional visibility](page-editor-widgets-visibility-section) configured for them. Click the eye icon to enable this option. For more information on conditional visibility and how it works, see [Conditional Visibility Section](page-editor-widgets-visibility-section).  
+
+## 4 Breadcrumb {#breadcrumb}
 
 A breadcrumb is displayed on every page in the left bottom corner of Studio.
 
@@ -118,11 +160,11 @@ The breadcrumb serves two functions:
 
 * Shows a bottom-up layering of a selected item on a page. For example, when you select a button on a page, you will see that it is placed in a container, which is in a column.  Whereas, the column is in a row, and this row is placed in a layout grid on the page:
 
-  ![](attachments/page-editor/breadcrumb.png)
+	![](attachments/page-editor/breadcrumb.png)
 
 * Allows you to select an element on the page and view its properties. To navigate to an element on a page and view element's properties, click this element in the breadcrumb.
 
-## 4 Toolbox Tab
+## 5 Toolbox Tab
 
 The **Toolbox** shows the tools that can be used on pages. 
 
@@ -131,7 +173,7 @@ This tab consists of the following:
 * [Widgets](#widgets)
 * [Building Blocks](#building-blocks)
 
-### 4.1 Widgets {#widgets}
+### 5.1 Widgets {#widgets}
 
 Widgets are single user-interface elements that can be configured. 
 
@@ -139,7 +181,7 @@ You can [quickly configure](page-editor-widgets#quick-config) most of the non-cu
 
 You can update widgets in the [Widget Overview](settings-widget-overview). 
 
-### 4.2 Building Blocks {#building-blocks}
+### 5.2 Building Blocks {#building-blocks}
 
 Building blocks consist of pre-set widgets that allow you to build a page faster:  
 
@@ -172,7 +214,7 @@ Building blocks categories may differ because Atlas UI can be customized using S
 
 {{% /alert %}}
 
-## 5 Properties Tab {#page-editor-properties}
+## 6 Properties Tab {#page-editor-properties}
 
 The **Properties** tab displays the properties of the currently selected element and can differ per element. 
 
@@ -184,6 +226,6 @@ For example, if you click **Layout**—which is the layout that you choose when 
 {{% image_container width="300" %}}![](attachments/page-editor/layout.png)
 {{% /image_container %}}
 
-## 6 Read More
+## 7 Main Documents in This Category
 
-* [Widgets](page-editor-widgets)
+* [Widgets](page-editor-widgets) – describes different type of widgets

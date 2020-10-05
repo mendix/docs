@@ -70,8 +70,8 @@ Widgets in Studio can be divided by origin as shown in the table below:
 | Type                                              | Description                                                  | Origin                                                       |
 | ------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Default widgets                                   | Widgets that are included into your app by default and do not have the information icon in the top-right corner. | Apps created in the Developer Portal (for more information on the Developer Portal, see [Developer Portal](https://docs.mendix.com/developerportal/)) |
-| App Store widgets<a name="app-store-widgets"></a> | Widgets that are you can download to your project directly from Studio. Some App Store widgets are already in your project as a part of the app. Such widgets have the information icon in the top-right corner of widgets in the **Toolbox**. <br />For more information on the App Store, see [App Store Overview](/developerportal/app-store/app-store-overview). | [App Store](/developerportal/app-store/)                     |
-| Local widgets                                     | Either widgets that are a part of a starter app, or widgets created by your or your team locally via Studio Pro. For more information on developing widgets, see the [Custom Widget Development](/howto/extensibility/widget-development) how-to's. As a rule local widgets will be listed in the **Add-ons** category. For more information on categories, see the [Widgets by Category](#widget-categories) section. | Apps created in the  Developer Portal/Studio Pro             |
+| App Store widgets<a name="app-store-widgets"></a> | Widgets that are you can download to your project directly from Studio. Some App Store widgets are already in your project as a part of the app. Such widgets have the information icon in the top-right corner of widgets in the **Toolbox**. <br />For more information on the App Store, see [App Store Overview](/appstore/general/app-store-overview). | [App Store](/appstore/index)                     |
+| Local widgets                                     | Either widgets that are a part of an app template, or widgets created by your or your team locally via Studio Pro. For more information on developing widgets, see the [Custom Widget Development](/howto/extensibility/widget-development) how-to's. As a rule local widgets will be listed in the **Add-ons** category. For more information on categories, see the [Widgets by Category](#widget-categories) section. | Apps created in the  Developer Portal/Studio Pro             |
 
 ## 6 Adding the App Store Widgets
 
@@ -108,4 +108,4 @@ Some similar widgets are packaged together: downloading one of these widgets wil
 
 * [Pages](page-editor)
 * [Settings](settings)
-* [App Store Overview](/developerportal/app-store/app-store-overview)
+* [App Store Overview](/appstore/general/app-store-overview)

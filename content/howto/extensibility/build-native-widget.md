@@ -3,7 +3,8 @@ title: "Build a Pluggable Native Widget"
 category: "Extensibility"
 description: "Describes building a native widget, configuring it, and styling it in a Mendix app."
 menu_order: 10
-tags: ["native","widget","pluggable","react native","extensibility",]
+tags: ["native","widget","pluggable","react native","extensibility"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -33,7 +34,7 @@ Clone this [code sample](https://github.com/mendix/native-group-box-pluggable-wi
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install Mendix Studio Pro 8.3
-* Install the Mendix Make it Native app on a mobile device or an emulator.
+* Install the Mendix Make It Native app on a mobile device or an emulator.
 * Install Long Term Support (LTS) v10.16.3 or any higher version of [Node.js](https://nodejs.org)
 * Install the latest [Yeoman](https://yeoman.io/) with the following command:
 
@@ -44,12 +45,12 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install the latest Mendix Pluggable Widget Generator for Yeoman with the following command:
 
 	```shell
-	npm install -g @mendix/generator-widget
+	$ npm install -g @mendix/generator-widget
 	```
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
 * Have a basic understanding of:
-	* Command prompt or the Unix command line
+	* Microsoft's Command Prompt or the Unix command line
 	* [TypeScript](https://www.typescriptlang.org/)
 	* [React](https://reactjs.org)
 
@@ -78,7 +79,7 @@ To scaffold your project folder for the group box widget, follow these steps:
 3. Start the generator by executing the following command:
 
 	```shell
-	yo @mendix/widget GroupBox
+	$ yo @mendix/widget GroupBox
 	```
 
 4. The generator will ask you for some input during setup. Provide this information to the generator:
@@ -108,7 +109,7 @@ In order to test your group box widget, you will a Mendix application that uses 
 
 1. Open Studio Pro.
 2. Create a new project by clicking **File** > **New Project**.
-3. Select the **Blank** app on the last page of **Starter Apps** (do not select **Blank App** on the first page).
+3. Select the **Blank** app (do not select **Blank App**).
 4. Click the **Use this starting point** button
 5. Fill in the following details in the **App Settings** dialog box:
 	* App name: *GroupBoxTestProject*
@@ -199,7 +200,7 @@ Define the structure and default style of the group box widget with these steps:
 5. Execute the following command to bundle your widget and update the widget bundle in your Mendix test project:
 
 	```shell
-	npm run dev
+	$ npm run dev
 	```
 
 	The executed script will keep watching your source files and rebundle the widget every time you save one of these files.
@@ -473,7 +474,7 @@ Next you will allow the Mendix developer to alter the header caption of your wid
 Do these final steps to sync and run your app:
 
 1. In Studio Pro press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to sync your app with the changes you made to **src/GroupBox.xml**. 
-2. An error will tell you to update your widget. Right-click on the Group Box widget and select **Update widget**. 
+2. An error will tell you to update your widget. Right-click the Group Box widget and select **Update widget**. 
 3. Double-click the same widget and you will now see your new property. 
 4. Fill in some caption text, click **OK**, and rerun your app locally to see your caption text in the app:
 
@@ -567,7 +568,7 @@ Verify that the new content property works:
 8. Drag and drop a **Show message** activity onto your nanoflow.
 9. Double-click the activity and add the text *Hello World!* to the **Template**, then click **OK**.
 10. Rerun the app locally.
-11. With the Make it Native app, verify that your button is inside the group box and is triggering a message popup saying **Hello World!**.
+11. With the Make It Native app, verify that your button is inside the group box and is triggering a message popup saying **Hello World!**.
 
 	![hello world](attachments/build-native-widget/5-hello-world.png)
 
@@ -677,7 +678,7 @@ To start, make the complete header clickable:
 	```
 
 5. Make sure all files have been saved.
-6. Reload your test app in the Make it Native app to view the change.
+6. Reload your test app in the Make It Native app to view the change.
 7. Verify the header is clickable by tapping it. You should see a light-up effect on iOS. Note that on Android, the ripple effect is not visible on a black background, so you cannot verify yet if it is clickable.
 
 Now make it possible to expand or collapse the group box:
@@ -743,7 +744,7 @@ Now make it possible to expand or collapse the group box:
 	};
 	```
 
-8. Verify in the Make It Native app that you can expand and collapse the group box by tapping your widget's header.
+8. Verify in the Make it Native app that you can expand and collapse the group box by tapping your widget's header.
 
 #### 3.3.6 Adding an Expand and Collapse Icon Property
 
@@ -1095,8 +1096,8 @@ First change the widget property configuration:
 	ii. Change your current working directory to the folder where *GroupBox.png* is stored.<br />
 	iii. Execute the following command to generate the Base64 representation:<br />
 	
-	```cmd
-	certutil -encode GroupBox.png data.b64
+	```shell
+	$ certutil -encode GroupBox.png data.b64
 	```
 	
 	Upon success, you will see a **data.b64** file in the same location as your original image.
@@ -1108,7 +1109,7 @@ First change the widget property configuration:
 	iii. Execute the following command to generate the Base64 representation:<br />
 	
 	```shell
-	base64 -i GroupBox.png -o data.b64
+	$ base64 -i GroupBox.png -o data.b64
 	```
 	
 	Upon success, you will see a **data.b64** file in the same location as your original image.
@@ -1438,6 +1439,8 @@ The developer needs to have the class names memorized to apply a certain group b
 	]
 	```
 
+	Note that the property name must be the same as the widget ID. This will ensure this design property can be configured for your group box widget in Studio Pro.
+
 3. In Studio Pro click <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to bring your application in sync with the changes you made to the previous two files.
 
 4. Double-click the group box widget and navigate to the **Appearance** tab.
@@ -1455,6 +1458,6 @@ The developer needs to have the class names memorized to apply a certain group b
 ## 4 Read More
 
 * [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets)
-* [How to Implement Native Styling](/howto/mobile/native-styling)
-* [Native Styling Reference Guide](/refguide/native-styling-refguide)
+* [How to Implement Native Mobile Styling](/howto/mobile/native-styling)
+* [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide)
 * [How to Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)

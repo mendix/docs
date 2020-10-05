@@ -3,7 +3,7 @@ title: "Getting started with the Widget Development Plugin for Adobe Brackets"
 category: "Custom Widget Development"
 tags: []
 ---
-This How-To will teach you how to use the Widget Development Plugin for Adobe Brackets. The Widget Development Plugin for Adobe Brackets is a plugin for Adobe Brackets that allows a Mendix Developer to quickly create a Custom Widget project. Adobe Brackets is a code editor for HTML / JavaScript and CSS. The Widget Development Plugin for Adobe Brackets will turn Brackets into an IDE (_Integrated Developement Environment)_ for creating Custom Widgets for the Mendix Platform.
+This How-To will teach you how to use the Widget Development Plugin for Adobe Brackets. The Widget Development Plugin for Adobe Brackets is a plugin for Adobe Brackets that allows a Mendix Developer to quickly create a Custom Widget project. Adobe Brackets is a code editor for HTML / JavaScript and CSS. The Widget Development Plugin for Adobe Brackets will turn Brackets into an IDE (_Integrated Development Environment)_ for creating Custom Widgets for the Mendix Platform.
 
 ## 1\. Preparations
 
@@ -33,7 +33,7 @@ The plugin adds menu options to Brackets. One of them is to start a new Custom W
 1.  Select **File > New Widget** from the menu to start.
     ![](attachments/18448565/18579932.png)
 
-The name of the widget is very important, this name is the name used in Mendix. It is strongly recommended to use [CamelCase](http://en.wikipedia.org/wiki/CamelCase) naming convention. Each new widget should at have an author, version number, copyright, license, package name, widget name and path defined before you can click OK. The location directory must alsoexist.
+The name of the widget is very important, this name is the name used in Mendix. It is strongly recommended to use [UpperCamelCase](http://en.wikipedia.org/wiki/CamelCase) naming convention. Each new widget should at have an author, version number, copyright, license, package name, widget name and path defined before you can click OK. The location directory must also exist.
 
 Information about the settings:
 
@@ -119,7 +119,7 @@ This How-to has enabled you to start working and building a Custom Widget for th
 
 
 
-Some interesting books and articles you might want to read next to dive into the sourcecode of the AppStoreWidgetBoilerplate:
+Some interesting books and articles you might want to read next to dive into the source code of the AppStoreWidgetBoilerplate:
 
 ### 7.1 Writing your own DOJO Widget
 
@@ -131,7 +131,7 @@ Mendix Custom Widgets are based upon DOJO widgets. You will find the following B
 
 To communicate with Mendix you need to use the Mendix JavaScript Client API. Read all about it at the following online documentation:
 
-[https://apidocs.mendix.com/6/client/](https://apidocs.mendix.com/6/client/)
+[https://apidocs.rnd.mendix.com/6/client/index.html](https://apidocs.rnd.mendix.com/6/client/index.html)
 
 ### 7.3 Learning JavaScript Design Patterns
 

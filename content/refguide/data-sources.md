@@ -7,7 +7,7 @@ tags: ["studio pro", "data source"]
 
 ## 1 Introduction
 
-Widgets that display information stored in entities require you to assign a method by which to retrieve the relevant data. Such methods are collectively known as data sources. Widgets that require a data source include all [data widgets](data-widgets) and [input widgets](input-widgets).
+Widgets that display information stored in entities require you to assign a method by which to retrieve the relevant data. Such methods are collectively known as data sources. Widgets that require a data source include all [data widgets](data-widgets) and [input widgets](input-widgets). [Pluggable widgets](/apidocs-mxsdk/apidocs/pluggable-widgets) can also use data sources.
 
 In this document, we describe data sources of data widgets. 
 
@@ -26,9 +26,9 @@ The **Microflow** source is not supported in offline applications because it imp
 
 {{% /alert %}}
 
-## 3 Data Grid, Template Grid, List View
+## 3 List Widgets {#list-widgets}
 
-A data grid, template grid, and list view support the data sources listed below:
+A data grid, template grid, and list view are list widgets. Also some [pluggable widgets](/apidocs-mxsdk/apidocs/pluggable-widgets) may behave as list widgets and use data sources. Supported data sources are listed below:
 
 *   [Database](database-source) – objects are retrieved from the database; database constraints can be used to limit which objects are shown. 
 *   [XPath](xpath-source) – objects are retrieved from the database; an XPath constraint can be used to constrain which objects are shown.
@@ -40,7 +40,7 @@ A data grid, template grid, and list view support the data sources listed below:
 
 {{% alert type="info" %}}
 
-The database source is the only data source that is also supported offline. If a list widget has a database data source in an offline application, the data will come from the database that is situated on the device. This database can be synced with a [button](button-properties) widget for creating a new object.
+Database and nanoflow data sources are the only data sources supported offline. If a list widget has a database data source in an offline application, the data will come from the database that is situated on the device. This database can be synced with a [button](button-properties) widget for creating a new object.
 
 {{% /alert %}}
 

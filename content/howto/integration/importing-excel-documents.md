@@ -8,7 +8,7 @@ tags: ["import", "excel", "integration"]
 
 ## 1 Introduction
 
-Adding large amounts of data to your application (for example, reference data or data from an external application) can be very time-consuming. In order to save time and effort, this process can be automated using the [Excel Importer](https://appstore.home.mendix.com/link/app/72/) from the Mendix App Store. In this how-to, you will set up import templates and import data into your app using this module.
+Adding large amounts of data to your application (for example, reference data or data from an external application) can be very time-consuming. In order to save time and effort, this process can be automated using the [Excel Importer](/appstore/modules/excel-importer) from the Mendix App Store. In this how-to, you will set up import templates and import data into your app using this module.
 
 ## 2 Prerequisites
 
@@ -18,7 +18,7 @@ Before starting this how-to, make sure you know how to do the following:
 * Create overview and detail pages (see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages))
 * Create menu items (see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
 * Create microflows (see [How to Create Your First Microflow: Hello World!](../logic-business-rules/create-your-first-microflow-hello-world)
-* Add App Store content to your app (see [How to Use App Store Content](/developerportal/app-store/app-store-content))
+* Add App Store content to your app (see [How to Use App Store Content in Studio Pro](/appstore/general/app-store-content))
 * Secure your applications (see [How to Create a Secure App](../security/create-a-secure-app))
 
 ## 3 Preparing the Data Structure, GUI & Modules
@@ -59,7 +59,7 @@ Because an enumeration is used for the **OrderStatus** attribute, you need to cr
 
 ## 5 Using Application Model Metadata in the Client
 
-In order to set up import templates for importing data, your application model metadata should be reflected in the client. This can be achieved by using the [Mx Model Reflection](https://appstore.home.mendix.com/link/app/69/Mendix/Mx-Model-reflection) module. In this section, you will learn how to do this by following these steps:
+In order to set up import templates for importing data, your application model metadata should be reflected in the client. This can be achieved by using the [Mx Model Reflection](/appstore/modules/model-reflection) module. In this section, you will learn how to do this by following these steps:
 
 1.  Click **Run Locally** to start your application.
 2.  Click **View** to open your application in the browser.

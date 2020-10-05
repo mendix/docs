@@ -10,7 +10,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-An **input reference set selector** is used to allow the end-user to display or select the value(s) of a many-to-many (reference set) [association](association-properties) by selecting the associated object(s).
+An **input reference set selector** is used to allow the end-user to display or select the value(s) of a many-to-many (reference set) [association](associations) by selecting the associated object(s).
 
 An input reference set selector must be placed in a [data widget](data-widgets).
 
@@ -36,7 +36,7 @@ For example, using the domain model above, the following input reference set sel
 
 An example of input reference set selector properties is represented in the image below:
 
-{{% image_container width="400" %}}![](attachments/input-reference-set-selector/input-reference-set-selector-properties.png)
+{{% image_container width="250" %}}![](attachments/input-reference-set-selector/input-reference-set-selector-properties.png)
 {{% /image_container %}}
 
 Reference set selector properties consist of the following sections:

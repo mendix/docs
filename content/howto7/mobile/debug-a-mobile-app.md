@@ -1,5 +1,5 @@
 ---
-title: "Debug a Mobile App with Mendix"
+title: "Debug a Hybrid Mobile App"
 category: "Mobile Development"
 menu_order: 40
 description: "How to set up a mobile app to run from your local machine and debug using Mendix's tools"
@@ -9,6 +9,16 @@ tags: ["mobile", "debug", "android", "ios"]
 ## 1 Introduction
 
 Mendix has great tools for debugging web applications, including the offline and online debugger, but a lot of people don’t know that these tools can also be used to debug and test mobile applications.
+
+{{% alert type="warning" %}}
+Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible. 
+
+To build a hybrid app and publish it, see the [Doing It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) section of the *Mobile App Developer Portal Guide*. Under that section are instructions for building [iOS](/developerportal/deploy/mobileapp#building-ios-locally) and [Android](/developerportal/deploy/mobileapp#building-ios-locally) apps locally.
+
+To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
+
+The PhoneGap build portions of this document will be updated with new instructions soon.
+{{% /alert %}}
 
 **This how-to will teach you how to do the following:**
 
@@ -20,20 +30,13 @@ Mendix has great tools for debugging web applications, including the offline and
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Ensure that you have a network utilities tool on your mobiledevice (I use [PingTools](https://play.google.com/store/apps/details?id=ua.com.streamsoft.pingtools) on Android, and [NetworkPing Lite](https://itunes.apple.com/us/app/network-ping-lite/id289967115?mt=8) on iOS) in order to ensure connectivity between your device andyour computer
-* Ensure that you have an Adobe ID that you can use to sign in to PhoneGap Build ([https://build.phonegap.com/apps](https://build.phonegap.com/apps))
 * You need a paid Apple Developer Membership - see [Apple Membership](https://developer.apple.com/support/membership/) for more details
 
-## 3 Mendix and PhoneGap <a name="MendixAndPhonegap"></a>
-
-Before we begin, it’s important to understand how Mendix Hybrid Mobile apps work, and the relationship between the Mendix application and the PhoneGap service. [Adobe PhoneGap](https://phonegap.com/) provides a way for users to create mobile applications using web technologies, like Mendix. PhoneGap (PG) essentially creates a wrapper for a Mendix application that is recognized and treated like a native application by mobile platforms. All your application’s logic, appearance, and functionality are controlled by Mendix. PhoneGap then, in a way, *translates* these aspects of your application into a language that can be understood by Android and iOS. That being said, there are some facets of your application’s configuration that need to be configured in the PhoneGap application and not in Mendix. We’ll return to this a little later.
-
-The basic function of the PhoneGap app is to ensure that all the necessary libraries (called PhoneGap Plugins) are loaded and available to the application, and then initialize the Mendix application from a target URL. As soon as the Mendix app has been initialized, the app’s Mendix logic then takes over. There are a couple of benefits that we, as Mendix developers, gain from the fact that the PhoneGap app initializes based on a URL: One, changes that we make to the application logic do not require a full rebuild of both the Mendix app and the PhoneGap app (just the Mendix one); and two, that we can instruct the PhoneGap app to initialize based on an IP address (rather than the production URL) and debug a mobile application running locally on our laptop, in order to further increase the speed of our iterations.
-
-## 4 Android and macOS <a name="AndroidMac"></a>
+## 3 Android and macOS <a name="AndroidMac"></a>
 
 This is perhaps the easiest combination of mobile target platform and development environment to get to work.
 
-### 4.1 macOS Configuration
+### 3.1 macOS Configuration
 
 Since the Mendix Modeler only runs on Mendix, we need to make sure that your virtual (windows) machine can be accessed by the outsideworld. To do that, the network setting much be shared between the virtual machine and your Mac, and the appropriate ports forwarded. Follow these steps to configure your development environment with Parallels:
 
@@ -76,7 +79,7 @@ Since the Mendix Modeler only runs on Mendix, we need to make sure that your vir
 
       ![win-2](./attachments/debug-a-mobile-app/win-2.png)
 
-### 4.2 PhoneGap Configuration
+### 3.2 PhoneGap Configuration
 
 You can use PhoneGap Build to build the native application and tell it to intialize based on this new URL, rather than the default. Follow these steps to download a package, update it, and upload it to PhoneGap Build:
 
@@ -120,7 +123,7 @@ You can use PhoneGap Build to build the native application and tell it to intial
 
 9. When your app has finished building in the cloud, download it and run it to connect to your Mendix app running on your local machine.
 
-### 4.3 Android Configuration
+### 3.3 Android Configuration
 
 1. Enable the developer options on your Android device. See [Configure On-Device Developer Options](https://developer.android.com/studio/debug/dev-options.html#enable) for more information.
 2. Connect your device to your development machine and when the popup appears on your mobile device to allow USB debugging, choose **Allow**.
@@ -141,14 +144,14 @@ You can use PhoneGap Build to build the native application and tell it to intial
 
 You can now take advantage of all the debugging tools you know and love with Mendix, including offline breakpoints, quick updates/refreshes, and the Chrome Developer Tools.
 
-## 5 iOS and macOS <a name="iosAndMac"></a>
+## 4 iOS and macOS <a name="iosAndMac"></a>
 
-### 5.1 Apple Developer Configuration
+### 4.1 Apple Developer Configuration
 
 In order to build (and debug) a Mendix iOS app, you need to ensure that you have the right setup in your Apple Developer Account. You'll need a Developer Provisioning Profile that includes your device ID and a Signing Certificate. If you already have an iOS Development provisioning profile, you can continue with [5.2 PhoneGap Configuration](#PhonegapConfiguration). Follow these steps to set up an iOS provisioning profile:
 
 1. Go to [developer.apple.com](https://developer.apple.com/) and log in to your account.
-2. Click **Certificates, IDs & Profiles** in the left-hand navigation.
+2. Click **Certificates, IDs & Profiles** in the left-side navigation.
 3. Click the `+` button to create a new certificate.
 4. Select **iOS Development** and click **Continue**.
 
@@ -174,7 +177,7 @@ In order to build (and debug) a Mendix iOS app, you need to ensure that you have
 
       ![apple-10](./attachments/debug-a-mobile-app/apple-10.png)
 
-9. Right-click on the certificate in the list of certificates and select **Export**.
+9. Right-click the certificate in the list of certificates and select **Export**.
 
       ![apple-11](./attachments/debug-a-mobile-app/apple-11.png)
 
@@ -230,7 +233,7 @@ In order to build (and debug) a Mendix iOS app, you need to ensure that you have
 28. Download your Provisioning Profile (you'll need this for Phonegap).
 
 
-### 5.2 Phonegap Configuration <a name="PhonegapConfiguration"></a>
+### 4.2 Phonegap Configuration <a name="PhonegapConfiguration"></a>
 
 You can use PhoneGap Build to build the native application and tell it to intialize based on this new URL, rather than the default. Follow these steps to change the PhoneGap Build
 
@@ -294,7 +297,7 @@ You can use PhoneGap Build to build the native application and tell it to intial
 
 15. When your app finishes building in the cloud, scan the QR code to download the app and run it on your iOS device.
 
-### 5.3 iOS Configuration
+### 4.3 iOS Configuration
 
 1. Go to **Settings > Safari** on your iOS device.
 
@@ -328,9 +331,9 @@ You can use PhoneGap Build to build the native application and tell it to intial
 
 10. This will bring up the **Safari Web Inspector** for your device!
 
-## 6 Android + Windows <a name="AndroidAndWindows"></a>
+## 5 Android + Windows <a name="AndroidAndWindows"></a>
 
-### 6.1 Windows Configuration
+### 5.1 Windows Configuration
 Follow these steps to test your computer's connection to your device:
 
 1. Open the command prompt and type `ipconfig /all` and find the IPv4 address of your wireless adapter.
@@ -341,7 +344,7 @@ Follow these steps to test your computer's connection to your device:
 
    ![win-2](./attachments/debug-a-mobile-app/win-2-1162756.png)
 
-### 6.2 PhoneGap Configuration
+### 5.2 PhoneGap Configuration
 You can use PhoneGap Build to build the native application and tell it to intialize based on this new URL, rather than the default. Follow these steps to create a new configuration:
 
 1. Go to **home.mendix.com** and open your app.
@@ -384,7 +387,7 @@ You can use PhoneGap Build to build the native application and tell it to intial
 
 10. When your app finished building in the cloud, download the app and run it to connect to your Mendix app running on your local machine!
 
-### 6.3 Android Configuration
+### 5.3 Android Configuration
 
 1. Enable the developer options on your Android device. See [Configure On-Device Developer Options](https://developer.android.com/studio/debug/dev-options.html#enable) for more information.
 2. Connect your device to your development machine and when the popup appears on your mobile device to allow USB debugging, choose **Allow**.
@@ -407,7 +410,7 @@ You can now take advantage of all the debugging tools you know and love with Men
 
 For more help with Android remote debugging, check out [Get Started with Remote Debugging Android Devices](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/).
 
-## Read More
+## 6 Read More
 
 * [Debug Java Actions](/howto7/monitoring-troubleshooting/debug-java-actions)
 * [Find the Root Cause of Runtime Errors](/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

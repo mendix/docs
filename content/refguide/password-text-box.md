@@ -19,7 +19,7 @@ The **Password text box** should be placed on a page together with  with a [Logi
 
 An example of password text box properties is represented in the image below:
 
-{{% image_container width="350" %}}![](attachments/authentication-widgets/password-text-box-properties.png)
+{{% image_container width="250" %}}![](attachments/authentication-widgets/password-text-box-properties.png)
 {{% /image_container %}}
 
 Password text box properties consist of the following sections:

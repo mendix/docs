@@ -21,7 +21,7 @@ This how-to will teach you how to do the following:
 * Download and install [Firefox](https://www.mozilla.org/nl/firefox/new/)
 * Download and install [Selenium IDE](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/) (when Selenium IDE is installed, it is then available as a Firefox plugin)
 
-### 2.1 Software Versions in This How-To
+These are the software versions used in this how-to:
 
 | Software | Version Used in This How-To |
 | --- | --- |
@@ -30,6 +30,10 @@ This how-to will teach you how to do the following:
 
 {{% alert type="warning" %}}
 All images, names, and steps in this how-to are based on these versions. When using other versions, the images and/or names on your screen may be different than what is used in this how-to.
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+This how-to uses the Company Expenses app template for an example scenario. However, this app template is no longer platform-supported by Mendix. Therefore, sections using this app template can only be used as reference and not as sections that can be completed step-by-step.
 {{% /alert %}}
 
 ## 3 Installing & Running the Company Expenses App

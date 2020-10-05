@@ -76,7 +76,7 @@ Below is a list of namespaces that were renamed. This is only relevant if you wr
 | mendix.widget | mxui/widget |
 | mobile.dom | mxui/dom |
 
-Quite a few methods are removed. For details on how to use the new APIs, see the [Client Documentation](https://apidocs.mendix.com/6/client/).
+Quite a few methods are removed. For details on how to use the new APIs, see the [Client Documentation](https://apidocs.rnd.mendix.com/6/client/index.html).
 
 | Removed | Replacement |
 | --- | --- |

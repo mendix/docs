@@ -10,9 +10,7 @@ tags: ["Operate", "App", "Developer Portal", "Backup"]
 
 Backups are created every night or on-demand, as described in the [Backups](#backups) section, below.
 
-Backups in the Mendix Cloud have two parts: the database and file documents. A full backup of the database is made each time, while file documents are backed up incrementally. 
-
-You can also buy a replication/failover add-on to enable incremental backups with a 15 minute interval for both the database and file documents.
+Backups in the Mendix Cloud have two parts: the database and file documents. A full backup of the database is made each time, while file documents are backed up incrementally.
 
 ## 2 Creation and Retention Schedules
 
@@ -50,7 +48,7 @@ Anything you can download you can also upload again, which means you can upload 
 * **Files Only**
 
 {{% alert type="info" %}}
-Uploading a **Files Only** archive will result in a backup item with an exclamation mark and a warning message. Since the archive does not contain a database, it is not possible to restore it. This functionality can be used to move file documents from one environment to another (especially useful if you have a lot of file documents). It will still be necessary to upload a **Database Only** archive to make sure the database can be restored.
+Uploading a **Files Only** archive will result in a backup item with an exclamation mark and a warning message. Since the archive does not contain a database, it is not possible to restore it.
 {{% /alert %}}
 
 #### 3.2.2 Uploading Data in Mendix Cloud v3
@@ -120,5 +118,5 @@ At the bottom of the screen, you can click **Delete** to delete this particular 
 * [How to Create a Backup](create-backup)
 * [How to Download a Backup](download-backup)
 * [How to Restore a Backup](restore-backup)
-* [How to Restore a Backup Locally](database-size-reduction)
+* [How to Restore a Backup Locally](restore-backup-locally)
 * [Database Size Reduction](database-size-reduction)

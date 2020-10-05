@@ -1,9 +1,9 @@
 ---
 title: "Bootstrap Tooltip"
 category: "Widgets"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the Bootstrap Tooltip widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "bootstrap tooltip", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -51,10 +51,6 @@ To start development on this widget, follow these steps:
 2. Make sure you have [Node.js](https://nodejs.org/en/) installed on your computer.
 3. Open a terminal in the root directory of the project.
 4. To install all the project dependencies, execute the following command in the terminal: `npm install`.
-5. In order to test the widget with one of the supplied test projects, run the following command to generate and include an *.mpk* file in every test project (and in a **dist** folder): `npm start`.
-
-	This command will also watch the source code files. When changes to these files have been saved, a new *.mpk* file will be generated and included in the **dist** folder and in every test project. The **dist** folder will also contain an unpacked version of the *.mpk*. The source files in the **deployment** folder of the test projects will also be updated, so that it only takes a refresh in the browser to view your changes.
+5. In order to test the widget with one of the supplied test projects, run the following command to generate and include an *.mpk* file in every test project (and in a **dist** folder): `npm start`. This command will also watch the source code files. When changes to these files have been saved, a new *.mpk* file will be generated and included in the **dist** folder and in every test project. The **dist** folder will also contain an unpacked version of the *.mpk*. The source files in the **deployment** folder of the test projects will also be updated, so that it only takes a refresh in the browser to view your changes.
 6. To keep the source code formatting uniform across the project, run the following command to format all the project source files (XML files are not supported): `npm run prettier:fix`.
-7. To release the widget in the Mendix App Store, run the following command to build the widget: `npm run build`.
-
-	This command will optimize the source code for the production environment and generate a new *.mpk* that will be included in the **dist** folder and in every test project. The **dist** folder will also contain an unpacked version of the *.mpk*. The source files in the **deployment** folder of the test projects will also be updated, so that it only takes a refresh in the browser to check your production code.
+7. To release the widget in the Mendix App Store, run the following command to build the widget: `npm run build`. This command will optimize the source code for the production environment and generate a new *.mpk* that will be included in the **dist** folder and in every test project. The **dist** folder will also contain an unpacked version of the *.mpk*. The source files in the **deployment** folder of the test projects will also be updated, so that it only takes a refresh in the browser to check your production code.

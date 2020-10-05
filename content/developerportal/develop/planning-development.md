@@ -24,7 +24,7 @@ There is also a percentage bar of the stories that are done and the deadline dat
 
 You can click **Mark current sprint as completed** only when all stories have the **Done** status.
 
-When you click **Details** for a story, you will be taken to the [Story Details](../collaborate/stories#accessing-details) page.
+When you click **Details** for a story, you will be taken to the [Story Details](../collaborate/stories#story-details) page.
 
 {{% alert type="info" %}}
 All the changes made on this page are directly passed on to the **Stories** page and vice versa.

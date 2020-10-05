@@ -16,7 +16,7 @@ The **Snippet call** widget allows you to use a [snippet](snippet) on a [page](p
 
 An example of snippet call properties is represented in the image below:
 
-{{% image_container width="350" %}}![Snippet Call Properties](attachments/common-widgets/snippet-call-properties.png)
+{{% image_container width="300" %}}![Snippet Call Properties](attachments/common-widgets/snippet-call-properties.png)
 {{% /image_container %}}
 
 Snippet call properties consist of the following sections:
@@ -44,4 +44,4 @@ To perform actions on a snippet call, select it on a page and right-click it. Th
 
 * [Page](page)
 * [Common Widgets](common-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

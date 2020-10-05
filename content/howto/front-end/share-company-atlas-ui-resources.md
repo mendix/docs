@@ -32,8 +32,8 @@ The Mendix App Store is a great way to share UI resources throughout your compan
 
 There are two important options to keep in mind when uploading a UI resources module:
 
-* **Publish to** – this option lets you share the UI resources in a private App Store (company-only) or with the public audience (the entire Mendix community)
-* **Category** – choose the **UI Resources** category to make the module available as a UI resources module
+* **Publish to** — this option lets you share the UI resources in a private App Store (company-only) or with the public audience (the entire Mendix community)
+* **Category** — choose the **UI Resources** category to make the module available as a UI resources module
 
 ![](attachments/howto/sharing_appstore_addcontent.png)
 
@@ -43,13 +43,13 @@ When you upload new UI resources to the public Mendix App Store, the content wil
 
 This section describes how Mendix developers in your company can benefit from the UI Resources module.
 
-### 4.1 Including the UI Resources Module With a Company Starter App
+### 4.1 Including the UI Resources Module With a Company App Template
 
-A UI Resources module is a great way to keep all the UI resources centralized in your application. It would be a lot of work to download the UI Resources module every time a Mendix developer starts a new Mendix app. An easier way to share the UI Resources for new Mendix apps is to create a blank company starter app with the UI Resources module already included. This blank app can also be extended with logic and data, depending on what your Mendix developers need to quickly create Mendix applications.
+A UI Resources module is a great way to keep all the UI resources centralized in your application. It would be a lot of work to download the UI Resources module every time a Mendix developer starts a new Mendix app. An easier way to share the UI Resources for new Mendix apps is to create a blank company app template with the UI Resources module already included. This blank app can also be extended with logic and data, depending on what your Mendix developers need to quickly create Mendix applications.
 
 Let’s start with creating a new Mendix application in the Mendix Developer Portal or directly in Mendix Studio Pro:
 
-1.  Under the **Starter Apps** tab, select the **Blank App**, and open the new app in Studio Pro.
+1.  Select the **Blank App** and open the new app in Studio Pro:
 
     ![](attachments/howto/sharing_createnewapp.png)
 
@@ -61,18 +61,18 @@ Let’s start with creating a new Mendix application in the Mendix Developer Por
 4. Download the company UI resources module you have created.
 5. When the download is complete, the UI resources will be visible in the **App Store modules** in **Project Explorer**.  Be sure to check if all the errors are resolved before continuing.
 
-Now that you have added your company UI resources to your company starter app, you can share the app in the Mendix App Store just as you did with the company UI resources (see the next section for details). The company starter app will be available for your Mendix developers to use whenever they want to create a new app, allowing them to save time and skip downloading the company UI resources separately.
+Now that you have added your company UI resources to your company app template, you can share the app in the Mendix App Store just as you did with the company UI resources (see the next section for details). The company app template will be available for your Mendix developers to use whenever they want to create a new app, allowing them to save time and skip downloading the company UI resources separately.
 
-#### 4.1.1 Sharing and Maintaining Your Company Starter App
+#### 4.1.1 Sharing and Maintaining Your Company App Template
 
-Now that you have created a company starter app, the next step is to share it with your company. The easiest way to do this is by uploading it to the private App Store.
+Now that you have created a company app template, the next step is to share it with your company. The easiest way to do this is by uploading it to the private App Store.
 
-There are four important options to keep in mind when uploading your company starter app:
+There are four important options to keep in mind when uploading your company app template:
 
-* **Publish to** – this option must be set to **Private App Store**
-* **Category** – select the **Create New App**
-* **Sub category** – select the **Starter Apps** sub-category to make the app available in the "create new app flow" for the Mendix Platform
-* **Impressions** – impressions contain the images that are shown when creating a new app in the Mendix Platform
+* **Publish to** — this option must be set to **Private App Store**
+* **Category** — select the **Create New App**
+* **Sub category** — select the **Starter Apps** sub-category to make the app available as a template in the "create new app flow" for the Mendix Platform
+* **Impressions** — impressions contain the images that are shown when creating a new app in the Mendix Platform
 
 ![](attachments/howto/sharing_appstore_addcontent_starterapp.png)
 

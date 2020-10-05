@@ -1,9 +1,9 @@
 ---
 title: "Google Analytics"
 category: "Widgets"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the Google Analytics widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "google analytics", "eventtracker", "webmaster", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -51,7 +51,7 @@ MasterPageTracker should only be used once in your Mendix application.
 This widget must be inside a data view.
 {{% /alert %}}
 
-* **Url** – the URL that should be shown in the Google Analytics overview
+* **URL** – the URL that should be shown in the Google Analytics overview
 * **Title ** – the title that should be shown in the Google Analytics overview
 
 For example, if the **Url** is */test/${name}*, then if the URL is parsed, *${name}* will be replaced by the value of the current object's attribute, which is defined in the **Data Source** tab. 

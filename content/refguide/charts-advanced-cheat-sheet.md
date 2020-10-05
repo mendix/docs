@@ -13,7 +13,7 @@ Standard charts provide the most common settings through the widget configuratio
 
 This cheat sheet with JSON snippets will provide some samples of advance configuration.
 
-The full reference can be found at [https://plot.ly/javascript/](https://plot.ly/javascript/).
+The full reference can be found at [https://plot.ly/javascript/](https://plot.ly/javascript/). The chart widgets support plotly.js version 1.47.4.
 
 When the advanced configuration does not suffice have a look at the [Any Chart](https://appstore.home.mendix.com/link/app/106437/Mendix/Any-Chart) widget in the App Store.
 
@@ -623,7 +623,7 @@ Displays two different X axes with different scales.
 
 ## 4 Configurations Options (All Charts) {#config-options}
 
-The following configuration options are available in all charts.
+The following configuration options are available in all charts (presented here as an example with formatting for the `nl` `locale`):
 
 ```json
 {
@@ -632,11 +632,57 @@ The following configuration options are available in all charts.
   "modeBarButtonsToRemove": [ "sendDataToCloud", "lasso2d", "select2d", "hoverClosestCartesian", "hoverCompareCartesian", "toggleSpikelines" ],
   "locale": "nl",
   "locales": {
-    "nl": {
-      "dictionary": {
-        "Download plot as a png": "Opslaan als PNG"  
-      }
-    }
-  }
- }
+		"nl": {
+			"dictionary": {
+				"Download plot as a png": "Opslaan als PNG"
+			},
+			"format": {
+				"days": ["zondag",
+				"maandag",
+				"dinsdag",
+				"woensdag",
+				"donderdag",
+				"vrijdag",
+				"zaterdag"],
+				"shortDays": ["zon",
+				"maa",
+				"din",
+				"woe",
+				"don",
+				"vri",
+				"zat"],
+				"months": ["januari",
+				"februari",
+				"maart",
+				"april",
+				"mei",
+				"juni",
+				"juli",
+				"augustus",
+				"september",
+				"oktober",
+				"november",
+				"december"],
+				"shortMonths": ["jan",
+				"feb",
+				"maa",
+				"apr",
+				"mei",
+				"jun",
+				"jul",
+				"aug",
+				"sep",
+				"okt",
+				"nov",
+				"dec"],
+				"date": "%d-%m-%Y",
+				"datetime": "%d-%m-%Y %H:%M",
+				"year": "%Y",
+				"month": "%b %Y",
+				"dayMonth": "%d %b",
+				"dayMonthYear": "%d %b %Y"
+			}
+		}
+	}
+}
 ```

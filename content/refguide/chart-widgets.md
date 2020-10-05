@@ -9,9 +9,9 @@ tags: ["Charts", "Any Chart", "Studio Pro", "Pages"]
 
 Chart widgets allow you to display data series visually on your app pages in a wide range of charts.
 
-[Basic Charts](#basic-charts) are included in Mendix starter apps based on Atlas UI. They can be included in other Mendix apps by downloading them from the Mendix App Store here: https://appstore.home.mendix.com/link/app/105695/.
+[Basic Charts](#basic-charts) are included in Mendix app templates based on Atlas UI. They can be included in other Mendix apps by downloading them from the Mendix App Store (for more information, see [Charts](/appstore/widgets/charts)). Basic charts are based on version 1.47.4 of plotly.js.
 
-[Any Chart](#any-chart) gives much more control and implements all the features of [plotly.js](https://plot.ly/). The *Any chart* widget can be included in your Mendix app by downloading it from the Mendix App Store here: https://appstore.home.mendix.com/link/app/106517/.
+[Any Chart](#any-chart) gives much more control and allows more flexible use of the features of [plotly.js](https://plot.ly/). The [Any Chart](/appstore/modules/any-chart) widget can be included in your app. See the widget description in the App Store to see what version of plotly.js is supported.
 
 ## 2 Basic Charts {#basic-charts}
 
@@ -30,13 +30,15 @@ The widgets contain several settings which can be changed in Studio Pro to custo
 
 If the standard chart settings are not sufficient for your purposes, see [Chart Advanced Cheat Sheet](charts-advanced-cheat-sheet) for information on advanced configuration of your basic charts.
 
+Note that only features up to version 1.47.4 of plotly.js can be used when configuring charts.
+
 **Dynamic Series Chart**
 
 From version 1.4 of the basic charts you can create charts with a variable number of data series. For instructions on how to do this, see [How to Create a Dynamic Series Chart](/howto/front-end/charts-dynamic-series).
 
 ## 3 Any Chart {#any-chart}
 
-With *Any Chart* you can build all the chart types that are possible with Plotly.js. If you want to build a chart which is not available in the Basic charts, *Any Chart* is your friend.
+With *Any Chart* you can build all the chart types that are possible with Plotly.js up to the version supported by the widget (see the widget description in the App Store for more details). If you want to build a chart which is not available in the Basic charts, *Any Chart* is your friend.
 
 {{% image_container width="400" %}}![Sample Contour Chart made with Any Chart](attachments/charts/contour.png){{% /image_container %}}
 

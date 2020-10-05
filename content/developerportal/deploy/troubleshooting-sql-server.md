@@ -4,6 +4,14 @@ parent: "mendix-on-windows-microsoft-sql-server"
 menu_order: 80
 ---
 
+## 1 Introduction
+
+This document covers various errors you might encounter when using SQL Server, and offers suggestions on how to resolve them.
+
+## 2 Issues
+
+### 2.1 Read Committed Snapshot
+
 ```
 Error while executing queries
 ALTER DATABASE [YourDatabase] SET READ_COMMITTED_SNAPSHOT ON;
@@ -11,6 +19,8 @@ CREATE ASSEMBLY [Mendix.SqlServerExtensions] FROM [a dll file] WITH PERMISSION_S
 ```
 
 In order to set **Read Committed Snapshot** or to create an assembly, the user will need to have the `db_ddladmin` role. For each new Mendix database, the Read Committed Snapshot configuration must be enabled. The assembly query is only executed once per database server instance, and is used by all Mendix applications.
+
+### 2.2 Create Function
 
 ```
 Error while executing query
@@ -21,12 +31,18 @@ This permission is granted implicitly to the `db_ddladmin` and `db_owner` fixed 
 
 In general if the user has the the `db_owner` role for the database he will have sufficient privileges to executing this query. 
 
+### 2.3 JDBC Connections
+
+#### 2.3.1 Time Out
+
 ```
 Opening JDBC connection to yourServerAddress\YourInstanceName:0 failed with SQLState: 08S01 Error code: 0 Message: The connection to the host localhost, named instance sqlexpress2008 failed.
 Error: "java.net.SocketTimeoutException: Receive timed out". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434\.  For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host. Retrying...(1/4)
 ```
 
 If the server address and instance name are correct, then validate if the service “SQL Server Browser” is running. When this process is not running start the service. If you don’t want to use “SQL Server Browser” you need to include the port of the database instance in your URL as well.
+
+#### 2.3.2 Login Failed
 
 ```
 Opening JDBC connection to localhost\sqlexpress2008:0 failed with SQLState: S0001 Error code: 18470
@@ -35,7 +51,7 @@ Message: Login failed for user 'YourDatabaseUser'. Reason: The account is disabl
 
 Validate the ‘Status’ of the User. One of the login properties of the user is probably configured to be Deny or Disabled. Both permissions should be configured as Grant/Enabled.
 
-## Read More
+## 3 Read More
 
 *   [Setting Up the Database User](setting-up-the-database-user)
 *   [Restoring a SQL Server Database](restoring-a-sql-server-database)

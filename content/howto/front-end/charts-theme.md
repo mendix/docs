@@ -19,7 +19,7 @@ The look of individual **Charts** widgets can be fine tuned with advanced settin
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Download the latest [Chart Widget](https://appstore.home.mendix.com/link/app/105695/) from the Mendix App Store
+* Download the latest [Chart Widget](/appstore/widgets/charts) from the Mendix App Store
 * Setup a chart: see [How to create a charts](charts-basic-create)
 
 ## 3 Creating a Chart Theme
@@ -85,7 +85,7 @@ To add a theme file which will apply to all charts in the app, follow these step
     {{% alert type="info" %}}Please note that<br/>
     * the file name is case sensitive<br/>
     * the file extension is `json`<br/>
-    * the file must contain a *json* object, even if this is empty – for example `{ }`
+    * the file must contain a *json* object, even if this is empty — for example `{ }`
     {{% /alert %}}
 
 ### 3.3 Changing the Font Globally

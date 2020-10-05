@@ -12,7 +12,8 @@ Grid columns allow you to set properties for a [data grid](data-grid) or [refere
 
  An example of grid column properties is represented in the image below: 
 
-![](attachments/data-widgets/column-properties.png)
+{{% image_container width="250" %}}![](attachments/data-widgets/column-properties.png)
+{{% /image_container %}}
 
 Grid column properties consist of the following sections:
 
@@ -73,7 +74,7 @@ If you choose **Custom** as the date format (see above), this property determine
 
 #### 2.4.1 Caption
 
-The caption of a column is the text that appears as a header above the rows. This is a translatable text. See [Translatable Texts](translatable-texts).
+The caption of a column is the text that appears as a header above the rows. This is a translatable text. See [Language Menu](translatable-texts).
 
 #### 2.4.2 Editable
 
@@ -100,7 +101,7 @@ Note that all objects will be taken into account, and not just the ones on the c
 
 #### 2.4.4 Aggregate Caption
 
-The aggregate caption is the text that appears in front of the computed value. This is a translatable text. See [Translatable Texts](translatable-texts).
+The aggregate caption is the text that appears in front of the computed value. This is a translatable text. See [Language Menu](translatable-texts).
 
 {{% alert type="info" %}}
 

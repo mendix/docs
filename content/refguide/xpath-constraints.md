@@ -4,7 +4,7 @@ parent: "xpath"
 tags: ["studio pro"]
 ---
 
-## 1 Overview
+## 1 Introduction
 
 A constraint can be added to any Xpath query to filter the data retrieved. It should always take the form of a valid [expression](xpath-expressions). This should consist of one or more variables combined with [operators](xpath-operators), [functions](xpath-constraint-functions), [keywords or system variables](xpath-keywords-and-system-variables).
 
@@ -17,6 +17,10 @@ For example, this query retrieves all customers whose name is equal to Jansen:
 The first half of the query is responsible for defining the entity to retrieve and the second half (between the brackets ) *constrains* the data to a certain attribute. Note that the constraint is (and should always be) enclosed by brackets.
 
 Multiple constraints can be added to a single query, this is true for all queries with the exception of the `id` query. This is most commonly done by the simple expedient of opening a new set of brackets after closing the first.
+
+{{% alert type="warning" %}}
+In Studio Pro, you do not write complete queries, only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']`, you only need to write `[Name='Jansen']` in the context of a customer. In Java, you do need to write the whole queries, including the double slashes (`//`) and the entity name.
+{{% /alert %}}
 
 ## 2 Examples
 

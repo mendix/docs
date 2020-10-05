@@ -192,6 +192,5 @@ In this section, you will create a microflow to hypothetically send data back to
 * [Importing Excel Documents](importing-excel-documents)
 * [Exposing a Web Service](expose-a-web-service)
 * [Selenium Support](selenium-support)
-* [Synchronizing User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [Importing XML Documents](importing-xml-documents)
 

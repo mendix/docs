@@ -1,137 +1,77 @@
 ---
 title: "8.3"
-parent: "metamodel"
-#When updating, remember to update the Latest Mendix Releases file
+parent: "metamodel-8"
 ---
-
-These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel) version 8.3.
 
 ## 8.3.0
 
 **Release date: October 25th, 2019**
 
-## CodeActions
+### CodeActions
 
-### CodeAction (ModelUnit)
+#### CodeAction (ModelUnit)
 
-#### Property 'actionReturnType'
+* We changed the default value of the `actionReturnType` property.
 
-* Changed the default value.
+#### VoidType (Element)
 
-### VoidType (Element)
+* We introduced this element.
 
-* Introduced.
+### DomainModels
 
-## DomainModels
+#### AssociationBase (Element)
 
-### AssociationBase (Element)
+* We introduced the `remoteSourceDocument` property.
 
-#### Property 'remoteSourceDocument'
+### Microflows
 
-* Introduced.
+#### JavaActionCallAction & MicroflowCallAction (Elements)
 
-## Microflows
+* We introduced the `outputVariableNameRuntime` property.
 
-### JavaActionCallAction (Element)
+### Rest
 
-#### Property 'outputVariableNameRuntime'
+#### PublishedODataService & PublishedRestService (ModelUnits)
 
-* Introduced.
+* We introduced the `authenticationTypesRuntime` property for **Authentication types supported by this service**.
 
-### MicroflowCallAction (Element)
+#### RestOperationParameter (Element)
 
-#### Property 'outputVariableNameRuntime'
+* We Introduced the `description` property for **A description of the parameter, to be used in documentation**.
 
-* Introduced.
+### CustomWidgets
 
-## Rest
+#### CustomWidgetType (Element)
 
-### PublishedODataService (ModelUnit)
+* We introduced the `helpUrl` property.
 
-#### Property 'authenticationTypesRuntime'
+#### WidgetValue (Element)
 
-* Introduced for **Authentication types supported by this service**.
+* We introduced the `dataSource` property.
 
-### PublishedRestService (ModelUnit)
+### Pages
 
-#### Property 'authenticationTypesRuntime'
+#### BuildingBlock (ModelUnit)
 
-* Introduced for **Authentication types supported by this service**.
+* We introduced the `platform` property.
 
-### RestOperationParameter (Element)
+#### DivContainer (Element)
 
-#### Property 'description'
+* We introduced the `onClickAction` property.
 
-* Introduced for **A description of the parameter, to be used in documentation**.
+#### ClientTemplate (Element)
 
-## CustomWidgets
+* We introduced the `fallback` property.
 
-### CustomWidgetType (Element)
+#### LayoutGrid (Element)
 
-#### Property 'helpUrl'
+* We changed the default value of the `rows` property.
 
-* Introduced.
+#### LayoutGridColumn (Element)
 
-### WidgetValue (Element)
+* We introduced the `tabletWeight`, `phoneWeight`, and `verticalAlignment` properties.
 
-#### Property 'dataSource'
+#### LayoutGridRow (Element)
 
-* Introduced.
-
-## Pages
-
-### BuildingBlock (ModelUnit)
-
-#### Property 'platform'
-
-* Introduced.
-
-### DivContainer (Element)
-
-#### Property 'onClickAction'
-
-* Introduced.
-
-### ClientTemplate (Element)
-
-#### Property 'fallback'
-
-* Introduced.
-
-### LayoutGrid (Element)
-
-#### Property 'rows'
-
-* Changed the default value.
-
-### LayoutGridColumn (Element)
-
-#### Property 'tabletWeight'
-
-* Introduced.
-
-#### Property 'phoneWeight'
-
-* Introduced.
-
-#### Property 'verticalAlignment'
-
-* Introduced.
-
-### LayoutGridRow (Element)
-
-#### Property 'columns'
-
-* Changed the default value.
-
-#### Property 'verticalAlignment'
-
-* Introduced.
-
-#### Property 'horizontalAlignment'
-
-* Introduced.
-
-#### Property 'spacingBetweenColumns'
-
-* Introduced.
+* We changed the default value of the `columns` property.
+* We introduced the `verticalAlignment`, `horizontalAlignment`, and `spacingBetweenColumns` properties.

@@ -2,16 +2,166 @@
 title: "Developer Portal"
 description: "Release notes for all project management parts of the Mendix Developer Portal"
 tags: ["developer portal", "buzz", "mendix profile"]
-#When updating, remember to update the Latest Mendix Releases file
+#This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes to the app project management functionality and other features of the Mendix Developer Portal. For more information, see the [Developer Portal Guide](/developerportal/index).
+These release notes cover changes to the app project management functionality and other features of the [Mendix Developer Portal](/developerportal/index).
 
 {{% alert type="info" %}}
 For release notes on Mendix Cloud and deployment options, see [Deployment](deployment).
 {{% /alert %}}
 
+## 2020
+
+### October 4th, 2020
+
+#### Improvements
+
+* We redesigned the [story details](/developerportal/collaborate/stories#story-details) page and made it available for Public Beta usage. You can use the new design when the new story UI is enabled. Please note that it is currently not possible to add or manage [labels](/developerportal/collaborate/stories#label). This functionality will be released in the future.
+* When you add a [task](/developerportal/collaborate/stories#adding-task) to a commit of your app model, we now show the revision in the revision overview of the story details. Clicking the task will bring you to the story details page to which the task belongs.
+* We simplified the [Company Settings](/developerportal/company-app-roles/company#company-settings) tab of the **Company** page by removing some barely used attributes.
+
+#### Fixes
+
+* We fixed an issue where the default avatar of an App Team member who committed a revision was not properly displayed in the revision overview of the story details.
+* We fixed an issue where a [Company Admin](/developerportal/company-app-roles/companyadmin-settings) was no longer able to open the [General](/developerportal/settings/general-settings) settings of an app project they for an App Team in which they were not a member.
+* We repaired a dead link to the documentation on the [App User Management](/developerportal/settings/general-settings#managing-app-users) page.
+
+### August 25th, 2020
+
+#### Improvements
+
+* We reintroduced the read-only authorization for the [user story](/developerportal/collaborate/stories) overview.
+
+#### Fixes
+
+* We fixed an issue where, under certain circumstances, email notifications were not sent on [story comment](/developerportal/collaborate/stories#story-details) updates.
+
+### August 11th, 2020
+
+#### Improvements
+
+* We made some small performance improvements.
+
+#### Fixes
+
+* We placed a deprecation warning in a file hosted by the Developer Portal that is used in old versions of the [Mendix Feedback](/appstore/widgets/mendix-feedback#below) widget. As of October 1st, 2020, we will end support for Mendix Feedback widget version 5 or below. Please always keep your Feedback widget up-to-date to ensure the best experience for your users.
+* We fixed an issue where you could move a user story to a different Sprint without specifying the target Sprint.
+
+### July 28th, 2020
+
+#### Fixes
+
+* We fixed an issue where email notifications on [feedback](/developerportal/collaborate/feedback) items were not sent under certain circumstances.
+
+### July 13th, 2020
+
+#### Improvements
+
+* We increased the performance on opening the buzz page.
+* We changed the default avatar of a user profile from the Mendix logo to an industry standard user-icon.
+
+#### Fixes
+
+* We fixed a bug where, under certain circumstances, the "View App" was disabled even though it should have been enabled.
+
+### June 28th, 2020
+
+#### Improvements
+
+* We implemented the second increment in renaming the default **End-user** App Team role to [Guest](/developerportal/company-app-roles/index#app-team-roles).
+
+#### Fixes
+
+* We fixed an issue where it was possible to change the end date of a closed Sprint.
+
+### June 15th, 2020
+
+#### Improvements
+
+* The [new Stories UI](/developerportal/collaborate/stories) has been improved with various sections. The [old Stories UI](/developerportal/collaborate/stories#old) will be made unavailable soon. We encourage you to turn your tasks that are still available in the old Stories UI into new stories before the old UI is inaccessible.
+* We improved performance on story-related actions such as drag-and-drop and status changes on large app projects with many deleted items.
+* We renamed the default **End-User** App Team role to [Guest](/developerportal/company-app-roles/index#app-team-roles) to better distinguish App Team roles from app user roles.
+* We removed the list appearance of the [My Company's Apps](/developerportal/apps-list/#my-company-apps) page.
+
+#### Fixes 
+
+* We fixed a bug where the background did not display properly on mobile browsers.
+* We fixed a bug where changes to a story title or description were saved when clicking **Cancel**.
+
+### May 27th, 2020
+
+#### Improvements
+
+* When you [delete a story or task](/developerportal/collaborate/stories#deleting) on the [Stories](/developerportal/collaborate/stories) page, it is now irreversibly removed from the system.
+* We removed the ability to revert story-related changes in an app project's history.
+* We removed the ability to delete several stories at once on the **Stories** page.
+* We simplified story maintenance by preventing nested tasks.
+* We removed the read-only permission on the stories board to bring the Developer Portal in line with industry standards.
+* We made small improvements in the look and feel of the Developer Portal.
+
+#### Fixes
+
+* We fixed a bug where the calendar icon on date/time input fields was not displayed properly.
+* We fixed a bug where the star icon on your [favorite app projects](/developerportal/apps-list/#favoriting) was not displayed properly.
+
+### May 22nd, 2020
+
+#### Improvements
+
+* The [Stories](/developerportal/collaborate/stories) template functionality has been replaced with the **Clone** functionality in the [new UI option (beta)](/developerportal/collaborate/stories#story-actions).
+
+### May 7th, 2020
+
+#### Improvements
+
+* We added a new story action called **Clone** to the new beta UI. For more information, see the [New UI Option (Beta)](/developerportal/collaborate/stories#story-actions) section of *Stories*.
+
+### February 21st, 2020
+
+#### Improvements
+
+* We fixed an issue where [favorited apps](/developerportal/apps-list/#favoriting) still showed up in the favorites view on the [My Apps](/developerportal/apps-list/) page after being deleted.
+* We made performance improvements to the **My Apps** page.
+* We fixed an issue where the description field did not expand properly when creating a new [story](/developerportal/collaborate/stories).
+
+### February 6th, 2020
+
+#### Improvements
+
+* We implemented a new design for the [Create App](/developerportal/#buzz) flow.
+* When creating a new app, you can now search through templates for feature demos, academy training apps, and ready-made apps.
+* After selecting an app template, you can now choose a nice icon for your app project.
+
 ## 2019
+
+### December 23rd, 2019
+
+#### Improvements
+
+* We made minor improvements to the process of creating a new app.
+
+#### Fixes
+
+* We fixed an issue where you were redirected to the **Comments** page from the **Stories** page.
+
+### December 18th, 2019
+
+#### Improvements
+
+* We made some minor improvements to the style of the [Stories](/developerportal/collaborate/stories#story-actions) beta version. This release fixes issues regarding batch actions.
+
+### December 13th, 2019 
+
+#### Improvements
+
+* We redesigned the [Stories](/developerportal/collaborate/stories#story-actions) page with a brand new UI and improved stability. The new UI can be accessed by clicking **Enable new UI**. This is a [beta version](/releasenotes/beta-features/).
+
+### December 5th, 2019
+
+#### Improvements
+
+* We made some minor styling improvements on [Buzz](/developerportal/collaborate/buzz).
 
 ### November 21st, 2019
 
@@ -30,7 +180,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 #### Improvements
 
 * We fixed an issue that would prevent users from inviting email addresses that contain capital letters.
-* We fixed an issue that occassionally triggered an error message during signup.
+* We fixed an issue that occasionally triggered an error message during signup.
 * We made various small performance improvements on the Developer Portal.
 
 ### September 19th, 2019
@@ -38,7 +188,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 #### Launchpad Removal & App User Management Update
 
 * We removed the old launchpad page, as we have moved to a new SSO architecture. The old URL `launchpad.mendix.com` now links to your [My Apps](/developerportal/apps-list/) page.
-* We moved the app user management functionality of the launchpad to the **General** app settings in the Developer Portal. For more information, see the [Managing App Users](/developerportal/settings/general-settings#managing-app-users) section of *How to Manage General App Settings*.
+* We moved the App User management functionality of the launchpad to the **General** app settings in the Developer Portal. For more information, see the [Managing App Users](/developerportal/settings/general-settings#managing-app-users) section of *How to Manage General App Settings*.
 
 ### August 9th, 2019
 
@@ -101,7 +251,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Feedback & Support
 
-* We removed the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) from the Developer Portal. If you want to report an issue or ask a question, please submit a ticket at [Mendix Support](https://support.mendix.com).
+* We removed the [Mendix Feedback](/appstore/widgets/mendix-feedback) widget from the Developer Portal. If you want to report an issue or ask a question, please submit a ticket at [Mendix Support](https://support.mendix.com).
 
 ### January 3rd, 2019
 
@@ -323,7 +473,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 #### Fixes
 
 * A story in a completed Sprint no longer disappears when you open the details view.
-* The Mendix Feedback Widget now supports reporting feedback from pages with very long URLs.
+* The Mendix Feedback widget now supports reporting feedback from pages with very long URLs.
 
 ### June 7th, 2017
 
@@ -367,7 +517,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 #### New Features
 
 * We added the **View App** and **Edit App** buttons. The **View App** button brings you to the deployment URL of your Free App, or, if you have test, acceptance, and production environments, it lets you choose between these environments using a drop-down menu. The **Edit App** button will launch the Desktop Modeler if you have it installed; if you are part of the partner group testing the Web Modeler, then you'll have the choice to directly open your app in the WM.
-* We redesigned the interface. The new look sports light colors and a responsive layout. Menu items pertaining to your apps have been moved from the top to the left-hand side. Users with permissions to access restricted parts of the Mendix App Platform can navigate there using the **Profile** menu, which opens when you click your avatar in the top-right corner of the screen.
+* We redesigned the interface. The new look sports light colors and a responsive layout. Menu items pertaining to your apps have been moved from the top to the left side. Users with permissions to access restricted parts of the Mendix App Platform can navigate there using the **Profile** menu, which opens when you click your avatar in the top-right corner of the screen.
 * We improved the breadcrumbs. A header on top of the Mendix App Platform will show you where you are in the navigation structure.
 * The **Feedback** widget can now be used when opened on small screen sizes (for example, on a  smartphone).
 * The **Guidance** sidebar has been replaced by the **Intercom** widget.

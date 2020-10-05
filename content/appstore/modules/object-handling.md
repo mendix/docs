@@ -1,9 +1,9 @@
 ---
 title: "Object Handling"
 category: "Modules"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the Object Handling module, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "object handling", "community commons", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -50,4 +50,4 @@ This helper Java class can be used in Java actions:
 
 ## 3 Read More
 
-* [How to Test Microflows Using the Unit Testing Module](/howto/testing/testing-microflows-using-the-unittesting-module)
+* [How to Test Microflows Using the Unit Testing Module](https://docs.mendix.com/howto/testing/testing-microflows-using-the-unittesting-module)

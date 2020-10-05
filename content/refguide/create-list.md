@@ -1,6 +1,7 @@
 ---
 title: "Create List"
 parent: "list-activities"
+menu_order: 3
 tags: ["studio pro"]
 ---
 
@@ -10,22 +11,37 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 ## 1 Introduction
 
-This activity creates a list which is empty.
+The **Create list** activity creates an empty list.
 
-{{% alert type="info" %}}
+## 2 Properties
 
-See [Common Properties](microflow-element-common-properties) for properties that all microflow activities share (f\or example, caption). This page only describes the properties specific to the action.
+An example of create list properties is represented in the image below:
 
-{{% /alert %}}
+![create list properties](attachments/list-activities/create-list-properties.png)
 
-## 2 Action Properties
+There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
-### 2.1 Entity
+The create list properties pane consists of the following sections:
 
-The entity of the objects list. All objects in the list should be of the same type.
+* [Action](#action)
+* [Common](#common)
 
-## 3 Output Properties
+## 3 Action Section{#action}
 
-### 3.1 List
+The **Action** section of the properties pane shows the action associated with this activity.
+
+You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
+
+You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+
+### 3.1 Entity
+
+The entity of the objects in the list. All objects in the list must be of the same type.
+
+### 3.2 List Name
 
 This is the name of the list which can be used by all activities that follow this activity.
+
+## 4 Common Section{#common}
+
+{{% snippet file="refguide/microflow-common-section-link.md" %}}

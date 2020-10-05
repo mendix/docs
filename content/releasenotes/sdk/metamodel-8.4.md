@@ -1,157 +1,96 @@
 ---
 title: "8.4"
-parent: "metamodel"
-#When updating, remember to update the Latest Mendix Releases file
+parent: "metamodel-8"
 ---
-
-These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel) version 8.4.
 
 ## 8.4.0
 
 **Release date: November 22nd, 2019**
 
-## CodeActions
+### CodeActions
 
-### StringTemplateParameterType (Element)
+#### StringTemplateParameterType (Element)
 
-* Introduced.
+* We introduced this element.
 
-## JavaScriptActions
+### JavaScriptActions
 
-### NanoflowJavaScriptActionParameterType (Element)
+#### NanoflowJavaScriptActionParameterType (Element)
 
-* Introduced.
+* We introduced this element.
 
-## Microflows
+### Microflows
 
-### JavaActionParameterMapping (Element)
+#### JavaActionParameterMapping (Element)
 
-#### Property 'argumentRuntime'
+* We deleted the `argumentRuntime` property.
 
-* Deleted.
+#### JavaScriptActionCallAction & JavaScriptActionParameterMapping (Elements)
 
-### JavaScriptActionCallAction (Element)
+* We removed the experimental status of these elements.
 
-* Removed experimental status.
+#### StringTemplateParameterValue & PushToClientAction (Elements)
 
-### JavaScriptActionParameterMapping (Element)
+* We introduced these elements.
 
-* Removed experimental status.
+#### ExpressionBasedCodeActionParameterValue (Element)
 
-### StringTemplateParameterValue (Element)
+* We introduced the `valueExpression` property.
 
-* Introduced.
+### Nanoflows
 
-### ExpressionBasedCodeActionParameterValue (Element)
+#### NanoflowParameterValue (Element)
 
-#### Property 'valueExpression'
+* We introduced this element.
 
-* Introduced.
+### Rest
 
-### PushToClientAction (Element)
+#### PublishedODataService (ModelUnit)
 
-* Introduced.
+* We introduced the `summary` property as a one-line summary description of the service.
+* We introduced the `description` property as a multi-line description of the service.
 
-## Nanoflows
+#### ConsumedODataService (ModelUnit)
 
-### NanoflowParameterValue (Element)
+* We introduced the `headersMicroflow` property as a microflow that provides headers to pass to the service.
 
-* Introduced.
+### CustomWidgets
 
-## Rest
+#### WidgetValueType (Element)
 
-### PublishedODataService (ModelUnit)
+* We introduced the `dataSourceProperty` property.
 
-#### Property 'summary'
+### Navigation
 
-* Introduced as a one-line summary description of the service.
+#### NavigationDocument (ModelUnit)
 
-#### Property 'description'
+* We deleted the `schemas` property.
 
-* Introduced as a multi-line description of the service.
+### Pages
 
-### ConsumedODataService (ModelUnit)
+#### BuildingBlock (ModelUnit)
 
-#### Property 'headersMicroflow'
+* We added the public `platform` property.
 
-* Introduced as a microflow that provides headers to pass to the service.
+#### MicroflowParameterMapping & NanoflowParameterMapping (Elements)
 
-## CustomWidgets
+* We introduced the `variable` property.
+* We deleted the `widget` property. Use the `variable` property instead.
+* We deleted the `useAllPages` property. Use `variable` instead.
 
-### WidgetValueType (Element)
+#### PageVariable (Element)
 
-#### Property 'dataSourceProperty'
+* We introduced this element.
 
-* Introduced.
+#### Snippet (ModelUnit)
 
-## Navigation
+* We added the public `type` property.
 
-### NavigationDocument (ModelUnit)
+#### RetrievalSchema (Element)
 
-#### Property 'schemas'
+* We deleted this element.
 
-* Deleted.
+#### RetrievalQuery (Element)
 
-## Pages
-
-### BuildingBlock (ModelUnit)
-
-#### Property 'platform'
-
-* Added public.
-
-### MicroflowParameterMapping (Element)
-
-#### Property 'variable'
-
-* Introduced.
-
-#### Property 'widget'
-
-* Deleted. Use variable instead (see above).
-
-#### Property 'useAllPages'
-
-* Deleted. Use variable instead (see above).
-
-### NanoflowParameterMapping (Element)
-
-#### Property 'variable'
-
-* Introduced.
-
-#### Property 'widget'
-
-* Deleted. Use variable instead (see above).
-
-#### Property 'useAllPages'
-
-* Deleted. Use variable instead (see above).
-
-### PageVariable (Element)
-
-* Introduced.
-
-### Snippet (ModelUnit)
-
-#### Property 'type'
-
-* Added as public.
-
-### RetrievalSchema (Element)
-
-* Deleted.
-
-### RetrievalQuery (Element)
-
-#### Property 'widgetName'
-
-* Introduced.
-
-#### Property 'usedAssociations'
-
-* Introduced.
-
-#### Property 'schemaId'
-
-* Deleted.
+* We introduced the `widgetName` and `usedAssociations` properties.
+* We deleted the `schemaId` property.

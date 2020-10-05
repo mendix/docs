@@ -5,7 +5,7 @@ category: "Studio Pro"
 
 To download the Windows Service, go to the Desktop Modeler page in the [Mendix App Store](https://appstore.home.mendix.com/link/modelers) and open **Related downloads**.
 
-## 4.6
+## 4.6{#4_6}
 
 **Release date: August 8, 2019**
 

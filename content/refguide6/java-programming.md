@@ -35,7 +35,7 @@ In the Java code that you write for your Java actions you can use the Mendix Jav
 
 {{% alert type="info" %}}
 
-You can find the Javadoc at [apidocs.mendix.com](http://apidocs.mendix.com/6/runtime/) or in the directory you installed Mendix in, for example: C:\Program Files\Mendix\6.0.0\runtime\javadoc
+You can find the Javadoc at [apidocs.rnd.mendix.com](http://apidocs.rnd.mendix.com/6/runtime/index.html) or in the directory you installed Mendix in, for example: C:\Program Files\Mendix\6.0.0\runtime\javadoc
 
 {{% /alert %}}
 
@@ -46,7 +46,3 @@ A tutorial with some examples can be found at the [Java API Tutorial](/howto6/ja
 ## Using Eclipse as an environment to write your Mendix Java actions
 
 See [Using Eclipse](using-eclipse).
-
-## Java actions in the cloud
-
-See [Java in the Cloud](/developerportal/deploy/java-in-the-cloud).

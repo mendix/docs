@@ -59,13 +59,13 @@ You can find the list of default actions and properties that need to be configur
 
 | Button         | Default Action | Properties to be Configured                                  |
 | -------------- | -------------- | ------------------------------------------------------------ |
-| Open Page      | Page           | **Page** (Select page) <br />If you want to create a new object and pass it as a context to the selected page, enable **Create Object** (disabled by default) and select an **Entity**. For more information on see section the [Create Object Option](page-editor-widgets-events-section#create-object-option) section in *Events Section*. |
+| Open Page      | Page           | **Page** (Select page) <br />If you want to create a new object and pass it as a context to the selected page, enable **Create Object** (disabled by default) and select an **Entity**. For more information on see section the [Create Object Option](page-editor-widgets-events-section#create-object-option) section in *Events Section*. <br /> **Close pages** <br />Control the number of pages to close after navigating to the target page. |
 | Call Microflow | Microflow      | **Microflow** (Select microflow)                             |
-| Create Object  | Create Object  | **Page** (Select page) and **Entity** (Select entity)        |
+| Create Object  | Create Object  | **Page** (Select page) and **Entity** (Select entity) <br /> **Close pages** <br />Control the number of pages to close after navigating to the new/edit page.       |
 | Save Changes   | Save Changes   | None                                                         |
 | Delete Object  | Delete Object  | None                                                         |
 | Cancel Changes | Cancel Changes | None                                                         |
-| Close Page     | Close Page     | None                                                         |
+| Close Page     | Close Page     | **Close pages** Control the number of pages to close                                                         |
 | Sign Out       | Sign Out       | None                                                         |
 | Open Link      | Open Link      | For **Open Link** you need to configure the following properties: <ul><li>**Link Type** (Default: *Web*)</li><li>**Source** (Default: *Use literal value*)</li><li>**Url**</li></ul> For more information on these properties, see the [Open Link Action](page-editor-widgets-events-section#open-link-action) section in *Events Section*. |
 

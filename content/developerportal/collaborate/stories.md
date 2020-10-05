@@ -172,19 +172,20 @@ When you click a story title, the **Story Details** page opens:
 
 On this page, you can perform a number of actions:
 
-* View details such as **Type** and date **Created**
-* Click **Edit** to edit the **Title**, **Description**, **Story type**, **Story points**, **Status**, and **Labels** of the story as well as see the history of edits made to the story
+* Change the **Title** or **Description** by clicking it
 * See the story's **Status** and click to update it (available statuses are **To-do**, **Running**, and **Done**)
-* View the **Sprint** that contains the story as well as move the story via **Move to Sprint** (for details, see the [Moving Stories](#move-stories) section below)
-* Click **Move to another app** to move the story to a different app project's backlog
-* Click **View history** to view the history of changes to the story
+* Change the **Story points**
+* See, add, and manage the **Tasks** of the story (you can mark them as **Done** by checking the box in front of the task)
+* Leave a **Comment** on the story to collaborate with your App Team
 
-Also on this page, you can access the following tabs:
+You can also do this following on this page:
 
-* **Tasks** – you can see the tasks that were added to the story here (for more information, see the [Adding a  Task to a Story](#adding-task) section below)
-* **Comments** – on this tab, you can view and add comments about the story to collaborate with your App Team
-* **Feedback** – here you can see the feedback item linked to the story (for details, see the [Adding a Feedback Item to Your Backlog](feedback#adding) section of *Feedback Management*)
-* **Revisions** –  on this tab, you can see the committed revision of the app project that is linked to the story (which is configured in the [Related stories](/refguide/commit-dialog#stories) tab of the **Commit** dialog box in Studio Pro)
+* **Move** a story to a different app project or Sprint (for details, see the [Moving Stories](#move-stories) section below)
+* **Duplicate** a story and its tasks, story points, status, and labels into a new user story
+* See the **Feedback** on which this story is based (if applicable; for details, see the [Adding a Feedback Item to Your Backlog](feedback#adding) section of *Feedback Management*)
+* See the committed **Revisions** linked to the story (which are configured in the [Related stories](/refguide/commit-dialog#stories) tab of the **Commit** dialog box in Studio Pro)
+* Click **History** to view the history of changes to the story
+* **Delete** the story
 
 ### 4.2 Moving a Story {#move-stories}
 
@@ -199,11 +200,10 @@ If you need to reorder stories or move a story to a different Sprint, there are 
 
 	![](attachments/stories/move-story-drag-new.jpg)
 
-* Click the story title to open the **Story Details** page, where you can select the Sprint to which you want to move the story from the **Move To Sprint** drop-down menu:
+* Click the story title to open the **Story Details** page, then click **Move Story**:
 
 	![](attachments/stories/move-story-details.png)
 	
-
 {{% alert type="info" %}}
 Moving a story will move the tasks as well.
 {{% /alert %}}

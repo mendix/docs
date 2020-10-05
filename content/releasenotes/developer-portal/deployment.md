@@ -10,6 +10,14 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### October 5th, 2020
+
+#### Mendix Cloud
+
+* In response to user feedback, we changed the way that you can control the target environment when deploying apps from Studio Pro
+    * You can now choose only to build the MDA without deploying to an environment
+    * The setting of the target environment (for Technical Contacts only) has been moved from the individual Environment Details pages to the Environments page of the app
+
 ### September 22nd, 2020
 
 #### Mendix Cloud v4

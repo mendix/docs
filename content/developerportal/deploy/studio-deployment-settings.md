@@ -11,7 +11,7 @@ tags: ["node","developer portal","deploy", "Studio", "settings", "target", "Mend
 If you have a licensed app in Mendix Cloud v4 which you want to deploy directly to an environment, you need to select a target environment where Mendix Studio and Mendix Studio Pro will deploy your app when you click **Publish** (for Studio) or **Deploy to Licensed Cloud Node** (for Studio Pro). For more information on licensed apps and environments, see [Mendix Cloud](mendix-cloud-deploy) and [Environments](environments).
 
 {{% alert type="info" %}}
-By default the target environment is set to *Build Only*, which means that your app will not be deployed directly to an environment.
+By default the target environment is set to *Build Only*, which means that your app will not be deployed directly to an environment from Studio Pro, and you will receive an error **No target selected** if you publish from Studio.
 
 When you deploy to a target environment from Mendix Studio Pro, the deployment will also restart the target environment.
 {{% /alert %}}
@@ -35,7 +35,9 @@ To select the target environment, do the following:
 
     {{% image_container width="400" %}}![Select Studios Target Dialog](attachments/studio-deployment-settings/setup-studios-deployment.png){{% /image_container %}}
 
-    {{% alert type="info" %}}If you do not want to deploy your app to an environment automatically from Studio or Studio Pro, choose the option **Build Only**. This will place your MDA in the **Deployment Package Repository** and you can deploy it from within the Developer Portal.{{% /alert %}}
+    {{% alert type="info" %}}If you do not want to deploy your app to an environment automatically from Studio Pro, choose the option **Build Only**. This will place your MDA in the **Deployment Package Repository** and you can deploy it from within the Developer Portal.
+    
+    If you choose **Build Only**, you will not be able to publish your app from Studio, but will get an error **No target selected**.{{% /alert %}}
 
 4. Click **Save**.
 

@@ -57,6 +57,28 @@ By default the title of the page is determined by the page title property of the
 
 This feature allows you to re-use the same page for the **New** and **Edit** buttons of a [data grid](data-grid). By simply setting the titles to, for example, *New Customer* and *Edit Customer*, you can save yourself the trouble of duplicating pages.
 
+### 3.4 Close Pages
+
+{{% alert type="info" %}}
+
+This option is only available for native mobile and was introduced with Mx8.14.
+{{% /alert %}}
+
+Often there is a need to have control of the history, e.g. which page is shown see when the user presses the hardware back button on Android or when the users does a swipe to go back gesture (swipe from left to right).
+These actions generally will only close a single page in the current stack.
+The 'Close Pages' setting provides more control over this behavior.
+
+*source page*: The page you are navigating _from_
+
+*target page*: The page you are navigating _to_
+
+| Value | Description |
+| --- | --- |
+| None | Do not remove any pages from history. This is the default behavior.|
+| Single | After navigating to the *target page*, remove the *source page* from history. |
+| Multiple | After navigating to the *target page*, remove the *source page* and one or more pages before it from history. The total number of pages to be removed can be configured using an expression. |
+| Clear history | Prevent the user from navigating back altogether. This is especially useful when navigating away from e.g. a login or tutorial flow.
+
 ## 4 Common Section{#common}
 
 {{% snippet file="refguide/microflow-common-section-link.md" %}}

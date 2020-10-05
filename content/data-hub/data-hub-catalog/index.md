@@ -12,9 +12,9 @@ The Data Hub Catalog functionality is enhanced by the [Data Hub Landscape](../da
 
 ## 2 Data Hub Screen {#data-hub-home}
 
-From the [Data Hub](https://hub.mendix.com) screen, you can carry out the major functions of Data Hub. Data Hub is also integrated in Mendix Studio Pro to find and connect to shared data sources in your apps. For further details on using Data Hub in Studio Pro, see [Data Hub Pane](/refguide/data-hub-pane) in the *Studio Pro Guide*.
+From the [Data Hub](https://hub.mendix.com) screen, you can carry out the major functions of Data Hub: 
 
-{{% todo %}}[AD: screenshot missing for data-hub-home - add new one]{{% /todo %}}
+![Data Hub screen](../share-data/attachments/share-data/data-hub-home.png)
 
 From the Data Hub screen, you can navigate to the following tabs:
 
@@ -24,8 +24,12 @@ From the Data Hub screen, you can navigate to the following tabs:
 From the Data Hub screen, you can do the following:
 
 * **Search** –  search for registered services and entities using the **Search** box or clicking the suggested **Tags**
+
 * **Register a new service** – manually register non-Mendix OData v4 services in the Data Hub Catalog (for further details, see the [Manually Registering OData V4 Services](register#registration-form) section of *How to Register Data Assets*)
+
 * **Most popular services** – view directly the most popular services being consumed and the datasets that are available through these services
+
+Data Hub is also integrated in Mendix Studio Pro to find and connect to shared data sources in your apps. For further details on using Data Hub in Studio Pro, see [Data Hub Pane](/refguide/data-hub-pane) in the *Studio Pro Guide*.
 
 ## 3 Using the Data Hub Catalog
 

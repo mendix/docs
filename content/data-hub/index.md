@@ -28,7 +28,7 @@ Mendix Data Hub has components to enable the flexible sharing of entities. The f
 6. The consuming application directly connects to the source system (as defined in the published service metadata) to use the data associated with the consumed entity.
 7. The [Data Hub Landscape](data-hub-landscape/index) enables users to see the dependencies between components and the relevance of data and to ascertain data lineage.
 
-## 3 Roles in Data Hub
+## 3 Roles in Data Hub{#data-hub-roles}
 
 In Mendix Data Hub, governance is the cornerstone. Curation of shared assets is essential for defining how the shared data assets can be used, identifying the relevance to users, ensuring that the resources can be found by the right users, and managing the accessibility, security and confidentiality levels of the shared data.
 

@@ -6,13 +6,9 @@ description: "Introduces the processes and properties of the Mendix Data Hub Cat
 tags: ["data hub", "data hub catalog"]
 ---
 
-{{% todo %}}[PC-704 Discoverability]{{% /todo %}}
-
 ## 1 Introduction
 
-Finding the right data to use in your app is made easier by the Data Hub Catalog search functionality. The metadata for a registered service is displayed in the **Search Details** screen to help in identifying the correct data source to use to use in your app development. 
-
-{{% todo %}}[AD: please verify that "Search Details" is in the UI to justify capitalizing/bolding; also add a cross-reference to doc where that screen is described more fully (if any).]{{% /todo %}}
+Finding the right data to use in your app is made easier by the Data Hub Catalog search functionality. The metadata for a registered service is displayed in the [**Search Details**](#search-details) screen to help in identifying the correct data source to use to use in your app development. 
 
 You can start searching from the **Data Hub** [Home](#data-hub-home) page or click the Data Hub [Catalog](#search-tab) tab to go to the **Search** pane and **Search Details** screen.
 
@@ -34,9 +30,7 @@ For details on creating a published OData service in Studio Pro, see [How to Reg
 
 Every published OData service has a version number, and apps consuming from a service will consume from a specific version. Updates and changes to a service will be indicated by a change in the version number. There may be several versions of a service available in the catalog. These will all be listed as separate items in the search results for a service.
 
-The [search details](#search-details) screen in the Data Hub Catalog will show all available versions of the service under **Usage** and the number of connections made to each service.
-
-{{% todo %}}[AD: a screenshot of that Usage section may be useful.]{{% /todo %}}
+The [search details](#search-details) screen in the Data Hub Catalog will the version of the selected service.
 
 ### 2.3 Environments
 
@@ -51,8 +45,6 @@ It is possible to filter search in the Data Hub Catalog to the following environ
 * Production
 * Non-production
 * Mendix Free App environment
-
-{{% todo %}}[are we allowed to talk about Sandbox, include the official term; AD: cross-references to definitions/descriptions of environments above may be useful.]{{% /todo %}}
 
 ### 2.4 URLs 
 
@@ -108,13 +100,11 @@ Any of the above actions will take you to the **Search** screen, which is descri
 
 The **Search** screen is divided into the [Search](#search-pane) pane, the [Search Details](#search-details) page, and the [Service Metadata](#metadata) panel.
 
-{{% todo %}}[AD: capitalization/bolding of these terms should be made consistent through all DHG documentation based on whether these appear as UI labels. If they do not - and it does not appear that they do in the screenshot below - they should be neither capitalized nor bolded?]{{% /todo %}}
-
 ![](attachments/search/search-details-page.png)
 
 ### 4.1 Search Pane {#search-pane}
 
-The **Search** pane is used to search through registered assets in the Data Hub Catalog. When a search term is entered, search results can be refined by using filters. 
+The collapsable **Search** pane is used to search for registered assets in the Data Hub Catalog. A search can be refined by using filters. 
 
 #### 4.1.1 Search Area
 
@@ -125,10 +115,8 @@ Punctuation cannot be used as part of the search term.
 {{% /alert %}}
 
 {{% alert type="info" %}}
-Search is case-blind.
+Search is case-insensitive.
 {{% /alert %}}
-
-{{% todo %}}[please explain "case-blind" in a clear non-metaphoric way that is more accessible]{{% /todo %}}
 
 #### 4.1.2 Filters
 
@@ -138,14 +126,16 @@ To refine search results, you can click **Add Filter**:
 
 In the **Add Filters** dialog box,  select the **Environment Type** that you want to confine your search to and click **Apply Filters**. The search results will only display hits for the specified search string in the checked environments.
 
+{{% alert type="info" %}}
+The **Sandbox** filter refers to the Mendix Free App environment. 
+{{% /alert %}}
+
 #### 4.1.3 Search Results
 
 The number of items satisfying the search criteria (search string plus filters) are shown at the top of the search results.  Search results will include all registered services, entities, attributes, tags, and descriptions satisfying the search string and filters. Search results are listed in the following order:
 
 * Closest match to the search string
 * Popularity of the service (number of connections)
-
-{{% todo %}}[I also had alphabetically - will this happen??]{{% /todo %}}
 
 If no search string is specified, all registered services will be listed in the search results in the above order showing the first five entities for each service.
 
@@ -154,8 +144,6 @@ When an item in the search results is selected, the **Catalog** tab will show th
 {{% alert type="info" %}}
 In Studio Pro, searching the Data Hub Catalog through the **Data Hub** pane requires use of the wildcard `*` for an empty search. It is not possible to use the wildcard in combination with other characters. The wildcard can also be used in the Data Hub Catalog search but it is not necessary. 
 {{% /alert %}}
-
-{{% todo %}}[for 0.23 search order is not specified but this is the list that we want to work towards]{{% /todo %}}
 
 ### 4.2 Search Details {#search-details}
 
@@ -189,8 +177,6 @@ When an **Entity** is selected in the search results, details for the entity are
 * Clicking **Share Datasource** will copy the deep link of the entity (meaning, the entity endpoint) to the clipboard
 * **Entity Information**
 
-{{% todo %}}[AD: please verify they have fixed the button name to "Share Data Source]{{% /todo %}}
-
 For every entity, the attributes exposed in the service are listed showing the attribute types and description.
 
 Under the **Associations** tab for each entity, the associations are shown:
@@ -198,10 +184,8 @@ Under the **Associations** tab for each entity, the associations are shown:
 ![](attachments/search/attributes-associations.png)
 
 * **Name** –  the name of the association that is exposed in the service
-* **Navigates to** –  the deep link of the entity to which the association navigates
+* **Navigates to** –  the deep link of the entity to that the current entity is assocated with. Click to see the entity details of the associated entity. 
 * **Multiplicity** –  the type of association
-
-{{% todo %}}[find out what the navigates to does]{{% /todo %}}
 
 ### 4.3 Service Metadata Panel {#metadata}
 

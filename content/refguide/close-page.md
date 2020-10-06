@@ -38,11 +38,10 @@ The **Close page** activity properties consists of the following sections:
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
-### 3.1 Number of pages
+### 3.1 Number of Pages
 
 {{% alert type="info" %}}
-
-This option is only available for native mobile and was introduced with Mx8.14.
+This option is only available for native mobile and was introduced with Mendix Studio Pro v8.14.
 {{% /alert %}}
 
 This property allows you to control how many pages should be closed.

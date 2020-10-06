@@ -78,15 +78,17 @@ For all items satisfying the search string, the following information is display
 * Information icon to view further information on the service and to go directly to the [Service Details](/data-hub/data-hub-catalog/search#search-details) screen in the Data Hub Catalog: 
   
   {{% image_container width="250" %}}![Data Hub Pane Information](attachments/data-hub-pane/data-hub-pane-info.png){{% /image_container %}}
-
+  
+### 4.1 Selected Consumed Service
 If you right-click a consumed service, you can do the following:
 
-{{% image_container width="250" %}}![info on a Service](attachments/data-hub-pane/data-hub-pane-menu.png){{% /image_container %}}
+   {{% image_container width="250" %}}![info on a Service](attachments/data-hub-pane/data-hub-pane-menu.png){{% /image_container %}}
 
   * **View in Data Hub Catalog** – click this to go to the **Service Details** page in the Data Hub Catalog
   * **Go to connection settings** – click this to open the [consumed OData service](consumed-odata-service) document
 
-If you right-click an entity in the list and select **View in Data Hub Catalog**, you will go to the entity details page in the [Data Hub Catalog](/data-hub/data-hub-catalog/index).
+### 4.2 Selected Entity
+If you right-click an entity in the search results and select **View in Data Hub Catalog**, it will take you to the entity details page in the [Data Hub Catalog](/data-hub/data-hub-catalog/index).
 
 If you right-click a consumed entity and **Go to entity**, the domain model will be opened.
 

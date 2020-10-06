@@ -57,8 +57,6 @@ Apps are displayed as square icons in the landscape and the environment that the
 
 ![](attachments/use-landscape/node-apps.png)
 
-{{% todo %}}[?**In the new**: The published service is shown in the circle and the relationships are lines to the publishing apps and the consuming apps that "call on" the service. A consuming "environment" is shown with the arrow pointing to the service. the service will get the data for the endpoint that is consumed, from the publishing app. ….also the explanation for the rest is changed - shape of Node containers, entities displayed, information… etc.]{{% /todo %}}
-
 ### 2.4 Dependencies
 
 For a service from a deployed app that is consumed by another deployed app—when the actual connection to the data for the exposed entities is made between the publishing and consuming apps—the relationships and dependencies are represented as shown and described for the example below: 

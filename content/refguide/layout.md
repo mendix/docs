@@ -76,7 +76,7 @@ For existing layouts, the value is read-only.
 
 The **layout type**, determines the purpose of the layout and how a page using the layout is opened.
 
-##### Web layout types
+##### 2.3.3.1 Web Layout Types
 
 | Layout Type | Description |
 | --- | --- |
@@ -86,7 +86,7 @@ The **layout type**, determines the purpose of the layout and how a page using t
 | **Modal pop-up** | Pages that appear as [modal pop-up windows](https://www.wikiwand.com/en/Modal_window). |
 | **Pop-up** | Pages that appear as *modeless* pop-up windows. |
 
-##### Native layout types
+##### 2.3.3.2 Native Layout Types
 
 | Layout Type | Description |
 | --- | --- |

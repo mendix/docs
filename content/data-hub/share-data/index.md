@@ -127,18 +127,10 @@ The **{yourname}CustomerODataService** from your app is now registered in the Da
 	
 	![data hub](attachments/share-data/search-details-screen.png)
 	
-<<<<<<< Updated upstream:content/data-hub/general/share-data.md
-	{{% todo %}}[**AD: add cross-references to these roles of "owner," "curator," "Data Hub Admin"**]{{% /todo %}}
-<<<<<<< HEAD:content/data-hub/share-data/index.md
-	
-=======
 
-=======
-	{{% alert type="info" %}}For more information about the user and curator roles in Data Hub see [Roles in Data Hub](../index#data-hub-roles).{{% /alert %}}
-	
->>>>>>> Stashed changes:content/data-hub/share-data/index.md
->>>>>>> ec-GA-release-revisions:content/data-hub/general/share-data.md
-	The curation bar, highlighted in the image above, enables you to edit details of the registered service and also set the **Discoverability** to other users. By default, services registered through a Studio Pro deployment will be set to **Discoverable**.  For further details about curating services, see [How to Curate Registered Assets](../data-hub-catalog/curate).
+​	{{% alert type="info" %}}For more information about the user and curator roles in Data Hub see [Roles in Data Hub](../index#data-hub-roles).{{% /alert %}}
+
+​	The curation bar, highlighted in the image above, enables you to edit details of the registered service and also set the **Discoverability** to other users. By default, services registered through a Studio Pro deployment will be set to **Discoverable**.  For further details about curating services, see [How to Curate Registered Assets](../data-hub-catalog/curate).
 
 For more details on searching in the Data Hub Catalog and the **Search Details** screen, see [How to Search in the Data Hub Catalog](../data-hub-catalog/search). You can also explore registered services in the Data Hub Landscape. For more information, see [How to Use the Data Hub Landscape](../data-landscape/../data-hub-landscape/index).
 
@@ -149,28 +141,15 @@ You are now going to create a new app and consume the data you have added to the
 Perform the following steps:
 
 1. In Studio Pro, create a new app using the **Blank App** template and call it *{yourname}CustomerActionsApp*.
+
 2. Go to the domain model.
 
 	The **Data Hub** pane will be displayed on the right. 
-<<<<<<< HEAD:content/data-hub/share-data/index.md
 	
-=======
-<<<<<<< Updated upstream:content/data-hub/general/share-data.md
-
->>>>>>> ec-GA-release-revisions:content/data-hub/general/share-data.md
-	![data hub pane](attachments/share-data/data-hub-pane-empty.png)
+	  {{% image_container width="300" %}}![data hub pane](attachments/share-data/data-hub-pane-empty.png){{% /image_container %}}
 	
-	If you do not see the Data Hub pane, click  **View** > **Data Hub** to display the **Data Hub** pane. 
-	
-	![](attachments/share-data/view-data-hub.png)
-=======
-	
-	{{% image_container width="300" %}}![data hub pane](attachments/share-data/data-hub-pane-empty.png){{% /image_container %}}
-	
-	If you do not see the Data Hub pane, click  **View** > **Data Hub** to display the **Data Hub** pane. 
-	
-	{{% image_container width="200" %}}![](attachments/share-data/view-data-hub.png){{% /image_container %}}
->>>>>>> Stashed changes:content/data-hub/share-data/index.md
+	If you do not see the Data Hub pane, click  **View** > **Data Hub** to display the **Data Hub** pane:
+		{{% image_container width="200" %}}![](attachments/share-data/view-data-hub.png){{% /image_container %}}
 
 3. In the [Data Hub](/refguide/data-hub-pane) pane, enter the search string *customer*.
 

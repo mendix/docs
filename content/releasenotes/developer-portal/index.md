@@ -17,7 +17,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Improvements
 
-* We redesigned the [story details](/developerportal/collaborate/stories#story-details) page and made it available for Public Beta usage. You can use the new design when the new story UI is enabled. Please note that it is currently not possible to add or manage [labels](/developerportal/collaborate/stories#label). This functionality will be released in the future.
+* We redesigned the [story details](/developerportal/collaborate/stories#story-details) page and made it available for Public Beta usage. You can use the new design when the new story UI is enabled. Please note that it is currently not possible to add or manage [labels](/developerportal/collaborate/stories#label) with the new UI; this functionality will be released in the future.
 * When you add a [task](/developerportal/collaborate/stories#adding-task) to a commit of your app model, we now show the revision in the revision overview of the story details. Clicking the task will bring you to the story details page to which the task belongs.
 * We simplified the [Company Settings](/developerportal/company-app-roles/company#company-settings) tab of the **Company** page by removing some barely used attributes.
 

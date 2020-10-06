@@ -65,8 +65,8 @@ This option is only available for native mobile and was introduced with Mendix S
 
 Often you need to have control of page history, for example to show the correct page when a user presses the hardware back button on Android. These types of actions generally will only close a single page in the current stack. **Close Pages** provides more control over this behavior. We define relevant terms as follows:
 
-* **source page**: The page you are navigating _from_.
-* **target page**: The page you are navigating _to_.
+* **source page**: The page you are navigating _from_
+* **target page**: The page you are navigating _to_
 
 | Value | Description |
 | --- | --- |

@@ -8,8 +8,6 @@ tags: ["domain model", "entity", "validation rule"]
 
 {{% todo %}}[confirm that validation rules are still read only]{{% /todo %}}
 
-## 
-
 ## 1 Introduction
 
 Validation rules are conditions that should be satisfied before an object is committed. If a condition defined by a validation rule is not satisfied when the object is committed, the runtime server generates a validation error.

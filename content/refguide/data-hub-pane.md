@@ -74,7 +74,7 @@ For all items satisfying the search string, the following information is display
 
 	{{% alert type="info" %}}The version number that is shown for the OData service is the latest one that is available in the Data Hub Catalog—in the example below version 1.0.11 of **Theatre_service** is currently consumed in the project, but version **1.0.12** is now available in the Data Hub Catalog. The search results display the entities available in the new service (also showing one that is locally consumed) however they are greyed-out and cannot be selected until the local service is **Updated** to this one.{{% /alert %}}
   
-  ![Data Hub Pane updaten](attachments/data-hub-pane/data-hub-pane-update.png)
+  ![Data Hub Pane update](attachments/data-hub-pane/data-hub-pane-update.png)
   
 * Information icon to view further information on the service and to go directly to the [Service Details](/data-hub/data-hub-catalog/search#search-details) screen in the Data Hub Catalog: 
 

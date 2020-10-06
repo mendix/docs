@@ -91,7 +91,7 @@ The **layout type**, determines the purpose of the layout and how a page using t
 | Layout Type | Description |
 | --- | --- |
 | **Default** | Pages that can be used for all purposes. |
-| **Pop-up** | Pages that slide in from the bottom and have a close icon instead of a back icon in the header. When a page with a default layout is open, all pop-up pages are dismissed and removed from the history. |
+| **Pop-up** | Pages that slide in from the bottom and have a close icon instead of a back icon in the header.<br />When a page with a default layout is open, all pop-up pages are dismissed and removed from the history. |
 
 ## 3 Layout Widgets
 

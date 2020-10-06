@@ -76,6 +76,8 @@ For existing layouts, the value is read-only.
 
 The **layout type**, determines the purpose of the layout and how a page using the layout is opened.
 
+##### Web layout types
+
 | Layout Type | Description |
 | --- | --- |
 | **Responsive** | Pages that will work fine on all types of devices. |
@@ -83,6 +85,13 @@ The **layout type**, determines the purpose of the layout and how a page using t
 | **Phone specific** | Pages to be displayed on a phone because the responsive option does not provide a good user interface on a phone. |
 | **Modal pop-up** | Pages that appear as [modal pop-up windows](https://www.wikiwand.com/en/Modal_window). |
 | **Pop-up** | Pages that appear as *modeless* pop-up windows. |
+
+##### Native layout types
+
+| Layout Type | Description |
+| --- | --- |
+| **Default** | Pages that can be used for all purposes. |
+| **Pop-up** | Pages that slide in from the bottom and have a close icon instead of a back icon in the header. When a page with a default layout is open, all pop-up pages are dismissed and removed from the history. |
 
 ## 3 Layout Widgets
 

@@ -7,8 +7,6 @@ tags: ["studio Pro", "data hub", "data hub pane", "data hub catalog"]
 
 ---
 
-{{% todo %}}[replace all graphics with 8.14 screens and improve on clarity of images]{{% /todo %}}
-
 ## 1 Introduction 
 
 [Mendix Data Hub](/data-hub/index) enables integration of available data sources from the different applications in an organization into your Mendix apps. This means that new apps can be created using shared datasets that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/index). In Studio Pro, this is possible using the integrated functionality of Data Hub Catalog through the **Data Hub** pane.
@@ -60,8 +58,6 @@ For all items satisfying the search string, the following information is display
 * Service name
 *  An icon indicating the source of the service (Mendix, SAP, Siemens Teamcenter, or other non-Mendix apps)
 
-	{{% todo %}}[list the icon types]{{% /todo %}}
-
 * Service version
 *  The name of the environment that the service is deployed to (for non-production environments)
 
@@ -90,8 +86,6 @@ If you right-click a consumed service, you can do the following:
 If you right-click an entity in the list and select **View in Data Hub Catalog**, you will go to the entity details page in the [Data Hub Catalog](/data-hub/data-hub-catalog/index).
 
 If you right-click a consumed entity and **Go to entity**, the domain model will be opened.
-
-{{% todo %}}[previous section: adding an external entity has now moved to the external-entities doc - watch for ex-refs]{{% /todo %}}
 
 ##  5 Read More
 

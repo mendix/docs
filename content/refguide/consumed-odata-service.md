@@ -40,7 +40,7 @@ The **Service URL** displays the URL of the service endpoint:
 * Click **Select** to select another [constant](/refguide/constants) for the service
 *  Click **Show** to display the **Constant** dialog box displaying the service URL or endpoint: 
 
-	![Connection Tab](attachments/consumed-odata-service/consumed-service-constant.jpg)
+	![Connection Tab](attachments/consumed-odata-service/consumed-service-constant.png)
 
 ### 2.3 Timeout
 
@@ -128,7 +128,7 @@ When you add an external entity to your project, you are consuming the entity fr
 
 The same service, deployed to a different environment will be to a different service endpoint and this will be registered as a different asset in the Data Hub Catalog. In the following example, there are two endpoints for the **CustomerApi service version 1.1.0** which is deployed to the production environment and the **Acceptance** environment: 
 
-![2 endpoints](attachments/consumed-odata-service/same-service-different-endpoints.png)
+{{% image_container width="250" %}}![2 endpoints](attachments/consumed-odata-service/same-service-different-endpoints.png){{% /image_container %}}
 
 When you drag the **Customer** entity from **CustomerApi version 1.0.0** deployed to the **Acceptance** environment into your project, Studio Pro will retrieve the information it requires from the contract that is at the endpoint. 
 
@@ -154,7 +154,7 @@ When a major change has been made to a published service we recommend that the s
 
 In this case the new service will be registered in the Data Hub Catalog as a different service, and show up in the catalog as a separate asset. In the following example, there are 4 registered occurrences of the **OrderManagementService**: 
 
-![4 endpoints](attachments/consumed-odata-service/consume-major-service-update-version.png)
+{{% image_container width="250" %}}![4 endpoints](attachments/consumed-odata-service/consume-major-service-update-version.png){{% /image_container %}}
 
 There is a major service update indicated by the change in the version number from **1.0.0** to **2.0.0**. Further, both versions have also been deployed to the **Acceptance** which also results in separately registered assets in the Data Hub Catalog.
 

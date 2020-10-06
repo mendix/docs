@@ -192,3 +192,35 @@ Under the **Associations** tab for each entity, the associations are shown:
 The service metadata panel at the right of the search details page displays details of the registered service from the OData metadata files and values that have been curated in the Data Hub Catalog:
 
 ![](attachments/search/metadata.png)
+
+* **Classification** – the classification of the data for the service; end-users of the data associated with the entities exposed in the service must have the appropriate [user role](/refguide/user-roles) to have access to the data:
+	
+	* **Public**  – data is available to users inside and outside the company
+	
+	* **Internal**  – data is restricted to the members of the organization
+  
+	{{% alert type="info" %}}Classifications at a service level propagate down to the entities and attributes exposed in the service.  {{% /alert %}}
+	
+* **Discoverability** – if the service is published for use by other users:
+
+  * **Discoverable** – all users of Data Hub Catalog and Studio Pro can see and consume the service 
+
+  * **Non-Discoverable** – the service is not visible and only owners of the service, Data Hub Curators, and Data Hub Admins can find and use the service
+
+  {{% alert type="info" %}}By default, newly registered services are set to **Discoverable** and visible to all users. **Discoverability** is curated in the Data Hub Catalog. For more information see [Curation](./curate) {{% /alert %}}
+
+* **Environment Type** – specifies if the environment is a **Production** or **Non-Production** environment and therefore indicates the status of the dataset associated with the exposed entities
+
+* **Application** – link to the app from which the OData service was published in the given environment
+
+* **Business Owner** – links to the business owner of the data that the service connects to; this is curated in the Data Hub Catalog
+
+* **Technical Owner** – technical owner of the app; by default this is the owner who registered the service, but this can be changed in the Data Hub Catalog
+
+* **Tags** – tags that have been assigned to the service
+
+  {{% alert type="info" %}}Tags assigned at a service level propagate down to the entities and attributes exposed in the service.{{% /alert %}}
+
+## 5 Viewing Search Results in the Data Hub Landscape
+
+When an item is selected in the search results pane, you can click the [Landscape](../data-hub-landscape/index) tab to see the network of connections and dependencies for the selected asset. This enables you to graphically see the context and relevance for a selected item and the data for the exposed entities. 

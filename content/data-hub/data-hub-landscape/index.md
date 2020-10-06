@@ -92,4 +92,3 @@ In this example, when viewed over the whole network, it appears that the data fl
 
 ![](attachments/use-landscape/complex-example.png)
 
-{{% todo %}}[? - tooltip should be moved and not "roll-out" from top left of landscape screen. Font is all wrong, too large and style does not fit rest of Landscape styling. Click **consume arrow** - shows entities being consumed in the right panel. This is inconsistent with the basic format of catalog/landscape screen. Right panel is for metadata. Entity list should appear highlighted in the search results pane on the left. ]{{% /todo %}}

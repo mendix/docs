@@ -139,19 +139,16 @@ studio:
   priority: false
   menu_categories:
     - "General Info"
-    - "Domain Model"
     - "Pages"
+    - "Domain Model"
     - "Navigation Document"
     - "Microflows"
-    - "Buzz"
-    - "Data Filters"
     - "Previewing & Publishing Your App"
     - "Checks"
-    - "Consistency Errors"
     - "Theme Customizer"
     - "Settings"
-    - "Starting With Your Own Data"
-    - "Data Hub in Studio"
+    - "Working With Data"
+    - "Collaboration"
 studio-how-to:
   space: "Studio 8 How-to's"
   priority: false

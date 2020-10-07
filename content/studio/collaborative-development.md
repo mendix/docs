@@ -1,9 +1,9 @@
 ---
 title: "Collaborative Development in Studio"
-category: "General Info"
+category: "Collaboration"
 description: This document describes the process of collaborative development between Mendix Studio and Mendix Studio from the perspective of Mendix Studio.
 tags: ["studio", "collaborative development", "sync"]
-menu_order: 05
+menu_order: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -52,7 +52,7 @@ As all Studio changes are auto-saved, the collaborative development is indicated
 	During this process Studio gets locked for a few moments, all changes are auto-saved on the current development line, and a pop-up dialog is shown that the Studio Pro user is changing the branch line for Studio. This means that the contents of your app will change. 
 
 	{{% image_container width="350" %}}![Switching Contents Dialog Box](attachments/general-collaborative-development/switching-branches.png)
-  {{% /image_container %}}
+    {{% /image_container %}}
 
 ## 4 Read More
 

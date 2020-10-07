@@ -1,6 +1,7 @@
 ---
 title: "Buzz"
-menu_order: 55
+category: "Collaboration"
+menu_order: 20
 description: "Describes Studio Buzz."
 tags: ["studio", "buzz"]
 ---

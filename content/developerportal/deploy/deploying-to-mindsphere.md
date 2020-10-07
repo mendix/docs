@@ -33,24 +33,24 @@ To help you with your first MindSphere apps, there is also an example app which 
 
 ## 2 Prerequisites{#prerequisites}
 
-To deploy and to register your app within MindSphere you need the following prerequisites.
+To deploy and register your app within MindSphere you need the following prerequisites.
 
 * A MindSphere user account on a **Developer** or a **Start for Free** tenant
-* A MindSphere developer role: either `mdsp:core:Developer` or `mdsp:core:DeveloperAdmin` - already granted on Start for Free tenants.
+* A MindSphere developer role: either `mdsp:core:Developer` or `mdsp:core:DeveloperAdmin` — these are already granted on Start for Free tenants.
 * [Mendix Studio Pro](https://appstore.home.mendix.com/index3.html)
 
-Additional required if deploy and run the Mendix app on MindSphere Cloud Foundry
+The following are also required if you want to deploy and run the Mendix app on MindSphere Cloud Foundry:
 
 * [Cloud Foundry Command Line Interface (CF CLI)](https://github.com/cloudfoundry/cli)
 * A Cloud Foundry role which allows you to push apps, such as `SpaceDeveloper`
 
-Additional required if deploy and run as self host app e.g. on Mendix Cloud
+The following are also required if you want to deploy and run as a self-host app, for example an app running on Mendix Cloud:
 
-* [Outbound Traffic Upgrade](https://www.dex.siemens.com/mindsphere/mindaccess/outbound-traffic-upgrade) - already included on Start for Free tenants.
+* [Outbound Traffic Upgrade](https://www.dex.siemens.com/mindsphere/mindaccess/outbound-traffic-upgrade) — this is already included on Start for Free tenants.
 
 ## 3 Including Required MindSphere Modules
 
-You must customize your app to allow it to be deployed, registered and shown in the launchpad. This is done through MindSphere customization modules. There are two ways to include the customization you need in your app.
+You must customize your app to allow it to be deployed, registered, and shown in the launchpad. This is done through MindSphere customization modules. There are two ways to include the customization you need in your app.
 
 ### 3.1 Option A: Using the MindSphere App Template
 
@@ -185,15 +185,19 @@ More information on the structure and content of this JSON object, together with
 
 ## 5 Deploying Your App
 
-A Mendix based application for MindSphere can be deployed to Mendix or to MindSphere. Deploying to Mendix is quiet easy and is the preferred option as you than also can use the **Auto Registration** process. Please note, **Auto Registration** process is only available on region Europe 1.
+A Mendix based application for MindSphere can be deployed to Mendix or to MindSphere. Deploying to Mendix is quite easy and is the preferred option as you than also can use the **Auto Registration** process.
+
+{{% alert type="info" %}}
+**Auto Registration** process is only available on region Europe 1.
+{{% /alert %}}
 
 ### 5.1 Option A: Deploy with Mendix Studio to the Mendix Cloud
 
-Just hit the Run Button in Mendix Studio Pro.
+Just click the Run Button in Mendix Studio Pro.
 
 ![Deploy to Mendix](attachments/deploying-to-mindsphere/runMendixApp.png)
 
-Once your app is deployed you can automatically register the app at your MindSphere tenant.
+Once your app is deployed you can automatically register the app in your MindSphere tenant.
 
 ### 5.2 Option B: Creating a Mendix Deployment Package and deploy it to MindSphere Cloud Foundry
 
@@ -316,51 +320,58 @@ If you have issues with deploying your app to Cloud Foundry, you can find additi
 Ensure that you have configured your proxy settings if these are required.
 
 ### 5.3 Setting up MindSphere Launchpad{#launchpad}
-You have to register your application to be working and appearing on the MindSphere Launchpad. If you have deployed your application to Mendix you have both of the following two options (where Option A is preferred). Deployed to MindSphere you have to register manually via the Developer Cockpit (Option B). Please note, Auto Registration process is only available on region Europe 1.
 
-#### 5.3.1 Option A: Use the Auto Registration process - recommended if your app is deployed to the Mendix Cloud
+You have to register your application for it to work and appear on the MindSphere Launchpad. If you have deployed your application to Mendix you can use either of the following two options (where Option A is preferred). Deployed to MindSphere, you have to register manually via the Developer Cockpit (Option B).
 
-In order to start the **Auto Registration** process just hit the view Button in Mendix Studio Pro once your app is deployed to the Mendix Cloud. Your default browser will open and your app is starting the process.
+#### 5.3.1 Option A: Using the Auto Registration Process
+
+{{% alert type="info" %}}
+This method is recommended if your app is deployed to the Mendix Cloud.
+
+However, the Auto Registration process is only available on region Europe 1.
+{{% /alert %}}
+
+To start the **Auto Registration** process click the **View** Button in Mendix Studio Pro once your app is deployed to the Mendix Cloud. Your default browser will open and your app will start the process.
 
 ![AutoRegistrationExplanation](attachments/deploying-to-mindsphere/AutoRegistrationExplanation.png)
 
-Hit the button **Start Auto Registration**. The process now tries to figure out on which tenant your app shall be registered. Therefore you have to login:
+Click **Start Auto Registration**. The process now tries to figure out on which tenant your app should be registered. Therefore you have to login:
 
 ![Login to Siemens Digital Industry Software](attachments/deploying-to-mindsphere/WebKeyLogin.png)
 
 {{% alert type="info" %}}
-In case that you have more then one tenant on Mindsphere you will get a list of tenants. Choose the tenant where you want to register your app.
+If you have more then one tenant on Mindsphere you will get a list of tenants. Choose the tenant where you want to register your app.
 
-In case that you have only one tenant on MindSphere, the process will automatically select this tenant for you.
+If you have only one tenant on MindSphere, the process will automatically select this tenant for you.
 {{% /alert %}}
 
-Give a name, internal name and optional a description in order to register your app.
+Give a name, internal name, and, optionally, a description in order to register your app.
 
 ![AutoRegistrationNameAndDescription](attachments/deploying-to-mindsphere/AutoRegistrationNameAndDescription.png)
 
-In case you are on a **Developer** tenant you also have to select at least one application role which will be assigned to your account automatically.
+If you are on a **Developer** tenant you also have to select at least one application role which will be assigned to your account automatically.
 
 On a **Start for Free** tenant the **admin** role will be assigned automatically to your account.
 
-Hit **Register** to start the registration process on your tenant. After a few seconds, a summary page is shown and you are able to navigate directly to your app.
+Click **Register** to start the registration process on your tenant. After a few seconds, a summary page is shown and you are able to navigate directly to your app.
 
 ![AutoRegistrationSummary](attachments/deploying-to-mindsphere/AutoRegistrationSummary.png)
 
 {{% alert type="info" %}}
-The **Auto Registration** process is creating application roles and scopes for your app.
+The **Auto Registration** process creates application roles and scopes for your app automatically.
 
-If you are on a **Start for Free** tenant additional MindSphere API roles are assigned and your user is granted **admin** access to your app.
+If you are on a **Start for Free** tenant, additional MindSphere API roles are assigned and your user is granted **admin** access to your app.
 
-If you are on a **Developer** tenant no additional MindSphere API roles are assigned. The granted access to your app is shown in the registration summary page.
+If you are on a **Developer** tenant, no additional MindSphere API roles are assigned. The granted access to your app is shown in the registration summary page.
 {{% /alert %}}
 
-Please note, for further adaption of your registration e.g. CSPs or additional roles, please use the Developer Cockpit.
+Please note, for further configuration of your registration e.g. CSPs or additional roles, please use the Developer Cockpit.
 
-#### 5.3.2.1 Option B: Configuring the Mendix App in the Developer Cockpit
+#### 5.3.2 Option B: Configuring the Mendix App in the Developer Cockpit
 
 ##### 5.3.2.1 Creating a New Application
 
-To create manually a new app in the MindSphere launchpad, do the following:
+To create a new app manually in the MindSphere launchpad, do the following:
 
 1.  Go to the **Developer Cockpit > Dashboard**.
 

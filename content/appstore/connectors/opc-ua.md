@@ -77,7 +77,7 @@ The module/app is designed for usage with multiple servers if necessary. The sta
 
 For each OPC UA server, the following information will need to be stored in a OpcUaServerCfg object.
 
-* ServerID (String) – ?????????? (differentiate different servers with same URL?)
+* ServerID (String) – a name you give to the server so that you can identify it easily
 * URL (String) – the URL of the OPC UA server
 * Username (String) – the username used if the authentication type is `CREDENTIALS`
 * Password (String) – the password for the username used if the authentication type is `CREDENTIALS`

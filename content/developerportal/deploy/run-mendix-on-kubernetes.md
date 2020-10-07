@@ -91,9 +91,9 @@ metadata:
   name: postgres
 spec:
   replicas: 1
-   selector:
-   matchLabels:
-     app: postgres
+  selector:
+    matchLabels:
+      app: postgres
   template:
     metadata:
       labels:
@@ -182,6 +182,10 @@ With the database running, we can deploy our application. We'll be using a sampl
 
 Before deploying the app, we'll create some secrets so that sensitive information for the application doesn't need to be in our *yaml* file. The secrets file has to be applied only once to the cluster, and the values will be kept there. For information on all of the options, see [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/). 
 
+{{% alert type="info" %}}
+The Secret values in the secrets file must be base64 encoded.
+{{% /alert %}}
+
 `mendix-app-secrets.yaml`:
 
 ```yml
@@ -197,7 +201,7 @@ data:
   license-id: YOUR_LICENSE_ID
 ```
 
-YOUR-DATABASE-ENDPOINT will be in the form `postgres://mendix:mendix@255.255.255.255:5432/postgres` (for example, `postgres://mendix:mendix@172.17.0.3:5432/postgres`). You can find the correct IP address and port for your database endpoint using the command:
+YOUR-DATABASE-ENDPOINT will be in the form `postgres://mendix:mendix@255.255.255.255:5432/db0` (for example, `postgres://mendix:mendix@172.17.0.3:5432/db0`). You can find the correct IP address and port for your database endpoint using the command:
 
 ```bash
 kubectl get ep postgres-service

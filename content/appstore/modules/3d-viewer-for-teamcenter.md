@@ -151,7 +151,7 @@ Since you built a model list pop-up page, one scenario is to select a list item 
 
  ![teamcenter-popuppageobject](attachments/3d-viewer-for-teamcenter/teamcenter-popuppageobject.jpg)
 
-6. Create a nanoflow called *OpenSelectedModel* and set it as the **On click** action for the list view. This nanoflow enables updating the **ModelDocument** associated with the **PageObject** and returns an updated **PageObject**. Every time the end-user clicks a model list item, **PageObject** will be updated, and the home page where the end-user is will be updated to the newly selected model.
+6. Create a nanoflow called *OpenSelectedModel* and set it as the **On click** action for the list view. This nanoflow enables updating the **ModelDocument** associated with the **PageObject** and returns an updated **PageObject**. Every time the end-user clicks a model list item, **PageObject** will be updated, and the home page that the end-user is on will be updated to the newly selected model.
 
  ![teamcenter-openselectedmodel](attachments/3d-viewer-for-teamcenter/teamcenter-openselectedmodel.jpg)
 

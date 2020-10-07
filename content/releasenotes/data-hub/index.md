@@ -17,8 +17,6 @@ The home page tab is now called  **Data Hub**.
 
 From the **Data Hub** screen, you can now navigate to the Mendix Academy course for the Data Hub where you can learn how to easily share data to build apps in Studio Pro.
 
-
-
 ### October 1st, 2020
 
 Using data from other applications used to be a complex activity requiring an in-depth understanding of building integrations. 

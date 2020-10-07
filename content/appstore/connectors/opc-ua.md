@@ -125,7 +125,7 @@ All values are read as strings, you will need to convert them if you need a nume
 
 #### 3.2.3 **Subscribe** to Updates of Data from a Node
 
-You can subscribe to a receive a notification every time the value of a node changes. This creates an object of type **Subscription** which is associated with the OPC UA service and contains details of the subscription and the item which is being monitored. You should assign a microflow to process the data each time a notification is received. The frequency of the notifications is controlled by the UPC UA server.
+You can subscribe to receive a notification every time the value of a node changes. This creates an object of type **Subscription** which is associated with the OPC UA service and contains details of the subscription and the item which is being monitored. You should assign a microflow to process the data each time a notification is received. The frequency of the notifications is controlled by the UPC UA server.
 
 ![Parameters for the subscribe action](attachments/opc-ua/subscribe-action.png)
 
@@ -186,9 +186,21 @@ The OPC UA Client connector comes with a number of pages which you can use to ma
 
 #### 3.3.1 OpcUaServer_Overview
 
+This page shows a summary of all the servers you have set up in your app and allows you to edit existing servers and set up a new one. For each server you will see the name you have given it, the URL where the server can be reached, and the authentication type.
+
+To use this page, just include it in the navigation for your app, or add an **Open Page** button to an existing page of your app.
+
+From this page, you can perform the following actions:
+
+* Search – search for a particular server in the list of servers
+* New server – add a new OPC UA server using the **OpcUaServer_NewEdit** page
+* Edit server - change the details of the selected server using the **OpcUaServer_NewEdit** page
 * View server – this button is there for adding further functionality — in the default module it calls a microflow which displays a message
+* Delete – delete all the information about the selected server — you will be asked for confirmation
 
 #### 3.3.2 OpcUaServer_NewEdit
+
+
 
 ## 4 OPC UA Client Example Implementation{#example-implementation}
 

@@ -54,6 +54,10 @@ Accessing the metadata can be done by downloading the XML file or by opening `ht
 
 ### 3.1 Creating a New IdP Configuration
 
+{{% alert type="warning" %}}
+If you have multiple IdPs, please make sure each IdP has a unique **Entity descriptor**. If you add multiple IdPs with the same entity descriptor, you might experience unexepected behavior where a different SSO configuration is selected than the alias provided.
+{{% /alert %}}
+
 When creating a new IdP configuration, you are guided through a workflow to help you configure everything required for the IdP configuration. Each option in the workflow is explained below.
 
 Upon completing these steps, you only need to send the metadata file to the IdP and have them configure the authentication on their end. 

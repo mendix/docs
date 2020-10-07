@@ -22,8 +22,6 @@ This section starts with guidelines and best practice for registering services a
 
 The steps for updating a consumed OData service in Studio Pro for which a new version is available are described in the [Updating a Published OData Service in Studio Pro](#updating-service) section below.
 
-{{% todo %}}[EC: This is removed from the beta-rel include when API is published officially: For non-Mendix apps using OData V3 and V4 contracts, the Data Hub Catalog API can be used to create an API gateway to the Data Hub Catalog to register available services. ]{{% /todo %}}
-
 ## 2 Best Practices for Registering Services and Shared Entities
 
 This section provides advice and best practices when registering your services in the Data Hub Catalog either from Studio Pro or through manual registration.
@@ -55,8 +53,6 @@ When apps are being developed, ensure that there is a representative set of data
 ### 2.4 Entities and Associations
 
 Currently only [persistable](/refguide/persistability) entities can be exposed for sharing by another app. The data associated with the entity is used in the consuming app.
-
-{{% todo %}}[what are persisitable entties known as in other systems? what is the characteristic of a persistable entity that makes it shareable]{{% /todo %}}
 
 When selecting the entities to expose in a service, consider including associated entities so that the relationship between the data is also registered.
 
@@ -113,11 +109,9 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 	{{% alert type="info" %}}The description will be included in the published service metadata file and displayed for the service in the Data Hub Catalog.  If no description is available, then the **Summary** will be used.
 	{{% /alert %}}
 
-	{{% todo %}}[Will this appear somewhere more logical. Also why have a summary and description field if the summary is not published in the OData metadata??]{{% /todo %}}
-
 	{{% alert type="info" %}}If you are updating a service (with a new service version), you can provide a summary of the changes from the previous version in the description. You can copy and paste the description from the previous version of the service and edit this with the new details. For further details, see the [Updating a Published OData Service in Studio Pro](#updating-service) section below.
-	{{% /alert %}}
-
+{{% /alert %}}
+	
 8. When the app is deployed with **Run**, the OData services defined for the app will automatically be registered in the Data Hub Catalog.
 
 {{% alert type="info" %}}
@@ -262,9 +256,7 @@ To register the service, follow these steps:
 		* You can copy the UUID of an already registered app from **Settings** > [General](/developerportal/settings/general-settings) in the Developer Porta
 		* For further information on deep links for an app, see [How to Manage Deep Links](/developerportal/settings/manage-deeplinks).
 	* **Name** – enter the name of the application as it should appear in the details page of the service
-	* **Business Owner** – enter the name of the business owner of the data that will be made available through the service
-
-	{{% todo %}}[??should the above be business or technical owner]{{% /todo %}}
+	* **Business Owner** – enter the name of the business owner of the data that is made available through the service
 
 4.  Enter the **Environment** details of the deployed app:
 	
@@ -281,7 +273,7 @@ To register the service, follow these steps:
 
 ### 7.3 Uploading the OData Contract and Selecting Main Schema
 
-{{% todo %}}[**AD: intro content needed**]{{% /todo %}}
+You will now select and upload the OData contract and select the schema.
 
 ![](attachments/register/old-register-service-form-contract.png)
 

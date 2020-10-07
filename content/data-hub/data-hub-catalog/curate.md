@@ -6,22 +6,14 @@ description: "Describes curating functions in the Data Hub Catalog"
 tags: ["data hub", "data hub catalog", "curate", "description", "services", "tags"]
 ---
 
-{{% todo %}}[PC-704 Discoverability]{{% /todo %}}
-
 ## 1 Introduction
 
-{{% todo %}}[**Describe fully the curate screens]{{% /todo %}}
-
-Curation is the processes of maintaining registered services and enriching the metadata of registered assets in the Data Hub Catalog to provide further information about the services as well as the entities and attributes exposed in the services. You can add catalog descriptions and tags to supplement the registered metadata in order to categorize the shared data. A primary curate function is setting the **Discoverability** of registered assets, which determines which users can find them. 
-
-{{% todo %}}[**AD: can you add a cross-reference for reading more about Discoverability?**]{{% /todo %}}
+Curation is the processes of maintaining registered services and enriching the metadata of registered assets in the Data Hub Catalog to provide further information about the services as well as the entities and attributes exposed in the services. You can add catalog descriptions and tags to supplement the registered metadata in order to categorize the shared data. A primary curate function is setting the [**Discoverability**](#discoverabilit) of registered assets, which determines if users can see (find and use) the registered asset. 
 
 Users with curation rights for the Data Hub Catalog are as follows:
 
 * Business Owners and Technical Owners of a registered service – can curate their own services and find non-discoverable services that they own
 * [Data Hub Curators](../index#curator) and [Data Hub Admins](../index#admin) – can curate and find all registered assets, discoverable and non-discoverable
-
-{{% todo %}}[**AD: where are the Business Owners and Technical Owners defined - both in the product and in the DHG?**]{{% /todo %}}
 
 {{% alert type="info" %}}
 Information that is added or changed during curation is stored in the Data Hub Catalog for that item. It will not be added to the OData service contract or metadata files or affect any of the values in the metadata files associated with the service or the datasets associated with the exposed entities. 
@@ -49,7 +41,7 @@ On the **Curation bar**, the following details are displayed:
 
 {{% todo %}}[add x-ref. and also consider using the term publishing]{{% /todo %}}
 
-## 3 Setting the Discoverability of a Service
+## 3 Setting the Discoverability of a Service{#discoverability}
 
 By default, when a service is registered in the Data Hub catalog, it is set to **Discoverable**, which means that all users can find, consume, and see details of the service. 
 

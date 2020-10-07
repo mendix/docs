@@ -57,8 +57,6 @@ Apps are displayed as square icons in the landscape and the environment that the
 
 ![](attachments/use-landscape/node-apps.png)
 
-{{% todo %}}[?**In the new**: The published service is shown in the circle and the relationships are lines to the publishing apps and the consuming apps that "call on" the service. A consuming "environment" is shown with the arrow pointing to the service. the service will get the data for the endpoint that is consumed, from the publishing app. ….also the explanation for the rest is changed - shape of Node containers, entities displayed, information… etc.]{{% /todo %}}
-
 ### 2.4 Dependencies
 
 For a service from a deployed app that is consumed by another deployed app—when the actual connection to the data for the exposed entities is made between the publishing and consuming apps—the relationships and dependencies are represented as shown and described for the example below: 
@@ -94,4 +92,3 @@ In this example, when viewed over the whole network, it appears that the data fl
 
 ![](attachments/use-landscape/complex-example.png)
 
-{{% todo %}}[? - tooltip should be moved and not "roll-out" from top left of landscape screen. Font is all wrong, too large and style does not fit rest of Landscape styling. Click **consume arrow** - shows entities being consumed in the right panel. This is inconsistent with the basic format of catalog/landscape screen. Right panel is for metadata. Entity list should appear highlighted in the search results pane on the left. ]{{% /todo %}}

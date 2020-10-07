@@ -7,8 +7,6 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% todo %}}[Compare to information published in the DH guide for repetitions and add x-refs. Can this be integrated into intro doc?]{{% /todo %}}
-
 ## 1 Introduction
 
 This document describes the requirements for an OData service that is going to be consumed. These requirements are not further verified at runtime and expected to hold. If these requirements are not met, errors may result.
@@ -23,8 +21,6 @@ The requirements for a consumed OData service used in a Mendix app project are t
 ## 3 Requirements on the Service Entities and Attributes
 
 This section describes the features of a consumed OData service that are supported in Mendix app projects. These features are checked before an external entity is used in the domain model.
-
-{{% todo %}}[Further verify if the title of the section "limitations …"  theOriginal text referred to an OData entity, but I have changed this to external entity. Iterate if this should refer specifically to "Odata" entities as opposed to other types that DH will eventually support]{{% /todo %}}
 
 ### 3.1 Entities
 
@@ -71,8 +67,6 @@ When the OData endpoint contains operations, these are not imported in the consu
 
 ### 3.3 Generalizations
 
-{{% todo %}}[Investigate what this means precisely ]{{% /todo %}}
-
 The consumed OData service does not support importing generalizations. This means that when you import entities that are each other's generalization, they will be imported as unrelated entities.
 
 When you are consuming a Mendix OData endpoint, do not import both a generalization and its specification; that is not supported.
@@ -83,8 +77,6 @@ The binary data format is supported in the form of *media entities*. When a medi
 
 Currently, the binary data can only be accessed by Java actions.
 
-{{% todo %}}[Following to be finalized depending on final licensing decisions and also has to incorporate, trial and freemium users -  ]{{% /todo %}}
-
 ## 4 Data Hub License Limitations {#license-limitations}
 
 Mendix Data Hub is a separately licensed product. The type of license that you have determines the total number of data objects that can be requested from a consumed OData service *per day* for *each* runtime instance of an app.
@@ -93,10 +85,6 @@ There are two types of licenses currently available:
 
 * **Data Hub** – this is the *default* license with no limitation on the number of OData objects that can be consumed
 * **Freemium** – this enables you to retrieve a total of 1000 OData objects per day for each runtime instance
-
-{{% todo %}}[add following bullet when that limited type of license is sold - the setting is implemented in 8.14 but not marketed - also establish if the `constraint` is visible somewhere for users or only back-end setting. Include x-ref to licensing: Limited– a specific limitation has been set for your Data Hub license and this is specified by the `limit` constraint. ]{{% /todo %}}
-
-{{% todo %}}[the following text was included in the source material but the directive for 8.14 is the above 2 bullets: Without a license, the app will retrieve up to 1000 records from the OData service per day.  Also Joost V specified "limit" is deetermined by the object container on the page ]{{% /todo %}}
 
  After that limit is exceeded, an error will occur when users try to retrieve more data.
 

@@ -3,10 +3,7 @@ title: "Consumed OData Services"
 parent: "integration"
 description: "Overview of consumed OData services for Studios"
 tags: ["studio pro"]
-#This file superseded .
 ---
-
-{{% todo %}}[edit further and add x-refs, and notify https://gitlab.rnd.mendix.com/integration/integration.wiki/-/blob/master/refguide/consumed-odata-services.md that this version is now the latest]{{% /todo %}}
 
 ## 1 Introduction
 
@@ -23,8 +20,6 @@ Mendix Data Hub is a licensed product. Using external entities to consume OData 
 For details on the features that a published OData service must support and how the conversion from and to the Mendix data model works, see [Consumed OData Service Requirements](consumed-odata-service-requirements).
 
 ## 2 OData Services and External Entities
-
-{{% todo %}}[ Consider moving this to External entities doc. or add x-ref . However, it is a summary and all the info is given elsewhere. Next iteration is to analyze all the available data and re-organize]{{% /todo %}}
 
 When you use an OData service to retrieve data from an external entity, the OData service is called and the data is returned.
 
@@ -43,5 +38,3 @@ You can create associations between [persistable entities](persistability#persis
 ## 3 Runtime Considerations
 
 The service endpoint is called for every retrieval of consumed OData services. Therefore, the data retrieval for consumed external entities may be slower than local persistable entities.
-
-{{% todo %}}[ what is the value of this? Here?]{{% /todo %}}

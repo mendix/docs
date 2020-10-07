@@ -58,25 +58,17 @@ OData services can be registered in the Data Hub Catalog in two ways:
 * In Mendix Studio Pro, entities are exposed in a [published OData service](/refguide/published-odata-services), and upon deployment of the app to an environment, the service is automatically registered in the Data Hub Catalog. For details on publishing OData services in Studio Pro, see the [Publishing an OData Service in Studio Pro to Register Entities](register#odata-service-reg) section of *How to Register Data Assets*.
 * OData v4 services originating from non-Mendix sources can be [registered manually through a new service](register#registration-form). For further details on registration in the Data Hub Catalog and using  manual registration, see [How to Register Data Assets](register).
 
-{{% todo %}}[IG:  The Data Hub Registration API is available to register OData Services to the Data Hub Catalog.   The deployment pipeline ensures that the app is only deployed if all dependencies are met. This API validates published dependencies and consumed dependencies and can  be used by 3rd party deployment tooling.]{{% /todo %}}
-
-{{% todo %}}[Out for 0.21 release]{{% /todo %}}
-
 ### 3.4 Curate – Maintaining Registered Assets
 
 Registered services can be curated in the Data Hub Catalog to ensure that they are discoverable by the relevant users. Findability of registered assets can be enhanced by adding tags and descriptions to the services.
 
 For more details, see [How to Curate Registered Assets](curate).
 
-{{% todo %}}[IG:GM -  Manage versions is not a curation task, this is part of the app/API lifecycle. Other curation tasks (beautifying display names for example) are not part of the public beta - review]{{% /todo %}}
-
 ### 3.5 Data Accessibility and Data Security
 
 Mendix Data Hub enables organizations to manage the data that is used. Security of the shared datasets is crucial, and this includes accessibility to the shared data and authentication of users.
 
 For details on security and accessibility in the Data Hub Catalog and for registered services and entities, see [Data Accessibility and Security](security).
-
-{{% todo %}}[IG: x-ref to authentication in Publish OData Service in SP and see if there is much to refer to in the consuming sections for SP - if it is just repeat of what is said in the former then one x-ref suf]{{% /todo %}}
 
 ## 4 Information Available in the Data Hub Catalog
 

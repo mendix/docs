@@ -8,7 +8,7 @@ tags: ["data hub", "data hub catalog", "curate", "description", "services", "tag
 
 ## 1 Introduction
 
-Curation is the processes of maintaining registered services and enriching the metadata of registered assets in the Data Hub Catalog to provide further information about the services as well as the entities and attributes exposed in the services. You can add catalog descriptions and tags to supplement the registered metadata in order to categorize the shared data. A primary curate function is setting the [**Discoverability**](#discoverabilit) of registered assets, which determines if users can see (find and use) the registered asset. 
+Curation is the processes of maintaining registered services and enriching the metadata of registered assets in the Data Hub Catalog to provide further information about the services as well as the entities and attributes exposed in the services. You can add catalog descriptions and tags to supplement the registered metadata in order to categorize the shared data. A primary curate function is setting the [**Discoverability**](#discoverability) of registered assets, which determines if users can see (find and use) the registered asset. 
 
 Users with curation rights for the Data Hub Catalog are as follows:
 

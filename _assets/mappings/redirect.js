@@ -2469,7 +2469,7 @@ module.exports = {
     },
 	{
   	   from: "/data-hub/data-catalog/",
-	   to: "/data-hub/index/"
+	   to: "/data-hub/index"
     },
 	/****************************************************
      * From the App Store (permanent, mapped)

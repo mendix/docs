@@ -115,6 +115,7 @@ releasenotes:
     - "Studio"
     - "Mobile"
     - "Developer Portal"
+    - "Data Hub"
     - "App Store"
     - "SDKs"
     - "Quality Add-ons"
@@ -150,6 +151,7 @@ studio:
     - "Theme Customizer"
     - "Settings"
     - "Starting With Your Own Data"
+    - "Data Hub in Studio"
 studio-how-to:
   space: "Studio 8 How-to's"
   priority: false
@@ -193,6 +195,14 @@ appstore:
     - "Modules"
     - "App Services"
     - "Themes"
+data-hub:
+  space: "Data Hub Guide"
+  priority: false
+  menu_categories:
+    - "Share Data Between Apps"
+    - "General Info"
+    - "Data Hub Catalog"
+    - "Data Hub Landscape"
 product-naming:
   space: "Mendix Product Naming Guide"
   priority: false

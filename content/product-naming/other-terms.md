@@ -211,7 +211,7 @@ Capitalize in all instances.
 
 ### Mendix mobile app {#mendix-mobile-app}
 
-[Mendix](/refguide/getting-the-mendix-app) is the name for the mobile app available for developers to test hybrid mobile apps using PhoneGap.
+[Mendix](/refguide/getting-the-mendix-app) is the name for the mobile app available for developers to test hybrid mobile apps.
 
 {{% alert type="info" %}}
 This term replaces "Mendix Developer app" and "Mendix Mobile app" (which are not to be used in the product UI or documentation – for more information, see [Terminology History](terminology-history)).<br />

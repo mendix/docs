@@ -6,8 +6,6 @@ description: "This guide describes how to assign the Mendix Data Hub Roles as a 
 tags: ["data hub", "Data Hub Admin", "curator"]
 ---
 
-{{% todo %}}[update with Admin screen and description]{{% /todo %}}
-
 ## 1 Introduction
 
 The Mendix Data Hub Administrator can perform admin functions for the Data Hub such as assigning the curator roles from the **Data Hub Admin** page.
@@ -17,8 +15,6 @@ The Data Hub Admin for the current release of Data Hub is assigned by [Mendix Su
 {{% /alert %}}
 
 This how-to describes how Mendix Data Hub Admin can assign the curator role to users.
-
-{{% todo %}}[this will, of course, change to Mendix Company Admin with an x-ref to [Company & App Roles](/developerportal/company-app-roles) when this implemented]{{% /todo %}}
 
 ## 2 Adding a Curator {#curator}
 

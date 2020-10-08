@@ -191,6 +191,7 @@ appstore:
     - "Connectors"
     - "Widgets"
     - "Modules"
+    - "App Services"
     - "Themes"
 product-naming:
   space: "Mendix Product Naming Guide"

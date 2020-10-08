@@ -1,6 +1,7 @@
 ---
 title: "3D Viewer"
 category: "App Services"
+menu_order: 1
 tags: ["3d visualization", "cad", "app store", "marketplace", "component", "platform support"]
 ---
 
@@ -61,7 +62,7 @@ You need to set this microflow as the after-startup step via **Project Settings*
 
 ## 5 3D Widgets
 
-These are the 3D widgets bundled in this module:
+These are the 3D widgets bundled in this app service:
 
 | Widget | Description |                                                                                                                                                                                      
 | --- | --- |

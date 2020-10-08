@@ -13,7 +13,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 #### Improvements
 
-The home page tab is now called  **Data Hub**. 
+The Data Hub home tab is now called  **Data Hub**. 
 
 From the **Data Hub** screen, you can now navigate to the Mendix Academy learning module for Data Hub where you can learn how to easily share data to build apps in Studio Pro.
 

@@ -13,4 +13,3 @@ When you download an app service, it will go into the **Project** > **App Store 
 ## 2 Main Documents in This Category
 
 * [3D Viewer](3d-viewer) – enables uploading, visualizing, and operating on 3D JT files in your web apps 
-* [3D Viewer for Teamcenter](3d-viewer-for-teamcenter) – lets you connect to a Teamcenter instance and then visualize and operate on 3D JT models

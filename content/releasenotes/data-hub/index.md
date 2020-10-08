@@ -9,6 +9,14 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 ## 2020
 
+### October 8th, 2020
+
+#### Improvements
+
+The Data Hub home tab is now called  **Data Hub**. 
+
+From the **Data Hub** screen, you can now navigate to the Mendix Academy learning module for Data Hub where you can learn how to easily share data to build apps in Studio Pro.
+
 ### October 1st, 2020
 
 Using data from other applications used to be a complex activity requiring an in-depth understanding of building integrations. 

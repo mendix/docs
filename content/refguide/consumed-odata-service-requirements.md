@@ -84,7 +84,10 @@ Mendix Data Hub is a separately licensed product. The type of license that you h
 There are two types of licenses currently available:
 
 * **Data Hub** – this is the *default* license with no limitation on the number of OData objects that can be consumed
+
 * **Freemium** – this enables you to retrieve a total of 1000 OData objects per day for each runtime instance
+
+  {{% alert type="warning" %}}The Freemimum Data Hub license is issued on an invitation-only basis. {{% /alert %}}
 
  After that limit is exceeded, an error will occur when users try to retrieve more data.
 

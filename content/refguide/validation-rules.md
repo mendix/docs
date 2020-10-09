@@ -6,8 +6,6 @@ tags: ["domain model", "entity", "validation rule"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% todo %}}[confirm that validation rules are still read only]{{% /todo %}}
-
 ## 1 Introduction
 
 Validation rules are conditions that should be satisfied before an object is committed. If a condition defined by a validation rule is not satisfied when the object is committed, the runtime server generates a validation error.

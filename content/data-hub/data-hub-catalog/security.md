@@ -49,8 +49,6 @@ The classification of the asset indicates the runtime security on the data and d
 
 The classification for a registered OData service is shown in the **Service Metadata** panel in the Data Hub Catalog. This classification applies to access to the data associated with the service or entity by end-users of the app that consumes the entity. 
 
-{{% todo %}}[For Services that are classified as Internal,  further information on how the security is enforced (Mendix SSO or the organization's own identification protocol) is given in the **Security** field in the **Asset Metadata** pane and the end-user roles that may have access to the data in the resulting app which is shown in the **Visibility**.]{{% /todo %}} 
-
 ## 4 Using Custom HTTP Header Validation for Published Entities {#http-header-validation}
 
 For an example of how to implement authentication using security assertion markup language (SAML) and Active Directory Federation Services (ADFS),  the following procedure illustrates how to use a custom HTTP headers microflow and a custom HTTP validation microflow to generate, set, and validate authentication tokens.
@@ -60,13 +58,9 @@ The following steps describe how the security proposal is set with
 
 ![](attachments/security/federation-with-ADFS-SAML-schematic.png)
 
-{{% todo %}}[anida to generate a new one]{{% /todo %}}
-
 1. The app end-user logs into an app that uses external entities.
 2. The end-user is not yet authenticated, so the SAML module forwards the user to ADFS for authentication.
 3.  If the correct credentials are provided, ADFS returns a cookie for SSO.
-
-	{{% todo %}}[**IG: EC - SJ or GM - Does the cookie contain the  JWT tokens?** change graphic to one which does specify a valid microflow should the microflow name be the same]{{% /todo %}} 
 
 4.  When the end-user performs a query on a external entity, the JSON web tokens (JWTs) are set on the API call (and are validated with a microflow in the consumed OData service):
 

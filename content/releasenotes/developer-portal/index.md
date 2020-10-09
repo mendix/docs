@@ -13,6 +13,12 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2020
 
+### October 9th, 2020
+
+#### Fixes
+
+* We fixed an issue where team members were not displayed in the [App Team](/developerportal/collaborate/team) overview.
+
 ### October 4th, 2020
 
 #### Improvements

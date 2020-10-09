@@ -26,7 +26,10 @@ For example, you have a collection of CDs like the one in the table below:
 The rows in the table are CDs. The type of the two rows is *CD* and this is the entity name. A specific CD like *How to Dismantle an Atomic Bomb* from the band *U2* is called an object of the entity *CD*. Characteristics like the title and artist are called attributes.
 
 {{% alert type="info" %}}
-This page provides information on entities created in the domain model. For information on *external entities* that can be used in through the [Data Hub](data-hub-pane) pane, see [External Entities](external-entities).
+You can also use data sources from other applications in your project  through the [Data Hub](data-hub-pane) pane, which are called *external entities* and displayed as a purple entity container in the domain model:
+ ![Virtual Entity Example](attachments/data-hub-pane/virtual-entity-example.png) 
+
+For a full description of see [External Entities](external-entities).
 {{% /alert %}}
 
 ## 2 Type of Entities {#entity-types}

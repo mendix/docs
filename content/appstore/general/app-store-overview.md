@@ -282,9 +282,11 @@ To delete a group, a Company Admin can click **Delete Group**.
 
 ## 6 My Subscriptions {#subscriptions}
 
-This page lists the **Product** (for example, **3D Visualization**), **Type** (for example, **App Service**), **Plan**, and **Expiration** of your subscriptions.
+This page lists the app services to which you have subscribed via **Product** (for example, **3D Visualization**), **Type** (for example, **App Service**), **Plan**, and **Expiration** of your subscriptions.
 
 {{% todo %}}[**Verify description above, add more info and cross-references as available**]{{% /todo %}}
+
+{{% todo %}}[**How to define “subscription”? Different plans/levels – defined by provider (e.g., free trial, monthly, pro, single use, etc.)**]{{% /todo %}}
 
 ![](attachments/app-store-overview/subscriptions.jpg)
 
@@ -308,6 +310,8 @@ To use an app service you are trying for free or that you have subscribed to, yo
 {{% todo %}}[**Verify step 5 - if don't do there, where do you add constant? Verify step 6 - specify name?**]{{% /todo %}}
 
 {{% todo %}}[**Need info on service instance and binding name**]{{% /todo %}}
+
+{{% todo %}}[**Company > Subscriptions page – what is there?**]{{% /todo %}}
 
 ## 7 Read More
 

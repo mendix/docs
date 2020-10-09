@@ -161,6 +161,10 @@ Downloading a theme is very similar to downloading a widget. Like a widget, a th
 
 To delete a theme, remove the ZIP file from your project's **theme** folder.
 
+### 6.3 Using an App Service
+
+To use an app service in Studio Pro, see the [My Subscriptions](app-store-overview#subscriptions) section of *App Store Overview*.
+
 ## 7 Read More
 
 * [App Store Overview](app-store-overview)

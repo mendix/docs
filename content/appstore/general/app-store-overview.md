@@ -36,11 +36,11 @@ It also presents various content categories:
 | Create New App | Click this to select a app template for your new app project. |
 | [Modules](/appstore/modules/) | These elements enable new functionality with accompanying domain models and security options. |
 | Solutions | Fully-formed solutions for apps you can immediately start using. |
-| App Services | -- |
+| [App Services](/appstore/app-services/) | Domain-focused and packaged business capabilities delivered in the form of an API or an API and associated UI. |
 | [Widgets](/appstore/widgets/) | Single user-interface elements that can be configured, such as containers, drop-down menus, and buttons. |
 | [Themes](/appstore/themes/) | Styling options for your apps that you can apply for different elements and devices. |
 
-{{% todo %}}[**Update Solutions description; verify App Services will be there and add description.**]{{% /todo %}}
+{{% todo %}}[**Update Solutions description; verify where App Services will be in menu**]{{% /todo %}}
 
 The following filter options are also available:
 
@@ -71,7 +71,8 @@ The header for each component presents the following details:
 		* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
 		* The best practice is to download a component from the App Store that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded App Store content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
 	* **Subscribe** – click this to [subscribe](#subscriptions) to a paid [platform-supported](app-store-content-support#category) app service
-	* <a name="try-for-free"></a>**Try for Free** – click this to [subscribe](#subscriptions) to a 30-day free trial of the paid [platform-supported](app-store-content-support#category) component
+	* <a name="try-for-free"></a>**Try for Free** – click this to start a 30-day free trial of the paid [platform-supported](app-store-content-support#category) component
+		* After you agree to the terms and conditions, your trial will be set up – click **Check Status** to go to the [My Subscriptions](#subscriptions) page, where you can click **Manage App Servcies** to go to the [Service Management](#service-management) page (you will also receive an email with a link to this page)
 
 	{{% todo %}}[**Verify "Subscribe" and "Try for Free" definitions**]{{% /todo %}}
 
@@ -86,12 +87,11 @@ The header for each component presents the following details:
 
 The **Publisher** section presents the name of the company who created the component as well as the **Date** when the component was first published.
 
-{{% todo %}}[** Verify what happens when you click company name?**]{{% /todo %}}
+{{% todo %}}[**Verify what happens when you click company name?**]{{% /todo %}}
 
 The **Developers** section presents the names of the developers who most recently updated the component, with links to their [Mendix Profile](/developerportal/mendix-profile/).
 
 The **Support** section presents the category of support Mendix offers for the component (for details on categories, see [App Store Content Support](app-store-content-support)).
-
 
 ### 3.2 Tabs
 
@@ -288,9 +288,26 @@ This page lists the **Product** (for example, **3D Visualization**), **Type** (f
 
 ![](attachments/app-store-overview/subscriptions.jpg)
 
-Click **Manage App Services** to go to the page where you can manage the app services to which you have subscribed. There, you will **create and manage binding keys**.
+<a name="service-management"></a>Click **Manage App Services** to go to the **Service Management** page where you can manage the app services to which you have subscribed and create and manage binding keys:
 
-{{% todo %}}[**Need more info here**]{{% /todo %}}
+{{% todo %}}[**Add screenshot**]{{% /todo %}}
+
+On this page, you can see the **Product Name**, **Service Instance** (which is auto-configured and created automatically if clicked **Try for Free**), the **Service Binding**, and who the service was **Created By**.
+
+To use an app service you are trying for free or that you have subscribed to, you have to create a key, which you can then add as a [constant](/refguide/constants) in Studio Pro to connect your app to the app service. Follow these steps to do so:
+
+1. Select the appropriate service via **Product Name** and **Service Environment**.
+2. Click **Create Keys**, which will provide an Excel file you can download.
+3. In the Excel file, there are two keys provided: an access key and a secret key. You need both keys for Studio Pro.
+4. In Studio Pro's Project Explorer, click **Project** > **Settings** > **Edit Constant** > **Edit Configuration** > **Constants** tab.
+5. Click **New** and in the **Select Constant** dialog box, select **App Store modules** and the folder for your app service, then click **New**.
+6. Enter a name for the constant.
+7. In the **Constant** dialog box, add the access key first as the **Default value**.
+8. Do the same steps to add the secret key as a consant.
+
+{{% todo %}}[**Verify step 5 - if don't do there, where do you add constant? Verify step 6 - specify name?**]{{% /todo %}}
+
+{{% todo %}}[**Need info on service instance and binding name**]{{% /todo %}}
 
 ## 7 Read More
 

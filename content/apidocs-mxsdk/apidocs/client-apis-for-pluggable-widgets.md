@@ -171,9 +171,10 @@ In practice, `WebIcon` and `NativeIcon` are usually passed to a `Icon` component
 ```ts
 export interface WebImage {
     readonly uri: string;
+    readonly name: string;
     readonly altText?: string;
 }
-export type NativeImage = Readonly<ImageURISource | string | number>;
+export type NativeImage = Readonly<ImageURISource & { name?: string; } | string | number>;
 export type ImageValue = WebImage | NativeImage;
 ```
 
@@ -185,7 +186,8 @@ export type ImageValue = WebImage | NativeImage;
 
 ```ts
 export interface FileValue {
-    uri: string;
+    readonly uri: string;
+    readonly name: string;
 }
 ```
 
@@ -252,28 +254,30 @@ In this code sample, checks of status `myDataSource` and availability of items a
 This allows the client component to access attribute values on individual items from a `ListValue`. `ListAttributeValue` is a function and its definition is as follows:
 
 ```ts
-export type ListAttributeValue = (item: ObjectItem) => EditableValue<AttributeValue>;
+export type ListAttributeValue<T extends AttributeValue> = (item: ObjectItem) => EditableValue<T>;
 ```
+
+The type `<T>` depends on the allowed value types as configured for the attribute property.
 
 In order to work with the attribute value of a particular item of a `ListValue` first an instance of `EditableValue` should be obtained by calling `ListAttributeValue` with the item. See an example below.
 
 
-Assuming widget properties are confgured as follows:
+Assuming widget properties are configured as follows (with an attribute of type `string`):
 
 ```ts
 interface MyListWidgetsProps {
     myDataSource: ListValue;
-    myAttributeOnDatasource: ListAttributeValue;
+    myAttributeOnDatasource: ListAttributeValue<string>;
 }
 ```
 
 The following code sample shows how to get an `EditableValue` that represents a read-only value of an attribute of the first element from the `myDataSource`.
 
 ```ts
-const attributeValue = this.props.myDataSource.myAttributeOnDatasource(this.props.myDataSource.item[0]);
+const attributeValue = this.props.myDataSource.myAttributeOnDatasource(this.props.myDataSource.items[0]);
 ```
 
-Note: in this code sample checks of status of `myDataSource` and availability of items are omited for simplicity. See [EditableValue section](#editable-value) for more information about usage of `EditableValue`.
+Note: in this code sample checks of status of `myDataSource` and availability of items are omitted for simplicity. See [EditableValue section](#editable-value) for more information about usage of `EditableValue`.
 
 
 ### 4.10 ListWidgetValue {#listwidgetvalue}
@@ -300,6 +304,35 @@ Because of the above configurations, the client component may render every insta
 
 ```ts
 this.props.myDataSource.items.map(i => this.props.myWidgets(i));
+```
+
+
+### 4.11 ListExpressionValue {#listexpressionvalue}
+
+`ListExpressionValue` represents an [expression property](property-types-pluggable-widgets#expression) or [text template property](property-types-pluggable-widgets#texttemplate) that is linked to a data source. This allows the client component to access expression or text template values for individual items from a `ListValue`. `ListExpressionValue` is a function and its definition is as follows:
+
+```ts
+export type ListExpressionValue<T extends AttributeValue> = (item: ObjectItem) => DynamicValue<T>;
+```
+
+The type `<T>` depends on the return type as configured for the expression property. For a text template property, this type is always `string`.
+
+In order to work with the expression or text template value of a particular item of a `ListValue`, first an instance of `DynamicValue` should be obtained by calling `ListExpressionValue` with the item. See an example below.
+
+Assuming widget properties are configured as follows (with an expression of type `boolean`):
+
+```ts
+interface MyListWidgetsProps {
+    myDataSource: ListValue;
+    myExpressionOnDatasource: ListExpressionValue<boolean>;
+    myTextTemplateOnDatasource: ListExpressionValue<string>;
+}
+```
+
+The following code sample shows how to get a `DynamicValue` that represents the value of an expression for the first element from the `myDataSource`.
+
+```ts
+const expressionValue = this.props.myDataSource.myExpressionOnDatasource(this.props.myDataSource.item[0]);
 ```
 
 

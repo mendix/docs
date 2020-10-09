@@ -26,7 +26,7 @@ To create a cluster in your OpenShift context, you need the following:
 * **Kubectl** installed if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
 * **Bash** (Bourne-again shell) for your machine. If you are running on Windows, you can use something like [**Windows Subsystem for Linux (WSL)**](https://docs.microsoft.com/en-us/windows/wsl/faq) or the **Git Bash emulator** that comes with [git for windows](https://gitforwindows.org/).
 
-## 3 Creating a Cluster and Namespace
+## 3 Creating a Cluster & Namespace
 
 ### 3.1 Creating a Cluster
 
@@ -46,7 +46,7 @@ To create a cluster in your OpenShift context, you need the following:
 
     ![](attachments/private-cloud-cluster/image5.png)
 
-5. Click **Create Cluster**. 
+5. Click **Register Cluster**. 
 
     ![](attachments/private-cloud-cluster/image6.png)
 
@@ -68,17 +68,19 @@ You now need to add a namespace to your cluster. Your cluster can contain severa
 
 To add a namespace, do the following:
 
-1. Click **Add Namespace**.
+1. Click **Details**:
 
     ![](attachments/private-cloud-cluster/empty-cluster.png)
+	
+2. Click **Add Namespace**:
+	
+    ![](attachments/private-cloud-cluster/namespace-details.PNG)
 
-2. Enter the following details:
+3. Enter the following details:
+	* **Namespace** – this is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name
+	* **Installation type** – if you want to [create environments and deploy your app from the Mendix Developer Portal](private-cloud-deploy), choose **Connected**, but if you only want to [control your deployments through the Mendix Operator using the CLI](private-cloud-operator), choose **Standalone**
 
-  1. **Namespace** – this is the namespace in your platform. This must conform to the namespace naming conventions of the cluster: all lowercase with hyphens allowed within the name.
-  
-  2. **Installation type** – if you want to [create environments and deploy your app from the Mendix Developer Portal](private-cloud-deploy), choose **Connected**, but if you only want to [control your deployments through the Mendix Operator using the CLI](private-cloud-operator), choose **Standalone**.
-
-3. Click **Done** to create the namespace.
+4. Click **Done** to create the namespace.
 
 ![](attachments/private-cloud-cluster/add-namespace.png)
 
@@ -92,7 +94,7 @@ The first script is the installation script which will install the Mendix operat
 
 You will need to have administrator rights to your private cloud platform. This means you will have to log in before you run the installation script.
 
-#### 3.3.1 Signing in to OpenShift{#openshift-signin}
+#### 3.3.1 Signing in to OpenShift {#openshift-signin}
 
 These instructions are for the OpenShift platform; a similar process will be required for other platforms.
 
@@ -143,7 +145,7 @@ The Mendix operator and Mendix Gateway Agent are now installed on your platform.
 
 You can always find the installation script again in the **Installation** tab for your namespace in the cluster manager.
 
-### 3.4 Running the Reconfiguration Script{#reconfiguration-script}
+### 3.4 Running the Reconfiguration Script {#reconfiguration-script}
 
 Before you deploy an app to your namespace, you will need to configure a number of services, namely:
 
@@ -163,7 +165,27 @@ Mendix provides you with a script which will configure these initially, and can 
 
 The script will ask you a series of questions. Type the number corresponding to your choice, or enter the value required.
 
-#### 3.4.1 What do you want to do?
+{{% alert type="info" %}}
+
+If you update the configuration and your namespace already has existing Mendix environments, restart the Mendix Operator to fully apply the configuration changes (replace `{namespace}` with the namespace where the Operator is installed):
+
+For OpenShift:
+
+```shell
+oc -n {namespace} scale deployment mendix-operator --replicas=0
+oc -n {namespace} scale deployment mendix-operator --replicas=1
+```
+
+For Kubernetes:
+
+```shell
+kubectl -n {namespace} scale deployment mendix-operator --replicas=0
+kubectl -n {namespace} scale deployment mendix-operator --replicas=1
+```
+
+{{% /alert %}}
+
+#### 3.4.1 What Do You Want to Do?
 
 ![](attachments/private-cloud-cluster/image16.png)
 
@@ -185,9 +207,9 @@ You can return to this initial question from any of the other questions by choos
 The configuration script does not currently validate input values. Configuration can be verified by deploying a sample app.
 {{% /alert %}}
 
-#### 3.4.2 Pick a database type
+#### 3.4.2 Pick a Database Type
 
-![](attachments/private-cloud-cluster/image17.png)
+![](attachments/private-cloud-cluster/image19.png)
 
 **Postgres** will enable you to enter the values to configure a PostgreSQL database. You will need to provide all the information about your PostgreSQL database such as plan name, host, port, database, user, and password.
 
@@ -237,7 +259,7 @@ If the plan name already exists you will receive an error that it cannot be crea
 To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.1.0 or later.
 {{% /alert %}}
 
-#### 3.4.3 Pick a storage type
+#### 3.4.3 Pick a Storage Type
 
 ![](attachments/private-cloud-cluster/image18.png)
 
@@ -349,9 +371,7 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide)
 
 **Ephemeral** will enable you to quickly set up your environment and deploy your app, but any data objects you store will be lost when you restart your environment.
 
-#### 3.4.4 Pick an ingress type
-
-![](attachments/private-cloud-cluster/image19.png)
+#### 3.4.4 Pick an Ingress Type
 
 **OpenShift Route** will set up an OpenShift Route. This can only be used for OpenShift clusters.
 
@@ -359,7 +379,11 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide)
 
 Both forms of ingress can have TLS enabled or disabled.
 
-#### 3.4.5 Pick a registry type
+{{% alert type="info" %}}
+When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
+{{% /alert %}}
+
+#### 3.4.5 Pick a Registry Type
 
 ![](attachments/private-cloud-cluster/image20.png)
 
@@ -385,7 +409,7 @@ For **Amazon Elastic Container Registry**, you will need to configure registry a
 
 When choosing the **Existing docker-registry secret**, you will need to add this secret to the `default` ServiceAccount manually, or provide registry authentication configuration in another way (depending on which registry authentication options the Kubernetes cluster vendor is offering).
 
-#### 3.4.6 Do you want to configure the proxy
+#### 3.4.6 Do You Want to Configure the Proxy?
 
 ![](attachments/private-cloud-cluster/image21.png)
 
@@ -397,11 +421,103 @@ When the namespace is configured correctly, its status will become **Connected**
 
 ![](attachments/private-cloud-cluster/image22.png)
 
-## 4 Cluster Management
+### 3.6 Advanced Operator configuration
+
+Some advanced configuration options of the Mendix Operator are not yet available in the reconfiguration script.
+These options can be changed by editing the `OperatorConfiguration` custom resource directly in Kubernetes.
+
+To start editing the `OperatorConfiguration`, use the following commands (replace `{namespace}` with the namespace where the operator is installed):
+
+For OpenShift:
+
+```shell
+oc -n {namespace} edit operatorconfiguration mendix-operator-configuration
+```
+
+For Kubernetes:
+
+```shell
+kubectl -n {namespace} edit operatorconfiguration mendix-operator-configuration
+```
+
+The OperatorConfiguration contains the following user-editable options:
+
+When using **Ingress** for network endpoints:
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+spec:
+  # Endpoint (Network) configuration
+  endpoint:
+    # Endpoint type: ingress or openshiftRoute
+    type: ingress
+    # Ingress configuration: used only when type is set to ingress
+    ingress:
+      # Optional, can be omitted: annotations which should be applied to all Ingress Resources
+      annotations:
+        # default annotation: allow uploads of files up 500 MB in the NGINX Ingress Controller
+        nginx.ingress.kubernetes.io/proxy-body-size: 500m
+        # example: use the specified cert-manager ClusterIssuer to generate TLS certificates with Let's Encrypt
+        cert-manager.io/cluster-issuer: staging-issuer
+      # App URLs will be generated for subdomains of this domain, unless an app is using a custom appURL
+      domain: mendix.example.com
+      # Enable or disable TLS
+      enableTLS: true
+      # Optional: name of a kubernetes.io/tls secret containing the TLS certificate
+      # This example is a template which lets cert-manager to generate a unique certificate for each app
+      tlsSecretName: '{{.Name}}-tls'
+```
+
+When using **OpenShift Routes** for network endpoints:
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+spec:
+  # Endpoint (Network) configuration
+  endpoint:
+    # Endpoint type: ingress or openshiftRoute
+    type: openshiftRoute
+    # OpenShift Route configuration: used only when type is set to openshiftRoute
+    openshiftRoute:
+      # Optional, can be omitted: annotations which should be applied to all Ingress Resources
+      annotations:
+        # example: use HSTS headers
+        haproxy.router.openshift.io/hsts_header: max-age=31536000;includeSubDomains;preload
+      # Optional: App URLs will be generated for subdomains of this domain, unless an app is using a custom appURL
+      domain: mendix.example.com
+      # Enable or disable TLS
+      enableTLS: true
+      # Optional: name of a kubernetes.io/tls secret containing the TLS certificate
+      # This example is the name of an existing secret, which should be a wildcard matching subdomains of the domain name
+      tlsSecretName: 'mendixapps-tls'
+```
+
+{{% alert type="warning" %}}
+Adjusting options which are not listed here can cause the Mendix Operator to configure environments incorrectly. Making a backup before applying any changes is strongly recommended.
+{{% /alert %}}
+
+You can change the following options:
+
+* **type**: – select the Endpoint type, possible options are `ingress` and `openshiftRoute`; this parameter is also configured through the **Reconfiguration Script**
+* **ingress**: - specify the Ingress configuration, required when **type** is set to `ingress`
+* **openshiftRoute**: - specify the OpenShift Route configuration, required when **type** is set to `openshiftRoute`
+* **annotations**: - optional, can be used to specify the Ingress or OpenShift Route annotations
+* **domain**: - optional for `openshiftRoute`, required for `ingress`, used to generate the app domain in case no app URL is specified; if left empty when using OpenShift Routes, the default OpenShift `apps` domain will be used; this parameter is also configured through the **Reconfiguration Script**
+* **enableTLS**: - allows you to enable or disable TLS for the Mendix App's Ingress or OpenShift Route
+* **tlsSecretName**: - optional name of a `kubernetes.io/tls` secret containing the TLS certificate, can be a template: `{{.Name}}` will be replaced with the name of the `MendixApp` CR; if left empty, the default TLS certificate from the Ingress Controller or OpenShift Router will be used
+
+
+{{% alert type="info" %}}
+When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
+{{% /alert %}}
+
+## 4 Cluster and Namespace Management
 
 Once it is configured, you can manage your cluster and namespaces through the Developer Portal.
 
-### 4.1 Cluster Overview
+### 4.1 Cluster Overview {#overview}
 
 Go to the Cluster Manager page by clicking **Cluster Manager** in the **Apps** menu.
 
@@ -415,14 +531,33 @@ Here you can perform the following actions on the entire cluster:
 
 * Delete the cluster by clicking the delete icon
 * Rename the cluster or edit its description by clicking the edit icon
+* Invite another cluster manager
+
+<a name="actvity-logs"></a>You can also see the activities logged for all you clusters by clicking **Activity** in the [cluster overview](#overview) page. This shows the following:
+
+* When a cluster has been added
+* When a cluster description is added
+* When name of the cluster is changed
+* When cluster description is changed
+
+![](attachments/private-cloud-cluster/cluster-activity-logs.PNG)
+
+{{% alert type="info" %}}
+When you add a cluster manager, the user will have most of the access which the original cluster manager had, such as the abilities to add a namespace, add a member, change the permissions of the cluster member, and delete another cluster manager. 
+
+The only limitations are that:
+
+* an added cluster manager will not be able to operate on or manage the environments created in the namespaces which are already in the cluster — they need to be added as a member of the namespace if they want to manage environments in the namespaces
+* cluster managers who are added to the cluster cannot remove the cluster manager who created the cluster
+{{% /alert %}}
 
 {{% alert type="info" %}}
 When you delete a cluster, this removes the cluster from the Developer Portal. However, it will not remove the cluster from your platform. You will need to explicitly delete the cluster using the tools provided by your platform.
 {{% /alert %}}
 
-#### 4.1.2 Managing a Namespace
+### 4.2 Namespace Management
 
-You can also manage a namespace in the cluster.
+If you are a member of a namespace, you can also manage a namespace in the cluster.
 
 Click the **Details** button for the namespace you want to manage.
 
@@ -440,27 +575,63 @@ You can also delete your namespace from the cluster manager by clicking the dele
 
 ![](attachments/private-cloud-cluster/image25.png)
 
+If there are any environments associated with the namespace, you cannot delete the namespace until the environments associated with it are deleted.
+
 When you delete a namespace, this removes the namespace from the cluster in the Developer Portal. However, it will not remove the namespace from your platform. You will need to explicitly delete the namespace using the tools provided by your platform.
 
-If you attempt to delete a namespace which contains environments, you will be warned that the environments will also be deleted. 
+![](attachments/private-cloud-cluster/image26.png)
 
-![](attachments/private-cloud-cluster/delete-namespace-and-env.png)
+You can also see an activity log containing the following information for all namespaces within the cluster:
 
-If the namespace is connected, then the environments will be removed from the namespace automatically. If it is not connected, you will need to remove the environments manually.
+* When a namespace has been added
+* When a namespace has been deleted
+* When a cluster manager has been added
+* When a cluster manager invitation is removed
+* When a cluster manager accepts the invitation
+* When a cluster manager is removed from the cluster
+* When a new database plan is added in a namespace
+* When a database plan is deactivated
+* When a new storage plan is added in a namespace
+* When a storage plan is deactivated
+* When Metrics/Alerts/Logs/Backups URLs are added in the namespace
+* When Metrics/Alerts/Logs/Backups URLs are removed from the namespace
+* When Metrics/Alerts/Logs/Backups URLs are changed in the namespace
+* When a user is invited as a namespace member
+* When a user invitation for namespace member is removed
+* When a user accepts the invitation as a namespace member
+* When a user is removed as a namespace member
+* When user's permission is changed in the namespace
 
-### 4.2 Apps
+![](attachments/private-cloud-cluster/namespace-activity-logs.PNG)
+
+#### 4.2.1 Apps
 
 The **Apps** tab of namespace details in the cluster manager page lists all the apps which are deployed to this namespace.
 
 ![](attachments/private-cloud-cluster/image27.png)
 
-Click **Details** to go to the **Environment Details** page for that app.
+If you are a team member of the app, click **Details** to go to the *Environment Details* page for that app.
 
-### 4.3 Members
+{{% alert type="info" %}}
+You can only see the environment details of an app if you are a member of the app team with the appropriate authorization.
+{{% /alert %}}
 
-By default, the cluster manager, who created the cluster in Mendix, has full administration rights to the cluster and its namespaces. These administration rights are:
+#### 4.2.2 Members
 
-* Manage Environment – user can create and delete environments, and start and stop the application
+By default, the cluster manager, who created the cluster in Mendix, and anyone added as a cluster manager has full administration rights to the cluster and its namespaces. These administration rights are:
+
+* Add and delete namespaces
+* Add, activate, or deactivate plans
+* Invite and manage users
+
+The following rights are available to the cluster creator, and members of a namespace with appropriate authorization:
+
+* Set up operating URLs for the namespace
+* View all environments in the namespace
+* Manage own environments – user can create and manage an environment in any namespace in the cluster
+
+The following actions require the appropriate access to the namespace **and** access to the app environment as a team member with appropriate authorization:
+
 * Deploy App – user can deploy a new app to the environment or start and stop existing apps
 * Scale App – user can change the number of replicas
 * Edit App Constants
@@ -470,18 +641,9 @@ By default, the cluster manager, who created the cluster in Mendix, has full adm
 * View App Metrics
 * Manage App Backups
 
-{{% alert type="info" %}}
-In addition, only the person who created the cluster can do the following:
-
-* add and delete namespaces
-* add, activate, or deactivate plans
-* invite and manage users
-* and set up operating URLs for the namespace
-{{% /alert %}}
-
 The **Members** tab allows you to manage the list of members of the namespace and control what rights they have.
 
-#### 4.3.1 Adding Members
+##### 4.2.2.1 Adding Members
 
 You can invite additional members to the namespace, and configure their role depending on what they should be allowed to do.
 
@@ -505,7 +667,7 @@ You can invite additional members to the namespace, and configure their role dep
 
 6. The user will receive an email and will be required to follow a link to confirm that they want to join this namespace. They will need to be logged in to Mendix when they follow the confirmation link.
 
-#### 4.3.2 Editing & Removing Members
+##### 4.2.2.2 Editing & Removing Members
 
 You can change the access rights for, or completely remove, existing members.
 
@@ -519,9 +681,7 @@ You can change the access rights for, or completely remove, existing members.
         
     ![](attachments/private-cloud-cluster/image30.png)
 
-When you edit or remove a member, they will receive an email informing them of the changes.
-
-### 4.4 Operate{#operate}
+#### 4.2.3 Operate {#operate}
 
 The **Operate** tab allows you to add a set of links which are used when users request a page from the Operate category for their app in the Developer Portal, as shown below.
 
@@ -540,7 +700,7 @@ Open the **Operate** tab, enter the URLs relevant to your namespace, and click *
 
 ![](attachments/private-cloud-cluster/image32.png)
 
-### 4.5 Plans
+#### 4.2.4 Plans
 
 The **Plans** tab shows you the database and storage plans which are currently configured for your namespace.
 
@@ -548,21 +708,21 @@ The **Plans** tab shows you the database and storage plans which are currently c
 
 From this tab you can perform the following action:
 
-#### 4.5.1 Add a Plan
+##### 4.2.4.1 Adding a Plan
 
 Click **Add** and you will be able to enter the name of an existing plan and add it to the plans linked to this namespace. You should only use this when adding plans using the namespace Reconfiguration Script fails to add them correctly.
 
 ![](attachments/private-cloud-cluster/image34.png)
 
-#### 4.5.2 Deactivate a Plan
+##### 4.2.4.2 Deactivating a Plan
 
 Click **Deactivate** next to the name of the plan you wish to deactivate. You cannot remove plans from within the cluster manager, but you can deactivate them to ensure that developers cannot create environments using the plan. Any environments currently using the plan will not be affected by this setting.
 
-#### 4.5.3 Activate a Plan
+##### 4.2.4.3 Activating a Plan
 
 Click **Activate** next to the name of the plan you wish to activate. The plan can then be used by developers when they create an environment to deploy their apps.
 
-### 4.6 Installation
+#### 4.2.5 Installation
 
 The **Installation** tab shows you the installation script and configuration script which you used to create the namespace, together with the parameters which are used to configure the agent.
 
@@ -572,13 +732,39 @@ You can also copy the installation and reconfiguration scripts to retain in your
 
 ## 5 Current Limitations
 
-### 5.1 Storage provisioning
+### 5.1 Storage Provisioning
 
 If the Operator fails to provision or deprovision storage (a database or file storage), it will not retry the operation. If there is a failed `*-database` or `*-file` pod, you'll need to do the following:
 
 1. Check the failed pod logs for the error message.
 2. Troubleshoot and fix the cause of this error.
 3. Delete the failed pod to retry the process again.
+
+### 5.2 Restart Required When Switching Between Ingress and OpenShift Route {#restart-after-changing-network-cr}
+
+Starting with Mendix Operator version 1.5.0, the operator will monitor only one network resource type: Ingress or OpenShift route.
+
+If you switch between Ingress and OpenShift Route, you will need to restart the Mendix Operator so that it can monitor the right network resource (replace `{namespace}` with the namespace where the Operator is installed). This can be done as follows:
+
+For OpenShift:
+
+```shell
+oc -n {namespace} scale deployment mendix-operator --replicas=0
+oc -n {namespace} scale deployment mendix-operator --replicas=1
+```
+
+For Kubernetes:
+
+```shell
+kubectl -n {namespace} scale deployment mendix-operator --replicas=0
+kubectl -n {namespace} scale deployment mendix-operator --replicas=1
+```
+
+### 5.3 Crashlooping mendix-operator Deployment in a New Installation
+
+When Mendix for Private Cloud is installed for the first time into a new namespace, the `mendix-operator` deployment will be crashlooping.
+
+This behavior is expected and the `mendix-operator` deployment should start normally after the the operator is fully configured.
 
 ## 6 Troubleshooting
 
@@ -588,7 +774,7 @@ This section covers an issue which can arise where Mendix cannot recover automat
 
 Under some circumstances changes in the status of the cluster, namespaces, and environments will not be updated automatically. To ensure you are seeing the current status, you may need to click the **Refresh** button on the screen (not the browser page refresh button).
 
-## 7 Containerized Mendix App Architecture{#containerized-architecture}
+## 7 Containerized Mendix App Architecture {#containerized-architecture}
 
 Within your cluster you can run one, or several, Mendix apps. Each app runs in an environment, and each environment is in a namespace. You can see the relationship between the Mendix environments and the Kubernetes namespaces in the image below.
 

@@ -20,7 +20,7 @@ The **App Services** page provides an overview of possible resources that can be
 
 ## 2 App Service
 
-App services are aimed at sharing functionality between your Mendix apps. You can create app services in Mendix Studio Pro and publish the created app content and functionality within your company or to the entire Mendix Community. Users of your app service can directly drag actions that you designed into their microflows in Studio Pro and use your entities and data in their apps. 
+App services are aimed at sharing functionality between your Mendix apps. You can create app services in Mendix Studio Pro and publish the created app content and functionality within your company or to the entire Mendix community. Users of your app service can directly drag actions that you designed into their microflows in Studio Pro and use your entities and data in their apps. 
 
 On the **App Service** page, you can see a list of the available app services, with whom the app service is shared, and what the current statuses are.
 
@@ -40,7 +40,7 @@ On the right side of the screen, you can choose with whom you want to **Share th
 
 * Nobody
 * My company
-* Mendix Community
+* Mendix community
 
 Saving your settings will update your app service's listing in the Mendix App Store. Note that publishing to the Community App Store is subject to an approval process. However, your app service will be available for your colleagues while it is awaiting approval.
 

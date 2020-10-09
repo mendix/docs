@@ -15,7 +15,6 @@ The **General** settings page presents an overview of your app project with the 
 * A **Description** of the app
 * The [App Contact](../company-app-roles/manage-roles#change-app-contact) and [Technical Contact](../company-app-roles/technical-contact) for the app
 * Whether the app is enabled for Mendix **Studio** (for details, see the [Mendix Studio](#web) section below)
-
 * The **App ID**
 
 {{% image_container width="550" %}}![](attachments/general-settings.png)
@@ -27,9 +26,7 @@ The sections below describe the actions you can perform on this page.
 
 In the **Mendix Studio** section, you can see whether Studio is enabled for the app. 
 
-You can also enable Studio if it has not been enabled yet by clicking **Enable Mendix Studio**:
-
-![](attachments/not-enabled.png)
+You can enable Studio if it has not been enabled yet by clicking **Enable Mendix Studio**.
 
 {{% alert type="info" %}}
 Only Scrum Masters or custom App Team roles with the **App Settings** permission are allowed to enable Studio.

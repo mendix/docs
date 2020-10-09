@@ -27,14 +27,16 @@ Selecting DISTINCT attributes of the string type with a size greater than 2000 c
 
 ## 3 Required Privileges
 
-The Mendix Runtime will require a user with roles with the following privileges to set up and maintain the Mendix database on Oracle:
+The following are the minimum privileges that have to be set for access to your Oracle DB: 
 
 * Create tables
+
 * Drop tables
+
 * Create indexes
+
 * Create sequences
+
 * Create, read, update, and delete data
 
-## 4 Known Issue
-
-There is a known bug in older versions of Oracle 11.2 where converting numeric attributes to string attributes with a length greater than 80 leads to corrupted data on existing rows. This problem is fixed in Oracle 11.2.0.4. For more information, see [this Oracle page](https://support.oracle.com/epmos/faces/DocumentDisplay?id=9949330.8) and [Strange behavior on Oracle CAST to NVARCHAR2](http://stackoverflow.com/questions/16735793/strange-behavior-on-oracle-cast-to-nvarchar2).
+These are the requirements for a Mendix Database. The Database Administrator can specify the other access and permissions that are necessary to access the data.  

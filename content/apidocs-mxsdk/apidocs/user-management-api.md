@@ -97,13 +97,13 @@ A group of users within the same company. Automated security policies can be ass
 
 #### 4.1.4 Company Admin
 
-A user account within a company that has additional permissions. New company admins can be appointed by existing company admins or by the Mendix support department. The following permissions can be assigned to company admins.
+A user account within a company that has additional permissions. New Company Admins can be appointed by existing Company Admins or by Mendix Support. The following permissions can be assigned to Company Admins:
 
 | Role | Description |
 | --- | --- |
-| Company manager | Has all of the privileges below. Can also manage company information, other company admins, security groups, security rules, and password policies. |
+| Company manager | Has all of the privileges below. Can also manage company information, other Company Admins, security groups, security rules, and password policies. |
 | Member manager | Can manage individual users within the company, and modify security group memberships. |
-| Project manager | Can see all Mendix projects within the company, and add or remove users to those projects. |
+| Project manager | Can see all Mendix app projects within the company. Can invite and manage [App Team](/developerportal/collaborate/team) members when the Company Admin with this role is also a member of the particular App Team with [permissions for managing](/developerportal/settings/#app-team) that team. |
 | Node manager | Can see all licensed App nodes that are managed by this company, or which relate to this company in any other way. |
 
 Most API calls described below can only be made by company managers or member managers.

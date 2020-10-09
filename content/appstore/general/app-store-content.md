@@ -1,5 +1,5 @@
 ---
-title: "Use App Store Content"
+title: "Use App Store Content in Studio Pro"
 category: "General Info"
 menu_order: 20
 tags: ["app store", "Studio Pro"]

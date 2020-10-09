@@ -138,9 +138,23 @@ For flexible environments there is only one action you can take :
 
 There is no concept of staging, and you need to deploy your app directly to the target environment.
 
+#### 2.2.3 Setup Studios Deployment
+
+If you are the [Technical Contact](/developerportal/company-app-roles/technical-contact) for an app, you will be see the **Setup Studios Deployment** button which enables you to set the target environment to which apps will be deployed from Studio and Studio Pro. For more information, see [Studio Deployment Settings](studio-deployment-settings).
+
+![](attachments/environments/setup-studios-target.png)
+
 ### 2.3 Activity
 
 ![](attachments/environments/activity.png)
+
+If you are the [Technical Contact](/developerportal/company-app-roles/technical-contact) you will see the **Download to CSV** button and can download a copy of the activity log as follows:
+
+1. Click **Download to CSV**.
+2. Choose the period for which you want to download log entries. If you choose **Custom Period** you will need to enter a valid period using **Start Date** and **End Date**.
+
+    ![](attachments/environments/download-activity-log.png)
+3. Click **Download**.
 
 {{% alert type="info" %}}
 Operations carried out by the Mendix Operations Desk are not currently logged on the activity log.
@@ -158,7 +172,7 @@ There is also a section with an overview of linked custom domains.
 
 For more information, see [Custom Domains](custom-domains).
 
-## 4 Access Restriction Profiles
+## 4 Access Restriction Profiles {#asp}
 
 In this tab you can manage custom access restriction profiles. These profiles can combine IP range filters and client certificate verification. Access restriction profiles can be applied to path-based access restrictions in specific environments of the application.
 

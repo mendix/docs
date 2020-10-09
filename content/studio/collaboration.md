@@ -7,11 +7,11 @@ tags: ["studio", "data", "working with data", "work with data"]
 
 ## 1 Introduction 
 
-Collaboration is an important concept of Studio. 
+Collaboration is an important process in Mendix Studio. 
 
-You share your app model changes with your team members automatically, both with Studio and Studio Pro users. This process is called [collaborative development](collaborative-development). 
+You can work together with your team members on one project in Studio and Studio Pro. The changes to your app model will be shared and synchronized automatically. This process is called collaborative development. For more information, see [Collaborative Development in Studio](collaborative-development).
 
-You can also leave comments and collaborate with your team members in the [Buzz](collaboration-buzz) pane.  
+You can also collaborate with your team members while creating the app and leave comment and create feedback items in the **Buzz** pane. For more information, see [Buzz](collaboration-buzz).  
 
 ## 2 Main Documents in This Category
 

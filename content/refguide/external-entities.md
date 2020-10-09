@@ -7,9 +7,11 @@ tags: ["domain model", "entity", "entities", "attribute", "external entities", "
 ---
 ## 1 Introduction
 
-External entities connect to shared datasets that are made available through [Mendix Data Hub](/data-hub/index). These entities are displayed as *purple* entity containers in the domain model. 
+External entities connect to shared data sources that are made available through [Mendix Data Hub](/data-hub/index). These external entities represent the link to the datasets that are maintained and stored in the external applications. You can integrate  or *consume* external entities in your project and use them with local entities to create an app that uses the shared datasets. This dataset that the external entity connects to will be updated as it is changed in the source application. 
 
-External entities are added to the domain model through the [Data Hub pane](data-hub-pane). They connect to the shared datasets which can be utilized or *consumed* in your module. 
+This means that several properties of the external entities are determined in their originating app and cannot be changed in your project. 
+
+External entities are added to the domain model through the [Data Hub pane](data-hub-pane) and are displayed as *purple* entity containers in the domain model. 
 
 {{% alert type="info" %}}
 A license is required to use Mendix Data Hub and connect to external data sources through consumed OData services in your apps.

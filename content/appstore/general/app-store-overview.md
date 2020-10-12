@@ -47,10 +47,6 @@ The following filter options are also available:
 * **Tags**
 * **Ratings**
 
-If a [platform-supported](app-store-content-support#category) component has the **Premium** label, this means that after your [30-day free trial](try-for-free) ends, you need to [subscribe](#subscriptions) to the component to use it.
-
-{{% todo %}}[**Verify "Premium" definition**]{{% /todo %}}
-
 ## 3 Component Details Page {#details}
 
 Clicking the tile of an App Store component will bring you to its details page with the sections described below.
@@ -73,25 +69,22 @@ The header for each component presents the following details:
 	* **Subscribe** – click this to [subscribe](#subscriptions) to a paid [platform-supported](app-store-content-support#category) app service
 	* <a name="try-for-free"></a>**Try for Free** – click this to start a 30-day free trial of the paid [platform-supported](app-store-content-support#category) component
 		* After you agree to the terms and conditions, your trial will be set up – click **Check Status** to go to the [My Subscriptions](#subscriptions) page, where you can click **Manage App Servcies** to go to the [Service Management](#service-management) page (you will also receive an email with a link to this page)
+		* If a [platform-supported](app-store-content-support#category) component has the **Premium** label, this means that after your 30-day free trial ends, you need to [subscribe](#subscriptions) to the component to use it
 
-	{{% todo %}}[**Verify "Subscribe" and "Try for Free" definitions**]{{% /todo %}}
+	{{% todo %}}[**Verify "Subscribe", "Try for Free", and "Premium" definitions**]{{% /todo %}}
 
 <a name="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
 
 * The latest **Version** number of the component
 * The Studio Pro version that the component **Requires** to work
-* The type of **License** for the component
+* The type of [license](share-app-store-content#license) for the component
 * A **View on GitHub** link, which will take you to the GitHub source files of the component
-
-{{% todo %}}[**Verify "View on GitHub" link position and update screenshot to reflect**]{{% /todo %}}
 
 The **Publisher** section presents the name of the company who created the component as well as the **Date** when the component was first published.
 
-{{% todo %}}[**Verify what happens when you click company name?**]{{% /todo %}}
-
 The **Developers** section presents the names of the developers who most recently updated the component, with links to their [Mendix Profile](/developerportal/mendix-profile/).
 
-The **Support** section presents the category of support Mendix offers for the component (for details on categories, see [App Store Content Support](app-store-content-support)).
+The **Support** section presents the category of support Mendix offers for the component (for more details, see [App Store Content Support](app-store-content-support)).
 
 ### 3.2 Tabs
 
@@ -102,19 +95,9 @@ The details page for a component presents the following item information tabs:
 	* **Screenshots** – screenshots of the component
 	* **User Reviews** – user reviews of the component; to leave a review for the component, click **Add Review** – a section will open where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page)
 *  **Documentation** – can include details on typical use cases, features and limitations, dependencies, installation and configuration, and frequently asked questions; [platform-supported](app-store-content-support#category) components are documented in the various categories of this *App Store Guide*:
-
-	![](attachments/app-store-overview/content_detail_6.jpg)
 	
-	{{% todo %}}[**Update screenshot for component with documentation**]{{% /todo %}}
-
-	* Clicking **Edit documentation** will open a text editor where you can edit the App Store component's documentation
-
+	* Click **Edit documentation** to open a text editor where you can edit the App Store component's documentation
 * **Pricing**  – lists the pricing options (only for paid components)
-
-	![](attachments/app-store-overview/content_detail_7.jpg)
-	
-	{{% todo %}}[**Verify definition above**]{{% /todo %}}
-
 * **Releases** – lists all the versions of the component (any of which can be downloaded by clicking **Download**) along with details like the **Framework version** and the **UUID** (which can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*): 
 
 	![](attachments/app-store-overview/content_detail_8.jpg)
@@ -172,7 +155,7 @@ Click **Delete** to delete a draft.
 
 Click **Withdraw** to withdraw the content from the review process after you have [submitted it for approval](share-app-store-content#status) . This will return the content to the draft state.
 
-{{% todo %}}[**Update screenshot to have Withdraw button**]{{% /todo %}}
+{{% todo %}}[**Update screenshot to have Withdraw button after release**]{{% /todo %}}
 
 ### 4.4 Shared with Me {#shared-with-me}
 

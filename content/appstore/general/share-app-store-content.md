@@ -107,7 +107,7 @@ To add content to the App Store, follow these steps:
 	a. Enter a **Name** for your content.<br />
 	b. Enter a **Description** of your content (for example, "Node control is an native Android app that gives a system administrator access to the Mendix Cloud nodes being administered. From the app, the status of the different environments within a node can be monitored and an environment can be started or stopped.")<br />
 	c. Select the **Studio Pro Version** on which you built the content.<br />
-	d. Select the type of **License** you want applied to your app (if applicable):<br />
+	<a name="license"></a>d. Select the type of **License** you want applied to your app (if applicable):<br />
 
 	* [Apache V2](https://www.apache.org/licenses/LICENSE-2.0)<br />
 	* [GNU General Public License, version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)<br />
@@ -135,10 +135,8 @@ To add content to the App Store, follow these steps:
 	* If you need to click **Manual upload**, follow the steps on the dialog box for uploading the package source file
 		* When you are finished, click **Save**
 
-9.  If this is the first version of the component you are uploading, the version number in the **Version** section of the **Package** page will be automatically set to **1.0.0**. You can enter **Release Notes** for the component in the box provided describing what is new in that release.
+9.  If this is the first version of the component you are uploading, the version number in the **Version** section of the **Package** page will be automatically set to **1.0.0**. Enter **Release Notes** for the component in the box provided describing what is new in that release.
 
-	{{% todo %}}[**Verify step above for versioning**]{{% /todo %}}
-	
 	![](attachments/share-app-store-content/package.jpg)
 
 10. On the **Enable** page, you can enter details on requirements and configuration for your component in the **Documentation**. Note that this documentation option is only available when the **Import Documentation** box has not been checked. Follow the template for the recommended content:
@@ -197,7 +195,7 @@ To update content that has already been published, follow these steps:
 
 4.  On the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
 
-	{{% todo %}}[**PULL REQUEST: please verify steps above**]{{% /todo %}}
+	{{% todo %}}[**IN PULL REQUEST: please verify steps above**]{{% /todo %}}
 
 ## 6 Read More
 

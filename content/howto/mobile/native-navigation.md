@@ -15,7 +15,7 @@ In general, in web apps, there is only one page open. When a user opens a page, 
 
 ### 1.2 Native mobile apps
 
-With native mobile, by default pages are kept in memory, which makes it possible to quickly navigate back (e.g. with hardware back button, or by swiping) and to retain the state on the previous page(s) (e.g. scroll location, active tab). This greatly benefit the overall user experience of the app. However, as a developer one has to take this into account when developing mobile apps so that there will not be too many pages open (e.g. in memory) and data is refreshed/updated accordingly. In addition, you have more control over the exact navigation flow.
+In native mobile apps, pages are kept open by default. This makes it possible to instantly navigate back (e.g. by pressing the back button, or by swiping) while retaining the state of the previous page(s) (e.g. scroll location, active tab). This greatly benefits the overall user experience of the app. This has to be taken into account when developing mobile apps, to make sure that there will not be too many pages open (which will result in bad performance) and data is refreshed/updated accordingly. To manage this, you have more control over the exact navigation flow.
 
 ## 2 Layout Types
 

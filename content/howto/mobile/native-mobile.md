@@ -17,6 +17,7 @@ You build Mendix native mobile apps the same way you build web or hybrid apps. Y
 * [Build Native Apps](build-native-apps)
 * [Use Notifications](notifications)
 * [Implement Native Mobile Styling](native-styling)
+* [Native Navigation](native-navigation)
 * [Implement Best Practices for Native Mobile App UI](ui-best-practices)
 * [Use Over the Air Updates](how-to-ota)
 * [Set Up Deep Links in Native Mobile Apps](native-deep-link)

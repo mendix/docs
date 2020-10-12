@@ -11,7 +11,7 @@ Although you model native mobile apps in the same way as you're used to, some as
 
 ### 1.1 Web apps
 
-In general, in web apps, there is only one page open. When a user opens a page the current page, it is replaced with the new one. And when the user navigates back, the previous page is loaded. This has as a negative effect that the page has to be reloaded, which costs performance and that in general the page state is lost (e.g. scroll location, active tab).
+In general, in web apps, there is only one page open. When a user opens a page, the current page is replaced with the new one. And when the user navigates back, the previous page is loaded. This has a negative effect on performance, because the page has to be reloaded.
 
 ### 1.2 Native mobile apps
 

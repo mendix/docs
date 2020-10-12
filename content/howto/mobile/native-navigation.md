@@ -113,7 +113,7 @@ It is important to remember that any changes you make to your data, will be imme
 
 ## 5 Best practices & patterns
 
-### 5.1 ake it simple for the user
+### 5.1 Make it simple for the user
 
 It is important for a user to always understand where he is in the app, and what his next options are. Overall it is useful to show the bottom bar, so that the user sees where he/she is, and can go towards. However, in some flows it makes sense to create focus and remove distractions by using a layout without bottom bar or by using a popup layout.
 

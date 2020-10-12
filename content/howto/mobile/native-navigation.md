@@ -135,4 +135,4 @@ The ‘clear history’ option of the Open Page action can be used to model out 
 
 ## 6 Customization
 
-Out of the box the bottom bar and top bar have a default styling and the styling can be changed as described [here](/refguide/native-styling-refguide#pages). However, if further customization is needed, like a total different design, it is possible to create a [pluggable widget](/apidocs-mxsdk/apidocs/pluggable-widgets#1-introduction), and or model the UI using the open and close page options.
+Out of the box, the bottom bar and top bar have a default styling. This styling can be changed as described [here](/refguide/native-styling-refguide#pages). However, if you want to further customize the styling to match your design, then it is possible to create [pluggable widgets](/apidocs-mxsdk/apidocs/pluggable-widgets#1-introduction) to replace some of the default navigation components.

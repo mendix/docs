@@ -236,7 +236,7 @@ export const preview: React.FC<Props> = (props) => (
 
 The preview module provides a component to define that an object is selectable in the preview. This component can be imported from "mendix/preview/Selectable", accepts an item from an `object` list property as an `object` parameter, and has an optional `caption` parameter.
 
-The example below defines a simplified representation of the types for your clarity. In reality you would import those types from `"../typings/TruckWidgetProps"` if `TruckWidget` was name of your widget.
+The example below defines a simplified representation of the types for your clarity. In reality you would import those types from `"../typings/TruckWidgetProps"` if `TruckWidget` was the name of your widget.
 
 ```tsx
 import { Selectable } from "mendix/preview/Selectable";
@@ -268,6 +268,9 @@ export const preview: React.FC<TruckWidgetPreviewProps> = (props) => (
     </div>
 )
 ```
+When the widget is added to a page you can select a specific item and edit it as shown in the image below.
+
+![Example of the selectable component](attachments/pluggable-widgets/selectable-component.png)
 
 ### 3.3 The GetPreviewCss Export
 

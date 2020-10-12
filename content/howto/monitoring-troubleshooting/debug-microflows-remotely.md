@@ -61,7 +61,35 @@ When your application is in the Mendix cloud:
 
 You will need to provide these credentials to Studio Pro to connect the debugger to the app running in the cloud.
 
-#### 3.1.2 Obtain Debugging Credentials from SAP S/4 HANA Cloud
+#### 3.1.2 Obtain Debugging Credentials from Private Cloud Connected{#private-cloud}
+
+If your application is on a connected Private Cloud, you can get the credentials from the Developer Portal:
+
+{{% alert type="warning" %}}
+You can only remotely debug apps deployed to Private Cloud for Mendix if you are using Mendix Operator version 1.6.0 or above.
+{{% /alert %}}
+
+1. Open your app in the [Developer Portal](https://home.mendix.com).
+
+2. Click **Environments** in the left sidebar.
+
+3. Click **Details** for the environment which you want to debug.
+
+4. Open the **Debugger** tab:
+
+5. If the debugger is currently disabled, click **Enable Debugger**. You  will be asked to provide a password.
+
+    ![Enter password for the private cloud debugger](attachments/debug-microflows-remotely/pc-debugger-password.png)
+
+    You will receive a warning that you have made some changes. Click **Apply Changes** to restart the app and apply the changes.
+
+Once the debugger is enabled, you will see the **URL** and **Password** which are the credentials you need to supply to Studio Pro. Use the **Copy to clipboard** links to simplify providing the credentials.
+
+![](attachments/debug-microflows-remotely/pc-debug-tab.png)
+
+When the debugger is enabled, you can click **Disable Debugger** to disable it. You will be asked to confirm your choice and will receive a warning that you have made some changes. Click **Apply Changes** to restart the app and apply the changes.
+
+#### 3.1.3 Obtain Debugging Credentials from SAP S/4 HANA Cloud
 
 If your application is on the SAP S/4 HANA cloud, you will need to set the password in the SAP Cockpit:
 

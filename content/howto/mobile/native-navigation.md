@@ -91,7 +91,7 @@ It is possible to open other pop-up pages inside the pop-up, and it behaves as i
 
 ### 4.2 Opening and closing pages
 
-Often there is a need to have control of the history, e.g. which page is shown see when the user presses the hardware back button on Android or when the users does a swipe to go back gesture (swipe from left to right). These actions will only close a single page in the current stack.
+Often there is a need to have control of the history, e.g. which page is shown when the user navigates back. By default, the Close Page action only closes a single page in the current stack, but it can be configured to close more pages.
 
 #### 4.2.1 Closing multiple pages
 

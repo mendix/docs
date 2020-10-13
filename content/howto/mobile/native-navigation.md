@@ -65,11 +65,11 @@ To keep pages open, the navigation system uses multiple 'stacks' of pages, and a
 
 #### 4.1.1 Single stack
 
-If the app does not use a bottom bar, by default there is a single stack. This means that pages can be opened, and when a page is closed this page is removed from the app. For example when the app is opened, the home pages is loaded.
+If the app does not use a bottom bar, then there is a single stack. This situation resembles navigation on the web most closely. However, it is important to keep in mind that all pages in the stack are kept open, until you close them explicitly (or until the user presses the back button).
 
-If the user clicks a button that opens Page A, there are two pages on the stack, and if on Page A the user clicks on a button that opens Page B, three pages are on the stack.
+The first page on the stack is always the homepage. When the user clicks a button that opens a page, then there are two pages on the stack, and so on.
 
-When a page is closed (e.g. via back button, a close action, or swipe to go back (iOS)), only the current page is closed and the previous page is visible again.
+When the user closes a page (e.g. via back button, a close action, or swipe to go back (iOS)), only the current page is closed and the previous page becomes visible again.
 
 {{% image_container width="500" %}}![](attachments/native-navigation/singlestack.png){{% /image_container %}}
 

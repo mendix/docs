@@ -77,7 +77,7 @@ When the user closes a page (e.g. via back button, a close action, or swipe to g
 
 If an app has bottom bar items, every item in the bottom bar will have a separate stack. Within a stack the user can navigate by opening and closing pages.
 
-If the bottom bar item is not focused, press will focus that item. Switching to another bottom bar item will not close pages in the focused one. If the item is already focused, press will dismiss all pages from its stack.
+If the bottom bar item is not focused, pressing it will focus that item. Switching to another bottom bar item will not close pages in the focused one. If the item is already focused, press will dismiss all pages from its stack.
 
 {{% image_container width="500" %}}![](attachments/native-navigation/multiplestacks.png){{% /image_container %}}
 

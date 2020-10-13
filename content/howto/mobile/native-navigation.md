@@ -25,7 +25,7 @@ After opening a page that has a default layout, you can navigate back to the pre
 
 ### 2.2 Pop-Up
 
-A page with a pop-up layout looks like a default page, but it shows up with a distinct animation, and it has a close icon instead of a back icon. On iOS it can also be closed by swiping down from the top of the pop-up. On Android it can be closed using the back button of the device. It is possible to open other pop-up pages inside the pop-up. When opening a normal page from the pop-up, the pop-up(s) will be closed first.
+A page with a pop-up layout looks like a default page, but it shows up with a distinct animation, and it has a close icon instead of a back icon. On iOS it can also be closed by swiping down from the top of the pop-up. On Android it can be closed using the back button of the device. It is possible to open other pop-up pages inside the pop-up. When opening a normal page from the pop-up, the pop-up(s) will be closed first. Pop-ups cannot have a bottom bar.
 
 Pop-ups can be very useful when asking for input in a certain context. One example is when the you have to scan a QR code. Another example is a wizard (form with multiple steps), as you can still go back to previous steps and change things until the process is finished and all pop-ups are closed.
 

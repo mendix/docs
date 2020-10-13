@@ -119,7 +119,7 @@ It is important for a user to always understand where he is in the app, and what
 
 ### 5.2 Minimize the number of open pages to reduce memory using
 
-As mentioned above, while the user navigates through the applications, all pages stay open in the background. This uses the device's memory, and having too many open pages can cause performance issues. The consequence of this is that the choice between using an Open Page or a Close Page action should be made more deliberately than with web applications.
+As mentioned above, while the user navigates through the applications, all pages stay open in the background. This uses the device's resources, and having too many open pages can cause performance issues. The consequence of this is that the choice between using an Open Page or a Close Page action should be made more deliberately than with web applications.
 
 Where possible, we advise you to use the Close Page action (or the above mentioned variants of the Show Page action) as much as possible, to ensure that you don't keep too many superfluous pages open.
 

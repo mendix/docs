@@ -49,7 +49,9 @@ You can add bottom bar items in the native navigation profile. These items will 
 
 Every item in the bottom bar has its own navigation stack. This means that if you open a few pages in the first tab, then switch to the second tab and back to the first tab again, those pages will still be open there.
 
-If you open a page in a stack that does not have the bottom bar property enabled, it will not show anymore on any further page, until you go back from the page that disabled it.
+{{% alert type="warning" %}}
+Pages without a bottom bar are created in a separate stack. If you navigate from a page _without_ a bottom bar to a page _with_ a bottom bar, then all pages in that stack are closed.
+{{% /alert %}}
 
 {{% image_container width="500" %}}![An example of the default bottom bar on iOS.](attachments/native-navigation/bottombar.png){{% /image_container %}}
 

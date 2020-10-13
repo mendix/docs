@@ -75,14 +75,14 @@ For a 64-bit system the prerequisites are:
 * [.NET Framework 4.6.2](http://download.microsoft.com/download/F/9/4/F942F07D-F26F-4F30-B4E3-EBD54FABA377/NDP462-KB3151800-x86-x64-AllOS-ENU.exe)
 * [AdoptOpenJDK 8](https://cdn.mendix.com/installer/AdoptOpenJDK/8/OpenJDK8U-jdk_x64_windows_hotspot_8u202b08.msi)
 * [Microsoft Visual C++ 2010 SP1 Redistributable Package](http://download.microsoft.com/download/A/8/0/A80747C3-41BD-45DF-B505-E9710D2744E0/vcredist_x64.exe)
-* [Microsoft Visual C++ 2015 Redistributable Package](https://download.microsoft.com/download/6/A/A/6AA4EDFF-645B-48C5-81CC-ED5963AEAD48/vc_redist.x64.exe) for Mendix 7.23.17 and up or [Microsoft Visual C++ 2013 Redistributable Package](http://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe) for Mendix 7.23.16 or below
+* [Microsoft Visual C++ 2015 Redistributable Package](https://download.microsoft.com/download/6/A/A/6AA4EDFF-645B-48C5-81CC-ED5963AEAD48/vc_redist.x64.exe) for [Mendix 7.23.17](/releasenotes/studio-pro/7.23#72317) and above or [Microsoft Visual C++ 2013 Redistributable Package](http://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe) for [Mendix 7.23.16](/releasenotes/studio-pro/7.23#72316) and below
 
 For a 32-bit system the prerequisites are:
 
 * [.NET Framework 4.6.2](http://download.microsoft.com/download/F/9/4/F942F07D-F26F-4F30-B4E3-EBD54FABA377/NDP462-KB3151800-x86-x64-AllOS-ENU.exe)
 * [AdoptOpenJDK 8](https://cdn.mendix.com/installer/AdoptOpenJDK/8/OpenJDK8U-jdk_x86-32_windows_hotspot_8u202b08.msi)
 * [Microsoft Visual C++ 2010 SP1 Redistributable Package](http://download.microsoft.com/download/C/6/D/C6D0FD4E-9E53-4897-9B91-836EBA2AACD3/vcredist_x86.exe)
-* [Microsoft Visual C++ 2015 Redistributable Package](https://download.microsoft.com/download/6/A/A/6AA4EDFF-645B-48C5-81CC-ED5963AEAD48/vc_redist.x86.exe) for Mendix 7.23.17 and up or [Microsoft Visual C++ 2013 Redistributable Package](http://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x86.exe) for Mendix 7.23.16 and below.
+* [Microsoft Visual C++ 2015 Redistributable Package](https://download.microsoft.com/download/6/A/A/6AA4EDFF-645B-48C5-81CC-ED5963AEAD48/vc_redist.x86.exe) for [Mendix 7.23.17](/releasenotes/studio-pro/7.23#72317) and above or [Microsoft Visual C++ 2013 Redistributable Package](http://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x86.exe) for [Mendix 7.23.16](/releasenotes/studio-pro/7.23#72316) and below
 
 Based on the error message you get from the installer you can decide to install a single prerequisite, or you can try to manually install them all.
 

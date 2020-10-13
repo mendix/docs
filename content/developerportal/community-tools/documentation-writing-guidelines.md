@@ -1,7 +1,6 @@
 ---
 title: "Documentation Writing Guidelines"
-category: "Community Tools"
-menu_order: 30
+parent: "contribute-to-the-mendix-documentation"
 description: "Describes some guidelines to follow when contributing to the Mendix documentation."
 tags: ["documentation", "community"]
 ---

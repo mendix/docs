@@ -25,7 +25,7 @@ After opening a page that has a default layout, you can navigate back to the pre
 
 ### 2.2 Pop-Up
 
-A page with a pop-up layout looks like a default page, but it shows up with a distinct animation, and it has a close icon instead of a back icon. On iOS it can also be closed by swiping down from the top of the pop-up. On Android it can be closed using the back button of the device. It is possible to open other pop-up pages inside the pop-up. When opening a normal page from the pop-up, the pop-up(s) will be closed first. Pop-ups cannot have a bottom bar.
+A page with a pop-up layout looks like a default page, but it shows up with a distinct animation, and it has a close icon instead of a back icon. On iOS it can also be closed by swiping down from the top of the pop-up. On Android it can be closed using the back button of the device. Pop-ups cannot have a bottom bar. A page with a pop-up layout cannot be used as the default home page, nor can it be added to the bottom bar.
 
 Pop-ups can be very useful when asking for input in a certain context. One example is when the you have to scan a QR code. Another example is a wizard (form with multiple steps), as you can still go back to previous steps and change things until the process is finished and all pop-ups are closed.
 
@@ -83,13 +83,9 @@ If the bottom bar item is not focused, pressing it will focus that item. Switchi
 
 #### 4.1.3 Pop-ups
 
-A page with a pop-up layout looks like a default page, but slides in from the bottom and has a close icon instead of a back icon. On iOS it can also be closed by swiping down from the top of the pop-up. On Android it can be closed using the back button of the device. It is possible to open other pop-up pages inside the pop-up. When opening a normal page from the pop-up, the pop-up will be closed first.
+When a page with a Popup layout is opened, a new stack is created and all pages in this stack fully cover the screen. To get back to the previous stack, the popup has to be closed.
 
-A page with a pop-up layout cannot be used as the default home page. Nor can it be added to the bottom bar.
-
-Pop-ups can be very useful when asking for input in a certain context. One example is when you have to scan a QR code. Another example is a wizard (form with multiple steps), as you can still go back to previous steps and change things until the process is finished and all pop-ups are closed.
-
-When a page with a Popup layout is opened, a new stack is created and all pages in this stack fully cover the screen. To get back to the previous stack, the popup has to be closed. Within a popup one can navigate, as if it is a single stack.
+It is possible to open other pop-up pages inside the pop-up, and it behaves as if it is a single stack. When opening a normal page from the pop-up, the pop-up(s) will be closed first.
 
 {{% image_container width="500" %}}![](attachments/native-navigation/popups.png){{% /image_container %}}
 

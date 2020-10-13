@@ -78,7 +78,9 @@ To filter the questions that appear on the overview page, select from the follow
 
 Clicking the title of a question will bring you to the details page for that question:
 
-![](attachments/mendix-forum/questions_specific_page.png)
+{{% image_container width="400" %}}
+![](attachments/mendix-forum/questions_specific_page.jpg)
+{{% /image_container %}}
 
 On this page, you can read the full descriptive text of the question and do the following:
 
@@ -103,13 +105,13 @@ The URL for each question is unique.
 
 Below the question details are the answer(s) to the question. Click the up or down arrow buttons to upvote or downvote the answer based on how it addresses the question. You can also click **Add comment** to comment on an answer.
 
-![](attachments/mendix-forum/questions_answer.png)
+![](attachments/mendix-forum/questions_answer.jpg)
 
 #### 2.2.3 Answering a Question
 
 Below the answer(s), you can contribute to the Mendix Forum by writing your own answer in the editor and then clicking **Submit answer**:
 
-![](attachments/mendix-forum/questions_answer_editor.png)
+![](attachments/mendix-forum/questions_answer_editor.jpg)
 
 {{% alert type="info" %}}
 
@@ -129,11 +131,11 @@ To ask your own question on the Mendix Forum, follow these steps:
 
 1.  Click **Ask a question** on the main page of the [Questions tab](#questions-tab):
 
-	![](attachments/mendix-forum/questions_ask_button.png)
+	![](attachments/mendix-forum/questions_ask_button.jpg)
 
 2.  On the **Ask your question** page, fill in the following details in the editor:
 
-	{{% image_container width="500" %}}![](attachments/mendix-forum/questions_ask_screen.png)
+	{{% image_container width="500" %}}![](attachments/mendix-forum/questions_ask_screen.jpg)
 	{{% /image_container %}}
 
 	* The **Title** of your question (which is how Mendix Forum users will first see your question, so make the title descriptive and interesting)
@@ -146,9 +148,7 @@ To ask your own question on the Mendix Forum, follow these steps:
 
 #### 2.3.2 Accepting an Answer on a Question You Have Asked
 
-Once a question you have asked receives several answers (for more details, see the [Asking a Question](#asking-your-question) and [Answering a Question](#answers) sections), you can accept an answer by clicking this button:
-
-![](attachments/mendix-forum/questions_accept_answer_button.png)
+Once a question you have asked receives several answers (for more details, see the [Asking a Question](#asking-your-question) and [Answering a Question](#answers) sections), you can accept an answer by clicking the check mark next to the answer.
 
 You should accept the answer that properly and accurately responds to your question in the best way possible.
 
@@ -158,7 +158,7 @@ You should accept the answer that properly and accurately responds to your quest
 
 On the **Ideas** tab, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members. Here is an example idea:
 
-![](attachments/mendix-forum/ideas_example.png)
+![](attachments/mendix-forum/ideas_example.jpg)
 
 All the submitted ideas are publicly visible, and each idea has a descriptive title (**1**). Clicking the idea title opens the specific idea details page under the **Ideas** tab (for more information, see the [Idea Details Page](#IdeaDetails) section).
 
@@ -177,7 +177,7 @@ Each idea specifies the following elements:
 
 The **Sort by** drop-down menu at the top of the screen has three options for sorting the ideas on this page: **Last Updated**, **Newest**, and **Most Votes**.
 
-![](attachments/mendix-forum/ideas_sort_by.png)
+![](attachments/mendix-forum/ideas_sort_by.jpg)
 
 #### 3.1.2 Searching
 
@@ -197,7 +197,7 @@ To filter the ideas that appear on the overview page, select from the following 
 
 Clicking the title of an idea will bring you to the details page for that idea:
 
-![](attachments/mendix-forum/ideas_specific_page.png)
+![](attachments/mendix-forum/ideas_specific_page.jpg)
 
 On this page, you can read the full descriptive text of the idea and do the following:
 
@@ -234,11 +234,11 @@ To submit your own idea to the idea forum, follow these steps:
 
 1.  Click **Submit idea** on the main page of the [Ideas tab](#ideas-tab):
 
-	![](attachments/mendix-forum/ideas_submit_button.png)
+	![](attachments/mendix-forum/ideas_submit_button.jpg)
 
 2.  On the **Submit your idea** page, fill in the following details in the editor:
 
-	{{% image_container width="500" %}}![](attachments/mendix-forum/ideas_submit_screen.png)
+	{{% image_container width="500" %}}![](attachments/mendix-forum/ideas_submit_screen.jpg)
 	{{% /image_container %}}
 
 	* The **Title** of your idea (which is how Mendix Forum users will first see your idea, so make the title descriptive and interesting)
@@ -252,4 +252,4 @@ Mendix looks forward to hearing all of your ideas!
 
 ## 4 Read More
 
-* [How to Contribute to the Documentation](contribute-to-the-mendix-documentation]
+* [How to Contribute to the Documentation](contribute-to-the-mendix-documentation)

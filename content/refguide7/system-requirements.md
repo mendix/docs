@@ -18,7 +18,7 @@ The following frameworks are automatically installed (if necessary):
 
 * Microsoft .NET Framework 4.6.2
 * Microsoft Visual C++ 2010 SP1 Redistributable Package
-* Microsoft Visual C++ 2015 Redistributable Package (for [Mendix 7.23.17](/releasenotes/studio-pro/7.23#72317) and above) or Microsoft Visual C++ 2013 Redistributable Package (for Mendix [7.23.16](/releasenotes/studio-pro/7.23#72316) and below)
+* Microsoft Visual C++ 2015 Redistributable Package (for [Mendix 7.23.17](/releasenotes/studio-pro/7.23#72317) and above) or Microsoft Visual C++ 2013 Redistributable Package (for [Mendix 7.23.16](/releasenotes/studio-pro/7.23#72316) and below)
 * AdoptOpenJDK 8 (installed automatically as of [Mendix 7.23.3](/releasenotes/studio-pro/7.23#7233) if you do not have this or Java Development Kit 1.8 already installed) or Java Development Kit 1.8
 
 {{% alert type="warning" %}}

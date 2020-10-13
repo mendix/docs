@@ -57,11 +57,11 @@ Pages without a bottom bar are created in a separate stack. If you navigate from
 
 ## 4 How does Mendix native navigation work?
 
-As mentioned above, by default pages are kept in memory to provide a better user experience, but they must also be managed correctly in order to get great performance and a logical UX/flow through the app.
+As mentioned above, by default pages are kept open to provide a better user experience, but they must also be managed correctly in order to get great performance and a logical UX/flow through the app.
 
 ### 4.1 Stacks
 
-To keep pages in memory, the navigation system uses multiple 'stacks' of pages, and a mobile app can contain multiple stacks at the same time. A stack can be compared to a pile of cards, one can add cards to the top, and one can remove cards from the top.
+To keep pages open, the navigation system uses multiple 'stacks' of pages, and a mobile app can contain multiple stacks at the same time. A stack can be compared to a pile of cards, one can add cards to the top, and one can remove cards from the top.
 
 #### 4.1.1 Single stack
 
@@ -119,7 +119,7 @@ It is important to remember that any changes you make to your data, will be imme
 
 It is important for a user to always understand where he is in the app, and what his next options are. Overall it is useful to show the bottom bar, so that the user sees where he/she is, and can go towards. However, in some flows it makes sense to create focus and remove distractions by using a layout without bottom bar or by using a popup layout.
 
-### 5.2 Minimize the number of open pages to reduce memory using
+### 5.2 Minimize the number of open pages to maintain high performance
 
 As mentioned above, while the user navigates through the applications, all pages stay open in the background. This uses the device's resources, and having too many open pages can cause performance issues. The consequence of this is that the choice between using an Open Page or a Close Page action should be made more deliberately than with web applications.
 

@@ -37,8 +37,8 @@ Native layouts have helpful properties that enable the most common patterns used
 
 A layout that has the header property enabled will always show a bar at the top of the screen. A header consists of three parts: 
 
-- Left part: not configurable, but can show a back icon, close icon, or sidebar icon depending on the layout type
-- Center part:  shows the title of the page
+- Left part: not configurable, but can show a back icon or a close icon, depending on the layout type
+- Center part: shows the title of the page
 - Right part: configurable with widgets and is often used to contain buttons
 
 {{% image_container width="500" %}}![An example of the default header on iOS.](attachments/native-navigation/header.png){{% /image_container %}}

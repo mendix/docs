@@ -50,7 +50,9 @@ The profile card presents the Mendix points for the developer. Clicking the deve
 
 The **Sort by** drop-down menu at the top of the screen has three options for sorting the questions on this page: **Last Updated**, **Newest**, and **Most Popular**.
 
+{{% image_container width="200" %}}
 ![](attachments/mendix-forum/questions_sort_by.jpg)
+{{% /image_container %}}
 
 #### 2.1.2 Searching {#searching}
 
@@ -129,10 +131,7 @@ It has never been easier to ask a question on the Mendix Forum. But before you s
 
 To ask your own question on the Mendix Forum, follow these steps:
 
-1.  Click **Ask a question** on the main page of the [Questions tab](#questions-tab):
-
-	![](attachments/mendix-forum/questions_ask_button.jpg)
-
+1.  Click **Ask a question** on the main page of the [Questions tab](#questions-tab).
 2.  On the **Ask your question** page, fill in the following details in the editor:
 
 	{{% image_container width="500" %}}![](attachments/mendix-forum/questions_ask_screen.jpg)
@@ -177,7 +176,9 @@ Each idea specifies the following elements:
 
 The **Sort by** drop-down menu at the top of the screen has three options for sorting the ideas on this page: **Last Updated**, **Newest**, and **Most Votes**.
 
+{{% image_container width="200" %}}
 ![](attachments/mendix-forum/ideas_sort_by.jpg)
+{{% /image_container %}}
 
 #### 3.1.2 Searching
 
@@ -232,10 +233,7 @@ If you have a great idea that you would like to see implemented on the Mendix Pl
 
 To submit your own idea to the idea forum, follow these steps:
 
-1.  Click **Submit idea** on the main page of the [Ideas tab](#ideas-tab):
-
-	![](attachments/mendix-forum/ideas_submit_button.jpg)
-
+1.  Click **Submit idea** on the main page of the [Ideas tab](#ideas-tab).
 2.  On the **Submit your idea** page, fill in the following details in the editor:
 
 	{{% image_container width="500" %}}![](attachments/mendix-forum/ideas_submit_screen.jpg)

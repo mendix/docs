@@ -90,6 +90,6 @@ When writing for the *Studio Pro Guide*, consider these guidelines:
 * Add examples for each feature being documented
 * Add images that clearly show the specific functionality being described (so the reader can check that the image matches what they see on their screen)
 
-## 6 Read More
+## 5 Read More
 
 * [How to Contribute to the Mendix Documentation](contribute-to-the-mendix-documentation)

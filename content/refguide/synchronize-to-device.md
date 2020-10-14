@@ -49,7 +49,7 @@ A variable that refers to an object or a list to be synchronized.
 
 When adding **Synchronize to device** to a microflow consider the following:
 
-* Only persistable objects or lists of persistable objects that are available in your offline-first app can be synchronized.
+* Only persistable objects or lists of persistable objects that you use in your offline-first app can be synchronized.
 * If the current user cannot access some of the objects due to access rules,
 they will not be synchronized to a device. If the offline database already contains the same object, it will be removed.
 * If the object to synchronize to a device is deleted in the same microflow,

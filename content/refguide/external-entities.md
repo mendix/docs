@@ -92,9 +92,17 @@ The **Edit Attribute** box can be used for specifying a local name for the attri
 
 ### 2.3 Associations
 
-This tab will show associations that the external entity has with other entities exposed in the same service and any local associations that have been made with local entities: 
+This tab displays the associations that the external entity has with other entities that are exposed in the same service and also any associations that have been made with local entities. For further details on association properties in Studio Pro see  [Association Tab Properties](association-member-properties). 
 
 ![Edit attributes](attachments/external-entities/external-entity-associations.png)
+
+The following apply for all associations with the external entity:
+
+**Name** – name of the association
+**Type** – read-only for associations between two external entities
+**Owner** – read-only for associations between two external entities
+**Parent** – read-only for associations between two external entities
+**Child** – read-only for associations between two external entities
 
 You can **Add** and **Edit** associations to the external entity with a local entity. However, the association cannot be made *from* an external entity to a local entity: the local entity must be the owner of the association.
 
@@ -108,18 +116,8 @@ It is possible to **Remove** an association between two external entities in the
 If you want to connect two external entities that are not connected in the originating app, this is not possible as the relationship to the data cannot be influenced locally. However, consider adding a local entity and connect this local entity with both external entities. The local entity must be the owner of both associations, in this case.
 {{% /alert %}}
 
-### 2.3.1 Associations
-The **Association** tab for external entities displays the following values for all associations with the external entity—associations with local entities and associations with other external entities in the domain model from the same OData service that are exposed in the service:
-
-**Name** – name of the association
-**Type** – read-only for associations between two external entities
-**Owner** – read-only for associations between two external entities
-
-{{% alert type="info" %}}
-An external entity cannot be the owner for an association between an external and a local entity.
-{{% /alert %}}
-
-When you **Edit** an association between that is exposed for two entities exposed in the same OData service, the following properties are displayed and the only local change that can be name is the local Name:
+### 2.3.1 Association Properties
+When you **Edit** an association that is included for two entities exposed in the same OData service, the following properties are displayed and the only local change that can be name is the local Name:
 
 ![Edit external associations](attachments/external-entities/association-properties.png)
 
@@ -128,6 +126,10 @@ When you **Edit** an association between that is exposed for two entities expose
 * **Summary** – read-only description of the association from the originating app
 * **Multiplicity** – read-only multiplicity values from the originating app
 * **Documentation** – go to this tab to add a local description for the external entity association
+
+### 2.3.2 Connecting Two External Entities 
+
+If you want to connect two external entities that are not connected in the originating app, this is not possible as the relationship to the data cannot be influenced locally. However, you can add a local entity and connect this local entity with both external entities. The local entity must be the owner of both associations, in this case.
 
 ### 2.4 Documentation {#documentation}
 

@@ -65,19 +65,19 @@ To keep pages open, the navigation system uses multiple stacks of pages. A mobil
 
 #### 4.1.1 Single Stack
 
-If the app does not use a bottom bar, then there is a single stack. This situation resembles navigation on the web most closely. However, it is important to keep in mind that all pages in the stack are kept open, until you close them explicitly (or until the user presses the back button).
+If your app does not use a bottom bar, then there is a single stack. This situation resembles navigation on the web most closely. However, it is important to keep in mind that all pages in the stack are kept open until you explicitly close them or press the back button.
 
-The first page on the stack is always the homepage. When the user clicks a button that opens a page, then there are two pages on the stack, and so on.
+The first page on the stack is always the home page. When you tap a button that opens a page, then there are two pages on the stack, and so on.
 
-When the user closes a page (e.g. via back button, a close action, or swipe to go back (iOS)), only the current page is closed and the previous page becomes visible again.
+When you close a page (via a back button, a close action, or swipe to go back (iOS)), only the current page is closed and the previous page becomes visible again.
 
 {{% image_container width="500" %}}![](attachments/native-navigation/singlestack.png){{% /image_container %}}
 
-#### 4.1.2 Multiple Stacks: Bottom bar navigation
+#### 4.1.2 Multiple Stacks: Bottom Bar Navigation
 
-If an app has bottom bar items, every item in the bottom bar will have a separate stack. Within a stack the user can navigate by opening and closing pages.
+If an app has bottom bar items, every item in the bottom bar will have a separate stack. Within a stack you can navigate by opening and closing pages.
 
-If the bottom bar item is not focused, pressing it will focus that item. Switching to another bottom bar item will not close pages in the focused one. If the item is already focused, press will dismiss all pages from its stack.
+If a bottom bar item is not focused, pressing it will focus that item. Switching to another bottom bar item will not close pages in the focused one. If the item is already focused, pressing it will dismiss all pages from its stack.
 
 {{% image_container width="500" %}}![](attachments/native-navigation/multiplestacks.png){{% /image_container %}}
 

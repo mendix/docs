@@ -11,7 +11,7 @@ Although you model native mobile apps in similar ways to web applications, some 
 
 ### 1.1 Web Apps
 
-Generally in web apps, there is only one page open at any given time. This is because when a user opens a page, the previous page is replaced with a new one. When the user navigates back, the page they started on is loaded again to replace their current page. This pattern of page loading slows performance.
+Generally in web apps, there is only one page open at any given time. This is because when you open a page, the previous page is replaced with a new one. When you navigate back, the page you started on is loaded again to replace the current page. This pattern of page loading slows performance.
 
 ### 1.2 Native Mobile Apps
 
@@ -25,43 +25,43 @@ After opening a page that has a default layout, you can navigate back to the pre
 
 ### 2.2 Pop-Up
 
-A page with a pop-up layout looks like a default page, but it shows up with a distinct animation, and it has a close icon instead of a back icon. On iOS it can also be closed by swiping down from the top of the pop-up. On Android it can be closed using the back button of the device. Pop-ups cannot have a bottom bar. A page with a pop-up layout cannot be used as the default home page, nor can it be added to the bottom bar.
+A page with a pop-up layout looks like a default page, but it shows up with a distinct animation and has a close icon instead of a back icon. On iOS it can also be closed by swiping down from the top of the pop-up. On Android it can be closed using the back button of the device. Pop-ups cannot have a bottom bar. A page with a pop-up layout cannot be used as the default home page, nor can it be added to the bottom bar.
 
-Pop-ups can be very useful when asking for input in a certain context. One example is when the you have to scan a QR code. Another example is a wizard (form with multiple steps), as you can still go back to previous steps and change things until the process is finished and all pop-ups are closed.
+Pop-ups can be very useful when asking for input in certain contexts. For example, they work well when you must scan a QR code. They also make wizards (forms with multiple steps) easier, as you can return to previous steps and change things until the process is finished and all pop-ups are closed.
 
 ## 3 Navigation-Related Layout Components
 
-Native layouts have helpful properties that enable the most common patterns used in native apps:
+Native layouts have helpful properties that enable the most common patterns used in native apps.
 
 ### 3.1 Header
 
 A layout that has the header property enabled will always show a bar at the top of the screen. A header consists of three parts: 
 
-- Left part: not configurable, but can show a back icon or a close icon, depending on the layout type
-- Center part: shows the title of the page
-- Right part: configurable with widgets and is often used to contain buttons
+* Left part: not configurable, but can show a back icon or a close icon depending on the layout type
+* Center part: shows the page's title 
+* Right part: configurable with widgets and is often used to contain buttons
 
-{{% image_container width="500" %}}![An example of the default header on iOS.](attachments/native-navigation/header.png){{% /image_container %}}
+{{% image_container width="350" %}}![An example of the default header on iOS.](attachments/native-navigation/header.png){{% /image_container %}}
 
 ### 3.2 Bottom Bar
 
 You can add bottom bar items in the native navigation profile. These items will show up on any page that has a layout with the bottom bar property enabled.
 
-Every item in the bottom bar has its own navigation stack. This means that if you open a few pages in the first tab, then switch to the second tab and back to the first tab again, those pages will still be open there.
+Every item in the bottom bar has its own navigation stack. This means that if you open a few pages in the first tab, then switch to the second tab and back to the first tab again, your first tab's pages will still be open as you left them.
 
 {{% alert type="warning" %}}
-Pages without a bottom bar are created in a separate stack. If you navigate from a page _without_ a bottom bar to a page _with_ a bottom bar, then all pages in that stack are closed.
+Pages without a bottom bar are created in a separate stack. If you navigate from a page *without* a bottom bar to a page *with* a bottom bar, then all pages in that stack are closed.
 {{% /alert %}}
 
-{{% image_container width="500" %}}![An example of the default bottom bar on iOS.](attachments/native-navigation/bottombar.png){{% /image_container %}}
+{{% image_container width="350" %}}![An example of the default bottom bar on iOS.](attachments/native-navigation/bottombar.png){{% /image_container %}}
 
 ## 4 How does Mendix Native Navigation Work?
 
-As mentioned above, by default pages are kept open to provide a better user experience, but they must also be managed correctly in order to get great performance and a logical UX/flow through the app.
+By default pages are kept open to provide a better user experience, but they must also be managed correctly for your app to have great performance and a logical flow through the app.
 
 ### 4.1 Stacks
 
-To keep pages open, the navigation system uses multiple 'stacks' of pages, and a mobile app can contain multiple stacks at the same time. A stack can be compared to a pile of cards, one can add cards to the top, and one can remove cards from the top.
+To keep pages open, the navigation system uses multiple stacks of pages. A mobile app can contain multiple stacks at the same time. A stack can be compared to a pile of cards: you can add cards to the top, and you can remove cards from the top.
 
 #### 4.1.1 Single Stack
 

@@ -91,13 +91,13 @@ It is possible to open other pop-up pages inside the pop-up, and all of those to
 
 ### 4.2 Opening and Closing Pages
 
-Often there is a need to have control of the history, e.g. which page is shown when the user navigates back. By default, the Close Page action only closes a single page in the current stack, but it can be configured to close more pages.
+Often you need to have control of page history to determine, for example, which page is shown when you navigate back. By default, the Close page action only closes a single page in the current stack, but it can be configured to close more pages.
 
 #### 4.2.1 Closing Multiple Pages
 
-It is possible to navigate back multiple pages in history at once, by setting the appropriate number of pages in the Close Page action. A Close Page action that closes multiple pages results in a single animation, as your user would expect.
+You can navigate back through multiple pages in history at once by setting the appropriate number of pages in your Close page action. A Close page action that closes multiple pages results in a single animation.
 
-You can configure this behavior either on Close Page actions that you've modeled on your pages, or on the Close Page activity in your nanoflows. This number can be set using an expression, so that you can set either a static number or a snapshot calculated one, for more complex cases.
+You can configure this behavior either on Close page actions that you have modeled on your pages, or on the Close page activity in your nanoflows. This number can be set using an expression so that you can set either a static number, or a snapshot-calculated one for more complex cases.
 
 #### 4.2.2 Combining Closing and Opening Pages
 

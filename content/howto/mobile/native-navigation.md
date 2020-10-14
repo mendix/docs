@@ -85,9 +85,9 @@ If a bottom bar item is not focused, pressing it will focus that item. Switching
 
 When a page with a pop-up layout is opened, a new stack is created and all pages in this stack fully cover the screen. To get back to the previous stack, the pop-up has to be closed.
 
-It is possible to open other pop-up pages inside the pop-up, and it behaves as if it is a single stack. When opening a normal page from the pop-up, the pop-up(s) will be closed first.
+It is possible to open other pop-up pages inside the pop-up, and all of those together behave as a single stack. When opening a normal page from the pop-up, the pop-ups will be closed first.
 
-{{% image_container width="500" %}}![](attachments/native-navigation/popups.png){{% /image_container %}}
+{{% image_container width="350" %}}![](attachments/native-navigation/popups.png){{% /image_container %}}
 
 ### 4.2 Opening and Closing Pages
 

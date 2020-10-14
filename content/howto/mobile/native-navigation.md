@@ -101,36 +101,41 @@ You can configure this behavior either on Close page actions that you have model
 
 #### 4.2.2 Combining Closing and Opening Pages
 
-For more complex scenarios, it is possible to transparently remove one or more pages from the history (that is, from the current stack) when navigating to a new page. Doing so ensures that users cannot inadvertently navigate back to pages that are no longer relevant. For example, when a user reaches the end of a three-step wizard flow, you can configure the Open Page activity to open the third page and close the previous two pages at the same time. As a result, the user will see a single transition, and navigating back will not lead them to the first two pages.
+For more complex scenarios, it is possible to transparently remove one or more pages from the history from the current stack when navigating to a new page. Doing so ensures that users cannot inadvertently navigate back to pages that are no longer relevant. For example, when a user reaches the end of a three-step wizard flow, you can configure the Open page activity to open the third page and close the previous two pages at the same time. As a result, the user will see a single transition, and navigating back will not lead them to the first two pages.
 
-In addition, you can configure the Open Page action to ‘clear history’ when navigating to a page. This effectively resets the entire navigation system, and the user will not be able to navigate back at all from the target page.
+In addition, you can configure the Open page action to **Clear history** when navigating to a page. This effectively resets the entire navigation system, and the user will not be able to navigate back from the target page.
 
 ### 4.3 Updating Data
 
-It is important to remember that any changes you make to your data, will be immediately reflected on all active screens. However, this does not mean that these changes are also committed to the database; this remains an explicit action. Another consequence of this is that you are responsible for keeping track of (and possibly reverting) changes to data when the user decides to navigate back (e.g. by pressing the back button) without saying their changes. In the future, we will provide more control over back behavior.
+It is important to remember that any changes you make to your data will be immediately reflected on all active screens. However, this does not mean that these changes are also committed to the database; that remains an explicit action. Another consequence of this is that your app is responsible for keeping track of (and possibly reverting) changes to data when the user decides to navigate back (for example by pressing the back button) without saving their changes. 
 
 ## 5 Best Practices and Patterns
 
 ### 5.1 Make it Simple for the User
 
-It is important for a user to always understand where he is in the app, and what his next options are. Overall it is useful to show the bottom bar, so that the user sees where he/she is, and can go towards. However, in some flows it makes sense to create focus and remove distractions by using a layout without bottom bar or by using a pop-up layout.
+It is important for a user to always understand where they are in the app, and what their next options are. Overall it is useful to show the bottom bar so that the user sees where they are and where they can go. However, in some flows it makes sense to create focus and remove distractions by using a layout without a bottom bar or by using a pop-up layout.
 
 ### 5.2 Minimize the Number of Open Pages to Maintain High Performance
 
-As mentioned above, while the user navigates through the applications, all pages stay open in the background. This uses the device's resources, and having too many open pages can cause performance issues. The consequence of this is that the choice between using an Open Page or a Close Page action should be made more deliberately than with web applications.
+While the user navigates through an app, all pages stay open in the background. This uses the device's resources, and having too many open pages can cause performance issues. The consequence of this is that the choice between using an Open page or a Close page action should be made more deliberately than with web applications.
 
-Where possible, we advise you to use the Close Page action (or the above mentioned variants of the Show Page action) as much as possible, to ensure that you don't keep too many superfluous pages open.
+Where possible, use the Close page action (or the above-mentioned variants of the Show page action) as often as possible to ensure that you do not keep too many unnecessary pages open.
 
 ### 5.3 Use Pop-Ups for Modal Interactions
 
-Most application consists of a set of primary user flows, and each primary flow may have secondary flows, e.g. to request some additional user input. For example, if we imagine a calendar app, then browsing the upcoming events will be the primary flow, and editing one event might be a secondary flow. In general, secondary flows should not disrupt the primary flow, meaning that after the user completes this secondary flow, they should end up right where they were in the primary flow.
+Most applications consist of a set of primary user flows, and each primary flow may have secondary flows, for example to request some additional user input. In the case of a calendar app, browsing upcoming events would be the primary flow, and editing one event might be a secondary flow. In general, secondary flows should not disrupt the primary flow, meaning that after the user completes this secondary flow, they should end up where they were in the primary flow.
 
-Although such behavior can be modeled using the ability to close multiple pages, as described above, we generally recommend the use of pop-ups for such scenarios. Pop-up pages exist entirely outside of the navigation stack, and they can be opened and closed without disrupting the navigation history of your application.
+Although such behavior can be modeled using the ability to close multiple pages, we recommend using pop-up pages for such scenarios. Pop-up pages exist entirely outside of the navigation stack, and can be opened and closed without disrupting your app's navigation history.
 
 ### 5.4 Startup Flows
 
-The ‘clear history’ option of the Open Page action can be used to model out complex behavior, but one of the most common use cases for it is that of a startup flow. Imagine for example an application that should show a series of tutorial screens on startup. After these screens, the user should land on the main page. From these, it should not be possible to navigate back. This can be achieved by using the Open Page action with the ‘clear history’ option to navigate from the final tutorial screen to the main page.
+The Open page action's **Clear history** option can be used to model out complex behavior, but one of its most common use cases is a startup flow. Imagine an app that should show a series of tutorial screens on startup. After these screens, the user should land on the main page. From these, it should not be possible to navigate back. This can be achieved by using the Open page action with the **Clear history** option to navigate from the final tutorial screen to the main page.
 
 ## 6 Customization
 
-Out of the box, the bottom bar and top bar have a default styling. This styling can be changed as described [here](/refguide/native-styling-refguide#pages). However, if you want to further customize the styling to match your design, then it is possible to create [pluggable widgets](/apidocs-mxsdk/apidocs/pluggable-widgets#1-introduction) to replace some of the default navigation components.
+Out of the box, the bottom bar and top bar have a default styling. To change this styling, see the [Pages](/refguide/native-styling-refguide#pages) section of the *Native Styling Reference Guide*. However, if you want to further customize the styling to match your design, you can create pluggable widgets to replace some of the default navigation components. For more information, see the [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets)
+
+## 7 Read More
+
+* 
+*

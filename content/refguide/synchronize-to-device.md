@@ -62,7 +62,7 @@ they will not be synchronized to a device. If the offline database already conta
 
 When adding **Synchronize to device** to a microflow consider the following:
 
-* This action should be used in combination with the [**Nothing (preserve data)**](offline-first#customizable-synchronization) option to make sure your data is not cleared during a synchronize action.
+* This action should be used in combination with the [Nothing (preserve data)](offline-first#customizable-synchronization) option to make sure your data is not cleared during a synchronize action.
 * **Synchronize to device** action works in an append mode, it does not replace all data in the database.
 Any existing data is kept and only objects that are sent to the client are affected.
 * synchronizing the same object or list multiple times will synchronize it only once. The latest commited state will be synchronized.
@@ -72,4 +72,3 @@ But uncommitted changes are still available in the app until you rollback the ob
 That means if **Synchronize to device** is used for offline objects that were changed and commited in offline,
 all those changes will be lost and attributes of the affected objects will be reset to their runtime values.
 * Uncommitted changes in a microflow for synchronized objects are sent to the client, but the objects rollback to their offline versions.
-

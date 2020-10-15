@@ -35,7 +35,7 @@ It also presents various content categories:
 | --- | --- |
 | **Get Studio Pro** | All the versions of [Studio Pro](/releasenotes/studio-pro/) available for download. |
 | [Layouts](/refguide/layout) | Start building your app based on a layout that is ready to use with commons structures and widgets. |
-| Create New App | Click this to select a app template for your new app project. |
+| **Create New App** | Click this to select a app template for your new app project. |
 | [Modules](/appstore/modules/) | These elements enable new functionality with accompanying domain models and security options. |
 | [Widgets](/appstore/widgets/) | Single user-interface elements that can be configured, such as containers, drop-down menus, and buttons. |
 | [Connectors](/appstore/connectors/) | Connectors can be used to connect your Mendix app with other systems.  |

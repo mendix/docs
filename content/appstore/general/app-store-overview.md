@@ -23,7 +23,7 @@ The home page of the Mendix App Store has three main tabs at the top:
 * **Discover** – the home page, where you can browse various component categories and filter what is displayed
 * **My Marketplace** – click this to go to [My App Store](#my-app-store)
 * **{Your company's private App Store page}** – click this to go to your [company's App Store](#company-content)
-* **My Subscriptions** – click this to go to your [Subscriptions](#subscriptions) page
+* **My Subscriptions** – click this to go to the [Subscriptions](#subscriptions) page
 
 ![](attachments/app-store-overview/home-page.jpg)
 
@@ -268,7 +268,7 @@ To delete a group, a Company Admin can click **Delete Group**.
 
 ## 6 My Subscriptions {#subscriptions}
 
-This page lists the app services to which you have subscribed via **Product** (for example, **3D Visualization**), **Type** (for example, **App Service**), **Plan**, and **Expiration** of your subscriptions.
+This page lists the app services to which you and your company have subscribed with details for **Product** (for example, **3D Visualization**), **Type** (for example, **App Service**), **Plan**, and **Expiration**.
 
 {{% todo %}}[**Verify description above, add more info and cross-references as available. How to define “subscription”? Different plans/levels – defined by provider (e.g., free trial, monthly, pro, single use, etc.)**]{{% /todo %}}
 

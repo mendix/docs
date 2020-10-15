@@ -10,6 +10,16 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### October 15th, 2020
+
+#### Mendix for Private Cloud — Mendix Operator v1.6.0 and Mendix Gateway Agent v1.5.0
+
+* Support for debugging
+* Fixed memory leak in Agent when it's restarted and the cluster is deleted from Portunus
+* Fixed the issue where the Operator pod was crashlooping until the Operator was fully configured
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+
 ### October 5th, 2020
 
 #### Mendix Cloud

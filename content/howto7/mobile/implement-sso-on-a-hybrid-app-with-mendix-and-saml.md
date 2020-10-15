@@ -19,6 +19,16 @@ The implementation described in this how-to will not work when you have enabled 
 The implementation described in this how-to will not work when you have enabled the PIN feature for your hybrid app. Disable the PIN feature for your hybrid app to use this implementation.
 {{% /alert %}}
 
+{{% alert type="warning" %}}
+Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible. 
+
+To build a hybrid app and publish it, see the [Doing It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) section of the *Mobile App Developer Portal Guide*. Under that section are instructions for building [iOS](/developerportal/deploy/mobileapp#building-ios-locally) and [Android](/developerportal/deploy/mobileapp#building-ios-locally) apps locally.
+
+To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
+
+The PhoneGap build portions of this document will be updated with new instructions soon.
+{{% /alert %}}
+
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
@@ -174,5 +184,5 @@ The last thing to do is to check the **Enable mobile authentication token** box 
 
 * [How to Deploy Your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
 * [How to Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
-* [How to Debug a Mobile App with Mendix](debug-a-mobile-app)
+* [How to Debug a Hybrid Mobile App](debug-a-mobile-app)
 * [Building a Mobile App with Mendix](https://www.mendix.com/blog/building-mobile-app-mendix/)

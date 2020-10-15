@@ -6,6 +6,10 @@ description: Describes how to deploy your first Mendix native mobile app with th
 tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
 ---
 
+{{% alert type="warning" %}}
+Please update to Native Builder v3.2.1. Native Builder v3.2.1 includes the fixes required to addresses GitHub's transition from using **master** to using **main** as its default repository branch name. 
+{{% /alert %}}
+
 ## 1 Introduction
 
 This how-to will teach you how to go from a blank slate to an app running on a device.

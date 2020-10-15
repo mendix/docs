@@ -209,7 +209,7 @@ The configuration script does not currently validate input values. Configuration
 
 #### 3.4.2 Pick a Database Type
 
-![](attachments/private-cloud-cluster/image17.png)
+![](attachments/private-cloud-cluster/image19.png)
 
 **Postgres** will enable you to enter the values to configure a PostgreSQL database. You will need to provide all the information about your PostgreSQL database such as plan name, host, port, database, user, and password.
 
@@ -372,8 +372,6 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide)
 **Ephemeral** will enable you to quickly set up your environment and deploy your app, but any data objects you store will be lost when you restart your environment.
 
 #### 3.4.4 Pick an Ingress Type
-
-![](attachments/private-cloud-cluster/image19.png)
 
 **OpenShift Route** will set up an OpenShift Route. This can only be used for OpenShift clusters.
 
@@ -633,6 +631,7 @@ The following rights are available to the cluster creator, and members of a name
 * Manage own environments – user can create and manage an environment in any namespace in the cluster
 
 The following actions require the appropriate access to the namespace **and** access to the app environment as a team member with appropriate authorization:
+
 * Deploy App – user can deploy a new app to the environment or start and stop existing apps
 * Scale App – user can change the number of replicas
 * Edit App Constants

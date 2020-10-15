@@ -10,6 +10,33 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### October 5th, 2020
+
+#### Mendix Cloud
+
+* In response to user feedback, we changed the way that you can control the target environment when deploying apps from Studio Pro
+    * You can now choose only to build the MDA without deploying to an environment
+    * The setting of the target environment (for Technical Contacts only) has been moved from the individual Environment Details pages to the Environments page of the app
+
+### September 22nd, 2020
+
+#### Mendix Cloud v4
+
+* We have added the ability for Technical Contacts to download the activity log from an environment.
+* On some of the Developer Portal pages (*Environments*, *Mobile App*, *App Services*, *Metrics*, *Alerts*, *Logs*, *Backups*, and the *Node Permissions* tab of *Security*) we have split the **Edit App** button into two separate buttons: **Edit in Studio** and **Edit in Studio Pro**.
+* We removed the ability to build PhoneGap hybrid applications through the Developer Portal. The PhoneGap Build service is removed by Adobe on 1 October, so this action would have failed after this date. You can still build your hybrid app locally.
+* We resolved an issue where transports which failed were not reported correctly to the customer. (Ticket 106033)
+* We resolved an issue where memory could not be scaled above 16GiB even though 32GiB was available. (Ticket 101035)
+* We resolved an issue where the documentation field was empty when editing a constant in the Developer Portal, even though there was documentation in the model. To see the documentation, you will need to redeploy your app. (Tickets 78758, 78958, 79212, 79359, 92954, 93107, and 100756)
+
+### September 17th, 2020
+
+#### Mendix Cloud v4
+
+* We improved the way that the SSL/TLS connection is established to the database instance in Mendix Cloud **v4**. Now the application will verify that the Subject Alternative Name attribute(s) or the Common Name attribute of the database server certificate is matched against the database host name.
+
+{{% alert type="info" %}}This change will take effect the next time you deploy your application.{{% /alert %}}
+
 ### September 15th, 2020
 
 #### Mendix Cloud

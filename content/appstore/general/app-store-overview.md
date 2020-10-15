@@ -27,6 +27,8 @@ The home page of the Mendix App Store has three main tabs at the top:
 
 ![](attachments/app-store-overview/home-page.jpg)
 
+{{% todo %}}[**Update screenshot for correct categories**]{{% /todo %}}
+
 It also presents various content categories:
 
 | Category | Description |

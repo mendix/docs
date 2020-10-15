@@ -155,4 +155,4 @@ To change entity and attribute descriptions, follow these steps:
 5.  Click **Save Changes**. 
 
 	{{% alert type="info" %}}If a **Catalog Description** has been specified for an entity or attribute, this will be retained even if the toggle is set to display the **Contract Description** for the entity or attribute. 
-	{{% /alert %}
+	{{% /alert %}}

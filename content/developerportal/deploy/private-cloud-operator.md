@@ -129,11 +129,10 @@ You need to make the following changes:
 * **resources** – change the minimum and maximum container resources your app requires
 * **logAutosubscribeLevel** – change the default logging level for your app, the standard level is INFO — possibilities are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
 * **mxAdminPassword** – here you can change the password for the MxAdmin user — if you leave this empty, the password will be the one set in the Mendix model
-* **debuggerPassword** - here you can provide the password for the Debugger — this is optional. Setting an empty `debuggerPassword` will disable debugging features. In order to connect debugger to your Studio Pro, the debugger url should be in '<AppURL>/debugger/' format. If you provide this, make sure you follow the [guidelines](https://docs.mendix.com/howto/monitoring-troubleshooting/debug-microflows-remotely)
+* **debuggerPassword** - here you can provide the password for the Debugger — this is optional. Setting an empty `debuggerPassword` will disable debugging features. In order to connect debugger to your Studio Pro, the debugger url should be in '<AppURL>/debugger/' format. If you provide this, make sure you follow the [guidelines](/howto/monitoring-troubleshooting/debug-microflows-remotely)
 * **dtapmode** – for development of the app, for example acceptance testing, choose **D**, for production deployment, select **P**
 
     If you select production, then you will need to provide a **Subscription Secret** to ensure that your app runs as a licensed app — see [Free Apps](mendix-cloud-deploy#free-app) in *Mendix Cloud* for the differences between free/test apps and licensed apps
-    
     the subscription secret needs to be supplied via the **customConfiguration** using the following values:
 
     * `"License.SubscriptionSecret":"{subscription secret}"`

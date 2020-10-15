@@ -31,16 +31,17 @@ It also presents various content categories:
 
 | Category | Description |
 | --- | --- |
-| Get Studio Pro | All the versions of [Studio Pro](/releasenotes/studio-pro/) available for download. |
+| **Get Studio Pro** | All the versions of [Studio Pro](/releasenotes/studio-pro/) available for download. |
 | [Layouts](/refguide/layout) | Start building your app based on a layout that is ready to use with commons structures and widgets. |
 | Create New App | Click this to select a app template for your new app project. |
 | [Modules](/appstore/modules/) | These elements enable new functionality with accompanying domain models and security options. |
-| Solutions | Fully-formed solutions for apps you can immediately start using. |
-| [App Services](/appstore/app-services/) | Domain-focused and packaged business capabilities delivered in the form of an API or an API and associated UI. |
 | [Widgets](/appstore/widgets/) | Single user-interface elements that can be configured, such as containers, drop-down menus, and buttons. |
+| [Connectors](/appstore/connectors/) | Connectors can be used to connect your Mendix app with other systems.  |
 | [Themes](/appstore/themes/) | Styling options for your apps that you can apply for different elements and devices. |
+| [App Services](/appstore/app-services/) | Domain-focused and packaged business capabilities delivered in the form of an API or an API and associated UI. |
+| **Solutions** |   |
 
-{{% todo %}}[**Update Solutions description; verify where App Services will be in menu**]{{% /todo %}}
+{{% todo %}}[**Get definition of Solutions, add cross-reference to ASG category..**]{{% /todo %}}
 
 The following filter options are also available:
 
@@ -155,7 +156,7 @@ Click **Delete** to delete a draft.
 
 Click **Withdraw** to withdraw the content from the review process after you have [submitted it for approval](share-app-store-content#status) . This will return the content to the draft state.
 
-{{% todo %}}[**Update screenshot to have Withdraw button after release**]{{% /todo %}}
+{{% todo %}}[**After releaes: update screenshot to have Withdraw button**]{{% /todo %}}
 
 ### 4.4 Shared with Me {#shared-with-me}
 
@@ -267,13 +268,11 @@ To delete a group, a Company Admin can click **Delete Group**.
 
 This page lists the app services to which you have subscribed via **Product** (for example, **3D Visualization**), **Type** (for example, **App Service**), **Plan**, and **Expiration** of your subscriptions.
 
-{{% todo %}}[**Verify description above, add more info and cross-references as available**]{{% /todo %}}
-
-{{% todo %}}[**How to define “subscription”? Different plans/levels – defined by provider (e.g., free trial, monthly, pro, single use, etc.)**]{{% /todo %}}
+{{% todo %}}[**Verify description above, add more info and cross-references as available. How to define “subscription”? Different plans/levels – defined by provider (e.g., free trial, monthly, pro, single use, etc.)**]{{% /todo %}}
 
 ![](attachments/app-store-overview/subscriptions.jpg)
 
-<a name="service-management"></a>Click **Manage App Services** to go to the **Service Management** page where you can manage the app services to which you have subscribed and create and manage binding keys:
+<a name="service-management"></a>Click **Manage App Services** to go to the **Service Management** page where you can manage the app services to which you have subscribed and create and manage binding keys.
 
 {{% todo %}}[**Add screenshot**]{{% /todo %}}
 
@@ -292,7 +291,7 @@ To use an app service you are trying for free or that you have subscribed to, yo
 
 {{% todo %}}[**Verify step 5 - if don't do there, where do you add constant? Verify step 6 - specify name?**]{{% /todo %}}
 
-{{% todo %}}[**Need info on service instance and binding name**]{{% /todo %}}
+{{% todo %}}[**Need info on service instance and binding name?**]{{% /todo %}}
 
 {{% todo %}}[**Company > Subscriptions page – what is there?**]{{% /todo %}}
 

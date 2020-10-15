@@ -195,7 +195,7 @@ To update content that has already been published, follow these steps:
 
 4.  On the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
 
-	{{% todo %}}[**IN PULL REQUEST: please verify steps above**]{{% /todo %}}
+	{{% todo %}}[**Verify steps above**]{{% /todo %}}
 
 ## 6 Read More
 

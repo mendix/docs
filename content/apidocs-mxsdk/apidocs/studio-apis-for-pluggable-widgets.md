@@ -268,7 +268,8 @@ export const preview: React.FC<TruckWidgetPreviewProps> = (props) => (
     </div>
 )
 ```
-When the widget is added to a page you can select a specific item and edit it as shown in the image below.
+
+When the widget is added to a page you can select a specific item and edit it:
 
 ![Example of the selectable component](attachments/pluggable-widgets/selectable-component.png)
 

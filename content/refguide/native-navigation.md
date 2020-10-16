@@ -1,7 +1,7 @@
 ---
 title: "Native Navigation"
 category: "native-mobile"
-menu_order: 34
+menu_order: 15
 tags: ["mobile", "navigation", "native", "iOS", "Android"]
 ---
 
@@ -77,7 +77,7 @@ When you close a page (via a back button, a close action, or swipe to go back (i
 
 If an app has bottom bar items, every item in the bottom bar will have a separate stack. Within a stack you can navigate by opening and closing pages.
 
-If a bottom bar item is not focused, pressing it will focus that item. Switching to another bottom bar item will not close pages in the focused one. If the item is already focused, pressing it will dismiss all pages from its stack.
+If a bottom bar item is not focused, pressing it will focus that item. Switching to another bottom bar item will not close pages in the focused one. If the item is already focused, pressing it again will dismiss all pages from its stack.
 
 {{% image_container width="500" %}}![](attachments/native-navigation/multiplestacks.png){{% /image_container %}}
 

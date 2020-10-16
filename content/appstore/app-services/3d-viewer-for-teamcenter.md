@@ -7,7 +7,7 @@ tags: ["3d visualization", "3d viewer", "cad", "app store", "marketplace", "comp
 ---
 ## 1 Introduction
 
-The 3D Viewer for Teamcenter app service lets you connect to a Teamcenter instance and then visualize and operate on 3D JT models. It provides nanoflows and microflows that enable you to find and fetch a JT model from Teamcenter.
+The 3D Viewer for Teamcenter app service lets you connect to a Teamcenter instance and then visualize and operate on 3D JT models. It provides [nanoflows](/refguide/nanoflows) and [microflows](/refguide/microflows) that enable you to find and fetch a JT model from Teamcenter.
 
 ### 1.1 Typical Use Cases
 

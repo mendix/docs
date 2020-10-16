@@ -137,5 +137,6 @@ Out of the box, the bottom bar and top bar have a default styling. To change thi
 
 ## 7 Read More
 
-* 
-*
+* [Show Page](/refguide/show-page)
+* [Close Page](/refguide/close-page)
+* [Native Navigation Styling](/refguide/native-styling-refguide#navigation-widget)

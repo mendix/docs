@@ -7,7 +7,7 @@ tags: ["mobile", "navigation", "native", "iOS", "Android"]
 
 ## 1 Introduction
 
-Although you model native mobile apps in similar ways to web applications, some aspects of navigation in native mobile apps are different than those in web applications. This guide will explain those navigation differences.
+Although you model native mobile apps in similar ways to web applications, some aspects of navigation in native mobile apps differ from those in web applications. This guide will explain those navigation differences.
 
 ### 1.1 Web Apps
 
@@ -15,7 +15,7 @@ Generally in web apps, there is only one page open at any given time. This is be
 
 ### 1.2 Native Mobile Apps
 
-In native mobile apps, pages are kept open by default. This makes it possible to instantly navigate back (for example by tapping the back button or by swiping) while retaining the state of previous pages such as scroll location and active tab information. This greatly benefits your apps user experience. We recommend, however, taking open pages into account when developing mobile apps. Specifically, make sure that there will not be too many pages open at once (which will result in bad performance) and that data is refreshed or updated when needed. To achieve these ends, Mendix gives you granular control over your exact navigation flow.
+In native mobile apps, pages are kept open by default. This makes it possible to instantly navigate back (for example by tapping the back button or by swiping) while retaining the state of previous pages such as scroll location and active tab information. This greatly benefits your app's user experience. We recommend, however, taking open pages into account when developing mobile apps. Specifically, make sure that there will not be too many pages open at once (which will result in bad performance), and that data is refreshed or updated when needed. To achieve these ends, Mendix gives you granular control over your exact navigation flow.
 
 ## 2 Layout Types
 
@@ -71,9 +71,9 @@ The first page on the stack is always the home page. When you tap a button that 
 
 When you close a page (via a back button, a close action, or swipe to go back (iOS)), only the current page is closed and the previous page becomes visible again.
 
-{{% image_container width="500" %}}![](attachments/native-navigation/singlestack.gif){{% /image_container %}}
+{{% image_container width="350" %}}![](attachments/native-navigation/singlestack.gif){{% /image_container %}}
 
-#### 4.1.2 Multiple Stacks: Bottom Bar Navigation
+#### 4.1.2 Multiple Stacks
 
 If an app has bottom bar items, every item in the bottom bar will have a separate stack. Within a stack you can navigate by opening and closing pages.
 
@@ -115,7 +115,7 @@ It is important to remember that any changes you make to your data will be immed
 
 It is important for a user to always understand where they are in the app, and what their next options are. Overall it is useful to show the bottom bar so that the user sees where they are and where they can go. However, in some flows it makes sense to create focus and remove distractions by using a layout without a bottom bar or by using a pop-up layout.
 
-### 5.2 Minimize the Number of Open Pages to Maintain High Performance
+### 5.2 Minimize Open Pages to Improve Performance
 
 While the user navigates through an app, all pages stay open in the background. This uses the device's resources, and having too many open pages can cause performance issues. The consequence of this is that the choice between using an Open page or a Close page action should be made more deliberately than with web applications.
 
@@ -137,6 +137,6 @@ Out of the box, the bottom bar and top bar have a default styling. To change thi
 
 ## 7 Read More
 
-* [Show Page](/refguide/show-page)
-* [Close Page](/refguide/close-page)
-* [Native Navigation Styling](/refguide/native-styling-refguide#navigation-widget)
+* [Show Page Reference Guide](/refguide/show-page)
+* [Close Page Reference Guide](/refguide/close-page)
+* [Native Navigation Styling Reference Guide](/refguide/native-styling-refguide#navigation-widget)

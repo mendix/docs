@@ -22,7 +22,7 @@ Using this app service alone will not be enough to visualize a 3D model.
 This app servcice enables doing the following:
 
 * Log in to a Teamcenter instance
-* Search  models from Teamcenter
+* Search  models from Teamcenter by setting revision rules
 * Get a model by setting revision rules
 * Visualize and perform operations on model when used with 3D Viewer app service
 

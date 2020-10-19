@@ -162,6 +162,7 @@ It is possible to require the following modules:
 
 * The react libraries `"react"`, `"react-dom"`, `"react-dom-factories"`, and `"prop-types"`
 * An `Icon` component that can be used to render icon properties: `"mendix/components/web/Icon"`
+* A `Selectable` component that can be used to define what it selectable in preview: `"mendix/preview/Selectable"`
 
 ### 3.2 Preview Export
 
@@ -230,6 +231,47 @@ export const preview: React.FC<Props> = (props) => (
     </div>
 );
 ```
+
+#### 3.2.3 Using the Selectable Component
+
+The preview module provides a component to define that an object is selectable in the preview. This component can be imported from `"mendix/preview/Selectable"`, accepts an item from an `object` list property as an `object` parameter, and has an optional `caption` parameter.
+
+The example below defines a simplified representation of the types for your clarity. In reality you would import those types from `"../typings/TruckWidgetProps"` if `TruckWidget` was the name of your widget.
+
+```tsx
+import { Selectable } from "mendix/preview/Selectable";
+
+type TruckDriversType = {
+    name: string;
+    age: number;
+    isExperienced: boolean;
+}
+
+type TruckWidgetPreviewProps = {
+    truckDrivers: TruckDriversType[];
+}
+
+export const preview: React.FC<TruckWidgetPreviewProps> = (props) => (
+    <div className="my-pw-container">
+        {props.truckDrivers.map((truckDriver, i) => (
+            <Selectable
+                object={truckDriver}
+                caption={truckDriver.isExperienced ? "Awesome truck driver" : undefined}
+                key={`truck_driver_${i}`}
+            >
+                <div className="my-pw-truck-driver">
+                    <div>Name: {truckDriver.name}</div>
+                    <div>Age: {truckDriver.age}</div>
+                </div>
+            </Selectable>
+        ))}
+    </div>
+)
+```
+
+When the widget is added to a page you can select a specific item and edit it:
+
+![Example of the selectable component](attachments/pluggable-widgets/selectable-component.png)
 
 ### 3.3 The GetPreviewCss Export
 

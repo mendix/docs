@@ -20,7 +20,9 @@ You may want to send email from your apps running in the Mendix Cloud via, for i
 | **Other SMTP-compatible services** | &#x2713;	| &#x2713; | &#x2713; |
 | **Mendix Mail Servers** | &#x2713; | &#x2717; | &#x2717; |
 
-In Mendix Cloud v3 we include a local mail server for convenience and backwards compatibility. For new applications, or applications that send large amounts of e-mail we recommend using an external e-mail service.
+In Mendix Cloud v3 we include a local mail server for convenience and backwards compatibility. Although it is convenient, you can encounter problems when using it. See {Mendix Mail Servers](#mendix-mail-servers), below, for more information.
+
+For new applications, or applications that send large amounts of e-mail, we strongly recommend using an external e-mail service.
 
 ## 2 External Email Providers
 
@@ -55,11 +57,18 @@ Your SMTP provider needs to expose a secure port like 587, which is a best pract
 
 {{% /alert %}}
 
-## 3 Mendix Mail Servers
-
-### 3.1 Mendix Mail Server Details
+## 3 Mendix Mail Servers{#mendix-mail-servers}
 
 The Mendix mail servers are only available in **Mendix Cloud v3**. If you are using Mendix Cloud v3 and are sending more than 1000 messages per day we recommend you use an external mail service as described above.
+
+Because multiple apps might be using the same Mendix mail server, there is a possibility that the Mendix IP is blocked by spamhouse.org. To work around this issue, we suggest that you follow the steps mentioned in the question [How do I hide the originating IP address of a sender in Postfix?](https://serverfault.com/questions/660129/how-do-i-hide-the-originating-ip-address-of-a-sender-in-postfix) on the *serverfault* website.
+
+We also recommend that you implement the suggestions described in the blog post [8 Best Practices To Improve Your Email Deliverability](https://sendgrid.com/blog/8-best-practices-to-improve-your-email-deliverability/) on the *Sendgrid* website. While these cannot guarantee that the Mendix mail server IP address will not get blacklisted, it reduces the chance that this will happen. These measures include:
+
+* Using double opt-in – sending an email with a link to confirm the address and subscription
+* Ensuring that email lists are kept up-to-date with customers' wishes and that addresses which 'bounce' emails back are removed
+
+### 3.1 Mendix Mail Server Details
 
 The settings for the Mendix mail servers are as follows:
 

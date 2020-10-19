@@ -34,7 +34,7 @@ An entity can only be used when it is accessible through an entity set.
 
 Furthermore, an entity can only be used if it is uniquely identifiable with a key. The key can consist of one or more properties, as long as the following conditions are met:
 
-* Those properties cannot be nullable (so they must have `isNullable="false"` specified)
+* The properties cannot be nullable (so they must have `isNullable="false"` specified)
 * Only the following types are allowed: `Byte`, `SByte`, `Int16`, `Int32`, `Int64`, `Boolean`, `Decimal`, `Single`, `Double`, and `String`
 * If the type is `String`, a `MaxLength` must be specified
 
@@ -67,9 +67,11 @@ When the OData endpoint contains operations, these are not imported in the consu
 
 ### 3.3 Generalizations
 
-The consumed OData service does not support importing generalizations. This means that when you import entities that are each other's generalization, they will be imported as unrelated entities.
+The consumed OData service does not support importing generalizations and specialization. This means that the Published OData service contract from the originating app will show specializations as discrete entities which will include the attributes of the generalization along with the attributes of the specialized entity. 
 
-When you are consuming a Mendix OData endpoint, do not import both a generalization and its specification; that is not supported.
+Associations to the gereralizations with other exposed entities in the published OData service will not be included for the now discrete "specialized" entities.
+
+When you are consuming a Mendix OData endpoint, it is not necessary to consume both a generalization and its specification.
 
 ### 3.4 Binary Attributes
 

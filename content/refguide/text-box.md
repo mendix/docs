@@ -76,26 +76,25 @@ The on change event property specifies an action that will be executed when the 
 
 #### 2.6.2 On Change Behaviour
 
-On Change Behaviour property let the users select how "on change" is handled via following options in the modeler:
+The On Change Behaviour property lets users select how **on change** is handled via the following options Studio Pro: 
 
-##### When user leaves input field (Default)
+* When user leaves input field (Default)
+* While user is entering data
 
-This option will work as previous versions of mendix. Textbox will apply changes when:
+##### 2.6.2.1 When user leaves input field (Default)
 
-Value is not the same as previously saved value in the DB and
+This option will work as in previous versions of Studio Pro. Textbox will apply changes when a value is not the same as previously saved value in the database and one of the following conditions is met:
 
-- On Enter key pressed: This will trigger On Change and On Enter key press events.
-- Blurred: This will trigger On Change and On Leave events.
+* On enter key pressed: This will trigger on change and on enter key press events
+* Blurred: This will trigger on change and on leave events
 
-This means that there is no way for users to trigger on change event while typing. This brings to us the second option.
+This means that there is no way for users to trigger an on change event while typing. That use case requires the second option: **While user is entering data**.
 
-##### While user is entering data
+##### 2.6.2.2 While user is entering data
 
-This option will introduce the new behaviour to textbox widget. Textbox will save changes when the value is not the same as previously saved value in the DB and if last change made was after configured `Apply after (ms)` miliseconds.
+This option allows makes it so users trigger an on change event while they are typing. Text Box will save changes when the value is not the same as the previously saved value in the database and if the last change made took place after the configured **Apply after (ms)** length of time.
 
-When `While user is entering data`, users now can adjust one more property called `Apply after (ms)` (described above). This will reduce the amount of the calls  made for on change event, thus improving performance of the app on demand.
-
-This way users now be able to trigger on change event while the users are typing.
+With **While user is entering data**, users now can adjust one more property called **Apply after (ms)** (described above). This will reduce the amount of the calls made for an on change event, thus improving app performance.
 
 {{% snippet file="refguide/events-section-link.md" %}}
 

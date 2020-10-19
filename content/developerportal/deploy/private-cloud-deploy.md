@@ -131,6 +131,10 @@ Before you can deploy your app, you will need to create a deployment package. En
 
 7. Confirm the information message and you will be returned to the **Environments** page.
 
+{{% alert type="info" %}}
+Alternatively, you can upload an existing MDA by clicking **Upload Package**.
+{{% /alert %}}
+
 ### 3.4 Deploying the Deployment Package{#deploy-package}
 
 You can also deploy an existing deployment package to an environment without having to create a new one. This also allows you to specify constant values and control scheduled events before the app is started.
@@ -187,10 +191,11 @@ This lists the deployment packages which have been created for this app project.
 
 ![](attachments/private-cloud-deploy/image17.png)
 
-There are four buttons:
+There are five buttons:
 
 * Refresh
 * Create Package
+* Upload Package
 * Details
 * Deploy
 
@@ -208,7 +213,11 @@ Using the browser refresh button will take you away from this environments page,
 
 This creates a new package as described in [Creating a Deployment Package](#create-deployment-package), above.
 
-#### 4.1.3 Details
+#### 4.1.3 Upload Package
+
+This allows you to upload an MDA package you have already created. The uploaded package is added to the list of packages for the app and can be deployed in the same way as a package created using **Create Package**.
+
+#### 4.1.4 Details
 
 This displays details of the deployment package.
 
@@ -222,7 +231,7 @@ There are three additional actions you can take while looking at the deployment 
 * **Download Package** – allows you to download the deployment package and save it locally
 * **Delete Package** – deletes the deployment package – you will be asked to confirm this action
 
-#### 4.1.4 Deploy
+#### 4.1.5 Deploy
 
 This deploys the package to an existing environment as described in [Deploying the Deployment Package](#deploy-package), above.
 

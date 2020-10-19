@@ -12,5 +12,6 @@ As of Mendix 8, it is possible to build fully native mobile apps. Native mobile 
 ## 2 Documents in This Section
 
 * [Getting the Make It Native App](getting-the-make-it-native-app)
+* [Native Navigation](native-navigation)
 * [Native Mobile Styling](native-styling-refguide)
 * [Working with Vector Graphics](native-svg)

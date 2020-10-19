@@ -10,6 +10,12 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### October 20th, 2020
+
+#### SAP Cloud Platform Deployment
+
+* On some of the Developer Portal pages (Environments, App Services, Metrics, Alerts, Logs, Backups, and the Node Permissions tab of Security) we have split the Edit App button into two separate buttons: Edit in Studio and Edit in Studio Pro. We have also updated the drop down for View app button.
+
 ### October 15th, 2020
 
 #### Mendix for Private Cloud — Mendix Operator v1.6.0 and Mendix Gateway Agent v1.5.0

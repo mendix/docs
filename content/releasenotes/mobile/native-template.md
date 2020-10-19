@@ -8,6 +8,22 @@ description: "Native Template release notes."
 
 For more information on native mobile app development, see the [native-template](https://github.com/mendix/native-template/) repository and [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app).
 
+## 5.0.3/5.0.4
+
+**Release date: October 9th, 2020**
+
+### Improvements 
+
+* We updated a number of dependencies to ensure support with XCode 12. We also updated the App Center configuration to use XCode 12 and Node LTS.
+
+## 5.0.2
+
+**Release date: September 2nd, 2020**
+
+### Fixes
+
+* We fixed an exception due to threading that could cause a crash on iOS.
+
 ## 5.0.1
 
 **Release date: August 26th, 2020**

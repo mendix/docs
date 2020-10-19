@@ -219,7 +219,7 @@ CPU usage of the database is shown in [Database Node CPU Usage](#Trends-dbcpu), 
 
 Because of the way resources are allocated to Mendix apps, your app may be able to burst to use more than the CPU specified for your container. For example, an app running in a container with 2 CPUs might show CPU usage of 250% where you would expect the maximum to be 200%.
 
-You will be alerted if your app consistently uses more CPU than specified for your container. This situation could cause your app to suffer from performance issues if there are periods when there are insufficient CPU resources for it to burst above that specified for the container.
+If your app consistently uses more CPU than specified for your container your app could suffer from performance issues if there are periods when there are insufficient CPU resources for it to burst above that specified for the container.
 
 Your app will always have access to at least the amount of CPU specified for your container when it needs it.
 

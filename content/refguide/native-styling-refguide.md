@@ -316,7 +316,7 @@ The widget’s style properties are structured as follows:
 | `input` | `placeholderTextColor` | This is the text color of the placeholder string. |
 | `input` | `selectionColor` | This is the highlight and cursor color of the text input. |
 | `input` | `underlineColorAndroid` | This is the color of the `input` underline. |
-| `inputFocused` | Same properties as `input` | Overrides `input` styles if the text box is focused. (with Studio version 8.15) |
+| `inputFocused` | Same properties as `input` | Overrides `input` styles if the text box is focused (with Studio v8.15). |
 | `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
 | `inputDisabled` | Same properties as `input` | Overrides `input` styles if the text box is non-editable. |
 | `label` | This has all TextStyle properties |   |
@@ -337,7 +337,7 @@ The default class to style all text areas is named `TextArea`.
 
 A drop-down is an input widget that can be used to display and edit enumeration attributes.
 
-Since Studio version 8.11, the drop-down widget has a new style property called `useUniformDesign: boolean` which enables the uniform design in both platforms.
+Since Studio v8.11, the drop-down widget has a new style property called `useUniformDesign: boolean` which enables the uniform design in both platforms.
 
 The widget’s render hierarchy is as follows for non-uniform:
 
@@ -390,19 +390,19 @@ The widget’s render hierarchy is as follows for uniform:
 | `pickerIOS` | This has all ViewStyle properties. |  |
 | `pickerBackdropIOS` | This has all ViewStyle properties. |   |
 | `pickerTopIOS` | This has all ViewStyle properties. |   |
-| `validationMessage` | This has all TextStyle properties. | Styles the validation message (with Studio version 8.11)|
+| `validationMessage` | This has all TextStyle properties. | Styles the validation message (with Studio v8.11).|
 | `value`  | This has all TextStyle properties  | Styles the value button which toggle's dropdown and PickerIOS items. If placeholder is selected, placeholderTextColor will be applied |
-| `useUniformDesign` | `boolean` | Enables new uniformDesign (with Studio version 8.11) |
-| `iconStyle`  | This has all TextStyle properties | Styles the arrow down icon next to the value (with Studio version 8.15)|
-| `value`  | `placeholderTextColor: string` | If placeholder is selected, placeholderTextColor will be applied (with Studio version 8.11)|
-| `valueFocused`  | Same properties as `value` | Overrides `value` styles if the dropdown box is focused. (with Studio version 8.15)|
-| `valueContainer` | This has all ViewStyle properties & rippleColor | Styles the value button's container (with Studio version 8.11)|
-| `valueContainerFocused` | Same properties as `valueContainer` | Overrides `valueContainer` styles if the dropdown box is focused. (with Studio version 8.15)|
-| `menuWrapper` | This has all ViewStyle properties | Styles the wrapper view surrounding all the menu items (with Studio version 8.11)|
-| `itemContainer` | This has all ViewStyle properties | Styles all the item containers in dropdown menu including selected item container (with Studio version 8.11)|
-| `item` | This has all TextStlye properties | Styles all the items in dropdown menu including selected item (with Studio version 8.11)|
-| `selectedItem` | This has all TextStyle properties | Styles the selected item in dropdown menu (with Studio version 8.11)|
-| `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio version 8.11)|
+| `useUniformDesign` | `boolean` | Enables new uniformDesign (with Studio v8.11). |
+| `iconStyle`  | This has all TextStyle properties | Styles the arrow down icon next to the value (with Studio v8.15).|
+| `value`  | `placeholderTextColor: string` | If placeholder is selected, placeholderTextColor will be applied (with Studio v8.11).|
+| `valueFocused`  | Same properties as `value` | Overrides `value` styles if the dropdown box is focused. (with Studio v8.15).|
+| `valueContainer` | This has all ViewStyle properties & rippleColor | Styles the value button's container (with Studio v8.11).|
+| `valueContainerFocused` | Same properties as `valueContainer` | Overrides `valueContainer` styles if the dropdown box is focused (with Studio v8.15).|
+| `menuWrapper` | This has all ViewStyle properties | Styles the wrapper view surrounding all the menu items (with Studio v8.11).|
+| `itemContainer` | This has all ViewStyle properties | Styles all the item containers in dropdown menu including selected item container (with Studio v8.11).|
+| `item` | This has all TextStlye properties | Styles all the items in dropdown menu including selected item (with Studio v8.11).|
+| `selectedItem` | This has all TextStyle properties | Styles the selected item in dropdown menu (with Studio v8.11).|
+| `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio v8.11).|
 
 
 ### 6.4 Check Box 

@@ -84,7 +84,7 @@ To extend the logic with a custom message that will be shown when end-users clic
 
 3. In the **Template** property enter a text that will be displayed in the message. Type in *Customer is saved!* 
 
-   ![](attachments/create-a-custom-save-button/show-message-properties.png)
+    ![](attachments/create-a-custom-save-button/show-message-properties.png)
 
 4. Click **OK** to save the changes. 
 

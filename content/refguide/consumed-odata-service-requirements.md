@@ -35,9 +35,7 @@ An entity can only be used when it is accessible through an entity set.
 Furthermore, an entity can only be used if it is uniquely identifiable with a key. The key can consist of one or more properties, as long as the following conditions are met:
 
 * The properties cannot be nullable (so they must have `isNullable="false"` specified)
-
 * Only the following types are allowed: `Byte`, `SByte`, `Int16`, `Int32`, `Int64`, `Boolean`, `Decimal`, `Single`, `Double`, and `String`
-
 * If the type is `String`, a `MaxLength` must be specified
 
 ### 3.2 Attributes

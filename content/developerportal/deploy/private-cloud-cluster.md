@@ -92,9 +92,17 @@ The first script is the installation script which will install the Mendix operat
 
 ### 3.3 Running the Installation Script
 
-You will need to have administrator rights to your private cloud platform. This means you will have to log in before you run the installation script.
+There are two different ways of running the installation and reconfiguration scripts, depending on the operating system of your local computer and your requirements.
+
+1. Choose your operating system
+
+2. If you want to take the option to download the configuration script to your local machine, follow the instructions in [Downloaded Installation Script](#downloaded-script), below.
+
+If you do not have this option, or you want to run the scripts in your Kubernetes cluster, continue with this section and the following section ([Running the Reconfiguration Script](#reconfiguration-script)).
 
 #### 3.3.1 Signing in to OpenShift {#openshift-signin}
+
+You will need to have administrator rights to your private cloud platform. This means you will have to log in before you run the installation script.
 
 These instructions are for the OpenShift platform; a similar process will be required for other platforms.
 
@@ -163,7 +171,7 @@ Mendix provides you with a script which will configure these initially, and can 
 
 2. Press **Enter** to start the script.
 
-The script will ask you a series of questions. Type the number corresponding to your choice, or enter the value required.
+Version 1 of the script will ask you a series of questions. Type the number corresponding to your choice, or enter the value required.
 
 {{% alert type="info" %}}
 
@@ -415,13 +423,15 @@ When choosing the **Existing docker-registry secret**, you will need to add this
 
 Choose **Yes** if a proxy is required to access the public internet from the namespace; you will be asked for the proxy configuration details.
 
-### 3.5 Confirming Namespace Configuration
+### 3.5 Downloaded Installation Script{#downloaded-script}
+
+### 3.6 Confirming Namespace Configuration
 
 When the namespace is configured correctly, its status will become **Connected**. You may need to click the **Refresh** button if the screen does not update automatically.
 
 ![](attachments/private-cloud-cluster/image22.png)
 
-### 3.6 Advanced Operator configuration
+### 3.7 Advanced Operator configuration
 
 Some advanced configuration options of the Mendix Operator are not yet available in the reconfiguration script.
 These options can be changed by editing the `OperatorConfiguration` custom resource directly in Kubernetes.

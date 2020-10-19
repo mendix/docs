@@ -8,7 +8,7 @@ description: "Native Template release notes."
 
 For more information on native mobile app development, see the [native-template](https://github.com/mendix/native-template/) repository and [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app).
 
-## 5.0.3/5.0.4
+## 5.0.3 and 5.0.4
 
 **Release date: October 9th, 2020**
 

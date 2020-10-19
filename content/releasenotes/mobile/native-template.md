@@ -22,7 +22,7 @@ For more information on native mobile app development, see the [native-template]
 
 ### Fixes
 
-* We fixed an exception due to threading that could cause a crash on iOS
+* We fixed an exception due to threading that could cause a crash on iOS.
 
 ## 5.0.1
 

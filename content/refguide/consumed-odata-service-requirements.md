@@ -67,9 +67,11 @@ When the OData endpoint contains operations, these are not imported in the consu
 
 ### 3.3 Generalizations
 
-The consumed OData service does not support importing generalizations. This means that when you import entities that are each other's generalization, they will be imported as unrelated entities.
+The consumed OData service does not support importing generalizations and specialization. This means that the Published OData service contract from the originating app will show specializations as discrete entities which will include the attributes of the generalization along with the attributes of the specialized entity. 
 
-When you are consuming a Mendix OData endpoint, do not import both a generalization and its specification; that is not supported.
+Associations to the gereralizations with other exposed entities in the published OData service will not be included for the now discrete "specialized" entities.
+
+When you are consuming a Mendix OData endpoint, it is not necessary to consume both a generalization and its specification.
 
 ### 3.4 Binary Attributes
 

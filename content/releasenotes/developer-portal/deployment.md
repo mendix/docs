@@ -14,7 +14,8 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 #### SAP Cloud Platform Deployment
 
-* On some of the Developer Portal pages (Environments, App Services, Metrics, Alerts, Logs, Backups, and the Node Permissions tab of Security) we have split the Edit App button into two separate buttons: Edit in Studio and Edit in Studio Pro. We have also updated the drop down for View app button.
+* We split the **Edit App** button into two separate buttons, **Edit in Studio** and **Edit in Studio Pro** on some of the Developer Portal pages (Environments, App Services, Metrics, Alerts, Logs, Backups, and the Node Permissions tab of Security).
+* We also updated the drop down for the **View App** button.
 
 ### October 15th, 2020
 

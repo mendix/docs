@@ -21,12 +21,11 @@ Please update to Native Builder v3.2.1. Version 3.2.1 includes the fixes require
 
 ### Improvements
 
-This release addresses a regression introduced with v3.2.1 of the CLI related to OTA updates. 
+* This release addresses a regression introduced with CLI v3.2.1 related to OTA updates. 
 
 ### Fixes
 
-* The CLI should once again correctly assign the Codepush API key environment variable for new builds
-
+* The CLI should once again correctly assign the Codepush API key environment variable for new builds.
 
 ## 3.2.1
 
@@ -34,9 +33,8 @@ This release addresses a regression introduced with v3.2.1 of the CLI related to
 
 ### Improvements
 
-This release addresses GitHub's transition from using **master** to using **main** as its default repository branch name.
-
-Using this CLI release is **mandatory**, as new projects created with the CLI will fail at the repository creation step for older CLI versions. 
+* This release addresses GitHub's transition from using **master** to using **main** as its default repository branch name.
+* Using this CLI release is **mandatory**, as new projects created with the CLI will fail at the repository creation step for older CLI versions. 
 
 ## 3.2.0
 

@@ -760,12 +760,6 @@ kubectl -n {namespace} scale deployment mendix-operator --replicas=0
 kubectl -n {namespace} scale deployment mendix-operator --replicas=1
 ```
 
-### 5.3 Crashlooping mendix-operator Deployment in a New Installation
-
-When Mendix for Private Cloud is installed for the first time into a new namespace, the `mendix-operator` deployment will be crashlooping.
-
-This behavior is expected and the `mendix-operator` deployment should start normally after the the operator is fully configured.
-
 ## 6 Troubleshooting
 
 This section covers an issue which can arise where Mendix cannot recover automatically and manual intervention may be required.

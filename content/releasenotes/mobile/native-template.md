@@ -8,7 +8,20 @@ description: "Native Template release notes."
 
 For more information on native mobile app development, see the [native-template](https://github.com/mendix/native-template/) repository and [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app).
 
-## 5.0.3 and 5.0.4
+## 5.0.5 and 4.2.3 
+
+**Release date: October 19th, 2020**
+
+### Improvements
+
+* We added support for the new file system security rules added to Android v10 and above. 
+
+### Fixes
+
+* We set the legacy external storage flag to support Android v10 and below.
+* We added support for missing iPad icons.
+
+## 5.0.4 and 5.0.3 
 
 **Release date: October 9th, 2020**
 

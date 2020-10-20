@@ -38,6 +38,10 @@ The OPC UA Client connector supports all three security options offered by OPC U
 * Credentials
 * Client certificates
 
+{{% alert type="warning" %}}
+Only one of these authentication methods should be enabled for each OPC UA server. This method must be matched by the OPC UA Client connector to ensure it can reach the correct endpoint.
+{{% /alert %}}
+
 #### 1.1.3 Dependencies
 
 The OPC UA Client connector has the following dependencies
@@ -65,8 +69,6 @@ This is all you need to do to use the connector. However, there is also a sample
 
 ## 3 OPC UA Client connector
 
-
-
 ### 3.1 Client State
 
 The module/app is designed for usage with multiple servers if necessary. The state for each OPC UA server is kept by the client in an object of entity type **OpcUaServerCfg**. This  needs to be populated before the actions of the OPC UA client connector can be used. 
@@ -83,11 +85,17 @@ For each OPC UA server, the following information will need to be stored in a Op
 * Password (String) – the password for the username used if the authentication type is `CREDENTIALS`
 * AuthenticationType (Enumeration) – the type of authentication required for this server: `NONE`, `CREDENTIALS`, or `CERTIFICATE`
 * CertificatePassword (String) – the certificate password required when using the `CERTIFICATE` type of authentication
+
+{{% todo %}}[Certificate password mechanism to be changed?]{{% /todo %}}
+
 * CertifcatePasswordEncrypted (String) – ???????????????
 * Result (String) – the latest result from an action which makes a call to the OPC UA server
 * ValueToWrite (String) – the value to write to the OPC UA server when using the **Write** action
 * NamespaceIndex (Integer) – the index an OPC UA server uses for a namespace URI
 * Identifier (String) – the identifier for a node in the address space of an OPC UA server — the OPC UA client connector only supports identifiers with *IdentifierType* of `String`
+
+{{% todo %}}[To be removed from entity as it is an implementation detail for the test options]{{% /todo %}}
+
 * EnableTestMode (Boolean) – ?????????????
 
 You can see an example of how this can be set up in the [OPC UA Client example implementation](#example-implementation) section.
@@ -98,18 +106,20 @@ Once you have set up the server configuration, you can perform the following act
 
 #### 3.2.1 **Browse** a List of Nodes
 
-The **Browse** action allows you to browse the nodes within 
+The **Browse** action allows you to browse the nodes within the OPC UA server.
 
 ![Parameters for the browse action](attachments/opc-ua/browse-action.png)
 
 * Opc ua server cfg – an object of entity type OpcUaServerCfg containing the configuration of the server to which the request is made
 * Namespace index – the index an OPC UA server uses for a namespace URI
 * Identifier – the identifier for a node in the address space of an OPC UA server 
-* Is root – ?????????
+* Is root – is used by the tree widget in the example implementation module — if you are not using the tree widget you, the value here is not important
 * Use return value – `Yes` creates a variable containing the list of nodes, `No` does not return a variable
 * Variable name – the name assigned to the variable containing the return value
 
 #### 3.2.2 **Read** the Value of a Node
+
+The **Read** action allows you to read the current value of a specific node within the OPC UA server.
 
 ![Parameters for the read action](attachments/opc-ua/read-action.png)
 
@@ -125,7 +135,7 @@ All values are read as strings, you will need to convert them if you need a nume
 
 #### 3.2.3 **Subscribe** to Updates of Data from a Node
 
-You can subscribe to receive a notification every time the value of a node changes. This creates an object of type **Subscription** which is associated with the OPC UA service and contains details of the subscription and the item which is being monitored. You should assign a microflow to process the data each time a notification is received. The frequency of the notifications is controlled by the UPC UA server.
+The **Subscribe** action allows you to subscribe to receive a notification every time the value of a node changes. This creates an object of type **Subscription** which is associated with the OPC UA service and contains details of the subscription and the item which is being monitored. You should assign a microflow to process the data each time a notification is received. The frequency of the notifications is controlled by the UPC UA server.
 
 ![Parameters for the subscribe action](attachments/opc-ua/subscribe-action.png)
 
@@ -137,7 +147,7 @@ You can subscribe to receive a notification every time the value of a node chang
 * Variable name – the name assigned to the variable containing the return value
 
 {{% alert type="info" %}}
-If you redeploy your app, the subscriptions will no longer receive data from the server and will need to be set up again. ??????????
+Subscriptions are automatically kept alive by the app and will continue to be sent as long as both the client and server are running. The OPC UA Connector automatically provides values for `requestedMaxKeepAliveCount` and `requestedLifetimeCount`and will keep the subscription alive. If these values are exceeded, then the subscription will lapse. This can happen, for example, if the app is redeployed.
 {{% /alert %}}
 
 ##### 3.2.3.1 Subscriptions
@@ -150,16 +160,16 @@ Information about nodes which are subscribed to is stored in the **Subscription*
 
 An object is created for each subscription and contains the following information:
 
-SubscriptionID (String) 
-Identifier (String) 
-NamespaceIndex (String) 
-MonitoredItemID (String) 
-Active (Boolean) 
-OpcUaNodeID (String) 
+SubscriptionID (String) – a unique identifier generated by the OPC UA server
+Identifier (String) – the identifier of the node the client is subscribed to
+NamespaceIndex (String) – the namespace index of the node the client is subscribed to
+MonitoredItemID (String) – a unique identifier generated by the OPC UA server — this can be used to identify a subscription to be cancelled
+Active (Boolean) – identifies whether the subscription is active or not
+OpcUaNodeID (String) – ????? Used within Example implementation
 
 #### 3.2.4 **Unsubscribe** from Updates of Data from a Node
 
-If you have subscribed to  item change notifications but no longer want to receive the notifications, you need to unsubscribe from them.
+The **Unsubscribe** action allows you to end a subscription to item change notifications when you no longer want to receive the notifications.
 
 ![Parameters for the unsubscribe action](attachments/opc-ua/unsubscribe-action.png)
 
@@ -170,6 +180,8 @@ If you have subscribed to  item change notifications but no longer want to recei
 * Variable name – the name assigned to the variable containing the return value
 
 #### 3.2.5 **Write** Data to a Node
+
+The **Write** action allows you to write a new value to a node to which you have write permissions.
 
 ![Parameters for the write action](attachments/opc-ua/write-action.png)
 
@@ -200,7 +212,43 @@ From this page, you can perform the following actions:
 
 #### 3.3.2 OpcUaServer_NewEdit
 
+This page allows you to create or change the details of an OPC UA server you want to use within your app. Your app administrator can use this page as is, or you can customize it for your own use. If you customize it, we recommend that you use a copy of it in one of your own modules so that it is not accidentally overwritten if you update the OPC UA Client connector App Store module.
 
+##### 3.3.2.1 Data on OpcUaServer_NewEdit Page
+
+* **Name** – The name to give to this server within the app
+* **URL** – The URL used for connection to the server — this should be in the form `opc.tcp://…` or `opc.https://…`
+* **Authentication type** – the type of authentication to be used with this server — this is one of **NONE**, **CREDENTIALS**, or **CERTIFICATE**
+    * **Username** (if **Authentication Type** is **CREDENTIALS**) – the username required to authenticate to the OPC UA server if credentials are being used for authentication
+    * **Password** (if **Authentication Type** is **CREDENTIALS**) – the password required to authenticate to the OPC UA server if credentials are being used for authentication
+    * **Certificate file (PFX)** (if **Authentication Type** is **CERTIFICATE**) – the file containing the certificate required to authenticate to the OPC UA server if a certificate is being used for authentication — you will be able to upload a file held locally, and also download an existing file
+    * **Certificate password** (if **Authentication Type** is **CERTIFICATE**) – the password required to authenticate to the OPC UA server if a certificate is being used for authentication
+
+{{% alert type="warning" %}}
+The OPC UA server should have only one type of authentication enabled, and the authentication type chosen here must match that type to ensure that the endpoint can be reached.
+{{% /alert %}}
+
+##### 3.3.2.2 Test Actions on OpcUaServer_NewEdit Page
+
+In addition to the usual **Save** and **Cancel** buttons which allow you to save the server settings or cancel the create or edit operation, there are a number of additional options. These enable you to test that your connection to the OPC UA server is working correctly.
+
+To display the test buttons and additional data fields, check **Enable Test Mode**.
+
+This displays the following data entry fields which can be used to control the tests.
+
+* **Value to write** – the value to write to a node when the **Test OPC UA Write** button is clicked
+* **Namespace index** – the namespace index of the node to test when the **Test OPC UA Subscribe**, **Test OPC UA Write**, or **Test OPC UA Read** button is clicked
+* **Identifier** – the identifier of the node to test when the **Test OPC UA Subscribe**, **Test OPC UA Write**, or **Test OPC UA Read** button is clicked
+* **Result** – the resulting JSON string from performing any of the four test actions
+
+The four test actions you can perform are listed below.
+
+* **Test OPC UA Browse** (no parameters required) – retrieves top level nodes of the Address space of an OPC UA server
+* **Test OPC UA Subscribe** (**Namespace index** and **Identifier**) – creates a subscription to the specified identifier — when a new value is received this will trigger the *OpcUaClientMx.SubscriptionIncomingData_Process_TEST* microflow, which does not contain any actions in the default implementation
+* **Test OPC UA Write** (**Namespace index**, **Identifier**, and **Value to write**)– writes the specified value to a writable node
+* **Test OPC UA Read** (**Namespace index** and **Identifier**) – reads the current value of a node
+
+The result of the tests is displayed in the **Result** field. It shows the raw JSON response which the OPC UA server provides.
 
 ## 4 OPC UA Client Example Implementation{#example-implementation}
 

@@ -217,7 +217,7 @@ This page allows you to create or change the details of an OPC UA server you wan
 ##### 3.3.2.1 Data on OpcUaServer_NewEdit Page
 
 * **Name** – The name to give to this server within the app
-* **URL** – The URL used for connection to the server — this should be in the form `opc.tcp://…` or `opc.https://…`
+* **URL** – The URL used for connection to the server — this should be a TCP connection in the form `opc.tcp://…`
 * **Authentication type** – the type of authentication to be used with this server — this is one of **NONE**, **CREDENTIALS**, or **CERTIFICATE**
     * **Username** (if **Authentication Type** is **CREDENTIALS**) – the username required to authenticate to the OPC UA server if credentials are being used for authentication
     * **Password** (if **Authentication Type** is **CREDENTIALS**) – the password required to authenticate to the OPC UA server if credentials are being used for authentication

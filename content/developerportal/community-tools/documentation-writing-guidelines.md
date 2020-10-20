@@ -29,7 +29,7 @@ Need an extra hand with spelling and grammar? Load your article into [Hemmingway
 
 {{% alert type="info" %}}
 
-This section presents detailed guidelines for writing a how-to. Read this section while referencing the [How-to Template](https://raw.githubusercontent.com/mendix/docs/development/templates/the-how-to-template.md).
+This section presents detailed guidelines for writing a how-to. Read this section while referencing the [How-to Template](https://github.com/mendix/docs/blob/development/templates/how-to-template.md).
 
 {{% /alert %}}
 
@@ -75,6 +75,12 @@ Add boxes, indicators, arrows, and other information to an image only if it make
 Keep the images as simple as possible, because having too many arrows on an image can make it confusing!
 
 ## 4 Guidelines for the Mendix Studio Pro Guide
+
+{{% alert type="info" %}}
+
+This section presents guidelines for writing the Studio Pro Guide page. Read this section while referencing the [Reference Guide Page Template](https://github.com/mendix/docs/blob/development/templates/ref-guide-page-template.md).
+
+{{% /alert %}}
 
 The *Studio Pro Guide* contains version-specific details about the various Mendix components. Each component has its own page or section that explains what the component does and the methods and parameters for using it. The guide also presents useful examples that make it easy to use the specific component in Mendix projects. The guide does not contain detailed sections on how to use Mendix in various ways or in specific situations.
 

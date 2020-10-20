@@ -12,9 +12,9 @@ The Data Hub Catalog functionality is enhanced by the [Data Hub Landscape](../da
 
 ## 2 Data Hub Screen {#data-hub-home}
 
-From the [Data Hub](https://hub.mendix.com) screen, you can carry out the major functions of Data Hub. Data Hub is also integrated in Mendix Studio Pro to find and connect to shared data sources in your apps. For further details on using Data Hub in Studio Pro, see [Data Hub Pane](/refguide/data-hub-pane) in the *Studio Pro Guide*.
+From the [Data Hub](https://hub.mendix.com) screen, you can carry out the major functions of Data Hub: 
 
-{{% todo %}}[AD: screenshot missing for data-hub-home - add new one]{{% /todo %}}
+![Data Hub screen](../share-data/attachments/share-data/data-hub-home.png)
 
 From the Data Hub screen, you can navigate to the following tabs:
 
@@ -24,8 +24,12 @@ From the Data Hub screen, you can navigate to the following tabs:
 From the Data Hub screen, you can do the following:
 
 * **Search** –  search for registered services and entities using the **Search** box or clicking the suggested **Tags**
+
 * **Register a new service** – manually register non-Mendix OData v4 services in the Data Hub Catalog (for further details, see the [Manually Registering OData V4 Services](register#registration-form) section of *How to Register Data Assets*)
+
 * **Most popular services** – view directly the most popular services being consumed and the datasets that are available through these services
+
+Data Hub is also integrated in Mendix Studio Pro to find and connect to shared data sources in your apps. For further details on using Data Hub in Studio Pro, see [Data Hub Pane](/refguide/data-hub-pane) in the *Studio Pro Guide*.
 
 ## 3 Using the Data Hub Catalog
 
@@ -54,25 +58,17 @@ OData services can be registered in the Data Hub Catalog in two ways:
 * In Mendix Studio Pro, entities are exposed in a [published OData service](/refguide/published-odata-services), and upon deployment of the app to an environment, the service is automatically registered in the Data Hub Catalog. For details on publishing OData services in Studio Pro, see the [Publishing an OData Service in Studio Pro to Register Entities](register#odata-service-reg) section of *How to Register Data Assets*.
 * OData v4 services originating from non-Mendix sources can be [registered manually through a new service](register#registration-form). For further details on registration in the Data Hub Catalog and using  manual registration, see [How to Register Data Assets](register).
 
-{{% todo %}}[IG:  The Data Hub Registration API is available to register OData Services to the Data Hub Catalog.   The deployment pipeline ensures that the app is only deployed if all dependencies are met. This API validates published dependencies and consumed dependencies and can  be used by 3rd party deployment tooling.]{{% /todo %}}
-
-{{% todo %}}[Out for 0.21 release]{{% /todo %}}
-
 ### 3.4 Curate – Maintaining Registered Assets
 
 Registered services can be curated in the Data Hub Catalog to ensure that they are discoverable by the relevant users. Findability of registered assets can be enhanced by adding tags and descriptions to the services.
 
 For more details, see [How to Curate Registered Assets](curate).
 
-{{% todo %}}[IG:GM -  Manage versions is not a curation task, this is part of the app/API lifecycle. Other curation tasks (beautifying display names for example) are not part of the public beta - review]{{% /todo %}}
-
 ### 3.5 Data Accessibility and Data Security
 
 Mendix Data Hub enables organizations to manage the data that is used. Security of the shared datasets is crucial, and this includes accessibility to the shared data and authentication of users.
 
 For details on security and accessibility in the Data Hub Catalog and for registered services and entities, see [Data Accessibility and Security](security).
-
-{{% todo %}}[IG: x-ref to authentication in Publish OData Service in SP and see if there is much to refer to in the consuming sections for SP - if it is just repeat of what is said in the former then one x-ref suf]{{% /todo %}}
 
 ## 4 Information Available in the Data Hub Catalog
 

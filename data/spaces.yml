@@ -198,6 +198,7 @@ data-hub:
   space: "Data Hub Guide"
   priority: false
   menu_categories:
+    - "Share Data Between Apps"
     - "General Info"
     - "Data Hub Catalog"
     - "Data Hub Landscape"

@@ -89,6 +89,7 @@ The following tokens can be used to add or subtract a period of time from a date
 | `[%MinuteLength%]` | The length of one minute. |
 | `[%SecondLength%]` | The length of one second. |
 | `[%WeekLength%]` | The length of one week (seven days). |
+| `[%MonthLength%]` | The length of one month. |
 | `[%YearLength%]` | The length of one year. |
 
 {{% alert type="info" %}}

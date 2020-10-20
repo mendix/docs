@@ -12,7 +12,7 @@ tags: ["data hub", "data hub catalog", "data hub landscape"]
 To use the Mendix Data Hub a license is required, with also includes the  integration of Data Hub in Studio Pro, in order to discover shared assets in you organization and consume the shared data for building apps.
 {{% /alert %}}
 
-Follow the journey for building an app using available entities from the [Data Hub](https://hub.mendix.com) home page, or try building a quick app by following [How to Share Data Between Apps Using Mendix Data Hub](general/share-data).
+Follow the journey for building an app using available entities from the [Data Hub](https://hub.mendix.com) home page, or try building a quick app by following [How to Share Data Between Apps Using Mendix Data Hub](share-data/index).
 
 ## 2 Overview of Mendix Data Hub
 
@@ -28,7 +28,7 @@ Mendix Data Hub has components to enable the flexible sharing of entities. The f
 6. The consuming application directly connects to the source system (as defined in the published service metadata) to use the data associated with the consumed entity.
 7. The [Data Hub Landscape](data-hub-landscape/index) enables users to see the dependencies between components and the relevance of data and to ascertain data lineage.
 
-## 3 Roles in Data Hub
+## 3 Roles in Data Hub{#data-hub-roles}
 
 In Mendix Data Hub, governance is the cornerstone. Curation of shared assets is essential for defining how the shared data assets can be used, identifying the relevance to users, ensuring that the resources can be found by the right users, and managing the accessibility, security and confidentiality levels of the shared data.
 
@@ -79,6 +79,7 @@ Curators are assigned by the the [Data Hub Admin](#admin) and they perform the f
 
 The *Data Hub Guide* is divided into the following categories:
 
+* [How to Share Data Between Apps Using Mendix Data Hub](share-data/index)
 * [General Info](general/index)
 * [Data Hub Catalog](data-hub-catalog/index)
 * [Data Hub Landscape](data-hub-landscape/index)

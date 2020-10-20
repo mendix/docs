@@ -330,7 +330,7 @@ Until now the components did not keep any state. Each keystroke passed through t
 			</Fragment>;
 		}
 		private isReadOnly(): boolean {
-			return this.props.editable === "never" || this.props.textAttribute.readOnly;
+		this.props.textAttribute.readOnly;
 		}
 		private onLeave(value: string, isChanged: boolean): void {
 			if (!isChanged) {

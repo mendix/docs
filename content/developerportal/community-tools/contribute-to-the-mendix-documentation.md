@@ -1,7 +1,7 @@
 ---
 title: "Contribute to the Documentation"
 category: "Community Tools"
-menu_order: 20
+menu_order: 10
 description: "Describes how to add and edit Mendix documentation as a Mendix community member."
 tags: ["documentation", "community"]
 #If moving or renaming this doc file, update the link in the site footer and links in the mendix/docs repo. See Mapping to Products for more details.
@@ -97,11 +97,9 @@ You may receive a response to your pull request asking for verification of speci
 
 ## 5 Signing the Contributor License Agreement
 
-The first time you make a contribution to the Mendix documentation (via a pull request), you need to sign the [Contributor License Agreement for mendix/docs](https://www.clahub.com/agreements/mendix/docs) via CLAHub.
+The first time you make a contribution to the Mendix documentation (via a pull request), you need to sign the [Contributor License Agreement for mendix/docs](https://cla-assistant.io/mendix/docs).
 
-To access the license agreement, go to the **Conversation** tab of the pull request and click **Details** for **clahub**:
-
-![](attachments/contribute-to-the-mendix-documentation/license_agreement.png)
+To access the license agreement, go to the the **Checks** section of the pull request's **Conversation** tab and click **Details** for **license/cla** .
 
 This only needs to be done once.
 

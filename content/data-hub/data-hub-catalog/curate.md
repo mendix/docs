@@ -6,22 +6,14 @@ description: "Describes curating functions in the Data Hub Catalog"
 tags: ["data hub", "data hub catalog", "curate", "description", "services", "tags"]
 ---
 
-{{% todo %}}[PC-704 Discoverability]{{% /todo %}}
-
 ## 1 Introduction
 
-{{% todo %}}[**Describe fully the curate screens]{{% /todo %}}
-
-Curation is the processes of maintaining registered services and enriching the metadata of registered assets in the Data Hub Catalog to provide further information about the services as well as the entities and attributes exposed in the services. You can add catalog descriptions and tags to supplement the registered metadata in order to categorize the shared data. A primary curate function is setting the **Discoverability** of registered assets, which determines which users can find them. 
-
-{{% todo %}}[**AD: can you add a cross-reference for reading more about Discoverability?**]{{% /todo %}}
+Curation is the processes of maintaining registered services and enriching the metadata of registered assets in the Data Hub Catalog to provide further information about the services as well as the entities and attributes exposed in the services. You can add catalog descriptions and tags to supplement the registered metadata in order to categorize the shared data. A primary curate function is setting the [**Discoverability**](#discoverability) of registered assets, which determines if users can see (find and use) the registered asset. 
 
 Users with curation rights for the Data Hub Catalog are as follows:
 
 * Business Owners and Technical Owners of a registered service – can curate their own services and find non-discoverable services that they own
 * [Data Hub Curators](../index#curator) and [Data Hub Admins](../index#admin) – can curate and find all registered assets, discoverable and non-discoverable
-
-{{% todo %}}[**AD: where are the Business Owners and Technical Owners defined - both in the product and in the DHG?**]{{% /todo %}}
 
 {{% alert type="info" %}}
 Information that is added or changed during curation is stored in the Data Hub Catalog for that item. It will not be added to the OData service contract or metadata files or affect any of the values in the metadata files associated with the service or the datasets associated with the exposed entities. 
@@ -29,9 +21,7 @@ Information that is added or changed during curation is stored in the Data Hub C
 
 ## 2 Curation Bar
 
-Curation is performed in the **Search Details** screen. Users with curation rights will see the **Curation Bar** in the **Search Details** screen of the selected item: 
-
-{{% todo %}}[**AD: capitalization/bolding of non-UI items is inconsistent with our style guideline - please make consistent throughout DHG - examples: Search Details, Curation Bar,  Curation bar (below)**]{{% /todo %}}
+Curation is performed in the Search Details** screen. Users with curation rights will see the **Curation Bar** in the **Search Details** screen of the selected item: 
 
 ![](attachments/curate/curate-bar.png)
 
@@ -47,19 +37,11 @@ On the **Curation bar**, the following details are displayed:
 	* **Discoverability** – you can set the discoverability of the service from the drop-down menu, which determines whether the service can be found (and consumed) by users of the Data Hub; if a service is set to **non-discoverable**, only the owners of the service (Business and Technical) can find the registered service
 * When an **entity** is selected in the **Search Results**, **Edit Entity Details** – to edit entity and attribute descriptions 
 
-{{% todo %}}[add x-ref. and also consider using the term publishing]{{% /todo %}}
-
-## 3 Setting the Discoverability of a Service
+## 3 Setting the Discoverability of a Service{#discoverability}
 
 By default, when a service is registered in the Data Hub catalog, it is set to **Discoverable**, which means that all users can find, consume, and see details of the service. 
 
-When a service is set to **Not Discoverable**, it will not be visible to other users of the Data Hub Catalog. This means that it cannot be found, either in the Data Hub Catalog or by users of Studio Pro.
-
-{{% todo %}}[**AD: this is a little confusing since you write that it "cannot be found in Data Hub Catalog" and then in the note below that it can be found by owners in "Data Hub Catalog" - please clarify. Also, it is probably not necessary to use alert styling for the content below, since those are important qualifications for Not-discoverable services and can just be added to the paragraph above.**]{{% /todo %}}
-
-{{% alert type="info" %}}
-Non-discoverable services can only be found by owners of the service, curators, and Data Hub Admins in the Data Hub Catalog and Studio Pro.
-{{% /alert %}}
+When a service is set to **Not Discoverable**, it will only be visible to the owners of the service and curators and not be visible to other users of the Data Hub Catalog. This means that it cannot be found, either in the Data Hub Catalog or by users of the Data Hub integration in Studio Pro and Studio.
 
 {{% alert type="info" %}}
 When a service is set to **Not Discoverable**, neither the service nor the entities that are exposed by the service can be found by other users. However, there may be instances of the same entities being available through other services that are published in the Data Hub Catalog.
@@ -125,8 +107,6 @@ To edit the service metadata of a selected service, follow these steps:
 	{{% alert type="info" %}}If a **Catalog Description** has been given for a service, both descriptions will be registered with the service in the Catalog. If you have selected to display the **Contract Description**, the **Catalog Description** will be retained providing the option for curators to display this as desired.
 	{{% /alert %}}
 
-	{{% todo %}}[will search also be performed on the hidden description???]{{% /todo %}}
-
 5.  Click **Save Changes** to save the changes that you have made to the **Edit Service Metadata** screen and return to the **Service Details** screen, which will now display the selected description.
 
 	{{% alert type="info" %}}If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. 
@@ -166,14 +146,10 @@ To change entity and attribute descriptions, follow these steps:
 
 1.  In the **Search Details** screen for the selected entity, click **Edit Entity Details** on the **Curate** bar to display the **Entity Metadata** box:
 
-	{{% todo %}}[AD: you use "**Curation Bar**" above and "**Curate** bar" here - bolding/capitalization should not be used for non-UI terms, and all terms should be made consistent.** ]{{% /todo %}}
-
 	![](attachments/curate/curate-entity-metadata.png)
 
-2. The service metadata contract description is shown. To edit and use a **Catalog Description**, click the toggle and enter a description. 
-3. If a **Catalog Description** has been provided for the entity or attribute but the toggle is set to use the **Contract Entity Description** or **Contract Attribute ** description, the **Catalog Description** will still be retained for the item.
-
-	{{% todo %}}[**AD: a lot of bolding here and different variations on terms and UI text, rather confusing - please clear up in regards to general capitalization/bolding consistency.** ]{{% /todo %}}
+2. The service metadata contract description is displayed. To edit and use a **Catalog Description**, click the toggle and enter a description. 
+3. If a **Catalog Description** has been provided for the entity or attribute but the toggle is set to use the contract description for the entity or attribute, the **Catalog Description** will still be retained for the item.
 
 4. When there are a large number of attributes for an entity, you can use the search area to find specific attributes.
 5.  Click **Save Changes**. 

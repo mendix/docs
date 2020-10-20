@@ -22,8 +22,6 @@ This section starts with guidelines and best practice for registering services a
 
 The steps for updating a consumed OData service in Studio Pro for which a new version is available are described in the [Updating a Published OData Service in Studio Pro](#updating-service) section below.
 
-{{% todo %}}[EC: This is removed from the beta-rel include when API is published officially: For non-Mendix apps using OData V3 and V4 contracts, the Data Hub Catalog API can be used to create an API gateway to the Data Hub Catalog to register available services. ]{{% /todo %}}
-
 ## 2 Best Practices for Registering Services and Shared Entities
 
 This section provides advice and best practices when registering your services in the Data Hub Catalog either from Studio Pro or through manual registration.
@@ -55,8 +53,6 @@ When apps are being developed, ensure that there is a representative set of data
 ### 2.4 Entities and Associations
 
 Currently only [persistable](/refguide/persistability) entities can be exposed for sharing by another app. The data associated with the entity is used in the consuming app.
-
-{{% todo %}}[what are persisitable entties known as in other systems? what is the characteristic of a persistable entity that makes it shareable]{{% /todo %}}
 
 When selecting the entities to expose in a service, consider including associated entities so that the relationship between the data is also registered.
 
@@ -113,11 +109,9 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 	{{% alert type="info" %}}The description will be included in the published service metadata file and displayed for the service in the Data Hub Catalog.  If no description is available, then the **Summary** will be used.
 	{{% /alert %}}
 
-	{{% todo %}}[Will this appear somewhere more logical. Also why have a summary and description field if the summary is not published in the OData metadata??]{{% /todo %}}
-
 	{{% alert type="info" %}}If you are updating a service (with a new service version), you can provide a summary of the changes from the previous version in the description. You can copy and paste the description from the previous version of the service and edit this with the new details. For further details, see the [Updating a Published OData Service in Studio Pro](#updating-service) section below.
-	{{% /alert %}}
-
+{{% /alert %}}
+	
 8. When the app is deployed with **Run**, the OData services defined for the app will automatically be registered in the Data Hub Catalog.
 
 {{% alert type="info" %}}
@@ -237,21 +231,17 @@ This section describes the sequence of steps to manually register a service in t
 New versions of previously registered services also have to be registered manually by following the steps below and specifying **Existing application** and **Existing environments**.
 {{% /alert %}}
 
-###  7.1 Preparing the V4 OData Service Documents
+###  7.1 Preparing the v4 OData Service Documents
 
-The documents making up the v4 OData service must be included in a *.zip* file. The files for an OData v4 service contract may comprise the base schema definition and additional associated schema documents to complete the full service definition. 
-
-{{% alert type="info" %}}
-If the v4 OData service document is only one file, this must also be saved as a *.zip* file, as the manual registration will only accept this file format.
-{{% /alert %}}
+The files for an OData v4 service contract may comprise the base schema definition and additional associated schema documents to complete the full service definition.  The files formats of the v4 OData Service contracts that are accepted are *.xml* (for a single file) and  *.zip* (when the contract is comprised of several files). 
 
 ### 7.2 Registering the Service – Application and Environment {#new-service}
 
 To register the service, follow these steps:
 
-1.  On the [Data Hub Home](../index) page, click **Register new service** to display the **Application and Environment Form**.
+1.  On the [Data Hub](../index) screen, click **Register new service** to display the **Application and Environment Form**.
 
-	![](attachments/register/register-form-home-page.png)
+	![Data Hub screen](attachments/register/register-form-home-page.png)
 
 2.  Enter the details of the app from which the OData v4 service was issued. This information will be displayed in the **Service Details** in the Data Hub Catalog and provide the link to the app.
 
@@ -266,9 +256,7 @@ To register the service, follow these steps:
 		* You can copy the UUID of an already registered app from **Settings** > [General](/developerportal/settings/general-settings) in the Developer Porta
 		* For further information on deep links for an app, see [How to Manage Deep Links](/developerportal/settings/manage-deeplinks).
 	* **Name** – enter the name of the application as it should appear in the details page of the service
-	* **Business Owner** – enter the name of the business owner of the data that will be made available through the service
-
-	{{% todo %}}[??should the above be business or technical owner]{{% /todo %}}
+	* **Business Owner** – enter the name of the business owner of the data that is made available through the service
 
 4.  Enter the **Environment** details of the deployed app:
 	
@@ -285,7 +273,7 @@ To register the service, follow these steps:
 
 ### 7.3 Uploading the OData Contract and Selecting Main Schema
 
-{{% todo %}}[**AD: intro content needed**]{{% /todo %}}
+You will now select and upload the OData contract and select the schema.
 
 ![](attachments/register/old-register-service-form-contract.png)
 

@@ -2455,22 +2455,22 @@ module.exports = {
 	{
       from: "/refguide/team-server",
       to: "/developerportal/develop/team-server"
-    },
-	{
-      from: "/releasenotes/studio/8.0-and-above",
-      to: "/releasenotes/studio/"
-    },
+    },	
 	/****************************************************
      * From Data Hub (permanent, mapped) 
      ****************************************************/
 	{
   	   from: "/data-hub/data-hub-catalog/use-data-catalog",
-   	   to: "/data-hub/general/share-data",
+   	   to: "/data-hub/share-data/index",
   	},
 	{
+      from: "/datahub/general/share-data/",
+      to: "/data-hub/share-data/index"
+    },
+	{
   	   from: "/data-hub/data-catalog/",
-	   to: "/data-hub/data-hub-catalog/"
-  	},
+	   to: "/data-hub/index"
+    },
 	/****************************************************
      * From the App Store (permanent, mapped)
      ****************************************************/

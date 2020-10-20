@@ -14,8 +14,8 @@ A custom developer app helps you by serving as a replacement for the Make It Nat
 
 ## 2 Prerequisites
 
-* Complete [How to Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile)
-* Complete the Mendix Native Mobile Builder wizard as found in [Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app)
+* Complete [How to Get Started with Native Mobile](getting-started-with-native-mobile)
+* Complete the Mendix Native Mobile Builder wizard as found in [Deploy Your First Mendix Native Mobile App](deploying-native-app)
 
 ## 3 Build Your Developer App
 

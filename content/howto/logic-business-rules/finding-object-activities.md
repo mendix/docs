@@ -1,19 +1,19 @@
 ---
-title: "Find Object Activities"
-category: "Logic & Business Rules"
-menu_order: 14
+title: "Find Advanced"
+parent: ""
+menu_order: 20
 tags: ["object", "microflow"]
 ---
 
 ## 1 Introduction
 
-Mendix has comprehensive functionality to find changes made to several subjects in the application. This how-to will describe how to find changes made in objects based on a certain activity.
+You can search for changes or usages of different document types in your application. 
 
 ## 2 Finding Object Activities
 
-The following steps will explain how to find certain activities that are used in microflows, to objects.
+You can search for microflows that have object activities in them. Do the following:
 
-1.  In the top toolbar of , click **Edit** > **Find** Advanced (or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>.
+1.  In the top toolbar of , click **Edit** > **Find** **Advanced** (or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>.
 2.  This dialog box will appear:
     ![](attachments/find-object-activities/18581632.png)
 3.  For **Search for**, select **Microflow actions**, and this dialog box will appear:

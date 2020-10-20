@@ -3,15 +3,7 @@ title: "Deploy Your First Mendix Native Mobile App"
 parent: "build-native-apps"
 menu_order: 10
 description: Describes how to deploy your first Mendix native mobile app with the Native Builder.
-tags:
-  [
-    "native",
-    "mobile",
-    "deploy",
-    "mendix native mobile builder",
-    "builder",
-    "appcenter",
-  ]
+tags: ["native", "mobile", "deploy", "mendix native mobile builder", "builder", "appcenter"]
 ---
 
 ## 1 Introduction
@@ -24,20 +16,20 @@ Mendix Native Mobile Builder is the UI tool to setup and build your Mendix Nativ
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-- Mendix Studio Pro 8.15 or later installed using the online installer. The offline installer does not include the Mendix Native Mobile Builder dependency.
-- Read [How to Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile) to see how to create, style and debug an application with Mendix Studio Pro
-- Deploy your native mobile app to the cloud via Studio Pro and have the cloud address of your deployed application available
-- A [GitHub](https://github.com/) account.
-- An [App Center](https://appcenter.ms/) account. We recommend a paid account if you will be building and deploying regularly.
+* Mendix Studio Pro 8.15 or later installed using the online installer. The offline installer does not include the Mendix Native Mobile Builder dependency.
+* Read [How to Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile) to see how to create, style and debug an application with Mendix Studio Pro
+* Deploy your native mobile app to the cloud via Studio Pro and have the cloud address of your deployed application available
+* A [GitHub](https://github.com/) account.
+* An [App Center](https://appcenter.ms/) account. We recommend a paid account if you will be building and deploying regularly.
 
 ### 2.1 Platform-Specific Prerequisites
 
 If you plan to deploy your app for testing on an iOS device, make sure you have completed the following prerequisites:
 
-- Register for an Apple Developer Account
-- Have an iOS device for testing the iOS package that will be produced
-- Have an iOS deployment certificate and a provisioning file for which your device is activated
-- Have Xcode installed on your computer for deploying the iOS package to your test device
+* Register for an Apple Developer Account
+* Have an iOS device for testing the iOS package that will be produced
+* Have an iOS deployment certificate and a provisioning file for which your device is activated
+* Have Xcode installed on your computer for deploying the iOS package to your test device
 
 If you plan to deploy your app for testing on an Android device, make sure you have an Android device available.
 
@@ -95,7 +87,7 @@ From Mendix Studio Pro:
 
 1. Click _Next Step_ when ready
 
-1. Select _Choose your splash screen_, if you already have an image you would like to use as an splash screen. Continue if you are fine with using the default image for now. The splash screen can be changed later.
+1. Select _Choose your splash screen_, if you already have an image you would like to use as a splash screen. Continue if you are fine with using the default image for now. The splash screen can be changed later.
    ![Wizard Splash screen](attachments/nbui/wizard-splashscreens.png)
 
 1. Click _Next Step_ when ready
@@ -173,8 +165,8 @@ For distributing your binaries, setup, signing for [iOS](#signing-for-ios) and [
 
 For distributing to a specific platform, see the subsequent sections below:
 
-- [Distributing for Android](#android-distributing)
-- [Distributing for iOS](#ios-distributing)
+* [Distributing for Android](#android-distributing)
+* [Distributing for iOS](#ios-distributing)
 
 ### 6.1 Distribute the iOS app to App Store Connect {#ios-distributing}
 
@@ -235,4 +227,4 @@ A signed Android APK can be uploaded to Google Play store directly. For more inf
 
 ## 7 Read More
 
-- [How To Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile)
+* [How To Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile)

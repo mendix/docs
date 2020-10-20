@@ -45,10 +45,6 @@ If you plan to deploy your app for testing on an Android device, make sure you h
 
 To use the Native Builder, you will first need to get tokens to authenticate with GitHub and App Center. If you already have tokens for your GitHub and App Center, you do not need to repeat these sections.
 
-{{% alert type="info" %}}
-The Mendix Native Mobile Builder needs to communicate with GitHub and App Center. Therefore, make sure your firewall permissions do not restrict the tool.
-{{% /alert %}}
-
 ### 3.1 GitHub Token {#github-token}
 
 1. Go to [GitHub](https://github.com/) and sign in.
@@ -69,6 +65,10 @@ The Mendix Native Mobile Builder needs to communicate with GitHub and App Center
 5. Store this token in a secure place as well. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
 
 ## 4 Build your native App
+
+{{% alert type="info" %}}
+The Mendix Native Mobile Builder needs to communicate with GitHub and App Center. Therefore, make sure your firewall permissions do not restrict the tool.
+{{% /alert %}}
 
 From Mendix Studio Pro:
 
@@ -176,20 +176,60 @@ For distributing to a specific platform, see the subsequent sections below:
 - [Distributing for Android](#android-distributing)
 - [Distributing for iOS](#ios-distributing)
 
-### 6.1 Distribute the iOS app to App Store Connect
+### 6.1 Distribute the iOS app to App Store Connect {#ios-distributing}
+
+Depending if you choose to sign your iOS app or not, the output of the build will result to be an IPA or XCArchive, respectively. IPA files can be directly distributed to App Store Connect for further processing. XCArchives require XCode to sign and generate an IPA before they can be further processed.
+
+#### 6.1.1 Distribute a signed IPA
 
 To be able to upload your app to App Store Connect, you will have to have setup a new app via the App Store Connect website using the name and app id you used to build the app. Follow the [App Store Connect Guide to adding a new app](https://help.apple.com/app-store-connect/en.lproj/static.html#devbec4892b7) for a how to.
 
-When signing your iOS app a file of type IPA is generated. To upload an IPA to the App Store XCode includes a command line tool. Assuming XCode is installed and the extra Command Line tools setup, the command to upload the IPA is the following:
+When signing your iOS app a file of type IPA is generated. To upload an IPA to the App Store, XCode includes a command line tool. Assuming XCode is installed and the extra Command Line tools setup, the command to upload the IPA is the following:
 
     xcrun altool --upload-app --type ios --file "path/to/application.ipa"
     --username "YOUR_APPSTORE_USER_EMAIL" --password "YOUR_APPSTORE_PASSWORD"
 
 Replace the filepath with the absolute path to the IPA file, the username with your developer app store email address and password with the respective password.
 
-The command will verify your is well packaged and ready to be shipped and will upload it to TestFlight for further processing.
+The command will first verify your IPA is well packaged and ready to be shipped and will then upload it to TestFlight for further processing.
 
-### 6.2 Distribute the Android app to Google Play
+#### 6.1.2 Distributed an unsigned XCArchive
+
+Local signing is useful if you only want to test your app on a device, or you do not have a distribution certificate and have run out of build minutes on App Center when signing with a developer certificate.
+
+In order to deploy the _nativeTemplate.xcarchive_ on a device or on the App Store, an Apple developer account and a development team is required. If one is available, do the following:
+
+1. Using Xcode, double-click the _nativeTemplate.xcarchive_ file and it should open with the built-in _Application Loader_ software.
+
+2. Click the _Distribute App_ button to start the local signing flow.:
+
+   ![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-1.png)
+
+3. Select **Development**:
+
+   ![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-2.png)
+
+4. Choose a **Development Team**:
+
+   ![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-3.png)
+
+5. Configure your **Development distribution options**:
+
+   ![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-4.png)
+
+6. Select a re-signing option:
+
+   ![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-5.png)
+
+7. Review your _.ipa_ content and click **Export**:
+
+   ![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-6.png)
+
+8. Congratulations. You now have a signed _.ipa_ file:
+
+   ![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-7.png)
+
+### 6.2 Distribute the Android app to Google Play {#android-distributing}
 
 A signed Android APK can be uploaded to Google Play store directly. For more info on setting up a new app and uploading your binaries follow Google's guide on [Uploading an app](https://support.google.com/googleplay/android-developer/answer/113469?hl=en).
 

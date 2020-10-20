@@ -1,7 +1,7 @@
 ---
 title: "Find Advanced"
 parent: "edit-menu"
-menu_order: 20
+menu_order: 10
 tags: ["studio pro", "find advanced", "find usages", "edit menu"]
 ---
 

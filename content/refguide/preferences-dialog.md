@@ -1,7 +1,7 @@
 ---
 title: "Preferences"
 parent: "edit-menu"
-menu_order: 10
+menu_order: 20
 tags: ["studio pro", "preferences", "settings", "edit menu"]
 ---
 

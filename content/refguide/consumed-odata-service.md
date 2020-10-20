@@ -158,6 +158,8 @@ In this case the new service will be registered in the Data Hub Catalog as a dif
 
 There is a major service update indicated by the change in the version number from **1.0.0** to **2.0.0**. Further, both versions have also been deployed to the **Acceptance** which also results in separately registered assets in the Data Hub Catalog.
 
+{{% alert type="info" %}} Entities of Non-Mendix OData services are identified with a key of one or more fields. If the key fields are changed in an update of the service, this will also be seen as a breaking change. {{% /alert %}}
+
 ### 4.3 Update or Switch
 
 When minor and major updates to a consumed service are detected in Data Hub the following options are available in the **Consumed OData Service** screen.

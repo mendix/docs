@@ -1,20 +1,19 @@
 ---
-title: "3D Viewer for Teamcenter - DO NOT PUBLISH, INCORPORATE/REPOSITION"
-category: "App Services"
-menu_order: 2
-description: "3D Viewer for Teamcenter is an add-on for the 3D Viewer app service. It adds additional functionality to enable fetching a JT model from a Teamcenter instance and visualizit it using existing 3D Viewer widgets."
+title: "3D Viewer for Teamcenter"
+parent: "3d-viewer"
+description: "3D Viewer for Teamcenter is an add-on module for the 3D Viewer app service. It adds additional functionality to enable fetching a JT model from a Teamcenter instance and visualizit it using existing 3D Viewer widgets."
 tags: ["3d visualization", "3d viewer", "cad", "app store", "marketplace", "component", "platform support", "teamcenter"]
 ---
 ## 1 Introduction
 
-The 3D Viewer for Teamcenter app service lets you connect to a Teamcenter instance and then visualize and operate on 3D JT models. It provides [nanoflows](/refguide/nanoflows) and [microflows](/refguide/microflows) that enable you to find and fetch a JT model from Teamcenter.
+The 3D Viewer for Teamcenter module lets you connect to a Teamcenter instance and then visualize and operate on 3D JT models. It provides [nanoflows](/refguide/nanoflows) and [microflows](/refguide/microflows) that enable you to find and fetch a JT model from Teamcenter.
 
 ### 1.1 Typical Use Cases
 
-You can use this app service to search and fetch JT models that are stored in a Teamcenter instance and use [3D Viewer](3d-viewer) widgets to visualize the fetched models. Once a model is fetched, you can perform some basic operations, such us navigating the model product structure tree and PMI tree, sectioning, and many more operations enabled by the 3D Viewer out-of-the-box tools. 
+You can use this module to search and fetch JT models that are stored in a Teamcenter instance and use [3D Viewer](3d-viewer) widgets to visualize the fetched models. Once a model is fetched, you can perform some basic operations, such us navigating the model product structure tree and PMI tree, sectioning, and many more operations enabled by the 3D Viewer out-of-the-box tools. 
 
 {{% alert type="warning" %}}
-Using this app service alone will not be enough to visualize a 3D model.
+Using this module alone will not be enough to visualize a 3D model.
 {{% /alert %}}
 
 ### 1.2 Features
@@ -57,7 +56,7 @@ After importing, you need map the **Administrator** and **User** [module roles](
 
 ## 4 Initializing on App Startup
 
-To automatically start this app service, create a **Startup** microflow, add **Viewer3D/USE_ME/VisServerAction** and **Viewer3D_TC/USE_ME/VisServerAction_TC** Java actions to the microflow, then set the return type as Boolean with a **Value** of **true**.
+To automatically start this module, create a **Startup** microflow, add **Viewer3D/USE_ME/VisServerAction** and **Viewer3D_TC/USE_ME/VisServerAction_TC** Java actions to the microflow, then set the return type as Boolean with a **Value** of **true**.
 
 You need to set this microflow as the after-startup step via **Project Settings** > **Runtime** > **After startup**.
 
@@ -69,7 +68,7 @@ Finally, double-click the **Visualization Server** Java action and make sure **H
 
 The 3D Viewer app service provides a set of widgets to visualize JT models as well as a set of nanoflows and Java actions to bring in the data stored in Mendix file storage. Meanwhile, the Teamcenter connector module provides full-scale APIs for you to interact with a Teamcenter instance.  
 
-The 3D Viewer for Teamcenter app service acts as an intermediate layer between the two components above. It mainly utilizes the APIs provided by the Teamcenter connector and provides nanoflows, Java actions, and microflows to get JT-format model data from the Teamcenter instance.  
+The 3D Viewer for Teamcenter module acts as an intermediate layer between the two components above. It mainly utilizes the APIs provided by the Teamcenter connector and provides nanoflows, Java actions, and microflows to get JT-format model data from the Teamcenter instance.  
 
 To visualize and operate on the JT model from Teamcenter, use the 3D widgets that are included in the 3D Viewer app service to visualize the data obtained from the 3D Viewer for Teamcenter.
 
@@ -97,7 +96,7 @@ The above is an example Teamcenter login flow. There are other Teamcenter login 
 
 ### 5.2 Getting a List of Corresponding Models from Teamcenter
 
-The **SearchTC** nanoflow in the 3D Viewer For Teamcenter app service enables setting search criteria and fetching a model list. This nanoflow will first check if an active Teamcenter user session is live and then perform the search, so logging in is essential before performing the model search. A list of **ModelDocument** objects will be returned as a result of this nanoflow; therefore, the nanoflow can be set as the data source of a [list view](/refguide/list-view). Additionally, by using **3dViewer_TC** > **USER_ME** > **SetRevisionRule**, you can apply specific revision rules to the search and get different model data returned.
+The **SearchTC** nanoflow in the 3D Viewer For Teamcenter module enables setting search criteria and fetching a model list. This nanoflow will first check if an active Teamcenter user session is live and then perform the search, so logging in is essential before performing the model search. A list of **ModelDocument** objects will be returned as a result of this nanoflow; therefore, the nanoflow can be set as the data source of a [list view](/refguide/list-view). Additionally, by using **3dViewer_TC** > **USER_ME** > **SetRevisionRule**, you can apply specific revision rules to the search and get different model data returned.
 
 Follow these steps to get the list:
 

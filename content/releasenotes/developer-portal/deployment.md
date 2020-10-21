@@ -10,7 +10,7 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
-### October 20th, 2020
+### October 21st, 2020
 
 #### SAP Cloud Platform Deployment
 

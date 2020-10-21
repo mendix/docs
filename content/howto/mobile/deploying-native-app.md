@@ -56,13 +56,13 @@ To use the Native Builder, you will first need to get tokens to authenticate wit
 4. Add a description of your token, select **Full Access**, then click **Add new API token**, and then **New API Token**.
 5. Store this token in a secure place as well. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
 
-## 4 Build your native App
+## 4 Build Your Native App
 
 {{% alert type="info" %}}
 The Mendix Native Mobile Builder needs to communicate with GitHub and App Center. Therefore, make sure your firewall permissions do not restrict the tool.
 {{% /alert %}}
 
-From Mendix Studio Pro:
+From Studio Pro:
 
 1. Navigate to the Project and then Build Native Mobile App:
 
@@ -109,22 +109,22 @@ You have now completed the mandatory basic configuration needed to be able to bu
 * Versions ranging from 0.5 to 0.9.x for beta
 * Versions starting from 1.0.0 for release.
 
-1. Fill in your **Runtime URL**. It can be the IP of your local machine if you plan on testing against a locally running Mendix Studio Pro installation. If you deployed your app already to Mendix Cloud, you can point it to the URL of the deployed runtime as found via the Cloud Portal.
+1. Fill in your **Runtime URL**. It can be the IP of your local machine if you plan on testing against a locally-running Studio Pro installation. If you deployed your app already to Mendix Cloud, you can point it to the URL of the deployed runtime as found in the Cloud Portal.
 1. Click the **Build** button to start the build.
 1. The tool will setup your GitHub repository commit your changes, configure App Center with two new projects, one for iOS and one for Android and continue with building the apps:
 
    {{% image_container width="350" %}}![Setting up build prerequisites](attachments/nbui/build-release-app-build-step1.png){{% /image_container %}}
    {{% image_container width="350" %}}![Building release app](attachments/nbui/build-release-app-build-step2.png){{% /image_container %}}
 
-1. When the build completes, you can scan the QR code provided to install the app to your device. Currently the QR code service is only supported for Android devices:
+1. When the build completes, you can scan the QR code provided to install the app on your device. Currently the QR code service is only supported for Android devices:
 
    {{% image_container width="350" %}}![Build completed](attachments/nbui/build-release-app-build-done-both.png){{% /image_container %}}
 
-## 5 Signing your apps {#signing-a-build}
+## 5 Signing Your Apps {#signing-a-build}
 
 By default, App Center builds are unsigned and cannot be released on the Google Play Store or the Apple App Store. To release your apps, you must provide your signature keys to Mendix Native Mobile Builder. Signature keys prove the authenticity of your app and prevent forgeries. For more information to how to acquire these keys, see the [Managing App Signing Keys Reference Guide](/refguide/managing-app-signing-keys).
 
-### 5.1 Set up signing for iOS {#signing-for-ios}
+### 5.1 Set Up Signing for iOS {#signing-for-ios}
 
 iOS Support two type of signing configurations. Development and Release. The type of the build depends on the type of Provisioning file and Certificate that was used for configuring the tool.
 
@@ -146,7 +146,7 @@ iOS Support two type of signing configurations. Development and Release. The typ
 
 With that you have completed setting up signing for iOS and the next build will use the provided configuration to sign the iOS app.
 
-### 5.2 Setup signing for Android {#signing-for-android}
+### 5.2 Set Up Signing for Android {#signing-for-android}
 
 1. From within Mendix Native Mobile Builder, choose Android under Certificates:
 
@@ -178,7 +178,7 @@ For distributing to a specific platform, see the subsequent sections below:
 
 Depending if you choose to sign your iOS app or not, the output of the build will result to be an IPA or XCArchive, respectively. IPA files can be directly distributed to App Store Connect for further processing. XCArchives require XCode to sign and generate an IPA before they can be further processed.
 
-#### 6.1.1 Distribute a signed IPA
+#### 6.1.1 Distribute a Signed IPA
 
 To be able to upload your app to App Store Connect, you will have to have setup a new app via the App Store Connect website using the name and app id you used to build the app. Follow the [App Store Connect Guide to adding a new app](https://help.apple.com/app-store-connect/en.lproj/static.html#devbec4892b7) for a how to.
 
@@ -193,7 +193,7 @@ Replace the filepath with the absolute path to the IPA file, the username with y
 
 The command will first verify your IPA is well packaged and ready to be shipped and will then upload it to TestFlight for further processing.
 
-#### 6.1.2 Distributed an unsigned XCArchive
+#### 6.1.2 Distributed an Unsigned XCArchive
 
 Local signing is useful if you only want to test your app on a device, or you do not have a distribution certificate and have run out of build minutes on App Center when signing with a developer certificate.
 

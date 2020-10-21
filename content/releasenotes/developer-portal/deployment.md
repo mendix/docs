@@ -16,6 +16,22 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 * We added the ability for the technical contact to download a list of [node permissions](/developerportal/deploy/node-permissions) as a CSV to assist with audits
 
+### October 21st, 2020
+
+#### Mendix for Private Cloud Portal
+
+* We added the ability to configure TLS on an environment level.
+* We added the ability to link the Studio Pro debugger to an app running through Mendix for Private Cloud.
+* We added the ability to upload an MDA to the Developer Portal.
+* We split the **Edit App** button into two separate buttons, **Edit in Studio** and **Edit in Studio Pro** on some of the Developer Portal pages (Environments, App Services, Metrics, Alerts, Logs, Backups, and the Node Permissions tab of Security).
+* We updated the drop down for the **View App** button.
+* We fixed an issue where the cluster icon was only visible to members of a namespace.
+* We fixed an issue where the **Next** button did not display correctly if no MDA branch was selected. (Ticket 108399)
+
+#### SAP Cloud Platform Deployment
+
+* We split the **Edit App** button into two separate buttons, **Edit in Studio** and **Edit in Studio Pro** on some of the Developer Portal pages (Environments, App Services, Metrics, Alerts, Logs, Backups, and the Node Permissions tab of Security).
+* We also updated the drop down for the **View App** button.
 
 ### October 15th, 2020
 

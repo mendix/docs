@@ -131,6 +131,10 @@ Before you can deploy your app, you will need to create a deployment package. En
 
 7. Confirm the information message and you will be returned to the **Environments** page.
 
+{{% alert type="info" %}}
+Alternatively, you can upload an existing MDA by clicking **Upload Package**.
+{{% /alert %}}
+
 ### 3.4 Deploying the Deployment Package{#deploy-package}
 
 You can also deploy an existing deployment package to an environment without having to create a new one. This also allows you to specify constant values and control scheduled events before the app is started.
@@ -187,10 +191,11 @@ This lists the deployment packages which have been created for this app project.
 
 ![](attachments/private-cloud-deploy/image17.png)
 
-There are four buttons:
+There are five buttons:
 
 * Refresh
 * Create Package
+* Upload Package
 * Details
 * Deploy
 
@@ -208,7 +213,11 @@ Using the browser refresh button will take you away from this environments page,
 
 This creates a new package as described in [Creating a Deployment Package](#create-deployment-package), above.
 
-#### 4.1.3 Details
+#### 4.1.3 Upload Package
+
+This allows you to upload an MDA package you have already created. The uploaded package is added to the list of packages for the app and can be deployed in the same way as a package created using **Create Package**.
+
+#### 4.1.4 Details
 
 This displays details of the deployment package.
 
@@ -222,7 +231,7 @@ There are three additional actions you can take while looking at the deployment 
 * **Download Package** – allows you to download the deployment package and save it locally
 * **Delete Package** – deletes the deployment package – you will be asked to confirm this action
 
-#### 4.1.4 Deploy
+#### 4.1.5 Deploy
 
 This deploys the package to an existing environment as described in [Deploying the Deployment Package](#deploy-package), above.
 
@@ -325,10 +334,14 @@ If you have any outstanding changes to your environment the page will display a 
 
 ![](attachments/private-cloud-deploy/image21.png)
 
-The environment details page consists of two tabs:
+The environment details page consists of six tabs:
 
 * General
 * Model Options
+* Runtime
+* Log Levels
+* TLS
+* Debugger
 
 These tabs are described below.
 
@@ -425,6 +438,42 @@ When you use some settings on the Runtime tab for Mendix for Private Cloud they 
 On the Log Levels tab, you can change the log levels which are used for the log nodes in your app. For more details of these, see the [Log Levels Tab](environments-details#log-levels) section of *Environment Details*.
 
 ![](attachments/private-cloud-deploy/log-levels-tab.png)
+
+### 5.5 TLS
+
+If you are using Mendix Operator version 1.5.0 or above, you can configure TLS for your environment from the Developer Portal.
+
+In the TLS pane, you can choose whether to **Apply Default Configuration** or a **Custom TLS Configuration**. If you apply the default configuration, then the configuration made when you ran the configuration script for the namespace will be used.
+
+{{% alert type="info" %}}
+If you are using a version of Mendix Operator before 1.5.0, the settings in this tab will have no effect and the default configuration will be applied.
+{{% /alert %}}
+
+![](attachments/private-cloud-deploy/tls-configuration.png)
+
+If you choose a custom TLS configuration, you will need to enter the following information:
+
+* Enable TLS – is TLS enabled for this environment?
+
+    ![](attachments/private-cloud-deploy/enable-tls.png)
+
+* Use existing TLS secret or add new tls private key and certificate?
+
+    ![](attachments/private-cloud-deploy/choose-secret.png)
+
+* Existing Secret Name – if you choose an existing TLS secret then you will be asked to enter its name
+
+* TLS Private Key File and TLS Certificate File – if you choose to add a new key you will need to upload these two files
+
+    ![](attachments/private-cloud-deploy/new-tls-key.png)
+
+Click **Save** to confirm your new configuration.
+
+You will receive a warning that you have made some changes. Click **Apply Changes** to restart the app and apply the changes.
+
+### 5.6 Debugger
+
+On the Debugger tab you can set up and view the credentials you need to debug your app when it is running in your private cloud. For more information see [How To Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely#private-cloud).
 
 ## 6 Current Limitations{#limitations}
 

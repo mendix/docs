@@ -22,6 +22,11 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 * We fixed an issue where the cluster icon was only visible to members of a namespace.
 * We fixed an issue where the **Next** button did not display correctly if no MDA branch was selected. (Ticket 108399)
 
+#### SAP Cloud Platform Deployment
+
+* We split the **Edit App** button into two separate buttons, **Edit in Studio** and **Edit in Studio Pro** on some of the Developer Portal pages (Environments, App Services, Metrics, Alerts, Logs, Backups, and the Node Permissions tab of Security).
+* We also updated the drop down for the **View App** button.
+
 ### October 15th, 2020
 
 #### Mendix for Private Cloud — Mendix Operator v1.6.0 and Mendix Gateway Agent v1.5.0

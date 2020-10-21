@@ -105,6 +105,7 @@ Backup Details | Cloud Version | Description
 **Date**/ <br /> **Created on** | v3 <br /> v4 | The creation date of the backup
 **Expires on** | v3 & v4 | The date on which the backup will be removed from the system
 **Mendix version** | v3 & v4 | The version of the deployment package used during backup creation
+**Snapshot Size Uncompressed (MB)** | v4 | The size of database dump and files of the snapshot in MB
 **Comment** | v3 & v4 | A specific comment added to the backup
 
 At the bottom of the screen, you can click **Delete** to delete this particular backup.

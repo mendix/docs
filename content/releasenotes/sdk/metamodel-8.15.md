@@ -1,32 +1,24 @@
-# Metamodel Release Notes for version 8.15.0
+---
+title: "8.15"
+parent: "metamodel-8"
+---
 
-## Rest
+## 8.15.0
 
-### ODataMappedValue (Element)
+**Release date: October 20th, 2020** 
 
+### Rest
 
-#### Property 'remoteType'
-* Introduced; "OData value type"
+#### ODataMappedValue (Element)
 
-## Pages
+* We introduced the `remoteType` property for the OData value type.
 
-### TextBox (Element)
+### Pages
 
+#### TextBox (Element)
 
-#### Property 'submitBehaviour'
-* Introduced; 
+* We introduced the `submitBehaviour` and `submitOnInputDelay` properties.
 
-#### Property 'submitOnInputDelay'
-* Introduced; 
+#### WorkflowTemplateType, UserTaskTemplateType & WorkflowOverviewTemplateType (Elements)
 
-### WorkflowTemplateType (Element)
-* Introduced; 
-
-
-### UserTaskTemplateType (Element)
-* Introduced; 
-
-
-### WorkflowOverviewTemplateType (Element)
-* Introduced; 
-
+* We introduced these elements.

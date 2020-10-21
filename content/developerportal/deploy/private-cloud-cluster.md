@@ -155,7 +155,7 @@ You can always find the installation script again in the **Installation** tab fo
 
 ### 3.4 Running the Reconfiguration Script {#reconfiguration-script}
 
-Before you deploy an app to your namespace, you will need to configure a number of services, namely:
+Before you deploy an app to your namespace, you will need to configure a number of resources, namely:
 
 * database
 * file storage
@@ -163,15 +163,19 @@ Before you deploy an app to your namespace, you will need to configure a number 
 * registry
 * ingress (network)
 
-Mendix provides you with a script which will configure these initially, and can be re-run any time that you want to change how these are configured.
+Mendix provides you with two methods to configure these.
+
+For most local operating systems, you can configure them through the downloadable installation script which can run locally. For instructions, see [Downloaded Installation Script](#downloaded-script), below.
+
+If your local operating system does not support it, or if you would rather run the cluster-side script, follow the instructions below.
+
+Mendix provides you with a script which will configure these initially, and this can be re-run any time that you want to change how these are configured.
 
 1. Copy the **Reconfiguration Script** which has been created for you by clicking **Copy to clipboard**. 
 
     ![](attachments/private-cloud-cluster/image15.png)
 
 2. Press **Enter** to start the script.
-
-Version 1 of the script will ask you a series of questions. Type the number corresponding to your choice, or enter the value required.
 
 {{% alert type="info" %}}
 
@@ -215,7 +219,7 @@ You can return to this initial question from any of the other questions by choos
 The configuration script does not currently validate input values. Configuration can be verified by deploying a sample app.
 {{% /alert %}}
 
-#### 3.4.2 Pick a Database Type
+#### 3.4.2 Pick a Database Type{#database-plan}
 
 ![](attachments/private-cloud-cluster/image19.png)
 
@@ -267,7 +271,7 @@ If the plan name already exists you will receive an error that it cannot be crea
 To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.1.0 or later.
 {{% /alert %}}
 
-#### 3.4.3 Pick a Storage Type
+#### 3.4.3 Pick a Storage Type{#storage-plan}
 
 ![](attachments/private-cloud-cluster/image18.png)
 
@@ -379,7 +383,7 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide)
 
 **Ephemeral** will enable you to quickly set up your environment and deploy your app, but any data objects you store will be lost when you restart your environment.
 
-#### 3.4.4 Pick an Ingress Type
+#### 3.4.4 Pick an Ingress Type{#ingress}
 
 **OpenShift Route** will set up an OpenShift Route. This can only be used for OpenShift clusters.
 
@@ -391,7 +395,7 @@ Both forms of ingress can have TLS enabled or disabled.
 When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
 {{% /alert %}}
 
-#### 3.4.5 Pick a Registry Type
+#### 3.4.5 Pick a Registry Type{#registry}
 
 ![](attachments/private-cloud-cluster/image20.png)
 
@@ -417,13 +421,107 @@ For **Amazon Elastic Container Registry**, you will need to configure registry a
 
 When choosing the **Existing docker-registry secret**, you will need to add this secret to the `default` ServiceAccount manually, or provide registry authentication configuration in another way (depending on which registry authentication options the Kubernetes cluster vendor is offering).
 
-#### 3.4.6 Do You Want to Configure the Proxy?
+#### 3.4.6 Do You Want to Configure the Proxy?{#proxy}
 
 ![](attachments/private-cloud-cluster/image21.png)
 
 Choose **Yes** if a proxy is required to access the public internet from the namespace; you will be asked for the proxy configuration details.
 
 ### 3.5 Downloaded Installation Script{#downloaded-script}
+
+{{% todo %}}[Review instructions for downloading and running the installation script]{{% /todo %}}
+
+1. Choose the operating system for your local computer.
+
+2. Click **Download Installation Script** and make sure that it is stored somewhere on your path.
+
+3. Run the downloaded script using the command ?????????.
+
+	You will see the configuration options on the screen and will be guided through filling in the information needed.
+
+    ![](attachments/private-cloud-cluster/post-install-landing-page.png)
+
+#### 3.5.1 Base Installation
+
+If the Mendix Operator and the Mendix Gateway Agent have not been installed in your cluster, you will need to install them.
+
+1. Click **Base Installation**.
+
+	You will see the screen below.
+
+	![](attachments/private-cloud-cluster/installer-options.png)
+
+2. Select the required **Cluster Mode**.
+
+3. Select the required **Cluster Type**.
+
+4. Click **Run Installer** to install the Mendix Operator and Mendix Gateway Agent in your cluster.
+
+	The installation is successful if the **Installer output** ends with **Installation Successful**.
+
+5. Click **Save Installer** if you want to save these settings to be used later.
+
+6. Click **Exit Installer** to finish.
+
+The Mendix operator and Mendix Gateway Agent are now installed on your platform.
+
+#### 3.5.2 Configure Namespace
+
+You can now configure the resources required for your namespace.
+
+The first time you configure the namespace, you should select all the items under **Select items to configure** except **Proxy**. Only select **Proxy** if you want to configure a proxy for your namespace.
+
+The options do the following:
+
+* **Database Plan** – will create a new database plan for your cluster — you must have at least one database plan in your namespace, but you can have more than one
+* **Storage Plan** – will create a new storage plan for your cluster — you must have at least one storage plan in your namespace, but you can have more than one
+* **Ingress** – will set up the ingress for your namespace — if there is already an ingress, this will replace it with new settings
+* **Registry** – will set up a registry for your namespace — if there is already a registry, this will replace it with new settings
+* **Proxy** – will set up a proxy for your namespace — if there is already a proxy, this will replace it with new settings
+
+1. Select the options you need to configure.
+
+2. Click **Configure Namespace**.
+
+	You will be shown the **Installation wizard** landing page.
+
+	![](attachments/private-cloud-cluster/installation-wizard.png)
+
+3. Use the allocated function keys (for example <kbd>F2</kbd> for the **Database Plan**) to navigate to the setup pages for each resource which you need to configure.
+
+4. Each page will lead you through the information you need to supply.
+
+	You can also refer to the related sections above for more information.
+
+	* [Database Plan](#database-plan)
+	* [Storage Plan](#storage-plan)
+	* [Ingress](#ingress)
+	* [Registry](#registry)
+	* [Proxy](#proxy)
+
+5. When you have set up all the resources, press <kbd>F7</kbd> to **Review and Apply**.
+
+	![](attachments/private-cloud-cluster/review-and-apply.png)
+
+6. Click **Evaluate Configuration** to check the configuration.
+
+	Resources which are correctly configured will have a status **Valid configuration**. If an resource is incorrectly configured, it will have a status **Invalid configuration: …** and an explanation of the issue.
+
+	![](attachments/private-cloud-cluster/evaluate-configuration.png)
+
+7. Once you have evaluated the configuration, click **Write YAML** to save a copy of the configuration .yml files on your local machine.
+
+	The **Installer output** panel will display the locations of the saved files.
+
+	![](attachments/private-cloud-cluster/write-yaml.png)
+
+8. Click **Apply Configuration** to apply the configuration to your namespace.
+
+	![](attachments/private-cloud-cluster/apply-configuration.png)
+
+	Once the configuration has been applied you will see the message **Successfully applied all the configuration!**.
+
+9. Click **Exit Installer** to return to the landing page.
 
 ### 3.6 Confirming Namespace Configuration
 

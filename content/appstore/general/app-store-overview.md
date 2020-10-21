@@ -27,7 +27,7 @@ The home page of the Mendix App Store has three main tabs at the top:
 
 ![](attachments/app-store-overview/home-page.jpg)
 
-{{% todo %}}[**Update screenshot for correct categories**]{{% /todo %}}
+{{% todo %}}[**Verify screenshot for  category order and correlate in table below**]{{% /todo %}}
 
 It also presents various content categories:
 
@@ -41,9 +41,9 @@ It also presents various content categories:
 | [Connectors](/appstore/connectors/) | Connectors can be used to connect your Mendix app with other systems.  |
 | [Themes](/appstore/themes/) | Styling options for your apps that you can apply for different elements and devices. |
 | [App Services](/appstore/app-services/) | Domain-focused and packaged business capabilities delivered in the form of an API or an API and associated UI. |
-| **Solutions** |   |
+| **Solutions** | Fully-formed solutions for your apps. |
 
-{{% todo %}}[**Get definition of Solutions, add cross-reference to ASG category..**]{{% /todo %}}
+{{% todo %}}[**Get definition of Solutions, cross-reference ASG category**]{{% /todo %}}
 
 The following filter options are also available:
 
@@ -71,7 +71,7 @@ The header for each component presents the following details:
 		* The best practice is to download a component from the App Store that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded App Store content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
 	* **Subscribe** – click this to [subscribe](#subscriptions) to a paid [platform-supported](app-store-content-support#category) app service
 	* <a name="try-for-free"></a>**Try for Free** – click this to start a 30-day free trial of the paid [platform-supported](app-store-content-support#category) component
-		* After you agree to the terms and conditions, your trial will be set up – click **Check Status** to go to the [My Subscriptions](#subscriptions) page, where you can click **Manage App Servcies** to go to the [Service Management](#service-management) page (you will also receive an email with a link to this page)
+		* After you agree to the terms and conditions, your trial will be set up – click **Check Status** to go to the [My Subscriptions](#subscriptions) page, where you can click **Manage App Services** to go to the [Service Management](#service-management) page (you will also receive an email with a link to this page)
 		* If a [platform-supported](app-store-content-support#category) component has the **Premium** label, this means that after your 30-day free trial ends, you need to [subscribe](#subscriptions) to the component to use it
 
 	{{% todo %}}[**Verify "Subscribe", "Try for Free", and "Premium" definitions**]{{% /todo %}}
@@ -94,6 +94,7 @@ The **Support** section presents the category of support Mendix offers for the c
 The details page for a component presents the following item information tabs:
 
 *  **Overview** – contains the following sections:
+	
 	* **Description** – a description of the component
 	* **Screenshots** – screenshots of the component
 	* **User Reviews** – user reviews of the component; to leave a review for the component, click **Add Review** – a section will open where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page)
@@ -158,7 +159,7 @@ Click **Delete** to delete a draft.
 
 Click **Withdraw** to withdraw the content from the review process after you have [submitted it for approval](share-app-store-content#status) . This will return the content to the draft state.
 
-{{% todo %}}[**After releaes: update screenshot to have Withdraw button**]{{% /todo %}}
+{{% todo %}}[**Update screenshot to have Withdraw button**]{{% /todo %}}
 
 ### 4.4 Shared with Me {#shared-with-me}
 
@@ -289,7 +290,7 @@ To use an app service you are trying for free or that you have subscribed to, yo
 5. Click **New** and in the **Select Constant** dialog box, select **App Store modules** and the folder for your app service, then click **New**.
 6. Enter a name for the constant.
 7. In the **Constant** dialog box, add the access key first as the **Default value**.
-8. Do the same steps to add the secret key as a consant.
+8. Do the same steps to add the secret key as a constant.
 
 {{% todo %}}[**Verify step 5 - if don't do there, where do you add constant? Verify step 6 - specify name?**]{{% /todo %}}
 

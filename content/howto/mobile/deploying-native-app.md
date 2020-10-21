@@ -65,57 +65,64 @@ The Mendix Native Mobile Builder needs to communicate with GitHub and App Center
 From Mendix Studio Pro:
 
 1. Navigate to the Project and then Build Native Mobile App:
+
    ![Start Mendix Native Mobiler Builder](attachments/nbui/start-nbui.png)
 
 1. When Mendix Native Mobile Builder launches you are greeted with the home screen:
+
    ![Mendix Natve Mobile Builder Home Screen](attachments/nbui/home-screen.png)
 
 1. Select Build app for distribution.
 
-1. Fill in the app name, the app identifier. By default the wizard provides some sane defaults, but you might want to align the app identifier to use your company's reversed URL, or change the app name to something else than the project name.
+1. Fill in the app name, the app identifier. By default the wizard provides some sane defaults, but you might want to align the app identifier to use your company's reversed URL, or change the app name to something else than the project name:
+
    ![Wizard App Details](attachments/nbui/wizard-app-details.png)
 
 1. Click _Next Step_ when ready
 
-1. In the Tokens screen fill in your GitHub and App Center API token. The tool will verify the tokens grant sufficient access to valid accounts and notify you otherwise.
+1. In the Tokens screen fill in your GitHub and App Center API token. The tool will verify the tokens grant sufficient access to valid accounts and notify you otherwise:
+
    ![Wizard Tokens](attachments/nbui/wizard-tokens.png)
 
-1. Click _Next Step_ when ready
+1. Click **Next Step** when ready.
 
-1. Select _Choose your icon_, if you already have an image you would like to use as an icon. Continue if you are fine with using the default image for now. The app icon can be changed later.
+1. Select **Choose your icon**, if you already have an image you would like to use as an icon. Continue if you are fine with using the default image for now. The app icon can be changed later:
+
    ![Wizard Icons](attachments/nbui/wizard-icons.png)
 
-1. Click _Next Step_ when ready
+1. Click **Next Step** when ready.
+1. Select **Choose your splash screen**, if you already have an image you would like to use as a splash screen. Continue if you are fine with using the default image for now. The splash screen can be changed later:
 
-1. Select _Choose your splash screen_, if you already have an image you would like to use as a splash screen. Continue if you are fine with using the default image for now. The splash screen can be changed later.
    ![Wizard Splash screen](attachments/nbui/wizard-splashscreens.png)
 
-1. Click _Next Step_ when ready
+1. Click **Next Step** when ready.
+1. Drag and drop your custom fonts, if you already have a selection of fonts you would like to use. Continue if no custom fonts should be used. Custom fonts can be added later:
 
-1. Drag and drop your custom fonts, if you already have a selection of fonts you would like to use. Continue if no custom fonts should be used. Custom fonts can be added later.
    ![Wizard Fonts](attachments/nbui/wizard-fonts.png)
 
-1. Click _Next Step_ when ready
+1. Click **Next Step** when ready.
 
-   With that you completed the mandatory basic configuration needed to be able to build your project and should be in the _Build app for distribution_ step.
+You have now completed the mandatory basic configuration needed to be able to build your project and should be in the **Build app for distribution** step:
 
    ![Build release app](attachments/nbui/build-release-app.png)
 
-1. Fill in a sane version number. Common sane defaults would be:
+1. Fill in an intentional version number. For defaults, we reccomend the following guidelines:
 
-   - Versions lower than 0.5.0 for alpha
-   - Versions ranging from 0.5 to 0.9.x for beta
-   - Versions starting from 1.0.0 for release.
+* Versions lower than 0.5.0 for alpha
+* Versions ranging from 0.5 to 0.9.x for beta
+* Versions starting from 1.0.0 for release.
 
-1. Fill in your _Runtime URL_. It can be the IP of your local machine if you plan on testing against a locally running Mendix Studio Pro installation. If you deployed your app already to Mendix Cloud, you can point it to the URL of the deployed runtime as found via the Cloud Portal.
+1. Fill in your **Runtime URL**. It can be the IP of your local machine if you plan on testing against a locally running Mendix Studio Pro installation. If you deployed your app already to Mendix Cloud, you can point it to the URL of the deployed runtime as found via the Cloud Portal.
 
-1. Click the _Build_ button to start the build.
+1. Click the **Build** button to start the build.
 
-1. The tool will setup your GitHub repository commit your changes, configure App Center with two new projects, one for iOS and one for Android and continue with building the apps.
+1. The tool will setup your GitHub repository commit your changes, configure App Center with two new projects, one for iOS and one for Android and continue with building the apps:
+
    ![Setting up build prerequisites](attachments/nbui/build-release-app-build-step1.png)
    ![Building release app](attachments/nbui/build-release-app-build-step2.png)
 
-1. When the build completes, you can scan the QR code provided to install the app to your device. Currently the QR code service is only supported for Android devices.
+1. When the build completes, you can scan the QR code provided to install the app to your device. Currently the QR code service is only supported for Android devices:
+
    ![Build completed](attachments/nbui/build-release-app-build-done-both.png)
 
 ## 5 Signing your apps {#signing-a-build}
@@ -126,36 +133,40 @@ By default, App Center builds are unsigned and cannot be released on the Google 
 
 iOS Support two type of signing configurations. Development and Release. The type of the build depends on the type of Provisioning file and Certificate that was used for configuring the tool.
 
-1. From within Mendix Native Mobile Builder, choose iOS under Certificates
+1. From within Mendix Native Mobile Builder, choose iOS under Certificates:
+
    ![Build release app](attachments/nbui/build-release-app.png)
 
 1. Upload your provisioning file and P12 certificate and type in your password. The tool will verify that:
 
-   - The app identifier of the app is included in the Provisioning file
-   - The Certificate is included in the Provisioning file
-   - The password can unlock the certificate
+* The app identifier of the app is included in the Provisioning file
+* The Certificate is included in the Provisioning file
+* The password can unlock the certificate
 
-   If it errors, please correct the issue and try again.
+   If it errors, please correct the issue and try again:
+   
    ![Signing iOS](attachments/nbui/signing-ios.png)
 
-1. Click _Save_
+1. Click **Save**.
 
 With that you have completed setting up signing for iOS and the next build will use the provided configuration to sign the iOS app.
 
 ### 5.2 Setup signing for Android {#signing-for-android}
 
-1. From within Mendix Native Mobile Builder, choose Android under Certificates
+1. From within Mendix Native Mobile Builder, choose Android under Certificates:
+
    ![Build release app](attachments/nbui/build-release-app.png)
 
 1. Upload your keystore file and provide the keystore password, the key alias and the key password as defined when setting up the keystore. The tool will verify that:
 
-   - The keystore password is valid
-   - The key alias exists in the provided keystore
+   * The keystore password is valid
+   * The key alias exists in the provided keystore
 
-   If it errors, please correct the issue and try again.
+   If it errors, please correct the issue and try again:
+   
    ![Signing iOS](attachments/nbui/signing-android.png)
 
-1. Click _Save_
+1. Click **Save**.
 
 With that you have completed setting up signing for Android and the next build will use the provided configuration to sign the Android app.
 

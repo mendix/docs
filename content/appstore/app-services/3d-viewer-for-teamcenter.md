@@ -7,7 +7,7 @@ tags: ["3d visualization", "3d viewer", "cad", "app store", "marketplace", "comp
 
 ## 1 Introduction
 
-The 3D Viewer for Teamcenter module lets you connect to a Teamcenter instance and then visualize and operate on 3D JT models. It provides [nanoflows](/refguide/nanoflows) and [microflows](/refguide/microflows) that enable you to find and fetch a JT model from Teamcenter.
+The 3D Viewer for Teamcenter module lets you connect, search and fetch JT model from Teamcenter instance with the help of [Teamcenter Connector](https://appstore.home.mendix.com/link/app/111627/). It is an add-on module to [3D Viewer](3d-viewer) app service. It provides [nanoflows](/refguide/nanoflows) and [microflows](/refguide/microflows) that are easy to use.
 
 ### 1.1 Typical Use Cases
 
@@ -31,7 +31,7 @@ This module enables doing the following:
 If you want to visualize models stored in Teamcenter, you will also need to import the following components into your app project:
 
 * [3D Viewer](3d-viewer) app service – this component provides out-of-the-box widgets and the domain model entities needed to visualize a JT model
-* [Teamcenter](https://appstore.home.mendix.com/link/app/111627/) connector – this component is required for the 3D Viewer app service to connect and load the model from Teamcenter
+* [Teamcenter Connector](https://appstore.home.mendix.com/link/app/111627/) – this component is required for the 3D Viewer app service to connect and load the model from Teamcenter
 
 ### 1.4 Limitations
 
@@ -51,9 +51,9 @@ To visualize a model fetched from a Teamcenter instance, you need to import the 
 
 * 3D Viewer for Teamcenter
 * [3D Viewer](3d-viewer) app service
-* [Teamcenter](https://appstore.home.mendix.com/link/app/111627/) connector (v2.1.0 or above) 
+* [Teamcenter connector](https://appstore.home.mendix.com/link/app/111627/)  (v2.1.0) 
 
-After importing, you need map the **Administrator** and **User** [module roles](/refguide/module-security#module-role) of the installed components to the applicable [user roles](/refguide/user-roles) in your app.
+After importing, you need to map the **Administrator** and **User** [module roles](/refguide/module-security#module-role) of the installed components to the applicable [user roles](/refguide/user-roles) in your app.
 
 ## 4 Initializing on App Startup
 
@@ -118,7 +118,7 @@ Follow these steps to get the list:
 	![teamcenter-searchsync](attachments/3d-viewer-for-teamcenter/teamcenter-searchsync.jpg)
 
 7.  In the [console](/refguide/view-menu#console), there will be an error stating that the **Pagination** and **TCModelParamArray** parameters are missing for the **SearchTC** nanoflow input, so you need to fix this.
-	* **Pagination** is an entity defined in the **Viewer3D**'s domain mode, so by setting values of its attribute, you can get a paginated model list. For now, just use the default setting, which is all in one page.  
+	* **Pagination** is an entity defined in the **Viewer3D**'s domain model, so by setting values of its attribute, you can get a paginated model list. For now, just use the default setting, which is all in one page.  
 	* **TCModelParamArray** is an entity defined in the **Viewer3D_TC**'s domain model. It defines a set of attributes where you can set revision rules and return different model data based on these revision rules. For now, just use its default revision rule.
 
 	Since you are missing these two input parameters for the **SearchTC** nanoflow, wrap it with two data views, with one data view including the nanoflow that returns the **Pagination** object and the **TCModelParamArray** object set as the **Data source** for the other nanoflow.

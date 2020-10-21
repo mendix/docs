@@ -7,15 +7,26 @@ tags: ["3d visualization", "cad", "app store", "marketplace", "component", "plat
 
 ## 1 Introduction
 
-The 3D Viewer app service lets you upload, visualize, and operate on 3D JT files in your web applications. The app service contains Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of 3D widgets that enable you build apps to work with 3D models via the JT format. The app service includes whole functionalities and integrations that can be very helpful when you are building your own 3D applications. All you need to do is drag and drop items and configure them. 
+The 3D Viewer app service lets you upload, visualize, and operate on 3D JT files in your web applications, using Mendix File Storage to store models. The app service contains Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of 3D widgets that enable you build apps to work with 3D models via the JT format. The app service includes whole functionalities and integrations that can be very helpful when you are building your own 3D applications. All you need to do is drag and drop items and configure them.
 
 {{% todo %}}[Add link to component]{{% /todo %}}
 
 This app service does the heavy-lifting for you so you do not have to build a 3D-rendering engine from scratch.
 
+Here is an overview of what The 3DViewer contains following:
+
+| Category                                   | Name                                                                                                                                                                                                                                                                                      |
+| :----------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Predefined Entity](#51-predefined-entity) | ModelDocument, Pagination                                                                                                                                                                                                                                                                 |
+| [Constants](#52-constants)                 | HttpEndpoint, ModelSourceType                                                                                                                                                                                                                                                             |
+| [Nanoflow](#54-nanoflow)                   | GetModelListFromMendix                                                                                                                                                                                                                                                                    |
+| [Microflow](#53-microflow)                 | DeleteModelFromMendix                                                                                                                                                                                                                                                                     |
+| [Java Action](#54-java-action)             | VisServerAction                                                                                                                                                                                                                                                                           |
+| [Widgets](#55-widgets)                     | Container3D, Markup builder, PMI tree, PS Tree,  PS Tree Table, Section view, Toolbar item camera mode,Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer |
+
 ### 1.1 Typical Use Cases
 
-You can use this app service when you want to upload, store, and visualize 3D JT models in your application. You can perform some basic operations, such us navigating the model product structure tree, the **Product Manufacturing Information** (PMI) tree, and sectioning.
+You can use this app service when you want to upload, store, and visualize 3D JT models in your application. You can perform some basic operations, such us navigating the model product structure tree, the **Product Manufacturing Information** (PMI) tree, creating section views and 2D Markups.
 
 ### 1.2 Features
 
@@ -32,6 +43,7 @@ This app service enables you to do the following:
 * Display part/assembly properties
 * Create 3D cross-sections
 * Examine your model from preset viewing angles
+* Create 2D Markup on model and save snapshot
   
 ### 1.3 Limitations {#limitations}
 
@@ -39,6 +51,7 @@ The 3D Viewer app service includes a few 3D widgets. These are the limitations o
 
 * The **Container3D** widget acts as a context-sharing container for other 3D widgets. Therefore, every other 3D widget needs to be put inside the Container3D widget. If 3D widgets are placed outside of the Container3D widget, you will see error in [Design mode](/refguide/page#design-mode).
 * One **Container3D** widget can only contain one **Viewer** widget. If multiple Viewer widgets are placed inside a Container3D widget, you will see error message in [Design mode](/refguide/page#design-mode).
+* The **MarkupBuilder** widget, **Tool bar** widgets only works when **Viewer** widget is added to the page.
 
 Currently, only JT models with version 9 and above are supported.
 
@@ -48,7 +61,7 @@ Follow the instructions in [How to Use App Store Content in Studio Pro](../gener
 
 After importing, you need map the **Administrator** and **User** [module roles](/refguide/module-security#module-role) of the installed modules to the applicable [user roles](/refguide/user-roles) in your app.
 
-## 4 Initializing the 3D Viewer App Service on App Startup
+## 3 Initializing the 3D Viewer App Service on App Startup
 
 To automatically start this app service, create a **Startup** microflow, add the **Viewer3D/USE_ME/VisServerAction** Java action to the microflow, then set the return type as **Boolean** with a **Value** of **true**.
 
@@ -58,25 +71,116 @@ You need to set this microflow as the after-startup step via **Project Settings*
 
 ![afterStartup](attachments/3d-viewer/afterstartup.jpg)
 
-## 5 3D Widgets
+## 4 3DViewer content
 
-These are the 3D widgets bundled in this app service:
+### 4.1 Predefined Entity
 
-| Widget | Description |
-| --- | --- |
-| Container3D | A special container widget that provides a shared context for other 3D Viewer widgets. |
-| PMI Tree | Provides a hierarchical tree display of a model's product manufacturing information, model views, and design groups. |
-| PS Tree | Provides a hierarchical classification of the items that form a product. |
-| PS Tree Table | A configurable tree table to display the model attributes of your choice. |
-| Sectioning | Allows you to create a section cut on the model. |
-| Tool bar item camera mode | Provides the ability to control the appearance of surface objects displayed in the view. The option determines whether surface objects are represented on the display by facet geometry or edge geometry. |
-| Tool bar item camera orientation | Allows you to view the model from different camera orientations. |
-| Tool bar item explode slider | Allows you to create an exploded view of your assembly. |
-| Tool bar item fit all | Allows you to fit all the model parts in the viewer. |
-| Tool bar item render mode | Allows you to toggle between different model render modes. |
-| Tool bar item selection mode | Provides the ability to select a model part, edge, face, and body. |
-| Uploader | Enables you to upload your own model to be viewed in a browser or the app. |
-| Viewer | Provides a viewing window of your 3D model when you open a model and zoom, rotate, or pan.|
+**ModelDocument** entity is an entity that incorporates all information of a model. You can choose to inherit from this entity, set an association to the entity or copy this entity to your module.
+![modeldocument](attachments/3d-viewer/modeldocument.jpg)
+| Attribute    | Description                                                                                                  |
+| :----------- | :----------------------------------------------------------------------------------------------------------- |
+| ModelId      | An unique string to  identify a model                                                                        |
+| ModelName    | A file name                                                                                                  |
+| Source       | Indicate where the model is stored, 3DViewer can visualize model from Source "Mendix" or Source "Teamcenter" |
+| Author       | Indicate the author of the model                                                                             |
+| CreationDate | Indicate the time when model is uploaded and stored in Mendix File Storage                                   |
+| FileSize     | Indicate the size of the model                                                                               |
+| FileType     | Indicate the 3D model format, currently only JT format is supported                                          |
+| ErrorReason  | Indicate why error occurs when loading a model                                                               |
+
+
+**Pagination** entity serves as an input parameter of **GetModelListFromMendix** nanoflow. It allows you to paginate model list returned by the nanoflow. If value of **Pagination** attributes are not specifically set, **GetModelListFromMendix** will return a full list of model.
+![pagination](attachments/3d-viewer/pagination.jpg)
+| Attribute | Intended use                                    |
+| :-------- | :---------------------------------------------- |
+| Count     | Indicate which page number to fetch             |
+| PageSize  | Indicate the item size of one page              |
+| OffSet    | Indicate offset from the first item of the page |
+
+### 4.2 Constants
+
+Constant `HttpEndpoint` with value "visualization" is needed to set **VisServerAction** java action's Transport http endpoint value.
+
+Constant `ModelSourceType` with value "Mendix" is used to signify the model source.
+
+### 4.3 Microflow
+
+**DeleteModelFromMendix** microflow takes a ModelDocument object as input parameter, and delete the corresponding model stored in Mendix File Storage.
+
+![deletemodelfrommendix](attachments/3d-viewer/deletemodelfrommendix.jpg)
+
+### 4.4 Nanoflow
+
+**GetModelListFromMendix** nanoflow takes a Pagination object as an input to fetch model list from Mendix File Storage, and return a list of ModelDocuments as a result. Each ModelDocument represents a model that is stored in Mendix File Storage.
+
+![getmodellistfrommendix](attachments/3d-viewer/getmodellistfrommendix.jpg)
+
+### 4.5 Java Action
+
+**VisServerAction** Java action is used to set up visualization server infrastructure, it is critical to realise all the functions 3DViewer provides. It is exposed as microflow actions. It is important to set app's AfterStartup microflow to call VisServerAction.
+
+### 4.6 Widgets
+
+#### 4.6.1 Core Widgets
+
+These are core widgets that are required to enable visualizing 3D JT Model.
+
+| Widget      | Description                                                                                                                                 |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Container3D | A special container widget designed to put other 3D widgets in, it provides a shared context for 3D widgets to communicate with each other. |
+| Uploader    | Enables you to select JT model from local machine and upload to Mendix Storage                                                              |
+| Viewer      | Provides a viewing window of your 3D model                                                                                                  |
+
+Usage:
+
+**Container3D** - Place it in any place of a page.
+
+**Uploader** - Place it inside Container3D widget. In **General** tab, `Progress percentage`, `Model ID` and `Data source` attributes can be used to retrieve uploading model's upload status, model ID and model source type.
+![uploadergeneral](attachments/3d-viewer/uploadergeneral.jpg)
+
+**Viewer** -  Place it inside Container3D widget. For Viewer widget to visualize a model correctly: 
+- In **Data Source** tab,  `Model ID` and `Model source type` needs to be specified.
+- In **Transport** tab,  make sure the HttpEndpoint is `@Viewer3D.HttpEndpoint`
+- In **Appearance** tab, give the viewer a fixed height, for example, `height:600px`.Viewer widget needs to have a fixed height.
+
+Besides, Viewer widget provides customization options to change Viewer widget's behavior. In **General** tab, `Show coordinate system` and `Show navigation cube` determines if coordinate system and navigation cube will appear in the viewer; `Show tooltip` determines if a tooltip will pop up when you click on a model part, it accepts boolean value `false` or `true`; `Automatically load parts` determines if model part will be loaded into viewer automatically, if set to yes, model will be automatically loaded into the viewer as long as Viewer receives `Model ID` and `Model source type` values, if set to no, model will only be loaded to the viewer when triggered from PS tree part toggling.
+
+#### 4.6.2 Panel widgets
+
+These are widgets that have an operation panel that contain interactive item for user to operate on.
+| Widget         | Description                                                                                                                                                     |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PS Tree        | Provides a hierarchical tree view of the items that form a model. By toggling tree node, user can control which model parts will be loaded into viewer.         |
+| PS Tree Table  | A configurable tree table to display the model attributes of your choice.                                                                                       |
+| PMI Tree       | Provides a hierarchical tree display of a model's product manufacturing information, model views, and design groups.                                            |
+| Section View   | Allows you to create a section cut on the model and provides section view from various angle                                                                    |
+| Markup Builder | Allows you to create 2D markup on model and save annotated screenshot, snapshots that contain 2D markup will saved along with the model in Mendix File Storage. |
+
+Usage :
+
+**PS Tree** - Place it in a **Container3D** widget, a **Viewer** widget with right data source should also be in the same **Container3D** widget. In **General** tab, `Expand all` determines if model's product structure tree should be fully expanded at the initial load; use `Show search` to ggle on and off a search bar that enables user to enter part name and search part in the PS tree; `Show lead structure` determines if subpart data should be displayed in the PS tree.
+
+**PS Tree Table** - Place it in a **Container3D** widget, a **Viewer** widget with right data source should also be in the same **Container3D** widget. Compared to **PS Tree**, **PS Tree Table** adds an additional configurable attribute for you, `Column`, it allows you to create new columns to form a tree  table view, it accepts a String with `,` to separate column names.
+
+**PMI Tree** - Place it in a **Container3D** widget, a **Viewer** widget with right data source should also be in the same **Container3D** widget.
+
+**Section View**: Place it in a **Container3D** widget, a **Viewer** widget with right data source should also be in the same **Container3D** widget.
+
+**Markup Builder**: Place it in a **Container3D** widget, a **Viewer** widget with right data source should also be in the same **Container3D** widget.
+
+#### 4.6.3 Toolbar widgets
+
+These are widgets that don't require additional configuration. Simply place them in **Container3D** widget with accompanying **Viewer** widget.
+
+| Widget                           | Description                                                                                                                                                                                               |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tool bar item camera mode        | Provides the ability to control the appearance of surface objects displayed in the view. The option determines whether surface objects are represented on the display by facet geometry or edge geometry. |
+| Tool bar item camera orientation | Allows you to view the model from different camera orientations.                                                                                                                                          |
+| Tool bar item explode slider     | Allows you to create an exploded view of your assembly.                                                                                                                                                   |
+| Tool bar item fit all            | Allows you to fit all the model parts in the viewer.                                                                                                                                                      |
+| Tool bar item render mode        | Allows you to toggle between different model render modes.                                                                                                                                                |
+| Tool bar item selection mode     | Provides the ability to select a model part, edge, face, and body.                                                                                                                                        |
+| Tool bar item snapshot           | Provides the ability to take snapshot of current viewer and save the snapshot to local machine                                                                                                            |
 
 ## 6 Using 3D Viewer  
 
@@ -155,7 +259,7 @@ This is the example in design mode:
 
 In the previous use case, you can only visualize the model you upload.
 
-Usually you will also need to manage the models that are uploaded and stored in the data storage. 3D Viewer provides the **GetModelList** and **DeleteModel** nanoflows to help you build model data management functionality into your app.
+Usually you will also need to manage the models that are uploaded and stored in the data storage. 3D Viewer provides the **GetModelListFromMendix** nanoflow and **DeleteModelFromMendix** microflow to help you build model data management functionality into your app.
 
 #### 6.4.1 Building a Model List
 
@@ -198,7 +302,7 @@ There might be some models that you do not want in the database, so you can dele
 Follow these steps to delete a model from the database:
 
 1. Use the **Viewer3D/USE_M3/DeleteModelFromMendix** microflow directly or copy it to one of your app modules.
-2.  For a model list item, add a **Delete** button:
+2.  **DeleteModelFromMendix** expects a ModelDocument(which represents a model stored in Mendix File Storage) as input parameter, after the successful execution, the model will be deleted from Mendix File Storage. From previous steps, you built a model list, each list item is a ModelDocument. For a model list item, add a **Delete** button:
 
 	![deletemodel-deletebutton](attachments/3d-viewer/deletemodel-deletebutton.jpg)
 
@@ -207,12 +311,13 @@ Follow these steps to delete a model from the database:
 	![deletemodel-nanoflow](attachments/3d-viewer/deletemodel-nanoflow.jpg)
 
 4. Set the **On click** event of the **Delete** button to the **DeleteModel** nanoflow.
+5. Run your app locally, you should be able to delete a model by clicking "Delete".
 
 Now you are able to get a list of models, select a list item to open a model, and delete the model.
 
 ### 6.5 Handling Viewer Events
 
-Multiple events can be picked up by the **Viewer** widget and can used to build your customized event handling logic.
+Multiple events can be picked up by the **Viewer** widget and can be used to build your customized event handling logic.
 
 There are three main types of events that can be picked up on the **Viewer** widget:
 

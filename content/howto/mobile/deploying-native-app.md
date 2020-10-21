@@ -10,7 +10,7 @@ tags: ["native", "mobile", "deploy", "mendix native mobile builder", "builder", 
 
 This how-to will teach you how to go from a blank slate to an app running on a device.
 
-Mendix Native Mobile Builder is the UI tool to setup and build your Mendix Native Mobile Apps. It is directly accessible via Mendix Studio Pro 8.15 and later versions for all projects with a Native Mobile navigation profile.
+The Mendix Native Mobile Builder is the UI tool to set up and build your Mendix Native Mobile Apps. It is directly accessible in Mendix Studio Pro v8.15 and above versions for all projects with a native mobile navigation profile.
 
 ## 2 Prerequisites {#prerequisites}
 
@@ -35,7 +35,7 @@ If you plan to deploy your app for testing on an Android device, make sure you h
 
 ## 3 Getting Your Tokens
 
-To use the Native Builder, you will first need to get tokens to authenticate with GitHub and App Center. If you already have tokens for your GitHub and App Center, you do not need to repeat these sections.
+To use the Native Builder, you will first need to get tokens to authenticate with GitHub and App Center. If you already have tokens for your GitHub and App Center, you do not need to complete these sections.
 
 ### 3.1 GitHub Token {#github-token}
 
@@ -51,7 +51,7 @@ To use the Native Builder, you will first need to get tokens to authenticate wit
 ### 3.2 App Center Token {#appcenter-token}
 
 1. Go to [App Center](https://appcenter.ms/apps) and sign in.
-2. Click your profile icon in the top right corner, then click **Settings**, and then **Account Settings**.
+2. Click your profile icon in the top-right corner, then click **Settings**, and then **Account Settings**.
 3. In the **API Tokens** tab, click **New API token**.
 4. Add a description of your token, select **Full Access**, then click **Add new API token**, and then **New API Token**.
 5. Store this token in a secure place as well. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
@@ -73,27 +73,27 @@ From Mendix Studio Pro:
    {{% image_container width="350" %}}![Mendix Natve Mobile Builder Home Screen](attachments/nbui/home-screen.png){{% /image_container %}}
 
 1. Select Build app for distribution.
-1. Fill in the app name, the app identifier. By default the wizard provides some sane defaults, but you might want to align the app identifier to use your company's reversed URL, or change the app name to something else than the project name:
+1. Fill in the app name, the app identifier. By default the wizard provides some defaults, but you might want to align the app identifier to use your company's reversed URL, or change the app name to something besides the project name:
 
    {{% image_container width="350" %}}![Wizard App Details](attachments/nbui/wizard-app-details.png){{% /image_container %}}
 
-1. Click *Next Step* when ready.
-1. In the **Tokens** screen fill in your GitHub and App Center API token. The tool will verify the tokens grant sufficient access to valid accounts and notify you otherwise:
+1. Click **Next Step** when ready.
+1. In the **Tokens** screen fill in your GitHub and App Center API token. The tool will verify the tokens grant sufficient access to valid accounts and notify you if they do not:
 
    {{% image_container width="350" %}}![Wizard Tokens](attachments/nbui/wizard-tokens.png){{% /image_container %}}
 
 1. Click **Next Step** when ready.
-1. Select **Choose your icon**, if you already have an image you would like to use as an icon. Continue if you are fine with using the default image for now. The app icon can be changed later:
+1. Select **Choose your icon** if you already have an image you would like to use as an icon, or just continue if you are satisfied using the default image. You can change app icon later if you wish:
 
    {{% image_container width="350" %}}![Wizard Icons](attachments/nbui/wizard-icons.png){{% /image_container %}}
 
 1. Click **Next Step** when ready.
-1. Select **Choose your splash screen**, if you already have an image you would like to use as a splash screen. Continue if you are fine with using the default image for now. The splash screen can be changed later:
+1. Select **Choose your splash screen** if you already have an image you would like to use as a splash screen, or just continue if you are satisfied using the default image. You can change the splash screen later if you wish:
 
    {{% image_container width="350" %}}![Wizard Splash screen](attachments/nbui/wizard-splashscreens.png){{% /image_container %}}
 
 1. Click **Next Step** when ready.
-1. Drag and drop your custom fonts, if you already have a selection of fonts you would like to use. Continue if no custom fonts should be used. Custom fonts can be added later:
+1. Drag and drop your custom fonts onto the field if you already have a selection of fonts you would like to use, or continue if you do not need to add custom fonts. You can add custom fonts later if you wish:
 
    {{% image_container width="350" %}}![Wizard Fonts](attachments/nbui/wizard-fonts.png){{% /image_container %}}
 

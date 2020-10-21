@@ -157,9 +157,9 @@ Click the name of an App Store component to be taken to the [DRAFT](share-app-st
 
 Click **Delete** to delete a draft.
 
-Click **Withdraw** to withdraw the content from the review process after you have [submitted it for approval](share-app-store-content#status) . This will return the content to the draft state.
+Click **Withdraw** to withdraw the content from the review process after you have [submitted it for approval](share-app-store-content#status), which will return the content to the draft state:
 
-{{% todo %}}[**Update screenshot to have Withdraw button**]{{% /todo %}}
+![](attachments/app-store-overview/draft-withdraw.png)
 
 ### 4.4 Shared with Me {#shared-with-me}
 

@@ -10,6 +10,13 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### October 22nd, 2020
+
+#### Mendix Cloud
+
+* We are in the process of migrating the alerting service to our internal infrastructure to improve maintainability. Your alerts will continue to operate in the same way after the migration.
+* As part of the migration the existing alert history will be deleted. The alerts history tab will only contain those alerts which have been triggered since the migration.
+
 ### October 21st, 2020
 
 #### Mendix for Private Cloud Portal

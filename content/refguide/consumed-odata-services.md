@@ -21,9 +21,11 @@ For details on the features that a published OData service must support and how 
 
 ## 2 OData Services and External Entities
 
-When you use an OData service to retrieve data from an external entity, the OData service is called and the data is returned.
+When an external entity is used in an app project, the associated dataset for the entity is retrieved through the information in the consumed OData service contract and returned. 
 
-When an external entity is used in an app project, the associated dataset for the entity is retrieved through the OData service and returned. These entities have some limitations compared to persistable entities:
+### 2.1 External Entities
+
+External entities have some limitations compared to persistable entities:
 
 * External entities are read-only
 * The aggregate functions (average, sum, maximum, minimum) cannot be used on external entities
@@ -31,9 +33,13 @@ When an external entity is used in an app project, the associated dataset for th
 * External entities cannot be used in datasets
 * [XPath constraints](/refguide/xpath-constraints) in the access rules of external entities cannot be set
 
-Associations between external entities appear in the domain model. You can only use associations where both sides are exposed.
+Associations between external entities (as defined in the originating app) will be shown in the domain model. You can only use the associations where both sides are exposed.
 
-You can create associations between [persistable entities](persistability#persistable) and external entities. For those associations, the persistable entities need to be the owner.
+You can create associations between local [persistable entities](persistability#persistable) and external entities. For those associations, the persistable entities need to be the owner.
+
+### 2.2 Consumed OData Service
+
+
 
 ## 3 Runtime Considerations
 

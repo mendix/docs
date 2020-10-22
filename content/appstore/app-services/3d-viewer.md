@@ -165,32 +165,31 @@ These are the widgets that have an operation panel that contains an interactive 
 | Section View   | Enables creating a section cut on the model and provides a section view from various angles. |
 | Markup Builder | Enables creating 2D markup on a model and saving the annotated screenshot. Snapshots that contain 2D markup will be saved along with the model in Mendix file storage. |
 
+Each panel widget should be placed in a **Container3D** widget. A **Viewer** widget with the right data source should also be in the same **Container3D** widget.
+
 The panel widgets can be used in the following ways:
 
-* **PS Tree** – place this in a **Container3D** widget; a **Viewer** widget with the right data source should also be in the same **Container3D** widget; on the **General** tab, the following options are available:
+* **PS Tree** – on the **General** tab, the following options are available:
 	* **Expand all** determines if the model's product structure tree should be fully expanded at the initial load
 	* Use **Show search** to toggle a search bar that enables the end-user to enter a part name and search for the part in the PS Tree
 	* **Show lead structure** determines if the sub-part data should be displayed in the PS Tree
-* **PS Tree Table** – Place it in a **Container3D** widget, a **Viewer** widget with right data source should also be in the same **Container3D** widget. Compared to **PS Tree**, **PS Tree Table** adds an additional configurable attribute for you, `Column`, it allows you to create new columns to form a tree  table view, it accepts a String with `,` to separate column names.
-* **PMI Tree** – Place it in a **Container3D** widget, a **Viewer** widget with right data source should also be in the same **Container3D** widget.
-* **Section View** – place it in a **Container3D** widget, a **Viewer** widget with right data source should also be in the same **Container3D** widget.
-* **Markup Builder** – place it in a **Container3D** widget, a **Viewer** widget with right data source should also be in the same **Container3D** widget.
+* **PS Tree Table** – compared to the **PS Tree** widget, this widget adds an additional configurable attribute with **Column**,w hich enables creating columns to form a tree table view; it accepts a string with `,` to separate column names
 
 #### 4.6.3 Toolbar widgets
 
-These are widgets that don't require additional configuration. Simply place them in **Container3D** widget with accompanying **Viewer** widget.
+These widgets do not require additional configuration. Simply place them in a **Container3D** widget with the accompanying **Viewer** widget.
 
-| Widget                           | Description                                                                                                                                                                                               |
-| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tool bar item camera mode        | Provides the ability to control the appearance of surface objects displayed in the view. The option determines whether surface objects are represented on the display by facet geometry or edge geometry. |
-| Tool bar item camera orientation | Allows you to view the model from different camera orientations.                                                                                                                                          |
-| Tool bar item explode slider     | Allows you to create an exploded view of your assembly.                                                                                                                                                   |
-| Tool bar item fit all            | Allows you to fit all the model parts in the viewer.                                                                                                                                                      |
-| Tool bar item render mode        | Allows you to toggle between different model render modes.                                                                                                                                                |
-| Tool bar item selection mode     | Provides the ability to select a model part, edge, face, and body.                                                                                                                                        |
-| Tool bar item snapshot           | Provides the ability to take snapshot of current viewer and save the snapshot to local machine                                                                                                            |
+| Widget | Description |
+| --- | --- |
+| Tool bar item camera mode | Provides the ability to control the appearance of surface objects displayed in the view. The option determines whether surface objects are represented on the display by facet geometry or edge geometry. |
+| Tool bar item camera orientation | Allows you to view the model from different camera orientations. |
+| Tool bar item explode slider | Allows you to create an exploded view of your assembly. |
+| Tool bar item fit all | Allows you to fit all the model parts in the viewer. |
+| Tool bar item render mode | Allows you to toggle between different model render modes. |
+| Tool bar item selection mode | Provides the ability to select a model part, edge, face, and body. |
+| Tool bar item snapshot | Provides the ability to take snapshot of current viewer and save the snapshot to local machine. |
 
-## 6 Using 3D Viewer  
+## 6 Using 3D Viewer
 
 3D Viewer mainly provides a set of widgets to visualize JT models and a set of nanoflows and Java Actions to bring in the data.
 

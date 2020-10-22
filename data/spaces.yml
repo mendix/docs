@@ -140,14 +140,13 @@ studio:
   menu_categories:
     - "General Info"
     - "Pages"
-    - "Domain Model"
+    - "Working With Data"
     - "Navigation Document"
     - "Microflows"
     - "Previewing & Publishing Your App"
     - "Checks"
     - "Theme Customizer"
-    - "Settings"
-    - "Working With Data"
+    - "Settings"    
     - "Collaboration"
 studio-how-to:
   space: "Studio 8 How-to's"

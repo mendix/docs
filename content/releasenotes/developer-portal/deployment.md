@@ -17,6 +17,12 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 * We are in the process of migrating the alerting service to our internal infrastructure to improve maintainability. Your alerts will continue to operate in the same way after the migration.
 * As part of the migration the existing alert history will be deleted. The alerts history tab will only contain those alerts which have been triggered since the migration.
 
+#### Mendix Cloud
+
+* We added the ability for the technical contact to download a list of [node permissions](/developerportal/deploy/node-permissions) as a CSV to assist with audits
+* We added information about the size of backup files.
+* We resolved an issue where [HTTP headers](https://docs.mendix.com/developerportal/deploy/environments-details#http-headers) were only returned for a successful request. You will have to redeploy your app to apply this fix. (Tickets 94915 and 107140)
+
 ### October 21st, 2020
 
 #### Mendix for Private Cloud Portal

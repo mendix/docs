@@ -34,6 +34,8 @@ If you want to restore a backup to a different cloud node, or have your backup s
 
 4. Confirm the backup restore by clicking **Restore Backup**.
 
+    ![](attachments/restore-a-backup/restore-backup.png)
+
 {{% alert type="info" %}}
 
 If the app is still running, you have to stop it by clicking **Stop Application**. Then click **Restore Backup** again.

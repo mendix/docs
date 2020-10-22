@@ -123,9 +123,10 @@ The placeholder text is shown when no text has been entered yet, or when a displ
 It can be used, for example, to give a hint to the end-user what kind of text should be entered.
 
 #### 2.6.7 Autocomplete
-The autocomplete property specifies if a text area should have autocomplete enabled. The autocomplete attribute also improves the phone ability to pre-populate fields with user-preferred values.
 
-{{% alert type="info" %}}This option is only available in Native pages.{{% /alert %}}
+The autocomplete property specifies if a text area should have autocomplete enabled. The autocomplete attribute also improves mobile devices' ability to pre-populate fields.
+
+{{% alert type="info" %}}This option is only available in native pages.{{% /alert %}}
 {{% alert type="info" %}}In Android when autocomplete is turned off it will remove support for new lines.{{% /alert %}}
 
 ### 2.8 Label Section{#label}

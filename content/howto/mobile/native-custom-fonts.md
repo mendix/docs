@@ -8,27 +8,27 @@ tags: ["mobile", "debug", "android", "ios", "native", "fonts"]
 
 ## 1 Introduction
 
-Good typography plays a major role in conveying your app's message in a way that is unique to your company's flair. Setting up the fonts you need is as simple as drag and dropping the required fonts and setting your app's style. 
+Good typography plays a major role in conveying your app's message while reinforcing your company's brand identity. Setting up the fonts you need is as simple as dragging and dropping the required fonts and setting your app's style. 
 
 ## 2 Introduction to Fonts in Mendix Native Apps
 
-When it comes to fonts several standards and types are extensively used in the industry. Most commonly, True type (.ttf), Open Type (.otf | .ttf) and Web Open Font Format (.woff). 
+When it comes to fonts files, several standards and types are common. True Type (*.ttf*), Open Type (*.otf* or *.ttf*), and Web Open Font Format (*.woff*) are the most common. 
 
-As this document focuses on Native Mobile platforms only, the later one can be safely ignored. 
+As this document focuses on native mobile platforms only, the later one can be safely ignored. 
 
 Open Type fonts support a variety of metadata as also the possibility to package multiple font varieties in a single file. This feature is not supported for mobile platforms. You should have each variety of the Font Family you would like to add as a separate file. 
 
-Android and iOS, both follow a different approach to fonts. Where Android requires an explicit declaration for each font added, iOS can derive the font type and font style dynamically. Of course, adding fonts to each platform requires a different approach. Where Android is expecting font files to exist in a specific folder, iOS requires the font files to be explicitly linked in its build process. 
+Android and iOS each take a different approach to fonts. Where Android requires an explicit declaration for each font added, iOS can derive the font type and font style dynamically. Adding fonts to each platform requires a different approach. Android expects font files to exist in a specific folder, while iOS requires the font files to be explicitly linked in its build process. 
 
-Furthermore, both platforms follow a different approach in how they resolve available fonts. While iOS fully supports Open Type fonts and can select fonts based on their metadata; Android requires explicit linking of the font file to the weight and style.
+Furthermore, both platforms resolve available fonts differently. While iOS fully supports Open Type fonts and can select fonts based on their metadata, Android requires explicit linking of the font file to the weight and style.
 
-React Native, the underlying framework of Mendix Native Apps attempts to unify the process of adding fonts. For example, fonts added under `assets/fonts` on android are explicitly linked in the project. These fonts are then exposed directly in the framework for styling your widgets using the common CSS properties we all know and love.
+React Native, the underlying framework of Mendix Native Apps, unifies the process of adding fonts. For example, fonts added under **assets/fonts** on Android are explicitly linked in the project. These fonts are then exposed directly in the framework for styling your widgets using the common CSS properties you use routinely.
 
-But there are limitations. In this case, Android has a very limited set of Font types supported. These are regular, bold, italic, and bold italic.
+There are limitations to mobile font capabilities. For example, Android supports a very limited set of font types: regular, bold, italic, and bold italic.
 
-What does that mean for the app's CSS styles? 
+What does that mean for your app's CSS styles? 
 
-For example, if we were to use the following snippet in our CSS like styles:
+For example, what would happen if you were to use the following snippet in your CSS styles:
 
 ```
 { 
@@ -36,17 +36,13 @@ For example, if we were to use the following snippet in our CSS like styles:
 }
 ```
 
-Our font, when running the app on Android, would end up looking regular instead of the semibold font we would expect. 
+Your font, when running app on Android, would end up looking regular instead of the semibold font you would expect. This is because Android would first look up the available font styles registered. Unable to resolve the weight, it would fall back to the next best option. The same applies to styles.
 
-That is because Android would first look up the available font styles registered. Unable to resolve the weight it would fall back to the next best option. The same applies to styles.
+In addition, Android expects the font filename to be a combination of the actual font family name, weight, and style. For example for Time New Roman bold italic, it expects something like *TimeNewRoman_bold_italic.ttf*. Failing to comply with these naming conventions makes the `fontFamily`, `fontWeight`, and `fontStyle` attributes fail to style text correctly.
 
-In addition, Android expects the font filename to be a combination of the actual font family name, the weight, and style. For example for Time New Roman bold italic, `TimeNewRoman_bold_italic.ttf`. Failing to comply leads in the `fontFamily`, `fontWeight` and `fontStyle` attributes to fail to style text correctly.
+So how can these issues be mitigated? First of all, explicitly styling text using the common CSS text attributes `fontWeight` and  `fontStyle` should be avoided. The results will vary per platform. Instead, use postscript names. Specifically, instead of a single `fontFamily` attribute with multiple weights and styles, a font family needs to be defined per weight and style combination.
 
-So how can that be mitigated? 
-First of all, explicitly styling of text using the common CSS text attributes `fontWeight`, `fontStyle` should be avoided. The results will vary per platform. 
-
-Instead, postscript names should be used. That means, instead of a single `fontFamily` attribute with multiple weights and styles, a font family needs to be defined per weight and style combination.
-Instead of: 
+For example, instead of writing this: 
 
 ```
 export const bold = {
@@ -55,7 +51,7 @@ export const bold = {
 }
 ```
 
-Define a constant: 
+Define a constant like this: 
 
 ```
 export const timesNewRomanFontFamily = {
@@ -66,7 +62,7 @@ export const timesNewRomanFontFamily = {
 };
 ```
 
-Then define the styles as follow: 
+Then define the styles as follows: 
 
 ```
 export const boldText = { 
@@ -74,7 +70,7 @@ export const boldText = {
 }
 ```
 
-Now wherever we use `boldText` we will certainly get the expected result on both platforms consistently.
+Now wherever you use `boldText`, you will get the expected result on both platforms consistently.
 
 ## 3 Add Custom Fonts With the Mendix Native Mobile Builder 
 

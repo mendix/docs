@@ -11,13 +11,9 @@ tags: ["studio pro"]
 This document describes the properties of an imported web service. If you want a general overview of imported web services, you can check the [Consumed Web Services](consumed-web-services) overview documentation.
 {{% /alert %}}
 
-![](attachments/16713734/16843949.png)
+## 2 WSDL Source
 
-## 2 General
-
-### 2.1 WSDL Source
-
-You can load the WSDL from an URL or from a WSDL file saved on your disk. After selecting an option and adding the required url or file location, press import to fetch the services/operations in this WSDL.
+You can load the WSDL from a URL or from a WSDL file saved on your disk.
 
 {{% alert type="warning" %}}
 
@@ -25,33 +21,29 @@ A dialog will ask for a username and password if you try to load a WSDL file fro
 
 {{% /alert %}}{{% alert type="warning" %}}
 
-A WSDL file can contain multiple services. A service can contain multiple ports. Upon loading a WSDL, a dialog will ask you to select a port for each service if a service contains multiple ports.
+A WSDL file can contain multiple services. A service can contain multiple ports. Upon loading a WSDL, a dialog will ask you to select a port for each service that contains multiple ports.
 
 {{% /alert %}}
 
-### 2.2 Services
+## 3 Services
 
 This part contains the services to be found in the WSDL.
 
-*   Name is the name of the service.
-*   Port is selected port in multiple-port service.
-*   Location is where the service is located.
-*   Location constant can be used to add additional locations for a service, for example: the URL of the soap service may change when moving from a development to a production environment. See also [Constants](constants).
+* **Name** shows the name of the service.
+* **Port** shows the selected port.
+* **Location** is where the service is located.
+* **Location constant** can be used to add additional locations for a service, for example because the URL of the SOAP service changes when moving from a development to a production environment. See also [Constants](constants).
 
-If there is a multiple-port service defined in the WSDL, a dialog will pop up that allows the user to select which one of the ports to use_._
+If there is a multiple-port service defined in the WSDL, a dialog will pop up that allows you to select which of the ports to use.
 
-### 2.3 Operations
+## 4 Operations
 
-This part contains all the operations found in the WSDL. You can expand the list and see additional information about individual operations in the right pane.
+This part shows all the operations found in the WSDL. You can expand the list and see additional information about individual operations in the right pane.
 
-### 2.4 Advanced Settings
+## 5 Advanced Settings
 
-*   Send binary data as attachment (MTOM) - enable or disable MTOM: the _Message Transmission Optimization Mechanism_, a method of efficiently sending binary data to and from Web services. Read more about it at [w3.org](https://www.w3.org/TR/soap12-mtom/). Please note that message optimization will only be applied when you use one or more export mappings to create the request body in the call web service action.
+Check **Send binary data as attachment (MTOM)** to enable MTOM (_Message Transmission Optimization Mechanism_), a method of efficiently sending binary data to and from Web services. Read more about it at [w3.org](https://www.w3.org/TR/soap12-mtom/). Note that message optimization will only be applied when you use one or more export mappings to create the request body in the call web service action.
 
-## 3 Documentation
+## 6 Calling consumed web services
 
-The documentation of the imported web service. Here you can describe the purpose of the web service.
-
-## 4 Calling consumed web services
-
-For details, refer to [Call Web Service](call-web-service-action).
+For details on how to call a consumed web service, see [Call Web Service](call-web-service-action).

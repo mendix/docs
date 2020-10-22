@@ -182,12 +182,12 @@ These widgets do not require additional configuration. Simply place them in a **
 | Widget | Description |
 | --- | --- |
 | Tool bar item camera mode | Provides the ability to control the appearance of surface objects displayed in the view. The option determines whether surface objects are represented on the display by facet geometry or edge geometry. |
-| Tool bar item camera orientation | Allows you to view the model from different camera orientations. |
-| Tool bar item explode slider | Allows you to create an exploded view of your assembly. |
-| Tool bar item fit all | Allows you to fit all the model parts in the viewer. |
-| Tool bar item render mode | Allows you to toggle between different model render modes. |
+| Tool bar item camera orientation | Enables viewing the model from different camera orientations. |
+| Tool bar item explode slider | Enables creating an exploded view of your assembly. |
+| Tool bar item fit all | Enables fitting all the model parts in the viewer. |
+| Tool bar item render mode | Enables toggling between different model render modes. |
 | Tool bar item selection mode | Provides the ability to select a model part, edge, face, and body. |
-| Tool bar item snapshot | Provides the ability to take snapshot of current viewer and save the snapshot to local machine. |
+| Tool bar item snapshot | Provides the ability to take a snapshot of the current Viewer and save the snapshot to the local machine. |
 
 ## 6 Using 3D Viewer
 
@@ -309,7 +309,7 @@ There might be some models that you do not want in the database, so you can dele
 Follow these steps to delete a model from the database:
 
 1. Use the **Viewer3D/USE_M3/DeleteModelFromMendix** microflow directly or copy it to one of your app modules.
-2.  **DeleteModelFromMendix** expects a ModelDocument(which represents a model stored in Mendix File Storage) as input parameter, after the successful execution, the model will be deleted from Mendix File Storage. From previous steps, you built a model list, each list item is a ModelDocument. For a model list item, add a **Delete** button:
+2.  **DeleteModelFromMendix** expects a ModelDocument (which represents a model stored in Mendix file storage) as an input parameter. After successful execution, the model will be deleted from Mendix file storage. In the previous steps a model list was built, each list item of which is a ModelDocument. For a model list item, add a **Delete** button:
 
 	![deletemodel-deletebutton](attachments/3d-viewer/deletemodel-deletebutton.jpg)
 
@@ -318,7 +318,7 @@ Follow these steps to delete a model from the database:
 	![deletemodel-nanoflow](attachments/3d-viewer/deletemodel-nanoflow.jpg)
 
 4. Set the **On click** event of the **Delete** button to the **DeleteModel** nanoflow.
-5. Run your app locally, you should be able to delete a model by clicking "Delete".
+5. Run your app locally. You should be able to delete a model by clicking **Delete**.
 
 Now you are able to get a list of models, select a list item to open a model, and delete the model.
 

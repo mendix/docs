@@ -7,7 +7,7 @@ tags: ["3d visualization", "3d viewer", "cad", "app store", "marketplace", "comp
 
 ## 1 Introduction
 
-The 3D Viewer for Teamcenter module lets you connect, search and fetch JT model from Teamcenter instance with the help of [Teamcenter Connector](https://appstore.home.mendix.com/link/app/111627/). It is an add-on module to [3D Viewer](3d-viewer) app service. It provides [nanoflows](/refguide/nanoflows) and [microflows](/refguide/microflows) that are easy to use.
+The 3D Viewer for Teamcenter module lets you connect, search, and fetch JT models from a Teamcenter instance with the help of the [Teamcenter Connector](https://appstore.home.mendix.com/link/app/111627/). This is an add-on module to the [3D Viewer](3d-viewer) app service that provides easy-to-use [nanoflows](/refguide/nanoflows) and [microflows](/refguide/microflows).
 
 ### 1.1 Typical Use Cases
 

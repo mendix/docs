@@ -33,8 +33,8 @@ On the **Curation bar**, the following details are displayed:
 
 * Information about the role of the current user: owner or curator
 * When a **service** is selected in the **Search Results**: 
-	* **Edit Metadata** – to edit the description of the service and entities, add tags or specify Business and Technical Owners
-	* **Discoverability** – you can set the discoverability of the service from the drop-down menu, which determines whether the service can be found (and consumed) by users of the Data Hub; if a service is set to **non-discoverable**, only the owners of the service (Business and Technical) can find the registered service
+	* **Edit Metadata** – edit the description of the service and entities, add tags or specify Business and Technical Owners
+	* **Discoverable/Validated** – set the service as **Discoverable** and **Validate** from the drop-down menu. **Discoverable** determines whether the service can be found (and consumed) by users of the Data Hub; if a service is set to **non-discoverable**, only the owners of the service (Business and Technical) can find the registered service. **Validate** indicates that the service and data set have been checked.
 * When an **entity** is selected in the **Search Results**, **Edit Entity Details** – to edit entity and attribute descriptions 
 
 ## 3 Setting the Discoverability of a Service{#discoverability}

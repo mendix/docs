@@ -95,7 +95,7 @@ To add content to the App Store, follow these steps:
 	
 4.  Select the location where you want to publish your component:
 
-	* **Public Marketplace (all Mendix users)** – your component will be available to the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
+	* <a name="public-app-store"></a>**Public Marketplace (all Mendix users)** – your component will be available to the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
 	* <a name="private-app-store"></a>**Private Marketplace (your company only)** – your content will receive the **Company only** label and be available only via your [Company's App Store](app-store-overview#company-content); selected private content of a user group can also be made available to [user group guests](app-store-overview#guests) for download; this content will not be reviewed by Mendix
 	
 	![](attachments/share-app-store-content/public-private.jpg)
@@ -172,6 +172,10 @@ To add content to the App Store, follow these steps:
 	![](attachments/share-app-store-content/publish.jpg)
 
 After you click **Publish Content**, your draft will be reviewed by Mendix within approximately 5 working days before it is visible in the App Store.
+
+{{% alert type="info" %}}
+Review and approval by Mendix is required only for the first version of [Public Marketplace](public-app-store) content. Subsequent versions of public content do not need review or approval by Mendix. [Private Marketplace](private-app-store) content does not require any review or approval.
+{{% /alert %}}
 
 ## 5 Updating Existing App Store Content {#updating}
 

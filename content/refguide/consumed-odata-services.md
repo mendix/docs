@@ -43,13 +43,13 @@ When an external entity is dragged into the domain model, the  **Consumed Odata*
 
 In the **Data Hub** pane the service and the entity will be shown as consumed both in the search results pane and also in the **Project** panels. 
 
-If the metadata contract at the specified service endpoint is different to the values in the current project model, this will be indicated in the **Data Hub** pane search results and  **Properties** pane with a blue **Update** arrow, respectively: 
+If the metadata contract at the specified service endpoint is different to the contract in the current project model, this will be indicated in the **Data Hub** pane search results and  **Properties** pane for the service with a blue **Update** arrow: 
 
 ![Data Hub Pane update](attachments/data-hub-pane/data-hub-pane-update.png)
 
 ![update service project-pane](attachments/consumed-odata-service/project-pane-update-available.png)
 
-This also means that the consumed service will have to be **Updated** to the new contract. Changes in consumed OData service contracts is further described in [Updating or Switching a consumed OData Service](consumed-odata-service-requirements#updating).
+This means that the consumed service will have to be **Updated** to the new contract. If this is not done, then this will result in errors when data has to be retrieved from the endpoint based on an outdated contract. Changes in consumed OData service contracts is further described in [Updating or Switching a Consumed OData Service](consumed-odata-service-requirements#updating).
 
 ## 3 Runtime Considerations
 

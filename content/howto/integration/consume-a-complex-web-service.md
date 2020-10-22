@@ -77,18 +77,18 @@ An alternative to using the wizard described above is to import a web service do
 To import a web service directly, follow these steps:
 
 1. Right-click a module and select **Add Other** > **Consumed web service**.
-
 2. Add a name for the new consumed web service.
+3.  In the **Consumed Web Service** wizard, on the **General** tab, enter the WSDL to be used for this imported web service. You can use a **URL** or load a **File** from your computer.
 
-3.  In the **Consumed Web Service** screen, click **Edit...**. Enter the WSDL to be used for this consumed web service. You can use a **URL** or load a **File** from your computer.
+    ![](attachments/consume-complex/18581780.png)
 
-    ![](attachments/consume-complex/enter-wsdl-url.png)
 
-3. Click **Import** to fetch the services and operations in the WSDL. If prompted, select ports, and click **OK** to close the **WSDL Source** dialog.
-
+3. Click **Import** to fetch the services and operations in the WSDL.
 4. Review the **Services** and **Operations** available to the imported web service:
 
     ![](attachments/consume-complex/18581779.png)
+
+You can also describe the design purpose of the web service on the **Documentation** tab.
 
 ## 4 Configuring the Web Service Call
 

@@ -10,7 +10,7 @@ tags: ["mobile", "debug", "android", "ios", "native", "fonts"]
 
 Good typography plays a major role in conveying your app's message while reinforcing your company's brand identity. Setting up the fonts you need is as simple as dragging and dropping the required fonts and setting your app's style. 
 
-## 2 Introduction to Fonts in Mendix Native Apps
+### 1.2 Introduction to Fonts in Mendix Native Apps
 
 When it comes to fonts files, several standards and types are common. True Type (*.ttf*), Open Type (*.otf* or *.ttf*), and Web Open Font Format (*.woff*) are the most common. 
 
@@ -72,7 +72,22 @@ export const boldText = {
 
 Now wherever you use `boldText`, you will get the expected result on both platforms consistently.
 
-## 3 Add Custom Fonts With the Mendix Native Mobile Builder 
+## 2 Prerequisites
+
+Before starting this how-to, make sure you have completed the following prerequisites:
+
+Before adding fonts [using the Mendix Native Mobile Builder](#fonts-nbui):
+
+* Run through the Native Mobile Builder's wizard at least once
+
+Before [adding fonts manually](#manual):
+
+* Understand the native mobile [local build process](/howto/mobile/native-build-locally)
+* Locally check out your repository 
+* Understand git and have a git tool installed
+* Have XCode installed for the iOS sections below
+
+## 3 Add Custom Fonts With the Mendix Native Mobile Builder {#fonts-nbui}
 
 The Mendix Native Mobile Builder simplifies adding custom fonts to your project. It configures both Android and iOS projects and also provides the snippets needed to simply copy and paste in your Mendix project's native styles. To add custom fonts to your project, follow these steps: 
 
@@ -114,7 +129,7 @@ To use the new fonts to style your content, follow these instructions:
 
      {{% image_container width="350" %}}![Custom style](/attachments/nbui/custom-style.png){{% /image_container %}}
 
-## 5 Add Custom Fonts Manually
+## 5 Add Custom Fonts Manually {#manual}
 
 While Mendix Native Mobile Builder simplifies things tremendously, you might find yourself in a situation where using the tool might not be possible.
 

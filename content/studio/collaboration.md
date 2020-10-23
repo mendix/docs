@@ -11,7 +11,7 @@ Collaboration is an important element of Mendix Studio experience. Studio and St
 
 Or, the Studio users can ask their Studio Pro colleagues to extend the app with a more technically complex functionality. 
 
-To provide such collaboration, the changes to your app model will be shared and synchronized automatically. This process is called collaborative development. For more information, see [Collaborative Development in Studio](collaborative-development).
+To provide such collaboration, the changes to your app model will be shared and synchronized automatically with team members using Mendix Studio and/or Mendix Studio Pro. This process is called collaborative development. For more information, see [Collaborative Development in Studio](collaborative-development).
 
 You can also collaborate with your team members while creating the app and leave comments, for example, on a specific page or a microflow, in the **Buzz** pane. For more information, see [Buzz](collaboration-buzz).  
 

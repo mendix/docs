@@ -103,7 +103,7 @@ The following settings are available:
 	* **URL** – click **Edit** to specify the URL for the metadata
 	* **File** – click **Browse** to select an XML metadata file
 
-When downloading the metadata from a URL, the server may request a username and password (basic authentication). In that case, a dialog appears that asks you to enter your username and password. If the metadata file refers to other metadata files on the same server within the same realm, the username and password are reused. This information is not stored, so if you were to download metadata from that server again, you would need to enter your username and password again.
+When downloading the metadata from a URL, the server may request a username and password (basic authentication). In that case, a dialog appears that asks you to enter your username and password. If the metadata file refers to other metadata files on the same server within the same realm, the username and password are reused. This information is not stored, so if you were to download metadata from that server again, you would need to enter your username and password again. Support for basic authentication was added in version [8.16.0](/releasenotes/studio-pro/8.16).
 
 When you import the metadata, you can add external entities from the consumed OData service in the [Data Hub Pane](data-hub-pane).
 

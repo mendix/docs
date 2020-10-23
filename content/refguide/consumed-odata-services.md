@@ -21,7 +21,9 @@ For details on the features that a published OData service must support and how 
 
 ## 2 OData Services and External Entities
 
-When you use an OData service to retrieve data from an external entity, the OData service is called and the data is returned.
+When an external entity is used in an app project, the associated dataset for the entity is retrieved through the information in the consumed OData service contract and returned. 
+
+### 2.1 External Entities
 
 When an external entity is used in an app project, the associated dataset for the entity is retrieved through the OData service and returned. These entities have some limitations compared to persistable entities:
 
@@ -31,9 +33,23 @@ When an external entity is used in an app project, the associated dataset for th
 * External entities cannot be used in datasets
 * [XPath constraints](/refguide/xpath-constraints) in the access rules of external entities cannot be set
 
-Associations between external entities appear in the domain model. You can only use associations where both sides are exposed.
+Associations between external entities (as defined in the originating app) will be shown in the domain model. You can only use the associations where both sides are exposed.
 
-You can create associations between [persistable entities](persistability#persistable) and external entities. For those associations, the persistable entities need to be the owner.
+You can create associations between local [persistable entities](persistability#persistable) and external entities. For those associations, the persistable entities need to be the owner.
+
+### 2.2 Consumed OData Service
+
+When an external entity is dragged into the domain model, the  **Consumed Odata** document that is added to the model will display the values of the metadata contract from the service endpoint.
+
+In the **Data Hub** pane the service and the entity will be shown as consumed both in the search results pane and also in the **Project** panels. 
+
+If the metadata contract at the specified service endpoint is different to the contract in the current project model, this will be indicated in the **Data Hub** pane search results and  **Properties** pane for the service with a blue **Update** arrow: 
+
+![Data Hub Pane update](attachments/data-hub-pane/data-hub-pane-update.png)
+
+![update service project-pane](attachments/consumed-odata-service/project-pane-update-available.png)
+
+This means that the consumed service will have to be **Updated** to the new contract. If this is not done, then this will result in errors when data has to be retrieved from the endpoint based on an outdated contract. Changes in consumed OData service contracts is further described in [Updating or Switching a Consumed OData Service](consumed-odata-service-requirements#updating).
 
 ## 3 Runtime Considerations
 

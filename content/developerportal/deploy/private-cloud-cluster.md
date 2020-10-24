@@ -8,8 +8,6 @@ tags: ["Create", "Private Cloud", "Cluster", "Namespace"]
 
 ## 1 Introduction
 
-{{% todo %}}[Test Effect of GitHub Branch Protection Rule on Travis build of Development - now set to new .com PR setting]{{% /todo %}}
-
 To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to create a cluster and add at least one namespace in the Mendix Developer Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Gateway Agent** in your OpenShift context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
 
 ![](attachments/private-cloud-cluster/mx4pc-architecture.png)

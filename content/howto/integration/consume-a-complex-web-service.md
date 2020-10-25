@@ -12,6 +12,7 @@ This how-to explains how to consume a (third-party) web service with which you c
 **This how-to will teach you how to do the following:**
 
 * Import a web service using the **Import Web Service** wizard
+* Directly import a web service document into your project
 * Configure a web service call
 
 ## 2 Importing a Web Service Using the Wizard
@@ -53,7 +54,7 @@ To import a web service using the wizard, follow these steps:
 
     ![](attachments/consume-complex/18581783.png)
 
-9. In the final step in this wizard you can select icons that will be attached to the generated entities and create a microflow in which the imported web service is called: 
+9. In the final step of this wizard you can select icons that will be attached to the generated entities and create a microflow in which the imported web service is called: 
 
     ![](attachments/consume-complex/18581782.png)
 
@@ -71,7 +72,7 @@ When finished the wizard will add the following to your model based on the optio
 
 ## 3 Importing a Web Service Directly
 
-An alternative to using the wizard described above is to import a web service document directly into your project. For more information, see [Consumed Web Services](/refguide/consumed-web-services) in the *Studio Pro Guide*.
+An alternative to using the wizard described above is to import a web service document directly into your project. For further information, see [Consumed Web Services](/refguide/consumed-web-services) in the *Studio Pro Guide*.
 
 To import a web service directly, follow these steps:
 
@@ -81,7 +82,7 @@ To import a web service directly, follow these steps:
 
     ![](attachments/consume-complex/enter-wsdl-url.png)
 
-3. Click **Import** to fetch the services and operations in the WSDL. If prompted, in the the **WSDL Source** dialog box, select the ports you want to use and click **OK**.
+3. Click **Import** to fetch the services and operations in the WSDL. If prompted, in the **WSDL Source** dialog box, select the ports you want to use and click **OK**.
 
 4. In the **Consumed Web Services** box, review the **Services** and **Operations** available to the imported web service. If you click on any of the **Operations**, information about the operation will be displayed in the right pane. You can select individual web service operations from the list otherwise the whole service and operation will be imported:
 
@@ -98,7 +99,7 @@ To configure the web service call, follow these steps:
 
     {{% alert type="info" %}}Make sure the microflow either creates the variables required as arguments for the web service call or has them passed to it.{{% /alert %}}
 
-2. If you are creating your own microflow, add the call web service activity to the microflow. For details on how to add activities to microflows, see [Activities](/refguide/activities) in the *Studio Pro Guide*.
+2. If you are creating your own microflow, add the call web service activity to the microflow. For details on how to add activities to a microflow, see [Activities](/refguide/activities) in the *Studio Pro Guide*.
 3. Double-click the activity to open the **Call Web Service** properties editor and in the **Operation** section, click **Select** for **Operation**.
 4. In the **Select Web Service Operation** dialog box, you can select the operation for this web service call:
 
@@ -114,16 +115,16 @@ To configure the web service call, follow these steps:
 
         ![](attachments/consume-complex/18581792.png)
 
-6. In the **HTTP Headers** tab, enter authentication information using the **Edit** button if the Mendix Runtime should use this before calling the web service:
+6. In the **HTTP Headers** tab, if the Mendix Runtime should HTTP authentication before calling the web service, check **Use HTTP authentication** and enter the **User name** and **Password** using the **Edit** buttons:
 
     ![](attachments/consume-complex/18581793.png)
 
 7. In the **SOAP Response** tab, you can configure the handling of the return from the web service call as follows:
-    * If the return is a complex XML structure, select the **Mapping** and use an XML-to-domain mapping to map the XML elements to the domain model entities:
+    * If the return is a complex XML structure, select **Mapping** and use an XML-to-domain mapping to map the XML elements to the domain model entities:
 
         ![](attachments/consume-complex/18581790.png)
 
-    * If the return is a primitive, you can store it in a variable that you can specify in the **Store in variable** field:
+    * If the return is a primitive, you can store it in a variable by selecting **Store in variable** — **Yes**  and provide the **Type** and **Variable**:
 
         ![](attachments/consume-complex/18581789.png)
         

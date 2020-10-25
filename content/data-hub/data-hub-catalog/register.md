@@ -56,6 +56,11 @@ Currently only [persistable](/refguide/persistability) entities can be exposed f
 
 When selecting the entities to expose in a service, consider including associated entities so that the relationship between the data is also registered.
 
+{{% alert type="warning" %}}
+
+When exposing Mendix entities that are generalizations and specializations in the same service the specialized entities will be defined in the published OData servcie as discrete entities which include the inherited attributes and associations. The inheritance relationship will not be present in the metadata contract, and also not when the entities are consumed in Mendix Studio Pro. Care has to be taken if the generailsed entity (and its associations) is also exposed in the same service as the specializations. The same association cannot be exposed for two different entities.
+{{% /alert %}}
+
 ## 3 Publishing an OData Service in Studio Pro to Register Entities {#odata-service-reg}
 
 This section describes how to register entities from your Mendix app in the Data Hub Catalog in Studio Pro. For details on publishing an OData resource, see [Published OData Resource](/refguide/published-odata-resource) in the *Studio Pro Guide*.
@@ -73,6 +78,7 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 	![](attachments/register/select-published-odata-service.png)
 
 3. Enter a meaningful name that indicates the entities and data that are going to be exposed for the published OData service and click **OK**.
+
 4.  The OData service document is added to the module, and the **Edit published resource** dialog box is displayed for the selected entity. The information in this will form the metadata definition for the entity:
 
 	![](attachments/register/edit-published-resource-box.png)
@@ -90,17 +96,21 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 	For further details, see [Published OData Resource](https://docs.mendix.com/refguide/published-odata-resource) in the *Studio Pro Guide*. 
 
 5. Click **OK** to see the [OData Service](#odata-service-general) page. If you want to publish several entities in the same service, add them here by clicking **Add** for the **Resources**.
-6.  If you add an entity that is associated with another entity that is exposed in the same OData service, you will be asked whether you want to include the association in the service definition. Click **Yes** and the association between the two entities will be included under **Attributes and associations**.
 
-	In the example illustrated below, you will see that for **Entity_2** under **Attributes and associations** there is currently **0 association**. 
+6. If you add an entity that is associated with another entity that is exposed in the same OData service, you will be asked whether you want to include the association in the service definition. Click **Yes** and the association between the two entities will be included under **Attributes and associations**.
 
-	When **Entity_3** is added to the service which has an association to **Entity_2**, you will see that **Entity_3** has listed that it has **1 association** and there is a further prompt **Would you like to publish the other side of this association as well** with the name of the association showing the entities being connected.
+   In the example illustrated below, you will see that for **Entity_2** under **Attributes and associations** there is currently **0 association**. 
 
-	![](attachments/register/publish-association.png)
-	
-	Click **Yes** and the association for **Entity-2** is now updated to **1 association**:
+   When **Entity_3** is added to the service which has an association to **Entity_2**, you will see that **Entity_3** has listed that it has **1 association** and there is a further prompt **Would you like to publish the other side of this association as well** with the name of the association showing the entities being connected.
 
-	![](attachments/register/publish-association-2.png)
+   ![](attachments/register/publish-association.png)
+
+   Click **Yes** and the association for **Entity-2** is now updated to **1 association**:
+
+   ![](attachments/register/publish-association-2.png)
+
+   {{% alert type="warning" %}}When a specialized entity is published, in the published OData Service contract this will be a discrete entity that has all the attributes and associations of the gernailzation. Care has to be taken if the generailsed entity (and its association) is also exposed in the same service. In this case,  the association in the specialized entity that is (inherited from the generalization) should not be published as this will result in errors. The same association cannot be exposed for two different entities in the same service. In this case, it is recommended that the inhertited association is not checked in the specialized entity.
+   {{% /alert %}}
 
 7.  Add a **Summary** and **Description** of the service In the **Properties** pane: 
 

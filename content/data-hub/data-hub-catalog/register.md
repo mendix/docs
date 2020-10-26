@@ -56,9 +56,10 @@ Currently only [persistable](/refguide/persistability) entities can be exposed f
 
 When selecting the entities to expose in a service, consider including associated entities so that the relationship between the data is also registered.
 
-{{% alert type="warning" %}}
+When exposing Mendix entities that are generalizations and specializations in the same service the specialized entities will be defined in the published OData servcie as discrete entities which include the inherited attributes and associations. The inheritance relationship will not be present in the metadata contract, and also not when the entities are consumed in Mendix Studio Pro.
 
-When exposing Mendix entities that are generalizations and specializations in the same service the specialized entities will be defined in the published OData servcie as discrete entities which include the inherited attributes and associations. The inheritance relationship will not be present in the metadata contract, and also not when the entities are consumed in Mendix Studio Pro. Care has to be taken if the generailsed entity (and its associations) is also exposed in the same service as the specializations. The same association cannot be exposed for two different entities.
+{{% alert type="warning" %}}
+The association of a generailsed entity that is exposed in the same service as the specializations is not supported for both entities when consumed. The same association cannot be consumed for the two different entities. In this case, the inherited association should not be included when exposing the specialization.
 {{% /alert %}}
 
 ## 3 Publishing an OData Service in Studio Pro to Register Entities {#odata-service-reg}

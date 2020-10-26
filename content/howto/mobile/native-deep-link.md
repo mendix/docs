@@ -29,12 +29,35 @@ Please note that the Make It Native app has already the registered schema `makei
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Complete the [Prerequisites](/howto/mobile/deploying-native-app#prerequisites) section of *How to Deploy Your First Mendix Native Mobile App*
-* Install git [command line](https://git-scm.com/downloads) tool
 * Make sure your [Native Mobile Resources](/appstore/modules/native-mobile-resources) module is up to date
+* Install git [command line](https://git-scm.com/downloads) tool for working with the Native Mobile App Builder CLI
+* Installed at least version `8.15.0` of Studio Pro in order to use the Native Mobile App Builder
 
 ## 3. Setting up App Deep Linking {#set-up}
 
 If you do not already have a native template for your app, you can create one:
+
+### 3.1 Using the Native Mobile App Builder
+
+1. Set up a native template with the **Native Mobile App Builder**. This can be launched from the Project menu as shown in [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app). Walk through the wizard and configure the project's details and tokens.
+
+    ![launch native mobile builder](attachments/native-deep-link/launch-native-mobile-app-builder.png)
+
+2. Once done with the wizard, next step is to enable the deep linking capability.
+
+    Select the **Capabilities** menu item.
+    ![capability menu option](attachments/native-deep-link/capability-menu-option.png)
+    
+    Enter the `schema` name without the appending `://`.
+    ![deep link input field](attachments/native-deep-link/deep-link-input-field.png)
+    
+3. Click on the **Save** button. Navigate to the build page and then, **Build**.
+
+{{% alert type="info" %}}
+When running locally from source, on iOS you have to run `pod install` once more
+{{% /alert %}}
+
+### 3.2 Using the Native Mobile App Builder CLI
 
 1. Create a shell app with Native Builder using the `prepare` command as shown in [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app). When you do this, replace the parameters in this example command with your own project's parameters, local paths, and tokens:
 
@@ -54,7 +77,7 @@ If you do not already have a native template for your app, you can create one:
     git clone https://github.com/your-account/native-deeplink-app
     ```
 
-### 3.1 For Android Apps {#for-android}
+#### 3.2.1 For Android Apps {#for-android}
 
 The manifest file registers the schema and host on your Android device that will be associated with your Mendix app. Put simply, the manifest file controls the permissions, `activity` code, and more. So to enable deep linking, you will need to configure your *AndroidManifest.xml* file:
 
@@ -74,7 +97,7 @@ The manifest file registers the schema and host on your Android device that will
     
     For more information on linking in Android, see this [Android documentation](https://developer.android.com/training/app-links/deep-linking#adding-filters).
 
-### 3.2 For iOS Apps
+#### 3.2.2 For iOS Apps
 
 The *info.plist* file registers the schema and host so that they will be associated with your app in iOS. This *plist* file controls permissions, app information, and more. So to enable deep linking, you will need to configure your *info.plist* file:
 
@@ -113,7 +136,7 @@ The *info.plist* file registers the schema and host so that they will be associa
    
 	This method will register the opened URL so it can be used in the **Native Deep Link** nanoflow actions. 
 
-### 3.3 Rebuilding Your Native Mobile App
+#### 3.2.3 Rebuilding Your Native Mobile App
 
 When running locally from source you have to launch your app again:
 

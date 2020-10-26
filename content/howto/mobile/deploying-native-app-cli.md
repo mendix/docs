@@ -180,11 +180,11 @@ The next steps differ depending on the type of app you want to configure.
 
 1.  Click the **Wrench icon** in the top-right corner to open the **Build configuration** panel:
 
-	![Build Wrench](attachments/deploying-native-app/ios-build-wrench.png)
+	{{% image_container width="400" %}}!![Build Wrench](attachments/deploying-native-app/ios-build-wrench.png){{% /image_container %}}
 
 2.  Switch the **Sign builds** toggle on:
 
-	![iOS sign upload](attachments/deploying-native-app/ios-sign-upload.png)
+	{{% image_container width="400" %}}!![iOS sign upload](attachments/deploying-native-app/ios-sign-upload.png){{% /image_container %}}
 
 3. Upload your mobile provisioning profile. A **Distribution** profile is best, as App Center has a 30 minute limit for free accounts signing with a **Developer** profile.
 4. Upload your *.p12* certificate.
@@ -309,31 +309,31 @@ In order to deploy the *nativeTemplate.xcarchive* on a device or on the App Stor
 
 2.  Click the *Distribute App* button to start the local signing flow.:
 
-	![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-1.png)
+	{{% image_container width="400" %}}!![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-1.png){{% /image_container %}}
 
 3.  Select **Development**:
 
-	![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-2.png)
+	{{% image_container width="400" %}}!![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-2.png){{% /image_container %}}
 
 4. Choose a **Development Team**:
 
-	![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-3.png)
+	{{% image_container width="400" %}}!![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-3.png){{% /image_container %}}
 
 5. Configure your **Development distribution options**:
 
-	![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-4.png)
+	{{% image_container width="400" %}}!![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-4.png){{% /image_container %}}
 
 6. Select a re-signing option:
 
-	![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-5.png)
+	{{% image_container width="400" %}}!![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-5.png){{% /image_container %}}
 
 7. Review your *.ipa* content and click **Export**:
 
-	![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-6.png)
+	{{% image_container width="400" %}}!![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-6.png){{% /image_container %}}
 
 8. Congratulations. You now have a signed *.ipa* file:
 
-	![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-7.png)
+	{{% image_container width="400" %}}!![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-7.png){{% /image_container %}}
 
 #### 6.2.2 Installing on a Device
 
@@ -343,7 +343,7 @@ To install the *ipa* on your device, follow these steps:
 
 1.  Connect your Apple device to your computer. Both will show dialog boxes which ask you to confirm that you trust the devices. Tap **Continue** on your device, and **Trust This Computer?** on your mobile device to proceed:
 
-	![trust dialog](attachments/deploying-native-app/appletrust.png)
+	{{% image_container width="400" %}}!![trust dialog](attachments/deploying-native-app/appletrust.png){{% /image_container %}}
 
 2. Open iTunes and connect your iOS device to your computer.
 3. Select the *.ipa* package file that you downloaded earlier, and drag it onto your device's **Devices** section on iTunes' left menu. Drop the *.ipa* file there to install it on your device.
@@ -381,11 +381,11 @@ First, navigate to your project's repository. This should be `www.github.com/<yo
 
 1. Using the **Find file** functionality, find and open *project.pbxproj*:
 
-	![find file toolbar](attachments/deploying-native-app/github-find-file.png)
+	{{% image_container width="400" %}}!![find file toolbar](attachments/deploying-native-app/github-find-file.png){{% /image_container %}}
 
 1.  Click the edit icon:
 
-	![find file toolbar](attachments/deploying-native-app/github-edit-file.png)
+	{{% image_container width="400" %}}!![find file toolbar](attachments/deploying-native-app/github-edit-file.png){{% /image_container %}}
 
 1. Change both instances of `TARGET_DEVICE_FAMILY = “1”;` to `TARGET_DEVICE_FAMILY = “1,2";`.
 1.  Commit these changes.
@@ -427,14 +427,14 @@ To upload your app to the iOS App Store, follow these instructions (to continue,
 1. Follow Apple's [Add an app to your account](https://help.apple.com/app-store-connect/#/dev2cd126805) tutorial to add an app entry to your account.
 2.  After adding a new app to your account, follow Apple's [View and edit app information](https://help.apple.com/app-store-connect/#/dev97865727c) tutorial to describe your new app entry. Consult the other pages under the left menu's **Enter app information** category should they apply to your app:
 
-	![enter app information](attachments/deploying-native-app/ios-enter-app-info.png)
+	{{% image_container width="400" %}}!![enter app information](attachments/deploying-native-app/ios-enter-app-info.png){{% /image_container %}}
 
 3. Follow Apple's [Uploading builds overview](https://help.apple.com/app-store-connect/#/dev82a6a9d79) to upload a build of your app to App Store Connect.
 4. Use Apple's [Upload tools guide](https://help.apple.com/app-store-connect/#/devb1c185036) to upload your *ipa*.
 5. Use Apple's [Choose the build before you submit to review](https://help.apple.com/app-store-connect/#/dev7cbda8c55) to select the build which you will submit to App Review.
 6.  Publish your app by following Apple's [Overview of publishing an app](https://help.apple.com/app-store-connect/#/dev34e9bbb5a) and the subsequent documents in the left menu's **Publish on the App Store** category:
 
-	![publish on the app store](attachments/deploying-native-app/ios-publishing-an-app.png)
+	{{% image_container width="400" %}}!![publish on the app store](attachments/deploying-native-app/ios-publishing-an-app.png){{% /image_container %}}
 
 ## 7 Read More
 

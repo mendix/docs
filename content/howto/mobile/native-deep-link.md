@@ -31,27 +31,31 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Complete the [Prerequisites](/howto/mobile/deploying-native-app#prerequisites) section of *How to Deploy Your First Mendix Native Mobile App*
 * Make sure your [Native Mobile Resources](/appstore/modules/native-mobile-resources) module is up to date
 * Install git [command line](https://git-scm.com/downloads) tool for working with the Native Mobile App Builder CLI
-* Installed at least version `8.15.0` of Studio Pro in order to use the Native Mobile App Builder
+* Install Mendix Studio Pro v 8.15.0 or above in order to use the Native Mobile App Builder
 
 ## 3. Setting up App Deep Linking {#set-up}
 
-If you do not already have a native template for your app, you can create one:
+If you do not already have a native template for your app, you can create one by following the sections below.
 
 ### 3.1 Using the Native Mobile App Builder
 
-1. Set up a native template with the **Native Mobile App Builder**. This can be launched from the Project menu as shown in [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app). Walk through the wizard and configure the project's details and tokens.
+Set up a native template with the **Native Mobile App Builder** by following these instructions:
+
+1.  Launch the Native Mobile App Builder from the **Project** menu. Walk through the wizard and configure the project's details and tokens (for more information, see [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app)):
 
     ![launch native mobile builder](attachments/native-deep-link/launch-native-mobile-app-builder.png)
 
-2. Once done with the wizard, next step is to enable the deep linking capability.
+2.  Once done with the wizard you will enable deep linking capabilities. First, select the **Capabilities** menu item:
 
-    Select the **Capabilities** menu item.
     ![capability menu option](attachments/native-deep-link/capability-menu-option.png)
     
-    Enter the `schema` name without the appending `://`.
+3.  Enter the `schema` name without the appending `://`:
+
     ![deep link input field](attachments/native-deep-link/deep-link-input-field.png)
     
-3. Click on the **Save** button. Navigate to the build page and then, **Build**.
+4. Click the **Save** button. 
+
+5. Navigate to the build page and click **Build**.
 
 {{% alert type="info" %}}
 When running locally from source, on iOS you have to run `pod install` once more

@@ -10,6 +10,12 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### October 28th, 2020
+
+#### Mendix Cloud & Buildpack
+
+* We resolved an issue where [HTTP headers](https://docs.mendix.com/developerportal/deploy/environments-details#http-headers) were only returned for a successful request. You will have to redeploy your app to apply this fix. (Tickets 94915 and 107140)
+
 ### October 22nd, 2020
 
 #### Mendix Cloud

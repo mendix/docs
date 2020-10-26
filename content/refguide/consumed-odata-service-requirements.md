@@ -71,7 +71,7 @@ The consumed OData service does not support importing generalizations and specia
 
 This means that when you are consuming a Mendix OData endpoint, it is not necessary to consume both a generalization and its specialization. The specialization will now be an entity with all the attributes and associations of the generalization.
 
-Associations to the gereralizations with other exposed entities in the published OData service will be included for the now discrete "specialized" entities.
+Associations to the generalizations with other exposed entities in the published OData service will be included for the now discrete "specialized" entities.
 
 {{% alert type="warning" %}}
 When a generalization and a specialized entity are exposed in the same service. Only the association for the generalization will be visible when both entities are consumed. The now discrete specialization will have the inherited association. A possible work-around for this is to publish a service with the specializations without the generalization. Alternatively, the association for the generalization should not be published, allowing for the inherited association in the specialization to be preserved.

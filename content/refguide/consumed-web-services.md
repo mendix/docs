@@ -80,5 +80,6 @@ Mendix supports consuming web service data according to the following protocols:
 *   WS-Policy v1.5
 *   WS-PolicyAttachment 1.5
 *   WS-ReliableMessaging 1.1
+*   WS-Addressing 1.0 (since Mendix 8.16)
 
 To connect to a Microsoft .NET web service, you have to configure your web service to use basicHttpBinding (SOAP 1.1) or wsHttpBinding (SOAP 1.2). For a secure connection, you have to configure SSL and to set the security mode to 'Transport' with clientCredentialType 'Basic' in the file 'web.config'. The user credentials can be configured in Studio Pro as [described here](call-web-service-action) (see 'Use HTTP authentication').

@@ -49,7 +49,7 @@ If the metadata contract at the specified service endpoint is different to the c
 
 ![update service project-pane](attachments/consumed-odata-service/project-pane-update-available.png)
 
-This means that the consumed service will have to be **Updated** to the new contract. If this is not done, then this will result in errors when data has to be retrieved from the endpoint based on an outdated contract. Changes in consumed OData service contracts is further described in [Updating or Switching a Consumed OData Service](consumed-odata-service-requirements#updating).
+This means that the consumed service will have to be **Updated** to the new contract. If this is not done, then this will result in errors when data has to be retrieved from the endpoint based on an outdated contract. Changes in consumed OData service contracts is further described in [Updating or Switching a Consumed OData Service](consumed-odata-service#updating).
 
 ## 3 Runtime Considerations
 

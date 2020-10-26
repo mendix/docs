@@ -17,8 +17,10 @@ From the [Data Hub](https://hub.mendix.com) screen, you can carry out the major 
 ![Data Hub screen](../share-data/attachments/share-data/data-hub-home.png)
 
 You can navigate to the following tabs:
-* **Catalog** –  search for registered assets in the search pane and see details of the selected asset
-* **Landscape** – gain a graphical view of the organization's available services and exposed entities showing consuming and publishing dependencies (for further details, see [Data Hub Landscape](../data-hub-landscape/index).
+* **Data Hub** –  search in the Data Hub Catalog, manually register a service from different applications, see the most popular services
+* **Catalog** –  [search](search) for registered assets in the search pane and see details of the metadata of selected asset
+* **Landscape** – gain a graphical view of the organization's available services and exposed entities showing consuming and publishing dependencies (for further details, see [Data Hub Landscape](../data-hub-landscape/index)
+* **Curate** – carry out [curate](curate) functions on registered assets to enrich the registered metdata and increase discoverability by relevant users
 
 From the Data Hub screen, you can do the following:
 * **Search** –  search in the Data Hub Catalog using the **Search** box or clicking the suggested **Tags**

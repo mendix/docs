@@ -8,11 +8,11 @@ tags: ["data hub", "data hub catalog"]
 
 ## 1 Introduction
 
-Finding the right data to use in your app is made easier by the Data Hub Catalog search functionality. The metadata for a registered service is displayed in the [Search Details](#search-details) screen to help in identifying the correct data source to use to use in your app development. 
+Finding the right data to use in your app is made easier by the Data Hub Catalog search functionality. The metadata for a registered service is displayed in the [search details](#search-details) screen to help in identifying the correct data source to use to use in your app development. 
 
-You can start searching from the **Data Hub** [Home](#data-hub-home) page or click the Data Hub [Catalog](#search-tab) tab to go to the **Search** pane and **Search Details** screen.
+You can start searching from the [Data Hub](#data-hub-home) page or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Search Details** screen.
 
-The [Data Hub pane](/refguide/data-hub-pane) in Studio Pro enables search in the Data Hub Catalog to use and connect to registered entities from your Mendix app.
+The [Data Hub pane](/refguide/data-hub-pane) in Studio Pro enables search in the Data Hub Catalog to find and connect to registered entities from your Mendix app.
 
 This page describes the search functionality of the Data Hub Catalog and the the information that is available.
 
@@ -30,11 +30,11 @@ For details on creating a published OData service in Studio Pro, see [How to Reg
 
 Every published OData service has a version number, and apps consuming from a service will consume from a specific version. Updates and changes to a service will be indicated by a change in the version number. There may be several versions of a service available in the catalog. These will all be listed as separate items in the search results for a service.
 
-The [search details](#search-details) screen in the Data Hub Catalog will the version of the selected service.
+The [search details](#search-details) screen in the Data Hub Catalog will include the version of the selected service.
 
 ### 2.3 Environments
 
-The Data Hub Catalog is a register of apps that are deployed to a particular environment and the services published from the apps deployed to an environment. This means that the catalog registers the version of a service running in a specific environment. 
+The Data Hub Catalog is a register of apps that are deployed to a particular environment and the services published from the apps deployed to the environment. This means that the catalog registers the version of a service running in a specific environment. The environmetn also indicates the quality of the dataset that is available. Shared datasets that are available from a *production environment* will have production-level data, while those in non-production environments (*acceptance*, *development*) will not be reliable for building stable apps but be useful for doing development work.
 
 The search results will show these service endpoints (where a service endpoint is the combination of a service version deployed on a specific environment). So if a version of a service is deployed on both a test and acceptance environment, a search on the service name in the Data Hub Catalog will have two hits. 
 
@@ -85,12 +85,12 @@ When searching in the Data Hub Catalog, the following fields are searched:
 * Attribute: Name, Description
 * Association: Name
 
-On the **Data Hub Home** page, you can search in the Data Hub Catalog in the following ways:
+From the **Data Hub** page, you can search in the Data Hub Catalog in the following ways:
 
-![](attachments/search/data-hub-home-search.png)
+![](../share-data/attachments/share-data/data-hub-home.png)
 
-* Type a search term in the search box and click **Search** (search strings can only include the alphanumeric characters that are allowed for service names or entity names)
-* Click one of the tags given in the **Search suggestions**
+* Type a search term in the search box and click **Search** (search strings can comprise a minimum of 3 characters and include the alphanumeric characters)
+* Click one of the *tags* given in the **Search suggestions**
 * Click one of the services under  **Most Popular Services**
 * Click the **Catalog** tab
 
@@ -98,7 +98,7 @@ Any of the above actions will take you to the **Search** screen, which is descri
 
 ## 4 Search Screen {#search-tab}
 
-The **Search** screen is divided into the [Search](#search-pane) pane, the [Search Details](#search-details) page, and the [Service Metadata](#metadata) panel.
+The **Search** screen is divided into the [search](#search-pane) pane on the left, the [search details](#search-details) of the selected asset in the centre panel, and the [service metadata](#metadata) panel on the right.
 
 ![](attachments/search/search-details-page.png)
 
@@ -108,7 +108,7 @@ The collapsable **Search** pane is used to search for registered assets in the D
 
 #### 4.1.1 Search Area
 
-Enter a search term in the **Search** area comprising alpha-numeric characters.
+Enter a search term in the **Search** area of minimum 3 characters comprising alpha-numeric characters.
 
 {{% alert type="info" %}}
 Punctuation cannot be used as part of the search term. 

@@ -43,15 +43,15 @@ Set up a native template with the **Native Mobile App Builder** by following the
 
 1.  Launch the Native Mobile App Builder from the **Project** menu. Walk through the wizard and configure the project's details and tokens (for more information, see [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app)):
 
-    ![launch native mobile builder](attachments/native-deep-link/launch-native-mobile-app-builder.png)
+    {{% image_container width="400" %}}![launch native mobile builder](attachments/native-deep-link/launch-native-mobile-app-builder.png){{% /image_container %}}
 
 2.  Once done with the wizard you will enable deep linking capabilities. First, select the **Capabilities** menu item:
 
-    ![capability menu option](attachments/native-deep-link/capability-menu-option.png)
+    {{% image_container width="400" %}}![capability menu option](attachments/native-deep-link/capability-menu-option.png){{% /image_container %}}
     
 3.  Enter the `schema` name without the appending `://`:
 
-    ![deep link input field](attachments/native-deep-link/deep-link-input-field.png)
+    {{% image_container width="400" %}}![deep link input field](attachments/native-deep-link/deep-link-input-field.png){{% /image_container %}}
     
 4. Click the **Save** button. 
 

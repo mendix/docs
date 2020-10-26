@@ -1,5 +1,5 @@
 ---
-title: "Deploy Your First Mendix Native Mobile App"
+title: "Deploy Your First Mendix Native Mobile App with the Native Builder CLI"
 parent: "build-native-apps"
 menu_order: 10
 description: Describes how to deploy your first Mendix native mobile app with the Native Builder.

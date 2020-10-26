@@ -1,9 +1,9 @@
 ---
-title: "Create a Custom Developer App with the Legacy CLI"
+title: "Create a Custom Developer App with the Native Builder CLI"
 parent: "build-native-apps"
 menu_order: 50
 description: A tutorial for creating custom developer apps.
-tags: ["native", "mobile", "developer", "native-builder", "developer app", "make it native", "deprecated"]
+tags: ["native", "mobile", "developer", "native-builder", "developer app", "make it native"]
 ---
 
 ## 1 Introduction

@@ -44,6 +44,12 @@ When security is enabled for your app, you can define access rules for external 
 
 You can associate external entities with local entities (both [persistable and non-persistable](/refguide/persistability). However, the external entity cannot be the owner of an association, which means that the association has to be from a local entity to the external entity in the domain model, and the value for the association [owner](/refguide/associations#ownership) must be set to **Default**.
 
+Mendix entities that are specializations in the the originating app will be published and consumed as discrete entities that include the inherited attributes and associations. When the generalized entity is also exposed in the same service as the specialized entities the inheritance relationship will not be present in the metadata contract or when both are consumed. 
+
+{{% alert type="warning" %}}
+Associations that are inherited from a generalization will be exposed and shown when the specialization is consumed. However the same association of the generalized entity is not supported for the specialization in the same domain model The same association cannot be exposed and consumed for two different external entities in the same domain model.
+{{% /alert %}}
+
 ### 2.3 Datasets
 
 Data for external entities is not in the consuming app's database but in the database of the app that publishes the OData service.

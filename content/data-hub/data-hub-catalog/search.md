@@ -108,7 +108,7 @@ The collapsable **Search** pane is used to search for registered assets in the D
 
 #### 4.1.1 Search Area
 
-Enter a search term in the **Search** area of minimum 3 characters comprising alpha-numeric characters.
+Enter a search term in the **Search** area of minimum 3 characters using alpha-numeric characters.
 
 {{% alert type="info" %}}
 Punctuation cannot be used as part of the search term. 
@@ -199,19 +199,30 @@ The service metadata panel at the right of the search details page displays deta
 
 	{{% alert type="info" %}}Classifications at a service level propagate down to the entities and attributes exposed in the service.  {{% /alert %}}
 	
-* **Discoverability** – if the service is published for use by other users:
-	* **Discoverable** – all users of Data Hub Catalog and Studio Pro can see and consume the service 
-	* **Non-Discoverable** – the service is not visible and only owners of the service, Data Hub Curators, and Data Hub Admins can find and use the service
+* 
 	
-	{{% alert type="info" %}}By default, newly registered services are set to **Discoverable** and visible to all users. **Discoverability** is curated in the Data Hub Catalog. For more information see [Curation](./curate) {{% /alert %}}
-
 * **Environment Type** – specifies if the environment is a **Production** or **Non-Production** environment and therefore indicates the status of the dataset associated with the exposed entities
+
 * **Application** – link to the app from which the OData service was published in the given environment
 * **Business Owner** – links to the business owner of the data that the service connects to; this is curated in the Data Hub Catalog
 * **Technical Owner** – technical owner of the app; by default this is the owner who registered the service, but this can be changed in the Data Hub Catalog
 *  **Tags** – tags that have been assigned to the service
 
 	{{% alert type="info" %}}Tags assigned at a service level propagate down to the entities and attributes exposed in the service.{{% /alert %}}
+	
+### 4.4 Curate Bar 
+
+If you are the owner of the selected asset or a curator, then the curate bar will also be displayed above the search details indicating that you can curate the asset. You can perform the following actions:
+* **Edit Metadata** – edit the registered metadata and add catalog descriptions and tags: 
+  * when a service is selected, you can edit **Application Details**, and **Service Details**
+  *  when an entity is selected you can **Edit Entity Details**
+* **Discoverable**/**Validated** – set the discoverability of the service so that other users can find it, and validate the dataset
+
+  * **Discoverable** – all users of Data Hub Catalog and Studio Pro can see and consume the service 
+  * **Non-Discoverable** – the service is not visible and only owners of the service, Data Hub Curators, and Data Hub Admins can find and use the service
+  * **Validated**
+
+{{% alert type="info" %}}By default, newly registered services are set to **Discoverable** and visible to all users. **Discoverability** is curated in the Data Hub Catalog. For more information see [Curation](./curate) {{% /alert %}}For more details on curation see  [Curation](./curate).
 
 ## 5 Viewing Search Results in the Data Hub Landscape
 

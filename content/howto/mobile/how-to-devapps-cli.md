@@ -1,5 +1,5 @@
 ---
-title: "Create a Custom Developer App"
+title: "Create a Custom Developer App with the Native Builder CLI"
 parent: "build-native-apps"
 menu_order: 50
 description: A tutorial for creating custom developer apps.
@@ -14,35 +14,35 @@ A custom developer app helps you by serving as a replacement for the Make It Nat
 
 ## 2 Prerequisites
 
-* Complete [How to Get Started with Native Mobile](getting-started-with-native-mobile)
-* Complete the Mendix Native Mobile Builder wizard as found in [Deploy Your First Mendix Native Mobile App](deploying-native-app)
+* Complete [How to Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile)
 
 ## 3 Build Your Developer App
 
-1. Run Mendix Native Mobile Builder from your project: 
-![Start Mendix Native Mobiler Builder](attachments/nbui/start-nbui.png)
+1. Open a command line interface (CLI) such as Command Prompt.
+2. Navigate to the directory of your Native Builder:
 
-1. When Mendix Native Mobile launches you are greeted with the home screen:
-![Mendix Natve Mobile Builder Home Screen](attachments/nbui/home-screen.png) 
+	```
+	cd {path to Native Builder executable file}
+	```
 
-1. Choose *Build app for local development*
+3. Run the following command to build your project's custom developer app:
 
-1. Given you already went through the initial wizard at least once, you should be greeted with the configuration screen for *Building an app for local development*: 
-![Mendix Natve Mobile Builder Home Screen](attachments/nbui/build-custom-dev-app.png) 
+	```
+	native-builder.exe build dev-app --project-name {your project's name}
+	```
 
-1. Click the *Build developer app* button
+	This command does the following: <br />
+	a. Creates a branch named `developer` based on the commited changes to your `master` <br />
+	b. Starts a build using the developer app flavors for your project
+4. Wait until the Native Builder completes your builds.
 
-1. The tool will set up your GitHub repository commit your changes, configure App Center if needed with two new projects, one for iOS and one for Android and continue with building the apps.
-![Building](attachments/nbui/build-release-app-build-step1.png)
-![Build release app](attachments/nbui/build-release-app-build-step2.png)
+As with a release build, when the Native Builder is done building you should have two archives for each build: an iOS and an Android build. These archives can be found under the build output path `{build output path}` with **Dev** prepended to their name. The default `{build output path}` is the `./builds` folder relative to your `native-builder.exe` location.
 
-1. When the build completes, you can scan the QR code provided to install the app to your device. Currently the QR code service is only supported for Android devices.
-![Build release app](attachments/nbui/build-release-app-build-done-both.png)
-
-
-## 4 Installing Your Custom Developer App manually
+## 4 Installing Your Custom Developer App
 
 ### 4.1 Android
+
+By default your custom developer app will be unsigned. To get a signed *IPA*, follow the steps in the [Signing Your Build](deploying-native-app#signing-a-build) section of *How to Deploy Your First Mendix Native Mobile App*. Your Custom developer app branch is named **developer**.
 
 For Android the output of the build is an *APK* file. *APK* files can be directly installed on devices or emulators.
 
@@ -60,7 +60,7 @@ There are various ways install an app on a device. Installing using a USB is det
 
 1. Connect your device to your machine via USB.
 2. Enable file transfer on your device (differs per device).
-3. Open **This PC** in File Explorer; your device should be listed as an external device.
+3. Open **This PC** in File Exploer; your device should be listed as an external device.
 4. Drag and drop your *APK* onto your device.
 5. Wait for it to finish transfering.
 6. Open your device's file manager.
@@ -77,8 +77,6 @@ The unsigned output of an iOS build is an *XCArchive* file. *XCArchive* files re
 
 The signed output of iOS build is an *IPA* file. If correctly signed, *IPA* files can be installed on physical devices.
 
-#### 4.2.1 Installing on an Emulator
-
 Before installing, make sure you have completed the following prerequisites:
 
 * Have a Mac OSX machine
@@ -86,7 +84,9 @@ Before installing, make sure you have completed the following prerequisites:
 * Install Cocoapods ([installation instructions](https://cocoapods.org/#install))
 * Install the latest XCode version
 
-Builds with the Mendix Native Mobile Builder are stripped of simulator artifacts. Therefore, to run on XCode's Simulator you will have to build the developer branch locally from source by completing these steps:
+#### 4.2.1 Installing on an Emulator
+
+Builds with the Native Builder are stripped of simulator artifacts. Therefore, to run on XCode's Simulator you will have to build the developer branch locally from source by completing these steps:
 
 1. Navigate to your GitHub repo.
 2.  Switch to your **developer** branch:
@@ -119,6 +119,8 @@ Builds with the Mendix Native Mobile Builder are stripped of simulator artifacts
 #### 4.2.2 Distributing the Custom Developer App
 
 To run your custom developer app on a device which is not a test device, you will have to sign the developer app with your certificates. 
+
+For local builds, follow the [Local Signing](deploying-native-app#ios-local-signing) section of *How to Deploy Your First Mendix Native Mobile App* to sign the *.xarchive* file. 
 
 If you want Native Builder to sign your custom developer app, follow the steps in the [Signing Your Build](deploying-native-app#signing-a-build) section of *How to Deploy Your First Mendix Native Mobile App*.
 

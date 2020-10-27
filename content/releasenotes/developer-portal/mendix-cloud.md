@@ -1,30 +1,12 @@
 ---
-title: "Deployment"
-category: "Developer Portal"
-description: "Release notes for deployment capabilities managed in the Mendix Developer Portal"
-tags: ["release notes", "deployment", "cloud environment", "Mendix Cloud", "SAP", "SAP Cloud", "IBM", "on-premises", "free app"]
-#This document is mapped to the landing page, featured.html. Update the link there if renaming or moving the doc file.
+title: "Mendix Cloud"
+parent: "deployment"
+menu_order: 10
+description: "Release notes for deployment to Mendix Clouds v3 and v4"
+tags: ["release notes", "deployment", "cloud environment", "Mendix Cloud", "free app"]
 ---
 
-The deployment release notes are split by the target of the deployment so that notes for your chosen method of deployment can be seen together.
-
-Follow the links in the table below to see the release notes you want:
-
-| Type of Deployment | Last Updated |
-| --- | --- |
-| [Mendix Cloud](mendix-cloud) | October 26th, 2020 |
-| [Mendix for Private Cloud](mendix-for-private-cloud) | October 21st, 2020 |
-| [SAP Cloud Platform](sap-cloud-platform) | October 21st, 2020 |
-| [Other Deployment Options](on-premises) | |
-
-The release notes for the buildpacks are held in their respective GitHub repos:
-
-* [Mendix Cloud Foundry Buildpack – cf-mendix-buildpack](https://github.com/mendix/cf-mendix-buildpack/releases)
-* [Mendix Buildpack for Docker – docker-mendix-buildpack](https://github.com/mendix/docker-mendix-buildpack/releases)
-
-To see the current status of the Mendix Clouds and Mendix for Private Cloud, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
-
-<!-- This is what was in the release notes when they were split into separate categories
+These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), other [deployment](/developerportal/deploy/) options, and app [operations](/developerportal/operate/). For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deployment options, see [Mendix Status](https://status.mendix.com/).
 
 ## 2020
 
@@ -47,33 +29,6 @@ To see the current status of the Mendix Clouds and Mendix for Private Cloud, see
 
 * We added the ability for the technical contact to download a list of [node permissions](/developerportal/deploy/node-permissions) as a CSV to assist with audits
 * We added information about the size of backup files.
-
-### October 21st, 2020
-
-#### Mendix for Private Cloud Portal
-
-* We added the ability to configure TLS on an environment level.
-* We added the ability to link the Studio Pro debugger to an app running through Mendix for Private Cloud.
-* We added the ability to upload an MDA to the Developer Portal.
-* We split the **Edit App** button into two separate buttons, **Edit in Studio** and **Edit in Studio Pro** on some of the Developer Portal pages (Environments, App Services, Metrics, Alerts, Logs, Backups, and the Node Permissions tab of Security).
-* We updated the drop down for the **View App** button.
-* We fixed an issue where the cluster icon was only visible to members of a namespace.
-* We fixed an issue where the **Next** button did not display correctly if no MDA branch was selected. (Ticket 108399)
-
-#### SAP Cloud Platform Deployment
-
-* We split the **Edit App** button into two separate buttons, **Edit in Studio** and **Edit in Studio Pro** on some of the Developer Portal pages (Environments, App Services, Metrics, Alerts, Logs, Backups, and the Node Permissions tab of Security).
-* We also updated the drop down for the **View App** button.
-
-### October 15th, 2020
-
-#### Mendix for Private Cloud — Mendix Operator v1.6.0 and Mendix Gateway Agent v1.5.0
-
-* We added support for debugging apps deployed to Mendix for Private Cloud.
-* We fixed a memory leak in Agent which occurred when it was restarted and the cluster was deleted from the Developer Portal.
-* We fixed an issue where the Operator pod was crashlooping until the Operator was fully configured.
-
-To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
 
 ### October 5th, 2020
 
@@ -156,40 +111,6 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
 * `TLS_DHE_RSA_WITH_AES_256_GCM_SHA384`
 * `TLS_DHE_RSA_WITH_AES_128_GCM_SHA256`
 
-### September 14th, 2020
-
-#### Mendix for Private Cloud
-
-* We resolved an issue where deployment of a new MDA to an environment set the constant values to the defaults in the MDA rather than applying the values set through the environment's [Model Options](/developerportal/deploy/private-cloud-deploy#environment-details). (Ticket 106933)
-
-### September 9th, 2020
-
-#### Mendix for Private Cloud — Mendix Operator v1.5.0 and Mendix Gateway Agent v1.4.0
-
-* We added an option to configure TLS options per environment, overriding the default namespace settings.
-* OpenShift Routes now support all features which were previously only available in Ingress endpoints.
-* We now only monitor the selected endpoint type (OpenShift Routes or Ingess), removing an error message which appeared when starting the operator in a non-OpenShift cluster.
-* We have added several features which make it possible to use [cert-manager](https://cert-manager.io/) with Ingress — this allows you to have TLS certificates generated on-demand.
-* We added an option to specify an environment's TLS certificate, or load it from a Kubernetes secret.
-* When TLS is enabled, Mendix for Private Cloud Portal will now display the App URL with an https:// prefix.
-* We have fixed an issue with connecting to PostgreSQL with TLS and will use encryption by default. (Ticket 106308)
-* We have fixed an issue with an incorrect _failed to create role_ error message for PostgreSQL databases, which in some cases was caused by connection issues.
-* We have improved logging and status messages when the Mendix Operator is provisioning Minio storage or building images.
-* We are introducing a new `private-cloud.registry.mendix.com` container registry which is intended to become the official Mendix for Private Cloud registry and eventually replace the `quay.io/digital_ecosystems` and the `mendix/runtime-base` Docker Hub repositories.
-
-To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
-
-### September 7th, 2020
-
-#### Mendix for Private Cloud Portal
-
-* We added a feature to add additional cluster managers to an existing cluster.
-* We added [activity logs](/developerportal/deploy/private-cloud-cluster#actvity-logs) at the cluster and namespace levels.
-* Email notifications will now be sent when a user is added/removed as a cluster manager.
-* We made changes to the [cluster overview](/developerportal/deploy/private-cloud-cluster#overview) to accommodate the activity logs.
-* We fixed a bug where creating an environment with a name that had been used before showed the state of the old environment before it was removed.
-* We updated security in the Developer Portal. (Ticket 106263)
-
 ### September 4th, 2020
 
 #### Mendix Cloud
@@ -226,25 +147,6 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 * We fixed an issue where users did not see changes they made to node permissions. (Tickets 104154 and 104642)
 
-### July 29th, 2020
-
-#### Mendix for Private Cloud Portal
-
-* We now allow you to delete a namespace which contains environments. For a connected namespace, this will also delete the environments.
-* We now allow you to delete environment information from the Developer Portal when the portal is unable to connect to the cluster via the Mendix Gateway Agent.
-* We now allow you to change log levels from the Developer Portal for your apps' log nodes.
-* We fixed an issue where you could not delete a deployment package if it was broken.
-* We now send an email to users when their permissions are changed, or when they are removed from a namespace.
-
-### July 27th, 2020
-
-#### Mendix for Private Cloud — Mendix Operator v1.4.0 and Mendix Gateway Agent v1.3.0
-
-* We have improved compatibility with annotations and other attributes modified by ingress controllers. Mendix Operator will no longer delete annotations and attributes it doesn't recognize.
-* We have added an option to specify log levels for every log node.
-
-To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
-
 ### July 22nd, 2020
 
 #### Mendix Cloud
@@ -257,27 +159,6 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 * We added the ability to set the `SameSite` value on cookies to `None` for existing apps. This enables apps to run in iframes in browsers where the default SameSite setting for cookies is `Lax` or `Strict`. (Tickets 97187, 97190, 97699, 97701, 97900, and 98507)
     *  This is implemented through the `SAMESITE_COOKIE_PRE_MX812` custom environment variable. For more information see [Running Your App in an Iframe](/developerportal/deploy/environments-details#iframe) in the *Environment Details* documentation.
-
-### July 15th, 2020
-
-#### Mendix for Private Cloud — Mendix Operator v1.3.0 and Mendix Gateway Agent v1.2.0
-
-* We introduced support for configuring environment variables and Java options for a Mendix application running in Private Cloud.
-* We added support for using registry credentials from an existing .dockerconfigjson secret.
-* We now provide an option to configure image pull secrets when using a Generic registry with authentication. When using an external generic registry, such as Azure Container Registry, Docker Hub or quay.io, you no longer need to configure image pull secrets manually - this will be done by the (re)configuration script.
-* We have updated all images to be based on the latest ubi8 image so that they include the latest security patches.
-* We have fixed an issue where changing the App URL in OpenShift resulted in an exception.
-
-To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
-
-#### Mendix for Private Cloud Portal
-
-* We have added support for configuring Custom Runtime Settings, Environment Variables and Java Options. This feature requires the Mendix Operator and Gateway Agent to be upgraded to the latest version.
-* We have added support for customizing the App URL. This feature requires the Mendix Operator to be upgraded to the latest version.
-* We have added support for dedicated storage plans which can only be used by one environment at a time. This feature requires the Mendix Operator and Gateway Agent to be upgraded to the latest version.
-* It is now possible to deploy an MDA which was built more than one week ago.
-* We improved the way that the Admin Password is updated.
-* We have fixed multiple issues where the UI was not showing information or was showing outdated information.
 
 ### July 8th, 2020
 
@@ -304,39 +185,6 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 {{% alert type="warning" %}}You may see a large increase in the size of the unused java heap metric when this change is applied. This is a consequence of the new calculation and not a change in the memory usage of your app.{{% /alert %}}
 
-### June 22nd, 2020
-
-#### Mendix for Private Cloud — Mendix Operator v1.2.0
-
-We released a new version of the Mendix for Private Cloud Operator.
-
-* We have added support for offline licenses.
-
-To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
-
-### June 19th, 2020
-
-#### Mendix for Private Cloud — Mendix Operator v1.1.1
-
-We released a new version of the Mendix for Private Cloud Operator.
-
-* We fixed an issue which incorrectly marked dedicated Storage Plans as being in use.
-* We changed the way the Operator updates Kubernetes Deployments to prevent a situation where two different versions of a Mendix application are running at the same moment.
-* We have added support for Azure PostgreSQL databases.
-* We have added support for using an existing JDBC database schema. This database can only be used by one environment and cannot be shared between environments.
-* We have added support for using an existing Azure Blob Storage Container or S3 bucket. Such a storage plan can be dedicated to one environment, or can be shared between multiple environments, with all environments using the same credentials.
-
-To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
-
-### June 18th, 2020
-
-#### Mendix for Private Cloud
-
-* We have separated the creation of the namespace and the cluster in order to align with Kubernetes concepts. As a consequence, there is now an additional namespace details page. The Mendix Operator and Mendix Gateway Agent will be deployed to each namespace.
-* We now allow you to set Kubernetes resource *requirements* in addition to resource *limits*. Apps no longer require the maximum amount of CPU and memory, improving utilization of cluster resources.
-* We have replaced the **Tiny** plan with a **Small** plan in the core resources.
-* We have improved the reliability of updating the current environment status in the Developer Portal.
-
 ### June 17th, 2020
 
 #### Mendix Cloud **v3**
@@ -352,34 +200,6 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 * We introduced new alerts for Mendix Cloud v4.
     * Database IOPS Burst Balance, based on the graph [Database IOPS Burst Balance](/developerportal/operate/trends-v4#Trends-dbmxdatabaseburstbalance)
     * Database Freeable Memory, based on the graph [Database Node Operating System Memory](/developerportal/operate/trends-v4#a-name-trends-dbmemory-a-5-5-database-node-operating-system-memory)
-
-### June 10th, 2020
-
-#### Mendix for Private Cloud — Mendix Gateway Agent v1.1.1
-
-To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#agent-latest).
-
-* We have fixed a regression which caused unusually high CPU usage.
-
-### June 8th, 2020
-
-#### Mendix for Private Cloud — Mendix Operator v1.1.0
-
-To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
-
-* Mendix apps now run as Kubernetes Deployments instead of StatefulSets. This will allow you to use rolling updates, reducing downtime. In addition, this helps avoid situations where a StatefulSet might become stuck and stop processing any changes.
-* We now allow you to set Kubernetes resource requirements in addition to resource limits. Apps no longer require the maximum amount of CPU and memory, improving utilization of cluster resources.
-* We improved the default health check configuration by adjusting the default Kubernetes liveness and readiness probe configuration. Kubernetes will now be much quicker in detecting that an environment has started and is ready to serve requests. In addition, the Kubernetes liveness probe will start with a delay to give a Mendix app some time to start and perform migrations.
-* We have added a port to enable monitoring of Mendix apps with Prometheus.
-* We have added an option to make a storage plan dedicated so that it can be used by only one environment.
-* We have added support for Microsoft SQL server and Azure SQL databases.
-* We have fixed a regression which prevented Private Cloud installing when using kubectl version 1.18.
-
-#### Mendix for Private Cloud — Mendix Gateway Agent v1.1.0
-
-To upgrade an existing installation of Private Cloud to the latest version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#agent-latest).
-
-* We have improved the reliability of event processing and cluster authentication.
 
 ### June 4th, 2020
 
@@ -400,51 +220,11 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 
 * For [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-capabilities/mendix-cloud-overview#mendix-cloud-vpc), we have added the ability to whitelist outgoing IP addresses.
 
-### April 24th, 2020
-
-#### SAP Cloud Platform Deployment
-
-* We have added an easy-to-use autoscaler configurator to allow you to easily create JSON configuration files for the **Application Autoscaler** on SAP Cloud Platform. See [Application Autoscaler for SAP Cloud Platform](/partners/sap/sap-autoscaler) for more information.
-    * There is currently an issue with how the JSON is uploaded. We are working on a fix for this but, in the meantime, please check the workaround in the documentation to ensure that the JSON is uploaded.
-
-### March 26th, 2020
-
-#### SAP Cloud Platform Deployment
-
-* We have added support for deploying to the Azure Netherlands region of SAP Cloud Platform.
-    * **Object storage is only supported in the Azure Netherlands region for  Mendix version 8.7.0 and above**
-* We have added a log of all deployment activities which are carried out on your SAP environments to the environments page of apps which are deployed to SAP Cloud Platform.
-* We have added the ability to specify a custom URL (e.g. `appname.subdomain.domain.com`) where the user will be redirected after signing on using XSUAA, instead of being redirected to the generated URL (e.g. `appname.cfapps.eu10.hana.ondemand.com`) of the app.
-
-### March 24th, 2020
-
-#### Mendix for Private Cloud — Mendix Operator v1.0.1
-
-* We have added an additional field to the `MendixApp` CR which will allows the Developer Portal to display the latest state of environments.
-* We have improved compatibility with popular container image registries (such as Azure Container Registry). The build process can now recognize that the container image already has the necessary base layers, and avoids downloading them again, saving time and network traffic.
-
-#### Mendix for Private Cloud — Mendix Gateway Agent v1.0.1
-
-* We have improved the reliability of sending environment statuses to the Developer Portal.
-
-### March 23rd, 2020
-
-#### Mendix for Private Cloud
-
-* We fixed an issue where users could not accept invitations to join a cluster.
-* We fixed an issue were the first time an app was deployed no replicas were started, meaning that it was still in a stopped state. Now all apps will have one replica started when they are deployed for the first time.
-
 ### March 17th, 2020
 
 #### Mendix Clouds
 
 * We have updated the environment details and backups screens for Mendix Clouds to show a more precise region, and the location of the secondary backup.
-
-### March 4th, 2020
-
-#### Mendix for Private Cloud
-
-* You can now deploy Mendix apps easily to Kubernetes-based platforms. We currently support Red Hat OpenShift, Amazon Web Services Elastic Kubernetes Service (AWS-EKS), and Amazon Web Services Azure Kubernetes Service (AWS-AKS). This involves deploying a Mendix Operator to your cluster to manage the Mendix requests. For more information see the [Private Cloud](/developerportal/deploy/private-cloud) documentation.
 
 ### March 2nd, 2020
 
@@ -484,12 +264,6 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 
 * We have implemented a change to our Mendix Cloud v3 infrastructure so that incoming SSL connections no longer support 3DES ciphers. 3DES ciphers are considered insecure.
 
-### January 3rd, 2020
-
-#### SAP Cloud Platform Deployment
-
-* We added support for using the HANA trial database available in new SAP Cloud Platform trial accounts. See the [Running Mendix on SAP HANA](/developerportal/deploy/sap-cloud-platform#sap-hana) section of the *SAP Cloud Platform* deployment document for more details.
-
 ## 2019
 
 ### December 23rd, 2019
@@ -497,19 +271,6 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 #### Improvements
 
 * We improved the stability and performance of Mendix Cloud deployment. (Tickets 86800, 92241, 92426)
-
-### December 5th, 2019
-
-#### Improvements
-
-* On the **General** page of [App Buzz](/developerportal/collaborate/buzz#app-buzz), we added a **Private Cloud** target. This will currently take you to a closed beta test that allows you to connect your private cluster to Mendix. You can ask to join the beta program, but places are currently limited.
-
-### November 26th, 2019
-
-#### IBM Cloud Portal Deployment
-
-* We have updated the process for deploying to IBM Cloud Portal (for details on the new process, see [IBM Cloud](/developerportal/deploy/ibm-cloud)).
-* We have also added the ability to manage IBM Cloud Portal Cloud Foundry Marketplace services from within the Mendix Developer Portal.
 
 ### November 21st, 2019
 
@@ -576,12 +337,6 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * SHA-256 Fingerprint: AE:55:1D:88:32:E1:7E:BF:AB:0D:F3:2F:57:57:C8:98:8D:87:3F:E8:F6:5F:A6:09:82:EA:37:F7:12:25:A5:D3
 * SHA-1 Fingerprint: 5E:4D:05:9B:FE:54:3F:B6:D8:A4:D7:86:7F:3B:50:9A:EE:09:35:8F
 
-### September 13th, 2019
-
-#### SAP Cloud Platform Improvements
-
-* We added support for AWS RDS PostgreSQL databases when deploying to SAP Cloud Platform
-
 ### September 5th, 2019
 
 #### Mendix Cloud Fixes
@@ -602,12 +357,6 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * We reordered and improved the Trends pages of operating metrics to improve the user experience.
 * We improved the performance of calculating the environment health status.
 * We improved the ability to recover from a failed deployment in the Free App cluster.
-
-### July 4th, 2019
-
-#### Fixes to SAP Cloud Platform Deployment
-
-* We fixed an issue where the XSUAA configuration wasn’t updated after deployment. **Please redeploy any apps which you deployed to SAP Cloud Platform between June 27th and 8:00 CST on July 4th.**
 
 ### June 27th, 2019
 
@@ -642,12 +391,6 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * We redesigned the App User management page of the Developer Portal for Mendix Cloud environments which are enabled for single sign-on (SSO).
 
-### May 13th, 2019
-
-#### SAP Cloud Portal Deployment Fix
-
-* We fixed an issue for users deploying to SAP Cloud Portal where newly-bound services were bound correctly but did not appear in the Mendix Developer Portal. (Ticket 81418)
-
 ### May 9th, 2019
 
 #### Fixes
@@ -673,12 +416,6 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * We released **Free Edition** of Mendix. This removes the limit of 10 named users on Free Apps which are deployed to the Mendix Cloud. To take advantage of the *Free Edition* for an existing app, you need to redeploy your app.
 
-### April 8th, 2019
-
-#### SAP HANA Deployment Availability
-
-* We have added support for SAP HANA in the Developer Portal. You can now choose to deploy to SAP Cloud Platform using an SAP HANA database schema. For more information see [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform).
-
 ### April 4th, 2019
 
 #### Fixes
@@ -699,18 +436,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 ### Deployment Improvements
 
-* We have changed Mendix deployment to **SAP Cloud Platform** so that the Cloud Foundry stack cflinuxfs3 is used. Previously, Mendix apps were using cflinuxfs2, which has been deprecated by SAP. See [Cloud Foundry Environment – Deprecation of cflinuxfs2](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?from=2018-11-08&sel3=Announcement&sel1=Cloud%20Foundry%20Environment&to=2018-11-08) SAP release note from 8 November 2018, and [Rapid Application Development by Mendix – Stack Switch](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?from=2019-03-29&to=2019-03-29&sel3=Announcement) SAP release note from 29 March 2019 for more information. The next time that you deploy a new, or existing, Mendix app to *SAP Cloud Platform* from the Mendix Developer Portal, the new stack will be applied to your app.
 * We have added the ability to manage tags through the Developer Portal, in addition to the current method which involved using the API
-
-### March 21st, 2019
-
-#### SAP Cloud Platform Improvements
-
-* We have added the ability to manage *SAP Cloud Platform* Cloud Foundry Marketplace services from within the Mendix Developer Portal.
-
-#### Limitation
-
-* If an app is deployed to SAP from the Desktop Modeler *before it has been started from the Developer Portal*, the deployment will fail because the marketplace services have not been bound. Please ensure that apps are first deployed from the Developer Portal before trying to deploy them from the Desktop Modeler.
 
 ### March 7th, 2019
 
@@ -773,19 +499,6 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * Cloud v3 PostgreSQL backups are now created with `pg_dump` version 1.13. This version has been shipped with PostgreSQL since March 2018 (PostgreSQL 10.3, 9.6.8, 9.5.12, 9.4.17, and 9.3.22). The side-effect is that it is not possible to restore these PostgreSQL backups using a `pg_restore` version below 1.13. The error that you will receive is `pg_restore: [archiver] unsupported version (1.13) in file header`. To fix this issue, upgrade your PostgreSQL client software to one that includes newer versions of `pg_dump` and `pg_restore`.
 
-### October 29th, 2018
-
-#### Improvements
-
-* Deploying to IBM Cloud is available from within Mendix. If you start with an app template, you will be taken through the process of creating a deployment environment on IBM Cloud. You can then deploy your app to IBM Cloud from within the Desktop Modeler or Mendix Developer Portal. More information is available in [IBM Cloud](/developerportal/deploy/ibm-cloud). You can also find Mendix Starter Kits on IBM Cloud and start the process from there.
-
-### October 22nd, 2018
-
-#### Improvements
-
-* Apps deployed to SAP Cloud Platform can be edited in the Web Modeler or Desktop Modeler by choosing the appropriate option on the **Edit App** button in the Developer Portal. Older apps can have this functionality enabled using the **Enable Web Modeler** button on the **General** settings page.
-* Logs for apps deployed to SAP Cloud Platform can be viewed with Kibana from the **Logs** page of the Developer Portal. See [Logs](/developerportal/operate/logs) for more information.
-
 ### October 17th, 2018
 
 #### Improvements
@@ -797,12 +510,6 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 #### Fix
 
 * We fixed an issue which caused subdomain validation errors for sandbox environments. (Ticket 56574)
-
-### October 1st, 2018
-
-#### SAP Cloud Deployment Version 3.5.2
-
-We now configure Destination Service in the scope of XSUAA. This means that we add the uaa.user default scope to the destination instances in each new environment. This is needed to fetch the destination configuration.
 
 ### August 21st, 2018
 
@@ -841,13 +548,6 @@ Over the last few months, we have made several improvements to our alerting stac
 
 In some cases, you may still experience false positives for the runtime heartbeat alert. If that happens, you can resolve the problem by doing a transport and then a restart of the app.
 
-### August 7th, 2018
-
-#### Improvements
-
-* We introduced a new environments lifecycle for our SAP apps and migrated all of the old environments.
-* We improved our UX, especially on the **Environments** screens of SAP apps.
-
 ### July 23rd, 2018
 
 #### Improvement
@@ -871,12 +571,6 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * You now get a warning if you try to restore a backup into a small environment. (Ticket 63367)
 * Creating a backup via REST API no longer returns error message 500 when it succeeds. (Ticket 65762)
-
-### July 3rd, 2018
-
-#### Improvements
-
-* To improve integration and security between Mendix and SAP we now redirect you to SAP to provide your SAP credentials. This means that you need to use the same username (email address) for Mendix and SAP the next time you need to provide your credentials. This is currently implemented only for SAP regions **eu10 (Europe - Frankfurt)** and **us10 (US East - VA)**.
 
 ### July 2nd, 2018
 
@@ -992,7 +686,6 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Fixes
 
-* We fixed an issue that prevented SAP Cloud users from viewing the **Mobile App** section properly.
 * When uploading a backup in Mendix Cloud v3, double-clicking the **Restore** button was causing the UI to break. This is now fixed.
 
 ### February 23rd, 2018
@@ -1219,5 +912,3 @@ In some cases, you may still experience false positives for the runtime heartbea
 #### Improvement
 
 * We removed static information from the log lines in Mendix Cloud v3. Every line before contained `tr10000` and `127.0.0.1`. We removed these fields as they were useless.
-
--->

@@ -7,7 +7,7 @@ tags: ["studio", "data", "working with data", "work with data"]
 
 ## 1 Introduction 
 
-In Mendix Studio, you work with data in various ways. For example, you create data and use it on pages and in microflows; you can start an app uploading your data from a spreadsheet, or use data from other apps in your organization. 
+In Mendix Studio, you work with data in various ways. For example, you create your own data and use it on pages and in microflows; you can start an app uploading your data from a spreadsheet, or use data from other apps in your organization. 
 
 Using data in Studio can be divided into the following:
 

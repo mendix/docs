@@ -7,7 +7,7 @@ tags: ["studio", "studio pro"]
 
 ## 1 Introduction {#studio-overview}
 
-Mendix Studio is the place where you can create, view and edit your Mendix applications without going into technical details. For this purpose you can use the [Studio Pro](/refguide/modeling) and [develop apps together with Studio Pro users](general-collaborative-development) anytime. 
+Mendix Studio is the place where you can create, view and edit your Mendix applications without going into technical details. For this purpose you can use the [Studio Pro](/refguide/modeling) and [develop apps together with Studio Pro users](collaborative-development) anytime. 
 
 With Studio you can create and edit applications in your browser without installing software on your PC.   
 
@@ -146,6 +146,6 @@ Mind the following characteristics when using cut/copy/paste:
 
 ## 9 Main Documents in This Category
 
-* [Collaborative Development in Studio](general-collaborative-development) – provides you with information on how team members work together on one project in Mendix Studio Pro and Mendix Studio 
+* [Collaborative Development in Studio](collaborative-development) – provides you with information on how team members work together on one project in Mendix Studio Pro and Mendix Studio 
 
 * [Studio Ranges & Mendix Versions](general-versions) – explains how Studio version correlates to the Mendix version

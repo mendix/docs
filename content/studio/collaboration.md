@@ -7,7 +7,7 @@ tags: ["studio", "data", "working with data", "work with data"]
 
 ## 1 Introduction 
 
-Collaboration is an important element of Mendix Studio experience. Studio and Studio Pro users collaborate with each other a lot and need to be able to work together seamlessly. For example, a Studio Pro user who has built technical functionality might ask a Studio user to review it from the business perspective.
+Collaboration is an important part of Mendix Studio experience. Studio and Studio Pro users collaborate with each other a lot and need to be able to work together seamlessly. For example, a Studio Pro user who has built technical functionality might ask a Studio user to review it from the business perspective.
 
 Or, the Studio users can ask their Studio Pro colleagues to extend the app with a more technically complex functionality. 
 

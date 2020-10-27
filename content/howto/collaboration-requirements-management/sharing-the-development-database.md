@@ -35,7 +35,7 @@ One application can make use of many different databases. Take the following ste
   
     ![](attachments/18448637/18580427.png)
 
-## 5 Starting the Database Viewer (#viewer)
+## 5 Starting the Database Viewer (#db-viewer)
 
 To start the built-in database viewer, the following steps have to be applied:
 

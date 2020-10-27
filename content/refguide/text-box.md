@@ -2,7 +2,7 @@
 title: "Text Box"
 parent: "input-widgets"
 menu_order: 10
-tags: ["studio pro"]
+tags: ["studio pro", "data"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -74,13 +74,37 @@ The on change event property specifies an action that will be executed when the 
 
 {{% snippet file="refguide/events-section-link.md" %}}
 
-#### 2.6.2 On Enter Event
+#### 2.6.2 On Change Behaviour
+
+The On Change Behaviour property lets users select how **on change** is handled via the following options Studio Pro: 
+
+* When user leaves input field (Default)
+* While user is entering data
+
+##### 2.6.2.1 When user leaves input field (Default)
+
+This option will work as in previous versions of Studio Pro. Textbox will apply changes when a value is not the same as previously saved value in the database and one of the following conditions is met:
+
+* On enter key pressed: This will trigger on change and on enter key press events
+* Blurred: This will trigger on change and on leave events
+
+This means that there is no way for users to trigger an on change event while typing. That use case requires the second option: **While user is entering data**.
+
+##### 2.6.2.2 While user is entering data
+
+This option allows makes it so users trigger an on change event while they are typing. Text Box will save changes when the value is not the same as the previously saved value in the database and if the last change made took place after the configured **Apply after (ms)** length of time.
+
+With **While user is entering data**, users now can adjust one more property called **Apply after (ms)** (described above). This will reduce the amount of the calls made for an on change event, thus improving app performance.
+
+{{% snippet file="refguide/events-section-link.md" %}}
+
+#### 2.6.3 On Enter Event
 
 The on enter event property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
 
 {{% snippet file="refguide/events-section-link.md" %}}
 
-#### 2.6.3 On Leave Event
+#### 2.6.4 On Leave Event
 
 The on leave event property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
 
@@ -88,7 +112,7 @@ This differs from the [On change](#on-change) property in that the event will al
 
 {{% snippet file="refguide/events-section-link.md" %}}
 
-#### 2.6.4 On Enter Key Press Event
+#### 2.6.5 On Enter Key Press Event
 
 The on enter key press event property specifies an action that will be executed when the focus is inside the widget  and the <kbd>Enter</kbd> key is pressed. In a web application the widget will keep focus after the action gets executed.
 

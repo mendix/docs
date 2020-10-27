@@ -1,7 +1,7 @@
 ---
 title: "Add Fonts to Your Native App"
-parent: "hybrid-mobile"
-menu_order: 40
+parent: "native-mobile"
+menu_order: 42
 description: "This tutorial will teach you to enrich the design of your native app with custom fonts."
 tags: ["mobile", "debug", "android", "ios", "native", "fonts"]
 ---
@@ -91,25 +91,25 @@ Before [adding fonts manually](#manual):
 
 The Mendix Native Mobile Builder simplifies adding custom fonts to your project. It configures both Android and iOS projects and also provides the snippets needed to simply copy and paste in your Mendix project's native styles. To add custom fonts to your project, follow these steps: 
 
-1.  Start the Native Builder:
+1. Start the Native Builder:
 
     {{% image_container width="350" %}}![Start Native Builer](attachments/nbui/start-nbui.png){{% /image_container %}}
 
-1.  Navigate to **Custom Fonts**:
+1. Navigate to **Custom Fonts**:
 
      {{% image_container width="350" %}}![Custom fonts screen](attachments/nbui/advanced-fonts.png){{% /image_container %}}
 
-1.  Drag and drop the font files you would like to apply. For example, Times New Roman is being used here. When the process is complete you should see the font family uploaded in the list:
+1. Drag and drop the font files you would like to apply. For example, Times New Roman is being used here. When the process is complete you should see the font family uploaded in the list:
 
      {{% image_container width="350" %}}![Custom fonts screen filled](attachments/nbui/advanced-fonts2.png){{% /image_container %}}
 
-1.  Extend the list using the arrow to the right. Verify the expected fonts are available. You can continue by adding as many fonts as you prefer:
+1. Extend the list using the arrow to the right. Verify the expected fonts are available. You can continue by adding as many fonts as you prefer:
 
-     {{% image_container width="350" %}}![Custom fonts screen filled & extended](attachments/nbui/advanced-fonts2.png)
+	{{% image_container width="350" %}}![Custom fonts screen filled & extended](attachments/nbui/advanced-fonts2.png)
 
-1.  Click the snippet button to get the code snippet which you can copy to your styles:
+1. Click the snippet button to get the code snippet which you can copy to your styles:
 
-     {{% image_container width="350" %}}![Custom fonts screen code snippet](attachments/nbui/advanced-fonts4.png){{% /image_container %}}
+	{{% image_container width="350" %}}![Custom fonts screen code snippet](attachments/nbui/advanced-fonts4.png){{% /image_container %}}
 
 1. Build your app to get a new binary with fonts included. 
 
@@ -117,17 +117,17 @@ The Mendix Native Mobile Builder simplifies adding custom fonts to your project.
 
 To use the new fonts to style your content, follow these instructions:
 
-1.  Copy the snippet from the Native Mobile Builder:
+1. Copy the snippet from the Native Mobile Builder:
 
-     {{% image_container width="350" %}}![Custom fonts screen code snippet](attachments/nbui/advanced-fonts4.png){{% /image_container %}}
+	{{% image_container width="350" %}}![Custom fonts screen code snippet](attachments/nbui/advanced-fonts4.png){{% /image_container %}}
 
-1.  Open your styles *js* file and paste the snippet there. For this example, the *custom-variables.js* file is being used. For more information on styling your app, see [How to Style Your Mendix Native Mobile App](https://docs.mendix.com/howto/mobile/how-to-use-native-styling#1-introduction):
+1. Open your styles *js* file and paste the snippet there. For this example, the *custom-variables.js* file is being used. For more information on styling your app, see [How to Style Your Mendix Native Mobile App](https://docs.mendix.com/howto/mobile/how-to-use-native-styling#1-introduction):
 
-     {{% image_container width="350" %}}![Custom variables file](attachments/nbui/custom-variables.png){{% /image_container %}}
+	{{% image_container width="350" %}}![Custom variables file](attachments/nbui/custom-variables.png){{% /image_container %}}
 
-1.  The constant can now be imported and used to define the font family of any test style. Elements styled using these classes will now be styled using the font:
+1. The constant can now be imported and used to define the font family of any test style. Elements styled using these classes will now be styled using the font:
 
-     {{% image_container width="350" %}}![Custom style](attachments/nbui/custom-style.png){{% /image_container %}}
+	{{% image_container width="350" %}}![Custom style](attachments/nbui/custom-style.png){{% /image_container %}}
 
 ## 5 Add Custom Fonts Manually {#manual}
 
@@ -138,7 +138,7 @@ While the Mendix Native Mobile Builder simplifies adding fonts, you might find y
 To manually add custom fonts to your Android app, follow these instructions: 
 
 1. Collect all the fonts you would like to use.
-1.  Use a tool like [Open Type Inspector](https://opentype.js.org/font-inspector.html) and derive the PostScript names for each font:
+1. Use a tool like [Open Type Inspector](https://opentype.js.org/font-inspector.html) and derive the PostScript names for each font:
 
      {{% image_container width="350" %}}![Open Type Inspector name metadata](attachments/nbui/postscript-name.png){{% /image_container %}}
 
@@ -147,7 +147,7 @@ To manually add custom fonts to your Android app, follow these instructions:
     * TimesNewRomanPS-BoldMT, for bold
 
 1. Copy the renamed fonts to the `android\app\src\main\assets\fonts` folder.
-1.  If you plan on using the tool to build your project, commit your changes:
+1. If you plan on using the tool to build your project, commit your changes:
 
      {{% image_container width="350" %}}![GitHub repo after uploading cutom fonts](attachments/nbui/custom-fonts-android-repo.png){{% /image_container %}}
 
@@ -198,3 +198,8 @@ Use XCode to manually add fonts to an iOS project:
 1. Build your iOS app with your preferred method.
 
 Congratulations, you have learned how to add fonts to an iOS project. 
+
+## 6 Read More
+
+* [Implement Native Mobile Styling](native-styling)
+* [Troubleshoot Common Native Mobile Issues](common-issues)

@@ -120,9 +120,9 @@ Builds with the Native Builder are stripped of simulator artifacts. Therefore, t
 
 To run your custom developer app on a device which is not a test device, you will have to sign the developer app with your certificates. 
 
-For local builds, follow the [Local Signing](deploying-native-app#ios-local-signing) section of *How to Deploy Your First Mendix Native Mobile App* to sign the *.xarchive* file. 
+For local builds, follow the [Signing a Build](deploying-native-app-cli#signing-a-build) section of *How to Deploy Your First Mendix Native Mobile App with the Native Builder CLI* to sign the *.xarchive* file. 
 
-If you want Native Builder to sign your custom developer app, follow the steps in the [Signing Your Build](deploying-native-app#signing-a-build) section of *How to Deploy Your First Mendix Native Mobile App*.
+If you want Native Builder to sign your custom developer app, follow the steps in the [Signing a Build](deploying-native-app-cli#signing-a-build) section of *How to Deploy Your First Mendix Native Mobile App with the Native Builder CLI*.
 
 ## 5 Read More
 

@@ -40,7 +40,7 @@ To add entities to your project model, see [Adding an External Entity to a Proje
 As you enter a search term, all the items in the Data Hub Catalog satisfying the search string are listed in the search results. You can do a wildcard search by entering `*` in the search area.
 
 {{% alert type="info" %}}
-The search strings must be a minimum of 3 alphanumeric characters. Punctuation cannot be used as part of the search term except for the `*` character to perform a wildcard search in the Data Hub Catalog. For further details, see [How to Search for Registered Assets](/data-hub/data-hub-catalog/search).
+The search strings must be a minimum of 3 alphanumeric characters. Punctuation cannot be used as part of the search term except for the wildcard character  `*`  to perform an empty search in the Data Hub Catalog. It is not possible to use the wildcard in combination with other characters. For further details, see [How to Search for Registered Assets](/data-hub/data-hub-catalog/search).
 {{% /alert %}}
 
 By default, the search is restricted to apps and services deployed to a production environment. To include non-production environments in the search, click the **Filter** icon and check **Show development environments**:

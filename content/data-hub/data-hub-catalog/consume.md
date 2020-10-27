@@ -6,8 +6,6 @@ description: "Using entities from the Mendix Data Hub Catalog in general."
 tags: ["data hub", "data hub catalog", "consume", "external entities", "asset", "entities", data hub pane", "studio pro"]
 ---
 
-{{% todo %}}[**IG: search through doc for [title?]() and insert correct x-ref and further verify all other links**]{{% /todo %}}
-
 ## 1 Introduction
 
 The Data Hub Catalog is a catalog of OData services exposing entities that you can use in your apps. This means that new apps can be built by using these shared entities from your organization to provide access to the data they connect to. In Mendix Studio Pro, these exposed entities are added as *external entities* through the [Data Hub pane](/refguide/data-hub-pane). The integrated Data Hub Catalog [search](search) functionality in Studio Pro is available to find suitable entities to use in your apps. 
@@ -36,8 +34,6 @@ This is not compulsory, and users can continue to use an older version of a serv
 It is good practice that publishers of a service serve a notice of deprecation on a service version that will be replaced with a new service that may contain breaking changes which would cause the consuming app to fail. In this case the updated service should be deployed to a new service endpoint. In this case, in Studio Pro, users will get the option to **Switch** to the new version. 
 {{% /alert %}}
 
-{{% todo %}}[Not sure about the value of this here - it is full of shoulds and recommendations - these should move to ]{{% /todo %}}
-
 ### 2.2 Consumed (External) Entities
 
 When you use an external entity from a published OData service through the **Data Hub** pane in Studio Pro, you are consuming the entity from the service (which is published from the app deployed in a specific environment). The OData endpoint for the entity is used in the consuming app.
@@ -47,6 +43,12 @@ External entities are read-only, so it is not possible to change the structural 
 When security is enabled for your app, you can define access rules for external entities just as you would for [persistable](/refguide/persistability#persistable) and [non-persistable](/refguide/persistability#non-persistable) entities. You can only define read access, and also access rules based on user roles (for more details, see [Security and Controlling Access to Information](security)).
 
 You can associate external entities with local entities (both [persistable and non-persistable](/refguide/persistability). However, the external entity cannot be the owner of an association, which means that the association has to be from a local entity to the external entity in the domain model, and the value for the association [owner](/refguide/associations#ownership) must be set to **Default**.
+
+Mendix entities that are specializations in the the originating app will be published and consumed as discrete entities that include the inherited attributes and associations. When the generalized entity is also exposed in the same service as the specialized entities the inheritance relationship will not be present in the metadata contract or when both are consumed. 
+
+{{% alert type="warning" %}}
+Associations that are inherited from a generalization will be exposed and shown when the specialization is consumed. However the same association of the generalized entity is not supported for the specialization in the same domain model The same association cannot be exposed and consumed for two different external entities in the same domain model.
+{{% /alert %}}
 
 ### 2.3 Datasets
 

@@ -7,7 +7,7 @@ tags: ["app store", "app store component", "widget", "feedback", "platform suppo
 ---
 
 {{% alert type="warning" %}}
-We are deprecating outdated versions of the Mendix Feedback widget to provide consistent and optimized experience. As of October 1st, 2020, we will end support for Mendix Feedback widget version 5 or below. Please always keep your Feedback widget up-to-date to ensure the best experience for your users.
+In order to provide a consistent and optimized experience, versions 5.1.3 and below of this widget are no longer supported. Please always keep your Feedback widget up-to-date to ensure the best experience for your users.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -171,6 +171,10 @@ If you encounter the following issue, you need to delete the old *.mpk* file in 
 For troubleshooting information, see [How to Configure the Mendix Feedback Widget for iOS](/howto/mobile/feedback-widget-ios).
 
 ## 3 Widget Version 5.1.3 & Below {#below}
+
+{{% alert type="warning" %}}
+Versions 5.1.3 and below of this widget are no longer supported.
+{{% /alert %}}
 
 The sections below describe using and configuring earlier versions of the Mendix Feedback widget.
 

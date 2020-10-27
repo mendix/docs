@@ -23,7 +23,6 @@ If you do want to use the list but you also want the optimized query, do two sep
 * [Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [Extend Your Application with Custom Java](extending-your-application-with-custom-java)
 * [Work with Lists in a Microflow](working-with-lists-in-a-microflow)
-* [Trigger Logic Using Microflows](triggering-logic-using-microflows)
 * [Create a Custom Save Button](create-a-custom-save-button)
 * [Optimize Retrieve Activities](optimizing-retrieve-activities)
 * [Configure Error Handling](set-up-error-handling)

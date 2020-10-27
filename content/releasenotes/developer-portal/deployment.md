@@ -10,6 +10,53 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### October 26th, 2020
+
+#### Mendix Cloud & Buildpack
+
+* We resolved an issue where [HTTP headers](https://docs.mendix.com/developerportal/deploy/environments-details#http-headers) were only returned for a successful request. You will have to redeploy your app to apply this fix. (Tickets 94915 and 107140)
+
+    See [Mendix Buildpack Releases](https://github.com/mendix/cf-mendix-buildpack/releases) on *GitHub* for more information.
+
+### October 22nd, 2020
+
+#### Mendix Cloud
+
+* We are in the process of migrating the alerting service to our internal infrastructure to improve maintainability. Your alerts will continue to operate in the same way after the migration.
+* As part of the migration the existing alert history will be deleted. The alerts history tab will only contain those alerts which have been triggered since the migration.
+
+#### Mendix Cloud
+
+* We added the ability for the technical contact to download a list of [node permissions](/developerportal/deploy/node-permissions) as a CSV to assist with audits
+* We added information about the size of backup files.
+
+### October 21st, 2020
+
+#### Mendix for Private Cloud Portal
+
+* We added the ability to configure TLS on an environment level.
+* We added the ability to link the Studio Pro debugger to an app running through Mendix for Private Cloud.
+* We added the ability to upload an MDA to the Developer Portal.
+* We split the **Edit App** button into two separate buttons, **Edit in Studio** and **Edit in Studio Pro** on some of the Developer Portal pages (Environments, App Services, Metrics, Alerts, Logs, Backups, and the Node Permissions tab of Security).
+* We updated the drop down for the **View App** button.
+* We fixed an issue where the cluster icon was only visible to members of a namespace.
+* We fixed an issue where the **Next** button did not display correctly if no MDA branch was selected. (Ticket 108399)
+
+#### SAP Cloud Platform Deployment
+
+* We split the **Edit App** button into two separate buttons, **Edit in Studio** and **Edit in Studio Pro** on some of the Developer Portal pages (Environments, App Services, Metrics, Alerts, Logs, Backups, and the Node Permissions tab of Security).
+* We also updated the drop down for the **View App** button.
+
+### October 15th, 2020
+
+#### Mendix for Private Cloud — Mendix Operator v1.6.0 and Mendix Gateway Agent v1.5.0
+
+* We added support for debugging apps deployed to Mendix for Private Cloud.
+* We fixed a memory leak in Agent which occurred when it was restarted and the cluster was deleted from the Developer Portal.
+* We fixed an issue where the Operator pod was crashlooping until the Operator was fully configured.
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+
 ### October 5th, 2020
 
 #### Mendix Cloud
@@ -452,11 +499,13 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 
 * We implemented a number of improvements to enable Mendix Support to provide better support if there are deployment issues
 
-### November 7th, 2019
+### November 7th, 2019{#20201107}
 
 #### Mendix Cloud Deployment Upgrade
 
 * We have improved the stability and performance of Mendix Cloud Deployment and Operations.
+
+    * This also resolved the [known issues noted on October 30th](#ki20201030)
 
 ### October 30th, 2019
 
@@ -466,13 +515,16 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 * You can now mask app constant values so that they cannot be seen in the **Model Options** tab of the **Environment Details**.
 * We now warn you on all **OPERATE** and **DEPLOY** pages if a maintenance window has been created to allow updating of the Mendix Developer Portal.
 
-**Known Issue**
+<a name="ki20201030"></a>**Known Issue**
 
 * In the **Environments** page, when you click the **Details** button for a **Production** environment and successfully complete two-factor authentication you are redirected to the **first** environment listed for your app, *not the Production environment*. (Ticket 90999)
 
     * Workaround – Choose the **Details** for the **Production** environment again and you will be taken to the correct environment.
+    * Resolved by release on [November 7th](#20201107).
 
 * When you attempt to open an **OPERATE** or **DEPLOY** page in the Developer Portal, you may see a login page. You will need to force a refresh of your page, or clear your browser cache, in order to access the page.
+
+    * Resolved by release on [November 7th](#20201107).
 
 ### October 1st, 2019
 

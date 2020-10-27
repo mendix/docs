@@ -2468,12 +2468,12 @@ module.exports = {
    	   to: "/data-hub/share-data/index",
   	},
 	{
-  	   from: "/data-hub/data-catalog/",
-	   to: "/data-hub/data-hub-catalog/"
-    },
-    {
       from: "/datahub/general/share-data/",
       to: "/data-hub/share-data/index"
+    },
+	{
+  	   from: "/data-hub/data-catalog/",
+	   to: "/data-hub/index"
     },
 	/****************************************************
      * From the App Store (permanent, mapped)

@@ -12,18 +12,18 @@ The Data Hub Catalog functionality is enhanced by the [Data Hub Landscape](../da
 
 ## 2 Data Hub Screen {#data-hub-home}
 
-From the [Data Hub](https://hub.mendix.com) screen, you can carry out the major functions of Data Hub: 
+From the [Data Hub](https://hub.mendix.com) screen, you can carry out the major functions of Data Hub.
 
 ![Data Hub screen](../share-data/attachments/share-data/data-hub-home.png)
 
-From the Data Hub screen, you can navigate to the following tabs:
-
-* **Catalog** –  search for registered services, entities, and attributes in the search pane and search details page
-* **Landscape** – gain a graphical view of the organization's available services and exposed entities showing consuming and publishing dependencies (for further details, see [Data Hub Landscape](../data-hub-landscape/index).
+You can navigate to the following tabs:
+* **Data Hub** –  search in the Data Hub Catalog, manually register a service from different applications, see the most popular services
+* **Catalog** –  [search](search) for registered assets in the search pane and see details of the metadata of selected asset
+* **Landscape** – gain a graphical view of the organization's available services and exposed entities showing consuming and publishing dependencies (for further details, see [Data Hub Landscape](../data-hub-landscape/index)
+* **Curate** – carry out [curate](curate) functions on registered assets to enrich the registered metdata and increase discoverability by relevant users
 
 From the Data Hub screen, you can do the following:
-
-* **Search** –  search for registered services and entities using the **Search** box or clicking the suggested **Tags**
+* **Search** –  search in the Data Hub Catalog using the **Search** box or clicking the suggested **Tags**
 
 * **Register a new service** – manually register non-Mendix OData v4 services in the Data Hub Catalog (for further details, see the [Manually Registering OData V4 Services](register#registration-form) section of *How to Register Data Assets*)
 
@@ -37,7 +37,7 @@ The functionality of the Data Hub Catalog reflects the process of sharing data i
 
 ### 3.1 Search – Finding Connectable Entities
 
-Users can find shared data by searching the Data Hub Catalog. The [search](search) features include results that are project-relevant in order of most popular services, and results can be refined by using filters. Full details of the registered services are displayed to help in deciding on the suitability of the data associated with a registered entity.
+Users can find shared datasets by searching the Data Hub Catalog. The [search](search) features include results that are project-relevant in order of most popular services, and results can be refined by using filters. Full details of the registered services are displayed to help in deciding on the suitability of the data associated with a registered entity.
 
 The Data Hub Catalog search functionality is integrated into Mendix Studio Pro through the [Data Hub pane](/refguide/data-hub-pane) for finding registered services and entities to use when developing apps.
 
@@ -45,7 +45,7 @@ For more details, see [How to Search for Registered Assets](search).
 
 ### 3.2 Consume – Using Registered Entities
 
-Services and their exposed entities registered in the Data Hub Catalog can be accessed in Mendix Studio Pro to [build apps](/refguide/modeling). These external sources of data are represented in the domain model as external entities which can be used with regular entities, with the difference that external entities connect to data that is maintained externally and therefore can only be consumed.
+Registered assets in the Data Hub Catalog can be accessed in Mendix Studio Pro to [build apps](/refguide/modeling). These external data sources are represented in the domain model as *external entities* which can be used with local entities with the difference that external entities connect to data that is maintained externally and therefore can only be consumed.
 
 For further information on consuming from the Data Hub Catalog, see [How to Consume Registered Assets](consume). For details on using shared entities in Studio Pro, see [Data Hub Pane](/refguide/data-hub-pane) in the *Studio Pro Guide*.
 

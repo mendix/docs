@@ -99,7 +99,7 @@ The **Toolbox**, **Properties** , and **Buzz** tabs are described in the table b
 | ------------ | ------------------------------------------------------------ |
 | Toolbox      | Shows tools available for the current editor.                |
 | Properties   | Shows the properties of the selected item.                   |
-| [Buzz](buzz) | Allows an app development team to make comments to different pages, microflows, domain models, and layouts of Studio, and interact with each other. |
+| [Buzz](collaboration-buzz) | Allows an app development team to make comments to different pages, microflows, domain models, and layouts of Studio, and interact with each other. |
 
 ## 7 Top Menu Bar
 

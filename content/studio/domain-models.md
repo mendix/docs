@@ -70,7 +70,7 @@ Entities have the following properties:
 
     ![General Properties of an Entity](attachments/domain-models/entity-general-properties.png)
 
-* **Stored Information** properties define whether the information about the entity is stored in the database. If the information is stored, it can be retrieved afterwards and can be used in [page filters](filters). For example, you can add a filter and show only objects that were created by the current user. 
+* **Stored Information** properties define whether the information about the entity is stored in the database. If the information is stored, it can be retrieved afterwards and can be used in [page filters](data-filters). For example, you can add a filter and show only objects that were created by the current user. 
 
     You can toggle the following properties: 
 

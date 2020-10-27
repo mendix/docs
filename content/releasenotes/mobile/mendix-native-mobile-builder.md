@@ -9,13 +9,13 @@ description: "Mendix Native Mobile Builder release notes."
 
 The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Studio Pro, which helps you build your Mendix native mobile app. After the Mendix Native Mobile Builder simplifies your build process, you can do what you want most: test and publish your app. The Mendix Native Mobile Builder uses MxBuild, GitHub, and App Center to simplify the app building process and is directly accessible via Mendix Studio Pro. 
 
-# 1.0.49
+## 1.0.49
 
 **Release date: October 27th, 2020**
 
 This marks the initial release of the Mendix Native Mobile Builder UI tool. It is included in Mendix Studio Pro v8.15 and higher.
 
-#### Features
+### Features
 
 With a few clicks you can:
 
@@ -29,7 +29,7 @@ With a few clicks you can:
 
 We are working on more features internally, so stay tuned.
 
-#### Background Updates
+### Background Updates
 
 The Mendix Native Mobile Builder supports background updates. That means it needs to be installed once and it will update itself as soon as there is a newer version.
 This auto-update functionality allows us to push a new version as soon as new features are ready to be shipped.

@@ -8,11 +8,11 @@ tags: ["data hub", "data hub catalog"]
 
 ## 1 Introduction
 
-Finding the right data to use in your app is made easier by the Data Hub Catalog search functionality. The metadata for a registered service is displayed in the [Search Details](#search-details) screen to help in identifying the correct data source to use to use in your app development. 
+Finding the right data to use in your app is made easier by the Data Hub Catalog search functionality. The metadata for a registered service is displayed in the [search details](#search-details) screen to help in identifying the correct data source to use to use in your app development. 
 
-You can start searching from the **Data Hub** [Home](#data-hub-home) page or click the Data Hub [Catalog](#search-tab) tab to go to the **Search** pane and **Search Details** screen.
+You can start searching from the [Data Hub](#data-hub-home) page or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Search Details** screen.
 
-The [Data Hub pane](/refguide/data-hub-pane) in Studio Pro enables search in the Data Hub Catalog to use and connect to registered entities from your Mendix app.
+The [Data Hub pane](/refguide/data-hub-pane) in Studio Pro enables search in the Data Hub Catalog to find and connect to registered entities from your Mendix app.
 
 This page describes the search functionality of the Data Hub Catalog and the the information that is available.
 
@@ -30,11 +30,11 @@ For details on creating a published OData service in Studio Pro, see [How to Reg
 
 Every published OData service has a version number, and apps consuming from a service will consume from a specific version. Updates and changes to a service will be indicated by a change in the version number. There may be several versions of a service available in the catalog. These will all be listed as separate items in the search results for a service.
 
-The [search details](#search-details) screen in the Data Hub Catalog will the version of the selected service.
+The [search details](#search-details) screen in the Data Hub Catalog will include the version of the selected service.
 
 ### 2.3 Environments
 
-The Data Hub Catalog is a register of apps that are deployed to a particular environment and the services published from the apps deployed to an environment. This means that the catalog registers the version of a service running in a specific environment. 
+The Data Hub Catalog is a register of apps that are deployed to a particular environment and the services published from the apps deployed to the environment. This means that the catalog registers the version of a service running in a specific environment. The environmetn also indicates the quality of the dataset that is available. Shared datasets that are available from a *production environment* will have production-level data, while those in non-production environments (*acceptance*, *development*) will not be reliable for building stable apps but be useful for doing development work.
 
 The search results will show these service endpoints (where a service endpoint is the combination of a service version deployed on a specific environment). So if a version of a service is deployed on both a test and acceptance environment, a search on the service name in the Data Hub Catalog will have two hits. 
 
@@ -85,12 +85,12 @@ When searching in the Data Hub Catalog, the following fields are searched:
 * Attribute: Name, Description
 * Association: Name
 
-On the **Data Hub Home** page, you can search in the Data Hub Catalog in the following ways:
+From the **Data Hub** page, you can search in the Data Hub Catalog in the following ways:
 
-![](attachments/search/data-hub-home-search.png)
+![](../share-data/attachments/share-data/data-hub-home.png)
 
-* Type a search term in the search box and click **Search** (search strings can only include the alphanumeric characters that are allowed for service names or entity names)
-* Click one of the tags given in the **Search suggestions**
+* Type a search term in the search box and click **Search** (search strings can comprise a minimum of 3 characters and include the alphanumeric characters)
+* Click one of the *tags* given in the **Search suggestions**
 * Click one of the services under  **Most Popular Services**
 * Click the **Catalog** tab
 
@@ -98,7 +98,7 @@ Any of the above actions will take you to the **Search** screen, which is descri
 
 ## 4 Search Screen {#search-tab}
 
-The **Search** screen is divided into the [Search](#search-pane) pane, the [Search Details](#search-details) page, and the [Service Metadata](#metadata) panel.
+The **Search** screen is divided into the [search](#search-pane) pane on the left, the [search details](#search-details) of the selected asset in the centre panel, and the [service metadata](#metadata) panel on the right.
 
 ![](attachments/search/search-details-page.png)
 
@@ -108,10 +108,12 @@ The collapsable **Search** pane is used to search for registered assets in the D
 
 #### 4.1.1 Search Area
 
-Enter a search term in the **Search** area comprising alpha-numeric characters.
+Enter a search term in the **Search** area of minimum 3 characters using alpha-numeric characters.
+
+In Studio Pro, searching the Data Hub Catalog through the **Data Hub** pane requires use of the wildcard `*` for an empty search. It is not possible to use the wildcard in combination with other characters. The wildcard can also be used in the Data Hub Catalog search but it is not necessary. 
 
 {{% alert type="info" %}}
-Punctuation cannot be used as part of the search term. 
+Punctuation cannot be used as part of the search term except for the  the wildcard `*`. 
 {{% /alert %}}
 
 {{% alert type="info" %}}
@@ -127,7 +129,7 @@ To refine search results, you can click **Add Filter**:
 In the **Add Filters** dialog box,  select the **Environment Type** that you want to confine your search to and click **Apply Filters**. The search results will only display hits for the specified search string in the checked environments.
 
 {{% alert type="info" %}}
-The **Sandbox** filter refers to the Mendix Free App environment. 
+The **Sandbox** filter refers to apps deployed to the Mendix Free App environment. 
 {{% /alert %}}
 
 #### 4.1.3 Search Results
@@ -140,10 +142,6 @@ The number of items satisfying the search criteria (search string plus filters) 
 If no search string is specified, all registered services will be listed in the search results in the above order showing the first five entities for each service.
 
 When an item in the search results is selected, the **Catalog** tab will show the **Search details** and the **Landscape** tab will show the network of connections and dependencies of the selected item in the [Data Hub Landscape](../data-hub-landscape/index).
-
-{{% alert type="info" %}}
-In Studio Pro, searching the Data Hub Catalog through the **Data Hub** pane requires use of the wildcard `*` for an empty search. It is not possible to use the wildcard in combination with other characters. The wildcard can also be used in the Data Hub Catalog search but it is not necessary. 
-{{% /alert %}}
 
 ### 4.2 Search Details {#search-details}
 
@@ -199,19 +197,37 @@ The service metadata panel at the right of the search details page displays deta
 
 	{{% alert type="info" %}}Classifications at a service level propagate down to the entities and attributes exposed in the service.  {{% /alert %}}
 	
-* **Discoverability** – if the service is published for use by other users:
-	* **Discoverable** – all users of Data Hub Catalog and Studio Pro can see and consume the service 
-	* **Non-Discoverable** – the service is not visible and only owners of the service, Data Hub Curators, and Data Hub Admins can find and use the service
+* **Discoverability** – the discoverability of the service so that other users can find it:
 	
-	{{% alert type="info" %}}By default, newly registered services are set to **Discoverable** and visible to all users. **Discoverability** is curated in the Data Hub Catalog. For more information see [Curation](./curate) {{% /alert %}}
-
+	* **Discoverable** – all users of Data Hub Catalog and Studio Pro can see and consume the service 
+* **Non-Discoverable** – the service is not visible and only owners of the service, Data Hub Curators, and Data Hub Admins can find and use the service
+	 See [Curate Bar](#curate-bar) for changing **DIscoverability** as an owner of the service or curator.
+	
 * **Environment Type** – specifies if the environment is a **Production** or **Non-Production** environment and therefore indicates the status of the dataset associated with the exposed entities
-* **Application** – link to the app from which the OData service was published in the given environment
-* **Business Owner** – links to the business owner of the data that the service connects to; this is curated in the Data Hub Catalog
-* **Technical Owner** – technical owner of the app; by default this is the owner who registered the service, but this can be changed in the Data Hub Catalog
-*  **Tags** – tags that have been assigned to the service
 
+* **Application** – link to the app from which the OData service was published in the given environment
+
+* **Business Owner** – links to the business owner of the data that the service connects to; this is curated in the Data Hub Catalog
+
+* **Technical Owner** – technical owner of the app; by default this is the owner who registered the service, but this can be changed in the Data Hub Catalog
+
+*  **Tags** – tags that have been assigned to the service when it has been [curated](curate#tags)
+	
 	{{% alert type="info" %}}Tags assigned at a service level propagate down to the entities and attributes exposed in the service.{{% /alert %}}
+### 4.4 Curate Bar {#curate-bar}
+
+If you are the owner of the selected asset or a curator, then the curate bar will also be displayed above the search details indicating that you can curate the asset. You can perform the following actions:
+* **Edit Metadata** – edit the registered metadata and add catalog descriptions and tags: 
+  * when a service is selected, you can edit **Application Details**, and **Service Details**
+  *  when an entity is selected you can **Edit Entity Details**
+* **Discoverable**/**Validated** – set the discoverability of the service so that other users can find it, and validate the dataset
+  * **Discoverable** – all users of Data Hub Catalog and Studio Pro can see and consume the service 
+  * **Non-Discoverable** – the service is not visible and only owners of the service, Data Hub Curators, and Data Hub Admins can find and use the service
+  * **Validated** – indicate if the dataset has been validated
+
+{{% alert type="info" %}}By default, newly registered services are set to **Discoverable** and visible to all users. {{% /alert %}}
+
+For further details see  [Curation](./curate).
 
 ## 5 Viewing Search Results in the Data Hub Landscape
 

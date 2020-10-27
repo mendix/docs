@@ -112,7 +112,7 @@ To edit the service metadata of a selected service, follow these steps:
 	{{% alert type="info" %}}If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. 
 	{{% /alert %}}
 
-### 4.3 Adding or Editing Tags for a Service
+### 4.3 Adding or Editing Tags for a Service{#tags}
 
 Add tags to categorize a registered service and provide additional means for finding the service. Tags that are specified for a service also apply to the entities and attributes that are exposed in the service. Specify tags for the selected service by following these steps:
 

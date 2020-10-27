@@ -47,7 +47,6 @@ Separate profiles are available for building [offline apps](offline). These apps
 
 * [Configuring Hybrid Mobile Apps To Run Offline](configuring-hybrid-mobile-apps-to-run-offline)
 * [Customizing Hybrid Mobile Apps](customizing-hybrid-mobile-apps)
-* [Customizing PhoneGap Build Packages](customizing-phonegap-build-packages)
 * [Developing Hybrid Mobile Apps](developing-hybrid-mobile-apps)
 * [Getting the Mendix Mobile App](getting-the-mendix-app)
 * [Managing App Signing Keys](managing-app-signing-keys)

@@ -61,7 +61,7 @@ On the right side of the screen, you can find the following action buttons:
 In Mendix Cloud v4 environments, you have two additional action buttons:
 
 * **View Live Log**
-* **Show debugger information** – shows the settings needed to connect the debugger in Studio Pro to your app — for Mendix Cloud v4, the debugger is *always* enabled
+* **Show debugger information** – shows the settings needed to connect the debugger in Studio Pro to your app — for Mendix Cloud v4, the debugger is *always* enabled — for more information on debugging in the cloud, see [How To Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely)
 
 #### 2.1.2 Logging and Debugging in Mendix Cloud v3
 
@@ -242,7 +242,17 @@ The changes to the headers will be implemented when the app is redeployed.
 
 Additional information can be found in the Mozilla developer guide [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
 
-#### 4.2.1 Running Your App in an Iframe{#iframe}
+#### 4.2.1 HTTP Response Headers Inserted Automatically
+
+A number of non-configurable response headers are added automatically by Mendix and the deployment environment. These are listed below.
+
+| Response Header | Added in |
+| --- | --- |
+| cache-control| the buildpack for index.html and login.html — the Mendix Runtime for other pages |
+| strict-transport-security | TLS terminating webservers - this is set to `max-age=31536000` |
+| x-vcap-request-id | Cloud Foundry to track requests through CF |
+
+#### 4.2.2 Running Your App in an Iframe{#iframe}
 
 Most browsers have additional security to ensure that iframes are only allowed when they are from the same domain as the main page. The defaults for these vary by browser version. This security is controlled through SameSite cookies. You can find a good explanation of SameSite cookies in [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) on the *web.dev* website.
 
@@ -250,11 +260,11 @@ Most browsers have additional security to ensure that iframes are only allowed w
 There can be additional issues when using cookies in iframes for end-users using the **Safari** browser. Resolving these issues is outside the control of Mendix. See the [Full Third-Party Cookie Blocking and More](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) blog post on *Webkit.org* for more information.
 {{% /alert %}}
 
-##### 4.2.1.1 Using Custom Domains
+##### 4.2.2.1 Using Custom Domains
 
 To avoid security issues when you want to embed the app in an iframe, we recommend that you use [custom domains](custom-domains) to ensure that the app you want to embed is part of the same domain. For example, if your page is mainpage.domain.name, then the app embedded in the iframe should be appname.domain.name.
 
-##### 4.2.1.2 Applying a Different SameSite Setting
+##### 4.2.2.2 Applying a Different SameSite Setting
 
 From **Mendix version 8.12**, you can control the value of SameSite in your cookies. The default for all cookies is `SameSite=None`, which means that they can be used in an iframe. You can change this value in the `com.mendix.core.SameSiteCookies` [custom runtime setting](#custom-runtime-settings) if you want to add restrictions to apps running outside iframes.
 
@@ -264,7 +274,7 @@ For **Mendix versions below 8.12** there was no SameSite value set on cookies an
 The SAMESITE_COOKIE_PRE_MX812 setting will only be implemented the next time your app is deployed.
 {{% /alert %}}
 
-##### 4.2.1.3 Using Custom Sign In Pages
+##### 4.2.2.3 Using Custom Sign In Pages
 
 If you use a custom sign in page, your **index.html** will probably set the `originURI` cookie. If your Mendix app runs within an iframe, this cookie needs to be set with the `SameSite=None` and `Secure` attributes.
 

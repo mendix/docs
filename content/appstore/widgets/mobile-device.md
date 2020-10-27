@@ -45,7 +45,7 @@ In some cases, it is important that end-users have downloaded the latest and cor
 
 ### 1.3 Dependencies
 
-* Add the [cordova-plugin-app-version](https://github.com/whiteoctober/cordova-plugin-app-version) to your [PhoneGap](/howto/mobile/customizing-phonegap-build-packages) app with this: `<plugin name="cordova-plugin-app-version" source="npm" spec="0.1.8" />`
+* Add the [cordova-plugin-app-version](https://github.com/whiteoctober/cordova-plugin-app-version) to your [locally built](/howto/mobile/customizing-phonegap-build-packages) app with this: `<plugin name="cordova-plugin-app-version" source="npm" spec="0.1.8" />`
 
 ### 1.4 Demo App Project
 

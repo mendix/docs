@@ -3,12 +3,12 @@ title: "MxBuild"
 category: "General Info"
 menu_order: 50
 description: "Describes MxBuild which is a command-line tool for building and deploying Mendix Apps"
-tags: ["Build", "Deploy", "deployment package", "command-line", "studio pro"]
+tags: ["build", "deploy", "deployment package", "command-line", "studio pro"]
 ---
 
 ## 1 Introduction
 
-MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package from a Mendix Project.
+MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package from a Mendix project.
 
 The version of MxBuild which you need is dependent on the version of the Mendix model you want to build. You can find your correct MxBuild by entering this URL into a browser and replacing `mxversion` with your own, full Mendix version number: `https://cdn.mendix.com/runtime/mxbuild-{mxversion}.tar.gz`.
 
@@ -25,14 +25,13 @@ Any public version of Studio Pro in this  [Studio Pro Releases List](https://app
 You can extract the files using your favorite archival tool, such as [7-Zip](https://www.7-zip.org/).
 
 For details on the system requirements for MxBuild, see [System Requirements](system-requirements#mxbuild).
-
 ## 2 Command Line
 
 To build your package, you specify the Mendix Project file (.mpr) for which you want to build the deployment package (.mda) on the command-line. The file name may be preceded by a relative or absolute path. The project file should be located inside a Mendix project directory.
 
 MxBuild takes a number of command-line options which control how the Mendix project is processed. These options precede the name of the project file.
 
-This is the format for the command line:
+Use the following format for the command line:
 
 `MxBuild --java-home="JDKDirectory" --java-exe-path="javaExecutable" [options] projectFile`
 
@@ -40,17 +39,16 @@ After creating the deployment package, the MxBuild process quits.
 
 ### 2.1 General Command-Line Options
 
-<!-- Note to editor: the &nbsp; here makes the column wider so that options are not broken at hyphens
-  The alternative of using non-breaking hyphens means that a cut and paste may not work -->
+Command-line options are described in the table below:
 
 | Option&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Description |
 | --- | --- |
-| `-h`, `--help` | prints a short description of MxBuild and a list of all available options. |
-| `--java-home=DIRECTORY` | (required) the directory in which the JDK is installed<br/>for example: `--java-home=/usr/lib/jvm/java-8-oracle`<br/>for Windows the *DIRECTORY* should be enclosed in double-quotes, `"`.|
-| `--java-exe-path=FILENAME` | (required) the **full path** to the Java executable<br/>for example `--java-exe-path=/usr/lib/jvm/java-8-oracle/bin/java`<br/>for Windows the *DIRECTORY* should be enclosed in double-quotes, `"`, and must contain the complete file name `...\java.exe`.|
-| <code>––target=[package&#124;deploy]</code> | `package` (default if option is omitted): create a deployment package (.mda file)<br/>`deploy`: make a deployment of the project without making a deployment package. |
-| `--loose-version-check` | create a deployment package from a project which was created with a lower Mendix version.<br/>The project will be upgraded to the MxBuild version before the deployment package is created.<br /> Any changes included as a result of this upgrade will **not** be stored in your project. |
-| `--write-errors=FILENAME` | Write all errors, warnings and deprecations encountered during deployment of the project to the specified file in JSON format.<br />This file is only written when the project contains errors.<br />If the file already exists, it will be overwritten without warning.<br />See the [Project Errors](#project-errors) section, below, for a description of the format of this file. |
+| `-h`, `--help` | Prints a short description of the MxBuild and a list of all available options. |
+| `--java-home=DIRECTORY` | (Required). The directory in which the JDK is installed.<br/>For example, `--java-home=/usr/lib/jvm/java-8-oracle`.<br/>For Windows the *DIRECTORY* should be enclosed in double-quotes `"`. |
+| `--java-exe-path=FILENAME` | (Required). The **full path** to the Java executable.<br/>For example, `--java-exe-path=/usr/lib/jvm/java-8-oracle/bin/java`.<br/>For Windows the *DIRECTORY* should be enclosed in double-quotes `"`, and must contain the complete file name `...\java.exe`. |
+| <code>––target=[package&#124;deploy]</code> | `package`: default if option is omitted. Creates a deployment package (.mda file)<br/>`deploy`: deploys the project without making a deployment package. |
+| `--loose-version-check` | Creates a deployment package from a project which was created with a lower Mendix version.<br/>The project will be upgraded to the MxBuild version before the deployment package is created.<br /> Any changes included as a result of this upgrade will **not** be stored in your project. |
+| `--write-errors=FILENAME` | Writes all errors, warnings, and deprecations encountered during deployment of the project to the specified file in JSON format.<br />This file is only written when the project contains errors.<br />If the file already exists, it will be overwritten without a warning.<br />For a description of the format of this file, see the [Project Errors](#project-errors) section below. |
 
 ### 2.2 Options When Creating a Package
 
@@ -58,14 +56,16 @@ After creating the deployment package, the MxBuild process quits.
 The following options are only applicable with the `--target=package` option:
 {{% /alert %}}
 
+Options when creating a package are described in the table below;
+
 | Option&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Description |
 | --- | --- |
-| `-o FILENAME` or<br/>`--output=FILENAME` | The name (with optional relative or absolute path) of the .mda file that is created by MxBuild.<br />If this option is omitted, the file will be saved in the *current* directory with the name `out.mda`. |
-| `--project-name=NAME` | Change the name of the application as used by the Mendix Runtime.<br />When this option is not specified, the name of the project is used. |
-| `--model-version=VERSION` | Apply a specific version number to the model in the package. |
-| `--model-description=DESCRIPTION` | Embed a description of the model in the package. |
+| `-o FILENAME` or<br/>`--output=FILENAME` | The name (with optional relative or absolute path) of the .mda file that is created by MxBuild.<br />If this option is omitted, the file will be saved in the *current* directory under a name `out.mda`. |
+| `--project-name=NAME` | Changes the name of the application to the one used by the Mendix Runtime.<br />When this option is not specified, the name of the project is used. |
+| `--model-version=VERSION` | Applies a specific version number to the model in the package. |
+| `--model-description=DESCRIPTION` | Embeds a description of the model in the package. |
 
-For example, to create a deployment package `out.mda` in the current directory using the app `MyApp` using the *Windows* version of MxBuild, you could use the command:
+For example, to create a deployment package `out.mda` in the current directory using the app `MyApp` using the *Windows* version of MxBuild, you can use the following command:
 
 ```bat
 mxbuild --target=package --java-home="C:\Program Files\Java\jdk1.8.0_144" --java-exe-path="C:\Program Files\Java\jdk1.8.0_144\bin\java.exe" "C:\Users\username\Documents\Mendix\MyApp\MyApp.mpr"
@@ -77,13 +77,13 @@ When MxBuild exits, one of the following codes will be returned:
 
 | Exit Code | Description |
 | --- | --- |
-| 0 | MxBuild finished successfully |
-| 1 | An internal error occurred |
-| 2 | There's something wrong with the command-line options |
-| 3 | Deployment of the Mendix project failed |
+| 0 | MxBuild finished successfully. |
+| 1 | An internal error occurred. |
+| 2 | There is something wrong with the command-line options. |
+| 3 | Deployment of the Mendix project failed. |
 
 
-If the exit code is larger than 0, MxBuild will also output a message describing the error.
+If the exit code is larger than 0, MxBuild will show you the message describing the error.
 
 ## 4 Project Errors {#project-errors}
 
@@ -116,9 +116,9 @@ The following table describes the various properties of the *problems* JSON obje
 
 | Property | Description |
 | --- | --- |
-| `name` | A unique identifier of the problem, or `null` when the consistency check is not yet defined in the Mendix Metamodel. |
-| `severity` | Describes the type of problem: `Warning`, `Error` or `Deprecation`. |
-| `message` | The description of the problem. This is the same as the message in the 'Errors' dock of Mendix Studio Pro. |
+| `name` | A unique identifier of the problem or `null` when the consistency check is not yet defined in the Mendix Metamodel. |
+| `severity` | Describes the type of problem: `Warning`, `Error`, or `Deprecation`. |
+| `message` | The description of the problem. This is the same as the message in the [Errors pane](errors-pane) of Mendix Studio Pro. |
 | `locations` | Contains zero or more objects that describe the location in the Mendix project where the problem occurs (see the following table). |
 
 The location(s) associated with the problem have the following properties:

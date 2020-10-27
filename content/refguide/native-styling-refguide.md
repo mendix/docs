@@ -103,8 +103,11 @@ The widget’s style properties are as follows:
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | All ViewStyle properties |       |
-| `container` | `numColumns` | This is the number of columns that the list should render (this defaults to 1). |
+| `container` | `numColumns` | This is the number of columns that the list should render (defaults to 1). |
 | `listItem`  | All ViewStyle properties |          |
+| `listItem`  | `rippleColor` | This is the color of the ripple on Android, and will be applied only when the item has an on click action set, otherwise it will be ignored (defaults to `rgba(0, 0, 0, 0.2)`). |
+| `listItem`  | `underlayColor` | This is the color while pressing the item on iOS, and will be applied only when the item has an on click action set, otherwise it will be ignored and defaulted to opacity only. |
+| `listItemDisabled`  | Same properties as `listItem` | Overrides `listItem` styles if the item has an on click action and the action cannot be executed or is disabled during action. |
 
 The default class to style all list views is named `ListView`.
 
@@ -142,8 +145,11 @@ The image widget can be used to show a predefined image on a page, layout, or sn
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties.  |       |
+| `container`  | `rippleColor` | This is the color of the ripple on Android, and will be applied only when the container has an on click action set, otherwise it will be ignored (defaults to `rgba(0, 0, 0, 0.2)`). |
+| `container`  | `underlayColor` | This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only. |
+| `containerDisabled` | Same properties as `container` | Overrides `container` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
 | `image`     | This has all ImageStyle properties. |       |
-
+| `imageDisabled` | Same properties as `image` | Overrides `image` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
 
 The default class to style all static image styles is named `Image`. Please note that images loaded from the model are styled with `NativeDynamicImage` as described in the [Image Viewer](#image-viewer) section below.
 
@@ -223,7 +229,9 @@ A container widget can be used to style or hide a group of widgets. This widget 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |        |
-| `container` | `rippleColor` | This is the color of the ripple on Android, and will be applied only when the container has an on-click action set, otherwise it will be ignored (this defaults to `rgba(0, 0, 0, 0.2)`). |
+| `container` | `rippleColor` | This is the color of the ripple on Android, and will be applied only when the container has an on click action set, otherwise it will be ignored (defaults to `rgba(0, 0, 0, 0.2)`). |
+| `container`  | `underlayColor` | This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only. |
+| `containerDisabled` | Same properties as `container` | This overrides `container` styles if the there is an on click action set and the action cannot be executed or is disabled during action. |
 
 The default class to style all page titles is named `Container`.
 
@@ -240,6 +248,7 @@ This is how the widget’s code is structured:
 	<tabBar>
 		<tab>
 			<activeLabel>PAGE 1</activeLabel>
+			<badgeContainer><badgeCaption /></badgeContainer>
 		</tab>
 		<tab>
 			<label>PAGE 2</label>
@@ -265,6 +274,8 @@ The widget’s style properties are as follows:
 | `tab`       | This has all ViewStyle properties. |     |
 | `label`     | This has all TextStyle properties. |     |
 | `activeLabel`     | This has all TextStyle properties. |     |
+| `badgeContainer`  | This has all ViewStyle properties. |     |
+| `badgeCaption`    | This has all TextStyle properties. |     |
 
 The default class to style all tab containers is named `TabContainer`.
 
@@ -311,6 +322,7 @@ The widget’s style properties are structured as follows:
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties.   |   |
+| `containerDisabled` | Same properties as `container` | Overrides `container` styles if the text box is non-editable. |
 | `input` | This has all TextStyle properties. |  |
 | `input` | `autoCapitalize` | This automatically capitalizes certain characters when the user types:<br><br>* `characters`: capitalizes all characters<br>* `words`: capitalizes the first letter of each word<br>* `sentences`: capitalizes the first letter of each sentence (default)<br>* `none`: capitalizes nothing |
 | `input` | `placeholderTextColor` | This is the text color of the placeholder string. |
@@ -320,7 +332,8 @@ The widget’s style properties are structured as follows:
 | `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
 | `inputDisabled` | Same properties as `input` | Overrides `input` styles if the text box is non-editable. |
 | `label` | This has all TextStyle properties |   |
-| `label` | `numberOfLines` | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (this defaults to 1). |
+| `label` | `numberOfLines` | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (defaults to 1). |
+| `labelDisabled` | Same properties as `label` | Overrides `label` styles if the text box is non-editable. |
 | `validationMessage` | This has all TextStyle properties.   |    |
 
 The default class to style all text boxes is named `TextBox`.
@@ -385,8 +398,10 @@ The widget’s render hierarchy is as follows for uniform:
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |  |
+| `containerDisabled` | Same properties as `container` | Overrides `container` styles if the drop-down is non-editable. |
 | `label` | This has all TextStyle properties. | |
 | `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
+| `labelDisabled` | Same properties as `label` | Overrides `label` styles if the drop-down is non-editable. |
 | `pickerIOS` | This has all ViewStyle properties. |  |
 | `pickerBackdropIOS` | This has all ViewStyle properties. |   |
 | `pickerTopIOS` | This has all ViewStyle properties. |   |
@@ -403,7 +418,6 @@ The widget’s render hierarchy is as follows for uniform:
 | `item` | This has all TextStlye properties | Styles all the items in dropdown menu including selected item (with Studio v8.11).|
 | `selectedItem` | This has all TextStyle properties | Styles the selected item in dropdown menu (with Studio v8.11).|
 | `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio v8.11).|
-
 
 ### 6.4 Check Box 
 
@@ -434,6 +448,7 @@ The widget’s style properties structure is as follows:
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties.   |   |
+| `containerDisabled` | Same properties as `container` | Overrides `container` styles if the text box is non-editable. |
 | `input` | This has all TextStyle properties.   |   |
 | `input` | `trackColorOn` | Custom color for the switch track when turned on. |
 | `input` | `trackColorOff` | Custom color for the switch track when turned off. |
@@ -443,6 +458,7 @@ The widget’s style properties structure is as follows:
 | `inputDisabled` | This has the same properties as `input` | Overrides `input` styles if the check box is non-editable. |
 | `label` | This has all TextStyle properties   |  |
 | `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
+| `labelDisabled` | Same properties as `label` | Overrides `label` styles if the check box is non-editable. |
 | `validationMessage` | This has all TextStyle properties.   |  |
 
 The default class to style all check box inputs is named `Checkbox`.
@@ -460,19 +476,32 @@ The widget’s style properties are as follows:
 	<label>Drop down enumeration</label>
 	<value>Content invalid</value>
 	<validationMessage>Validation feedback enumeration</validationMessage>
+	<pickerBackdropIOS>iOS picker modal shadow container
+		<pickerIOS>iOS picker
+			<pickerTopIOS>iOS picker modal header</pickerTopIOS>
+		</pickerIOS>
+	</pickerBackdropIOS>
 </container>
 ```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |  |
+| `containerDisabled` | Same properties as `container` | Overrides `container` styles if the date picker is non-editable. |
 | `label` | This has all TextStyle properties. |  |
-| `label`  | `numberOfLines` | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis ( this defaults to `1`.) |
+| `label`  | `numberOfLines` | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (defaults to `1`.) |
+| `labelDisabled` | Same properties as `label` | Overrides `label` styles if the date picker is non-editable. |
 | `value` | This has all TextStyle properties |  |
+| `value` | `rippleColor` | This is the color of the ripple on Android, and will be applied only when the date picker is pressed (defaults to `rgba(0, 0, 0, 0.2)`). |
+| `value`  | `underlayColor` | This is the color while pressing the date picker on iOS, if not set it will be defaulted to opacity only. |
 | `valueDisabled` | This has all TextStyle properties | Overrides `value` styles if the date picker is non-editable. |
 | `placeholder` | This has all TextStyle properties |   |
 | `placeholderDisabled` | This has all TextStyle properties | Overrides `placeholder` styles if the date picker is non-editable. |
 | `validationMessage` | This has all TextStyle properties |  |
+| `pickerBackdropIOS` | This has all ViewStyle properties |  |
+| `pickerIOS` | This has all ViewStyle properties |  |
+| `pickerIOS` | `color` |  |
+| `pickerTopIOS` | This has all ViewStyle properties |  |
 
 The default class to style all date picker inputs is named `DatePicker`.
 
@@ -513,11 +542,15 @@ The widget’s style properties are as follows:
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |    |
-| `container` | `rippleColor` | This is the color of the ripple on Android (this defaults to `rgba(0, 0, 0, 0.2)`). |
+| `container` | `rippleColor` | This is the color of the ripple on Android (defaults to `rgba(0, 0, 0, 0.2)`). |
+| `container`  | `underlayColor` | This is the color while pressing the button on iOS, if not set it will be defaulted to opacity only. |
+| `containerDisabled` | Same properties as `container` | Overrides `container` styles if the button has on click action set and it cannot be executed or is set with `Disable during action`. |
 | `caption` | This has all TextStyle properties. |   |
+| `captionDisabled` | Same properties as `caption` | Overrides `caption` styles if the button has on click action set and it cannot be executed or is set with `Disable during action`. |
 | `icon` | This has all ViewStyle properties. |   |
-| `icon` | `size` | This is the size of the button icon (this defaults to `12`). |
+| `icon` | `size` | This is the size of the button icon (defaults to `12`). |
 | `icon` | `color` | This is the color of the button icon. |
+| `iconDisabled` | Same properties as `icon` | Overrides `icon` styles if the button has on click action set and it cannot be executed or is set with `Disable during action`. |
 
 The default class to style all actions buttons is named `ActionButton`. However, an action button in a header has the default class `ActionButtonHeader`.
 
@@ -605,8 +638,8 @@ The widget’s style properties are as follows:
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |  |
-| `indicator` | `color` | This is the color of the indicator (this defaults to `gray`). |
-| `indicator` | `size` | Possible values for indicator are `large` and `small` (this defaults to `large`). |
+| `indicator` | `color` | This is the color of the indicator (defaults to `gray`). |
+| `indicator` | `size` | Possible values for indicator are `large` and `small` (defaults to `large`). |
 
 The default class to style all activity indicators is named `com_mendix_widget_native_activityindicator_ActivityIndicator`.
 
@@ -630,7 +663,7 @@ The widget’s style properties are as follows:
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |  |
 | `image` | This has all ImageStyle properties. |  |
-| `image` | `svgColor` | Property to set the color of an SVG image (this defaults to `black`). |
+| `image` | `svgColor` | Property to set the color of an SVG image (defaults to `black`). |
 
 The default class to style all background images is named `com_mendix_widget_native_backgroundimage_BackgroundImage`.
 
@@ -659,9 +692,22 @@ The default class to style all badges is named `com_mendix_widget_native_badge_B
 
 The barcode scanner widget allows your app to scan barcodes and QR codes. This widget renders a camera view in a styleable container.
 
+The widget's style properties are as follows:
+
+```javascript
+<container>
+        <mask />
+<container />
+```
+
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |  |
+| `mask` | This only allows the properties below. |  |
+| `mask` | `color` | Property to set the color of the mask border indicators (defaults to `#62B1F6`). |
+| `mask` | `width` | Property to set the width of the barcode reader. |
+| `mask` | `height` | Property to set the height of the barcode reader. |
+| `mask` | `backgroundColor` | Property to set the background color of the mask (defaults to `rgba(0, 0, 0, 0.6)`). |
 
 The default class to style all barcode scanner widgets is named `com_mendix_widget_native_barcodescanner_BarcodeScanner`.
 
@@ -1124,7 +1170,7 @@ The widget’s style properties are as follows:
 
 The default class to style all bottom sheet widgets is named `com_mendix_widget_native_bottomsheet_BottomSheet`.
 
-### 11.23 Popup Menu
+### 11.24 Popup Menu
 
 The popup menu widget allows you to show a context menu exactly where the user taps.
 
@@ -1192,7 +1238,7 @@ A main object has four objects.
 
 The default class to style all popup menus is named `com_mendix_widget_native_popupmenu_PopupMenu`.
 
-### 11.24 Carousel
+### 11.25 Carousel
 
 The carousel widget allows you to show swipeable items in a carousel.
 

@@ -117,6 +117,8 @@ if $package/weight < 1.00 then 0.00 else 5.00`
 * [`hoursBetween`](between-date-function-calls) – the hours between two dates
 * [`daysBetween`](between-date-function-calls) – the days between two dates
 * [`weeksBetween`](between-date-function-calls) – the weeks between two dates
+* [`calendarMonthsBetween`](between-date-function-calls) - the months between two dates
+* [`calendarYearsBetween`](between-date-function-calls) - the years between two dates
 
 ## 12 Add Date Function Calls
 
@@ -165,6 +167,8 @@ See [Parse Integer](parse-integer) for details.
 * [`formatDateTime[UTC]`](parse-and-format-date-function-calls) – converts a date value to a string
 * [`formatTime[UTC]`](parse-and-format-date-function-calls) – converts the time part of a date value to a string
 * [`formatDate[UTC]`](parse-and-format-date-function-calls) – converts the date part of a date value to a string
+* [`dateTimeToEpoch`](parse-and-format-date-function-calls) – converts a date to a long
+* [`epochToDateTime`](parse-and-format-date-function-calls) – converts a long to a date
 
 ## 18 Enumerations in Expressions
 

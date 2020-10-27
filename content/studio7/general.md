@@ -17,37 +17,17 @@ The picture below shows the components of Studio's interface:
 
 ## 2 Opening Studio
 
-### 2.1 Opening Studio via the Developer Portal {#opening-studio-via-dev-portal}
+You can open Mendix Studio [via Developer Portal](#opening-studio-via-dev-portal) or [via Studio Pro](#opening-via-studio-pro). 
 
-You can edit an app in Mendix Studio by opening your app in the [Developer Portal](https://home.mendix.com) and clicking **Edit App** or choosing the **Edit in Studio** option in the drop-down menu of the **Edit App** button. 
+### 2.1 Opening Studio via Developer Portal {#opening-studio-via-dev-portal}
 
-{{% image_container width="350" %}}![](attachments/general/edit-app-button.png)
-{{% /image_container %}}
+You can edit an app in Mendix Studio by opening your app in [Developer Portal](https://home.mendix.com) and clicking **Edit in Studio**:
 
-{{% alert type="warning" %}}
+![](attachments/general/edit-app.jpg)
 
-The drop-down menu on the **Edit App** button is only available for **Free Apps**.
+If you do not see **Edit in Studio**, go to [General Settings](/developerportal/settings/general-settings) in the Developer Portal and [enable Studio](/developerportal/settings/general-settings#web).
 
-Some apps are not suitable for Studio. The following ones are not suitable to run in Studio:<br />
-
-* Apps below **Mendix 7.5** version<br />
-* Apps that are not based on the Atlas UI framework
-
-{{% /alert %}}
-
-When Studio is not enabled, you can click **Edit App** > **Settings**. For more information, see [Developer Portal Settings](../../developerportal/settings/).
-
-![](attachments/general/not-enabled.png)
-
-{{% alert type="info" %}}
-Only Scrum Masters or custom **App Team roles** with the **App Settings** permission are allowed to enable Studio.
-{{% /alert %}}    
-
-On the **Settings** page, Studio can be enabled by upgrading the existing theme of the app to the [Atlas UI](../../howto/front-end/atlas-ui) theme.
-
-![](attachments/general/enabling.png)
-
-### 2.2 Opening Studio via Studio Pro
+### 2.2 Opening Studio via Studio Pro {#opening-via-studio-pro}
 
 You can also open your app in Studio via Studio Pro. Do the following:
 
@@ -56,7 +36,6 @@ You can also open your app in Studio via Studio Pro. Do the following:
 2.  Click the globe icon in the top right corner (only available if Studio is enabled).
 
     ![](attachments/general/globe-icon.png)
-
 
 The app opens in Studio.
 

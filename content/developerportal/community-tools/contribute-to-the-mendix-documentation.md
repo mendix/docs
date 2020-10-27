@@ -116,6 +116,12 @@ The amount of points you gain depends on the size of the documentation contribut
 
 The points are awarded when the pull request is merged.
 
-## 7 Read More
+## 7 Completing Mendix Badges {#CompletionDescription}
+
+Badges represent your achievements in one particular thing, like getting 10 forum upvotes. That will get you the 1-star Someone likes you! badge. Get 100 upvotes and you’ll get your 2-star Someone likes you! badge, and so on. Check out the available badges below.
+
+* Staying up-to-date: This badge requires you to download all 25 latest Studio Pro versions from the mendix App Store.
+
+## 8 Read More
 
 * [Documentation Writing Guidelines](documentation-writing-guidelines)

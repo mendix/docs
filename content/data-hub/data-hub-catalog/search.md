@@ -198,8 +198,10 @@ The service metadata panel at the right of the search details page displays deta
 	{{% alert type="info" %}}Classifications at a service level propagate down to the entities and attributes exposed in the service.  {{% /alert %}}
 	
 * **Discoverability** – the discoverability of the service so that other users can find it:
+	
 	* **Discoverable** – all users of Data Hub Catalog and Studio Pro can see and consume the service 
-	* **Non-Discoverable** – the service is not visible and only owners of the service, Data Hub Curators, and Data Hub Admins can find and use the service
+* **Non-Discoverable** – the service is not visible and only owners of the service, Data Hub Curators, and Data Hub Admins can find and use the service
+	 See [Curate Bar](#curate-bar) for changing **DIscoverability** as an owner of the service or curator.
 	
 * **Environment Type** – specifies if the environment is a **Production** or **Non-Production** environment and therefore indicates the status of the dataset associated with the exposed entities
 
@@ -209,11 +211,10 @@ The service metadata panel at the right of the search details page displays deta
 
 * **Technical Owner** – technical owner of the app; by default this is the owner who registered the service, but this can be changed in the Data Hub Catalog
 
-*  **Tags** – tags that have been assigned to the service
-
-	{{% alert type="info" %}}Tags assigned at a service level propagate down to the entities and attributes exposed in the service.{{% /alert %}}
+*  **Tags** – tags that have been assigned to the service when it has been [curated](curate#tags)
 	
-### 4.4 Curate Bar 
+	{{% alert type="info" %}}Tags assigned at a service level propagate down to the entities and attributes exposed in the service.{{% /alert %}}
+### 4.4 Curate Bar {#curate-bar}
 
 If you are the owner of the selected asset or a curator, then the curate bar will also be displayed above the search details indicating that you can curate the asset. You can perform the following actions:
 * **Edit Metadata** – edit the registered metadata and add catalog descriptions and tags: 

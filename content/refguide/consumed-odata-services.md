@@ -25,7 +25,7 @@ When an external entity is used in an app project, the associated dataset for th
 
 ### 2.1 External Entities
 
-When an external entity is used in an app project, the associated dataset for the entity is retrieved through the OData service and returned. These entities have some limitations compared to persistable entities:
+External entities have some limitations compared to persistable entities:
 
 * External entities are read-only
 * The aggregate functions (average, sum, maximum, minimum) cannot be used on external entities

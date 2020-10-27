@@ -81,7 +81,7 @@ For more flexible HTTP request headers, you can select a microflow that returns 
 
 {{% alert type="info" %}}
 Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For further information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/data-hub/data-hub-catalog/security#http-header-validation) in the *Data Hub Guide*.
-{{% /alert %}}
+
 
 ## 3 Metadata Tab {#metadata}
 
@@ -103,7 +103,11 @@ The following settings are available:
 	* **URL** – click **Edit** to specify the URL for the metadata
 	* **File** – click **Browse** to select an XML metadata file
 
-When downloading the metadata from a URL, the server may request a username and password (basic authentication). In that case, a dialog appears that asks you to enter your username and password. If the metadata file refers to other metadata files on the same server within the same realm, the username and password are re-used. This information is not stored, so if you download the metadata from the same server again, you will have to enter your username and password again. Support for basic authentication was added in version [8.16.0](/releasenotes/studio-pro/8.16).
+Support for basic authentication was added from version [8.16.0](/releasenotes/studio-pro/8.16). When downloading the metadata from a URL, the server may request a username and password (basic authentication). In that case, a dialog box will prompt you to enter your username and password. If the metadata file refers to other metadata files on the same server within the same realm, the username and password are re-used. 
+
+{{% alert type="info" %}}
+This information is not stored, so if you download the metadata from the same server again, you will have to enter your username and password again. 
+{{% /alert %}}
 
 When you import the metadata, you can add external entities from the consumed OData service in the [Data Hub Pane](data-hub-pane).
 

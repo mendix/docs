@@ -69,7 +69,7 @@ The Native Builder needs to communicate with GitHub and App Center. Therefore, m
 4. Add a description of your token, select **Full Access**, then click **Add new API token**, and then **New API Token**.
 5. Store this token in a secure place as well. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
 
-## 4 Preparing Your Project {preparing}
+## 4 Preparing Your Project {#preparing}
 
 The native builder uses the `prepare` command as well as a line of parameters in your CLI to specify the details of your build. Below is an example of a `prepare` command with a complete set of parameters:
 

@@ -13,7 +13,7 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 **Release date: October 27th, 2020**
 
-This marks the initial release of the Mendix Native Mobile Builder UI tool. It is included in Mendix Studio Pro v8.15 and higher.
+This marks the initial release of the Mendix Native Mobile Builder UI tool. It is included in [Mendix Studio Pro v8.15](/releasenotes/studio-pro/8.15) and higher.
 
 ### Features
 

@@ -56,7 +56,7 @@ To use the Native Builder, you will first need to get tokens to authenticate wit
 4. Add a description of your token, select **Full Access**, then click **Add new API token**, and then **New API Token**.
 5. Store this token in a secure place as well. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
 
-## 4 Build Your Native App
+## 4 Build Your Native App {#building}
 
 {{% alert type="info" %}}
 The Mendix Native Mobile Builder needs to communicate with GitHub and App Center. Therefore, make sure your firewall permissions do not restrict the tool.

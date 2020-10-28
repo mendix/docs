@@ -3,24 +3,27 @@ title: "Mendix for Private Cloud"
 parent: "deployment"
 menu_order: 20
 description: "Release notes for deployment using Mendix for Private Cloud"
-tags: ["release notes", "deployment", "cloud environment", "Mendix Cloud", "SAP", "SAP Cloud", "IBM", "on-premises", "free app"]
+tags: ["release notes", "deployment", "Mendix for Private Cloud", "Private Cloud"]
 ---
 
 ### October 21st, 2020
 
-#### Mendix for Private Cloud Portal
+#### Portal Improvements
 
 * We added the ability to configure TLS on an environment level.
 * We added the ability to link the Studio Pro debugger to an app running through Mendix for Private Cloud.
 * We added the ability to upload an MDA to the Developer Portal.
 * We split the **Edit App** button into two separate buttons, **Edit in Studio** and **Edit in Studio Pro** on some of the Developer Portal pages (Environments, App Services, Metrics, Alerts, Logs, Backups, and the Node Permissions tab of Security).
 * We updated the drop down for the **View App** button.
+
+#### Portal Fixes
+
 * We fixed an issue where the cluster icon was only visible to members of a namespace.
 * We fixed an issue where the **Next** button did not display correctly if no MDA branch was selected. (Ticket 108399)
 
 ### October 15th, 2020
 
-#### Mendix for Private Cloud — Mendix Operator v1.6.0 and Mendix Gateway Agent v1.5.0
+#### Mendix Operator v1.6.0 and Mendix Gateway Agent v1.5.0
 
 * We added support for debugging apps deployed to Mendix for Private Cloud.
 * We fixed a memory leak in Agent which occurred when it was restarted and the cluster was deleted from the Developer Portal.
@@ -30,17 +33,17 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 ### September 14th, 2020
 
-#### Mendix for Private Cloud
+#### Fixes
 
 * We resolved an issue where deployment of a new MDA to an environment set the constant values to the defaults in the MDA rather than applying the values set through the environment's [Model Options](/developerportal/deploy/private-cloud-deploy#environment-details). (Ticket 106933)
 
 ### September 9th, 2020
 
-#### Mendix for Private Cloud — Mendix Operator v1.5.0 and Mendix Gateway Agent v1.4.0
+#### Mendix Operator v1.5.0 and Mendix Gateway Agent v1.4.0
 
 * We added an option to configure TLS options per environment, overriding the default namespace settings.
 * OpenShift Routes now support all features which were previously only available in Ingress endpoints.
-* We now only monitor the selected endpoint type (OpenShift Routes or Ingess), removing an error message which appeared when starting the operator in a non-OpenShift cluster.
+* We now only monitor the selected endpoint type (OpenShift Routes or Ingress), removing an error message which appeared when starting the operator in a non-OpenShift cluster.
 * We have added several features which make it possible to use [cert-manager](https://cert-manager.io/) with Ingress — this allows you to have TLS certificates generated on-demand.
 * We added an option to specify an environment's TLS certificate, or load it from a Kubernetes secret.
 * When TLS is enabled, Mendix for Private Cloud Portal will now display the App URL with an https:// prefix.
@@ -53,28 +56,34 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 ### September 7th, 2020
 
-#### Mendix for Private Cloud Portal
+#### Portal Improvements
 
 * We added a feature to add additional cluster managers to an existing cluster.
 * We added [activity logs](/developerportal/deploy/private-cloud-cluster#actvity-logs) at the cluster and namespace levels.
 * Email notifications will now be sent when a user is added/removed as a cluster manager.
 * We made changes to the [cluster overview](/developerportal/deploy/private-cloud-cluster#overview) to accommodate the activity logs.
-* We fixed a bug where creating an environment with a name that had been used before showed the state of the old environment before it was removed.
 * We updated security in the Developer Portal. (Ticket 106263)
+
+#### Fixes
+
+* We fixed a bug where creating an environment with a name that had been used before showed the state of the old environment before it was removed.
 
 ### July 29th, 2020
 
-#### Mendix for Private Cloud Portal
+#### Portal Improvements
 
 * We now allow you to delete a namespace which contains environments. For a connected namespace, this will also delete the environments.
 * We now allow you to delete environment information from the Developer Portal when the portal is unable to connect to the cluster via the Mendix Gateway Agent.
 * We now allow you to change log levels from the Developer Portal for your apps' log nodes.
-* We fixed an issue where you could not delete a deployment package if it was broken.
 * We now send an email to users when their permissions are changed, or when they are removed from a namespace.
+
+#### Fixes
+
+* We fixed an issue where you could not delete a deployment package if it was broken.
 
 ### July 27th, 2020
 
-#### Mendix for Private Cloud — Mendix Operator v1.4.0 and Mendix Gateway Agent v1.3.0
+#### Mendix Operator v1.4.0 and Mendix Gateway Agent v1.3.0
 
 * We have improved compatibility with annotations and other attributes modified by ingress controllers. Mendix Operator will no longer delete annotations and attributes it doesn't recognize.
 * We have added an option to specify log levels for every log node.
@@ -83,7 +92,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 ### July 15th, 2020
 
-#### Mendix for Private Cloud — Mendix Operator v1.3.0 and Mendix Gateway Agent v1.2.0
+#### Mendix Operator v1.3.0 and Mendix Gateway Agent v1.2.0
 
 * We introduced support for configuring environment variables and Java options for a Mendix application running in Private Cloud.
 * We added support for using registry credentials from an existing .dockerconfigjson secret.
@@ -93,18 +102,21 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
 
-#### Mendix for Private Cloud Portal
+#### Portal Improvements
 
 * We have added support for configuring Custom Runtime Settings, Environment Variables and Java Options. This feature requires the Mendix Operator and Gateway Agent to be upgraded to the latest version.
 * We have added support for customizing the App URL. This feature requires the Mendix Operator to be upgraded to the latest version.
 * We have added support for dedicated storage plans which can only be used by one environment at a time. This feature requires the Mendix Operator and Gateway Agent to be upgraded to the latest version.
 * It is now possible to deploy an MDA which was built more than one week ago.
 * We improved the way that the Admin Password is updated.
+
+#### Fixes
+
 * We have fixed multiple issues where the UI was not showing information or was showing outdated information.
 
 ### June 22nd, 2020
 
-#### Mendix for Private Cloud — Mendix Operator v1.2.0
+#### Mendix Operator v1.2.0
 
 We released a new version of the Mendix for Private Cloud Operator.
 
@@ -114,7 +126,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 ### June 19th, 2020
 
-#### Mendix for Private Cloud — Mendix Operator v1.1.1
+#### Mendix Operator v1.1.1
 
 We released a new version of the Mendix for Private Cloud Operator.
 
@@ -128,7 +140,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 ### June 18th, 2020
 
-#### Mendix for Private Cloud
+#### Improvements
 
 * We have separated the creation of the namespace and the cluster in order to align with Kubernetes concepts. As a consequence, there is now an additional namespace details page. The Mendix Operator and Mendix Gateway Agent will be deployed to each namespace.
 * We now allow you to set Kubernetes resource *requirements* in addition to resource *limits*. Apps no longer require the maximum amount of CPU and memory, improving utilization of cluster resources.
@@ -137,7 +149,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 ### June 10th, 2020
 
-#### Mendix for Private Cloud — Mendix Gateway Agent v1.1.1
+#### Mendix Gateway Agent v1.1.1
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#agent-latest).
 
@@ -145,7 +157,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 ### June 8th, 2020
 
-#### Mendix for Private Cloud — Mendix Operator v1.1.0
+#### Mendix Operator v1.1.0
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
 
@@ -157,7 +169,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 * We have added support for Microsoft SQL server and Azure SQL databases.
 * We have fixed a regression which prevented Private Cloud installing when using kubectl version 1.18.
 
-#### Mendix for Private Cloud — Mendix Gateway Agent v1.1.0
+#### Mendix Gateway Agent v1.1.0
 
 To upgrade an existing installation of Private Cloud to the latest version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#agent-latest).
 
@@ -165,25 +177,25 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 
 ### March 24th, 2020
 
-#### Mendix for Private Cloud — Mendix Operator v1.0.1
+#### Mendix Operator v1.0.1
 
 * We have added an additional field to the `MendixApp` CR which will allows the Developer Portal to display the latest state of environments.
 * We have improved compatibility with popular container image registries (such as Azure Container Registry). The build process can now recognize that the container image already has the necessary base layers, and avoids downloading them again, saving time and network traffic.
 
-#### Mendix for Private Cloud — Mendix Gateway Agent v1.0.1
+#### Mendix Gateway Agent v1.0.1
 
 * We have improved the reliability of sending environment statuses to the Developer Portal.
 
 ### March 23rd, 2020
 
-#### Mendix for Private Cloud
+#### Fixes
 
 * We fixed an issue where users could not accept invitations to join a cluster.
 * We fixed an issue were the first time an app was deployed no replicas were started, meaning that it was still in a stopped state. Now all apps will have one replica started when they are deployed for the first time.
 
 ### March 4th, 2020
 
-#### Mendix for Private Cloud
+#### Improvements
 
 * You can now deploy Mendix apps easily to Kubernetes-based platforms. We currently support Red Hat OpenShift, Amazon Web Services Elastic Kubernetes Service (AWS-EKS), and Amazon Web Services Azure Kubernetes Service (AWS-AKS). This involves deploying a Mendix Operator to your cluster to manage the Mendix requests. For more information see the [Private Cloud](/developerportal/deploy/private-cloud) documentation.
 

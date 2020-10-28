@@ -125,6 +125,7 @@ developerportal:
   priority: false
   menu_categories:
     - "Mendix Profile"
+    - "Control Center"
     - "Company & App Roles"
     - "Apps List"
     - "Collaboration Tools"

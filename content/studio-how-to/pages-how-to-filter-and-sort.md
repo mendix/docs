@@ -42,7 +42,7 @@ Domain model is configured the following way in this use-case:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Pages](/studio/page-editor). 
-* Familiarize yourself with terms on data filters. For more information, see [Data Filters](/studio/filters).
+* Familiarize yourself with terms on data filters. For more information, see [Data Filters](/studio/data-filters).
 * Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/studio/domain-models).
 
 ## 3 Filtering Information 

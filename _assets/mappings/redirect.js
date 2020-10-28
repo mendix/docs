@@ -2401,6 +2401,10 @@ module.exports = {
       from: "/refguide/web-modeler/app-settings-wm",
       to: "/studio/settings-widget-overview"
     },	
+	{
+      from: "/studio/general-collaborative-development",
+      to: "/studio/collaborative-development"
+    },
     {
       from: "/howto/sap/use-sap-odata-model-creator",
       to: "/partners/sap/use-sap-odata-model-creator"

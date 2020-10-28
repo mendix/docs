@@ -1,9 +1,9 @@
 ---
 title: "Collaborative Development in Studio"
-category: "General Info"
+category: "Collaboration"
 description: This document describes the process of collaborative development between Mendix Studio and Mendix Studio from the perspective of Mendix Studio.
 tags: ["studio", "collaborative development", "sync"]
-menu_order: 05
+menu_order: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -33,12 +33,12 @@ As all Studio changes are auto-saved, the collaborative development is indicated
 
 1. **Committing Your Changes** – if your team members are working on the same development line in Studio Pro and they click **Update**, your screen gets locked for a few moments while your changes are automatically committed to the Team Server and then applied to Studio Pro. For more information on the collaborative development process in Studio Pro, see section [4 Studio Pro Perspective](/refguide/collaborative-development) in *Collaborative Development* in *Version Control*.
 
-    {{% image_container width="350" %}}![Committing Changes Dialog Box](attachments/general-collaborative-development/committing-changes.png)
+    {{% image_container width="350" %}}![Committing Changes Dialog Box](attachments/collaborative-development/committing-changes.png)
    {{% /image_container %}}
 
 2.  **Syncing Changes** – your screen gets locked for a few moments each time the Studio Pro users commit. <br/>
 
-    {{% image_container width="350" %}}![Synching Changes Dialog Box](attachments/general-collaborative-development/synching-changes.png)<br/>
+    {{% image_container width="350" %}}![Synching Changes Dialog Box](attachments/collaborative-development/synching-changes.png)<br/>
 
     {{% /image_container %}}
 
@@ -51,8 +51,8 @@ As all Studio changes are auto-saved, the collaborative development is indicated
 3.  **Switching Contents** – in Studio Pro, users can change the branch line Studio is enabled for. For more information on managing branches, see the [Managing Development Lines](/refguide/collaborative-development#managing-branches) section in the *Collaborative Development* in the *Studio Pro Guide*. 
 	During this process Studio gets locked for a few moments, all changes are auto-saved on the current development line, and a pop-up dialog is shown that the Studio Pro user is changing the branch line for Studio. This means that the contents of your app will change. 
 
-	{{% image_container width="350" %}}![Switching Contents Dialog Box](attachments/general-collaborative-development/switching-branches.png)
-  {{% /image_container %}}
+	{{% image_container width="350" %}}![Switching Contents Dialog Box](attachments/collaborative-development/switching-branches.png)
+    {{% /image_container %}}
 
 ## 4 Read More
 

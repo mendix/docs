@@ -70,7 +70,7 @@ In App Buzz, a comment can come from Mendix Studio and refer to a specific docum
 
 ![](attachments/show-document.png)
 
-For more information on making comments in Studio, see [Buzz](/studio/buzz).  
+For more information on making comments in Studio, see [Buzz](/studio/collaboration-buzz).  
 
 ### 2.2 Starting a Poll
 

@@ -9,6 +9,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 ## 2020
 
+### October 29th, 2020
+
+#### Improvements
+* In **Landscape** nodes are now static and cannot be dragged around the display. To see other parts of  of the selected assets network, you can pan and zoom using the mouse.
+* In Data Hub **Catalog** a defult search filter will now be set to show results in the **Production** environnment only. To include hits in **Non-production** and **Sandbox** environments you will have to check these boxes in the **Add Filter** list.
+
 ### October 8th, 2020
 
 #### Improvements

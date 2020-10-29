@@ -16,7 +16,7 @@ The Maps module allows you to work with maps. Consult the instructions below to 
 * Create an app on the [Google Cloud Console](https://console.cloud.google.com/google/maps-apis/overview] and have Google Maps enabled for Android (and iOS, if you wish to use Google Maps on iOS as well) and also posses an API key  [https://developers.google.com/maps/documentation/android-sdk/get-api-key]. An important note: Before you can start using the Google Maps Platform APIs and SDKs, you must sign up and create a billing account [https://developers.google.com/maps/gmp-get-started#create-billing-account).
 * Install Mendix Studio Pro v8.15.0 or above to use the Native Mobile App Builder
 
-## 3. Setting Up App Deep Linking {#set-up}
+## 3 Setting Up App Deep Linking {#set-up}
 
 Make sure you have app containing the Maps module. This is a core module, so its available in the **Widgets** panel. You add either an existing project or a new one. 
 
@@ -25,29 +25,30 @@ Make sure you have app containing the Maps module. This is a core module, so its
 Next you will configure the **Maps** widget provider. You will have two choices: **Default** and **Google Maps**. Selecting **Default** will have your app use the default-enabled map on your device. This means using Google Maps an Android devices and Apple Maps on iOS devices. Selecting **Google Maps** as your **Maps** configuration will have only Google Maps used on both platforms:
 
 1. Double-click your Maps widget and Selecting the **Map** tab. 
-2. Select either the **Default** or **Google Maps** provider:
+1. Select either the **Default** or **Google Maps** provider:
 
     ![maps provider configuration](attachments/how-to-maps/maps-provider-configuration.png)
 
 ### 3.2 Configuring Maps Capability 
 
-1. Set up a native template with the **Native Mobile App Builder**. This can be launched from the Project menu as shown in [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app). Walk through the wizard and configure the project's details and tokens.
+1. Set up a native template with the **Native Mobile App Builder**. This can be launched from the Project menu as shown in [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app). Complete the wizard and configure the project's details and tokens:
 
     ![launch native mobile builder](attachments/how-to-maps/launch-native-mobile-app-builder.png)
 
-2. Once done with the wizard, Select the **Capabilities** menu item.
+1. Once done with the wizard, select the **Capabilities** menu item:
 
     ![capability menu option](attachments/how-to-maps/capability-menu-option.png)
 
-3. Enable the maps capability. This would expose a set of configurations as seen in the snap shot below.
+1. Enable the **maps** capability. This exposes a set of configurations:
     
     ![maps input fields](attachments/how-to-maps/maps-input-fields.png)
 
-    * As described in the prerequisite, the API key gives the maps widget access to Google Cloud services.
-    * The Purpose string is a specialised text that describes to Apple why you need to use maps in your app which in turn uses the device location
-    * The “I want to use Apple Maps for iOS” selection mirrors the decision made from section 3.1. 
+    * As described in the prerequisite, the API key gives the maps widget access to Google Cloud services
+    * The **Purpose** string is a specialized text that tells Apple why you need to use maps in your app (Apple requests explanation as maps use device location data)
+    * **I want to use Apple Maps for iOS** mirrors the decision explained in the Configuring Map Provider section above
     
-4. Click on the **Save** button. Navigate to the build page and then, **Build**.
+1. Click the **Save** button. 
+1. Navigate to the build page then click **Build**.
 
 {{% alert type="info" %}}
 When running locally from source, on iOS you have to run `pod install` once more

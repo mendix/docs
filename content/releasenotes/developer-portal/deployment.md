@@ -10,6 +10,14 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### October 26th, 2020
+
+#### Mendix Cloud & Buildpack
+
+* We resolved an issue where [HTTP headers](https://docs.mendix.com/developerportal/deploy/environments-details#http-headers) were only returned for a successful request. You will have to redeploy your app to apply this fix. (Tickets 94915 and 107140)
+
+    See [Mendix Buildpack Releases](https://github.com/mendix/cf-mendix-buildpack/releases) on *GitHub* for more information.
+
 ### October 22nd, 2020
 
 #### Mendix Cloud
@@ -21,7 +29,6 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 * We added the ability for the technical contact to download a list of [node permissions](/developerportal/deploy/node-permissions) as a CSV to assist with audits
 * We added information about the size of backup files.
-* We resolved an issue where [HTTP headers](https://docs.mendix.com/developerportal/deploy/environments-details#http-headers) were only returned for a successful request. You will have to redeploy your app to apply this fix. (Tickets 94915 and 107140)
 
 ### October 21st, 2020
 
@@ -492,11 +499,13 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 
 * We implemented a number of improvements to enable Mendix Support to provide better support if there are deployment issues
 
-### November 7th, 2019
+### November 7th, 2019{#20201107}
 
 #### Mendix Cloud Deployment Upgrade
 
 * We have improved the stability and performance of Mendix Cloud Deployment and Operations.
+
+    * This also resolved the [known issues noted on October 30th](#ki20201030)
 
 ### October 30th, 2019
 
@@ -506,13 +515,16 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 * You can now mask app constant values so that they cannot be seen in the **Model Options** tab of the **Environment Details**.
 * We now warn you on all **OPERATE** and **DEPLOY** pages if a maintenance window has been created to allow updating of the Mendix Developer Portal.
 
-**Known Issue**
+<a name="ki20201030"></a>**Known Issue**
 
 * In the **Environments** page, when you click the **Details** button for a **Production** environment and successfully complete two-factor authentication you are redirected to the **first** environment listed for your app, *not the Production environment*. (Ticket 90999)
 
     * Workaround – Choose the **Details** for the **Production** environment again and you will be taken to the correct environment.
+    * Resolved by release on [November 7th](#20201107).
 
 * When you attempt to open an **OPERATE** or **DEPLOY** page in the Developer Portal, you may see a login page. You will need to force a refresh of your page, or clear your browser cache, in order to access the page.
+
+    * Resolved by release on [November 7th](#20201107).
 
 ### October 1st, 2019
 

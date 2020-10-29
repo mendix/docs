@@ -259,11 +259,11 @@ Congratulations! You have now configured the domain model for the online shoppin
 
 ![Domain Model online shopping app](attachments/domain-model-how-to-configure/domain-model-online-shop.png)
 
-Now you can build [pages](/studio/page-editor) for it or use [Buzz](/studio/buzz) to collaborate with developers and designers from your team and build the app experience. 
+Now you can build [pages](/studio/page-editor) for it or use [Buzz](/studio/collaboration-buzz) to collaborate with developers and designers from your team and build the app experience. 
 
 ## 8 Read More
 
 * [Domain Model](/studio/domain-models)
 * [Pages](/studio/page-editor)
 * [Microflows](/studio/microflows)
-* [Buzz](/studio/buzz)
+* [Buzz](/studio/collaboration-buzz)

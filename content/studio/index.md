@@ -27,13 +27,13 @@ Studio enables you to do the following:
 The *Studio 8 Guide* is divided into the following categories:
 
 * [General Info](general) 
-* [Domain Model](domain-models)
 * [Pages](page-editor)
+* [Domain Model](domain-models)
 * [Navigation Document](navigation)
 * [Microflows](microflows)
-* [Data Filters](filters)
 * [Previewing & Publishing Your App](publishing-app)
 * [Checks](checks)
-* [Consistency Errors](consistency-errors)
 * [Theme Customizer](theme-customizer)
 * [Settings](settings)
+* [Working with Data](work-with-data)
+* [Collaboration](collaboration)

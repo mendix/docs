@@ -54,7 +54,7 @@ When the Studio Pro user wants to deploy the app to the cloud, they click the **
 
 ## 3 Studio Perspective
 
-For information on collaborative development from the Studio perspective, see [Collaborative Development in Studio](/studio/general-collaborative-development). 
+For information on collaborative development from the Studio perspective, see [Collaborative Development in Studio](/studio/collaborative-development). 
 
 ## 4 Studio Pro Perspective
 
@@ -82,7 +82,7 @@ We recommend you update your project and commit changes often to avoid multiple 
 
 If your project has conflicts, Studio will be unlocked without receiving your changes. You need to resolve the conflicts in Studio Pro first to be able to complete the merge and commit again. 
 
-Your changes will be sent to Studio automatically if there are no conflicts. For more information on the collaborative development process in Studio, see [Collaborative Development in Studio](/studio/general-collaborative-development).
+Your changes will be sent to Studio automatically if there are no conflicts. For more information on the collaborative development process in Studio, see [Collaborative Development in Studio](/studio/collaborative-development).
 
 ### 4.3 Viewing History of Commits
 
@@ -187,5 +187,5 @@ You cannot delete a Studio enabled branch. If you need to delete this branch, en
 
 * [Version Control](version-control)
 * [Troubleshooting Collaborative Development](collaborative-development-troubleshooting)
-* [Collaborative Development in Studio](/studio/general-collaborative-development)
+* [Collaborative Development in Studio](/studio/collaborative-development)
 

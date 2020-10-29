@@ -202,7 +202,7 @@ Local signing is useful if you only want to test your app on a device, or you do
 In order to deploy the *nativeTemplate.xcarchive* on a device or on the App Store, an Apple developer account and development team is required. If one is available, do the following:
 
 1. Using Xcode, double-click the *nativeTemplate.xcarchive* file. It should open with the built-in **Application Loader** software.
-1.  Click the *Distribute App* button to start the local signing flow.:
+1.  Click the *Distribute App* button to start the local signing flow:
 
 	{{% image_container width="350" %}}![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-1.png){{% /image_container %}}
 

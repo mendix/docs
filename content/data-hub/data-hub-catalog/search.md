@@ -40,22 +40,17 @@ The search results will show these service endpoints (where a service endpoint i
 
 The environment is therefore a major component of the definition and forms part of the URL for the endpoint being consumed. This, in combination with the OData version number, provides the link to the correct data for the entities that are exposed.
 
-It is possible to filter search in the Data Hub Catalog to the following environments:
-
-* Production
-* Non-production
-* Mendix Free App environment
+{{% alert type="info" %}}
+By default, search results in the Data Hub Catalog will be filtered to show only hits in the Production environment. You can extend the search to **Non-production** or **Mendix Free App (Sandbox)** environments by checking them in the search pane **Add Filter** list. For more details, see Add Filters{#filter}.
+{{% /alert %}}
 
 ### 2.4 URLs 
-
 The service URLs provide the exact locations of the service documents. In turn, these define the endpoints for exposed entities and attributes and thereby access to the associated datasets by the consuming apps. 
 
 ### 2.5 Discoverability 
-
 When a service is registered, by default it is "published" by being set to **Discoverable** in the Data Hub Catalog so that all users can find it and see details about it. Owners and curators of a registered service can set a service to be **non-discoverable**, which means that it can only be found and consumed by them and is not available to other users.
 
 ### 2.6 Tags 
-
 Tags help you to group services and entities and categorize them (for example, by department, process, or use). You can use tags to refine the search and filter search results in the Data Hub Catalog by doing the following:
 
 * Add tags to the service as a curate function in the Data Hub Catalog after a service is registered by service owners and [Data Hub Curators](../index#curator)
@@ -64,7 +59,6 @@ Tags help you to group services and entities and categorize them (for example, b
 * Add tags during the manual registration of OData services using the [register new service](register#new-service) form
 
 ### 2.7 Description
-
 The description that is included as part of the published service metadata. This description can be further curated at the service, entity, and attribute level by Data Hub Curators to provide further details of the exposed entities and associated datasets.
 
 {{% alert type="info" %}}
@@ -72,7 +66,6 @@ In Studio Pro, when publishing an OData service, it is possible to specify a sum
 {{% /alert %}}
 
 ### 2.8 Contacts for Registered Apps and Services  
-
 In the Data Hub Catalog, the search details for a service include a **Technical Owner** (for technical inquiries) and the **Business Owner** who is responsible for the data sets. Both of these owners can curate their registered assets.
 
 ## 3 Searching in the Data Hub Catalog {#data-hub-home}
@@ -104,7 +97,7 @@ The **Search** screen is divided into the [search](#search-pane) pane on the lef
 
 ### 4.1 Search Pane {#search-pane}
 
-The collapsable **Search** pane is used to search for registered assets in the Data Hub Catalog. A search can be refined by using filters. 
+The collapsable **Search** pane is used to search for registered assets in the Data Hub Catalog. 
 
 #### 4.1.1 Search Area
 
@@ -120,13 +113,15 @@ Punctuation cannot be used as part of the search term except for the  the wildca
 Search is case-insensitive.
 {{% /alert %}}
 
-#### 4.1.2 Filters
+#### 4.1.2 Add Filters{#filter}
 
-To refine search results, you can click **Add Filter**:
+By default, the search results will be filtered to show only hits in the **Production** environment. To extend search results to include other environments, you can click **Add Filter**:
 
 ![](attachments/search/add-filters.png)
 
-In the **Add Filters** dialog box,  select the **Environment Type** that you want to confine your search to and click **Apply Filters**. The search results will only display hits for the specified search string in the checked environments.
+In the **Add Filters** dialog box,  select the **Environment Type** that you want to restrict your search to and click **Apply Filters**. The search results will only display hits for the specified search string in the checked environments.
+
+Click **Clear Filters** to see search results in all environments.
 
 {{% alert type="info" %}}
 The **Sandbox** filter refers to apps deployed to the Mendix Free App environment. 
@@ -161,7 +156,7 @@ When a service is selected, the full details of the service are displayed:
 * Clicking **Share Service** will copy the link to the service to the clipboard
 * Each **Entity** that is exposed in the service (you can expand an entity to see details of the attributes and associations for the entity, as described below)
 
-#### 4.2.2 Search Details for Selected Entity
+#### 4.2.2 Search Details for Selected Entity{#entity-details}
 
 When an **Entity** is selected in the search results, details for the entity are displayed in the **Search Details** window:
 
@@ -170,7 +165,7 @@ When an **Entity** is selected in the search results, details for the entity are
 * The name of the Service
 * **Part of** contains a link that will take you to the **Search Details** of the service in which the entity is exposed
 * The **Version ** number of the service
-* The number of connections (**Used in**)
+* The number of connections (**Used in**) to the entity
 * A description of the entity as given in the service metadata or curated in the Data Hub Catalog
 * Clicking **Share Datasource** will copy the deep link of the entity (meaning, the entity endpoint) to the clipboard
 * **Entity Information**

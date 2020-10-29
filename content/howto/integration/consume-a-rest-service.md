@@ -25,37 +25,45 @@ We will start by providing Studio Pro as an example of what the REST service ret
 
     ![Screenshot of the result of the rest call](attachments/consume-a-rest-service/get-call-result.png)
 
-2. Copy the whole JSON snippet.
-3.  Now you need to add a new JSON structure to your app. A [JSON structure](../../refguide/json-structures) contains sample JSON that you can use in the app. To do this, follow these steps in :<br>
-    a. Right-click the module in the **Project Explorer**.<br>
-    b. Select **Add** > **Mapping** > **JSON structure**.<br>
-    c. Paste the JSON snippet.<br>
-4.  Click **Refresh**. This analyzes the structure of the JSON snippet so we can use later.
+2. Copy the whole JSON snippet. Make sure that you select the **Raw Data** tab to copy the whole code structure.
 
-    ![](attachments/consume-a-rest-service/json-structure.png)
+3.  Now you need to add a new [JSON structure](../../refguide/json-structures)  to your module which contains sample JSON that you can use in the app. Right-click the module in the **Project Explorer** and select **Add other** > **JSON structure**.
+    
+4. Enter a **Name** for the structure: *Tahiti_wikipedia* and click **OK**.
 
-5. Click **OK**
+5. In the **JSON Structure** dialog box, paste the JSON snippet the under section **General** and click **Refresh**. This analyzes the structure of the JSON snippet that we can use later.
+
+   ![](attachments/consume-a-rest-service/json-structure.png)
+
+6. Click **OK**
 
 ## 3 Creating an Import Mapping
 
-An [import mapping](../../refguide/import-mappings) specifies how the JSON relates to [entities](../../refguide/entities). Here we will generate those entities, but generally you can map the JSON to any entity you like.
+An [import mapping](../../refguide/import-mappings) specifies how the JSON relates to [entities](../../refguide/entities). You can map the the JSON to any entity you like.  The following steps describe how to generate the entities and create an import mapping roll:
 
-To create an import mapping:
+1. Right-click the module in the **Project Explorer** and select **Add other** >  **Import Mapping**.
 
-1. Add a new **Import Mapping**.
-2. Click the radio button for **JSON structure** and then click **Select**.
-3. Double-click **JSON_structure**.
-4. Click **Expand all** and then click **Check all**.
+2. Enter a **Name** for the import mapping: *Tahiti_wikipedia* and click **OK**.
+
+3. In the **Select schema elements for import mapping** dialog box, click the radio button for **JSON structure** and then click **Select**.
+
+4. Double-click **Tahiti_wikipedia** in the **Select JSON Structure** dialog box.
+
+5. Click **Expand all** and then click **Check all**.
 
     ![](attachments/consume-a-rest-service/import-mapping.png)
 
-5. Click **OK**. You will now see the structure on the right.
-6. Click **Map automatically** in the editor toolbar. Studio Pro will inform you that it has applied some changes. That means that it has generated entities that match the JSON structure.
-7. Click **Close**.
+6. Click **OK**. The ***Tahiti_wikipedia** document is displayed and the JSON structure is on the right.
+
+7. Click **Map automatically** in the editor toolbar. 
+
+8. A pop-up box is displayed informing you that can **See the details for the changes that have been applied**. You can click **Details** to see details of the mapping to the entities that are generated to match the JSON structure.
+
+9. Click **Close** to see the entities corresponding to the JSON structure.
 
 ## 4 Adding an Input Entity to the Domain Model
 
-Our service takes the title of the page as an input. It returns the summary of the page. 
+The service takes the title of the page as an input. It returns the summary of the page. 
 
 In this section, you are creating an entity that represents this input and associating it with its summary.
 

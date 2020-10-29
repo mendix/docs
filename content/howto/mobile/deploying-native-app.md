@@ -208,7 +208,7 @@ In order to deploy the *nativeTemplate.xcarchive* on a device or on the App Stor
 
 1.  Select **Development**:
 
-	{{% image_container width="350" %}}{{% image_container width="350" %}}![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-2.png){{% /image_container %}}
+	{{% image_container width="350" %}}![Xcode Application loader](attachments/deploying-native-app/xcode-app-loader-2.png){{% /image_container %}}
 
 1.  Choose a **Development Team**:
 

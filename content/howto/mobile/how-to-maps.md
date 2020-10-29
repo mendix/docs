@@ -1,6 +1,6 @@
 ---
 title: "Set Up Maps in Native Mobile Apps"
-category: "native-mobile"
+parent: "native-mobile"
 menu_order: 76
 description: This guide will teach you to set up native mobile maps capabilities for Android and Apple devices.
 tags: ["maps", "google maps", "native", "mobile"]
@@ -28,26 +28,26 @@ Next you will configure the **Maps** widget provider. You will have two choices:
 1. Double-click your Maps widget and Selecting the **Map** tab. 
 1. Select either the **Default** or **Google Maps** provider:
 
-    ![maps provider configuration](attachments/how-to-maps/maps-provider-configuration.png)
+	{{% image_container width="400" %}}![maps provider configuration](attachments/how-to-maps/maps-provider-configuration.png){{% /image_container %}}
 
 ### 3.2 Configuring Maps Capability 
 
 1. Set up a native template with the **Native Mobile App Builder**. This can be launched from the Project menu as shown in [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app). Complete the wizard and configure the project's details and tokens:
 
-    ![launch native mobile builder](attachments/how-to-maps/launch-native-mobile-app-builder.png)
+	{{% image_container width="400" %}}![launch native mobile builder](attachments/how-to-maps/launch-native-mobile-app-builder.png){{% /image_container %}}
 
 1. Once done with the wizard, select the **Capabilities** menu item:
 
-    ![capability menu option](attachments/how-to-maps/capability-menu-option.png)
+	{{% image_container width="400" %}}![capability menu option](attachments/how-to-maps/capability-menu-option.png){{% /image_container %}}
 
 1. Enable the **maps** capability. This exposes a set of configurations:
-    
-    ![maps input fields](attachments/how-to-maps/maps-input-fields.png)
+   
+	{{% image_container width="400" %}}![maps input fields](attachments/how-to-maps/maps-input-fields.png){{% /image_container %}}
 
-    * As described in the Prerequisites section, the API key gives the maps widget access to Google Cloud services
-    * The **Purpose** string is a specialized text that tells Apple why you need to use maps in your app (Apple requests explanation as maps use device location data)
-    * **I want to use Apple Maps for iOS** mirrors the decision explained in the Configuring Map Provider section above
-    
+	* As described in the Prerequisites section, the API key gives the maps widget access to Google Cloud services
+	* The **Purpose for maps** string is a specialized text that tells Apple why you need to use maps in your app (Apple requests explanation as maps use device location data)
+	* **I want to use Apple Maps for iOS** mirrors the decision explained in the Configuring Map Provider section above
+   
 1. Click the **Save** button. 
 1. Navigate to the build page then click **Build**.
 

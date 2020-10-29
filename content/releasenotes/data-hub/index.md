@@ -12,9 +12,10 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 ### October 29th, 2020
 
 #### Improvements
-* In **Landscape** nodes are now static and cannot be dragged around the display. To see other parts of  of the selected assets network, you can pan and zoom using the mouse.
-* In Data Hub **Catalog** a defult search filter will now be set to show results in the **Production** environnment only. To include hits in **Non-production** and **Sandbox** environments you will have to check these boxes in the **Add Filter** list.
-* The entity details screen will now display the number of connections to the individual entity. The service details will continue to show the total number of connections to the service.
+
+* In [Landscape](/data-hub/data-hub-landscape/index) nodes are now static and cannot be dragged around the display. To see other parts of of the selected assets network, you can pan and zoom using the mouse.
+* In Data Hub **Catalog** by default, the [search filter](/data-hub/data-hub-catalog/search#filter) is set to show results in the **Production** environnment only. To include hits in **Non-production** or **Sandbox** environments you have to check these boxes in the **Add Filter** dialog box.
+* The [entity details](/data-hub/data-hub-catalog/search screen now displays the number of connections to the individual entity. The service details continue to show the total number of connections to the service.
 
 ### October 8th, 2020
 

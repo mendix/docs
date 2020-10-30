@@ -10,66 +10,53 @@ tags: ["Control Center", "Mendix Admin", "Developer Portal", "role", "permission
 
 [**How to access? Menu item in community header?**]
 
-## People / Company Page
+## Company {#company}
 
-This page lists all the people in your company.
+The company page lists the name of your company and its description as well as all the people in your company on the **People** tab.
 
-Clicking an icon will open their Mendix Profile. [verify: true, or unclickable?]
-
-[**How to get back to People page from Admin panel?**]
-
-When you are a Mendix Admin, you will see the **Admin Panel** button available. Click this to go to the Mendix Admin pages.
-
-## Members
-
-After you click **Admin Panel**, the **Members** page will open. Members are users who can edit and/or view an app project. This page presents two tabs:
-
-* **Company members** – members of your company who can view an app project
-* **External members** – members outside of your company who have access to at least one of your company app projects
-
-[**Correct tabs? Supposed to be Active Members and Inactive Members?**]
-
-[**How to define "access" here?**]
-
-When you click a company member's name, a pop-up window will open with their member profile. The profile displays the app **Projects** of which they are a member as well as their **Project role**.
-
-[**Supposed to show permissions?**]
-
-When you click an external member's name, a pop-up window will open their member profile.
-
-[**Finish describing - supposed to show less info than for company members**]
+If you are a Mendix Admin, you have one main permission to edit your company's details as well as perform many other tasks. As a Mendix Admin, you will see the **Admin Panel** button available, which will take you to the pages described below.
 
 ## Company Settings
 
-### Company Details
+This page presents your company's details and its Mendix Admins.
 
-On this tab, you can edit the **Company name** and **Description** as well as the **Company Email Domains**. 
+On the **Company Details** tab, you can edit the **Company name** and **Description** as well as the **Company Email Domains**.  When you click **Add Domain**, a request is sent to Mendix Support. Once that domain is added, every user who signs up to Mendix wth that email domain will be assigned to your company.
 
-When you click **Add Domain**, a request is sent to Mendix Support. Once that domain is added, every user who signs up with that domain will be added to your company.
-
-### Mendix Admins
-
-This lists all the current Mendix Admins in your company. The Mendix Admin has one main permission.
-
-[**How to describe permission in comparison to Company Admin and current permissions list?**]
-
-To add a new admin, click **Add Mendix Admin**.
-
-To remove an admin, select their name in the list and click **Remove**.
+On the **Mendix Admins** tab, all the current Mendix Admins in your company are listed. To add a new admin, click **Add Mendix Admin**. To remove an admin, select their name in the list and click **Remove**.
 
 ## Company Brand
 
-On this tab as a Mendix Admin, you can customize your company brand.
+On this page, you can customize your company brand with a logo and image.
 
-The **Logo** will appear on your company page. You can add a logo and edit it here.
+The **Logo** will appear on your [company page](#company). You can add a logo and edit it here.
 
-[**Company page is where People are? And what is launchpad here?**]
+[**What is the "company launchpad" as mentioned in the UI?**]
 
 [**Verify: icon will not be released yet**]
 
-The **Cover Image** is the  will be the background header of your company page. If you do not set one, a primary color will be used instead.
+The **Cover image** is the the background header of your company page. If you do not set one, the **Primary** color as set in the **Brand colors** section will be used instead.
 
 [**How to do draft brand that is not applied on company page right away and that can be saved as a draft? Only see Apply button, no Save as Draft or anything**]
+
+## Members
+
+This is the page that opens first after you click **Admin Panel**.
+
+[**How to get back to People page from Admin panel?**]
+
+Members are users who can view and/or edit an app project. 
+
+On the **Company members** tab, you can see the members of your company.
+
+[**Does this correspond to People on company page?**]
+
+[**Correct tabs? Supposed to be Active Members and Inactive Members?**]
+
+When you click a company member's name, a pop-up window will open with their member profile. The profile displays the app **Projects** of which they are a member as well as their **Project role** for each project. Click a **Project** name to go to its [project details](#project-details) page.
+
+On the **External members** tab, you can see the members outside of your company who have access to at least one of your company app projects. When you click an external member's name, a pop-up window will open their member profile.
+
+[**How to define "access" here? Supposed to show permissions? Finish describing - supposed to show less info than for company members.**]
 
 ## Projects
 
@@ -79,7 +66,7 @@ On the **Projects** page, you first have the **Projects Overview** tab, which sh
 
 The **Deactivated Projects** tab shows the deactivated app projects that belong to your company.
 
-### Project Details
+### Project Details {#project-details}
 
 When you click a **Project** name, a pop-up window will open with the project profile. This has the **Project Info**, **Members**, and **Project Roles** tabs.
 

@@ -31,23 +31,23 @@ The Landscape depiction of a service and its network will be such that it will s
 
 ### 2.2 Navigating the Landscape
 
-By default, the Data Hub **Search** pane is on the left of the Landscape screen. When a service is selected in the search results, it is displayed in the center with its network of connection. The selected service and the deploying app are highlighted with a blue outline.
+By default, the Data Hub **Search** pane is on the left of the Landscape screen. When a service is selected in the search results, it is displayed in the center with its network of connections. The selected service and the deploying app are highlighted with a blue outline.
 
 When you click any of the nodes or connections, the metadata pane on the right displays further details.
 
-To see the full details of the selected item, click the **Catalog** tab to display the **Search Details** screen in the Data Hub Catalog.
+You can pan around the landscape and and zoom using the mouse. You can also collapse both the search pane and the metadata pane so that the full screen area is available for viewing.
 
-You can pan and zoom around the landscape using the mouse controls. You can also collapse both the search pane and the metadata pane so that the full screen area is available.
+When you click the **Catalog** tab this will display the **Search Details** screen of the items selected in the search pane.
 
 ![](attachments/use-landscape/landscape.png)
 
 ### 2.3 Nodes
-Registered apps and services are depicted in the Landscape as nodes from the definitions in the registered service metadata. The icons for each of these nodes identifies the the source.
+Registered apps and services are depicted in the Landscape as nodes from the definitions in the registered service metadata. The icons for each of these nodes identifies the the source application, for example, Mendix and Siemens.
 
 #### 2.3.1 Service
-Services are shown as a round node with the service name and version number and the number of entities exposed by the service.
+Services are depicted as a round node with the service name and version number, and the number of entities exposed by the service.
 
-The following examples show a selected service node from a Mendix app exposing one entity and a non-Mendix service exposing three entities:
+The following is an example of a selected service node of an OData service exposing three entities:
 
 ![](attachments/use-landscape/node-service.png)
 

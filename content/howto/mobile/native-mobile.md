@@ -21,4 +21,6 @@ You build Mendix native mobile apps the same way you build web or hybrid apps. Y
 * [Use Over the Air Updates](how-to-ota)
 * [Set Up Deep Links in Native Mobile Apps](native-deep-link)
 * [Add Fonts to Your Native App](native-custom-fonts)
+* [Set Up Maps in Native Mobile Apps](how-to-maps)
 * [Troubleshoot Common Native Mobile Issues](common-issues)
+

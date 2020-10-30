@@ -39,7 +39,7 @@ For example, if the image name is `quay.io/digital_ecosystems/mendix-operator:1.
 This process will take:
 
 * about 15 to 30 minutes when upgrading from Mendix Operator 1.0.\*
-* about 10 minutes when upgrading from Mendix Operator 1.1.\*, 1.2.\* , 1.3.\*, 1.4.\*, 1.5.\* and 1.6.\*
+* about 10 minutes when upgrading from Mendix Operator 1.1.\*, 1.2.\* , 1.3.\*, 1.4.\*, 1.5.\*, and 1.6.\*
 
 Some upgrade steps are only required when upgrading from older versions of the Mendix Operator. There is a notice on these steps indicating which upgrade paths they apply to and for which paths the step should be skipped.
 
@@ -128,7 +128,7 @@ kubectl -n $OPERATOR_NAMESPACE get storageplan --no-headers=true -o name | sed -
 ##### 2.2.4.2 Updating the Mendix Operator Configuration (from versions 1.1.\*, 1.2.\*, 1.3.\*, 1.4.\*, and 1.5.\*){#update-configuration-1.1.0}
 
 {{% alert type="info" %}}
-Follow this step only when upgrading from Mendix Operator 1.1.\*, 1.2.\*, 1.3.\*, 1.4.\* and 1.5.\*.
+Follow this step only when upgrading from Mendix Operator 1.1.\*, 1.2.\*, 1.3.\*, 1.4.\*, and 1.5.\*.
 {{% /alert %}}
 
 Run the following commands to switch to the latest component versions:

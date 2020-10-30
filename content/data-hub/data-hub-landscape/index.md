@@ -45,9 +45,9 @@ When you click the **Catalog** tab this will display the **Search Details** scre
 Registered apps and services are depicted in the Landscape as nodes from the definitions in the registered service metadata. The icons for each of these nodes identifies the the source application, for example, Mendix and Siemens.
 
 #### 2.3.1 Service
-Services are depicted as a round node with the service name and version number, and the number of entities exposed by the service.
+Services are depicted as a round node with the OData icon and the service name and version number, and on the line connecting it to the publishing app, the number of entities exposed in the service.
 
-The following is an example of a selected service node of an OData service exposing three entities:
+The following is an example of a selected service node exposing three entities:
 
 ![](attachments/use-landscape/node-service.png)
 

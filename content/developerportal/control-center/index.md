@@ -62,13 +62,13 @@ On the **External members** tab, you can see the members outside of your company
 
 ### Company Projects
 
-On the **Projects** page, you first have the **Projects Overview** tab, which shows a list of the active app projects that belong to your company.
+On this page, you can see a list of the active app projects that belong to your company on the **Projects Overview** tab.
 
-The **Deactivated Projects** tab shows the deactivated app projects that belong to your company.
+On the **Deactivated Projects** tab, you can see the deactivated app projects that belong to your company.
 
 ### Project Details {#project-details}
 
-When you click a **Project** name, a pop-up window will open with the project profile. This has the **Project Info**, **Members**, and **Project Roles** tabs.
+START: When you click a **Project** name, a pop-up window will open with the project profile. This has the **Project Info**, **Members**, and **Project Roles** tabs.
 
 [**Project details page – project contacts will be removed (verify)**]
 

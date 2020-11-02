@@ -1,8 +1,8 @@
 ---
-title: "Add Fonts to Your Native App"
+title: "Add Fonts to Your Native Mobile App"
 parent: "native-mobile"
 menu_order: 42
-description: "This tutorial will teach you to enrich the design of your native app with custom fonts."
+description: "This tutorial will teach you to enrich the design of your native mobile app with custom fonts."
 tags: ["mobile", "debug", "android", "ios", "native", "fonts"]
 ---
 
@@ -10,7 +10,7 @@ tags: ["mobile", "debug", "android", "ios", "native", "fonts"]
 
 Good typography plays a major role in conveying your app's message while reinforcing your company's brand identity. Setting up the fonts you need is as simple as dragging and dropping the required fonts and setting your app's style. As you can see in the [Prerequisites](#prerecs) section below, Mendix offers two ways for you to add custom fonts: using the Mendix Native Mobile Builder or manually.
 
-### 1.2 Introduction to Fonts in Mendix Native Apps
+### 1.2 Introduction to Fonts in Mendix Native Mobile Apps
 
 When it comes to fonts files, several standards and types are common. True Type (*.ttf*), Open Type (*.otf* or *.ttf*), and Web Open Font Format (*.woff*) are the most common. 
 
@@ -22,7 +22,7 @@ Android and iOS each take a different approach to fonts. Where Android requires 
 
 Furthermore, both platforms resolve available fonts differently. While iOS fully supports Open Type fonts and can select fonts based on their metadata, Android requires explicit linking of the font file to the weight and style.
 
-React Native, the underlying framework of Mendix Native Apps, unifies the process of adding fonts. For example, fonts added under **assets/fonts** on Android are explicitly linked in the project. These fonts are then exposed directly in the framework for styling your widgets using the common CSS properties you use routinely.
+React Native, the underlying framework of Mendix native mobile apps, unifies the process of adding fonts. For example, fonts added under **assets/fonts** on Android are explicitly linked in the project. These fonts are then exposed directly in the framework for styling your widgets using the common CSS properties you use routinely.
 
 There are limitations to mobile font capabilities. For example, Android supports a very limited set of font types: regular, bold, italic, and bold italic.
 

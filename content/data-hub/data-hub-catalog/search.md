@@ -97,11 +97,13 @@ The **Search** screen is divided into the [search](#search-pane) pane on the lef
 
 ### 4.1 Search Pane {#search-pane}
 
-The collapsable **Search** pane is used to search for registered assets in the Data Hub Catalog. 
+The collapsable **Search** pane is used to search for registered assets in the Data Hub Catalog:
+
+ {{% image_container width="300" %}}![](attachments/search/search-pane.png){{% /image_container %}}
 
 #### 4.1.1 Search Area
 
-Enter a search term in the **Search** area of minimum 3 characters using alpha-numeric characters.
+Enter a search string in the **Search** area of  minimum of 3 alpha-numeric.
 
 In Studio Pro, searching the Data Hub Catalog through the **Data Hub** pane requires use of the wildcard `*` for an empty search. It is not possible to use the wildcard in combination with other characters. The wildcard can also be used in the Data Hub Catalog search but it is not necessary. 
 
@@ -113,13 +115,18 @@ Punctuation cannot be used as part of the search term except for the  the wildca
 Search is case-insensitive.
 {{% /alert %}}
 
-#### 4.1.2 Add Filters{#filter}
+#### 4.1.2 Filters{#filter}
 
-By default, the search results will be filtered to show only hits in the **Production** environment. To extend search results to include other environments, you can click **Add Filter**:
+By default, **Production** environment filter is active to restrict search results to the production environment. The number of filters that are active for the current search is displayed: 
 
-![](attachments/search/add-filters.png)
+ {{% image_container width="200" %}}![](attachments/search/filter-active.png){{% /image_container %}}
 
-In the **Add Filters** dialog box,  select the **Environment Type** that you want to restrict your search to and click **Apply Filters**. The search results will only display hits for the specified search string in the checked environments.
+
+To change the active environments, click **Filter**:
+
+![](attachments/search/dh-filter-box.png)
+
+In the **Filters** dialog box,  check the **Environment Types** that you want to restrict your search to and click **Apply Filters**. The search results will only display hits for the specified search string in the checked environments.
 
 Click **Clear Filters** to see search results in all environments.
 

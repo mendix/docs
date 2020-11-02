@@ -100,23 +100,23 @@ To call the REST service in a microflow, follow these steps:
 
 6. In the **Response** tab, set **Response handling** to **Apply import mapping** (or to **Import mapping for the entire response**, depending on your Studio Pro version).
 
-7. Click **Select** and double-click **Import_mapping**.
+7. For **Mapping** click ** **Select** and double-click **Tahiti_wikipedia**.
 
-8. For **Variable**, enter *Summary*.
+8. For **Output** select **Yes** for  **Store in variable** and specify  *Summary* for the **Variable name**.
 
     ![](attachments/consume-a-rest-service/response.png)
 
 9. Click **OK**.
 
-10. From the **Toolbox**, drag a **Change object** activity onto the microflow and double-click it.
+10. From the **Toolbox**, drag a **Change object** activity onto the microflow and place it after **Call REST service** and double-click it.
 
-11. For the **Object**, select **Input (MyFirstModule.Input)**.
+11. For the **Input Object**, select **Input (MyFirstModule.Input)**.
 
-12. For **Refresh in client**, select **Yes**. This makes sure that the summary gets shown on the screen.
+12. For **Refresh in client**, select **Yes**. This makes sure that the summary is displayed on the screen.
 
 13. Click **New**.
 
-14. Under **Member**, select **MyFirstModule.Input_Summary (MyFirstModule.Summary)**.
+14. On the **Edit Change Item** dialog box, for** **Member**, select **MyFirstModule.Input_Summary (MyFirstModule.Summary)**.
 
 15. Under **Value**, enter `$Summary`.
 
@@ -126,22 +126,20 @@ To call the REST service in a microflow, follow these steps:
 
      ![](attachments/consume-a-rest-service/change-object.png)
 
-17. Click **OK**
+17. Click **OK**. You have created microflow that takes the title of an article as input and associates it with its summary.
 
      ![](attachments/consume-a-rest-service/microflow.png)
 
-There you have it: a microflow that takes the title of an article as input and associates it with its summary.
-
-The rest of this how-to will describe turning this microflow into an app. It doesn't deal with consuming REST services anymore, so you only need to follow along if you want to see the REST call in action.
+You have successfully consumed a REST service and created a microflow to show the results. The rest of this how-to describes turning this microflow into an app so that yoyu can see the REST call in action.
 
 ## 6 Creating a Page
 
 To create a page for this app, follow these steps:
 
 1. Open the **Homepage** and add a **Data view**.
-2. From the **Connector**, drag the **Input** entity onto to the **[Unknown]** bar.
-3. Select **Microflow**.
-4. For the **Name**, enter *CreateInput*. Please note that when this page loads, it needs a new **Input** object – you will fill the **CreateInput** microflow that creates this object below.
+2. Double-click the the **[Unknown]** bar and select the **Input** entity.
+3. For the **Data source Type** select **Microflow**.
+4. For the **Name**, enter *CreateInput*. Note that when this page loads, it needs a new **Input** object – you will fill the **CreateInput** microflow that creates this object below.
 5. Click **OK**.
 6. From **Container widgets**, add a new **Table** with one row and two columns.
 7. Drag the **Title** field onto the left column.

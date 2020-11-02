@@ -132,7 +132,7 @@ The **{yourname}CustomerODataService** from your app is now registered in the Da
 
    ![Data Hub screen](attachments/share-data/dh-filter-box.png)
 
-5. You can either click **Sandbox** to include it in the search results and  or you can click **Clear Filters** to clear all active filters and then click **Apply Filters**. 
+5. You can either check **Sandbox** to include it in the search results and  or you can click **Clear Filters** to clear all active filters and then click **Apply Filters**. 
 
 6. From the new search results list, find the service that you published and click to select it. 
 

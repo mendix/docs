@@ -31,7 +31,7 @@ We will start by providing Studio Pro as an example of what the REST service ret
     
 4. Enter a **Name** for the structure: *Tahiti_wikipedia* and click **OK**.
 
-5. In the **JSON Structure** dialog box, paste the JSON snippet the under section **General** and click **Refresh**. This analyzes the structure of the JSON snippet that we can use later.
+5. In the **JSON Structure** dialog box, paste the JSON snippet in the  **General** tab and click **Refresh**. This analyzes the structure of the JSON snippet that we can use later.
 
    ![](attachments/consume-a-rest-service/json-structure.png)
 
@@ -53,7 +53,7 @@ An [import mapping](../../refguide/import-mappings) specifies how the JSON relat
 
     ![](attachments/consume-a-rest-service/import-mapping.png)
 
-6. Click **OK**. The ***Tahiti_wikipedia** document is displayed and the JSON structure is on the right.
+6. Click **OK**. The **Tahiti_wikipedia** document is displayed and the JSON structure is on the right.
 
 7. Click **Map automatically** in the editor toolbar. 
 
@@ -86,36 +86,49 @@ You will now call the REST service in a [microflow](../../refguide/microflows). 
 
 To call the REST service in a microflow, follow these steps:
 
-1. Create a new microflow.
-2. Add an **Input** object as an input parameter.
-3. From the **Toolbox**, drag a **Call REST service** activity onto the microflow and double-click it.
-4. Edit the location to `https://en.wikipedia.org/api/rest_v1/page/summary/{1}`, with the parameter `$Input/Title`.
+1. Create a new microflow and call it *Tahiti*.
+
+2. Right-click and select **Add** > **Parameter** to add an input parameter.
+
+3. Double-click the input parameter and in the **Parameter** dialog box, click **Select**. Select the **Input** entity from the module to specify that as the input.
+
+4. From the **Toolbox**, drag a **Call REST service** activity onto the microflow and double-click it.
+
+5. In the **Call REST** dialog box, click **Edit** for the **Location** and add the following for the template: `https://en.wikipedia.org/api/rest_v1/page/summary/{1}`, with the parameter `$Input/Title`. Click **OK**.
 
     ![](attachments/consume-a-rest-service/location.png)
 
-5. On the **Response** tab, set **Response handling** to **Apply import mapping** (or to **Import mapping for the entire response**, depending on your Studio Pro version).
-6. Click **Select** and double-click **Import_mapping**.
-7. For **Variable**, enter *Summary*.
+6. In the **Response** tab, set **Response handling** to **Apply import mapping** (or to **Import mapping for the entire response**, depending on your Studio Pro version).
+
+7. Click **Select** and double-click **Import_mapping**.
+
+8. For **Variable**, enter *Summary*.
 
     ![](attachments/consume-a-rest-service/response.png)
 
-8. Click **OK**.
-9. From the **Toolbox**, drag a **Change object** activity onto the microflow and double-click it.
-10. For the **Object**, select **Input (MyFirstModule.Input)**.
-11. For **Refresh in client**, select **Yes**. This makes sure that the summary gets shown on the screen.
-12. Click **New**.
-13. Under **Member**, select **MyFirstModule.Input_Summary (MyFirstModule.Summary)**.
-14. Under **Value**, enter `$Summary`.
+9. Click **OK**.
 
-    ![](attachments/consume-a-rest-service/set-association.png)
+10. From the **Toolbox**, drag a **Change object** activity onto the microflow and double-click it.
 
-15. Click **OK**
+11. For the **Object**, select **Input (MyFirstModule.Input)**.
 
-    ![](attachments/consume-a-rest-service/change-object.png)
+12. For **Refresh in client**, select **Yes**. This makes sure that the summary gets shown on the screen.
+
+13. Click **New**.
+
+14. Under **Member**, select **MyFirstModule.Input_Summary (MyFirstModule.Summary)**.
+
+15. Under **Value**, enter `$Summary`.
+
+     ![](attachments/consume-a-rest-service/set-association.png)
 
 16. Click **OK**
 
-    ![](attachments/consume-a-rest-service/microflow.png)
+     ![](attachments/consume-a-rest-service/change-object.png)
+
+17. Click **OK**
+
+     ![](attachments/consume-a-rest-service/microflow.png)
 
 There you have it: a microflow that takes the title of an article as input and associates it with its summary.
 
@@ -145,7 +158,7 @@ To create a page for this app, follow these steps:
 
     ![](attachments/consume-a-rest-service/page.png)
 
-## 7 Filling In the CreateInput Microflow
+## 7 Filling In the Create Input Microflow
 
 Now all that is left is to have the **CreateInput** microflow create a new **Input** object.
 

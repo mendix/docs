@@ -27,7 +27,7 @@ We will start by providing Studio Pro as an example of what the REST service ret
 
 2. Copy the whole JSON snippet. Make sure that you select the **Raw Data** tab to copy the whole code structure.
 
-3.  Now you need to add a new [JSON structure](../../refguide/json-structures)  to your module which contains sample JSON that you can use in the app. Right-click the module in the **Project Explorer** and select **Add other** > **JSON structure**.
+3.  Create a module and name it *RESTconsume*. To add a new [JSON structure](../../refguide/json-structures)  to your module with the sample JSON that you can use in the app right-click the module in the **Project Explorer** and select **Add other** > **JSON structure**.
     
 4. Enter a **Name** for the structure: *JSON_structure* and click **OK**.
 
@@ -47,7 +47,7 @@ An [import mapping](../../refguide/import-mappings) specifies how the JSON relat
 
 3. In the **Select schema elements for import mapping** dialog box, click the radio button for **JSON structure** and then click **Select**.
 
-4. Double-click **Tahiti_wikipedia** in the **Select JSON Structure** dialog box.
+4. Double-click **JSON_structure** in the **Select JSON Structure** dialog box.
 
 5. Click **Expand all** and then click **Check all**.
 
@@ -65,7 +65,7 @@ An [import mapping](../../refguide/import-mappings) specifies how the JSON relat
 
 The service takes the title of the page as an input. It returns the summary of the page. 
 
-In this section, you are creating an entity that represents this input and associating it with its summary.
+In this section, you will create an entity that represents this input and associate it with its summary.
 
 To add an input entity to the domain model, follow these steps:
 
@@ -96,31 +96,35 @@ You will now call the REST service in a [microflow](../../refguide/microflows) t
 To call the REST service in a microflow, follow these steps:
 
 1. Right-click the module and select **Add** > **Microflow** and accept the default **Name** *Microflow* for the name of the microflow and click **OK**.
-2. Add**** **Input** object as an input parameter.
-3. Right-click the mouse and select **Insert** > **Activity** to insert an activity to the microflow.  Double-click the activity and select the **Call REST service** to change the activity.
-4. In the **Call REST** dialog box, click **Edit** for the **Location** and add the following to **Template**: `https://en.wikipedia.org/api/rest_v1/page/summary/{1}`, with the parameter `$Input/Title`. Click **OK**.
 
-9. ![](attachments/consume-a-rest-service/location.png)
+2. From the tool bar, drag a **Parameter** object to the microflow document.
 
-10. In the **Response** tab, set **Response handling** to **Apply import mapping** (or to **Import mapping for the entire response**, depending on your Studio Pro version).
+3. Click **Select** for the **Data type** and select the **Input** entity as the input parameter. Click **OK**. 
 
-11. For **Mapping** click ** **Select** and double-click **Tahiti_wikipedia**.
+4. Right-click the mouse and select **Insert** > **Activity** to insert an activity to the microflow.  Double-click the activity and select the **Call REST service** to change the activity.
 
-12. For **Output** select **Yes** for  **Store in variable** and specify  *Summary* for the **Variable name**.
+5. In the **Call REST** dialog box, click **Edit** for the **Location** and add the following to **Template**: `https://en.wikipedia.org/api/rest_v1/page/summary/{1}`, with the parameter being the Title attribute from the **Input** parameter `$Input/Title`. Click **OK**.
 
-     ![](attachments/consume-a-rest-service/response.png)
+   ![](attachments/consume-a-rest-service/location.png)
 
-13. Click **OK**.
+6. In the **Response** tab, the response has to be mapped using the import mapping. For **Response handling** select **Apply import mapping**.
 
-14. From the **Toolbox**, drag a **Change object** activity onto the microflow and place it after **Call REST service** and double-click it.
+7. For **Mapping**, click **Select** and double-click **Import_mapping**. For the **Parameter**, select **Input**. 
 
-15. For the **Input Object**, select **Input (MyFirstModule.Input)**.
+8. For **Output** select **Yes** for  **Store in variable** and specify  *Summary* for the **Variable name**.
 
-16. For **Refresh in client**, select **Yes**. This makes sure that the summary is displayed on the screen.
+   ![](attachments/consume-a-rest-service/response.png)
+
+9. Click **OK**.
+10. Right-click after the **Call REST service** object and select **Insert** > **Activity** and double-click it and change it to a **Change object**.
+
+15. For the **Input Object**, select **Input (RESTconsume.Input)**.
+
+16. For **Refresh in client**, select **Yes**. This makes ensures that the summary is displayed on the screen.
 
 17. Click **New**.
 
-18. On the **Edit Change Item** dialog box, for** **Member**, select **MyFirstModule.Input_Summary (MyFirstModule.Summary)**.
+18. On the **Edit Change Item** dialog box, for **Member**, select **RESTconsume.Input_Summary (RESTconsume.Summary)**.
 
 19. Under **Value**, enter `$Summary`.
 
@@ -134,21 +138,21 @@ To call the REST service in a microflow, follow these steps:
 
       ![](attachments/consume-a-rest-service/microflow.png)
 
-You have successfully consumed a REST service and created a microflow to show the results. The rest of this how-to describes turning this microflow into an app so that yoyu can see the REST call in action.
+You have successfully consumed a REST service and created a microflow to show the results. The rest of this how-to describes how to use this microflow in an app so that yoyu can see the REST call in action.
 
 ## 6 Creating a Page
 
 To create a page for this app, follow these steps:
 
 1. Open the **Homepage** and add a **Data view**.
-2. Double-click the the **[Unknown]** bar and select the **Input** entity.
-3. For the **Data source Type** select **Microflow**.
+2. Right-click the the **[Unknown]** bar and click, **Select entity**.  Select the **Input** entity.
+3. For the **Data source – Type** select **Microflow**.
 4. For the **Name**, enter *CreateInput*. Note that when this page loads, it needs a new **Input** object – you will fill the **CreateInput** microflow that creates this object below.
 5. Click **OK**.
 6. From **Container widgets**, add a new **Table** with one row and two columns.
 7. Drag the **Title** field onto the left column.
-8. From the **Project Explorer**, drag **Microflow** onto the right column.
-9. On the **Properties** tab, enter *Get summary* for the caption of the button.
+8. From the **Project Explorer**, drag **Microflow** into the right column.
+9. In the **Edit Action Button**  dialog box, enter *Get summary* for the caption of the button.
 10. Add a **Data view** below the table (inside the other data view).
 11. From the **Connector**, drag the **Summary** entity onto the **[Unknown]** bar.
 12. Click **OK**.
@@ -167,9 +171,9 @@ Now all that is left is to have the **CreateInput** microflow create a new **Inp
 To fill in the CreateInput microflow, follow these steps:
 
 1. In the **Project Explorer**, double-click **CreateInput**.
-2. From the **Toolbox**, drag on a **Create object** activity.
+2. From the **Toolbox**, drag In a **Create object** activity.
 3. Double-click the activity.
-4. Click **Select...** and double-click **Input**.
+4. Click **Select** and double-click **Input**.
 5. Click **OK**.
 6. Double-click the red **End event**.
 7. Under **Return value**, enter `$NewInput`.

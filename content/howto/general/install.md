@@ -11,6 +11,17 @@ tags: ["studio pro", "install", "install studio pro", "download"]
 
 Mendix Studio Pro enables you to build apps on the Mendix Platform. This how-to will guide you through the steps of installing the latest version of Mendix Studio Pro.
 
+For a deep-dive demonstration of how to install Studio Pro, follow along in this video:
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/WUp2tLi68nXFQd7xhPbDtt.jpg"
+  data-uuid="WUp2tLi68nXFQd7xhPbDtt"
+  data-v="4"
+  data-type="inline"
+/>
+
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:

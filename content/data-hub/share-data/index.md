@@ -120,13 +120,30 @@ The **{yourname}CustomerODataService** from your app is now registered in the Da
 
 	![Data Hub screen](attachments/share-data/data-hub-home.png)
 
-2.  In the search field, enter the search term *customer*. All services and entities that satisfy this search string will be displayed in the **Search Results** pane in the **Search Details** screen.
-3. From the search results, find the service that you published and select it. Full details will be displayed in the **Search Details** screen and the service metadata pane on the right. This information was defined in the OData service document in Studio Pro. 
+2. In the search field, enter the search term *customer*. All services and entities that satisfy this search string will be displayed in the **Search Results** pane in the **Search Details** screen.
 
-	If you have curate permissions (meaning, you are the owner of a service, a curator, or a Data Hub Admin), you will also see the curation bar and you will see that it will show that "**You are the owner of the service**":
-	
-	![data hub](attachments/share-data/search-details-screen.png)
-	
+3. When you look for your app in the search results you will not find it there. This is because there is a **Filter** active which is indicated by the **1**: 
+
+   ![Data Hub screen](attachments/share-data/filter-active.png)
+
+   By default, a filter is set to show results in **Production** environments.  
+
+4. Your app was deployed to the **Mendix Free App** or **Sandbox** environment so you will have to change the filter settings so that search will also show results in this environment. Click **Filter** to see the **Filters** dialog box: 
+
+   ![Data Hub screen](attachments/share-data/dh-filter-box.png)
+
+5. You can either click **Sandbox** to include it in the search results and click **Apply Filters**, or you can click **Clear Filters** to clear all active filters and see search results for all registered assets satisfying your search string. The number of active filters will be shown.
+
+6. From the new search results list, find the service that you published and select it. 
+
+7. Full details for the service is displayed in the search details screen and the service metadata panel on the right. This information was defined when you published the OData service in for you app in Studio Pro:
+
+   
+
+  If you have curate permissions (meaning, you are the owner of a service, a curator, or a Data Hub Admin), you will also see the curation bar and you will see that it will show that "**You are the owner of the service**":
+
+  ![data hub](attachments/share-data/search-details-screen.png)
+
 
 ​	{{% alert type="info" %}}For more information about the user and curator roles in Data Hub see [Roles in Data Hub](../index#data-hub-roles).{{% /alert %}}
 

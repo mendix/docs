@@ -29,7 +29,7 @@ We will start by providing Studio Pro as an example of what the REST service ret
 
 3.  Now you need to add a new [JSON structure](../../refguide/json-structures)  to your module which contains sample JSON that you can use in the app. Right-click the module in the **Project Explorer** and select **Add other** > **JSON structure**.
     
-4. Enter a **Name** for the structure: *Tahiti_wikipedia* and click **OK**.
+4. Enter a **Name** for the structure: *JSON_structure* and click **OK**.
 
 5. In the **JSON Structure** dialog box, paste the JSON snippet in the  **General** tab and click **Refresh**. This analyzes the structure of the JSON snippet that we can use later.
 
@@ -43,7 +43,7 @@ An [import mapping](../../refguide/import-mappings) specifies how the JSON relat
 
 1. Right-click the module in the **Project Explorer** and select **Add other** >  **Import Mapping**.
 
-2. Enter a **Name** for the import mapping: *Tahiti_wikipedia* and click **OK**.
+2. Enter a **Name** for the import mapping: *Import_mapping* and click **OK**.
 
 3. In the **Select schema elements for import mapping** dialog box, click the radio button for **JSON structure** and then click **Select**.
 
@@ -53,7 +53,7 @@ An [import mapping](../../refguide/import-mappings) specifies how the JSON relat
 
     ![](attachments/consume-a-rest-service/import-mapping.png)
 
-6. Click **OK**. The **Tahiti_wikipedia** document is displayed and the JSON structure is on the right.
+6. Click **OK**. The **Import_mapping** document is displayed and the JSON structure is on the right.
 
 7. Click **Map automatically** in the editor toolbar. 
 
@@ -77,58 +77,62 @@ To add an input entity to the domain model, follow these steps:
 6. On the **Attributes** tab, click **New** to add a string attribute and name it *Title*.
 7. Click **OK**.
 8. Drag an association from **Input** to **Summary**.
+9.   ![](attachments/consume-a-rest-service/domain-model.png)
 
-  ![](attachments/consume-a-rest-service/domain-model.png)
+9. Go to the **Import_mapping** and from the **Connector** pane drag  **Input** as the input parameter for the input mapping.
+
+10. Double-click **Summary**.
+
+11. In the **Map entity 'Summary from the object element 'Summary** dialog box, **Set association** to **Yes** and select the **RESTconsume_input_Summary** for the **Association** to have the import mapping set the association:
+
+    ![](attachments/consume-a-rest-service/map-entity-from-input-mapping.png)
+
+12. Click **OK**. 
 
 ## 5 Calling the REST Service in a Microflow
 
-You will now call the REST service in a [microflow](../../refguide/microflows). The microflow takes an **Input** as a parameter and sets the associated **Summary**.
+You will now call the REST service in a [microflow](../../refguide/microflows) to build the integration with Wikipedia. The microflow takes **Input** as the input parameter and sets the associated **Summary**.
 
 To call the REST service in a microflow, follow these steps:
 
-1. Create a new microflow and call it *Tahiti*.
+1. Right-click the module and select **Add** > **Microflow** and accept the default **Name** *Microflow* for the name of the microflow and click **OK**.
+2. Add**** **Input** object as an input parameter.
+3. Right-click the mouse and select **Insert** > **Activity** to insert an activity to the microflow.  Double-click the activity and select the **Call REST service** to change the activity.
+4. In the **Call REST** dialog box, click **Edit** for the **Location** and add the following to **Template**: `https://en.wikipedia.org/api/rest_v1/page/summary/{1}`, with the parameter `$Input/Title`. Click **OK**.
 
-2. Right-click and select **Add** > **Parameter** to add an input parameter.
+9. ![](attachments/consume-a-rest-service/location.png)
 
-3. Double-click the input parameter and in the **Parameter** dialog box, click **Select**. Select the **Input** entity from the module to specify that as the input.
+10. In the **Response** tab, set **Response handling** to **Apply import mapping** (or to **Import mapping for the entire response**, depending on your Studio Pro version).
 
-4. From the **Toolbox**, drag a **Call REST service** activity onto the microflow and double-click it.
+11. For **Mapping** click ** **Select** and double-click **Tahiti_wikipedia**.
 
-5. In the **Call REST** dialog box, click **Edit** for the **Location** and add the following for the template: `https://en.wikipedia.org/api/rest_v1/page/summary/{1}`, with the parameter `$Input/Title`. Click **OK**.
+12. For **Output** select **Yes** for  **Store in variable** and specify  *Summary* for the **Variable name**.
 
-    ![](attachments/consume-a-rest-service/location.png)
+     ![](attachments/consume-a-rest-service/response.png)
 
-6. In the **Response** tab, set **Response handling** to **Apply import mapping** (or to **Import mapping for the entire response**, depending on your Studio Pro version).
+13. Click **OK**.
 
-7. For **Mapping** click ** **Select** and double-click **Tahiti_wikipedia**.
+14. From the **Toolbox**, drag a **Change object** activity onto the microflow and place it after **Call REST service** and double-click it.
 
-8. For **Output** select **Yes** for  **Store in variable** and specify  *Summary* for the **Variable name**.
+15. For the **Input Object**, select **Input (MyFirstModule.Input)**.
 
-    ![](attachments/consume-a-rest-service/response.png)
+16. For **Refresh in client**, select **Yes**. This makes sure that the summary is displayed on the screen.
 
-9. Click **OK**.
+17. Click **New**.
 
-10. From the **Toolbox**, drag a **Change object** activity onto the microflow and place it after **Call REST service** and double-click it.
+18. On the **Edit Change Item** dialog box, for** **Member**, select **MyFirstModule.Input_Summary (MyFirstModule.Summary)**.
 
-11. For the **Input Object**, select **Input (MyFirstModule.Input)**.
+19. Under **Value**, enter `$Summary`.
 
-12. For **Refresh in client**, select **Yes**. This makes sure that the summary is displayed on the screen.
+      ![](attachments/consume-a-rest-service/set-association.png)
 
-13. Click **New**.
+20. Click **OK**
 
-14. On the **Edit Change Item** dialog box, for** **Member**, select **MyFirstModule.Input_Summary (MyFirstModule.Summary)**.
+      ![](attachments/consume-a-rest-service/change-object.png)
 
-15. Under **Value**, enter `$Summary`.
+21. Click **OK**. You have created microflow that takes the title of an article as input and associates it with its summary.
 
-     ![](attachments/consume-a-rest-service/set-association.png)
-
-16. Click **OK**
-
-     ![](attachments/consume-a-rest-service/change-object.png)
-
-17. Click **OK**. You have created microflow that takes the title of an article as input and associates it with its summary.
-
-     ![](attachments/consume-a-rest-service/microflow.png)
+      ![](attachments/consume-a-rest-service/microflow.png)
 
 You have successfully consumed a REST service and created a microflow to show the results. The rest of this how-to describes turning this microflow into an app so that yoyu can see the REST call in action.
 

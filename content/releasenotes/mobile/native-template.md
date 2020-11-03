@@ -38,9 +38,9 @@ This release is required to use the **Capabilities** support introduced with the
 
 With the release of Mendix Native Mobile Builder we are introducing a new approach for linking dependencies.
 
-While previous versions of the Native Template would have all core dependencies linked by default — for example an app would have Firebase linked even though it is not using any functionality — our new approach builds on top of React Native's auto-linking behaviour and extends it a step further.
+While previous versions of the Native Template would have all core dependencies linked by default — for example an app would have Firebase linked even though it is not using any functionality — our new approach builds on top of React Native's auto-linking behavior and extends it a step further.
 
-We gathered all core functionalities and grouped them under the platform-specific capabilities' *.json* files. With a simple boolean toggle, the Native Template is able to link the required dependencies for the enabled capability — even ones without auto-link. This happens as part of the `pod install` step for iOS and the building step on Android. After each change to these files, you must remember to run `pod install` for iOS or build your Android project so that the new files can be generated.
+We gathered all core functionalities and grouped them under the platform-specific capabilities' *.json* files. With a simple Boolean toggle, the Native Template is able to link the required dependencies for the enabled capability — even ones without auto-link. This happens as part of the `pod install` step for iOS and the building step on Android. After each change to these files, you must remember to run `pod install` for iOS or build your Android project so that the new files can be generated.
 
 Some steps, like the inclusion of the Google Service configuration or the Google Maps API, are still manual if you are building locally. If you would like to further simplify these steps, consider using the Mendix Native Mobile Builder to just configure your project and build your project however you like.
 

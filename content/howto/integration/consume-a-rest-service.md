@@ -23,14 +23,14 @@ We will start by providing Studio Pro as an example of what the REST service ret
 1. Open your browser and go to [https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti](https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti).
 2. This calls the REST service with a GET request – the result is the summary of the [Tahiti page on Wikipedia](https://en.wikipedia.org/wiki/Tahiti) in the JSON format:
 
-    ![Screenshot of the result of the rest call](attachments/consume-a-rest-service/get-call-result.png)
+   ![Screenshot of the result of the rest call](attachments/consume-a-rest-service/get-call-result.png)
 
 3. Copy the whole JSON snippet. Make sure that you select the **Raw Data** tab to copy the whole code structure.
 4. Create a module and name it *RESTconsume*. To add a new [JSON structure](../../refguide/json-structures) to your module with the sample JSON that you can use in the app, right-click the module in the **Project Explorer** and select **Add other** > **JSON structure**.
 5. Enter a **Name** for the structure: *JSON_structure* and click **OK**.
 6. In the **JSON Structure** dialog box, paste the JSON snippet in the **General** tab and click **Refresh**. This analyzes the structure of the JSON snippet that we can use later.
 
-    ![](attachments/consume-a-rest-service/json-structure.png)
+   ![](attachments/consume-a-rest-service/json-structure.png)
 
 7. Click **OK**
 
@@ -60,18 +60,27 @@ In this section, you will create an entity that represents this input and associ
 To add an input entity to the domain model, follow these steps:
 
 1. In the **Project Explorer**, double-click the **Domain Model**.
+
 2. Rename **Root** to **Summary**.
+
 3. From the **Toolbox**, drag an **Entity** into the domain model.
+
 4. Double-click the entity and enter *Input* for the **Name**.
+
 5. For **Persistable**, select **No**.
+
 6. On the **Attributes** tab, click **New** to add a string attribute and name it *Title*.
+
 7. Click **OK**.
+
 8. Drag an association from **Input** to **Summary**.
 
-    ![](attachments/consume-a-rest-service/domain-model.png)
+   ![](attachments/consume-a-rest-service/domain-model.png)
    
 9. Go to the **Import_mapping** and from the **Connector** pane drag **Input** as the input parameter for the input mapping.
+
 10. Double-click **Summary**.
+
 11. In the **Map entity 'Summary from the object element 'Summary** dialog box, **Set association** to **Yes** and select the **RESTconsume_input_Summary** for the **Association** to have the import mapping set the association:
 
     ![](attachments/consume-a-rest-service/map-entity-from-input-mapping.png)
@@ -96,7 +105,7 @@ To call the REST service in a microflow, follow these steps:
 7. For **Mapping**, click **Select** and double-click **Import_mapping**. For the **Parameter**, select **Input**. 
 8. For **Output** select **Yes** for **Store in variable** and specify *Summary* for the **Variable name**.
 
-    ![](attachments/consume-a-rest-service/response.png)
+   ![](attachments/consume-a-rest-service/response.png)
 
 9. Click **OK**.
 10. Right-click after the **Call REST service** object and select **Insert** > **Activity** and double-click it and change it to a **Change object**.
@@ -106,15 +115,15 @@ To call the REST service in a microflow, follow these steps:
 14. On the **Edit Change Item** dialog box, for **Member**, select **RESTconsume.Input_Summary (RESTconsume.Summary)**.
 15. Under **Value**, enter `$Summary`.
 
-    ![](attachments/consume-a-rest-service/set-association.png)
+     ![](attachments/consume-a-rest-service/set-association.png)
 
 16. Click **OK**.
 
-    ![](attachments/consume-a-rest-service/change-object.png)
+     ![](attachments/consume-a-rest-service/change-object.png)
 
 17. Click **OK**. You have created microflow that takes the title of an article as input and associates it with its summary.
 
-    ![](attachments/consume-a-rest-service/microflow.png)
+     ![](attachments/consume-a-rest-service/microflow.png)
 
 You have successfully consumed a REST service and created a microflow to show the results. The rest of this how-to describes how to use this microflow in an app so that yoyu can see the REST call in action.
 

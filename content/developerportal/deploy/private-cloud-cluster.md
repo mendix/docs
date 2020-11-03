@@ -84,12 +84,6 @@ To add a namespace, do the following:
 
 ![](attachments/private-cloud-cluster/add-namespace.png)
 
-You will see the details of the namespace you are adding on a screen with two scripts.
-
-The first script is the installation script which will install the Mendix operator and Mendix agent in your namespace. Once that is done, you can run the second script which allows you to configure your namespace.
-
-![](attachments/private-cloud-cluster/namespace-scripts.png)
-
 ### 3.3 Running the Installation Script
 
 There are two different ways of running the installation and reconfiguration scripts, depending on the operating system of your local computer and your requirements.
@@ -533,6 +527,8 @@ When the namespace is configured correctly, its status will become **Connected**
 
 Some advanced configuration options of the Mendix Operator are not yet available in the reconfiguration script.
 These options can be changed by editing the `OperatorConfiguration` custom resource directly in Kubernetes.
+
+Look at [Supported Providers](private-cloud-supported-environments) to ensure that your planned configuration is supported by Mendix for Private Cloud.
 
 To start editing the `OperatorConfiguration`, use the following commands (replace `{namespace}` with the namespace where the operator is installed):
 

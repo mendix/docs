@@ -36,7 +36,7 @@ You will see two scripts which you can run on your cluster to install and config
 
 The first script is the installation script which will install the Mendix operator and Mendix agent in your namespace. See [Running the Installation Script](#installation-script), below for details.
 
-Once that is done, you can run the second script which allows you to configure your namespace.
+Once that is done, you can run the second script which allows you to configure your namespace. See [Running the Configuration Script](#configuration-script), below for details.
 
 ![](attachments/private-cloud-config-script/namespace-scripts.png)
 
@@ -95,7 +95,7 @@ The Mendix operator and Mendix Gateway Agent are now installed on your platform.
 
 You can always find the installation script again in the **Installation** tab for your namespace in the cluster manager.
 
-## 4 Running the Reconfiguration Script {#reconfiguration-script}
+## 4 Running the Configuration Script {#configuration-script}
 
 Before you deploy an app to your namespace, you will need to configure a number of resources, namely:
 
@@ -105,15 +105,11 @@ Before you deploy an app to your namespace, you will need to configure a number 
 * registry
 * ingress (network)
 
-Mendix provides you with two methods to configure these.
-
-For most local operating systems, you can configure them through the downloadable installation script which can run locally. For instructions, see [Downloaded Installation Script](#downloaded-script), below.
-
-If your local operating system does not support it, or if you would rather run the cluster-side script, follow the instructions below.
-
 Mendix provides you with a script which will configure these initially, and this can be re-run any time that you want to change how these are configured.
 
-1. Copy the **Reconfiguration Script** which has been created for you by clicking **Copy to clipboard**. 
+Before you start, you will need to be signed in with administration rights to the namespace.
+
+1. Copy the **Configuration Script** which has been created for you by clicking **Copy to clipboard**. 
 
     ![](attachments/private-cloud-config-script/image15.png)
 
@@ -153,7 +149,7 @@ Choose **2** if you have a configuration already but want to reconfigure part of
 * Registry
 * Proxy
 
-When you reconfigure your namespace with databases or storage, you will add new services in addition to any services which are already set up. These plans are then added to the Developer Portal and can be used when creating environments for an app, unless you specifically deactivate them.
+When you reconfigure your namespace with databases or storage, you will add new services in addition to any services which are already configured. These plans are then added to the Developer Portal and can be used when creating environments for an app, unless you specifically deactivate them.
 
 You can return to this initial question from any of the other questions by choosing the option **Go back to the start** where it is available.
 
@@ -327,7 +323,7 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide)
 
 ### 4.4 Pick an Ingress Type{#ingress}
 
-**OpenShift Route** will set up an OpenShift Route. This can only be used for OpenShift clusters.
+**OpenShift Route** will configure an OpenShift Route. This can only be used for OpenShift clusters.
 
 **Ingress** will configure ingress according to the additional domain name you supply.
 

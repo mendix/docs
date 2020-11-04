@@ -14,50 +14,47 @@ You can use the [Timeline](https://appstore.home.mendix.com/link/app/115852/) wi
 
 ### 2.1 Choosing the Render Type
 
-[**ADD**]
+For the sake of simplicity, there are two modes available to create a timeline:
 
-For the sake of simplicity, there are two modes available to create a timeline: basic and custom.
-
-With the basic mode, you can quickly select the **Title**, **Description**, **Time indication**, and **Icon** for fast results in implementing a timeline.
-
-With the custom mode, you can freely model everything that will be shown in the timeline, such as the **Title**, **Icon**,  day divider, event date/time, and content.
+* Basic – this is the default mode in which you can select the **Data source**, **Title**, **Description**, and **Time indication** on the **Data Source** tab and the **Icon** on the **General** tab to quickly implement a timeline in your app.
+* Custom – enable this mode by setting **Custom Visualization** to **Yes** on the **General** tab to freely model everything that will be shown in the timeline, such as the title, icon, day divider, event date/time, and content
 
 ### 2.2 Selecting a Data Source
 
-On the **Data Source** tab, you should simply select the data source that will be used. Since the widget will try to group the events based on date, make sure there is a DateTime attribute in the entity itself. 
+On the **Data Source** tab for both basic and custom modes, you must select the **Data source** that will be used. 
+
+Since the widget will try to group the events based on date, make sure there is a DateTime attribute in the data-source entity itself. For details, see the [Showing the Group Header](#group-header) section below.
+
+#### 2.2 Showing the Group Header {#group-header}
+
+On the **General** tab for both basic and custom modes, you can opt to show a day divider by selecting **Yes** for **Group Events** and selecting a **Group Attribute**.
 
 {{% alert type="info" %}}
-If you are using the basic mode, the values of the **Data source** field will be used as a group header.
+If you are using the basic mode, the values of the **Data source** field will be used as a group header via the **Group Attribute** property.
 {{% /alert %}}
 
-#### 2.2.1 Showing the Group Header
+Selecting **No** for **Group Events** will make the timeline look like one single flow.
 
-[**ADD**]
+### 2.3 Basic Mode-Specific Fields {#basic}
 
-For both custom and basic mode, you can opt for showing the day divider by using this control. Removing divider will make timeline look like one single flow.
-
-### 2.3 Basic Mode-Specific Fields
-
-[**POSITION**]
-
-Simply select:
+In the basic mode, configure the following properties:
 
 * **Title** – required
 * **Description**
-* **Event date/time** [**VERIFY**]
+* Event date/time
 * **Icon** – you can use glyphicons and images from the connected data-source entity; if an **Icon** is not provided, it will be shown as circle with a background color specified in `.widget-timeline-icon-circle`
 
 In the basic mode, you can show a group header in the following formats:
 
-| Option                           | Explanation                                                                                       | Example    |
-| -------------------------------- | ------------------------------------------------------------------------------------------------- | ---------- |
-| day / day name                   | If events are grouped by date, this will show full name of the week day\.                         | Monday     |
-| day / day number and month       | If events are grouped by date, this will show zero padded day number and full name of the month\. | 01 March   |
-| day / day number, month and year | If events are grouped by date, this will show default date format based on current language\.     | 31/12/2020 |
-| month / month name               | If events are grouped by month, this will show full name of the month\.                           | April      |
-| month / month and year           | If events are grouped by month, this will show short name of the month and full year\.            | Apr 2020   |
-| year                             | If events are grouped by year, this will show full year\.                                         | 2020       |
+| Option | Explanation | Example |
+| --- | --- | --- |
+| **Day** / **Day name** | This will show the full name of the weekday. | Monday |
+| **Day** / **Day** number and **month** | This will show a zero-padded day number and the full name of the month. | 01 March |
+| **Day** / **Day** number, **month**, and **year** | This will show the default date format based on the current language. | 31/12/2020 |
+| **Month** / **Month** name | This will show the full name of the month. | April |
+| **Month** / **Month** and **year** | This will show the short name of the month and the full year. | Apr 2020 |
+| **Year** | This will show the full year. | 2020 |
 
-##### Custom Mode Specific Fields
+### 2.4 Custom Mode-Specific Fields {#custom}
 
-Timeline will generate 5 drop zones for Icon, Divider, Title, Event Date Time and Content. Since none of these fields are required, feel free to create your own timeline widget with any combinations.
+In the custom mode, the widget will generate five drop-zones for the icoon, divider, title, event date-time attribute, and the content. Since none of these fields are required, feel free to create your own timeline with any combinations.

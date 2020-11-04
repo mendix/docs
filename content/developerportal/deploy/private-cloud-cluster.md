@@ -84,23 +84,41 @@ To add a namespace, do the following:
 
 ![](attachments/private-cloud-cluster/add-namespace.png)
 
-### 3.3 Running the Installation Script
+## 4. Installing and Configuring the Mendix Operator
 
-There are two different ways of running the installation and reconfiguration scripts, depending on the operating system of your local computer and your requirements.
+Before you can use the Mendix Operator in your namespace you need to install it and configure the services your app will use. Mendix provides you with a **Configuration Tool** which guides you through the process.
 
-1. Choose your operating system
+### 4.1 Downloaded Configuration Tool{#downloaded-script}
 
-2. If you want to take the option to download the configuration script to your local machine, follow the instructions in [Downloaded Installation Script](#downloaded-script), below.
+{{% todo %}}[Review instructions for downloading and running the Configuration Tool]{{% /todo %}}
 
-If you do not have this option, or you want to run the scripts in your Kubernetes cluster, continue with this section and the following section ([Running the Reconfiguration Script](#reconfiguration-script)).
+If you are not already on the installation tab for your namespace, go to it by following these instructions:
 
-#### 3.3.1 Signing in to OpenShift {#openshift-signin}
+1. Go to the Cluster Manager page by clicking **Cluster Manager** in the **Apps** menu.
 
-You will need to have administrator rights to your private cloud platform. This means you will have to log in before you run the installation script.
+    ![](attachments/private-cloud-cluster/image23.png)
+
+2. Click **Details** next to the namespace you want to use.
+
+    ![](attachments/private-cloud-cluster/cluster-details.png)
+
+3. Select the **Installation** tab.
+
+Now you can download the Configuration Tool by doing the following:
+
+1. Choose the operating system for your local computer.
+
+2. Click **Download Installation Script** and make sure that it is stored somewhere on your path.
+
+    ![](attachments/private-cloud-cluster/download-executable.png)
+
+### 4.2 Signing in to OpenShift {#openshift-signin}
+
+You will need to have administrator rights to your private cloud platform. This means you will have to log in before you run the Configuration Tool.
 
 These instructions are for the OpenShift platform; a similar process will be required for other platforms.
 
-To run the installation script on OpenShift, you must sign in to OpenShift using the OpenShift CLI, before you run the scripts in Bash.
+To run the Configuration Tool, you must first sign in to OpenShift using the OpenShift CLI.
 
 You can do this as follows:
 
@@ -122,100 +140,81 @@ You can do this as follows:
 
 6. Paste the command into Bash and press Enter.
 
-#### 3.3.2 Executing the Installation Script
+### 4.3 Running the Configuration Tool{#running-the-tool}
 
-To execute the installation script, do the following:
+Once you are signed in to your cluster you can run the Configuration Tool.
 
-1. Copy the Installation Script which has been created for you by clicking **Copy to clipboard**.
+1. Copy the **Installation Command** by clicking **Copy to clipboard**.
 
-    ![](attachments/private-cloud-cluster/image12.png)
+    ![](attachments/private-cloud-cluster/installation-command.png)
 
-2. Paste the script into your Bash console and press **Enter** to run the script.
+2. Paste the command into your Bash console and  press <kbd>Enter</kbd>
 
-The response to the script should look like the image below. You can see that the script has installed the following:
+	You will see the configuration options on the screen and will be guided through filling in the information needed.
 
-* mendix-agent
-* mendix-operator
+    ![](attachments/private-cloud-cluster/post-install-landing-page.png)
 
-The installation is successful if the response ends with **Installation Successful**.
+If, instead of using the Configuration Tool, you want to run the scripts in your Kubernetes cluster, see the instructions in [Using Installation and Configuration Scripts](private-cloud-config-script).
 
-![](attachments/private-cloud-cluster/image13.png)
+#### 4.3.1 Base Installation
 
-The Mendix operator and Mendix Gateway Agent are now installed on your platform. If you look at the project resources in the OpenShift console, you can see the mendix-operator resource.
+If the Mendix Operator and the Mendix Gateway Agent have not been installed in your cluster, you will need to install them.
 
-![](attachments/private-cloud-cluster/image14.png)
+1. Click **Base Installation**.
 
-You can always find the installation script again in the **Installation** tab for your namespace in the cluster manager.
+	You will see the screen below.
 
-### 3.4 Running the Reconfiguration Script {#reconfiguration-script}
+	![](attachments/private-cloud-cluster/installer-options.png)
 
-Before you deploy an app to your namespace, you will need to configure a number of resources, namely:
+2. Select the required **Cluster Mode**.
 
-* database
-* file storage
-* proxy
-* registry
-* ingress (network)
+3. Select the required **Cluster Type**.
 
-Mendix provides you with two methods to configure these.
+4. Click **Run Installer** to install the Mendix Operator and Mendix Gateway Agent in your cluster.
 
-For most local operating systems, you can configure them through the downloadable installation script which can run locally. For instructions, see [Downloaded Installation Script](#downloaded-script), below.
+	The installation is successful if the **Installer output** ends with **Installation Successful**.
 
-If your local operating system does not support it, or if you would rather run the cluster-side script, follow the instructions below.
+5. Click **Save Installer** if you want to save these settings to be used later.
 
-Mendix provides you with a script which will configure these initially, and this can be re-run any time that you want to change how these are configured.
+6. Click **Exit Installer** to finish.
 
-1. Copy the **Reconfiguration Script** which has been created for you by clicking **Copy to clipboard**. 
+The Mendix operator and Mendix Gateway Agent are now installed on your platform.
 
-    ![](attachments/private-cloud-cluster/image15.png)
+#### 4.3.2 Configure Namespace
 
-2. Press **Enter** to start the script.
+You can now configure the resources required for your namespace.
 
-{{% alert type="info" %}}
+The first time you configure the namespace, you should select all the items under **Select items to configure** except **Proxy**. Only select **Proxy** if you want to configure a proxy for your namespace.
 
-If you update the configuration and your namespace already has existing Mendix environments, restart the Mendix Operator to fully apply the configuration changes (replace `{namespace}` with the namespace where the Operator is installed):
+The options do the following:
 
-For OpenShift:
+* **Database Plan** – will create a new database plan for your cluster — you must have at least one database plan in your namespace, but you can have more than one
+* **Storage Plan** – will create a new storage plan for your cluster — you must have at least one storage plan in your namespace, but you can have more than one
+* **Ingress** – will set up the ingress for your namespace — if there is already an ingress, this will replace it with new settings
+* **Registry** – will set up a registry for your namespace — if there is already a registry, this will replace it with new settings
+* **Proxy** – will set up a proxy for your namespace — if there is already a proxy, this will replace it with new settings
 
-```shell
-oc -n {namespace} scale deployment mendix-operator --replicas=0
-oc -n {namespace} scale deployment mendix-operator --replicas=1
-```
+1. Select the options you need to configure.
 
-For Kubernetes:
+2. Click **Configure Namespace**.
 
-```shell
-kubectl -n {namespace} scale deployment mendix-operator --replicas=0
-kubectl -n {namespace} scale deployment mendix-operator --replicas=1
-```
+	You will be shown the **Installation wizard** landing page.
 
-{{% /alert %}}
+	![](attachments/private-cloud-cluster/installation-wizard.png)
 
-#### 3.4.1 What Do You Want to Do?
+3. Use the allocated function keys (for example <kbd>F2</kbd> for the **Database Plan**) to navigate to the setup pages for each resource which you need to configure.
 
-![](attachments/private-cloud-cluster/image16.png)
+4. Each page will lead you through the information you need to supply.
 
-Choose **1** if this is the initial configuration and you will be led through all the items which you need to configure.
+	These are described in the following sections:
 
-Choose **2** if you have a configuration already but want to reconfigure part of it. If you choose this option, you will then be able to navigate directly to the thing you want to configure, namely one of the following:
+	* [Database Plan](#database-plan)
+	* [Storage Plan](#storage-plan)
+	* [Ingress](#ingress)
+	* [Registry](#registry)
+	* [Proxy](#proxy)
 
-* Database
-* Storage
-* Ingress
-* Registry
-* Proxy
-
-When you reconfigure your namespace with databases or storage, you will add new services in addition to any services which are already set up. These plans are then added to the Developer Portal and can be used when creating environments for an app, unless you specifically deactivate them.
-
-You can return to this initial question from any of the other questions by choosing the option **Go back to the start** where it is available.
-
-{{% alert type="info" %}}
-The configuration script does not currently validate input values. Configuration can be verified by deploying a sample app.
-{{% /alert %}}
-
-#### 3.4.2 Pick a Database Type{#database-plan}
-
-![](attachments/private-cloud-cluster/image19.png)
+#### 4.3.1 Database Plan{#database-plan}
 
 **Postgres** will enable you to enter the values to configure a PostgreSQL database. You will need to provide all the information about your PostgreSQL database such as plan name, host, port, database, user, and password.
 
@@ -265,9 +264,7 @@ If the plan name already exists you will receive an error that it cannot be crea
 To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.1.0 or later.
 {{% /alert %}}
 
-#### 3.4.3 Pick a Storage Type{#storage-plan}
-
-![](attachments/private-cloud-cluster/image18.png)
+#### 4.3.2 Storage Plan{#storage-plan}
 
 **Minio** will connect to a [MinIO](https://min.io/product/overview) S3-compatible object storage. You will need to provide all the information about your MinIO storage such as endpoint, access key, and secret key. The MinIO server needs to be a full-featured MinIO server and not a [MinIO Gateway](https://github.com/minio/minio/tree/master/docs/gateway).
 
@@ -377,9 +374,9 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide)
 
 **Ephemeral** will enable you to quickly set up your environment and deploy your app, but any data objects you store will be lost when you restart your environment.
 
-#### 3.4.4 Pick an Ingress Type{#ingress}
+#### 4.3.3 Ingress{#ingress}
 
-**OpenShift Route** will set up an OpenShift Route. This can only be used for OpenShift clusters.
+**OpenShift Route** will configure an OpenShift Route. This can only be used for OpenShift clusters.
 
 **Ingress** will configure ingress according to the additional domain name you supply.
 
@@ -389,9 +386,7 @@ Both forms of ingress can have TLS enabled or disabled.
 When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
 {{% /alert %}}
 
-#### 3.4.5 Pick a Registry Type{#registry}
-
-![](attachments/private-cloud-cluster/image20.png)
+#### 4.3.4 Registry{#registry}
 
 Selecting a registry type and configuring its credentials will configure the destination registry used by Mendix for Private Cloud to build images.
 Images are pulled from this registry by Kubernetes, bypassing the Mendix Operator.
@@ -409,121 +404,53 @@ You can choose one of the following registry types. OpenShift registries can onl
 
 For **OpenShift 3** and **OpenShift 4** registries, the default image pull credentials from the `default` ServiceAccount will be used. No additional configuration steps are required to enable image pulls in OpenShift.
 
-For **Generic registry…** options, the reconfiguration script will ask if the credentials should be added to `imagePullSecrets` in the `default` ServiceAccount. If you answer **Yes**, the reconfiguration script will add image pull credentials to the `default` ServiceAccount - no additional image pull configuration is required. If you want to configure the image pull separately, choose **No**.
+For **Generic registry…** options, the configuration script will ask if the credentials should be added to `imagePullSecrets` in the `default` ServiceAccount. If you answer **Yes**, the configuration script will add image pull credentials to the `default` ServiceAccount - no additional image pull configuration is required. If you want to configure the image pull separately, choose **No**.
 
 For **Amazon Elastic Container Registry**, you will need to configure registry authentication separately through [IAM roles](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_EKS.html).
 
 When choosing the **Existing docker-registry secret**, you will need to add this secret to the `default` ServiceAccount manually, or provide registry authentication configuration in another way (depending on which registry authentication options the Kubernetes cluster vendor is offering).
 
-#### 3.4.6 Do You Want to Configure the Proxy?{#proxy}
+#### 4.3.5 Proxy{#proxy}
 
-![](attachments/private-cloud-cluster/image21.png)
+![](attachments/private-cloud-config-script/image21.png)
 
 Choose **Yes** if a proxy is required to access the public internet from the namespace; you will be asked for the proxy configuration details.
 
-### 3.5 Downloaded Installation Script{#downloaded-script}
+##### 4.3.6 Review and Apply
 
-{{% todo %}}[Review instructions for downloading and running the installation script]{{% /todo %}}
+When you have set up all the resources, do the following:
 
-1. Choose the operating system for your local computer.
-
-2. Click **Download Installation Script** and make sure that it is stored somewhere on your path.
-
-3. Run the downloaded script using the command ?????????.
-
-	You will see the configuration options on the screen and will be guided through filling in the information needed.
-
-    ![](attachments/private-cloud-cluster/post-install-landing-page.png)
-
-#### 3.5.1 Base Installation
-
-If the Mendix Operator and the Mendix Gateway Agent have not been installed in your cluster, you will need to install them.
-
-1. Click **Base Installation**.
-
-	You will see the screen below.
-
-	![](attachments/private-cloud-cluster/installer-options.png)
-
-2. Select the required **Cluster Mode**.
-
-3. Select the required **Cluster Type**.
-
-4. Click **Run Installer** to install the Mendix Operator and Mendix Gateway Agent in your cluster.
-
-	The installation is successful if the **Installer output** ends with **Installation Successful**.
-
-5. Click **Save Installer** if you want to save these settings to be used later.
-
-6. Click **Exit Installer** to finish.
-
-The Mendix operator and Mendix Gateway Agent are now installed on your platform.
-
-#### 3.5.2 Configure Namespace
-
-You can now configure the resources required for your namespace.
-
-The first time you configure the namespace, you should select all the items under **Select items to configure** except **Proxy**. Only select **Proxy** if you want to configure a proxy for your namespace.
-
-The options do the following:
-
-* **Database Plan** – will create a new database plan for your cluster — you must have at least one database plan in your namespace, but you can have more than one
-* **Storage Plan** – will create a new storage plan for your cluster — you must have at least one storage plan in your namespace, but you can have more than one
-* **Ingress** – will set up the ingress for your namespace — if there is already an ingress, this will replace it with new settings
-* **Registry** – will set up a registry for your namespace — if there is already a registry, this will replace it with new settings
-* **Proxy** – will set up a proxy for your namespace — if there is already a proxy, this will replace it with new settings
-
-1. Select the options you need to configure.
-
-2. Click **Configure Namespace**.
-
-	You will be shown the **Installation wizard** landing page.
-
-	![](attachments/private-cloud-cluster/installation-wizard.png)
-
-3. Use the allocated function keys (for example <kbd>F2</kbd> for the **Database Plan**) to navigate to the setup pages for each resource which you need to configure.
-
-4. Each page will lead you through the information you need to supply.
-
-	You can also refer to the related sections above for more information.
-
-	* [Database Plan](#database-plan)
-	* [Storage Plan](#storage-plan)
-	* [Ingress](#ingress)
-	* [Registry](#registry)
-	* [Proxy](#proxy)
-
-5. When you have set up all the resources, press <kbd>F7</kbd> to **Review and Apply**.
+1. Press <kbd>F7</kbd> to **Review and Apply**.
 
 	![](attachments/private-cloud-cluster/review-and-apply.png)
 
-6. Click **Evaluate Configuration** to check the configuration.
+2. Click **Evaluate Configuration** to check the configuration.
 
 	Resources which are correctly configured will have a status **Valid configuration**. If an resource is incorrectly configured, it will have a status **Invalid configuration: …** and an explanation of the issue.
 
 	![](attachments/private-cloud-cluster/evaluate-configuration.png)
 
-7. Once you have evaluated the configuration, click **Write YAML** to save a copy of the configuration .yml files on your local machine.
+3. Once you have evaluated the configuration, click **Write YAML** to save a copy of the configuration .yml files on your local machine.
 
 	The **Installer output** panel will display the locations of the saved files.
 
 	![](attachments/private-cloud-cluster/write-yaml.png)
 
-8. Click **Apply Configuration** to apply the configuration to your namespace.
+4. Click **Apply Configuration** to apply the configuration to your namespace.
 
 	![](attachments/private-cloud-cluster/apply-configuration.png)
 
 	Once the configuration has been applied you will see the message **Successfully applied all the configuration!**.
 
-9. Click **Exit Installer** to return to the landing page.
+5. Click **Exit Installer** to return to the landing page.
 
-### 3.6 Confirming Namespace Configuration
+### 4.4 Confirming Namespace Configuration
 
 When the namespace is configured correctly, its status will become **Connected**. You may need to click the **Refresh** button if the screen does not update automatically.
 
 ![](attachments/private-cloud-cluster/image22.png)
 
-### 3.7 Advanced Operator configuration
+## 5 Advanced Operator configuration
 
 Some advanced configuration options of the Mendix Operator are not yet available in the reconfiguration script.
 These options can be changed by editing the `OperatorConfiguration` custom resource directly in Kubernetes.
@@ -617,11 +544,11 @@ You can change the following options:
 When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
 {{% /alert %}}
 
-## 4 Cluster and Namespace Management
+## 6 Cluster and Namespace Management
 
 Once it is configured, you can manage your cluster and namespaces through the Developer Portal.
 
-### 4.1 Cluster Overview {#overview}
+### 6.1 Cluster Overview {#overview}
 
 Go to the Cluster Manager page by clicking **Cluster Manager** in the **Apps** menu.
 
@@ -629,7 +556,7 @@ Go to the Cluster Manager page by clicking **Cluster Manager** in the **Apps** m
 
 From this page you can see a summary of your clusters with all their namespaces and an indication of the namespace status and how long it has been running (runtime).
 
-#### 4.1.1 Managing the Cluster
+#### 6.1.1 Managing the Cluster
 
 Here you can perform the following actions on the entire cluster:
 
@@ -659,7 +586,7 @@ The only limitations are that:
 When you delete a cluster, this removes the cluster from the Developer Portal. However, it will not remove the cluster from your platform. You will need to explicitly delete the cluster using the tools provided by your platform.
 {{% /alert %}}
 
-### 4.2 Namespace Management
+### 6.2 Namespace Management
 
 If you are a member of a namespace, you can also manage a namespace in the cluster.
 
@@ -708,7 +635,7 @@ You can also see an activity log containing the following information for all na
 
 ![](attachments/private-cloud-cluster/namespace-activity-logs.PNG)
 
-#### 4.2.1 Apps
+#### 6.2.1 Apps
 
 The **Apps** tab of namespace details in the cluster manager page lists all the apps which are deployed to this namespace.
 
@@ -720,7 +647,7 @@ If you are a team member of the app, click **Details** to go to the *Environment
 You can only see the environment details of an app if you are a member of the app team with the appropriate authorization.
 {{% /alert %}}
 
-#### 4.2.2 Members
+#### 6.2.2 Members
 
 By default, the cluster manager, who created the cluster in Mendix, and anyone added as a cluster manager has full administration rights to the cluster and its namespaces. These administration rights are:
 
@@ -747,7 +674,7 @@ The following actions require the appropriate access to the namespace **and** ac
 
 The **Members** tab allows you to manage the list of members of the namespace and control what rights they have.
 
-##### 4.2.2.1 Adding Members
+##### 6.2.2.1 Adding Members
 
 You can invite additional members to the namespace, and configure their role depending on what they should be allowed to do.
 
@@ -771,7 +698,7 @@ You can invite additional members to the namespace, and configure their role dep
 
 6. The user will receive an email and will be required to follow a link to confirm that they want to join this namespace. They will need to be logged in to Mendix when they follow the confirmation link.
 
-##### 4.2.2.2 Editing & Removing Members
+##### 6.2.2.2 Editing & Removing Members
 
 You can change the access rights for, or completely remove, existing members.
 
@@ -785,7 +712,7 @@ You can change the access rights for, or completely remove, existing members.
         
     ![](attachments/private-cloud-cluster/image30.png)
 
-#### 4.2.3 Operate {#operate}
+#### 6.2.3 Operate {#operate}
 
 The **Operate** tab allows you to add a set of links which are used when users request a page from the Operate category for their app in the Developer Portal, as shown below.
 
@@ -804,7 +731,7 @@ Open the **Operate** tab, enter the URLs relevant to your namespace, and click *
 
 ![](attachments/private-cloud-cluster/image32.png)
 
-#### 4.2.4 Plans
+#### 6.2.4 Plans
 
 The **Plans** tab shows you the database and storage plans which are currently configured for your namespace.
 
@@ -812,31 +739,31 @@ The **Plans** tab shows you the database and storage plans which are currently c
 
 From this tab you can perform the following action:
 
-##### 4.2.4.1 Adding a Plan
+##### 6.2.4.1 Adding a Plan
 
 Click **Add** and you will be able to enter the name of an existing plan and add it to the plans linked to this namespace. You should only use this when adding plans using the namespace Reconfiguration Script fails to add them correctly.
 
 ![](attachments/private-cloud-cluster/image34.png)
 
-##### 4.2.4.2 Deactivating a Plan
+##### 6.2.4.2 Deactivating a Plan
 
 Click **Deactivate** next to the name of the plan you wish to deactivate. You cannot remove plans from within the cluster manager, but you can deactivate them to ensure that developers cannot create environments using the plan. Any environments currently using the plan will not be affected by this setting.
 
-##### 4.2.4.3 Activating a Plan
+##### 6.2.4.3 Activating a Plan
 
 Click **Activate** next to the name of the plan you wish to activate. The plan can then be used by developers when they create an environment to deploy their apps.
 
-#### 4.2.5 Installation
+#### 6.2.5 Installation
 
-The **Installation** tab shows you the installation script and configuration script which you used to create the namespace, together with the parameters which are used to configure the agent.
+The **Installation** tab shows you the Configuration Tool which you used to create the namespace, together with the parameters which are used to configure the agent.
 
-You can use the **Reconfiguration Script** to change the configuration of your namespace by pasting it into a bash shell as described in [Running the Reconfiguration Script](#reconfiguration-script), above.
+You can use the Configuration Tool again to change the configuration of your namespace by pasting the command into a bash shell as described in [Running the Configuration Tool](#running-the-tool), above.
 
-You can also copy the installation and reconfiguration scripts to retain in your own code repository, if you wish.
+You can also download the Configuration Tool again, or retrieve the installation and reconfiguration scripts which are described in [Using Installation and Configuration Scripts](private-cloud-config-script) to retain in your own code repository, if you wish.
 
-## 5 Current Limitations
+## 7 Current Limitations
 
-### 5.1 Storage Provisioning
+### 7.1 Storage Provisioning
 
 If the Operator fails to provision or deprovision storage (a database or file storage), it will not retry the operation. If there is a failed `*-database` or `*-file` pod, you'll need to do the following:
 
@@ -844,7 +771,7 @@ If the Operator fails to provision or deprovision storage (a database or file st
 2. Troubleshoot and fix the cause of this error.
 3. Delete the failed pod to retry the process again.
 
-### 5.2 Restart Required When Switching Between Ingress and OpenShift Route {#restart-after-changing-network-cr}
+### 7.2 Restart Required When Switching Between Ingress and OpenShift Route {#restart-after-changing-network-cr}
 
 Starting with Mendix Operator version 1.5.0, the operator will monitor only one network resource type: Ingress or OpenShift route.
 
@@ -864,15 +791,15 @@ kubectl -n {namespace} scale deployment mendix-operator --replicas=0
 kubectl -n {namespace} scale deployment mendix-operator --replicas=1
 ```
 
-## 6 Troubleshooting
+## 8 Troubleshooting
 
 This section covers an issue which can arise where Mendix cannot recover automatically and manual intervention may be required.
 
-### 6.1 Status Reporting
+### 8.1 Status Reporting
 
 Under some circumstances changes in the status of the cluster, namespaces, and environments will not be updated automatically. To ensure you are seeing the current status, you may need to click the **Refresh** button on the screen (not the browser page refresh button).
 
-## 7 Containerized Mendix App Architecture {#containerized-architecture}
+## 9 Containerized Mendix App Architecture {#containerized-architecture}
 
 Within your cluster you can run one, or several, Mendix apps. Each app runs in an environment, and each environment is in a namespace. You can see the relationship between the Mendix environments and the Kubernetes namespaces in the image below.
 

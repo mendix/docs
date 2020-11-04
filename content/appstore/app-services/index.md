@@ -11,7 +11,7 @@ An app service is a domain-focused and packaged business capability delivered in
 When you download an app service, it will go into the **Project** > **App Store modules** folder.
 
 {{% alert type="warning" %}}
-App services like [3D Viewer](3d-viewer) are free to use for development and testing. However, when you deploy your app on Mendix Cloud, a [subscription](app-store-overview#subscriptions) will be required.
+App services like [3D Viewer](3d-viewer) start with a free trial for development and testing. After the trial ends, a [subscription](app-store-overview#subscriptions) will be required to continue using the app service.
 {{% /alert %}}
 
 ## 2 Main Documents in This Category

@@ -70,9 +70,9 @@ The header for each component presents the following details:
 		* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
 		* The best practice is to download a component from the App Store that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded App Store content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
 	* **Subscribe** – click this to [subscribe](#subscriptions) to a paid [platform-supported](app-store-content-support#category) app service
-	* <a name="try-for-free"></a>**Try for Free** – click this to start a 30-day free trial of the paid [platform-supported](app-store-content-support#category) component
+	* <a name="try-for-free"></a>**Try for Free** – click this to start a free trial of the paid [platform-supported](app-store-content-support#category) component
 		* After you agree to the terms and conditions, your trial will be set up – click **Check Status** to go to the [My Subscriptions](#subscriptions) page, where you can click **Manage App Services** to go to the [Service Management](#service-management) page (you will also receive an email with a link to this page)
-		* If a [platform-supported](app-store-content-support#category) component has the **Premium** label, this means that after your 30-day free trial ends, you need to [subscribe](#subscriptions) to the component to use it
+		* If a [platform-supported](app-store-content-support#category) component has the **Premium** label, this means that after your free trial ends, you need to [subscribe](#subscriptions) to the component to use it
 
 	{{% todo %}}[**Verify "Subscribe", "Try for Free", and "Premium" definitions**]{{% /todo %}}
 

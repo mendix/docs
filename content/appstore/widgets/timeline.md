@@ -16,14 +16,14 @@ You can use the [Timeline](https://appstore.home.mendix.com/link/app/115852/) wi
 
 For the sake of simplicity, there are two modes available to create a timeline:
 
-* Basic – this is the default mode in which you can select the **Data source**, **Title**, **Description**, and **Time indication** on the **Data Source** tab and the **Icon** on the **General** tab to quickly implement a timeline in your app.
-* Custom – enable this mode by setting **Custom Visualization** to **Yes** on the **General** tab to freely model everything that will be shown in the timeline, such as the title, icon, day divider, event date/time, and content
+* Basic – this is the default mode in which you can select the **Data source**, **Title**, **Description**, and **Time indication** on the **Data Source** tab and the **Icon** on the **General** tab to quickly implement a timeline in your app
+* Custom – enable this mode by setting **Custom Visualization** to **Yes** on the **General** tab to freely model everything that will be shown in the timeline, such as the title, icon, group header/day divider, event date/time attribute, and content
 
 ### 2.2 Selecting a Data Source
 
 On the **Data Source** tab for both basic and custom modes, you must select the **Data source** that will be used. 
 
-Since the widget will try to group the events based on date, make sure there is a DateTime attribute in the data-source entity itself. For details, see the [Showing the Group Header](#group-header) section below.
+Since the widget will try to group the events based on date, make sure there is a date-time attribute in the data-source entity itself. For details, see the [Showing the Group Header](#group-header) section below.
 
 #### 2.2 Showing the Group Header {#group-header}
 
@@ -42,7 +42,7 @@ In the basic mode, configure the following properties:
 * **Title** – required
 * **Description**
 * Event date/time
-* **Icon** – you can use glyphicons and images from the connected data-source entity; if an **Icon** is not provided, it will be shown as circle with a background color specified in `.widget-timeline-icon-circle`
+* **Icon** – you can use glyphicons and images from the connected data-source entity; if an **Icon** is not provided, it will be shown as a circle with a background color specified in `.widget-timeline-icon-circle`
 
 In the basic mode, you can show a group header in the following formats:
 
@@ -57,4 +57,4 @@ In the basic mode, you can show a group header in the following formats:
 
 ### 2.4 Custom Mode-Specific Fields {#custom}
 
-In the custom mode, the widget will generate five drop-zones for the icoon, divider, title, event date-time attribute, and the content. Since none of these fields are required, feel free to create your own timeline with any combinations.
+In the custom mode, the widget will generate five drop-zones for the icon, group header, title, event date-time attribute, and content. Since none of these fields are required, feel free to create your own timeline with any combination.

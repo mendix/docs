@@ -25,7 +25,7 @@ On the **Data Source** tab for both basic and custom modes, you must select the 
 
 Since the widget will try to group the events based on date, make sure there is a date-time attribute in the data-source entity itself. For details, see the [Showing the Group Header](#group-header) section below.
 
-#### 2.2 Showing the Group Header {#group-header}
+### 2.3 Showing the Group Header {#group-header}
 
 On the **General** tab for both basic and custom modes, you can opt to show a day divider by selecting **Yes** for **Group Events** and selecting a **Group Attribute**.
 
@@ -35,7 +35,7 @@ If you are using the basic mode, the values of the **Data source** field will be
 
 Selecting **No** for **Group Events** will make the timeline look like one single flow.
 
-### 2.3 Basic Mode-Specific Fields {#basic}
+### 2.4 Basic Mode-Specific Fields {#basic}
 
 In the basic mode, configure the following properties:
 
@@ -55,6 +55,6 @@ In the basic mode, you can show a group header in the following formats:
 | **Month** / **Month** and **year** | This will show the short name of the month and the full year. | Apr 2020 |
 | **Year** | This will show the full year. | 2020 |
 
-### 2.4 Custom Mode-Specific Fields {#custom}
+### 2.5 Custom Mode-Specific Fields {#custom}
 
 In the custom mode, the widget will generate five drop-zones for the icon, group header, title, event date-time attribute, and content. Since none of these fields are required, feel free to create your own timeline with any combination.

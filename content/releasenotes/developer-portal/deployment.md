@@ -14,7 +14,6 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 #### Mendix Cloud
 
-* We added the ability to permanently change the Log Levels in Mendix Cloud v4 for an app so that they persist between restarts. This was in response to customer requests. (Ticket 101413)<br/>Log Levels will only become persistent after the next restart of your app, so you may have to set them one more time.<br/>For more information on log levels, see [Log Levels Tab](https://docs.mendix.com/developerportal/deploy/environments-details#log-levels) in the *Environment Details* documentation.
 * We added support to generate 1024x1024 App Store icons for iOS.
 * We resolved an issue where the error **Incorrect debugger password specified** was shown, even though the correct debugger password had been provided. (Ticket 105317)
 

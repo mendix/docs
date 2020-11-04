@@ -1,43 +1,53 @@
-## Timeline
+---
+title: "Timeline"
+category: "Widgets"
+description: "Describes the Timeline widget, which is available in the Mendix App Store."
+tags: ["app store", "app store component", "widget", "timeline", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+---
 
-Use Timeline widget to create vertical list of events with descriptions.
+## 1 Introduction
 
-## Usage
+You can use the [Timeline](https://appstore.home.mendix.com/link/app/115852/) widget to create a vertical list of events with descriptions.
 
-#### Choosing the render type
+## 2 Configuration
 
-For the sake of simplicity, there are two modes available to create timeline: Basic and Custom.
+### 2.1 Choosing the Render Type
 
-With basic mode you can quickly select title, description, time and icon to have the fastest results.
+[**ADD**]
 
-With custom mode you can freely model everything which will be shown in the timeline. Including Icon, Day divider, Title, Event Date/Time or Content.
+For the sake of simplicity, there are two modes available to create a timeline: basic and custom.
 
-#### Selecting a data source
+With the basic mode, you can quickly select the **Title**, **Description**, **Time indication**, and **Icon** for fast results in implementing a timeline.
 
-Simply select a data source which will be used in the widget. Since timeline widget will try to group the events, make sure there is a DateTime attribute in the entity itself.
+With the custom mode, you can freely model everything that will be shown in the timeline, such as the **Title**, **Icon**,  day divider, event date/time, and content.
 
-#### Selecting event date time attribute
+### 2.2 Selecting a Data Source
 
-**Timeline will use this attribute to group events based on the date.** If you are using basic mode, values of this field will be used as a group header.
+On the **Data Source** tab, you should simply select the data source that will be used. Since the widget will try to group the events based on date, make sure there is a DateTime attribute in the entity itself. 
 
-#### Configuring widget
+{{% alert type="info" %}}
+If you are using the basic mode, the values of the **Data source** field will be used as a group header.
+{{% /alert %}}
 
-##### Showing group header
+#### 2.2.1 Showing the Group Header
+
+[**ADD**]
 
 For both custom and basic mode, you can opt for showing the day divider by using this control. Removing divider will make timeline look like one single flow.
 
-##### Basic Mode Specific Fields
+### 2.3 Basic Mode-Specific Fields
+
+[**POSITION**]
 
 Simply select:
 
--   Title (**Required**)
--   Description
--   Event date/time
--   Icon
+* **Title** – required
+* **Description**
+* **Event date/time** [**VERIFY**]
+* **Icon** – you can use glyphicons and images from the connected data-source entity; if an **Icon** is not provided, it will be shown as circle with a background color specified in `.widget-timeline-icon-circle`
 
-from the connected data source entity. You may use glyphicons and images for the icon itself. If icon is not provided, it will be shown as circle with background color specified in `.widget-timeline-icon-circle`
-
-In basic mode, you can show group header in six different formats.
+In the basic mode, you can show a group header in the following formats:
 
 | Option                           | Explanation                                                                                       | Example    |
 | -------------------------------- | ------------------------------------------------------------------------------------------------- | ---------- |

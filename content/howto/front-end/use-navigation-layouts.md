@@ -28,44 +28,44 @@ Mendix's Atlas UI provides two distinct web for you to choose from: Atlas Defaul
 
 ### 2.1 Atlas Default
 
-The default layout of Atlas, it is a responsive layout which can be used across web, tablet and mobile devices. 
+The default layout of Atlas, it is a responsive layout which can be used across web, tablet and mobile devices:
 
-![](attachments/2.1_atlasdefault.png)
+![](attachments/use-navigation-layouts/2.1_atlasdefault.png)
 
 It has three regions: top, left and center. The top region contains the brand logo of your application, the left region your navigation menu and the center region your dynamic content. 
 
-![](attachments/2.1_atlasdefaultregions.png)
+![](attachments/use-navigation-layouts/2.1_atlasdefaultregions.png)
 
 The navigation menu of Atlas Default, is a toggled menu. Options for this toggled menu are to shrink content (initially open) or to shrink content (initially closed).
 
 Shrink content (initially open) - with this option the navigation menu will initially start open, at its maximum width displaying both the menuitem's description and icon. When toggled it will move to its minimum width and display just the menuitem's icon. The page's content (center region) also starts shrunk to make space for the open menu. 
 
-![](attachments/2.1_shrinkingcontentopenoption.gif)
+![](attachments/use-navigation-layouts/2.1_shrinkingcontentopenoption.gif)
 
 Shrink content (initially closed) - with this option the navigation menu will initially start closed, at its minimum width displaying just the menuitem's icon. When toggled it will move to its maximum width and display both the menuitem's icon and description. The page's content (center region) doesn't not start shrunk, but will shrink when sidebar is toggled. 
 
-![](attachments/2.1_shrinkingcontentclosedoption.gif)
+![](attachments/use-navigation-layouts/2.1_shrinkingcontentclosedoption.gif)
 
 ### 2.2 Atlas TopBar
 
 The TopBar layout of Atlas, is also a responsive layout which can be used 
 across web, tablet and mobile devices. 
 
-![](attachments/2.1_atlastopbar.png)
+![](attachments/use-navigation-layouts/2.1_atlastopbar.png)
 
 It has three regions: top, left and center as well. The top region though contains both the brand logo and the navigation menu. The left region does contain a navigation menu, but it is only visible at the phone screen size. At that screen size the navigation menu in the top region will be hidden and replaced with a hamburger toggle which triggers the  opening and closing of the left region. The center region again houses the dynamic content of your app. 
 
-![](attachments/2.1_atlastopbarregions.png)
+![](attachments/use-navigation-layouts/2.1_atlastopbarregions.png)
 
 The options for the sidebar unlike the Atlas Default are only applicable when the screen is at the phone size. You then have two options for how the sidebar is toggled: slide over content and push content aside. 
 
 Slide over content - with this option the sidebar will move to overlay ontop of the content, hiding a portion (depends on the width of the sidebar) of the content. 
 
-![](attachments/2.2_slideovercontent.gif)
+![](attachments/use-navigation-layouts/2.2_slideovercontent.gif)
 
 Push content aside - with this option the sidebar will push the content off-screen. 
 
-![](attachments/2.2_pushcontentaside.gif)
+![](attachments/use-navigation-layouts/2.2_pushcontentaside.gif)
 
 ### 2.3 Choosing between layouts
 
@@ -73,7 +73,7 @@ Choosing between the two layouts: Atlas Default and Atlas Topbar, comes down to 
 
 When it comes down to deisgning for your users, context is king. A navigation that works well in one context, may not as well in another. To figure out which navigation is best for your app, it’s important to understand the different contexts where the top and left navigation work best.
 
-![](attachments/2.3_topvsleftnavigation.png)
+![](attachments/use-navigation-layouts/2.3_topvsleftnavigation.png)
 
 ### 2.3.1 Scanning
 
@@ -98,138 +98,138 @@ Top navigation items are more visible because they are always above the fold and
 To configure the toggled sidebar to shrinking content (initially open), follow these steps:
 
 1. Open the page properties of the Home_Web page
-![](attachments/3.1_pageproperties.png)
+![](attachments/use-navigation-layouts/3.1_pageproperties.png)
 
 2. In the tab General, select Atlas_Default as the layout. 
-![](attachments/3.1_layoutselection.png)
+![](attachments/use-navigation-layouts/3.1_layoutselection.png)
 
 3. Then in the breadcrumb, navigate to the Atlas_Default navigation layout.
-![](attachments/3.1_breadcrumb.png)
+![](attachments/use-navigation-layouts/3.1_breadcrumb.png)
 
 4. Open the region properties of the left sidebar
-![](attachments/3.1_regionproperties.png)
+![](attachments/use-navigation-layouts/3.1_regionproperties.png)
 
 5. In the tab General, select Shrinking content (initially open) as the toggle mode.
-![](attachments/3.1_shrinkcontentopen.png) 
+![](attachments/use-navigation-layouts/3.1_shrinkcontentopen.png) 
 
 ### 3.2 Toggling the sidebar for Shrinking content (initially open)
 
 To toggle the sidebar for Shrinking content (initially open), follow these steps:
 
 1. Run the project. 
-![](attachments/3.2_runningproject.png)
+![](attachments/use-navigation-layouts/3.2_runningproject.png)
 
 2. In your browser, click the toggle button.
-![](attachments/3.2_toggleshrinkingcontentopenoption.gif)
+![](attachments/use-navigation-layouts/3.2_toggleshrinkingcontentopenoption.gif)
 
 ### 3.3 Set the toggled sidebar to Shrinking content (initially closed)
 
 To configure the toggled sidebar to Shrinking content (initially closed), follow these steps:
 
 1. Open the page properties of the Home_Web page
-![](attachments/3.3_pageproperties.png)
+![](attachments/use-navigation-layouts/3.3_pageproperties.png)
 
 2. In the tab General, select Atlas_Default as the layout. 
-![](attachments/3.3_layoutselection.png)
+![](attachments/use-navigation-layouts/3.3_layoutselection.png)
 
 3. Then in the breadcrumb, navigate to the Atlas_Default navigation layout.
-![](attachments/3.3_breadcrumb.png)
+![](attachments/use-navigation-layouts/3.3_breadcrumb.png)
 
 4. Open the region properties of the left sidebar
-![](attachments/3.3_regionproperties.png)
+![](attachments/use-navigation-layouts/3.3_regionproperties.png)
 
 5. In the tab General, select Shrinking content (initially closed) as the toggle mode. 
-![](attachments/3.3_shrinkcontentclosed.png) 
+![](attachments/use-navigation-layouts/3.3_shrinkcontentclosed.png) 
 
 ### 3.4 Toggling the sidebar for Shrinking content (initially closed)
 
 1. Run the project. 
-![](attachments/3.4_runningproject.png)
+![](attachments/use-navigation-layouts/3.4_runningproject.png)
 
 2. In your browser, click the toggle button.
-![](attachments/3.4_toggleshrinkingcontentclosedoption.gif)
+![](attachments/use-navigation-layouts/3.4_toggleshrinkingcontentclosedoption.gif)
 
 ### 3.5 Set the toggled sidebar to Pushing content aside
 
 To configure the toggled sidebar to Push content aside, follow these steps:
 
 1. Open the page properties of the Home_Web page
-![](attachments/3.5_pageproperties.png)
+![](attachments/use-navigation-layouts/3.5_pageproperties.png)
 
 2. In the tab General, select Atlas_Topbar as the layout. 
-![](attachments/3.5_layoutselection.png)
+![](attachments/use-navigation-layouts/3.5_layoutselection.png)
 
 3. Then in the breadcrumb, navigate to the Atlas_Topbar navigation layout.
-![](attachments/3.5_breadcrumb.png)
+![](attachments/use-navigation-layouts/3.5_breadcrumb.png)
 
 4. Open the region properties of the left sidebar
-![](attachments/3.5_regionproperties.png)
+![](attachments/use-navigation-layouts/3.5_regionproperties.png)
 
 5. In the tab General, select Push content aside as the toggle mode. 
-![](attachments/3.5_pushcontentaside.png) 
+![](attachments/use-navigation-layouts/3.5_pushcontentaside.png) 
 
 6. (Optional) Change the Width to Percentage and enter 80 as the Width value. 
-![](attachments/3.5_changewidth.png) 
+![](attachments/use-navigation-layouts/3.5_changewidth.png) 
 
 ### 3.6 Toggling the sidebar for Pushing content aside
 
 To toggle the sidebar for Pushing content aside, follow these steps:
 
 1. Run the project. 
-![](attachments/3.6_runningproject.png)
+![](attachments/use-navigation-layouts/3.6_runningproject.png)
 
 2. In your browser, Inspect your Web Page (Right-click). 
-![](attachments/3.6_inspector.png)
+![](attachments/use-navigation-layouts/3.6_inspector.png)
 
 3. Click Toggle device toolbar. 
-![](attachments/3.6_toggledevicetoolbar.png)
+![](attachments/use-navigation-layouts/3.6_toggledevicetoolbar.png)
 
 4. Change Emulated Device to iPhoneX or to an equivalent mobile device. 
-![](attachments/3.6_selectdevicesize.png)
+![](attachments/use-navigation-layouts/3.6_selectdevicesize.png)
 
 5. In your Emulated Device's browser window, click the toggle button.
-![](attachments/3.6_pushingcontentaside.gif)
+![](attachments/use-navigation-layouts/3.6_pushingcontentaside.gif)
 
 ### 3.7 Set the toggled sidebar to Slide over content
 
 To configure the toggled sidebar to Slide over content, follow these steps:
 
 1. Open the page properties of the Home_Web page
-![](attachments/3.7_pageproperties.png)
+![](attachments/use-navigation-layouts/3.7_pageproperties.png)
 
 2. In the tab General, select Atlas_Topbar as the layout. 
-![](attachments/3.7_layoutselection.png)
+![](attachments/use-navigation-layouts/3.7_layoutselection.png)
 
 3. Then in the breadcrumb, navigate to the Atlas_Topbar navigation layout.
-![](attachments/3.7_breadcrumb.png)
+![](attachments/use-navigation-layouts/3.7_breadcrumb.png)
 
 4. Open the region properties of the left sidebar
-![](attachments/3.7_regionproperties.png)
+![](attachments/use-navigation-layouts/3.7_regionproperties.png)
 
 5. In the tab General, select Slide over content as the toggle mode. 
-![](attachments/3.7_slideovercontent.png) 
+![](attachments/use-navigation-layouts/3.7_slideovercontent.png) 
 
 6. (Optional) Change the Width to Percentage and enter 80 as the Width value. 
-![](attachments/3.7_changewidth.png) 
+![](attachments/use-navigation-layouts/3.7_changewidth.png) 
 
 ### 3.8 Toggling the sidebar for Slide over content
 
 To toggle the sidebar for Slide over content, follow these steps:
 
 1. Run the project. 
-![](attachments/3.8_runningproject.png)
+![](attachments/use-navigation-layouts/3.8_runningproject.png)
 
 2. In your browser, Inspect your Web Page. 
-![](attachments/3.8_inspector.png)
+![](attachments/use-navigation-layouts/3.8_inspector.png)
 
 3. Click Toggle device toolbar. 
-![](attachments/3.8_toggledevicetoolbar.png)
+![](attachments/use-navigation-layouts/3.8_toggledevicetoolbar.png)
 
 4. Change Emulated Device to iPhoneX or to an equivalent mobile device.
-![](attachments/3.8_selectdevicesize.png)
+![](attachments/use-navigation-layouts/3.8_selectdevicesize.png)
 
 5. In your Emulated Device's browser window, click the toggle button.
-![](attachments/3.8_slidingovercontent.gif)
+![](attachments/use-navigation-layouts/3.8_slidingovercontent.gif)
 
 ## 4 Read More
 

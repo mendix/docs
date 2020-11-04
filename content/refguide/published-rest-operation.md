@@ -12,49 +12,64 @@ tags: ["Published REST", "operation", "method", "path", "example location", "map
 
 A published REST operation is part of a [published REST resource](published-rest-resource) and defines an endpoint that a client can call to get, put, post, patch, or delete items from the resource.
 
-This document describes the options when configuring a REST operation through the *add operation for resource* pop-up dialog.
+In the **Published REST Service** document you can add items to be included in the service as **Resources** :
 
-## 2 General
+![Published REST Service](attachments/published-rest-operation/publshed-rest-service.png)
 
-### 2.1 Method
+## 2 Operation Definition
 
-The method specifies what type of operation is performed by the microflow:
+When you **Add** or **Edit** a resource, you can specify the details described in the following sections in the **Operation** definition dialog box for the selected item:
 
-* 'GET' – the operation retrieves the entry or entries at the specified location
-* 'PUT' – the operation replaces the entry or entries at the specified location, or it creates them if they do not exist
-* 'POST' – the operation creates an entry in the collection at the specified location
-* 'PATCH' – the operations updates (part of) the entry at the specified location
-* 'DELETE' – the operation deletes the entry or entries at the specified location
-* 'HEAD' - the operation retrieves information about the entry or entries at the specified location; this is identical to _GET_, except for the fact that it doesn't return a message body
-* 'OPTIONS' - the operation returns information about the available communication options
+![REST Operation](attachments/published-rest-operation/operation-definition.png)
 
-### <a name="operation-path"></a>2.2 Operation Path
+### 2.1 General
 
-The location where the operation can be reached starts with the location of the resource.
+In the **General** tab, the following information is specified.
 
-The operation path specifies the remainder of the location of the operation. You can leave it empty to use the location of the resource.
+#### 2.1.1 Method
 
-You can use [path parameters](published-rest-path-parameters) to capture part of the location as a microflow parameter or as a parameter to the import mapping. Specify path parameters in the operation path between '{' and '}'. Whatever is in the URL at the place of the path parameter will be passed to the microflow or the import mapping.
+The method specifies the type of operation that is performed by the microflow. From the drop-down menu you can select one of the following:
 
-The method and operation path determine [which operation gets executed for a given request URL](published-rest-routing).
+* **GET** – retrieve the entry or entries at the specified location
+* **PUT** – replace the entry or entries at the specified location, or create them if they do not exist
+* **POST** – create an entry in the collection at the specified location
+* **PATCH** – update (part of) the entry at the specified location
+* **DELETE** – delete the entry or entries at the specified location
+* **HEAD** - retrieve information about the entry or entries at the specified location; this is identical to _GET_, except that a message body is not returned
+* **OPTIONS** - return information about the available communication options
 
-### <a name="example-location"></a>2.3 Example Location
+#### 2.1.2 Operation Path{#operation-path}
 
-The example location gives an example of a URL on which the operation can be reached. It shows path parameters and query parameter values as placeholders between '{' and '}'.
+The location where the operation can be reached starts with the URL of the resource and the **Operation path** specifies the remainder of the path for the operation. You can leave it empty to use the location of the resource.
 
-### 2.4 Microflow
+You can use [path parameters](published-rest-path-parameters) to capture part of the location as a microflow parameter or as a parameter to the import mapping. Specify path parameters in the operation path between '{' and '}'. The value that is in the URL for the path parameter will be passed to the microflow or the import mapping.
 
-An operation has different parameters:
+The **Method** and **Operation path** define [the operation that gets executed for a given request URL](published-rest-routing).
 
- * [Query parameters](published-rest-query-parameters), which are at the end of the URL in the form of `?name1=value1&name2=value2` (when a microflow parameter is not in the path and is not object, then it's considered a query parameter)
- * [Path parameters](published-rest-path-parameters), which are part of the path of the URL
- * A body parameter (optional), which is in the body of the request to the operation (the 'GET', 'HEAD', and 'DELETE' operations do not have a body parameter)
- * Header parameters, which come from the HTTP headers of the request
- * A form parameter (optional), which is a part of the body of a multipart form request
+#### 2.1.3 Example Location{#example-location}
+
+The **Example Location** gives an example of a URL on which the operation can be reached. 
+
+#### 2.1.4 Microflow
+
+An operation can have the following parameters:
+
+ * [Query parameters](published-rest-query-parameters), which are at the end of the URL in the form of `?name1=value1&name2=value2`  
+
+   {{% alert type="info" %}}
+   When a microflow parameter is not in the path and is not an object, then it is considered to be a query parameter.
+   {{% /alert %}}
+* [Path parameters](published-rest-path-parameters), which form part of the path of the URL
+* A body parameter (optional), which is in the body of the request to the operation 
+   {{% alert type="info" %}}
+   The 'GET', 'HEAD', and 'DELETE' operations do not have a body parameter.
+   {{% /alert %}}
+* Header parameters, which come from the HTTP headers of the request
+* A form parameter (optional), which is a part of the body of a multipart form request
 
 A microflow for an operation takes these operation parameters as input.
 
-A microflow parameter that has the *List* or *Object* type indicates a body parameter. You can specify an import mapping to convert the incoming JSON or XML. A parameter of the *FileDocument* type (or that inherits from a *FileDocument*) is special: It can also be used for form parameters, and an import mapping is not needed.
+A microflow parameter that has the 'List' or 'Object' type indicates a body parameter. You can specify an import mapping to convert the incoming JSON or XML. A parameter of the *FileDocument* type (or that inherits from a *FileDocument*) is special: It can also be used for form parameters, and an import mapping is not needed.
 
 An operation microflow may also take an [HttpRequest](http-request-and-response-entities#http-request) parameter. You can add this parameter if you would like to inspect the requested URL and headers.
 

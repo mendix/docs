@@ -12,7 +12,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 ### November 5th, 2020
 
 #### Improvements
-In the Data Hub **Catalog** search pane, we now show the number of  [filters](/data-hub/data-hub-catalog/search#filter) that are active for the current search at the filter icon.
+* In the Data Hub **Catalog** search pane, we now show the number of  [filters](/data-hub/data-hub-catalog/search#filter) that are active for the current search at the filter icon.
 
 ### October 29th, 2020
 

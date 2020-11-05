@@ -15,7 +15,7 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 #### Mendix Cloud
 
 * We added support to generate 1024x1024 App Store icons for iOS.
-* We resolved an issue where the error **Incorrect debugger password specified** was shown, even though the correct debugger password had been provided. (Ticket 105317)
+* We resolved an issue where an incorrect debugger password was sometimes shown for Mendix Cloud v4 apps in the Developer Portal. This meant that customers were not able to connect to the debugger. (Ticket 105317)
 
 ### October 30th, 2020
 

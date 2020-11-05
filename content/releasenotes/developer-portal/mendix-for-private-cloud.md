@@ -11,6 +11,8 @@ These release notes cover changes to deployment to [Mendix for Private Cloud](/d
 For information on the current status of deployment to Mendix for Private Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
 
+## 2020
+
 ### October 30th, 2020
 
 #### Mendix for Private Cloud — Mendix Operator v1.6.1
@@ -212,6 +214,8 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 #### Improvements
 
 * You can now deploy Mendix apps easily to Kubernetes-based platforms. We currently support Red Hat OpenShift, Amazon Web Services Elastic Kubernetes Service (AWS-EKS), and Amazon Web Services Azure Kubernetes Service (AWS-AKS). This involves deploying a Mendix Operator to your cluster to manage the Mendix requests. For more information see the [Private Cloud](/developerportal/deploy/private-cloud) documentation.
+
+## 2019
 
 ### December 5th, 2019
 

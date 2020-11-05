@@ -10,6 +10,8 @@ These release notes cover changes to deployment to [SAP Cloud Platform](/develop
 
 For information on the current status of deployment to SAP Cloud Platform and any planned releases see [Mendix Status](https://status.mendix.com/).
 
+## 2020
+
 ### October 21st, 2020
 
 #### Improvements
@@ -38,6 +40,8 @@ For information on the current status of deployment to SAP Cloud Platform and an
 #### Improvements
 
 * We added support for using the HANA trial database available in new SAP Cloud Platform trial accounts. See the [Running Mendix on SAP HANA](/developerportal/deploy/sap-cloud-platform#sap-hana) section of the *SAP Cloud Platform* deployment document for more details.
+
+## 2019
 
 ### September 13th, 2019
 
@@ -72,6 +76,8 @@ For information on the current status of deployment to SAP Cloud Platform and an
 #### Limitation
 
 * If an app is deployed to SAP from the Desktop Modeler *before it has been started from the Developer Portal*, the deployment will fail because the marketplace services have not been bound. Please ensure that apps are first deployed from the Developer Portal before trying to deploy them from the Desktop Modeler.
+
+## 2018
 
 ### October 22nd, 2018
 

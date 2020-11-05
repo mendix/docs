@@ -10,6 +10,13 @@ These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mend
 
 ## 2020
 
+### November 5th, 2020
+
+#### Mendix Cloud
+
+* We added support to generate 1024x1024 App Store icons for iOS.
+* We resolved an issue where an incorrect debugger password was sometimes shown for Mendix Cloud v4 apps in the Developer Portal. This meant that customers were not able to connect to the debugger. (Ticket 105317)
+
 ### October 30th, 2020
 
 #### Mendix for Private Cloud — Mendix Operator v1.6.1

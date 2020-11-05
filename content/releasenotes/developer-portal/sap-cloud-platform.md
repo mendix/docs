@@ -6,6 +6,10 @@ description: "Release notes for deployment to SAP Cloud Platform"
 tags: ["release notes", "deployment", "cloud environment", "SAP", "SAP Cloud"]
 ---
 
+These release notes cover changes to deployment to [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform). There are separate release notes for other deployment targets, see [Deployment](deployment) release notes page for further information.
+
+For information on the current status of deployment to SAP Cloud Platform and any planned releases see [Mendix Status](https://status.mendix.com/).
+
 ### October 21st, 2020
 
 #### Improvements

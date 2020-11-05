@@ -12,8 +12,8 @@ Follow the links in the table below to see the release notes you want:
 
 | Type of Deployment | Last Updated |
 | --- | --- |
-| [Mendix Cloud](mendix-cloud) | October 26th, 2020 |
-| [Mendix for Private Cloud](mendix-for-private-cloud) | October 21st, 2020 |
+| [Mendix Cloud](mendix-cloud) | November 5th, 2020 |
+| [Mendix for Private Cloud](mendix-for-private-cloud) | October 30th, 2020 |
 | [SAP Cloud Platform](sap-cloud-platform) | October 21st, 2020 |
 | [Other Deployment Options](on-premises) | October 26th, 2020 |
 
@@ -23,6 +23,8 @@ The release notes for the buildpacks are held in their respective GitHub repos:
 * [Mendix Buildpack for Docker – docker-mendix-buildpack](https://github.com/mendix/docker-mendix-buildpack/releases)
 
 To see the current status of the Mendix Clouds and Mendix for Private Cloud, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
+
+{{% todo %}}[Remove old Release Notes and copy over recent changes before publishing.]{{% /todo %}}
 
 <!-- This is what was in the release notes when they were split into separate categories
 

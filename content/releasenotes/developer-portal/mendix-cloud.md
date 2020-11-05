@@ -6,9 +6,19 @@ description: "Release notes for deployment to Mendix Clouds v3 and v4"
 tags: ["release notes", "deployment", "cloud environment", "Mendix Cloud", "free app"]
 ---
 
-These release notes cover changes to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), other [deployment](/developerportal/deploy/) options, and app [operations](/developerportal/operate/). For updates on the status of Mendix Cloud v4, Mendix Cloud v3, and other deployment options, see [Mendix Status](https://status.mendix.com/).
+These release notes cover changes to deployment to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy). There are separate release notes for other deployment targets, see [Deployment](deployment) release notes page for further information.
+
+For information on the current status of deployment to Mendix Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
+
 
 ## 2020
+
+### November 5th, 2020
+
+#### Mendix Cloud
+
+* We added support to generate 1024x1024 App Store icons for iOS.
+* We resolved an issue where an incorrect debugger password was sometimes shown for Mendix Cloud v4 apps in the Developer Portal. This meant that customers were not able to connect to the debugger. (Ticket 105317)
 
 ### October 26th, 2020
 

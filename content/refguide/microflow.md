@@ -37,9 +37,9 @@ Microflow properties consist of the following sections:
 
 #### 2.2.1 Disallow
 
-The **Disallow** property allows you to specify whether the microflow can be to be executed multiple times concurrently. This applies to all end-users who are using the app, not just within one user session.
+The **Disallow** property allows you to specify whether the microflow can be to be executed multiple times concurrently. This applies to all end-users who is using the app, not just within one user session.
 
-Disallowing concurrent execution of a microflow is useful if a microflow would interfere with another running instance. For example, if it accesses a global resource.
+Disallowing concurrent execution of a microflow can be useful if a microflow would interfere with another running instance. For example, if it accessed via a global resource.
 
 | Option | Description |
 | --- | --- |

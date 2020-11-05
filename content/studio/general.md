@@ -146,6 +146,5 @@ Mind the following characteristics when using cut/copy/paste:
 
 ## 9 Main Documents in This Category
 
-* [Collaborative Development in Studio](collaborative-development) – provides you with information on how team members work together on one project in Mendix Studio Pro and Mendix Studio 
-
 * [Studio Ranges & Mendix Versions](general-versions) – explains how Studio version correlates to the Mendix version
+

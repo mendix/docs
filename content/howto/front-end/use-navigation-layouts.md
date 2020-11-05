@@ -68,7 +68,7 @@ The options for the sidebar (unlike the Atlas Default) are only applicable at ph
 
 ### 2.3 Choosing Between Layouts
 
-Choosing between the two layouts (Atlas Default and Atlas Topbar) comes down to a decision of top navigation versus left navigation, The information below will help you determine which approach better suits your users. 
+Choosing between the two layouts (Atlas Default and Atlas Topbar) comes down to a decision of top navigation versus left navigation, The information below will help you determine which approach better suits your users. The sections below assume your app is designed for users who read left to right, but Mendix may release more design guidance and options for other language cultures in the future.
 
 When it comes down to deisgning for your users, context is key. A navigation that works well in one context may not as well in another. To determine which navigation is best for your app, it is important to understand the different contexts where the top and left navigation work best:
 

@@ -26,7 +26,7 @@ File manager properties consist of the following sections:
 
 * [Common](#common) 
 
-* Design Properties
+* [Design Properties](#design-properties)
 
 * [Editability](#editability)
 
@@ -40,13 +40,17 @@ File manager properties consist of the following sections:
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 2.2 Editability Section {#editability}
+### 2.2 Design Properties Section {#design-properties}
+
+{{% snippet file="refguide/design-section-link.md" %}} 
+
+### 2.3 Editability Section {#editability}
 
 {{% snippet file="refguide/editability-section-link.md" %}}
 
-### 2.3 General Section {#general}
+### 2.4 General Section {#general}
 
-#### 2.3.1 Type
+#### 2.4.1 Type
 
 The **Type** property indicates how the end-user will be able to use the file manager.
 
@@ -56,29 +60,29 @@ The **Type** property indicates how the end-user will be able to use the file ma
 | Download | The file manager can only be used to download a file. |
 | Both *(default)*  | The file manager can be used to both upload and download a file. |
 
-#### 2.3.2 Max File Size (MB)
+#### 2.4.2 Max File Size (MB)
 
 **Max file size (MB)** determines the maximum size of files (in megabytes) that can be uploaded.
 
 Default: *5*
 
-#### 2.3.3 Allowed Extensions
+#### 2.4.3 Allowed Extensions
 
 You can specify file extensions that users are allowed to upload. If no extension is specified, all file extensions are allowed. Separate multiple extensions by a semi-colon, e.g. `txt;doc`
 
 If a file with an extension that is not allowed is selected, a [system text](system-texts) for **File manager/image viewer** > **Error: incorrect file extension** will be shown below the file manager.
 
-#### 2.3.4 Show File in Browser
+#### 2.4.4 Show File in Browser
 
 **Show file in browser** indicates whether a file will be shown in the browser instead of being downloaded.
 
 Default: *False*
 
-### 2.4 Label Section {#label}
+### 2.5 Label Section {#label}
 
 {{% snippet file="refguide/label-section-link.md" %}}
 
-### 2.5 Visibility Section {#visibility}
+### 2.6 Visibility Section {#visibility}
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 

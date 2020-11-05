@@ -13,7 +13,7 @@ With Studio you can create and edit applications in your browser without install
 
 The picture below shows the components of Studio's interface:
 
-![](attachments/general/home-page.png)
+![Studio Diagram](attachments/general/home-page.png)
 
 ## 2 Opening Studio
 
@@ -23,7 +23,9 @@ You can open Mendix Studio via [Developer Portal](#opening-studio-via-dev-portal
 
 You can edit an app in Mendix Studio by opening your app in [Developer Portal](https://home.mendix.com) and clicking **Edit in Studio**:
 
-![](attachments/general/edit-app.jpg)
+{{% image_container width="350" %}}
+![Edit in Studio](attachments/general/edit-app.jpg)
+{{% /image_container %}}
 
 If you do not see **Edit in Studio**, go to [General Settings](/developerportal/settings/general-settings) in the Developer Portal and [enable Studio](/developerportal/settings/general-settings#web).
 
@@ -34,7 +36,7 @@ You can also open your app in Studio via Studio Pro. Do the following:
 1. In Studio Pro, open the project in that you want to view in Studio.
 2.  Click the globe icon in the top right corner (only available if Studio is enabled).
 
-	![](attachments/general/globe-icon.png)
+	![Globe Icon](attachments/general/globe-icon.png)
 
 The app opens in Studio.
 
@@ -42,7 +44,7 @@ The app opens in Studio.
 
 After clicking **Edit in Studio** you may need to upgrade your app to the latest version.
 
-{{% image_container width="350" %}}![](attachments/general/upgrade.png)
+{{% image_container width="350" %}}![Upgrade](attachments/general/upgrade.png)
 {{% /image_container %}}
 
 You may also see an orange top bar suggesting an upgrade to the next Mendix version. For more information on Studio upgrades and Mendix versions, see [Studio Ranges & Mendix Versions](general-versions).
@@ -50,7 +52,7 @@ You may also see an orange top bar suggesting an upgrade to the next Mendix vers
 {{% alert type="info" %}}
 When you upgrade your app in Studio to the latest  Mendix version, you will need to upgrade your app in the Studio Pro to the same version as well. 
 
-If you are working in a team with others, it is wise to check with your team members if everyone is OK to upgrade the app to the latest Mendix version. The reason for this is that once you update Studio, you need to update Studio Pro as well.
+If you are working in a team with others, it is wise to check with your team members if everyone is OK to upgrade the app to the latest Mendix version. 
 
 {{% /alert %}}
 
@@ -64,14 +66,15 @@ You can change the view of your page to different views by clicking the correspo
 * Tablet
 * Responsive (Desktop) 
 
-  {{% image_container width="350" %}}![](attachments/general/view.png)
-  {{% /image_container %}}
+    {{% image_container width="350" %}}![Device Modes](attachments/general/view.png)
+    {{% /image_container %}}
 
 ## 5 Left Menu Bar
 
 The left menu bar allows you to go back to the Developer Portal, access pages, the domain model, microflows, and the navigation document in Studio, search for different elements in your app, open settings, and customize the look of your app:
 
-{{% image_container width="350" %}}![](attachments/general/left-menu-bar.png)
+{{% image_container width="250" %}}
+![Left Menu Bar](attachments/general/left-menu-bar.png)
 {{% /image_container %}}
 
 All items of the left menu bar are described in the table below:
@@ -91,7 +94,7 @@ All items of the left menu bar are described in the table below:
 
 The top right menu of Studio consists of the **Toolbox**, **Properties** , and **Buzz** tabs: 
 
-<img src="attachments/general/toolbox-properties-buzz.png"  />
+![Toolbox, Properties, Buzz](attachments/general/toolbox-properties-buzz.png)
 
 The **Toolbox**, **Properties** , and **Buzz** tabs are described in the table below:
 
@@ -105,7 +108,7 @@ The **Toolbox**, **Properties** , and **Buzz** tabs are described in the table b
 
 The top menu bar allows to check whether Studio is connected to the internet, undo or redo actions, view your recent documents, preview or publish your app, and view errors in your app (if any). You can also access help and learning and view various information in the top menu bar. 
 
-![](attachments/general/top-bar.png)
+![Top Menu Bar](attachments/general/top-bar.png)
 
 The top menu bar items are described in the table below: 
 

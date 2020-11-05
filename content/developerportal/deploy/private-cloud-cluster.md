@@ -90,8 +90,6 @@ Before you can use the Mendix Operator in your namespace you need to install it 
 
 ### 4.1 Downloaded Configuration Tool{#downloaded-script}
 
-{{% todo %}}[Review instructions for downloading and running the Configuration Tool]{{% /todo %}}
-
 If you are not already on the installation tab for your namespace, go to it by following these instructions:
 
 1. Go to the Cluster Manager page by clicking **Cluster Manager** in the **Apps** menu.
@@ -106,7 +104,7 @@ If you are not already on the installation tab for your namespace, go to it by f
 
 Now you can download the Configuration Tool by doing the following:
 
-1. Choose the operating system for your local computer.
+1. Choose the **Operating System** for your local computer.
 
 2. Click **Download Installation Script** and make sure that it is stored somewhere on your path.
 
@@ -117,8 +115,6 @@ Now you can download the Configuration Tool by doing the following:
 You will need to have administrator rights to your private cloud platform. This means you will have to log in before you run the Configuration Tool.
 
 These instructions are for the OpenShift platform; a similar process will be required for other platforms.
-
-To run the Configuration Tool, you must first sign in to OpenShift using the OpenShift CLI.
 
 You can do this as follows:
 
@@ -166,13 +162,15 @@ If the Mendix Operator and the Mendix Gateway Agent have not been installed in y
 
 	![](attachments/private-cloud-cluster/installer-options.png)
 
-2. Select the required **Cluster Mode**.
+2. Select the required **Cluster Mode** – *connected* or *standalone.
 
-3. Select the required **Cluster Type**.
+    For more information, see [Connected and Standalone Clusters](private-cloud#connected-standalone) in the *Private Cloud* documentation.
+
+3. Select the required **Cluster Type** – *openshift* or *kubernetes*.
 
 4. Click **Run Installer** to install the Mendix Operator and Mendix Gateway Agent in your cluster.
 
-	The installation is successful if the **Installer output** ends with **Installation Successful**.
+	{{% alert type="info" %}}The installation is successful if the **Installer output** ends with **Installation Successful**.{{% /alert %}}
 
 5. Click **Save Installer** if you want to save these settings to be used later.
 
@@ -190,11 +188,11 @@ The options do the following:
 
 * **Database Plan** – will create a new database plan for your cluster — you must have at least one database plan in your namespace, but you can have more than one
 * **Storage Plan** – will create a new storage plan for your cluster — you must have at least one storage plan in your namespace, but you can have more than one
-* **Ingress** – will set up the ingress for your namespace — if there is already an ingress, this will replace it with new settings
-* **Registry** – will set up a registry for your namespace — if there is already a registry, this will replace it with new settings
-* **Proxy** – will set up a proxy for your namespace — if there is already a proxy, this will replace it with new settings
+* **Ingress** – will configure the ingress for your namespace — if there is already an ingress, this will replace it with new settings
+* **Registry** – will configure a registry for your namespace — if there is already a registry, this will replace it with new settings
+* **Proxy** – will configure a proxy for your namespace — if there is already a proxy, this will replace it with new settings
 
-1. Select the options you need to configure.
+1. Select the options you need to configure – the first time you configure your namespace you must check *all the first four options*.  **Proxy** is optional.
 
 2. Click **Configure Namespace**.
 
@@ -214,7 +212,7 @@ The options do the following:
 	* [Registry](#registry)
 	* [Proxy](#proxy)
 
-#### 4.3.1 Database Plan{#database-plan}
+##### 4.3.2.1 Database Plan{#database-plan}
 
 **Postgres** will enable you to enter the values to configure a PostgreSQL database. You will need to provide all the information about your PostgreSQL database such as plan name, host, port, database, user, and password.
 
@@ -264,7 +262,7 @@ If the plan name already exists you will receive an error that it cannot be crea
 To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.1.0 or later.
 {{% /alert %}}
 
-#### 4.3.2 Storage Plan{#storage-plan}
+##### 4.3.2.2 Storage Plan{#storage-plan}
 
 **Minio** will connect to a [MinIO](https://min.io/product/overview) S3-compatible object storage. You will need to provide all the information about your MinIO storage such as endpoint, access key, and secret key. The MinIO server needs to be a full-featured MinIO server and not a [MinIO Gateway](https://github.com/minio/minio/tree/master/docs/gateway).
 
@@ -374,7 +372,7 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide)
 
 **Ephemeral** will enable you to quickly set up your environment and deploy your app, but any data objects you store will be lost when you restart your environment.
 
-#### 4.3.3 Ingress{#ingress}
+##### 4.3.2.3 Ingress{#ingress}
 
 **OpenShift Route** will configure an OpenShift Route. This can only be used for OpenShift clusters.
 
@@ -386,7 +384,7 @@ Both forms of ingress can have TLS enabled or disabled.
 When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
 {{% /alert %}}
 
-#### 4.3.4 Registry{#registry}
+##### 4.3.2.4 Registry{#registry}
 
 Selecting a registry type and configuring its credentials will configure the destination registry used by Mendix for Private Cloud to build images.
 Images are pulled from this registry by Kubernetes, bypassing the Mendix Operator.
@@ -410,15 +408,13 @@ For **Amazon Elastic Container Registry**, you will need to configure registry a
 
 When choosing the **Existing docker-registry secret**, you will need to add this secret to the `default` ServiceAccount manually, or provide registry authentication configuration in another way (depending on which registry authentication options the Kubernetes cluster vendor is offering).
 
-#### 4.3.5 Proxy{#proxy}
-
-![](attachments/private-cloud-config-script/image21.png)
+#### 4.3.3 Proxy{#proxy}
 
 Choose **Yes** if a proxy is required to access the public internet from the namespace; you will be asked for the proxy configuration details.
 
-##### 4.3.6 Review and Apply
+#### 4.3.4 Review and Apply
 
-When you have set up all the resources, do the following:
+When you have configured all the resources, do the following:
 
 1. Press <kbd>F7</kbd> to **Review and Apply**.
 

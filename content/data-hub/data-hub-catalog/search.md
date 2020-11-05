@@ -117,16 +117,16 @@ Search is case-insensitive.
 
 #### 4.1.2 Filters{#filter}
 
-By default, **Production** environment filter is active to restrict search results to the production environment. The number of filters that are active for the current search is displayed: 
+By default, the **Production** environment filter is active to restrict search results to the production environment. The number of filters that are active for the current search is displayed adjacent to the filter: 
 
  {{% image_container width="200" %}}![](attachments/search/filter-active.png){{% /image_container %}}
 
 
-To change the active environments, click **Filter**:
+To specify the environments for the search, click **Filter**:
 
 ![](attachments/search/dh-filter-box.png)
 
-In the **Filters** dialog box,  check the **Environment Types** that you want to restrict your search to and click **Apply Filters**. The search results will only display hits for the specified search string in the checked environments.
+In the **Filters** dialog box,  check the **Environment Type** that you want to restrict your search to and click, **Apply Filters**. The search results will only display hits for the specified search string in the checked environments.
 
 Click **Clear Filters** to see search results in all environments.
 

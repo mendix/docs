@@ -271,8 +271,3 @@ You cannot delete *Name* and *Size* attributes of image and file entities.
 
 {{% /alert %}}
 
-## 8 Main Documents in This Category
-
-* [Attributes](domain-models-attributes) – describes attributes and their types
-* [Associations](domain-models-association-properties) – describes associations and their properties
-* [Enumeration](domain-models-enumeration) – explains what an enumeration is and how to use it

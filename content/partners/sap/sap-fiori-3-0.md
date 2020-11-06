@@ -36,7 +36,9 @@ There are a few cases where you will need to apply some extra CSS classes manual
 
 There are also a few Mendix widgets which do not support SAP Fiori 3 styles. These are listed in [Unsupported Widgets](#unsupported-widgets).
 
-### 2.1 Examples of Mendix Widget Styling
+### 2.1 Examples of Mendix Core Widget Styling
+
+You can see examples of the Fiori 3 styling of the Mendix Core Widgets by going to the **Mendix_Core_Elements** page of the SAP Fiori 3 UI Resources App Store Module. 
 
 #### 2.1.1 Text Widgets
 
@@ -65,8 +67,20 @@ You can choose different types of button by setting the appropriate **Button sty
 | Ghost | *requires manual CSS class, see [Applying CSS Classes Manually](#apply-css), below* |
 
 {{% image_container width="75%" %}}
-![SAP Fiori Text Styles](attachments/sap-fiori-3-0/button-styles.png)
+![SAP Fiori Button Styles](attachments/sap-fiori-3-0/button-styles.png)
 {{% /image_container %}}
+
+The **Link button** also has Fiori 3 styling.
+
+#### 2.1.4 Action Bar
+
+{{% todo %}}[Does the construction of the Action Bar need to be described? Why isn't it a building block?]{{% /todo %}}
+
+#### 2.1.5 Container Count Badge
+
+The **container count badge** allows you to add a count to your 
+
+![SAP Fiori Count Badge Example](attachments/sap-fiori-3-0/count-badge-example.png)
 
 ### 2.2 Applying CSS Classes Manually{#apply-css}
 

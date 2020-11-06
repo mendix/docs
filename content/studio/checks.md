@@ -3,6 +3,8 @@ title: "Checks"
 description: "Describes checks during publishing process in Mendix Studio."
 menu_order: 70
 tags: ["studio", "app viewing", "checks", "errors", "consistency errors"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#The anchor viewing-checks below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Introduction 

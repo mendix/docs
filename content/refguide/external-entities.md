@@ -14,7 +14,7 @@ This means that several properties of the external entities are determined in th
 External entities are added to the domain model through the [Data Hub pane](data-hub-pane) and are displayed as *purple* entity containers in the domain model. 
 
 {{% alert type="info" %}}
-A license is required to use Mendix Data Hub and connect to external data sources through consumed OData services in your apps.
+A [license is required](consumed-odata-service-requirements#license-limitations) to use Mendix Data Hub and connect to external data sources through consumed OData services in your apps.
 {{% /alert %}}
 
 For more information on adding external entites from the **Data Hub** pane see [Adding External Entities](#adding-external-entities).

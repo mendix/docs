@@ -52,7 +52,7 @@ In the [Mendix App Store](/appstore/general/app-store-overview), you can share M
 
 ## 7 Academy 
 
-The [Mendix Academy](https://gettingstarted.mendixcloud.com/link/home) offers both self-paced online training (via learning paths) and classroom instruction from our team of experts:
+The [Mendix Academy](https://academy.mendix.com/link/home) offers both self-paced online training (via learning paths) and classroom instruction from our team of experts:
 
 ![](attachments/developerportal-academy.png)
 

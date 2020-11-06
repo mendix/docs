@@ -26,7 +26,7 @@ The **Consumed OData Service** document that is added to the project displays th
 	{{% /alert %}} 
 
 	{{% alert type="info" %}}In the **Data Hub** pane consumed services that have an available **Update** will have an update arrow to indicate this:<br />
-	![update service dhpane](attachments/consumed-odata-service/data-hub-pane-update-available.png)
+	![update service data hub pane](attachments/consumed-odata-service/data-hub-pane-update-available.png)
 	{{% /alert %}} 
 
 ### 2.1 Connection Tab
@@ -134,7 +134,7 @@ When you drag the **Customer** entity from **CustomerApi version 1.0.0** deploye
 
 ### 4.2 Major and Minor Service Versions
 
-It is important that the publishers of the services adopt a strict revision process for any changes they make to their published Odata services that are consumed by other users. 
+It is important that the publishers of the services adopt a strict revision process for any changes they make to their published OData services that are consumed by other users. 
 
 We recommend that a strict versioning system, for example semantic numbering, is used when issuing updates to services. The service version should clearly indicate the level and severity of the changes that have been made when a service is updated and deployed according to the following guidelines.
 
@@ -157,6 +157,10 @@ In this case the new service will be registered in the Data Hub Catalog as a dif
 {{% image_container width="250" %}}![4 endpoints](attachments/consumed-odata-service/consume-major-service-update-version.png){{% /image_container %}}
 
 There is a major service update indicated by the change in the version number from **1.0.0** to **2.0.0**. Further, both versions have also been deployed to the **Acceptance** which also results in separately registered assets in the Data Hub Catalog.
+
+{{% alert type="info" %}} 
+Entities of non-Mendix OData services are identified with a key of one or more fields. If the key fields are changed in an update of the service, this will also be seen as a breaking change. 
+{{% /alert %}}
 
 ### 4.3 Update or Switch
 
@@ -198,7 +202,7 @@ When you click **Update** on the **Consumed OData Service** document or the upda
 
 ![update service dhpane](attachments/consumed-odata-service/update-service-dialog-box.png)
 
-The consumed Odata service that is currently consumed in the project (**1.0.0**) is shown on the left, and you can click **Update** to retrieve the new contract from the Data Hub (**2.0.0**).
+The consumed OData service that is currently consumed in the project (**1.0.0**) is shown on the left, and you can click **Update** to retrieve the new contract from the Data Hub (**2.0.0**).
 
 #### 4.3.2. Switch
 

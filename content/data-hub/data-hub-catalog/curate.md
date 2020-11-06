@@ -26,16 +26,18 @@ Curation is performed in the Search Details** screen. Users with curation rights
 ![](attachments/curate/curate-bar.png)
 
 {{% alert type="info" %}}
-If you do see the curation bar, check with your Data Hub Admin. Owners of services can only curate their services. 
+Owners of registered assets and curators can only curate their services.
 {{% /alert %}}
 
 On the **Curation bar**, the following details are displayed:
 
 * Information about the role of the current user: owner or curator
-* When a **service** is selected in the **Search Results**: 
-	* **Edit Metadata** – to edit the description of the service and entities, add tags or specify Business and Technical Owners
-	* **Discoverability** – you can set the discoverability of the service from the drop-down menu, which determines whether the service can be found (and consumed) by users of the Data Hub; if a service is set to **non-discoverable**, only the owners of the service (Business and Technical) can find the registered service
-* When an **entity** is selected in the **Search Results**, **Edit Entity Details** – to edit entity and attribute descriptions 
+* When a service is selected in the **Search Results**: 
+	* **Edit Metadata** – edit the description of the service and entities, add tags or specify Business and Technical Owners
+	* **Discoverable/Validated** – set the service as **Discoverable** and **Validate** from the drop-down menu. 
+	  * **Discoverable** defines whether the service can be found (and consumed) by users of the Data Hub; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) can find the registered service. 
+	  * **Validate** indicates that the service and data set have been validated.
+* When an entity is selected in the **Search Results**, **Edit Entity Details** – to edit entity and attribute descriptions 
 
 ## 3 Setting the Discoverability of a Service{#discoverability}
 
@@ -76,11 +78,11 @@ To change the owners of the app of the selected service, follow these steps:
 
 	![](attachments/curate/edit-application-metadata.png)
 
-2.  The **Application Metadata** dialog box is displayed. You can set or change the  **Business Owner ** and  **Technical Owner** from this page. They will be displayed in the **Service Metadata** panel in the **Search Details** screen.
+2.  The **Application Metadata** dialog box is displayed. You can set or change the **Business Owner ** and **Technical Owner** from this page. They will be displayed in the **Service Metadata** panel in the **Search Details** screen.
 
 	![](attachments/curate/application-meta-data.png)
 	
-3. Click **Back to…** to return to the **Service Details** screen.
+3. Click **Back to** to return to the **Service Details** screen.
 
 ### 4.2 Changing the Service Description
 
@@ -112,7 +114,7 @@ To edit the service metadata of a selected service, follow these steps:
 	{{% alert type="info" %}}If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. 
 	{{% /alert %}}
 
-### 4.3 Adding or Editing Tags for a Service
+### 4.3 Adding or Editing Tags for a Service{#tags}
 
 Add tags to categorize a registered service and provide additional means for finding the service. Tags that are specified for a service also apply to the entities and attributes that are exposed in the service. Specify tags for the selected service by following these steps:
 

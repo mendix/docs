@@ -15,15 +15,26 @@ We are heavily invested in streamlining the experience of building your apps and
 Please update to Native Builder v3.2.1. Version 3.2.1 includes the fixes required to accomodate Github's transition of using **main** instead of **master** for naming the default branch for new repositories. 
 {{% /alert %}}
 
+## 3.2.2
+
+**Release date: October 16th, 2020**
+
+### Improvements
+
+* This release addresses a regression introduced with CLI v3.2.1 related to OTA updates. 
+
+### Fixes
+
+* The CLI should once again correctly assign the Codepush API key environment variable for new builds.
+
 ## 3.2.1
 
 **Release date: October 5th, 2020**
 
 ### Improvements
 
-This release addresses GitHub's transition from using **master** to using **main** as its default repository branch name.
-
-Using this CLI release is **mandatory**, as new projects created with the CLI will fail at the repository creation step for older CLI versions. 
+* This release addresses GitHub's transition from using **master** to using **main** as its default repository branch name.
+* Using this CLI release is **mandatory**, as new projects created with the CLI will fail at the repository creation step for older CLI versions. 
 
 ## 3.2.0
 

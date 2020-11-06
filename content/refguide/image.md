@@ -30,7 +30,7 @@ An example of image properties is represented in the image below:
 Image properties consist of the following sections:
 
 * [Common](#common)
-* Design Properties
+* [Design Properties](#design-properties)
 * [Events](events)
 * [General](#general)
 * [Visibility](#visibility)
@@ -39,17 +39,21 @@ Image properties consist of the following sections:
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 2.2 Events Section {#events}
+### 2.2 Design Properties Section {#design-properties}
+
+{{% snippet file="refguide/design-section-link.md" %}} 
+
+### 2.3 Events Section {#events}
 
 For information on the Events section and its properties, see [On Click Event & Events Section](on-click-event). 
 
-### 2.3 General Section {#general}
+### 2.4 General Section {#general}
 
-#### 2.3.1 Image
+#### 2.4.1 Image
 
 The file name that this widget shows. For more information on when to use images and supported formats, see [Images](images).
 
-#### 2.3.2 Width Unit
+#### 2.4.2 Width Unit
 
 The width of an image. Possible values of this property are described in the table below:
 
@@ -61,13 +65,13 @@ The width of an image. Possible values of this property are described in the tab
 
 {{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
-#### 2.3.3 Width
+#### 2.4.3 Width
 
 Specifies the width of the image in pixels or percentage. This option is displayed only when **Pixels** or **Percentage** are selected for the **Width Unit** described above. 
 
 Default: *not applicable*
 
-#### 2.3.4 Height Unit
+#### 2.4.4 Height Unit
 
 The height of an image. Possible values of this property are described in the table below: 
 
@@ -79,13 +83,13 @@ The height of an image. Possible values of this property are described in the ta
 
 {{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
-#### 2.3.5 Height
+#### 2.4.5 Height
 
 Specifies the width of the image in pixels or percentage. This option is displayed only when **Pixels** or **Percentage** are selected for the **Width Unit** described above. 
 
 Default: *not applicable*
 
-#### 2.3.6 Responsive
+#### 2.4.6 Responsive
 
 This property influences how the image scales. If the value is 'Yes', the image will never get bigger than its original size. It can become smaller. If the value is 'No', the image can become both larger and smaller than its original size.
 
@@ -93,7 +97,7 @@ Default: *Yes*
 
 {{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
-### 2.4 Visibility Section {#visibility}
+### 2.5 Visibility Section {#visibility}
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 

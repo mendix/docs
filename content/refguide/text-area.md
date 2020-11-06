@@ -20,7 +20,7 @@ For example, the following text area allows the end-user to see, and set, the **
 
 An example of text area properties is represented in the image below:
 
-{{% image_container width="300" %}}![](attachments/text-area/text-area-properties.png)
+{{% image_container width="250" %}}![](attachments/text-area/text-area-properties.png)
 {{% /image_container %}}
 
 Text area properties consist of the following sections:
@@ -121,6 +121,13 @@ This property specifies the maximum number of characters that can be typed in th
 The placeholder text is shown when no text has been entered yet, or when a displayed attribute is empty.
 
 It can be used, for example, to give a hint to the end-user what kind of text should be entered.
+
+#### 2.6.7 Autocomplete
+
+The autocomplete property specifies if a text area should have autocomplete enabled. The autocomplete attribute also improves mobile devices' ability to pre-populate fields.
+
+{{% alert type="info" %}}This option is only available in native pages.{{% /alert %}}
+{{% alert type="info" %}}In Android when autocomplete is turned off it will remove support for new lines.{{% /alert %}}
 
 ### 2.8 Label Section{#label}
 

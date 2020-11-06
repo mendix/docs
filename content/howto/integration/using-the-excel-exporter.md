@@ -1,5 +1,5 @@
 ---
-title: "Use the Excel Exporter"
+title: "Export to Excel"
 category: "Integration"
 menu_order: 6
 tags: ["excel", "excel export", "excel exporter", "integration"]
@@ -34,6 +34,7 @@ To download the modules, follow these steps:
 
 	![](attachments/using-the-excel-exporter/exporter.png)
 	
+
 {{% alert type="warning" %}}
 Depending on the layout selected when the project was created, errors in Studio Pro may arise due to the new module's default layouts. To correct this, open each page that has an error and update the layout to the desired layout within the app.
 {{% /alert %}}

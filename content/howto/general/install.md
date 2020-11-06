@@ -4,18 +4,29 @@ category: "General Info"
 menu_order: 1
 description: "Follow this how-to to learn how to install Mendix Studio Pro."
 toc-level: "2"
-tags: ["studio pro"]
+tags: ["studio pro", "install", "install studio pro", "download"]
 ---
 
 ## 1 Introduction
 
 Mendix Studio Pro enables you to build apps on the Mendix Platform. This how-to will guide you through the steps of installing the latest version of Mendix Studio Pro.
 
+For a deep-dive demonstration of how to install Studio Pro, follow along in this video:
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/WUp2tLi68nXFQd7xhPbDtt.jpg"
+  data-uuid="WUp2tLi68nXFQd7xhPbDtt"
+  data-v="4"
+  data-type="inline"
+/>
+
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* You need a Windows environment to install Studio Pro (see [System Requirements](/refguide/system-requirements) for the full list of supported systems and required frameworks)
+* A Windows environment to install Studio Pro (For the full list of supported systems and required frameworks, see [System Requirements](/refguide/system-requirements))
 
 ## 3 Downloading Mendix Studio Pro
 
@@ -31,37 +42,37 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
 1.  Open the downloaded Mendix Studio Pro executable. It is named like this: *Mendix-8.X.X-Setup*. Then click **Next**:
 
-	![](attachments/install/2.png)
+	![](attachments/install/setup-wizard.png)
 
 2.  Select **I accept the terms in the License Agreement** and click **Next**:
 
-	![](attachments/install/3.png)
+	![](attachments/install/terms-of-use.png)
 
 3.  Select the folder in which you want to install Studio Pro and click **Next**:
 
-	![](attachments/install/4.png)
+	![](attachments/install/select-folder.png)
 
 4.  Enter the start menu shortcuts folder you want to use and click **Next**:
 
-	![](attachments/install/5.png)
+	![](attachments/install/shortcut-folder.png)
 
 5.  Check the **Desktop** option to create a shortcut to Studio Pro on your desktop and click **Next**:
 
-	![](attachments/install/6.png)
+	![](attachments/install/location.png)
 
 6.  Click **Install** to install Studio Pro on your computer:
 
-	![](attachments/install/7.png)
+	![](attachments/install/ready-to-install.png)
 
 7.  Check **Launch Mendix 8.X.X** and click **Finish** to finish the installation and launch Studio Pro:
 
-	![](attachments/install/8.png)
+	![](attachments/install/completing-setup.png)
 
 ## 5 Troubleshooting {#troubleshooting}
 
-Some people run into problems when installing Studio Pro. One work-around is to restart your system and install the prerequisites separately if they are not already installed. 
+Sometimes you can run into problems when installing Studio Pro. One work-around is to restart your system and install the prerequisites separately if they are not installed yet. 
 
-The prerequisites are:
+The prerequisites are the following:
 
 * [Microsoft .NET Framework 4.7.2](https://download.microsoft.com/download/6/E/4/6E48E8AB-DC00-419E-9704-06DD46E5F81D/NDP472-KB4054530-x86-x64-AllOS-ENU.exe)
 * [AdoptOpenJDK 11](https://cdn.mendix.com/installer/AdoptOpenJDK/OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi)

@@ -9,13 +9,26 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 ## 2020
 
+### November 5th, 2020
+
+#### Improvements
+* In the Data Hub **Catalog** search pane, we now show the number of  [filters](/data-hub/data-hub-catalog/search#filter) that are active for the current search at the filter icon.
+
+### October 29th, 2020
+
+#### Improvements
+
+* In [Landscape](/data-hub/data-hub-landscape/index) nodes are now static and cannot be dragged around the display. To see other parts of of the selected assets network, you can pan and zoom using the mouse.
+* In Data Hub **Catalog** by default, the [search filter](/data-hub/data-hub-catalog/search#filter) is set to show results in the **Production** environnment only. To include hits in **Non-production** or **Sandbox** environments you have to check these boxes in the **Add Filters** dialog box.
+* The [entity details](/data-hub/data-hub-catalog/search#entity-details) screen now displays the number of connections to the individual entity. The service details continue to show the total number of connections to the service.
+
 ### October 8th, 2020
 
 #### Improvements
 
 The Data Hub home tab is now called  **Data Hub**. 
 
-From the **Data Hub** screen, you can now navigate to the [Mendix Academy learning path for Data Hub](https://gettingstarted.mendixcloud.com/link/path/111/Share-Data-Between-Apps-Using-the-Data-Hub-Catalog) where you can learn how to easily share data to build apps in Studio Pro.
+From the **Data Hub** screen, you can now navigate to the [Mendix Academy learning path for Data Hub](https://academy.mendix.com/link/path/111/Share-Data-Between-Apps-Using-the-Data-Hub-Catalog) where you can learn how to easily share data to build apps in Studio Pro.
 
 ### October 1st, 2020
 

@@ -22,18 +22,22 @@ For example, clicking one row can open a page, clicking another one can execute 
 
 An example of navigation list properties is represented in the image below:
 
-{{% image_container width="300" %}}![Navigation List Properties](attachments/container-widgets/navigation-list-properties.png)
+{{% image_container width="250" %}}![Navigation List Properties](attachments/container-widgets/navigation-list-properties.png)
 {{% /image_container %}}
 
 Navigation list properties consist of the following sections:
 
 * [Common](#common)
-* Design Properties
+* [Design Properties](#design-properties)
 * [Visibility](#visibility)
 
 ### 2.1 Common Section {#common}
 
 {{% snippet file="refguide/common-section-link.md" %}}
+
+### 2.2 Design Properties Section {#design-properties}
+
+{{% snippet file="refguide/design-section-link.md" %}} 
 
 ### 2.3 Visibility Section {#visibility}
 

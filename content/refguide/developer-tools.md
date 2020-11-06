@@ -6,6 +6,8 @@ description: "Describes the best third-party tools to use when developing with M
 tags: ["Linux", "GNU", "Firefox", "devtools", "Selenium", "Eclipse", "SOAP", "REST", "Visual Studio Code", "studio pro"]
 ---
 
+## 1 Introduction
+
 To make your development life a little easier, here is a list of helpful third-party tools that will speed up your app-development efforts:
 
 * [Linux m2ee scripts](https://github.com/mendix/m2ee-tools) – Mendix Runtime helper tools for GNU/Linux (for details on installation, see [Installing Mendix on GNU/Linux](https://github.com/mendix/m2ee-tools/blob/master/doc/README.md))

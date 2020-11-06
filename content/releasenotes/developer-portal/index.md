@@ -13,6 +13,13 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2020
 
+### November 4th, 2020
+
+#### Fixes
+
+* We fixed a bug where a change of [company name](/developerportal/company-app-roles/company) was not properly distributed along the platform.
+* We fixed a bug where drop-down menus were cut off on the [story details](/developerportal/collaborate/stories#story-details) page.
+
 ### October 9th, 2020
 
 #### Fixes

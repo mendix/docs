@@ -22,11 +22,11 @@ You can experience the SAP Fiori 3 design by using the [SAP Fiori 3 Starter App]
 
 More information on using SAP Fiori 3 design in your Mendix app is available in the following sections:
 
-* [Widgets](#widgets) – 
-* [Building Blocks](#building-blocks) – 
-* [Layouts](#layouts) – 
-* [Page Templates](#page-templates) – 
-* [Theme Selector](#theme-selector) – 
+* [Widgets](#widgets) – configuring existing Mendix widgets and new SAP Fiori 3 widgets to match SAP Fiori 3 components
+* [Building Blocks](#building-blocks) – groups of widgets which can be used to quickly create SAP Fiori styled pages
+* [Layouts](#layouts) – different styles of page which can be used in your app — choose, for example, between static or sliding master/details
+* [Page Templates](#page-templates) – complete pages which are already styled ready for you to use in your Mendix app
+* [Theme Selector](#theme-selector) – switch between different theme — for example *light* and *dark*
 
 ## 2 Widgets{#widgets}
 
@@ -34,26 +34,17 @@ The majority of Mendix widgets have been styled to match SAP Fiori 3 styles by d
 
 There are a few cases where you will need to apply some extra CSS classes manually to achieve the correct SAP Fiori look and feel. These are described in [Applying CSS Classes Manually](#apply-css).
 
-There are also a few Mendix widgets which do not support SAP Fiori 3 styles. These are listed in [Unsupported Widgets](#unsupported-widgets).
+There are also a few SAP Fiori components which are not supported by Mendix core widgets. These are listed in [Unsupported SAP Fiori Components](#unsupported-components), below.
+
+The examples of Fiori 3 styling in the SAP Fiori 3 UI Resources App Store Module will be clearer if you populate the database first using the **Create Test Data** option on the Home page.
 
 ### 2.1 Examples of Mendix Core Widget Styling
 
-You can see examples of the Fiori 3 styling of the Mendix Core Widgets by going to the **Mendix_Core_Elements** page of the SAP Fiori 3 UI Resources App Store Module. 
+You can see examples of the Fiori 3 styling of the Mendix Core Widgets by going to the **Mendix_Core_Elements** page of the SAP Fiori 3 UI Resources App Store Module.
 
-#### 2.1.1 Text Widgets
+Most widgets work the same way as they do in other Mendix styles based on Atlas UI, but there are some changes which are listed in the sections below.
 
-These are standard Mendix text widgets. You can format them using the following properties:
-
-* Headings – set the **Render mode** to the appropriate heading level
-* Weights – set **Font Weight** to the desired weight
-* Colors – set **Color** to the appropriate color, either *Brand {color}* or *Header* or *Detail* color
-* Labels – for a *required* label, set **Class** to *required*
-
-{{% image_container width="50%" %}}
-![SAP Fiori Text Styles](attachments/sap-fiori-3-0/text-styles.png)
-{{% /image_container %}}
-
-#### 2.1.2 Buttons
+#### 2.1.1 Buttons
 
 You can choose different types of button by setting the appropriate **Button style**. The SAP Fiori styles are mapped as follows:
 
@@ -72,26 +63,117 @@ You can choose different types of button by setting the appropriate **Button sty
 
 The **Link button** also has Fiori 3 styling.
 
-#### 2.1.4 Action Bar
+#### 2.1.2 Action Bar
 
 {{% todo %}}[Does the construction of the Action Bar need to be described? Why isn't it a building block?]{{% /todo %}}
 
-#### 2.1.5 Container Count Badge
+#### 2.1.3 Container Count Badge
 
-The **container count badge** allows you to add a count to your 
+The **container count badge** allows you to add a count badge to containers on Mendix pages as shown in the following example.
 
 ![SAP Fiori Count Badge Example](attachments/sap-fiori-3-0/count-badge-example.png)
 
+You can create this style by adding the **ContainerCountBadge** widget inside a container.
+
+![SAP Fiori Count Badge page design](attachments/sap-fiori-3-0/count-badge-edit.png)
+
+The number which is displayed in the badge is supplied by a microflow which you can specify in the **Data Source** tab of the badge properties. The microflow must return an integer value.
+
+![SAP Fiori Count Badge microflow](attachments/sap-fiori-3-0/count-badge-microflow.png)
+
+You can specify the appearance of the count badge in the **Appearance** tab of the badge properties. If you want to maintain the correct SAP Fiori theme, you should choose the **Color Source** *Bootstrap Color Schema*.
+
+![SAP Fiori Count Badge appearance](attachments/sap-fiori-3-0/count-badge-appearance.png)
+
+#### 2.1.4 List Views
+
+Standard Mendix **List view** widgets can be used on your pages. However, these cannot be borderless. To create a borderless list view, see [Applying CSS Classes Manually](#apply-css), below.
+
+{{% todo %}}[Do we need a section }#### 2.1.5 Pagination]{{% /todo %}
+
 ### 2.2 Applying CSS Classes Manually{#apply-css}
 
-Some 
+Some SAP Fiori styling requires you to add some additional CSS classes manually for the styles to be implemented correctly. These cases are described in the following sections.
 
-### 2.3 Unsupported Widgets{#unsupported-widgets}
+#### 2.2.1 Transparent Buttons
+
+#### 2.2.2 Borderless List Views
+
+### 2.3 Unsupported SAP Fiori Components{#unsupported-components}
+
+* Avatar – you can mimic this using a **List 3** building block
+* Message Strip – we suggest you use one of the **Notifications** building blocks 
+* Message Toast/Short message on actions
+* Time
+* StepInput
+* Menu/Navigation
+* Calendar
+* Tabs
+* Table
 
 ## 3 Building Blocks{#building-blocks}
 
+You can see examples of the Fiori 3 building blocks by going to the **Building Blocks** page of the SAP Fiori 3 UI Resources App Store Module. The building blocks are categorized by type.
+
+{{% todo %}}[Is there anything that needs to be mentioned here? Are there any specific use cases or configuration (e.g. for notifications)]{{% /todo %}}
+
 ## 4 Layouts{#layouts}
+
+You can see examples of the Fiori 3 navigation layouts by going to the **Layout** page of the SAP Fiori 3 UI Resources App Store Module. These layouts are designed for use in *Responsive (Web)* applications, designed to run in a browser.
+
+The guidelines for the use of each layout are:
+
+* Use the **PopupLayout** to create a page which appears in front of the existing page.
+* Use the **SAP_Launchpad** layout when you want to create a SAP Fiori Launchpad. See [SAP Fiori Launchpad – Overview](https://experience.sap.com/fiori-design-web/launchpad/) on the *SAP Fiori Design Guidelines* site for more information.
+* Use a *Default* layout to display information in a single panel.
+* Use a *MasterDetail* layout to display information in two panels side-by-side such as an *Order* with multiple *Order Lines*.
+* Use a *Sliding* layout to display dynamic side content. See [Dynamic Side Content](https://experience.sap.com/fiori-design-web/dynamic-side-content/) on the *SAP Fiori Design Guidelines* site for more information.
+* Use a *Letterbox* layout use Letterboxing display to restrict your layout to a certain width. See [Letterboxing](https://experience.sap.com/fiori-design-web/letter-boxing/) on the *SAP Fiori Design Guidelines* site for more information.
+* Use an *Embedded* layout when you are using this page inside a page which already contains a Header.
+
+Here is a list of the layouts you can use.
+
+* PopupLayout (SAP_3_0_UI_Resources) 
+* SAP_MasterDetail_Embedded (SAP_3_0_UI_Resources) 
+* SAP_Launchpad (SAP_3_0_UI_Resources) 
+* SAP_Default_Letterbox (SAP_3_0_UI_Resources) 
+* SAP_MasterDetail_Sliding (SAP_3_0_UI_Resources)
+* SAP_MasterDetail_Sliding_Letterbox (SAP_3_0_UI_Resources)
+* SAP_Default_Embedded (SAP_3_0_UI_Resources)
+* SAP Default (SAP_3_0_UI_Resources)
+* SAP_MasterDetail_Letterbox (SAP_3_0_UI_Resources)
+* SAP_MasterDetail (SAP_3_0_UI_Resources) 
 
 ## 5 Page Templates{#page-templates}
 
+There are many different page layouts which you can use to base your page on. These provide you with the building blocks and widgets already arranged to provide an SAP Fiori-style page.
+
+Note that these pages work best when combined with the appropriate **Navigation layout**. For example, the **Fiori Launchpad** page template works best with the *SAP_Launchpad (SAP_3_0_UI_Resources)* **Navigation Layout**.
+
 ## 6 Theme Selector{#theme-selector}
+
+You can give the end-use the option to choose their own theme. There is an example of this on the **Home** page of the SAP Fiori 3 UI Resources App Store Module. The end-user can click a button to switch between a *Dark Theme* or a *Light Theme*.
+
+To do this you need to trigger a nanoflow which passes a variable containing the name of the theme to the **ChangeTheme_JavaScript_Action** JavaScript action. This changes the theme and implements it directly on your app's pages.
+
+The themes available are:
+
+* **light** *(default)*
+* **dark**
+* **belize**
+* **belizeDeep**
+
+
+## 7 Demo Apps
+
+The SAP Fiori 3 UI Resources App Store Module contains a number of different skeleton apps which you can review or copy to use as the basis for your own apps.
+
+{{% todo %}}[How is this data populated?]{{% /todo %}}
+
+The demo apps are:
+
+* Shopping Cart – a demo app which allows you to display products by category and view product details
+* Browse Orders – a searchable list of orders with the ability to switch from the searchable list to a master/detail view
+* Manage Products – a list of products which demonstrates the use of the count badge and navigation to see the product details
+* Bulletin Board – a list of items with navigation to see the details of each item
+* Shopping Cart Master Slider – the same as the Shopping Cart demo but using dynamic side content

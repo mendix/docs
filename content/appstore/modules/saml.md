@@ -156,7 +156,7 @@ The resources folder contains the *SAMLConfig.properties* file, and through this
 
 ## 9 Read More
 
-*  [SSO Using SAML](https://gettingstarted.mendixcloud.com/link/module/115/lecture/938)
+*  [SSO Using SAML](https://academy.mendix.com/link/module/115/lecture/938)
 
 	{{% alert type="info" %}}You must be signed in to the Mendix Platform to see the above lecture.
 	{{% /alert %}}

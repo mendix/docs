@@ -31,7 +31,7 @@ The Mendix MVPs represent the spirit of the Mendix community. They are highly en
 These are the labels we use to describe our MVP recognition requirements:
 
 * Active – the developer is highly active, accessible, and well-known in the community while contributing to the Mendix Forum every week (if not every day), frequently adding new App Store content, organizing Meetups, and writing [blogs on Mendix topics](https://developers.mendix.com/community-blog/)
-* Expert – the developer knows a lot about the Mendix Platform and is a real [Expert Developer](https://gettingstarted.mendixcloud.com/link/certification/expert), answers more question than they ask, and has proven expertise as well as successful complex implementations
+* Expert – the developer knows a lot about the Mendix Platform and is a real [Expert Developer](https://academy.mendix.com/link/certification/expert), answers more question than they ask, and has proven expertise as well as successful complex implementations
 * Evangelist – the developer is a Mendix advocate, shows a passion for developing Mendix solutions, and is able to think at an abstract level about developments within the software industry
 * Leader – the developer can act as a bridge between Mendix and community developers by being creditable and sharing passion, real-world knowledge, and technical expertise with both the community and Mendix representatives
 

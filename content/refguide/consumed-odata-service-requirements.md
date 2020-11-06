@@ -93,7 +93,7 @@ There are two types of licenses currently available:
 
 * **Freemium** – this enables you to retrieve a total of 1000 OData objects per day for each runtime instance
 
-  {{% alert type="warning" %}}The Freemimum Data Hub license is issued on an invitation-only basis. {{% /alert %}}
+  {{% alert type="warning" %}}The Freemium Data Hub license is issued on an invitation-only basis. {{% /alert %}}
 
  After that limit is exceeded, an error will occur when users try to retrieve more data.
 
@@ -102,3 +102,7 @@ The number of consumed objects per day is reset at midnight in the timezone of t
 {{% alert type="warning" %}}
 Contact your Mendix Company Admin, or Data Hub Admin to find out what type of license your organization has.
 {{% /alert %}}
+
+### 4.1 Local development
+
+Local development is subject to the same license as the fremium model. You have the ability to retrieve a total of 1000 OData objects, after which an error will occur. It is possible to reset this by restarting the App.

@@ -1,0 +1,70 @@
+name: Build
+
+on:
+  push:
+    branches: [ master, development ]
+
+jobs:
+  build:
+    name: "Build"
+    runs-on: ubuntu-latest
+    env:
+      BRANCH: ${{ github.event.pull_request.base.ref }}
+      GET_ENV_VAR: ./_scripts/get_env.sh
+      GOPATH: "${HOME}/.go_workspace"
+      HUGO_ENV: $($GET_ENV_VAR)
+      CF_APP: docs
+      CF_API: https://api.run.pivotal.io
+      CF_USERNAME: jelte.lagendijk@mendix.com
+      CF_ORGANIZATION: mendix-rnd.com
+      CF_SPACE: docs
+      CF_CLI_VERSION: 6.22.2
+      HUGO_VERSION: 0.31.1
+      CF_PASSWORD: ${{ secrets.CF_PASSWORD }}
+      ALGOLIA_WRITE_KEY: ${{ secrets.ALGOLIA_WRITE_KEY }}
+
+    steps:
+      - name: "Checking-out code"
+        uses: actions/checkout@v2
+        with:
+          submodules: false
+          fetch-depth: 20000 # We're cloning a max of xxx commits, so the author date is correct
+      - name: "Retrieving Hugo"
+        run: |
+          curl -L "https://github.com/gohugoio/hugo/releases/download/v${{ env.HUGO_VERSION }}/${{ env.HUGO_PACKAGE }}.tar.gz" | tar xz
+          chmod +x ./hugo
+          mv ./hugo $HOME/bin/hugo
+      - name: "Defining cache"
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - name: "Installing dependencies"
+        run: |
+          rm -rf _site
+          npm install -g yarn
+          yarn install
+      - name: "Building"
+        run: npx gulp build
+      - name: "Pre Deploying"
+        run: |
+          export PATH=$HOME:$PATH
+          curl -L -o $HOME/cf.tgz "https://cli.run.pivotal.io/stable?release=linux64-binary&version=${{ env.CF_CLI_VERSION }}"
+          tar xzvf $HOME/cf.tgz -C $HOME
+          chmod +x $HOME/cf
+          mv $HOME/cf $HOME/bin/cf
+          cp ./_scripts/autopilot-linux $HOME/
+          chmod a+x $HOME/autopilot-linux
+          ./_scripts/before_deploy.sh
+      - name: "Deploying"
+        run: ./_scripts/deploy.sh
+      - name: "Executing Algolia"
+        run: |
+          export COMMIT_MESSAGE=$(git log --format=%B -n 1 ${{ github.event.after }})
+          ./_scripts/algolia.sh

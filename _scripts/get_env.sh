@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Choose necessary argument according to the current branch.
-if [[ $TRAVIS_BRANCH == 'development' ]]; then
+if [[ $BRANCH == 'development' ]]; then
     echo 'test'
-elif [[ $TRAVIS_BRANCH == 'master' ]]; then
+elif [[ $BRANCH == 'master' ]]; then
     echo 'production'
 else
     echo 'test'

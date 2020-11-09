@@ -2,7 +2,7 @@
 
 set -ev
 
-if (echo "$TRAVIS_COMMIT_MESSAGE" | grep -F -q "[skip algolia]")
+if (echo "$COMMIT_MESSAGE" | grep -F -q "[skip algolia]")
 then
   echo "[skip algolia] has been found, exiting"
   exit 0
@@ -10,7 +10,7 @@ else
   echo "[skip algolia] has not been found, continuing"
 fi
 
-if ([ $TRAVIS_BRANCH == "master" ] && [ $TRAVIS_PULL_REQUEST == "false" ])
+if ([ $BRANCH == "master" ] && [ $GITHUB_EVENT_NAME == "push" ])
 then
   gulp algolia
   echo 'Pushed to Algolia'

@@ -145,4 +145,3 @@ To configure the web service call, follow these steps:
 * [How to Use Selenium Support](selenium-support)
 * [How to Import XML Documents](importing-xml-documents)
 * [How to Consume a REST Service](consume-a-rest-service)
-* [How to Expose Data to BI tools Using OData](exposing-data-to-bi-tools-using-odata)

@@ -23,7 +23,6 @@ With these how-to's, you can learn how to translate your business logic into mic
 * [Optimize Retrieve Activities](optimizing-retrieve-activities)
 * [Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [Configure String Concatenation](string-concatenation)
-* [Extend Your Application with Custom Java](extending-your-application-with-custom-java)
 * [Use the Java API](java-api-tutorial)
 * [Find Object Activities](finding-object-activities)
 * [Use Translatable Validation Messages](translatable-validation-messages)

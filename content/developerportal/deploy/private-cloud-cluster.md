@@ -232,7 +232,7 @@ If the plan name already exists, you will receive an error that it cannot be cre
 {{% /alert %}}
 
 {{% alert type="info" %}}
-To connect to an Azure PostgreSQL server, the `Enforce SSL connection` option has to be disabled and the Kubernetes cluster must be added to the list of allowed hosts in the firewall. For the database name, use `postgres`.
+To connect to an Azure PostgreSQL server, the Kubernetes cluster must be added to the list of allowed hosts in the firewall. For the database name, use `postgres`.
 {{% /alert %}}
 
 {{% alert type="info" %}}

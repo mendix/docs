@@ -73,17 +73,21 @@ A microflow parameter that has the 'List' or 'Object' type indicates a body para
 
 An operation microflow may also take an [HttpRequest](http-request-and-response-entities#http-request) parameter. You can add this parameter if you would like to inspect the requested URL and headers.
 
-To set the status code, reason phrase, and headers, you should add an [HttpResponse](http-request-and-response-entities#http-response) object parameter and set the attributes of that object, or return an *HttpResponse*.
+To set the status code, reason phrase, and headers, add an [HttpResponse](http-request-and-response-entities#http-response) object parameter and set the attributes of that object, or return an *HttpResponse*.
 
-The result of the microflow is the result of the operation. You have several options here, which are described below.
+The result of the microflow is the result of the operation and can include the following:
 
-The first option is to **return a *list* or an *object***. You will need to specify an export mapping to convert it to XML or JSON.
-
-The second option is to **return a primitive**. When your microflow returns a string, integer, Boolean, etc., then the response to the operation will be that value. If you return a non-empty value from the microflow, the *Content* attribute of the *HttpResponse* object is ignored. If you return an empty value from the microflow, then the *Content* of the *HttpResponse* is taken as the result.
-
-The third option is to **return a file document**. When you want to return data that is a file (such as a PDF or image), then you can have your microflow return a file document.
-
-The final option is to **return an [HttpResponse](http-request-and-response-entities#http-response)**. In the *HttpResponse*, you can set the status code, reason phrase, and content (as a string). You can fill the content with, for example, the result of a mapping or a string from another source. You can also add headers to the response. One important header to set is *Content-Type*. Do not return an *empty* *HttpResponse*, because that will always result in an error.
+1. **Return a *list* or an *object*** – you must specify an export mapping to convert it to XML or JSON.
+2. **Return a primitive ** – when the microflow returns a value, for example, a string, integer, Boolean, then the response to the operation will be that value. 
+   {{% alert type="info" %}}
+   If a non-empty value from the microflow is returned, the *Content* attribute of the *HttpResponse* object is ignored. 
+   If an empty value from the microflow is returned, then the *Content* of the *HttpResponse* is taken as the result.
+   {{% /alert %}}
+3.  **Return a file document** – when you want to return data that is a file (such as a PDF or image), then the microflow returns a file document.
+4. **Return a** [HttpResponse](http-request-and-response-entities#http-response) – in the *HttpResponse*, you can set the status code, reason phrase, and content (as a string). You can fill the content with, for example, the result of a mapping or a string from another source. You can also add headers to the response. 
+   {{% alert type="info" %}}
+   One important header to set is *Content-Type*. Do not return an *empty* *HttpResponse*, because that will always result in an error.
+   {{% /alert %}}
 
 If the microflow throws an unhandled exception, the response is **500: Internal server error**.
 
@@ -91,11 +95,11 @@ If security is enabled, then then microflow needs to have at least one role conf
 
 ### 2.5 Deprecated
 
-If you check this box, the operation is marked as deprecated in the service's [OpenApi (Swagger) documentation page](published-rest-services#interactive-documentation). This tells clients not to use it anymore.
+Check this box to mark the operation as deprecated in the service's [OpenApi (Swagger) documentation page](published-rest-services#interactive-documentation). This tells clients not to use it anymore.
 
 ### 2.6 Parameters
 
-In this list, you can add, update or delete the [parameters of the operation](published-rest-operation-parameter).
+You can add, update or delete the [parameters of the operation](published-rest-operation-parameter).****
 
 ### 2.6.1 Import Mapping {#import-mapping}
 

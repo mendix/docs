@@ -105,4 +105,4 @@ Contact your Mendix Company Admin, or Data Hub Admin to find out what type of li
 
 ### 4.1 Local development
 
-Local development is subject to the same license as the fremium model. You have the ability to retrieve a total of 1000 OData objects, after which an error will occur. It is possible to reset this by restarting the App.
+Local development is subject to the same license as the freemium model. You have the ability to retrieve a total of 1000 OData objects, after which an error will occur. It is possible to reset this by restarting the App.

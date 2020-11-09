@@ -83,7 +83,7 @@ The **Edit Attribute** box can be used for specifying a local name for the attri
 
 ![Edit attributes](attachments/external-entities/edit-attributes.png)
 
-* **General Tab **
+* **General Tab**
 	* **Name** – a local name for the attribute
 	* **Original Name** – this is a read-only value that displays the original name of the attribute as given in the originating app
 	* **Summary** – the description for the attribute in the originating app; to enter a local description, add this in the [Documentation tab](#documentation)

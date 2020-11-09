@@ -90,7 +90,7 @@ The **Edit Attribute** box can be used for specifying a local name for the attri
 	* **Type** – the **Type** and **Length** of the attribute as defined in the originating app 
 * **Documentation** – a description for the attribute that is displayed for users of the current app
 
-### 2.3 Associations{#associations}
+### 2.3 Associations {#associations}
 
 This tab displays the associations that the external entity has with other entities that are exposed in the same service and also any associations that have been made with local entities. For further details on association properties in Studio Pro see  [Association Tab Properties](association-member-properties). 
 

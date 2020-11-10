@@ -93,15 +93,15 @@ If the microflow throws an unhandled exception, the response is **500: Internal 
 
 If security is enabled, then then microflow needs to have at least one role configured to be accessible.
 
-### 2.5 Deprecated
+#### 2.1.5 Deprecated
 
 Check this box to mark the operation as deprecated in the service's [OpenApi (Swagger) documentation page](published-rest-services#interactive-documentation). This tells clients not to use it anymore.
 
-### 2.6 Parameters
+#### 2.1.6 Parameters
 
-You can add, update or delete the [parameters of the operation](published-rest-operation-parameter).****
+You can add, update or delete the [parameters of the operation](published-rest-operation-parameter).
 
-### 2.6.1 Import Mapping {#import-mapping}
+##### 2.1.6.1 Import Mapping {#import-mapping}
 
 For a body parameter, you can select an [import mapping](import-mappings) that converts the body of the request to an object. All object and list parameters besides file documents must have an import mapping selected. To select an import mapping, double-click the parameter or click **Edit** in the grid after you select the parameter. When selecting the import mapping, you can also choose the commit behavior of the mapping. You can choose to either commit, commit without events, or not commit imported objects.
 

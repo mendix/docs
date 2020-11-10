@@ -89,7 +89,7 @@ You can specify the appearance of the count badge in the **Appearance** tab of t
 
 Standard Mendix **List view** widgets can be used on your pages. However, these cannot be borderless. To create a borderless list view, see [Applying CSS Classes Manually](#apply-css), below.
 
-{{% todo %}}[Do we need a section }#### 2.1.5 Pagination]{{% /todo %}
+{{% todo %}}[Do we need a section }#### 2.1.5 Pagination]{{% /todo %}}
 
 ### 2.2 Applying CSS Classes Manually{#apply-css}
 

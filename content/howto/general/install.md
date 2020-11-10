@@ -99,6 +99,7 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
 	* The `Java Development Kit 11 (x64)` *msi* to `adoptopenjdk_11_x64.msi`
  	* The `Visual C++ 2010 SP1 Redistributable (x64)` executable to `vcredist2010_x64.exe`
  	* The `Visual C++ Redistributable for Visual Studio 2015 (x64)` executable to `vcredist2015_x64.exe`
+	* The `latest` executable to `mendix_native_mobile_builder.exe`
 6. Run the installer as described in the [Installing Mendix Studio Pro](#install) section above.
 
 ## 7 Read More

@@ -103,11 +103,22 @@ The *info.plist* file registers the schema and host so that they will be associa
 
 1. Open *ios/AppDelegate.m* 
 1. Add this import to the existing imports: `#import "React/RCTLinkingManager.h"`.
-1. Before `@end`, add a new method:
+1. Update the `openURL` method from
+
+    ```objc
+    - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+      [MendixAppDelegate application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+      return YES;
+    }
+    ```
+
+    to the following:
 
 	```objc
-		- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-        return [RCTLinkingManager application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+    - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+      [RCTLinkingManager application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+      [MendixAppDelegate application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+      return YES;
     }
 	```
    

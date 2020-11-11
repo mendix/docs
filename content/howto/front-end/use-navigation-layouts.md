@@ -187,7 +187,7 @@ To configure the toggled sidebar to **Push content aside**, follow these steps:
 	![](attachments/use-navigation-layouts/3.5_pushcontentaside.png) 
 
 6. Optionally, you can change the **Width to Percentage** and enter *80* as the **Width**value:
- 
+
 	![](attachments/use-navigation-layouts/3.5_changewidth.png) 
 
 ### 3.6 Toggling the Sidebar for Pushing Content Aside

@@ -57,7 +57,7 @@ It has three regions: top, left, and center. The top region though contains both
 
 The options for the sidebar (unlike the Atlas Default) are only applicable at phone screen size. You then have two options for how the sidebar is toggled: **slide over content** and **push content aside**: 
 
-*  **Slide over content** — the sidebar will move to overlay ontop of the content, hiding a portion (depends on the width of the sidebar) of the content:
+*  **Slide over content** — the sidebar will move to overlay on top of the content, hiding a portion (depends on the width of the sidebar) of the content:
 
 	{{% image_container width="350" %}}![](attachments/use-navigation-layouts/2.2_slidingovercontent.gif){{% /image_container %}}
 
@@ -69,7 +69,7 @@ The options for the sidebar (unlike the Atlas Default) are only applicable at ph
 
 Choosing between the two layouts (Atlas Default and Atlas Topbar) comes down to a decision of top navigation versus left navigation, The information below will help you determine which approach better suits your users. The sections below assume your app is designed for users who read left to right, but Mendix may release more design guidance and options for other language cultures in the future.
 
-When it comes down to deisgning for your users, context is key. A navigation that works well in one context may not as well in another. To determine which navigation is best for your app, it is important to understand the different contexts where the top and left navigation work best:
+When it comes down to designing for your users, context is key. A navigation that works well in one context may not as well in another. To determine which navigation is best for your app, it is important to understand the different contexts where the top and left navigation work best:
 
 {{% image_container width="350" %}}![](attachments/use-navigation-layouts/2.3_topvsleftnavigation.png){{% /image_container %}}
 

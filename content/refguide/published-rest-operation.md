@@ -2,7 +2,7 @@
 title: "Published REST Operation"
 parent: "published-rest-service"
 menu_order: 10
-description: "Options to  configure a published REST operation."
+description: "Options to configure a published REST operation."
 tags: ["Published REST", "operation", "method", "path", "example location", "mapping", "operation parameters", "how to"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # linked from DM: published rest > select resource > add operation for resource > help (integration)
@@ -54,7 +54,7 @@ The **Example Location** gives an example of a URL on which the operation can be
 
 An operation can have the following parameters:
 
- * [Query parameters](published-rest-query-parameters), which are at the end of the URL in the form of `?name1=value1&name2=value2`  
+ * [Query parameters](published-rest-query-parameters), which are at the end of the URL in the form of `?name1=value1&name2=value2` 
 
    {{% alert type="info" %}}
    When a microflow parameter is not in the path and is not an object, then it is considered to be a query parameter.
@@ -117,7 +117,7 @@ You can indicate what should happen **if no object was found** when the import m
 
 If you select an import mapping that supports both XML and JSON (for example, a mapping that is based on a message definition), then the operation will be able to handle both XML and JSON requests.
 
-Valid requests must contain a *Content-Type* header. See [Table 1: Recognized media types](#table1)  for a list of media types that are understood by the import mapping. If an unsupported content type is used, the operation will result in a "**400 Bad Request**" response.
+Valid requests must contain a *Content-Type* header. See [Table 1: Recognized media types](#table1) for a list of media types that are understood by the import mapping. If an unsupported content type is used, the operation will result in a "**400 Bad Request**" response.
 
 The import mapping is also used to generate object schemas for operation responses in [OpenAPI (Swagger) documentation page](published-rest-services#interactive-documentation) based on [JSON Schema](published-rest-service-json-schema)
 
@@ -141,7 +141,7 @@ If you select an export mapping that supports both XML and JSON (for example, a 
 
 * When the microflow sets the *Content-Type* header to something else, then the operation returns JSON
 
-* When the microflow does not set the *Content-Type* header, then the output is determined by inspecting the *Accept* header in the request. The first media type that is recognised to be XML or JSON (see [Table 1: Recognized media types](#table1)) determines the operation result:  the *Content-Type* is *application-xml* (when it is XML) or *application-json* (when it is JSON)
+* When the microflow does not set the *Content-Type* header, then the output is determined by inspecting the *Accept* header in the request. The first media type that is recognized to be XML or JSON (see [Table 1: Recognized media types](#table1)) determines the operation result: the *Content-Type* is *application-xml* (when it is XML) or *application-json* (when it is JSON)
 
 [//]: # "Verify the parameter types and correspondence to the table"
 

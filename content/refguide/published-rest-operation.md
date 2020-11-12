@@ -35,14 +35,14 @@ The method specifies the type of operation that is performed by the microflow. F
 * **POST** – create an entry in the collection at the specified location
 * **PATCH** – update (part of) the entry at the specified location
 * **DELETE** – delete the entry or entries at the specified location
-* **HEAD** - retrieve information about the entry or entries at the specified location; this is identical to _GET_, except that a message body is not returned
+* **HEAD** - retrieve information about the entry or entries at the specified location; this is identical to **GET**, except that a message body is not returned
 * **OPTIONS** - return information about the available communication options
 
 #### 2.1.2 Operation Path{#operation-path}
 
 The location where the operation can be reached starts with the URL of the resource and the **Operation path** specifies the remainder of the path for the operation. You can leave it empty to use the location of the resource.
 
-You can use [path parameters](published-rest-path-parameters) to capture part of the location as a microflow parameter or as a parameter to the import mapping. Specify path parameters in the operation path between '{' and '}'. The value that is in the URL for the path parameter will be passed to the microflow or the import mapping.
+You can use [path parameters](published-rest-path-parameters) to capture part of the location as a microflow parameter or as a parameter to the import mapping. Specify path parameters in the operation path between `{` and `}`. The value that is in the URL for the path parameter will be passed to the microflow or the import mapping.
 
 The **Method** and **Operation path** define the operation that is executed for a given request URL as described in [Published Rest Routing](published-rest-routing).
 
@@ -91,7 +91,7 @@ The result of the microflow is the result of the operation and can include the f
 
 If the microflow throws an unhandled exception, the response is **500: Internal server error**.
 
-If security is enabled, then then microflow needs to have at least one role configured to be accessible.
+When security is enabled, then then microflow needs to have at least one role configured to be accessible.
 
 #### 2.1.5 Deprecated
 
@@ -105,15 +105,11 @@ You can **Add**, **Update** or **Delete** the parameters of the operation which 
 
 For a body parameter, you can select an [import mapping](import-mappings) that converts the body of the request into an object. All object and list parameters except file documents must have an import mapping selected. 
 
-To select an import mapping, double-click the parameter or click **Edit** in the grid after you select the parameter. When selecting the import mapping, you can also choose the commit behavior of the mapping. You can choose to either commit, commit without events, or not commit imported objects.
-
-[//]: #	"When does option to commit appear?"
+To select an import mapping, double-click the parameter or click **Edit** in the grid after you select the parameter. When selecting the import mapping, you can also choose the commit behavior of the mapping: you can choose to either commit, commit without events, or not commit imported objects.
 
 You can select an import mapping that takes no parameter, or an import mapping that takes a primitive parameter (for example, string, integer). If you select an import mapping with a primitive parameter, you need to have exactly one [path parameter](published-rest-path-parameters) with the same type. That path parameter will be passed to the import mapping.
 
 You can indicate what should happen **if no object was found** when the import mapping has checked the box **decide this at the place where the mapping gets used**.
-
-[//]: #	"When does option to commit appear?"
 
 If you select an import mapping that supports both XML and JSON (for example, a mapping that is based on a message definition), then the operation will be able to handle both XML and JSON requests.
 
@@ -129,8 +125,6 @@ This defines the response of the operation. You can specify the type of the micr
 
 This shows the result type of the microflow.
 
-[//]: #	"This should say specify or enter the result"
-
 ##### 2.1.7.2 Export Mapping
 
 When the microflow returns an object or a list of objects, you must specify how this result is mapped to JSON or XML. Select an export mapping that takes the result of the microflow as input.
@@ -141,9 +135,7 @@ If you select an export mapping that supports both XML and JSON (for example, a 
 
 * When the microflow sets the *Content-Type* header to something else, then the operation returns JSON
 
-* When the microflow does not set the *Content-Type* header, then the output is determined by inspecting the *Accept* header in the request. The first media type that is recognized to be XML or JSON (see [Table 1: Recognized media types](#table1)) determines the operation result: the *Content-Type* is *application-xml* (when it is XML) or *application-json* (when it is JSON)
-
-[//]: # "Verify the parameter types and correspondence to the table"
+* When the microflow does not set the *Content-Type* header, then the output is determined by inspecting the *Accept* header in the request. The first media type that is recognized to be XML or JSON (see [Table 1: Recognized media types](#table1)) determines the operation result: the *Content-Type* is *application/xml* (when it is XML) or *application/json* (when it is JSON)
 
 * When there is no *Accept* header or the *Accept* header does not contain a recognizable media type, then the operation returns JSON and the *Content-Type* is *application/json*
 
@@ -165,14 +157,10 @@ In the **Public Documentation** tab you can specify the documentation that will 
 
 #### 2.2.1 Summary {#summary}
 
-Provides a short description of what the operation does.
+Provide a short description of what the operation does.
 
 #### 2.2.2 Description {#description}
 
-Enter a complete overview of what the operation does. You can use [GitHub-flavored markdown](gfm-syntax) for rich text.
+Enter a complete overview of what the operation does. You can use [GitHub-flavored markdown](gfm-syntax) syntax to style the text.
 
-## 3 Example
 
-**How to publish REST natively with Mendix**
-
-{{% youtube HzrFkv0U4n8 %}}

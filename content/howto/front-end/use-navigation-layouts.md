@@ -148,7 +148,7 @@ To configure the toggled sidebar to **Shrinking content (initially closed)**, fo
 
 	{{% image_container width="350" %}}![](attachments/use-navigation-layouts/3.3_shrinkcontentclosed.png){{% /image_container %}}
 
-### 3.4 Toggling the sidebar for Shrinking content (initially closed)
+### 3.4 Toggling the Sidebar for Shrinking Content (Initially Closed)
 
 1.  Click **Run Locally** to run your project.
 2.  In your browser, click the toggle button:

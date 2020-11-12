@@ -7,7 +7,7 @@ tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
 ---
 
 {{% alert type="warning" %}}
-Please update to Native Builder v3.2.1. Native Builder v3.2.1 includes the fixes required to addresses GitHub's transition from using **master** to using **main** as its default repository branch name. 
+Please update to Native Builder v3.2.2. Native Builder v3.2.2 includes the fixes required to addresses GitHub's transition from using **master** to using **main** as its default repository branch name. 
 {{% /alert %}}
 
 ## 1 Introduction

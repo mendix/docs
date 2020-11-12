@@ -20,7 +20,7 @@ FROM
     {
         { INNER | { { LEFT | RIGHT | FULL } [ OUTER ] } } JOIN
         entity_path [ [ AS ] from_alias ]
-        ON <constraint>
+        [ ON <constraint> ]
     } [ ,...n ]
 ```
 

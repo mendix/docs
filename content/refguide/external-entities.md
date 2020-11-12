@@ -14,7 +14,7 @@ This means that several properties of the external entities are determined in th
 External entities are added to the domain model through the [Data Hub pane](data-hub-pane) and are displayed as *purple* entity containers in the domain model. 
 
 {{% alert type="info" %}}
-A license is required to use Mendix Data Hub and connect to external data sources through consumed OData services in your apps.
+A [license is required](consumed-odata-service-requirements#license-limitations) to use Mendix Data Hub and connect to external data sources through consumed OData services in your apps.
 {{% /alert %}}
 
 For more information on adding external entites from the **Data Hub** pane see [Adding External Entities](#adding-external-entities).
@@ -83,14 +83,14 @@ The **Edit Attribute** box can be used for specifying a local name for the attri
 
 ![Edit attributes](attachments/external-entities/edit-attributes.png)
 
-* **General Tab **
+* **General Tab**
 	* **Name** – a local name for the attribute
 	* **Original Name** – this is a read-only value that displays the original name of the attribute as given in the originating app
 	* **Summary** – the description for the attribute in the originating app; to enter a local description, add this in the [Documentation tab](#documentation)
 	* **Type** – the **Type** and **Length** of the attribute as defined in the originating app 
 * **Documentation** – a description for the attribute that is displayed for users of the current app
 
-### 2.3 Associations
+### 2.3 Associations {#associations}
 
 This tab displays the associations that the external entity has with other entities that are exposed in the same service and also any associations that have been made with local entities. For further details on association properties in Studio Pro see  [Association Tab Properties](association-member-properties). 
 

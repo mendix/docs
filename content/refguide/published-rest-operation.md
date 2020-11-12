@@ -55,7 +55,6 @@ The **Example Location** gives an example of a URL on which the operation can be
 An operation can have the following parameters:
 
  * [Query parameters](published-rest-query-parameters), which are at the end of the URL in the form of `?name1=value1&name2=value2` 
-
    {{% alert type="info" %}}
    When a microflow parameter is not in the path and is not an object, then it is considered to be a query parameter.
    {{% /alert %}}

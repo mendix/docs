@@ -26,7 +26,7 @@ When configuring an access restriction profile, you need to bear the following t
 
 * Access restriction profiles are configured at the *application* level and they can be reused in all the environments (test, acceptance, production) of an app
 * Access restriction profiles can contain any number of IPv4 address ranges, client CAs, or both
-* If an access restriction profile contains *both IP address ranges and client CAs*, then the IP range restrictions will be checked first, and the client certificate will be checked if the IP address is in an allowed range — access will be granted only if both tests are passed
+* If an access restriction profile contains *both IP address ranges and client CAs*, then any match on *either* the IP range *or* the client certificate will grant access
 
 ### 2.1 Access Restriction Profiles for Mendix Cloud V4{#v4}
 

@@ -84,7 +84,7 @@ A top navigation conserves more vertical page space than a left navigation. With
 
 ### 2.3.3 Item Priority
 
-Items in a top navigation do not have equal weight. The leftmost items carry more visual weight than other items because of their placement in the primary optical area (top left). Items in the top-left area get more exposure and are often seen as more important than other items. The items in  left navigation, however, do have equal weight because they are all placed on the left with no other items in their opposing direction on the right. Because users read items from left to right, the priority direction for reading items is stronger horizontally than vertically.
+Items in a top navigation do not have equal weight. The leftmost items carry more visual weight than other items because of their placement in the primary visual area (top left). Items in the top-left area get more exposure and are often seen as more important than other items. The items in  left navigation, however, do have equal weight because they are all placed on the left with no other items in their opposing direction on the right. Because users read items from left to right, the priority direction for reading items is stronger horizontally than vertically.
 
 ### 2.3.4 Visibility
 
@@ -122,7 +122,7 @@ To toggle the sidebar for **Shrinking content (initially open)**, follow these s
 
 1.  Run the project:
 
-	![](attachments/use-navigation-layouts/3.2_runningproject.png)
+	![](attachments/use-navigation-layouts/3.2_runtheproject.png)
 
 2.  In your browser, click the toggle button:
 
@@ -148,7 +148,7 @@ To configure the toggled sidebar to **Shrinking content (initially closed)**, fo
 
 	![](attachments/use-navigation-layouts/3.3_regionproperties.png)
 
-5.  In the tab General, select **Shrinking content (initially closed)** as the toggle mode:
+5.  In the tab **General**, select **Shrinking content (initially closed)** as the toggle mode:
 
 	![](attachments/use-navigation-layouts/3.3_shrinkcontentclosed.png) 
 
@@ -186,7 +186,7 @@ To configure the toggled sidebar to **Push content aside**, follow these steps:
 
 	![](attachments/use-navigation-layouts/3.5_pushcontentaside.png) 
 
-6. Optionally, you can change the **Width to Percentage** and enter *80* as the **Width**value:
+6. Optionally, you can change the **Width to Percentage** and enter *80* as the **Width value**:
 
 	![](attachments/use-navigation-layouts/3.5_changewidth.png) 
 
@@ -194,61 +194,77 @@ To configure the toggled sidebar to **Push content aside**, follow these steps:
 
 To toggle the sidebar for Pushing content aside, follow these steps:
 
-1. Run the project. 
-![](attachments/use-navigation-layouts/3.6_runningproject.png)
+1.  Run the project:
 
-2. In your browser, Inspect your Web Page (Right-click). 
-![](attachments/use-navigation-layouts/3.6_inspector.png)
+	![](attachments/use-navigation-layouts/3.6_runtheproject.png)
 
-3. Click Toggle device toolbar. 
-![](attachments/use-navigation-layouts/3.6_toggledevicetoolbar.png)
+2.  In your browser, right-click your web page and click **Inspect**:
 
-4. Change Emulated Device to iPhoneX or to an equivalent mobile device. 
-![](attachments/use-navigation-layouts/3.6_selectdevicesize.png)
+	![](attachments/use-navigation-layouts/3.6_inspector.png)
 
-5. In your Emulated Device's browser window, click the toggle button.
-![](attachments/use-navigation-layouts/3.6_pushingcontentaside.gif)
+3.  Click the toggle device toolbar:
 
-### 3.7 Set the toggled sidebar to Slide over content
+	![](attachments/use-navigation-layouts/3.6_toggledevicetoolbar.png)
 
-To configure the toggled sidebar to Slide over content, follow these steps:
+4.  Change the emulated device to an **iPhoneX** or an equivalent mobile device: 
 
-1. Open the page properties of the Home_Web page
-![](attachments/use-navigation-layouts/3.7_pageproperties.png)
+	![](attachments/use-navigation-layouts/3.6_selectdevicesize.png)
 
-2. In the tab General, select Atlas_Topbar as the layout. 
-![](attachments/use-navigation-layouts/3.7_layoutselection.png)
+5.  In your emulated device's browser window, click the toggle button:
 
-3. Then in the breadcrumb, navigate to the Atlas_Topbar navigation layout.
-![](attachments/use-navigation-layouts/3.7_breadcrumb.png)
+	![](attachments/use-navigation-layouts/3.6_pushingcontentaside.gif)
 
-4. Open the region properties of the left sidebar
-![](attachments/use-navigation-layouts/3.7_regionproperties.png)
+### 3.7 Set the Toggled Sidebar to Slide Over Content
 
-5. In the tab General, select Slide over content as the toggle mode. 
-![](attachments/use-navigation-layouts/3.7_slideovercontent.png) 
+To configure the toggled sidebar to **Slide over content**, follow these steps:
 
-6. (Optional) Change the Width to Percentage and enter 80 as the Width value. 
-![](attachments/use-navigation-layouts/3.7_changewidth.png) 
+1.  Open the page properties of the **Home_Web** page:
 
-### 3.8 Toggling the sidebar for Slide over content
+	![](attachments/use-navigation-layouts/3.7_pageproperties.png)
 
-To toggle the sidebar for Slide over content, follow these steps:
+2.  In the **General** tab, select **Atlas_Topbar** as the layout:
 
-1. Run the project. 
-![](attachments/use-navigation-layouts/3.8_runningproject.png)
+	![](attachments/use-navigation-layouts/3.7_layoutselection.png)
 
-2. In your browser, Inspect your Web Page. 
-![](attachments/use-navigation-layouts/3.8_inspector.png)
+3.  In the breadcrumb, navigate to the **Atlas_Topbar** navigation layout:
 
-3. Click Toggle device toolbar. 
-![](attachments/use-navigation-layouts/3.8_toggledevicetoolbar.png)
+	![](attachments/use-navigation-layouts/3.7_breadcrumb.png)
 
-4. Change Emulated Device to iPhoneX or to an equivalent mobile device.
-![](attachments/use-navigation-layouts/3.8_selectdevicesize.png)
+4.  Open the region properties of the left sidebar:
 
-5. In your Emulated Device's browser window, click the toggle button.
-![](attachments/use-navigation-layouts/3.8_slidingovercontent.gif)
+	![](attachments/use-navigation-layouts/3.7_regionproperties.png)
+
+5.  In the **General** tab, select **Slide over content** as the toggle mode:
+
+	![](attachments/use-navigation-layouts/3.7_slideovercontent.png) 
+
+6.  Optionally, change the **Width** to **Percentage** and enter *80* as the **Width value**: 
+
+	![](attachments/use-navigation-layouts/3.7_changewidth.png) 
+
+### 3.8 Toggling the Sidebar for Slide Over Content
+
+To toggle the sidebar for **Slide over content**, follow these steps:
+
+1. Run the project: 
+
+	![](attachments/use-navigation-layouts/3.8_runningproject.png)
+
+2. In your browser, right-click your web page and click **Inspect**:
+
+	![](attachments/use-navigation-layouts/3.8_inspector.png)
+
+3. Click the toggle device toolbar:
+
+	![](attachments/use-navigation-layouts/3.8_toggledevicetoolbar.png)
+
+4. Change the emulated device to an **iPhoneX** or an equivalent mobile device:
+
+	![](attachments/use-navigation-layouts/3.8_selectdevicesize.png)
+
+5. In your emulated device's browser window, click the toggle button:
+
+	![](attachments/use-navigation-layouts/3.8_slidingovercontent.gif)
 
 ## 4 Read More
 

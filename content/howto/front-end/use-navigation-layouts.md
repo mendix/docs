@@ -268,5 +268,5 @@ To toggle the sidebar for **Slide over content**, follow these steps:
 
 ## 4 Read More
 
-* Atlas UI {https://atlas.mendix.com/} - For more information on the Atlas UI framework. 
-* Use Layouts & Snippets {https://docs.mendix.com/howto/front-end/layouts-and-snippets#4-1-layout-examples} - For information on how to create your own navigation layouts. 
+* Check the [Atlas UI](https://atlas.mendix.com/) page for more information on the Atlas UI framework
+* See the [Layout Examples](layouts-and-snippets#layout-examples) section of *How to Use Layouts & Snippets* for more information on creating your own navigation layouts

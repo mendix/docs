@@ -1,6 +1,6 @@
 ---
 title: "Consistency Errors"
-menu_order: 70
+category: "Checks"
 description: "Describes consistency errors in Mendix Studio and the way to fix them."
 tags: ["studio", "consistency errors", "checks", "errors"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -20,9 +20,9 @@ Consistency errors can occur in the following editors of Mendix Studio:
 * Navigation document (For information on consistency error in the navigation, see [Navigation Consistency Errors](consistency-errors-navigation))
 * Microflows (For information on consistency error in the microflow editor, see [Microflow Consistency Errors](consistency-errors-microflows))
 
-##  2 Main Documents in This Category
+##  2 Read More
 
-* [Page Consistency Errors](consistency-errors-pages) – provides information on page consistency errors and how to fix them
-* [Navigation Consistency Errors](consistency-errors-navigation) – provides information on navigation consistency errors and how to fix them
-* [Microflow Consistency Errors](consistency-errors-microflows) – provides information on microflow consistency errors and how to fix them
-* [Domain Model Consistency Errors](consistency-errors-domain-model) – provides information on domain model consistency errors and how to fix them
+* [Page Consistency Errors](consistency-errors-pages) 
+* [Navigation Consistency Errors](consistency-errors-navigation) 
+* [Microflow Consistency Errors](consistency-errors-microflows) 
+* [Domain Model Consistency Errors](consistency-errors-domain-model) 

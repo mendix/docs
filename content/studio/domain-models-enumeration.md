@@ -1,6 +1,6 @@
 ---
 title: "Enumeration"
-category: "Domain Model"
+parent: "domain-models"
 description: "Describes enumerations in Mendix Studio."
 tags: ["studio", "domain model", "attributes", "enumeration"]
 ---

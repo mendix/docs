@@ -17,7 +17,7 @@ We want to create a large network of Mendix apps, so let's start integrating!
 * [Import XML Documents](importing-xml-documents) – teaches you how to prepare the data structure and GUI, add an XML schema, and create XML-to-domain mapping
 * [Export XML Documents](export-xml-documents) – shows you how to add an XML schema and create domain-to-XML mapping and export logic
 * [Import Excel Documents](importing-excel-documents) – illustrates setting up import templates and importing data into your application via the Excel Importer
-* [Use the Excel Exporter](using-the-excel-exporter) – teaches you how to create custom Excel documents from your app based on configurable templates
+* [Export to Excel](using-the-excel-exporter) – teaches you how to create custom Excel documents from your app based on configurable templates
 * [Consume a Simple Web Service](consume-a-simple-web-service) – details how to import a WSDL and create logic to call the web service
 * [Consume a Complex Web Service](consume-a-complex-web-service) – shows you how to import a web service both directly and using the wizard as well as how to configure a web service call
 * [Consume a REST Service](consume-a-rest-service) – demonstrates calling a REST service in a microflow

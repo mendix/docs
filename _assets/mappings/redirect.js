@@ -24,7 +24,7 @@ module.exports = {
 	{
       from: "/refguide/customizing-phonegap-build-packages",
       to: "/howto/mobile/customizing-phonegap-build-packages"
-    },
+    },	
 	/****************************************************
      * Reference Guide version 7 (permanent, unmapped)
      ****************************************************/	
@@ -2401,14 +2401,10 @@ module.exports = {
       from: "/refguide/web-modeler/app-settings-wm",
       to: "/studio/settings-widget-overview"
     },	
-    {
-      from: "/howto/sap/use-sap-odata-model-creator",
-      to: "/partners/sap/use-sap-odata-model-creator"
-    },	
-    {
-      from: "/refguide/siemens/mindsphere-module-details",
-      to: "/partners/siemens/mindsphere-module-details"
-    },
+	{
+      from: "/studio/general-collaborative-development",
+      to: "/studio/collaborative-development"
+    },    
 	/****************************************************
      * From Developer Portal (permanent, mapped) 
      ****************************************************/
@@ -2470,6 +2466,17 @@ module.exports = {
 	{
   	   from: "/data-hub/data-catalog/",
 	   to: "/data-hub/index"
+    },
+	/****************************************************
+     * From Strategic Partners Guide (permanent, mapped)
+     ****************************************************/
+	 {
+      from: "/howto/sap/use-sap-odata-model-creator",
+      to: "/partners/sap/use-sap-odata-model-creator"
+    },	
+    {
+      from: "/refguide/siemens/mindsphere-module-details",
+      to: "/partners/siemens/mindsphere-module-details"
     },
 	/****************************************************
      * From the App Store (permanent, mapped)

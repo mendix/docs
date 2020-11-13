@@ -30,6 +30,22 @@ To see the current status of the Mendix Clouds and Mendix for Private Cloud, see
 
 ## 2020
 
+### November 5th, 2020
+
+#### Mendix Cloud
+
+* We added support to generate 1024x1024 App Store icons for iOS.
+* We resolved an issue where an incorrect debugger password was sometimes shown for Mendix Cloud v4 apps in the Developer Portal. This meant that customers were not able to connect to the debugger. (Ticket 105317)
+
+### October 30th, 2020
+
+#### Mendix for Private Cloud — Mendix Operator v1.6.1
+
+* We have fixed a bug where building and pushing an image into some registries (such as coding.net) would fail with an authentication error.
+* If creating a database or file storage for a new environment fails, the Mendix Operator will now attempt to clean up (roll back) temporary resources. In this case, a manual cleanup is not required. In addition, log messages for such failed attempts will provide details on what what was created and rolled back.
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+
 ### October 26th, 2020
 
 #### Mendix Cloud & Buildpack

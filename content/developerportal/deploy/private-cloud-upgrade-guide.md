@@ -12,7 +12,7 @@ This document describes how an existing installation of Mendix for Private Cloud
 
 Both the Mendix Operator and Mendix Agent should be upgraded at the same time.
 
-## 2 Upgrading to Mendix Operator 1.6.0{#operator-latest}
+## 2 Upgrading to Mendix Operator 1.6.1{#operator-latest}
 
 ### 2.1 Preparation
 
@@ -39,7 +39,7 @@ For example, if the image name is `quay.io/digital_ecosystems/mendix-operator:1.
 This process will take:
 
 * about 15 to 30 minutes when upgrading from Mendix Operator 1.0.\*
-* about 10 minutes when upgrading from Mendix Operator 1.1.\*, 1.2.\** , 1.3.\*, 1.4.\*, and 1.5.\*
+* about 10 minutes when upgrading from Mendix Operator 1.1.\*, 1.2.\* , 1.3.\*, 1.4.\*, 1.5.\*, and 1.6.\*
 
 Some upgrade steps are only required when upgrading from older versions of the Mendix Operator. There is a notice on these steps indicating which upgrade paths they apply to and for which paths the step should be skipped.
 
@@ -70,11 +70,11 @@ kubectl apply -f https://installergen.private-cloud.api.mendix.com/privatecloud/
 
 #### 2.2.3 Upgrading the Mendix Operator Deployment
 
-Run the following command to switch to Mendix Operator version 1.6.0:
+Run the following command to switch to Mendix Operator version 1.6.1:
 
 ```shell
 kubectl -n $OPERATOR_NAMESPACE patch deployment mendix-operator -p \
-  '{"spec":{"template":{"spec":{"containers":[{"name":"mendix-operator","image":"private-cloud.registry.mendix.com/mendix-operator:1.6.0"}]}}}}'
+  '{"spec":{"template":{"spec":{"containers":[{"name":"mendix-operator","image":"private-cloud.registry.mendix.com/mendix-operator:1.6.1"}]}}}}'
 ```
 
 #### 2.2.4 Updating the Mendix Operator Configuration
@@ -128,7 +128,7 @@ kubectl -n $OPERATOR_NAMESPACE get storageplan --no-headers=true -o name | sed -
 ##### 2.2.4.2 Updating the Mendix Operator Configuration (from versions 1.1.\*, 1.2.\*, 1.3.\*, 1.4.\*, and 1.5.\*){#update-configuration-1.1.0}
 
 {{% alert type="info" %}}
-Follow this step only when upgrading from Mendix Operator 1.1.\*, 1.2.\*, 1.3.\*, and 1.4.\*.
+Follow this step only when upgrading from Mendix Operator 1.1.\*, 1.2.\*, 1.3.\*, 1.4.\*, and 1.5.\*.
 {{% /alert %}}
 
 Run the following commands to switch to the latest component versions:

@@ -1,7 +1,7 @@
 ---
 title: "Previewing & Publishing Your App"
-description: "Describes previewing and publishing processes in Mendix Studio."
-menu_order: 55
+description: "Describes previewing and publishing processes in the Mendix Studio."
+menu_order: 60
 tags: ["studio", "deployment", "publishing", "app publishing", "deploy", "deploying", "publish", "preview"]
 ---
 

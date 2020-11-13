@@ -8,6 +8,42 @@ description: "Native Template release notes."
 
 For more information on native mobile app development, see the [native-template](https://github.com/mendix/native-template/) repository and [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app).
 
+## 5.1.1,  5.0.6, and 4.2.3
+
+**Release date: November 2nd, 2020**
+
+### Disclaimer
+
+* Native Template v5.1.1 applies to apps built using Studio Pro v8.15.x and above.
+* Native Template v5.0.5 applies to apps built using Studio Pro v8.12.1 - 8.14.x.
+* Native Template v4.2.3 applies to apps built using Studio Pro up to 8.12.0.
+
+### Improvements
+
+* This release makes Mendix native mobile apps fully compatible with Xcode 12's build system.
+
+### Fixes
+
+* Base64-encoded images are now fully supported with builds completed using Xcode 12.
+
+## 5.1.0
+
+**Release date: October 27th, 2020**
+
+### Disclaimer
+
+This release is required to use the **Capabilities** support introduced with the new Mendix Native Mobile Builder. You must update to this version or higher in order to use that tool's functionality. The Mendix Native Mobile Builder is included in Mendix Studio Pro v8.15 and above.
+
+### Capabilities Support
+
+With the release of Mendix Native Mobile Builder we are introducing a new approach for linking dependencies.
+
+While previous versions of the Native Template would have all core dependencies linked by default — for example an app would have Firebase linked even though it is not using any functionality — our new approach builds on top of React Native's auto-linking behavior and extends it a step further.
+
+We gathered all core functionalities and grouped them under the platform-specific capabilities' *.json* files. With a simple Boolean toggle, the Native Template is able to link the required dependencies for the enabled capability — even ones without auto-link. This happens as part of the `pod install` step for iOS and the building step on Android. After each change to these files, you must remember to run `pod install` for iOS or build your Android project so that the new files can be generated.
+
+Some steps, like the inclusion of the Google Service configuration or the Google Maps API, are still manual if you are building locally. If you would like to further simplify these steps, consider using the Mendix Native Mobile Builder to just configure your project and build your project however you like.
+
 ## 5.0.5 and 4.2.3 
 
 **Release date: October 19th, 2020**

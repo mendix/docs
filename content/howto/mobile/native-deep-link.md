@@ -103,7 +103,7 @@ The *info.plist* file registers the schema and host so that they will be associa
 
 1. Open *ios/AppDelegate.m* 
 1. Add this import to the existing imports: `#import "React/RCTLinkingManager.h"`.
-1. Update the `openURL` method from
+1. Change the `openURL` method from this:
 
     ```objc
     - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
@@ -112,7 +112,7 @@ The *info.plist* file registers the schema and host so that they will be associa
     }
     ```
 
-    to the following:
+    to this:
 
 	```objc
     - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {

@@ -475,9 +475,9 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 ### January 28th, 2019
 
-#### Improvements
+#### Improvements{#tls}
 
-**TLS v1.0 & v1.1 Disabled for Mendix Cloud v4 {#tls}**
+**TLS v1.0 & v1.1 Disabled for Mendix Cloud v4**
 
 * We have implemented a change on our Mendix Cloud v4 infrastructure so that incoming connections that do not support TLS v1.2 or higher will stop working. This effectively means that TLS v1.0 and v1.1 are disabled, and Mendix Cloud v4 now has an [A+ rating at SSL Labs](https://www.ssllabs.com/ssltest/index.html) again.
 

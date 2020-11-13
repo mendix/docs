@@ -21,8 +21,8 @@ You can use the `height` and `width` properties to set a widget component’s di
 A widget is composed of various elements, and each can be styled individually. You can customize your widgets using style objects. A style object is a JavaScript object with a set of attributes specific for each widget. Some of the attributes reuse properties of other elements, such as React Native’s ViewStyle, TextStyle, ImageStyle, and Colors elements. You can consult the following property sets for more information on styling properties as you customize your app:
 
 * **ViewStyle** – React Native’s [View Style](https://reactnative.dev/docs/view-style-props) property set helps you alter borders, opacity, and other general aspects of your app (the view style property set also contains layout, shadow, and transform properties)
-* **TextStyle** – React Native’s [Text](https://reactnative.dev/docs/text#style) property set will allow you to style text – using these props you can control text’s font, selection status, and more (the text property set also contains layout properties)
-* **ImageStyle** – React Native’s [Image](https://reactnative.dev/docs/image#style) property set will allow you to style images from network sources, a local library, and temporary local images – using these properties you can alter an image’s size, border, and more, while the image property set also contains layout properties (the `resizeMode` value `repeat` is not supported)
+* **TextStyle** – React Native’s [Text](https://reactnative.dev/docs/text-style-props) property set will allow you to style text – using these props you can control text’s font, selection status, and more (the text property set also contains layout properties)
+* **ImageStyle** – React Native’s [Image](https://reactnative.dev/docs/image-style-props) property set will allow you to style images from network sources, a local library, and temporary local images – using these properties you can alter an image’s size, border, and more, while the image property set also contains layout properties (the `resizeMode` value `repeat` is not supported)
 * **Colors** – React Native’s [Color Reference](https://reactnative.dev/docs/colors) property set will allow you to alter colors – you can customize colors using red-green-blue notation, change hue or saturation, and more 
 
 ### 2.1  Class Names
@@ -151,7 +151,7 @@ The image widget can be used to show a predefined image on a page, layout, or sn
 | `image`     | This has all ImageStyle properties. |       |
 | `imageDisabled` | Same properties as `image` | Overrides `image` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
 
-The default class to style all static image styles is named `Image`. Please note that images loaded from the model are styled with `NativeDynamicImage` as described in the [Image Viewer](#image-viewer) section below.
+The default class to style all static image styles is named `Image`. Please note that images loaded from the model are styled with `ImageViewer` as described in the [Image Viewer](#image-viewer) section below.
 
 ### 4.3 Page Title 
 
@@ -519,7 +519,7 @@ File widgets help your user app manage images and other files. For more informat
 
 An image viewer can be used to display an image. This widget supports the same style properties and structure as the [Image](#image) widget above.
 
-The default class to style all image viewers is named  `NativeDynamicImage`.
+The default class to style all image viewers is named  `ImageViewer`.
 
 ## 8 Button Widgets
 

@@ -1,13 +1,13 @@
 ---
 title: "Deploy Your First Mendix Native Mobile App with the Native Builder CLI"
-parent: "build-native-apps"
-menu_order: 10
+parent: "use-cli-docs"
+menu_order: 20
 description: Describes how to deploy your first Mendix native mobile app with the Native Builder.
 tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
 ---
 
 {{% alert type="warning" %}}
-Please update to Native Builder v3.2.1. Native Builder v3.2.1 includes the fixes required to addresses GitHub's transition from using **master** to using **main** as its default repository branch name. 
+Please update to Native Builder v3.2.2. Native Builder v3.2.2 includes the fixes required to addresses GitHub's transition from using **master** to using **main** as its default repository branch name. 
 {{% /alert %}}
 
 ## 1 Introduction

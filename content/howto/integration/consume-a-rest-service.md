@@ -8,9 +8,9 @@ description: "Describes how to get information from a REST service."
 
 ## 1 Introduction
 
-Mendix applications frequently need to communicate with existing systems. Whether you are creating an app to replace an older platform or legacy system or want to integrate an existing database the ability to integrate with existing systems is a necessary feature.  In your Mendix app, you can use information from REST services for this integration. 
+Mendix applications frequently need to communicate with existing systems. Whether you are creating an app to replace an older platform or a legacy system or want to integrate an existing database, the ability to integrate with existing systems is a necessary feature. In your Mendix app, you can use published REST services for this integration. 
 
-This how-to shows you how to do that through an example in which you create an app that retrieves Wikipedia pages from a REST service. The resulting app is [available for download](attachments/consume-a-rest-service/WikipediaApi.mpk).
+This how-to shows you how to do this using an example in which you create an app that retrieves Wikipedia pages from a REST service. The resulting app is [available for download](attachments/consume-a-rest-service/WikipediaApi.mpk).
 
 **This how-to will teach you how to do the following:**
 
@@ -184,7 +184,7 @@ Congratulations! You can now start your app and get summaries from Wikipedia.
 **How to consume REST with Mendix Studio Pro 8**
 
 {{% alert type="info" %}}
-For Studio Pro v 8.15 and above, the **Call REST** dialog box has changed from what is shown in the video. You have to ensure that for  **Output** you select **Yes** for **Store in variable** and then specify the **Variable name**.
+For Studio Pro v 8.15 and above, the **Call REST** dialog box has changed from what is shown in the video. You have to ensure that for **Output** you select **Yes** for **Store in variable** and then specify the **Variable name**.
 {{% /alert %}}
 
 ![](attachments/consume-a-rest-service/response.png)

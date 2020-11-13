@@ -2,23 +2,33 @@
 title: "Consume a REST Service"
 category: "Integration"
 menu_order: 9
-tags: ["integration", "rest service", "data model", "consume"]
+tags: ["integration", "rest service", "data model", "consume", "legacy system", "legacy"]
 description: "Describes how to get information from a REST service."
 ---
 
 ## 1 Introduction
 
-In your Mendix app, you can use information from REST services. This how-to shows you how to do that through an example in which you create an app that retrieves Wikipedia pages from a REST service. The resulting app is [available for download](attachments/consume-a-rest-service/WikipediaApi.mpk).
+Mendix applications frequently need to communicate with existing systems. Whether you are creating an app to replace an older platform or a legacy system or want to integrate an existing database, the ability to integrate with existing systems is a necessary feature. In your Mendix app, you can use published REST services for this integration. 
+
+This how-to shows you how to do this using an example in which you create an app that retrieves Wikipedia pages from a REST service. The resulting app is [available for download](attachments/consume-a-rest-service/WikipediaApi.mpk).
 
 **This how-to will teach you how to do the following:**
 
+* Integrate with an existing system using a REST service
 * Call the REST service in a microflow
+
+{{% alert type="info" %}}
+Creating a published REST service on top of the system you want to integrate with is outside the scope of this how-to; for instructions on how to do this, refer to the configuration of your non-Mendix Platform.
+{{% /alert %}}
+
 
 ## 2 Creating a JSON Structure
 
-The Wikipedia REST service allows you to retrieve the summary of a page. This service can be reached at `https://en.wikipedia.org/api/rest_v1/page/summary/{title}`, where `{title}` is the title of a page.
+If the system you want to integrate into your app has the functionality for exposing its data to REST services, you can integrate it easily into your Mendix app using consume REST service. Each system has a different JSON structure based on internal data models. 
 
-We will start by providing Studio Pro as an example of what the REST service returns:
+You are going to use the Wikipedia REST service as an example in this how-to. It allows you to retrieve the summary of a Wikipedia page – in this case information about a country. This service can be reached at `https://en.wikipedia.org/api/rest_v1/page/summary/{title}`, where `{title}` is the title of a page.
+
+We will start by providing to Studio Pro an example of what the REST service returns:
 
 1. Open your browser and go to [https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti](https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti).
 2. This calls the REST service with a GET request – the result is the summary of the [Tahiti page on Wikipedia](https://en.wikipedia.org/wiki/Tahiti) in the JSON format:
@@ -32,7 +42,7 @@ We will start by providing Studio Pro as an example of what the REST service ret
 
     ![](attachments/consume-a-rest-service/json-structure.png)
 
-7. Click **OK**
+7. Click **OK**.
 
 ## 3 Creating an Import Mapping
 
@@ -174,7 +184,7 @@ Congratulations! You can now start your app and get summaries from Wikipedia.
 **How to consume REST with Mendix Studio Pro 8**
 
 {{% alert type="info" %}}
-For Studio Pro v 8.15 and above, the **Call REST** dialog box has changed from what is shown in the video. You have to ensure that for  **Output** you select **Yes** for **Store in variable** and then specify the **Variable name**.
+For Studio Pro v 8.15 and above, the **Call REST** dialog box has changed from what is shown in the video. You have to ensure that for **Output** you select **Yes** for **Store in variable** and then specify the **Variable name**.
 {{% /alert %}}
 
 ![](attachments/consume-a-rest-service/response.png)

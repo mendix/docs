@@ -10,7 +10,7 @@ tags: ["mobile", "push notification", "remote", "push", "notification"]
 
 Push notifications (also known as remote notifications) allow you to remotely trigger small text messages, sounds, and more on your users' devices. For more information on notifications, see Apple's [APNs Overview](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) or Google's [Notifications Overview](https://developer.android.com/guide/topics/ui/notifiers/notifications).
 
-Native remote push notifications have more capabilities than hybrid push notifications. To setup Push Notifications for your Native App, you will have to:
+Native remote push notifications have more capabilities than hybrid push notifications. To set up push notifications for your Native App, you will have to:
 
 1. Generate an app using the Native Mobile Builder.
 1. Configure your Firebase setup.
@@ -26,24 +26,22 @@ Push notifications will not work in XCode's Simulator. For iOS, notifications on
 
 **This how-to will teach you how to do the following:**
 
-* Enable Push Notifications in your Native Mobile App.
+* Enable push notifications in your native mobile app
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Complete [How to Deploy Your First Mendix Native Mobile App](deploying-native-app) through the end of the *Preparing Your Project* section. Once you finish those sections, you will have a generated a GitHub repository with all the files you will need.
-* Learn the basics of [Git](https://www.atlassian.com/git). **Only if you can't use the Mendix Native Mobile Builder or need to modify your app manually.**
+* Learn the basics of [Git](https://www.atlassian.com/git) (only if you cannot use the Mendix Native Mobile Builder or need to modify your app manually)
 
 ## 3 Setting up Firebase Cloud Messaging Service {#firebase-setup}
 
 Google's Firebase service supports both Android and Apple push notifications. Because APNs can require more work during customization steps, this document will teach you to set up your push notifications using Firebase.
 
-To set up the Firebase cloud messaging server, complete [How to Set Up the Google Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server). 
-During that document's *Adding an Android and iOS App* section, be sure to add both an iOS and an Android app to your Firebase configuration. 
+To set up the Firebase cloud messaging server, complete [How to Set Up the Google Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server). During that document's *Adding an Android and iOS App* section, be sure to add both an iOS and an Android app to your Firebase configuration. 
 
-If you would like to test Push Notifications with a Custom Developer App. Please make sure to add one more Android app to your Firebase project, using the app identifier
-**(your chosen app identifier)-developerapp**. So in total you should have 2 Android apps and 1 iOS app included in your Firebase project. 
+If you would like to test push notifications with a custom developer app, please make sure to add one *additional* Android app to your Firebase project, using the app identifier *{your chosen app identifier}-developerapp*. So in this case, you should have a total of two Android apps and one iOS app included in your Firebase project. 
 
 After you complete that tutorial, you will have these files:
 
@@ -54,13 +52,14 @@ After you complete that tutorial, you will have these files:
 You will use these later to complete your work with the Native Mobile Builder and with Firebase.
 
 ## 4 Enabling Push Notification for your Native Apps
-To enable Push Notifications for your application you will have to follow one of the following section. The choice is based on the availability of the tools you can use.
 
-With the release of Native Mobile Builder with Mendix Studio Pro 8.15, the process of enabling push notifications has been simplified and is now the preferred method for setting up any capabilities in your app. Please follow the section: [Enabling Push Notification with the Native Mobile Builder (UI)](#auto-changes).
+To enable push notifications for your application you will have to follow one of the following sections. Please choose the section that fits which tools you can use.
 
-For older Mendix Studio Pro versions the CLI, Native Builder, is the preferred method. Please follow the section: [Enabling Push Notification with the Native Builder (CLI)](#auto-changes-cli).
+With the release of Native Mobile Builder in Mendix Studio Pro v8.15, the process of enabling push notifications has been simplified. The Native Mobile Builder, integrated into Mendix Studio Pro, is the recommended method for setting up any capabilities in your app. If you can use this tooling, please follow this section: [Enabling Push Notification with the Native Mobile Builder (UI)](#auto-changes).
 
-If you wish to implement the changes manually, please follow the section: [Manually Implementing Changes](#manually-implementing-changes).
+If you must use a version Mendix Studio Pro below 8.15, the Native Builder (CLI) is the preferred method. To use that tooling, please follow the section: [Enabling Push Notification with the Native Builder (CLI)](#auto-changes-cli).
+
+If you wish to implement your changes manually, please follow this section: [Manually Implementing Changes](#manually-implementing-changes).
 
 ### 4.1 Implementing Push Changes With the Native Builder CLI {#auto-changes}
 

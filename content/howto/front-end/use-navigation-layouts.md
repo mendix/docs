@@ -99,7 +99,7 @@ To configure the toggled sidebar to shrinking content (initially open), follow t
 
 	{{% image_container width="350" %}}![](attachments/use-navigation-layouts/3.1_pageproperties.png){{% /image_container %}}
 
-2.  In the tab General, select **Atlas_Default** as the layout:
+2.  In the **General** tab, select **Atlas_Default** as the layout:
 
 	{{% image_container width="350" %}}![](attachments/use-navigation-layouts/3.1_layoutselection.png){{% /image_container %}}
 
@@ -132,7 +132,7 @@ To configure the toggled sidebar to **Shrinking content (initially closed)**, fo
 
 	{{% image_container width="350" %}}![](attachments/use-navigation-layouts/3.3_pageproperties.png){{% /image_container %}}
 
-2.  In the tab General, select **Atlas_Default** as the layout:
+2.  In the **General** tab, select **Atlas_Default** as the layout:
 
 	{{% image_container width="350" %}}![](attachments/use-navigation-layouts/3.3_layoutselection.png){{% /image_container %}}
 

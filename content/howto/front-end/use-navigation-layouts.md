@@ -73,19 +73,19 @@ When it comes down to designing for your users, context is key. A navigation tha
 
 {{% image_container width="350" %}}![](attachments/use-navigation-layouts/2.3_topvsleftnavigation.png){{% /image_container %}}
 
-### 2.3.1 Scanning
+#### 2.3.1 Scanning
 
 A left navigation is faster and more efficient for users to scan. In just three visual fixations, users scan six items in the left navigation compared to the three items scanned in the top navigation. The left navigation also facilitates a vertical scanning direction that is natural for people, while the top navigation forces a horizontal scanning direction that people often use when they are reading.
 
-### 2.3.2 Page Space
+#### 2.3.2 Page Space
 
 A top navigation conserves more vertical page space than a left navigation. With a left navigation, the navigation links occupy the left column of your page. This shrinks and narrows the content area of your page, which means you will have less space for your content. A top navigation, however, uses minimal vertical space which allows you to fill your page's content area with content only.
 
-### 2.3.3 Item Priority
+#### 2.3.3 Item Priority
 
 Items in a top navigation do not have equal weight. The leftmost items carry more visual weight than other items because of their placement in the primary visual area (top left). Items in the top-left area get more exposure and are often seen as more important than other items. The items in  left navigation, however, do have equal weight because they are all placed on the left with no other items in their opposing direction on the right. Because users read items from left to right, the priority direction for reading items is stronger horizontally than vertically.
 
-### 2.3.4 Visibility
+#### 2.3.4 Visibility
 
 Top navigation items are more visible because they are always above the fold and are easier to find. Left navigation items are not always above the fold; sometimes if you have too many items a few of them can get pushed below the fold. Top navigations are also easier to find because they are usually accompanied by the header and logo, both of which are visually dominant objects on a web page.
 

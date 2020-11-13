@@ -106,7 +106,7 @@ The *info.plist* file registers the schema and host so that they will be associa
 1. Change the `openURL` method from this:
 
     ```objc
-    - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+	- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
       [MendixAppDelegate application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
       return YES;
     }
@@ -115,7 +115,7 @@ The *info.plist* file registers the schema and host so that they will be associa
     to this:
 
 	```objc
-    - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+	- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
       [RCTLinkingManager application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
       [MendixAppDelegate application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
       return YES;

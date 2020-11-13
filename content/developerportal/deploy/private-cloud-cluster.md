@@ -214,6 +214,17 @@ The options do the following:
 
 ##### 4.3.2.1 Database Plan{#database-plan}
 
+Give your plan a **Name** and choose the **Database Type**. See the information below for more help in setting up plans for the different types of database which are supported by Mendix for Private Cloud.
+
+Once you have entered the details you can apply two validation checks by clicking the **Validate** and **Connection Validation** buttons:
+
+* **Validate** – checks that you have provided all the required values and that they are in the correct format
+* **Connection validation** –  checks whether the specified storage plan has been successfully created — this does not guarantee that the storage *instance* will be created successfully when the configuration is applied
+
+![Database Plan Configuration](attachments/private-cloud-cluster/database-plan-config.png)
+
+The supported **Database Types** are described below:
+
 **Postgres** will enable you to enter the values to configure a PostgreSQL database. You will need to provide all the information about your PostgreSQL database such as plan name, host, port, database, user, and password.
 
 {{% alert type="info" %}}
@@ -667,6 +678,10 @@ The following actions require the appropriate access to the namespace **and** ac
 * View App Alerts
 * View App Metrics
 * Manage App Backups
+* Manage Debugger
+* Manage TLS configurations
+* Manage Custom Runtime Settings
+* Manage Log levels
 
 The **Members** tab allows you to manage the list of members of the namespace and control what rights they have.
 

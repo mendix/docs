@@ -78,7 +78,7 @@ These are the results of the actions:
 * [SQLite](https://bitbucket.org/xerial/sqlite-jdbc/downloads/)
 
 {{% alert type="info" %}}
-If you intend to connect to Sql Server using integrated security, please be aware that the JDBC driver in the `userlib` folder of the module needs to match the version supplied with the Mendix platform.
+If you intend to connect to SQL Server using integrated security, please be aware that the JDBC driver in the `userlib` folder needs to match the version supplied with the Mendix platform.
 {{% /alert %}}
 
 ## 6 Developing This App Store Component

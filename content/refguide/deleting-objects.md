@@ -40,19 +40,23 @@ The name of the object or list of objects that will be deleted. If you choose a 
 
 ### 3.2 Refresh in Client
 
-This setting defines how changes are reflected in the pages presented to the end-user.
+This setting defines whether data sources are rerun after objects are deleted from the database.
 
 Default: *No*
 
+{{% alert type="info" %}}
+To make pages of a Mendix app efficient, many widgets display values from an object value which is cached on the page. Attributes in widgets which use cached data are *always* reflected in the client irrespective of the value of **Refresh in client**. When an object is deleted, it will display any attributes as null, but the object will still be displayed (for example, there will be a blank entry for the deleted object in a list view) 
+
+If **Refresh in client** is set to *Yes* then all widgets will be updated, including those which are only updated when a [data source](data-sources) is loaded. 
+
+When testing your app, ensure that the desired data is being displayed by the widgets you have chosen.
+{{% /alert %}}
+
 #### 3.2.1 Microflow is Called from the Client in an Online App
 
-If **Refresh in client** is set to *No*, the deletion is not reflected in the client.
+If **Refresh in client** is set to *No*, the data sources are not rerun, and widgets which need to reload data will still display the object(s).
 
 If set to *Yes*, the deletion is reflected across the client, which includes reloading the relevant [data sources](data-sources).
-
-{{% alert type="info" %}}
-Deletions are always reflected in the client. [Data sources](data-sources) are only reloaded if **Refresh in client** is set to *Yes*.
-{{% /alert %}}
 
 #### 3.2.2 Microflow is Called in an Offline, Native, or Hybrid App
 

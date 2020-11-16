@@ -6,8 +6,6 @@ menu_order: 10
 tags: ["Installation Script", "Configuration Script", "Private Cloud", "Cluster", "Namespace"]
 ---
 
-{{% todo %}}[Confirm name of the Configuration Tool]{{% /todo %}}
-
 ## 1 Introduction
 
 Usually you will install the Mendix Operator and Mendix Gateway Agent in your Kubernetes or OpenShift namespace using the Configuration Tool. However, there might be a reason you need to perform the installation or configuration on your cluster.
@@ -40,7 +38,7 @@ Once that is done, you can run the second script which allows you to configure y
 
 ![](attachments/private-cloud-config-script/namespace-scripts.png)
 
-## 3 Running the Installation Script
+## 3 Running the Installation Script{#installation-script}
 
 ### 3.1 Signing in to OpenShift {#openshift-signin}
 
@@ -330,7 +328,7 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide)
 Both forms of ingress can have TLS enabled or disabled.
 
 {{% alert type="info" %}}
-When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
+When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](private-cloud-cluster#restart-after-changing-network-cr) for the changes to be fully applied.
 {{% /alert %}}
 
 ### 4.5 Pick a Registry Type{#registry}

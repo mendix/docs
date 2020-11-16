@@ -45,7 +45,7 @@ By default, search results in the Data Hub Catalog will be filtered to show only
 {{% /alert %}}
 
 ### 2.4 URLs 
-The service URLs provide the exact locations of the service documents. In turn, these define the endpoints for exposed entities and attributes and thereby access to the associated datasets by the consuming apps. 
+The service URLs provide the locations of the service contract. In turn, these define the endpoints for exposed entities and attributes and thereby access to the associated datasets by the consuming apps. 
 
 ### 2.5 Discoverability 
 When a service is registered, by default it is "published" by being set to **Discoverable** in the Data Hub Catalog so that all users can find it and see details about it. Owners and curators of a registered service can set a service to be **non-discoverable**, which means that it can only be found and consumed by them and is not available to other users.
@@ -117,12 +117,12 @@ Search is case-insensitive.
 
 #### 4.1.2 Filters{#filter}
 
-By default, the **Production** environment filter is active to restrict search results to the production environment. The number of filters that are active for the current search is displayed adjacent to the filter: 
+You can filter search results by environment type. By default, the **Production** environment filter is active to restrict search results to the production environment. The number of filters that are active for the current search is displayed adjacent to the filter: 
 
  {{% image_container width="200" %}}![](attachments/search/filter-active.png){{% /image_container %}}
 
 
-To specify the environments for the search, click **Filter**:
+To specify the environment type for the search, click **Filter**:
 
 ![](attachments/search/dh-filter-box.png)
 
@@ -136,12 +136,12 @@ The **Sandbox** filter refers to apps deployed to the Mendix Free App environmen
 
 #### 4.1.3 Search Results
 
-The number of items satisfying the search criteria (search string plus filters) are shown at the top of the search results.  Search results will include all registered services, entities, attributes, tags, and descriptions satisfying the search string and filters. Search results are listed in the following order:
+The number of items satisfying the search criteria (search string plus filters) are shown at the top of the search results.  Search results will include all application names, registered services, entities, attributes, tags, and descriptions satisfying the search string and filters. Th order of the search results will be a combination of the following:
 
 * Closest match to the search string
 * Popularity of the service (number of connections)
 
-If no search string is specified, all registered services will be listed in the search results in the above order showing the first five entities for each service.
+If no search string is specified, all registered assets will be listed in the search results in order of popularity (number of connections to the asset).
 
 When an item in the search results is selected, the **Catalog** tab will show the **Search details** and the **Landscape** tab will show the network of connections and dependencies of the selected item in the [Data Hub Landscape](../data-hub-landscape/index).
 
@@ -151,17 +151,17 @@ The Search Details displays the details of the selected item in the search resul
 
 #### 4.2.1 Search Details for a Selected Service
 
-When a service is selected, the full details of the service are displayed:
+When a service is selected, the full details of the selected endpoint are displayed:
 
 ![](attachments/search/search-details-service.png)
 
 * The name of the Service
-* The name of the environment to the app is deployed
-* The **Version** number of the service
-* The number of connections (**Used in**)
+* The name of the environment to which the app is deployed
+* The **Version** number of the service at this endpoint
+* The number of environments (app in a specific environment) that consume the service (**Used in**)
 * A description of the entity as given in the service metadata or curated in the Data Hub Catalog
-* Clicking **Share Service** will copy the link to the service to the clipboard
-* Each **Entity** that is exposed in the service (you can expand an entity to see details of the attributes and associations for the entity, as described below)
+* Clicking **Share Service** will copy the link to the this asset detail to the clipboard
+* Each **Entity** that is exposed in the service (you can expand an entity to see details of the attributes and associations, as described below)
 
 #### 4.2.2 Search Details for Selected Entity{#entity-details}
 
@@ -170,11 +170,11 @@ When an **Entity** is selected in the search results, details for the entity are
 ![](attachments/search/search-details-entity.png)
 
 * The name of the Service
-* **Part of** contains a link that will take you to the **Search Details** of the service in which the entity is exposed
-* The **Version ** number of the service
-* The number of connections (**Used in**) to the entity
+* **Part of** contains a link that will take you to the asset details page of the service in which the entity is exposed
+* The **Version** number of the service at the endpoint
+* The number of environments (app in a specific environment) that consume the entity (**Used in**) 
 * A description of the entity as given in the service metadata or curated in the Data Hub Catalog
-* Clicking **Share Datasource** will copy the deep link of the entity (meaning, the entity endpoint) to the clipboard
+* Clicking **Share Datasource** will copy the link to this entity detail page to the clipboard
 * **Entity Information**
 
 For every entity, the attributes exposed in the service are listed showing the attribute types and description.
@@ -184,8 +184,8 @@ Under the **Associations** tab for each entity, the associations are shown:
 ![](attachments/search/attributes-associations.png)
 
 * **Name** –  the name of the association that is exposed in the service
-* **Navigates to** –  the deep link of the entity to that the current entity is assocated with. Click to see the entity details of the associated entity. 
-* **Multiplicity** –  the type of association
+* **Navigates to** –  the entity the assocation refers to. Click the link to see the details of the associated entity in the Catalog. 
+* **Multiplicity** –  the number of object at the other end of the association (0..1, 1 or *)
 
 ### 4.3 Service Metadata Panel {#metadata}
 
@@ -193,44 +193,49 @@ The service metadata panel at the right of the search details page displays deta
 
 ![](attachments/search/metadata.png)
 
-* **Classification** – the classification of the data for the service; end-users of the data associated with the entities exposed in the service must have the appropriate [user role](/refguide/user-roles) to have access to the data:
-	* **Public**  – data is available to users inside and outside the company	
-	* **Internal**  – data is restricted to the members of the organization
-
+* **Classification** – the classification of the dataset for the service; end-users of the data associated with the entities exposed in the service must have the appropriate [user role](/refguide/user-roles) to have access to the data:
+	
+	* **Public**  – this service information is classified as public	
+* **Internal**  – the service metadata is restricted to the members of the organization
+	
 	{{% alert type="info" %}}Classifications at a service level propagate down to the entities and attributes exposed in the service.  {{% /alert %}}
 	
 * **Discoverability** – the discoverability of the service so that other users can find it:
 	
-	* **Discoverable** – all users of Data Hub Catalog and Studio Pro can see and consume the service 
-* **Non-Discoverable** – the service is not visible and only owners of the service, Data Hub Curators, and Data Hub Admins can find and use the service
+	* **Discoverable** – all users of Data Hub Catalog and Studio Pro can see and consume the service provided they meet the requirements of the **Classification**
+	
+* **Non-Discoverable** – the service is not visible and only owners of the service, Data Hub Curators, and Data Hub Admins can find and use and curate the service
 	 See [Curate Bar](#curate-bar) for changing **DIscoverability** as an owner of the service or curator.
 	
-* **Environment Type** – specifies if the environment is a **Production** or **Non-Production** environment and therefore indicates the status of the dataset associated with the exposed entities
+	{{% alert type="info" %}}If an asset is set to **Non-discoverable** it will not appear in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Data Hub API.{{% /alert %}}
+	
+* **Environment Type** – indicates the quality and the status of the datasets associated with the exposed entities. The environment type can be **Production**,  **Non-Production**  or the Mendix Free App environment,**Sandbox** 
 
-* **Application** – link to the app from which the OData service was published in the given environment
+* **Application** – link to the app in the given environment from which the OData service was published 
 
 * **Business Owner** – links to the business owner of the data that the service connects to; this is curated in the Data Hub Catalog
 
-* **Technical Owner** – technical owner of the app; by default this is the owner who registered the service, but this can be changed in the Data Hub Catalog
+* **Technical Owner** – technical contact of the app; by default this is the owner who registered the service. For apps hosted in the Mendix Cloud, the **Technical Owner** is the **Technical Contact** of the app in the Mendix Cloud
 
 *  **Tags** – tags that have been assigned to the service when it has been [curated](curate#tags)
 	
 	{{% alert type="info" %}}Tags assigned at a service level propagate down to the entities and attributes exposed in the service.{{% /alert %}}
 ### 4.4 Curate Bar {#curate-bar}
 
-If you are the owner of the selected asset or a curator, then the curate bar will also be displayed above the search details indicating that you can curate the asset. You can perform the following actions:
+The **Curate Bar** is displayed on the asset detail screen if you are the owner of the selected asset or a curator indicating that you can curate the asset. You can perform the following actions:
 * **Edit Metadata** – edit the registered metadata and add catalog descriptions and tags: 
   * when a service is selected, you can edit **Application Details**, and **Service Details**
   *  when an entity is selected you can **Edit Entity Details**
-* **Discoverable**/**Validated** – set the discoverability of the service so that other users can find it, and validate the dataset
-  * **Discoverable** – all users of Data Hub Catalog and Studio Pro can see and consume the service 
+* **Discoverable**/**Validated** – set the discoverability of the service, and validate the dataset
+  * **Discoverable** – all users of Data Hub Catalog and Studio Pro can see and consume the service in combination with the classification of the asset
   * **Non-Discoverable** – the service is not visible and only owners of the service, Data Hub Curators, and Data Hub Admins can find and use the service
   * **Validated** – indicate if the dataset has been validated
 
 {{% alert type="info" %}}By default, newly registered services are set to **Discoverable** and visible to all users. {{% /alert %}}
 
-For further details see  [Curation](./curate).
+For further details on curating registered assets see  [Curation](./curate).
 
 ## 5 Viewing Search Results in the Data Hub Landscape
 
 When an item is selected in the search results pane, you can click the [Landscape](../data-hub-landscape/index) tab to see the network of connections and dependencies for the selected asset. This enables you to graphically see the context and relevance for a selected item and the data for the exposed entities.
+

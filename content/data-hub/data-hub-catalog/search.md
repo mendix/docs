@@ -1,5 +1,5 @@
 ---
-title: "Search for Registered Assets"
+tghetitle: "Search for Registered Assets"
 category: "Data Hub Catalog"
 menu_order: 10
 description: "Introduces the processes and properties of the Mendix Data Hub Catalog."
@@ -14,7 +14,7 @@ You can start searching from the [Data Hub](#data-hub-home) page or click the [C
 
 The [Data Hub pane](/refguide/data-hub-pane) in Studio Pro enables search in the Data Hub Catalog to find and connect to registered entities from your Mendix app.
 
-This page describes the search functionality of the Data Hub Catalog and the the information that is available.
+This page describes the search functionality of the Data Hub Catalog and the information that is displayed for registered assets.
 
 ## 2 Details of Registered Assets
 
@@ -65,7 +65,7 @@ The description that is included as part of the published service metadata. This
 In Studio Pro, when publishing an OData service, it is possible to specify a summary of the service and a description. Only the description is included in the OData service contract document and displayed in the Data Hub Catalog.
 {{% /alert %}}
 
-### 2.8 Contacts for Registered Apps and Services  
+### 2.8 Contacts for Registered Apps and Services 
 In the Data Hub Catalog, the search details for a service include a **Technical Owner** (for technical inquiries) and the **Business Owner** who is responsible for the data sets. Both of these owners can curate their registered assets.
 
 ## 3 Searching in the Data Hub Catalog {#data-hub-home}
@@ -84,7 +84,7 @@ From the **Data Hub** page, you can search in the Data Hub Catalog in the follow
 
 * Type a search term in the search box and click **Search** (search strings can comprise a minimum of 3 characters and include the alphanumeric characters)
 * Click one of the *tags* given in the **Search suggestions**
-* Click one of the services under  **Most Popular Services**
+* Click one of the services under **Most Popular Services**
 * Click the **Catalog** tab
 
 Any of the above actions will take you to the **Search** screen, which is described below.
@@ -103,12 +103,12 @@ The collapsable **Search** pane is used to search for registered assets in the D
 
 #### 4.1.1 Search Area
 
-Enter a search string in the **Search** area of  minimum of 3 alpha-numeric.
+Enter a search string in the **Search** area of minimum of 3 alpha-numeric.
 
 In Studio Pro, searching the Data Hub Catalog through the **Data Hub** pane requires use of the wildcard `*` for an empty search. It is not possible to use the wildcard in combination with other characters. The wildcard can also be used in the Data Hub Catalog search but it is not necessary. 
 
 {{% alert type="info" %}}
-Punctuation cannot be used as part of the search term except for the  the wildcard `*`. 
+Punctuation cannot be used as part of the search term except for the wildcard `*`. 
 {{% /alert %}}
 
 {{% alert type="info" %}}
@@ -126,7 +126,7 @@ To specify the environment type for the search, click **Filter**:
 
 ![](attachments/search/dh-filter-box.png)
 
-In the **Filters** dialog box,  check the **Environment Type** that you want to restrict your search to and click, **Apply Filters**. The search results will only display hits for the specified search string in the checked environments.
+In the **Filters** dialog box, check the **Environment Type** that you want to restrict your search to and click, **Apply Filters**. The search results will only display hits for the specified search string in the checked environments.
 
 Click **Clear Filters** to see search results in all environments.
 
@@ -136,7 +136,7 @@ The **Sandbox** filter refers to apps deployed to the Mendix Free App environmen
 
 #### 4.1.3 Search Results
 
-The number of items satisfying the search criteria (search string plus filters) are shown at the top of the search results.  Search results will include all application names, registered services, entities, attributes, tags, and descriptions satisfying the search string and filters. Th order of the search results will be a combination of the following:
+The number of items satisfying the search criteria (search string plus filters) are shown at the top of the search results. Search results will include all application names, registered services, entities, attributes, tags, and descriptions satisfying the search string and filters. Th order of the search results will be a combination of the following:
 
 * Closest match to the search string
 * Popularity of the service (number of connections)
@@ -183,9 +183,9 @@ Under the **Associations** tab for each entity, the associations are shown:
 
 ![](attachments/search/attributes-associations.png)
 
-* **Name** –  the name of the association that is exposed in the service
-* **Navigates to** –  the entity the assocation refers to. Click the link to see the details of the associated entity in the Catalog. 
-* **Multiplicity** –  the number of object at the other end of the association (0..1, 1 or *)
+* **Name** – the name of the association that is exposed in the service
+* **Navigates to** – the entity the association refers to. Click the link to see the details of the associated entity in the Catalog. 
+* **Multiplicity** – the number of object at the other end of the association (0..1, 1 or *)
 
 ### 4.3 Service Metadata Panel {#metadata}
 
@@ -195,10 +195,10 @@ The service metadata panel at the right of the search details page displays deta
 
 * **Classification** – the classification of the dataset for the service; end-users of the data associated with the entities exposed in the service must have the appropriate [user role](/refguide/user-roles) to have access to the data:
 	
-	* **Public**  – this service information is classified as public	
-* **Internal**  – the service metadata is restricted to the members of the organization
+	* **Public** – this service information is classified as public	
+* **Internal** – the service metadata is restricted to the members of the organization
 	
-	{{% alert type="info" %}}Classifications at a service level propagate down to the entities and attributes exposed in the service.  {{% /alert %}}
+	{{% alert type="info" %}}Classifications at a service level propagate down to the entities and attributes exposed in the service. {{% /alert %}}
 	
 * **Discoverability** – the discoverability of the service so that other users can find it:
 	
@@ -209,7 +209,7 @@ The service metadata panel at the right of the search details page displays deta
 	
 	{{% alert type="info" %}}If an asset is set to **Non-discoverable** it will not appear in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Data Hub API.{{% /alert %}}
 	
-* **Environment Type** – indicates the quality and the status of the datasets associated with the exposed entities. The environment type can be **Production**,  **Non-Production**  or the Mendix Free App environment,**Sandbox** 
+* **Environment Type** – indicates the quality and the status of the datasets associated with the exposed entities. The environment type can be **Production**, **Non-Production** or the Mendix Free App environment,**Sandbox** 
 
 * **Application** – link to the app in the given environment from which the OData service was published 
 
@@ -233,7 +233,7 @@ The **Curate Bar** is displayed on the asset detail screen if you are the owner 
 
 {{% alert type="info" %}}By default, newly registered services are set to **Discoverable** and visible to all users. {{% /alert %}}
 
-For further details on curating registered assets see  [Curation](./curate).
+For further details on curating registered assets see [Curation](./curate).
 
 ## 5 Viewing Search Results in the Data Hub Landscape
 

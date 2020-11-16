@@ -84,7 +84,7 @@ The Native Mobile Builder simplifies the process of adding any capabilities to y
 
 1. Click **Upload google-service.json file**. Navigate to where you saved your app's **google-services.json** file and select it. The tool will verify that the required app id is included in *json* file and will notify you if otherwise. That is to prevent you using the wrong configuration files, which would result in push notifications not working. 
 
-{{% alert type="info" %}}The tool will warn you if *google-services.json* does not include a correct custom developer app's app identifier in the format of `(chosen app id)-developerapp`. It can be safely ignored if you do not plan on testing push notifications with a custom developer app.{{% /alert %}}
+	{{% alert type="info" %}}The tool will warn you if *google-services.json* does not include a correct custom developer app's app identifier in the format of `(chosen app id)-developerapp`. It can be safely ignored if you do not plan on testing push notifications with a custom developer app.{{% /alert %}}
 
 1. Click **Upload GoogleServices-info.plist file**. Navigate to where you saved your app's *GoogleServices-info.plist* file and select it. The tool will verify that the required app id is included in *json* file and will notify you if otherwise. That is to prevent you using the wrong configuration files, which would result in push notifications not working.
 1. Click **Save**.
@@ -123,7 +123,7 @@ Implementing push notifications manually requires you to modify source files loc
 
 * For Native Template versions up to v5.0.x, or otherwise for Native Templates supporting up to Mendix Studio Pro v8.15.0, please follow these sections based on your platform: 
 	* [For Android](#manual-android-5.0.x)
-	* [For iOS](#manual-ios-5.0.x). 
+	* [For iOS](#manual-ios-5.0.x)
 * For Native Template versions from v5.1.x, or otherwise for Native Templates supporting from Mendix Studio Pro v8.15.x and up, please follow these sections based on your platform: 
 	* [For Android](#manual-android-5.1.x)
 	* [For iOS](#manual-ios-5.1.x)
@@ -131,32 +131,32 @@ Implementing push notifications manually requires you to modify source files loc
 #### 4.2.1 On Android for Native Template up to v5.0.x {#manual-android-5.0.x}
 
 1. Add the *google-services.json* file inside your **android/app** folder. 
-1.  Set app launch mode inside activity props and add necessary receiver changes in *android/app/src/main/AndroidManifest.xml*:
+1. Set app launch mode inside activity props and add necessary receiver changes in *android/app/src/main/AndroidManifest.xml*:
 
 	```
 	<activity
-...
-android:launchMode="singleTop"
+   ...
+   android:launchMode="singleTop"
   >
 	```
-	
+
 1.  Included the firebase service and receiver in your **android/app/src/main/AndroidManifest.xml**. Copy and paste the lines below that are between the **\<application>\</applicatation>** tags into the app's **AndroidManifest.xml** between the **\<application ...>\</application>**:
 
 	```
 	<application ...>
  <receiver android:name="io.invertase.firebase.notifications.RNFirebaseNotificationReceiver"/>
  <receiver android:enabled="true" android:exported="true"  android:name="io.invertase.firebase.notifications.RNFirebaseNotificationsRebootReceiver">
-  <intent-filter>
+    <intent-filter>
     <action android:name="android.intent.action.BOOT_COMPLETED"/>
     <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
     <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
     <category android:name="android.intent.category.DEFAULT" />
-  </intent-filter>
+    </intent-filter>
  </receiver>
  <service android:name="io.invertase.firebase.messaging.RNFirebaseMessagingService">
-  <intent-filter>
+    <intent-filter>
    <action android:name="com.google.firebase.MESSAGING_EVENT" />
-  </intent-filter>
+    </intent-filter>
  </service>
 </application>
 	```
@@ -167,21 +167,26 @@ android:launchMode="singleTop"
 
 #### 4.2.2 On Android for Native Template from v5.1.x {#manual-android-5.1.x}
 
-With Native Template v5.1.0 we introduced a new auto-linking behavior. Before Native Template v5.1.0, libraries not needed explicitly by your app were included when building your applications. With the new approach in Native Template v5.1.0 and above, you can easily toggle capabilities on or off as needed by modifying the configuration files of each platform. The system will take care 
+With Native Template v5.1.0 we introduced a new auto-linking behavior. Before Native Template v5.1.0, libraries not needed explicitly by your app were included when building your applications. 
+
+With the new approach in Native Template v5.1.0 and above, you can easily toggle capabilities on or off as needed by modifying the configuration files of each platform. The system will take care 
 of linking the libraries and peer-dependencies as needed. You can do so manually by following these steps:
 
 1. Manually add the `google-services.json` file inside your **android/app** folder.
-1. In the `capabilitiles.android.json` change the push notification key to be truthfull: `"pushNotifications": true`. This tells the new Autolink behavior to link the libraries needed
+1. In *capabilitiles.android.json* change the push notification key to be true: `"pushNotifications": true`. This tells the new Autolink behavior to link the libraries needed
 1. Set app launch mode inside activity props and add necessary receiver changes in **android/app/src/main/AndroidManifest.xml**:
-    ```
-    <activity
+   
+	```
+	<activity
     ...
     android:launchMode="singleTop"
       >
-    ```
-1. Included the firebase service and receiver in your **android/app/src/main/AndroidManifest.xml**. Copy and paste the lines below that are between the **\<application>\</applicatation>** tags into the app's **AndroidManifest.xml** between the **\<application ...>\</application>**.
-    ```
-    <application ...>
+	```
+    
+1.  Include the firebase service and receiver in your **android/app/src/main/AndroidManifest.xml**. Copy and paste the lines below that are between the **\<application>\</applicatation>** tags into the app's **AndroidManifest.xml** between the **\<application ...>\</application>**:
+
+	```
+	<application ...>
     <receiver android:name="io.invertase.firebase.notifications.RNFirebaseNotificationReceiver"/>
     <receiver android:enabled="true" android:exported="true"  android:name="io.invertase.firebase.notifications.RNFirebaseNotificationsRebootReceiver">
       <intent-filter>
@@ -197,11 +202,13 @@ of linking the libraries and peer-dependencies as needed. You can do so manually
       </intent-filter>
     </service>
     </application>
-    ```
-    ![AndroidManifestChanges](attachments/native-remote-push/androidManifestXml.png)
-1. Commit and push your changes to master branch.
+	```
+    
+	![AndroidManifestChanges](attachments/native-remote-push/androidManifestXml.png)
+	
+1. Commit and push your changes to **master** branch.
 
-You repository should now have the `google-services.json` included and the `pushNotifications` value in the `capabilitiles.android.json` set to true.
+You repository should now have the *google-services.json* included and the `pushNotifications` value in the `capabilitiles.android.json` set to true.
 
 #### 4.2.3 On iOS for Native Template up to v5.0.x {#manual-ios-5.0.x}
 
@@ -210,14 +217,14 @@ In order for your generated template to work with push notifications, you will n
 1. Open the *app/ios/yourProjectName.xcworkspace* in Xcode.
 1.  Right click in the left pane and select **Add files to ...**, then drop the *GoogleServices-Info.plist* file into the root iOS directory:
 
-  ![AddFilesToXcode](attachments/native-remote-push/add-files-to-xcode.png)
+	![AddFilesToXcode](attachments/native-remote-push/add-files-to-xcode.png)
 
 1. Select **GoogleService-Info.plist** and make sure **Copy items if needed** is selected. 
-1. Select the **Create Groups** option, then select all targets:
+1.  Select the **Create Groups** option, then select all targets:
 
-  ![GoogleServicesInfoPlist](attachments/native-remote-push/GoogleServicesInfoPlist.png)
+	![GoogleServicesInfoPlist](attachments/native-remote-push/GoogleServicesInfoPlist.png)
 
-In **Signing & Capabilities** tab, add **push notifications** capabilities to your app by doing the following:
+In the **Signing & Capabilities** tab, add **push notifications** capabilities to your app by doing the following:
 
 1. Click **nativeTemplate** in the left-side file explorer.
 1. Click the **Signing & Capabilities** tab.
@@ -225,7 +232,7 @@ In **Signing & Capabilities** tab, add **push notifications** capabilities to yo
 1. Click **Capability**, type *push* in the dialog box, then select **Push Notifications**.
 1. Click **Capability**, type *background* in the dialog box, then select **Background Modes**.
 1. Select **Background Modes** > **Remote Notifications**:
-  ![Capabilities](attachments/native-remote-push/ios-customizations.png)
+    ![Capabilities](attachments/native-remote-push/ios-customizations.png)
 1. Commit and push your changes to your master branch.
 
 With those steps completed you have manually enabled push notifications for your Android app.

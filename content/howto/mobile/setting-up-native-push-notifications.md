@@ -137,7 +137,10 @@ Implementing push notifications manually requires you to modify source files loc
 	<activity
    ...
    android:launchMode="singleTop"
+   ```
   >
+	```
+	
 	```
 
 1.  Included the firebase service and receiver in your **android/app/src/main/AndroidManifest.xml**. Copy and paste the lines below that are between the **\<application>\</applicatation>** tags into the app's **AndroidManifest.xml** between the **\<application ...>\</application>**:
@@ -182,7 +185,7 @@ of linking the libraries and peer-dependencies as needed. You can do so manually
     android:launchMode="singleTop"
       >
 	```
-    
+   
 1.  Include the firebase service and receiver in your **android/app/src/main/AndroidManifest.xml**. Copy and paste the lines below that are between the **\<application>\</applicatation>** tags into the app's **AndroidManifest.xml** between the **\<application ...>\</application>**:
 
 	```
@@ -239,7 +242,7 @@ With those steps completed you have manually enabled push notifications for your
 
 #### 4.2.4 On iOS for Native Template from v5.1.x {#manual-ios-5.1.x}
 
-1. Make sure you have completed section [4.2.3 iOS for Native Template up to 5.0.x](#manual-ios-5.0.0).
+1. Make sure you have completed the [iOS for Native Template up to 5.0.x](#manual-ios-5.0.x) section.
 1. In *capabilitiles.ios.json* change the push notification key to be true: `"pushNotifications": true`. This allows the push notifications libraries to be installed.
 1. Run `pod install` to link the new libraries and update the *Podfile.lock* file.
 1. Commit and push your changes to your **master** branch.

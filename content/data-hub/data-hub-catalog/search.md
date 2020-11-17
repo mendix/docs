@@ -41,7 +41,7 @@ The search results will show these service endpoints (where a service endpoint i
 The environment is therefore a major component of the definition and forms part of the URL for the endpoint being consumed. This, in combination with the OData version number, provides the link to the correct data for the entities that are exposed.
 
 {{% alert type="info" %}}
-By default, search results in the Data Hub Catalog will be filtered to show only hits in the Production environment. You can extend the search to **Non-production** or **Mendix Free App (Sandbox)** environments by checking them in the search pane **Add Filter** list. For more details, see Add Filters{#filter}.
+By default, search results in the Data Hub Catalog is filtered to show only hits in the Production environment. You can extend the search to **Non-production** or **Mendix Free App (Sandbox)** environments by checking them in the search pane **Add Filter** list. For more details, see [Filters](#filter).
 {{% /alert %}}
 
 ### 2.4 URLs 
@@ -54,9 +54,9 @@ When a service is registered, by default it is "published" by being set to **Dis
 Tags help you to group services and entities and categorize them (for example, by department, process, or use). You can use tags to refine the search and filter search results in the Data Hub Catalog by doing the following:
 
 * Add tags to the service as a curate function in the Data Hub Catalog after a service is registered by service owners and [Data Hub Curators](../index#curator)
-* Add different tags to the different versions of the same service, as they will be two separate entries in the catalog (this is also a way to make different version identifiable)
-* Add tags to a service because they also apply to the entities exposed in the service
-* Add tags during the manual registration of OData services using the [register new service](register#new-service) form
+* Add different tags to the different versions of the same service, as they will be two separately registered assets in the catalog (this is also a way to make different version identifiable)
+* Add tags to the entities exposed in the service
+* Add tags in the [manual registration of OData v4 services](register#registration-form)
 
 ### 2.7 Description
 The description that is included as part of the published service metadata. This description can be further curated at the service, entity, and attribute level by Data Hub Curators to provide further details of the exposed entities and associated datasets.
@@ -115,7 +115,7 @@ Punctuation cannot be used as part of the search term except for the wildcard `*
 Search is case-insensitive.
 {{% /alert %}}
 
-#### 4.1.2 Filters{#filter}
+#### 4.1.2 Filters {#filter}
 
 You can filter search results by environment type. By default, the **Production** environment filter is active to restrict search results to the production environment. The number of filters that are active for the current search is displayed adjacent to the filter: 
 
@@ -163,7 +163,7 @@ When a service is selected, the full details of the selected endpoint are displa
 * Clicking **Share Service** will copy the link to the this asset detail to the clipboard
 * Each **Entity** that is exposed in the service (you can expand an entity to see details of the attributes and associations, as described below)
 
-#### 4.2.2 Search Details for Selected Entity{#entity-details}
+#### 4.2.2 Search Details for Selected Entity {#entity-details}
 
 When an **Entity** is selected in the search results, details for the entity are displayed in the **Search Details** window:
 
@@ -220,6 +220,7 @@ The service metadata panel at the right of the search details page displays deta
 *  **Tags** – tags that have been assigned to the service when it has been [curated](curate#tags)
 	
 	{{% alert type="info" %}}Tags assigned at a service level propagate down to the entities and attributes exposed in the service.{{% /alert %}}
+
 ### 4.4 Curate Bar {#curate-bar}
 
 The **Curate Bar** is displayed on the asset detail screen if you are the owner of the selected asset or a curator indicating that you can curate the asset. You can perform the following actions:
@@ -238,4 +239,3 @@ For further details on curating registered assets see [Curation](./curate).
 ## 5 Viewing Search Results in the Data Hub Landscape
 
 When an item is selected in the search results pane, you can click the [Landscape](../data-hub-landscape/index) tab to see the network of connections and dependencies for the selected asset. This enables you to graphically see the context and relevance for a selected item and the data for the exposed entities.
-

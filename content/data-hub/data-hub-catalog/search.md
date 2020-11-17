@@ -1,5 +1,5 @@
 ---
-tghetitle: "Search for Registered Assets"
+title: "Search for Registered Assets"
 category: "Data Hub Catalog"
 menu_order: 10
 description: "Introduces the processes and properties of the Mendix Data Hub Catalog."

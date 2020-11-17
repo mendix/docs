@@ -85,11 +85,16 @@ Standard Mendix **List view** widgets can be used on your pages. However, these 
 
 ### 2.2 Applying CSS Classes Manually{#apply-css}
 
-Some SAP Fiori styling requires you to add some additional CSS classes manually for the styles to be implemented correctly. These cases are described in the following sections.
+Some SAP Fiori styling requires you to add some additional CSS classes manually for the styles to be implemented correctly. These cases are described in the following tables.
 
-#### 2.2.1 Transparent Buttons
-
-#### 2.2.2 Borderless List Views
+| SAP Component Style | Mendix Class(es) |
+| --- | --- |
+| Disabled Link | link-disabled |
+| Emphasized Link | link-emphasized |
+| Inverted Link | link-inverted |
+| Right Icon Link | link right icon |
+| Left Icon Link | *this is the default* |
+| Transparent Button | transparent-btn |
 
 ### 2.3 Unsupported SAP Fiori Components{#unsupported-components}
 

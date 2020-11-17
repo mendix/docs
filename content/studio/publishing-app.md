@@ -61,7 +61,7 @@ By default all apps created in Mendix Studio are Free Apps. A Free App is a comp
 | **Environments**    | Single environment in the Mendix Cloud.                      | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
 | **Sleep Mode**      | Goes into Sleep Mode after an hour of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in Sleep Mode. | Does not have a Sleep Mode.                                  |
 
-The Mendix Cloud is the default deployment option when you get started with the Mendix Platform. However, you can use other environments, such as  SAP, IBM, or Mendix Private Cloud. For more technical information, see [Deployment](/developerportal/deploy) in the *Developer Portal Guide*.
+The Mendix Cloud is the default deployment option when you get started with the Mendix Platform. When you create an app, you can choose dedicated app templates that use other environments, such as SAP Cloud Platform. For more technical information, see [Deployment](/developerportal/deploy) in the *Developer Portal Guide*.
 
 ## 4 Viewing Your App {#viewing-your-app}
 

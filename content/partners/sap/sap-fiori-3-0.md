@@ -16,16 +16,16 @@ Should we have a section on the "Shell Bar"?
 
 SAP Fiori 3 is SAP's target design system used to give your SAP C4/HANA application a consistent look and feel. The [SAP Fiori 3 UI Resources](#wrong) module in the Mendix App Store allows you to apply this look and feel to your Mendix apps running on SAP C4/HANA.
 
-The Mendix module gives you access to designing your pages with SAP Fiori-styled widgets and building blocks, together with support for using integration cards as part of your layout. You can also allow end-users to select a theme and apply it immediately.
+The Mendix module gives you access to designing your pages with SAP Fiori-styled widgets and building blocks as part of your layout. You can also allow end-users to select a theme and apply it immediately. The module supports SAP Quartz Light and Dark themes.
 
 You can experience the SAP Fiori 3 design by using the [SAP Fiori 3 Starter App](#wrong) as the basis for a new app, or by including the [SAP Fiori 3 UI Resources](#wrong) module in your app.
 
 More information on using SAP Fiori 3 design in your Mendix app is available in the following sections:
 
-* [Widgets](#widgets) – configuring existing Mendix widgets and new SAP Fiori 3 widgets to match SAP Fiori 3 components
+* [Widgets](#widgets) – Mendix core widgets have SAP Fiori 3 styling
 * [Building Blocks](#building-blocks) – groups of widgets which can be used to quickly create SAP Fiori styled pages
-* [Layouts](#layouts) – different styles of page which can be used in your app — choose, for example, between static or sliding master/details
-* [Page Templates](#page-templates) – complete pages which are already styled ready for you to use in your Mendix app
+* [Layouts](#layouts) – different styles of page which can be used in your app — for example, Master/detail or Pop-Up
+* [Page Templates](#page-templates) – readily-available page templates which are already styled ready for you to use in your Mendix app
 * [Theme Selector](#theme-selector) – switch between different theme — for example *light* and *dark*
 
 ## 2 Widgets{#widgets}
@@ -35,8 +35,6 @@ The majority of Mendix widgets have been styled to match SAP Fiori 3 styles by d
 There are a few cases where you will need to apply some extra CSS classes manually to achieve the correct SAP Fiori look and feel. These are described in [Applying CSS Classes Manually](#apply-css).
 
 There are also a few SAP Fiori components which are not supported by Mendix core widgets. These are listed in [Unsupported SAP Fiori Components](#unsupported-components), below.
-
-The examples of Fiori 3 styling in the SAP Fiori 3 UI Resources App Store Module will be clearer if you populate the database first using the **Create Test Data** option on the Home page.
 
 ### 2.1 Examples of Mendix Core Widget Styling
 
@@ -63,11 +61,7 @@ You can choose different types of button by setting the appropriate **Button sty
 
 The **Link button** also has Fiori 3 styling.
 
-#### 2.1.2 Action Bar
-
-{{% todo %}}[Does the construction of the Action Bar need to be described? Why isn't it a building block?]{{% /todo %}}
-
-#### 2.1.3 Container Count Badge
+#### 2.1.2 Container Count Badge
 
 The **container count badge** allows you to add a count badge to containers on Mendix pages as shown in the following example.
 
@@ -85,11 +79,9 @@ You can specify the appearance of the count badge in the **Appearance** tab of t
 
 ![SAP Fiori Count Badge appearance](attachments/sap-fiori-3-0/count-badge-appearance.png)
 
-#### 2.1.4 List Views
+#### 2.1.3 List Views
 
 Standard Mendix **List view** widgets can be used on your pages. However, these cannot be borderless. To create a borderless list view, see [Applying CSS Classes Manually](#apply-css), below.
-
-{{% todo %}}[Do we need a section }#### 2.1.5 Pagination]{{% /todo %}}
 
 ### 2.2 Applying CSS Classes Manually{#apply-css}
 
@@ -105,17 +97,26 @@ Some SAP Fiori styling requires you to add some additional CSS classes manually 
 * Message Strip – we suggest you use one of the **Notifications** building blocks 
 * Message Toast/Short message on actions
 * Time
+* Timepicker
 * StepInput
-* Menu/Navigation
-* Calendar
-* Tabs
-* Table
+
+In addition, there are some limitations on supporting other components:
+
+* In **Menus** you cannot have:
+    * two icons
+    * a slider showing sub-menus
+* In **Calendars** you cannot:
+    * highlight multiple dates such as holidays or other special days
+* In **Tables**
+    * you cannot have checkboxes or icons
+    * you can only select rows at the row selection level
+* In **Tabs** you cannot have
+    * icons with a counter
+    * only icons
 
 ## 3 Building Blocks{#building-blocks}
 
 You can see examples of the Fiori 3 building blocks by going to the **Building Blocks** page of the SAP Fiori 3 UI Resources App Store Module. The building blocks are categorized by type.
-
-{{% todo %}}[Is there anything that needs to be mentioned here? Are there any specific use cases or configuration (e.g. for notifications)]{{% /todo %}}
 
 ## 4 Layouts{#layouts}
 
@@ -146,7 +147,7 @@ Here is a list of the layouts you can use.
 
 ## 5 Page Templates{#page-templates}
 
-There are many different page layouts which you can use to base your page on. These provide you with the building blocks and widgets already arranged to provide an SAP Fiori-style page.
+There are many different page templates which you can use to base your page on. These provide you with the building blocks and widgets already arranged to provide an SAP Fiori-style page.
 
 Note that these pages work best when combined with the appropriate **Navigation layout**. For example, the **Fiori Launchpad** page template works best with the *SAP_Launchpad (SAP_3_0_UI_Resources)* **Navigation Layout**.
 

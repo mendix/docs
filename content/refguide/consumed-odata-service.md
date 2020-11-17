@@ -132,7 +132,7 @@ The same service, deployed to a different environment will be to a different ser
 
 When you drag the **Customer** entity from **CustomerApi version 1.0.0** deployed to the **Acceptance** environment into your project, Studio Pro will retrieve the information it requires from the contract that is at the endpoint. 
 
-### 4.2 Major and Minor Service Versions
+### 4.2 Semantic Numbering for Service Versions {#semantic}
 
 It is important that the publishers of the services adopt a strict revision process for any changes they make to their published OData services that are consumed by other users. 
 

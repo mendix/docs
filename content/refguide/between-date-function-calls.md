@@ -221,6 +221,8 @@ The output results in 8 days divided by 7 days in a week:
 
 ## 8 calendarMonthsBetween
 
+{{% alert type="warning" %}}This expression is only available in Mendix versions 8.15 and above.{{% /alert %}}
+
 The `calendarMonthsBetween` function calculates the difference between the input values in months. Time will be ignored. The dates are assumed to be in the end-user's local time zone.
 
 ### 8.1 Input Parameters
@@ -255,6 +257,8 @@ The output results in the amount of months between the two dates:
 ```
 
 ## 9 calendarYearsBetween
+
+{{% alert type="warning" %}}This expression is only available in Mendix versions 8.15 and above.{{% /alert %}}
 
 The `calendarYearsBetween` function calculates the difference between the input values in years. Time will be ignored. The dates are assumed to be in the end-user's local time zone.
 

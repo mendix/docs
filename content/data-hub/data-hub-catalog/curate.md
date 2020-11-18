@@ -57,9 +57,9 @@ On the **Curation bar**, the following details are displayed:
 	  * **Validate** indicates that the service and data set have been validated.
 * When an entity is selected in the **Search Results**, **Edit Entity Details** – to edit entity and attribute descriptions 
 
-## 3 Setting the Discoverability and Validating a Service{#discoverability}
+## 4 Setting the Discoverability and Validating a Service{#discoverability}
 
-### 3.1 Discoverable
+### 4.1 Discoverable
 
 By default, when a service is registered in the Data Hub catalog, it is set to **Discoverable**, which means that all users can find, consume, and see details of the service. 
 
@@ -81,17 +81,17 @@ To change the discoverability of a service, follow these steps:
 
 	![non-discoverable](attachments/curate/curate-non-discoverable.png) 
 
-### 3.2 Vaidated {#validated}
+### 4.2 Validated {#validated}
 
 The **Validated** value can be assigned to a service. When it is turned on, by clicking the **Validated** toggle, this will be indicated in the service details screen and also in the search results pane for the service. 
 
 ![validated](attachments/curate/curate-validated.png)
 
-## 4 Curating Services 
+## 5 Curating Services 
 
 A service can be curated to specify the owners of the app and also add or edit the descriptions and tags for the selected service. 
 
-### 4.1 Changing the Technical and Business Owners of an App {#customowner}
+### 5.1 Changing the Technical and Business Owners of an App {#customowner}
 
 By default, the **Technical Owner** for a registered service is the user who registered the service when registration is done through the deployment pipeline in Studio Pro or specified during manual registration. Services can be curated to change the owners. The **Technical** and **Business Owners** are displayed as a link the service **Metadata** pane so that users can contact them. 
 
@@ -127,7 +127,7 @@ To change the owners of the app for the selected service, follow these steps:
 
    
 
-### 4.2 Changing the Service Description
+### 5.2 Changing the Service Description
 
 If a description was included in the OData metadata contract, this will be displayed in the **Search Details** screen for the selected service. You can curate a service to add a catalog description to include further details on data usage and relevancy. As search in the Data Hub Catalog also includes searching the contents of the description fields of registered services, entities, and attributes, adding relevant descriptions can help in the right users finding these shared assets.
 
@@ -157,7 +157,7 @@ To edit the service metadata of a selected service, follow these steps:
 	{{% alert type="info" %}}If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. 
 	{{% /alert %}}
 
-### 4.3 Adding or Editing Tags to a Service {#tags}
+### 5.3 Adding or Editing Tags to a Service {#tags}
 
 Add tags to categorize a registered service and provide additional means for finding the service. Tags that are specified for a service also apply to the entities and attributes that are exposed in the service. Specify tags for the selected service by following these steps:
 
@@ -183,7 +183,7 @@ Add tags to categorize a registered service and provide additional means for fin
 	{{% alert type="info" %}}If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. 
 	{{% /alert %}}
 
-## 5 Curating Entities and Attributes
+## 6 Curating Entities and Attributes
 
 Entities and their exposed attributes can be curated to add **Catalog descriptions**. Catalog descriptions are stored in the Data Hub Catalog and it is possible to specify if the description provided in the service contract metadata or the Data Hub Catalog descriptions are displayed for the item.
 

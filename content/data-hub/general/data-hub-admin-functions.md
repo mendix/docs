@@ -39,7 +39,7 @@ The Data Hub Admin can assign users the curator role by following these steps:
 
 4. To search from the list of Mendix users in your organization, start typing in the search box and check the user(s) you want to assign the curator role to.
 
-5. If you want to remove the curator rights for a user, check the box against the name and confirm this by clicking  **Remove Curator**.
+5. If you want to remove the curator rights for a user, check the box against the name and confirm this by clicking **Remove Curator**.
 
    {{% alert type="info" %}}
    This will only remove the curator rights of the user, it will not remove the user as a Mendix platform user.
@@ -55,7 +55,7 @@ You can **Add Owners** that can be selected as **Business** or **Technical Owner
 
 {{% alert type="info" %}}
 Custom owners in this list do are not Mendix platform users but only serve as contact points for the registered assets. 
-{{% /alert %}}  
+{{% /alert %}} 
 
 The details of owners can be edited from this screen.
 
@@ -63,7 +63,7 @@ To delete customer owners from the list, click the **x** and confirm the removal
 
 {{% alert type="info" %}}
 If a custom owner is removed from the list, they will also be removed from any registered assets where they were set as the owner.
-{{% /alert %}}  
+{{% /alert %}} 
 
 
 

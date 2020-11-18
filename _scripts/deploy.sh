@@ -4,7 +4,7 @@ set -ev
 
 # TRAVIS_PULL_REQUEST is never true - it is either false or the number of the pull request. Luckily this test was never made as Travis does not run the deploy section for pull requests.
 # changed "if ([ "${TRAVIS_PULL_REQUEST}" == "true" ])" to "if ([ "${TRAVIS_PULL_REQUEST}" != "false" ])""
-if ([ "${TRAVIS_PULL_REQUEST}" == "true" ])
+if ([ "${TRAVIS_PULL_REQUEST}" != "false" ])
 then
   echo 'Pull request, not deploying'
   exit 0

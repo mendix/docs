@@ -19,7 +19,7 @@ In addition, the Data Hub Admin and curators can also maintain the list of custo
 This how-to describes:
 
 - how the Mendix Data Hub Admin can assign the curator role to users
-- how curators and the Data Hub Admin can manage the list of owners and contact details that have been added to asset details.
+- how curators and the Data Hub Admin can manage the list of owners and their contact details that have been added to the asset
 
 ## 2 Managing Curators {#curator}
 
@@ -33,9 +33,9 @@ The Data Hub Admin can assign users the curator role by following these steps:
 
    ![Administration](attachments/data-hub-admin/administration.png)
 
-2. The **Data Hub Admin** page will display the **Curator Management** tab by default. On this screen you will see the list of Data Hub curators for the organization.
+2. By default, the **Curator Management** tab is displayed showing the list of Data Hub curators for the organization.
 
-3. To add a curator role to a user, click **Add Curator**.
+3. To add a curator role to a Mendix user, click **Add Curator**.
 
 4. To search from the list of Mendix users in your organization, start typing in the search box and check the user(s) you want to assign the curator role to.
 
@@ -51,18 +51,18 @@ The Data Hub Admin can assign users the curator role by following these steps:
 
 ![owner admin](attachments/data-hub-admin/owner-management.png)
 
-You can **Add Owners** that can be selected as **Business** or **Technical Owners** when registered assets are curated. This will insert a link to the email that is specified here. 
+You can **Add Owners** which will be listed in the selection list for **Business** or **Technical Owners** when registered assets are curated. This will insert a link to the email that is specified here. 
 
 {{% alert type="info" %}}
-Custom owners in this list do are not Mendix platform users but only serve as contact points for the registered assets. 
+Custom owners in this list are not Mendix platform users but serve as contact for the registered assets. 
 {{% /alert %}} 
 
-The details of owners can be edited from this screen.
+You can edit the details of the listed owners from this screen.
 
-To delete customer owners from the list, click the **x** and confirm the removal. 
+To delete names from the list, click the **x** and confirm the removal. 
 
 {{% alert type="info" %}}
-If a custom owner is removed from the list, they will also be removed from any registered assets where they were set as the owner.
+If a custom owner is removed from the list, they will also be removed from any registered assets where they were set as the owner. This means that the asset will not have a contact.
 {{% /alert %}} 
 
 

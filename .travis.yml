@@ -23,6 +23,8 @@ before_install:
   - travis_retry curl -L https://github.com/gohugoio/hugo/releases/download/v$HUGO_VERSION/$HUGO_PACKAGE.tar.gz | tar xz
   - chmod +x ./hugo
   - mv ./hugo $HOME/bin/hugo
+  - pip install -U pip
+  - pip install awscli
 install:
   - rm -rf _site
   - yarn install
@@ -35,10 +37,9 @@ before_deploy:
   - cp ./_scripts/autopilot-linux $HOME/
   - chmod a+x $HOME/autopilot-linux
   - ./_scripts/before_deploy.sh
-  - pip install -U pip
-  - pip install awscli
 script:
   - ./node_modules/.bin/gulp build
+  - ./_scripts/test_deploy.sh
 cache:
   yarn: true
   #directories:

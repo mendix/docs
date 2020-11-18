@@ -11,6 +11,7 @@ fi
 if ([ "${TRAVIS_PULL_REQUEST}" == "true" -a "${TRAVIS_BRANCH}" == "MvMAWSTESTDONOTMERGE" ])
 then
   echo 'Testing AWS deployment'
+  echo '$AWS_DEFAULT_REGION'
   pwd
   exit 0
 fi

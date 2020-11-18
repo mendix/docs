@@ -25,7 +25,7 @@ before_install:
   - mv ./hugo $HOME/bin/hugo
   - travis_retry curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
   - unzip awscliv2.zip
-  - ./aws/install -b ~/bin/aws
+  - sudo ./aws/install -b ~/bin/aws
   - export PATH=~/bin:$PATH
 install:
   - rm -rf _site

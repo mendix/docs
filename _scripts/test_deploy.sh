@@ -2,20 +2,21 @@
 
 set -ev
 
-echo '${TRAVIS_BRANCH}'
-echo '$TRAVIS_BRANCH'
 echo $TRAVIS_BRANCH
+echo $TRAVIS_PULL_REQUEST
+echo $TRAVIS_PULL_REQUEST_BRANCH
 
-if ([ "${TRAVIS_PULL_REQUEST}" == "true" -a "${TRAVIS_BRANCH}" != "MvMAWSTESTDONOTMERGE" ])
+
+if ([ "${TRAVIS_PULL_REQUEST}" == "true" -a "${TRAVIS_PULL_REQUEST_BRANCH}" != "MvMAWSTESTDONOTMERGE" ])
 then
   echo 'Pull request, not testing deploying'
   exit 0
 fi
 
-if ([ "${TRAVIS_PULL_REQUEST}" == "true" -a "${TRAVIS_BRANCH}" == "MvMAWSTESTDONOTMERGE" ])
+if ([ "${TRAVIS_PULL_REQUEST}" == "true" -a "${TRAVIS_PULL_REQUEST_BRANCH}" == "MvMAWSTESTDONOTMERGE" ])
 then
   echo 'Testing AWS deployment'
-  echo '$AWS_DEFAULT_REGION'
+  echo $AWS_DEFAULT_REGION
   pwd
   aws --help
   exit 0

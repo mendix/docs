@@ -25,8 +25,7 @@ before_install:
   - mv ./hugo $HOME/bin/hugo
   - travis_retry curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
   - unzip awscliv2.zip
-  - sudo ./aws/install -b ~/bin/aws
-  - export PATH=~/bin:$PATH
+  - sudo ./aws/install
 install:
   - rm -rf _site
   - yarn install
@@ -41,6 +40,7 @@ before_deploy:
   - ./_scripts/before_deploy.sh
 script:
   - ./node_modules/.bin/gulp build
+  - chmod +x ./_scripts/test_deploy.sh
   - ./_scripts/test_deploy.sh
 cache:
   yarn: true

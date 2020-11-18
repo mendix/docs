@@ -13,6 +13,7 @@ then
   echo 'Testing AWS deployment'
   echo '$AWS_DEFAULT_REGION'
   pwd
+  aws --help
   exit 0
 fi
 

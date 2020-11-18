@@ -15,11 +15,29 @@ Users who can curate assets in Data Hub Catalog are as follows:
 * Owners of a registered service – can curate their own services and find those that are set to non-**Discoverable**
 * [Data Hub Curators](../index#curator) and [Data Hub Admins](../index#admin) – can curate and find all registered assets, discoverable and non-discoverable
 
+Owners and Curators can also get an overview of the registered assets they own and curate from the [Curate](#curatetab) tab of Data Hub.
+
 {{% alert type="info" %}}
 Information that is added or changed during curation is stored in the Data Hub Catalog for that item. It will not be added to the OData service contract or metadata files or affect any of the values in the metadata files associated with the service or the datasets associated with the exposed entities. 
 {{% /alert %}}
 
-## 2 The Curation Bar
+## 2 The Curate List {#curatelist}
+
+Owners and curators of registered assets can click  **Curate** from the **Data Hub** screen to see the **Curation List** screen which provides an overview of all the registered assets (**My Assets**) that you can curate as an owner and **Company Assets** that you can curate as a curator:
+
+![curate list](attachments/curate/curate-list.png)
+
+The list includes registered services and also individual entities that are exposed in the services.
+
+From the overview, you can see details of assets, and determine if assets have to be further curated. 
+
+You can search for specific assets by entering a search string in the search bar or **Filter By:** **Environment** or **Validated** assets.
+
+The list can be also be sorted by any of the columns by clicking on the column header.
+
+To go to the asset details, click **View**. You can then perform curate actions to add Catalog specific information to the asset metadata.
+
+## 3 The Curation Bar
 
 Curation is performed in the search details screen. Users with curation rights will see the **Curation Bar** in the **Search Details** screen of the selected item: 
 
@@ -73,12 +91,20 @@ The **Validated** value can be assigned to a service. When it is turned on, by c
 
 A service can be curated to specify the owners of the app and also add or edit the descriptions and tags for the selected service. 
 
-### 4.1 Changing the Technical and Business Owners of an App
+### 4.1 Changing the Technical and Business Owners of an App {#customowner}
 
 By default, the **Technical Owner** for a registered service is the user who registered the service when registration is done through the deployment pipeline in Studio Pro or specified during manual registration. Services can be curated to change the owners. The **Technical** and **Business Owners** are displayed as a link the service **Metadata** pane so that users can contact them. 
 
 {{% alert type="info" %}}
+If you as a **Technical Owner** curate the service and change the name, then you will no longer have curation rights to the asset. If the discoverability is turned off, then you will not be able to find the asset in the Catalog.
+{{% /alert %}}
+
+{{% alert type="info" %}}
 **Business** and **Technical Owners** have curation rights for the registered service in the Data Hub Catalog if they are registered users on the Mendix Platform. If a custom owner is created with the process described in this section, the link to contact them will be displayed for the asset but this does not mean that they are able to curate it.  
+{{% /alert %}}
+
+{{% alert type="info" %}}
+Curators and the Data Hub Administrator can manage the custom Owner details in the **Owner Management** screen as an **Administration** function. For further details see the [Managing Custom Owners ](../general/data-hub-admin-functions#customowners) section of *Data Hub Administration*.  
 {{% /alert %}}
 
 To change the owners of the app for the selected service, follow these steps:
@@ -95,11 +121,11 @@ To change the owners of the app for the selected service, follow these steps:
 
     ![custom contact create](attachments/curate/custom-contact.png)
 
-4. Enter the **Name** and **Email** of the owner and click **Save**. This 
+4. Enter the **Name** and **Email** of the owner and click **Save**. 
 
-5. They will be displayed in the service **Metadata** panel in the asset details screen.
+5. Click **Back to...** to return to the asset details screen where you will see the new owners.
 
-6. Click **Back to...** to return to the asset details screen.
+   
 
 ### 4.2 Changing the Service Description
 

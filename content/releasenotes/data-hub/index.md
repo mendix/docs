@@ -1,7 +1,7 @@
 ---
 title: "Data Hub"
 description: "Release notes for updates to the Mendix Data Hub"
-tags: ["data hub", "data hub catalog"]
+tags: ["data hub", "data hub catalog", "data hub Landscape"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
@@ -11,16 +11,16 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 ### November 19th, 2020
 #### New Features
-* There is new functionality to add Business and Technical Owner contact details when curating the **Application Details** of a registered asset. Curators and owners can select owners from a list or create a new owner and add their contact details.
-* We have added a new tab to the Data Hub **Administration** page: **Owner Management**  which provides an overview of the custom Business and Technical owners in the Data Hub Catalog. From this release, the Data Hub Administrator and curators can now add, edit, and remove custom owners from this list.
+* We have added new functionality for adding [Business and Technical Owner contact details](/data-hub/data-hub-catalog/curate#customowner) when curating the **Application Details** of a registered asset. Curators and owners can select owners from a list or create a new owner and add their contact details.
+* We have added a new tab to the Data Hub **Administration** page: [Owner Management](/data-hub/general/data-hub-admin-functions#customowners)  which provides an overview of the custom Business and Technical owners in the Data Hub Catalog. From this release, the Data Hub Administrator and curators can now add, edit, and remove custom owners from this list.
 
 #### Improvements
-* We improved the responsiveness of the **Data Hub** screen for searching in the Data Hub Catalog by specifying a string or using the tags. 
-* We have made several styling improvements and removed the empty last tab on the asset details page.
+* We improved the responsiveness of the **Data Hub** screen for searching in the Data Hub Catalog when specifying a string or using the tags. 
+* We made several styling improvements and removed the empty last tab on the asset details page.
 
 #### Fixes
 * The [Validated](/data-hub/data-hub-catalog/curate#validated) label will now be correctly updated in the search results pane for the selected asset when it is changed by curators and the owners of the asset.
-* We fixed an issue on the **Curation List** where clicking on the **Added** column title (to change the sort order) resulted in an error. 
+* We fixed an issue on the [Curation List](/data-hub/data-hub-catalog/curate#curatelist) where clicking on the **Added** column title (to change the sort order) resulted in an error. 
 
 
 ### November 5th, 2020

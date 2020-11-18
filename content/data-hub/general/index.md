@@ -10,4 +10,4 @@ Mendix Data Hub has several components that enables an organization's data sourc
 
 ## 2 Main Document in This Category
 
-* [Data Hub Admin Functions](data-hub-admin-functions) – an organization's Data Hub requires managed governance of the data- sharing policy down to the practical details of curating registered assets; the Data Hub Admin can oversee these functions and also assign curators that can perform governance tasks for their apps, as described in this page
+* [Data Hub Administration](data-hub-admin-functions) – an organization's Data Hub requires managed governance of the data- sharing policy down to the practical details of curating registered assets. The Data Hub Admin can oversee these functions and also assign curators that can perform governance tasks for their apps, as described in this page. Further administration tasks are also described

@@ -2,11 +2,6 @@
 
 set -ev
 
-echo $TRAVIS_BRANCH
-echo $TRAVIS_PULL_REQUEST
-echo $TRAVIS_PULL_REQUEST_BRANCH
-
-
 if ([ "${TRAVIS_PULL_REQUEST}" != "false" -a "${TRAVIS_PULL_REQUEST_BRANCH}" != "MvMAWSTESTDONOTMERGE" ])
 then
   echo 'Pull request, not testing deploying'
@@ -17,8 +12,10 @@ if ([ "${TRAVIS_PULL_REQUEST}" != "false" -a "${TRAVIS_PULL_REQUEST_BRANCH}" == 
 then
   echo 'Testing AWS deployment'
   echo $AWS_DEFAULT_REGION
+  cd ./_site
   pwd
-  aws --help
+  ls
+  aws s3 ls s3://mendixtestdocumentation
   exit 0
 fi
 

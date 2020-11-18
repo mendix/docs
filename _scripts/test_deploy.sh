@@ -15,6 +15,8 @@ then
   cd ./_site
   pwd
   ls
+  find . -name '*.html' -type f | while read NAME ; do mv "${NAME}" "${NAME%.html}" ; done # Rename all .html files to remove the suffix
+  ls
   aws s3 ls s3://mendixtestdocumentation
   exit 0
 fi

@@ -14,7 +14,7 @@ Apps deployed to v4 run in Cloud Foundry clusters that are deployed on highly av
 
 Mendix Cloud v4 is a mature product, launched in Q1 2017, and has a number of improvements over previous versions of Mendix Cloud:
 
-* It is more secure as you can use [HTTP Headers](environments-details#http-headers) and [client certificates](certificates), and have [TLS v1.2 or higher enforced](/releasenotes/developer-portal/deployment#tls)
+* It is more secure as you can use [HTTP Headers](environments-details#http-headers) and [client certificates](certificates), and have [TLS v1.2 or higher enforced](/releasenotes/developer-portal/mendix-cloud#tls)
 * It runs on faster hardware
 * It is still being actively developed and improved, with new features regularly being introduced (for example [flexible environments](mendix-cloud-deploy#flexible-environments))
 * It uses industry-standard techniques for scalability and maintainability

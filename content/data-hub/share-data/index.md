@@ -58,7 +58,7 @@ Follow these steps to create a simple app in Studio Pro whose data you will use 
 	
 	![](attachments/share-data/customer-overview-home-page.png)
 
-## 4 Publishing to the Data Hub Catalog
+## 4 Publishing to the Data Hub Catalog {#publishing}
 
 You are going to register the **Customer** entity in the Data Hub Catalog. This means you will be providing access to the data that will be associated with this entity for use in other apps. To do this you have to expose the **Customer** entity in a published OData service in Studio Pro. OData V3 is a REST-based protocol  and a standard format that is used for registering services and the entities that are exposed in the service in the Data Hub Catalog.  
 

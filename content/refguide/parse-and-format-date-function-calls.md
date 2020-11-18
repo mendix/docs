@@ -173,6 +173,8 @@ the output is:
 
 ## 6 dateTimeToEpoch
 
+{{% alert type="warning" %}}This expression is only available in Mendix versions 8.15 and above.{{% /alert %}}
+
 Returns the number of milliseconds since January 1, 1970, 00:00:00 GMT to the date.
 
 ### 6.1 Input Parameters
@@ -206,6 +208,8 @@ The output is:
 ```
 
 ## 7 epochToDateTime
+
+{{% alert type="warning" %}}This expression is only available in Mendix versions 8.15 and above.{{% /alert %}}
 
 Creates a Datetime that represents the specified number of milliseconds since January 1, 1970, 00:00:00 GMT.
 

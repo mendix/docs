@@ -83,7 +83,7 @@ By default, the desktop and phone layouts are available out-of-the-box, and the 
 
 Be careful with how you design these layouts. For example, in the mobile apps, you do not want to have too many regions, or the design will look crowded and confusing to the end-user. On the other hand, a desktop application might require different regions that allow for more content to be shown and details to be displayed.
 
-### 4.1 Layout Examples
+### 4.1 Layout Examples {#layout-examples}
 
 These are some layout examples:
 

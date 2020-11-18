@@ -13,11 +13,8 @@ then
   echo 'Testing AWS deployment'
   cd ./_site # change to root directory of the site
   find . -name '*.html' -type f | while read NAME ; do mv "${NAME}" "${NAME%.html}" ; done # Rename all .html files to remove the suffix
-  echo 'List of files in the site root'
-  ls
-  echo aws s3 sync . s3://mendixtestdocumentation --delete --exclude "*.[abcdefghijklmnnopqrstuvwxyz]*" --content-type text/html
-  aws s3 sync . s3://mendixtestdocumentation --delete --exclude "*.[abcdefghijklmnnopqrstuvwxyz]*" --content-type text/html 
-  # aws s3 sync . s3://mendixtestdocumentation --delete --exclude * --include *.[abcdefghijklmnnopqrstuvwxyz]* # Sync all other files and ensure that content type is not overwritten
+  aws s3 sync . s3://mendixtestdocumentation --delete --exclude "*.[abcdefghijklmnnopqrstuvwxyz]*" --content-type text/html # Sync only html files (without file type) and set content type for html
+  # aws s3 sync . s3://mendixtestdocumentation --delete --exclude "*"" --include "*.[abcdefghijklmnnopqrstuvwxyz]*" # Sync all other files and ensure that content type is not overwritten
   exit 0
 fi
 

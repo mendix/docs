@@ -2,29 +2,23 @@
 
 set -ev
 
-if ([ "${TRAVIS_PULL_REQUEST}" == "true" -a "${TRAVIS_BRANCH}" != "MvMAWSTESTDONOTMERGE" ])
+# TRAVIS_PULL_REQUEST is never true - it is either false or the number of the pull request. Luckily this test was never made as Travis does not run the deploy section for pull requests.
+# changed "if ([ "${TRAVIS_PULL_REQUEST}" == "true" ])" to "if ([ "${TRAVIS_PULL_REQUEST}" != "false" ])""
+if ([ "${TRAVIS_PULL_REQUEST}" == "true" ])
 then
   echo 'Pull request, not deploying'
   exit 0
 fi
 
-if ([ "${TRAVIS_PULL_REQUEST}" == "true" -a "${TRAVIS_BRANCH}" == "MvMAWSTESTDONOTMERGE" ])
-then
-  echo 'Testing AWS deployment'
-  echo '$AWS_DEFAULT_REGION'
-  pwd
-  exit 0
-fi
-
 if ([ "${TRAVIS_BRANCH}" == "development" ])
 then
-  echo 'cf push -f ./manifest_accp.yml'
+  cf push -f ./manifest_accp.yml
   exit 0
 fi
 
 if ([ "${TRAVIS_BRANCH}" == "master" ])
 then
-  echo 'cf zero-downtime-push $CF_APP -f ./manifest_prod.yml'
+  cf zero-downtime-push $CF_APP -f ./manifest_prod.yml
   exit 0
 fi
 

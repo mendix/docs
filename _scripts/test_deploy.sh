@@ -2,6 +2,10 @@
 
 set -ev
 
+echo '${TRAVIS_BRANCH}'
+echo '$TRAVIS_BRANCH'
+echo $TRAVIS_BRANCH
+
 if ([ "${TRAVIS_PULL_REQUEST}" == "true" -a "${TRAVIS_BRANCH}" != "MvMAWSTESTDONOTMERGE" ])
 then
   echo 'Pull request, not testing deploying'

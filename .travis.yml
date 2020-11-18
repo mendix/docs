@@ -23,6 +23,7 @@ before_install:
   - travis_retry curl -L https://github.com/gohugoio/hugo/releases/download/v$HUGO_VERSION/$HUGO_PACKAGE.tar.gz | tar xz
   - chmod +x ./hugo
   - mv ./hugo $HOME/bin/hugo
+  - pyenv global 3.7.1
   - pip install -U pip
   - pip install awscli
 install:

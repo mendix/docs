@@ -23,9 +23,10 @@ before_install:
   - travis_retry curl -L https://github.com/gohugoio/hugo/releases/download/v$HUGO_VERSION/$HUGO_PACKAGE.tar.gz | tar xz
   - chmod +x ./hugo
   - mv ./hugo $HOME/bin/hugo
-  - pyenv global 3.7.1
-  - pip install -U pip
-  - pip install awscli
+  - travis_retry curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  - unzip awscliv2.zip
+  - ./aws/install -b ~/bin/aws
+  - export PATH=~/bin:$PATH
 install:
   - rm -rf _site
   - yarn install

@@ -13,14 +13,11 @@ then
   echo 'Testing AWS deployment'
   cd ./_site # change to root directory of the site
   find . -name '*.html' -type f | while read NAME ; do mv "${NAME}" "${NAME%.html}" ; done # Rename all .html files to remove the suffix
-  echo 'Check timestamps on non html files'
-  echo '_site files'
-  ls -l refguide/attachments/button-widgets
-  echo 'AWS files'
-  aws s3 ls --human-readable s3://mendixtestdocumentation/refguide/attachments/button-widgets
-  # Have to use --size-only as HUGO creates new files with a newer timestamp
-  aws s3 sync . s3://mendixtestdocumentation --delete --size-only --exclude "*.[abcdefghijklmnnopqrstuvwxyz]*" --content-type text/html # Sync only html files (without file type) and set content type for html
-  aws s3 sync . s3://mendixtestdocumentation --delete --size-only --exclude "*" --include "*.[abcdefghijklmnnopqrstuvwxyz]*" # Sync all other files and ensure that content type is not overwritten
+  # HUGO creates new files with a newer timestamp so this will always push all the html - this catches all single character changes at the expense of time. Rely on size only for images as these are unlikely to be the same size.
+  start=$SECONDS
+  aws s3 sync . s3://mendixtestdocumentation --delete --exclude "*.[abcdefghijklmnnopqrstuvwxyz]*" --content-type text/html # Sync only html files (without file type) and set content type for html
+  echo 'Upload of HTML took $((SECONDS - start)) seconds' 
+  aws s3 sync . s3://mendixtestdocumentation --delete --size-only --exclude "*" --include "*.[abcdefghijklmnnopqrstuvwxyz]*" # Sync all other files and ensure that content type is not overwritten Just rely on size for all changes to these files.
   exit 0
 fi
 

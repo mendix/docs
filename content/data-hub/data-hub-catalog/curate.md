@@ -123,9 +123,8 @@ To change the owners of the app for the selected service, follow these steps:
 
 4. Enter the **Name** and **Email** of the owner and click **Save**. 
 
-    {{% alert type="info" %}}
-    The contact details that you add here will be shown as link for the application in the **Metadata** pane; this does not mean that they are able to curate the asset. For this they have to be a Mendix user.
-    {{% /alert %}}
+	{{% alert type="info" %}}The contact details that you add here will be shown as link for the application in the **Metadata** pane; this does not mean that they are able to curate the asset. For this they have to be a Mendix user.
+	{{% /alert %}}
 
 5. Click **Back to...** to return to the asset details screen where you will see the link for new owners in the **Metadata** pane.
 
@@ -166,6 +165,7 @@ To edit the service metadata of a selected service, follow these steps:
 Add tags to categorize a registered service and provide additional means for finding the service. Tags that are specified for a service also apply to the entities and attributes that are exposed in the service. Specify tags for the selected service by following these steps:
 
 1. In the **Search Details** screen of a selected service, click **Edit Metadata** > **Service Details** in the **Curation Bar** to display the **Service Metadata** box.
+
 2.  To add tags, click the empty **Tag** input area:
 
 	![](attachments/curate/service-metadata-tags.png)
@@ -184,7 +184,8 @@ Add tags to categorize a registered service and provide additional means for fin
 
 5. When you are finished specifying the tags, click **Save Changes** to register the changes and the tags will be shown in the **Service Metadata** pane.
 
-	{{% alert type="info" %}}If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. 
+	{{% alert type="info" %}}
+	If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. 
 	{{% /alert %}}
 
 ## 6 Curating Entities and Attributes

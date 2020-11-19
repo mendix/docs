@@ -2,6 +2,8 @@
 
 set -ev
 
+echo $HOME
+
 if ([ "${TRAVIS_PULL_REQUEST}" != "false" -a "${TRAVIS_PULL_REQUEST_BRANCH}" != "MvMAWSTESTDONOTMERGE" ])
 then
   echo 'Pull request, not testing deploying'
@@ -15,14 +17,14 @@ then
   find . -name '*.html' -type f | while read NAME ; do mv "${NAME}" "${NAME%.html}" ; done # Rename all .html files to remove the suffix
   # HUGO creates new files with a newer timestamp so this will always push all the html - this catches all single character changes at the expense of time. Rely on size only for images as these are unlikely to be the same size.
   start=$SECONDS
-  # aws s3 sync . s3://mendixtestdocumentation --delete --only-show-errors --exclude "*.[abcdefghijklmnnopqrstuvwxyz]*" --content-type text/html # Sync only html files (without file type) and set content type for html
+  aws s3 sync . s3://mendixtestdocumentation --delete --only-show-errors --exclude "*.[abcdefghijklmnnopqrstuvwxyz]*" --content-type text/html # Sync only html files (without file type) and set content type for html
   echo "Upload of HTML took $((SECONDS - start)) seconds"
   start=$SECONDS
   aws s3 sync . s3://mendixtestdocumentation --delete --size-only --exclude "*" --include "*.[abcdefghijklmnnopqrstuvwxyz]*" # Sync all other files and ensure that content type is not overwritten Just rely on size for all changes to these files.
   echo "Upload of non-html took $((SECONDS - start)) seconds"  
   chmod +x ../_scripts/redirectaws.sh
   start=$SECONDS  
-  ../_scripts/redirectaws.sh
+  # ../_scripts/redirectaws.sh
   echo "Setting up redirects took $((SECONDS - start)) seconds"
   echo "Testing using a function instead of lots of commands!"  
   chmod +x ../_scripts/mark_test.sh

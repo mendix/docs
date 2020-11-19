@@ -47,7 +47,7 @@ The Data Hub Admin can assign users the curator role by following these steps:
 
 ## 3 Managing Custom Owners {#customowners} 
 
-**Business** or **Technical Owners** that have been added when a service has been [Curated](../data-hub-catalog/curate#customowner) can be managed in the **Owner Management** screen:
+**Business** or **Technical Owners** that have been added when a service has been [Curated](../data-hub-catalog/curate#customowner) as custom owners can be managed in the **Owner Management** screen:
 
 ![owner admin](attachments/data-hub-admin/owner-management.png)
 

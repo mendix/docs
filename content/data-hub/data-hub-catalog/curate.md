@@ -93,14 +93,14 @@ A service can be curated to specify the owners of the app and also add or edit t
 
 ### 5.1 Changing the Technical and Business Owners of an App {#customowner}
 
-By default, the **Technical Owner** for a registered service is the user who registered the service when registration is done through the deployment pipeline in Studio Pro or specified during manual registration. Services can be curated to change the owners. The **Technical** and **Business Owners** are displayed as a link the service **Metadata** pane so that users can contact them. 
+By default, the **Technical Owner** for a registered service is the user who registered the service when registration is done through the deployment pipeline in Studio Pro or specified during manual registration. Services can be curated to change the owners. The **Technical** and **Business Owners** are displayed as a link in the asset **Metadata** pane so that users can contact them. 
 
 {{% alert type="info" %}}
 If you as a **Technical Owner** curate the service and change the name, then you will no longer have curation rights to the asset. If the discoverability is turned off, then you will not be able to find the asset in the Catalog.
 {{% /alert %}}
 
 {{% alert type="info" %}}
-**Business** and **Technical Owners** have curation rights for the registered service in the Data Hub Catalog if they are registered users on the Mendix Platform. If a custom owner is created with the process described in this section, the link to contact them will be displayed for the asset but this does not mean that they are able to curate it.  
+**Business** and **Technical Owners** have curation rights for the registered service in the Data Hub Catalog if they are registered users on the Mendix Platform. If a custom owner is *created* with the process described in this section, the link to contact them will be displayed for the asset but this does not mean that they are able to curate it. 
 {{% /alert %}}
 
 {{% alert type="info" %}}
@@ -117,15 +117,19 @@ To change the owners of the app for the selected service, follow these steps:
 
 	![](attachments/curate/application-meta-data.png)
 	
-3. If you type a name that is not on the list, you will be prompted if you want to **Create** it.  Click on this and the **Create new contact** dialog box is displayed:
+3. If you type a name that is not on the list, you will be asked if you want to **Create** it.  Click on this prompt and the **Create new contact** dialog box is displayed:
 
     ![custom contact create](attachments/curate/custom-contact.png)
 
 4. Enter the **Name** and **Email** of the owner and click **Save**. 
 
-5. Click **Back to...** to return to the asset details screen where you will see the new owners.
+    {{% alert type="info" %}}
+    The contact details that you add here will be shown as link for the application in the **Metadata** pane; this does not mean that they are able to curate the asset. For this they have to be a Mendix user.
+    {{% /alert %}}
 
-   
+5. Click **Back to...** to return to the asset details screen where you will see the link for new owners in the **Metadata** pane.
+
+    
 
 ### 5.2 Changing the Service Description
 

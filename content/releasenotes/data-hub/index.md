@@ -11,11 +11,11 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 ### November 19th, 2020
 #### New Features
-* We have added new functionality for adding [Business and Technical Owner contact details](/data-hub/data-hub-catalog/curate#customowner) when curating the **Application Details** of a registered asset. Curators and owners can select owners from a list or create a new owner and add their contact details.
+* We have added new functionality for adding [Business and Technical Owner contact details](/data-hub/data-hub-catalog/curate#customowner) when curating the **Application Details** of a registered asset. Curators and owners can select owners from a drop-down list or create a new owner and add their contact details.
 * We have added a new tab to the Data Hub **Administration** page: [Owner Management](/data-hub/general/data-hub-admin-functions#customowners)  which provides an overview of the custom Business and Technical owners in the Data Hub Catalog. From this release, the Data Hub Administrator and curators can now add, edit, and remove custom owners from this list.
 
 #### Improvements
-* We improved the responsiveness of the **Data Hub** screen for searching in the Data Hub Catalog when specifying a string or using the tags. 
+* We improved the screen layout of the **Data Hub** screen for different screens. 
 * We made several styling improvements and removed the empty last tab on the asset details page.
 
 #### Fixes

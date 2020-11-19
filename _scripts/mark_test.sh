@@ -10,7 +10,7 @@ pwd
 # Delete the no_new_redirects.lock file in the _scripts directory if you change any redirects here
 #
 NONEWREDIRECTS="$TRAVIS_BUILD_DIR/_scripts/no_new_redirects.lock"
-echo NONEWREDIRECTS
+echo $NONEWREDIRECTS
 
 if [ 1 == 1 ] # [ -f $NONEWREDIRECTS]
 then
@@ -18,14 +18,15 @@ then
   MAKEREDIRECT="false"
 else
   # Need to upload new redirects to AWS - create a lock file to ensure we don't do it next time
-  echo "here we make a NONEWDIRECTS FILE"
+  echo "here we make a $NONEWDIRECTS FILE"
   MAKEREDIRECT="true"
 fi
 
 objectredirect () {
   echo "We will make a local file at $TRAVIS_BUILD_DIR/_site/$1"
-  echo "here we make a directory mkdir -p xxx"
-  echo "here we would make a new file" # : > ./_site/$1
+  echo ""
+  echo "here we make a directory mkdir -p $(dirname $TRAVIS_BUILD_DIR/_site/$1)"
+  echo "here we would make a new file $TRAVIS_BUILD_DIR/_site/$1" # : > $TRAVIS_BUILD_DIR/_site/$1
   if ([ "${MAKEREDIRECT}" == "true" ])
   then
     echo "We will make a redirect on $1 to $2"

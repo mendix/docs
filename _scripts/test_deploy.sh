@@ -13,7 +13,7 @@ fi
 if ([ "${TRAVIS_PULL_REQUEST}" != "false" -a "${TRAVIS_PULL_REQUEST_BRANCH}" == "MvMAWSTESTDONOTMERGE" ])
 then
   echo 'Testing AWS deployment'
-  cd ./_site # change to root directory of the site
+  cd $TRAVIS_BUILD_DIR/_site # change to root directory of the site
   find . -name '*.html' -type f | while read NAME ; do mv "${NAME}" "${NAME%.html}" ; done # Rename all .html files to remove the suffix
   # HUGO creates new files with a newer timestamp so this will always push all the html - this catches all single character changes at the expense of time. Rely on size only for images as these are unlikely to be the same size.
   start=$SECONDS
@@ -22,13 +22,13 @@ then
   start=$SECONDS
   aws s3 sync . s3://mendixtestdocumentation --delete --size-only --exclude "*" --include "*.[abcdefghijklmnnopqrstuvwxyz]*" # Sync all other files and ensure that content type is not overwritten Just rely on size for all changes to these files.
   echo "Upload of non-html took $((SECONDS - start)) seconds"  
-  chmod +x ../_scripts/redirectaws.sh
+  chmod +x $TRAVIS_BUILD_DIR/_scripts/redirectaws.sh
   start=$SECONDS  
-  # ../_scripts/redirectaws.sh
+  # $TRAVIS_BUILD_DIR/_scripts/redirectaws.sh
   echo "Setting up redirects took $((SECONDS - start)) seconds"
   echo "Testing using a function instead of lots of commands!"  
-  chmod +x ../_scripts/mark_test.sh
-  ../_scripts/mark_test.sh
+  chmod +x $TRAVIS_BUILD_DIR/_scripts/mark_test.sh
+  $TRAVIS_BUILD_DIR/_scripts/mark_test.sh
   exit 0
 fi
 

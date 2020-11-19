@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -ev
+# set -ev
 
 # convert from redirects.js using this regular expression
 # ^\s+\{\n\s+from: "/(.+)",\n\s+to: "(.+)"\n\s+\},
@@ -683,10 +683,10 @@ echo aws s3api put-object --bucket mendixtestdocumentation --key 'refguide/team-
 #	/****************************************************
 #     * From Data Hub (permanent, mapped) 
 #     ****************************************************/
-	{
-  	   from: "/data-hub/data-hub-catalog/use-data-catalog",
-   	   to: "/data-hub/share-data/index",
-  	},
+#	{
+#  	   from: "/data-hub/data-hub-catalog/use-data-catalog",
+#   	   to: "/data-hub/share-data/index",
+#  	},
 echo aws s3api put-object --bucket mendixtestdocumentation --key 'datahub/general/share-data/' --content-type text/html --website-redirect-location '/data-hub/share-data/index'
 echo aws s3api put-object --bucket mendixtestdocumentation --key 'data-hub/data-catalog/' --content-type text/html --website-redirect-location '/data-hub/index'
 #	/****************************************************

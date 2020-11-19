@@ -1,0 +1,28 @@
+{
+    "RoutingRules": [
+        {
+            "Condition": {
+                "KeyPrefixEquals": "refguide8/"
+            },
+            "Redirect": {
+                "ReplaceKeyPrefixWith": "refguide/"
+            }
+        },
+        {
+            "Condition": {
+                "KeyPrefixEquals": "howto8/"
+            },
+            "Redirect": {
+                "ReplaceKeyPrefixWith": "howto/"
+            }
+        }
+        {
+            "Condition": {
+                "KeyPrefixEquals": "testrule/"
+            },
+            "Redirect": {
+                "ReplaceKeyPrefixWith": "refguide/"
+            }
+        }
+    ]
+}

@@ -128,8 +128,6 @@ To change the owners of the app for the selected service, follow these steps:
 
 5. Click **Back to...** to return to the asset details screen where you will see the link for new owners in the **Metadata** pane.
 
-    
-
 ### 5.2 Changing the Service Description
 
 If a description was included in the OData metadata contract, this will be displayed in the **Search Details** screen for the selected service. You can curate a service to add a catalog description to include further details on data usage and relevancy. As search in the Data Hub Catalog also includes searching the contents of the description fields of registered services, entities, and attributes, adding relevant descriptions can help in the right users finding these shared assets.

@@ -3,13 +3,30 @@
 set -ev
 
 echo "HOME is $HOME"
-ls $HOME
+pwd
+
+#
+# Delete this file in the _scripts directory if you change any redirects here
+#
+NONEWREDIRECTS="a file name"
+
+if [ 1 == 1 ] # [ -f $NONEWREDIRECTS]
+then
+  MAKEREDIRECT="false"
+else
+  echo "here we make a NONEWDIRECTS FILE"
+  MAKEREDIRECT="true"
+fi
 
 objectredirect () {
   echo "We will make a local file at ./_site/$1"
-  echo  : > ./_site/$1
-  echo "We will make a redirect on $1 to $2"
-  echo  aws s3api put-object --bucket mendixtestdocumentation --key $1 --content-type text/html --website-redirect-location $2
+  echo "here we make a directory mkdir -p xxx"
+  echo "here we would make a new file" # : > ./_site/$1
+  if ([ "${MAKEREDIRECT}" == "true" ])
+  then
+    echo "We will make a redirect on $1 to $2"
+    echo  aws s3api put-object --bucket mendixtestdocumentation --key $1 --content-type text/html --website-redirect-location $2  fi
+  fi
 }
 
 objectredirect 'howtogeneral/bestpractices/ux-best-practices' '/howto/front-end/ux-best-practices'

@@ -770,3 +770,5 @@ aws s3api put-object --bucket mendixtestdocumentation --key 'refguide7/static-la
 aws s3api put-object --bucket mendixtestdocumentation --key 'refguide7/table-(document-template)' --content-type text/html --website-redirect-location '/refguide/table-document-template'
 aws s3api put-object --bucket mendixtestdocumentation --key 'refguide7/template-grid-(document-template)' --content-type text/html --website-redirect-location '/refguide/template-grid-document-template'
 aws s3api put-object --bucket mendixtestdocumentation --key 'refguide7/title-(document-template)' --content-type text/html --website-redirect-location '/refguide/title-document-template'
+
+exit 0

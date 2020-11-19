@@ -24,7 +24,6 @@ fi
 
 objectredirect () {
   echo "We will make a local file at $TRAVIS_BUILD_DIR/_site/$1"
-  echo ""
   echo "here we make a directory mkdir -p $(dirname $TRAVIS_BUILD_DIR/_site/$1)"
   echo "here we would make a new file $TRAVIS_BUILD_DIR/_site/$1" # : > $TRAVIS_BUILD_DIR/_site/$1
   if ([ "${MAKEREDIRECT}" == "true" ])

@@ -104,7 +104,7 @@ If you as a **Technical Owner** curate the service and change the name, then you
 {{% /alert %}}
 
 {{% alert type="info" %}}
-Curators and the Data Hub Administrator can manage the custom Owner details in the **Owner Management** screen as an **Administration** function. For further details see the [Managing Custom Owners ](../general/data-hub-admin-functions#customowners) section of *Data Hub Administration*.  
+Curators and the Data Hub Administrator can manage the custom Owner details in the **Owner Management** screen as an **Administration** function. For further details see the [Managing Custom Owners ](../general/data-hub-admin-functions#customowners) section of *Data Hub Administration*. 
 {{% /alert %}}
 
 To change the owners of the app for the selected service, follow these steps:
@@ -113,20 +113,24 @@ To change the owners of the app for the selected service, follow these steps:
 
 	![edit application](attachments/curate/edit-application-metadata.png)
 
-2.  The **Application Metadata** dialog box is displayed. To change the **Business Owner ** or **Technical Owner** click in the name field and you can start typing or select from the drop-down list of names. 
+2.  The **Application Metadata** dialog box is displayed. To change the **Business Owner ** or **Technical Owner** click in the name field and you can start typing or select from the drop-down list of names:
 
 	![](attachments/curate/application-meta-data.png)
 	
-3. If you type a name that is not on the list, you will be asked if you want to **Create** it.  Click on this prompt and the **Create new contact** dialog box is displayed:
+3. In this list you will be shown a list of Mendix platform users (who will be displayed with the their avatar), and custom owners will be shown with an initial avatar:
+
+    ![](attachments/curate/custom-avatar.png)
+
+4. If you type a name that is not on the list, you will be asked if you want to **Create** it.  Click on this prompt and the **Create new contact** dialog box is displayed:
 
     ![custom contact create](attachments/curate/custom-contact.png)
 
-4. Enter the **Name** and **Email** of the owner and click **Save**. 
+5. Enter the **Name** and **Email** of the owner and click **Save**. 
 
-	{{% alert type="info" %}}The contact details that you add here will be shown as link for the application in the **Metadata** pane; this does not mean that they are able to curate the asset. For this they have to be a Mendix user.
-	{{% /alert %}}
+  {{% alert type="info" %}}The contact details that you add here will be shown as link for the application in the **Metadata** pane; this does not mean that they are able to curate the asset. For this they have to be a Mendix user.
+  {{% /alert %}}
 
-5. Click **Back to...** to return to the asset details screen where you will see the link for new owners in the **Metadata** pane.
+6. Click **Back to...** to return to the asset details screen where you will see the link to the new owners in the **Metadata** pane.
 
 ### 5.2 Changing the Service Description
 

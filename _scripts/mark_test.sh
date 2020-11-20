@@ -41,13 +41,13 @@ objectredirect () {
   fi
 }
 
-objectredirect 'howtogeneral/bestpractices/ux-best-practices' '/howto/front-end/ux-best-practices'
+objectredirect 'howtogeneral/bestpractices/ux-best-practices' '/developerportal/deploy/'
 objectredirect 'howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications' '/howto/security/best-practices-security'
 objectredirect 'howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7' '/howto/general/community-best-practices-for-app-performance'
 objectredirect 'howto/ux/configuring-your-theme' '/howto/front-end/configuring-your-theme'
 objectredirect 'refguide7/static-label-(document-template)' '/refguide/static-label-document-template'
 objectredirect 'refguide7/table-(document-template)' '/refguide/table-document-template'
 objectredirect 'refguide7/template-grid-(document-template)' '/refguide/template-grid-document-template'
-objectredirect 'refguide7/title-(document-template)' '/refguide/title-document-template'
+objectredirect 'refguide7/title-(document-template)' '/developerportal/deploy/'
 
 exit 0

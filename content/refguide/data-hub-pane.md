@@ -11,15 +11,19 @@ tags: ["studio Pro", "data hub", "data hub pane", "data hub catalog"]
 
 [Mendix Data Hub](/data-hub/index) enables integration of available data sources from the different applications in an organization into your Mendix apps. This means that new apps can be created using shared datasets that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/index). In Studio Pro, this is possible using the integrated functionality of Data Hub Catalog through the **Data Hub** pane.
 
-The **Data Hub** pane enables you to search the Data Hub Catalog and discover the data sources available for your organization. Via this pane you can add the entities that are exposed in the OData services registered in the Data Hub Catalog into your app's domain model customer where they are known as [external entities](external-entities). These external entities provide access to the data associated with the entities which can be utilized in your app.
+{{% alert type="info" %}}
+You need a license to use Data Hub in Studio Pro. You will not For further information see [Data Hub License](consumed-odata-service-requirements#license-limitations).
+{{% /alert %}}
 
-Click  **View** > **Data Hub** to display the **Data Hub** pane:
+The **Data Hub** pane enables you to search the Data Hub Catalog and discover the data sources available for your organization. Via this pane you can add the entities that are exposed in the OData services registered in the Data Hub Catalog into your app's domain model. These external entities provide the connection to the data associated with the entities which can be utilized in your app and they are called [external entities](external-entities).
+
+To display the **Data Hub** pane, click  **View** > **Data Hub**:
 
 {{% image_container width="300" %}}![data-hub-pane](attachments/data-hub-pane/data-hub-pane-empty.png){{% /image_container %}}
 
 ## 2 Data Hub Pane in the Domain Model
 
-In the domain model, the Data Hub pane is used to search the Data Hub Catalog for services and entities that can be dragged and used:
+In the domain model, the Data Hub pane is used to search the Data Hub Catalog for services and entities that can be dragged and used in your app project:
 
 {{% image_container width="300" %}}![](attachments/data-hub-pane/data-hub-pane.png){{% /image_container %}}
 
@@ -27,9 +31,9 @@ The following functionality is available in the pane:
 
 * [Search](#search) – Enter a search string of alphanumeric characters to find a service, entity, or attribute in the Data Hub Catalog. Entities can be dragged from the search results into your domain model as external entities.
 * [Filter](#search) – By default, the search will search for services in production environments. Click the **Filter** icon to include non-production environments in the search.
-* [Search results](#viewing) – The items satisfying the search string will show the service name, service version, environment that the service was deployed to, and the entities in the service. Services and the entities that are currently being used in the current domain model are indicated with a green check-mark in the search results. You can drag entities from the search results into the domain model and use them as a data source for your app project.
+* [Search results](#viewing) – The items satisfying the search string will show the service name, service version, environment that the service was deployed to, and the entities in the service. If attributes satisfy the search criteria, they will be displayed. Services and the entities that are currently being used in the current domain model are indicated with a green check-mark in the search results. You can drag entities from the search results into the domain model and use them as a data source for your app project.
 
-When no search string has been specified, the **Project** pane displays the consumed services and the external entities used in the current project:
+When no search string has been specified in the **Data Hub** pane, the **Project** pane is displayed. This shows the consumed services and the external entities used in the current project. The attributes for en:
 
 {{% image_container width="300" %}}![Project Section](attachments/data-hub-pane/project-section.png){{% /image_container %}}
 

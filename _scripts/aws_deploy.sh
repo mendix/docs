@@ -12,9 +12,7 @@ find . -name '*.html' -type f | while read NAME ; do mv "${NAME}" "${NAME%.html}
 start=$SECONDS
 echo "Starting setup of redirection"
 chmod +x $TRAVIS_BUILD_DIR/_scripts/redirectaws.sh
-# source $TRAVIS_BUILD_DIR/_scripts/redirectaws.sh # source ensures that script can read TARGETAWSBUCKET
-chmod +x $TRAVIS_BUILD_DIR/_scripts/mark_test.sh
-source $TRAVIS_BUILD_DIR/_scripts/mark_test.sh # source ensures that script can read TARGETAWSBUCKET
+source $TRAVIS_BUILD_DIR/_scripts/redirectaws.sh # source ensures that script can read TARGETAWSBUCKET
 echo "Setting up redirects took $((SECONDS - start)) seconds"  
 
 # HUGO creates new files with a newer timestamp so this will always push all the html - this catches all single character changes at the expense of time. Rely on size only for images as these are unlikely to be the same size.

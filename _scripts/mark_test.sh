@@ -33,13 +33,6 @@ objectredirect () {
   fi
 }
 
-if ([ "${MAKEREDIRECT}" == "true" ])
-# Only make the redirects froum routing_rules.json if MAKEDIRECT is "true"
-then
-  echo  aws s3api put-bucket-website --bucket $TARGETAWSBUCKET --website-configuration file://$TRAVIS_BUILD_DIR/_scripts/routing_rules.json
-  aws s3api put-bucket-website --bucket $TARGETAWSBUCKET --website-configuration file://$TRAVIS_BUILD_DIR/_scripts/routing_rules.json
-fi
-
 #########################################################################################################
 #                                                                                                       #
 # Set up a redirect using objectredirect '{original}' '{redirect to}'                                   #

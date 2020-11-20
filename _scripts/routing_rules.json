@@ -1,3 +1,6 @@
+# Note that this doesn't work unless you have an IndexDocument -> Suffix which is non-null. This causes problems as our html all have a null suffix.
+# Therefore giving up on automating this for now.
+
 {
     "ErrorDocument": {
         "Key": "404"

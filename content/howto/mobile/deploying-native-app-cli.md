@@ -57,7 +57,7 @@ The Native Builder needs to communicate with GitHub and App Center. Therefore, m
 3. Click [Developer settings](https://github.com/settings/apps) at the bottom of the left menu.
 4. Navigate to [Personal access tokens](https://github.com/settings/tokens) and then click **Generate new token** to create a new personal access token.
 5. In the **Note** field, write *Native Builder.*
-6. Under **Select scopes**, select **repo**.
+6. Under **Select scopes**, select **repo** and **workflows**.
 7. Click **Generate token**.
 8. Store your token in a secure place. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
 

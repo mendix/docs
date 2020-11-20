@@ -19,6 +19,7 @@ MAKEREDIRECT="false"
 
 echo "HOME is $HOME"
 echo "TRAVIS_BUILD_DIR is $TRAVIS_BUILD_DIR"
+echo "Target AWS bucket is $TARGETAWSBUCKET"
 
 objectredirect () {
 #  echo "We will make a local file at $TRAVIS_BUILD_DIR/_site/$1"

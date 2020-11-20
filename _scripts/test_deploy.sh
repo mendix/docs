@@ -13,6 +13,7 @@ fi
 if ([ "${TRAVIS_PULL_REQUEST}" != "false" -a "${TRAVIS_PULL_REQUEST_BRANCH}" == "MvMAWSTESTDONOTMERGE" ])
 then
   echo 'Testing AWS deployment'
+  TARGETAWSBUCKET="mendixtestdocumentation"
   cd $TRAVIS_BUILD_DIR/_site # change to root directory of the site
   find . -name '*.html' -type f | while read NAME ; do mv "${NAME}" "${NAME%.html}" ; done # Rename all .html files to remove the suffix
   #  echo Need to run the redirects first so that the dummy files are created and the old redirects are not deleted from AWS

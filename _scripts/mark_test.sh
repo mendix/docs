@@ -25,6 +25,7 @@ else
   # Need to upload new redirects to AWS - create a lock file to ensure we don't do it next time
   echo "here we make a $NONEWDIRECTS FILE"
   touch $NONEWREDIRECTS
+  # how do we put this back into the repo?
   MAKEREDIRECT="true"
 fi
 
@@ -36,7 +37,7 @@ objectredirect () {
   if ([ "${MAKEREDIRECT}" == "true" ])
   # Only make the redirects if no_new_redirects.lock wasn't there as it takes about 10 minutes and isn't needed if the redirects file hasn't changed
   then
-    echo  aws s3api put-object --bucket mendixtestdocumentation --key $1 --content-type text/html --website-redirect-location $2
+    aws s3api put-object --bucket mendixtestdocumentation --key $1 --content-type text/html --website-redirect-location $2
   fi
 }
 

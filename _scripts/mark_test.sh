@@ -26,11 +26,18 @@ objectredirect () {
   mkdir -pv $(dirname $TRAVIS_BUILD_DIR/_site/$1)
   touch -t 202001010001 $TRAVIS_BUILD_DIR/_site/$1
   if ([ "${MAKEREDIRECT}" == "true" ])
-  # Only make the redirects if no_new_redirects.lock wasn't there as it takes about 10 minutes and isn't needed if the redirects file hasn't changed
+  # Only make the redirects if if MAKEDIRECT is "true" as it takes about 10 minutes and isn't needed if the redirects file hasn't changed
   then
     aws s3api put-object --bucket mendixtestdocumentation --key $1 --content-type text/html --website-redirect-location $2
   fi
 }
+
+if ([ "${MAKEREDIRECT}" == "true" ])
+# Only make the redirects froum routing_rules.json if MAKEDIRECT is "true"
+then
+  echo  aws s3api put-bucket-website --bucket mendixtestdocumentation --website-configuration file://$TRAVIS_BUILD_DIR/_scripts/routing_rules.json
+  aws s3api put-bucket-website --bucket mendixtestdocumentation --website-configuration file://$TRAVIS_BUILD_DIR/_scripts/routing_rules.json
+fi
 
 #########################################################################################################
 #                                                                                                       #

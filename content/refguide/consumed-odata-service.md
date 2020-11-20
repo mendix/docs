@@ -22,7 +22,8 @@ The **Consumed OData Service** document that is added to the project displays th
 	* **Update** – this button is displayed so that you can **Update** the contract that is currently consumed (and shown in the **Consumed OData Service** document). You will be presented with the contract that is currently at the service end-point. It is good practice that only minor, non-breaking changes are deployed to the same end-point. 
 	*  **Switch** – this button is shown if other registered instances of the same service (with the same name, from the same app) are available in Data Hub and are deployed to different endpoints (for example, to another environment or because of changes that would break existing apps consuming the previous version)
 
-	{{% alert type="info" %}}Studio Pro will always show the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Data Hub search and **Project**  pane, when a different contract is detected at the service end-point, this will be indicated with an update arrow for the service. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document.
+	{{% alert type="info" %}}
+	Studio Pro will always show the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Data Hub search and **Project**  pane, when a different contract is detected at the service end-point, this will be indicated with an update arrow for the service. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document.
 	{{% /alert %}} 
 
 	{{% alert type="info" %}}In the **Data Hub** pane consumed services that have an available **Update** will have an update arrow to indicate this:<br />
@@ -81,7 +82,7 @@ For more flexible HTTP request headers, you can select a microflow that returns 
 
 {{% alert type="info" %}}
 Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For further information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/data-hub/data-hub-catalog/security#http-header-validation) in the *Data Hub Guide*.
-
+{{% /alert %}}
 
 ## 3 Metadata Tab {#metadata}
 
@@ -103,7 +104,7 @@ The following settings are available:
 	* **URL** – click **Edit** to specify the URL for the metadata
 	* **File** – click **Browse** to select an XML metadata file
 
-Support for basic authentication was added from version [8.16.0](/releasenotes/studio-pro/8.16). When downloading the metadata from a URL, the server may request a username and password (basic authentication). In that case, a dialog box will prompt you to enter your username and password. If the metadata file refers to other metadata files on the same server within the same realm, the username and password are re-used. 
+Support for basic authentication was added from [version 8.16.0](/releasenotes/studio-pro/8.16). When downloading the metadata from a URL, the server may request a username and password (basic authentication). In that case, a dialog box will prompt you to enter your username and password. If the metadata file refers to other metadata files on the same server within the same realm, the username and password are re-used. 
 
 {{% alert type="info" %}}
 This information is not stored, so if you download the metadata from the same server again, you will have to enter your username and password again. 

@@ -15,7 +15,7 @@ set -ev
 #                                                                                                       #
 #########################################################################################################
 
-MAKEREDIRECT="false"
+MAKEREDIRECT="true"
 
 echo "HOME is $HOME"
 echo "TRAVIS_BUILD_DIR is $TRAVIS_BUILD_DIR"
@@ -29,15 +29,15 @@ objectredirect () {
   if ([ "${MAKEREDIRECT}" == "true" ])
   # Only make the redirects if if MAKEDIRECT is "true" as it takes about 10 minutes and isn't needed if the redirects file hasn't changed
   then
-    aws s3api put-object --bucket mendixtestdocumentation --key $1 --content-type text/html --website-redirect-location $2
+    aws s3api put-object --bucket $TARGETAWSBUCKET --key $1 --content-type text/html --website-redirect-location $2
   fi
 }
 
 if ([ "${MAKEREDIRECT}" == "true" ])
 # Only make the redirects froum routing_rules.json if MAKEDIRECT is "true"
 then
-  echo  aws s3api put-bucket-website --bucket mendixtestdocumentation --website-configuration file://$TRAVIS_BUILD_DIR/_scripts/routing_rules.json
-  aws s3api put-bucket-website --bucket mendixtestdocumentation --website-configuration file://$TRAVIS_BUILD_DIR/_scripts/routing_rules.json
+  echo  aws s3api put-bucket-website --bucket $TARGETAWSBUCKET --website-configuration file://$TRAVIS_BUILD_DIR/_scripts/routing_rules.json
+  aws s3api put-bucket-website --bucket $TARGETAWSBUCKET --website-configuration file://$TRAVIS_BUILD_DIR/_scripts/routing_rules.json
 fi
 
 #########################################################################################################
@@ -57,3 +57,17 @@ objectredirect 'refguide7/template-grid-(document-template)' '/refguide/template
 objectredirect 'refguide7/title-(document-template)' '/developerportal/deploy/'
 
 exit 0
+
+# convert from redirects.js using this regular expression
+# ^\s+\{\n\s+from: "/(.+)",\n\s+to: "(.+)"\n\s+\},
+# and replace with
+# objectredirect '$1' '$2'\n
+#
+# Then change the comments
+# ^(\s+\/\*)
+# #$1
+# and
+# ^(\s+\*)
+# #$1
+#
+# check for commands still outstanding ({) and commands containing \

@@ -5,7 +5,7 @@
 # convert from redirects.js using this regular expression
 # ^\s+\{\n\s+from: "/(.+)",\n\s+to: "(.+)"\n\s+\},
 # and replace with
-# aws s3api put-object --bucket mendixtestdocumentation --key '$1' --content-type text/html --website-redirect-location '$2'\n
+# objectredirect '$1' '$2'\n
 #
 # Then change the comments
 # ^(\s+\/\*)

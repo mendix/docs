@@ -12,24 +12,33 @@ pwd
 NONEWREDIRECTS="$TRAVIS_BUILD_DIR/_scripts/no_new_redirects.lock"
 echo $NONEWREDIRECTS
 
-if [ 1 == 1 ] # [ -f $NONEWREDIRECTS]
+#
+# If no_new_redirects file exists, then we don't have to set up new redirects for AWS
+# We just make a set of empty files locally so that the --delete option on the aws sync doesn't delete the redirects
+#
+
+if [ -f $NONEWREDIRECTS ] # [ -f $NONEWREDIRECTS]
 then
   # Do not need to upload new redirects to AWS
   MAKEREDIRECT="false"
 else
   # Need to upload new redirects to AWS - create a lock file to ensure we don't do it next time
   echo "here we make a $NONEWDIRECTS FILE"
+  touch $NONEWREDIRECTS
   MAKEREDIRECT="true"
 fi
 
 objectredirect () {
-  echo "We will make a local file at $TRAVIS_BUILD_DIR/_site/$1"
-  echo "here we make a directory mkdir -p $(dirname $TRAVIS_BUILD_DIR/_site/$1)"
-  echo "here we would make a new file $TRAVIS_BUILD_DIR/_site/$1" # : > $TRAVIS_BUILD_DIR/_site/$1
+#  echo "We will make a local file at $TRAVIS_BUILD_DIR/_site/$1"
+  mkdir -p $(dirname $TRAVIS_BUILD_DIR/_site/$1)"
+  : > $TRAVIS_BUILD_DIR/_site/$1
   if ([ "${MAKEREDIRECT}" == "true" ])
   then
-    echo "We will make a redirect on $1 to $2"
+#    echo "We will make a redirect on $1 to $2"
     echo  aws s3api put-object --bucket mendixtestdocumentation --key $1 --content-type text/html --website-redirect-location $2  fi
+  else
+    # put an old date on it to stop it being uploaded with sync
+    touch -t 202001010001 $TRAVIS_BUILD_DIR/_site/$1
   fi
 }
 

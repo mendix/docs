@@ -2,32 +2,23 @@
 
 set -ev
 
+#
+# Can we set up something (travis cache?) to ensure that this change doesn't have to be made manually.
+# Can always leave the switch at MAKEREDIRECT="true" but this will slow down deployment unnecessarily.
+# Currently have to rely on writers making the change manually after the change is successful
+#
+
+#########################################################################################################
+#                                                                                                       #
+# Set MAKEREDIRECT to "true" when you make changes to any redirects                                     #
+# Set MAKEREDIRECT to "false" once redirects have been pushed to development AND master                 #
+#                                                                                                       #
+#########################################################################################################
+
+MAKEREDIRECT="false"
+
 echo "HOME is $HOME"
 echo "TRAVIS_BUILD_DIR is $TRAVIS_BUILD_DIR"
-pwd
-
-#
-# Delete the no_new_redirects.lock file in the _scripts directory if you change any redirects here
-#
-NONEWREDIRECTS="$TRAVIS_BUILD_DIR/_scripts/no_new_redirects.lock"
-echo $NONEWREDIRECTS
-
-#
-# If no_new_redirects file exists, then we don't have to set up new redirects for AWS
-# We just make a set of empty files locally so that the --delete option on the aws sync doesn't delete the redirects
-#
-
-if [ -f $NONEWREDIRECTS ] # [ -f $NONEWREDIRECTS]
-then
-  # Do not need to upload new redirects to AWS
-  MAKEREDIRECT="false"
-else
-  # Need to upload new redirects to AWS - create a lock file to ensure we don't do it next time
-  echo "here we make a $NONEWDIRECTS FILE"
-  touch $NONEWREDIRECTS
-  # how do we put this back into the repo?
-  MAKEREDIRECT="true"
-fi
 
 objectredirect () {
 #  echo "We will make a local file at $TRAVIS_BUILD_DIR/_site/$1"
@@ -40,6 +31,13 @@ objectredirect () {
     aws s3api put-object --bucket mendixtestdocumentation --key $1 --content-type text/html --website-redirect-location $2
   fi
 }
+
+#########################################################################################################
+#                                                                                                       #
+# Set up a redirect using objectredirect '{original}' '{redirect to}'                                   #
+# Remember to set MAKEREDIRECT to "true" until redirects have been pushed to development AND master     #
+#                                                                                                       #
+#########################################################################################################
 
 objectredirect 'howtogeneral/bestpractices/ux-best-practices' '/developerportal/deploy/'
 objectredirect 'howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications' '/howto/security/best-practices-security'

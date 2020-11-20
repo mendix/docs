@@ -358,7 +358,6 @@ objectredirect 'refguide6/Domain+Model' '/refguide6/domain-model'
 objectredirect 'refguide6/Download+File' '/refguide6/download-file'
 objectredirect 'refguide6/Download+From+Team+Server+Dialog' '/refguide6/download-from-team-server-dialog'
 objectredirect 'refguide6/Drop+Down+Widget' '/refguide6/drop_down'
-objectredirect 'refguide6/Drop+Down Widget' '/refguide6/drop_down'
 objectredirect 'refguide6/Drop+Down' '/refguide6/drop-down'
 objectredirect 'refguide6/Drop+down+button' '/refguide6/drop-down-button'
 objectredirect 'refguide6/Drop+Down+Search+Field' '/refguide6/drop-down-search-field'
@@ -796,6 +795,11 @@ objectredirect 'refguide7/title-(document-template)' '/refguide/title-document-t
 #      to: "/refguide6/drop_down",
 #      "exact": true
 #    },
+#
+# This one has a space in it
+#
+# objectredirect 'refguide6/Drop+Down Widget' '/refguide6/drop_down'
+#
 
 exit 0
 

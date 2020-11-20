@@ -1,8 +1,8 @@
 #!/bin/bash
 
-set -ev
+set -e
 
-echo $HOME
+echo "Travis HOME variable is $HOME"
 
 if ([ "${TRAVIS_PULL_REQUEST}" != "false" -a "${TRAVIS_PULL_REQUEST_BRANCH}" != "MvMAWSTESTDONOTMERGE" ])
 then

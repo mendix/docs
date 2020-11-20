@@ -1,4 +1,10 @@
 {
+    "ErrorDocument": {
+        "Key": "404"
+    },
+    "IndexDocument": {
+        "Suffix": ""
+    },
     "RoutingRules": [
         {
             "Condition": {

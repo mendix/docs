@@ -47,7 +47,7 @@ objectredirect () {
 #     * Documentation Site (permanent, unmapped) 
 #     ****************************************************/
 objectredirect 'docs/Overview' '/'
-objectredirect 'docs/' '/'
+objectredirect 'docs/index' '/'
 #	/****************************************************
 #     * Studio Pro Guide (permanent, mapped)
 #     ****************************************************/
@@ -71,7 +71,7 @@ objectredirect 'howto7/ux/configuring-your-theme' '/howto7/front-end/configuring
 #	/****************************************************
 #     * Studio Guide (permanent, unmapped)
 #     ****************************************************/
-objectredirect 'howto/tutorials/' '/studio/general'
+objectredirect 'howto/tutorials/index' '/studio/general'
 objectredirect 'howto/tutorials/mendix-tutorials' '/studio/general'
 #	/****************************************************
 #     * Developer Portal Guide (permanent, unmapped) 
@@ -85,14 +85,14 @@ objectredirect 'mendixcloud/maintenance-windows' '/developerportal/deploy/mainte
 objectredirect 'developerportal/howto/migrating-to-v4' '/developerportal/deploy/migrating-to-v4'
 objectredirect 'deployment/mendixcloud/how-to-deploy-a-mendix-app-on-azure' '/developerportal/deploy/azure-deploy'
 objectredirect 'mendixcloud/how-to-link-app-to-node' '/developerportal/deploy/licensing-apps'
-objectredirect 'howtogeneral/support/' '/developerportal/support/'
+objectredirect 'howtogeneral/support/index' '/developerportal/support/'
 objectredirect 'deployment/mendixcloud/sending-email' '/developerportal/deploy/sending-email'
 objectredirect 'howto/deploying-a-mendix-app-to-cloud-foundry' '/developerportal/deploy/cloud-foundry-deploy'
 #	/****************************************************
 #     * App Store Guide (permanent, mapped & unmapped) 
 #     ****************************************************/	
 objectredirect 'community/app-store/app-store-overview' '/appstore/general/app-store-overview'
-objectredirect 'community/app-store/' '/appstore/index'
+objectredirect 'community/app-store/index' '/appstore/index'
 objectredirect 'developerportal/app-store/app-store-content' '/appstore/general/app-store-content'
 objectredirect 'developerportal/app-store/app-store-content-support' '/appstore/general/app-store-content-support'
 objectredirect 'developerportal/app-store/app-store-overview' '/appstore/general/app-store-overview'
@@ -100,7 +100,7 @@ objectredirect 'developerportal/app-store/share-app-store-content' '/appstore/ge
 #    /****************************************************
 #     * Add-on Guides (permanent, mapped)
 #     ****************************************************/
-objectredirect 'addons/apm-addon/' '/addons/apd-addon/'
+objectredirect 'addons/apm-addon/index' '/addons/apd-addon/'
 objectredirect 'apm/installation-guide' '/addons/apd-addon/ig-two'
 objectredirect 'apm/reference-guide/rg-2/reference-guide-2' '/addons/apd-addon/rg-two-apm'
 #	/****************************************************
@@ -117,7 +117,7 @@ objectredirect 'refguide/download-from-team-server-dialog' '/refguide/download-f
 objectredirect 'refguide/open-project-dialog' '/refguide/open-app-dialog'
 objectredirect 'refguide/upload-to-team-server-dialog' '/refguide/upload-to-version-control-dialog'
 objectredirect 'refguide/microflow-expressions' '/refguide/expressions'
-objectredirect 'deployment/cloud-foundry/' '/developerportal/deploy/cloud-foundry-deploy'
+objectredirect 'deployment/cloud-foundry/index' '/developerportal/deploy/cloud-foundry-deploy'
 objectredirect 'howto/solving-load-and-import-errors' '/howto/monitoring-troubleshooting/solving-load-and-import-errors'
 objectredirect 'refguide/drop-down-widget' '/refguide/drop-down'
 objectredirect 'refguide/horizontal-split-pane' '/refguide/scroll-container'
@@ -209,7 +209,7 @@ objectredirect 'refguide7/download-from-team-server-dialog' '/refguide7/download
 objectredirect 'refguide7/open-project-dialog' '/refguide7/open-app-dialog'
 objectredirect 'refguide7/upload-to-team-server-dialog' '/refguide7/upload-to-version-control-dialog'
 objectredirect 'refguide7/microflow-expressions' '/refguide7/expressions'
-objectredirect 'deployment/cloud-foundry/' '/developerportal/deploy/cloud-foundry-deploy'
+objectredirect 'deployment/cloud-foundry/index' '/developerportal/deploy/cloud-foundry-deploy'
 objectredirect 'howto7/solving-load-and-import-errors' '/howto7/monitoring-troubleshooting/solving-load-and-import-errors'
 objectredirect 'refguide7/drop-down-widget' '/refguide7/drop_down'
 objectredirect 'refguide7/horizontal-split-pane' '/refguide7/scroll-container'
@@ -688,8 +688,8 @@ objectredirect 'refguide/team-server' '/developerportal/develop/team-server'
 #     * From Data Hub (permanent, mapped) 
 #     ****************************************************/
 objectredirect 'data-hub/data-hub-catalog/use-data-catalog' '/data-hub/share-data/index'
-objectredirect 'datahub/general/share-data/' '/data-hub/share-data/index'
-objectredirect 'data-hub/data-catalog/' '/data-hub/index'
+objectredirect 'datahub/general/share-data/index' '/data-hub/share-data/index'
+objectredirect 'data-hub/data-catalog/index' '/data-hub/index'
 #	/****************************************************
 #     * From Strategic Partners Guide (permanent, mapped)
 #     ****************************************************/
@@ -704,7 +704,7 @@ objectredirect 'howto50/Contributing+to+a+GitHub+repository' '/howto/collaborati
 objectredirect 'howto/collaboration-project-management/contribute-to-a-github-repository' '/howto/collaboration-requirements-management/contribute-to-a-github-repository'
 objectredirect 'howto/ux/create-a-custom-theme-with-the-mendix-ui-framework' '/howto/front-end/atlas-ui'
 objectredirect 'howto/front-end/create-a-custom-theme-with-the-mendix-ui-framework' '/howto/front-end/atlas-ui'
-objectredirect 'releasenotes/desktop-modeler/' '/releasenotes/studio-pro/'
+objectredirect 'releasenotes/desktop-modeler/index' '/releasenotes/studio-pro/'
 objectredirect 'releasenotes/desktop-modeler/8.0' '/releasenotes/studio-pro/8.0'
 objectredirect 'releasenotes/desktop-modeler/7.23' '/releasenotes/studio-pro/7.23'
 objectredirect 'releasenotes/desktop-modeler/7.22' '/releasenotes/studio-pro/7.22'
@@ -814,5 +814,7 @@ exit 0
 # Remove multiple spaces and newlines (\n\s*\n -> \n)
 #
 # Use howto and refguide instead of howto8 and refguide8
+#
+# file names with trailing slashes need to be redirected from index! (e.g. 'howto/tutorials/' needs to be 'howto/tutorials/index')
 #
 # check for commands still outstanding ({) and commands containing \

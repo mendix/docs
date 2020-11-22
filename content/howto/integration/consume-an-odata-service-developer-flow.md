@@ -42,7 +42,7 @@ Before starting this how-to you will need the following:
 
 ## 3 Consuming an OData Service using the URL {#consumeurl}
 
-
+Click the project and right-click… 
 
 
 

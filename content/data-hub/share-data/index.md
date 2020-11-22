@@ -26,7 +26,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install Studio Pro version [8.14.0 or above](https://appstore.home.mendix.com/link/modelers/)
 
-## 3 Creating an App 
+## 3 Creating an App {#createapp} 
 
 Follow these steps to create a simple app in Studio Pro whose data you will use in another app: 
 

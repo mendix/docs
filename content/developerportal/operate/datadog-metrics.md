@@ -73,22 +73,35 @@ By default, Mendix will only pass request handler activity to Datadog, but you c
 
 #### 3.1.1 Request Handler Metrics
 
-Unless you customize your metrics agent, the metrics agent will provide metrics for all your request handlers. The metrics provided are:
+Unless you customize your metrics agent, the metrics agent will provide metrics for all your request handlers. The metrics provided are listed below:
 
-* `mx.soap.time` – for SOAP requests
-* `mx.odata.time` – for OData requests
-* `mx.rest.time` – for REST requests
-* `mx.client.time` – for all of the following types of request
-  * REST, ODATA, SOAP **doc** requests
-  * `/xas` requests (general queries for data in data grids, sending changes to the server, and triggering the execution of microflows)
-  * File upload/download requests
-  * `/p` requests
+##### 3.1.1.1 mx.soap.time
+
+A timing/histogram value for SOAP requests.
+
+##### 3.1.1.2 mx.odata.time
+
+A timing/histogram value for OData requests.
+
+##### 3.1.1.3 mx.rest.time
+
+A timing/histogram value for REST requests.
+
+##### 3.1.1.4 mx.client.time
+
+The time it takes to handle a request to a request handler used by the web UI. You can get results for all of the following types of request
+* REST, ODATA, SOAP **doc** requests
+* `/xas` requests (general queries for data in data grids, sending changes to the server, and triggering the execution of microflows)
+* File upload/download requests
+* `/p` requests
 
 Each metric is also tagged with `resource:{resource_name}` to indicate which resource was being requested.
 
+This metric helps you to gain an overview of how long users have to wait for individual requests, and hence indicates overall application performance.
+
 #### 3.1.2 Microflow Metrics
 
-For the microflows you select (see [Customizing the Metrics Agent](#customizing), below), the metrics agent will provide the following metrics:
+For the microflows you select (see [Customizing the Metrics Agent](#customizing), below), the metrics agent will provide the following metrics relating to the time the microflow takes to run:
 
 * mx.microflow.time.avg
 * mx.microflow.time.count
@@ -97,6 +110,8 @@ For the microflows you select (see [Customizing the Metrics Agent](#customizing)
 * mx.microflow.time.95percentile
 
 In addition, each metric will be tagged with the `microflow:{microflow_name}` tag which indicates which microflow the metric came from. The microflow name is in the format `{module}.{microflow}`.
+
+This metric can indicate how long individual microflows are taking to run and enables you to target long-running microflows for improvement, if required.
 
 #### 3.1.3 Activity Metrics
 
@@ -128,6 +143,8 @@ The activity name will be one of the following activities which are reported:
 * CallWebService
 * ImportWithMapping
 * ExportWithMapping
+
+This information can be used during performance optimization.
 
 ### 3.2 Tagging Metrics for Datadog
 

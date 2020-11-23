@@ -53,13 +53,13 @@ You can choose different types of button by setting the appropriate **Button sty
 | Positive | Success |
 | Negative | Danger |
 | Attention | Warning |
-| Ghost | *requires manual CSS class, see [Applying CSS Classes Manually](#apply-css), below* |
+| Transparent | *this can be added using a building block* |
 
 {{% image_container width="75%" %}}
 ![SAP Fiori Button Styles](attachments/sap-fiori-3-0/button-styles.png)
 {{% /image_container %}}
 
-The **Link button** also has Fiori 3 styling.
+For the **Link button**, see [Applying CSS Classes Manually](#apply-css), below*.
 
 #### 2.1.2 Container Count Badge
 
@@ -81,7 +81,7 @@ You can specify the appearance of the count badge in the **Appearance** tab of t
 
 #### 2.1.3 List Views
 
-Standard Mendix **List view** widgets can be used on your pages. However, these cannot be borderless. To create a borderless list view, see [Applying CSS Classes Manually](#apply-css), below.
+Standard Mendix **List view** widgets can be used on your pages. However, these cannot be borderless. You can add a borderless list from a building block.
 
 ### 2.2 Applying CSS Classes Manually{#apply-css}
 
@@ -94,7 +94,6 @@ Some SAP Fiori styling requires you to add some additional CSS classes manually 
 | Inverted Link | link-inverted |
 | Right Icon Link | link right icon |
 | Left Icon Link | *this is the default* |
-| Transparent Button | transparent-btn |
 
 ### 2.3 Unsupported SAP Fiori Components{#unsupported-components}
 
@@ -113,8 +112,8 @@ In addition, there are some limitations on supporting other components:
 * In **Calendars** you cannot:
     * highlight multiple dates such as holidays or other special days
 * In **Tables**
-    * you cannot have checkboxes or icons
-    * you can only select rows at the row selection level
+    * you cannot use icons on tables
+    * you cannot select rows using checkboxes, you can only select rows using the standard Mendix selection methods
 * In **Tabs** you cannot have
     * icons with a counter
     * only icons
@@ -164,8 +163,8 @@ To do this you need to trigger a nanoflow which passes a variable containing the
 
 The themes available are:
 
-* **light** *(default)*
-* **dark**
+* **light** *(default)* – the SAP Quartz Light theme
+* **dark** – the SAP Quartz Dark theme
 * **belize**
 * **belizeDeep**
 

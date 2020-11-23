@@ -48,12 +48,22 @@ If you have the URL of your OData service, you can use it to consume the service
 
 Follow these steps to consume a published Odata service directly using the URL:
 
-1. You are going to add a consumed OData service document to your model: in project explorer, right click over the model name and select **Add other** > **Consumed OData Service**.
+1. You will add a consumed OData service document to your model: in project explorer, right click over the model name and select **Add other** > **Consumed OData Service**.
+
+     {{% alert type="info" %}}You must have a Data Hub license to see this menu item.
+     {{% /alert %}}
+
 2. In the **Add Consumed OData Service** box provide a name to the Consumed OData Service document that will be added to your module and click **OK**.
+
 3. A blank **Consumed OData** document is added to the module and the **Metadata Editor** dialog is displayed asking you to provide the metadata file to consume from.
+
 4. By default the **Import from** is set to **URL**; click **Edit**
-5. In this example, you are going to use a sample OData file from OData.org: https://www.odata.org/odata-services/.  Under the **OData v3** tab we will use the sample OData v3 example, [Northwind read only](https://services.odata.org/V3/Northwind/Northwind.svc) service. Click the link to open the metadata file for this service.
+
+5. ??In this example, you are going to use a sample OData file from OData.org: https://www.odata.org/odata-services/.  Under the **OData v3** tab we will use the sample OData v3 example, [Northwind read only](https://services.odata.org/V3/Northwind/Northwind.svc) service. Click the link to open the metadata file for this service.
+
 6. You are going to paste the full URL of this file in the 
+
+![use data hub pane](attachments/consume-an-odata-service/data-hub-pane-dialog-box.png)
 
 ## 4 Consuming an OData Service using a local stored Metadata Contract
 

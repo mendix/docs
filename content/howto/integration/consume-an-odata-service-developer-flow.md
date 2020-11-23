@@ -8,7 +8,7 @@ description: "Describes the development workflow for working with oData and exte
 
 ## 1 Introduction
 
-Developers can consume OData services by specifying the service metadata URL or the (local) metadata file in the Consume OData Service document.  The entities exposed in the service will be listed in  the Data Hub Project pane and can be dragged into the domain model in the same way as when using the Data Hub pane.  
+Developers can consume OData services by specifying the service metadata URL or a (local) metadata file in the Consume OData Service document.  The entities exposed in the service will be listed in  the Data Hub Project pane and can be dragged into the domain model using the Data Hub pane.  
 
 Developers who are publshing OData services can follow the steps in this how-to to test their published OData service locally before deploying them and registering  them in the Data Hub Catlog. 
 

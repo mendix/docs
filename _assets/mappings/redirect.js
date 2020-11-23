@@ -2457,7 +2457,7 @@ module.exports = {
      ****************************************************/
 	{
   	   from: "/data-hub/data-hub-catalog/use-data-catalog",
-   	   to: "/data-hub/share-data/index"
+   	   to: "/data-hub/share-data/index",
   	},
 	{
       from: "/datahub/general/share-data/",

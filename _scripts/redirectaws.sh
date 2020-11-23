@@ -38,6 +38,8 @@ objectredirect () {
 # Set up a redirect using objectredirect '{original}' '{redirect to}'                                   #
 # Remember to set MAKEREDIRECT to "true" until redirects have been pushed to development AND master     #
 #                                                                                                       #
+#  Routing rules (e.g. refguide9/ -> refguide/) need to be set up in the S3 console                     #
+#                                                                                                       #
 #########################################################################################################
 
 #	/****************************************************

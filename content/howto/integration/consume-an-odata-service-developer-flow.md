@@ -1,5 +1,5 @@
 ---
-title: "Consume an OData Service REST and Use External External Entities"
+title: "Consume an OData Service and Use External External Entities"
 category: "Integration"
 menu_order: 8.5
 tags: ["integration", "OData service", "data hub", "consume", "external entity", "OData service URL"]
@@ -8,13 +8,14 @@ description: "Describes the development workflow for working with oData and exte
 
 ## 1 Introduction
 
-Developers can consume OData services by specifying the service metadata URL in the Consume OData Service document by.  The entities exposed in the service will be listed in  the Data Hub Project pane and can be dragged into the domain model in the same way as when using the Data Hub pane.  
+Developers can consume OData services by specifying the service metadata URL or the (local) metadata file in the Consume OData Service document.  The entities exposed in the service will be listed in  the Data Hub Project pane and can be dragged into the domain model in the same way as when using the Data Hub pane.  
 
 Developers who are publshing OData services can follow the steps in this how-to to test their published OData service locally before deploying them and registering  them in the Data Hub Catlog. 
 
 **This how-to will teach you how to do the following:**
 
-* Specify the published OData service using the service metadata URL.
+* Add a consumed OData Service document in your project module
+* Specify the published OData service using the service metadata contract URL or location of the file
 * Use the **Data Hub Project** pane to view and use exposed entities in your app development
 
 {{% alert type="info" %}}
@@ -28,9 +29,9 @@ Before starting this how-to you will need the following:
 
 * Be familiar with app modelling using [external entities](/refguide/external-entities)
 
-* URL of a valid published OData v3 or v4?? metadata contract
+* URL of a valid published OData v3 or v4 metadata contract or have a locally stored metadata contract
 
-	{{% alert type="info" %}}The OData metadata contract is the `$metadata` file and in Studio Pro the URL is displayed under the **Settings** tab of the **Published OData Service** document:
+	{{% alert type="info" %}}The OData metadata contract is the file  `$metadata` file and in Studio Pro the URL is displayed under the **Settings** tab of the **Published OData Service** document:
 	
 
 ![published Odata service URL](attachments/consume-an-odata-service/metadata-contract-url.png)  

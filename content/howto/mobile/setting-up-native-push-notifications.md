@@ -51,7 +51,7 @@ After you complete that tutorial, you will have these files:
 
 You will use these later to complete your work with the Native Mobile Builder and with Firebase.
 
-## 4 Enabling Push Notification for your Native Apps
+## 4 Enabling Push Notifications for your Native Apps
 
 To enable push notifications for your application you will have to follow one of the following sections. Please choose the section that fits which tools you can use.
 
@@ -61,7 +61,7 @@ If you must use a version Mendix Studio Pro below 8.15, the Native Builder (CLI)
 
 If you wish to implement your changes manually, please follow this section: [Manually Implementing Changes](#manually-implementing-changes).
 
-### 4.1 Implementing Push Changes With the Native Builder CLI {#auto-changes}
+### 4.1 Implementing Push Changes With the Native Builder {#auto-changes}
 
 The Native Mobile Builder simplifies the process of adding any capabilities to your native mobile app. To enable push notifications, do the following: 
 
@@ -135,12 +135,9 @@ Implementing push notifications manually requires you to modify source files loc
 
 	```
 	<activity
-   ...
-   android:launchMode="singleTop"
-   ```
-  >
-	```
-	
+    ...
+    android:launchMode="singleTop"
+      >
 	```
 
 1.  Included the firebase service and receiver in your **android/app/src/main/AndroidManifest.xml**. Copy and paste the lines below that are between the **\<application>\</applicatation>** tags into the app's **AndroidManifest.xml** between the **\<application ...>\</application>**:

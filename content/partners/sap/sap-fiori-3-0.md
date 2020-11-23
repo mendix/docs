@@ -173,8 +173,6 @@ The themes available are:
 
 The SAP Fiori 3 UI Resources App Store Module contains a number of different skeleton apps which you can review or copy to use as the basis for your own apps.
 
-{{% todo %}}[How is this data populated?]{{% /todo %}}
-
 The demo apps are:
 
 * Shopping Cart – a demo app which allows you to display products by category and view product details

@@ -16,6 +16,8 @@ Datadog logging is supported in Mendix version 7.15 and above.
 
 This document explains what information can be provided to Datadog and how to configure your Mendix Cloud v4 app to send data to Datadog. If you want to know more about the capabilities of Datadog and, in particular, using Datadog with Mendix, have a look at the Mendix blog [Monitor Your Mendix Apps with Datadog](https://www.mendix.com/blog/monitor-your-mendix-apps-with-datadog/).
 
+A summary of the useful metrics is in the section [Summary of Metrics](#summary), below.
+
 {{% alert type="warning" %}}
 Datadog is not supported in Mendix Cloud v3, nor in default deployment buildpacks for other cloud platforms.
 {{% /alert %}}
@@ -391,6 +393,38 @@ If you configure your app for Datadog but the Datadog agent is not started, the 
 
 If you have any issues related to accessing Datadog, please contact their support here: [Support | Datadog](https://www.datadoghq.com/support/), or by email at [support@datadoghq.com](mailto:support@datadoghq.com).
 
-## 6 Read More
+## 6 Summary of Metrics{#summary}
+
+| Metric | Description |
+| --- | --- |
+| database.diskstorage_size | The size of the database on disk |
+| jmx.com.mendix.anonymous_sessions | |
+| jmx.com.mendix.entities | |
+| jmx.com.mendix.idle_threads | |
+| jmx.com.mendix.max_threads | |
+| jmx.com.mendix.named_users | |
+| jmx.com.mendix.queue_size | |
+| jmx.com.mendix.threads | |
+| jvm.heap_memory | |
+| jvm.heap_memory_committed | |
+| jvm.heap_memory_init | |
+| jvm.heap_memory_max | |
+| jvm.non_heap_memory | |
+| jvm.non_heap_memory_committed | |
+| jvm.non_heap_memory_init | |
+| jvm.non_heap_memory_max | |
+| mx.activity.time | How long a microflow activity takes to run |
+| mx.client.time | The time to handle a request to a request handler that is used by the web ui |
+| mx.microflow.time | How long a microflow takes to run |
+| mx.odata.time | The time to handle an OData request |
+| mx.rest.time | The time to handle a REST request |
+| mx.soap.time | The time to handle a SOAP request |
+| postgresql.connections | |
+| postgresql.database_size | |
+| postgresql.max_connections | |
+| postgresql.percent_usage_connections | |
+
+
+## 7 Read More
 
 * [Metrics](metrics)

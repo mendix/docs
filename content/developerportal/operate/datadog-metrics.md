@@ -16,6 +16,8 @@ Datadog logging is supported in Mendix version 7.15 and above.
 
 This document explains what information can be provided to Datadog and how to configure your Mendix Cloud v4 app to send data to Datadog. If you want to know more about the capabilities of Datadog and, in particular, using Datadog with Mendix, have a look at the Mendix blog [Monitor Your Mendix Apps with Datadog](https://www.mendix.com/blog/monitor-your-mendix-apps-with-datadog/).
 
+A summary of the useful metrics is in the section [Summary of Metrics](#summary), below.
+
 {{% alert type="warning" %}}
 Datadog is not supported in Mendix Cloud v3, nor in default deployment buildpacks for other cloud platforms.
 {{% /alert %}}
@@ -73,22 +75,35 @@ By default, Mendix will only pass request handler activity to Datadog, but you c
 
 #### 3.1.1 Request Handler Metrics
 
-Unless you customize your metrics agent, the metrics agent will provide metrics for all your request handlers. The metrics provided are:
+Unless you customize your metrics agent, the metrics agent will provide metrics for all your request handlers. The metrics provided are listed below:
 
-* `mx.soap.time` – for SOAP requests
-* `mx.odata.time` – for OData requests
-* `mx.rest.time` – for REST requests
-* `mx.client.time` – for all of the following types of request
-  * REST, ODATA, SOAP **doc** requests
-  * `/xas` requests (general queries for data in data grids, sending changes to the server, and triggering the execution of microflows)
-  * File upload/download requests
-  * `/p` requests
+##### 3.1.1.1 mx.soap.time
+
+A timing/histogram value for SOAP requests.
+
+##### 3.1.1.2 mx.odata.time
+
+A timing/histogram value for OData requests.
+
+##### 3.1.1.3 mx.rest.time
+
+A timing/histogram value for REST requests.
+
+##### 3.1.1.4 mx.client.time
+
+The time it takes to handle a request to a request handler used by the web UI. You can get results for all of the following types of request
+* REST, ODATA, SOAP **doc** requests
+* `/xas` requests (general queries for data in data grids, sending changes to the server, and triggering the execution of microflows)
+* File upload/download requests
+* `/p` requests
 
 Each metric is also tagged with `resource:{resource_name}` to indicate which resource was being requested.
 
+This metric helps you to gain an overview of how long users have to wait for individual requests, and hence indicates overall application performance.
+
 #### 3.1.2 Microflow Metrics
 
-For the microflows you select (see [Customizing the Metrics Agent](#customizing), below), the metrics agent will provide the following metrics:
+For the microflows you select (see [Customizing the Metrics Agent](#customizing), below), the metrics agent will provide the following metrics relating to the time the microflow takes to run:
 
 * mx.microflow.time.avg
 * mx.microflow.time.count
@@ -97,6 +112,8 @@ For the microflows you select (see [Customizing the Metrics Agent](#customizing)
 * mx.microflow.time.95percentile
 
 In addition, each metric will be tagged with the `microflow:{microflow_name}` tag which indicates which microflow the metric came from. The microflow name is in the format `{module}.{microflow}`.
+
+This metric can indicate how long individual microflows are taking to run and enables you to target long-running microflows for improvement, if required.
 
 #### 3.1.3 Activity Metrics
 
@@ -128,6 +145,8 @@ The activity name will be one of the following activities which are reported:
 * CallWebService
 * ImportWithMapping
 * ExportWithMapping
+
+This information can be used during performance optimization. Even when you cannot identify the exact activity (for example, if there are several different *retrieveObject* activities in the same microflow), you can still use this information to identify which activities might be related to trends in performance, or to compare performance between different versions or environment configurations.
 
 ### 3.2 Tagging Metrics for Datadog
 
@@ -374,6 +393,38 @@ If you configure your app for Datadog but the Datadog agent is not started, the 
 
 If you have any issues related to accessing Datadog, please contact their support here: [Support | Datadog](https://www.datadoghq.com/support/), or by email at [support@datadoghq.com](mailto:support@datadoghq.com).
 
-## 6 Read More
+## 6 Summary of Metrics{#summary}
+
+| Metric | Description |
+| --- | --- |
+| database.diskstorage_size | The size of the database on disk |
+| jmx.com.mendix.anonymous_sessions | |
+| jmx.com.mendix.entities | |
+| jmx.com.mendix.idle_threads | |
+| jmx.com.mendix.max_threads | |
+| jmx.com.mendix.named_users | |
+| jmx.com.mendix.queue_size | |
+| jmx.com.mendix.threads | |
+| jvm.heap_memory | |
+| jvm.heap_memory_committed | |
+| jvm.heap_memory_init | |
+| jvm.heap_memory_max | |
+| jvm.non_heap_memory | |
+| jvm.non_heap_memory_committed | |
+| jvm.non_heap_memory_init | |
+| jvm.non_heap_memory_max | |
+| mx.activity.time | How long a microflow activity takes to run |
+| mx.client.time | The time to handle a request to a request handler that is used by the web ui |
+| mx.microflow.time | How long a microflow takes to run |
+| mx.odata.time | The time to handle an OData request |
+| mx.rest.time | The time to handle a REST request |
+| mx.soap.time | The time to handle a SOAP request |
+| postgresql.connections | |
+| postgresql.database_size | |
+| postgresql.max_connections | |
+| postgresql.percent_usage_connections | |
+
+
+## 7 Read More
 
 * [Metrics](metrics)

@@ -144,7 +144,7 @@ The activity name will be one of the following activities which are reported:
 * ImportWithMapping
 * ExportWithMapping
 
-This information can be used during performance optimization.
+This information can be used during performance optimization. Even when you cannot identify the exact activity (for example, if there are several different *retrieveObject* activities in the same microflow), you can still use this information to identify which activities might be related to trends in performance, or to compare performance between different versions or environment configurations.
 
 ### 3.2 Tagging Metrics for Datadog
 

@@ -13,20 +13,6 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2020
 
-### November 24th, 2020
-
-#### Improvements
-
-* We added the ability to permanently change the Log Levels in Mendix Cloud v4 for an app so that they persist between restarts. This was in response to customer requests. (Ticket 101413)<br/>Log Levels will only become persistent after the next restart of your app, so you may have to set them one more time.<br/>For more information on log levels, see [Log Levels Tab](https://docs.mendix.com/developerportal/deploy/environments-details#log-levels) in the *Environment Details* documentation.
-* We now prevent you from starting or stopping your apps during a maintenance window to prevent issues occurring during the maintenance.
-* You can now retrieve the version of the buildpack used in deployment via the Deploy API [Retrieve Environment](/apidocs-mxsdk/apidocs/deploy-api#retrieve-environment) call. The version is returned as `RuntimeLayer`.
-
-
-#### Fixes
-
-* We fixed an issue where you could not set the value for a constant which was defined as long to a value greater than the maximum value for an integer.
-* We fixed an issue where the Company Admin could not search through licensed nodes. (Ticket 109742)
-
 ### November 5th, 2020
 
 #### Improvements

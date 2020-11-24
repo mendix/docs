@@ -18,11 +18,9 @@ Most application logic can be developed using microflows. Microflows are very po
 Before starting this how-to, make sure you have completed the following prerequisite:
 
 *  Have Eclipse installed (download it [here](https://eclipse.org/))
-
 	{{% alert type="info" %}}You can use any text editor to create custom Java actions, but we highly recommend using Eclipse. Studio Pro contains a **Deploy for Eclipse** feature verifying that everything that needs to be configured in Eclipse is done automatically. All you have to do is import the project into your Eclipse working environment.
 {{% /alert %}}
-
-* Have an app project with the **Asset Manager** app template
+* Have an app project ready using the [Asset Manager](https://appstore.home.mendix.com/link/app/69674/) template
 
 ## 3 Adding a Java Action in Studio Pro
 

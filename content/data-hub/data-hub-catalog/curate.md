@@ -15,7 +15,7 @@ Users who can curate assets in Data Hub Catalog are as follows:
 * Owners of a registered service – can curate their own services and find those that are set to non-**Discoverable**
 * [Data Hub Curators](../index#curator) and [Data Hub Admins](../index#admin) – can curate and find all registered assets, discoverable and non-discoverable
 
-Owners and Curators can also get an overview of the registered assets they own and curate from the [Curate](#curatetab) tab of Data Hub.
+Owners and Curators can also get an overview of the registered assets they own and curate from the [Curate](#curatelist) tab of Data Hub.
 
 {{% alert type="info" %}}
 Information that is added or changed during curation is stored in the Data Hub Catalog for that item. It will not be added to the OData service contract or metadata files or affect any of the values in the metadata files associated with the service or the datasets associated with the exposed entities. 

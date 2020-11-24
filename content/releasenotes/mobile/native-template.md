@@ -10,7 +10,7 @@ For more information on native mobile app development, see the [native-template]
 
 ## 3.2.2 
 
-**Release date: November 9nd, 2020**
+**Release date: November 9th, 2020**
 
 We fixed the Native Template for a dependency affecting Mendix Studio Pro 8.8.x.
 

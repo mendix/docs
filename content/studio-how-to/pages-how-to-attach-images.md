@@ -4,6 +4,7 @@ category: "Pages"
 description: "Describes how to configure image uploader in Mendix Studio."
 menu_order: 60
 tags: ["studio", "pages", "image", "image uploader", "attachment", "attach image"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 

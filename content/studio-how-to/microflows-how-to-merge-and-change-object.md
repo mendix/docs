@@ -4,6 +4,7 @@ category: "Microflows"
 menu_order: 70
 description: "This how to describes the process of configuring a merge and a change object activity in Mendix Studio."
 tags: ["studio", "microflows", "merge", "expression", "change object"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 

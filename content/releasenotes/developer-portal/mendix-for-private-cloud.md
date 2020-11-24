@@ -13,6 +13,14 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2020
 
+### November 16th, 2020
+
+* We have introduced a new, interactive, installation and configuration tool for the Mendix Operator. The previous installation scripts are still available, and you can choose between the new and previous installation tools.
+* We added access rules for namespaces to control access to the debugger and TLS.
+* We added activity log entries for TLS, the debugger, changing log levels, and uploading an mda locally.
+* We improved the stability of the Private Cloud Portal.
+* We added a warning message when the operator license has expired
+
 ### October 30th, 2020
 
 #### Mendix for Private Cloud — Mendix Operator v1.6.1

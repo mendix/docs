@@ -77,6 +77,10 @@ These are the results of the actions:
 * [Presto](https://prestodb.github.io/docs/current/installation/jdbc.html)
 * [SQLite](https://bitbucket.org/xerial/sqlite-jdbc/downloads/)
 
+{{% alert type="info" %}}
+If you intend to connect to SQL Server using integrated security, please be aware that the JDBC driver in the **userlib** folder needs to match the version supplied with the Mendix Platform (via the **runtime/bundles/** folder inside the Mendix installation directory).
+{{% /alert %}}
+
 ## 6 Developing This App Store Component
 
 1. Clone [https://github.com/mendix/database-connector.git](https://github.com/mendix/database-connector.git).

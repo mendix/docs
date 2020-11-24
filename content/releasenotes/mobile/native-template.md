@@ -8,6 +8,16 @@ description: "Native Template release notes."
 
 For more information on native mobile app development, see the [native-template](https://github.com/mendix/native-template/) repository and [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app).
 
+## 3.2.2 
+
+**Release date: November 9nd, 2020**
+
+We fixed the Native Template for a dependency affecting Mendix Studio Pro 8.8.x.
+
+### Fixes
+
+* We fixed an issue with the npm installation on the Mendix Native Template targeting Mendix Studio Pro 8.8 due to an outdated dependency.
+
 ## 5.1.1,  5.0.6, and 4.2.3
 
 **Release date: November 2nd, 2020**

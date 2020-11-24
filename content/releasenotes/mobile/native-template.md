@@ -12,11 +12,11 @@ For more information on native mobile app development, see the [native-template]
 
 **Release date: November 9nd, 2020**
 
- Fix for Native Template for Mendix Studio Pro 8.8.x.
+We fixed the Native Template for a dependency affecting Mendix Studio Pro 8.8.x.
 
 ### Fixes
 
-* We fixed an issue with the npm installation on Native Template targeting Mendix Studio Pro 8.8 due to an outdated dependency.
+* We fixed an issue with the npm installation on the Mendix Native Template targeting Mendix Studio Pro 8.8 due to an outdated dependency.
 
 ## 5.1.1,  5.0.6, and 4.2.3
 

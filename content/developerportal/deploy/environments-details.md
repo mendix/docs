@@ -54,10 +54,6 @@ On the right side of the screen, you can find the following action buttons:
 * **Show Logged in Users** 
 * **Change Admin Password** – this changes the password for the inbuilt [administrator](/refguide/administrator) account — the new password is applied immediately, without the need for a restart and will also force the administrator to pick up any new roles assigned in the app deployment package — see the [User Role](/refguide/administrator#user-role) section of *Administrator* for more information
 
-{{% alert type="info" %}}
-During a [maintenance window](maintenance-windows), you will not be able to start, restart, or stop your app.
-{{% /alert %}}
-
 #### 2.1.1 Logging and Debugging in Mendix Cloud v4
 
 ![](attachments/environments-details/actions-v4.png)

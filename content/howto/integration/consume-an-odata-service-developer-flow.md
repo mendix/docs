@@ -29,52 +29,44 @@ Before starting this how-to you will need the following:
 
 * Be familiar with app modelling using [external entities](/refguide/external-entities)
 
-* Have a URL of a valid published OData v3 or v4 metadata contract or a locally stored metadata contract – an example file to use in this how to is described in [using a sample OData service](#sampleODataservice)
+* Have a URL of a valid published OData v3 or v4 metadata contract or a locally stored metadata contract – an example file to use in this how to is described in Section 3—[using a sample OData service](#sampleODataservice)
 
-	{{% alert type="info" %}}The OData metadata contract is the file  `$metadata` file and in Studio Pro the URL is displayed under the **Settings** tab of the **Published OData Service** document:
-	
+	  {{% alert type="info" %}}You can create a simple published OData service by following the steps in [Section 3: Creating an App](/data-hub/share-data/index#createapp) and [Section 4: Publishing to the Data Hub Catalog](/data-hub/share-data/index#publishing) of the Data Hub how-to [Share Data Between Apps](/data-hub/share-data/index). The OData metadata contract is the file  `$metadata` file and in Studio Pro the URL is displayed under the **Settings** tab of the **Published OData Service** document:
 
-![published Odata service URL](attachments/consume-an-odata-service/metadata-contract-url.png)  
+![published Odata service URL](attachments/consume-an-odata-service/metadata-contract-url.png) 
   {{% /alert %}}
-
-  {{% alert type="info" %}}You can create a simple published OData service by following the steps in [Section 3: Creating an App](/data-hub/share-data/index#createapp) and [Section 4: Publishing to the Data Hub Catalog](/data-hub/share-data/index#publishing) of the Data Hub how-to [Share Data Between Apps](/data-hub/share-data/index).
-  {{% /alert %}}
-
-
 
 ## 3 Using a Sample OData Service{#sampleODataservice}
 
-You can locate a sample OData V3 metadata file to use in this how-to  from the OData.org website: https://www.odata.org/odata-services/. They provide some sample OData files for the different versions of OData. You can try using the URL, and you can also download the sample contract to your computer to try consuming from a local file.
+You can find a sample OData V3 metadata file to use in this how-to  from the OData.org website: https://www.odata.org/odata-services/. They different example OData files for the different versions of OData. You can copy the URL of of a file as described in the following steps. You can also download the sample Odata file to your computer to try consuming from a locally stored file.
 
 1. Go to  https://www.odata.org/odata-services/ Under the **OData v3** tab you will use the sample OData v3 example, [Northwind read only](https://services.odata.org/V3/Northwind/Northwind.svc) service. Click the link for this file or any other file that is listed for OData v3 to open the metadata file for this service.
-2. The file that you will see displayed is saved stored under the name `$metadata` at the web URL.
-3. So for the example used in step 1, this file is https://services.odata.org/V3/Northwind/Northwind.svc/metadata.
-4. You can download the file to your computer if you want to follow the steps for  consuming a local file. 
-
-
+2. The file that you will see displayed is stored under the name `$metadata` at the web URL.
+3. So for the example used in step 1, the full URL of the file is `https://services.odata.org/V3/Northwind/Northwind.svc/$metadata`.
+4. You can download the file to your computer if you want to try consuming a locally stored file. 
 
 ## 4 Consuming an OData Service using the URL {#consumeurl}
 
-When you search for a data source in the [Data Hub](/refguide/data-hub-pane) pane you will be presented with all the registered assets in the [Dat Hub Catalog](/data-hub/data-hub-catalog/search) that satisfy your search criteria. These assets are exposed in, and registered as, published OData services in the **Data Hub Catlog**. When you drag an entity from the **Data Hub** pane into your domain model, the asset metadata contract is accessed at the service endpoint and a **Consumed OData Servcice** document is added to the app project module showing all the information in the contractat. 
+When you search for a data source in the [Data Hub](/refguide/data-hub-pane) pane you will be presented with all the registered assets in the [Dat Hub Catalog](/data-hub/data-hub-catalog/search) that satisfy your search criteria. These assets are exposed in, and registered as, published OData services in the **Data Hub Catlog**. When you drag an entity from the **Data Hub** pane into your domain model, the asset metadata contract is accessed at the service endpoint and a **Consumed OData Servcice** document is added to the app project module with the details of metadata file and this is accessed to display the entities available in the service. 
 
-If you have the URL of your OData service, you can use it to consume the service directly into your module and see the exposed entities in the **Data Hub** project. This means that you can easily drag them into your domain model. 
+You can specify the URL of your OData service, to consume the service directly into your module and see the exposed entities in the **Data Hub** project. This means that you can easily drag them into your domain model. 
 
 During app development and testing phases this means that you can deploy your app locally and without taking up a cloud slot and can speed up a process that possibly has to go through several iterations.
 
 Follow these steps to consume a published Odata service directly using the URL:
 
-1. First you will add a consumed OData service document to your model: in project explorer, right click over the model name and select **Add other** > **Consumed OData Service**.
+1. First you will add a consumed OData service document to your model: in project explorer, right-click over the model name and select **Add other** > **Consumed OData Service**.
 
      {{% alert type="info" %}}You must have a Data Hub license to see this menu item.
      {{% /alert %}}
 
-2. In the **Add Consumed OData Service** dialog box, enter a name for the Consumed OData Service document that will be added to your module. In this case  and click **OK**.
+2. In the **Add Consumed OData Service** dialog box, enter a name for the Consumed OData Service document that will be added to your module. In this case, accept the default **Consumed_OData_Service**  and click **OK**.
 
-3. A blank **Consumed OData** document is added to the module and the **Metadata Editor** dialog is displayed asking you to provide the metadata file to consume from.
+3. A blank consumed OData document is added to the module and the **Metadata Editor** dialog is displayed asking you to provide the metadata file to consume from.
 
 4. By default the **Import from** is set to **URL**; click **Edit**.
 
-5. Copy the full URL of the OData service you want to consume. For the example in [using a sample OData service](#sampleODataservice) this is: `https://services.odata.org/V3/Northwind/Northwind.svc/$metadata`
+5. Copy the full URL of the OData service you want to consume . For the example in Section 3—[using a sample OData service](#sampleODataservice) this is: `https://services.odata.org/V3/Northwind/Northwind.svc/$metadata`.
 
 6.  Paste this in the **Metadata URL** and click **OK** twice:
 
@@ -84,11 +76,27 @@ Follow these steps to consume a published Odata service directly using the URL:
 
      ![use data hub pane](attachments/consume-an-odata-service/data-hub-pane-dialog-box.png)
 
-8. Click **OK**. The service will be added under **Project** in the **Data Hub** pane and also be shown as being consumed. If you expand the service, the entities in this service will be listed: 
+8. Click **OK**. The **Consumed_OData_Service** document is added to the module in the project explorer and displayed:
 
-   ![use data hub pane](attachments/consume-an-odata-service/data-hub-project-pane.png)
+   ![consumed odata service doc](attachments/consume-an-odata-service/consumed-odata-document.png)
 
-9. Take a few moments to explore the entities that are available in the service, and the attributes for entities (click **+** to expand the entity and display the attributes): 
+9.  Under **Connection**, you have to specify the **Service URL**. This information is always stored in the **Constant** document that always accompanies a **Consumed OData service**. Click **Select** and for the **Select Constant** click  **New** to create a new constant. 
+
+10. Click **OK**  to accept the default **Name**: **Consumed_OData_Service_Location**:
+
+   ![constant doc](attachments/consume-an-odata-service/location-constant-document.png)
+
+11. For the **Default value** enter the service URL  `https://services.odata.org/V3/Northwind/Northwind.svc/` and click **OK**.
+
+12. In the **Data Hub** pane, the new service is listed in the **Project panel**. The green tick indicates that it is being consumed.  For further detail see the [Data Hub Project](/refguide/data-hub-pane#projectpanel) panel.
+
+13. Take a few moments to explore the entities that are available in the service, and the attributes for entities (click **+** to expand the entity and display the attributes): 
+
+    ![use data hub pane](attachments/consume-an-odata-service/data-hub-project-pane.png)
+
+14. You can now drag and drop entities from the service into your domain model. 
+
+15. 
 
 ## 4 Consuming an OData Service using a local stored Metadata Contract
 

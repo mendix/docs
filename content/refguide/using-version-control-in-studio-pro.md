@@ -382,12 +382,11 @@ To revert this version upgrade of the app model, follow these steps:
 4. Right-click the directory and select **TortoiseSVN** > **Show log**. 
 5. In SVN, find the latest revision that was in the desired Studio Pro version.
 6. Right-click that revision, select **Revert to this version**, confirm, and click **OK**.
-7. Back in Windows Explorer, right-click the folder again, select **SVN Commit**, enter your commit message, and click **OK**.
-8. After your commit has finished, remove or rename your main app project folder.
-9. Start the desired Studio Pro version and download the app project from Team Server.
-10. Check that everything is okay in your app project, and inform your App Team they can commit again.
+7. Back in Windows Explorer, right-click the folder again, select **TortoiseSVN** > **Commit**, enter your commit message, and click **OK**.
+8. Start the desired Studio Pro version and download the app project from Team Server.
+9. Check that everything is okay in your app project.
+10. Inform your App Team that they need to do a fresh checkout of the app project or run **TortoiseSVN** > **Update** on their project folder before opening the project in the desired Studio Pro version again.
 
 ## 10 Read More
 
 * [Advanced Branching and Merging Strategies](https://www.mendix.com/blog/advanced-branching-merging-strategies-part-1-2/)
-

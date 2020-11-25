@@ -29,7 +29,7 @@ Before starting this how-to you will need the following:
 
 * Be familiar with app modelling using [external entities](/refguide/external-entities)
 
-* URL of a valid published OData v3 or v4 metadata contract or have a locally stored metadata contract
+* Have a URL of a valid published OData v3 or v4 metadata contract or a locally stored metadata contract – an example file to use in this how to is described in [using a sample OData service](#using a sample OData service)
 
 	{{% alert type="info" %}}The OData metadata contract is the file  `$metadata` file and in Studio Pro the URL is displayed under the **Settings** tab of the **Published OData Service** document:
 	
@@ -40,11 +40,13 @@ Before starting this how-to you will need the following:
   {{% alert type="info" %}}You can create a simple published OData service by following the steps in [Section 3: Creating an App](/data-hub/share-data/index#createapp) and [Section 4: Publishing to the Data Hub Catalog](/data-hub/share-data/index#publishing) of the Data Hub how-to [Share Data Between Apps](/data-hub/share-data/index).
   {{% /alert %}}
 
+
+
 ## 3 Consuming an OData Service using the URL {#consumeurl}
 
 When you search for a data source in the [Data Hub](/refguide/data-hub-pane) pane you will be presented with all the registered assets in the [Dat Hub Catalog](/data-hub/data-hub-catalog/search) that satisfy your search criteria. These assets are exposed in, and registered as, published OData services in the **Data Hub Catlog**. When you drag an entity from the **Data Hub** pane into your domain model, the asset metadata contract is accessed at the service endpoint and a **Consumed OData Servcice** document is added to the app project module showing all the information in the contractat. 
 
-If you have the URL of your OData service, you can use it to consume the service directly into your module and see the exposed entities in the **Data Hub** project pane and drage them into your domain model. During app development and testing phases this means that you can deploy your app locally and without taking up a cloud slot. 
+If you have the URL of your OData service, you can use it to consume the service directly into your module and see the exposed entities in the **Data Hub** project pane and drag them into your domain model. During app development and testing phases this means that you can deploy your app locally and without taking up a cloud slot and can speed up a process that possibly has to go through several iterations.
 
 Follow these steps to consume a published Odata service directly using the URL:
 

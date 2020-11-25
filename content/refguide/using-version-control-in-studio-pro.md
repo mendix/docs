@@ -370,6 +370,25 @@ If you perform branching outside of Studio Pro, you will not be able to immediat
 
 To fix this, make a small commit on your branch in Studio Pro (for example, changing a documentation field). Studio Pro will then add the metadata that Mendix Cloud deployment requires, and you will be able to deploy your app.
 
+### 9.5 Reverting an accidental Studio Pro upgrade of your model
+
+When working in different projects under different Studio Pro versions you may one day find your self with a model upgraded and commited to a newer Studio Pro version, while the the rest of the team is not yet ready to upgrade. 
+
+To undo this version upgrade of the model follow these steps:
+1. Inform your team, and prevent them from doing further commits.
+2. Close Studio Pro 
+3. In Windows Explorer go to your main project directy
+4. Right click the directory and open with SVN Show Log. 
+5. In SVN
+5.1 Select the latest version that was in the right Studio Pro version
+5.2 Right click that version and select "revert to this version", confirm and close with ok
+6 Right click on the folder again and now select "SVN Commit", enter your commit messageand click OK
+7 After your commit has finished, remove or rename your main project folder
+8 Start Studio Pro (the desired version) and download the project from team server
+9 Check that everything is OK & inform your team
+
+
+
 ## 10 Read More
 
 * [Advanced Branching and Merging Strategies](https://www.mendix.com/blog/advanced-branching-merging-strategies-part-1-2/)

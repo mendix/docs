@@ -15,10 +15,6 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ### November 26th, 2020
 
-#### Improvements
-
-* We now prevent you from starting or stopping your apps during a maintenance window to prevent issues occurring during the maintenance.
-
 #### Fixes
 
 * We fixed an issue where you could not set the value for a constant which was defined as long to a value greater than the maximum value for an integer.
@@ -29,9 +25,6 @@ For information on the current status of deployment to Mendix Cloud and any plan
 #### Improvements
 
 * We added support to generate 1024x1024 App Store icons for iOS.
-
-#### Fixes
-
 * We resolved an issue where an incorrect debugger password was sometimes shown for Mendix Cloud v4 apps in the Developer Portal. This meant that customers were not able to connect to the debugger. (Ticket 105317)
 
 ### October 26th, 2020

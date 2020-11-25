@@ -12,11 +12,11 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 ### November 26th, 2020
 
 #### Improvements
-* The Service [Metadata](/data-hub/data-hub-catalog/) panel on the right of the the Data Hub Catalog search details page has been reorganised to improve the grouping of the service metadata 
+* The Service [Metadata](/data-hub/data-hub-catalog/search#metadata) panel on the right side of the the Data Hub Catalog search details page has been reorganised to improve the grouping of the service metadata 
 
 #### Fixes
 
-* You can now sign-out from the Mendix Platform from the Mendix top bar when you click on the account avatar
+* You can now sign-out from the Mendix platform from the Mendix top bar when you click on the account avatar.
 
 #### November 19th, 2020
 

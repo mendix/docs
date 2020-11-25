@@ -16,7 +16,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 #### Fixes
 
-* You can now sign-out from the Mendix platform from the Mendix top bar when you click on the account avatar.
+* You can now sign-out from the Mendix Platform from the Mendix top bar when you click on the account avatar.
 
 #### November 19th, 2020
 

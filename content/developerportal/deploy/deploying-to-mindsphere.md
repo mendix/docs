@@ -367,6 +367,12 @@ If you are on a **Developer** tenant, no additional MindSphere API roles are ass
 
 Please note, for further configuration of your registration e.g. CSPs or additional roles, please use the Developer Cockpit.
 
+{{% alert type="info" %}}
+You can have multiple versions of your app within the Developer Cockpit, for example versions with different configurations or roles and scopes. 
+
+The deployment registered via the **Auto Registration** process is *always mapped to the version created during the process*. If you want to create additional versions of your app, you can do this by manually creating a new version within the Developer Cockpit.
+{{% /alert %}}
+
 #### 5.3.2 Option B: Configuring the Mendix App in the Developer Cockpit
 
 ##### 5.3.2.1 Creating a New Application

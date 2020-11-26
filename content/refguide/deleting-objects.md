@@ -45,7 +45,7 @@ This setting defines whether data sources are rerun after objects are deleted fr
 Default: *No*
 
 {{% alert type="info" %}}
-To make pages of a Mendix app efficient, many widgets display values from an object value which is cached on the page. Attributes in widgets which use cached data are *always* reflected in the client irrespective of the value of **Refresh in client**. When an object is deleted, it will display any attributes as null, but the object will still be displayed (for example, there will be a blank entry for the deleted object in a list view) 
+To make pages of a Mendix app efficient, many widgets display values from an attribute of an object which is cached on the page. Attributes in widgets which use cached data are *always* reflected in the client even if they are not committed and irrespective of the value of **Refresh in client**. When an object is deleted, it will display any attributes as null, but the object will still be displayed (for example, there will be a blank entry for the deleted object in a list view) 
 
 If **Refresh in client** is set to *Yes* then all widgets will be updated, including those which are only updated when a [data source](data-sources) is loaded. 
 

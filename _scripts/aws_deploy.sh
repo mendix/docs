@@ -8,12 +8,20 @@ echo "Renaming all .html files to have no suffix"
 cd $TRAVIS_BUILD_DIR/_site # change to root directory of the site
 find . -name '*.html' -type f | while read NAME ; do mv "${NAME}" "${NAME%.html}" ; done # Rename all .html files to remove the suffix
 
+######################################################################################################################
+#                                                                                                                    #
+# Removing redirectaws and using aliases in markdown frontmatter instead                                             #
+#                                                                                                                    #
+######################################################################################################################
+#
 # Need to run the redirects first so that the dummy files are created and the old redirects are not deleted from AWS
-start=$SECONDS
-echo "Starting setup of redirection"
-chmod +x $TRAVIS_BUILD_DIR/_scripts/redirectaws.sh
-source $TRAVIS_BUILD_DIR/_scripts/redirectaws.sh # source ensures that script can read TARGETAWSBUCKET
-echo "Setting up redirects took $((SECONDS - start)) seconds"  
+#
+# start=$SECONDS
+# echo "Starting setup of redirection"
+# chmod +x $TRAVIS_BUILD_DIR/_scripts/redirectaws.sh
+# source $TRAVIS_BUILD_DIR/_scripts/redirectaws.sh # source ensures that script can read TARGETAWSBUCKET
+# echo "Setting up redirects took $((SECONDS - start)) seconds"  
+######################################################################################################################
 
 # HUGO creates new files with a newer timestamp so this will always push all the html - this catches all single character changes at the expense of time. Rely on size only for images as these are unlikely to be the same size.
 start=$SECONDS

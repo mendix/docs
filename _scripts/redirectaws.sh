@@ -1,5 +1,12 @@
 #!/bin/bash
 
+#########################################################################################################
+#                                                                                                       #
+# NO LONGER RUN - REPLACED WITH USING HUGO ALIASES                                                      #
+# Left here so that we can recover it if it becomes a problem in the future                             #
+#                                                                                                       #
+#########################################################################################################
+
 set -ev
 
 #

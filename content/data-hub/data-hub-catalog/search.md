@@ -128,7 +128,7 @@ To specify the environment type for the search, click **Filter**:
 
 In the **Filters** dialog box, check the **Environment Type** that you want to restrict your search to and click, **Apply Filters**. The search results will only display hits for the specified search string in the checked environments.
 
-Click **Clear Filters** to see search results in all environments.
+Click **Clear Filters** to clear all the checked environments and click **Apply Filters** to see search results in all environments.
 
 {{% alert type="info" %}}
 The **Sandbox** filter refers to apps deployed to the Mendix Free App environment. 
@@ -191,35 +191,25 @@ Under the **Associations** tab for each entity, the associations are shown:
 
 The service metadata panel at the right of the search details page displays details of the registered service from the OData metadata files and values that have been curated in the Data Hub Catalog:
 
-![](attachments/search/metadata.png)
+ {{% image_container width="300" %}}![](attachments/search/metadata.png){{% /image_container %}}
 
-* **Classification** – the classification of the dataset for the service; end-users of the data associated with the entities exposed in the service must have the appropriate [user role](/refguide/user-roles) to have access to the data:
-	
-	* **Public** – this service information is classified as public	
-* **Internal** – the service metadata is restricted to the members of the organization
-	
-	{{% alert type="info" %}}Classifications at a service level propagate down to the entities and attributes exposed in the service. {{% /alert %}}
-	
-* **Discoverability** – the discoverability of the service so that other users can find it:
-	
-	* **Discoverable** – all users of Data Hub Catalog and Studio Pro can see and consume the service provided they meet the requirements of the **Classification**
-	
-* **Non-Discoverable** – the service is not visible and only owners of the service, Data Hub Curators, and Data Hub Admins can find and use and curate the service
-	 See [Curate Bar](#curate-bar) for changing **DIscoverability** as an owner of the service or curator.
-	
-	{{% alert type="info" %}}If an asset is set to **Non-discoverable** it will not appear in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Data Hub API.{{% /alert %}}
-	
-* **Environment Type** – indicates the quality and the status of the datasets associated with the exposed entities. The environment type can be **Production**, **Non-Production** or the Mendix Free App environment,**Sandbox** 
-
-* **Application** – link to the app in the given environment from which the OData service was published 
-
-* **Business Owner** – links to the business owner of the data that the service connects to; this is curated in the Data Hub Catalog
-
-* **Technical Owner** – technical contact of the app; by default this is the owner who registered the service. For apps hosted in the Mendix Cloud, the **Technical Owner** is the **Technical Contact** of the app in the Mendix Cloud
-
-*  **Tags** – tags that have been assigned to the service when it has been [curated](curate#tags)
-	
+* **Tags** – tags that have been assigned to the service when it has been [curated](curate#tags)
 	{{% alert type="info" %}}Tags assigned at a service level propagate down to the entities and attributes exposed in the service.{{% /alert %}}
+* **Business Owner** – links to the business owner of the data that the service connects to; this is curated in the Data Hub Catalog
+* **Technical Owner** – technical contact of the app; by default this is the owner who registered the service. For apps hosted in the Mendix Cloud, the **Technical Owner** is the **Technical Contact** of the app in the Mendix Cloud
+* **Discoverability** – the discoverability of the service so that other users can find it:
+	* **Discoverable** – all users of the Data Hub Catalog and Studio Pro can see and consume the service provided they meet the requirements of the **Classification**
+	* **Non-Discoverable** – the service is not visible in the Catalog and only owners of the service, Data Hub Curators, and Data Hub Admins can find, use, and curate the service. See [Curate Bar](#curate-bar) for changing **Discoverability** as an owner of the service or curator.
+	  {{% alert type="info" %}}If an asset is set to **Non-discoverable** it will not appear in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Data Hub API.{{% /alert %}}
+* **Access Level** – shows the access classification of the service; end-users of the data associated with the entities exposed in the service must have the appropriate [user role](/refguide/user-roles) to have access to the data:
+	* **Public** – this service is classified as public	
+	* **Internal** – the service is restricted to the members of the organization
+	{{% alert type="info" %}}Classifications at a service level propagate down to the entities and attributes exposed in the service. {{% /alert %}}
+* **Environment Type** – indicates the quality and the status of the datasets associated with the exposed entities by the environment that the app and service are deployed to. The following are the environment types: 
+  * **Production**
+  * **Non-Production** 
+  * **Sandbox** (the Mendix Free App environment) 
+* **Application** – link to the app in the given environment from which the OData service was published 
 
 ### 4.4 Curate Bar {#curate-bar}
 

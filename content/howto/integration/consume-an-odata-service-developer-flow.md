@@ -14,7 +14,7 @@ Developers who are publishing OData services can follow the steps in this how-to
 
 **This how-to will teach you how to do the following:**
 
-* Add a consumed OData Service document in your project module
+* Add a consumed OData Service document in your project model
 * Specify the published OData service using the service metadata contract URL or location of the file
 * Use the **Data Hub Project** pane to view and use exposed entities in your app development
 
@@ -69,49 +69,38 @@ In this case, you can consume the OData service by specifying the locally stored
 
 ## 4 Consuming an OData Service using the URL {#consumeurl}
 
-When you search for a data source in the [Data Hub](/refguide/data-hub-pane) pane you will be presented with all the registered assets in the [Dat Hub Catalog](/data-hub/data-hub-catalog/search) that satisfy your search criteria. These assets are exposed in, and registered as, published OData services in the **Data Hub Catlog**. When you drag an entity from the **Data Hub** pane into your domain model, the asset metadata contract is accessed at the service endpoint and a **Consumed OData Service** document is added to the app project module with the details of metadata file and this is accessed to display the entities available in the service. 
+When you search for a data source in the [Data Hub](/refguide/data-hub-pane) pane you will be presented with all the registered assets in the [Dat Hub Catalog](/data-hub/data-hub-catalog/search) that satisfy your search criteria. These assets are exposed in, and registered as, published OData services in the **Data Hub Catlog**. When you drag an entity from the **Data Hub** pane into your domain model, the asset metadata contract is accessed at the service endpoint and a **Consumed OData Service** document is added to the app project model with the details of metadata file and this is accessed to display the entities available in the service. 
 
-You can specify the URL of your OData service, to consume the service directly into your module and see the exposed entities in the **Data Hub** project. This means that you can easily drag them into your domain model. 
+You can specify the URL of your OData service, to consume the service directly into your model and see the exposed entities in the **Data Hub** project. This means that you can easily drag them into your domain model. 
 
 During app development and testing phases this means that you can deploy your app locally and without taking up a cloud slot and can speed up a process that possibly has to go through several iterations.
 
 Follow these steps to consume a published Odata service directly using the URL:
 
 1. First you will add a consumed OData service document to your model: in project explorer, right-click over the model name and select **Add other** > **Consumed OData Service**.
-
      {{% alert type="info" %}}You must have a Data Hub license to see this menu item.
      {{% /alert %}}
+2. In the **Add Consumed OData Service** dialog box, enter a name for the Consumed OData Service document that will be added to your model. In this case, accept the default **Consumed_OData_Service**  and click **OK**.
 
-2. In the **Add Consumed OData Service** dialog box, enter a name for the Consumed OData Service document that will be added to your module. In this case, accept the default **Consumed_OData_Service**  and click **OK**.
-
-3. A blank consumed OData document is added to the module and the **Metadata Editor** dialog is displayed asking you to provide the metadata file to consume from.
+3. A blank consumed OData document is added to the model and the **Metadata Editor** dialog is displayed asking you to provide the metadata file to consume from.
 
 4. By default the **Import from** is set to **URL**; click **Edit**.
-
 5. Copy the full URL of the OData service you want to consume . For the example in Section 3—[using a sample OData service](#sampleODataservice) this is: `https://services.odata.org/V3/Northwind/Northwind.svc/$metadata`.
-
 6.  Paste this in the **Metadata URL** and click **OK** twice:
-
      ![use data hub pane](attachments/consume-an-odata-service/metadata-URL-box.png)
-
-7. You will informed of the following:
+7. You will be informed of the following:
 
      ![use data hub pane](attachments/consume-an-odata-service/data-hub-pane-dialog-box.png)
 
-8. Click **OK**. The **Consumed_OData_Service** document is added to the module in the project explorer and displayed:
+8. Click **OK**. The **Consumed_OData_Service** document is added to the model in the project explorer and displayed:
 
    ![consumed odata service doc](attachments/consume-an-odata-service/consumed-odata-document.png)
-
-9.  Under **Connection**, you have to specify the **Service URL**. This information is always stored in the **Constant** document that always accompanies a **Consumed OData service**. Click **Select** and for the **Select Constant** click  **New** to create a new constant. 
-
+9.  Studio Pro requires the URL of the service as a constant so that it can use this when locating further information for the service. Under **Connection**, specify the **Service URL**. This information is always stored in the **Constant** document that always accompanies a **Consumed OData service**. Click **Select** and for the **Select Constant** click  **New** to create a new constant. 
 10. Click **OK**  to accept the default **Name**: **Consumed_OData_Service_Location**:
 
    ![constant doc](attachments/consume-an-odata-service/location-constant-document.png)
-
 11. For the **Default value** enter the service URL  `https://services.odata.org/V3/Northwind/Northwind.svc/` and click **OK**.
-
-12. In the **Data Hub** pane, the new service is listed in the **Project panel**. The green tick indicates that it is being consumed.  For further detail see the [Data Hub Project](/refguide/data-hub-pane#projectpanel) panel.
-
+12. In the **Data Hub** pane, the new service is listed in the **Project** panel. The green tick indicates that it is being consumed.  For further details see the [Data Hub Project](/refguide/data-hub-pane#projectpanel) panel.
 13. Take a few moments to explore the entities that are available in the service, and the attributes for entities (click **+** to expand the entity and display the attributes): 
 
     ![use data hub pane](attachments/consume-an-odata-service/data-hub-project-pane.png)
@@ -121,14 +110,22 @@ Follow these steps to consume a published Odata service directly using the URL:
 
 
 ## 5 Consuming an OData Service using a locally stored OData Metadata File
-If you want to consume from a file, follow up to step 3 of [Consuming an OData Service using the URL](#consumeurl) and replace step 4-6 with the following:
+If you want to consume from a file, follow up to step 3 of [Consuming an OData Service using the URL](#consumeurl) and then proceed with the following:
 
-4. In the **Metadata Editor** dialog select **File** and then click **Browse** to select a locally stored file.
+4. In the **Metadata Editor** dialog, select **File** and then click **Browse** to select a locally stored file.
+5. Select the saved `$metadata` from your files system and click **Open** in the finder. 
+6. You will be informed of the following:
 
-5. Select the saved `$metadata` file and click **Open** in the finder. 
+     ![use data hub pane](attachments/consume-an-odata-service/data-hub-pane-dialog-box.png)
 
-     ![use data hub pane](attachments/consume-an-odata-service/metadata-URL-box.png)
-In the  
+8. Click **OK**. The **Consumed_OData_Service** document is added to the model in the project explorer and the consumed service is added to the **Project**  panel in the **Data Hub** pane:
+
+   ![consumed odata service doc](attachments/consume-an-odata-service/consumed-odata-document-file.png)
+1. Under the **Metadata** tab 
+
+The green tick indicates that it is being consumed.  For further detail see the [Data Hub Project](/refguide/data-hub-pane#projectpanel) panel.
+	 ![consumed odata service doc](attachments/consume-an-odata-service/consumed-odata-document.png)
+13. Take a few moments to explore the entities that are available in the service, and the attributes for entities (click **+** to expand the entity and display the attributes): 
 
 
 

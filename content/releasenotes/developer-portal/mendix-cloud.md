@@ -13,9 +13,16 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2020
 
+### November 26th, 2020
+
+#### Fixes
+
+* We fixed an issue where you could not set the value for a constant which was defined as long to a value greater than the maximum value for an integer.
+* We fixed an issue where the Company Admin could not search through licensed nodes. (Ticket 109742)
+
 ### November 5th, 2020
 
-#### Mendix Cloud
+#### Improvements
 
 * We added support to generate 1024x1024 App Store icons for iOS.
 * We resolved an issue where an incorrect debugger password was sometimes shown for Mendix Cloud v4 apps in the Developer Portal. This meant that customers were not able to connect to the debugger. (Ticket 105317)

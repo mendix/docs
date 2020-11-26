@@ -10,34 +10,6 @@ tags: ["Control Center", "Mendix Admin", "Developer Portal", "role", "permission
 
 [**How to access? Menu item in community header?**]
 
-## Company {#company}
-
-The company page lists the name of your company and its description as well as all the people in your company on the **People** tab.
-
-If you are a Mendix Admin, you have one main permission to edit your company's details as well as perform many other tasks. As a Mendix Admin, you will see the **Admin Panel** button available, which will take you to the pages described below.
-
-## Company Settings
-
-This page presents your company's details and its Mendix Admins.
-
-On the **Company Details** tab, you can edit the **Company name** and **Description** as well as the **Company Email Domains**.  When you click **Add Domain**, a request is sent to Mendix Support. Once that domain is added, every user who signs up to Mendix wth that email domain will be assigned to your company.
-
-On the **Mendix Admins** tab, all the current Mendix Admins in your company are listed. To add a new admin, click **Add Mendix Admin**. To remove an admin, select their name in the list and click **Remove**.
-
-## Company Brand
-
-On this page, you can customize your company brand with a logo and image.
-
-The **Logo** will appear on your [company page](#company). You can add a logo and edit it here.
-
-[**What is the "company launchpad" as mentioned in the UI?**]
-
-[**Verify: icon will not be released yet**]
-
-The **Cover image** is the the background header of your company page. If you do not set one, the **Primary** color as set in the **Brand colors** section will be used instead.
-
-[**How to do draft brand that is not applied on company page right away and that can be saved as a draft? Only see Apply button, no Save as Draft or anything**]
-
 ## Members
 
 This is the page that opens first after you click **Admin Panel**.
@@ -58,7 +30,7 @@ On the **External members** tab, you can see the members outside of your company
 
 [**How to define "access" here? Supposed to show permissions? Finish describing - supposed to show less info than for company members.**]
 
-## Projects
+## App Projects
 
 ### Company Projects
 
@@ -80,11 +52,9 @@ The **Default App Roles** tab shows the default App Team roles assigned for ever
 
 [**Verify these are App Team roles; finish describing for creating new role**]
 
-## End-Users
+## Groups
 
-End-users are users outside of your company who can access the deployed app but not the app project.
-
-An **App Access Group** consists of end-users who will have access to accessible apps (with specific environments and roles.
+An **App Access Group** consists of end-users who will have access to accessible apps (with specific environments and roles. End-users are users outside of your company who can access the deployed app but not the app project.
 
 When you assign end-users to an app access group, they will automatically be granted access to specified app-cloud apps. Mendix Admins and company managers are able to set up these groups and specify app permissions.
 
@@ -100,6 +70,36 @@ For current app access groups, click the name of the group to open up the group 
 * **Accessible Apps** – this lists the apps accessible to the members of the group; click **Add App** to add a new app for the group 
 
 [**Finish for selecting environments and roles**]
+
+## Company Settings
+
+This page presents your company's details and its Mendix Admins.
+
+On the **Company Details** tab, you can edit the **Company name** and **Description** as well as the **Company Email Domains**.  When you click **Add Domain**, a request is sent to Mendix Support. Once that domain is added, every user who signs up to Mendix wth that email domain will be assigned to your company.
+
+On the **Mendix Admins** tab, all the current Mendix Admins in your company are listed. To add a new admin, click **Add Mendix Admin**. To remove an admin, select their name in the list and click **Remove**.
+
+### Company
+
+The company page lists the name of your company and its description as well as all the people in your company on the **People** tab.
+
+If you are a Mendix Admin, you have one main permission to edit your company's details as well as perform many other tasks. As a Mendix Admin, you will see the **Admin Panel** button available, which will take you to the pages described below.
+
+[**Admin Panel still exists?**]
+
+## Company Brand
+
+On this page, you can customize your company brand with a logo and image.
+
+The **Logo** will appear on your [company page](#company). You can add a logo and edit it here.
+
+[**What is the "company launchpad" as mentioned in the UI?**]
+
+[**Verify: icon will not be released yet**]
+
+The **Cover image** is the the background header of your company page. If you do not set one, the **Primary** color as set in the **Brand colors** section will be used instead.
+
+[**How to do draft brand that is not applied on company page right away and that can be saved as a draft? Only see Apply button, no Save as Draft or anything**]
 
 ## Security
 

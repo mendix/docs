@@ -198,11 +198,10 @@ The service metadata panel at the right of the search details page displays deta
 * **Business Owner** – links to the business owner of the data that the service connects to; this is curated in the Data Hub Catalog
 * **Technical Owner** – technical contact of the app; by default this is the owner who registered the service. For apps hosted in the Mendix Cloud, the **Technical Owner** is the **Technical Contact** of the app in the Mendix Cloud
 * **Discoverability** – the discoverability of the service so that other users can find it:
-	* **Discoverable** – all users of Data Hub Catalog and Studio Pro can see and consume the service provided they meet the requirements of the **Classification**
-	* **Non-Discoverable** – the service is not visible in the Catalog and only owners of the service, Data Hub Curators, and Data Hub Admins can find, use, and curate the service
-	  See [Curate Bar](#curate-bar) for changing **DIscoverability** as an owner of the service or curator.
-	{{% alert type="info" %}}If an asset is set to **Non-discoverable** it will not appear in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Data Hub API.{{% /alert %}}
-* **Access Level** – the classification of the service; end-users of the data associated with the entities exposed in the service must have the appropriate [user role](/refguide/user-roles) to have access to the data:
+	* **Discoverable** – all users of the Data Hub Catalog and Studio Pro can see and consume the service provided they meet the requirements of the **Classification**
+	* **Non-Discoverable** – the service is not visible in the Catalog and only owners of the service, Data Hub Curators, and Data Hub Admins can find, use, and curate the service. See [Curate Bar](#curate-bar) for changing **Discoverability** as an owner of the service or curator.
+	  {{% alert type="info" %}}If an asset is set to **Non-discoverable** it will not appear in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Data Hub API.{{% /alert %}}
+* **Access Level** – shows the access classification of the service; end-users of the data associated with the entities exposed in the service must have the appropriate [user role](/refguide/user-roles) to have access to the data:
 	* **Public** – this service is classified as public	
 	* **Internal** – the service is restricted to the members of the organization
 	{{% alert type="info" %}}Classifications at a service level propagate down to the entities and attributes exposed in the service. {{% /alert %}}

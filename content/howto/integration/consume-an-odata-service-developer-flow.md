@@ -31,19 +31,27 @@ Before starting this how-to you will need the following:
 
 * Have a URL of a valid published OData v3 or v4 metadata contract or a locally stored metadata contract – an example file to use in this how to is described in Section 3—[using a sample OData service](#sampleODataservice)
 
-	  {{% alert type="info" %}}You can create a simple published OData service by following the steps in [Section 3: Creating an App](/data-hub/share-data/index#createapp) and [Section 4: Publishing to the Data Hub Catalog](/data-hub/share-data/index#publishing) of the Data Hub how-to [Share Data Between Apps](/data-hub/share-data/index). The OData metadata contract is the file  `$metadata` file and in Studio Pro the URL is displayed under the **Settings** tab of the **Published OData Service** document:
+	  
 
-![published Odata service URL](attachments/consume-an-odata-service/metadata-contract-url.png) 
-  {{% /alert %}}
+## 3 Using a Sample Published OData Service{#sampleODataservice}
 
-## 3 Using a Sample OData Service{#sampleODataservice}
+In this how-to you can use a publically available OData service or the URL of a published OData service from a Mendix app.
 
-You can find a sample OData V3 metadata file to use in this how-to  from the OData.org website: https://www.odata.org/odata-services/. They different example OData files for the different versions of OData. You can copy the URL of of a file as described in the following steps. You can also download the sample Odata file to your computer to try consuming from a locally stored file.
+### 3.1 Sample file from OData.org
+
+You can find a sample OData V3 metadata file to use in this how-to  from the OData.org website: https://www.odata.org/odata-services/. They have example files for the different versions of OData. You can copy the URL of a file as described in the following steps. You can also download the sample Odata file to your computer to try consuming from a locally stored file.
 
 1. Go to  https://www.odata.org/odata-services/ Under the **OData v3** tab you will use the sample OData v3 example, [Northwind read only](https://services.odata.org/V3/Northwind/Northwind.svc) service. Click the link for this file or any other file that is listed for OData v3 to open the metadata file for this service.
 2. The file that you will see displayed is stored under the name `$metadata` at the web URL.
 3. So for the example used in step 1, the full URL of the file is `https://services.odata.org/V3/Northwind/Northwind.svc/$metadata`.
 4. You can download the file to your computer if you want to try consuming a locally stored file. 
+
+### 3.2 Mendix Published OData Service
+
+You can also create a simple published OData service by following the steps in [Section 3: Creating an App](/data-hub/share-data/index#createapp) and [Section 4: Publishing to the Data Hub Catalog](/data-hub/share-data/index#publishing) of the Data Hub how-to [Share Data Between Apps](/data-hub/share-data/index). The OData metadata contract is the file  `$metadata` file and in Studio Pro the URL is displayed under the **Settings** tab of the **Published OData Service** document:
+
+![published Odata service URL](attachments/consume-an-odata-service/metadata-contract-url.png) 
+  {{% /alert %}}
 
 ## 4 Consuming an OData Service using the URL {#consumeurl}
 

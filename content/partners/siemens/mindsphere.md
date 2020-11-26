@@ -3,6 +3,8 @@ title: "MindSphere"
 category: "Siemens"
 description: "Reference content for apps deployed to MindSphere"
 tags: ["Siemens", "MindSphere"]
+aliases:
+    - /xyzzy.html
 ---
 
 ## 1 Introduction

@@ -125,9 +125,11 @@ If you want to consume from a file, follow up to step 3 of [Consuming an OData S
 6. Take a few moments to explore the entities that are available in the service, and the attributes for entities (click **+** to expand the entity and display the attributes).
 
 ## 6 Working with Consumed Services without Using the Data Hub Pane
-- how to couple this back to the catalog when you want to ensure that you get the **Update** and **Switch** options (although if a different contract is detected at the specified endpoint, you will see the update arrow in the **Project** panel.
+- how is this coupled with the catalog and the **Update** and **Switch** options (although if a different contract is detected at the specified endpoint, you will see the update arrow in the **Project** panel.
 - Will there be a coupling with the consumed service,  in the catalog - when the service is registered?
-- What happens with the datasets when looking at the deployed app?
+- Modelling with locally stored datasets?
+- Have to manually change the URL info to connect with the published URL - this will be another procedure to describe copying the service URL (which is not currently available in Catalog - but is planned for the BI integration developments).
+- How do you find out the service URL of a registered asset?
 
 
 

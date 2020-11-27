@@ -112,20 +112,22 @@ Follow these steps to consume a published Odata service directly using the URL:
 ## 5 Consuming an OData Service using a locally stored OData Metadata File
 If you want to consume from a file, follow up to step 3 of [Consuming an OData Service using the URL](#consumeurl) and then proceed with the following:
 
-4. In the **Metadata Editor** dialog, select **File** and then click **Browse** to select a locally stored file.
-5. Select the saved `$metadata` from your files system and click **Open** in the finder. 
-6. You will be informed of the following:
+1. In the **Metadata Editor** dialog, select **File** and then click **Browse** to select a locally stored file.
+2. Select the saved `$metadata` from your files system and click **Open** in the finder. 
+3. You will be informed of the following:
 
      ![use data hub pane](attachments/consume-an-odata-service/data-hub-pane-dialog-box.png)
 
-8. Click **OK**. The **Consumed_OData_Service** document is added to the model in the project explorer and the consumed service is added to the **Project**  panel in the **Data Hub** pane:
-
+4. Click **OK**. The **Consumed_OData_Service** document is added to the model in the project explorer and under the **Metadata** tab you will see the metadata file with the local pathname. 
    ![consumed odata service doc](attachments/consume-an-odata-service/consumed-odata-document-file.png)
-1. Under the **Metadata** tab 
+5.  The consumed service is added to the **Project**  panel in the **Data Hub** pane and the green tick indicates that it is being consumed.  For further detail see the [Data Hub Project](/refguide/data-hub-pane#projectpanel) panel.
+	
+6. Take a few moments to explore the entities that are available in the service, and the attributes for entities (click **+** to expand the entity and display the attributes).
 
-The green tick indicates that it is being consumed.  For further detail see the [Data Hub Project](/refguide/data-hub-pane#projectpanel) panel.
-	 ![consumed odata service doc](attachments/consume-an-odata-service/consumed-odata-document.png)
-13. Take a few moments to explore the entities that are available in the service, and the attributes for entities (click **+** to expand the entity and display the attributes): 
+## 6 Working with Consumed Services without Using the Data Hub Pane
+- how to couple this back to the catalog when you want to ensure that you get the **Update** and **Switch** options (although if a different contract is detected at the specified endpoint, you will see the update arrow in the **Project** panel.
+- Will there be a coupling to the consumed service, when you search in the catalog - when the service is registered?
+- What happens with the datasets when looking at the deployed app?
 
 
 

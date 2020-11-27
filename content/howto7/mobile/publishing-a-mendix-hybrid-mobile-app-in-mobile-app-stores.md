@@ -32,7 +32,6 @@ The hybrid mobile app publishing process is based on Adobe PhoneGap. We have int
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a Mendix app with mobile support running in the Mendix Cloud, either as a free app or on a licensed cloud node
-	* If you require an app to test with, set up the [Event App](https://appstore.home.mendix.com/link/app/36793/) from the Mendix App Store as a free app to try out its mobile features 
 * Have an account for Adobe PhoneGap Build (you can create one for free [here](https://build.phonegap.com/plans/free-adobeid))
 * Have an iOS device (iPhone or iPad) for testing the iOS package that will be produced
 * Have an iOS deployment certificate and a provisioning file for which your test device is activated
@@ -46,7 +45,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 To start the packaging process, follow these steps:
 
 1. Open the [Developer Portal](https://sprintr.home.mendix.com/).
-2. Go to the project of the Mendix app that you want to publish.
+2. Go to the Mendix app that you want to publish.
 3. Go to the **Deploy > Mobile app** entry in the side menu of the project.
 4. You will be shown the **Publish App for Mobile App Stores** page, where you need to set up some options for your hybrid mobile app.
 5.  On the **App Info** tab set up the following settings for your app:</br>

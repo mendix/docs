@@ -23,22 +23,27 @@ A scroll container can consist of several scroll container regions. For more inf
 
 An example of scroll container properties is represented in the image below:
 
-{{% image_container width="300" %}}![Scroll Container Properties](attachments/container-widgets/scroll-container-properties.png)
+{{% image_container width="250" %}}![Scroll Container Properties](attachments/container-widgets/scroll-container-properties.png)
 {{% /image_container %}}
 
 Scroll container properties consist of the following sections:
 
 * [Common](#common)
-* Design Properties
+* [Design Properties](#design-properties)
 * [General](#general)
+* [Regions](#regions)
 
 ### 2.1 Common Section {#common}
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 2.2 General Section {#general}
+### 2.2 Design Properties Section {#design-properties}
 
-#### 2.2.1 Layout Mode
+{{% snippet file="refguide/design-section-link.md" %}} 
+
+### 2.3 General Section {#general}
+
+#### 2.3.1 Layout Mode
 
 This property determines in which mode the scroll container operates.
 
@@ -49,7 +54,7 @@ This property determines in which mode the scroll container operates.
 
 {{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
-#### 2.2.2 Scroll Behavior
+#### 2.3.2 Scroll Behavior
 
 This property determines what happens when the content of a region does not fit in the region.
 
@@ -60,7 +65,7 @@ This property determines what happens when the content of a region does not fit 
 
 {{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
-#### 2.2.3 Width {#width}
+#### 2.3.3 Width {#width}
 
 By default the scroll container will extend the full width of its parent widget. It can also be given a specific width, which can be defined either in pixels or percentage of its parent widget.
 
@@ -68,17 +73,17 @@ Default: *Full width*
 
 {{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
-#### 2.2.4 Width Value
+#### 2.3.4 Width Value
 
 This property is displayed only when the [Width](#width) property is set to *Pixels* or *Percentage*. This property determines the width of the scroll container, either in pixels or a percentage.
 
-#### 2.2.5 Alignment 
+#### 2.3.5 Alignment 
 
 This property is displayed only when the [Width](#width) property is set to *Pixels* or *Percentage*. The scroll container can be aligned to the left, to the right, or in the middle of its parent widget.
 
 Default: *Center*
 
-### 2.3 Regions Section
+### 2.4 Regions Section {#regions}
 
 {{% alert type="info" %}}Regions are not supported on native mobile pages.{{% /alert %}}
 
@@ -88,19 +93,19 @@ Regions define the content area of a scroll container. For more information see 
 If you add regions in a [layout](layout), they will automatically be filled with [placeholders](placeholder).
 {{% /alert %}}
 
-#### 2.3.1 Enable Top
+#### 2.4.1 Enable Top
 
 Determines whether the scroll container should contain a top region.
 
-#### 2.3.2 Enable Bottom
+#### 2.4.2 Enable Bottom
 
 Determines whether the scroll container should contain a bottom region.
 
-#### 2.3.3 Enable Left
+#### 2.4.3 Enable Left
 
 Determines whether the scroll container should contain a left region.
 
-#### 2.3.4 Enable Right
+#### 2.4.4 Enable Right
 
 Determines whether the scroll container should contain a right region.
 

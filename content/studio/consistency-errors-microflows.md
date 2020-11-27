@@ -1,9 +1,10 @@
 ---
 title: "Microflow Consistency Errors"
-category: "Consistency Errors"
+parent: "consistency-errors"
 menu_order: 30
 description: "Describes microflow consistency errors in Mendix Studio and the way to fix them."
 tags: ["studio", "consistency errors", "checks", "errors", "microflow"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 

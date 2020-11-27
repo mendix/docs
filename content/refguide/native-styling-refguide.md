@@ -21,8 +21,8 @@ You can use the `height` and `width` properties to set a widget component’s di
 A widget is composed of various elements, and each can be styled individually. You can customize your widgets using style objects. A style object is a JavaScript object with a set of attributes specific for each widget. Some of the attributes reuse properties of other elements, such as React Native’s ViewStyle, TextStyle, ImageStyle, and Colors elements. You can consult the following property sets for more information on styling properties as you customize your app:
 
 * **ViewStyle** – React Native’s [View Style](https://reactnative.dev/docs/view-style-props) property set helps you alter borders, opacity, and other general aspects of your app (the view style property set also contains layout, shadow, and transform properties)
-* **TextStyle** – React Native’s [Text](https://reactnative.dev/docs/text#style) property set will allow you to style text – using these props you can control text’s font, selection status, and more (the text property set also contains layout properties)
-* **ImageStyle** – React Native’s [Image](https://reactnative.dev/docs/image#style) property set will allow you to style images from network sources, a local library, and temporary local images – using these properties you can alter an image’s size, border, and more, while the image property set also contains layout properties (the `resizeMode` value `repeat` is not supported)
+* **TextStyle** – React Native’s [Text](https://reactnative.dev/docs/text-style-props) property set will allow you to style text – using these props you can control text’s font, selection status, and more (the text property set also contains layout properties)
+* **ImageStyle** – React Native’s [Image](https://reactnative.dev/docs/image-style-props) property set will allow you to style images from network sources, a local library, and temporary local images – using these properties you can alter an image’s size, border, and more, while the image property set also contains layout properties (the `resizeMode` value `repeat` is not supported)
 * **Colors** – React Native’s [Color Reference](https://reactnative.dev/docs/colors) property set will allow you to alter colors – you can customize colors using red-green-blue notation, change hue or saturation, and more 
 
 ### 2.1  Class Names
@@ -151,7 +151,7 @@ The image widget can be used to show a predefined image on a page, layout, or sn
 | `image`     | This has all ImageStyle properties. |       |
 | `imageDisabled` | Same properties as `image` | Overrides `image` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
 
-The default class to style all static image styles is named `Image`. Please note that images loaded from the model are styled with `NativeDynamicImage` as described in the [Image Viewer](#image-viewer) section below.
+The default class to style all static image styles is named `Image`. Please note that images loaded from the model are styled with `ImageViewer` as described in the [Image Viewer](#image-viewer) section below.
 
 ### 4.3 Page Title 
 
@@ -328,6 +328,7 @@ The widget’s style properties are structured as follows:
 | `input` | `placeholderTextColor` | This is the text color of the placeholder string. |
 | `input` | `selectionColor` | This is the highlight and cursor color of the text input. |
 | `input` | `underlineColorAndroid` | This is the color of the `input` underline. |
+| `inputFocused` | Same properties as `input` | Overrides `input` styles if the text box is focused (with Studio Pro v8.15). |
 | `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
 | `inputDisabled` | Same properties as `input` | Overrides `input` styles if the text box is non-editable. |
 | `label` | This has all TextStyle properties |   |
@@ -349,7 +350,7 @@ The default class to style all text areas is named `TextArea`.
 
 A drop-down is an input widget that can be used to display and edit enumeration attributes.
 
-Since Studio version 8.11, the drop-down widget has a new style property called `useUniformDesign: boolean` which enables the uniform design in both platforms.
+Since Studio Pro v8.11, the drop-down widget has a new style property called `useUniformDesign: boolean` which enables the uniform design in both platforms.
 
 The widget’s render hierarchy is as follows for non-uniform:
 
@@ -377,6 +378,7 @@ The widget’s render hierarchy is as follows for uniform:
 	<label>Drop down enumeration</label>
     <valueContainer>
         <value>First</value>
+	<icon/>
     </valueContainer>
 	<validationMessage>Validation feedback enumeration</validationMessage>
 </container>
@@ -403,23 +405,19 @@ The widget’s render hierarchy is as follows for uniform:
 | `pickerIOS` | This has all ViewStyle properties. |  |
 | `pickerBackdropIOS` | This has all ViewStyle properties. |   |
 | `pickerTopIOS` | This has all ViewStyle properties. |   |
-| `validationMessage` | This has all TextStyle properties. | Styles the validation message (with Studio version 8.11)|
+| `validationMessage` | This has all TextStyle properties. | Styles the validation message (with Studio Pro v8.11).|
 | `value`  | This has all TextStyle properties  | Styles the value button which toggle's dropdown and PickerIOS items. If placeholder is selected, placeholderTextColor will be applied |
-| `useUniformDesign` | `boolean` | Enables new uniformDesign (with Studio version 8.11) |
-| `value`  | `placeholderTextColor: string` | If placeholder is selected, placeholderTextColor will be applied (with Studio version 8.11)|
-| `value` | `rippleColor` | This is the color of the ripple on Android, and will be applied only when the drop-down is pressed (defaults to `rgba(0, 0, 0, 0.2)`). |
-| `value`  | `underlayColor` | This is the color while pressing the drop-down on iOS, if not set it will be defaulted to opacity only. |
-| `valueDisabled` | Same properties as `value` | Overrides `value` styles if the drop-down is non-editable |
-| `valueContainer` | This has all ViewStyle properties & rippleColor | Styles the value button's container (with Studio version 8.11)|
-| `valueContainerDisabled` | Same properties as `valueContainer` | Overrides `valueContainer` styles if the drop-down is non-editable |
-| `menuWrapper` | This has all ViewStyle properties | Styles the wrapper view surrounding all the menu items (with Studio version 8.11)|
-| `itemContainer` | This has all ViewStyle properties | Styles all the item containers in dropdown menu including selected item container (with Studio version 8.11)|
-| `itemContainer` | `rippleColor` | This is the color of the ripple on Android, and will be applied only when the drop-down item is pressed (defaults to `rgba(0, 0, 0, 0.2)`). |
-| `itemContainer`  | `underlayColor` | This is the color while pressing the drop-down item on iOS, if not set it will be defaulted to opacity only. |
-| `item` | This has all TextStlye properties | Styles all the items in dropdown menu including selected item (with Studio version 8.11)|
-| `selectedItem` | This has all TextStlye properties | Styles the selected item in dropdown menu (with Studio version 8.11)|
-| `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio version 8.11)|
-
+| `useUniformDesign` | `boolean` | Enables new uniformDesign (with Studio Pro v8.11). |
+| `iconStyle`  | This has all TextStyle properties | Styles the arrow down icon next to the value (with Studio Pro v8.15).|
+| `value`  | `placeholderTextColor: string` | If placeholder is selected, placeholderTextColor will be applied (with Studio Pro v8.11).|
+| `valueFocused`  | Same properties as `value` | Overrides `value` styles if the dropdown box is focused. (with Studio Pro v8.15).|
+| `valueContainer` | This has all ViewStyle properties & rippleColor | Styles the value button's container (with Studio Pro v8.11).|
+| `valueContainerFocused` | Same properties as `valueContainer` | Overrides `valueContainer` styles if the dropdown box is focused (with Studio Pro v8.15).|
+| `menuWrapper` | This has all ViewStyle properties | Styles the wrapper view surrounding all the menu items (with Studio Pro v8.11).|
+| `itemContainer` | This has all ViewStyle properties | Styles all the item containers in dropdown menu including selected item container (with Studio Pro v8.11).|
+| `item` | This has all TextStlye properties | Styles all the items in dropdown menu including selected item (with Studio Pro v8.11).|
+| `selectedItem` | This has all TextStyle properties | Styles the selected item in dropdown menu (with Studio Pro v8.11).|
+| `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio Pro v8.11).|
 
 ### 6.4 Check Box 
 
@@ -521,7 +519,7 @@ File widgets help your user app manage images and other files. For more informat
 
 An image viewer can be used to display an image. This widget supports the same style properties and structure as the [Image](#image) widget above.
 
-The default class to style all image viewers is named  `NativeDynamicImage`.
+The default class to style all image viewers is named  `ImageViewer`.
 
 ## 8 Button Widgets
 

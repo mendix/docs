@@ -239,6 +239,5 @@ In the previous sections you filtered the list of orders from database on attrib
 *   [Defining access rules using XPath](define-access-rules-using-xpath)
 *   [Extending Your Application with Custom Java](extending-your-application-with-custom-java)
 *   [Working With Lists in a Microflow](working-with-lists-in-a-microflow)
-*   [Triggering Logic using Microflows](triggering-logic-using-microflows)
 *   [Creating a Custom Save Button](create-a-custom-save-button)
 *   [Optimizing Retrieve Activities](optimizing-retrieve-activities)

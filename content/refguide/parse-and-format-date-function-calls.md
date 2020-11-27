@@ -170,3 +170,75 @@ the output is:
 ```java
 '7/2/74'
 ```
+
+## 6 dateTimeToEpoch
+
+{{% alert type="warning" %}}This expression is only available in Mendix versions 8.15 and above.{{% /alert %}}
+
+Returns the number of milliseconds since January 1, 1970, 00:00:00 GMT to the date.
+
+### 6.1 Input Parameters
+
+The input parameters are described in the table below:
+
+| Value | Type          |
+| ----- | ------------- |
+| Date  | Date and time |
+
+### 6.2 Output
+
+The output is described in the table below:
+
+| Value                                                        | Type   |
+| ------------------------------------------------------------ | ------ |
+| The number of milliseconds since January 1, 1970, 00:00:00 GMT to the date. | Integer/Long |
+
+### 6.3 Example
+
+If you use the following input:
+
+```java
+dateTimeToEpoch(dateTime(1974, 7, 2, 9, 50, 10))
+```
+
+The output is:
+
+```java
+141990610000
+```
+
+## 7 epochToDateTime
+
+{{% alert type="warning" %}}This expression is only available in Mendix versions 8.15 and above.{{% /alert %}}
+
+Creates a Datetime that represents the specified number of milliseconds since January 1, 1970, 00:00:00 GMT.
+
+### 7.1 Input Parameters
+
+The input parameters are described in the table below:
+
+| Value | Type          |
+| ----- | ------------- |
+| Epoch | Integer/Long |
+
+### 7.2 Output
+
+The output is described in the table below:
+
+| Value                                                        | Type   |
+| ------------------------------------------------------------ | ------ |
+| A Datetime that represents the specified number of milliseconds since January 1, 1970, 00:00:00 GMT. | Date and time |
+
+### 7.3 Example
+
+If you use the following input:
+
+```java
+epochToDateTime(141990610000)
+```
+
+The output is:
+
+```java
+dateTime(1974, 7, 2, 9, 50, 10)
+```

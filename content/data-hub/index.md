@@ -63,7 +63,7 @@ The Data Hub Admin can do the following:
 
 The Data Hub Admin for the current release of Data Hub is assigned by [Mendix Support](https://support.mendix.com/hc/en-us): please contact Mendix Support to set this up.
 
-Admin tasks are described in [Data Hub Admin Functions](general/data-hub-admin-functions).
+Admin tasks are described in [Data Hub Administration](general/data-hub-admin-functions).
 
 ### 3.3 Data Hub Curator {#curator}
 

@@ -74,6 +74,22 @@ a {
 
 }
 
+@media print {
+
+  .input-group.search-group {
+    display: none;
+  }
+
+  .sidebar-menu__content {
+    display: none;
+  }
+
+  #mx-dock-footer {
+    display: none;
+  }
+
+}
+
 :not(pre) > code {
   color: $color-code-font;
   background: $color-code-background;

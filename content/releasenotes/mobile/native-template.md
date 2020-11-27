@@ -15,11 +15,15 @@ Current versions in active development:
 
 ## 5.1.3, 5.0.7, and 4.2.5
 
+**Release date: November 27th, 2020**
+
 ### Improvements
-- We updated the iOS peer dependencies
+
+* We updated the iOS peer dependencies.
 
 ### Fixes
-* We updated the underlying DatePicker library to fix a bug with iOS 14
+
+* We updated the underlying DatePicker library to fix a bug with iOS 14.
 
 ## 3.2.2 
 

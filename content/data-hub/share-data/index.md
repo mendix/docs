@@ -11,13 +11,13 @@ This how-to will demonstrate how easy it is to build apps using data from differ
 
 * Create a simple app in Studio Pro
 * Publish an entity from the app and register it in the Data Hub Catalog 
-* Use the Data Hub Catalog to explore the entities that are available in the organization 
-* Connect to the registered entity in a new app
-* Change data in the original app and see it updated in the consuming app
+* Use the Data Hub Catalog to explore the datasources from the organization that are registered as assets 
+* Connect to the registered asset that you published earlier and use it in a new app
+* Change data in the original app and see it updated in the new or consuming app
 * See the network of shared data in the Data Hub Landscape
 
 {{% alert type="info" %}}
-To use the Mendix Data Hub a license is required, with also includes the  integration of Data Hub in Studio Pro, in order to discover shared assets in you organization and consume the shared data for building apps.
+To use the Mendix Data Hub a license is required, which also includes the  integration of Data Hub in Studio Pro. The license enables you to discover all the shared assets that are registerd in your organization and also use the Data Hub integration in Studio Pro to consume the shared datasets for building apps.
 {{% /alert %}}
 
 ## 2 Prerequisites
@@ -25,10 +25,11 @@ To use the Mendix Data Hub a license is required, with also includes the  integr
 Before starting this how-to, make sure you have completed the following prerequisite:
 
 * Install Studio Pro version [8.14.0 or above](https://appstore.home.mendix.com/link/modelers/)
+* Be familiar with app development using Mendix Studio Pro
 
 ## 3 Creating an App {#createapp} 
 
-Follow these steps to create a simple app in Studio Pro whose data you will use in another app: 
+Follow these steps to create a simple app in Studio Pro and populate it. You will you will use this data in another app through the Data Hub: 
 
 1. In Studio Pro, click **New App** to create a new app project using the **Blank App** template. Call this app *{yourname}CustomerServiceApp*.
 2. Open **MyFirstModule** > **Domain Model** and click **Entity** in the toolbar above the main window to add an entity to your domain model.

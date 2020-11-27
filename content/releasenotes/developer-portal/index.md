@@ -13,6 +13,12 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2020
 
+### November 30th, 2020
+
+#### Improvements
+
+* We changed the home page of the Developer Portal to [My Apps](/developerportal/apps-list/#my-apps)
+
 ### October 9th, 2020
 
 #### Fixes

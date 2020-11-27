@@ -64,7 +64,14 @@ The **Language** menu items are described in the table below:
 
 ## 4 Setting the End-User's Language
 
-The language which is displayed to the end-user is determined by the **Language** object which is associated with the **User** object for the current end-user via the association **User_Language**. If the end-user is not associated with a language, or if the associated language is not one of those set in the app, then the end-user will see pages in the default language.
+The language which is displayed to the end-user is determined by the **Language** object which is associated with the **User** object for the current end-user via the association **User_Language**.
+
+If the associated language is not one of those set in the app, then the end-user will see pages in the default language.
+
+If the end-user is not associated with a language, for example they are an anonymous user, the language used depends on the user's browser or operating system settings. If the language requested is not present up in the app, then the app's default language will be used. The requested language will be as follows:
+
+* for web apps – the language set as the browser's primary or preferred language
+* for mobile apps – the operating system language
 
 ![System Domain Model for User and Language](attachments/language/user-language-domain-model.png)
 

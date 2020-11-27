@@ -126,7 +126,7 @@ If you want to consume from a file, follow up to step 3 of [Consuming an OData S
 
 ## 6 Working with Consumed Services without Using the Data Hub Pane
 - how to couple this back to the catalog when you want to ensure that you get the **Update** and **Switch** options (although if a different contract is detected at the specified endpoint, you will see the update arrow in the **Project** panel.
-- Will there be a coupling to the consumed service, when you search in the catalog - when the service is registered?
+- Will there be a coupling with the consumed service,  in the catalog - when the service is registered?
 - What happens with the datasets when looking at the deployed app?
 
 

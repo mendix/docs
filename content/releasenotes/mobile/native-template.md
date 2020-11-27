@@ -10,7 +10,7 @@ For more information on native mobile app development, see the [native-template]
 
 Current versions in active development: 
 * Native Template v5.1.x applies to apps built using Studio Pro v8.15.x and above.
-* Native Template v5.0.x applies to apps built using Studio Pro v8.12.1 - 8.14.x.
+* Native Template v5.0.x applies to apps built using Studio Pro v8.12.1–8.14.x.
 * Native Template v4.2.x applies to apps built using Studio Pro up to 8.12.0.
 
 ## 5.1.3, 5.0.7, and 4.2.5

@@ -61,9 +61,9 @@ Follow these steps to create a simple app in Studio Pro and populate it. You wil
 
 ## 4 Publishing to the Data Hub Catalog {#publishing}
 
-You want to register the **Customer** entity in the Data Hub Catalog so that you provide access to the dataset that will be associated with this entity for use in other apps. To do this you have to expose the **Customer** entity in a *published OData service* in Studio Pro. OData V3 is a REST-based protocol  and a standard format that is used for registering services and the entities that are exposed in the service in the Data Hub Catalog.  
+You want to register the **Customer** entity in the Data Hub Catalog which will provide the link to access the dataset that you will input for this entity which can be used in other apps. To do this you have to expose the **Customer** entity in a *published OData service* in Studio Pro. OData v3 is a REST-based protocol  and a standard format that is used for registering services and the entities that are exposed in the service in the Data Hub Catalog.  
 
-When the app is deployed to the Mendix Cloud v4, the service is automatically registered in the Data Hub Catalog along with the exposed entity.
+When the app is deployed to the Mendix Cloud, the service is automatically registered in the Data Hub Catalog along with the exposed entity.
 
 The following steps take you through creating an OData service for your app to expose the **Customer** entity and register it in the Data Hub Catalog.
 
@@ -75,7 +75,7 @@ The following steps take you through creating an OData service for your app to e
 
 	![](attachments/share-data/expose-as-odata-resource.png)
 
-3.  In the **Select Published OData Service** dialog box, select the **MyFirstModule** > **APIs** folder and click **New** to add a new OData service. Call this published OData service *{yourname}CustomerODataService* and press **OK**. 
+3.  In the **Select Published OData Service** dialog box, select the **MyFirstModule** > **APIs** folder and click **New** to add a new OData service into this folder. Call this published OData service *{yourname}CustomerODataService* and press **OK**. 
 
 	![](attachments/share-data/select-published-odata-service.png)
 
@@ -83,11 +83,11 @@ The following steps take you through creating an OData service for your app to e
 
 	![](attachments/share-data/edit-published-resource-box.png)
 	
-4.	Click **Select…** to take a look at the list of **Exposed attributes and associations**. You will see the list of attributes that you defined in the last section. When publishing an entity to an OData service you can select the attributes that you want to expose in the service from here.
+4.	For **Entity** click **Select…** to see at the list of **Exposed attributes and associations**. You will see the list of attributes that you defined in the last section. When publishing an entity to an OData service you can select the attributes that you want to expose in the service from here and also associations.
 
-5.  Click **OK** twice to display the **OData Service** document. You will see the details of  the service that will be included in the service metadata files and be registered in the Data Hub Catalog. 
+5.  Click **OK** twice to display the **OData Service** document. You will see the details of  the service that will be included in the service metadata files and registered in the Data Hub Catalog. 
 
-	{{% alert type="info" %}}   The **Version** number that is assigned to a service is important. It is possible to have different versions of the same OData service registered in the Data Hub Catalog. A connection to an entity by a consuming app will be through a specific service and version number. {{% /alert %}}
+	{{% alert type="info" %}}   The **Version** number that is assigned to a service is important. It is possible to have different versions of the same OData service registered in the Data Hub Catalog. A connection to an entity by a consuming app will be to a specific service and version number. {{% /alert %}}
 
 	![](attachments/share-data/customer-odata-service-page.png)
 
@@ -139,7 +139,7 @@ The **{yourname}CustomerODataService** from your app is now registered in the Da
 
 7. Full details for the service is displayed in the search details screen and the service metadata panel on the right. This information was published in the OData service contract.
 
-8. As you are the owner of the service is also displayed. You have curate permissions to edit the metadata for this service and also enrich it further.  The curation bar will state "**You are the owner of the service**":
+8. As you are the owner of the service, the **Curate** bar is also displayed. You have curate permissions to edit the metadata for this service and also additional information to the registered data.  The curation bar will state "**You are the owner of the service**":
 
   ![data hub](attachments/share-data/search-details-screen.png)
 

@@ -239,6 +239,12 @@ To connect to an Azure PostgreSQL server, the Kubernetes cluster must be added t
 To connect to an Amazon RDS database, the VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster.
 {{% /alert %}}
 
+{{% alert type="info" %}}
+Enabling the **Strict TLS** option will enable full TLS certificate validation and require encryption when connecting to the Postgres server. If the Postgres server has a self-signed certificate, you'll also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
+
+Disabling **Strict TLS** will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
+{{% /alert %}}
+
 **Ephemeral** will enable you to quickly set up your environment and deploy your app, but any data you store in the database will be lost when you restart your environment.
 
 **SQL Server** will enable you to enter the values to configure a Microsoft SQL Server database. You will need to provide all the information about your SQL Server database such as plan name, host, port, user, and password. 
@@ -253,6 +259,12 @@ To connect to an Azure PostgreSQL server, the Kubernetes cluster must be added t
 
 {{% alert type="info" %}}
 For Azure SQL databases, additional parameters are required to specify the database elastic pool name, tier, service objective and maximum size.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+Enabling the **Strict TLS** option will enable full TLS certificate validation and require encryption when connecting to SQL Server. If the SQL Server has a self-signed certificate, you'll also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
+
+Disabling **Strict TLS** will attempt to connect with TLS, but skip certificate validation. If encryption is not supported, it will fall back to an unencrypted connection.
 {{% /alert %}}
 
 **Dedicated JDBC** will enable you to enter the [database configuration parameters](/refguide/custom-settings) for an existing database directly, as supported by the Mendix Runtime.
@@ -275,7 +287,13 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide)
 
 ##### 4.3.2.2 Storage Plan{#storage-plan}
 
-**Minio** will connect to a [MinIO](https://min.io/product/overview) S3-compatible object storage. You will need to provide all the information about your MinIO storage such as endpoint, access key, and secret key. The MinIO server needs to be a full-featured MinIO server and not a [MinIO Gateway](https://github.com/minio/minio/tree/master/docs/gateway).
+**Minio** will connect to a [MinIO](https://min.io/product/overview) S3-compatible object storage. You will need to provide all the information about your MinIO storage such as endpoint, access key, and secret key. The MinIO server needs to be a full-featured MinIO server, or a [MinIO Gateway](https://github.com/minio/minio/tree/master/docs/gateway) with configured etcd.
+
+{{% alert type="info" %}}
+To use TLS, specify the MinIO URL with an `https` schema, for example `https://minio.local:9000`. If MinIO has a self-signed certificate, you'll also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
+
+If the MinIO URL is specified with an `http` schema, TLS will not be used.
+{{% /alert %}}
 
 **S3 (create on-demand)** will connect to an AWS account to create S3 buckets and associated IAM accounts. Each app will receive a dedicated S3 bucket and an IAM account which only has access to that specific S3 bucket. You will need to provide all the information about your Amazon S3 storage such as plan name, region, access key, and secret key. The associated IAM account needs to have the following IAM policy (replace `<account_id>` with your AWS account number):
 
@@ -450,6 +468,18 @@ When you have configured all the resources, do the following:
 	Once the configuration has been applied you will see the message **Successfully applied all the configuration!**.
 
 5. Click **Exit Installer** to return to the landing page.
+
+#### 4.3.4 Custom TLS{#custom-tls}
+
+{{% alert type="info" %}}
+To use this option, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.7.0 or later.
+{{% /alert %}}
+
+!!! TODO how to load custom.crt
+
+{{% alert type="info" %}}
+For best results, custom TLS configuration should be used for apps running Mendix 8.15.2 and later versions.
+{{% /alert %}}
 
 ### 4.4 Confirming Namespace Configuration
 

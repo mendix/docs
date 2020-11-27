@@ -138,11 +138,18 @@ For every Mendix app environment, a new database schema and user (role) will be 
 {{% /alert %}}
 
 {{% alert type="info" %}}
-TLS is supported, and preferred if the PostgreSQL supports it.
-
-Mendix for Private Cloud will first try to connect with TLS enabled; if the server doesn't support TLS, the Mendix Operator will retry connecting without TLS.
-
+By default, Mendix for Private Cloud will first try to connect with TLS enabled; if the server doesn't support TLS, the Mendix Operator will retry connecting without TLS.
 To ensure compatibility with all PostgreSQL databases (including ones with self-signed certificates), all TLS CAs are trusted by default.
+
+If Strict TLS is enabled, Mendix for Private Cloud will connect with TLS and validate the Postgres server's TLS certificate. In this case, the connection will fail if 
+
+* the Postgres server has an invalid certificate
+* or its certificate is signed by an unknown Certificate Authority
+* or doesn't support TLS.
+
+The Mendix Operator allows to specify a custom Certificate Authorities to trust. This allows to enable Strict TLS even for databases with self-signed certificates.
+
+For best results, Strict TLS mode should be used for apps running Mendix 8.15.2 and later versions.
 {{% /alert %}}
 
 ### 4.3 Microsoft SQL Server
@@ -164,6 +171,21 @@ Some managed SQL Server databases might have restrictions or require additional 
 To use a SQL Server database, the Mendix Operator requires a master account with permissions to create new users and databases.
 
 For every Mendix app environment, a new database, user and login will be created so that the app can only access its own data.
+
+{{% /alert %}}
+
+{{% alert type="info" %}}
+By default, Mendix for Private Cloud will not enforce encryption. Encryption can be enforced in SQL Server if required.
+
+If Strict TLS is enabled, Mendix for Private Cloud will connect with TLS and validate the SQL Server's TLS certificate. In this case, the connection will fail if 
+
+* SQL Server doesn't support encryption
+* the SQL Server server has an invalid certificate
+* or its certificate is signed by an unknown Certificate Authority
+
+The Mendix Operator allows to specify a custom Certificate Authorities to trust. This allows to enable Strict TLS even for databases with self-signed certificates.
+
+For best results, Strict TLS mode should be used for apps running Mendix 8.15.2 and later versions.
 {{% /alert %}}
 
 ### 4.4 Dedicated JDBC database
@@ -196,7 +218,9 @@ For every Mendix app environment, a new bucket and user will be created so that 
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-MinIO Gateway is not supported since running MinIO in gateway mode disables the admin API and makes it impossible to create new users.
+If MinIO is installed in [Gateway](https://github.com/minio/minio/tree/master/docs/gateway) mode, it needs to be configured to use etcd.
+MinIO uses etcd to store its configuration.
+Without etcd, MinIO will disable its admin API - which is required by the Mendix Operator to create new users for each environment.
 {{% /alert %}}
 
 ### 5.3 Amazon S3

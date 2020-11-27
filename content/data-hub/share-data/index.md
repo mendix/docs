@@ -32,13 +32,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 Follow these steps to create a simple app in Studio Pro and populate it. You will you will use this data in another app through the Data Hub: 
 
 1. In Studio Pro, click **New App** to create a new app project using the **Blank App** template. Call this app *{yourname}CustomerServiceApp*.
-2. Open **MyFirstModule** > **Domain Model** and click **Entity** in the toolbar above the main window to add an entity to your domain model.
+2. In the project explorer, double click the **Domain Model** for **MyFirstModule** and click **Entity** in the toolbar above the main window to add an entity to the domain model.
 3. Double-click the entity to open its properties and change its **Name** to *Customer*.
 4.  In the **Attributes** tab, click **New** to create the following attributes for the entity:
 
 	| Name | Type |
 	| :---------- | :--------- |
-	| CustomerId  | Autonumber |
+	| CustomerID | Autonumber |
 	| FirstName   | String     |
 	| LastName    | String     |
 	| CompanyName | String     |
@@ -48,7 +48,7 @@ Follow these steps to create a simple app in Studio Pro and populate it. You wil
 	
 5. Click **OK** to see the entity and attributes in the domain model.
 6. Right-click the entity and from the menu,  select **Generate overview pages**.
-7. In the **Generate pages** dialog box, select **Atlas_Default(Atlas_UI_Resources)** as the **Content layout** and click **OK**. Overview pages for the new entity will be added in the **OverviewPages** folder of **MyFirstModule**.
+7. In the **Generate pages** dialog box, select **Atlas_Default(Atlas_UI_Resources)** as the **Content layout** and click **OK**.  Click **OK** to accept the informational box. Overview pages for the new entity will be added in the **OverviewPages** folder of **MyFirstModule**.
 
 	![](attachments/share-data/overview-pages-for-customer-entity.png)
 
@@ -61,7 +61,7 @@ Follow these steps to create a simple app in Studio Pro and populate it. You wil
 
 ## 4 Publishing to the Data Hub Catalog {#publishing}
 
-You are going to register the **Customer** entity in the Data Hub Catalog. This means you will be providing access to the data that will be associated with this entity for use in other apps. To do this you have to expose the **Customer** entity in a published OData service in Studio Pro. OData V3 is a REST-based protocol  and a standard format that is used for registering services and the entities that are exposed in the service in the Data Hub Catalog.  
+You want to register the **Customer** entity in the Data Hub Catalog so that you provide access to the dataset that will be associated with this entity for use in other apps. To do this you have to expose the **Customer** entity in a *published OData service* in Studio Pro. OData V3 is a REST-based protocol  and a standard format that is used for registering services and the entities that are exposed in the service in the Data Hub Catalog.  
 
 When the app is deployed to the Mendix Cloud v4, the service is automatically registered in the Data Hub Catalog along with the exposed entity.
 

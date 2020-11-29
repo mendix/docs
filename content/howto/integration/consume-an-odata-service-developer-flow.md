@@ -50,7 +50,7 @@ You can find a sample OData V3 metadata file to use in this how-to  from the ODa
 
 You can also create a simple published OData service by following the steps in [Section 3: Creating an App](/data-hub/share-data/index#createapp) and [Section 4: Publishing to the Data Hub Catalog](/data-hub/share-data/index#publishing) of the Data Hub how-to [Share Data Between Apps](/data-hub/share-data/index). The OData metadata contract is the file  `$metadata` file.
 
-#### 3.2.1 Published OData Service URL
+#### 3.2.1 Published OData Service URL {#publishedservice}
 For a deployed app in Studio Pro the URL is displayed under the **Settings** tab of the **Published OData Service** document:
 
 ![published Odata service URL](attachments/consume-an-odata-service/metadata-contract-url.png) 
@@ -60,7 +60,7 @@ For a deployed app in Studio Pro the URL is displayed under the **Settings** tab
 The service and the app must be deployed to an environment if you want to use the URL so that the metadata file will be created and available at the specified URL. 
 {{% /alert %}}
 
-#### 3.2.1 Published OData Service file stored locally
+#### 3.2.2 Published OData Service file stored locally
 If you are working locally and creating published OData services that you want to test, you can create a published OData service in your Mendix project and after saving your project you can **Export** the **Metadata** file locally:
 
 ![published Odata service URL](attachments/consume-an-odata-service/metadata-contract-file.png) 
@@ -80,28 +80,39 @@ Follow these steps to consume a published Odata service directly using the URL:
 1. First you will add a consumed OData service document to your model: in project explorer, right-click over the model name and select **Add other** > **Consumed OData Service**.
      {{% alert type="info" %}}You must have a Data Hub license to see this menu item.
      {{% /alert %}}
+     
 2. In the **Add Consumed OData Service** dialog box, enter a name for the Consumed OData Service document that will be added to your model. In this case, accept the default **Consumed_OData_Service**  and click **OK**.
 
 3. A blank consumed OData document is added to the model and the **Metadata Editor** dialog is displayed asking you to provide the metadata file to consume from.
 
 4. By default the **Import from** is set to **URL**; click **Edit**.
-5. Copy the full URL of the OData service you want to consume . For the example in Section 3—[using a sample OData service](#sampleODataservice) this is: `https://services.odata.org/V3/Northwind/Northwind.svc/$metadata`.
-6.  Paste this in the **Metadata URL** and click **OK** twice:
+
+5. Copy the full URL of the OData service you want to consume . For the example in described in [Using a sample OData service](#sampleODataservice) this is: `https://services.odata.org/V3/Northwind/Northwind.svc/$metadata`.
+     Alternatively, you can copy the URL of a published OData service created in your Mendix app as described in [Published OData Service URL](#publishedservice).
+
+6.  Paste the URL in the **Metadata URL** and click **OK**:
      ![use data hub pane](attachments/consume-an-odata-service/metadata-URL-box.png)
-7. You will be informed of the following:
+    
+7. The **Metadata Editor** will show the **URL** of the file that you have specified. Click **OK**: 
+
+     ![metadata editor URL](attachments/consume-an-odata-service/metadata-editor-url.png)
+
+8. You will be informed of the following:
 
      ![use data hub pane](attachments/consume-an-odata-service/data-hub-pane-dialog-box.png)
 
-8. Click **OK**. The **Consumed_OData_Service** document is added to the model in the project explorer and displayed:
+9. Click **OK**. The **Consumed_OData_Service** document is added to the model in the project explorer and displayed:
 
    ![consumed odata service doc](attachments/consume-an-odata-service/consumed-odata-document.png)
-9.  Studio Pro requires the URL of the service as a constant so that it can use this when locating further information for the service. Under **Connection**, specify the **Service URL**. This information is always stored in the **Constant** document that always accompanies a **Consumed OData service**. Click **Select** and for the **Select Constant** click  **New** to create a new constant. 
-10. Click **OK**  to accept the default **Name**: **Consumed_OData_Service_Location**:
 
-   ![constant doc](attachments/consume-an-odata-service/location-constant-document.png)
+10. Studio Pro requires the URL of the service as a constant so that it can use this when locating further information for the service. Under the **Connection** tab, you have to specify the **Service URL**. This information is always stored in the **Constant** document that always accompanies a **Consumed OData service**. Click **Select** and for the **Select Constant** click  **New** to create a new constant. 
+
+11. Click **OK**  to accept the default **Name**: *Consumed_OData_Service_Location*:
+
+![constant doc](attachments/consume-an-odata-service/location-constant-document.png)
 11. For the **Default value** enter the service URL  `https://services.odata.org/V3/Northwind/Northwind.svc/` and click **OK**.
-12. In the **Data Hub** pane, the new service is listed in the **Project** panel. The green tick indicates that it is being consumed.  For further details see the [Data Hub Project](/refguide/data-hub-pane#projectpanel) panel.
-13. Take a few moments to explore the entities that are available in the service, and the attributes for entities (click **+** to expand the entity and display the attributes): 
+12. In the **Data Hub** pane, the new service is listed in the **Project** panel. The green tick indicates that it is being consumed.  For more details about the information displayed in the **Data Hub** pane and the the **Project** ** panel see the [Data Hub Project](/refguide/data-hub-pane#projectpanel) panel.
+13. Take a few moments to explore the entities that are available in the service, and the attributes for the entities (click **+** to expand the entity and display the attributes). The **Northwind** example has many entities: 
 
     ![use data hub pane](attachments/consume-an-odata-service/data-hub-project-pane.png)
 

@@ -154,13 +154,13 @@ For more details on searching in the Data Hub Catalog and the **Search Details**
 
 You are now going to create a new app and consume the data you have added to the **Customer** entity through the **{yourname}CustomerODataService** service.
 
-Perform the following steps:
+To do this follow these steps:
 
 1. In Studio Pro, create a new app using the **Blank App** template and call it *{yourname}CustomerActionsApp*.
 
 2. Go to the domain model.
 
-	The **Data Hub** pane will be displayed on the right. 
+	The **Data Hub** pane is displayed on the right. 
 	
 	  {{% image_container width="300" %}}![data hub pane](attachments/share-data/data-hub-pane-empty.png){{% /image_container %}}
 	
@@ -169,9 +169,9 @@ Perform the following steps:
 
 3. In the [Data Hub](/refguide/data-hub-pane) pane, enter the search string *customer*.
 
-	The search results will be listed in the **Data Hub** pane showing all the services and entities satisfying this search string. You will note that the app that you have created is not listed.
+	The search results will be listed in the **Data Hub** pane showing all the registered assets (services, entities,and attributes) satisfying this search string. You will note that the app that you have created previously is not listed.
 	
-	By default, search in the **Data Hub** pane will only show services in production environments. The app that you have deployed in this how-to was deployed to the Mendix Cloud for Free Apps. 
+	By default, search in the **Data Hub** pane will only show services in production environments. The app that you have deployed in this how-to was deployed to the Mendix Cloud for Free Apps, **Sandbox**. 
 
 4. Click the **Filter** icon next to the search area to include this non-production environment in your search:  
 

@@ -70,7 +70,7 @@ If the associated language is not one of those set in the app, then the end-user
 
 If the end-user is not associated with a language, for example they are an anonymous user, the language used depends on the user's browser or operating system settings. If the language requested is not present up in the app, then the app's default language will be used. The requested language will be as follows:
 
-* for web apps – the language set as the browser's primary or preferred language
+* for web apps – the first language which matches a language set in the app based on the browser's preferred order of languages
 * for mobile apps – the operating system language
 
 ![System Domain Model for User and Language](attachments/language/user-language-domain-model.png)

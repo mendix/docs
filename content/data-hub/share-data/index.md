@@ -1,7 +1,7 @@
 ---
 title: "Share Data Between Apps"
 description: "Describes how-to create a Mendix app in Studio Pro which publishes a service to the Data Hub Catalog, and creating a second app which uses external entities from the first app."
-tags: ["data hub catalog", "data hub", "external entities", "landscape", "published OData service" ,"how to", "consume"]
+tags: ["data hub catalog", "data hub", "external entities", "landscape", "published OData service","how to", "consume"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -17,7 +17,7 @@ This how-to will demonstrate how easy it is to build apps using data from differ
 * See the network of shared data in the Data Hub Landscape
 
 {{% alert type="info" %}}
-To use the Mendix Data Hub a license is required, which also includes the  integration of Data Hub in Studio Pro. The license enables you to discover all the shared assets that are registerd in your organization and also use the Data Hub integration in Studio Pro to consume the shared datasets for building apps.
+To use the Mendix Data Hub a license is required, which also includes the integration of Data Hub in Studio Pro. The license enables you to discover all the shared assets that are registered in your organization and also use the Data Hub integration in Studio Pro to consume the shared datasets for building apps.
 {{% /alert %}}
 
 ## 2 Prerequisites
@@ -47,8 +47,8 @@ Follow these steps to create a simple app in Studio Pro and populate it. You wil
 	![](attachments/share-data/entity-properties-pane.png)
 	
 5. Click **OK** to see the entity and attributes in the domain model.
-6. Right-click the entity and from the menu,  select **Generate overview pages**.
-7. In the **Generate pages** dialog box, select **Atlas_Default(Atlas_UI_Resources)** as the **Content layout** and click **OK**.  Click **OK** to accept the informational box. Overview pages for the new entity will be added in the **OverviewPages** folder of **MyFirstModule**.
+6. Right-click the entity and from the menu, select **Generate overview pages**.
+7. In the **Generate pages** dialog box, select **Atlas_Default(Atlas_UI_Resources)** as the **Content layout** and click **OK**. Click **OK** to accept the informational box. Overview pages for the new entity will be added in the **OverviewPages** folder of **MyFirstModule**.
 
 	![](attachments/share-data/overview-pages-for-customer-entity.png)
 
@@ -61,7 +61,7 @@ Follow these steps to create a simple app in Studio Pro and populate it. You wil
 
 ## 4 Publishing to the Data Hub Catalog {#publishing}
 
-You want to register the **Customer** entity in the Data Hub Catalog which will provide the link to access the dataset that you will input for this entity which can be used in other apps. To do this you have to expose the **Customer** entity in a *published OData service* in Studio Pro. OData v3 is a REST-based protocol  and a standard format that is used for registering services and the entities that are exposed in the service in the Data Hub Catalog.  
+You want to register the **Customer** entity in the Data Hub Catalog which will provide the link to access the dataset that you will input for this entity which can be used in other apps. To do this you have to expose the **Customer** entity in a *published OData service* in Studio Pro. OData v3 is a REST-based protocol and a standard format that is used for registering services and the entities that are exposed in the service in the Data Hub Catalog. 
 
 When the app is deployed to the Mendix Cloud, the service is automatically registered in the Data Hub Catalog along with the exposed entity.
 
@@ -85,9 +85,9 @@ The following steps take you through creating an OData service for your app to e
 	
 4.	For **Entity** click **Select…** to see at the list of **Exposed attributes and associations**. You will see the list of attributes that you defined in the last section. When publishing an entity to an OData service you can select the attributes that you want to expose in the service from here and also associations.
 
-5.  Click **OK** twice to display the **OData Service** document. You will see the details of  the service that will be included in the service metadata files and registered in the Data Hub Catalog. 
+5.  Click **OK** twice to display the **OData Service** document. You will see the details of the service that will be included in the service metadata files and registered in the Data Hub Catalog. 
 
-	{{% alert type="info" %}}   The **Version** number that is assigned to a service is important. It is possible to have different versions of the same OData service registered in the Data Hub Catalog. A connection to an entity by a consuming app will be to a specific service and version number. {{% /alert %}}
+	{{% alert type="info" %}}  The **Version** number that is assigned to a service is important. It is possible to have different versions of the same OData service registered in the Data Hub Catalog. A connection to an entity by a consuming app will be to a specific service and version number. {{% /alert %}}
 
 	![](attachments/share-data/customer-odata-service-page.png)
 
@@ -127,26 +127,26 @@ The **{yourname}CustomerODataService** from your app is now registered in the Da
 
    ![Data Hub screen](attachments/share-data/filter-active.png)
 
-   By default, a filter is set to show results in **Production** environments.  
+   By default, a filter is set to show results in **Production** environments. 
 
 4. Your app was deployed to the **Mendix Free App** or **Sandbox** environment so you will have to change the filter settings so that search will also show results in this environment. Click **Filter** to see the **Filters** dialog box: 
 
    ![Data Hub screen](attachments/share-data/dh-filter-box.png)
 
-5. You can either check **Sandbox** to include it in the search results and  or you can click **Clear Filters** to clear all active filters and then click **Apply Filters**. 
+5. You can either check **Sandbox** to include it in the search results and or you can click **Clear Filters** to clear all active filters and then click **Apply Filters**. 
 
 6. From the new search results list, find the service that you published and click to select it. 
 
 7. Full details for the service is displayed in the search details screen and the service metadata panel on the right. This information was published in the OData service contract.
 
-8. As you are the owner of the service, the **Curate** bar is also displayed. You have curate permissions to edit the metadata for this service and also additional information to the registered data.  The curation bar will state "**You are the owner of the service**":
+8. As you are the owner of the service, the **Curate** bar is also displayed. You have curate permissions to edit the metadata for this service and also additional information to the registered data. The curation bar will state "**You are the owner of the service**":
 
-  ![data hub](attachments/share-data/search-details-screen.png)
+ ![data hub](attachments/share-data/search-details-screen.png)
 
 
 ​	{{% alert type="info" %}}For more information about the user and curator roles in Data Hub see [Roles in Data Hub](../index#data-hub-roles).{{% /alert %}}
 
-Owners of assets registered in the catalog and curators can edit details of the registered service and also set the **Discoverability** to other users. By default, services registered through a Studio Pro deployment will be set to **Discoverable** meaning that it is visible to all users.  For further details about curating functions, see [How to Curate Registered Assets](../data-hub-catalog/curate).
+Owners of assets registered in the catalog and curators can edit details of the registered service and also set the **Discoverability** to other users. By default, services registered through a Studio Pro deployment will be set to **Discoverable** meaning that it is visible to all users. For further details about curating functions, see [How to Curate Registered Assets](../data-hub-catalog/curate).
 
 For more details on searching in the Data Hub Catalog and the **Search Details** screen, see [How to Search in the Data Hub Catalog](../data-hub-catalog/search). You can also explore registered services in the Data Hub Landscape. For more information, see [How to Use the Data Hub Landscape](../data-landscape/../data-hub-landscape/index).
 
@@ -162,18 +162,18 @@ To do this follow these steps:
 
 	The **Data Hub** pane is displayed on the right. 
 	
-	  {{% image_container width="300" %}}![data hub pane](attachments/share-data/data-hub-pane-empty.png){{% /image_container %}}
+	 {{% image_container width="300" %}}![data hub pane](attachments/share-data/data-hub-pane-empty.png){{% /image_container %}}
 	
-	If you do not see the Data Hub pane, click  **View** > **Data Hub** to display the **Data Hub** pane:
+	If you do not see the Data Hub pane, click **View** > **Data Hub** to display the **Data Hub** pane:
 		{{% image_container width="200" %}}![](attachments/share-data/view-data-hub.png){{% /image_container %}}
 
 3. In the [Data Hub](/refguide/data-hub-pane) pane, enter the search string *customer*.
 
-	The search results will be listed in the **Data Hub** pane showing all the registered assets (services, entities,and attributes) satisfying this search string. You will note that the app that you have created previously is not listed.
+	The search results will be listed in the **Data Hub** pane showing all the registered assets (services, entities, and attributes) satisfying this search string. You will note that the app that you have created previously is not listed.
 	
 	By default, search in the **Data Hub** pane will only show services in production environments. The app that you have deployed in this how-to was deployed to the Mendix Cloud for Free Apps, **Sandbox**. 
 
-4. Click the **Filter** icon next to the search area to include this non-production environment in your search:  
+4. Click the **Filter** icon next to the search area to include this non-production environment in your search: 
 
 	{{% image_container width="300" %}}![Filter Icon](attachments/share-data/filter-icon.png){{% /image_container %}}
 

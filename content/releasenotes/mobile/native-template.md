@@ -8,10 +8,11 @@ description: "Native Template release notes."
 
 For more information on native mobile app development, see the [native-template](https://github.com/mendix/native-template/) repository and [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app).
 
-Current versions in active development: 
-* Native Template v5.1.x applies to apps built using Studio Pro v8.15.x and above.
-* Native Template v5.0.x applies to apps built using Studio Pro v8.12.1–8.14.x.
-* Native Template v4.2.x applies to apps built using Studio Pro up to 8.12.0.
+These are the current versions in active development:
+
+* Native Template v5.1.x applies to apps built using Studio Pro [8.15.x](../studio-pro/8.15) and above.
+* Native Template v5.0.x applies to apps built using Studio Pro [8.12.1](../studio-pro/8.12#8121)–[8.14.x](../studio-pro/8.14).
+* Native Template v4.2.x applies to apps built using Studio Pro up to [8.12.0](../studio-pro/8.12#8120).
 
 ## 5.1.3, 5.0.7, and 4.2.5
 

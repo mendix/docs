@@ -8,6 +8,24 @@ description: "Native Template release notes."
 
 For more information on native mobile app development, see the [native-template](https://github.com/mendix/native-template/) repository and [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app).
 
+These are the current versions in active development:
+
+* Native Template v5.1.x applies to apps built using Studio Pro [8.15.x](../studio-pro/8.15) and above.
+* Native Template v5.0.x applies to apps built using Studio Pro [8.12.1](../studio-pro/8.12#8121)–[8.14.x](../studio-pro/8.14).
+* Native Template v4.2.x applies to apps built using Studio Pro up to [8.12.0](../studio-pro/8.12#8120).
+
+## 5.1.3, 5.0.7, and 4.2.5
+
+**Release date: November 27th, 2020**
+
+### Improvements
+
+* We updated the iOS peer dependencies.
+
+### Fixes
+
+* We updated the underlying DatePicker library to fix a bug with iOS 14.
+
 ## 3.2.2 
 
 **Release date: November 9th, 2020**
@@ -18,7 +36,7 @@ We fixed the Native Template for a dependency affecting Mendix Studio Pro 8.8.x.
 
 * We fixed an issue with the npm installation on the Mendix Native Template targeting Mendix Studio Pro 8.8 due to an outdated dependency.
 
-## 5.1.1,  5.0.6, and 4.2.3
+## 5.1.1,  5.0.6, and 4.2.4
 
 **Release date: November 2nd, 2020**
 

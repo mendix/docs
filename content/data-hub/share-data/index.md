@@ -183,26 +183,28 @@ To do this follow these steps:
 
 6.  Find **{yourname}CustomerODataService** and drag the **Customer** entity from this service into the domain model for your app. The consumed service and entity will be shown in the **Data Hub** pane with a green check mark against them.
 
-	{{% alert type="info" %}}Entities that are used in an app from the **Data Hub** pane are called external entities. They are displayed as purple containers in the domain model, and the name of the OData service they are exposed in is displayed.{{% /alert %}}
+7. The entity that you now have in the domain model is different to the blue entity container that is created when you create an entity in the domain model. This purple colored entity is called an *external entity*.
 
-	{{% alert type="info" %}}The properties of external entities are different from other kinds of entities because the properties that define the data in the publishing app cannot be changed in the consuming app. For further information on external entities, see [External Entities](/refguide/external-entities) in the *Studio Pro Guide*. 
-	{{% /alert %}}
-	
-7.  Click the information icon for the consumed service in the **Data Hub** Pane to see further information about the service as it is registered in the Data Hub Catalog. You can also click **View in Data Hub Catalog** to go to the service details screen in the Data Hub Catalog.
+   {{% alert type="info" %}}Entities that are used in an app from the **Data Hub** pane are called external entities. They are displayed as purple containers in the domain model, and the name of the OData service they are exposed in is displayed.{{% /alert %}}
 
-	![external entities](attachments/share-data/external-entities-in-domain-model.png)
+   {{% alert type="info" %}}The properties of external entities are different from other kinds of entities because the properties that define the data in the publishing app cannot be changed in the consuming app. For further information on external entities, see [External Entities](/refguide/external-entities) in the *Studio Pro Guide*. 
+   {{% /alert %}}
 
-	In the **Project Explorer**, the service and location documents for the external entity that you have just included in your domain model are now listed. These documents contain the metadata for the service and provide the links for connecting to the shared data.
-   
-	![external entities](attachments/share-data/external-entity-metadata-docs.png)
+8. Click the information icon for the consumed service in the **Data Hub** Pane to see further information about the service as it is registered in the Data Hub Catalog. You can also click **View in Data Hub Catalog** to go to the service details screen in the Data Hub Catalog.
 
-9. Right-click the entity and select **Generate overview pages** to generate overview pages for this entity.
+   ![external entities](attachments/share-data/external-entities-in-domain-model.png)
 
-10. In the **Generate pages** dialog box, for **Content layout** select **Atlas_Default(Atlas_UI_Resources)** and click **OK**. Overview pages for the new entity will be added to the **MyFirstModule** module.
+9. In the **Project Explorer**, the service and location documents for the external entity that you have just included in your domain model are now listed. These documents specify the metadata for the service and provide the links for connecting to the shared data.
 
-11. Open the **Home_Web** page and, from **Project Explorer**, drag **Customers_Overview** into the **Auto-fill** container under the "Welcome" banner. Go ahead and add a new banner and welcome text.
+  ![external entities](attachments/share-data/external-entity-metadata-docs.png)
 
-12. Click **Run** to deploy the app. The app will be deployed and a link established to the data associated with the **Customer** entity in the publishing app (**{yourname)CustomerServiceApp**) through the **{yourname)CustomerODataservice**.
+10. Right-click the entity and select **Generate overview pages** to generate overview pages for this entity.
+
+11. In the **Generate pages** dialog box, for **Content layout** select **Atlas_Default(Atlas_UI_Resources)** and click **OK**. Overview pages for the new entity will be added to the **MyFirstModule** module. Confirm **OK** to accept the message that informs you of this.
+
+12. Open the **Home_Web** page and, from **Project Explorer**, drag **Customers_Overview** into the **Auto-fill** container under the "Welcome" banner. Go ahead and add a new banner and welcome text.
+
+13. Click **Run** to deploy the app. The app will be deployed and a link established to the data associated with the **Customer** entity in the publishing app (**{yourname)CustomerServiceApp**) through the **{yourname)CustomerODataservice**.
 
 ## 7 Viewing the Shared Data in Your New App 
 

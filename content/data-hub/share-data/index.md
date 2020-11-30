@@ -11,7 +11,7 @@ This how-to will demonstrate how easy it is to build apps using data from differ
 
 * Create a simple app in Studio Pro
 * Publish an entity from the app and register it in the Data Hub Catalog 
-* Use the Data Hub Catalog to explore the datasources from the organization that are registered as assets 
+* Use the Data Hub Catalog to explore the data sources from the organization that are registered as assets 
 * Connect to the registered asset that you published earlier and use it in a new app
 * Change data in the original app and see it updated in the new or consuming app
 * See the network of shared data in the Data Hub Landscape

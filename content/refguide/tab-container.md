@@ -17,20 +17,24 @@ Tab containers are used to show information categorized into tabs. This can be v
 
 An example of tab container properties is represented in the image below:
 
-{{% image_container width="300" %}}![Tab Container Properties](attachments/container-widgets/tab-container-properties.png)
+{{% image_container width="250" %}}![Tab Container Properties](attachments/container-widgets/tab-container-properties.png)
 {{% /image_container %}}
 
 Tab container properties consist of the following sections:
 
 * [Common](#common)
-* Design Properties
+* [Design Properties](#design-properties)
 * [Visibility](#visibility)
 
 ### 2.1 Common Section {#common}
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 2.2 Visibility Section {#visibility}
+### 2.2 Design Properties Section {#design-properties}
+
+{{% snippet file="refguide/design-section-link.md" %}} 
+
+### 2.3 Visibility Section {#visibility}
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 
@@ -46,7 +50,7 @@ A tab container contains one or more tab pages where you place widgets. For exam
 
 Default: *False*
 
-#### 3.1.2 Refresh on Show
+#### 3.1.2 Refresh on Show {#refresh}
 
 **Refresh on show** indicates whether the contents of the tab page should be refreshed when the tab page is shown. Set this property to *No* if you know that nothing will affect the information on the tab page.
 

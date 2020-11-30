@@ -84,6 +84,7 @@ spec:
   runtime: # Configuration of the Mendix Runtime
     logAutosubscribeLevel: INFO # Default logging level
     mxAdminPassword: V2VsYzBtZSE= # base64 encoded password for MendixAdmin user. In this example, 'Welc0me!'; can be left empty keep password unchanged
+    debuggerPassword: V2VsYzBtZSE= # base64 encoded password for debuggerPassword. In this example, 'Welc0me!';
     dtapMode: P # Security & runtime mode: P for production, D for development
     logLevels: # Optional, can be omitted : set custom log levels for specific nodes
       NodeOne: CRITICAL
@@ -128,10 +129,10 @@ You need to make the following changes:
 * **resources** – change the minimum and maximum container resources your app requires
 * **logAutosubscribeLevel** – change the default logging level for your app, the standard level is INFO — possibilities are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
 * **mxAdminPassword** – here you can change the password for the MxAdmin user — if you leave this empty, the password will be the one set in the Mendix model
+* **debuggerPassword** - here you can provide the password for the debugger — this is optional. Setting an empty `debuggerPassword` will disable the debugging features. In order to connect to the debugger in Studio Pro, enter the debugger URL as `<AppURL>/debugger/`. You can find further information in [How to Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely)
 * **dtapmode** – for development of the app, for example acceptance testing, choose **D**, for production deployment, select **P**
 
     If you select production, then you will need to provide a **Subscription Secret** to ensure that your app runs as a licensed app — see [Free Apps](mendix-cloud-deploy#free-app) in *Mendix Cloud* for the differences between free/test apps and licensed apps
-    
     the subscription secret needs to be supplied via the **customConfiguration** using the following values:
 
     * `"License.SubscriptionSecret":"{subscription secret}"`
@@ -304,11 +305,11 @@ Names beginning **mendix-** cannot be used for your own apps as they are reserve
 
 All names beginning **openshift-** are reserved for use by OpenShift if you are deploying to an OpenShift cluster.
 
-### 4.2 ApplicationRootURL Needs to be Set Manually
+### 4.2 ApplicationRootUrl Needs to be Set Manually
 
 In some cases, your Mendix app will need to know its own URL - for example when using SSO or sending emails.
 
-For this to work properly, you need to set the [ApplicationRootURL variable](https://docs.mendix.com/refguide/custom-settings#2-general-settings) in `customConfiguration` to the app's URL. For example: 
+For this to work properly, you need to set the [ApplicationRootUrl variable](https://docs.mendix.com/refguide/custom-settings#2-general-settings) in `customConfiguration` to the app's URL. For example: 
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
 kind: MendixApp
@@ -316,15 +317,15 @@ metadata:
   name: example-mendixapp
 spec:
   runtime:
-    # Add the ApplicationRootURL value here
+    # Add the ApplicationRootUrl value here
     customConfiguration: |-
       {
-        "ApplicationRootURL": "https://myapp1-dev.mendix.example.com"
+        "ApplicationRootUrl": "https://myapp1-dev.mendix.example.com"
       }
 ```
 
 {{% alert type="info" %}}
-If you change `appURL`, you should also update the `ApplicationRootURL` value.
+If you change `appURL`, you should also update the `ApplicationRootUrl` value.
 
-Note that the `appURL` is a domain name (without a schema or path), while `ApplicationRootURL` should be a HTTP URL with an http:// or https:// prefix.
+Note that the `appURL` is a domain name (without a schema or path), while `ApplicationRootUrl` should be a HTTP URL with an http:// or https:// prefix.
 {{% /alert %}}

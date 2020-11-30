@@ -24,7 +24,7 @@ An example of text properties is represented in the image below:
 Text properties consist of the following sections:
 
 * [Common](#common)
-* Design Properties
+* [Design Properties](#design-properties)
 * [General](#general)
 * [Visibility](#visibility)
 
@@ -32,15 +32,19 @@ Text properties consist of the following sections:
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 2.2 General Section {#general}
+### 2.2 Design Properties Section {#design-properties}
 
-#### 2.2.1 Caption {#caption}
+{{% snippet file="refguide/design-section-link.md" %}} 
+
+### 2.3 General Section {#general}
+
+#### 2.3.1 Caption {#caption}
 
 **Caption** defines a text that will be shown. The caption can contain parameters that are written between braces, e.g. {1}.  
 
 For more information on using parameters, see the [Parameters]() section below. 
 
-#### 2.2.2 Parameters {#parameters}
+#### 2.3.2 Parameters {#parameters}
 
 Parameters are attributes the value of which will be displayed. To view **Parameters**, do one of the following:
 
@@ -60,7 +64,7 @@ Parameters have the following settings:
 
     ![Parameter Settings](attachments/common-widgets/parameter-settings.png)
 
-##### 2.2.2.1 Adding New Parameters
+##### 2.3.2.1 Adding New Parameters
 
 To use parameters, do the following:
 
@@ -78,7 +82,7 @@ To use parameters, do the following:
 
     ![Parameter Example](attachments/common-widgets/parameters-example.png)
 
-##### 2.2.2.2 Performing Other Actions on Parameters
+##### 2.3.2.2 Performing Other Actions on Parameters
 
 In addition to adding new parameters, you can perform the following actions on parameters:
 
@@ -92,7 +96,7 @@ In addition to adding new parameters, you can perform the following actions on p
 
     ![Parameter Actions](attachments/common-widgets/parameter-actions.png)
 
-#### 2.2.3 Render Mode
+#### 2.3.3 Render Mode
 
 The render mode determines how the text will be displayed. 
 

@@ -8,7 +8,6 @@ The following XPath query aggregate functions are available:
 
 * [avg](xpath-avg)
 * [count](xpath-count)
-* [id](xpath-id)
 * [max](xpath-max)
 * [min](xpath-min)
 * [sum](xpath-sum)

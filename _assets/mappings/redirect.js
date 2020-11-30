@@ -24,7 +24,7 @@ module.exports = {
 	{
       from: "/refguide/customizing-phonegap-build-packages",
       to: "/howto/mobile/customizing-phonegap-build-packages"
-    },
+    },	
 	/****************************************************
      * Reference Guide version 7 (permanent, unmapped)
      ****************************************************/	
@@ -2401,16 +2401,12 @@ module.exports = {
       from: "/refguide/web-modeler/app-settings-wm",
       to: "/studio/settings-widget-overview"
     },	
-    {
-      from: "/howto/sap/use-sap-odata-model-creator",
-      to: "/partners/sap/use-sap-odata-model-creator"
-    },	
-    {
-      from: "/refguide/siemens/mindsphere-module-details",
-      to: "/partners/siemens/mindsphere-module-details"
-    },
+	{
+      from: "/studio/general-collaborative-development",
+      to: "/studio/collaborative-development"
+    },    
 	/****************************************************
-     * From the Developer Portal (permanent, mapped) 
+     * From Developer Portal (permanent, mapped) 
      ****************************************************/
 	{
       from: "/developerportal/settings/technical-contact",
@@ -2455,10 +2451,32 @@ module.exports = {
 	{
       from: "/refguide/team-server",
       to: "/developerportal/develop/team-server"
+    },	
+	/****************************************************
+     * From Data Hub (permanent, mapped) 
+     ****************************************************/
+	{
+  	   from: "/data-hub/data-hub-catalog/use-data-catalog",
+   	   to: "/data-hub/share-data/index"
+  	},
+	{
+      from: "/datahub/general/share-data/",
+      to: "/data-hub/share-data/index"
     },
 	{
-      from: "/releasenotes/studio/8.0-and-above",
-      to: "/releasenotes/studio/"
+  	   from: "/data-hub/data-catalog/",
+	   to: "/data-hub/index"
+    },
+	/****************************************************
+     * From Strategic Partners Guide (permanent, mapped)
+     ****************************************************/
+	 {
+      from: "/howto/sap/use-sap-odata-model-creator",
+      to: "/partners/sap/use-sap-odata-model-creator"
+    },	
+    {
+      from: "/refguide/siemens/mindsphere-module-details",
+      to: "/partners/siemens/mindsphere-module-details"
     },
 	/****************************************************
      * From the App Store (permanent, mapped)

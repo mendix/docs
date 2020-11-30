@@ -16,7 +16,7 @@ This feedback comes from different sources:
 
 * Submitted via the [Mendix Feedback widget](/appstore/widgets/mendix-feedback)
 * Submitted on the **Feedback** page itself (for details, see the [Actions](#actions) section, below)
-* Submitted in Mendix Studio (for more information, see [Buzz](/studio/buzz))
+* Submitted in Mendix Studio (for more information, see [Buzz](/studio/collaboration-buzz))
 
 ## 2 Feedback Fundamentals
 

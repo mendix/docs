@@ -29,7 +29,7 @@ This widget includes the following features that can be used in a Mendix hybrid 
 
 ### 1.3 Dependencies
 
-Be sure that the Cordova plugins below are included in your PhoneGap *config.xml* file, because without them, some features will not work.
+Be sure that the Cordova plugins below are included in your *config.xml* file, because without them, some features will not work.
 
 #### 1.3.1 Spinner
 

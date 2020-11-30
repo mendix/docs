@@ -68,8 +68,8 @@ These are the properties for configuring Pie chart data:
 	* **Entity** (required) – the entity from which the data values will be retrieved
 * **Data points** tab
 	* **Name attribute** (required) – the attribute that contains the data point captions
-	* **Value attribute ** (required) – the attribute that contains the data point values
-	* **Color attribute ** (required) – the attribute that contains the data point colors
+	* **Value attribute** (required) – the attribute that contains the data point values
+	* **Color attribute** (required) – the attribute that contains the data point colors
 	* **Sort attribute** – the attribute to use for sorting the X-axis data
 
 ### 2.6 Time Series Chart {#time-series}

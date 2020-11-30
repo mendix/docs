@@ -24,7 +24,7 @@ You can choose the **AWS RDS PostgreSQL-development** standard database when you
 
 #### 2.1.2 Creating an SAP Environment for an App
 
-You can choose the **AWS RDS PostgreSQL-development** standard database when you are creating an environment from the Environments page for your app in the Developer Portal..
+You can choose the **AWS RDS PostgreSQL-development** standard database when you are creating an environment from the Environments page for your app in the Developer Portal.
 
 ![RDW AWS PostgreSQL-development option for environment](attachments/sap-postgresql-on-aws/database-new-environment.png)
 

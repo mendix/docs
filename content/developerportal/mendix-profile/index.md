@@ -133,7 +133,7 @@ These are points you can gain through activity in the [Mendix App Store](https:/
 | Activity | Points | Max. per Day |
 | --- | --- | --- |
 | Win a Mendix Hackathon! | 300 | N/A |
-| Reach the [Mendix MVP](https://developer.mendixcloud.com/link/mvp) status | 300 | N/A |
+| Reach the [Mendix MVP](https://www.mendix.com/mvp-program/) status | 300 | N/A |
 | Be the runner-up in a Mendix Hackathon | 150 | N/A |
 | Organize a [Mendix Meetup ](https://developers.mendix.com/)  | 100 | N/A |
 | Complete your Mendix Profile | 50 | N/A |
@@ -154,15 +154,15 @@ In order to receive Mendix points for your contributions to Mendix GitHub reposi
 
 | Activity | Points | Max. per Day |
 | --- | --- | --- |
-| Pass the [Expert Developer Certification](https://gettingstarted.mendixcloud.com/link/certification/expert) exam | 100 | N/A |
-| Pass the [Advanced Developer](https://gettingstarted.mendixcloud.com/link/certification/advanced) exam | 50 | N/A |
+| Pass the [Expert Developer Certification](https://academy.mendix.com/link/certification/expert) exam | 100 | N/A |
+| Pass the [Advanced Developer](https://academy.mendix.com/link/certification/advanced) exam | 50 | N/A |
 | Give a presentation on Mendix | 25 | N/A |
 | Write a blog post that is featured on the Mendix [Community Blog](https://developers.mendix.com/community-blog/) | 25 | N/A |
-| Pass the [Rapid Developer Certification](https://gettingstarted.mendixcloud.com/link/certification/rapid) exam | 25 | N/A |
-| Complete a learning path in the [Mendix Academy](https://gettingstarted.mendixcloud.com/link/home) | 25 | N/A |
+| Pass the [Rapid Developer Certification](https://academy.mendix.com/link/certification/rapid) exam | 25 | N/A |
+| Complete a learning path in the [Mendix Academy](https://academy.mendix.com/link/home) | 25 | N/A |
 | Make a large contribution to the [Mendix documentation](https://docs.mendix.com/) | 15 | N/A |
-| Attend the [Advanced Developer Course](https://gettingstarted.mendixcloud.com/link/classroom/5/Advanced/Course) | 10 | N/A |
-| Attend the [Rapid Developer Course](https://gettingstarted.mendixcloud.com/link/classroom/1/Rapid/Course) | 10 | N/A |
+| Attend the [Advanced Developer Course](https://academy.mendix.com/link/classroom/5/Advanced/Course) | 10 | N/A |
+| Attend the [Rapid Developer Course](https://academy.mendix.com/link/classroom/1/Rapid/Course) | 10 | N/A |
 | Make a small contribution to the Mendix documentation | 5 | N/A |
 | Complete a unit in the Mendix Academy | 1 | N/A |
 

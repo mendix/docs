@@ -12,6 +12,10 @@ There are two ways to edit the properties of an [association](associations). Thi
 
 You can also edit an association directly within the association tab in the entity properties. For more information see [Association Tab Properties](association-member-properties).
 
+{{% alert type="info" %}}
+Attributes properties for associated external entities are defined in the originating app and the only local changes that can be applied to these entities is a local name and description. For further information, see the [Attributes](external-entities#attributes) section of *External Entities*.
+{{% /alert %}}
+
 ## 2 Association Properties
 
 An example of the association properties is represented in the image below:
@@ -28,15 +32,13 @@ Associations have the following properties:
 
 ### 2.1 Name {#name}
 
-The name of the association is used to refer to it. For example, in forms or microflows.
+The name used to refer to the association. For example, in forms or microflows.
 
 ### 2.2 Documentation {#documentation}
 
 You can write notes and documentation in the **Documentation** property.
 
 ### 2.3 Multiplicity {#multiplicity}
-
-Multiplicity specifies the number of objects which can be referred to. It is indicated by the number one (`1`) or a star (`*`) at either side of the association.
 
 Multiplicity can be of the following types:
 
@@ -50,8 +52,6 @@ For more information about association types, see the [Type](association-member-
 
 ### 2.4 Navigability {#navigability}
 
-Navigability changes the owner of many-to-many associations. Navigability has the following options:
-
 | Navigability | Meaning | Equivalent of |
 | --- | --- | --- |
 | X objects refer to Y objects *(default)* | The owner of the association is X | An association of type **Reference set** with owner set to **Default** |
@@ -62,8 +62,6 @@ This corresponds to the **Owner** property for **Reference sets**. See the [Owne
 Despite it's name, navigability is usually only important when adding or changing associations. Making one object owner of an association does not prevent you reading the association from the non-owner end.
 
 ### 2.5 Delete Behavior {#delete-behavior}
-
-Delete behavior defines what should happen to the associated object when an object is deleted. The following options can be configured for each end of the association.
 
 | Value | Description |
 | --- | --- |

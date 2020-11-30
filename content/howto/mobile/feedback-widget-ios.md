@@ -16,12 +16,12 @@ When you first start a Mendix hybrid mobile app for iOS, the feedback button fro
 
 ## 2 Prerequisites
 
-* Ensure that you have access to the Developer Portal and the **Custom Phonegap/Cordova configuration** section on the **Mobile App** page (accessible via **DEPLOY**)
+* Ensure that you have access to the Developer Portal and the **Custom Cordova configuration** section on the **Mobile App** page (accessible via **DEPLOY**)
 * Alternatively, you can make this change directly in the *config.xml* file, if you have that available
 
 ## 3 Extending the config.xml File
 
-To make the feedback button work as it should, you need only to add two lines to your PhoneGap *config.xml* file inside the `<widget>` element:
+To make the feedback button work as it should, you need only to add two lines to your *config.xml* file inside the `<widget>` element:
 
 ```xml
 <!-- Don't block any requests -->

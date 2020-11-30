@@ -13,6 +13,17 @@ This document describes functions that are used to convert and inspect [strings]
 
 Strings are surrounded by quotes. If the string contains a quote, it should be escaped by another quote. For example: `'this isn''t funny'`.
 
+For a great deep-dive look into string functions call, check out this video:
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/EpVivdyB4i1jGvc8J9yXkt.jpg"
+  data-uuid="EpVivdyB4i1jGvc8J9yXkt"
+  data-v="4"
+  data-type="inline"
+/>
+
 ## 2 toLowerCase
 
 Converts all characters in the string to lowercase.

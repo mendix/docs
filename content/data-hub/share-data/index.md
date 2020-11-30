@@ -256,4 +256,4 @@ You can view the two apps that you have created in the Data Hub Landscape and se
 
 4. Click a node to see details of the selected item in the Data Hub Catalog metadata panel on the right. You can also click the **Search** tab to see full details in the **Search Details** screen.
 
-5. Go ahead and search for another item. For large networks, you can use your mouse to zoom in out and pan around the landscape. 
+5. Go ahead and search for another item. For large networks, you can use your mouse to zoom in out and pan to explore the network. 

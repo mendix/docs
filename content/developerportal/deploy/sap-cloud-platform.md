@@ -475,13 +475,29 @@ Mendix needs access to a relational database backend and can run using different
 
 ### 8.1 Running Mendix on PostgreSQL
 
-{{% alert type="warning" %}}
-SAP have deprecated the use of PostgreSQL databases bound via the marketplace. This means that SAP accounts created recently will not be able to directly bind PostgreSQL databases and you will have to use [SAP HANA](#sap-hana) or [AWS RDS PostgreSQL](#aws-rds) databases.
-{{% /alert %}}
+When you create your environment on SAP Cloud Platform, you can select a PostgreSQL database. This uses the **PostgreSQL on SAP Cloud Platform** database.
 
-When you create your environment on SAP Cloud Platform, you can select a PostgreSQL database. During the creation of the environment, a PostgreSQL service will be added to your space and, when you deploy your app, it will be bound to the PostgreSQL service.
+![](attachments/sap-cloud-platform/postgresql-service.png)
+
+You will need to upload a file which contains the configuration for this database – click **Browse…** to select your configuration file. You can use the [SAP Hyperscaler PostgreSQL Configurator](#postgresql-configurator) to help you create the configuration file and find more information in the *Parameters* section of [PostgreSQL on SAP Cloud Platform, Hyperscaler Option](https://help.sap.com/viewer/b3fe3621fa4a4ed28d7bbe3d6d88f036/Cloud/en-US/0630e03aa45d479eaf806c564dc2447a.html) in the *SAP Help Portal*.
+
+During the creation of the environment, the selected PostgreSQL service will be added to your space and, when you deploy your app, the app will be bound to the PostgreSQL service.
 
 This database service should not be unbound from your environment: see [Services Tab](#binding-services), above, for more information on required services.
+
+#### 8.1.2 SAP Hyperscaler PostgreSQL Configurator{#postgresql-configurator}
+
+To get help to create the configuration file, click the **Configurator** button.
+
+On the new page which is displayed you can set the required values for your **SAP Hyperscaler PostgreSQL** database. Tooltips describe the values which you need to provide. 
+
+![](attachments/sap-cloud-platform/postgresql-configurator.png)
+
+{{% alert type="warning" %}}
+There is no validation on the value of the **Source Instance ID** or **Restore Time** you enter for Standard or Premium plans. If you have issues, check that you entered the correct value here.
+{{% /alert %}}
+
+Click **Generate Configuration File** to create the file which you can then use on the **Services** tab to configure your PostgreSQL database.
 
 ### 8.2 Running Mendix on SAP HANA{#sap-hana}
 
@@ -527,9 +543,7 @@ If your trial account does not include the hanatrial schema, you will get an err
 
 ### 8.3 Running Mendix on AWS RDS PostgreSQL{#aws-rds}
 
-If you do not have any PostgreSQL databases available to bind in your marketplace, you can still use a PostgreSQL database as your Mendix database.
-
-To do this, you will need to set up a PostgreSQL database on Amazon Web Services (AWS). Instructions for doing this to support an app deployed to SAP Cloud Platform are available on the SAP Help Portal here: [PostgreSQL on Amazon](https://help.sap.com/viewer/b392039670364098a722cad3071c7af9/Cloud/en-US).
+It is also possible to set up a PostgreSQL database on Amazon Web Services (AWS) to hold the data for your app. Instructions for doing this to support an app deployed to SAP Cloud Platform are available on the SAP Help Portal here: [PostgreSQL on Amazon](https://help.sap.com/viewer/b392039670364098a722cad3071c7af9/Cloud/en-US).
 
 To use this database for your Mendix app, you will need to choose **AWS RDS PostgreSQL** when specifying your environment on SAP Cloud Platform.
 

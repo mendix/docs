@@ -60,19 +60,23 @@ Nanoflows do not support committing changes without events. Committing while run
 
 ### 3.3 Refresh in Client{#refresh-in-client}
 
-This setting defines how changes are reflected in the pages presented to the end-user.
+This setting defines whether data sources are rerun after data is committed to the database.
 
 Default: *No*
+
+{{% alert type="info" %}}
+To make pages of a Mendix app efficient, many widgets display values from an attribute of an object which is cached on the page. Attributes in widgets which use cached data are *always* reflected in the client even if they are not committed and irrespective of the value of **Refresh in client**.
+
+If a widget is only updated when a [data source](data-sources) is loaded, then changes will only be seen if changes are committed and **Refresh in client** is set to *Yes*.
+
+When testing your app, ensure that the desired data is being displayed by the widgets you have chosen.
+{{% /alert %}}
 
 #### 3.3.1 Microflow is Called from the Client in an Online App
 
 If **Refresh in client** is set to *No*, the change is not reflected in the client.
 
 If set to *Yes*, the object is refreshed across the client, which includes reloading the relevant [data sources](data-sources).
-
-{{% alert type="info" %}}
-Changed attribute values are *always* reflected in the client. If the object is committed, the object is refreshed from the Mendix Runtime, which includes updating virtual attributes. [Data sources](data-sources) are only reloaded if **Refresh in client** is set to *Yes*.
-{{% /alert %}}
 
 #### 3.3.2 Microflow is Called in an Offline, Native, or Hybrid App
 

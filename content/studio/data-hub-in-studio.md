@@ -114,6 +114,10 @@ You can rename external entity attributes to better fit your app structure. It w
 
 ![Properties of External Entity Attribute](attachments/data-hub-in-studio/external-attribute-properties.png)
 
+External attributes may have limitations that you can see in their properties. Limitation are added by the external service owner to indicate the features that are not supported. For example, if there are limitations on an attribute, you will not be able to use it in filters and/or sort on it on pages and in microflows.
+
+{{% image_container width="250" %}}![Attribute with Limitations](attachments/data-hub-in-studio/attribute-with-limitations.jpg){{% /image_container %}}
+
 {{% alert type="info" %}}
 
 You cannot delete attributes of external entities.

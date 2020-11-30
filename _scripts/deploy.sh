@@ -10,7 +10,6 @@ fi
 
 if ([ "${TRAVIS_BRANCH}" == "development" ])
 then
-  echo "Temporarily not deploying development to save Travis credits"
   cf push -f ./manifest_accp.yml
   exit 0
 fi

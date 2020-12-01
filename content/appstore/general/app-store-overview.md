@@ -34,7 +34,7 @@ It also presents various content categories:
 | --- | --- |
 | **Get Studio Pro** | All the versions of [Studio Pro](/releasenotes/studio-pro/) available for download. |
 | [Widgets](/appstore/widgets/) | Single user-interface elements that can be configured, such as containers, drop-down menus, and buttons. |
-| [App Design](/appstore/themes/) | Start building your app based on a [layout](/refguide/layout) that is ready to use with commons structures and widgets or a theme that contains styling options you can apply for different elements and devices. |
+| **App Design** | Start building your app based on a [layout](/refguide/layout) that is ready to use with commons structures and widgets or a [theme](/appstore/themes/) that contains styling options you can apply for different elements and devices. |
 | [Connectors](/appstore/connectors/) | Connectors can be used to connect your Mendix app with other systems.  |
 | [Modules](/appstore/modules/) | These elements enable new functionality with accompanying domain models and security options. |
 | **Solutions** | Fully-formed solutions for your apps. |
@@ -103,7 +103,7 @@ The **Dashboard** page presents your App Store activity:
 * Your numbers for [Published Content](#content) and [Submitted Reviews](#my-reviews)
 * [Notifications](#notifications) on components you created and favorited
 * Content [Drafts](#drafts) you have created
-* Your content [Favorites](#favorites)
+* Your content [Favorites](#saved)
 
 ![](attachments/app-store-overview/my_app_store.png)
 
@@ -133,7 +133,7 @@ On this page, you will see the following buttons:
 * **Unpublish** – click this to remove that version from the component
 	* If the component is not the protected content of a [user group](#user-groups), you can only unpublish a version that you have published yourself
 	* If the component is protected [content](#content) from a user group, a group [member](#members) can unpublish any version
-* **Edit** – click this to edit the component (for details on editing, see the [Adding New App Store Content](share-app-store-content#edit) section of *How to Share App Store Content*)
+* **Edit** – click this to edit the component (for details on editing, see the [Adding New App Store Content](share-app-store-content#adding) section of *How to Share App Store Content*)
 
 ### 4.3 Drafts {#drafts}
 
@@ -145,7 +145,7 @@ Click the name of an App Store component to be taken to the [DRAFT](share-app-st
 
 Click **Delete** to delete a draft.
 
-Click **Withdraw** to withdraw the content from the review process after you have [submitted it for approval](share-app-store-content#status), which will return the content to the draft state:
+Click **Withdraw** to withdraw the content from the review process after you have [submitted it for approval](share-app-store-content#approval), which will return the content to the draft state:
 
 ![](attachments/app-store-overview/draft-withdraw.png)
 

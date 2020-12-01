@@ -61,7 +61,7 @@ For more information on these support levels, see [App Store Content Support](/a
 
 #### Improvement
 
-You can now subscribe to receive emails when new versions of your [favorite](/appstore/general/app-store-overview#favorites) App Store content are published.
+You can now subscribe to receive emails when new versions of your [favorite](/appstore/general/app-store-overview#saved) App Store content are published.
 
 ### October 23rd, 2019
 

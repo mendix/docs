@@ -38,7 +38,7 @@ These are some general guidelines for creating new App Store content :
 * Use a relatively recent Mendix version when creating the item, not only the latest Mendix version
 * Create multiple versions of your App Store component (for example, for Studio Pro 8 and Desktop Modeler 7)
 
-Any information the end-user should know about your content can be written on the [Documentation tab](#doc-tab) when you are adding the content to the App Store.
+You can add information the end-user should know about your content to  can be added for the [Documentation](#doc) when you are adding the content to the App Store.
 
 ### 3.2 Widget Guidelines
 
@@ -130,7 +130,7 @@ To add content to the App Store, follow these steps:
 8.  On the **Package** page, select your content source:
 
 	* If you need to click **Select from GitHub**, follow the steps on the dialog box for copying the link of the release you want to import
-		* To include the repo's *README.md* file on the component's [Documentation](#doc-tab) tab, make sure you have checked the **Import Documentation** box 
+		* To include the repo's *README.md* file on the component's [Documentation](#doc) tab, make sure you have checked the **Import Documentation** box 
 		* When you are finished, click **OK**
 	* If you need to click **Manual upload**, follow the steps on the dialog box for uploading the package source file
 		* When you are finished, click **Save**
@@ -139,7 +139,7 @@ To add content to the App Store, follow these steps:
 
 	![](attachments/share-app-store-content/package.jpg)
 
-10. On the **Enable** page, you can enter details on requirements and configuration for your component in the **Documentation**. Note that this documentation option is only available when the **Import Documentation** box has not been checked. Follow the template for the recommended content:
+10. <a name="doc"></a>On the **Enable** page, you can enter details on requirements and configuration for your component in the **Documentation**. Note that this documentation option is only available when the **Import Documentation** box has not been checked. Follow the template for the recommended content:
 
 	* The documentation template includes the following sections that you must fill out in order to submit your content:
 		* An extended **Description** of the content
@@ -174,7 +174,7 @@ To add content to the App Store, follow these steps:
 After you click **Publish Content**, your draft will be reviewed by Mendix within approximately 5 working days before it is visible in the App Store.
 
 {{% alert type="info" %}}
-Review and approval by Mendix is required only for the first version of [Public Marketplace](public-app-store) content. Subsequent versions of public content do not need review or approval by Mendix. [Private Marketplace](private-app-store) content does not require any review or approval.
+<a name="approval"></a>Review and approval by Mendix is required only for the first version of [Public Marketplace](#public-app-store) content. Subsequent versions of public content do not need review or approval by Mendix. [Private Marketplace](#private-app-store) content does not require any review or approval.
 {{% /alert %}}
 
 ## 5 Updating Existing App Store Content {#updating}

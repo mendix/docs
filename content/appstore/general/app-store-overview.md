@@ -23,7 +23,6 @@ The home page of the Mendix App Store has three main tabs at the top:
 * **Discover** – the home page, where you can browse various component categories and filter what is displayed
 * **My Marketplace** – click this to go to [My App Store](#my-app-store)
 * **{Your company's private App Store page}** – click this to go to your [company's App Store](#company-content)
-* **My Subscriptions** – click this to go to the [Subscriptions](#subscriptions) page
 
 ![](attachments/app-store-overview/home-page.jpg)
 
@@ -34,16 +33,11 @@ It also presents various content categories:
 | Category | Description |
 | --- | --- |
 | **Get Studio Pro** | All the versions of [Studio Pro](/releasenotes/studio-pro/) available for download. |
-| [Layouts](/refguide/layout) | Start building your app based on a layout that is ready to use with commons structures and widgets. |
-| **Create New App** | Click this to select a app template for your new app project. |
-| [Modules](/appstore/modules/) | These elements enable new functionality with accompanying domain models and security options. |
 | [Widgets](/appstore/widgets/) | Single user-interface elements that can be configured, such as containers, drop-down menus, and buttons. |
+| [App Design](/appstore/themes/) | Start building your app based on a [layout](/refguide/layout) that is ready to use with commons structures and widgets or a theme that contains styling options you can apply for different elements and devices. |
 | [Connectors](/appstore/connectors/) | Connectors can be used to connect your Mendix app with other systems.  |
-| [Themes](/appstore/themes/) | Styling options for your apps that you can apply for different elements and devices. |
-| [App Services](/appstore/app-services/) | Domain-focused and packaged business capabilities delivered in the form of an API or an API and associated UI. |
+| [Modules](/appstore/modules/) | These elements enable new functionality with accompanying domain models and security options. |
 | **Solutions** | Fully-formed solutions for your apps. |
-
-{{% todo %}}[**Get definition of Solutions, cross-reference ASG category**]{{% /todo %}}
 
 The following filter options are also available:
 
@@ -56,7 +50,7 @@ Clicking the tile of an App Store component will bring you to its details page w
 
 ### 3.1 Header & Usage
 
-![](attachments/app-store-overview/content_detail_1.jpg)
+{{% todo %}}[**Add screenshot after release of good component example**]{{% /todo %}}
 
 The header for each component presents the following details:
 
@@ -69,12 +63,7 @@ The header for each component presents the following details:
 	* **Download** – click this to download the component
 		* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
 		* The best practice is to download a component from the App Store that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded App Store content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
-	* **Subscribe** – click this to [subscribe](#subscriptions) to a paid [platform-supported](app-store-content-support#category) app service
-	* <a name="try-for-free"></a>**Try for Free** – click this to start a free trial of the paid [platform-supported](app-store-content-support#category) component
-		* After you agree to the terms and conditions, your trial will be set up – click **Check Status** to go to the [My Subscriptions](#subscriptions) page, where you can click **Manage App Services** to go to the [Service Management](#service-management) page (you will also receive an email with a link to this page)
-		* If a [platform-supported](app-store-content-support#category) component has the **Premium** label, this means that after your free trial ends, you need to [subscribe](#subscriptions) to the component to use it
-
-	{{% todo %}}[**Verify "Subscribe", "Try for Free", and "Premium" definitions**]{{% /todo %}}
+	
 
 <a name="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
 
@@ -94,7 +83,6 @@ The **Support** section presents the category of support Mendix offers for the c
 The details page for a component presents the following item information tabs:
 
 *  **Overview** – contains the following sections:
-	
 	* **Description** – a description of the component
 	* **Screenshots** – screenshots of the component
 	* **User Reviews** – user reviews of the component; to leave a review for the component, click **Add Review** – a section will open where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page)
@@ -266,37 +254,6 @@ To remove a component from the user group, click **Remove**.
 On this tab, you can enter a **Name** and **Description** for the user group.
 
 To delete a group, a Company Admin can click **Delete Group**.
-
-## 6 My Subscriptions {#subscriptions}
-
-This page lists the app services to which you and your company have subscribed with details for **Product** (for example, **3D Visualization**), **Type** (for example, **App Service**), **Plan**, and **Expiration**.
-
-{{% todo %}}[**Verify description above, add more info and cross-references as available. How to define “subscription”? Different plans/levels – defined by provider (e.g., free trial, monthly, pro, single use, etc.)**]{{% /todo %}}
-
-![](attachments/app-store-overview/subscriptions.jpg)
-
-<a name="service-management"></a>Click **Manage App Services** to go to the **Service Management** page where you can manage the app services to which you have subscribed and create and manage binding keys.
-
-{{% todo %}}[**Add screenshot**]{{% /todo %}}
-
-On this page, you can see the **Product Name**, **Service Instance** (which is auto-configured and created automatically if clicked **Try for Free**), the **Service Binding**, and who the service was **Created By**.
-
-To use an app service you are trying for free or that you have subscribed to, you have to create a key, which you can then add as a [constant](/refguide/constants) in Studio Pro to connect your app to the app service. Follow these steps to do so:
-
-1. Select the appropriate service via **Product Name** and **Service Environment**.
-2. Click **Create Keys**, which will provide an Excel file you can download.
-3. In the Excel file, there are two keys provided: an access key and a secret key. You need both keys for Studio Pro.
-4. In Studio Pro's Project Explorer, click **Project** > **Settings** > **Edit Constant** > **Edit Configuration** > **Constants** tab.
-5. Click **New** and in the **Select Constant** dialog box, select **App Store modules** and the folder for your app service, then click **New**.
-6. Enter a name for the constant.
-7. In the **Constant** dialog box, add the access key first as the **Default value**.
-8. Do the same steps to add the secret key as a constant.
-
-{{% todo %}}[**Verify step 5 - if don't do there, where do you add constant? Verify step 6 - specify name?**]{{% /todo %}}
-
-{{% todo %}}[**Need info on service instance and binding name?**]{{% /todo %}}
-
-{{% todo %}}[**Company > Subscriptions page – what is there?**]{{% /todo %}}
 
 ## 7 Read More
 

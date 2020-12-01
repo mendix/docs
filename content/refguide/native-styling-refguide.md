@@ -151,7 +151,7 @@ The image widget can be used to show a predefined image on a page, layout, or sn
 | `image`     | This has all ImageStyle properties. |       |
 | `imageDisabled` | Same properties as `image` | Overrides `image` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
 
-The default class to style all static image styles is named `Image`. Please note that images loaded from the model are styled with `NativeDynamicImage` as described in the [Image Viewer](#image-viewer) section below.
+The default class to style all static image styles is named `Image`. Please note that images loaded from the model are styled with `ImageViewer` as described in the [Image Viewer](#image-viewer) section below.
 
 ### 4.3 Page Title 
 
@@ -519,7 +519,7 @@ File widgets help your user app manage images and other files. For more informat
 
 An image viewer can be used to display an image. This widget supports the same style properties and structure as the [Image](#image) widget above.
 
-The default class to style all image viewers is named  `NativeDynamicImage`.
+The default class to style all image viewers is named  `ImageViewer`.
 
 ## 8 Button Widgets
 

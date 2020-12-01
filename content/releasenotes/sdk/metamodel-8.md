@@ -5,6 +5,7 @@ parent: "metamodel"
 
 These are the release notes for the Mendix Metamodel version 8:
 
+* [8.16](metamodel-8.16)
 * [8.15](metamodel-8.15)
 * [8.14](metamodel-8.14)
 * [8.13](metamodel-8.13)

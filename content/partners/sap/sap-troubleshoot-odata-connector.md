@@ -16,7 +16,11 @@ If you cannot fetch the destination, it could be for one of the following reason
 
 ### 2.1 XSUAA token failed
 
-The XSUAA token is fetched from the database using the current user logged in. Check that the user is a valid SAP Cloud Platform user so that there is a valid token for that user.
+The JWT token for the currently signed-in user is not valid. You can resolve this by getting a valid token for the user.
+
+Firstly, refresh the token to fetch a valid token for the user.
+
+If refreshing the token does not work, check that the user is a valid SAP Cloud Platform user.
 
 ### 2.2 Destination name not found
 

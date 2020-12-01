@@ -133,7 +133,7 @@ These are points you can gain through activity in the [Mendix App Store](https:/
 | Activity | Points | Max. per Day |
 | --- | --- | --- |
 | Win a Mendix Hackathon! | 300 | N/A |
-| Reach the [Mendix MVP](https://developer.mendixcloud.com/link/mvp) status | 300 | N/A |
+| Reach the [Mendix MVP](https://www.mendix.com/mvp-program/) status | 300 | N/A |
 | Be the runner-up in a Mendix Hackathon | 150 | N/A |
 | Organize a [Mendix Meetup ](https://developers.mendix.com/)  | 100 | N/A |
 | Complete your Mendix Profile | 50 | N/A |

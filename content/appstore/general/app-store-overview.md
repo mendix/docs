@@ -86,14 +86,12 @@ The details page for a component presents the following item information tabs:
 	* **Description** – a description of the component
 	* **Screenshots** – screenshots of the component
 	* **User Reviews** – user reviews of the component; to leave a review for the component, click **Add Review** – a section will open where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page)
-*  **Documentation** – can include details on typical use cases, features and limitations, dependencies, installation and configuration, and frequently asked questions; [platform-supported](app-store-content-support#category) components are documented in the various categories of this *App Store Guide*:
-	
+*  **Documentation** – can include details on typical use cases, features and limitations, dependencies, installation and configuration, and frequently asked questions
+	* [Platform-supported](app-store-content-support#category) components are documented in the various categories of this *App Store Guide*
 	* Click **Edit documentation** to open a text editor where you can edit the App Store component's documentation
 * **Pricing**  – lists the pricing options (only for paid components)
 * **Releases** – lists all the versions of the component (any of which can be downloaded by clicking **Download**) along with details like the **Framework version** and the **UUID** (which can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*): 
 
-	![](attachments/app-store-overview/content_detail_8.jpg)
-	
 ## 4 My App Store {#my-app-store}
 
 ### 4.1 Dashboard {#dashboard}
@@ -167,7 +165,7 @@ This page presents a history of notifications on content you have contributed to
 
 ![](attachments/app-store-overview/notifications.png)
 
-### 4.7 Saved {#saved-components}
+### 4.7 Favorites {#saved-components}
 
 This page presents the App Store content you have [favorited](#saved):
 
@@ -255,7 +253,7 @@ On this tab, you can enter a **Name** and **Description** for the user group.
 
 To delete a group, a Company Admin can click **Delete Group**.
 
-## 7 Read More
+## 6 Read More
 
 * [How to Use App Store Content in Studio Pro](app-store-content)
 * [How to Share App Store Content](share-app-store-content)

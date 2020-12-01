@@ -10,7 +10,7 @@ tags: ["Published REST", "operation", "method", "path", "example location", "map
 
 ## 1 Introduction
 
-A published REST operation is part of a [published REST resource](published-rest-resource) and defines an endpoint that a client can call to get, put, post, patch, or delete items from the resource.
+A published REST operation is part of a [published REST resource](published-rest-resource) and defines an endpoint that a client can call to GET, PUT, POST, PATCH, or DELETE items from the resource.
 
 In the **Published REST Service** document you can add items to be included in the service as **Resources**:
 
@@ -76,14 +76,14 @@ To set the status code, reason phrase, and headers, add an [HttpResponse](http-r
 
 The result of the microflow is the result of the operation and can include the following:
 
-1. **Return a *list* or an *object*** – you must specify an export mapping to convert it to XML or JSON.
-2. **Return a primitive ** – when the microflow returns a value, for example, a string, integer, or Boolean, then the response to the operation will be that value. 
+1. **Return a *list* or an *object* **– you must specify an export mapping to convert it to XML or JSON.
+2. **Return a primitive** – when the microflow returns a value, for example, a string, integer, or Boolean, then the response to the operation will be that value. 
    {{% alert type="info" %}}
    If a non-empty value from the microflow is returned, the *Content* attribute of the *HttpResponse* object is ignored. 
    If an empty value from the microflow is returned, then the *Content* of the *HttpResponse* is taken as the result.
    {{% /alert %}}
 3.  **Return a file document** – when you want to return data that is a file (such as a PDF or image), then the microflow returns a file document.
-4. **Return a ** [HttpResponse](http-request-and-response-entities#http-response) – in the *HttpResponse*, you can set the status code, reason phrase, and content (as a string). You can fill the content with, for example, the result of a mapping or a string from another source. You can also add headers to the response. 
+4. **Return a** [HttpResponse](http-request-and-response-entities#http-response) – in the *HttpResponse*, you can set the status code, reason phrase, and content (as a string). You can fill the content with, for example, the result of a mapping or a string from another source. You can also add headers to the response. 
    {{% alert type="info" %}}
    One important header to set is *Content-Type*. Do not return an *empty* *HttpResponse* because that will always result in an error.
    {{% /alert %}}
@@ -117,36 +117,31 @@ Valid requests must contain a *Content-Type* header. See [Table 1: Recognized me
 The import mapping is also used to generate object schemas for operation responses in [OpenAPI (Swagger) documentation page](published-rest-services#interactive-documentation) based on [JSON Schema](published-rest-service-json-schema)
 
 #### 2.1.7 Response
-
 This defines the response of the operation. You can specify the type of the microflow result and the export mapping applied to it (if any).
 
 ##### 2.1.7.1 Type
-
 This shows the result type of the microflow.
 
 ##### 2.1.7.2 Export Mapping
-
 When the microflow returns an object or a list of objects, you must specify how this result is mapped to JSON or XML. Select an export mapping that takes the result of the microflow as input.
 
-If you select an export mapping that supports both XML and JSON (for example, a mapping that is based on a message definition), then the output depends on whether the microflow has a parameter of type *System.HttpResponse* and adds a *Content-Type* header to it. These are the possible scenarios:
+If you select an export mapping that supports both XML and JSON (for example, a mapping that is based on a message definition), then the output depends on whether the microflow has a parameter of type *System.HttpResponse* and adds a *Content-Type* header to it. The possible scenarios are given below:
 
-* When the microflow sets the *Content-Type* header parameter with a media type that is XML (see [Table 1: Recognized media types](#table1)), then the operation returns XML
+* When the microflow sets the *Content-Type* header parameter with a media type that is XML, then the operation returns XML as given in the table below.
 
-* When the microflow sets the *Content-Type* header to something else, then the operation returns JSON
+	| Media Type                   | Recogized As |
+	| ---                          | --- |
+	| *application/xml*            | XML |
+	| *text/xml*                   | XML |
+	| anything ending with *+xml*  | XML |
+	| *application/json*           | JSON |
+	| anything ending with *+json* | JSON |
 
-* When the microflow does not set the *Content-Type* header, then the output is determined by inspecting the *Accept* header in the request. The first media type that is recognized to be XML or JSON (see [Table 1: Recognized media types](#table1)) determines the operation result: the *Content-Type* is *application/xml* (when it is XML) or *application/json* (when it is JSON)
+* When the microflow sets the *Content-Type* header to something else, then the operation returns JSON.
 
-* When there is no *Accept* header or the *Accept* header does not contain a recognizable media type, then the operation returns JSON and the *Content-Type* is *application/json*
+* When the microflow does not set the *Content-Type* header, then the output is determined by inspecting the *Accept* header in the request. The first media type that is recognized to be XML or JSON (as given in the table above) determines the operation result: the *Content-Type* is *application/xml* (when it is XML) or *application/json* (when it is JSON).
 
-| Media Type                   | Recogized As |
-| ---                          | --- |
-| *application/xml*            | XML |
-| *text/xml*                   | XML |
-| anything ending with *+xml*  | XML |
-| *application/json*           | JSON |
-| anything ending with *+json* | JSON |
-
-<a name="table1"></a>**Table 1: Recognized media types**
+* When there is no *Accept* header or the *Accept* header does not contain a recognizable media type, then the operation returns JSON and the *Content-Type* is *application/json*.
 
 The export mapping is also used to generate object schemas for operation responses in the [OpenAPI (Swagger) documentation page](published-rest-services#interactive-documentation) based on the [JSON schema](published-rest-service-json-schema).
 
@@ -155,11 +150,9 @@ The export mapping is also used to generate object schemas for operation respons
 In the **Public Documentation** tab you can specify the documentation that will be used in the service's [OpenAPI (Swagger) documentation page](published-rest-services#interactive-documentation).
 
 #### 2.2.1 Summary {#summary}
-
 Provide a short description of what the operation does.
 
 #### 2.2.2 Description {#description}
-
 Enter a complete overview of what the operation does. You can use [GitHub-flavored markdown](gfm-syntax) syntax to style the text.
 
 ## 3 Example

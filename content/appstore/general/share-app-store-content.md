@@ -171,10 +171,10 @@ To add content to the App Store, follow these steps:
 
 	![](attachments/share-app-store-content/publish.jpg)
 
-After you click **Publish Content**, your draft will be reviewed by Mendix within approximately 5 working days before it is visible in the App Store.
+<a name="approval"></a>After you click **Publish Content**, your draft will be reviewed by Mendix within approximately 5 working days before it is visible in the App Store.
 
 {{% alert type="info" %}}
-<a name="approval"></a>Review and approval by Mendix is required only for the first version of [Public Marketplace](#public-app-store) content. Subsequent versions of public content do not need review or approval by Mendix. [Private Marketplace](#private-app-store) content does not require any review or approval.
+Review and approval by Mendix is required only for the first version of [Public Marketplace](#public-app-store) content. Subsequent versions of public content do not need review or approval by Mendix. [Private Marketplace](#private-app-store) content does not require any review or approval.
 {{% /alert %}}
 
 ## 5 Updating Existing App Store Content {#updating}

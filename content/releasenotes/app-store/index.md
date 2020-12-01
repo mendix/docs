@@ -9,6 +9,10 @@ These release notes cover changes made to the [Mendix App Store](/appstore/index
 
 ## 2020
 
+### December 15th, 2020
+
+
+
 ### May 27th, 2020
 
 #### Fix

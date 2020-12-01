@@ -419,7 +419,7 @@ In order for the Mendix Operator to trust such certificates, you need to add the
         ```
 
         For Kubernetes:
-        ```
+        ```shell
         kubectl -n {namespace} create secret generic mendix-custom-ca --from-file=custom.crt=custom.crt
         ```
 

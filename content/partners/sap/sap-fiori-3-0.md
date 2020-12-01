@@ -22,7 +22,7 @@ You can experience the SAP Fiori 3 design by using the [SAP Fiori 3 Starter App]
 
 More information on using SAP Fiori 3 design in your Mendix app is available in the following sections:
 
-* [Widgets](#widgets) – Mendix core widgets have SAP Fiori 3 styling
+* [Widgets](#widgets) – Mendix core widgets having SAP Fiori 3 styling
 * [Building Blocks](#building-blocks) – groups of widgets which can be used to quickly create SAP Fiori styled pages
 * [Layouts](#layouts) – different styles of page which can be used in your app — for example, Master/detail or Pop-Up
 * [Page Templates](#page-templates) – readily-available page templates which are already styled ready for you to use in your Mendix app
@@ -34,7 +34,7 @@ The majority of Mendix widgets have been styled to match SAP Fiori 3 styles by d
 
 There are a few cases where you will need to apply some extra CSS classes manually to achieve the correct SAP Fiori look and feel. These are described in [Applying CSS Classes Manually](#apply-css).
 
-There are also a few SAP Fiori components which are not supported by Mendix core widgets. These are listed in [Unsupported SAP Fiori Components](#unsupported-components), below.
+Some SAP Fiori components are not yet supported by Mendix core widgets. These are listed in [Unsupported SAP Fiori Components](#unsupported-components), below.
 
 ### 2.1 Examples of Mendix Core Widget Styling
 
@@ -124,7 +124,7 @@ You can see examples of the Fiori 3 building blocks by going to the **Building B
 
 ## 4 Layouts{#layouts}
 
-You can see examples of the Fiori 3 navigation layouts by going to the **Layout** page of the SAP Fiori 3 UI Resources App Store Module. These layouts are designed for use in *Responsive (Web)* applications, designed to run in a browser.
+You can see examples of the Fiori 3 navigation layouts by going to the **Layout** page of the SAP Fiori 3 UI Resources App Store Module. These layouts are designed for use in *Responsive (Web)* applications, designed to run in any modern web browser, on any device.
 
 The guidelines for the use of each layout are:
 
@@ -145,7 +145,7 @@ Here is a list of the layouts you can use.
 * SAP_MasterDetail_Sliding (SAP_3_0_UI_Resources)
 * SAP_MasterDetail_Sliding_Letterbox (SAP_3_0_UI_Resources)
 * SAP_Default_Embedded (SAP_3_0_UI_Resources)
-* SAP Default (SAP_3_0_UI_Resources)
+* SAP_Default (SAP_3_0_UI_Resources)
 * SAP_MasterDetail_Letterbox (SAP_3_0_UI_Resources)
 * SAP_MasterDetail (SAP_3_0_UI_Resources) 
 
@@ -163,8 +163,8 @@ To do this you need to trigger a nanoflow which passes a variable containing the
 
 The themes available are:
 
-* **light** *(default)* – the SAP Quartz Light theme
-* **dark** – the SAP Quartz Dark theme
+* **light** *(default)* – equivalent to the SAP Quartz Light theme
+* **dark** – equivalent to the SAP Quartz Dark theme
 * **belize**
 * **belizeDeep**
 

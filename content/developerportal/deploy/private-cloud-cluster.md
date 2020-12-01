@@ -182,7 +182,7 @@ The Mendix operator and Mendix Gateway Agent are now installed on your platform.
 
 You can now configure the resources required for your namespace.
 
-The first time you configure the namespace, you should select all the items under **Select items to configure** except **Proxy**. Only select **Proxy** if you want to configure a proxy for your namespace.
+The first time you configure the namespace, you should select all the items under **Select items to configure** except **Proxy** and **Custom TLS**. Only select **Proxy** if you want to configure a proxy for your namespace. Select **Custom TLS** only if you want to configure custom CAs for your namespace.
 
 The options do the following:
 
@@ -191,6 +191,7 @@ The options do the following:
 * **Ingress** – will configure the ingress for your namespace — if there is already an ingress, this will replace it with new settings
 * **Registry** – will configure a registry for your namespace — if there is already a registry, this will replace it with new settings
 * **Proxy** – will configure a proxy for your namespace — if there is already a proxy, this will replace it with new settings
+* **Custom TLS** – will configure custom CA trust for your namespace — if there is already a custom CA trust configuration, this will replace it with new settings
 
 1. Select the options you need to configure – the first time you configure your namespace you must check *all the first four options*.  **Proxy** is optional.
 
@@ -441,7 +442,62 @@ When choosing the **Existing docker-registry secret**, you will need to add this
 
 Choose **Yes** if a proxy is required to access the public internet from the namespace; you will be asked for the proxy configuration details.
 
-#### 4.3.4 Review and Apply
+#### 4.3.4 Custom TLS{#custom-tls}
+
+{{% alert type="info" %}}
+To use this option, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.7.0 or later.
+{{% /alert %}}
+
+To use encryption and avoid [MITM attacks](https://en.wikipedia.org/wiki/Man-in-the-middle_attack), communication with all external services should be done over TLS.
+By default, Mendix Operator trusts Certificate Authorities from the [Mozilla CA root bundle](https://wiki.mozilla.org/CA), as they are provided by default in the container image.
+
+If Mendix for Private Cloud needs to communicate with external services, some of those services might have TLS certificates signed by a custom (private) CA.
+In order for the Mendix Operator to trust such certificates, you need to add their root CAs to the Mendix Operator configuration.
+
+1. In another terminal, prepare the Kubernetes secret containing the custom root CAs list:
+   1. Create a `custom.crt` file, containing the public keys of all custom (private) CAs that Mendix for Private Cloud should trust:
+       ```
+       # Private CA 1
+       -----BEGIN CERTIFICATE-----
+       [...]
+       -----END CERTIFICATE-----
+       # Private CA 2
+       -----BEGIN CERTIFICATE-----
+       [...]
+       -----END CERTIFICATE-----
+       ```
+       (concatenate all the public keys from custom CAs into one `custom.crt` file, separating them with line breaks and optional comments).
+   2. Load into a file (replace `{namespace}` with the namespace where the Operator is installed):
+
+        For OpenShift:
+        ```shell
+        oc -n {namespace} create secret generic mendix-custom-ca --from-file=custom.crt=custom.crt
+        ```
+
+        For Kubernetes:
+        ```
+        kubectl -n {namespace} create secret generic mendix-custom-ca --from-file=custom.crt=custom.crt
+        ```
+
+2. Paste the name of this `custom.crt` Secret into the **CA Certificates Secret Name** field (e.g. `mendix-custom-ca`):
+   
+   ![Custom TLS configuration](attachments/private-cloud-cluster/custom-tls-config.png)
+
+These custom CAs will be trusted by:
+
+* The Mendix Operator when communicating with the database and file storage
+* The Mendix Operator when pushing app images to the container registry
+* Mendix Apps when communicating with the database, file storage and external web services
+
+{{% alert type="info" %}}
+To prevent MITM attacks, enable **Strict TLS** for the database and use an HTTPS URL for Minio. This will ensure that all communication with data storage is done over TLS, and that certificates are properly validated.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+For best results, custom TLS configuration should be used for apps running Mendix 8.15.2 and later versions.
+{{% /alert %}}
+
+#### 4.3.5 Review and Apply
 
 When you have configured all the resources, do the following:
 
@@ -468,18 +524,6 @@ When you have configured all the resources, do the following:
 	Once the configuration has been applied you will see the message **Successfully applied all the configuration!**.
 
 5. Click **Exit Installer** to return to the landing page.
-
-#### 4.3.4 Custom TLS{#custom-tls}
-
-{{% alert type="info" %}}
-To use this option, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.7.0 or later.
-{{% /alert %}}
-
-!!! TODO how to load custom.crt
-
-{{% alert type="info" %}}
-For best results, custom TLS configuration should be used for apps running Mendix 8.15.2 and later versions.
-{{% /alert %}}
 
 ### 4.4 Confirming Namespace Configuration
 

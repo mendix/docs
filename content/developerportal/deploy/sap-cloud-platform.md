@@ -475,7 +475,11 @@ Mendix needs access to a relational database backend and can run using different
 
 ### 8.1 Running Mendix on PostgreSQL
 
-When you create your environment on SAP Cloud Platform, you can select a PostgreSQL database. This uses the **PostgreSQL on SAP Cloud Platform** database.
+{{% alert type="warning" %}}
+SAP have deprecated the use of PostgreSQL databases bound via the marketplace. This means that SAP accounts created recently will not be able to directly bind PostgreSQL databases and you will have to use [SAP HANA](#sap-hana) or [AWS RDS PostgreSQL](#aws-rds) databases.
+{{% /alert %}}
+
+When you create your environment on SAP Cloud Platform, you can still select a PostgreSQL database. You can use either the **PostgreSQL on SAP Cloud Platform** database or the **AWS RDS PostgreSQL** database.
 
 ![](attachments/sap-cloud-platform/postgresql-service.png)
 

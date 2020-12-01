@@ -14,7 +14,7 @@ In this how-to, you will be using an example web service of [W3Schools](http://w
 **This how-to will teach you how to do the following:**
 
 * Import a WSDL
-* Create logic to call the web service
+*  Create logic to call the web service
 
 ## 2 Importing a WSDL
 

@@ -11,7 +11,7 @@ These release notes cover changes made to the [Mendix App Store](/appstore/index
 
 ### December 15th, 2020
 
-* We have implemented a UX Refresh to provide a fresh new look and feel for the [App Store home](/appstore/general/app-store-overview) and [component details](/appstore/general/app-store-overview#details) pages as well as the [App Store page in Studio Pro](/appstore/general/app-store-content).
+* We have implemented a UX Refresh to provide a fresh new look and feel for the [App Store home](/appstore/general/app-store-overview), [component details](/appstore/general/app-store-overview#details), and [Studio Pro download] pages.
 * The Mendix "App Store" has been renamed to the "Marketplace" as part of the continued investment in new capabilities that is underway. This rename (and URL change) is only for the pages rebuilt so far listed above. Further implementation of this renaming is to follow in future releases.
 * We have enabled an enhanced navigation and undertaken some curation of published components to help you discover the components you require more easily.
 * We have enabled a more structured wizard-based flow that makes it a lot easier for you to [add new content] to the App Store.

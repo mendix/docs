@@ -13,7 +13,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2020
 
-### November 30th, 2020
+### December 2nd, 2020
 
 #### Improvements
 

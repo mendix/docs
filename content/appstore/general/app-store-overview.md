@@ -28,9 +28,9 @@ The home page of the Mendix App Store has three main tabs at the top:
 
 {{% todo %}}[**Verify screenshot for  category order and correlate in table below**]{{% /todo %}}
 
-It also presents various content categories:
+It also presents various content catalogs:
 
-| Category | Description |
+| Catalog | Description |
 | --- | --- |
 | **Get Studio Pro** | All the versions of [Studio Pro](/releasenotes/studio-pro/) available for download. |
 | [Widgets](/appstore/widgets/) | Single user-interface elements that can be configured, such as containers, drop-down menus, and buttons. |

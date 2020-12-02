@@ -1,6 +1,6 @@
 ---
 title: "SAP Cloud Platform"
-parent: "deployment"
+category: "Deployment"
 menu_order: 30
 description: "Release notes for deployment to SAP Cloud Platform"
 tags: ["release notes", "deployment", "cloud environment", "SAP", "SAP Cloud"]

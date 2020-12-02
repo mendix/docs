@@ -1,6 +1,6 @@
 ---
 title: "Mendix Cloud"
-parent: "deployment"
+category: "Deployment"
 menu_order: 10
 description: "Release notes for deployment to Mendix Clouds v3 and v4"
 tags: ["release notes", "deployment", "cloud environment", "Mendix Cloud", "free app"]

@@ -10,6 +10,11 @@ In Mendix 9.0.2 you can opt-in to use a new merge algorithm. This algorithm is u
     
 ## Enabling The New Algorithm
 
-To enable the new algorithm, go to Edit > Preferences > New features and check the relevant box.
+Make sure that you repository is in a clean state: everything has been committed and there is no outstanding changes or conflicts. 
+
+Go to Edit > Preferences > New features and check the relevant box. Restart Studio Pro and you are good to go!
 
 ![Enabling the new merge algorithm](attachments/new-merge-algorithm/enable-new-merge-algorithm.png)
+
+## Resolving Conflicts
+

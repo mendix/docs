@@ -10,4 +10,6 @@ In Mendix 9.0.2 you can opt-in to use a new merge algorithm. This algorithm is u
     
 ## Enabling The New Algorithm
 
-To enable the new algorithm, go to Edit > Preferences > New features and 
+To enable the new algorithm, go to Edit > Preferences > New features and check the relevant box.
+
+![Enabling the new merge algorithm](attachments/new-merge-algorithm/enable-new-merge-algorithm.png)

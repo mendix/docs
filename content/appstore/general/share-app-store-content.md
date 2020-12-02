@@ -86,9 +86,6 @@ To add content to the App Store, follow these steps:
 	![](attachments/share-app-store-content/add-content-button.jpg)
 
 2.  Select the type of content you would like to publish. The categories available correspond to the content categories available on the [App Store homepage](app-store-overview#home):
-
-	![](attachments/share-app-store-content/categories.jpg)
-
 3.  Depending on the category you selected, you may be asked to select a sub-category for your component, for example:
 
 	![](attachments/share-app-store-content/sub-categories.jpg)

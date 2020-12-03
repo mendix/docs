@@ -4,55 +4,40 @@ description: " "
 tags: ["Control Center", "Mendix Admin", "Developer Portal", "role", "permissions"]
 ---
 
-## Introduction
+## 1 Introduction
 
 [**Intro content needed**]
 
 [**How to access? Menu item in community header?**]
 
-## Members
+Control Center consists of the tabs described below.
 
-This is the page that opens first after you click **Admin Panel**.
-
-[**How to get back to People page from Admin panel?**]
+## 2 Members
 
 Members are users who can view and/or edit an app project. 
 
-On the **Company members** tab, you can see the members of your company.
+On the **Active members** tab, you can see the active members of your company who can access certain app projects.
 
-[**Does this correspond to People on company page?**]
+When you click a company member's name, a pop-up window opens with their member profile. The profile displays the app **Projects** of which they are a member as well as their **Project role** for each project. Click a project name to go to its [project details](#project-details) page.
 
-[**Correct tabs? Supposed to be Active Members and Inactive Members?**]
-
-When you click a company member's name, a pop-up window will open with their member profile. The profile displays the app **Projects** of which they are a member as well as their **Project role** for each project. Click a **Project** name to go to its [project details](#project-details) page.
+On the **Inactive members** tab, you can see former members of your company who have been deactivated.
 
 On the **External members** tab, you can see the members outside of your company who have access to at least one of your company app projects. When you click an external member's name, a pop-up window will open their member profile.
 
 [**How to define "access" here? Supposed to show permissions? Finish describing - supposed to show less info than for company members.**]
 
-## App Projects
+## 3 App Projects
 
-### Company Projects
+On this page, you can see a list of the active app projects that belong to your company on the **Active App Projects** tab. On the **Inactive App Projects** tab, you can see the deactivated app projects that belong to your company.
 
-On this page, you can see a list of the active app projects that belong to your company on the **Projects Overview** tab.
+When you click a **Project** name, a pop-up window opens with the project profile. The **Project Info** tab has the **Description** and **App ID** fields, which are also available on the [General](/developerportal/settings/general-settings) settings page for your app project in the Developer Portal. On the **Members** tab, you can see the members of your app project, which are compromised of both active members and external members. The **Project Roles** tab has the App Team roles defined via the **Default App Roles** tab or customized for a particular app project.
 
-On the **Deactivated Projects** tab, you can see the deactivated app projects that belong to your company.
+The **Default App Roles** tab shows the default  [App Team roles](/developerportal/company-app-roles/manage-roles#edit-app-team-roles) assigned for every new app project created in your company. These can be customized at the app project-level. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/develop/team-server) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) information.
 
-### Project Details {#project-details}
 
-START: When you click a **Project** name, a pop-up window will open with the project profile. This has the **Project Info**, **Members**, and **Project Roles** tabs.
 
-[**Project details page – project contacts will be removed (verify)**]
 
-[**Inactive project: select projects, menu bar appears at bottom of page**]
-
-### Default App Roles
-
-The **Default App Roles** tab shows the default App Team roles assigned for every new app project careted in your company. These can be customized at the app project-level. Click **Add Role** to add a new default role.
-
-[**Verify these are App Team roles; finish describing for creating new role**]
-
-## Groups
+## 4 Groups
 
 An **App Access Group** consists of end-users who will have access to accessible apps (with specific environments and roles. End-users are users outside of your company who can access the deployed app but not the app project.
 
@@ -71,7 +56,7 @@ For current app access groups, click the name of the group to open up the group 
 
 [**Finish for selecting environments and roles**]
 
-## Company Settings
+## 5 Company Settings
 
 This page presents your company's details and its Mendix Admins.
 
@@ -79,7 +64,7 @@ On the **Company Details** tab, you can edit the **Company name** and **Descript
 
 On the **Mendix Admins** tab, all the current Mendix Admins in your company are listed. To add a new admin, click **Add Mendix Admin**. To remove an admin, select their name in the list and click **Remove**.
 
-### Company
+### 5.1 Company
 
 The company page lists the name of your company and its description as well as all the people in your company on the **People** tab.
 
@@ -87,7 +72,7 @@ If you are a Mendix Admin, you have one main permission to edit your company's d
 
 [**Admin Panel still exists?**]
 
-## Company Brand
+## 6 Company Brand
 
 On this page, you can customize your company brand with a logo and image.
 
@@ -101,26 +86,26 @@ The **Cover image** is the the background header of your company page. If you do
 
 [**How to do draft brand that is not applied on company page right away and that can be saved as a draft? Only see Apply button, no Save as Draft or anything**]
 
-## Security
+## 7 Security
 
-### Password Policy
+### 7.1 Password Policy
 
 On this tab, you can set the password expiration policy for all company members. 
 
 If you set **Days before passwords expire** to **0**, the password will never expire.
 
-### Audit Trail
+### 7.2 Audit Trail
 
 From this tab, you can click **Open Audit Trail** to open the **Security History** page, which presents an audit trail of security-related changes made in app projects and member accounts within your company.
 
-#### Project History
+#### 7.3 Project History
 
 On this tab, you search for and view app project changes as well as export the list of changes to a CSV file.
 
-#### Member History
+#### 7.4 Member History
 
 On this tab, you search for and view company member changes as well as export the list of changes to a CSV file.
 
-## Cloud
+## 8 Cloud
 
 [**Will be there for Public Beta?**]

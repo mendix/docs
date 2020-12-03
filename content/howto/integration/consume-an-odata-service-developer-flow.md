@@ -120,7 +120,7 @@ Follow these steps to consume a published Odata service directly using the URL:
 
 
 
-## 5 Consuming an OData Service using a locally stored OData Metadata File
+## 5 Consuming an OData Service Using a Locally Stored OData Metadata File
 If you want to consume from a file, follow up to step 3 of [Consuming an OData Service using the URL](#consumeurl) and then proceed with the following:
 
 1. In the **Metadata Editor** dialog, select **File** and then click **Browse** to select a locally stored file.
@@ -135,7 +135,22 @@ If you want to consume from a file, follow up to step 3 of [Consuming an OData S
 	
 6. Take a few moments to explore the entities that are available in the service, and the attributes for entities (click **+** to expand the entity and display the attributes).
 
+## 7 Consuming from the Data Hub after offline Modeling
+
+As specified in ????? if a different contract is detected to the one that is currently loaded in Studio Pro, you will be given the open to **Update** or **Switch** to the new contract.
+
+??Ela try out if an update arrow 
+
+
+
+If you now want to connect to the same service that is published in the Data Hub Catalog then you can change the service metadata URL in the **Consumed_OData_Service**document under the **Metadata** pane and the **Constant** information to connect with the datasets under the  **Connection** tab.
+
+
+
+
+
 ## 6 Working with Consumed Services without Using the Data Hub Pane
+
 - how is this coupled with the catalog and the **Update** and **Switch** options (although if a different contract is detected at the specified endpoint, you will see the update arrow in the **Project** panel.
 - Will there be a coupling with the consumed service,  in the catalog - when the service is registered?
 - Modelling with locally stored datasets?

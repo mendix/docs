@@ -32,6 +32,8 @@ After the database is created, the Mendix Runtime can initiate the initial setup
 
 ## 3 Configuring the Read Committed Snapshot Isolation Level
 
+Mendix apps using SQL Server use the **Read Committed Snapshot** feature for their database. This feature allows read operations to continue even if the record has been updated by a concurrent transaction, improving concurrency. For more information, see the [Transaction Locking and Row Versioning Guide](https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide?view=sql-server-ver15).
+
 {{% alert type="info" %}}
 You only need to follow these steps if the database user used by the Mendix Runtime does not have enough permission to issue the `ALTER DATABASE` command (usually the `sysadmin` role).
 {{% /alert %}}

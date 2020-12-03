@@ -17,8 +17,8 @@ Before starting this how-to, make sure you know how to do the following:
 * Create domain models (see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
 * Create overview and detail pages (see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages))
 * Create menu items (see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
-* Create microflows (see [How to Create Your First Microflow: Hello World!](../logic-business-rules/create-your-first-microflow-hello-world)
-* Add App Store content to your app (see [How to Use App Store Content](/appstore/general/app-store-content))
+* Create microflows (see [How to Trigger a Microflow From a Menu Item](../logic-business-rules/trigger-microflow-from-menu-item)
+* Add App Store content to your app (see [How to Use App Store Content in Studio Pro](/appstore/general/app-store-content))
 * Secure your applications (see [How to Create a Secure App](../security/create-a-secure-app))
 
 ## 3 Preparing the Data Structure, GUI & Modules

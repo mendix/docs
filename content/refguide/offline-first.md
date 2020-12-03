@@ -71,8 +71,7 @@ Depending on the use-case, more fine-grained synchronization controls might be r
 * **Nothing (clear data)** — do not download any objects automatically, but do clear the data stored in the database for this entity when performing a synchronization (this can be useful in cases where the objects should only be uploaded, for example a `Feedback` entity)
 * **Nothing (preserve data)** — do not download any objects automatically, and do not clear the data stored in the database for this entity when performing a synchronization  (this can be useful in cases where you want have full control over the download phase and should be used in combination with the [Synchronize to device](synchronize-to-device) activity)
 
-If you have custom widgets or JavaScript acclear
-tions which use an entity that cannot be detected by Studio Pro in your offline-first profile (because its only used in the code), you can use customizable synchronization to include such entities.
+If you have custom widgets or JavaScript actions which use an entity that cannot be detected by Studio Pro in your offline-first profile (because its only used in the code), you can use customizable synchronization to include such entities.
 
 {{% image_container width="450" %}}![custom synchronization](attachments/offline-first/custom-sync.png){{% /image_container %}}
 
@@ -168,11 +167,11 @@ Changes to persistable objects made in a microflow will not be reflected on the 
 * Returning an object or a list of persistable entity is not supported.
 * Returning an object or a list of a non-persistable entity that has an association with a persistable entity is not supported (such association can be an indirect association).
 
-### 4.1.5 Language Switching
+#### 4.1.5 Language Switching
 
 To be able to switch the language of a Mendix app, a device must be online and have access to the Mendix runtime. For more information on the runtime, see the [Runtime Reference Guide](runtime).
 
-### 4.1.1 Offline Microflow Best Practices {#offline-mf-best-practices}
+### 4.2 Offline Microflow Best Practices {#offline-mf-best-practices}
 
 To make microflow calls work from offline-first apps, Mendix stores some microflow information in the offline app. That information is called from the app. This means that changes to microflows used from offline apps must be backwards-compatible, because there can be older apps which have not received an over the air update yet. All microflow calls from such a device will still contain the old microflow call configuration in nanoflows, which means that the request might fail. For more information on over the air updates, see [How to Use Over the Air Updates](/howto/mobile/how-to-ota).
 
@@ -186,26 +185,26 @@ To avoid backwards-compatibility errors in offline microflow calls after the ini
 
 If you want to deviate from the practices outlined above, introduce a new microflow. You can change the contents of the microflow, but keep in mind that older apps might call the new version of the microflow until they are updated.
 
-### 4.2 Autonumbers & Calculated Attributes {#autonumbers}
+### 4.3 Autonumbers & Calculated Attributes {#autonumbers}
 
 Both autonumbers and calculated attributes require input from the server; therefore, they are not allowed. Objects with these attribute types can still be viewed and created offline, but the attributes themselves cannot be displayed.
 
-### 4.3 Default Attribute Values {#default-attributive}
+### 4.4 Default Attribute Values {#default-attributive}
 
 Default attribute values for entities in the domain model do not have any effect on objects created offline. Boolean attributes will always default to `false`, numeric attributes to `0`, and other attributes to `empty`.
 
-### 4.4 Many-to-Many Associations {#many-to-many}
+### 4.5 Many-to-Many Associations {#many-to-many}
 
 Many-to-many associations are not supported. A common alternative is to introduce a third entity that has one-to-many associations with the other entities.
 
-### 4.5 Inheritance {#inheritance}
+### 4.6 Inheritance {#inheritance}
 
 It is not possible to use more than one entity from a generalization or specialization relation. For example if you have an `Animal` entity and a `Dog` specialization, you can use either use `Animal` or `Dog`, but not both from your offline profile. An alternative pattern is to use composition (for example, object associations).
 
-### 4.6 System Members {#system-members}
+### 4.7 System Members {#system-members}
 
 System members (`createdDate`, `changedDate`, `owner`, `changedBy`) are not supported.
 
-### 4.7 Excel and CSV Export {#excel-cv}
+### 4.8 Excel and CSV Export {#excel-cv}
 
 Excel and CSV export are not available in offline applications.

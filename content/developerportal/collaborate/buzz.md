@@ -28,7 +28,7 @@ Below the company name is a list of apps for which you are a team member. Clicki
 
 App Buzz is Buzz for a specific app. It is the landing page when you open that app project:
 
-![](attachments/app-buzz.png)
+![](attachments/app-buzz.jpg)
 
 You can see the size of your **Team** and your fellow App Team members on the right side of the page.
 
@@ -70,7 +70,7 @@ In App Buzz, a comment can come from Mendix Studio and refer to a specific docum
 
 ![](attachments/show-document.png)
 
-For more information on making comments in Studio, see [Buzz](/studio/buzz).  
+For more information on making comments in Studio, see [Buzz](/studio/collaboration-buzz).  
 
 ### 2.2 Starting a Poll
 

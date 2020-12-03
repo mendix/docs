@@ -2,7 +2,7 @@
 title: "Properties Common in the Page Editor"
 parent: "pages"
 menu_order: 120
-tags: ["studio pro", "widget properties", "properties", "common", "widget"]
+tags: ["studio pro", "widget properties", "properties", "common", "widget", "classes"]
 #Common Section and Visibility section anchors are used in links of common-section-link and visibility-section-link snippets. If moving or renaming them, do not forget to update snippets.
 ---
 
@@ -55,7 +55,7 @@ The class property allows you to specify one or more cascading style sheet (CSS)
 Styling is applied in the following order:
 
 1. The default styling defined by the theme the project uses.
-2. The `Class` property of the widget.
+2. The `Class` combined with `Dynamic classes` properties of the widget.
 3. The `Style` property of the widget.
 
 You can see which widgets in a page have styling applied via the class or style property by clicking the <strong>Show styles</strong> button.
@@ -68,9 +68,19 @@ The style property allows you to specify additional CSS styling. If a class is a
 
 ![](attachments/common-widget-properties/style-example.png)
 
-You can see which widgets in a page have styling applied via the style or class property by clicking the <strong>Show styles</strong> button.
+### 3.5 Dynamic Classes{#dynamicclasses}
 
-### 3.5 Documentation{#documentation}
+The dynamic classes property allows you to specify one or more cascading stylesheet (CSS) class like the class property, but based on an [expression](expressions). This allows you to dynamically construct classes based on data from an enclosing data container. The dynamic classes constructed in the expression are appended to the classes defined in the [`Class`](#class) property.
+
+![](attachments/common-widget-properties/dynamic-classes.png)
+
+{{% alert type="info" %}}
+The dynamic classes property was introduced in Mendix Studio Pro v8.14.
+{{% /alert %}}
+
+You can see which widgets in a page have styling applied via the style or class property by clicking the **Show styles** button.
+
+### 3.6 Documentation{#documentation}
 
 Some widgets, for example snippets and building blocks, have a **Documentation** property which can be used to store developer documentation. This can be used to explain to other developers how to use these widgets. End-users will never see this documentation.
 
@@ -147,7 +157,8 @@ The editable property indicates whether the end-user will be able to change the 
 
 | Value       | Description                                                  |
 | ----------- | ------------------------------------------------------------ |
-| Default *(default)*    | The value is editable if security allows it (as in, if the user that is signed in has write access to the selected attribute). |
+| Default     | The value is editable if security allows it such as if the user that is signed in has write access to the selected attribute (default value for widgets outside a snippet). |
+| Inherited from snippet call | Set to **Default** or **Never** by the containing data container of the snippet call (default value for widgets inside a snippet). |
 | Never       | The value is never editable.                                 |
 | Conditionally | The value is editable if the specified condition holds (see below). |
 

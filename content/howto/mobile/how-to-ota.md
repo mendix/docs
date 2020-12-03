@@ -56,6 +56,7 @@ It is good practice to *always* redeploy your Mendix App before pushing a new ov
 If you have made any changes directly to your iOS or Android project, you will have to fully redeploy you app to the app stores for the changes to take effect. OTA updates do not suffice, and a full release is required, in the following cases: 
 
 * The initial release of your app
+* A Mendix Studio Pro version upgrade that requires a new Native Template version
 * You fundamentally changed your app's functionality (this is a App Store limitation, and will require a re-release and re-review of your app by Apple—your app might be removed if you do not comply)
 * A new native module has been added
 * The app has been renamed
@@ -150,7 +151,7 @@ To roll out your app to only *some* of your users, run this command:
 `native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 50 --mandatory`
 ```
 
-Instead of passing a rollout percentage of 100%, you are passing 50%. This means the update will be distributed to 50% of the app's user base. This number can be an any integer from 1 to 100, representing the percentage of your user base which will recieve the update.
+Instead of passing a rollout percentage of 100%, you are passing 50%. This means the update will be distributed to 50% of the app's user base. This number can be an any integer from 1 to 100, representing the percentage of your user base which will receive the update.
 
 To fully roll out the update, run this command: 
 

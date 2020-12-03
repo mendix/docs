@@ -46,6 +46,25 @@ Once the app has been created you can continue with [Set Up Region](#SetUpRegion
 
 You are now prompted with an SAP Cloud Platform login screen. Select the region where your SAP Cloud Platform is located.
 
+{{% alert type="info" %}}
+Currently supported regions are:
+
+* Australia (Sydney) 
+* AWS Japan 
+* AWS Singapore 
+* Azure Japan 
+* Azure Singapore 
+* Azure US East (VA) 
+* Azure US West (WA) 
+* Canada (Montreal) 
+* Europe (Frankfurt) 
+* Europe (Netherlands) 
+* US Central (IA) Beta 
+* US East (VA)
+
+Please contact Mendix support if you have a requirement for an additional region.
+{{% /alert %}}
+
 Make sure that you have enough quota in this region for your organization to run a Mendix app. You will need enough quota to create the following:
 
 * Database
@@ -289,6 +308,10 @@ If you receive an error trying to start the app, please refer to the [App Will N
 
 Click **Change Admin Password** to change the password for the administrator account (by default, MxAdmin) in your Mendix app.
 
+{{% alert type="warning" %}}
+The new password will not come into effect until you stop and start your environment.
+{{% /alert %}}
+
 #### 7.1.3 View Recent Log
 
 Click **View Recent Log** to see recent events written to the log.
@@ -367,7 +390,7 @@ There are a number of services which your Mendix app requires. **If you unbind a
 * database (PostgreSQL or SAP HANA schema)
 * connectivity
 
-Services should be selected, bound, and unbound through this **Services** page. Changes made in the SAP Cloud Platform Cockpit will *not* be reflected in the Mendix Developer Portal.
+Services should be selected, bound, and unbound through this **Services** page. Changes made in the SAP Cloud Platform cockpit will *not* be reflected in the Mendix Developer Portal.
 {{% /alert %}}
 
 {{% alert type="info" %}}
@@ -470,21 +493,20 @@ There are also some differences in the way that Mendix can be used with SAP HANA
 
 #### 8.2.1 SAP HANA Configuration for Full Accounts
 
-SAP HANA works in a different way to PostgreSQL.
+To run a Mendix application on SAP Cloud Platform using SAP HANA as the database, there are two options. Both these options need to be set up in the SAP Cloud Platform cockpit. The two options are:
 
-If you select an SAP HANA database, an SAP HANA *schema* service will be added to your space and when you deploy your app it will be bound to the SAP HANA schema service. This schema service defines access to a separate SAP Cloud Platform, SAP HANA service, which also needs to be running in the same space as your app.
+* provision the SAP HANA DB Service and make it available in your application space
+
+* provision SAP HANA Cloud and make this service available to your application space
+
+Once one of these services is available, you can use the SAP Cloud deployment functions of the Mendix SAP Developer Portal to deploy your app and use the **HANA_SCHEMA** service to bind your application to the provisioned service. The HANA_SCHEMA will create a separate schema on the SAP HANA Database which isolates your application's data from other applications. In this way the SAP HANA DB/Cloud Service will be shared across applications.
 
 {{% alert type="warning" %}}
 Please bear the following in mind when using SAP HANA as your Mendix database:
 
-* You must create and configure the SAP HANA *service* yourself in the SAP Cloud Platform cockpit. It is *not* created for you by the Mendix Developer Portal. The configuration of this service is not possible through the Mendix Developer Portal.
-
 * Do *not* attempt to add the SAP HANA *service* to your app. It is the SAP HANA *schema* which needs to be bound to your app.
 
 * Do *not* use the *Services* tab or the *SAP Cloud Platform Marketplace* to add **both a PostgreSQL database and an SAP HANA schema** to your app. If you do this it is not possible to predict which database your Mendix app will choose to bind.
-
-* Do *not* unbind the SAP HANA schema service from your environment: see [Services Tab](#binding-services), above, for more information on required services.
-
 {{% /alert %}}
 
 If you have issues with your app running on SAP HANA, you will need to use the SAP Cloud Platform cockpit to investigate. The Mendix Developer Portal does not have information on the status or configuration of the SAP HANA service.

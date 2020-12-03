@@ -56,4 +56,4 @@ The level of support depends on the availability and effort of the developer and
 
 * [App Store Overview](app-store-overview)
 * [How to Share App Store Content](share-app-store-content)
-* [How to Use App Store Content](app-store-content)
+* [How to Use App Store Content in Studio Pro](app-store-content)

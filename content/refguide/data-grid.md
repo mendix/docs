@@ -36,7 +36,7 @@ Data grid properties consist of the following sections:
 
 * [Common](#common)
 * [Data source](#data-source)
-* Design Properties
+* [Design Properties](#design-properties)
 * [General](#general)
 * [Visibility](#visibility)
 
@@ -59,39 +59,65 @@ The list view supports the following types of data sources:
 
 The database and XPath sources retrieve objects from the database and supports searching and sorting. 
 
-### 3.3 General Section {#general}
+### 3.3 Design Properties Section {#design-properties}
 
-#### 3.3.1 Show Control Bar Buttons
+{{% snippet file="refguide/design-section-link.md" %}} 
+
+### 3.4 General Section {#general}
+
+#### 3.4.1 Show Control Bar Buttons {#show-control-bar}
 
 This property indicates whether the control bar buttons will be visible in the end-user interface.
 
 {{% alert type="warning" %}}
-
-Even if the control bar buttons are invisible, there can still be a default button that is triggered by (double) clicking a row. For more information, see the property [Default Button Trigger](#dbt) and [Control Bar](control-bar).
-
+Even if the control bar buttons are invisible, there can still be a default button that is triggered by (double) clicking a row. For more information, see the property [Default Button Trigger](#default-button-trigger) and [Control Bar](control-bar).
 {{% /alert %}}
 
 Default: *True*
 
-#### 3.3.2 Show Paging Buttons
+#### 3.4.2 Show Paging Buttons {#show-paging-buttons}
+
+{{% alert type="warning" %}}
+This property is not available in Mendix 8.13 and above. Use the [Show Paging Bar](#show-paging-bar) property instead.
+{{% /alert %}}
 
 This property indicates with the buttons to page through the information in the grid are visible. Only hide these buttons if you are sure that there will never be more objects than the number of rows of the grid.
 
 Default: *True*
 
-#### 3.3.3 Number of Rows
+#### 3.4.3 Show Paging Bar {#show-paging-bar}
+
+{{% alert type="info" %}}
+This property was introduced in Mendix 8.13. It replaces the [Show Paging Buttons](#show-paging-buttons) property.
+{{% /alert %}}
+
+With this property, you can change the way the paging bar is shown.
+
+| Value | Description |
+| --- | --- |
+| Yes (with total count) | The paging bar is shown, including the **Go to last page** button and the total count of objects. |
+| Yes (without total count) | The paging bar is shown (except for the **Go to last page** button). Also, the total count of objects is not shown, as page numbers are shown instead. |
+| No | The paging buttons are not shown. |
+
+Default: *Yes (with total count)*
+
+{{% alert type="warning" %}}
+Hiding the control bar also hides the paging buttons. For details, see [Show Control Bar Buttons](#show-control-bar).
+{{% /alert %}}
+
+#### 3.4.4 Number of Rows {#number-of-rows}
 
 With this property you can change the number of rows that will be shown in one page. See also the property 'Show empty rows'.
 
 Default: *20*
 
-#### 3.3.4 Show Empty Rows
+#### 3.4.5 Show Empty Rows {#show-empty-rows}
 
 If you choose to show empty rows there will always be the grid will always show the same number of rows (see 'Number of rows') even if there are less objects to show on the page.
 
 Default: *False*
 
-#### 3.3.5 Selection Mode
+#### 3.4.6 Selection Mode {#selection-mode}
 
 The selection mode determines whether and how the user can select items in the grid.
 
@@ -103,13 +129,13 @@ The selection mode determines whether and how the user can select items in the g
 | Multi-selection | The user can select multiple items by clicking the first one and holding the 'Ctrl' key while clicking on other items. Simply clicking an item will deselect all items and make the clicked item the selection. |
 | Simple multi-selection | The user can select multiple items by simply clicking on them. |
 
-#### 3.3.6 Select First
+#### 3.4.7 Select First {#select-first}
 
 This property indicates whether the first item will be selected initially. This is especially useful if there is a data view listening to this grid.
 
 Default: *False*
 
-#### 3.3.7 <a name="dbt"></a>Default Button Trigger
+#### 3.4.8 Default Button Trigger {#default-button-trigger}
 
 The default button can be triggered by a single or a double click a row.
 
@@ -118,17 +144,17 @@ The default button can be triggered by a single or a double click a row.
 | Single click | A single click triggers the default button. This cannot be used in combination with allowing the user to select rows. |
 | Double click  *(default)* | A double click triggers the default button. |
 
-#### 3.3.8 Refresh Time (in Seconds)
+#### 3.4.9 Refresh Time (in Seconds) {#refresh-time}
 
 If the refresh time is non-zero, the data grid will refresh its contents every given number of seconds. For example, a task list could be refreshed every minute so that you know when new tasks arrive. By default the refresh time is zero and this means that the grid will not automatically refresh itself.
 
 Default: *0*
 
-#### 3.3.9 Tooltip Page {#tooltip-page}
+#### 3.4.10 Tooltip Page {#tooltip-page}
 
 A tooltip page is a page that appears when you hover your mouse over a row. The tooltip page should consist of a data view on the same entity as the data grid. Besides creating and connecting a tooltip page you also have to specify on which columns the tooltip will appear. See the property 'Show tooltip' of [data grid columns](columns).
 
-### 3.4 Visibility Section {#visibility}
+### 3.5 Visibility Section {#visibility}
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 

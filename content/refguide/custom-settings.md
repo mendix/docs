@@ -19,6 +19,8 @@ Each custom setting consists of a name and a value. For example, to enable persi
 
 If you are running your app on the Mendix Cloud, you can access these settings in the Developer Portal via **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see the [Runtime Tab](/developerportal/deploy/environments-details#runtime-tab) section of *Environment Details*.
 
+If you are running on SAP Cloud, you can add custom settings as User-Provided Variables prefixed with `MXRUNTIME_`. If the setting contains a dot `.` you can use an underscore `_` in the variable. [Reference](https://github.com/mendix/cf-mendix-buildpack#configuring-custom-runtime-settings)
+
 ## 2 General Settings
 
 The following custom settings can be configured:
@@ -74,7 +76,6 @@ The settings below influence the behavior of the log files. These settings can o
 | **DatabaseUseSsl** | For PostgreSQL databases, defines whether the connection will be made using SSL without certificate validation. If you need certificate validation, use **DatabaseJdbcUrl** instead. | false |
 | **LogMinDurationQuery** | Defines whether database queries are logged via the `ConnectionBus_Queries` log node if they finished after the number of milliseconds specified here. By default, only the relevant SQL query will be logged. Set the log level of the `ConnectionBus_Queries` log node to `TRACE` to show more information about the page or the microflow which leads to this query. |   |
 | **OracleServiceName** | Defines the `SERVICE_NAME` when you have a connection with an Oracle DBMS. |   |
-| **ReadCommittedSnapshot** | Defines whether the`READ_COMMITTED_SNAPSHOT` option of Microsoft SQL Server must be enabled or not. For more information, see [Using Snapshot Isolation](http://msdn.microsoft.com/en-us/library/tcbchxcb(VS.80).aspx). The value can be `true` or `false`. | true |
 | **DataStorage.EnableDiagnostics** | This setting can be used to generate a uniqueness constraint violation report. | false |
 | **UseNetworkTimeout** | This setting is applied to PostgreSQL and DB2. It affects the timeout mechanism used when reserving new ids for Mendix objects. If set to true, the socket level request timeout is used. In that case, the request timeout is handled within the operating system. If set to false, the timeout is handled by Mendix runtime. For other databases, timeouts are always handled by Mendix runtime. | true |
 | **JdbcLoginTimeout** | This setting defines the database connection establishment time in milliseconds. | 5000 |

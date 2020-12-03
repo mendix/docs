@@ -6,15 +6,118 @@ toc-level: 1
 description: "Native Template release notes."
 ---
 
-For more information on native mobile app development, see the [native-template repository](https://github.com/mendix/native-template/) and [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app) .
+For more information on native mobile app development, see the [native-template](https://github.com/mendix/native-template/) repository and [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app).
+
+These are the current versions in active development:
+
+* Native Template v5.1.x applies to apps built using Studio Pro [8.15.x](../studio-pro/8.15) and above.
+* Native Template v5.0.x applies to apps built using Studio Pro [8.12.1](../studio-pro/8.12#8121)–[8.14.x](../studio-pro/8.14).
+* Native Template v4.2.x applies to apps built using Studio Pro up to [8.12.0](../studio-pro/8.12#8120).
+
+## 5.1.3, 5.0.7, and 4.2.5
+
+**Release date: November 27th, 2020**
+
+### Improvements
+
+* We updated the iOS peer dependencies.
+
+### Fixes
+
+* We updated the underlying DatePicker library to fix a bug with iOS 14.
+
+## 3.2.2 
+
+**Release date: November 9th, 2020**
+
+We fixed the Native Template for a dependency affecting Mendix Studio Pro 8.8.x.
+
+### Fixes
+
+* We fixed an issue with the npm installation on the Mendix Native Template targeting Mendix Studio Pro 8.8 due to an outdated dependency.
+
+## 5.1.1,  5.0.6, and 4.2.4
+
+**Release date: November 2nd, 2020**
+
+### Disclaimer
+
+* Native Template v5.1.1 applies to apps built using Studio Pro v8.15.x and above.
+* Native Template v5.0.5 applies to apps built using Studio Pro v8.12.1 - 8.14.x.
+* Native Template v4.2.3 applies to apps built using Studio Pro up to 8.12.0.
+
+### Improvements
+
+* This release makes Mendix native mobile apps fully compatible with Xcode 12's build system.
+
+### Fixes
+
+* Base64-encoded images are now fully supported with builds completed using Xcode 12.
+
+## 5.1.0
+
+**Release date: October 27th, 2020**
+
+### Disclaimer
+
+This release is required to use the **Capabilities** support introduced with the new Mendix Native Mobile Builder. You must update to this version or higher in order to use that tool's functionality. The Mendix Native Mobile Builder is included in Mendix Studio Pro v8.15 and above.
+
+### Capabilities Support
+
+With the release of Mendix Native Mobile Builder we are introducing a new approach for linking dependencies.
+
+While previous versions of the Native Template would have all core dependencies linked by default — for example an app would have Firebase linked even though it is not using any functionality — our new approach builds on top of React Native's auto-linking behavior and extends it a step further.
+
+We gathered all core functionalities and grouped them under the platform-specific capabilities' *.json* files. With a simple Boolean toggle, the Native Template is able to link the required dependencies for the enabled capability — even ones without auto-link. This happens as part of the `pod install` step for iOS and the building step on Android. After each change to these files, you must remember to run `pod install` for iOS or build your Android project so that the new files can be generated.
+
+Some steps, like the inclusion of the Google Service configuration or the Google Maps API, are still manual if you are building locally. If you would like to further simplify these steps, consider using the Mendix Native Mobile Builder to just configure your project and build your project however you like.
+
+## 5.0.5 and 4.2.3 
+
+**Release date: October 19th, 2020**
+
+### Improvements
+
+* We added support for the new file system security rules added to Android v10 and above. 
+
+### Fixes
+
+* We set the legacy external storage flag to support Android v10 and below.
+* We added support for missing iPad icons.
+
+## 5.0.4 and 5.0.3 
+
+**Release date: October 9th, 2020**
+
+### Improvements 
+
+* We updated a number of dependencies to ensure support with XCode 12. We also updated the App Center configuration to use XCode 12 and Node LTS.
+
+## 5.0.2
+
+**Release date: September 2nd, 2020**
+
+### Fixes
+
+* We fixed an exception due to threading that could cause a crash on iOS.
+
+## 5.0.1
+
+**Release date: August 26th, 2020**
+
+As of August 2020, Google Play requires apps to be built targeting SDK 29. This version of the Native Template complies with these requirements. For more information, see [Target API level requirements for the Play Console](https://support.google.com/googleplay/android-developer/answer/113469#targetsdk).
+
+## 4.2.1
+
+**Release date: August 26th, 2020**
+
+As of August 2020, Google Play requires apps to be built targeting SDK 29. This version of the Native Template complies with these requirements for Mendix Studio Pro versions [8.9.0](/releasenotes/studio-pro/8.9) to [8.12.0](/releasenotes/studio-pro/8.12). For more information, see [Target API level requirements for the Play Console](https://support.google.com/googleplay/android-developer/answer/113469#targetsdk).
 
 ## 5.0.0
 
-**Release date: August 7, 2020**
+**Release date: August 7th, 2020**
 
-Mendix Studio Pro 8.12.1 introduces better splash screen support for native mobile apps. As the new functionality requires new native dependencies, the changes are not backwards compatible with previous Mendix Studio versions. 
-
-### Improvements
+Mendix Studio Pro [8.12.1](/releasenotes/studio-pro/8.12#8121) introduces better splash screen support for native mobile apps. As the new functionality requires new native dependencies, the changes are not backwards-compatible with previous Mendix Studio versions. 
 
 In the first implementation, splash screens were static resources controlled by the native side of the app. While good enough in simple cases, they were inadequate for longer synchronizing sessions where the splash screen could toggle off too soon.
 
@@ -22,7 +125,7 @@ With the new implementation, splash screens are fully togglable via the client. 
 
 ## 4.2.0
 
-**Release date: June 24, 2020**
+**Release date: June 24th, 2020**
 
 ### Improvements
 
@@ -35,7 +138,7 @@ With the new implementation, splash screens are fully togglable via the client. 
 
 ## 4.1.1
 
-**Release date: June 15, 2020**
+**Release date: June 15th, 2020**
 
 ### Fixes
 
@@ -43,11 +146,11 @@ With the new implementation, splash screens are fully togglable via the client. 
 
 ## 4.1.0
 
-**Release date: May 25, 2020**
+**Release date: May 25th, 2020**
 
 ### Improvements
 
-* Prior to 8.10, custom developer apps had to do a full session data request with each reload, slowing down the developer experience tremendously. From 8.10 and above the client is able to determine when and what to sync. This behavior should emulate incremental syncs better and more consistently.
+* Prior to Studio Pro [8.10](/releasenotes/studio-pro/8.10), custom developer apps had to do a full session data request with each reload, slowing down the developer experience tremendously. From 8.10 and above the client is able to determine when and what to sync. This behavior should emulate incremental syncs better and more consistently.
 
 ### Fixes
 
@@ -55,20 +158,20 @@ With the new implementation, splash screens are fully togglable via the client. 
 
 ## 4.0.0
 
-**Release date: Apr 29, 2020**
+**Release date: Apr 29th, 2020**
 
 {{% alert type="info" %}}
 Update to 4.1.0 or later if you are using the camera functionality to avoid crashes if Firebase is not enabled for your project.
 {{% /alert %}}
 
-This is the release supporting Studio Pro 8.9 and onwards. This release includes a major upgrade of the included dependencies which renders it incompatible with previous versions of Studio Pro.
+This is the release supporting Studio Pro [8.9](/releasenotes/studio-pro/8.9) and above. This release includes a major upgrade of the included dependencies which renders it incompatible with previous versions of Studio Pro.
 
 ## 3.2.0
 
 **Release date: April 1st, 2020**
 
 {{% alert type="info" %}}
-This release is compatible with Mendix Studio Pro 8.8 and above.
+This release is compatible with Mendix Studio Pro [8.8](/releasenotes/studio-pro/8.8) and above.
 {{% /alert %}}
 
 {{% alert type="warning" %}}

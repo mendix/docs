@@ -76,6 +76,10 @@ This pane has two levels, so when you zoom into a changed document, you can revi
 
 The **Connector** pane displays elements that can be connected to the currently selected element. For example, when a button is a selected, the **Connector** shows microflows that you can drag onto the button to connect them.
 
+### 3.3 Data Hub {#data-hub}
+
+The [Data Hub pane](data-hub-pane) allows you to browse the [Data Hub Catalog](/data-hub/data-hub-catalog) and integrate registered data sources that are available for your organization. You can add [external entities](external-entities) to your app project via this pane and view entities and services already consumed in your project. 
+
 ### 3.3 Console {#console}
 
 The **Console** pane displays the output of the [Mendix Runtime](runtime) while running an application.

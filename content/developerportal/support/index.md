@@ -8,7 +8,7 @@ tags: ["Support", "SLA", "Gold", "Platinum"]
 
 Mendix Support is here to answer any questions and solve any issues that you might have. We try to make your journey as frictionless as possible.
 
-### 1.1 Service Level Agreements{#sla}
+### 1.1 Service Level Agreements {#sla}
 
 We are available for all users of the Mendix Platform, and we are bound by service-level agreements (SLAs) with our licensed customers. Licensed customers can select their SLA level: **Gold** or **Platinum**. The SLA level determines the specific agreement in the following areas:
 
@@ -38,16 +38,17 @@ Please contact [Mendix Support](https://support.mendix.com/) or your Customer Su
 
 ## 2 Finding Your Answers
 
-We expect that many questions and issues can be solved by reading the [Mendix documentation](https://docs.mendix.com/) and by exploring the [forum](https://forum.mendix.com/). If you can’t find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio and Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
+We expect that many questions and issues can be solved by reading the [Mendix Documentation](https://docs.mendix.com/) and by exploring the [Mendix Forum](https://forum.mendix.com/). If you cannot find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio and Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
 
 ## 3 Feature Requests
 
-We would like to invite you to an important channel where you can provide feature requests to Mendix: the [Mendix Idea Forum](https://forum.mendix.com/link/ideas/). Any customer can post a feature request that can be reviewed, expanded on, and voted on by other members of the Mendix Community. Based on this feedback, every quarter we will determine which features have the most value according to our customers, and we will implement them.
-For more details about the idea forum, see [Mendix Forum](/developerportal/community-tools/mendix-forum).
+We would like to invite you to an important channel where you can provide feature requests to Mendix: the [Mendix Idea Forum](https://forum.mendix.com/link/ideas/). Any customer can post a feature request that can be reviewed, expanded on, and voted on by other members of the Mendix community. Based on this feedback, every quarter we will determine which features have the most value according to our customers, and we will implement them.
+
+For more details, see [Mendix Forum](/developerportal/community-tools/mendix-forum).
 
 ## 4 Accessing Mendix Support
 
-You can access the Mendix Support team through the [Mendix Support Portal](https://support.mendix.com/), via email (support@mendix.com), or by phone (phone numbers are listed in the Support Portal). Please note that critical tickets always need to be accompanied by a phone call to speed up the triage of the issue. In the Support Portal, you can check the status of your personal tickets, check all the submitted tickets for your applications, and provide updates on them.
+You can access the Mendix Support team through the [Mendix Support Portal](https://support.mendix.com/), via email (`support@mendix.com`), or by phone (phone numbers are listed in the Support Portal). Please note that critical tickets always need to be accompanied by a phone call to speed up the triage of the issue. In the Support Portal, you can check the status of your personal tickets, check all the submitted tickets for your applications, and provide updates on them.
 
 ## 5 What We Expect from You
 
@@ -56,22 +57,25 @@ Mendix supports the Mendix Platform, and we expect you to support the applicatio
 * Developing code on your behalf
 * Debugging or troubleshooting your applications
 * Analyzing and troubleshooting the health and performance of your applications or your infrastructure, except when we suspect an underlying issue exists in the Mendix Platform
-* Troubleshooting Mendix Community-developed components from the Mendix App Store
+* Troubleshooting Mendix community-developed components from the Mendix App Store
 
-See [Support for Different Deployment Strategies](#support-by-strategy), below, for more information.
+For more information, see the [Support for Different Deployment Strategies](#support-by-strategy) section below.
 
 During the start phase, and through part of the scale phase, of your digital transformation journey, it might be best to let your development team (DevOps) handle the support of the applications. As the number of applications grows, it is best to let an expert service desk handle the support of your applications. You can involve your existing service desk team or outsource support to one of our support partners, which you can find listed on the [Meet Our Partners](https://developer.mendixcloud.com/link/partneroverview) page.
 
 ### 5.1 Company Admins
+
 To manage your company account, and the users, projects, and licensed cloud nodes of your company, you can appoint company admins in the [Developer Portal](https://home.mendix.com/).
 Please read more about this in [Company Admin Settings](/developerportal/company-app-roles/companyadmin-settings).
 
 ### 5.2 Technical Contacts
+
 You need to appoint a [technical contact](/developerportal/company-app-roles/technical-contact) for each of your applications running in the Mendix Public Cloud and Cloud Dedicated. The technical contact checks the performance of the applications in the Developer Portal and receives alerts from the Mendix Developer Portal based on errors and warnings in the application. It is possible to have other team members receive these alerts as well.
 Reading these alerts carefully and acting upon them is important, as they can affect the performance of your app. For more information on alerts, see [Alerts](/developerportal/operate/monitoring-application-health).
 
 ### 5.3 Training
-We expect your support team to be trained and certified on Studio Pro and the Developer Portal so that they can interpret and analyze alerts, graphs, and logs in the Developer Portal. For more information, please check our available [classroom courses](https://gettingstarted.mendixcloud.com/link/classroom) and [expert webinars](https://gettingstarted.mendixcloud.com/link/webinar) or contact the Mendix Academy ([academy@mendix.com](mailto:academy@mendix.com)).
+
+We expect your support team to be trained and certified on Studio Pro and the Developer Portal so that they can interpret and analyze alerts, graphs, and logs in the Developer Portal. For more information, please check our available [classroom courses](https://academy.mendix.com/link/classroom) and [expert webinars](https://academy.mendix.com/link/webinar) or contact the Mendix Academy ([academy@mendix.com](mailto:academy@mendix.com)).
 
 ## 6 Platform Status
 
@@ -85,7 +89,7 @@ If, after your analysis, you suspect there is an issue with the Mendix Platform 
 
 Mendix supports the current major release and the two prior major releases (and we support each major release for a minimum of 24 months). Because of this, we recommend that you upgrade your projects to the latest version of Studio Pro at least once a year. We will reach out to you in time if you are running on a version that will become unsupported so that you have ample time to perform an upgrade.
 
-## 9 Support for Different Deployment Strategies{#support-by-strategy}
+## 9 Support for Different Deployment Strategies {#support-by-strategy}
 
 With our Multi-Cloud strategy, Mendix allows the apps that you build to be deployed in any Cloud. This can be in the [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy), Mendix Dedicated Cloud, [Mendix Private Cloud](/developerportal/deploy/private-cloud), [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform), or in other on-premises and Cloud architectures.
 
@@ -254,7 +258,7 @@ In the diagrams below, the following colors are used:
 ![](attachments/index-mendix-support/legend.png)
 {{% /image_container %}}
 
-### 9.1 Mendix Public and Dedicated Cloud
+### 9.1 Mendix Public & Dedicated Cloud
 
 The Mendix Public and Dedicated Clouds are an integrated part of the Mendix Platform and are therefore fully supported as described in the SLA.
 Mendix Support has access to app health, logs, graphs and monitoring.
@@ -281,7 +285,7 @@ Mendix Support does not have access to app health, logs, graphs and monitoring. 
 ![](attachments/index-mendix-support/sap-cloud-platform.png)
 {{% /image_container %}}
 
-### 9.4 Cloud Foundry / Docker & Kubernetes / traditional architectures
+### 9.4 Cloud Foundry / Docker & Kubernetes / Traditional Architectures
 
 Mendix is compatible with all the well-known cloud providers: IBM Cloud, Microsoft Azure, Amazon Web Services (AWS), Red Hat OpenShift, and Google Cloud Platform.
 Depending on the Cloud architecture a Mendix application is built using the [Mendix Cloud Foundry buildpack](https://github.com/mendix/cf-mendix-buildpack), the [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack) or to a Unix-like or Windows server.
@@ -293,11 +297,11 @@ Mendix Support does not have access to app health, logs, graphs and monitoring. 
 ![](attachments/index-mendix-support/on-premises.png)
 {{% /image_container %}}
 
-## 10 Components of the Mendix Stack{#components}
+## 10 Components of the Mendix Stack {#components}
 
 These are the components of the Mendix stack described in the section above. Please read an extensive description of the [Mendix architecture](https://www.mendix.com/evaluation-guide/enterprise-capabilities/architecture-intro) in the Evaluation Guide.
 
-### 10.1 Database, File Storage, & Network
+### 10.1 Database, File Storage & Network
 
 The database component includes the database service and the creating, storing, downloading, uploading, and restoring of backups.
 The file storage component refers to the file storage service and the creating, storing, downloading, uploading, and restoring of backups.
@@ -317,7 +321,7 @@ The container runtime platform refers to the platform for managing, creating, de
 
 Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Support diagnose this component. When running on SAP Cloud Platform or IBM Cloud, the selected third party can diagnose this component.
 
-### 10.4 Buildpack, m2ee and Service Console
+### 10.4 Buildpack, m2ee & Service Console
 
 The Mendix buildpacks for [Cloud Foundry](https://github.com/mendix/cf-mendix-buildpack) and [Docker](https://github.com/mendix/docker-mendix-buildpack) are available in GitHub repositories. The documentation for the buildpacks and m2ee tools is contained within these GitHub repositories and, because they are released under an Open Source license, the code can be inspected and the functionality and options can be understood by customers who wish to use these buildpacks.
 
@@ -371,7 +375,7 @@ Mendix Support needs application logs to diagnose these component. Because Mendi
 This includes the implementation and configuration of features, and the data and files in the Mendix app itself.
 These components are not accessible for Mendix Support and issues in the application are out of the scope of Mendix Support, although we will gladly assist in case of questions.
 
-## 11 Main Documents in this Category
+## 11 Main Documents in This Category
 
 * [Prepare Your App Project for Support](https://docs.mendix.com/developerportal/support/prepare-your-project) – shows you how to configure project authorization to select the affected app(s) in the Mendix Support Portal
 * [Submit a Support Request](https://docs.mendix.com/developerportal/support/submit-support-request) – presents the details necessary for Mendix Support to process your request

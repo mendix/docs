@@ -18,7 +18,7 @@ Before starting this how-to, make sure you know how to do the following:
 * Create overview and detail pages (see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages))
 * Create menu items (see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
 * Create microflows (see [How to Create Your First Microflow: Hello World!](../logic-business-rules/create-your-first-microflow-hello-world)
-* Add App Store content to your app (see [How to Use App Store Content](/appstore/general/app-store-content))
+* Add App Store content to your app (see [How to Use App Store Content in Studio Pro](/appstore/general/app-store-content))
 * Secure your applications (see [How to Create a Secure App](../security/create-a-secure-app))
 
 ## 3 Preparing the Data Structure, GUI, and Modules
@@ -279,6 +279,4 @@ Once you have completed an Excel template you can export the template for exampl
 * [Selenium Support](selenium-support)
 * [How to Import XML Documents](importing-xml-documents)
 * [How to Consume a REST Service](consume-a-rest-service)
-* [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
 * [The Export to CSV Button](/refguide7/export-to-csv-button)
-

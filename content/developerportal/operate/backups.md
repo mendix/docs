@@ -104,10 +104,13 @@ Backup Details | Cloud Version | Description
 **ID**/ <br /> **Snapshot id** | v3 <br /> v4 | Unique identifier for the backup *snapshot*
 **Date**/ <br /> **Created on** | v3 <br /> v4 | The creation date of the backup
 **Expires on** | v3 & v4 | The date on which the backup will be removed from the system
-**Mendix version** | v3 & v4 | The version of the deployment package used during backup creation
+**Model version** | v3 & v4 | The version of the deployment package used during backup creation
+**Snapshot Size Uncompressed (MB)** | v4 | The size of database dump and files of the snapshot in MB
 **Comment** | v3 & v4 | A specific comment added to the backup
 
 At the bottom of the screen, you can click **Delete** to delete this particular backup.
+
+![Backup Details](attachments/backups/backup-details.png)
 
 ## 4 Known issues
 
@@ -118,5 +121,5 @@ At the bottom of the screen, you can click **Delete** to delete this particular 
 * [How to Create a Backup](create-backup)
 * [How to Download a Backup](download-backup)
 * [How to Restore a Backup](restore-backup)
-* [How to Restore a Backup Locally](database-size-reduction)
+* [How to Restore a Backup Locally](restore-backup-locally)
 * [Database Size Reduction](database-size-reduction)

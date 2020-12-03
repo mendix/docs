@@ -218,3 +218,77 @@ The output results in 8 days divided by 7 days in a week:
 ```java
 1.1428571428571428
 ```
+
+## 8 calendarMonthsBetween
+
+{{% alert type="warning" %}}This expression is only available in Mendix versions 8.15 and above.{{% /alert %}}
+
+The `calendarMonthsBetween` function calculates the difference between the input values in months. Time will be ignored. The dates are assumed to be in the end-user's local time zone.
+
+### 8.1 Input Parameters
+
+The input parameters are described in the table below:
+
+| Value       | Type          |
+| ----------- | ------------- |
+| First date  | Date and time |
+| Second date | Date and time |
+
+### 8.2 Output
+
+The output is described in the table below:
+
+| Value                                                    | Type            |
+| -------------------------------------------------------- | --------------- |
+| The difference between the two dates measured in months. | Integer/Long    |
+
+### 8.3 Example
+
+If you use the following input:
+
+```java
+calendarMonthsBetween(dateTime(2007, 1, 1, 10, 1, 1), dateTime(2007, 8, 1, 1, 1, 1))
+```
+
+The output results in the amount of months between the two dates:
+
+```java
+7
+```
+
+## 9 calendarYearsBetween
+
+{{% alert type="warning" %}}This expression is only available in Mendix versions 8.15 and above.{{% /alert %}}
+
+The `calendarYearsBetween` function calculates the difference between the input values in years. Time will be ignored. The dates are assumed to be in the end-user's local time zone.
+
+### 9.1 Input Parameters
+
+The input parameters are described in the table below:
+
+| Value       | Type          |
+| ----------- | ------------- |
+| First date  | Date and time |
+| Second date | Date and time |
+
+### 9.2 Output
+
+The output is described in the table below:
+
+| Value                                                   | Type            |
+| ------------------------------------------------------- | --------------- |
+| The difference between the two dates measured in years. | Integer/Long    |
+
+### 9.3 Example
+
+If you use the following input:
+
+```java
+calendarYearsBetween(dateTime(2007, 1, 1, 10, 1, 1), dateTime(2017, 1, 1, 1, 1, 1))
+```
+
+The output results in the amount of years between the two dates:
+
+```java
+10
+```

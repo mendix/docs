@@ -83,7 +83,7 @@ The number of requests per second is split up by request handlers. The key ones 
 * **xas/** lists general queries for data in data grids, sending changes to the server, and triggering the execution of microflows
 * **ws/** shows the number of web service calls that were done
 * **file** shows the number of file uploads and downloads
-* The **default** should not list any requests, because static content is directly served to the user by the front-facing web server, which is placed between the user and this application process
+* The **default** request handler handles all requests which are *not* handled by the standard request handlers (`/xas/`,`/file`, etc) or request handlers installed by the user application — requests handled by the default handler will usually be for the static resources of application (for example `/login.html` and `/mxui.js`).
 
 These are the commonly used types:
 
@@ -217,6 +217,12 @@ The **Application node CPU usage** graph shows the CPU utilization in percentage
 CPU usage of the database is shown in [Database Node CPU Usage](#Trends-dbcpu), below.
 {{% /alert %}}
 
+Because of the way resources are allocated to Mendix apps, your app may be able to burst to use more than the CPU specified for your container. For example, an app running in a container with 2 CPUs might show CPU usage of 250% where you would expect the maximum to be 200%.
+
+If your app consistently uses more CPU than specified for your container your app could suffer from performance issues if there are periods when there are insufficient CPU resources for it to burst above that specified for the container.
+
+Your app will always have access to at least the amount of CPU specified for your container when it needs it.
+
 ### <a name="Trends-appdf"></a>4.10 Application Node Disk Usage in Percentage (%)
 
 The **Application node disk usage (percentage)** graph shows the relative amounts of data that are stored on disk.
@@ -322,7 +328,15 @@ If you see large values here which do not immediately drop back again, it may in
 
 ### <a name="Trends-dbdfabs"></a><a name="Trends-dbdf"></a>5.8 Database Node Disk Usage (in Bytes)
 
-The **Database node disk usage (in bytes)** graph displays the absolute amount of data that is stored on disk.
+The **Database node disk usage (in bytes)** graph displays both used storage (the absolute amount of data that is stored on disk), and free space (the remaining space on the database node). When hovering over the graph, you will also see the total size of your database.
+
+{{% alert type="info" %}}
+The units on the graph are mebibtyes. One gibibyte is 1024 mebibytes, so if the total storage of your database is 10 GiB, it is 10240 MiB, and will appear like this on the graph.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+The used storage metric was added in September 2020. The used storage metric will not be present on graphs for times before September 2020. When hovering over the graph for times before September 2020, the value will be shown as "NaN". This is normal.
+{{% /alert %}}
 
 ![](attachments/trends-v4/db-disk-usage-bytes.png)
 

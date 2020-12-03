@@ -47,7 +47,13 @@ Shortcut key: <kbd>F4</kbd>
 
 ## 4 Show Project Directory in Explorer
 
-The **Show Project Directory in Explorer** option shows the directory that contains the project file (*.mpr*) and other assets such as resources and Java actions in Windows Explorer
+The **Show Project Directory in Explorer** option shows the directory that contains the project file (*.mpr*) and other assets such as resources and Java actions in Windows Explorer. By default, the directory is located in the **MyDocuments** section.
+
+The following directories in the project directory are useful for customizing the app style and adding custom widgets and Java actions:
+
+* **theme** – stores the *.css* files that can be used to style the application
+* **javasource** – stores the JavaScript actions
+* **widgets** – stores the widgets
 
 ## 5 Deploy for Eclipse
 
@@ -67,11 +73,15 @@ For more information on settings displayed on the Create Deployment Package dial
 
 The **Clean Deployment Directory** option cleans the deployment directory.
 
-## 8 Deploy to Licensed Cloud Node
+## 8 Deploy to Licensed Cloud Node {#deploy}
 
 The **Deploy to Licensed Cloud Node** option deploys the latest committed revision of a Team Server project to the associated Mendix Cloud node.
 
 Shortcut key:  <kbd>Ctrl</kbd> + <kbd>F5</kbd>
+
+{{% alert type="warning" %}}
+The [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings#target) needs to be set and the deploying user needs to have transport rights to the set target.
+{{% /alert %}}
 
 For more information on using this option, see [Deploy to the Cloud](deploy-to-the-cloud-dialog).
 

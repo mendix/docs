@@ -1,7 +1,7 @@
 ---
 title: "Stories Pane"
 parent: view-menu
-menu_order: 90
+menu_order: 50
 description: "Describes the Stories pane in Mendix Studio Pro."
 tags: ["Studio Pro", "stories", "stories pane"]
 ---

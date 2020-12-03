@@ -13,7 +13,7 @@ When the application is started for the first time, the specified demo users are
 
 The demo users are only created and shown when running your application locally on your development machine, or when running in a Free App environment.
 
-To access demo users and their properties, open **Project Security** > the**Demo users** tab:
+To access demo users and their properties, open **Project Security** > **Demo users**:
 
 ![](attachments/demo-users/demo-users-tab.png)
 

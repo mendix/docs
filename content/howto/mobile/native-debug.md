@@ -93,8 +93,38 @@ After running `react-devtools` you will see the React developer tools GUI. To us
 4. Tap any styled element in your app (like a text element) to see its style information on your device and inspect and debug it in your React developer tools GUI.
 5. Shake your device and tap **Toggle Element Inspector** to turn off the inspector off.
 
-## 4 Read More
+## 4 Debugging the OS Logs
+
+When your Mendix app is crashing or the logging in Mendix Studio Pro is incomplete, you might want to dive into your operating system's log files for information. There are 2 options:
+
+1. You could start the app in [XCode or Android Studio](/howto/mobile/native-build-locally#building-app-project), either of which will give you more information and allow you to set breakpoint and inspect variable values. This approach is a bit more cumbersome. 
+1. Get the log files directly from your device.
+
+The first approach is self-explanatory. For information on getting log files directly from your device, however, see below.
+
+### 4.1 Using Android Logcat
+
+The Android Debug Bridge (ADB) can get the log files via command line (specifically logcat) by following these steps:
+
+1.  Set up your phone:<br />
+	a. If not already, enable **Developer Mode** by opening **Settings** > **System** and tap 7 times om the **Build Number**.<br />
+	b. In **Settings** open the **Developer Options**.<br />
+	c. Enable **USB Debugging**.
+1. Download the [Latest Android Tools](https://dl.google.com/android/repository/platform-tools-latest-windows.zip) for Windows.
+1. Unzip the files in a working directory, for example **C:\adb**.
+1. Open a command line tool the in the working directory.
+1. Execute the command `adb.exe start`.
+1. Connect your phone via USB, then accept the **Allow USB debugging?** dialog box on your phone.
+1. Execute the command `adb logcat > output.txt`. All output will be written in *output.txt*.
+1. Open your Mendix app and implement the actions that you want to debug.
+1. Stop the log capturing in your command line tool by pressing <kbd>Ctrl</kbd> + <kbd>C</kbd>.
+1. Open *output.txt* in a text editor.
+1. Search for your issue.
+
+For more detailed steps how to set up ADB, see [Install ADB](https://www.xda-developers.com/install-adb-windows-macos-linux/). To learn more about ADB in general, see [Command ADB](https://developer.android.com/studio/command-line/adb).
+
+## 5 Read More
 
 * [Get Started with Native Mobile](getting-started-with-native-mobile)
-* [Debug a Mobile App with Mendix](debug-a-mobile-app)
+* [Debug a Hybrid Mobile App](debug-a-mobile-app)
 * [Build Native Mobile Apps with Parallels](using-mendix-studio-pro-on-a-mac)

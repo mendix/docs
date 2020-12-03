@@ -113,12 +113,11 @@ After this, all `Attachments` belonging to one `GenericObject` have been copied 
 ## 4 Read More
 
 * [Create a Custom Save Button](create-a-custom-save-button)
-* [Create Your First Microflow: Hello World!](create-your-first-microflow-hello-world)
+* [Trigger a Microflow From a Menu Item](trigger-microflow-from-menu-item)
 * [Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [Extend Your Application with Custom Java](extending-your-application-with-custom-java)
 * [Extract & Use Sub-Microflows](extract-and-use-sub-microflows)
 * [Optimize Microflow Aggregates](optimizing-microflow-aggregates)
 * [Optimize Retrieve Activities](optimizing-retrieve-activities)
 * [Set Up Error Handling](set-up-error-handling)
-* [Trigger Logic Using Microflows](triggering-logic-using-microflows)
 * [Work with Lists in a Microflow](working-with-lists-in-a-microflow)

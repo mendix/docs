@@ -6,7 +6,7 @@ tags: ["Control Center", "Mendix Admin", "Developer Portal", "role", "permission
 
 ## 1 Introduction
 
-[**Intro content needed**]
+[**Intro content needed - purpose: for Mendix Admins and company managers?**]
 
 [**How to access? Menu item in community header?**]
 
@@ -26,7 +26,7 @@ On the **External members** tab, you can see the members outside of your company
 
 [**How to define "access" here? Supposed to show permissions? Finish describing - supposed to show less info than for company members.**]
 
-## 3 App Projects
+## 3 App Projects {#projects}
 
 On this page, you can see a list of the active app projects that belong to your company on the **Active App Projects** tab. On the **Inactive App Projects** tab, you can see the deactivated app projects that belong to your company.
 
@@ -34,57 +34,37 @@ When you click a **Project** name, a pop-up window opens with the project profil
 
 The **Default App Roles** tab shows the default  [App Team roles](/developerportal/company-app-roles/manage-roles#edit-app-team-roles) assigned for every new app project created in your company. These can be customized at the app project-level. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/develop/team-server) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) information.
 
-
-
-
 ## 4 Groups
 
-An **App Access Group** consists of end-users who will have access to accessible apps (with specific environments and roles. End-users are users outside of your company who can access the deployed app but not the app project.
+A Mendix Admins can set up an **App Access Group**, which consists of end-users who have access to certain apps with specific environments and roles. End-users are comprised of both active members of your company and external members. Click **Add Access Group** to create a new group.
 
-When you assign end-users to an app access group, they will automatically be granted access to specified app-cloud apps. Mendix Admins and company managers are able to set up these groups and specify app permissions.
+[**Please verify above description**]
 
-[**Verify "app-cloud" use above taken from UI**]
+On the group details pop-up window, you can add **Members** of the group by clicking **Add Member**. When you add members to an app access group, they will automatically be granted access to the apps listed on **Accessible Apps** tab. After you select an app to be accessible for the group, you also need to select a specific app [environment](/developerportal/deploy/environments) node to be accessible, in addition to specific user [roles](/refguide/project-security#user-roles) that should be able to access the app.
 
-[**Reference Security Groups, same thing**]
+{{% alert type="warning" %}}
+You can only add apps to groups that utilize [Mendix SSO](https://docs.mendix.com/appstore/modules/mendix-sso#1-introduction) to App Access Groups.
+{{% /alert %}}
 
-Click **Add Access Group** to add a new app access group with a **Name** and **Description**.
-
-For current app access groups, click the name of the group to open up the group editor. The editor has two tabs:
-
-* **Members** – this lists the members of the group by **Name** and **Email**; click **Add Member** to add a new group member
-* **Accessible Apps** – this lists the apps accessible to the members of the group; click **Add App** to add a new app for the group 
-
-[**Finish for selecting environments and roles**]
-
-## 5 Company Settings
+## 5 DO: Company Settings
 
 This page presents your company's details and its Mendix Admins.
 
 On the **Company Details** tab, you can edit the **Company name** and **Description** as well as the **Company Email Domains**.  When you click **Add Domain**, a request is sent to Mendix Support. Once that domain is added, every user who signs up to Mendix wth that email domain will be assigned to your company.
 
-On the **Mendix Admins** tab, all the current Mendix Admins in your company are listed. To add a new admin, click **Add Mendix Admin**. To remove an admin, select their name in the list and click **Remove**.
-
-### 5.1 Company
-
-The company page lists the name of your company and its description as well as all the people in your company on the **People** tab.
-
-If you are a Mendix Admin, you have one main permission to edit your company's details as well as perform many other tasks. As a Mendix Admin, you will see the **Admin Panel** button available, which will take you to the pages described below.
-
-[**Admin Panel still exists?**]
+On the **Mendix Admins** tab, all the current Mendix Admins in your company are listed. If you are a Mendix Admin, you have one main permission to edit your company's details as well as perform many other tasks. To add a new admin, click **Add Mendix Admin**. To remove an admin, select their name in the list and click **Remove**.
 
 ## 6 Company Brand
 
 On this page, you can customize your company brand with a logo and image.
 
-The **Logo** will appear on your [company page](#company). You can add a logo and edit it here.
+The **Logo** will appear on your company page.. You can add a logo and edit it here.
 
-[**What is the "company launchpad" as mentioned in the UI?**]
+[**where is the company page now as mentioned in the UI?**]
 
 [**Verify: icon will not be released yet**]
 
-The **Cover image** is the the background header of your company page. If you do not set one, the **Primary** color as set in the **Brand colors** section will be used instead.
-
-[**How to do draft brand that is not applied on company page right away and that can be saved as a draft? Only see Apply button, no Save as Draft or anything**]
+The **Cover image** is the the background header of your company page. If you do not set an image by clicking **Upload**, the **Primary** color as set in the **Brand colors** section will be used instead.
 
 ## 7 Security
 

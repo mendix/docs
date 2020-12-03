@@ -28,7 +28,7 @@ The home page of the Mendix App Store has three main tabs at the top:
 
 {{% todo %}}[**Verify screenshot for  category order and correlate in table below**]{{% /todo %}}
 
-It also presents various content catalogs:
+<a name="catalog"></a>It also presents various content catalogs:
 
 | Catalog | Description |
 | --- | --- |

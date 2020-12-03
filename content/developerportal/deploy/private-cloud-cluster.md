@@ -16,7 +16,7 @@ This document explains how to set up the cluster in Mendix.
 
 Once you have created your namespace, you can invite additional team members who can then create or view environments in which their apps are deployed, depending on the rights you give them. For more information on the relationship between Mendix environments, Kubernetes namespaces, and Kubernetes clusters, see [Containerized Mendix App Architecture](#containerized-architecture), below.
 
-## 2 Prerequisites for Creating a Cluster
+## 2 Prerequisites for Creating a Cluster{#prerequisites}
 
 To create a cluster in your OpenShift context, you need the following:
 
@@ -152,7 +152,7 @@ Once you are signed in to your cluster you can run the Configuration Tool.
 
 If, instead of using the Configuration Tool, you want to run the scripts in your Kubernetes cluster, see the instructions in [Using Installation and Configuration Scripts](private-cloud-config-script).
 
-#### 4.3.1 Base Installation
+#### 4.3.1 Base Installation{#base-installation}
 
 If the Mendix Operator and the Mendix Gateway Agent have not been installed in your cluster, you will need to install them.
 
@@ -411,6 +411,8 @@ You can choose one of the following registry types. OpenShift registries can onl
 
 **Additional Information**
 
+You can host the default Mendix components in your own registry, for example if your cluster is firewalled and cannot open up a route to the Mendix registry. In this case you need to migrate some, or all, of the Mendix components to your cluster. See the instructions in [Migrating to Your Own Registry](private-cloud-migrating) to find out how to do this.
+
 For **OpenShift 3** and **OpenShift 4** registries, the default image pull credentials from the `default` ServiceAccount will be used. No additional configuration steps are required to enable image pulls in OpenShift.
 
 For **Generic registry…** options, the configuration script will ask if the credentials should be added to `imagePullSecrets` in the `default` ServiceAccount. If you answer **Yes**, the configuration script will add image pull credentials to the `default` ServiceAccount - no additional image pull configuration is required. If you want to configure the image pull separately, choose **No**.
@@ -419,11 +421,11 @@ For **Amazon Elastic Container Registry**, you will need to configure registry a
 
 When choosing the **Existing docker-registry secret**, you will need to add this secret to the `default` ServiceAccount manually, or provide registry authentication configuration in another way (depending on which registry authentication options the Kubernetes cluster vendor is offering).
 
-#### 4.3.3 Proxy{#proxy}
+##### 4.3.2.5 Proxy{#proxy}
 
 Choose **Yes** if a proxy is required to access the public internet from the namespace; you will be asked for the proxy configuration details.
 
-#### 4.3.4 Review and Apply
+#### 4.3.3 Review and Apply
 
 When you have configured all the resources, do the following:
 

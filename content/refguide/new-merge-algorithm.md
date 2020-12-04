@@ -18,3 +18,30 @@ Go to Edit > Preferences > New features and check the relevant box. Restart Stud
 
 ## Resolving Conflicts
 
+To illustrate the new conflict resolution mode, we will look at an example. Let us take a simple page so that you can clearly see what is going on:
+
+![Original page](attachments/new-merge-algorithm/new-merge-algorithm-base-page.png)
+
+One person makes the following changes in the main line:
+
+* Change the text 'Home' to 'Welcome!'
+* Add a Mendix logo above the text 'Welcome!'
+* Delete the subtitle 'Welcome to your new app'
+* Add a text 'Write some text here` in the bottom layout grid
+
+This results in the page now looking like this:
+
+![Main line page](attachments/new-merge-algorithm/new-merge-algorithm-main-page.png)
+
+Another person in a branch, makes other changes:
+
+* Change the text 'Home' to 'My homepage'
+* Add a data grid to the bottom layout grid
+
+This results in their page looking like this:
+
+![Branch line page](attachments/new-merge-algorithm/new-merge-algorithm-branch-page.png)
+
+As you can see, there will be at least one real conflict: both people changed the text 'Home'. In the old merge algorithm the changes to the bottom layout grid would be an additional conflict. And then you would have to choose between the main line page and the branch line page. 
+
+Let us see what the new algorithm does in this situation.

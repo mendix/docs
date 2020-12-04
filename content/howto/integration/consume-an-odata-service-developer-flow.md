@@ -12,11 +12,7 @@ Licensed users of Mendix Data Hub can also consume published OData Services duri
 
 Developers can consume published OData services by specifying the service metadata URL or a (local) metadata file in the Consume OData Service document.  The service will be listed in  the **Data Hub Project** pane and  the exposed entities can be dragged into the domain model from this.  
 
-Follow the steps in this how-to to develop your app using locally stored publised OData Services or those that are not yet registered in the [Data Hub Catalog](/data-hub/data-hub-catalog). 
-
-When an external entity is used in a project module through the [Data Hub pane](data-hub-pane), a **Consumed OData service** document is added to the project specifying the details of the consumed service. This is the API to the publishing app and the connection to the dataset that the external entity connects to.
-
-
+Follow the steps in this how-to to develop your app by directly consuming publised OData Services or those that are not yet registered in the [Data Hub Catalog](/data-hub/data-hub-catalog). 
 
 **This how-to will teach you how to do the following:**
 

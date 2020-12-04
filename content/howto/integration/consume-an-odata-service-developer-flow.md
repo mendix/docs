@@ -34,7 +34,7 @@ Before starting this how-to you will need the following:
 * Have a URL of a valid published OData v3 or v4 metadata contract
 
 	* An example OData service URL which will not be published in your organization's Data Hub is decribed in [Sample file from OData.org](#sampleODataservice) 
-	* you can also use a metadata file stored on your computer – an example is described for a simple app, giving the option to use the URL or the metadata file  in [Mendix Published OData Service](#how-to-file).
+	* you can also use a metadata file stored on your computer – an example is given for a simple app, giving the option to use the URL or the metadata file  in [Mendix Published OData Service](#how-to-file).
 	
 	  
 

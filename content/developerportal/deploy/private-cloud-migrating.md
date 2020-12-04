@@ -25,11 +25,33 @@ Follow the instructions for doing the base installation, including the instructi
 
 You will need to patch this installer later on to use your own registry.
 
-
-
 ## 4 Export Mendix Components
 
+To export the Mendix components you want to migrate to your own registry, you need to run the Mendix Configuration Tool in registry migration mode.
+
+Follow these steps to export the Mendix components and store them on your local machine. 
+
+1. Start the Configuration Tool using the command `mx-config-cli registry-migration` to initiate registry migration mode.
+
+2. Select **Migration Type** to be *Export*.
+
+3. Select all the **Main Components** and **Storage Provisioners** you want to export.
+
+    ![](attachments/private-cloud-migrating/export.png)
+
+4. Click **Export components**.
+
+    The components you selected will be extracted from the Mendix repository and saved on your local machine in the folder `C:\Users\<User id>\.mx_config_cli\registry-migration`.
+
 ## 5 Import Mendix Components Into Custom Registry
+
+Once you have the Mendix components saved on your local machine, you can import them into your custom registry.
+
+Perform the following steps.
+
+1. Ensure that the Configuration Tool is started in registry migration mode. use the command `mx-config-cli registry-migration` if it is not already running.
+
+
 
 ## 6 Configure Installation Script to use Custom Registry
 

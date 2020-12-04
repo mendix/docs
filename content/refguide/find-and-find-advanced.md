@@ -104,4 +104,4 @@ Click **Lock results** in the **Find Results** pane. Now if you click **Find Usa
 
 ## 5 Read More
 
-* [Find Your Way in an App Project](find-your-way)
+* [Go to Option](go-to-option)

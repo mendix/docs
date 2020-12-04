@@ -1,6 +1,6 @@
 ---
 title: "Control Center"
-description: " "
+description: "Describes the Mendix Control Center, used for the governance of apps and company members."
 tags: ["Control Center", "Mendix Admin", "Developer Portal", "role", "permissions"]
 ---
 
@@ -14,9 +14,9 @@ Control Center consists of the tabs described below.
 
 ## 2 Members
 
-Members are users who can view and/or edit an app project. 
+Members are users who can view and/or edit an app project. On the **Active members** tab, you can see the active members of your company who can access certain app projects: 
 
-On the **Active members** tab, you can see the active members of your company who can access certain app projects.
+![](attachments/members.jpg)
 
 When you click a company member's name, a pop-up window opens with their member profile. The profile displays the app **Projects** of which they are a member as well as their **Project role** for each project. Click a project name to go to its [project details](#project-details) page.
 

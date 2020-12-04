@@ -16,7 +16,7 @@ Go to Edit > Preferences > New features and check the relevant box. Restart Stud
 
 ![Enabling the new merge algorithm](attachments/new-merge-algorithm/enable-new-merge-algorithm.png)
 
-## Resolving Conflicts
+## Example Setup
 
 To illustrate the new conflict resolution mode, we will look at an example. Let us take a simple page so that you can clearly see what is going on:
 
@@ -42,6 +42,19 @@ This results in their page looking like this:
 
 ![Branch line page](attachments/new-merge-algorithm/new-merge-algorithm-branch-page.png)
 
-As you can see, there will be at least one real conflict: both people changed the text 'Home'. In the old merge algorithm the changes to the bottom layout grid would be an additional conflict. And then you would have to choose between the main line page and the branch line page. 
+## Merging With The Old Algorithm
+
+If we merge the branch into the main line with the old merge algorithm, it will find two conflicts:
+
+* Both people changed the text 'Home'
+* The layout grid in the bottom was changed by both people (adding different widgets)
+
+![Old algorithm conflicts](attachments/new-merge-algorithm/old-merge-algorithm-conflicts.png)
+
+The only thing you can do is to choose the whole page as it is in the main line or as it is in the branch line. You cannot combine changes from both sides, meaning that you may have to do rework if you want changes from both sides.
+
+## Merge
 
 Let us see what the new algorithm does in this situation.
+
+![New algorithm conflicts](attachments/new-merge-algorithm/new-merge-algorithm-conflicts.png)

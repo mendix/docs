@@ -11,7 +11,7 @@ There are some minor differences in how Mendix behaves when using an Oracle data
 
 ## 2 Setting Up a User for Mendix
 
-When setting up an integration with an Oracle backend we recommend that you create a user/schema with the appropriate number of privileges. In Mendix, we use a single user to update the schema-structure (for example, tables and indices) and to make DML statements. The former is done when Mendix is starting up and synchronizing the model with the storage structure, and the latter is done in normal runtime operations. 
+When setting up an integration with an Oracle backend we recommend that you create a user/schema with the appropriate privileges. In Mendix, we use a single user to update the schema-structure (for example, tables and indices) and to execute DML statements. The former is done when Mendix is starting up and synchronizing the model with the storage structure, and the latter is done in normal runtime operations. 
 
 When setting-up perform the following steps:
 
@@ -24,7 +24,7 @@ When setting-up perform the following steps:
 3. Ensure that the user has been granted enough quotas to create the resources they need, or give them an unlimited grant (for example, `GRANT UNLIMITED TABLESPACE TO mendix` where `mendix` is the user/schema that you have created).
 
 {{% alert type="info" %}}
-During the creation of the Mendix database, the number of structural modifications made will be dependent on the size of your domain model. If this number is quite large, or if there is a large structural change, it may be prudent to increase the value of `OPEN_CURSORS`.
+During the creation of the Mendix database, the number of structural modifications made will depend on the size of your domain model. If this number is quite large, or if there is a large structural change, it may be prudent to increase the value of `OPEN_CURSORS`.
 {{% /alert %}}
 
 ## 2 Unlimited and Very Long Strings

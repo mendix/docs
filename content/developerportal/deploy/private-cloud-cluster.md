@@ -494,7 +494,7 @@ To prevent MITM attacks, enable **Strict TLS** for the database and use an HTTPS
 {{% /alert %}}
 
 {{% alert type="info" %}}
-For best results, custom TLS configuration should be used for apps running Mendix 8.15.2 and later versions.
+Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 {{% /alert %}}
 
 #### 4.3.5 Review and Apply

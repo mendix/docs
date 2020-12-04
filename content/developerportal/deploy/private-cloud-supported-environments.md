@@ -149,7 +149,7 @@ If Strict TLS is enabled, Mendix for Private Cloud will connect with TLS and val
 
 The Mendix Operator allows to specify a custom Certificate Authorities to trust. This allows to enable Strict TLS even for databases with self-signed certificates.
 
-For best results, Strict TLS mode should be used for apps running Mendix 8.15.2 and later versions.
+Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 {{% /alert %}}
 
 ### 4.3 Microsoft SQL Server
@@ -185,7 +185,7 @@ If Strict TLS is enabled, Mendix for Private Cloud will connect with TLS and val
 
 The Mendix Operator allows to specify a custom Certificate Authorities to trust. This allows to enable Strict TLS even for databases with self-signed certificates.
 
-For best results, Strict TLS mode should be used for apps running Mendix 8.15.2 and later versions.
+Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 {{% /alert %}}
 
 ### 4.4 Dedicated JDBC database

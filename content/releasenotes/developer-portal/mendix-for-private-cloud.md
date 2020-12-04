@@ -18,7 +18,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 #### Mendix for Private Cloud — Mendix Operator v1.7.0 and Mendix Gateway Agent v1.6.0
 
 * We have added a configuration option to add custom Certificate Authorities which should be trusted by the Mendix Operator and app environments.
-* We have added a Strict TLS mode to Postgres, SQL Server and Minio, which will only allow connections to the database and file storage if it has a valid and trusted TLS certificate. Together with custom Certificate Authorities option, this will ensure that Mendix Apps are connecting to the database and file storage over a secured connection. For best results, Strict TLS mode should be used with apps created in Mendix 8.15.2 (or later versions).
+* We have added a Strict TLS mode to Postgres, SQL Server and Minio, which will only allow connections to the database and file storage if it has a valid and trusted TLS certificate. Together with custom Certificate Authorities option, this will ensure that Mendix Apps are connecting to the database and file storage over a secured connection. Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 * We have added an option to specify TLS client certificates in Mendix apps. A Mendix app can use TLS client certificate when communicating with external web services.
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).

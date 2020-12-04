@@ -1,20 +1,16 @@
 ---
-title: "Find Your Way in an App Project"
+title: "Go to Options"
 parent: studio-pro-overview
-description: "Describes Go to and Find usages option in Mendix Studio Pro."
+description: "Describes the Go to option in Mendix Studio Pro."
 menu_order: 10
-tags: ["project", "navigation", "usage", "find usages"]
+tags: ["project", "go to" "navigation", "usage"]
 ---
 
 ## 1 Introduction
 
-In Studio Pro editors, such as navigation, page, or microflow editor, you can access a handy menu by right-clicking items. Two options are commonly used to find your way in a project: **Go to** and **Find usages**. 
+In Studio Pro editors, such as navigation, page, or microflow editor, you can access a handy menu by right-clicking items. A **Go to** option is commonly used to find your way in a project. It allows you to navigate from one element to another: for example, to navigate to the target of a button or to the source of a data grid.
 
-The **Go to** option allows you to navigate from one element to another: for example, to navigate to the target of a button or to the source of a data grid.
-
- The **Find Usages** option allows you to find where a certain element is used, for example, to find all buttons that open a certain page.
-
-## 2 Go To Options
+## 2 Go To Option
 
 The examples of using the **Go to** option are described below:
 
@@ -25,19 +21,9 @@ The examples of using the **Go to** option are described below:
 * **Opening an entity from a microflow** – you can navigate to an entity in the domain model if you right-click an activity in the microflow and select **Go to entity**. Mendix Studio Pro will open the corresponding domain model:
   ![Go to Entity](attachments/find-your-way/go-to-entity.png)
 
-## 3 Finding Usages
+## 3 Read More
 
-To find where a certain element is used, do the following:
-
-1.  In the domain-model, right-click an entity and select **Find usages**. Mendix Studio Pro shows all usages of this entity in the **Find Results** pane.
-    ![Find Usages](attachments/find-your-way/find-usages.png)
-2.  Double-click an item in the **Find Results** pane to open the corresponding document:
-    ![Find Results Pane](attachments/find-your-way/find-results-pane.png)
-3.  Click **Lock results** in the **Find Results** pane. Now if you click **Find Usages**, the results will be shown in a second **Find Results** pane. This allows you to  keep several search results.
-    ![Lock Results](attachments/find-your-way/lock-results.png)
-
-## 4 Read More
-
+* [Find, Find Advanced, and Find Usages](find-and-find-advanced)
 * [Navigation](navigation)
 * [Pages](pages)
 * [Microflows](microflows)

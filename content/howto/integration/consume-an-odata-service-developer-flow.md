@@ -12,6 +12,10 @@ Developers can consume OData services by specifying the service metadata URL or 
 
 Developers who are publishing OData services can follow the steps in this how-to to test their published OData service locally before deploying them and registering  them in the Data Hub Catlog. 
 
+When an external entity is used in a project module through the [Data Hub pane](data-hub-pane), a **Consumed OData service** document is added to the project specifying the details of the consumed service. This is the API to the publishing app and the connection to the dataset that the external entity connects to.
+
+Licensed users of Mendix Data Hub can also consume published OData Services during app development without using the **Data Hub** pane when trying out published OData Services which may not be registered in the **Data Hub Catalog**, or when working with locally deployed services.
+
 **This how-to will teach you how to do the following:**
 
 * Add a consumed OData Service document in your project model

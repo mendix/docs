@@ -76,7 +76,7 @@ Note that the following non-conflicting changes have already been applied to the
 
 And you will keep seeing the page as its going to be while you are resolving conflicts.
 
-## Resolving the First Conflict
+### Resolving the First Conflict
 
 For the first conflict, we can inspect what both people did and decide which side to take. Select one of the three lines that represent the conflict and choose "Resolve using Mine" or "Resolve using Theirs". 
 
@@ -88,7 +88,7 @@ There is a third option to deal with a conflict: "Mark as resolved". This means:
 
 Once you have chosen one of the three options to resolve the first conflict, green checkmarks will appear to indicate that this conflict has been dealt with.
 
-## Resolving the Second Conflict
+### Resolving the Second Conflict
 
 The second conflict is a list order conflict. It is a reminder to take a look at the order of the widgets in the bottom layout grid. Was the text supposed to come first or the data grid? You arrange the widgets in the desired order in the page editor and then choose "Mark as Resolved" for the list order conflict.
 
@@ -96,7 +96,7 @@ You can even decide to delete one of the widgets or add some of your own. The pa
 
 ![Conflict cannot be resolved](attachments/new-merge-algorithm/new-merge-algorithm-cannot-resolve.PNG)
 
-## Finishing Conflict Resolution
+### Finishing Conflict Resolution
 
 Once all conflicts have been resolved, you can click the 'Accept and Exit' button to finalize the results. The document will be saved in its merged form and the conflict for that document will be gone. The result is a document that contains changes from both sides and possibly some manual edits.
 

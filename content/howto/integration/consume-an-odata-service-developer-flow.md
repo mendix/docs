@@ -33,9 +33,9 @@ Before starting this how-to you will need the following:
 
 * Have a URL of a valid published OData v3 or v4 metadata contract:
 
-	* An example OData service URL which will not be published in your organization's Data Hub is decribed in [Sample file from OData.org](#sampleODataservice) 
+	* An example OData service URL which will not be published in your organization's Data Hub is decribed in [Sample file from OData.org](#sampleODataservice). 
 	
-	* An example is given for a simple Mendix app in [Mendix Published OData Service](#how-to-file)
+	* An example is given for a simple Mendix app in [Mendix Published OData Service](#how-to-file).
 
 	In both cases, you can try the steps for [consuming from a URL](#consumeurl), or download the service contract to your computer and follow the steps for [consuming from a file](#consumefile)
 	
@@ -158,25 +158,17 @@ If you want to consume from a metadata file stored locally, follow up to step 3 
 Your resulting app, which you can also deploy locally, will show the consumed entities and display the data they connect to.
 
 
-## 7 Consuming from the Data Hub after offline Modeling
+## 7 Consuming from the Data Hub after Offline Modeling
 
-If you now want to connect to the same service that is published in the Data Hub Catalog then you can change the service metadata URL in the **Consumed_OData_Service** document under the **Metadata** pane and the default value for the **Service URL** for the **Constant** so that the connections can be made to the datasets for the service.
+If you now want to connect to the same service that is published in the Data Hub Catalog then you can change the service metadata URL in the **Consumed_OData_Service** document under the **Metadata** tab and the default value for the **Service URL** for the **Constant** so that the connections can be made to the datasets for the service.
 
-Alternatively, you can search for the published service, in the **Data Hub Catalog** and recreate your model, and the assoicated documents will be automatically created when your drag the entities into your domain model with the relevant information. 
+Alternatively, you can search for the published service in the **Data Hub Catalog** and recreate your model, and the assoicated documents will be automatically created when your drag the entities into your domain model with the relevant information. 
 
-In this way, you can also ensure that if new versions of the consumed OData service are made available you will be notified and can **Update** or **Switch** to the newer versions.
+In this way, you can also ensure that when new versions of the published OData services that you have consumed in your project are made available you will be notified and can **Update** or **Switch** to the newer versions.
 
-## 8 Working with Consumed Services without Using the Data Hub Pane
+## 8 Updating Consumed Services without Using the Data Hub Pane
 
 As described in [Updating or Switching a Consumed OData Service](/refguide/consumed-odata-service#updating) if a different metadata contract is detected by Studio Pro at the service URL to the one that is currently being consumed by the project, you will be presented with the option to **Update** to the new contract. 
-
-
-
-how is this coupled with the catalog and the **Update** and **Switch** options (although if a different contract is detected at the specified endpoint, you will see the update arrow in the **Project** panel.
-
-- How do you find out the service endpoint info URL of a registered asset? this will be available in near release of DH 
-
-
 
 ## 4 Read More
 * [Consumed OData Service](/refguide/consumed-odata-service) 

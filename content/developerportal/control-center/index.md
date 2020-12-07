@@ -68,6 +68,10 @@ The **Mendix Admins** tab lists all the current Mendix Admins in your company. M
 
 ## 6 Company Brand
 
+{{% alert type="warning" %}}
+Features on this page are available to try out, but you will not see changes implemented yet.
+{{% /alert %}}
+
 On this page, you can add and edit a **Logo** that will appear on your company page.
 
 [**Where is the "company page" located, how can the user access it?**]

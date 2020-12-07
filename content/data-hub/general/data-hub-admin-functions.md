@@ -60,7 +60,7 @@ Custom owners are those that can be listed as the contact for a registered asset
 Curators and the Data Hub Admin can manage the custom owner list under the **Owner Management** tab.  
 
 {{% alert type="info" %}}
-Curators will only see  **Owner Management ** under the **Administration** tab.
+Curators will only see  **Owner Management** under the **Administration** tab.
 {{% /alert %}} 
 
 ![owner admin](attachments/data-hub-admin/owner-management.png)

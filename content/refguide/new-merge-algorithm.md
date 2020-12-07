@@ -104,4 +104,4 @@ At any time, you can also choose to abort conflict resolution by clicking the 'C
 
 ## Conclusion
 
-The new merge algorithm allows for fine-grained conflict resolution which means that you can mix and match changes from both sides. All the time you see what the page (or microflow or whatever) looks like at the moment, so that you know what you are doing. You undo and redo changes so that experimenting is without danger. And finally, you can edit the page while resolving conflicts so that you have all the freedom to get the desired results. 
+The new merge algorithm allows for fine-grained conflict resolution which means that you can mix and match changes from both sides. All the time you see what the page (or microflow or whatever) looks like at the moment, so that you know what you are doing. You can undo and redo changes so that experimenting is without danger. And finally, you can edit the page while resolving conflicts so that you have all the freedom to get the desired results. 

@@ -4,6 +4,11 @@ description: "Describes the Mendix Control Center, used for the governance of ap
 tags: ["Control Center", "Mendix Admin", "Developer Portal", "role", "permissions"]
 ---
 
+{{% alert type="info" %}}
+Mendix Control Center is currently a Beta release. For details on what this means, see [Mendix Beta Features](
+/releasenotes/beta-features/).
+{{% /alert %}}
+
 ## 1 Introduction
 
 [**Please add some intro content needed. What is the purpose of Control Center?**]

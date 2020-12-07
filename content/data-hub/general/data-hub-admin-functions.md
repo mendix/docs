@@ -37,27 +37,21 @@ The Data Hub Admin can add or remove the curator role by following these steps:
 
 1. From **Data Hub** screen, click the **Administration** tab:
 
-   ![Administration](attachments/data-hub-admin/administration.png)
+	![Administration](attachments/data-hub-admin/administration.png)
 
 2. The Data Hub Admin will see the **Curator Management** tab displaying  the list of Data Hub curators for the organization.
 
 3. To assign a curator role to a Mendix user, click **Add Curator**.
 
-   {{% alert type="info" %}}
-   A user with curator rights will be able to see all assets registered in the Catalog, including those that are set to **Non-discoverable** by asset owners. Curators will also be able to change the information that is registered for the assets they are owned by other users. 
-   {{% /alert %}}
+	{{% alert type="info" %}}A user with curator rights will be able to see all assets registered in the Catalog, including those that are set to **Non-discoverable** by asset owners. Curators will also be able to change the information that is registered for the assets they are owned by other users. {{% /alert %}}
 
 4. To search from the list of Mendix users in your organization, start typing in the search box and check the user(s) you want to assign the curator role to.
 
-   {{% alert type="info" %}}
-   This list will show all Mendix users for your organizations. It will not include non-Mendix users that are  added as *Custom Owners* as described in [Managing Custom Owners](#customowners).
-   {{% /alert %}}
+	{{% alert type="info" %}}This list will show all Mendix users for your organizations. It will not include non-Mendix users that are  added as *Custom Owners* as described in [Managing Custom Owners](#customowners).{{% /alert %}}
 
 5. If you want to remove the curator rights for a user, check the box against the name and confirm this by clicking **Remove Curator**.
 
-   {{% alert type="info" %}}
-   This will only remove the curator rights of the user, it will not remove the user as a Mendix platform user.
-   {{% /alert %}}
+	{{% alert type="info" %}}This will only remove the curator rights of the user, it will not remove the user as a Mendix platform user.{{% /alert %}}
 
 ## 3 Managing Custom Owners {#customowners} 
 
@@ -75,16 +69,11 @@ From this screen, the following functions can be carried out:
 
 * **Add Owners**—click and enter the name and email of the contact and click **OK**. This will be listed for **Business** or **Technical Owners** when registered assets are curated and a link to the name and email that is specified here added to the asset.
 
-   {{% alert type="info" %}}
-  Custom owners in this list are not Mendix platform users but serve as contact for the registered assets.  They will not be able to login to the Mendix Platform or curate registered assets in the Catalog. 
-  {{% /alert %}} 
+	{{% alert type="info" %}}Custom owners in this list are not Mendix platform users but serve as contact for the registered assets.  They will not be able to login to the Mendix Platform or curate registered assets in the Catalog. {{% /alert %}} 
 
 * Edit the details of the listed owners from this screen by clicking the edit pencil icon.
-
 * Delete names from the list, click the **x** and confirm the removal of the name from the list. 
 
-   {{% alert type="info" %}}
-   If a custom owner is removed from the list, they will also be removed from any registered assets where they were set as the owner. This means that the asset will not have a contact.
-   {{% /alert %}} 
+	{{% alert type="info" %}}If a custom owner is removed from the list, they will also be removed from any registered assets where they were set as the owner. This means that the asset will not have a contact.{{% /alert %}} 
 
 New custom owners can also be added when assets are being curated as described in [Changing the Technical and Business Owners of an App](../data-hub-catalog/curate#customowner).

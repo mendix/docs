@@ -23,17 +23,21 @@ To display the **Data Hub** pane, click **View** > **Data Hub**:
 
 ## 2 Data Hub Pane in the Domain Model
 
-In the domain model, the Data Hub pane is used to search the Data Hub Catalog for services and entities that can be dragged and used in your app project:
+In the domain model, the Data Hub pane is used to search the Data Hub Catalog for services and entities that can be dragged and used in your app project and when no search string is specified, the consumed services and entities for you project are displayed in the **Project** panel.
+
+### 2.1 The Search Pane
 
 {{% image_container width="300" %}}![](attachments/data-hub-pane/data-hub-pane.png){{% /image_container %}}
 
-The following functionality is available in the pane:
+The following functionality is available in the **Data Hub** pane:
 
 * [Search](#search) – Enter a search string of alphanumeric characters to find a service, entity, or attribute in the Data Hub Catalog. Entities can be dragged from the search results into your domain model as external entities.
 * [Filter](#search) – By default, the search will search for services in production environments. Click the **Filter** icon to include non-production environments in the search.
 * [Search results](#viewing) – The search results satisfying the search string will show the service name, service version, environment that the service was deployed to, and the entities in the service. If attributes satisfy the search criteria, they will be displayed under the expanded entity. Services and the entities that are currently being used in the current domain model are indicated with a green check-mark in the search results. You can drag entities from the search results into the domain model and use them as a data source for your app project.
 
-When no search string has been specified in the **Data Hub** pane, the **Project** pane is displayed. This shows the consumed services and the external entities used in the current project. The attributes for consumed entities are also listed:
+### 2.2 The Project Pane {#projectpanel}
+
+When no search string has been specified in the **Data Hub** pane, the **Project** panel is displayed. This shows the consumed services and the external entities used in the current project. The attributes for consumed entities are also listed:
 
 {{% image_container width="300" %}}![Project Section](attachments/data-hub-pane/project-section.png){{% /image_container %}}
 

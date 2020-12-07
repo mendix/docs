@@ -8,9 +8,9 @@ description: "Describes the development workflow for working with oData and exte
 
 ## 1 Introduction
 
-Licensed users of Mendix Data Hub can also consume published OData Services during app development without using the [Data Hub pane](/refguide/data-hub-pane) when, for example, trying out published OData Services which may not be registered in the [Data Hub Catalog](/data-hub/data-hub-catalog), or when working with locally deployed apps and their [published OData services](/refguide/published-odata-services.md).
+Licensed users of Mendix Data Hub can also consume published OData Services during app development without using the [Data Hub pane](/refguide/data-hub-pane) when, for example, trying out published OData Services which may not be registered in the [Data Hub Catalog](/data-hub/data-hub-catalog), or when working with locally deployed apps and their [published OData services](/refguide/published-odata-services).
 
-Developers can consume published OData services by specifying the service metadata URL or a (local) metadata file in the [Consumed OData Service](/refguide/consumed-odata-service.md) document.  The service will be listed in  the **Data Hub Project** pane and  the exposed entities can be dragged into the domain model as [External Entities](/refguide/external-entities).  
+Developers can consume published OData services by specifying the service metadata URL or a (local) metadata file in the [Consumed OData Service](/refguide/consumed-odata-service) document.  The service will be listed in  the **Data Hub Project** pane and  the exposed entities can be dragged into the domain model as [External Entities](/refguide/external-entities).  
 
 Follow the steps in this how-to to develop your app by directly consuming locally stored published OData Services or those that are not yet registered in the Data Hub Catalog. 
 
@@ -74,11 +74,11 @@ If you are working locally and creating published OData services and creating da
 
 ![published Odata service URL](attachments/consume-an-odata-service/metadata-contract-file.png) 
 
-You can consume the locally stored OData service by specifying the file as described in [Consuming an OData Service from a local file](consumefile). 
+You can consume the locally stored OData service by specifying the file as described in [Consuming an OData Service from a local file](#consumefile). 
 
 You can use locally stored datasets whose location will be specified by the **Service feed** value.
 
-## 4 Consuming an OData Service using the URL {#consumeurl}
+## 4 Consuming an OData Service using the URL{#consumeurl}
 
 When you search for a data source in the [Data Hub](/refguide/data-hub-pane) pane you will be presented with all the registered assets in the [Data Hub Catalog](/data-hub/data-hub-catalog/search) that satisfy your search criteria. These assets are exposed in, and registered as, published OData services in the **Data Hub Catlog**. When you drag an entity from the **Data Hub** pane into your domain model, the asset metadata contract is accessed at the service endpoint and a **Consumed OData Service** document is added to your app project model with the details of metadata file. In addition, the **Location** document that accompanies all **Consumed OData Services**is also added providing **Constant** information.
 

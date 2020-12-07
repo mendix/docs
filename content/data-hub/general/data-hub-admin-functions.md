@@ -87,4 +87,4 @@ From this screen, the following functions can be carried out:
    If a custom owner is removed from the list, they will also be removed from any registered assets where they were set as the owner. This means that the asset will not have a contact.
    {{% /alert %}} 
 
-New custom owners can also be added when assets are being curated as described in [Changing the Technical and Business Owners of an App](/data-hub-catalog/curate.md#customowner).
+New custom owners can also be added when assets are being curated as described in [Changing the Technical and Business Owners of an App](/data-hub-catalog/curate#customowner).

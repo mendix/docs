@@ -7,7 +7,9 @@ In Mendix 9.0.2 you can opt-in to use a new merge algorithm. This algorithm is u
 2. Lists of widgets now allow both people to change them. So, two people inserting a widget in the same container (e.g. data view) is perfectly fine. This used to be a conflict in the old algorithm forcing you to choose between one or the other. If the changes are too close (e.g. two people inserting at the same position), there will be a so-called list order conflict to remind you to look at the final order of the widgets in the list. 
     
 3. There are some more cases where the new algorithm does not give a conflict, while the old one did. An example is one person moving an entity and the other deleting it. That used to be a conflict but no longer is. The entity will simply be deleted.
-    
+
+Note: the underlying algorithm is done but the user interface will improve as we get closer to the general availability of Mendix 9. We will update the documentation as the UI improves.
+
 ## Enabling The New Algorithm
 
 Make sure that you repository is in a clean state: everything has been committed and there is no outstanding changes or conflicts. 

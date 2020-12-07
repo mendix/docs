@@ -1,5 +1,5 @@
 ---
-title: "Studio 8 Guide"
+title: "Studio 9 Guide"
 tags: ["studio", "web modeler"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
@@ -7,7 +7,7 @@ tags: ["studio", "web modeler"]
 
 {{% alert type="warning" %}}
 
-The **Studio 8 Guide** describes Mendix Studio functionality that corresponds to Mendix 8 version. It describes the latest Studio functionality and features.
+The **Studio 9 Guide** describes Mendix Studio functionality that corresponds to Mendix 9 version. It describes the latest Studio functionality and features.
 
 {{% /alert %}}
 

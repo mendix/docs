@@ -124,7 +124,7 @@ refguide8:
     - "Mobile"
     - "Java Programming"
 refguide:
-  space: "Studio Pro 8 Guide"
+  space: "Studio Pro 9 Guide"
   priority: 9
   mendix_version: 9
   menu_categories:

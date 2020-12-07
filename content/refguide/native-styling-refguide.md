@@ -1309,7 +1309,7 @@ export myCarouselStyle = {
 
 The default class to style all popup menus is named `com_mendix_widget_native_carousel_Carousel`.
 
-### 11.25 Line Chart
+### 11.26 Line Chart
 
 The [line chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/line-chart-native) widget renders a scalable line graph based on static and dynamic data sets.
 
@@ -1348,7 +1348,7 @@ The widget consists of the following elements:
 | `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
 | `errorMessage` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
 | `chart` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `grid` | `backgroundColor` | Applies a color to the grid brackground (string). |
+| `grid` | `backgroundColor` | Applies a color to the grid background (string). |
 | `grid` | `dashArray` | Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
 | `grid` | `lineColor` | Applies a color to the grid lines (string). |
 | `grid` | `lineWidth` | Applies a width to the grid lines (number). |

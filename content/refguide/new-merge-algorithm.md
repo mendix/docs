@@ -94,7 +94,9 @@ Once you have chosen one of the three options to resolve the first conflict, gre
 
 The second conflict is a list order conflict. It is a reminder to take a look at the order of the widgets in the bottom layout grid. Was the text supposed to come first or the data grid? You arrange the widgets in the desired order in the page editor and then choose "Mark as Resolved" for the list order conflict.
 
-You can even decide to delete one of the widgets or add some of your own. The page is fully editable while resolving conflicts! Note that some edit operations will make it impossible to choose a side for certain conflicts. For example, if you had not resolved the first conflict and you delete the 'Home' widget, you cannot resolve the first conflict anymore, because the widget is simply not there anymore. You can only mark the conflict it as resolved then.
+You can even decide to delete one of the widgets or add some of your own. The page is fully editable while resolving conflicts! 
+
+Note that some edit operations will make it impossible to choose a side for certain conflicts. For example, if you had not resolved the first conflict yet and you delete the 'Home' widget, you cannot resolve the first conflict anymore, because the widget is simply not there anymore. At that point, you can only mark the conflict as resolved:
 
 ![Conflict cannot be resolved](attachments/new-merge-algorithm/new-merge-algorithm-cannot-resolve.PNG)
 

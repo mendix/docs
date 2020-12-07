@@ -212,6 +212,7 @@ The options do the following:
 	* [Ingress](#ingress)
 	* [Registry](#registry)
 	* [Proxy](#proxy)
+	* [Custom TLS](#custom-tls)
 
 ##### 4.3.2.1 Database Plan{#database-plan}
 

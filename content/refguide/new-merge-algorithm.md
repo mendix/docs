@@ -86,5 +86,5 @@ The second conflict is a list order conflict. It is a reminder to take a look at
 
 You can even decide to delete one of the widgets or add some of your own. The page is fully editable while resolving conflicts! Note that some edit operations will make it impossible to choose a side for certain conflicts. For example, if you had not resolved the first conflict and you delete the 'Home' widget, you cannot resolve the first conflict anymore, because the widget is simply not there anymore. You can only mark the conflict it as resolved then.
 
-![Conflict cannot be resolved](attachments/new-merge-algorithm/new-merge-algorithm-cannot-resolve.png)
+![Conflict cannot be resolved](attachments/new-merge-algorithm/new-merge-algorithm-cannot-resolve.PNG)
 

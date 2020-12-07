@@ -53,7 +53,7 @@ If we merge the branch into the main line with the old merge algorithm, it will 
 
 The only thing you can do is to choose the whole page as it is in the main line or as it is in the branch line. You cannot combine changes from both sides, meaning that you may have to do rework if you want changes from both sides.
 
-## Merge
+## Merging With The New Algorithm
 
 Let us see what the new algorithm does in this situation:
 
@@ -61,6 +61,10 @@ Let us see what the new algorithm does in this situation:
 
 There are still two conflicts. One conflict is about the text that both sides changed. The other conflict is a so-called *list order conflict*. Both people added something to the bottom layout grid and that is fine. However, the merge algorithm cannot guess the right order of the two new widgets and so it reports this list order conflict. This is purely a reminder for the person who is doing the merge to look at the final list. 
 
+## Resolving Conflicts
+
 Now, let us resolve those conflicts. We do not have to choose between the whole page of the main line and the whole page of the branch line anymore. To start the resolution process, we click the new "Resolve..." button. The page is opened in a special mode with an orange tab:
 
 ![Document in orange tab](attachments/new-merge-algorithm/new-merge-algorithm-orange-tab.png)
+
+

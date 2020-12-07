@@ -27,7 +27,7 @@ A reporting tool like Tableau or Excel can discover what data and functionality 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Create an app using the **Asset Manager** app template
+* Create an app using the [Asset Manager](https://appstore.home.mendix.com/link/app/69674/0) template
 * Install Excel (we will use Excel for Office 365)
 * Download and install [Tableau](https://public.tableau.com) (The public version of Tableau is free)
 

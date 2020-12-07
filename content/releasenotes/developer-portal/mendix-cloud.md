@@ -1,6 +1,6 @@
 ---
 title: "Mendix Cloud"
-parent: "deployment"
+category: "Deployment"
 menu_order: 10
 description: "Release notes for deployment to Mendix Clouds v3 and v4"
 tags: ["release notes", "deployment", "cloud environment", "Mendix Cloud", "free app"]
@@ -13,11 +13,26 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2020
 
+### December 3rd, 2020
+
+* We added the ability to permanently change the Log Levels in Mendix Cloud v4 for an app so that they persist between restarts. This was in response to customer requests. (Ticket 101413)<br/>Log Levels will only become persistent after the next restart of your app, so you may have to set them one more time.<br/>For more information on log levels, see [Log Levels Tab](https://docs.mendix.com/developerportal/deploy/environments-details#log-levels) in the *Environment Details* documentation.
+* You can now retrieve the version of the buildpack used in deployment via the Deploy API [Retrieve Environment](/apidocs-mxsdk/apidocs/deploy-api#retrieve-environment) call. The version is returned as `RuntimeLayer`. You will need to redeploy your app to ensure it returns this in the API response.
+
+### November 26th, 2020
+
+#### Fixes
+
+* We fixed an issue where you could not set the value for a constant which was defined as long to a value greater than the maximum value for an integer.
+* We fixed an issue where the Company Admin could not search through licensed nodes. (Ticket 109742)
+
 ### November 5th, 2020
 
-#### Mendix Cloud
+#### Improvements
 
 * We added support to generate 1024x1024 App Store icons for iOS.
+
+#### Fixes
+
 * We resolved an issue where an incorrect debugger password was sometimes shown for Mendix Cloud v4 apps in the Developer Portal. This meant that customers were not able to connect to the debugger. (Ticket 105317)
 
 ### October 26th, 2020

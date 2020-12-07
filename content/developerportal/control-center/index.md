@@ -10,9 +10,15 @@ tags: ["Control Center", "Mendix Admin", "Developer Portal", "role", "permission
 
 [**How do you access Control Center? Only via URL, or will there be a Menu item in the community header?**]
 
-The [Mendix Control Center](https://controlcenter.mendix.com/) consists of the pages described below. Some of these pages are only visible to Mendix Admins.
+The [Mendix Control Center](https://controlcenter.mendix.com/) consists of the pages described below, which are for use by [Mendix Admins](#company). If you are not a Mendix Admin, you will see this landing page, which outlines the usage and goals of Control Center. You can also recommend a colleague for Mendix Admin status by clicking **Suggest a Mendix Admin**:
+
+![](attachments/non-admin.png)
 
 ## 2 Members
+
+Mendix Admins will see this as the landing page:
+
+![](attachments/admin.png)
 
 Members are users who can view and/or edit an app project. On the **Active members** tab, you can see the active members of your company who can access certain app projects: 
 
@@ -56,7 +62,7 @@ You can only add apps to groups that utilize [Mendix SSO](https://docs.mendix.co
 
 [**How do you delete a group?**]
 
-## 5 Company Settings
+## 5 Company Settings {#company}
 
 On the **Company Details** tab of this page, you can edit your **Company Name** and **Description** as well as the **Company Email Domains**.  When you click **Add Domain**, a request is sent to [Mendix Support](/developerportal/support/). Once a domain is added, every user who signs up to Mendix wth that email domain will be assigned to your company.
 

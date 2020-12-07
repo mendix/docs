@@ -61,10 +61,30 @@ Let us see what the new algorithm does in this situation:
 
 There are still two conflicts. One conflict is about the text that both sides changed. The other conflict is a so-called *list order conflict*. Both people added something to the bottom layout grid and that is fine. However, the merge algorithm cannot guess the right order of the two new widgets and so it reports this list order conflict. This is purely a reminder for the person who is doing the merge to look at the final list. 
 
-## Resolving Conflicts
+### Resolving Conflicts
 
-Now, let us resolve those conflicts. We do not have to choose between the whole page of the main line and the whole page of the branch line anymore. To start the resolution process, we click the new "Resolve..." button. The page is opened in a special mode with an orange tab:
+Now, let us resolve those individual conflicts. Remember, we do not have to choose between the whole page of the main line and the whole page of the branch line anymore! To start the resolution process, we click the new "Resolve..." button. The page is opened in a special mode with an orange tab:
 
-![Document in orange tab](attachments/new-merge-algorithm/new-merge-algorithm-orange-tab.png)
+![Document with orange tab](attachments/new-merge-algorithm/new-merge-algorithm-orange-tab.png)
 
+Note that the following non-conflicting changes have already been applied to the page:
+
+* Add a Mendix logo above the text 'Home' (main line)
+* Delete the subtitle (main line)
+* Add text widget to the bottom layout grid (main line)
+* Add a data grid to the bottom layout grid (branch line)
+
+And you will keep seeing the page as its going to be while you are resolving conflicts.
+
+For the first conflict, we can inspect what both people did and decide which side to take. Select one of the three lines that represent the conflict and choose "Resolve using Mine" or "Resolve using Theirs". You will see the document update immediately when you click the button. If you are unhappy with your choice, you can use undo to go back and try another option. Note that the document needs to be focused for the keyboard shortcuts Ctrl+Z and Ctrl+Y to work.
+
+There is a third option to deal with a conflict: "Mark as resolved". This means: "I have seen the conflict, but I do not want to choose either side. I'll keep things the way they were in the original, before anyone started changing things."
+
+Once you have chosen one of the three options to resolve the first conflict, green checkmarks will appear to indicate that this conflict has been dealt with.
+
+The second conflict is a list order conflict. It is a reminder to take a look at the order of the widgets in the bottom layout grid. Was the text supposed to come first or the data grid? You arrange the widgets in the desired order and then choose "Mark as Resolved" for the list order conflict.
+
+You can even decide to delete one of the widgets or add some of your own. The page is fully editable while resolving conflicts! Note that some edit operations will make it impossible to choose a side for certain conflicts. For example, if you had not resolved the first conflict and you delete the 'Home' widget, you cannot resolve the first conflict anymore, because the widget is simply not there anymore. You can only mark the conflict it as resolved then.
+
+![Conflict cannot be resolved](attachments/new-merge-algorithm/new-merge-algorithm-cannot-resolve.png)
 

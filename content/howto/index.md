@@ -5,6 +5,12 @@ tags: ["studio pro"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
+{{% alert type="info" %}}
+
+Mendix 9 is currently a Beta release. For details on what this means, see [Mendix Beta Features](/releasenotes/beta-features).
+
+{{% /alert %}}
+
 ## 1 Introduction
 
 Browse the *Studio Pro 9 How-to's* to find step-by-step guides that will teach you how to build and customize apps with Mendix.

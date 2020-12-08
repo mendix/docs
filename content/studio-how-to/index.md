@@ -3,6 +3,12 @@ title: "Studio 9 How-to's"
 tags: ["studio", "how to"]
 ---
 
+{{% alert type="info" %}}
+
+Mendix 9 is currently a Beta release. For details on what this means, see [Mendix Beta Features](/releasenotes/beta-features).
+
+{{% /alert %}}
+
 {{% alert type="warning" %}}
 
 The **Studio 9 How-to's** space describes Mendix Studio functionality that corresponds to Mendix 9version. It describes the latest Studio functionality and features.

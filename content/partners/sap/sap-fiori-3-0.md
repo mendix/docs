@@ -14,7 +14,7 @@ Should we have a section on the "Shell Bar"?
 
 ## 1 Introduction
 
-SAP Fiori 3 is SAP's target design system used to give your SAP C4/HANA application a consistent look and feel. The [SAP Fiori 3 UI Resources](#wrong) module in the Mendix App Store allows you to apply this look and feel to your Mendix apps running on SAP C4/HANA.
+The SAP Fiori user experience creates a consistent UI across the SAP Suite of products. SAP Fiori 3 is SAP’s new target design system for all SAP products in the *Intelligent Suite*. The  [SAP Fiori 3 UI Resource](#wrong) module in the Mendix App Store allows you to create the same user experience in your Mendix apps.
 
 The Mendix module gives you access to designing your pages with SAP Fiori-styled widgets and building blocks as part of your layout. You can also allow end-users to select a theme and apply it immediately. The module supports SAP Quartz Light and Dark themes.
 
@@ -32,7 +32,7 @@ More information on using SAP Fiori 3 design in your Mendix app is available in 
 
 The majority of Mendix widgets have been styled to match SAP Fiori 3 styles by default. Examples are shown below.
 
-There are a few cases where you will need to apply some extra CSS classes manually to achieve the correct SAP Fiori look and feel. These are described in [Applying CSS Classes Manually](#apply-css).
+There are a couple of cases where you will need to apply some extra CSS classes manually to achieve the correct SAP Fiori look and feel. These are described in [Applying CSS Classes Manually](#apply-css).
 
 Some SAP Fiori components are not yet supported by Mendix core widgets. These are listed in [Unsupported SAP Fiori Components](#unsupported-components), below.
 
@@ -151,7 +151,7 @@ Here is a list of the layouts you can use.
 
 ## 5 Page Templates{#page-templates}
 
-There are many different page templates which you can use to base your page on. These provide you with the building blocks and widgets already arranged to provide an SAP Fiori-style page.
+You can use one of the available page templates to rapidly create a consistent UI for your app pages. The templates provide you with the building blocks and widgets already arranged to provide an SAP Fiori-style page.
 
 Note that these pages work best when combined with the appropriate **Navigation layout**. For example, the **Fiori Launchpad** page template works best with the *SAP_Launchpad (SAP_3_0_UI_Resources)* **Navigation Layout**.
 

@@ -30,7 +30,7 @@ To view the microflows of your app in Studio, click the **Microflows** icon in t
 
 ## 2 Concepts and Definitions 
 
-A microflow is like a flow chart. On a new microflow the start event (a starting point of the microflow represented by a green dot) and the end event (an endpoint of the microflow represented by a red dot) exist by default. They are also connected by a sequence flow (a line with an arrow), where you can add new events and activities. For more information, see section [3 Creating a New Microflow](#creating-new-microflow). If Mendix Assist is on, it will be represented with a blue dot in the middle. For more information, see [Mendix Assist](mendix-assist).
+A microflow is like a flow chart. On a new microflow the start event (a starting point of the microflow represented by a green dot) and the end event (an endpoint of the microflow represented by a red dot) exist by default. They are also connected by a sequence flow (a line with an arrow), where you can add new events and activities. For more information, see section [3 Creating a New Microflow](#creating-new-microflow). If Mendix Assist is on, it will be represented with a blue dot in the middle. For more information, see [Mendix Assist](mx-assist).
 
 ![New Microflow](attachments/microflows/new-microflow-created.png)
 

@@ -32,7 +32,7 @@ To view the microflows of your app in Studio, click the **Microflows** icon in t
 
 A microflow looks like a flow chart. On a new microflow a *start event* (a starting point of the microflow represented by a *green* dot) and an *end event* (an endpoint of the microflow represented by a *red* dot) are created by default. 
 
-Start and end events are connected by a *sequence flow* (a line with an arrow), where you can add new events and activities. For more information, see the [Creating a New Microflow](#creating-new-microflow) section. If [MxAssist Logic Bot](mendix-assist-logic-bot) is on, it will be represented with a blue dot in the middle (for more information on what MxAssist Logic Bot is, see [MxAssist Logic Bot](mendix-assist-logic-bot)).
+Start and end events are connected by a *sequence flow* (a line with an arrow), where you can add new events and activities. For more information, see the [Creating a New Microflow](#creating-new-microflow) section. If [MxAssist Logic Bot](mx-assist-logic-bot) is on, it will be represented with a blue dot in the middle (for more information on what MxAssist Logic Bot is, see [MxAssist Logic Bot](mx-assist-logic-bot)).
 
 ![New Microflow](attachments/microflows/new-microflow-created.png)
 
@@ -221,7 +221,7 @@ When configuring the activities of microflows you will notice icons above or und
 
 ## 11 Main Documents in This Category
 
-* [MxAssist Logic Bot](mendix-assist-logic-bot) – describes an artificial intelligence-powered agent that helps you configure microflows
+* [MxAssist Logic Bot](mx-assist-logic-bot) – describes an artificial intelligence-powered agent that helps you configure microflows
 * [Decision](microflows-decision) – explains what a decision is and describes its properties
 * [Loop](microflows-loop) – explains what a loop is and describes its properties
 * [Microflow Expressions](microflows-expressions) – explains how to use microflow expressions

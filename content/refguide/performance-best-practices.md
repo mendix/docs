@@ -66,7 +66,7 @@ Entities, for which the number of select operations is much greater than the num
 
 As totally different best practices apply for read- and write-intensive entities, it would be valuable to differentiate entities by the type of operations that are performed on the entities.
 
-#### 3.1.1 Steps to Fix
+### 3.1 Steps to Fix
 
 To fix the issue, add an index on attributes which are used as sort items in sort bars on pages.
 

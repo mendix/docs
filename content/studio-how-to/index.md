@@ -5,7 +5,7 @@ tags: ["studio", "how to"]
 
 {{% alert type="warning" %}}
 
-The **Studio 9 How-to's** space describes Mendix Studio functionality that corresponds to Mendix 89version. It describes the latest Studio functionality and features.
+The **Studio 9 How-to's** space describes Mendix Studio functionality that corresponds to Mendix 9version. It describes the latest Studio functionality and features.
 
 {{% /alert %}}
 

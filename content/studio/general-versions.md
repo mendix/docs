@@ -30,12 +30,6 @@ The *Studio version* is updated continuously (even daily), which will provide yo
 
 ![](attachments/general-versions/top-bar-upgrade.png)
 
-{{% alert type="info" %}}
-
-Automatic upgrade will not be offered in Studio when moving from Mendix 7 to Mendix 8, as Mendix 8 contains changes that cannot be upgraded automatically using the regular Studio upgrade mechanism. For more information, see the [Upgrading to Mendix Version 8](#upgrade-to-8) section below.
-
-{{% /alert %}}
-
 This means that when you upgrade, you upgrade your whole project to a new Mendix version. As Mendix version contains Mendix Studio Pro version, this also means that you or your team members need to install and use the new version for Studio Pro as well. 
 
 When you see the upgrade notification, you can either stay on the current version and continue working (although you might not have the newest Mendix Platform features and improvements), or you can upgrade to the newest version. When you upgrade, you will automatically be upgraded to the latest version possible, even if it is in a new Studio range. 

@@ -24,7 +24,7 @@ Studio enables you to do the following:
 
 ## 2 Guide Categories
 
-The *Studio 8 Guide* is divided into the following categories:
+The *Studio 9 Guide* is divided into the following categories:
 
 * [General Info](general) 
 * [Pages](page-editor)

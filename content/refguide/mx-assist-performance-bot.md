@@ -140,4 +140,4 @@ After the issue is auto-fixed, a pop-up window listing the changes appears. You 
 
 * [Mendix Assist](mx-assist-studio-pro)
 * [MxAssist Logic Bot](mx-assist-logic-bot)
-* [How to Implement Mendix Best Practices for Development](/howto/dev-best-practices)
+* [How to Implement Mendix Best Practices for Development](/howto/general/dev-best-practices)

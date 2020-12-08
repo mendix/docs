@@ -15,15 +15,20 @@ Mendix Control Center is currently a Beta release. For details on what this mean
 
 [**How do you access Control Center? Only via URL, or will there be a Menu item in the community header?**]
 
-The [Mendix Control Center](https://controlcenter.mendix.com/) consists of the pages described below, which are for use by [Mendix Admins](#company). If you are not a Mendix Admin, you will see this landing page, which outlines the usage and goals of Control Center. You can also recommend a colleague for Mendix Admin status by clicking **Suggest a Mendix Admin**:
+The [Mendix Control Center](https://controlcenter.mendix.com/) consists of the pages described below, which are for use by [Mendix Admins](#company). 
 
-![](attachments/non-admin.png)
+
+If your company does not already have a Mendix Admin, you will see this landing page, which outlines the usage and goals of Control Center. You can also recommend a colleague for Mendix Admin status by clicking **Suggest a Mendix Admin**:
+
+![](attachments/no-admin-exists.png)
+
+If your company does already have a Mendix Admin (but you yourself are not a Mendix Admin), you will see this landing page:
+
+![](attachments/admin-exists.png)
+
+If you are a Mendix Admin, you will immediately see the **Members** page and can navigate to the pages described in the sections below.
 
 ## 2 Members
-
-Mendix Admins will see this as the landing page:
-
-![](attachments/admin.png)
 
 Members are users who can view and/or edit an app project. On the **Active members** tab, you can see the active members of your company who can access certain app projects: 
 

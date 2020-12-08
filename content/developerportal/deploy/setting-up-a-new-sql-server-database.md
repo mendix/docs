@@ -38,7 +38,7 @@ Mendix apps using SQL Server use both **Read Committed Snapshot** and **Snapshot
 You only need to follow these steps if the database user used by the Mendix Runtime does not have enough permission to issue the `ALTER DATABASE` command (usually the `sysadmin` role).
 {{% /alert %}}
 
-The database schema needs to be configured so that the **Read Committed Snapshot** and **Snapshot Isolation** features are enabled. This can be achieved by executing the following command on the database:
+The database schema needs to be configured so that the **Read Committed Snapshot** and **Snapshot Isolation** features are enabled. This can be achieved by executing the following commands on the database:
 
 ```
 ALTER DATABASE [MySchema] SET READ_COMMITTED_SNAPSHOT ON;

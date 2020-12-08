@@ -141,13 +141,13 @@ For every Mendix app environment, a new database schema and user (role) will be 
 By default, Mendix for Private Cloud will first try to connect with TLS enabled; if the server doesn't support TLS, the Mendix Operator will reconnect without TLS.
 To ensure compatibility with all PostgreSQL databases (including ones with self-signed certificates), all TLS CAs are trusted by default.
 
-If Strict TLS is enabled, Mendix for Private Cloud will connect with TLS and validate the Postgres server's TLS certificate. In this case, the connection will fail if 
+If Strict TLS is enabled, Mendix for Private Cloud will connect with TLS and validate the PostgreSQL server's TLS certificate. In this case, the connection will fail if: 
 
-* the Postgres server has an invalid certificate
+* the PostgreSQL server has an invalid certificate
 * or its certificate is signed by an unknown Certificate Authority
 * or doesn't support TLS.
 
-The Mendix Operator allows to specify a custom Certificate Authorities to trust. This allows to enable Strict TLS even for databases with self-signed certificates.
+The Mendix Operator allows you to specify custom Certificate Authorities to trust. This allows you to enable Strict TLS even for databases with self-signed certificates.
 
 Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 {{% /alert %}}
@@ -183,7 +183,7 @@ If Strict TLS is enabled, Mendix for Private Cloud will connect with TLS and val
 * the SQL Server server has an invalid certificate
 * or its certificate is signed by an unknown Certificate Authority
 
-The Mendix Operator allows to specify a custom Certificate Authorities to trust. This allows to enable Strict TLS even for databases with self-signed certificates.
+The Mendix Operator allows you to specify custom Certificate Authorities to trust. This allows you to enable Strict TLS even for databases with self-signed certificates.
 
 Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 {{% /alert %}}

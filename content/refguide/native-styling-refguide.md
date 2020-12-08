@@ -1368,10 +1368,10 @@ The widget consists of the following elements:
 | `xAxis` | `lineColor` | Applies a color to the axis line (string). |
 | `xAxis` | `lineWidth` | Applies a width to the axis line (number). |
 | `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
-| `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the bottom or right side of the grid ("bottom" or "right") |
+| `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the bottom or right side of the grid ("bottom" or "right"). |
 | `yAxis` | All `xAxis` element styles. | |
 | `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. |
-| `yAxis` > `label` | `relativePositionGrid` | Positions the axis label at the top or left side of the grid ("top" or "left") |
+| `yAxis` > `label` | `relativePositionGrid` | Positions the axis label at the top or left side of the grid ("top" or "left"). |
 | `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
 | `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
 | `legend` > `indicator` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |

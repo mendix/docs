@@ -21,7 +21,7 @@ When enabled, **Project Explorer** automatically highlights the document that is
 
 #### 2.2.1 Enable Mendix Assist
 
-If **Enable Mendix Assist** is checked, then [Mendix Assist](mx-assist-studio-pro) is activated and can offer suggestions for activities in your microflows.
+If **Enable Mendix Assist** is checked, then [Mendix Assist](mendix-assist-studio-pro) is activated and can offer suggestions for activities in your microflows.
 
 #### 2.2.2 Show Suggestions for System Variables
 

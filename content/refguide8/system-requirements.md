@@ -169,6 +169,6 @@ MxBuild is a Windows and Linux command-line tool that can be used to build a Men
 
 ## 14 mx Command-Line Tool {#mxtool}
 
-The **mx** command-line tool is a Windows and Linux command-line tool that can be used to do useful things with your Mendix app project. For more information, see [mx Command-Line Tool](mx-command-line-tool).
+The **mx** command-line tool is a Windows and Linux command-line tool that can be used to do useful things with your Mendix app project. For more information, see [mx Command-Line Tool](mendix-command-line-tool).
 
 * Mono v5.20.x or .NET v4.7.2

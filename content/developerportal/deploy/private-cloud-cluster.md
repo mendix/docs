@@ -242,7 +242,7 @@ To connect to an Amazon RDS database, the VPC and firewall must be configured to
 {{% /alert %}}
 
 {{% alert type="info" %}}
-Enabling the **Strict TLS** option will enable full TLS certificate validation and require encryption when connecting to the Postgres server. If the Postgres server has a self-signed certificate, you'll also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
+Enabling the **Strict TLS** option will enable full TLS certificate validation and require encryption when connecting to the PostgreSQL server. If the PostgreSQL server has a self-signed certificate, you will also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
 
 Disabling **Strict TLS** will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
 {{% /alert %}}
@@ -264,7 +264,7 @@ For Azure SQL databases, additional parameters are required to specify the datab
 {{% /alert %}}
 
 {{% alert type="info" %}}
-Enabling the **Strict TLS** option will enable full TLS certificate validation and require encryption when connecting to SQL Server. If the SQL Server has a self-signed certificate, you'll also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
+Enabling the **Strict TLS** option will enable full TLS certificate validation and require encryption when connecting to SQL Server. If the SQL Server has a self-signed certificate, you will also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
 
 Disabling **Strict TLS** will attempt to connect with TLS, but skip certificate validation. If encryption is not supported, it will fall back to an unencrypted connection.
 {{% /alert %}}
@@ -480,7 +480,7 @@ In order for the Mendix Operator to trust such certificates, you need to add the
         kubectl -n {namespace} create secret generic mendix-custom-ca --from-file=custom.crt=custom.crt
         ```
 
-2. Paste the name of this `custom.crt` Secret into the **CA Certificates Secret Name** field (e.g. `mendix-custom-ca`):
+2. Paste the name of this `custom.crt` secret into the **CA Certificates Secret Name** field (e.g. `mendix-custom-ca`):
    
    ![Custom TLS configuration](attachments/private-cloud-cluster/custom-tls-config.png)
 
@@ -488,7 +488,7 @@ These custom CAs will be trusted by:
 
 * The Mendix Operator when communicating with the database and file storage
 * The Mendix Operator when pushing app images to the container registry
-* Mendix Apps when communicating with the database, file storage and external web services
+* Mendix apps when communicating with the database, file storage and external web services
 
 {{% alert type="info" %}}
 To prevent MITM attacks, enable **Strict TLS** for the database and use an HTTPS URL for Minio. This will ensure that all communication with data storage is done over TLS, and that certificates are properly validated.

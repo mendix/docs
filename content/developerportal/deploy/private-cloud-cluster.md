@@ -468,7 +468,7 @@ In order for the Mendix Operator to trust such certificates, you need to add the
        -----END CERTIFICATE-----
        ```
        (concatenate all the public keys from custom CAs into one `custom.crt` file, separating them with line breaks and optional comments).
-   2. Load the file into a Secret (replace `{namespace}` with the namespace where the Operator is installed, and `{secret}` the name of the Secret to create, e.g. `mendix-custom-ca`):
+   2. Load the file into a Secret (replace `{namespace}` with the namespace where the Operator is installed, and `{secret}` with the name of the Secret to create, e.g. `mendix-custom-ca`):
 
         For OpenShift:
         ```shell

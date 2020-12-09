@@ -1,6 +1,6 @@
 ---
 title: "SAP Cloud Platform"
-parent: "deployment"
+category: "Deployment"
 menu_order: 30
 description: "Release notes for deployment to SAP Cloud Platform"
 tags: ["release notes", "deployment", "cloud environment", "SAP", "SAP Cloud"]
@@ -11,6 +11,15 @@ These release notes cover changes to deployment to [SAP Cloud Platform](/develop
 For information on the current status of deployment to SAP Cloud Platform and any planned releases see [Mendix Status](https://status.mendix.com/).
 
 ## 2020
+
+### December 9th, 2020
+
+#### Improvements
+
+* We have added support for PostgreSQL on SAP Cloud Platform, Hyperscaler Option for Mendix apps deployed to SAP Cloud Platform.
+    * this comes with a configurator to help you create the correct configuration.
+    * see [Running Mendix on PostgreSQL on SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform#sap-hyperscaler) for more information.
+* As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on SAP Cloud Platform. The functions of this page are still available via the **Edit in Studio** and **Edit in Studio Pro** buttons on the environments page. 
 
 ### October 21st, 2020
 

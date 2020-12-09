@@ -20,12 +20,7 @@ It consists of a three-level assistance:
 
 ## 2 MxAssist Performance Bot Pane
 
-To access settings of MxAssist Performance Bot, open Edit > Preferences >the General tab >the MxAssist Performance Bot section:
-
-{{% todo %}}[add screenshot]{{% /todo %}}
-
-In the MxAssist Logic Bot section, you can set the following: 
-* Show recommendations in the editor 
+To access settings of MxAssist Performance Bot, open **Edit** > Preferences >the **General** tab >the **MxAssist Performance Bot** tab. For more information, see [Preferences](preferences-dialog).
 
 MxAssist Performance Bot is enabled by default and is designed as a pane. To access the **MxAssist Performance Bot** pane, click **View** > **MxAssist Performance Bot.**
 
@@ -93,13 +88,19 @@ The following actions are available in the drop-down menu:
 
 The first level of assistance is **detection** that includes inspecting the project model, identifying anti-patterns, and pinpointing you to the document causing the issue. 
 
-To inspect your project model, click **Inspect now** in the **MxAssist Performance Bot** pane. Please note that the Inspect now will be decative if there are consistency erroes in the project. In this case, you need to resolve the consistency errors first. 
+To inspect your project model, click **Inspect now** in the **MxAssist Performance Bot** pane. 
+
+{{% alert type="info" %}}
+
+The **Inspect now** option will be disabled if there are consistency errors in the project. In this case, you need to resolve the consistency errors first. 
+
+{{% /alert %}}
 
 The bot will detect performance anti-patterns and list them in the pane under the associated anti-pattern type. To learn more about each anti-pattern type, click the anti-pattern code link. Click the plus icon next to the anti-pattern type to see the detected cases of this type:
 
 ![Viewing Anti-Pattern](attachments/mx-assist-performance-bot/viewing-anti-pattern.jpg)
 
-To view the element or document where the anti-pattern is located, double cick on an anti-pattern message. Alternatively, right-click the anti-pattern message in the pane and choose one of the following in the drop-down menu:
+To view the element or document where the anti-pattern is located, double-click on an anti-pattern message. Alternatively, right-click the anti-pattern message in the pane and choose one of the following in the drop-down menu:
 
 * **Go to Cause {the name of the element}** 
 * **Go to Usage {the name of the location}**
@@ -110,13 +111,15 @@ In the in the drop-down menu, you can mark an issue as read or suppress it.
 
 The second level of assistance is **recommendation** – giving you an overview of the issue and recommending how to fix it. 
 
-There are two ways to view the recommendations. First in the pane by right-clicking an anti-pattern message and select **View MxAssist Performance Recommendation** in the drop-down menu. 
+There are two ways to view the recommendations:
 
-The second way is to so-called on-canvas indicators in the editor. To see the detected issues in a document, you can open it. If there is any detected issue for that document, there will be MxAssist Performance Bot indicators where you can click on them to open the recommendation.
+1.  Right-click an anti-pattern message on the pane and select **View MxAssist Performance Recommendation** in the drop-down menu. 
+
+2. Click the so-called on-canvas indicators in the visual editor to view the detected issue.  
 
 {{% todo %}}[add screenshot]{{% /todo %}}
 
-The recommendation pop-up contains the description of the identified issue, potential impact from it, the way to fix it, and a link to a more detailed guidance on fixing the issue: 
+The recommendation contains the description of the identified issue, potential impact from it, the way to fix it, and a link to a more detailed guidance on fixing the issue: 
 
 ![Performance Recommendation](attachments/mx-assist-performance-bot/performance-recommendation.jpg)
 
@@ -128,7 +131,7 @@ The third level of assistance is **auto-fixing** where the bot can automatically
 
 To auto-fix the issue, follow the steps below:
 
-1. Right-click the message line in the pane and select **View MxAssist Performance Recommendation** in the drop-down menu or click on the associated on-canvas indicatorto open the recommendation.
+1. Right-click the message line in the pane and select **View MxAssist Performance Recommendation** in the drop-down menu or click the corresponding on-canvas indicator to open the recommendation.
 
 2. In the **MxAssist Performance Recommendation** pop-up window, click the available action button, for example, **Fix**: 
 

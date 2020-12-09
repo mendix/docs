@@ -9,6 +9,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 ## 2020
 
+### December 10th, 2020
+
+#### Improvements
+
+* We have implemented several security fixes
+
 ### November 26th, 2020
 
 #### Improvements

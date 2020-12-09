@@ -13,11 +13,11 @@ Mendix Assist consists of different capabilities that act as a virtual co-develo
 
 * **MxAssist Logic Bot** – helps     you model and configure microflows in Mendix Studio Pro.  It gives     you contextualized recommendations on the next best activity in your     microflow based on the activities and parameters that are already     configured in the specific microflow. It is built using machine learning     analysis of over twelve million anonymized application logics (Microflows)     built with Mendix. It uses deep learning to detect and learn the best     practice patterns in microflows.
 
-    For more information, see [MxAssist Logic Bot]().
+    For more information, see [MxAssist Logic Bot](mx-assist-logic-bot).
 
 * **MxAssist Performance Bot** – helps you inspect your project against Mendix     development best practice detecting and pinpointing development     anti-patterns and, in many cases, automatically fixing them. The bot is     built using statistical analysis of thousands of anonymized Mendix     projects to learn common anti-patterns as well as Mendix Expert Services     best practices in the development of microflows, domain models, pages,     security, etc. 
 
-    For more information, see [MxAssist Performance Bot]().
+    For more information, see [MxAssist Performance Bot](mx-assist-performance-bot).
 
 ## 2 Read More
 

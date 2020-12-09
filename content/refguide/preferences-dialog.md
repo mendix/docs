@@ -7,7 +7,9 @@ tags: ["studio pro", "preferences", "settings", "edit menu"]
 
 ## 1 Introduction
 
-The **Preferences** option opens a dialog box where you can set user-specific preferences which apply to the whole of Studio Pro.
+The **Preferences** option in the menu opens a dialog box where you can set user-specific preferences which apply to the whole of Studio Pro:
+
+![Preferences](attachments/preferences-dialog/preferences.jpg)
 
 ## 2 General Tab
 
@@ -17,15 +19,18 @@ The **Preferences** option opens a dialog box where you can set user-specific pr
 
 When enabled, **Project Explorer** automatically highlights the document that is currently active. When this property is disabled, the selection in **Project Explorer** remains unchanged when the active document changes.
 
-### 2.2 MxAssist Logic Bot
+### 2.2 Mendix Assist
 
-#### 2.2.1 Enable MxAssist Logic Bot
+#### 2.2.1 Logic Bot
 
-If **Enable MxAssist Logic Bot** is checked, then [Mx Assist Logic Bot](mx-assist-logic-bot) is activated and can offer suggestions for activities in your microflows.
+The **Logic Bot** tab contains the following settings:
 
-#### 2.2.2 Show Suggestions for System Variables
+* **Enable MxAssist Logic Bot** – when enabled, [MxAssist Logic Bot](mx-assist-logic-bot) is activated and can give you suggestions for microflow activities.
+* **Show Suggestions for System Variables** – when enabled, MxAssist Logic Bot will include system objects in its suggestions (for example, it can suggest that you change system objects like currentUser or currentSession).
 
-When **Show suggestions for system variables** is checked, MxAssist Logic Bot will include system objects in its suggestions (for example, it can suggest that you change system objects like currentUser or currentSession).
+#### 2.2.2 Performance Bot
+
+The **Performance Bot** tab contains the **Show recommendation in editors** setting. When enabled, [MxAssist Performance Bot](mx-assist-performance-bot) highlights elements that contain performance issues in visual editors. 
 
 ### 2.3 Error List
 

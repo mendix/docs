@@ -145,7 +145,7 @@ If Strict TLS is enabled, Mendix for Private Cloud will connect with TLS and val
 
 * the PostgreSQL server has an invalid certificate
 * or its certificate is signed by an unknown Certificate Authority
-* or doesn't support TLS.
+* or the PostgreSQL server doesn't support TLS connections.
 
 The Mendix Operator allows you to specify custom Certificate Authorities to trust. This allows you to enable Strict TLS even for databases with self-signed certificates.
 

@@ -468,16 +468,16 @@ In order for the Mendix Operator to trust such certificates, you need to add the
        -----END CERTIFICATE-----
        ```
        (concatenate all the public keys from custom CAs into one `custom.crt` file, separating them with line breaks and optional comments).
-   2. Load into a file (replace `{namespace}` with the namespace where the Operator is installed):
+   2. Load the file into a Secret (replace `{namespace}` with the namespace where the Operator is installed, and `{secret}` the name of the Secret to create, e.g. `mendix-custom-ca`):
 
         For OpenShift:
         ```shell
-        oc -n {namespace} create secret generic mendix-custom-ca --from-file=custom.crt=custom.crt
+        oc -n {namespace} create secret generic {secret} --from-file=custom.crt=custom.crt
         ```
 
         For Kubernetes:
         ```shell
-        kubectl -n {namespace} create secret generic mendix-custom-ca --from-file=custom.crt=custom.crt
+        kubectl -n {namespace} create secret generic {secret} --from-file=custom.crt=custom.crt
         ```
 
 2. Paste the name of this `custom.crt` secret into the **CA Certificates Secret Name** field (e.g. `mendix-custom-ca`):

@@ -92,7 +92,7 @@ Run the following commands to switch to the latest component versions:
 kubectl -n $OPERATOR_NAMESPACE patch operatorconfiguration mendix-operator-configuration --type merge -p \
 '{"spec":{
     "sidecarImage":"private-cloud.registry.mendix.com/mx-m2ee-sidecar:1.5.0",
-    "metricsSidecarImage":"private-cloud.registry.mendix.com/mx-m2ee-metrics:1.1.0",
+    "metricsSidecarImage":"private-cloud.registry.mendix.com/mx-m2ee-metrics:1.1.1",
     "builderImage":"private-cloud.registry.mendix.com/image-builder:ingvar-rhel",
     "buildRuntimeBaseImage":"private-cloud.registry.mendix.com/runtime-base:{{.MxRuntimeVersion}}-rhel",
     "dockerfile":null
@@ -139,7 +139,7 @@ Run the following commands to switch to the latest component versions:
 kubectl -n $OPERATOR_NAMESPACE patch operatorconfiguration mendix-operator-configuration --type merge -p \
 '{"spec":{
     "sidecarImage":"private-cloud.registry.mendix.com/mx-m2ee-sidecar:1.5.0",
-    "metricsSidecarImage":"private-cloud.registry.mendix.com/mx-m2ee-metrics:1.1.0",
+    "metricsSidecarImage":"private-cloud.registry.mendix.com/mx-m2ee-metrics:1.1.1",
     "builderImage":"private-cloud.registry.mendix.com/image-builder:ingvar-rhel",
     "buildRuntimeBaseImage":"private-cloud.registry.mendix.com/runtime-base:{{.MxRuntimeVersion}}-rhel"
 }}'
@@ -156,7 +156,8 @@ Run the following commands to switch to the latest component versions:
 ```shell
 kubectl -n $OPERATOR_NAMESPACE patch operatorconfiguration mendix-operator-configuration --type merge -p \
 '{"spec":{
-    "sidecarImage":"private-cloud.registry.mendix.com/mx-m2ee-sidecar:1.5.0"
+    "sidecarImage":"private-cloud.registry.mendix.com/mx-m2ee-sidecar:1.5.0",
+    "metricsSidecarImage":"private-cloud.registry.mendix.com/mx-m2ee-metrics:1.1.1"
 }}'
 ```
 

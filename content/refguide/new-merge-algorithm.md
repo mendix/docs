@@ -1,3 +1,9 @@
+---
+title: "The New Merge Algorithm"
+#parent: "version-control"
+#tags: ["merge", "algorithm", "conflict", "resolution"]
+---
+
 # The New Merge Algorithm
     
 In Mendix 9.0.2 you can opt-in to use a new merge algorithm. This algorithm is used when doing an Update or a Merge to merge the change in your project model. The new algorithm has a number of advantages when compared to the current one:

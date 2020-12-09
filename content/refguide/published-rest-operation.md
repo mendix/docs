@@ -112,7 +112,7 @@ You can indicate what should happen **if no object was found** when the import m
 
 If you select an import mapping that supports both XML and JSON (for example, a mapping that is based on a message definition), then the operation will be able to handle both XML and JSON requests.
 
-Valid requests must contain a *Content-Type* header. See [Table 1: Recognized media types](#table1) for a list of media types that are understood by the import mapping. If an unsupported content type is used, the operation will result in a "**400 Bad Request**" response.
+Valid requests must contain a *Content-Type* header. See [Recognized media types](#table1) for a list of media types that are understood by the import mapping. If an unsupported content type is used, the operation will result in a "**400 Bad Request**" response.
 
 The import mapping is also used to generate object schemas for operation responses in [OpenAPI (Swagger) documentation page](published-rest-services#interactive-documentation) based on [JSON Schema](published-rest-service-json-schema)
 
@@ -129,7 +129,9 @@ If you select an export mapping that supports both XML and JSON (for example, a 
 
 * When the microflow sets the *Content-Type* header parameter with a media type that is XML, then the operation returns XML as given in the table below.
 
-	| Media Type                   | Recogized As |
+    <a name="table1">**Recognized media types**</a>
+
+	| Media Type                   | Recognized As |
 	| ---                          | --- |
 	| *application/xml*            | XML |
 	| *text/xml*                   | XML |

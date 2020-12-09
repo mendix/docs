@@ -62,19 +62,23 @@ This setting defines how changes are reflected in the pages presented to the end
 
 Default: *No*
 
-#### 3.3.1 Microflow is Called from the Client in an Online App
-
-If **Refresh in client** is set to *No*, the change is not reflected in the client.
-
-If set to *Yes*, the object is refreshed across the client, which includes reloading the relevant [data sources](data-sources).
-
 {{% alert type="info" %}}
-Changed attribute values are *always* reflected in the client. The object is refreshed from the Mendix Runtime, which includes updating virtual attributes.
+To make pages of a Mendix app efficient, many widgets display values from an attribute of an object which is cached on the page. Attributes in widgets which use cached data are *always* reflected in the client when they are updated or deleted irrespective of the value of **Refresh in client**.
+
+If a widget is only updated when a [data source](data-sources) is loaded, then changes will only be seen when **Refresh in client** is set to *Yes*.
+
+When testing your app, ensure that the desired data is being displayed by the widgets you have chosen.
 {{% /alert %}}
 
 {{% alert type="warning" %}}
 When committing a large number of objects, we recommend that you do not enable 'Refresh in client' because it can slow things down.
 {{% /alert %}}
+
+#### 3.3.1 Microflow is Called from the Client in an Online App
+
+If **Refresh in client** is set to *No*, the change is not reflected in the client.
+
+If set to *Yes*, the object is refreshed across the client, which includes reloading the relevant [data sources](data-sources).
 
 #### 3.3.2 Microflow is Called in an Offline, Native, or Hybrid App
 

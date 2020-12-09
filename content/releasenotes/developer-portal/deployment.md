@@ -1,6 +1,5 @@
 ---
 title: "Deployment"
-category: "Developer Portal"
 description: "Release notes for deployment capabilities managed in the Mendix Developer Portal"
 tags: ["release notes", "deployment", "cloud environment", "Mendix Cloud", "SAP", "SAP Cloud", "IBM", "on-premises", "free app"]
 #This document is mapped to the landing page, featured.html. Update the link there if renaming or moving the doc file.
@@ -12,7 +11,7 @@ Follow the links in the table below to see the release notes you want:
 
 | Type of Deployment | Last Updated |
 | --- | --- |
-| [Mendix Cloud](mendix-cloud) | November 26th, 2020 |
+| [Mendix Cloud](mendix-cloud) | December 8th, 2020 |
 | [Mendix for Private Cloud](mendix-for-private-cloud) | November 16th, 2020 |
 | [SAP Cloud Platform](sap-cloud-platform) | December 9th, 2020 |
 | [Other Deployment Options](on-premises) | October 26th, 2020 |

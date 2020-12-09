@@ -11,7 +11,7 @@ tags: ["studio pro", "performance", "performance bot", "mx assist", "mendix assi
 
 This document outlines Mendix best practices for optimizing an app performance. 
 
-## 2 Using Calculated Attributes {#MXP001} {#MXP002}
+## 2 Using Calculated Attributes {#mxp001} {#mxp002}
 
 When an object has calculated attributes, each time this object is changed or retrieved from the storage, its calculated attributes are computed by calling a microflow. If the logic behind calculated attributes retrieves other objects or executes Integration activities, it will result in an extra load (and delay) while the outcome of the logic is not used. Creating calculated attributes always affects performance, so you should evaluate whether it is necessary to them. For more information on attributes, see [Attributes](attributes).
 
@@ -40,7 +40,7 @@ You will also need to migrate any existing data, since when the attribute is cha
 
 {{% /alert %}}
 
-### 2.2 Remove Unused Calculated Attributes {#MXP002}
+### 2.2 Remove Unused Calculated Attributes {#mxp002}
 
 Retrieve activities also trigger the logic of calculated attributes, it could lead to an execution chain of database actions and microflow calls (objects retrieving each other through calculated attributes).
 
@@ -50,7 +50,7 @@ If calculated attributes are not used, they can safely be removed to avoid redun
 
 To fix the issue, delete the unused calculated attribute.
 
-## 3 Add Index to Attributes that Are Used in Sort Bars Belonging to Pages {#MXP003}
+## 3 Add Index to Attributes that Are Used in Sort Bars Belonging to Pages {#mxp003}
 
 [Sort bars](https://docs.mendix.com/refguide/sort-bar) are used to sort items in data widgets. Sort bars can be used in three different types of data widgets:
 
@@ -70,7 +70,7 @@ As totally different best practices apply for read- and write-intensive entities
 
 To fix the issue, add an index on attributes which are used as sort items in sort bars on pages.
 
-## 4 Avoid Committing Objects Inside a Loop with a Create Object, Change Object, or Commit Activities {#MXP004} {#MXP005}
+## 4 Avoid Committing Objects Inside a Loop with a Create Object, Change Object, or Commit Activities {#mxp004} {#mxp005}
 
 In a microflow, Mendix objects can be persisted to the database with three activities: the **Create object** activity, **Change object** activity, and **Commit** activity. For objects that are created or changed in a loop, it is not the best practice to commit them immediately in the loop, as this comes with an unnecessary performance overhead. Instead, it is recommended to perform a batch commit of several created/changed objects with the **Commit** activity outside of the loop to reduce database, application, and network overhead. For more information on **Create object**, **Change object**, and **Commit** activities, see [Create Object](create-object), [Change Object](change-object), and [Commit Object(s)](committing-objects).
 
@@ -95,7 +95,7 @@ To fix the issue for **Create** or **Change object** activities, do the followin
 
 To fix the issue for the **Commit** activity, commit the list after the loop when the iteration has finished or when number of objects in the list reaches 1000 to avoid excessive memory usage.
 
-## 5 Convert Eligible Microflows to Nanoflows {#MXP006}
+## 5 Convert Eligible Microflows to Nanoflows {#mxp006}
 
 Nanoflows are executed directly on an end-user's device or browser. This makes them ideal for offline usage. In contrast, microflows run in the Runtime server, thus involve usage of network traffic. Converting an eligible microflow to a nanoflow helps avoiding communication over networks and significantly boosts app performance. For more information on when to use on nanoflows and when to use them, see [Nanoflows](nanoflows).
 
@@ -118,7 +118,7 @@ To fix the issue, do the following:
 3. Check usages of the microflow by right-clicking the microflow and selecting **Find usages**. Replace all usages with the newly created nanoflow.
 4. Delete the unused microflow. You can do this by selecting the microflow and pressing <kbd>Delete</kbd> or by right-clicking it and selecting **Delete**.
 
-## 6 Add Index to Attributes that Are Used in XPath Expressions {#MXP007}
+## 6 Add Index to Attributes that Are Used in XPath Expressions {#mxp007}
 
 [XPath expressions](xpath) can take a long time to run depending on how many records the underlying entities contain. For read-intensive entities, it makes sense to add an index on the attributes used in XPath expressions. This can significantly boost performance of object retrieval from the database. XPath expressions can also be optimized by ordering them in such a way that the first class excludes as many items as possible. This can be achieved by using indexed attributes earlier in the expression. This will make the rest of the data set to join/filter as small as possible and reduce the load on the database.
 
@@ -141,7 +141,7 @@ This optimization may not be very beneficial for data types like Boolean and enu
 
 {{% /alert %}}
 
-## 7 Avoid Caching Non-Persistable Entities {#MXP008}
+## 7 Avoid Caching Non-Persistable Entities {#mxp008}
 
 A non-persistable object is an object that is considered temporary and only exists in the memory. It is an instance of a non-persistable entity. For more information on persistable and non-persistable entities, see [Persistablity](persistability). As these objects exist only in memory, caching them is not useful. On the one hand, it is redundant to create associations of non-persistable entities with System.Session or System.User persistable entities. On the other hand, it is important to cache objects which do not change very often but are used frequently in logic. This will help avoid the overhead of database communication. Persistent entities can be connected to the System.Session of the user and be used as a cache of outcomes. For more information on objects and caching, see [Objects & Caching](objects-and-caching).
 

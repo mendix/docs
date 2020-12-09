@@ -178,7 +178,7 @@ If the Mendix Operator and the Mendix Gateway Agent have not been installed in y
 
 The Mendix operator and Mendix Gateway Agent are now installed on your platform.
 
-#### 4.3.2 Configure Namespace
+#### 4.3.2 Configure Namespace{#configure-namespace}
 
 You can now configure the resources required for your namespace.
 
@@ -425,7 +425,7 @@ When choosing the **Existing docker-registry secret**, you will need to add this
 
 Choose **Yes** if a proxy is required to access the public internet from the namespace; you will be asked for the proxy configuration details.
 
-#### 4.3.3 Review and Apply
+#### 4.3.3 Review and Apply{#review-apply}
 
 When you have configured all the resources, do the following:
 

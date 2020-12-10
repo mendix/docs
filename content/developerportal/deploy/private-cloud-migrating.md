@@ -21,7 +21,7 @@ You will also need all the other prerequisites for creating a Mendix for Private
 
 Follow the instructions in [Creating a Private Cloud Cluster](private-cloud-cluster) using the configuration tool as far as doing the [Base Installation](private-cloud-cluster#base-installation).
 
-Follow the instructions for doing the base installation, including the instructions for saving the installer settings: "Click **Save Installer**". This step will save the *mx_installer* shell script on your local machine in the folder `C:\Users\<User id>\.mx_config_cli`.
+Follow the instructions for doing the base installation, including the instructions for saving the installer settings: "Click **Save Installer**". This step will save the *mx_installer* shell script on your local machine in the subfolder `.mx_config_cli` of your user home directory (for example `C:\Users\<User id>\.mx_config_cli` in Windows or `/home/<User id>/.mx_config_cli` for Mac and U*ix).
 
 You will need to patch this installer later on to use your own registry.
 
@@ -41,7 +41,7 @@ Follow these steps to export the Mendix components and store them on your local 
 
 4. Click **Export components**.
 
-    The components you selected will be extracted from the Mendix repository and saved on your local machine in the folder `C:\Users\<User id>\.mx_config_cli\registry-migration`. This can take some time. Wait for the message *The images for the selected components were exported successfully in tarballs*.
+    The components you selected will be extracted from the Mendix repository and saved on your local machine. This will be in the folder `C:\Users\<User id>\.mx_config_cli\registry-migration` on Windows or `home/<User id>/.mx_config_cli/registry-migration` for Mac and U*ix. This can take some time. Wait for the message *The images for the selected components were exported successfully in tarballs*.
 
 ## 5 Import Mendix Components Into Custom Registry
 
@@ -70,7 +70,7 @@ Perform the following steps.
 
 6. Click **Import components**.
 
-    The components you selected will be uploaded from the folder `C:\Users\<User id>\.mx_config_cli\registry-migration` on your local machine and imported into the selected registry.
+    The components you selected will be uploaded from the folder on your local machine where they were saved, and imported into the selected registry. This will be from the folder `C:\Users\<User id>\.mx_config_cli\registry-migration` on Windows or `home/<User id>/.mx_config_cli/registry-migration` for Mac and U*ix.
 
 ## 6 Configure Installation Script to use Custom Registry
 
@@ -84,7 +84,7 @@ Perform the following steps.
 
 3. Click **Patch installation script**.
 
-    This will replace the standard registry location (`private-cloud.registry.mendix.com`) in the *mx_installer* shell script, stored on your local machine in the folder `C:\Users\<User id>\.mx_config_cli`, with the new registry details for the components you have imported.
+    This will replace the standard registry location (`private-cloud.registry.mendix.com`) in the *mx_installer* shell script with the new registry details for the components you have imported. This is stored on your local machine in the subfolder `.mx_config_cli` of your user home directory (for example `C:\Users\<User id>\.mx_config_cli` in Windows or `/home/<User id>/.mx_config_cli` for Mac and U*ix).
 
 ## 7 Create and Configure Mendix for Private Cloud Cluster and Namespace
 
@@ -102,6 +102,6 @@ With the `--offline` flag set, follow the instructions in the [Base Installation
 
 With the `--offline` flag set, follow the instructions in the [Configure Namespace](private-cloud-cluster#configure-namespace) section of *Creating a Private Cloud Cluster*.
 
-When you get to the stage [Review and Apply](private-cloud-cluster#review-apply), the YAML file which you create will contain the location of your custom registry instead of the default Mendix registry. The patched YAML file is stored in the folder `C:\Users\<User id>\.mx_config_cli\\<project name\<folder name>\kube` on your local machine. The **Installer output** panel will confirm the location of the saved file when you click **Write YAML**.
+When you get to the stage [Review and Apply](private-cloud-cluster#review-apply), the YAML file which you create will contain the location of your custom registry instead of the default Mendix registry. The patched YAML file is stored in the subfolder `.mx_config_cli/<project name/<folder name>/kube` of your user home directory (for example `C:\Users\<User id>\.mx_config_cli\<project name\<folder name>\kube` in Windows or `/home/<User id>/.mx_config_cli/<project name/<folder name>/kube` for Mac and U*ix). The **Installer output** panel will confirm the location of the saved file when you click **Write YAML**.
 
 Click **Apply Configuration** to apply the configuration to your namespace, as normal.

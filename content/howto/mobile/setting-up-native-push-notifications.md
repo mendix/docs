@@ -183,7 +183,7 @@ of linking the libraries and peer-dependencies as needed. You can do so manually
       >
 	```
    
-1.  Include the firebase service and receiver in your **android/app/src/main/AndroidManifest.xml**. Copy and paste the lines below that are between the **\<application>\</applicatation>** tags into the app's **AndroidManifest.xml** between the **\<application ...>\</application>**:
+1.  Include the firebase service and receiver in your **android/app/src/main/AndroidManifest.xml** file. Copy and paste the lines below that are between the **\<application>\</applicatation>** tags into the app's **AndroidManifest.xml** between the **\<application ...>\</application>**:
 
 	```
 	<application ...>

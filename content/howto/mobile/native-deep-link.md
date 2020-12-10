@@ -228,7 +228,7 @@ Now that the **Native Deep Link** nanoflow actions are available in Studio Pro, 
    
 	This nanoflow will be called every time the app is opened using a URL.
 
-1. To parse the URL into an object, you will use a non-persistent entity named **DeepLinkParameter** from the **NativeMobileActions** module in the next step. For now, go to **NativeMobileActions** > **Domain Model** and examine this entity. If you use query strings or more, you can copy this entity to your own module. The attributes are all optional and you should only add the attributes your implementation requires. Besides the standard list of possible URL parts, you can also add the query string's keys (for example `?name=Jhon&title=sir`). The attributes are not case sensitive. You can add attributes for path segments of the URL which will be split into `Path0` , `Path1`, and more:
+1. To parse the URL into an object, you will use a non-persistent entity named **DeepLinkParameter** from the **NativeMobileResources** module in the next step. For now, go to **NativeMobileResources** > **Domain Model** and examine this entity. If you use query strings or more, you can copy this entity to your own module. The attributes are all optional and you should only add the attributes your implementation requires. Besides the standard list of possible URL parts, you can also add the query string's keys (for example `?name=Jhon&title=sir`). The attributes are not case sensitive. You can add attributes for path segments of the URL which will be split into `Path0` , `Path1`, and more:
 
     ![parameter entity](attachments/native-deep-link/entity-parameter.png)
 
@@ -241,7 +241,7 @@ Next you will implement the deep link handler nanoflow **DL_ShowUrlDetails** so 
 	![parse url](attachments/native-deep-link/parse-url.png)
 
 1. Add a **Show message** activity to the right of your **Parse URL to Object** activity.
-1. Double-click the **Parse URL to Object** activity.
+1. Double-click the **Show message** activity.
 1. In **Template** write *Your deep link callback URL {1} host = {2}*.
 1. Click **Parameters** > **New**, write *$Parameter/Href*, and click **OK**.
 1. Click **Parameters** > **New**, write *$Parameter/Host*, and click **OK**.

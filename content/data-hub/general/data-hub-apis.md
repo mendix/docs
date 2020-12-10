@@ -2,8 +2,8 @@
 title: "Data Hub APIs"
 category: "General Info"
 menu_order: 30
-description: "This guide describes how to assign the Mendix Data Hub Roles as a Data Hub Admin."
-tags: ["data hub", "Data Hub Admin", "curator", "custom owner", "administration"]
+description: "This document describes the Data Hub API and generating PAT."
+tags: ["data hub", "Data Hub API", "Warden", "authentication", "personal access token"]
 ---
 
 ## 1. Introduction

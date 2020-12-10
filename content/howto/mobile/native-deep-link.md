@@ -130,11 +130,22 @@ The *info.plist* file registers the schema and host so that they will be associa
 
 1. Open *ios/AppDelegate.m* 
 1. Add this import to the existing imports: `#import "React/RCTLinkingManager.h"`.
-1. Before `@end`, add a new method:
+1. Change the `openURL` method from this:
+
+    ```objc
+	- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+      [MendixAppDelegate application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+      return YES;
+    }
+    ```
+
+    to this:
 
 	```objc
-		- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-        return [RCTLinkingManager application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+	- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+      [RCTLinkingManager application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+      [MendixAppDelegate application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+      return YES;
     }
 	```
    
@@ -228,7 +239,7 @@ Next you will implement the deep link handler nanoflow **DL_ShowUrlDetails** so 
 1. Add a **Parse URL to Object** activity to your nanoflow. Double-click it and configure it like this:
 
 	![parse url](attachments/native-deep-link/parse-url.png)
-   
+
 1. Add a **Show message** activity to the right of your **Parse URL to Object** activity.
 1. Double-click the **Parse URL to Object** activity.
 1. In **Template** write *Your deep link callback URL {1} host = {2}*.

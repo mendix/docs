@@ -1,7 +1,8 @@
 ---
 title: "Data Hub in Studio"
+category: "Working with Data"
+menu_order: 30
 description: "Describes the Data Hub Catalog usage in Mendix Studio."
-menu_order: 110
 tags: ["studio", "data hub", "data hub catalog", "external entities"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -82,11 +83,11 @@ In the **Data Hub** tab, you can do the following:
 
     * **Service name** – the name of the shared data source registered in the Data Hub Catalog.
 
-    * **Used in Apps** – number of apps the service is consumed in.
-    
     * **Version** – every service has a version number. When you consume data from a service, you consume from a specific version of a service published to an environment. New versions of a service are issued if changes are made.
     
     * **Last Updated** – indicated the date when the service was last updated.
+    
+    * **Technical Owner** – links to the technical owner of the service (by default this is the owner who registered the service, but this can be changed in the Data Hub Catalog). 
     
     * **Business Owner** – links to the business owner of the data that the service connects to.
     
@@ -94,7 +95,7 @@ In the **Data Hub** tab, you can do the following:
     
     * **View in Data Hub Catalog** – a link to the Data Hub Catalog of your organization.
     
-        {{% image_container width="400" %}}![Service Information](attachments/data-hub-in-studio/service-information.jpg){{% /image_container %}}
+        {{% image_container width="300" %}}![Service Information](attachments/data-hub-in-studio/service-information.jpg){{% /image_container %}}
 
 
 ## 3 External Entity Properties
@@ -112,6 +113,10 @@ When you add external entities to your app, it is possible to make local changes
 You can rename external entity attributes to better fit your app structure. It will still be the same attribute containing the same data, meaning that this change will be local to your app and not affect the source app. All other properties, except the **Name** property, are read-only. 
 
 ![Properties of External Entity Attribute](attachments/data-hub-in-studio/external-attribute-properties.png)
+
+External attributes may have limitations that you can see in their properties. Limitation are added by the external service owner to indicate the features that are not supported. For example, if there are limitations on an attribute, you will not be able to use it in filters and/or sort on it on pages and in microflows.
+
+{{% image_container width="250" %}}![Attribute with Limitations](attachments/data-hub-in-studio/attribute-with-limitations.jpg){{% /image_container %}}
 
 {{% alert type="info" %}}
 

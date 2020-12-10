@@ -37,7 +37,7 @@ One application can make use of many different databases. Take the following ste
 
 ## 5 Starting the Database Viewer
 
-To start the built in database viewer, the following steps have to be applied:
+To start the built-in database viewer, the following steps have to be applied:
 
 1.  Run the application locally (if this  is the first time, Studio Pro will ask you to create the new database, so click **Yes**):
 

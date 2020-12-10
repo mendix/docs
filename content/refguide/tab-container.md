@@ -17,20 +17,24 @@ Tab containers are used to show information categorized into tabs. This can be v
 
 An example of tab container properties is represented in the image below:
 
-{{% image_container width="300" %}}![Tab Container Properties](attachments/container-widgets/tab-container-properties.png)
+{{% image_container width="250" %}}![Tab Container Properties](attachments/container-widgets/tab-container-properties.png)
 {{% /image_container %}}
 
 Tab container properties consist of the following sections:
 
 * [Common](#common)
-* Design Properties
+* [Design Properties](#design-properties)
 * [Visibility](#visibility)
 
 ### 2.1 Common Section {#common}
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 2.2 Visibility Section {#visibility}
+### 2.2 Design Properties Section {#design-properties}
+
+{{% snippet file="refguide/design-section-link.md" %}} 
+
+### 2.3 Visibility Section {#visibility}
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 

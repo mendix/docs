@@ -6,23 +6,25 @@ description: "This guide describes how to assign the Mendix Data Hub Roles as a 
 tags: ["data hub", "Data Hub Admin", "curator", "custom owner", "administration"]
 ---
 
-## 1 Introduction
+## 1. Introduction
 
-The Data Hub APIs can be used to connect your applications to your organization's Data Hub. In this way you can add, discover and explore data sources and ensure that the data is available to developers.
+The Data Hub API can be used to establish a gateway that connects your applications to Mendix Data Hub and enable data sources to be shared and used by developers in creating new apps. This means you can integrate the  functionality to explore and discover data sources in the Data Hub Catalog and connect them them. You can also build a registration pipeline to the organization's Data Hub, ensuring that the latest data is readily available.
 
 {{% alert type="info" %}}
 To use the Mendix Data Hub a license is required.
 {{% /alert %}}
 
-The Data Hub API specification is available as an Open API (formerly Swagger) spec at : https://platformcore.pages.rnd.mendix.com/datahub-spec/datahub.html#/.  ??post the final API link here??
+The following Data Hub APIs are available as Open API (formerly Swagger) specs:
 
-Before you can access the API,  authorization is required. Mendix users must generate a Personal Access Token (PAT) as described in [Generating your Personal Access Token](#generatepat).
+* Registration API [link]
+* Search API [lik] 
+* ...https://platformcore.pages.rnd.mendix.com/datahub-spec/datahub.html#/.  ??post the final API link here??
 
-## 2 Generating your Personal Access Token {#generatepat}
+Before you can access the API,  authorization is required. Mendix users must obtain a Personal Access Token (PAT) as described in [Generating your Personal Access Token](#generatepat).
 
-For every request that is made to the Data Hub AP ??is it for every request or..??I, you must include a personal access token which will be exchanged with the relevant API key. The following procedure describes how to generate your Personal Access Token using the Mendix **Warden** app. 
+## 2. Generating your Personal Access Token {#generatepat}
 
-To use the **Warden** app, you must be a Mendix Platform User with a registered account.
+For every request that is made to the Data Hub API ??is it for every request or is this not relevant.??, you must include a PAT which will be exchanged with the relevant API key to enable access. Mendix users (with a registered account) can obtain the necessary PAT using the Mendix **Warden** app by following these steps: 
 
 1. You can access the **Warden** app ??currently on the test env:?? at:  https://warden-test.mendix.com/index.html. 
 
@@ -36,7 +38,7 @@ To use the **Warden** app, you must be a Mendix Platform User with a registered 
 
 5. For **Maximum idle time(Days)** select **180** to indicate the length of time that the token is valid for.
 
-6. For the **Select scopes this token grants access to:** **Catalog**, check both **read** and **write** services to the Data Hub by checking both options:
+6. For the **Select scopes this token grants access to:** **Catalog**, check both **read** and **write** **services** to the Data Hub by checking both options:
 
    ![create token home](attachments/register-api/create-pat-token.png)
 

@@ -1361,7 +1361,7 @@ The widget consists of the following elements:
 | `grid` | `paddingVertical` | Applies padding to the vertical sides of the grid (number). This is useful to make axis value labels visible. |
 | `xAxis` | `color` | Applies a color to the axis value labels (string). |
 | `xAxis` | `dashArray` | Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
-| `xAxis` | `fontFamily` | Applies a font types to the axis value labels (string). |
+| `xAxis` | `fontFamily` | Applies fonts to the axis value labels (string). |
 | `xAxis` | `fontSize` | Applies a size to the axis value labels (number). |
 | `xAxis` | `fontStyle` | Applies a font style to the axis value labels ("normal" or "italic"). |
 | `xAxis` | `fontWeight` | Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |

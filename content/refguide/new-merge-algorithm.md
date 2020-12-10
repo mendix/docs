@@ -1,12 +1,12 @@
 ---
 title: "The New Merge Algorithm"
-#parent: "version-control"
-#tags: ["merge", "algorithm", "conflict", "resolution"]
+parent: "version-control"
+tags: ["merge", "algorithm", "conflict", "resolution"]
 ---
 
-# The New Merge Algorithm
+## 1 Intriduction
     
-In Mendix 9.0.2 you can opt-in to use a new merge algorithm. This algorithm is used when doing an Update or a Merge to merge the change in your project model. The new algorithm has a number of advantages when compared to the current one:
+In Mendix 9, you can opt-in to use a new merge algorithm. This algorithm is used when doing an Update or a Merge to merge the change in your project model. The new algorithm has a number of advantages when compared to the current one:
     
 1. The algorithm allows for fine-grained conflict resolution. This means that when there are conflicting changes to a document, you no longer have to choose between whole documents: your whole page vs their whole page. Instead, you can resolve conflicts at the level of individual elements, like data views, entities, attributes and microflow actions. Also, all non-conflicting changes from both sides will automatically be accepted.
     
@@ -16,62 +16,62 @@ In Mendix 9.0.2 you can opt-in to use a new merge algorithm. This algorithm is u
 
 Note: the underlying algorithm is done but the user interface will improve as we get closer to the general availability of Mendix 9. We will update the documentation as the UI improves.
 
-## Enabling The New Algorithm
+## 2 Enabling The New Algorithm
 
 Make sure that you repository is in a clean state: everything has been committed and there is no outstanding changes or conflicts. 
 
-Go to Edit > Preferences > New features and check the relevant box. Restart Studio Pro and you are good to go!
+Go to **Edit** > **Preferences** > **New features** and check the relevant box. Restart Studio Pro and you are good to go!
 
 ![Enabling the new merge algorithm](attachments/new-merge-algorithm/enable-new-merge-algorithm.png)
 
-## Example Setup
+## 3 Example Setup
 
-To illustrate the new conflict resolution mode, we will look at an example. Let us take a simple page so that you can clearly see what is going on:
+For example, you have a simple page in your app project:
 
 ![Original page](attachments/new-merge-algorithm/new-merge-algorithm-base-page.png)
 
-One person makes the following changes in the main line:
+Your teammate makes the following changes in the main line:
 
-* Change the text 'Home' to 'Welcome!'
-* Add a Mendix logo above the text 'Welcome!'
-* Delete the subtitle 'Welcome to your new app'
-* Add a text 'Write some text here` in the bottom layout grid
+* Changes the text 'Home' to 'Welcome!'
+* Adds a Mendix logo above the text 'Welcome!'
+* Deletes the subtitle 'Welcome to your new app'
+* Adds a text 'Write some text here` in the bottom layout grid
 
-This results in the page now looking like this:
+This results in the page looking the following way:
 
 ![Main line page](attachments/new-merge-algorithm/new-merge-algorithm-main-page.png)
 
-Another person in a branch, makes other changes:
+You make the following changes on a branch:
 
-* Change the text 'Home' to 'My homepage'
+* Change the text *Home* to *My homepage*
 * Add a data grid to the bottom layout grid
 
-This results in their page looking like this:
+This results in the page looking the following way:
 
 ![Branch line page](attachments/new-merge-algorithm/new-merge-algorithm-branch-page.png)
 
-## Merging With The Old Algorithm
+### 3.1 Merging With the Old Algorithm
 
-If we merge the branch into the main line with the old merge algorithm, it will find two conflicts:
+If you merge the branch into the main line with the old merge algorithm, it will find two conflicts:
 
-* Both people changed the text 'Home'
+* Both people changed the text *Home*
 * The layout grid in the bottom was changed by both people (adding different widgets)
 
-![Old algorithm conflicts](attachments/new-merge-algorithm/old-merge-algorithm-conflicts.png)
+    ![Old algorithm conflicts](attachments/new-merge-algorithm/old-merge-algorithm-conflicts.png)
 
-The only thing you can do is to choose the whole page as it is in the main line or as it is in the branch line. You cannot combine changes from both sides, meaning that you may have to do rework if you want changes from both sides.
+The only thing you can do is to choose changes for the page either from the main line or from the branch line. You cannot combine changes from both sides and have to redo teh work to have changes from both lines. 
 
-## Merging With The New Algorithm
+### 3.2 Merging With the New Algorithm
 
-Let us see what the new algorithm does in this situation:
+The new algorithm shows you the following:
 
 ![New algorithm conflicts](attachments/new-merge-algorithm/new-merge-algorithm-conflicts.png)
 
-There are still two conflicts. One conflict is about the text that both sides changed. The other conflict is a so-called *list order conflict*. Both people added something to the bottom layout grid and that is fine. However, the merge algorithm cannot guess the right order of the two new widgets and so it reports this list order conflict. This is purely a reminder for the person who is doing the merge to look at the final list. 
+There are still two conflicts. One conflict is about the text that both sides changed. The other conflict is a so-called *list order conflict*. Both people added something to the bottom layout grid. The merge algorithm cannot guess the right order of the two new widgets and so it reports this list order conflict. This is purely a reminder for the developer who is doing the merge to look at the final list. 
 
-### Start Conflict Resolution
+### 3.3 Conflict Resolution
 
-Now, let us resolve those individual conflicts. Remember, we do not have to choose between the whole page of the main line and the whole page of the branch line anymore! To start the resolution process, we click the new "Resolve..." button. The page is opened in a special mode with an orange tab:
+To start the resolution process, click the "Resolve..." button. The page is opened in a special mode with an orange tab:
 
 ![Document with orange tab](attachments/new-merge-algorithm/new-merge-algorithm-orange-tab.png)
 
@@ -82,36 +82,34 @@ Note that the following non-conflicting changes have already been applied to the
 * Add text widget to the bottom layout grid (main line)
 * Add a data grid to the bottom layout grid (branch line)
 
-And you will keep seeing the page as its going to be while you are resolving conflicts.
+#### 3.3.1 Resolving the First Conflict
 
-### Resolving the First Conflict
-
-For the first conflict, we can inspect what both people did and decide which side to take. Select one of the three lines that represent the conflict and choose "Resolve using Mine" or "Resolve using Theirs". 
+For the first conflict, you can inspect changes and decide which version to apply. Select one of the three lines that represent the conflict and choose **Resolve using Mine** or **Resolve using Theirs**. 
 
 ![Conflict resolution mode](attachments/new-merge-algorithm/new-merge-algorithm-resolve-mode.png)
 
-You will see the document update immediately when you click the button. If you are unhappy with your choice, you can use undo to go back and try another option. Note that the document needs to be focused for the keyboard shortcuts Ctrl+Z and Ctrl+Y to work.
+You will see the document update immediately when you click the button. If you are unhappy with your choice, you can use undo to go back and try another option. Note that the document needs to be focused for the keyboard shortcuts <kbd>Ctrl</kbd>+<kbd>Z</kbd> and <kbd>Ctrl</kbd>+<kbd>Y</kbd> to work.
 
-There is a third option to deal with a conflict: "Mark as resolved". This means: "I have seen the conflict, but I do not want to choose either side. I'll keep things the way they were in the original, before anyone started changing things."
+There is a third option to deal with a conflict: **Mark as resolved**. This means: "I have seen the conflict, but I do not want to choose either side. I will keep things the way they were in the original, before anyone started changing things."
 
 Once you have chosen one of the three options to resolve the first conflict, green checkmarks will appear to indicate that this conflict has been dealt with.
 
-### Resolving the Second Conflict
+#### 3.3.2 Resolving the Second Conflict
 
-The second conflict is a list order conflict. It is a reminder to take a look at the order of the widgets in the bottom layout grid. Was the text supposed to come first or the data grid? You arrange the widgets in the desired order in the page editor and then choose "Mark as Resolved" for the list order conflict.
+The second conflict is a list order conflict. It is a reminder to take a look at the order of the widgets in the bottom layout grid. You can arrange the widgets in the desired order in the page editor and then choose **Mark as Resolved** for the list order conflict.
 
-You can even decide to delete one of the widgets or add some of your own. The page is fully editable while resolving conflicts! 
+You can even decide to delete one of the widgets or add a new one. The page is fully editable while resolving conflicts. 
 
-Note that some edit operations will make it impossible to choose a side for certain conflicts. For example, if you had not resolved the first conflict yet and you delete the 'Home' widget, you cannot resolve the first conflict anymore, because the widget is simply not there anymore. At that point, you can only mark the conflict as resolved:
+Some edit operations will make it impossible to choose a side for certain conflicts. For example, if you had not resolved the first conflict yet and you delete the 'Home' widget, you cannot resolve the first conflict anymore, because the widget is simply not there. At that point, you can only mark the conflict as resolved:
 
 ![Conflict cannot be resolved](attachments/new-merge-algorithm/new-merge-algorithm-cannot-resolve.PNG)
 
-### Finishing Conflict Resolution
+#### 3.3.3 Finishing Conflict Resolution
 
-Once all conflicts have been resolved, you can click the 'Accept and Exit' button to finalize the results. The document will be saved in its merged form and the conflict for that document will be gone. The result is a document that contains changes from both sides and possibly some manual edits.
+Once all conflicts have been resolved, you can click the **Accept and Exit** button to finalize the results. The document will be saved in its merged form and the conflict for that document will be gone. The result is a document that contains changes from both sides and possibly some manual edits.
 
-At any time, you can also choose to abort conflict resolution by clicking the 'Cancel' button. The conflict will remain and you can resolve it at a later time.
+At any time, you can also choose to abort conflict resolution by clicking the **Cancel** button. The conflict will remain and you can resolve it later.
 
-## Conclusion
+## 4 Conclusion
 
-The new merge algorithm allows for fine-grained conflict resolution which means that you can mix and match changes from both sides. All the time you see what the page (or domain model or whatever) looks like at the moment, so that you know what you are doing. You can undo and redo changes so that experimenting is without danger. And finally, you can edit the page while resolving conflicts so that you have all the freedom to get the desired results. 
+The new merge algorithm allows for fine-grained conflict resolution which means that you can mix and match changes from both sides. All the time you see what the conflicted document looks like at the moment, and you can undo and redo changes. And finally, you can edit the document while resolving conflict. 

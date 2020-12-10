@@ -4,7 +4,7 @@ parent: "version-control"
 tags: ["merge", "algorithm", "conflict", "resolution"]
 ---
 
-## 1 Intriduction
+## 1 Introduction
     
 In Mendix 9, you can opt-in to use a new merge algorithm. This algorithm is used when doing an Update or a Merge to merge the change in your project model. The new algorithm has a number of advantages when compared to the current one:
     
@@ -35,7 +35,7 @@ Your teammate makes the following changes in the main line:
 * Changes the text 'Home' to 'Welcome!'
 * Adds a Mendix logo above the text 'Welcome!'
 * Deletes the subtitle 'Welcome to your new app'
-* Adds a text 'Write some text here` in the bottom layout grid
+* Adds a text 'Write some text here' in the bottom layout grid
 
 This results in the page looking the following way:
 
@@ -59,7 +59,7 @@ If you merge the branch into the main line with the old merge algorithm, it will
 
     ![Old algorithm conflicts](attachments/new-merge-algorithm/old-merge-algorithm-conflicts.png)
 
-The only thing you can do is to choose changes for the page either from the main line or from the branch line. You cannot combine changes from both sides and have to redo teh work to have changes from both lines. 
+The only thing you can do is to choose changes for the page either from the main line or from the branch line. You cannot combine changes from both sides and have to redo the work to have changes from both lines. 
 
 ### 3.2 Merging With the New Algorithm
 

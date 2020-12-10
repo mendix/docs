@@ -7,7 +7,7 @@ tags: ["data hub catalog", "data hub", "external entities", "landscape", "publis
 
 ## 1 Introduction
 
-This how-to will demonstrate how easy it is to build apps using data from different sources using Mendix Data Hub. The steps will describe the following: 
+This how-to will demonstrate how easy it is to build apps using data from different sources using Mendix Data Hub. The steps describe the following: 
 
 * Create a simple app in Studio Pro
 * Publish an entity from the app and register it in the Data Hub Catalog 

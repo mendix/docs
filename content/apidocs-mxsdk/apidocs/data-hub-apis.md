@@ -1,8 +1,7 @@
 ---
 title: "Data Hub APIs"
-category: "General Info"
-menu_order: 30
-description: "This document describes the Data Hub API and generating PAT."
+category: "API Documentation"
+description: "This document describes the Data Hub API and generating the Personal Access Token."
 tags: ["data hub", "Data Hub API", "Warden", "authentication", "personal access token"]
 ---
 

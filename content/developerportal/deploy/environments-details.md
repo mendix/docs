@@ -54,6 +54,10 @@ On the right side of the screen, you can find the following action buttons:
 * **Show Logged in Users** 
 * **Change Admin Password** – this changes the password for the inbuilt [administrator](/refguide/administrator) account — the new password is applied immediately, without the need for a restart and will also force the administrator to pick up any new roles assigned in the app deployment package — see the [User Role](/refguide/administrator#user-role) section of *Administrator* for more information
 
+{{% alert type="info" %}}
+During a [maintenance window](maintenance-windows), you will not be able to start, restart, or stop your app.
+{{% /alert %}}
+
 #### 2.1.1 Logging and Debugging in Mendix Cloud v4
 
 ![](attachments/environments-details/actions-v4.png)
@@ -357,6 +361,22 @@ On this tab, you can perform the following actions:
 
 * Change the log level type by clicking the specific level
 * Click **Set all to INFO** to revert all the changes
+
+{{% alert type="info" %}}
+If you change the log level, this level will continue to be used even if you later restart your app.
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+For an application running a **single instance**, any changes will be applied immediately to the application.
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+For an application running **more than one instance**, the changes can only be applied after a restart of the app. This is because it is not possible to instruct the load balancer to set the log level for a specific running instance. 
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+Log levels may not persist across restarts if you change them outside the Developer Portal (for example, using an app module).
+{{% /alert %}}
 
 ![](attachments/environments-details/loglevels.png)
 

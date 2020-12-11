@@ -10,17 +10,17 @@ tags: ["studio pro", "performance bot", mendix assist", "AI", "assist", "mx assi
 
 MxAssist Performance Bot is an intelligent virtual co-developer bot that helps you improve the performance of your project by inspecting your project model against Mendix development best practice in Mendix Studio Pro. It detects anti-patterns during the design and development, pinpoints you to these anti-patterns, suggests you how to resolve it, and in many cases can automatically fix these issues. 
 
-MxAssist Performance Bot is built using statistical analysis of thousands of anonymized Mendix projects to learn common anti-patterns as well as using Mendix Expert Services best practices in the development of microflows, domain models, pages, security, etc..
+MxAssist Performance Bot is built using statistical analysis of thousands of anonymized Mendix projects to learn common anti-patterns as well as using Mendix Expert Services best practices in the development of microflows, domain models, pages, security, etc.
 
 It consists of a three-level assistance:
 
-1. **Detection** – the bot inspects the model, identifies issue, and pinpoints you to the document/element causing the issue 
+1. **Detection** – the bot inspects the model, identifies issue, and pinpoints you to the document/element causing the issue.
 2. **Recommendation** – the bot explains the identified issue, the potential impact, and how to fix it. There is also a detailed best practice guide with a     dedicated step-by-step guideline of how to fix the issue.
 3. **Auto-fixing** – the bot can automatically implement the best practice and fix the issue.
 
 ## 2 MxAssist Performance Bot Pane
 
-To access settings of MxAssist Performance Bot, open **Edit** > Preferences >the **General** tab >the **MxAssist Performance Bot** tab. For more information, see [Preferences](preferences-dialog).
+To access settings of MxAssist Performance Bot, open **Edit** > **Preferences** >the **General** tab >the **MxAssist Performance Bot** tab. For more information, see [Preferences](preferences-dialog).
 
 MxAssist Performance Bot is enabled by default and is designed as a pane. To access the **MxAssist Performance Bot** pane, click **View** > **MxAssist Performance Bot.**
 
@@ -42,7 +42,7 @@ At the top of the **MxAssist Performance Bot** pane you can see the following op
 
         ![Project Model](attachments/mx-assist-performance-bot/project-model.jpg)
 
-    * The **Best Practice** tab lists the available best practice. You can choose your preferred best practices to inspect your model against to. 
+    * The **Best Practice** tab lists the available best practice. You can choose your preferred best practices and inspect your model against it: 
 
         ![Best Practice](attachments/mx-assist-performance-bot/best-practice.jpg)
 
@@ -52,7 +52,7 @@ You can use both project model and best practice configuration together.
 
 Each anti-pattern line in the pane provides you with the following information: 
 
-* **Icon** – indicates if the anti-pattern can be automatically fixed
+* **Icon** – indicates if the anti-pattern can be automatically fixed; if the icon has the “A” letter, the issue can be auto-fixed
 
 * **Code** – a unique code that is specific to the anti-pattern type 
 
@@ -76,9 +76,9 @@ The following actions are available in the drop-down menu:
 
 * **Go to Cause** – takes you to the element causing the issue.
 * **Go to Usage** – opens the corresponding locations where the anti-pattern is used.
-* **View MxAssist Performance recommendation** – similar to double-clicking the message, opens the pop-up window with recommendations.
+* **View MxAssist Performance recommendation** – opens the pop-up window with recommendations (similar to double-clicking the message).
 * **Mark as read** – marks the issue as read. This will make the blue circle to disappear. 
-* **Suppress this recommendation** – suppresses the issue. This will gray out the issue and send it to the bottom of the list. The related indicator in the editor will also disappear. 
+* **Suppress this recommendation** – suppresses the issue. This will gray out the issue and send it to the bottom of the list. The related indicator in the editor will disappear. 
 
 ## 3 Using MxAssist Performance Bot in App Development  
 
@@ -98,10 +98,7 @@ The bot will detect performance anti-patterns and list them in the pane under th
 
 ![Viewing Anti-Pattern](attachments/mx-assist-performance-bot/viewing-anti-pattern.jpg)
 
-To view the element or document where the anti-pattern is located, double-click an anti-pattern message. Alternatively, right-click the anti-pattern message in the pane and choose one of the following in the drop-down menu:
-
-* **Go to Cause** 
-* **Go to Usage**
+To view the element or the document where the anti-pattern is located, double-click the message line or right-click the message line and choose **Go to Cause** or **Go to Usage** in the drop-down menu.
 
 ### 3.2 Recommending a Fix
 
@@ -115,22 +112,20 @@ There are two ways to view the recommendations:
 
    ![Indicator in the Editor](attachments/mx-assist-performance-bot/indicator-in-editor.jpg)
 
-
-
 The recommendation contains the description of the identified issue, potential impact from it, the way to fix it, and a link to a more detailed guidance on fixing the issue: 
 
 ![Performance Recommendation](attachments/mx-assist-performance-bot/performance-recommendation.jpg)
 
 ### 3.3. Auto-Fixing the Anti-Pattern 
 
-The third level of assistance is **auto-fixing** where the bot can automatically implement the best practice and fix the issue with just one user click. To avoid undesirable changes, the automatic refactor is only available when the bot can safely refactor the code without creating an error or making other undesirable change in the model. Each performance issue has an icon in the pane that indicates whether it is auto-fixable or not. If the icon has the “A” letter, the issue can be auto-fixed:
+The third level of assistance is **auto-fixing** where the bot can automatically implement the best practice and fix the issue in just one click. To avoid undesirable changes, auto-fixing is only available when the bot can safely refactor the code without creating an error or making other undesirable change in the model. Each performance issue has an icon in the pane that indicates whether it is auto-fixable. If the icon has the “A” letter, the issue can be auto-fixed:
 
 {{% image_container width="45" %}}![Auto-Fixable Icon](attachments/mx-assist-performance-bot/auto-fixable.png)
 {{% /image_container %}}
 
 To auto-fix the issue, follow the steps below:
 
-1. Right-click the message line in the pane and select **View MxAssist Performance Recommendation** in the drop-down menu or click the corresponding on-canvas indicator to open the recommendation.
+1. Right-click the message line in the pane and select **View MxAssist Performance Recommendation** in the drop-down menu or click the corresponding indicator in the editor to open the recommendation.
 
 2. In the **MxAssist Performance Recommendation** pop-up window, click the available action button, for example, **Fix the Commit**: 
 

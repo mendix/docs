@@ -4,26 +4,31 @@ description: "Describes Mendix best practices on optimizing an app performance."
 parent: "mx-assist-performance-bot"
 tags: ["studio pro", "performance", "performance bot", "mx assist", "mendix assist"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#The anchors <MXP001-MXP008> below are all mapped, so they should not be removed or changed.
+#The anchors <mxp001-mxp008> below are all mapped, so they should not be removed or changed.
 ---
 
 ## 1 Introduction
 
-This document outlines Mendix best practices for optimizing an app performance. 
+This document outlines performance issues and Mendix best practices for optimizing an app performance. 
 
-## 2 Using Calculated Attributes {#mxp001} {#mxp002}
+## 2 Calculated Attributes Best Practices {#mxp001} 
 
-When an object has calculated attributes, each time this object is changed or retrieved from the storage, its calculated attributes are computed by calling a microflow. If the logic behind calculated attributes retrieves other objects or executes Integration activities, it will result in an extra load (and delay) while the outcome of the logic is not used. Creating calculated attributes always affects performance, so you should evaluate whether it is necessary to them. For more information on attributes, see [Attributes](attributes).
+<a name="mxp002"></a>When an object has calculated attributes, each time this object is changed or retrieved from the storage, its calculated attributes are computed by calling a microflow. If the logic behind calculated attributes retrieves other objects or executes Integration activities, it will result in an extra load (and delay) while the outcome of the logic is not used. Creating calculated attributes always affects performance, so you should evaluate whether it is necessary to use them. For more information on attributes, see [Attributes](attributes).
 
-In most cases, the logic behind a calculated attribute is always executed when the object is used. It is executed whenever there is no retrieval schema present for a retrieve activity (which is the case with data grids). The logic behind calculated attributes is executed at the following elements:
+In most cases, the logic behind a calculated attribute is always executed when the object is used. It is executed whenever there is no retrieval schema for a Retrieve activity (which is the case with data grids). The logic behind calculated attributes is executed in the following elements:
 
 - Retrieve and change object activities in microflows
 - In UI widgets (e.g. data views, custom widgets)
 - When an object is passed from the UI as a parameter to a microflow (e.g. a button triggering a microflow).
 
-### 2.1 Avoid Using Calculated Attributes on a Page
+There are two different performance issues with calculated attributes that you can easily fix:
 
-Retrieve activities also trigger the logic of calculated attributes, which can lead to database actions and microflow calls being executed (objects retrieving each other through calculated attributes).
+1. [When you use calculated attributes on a page](#calculated-attribute-on-page)
+2. [When there are unused calculated attributes](#unused-calculated-attributes)
+
+### 2.1 Avoid Using Calculated Attributes on a Page {#calculated-attribute-on-page}
+
+Retrieve activities trigger the logic of calculated attributes, which can lead to database actions and microflow calls being executed (objects retrieving each other through calculated attributes).
 
 If data widgets (list view, data view, or data grid) on a page are using calculated attributes, this may affect the time to load and display the page. 
 
@@ -32,7 +37,7 @@ If data widgets (list view, data view, or data grid) on a page are using calcula
 To fix the issue, do the following:
 
 1. In the domain model, change the attribute to be stored instead of calculated.
-2. Wherever the attribute is about to be committed to the database, the value needs to be calculated using the relevant microflow.
+2. Wherever the attribute is about to be committed to the database, calculate the value using the relevant microflow.
 
 {{% alert type="info" %}}
 
@@ -40,9 +45,9 @@ You will also need to migrate any existing data, since when the attribute is cha
 
 {{% /alert %}}
 
-### 2.2 Remove Unused Calculated Attributes {#mxp002}
+### 2.2 Remove Unused Calculated Attributes {#unused-calculated-attributes}
 
-Retrieve activities also trigger the logic of calculated attributes, it could lead to an execution chain of database actions and microflow calls (objects retrieving each other through calculated attributes).
+As Retrieve activities trigger the logic of calculated attributes, it could lead to an execution chain of database actions and microflow calls (objects retrieving each other through calculated attributes).
 
 If calculated attributes are not used, they can safely be removed to avoid redundant microflow calls.
 
@@ -50,7 +55,7 @@ If calculated attributes are not used, they can safely be removed to avoid redun
 
 To fix the issue, delete the unused calculated attribute.
 
-## 3 Add Index to Attributes that Are Used in Sort Bars Belonging to Pages {#mxp003}
+## 3 Add an Index to Attributes in Sort Bars {#mxp003}
 
 [Sort bars](https://docs.mendix.com/refguide/sort-bar) are used to sort items in data widgets. Sort bars can be used in three different types of data widgets:
 
@@ -58,21 +63,21 @@ To fix the issue, delete the unused calculated attribute.
 - Template grid
 - Reference set selector
 
-Each sort item in the sort bar is sequentially utilized to order the data in the widget. Adding an [index](indexes) on the attributes used in sort items can make the sorting process faster, subsequently improve the performance of the page. It is also important to perform this optimization only on attributes belonging to entities which are predominantly **read-intensive**. 
+Each sort item in the sort bar is sequentially utilized to order the data in the widget. Adding an [index](indexes) on the attributes used in sort items can make the sorting process faster, subsequently improve the performance of the page. 
 
-There can be four operations performed on an entity: create, update, delete, and select. Entities, for which the number of create, update, and delete operations is much greater than the number of select operations can be called **write-intensive** because most operations mutate data in a database rather than select from it.
+There can be four operations performed on an entity: create, update, delete, and select. Entities, for which the number of create, update, and delete operations is much greater than the number of select operations can be called *write-intensive* because most operations mutate data in a database rather than select from it.
 
-Entities, for which the number of select operations is much greater than the number of create, update, and delete operations can be called **read-intensive** because most operations select data from the database.
+Entities, for which the number of select operations is much greater than the number of create, update, and delete operations can be called *read-intensive* because most operations select data from the database. It is important to perform this optimization only on attributes belonging to entities which are predominantly *read-intensive*. 
 
-As totally different best practices apply for read- and write-intensive entities, it would be valuable to differentiate entities by the type of operations that are performed on the entities.
+As totally different best practices apply for read-intensive and write-intensive entities, it would be valuable to differentiate entities by the type of operations that are performed on the entities.
 
 ### 3.1 Steps to Fix
 
 To fix the issue, add an index on attributes which are used as sort items in sort bars on pages.
 
-## 4 Avoid Committing Objects Inside a Loop with a Create Object, Change Object, or Commit Activities {#mxp004} {#mxp005}
+## 4 Avoid Committing Objects Inside a Loop with Create Object, Change Object, or Commit Activities {#mxp004} 
 
-In a microflow, Mendix objects can be persisted to the database with three activities: the **Create object** activity, **Change object** activity, and **Commit** activity. For objects that are created or changed in a loop, it is not the best practice to commit them immediately in the loop, as this comes with an unnecessary performance overhead. Instead, it is recommended to perform a batch commit of several created/changed objects with the **Commit** activity outside of the loop to reduce database, application, and network overhead. For more information on **Create object**, **Change object**, and **Commit** activities, see [Create Object](create-object), [Change Object](change-object), and [Commit Object(s)](committing-objects).
+<a name="mxp005"></a>In a microflow, Mendix objects can be persisted to the database with three activities: the **Create object** activity, **Change object** activity, and **Commit** activity. For objects that are created or changed in a loop, it is not the best practice to commit them immediately in the loop, as this comes with an unnecessary performance overhead. Instead, it is recommended to perform a batch commit of several created/changed objects with the **Commit** activity outside of the loop to reduce database, application, and network overhead. For more information on **Create object**, **Change object**, and **Commit** activities, see [Create Object](create-object), [Change Object](change-object), and [Commit Object(s)](committing-objects).
 
 Committing lists of objects has the following benefits compared to individual commits:
 
@@ -86,9 +91,9 @@ Committing lists of objects has the following benefits compared to individual co
 
 ### 4.1 Steps to Fix for Create or Change Object Activities
 
-To fix the issue for **Create** or **Change object** activities, do the following:
+To fix the issue for **Create** or **Change object** activities inside the loop, do the following:
 
-1. Inside a loop, change **Commit** option of a **Create**/**Change** object activity from *No* and make sure created/changed objects are available in a list.
+1. Change the **Commit** option of a **Create**/**Change** object activity from *No* and make sure created/changed objects are available in a list.
 2. Commit the list after the loop when the iteration has finished or when number of objects in the list reaches 1000 to avoid excessive memory usage.
 
 ### 4.2 Steps to Fix for the Commit Activity

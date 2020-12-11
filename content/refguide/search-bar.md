@@ -83,13 +83,7 @@ Many input widgets (like text boxes and drop-down widgets) can be connected to t
 
 In the first case, we say the widget is connected to an attribute, and in the second case it is connected to an attribute path.
 
-{{% alert type="warning" %}}
-
-In Mendix 8.0, an input widget connected to an attribute path must be read-only. Studio Pro will check this for you.
-
-In Mendix 8.1 and above, you can edit attributes presented in input widgets over a path.
-
-{{% /alert %}}
+You can edit attributes presented in input widgets over a path.
 
 #### 3.2.2 Comparison
 

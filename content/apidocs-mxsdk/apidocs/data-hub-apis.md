@@ -8,25 +8,25 @@ tags: ["data hub", "Data Hub API", "Warden", "authentication", "personal access 
 
 ## 1. Introduction
 
-The Data Hub APIs enable you to expore and discover data sources in Mendix Data Hub and use them to build new apps.  You can also register new data sources from your applications to the Data Hub Catalog ensuring that the latest data is readily available.
+The Data Hub API enables you to explore and discover data sources in Mendix Data Hub and use them to build new apps. You can also set up a registration flow in your deployment pipeline to register new data sources from your applications to the Data Hub Catalog.
 
 {{% alert type="info" %}}
 To use the Mendix Data Hub a license is required.
 {{% /alert %}}
 
-The following Data Hub APIs are available in the Open API (formerly Swagger) specification:
+The [DataHubAPI](https://platformcore.pages.rnd.mendix.com/datahub-spec/datahub.html#/) ??post the final API link here?? is an Open API (formerly Swagger) specification which contains all the APIs for the operations that are available:
 
-* Registration API [link]
-* Search API [lik] 
-* ...https://platformcore.pages.rnd.mendix.com/datahub-spec/datahub.html#/.  ??post the final API link here??
+* Registration
+* Search
+* Consume
 
-Before you can access the API,  authorization is required. Mendix users must obtain a Personal Access Token (PAT) as described in [Generating your Personal Access Token](#generatepat).
+To access the API, authorization is required. Mendix users must obtain a Personal Access Token (PAT) as described in [Generating your Personal Access Token](#generatepat).
 
 ## 2. Generating your Personal Access Token {#generatepat}
 
 For every request that is made to the Data Hub API ??is it for every request or is this not relevant.??, you must include a PAT which will be exchanged with the relevant API key to enable access. Mendix users (with a registered account) can obtain the necessary PAT using the Mendix **Warden** app by following these steps: 
 
-1. You can access the **Warden** app ??currently on the test env:?? at:  https://warden-test.mendix.com/index.html. 
+1. You can access the **Warden** app at: https://warden.mendix.com/
 
 2. When you are prompted, enter your login and password. This will take you to the Warden Home page:
 
@@ -34,19 +34,25 @@ For every request that is made to the Data Hub API ??is it for every request or 
 
 3. To create a new personal access token, click **Add** to see the **Create a Personal Access Token** screen. 
 
-4. Specify a name for the token.
+4. Enter a **Name** for the token.
 
-5. For **Maximum idle time(Days)** select **180** to indicate the length of time that the token is valid for.
-
-6. For the **Select scopes this token grants access to:** **Catalog**, check both **read** and **write** **services** to the Data Hub by checking both options:
+5. For the **Select scopes this token grants access to**, for Data Hub, check both the **mx:datahub:services:read** and **mx:datahub:services:write**:
 
    ![create token home](attachments/dta-hub-apis/create-pat-token.png)
 
-7. Click **Create**. The token will be generated and displayed in a pop-up window:
+6. Click **Create**. The token will be generated and displayed in a pop-up window:
 
    ![generated token](attachments/dta-hub-apis/generated-pat-token.png)
 
-8. Copy  the **Token secret** to your clipboard by clicking the book icon below the secret. Make sure that you keep this token in a safe place in case you have to set-up the link to the API again.
+7. Copy the **Token secret** to your clipboard by clicking the storage icon below the secret. You will have to include this token in the authorization header for your requests to the Data Hub API.
 
-9. You will have to include ths token in the Authorization header for your requests to the Data Hub API.
+   {{% alert type="info" %}}Make sure that you keep this token in a safe place in case. You will not get another chance to view this token once you **Close** is dialog box.
+
+   {{% /alert %}}
+
+8. Click **Close** to return to the **Personal Access Tokens** home screen. Your generated token will be listed:
+
+   ![token list](attachments/dta-hub-apis/token-list.png)
+
+9. You can delete unused tokens by clicking the "bin" icon.
 

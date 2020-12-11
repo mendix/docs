@@ -8,7 +8,7 @@ tags: ["data hub", "Data Hub API", "Warden", "authentication", "personal access 
 
 ## 1. Introduction
 
-The Data Hub APIs can be used to establish a gateway that connects your applications to Mendix Data Hub and enable data sources to be shared and used by developers in creating new apps. This means you can integrate the functionality to explore and discover data sources in the Data Hub Catalog into your applications and connect to them them. You can also build a registration pipeline to the organization's Data Hub, ensuring that the latest data is readily available.
+The Data Hub APIs enable you to expore and discover data sources in Mendix Data Hub and use them to build new apps.  You can also integrate automatic registration of new data sources to the Data Hub Catalog upon deployment ensuring that the latest data is readily available.
 
 {{% alert type="info" %}}
 To use the Mendix Data Hub a license is required.

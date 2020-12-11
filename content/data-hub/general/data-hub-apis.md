@@ -14,7 +14,7 @@ The Data Hub APIs enable you to expore and discover data sources in Mendix Data 
 To use the Mendix Data Hub a license is required.
 {{% /alert %}}
 
-The following Data Hub APIs are available as Open API (formerly Swagger) specs:
+The following Data Hub APIs are available in the Open API (formerly Swagger) specification:
 
 * Registration API [link]
 * Search API [lik] 

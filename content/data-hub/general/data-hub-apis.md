@@ -8,7 +8,7 @@ tags: ["data hub", "Data Hub API", "Warden", "authentication", "personal access 
 
 ## 1. Introduction
 
-The Data Hub APIs enable you to expore and discover data sources in Mendix Data Hub and use them to build new apps.  You can also integrate automatic registration of new data sources to the Data Hub Catalog upon deployment ensuring that the latest data is readily available.
+The Data Hub APIs enable you to expore and discover data sources in Mendix Data Hub and use them to build new apps.  You can also register new data sources from your applications to the Data Hub Catalog ensuring that the latest data is readily available.
 
 {{% alert type="info" %}}
 To use the Mendix Data Hub a license is required.

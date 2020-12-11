@@ -9,6 +9,29 @@ description: "Mendix Native Mobile Builder release notes."
 
 The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Studio Pro, which helps you build your Mendix native mobile app. After the Mendix Native Mobile Builder simplifies your build process, you can do what you want most: test and publish your app. The Mendix Native Mobile Builder uses MxBuild, GitHub, and App Center to simplify the app building process and is directly accessible via Mendix Studio Pro. 
 
+## 1.0.51 
+
+**Release date: December 10th, 2020**
+ ### Improvements
+  This release focuses mainly on quality of life bug fixes and features.
+   
+  ### Features
+  * We introduced the option to simply commit your changes to your repository without the need for building. The build button is now a combi button allowing you to choose between build or configure.
+   
+  * When a build fails you should now find a button pointing to the application logs. This allows for easy access to the logs needed for further assistance.
+   
+  * We made the Custom Developer App push notification configuration optional. Instead, a warning is shown if the configuration is missing for Custom Developer Apps.
+   
+  ### Fixes
+   
+  * Capabilities should be enabled correctly if a compatible Native Template is found.
+  * Missing tokens should not crash Native Builder UI anymore.
+  * Fixed a possible duplication of capabilities after a Native Template update.
+  * iOS Purpose strings should be applied correctly to apps using the Maps capability.
+  * *Workflows* permission for the GitHub token should now be optional again.
+  * Fonts should now correctly be applied throughout the app.
+  * Removed the skip buttons from the wizard to avoid confusion.
+
 ## 1.0.49
 
 **Release date: October 27th, 2020**

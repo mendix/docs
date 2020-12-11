@@ -23,7 +23,9 @@ The actions which can be performed are:
 * Equals 
 * Sort 
 * Filter 
+* Filter by expression 
 * Find 
+* Find by expression 
 * Head 
 * Tail 
 
@@ -88,6 +90,15 @@ These unary operations have a list as the single operand and return either an ob
 | --- | --- | --- |
 | Head | The result is the first element of the list, or empty if the parameter contains zero elements or was initialized as empty. | Object |
 | Tail | The result is a list containing all elements of the parameter except the first, or an empty list if the parameter contains zero elements or was initialized as empty. | List |
+
+#### 3.1.4 Expression
+
+These operations take a list and filter it based on an expression. Inside the expression `$currentObject` can be used to perform the filtering.
+
+| Operation | Description | Result Type |
+| --- | --- | --- |
+| Find by expression | Find the first object that matches the given expression. | Object |
+| Filter by expression | Find all objects that match the given expression. | List |
 
 ### 3.2 List Name, Object Name, or Variable Name
 

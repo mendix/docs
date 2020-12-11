@@ -8,25 +8,43 @@ tags: ["data hub", "data hub catalog", "curate", "description", "services", "tag
 
 ## 1 Introduction
 
-Curation is the processes of maintaining registered services and enriching the metadata of registered assets in the Data Hub Catalog to provide further information about the services as well as the entities and attributes exposed in the services. You can add catalog descriptions and tags to supplement the registered metadata in order to categorize the shared data. A primary curate function is setting the [**Discoverability**](#discoverability) of registered assets, which determines if users can see (find and use) the registered asset. 
+Curation is the processes of maintaining registered services and enriching the metadata of registered assets in the Data Hub Catalog to provide further information about the services as well as the entities and attributes exposed in the services. You can add catalog descriptions and tags to supplement the registered metadata in order to categorize the asset and the datasets they connect to. Curate functions include setting the [Discoverability](#discoverability) of registered assets, assigning a **Validated** tag and specifying the **Business** and **Technical** owners. 
 
-Users with curation rights for the Data Hub Catalog are as follows:
+Users who can curate assets in Data Hub Catalog are as follows:
 
-* Business Owners and Technical Owners of a registered service – can curate their own services and find non-discoverable services that they own
+* Owners of a registered service – can curate their own services and find those that are set to non-**Discoverable**
 * [Data Hub Curators](../index#curator) and [Data Hub Admins](../index#admin) – can curate and find all registered assets, discoverable and non-discoverable
+
+Owners and Curators can also get an overview of the registered assets they own and curate from the [Curate](#curatelist) tab of Data Hub.
 
 {{% alert type="info" %}}
 Information that is added or changed during curation is stored in the Data Hub Catalog for that item. It will not be added to the OData service contract or metadata files or affect any of the values in the metadata files associated with the service or the datasets associated with the exposed entities. 
 {{% /alert %}}
 
-## 2 Curation Bar
+## 2 The Curate List {#curatelist}
 
-Curation is performed in the Search Details** screen. Users with curation rights will see the **Curation Bar** in the **Search Details** screen of the selected item: 
+Owners and curators of registered assets can click  **Curate** from the **Data Hub** screen to see the **Curation List** screen which provides an overview of all the registered assets (**My Assets**) that you can curate as an owner and **Company Assets** that you can curate as a curator:
 
-![](attachments/curate/curate-bar.png)
+![curate list](attachments/curate/curate-list.png)
+
+The list includes registered services and also individual entities that are exposed in the services.
+
+From the overview, you can see details of assets, and determine if assets have to be further curated. 
+
+You can search for specific assets by entering a search string in the search bar or **Filter By:** **Environment** or **Validated** assets.
+
+The list can be also be sorted by any of the columns by clicking on the column header.
+
+To go to the asset details, click **View**. You can then perform curate actions to add Catalog specific information to the asset metadata.
+
+## 3 The Curation Bar
+
+Curation is performed in the search details screen. Users with curation rights will see the **Curation Bar** in the **Search Details** screen of the selected item: 
+
+![curate bar](attachments/curate/curate-bar.png)
 
 {{% alert type="info" %}}
-Owners of registered assets and curators can only curate their services.
+Owners of registered assets and can only curate their services.
 {{% /alert %}}
 
 On the **Curation bar**, the following details are displayed:
@@ -39,52 +57,82 @@ On the **Curation bar**, the following details are displayed:
 	  * **Validate** indicates that the service and data set have been validated.
 * When an entity is selected in the **Search Results**, **Edit Entity Details** – to edit entity and attribute descriptions 
 
-## 3 Setting the Discoverability of a Service{#discoverability}
+## 4 Setting the Discoverability and Validating a Service{#discoverability}
+
+### 4.1 Discoverable
 
 By default, when a service is registered in the Data Hub catalog, it is set to **Discoverable**, which means that all users can find, consume, and see details of the service. 
 
-When a service is set to **Not Discoverable**, it will only be visible to the owners of the service and curators and not be visible to other users of the Data Hub Catalog. This means that it cannot be found, either in the Data Hub Catalog or by users of the Data Hub integration in Studio Pro and Studio.
+When the **Discoverable** setting is turned off , it will only be visible to the owners of the service and curators and not be visible to other users of the Data Hub Catalog. This means that it cannot be found, either in the Data Hub Catalog or by users of the Data Hub integration in Studio Pro and Studio.
 
 {{% alert type="info" %}}
-When a service is set to **Not Discoverable**, neither the service nor the entities that are exposed by the service can be found by other users. However, there may be instances of the same entities being available through other services that are published in the Data Hub Catalog.
+When a service is set to not-**Discoverable**, neither the service nor the entities that are exposed by the service can be found by other users. However, there may be instances of the same entities being available through other services that are published in the Data Hub Catalog.
 {{% /alert %}}
 
 To change the discoverability of a service, follow these steps:
 
 1. In the Data Hub Catalog, select the service to display the **Search Details**.
+
 2.  If you have curation rights, the **Curation Bar** will be displayed. Click **Discoverability** to display the **Discoverable** toggle:
 
-	![](attachments/curate/curate-discoverable.png)
+	![discoverable](attachments/curate/curate-discoverable.png)
 
-3. To turn off **Discoverability**, click the toggle. A message will be displayed to indicate that the service is no longer discoverable.
+3. Click the **Discoverable** toggle to turn it on or off. A message will be displayed to indicate the discoverability of the asset.
 
-	![](attachments/curate/curate-non-discoverable.png) 
+	![non-discoverable](attachments/curate/curate-non-discoverable.png) 
 
-## 4 Curating Services 
+### 4.2 Validated {#validated}
+
+The **Validated** value can be assigned to a service. When it is turned on, by clicking the **Validated** toggle, this will be indicated in the service details screen and also in the search results pane for the service. 
+
+![validated](attachments/curate/curate-validated.png)
+
+## 5 Curating Services 
 
 A service can be curated to specify the owners of the app and also add or edit the descriptions and tags for the selected service. 
 
-### 4.1 Changing the Technical and Business Owners of an App
+### 5.1 Changing the Technical and Business Owners of an App {#customowner}
 
-By default, the **Technical Owner** for a registered service is the user who registered the service when registration is done through the deployment pipeline in Studio Pro or specified during manual registration. Services can be curated to add a business owner. The Technical and Business Owners are displayed in the **Service Metadata** pane and provide a contact point for users. 
+By default, the **Technical Owner** for a registered service is the user who registered the service when registration is done through the deployment pipeline in Studio Pro or specified during manual registration. Services can be curated to change the owners. The **Technical** and **Business Owners** are displayed as a link in the asset **Metadata** pane so that users can contact them. 
 
 {{% alert type="info" %}}
-Both Business and Technical Owners have curation rights for the registered service in the Data Hub Catalog.
+If you as a **Technical Owner** curate the service and change the name, then you will no longer have curation rights to the asset. If the discoverability is turned off, then you will not be able to find the asset in the Catalog.
 {{% /alert %}}
 
-To change the owners of the app of the selected service, follow these steps:
+{{% alert type="info" %}}
+**Business** and **Technical Owners** have curation rights for the registered service in the Data Hub Catalog if they are registered users on the Mendix Platform. If a custom owner is *created* with the process described in this section, the link to contact them will be displayed for the asset but this does not mean that they are able to curate it. 
+{{% /alert %}}
 
-1.  In the **Service Details** screen for the selected service, in the **Curation Bar** click **Edit Metadata** > **Application Details**:
+{{% alert type="info" %}}
+Curators and the Data Hub Administrator can manage the custom Owner details in the **Owner Management** screen as an **Administration** function. For further details see the [Managing Custom Owners ](../general/data-hub-admin-functions#customowners) section of *Data Hub Administration*. 
+{{% /alert %}}
 
-	![](attachments/curate/edit-application-metadata.png)
+To change the owners of the app for the selected service, follow these steps:
 
-2.  The **Application Metadata** dialog box is displayed. You can set or change the **Business Owner ** and **Technical Owner** from this page. They will be displayed in the **Service Metadata** panel in the **Search Details** screen.
+1.  In the service details screen for the selected service, in the **Curation Bar** click **Edit Metadata** > **Application Details**:
+
+	![edit application](attachments/curate/edit-application-metadata.png)
+
+2.  The **Application Metadata** dialog box is displayed. To change the **Business Owner ** or **Technical Owner** click in the name field and you can start typing or select from the drop-down list of names:
 
 	![](attachments/curate/application-meta-data.png)
 	
-3. Click **Back to** to return to the **Service Details** screen.
+3. In this list you will be shown a list of Mendix platform users (who will be displayed with the their avatar), and custom owners will be shown with an initial avatar:
 
-### 4.2 Changing the Service Description
+    ![](attachments/curate/custom-avatar.png)
+
+4. If you type a name that is not on the list, you will be asked if you want to **Create** it.  Click on this prompt and the **Create new contact** dialog box is displayed:
+
+    ![custom contact create](attachments/curate/custom-contact.png)
+
+5. Enter the **Name** and **Email** of the owner and click **Save**. 
+
+  {{% alert type="info" %}}The contact details that you add here will be shown as link for the application in the **Metadata** pane; this does not mean that they are able to curate the asset. For this they have to be a Mendix user.
+  {{% /alert %}}
+
+6. Click **Back to...** to return to the asset details screen where you will see the link to the new owners in the **Metadata** pane.
+
+### 5.2 Changing the Service Description
 
 If a description was included in the OData metadata contract, this will be displayed in the **Search Details** screen for the selected service. You can curate a service to add a catalog description to include further details on data usage and relevancy. As search in the Data Hub Catalog also includes searching the contents of the description fields of registered services, entities, and attributes, adding relevant descriptions can help in the right users finding these shared assets.
 
@@ -114,11 +162,12 @@ To edit the service metadata of a selected service, follow these steps:
 	{{% alert type="info" %}}If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. 
 	{{% /alert %}}
 
-### 4.3 Adding or Editing Tags for a Service{#tags}
+### 5.3 Adding or Editing Tags to a Service {#tags}
 
 Add tags to categorize a registered service and provide additional means for finding the service. Tags that are specified for a service also apply to the entities and attributes that are exposed in the service. Specify tags for the selected service by following these steps:
 
 1. In the **Search Details** screen of a selected service, click **Edit Metadata** > **Service Details** in the **Curation Bar** to display the **Service Metadata** box.
+
 2.  To add tags, click the empty **Tag** input area:
 
 	![](attachments/curate/service-metadata-tags.png)
@@ -137,10 +186,11 @@ Add tags to categorize a registered service and provide additional means for fin
 
 5. When you are finished specifying the tags, click **Save Changes** to register the changes and the tags will be shown in the **Service Metadata** pane.
 
-	{{% alert type="info" %}}If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. 
+	{{% alert type="info" %}}
+	If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. 
 	{{% /alert %}}
 
-## 5 Curating Entities and Attributes
+## 6 Curating Entities and Attributes
 
 Entities and their exposed attributes can be curated to add **Catalog descriptions**. Catalog descriptions are stored in the Data Hub Catalog and it is possible to specify if the description provided in the service contract metadata or the Data Hub Catalog descriptions are displayed for the item.
 

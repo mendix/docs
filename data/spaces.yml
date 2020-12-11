@@ -115,6 +115,7 @@ releasenotes:
     - "Studio"
     - "Mobile"
     - "Developer Portal"
+    - "Deployment"
     - "Data Hub"
     - "App Store"
     - "SDKs"
@@ -140,7 +141,7 @@ studio:
   menu_categories:
     - "General Info"
     - "Pages"
-    - "Working With Data"
+    - "Working with Data"
     - "Navigation Document"
     - "Microflows"
     - "Previewing & Publishing Your App"

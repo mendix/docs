@@ -48,15 +48,19 @@ This setting defines how changes are reflected in the pages presented to the end
 
 Default: *No*
 
+{{% alert type="info" %}}
+To make pages of a Mendix app efficient, many widgets display values from an attribute of an object which is cached on the page. Attributes in widgets which use cached data are *always* reflected in the client even if they are not committed and irrespective of the value of **Refresh in client**.
+
+If a widget is only updated when a [data source](data-sources) is loaded, then rollbacks will only be seen if they are committed and **Refresh in client** is set to *Yes*.
+
+When testing your app, ensure that the desired data is being displayed by the widgets you have chosen.
+{{% /alert %}}
+
 #### 3.2.1 Microflow Is Called from the Client in an Online App
 
 If **Refresh in client** is set to *No*, the rollback is not reflected in the client.
 
 If set to *Yes*, the object is refreshed across the client, which includes reloading the relevant [data sources](data-sources).
-
-{{% alert type="info" %}}
-Rolled back attribute values are always reflected in client. This includes updating their visibility and editability [properties](common-widget-properties). [Data sources](data-sources) are only reloaded if **Refresh in client** is set to *Yes*.
-{{% /alert %}}
 
 #### 3.2.2 Microflow Is Called in an Offline, Native, or Hybrid App
 

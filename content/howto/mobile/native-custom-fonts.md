@@ -1,8 +1,8 @@
 ---
-title: "Add Fonts to Your Native App"
+title: "Add Fonts to Your Native Mobile App"
 parent: "native-mobile"
 menu_order: 42
-description: "This tutorial will teach you to enrich the design of your native app with custom fonts."
+description: "This tutorial will teach you to enrich the design of your native mobile app with custom fonts."
 tags: ["mobile", "debug", "android", "ios", "native", "fonts"]
 ---
 
@@ -10,7 +10,7 @@ tags: ["mobile", "debug", "android", "ios", "native", "fonts"]
 
 Good typography plays a major role in conveying your app's message while reinforcing your company's brand identity. Setting up the fonts you need is as simple as dragging and dropping the required fonts and setting your app's style. As you can see in the [Prerequisites](#prerecs) section below, Mendix offers two ways for you to add custom fonts: using the Mendix Native Mobile Builder or manually.
 
-### 1.2 Introduction to Fonts in Mendix Native Apps
+### 1.2 Introduction to Fonts in Mendix Native Mobile Apps
 
 When it comes to fonts files, several standards and types are common. True Type (*.ttf*), Open Type (*.otf* or *.ttf*), and Web Open Font Format (*.woff*) are the most common. 
 
@@ -22,7 +22,7 @@ Android and iOS each take a different approach to fonts. Where Android requires 
 
 Furthermore, both platforms resolve available fonts differently. While iOS fully supports Open Type fonts and can select fonts based on their metadata, Android requires explicit linking of the font file to the weight and style.
 
-React Native, the underlying framework of Mendix Native Apps, unifies the process of adding fonts. For example, fonts added under **assets/fonts** on Android are explicitly linked in the project. These fonts are then exposed directly in the framework for styling your widgets using the common CSS properties you use routinely.
+React Native, the underlying framework of Mendix native mobile apps, unifies the process of adding fonts. For example, fonts added under **assets/fonts** on Android are explicitly linked in the project. These fonts are then exposed directly in the framework for styling your widgets using the common CSS properties you use routinely.
 
 There are limitations to mobile font capabilities. For example, Android supports a very limited set of font types: regular, bold, italic, and bold italic.
 
@@ -105,7 +105,7 @@ The Mendix Native Mobile Builder simplifies adding custom fonts to your project.
 
 1. Extend the list using the arrow to the right. Verify the expected fonts are available. You can continue by adding as many fonts as you prefer:
 
-	{{% image_container width="350" %}}![Custom fonts screen filled & extended](attachments/nbui/advanced-fonts2.png)
+	{{% image_container width="350" %}}![Custom fonts screen filled & extended](attachments/nbui/advanced-fonts2.png){{% /image_container %}}
 
 1. Click the snippet button to get the code snippet which you can copy to your styles:
 
@@ -178,7 +178,7 @@ Use XCode to manually add fonts to an iOS project:
 
      {{% image_container width="350" %}}![Project explorer with fonts](attachments/nbui/custom-fonts-project-explorer-filled.png){{% /image_container %}}
 
-1. Open the *Info.plist* file by pressing <kbd>{⌘}</kbd> + <kbd>{Shift}</kbd> + <kbd>{0}</kbd>` and searching for the file. Press <kbd>{Enter}</kbd> to open it:
+1. Open the *Info.plist* file by pressing <kbd>{⌘}</kbd> + <kbd>{Shift}</kbd> + <kbd>{0}</kbd> and searching for the file. Press <kbd>{Enter}</kbd> to open it:
 
      {{% image_container width="350" %}}![XCode Open file dialog](attachments/nbui/xcode-open-infoplist.png){{% /image_container %}}
 

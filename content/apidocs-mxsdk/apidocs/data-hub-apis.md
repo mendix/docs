@@ -30,7 +30,7 @@ For every request that is made to the Data Hub API ??is it for every request or 
 
 2. When you are prompted, enter your login and password. This will take you to the Warden Home page:
 
-   ![Warden Home Screen](attachments/register-api/warden-home-screen.png)
+   ![Warden Home Screen](attachments/dta-hub-apis/warden-home-screen.png)
 
 3. To create a new personal access token, click **Add** to see the **Create a Personal Access Token** screen. 
 
@@ -40,11 +40,11 @@ For every request that is made to the Data Hub API ??is it for every request or 
 
 6. For the **Select scopes this token grants access to:** **Catalog**, check both **read** and **write** **services** to the Data Hub by checking both options:
 
-   ![create token home](attachments/register-api/create-pat-token.png)
+   ![create token home](attachments/dta-hub-apis/create-pat-token.png)
 
 7. Click **Create**. The token will be generated and displayed in a pop-up window:
 
-   ![generated token](attachments/register-api/generated-pat-token.png)
+   ![generated token](attachments/dta-hub-apis/generated-pat-token.png)
 
 8. Copy  the **Token secret** to your clipboard by clicking the book icon below the secret. Make sure that you keep this token in a safe place in case you have to set-up the link to the API again.
 

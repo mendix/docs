@@ -1,6 +1,8 @@
 ---
 title: "General Info"
 description: "Presents details on using, sharing, and getting support on Mendix App Store content."
+aliases:
+    - /community/app-store/index.html
 ---
 
 ## 1 Introduction

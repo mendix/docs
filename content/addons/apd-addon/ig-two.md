@@ -2,6 +2,8 @@
 title: "APM 2 Installation Guide"
 parent: "ig"
 menu_order: 1
+aliases:
+    - /apm/installation-guide.html
 ---
 
 ## 1 Introduction

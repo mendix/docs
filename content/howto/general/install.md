@@ -64,7 +64,7 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
 	![](attachments/install/ready-to-install.png)
 
-7.  Check **Launch Mendix 8.X.X** and click **Finish** to finish the installation and launch Studio Pro:
+7.  Check **Launch Mendix 9.X.X** and click **Finish** to finish the installation and launch Studio Pro:
 
 	![](attachments/install/completing-setup.png)
 

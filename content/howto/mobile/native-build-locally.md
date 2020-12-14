@@ -32,9 +32,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install [Node and NPM](https://nodejs.org/en/download/)
 * Download the Native Builder [executable](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) to a folder of your preference and extract all contents
-   * Use v1.0.0 with Mendix 8.0
-   * Use v2.0.0 with Mendix 8.1.0 and above
-   * Use v3.0.0 with Mendix 8.3.0 and above
+   * Use v3.0.0 with Mendix 9.0 and above
 
 For iOS builds:
 
@@ -63,7 +61,7 @@ The keys of the dictionary represent the Mendix Studio Pro version. The `min` an
 
 {{% image_container width="200" %}}![iOS output](attachments/native-build-locally/mendix-version.png){{% /image_container %}}
 
-In the case of Mendix Studio Pro 8.9.x, you could choose any Native Template version from 4.0.0 to the latest. Ideally you should choose the most recent supported version
+So like in the example picture shown above, in the case of Mendix Studio Pro 8.9.x, you could choose any Native Template version from 4.0.0 to the latest. Ideally you should choose the most recent supported version.
 
 There is no best way of getting a copy of the Native Template. In the following sections we provide two ways to get the version you need.
 

@@ -169,19 +169,7 @@ To fill in the CreateInput microflow, follow these steps:
 
 Congratulations! You can now start your app and get summaries from Wikipedia.
 
-## 8 Example
-
-**How to consume REST with Mendix Studio Pro 8**
-
-{{% alert type="info" %}}
-For Studio Pro v 8.15 and above, the **Call REST** dialog box has changed from what is shown in the video. You have to ensure that for  **Output** you select **Yes** for **Store in variable** and then specify the **Variable name**.
-{{% /alert %}}
-
-![](attachments/consume-a-rest-service/response.png)
-
-{{% youtube OhzWTa1kZ00 %}}
-
-## 9 Read More
+## 8 Read More
 
 * [Consume a Complex Web Service](consume-a-complex-web-service)
 * [Consume a Simple Web Service](consume-a-simple-web-service)

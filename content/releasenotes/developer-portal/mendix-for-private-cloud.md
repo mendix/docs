@@ -13,6 +13,19 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2020
 
+### December 14th, 2020
+
+#### Portal Improvements
+
+* We added support for client certificates and Certificate Authorities for TLS/SSL
+* We added enhanced search capabilities to make it easier to find your deployment packages (.mda files)
+* We added a link from the Developer Portal to the documentation to help customers who want to migrate their registries to a custom registry location
+* As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on Mendix for Private Cloud. The functions of this page are still available via the **Edit in Studio** and **Edit in Studio Pro** buttons on the environments page. 
+
+#### Fixes
+
+* We fixed the bug where you would be taken to a non-existent page and receive a *404 Not Found* message if you didn't select an Operating System when downloading the configuration tool.
+
 ### December 10th, 2020
 
 #### Mendix for Private Cloud — Mendix Operator v1.7.0 and Mendix Gateway Agent v1.6.0

@@ -10,7 +10,7 @@ The new merge algorithm with fine-grained conflict resolution is used when you u
     
 * Fine-grained conflict resolution – when there are conflicting changes in a document, you do not have to choose between whole documents: resolving a conflict using your change or using their change. Instead, you can resolve conflicts at the level of individual elements, such as widgets, entities, attributes, and microflow actions. Also, all non-conflicting changes from both sides are accepted automatically.
     
-* List order conflict – this option lists close changes to the same element and allows you to combine these changes. For example, two developers insert a widget in the same data container. These changes are too close and the merge algorithm cannot decide in what order to put these widgets, so there will be the so-called *list order conflict* that will allow you to place the widgets on the page in the right order. 
+* Possibility to choose the order of changes via a list order conflict – a *list order conflict* lists close changes to the same element, and the new algorithm allows you to combine these changes. For example, two developers insert a widget in the same data container. These changes are too close and the merge algorithm cannot decide in what order to put these widgets, so it will allow you to place the widgets on the page in the right order. 
     
 * Accepting one of the changes automatically in certain cases – there are some cases where the new algorithm does not give a conflict. For example, one developer has moved an entity and the other has deleted it. The entity will be deleted in this case.
 

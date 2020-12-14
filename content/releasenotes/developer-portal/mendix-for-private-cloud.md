@@ -17,9 +17,8 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Portal Improvements
 
-* We added support for client certificates and Certificate Authorities for TLS/SSL
-* We added enhanced search capabilities to make it easier to find your deployment packages (.mda files)
-* We added a link from the Developer Portal to the documentation to help customers who want to migrate their registries to a custom registry location
+* We have added support in the Developer Portal to configure custom Certificate Authorities which should be trusted by the Mendix Operator and app environments.
+* We now add an environment UUID to environments deployed to Private Cloud namespaces so environment names no longer need to be unique.
 * As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on Mendix for Private Cloud. The functions of this page are still available via the **Edit in Studio** and **Edit in Studio Pro** buttons on the environments page. 
 
 #### Fixes

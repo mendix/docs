@@ -183,7 +183,7 @@ On this page, you can see all the content your company has published:
 
 The **Manage** button is available to you if one of the following conditions is true:
 
-* You are the creator of the component and the component is not assigned to any [user groups](#user-groups)
+* The component is not assigned to any [user groups](#user-groups) (in which case it can be managed by anyone in the company)
 * The component is assigned to a user group, and you are a [member](#members) of that group
 * You are a Company Admin of the company that published the component
 

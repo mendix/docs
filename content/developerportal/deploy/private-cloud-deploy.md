@@ -20,7 +20,7 @@ Within your namespace you can run one, or several, Mendix apps. You can see the 
 
 ![](attachments/private-cloud-deploy/mx4pc-containerized-architecture.png)
 
-Because you can run several Mendix apps in the same namespace, each app must have a unique name. In addition, the app cannot have the same name as the Mendix tools used to deploy the app. See the section [Reserved Names for Mendix Apps](#reserved-names), below.
+Because you can run several Mendix apps in the same namespace, each environment will have an **Environment UUID** added when the app is deployed to ensure that it is unique in the project. You should not use the same name as the Mendix tools used to deploy the app. See the section [Reserved Names for Mendix Apps](#reserved-names), below.
 
 ##  2 Prerequisites for Deploying an App
 
@@ -334,10 +334,11 @@ If you have any outstanding changes to your environment the page will display a 
 
 ![](attachments/private-cloud-deploy/image21.png)
 
-The environment details page consists of six tabs:
+The environment details page consists of seven tabs:
 
 * General
 * Model Options
+* Network
 * Runtime
 * Log Levels
 * TLS
@@ -423,7 +424,13 @@ To toggle any scheduled events, select the scheduled event you want to enable or
 
 To change any constants, select the constant you want to edit and then click **Edit**.
 
-### 5.3 Runtime Tab
+### 5.3 Network Tab
+
+On the Network tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections.
+
+![](attachments/private-cloud-deploy/network-tab.png)
+
+### 5.4 Runtime Tab
 
 On the Runtime tab, you can change various runtime settings for your app environment. For more details of these, see the [Runtime Tab](environments-details#runtime-tab) section of *Environment Details*.
 
@@ -433,13 +440,13 @@ On the Runtime tab, you can change various runtime settings for your app environ
 When you use some settings on the Runtime tab for Mendix for Private Cloud they may work differently from how they work in the Mendix Cloud.
 {{% /alert %}}
 
-### 5.4 Log Levels Tab
+### 5.5 Log Levels Tab
 
 On the Log Levels tab, you can change the log levels which are used for the log nodes in your app. For more details of these, see the [Log Levels Tab](environments-details#log-levels) section of *Environment Details*.
 
 ![](attachments/private-cloud-deploy/log-levels-tab.png)
 
-### 5.5 TLS
+### 5.6 TLS
 
 If you are using Mendix Operator version 1.5.0 or above, you can configure TLS for your environment from the Developer Portal.
 
@@ -471,7 +478,7 @@ Click **Save** to confirm your new configuration.
 
 You will receive a warning that you have made some changes. Click **Apply Changes** to restart the app and apply the changes.
 
-### 5.6 Debugger
+### 5.7 Debugger
 
 On the Debugger tab you can set up and view the credentials you need to debug your app when it is running in your private cloud. For more information see [How To Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely#private-cloud).
 

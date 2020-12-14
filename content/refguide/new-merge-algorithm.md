@@ -8,11 +8,11 @@ tags: ["merge", "algorithm", "conflict", "resolution"]
     
 The new merge algorithm with fine-grained conflict resolution is used when you update your project or merge changes in it. The new algorithm has the following features: 
     
-* Fine-grained conflict resolution – when there are conflicting changes in a document, you do not have to choose between whole documents: resolving a conflict using your change or using their change. Instead, you can resolve conflicts at the level of individual elements, such as widgets, entities, attributes, and microflow actions. Also, all non-conflicting changes from both sides are accepted automatically.
+* **Fine-grained conflict resolution** – When there are conflicting changes in a document, you do not have to choose between whole documents: resolving a conflict using your change or using their change. Instead, you can resolve conflicts at the level of individual elements, such as widgets, entities, attributes, and microflow actions. Also, all non-conflicting changes from both sides are accepted automatically.
     
-* Possibility to choose the order of changes via a list order conflict – a *list order conflict* lists close changes to the same element, and the new algorithm allows you to combine these changes. For example, two developers insert a widget in the same data container. These changes are too close and the merge algorithm cannot decide in what order to put these widgets, so it will allow you to place the widgets on the page in the right order. 
+* **No conflicts on parallel changes to lists of widgets** – When two developers make changes to the same list of widgets, there is no conflict, the changes are combined. However, if the changes are too close, a **list order conflict** is reported that reminds the developer who is merging the changes to decide on the final order of the widgets in the list. 
     
-* Accepting one of the changes automatically in certain cases – there are some cases where the new algorithm does not give a conflict. For example, one developer has moved an entity and the other has deleted it. The entity will be deleted in this case.
+* **Accepting one of the changes automatically in certain cases** – There are some cases where the new algorithm does not give a conflict. For example, one developer has moved an entity and the other has deleted it. The entity will be deleted in this case.
 
 ## 2 Enabling the New Algorithm with Fine-Grained Conflict Resolution
 
@@ -62,7 +62,7 @@ When you merge changes, the new algorithm shows you the following conflicts:
 
 1. The text that both sides changed. 
 
-2. The so-called *list order conflict*. Both people added widgets to the bottom layout grid. The merge algorithm cannot guess the right order of two new widgets and it reports the list order conflict. This is a reminder for the developer who is doing the merge to look at the final list. 
+2. The so-called **list order conflict**. Both people added widgets to the bottom layout grid. The merge algorithm cannot guess the right order of two new widgets and it reports the list order conflict. This is a reminder for the developer who is doing the merge to look at the final list. 
 
     ![New algorithm conflicts](attachments/new-merge-algorithm/new-merge-algorithm-conflicts.png)
 

@@ -82,7 +82,7 @@ The following actions are available in the drop-down menu:
 
 ## 3 Using MxAssist Performance Bot in App Development  
 
-### 3.1 Detecting an Anti-Pattern 
+### 3.1 Detecting an Anti-Pattern {#detecting}
 
 The first level of assistance is **detection** that includes inspecting the project model, identifying anti-patterns, and pinpointing you to the document causing the issue. 
 
@@ -100,7 +100,7 @@ The bot will detect performance anti-patterns and list them in the pane under th
 
 To view the element or the document where the anti-pattern is located, double-click the message line or right-click the message line and choose **Go to Cause** or **Go to Usage** in the drop-down menu.
 
-### 3.2 Recommending a Fix
+### 3.2 Recommending a Fix {#recommending}
 
 The second level of assistance is **recommendation** – giving you an overview of the issue and recommending how to fix it. 
 
@@ -116,7 +116,7 @@ The recommendation contains the description of the identified issue, potential i
 
 ![Performance Recommendation](attachments/mx-assist-performance-bot/performance-recommendation.jpg)
 
-### 3.3. Auto-Fixing the Anti-Pattern 
+### 3.3. Auto-Fixing the Anti-Pattern {#auto-fixing}
 
 The third level of assistance is **auto-fixing** where the bot can automatically implement the best practice and fix the issue in just one click. To avoid undesirable changes, auto-fixing is only available when the bot can safely refactor the code without creating an error or making other undesirable change in the model. Each performance issue has an icon in the pane that indicates whether it is auto-fixable. If the icon has the “A” letter, the issue can be auto-fixed:
 

@@ -25,3 +25,4 @@ There are four documents in this section:
 * [MindSphere Module Details](mindsphere-module-details) – describes more technical details about the MindSphere modules that you need to include in your Mendix app to enable it to run on MindSphere
 * [MindSphere Asset Management Connector](mindsphere-asset-management-connector) – describes how to use the MindSphere Asset Management Connector to retrieve assets and asset types from MindSphere
 * [How to Use the Siemens MindSphere Pump Asset Example App](mindsphere-example-app) – contains documentation and assistance in using the Pump Asset Example App available in the App Store
+* [MindSphere Mobile Native](mindsphere-mobile-native) - explains how to create your own Native Mobile application for MindSphere

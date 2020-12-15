@@ -52,7 +52,7 @@ You make the following changes on a branch line:
 * You change the text *Home* to *My homepage*
 * You add a data grid inside the bottom layout grid
 
-The page looks the following way:
+Your page is now laid out as shown below:
 
 ![Branch line page](attachments/new-merge-algorithm/new-merge-algorithm-branch-page.png)
 

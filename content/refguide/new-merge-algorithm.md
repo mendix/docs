@@ -12,7 +12,7 @@ The new merge algorithm with fine-grained conflict resolution is used when you u
     
 * **No conflicts on parallel changes to lists of widgets** – When two developers make changes to the same list of widgets, there is no conflict, the changes are combined. However, if the changes are too close, a **list order conflict** is reported that reminds the developer who is merging the changes to decide on the final order of the widgets in the list. 
     
-* **Accepting one of the changes automatically in certain cases** – There are some cases where the new algorithm does not give a conflict. For example, one developer has moved an entity and the other has deleted it. The entity will be deleted in this case.
+* **Acceptance of one of the changes automatically in certain cases** – There are some cases where the new algorithm does not give a conflict. For example, one developer has moved an entity and the other has deleted it. The entity will be deleted in this case.
 
 ## 2 Enabling the New Algorithm with Fine-Grained Conflict Resolution
 

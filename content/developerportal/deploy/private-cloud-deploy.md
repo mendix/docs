@@ -61,22 +61,26 @@ First you need to create an environment:
 
 1. Click **Create Environment**.
 
-2. Enter **Environment Name**, the name for the environment. The environment name can only contain lowercase letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production.
+2. A **UUID** will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
 
-3. Use the drop-down **Select Namespace** to select an existing namespace. You will see all namespaces of which you are a member.
+    {{% alert type="info" %}}You can change the UUID if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.{{% /alert %}}
 
-4. Select the **Purpose**.
+3. Enter **Environment Name**, the name for the environment. The environment name can only contain lowercase letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production.
+
+4. Use the drop-down **Select Namespace** to select an existing namespace. You will see all namespaces of which you are a member.
+
+5. Select the **Purpose**.
     
   1. For development of the app, for example acceptance testing, choose **Development**.
   2. For production deployment, select **Production**. If you select production, then you will be asked for the **Subscription Secret** which ensures that your app runs as a licensed app. See [Free Apps](mendix-cloud-deploy#free-app) in *Mendix Cloud* for the differences between free/test apps and licensed apps.
 
     {{% alert type="warning" %}}Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
 
-5. Click **Next**.
+6. Click **Next**.
     
-    ![](attachments/private-cloud-deploy/image6.png)
+    ![](attachments/private-cloud-deploy/create-environment.png)
 
-6. Select **Core Resources**.
+7. Select **Core Resources**.
 
     For core resources, there are two sets of values. The **Request** value is the amount of core resources which are initially requested. The **Limit** value is the maximum amount of resource that the environment can use.
 
@@ -91,17 +95,17 @@ First you need to create an environment:
 
     Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**. Ensure that these values are the same or greater than the values for a *Small* enviroment, otherwise you may run into problems running your app.
 
-7. Select a **Database plan** from the list of plans set up in the namespace.
+8. Select a **Database plan** from the list of plans set up in the namespace.
 
-8. Select a **Storage plan** from the list of plans set up in the namespace.
+9. Select a **Storage plan** from the list of plans set up in the namespace.
     
     ![](attachments/private-cloud-deploy/image7.png)
 
-9. Click **Create Environment**.
+10. Click **Create Environment**.
 
-10. You will see your new environment listed. An *in-progress* icon will be shows next to the resource plans until they have been provisioned.
+11. You will see your new environment listed. An *in-progress* icon will be shows next to the resource plans until they have been provisioned.
 
-![](attachments/private-cloud-deploy/image8.png)
+    ![](attachments/private-cloud-deploy/image8.png)
 
 You will not be able to deploy to this environment until it has been fully prepared. This means that all the resource plans have been confirmed and that the placeholder app has been successfully deployed. See [Deploying the Deployment Package](#deploy-package), below, for instructions on how to check that the environment has been created successfully.
 
@@ -384,11 +388,15 @@ This allows you to scale your app by increasing the number of replicas.
 
 To apply the new value, click **Restart the App and Scale**. Because you restart your app, it will be unavailable for a short time.
 
-##### 5.1.3.4 Change Admin Password
+##### 5.1.3.4 Clear Admin Password
+
+This allows you to clear the password for the local admin user in your app to disable the user without having to clear it in Studio Pro and redeploy the app.
+
+##### 5.1.3.5 Change Admin Password
 
 This allows you to change the password for the local admin user in your app without having to change it in Studio Pro and redeploy the app.
 
-##### 5.1.3.5 Delete Environment
+##### 5.1.3.6 Delete Environment
 
 This deletes the environment — you will be asked to confirm this action.
 
@@ -398,7 +406,7 @@ If the environment cannot be deleted, you will receive a warning, but can go ahe
 
 ![](attachments/private-cloud-deploy/delete-environment.png)
 
-##### 5.1.3.6 Change Purpose
+##### 5.1.3.7 Change Purpose
 
 This enables you to change the purpose of your app environment. You can label an environment as one used for development of the app, for example acceptance testing. In this case choose **Development** and the app will be deployed as a free app.
 
@@ -408,7 +416,7 @@ For production deployment, select **Production**. If you select production, then
 Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.
 {{% /alert %}}
 
-##### 5.1.3.7 Change Subscription Secret{#change-subscription-secret}
+##### 5.1.3.8 Change Subscription Secret{#change-subscription-secret}
 
 If you select Production as the **purpose** of the app environment, then you will need to use a Subscription Secret which ensures that your app runs as a licensed app. If you need to enter or change the subscription secret, then you can do that here.
 

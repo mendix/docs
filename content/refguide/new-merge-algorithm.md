@@ -43,7 +43,7 @@ Your colleague makes the following changes in the main line:
 * The subtitle *Welcome to your new app* is deleted
 * A text *Write some text here* is added to the bottom layout grid
 
-This results in the page looking the following way:
+Your colleague's new document layout is shown below:
 
 ![Main line page](attachments/new-merge-algorithm/new-merge-algorithm-main-page.png)
 

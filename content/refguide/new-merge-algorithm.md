@@ -49,7 +49,7 @@ Your colleague's new document layout is shown below:
 
 You make the following changes on a branch line:
 
-* The text *Home* is changed to *My homepage*
+* You change the text *Home* to *My homepage*
 * A data grid is added to the bottom layout grid
 
 The page looks the following way:

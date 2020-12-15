@@ -48,7 +48,7 @@ In [Community](/developerportal/community-tools/index), you can explore various 
 
 In the [Mendix App Store](/appstore/general/app-store-overview), you can share Mendix content you have created, check out complete sample apps that can be used right away, and browse connectors, [widgets](https://appstore.home.mendix.com/link/app/48902/), and modules that can be used to build custom apps more quickly:
 
-![](attachments/developerportal-app-store.jpg)
+![](attachments/developerportal-app-store.png)
 
 ## 7 Academy 
 

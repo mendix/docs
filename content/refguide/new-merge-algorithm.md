@@ -10,7 +10,7 @@ There is an alternative merge algorithm introduced in Mendix 9 which has finer-g
     
 * **Fine-grained conflict resolution** – When there are conflicting changes in a document, you do not have to choose between whole documents: resolving a conflict using your change or using their change. Instead, you can resolve conflicts at the level of individual elements, such as widgets, entities, attributes, or microflow actions. Also, all non-conflicting changes from both sides are accepted automatically.
     
-* **No conflicts on parallel changes to lists of widgets** – When two developers make changes to the same list of widgets, there is no conflict, the changes are combined. However, if the changes are too close, a **list order conflict** is reported that reminds the developer who is merging the changes to decide on the final order of the widgets in the list. 
+* **No conflicts on parallel changes to lists of widgets** – When two developers make changes to widgets in the same document there is no conflict, the changes are combined. However, if the changes are made too close to the same place in the document, a **list order conflict** is reported that reminds the developer who is merging the changes to decide on the final order of the widgets in the list. 
     
 * **Acceptance of one of the changes automatically in certain cases** – There are some cases where the new algorithm does not give a conflict. For example, one developer has moved an entity and the other has deleted it. The entity will be deleted in this case.
 

@@ -187,10 +187,10 @@ appstore:
   priority: false
   menu_categories:
     - "General Info"
-    - "Connectors"
     - "Widgets"
-    - "Modules"
     - "Themes"
+    - "Connectors"
+    - "Modules"
 data-hub:
   space: "Data Hub Guide"
   priority: false

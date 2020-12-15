@@ -25,7 +25,7 @@ Alternatively, you can create a connected cluster and use the Mendix Developer P
 
 ## 3 Deploying a Mendix App with an Operator
 
-You can deploy multiple Mendix apps to run in the same Kubernetes or OpenShift namespace. This means that they need to have unique and recognizable names; the name is required to identify the app when creating/modifying/deleting it.
+You can deploy multiple Mendix apps to run in the same Kubernetes or OpenShift namespace. Apps will have an **Environment UUID** added when they are  deployed to ensure that they are unique in the project; the name is required to identify the app when creating, modifying, or deleting it.
 
 Follow the instructions below to deploy your app.
 
@@ -122,7 +122,7 @@ spec:
 
 You need to make the following changes:
 
-* **name**: – You can deploy multiple apps in one project/namespace — the app name in the CR doesn't have to match the app name in the mda but must be unique in the project — see [Reserved Names for Mendix Apps](#reserved-names), below, for restrictions on naming your app
+* **name**: – You can deploy multiple apps in one project/namespace — the app name in the CR doesn't have to match the app name in the mda and will have an **Environment UUID** added when it is deployed to ensure that it is unique in the project — see [Reserved Names for Mendix Apps](#reserved-names), below, for restrictions on naming your app
 * **database/storage** – ensure that these have the correct **servicePlan** — they have to have the same names that you registered in the namespace
 * **mendixRuntimeVersion** – the full runtime version which matches the mda, including the build number
 * **sourceURL** – the location of the deployment package, this must be accessible from your cluster without any authentication

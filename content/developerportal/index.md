@@ -12,7 +12,9 @@ The [Developer Portal](http://home.mendix.com) is one of the three key component
 
 The Developer Portal also offers open, well-defined APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
 
-You can go to any part of the Developer Portal using the menu items described below.
+You can go to any part of the Developer Portal using the menu items in the header:
+
+![](attachments/header.jpg)
 
 ## 2 Apps
 

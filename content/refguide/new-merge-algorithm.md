@@ -32,7 +32,7 @@ For more information, see [Preferences](preferences-dialog).
 
 ## 3 Resolving Conflict Example
 
-You have a page in your app project that looks the following way:
+A page document in your app project is designed as shown below:
 
 ![Original page](attachments/new-merge-algorithm/new-merge-algorithm-base-page.png)
 

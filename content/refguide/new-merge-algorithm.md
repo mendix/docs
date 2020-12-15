@@ -8,7 +8,7 @@ tags: ["merge", "algorithm", "conflict", "resolution"]
     
 The new merge algorithm with fine-grained conflict resolution is used when you update your project or merge changes in it. The new algorithm has the following features: 
     
-* **Fine-grained conflict resolution** – When there are conflicting changes in a document, you do not have to choose between whole documents: resolving a conflict using your change or using their change. Instead, you can resolve conflicts at the level of individual elements, such as widgets, entities, attributes, and microflow actions. Also, all non-conflicting changes from both sides are accepted automatically.
+* **Fine-grained conflict resolution** – When there are conflicting changes in a document, you do not have to choose between whole documents: resolving a conflict using your change or using their change. Instead, you can resolve conflicts at the level of individual elements, such as widgets, entities, attributes, or microflow actions. Also, all non-conflicting changes from both sides are accepted automatically.
     
 * **No conflicts on parallel changes to lists of widgets** – When two developers make changes to the same list of widgets, there is no conflict, the changes are combined. However, if the changes are too close, a **list order conflict** is reported that reminds the developer who is merging the changes to decide on the final order of the widgets in the list. 
     
@@ -109,4 +109,3 @@ Some changes will make it impossible to resolve conflicts using **mine** or **th
 Once all conflicts have been resolved, click the **Accept and Exit** button to finalize the results. The document will be saved in its merged form and the conflict for that document will be gone. The result is the document that contains changes from both sides and possibly some manual edits.
 
 At any time, you can also choose to abort conflict resolution by clicking the **Cancel** button. The conflict will remain and you can resolve it later.
-

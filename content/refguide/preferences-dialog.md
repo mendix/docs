@@ -95,29 +95,29 @@ The **New features** tab allows you to turn new features on and off. These are f
 You need to restart Studio Pro for changes to these settings to take effect.
 {{% /alert %}}
 
-### 6.1 New Version of the Changes Pane {#new-changes}
-
-With this option, you can enable the new version of the [Changes](changes-pane) pane. Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
-
-Default: *enabled*
-
-### 6.2 New Version of the Connector {#new-connector}
+### 6.1 New Version of the Connector {#new-connector}
 
 With this option, you can enable the new version of the [Connector](view-menu#connector). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
 
 Default: *disabled*
 
-### 6.3 New Version of the Project Explorer {#new-project-explorer}
+### 6.2 New Version of the Project Explorer {#new-project-explorer}
 
 With this option, you can enable the new version of the [Project Explorer](project-explorer). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
 
 Default: *enabled*
 
-### 6.4 New Version of the Toolbox {#new-toolbox}
+### 6.3 New Version of the Toolbox {#new-toolbox}
 
 With this option, you can enable the new version of the [Toolbox](/refguide/view-menu#toolbox). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
 
 Default: *enabled*
+
+### 6.4 New Merge Algorithm with Fine-Grained Conflict Resolution
+
+With this option, you can enable the new merge algorithm that is used when you update your project or merge changes in it. For more information on the algorithm, see [New Merge Algorithm with Fine-Grained Conflict Resolution](new-merge-algorithm).
+
+Default: *disabled*
 
 ## 7 Read More
 

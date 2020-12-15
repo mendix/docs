@@ -20,11 +20,9 @@ The key features of MxAssist Logic Bot are the following:
 
 ## 2 MxAssist Logic Bot Settings
 
-To access settings of MxAssist Logic Bot, open **Edit** > **Preferences >**the **General** tab >the **MxAssist Logic Bot** section:
+To access settings of MxAssist Logic Bot, open **Edit** > **Preferences >**the **General** tab >the **MxAssist Logic Bot** tab. For more information, see [Preferences](preferences-dialog).
 
-![Preferences Dialog Box](attachments/mx-assist-logic-bot/preferences-dialog.jpg)
-
-In the **MxAssist Logic Bot** section, you can set the following: 
+In the **MxAssist Logic Bot** tab, you can set the following: 
 
 * **Enable MxAssist Logic Bot** – switches MxAssist Logic Bot on and off
 

@@ -4,6 +4,9 @@ category: "General Info"
 menu_order: 10
 description: "Presents an overview of how to find and use content from the Mendix App Store."
 tags: ["app store", "widget", "connector", "module", "partner"]
+aliases:
+    - /community/app-store/app-store-overview.html
+    - /developerportal/app-store/app-store-overview.html
 ---
 
 ## 1 Introduction

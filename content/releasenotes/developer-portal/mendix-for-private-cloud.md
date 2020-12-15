@@ -13,6 +13,18 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2020
 
+### December 14th, 2020
+
+#### Portal Improvements
+
+* We have added support in the Developer Portal to configure custom Certificate Authorities which should be trusted by the Mendix Operator and app environments.
+* We now add an environment UUID to environments deployed to Private Cloud namespaces so environment names no longer need to be unique.
+* As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on Mendix for Private Cloud. The functions of this page are still available via the **Edit in Studio** and **Edit in Studio Pro** buttons on the environments page. 
+
+#### Fixes
+
+* We fixed the bug where you would be taken to a non-existent page and receive a *404 Not Found* message if you didn't select an Operating System when downloading the configuration tool.
+
 ### December 10th, 2020
 
 #### Mendix for Private Cloud — Mendix Operator v1.7.0 and Mendix Gateway Agent v1.6.0

@@ -11,110 +11,91 @@ aliases:
 
 ## 1 Introduction
 
-The [Mendix App Store](https://appstore.home.mendix.com/index3.html) is a vibrant marketplace containing complete sample apps that can be used right away as well as various add-ons (connectors, widgets, and modules) that can be used to build custom apps more quickly. In the Mendix App Store, you can browse all the content, get what you need, and share the content you have created.
+{{% alert type="info" %}}
+As the Mendix App Store is being updated into a dynamic and fully functioning Mendix Marketplace, some documentation pages will refer to "App Store" and some to "Marketplace." The URLs will also be updated during this conversion.
+{{% /alert %}}
+
+The [Mendix App Store](https://appstore.home.mendix.com/index3.html) is a vibrant marketplace containing complete sample apps that can be used right away as well as various components (connectors, widgets, and modules) that can be used to build custom apps more quickly. In the Mendix App Store, you can browse all the content, get what you need, and share the content you have created.
 
 This document describes the different sections of the Mendix App Store.
 
-## 2 App Store Home Page
+## 2 App Store Home Page {#home}
 
-The home page of the Mendix App Store presents various content categories:
+The home page of the Mendix App Store has three main tabs at the top:
 
-![](attachments/app-store-overview/home_page.png)
+* **Discover** – the home page, where you can browse various component categories and filter what is displayed
+* **My Marketplace** – click this to go to [My App Store](#my-app-store)
+* **{Your company's private App Store page}** – click this to go to your [company's App Store](#company-content)
 
-Category | Description
---- | ---
-[Connectors](../connectors/index), **Mobile**, [Widgets](../widgets/index), [Modules](../modules/index), [Themes](../themes/index), **App Services**, **Add-on Examples**, **Sample Apps** | Add-on categories and sub-categories available in the sidebar menu (for example, **Internet-of-Things** and **Authentication**). 
-**Featured** | The most important and useful App Store content as determined by Mendix (think of it as a "staff picks" section). 
-**New content** | The most recently uploaded content. 
-**Recent updates** | The most recently updated content. 
-**Most popular** | Content that has been downloaded the most in the past seven days. 
-**Reviews** | The most recent content reviews along with the author and date of the review. Clicking the name of the review author will bring you to their [Mendix Profile](/developerportal/mendix-profile/index). Clicking the title of an App Store component will allow you to see the details of what was reviewed. 
-**Top App Store contributors** | The top 10 App Store contributors of the last 30 days. Clicking the name of the developer will bring you to their Mendix Profile. Clicking **View full leaderboard** will take you to the [Mendix Leaderboards](https://developer.mendixcloud.com/link/topappstore30).
+![](attachments/app-store-overview/home-page.jpg)
 
-## 3 Add-On Details Page {#details}
+{{% todo %}}[**Verify screenshot for  category order and correlate in table below**]{{% /todo %}}
 
-Clicking an App Store component in a menu will bring you to the component's details page. The details page presents the sections described below.
+<a name="catalog"></a>It also presents various content catalogs:
 
-### 3.1 Header
+| Catalog | Description |
+| --- | --- |
+| **Get Studio Pro** | All the versions of [Studio Pro](/releasenotes/studio-pro/) available for download. |
+| [Widgets](/appstore/widgets/) | Single user-interface elements that can be configured, such as containers, drop-down menus, and buttons. |
+| **App Design** | Start building your app based on a [layout](/refguide/layout) that is ready to use with commons structures and widgets or a [theme](/appstore/themes/) that contains styling options you can apply for different elements and devices. |
+| [Connectors](/appstore/connectors/) | Connectors can be used to connect your Mendix app with other systems.  |
+| [Modules](/appstore/modules/) | These elements enable new functionality with accompanying domain models and security options. |
+| **Solutions** | Fully-formed solutions for your apps. |
 
-![](attachments/app-store-overview/content_detail_1.png)
+The following filter options are also available:
 
-The header for each add-on presents the following details:
+* **Tags**
+* **Ratings**
 
-* The **Name** and **Category** of the component
+## 3 Component Details Page {#details}
+
+Clicking the tile of an App Store component will bring you to its details page with the sections described below.
+
+### 3.1 Header & Usage
+
+{{% todo %}}[**Add screenshot after release of good component example**]{{% /todo %}}
+
+The header for each component presents the following details:
+
+* The name and category of the component
 * The review average (in stars) and the number of reviews
 * The number of times the component has been downloaded
-* <a name="favorite-heart"></a>A heart for favoriting the component (so it will appear in your list of favorites on the [Dashboard](#dashboard) and on the [Favorites](#favorites) page)
-* The following buttons (depending on the type of component and what the developer added to share):
-	* **Preview** – click this to preview more information or a demo about the component
-		* This is only available if the developer has included a demo URL when sharing the component (for details on sharing components, see [How to Share App Store Content](share-app-store-content))
-	* **Open** – click this to open a supplementary page for the component
+* <a name="saved"></a>The **Add to Saved** button which, when clicked, will add the component to the list on the [Dashboard](#dashboard) and [Saved](#saved-components) pages
+* The **Share** button, which allows you to copy the URL of the component and share it to your networks
+* The following buttons, depending on the category of component and what the developer has added to share:
 	* **Download** – click this to download the component
-		* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotion)
+		* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
 		* The best practice is to download a component from the App Store that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded App Store content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
+	
+
+<a name="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
+
+* The latest **Version** number of the component
+* The Studio Pro version that the component **Requires** to work
+* The type of [license](share-app-store-content#license) for the component
+* A **View on GitHub** link, which will take you to the GitHub source files of the component
+
+The **Publisher** section presents the name of the company who created the component as well as the **Date** when the component was first published.
+
+The **Developers** section presents the names of the developers who most recently updated the component, with links to their [Mendix Profile](/developerportal/mendix-profile/).
+
+The **Support** section presents the category of support Mendix offers for the component (for more details, see [App Store Content Support](app-store-content-support)).
 
 ### 3.2 Tabs
 
-The details page for each add-on and app presents the following item information tabs:
+The details page for a component presents the following item information tabs:
 
-*  **Overview** tab – contains following sections:
+*  **Overview** – contains the following sections:
 	* **Description** – a description of the component
 	* **Screenshots** – screenshots of the component
 	* **User Reviews** – user reviews of the component; to leave a review for the component, click **Add Review** – a section will open where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page)
+*  **Documentation** – can include details on typical use cases, features and limitations, dependencies, installation and configuration, and frequently asked questions
+	* [Platform-supported](app-store-content-support#category) components are documented in the various categories of this *App Store Guide*
+	* Click **Edit documentation** to open a text editor where you can edit the App Store component's documentation
+* **Pricing**  – lists the pricing options (only for paid components)
+* **Releases** – lists all the versions of the component (any of which can be downloaded by clicking **Download**) along with details like the **Framework version** and the **UUID** (which can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*): 
 
-	![](attachments/app-store-overview/content_detail_5.png)
-
-*  **Documentation** tab – can include details on typical use cases, features and limitations, dependencies, installation and configuration, and frequently asked questions; [platform-supported](app-store-content-support#category) components are documented in the various categories of this *App Store Guide*:
-
-	![](attachments/app-store-overview/content_detail_6.png)
-
-	* Clicking **Edit documentation** will open a text editor where you can edit the App Store component's documentation
-
-*  **Statistics** tab –  charts the downloads of the component over time:
-
-	![](attachments/app-store-overview/content_detail_7.png)
-
-*  **All versions** tab – lists all the versions (updates) of the component, any of which can be downloaded by clicking **Download**:
-
-	![](attachments/app-store-overview/content_detail_8.png)
-	
-*  **Group members** tab – if this App Store component is assigned to a [user group](#user-groups), this tab lists the [user group members](#members) (who are the users that can manage the component)
-
-	![](attachments/app-store-overview/content_detail_9.png)
-
-### 3.3 Additional Info Section {#additional-info}
-
-{{% image_container width="300" %}}
-![](attachments/app-store-overview/content_detail_2.png)
-{{% /image_container %}}
-
-In the **Additional Info** section, you can see the following information (depending on the type of component):
-
-* The **Latest version** number of the component
-* The Studio Pro version that the component **Requires** to work
-* When the component was **Published**
-* The type of **License** for the component
-* The type of support Mendix offers for the component (for more information, see [App Store Content Support](app-store-content-support))
-* The **URL** for the component page that you can copy and share
-* The **UUID** of the component; if the component is part of the **Getting Started** category of App Store content, this UUID can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*
-* A **View on GitHub** link, which will take you to the GitHub source files of the component
-* A link to the documentation on how to install the App Store component
-
-### 3.4 Developer Info Section
-
-{{% image_container width="350" %}}
-![](attachments/app-store-overview/content_detail_3.png)
-{{% /image_container %}}
-
-In the **Developer Info** section, you can see the following information:
-
-* The name, job title, and Mendix level of the App Store content's developer
-	* Clicking the developer name will bring you to their [Mendix Profile](/developerportal/mendix-profile/index)
-* The numbers for **Added items**, **Updated items**, and **Reviews added** in the Mendix App Store
-* The company for which the developer works
-	* Clicking the company name will bring you to the company's [Partner Profile](/developerportal/community-tools/how-to-set-up-your-partner-profile)
-
-## 4 My App Store
+## 4 My App Store {#my-app-store}
 
 ### 4.1 Dashboard {#dashboard}
 
@@ -123,7 +104,7 @@ The **Dashboard** page presents your App Store activity:
 * Your numbers for [Published Content](#content) and [Submitted Reviews](#my-reviews)
 * [Notifications](#notifications) on components you created and favorited
 * Content [Drafts](#drafts) you have created
-* Your content [Favorites](#favorites)
+* Your content [Favorites](#saved)
 
 ![](attachments/app-store-overview/my_app_store.png)
 
@@ -153,7 +134,7 @@ On this page, you will see the following buttons:
 * **Unpublish** – click this to remove that version from the component
 	* If the component is not the protected content of a [user group](#user-groups), you can only unpublish a version that you have published yourself
 	* If the component is protected [content](#content) from a user group, a group [member](#members) can unpublish any version
-* **Edit** – click this to edit the component (for details on editing, see the [Adding New App Store Content](share-app-store-content#edit) section of *How to Share App Store Content*)
+* **Edit** – click this to edit the component (for details on editing, see the [Adding New App Store Content](share-app-store-content#adding) section of *How to Share App Store Content*)
 
 ### 4.3 Drafts {#drafts}
 
@@ -164,6 +145,10 @@ This page contains drafts of App Store content you have started:
 Click the name of an App Store component to be taken to the [DRAFT](share-app-store-content#adding) page, where you can continue editing the component details.
 
 Click **Delete** to delete a draft.
+
+Click **Withdraw** to withdraw the content from the review process after you have [submitted it for approval](share-app-store-content#approval), which will return the content to the draft state:
+
+![](attachments/app-store-overview/draft-withdraw.png)
 
 ### 4.4 Shared with Me {#shared-with-me}
 
@@ -183,9 +168,9 @@ This page presents a history of notifications on content you have contributed to
 
 ![](attachments/app-store-overview/notifications.png)
 
-### 4.7 Favorites {#favorites}
+### 4.7 Favorites {#saved-components}
 
-This page presents the App Store content you have [favorited](#favorite-heart):
+This page presents the App Store content you have [favorited](#saved):
 
 ![](attachments/app-store-overview/favorites.png)
 
@@ -201,7 +186,7 @@ On this page, you can see all the content your company has published:
 
 The **Manage** button is available to you if one of the following conditions is true:
 
-* You are the creator of the component and the component is not assigned to any [user groups](#user-groups)
+* The component is not assigned to any [user groups](#user-groups) (in which case it can be managed by anyone in the company)
 * The component is assigned to a user group, and you are a [member](#members) of that group
 * You are a Company Admin of the company that published the component
 

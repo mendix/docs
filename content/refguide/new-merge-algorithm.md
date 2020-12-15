@@ -1,12 +1,12 @@
 ---
-title: "Alternative Merge Algorithm with Fine-Grained Conflict Resolution"
+title: "New Merge Algorithm with Fine-Grained Conflict Resolution"
 parent: "version-control"
 tags: ["merge", "algorithm", "conflict", "resolution"]
 ---
 
 ## 1 Introduction
     
-There is an alternative merge algorithm introduced in Mendix 9 which has finer-grained conflict resolution. Once you have enabled it, it is used when you update your project or merge changes in it. The fine-grained algorithm has the following features: 
+A new merge algorithm with fine-grained conflict resolution is used when you update your project or merge changes in it. The new merge algorithm has the following features: 
     
 * **Fine-grained conflict resolution** – When there are conflicting changes in a document, you do not have to choose between whole documents: resolving a conflict using your change or using their change. Instead, you can resolve conflicts at the level of individual elements, such as widgets, entities, attributes, or microflow actions. Also, all non-conflicting changes from both sides are accepted automatically.
     
@@ -24,7 +24,7 @@ To enable the new algorithm, do the following:
 
 1. In the Studio Pro top bar, go to **Edit** > **Preferences** > **New features**. 
 
-2. In the **Version Control** section, enable the **New merge algorithm with fine-grained conflict resolution option**.
+2. In the **Version Control** section, enable the **New merge algorithm with fine-grained conflict resolution** option.
 
 3. Restart Studio Pro.
 

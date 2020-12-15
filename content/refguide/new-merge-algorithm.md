@@ -50,7 +50,7 @@ Your colleague's new document layout is shown below:
 You make the following changes on a branch line:
 
 * You change the text *Home* to *My homepage*
-* A data grid is added to the bottom layout grid
+* You add a data grid inside the bottom layout grid
 
 The page looks the following way:
 

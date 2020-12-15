@@ -1,5 +1,5 @@
 ---
-title: "New Merge Algorithm with Fine-Grained Conflict Resolution"
+title: "Alternative Merge Algorithm with Fine-Grained Conflict Resolution"
 parent: "version-control"
 tags: ["merge", "algorithm", "conflict", "resolution"]
 ---

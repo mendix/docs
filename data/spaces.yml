@@ -190,6 +190,7 @@ appstore:
     - "Connectors"
     - "Widgets"
     - "Modules"
+    - "App Services"
     - "Themes"
 data-hub:
   space: "Data Hub Guide"

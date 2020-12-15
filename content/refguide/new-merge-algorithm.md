@@ -98,7 +98,7 @@ Once you have chosen one of the three options to resolve the conflict, green che
 The second conflict is a list order conflict. It is a reminder to take a look at the order of the widgets in the 
 layout grid. You can arrange the widgets in the desired order in the page editor and then choose **Mark as Resolved** for the list order conflict.
 
-You can also decide to delete one of the widgets or add a new one. The page is fully editable while resolving conflicts. 
+You can also decide to delete one of the widgets or add a new one. The document is fully editable while resolving conflicts. 
 
 Some changes will make it impossible to resolve conflicts using **mine** or **theirs**. For example, if you have not resolved the first conflict yet and you delete the *Home* text widget, you cannot resolve the first conflict any more, because the widget is simply not there. At that point, you can only mark the conflict as resolved:
 

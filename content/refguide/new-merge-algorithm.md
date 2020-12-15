@@ -100,7 +100,7 @@ layout grid. You can arrange the widgets in the desired order in the page editor
 
 You can also decide to delete one of the widgets or add a new one. The page is fully editable while resolving conflicts. 
 
-Some changes will make it impossible to resolve conflicts using **mine** or **theirs**. For example, if you had not resolved the first conflict yet and you delete the *Home* text widget, you cannot resolve the first conflict anymore, because the widget is simply not there. At that point, you can only mark the conflict as resolved:
+Some changes will make it impossible to resolve conflicts using **mine** or **theirs**. For example, if you have not resolved the first conflict yet and you delete the *Home* text widget, you cannot resolve the first conflict any more, because the widget is simply not there. At that point, you can only mark the conflict as resolved:
 
 ![Conflict cannot be resolved](attachments/new-merge-algorithm/new-merge-algorithm-cannot-resolve.PNG)
 

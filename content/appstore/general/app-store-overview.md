@@ -29,17 +29,15 @@ The home page of the Mendix App Store has three main tabs at the top:
 
 ![](attachments/app-store-overview/home-page.jpg)
 
-{{% todo %}}[**Verify screenshot for  category order and correlate in table below**]{{% /todo %}}
-
 <a name="catalog"></a>It also presents various content catalogs:
 
 | Catalog | Description |
 | --- | --- |
 | **Get Studio Pro** | All the versions of [Studio Pro](/releasenotes/studio-pro/) available for download. |
 | [Widgets](/appstore/widgets/) | Single user-interface elements that can be configured, such as containers, drop-down menus, and buttons. |
-| **App Design** | Start building your app based on a [layout](/refguide/layout) that is ready to use with commons structures and widgets or a [theme](/appstore/themes/) that contains styling options you can apply for different elements and devices. |
 | [Connectors](/appstore/connectors/) | Connectors can be used to connect your Mendix app with other systems.  |
 | [Modules](/appstore/modules/) | These elements enable new functionality with accompanying domain models and security options. |
+| **App Design** | Start building your app based on a [layout](/refguide/layout) that is ready to use with commons structures and widgets or a [theme](/appstore/themes/) that contains styling options you can apply for different elements and devices. |
 | **Solutions** | Fully-formed solutions for your apps. |
 
 The following filter options are also available:
@@ -51,9 +49,9 @@ The following filter options are also available:
 
 Clicking the tile of an App Store component will bring you to its details page with the sections described below.
 
-### 3.1 Header & Usage
+![](attachments/app-store-overview/component-details.jpg)
 
-{{% todo %}}[**Add screenshot after release of good component example**]{{% /todo %}}
+### 3.1 Header & Usage
 
 The header for each component presents the following details:
 
@@ -62,10 +60,9 @@ The header for each component presents the following details:
 * The number of times the component has been downloaded
 * <a name="saved"></a>The **Add to Saved** button which, when clicked, will add the component to the list on the [Dashboard](#dashboard) and [Saved](#saved-components) pages
 * The **Share** button, which allows you to copy the URL of the component and share it to your networks
-* The following buttons, depending on the category of component and what the developer has added to share:
-	* **Download** – click this to download the component
-		* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
-		* The best practice is to download a component from the App Store that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded App Store content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
+* **Download** – click this to download the component
+	* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
+	* The best practice is to download a component from the App Store that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded App Store content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
 	
 
 <a name="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
@@ -73,13 +70,14 @@ The header for each component presents the following details:
 * The latest **Version** number of the component
 * The Studio Pro version that the component **Requires** to work
 * The type of [license](share-app-store-content#license) for the component
-* A **View on GitHub** link, which will take you to the GitHub source files of the component
 
 The **Publisher** section presents the name of the company who created the component as well as the **Date** when the component was first published.
 
 The **Developers** section presents the names of the developers who most recently updated the component, with links to their [Mendix Profile](/developerportal/mendix-profile/).
 
 The **Support** section presents the category of support Mendix offers for the component (for more details, see [App Store Content Support](app-store-content-support)).
+
+* A **GitHub** link, which will take you to the GitHub source files of the component
 
 ### 3.2 Tabs
 

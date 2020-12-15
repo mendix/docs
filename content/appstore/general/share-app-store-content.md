@@ -176,27 +176,26 @@ Review and approval by Mendix is required only for the first version of [Public 
 
 ## 5 Updating Existing App Store Content {#updating}
 
-{{% alert type="info" %}}
-If an existing App Store component is assigned to a [user group](app-store-overview#user-groups) as specific user group [content](app-store-overview#content), you can only update the component if you are a member of that group.
-{{% /alert %}}
-
 To update content that has already been published, follow these steps:
 
-1.  Find the component clicking **My Marketplace** > [My Content](/appstore/general/app-store-overview#content) and then **Manage** for the component to update
+1.  Find the component in the correct location by clicking **My Marketplace**and selecting one of the following:
+	* **My Content**
+	* **Company Content**
+	* **User Groups** (note that if an existing App Store component is assigned to a [user group](app-store-overview#user-groups) as specific user group [content](app-store-overview#content), you can only update the component if you are a member of that group)
+	
+2.  Click **Manage** next to the component you want to update.
 
 	{{% alert type="info" %}}Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be started. If there is a draft version in progress, click **View draft** on the page where you manage the component in order to see the draft.
 	{{% /alert %}}
 
-2. You can edit all component details, as described in the [Adding New App Store Content](#adding) section above.
-3.  In the **Version** section of the **Package** page, update the **Major**, **Minor**, and **Patch** numbers so that the component is saved as a new version:
+3. You can edit all component details, as described in the [Adding New App Store Content](#adding) section above.
+4.  In the **Version** section of the **Package** page, update the **Major**, **Minor**, and **Patch** numbers so that the component is saved as a new version:
 
 	* **Major update** – a large change (which will save the content from version 5.0 to version 6.0, for example)
 	* **Minor update** – a medium-sized change (which will save the content from version 6.0.0 to version 6.1.0, for example)
 	* **Patch** – a small change (which will save the content from 6.1.0 to 6.1.1, for example)
 
-4.  On the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
-
-	{{% todo %}}[**Verify steps above**]{{% /todo %}}
+5.  On the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
 
 ## 6 Read More
 

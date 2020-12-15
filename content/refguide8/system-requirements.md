@@ -17,7 +17,7 @@ Mendix [Studio Pro](modeling) supports 64-bit versions of Windows 7, 8, and 10. 
 
 The following frameworks are automatically installed (if necessary):
 
-* Microsoft .NET Framework 4.7.2
+* Microsoft .NET Framework 4.7.2 and all applicable Windows security patches
 * Microsoft Visual C++ 2010 SP1 Redistributable Package
 * Microsoft Visual C++ 2015 Redistributable Package
 * AdoptOpenJDK 11 or Oracle JDK 11 (the former is installed automatically as of [Mendix 8.0.0](/releasenotes/studio-pro/8.0#800) if you do not have any JDK 11 installed) 

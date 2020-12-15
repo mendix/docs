@@ -9,6 +9,13 @@ These release notes cover changes made to the [Mendix App Store](/appstore/index
 
 ## 2020
 
+### December 15th, 2020
+
+* We have implemented a UX Refresh to provide a fresh new look and feel for the [App Store home](/appstore/general/app-store-overview#home), [catalog](/appstore/general/app-store-overview#catalog), [component details](/appstore/general/app-store-overview#details), and Studio Pro download pages.
+* The Mendix "App Store" has been renamed to the "Marketplace" as part of the continued investment in new capabilities that is underway. This rename (and URL change) is only for the pages rebuilt so far listed above. Further implementation of this renaming is to follow in future releases.
+* We have enabled an enhanced navigation and undertaken some curation of published components to help you discover the components you require more easily.
+* We have enabled a more structured wizard-based flow that makes it a lot easier for you to [add new content] to the App Store.
+
 ### May 27th, 2020
 
 #### Fix
@@ -61,7 +68,7 @@ For more information on these support levels, see [App Store Content Support](/a
 
 #### Improvement
 
-You can now subscribe to receive emails when new versions of your [favorite](/appstore/general/app-store-overview#favorites) App Store content are published.
+You can now subscribe to receive emails when new versions of your [favorite](/appstore/general/app-store-overview#saved) App Store content are published.
 
 ### October 23rd, 2019
 
@@ -77,7 +84,7 @@ Content that was marked as **Protected** as well as content marked as **Shared w
 
 #### Improvement
 
-We now display the UUID of an App Store component in the [Additional Info](/appstore/general/app-store-overview#additional-info) section of its details page. This allows you to specify the `TemplateUUID` when calling the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*.
+We now display the UUID of an App Store component in the [Usage](/appstore/general/app-store-overview#usage) section of its details page. This allows you to specify the `TemplateUUID` when calling the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*.
 
 ### September 11th, 2019
 

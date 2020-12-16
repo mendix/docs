@@ -36,28 +36,6 @@ We fixed the Native Template for a dependency affecting Mendix Studio Pro 8.8.x.
 
 * We fixed an issue with the npm installation on the Mendix Native Template targeting Mendix Studio Pro 8.8 due to an outdated dependency.
 
-## 5.1.3, 5.0.7, and 4.2.5
-
-**Release date: November 27th, 2020**
-
-### Improvements
-
-* We updated the iOS peer dependencies.
-
-### Fixes
-
-* We updated the underlying DatePicker library to fix a bug with iOS 14.
-
-## 3.2.2 
-
-**Release date: November 9th, 2020**
-
-We fixed the Native Template for a dependency affecting Mendix Studio Pro 8.8.x.
-
-### Fixes
-
-* We fixed an issue with the npm installation on the Mendix Native Template targeting Mendix Studio Pro 8.8 due to an outdated dependency.
-
 ## 5.1.1,  5.0.6, and 4.2.4
 
 **Release date: November 2nd, 2020**

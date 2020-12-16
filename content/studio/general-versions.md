@@ -48,7 +48,7 @@ The table below gives examples of how Mendix versions relate to Studio ranges, a
 | 7.15.1                 | 7.15–7.22    | 7.23.14                                                      |
 | 7.22.2                 | 7.15–7.22    | 7.23.14                                                      |
 | 7.23.0                 | 7.23         | 7.23.14                                                      |
-| 7.23.7                 | 7.23         | No automatic upgrade, only manual upgrade to Mendix 8. For details, see the [Upgrading to Mendix Version 8](#upgrade-to-8) section below. |
+| 7.23.7                 | 7.23         | No automatic upgrade, only manual upgrade to Mendix 8. For details, see the [Upgrading to Mendix Version 8](/studio8/general-versions#upgrade-to-8) section in *Studio Ranges & Mendix Versions* in *Studio 8 Guide*. |
 | 8.0.0                  | 8.0–8.6      | 8.6.4                                                        |
 | 8.7.0                  | 8.7–8.17     | 8.17                                                         |
 | 9.0.2                  | 9.0 & Above  | Latest available version of Mendix 9.                        |

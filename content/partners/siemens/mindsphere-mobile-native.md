@@ -6,7 +6,9 @@ description: "Explain how to create your own Native Mobile application for MindS
 tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Local", "Styling", "UI", "Icons", "Limitations", "Licensing", "Validation", "Mobile Native"]
 ---
 
-# 1 Introduction
+# MindSphere Mobile Native
+
+## 1 Introduction
 
 This documentation describes the adoptions needed to develop native mobile apps for MindSphere with Mendix. Native mobile apps do not render inside a web view - they use native UI elements. This enables fast performance, smooth animations and allow access to all native device capabilities.
 Details about native mobile app development with Mendix can be found [here.](https://docs.mendix.com/howto/mobile/native-mobile)
@@ -19,14 +21,14 @@ To support Deep Links with your app, you have to create your own [Custom Develop
 
 We recommend to do the [build a native mobile inspection-app](https://academy.mendix.com/link/path/66/Build-a-Native-Mobile-Inspection-App) tutorial from the mendix academy to get yourself familiar with mobile app development.
 
+## TODO: Describe Structure of the following chapters - maybe split to different files ? HEIKO
 
-# TODO: Describe Structure of the following chapters - maybe split to different files ? HEIKO
-
-# Setup development environment
+## Setup development environment
 TODO: Describe Structure of the following chapters HEIKO
-## Registration of your mobile app in Developer Cockpit
 
-TODO: give some starting sentence why you need to register your application. STEFAN
+### Registration of your mobile app in Developer Cockpit
+
+The Siemens MindSphere Mobile Starter Application provides functionality that a user can sign in to MindSphere from within the mobile application. To get the mobile authentication running it is necessary that the application itself is registered within MindSphere. This registration can be done within the MindSphere Developer Cockpit in some easy steps.
 
 1. Open the *Developer Cockpit* via the Launchpad of your *Developer Tenant*.
 
@@ -78,7 +80,7 @@ Very good, you know have successfully registered your application within the Dev
 
 Note: With the **MindSphere Mobile Starter Application** you can build applications for native mobile apps as well as for 'normal' Web applications. Right now Developer Cockpit supports either the registration of a mobile or a Web app but not for both together. But don't worry, this can be achieved. You only have to setup another registration in the Developer Cockpit for your Web application. With this application you also will achieve to get your application on the MindSphere Launchpad. If you have a Web part than do this registration as described in [Setting up MindSphere Launchpad](/developerportal/deploy/deploying-to-mindsphere), otherwise you can skip this.
 
-## Start developing your app with Mendix Studio Pro HEIKO
+### Start developing your app with Mendix Studio Pro HEIKO
 
 Now nearly everything is in place to start developing your native app with Mendix Studio Pro. Just a few configurations need to be done in the Mendix project itself.
 
@@ -136,7 +138,7 @@ TODO: Deploy your app once to Mendix Cloud --> to serve the .wellknown files and
 
 Hit the run button to start your app locally. Once the Mendix Backend is up and running you can start your app on your device, enter your remote URL and you should see the login screen. If everything is setup correctly you should now be able to login to your tenant.
 
-## Build your own development app
+### Build your own development app
 
 The following steps describe the process to setup everything for develop your native mobile app for MindSphere.
 
@@ -314,17 +316,28 @@ The following steps describe the process to setup everything for develop your na
 
           After the build succeeds the app should be starting on the selected device.
 
-## Well Known Files
+### Well Known Files
 TODO HEIKO
 
-## Try out your application
-TODO STEFAN
+### Try out your application
 
-# Module Details
+Well done, you should now be ready to start your application for the very first time on your mobile phone. For this press the **Run Locally** button so that your own native application can connect to your Mendix Studio Pro.
+If your application is up you should see the login page of the Anonymous user role.
+
+![Mobile](./attachments/mindsphere-mobile-native/MobileLoginPage.png)
+
+Please provide your developer tenant name and hit the **Login** button.
+The default browser of your phone will open and show you the MindSphere credential page where you can sign in with your MindSphere credentials.
+
+![Mobile](./attachments/mindsphere-mobile-native/MobileCredentialPage.png)
+
+After a successful login, your app will be started again and create your session. At the end your native home page comes up.
+
+## Module Details
 
 The **Siemens MindSphere SSO** module provides a couple of nanoflows which should be used to achieve a seamless integration into MindSphere. This nanoflows can be found in the folder **_Use me/NativeMobile** of the SSO module. The **Siemens MindSphere Mobile Starter Application** contains the SSO module and is using the provided nanoflows. The starter template just needs to be configured to get an application running. Nevertheless we like to explain some details here.
 
-## Authentication
+### Authentication
 
 The authentication is based on the usage of **Anonymous** users and is enabled in the project securities.
 ![StudioPro](./attachments/mindsphere-mobile-native/StudioPro_Security_Anonymous.png)
@@ -336,7 +349,9 @@ When the **Sign in** button will be clicked, the nanoflow **ACT_Login** will be 
 After a successful login, the Deep Link handler of the SSO module will fetch the MindSphere Mobile Token and will start the user session accordingly.
 At the end of the authentication process the app will be restarted and provide the home page of the corresponding user role.
 
-## MindSphere APIs and Token Handling
+If something gets wrong during the authentication the corresponding error code will be visualized via the Login page.
+
+### MindSphere APIs and Token Handling
 
 When you have already developed a Web application for MindSphere you are aware that you need the **Access Token** node included and used with your REST calls. The very good news for native mobile is, that this doesn't need to change. You can use the very same microflows for Web apps and native apps to fetch MindSphere APIs.
 
@@ -373,6 +388,6 @@ As you need a valid MindSphere token do call MindSphere APIs it is very importan
 
 For sure you will like to change the provided home page fitting to the rest of your home page. Please do this, but always make sure not to delete the initial provided Data view and App events.
 
-## Additional user role home pages
+### Additional user role home pages
 
 If you like to create new home pages for different user roles, please assure that it includes the Data view with the **OnSessionStartup** nanoflow and the **AppEvents** as provided via the default mobile home page as well. This ensures that the MindSphere token handling working properly for this user roles as well.

@@ -67,31 +67,59 @@ Note: With the **MindSphere Mobile Starter Application** you can build applicati
 
 ## Module Details
 
-The **Siemens MindSphere SSO** module provides a couple of Nanoflows which should be used to achieve a seamless integration into MindSphere. This Nanoflows can be found in the folder **_Use me/NnativeMobile** of the SSO module. The **Siemens MindSphere Mobile Starter Application** contains the SSO module and is using the provided Nanoflows. The starter template just needs to be configured to get an application running. Nevertheless we like to explain some details here.
+The **Siemens MindSphere SSO** module provides a couple of nanoflows which should be used to achieve a seamless integration into MindSphere. This nanoflows can be found in the folder **_Use me/NativeMobile** of the SSO module. The **Siemens MindSphere Mobile Starter Application** contains the SSO module and is using the provided nanoflows. The starter template just needs to be configured to get an application running. Nevertheless we like to explain some details here.
 
 ### Basic Authentication
 
 The authentication is based on the usage of **Anonymous** users and is enabled in the project securities.
 ![StudioPro](./attachments/mindsphere-mobile-native/StudioPro_Security_Anonymous.png)
-When the application starts it will provide the **Login** page from the **Login** folder where the user can provide his tenant name he likes to authenticate against. To get this work, the **Login** page is registered as default homepage for the Anonymous role.
+
+When the application starts it will provide the **Login** page from the **Login** folder where the user can provide the tenant name he likes to authenticate against. To get this work, the **Login** page is registered as default homepage for the Anonymous role.
 ![StudioPro](./attachments/mindsphere-mobile-native/StudioPro_Navigation_Anonymous_HomePage.png)
-When the **Sign in** button will be clicked, the Nanoflow **ACT_Login** will be called which will open the browser so that the user can provide his credentials.
+
+When the **Sign in** button will be clicked, the nanoflow **ACT_Login** will be called which will open the browser so that the user can provide his credentials.
 After a successful login, the Deep Link handler of the SSO module will fetch the MindSphere Mobile Token and will start the user session accordingly.
 At the end of the authentication process the app will be restarted and provide the home page of the corresponding user role.
 
-### App Start
+### MindSphere APIs and Token Handling
 
-With each start of the application it needs to be checked if the MindSphere Mobile Token of the user is still valid. There are then three possibilities:
+When you have already developed a Web application for MindSphere you are aware that you need the **Access Token** node included and used with your REST calls. The very good news for native mobile is, that this doesn't need to change. You can use the very same microflows for Web apps and native apps to fetch MindSphere APIs.
+
+If you are new to MindSphere app development please checkout [MindSphere Development Considerations](mindsphere-development-considerations) to learn more about this topic.
+
+To support mobile native applications, MindSphere provides a special mobile token, which is called MindSphere Mobile Token. As a Mendix developer you luckily don't have to take care much on this token as this has been done in the MindSphere Mobile Starter Application, but it is maybe worth to have some details to understand the impact on your application better.
+
+Actually the Mobile Token is not only one token. It contains two tokens
+
+* the **Access Token** which you need to fetch the MindSphere APIs which has an expiration time of half a hour and
+* the **Refresh Token** which will be used to refresh the Access Token when this expires. The refresh token itself is also only valid for 12hours, latest after this tme the user has to sign in again into the application to acquire a new token.
+
+As tokens can expires, there are some events on the lifecycle of a mobile app which needs to be considered. At each event the tokens has to be checked and the result  will be one of the following three:
 
 1. The token is still valid and nothing has to be done.
-2. The access token which is only valid for half an hour is no longer valid but the refresh token is still valid. In this case the access token will be renewed.
+2. The access token which is only valid for half an hour is no longer valid but the refresh token is still valid. In this case just the access token has to be refreshed.
 3. Both the access token as well as the refresh token has become invalid. In this case the user will be logged out and has to be sign in again.
 
-As you need a valid MindSphere token do call MindSphere APIs it is very important that this checks are done before you call a flow to access a MindSphere API. To ensure this, the standard mobile homepage of the Native Mobile Application already has a Data view calling the Nanoflow **OnSessionStartup**. OnSessionStartup will take care of the checks mention above. Please do not delete this Data view and if you like to add content which needs MindSphere APIs please do this inside the provided container.
+As you need a valid MindSphere token do call MindSphere APIs it is very important that this checks are done before you call a flow to access a MindSphere API. The Siemens MindSphere Mobile Starter Application helps you to ensure this by taking care of the following events:
+
+* Application startup: The standard mobile homepage of the Native Mobile Application already has a Data view calling the nanoflow **OnSessionStartup**. OnSessionStartup will take care of the checks mention above.
+
+    ![StarterMobile](./attachments/mindsphere-mobile-native/StarterMobile_OnSessionStartup.png)
+
+* Application resume: Within the provided Data view also an **App events** element is placed where the **On resume** event will call the nanoflow **MindSphereSingleSignOn.OnResume**.
+    ![StarterMobile](./attachments/mindsphere-mobile-native/StarterMobile_OnResume.png)
+
+* Application gets online: Same as on application resume but now the **On online** event of the App events will call the OnResume nanoflow.
+
+* Periodically your token needs to be checked when your app is running. Therefore the **MindSphereSingleSignOn.OnRefresh** nanoflow is configured to be called every minute.
+
+    ![StarterMobile](./attachments/mindsphere-mobile-native/StarterMobile_OnRefresh.png)
+
+For sure you will like to change the provided home page fitting to the rest of your home page. Please do this, but always make sure not to delete the initial provided Data view and App events.
 
 ### Additional user role home pages
 
-If you like to create new home pages for different user roles. Please assure that it includes the Data view with the **OnSessionStartup** Nanoflow and the **AppEvents** as provided via the default mobile home page as well to ensure the MindSphere token handling working properly for this user roles as well.
+If you like to create new home pages for different user roles, please assure that it includes the Data view with the **OnSessionStartup** nanoflow and the **AppEvents** as provided via the default mobile home page as well. This ensures that the MindSphere token handling working properly for this user roles as well.
 
 * .well-known files
 * Login flow - usage of "Anonymous" / "User"

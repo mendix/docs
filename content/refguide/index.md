@@ -4,12 +4,6 @@ description: "The various sections of the Mendix Studio Pro Guide provide detail
 tags: ["studio pro"]
 ---
 
-{{% alert type="info" %}}
-
-Mendix 9 is currently a Beta release. For details on what this means, see [Mendix Beta Features](/releasenotes/beta-features).
-
-{{% /alert %}}
-
 ## 1 Introduction
 
 The *Mendix Studio Pro 9 Guide* covers important topics concerning [Studio Pro](modeling), the [Mendix Runtime](runtime), and other components of the Mendix Platform.

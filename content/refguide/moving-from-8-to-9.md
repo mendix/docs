@@ -3,7 +3,7 @@ title: "Moving from Mendix 8 to Mendix 9"
 category: "General Info"
 menu_order: 20
 description: "Provides details on updating your project from Mendix 8 to Mendix 9, including sections on converting your project and deprecated features."
-tags: ["studio pro"]
+tags: ["studio pro", "studio"]
 ---
 
 ## 1 Introduction
@@ -15,9 +15,11 @@ Mendix Studio Pro 9 and Mendix Studio 9 give you powerful new tools to enhance y
 
 ## 2 Upgrading from Mendix 8 to 9 for Studio
 
-### 2.1 Read committed Snapshot isolation for MS SQL Server
+### 2.1 Turn On RCSI
 
-In order to improve performance and reduce the chance of deadlocks, Mendix 9 requires MS SQL Server to be used with Read Committed Snapshot Isolation (RCSI) turned ON. During the synchronization stage, Mendix 9 will perform a check for the RCSI status and could abort the process if it is not ON and the database user lacks the necessary privileges to do so automatically.
+In order to improve performance and reduce the chance of deadlocks, Mendix 9 requires MS SQL Server to be used with **Read Committed Snapshot Isolation** (RCSI) turned **ON**. 
+
+During the synchronization stage, Mendix 9 will perform a check for the RCSI status and could abort the process if it is not **ON** and the database user lacks the necessary privileges to do so automatically.
 
 ## 3 Changing Your App Before Upgrading to Studio Pro 9
 
@@ -25,20 +27,20 @@ In order to improve performance and reduce the chance of deadlocks, Mendix 9 req
 
 The following sub-sections explain the steps to take in converting your app project from Mendix 8 to Mendix 9.
 
-### 3.2 Backup Your Project
+### 3.2 Back Up Your Project
 
-Make sure that you have either committed your latest changes to Team Server, or taken a backup of your local project before you start the conversion.
+Make sure that you have either committed your latest changes to Team Server, or created a backup of your local project before you start the conversion.
 
 ### 3.3 Upgrade to the Latest Release of Version 8
 
 {{% alert type="warning" %}}
-It is technically required for you to upgrade your app project to the latest version of Mendix 8, which is XXX. You can only convert your app project to Mendix 9 from XXX.
+It is technically required for you to upgrade your app project to the latest version of Mendix 8, which is [8.16](/releasenotes/studio-pro/8.16). You can only convert your app project to Mendix 9 from v8.16.x.
 {{% /alert %}}
 
 To upgrade to Mendix 8, follow these steps:
 
-1. Download the latest patch release of Studio Pro vXXX.
-1. Open your app in Studio Pro vXXX.
+1. Download the latest patch release of Studio Pro [v8.16](/releasenotes/studio-pro/8.16).
+1. Open your app in Studio Pro v8.16.
 1. Allow it to upgrade the app, if necessary.
 
 ### 3.4 Review Your Mendix 8 Project
@@ -47,21 +49,19 @@ Review your app project in combination with the sections below and assess if fur
 
 You should run your app, test all functionality, and ensure it works without error. You should also fix any depreciation warnings you see.
 
-### 3.5 Save Version 8 Project
+### 3.5 Save Your Version 8 Project
 
-Your app project is now ready to be upgraded to Mendix Version 9.
+Backup or commit your project so that you can return to it if necessary. Saving a copy will ensure your work is kept safe.
 
-It is recommended that you backup/commit your project at this point so that you can return to it if necessary.
+After saving a copy, you can close the project in Studio Pro v8.16.
 
-You can now close the project in Desktop Modeler version 8.
+Your app project is now ready to be upgraded to Mendix 9.
 
 ### 3.6 Upgrade Your App Project to Version 9
 
-Mendix will upgrade your app project for you.
+Open your project in Studio Pro 9 and allow Studio Pro to update your app to version 9. Mendix will upgrade your app project for you automatically.
 
-Open the project in Mendix Studio Pro version 8 and allow Studio Pro to update your app to version 9.
-
-### 3.7 Review Errors, Warnings & Deprecations in Studio Pro
+### 3.7 Review Errors, Warnings, and Deprecations in Studio Pro
 
 Review all error messages and messages about deprecated items and make changes where necessary. Be sure to check for errors both in development in Studio Pro, as well as in the runtime using your console and browser console.
 
@@ -73,7 +73,7 @@ Check if there is a newer version of your App Store modules available in the App
 
 In general you should not remove and reimport modules, unless this is recommended in the release notes. If you do remove and reimport them, you may lose data or configuration related to the module.
 
-### 3.9 Review & Test Your App
+### 3.9 Review and Test Your App
 
 Finally, review the sections below and ensure that you have made all the changes necessary. Test the app for any unexpected results.
 

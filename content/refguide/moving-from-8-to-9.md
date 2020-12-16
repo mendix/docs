@@ -83,19 +83,9 @@ Congratulations! Your app has been successfully upgraded to Mendix 8 and you can
 
 ## 4 Runtime API Changes
 
-Most of the Java API calls that were deprecated in Mendix 8 have been removed. If you were still using such methods in your Java actions, you must replace or delete them. Below is a summary of the changes. Refer to the [Mendix Studio Pro 9.02](/release-notes/9.0.2) release notes for full details.
+Most of the Java API calls that were deprecated in Mendix 8 have been removed. If you were still using such methods in your Java actions, you must replace or delete them. To check which calls were depreciated, click the **Mendix 8 Server Runtime API** link in our [Runtime API Documentation](/apidocs-mxsdk/apidocs/runtime-api).
 
-* Some versions of `Core.execute()` have been removed. Use `Core.microflowCall()` or `Core.userActionCall()` instead.
-* Some versions of `ActionListener.addBeforeEvent()` and `ActionListener.addAfterEvent()` have been removed. Use the remaining versions instead.
-* Several methods have been removed from the `MendixBinary` interface:
-	* `setValue(IContext, byte[])` has been removed. Use the `IMendixObjectMember.setValue()` instead.
-	* `parseAndStoreValue(IContext, String)`has been removed. Use `IMendixObjectMember.setValue()` instead.
-	* `commitValueAsFileDocument(IContext)` has been removed. Use regular commits instead.
-	* `setLength(Long)`has been removed. There is no replacement.
-	* `getLength()` has been removed. Use the remaining `getLength(IContext)` instead.
-* The deprecated `Core.setSystemAction()` was removed. There is no replacement.
-* The deprecated `IMetaObject.getRemoteSource()` was removed. There is no replacement.
-* The deprecated `IDataValidation.getType()` was removed. Use `getValidationType()` instead.
+Additionally, refer to the [Mendix Studio Pro 9.02 Release notes](/release-notes/9.0.2) for more Runtime API change details.
 
 ### 4.1 Changes to Database Uniqueness
 
@@ -107,6 +97,6 @@ If any are found, an error like **An error occured while initializing the Runtim
 
 ## 6 Read More
 
-* Studio Pro 9 RN
-* Stuio 9 RN
+* [Mendix Studio Pro 9.02 Release notes](/release-notes/9.0.2)
+* Studio 9 RN
 * API Docs RN?

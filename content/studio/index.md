@@ -5,12 +5,6 @@ tags: ["studio", "web modeler"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-{{% alert type="info" %}}
-
-Mendix 9 is currently a Beta release. For details on what this means, see [Mendix Beta Features](/releasenotes/beta-features).
-
-{{% /alert %}}
-
 {{% alert type="warning" %}}
 
 The **Studio 9 Guide** describes Mendix Studio functionality that corresponds to Mendix 9 version. It describes the latest Studio functionality and features.

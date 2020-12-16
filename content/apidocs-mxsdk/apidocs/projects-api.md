@@ -43,7 +43,7 @@ The CreateNewApp action returns a String which is the ID of the background job t
 
 #### 3.1.3 Usage from Studio Pro
 
-After you have imported the Projects API App Service, an activity called 'CreateNewApp' is available under the 'ProjectsAPI' node in the Action dialog. For more information, see [Consumed App Services](/refguide/consumed-app-services). 
+After you have imported the Projects API App Service, an activity called 'CreateNewApp' is available under the 'ProjectsAPI' node in the Action dialog.
 
 Reference the microflow below:
 

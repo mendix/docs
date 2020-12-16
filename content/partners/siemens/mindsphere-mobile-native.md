@@ -330,16 +330,43 @@ optional, in case you are not working on *eu1.mindsphere.io*
 
 * **PublicKeyURL**
 
-And in the NativeMobile folder
+and in the NativeMobile folder
 
 * **ClientID** = **client_id** from app registration in developer cockpit
 
 * **ClientSecret** = **client_secret** from app registration in developer cockpit
 
+for iOS:
+
 * **AppleAppSiteAssociation** =
 
-  ```
+    ```json
+    {
+        "applinks": {
+            "apps": [],
+            "details": [
+                {
+                    "appID": "TEAM_ID.BUNDLE_IDENTIFIER",
+                    "paths": ["/login"]
+                }
+            ]
+        }
+    }
+    ```
 
-  ```
+    replace the appID with your **TEAM_ID** and your **BUNDLE_IDENTIFIER**.
+
+    Hint: You can find the **TEAM_ID** in the [Apple developer center](https://developer.apple.com/membercenter). Log into the web site, click on Membership, then look for Team ID in the Membership Information section.
+
+    Attention: You have to remove all `/r/n` from the json object before saving the constant in Mendix Studio Pro. This could be done for example here: http://jsoneditoronline.org/
+
+
+for Android:
 
 * **AssetLinks**
+
+    TODO
+
+TODO: Deploy your app once to Mendix Cloud --> to serve the .wellknown files and register the .well-known files in the developer cockpit.
+
+Hit the run button to start your app locally. Once the Mendix Backend is up and running you can start your app on your device, enter your remote URL and you should see the login screen. If everything is setup correctly you should now be able to login to your tenant.

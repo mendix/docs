@@ -10,18 +10,18 @@ tags: ["studio pro", "studio"]
 
 Mendix Studio Pro 9 and Mendix Studio 9 give you powerful new tools to enhance your apps. For the full list of changes, see the Studio Pro 9 and Studio 9 release notes. If you want to upgrade an existing Studio Pro 8 or Studio 8 project to its respective 9 version, please check the information below:
 
-* If you are upgrading your Studio project from Mendix 8 to 9, see Upgrading from Mendix 8 to 9 for Studio below.
-* If you are converting your Mendix app project from Mendix Studio Pro 8 to Studio Pro 9, see Changing Your App Before Upgrading to Studio Pro 9 below.
+* If you are upgrading your Studio project from Mendix 8 to 9, see [Upgrading from Mendix 8 to 9 for Studio](#studio-upgrade) below.
+* If you are converting your Mendix app project from Mendix Studio Pro 8 to Studio Pro 9, see [Changing Your App Before Upgrading to Studio Pro 9](#studio-pro-upgrade) below.
 
-## 2 Upgrading from Mendix 8 to 9 for Studio
+## 2 Upgrading from Mendix 8 to 9 for Studio {#studio-upgrade}
 
-### 2.1 Turn On RCSI
+### 2.1 Turn On RCSI for MS SQL Server
 
 In order to improve performance and reduce the chance of deadlocks, Mendix 9 requires MS SQL Server to be used with **Read Committed Snapshot Isolation** (RCSI) turned **ON**. 
 
 During the synchronization stage, Mendix 9 will perform a check for the RCSI status and could abort the process if it is not **ON** and the database user lacks the necessary privileges to do so automatically.
 
-## 3 Changing Your App Before Upgrading to Studio Pro 9
+## 3 Changing Your App Before Upgrading to Studio Pro 9 {#studio-pro-upgrade}
 
 ### 3.1 Converting Your App Project
 
@@ -81,46 +81,31 @@ Finally, review the sections below and ensure that you have made all the changes
 Congratulations! Your app has been successfully upgraded to Mendix 8 and you can continue working as normal.
 {{% /alert %}}
 
-## Runtime API Changes
+## 4 Runtime API Changes
 
-Most of the Java API calls that were deprecated in Mendix 8 have been removed. If you were still using such methods in your Java actions, you’ll have to use their replacement or remove their usage. Below is a summary of the changes. Refer to the release notes for full details.
+Most of the Java API calls that were deprecated in Mendix 8 have been removed. If you were still using such methods in your Java actions, you must replace or delete them. Below is a summary of the changes. Refer to the [Mendix Studio Pro 9.02](/release-notes/9.0.2) release notes for full details.
 
-- Some versions of `Core.execute()` have been removed. Use `Core.microflowCall()` or `Core.userActionCall()` instead.
-- Some versions of `ActionListener.addBeforeEvent()` and `ActionListener.addAfterEvent()` have been removed. Use the remaining versions instead.
-- Several methods have been removed from the `MendixBinary` interface:
-    - `setValue(IContext, byte[])`, use the `IMendixObjectMember.setValue()` instead.
-    - `parseAndStoreValue(IContext, String)`, use `IMendixObjectMember.setValue()` instead.
-    - `commitValueAsFileDocument(IContext)`, there’s no replacement; use regular commits.
-    - `setLength(Long)`, there’s no replacement.
-    - `getLength()`, use the remaining `getLength(IContext)` instead.
-- The deprecated `Core.setSystemAction()` was removed. There’s no replacement.
-- The deprecated `IMetaObject.getRemoteSource()` was removed. There’s no replacement.
-- The deprecated `IDataValidation.getType()` was removed. Use `getValidationType()` instead.
-## Stricter type-checking on `Core.evaluateExpression()`.
+* Some versions of `Core.execute()` have been removed. Use `Core.microflowCall()` or `Core.userActionCall()` instead.
+* Some versions of `ActionListener.addBeforeEvent()` and `ActionListener.addAfterEvent()` have been removed. Use the remaining versions instead.
+* Several methods have been removed from the `MendixBinary` interface:
+	* `setValue(IContext, byte[])` has been removed. Use the `IMendixObjectMember.setValue()` instead.
+	* `parseAndStoreValue(IContext, String)`has been removed. Use `IMendixObjectMember.setValue()` instead.
+	* `commitValueAsFileDocument(IContext)` has been removed. Use regular commits instead.
+	* `setLength(Long)`has been removed. There is no replacement.
+	* `getLength()` has been removed. Use the remaining `getLength(IContext)` instead.
+* The deprecated `Core.setSystemAction()` was removed. There is no replacement.
+* The deprecated `IMetaObject.getRemoteSource()` was removed. There is no replacement.
+* The deprecated `IDataValidation.getType()` was removed. Use `getValidationType()` instead.
 
-The `Core.evaluateExpression()` function has been made more type-safe. It now only allows the same expressions as those that are allowed by Studio Pro. In addition the currency and float functions are no longer available. If you are using expressions that would give an error in Studio Pro, then you’ll have to adapt the expression. If not, it will result in a runtime exception during execution. Refer to the release notes for an exhaustive list of the constructs that are no longer allowed and their replacements.
+### 4.1 Changes to Database Uniqueness
 
-## Mathematical Operators in XPath
+Before Mendix 9, Mendix could ensure data uniqueness using either the Mendix runtime or by relying on the database engine itself. Starting with Mendix 9, **Database** will be the only option. 
 
-Any usage of mathematical operators in XPath expressions is now deprecated unless they are inside a token. If you have any custom widgets containing such XPath expressions, they will need to be updated accordingly.
+If your project is still using Mendix runtime for uniqueness validation, then you should set the custom runtime setting `DataStorage.EnableDiagnostics` to `true`  to check for potential data redundancy issues that might exist in the database. 
 
-## Non-Persistent Sessions are not Supported Anymore
+If any are found, an error like **An error occured while initializing the Runtime: Detected unique constraing violation...** will be logged. To solve this, your project will have to be prepared before moving to Mendix 9. You can obtain the tools you need by [submitting a support request](/developerportal/support/submit-support-request).
 
-Previously non-persistent sessions could be enabled by setting the custom runtime setting `PersistentSessions` to false. Now this setting is ignored and user sessions are always persisted to the database. Additionally the `com.mendix.core.conf.Configuration#` ```enablePersistentSessions`() method is now deprecated and always returns `true`.
-
-## Changes to Database Uniqueness
-
-Before Mendix 9, Mendix could ensure data uniqueness using either the Mendix runtime or by relying on the database engine itself:
-
-![Uniqueness Validation Setting](https://paper-attachments.dropbox.com/s_0AB3B0F9C9C07A910D33534B498F0B0DAD7344EF6A3CFCE0384BE92C935C1B05_1607685916901_image.png)
-
-Starting with Mendix 9, **Database** will be the only option. If your project is still using Mendix runtime for uniqueness validation, then you should set the custom runtime setting `DataStorage.EnableDiagnostics` to `true`  to check for potential data redundancy issues that might exist in the database. If any are found, an error similar the one below will be logged and the project will have to be prepped before moving to Mendix 9. The necessary tools can be obtained by [submitting a](https://docs.mendix.com/developerportal/support/submit-support-request) [support](https://docs.mendix.com/developerportal/support/submit-support-request) [request](https://docs.mendix.com/developerportal/support/submit-support-request).
-
-![Unique Constraint Violation Error](https://docs.mendix.com/refguide/attachments/datastorage/startup-error-assoc.png)
-
-## 4 Troubleshooting
-
-## 5 Read More
+## 6 Read More
 
 * Studio Pro 9 RN
 * Stuio 9 RN

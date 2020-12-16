@@ -1,7 +1,6 @@
 ---
 title: "Pluggable Widgets API"
 category: "API Documentation"
-menu_order: 8
 description: A guide for understanding pluggable widgets.
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 ---

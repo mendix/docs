@@ -85,6 +85,9 @@ howto:
     - "Security"
     - "Testing"
     - "Monitoring & Troubleshooting"
+  banner:
+    type: 'info'
+    text: 'You are browsing the documentation for Mendix 9, which is currently a beta release. For more information, see <a href="/releasenotes/beta-features/index">Mendix Beta Features</a>.'
 refguide6:
   space: "Mendix 6 Reference Guide"
   priority: false
@@ -134,6 +137,9 @@ refguide:
     - "Mendix Runtime"
     - "Mobile"
     - "Java Programming"
+  banner:
+    type: 'info'
+    text: 'You are browsing the documentation for Mendix 9, which is currently a beta release. For more information, see <a href="/releasenotes/beta-features/index">Mendix Beta Features</a>.'
 releasenotes:
   space: "Release Notes"
   priority: false

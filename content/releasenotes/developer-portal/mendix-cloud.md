@@ -15,7 +15,9 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ### December 16th, 2020
 
-* We added the ability to fill in certain allowed Custom Environment Variables in a text field beside the dropdown that is currently present while adding or editing Custom Environment Variables in Mendix Cloud v4 environment. This enables customers to test beta features. <br/>For more information on custom environment variables, see [Runtime Tab](https://docs.mendix.com/developerportal/deploy/environments-details#custom-environment-variables) in the *Environment Details* documentation.
+* We added the ability to allow customers to test beta features by adding certain allowed Custom Environment Variables. These can be added like Custom Environment Variables in Mendix Cloud v4 environment, using a text field beside the current dropdown.
+
+	For more information on custom environment variables, see [Runtime Tab](https://docs.mendix.com/developerportal/deploy/environments-details#custom-environment-variables) in the *Environment Details* documentation.
 
 * As part of a Developer Portal clean up, we removed the Model option from the DEVELOP section of the Developer Portal menu when you are looking at environments on Mendix Cloud. The functions of this page are still available via the Edit in Studio and Edit in Studio Pro buttons on the environments page.
 

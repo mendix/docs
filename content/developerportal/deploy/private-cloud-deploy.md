@@ -20,7 +20,7 @@ Within your namespace you can run one, or several, Mendix apps. You can see the 
 
 ![](attachments/private-cloud-deploy/mx4pc-containerized-architecture.png)
 
-Because you can run several Mendix apps in the same namespace, each app must have a unique name. In addition, the app cannot have the same name as the Mendix tools used to deploy the app. See the section [Reserved Names for Mendix Apps](#reserved-names), below.
+Because you can run several Mendix apps in the same namespace, each environment will have an **Environment UUID** added when the app is deployed to ensure that it is unique in the project. You should not use the same name as the Mendix tools used to deploy the app. See the section [Reserved Names for Mendix Apps](#reserved-names), below.
 
 ##  2 Prerequisites for Deploying an App
 
@@ -61,22 +61,26 @@ First you need to create an environment:
 
 1. Click **Create Environment**.
 
-2. Enter **Environment Name**, the name for the environment. The environment name can only contain lowercase letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production.
+2. A **UUID** will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
 
-3. Use the drop-down **Select Namespace** to select an existing namespace. You will see all namespaces of which you are a member.
+    {{% alert type="info" %}}You can change the UUID if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.{{% /alert %}}
 
-4. Select the **Purpose**.
+3. Enter **Environment Name**, the name for the environment. The environment name can only contain lowercase letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production.
+
+4. Use the drop-down **Select Namespace** to select an existing namespace. You will see all namespaces of which you are a member.
+
+5. Select the **Purpose**.
     
   1. For development of the app, for example acceptance testing, choose **Development**.
   2. For production deployment, select **Production**. If you select production, then you will be asked for the **Subscription Secret** which ensures that your app runs as a licensed app. See [Free Apps](mendix-cloud-deploy#free-app) in *Mendix Cloud* for the differences between free/test apps and licensed apps.
 
     {{% alert type="warning" %}}Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
 
-5. Click **Next**.
+6. Click **Next**.
     
-    ![](attachments/private-cloud-deploy/image6.png)
+    ![](attachments/private-cloud-deploy/create-environment.png)
 
-6. Select **Core Resources**.
+7. Select **Core Resources**.
 
     For core resources, there are two sets of values. The **Request** value is the amount of core resources which are initially requested. The **Limit** value is the maximum amount of resource that the environment can use.
 
@@ -91,17 +95,17 @@ First you need to create an environment:
 
     Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**. Ensure that these values are the same or greater than the values for a *Small* enviroment, otherwise you may run into problems running your app.
 
-7. Select a **Database plan** from the list of plans set up in the namespace.
+8. Select a **Database plan** from the list of plans set up in the namespace.
 
-8. Select a **Storage plan** from the list of plans set up in the namespace.
+9. Select a **Storage plan** from the list of plans set up in the namespace.
     
     ![](attachments/private-cloud-deploy/image7.png)
 
-9. Click **Create Environment**.
+10. Click **Create Environment**.
 
-10. You will see your new environment listed. An *in-progress* icon will be shows next to the resource plans until they have been provisioned.
+11. You will see your new environment listed. An *in-progress* icon will be shows next to the resource plans until they have been provisioned.
 
-![](attachments/private-cloud-deploy/image8.png)
+    ![](attachments/private-cloud-deploy/image8.png)
 
 You will not be able to deploy to this environment until it has been fully prepared. This means that all the resource plans have been confirmed and that the placeholder app has been successfully deployed. See [Deploying the Deployment Package](#deploy-package), below, for instructions on how to check that the environment has been created successfully.
 
@@ -334,10 +338,11 @@ If you have any outstanding changes to your environment the page will display a 
 
 ![](attachments/private-cloud-deploy/image21.png)
 
-The environment details page consists of six tabs:
+The environment details page consists of seven tabs:
 
 * General
 * Model Options
+* Network
 * Runtime
 * Log Levels
 * TLS
@@ -383,11 +388,15 @@ This allows you to scale your app by increasing the number of replicas.
 
 To apply the new value, click **Restart the App and Scale**. Because you restart your app, it will be unavailable for a short time.
 
-##### 5.1.3.4 Change Admin Password
+##### 5.1.3.4 Clear Admin Password
+
+This allows you to clear the password for the local admin user in your app to disable the user without having to clear it in Studio Pro and redeploy the app.
+
+##### 5.1.3.5 Change Admin Password
 
 This allows you to change the password for the local admin user in your app without having to change it in Studio Pro and redeploy the app.
 
-##### 5.1.3.5 Delete Environment
+##### 5.1.3.6 Delete Environment
 
 This deletes the environment — you will be asked to confirm this action.
 
@@ -397,7 +406,7 @@ If the environment cannot be deleted, you will receive a warning, but can go ahe
 
 ![](attachments/private-cloud-deploy/delete-environment.png)
 
-##### 5.1.3.6 Change Purpose
+##### 5.1.3.7 Change Purpose
 
 This enables you to change the purpose of your app environment. You can label an environment as one used for development of the app, for example acceptance testing. In this case choose **Development** and the app will be deployed as a free app.
 
@@ -407,7 +416,7 @@ For production deployment, select **Production**. If you select production, then
 Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.
 {{% /alert %}}
 
-##### 5.1.3.7 Change Subscription Secret{#change-subscription-secret}
+##### 5.1.3.8 Change Subscription Secret{#change-subscription-secret}
 
 If you select Production as the **purpose** of the app environment, then you will need to use a Subscription Secret which ensures that your app runs as a licensed app. If you need to enter or change the subscription secret, then you can do that here.
 
@@ -423,7 +432,13 @@ To toggle any scheduled events, select the scheduled event you want to enable or
 
 To change any constants, select the constant you want to edit and then click **Edit**.
 
-### 5.3 Runtime Tab
+### 5.3 Network Tab
+
+On the Network tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections.
+
+![](attachments/private-cloud-deploy/network-tab.png)
+
+### 5.4 Runtime Tab
 
 On the Runtime tab, you can change various runtime settings for your app environment. For more details of these, see the [Runtime Tab](environments-details#runtime-tab) section of *Environment Details*.
 
@@ -433,13 +448,13 @@ On the Runtime tab, you can change various runtime settings for your app environ
 When you use some settings on the Runtime tab for Mendix for Private Cloud they may work differently from how they work in the Mendix Cloud.
 {{% /alert %}}
 
-### 5.4 Log Levels Tab
+### 5.5 Log Levels Tab
 
 On the Log Levels tab, you can change the log levels which are used for the log nodes in your app. For more details of these, see the [Log Levels Tab](environments-details#log-levels) section of *Environment Details*.
 
 ![](attachments/private-cloud-deploy/log-levels-tab.png)
 
-### 5.5 TLS
+### 5.6 TLS
 
 If you are using Mendix Operator version 1.5.0 or above, you can configure TLS for your environment from the Developer Portal.
 
@@ -471,7 +486,7 @@ Click **Save** to confirm your new configuration.
 
 You will receive a warning that you have made some changes. Click **Apply Changes** to restart the app and apply the changes.
 
-### 5.6 Debugger
+### 5.7 Debugger
 
 On the Debugger tab you can set up and view the credentials you need to debug your app when it is running in your private cloud. For more information see [How To Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely#private-cloud).
 

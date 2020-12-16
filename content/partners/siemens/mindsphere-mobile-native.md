@@ -52,7 +52,8 @@ The standard template also includes the role **Anonymous** which will be used fo
 
 {{% /alert %}}
 
-1. Hit **Configure** ![DeveloperCockpit](./attachments/mindsphere-mobile-native/DC_Configure.png) to open the **Roles and Scopes Management**.
+1. Hit **Configure** to open the **Roles and Scopes Management**.
+    ![DeveloperCockpit](./attachments/mindsphere-mobile-native/DC_Configure.png)
 
 1. Extend the **Application Scopes** section and hit the **Create Scope** button.
 
@@ -63,8 +64,10 @@ The standard template also includes the role **Anonymous** which will be used fo
 1. The final result should looks like
     ![DeveloperCockpit](./attachments/mindsphere-mobile-native/DC_ScopesRoles.png)
 
-1. Hit **Back to App** and **Register** ![DeveloperCockpit](./attachments/mindsphere-mobile-native/DC_Register.png) the app at Mindgate.
-You will see the following popup after registration:
+1. Hit **Back to App** and **Register** to finalize the registration at MindSphere
+     ![DeveloperCockpit](./attachments/mindsphere-mobile-native/DC_Register.png)
+
+1. You will see the following popup after registration:
 
     ![DeveloperCockpit](./attachments/mindsphere-mobile-native/DC_AppCred.png)
 

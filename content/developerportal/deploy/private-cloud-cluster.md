@@ -891,4 +891,4 @@ Within your cluster you can run one, or several, Mendix apps. Each app runs in a
 
 ![](attachments/private-cloud-cluster/mx4pc-containerized-architecture.png)
 
-Because you can run several Mendix apps in the same namespace, each app must have a unique name. In addition, the app cannot have the same name as the Mendix tools used to deploy the app. See Deploy an app to Private Cloud for more information.
+To ensure that every app deployed to a namespace has a unique name, the environment will have an **Environment UUID** added to the environment name when it is deployed to ensure that it is unique in the project. This also ensures the app cannot have the same name as the Mendix tools used to deploy the app. See [Deploying a Mendix App to a Private Cloud Cluster](private-cloud-deploy) for more information.

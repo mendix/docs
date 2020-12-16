@@ -5,6 +5,10 @@ parent: "mendix-cloud-deploy"
 menu_order: 15
 description: "Licensing apps for production by linking them to a licensed cloud node."
 tags: ["App", "Node", "Developer Portal", "Deploy", "Link", "Unlink", "Licensed", "Free App", "Upgrade", "Mendix Cloud", "v3", "v4"]
+aliases:
+    - /developerportal/howto/how-to-link-a-different-app-to-a-node.html
+    - /developerportal/howto/how-to-link-app-to-node.html
+    - /mendixcloud/how-to-link-app-to-node.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

@@ -1,6 +1,8 @@
 ---
 title: "Show Home Page"
 parent: "client-activities"
+aliases:
+    - /refguide7/Show+Home+Page.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

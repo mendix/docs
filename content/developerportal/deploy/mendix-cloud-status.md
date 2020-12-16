@@ -4,6 +4,8 @@ parent: "mendix-cloud-deploy"
 menu_order: 21
 description: "Describes where to find the current status of the Mendix Cloud."
 tags: ["Status","Mendix Cloud","Developer Portal", "Issue", "Maintenance", "Subscribe"]
+aliases:
+    - /developerportal/operate/mendix-cloud-status.html
 ---
 
 ## 1 Introduction

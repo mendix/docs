@@ -4,6 +4,8 @@ parent: "on-premises-design"
 description: "How to install and configure Mendix on a system running Microsoft Windows"
 menu_order: 50
 tags: ["deploy", "Windows", "On Premises", "Microsoft", "Mendix Service Console", "IIS", "URL Rewrite", "Client Cache", "Reverse Inbound Proxy", "Host Header"]
+aliases:
+    - /deployment/on-premises/deploy-mendix-on-microsoft-windows.html
 ---
 
 ## 1 Introduction

@@ -1,6 +1,8 @@
 ---
 title: "Studio 8 Guide"
 tags: ["studio", "web modeler"]
+aliases:
+    - /refguide/web-modeler.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---

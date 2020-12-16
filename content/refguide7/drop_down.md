@@ -2,6 +2,8 @@
 title: "Drop-Down"
 parent: "input-widgets"
 tags: ["Drop-down", "input", "page", "widget", "enumeration"]
+aliases:
+    - /refguide7/drop-down-widget.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

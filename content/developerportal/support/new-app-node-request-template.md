@@ -3,6 +3,8 @@ title: "Make a New App Node Request"
 category: "Mendix Support"
 menu_order: 3
 tags: ["Support", "app node", "node", "license", "subscription secret"]
+aliases:
+    - /developerportal/support/new-app-request-template.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

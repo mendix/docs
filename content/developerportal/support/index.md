@@ -2,6 +2,8 @@
 title: "Mendix Support"
 description: ""
 tags: ["Support", "SLA", "Gold", "Platinum"]
+aliases:
+    - /howtogeneral/support/index.html
 ---
 
 ## 1 What You Can Expect from Mendix Support

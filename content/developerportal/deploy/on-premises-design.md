@@ -4,6 +4,8 @@ category: "Deployment"
 description: "Describes the options for deploying a Mendix app on premises"
 menu_order: 80
 tags: ["Deployment", "On premises", "Environment"]
+aliases:
+    - /deployment/on-premises.html
 ---
 
 ## 1 Introduction

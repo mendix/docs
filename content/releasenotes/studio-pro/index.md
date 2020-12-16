@@ -3,6 +3,8 @@ title: "Studio Pro"
 toc-level: 1
 description: "Presents all of the available release notes for Mendix Studio Pro."
 frontpage_featured: true
+aliases:
+    - /releasenotes/desktop-modeler/index.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

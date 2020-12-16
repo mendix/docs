@@ -1,6 +1,8 @@
 ---
 title: "Developing Hybrid Mobile Apps"
 category: "Mobile Development"
+aliases:
+    - /refguide7/Developing+Hybrid+Mobile+Apps.html
 ---
 
 ## 1 Introduction

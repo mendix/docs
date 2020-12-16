@@ -4,6 +4,8 @@ parent: "mendix-cloud-deploy"
 menu_order: 27
 description: "How to configure custom domains as well as generate, upload, and renew certificates in Mendix."
 tags: ["Custom Domain","Mendix Cloud","Developer Portal", "certificates"]
+aliases:
+    - /mendixcloud/custom-domains.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #Linked from Developer Portal > Environments > Custom Domains
 ---

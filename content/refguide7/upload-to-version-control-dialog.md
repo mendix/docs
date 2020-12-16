@@ -1,6 +1,8 @@
 ---
 title: "Upload To Version Control Server"
 parent: "dialogs"
+aliases:
+    - /refguide7/upload-to-team-server-dialog.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 Use this dialog to upload an app that is not yet stored in a version control server.

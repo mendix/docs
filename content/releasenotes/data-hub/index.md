@@ -9,6 +9,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 ## 2020
 
+### December 17th, 2020
+
+#### New Feature
+
+* The Data Hub API is available to enable searching of data sources in the Data Hub Catalog. The API can be used to register data sources from your application to your organization's Data Hub. 
+
 ### December 10th, 2020
 
 #### Improvements

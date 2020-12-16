@@ -75,7 +75,7 @@ There is a drawback here as well: since the objects will never be removed, they 
 
 ### 6.1 Scenario
 
-When dealing with web or app-service integrations, you will often use non-persistable entities to model requests and responses. For more complex integrations, this can quickly become a complex domain model with a lot of entities. When calling the service, many objects can be created. There are often cases where developers map an entire web service response to a large domain model, only to use a small part of the message in a microflow.
+When dealing with web integrations, you will often use non-persistable entities to model requests and responses. For more complex integrations, this can quickly become a complex domain model with a lot of entities. When calling the service, many objects can be created. There are often cases where developers map an entire web service response to a large domain model, only to use a small part of the message in a microflow.
 
 Building an integration as described above will cause all objects that are created to be sent to the Mendix Client as well.
 

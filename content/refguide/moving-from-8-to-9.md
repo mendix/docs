@@ -1,42 +1,53 @@
-# Moving from Mendix Studio Pro 8 to Studio Pro 9
+---
+title: "Moving from Mendix 8 to Mendix 9"
+category: "General Info"
+menu_order: 20
+description: "Provides details on updating your project from Mendix 8 to Mendix 9, including sections on converting your project and deprecated features."
+tags: ["studio pro"]
+---
 
-# Introduction
+## 1 Introduction
 
 Mendix Studio Pro 9 and Mendix Studio 9 give you powerful new tools to enhance your apps. For the full list of changes, see the Studio Pro 9 and Studio 9 release notes. If you want to upgrade an existing Studio Pro 8 or Studio 8 project to its respective 9 version, please check the information below:
 
+* If you are upgrading your Studio project from Mendix 8 to 9, see Upgrading from Mendix 8 to 9 for Studio below.
+* If you are converting your Mendix app project from Mendix Studio Pro 8 to Studio Pro 9, see Changing Your App Before Upgrading to Studio Pro 9 below.
 
-- If you are upgrading your Studio project from Mendix 8 to 9, see Upgrading from Mendix 8 to 9 for Studio below.
-- If you are converting your Mendix app project from Mendix Studio Pro 8 to Studio Pro 9, see Changing Your App Before Upgrading to Studio Pro 9 below.
-# Upgrading from Mendix 8 to 9 for Studio
-## Read committed Snapshot isolation for MS SQL Server
+## 2 Upgrading from Mendix 8 to 9 for Studio
+
+### 2.1 Read committed Snapshot isolation for MS SQL Server
 
 In order to improve performance and reduce the chance of deadlocks, Mendix 9 requires MS SQL Server to be used with Read Committed Snapshot Isolation (RCSI) turned ON. During the synchronization stage, Mendix 9 will perform a check for the RCSI status and could abort the process if it is not ON and the database user lacks the necessary privileges to do so automatically.
 
-# Changing Your App Before Upgrading to Studio Pro 9
-## Converting Your App Project
+## 3 Changing Your App Before Upgrading to Studio Pro 9
+
+### 3.1 Converting Your App Project
 
 The following sub-sections explain the steps to take in converting your app project from Mendix 8 to Mendix 9.
 
-## Backup Your Project
+### 3.2 Backup Your Project
 
 Make sure that you have either committed your latest changes to Team Server, or taken a backup of your local project before you start the conversion.
 
-## Upgrade to the Latest Release of Version 8
+### 3.3 Upgrade to the Latest Release of Version 8
 
-ALERT TEXT It is technically required for you to upgrade your app project to the latest version of Mendix 8, which is XXX. You can only convert your app project to Mendix 9 from XXX.
+{{% alert type="warning" %}}
+It is technically required for you to upgrade your app project to the latest version of Mendix 8, which is XXX. You can only convert your app project to Mendix 9 from XXX.
+{{% /alert %}}
 
 To upgrade to Mendix 8, follow these steps:
 
 1. Download the latest patch release of Studio Pro vXXX.
-2. Open your app in Studio Pro vXXX.
-3. Allow it to upgrade the app, if necessary.
-## Review Your Mendix 8 Project
+1. Open your app in Studio Pro vXXX.
+1. Allow it to upgrade the app, if necessary.
+
+### 3.4 Review Your Mendix 8 Project
 
 Review your app project in combination with the sections below and assess if further action needs to be taken before upgrading to Mendix 9. 
 
 You should run your app, test all functionality, and ensure it works without error. You should also fix any depreciation warnings you see.
 
-## Save Version 8 Project
+### 3.5 Save Version 8 Project
 
 Your app project is now ready to be upgraded to Mendix Version 9.
 
@@ -44,17 +55,17 @@ It is recommended that you backup/commit your project at this point so that you 
 
 You can now close the project in Desktop Modeler version 8.
 
-## Upgrade Your App Project to Version 9
+### 3.6 Upgrade Your App Project to Version 9
 
 Mendix will upgrade your app project for you.
 
 Open the project in Mendix Studio Pro version 8 and allow Studio Pro to update your app to version 9.
 
-## Review Errors, Warnings & Deprecations in Studio Pro
+### 3.7 Review Errors, Warnings & Deprecations in Studio Pro
 
 Review all error messages and messages about deprecated items and make changes where necessary. Be sure to check for errors both in development in Studio Pro, as well as in the runtime using your console and browser console.
 
-## Upgrade All Widgets
+### 3.8 Upgrade All Widgets
 
 To minimize the chance of problems, you should update all widgets and other App Store models used by your project to the latest version.
 
@@ -62,10 +73,13 @@ Check if there is a newer version of your App Store modules available in the App
 
 In general you should not remove and reimport modules, unless this is recommended in the release notes. If you do remove and reimport them, you may lose data or configuration related to the module.
 
-## Review & Test Your App
+### 3.9 Review & Test Your App
 
 Finally, review the sections below and ensure that you have made all the changes necessary. Test the app for any unexpected results.
-SUCCESS TEXT Congratulations! Your app has been successfully upgraded to Mendix 8 and you can continue working as normal.
+
+{{% alert type="success" %}}
+Congratulations! Your app has been successfully upgraded to Mendix 8 and you can continue working as normal.
+{{% /alert %}}
 
 ## Runtime API Changes
 
@@ -100,12 +114,14 @@ Before Mendix 9, Mendix could ensure data uniqueness using either the Mendix run
 
 ![Uniqueness Validation Setting](https://paper-attachments.dropbox.com/s_0AB3B0F9C9C07A910D33534B498F0B0DAD7344EF6A3CFCE0384BE92C935C1B05_1607685916901_image.png)
 
-
-Starting with Mendix 9, **D****atabase** will be the only option. If your project is still using Mendix runtime for uniqueness validation, then you should set the custom runtime setting `DataStorage.EnableDiagnostics` to `true`  to check for potential data redundancy issues that might exist in the database. If any are found, an error similar the one below will be logged and the project will have to be prepped before moving to Mendix 9. The necessary tools can be obtained by [submitting a](https://docs.mendix.com/developerportal/support/submit-support-request) [support](https://docs.mendix.com/developerportal/support/submit-support-request) [request](https://docs.mendix.com/developerportal/support/submit-support-request).
+Starting with Mendix 9, **Database** will be the only option. If your project is still using Mendix runtime for uniqueness validation, then you should set the custom runtime setting `DataStorage.EnableDiagnostics` to `true`  to check for potential data redundancy issues that might exist in the database. If any are found, an error similar the one below will be logged and the project will have to be prepped before moving to Mendix 9. The necessary tools can be obtained by [submitting a](https://docs.mendix.com/developerportal/support/submit-support-request) [support](https://docs.mendix.com/developerportal/support/submit-support-request) [request](https://docs.mendix.com/developerportal/support/submit-support-request).
 
 ![Unique Constraint Violation Error](https://docs.mendix.com/refguide/attachments/datastorage/startup-error-assoc.png)
 
+## 4 Troubleshooting
 
+## 5 Read More
 
-# Troubleshooting
-
+* Studio Pro 9 RN
+* Stuio 9 RN
+* API Docs RN?

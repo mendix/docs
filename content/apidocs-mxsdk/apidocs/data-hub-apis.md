@@ -52,7 +52,7 @@ Mendix users (with a registered account) can obtain the necessary PAT using the 
 
 7. Copy the **Token secret** to your clipboard by clicking the storage icon below the secret. You will have to include this token in the authorization header for all requests to the Data Hub API.
 
-   {{% alert type="info" %}}Make sure that you keep this token in a secure place. You will not get another chance to view this token once you **Close** this dialog box.
+	{{% alert type="info" %}}Make sure that you keep this token in a secure place. You will not get another chance to view this token once you **Close** this dialog box.
    {{% /alert %}}
 
 8. Click **Close** to return to the **Personal Access Tokens** home screen. Your generated token will be listed:

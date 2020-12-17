@@ -1,5 +1,5 @@
 ---
-title: "Data Hub APIs"
+title: "Data Hub API"
 category: "API Documentation"
 description: "This document describes the Data Hub API and generating the Personal Access Token."
 tags: ["data hub", "Data Hub API", "Warden", "authentication", "personal access token"]

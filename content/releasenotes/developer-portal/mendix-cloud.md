@@ -13,6 +13,14 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2020
 
+### December 17th, 2020
+
+* We added the ability to allow customers to test beta features by adding certain allowed Custom Environment Variables. These can be added like Custom Environment Variables in Mendix Cloud v4 environment, using a text field beside the current dropdown.
+
+	For more information on custom environment variables, see [Runtime Tab](https://docs.mendix.com/developerportal/deploy/environments-details#custom-environment-variables) in the *Environment Details* documentation.
+
+* As part of a Developer Portal clean up, we removed the Model option from the DEVELOP section of the Developer Portal menu when you are looking at environments on Mendix Cloud. The functions of this page are still available via the Edit in Studio and Edit in Studio Pro buttons on the environments page.
+
 ### December 8th, 2020
 
 * We changed the way Log Levels can be set in Mendix Cloud v4.

@@ -23,24 +23,31 @@ The [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) is 
 You can access the API at: http://datahub-spec.s3-website.eu-central-1.amazonaws.com/.
 
 {{% alert type="info" %}}
-To access the API, authorization is required. Mendix users must obtain a Personal Access Token (PAT) as described in [Generating your Personal Access Token](#generatepat).
+For the current release, the interactive features of the OpenAPI interface are not operational and therefore the **Try it out** feature does not work.
 {{% /alert %}}
 
-## 3. Generating your Personal Access Token {#generatepat}
+To access the API, authorization is required. Mendix users must obtain a Personal Access Token (PAT) as described in [Generating your Personal Access Token](#generatepat).
 
-For every request that is made to the Data Hub API, you must include a personal access token which will be exchanged with the required API key for accessing your organization's Data Hub. 
+For every request that is made to the Data Hub API, you must add a header called `MxToken` and include the PAT in order to access your organization's Data Hub. 
+
+For example:
+```
+curl -X GET "https://hub.mendix.com/rest/datahubservice/v2/data?contractType=OData_3_0" -H  "accept: application/json" -H  "MxToken: 4XsnkDhNWu1drAugLYTMLstRGa8F9qeTD5DJU2GgERwhpyTZCbJoLWbKy1BYbSUgENr5Gb43cLwXU6Mj3gbB2nwEd5rf6eRfcuLq"
+```
+
+## 3. Generating your Personal Access Token {#generatepat}
 
 Mendix users (with a registered account) can obtain the necessary PAT using the Mendix **Warden** app by following these steps: 
 
 1. You can access the **Warden** app at: https://warden.mendix.com/.
 
-2. When you are prompted, enter your login and password. This will take you to the Warden Home page:
+2. When you are prompted, sign-in using your username and password. The Warden Home page is shown:
 
 	![Warden Home Screen](attachments/dta-hub-apis/warden-home-screen.png)
 
 3. To create a new personal access token, click **Add** to go to the **Create a Personal Access Token** screen. 
 
-4. Enter a **Name** for the token. This name will be used when generated tokens are listed on the Warden home screen - which will also identify which tokens are being used.
+4. Enter a **Name** for the token. This name will be used when generated tokens are listed on the Warden home screen—that also identifies which tokens are being used.
 
 5. For the **Select scopes that can be used with this token:** under Data Hub, check both the **mx:datahub:services:read** and **mx:datahub:services:write**:
 
@@ -50,10 +57,13 @@ Mendix users (with a registered account) can obtain the necessary PAT using the 
 
 	![generated token](attachments/dta-hub-apis/generated-pat-token.png)
 
-7. Copy the **Token secret** to your clipboard by clicking the storage icon below the secret. You will have to include this token in the authorization header for all requests to the Data Hub API.
+7. Copy the **Token secret** to your clipboard by clicking the storage icon below the secret. 
 
 	{{% alert type="info" %}}Make sure that you keep this token in a secure place. You will not get another chance to view this token once you **Close** this dialog box.
-   {{% /alert %}}
+  {{% /alert %}}
+
+	{{% alert type="info" %}}You must include this token in an authorization header called `MxToken` for every request to the Data Hub API.
+  {{% /alert %}}
 
 8. Click **Close** to return to the **Personal Access Tokens** home screen. Your generated token will be listed:
 

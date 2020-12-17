@@ -5,7 +5,7 @@ tags: ["studio pro"]
 ---
 
 {{% alert type="info" %}}
-App services are deprecated and were removed in [Studio Pro 9](/releasenotes/studio-pro/9.0). Use a [consumed web service](consumed-web-services) to consume existing app services.
+App services are deprecated and were removed in Studio Pro 9. Use a [consumed web service](consumed-web-services) to consume existing app services.
 {{% /alert %}}
 
 ## Source

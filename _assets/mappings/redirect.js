@@ -33,23 +33,23 @@ module.exports = {
       to: "/refguide7/moving-from-6-to-7"
     },
 	/****************************************************
-     * How-to's (permanent, unmapped)
+     * How-to's version 8 (permanent, unmapped)
      ****************************************************/
     {
       from: "/howtogeneral/bestpractices/ux-best-practices",
-      to: "/howto/front-end/ux-best-practices"
+      to: "/howto8/front-end/ux-best-practices"
     },
 	{
       from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
-      to: "/howto/security/best-practices-security"
+      to: "/howto8/security/best-practices-security"
     },
 	{
       from: "/howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7",
-      to: "/howto/general/community-best-practices-for-app-performance"
+      to: "/howto8/general/community-best-practices-for-app-performance"
     },	
 	{
       from: "/howto/ux/configuring-your-theme",
-      to: "/howto/front-end/configuring-your-theme"
+      to: "/howto8/front-end/configuring-your-theme"
     },
 	/****************************************************
      * How-to's version 7 (permanent, unmapped)

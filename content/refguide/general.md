@@ -17,6 +17,6 @@ If you have been using Studio Pro version 8, we advise reading [Moving from Stud
 	* [Team Server](system-requirements#ts)
 	* [Browsers](system-requirements#browsers)
 
-* [Moving from Studio Pro Version 8 to Studio Pro Version 9](moving-from-8-to-9) – presents important information on converting your app projects to use in Studio Pro 9
+* [Moving from Mendix 8 to Mendix 9](moving-from-8-to-9) – presents important information on converting your app projects to use in Studio Pro 9
 * [MxBuild](mxbuild) – presents information for building a Mendix deployment package from an app project
 * [Third-Party Licenses](third-party-licenses) – lists locations for third-party libraries that have their own licenses

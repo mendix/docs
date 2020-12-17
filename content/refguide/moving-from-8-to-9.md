@@ -85,7 +85,7 @@ Congratulations! Your app has been successfully upgraded to Mendix 8 and you can
 
 Most of the Java API calls that were deprecated in Mendix 8 have been removed. If you were still using such methods in your Java actions, you must replace or delete them. To check which calls were depreciated, click the **Mendix 8 Server Runtime API** link in our [Runtime API Documentation](/apidocs-mxsdk/apidocs/runtime-api).
 
-Additionally, refer to the [Mendix Studio Pro 9.02 Release notes](/release-notes/9.0.2) for more Runtime API change details.
+Additionally, refer to the Mendix Studio Pro 9.02 Release notes for more Runtime API change details.
 
 ### 4.1 Changes to Database Uniqueness
 
@@ -97,6 +97,5 @@ If any are found, an error like **An error occured while initializing the Runtim
 
 ## 6 Read More
 
-* [Mendix Studio Pro 9.02 Release notes](/release-notes/9.0.2)
+* Mendix Studio Pro 9.02 Release Notes
 * Studio 9 RN
-* API Docs RN?

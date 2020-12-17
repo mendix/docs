@@ -1352,13 +1352,13 @@ The widget consists of the following elements:
 | `grid` | `dashArray` | Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
 | `grid` | `lineColor` | Applies a color to the grid lines (string). |
 | `grid` | `lineWidth` | Applies a width to the grid lines (number). |
-| `grid` | `padding` | Applies padding to all sides of the grid (number). This is useful to make axis value labels visible. |
-| `grid` | `paddingBottom` | Applies padding to the bottom side of the grid (number). This is useful to make axis value labels visible. |
-| `grid` | `paddingHorizontal` | Applies padding to the horizontal sides of the grid (number). This is useful to make axis value labels visible. |
-| `grid` | `paddingLeft` | Applies padding to the left side of the grid (number). This is useful to make axis value labels visible. |
-| `grid` | `paddingRight` | Applies padding to the right side of the grid (number). This is useful to make axis value labels visible. |
-| `grid` | `paddingTop` | Applies padding to the top side of the grid (number). This is useful to make axis value labels visible. |
-| `grid` | `paddingVertical` | Applies padding to the vertical sides of the grid (number). This is useful to make axis value labels visible. |
+| `grid` | `padding` | Applies padding to all sides of the grid (number). Use it to make axis value labels visible. |
+| `grid` | `paddingBottom` | Applies padding to the bottom side of the grid (number). Use it to make axis value labels visible. |
+| `grid` | `paddingHorizontal` | Applies padding to the horizontal sides of the grid (number). Use it to make axis value labels visible. |
+| `grid` | `paddingLeft` | Applies padding to the left side of the grid (number). Use it to make axis value labels visible. |
+| `grid` | `paddingRight` | Applies padding to the right side of the grid (number). Use it to make axis value labels visible. |
+| `grid` | `paddingTop` | Applies padding to the top side of the grid (number). Use itto make axis value labels visible. |
+| `grid` | `paddingVertical` | Applies padding to the vertical sides of the grid (number). Use it to make axis value labels visible. |
 | `xAxis` | `color` | Applies a color to the axis value labels (string). |
 | `xAxis` | `dashArray` | Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
 | `xAxis` | `fontFamily` | Applies fonts to the axis value labels (string). |
@@ -1376,7 +1376,7 @@ The widget consists of the following elements:
 | `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
 | `legend` > `indicator` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
 | `legend` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
-| `lines` | `lineColorPalette` | Provides colors to lines that don't have a line color configured (string with list of colors separated by ';'). |
+| `lines` | `lineColorPalette` | Provides colors to lines that do not have a line color configured (string with list of colors separated by ';'). |
 | `lines` > `customLineStyles` > `any_custom_line_style_name` > `line` | `dashArray` | Applies a pattern of dashes and gaps to the graph line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
 | `lines` > `customLineStyles` > `any_custom_line_style_name` > `line` | `ending` | Applies a flat or rounded line end to the graph line ("flat" or "round"). |
 | `lines` > `customLineStyles` > `any_custom_line_style_name` > `line` | `lineColor` | Applies a color to the graph line (string). |

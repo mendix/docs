@@ -85,7 +85,11 @@ Select this option when you want to work on an app that is not stored in [Mendix
 
 #### 4.3.1 Enable Private Version Control with Git {#enable}
 
-Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/develop/team-server), but in a private Git server to which you have access. This will allow you to specify the location of the app on the Git server when opening, downloading, or uploading the app. Here you also have to specify the name and email values that will be used to identify your commits with Git.
+{{% alert type="info" %}}
+Only appears when a feature flag for Git is enabled.
+{{% /alert %}}
+
+Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/develop/team-server), but in a private Git server to which you have access. This will allow you to specify the location of the app on the Git server when opening, downloading, or uploading the app. In this section, you also need to specify name and email values that will be used to identify your commits with Git.
 
 ## 5 Advanced Tab
 

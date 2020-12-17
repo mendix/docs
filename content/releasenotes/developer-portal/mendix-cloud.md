@@ -13,7 +13,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2020
 
-### December 16th, 2020
+### December 17th, 2020
 
 * We added the ability to allow customers to test beta features by adding certain allowed Custom Environment Variables. These can be added like Custom Environment Variables in Mendix Cloud v4 environment, using a text field beside the current dropdown.
 

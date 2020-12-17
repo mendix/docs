@@ -36,7 +36,7 @@ Mendix users (with a registered account) can obtain the necessary PAT using the 
 
 2. When you are prompted, enter your login and password. This will take you to the Warden Home page:
 
-   ![Warden Home Screen](attachments/dta-hub-apis/warden-home-screen.png)
+	![Warden Home Screen](attachments/dta-hub-apis/warden-home-screen.png)
 
 3. To create a new personal access token, click **Add** to go to the **Create a Personal Access Token** screen. 
 

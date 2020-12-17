@@ -44,11 +44,11 @@ Mendix users (with a registered account) can obtain the necessary PAT using the 
 
 5. For the **Select scopes that can be used with this token:** under Data Hub, check both the **mx:datahub:services:read** and **mx:datahub:services:write**:
 
-   ![create token home](attachments/dta-hub-apis/create-pat-token.png)
+	![create token home](attachments/dta-hub-apis/create-pat-token.png)
 
 6. Click **Create**. The token will be generated and displayed in a pop-up window:
 
-   ![generated token](attachments/dta-hub-apis/generated-pat-token.png)
+	![generated token](attachments/dta-hub-apis/generated-pat-token.png)
 
 7. Copy the **Token secret** to your clipboard by clicking the storage icon below the secret. You will have to include this token in the authorization header for all requests to the Data Hub API.
 
@@ -57,7 +57,7 @@ Mendix users (with a registered account) can obtain the necessary PAT using the 
 
 8. Click **Close** to return to the **Personal Access Tokens** home screen. Your generated token will be listed:
 
-   ![token list](attachments/dta-hub-apis/token-list.png)
+	![token list](attachments/dta-hub-apis/token-list.png)
 
 9. For each token, **Last Used:** will show when the token was last used. 
 

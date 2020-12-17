@@ -15,12 +15,12 @@ To use the Mendix Data Hub a license is required.
 
 ## 2. The Data Hub API
 
-The [DataHubAPI](https://hub.mendix.com/rest/datahubservice/v2/) is an Open API (formerly Swagger) specification which contains all the APIs for the operations that are currently available which include the following: 
+The [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) is an Open API (formerly Swagger) specification which contains all the APIs for the operations that are currently available which include the following: 
 
 * Registration
 * Search
 
-You can access the API at: https://hub.mendix.com/rest/datahubservice/v2/.
+You can access the API at: http://datahub-spec.s3-website.eu-central-1.amazonaws.com/.
 
 {{% alert type="info" %}}
 To access the API, authorization is required. Mendix users must obtain a Personal Access Token (PAT) as described in [Generating your Personal Access Token](#generatepat).

@@ -4,6 +4,13 @@ set -ev
 
 echo "Deploying to AWS bucket $TARGETAWSBUCKET"
 
+# This depends on the following (secret) Environment Variables being set up in Travis-CI
+# AWS key needs to have appropriate access to the TARGETAWSBUCKET
+# AWS_ACCESS_KEY_ID
+# AWS_SECRET_ACCESS_KEY
+# AWS_DEFAULT_REGION
+#
+
 echo "Renaming all .html files to have no suffix"
 cd $TRAVIS_BUILD_DIR/_site # change to root directory of the site
 find . -name '*.html' -type f | while read NAME ; do mv "${NAME}" "${NAME%.html}" ; done # Rename all .html files to remove the suffix

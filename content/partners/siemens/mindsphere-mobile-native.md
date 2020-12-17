@@ -6,7 +6,7 @@ description: "Explain how to create your own Native Mobile application for MindS
 tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Local", "Styling", "UI", "Icons", "Limitations", "Licensing", "Validation", "Mobile Native"]
 ---
 
-## Introduction
+## 1 Introduction
 
 This documentation describes the adoptions needed to develop native mobile apps for MindSphere with Mendix. Native mobile apps do not render inside a web view - they use native UI elements. This enables fast performance, smooth animations and allow access to all native device capabilities.
 Details about native mobile app development with Mendix can be found [here.](https://docs.mendix.com/howto/mobile/native-mobile)
@@ -17,14 +17,24 @@ On a phone there is no MindSphere launchpad - therefore the app as to implement 
 The login itself to MindSphere on your device is done outside of our native application in a browser and your app is started after successful login via a "Deep Link". Details about this process can be found [here](https://developer.mindsphere.io/howto/howto-develop-mobile-app-with-mdsp.html) - but do not worry - the implementation is already part of the app template - just use it.
 To support Deep Links with your app, you have to create your own [Custom Development App](https://docs.mendix.com/howto/mobile/how-to-devapps) and register a DeepLink corresponding to your app registration.
 
-We recommend to do the [build a native mobile inspection-app](https://academy.mendix.com/link/path/66/Build-a-Native-Mobile-Inspection-App) tutorial from the mendix academy to get yourself familiar with mobile app development.
+We recommend to do the [build a native mobile inspection-app](https://academy.mendix.com/link/path/66/Build-a-Native-Mobile-Inspection-App) tutorial from the academy to get yourself familiar with mobile app development.
 
-## TODO: Describe Structure of the following chapters - maybe split to different files ? HEIKO
+This documentation is structured in two main parts:
 
-## Setup development environment
-TODO: Describe Structure of the following chapters HEIKO
+* Setup development environment - explains everything to get you started
+* Module Details - describes the solution and what should be considered during development
 
-### Registration of your mobile app in Developer Cockpit
+## 2 Setup development environment
+
+The setup of your development environment contains the following steps:
+
+* Registration of a new mobile app in Developer Cockpit
+* Create project based on "Siemens MindSphere Mobile Starter Application"
+* Build your own development app
+* .well-known files
+* Try it out
+
+### 2.1 Registration of your mobile app in Developer Cockpit
 
 The Siemens MindSphere Mobile Starter Application provides functionality that a user can sign in to MindSphere from within the mobile application. To get the mobile authentication running it is necessary that the application itself is registered within MindSphere. This registration can be done within the MindSphere Developer Cockpit in some easy steps.
 
@@ -81,15 +91,17 @@ Very good, you know have successfully registered your application within the Dev
 
 Note: With the **MindSphere Mobile Starter Application** you can build applications for native mobile apps as well as for 'normal' Web applications. Right now Developer Cockpit supports either the registration of a mobile or a Web app but not for both together. But don't worry, this can be achieved. You only have to setup another registration in the Developer Cockpit for your Web application. With this application you also will achieve to get your application on the MindSphere Launchpad. If you have a Web part than do this registration as described in [Setting up MindSphere Launchpad](/developerportal/deploy/deploying-to-mindsphere), otherwise you can skip this.
 
-### Start developing your app with Mendix Studio Pro HEIKO
+### 2.2 Start developing your app with Mendix Studio Pro HEIKO
 
-Now nearly everything is in place to start developing your native app with Mendix Studio Pro. Just a few configurations need to be done in the Mendix project itself.
+First you have to create a new Mendix Team server project based on the **Siemens MindSphere Mobile Starter Application** template.
 
-Open your team server project with Mendix Studio Pro. In the project explorer open the configuration of the appstore module **MindsphereSingleSignOn**
+There are some configurations need to be done in the project itself.
+In the project explorer open the configuration of the app store module **MindsphereSingleSignOn**
 
 ![Studio SSO configuration](./attachments/mindsphere-mobile-native/StudioPro_SSO_configuration.png)
 
 You have to adopt these constants:
+
 * **HostTenant** = name of your tenant
 
 optional, in case you are not working on *eu1.mindsphere.io*
@@ -103,6 +115,186 @@ and in the NativeMobile folder
 * **ClientID** = **client_id** from app registration in developer cockpit
 
 * **ClientSecret** = **client_secret** from app registration in developer cockpit
+
+### 2.3 Build your own development app
+
+In this chapter you will create your own custom develpoment app and register a deep link.
+
+1. Follow the description on how to create a [Custom Development App](https://docs.mendix.com/howto/mobile/how-to-devapps) and install it on your device or emulator as described there.
+
+1. Configure the DeepLink.
+
+    The configuration of the deep links has to be done (at the moment) on the native part for Android and iOS separately. Currently the "Native Builder App" has limited configuration possibilities for deep links so we will enable them manually.
+
+If not already done in step 2 clone your github repo locally in order to make the needed changes.
+
+#### Android
+
+##### AndroidMainfest.xml
+
+Open the file `./android/app/src/main/AndroidManifest.xml` with an editor of your choice e.g. [Visual Studio Code](https://code.visualstudio.com/)
+
+Set the `android:launchMode` in the main activity to `singleTask`
+
+```xml
+<activity
+    ...
+    android:launchMode="singleTask">
+```
+
+Add the following `<intent-filter>` to the main activity:
+
+```xml
+<intent-filter android:label="@string/app_name">
+    <action android:name="android.intent.action.VIEW" />
+    <category android:name="android.intent.category.DEFAULT" />
+    <category android:name="android.intent.category.BROWSABLE" />
+    <data android:scheme="https" android:host="TENANT-INTERNAL_NAME-TENANT.eu1.mindsphere.io" />
+</intent-filter>
+```
+Replace the placeholders `TENANT` and `INTERNAL_NAME` in the `android:host` attribute with your tenant name (2x) and the **internal_name** of your application registration. Example given:
+
+```xml
+    <data android:scheme="https" android:host="demo-mmna-demo.eu1.mindsphere.io" />
+```
+
+##### MainActivity.java
+
+Open the file `./android/app/src/dev/java/com/mendix/nativetemplate/MainActivity.java`
+
+Add the following import:
+
+```java
+import android.net.Uri;
+```
+
+Add the following method to the class `MainActivity`
+
+```java
+@Override
+protected void onNewIntent (Intent intent){
+    setIntent(intent);
+}
+```
+
+Replace the existing method `private void launchApp(String url)` in "MainActivity" with the following code:
+
+```java
+private void launchApp(String url) {
+    disableUIInteraction(true);
+    isPackagerRunning(url, (res) -> {
+        if (!res) {
+            disableUIInteraction(false);
+            return;
+        }
+
+        boolean clearData = clearDataCheckBox.isChecked();
+        Intent intent = new Intent(this, MendixReactActivity.class);
+        boolean devModeEnabled = devModeCheckBox.isChecked();
+        MxConfiguration.WarningsFilter warningsFilter = devModeEnabled ?
+            MxConfiguration.WarningsFilter.partial : MxConfiguration.WarningsFilter.none;
+        MendixApp mendixApp = new MendixApp(AppUrl.forRuntime(url), warningsFilter, devModeEnabled);
+        // MindSphere enhancement
+        // Copy current intent data if available
+        Intent appLinkIntent = getIntent();
+        String appLinkAction = appLinkIntent.getAction();
+        Uri appLinkData = appLinkIntent.getData();
+        if (appLinkAction != null) {
+            intent.setAction(appLinkAction);
+        }
+        if (appLinkData != null) {
+            intent.setData(appLinkData);
+        }
+        // end MindSphere enhancement
+        intent.putExtra(MendixReactActivity.MENDIX_APP_INTENT_KEY, mendixApp);
+        intent.putExtra(MendixReactActivity.CLEAR_DATA, clearData);
+        startActivity(intent);
+        disableUIInteraction(false);
+    });
+}
+```
+
+That's it - commit the two changed files to your github repo and build your developer app again. You can do this with the "Build Native App" application from Mendix Studio Pro - or build it [locally](https://docs.mendix.com/howto/mobile/native-build-locally#5-1-building-an-android-app-with-android-studio) with [Android Studio](https://developer.android.com/studio)
+
+
+#### iOS
+
+We recommend to make the required changes with the help of Xcode and build your developer app locally. Details about this process can be found [here](https://docs.mendix.com/howto/mobile/native-build-locally#5-2-building-an-ios-app-with-xcode)
+
+Do the following:
+
+* Open a terminal at the project root directory (the folder where you have cloned the github repo) and run
+
+    ```bash
+    npm install
+    ```
+
+    in the project root to install the required dependencies.
+
+* Change directory by running `cd ios` and run
+
+    ```bash
+    pod install
+    ```
+
+    to install the iOS dependencies. The iOS project is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see CocoaPods documentation.
+
+* Open the .xcodeworkspace in the ios folder using Xcode.
+
+    Navigate to Signing and Capabilities, select as target `dev` and choose your Team from the drop-down menu:
+
+    ![Xcode Team](./attachments/mindsphere-mobile-native/Xcode_Team.png)
+
+    As with the Android Build Variants the iOS app makes use of Build Targets to switch between building a custom developer app (target *dev*) or a release app (target *nativeTemplate*).
+
+    Adopt also the `Bundle Identifier` as it has to be unique.
+
+    Click on `Capability` and add `Associated Domains`
+
+    ![Associated Domain](./attachments/mindsphere-mobile-native/Xcode_enable_associated_domain.png)
+
+    Add the following domain:
+
+    ```bash
+    applinks:TENANT-INTERNAL_NAME-TENANT.eu1.mindsphere.io
+    ```
+
+    Replace the placeholders `TENANT` and `INTERNAL_NAME` with your tenant name (2x) and with the internal name of your application registration in the developer cockpit e.g.
+
+    ```bash
+    applinks:demo-mmna-demo.eu1.mindsphere.io
+    ```
+
+    ![Associated Domain](./attachments/mindsphere-mobile-native/Xcode_associated_domain.png)
+
+* In the `project navigator` open the file `nativeTemplate/NativeTemplate/AppDelegate.m`
+
+    Add the following import:
+
+    ```objc
+    #import "React/RCTLinkingManager.h"
+    ```
+
+    and the method `continueUserActivity":
+
+    ```objc
+    - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity
+        restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler
+    {
+        return [RCTLinkingManager application:application
+            continueUserActivity:userActivity
+            restorationHandler:restorationHandler];
+    }
+    ```
+
+* From the drop-down menu choose `dev` and the device you would like to run the app on, then click the play button to
+    start a build for your app:
+
+    ![Build ios dev app](./attachments/mindsphere-mobile-native/Xcode_build_ios_dev_app.png)
+
+    After the build succeeds the app should be starting on the selected device.
+
+### 2.4 Well Known Files
 
 for iOS:
 
@@ -137,190 +329,7 @@ for Android:
 
 TODO: Deploy your app once to Mendix Cloud --> to serve the .wellknown files and register the .well-known files in the developer cockpit.
 
-Hit the run button to start your app locally. Once the Mendix Backend is up and running you can start your app on your device, enter your remote URL and you should see the login screen. If everything is setup correctly you should now be able to login to your tenant.
-
-### Build your own development app
-
-The following steps describe the process to setup everything for develop your native mobile app for MindSphere.
-
-1. Create a new Mendix Team server project based on the "Siemens MindSphere Mobile Starter Application" template.
-
-1. Follow the description on how to create a [Custom Development App](https://docs.mendix.com/howto/mobile/how-to-devapps) and install it on your device or emulator as described there.
-
-1. Configure the DeepLink.
-
-   The configuration of the deep links has to be done (at the moment) on the native part for Android and iOS separately.Currently the "Native Builder App" as limited configuration possibilities for deep links so we will enable them manually.
-
-   If not already done in step 2 clone your github repo locally in order to make the needed changes.
-
-   * Android
-
-        * AndroidMainfest.xml
-
-            Open the file `./android/app/src/main/AndroidManifest.xml` with an editor of your choice e.g. [Visual Studio Code](https://code.visualstudio.com/)
-
-            Set the `android:launchMode` in the main activity to `singleTask`
-
-            ```xml
-            <activity
-                ...
-                android:launchMode="singleTask">
-            ```
-
-            Add the following `<intent-filter>` to the main activity:
-
-            ```xml
-            <intent-filter android:label="@string/app_name">
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="https" android:host="TENANT-INTERNAL_NAME-TENANT.eu1.mindsphere.io" />
-            </intent-filter>
-            ```
-            Replace the placeholders `TENANT` and `INTERNAL_NAME` in the `android:host` attribute with your tenant name (2x) and with the internal name of your application registration in the developer cockpit e.g.
-
-            ```xml
-                <data android:scheme="https" android:host="demo-mmna-demo.eu1.mindsphere.io" />
-            ```
-
-        * `MainActivity.java`
-
-            Open the file `./android/app/src/dev/java/com/mendix/nativetemplate/MainActivity.java`
-            Add the following import:
-
-            ```java
-            import android.net.Uri;
-            ```
-
-            Add the following method to the class `MainActivity`
-
-            ```java
-            @Override
-            protected void onNewIntent (Intent intent){
-                setIntent(intent);
-            }
-            ```
-
-            Replace the existing method `private void launchApp(String url)` in "MainActivity" with the following code:
-
-            ```java
-            private void launchApp(String url) {
-                disableUIInteraction(true);
-                isPackagerRunning(url, (res) -> {
-                    if (!res) {
-                        disableUIInteraction(false);
-                        return;
-                    }
-
-                    boolean clearData = clearDataCheckBox.isChecked();
-                    Intent intent = new Intent(this, MendixReactActivity.class);
-                    boolean devModeEnabled = devModeCheckBox.isChecked();
-                    MxConfiguration.WarningsFilter warningsFilter = devModeEnabled ?
-                        MxConfiguration.WarningsFilter.partial : MxConfiguration.WarningsFilter.none;
-                    MendixApp mendixApp = new MendixApp(AppUrl.forRuntime(url), warningsFilter, devModeEnabled);
-                    // MindSphere enhancement
-                    // Copy current intent data if available
-                    Intent appLinkIntent = getIntent();
-                    String appLinkAction = appLinkIntent.getAction();
-                    Uri appLinkData = appLinkIntent.getData();
-                    if (appLinkAction != null) {
-                        intent.setAction(appLinkAction);
-                    }
-                    if (appLinkData != null) {
-                        intent.setData(appLinkData);
-                    }
-                    // end MindSphere enhancement
-                    intent.putExtra(MendixReactActivity.MENDIX_APP_INTENT_KEY, mendixApp);
-                    intent.putExtra(MendixReactActivity.CLEAR_DATA, clearData);
-                    startActivity(intent);
-                    disableUIInteraction(false);
-                });
-            }
-            ```
-        That's it - commit the two changed files to your github repo and build your developer app again. You can do this with the "Build Native App" application from Mendix Studio Pro - or build it [locally](https://docs.mendix.com/howto/mobile/native-build-locally#5-1-building-an-android-app-with-android-studio) with [Android Studio](https://developer.android.com/studio)
-
-
-   * iOS
-
-        We recommend to make the required changes with the help of Xcode and build your developer app locally. Details about this process can be found [here](https://docs.mendix.com/howto/mobile/native-build-locally#5-2-building-an-ios-app-with-xcode)
-
-        Do the following:
-
-        * Open a terminal at the project root directory (the folder where you have cloned the github repo) and run
-
-            ```bash
-            npm install
-            ```
-
-            in the project root to install the required dependencies.
-
-        * Change directory by running `cd ios` and run
-
-            ```bash
-            pod install
-            ```
-
-            to install the iOS dependencies. The iOS project is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see CocoaPods documentation.
-
-        * Open the .xcodeworkspace in the ios folder using Xcode.
-
-            Navigate to Signing and Capabilities, select as target `dev` and choose your Team from the drop-down menu:
-
-            ![Xcode Team](./attachments/mindsphere-mobile-native/Xcode_Team.png)
-
-            As with the Android Build Variants the iOS app makes use of Build Targets to switch between building a custom developer app (target *dev*) or a release app (target *nativeTemplate*).
-
-            Adopt also the `Bundle Identifier` as it has to be unique.
-
-            Click on `Capability` and add `Associated Domains`
-
-            ![Associated Domain](./attachments/mindsphere-mobile-native/Xcode_enable_associated_domain.png)
-
-            Add the following domain:
-
-            ```bash
-            applinks:TENANT-INTERNAL_NAME-TENANT.eu1.mindsphere.io
-            ```
-
-            Replace the placeholders `TENANT` and `INTERNAL_NAME` with your tenant name (2x) and with the internal name of your application registration in the developer cockpit e.g.
-
-            ```bash
-            applinks:demo-mmna-demo.eu1.mindsphere.io
-            ```
-
-           ![Associated Domain](./attachments/mindsphere-mobile-native/Xcode_associated_domain.png)
-
-        * In the `project navigator` open the file `nativeTemplate/NativeTemplate/AppDelegate.m`
-
-            Add the following import:
-
-            ```objc
-            #import "React/RCTLinkingManager.h"
-            ```
-
-            and the method `continueUserActivity":
-
-            ```objc
-            - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity
-                restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler
-            {
-                return [RCTLinkingManager application:application
-                    continueUserActivity:userActivity
-                    restorationHandler:restorationHandler];
-            }
-            ```
-
-        * From the drop-down menu choose `dev` and the device you would like to run the app on, then click the play button to
-          start a build for your app:
-
-          ![Build ios dev app](./attachments/mindsphere-mobile-native/Xcode_build_ios_dev_app.png)
-
-          After the build succeeds the app should be starting on the selected device.
-
-### Well Known Files
-TODO HEIKO
-
-### Try out your application
+### 2.5 Try out your application
 
 Well done, you should now be ready to start your application for the very first time on your mobile phone. For this press the **Run Locally** button so that your own native application can connect to your Mendix Studio Pro.
 If your application is up you should see the login page of the Anonymous user role.
@@ -334,11 +343,11 @@ The default browser of your phone will open and show you the MindSphere credenti
 
 After a successful login, your app will be started again and create your session. At the end your native home page comes up.
 
-## Module Details
+## 3 Module Details
 
 The **Siemens MindSphere SSO** module provides a couple of nanoflows which should be used to achieve a seamless integration into MindSphere. This nanoflows can be found in the folder **_Use me/NativeMobile** of the SSO module. The **Siemens MindSphere Mobile Starter Application** contains the SSO module and is using the provided nanoflows. The starter template just needs to be configured to get an application running. Nevertheless we like to explain some details here.
 
-### Authentication
+### 3.1 Authentication
 
 The authentication is based on the usage of **Anonymous** users and is enabled in the project securities.
 ![StudioPro](./attachments/mindsphere-mobile-native/StudioPro_Security_Anonymous.png)
@@ -352,7 +361,7 @@ At the end of the authentication process the app will be restarted and provide t
 
 If something gets wrong during the authentication the corresponding error code will be visualized via the Login page.
 
-### MindSphere APIs and Token Handling
+### 3.2 MindSphere APIs and Token Handling
 
 When you have already developed a Web application for MindSphere you are aware that you need the **Access Token** node included and used with your REST calls. The very good news for native mobile is, that this doesn't need to change. You can use the very same microflows for Web apps and native apps to fetch MindSphere APIs.
 
@@ -389,6 +398,6 @@ As you need a valid MindSphere token do call MindSphere APIs it is very importan
 
 For sure you will like to change the provided home page fitting to the rest of your home page. Please do this, but always make sure not to delete the initial provided Data view and App events.
 
-### Additional user role home pages
+### 3.3 Additional user role home pages
 
 If you like to create new home pages for different user roles, please assure that it includes the Data view with the **OnSessionStartup** nanoflow and the **AppEvents** as provided via the default mobile home page as well. This ensures that the MindSphere token handling working properly for this user roles as well.

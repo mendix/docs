@@ -156,8 +156,8 @@ Add the following `<intent-filter>` to the main activity:
     <category android:name="android.intent.category.BROWSABLE" />
     <data android:scheme="https" android:host="TENANT-INTERNAL_NAME-TENANT.eu1.mindsphere.io" />
 </intent-filter>
+```
 
-``` bash
 Replace the placeholders `TENANT` and `INTERNAL_NAME` in the `android:host` attribute with your tenant name (2x) and the **internal_name** of your application registration. Example given:
 
 ```xml
@@ -326,13 +326,9 @@ In Mendix Studio Pro open the *NativeMobile* folder in the **MindSphereSSO** mod
 replace the value of the **appID** property with your **TEAM_ID** and your **BUNDLE_IDENTIFIER**.
 Do not remove the "." between the two parts.
 
-{{% alert type="info" %}}
-You can find the **TEAM_ID** in the [Apple developer center](https://developer.apple.com/membercenter). Log into the web site, click on Membership, then look for Team ID in the Membership Information section.
-{{% /alert %}}
+Info: You can find the **TEAM_ID** in the [Apple developer center](https://developer.apple.com/membercenter). Log into the web site, click on Membership, then look for Team ID in the Membership Information section.
 
-{{% alert type="warning" %}}
 Attention: You have to remove all `/r/n` from the json object before saving the constant in Mendix Studio Pro. This could be done for example [here](http://jsoneditoronline.org/)
-{{% /alert %}}
 
 #### For Android
 
@@ -361,9 +357,8 @@ To generate the needed file you have to use Android Studio. In the chapter [buil
 1. Copy the content from the preview window and use it as the value for the constant **AssetLinks**.
    You find this constant in Mendix Studio Pro in the **MindSphereSSO** module.
 
-  {{% alert type="warning" %}}
-  Attention: You have to remove all `/r/n` from the json object before saving the constant in Mendix Studio Pro. This could be done for example [here](http://jsoneditoronline.org/)
-  {{% /alert %}}
+   Attention: You have to remove all `/r/n` from the json object before saving the constant in Mendix Studio Pro. This could be done for example [here](http://jsoneditoronline.org/)
+
 
 #### Make your .well-known files public available
 

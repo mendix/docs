@@ -29,7 +29,6 @@ To solve this issue and others like it, the apps provided in this document can b
 ### 2.1 Android
 
 To acquire the archive you need, see the [Android Make It Native Archive](https://www.dropbox.com/sh/37s3d4gumhej6j3/AAAdXd97G3s8W0sUE1TQyYW9a?dl=0). To install the APKs, navigate with your device to the link provided, choose the version you would like to install, then download and install it on your device.
-You can also scan one of the QR codes with your device in the [Direct Downloads](#direct-links) section below..
 
 ### 2.2 iOS
 

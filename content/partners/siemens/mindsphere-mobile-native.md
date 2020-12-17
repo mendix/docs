@@ -6,6 +6,8 @@ description: "Explain how to create your own Native Mobile application for MindS
 tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Local", "Styling", "UI", "Icons", "Limitations", "Licensing", "Validation", "Mobile Native"]
 ---
 
+# MindSphere Mobile Native
+
 ## Introduction
 
 This documentation describes the adoptions needed to develop native mobile apps for MindSphere with Mendix. Native mobile apps do not render inside a web view - they use native UI elements. This enables fast performance, smooth animations and allow access to all native device capabilities.
@@ -53,6 +55,7 @@ The standard template also includes the role **Anonymous** which will be used fo
 {{% /alert %}}
 
 1. Hit **Configure** to open the **Roles and Scopes Management**.
+
     ![DeveloperCockpit](./attachments/mindsphere-mobile-native/DC_Configure.png)
 
 1. Extend the **Application Scopes** section and hit the **Create Scope** button.
@@ -62,9 +65,11 @@ The standard template also includes the role **Anonymous** which will be used fo
 1. Hit the **Create Scope** button again and enter **user** as scope name and assign it to the **admin** and **user** role.
 
 1. The final result should looks like
+
     ![DeveloperCockpit](./attachments/mindsphere-mobile-native/DC_ScopesRoles.png)
 
 1. Hit **Back to App** and **Register** to finalize the registration at MindSphere
+
      ![DeveloperCockpit](./attachments/mindsphere-mobile-native/DC_Register.png)
 
 1. You will see the following popup after registration:
@@ -341,9 +346,11 @@ The **Siemens MindSphere SSO** module provides a couple of nanoflows which shoul
 ### Authentication
 
 The authentication is based on the usage of **Anonymous** users and is enabled in the project securities.
+
 ![StudioPro](./attachments/mindsphere-mobile-native/StudioPro_Security_Anonymous.png)
 
 When the application starts it will provide the **Login** page from the **Login** folder where the user can provide the tenant name he likes to authenticate against. To get this work, the **Login** page is registered as default homepage for the Anonymous role.
+
 ![StudioPro](./attachments/mindsphere-mobile-native/StudioPro_Navigation_Anonymous_HomePage.png)
 
 When the **Sign in** button will be clicked, the nanoflow **ACT_Login** will be called which will open the browser so that the user can provide his credentials.

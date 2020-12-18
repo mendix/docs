@@ -24,13 +24,13 @@ The initial project mpk file that is uploaded is not allowed to exceed 250Mb (pr
 
 ### 1.5 Which Parts of the Mendix App Model Can I Access with the Model API?
 
-You can access every meta model element of your app model! That includes domain models, microflows, pages, integrations (consumed and published web and app services), Java actions, custom widgets, security constraints and so on. Anything you can access with Studio Pro - and all the technical details we abstract away from in the UI, but are part of the app model!
+You can access every meta model element of your app model! That includes domain models, microflows, pages, integrations (consumed and published web services), Java actions, custom widgets, security constraints and so on. Anything you can access with Studio Pro - and all the technical details we abstract away from in the UI, but are part of the app model!
 
 When analyzing app models this gives you a lot of power: you can access every tiny detail in the model, so that you can reason about the entire model, analyze it for quality, or export it completely.
 
 However, because we provide full read-write access, you can also break the model easily. We have taken measures against this, of course, and most of the meta model is safe to use. However, we recommend only doing read access actions on the following specific meta model components, because it is easy to create an invalid model:
 
-*   Consumed and published web and app services
+*   Consumed and published web services
 *   XML schemas
 *   Import and export mappings
 *   Custom widgets

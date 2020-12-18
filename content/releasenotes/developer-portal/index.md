@@ -13,6 +13,16 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2020
 
+### December 23nd, 2020
+
+#### Improvements
+
+* We removed the Model page. It contained tips on how to get started creating your apps. For this we now have the excellent [Academy Portal](https://academy.mendix.com/link/home)
+
+#### Fixes
+
+* We fixed an issue where replies to buzz notifications were not properly processed into comments on your project buzz page (Ticket 111076).
+
 ### December 2nd, 2020
 
 #### Improvements

@@ -1,28 +1,34 @@
 ---
 title: "Work with Git On-Premises Version Control Server"
-category: "Collaboration"
 parent: "on-premises-howto"
-menu_order: 60
+menu_order: 20
 tags: ["on-premises"]
 ---
 
-## 1 Prerequisites
+## 1 Introduction
 
-Preliminary Git support in Mendix Studio Pro is limited to specific Git service providers and specific authentication mechanisms. We currently only support Git Private Server.
+**This how-to will teach you how to do the following:**
 
-### 1.1 Supported Authentication Mechanisms
+## 2 Prerequisites
+
+Before starting this how-to, make sure you have completed the following prerequisites:
+
+* Make sure you have the right server provider. We currently only support Git Private Server. For more information, see the [Preparing Your Repository](#preparing-your-repo section. 
+* You have a feature flag enabled. For more information, see the [Preparing Studio Pro](#preparing-studio-pro) section.
+
+## 3 Supported Authentication Mechanisms
 
 Currently, we only support HTTP Basic authentication for Git service providers. With most providers this means the use of Personal Access Tokens (PATs).
 
-To use PAT (or equivalent), you need to specify it in the Password field when Studio Pro requests to enter credentials for the version control server:
+To use PAT (or equivalent), you need to specify it in the **Password** field when Studio Pro requests to enter credentials for the version control server:
 
 ![Sign In dialog](attachments/on-premises-git-howto/sign-in-dialog.png)
 
 See below for instructions on how to set up Personal Access Tokens or equivalent for the supported providers.
 
-## 2 Supported Git Service Providers
+## 3 Supported Git Service Providers
 
-### 2.1 Azure Repos and Azure DevOps Server 
+### 3.1 Azure Repos and Azure DevOps Server 
 
 We support both Microsoft’s [Azure Repos](https://azure.microsoft.com/en-us/services/devops/repos/) hosted Git service, as well as Azure DevOps Server(former Team Foundation Server) which is an on-premises solution for hosting your Git repos on the private infrastructure.
 
@@ -30,7 +36,7 @@ To get a PAT for your user account, see the [Use personal access tokens](https:/
 
 You would need `Code (full)` permission for your token.
 
-### 2.2 GitHub 
+### 3.2 GitHub 
 
 We support GitHub’s hosting solutions, including the free GitHub.com cloud-hosted service and GitHub Enterprise, both hosted (Enterprise Cloud) and on-premises (Enterprise Server).
 
@@ -39,7 +45,7 @@ To get a PAT for your user account, see the [Creating a personal access token](h
 You would need `repo` permissions for your token.
 
 
-### 2.3 GitLab 
+### 3.3 GitLab 
 
 We support all tiers of GitLab’s service, including the free GitLab.com, GitLab Community Edition and GitLab Enterprise Edition.
 
@@ -47,7 +53,7 @@ To get a PAT for your user account , see the [Personal access tokens](https://do
 
 You would need `write_repository` permission for the token.
 
-### 2.4 BitBucket 
+### 3.4 BitBucket 
 
 We support all tiers of Atlassian’s BitBucket service, including the free BitBucket.org, BitBucket Server and BitBucket Data Center on-premises solutions.
 
@@ -58,15 +64,15 @@ BitBucket Server and BitBucket Data Center, on the other hand, still use the ter
 
 In both cases you would need `repository write` permission.
 
-### 2.5 AWS CodeCommit 
+### 3.5 AWS CodeCommit 
 
 We have a known compatibility issue with AWS CodeCommit in Git Technology Preview for Studio Pro. We are working to resolve the issue in the next release.
 
-## 3 Steps to Set Up Environment
+## 4 Steps to Set Up the Environment
 
 This section describes all the initial steps that are necessary to use Studio Pro to manage a Git versioned app. To do so, you need a Git server and an initially unversioned Mendix app.
 
-### 3.1 Preparing Your Repository
+### 4.1 Preparing Your Repository {#preparing-your-repo}
 
 Studio Pro is able to use the following Git server providers:
 
@@ -86,7 +92,7 @@ To interact with this private repository from Studio Pro, you need the link to t
 
 For more information, see the [Supported Git Service Providers]() section above.
 
-### 3.2 Preparing Studio Pro {#preparing-studio-pro}
+### 4.2 Preparing Studio Pro {#preparing-studio-pro}
 
 To use Git, you need to start Studio Pro with a specific feature flag. Navigate to the directory where your installation of Studio Pro is located, specifically where the **studiopro.exe** file is. There are two ways to enable the feature flag. Do one of the following:
 * Open the command line at that location (or navigate to it from the command line) and type the following command: `studiopro.exe --enable-git-support`
@@ -96,13 +102,13 @@ To use Git, you need to start Studio Pro with a specific feature flag. Navigate 
     - Put your cursor all the way to the end of the **Target** field and enter the feature flag `--enable-git-support`  after a space.
     - Click **OK**.
     - Start Studio Pro by double-clicking the shortcut. Make sure the **Target** option has Git enabled:
-![Shortcut Properties dialog](attachments/on-premises-git-howto/shortcut-properties.png)
+        ![Shortcut Properties dialog](attachments/on-premises-git-howto/shortcut-properties.png)
     - Once Studio Pro is opened, go to **Edit > Preferences > Version Control** and make sure to activate private version control for Git. The name and email values will be used to identify your commit:
-![Preferences dialog](attachments/on-premises-git-howto/preferences-git.png)
+        ![Preferences dialog](attachments/on-premises-git-howto/preferences-git.png)
 			  
 Studio Pro now has the ability to support Git.
 
-### 3.3 Creating an App
+### 4.3 Creating an App
 
 Create an unversioned app in Studio Pro.
 
@@ -112,7 +118,7 @@ Once the app is created, you can now upload it to your private Git repository, u
 
 Once the app is uploaded, it will be a version-controlled app under Git.
 
-### 3.4 Downloading from a Private Repository
+### 4.4 Downloading from a Private Repository
 
 Now that you have a Git app on your server, you can download it to another directory or one of your team members can download it on their machine. Follow the steps below:
 1. Under **Version Control > Download from Version Control Server**, select the **Private server** option and enter the URL of your repository which contains the app you want to download. If you are not sure which URL this is, you can find this info in your Git server.
@@ -133,7 +139,7 @@ Now that you have a Git app on your server, you can download it to another direc
 
 The app is downloaded and ready to be used with version control.
 
-### 3.5 Opening the Existing Git App
+### 4.5 Opening the Existing Git App
 
 There are a few ways to open a Git Mendix app, as long as you have Studio Pro started up with the git flag mentioned in the [Preparing Studio Pro](#preparing-studio-pro) section.
 

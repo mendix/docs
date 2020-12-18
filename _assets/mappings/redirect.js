@@ -24,7 +24,14 @@ module.exports = {
 	{
       from: "/refguide/customizing-phonegap-build-packages",
       to: "/howto/mobile/customizing-phonegap-build-packages"
-    },	
+    },		
+	/****************************************************
+     * Studio Pro Guide version 8 (permanent, mapped)
+     ****************************************************/
+	 {
+      from: "/refguide8/customizing-phonegap-build-packages",
+      to: "/howto8/mobile/customizing-phonegap-build-packages"
+    },
 	/****************************************************
      * Reference Guide version 7 (permanent, unmapped)
      ****************************************************/	

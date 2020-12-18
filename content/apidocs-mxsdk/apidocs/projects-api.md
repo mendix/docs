@@ -43,7 +43,7 @@ The CreateNewApp action returns a String which is the ID of the background job t
 
 #### 3.1.3 Usage from Studio Pro
 
-After you have imported the Projects API App Service, an activity called 'CreateNewApp' is available under the 'ProjectsAPI' node in the Action dialog.
+After you have imported the Projects API app service, an activity called 'CreateNewApp' is available under the 'ProjectsAPI' node in the Action dialog.
 
 Reference the microflow below:
 
@@ -143,8 +143,8 @@ Reference this microflow:
 
 ## 4 Download
 
-Download the Projects API App Service below, so you can import it in your model:
+Download the Projects API app service below, so you can import it in your model:
 
 [ProjectsAPI_11.msd](attachments/14778446/ProjectsAPI_11.msd)
 
-In the consumed Projects API App Service settings, you will have to use a constant with the value `https://sprintr.home.mendix.com/ws/ProjectsAPI/11/soap1` as Location.
+In the consumed Projects API app service settings, you will have to use a constant with the value `https://sprintr.home.mendix.com/ws/ProjectsAPI/11/soap1` as Location.

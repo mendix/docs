@@ -16,7 +16,35 @@ You can go to any part of the Developer Portal using the menu items in the heade
 
 ![](attachments/header.jpg)
 
-## 2 Apps
+These menu items are described below.
+
+Or, you can turn on the **New Navigation** option via the menu beneath your profile avatar:
+
+![](attachments/new-navigation.jpg)
+
+Open and close the new navigation via the icon on the very left of the toolbar:
+
+![](attachments/dock.jpg)
+
+In this navigation, you can access the following:
+
+* **Mendix Home** – the [Apps](#apps) page
+* **Studio Pro** – the [Studio Pro](/refguide/index) download page in the [Mendix App Store](/appstore/index)
+* [Control Center]()
+* [Buzz](#buzz)
+* **Cloud Portal**  – the [Deployment](/developerportal/deploy/) facilities of the Developer Portal [**VERIFY: use of "Cloud Portal" at all - which leads to required change in PNG but enables using it in other docs; whether "Cloud Portal" reflects the destination, and how - this is the bigger issue**]
+* [App Store](/appstore/index)
+* [Data Hub](/data-hub/)
+* [Academy](#academy)
+* [Docs](#docs)
+* [Forum](#forum)
+* [Community](#community)
+
+On the very right side of the toolbar, click this icon to create a new app:
+
+![](attachments/new-app.jpg)
+
+## 2 Apps {#apps}
 
 In [Apps](/developerportal/apps-list/index), you can find your free and licensed apps, nodes, and other apps created by your company:
 
@@ -40,7 +68,7 @@ In [People](mendix-profile/index#connections), you can view the other members of
 
 ![](attachments/developerportal-people.jpg)
 
-## 5 Community
+## 5 Community {#community}
 
 In [Community](/developerportal/community-tools/index), you can explore various resources for the vibrant Mendix community of users, from blog posts about how Mendix is being used in the wider world of low-code development to the [Mendix job board](/developerportal/community-tools/mendix-job-board) and [Mendix Shop](https://shop.mendix.com/):
 
@@ -52,19 +80,19 @@ In the [Mendix App Store](/appstore/general/app-store-overview), you can share M
 
 ![](attachments/developerportal-app-store.jpg)
 
-## 7 Academy 
+## 7 Academy {#academy}
 
 The [Mendix Academy](https://academy.mendix.com/link/home) offers both self-paced online training (via learning paths) and classroom instruction from our team of experts:
 
 ![](attachments/developerportal-academy.jpg)
 
-## 8 Forum
+## 8 Forum {#forum}
 
 In the [Mendix Forum](/developerportal/community-tools/mendix-forum), you can interact with the Mendix community to help out with [questions](https://forum.mendixcloud.com/link/questions/) and answers on the best ways to use Mendix as well as propose [ideas](https://forum.mendixcloud.com/link/ideas/) for improving the Mendix Platform:
 
 ![](attachments/developerportal-forum.jpg)
 
-## 9 Docs
+## 9 Docs {#docs}
 
 The [Mendix Documentation](https://docs.mendix.com/) is open to the Mendix community, which means you can [make changes and contribute](/developerportal/community-tools/contribute-to-the-mendix-documentation) to benefit the whole Mendix community:
 

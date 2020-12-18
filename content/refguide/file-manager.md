@@ -15,6 +15,10 @@ A file manager is used to upload and/or download files.
 
 It must be placed inside a data view connected to the entity System.FileDocument or a specialization thereof.
 
+{{% alert type="info" %}}
+When uploading a file through the file manager, the FileDocument object will be committed immediately.
+{{% /alert %}}
+
 ## 2 Properties
 
 An example of file manager properties is represented in the image below:

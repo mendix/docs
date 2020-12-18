@@ -13,6 +13,28 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2020
 
+### December 14th, 2020
+
+#### Portal Improvements
+
+* We have added support in the Developer Portal to configure custom Certificate Authorities which should be trusted by the Mendix Operator and app environments.
+* We now add an environment UUID to environments deployed to Private Cloud namespaces so environment names no longer need to be unique.
+* As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on Mendix for Private Cloud. The functions of this page are still available via the **Edit in Studio** and **Edit in Studio Pro** buttons on the environments page. 
+
+#### Fixes
+
+* We fixed the bug where you would be taken to a non-existent page and receive a *404 Not Found* message if you didn't select an Operating System when downloading the configuration tool.
+
+### December 10th, 2020
+
+#### Mendix for Private Cloud — Mendix Operator v1.7.0 and Mendix Gateway Agent v1.6.0
+
+* We have added a configuration option to add custom Certificate Authorities which should be trusted by the Mendix Operator and app environments.
+* We have added a Strict TLS mode to PostgreSQL, SQL Server, and Minio, which will only allow connections to the database and file storage if there is a valid and trusted TLS certificate. Together with the custom Certificate Authorities option, this will ensure that Mendix apps are connecting to the database and file storage over a secured connection. Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
+* We have added an option to specify TLS client certificates in Mendix apps. A Mendix app can use a TLS client certificate when communicating with external web services.
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+
 ### November 16th, 2020
 
 * We have introduced a new, interactive, installation and configuration tool for the Mendix Operator. The previous installation scripts are still available, and you can choose between the new and previous installation tools.

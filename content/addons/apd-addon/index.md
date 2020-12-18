@@ -1,5 +1,7 @@
 ---
 title: "APD"
+aliases:
+    - /addons/apm-addon/index.html
 ---
 
 ## 1 Introduction

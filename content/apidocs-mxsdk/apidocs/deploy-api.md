@@ -1,7 +1,6 @@
 ---
 title: "Deploy API"
 category: "API Documentation"
-menu_order: 4
 description: "APIs which can be used to deploy Mendix apps to licensed nodes"
 tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -319,9 +318,14 @@ An object with the following key-value pairs:
      "Url" :  "https://calc-accp.mendixcloud.com",
      "ModelVersion" :  "1.1.0.253",
      "MendixVersion" :  "6.10.10",
-     "Production" :  "false"
+     "Production" :  "false",
+     "RuntimeLayer": "v4.13.2"
 }
 ```
+
+{{% alert type="info" %}}
+`RunTimeLayer` is available when the app is deployed using buildpack v4.13 and above.
+{{% /alert %}}
 
 ### 3.6 Start Environment {#start-environment}
 

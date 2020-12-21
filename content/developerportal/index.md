@@ -22,11 +22,15 @@ Or, you can turn on the **New Navigation** option via the menu beneath your prof
 
 ![](attachments/new-navigation.jpg)
 
-In this navigation, you can access different parts of the Mendix Platform  via the icon on the very left of the toolbar:
+On the right side of the toolbar with the new navigation, you can search and access your [Mendix Profile](/developerportal/mendix-profile/). You can also click this icon to create a new app:
+
+![](attachments/new-app.jpg)
+
+On the left side of the toolbar with the new navigation, you can access different parts of the Mendix Platform by clicking this icon:
 
 ![](attachments/dock.jpg)
 
-In this navigation, you can access the following:
+You can can access the following parts of the Mendix Platform:
 
 * **Mendix Home** – the [Apps](#apps) page
 * **Studio Pro** – the [Studio Pro](/refguide/index) download page in the [Mendix App Store](/appstore/index)
@@ -40,9 +44,7 @@ In this navigation, you can access the following:
 * [Forum](#forum)
 * [Community](#community)
 
-On the very right side of the toolbar, you can search and access your [Mendix Profile](/developerportal/mendix-profile/). You can also click this icon to create a new app:
 
-![](attachments/new-app.jpg)
 
 ## 2 Apps {#apps}
 

@@ -14,11 +14,13 @@ Should we have a section on the "Shell Bar"?
 
 ## 1 Introduction
 
-The SAP Fiori user experience creates a consistent UI across the SAP Suite of products. SAP Fiori 3 is SAP’s new target design system for all SAP products in the *Intelligent Suite*. The  [SAP Fiori 3 UI Resource](#wrong) module in the Mendix App Store allows you to create the same user experience in your Mendix apps.
+The SAP Fiori user experience creates a consistent UI across the SAP Suite of products. SAP Fiori 3 is SAP’s new target design system for all SAP products in the *Intelligent Suite*. The  [SAP Fiori 3 UI Resource](https://marketplace.mendix.com/link/component/116359) module in the Mendix App Store allows you to create the same user experience in your Mendix apps.
 
 The Mendix module gives you access to designing your pages with SAP Fiori-styled widgets and building blocks as part of your layout. You can also allow end-users to select a theme and apply it immediately. The module supports SAP Quartz Light and Dark themes.
 
-You can experience the SAP Fiori 3 design by using the [SAP Fiori 3 Starter App](#wrong) as the basis for a new app, or by including the [SAP Fiori 3 UI Resources](#wrong) module in your app.
+{{% todo %}}[Add link to Fiori 3 Starter App when published]{{% /todo %}}
+
+You can experience the SAP Fiori 3 design by using the SAP Fiori 3 Starter App as the basis for a new app, or by including the [SAP Fiori 3 UI Resources](https://marketplace.mendix.com/link/component/116359) module in your app.
 
 More information on using SAP Fiori 3 design in your Mendix app is available in the following sections:
 

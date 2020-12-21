@@ -45,7 +45,7 @@ For instruction on how to set up Personal Access Tokens, see the  or equivalent 
 
 ### 3.1 Azure Repos and Azure DevOps Server 
 
-We support both Microsoft’s [Azure Repos](https://azure.microsoft.com/en-us/services/devops/repos/) hosted Git service, and Azure DevOps Server (former Team Foundation Server) which is an on-premises solution for hosting your Git repos on the private infrastructure.
+We support both Microsoft’s [Azure Repos](https://azure.microsoft.com/en-us/services/devops/repos/) hosted Git service, and Azure DevOps Server (former Team Foundation Server) which is an on-premises solution for hosting your Git repos on private infrastructure.
 
 To get a PAT for your user account, see the [Use personal access tokens](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page) instructions in the Microsoft documentation.
 
@@ -71,7 +71,8 @@ You need `write_repository` permission for the token.
 
 We support all tiers of Atlassian’s BitBucket service, including BitBucket.org, BitBucket Server, and BitBucket Data Center on-premises solutions.
 
-On BitBucket.org, the Personal Access Tokens are called App Passwords. 
+On BitBucket.org, the Personal Access Tokens are called App Passwords.
+
 To setup an App Password for your BitBucket.org account, see the [App passwords](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/) instructions.
 
 BitBucket Server and BitBucket Data Center, on the other hand, still use the term Personal Access Tokens. To set up a personal access token, see [Personal access tokens](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html) instructions.
@@ -109,23 +110,31 @@ For more information on PAT, see the [Supported Git Service Providers](#supporte
 
 ### 4.2 Preparing Studio Pro {#preparing-studio-pro}
 
-To use Git, you need to start Studio Pro with a specific feature flag. Navigate to the directory where your installation of Studio Pro is located, specifically where the **studiopro.exe** file is. There are two ways to enable the feature flag. Do one of the following:
-* Open the command line at that location (or navigate to it from the command line) and type the following command: `studiopro.exe --enable-git-support`
-* Right-click the file, choose **Create shortcut**, and do the following:
-    - If you are asked to save it on the Desktop, click **Yes**. 
-    - Once the shortcut is created, right-click it and select **Properties**.
-    - At the end of the **Target** field, add the feature flag `--enable-git-support` after a space.
-        ![Shortcut Properties dialog](attachments/on-premises-git-howto/shortcut-properties.png)
-    - Click **OK**.
-    - Start Studio Pro by double-clicking the shortcut.        
-    - Once Studio Pro is opened, go to **Edit > Preferences > Version Control** and make sure to activate private version control for Git. The name and email values will be used to identify your commit:
-        ![Preferences dialog](attachments/on-premises-git-howto/preferences-git.png)
+To use Git, you need to start Studio Pro with a specific feature flag. Navigate to the directory where Studio Pro is located, specifically where the **studiopro.exe** file is. There are two ways to enable the feature flag: the command-line method or the shortcut method.
+
+To use the command-line method, do the following:
+
+1. Open the command line at that location (or navigate to it from the command line) and type the following command: `studiopro.exe --enable-git-support`
+
+To use the shortcut method, do the following:
+
+1. Right-click the file and click **Create shortcut**. If you are asked to save it on the Desktop, click **Yes**. 
+1. Once the shortcut is created, right-click it and select **Properties**.
+1.  At the end of the **Target** field, add the feature flag `--enable-git-support` after a space:
+
+	![Shortcut Properties dialog](attachments/on-premises-git-howto/shortcut-properties.png)
+ 
+1. Click **OK**.
+1. Start Studio Pro by double-clicking the shortcut.        
+1. Once Studio Pro is opened, go to **Edit > Preferences > Version Control** and make sure to activate private version control for Git. The name and email values will be used to identify your commit:
+
+	![Preferences dialog](attachments/on-premises-git-howto/preferences-git.png)
 			  
 Studio Pro now is set up to support Git.
 
 ### 4.3 Creating an App
 
-Create an unversioned app in Studio Pro.
+Create an unversioned app in Studio Pro:
 
 ![App Settings dialog](attachments/on-premises-git-howto/app-settings.png)
 
@@ -136,20 +145,20 @@ Once the app is created, you can upload it to your private Git repository. For m
 Now that you have a Git app on your server, you can download it to another directory or one of your team members can download it on their machine. Follow the steps below:
 
 1. Under **Version Control > Download from Version Control Server**, select the **Private server** option and enter the URL of your repository, which contains the app you want to download. If you are not sure what URL to use, you can find this info in your Git server.
-2. If you have both Subversion and Git enabled for the private version control in your preferences in Studio Pro, specify which version control system your repository uses. For this case, enable the **Git** radio button.
+1.  If you have both Subversion and Git enabled for the private version control in your preferences in Studio Pro, specify which version control system your repository uses. For this case, enable the **Git** radio button:
 
     ![Download from Version Control Server dialog](attachments/on-premises-git-howto/download-from-version-control-server.png)
 
-3. Enter the link to the repository in the **App repository address** and click **Connect**. Now you will have the option to change the directory where the app is downloaded to.
+1.  Enter the link to the repository in the **App repository address** and click **Connect**. Now you will have the option to change the directory where the app is downloaded to:
 
-    ![Download from Version Control Server Extended dialog](attachments/on-premises-git-howto/download-from-version-control-server-extended.png)
+	![Download from Version Control Server Extended dialog](attachments/on-premises-git-howto/download-from-version-control-server-extended.png)
 
-4. Click **OK**. 
-5. In the **Sign In** dialog box, enter your credentials.
+1. Click **OK**. 
+1.  In the **Sign In** dialog box, enter your credentials:
 
-    ![Sign In dialog](attachments/on-premises-git-howto/sign-in-dialog.png)
+	![Sign In dialog](attachments/on-premises-git-howto/sign-in-dialog.png)
 
-6. Enter username (it can be anything except empty) and use the PAT you saved earlier as the password. 
+1. Enter username (it can be anything except empty) and use the PAT you saved earlier as the password. 
 
 The app is downloaded and ready to be used with version control.
 
@@ -168,20 +177,26 @@ Under **File > Recent Projects** you can select the app and open it.
 #### 4.5.3 Open App Form
 
 The **Open App** form is accessible from two different places:
-- **Open App** button on the **My Apps** tab
-- Under menu **File > Open Project**
+* **Open App** button on the **My Apps** tab
+* Under menu **File > Open Project**
 
-In the form, there are two ways to open a Git app:
+In a form, there are two ways to open a Git app, by opening it from a previous checkout or by opening it locally on disk:
 
-* Open from previous checkout and do the following:
-    - Enable the **Private server** radio button and enter the link to the repository. 
-    - Click **Connect**. 
-    - If you have checked out the app at least once, you can then pick one of the existing locations on disk and the app will open (shown here with two previous checkouts).
-        ![Open App dialog](attachments/on-premises-git-howto/open-app-dialog.png)
-* You can open it locally on disk by doing the following:
-    - Select the **Locally on disk** option.
-    - In a file browser dialog box, browse to the directory containing your app and double-click the `.mpr` file (or select it and click **Open**). 
-        ![Open App Select File](attachments/on-premises-git-howto/open-app-select-file.png)
+For the previous checkout method do the following:
+
+1. Open from previous checkout.
+1. Enable the **Private server** radio button and enter the link to the repository. 
+1. Click **Connect**. 
+1.  If you have checked out the app at least once, you can then pick one of the existing locations on disk and the app will open (shown here with two previous checkouts):
+
+	![Open App dialog](attachments/on-premises-git-howto/open-app-dialog.png)
+	
+For the previous local disk method do the following:
+ 
+1. Select the **Locally on disk** option.
+1. In a file browser dialog box, browse to the directory containing your app and double-click the *.mpr* file (or select it and click **Open**):
+
+	![Open App Select File](attachments/on-premises-git-howto/open-app-select-file.png)
       
 ### 4.6 Uploading to the Private Git Server
 
@@ -193,17 +208,22 @@ The repository has to be completely empty (including README.md and. gitignore fi
 
 To upload your app project, do the following:
 
-1. Open the app project in Studio Pro and go to **Version Control > Upload to Version Control Server**.
+1.  Open the app project in Studio Pro and go to **Version Control > Upload to Version Control Server**:
+
     ![Upload to Version Control Server Menu](attachments/on-premises-git-howto/upload-to-vc-menu.png)
-2. In the **Upload to Version Control Server** dialog box, select **Private server**. 
-3. Select **Git** as the private server type (if you have both **Subversion** and **Git** enabled in the **Preferences Form**). 
-4. Enter the link to the repository you want to upload this app to and click **OK**.
+    
+1. In the **Upload to Version Control Server** dialog box, select **Private server**. 
+1. Select **Git** as the private server type (if you have both **Subversion** and **Git** enabled in the **Preferences Form**). 
+1.  Enter the link to the repository you want to upload this app to and click **OK**:
+
     ![Upload to Version Control Server dialog](attachments/on-premises-git-howto/upload-to-vc-server.png)
     It might ask you to sign into the server, depending on whether you have previously signed in and choose to stay logged in.
-5. You can see the upload process in the **Upload Project to Team Server** pop-up window:
+1.  You can see the upload process in the **Upload Project to Team Server** pop-up window:
+
     ![Upload Project to Team Server progress window](attachments/on-premises-git-howto/upload-project-to-team-server.png)
     
-The project is uploaded successfully. You can check on your private server and see that the app is now on the selected repository.
+The project is uploaded successfully. You can check on your private server and see that the app is now on the selected repository:
+
 ![Project Uploaded confirmation window](attachments/on-premises-git-howto/project-uploaded-confirmation.png)
 
 ### 4.7 Moving a Subversion App Project to Git
@@ -211,18 +231,26 @@ The project is uploaded successfully. You can check on your private server and s
 If you already have an existing versioned app project (with Subversion) that you would like to upload to your Git private server instead, you can export it, then re-import it, and uploading it to your server. Follow the steps below:
 
 1. Once the app is opened, go to **File > Export Project Package**. 
-2. In the **Export Project Package** dialog box, browse to the location you would like to save the `mpk` (Mendix Package) file, or accept the default location, a new **packages** folder in the root of the application folder. Take note of this location, as you will need it later. You can also rename the `mpk` file (e.g.`MyGitApp.mpk`) and the app will be named that way once you import it and upload it to the Git server.
+1.  In the **Export Project Package** dialog box, browse to the location you would like to save the *.mpk* (Mendix Package) file, or accept the default location, a new **packages** folder in the root of the application folder. Take note of this location, as you will need it later. You can also rename the *.mpk* file (e.g.*MyGitApp.mpk*) and the app will be named that way once you import it and upload it to the Git server:
+
     ![Export Project Package dialog](attachments/on-premises-git-howto/export-project-package-dialog.png)
-3. The **Progress** pop-up window appears, and once it is completed, you can close the project in **Studio Pro**.
+
+1.  The **Progress** pop-up window appears, and once it is completed, you can close the project in **Studio Pro**:
+
     ![Progress dialog](attachments/on-premises-git-howto/progress-dialog.png)
-4. Now you can import the project package again, and from there you can choose to upload it to your Git private server. Go to **File > Import Project Package**. 
+
+1.  Now you can import the project package again, and from there you can choose to upload it to your Git private server. Go to **File > Import Project Package**:
+
     ![Import Project Package menu](attachments/on-premises-git-howto/import-project-package-menu.png)
-5. Once the file browser dialog open, navigate to the location you save the `mpk` file during the export process.
-6. In the **Import Project Package** dialog box, select **Private server** option in the **Where should we store your App?** section. 
-7. In the **Private Server Type** option, select **Git** (if you have both **Subversion** and **Git** enabled in the **Preferences** form). 
-8. Enter the link to the private repository in the address textbox and click **OK**. Remember, the repository **must be completely empty**, or **Studio Pro** will not be able to upload a project to it.
+
+1. Once the file browser dialog box is open, navigate to the location you save the *.mpk* file during the export process.
+1. In the **Import Project Package** dialog box, select **Private server** option in the **Where should we store your App?** section. 
+1. In the **Private Server Type** option, select **Git** (if you have both **Subversion** and **Git** enabled in the **Preferences** form). 
+1.  Enter the link to the private repository in the address textbox and click **OK**. Remember, the repository **must be completely empty**, or **Studio Pro** will not be able to upload a project to it:
+
     ![Import Git Project Package menu](attachments/on-premises-git-howto/import-project-package-git-dialog.png)
-9. Click **OK**. 
+
+1. Click **OK**. 
 
 After the import process is completed, your previous Subversion app will be now versioned using Git.
 
@@ -232,7 +260,7 @@ Note that your previous app still exists, **Studio Pro** will simply make an unv
 
 ## 5 Read More
 
-* [Version Control](/refguide/version-control)
+* [Version Control Reference Guide](/refguide/version-control)
 * [Team Server Overview](/developerportal/develop/team-server)
-* [Upload to Version Control Server](/refguide/upload-to-version-control-dialog)
+* [Upload to Version Control Server Reference Guide](/refguide/upload-to-version-control-dialog)
 

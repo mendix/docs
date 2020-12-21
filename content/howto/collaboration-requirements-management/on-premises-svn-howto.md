@@ -1,9 +1,8 @@
 ---
 title: "Work with SVN On-Premises Version Control Server"
-category: "Collaboration"
 parent: "on-premises-howto"
 menu_order: 10
-tags: ["on-premises"]
+tags: ["on-premises", "svn", "version control"]
 ---
 
 ## 1 Introduction

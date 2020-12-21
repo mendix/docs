@@ -18,6 +18,8 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 #### Improvements
 
 * We removed the Model page. It contained tips on how to get started creating your apps. For this we now have the excellent [Academy Portal](https://academy.mendix.com/link/home)
+* We tweaked the styling of the user-story [History](/developerportal/collaborate/stories#history) page a little bit
+* We made [moving a user-story](/developerportal/collaborate/stories#move-stories) to another project more intuitive
 
 #### Fixes
 

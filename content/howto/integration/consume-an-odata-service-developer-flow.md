@@ -1,5 +1,5 @@
 ---
-title: "Consume an OData Service and Use External External Entities"
+title: "Consume an OData Service and use External Entities"
 category: "Integration"
 menu_order: 8.5
 tags: ["integration", "OData service", "data hub", "consume", "external entity", "OData service URL"]

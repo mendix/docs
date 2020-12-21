@@ -1,7 +1,10 @@
 ---
 title: "Share Data Between Apps"
 description: "Describes how-to create a Mendix app in Studio Pro which publishes a service to the Data Hub Catalog, and creating a second app which uses external entities from the first app."
-tags: ["data hub catalog", "data hub", "external entities", "landscape", "published OData service","how to", "consume"]
+tags: ["data hub catalog", "data hub", "external entities", "landscape", "published OData service" ,"how to", "consume"]
+aliases:
+    - /data-hub/data-hub-catalog/use-data-catalog.html
+    - /datahub/general/share-data/index.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -204,7 +207,7 @@ To do this follow these steps:
 
 12. Open the **Home_Web** page and, from **Project Explorer**, drag **Customers_Overview** into the **Auto-fill** container under the "Welcome" banner. Go ahead and add a new banner and welcome text.
 
-13. Click **Run** to deploy the app. The app will be deployed and a link established to the data associated with the **Customer** entity in the publishing app (**{yourname)CustomerServiceApp**) through the **{yourname)CustomerODataservice**.
+13. Click **Run** to deploy the app. The app will be deployed and a link established to the data associated with the **Customer** entity in the publishing app (**{yourname)CustomerServiceApp**) through the **{yourname)CustomerODataService**.
 
 ## 7 Viewing the Shared Data in Your New App 
 

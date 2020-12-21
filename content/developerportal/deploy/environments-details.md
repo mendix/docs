@@ -440,13 +440,25 @@ The Mendix Cloud uses runtime settings to configure the included systems for log
 
 Use the Custom Environment Variables to **add**, **Edit**, or **Delete** an environment variable.
 
-Unlike the Custom Runtime Settings, the variables you add have to be chosen from a drop-down list. The variables are:
+Unlike the Custom Runtime Settings, most of the variables you add are chosen from a drop-down list.
 
+Select **Supported** and you can choose from the following variables:
+
+* **APPMETRICS_TARGET** – setting this enables business events to be sent to a different monitoring solution from the technical events
 * **DD_API_KEY** – the API key used with Datadog
 * **DD_LOG_LEVEL** – the log level of logging sent to Datadog
+* **DD_SITE** – directs metrics to a specific Datadog region
 * **DATABASE_CONNECTION_PARAMS** – Additional JDBC parameters for PostgreSQL databases, see the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack) for more information
-* **APPMETRICS_TARGET** – setting this enables business events to be sent to a different monitoring solution from the technical events
+* **METRICS_AGENT_CONFIG** – passes a configuration JSON to control the metrics passed to Datadog
 * **SAMESITE_COOKIE_PRE_MX812** – set `SameSite=None;Secure` for all cookies coming from the Mendix runtime, as described in the [Running Your App in an Iframe](#iframe) section
+
+In addition, to support features which are in beta, you can add **Unsupported** environment variables. If you are involved in using a beta feature, you will be told what **Name** needs to be entered here and what the **Value** should be.
+
+![](attachments/environments-details/environment-variable.png)
+
+{{% alert type="info" %}}
+The *Unsupported* environment variables can only be used for controlling Mendix beta features.
+{{% /alert %}}
 
 ## 7 Maintenance Tab
 

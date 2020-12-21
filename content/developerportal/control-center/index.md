@@ -41,7 +41,13 @@ On the **External members** tab, you can see the members outside of your company
 
 ## 3 App Projects {#projects}
 
-On the **Active App Projects** tab of this page, you can see a list of the active app projects that belong to your company. The **Inactive App Projects** tab lists your company's [deactivated app projects](/developerportal/company-app-roles/deactivate-activate-app).
+On the **Active App Projects** tab of this page, you can see a list of the active app projects that belong to your company. The **Inactive App Projects** tab lists your company's deactivated app projects. The following details apply to deactivated app projects:
+
+* Only Free Apps can be deactivated
+* A deactivated app still exists in the company, but it is invisible to regular users 
+* Licensed apps with a node can only be offboarded by Mendix Support – to offboard an app, you must submit an [offboarding request](/developerportal/support/submit-support-request)
+
+[**Please verify these points are still accurate/relevant.**]
 
 When you click a **Project** name, a pop-up window opens with the project profile. The **Project Info** tab has the **Description** and **App ID** fields, which are also available on the [General](/developerportal/settings/general-settings) settings page for your app project in the Developer Portal. On the **Members** tab, you can see the active members and external members of the app project. The **Project Roles** tab presents the App Team roles defined via the **Default App Roles** tab and/or customized for a particular app project.
 

@@ -7,7 +7,7 @@ tags: ["integration", "publish"]
 ---
 
 {{% alert type="info" %}}
-App services are deprecated marked for removal. Use a [published web service](/refguide/published-web-services) or a [published REST service](/refguide/published-rest-services) instead.
+App services are deprecated and from version 8.18, are no longer supported. They are replaced by [published web services](/refguide/published-web-services) and [published REST services](/refguide/published-rest-services).
 {{% /alert %}}
 
 ## 1 Introduction

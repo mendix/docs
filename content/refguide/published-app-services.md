@@ -8,7 +8,7 @@ tags: ["studio pro"]
 ## 1 Introduction
 
 {{% alert type="info" %}}
-App services are deprecated and marked for removal. Use a [published web service](published-web-services) or a [published REST service](published-rest-services) instead.
+App services are deprecated and from version 8.18, are no longer supported. They are replaced by [published web services](published-web-services) and [published REST services](published-rest-services).
 {{% /alert %}}
 
 An app service can be created via **File** > **New Document**.

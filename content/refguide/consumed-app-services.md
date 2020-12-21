@@ -6,7 +6,7 @@ tags: ["studio pro"]
 ---
 
 {{% alert type="info" %}}
-App services are deprecated and marked for removal. Use a [consumed web service](consumed-web-services) to consume existing app services.
+App services are deprecated and from version 8.18, are no longer supported. Use a [consumed web service](consumed-web-services) to consume existing app services.
 {{% /alert %}}
 
 App services are a way of connecting Mendix applications to each other. An app service can be imported and its content can be used. As for now, app services provide the following content:

@@ -82,7 +82,6 @@ To replace the default Save button with a custom one, follow these steps:
 
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)
-* [How to Extend Your Application with Custom Java](extending-your-application-with-custom-java)
 * [How to Work With Lists in a Microflow](working-with-lists-in-a-microflow)
 * [How to Optimize Retrieve Activities](optimizing-retrieve-activities)
 * [How to Configure Error Handling](set-up-error-handling)

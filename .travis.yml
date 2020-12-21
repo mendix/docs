@@ -35,6 +35,9 @@ before_deploy:
   - cp ./_scripts/autopilot-linux $HOME/
   - chmod a+x $HOME/autopilot-linux
   - ./_scripts/before_deploy.sh
+  - travis_retry curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  - unzip -q awscliv2.zip
+  - sudo ./aws/install
 script:
   - ./node_modules/.bin/gulp build
 cache:

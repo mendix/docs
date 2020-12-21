@@ -4,6 +4,9 @@ category: "Company & App Roles"
 menu_order: 30
 description: "Describes the role of a Mendix Technical Contact."
 tags: ["Technical Contact","Settings","Developer Portal"]
+aliases:
+    - /developerportal/general/technical-contact.html
+    - /developerportal/settings/technical-contact.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

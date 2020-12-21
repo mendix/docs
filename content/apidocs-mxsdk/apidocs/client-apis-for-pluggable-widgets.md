@@ -344,7 +344,7 @@ Mendix platform exposes two versions of an `Icon` react component: `mendix/compo
 
 ## 6 Exposed Libraries {#exposed-libraries}
 
-### 6.1 React and React Native
+### 6.1 React and React Native {#exposed-react}
 
 Mendix platform re-export [react](https://www.npmjs.com/package/react), [react-dom](https://www.npmjs.com/package/react-dom), and [react-native](https://www.npmjs.com/package/react-native) packages to pluggable widgets. React is available to all components. React-dom is available only to components running in web or hybrid mobile apps. React-native is available only to components running in native mobile apps.
 

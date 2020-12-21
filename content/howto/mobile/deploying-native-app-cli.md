@@ -1,13 +1,13 @@
 ---
 title: "Deploy Your First Mendix Native Mobile App with the Native Builder CLI"
-parent: "build-native-apps"
-menu_order: 10
+parent: "use-cli-docs"
+menu_order: 20
 description: Describes how to deploy your first Mendix native mobile app with the Native Builder.
 tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
 ---
 
 {{% alert type="warning" %}}
-Please update to Native Builder v3.2.1. Native Builder v3.2.1 includes the fixes required to addresses GitHub's transition from using **master** to using **main** as its default repository branch name. 
+Please update to Native Builder v3.2.2. Native Builder v3.2.2 includes the fixes required to addresses GitHub's transition from using **master** to using **main** as its default repository branch name. 
 {{% /alert %}}
 
 ## 1 Introduction
@@ -57,7 +57,7 @@ The Native Builder needs to communicate with GitHub and App Center. Therefore, m
 3. Click [Developer settings](https://github.com/settings/apps) at the bottom of the left menu.
 4. Navigate to [Personal access tokens](https://github.com/settings/tokens) and then click **Generate new token** to create a new personal access token.
 5. In the **Note** field, write *Native Builder.*
-6. Under **Select scopes**, select **repo**.
+6. Under **Select scopes**, select **repo** and **workflows**.
 7. Click **Generate token**.
 8. Store your token in a secure place. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
 

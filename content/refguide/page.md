@@ -81,7 +81,7 @@ In **Structure mode**, there are several ways to add an element on a page:
       
     2. Select an element you would like to add and drag and drop this element on your page.
    
-2. Though the menu at the top of the page:
+2. Through the menu at the top of the page:
 
     1. Do one of the following:
 

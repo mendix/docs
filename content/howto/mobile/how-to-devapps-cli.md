@@ -1,7 +1,7 @@
 ---
 title: "Create a Custom Developer App with the Native Builder CLI"
-parent: "build-native-apps"
-menu_order: 50
+parent: "use-cli-docs"
+menu_order: 30
 description: A tutorial for creating custom developer apps.
 tags: ["native", "mobile", "developer", "native-builder", "developer app", "make it native"]
 ---

@@ -35,7 +35,7 @@ You can use the [Database Replication](https://appstore.home.mendix.com/link/app
 
 ## 2 Configuration
 
-After downloading the module, you should place the **DatabaseMapping** page in the menu or put both the **Database_Overview** and **TableMapping_Overview** pages in your menu. With these pages, you can create database connections and table mappings. 
+After downloading the module, you should place the **DatabaseMapping** page in the menu. With this page, you can create database connections and table mappings. 
 
 To use this module, you need a database connection definition and a table mapping. The connection definition points to the location of the database you want to import. The table mapping determines how this database will be mapped to your domain model.
 

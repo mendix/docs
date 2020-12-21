@@ -30,16 +30,20 @@ As a recovery model, Mendix only requires the **Simple** mode. The functionality
 
 After the database is created, the Mendix Runtime can initiate the initial setup and prepare all the tables and functions for usage by the platform. Some of these queries require `sysadmin` privileges. The `sysadmin` role can be temporarily assigned to the user, or these queries can be executed by the administrator. Other queries need privileges which are implicitly assigned to the `db_owner` role. If the user used by the Mendix Runtime does not have enough permissions for any of these queries, you can run them manually – see below for more information.
 
-## 3 Configuring the Read Committed Snapshot Isolation Level
+## 3 Enabling Read Committed Snapshot Isolation Level and Snapshot Isolation
+
+Mendix apps using SQL Server use both **Read Committed Snapshot** and **Snapshot Isolation** features for their database. This allows read operations to continue even if the record has been updated by a concurrent transaction, improving concurrency. For more information, see the [Transaction Locking and Row Versioning Guide](https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide?view=sql-server-ver15).
 
 {{% alert type="info" %}}
 You only need to follow these steps if the database user used by the Mendix Runtime does not have enough permission to issue the `ALTER DATABASE` command (usually the `sysadmin` role).
 {{% /alert %}}
 
-The database schema needs to be configured so that the **Read Committed Snapshot** feature is enabled. This can be achieved by executing the following command on the database:
+The database schema needs to be configured so that the **Read Committed Snapshot** and **Snapshot Isolation** features are enabled. This can be achieved by executing the following commands on the database:
 
 ```
 ALTER DATABASE [MySchema] SET READ_COMMITTED_SNAPSHOT ON;
+
+ALTER DATABASE [MySchema] SET ALLOW_SNAPSHOT_ISOLATION ON;
 ```
 {{% alert type="info" %}}
 You need to replace `MySchema` with the name of your schema.

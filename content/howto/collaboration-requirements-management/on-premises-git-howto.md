@@ -39,7 +39,7 @@ To use PAT (or another equivalent), you need to specify it in the **Password** f
 
 ![Sign In dialog](attachments/on-premises-git-howto/sign-in-dialog.png)
 
-For instruction on how to set up Personal Access Tokens, see the  or equivalent for the [Supported Git Service Providers](#supported-providers) section below.
+For instruction on how to set up Personal Access Tokens, see the [Supported Git Service Providers](#supported-providers) section below.
 
 ## 3 Supported Git Service Providers {#supported-providers}
 

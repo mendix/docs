@@ -11,12 +11,9 @@ Mendix Control Center is currently a Beta release. For details on what this mean
 
 ## 1 Introduction
 
-[**Please add some intro content needed. What is the purpose of Control Center?**]
+Users that sign up on the Mendix Platform will be able create new app projects, invite others to their app project teams, deploy their apps, and invite end-users to give feedback on apps, among many other activities. Insights into all these company activities are provided to you in the Control Center in one central overview. These insights will help you to be in control and remain aware of everything happening within the Mendix landscape of your company.
 
-[**How do you access Control Center? Only via URL, or will there be a Menu item in the community header?**]
-
-The [Mendix Control Center](https://controlcenter.mendix.com/) consists of the pages described below, which are for use by [Mendix Admins](#company). 
-
+The [Mendix Control Center](https://controlcenter.mendix.com/) consists of the pages described below, which are for use by [Mendix Admins](#company).
 
 If your company does not already have a Mendix Admin, you will see this landing page, which outlines the usage and goals of Control Center. You can also recommend a colleague for Mendix Admin status by clicking **Suggest a Mendix Admin**:
 
@@ -27,6 +24,8 @@ If your company does already have a Mendix Admin (but you yourself are not a Men
 ![](attachments/admin-exists.png)
 
 If you are a Mendix Admin, you will immediately see the **Members** page and can navigate to the pages described in the sections below.
+
+You can access Control Center via the menu item on the navigation pane.
 
 ## 2 Members
 
@@ -39,8 +38,6 @@ When you click a company member's name, a pop-up window opens with their member 
 On the **Inactive members** tab, you can see former members of your company who have been deactivated.
 
 On the **External members** tab, you can see the members outside of your company who have access to at least one of your company app projects. When you click an external member's name, a pop-up window will open with their member profile.
-
-[**Please verify "External members" description.**]
 
 ## 3 App Projects {#projects}
 

@@ -8,6 +8,7 @@ frontpage_featured: true
 
 These are the [Mendix Studio Pro](/refguide/index) major version release notes:
 
+* [9](9)
 * [8](8)
 * [7](7)
 * [6](6)
@@ -21,4 +22,3 @@ The Windows Service release notes can be found in [Windows Service](windows-serv
 For updates on the status of Team Server as well as deployment options and other Mendix services, see [Mendix Status](https://status.mendix.com/).
 
 More in-depth information about our latest features can be found on [Mendix Platform Releases](https://www.mendix.com/releases/).
-

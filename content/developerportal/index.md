@@ -22,7 +22,7 @@ Or, you can turn on the **New Navigation** option via the menu beneath your prof
 
 ![](attachments/new-navigation.jpg)
 
-Open and close the new navigation via the icon on the very left of the toolbar:
+In this navigation, you can access different parts of the Mendix Platform  via the icon on the very left of the toolbar:
 
 ![](attachments/dock.jpg)
 
@@ -40,7 +40,7 @@ In this navigation, you can access the following:
 * [Forum](#forum)
 * [Community](#community)
 
-On the very right side of the toolbar, click this icon to create a new app:
+On the very right side of the toolbar, you can search and access your [Mendix Profile](/developerportal/mendix-profile/). You can also click this icon to create a new app:
 
 ![](attachments/new-app.jpg)
 

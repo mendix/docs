@@ -28,7 +28,7 @@ You will not be able to use Mendix Studio for collaborative development if you u
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Make sure you have the right server provider. We currently only support Git Private Server. For more information, see the [Preparing Your Repository](#preparing-your-repo section. 
-* You have an unversioned Mendix app project. 
+* You have an unversioned Mendix app project. For more information, see the [Preparing Studio Pro](#preparing-studio-pro) section.
 * You have a feature flag enabled. For more information, see the [Preparing Studio Pro](#preparing-studio-pro) section.
 
 ## 3 Supported Authentication Mechanisms
@@ -39,13 +39,13 @@ To use PAT (or equivalent), you need to specify it in the **Password** field whe
 
 ![Sign In dialog](attachments/on-premises-git-howto/sign-in-dialog.png)
 
-See below for instructions on how to set up Personal Access Tokens or equivalent for the supported providers.
+For instruction on how to set up Personal Access Tokens, see the  or equivalent for the [Supported Git Service Providers](#supported-providers) section below.
 
 ## 3 Supported Git Service Providers {#supported-providers}
 
 ### 3.1 Azure Repos and Azure DevOps Server 
 
-We support both Microsoft’s [Azure Repos](https://azure.microsoft.com/en-us/services/devops/repos/) hosted Git service, as well as Azure DevOps Server (former Team Foundation Server) which is an on-premises solution for hosting your Git repos on the private infrastructure.
+We support both Microsoft’s [Azure Repos](https://azure.microsoft.com/en-us/services/devops/repos/) hosted Git service, and Azure DevOps Server (former Team Foundation Server) which is an on-premises solution for hosting your Git repos on the private infrastructure.
 
 To get a PAT for your user account, see the [Use personal access tokens](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page) instructions in the Microsoft documentation.
 
@@ -105,7 +105,7 @@ You need to create a private repository in the selected provider and create a Pe
 
 To interact with this private repository from Studio Pro, you need a link to the repository and a PAT.
 
-For more information, see the [Supported Git Service Providers](#supported-providers) section above.
+For more information on PAT, see the [Supported Git Service Providers](#supported-providers) section above.
 
 ### 4.2 Preparing Studio Pro {#preparing-studio-pro}
 
@@ -129,7 +129,7 @@ Create an unversioned app in Studio Pro.
 
 ![App Settings dialog](attachments/on-premises-git-howto/app-settings.png)
 
-Once the app is created, you can upload it to your private Git repository, using **Version Control > Upload to Version Control Server**. To upload it, see the steps in the [Uploading to the Private Git Server](#upload-to-private-git-server} section below.
+Once the app is created, you can upload it to your private Git repository. For more information on how to upload it, see the [Uploading to the Private Git Server](#upload-to-private-git-server} section below.
 
 ### 4.4 Downloading from a Private Repository
 
@@ -153,9 +153,9 @@ Now that you have a Git app on your server, you can download it to another direc
 
 The app is downloaded and ready to be used with version control.
 
-### 4.5 Opening the Existing Git App
+### 4.5 Opening the Existing Git App Project
 
-There are a few ways to open a Git Mendix app, as long as you have Studio Pro started up with the git flag mentioned in the [Preparing Studio Pro](#preparing-studio-pro) section.
+There are a few ways to open a Git Mendix app project, as long as you have Studio Pro started up with the git flag mentioned in the [Preparing Studio Pro](#preparing-studio-pro) section.
 
 #### 4.5.1 Recent Apps List
 
@@ -182,19 +182,18 @@ In the form, there are two ways to open a Git app:
     - Select the **Locally on disk** option.
     - In a file browser dialog box, browse to the directory containing your app and double-click the `.mpr` file (or select it and click **Open**). 
         ![Open App Select File](attachments/on-premises-git-howto/open-app-select-file.png)
-    - The app is now open in **Studio Pro**.
-
+      
 ### 4.6 Uploading to the Private Git Server
 
-Once you have an unversioned app, you can upload it to your private team server. 
+Once you have an unversioned app project, you can upload it to your private team server. 
 
 {{% alert type="warning" %}}
 The repository has to be completely empty (including README.md and. gitignore files), or the upload will fail.
 {{% /alert %}}
 
-To upload your app, do the following:
+To upload your app project, do the following:
 
-1. Open the app in Studio Pro and go to **Version Control > Upload to Version Control Server**.
+1. Open the app project in Studio Pro and go to **Version Control > Upload to Version Control Server**.
     ![Upload to Version Control Server Menu](attachments/on-premises-git-howto/upload-to-vc-menu.png)
 2. In the **Upload to Version Control Server** dialog box, select **Private server**. 
 3. Select **Git** as the private server type (if you have both **Subversion** and **Git** enabled in the **Preferences Form**). 
@@ -207,9 +206,10 @@ To upload your app, do the following:
 The project is uploaded successfully. You can check on your private server and see that the app is now on the selected repository.
 ![Project Uploaded confirmation window](attachments/on-premises-git-howto/project-uploaded-confirmation.png)
 
-### 4.7 “Converting” a Subversion App to Git
+### 4.7 Moving a Subversion App Project to Git
 
-If you already have an existing versioned app (with Subversion) that you would like to upload to your Git private server instead, you can export it, then re-import it, and uploading it to your server. Follow the steps below:
+If you already have an existing versioned app project (with Subversion) that you would like to upload to your Git private server instead, you can export it, then re-import it, and uploading it to your server. Follow the steps below:
+
 1. Once the app is opened, go to **File > Export Project Package**. 
 2. In the **Export Project Package** dialog box, browse to the location you would like to save the `mpk` (Mendix Package) file, or accept the default location, a new **packages** folder in the root of the application folder. Take note of this location, as you will need it later. You can also rename the `mpk` file (e.g.`MyGitApp.mpk`) and the app will be named that way once you import it and upload it to the Git server.
     ![Export Project Package dialog](attachments/on-premises-git-howto/export-project-package-dialog.png)

@@ -2739,26 +2739,7 @@ module.exports = {
 	/****************************************************
      * From Studio (potentially temporary until the support of old bundles stops, mapped)
      ****************************************************/
-	{
-      from: "/refguide/web-modeler/domain-models-association-properties-wm",
-      to: "/studio/domain-models-association-properties"
-    },
-	{
-      from: "/refguide/web-modeler",
-      to: "/studio/"
-    },
-	{
-      from: "/refguide/web-modeler/microflows-wm",
-      to: "/studio/microflows"
-    },
-	{
-      from: "/refguide/web-modeler/microflows-expressions-wm",
-      to: "/studio/microflows-expressions"
-    },
-	{
-      from: "/refguide/web-modeler/app-settings-wm",
-      to: "/studio/settings-widget-overview"
-    },	
+	
 	{
       from: "/studio/general-collaborative-development",
       to: "/studio/collaborative-development"

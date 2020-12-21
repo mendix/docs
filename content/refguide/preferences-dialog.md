@@ -86,10 +86,8 @@ Select this option when you want to work on an app that is not stored in [Mendix
 #### 4.3.1 Enable Private Version Control with Git {#enable}
 
 {{% alert type="info" %}}
-Only appears when a feature flag for Git is enabled.
+Only appears when a feature flag for Git is enabled. For more information on how to enable the feature flag, see the [Enabling Feature Flag](/howto/collaboration-requirements-management/on-premises-git-howto#enable-feature-flag) section in *How to Work with Git On-Premises Version Control Server*.
 {{% /alert %}}
-
-{{% todo %}}[Add a cross-reference on how to enable a feature flag]{{% /todo %}}
 
 Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/develop/team-server), but in a private Git server to which you have access. This will allow you to specify the location of the app on the Git server when opening, downloading, or uploading the app. In this section, you also need to specify name and email values that will be used to identify your commits with Git.
 

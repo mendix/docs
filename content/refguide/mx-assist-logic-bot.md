@@ -36,7 +36,7 @@ For more information on preferences, see [Preferences](preferences-dialog).
 
 MxAssist Logic Bot is enabled by default and is displayed as a blue dot in the flow of a [microflow](https://docs.mendix.com/refguide/microflows). A bow-tie appears on the dot when you hover over it:
 
-![Logic Bot Icon](attachments/mx-assist-logic-bot/mendix-assist-icon.png)
+{{% image_container width="350" %}}![Logic Bot Icon](attachments/mx-assist-logic-bot/mendix-assist-icon.png){{% /image_container %}}
 
 It is possible to add elements to the microflow in a regular way without using MxAssist Logic Bot, however, MxAssist Logic Bot helps you add elements to the microflow faster as it suggests a short list of the most relevant activities. 
 

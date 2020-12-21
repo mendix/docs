@@ -28,8 +28,8 @@ You will not be able to use Mendix Studio for collaborative development if you u
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Make sure you have the right server provider. We currently only support Git Private Server. For more information, see the [Preparing Your Repository](#preparing-your-repo section). 
-* You have an unversioned Mendix app project. For more information, see the [Preparing Studio Pro](#preparing-studio-pro) section.
-* You have a feature flag enabled. For more information, see the [Preparing Studio Pro](#preparing-studio-pro) section.
+* You have a feature flag enabled. For more information, see the [Enabling a Feature Flag](#enable-feature-flag) section.
+* You have an unversioned Mendix app project. For more information, see the [Creating an App](##create-app) section.
 
 ## 3 Supported Authentication Mechanisms
 
@@ -108,7 +108,7 @@ To interact with this private repository from Studio Pro, you need a link to the
 
 For more information on PAT, see the [Supported Git Service Providers](#supported-providers) section above.
 
-### 4.2 Preparing Studio Pro {#preparing-studio-pro}
+### 4.2 Enabling a Feature Flag {#enable-feature-flag}
 
 To use Git, you need to start Studio Pro with a specific feature flag. Navigate to the directory where Studio Pro is located, specifically where the **studiopro.exe** file is. There are two ways to enable the feature flag: 
 
@@ -131,7 +131,7 @@ To use Git, you need to start Studio Pro with a specific feature flag. Navigate 
 
 Studio Pro now is set up to support Git.
 
-### 4.3 Creating an App
+### 4.3 Creating an App {#create-app}
 
 Create an unversioned app in Studio Pro:
 
@@ -163,7 +163,7 @@ The app is downloaded and ready to be used with version control.
 
 ### 4.5 Opening the Existing Git App Project
 
-There are a few ways to open a Git Mendix app project, as long as you have Studio Pro started up with the git flag mentioned in the [Preparing Studio Pro](#preparing-studio-pro) section.
+There are a few ways to open a Git Mendix app project, as long as you have Studio Pro started up with the [git feature flag](#enable-feature-flag).
 
 #### 4.5.1 Recent Apps List
 

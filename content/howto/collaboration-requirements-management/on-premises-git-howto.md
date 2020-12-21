@@ -7,9 +7,9 @@ tags: ["on-premises", "git", "version control"]
 
 ## 1 Introduction
 
-When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/develop/team-server) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see [Version Control](/refguide/version-control).	
+When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/develop/team-server) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see the [Version Control Reference Guide](/refguide/version-control).	
 
-While this is the recommended way of working for almost all Mendix developers, you may prefer to store your application's files in a system that is controlled by your own organization. For version control, Mendix uses the [Subversion](https://subversion.apache.org) system (also known as SVN) and [Git](on-premises-git-howto). This how-to describes how to work with Git version control system.	
+While using Team Server is the recommended for most Mendix developers, you may prefer to store your application's files in a system controlled by your own organization. For version control, Mendix uses the [Subversion](https://subversion.apache.org) system (also known as SVN) and [Git](on-premises-git-howto). This how-to describes how to work with Git version control system.	
 
 {{% alert type="info" %}}	
 This how-to will not describe how to set up a Git server from scratch; typically, this will be taken care of by the IT department of your organization.	
@@ -33,9 +33,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Supported Authentication Mechanisms
 
-Currently, we only support HTTP Basic authentication for Git service providers. With most providers this means the use of Personal Access Tokens (PATs).
+Currently, we only support HTTP Basic authentication for Git service providers. With most providers this takes the form of using of Personal Access Tokens (PATs).
 
-To use PAT (or equivalent), you need to specify it in the **Password** field when Studio Pro requests to enter credentials for the version control server:
+To use PAT (or another equivalent), you need to specify it in the **Password** field when Studio Pro requests credentials for the version control server:
 
 ![Sign In dialog](attachments/on-premises-git-howto/sign-in-dialog.png)
 

@@ -16,7 +16,7 @@ As a Company Admin, you can deactivate and activate apps within your company. Th
 
 ## 2 Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this how-to, make sure you have completed the following prerequisite:
 
 * To deactivate or activate an app, make sure you have the **Company Admin** role in your company
 

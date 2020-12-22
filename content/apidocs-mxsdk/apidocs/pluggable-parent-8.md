@@ -8,6 +8,6 @@ tags: ["API", "pluggable","widget"]
 
 The following Mendix 8 pluggable widget API documents are available here:
 
-* [Client APIs Available to Pluggable Widgets for Mendix 8](client-apis-for-pluggable-widgets-8)
-* [Pluggable Widget Property Types for Mendix 8](property-types-pluggable-widgets-8)
-* [How to Build Pluggable Widgets for Mendix 8](studio-apis-for-pluggable-widgets-8)
+* [Client APIs Available to Pluggable Widgets](client-apis-for-pluggable-widgets-8) for Mendix 8
+* [Pluggable Widget Property Types](property-types-pluggable-widgets-8) for Mendix 8
+* [How to Build Pluggable Widgets](studio-apis-for-pluggable-widgets-8) for Mendix 8

@@ -152,7 +152,7 @@ For server-based installations, the following storage types mounted by the OS ar
 
 For Mendix Native and Hybrid apps and the [Mendix Mobile app](getting-the-mendix-app):
 
-* latest 2 major versions of iOS, that is iOS 12 and above
+* latest 2 major versions of iOS, at this moment those are iOS 12 and above
 * Android 5.0 and above
 
 ### 11.1 Hybrid Apps Preview

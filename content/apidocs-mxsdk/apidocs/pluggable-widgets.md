@@ -280,7 +280,6 @@ Here is how a caption and description look in Studio Pro:
 
 ## 8 Read More
 
-* [Client APIs Available to Pluggable Widgets](client-apis-for-pluggable-widgets)
-* [Pluggable Widget Property Types](property-types-pluggable-widgets)
-* [How to Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)
+* Pluggable Widget API information for [Mendix 9](pluggable-parent-9)
+* Pluggable Widget API information for [Mendix 8](pluggable-parent-8)
 

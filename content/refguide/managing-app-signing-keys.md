@@ -103,4 +103,4 @@ After creating the keystore file, upload it to Adobe PhoneGap Build on your [acc
 1. Go to the **Signing Keys** tab and click **Add a key** under **Android**. 
 2. Select the keystore file, fill in a title for the key, and fill in the alias that you noted down in the previous step. 
 3. After uploading the keystore file, unlock the key. Click the yellow lock icon on the right of the key and fill in both the keystore and the key passwords. The key is now ready to be used by your build job.
-4. In the [Developer Portal](https://sprintr.home.mendix.com/index.html), navigate to **Deploy** > **Mobile app**, and click the **Publish for Mobile App Stores** button. Then click the **Start PhoneGap Build job** button.
+4. In the [Developer Portal](https://sprintr.home.mendix.com/index.html), navigate to **Deploy > Mobile app**, and click the **Publish for Mobile App Stores** button. Then click the **Start PhoneGap Build job** button.

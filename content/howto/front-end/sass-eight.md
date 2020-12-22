@@ -206,9 +206,9 @@ You may encounter certain issues when styling your app using Gulp and Sass. Here
 
 ### 7.1 Theme Folder Issues
 
-When using UX-theming in Mendix 8, some issues might occur with an infinite loop or folders not being recognized.
+When using UX-theming in Mendix 9, some issues might occur with an infinite loop or folders not being recognized.
 
-This is probably because your theme folder has changes. The Mendix 8 theme structure uses distinct folders for **web** and **native** styling files. Make sure you set the following folders correctly in your Gulpfile:
+This is probably because your theme folder has changes. The Mendix 9 theme structure uses distinct folders for **web** and **native** styling files. Make sure you set the following folders correctly in your Gulpfile:
 
 ```js
 // What is the name of the style folder in this theme folder?

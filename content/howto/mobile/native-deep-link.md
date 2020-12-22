@@ -239,7 +239,7 @@ Next you will implement the deep link handler nanoflow **DL_ShowUrlDetails** so 
 1. Add a **Parse URL to Object** activity to your nanoflow. Double-click it and configure it like this:
 
 	![parse url](attachments/native-deep-link/parse-url.png)
-   
+
 1. Add a **Show message** activity to the right of your **Parse URL to Object** activity.
 1. Double-click the **Show message** activity.
 1. In **Template** write *Your deep link callback URL {1} host = {2}*.

@@ -8,7 +8,7 @@ description: "Describes the development workflow for working with oData and exte
 
 ## 1 Introduction
 
-Licensed users of Mendix Data Hub can also consume published OData Services during app development without using the [Data Hub pane](/refguide/data-hub-pane) when, for example, trying out published OData Services which may not be registered in the [Data Hub Catalog](/data-hub/data-hub-catalog), or when working with locally deployed apps and their [published OData services](/refguide/published-odata-services).
+Licensed users of Mendix Data Hub can also directly consume published OData Services in their projects without using the functionality of the [Data Hub Catalog](/data-hub/data-hub-catalog) through the [Data Hub pane.](/refguide/data-hub-pane) This can save time when, for example, trying out [published OData services](/refguide/published-odata-services) of locally deployed apps that are being developed or testing services that may not be registered in the [Data Hub Catalog](/data-hub/data-hub-catalog).
 
 Developers can consume published OData services by specifying the service metadata URL or a (local) metadata file in the [Consumed OData Service](/refguide/consumed-odata-service) document.  The service will be listed in  the **Data Hub Project** pane and  the exposed entities can be dragged into the domain model as [External Entities](/refguide/external-entities).  
 
@@ -33,7 +33,7 @@ Before starting this how-to you will need the following:
 
 * Have a URL of a valid published OData v3 or v4 metadata contract:
 
-	* An example OData service URL which will not be published in your organization's Data Hub is decribed in [Sample file from OData.org](#sampleODataservice). 
+	* An example OData service URL ???which will not be published in your organization's ???Data Hub is decribed in [Sample file from OData.org](#sampleODataservice). 
 	
 	* An example is given for a simple Mendix app in [Mendix Published OData Service](#how-to-file).
 
@@ -84,7 +84,7 @@ When you search for a data source in the [Data Hub](/refguide/data-hub-pane) pan
 
 If you want to model using an OData service that is not registered in the Data Hub Catalog, or you are developing services that are not ready to register in the **Data Hub Catalog**, you can use the procedure given in this how-to. By specifying the URL of your OData service you can consume the service directly into your model and see the exposed entities in the **Data Hub** project panel and easily drag them into your domain model. 
 
-During app development and testing phases this means that you can deploy your app locally and without taking up a cloud slot which can speed up a process that may involve several iterations.
+During app development and testing phases this means that you can deploy your app locally and without taking up a cloud slot which can speed up the process that may involve several iterations.
 
 Follow these steps to consume a published Odata service directly using the URL:
 
@@ -160,7 +160,7 @@ Your resulting app, which you can also deploy locally, will show the consumed en
 
 ## 7 Consuming from the Data Hub after Offline Modeling
 
-If you now want to connect to the same service that is published in the Data Hub Catalog then you can change the service metadata URL in the **Consumed_OData_Service** document under the **Metadata** tab and the default value for the **Service URL** for the **Constant** so that the connections can be made to the datasets for the service.
+If you now want to connect to the same service that is published??? in the Data Hub Catalog then you can change the service metadata URL in the **Consumed_OData_Service** document under the **Metadata** tab and the default value for the **Service URL** for the **Constant** so that the connections can be made to the datasets for the service.
 
 Alternatively, you can search for the published service in the **Data Hub Catalog** and recreate your model, and the assoicated documents will be automatically created when your drag the entities into your domain model with the relevant information. 
 

@@ -106,12 +106,10 @@ The package can contain a single example of one of the following:
 * XML schema
 * Export mapping
 * Import mapping
-* Consumed app service (deprecated)
 * Consumed web service
 * Published REST service
 * Published web service
 * Published OData service
-* Published app service (deprecated)
 
 To import module objects, follow these steps:
 

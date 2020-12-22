@@ -318,14 +318,9 @@ An object with the following key-value pairs:
      "Url" :  "https://calc-accp.mendixcloud.com",
      "ModelVersion" :  "1.1.0.253",
      "MendixVersion" :  "6.10.10",
-     "Production" :  "false",
-     "RuntimeLayer": "v4.13.2"
+     "Production" :  "false"
 }
 ```
-
-{{% alert type="info" %}}
-`RunTimeLayer` is available when the app is deployed using buildpack v4.13 and above.
-{{% /alert %}}
 
 ### 3.6 Start Environment {#start-environment}
 

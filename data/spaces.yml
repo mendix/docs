@@ -53,7 +53,7 @@ howto7:
     - "Testing"
     - "Monitoring & Troubleshooting"
     - "Collaboration & Requirements Management"
-howto:
+howto8:
   space: "Studio Pro 8 How-to's"
   priority: 7
   mendix_version: 8
@@ -69,6 +69,25 @@ howto:
     - "Security"
     - "Testing"
     - "Monitoring & Troubleshooting"
+howto:
+  space: "Studio Pro 9 How-to's"
+  priority: 8
+  mendix_version: 9
+  menu_categories:  
+    - "General Info"
+    - "Collaboration"
+    - "Front-End"
+    - "Mobile"
+    - "Data Models"
+    - "Logic & Business Rules"
+    - "Integration"
+    - "Extensibility"
+    - "Security"
+    - "Testing"
+    - "Monitoring & Troubleshooting"
+  banner:
+    type: 'info'
+    text: 'You are browsing the documentation for Mendix 9, which is currently a beta release. For more information, see <a href="/releasenotes/beta-features/index">Mendix Beta Features</a>.'
 refguide6:
   space: "Mendix 6 Reference Guide"
   priority: false
@@ -96,7 +115,7 @@ refguide7:
     - "SAP"
     - "IBM"
     - "Siemens MindSphere"
-refguide:
+refguide8:
   space: "Studio Pro 8 Guide"
   priority: 8
   mendix_version: 8
@@ -107,6 +126,20 @@ refguide:
     - "Mendix Runtime"
     - "Mobile"
     - "Java Programming"
+refguide:
+  space: "Studio Pro 9 Guide"
+  priority: 9
+  mendix_version: 9
+  menu_categories:
+    - "General Info"
+    - "App Modeling"
+    - "Version Control"
+    - "Mendix Runtime"
+    - "Mobile"
+    - "Java Programming"
+  banner:
+    type: 'info'
+    text: 'You are browsing the documentation for Mendix 9, which is currently a beta release. For more information, see <a href="/releasenotes/beta-features/index">Mendix Beta Features</a>.'
 releasenotes:
   space: "Release Notes"
   priority: false
@@ -136,6 +169,23 @@ developerportal:
     - "Community Tools"
     - "Mendix Support"
 studio:
+  space: "Studio 9 Guide"
+  priority: false
+  menu_categories:
+    - "General Info"
+    - "Pages"
+    - "Working with Data"
+    - "Navigation Document"
+    - "Microflows"
+    - "Previewing & Publishing Your App"
+    - "Checks"
+    - "Theme Customizer"
+    - "Settings"    
+    - "Collaboration"
+  banner:
+    type: 'info'
+    text: 'You are browsing the documentation for Mendix 9, which is currently a beta release. For more information, see <a href="/releasenotes/beta-features/index">Mendix Beta Features</a>.'
+studio8:
   space: "Studio 8 Guide"
   priority: false
   menu_categories:
@@ -149,16 +199,6 @@ studio:
     - "Theme Customizer"
     - "Settings"    
     - "Collaboration"
-studio-how-to:
-  space: "Studio 8 How-to's"
-  priority: false
-  menu_categories:
-    - "Pages"
-    - "Configure a Navigation Bar"
-    - "Configure a Domain Model"
-    - "Secure Your App and Configure Access to Its Functionality"
-    - "Microflows"
-    - "Customize the Design of Your App"
 studio7:
   space: "Mendix 7 Studio Guide"
   priority: false
@@ -175,6 +215,29 @@ studio7:
     - "Theme Customizer"
     - "Settings"
     - "Starting With Your Own Data"
+studio-how-to:
+  space: "Studio 9 How-to's"
+  priority: false
+  menu_categories:
+    - "Pages"
+    - "Configure a Navigation Bar"
+    - "Configure a Domain Model"
+    - "Secure Your App and Configure Access to Its Functionality"
+    - "Microflows"
+    - "Customize the Design of Your App"
+  banner:
+    type: 'info'
+    text: 'You are browsing the documentation for Mendix 9, which is currently a beta release. For more information, see <a href="/releasenotes/beta-features/index">Mendix Beta Features</a>.'
+studio-how-to8:
+  space: "Studio 8 How-to's"
+  priority: false
+  menu_categories:
+    - "Pages"
+    - "Configure a Navigation Bar"
+    - "Configure a Domain Model"
+    - "Secure Your App and Configure Access to Its Functionality"
+    - "Microflows"
+    - "Customize the Design of Your App"
 partners:
   space: "Strategic Partners Guide"
   priority: false

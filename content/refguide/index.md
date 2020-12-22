@@ -1,18 +1,18 @@
 ---
-title: "Studio Pro 8 Guide"
+title: "Studio Pro 9 Guide"
 description: "The various sections of the Mendix Studio Pro Guide provide details on the features and functionality of the Mendix Platform."
 tags: ["studio pro"]
 ---
 
 ## 1 Introduction
 
-The *Mendix Studio Pro 8 Guide* covers important topics concerning [Studio Pro](modeling), the [Mendix Runtime](runtime), and other components of the Mendix Platform.
+The *Mendix Studio Pro 9 Guide* covers important topics concerning [Studio Pro](modeling), the [Mendix Runtime](runtime), and other components of the Mendix Platform.
 
-Before installing Studio Pro 8, please read [System Requirements](system-requirements). For information on how to install Studio Pro, see [How to Install Mendix Studio Pro](/howto/general/install).
+Before installing Studio Pro 9, please read [System Requirements](system-requirements). For information on how to install Studio Pro, see [How to Install Mendix Studio Pro](/howto/general/install).
 
-If you have been using Desktop Modeler version 7, we recommend reading [Moving from Desktop Modeler Version 7 to Studio Pro Version 8](moving-from-7-to-8).
+If you have been using Studio Pro version 8, we recommend reading [Moving from Studio Pro Version 8 to Studio Pro Version 8](moving-from-8-to-9).
 
-If you are looking for step-by-step guides on performing various Mendix actions, browse the [Studio Pro 8 How-to's](/howto).
+If you are looking for step-by-step guides on performing various Mendix actions, browse the [Studio Pro 9 How-to's](/howto).
 
 ## 2 Studio Pro Functionality
 
@@ -38,7 +38,7 @@ For more information on options for deploying your app see [Deployment](/develop
 
 ## 4 Mendix Runtime
 
-The [Mendix Runtime](runtime) executes the application model that is created in Studio Pro. It is included in the Studio Pro 8 Guide as it is uses the same version numbering. 
+The [Mendix Runtime](runtime) executes the application model that is created in Studio Pro. It is included in the Studio Pro 9 Guide as it is uses the same version numbering. 
 
 ## 5 Mobile
 
@@ -46,7 +46,7 @@ Mobile app development allows you to create native mobile and hybrid apps and an
 
 ## 6 Guide Categories
 
-The *Studio Pro 8 Guide* is divided into the following categories:
+The *Studio Pro 9 Guide* is divided into the following categories:
 
 {{% category_block %}}
 

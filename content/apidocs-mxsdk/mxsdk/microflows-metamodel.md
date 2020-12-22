@@ -172,7 +172,7 @@ An app service call action points to a specific app service action (which is par
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
-[Consumed App Services](/refguide/consumed-app-services) |[AppServiceCallAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.appservicecallaction.html)
+[AppServiceCallAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.appservicecallaction.html)
 |[AppServiceAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/appservices.appserviceaction.html)
 |[AppServiceCallParameterMapping](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.appservicecallparametermapping.html)
 |[AppServiceActionParameter](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/appservices.appserviceactionparameter.html)

@@ -103,12 +103,23 @@ On the **Security History** tab, you can click **Show Security History** to open
 
 ## 8 Cloud
 
-The **Cloud Environments** tab on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's **Resource pack** and **Fallback**.
+The **Cloud Environments** tab on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy#plans) and **Fallback** (meaning, a standard or premium plan). 
 
-[**How to define "Resource pack" and "Fallback" here, as these terms are not used in relation to Mendix Cloud in documentation?**]
+[**Mark: Please verify definitions for resource pack and fallback above. Any cross-reference to implement for "fallback"? Do we need more documentation on fallbacks, especially as users will need to understand that when requesting via App Node below?**]
 
 ![](attachments/cloud.png)
 
-[**See if can get screenshot with sidebar menu**]
+[**Get screenshot with sidebar menu**]
+
+There are three other pages accessible from this tab where you can perform other Mendix Cloud operations:
+
+* **Add Node** – click this to request a new app node for a specific app and environment
+* **Resize Environment** – click this to request a container size change
+* **Offboard Environment** – click this to offboard an app
+
+[**Mark: Please expand definitions of operations above and add useful cross-references for app node, container, offboard**]
+
+[**Mark: Please verify what will happen with this page and Support's involvement when Control Center comes out: https://docs.mendix.com/developerportal/support/new-app-node-request-template#1-requesting-a-new-license**]
+
 
 

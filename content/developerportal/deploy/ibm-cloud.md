@@ -16,7 +16,7 @@ This document describes two ways of managing IBM Cloud:
 * Initial setup of the environment when creating a new app: see the section [Set Up IBM Cloud environment for the First Time](#FirstTime)
 * Create a new environment for an existing app: see the section [Create a New Environment](#NewEnvironment)
 
-## 2 Set Up IBM Cloud Environment for the First Time{#FirstTime}
+## 2 Set Up IBM Cloud Environment for the First Time {#FirstTime}
 
 Before you can manage your IBM Cloud environment using the Developer Portal, you will need to set it up. There are two circumstances in which you will have to set up IBM Cloud for the first time.
 
@@ -24,7 +24,7 @@ Before you can manage your IBM Cloud environment using the Developer Portal, you
 
 2. You are creating a new app from an IBM app template. See [New IBM App](#NewIBMApp).
 
-### 2.1 Change Cloud Settings{#ChangeCloudSettings}
+### 2.1 Change Cloud Settings {#ChangeCloudSettings}
 
 In this scenario, you have an existing app which is running in another environment: for instance, on the Mendix Cloud. To change this, go to the Cloud Settings tab of the General Settings in the Development Portal.
 
@@ -40,13 +40,13 @@ Click **Set up IBM Cloud** and you will be taken to IBM Cloud welcome page.
 
 Click **Getting Started** and then continue with [Set Up Region](#SetUpRegion).
 
-### 2.2 New IBM App{#NewIBMApp}
+### 2.2 New IBM App {#NewIBMApp}
 
 In this scenario, you choose a Mendix app template for IBM and give it a name.
 
 Once the app has been created you can continue with [Set Up Region](#SetUpRegion).
 
-### 2.3 Set Up Region{#SetUpRegion}
+### 2.3 Set Up Region {#SetUpRegion}
 
 You are now prompted with an IBM Cloud login screen. Select the region where your IBM Cloud is located.
 
@@ -71,13 +71,9 @@ If you do not choose a Custom database, you will still be able to choose from a 
 
 If you select **Yes** for **Custom database?**, you will be asked for the Name and the Plan.
 
-After the environment has been created successfully, you will see the following page:
-
-![](attachments/ibm-cloud/02-ibm-configured-for-use.png)
-
 Your development environment is now configured and you can now develop your app.
 
-## 3 Create a New Environment{#NewEnvironment}
+## 3 Create a New Environment {#NewEnvironment}
 
 You can create several environments for your app. For example, you may have created a development environment, but you may want environments for test, acceptance, production, and so forth. Additionally, when you switch from another cloud you need to create at least one environment for your Mendix application.
 
@@ -95,17 +91,13 @@ This is done from the **Environments** page of the Developer Portal:
 
     If no session is active for that region, or the current session does not have access to that region, you will be asked for your IBM credentials for that region.
 
-3.  Select the **Domain**, **Organization**, and **Space** of your app. The URL of the domain will form part of the application's URL. The URL of the application will be this:
+3.  Select the **Domain**, **Organization**, and **Space** of your app. The URL of the domain will form part of the application's URL. The URL of the application will be this:  `{appname}-{environment name}.{domain}`
 
-    ```
-    {appname}-{environment name}.{domain}
-    ```
-  
-    This is an example URL:
+	This is an example URL:
 
-    ```http
-    https://myApp-Development.eu-gb.mybluemix.net
-    ```
+	```http
+	https://myApp-Development.eu-gb.mybluemix.net
+	```
 
     ![](attachments/ibm-cloud/07-ibm-env-1.png)
 
@@ -179,7 +171,7 @@ You will still have to deploy your app in the Developer Portal the very first ti
 
 When the package is ready to be deployed, a green tick will be shown next to the deployment package. To deploy your package, follow the instructions in the [Deploy Package](#DeployPackage) section, below.
 
-## 5 Deploy Package{#DeployPackage}
+## 5 Deploy Package {#DeployPackage}
 
 ### 5.1 Deploy to an Environment
 
@@ -193,7 +185,7 @@ When the package is ready to be deployed, a green tick will be shown next to the
 
 3.  Click **Transport** to deploy the package to the IBM Cloud environment. This will replace any current app deployed to this environment. If the app is already running, you will be asked to stop it so that your new app can be deployed.
 
-### 5.2 Configure the Application{#ConfigureTheApplication}
+### 5.2 Configure the Application {#ConfigureTheApplication}
 
 1. You will see confirmation of the package which has been transported.
 
@@ -220,12 +212,12 @@ When the package is ready to be deployed, a green tick will be shown next to the
     ![](attachments/ibm-cloud/start-application.png)
 
     {{% alert type="info" %}}This will bind any services which are in the status **Services To Be Bound**.{{% /alert %}}
- 
+
 7. When the application has been started you will receive a confirmation message. Click **OK** and you will be taken to the Environment Details page for the selected environment. See [Environment Details](#EnvironmentDetails), below.
 
     ![](attachments/ibm-cloud/application-started.png)
 
-## 6 Transport App Between Environments{#TransportApp}
+## 6 Transport App Between Environments {#TransportApp}
 
 1. Click **Transport** on the source environment you want to transport to another environment. Environments without deployed apps will have the transport button grayed out and cannot be transported.
 
@@ -239,7 +231,7 @@ When the package is ready to be deployed, a green tick will be shown next to the
 
 When the app has been transported you will be on the page **Configure the Application**. This has the same options as the **Deploy** pages which are described above in the [Configure the Application](#ConfigureTheApplication) section.
 
-## 7 Environment Details{#EnvironmentDetails}
+## 7 Environment Details {#EnvironmentDetails}
 
 The environment details page contains three tabs: General, Model Options and Services. Open the environment details by clicking **Details** on an environment on the Environments page of the Development Portal. You will also be taken to this page when you successfully deploy or transport your app.
 

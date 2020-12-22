@@ -94,3 +94,7 @@ Before Mendix 9, Mendix could ensure data uniqueness using either the Mendix run
 If your project is still using Mendix runtime for uniqueness validation, then you should set the custom runtime setting `DataStorage.EnableDiagnostics` to `true`  to check for potential data redundancy issues that might exist in the database. 
 
 If any are found, an error like **An error occured while initializing the Runtime: Detected unique constraing violation...** will be logged. To solve this, your project will have to be prepared before moving to Mendix 9. You can obtain the tools you need by [submitting a support request](/developerportal/support/submit-support-request).
+
+## 6 Client API Changes
+
+Client APIs that were deprecated and marked for removal in Mendix 9 were indeed removed. We also have updated the versions of `big.js`, `react`, `react-native`, and a few others libraries shipped with the Client and available to Custom and Pluggable Widgets and to JavaScript Actions. Please refer to **Breaking Changes** section of [release notes](/releasnotes/studio-pro/9.0#breaking-changes) for more details.

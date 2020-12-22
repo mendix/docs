@@ -33,14 +33,14 @@ module.exports = {
       to: "/howto8/mobile/customizing-phonegap-build-packages"
     },
 	/****************************************************
-     * Reference Guide version 7 (permanent, unmapped)
+     * Desktop Modeler Reference Guide version 7 (permanent, unmapped)
      ****************************************************/	
 	{
       from: "/refguide/moving-from-6-to-7",
       to: "/refguide7/moving-from-6-to-7"
     },
 	/****************************************************
-     * How-to's version 8 (permanent, unmapped)
+     * Studio Pro How-to's version 8 (permanent, unmapped)
      ****************************************************/
     {
       from: "/howtogeneral/bestpractices/ux-best-practices",
@@ -59,7 +59,7 @@ module.exports = {
       to: "/howto8/front-end/configuring-your-theme"
     },
 	/****************************************************
-     * How-to's version 7 (permanent, unmapped)
+     * Desktop Modeler How-to's version 7 (permanent, unmapped)
      ****************************************************/	
 	{
       from: "/howto7/ux/configuring-your-theme",
@@ -187,357 +187,357 @@ module.exports = {
 	/****************************************************
      * PERMANENT REDIRECTS FROM PRODUCTS
      ****************************************************/	
-    	/****************************************************
+    /****************************************************
      * From Studio Pro version 9 (permanent, mapped)
      ****************************************************/
 	{
-    from: "/refguide9/modeler",
-    to: "/refguide/modeling"
-  },
-{
-    from: "/refguide9/Modeler",
-    to: "/refguide/modeling"
-  },
-{
-    from: "/refguide9/desktop-modeler",
-    to: "/refguide/modeling"
-  },
-{
-    from: "/refguide9/desktop-modeler-overview",
-    to: "/refguide/studio-pro-overview"
-  },
-{
-    from: "/refguide9/download-from-team-server-dialog",
-    to: "/refguide/download-from-version-control-dialog"
-  },
-{
-    from: "/refguide9/open-project-dialog",
-    to: "/refguide/open-app-dialog"
-  },
-{
-    from: "/refguide9/upload-to-team-server-dialog",
-    to: "/refguide/upload-to-version-control-dialog"
-  },
-{
-    from: "/refguide9/microflow-expressions",
-    to: "/refguide/expressions"
-  },
-{
-    from: "/deployment/cloud-foundry/",
-    to: "/developerportal/deploy/cloud-foundry-deploy"
-  },	
-{
-    from: "/howto9/solving-load-and-import-errors",
-    to: "/howto/monitoring-troubleshooting/solving-load-and-import-errors"
-  },
-{
-    from: "/refguide9/drop-down-widget",
-    to: "/refguide/drop-down"
-  },
-{
-    from: "/refguide9/horizontal-split-pane",
-    to: "/refguide/scroll-container"
-  },
-{
-    from: "/refguide9/vertical-split-pane",
-    to: "/refguide/scroll-container"
-  },
-{
-    from: "/refguide9/Select++Elements",
-    to: "/refguide/select--elements"
-  },
-{
-    from: "/refguide9/Developing+Hybrid+Mobile+Apps",
-    to: "/refguide/developing-hybrid-mobile-apps"
-  },
-{
-    from: "/refguide9/enumeration-values",
-    to: "/refguide/enumerations"
-  },
-{
-    from: "/refguide9/inheritance-split",
-    to: "/refguide/object-type-decision"
-  },
-{
-    from: "/refguide9/exclusive-split",
-    to: "/refguide/decision"
-},
-{
-    from: "/refguide9/menu-item",
-    to: "/refguide/menu"
-  },
-{
-    from: "/refguide9/Show+Page",
-    to: "/refguide/show-page"
-  },
-{
-    from: "/refguide9/Validation+Feedback",
-    to: "/refguide/validation-feedback"
-  },
-{
-    from: "/refguide9/Show+Message",
-    to: "/refguide/show-message"
-  },
-{
-    from: "/refguide9/Show+Home+Page",
-    to: "/refguide/show-home-page"
-  },
-{
-    from: "/refguide9/Download+File",
-    to: "/refguide/download-file"
-  },
-{
-    from: "/refguide9/Close+Form",
-    to: "/refguide/close-page"
-  },
-{
-    from: "/refguide9/Row+(document+template)",
-    to: "/refguide/row-document-template"
-  },
-{
-    from: "/refguide9/row-(document-template)",
-    to: "/refguide/row-document-template"
-  },
-{
-    from: "/refguide9/Table+(document+template",
-    to: "/refguide/table-document-template"
-  },
-{
-    from: "/refguide9/table-(document-template)",
-    to: "/refguide/table-document-template"
-  },
-{
-    from: "/refguide9/Cell+(document+template)",
-    to: "/refguide/cell-document-template"
-  },
-{
-    from: "/refguide9/cell-(document-template)",
-    to: "/refguide/cell-document-template"
-  },
-{
-    from: "/refguide9/Static+Image+(document+template)",
-    to: "/refguide/static-image-document-template"
-  },
-{
-    from: "/refguide9/static-image-(document-template)",
-    to: "/refguide/static-image-document-template"
-  },
-{
-    from: "/refguide9/Title+(document+template)",
-    to: "/refguide/title-document-template"
-  },
-{
-    from: "/refguide9/title-(document-template)",
-    to: "/refguide/title-document-template"
-  },
-{
-    from: "/refguide9/Static+label+(document+template)",
-    to: "/refguide/static-label-document-template"
-  },
-{
-    from: "/refguide9/static-label-(document-template)",
-    to: "/refguide/static-label-document-template"
-  },
-{
-    from: "/refguide9/Page+Break+(document+template)",
-    to: "/refguide/page-break-document-template"
-  },
-{
-    from: "/refguide9/page-break-(document-template)",
-    to: "/refguide/page-break-document-template"
-  },
-{
-    from: "/refguide9/Line+Break+(document+template)",
-    to: "/refguide/line-break-document-template"
-  },
-{
-    from: "/refguide9/line-break-(document-template)",
-    to: "/refguide/line-break-document-template"
-  },
-{
-    from: "/refguide9/Header+(document+template)",
-    to: "/refguide/header-document-template"
-  },
-{
-    from: "/refguide9/header-(document-template)",
-    to: "/refguide/header-document-template"
-  },
-{
-    from: "/refguide9/Footer+(document+template)",
-    to: "/refguide/footer-document-template"
-  },
-{
-    from: "/refguide9/footer-(document-template)",
-    to: "/refguide/footer-document-template"
-  },
-{
-    from: "/refguide9/Dynamic+label+(document+template)",
-    to: "/refguide/dynamic-label-document-template"
-  },
-{
-    from: "/refguide9/dynamic-label-(document-template)",
-    to: "/refguide/dynamic-label-document-template"
-  },
-{
-    from: "/refguide9/Template+Grid+(document+template)",
-    to: "/refguide/template-grid-document-template"
-  },
-{
-    from: "/refguide9/template-grid-(document-template)",
-    to: "/refguide/template-grid-document-template"
-  },
-{
-    from: "/refguide9/Data+Grid+(document+template)",
-    to: "/refguide/data-grid-document-template"
-  },
-{
-    from: "/refguide9/Sort+Bar",
-    to: "/refguide/sort-bar"
-  },
-{
-    from: "/refguide9/Columns+(document+template)",
-    to: "/refguide/columns-document-template"
-  },
-{
-    from: "/refguide9/Dynamic+Image+(document+template)",
-    to: "/refguide/dynamic-image-document-template"
-  },
-{
-    from: "/refguide9/dynamic-image-(document-template)",
-    to: "/refguide/dynamic-image-document-template"
-  },
-{
-    from: "/refguide9/Data+View+(document+template)",
-    to: "/refguide/data-view-document-template"
-  },
-{
-    from: "/refguide9/data-view-(document-template)",
-    to: "/refguide/data-view-document-template"
-  },
-{
-    from: "/refguide9/Document+Templates",
-    to: "/refguide/document-templates"
-  },
-{
-    from: "/refguide9/tab-page",
-    to: "/refguide/tab-container"
-  },
-{
-  from: "/refguide9/action-button",
-    to: "/refguide/button-widgets"
-  },
-{
-  from: "/refguide9/drop-down-button",
-    to: "/refguide/button-widgets"
-  },
-{
-  from: "/refguide9/image-property",
-    to: "/refguide/image"
-  },
-{
-  from: "/refguide9/grid-action-button",
-    to: "/refguide/control-bar"
-  },
-{
-  from: "/refguide9/remove-button",
-    to: "/refguide/control-bar"
-  },
-{
-  from: "/refguide9/select-button",
-    to: "/refguide/control-bar"
-  },
-{
-  from: "/refguide9/add-button",
-    to: "/refguide/control-bar"
-  },
-{
-  from: "/refguide9/deselect-all-button",
-    to: "/refguide/control-bar"
-  },
-{
-  from: "/refguide9/export-to-csv-button",
-    to: "/refguide/control-bar"
-  },
-{
- from: "/refguide9/export-to-excel-button",
-    to: "/refguide/control-bar"
-  },
-{
-  from: "/refguide9/grid-new-button",
-    to: "/refguide/control-bar"
-  },
-{
-  from: "/refguide9/search-button",
-    to: "/refguide/control-bar"
-  },
-{
-  from: "/refguide9/select-all-button",
-    to: "/refguide/control-bar"
-  },
-{
-  from: "/refguide9/comparison-search-field",
-    to: "/refguide/search-bar"
-  },
-{
-  from: "/refguide9/drop-down-search-field",
-    to: "/refguide/search-bar"
-  },
-{
-  from: "/refguide9/range-search-field",
-    to: "/refguide/search-bar"
-  },
-  {
-    from: "/refguide9/opening-pages",
-    to: "/refguide/on-click-event"
-  },
-  {
-    from: "/refguide9/starting-microflows",
-    to: "/refguide/on-click-event"
-  },
-{
-    from: "/refguide9/app-settings-dialog",
-    to: "/refguide/new-project"
-  },
-  {
-    from: "/refguide9/annotation-flow",
-    to: "/refguide/annotation"
-  },
-{
-    from: "/refguide9/close-form",
-    to: "/refguide/close-page"
-  },
-{
-    from: "/refguide9/columns-(document-template)",
-    to: "/refguide/columns-document-template"
-  },
-{
-    from: "/refguide9/consumed-odata-services",
-    to: "/refguide/published-odata-services"
-  },
-{
-    from: "/refguide9/data-grid-(document-template)",
-    to: "/refguide/data-grid-document-template"
-  },
-{
-    from: "/refguide9/module-role",
-    to: "/refguide/module-security"
-  },
-{
-    from: "/refguide9/page-template",
-    to: "/refguide/page-templates"
-  },
-{
-    from: "/refguide9/user-role",
-    to: "/refguide/user-roles"
-  },
- {
-    from: "/refguide9/link-button",
-    to: "/refguide/button-widgets"
-  },
-{
-    from: "/refguide9/sign-out-button",
-    to: "/refguide/button-widgets"
-  },
+      from: "/refguide9/modeler",
+      to: "/refguide/modeling"
+	},
+	{
+      from: "/refguide9/Modeler",
+      to: "/refguide/modeling"
+	},
+	{
+      from: "/refguide9/desktop-modeler",
+      to: "/refguide/modeling"
+	},
+	{
+      from: "/refguide9/desktop-modeler-overview",
+      to: "/refguide/studio-pro-overview"
+	},
+	{
+      from: "/refguide9/download-from-team-server-dialog",
+      to: "/refguide/download-from-version-control-dialog"
+	},
+	{
+      from: "/refguide9/open-project-dialog",
+      to: "/refguide/open-app-dialog"
+	},
+	{
+      from: "/refguide9/upload-to-team-server-dialog",
+      to: "/refguide/upload-to-version-control-dialog"
+	},
+	{
+      from: "/refguide9/microflow-expressions",
+      to: "/refguide/expressions"
+	},
+	{
+      from: "/deployment/cloud-foundry/",
+      to: "/developerportal/deploy/cloud-foundry-deploy"
+	},	
+	{
+      from: "/howto9/solving-load-and-import-errors",
+      to: "/howto/monitoring-troubleshooting/solving-load-and-import-errors"
+	},
+	{
+      from: "/refguide9/drop-down-widget",
+      to: "/refguide/drop-down"
+	},
+	{
+      from: "/refguide9/horizontal-split-pane",
+      to: "/refguide/scroll-container"
+	},
+	{
+      from: "/refguide9/vertical-split-pane",
+      to: "/refguide/scroll-container"
+	},
+	{
+      from: "/refguide9/Select++Elements",
+      to: "/refguide/select--elements"
+	},
+	{
+      from: "/refguide9/Developing+Hybrid+Mobile+Apps",
+      to: "/refguide/developing-hybrid-mobile-apps"
+	},
+	{
+      from: "/refguide9/enumeration-values",
+      to: "/refguide/enumerations"
+	},
+	{
+      from: "/refguide9/inheritance-split",
+      to: "/refguide/object-type-decision"
+	},
+	{
+      from: "/refguide9/exclusive-split",
+      to: "/refguide/decision"
+	},
+	{
+      from: "/refguide9/menu-item",
+      to: "/refguide/menu"
+	},
+	{
+      from: "/refguide9/Show+Page",
+      to: "/refguide/show-page"
+	},
+	{
+      from: "/refguide9/Validation+Feedback",
+      to: "/refguide/validation-feedback"
+	},
+	{
+      from: "/refguide9/Show+Message",
+      to: "/refguide/show-message"
+	},
+	{
+      from: "/refguide9/Show+Home+Page",
+      to: "/refguide/show-home-page"
+	},
+	{
+      from: "/refguide9/Download+File",
+      to: "/refguide/download-file"
+	},
+	{
+      from: "/refguide9/Close+Form",
+      to: "/refguide/close-page"
+	},
+	{
+      from: "/refguide9/Row+(document+template)",
+      to: "/refguide/row-document-template"
+	},
+	{
+      from: "/refguide9/row-(document-template)",
+      to: "/refguide/row-document-template"
+	},
+	{
+      from: "/refguide9/Table+(document+template",
+      to: "/refguide/table-document-template"
+	},
+	{
+      from: "/refguide9/table-(document-template)",
+      to: "/refguide/table-document-template"
+	},
+	{
+      from: "/refguide9/Cell+(document+template)",
+      to: "/refguide/cell-document-template"
+	},
+	{
+      from: "/refguide9/cell-(document-template)",
+      to: "/refguide/cell-document-template"
+	},
+	{
+      from: "/refguide9/Static+Image+(document+template)",
+      to: "/refguide/static-image-document-template"
+	},
+	{
+      from: "/refguide9/static-image-(document-template)",
+      to: "/refguide/static-image-document-template"
+	},
+	{
+      from: "/refguide9/Title+(document+template)",
+      to: "/refguide/title-document-template"
+	},
+	{
+      from: "/refguide9/title-(document-template)",
+      to: "/refguide/title-document-template"
+	},
+	{
+      from: "/refguide9/Static+label+(document+template)",
+      to: "/refguide/static-label-document-template"
+	},
+	{
+      from: "/refguide9/static-label-(document-template)",
+      to: "/refguide/static-label-document-template"
+	},
+	{
+      from: "/refguide9/Page+Break+(document+template)",
+      to: "/refguide/page-break-document-template"
+	},
+	{
+      from: "/refguide9/page-break-(document-template)",
+      to: "/refguide/page-break-document-template"
+	},
+	{
+      from: "/refguide9/Line+Break+(document+template)",
+      to: "/refguide/line-break-document-template"
+	},
+	{
+      from: "/refguide9/line-break-(document-template)",
+      to: "/refguide/line-break-document-template"
+	},
+	{
+      from: "/refguide9/Header+(document+template)",
+      to: "/refguide/header-document-template"
+	},
+	{
+      from: "/refguide9/header-(document-template)",
+      to: "/refguide/header-document-template"
+	},
+	{
+      from: "/refguide9/Footer+(document+template)",
+      to: "/refguide/footer-document-template"
+	},
+	{
+      from: "/refguide9/footer-(document-template)",
+      to: "/refguide/footer-document-template"
+	},
+	{
+      from: "/refguide9/Dynamic+label+(document+template)",
+      to: "/refguide/dynamic-label-document-template"
+	},
+	{
+      from: "/refguide9/dynamic-label-(document-template)",
+      to: "/refguide/dynamic-label-document-template"
+	},
+	{
+      from: "/refguide9/Template+Grid+(document+template)",
+      to: "/refguide/template-grid-document-template"
+	},
+	{
+      from: "/refguide9/template-grid-(document-template)",
+      to: "/refguide/template-grid-document-template"
+	},
+	{
+      from: "/refguide9/Data+Grid+(document+template)",
+      to: "/refguide/data-grid-document-template"
+	},
+	{
+      from: "/refguide9/Sort+Bar",
+      to: "/refguide/sort-bar"
+	},
+	{
+      from: "/refguide9/Columns+(document+template)",
+      to: "/refguide/columns-document-template"
+	},
+	{
+      from: "/refguide9/Dynamic+Image+(document+template)",
+      to: "/refguide/dynamic-image-document-template"
+	},
+	{
+      from: "/refguide9/dynamic-image-(document-template)",
+      to: "/refguide/dynamic-image-document-template"
+	},
+	{
+      from: "/refguide9/Data+View+(document+template)",
+      to: "/refguide/data-view-document-template"
+	},
+	{
+      from: "/refguide9/data-view-(document-template)",
+      to: "/refguide/data-view-document-template"
+	},
+	{
+      from: "/refguide9/Document+Templates",
+      to: "/refguide/document-templates"
+	},
+	{
+      from: "/refguide9/tab-page",
+      to: "/refguide/tab-container"
+	},
+	{
+      from: "/refguide9/action-button",
+      to: "/refguide/button-widgets"
+	},
+	{
+      from: "/refguide9/drop-down-button",
+      to: "/refguide/button-widgets"
+	},
+	{
+      from: "/refguide9/image-property",
+      to: "/refguide/image"
+	},
+	{
+      from: "/refguide9/grid-action-button",
+      to: "/refguide/control-bar"
+	},
+	{
+      from: "/refguide9/remove-button",
+      to: "/refguide/control-bar"
+	},
+	{
+      from: "/refguide9/select-button",
+      to: "/refguide/control-bar"
+	},
+	{
+      from: "/refguide9/add-button",
+      to: "/refguide/control-bar"
+	},
+	{
+      from: "/refguide9/deselect-all-button",
+      to: "/refguide/control-bar"
+	},
+	{
+      from: "/refguide9/export-to-csv-button",
+      to: "/refguide/control-bar"
+	},
+	{
+      from: "/refguide9/export-to-excel-button",
+      to: "/refguide/control-bar"
+	},
+	{
+      from: "/refguide9/grid-new-button",
+      to: "/refguide/control-bar"
+	},
+	{
+      from: "/refguide9/search-button",
+      to: "/refguide/control-bar"
+	},
+	{
+      from: "/refguide9/select-all-button",
+      to: "/refguide/control-bar"
+	},
+	{
+      from: "/refguide9/comparison-search-field",
+      to: "/refguide/search-bar"
+	},
+	{
+      from: "/refguide9/drop-down-search-field",
+      to: "/refguide/search-bar"
+	},
+	{
+      from: "/refguide9/range-search-field",
+      to: "/refguide/search-bar"
+	},
+	{
+      from: "/refguide9/opening-pages",
+      to: "/refguide/on-click-event"
+	},
+	{
+      from: "/refguide9/starting-microflows",
+      to: "/refguide/on-click-event"
+	},
+	{
+      from: "/refguide9/app-settings-dialog",
+      to: "/refguide/new-project"
+	},
+	{
+      from: "/refguide9/annotation-flow",
+      to: "/refguide/annotation"
+	},
+	{
+      from: "/refguide9/close-form",
+      to: "/refguide/close-page"
+	},
+	{
+      from: "/refguide9/columns-(document-template)",
+      to: "/refguide/columns-document-template"
+	},
+	{
+      from: "/refguide9/consumed-odata-services",
+      to: "/refguide/published-odata-services"
+	},
+	{
+      from: "/refguide9/data-grid-(document-template)",
+      to: "/refguide/data-grid-document-template"
+	},
+	{
+      from: "/refguide9/module-role",
+      to: "/refguide/module-security"
+	},
+	{
+      from: "/refguide9/page-template",
+      to: "/refguide/page-templates"
+	},
+	{
+      from: "/refguide9/user-role",
+     to: "/refguide/user-roles"
+	},
+	{
+      from: "/refguide9/link-button",
+      to: "/refguide/button-widgets"
+	},
+	{
+      from: "/refguide9/sign-out-button",
+      to: "/refguide/button-widgets"
+	},
 	/****************************************************
      * From Studio Pro version 8 (permanent, mapped)
      ****************************************************/

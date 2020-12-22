@@ -1,7 +1,7 @@
 ---
 title: "Mendix 8"
 parent: "pluggable-widgets"
-menu_order: 10
+menu_order: 20
 description: Information on Pluggable Widget API.
 tags: ["API", "pluggable","widget"]
 ---

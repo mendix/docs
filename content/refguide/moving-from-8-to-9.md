@@ -1,5 +1,5 @@
 ---
-title: "Moving from Mendix 8 to Mendix 9"
+title: "Moving from Mendix Studio Pro 8 to 9"
 category: "General Info"
 menu_order: 20
 description: "Provides details on updating your project from Mendix 8 to Mendix 9, including sections on converting your project and deprecated features."

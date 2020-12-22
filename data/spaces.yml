@@ -87,7 +87,7 @@ howto:
     - "Monitoring & Troubleshooting"
   banner:
     type: 'info'
-    text: 'You are browsing the documentation for Mendix 9, which is currently a <a href="/releasenotes/beta-features/index">beta release</a>. If you are looking for Mendix 8 documentation, see <a href="/howto8/index">Studio Pro 8 How-to's</a>.'
+    text: 'You are browsing the documentation for Mendix 9, which is currently a <a href="/releasenotes/beta-features/index">beta release</a>. If you are looking for Mendix 8 documentation, see <a href="/howto8/index">Studio Pro 8 How-tos</a>.'
 refguide6:
   space: "Mendix 6 Reference Guide"
   priority: false
@@ -227,7 +227,7 @@ studio-how-to:
     - "Customize the Design of Your App"
   banner:
     type: 'info'
-    text: 'You are browsing the documentation for Mendix 9, which is currently a <a href="/releasenotes/beta-features/index">beta release</a>. If you are looking for Mendix 8 documentation, see <a href="/studio-how-to8/index">Studio 8 How-to's</a>.'
+    text: 'You are browsing the documentation for Mendix 9, which is currently a <a href="/releasenotes/beta-features/index">beta release</a>. If you are looking for Mendix 8 documentation, see <a href="/studio-how-to8/index">Studio 8 How-tos</a>.'
 studio-how-to8:
   space: "Studio 8 How-to's"
   priority: false

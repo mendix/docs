@@ -1,6 +1,6 @@
 ---
 title: "Preview Appearance APIs for Pluggable Widgets"
-parent: "pluggable-widgets"
+parent: "pluggable-widgets-8"
 menu_order: 30
 description: A guide for understanding the APIs which influence pluggable widget preview appearances.
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React", "Preview"]

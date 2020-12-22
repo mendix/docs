@@ -1,6 +1,6 @@
 ---
 title: "Pluggable Widget Property Types"
-parent: "pluggable-widgets"
+parent: "pluggable-widgets-8"
 menu_order: 20
 description: A guide for understanding pluggable widgets' property types.
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]

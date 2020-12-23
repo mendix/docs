@@ -147,27 +147,28 @@ For server-based installations, the following storage types mounted by the OS ar
 * Mozilla Firefox (latest stable desktop version)
 * Apple Safari (latest stable desktop version and latest version for each [supported iOS](#mobileos) version)
 * Microsoft Edge (latest stable desktop version)
-* Microsoft Internet Explorer 11
 
-## 11 Hybrid Preview
+## 11 Mobile Operating Systems {#mobileos}
 
-Using a hybrid preview is not the same as using an emulator. A hybrid preview only shows a resized view of an app to give an impression of what that app might look like on a mobile device. Some hybrid app functionality will not be supported in this browser view. Full tests always need to be done on a device or emulator. Offline apps can only be previewed in Google Chrome.
+For Mendix Native and Hybrid apps and the [Mendix Mobile app](getting-the-mendix-app):
 
-## 12 Mobile Operating Systems {#mobileos}
-
-For Mendix apps and the [Mendix Mobile app](getting-the-mendix-app):
-
-* iOS 12 and above
+* latest 2 major versions of iOS, at this moment those are iOS 12 and above
 * Android 5.0 and above
 
-## 13 MxBuild {#mxbuild}
+### 11.1 Hybrid Apps Preview
+
+Using a hybrid preview feature is not the same as testing an app on a phone or simulator. A hybrid preview only shows a resized view of an app to give an impression of what that app might look like on a mobile device. Some hybrid app functionality will not be supported in this browser view. Full tests always need to be done on a device or emulator. Offline apps can only be previewed in Google Chrome.
+
+Also note Hybrid Apps cannot be tested in Android Emulator, but only on a real device.
+
+## 12 MxBuild {#mxbuild}
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](mxbuild).
 
 * Mono v5.20.x or .NET v4.7.2
 * JDK 11
 
-## 14 mx Command-Line Tool {#mxtool}
+## 13 mx Command-Line Tool {#mxtool}
 
 The **mx** command-line tool is a Windows and Linux command-line tool that can be used to do useful things with your Mendix app project. For more information, see [mx Command-Line Tool](mx-command-line-tool).
 

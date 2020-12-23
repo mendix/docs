@@ -13,6 +13,18 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2020
 
+### December 23rd, 2020
+
+#### Improvements
+
+* We tweaked the styling of the **Stories** > [Project History](/developerportal/collaborate/stories#history) page.
+* We made [moving a story](/developerportal/collaborate/stories#move-stories) to another app project more intuitive.
+* We removed the Model page, which contained tips on how to get started creating your apps.
+
+#### Fixes
+
+* We fixed an issue where replies to Buzz notifications were not properly processed into comments on your [app Buzz](/developerportal/collaborate/buzz#app-buzz) page. (Ticket 111076)
+
 ### December 2nd, 2020
 
 #### Improvements

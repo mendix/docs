@@ -132,7 +132,7 @@ For container-based deployments using Docker, Kubernetes, or Cloud Foundry, the 
 
 For container-mounted storage in Kubernetes, provided by an external storage class, see also [Run Mendix on Kubernetes](/developerportal/deploy/run-mendix-on-kubernetes).
 
-###  9.2 Storage types for Servers
+###  9.2 Storage Types for Servers
 
 For server-based installations, the following storage types mounted by the OS are supported:
 
@@ -150,16 +150,16 @@ For server-based installations, the following storage types mounted by the OS ar
 
 ## 11 Mobile Operating Systems {#mobileos}
 
-For Mendix Native and Hybrid apps and the [Mendix Mobile app](getting-the-mendix-app):
+For Mendix native apps, hybrid apps, and the [Mendix Mobile app](getting-the-mendix-app) the following operating systems are supported:
 
-* latest 2 major versions of iOS, at this moment those are iOS 12 and above
+* Latest two major versions of iOS
 * Android 5.0 and above
 
 ### 11.1 Hybrid Apps Preview
 
 Using a hybrid preview feature is not the same as testing an app on a phone or simulator. A hybrid preview only shows a resized view of an app to give an impression of what that app might look like on a mobile device. Some hybrid app functionality will not be supported in this browser view. Full tests always need to be done on a device or emulator. Offline apps can only be previewed in Google Chrome.
 
-Also note Hybrid Apps cannot be tested in Android Emulator, but only on a real device.
+Hybrid apps cannot be tested in Android Emulator, only on a real device.
 
 ## 12 MxBuild {#mxbuild}
 

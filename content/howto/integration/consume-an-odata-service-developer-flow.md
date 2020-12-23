@@ -31,11 +31,11 @@ Before starting this how-to you will need the following:
 
 * Be familiar with app modeling using [external entities](/refguide/external-entities)
 
-* Have a URL of a valid published OData v3 or v4 metadata contract:
+* Have the URL of a valid published OData v3 or v4 metadata contract to consume. For the purposes of this how-to you can use any of the following examples:
 
-	* An example OData service URL ???which will not be published in your organization's ???Data Hub is decribed in [Sample file from OData.org](#sampleODataservice). 
+	* An example OData service URL is provided in [Sample file from OData.org](#sampleODataservice)
 	
-	* An example is given for a simple Mendix app in [Mendix Published OData Service](#how-to-file).
+	* You can use the example service for a simple Mendix app described in the section [Mendix Published OData Service](#how-to-file).
 
 	In both cases, you can try the steps for [consuming from a URL](#consumeurl), or download the service contract to your computer and follow the steps for [consuming from a file](#consumefile)
 	
@@ -160,7 +160,7 @@ Your resulting app, which you can also deploy locally, will show the consumed en
 
 ## 7 Consuming from the Data Hub after Offline Modeling
 
-If you now want to connect to the same service that is published??? in the Data Hub Catalog then you can change the service metadata URL in the **Consumed_OData_Service** document under the **Metadata** tab and the default value for the **Service URL** for the **Constant** so that the connections can be made to the datasets for the service.
+If you now want to connect to the same service that is published??? (currently users have no way of finding this) ???in the Data Hub Catalog then you can change the service metadata URL in the **Consumed_OData_Service** document under the **Metadata** tab and the default value for the **Service URL** for the **Constant** so that the connections can be made to the datasets for the service.
 
 Alternatively, you can search for the published service in the **Data Hub Catalog** and recreate your model, and the assoicated documents will be automatically created when your drag the entities into your domain model with the relevant information. 
 

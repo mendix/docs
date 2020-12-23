@@ -132,7 +132,7 @@ For container-based deployments using Docker, Kubernetes, or Cloud Foundry, the 
 
 For container-mounted storage in Kubernetes, provided by an external storage class, see also [Run Mendix on Kubernetes](/developerportal/deploy/run-mendix-on-kubernetes).
 
-###  9.2 Storage types for Servers
+###  9.2 Storage Types for Servers
 
 For server-based installations, the following storage types mounted by the OS are supported:
 
@@ -147,27 +147,28 @@ For server-based installations, the following storage types mounted by the OS ar
 * Mozilla Firefox (latest stable desktop version)
 * Apple Safari (latest stable desktop version and latest version for each [supported iOS](#mobileos) version)
 * Microsoft Edge (latest stable desktop version)
-* Microsoft Internet Explorer 11
 
-## 11 Hybrid Preview
+## 11 Mobile Operating Systems {#mobileos}
 
-Using a hybrid preview is not the same as using an emulator. A hybrid preview only shows a resized view of an app to give an impression of what that app might look like on a mobile device. Some hybrid app functionality will not be supported in this browser view. Full tests always need to be done on a device or emulator. Offline apps can only be previewed in Google Chrome.
+For Mendix native apps, hybrid apps, and the [Mendix Mobile app](getting-the-mendix-app) the following operating systems are supported:
 
-## 12 Mobile Operating Systems {#mobileos}
-
-For Mendix apps and the [Mendix Mobile app](getting-the-mendix-app):
-
-* iOS 12 and above
+* Latest two major versions of iOS
 * Android 5.0 and above
 
-## 13 MxBuild {#mxbuild}
+### 11.1 Hybrid Apps Preview
+
+Using a hybrid preview feature is not the same as testing an app on a phone or simulator. A hybrid preview only shows a resized view of an app to give an impression of what that app might look like on a mobile device. Some hybrid app functionality will not be supported in this browser view. Full tests always need to be done on a device or emulator. Offline apps can only be previewed in Google Chrome.
+
+Hybrid apps cannot be tested in Android Emulator, only on a real device.
+
+## 12 MxBuild {#mxbuild}
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](mxbuild).
 
 * Mono v5.20.x or .NET v4.7.2
 * JDK 11
 
-## 14 mx Command-Line Tool {#mxtool}
+## 13 mx Command-Line Tool {#mxtool}
 
 The **mx** command-line tool is a Windows and Linux command-line tool that can be used to do useful things with your Mendix app project. For more information, see [mx Command-Line Tool](mx-command-line-tool).
 

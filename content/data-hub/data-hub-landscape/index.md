@@ -1,7 +1,7 @@
 ---
 title: "Data Hub Landscape"
 description: "Describes using Data Hub Landscape to search for and look at registered assets"
-tags: ["data hub catalog", "data hub", "virtual entities", "landscape", "published odata service"]
+tags: ["data hub catalog", "data hub", "external entities", "landscape", "published odata service"]
 ---
 
 ## 1 Introduction
@@ -15,7 +15,7 @@ In the Landscape, you will see, at a glance, the network of deployments of the a
 * All the services published from an app (deployed to a specific environment) and the entities that are exposed in the service
 * Details of the selected nodes
 This visual display of registered assets will enable you to:
-* Decide on the relevance of available entities by seeing the apps that they are consumed by
+* Decide on the relevance of available assets by seeing the apps that they are consumed by
 * Discover the context of the data being shared by the network of nodes for a service and the deploying app
 * From the displayed network of dependencies, ascertain the differences between the services by seeing how the shared data is used
 
@@ -25,7 +25,7 @@ You can access the Data Hub Landscape from [Mendix Data Hub](https://hub.mendix.
 
 ### 2.1 Structure and Flow of Data
 
-A registered OData service includes the precise definition of the app and the entities—that provide the link to the shared data. The service endpoint and the deployment to a specific environment is shown as a node on the Landscape. 
+A registered OData service includes the precise definition of the app and the datasets or entity sets—that provide the link to the shared data. The service endpoint and the deployment to a specific environment is shown as a node on the Landscape. 
 
 The Landscape depiction of a service and its network will be such that it will show the "flow" of data from the bottom of the display towards the top. Therefore, services that are consumed by an app will always be shown below it. Other applications that consume a selected service will always be displayed above it. A complex example of a network where this is illustrated is shown in the [example landscape network](#example-landscape) below.
 

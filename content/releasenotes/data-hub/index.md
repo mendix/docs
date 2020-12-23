@@ -9,7 +9,19 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 ## 2020
 
-### December 17th, 2020
+### December 24th, 2020
+
+#### New Feature
+
+* The Data Hub Catalog now displays the exposed **datasets** (the entity sets of an entity) for registered services instead of the **entity** names. This means that for Mendix app services, the name shown for the **dataset** will be the Mendix **entity set** name.
+
+* In the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis), the Search API (`/GET` data) now returns items that specify the entity sets instead of  entity types. The response structure has been expanded by adding the fields `EntitySetName` `EntityTypeName` and `Namespace` at the `Item` and `ItemAssociation` level.
+
+#### Improvements
+
+* Contract validation has been improved when registering  Odata v4 contracts using the manual registration form or the `PUT` services API call. improvements in v4 contract validation for registering through the manual registration form and through the Data Hub API
+
+## December 17th, 2020
 
 #### New Feature
 
@@ -24,7 +36,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 ### November 26th, 2020
 
 #### Improvements
-* The Service [Metadata](/data-hub/data-hub-catalog/search#metadata) panel on the right side of the the Data Hub Catalog search details page has been reorganised to improve the grouping of the information. 
+* The Service [Metadata](/data-hub/data-hub-catalog/search#metadata) panel on the right side of the the Data Hub Catalog search details page has been reorganized to improve the grouping of the information. 
 
 #### Fixes
 

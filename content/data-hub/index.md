@@ -11,23 +11,23 @@ aliases:
 [Mendix Data Hub](https://hub.mendix.com) is a product for integrating app development with the data available from the many applications in an organization. It is the central hub in an organization for finding and connecting to the relevant shared datasets. It also ensures consistency in the data used throughout the organization. Data Hub enables reliable data sources to be located centrally from one point and for users to connect to them through it. 
 
 {{% alert type="info" %}}
-To use the Mendix Data Hub a license is required, with also includes the  integration of Data Hub in Studio Pro, in order to discover shared assets in your organization and consume the shared data sources to building apps.
+To use the Mendix Data Hub a license is required, which also includes the integration of Data Hub in Studio Pro.
 {{% /alert %}}
 
-Follow the journey for building an app using available entities from the [Data Hub](https://hub.mendix.com) home page, or try building a quick app by following [How to Share Data Between Apps Using Mendix Data Hub](share-data/index).
+Follow the journey for building an app using available datasets (or entity sets for services from Mendix apps) from the [Data Hub](https://hub.mendix.com) home page, or try building a quick app by following [How to Share Data Between Apps Using Mendix Data Hub](share-data/index).
 
 ## 2 Overview of Mendix Data Hub
 
-Mendix Data Hub has components to enable the flexible sharing of entities. The following diagram shows how these components enable app development using shared entities:
+Mendix Data Hub has components to enable the flexible sharing of datasets. The following diagram shows how these components enable app development using shared datasets:
 
 ![](attachments/overview-schematic-datahub.png)
 
-1. Published apps and other software expose entities in OData services that can be used to provide a consistent and reliable network of shared data. The data is maintained in the respective source apps.
-2. In Studio Pro, published OData services exposing entities connecting to the available data are automatically registered in the [Data Hub Catalog](data-hub-catalog/index).  OData services from other applications can also be manually registered. For each service,  structural and descriptive metadata and the location of the entities is registered in the Data Hub Catalog. Curation of registered services and entities is done by Owners of the service, [Data Hub  Admin](#admin) and [Data Curators](#curator).
+1. Published apps and other software expose datasets in OData services that can be used to provide a consistent and reliable network of shared data. The data is maintained in the respective source apps.
+2. In Studio Pro, published OData services exposing datasets (or entity sets as they are named in Studio Pro) connecting to the available data are automatically registered in the [Data Hub Catalog](data-hub-catalog/index).  OData services from other applications can also be manually registered. For each service,  structural and descriptive metadata and the location of the datasets is registered in the Data Hub Catalog. Curation of registered services and datasets is done by Owners of the service, [Data Hub  Admin](#admin) and [Data Curators](#curator).
 3. Search in the Data Hub Catalog or use the integrated Data Hub in Studio Pro to find suitable shared data assets to use in your app development.
-4. Consume exposed entities connecting to the shared data in Studio Pro to create new apps. 
+4. Consume registered datasets in Studio Pro to create new apps. 
 5. Upon deployment of an app in Studio Pro, registered services are updated in the Data Hub Catalog to show published dependencies and consumed dependencies, and a connection is established to the shared data sources.
-6. The consuming application directly connects to the source system (as defined in the published service metadata) to use the data associated with the consumed entity.
+6. The consuming application directly connects to the source system (as defined in the published service metadata) to use the data associated with the consumed dataset.
 7. The [Data Hub Landscape](data-hub-landscape/index) enables users to see the dependencies between components and the relevance of data and to ascertain data lineage.
 
 ## 3 Roles in Data Hub{#data-hub-roles}

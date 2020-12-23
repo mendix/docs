@@ -213,7 +213,7 @@ The service metadata panel at the right of the search details page displays deta
 * **Access Level** – shows the access classification of the service; end-users of the data associated with the datasets exposed in the service must have the appropriate [user role](/refguide/user-roles) to have access to the data:
 	* **Public** – this service is classified as public	
 	* **Internal** – the service is restricted to the members of the organization
-	datasets and attributes exposed in the service. {{% /alert %}}
+	{{% alert type="info" %}}Classifications at a service level propagate down to the datasets and attributes exposed in the service. {{% /alert %}}
 * **Environment Type** – indicates the quality and the status of the data associated with the exposed datasets by the environment that the app and service are deployed to. The following are the environment types: 
   * **Production**
   * **Non-Production** 

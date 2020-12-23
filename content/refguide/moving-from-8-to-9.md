@@ -23,7 +23,7 @@ During the synchronization stage, Mendix 9 will perform a check for the RCSI sta
 
 ## 3 Update from Mendix 8 to 9 for Studio Pro {#studio-pro-upgrade}
 
-The following sub-sections explain the steps to take in converting your app project from Mendix 8 to Mendix 9. We recommend you first review the [Breaking Changes](/releasnotes/studio-pro/9.0#breaking-changes) section of the *Studio Pro 9.0* release notes as well as our updated [System Requirements](/refguide/system-requirements).
+The following sub-sections explain the steps to take in converting your app project from Mendix 8 to Mendix 9. We recommend you first review the [Breaking Changes](/releasenotes/studio-pro/9.0#breaking-changes) section of the *Studio Pro 9.0* release notes as well as our updated [System Requirements](/refguide/system-requirements).
 
 ### 3.1 Back Up Your Project
 
@@ -91,7 +91,7 @@ If any are found, an error like **An error occured while initializing the Runtim
 
 ## 5 Client API Changes
 
-Client APIs that were deprecated and marked for removal in Mendix 9 were indeed removed. Libraries like `big.js`, `react`, `react-native`, and a few others shipped with the Client have been updated to latest version. This might affect your custom and pluggable widgets and to JavaScript actions. Please refer to the [Breaking Changes](/releasnotes/studio-pro/9.0#breaking-changes) section of the *Studio Pro 9.0* release notes for more details.
+Client APIs that were deprecated and marked for removal in Mendix 9 were indeed removed. Libraries like `big.js`, `react`, `react-native`, and a few others shipped with the Client have been updated to latest version. This might affect your custom and pluggable widgets and to JavaScript actions. Please refer to the [Breaking Changes](/releasenotes/studio-pro/9.0#breaking-changes) section of the *Studio Pro 9.0* release notes for more details.
 
 ## 6 Read More
 

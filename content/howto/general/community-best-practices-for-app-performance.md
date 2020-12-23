@@ -3,6 +3,8 @@ title: "Implement Community Best Practices for App Performance"
 category: "General Info"
 menu_order: 8
 tags: ["best practice", "performance", "community"]
+aliases:
+    - /howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7.html
 ---
 
 ## 1 Introduction

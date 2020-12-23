@@ -3,6 +3,8 @@ title: "Customizing Local Build Packages"
 parent: "build-hybrid-apps"
 menu_order: 30
 tags: ["mobile", "app store", "phonegap"]
+aliases:
+    - /refguide8/customizing-phonegap-build-packages.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

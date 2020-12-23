@@ -2,6 +2,8 @@
 title: "Developing Hybrid Mobile Apps"
 parent: "hybrid-mobile"
 tags: ["studio pro"]
+aliases:
+    - /refguide/Developing+Hybrid+Mobile+Apps.html
 ---
 
 ## 1 Introduction

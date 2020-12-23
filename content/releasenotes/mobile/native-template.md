@@ -14,6 +14,14 @@ These are the current versions in active development:
 * Native Template v5.0.x applies to apps built using Studio Pro [8.12.1](../studio-pro/8.12#8121)–[8.14.x](../studio-pro/8.14).
 * Native Template v4.2.x applies to apps built using Studio Pro up to [8.12.0](../studio-pro/8.12#8120).
 
+## 5.1.4, 5.0.8, and 4.2.6
+
+**Release date: December 22nd, 2020**
+
+### Fixes
+
+* We fixed an issue where iOS apps could crash when opening a push notification.
+
 ## 5.1.3, 5.0.7, and 4.2.5
 
 **Release date: November 27th, 2020**

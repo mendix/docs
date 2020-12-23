@@ -21,64 +21,68 @@ In order to improve performance and reduce the chance of deadlocks, Mendix 9 req
 
 During the synchronization stage, Mendix 9 will perform a check for the RCSI status and could abort the process if it is not **ON** and the database user lacks the necessary privileges to do so automatically.
 
-## 3 Changing Your App Before Upgrading to Studio Pro 9 {#studio-pro-upgrade}
+## 3 Update from Mendix 8 to 9 for Studio Pro {#studio-pro-upgrade}
 
-### 3.1 Converting Your App Project
+The following sub-sections explain the steps to take in converting your app project from Mendix 8 to Mendix 9. We recommend you first review the [Breaking Changes](/releasenotes/studio-pro/9.0#breaking-changes) section of the *Studio Pro 9.0* release notes as well as our updated [System Requirements](/refguide/system-requirements).
 
-The following sub-sections explain the steps to take in converting your app project from Mendix 8 to Mendix 9.
-
-### 3.2 Back Up Your Project
+### 3.1 Back Up Your Project
 
 Make sure that you have either committed your latest changes to Team Server, or created a backup of your local project before you start the conversion.
 
-### 3.3 Upgrade to the Latest Release of Version 8
+### 3.2 Upgrade to the Latest Release of Version 8
 
 {{% alert type="warning" %}}
-It is technically required for you to upgrade your app project to the latest version of Mendix 8, which is [8.16](/releasenotes/studio-pro/8.16). You can only convert your app project to Mendix 9 from v8.16.x.
+It is technically required for you to upgrade your app project to Mendix 8.12 first to be able to update it to Mendix 9. However, we recommend you update to the latest version of Mendix 8: [8.17](/releasenotes/studio-pro/8.17).
 {{% /alert %}}
 
-To upgrade to Mendix 8, follow these steps:
+To upgrade to Mendix 8.17, follow these steps:
 
-1. Download the latest patch release of Studio Pro [v8.16](/releasenotes/studio-pro/8.16).
-1. Open your app in Studio Pro v8.16.
+1. Download the latest patch release of Studio Pro [v8.17](/releasenotes/studio-pro/8.17).
+1. Open your app in Studio Pro v8.17.
 1. Allow it to upgrade the app, if necessary.
 
-### 3.4 Review Your Mendix 8 Project
+### 3.3 Review Your Mendix 8 Project
 
-Review your app project in combination with the sections below and assess if further action needs to be taken before upgrading to Mendix 9. 
+Review your app project in combination with the sections below and assess if further action needs to be taken before upgrading to Mendix 9.
 
-You should run your app, test all functionality, and ensure it works without error. You should also fix any depreciation warnings you see.
+You should run your app, test all functionality, and ensure it works without error. You should also fix any depreciation warnings you see both in development in Studio Pro, as well as in the runtime using your console and browser console.
 
-### 3.5 Save Your Version 8 Project
+### 3.4 Save Your Version 8 Project
 
-Backup or commit your project so that you can return to it if necessary. Saving a copy will ensure your work is kept safe.
+Backup or commit your project so that you can return to it if necessary.
 
-After saving a copy, you can close the project in Studio Pro v8.16.
+Your app project is now ready to be upgraded to Mendix 9. You can now close the project in Studio Pro 8.
 
-Your app project is now ready to be upgraded to Mendix 9.
-
-### 3.6 Upgrade Your App Project to Version 9
+### 3.5 Upgrade Your App Project to Version 9
 
 Open your project in Studio Pro 9 and allow Studio Pro to update your app to version 9. Mendix will upgrade your app project for you automatically.
 
-### 3.7 Review Errors, Warnings, and Deprecations in Studio Pro
+Review all error messages and messages about deprecated items and make changes where necessary.
 
-Review all error messages and messages about deprecated items and make changes where necessary. Be sure to check for errors both in development in Studio Pro, as well as in the runtime using your console and browser console.
+### 3.6 Upgrade All Widgets and Modules {#upgrade-widgets}
 
-### 3.8 Upgrade All Widgets
-
-To minimize the chance of problems, you should update all widgets and other App Store models used by your project to the latest version.
+To minimize the chance of problems, you should update all widgets and other App Store modules used by your project to the latest version.
 
 Check if there is a newer version of your App Store modules available in the App Store. Read the version release notes in the App Store to see whether you need to perform specific actions when upgrading.
 
+Be sure to update these key widgets, resources, and actions:
+
+* [Native Mobile Resources (Mx9 Beta)](https://marketplace.mendix.com/link/component/116537)
+* [Nanoflow Commons (Mx9 Beta)](https://marketplace.mendix.com/link/component/116538)
+* [Data Grid 2 (Mx9 Beta)](https://marketplace.mendix.com/link/component/116540)
+
 In general you should not remove and reimport modules, unless this is recommended in the release notes. If you do remove and reimport them, you may lose data or configuration related to the module.
 
-### 3.9 Review and Test Your App
+### 3.7 Update Atlas Module (Optional)
+
+Mendix 9 comes with a new Atlas theme including new page templates and building blocks. To get this theme, you can download the [Atlas UI 3 (Mx9 Beta)](https://marketplace.mendix.com/link/component/116539) module package from the App Store.
+
+### 3.8 Review and Test Your App
 
 Finally, review the sections below and ensure that you have made all the changes necessary. Test the app for any unexpected results.
 
 {{% alert type="success" %}}
-Congratulations! Your app has been successfully upgraded to Mendix 8 and you can continue working as normal.
+Congratulations! Your app has been successfully upgraded to Mendix 9 and you can continue working as normal.
 {{% /alert %}}
 
 ## 4 Runtime API Changes
@@ -95,6 +99,19 @@ If your project is still using Mendix runtime for uniqueness validation, then yo
 
 If any are found, an error like **An error occured while initializing the Runtime: Detected unique constraing violation...** will be logged. To solve this, your project will have to be prepared before moving to Mendix 9. You can obtain the tools you need by [submitting a support request](/developerportal/support/submit-support-request).
 
-## 5 Read More
+## 5 Testing Native Mobile Apps
+
+To test and preview native mobile apps in Mendix 9, you must download the Mendix 9 version of the Make It Native app:
+
+* Download Make It Native 9 for Android in the [Google Play Store](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9)
+* Download Make It Native 9 for iOS in the [Apple App Store](https://apps.apple.com/nl/app/make-it-native/id1542182000)
+
+For best results with native apps, make sure you have updated the [Native Mobile Resources (Mx9 Beta)](https://marketplace.mendix.com/link/component/116537) module as described in the [Upgrade All Widgets and Modules](#upgrade-widgets) section above.
+
+## 6 Client API Changes
+
+Client APIs that were deprecated and marked for removal in Mendix 9 were indeed removed. Libraries like `big.js`, `react`, `react-native`, and a few others shipped with the Client have been updated to latest version. This might affect your custom and pluggable widgets and to JavaScript actions. Please refer to the [Breaking Changes](/releasenotes/studio-pro/9.0#breaking-changes) section of the *Studio Pro 9.0* release notes for more details.
+
+## 7 Read More
 
 * [Studio Pro 9 Release Notes](/releasenotes/studio-pro/9.0)

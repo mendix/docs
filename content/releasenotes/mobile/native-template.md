@@ -20,7 +20,7 @@ These are the current versions in active development:
 
 ### Fixes
 
-- We fixed the the App crashing when opening a push notification (iOS)
+* We fixed an issue where iOS apps could crash when opening a push notification.
 
 ## 5.1.3, 5.0.7, and 4.2.5
 

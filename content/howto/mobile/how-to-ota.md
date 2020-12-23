@@ -30,7 +30,7 @@ Currently OTA  does not update your app while the app is open or minimized.
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install Native Builder 3.0.0 or higher
-* Install Mendix Studio Pro 8.4 or higher
+* Install the latest version of Mendix Studio Pro
 * Complete [How to Deploy your First Mendix Native Mobile App](/howto/mobile/deploying-native-app)
 * Complete at least one successful build using Native Builder v3.0.0 and Native Template v2.0.0
 * Install your app on a test device or emulator

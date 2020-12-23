@@ -106,22 +106,12 @@ With the following widgets, the Attribute (Path) specifies the attribute which i
 The attribute can be one of the following:
 
 1. An attribute of the entity of the data container that contains the widget.
-2. An attribute of the entity of any enclosing data container that contains the widget. Available since Mendix 8.8.
+2. An attribute of the entity of any enclosing data container that contains the widget. 
 3. An attribute of an entity associated with the data container entity by following one or more associations of type reference through the domain model.
 
 In the first two cases we say the widget is connected to an **attribute** and in the third case to an **attribute path**.
 
-{{% alert type="info" %}}
-In Mendix 8.0, an input widget connected to an **attribute path** must be read-only. Studio Pro will check this for you.
-{{% /alert %}}
-
-{{% alert type="info" %}}
-In Mendix 8.1 and above, you can edit attributes presented in input widgets over a path.
-{{% /alert %}}
-
-{{% alert type="info" %}}
-In Mendix 8.8 and above, you can edit attributes of any enclosing data container including grandparent data containers.
-{{% /alert %}}
+You can edit attributes of any enclosing data container including grandparent data containers.
 
 #### 4.1.2 Association Input Widgets
 
@@ -328,7 +318,7 @@ There are a number of variables you can use in your expression:
 * `$value` – the current member (attribute or association) value
 
 {{% alert type="info" %}}
-In **Mendix 8.1 and above**, the expression can access objects of **all** the data containers enclosing the input widget. The objects are given the name of the widget they originate from (for example, `$dataView1`).
+The expression can access objects of **all** the data containers enclosing the input widget. The objects are given the name of the widget they originate from (for example, `$dataView1`).
 {{% /alert %}}
 
 When a validation is set and it fails for this widget, the message you specify will be shown before the user can use the value in the app.
@@ -367,7 +357,7 @@ When selected, this shows the widget while a particular attribute has a certain 
 
 ##### 9.1.1.2 Based on Expression{#visibility-based-on-expression}
 
-When selected, this shows the widget while a provided [expression](expressions) evaluates to true. The object of the containing data container is available inside an expression as a `$currentObject` variable. In Mendix 8.1 and above, the expression can access objects of all the data containers enclosing that data container widget. These objects are available under the name of the widget they originate from (for example, `$dataView1`).
+When selected, this shows the widget while a provided [expression](expressions) evaluates to true. The object of the containing data container is available inside an expression as a `$currentObject` variable. The expression can access objects of all the data containers enclosing that data container widget. These objects are available under the name of the widget they originate from (for example, `$dataView1`).
 
 Note that the expression is evaluated in the browser, and hence, we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](constants). Also, client-side expressions currently do not support all the functions that are available in the microflows. Please refer to an autocomplete list to know what functions are supported in your version.
 

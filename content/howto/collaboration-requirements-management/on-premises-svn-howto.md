@@ -1,27 +1,27 @@
 ---
-title: "Work with an On-Premises Version Control Server"
-category: "Collaboration"
-menu_order: 60
-tags: ["on-premises"]
+title: "Work with SVN On-Premises Version Control Server"
+parent: "on-premises-howto"
+menu_order: 10
+tags: ["on-premises", "svn", "version control"]
 ---
 
 ## 1 Introduction
 
-When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/develop/team-server) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see [Version Control](/refguide/version-control).
+When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/develop/team-server) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see [Version Control](/refguide/version-control).	
 
-While this is the recommended way of working for almost all Mendix developers, you may prefer to store your application's files in a system that is controlled by your own organization.
+While this is the recommended way of working for almost all Mendix developers, you may prefer to store your application's files in a system that is controlled by your own organization. For version control, Mendix uses the [Subversion](https://subversion.apache.org) system (also known as SVN) and [Git](on-premises-git-howto). This how-to describes how to work with SVN version control system.	
 
-{{% alert type="warning" %}}
-You will not be able to use Mendix Studio for collaborative development if you use an on-premises version control server. Collaborative development between Studio and Studio Pro will only work if you use the Mendix Team Server.
+{{% alert type="info" %}}	
+This how-to will not describe how to set up an SVN server from scratch; typically, this will be taken care of by the IT department of your organization.	
 {{% /alert %}}
 
-**This how-to will teach you how to do the following:**
+{{% alert type="warning" %}}	
+You will not be able to use Mendix Studio for collaborative development if you use an on-premises version control server. Collaborative development between Studio and Studio Pro will only work if you use the Mendix Team Server.	
+{{% /alert %}}	
 
-* Configure your Mendix app projects to work with your own (on-premises) version control system
+**This how-to will teach you how to do the following:**	
 
-{{% alert type="info" %}}
-For version control, Mendix uses the [Subversion](https://subversion.apache.org) system (also known as SVN). This how-to will not describe how to set up an SVN server from scratch; typically, this will be taken care of by the IT department of your organization.
-{{% /alert %}}
+* Configure your Mendix app projects to work with SVN (on-premises) version control system	
 
 ## 2 Prerequisites
 

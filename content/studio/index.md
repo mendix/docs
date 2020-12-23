@@ -1,5 +1,5 @@
 ---
-title: "Studio 8 Guide"
+title: "Studio 9 Guide"
 tags: ["studio", "web modeler"]
 aliases:
     - /refguide/web-modeler.html
@@ -9,7 +9,7 @@ aliases:
 
 {{% alert type="warning" %}}
 
-The **Studio 8 Guide** describes Mendix Studio functionality that corresponds to Mendix 8 version. It describes the latest Studio functionality and features.
+The **Studio 9 Guide** describes Mendix Studio functionality that corresponds to Mendix 9 version. It describes the latest Studio functionality and features.
 
 {{% /alert %}}
 
@@ -26,7 +26,7 @@ Studio enables you to do the following:
 
 ## 2 Guide Categories
 
-The *Studio 8 Guide* is divided into the following categories:
+The *Studio 9 Guide* is divided into the following categories:
 
 * [General Info](general) 
 * [Pages](page-editor)

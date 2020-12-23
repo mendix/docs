@@ -390,3 +390,4 @@ To revert this version upgrade of the app model, follow these steps:
 ## 10 Read More
 
 * [Advanced Branching and Merging Strategies](https://www.mendix.com/blog/advanced-branching-merging-strategies-part-1-2/)
+

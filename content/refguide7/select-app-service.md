@@ -4,7 +4,7 @@ parent: "consumed-app-services"
 ---
 
 {{% alert type="info" %}}
-App services have been deprecated in version 7.23.4 and are marked for removal in version 8.0.0. Use a [consumed web service](consumed-web-services) to consume existing app services.
+App services have been deprecated in version 7.23.4 and are marked for removal. Use a [consumed web service](consumed-web-services) to consume existing app services.
 {{% /alert %}}
 
 ## Source

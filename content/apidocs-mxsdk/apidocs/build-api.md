@@ -1,7 +1,6 @@
 ---
 title: "Build API"
 category: "API Documentation"
-menu_order: 2
 description: "An API to allow the triggering of deployment package builds, and to get information about existing deployment packages."
 tags: ["API", "Build Server", "Team Server", "Deployment package", "Mendix Cloud"]
 ---

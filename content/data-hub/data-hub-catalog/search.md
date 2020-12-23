@@ -22,7 +22,7 @@ The [search details](#search-details) screen for a registered service, dataset, 
 
 ### 2.1 Published OData Service 
 
-The OData service document contains the data that is registered in the Data Hub Catalog. The contract of the published service (the *$metadata* document) contains the details of what is exposed in the service and further links to the metadata of the data sets (or entity sets in Mendix Studio pro) exposed in the service for attributes, associations, types, and accessibility. The published OData service that is registered is shown in search details. 
+ The contract of the published OData service (the *$metadata* document) contains the details of what is exposed in the service. This includes the metadata of the exposed datasets (or entity sets in Mendix Studio Pro) and their exposed attributes, associations, types, and accessibility. This information about the registered  OData service is shown in the search details. 
 
 For details on creating a published OData service in Studio Pro, see [How to Register Data Assets](register).
 
@@ -151,17 +151,27 @@ The Search Details displays the details of the selected item in the search resul
 
 #### 4.2.1 Search Details for a Selected Service
 
-When a service is selected, the full details of the selected endpoint are displayed:
+When a service is selected, the details of the contract at the selected endpoint that is deployed to the given environment are displayed:
 
 ![](attachments/search/search-details-service.png)
 
 * The name of the Service
+
 * The name of the environment to which the app is deployed
+
 * The **Version** number of the service at this endpoint
-* The number of environments (app in a specific environment) that consume the service (**Used in**)
+
+* The number of **Connections** that are made by apps in a specific environment, in other words, that consume the service
+
 * A description of the service as given in the service metadata or curated in the Data Hub Catalog
-* Click **Share Service** to copy the link to this asset detail page to the clipboard
+
+* Click **Share Data Source** to copy the link to this asset detail page to the clipboard
+
 * Each **Dataset** that is exposed in the service (you can expand this to see details of the attributes and associations, as described below)
+
+  {{% alert type="info" %}}
+	The **Dataset** is the name of the **Entity set** of a published **Entity**  which in Mendix Studio Pro, by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Datasource** that will be displayed in the **Search Details** will be `Customers`.
+	{{% /alert %}}
 
 #### 4.2.2 Search Details for a Selected Dataset {#entity-details}
 
@@ -176,16 +186,15 @@ When an **Dataset** is selected in the search results, details of the registered
 * A description of the dataset as given in the service metadata or curated in the Data Hub Catalog
 * Clicking **Share Datasource** will copy the link to this dataset detail page to the clipboard
 * **Dataset Information**
+	The **Attributes** that are exposed for the dataset in the service are listed showing the attribute types and description.
 
-The attributes that are exposed for the dataset in the service are listed showing the attribute types and description.
+  Under the **Associations** tab for each dataset, the associations are shown:
 
-Under the **Associations** tab for each dataset, the associations are shown:
+	![](attachments/search/attributes-associations.png)
 
-![](attachments/search/attributes-associations.png)
-
-* **Name** – the name of the association that is exposed in the service
-* **Navigates to** – the dataset the association is made with. Click the link to see the details of the associated dataset in the Catalog. 
-* **Multiplicity** – the number of object at the other end of the association (0..1, 1 or *)
+	* **Name** – the name of the association that is exposed in the service
+	* **Navigates to** – the dataset the association is made with. Click the link to see the details of the associated dataset in the Catalog. 
+	* **Multiplicity** – the number of object at the other end of the association (0..1, 1 or *)
 
 ### 4.3 Service Metadata Panel {#metadata}
 

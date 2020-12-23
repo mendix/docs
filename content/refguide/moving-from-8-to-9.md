@@ -59,15 +59,25 @@ Open your project in Studio Pro 9 and allow Studio Pro to update your app to ver
 
 Review all error messages and messages about deprecated items and make changes where necessary.
 
-### 3.6 Upgrade All Widgets and Modules
+### 3.6 Upgrade All Widgets and Modules {#upgrade-widgets}
 
 To minimize the chance of problems, you should update all widgets and other App Store modules used by your project to the latest version.
 
 Check if there is a newer version of your App Store modules available in the App Store. Read the version release notes in the App Store to see whether you need to perform specific actions when upgrading.
 
+Be sure to update these key widgets, resources, and actions:
+
+* [Native Mobile Resources (Mx9 Beta)](https://marketplace.mendix.com/link/component/116537)
+* [Nanoflow Commons (Mx9 Beta)](https://marketplace.mendix.com/link/component/116538)
+* [Data Grid 2 (Mx9 Beta)](https://marketplace.mendix.com/link/component/116540)
+
 In general you should not remove and reimport modules, unless this is recommended in the release notes. If you do remove and reimport them, you may lose data or configuration related to the module.
 
-### 3.7 Review and Test Your App
+### 3.7 Update Atlas Module (Optional)
+
+Mendix 9 comes with a new Atlas theme including new page templates and building blocks. To get this theme, you can download the [Atlas UI 3 (Mx9 Beta)](https://marketplace.mendix.com/link/component/116539) module package from the App Store.
+
+### 3.8 Review and Test Your App
 
 Finally, review the sections below and ensure that you have made all the changes necessary. Test the app for any unexpected results.
 
@@ -89,10 +99,19 @@ If your project is still using Mendix runtime for uniqueness validation, then yo
 
 If any are found, an error like **An error occured while initializing the Runtime: Detected unique constraing violation...** will be logged. To solve this, your project will have to be prepared before moving to Mendix 9. You can obtain the tools you need by [submitting a support request](/developerportal/support/submit-support-request).
 
-## 5 Client API Changes
+## 5 Testing Native Mobile Apps
+
+To test and preview native mobile apps in Mendix 9, you must download the Mendix 9 version of the Make It Native app:
+
+* Download Make It Native 9 for Android in the [Google Play Store](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9)
+* Download Make It Native 9 for iOS in the [Apple App Store](https://apps.apple.com/nl/app/make-it-native/id1542182000)
+
+For best results with native apps, make sure you have updated the [Native Mobile Resources (Mx9 Beta)](https://marketplace.mendix.com/link/component/116537) module as described in the [Upgrade All Widgets and Modules](#upgrade-widgets) section above.
+
+## 6 Client API Changes
 
 Client APIs that were deprecated and marked for removal in Mendix 9 were indeed removed. Libraries like `big.js`, `react`, `react-native`, and a few others shipped with the Client have been updated to latest version. This might affect your custom and pluggable widgets and to JavaScript actions. Please refer to the [Breaking Changes](/releasenotes/studio-pro/9.0#breaking-changes) section of the *Studio Pro 9.0* release notes for more details.
 
-## 6 Read More
+## 7 Read More
 
 * [Studio Pro 9 Release Notes](/releasenotes/studio-pro/9.0)

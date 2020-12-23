@@ -11,15 +11,13 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 ### December 24th, 2020
 
-#### New Feature
+#### New Features
+* The Data Hub Catalog now displays the exposed **datasets** (the entity sets of an entity) for registered services in place of the **entity** names. This means that for published services of Mendix apps, the name shown as the **Dataset** will be the Mendix **Entity set** name.
 
-* The Data Hub Catalog now displays the exposed **datasets** (the entity sets of an entity) for registered services instead of the **entity** names. This means that for published services of Mendix apps, the name shown for the **dataset** will be the Mendix **entity set** name.
-
-* In the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis), the Search API (`/GET` data) now returns items that specify the entity sets instead of  entity types. The response structure has been expanded by adding the fields `EntitySetName` `EntityTypeName` and `Namespace` at the `Item` and `ItemAssociation` level.
+* In the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis), the Search API (`/GET` data) returns items that specify the entity sets instead of entity types. The response structure has been expanded by adding the fields `EntitySetName` `EntityTypeName` and `Namespace` at the `Item` and `ItemAssociation` level.
 
 #### Improvements
-
-* Contract validation has been improved when registering  Odata v4 contracts using the manual registration form or the `PUT` services API call. 
+* Contract validation has been improved when registering Odata v4 contracts using the manual registration form or when using the `PUT` services API call. 
 
 ## December 17th, 2020
 
@@ -46,7 +44,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 #### New Features
 * We have added new functionality for adding [Business and Technical Owner contact details](/data-hub/data-hub-catalog/curate#customowner) when curating the **Application Details** of a registered asset. Curators and owners can select owners from a drop-down list or create a new owner and add their contact details.
-* We have added a new tab to the Data Hub **Administration** page: [Owner Management](/data-hub/general/data-hub-admin-functions#customowners)  which provides an overview of the custom Business and Technical owners in the Data Hub Catalog. From this release, the Data Hub Administrator and curators can now add, edit, and remove custom owners from this list.
+* We have added a new tab to the Data Hub **Administration** page: [Owner Management](/data-hub/general/data-hub-admin-functions#customowners) which provides an overview of the custom Business and Technical owners in the Data Hub Catalog. From this release, the Data Hub Administrator and curators can now add, edit, and remove custom owners from this list.
 
 #### Improvements
 * We improved the screen layout of the **Data Hub** screen for different screens. 

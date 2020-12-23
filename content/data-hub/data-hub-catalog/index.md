@@ -19,7 +19,7 @@ From the [Data Hub](https://hub.mendix.com) screen, you can carry out the major 
 You can navigate to the following tabs:
 * **Data Hub** – search in the Data Hub Catalog, manually register a service from different applications, see the most popular services
 * **Catalog** – [search](search) for registered assets in the search pane and see details of the metadata of selected asset
-* **Landscape** – gain a graphical view of the organization's available services and exposed entities showing consuming and publishing dependencies (for further details, see [Data Hub Landscape](../data-hub-landscape/index)
+* **Landscape** – gain a graphical view of the organization's available services and exposed datasets showing consuming and publishing dependencies (for further details, see [Data Hub Landscape](../data-hub-landscape/index)
 * **Curate** – carry out [curate](curate) functions on registered assets to enrich the registered metdata and increase discoverability by relevant users
 * **Administration** – Data Hub Admin can assign curator roles and curators can manage the list of owners
 
@@ -38,13 +38,13 @@ The functionality of the Data Hub Catalog reflects the process of sharing data i
 
 ### 3.1 Search – Finding Connectable Data sources
 
-Users can find shared datasets by searching the Data Hub Catalog. The [search](search) features include results that are project-relevant in order of most popular services, and results can be refined by using filters. Full details of the registered services are displayed to help in deciding on the suitability of the data associated with a registered entity.
+Users can find shared datasets by searching the Data Hub Catalog. The [search](search) features include results that are project-relevant in order of most popular services, and results can be refined by using filters. Full details of the registered services are displayed to help in deciding on the suitability of the data associated with a registered dataset.
 
-The Data Hub Catalog search functionality is integrated into Mendix Studio Pro through the [Data Hub pane](/refguide/data-hub-pane) for finding registered services and entities to use when developing apps.
+The Data Hub Catalog search functionality is integrated into Mendix Studio Pro through the [Data Hub pane](/refguide/data-hub-pane) for finding registered services and datasets to use when developing apps.
 
 For more details, see [How to Search for Registered Assets](search).
 
-### 3.2 Consume – Using Registered Entities
+### 3.2 Consume – Using Registered Datasets
 
 Registered assets in the Data Hub Catalog can be accessed in Mendix Studio Pro to [build apps](/refguide/modeling). These external data sources are represented in the domain model as *external entities* which can be used with local entities with the difference that external entities connect to data that is maintained externally and therefore can only be read or consumed. Changes to this data is done in the originating apps
 
@@ -52,7 +52,7 @@ For further information on consuming from the Data Hub Catalog, see [How to Cons
 
 ### 3.3 Register – Sharing Datasets 
 
-If you want to make the data from your app available to others, you can provide access by publishing the entities in an OData service and registering it in the Data Hub Catalog. Using this REST-based protocol, metadata contracts defining the structure and documentation of the datasets that are available are registered. Further details such as the location of the data associated with a registered entity are captured, for example from the `dependencies.json`, or during the registration process. 
+If you want to make the data from your app available to others, you can provide access by publishing the datasets (in a Mendix app, they are the entity sets that define an entity) in an OData service and registering it in the Data Hub Catalog. Using this REST-based protocol, metadata contracts defining the structure and documentation of the datasets that are available are registered. Further details such as the location of the data associated with a registered dataset are captured, for example from the `dependencies.json`, or during the registration process. 
 
 OData services can be registered in the Data Hub Catalog in two ways:
 
@@ -71,7 +71,7 @@ Mendix Data Hub enables organizations to manage the data that is used. Security 
 
 Registered users on the Mendix platform have access to Data Hub. However to consume data through external entities in your Mendix app, you need a Data Hub license and the type of license that you have determines how much data you can consume. This is described in [Data Hub License](/refguide/consumed-odata-service-requirements#license-limitations). 
 
-For details on security and accessibility in the Data Hub Catalog and for registered services and entities, see [Data Accessibility and Security](security).
+For details on security and accessibility in the Data Hub Catalog and for registered services and datasets, see [Data Accessibility and Security](security).
 
 ## 4 Information Available in the Data Hub Catalog
 
@@ -87,7 +87,7 @@ The information that is registered for services and exposed assets are as follow
   You can filter the search results by environment type in the Data Hub Catalog (**Production**, **Non-production**, and the Mendix Free App environment or **Sandbox**). In the [Data Hub pane](/refguide/data-hub-pane) of Studio Pro, you can expand search results to include non-production environments. 
   {{% /alert %}}
 
-* **Published OData service** – At the endpoint an OData service is available and defined by the metadata contract at the location. Available data sources are registered in the Data Hub Catalog by exposing the entities that define them in a [published OData service](/refguide/published-odata-services). This service document or metadata contract also includes the exposed attributes and associations that are relevant for connecting to the data they define. 
+* **Published OData service** – At the service endpoint there is an OData service metadata contract. Available data sources are registered in the Data Hub Catalog by exposing  datasets in a [published OData service](/refguide/published-odata-services). This service document or metadata contract also includes the exposed attributes and associations that are relevant for connecting to the data they define. 
 
 * **Versions** – The version number of the OData service contracts is also included in the asset registration. The contract exposed by a specific endpoint may be changed over time by the service owner, and if good practice is followed, these changes will be indicated by changing the version number. Every published OData service has a version number. Apps consuming from a service will consume from a specific version of a service deployed to an environment. 
 
@@ -98,7 +98,7 @@ The information that is registered for services and exposed assets are as follow
 ## 5 Main Documents in This Category
 
 * [How to Search for Registered Assets](search) – describes search and asset details
-* [How to Consume Registered Assets](consume) – gives general information on consuming registered entities
+* [How to Consume Registered Assets](consume) – gives general information on consuming registered datasets
 * [How to Register Data Assets](register) – describes how to register OData services in the Data Hub Catalog through Studio Pro and manually register non-Mendix services
 * [How to Curate Registered Assets](curate) – describes the curate functions for managing assets
-* [Data Accessibility and Security](security) – describes access to entities and security
+* [Data Accessibility and Security](security) – describes access to datasets and security

@@ -1,6 +1,6 @@
 ---
 title: "Client APIs Available to Pluggable Widgets"
-parent: "pluggable-widgets"
+parent: "pluggable-parent-8"
 menu_order: 10
 description: A guide for understanding the client APIs available to pluggable widgets.
 tags: ["Widget", "Pluggable",  "JavaScript"]

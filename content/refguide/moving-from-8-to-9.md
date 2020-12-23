@@ -1,5 +1,5 @@
 ---
-title: "Moving from Mendix 8 to Mendix 9"
+title: "Moving from Mendix Studio Pro 8 to 9"
 category: "General Info"
 menu_order: 20
 description: "Provides details on updating your project from Mendix 8 to Mendix 9, including sections on converting your project and deprecated features."
@@ -92,3 +92,7 @@ If any are found, an error like **An error occured while initializing the Runtim
 ## 5 Client API Changes
 
 Client APIs that were deprecated and marked for removal in Mendix 9 were indeed removed. Libraries like `big.js`, `react`, `react-native`, and a few others shipped with the Client have been updated to latest version. This might affect your custom and pluggable widgets and to JavaScript actions. Please refer to the [Breaking Changes](/releasnotes/studio-pro/9.0#breaking-changes) section of the *Studio Pro 9.0* release notes for more details.
+
+## 6 Read More
+
+* [Studio Pro 9 Release Notes](/releasenotes/studio-pro/9.0)

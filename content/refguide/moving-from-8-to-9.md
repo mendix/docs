@@ -23,7 +23,7 @@ During the synchronization stage, Mendix 9 will perform a check for the RCSI sta
 
 ## 3 Update from Mendix 8 to 9 for Studio Pro {#studio-pro-upgrade}
 
-The following sub-sections explain the steps to take in converting your app project from Mendix 8 to Mendix 9. We recommend to first review the **Breaking Changes** section of [release notes](/releasnotes/studio-pro/9.0#breaking-changes) and changes in [System Requirements](/refguide/system-requirements).
+The following sub-sections explain the steps to take in converting your app project from Mendix 8 to Mendix 9. We recommend you first review the [Breaking Changes](/releasnotes/studio-pro/9.0#breaking-changes) section of the *Studio Pro 9.0* release notes as well as our updated [System Requirements](/refguide/system-requirements).
 
 ### 3.1 Back Up Your Project
 
@@ -32,7 +32,7 @@ Make sure that you have either committed your latest changes to Team Server, or 
 ### 3.2 Upgrade to the Latest Release of Version 8
 
 {{% alert type="warning" %}}
-It is technically required for you to upgrade your app project to Mendix 8.12 first to be able to update it to Mendix 9. But we still recommend to update to the latest version of Mendix 8, which is [8.17](/releasenotes/studio-pro/8.17).
+It is technically required for you to upgrade your app project to Mendix 8.12 first to be able to update it to Mendix 9. However, we recommend you update to the latest version of Mendix 8: [8.17](/releasenotes/studio-pro/8.17).
 {{% /alert %}}
 
 To upgrade to Mendix 8.17, follow these steps:
@@ -51,7 +51,7 @@ You should run your app, test all functionality, and ensure it works without err
 
 Backup or commit your project so that you can return to it if necessary.
 
-Your app project is now ready to be upgraded to Mendix 9, you can now close the project in Studio Pro 8.
+Your app project is now ready to be upgraded to Mendix 9. You can now close the project in Studio Pro 8.
 
 ### 3.5 Upgrade Your App Project to Version 9
 
@@ -67,7 +67,7 @@ Check if there is a newer version of your App Store modules available in the App
 
 In general you should not remove and reimport modules, unless this is recommended in the release notes. If you do remove and reimport them, you may lose data or configuration related to the module.
 
-### 3.9 Review and Test Your App
+### 3.7 Review and Test Your App
 
 Finally, review the sections below and ensure that you have made all the changes necessary. Test the app for any unexpected results.
 
@@ -75,13 +75,13 @@ Finally, review the sections below and ensure that you have made all the changes
 Congratulations! Your app has been successfully upgraded to Mendix 9 and you can continue working as normal.
 {{% /alert %}}
 
-## 5 Runtime API Changes
+## 4 Runtime API Changes
 
 Most of the Java API calls that were deprecated in Mendix 8 have been removed. If you were still using such methods in your Java actions, you must replace or delete them. To check which calls were depreciated, click the **Mendix 8 Server Runtime API** link in our [Runtime API Documentation](/apidocs-mxsdk/apidocs/runtime-api).
 
 Additionally, refer to the Mendix Studio Pro 9.02 Release notes for more Runtime API change details.
 
-### 5.1 Changes to Database Uniqueness
+### 4.1 Changes to Database Uniqueness
 
 Before Mendix 9, Mendix could ensure data uniqueness using either the Mendix runtime or by relying on the database engine itself. Starting with Mendix 9, **Database** will be the only option. 
 
@@ -89,6 +89,6 @@ If your project is still using Mendix runtime for uniqueness validation, then yo
 
 If any are found, an error like **An error occured while initializing the Runtime: Detected unique constraing violation...** will be logged. To solve this, your project will have to be prepared before moving to Mendix 9. You can obtain the tools you need by [submitting a support request](/developerportal/support/submit-support-request).
 
-## 6 Client API Changes
+## 5 Client API Changes
 
-Client APIs that were deprecated and marked for removal in Mendix 9 were indeed removed. `big.js`, `react`, `react-native`, and a few others libraries shipped with the Client have been updated to latest version. This might affect your Custom and Pluggable Widgets and to JavaScript Actions. Please refer to **Breaking Changes** section of [release notes](/releasnotes/studio-pro/9.0#breaking-changes) for more details.
+Client APIs that were deprecated and marked for removal in Mendix 9 were indeed removed. Libraries like `big.js`, `react`, `react-native`, and a few others shipped with the Client have been updated to latest version. This might affect your custom and pluggable widgets and to JavaScript actions. Please refer to the [Breaking Changes](/releasnotes/studio-pro/9.0#breaking-changes) section of the *Studio Pro 9.0* release notes for more details.

@@ -88,23 +88,23 @@ The following steps take you through creating an OData service for your app to e
 	
 4. For **Entity** click **Select…** to see at the list of **Exposed attributes and associations**. You will see the list of attributes that you defined in the last section. When publishing an entity to an OData service you can select the attributes that you want to expose in the service from here and also associations.
 
-   {{% alert type="info" %}}  Make a note of the the **Exposed entity set name**—by default this is the **Exposed entity name** with an "**s"** added at the end of it. When the service is registered in the Data Hub Catalog, the **Exposed entity set name** will be displayed as the available **Dataset**. {{% /alert %}}
+	{{% alert type="info" %}}  Make a note of the the **Exposed entity set name**—by default this is the **Exposed entity name** with an "**s"** added at the end of it. When the service is registered in the Data Hub Catalog, the **Exposed entity set name** will be displayed as the available **Dataset**. {{% /alert %}}
 
 5. Click **OK** twice to display the **OData Service** document. You will see the details of the service that will be included in the service metadata files and registered in the Data Hub Catalog. 
 
-   {{% alert type="info" %}}  The **Version** number that is assigned to a service is important. It is possible to have different versions of the same OData service registered in the Data Hub Catalog. A connection to an entity by a consuming app will be to a specific service and version number. {{% /alert %}}
+	{{% alert type="info" %}}  The **Version** number that is assigned to a service is important. It is possible to have different versions of the same OData service registered in the Data Hub Catalog. A connection to an entity by a consuming app will be to a specific service and version number. {{% /alert %}}
 
-   ![](attachments/share-data/customer-odata-service-page.png)
+	![](attachments/share-data/customer-odata-service-page.png)
 
-   Under **Resources**, the **Customer** entity is listed. 
+	Under **Resources**, the **Customer** entity is listed. 
 
-   {{% alert type="info" %}} If you want to expose several entities or datasets in a service, they can be added and edited in the **OData service** page. {{% /alert %}}
+	{{% alert type="info" %}} If you want to expose several entities or datasets in a service, they can be added and edited in the **OData service** page. {{% /alert %}}
 
 6. Click **Run** to deploy the app. When prompted, click **Save and continue** to save any unsaved changes to the app. The app will be deployed, and the OData service will be automatically registered in the Data Hub Catalog.
 
-   {{% image_container width="150" %}}![](attachments/share-data/run.png){{% /image_container %}}
+	{{% image_container width="150" %}}![](attachments/share-data/run.png){{% /image_container %}}
 
-   {{% alert type="info" %}}The app has to be deployed to the Mendix Cloud or to your organization's environment using **Run** for the service to be registered in the Data Hub Catalog.{{% /alert %}}
+	{{% alert type="info" %}}The app has to be deployed to the Mendix Cloud or to your organization's environment using **Run** for the service to be registered in the Data Hub Catalog.{{% /alert %}}
 
 7. Once the app is deployed, click **View** to open the app in your browser. Your app is now ready to use.
 
@@ -114,9 +114,9 @@ The following steps take you through creating an OData service for your app to e
 
 10. You can now add data to your app. Go ahead and add several customers. This will consititute the entity set or dataset for this entity.
 
-    ![external entities](attachments/share-data/add-data-in-app.png)
+	![external entities](attachments/share-data/add-data-in-app.png)
 
-    When this entity set is consumed in another app via the Data Hub Catalog, a connection will be made to the data that you enter here.
+	When this entity set is consumed in another app via the Data Hub Catalog, a connection will be made to the data that you enter here.
 
 ## 5 Using the Data Hub Catalog and Curating your own Service
 
@@ -130,13 +130,13 @@ The **{yourname}CustomerODataService** from your app is now registered in the Da
 
 3. When you look for your app in the search results you will not find it there. This is because there is a **Filter** active which is indicated by the **1**: 
 
-   ![Data Hub screen](attachments/share-data/filter-active.png)
+	![Data Hub screen](attachments/share-data/filter-active.png)
 
-   By default, a filter is set to show results in **Production** environments. 
+	By default, a filter is set to show results in **Production** environments. 
 
 4. Your app was deployed to the **Mendix Free App** or **Sandbox** environment so you will have to change the filter settings so that search will also show results in this environment. Click **Filter** to see the **Filters** dialog box: 
 
-   ![Data Hub screen](attachments/share-data/dh-filter-box.png)
+	![Data Hub screen](attachments/share-data/dh-filter-box.png)
 
 5. You can either check **Sandbox** to include it in the search results and or you can click **Clear Filters** to clear all active filters and then click **Apply Filters**. 
 
@@ -148,10 +148,9 @@ The **{yourname}CustomerODataService** from your app is now registered in the Da
 
 8. As you are the owner of the service, the **Curate** bar is also displayed. You have curate permissions to edit the metadata for this service and also additional information to the registered data. The curation bar will state "**You are the owner of the service**":
 
- ![data hub](attachments/share-data/search-details-screen.png)
+	![data hub](attachments/share-data/search-details-screen.png)
 
-
-​	{{% alert type="info" %}}For more information about the user and curator roles in Data Hub see [Roles in Data Hub](../index#data-hub-roles).{{% /alert %}}
+	{{% alert type="info" %}}For more information about the user and curator roles in Data Hub see [Roles in Data Hub](../index#data-hub-roles).{{% /alert %}}
 
 Owners of assets registered in the catalog and curators can edit details of the registered service and also set the **Discoverability** to other users. By default, services registered through a Studio Pro deployment will be set to **Discoverable** meaning that it is visible to all users. For further details about curating functions, see [How to Curate Registered Assets](../data-hub-catalog/curate).
 
@@ -168,50 +167,46 @@ To do this follow these steps:
 2. Go to the domain model.
 
 	The **Data Hub** pane is displayed on the right. 
-	
+
 	 {{% image_container width="300" %}}![data hub pane](attachments/share-data/data-hub-pane-empty.png){{% /image_container %}}
 	
 	If you do not see the Data Hub pane, click **View** > **Data Hub** to display the **Data Hub** pane:
-		{{% image_container width="200" %}}![](attachments/share-data/view-data-hub.png){{% /image_container %}}
+	{{% image_container width="200" %}}![](attachments/share-data/view-data-hub.png){{% /image_container %}}
 
 3. In the [Data Hub](/refguide/data-hub-pane) pane, enter the search string *customer*.
-
-	The search results will be listed in the **Data Hub** pane showing all the registered assets (services, datasets, and attributes) satisfying this search string. You will note that the app that you have created previously is not listed.
-	
-	By default, search in the **Data Hub** pane will only show services in production environments. The app that you have deployed in this how-to was deployed to the Mendix Cloud for Free Apps, **Sandbox**. 
-
-4. Click the **Filter** icon next to the search area to include this non-production environment in your search: 
+4. 	The search results will be listed in the **Data Hub** pane showing all the registered assets (services, datasets, and attributes) satisfying this search string. You will note that the app that you have created previously is not listed.
+5. 		By default, search in the **Data Hub** pane will only show services in production environments. The app that you have deployed in this how-to was deployed to the Mendix Cloud for Free Apps, **Sandbox**. 
+6. Click the **Filter** icon next to the search area to include this non-production environment in your search: 
 
 	{{% image_container width="300" %}}![Filter Icon](attachments/share-data/filter-icon.png){{% /image_container %}}
 
-5.  Check **Show development environments**. The search results will now show results for all environments including the **{yourname}CustomerOData_service** which is available in the Mendix Free App environment (which is displayed as **Sandbox** in the example below):
+7.  Check **Show development environments**. The search results will now show results for all environments including the **{yourname}CustomerOData_service** which is available in the Mendix Free App environment (which is displayed as **Sandbox** in the example below):
 
 	{{% image_container width="300" %}}![data hub pane](attachments/share-data/data-hub-pane.png){{% /image_container %}}
 
-6.  Find **{yourname}CustomerODataService** and drag the **Customer** entity from this service into the domain model for your app. The consumed service and entity will be shown in the **Data Hub** pane with a green check mark against them.
+8.  Find **{yourname}CustomerODataService** and drag the **Customer** entity from this service into the domain model for your app. The consumed service and entity will be shown in the **Data Hub** pane with a green check mark against them.
 
-7. The entity that you now have in the domain model is different to the blue entity container that is created when you create an entity in the domain model. This purple colored entity is called an *external entity*.
+9. The entity that you now have in the domain model is different to the blue entity container that is created when you create an entity in the domain model. This purple colored entity is called an *external entity*.
 
-   {{% alert type="info" %}}Entities that are used in an app from the **Data Hub** pane are called external entities. They are displayed as purple containers in the domain model, and the name of the OData service they are exposed in is displayed.{{% /alert %}}
+	{{% alert type="info" %}}Entities that are used in an app from the **Data Hub** pane are called external entities. They are displayed as purple containers in the domain model, and the name of the OData service they are exposed in is displayed.{{% /alert %}}
 
-   {{% alert type="info" %}}The properties of external entities are different from other kinds of entities because the properties that define the data in the publishing app cannot be changed in the consuming app. For further information on external entities, see [External Entities](/refguide/external-entities) in the *Studio Pro Guide*. 
-   {{% /alert %}}
+	{{% alert type="info" %}}The properties of external entities are different from other kinds of entities because the properties that define the data in the publishing app cannot be changed in the consuming app. For further information on external entities, see [External Entities](/refguide/external-entities) in the *Studio Pro Guide*.  {{% /alert %}}
 
-8. Click the information icon for the consumed service in the **Data Hub** Pane to see further information about the service as it is registered in the Data Hub Catalog. You can also click **View in Data Hub Catalog** to go to the service details screen in the Data Hub Catalog.
+10. Click the information icon for the consumed service in the **Data Hub** Pane to see further information about the service as it is registered in the Data Hub Catalog. You can also click **View in Data Hub Catalog** to go to the service details screen in the Data Hub Catalog.
 
-   ![external entities](attachments/share-data/external-entities-in-domain-model.png)
+	![external entities](attachments/share-data/external-entities-in-domain-model.png)
 
-9. In the **Project Explorer**, the service and location documents for the external entity that you have just included in your domain model are now listed. These documents specify the metadata for the service and provide the links for connecting to the shared data.
+11. In the **Project Explorer**, the service and location documents for the external entity that you have just included in your domain model are now listed. These documents specify the metadata for the service and provide the links for connecting to the shared data.
 
-  ![external entities](attachments/share-data/external-entity-metadata-docs.png)
+	![external entities](attachments/share-data/external-entity-metadata-docs.png)
 
-10. Right-click the entity and select **Generate overview pages** to generate overview pages for this entity.
+12. Right-click the entity and select **Generate overview pages** to generate overview pages for this entity.
 
-11. In the **Generate pages** dialog box, for **Content layout** select **Atlas_Default(Atlas_UI_Resources)** and click **OK**. Overview pages for the new entity will be added to the **MyFirstModule** module. Confirm **OK** to accept the message that informs you of this.
+13. In the **Generate pages** dialog box, for **Content layout** select **Atlas_Default(Atlas_UI_Resources)** and click **OK**. Overview pages for the new entity will be added to the **MyFirstModule** module. Confirm **OK** to accept the message that informs you of this.
 
-12. Open the **Home_Web** page and, from **Project Explorer**, drag **Customers_Overview** into the **Auto-fill** container under the "Welcome" banner. Go ahead and add a new banner and welcome text.
+14. Open the **Home_Web** page and, from **Project Explorer**, drag **Customers_Overview** into the **Auto-fill** container under the "Welcome" banner. Go ahead and add a new banner and welcome text.
 
-13. Click **Run** to deploy the app. The app will be deployed and a link established to the data associated with the **Customer** entity in the publishing app (**{yourname)CustomerServiceApp**) through the **{yourname)CustomerODataService**.
+15. Click **Run** to deploy the app. The app will be deployed and a link established to the data associated with the **Customer** entity in the publishing app (**{yourname)CustomerServiceApp**) through the **{yourname)CustomerODataService**.
 
 ## 7 Viewing the Shared Data in Your New App 
 
@@ -232,9 +227,9 @@ To see an example of consumed data being updated when data is changed in the ori
 2. Make some changes to the customer list in **{yourname}CustomerServiceApp** by adding a few more customers to the list and editing some existing entries.
 3. Refresh the **{yourname}CustomerActionsApp** window by doing a **Search** to see the changes in the data displayed. 
 
-In the example below, the consuming app is on the right:
+	In the example below, the consuming app is on the right:
 
-![](attachments/share-data/shared-data-in-new-app.png)
+	![](attachments/share-data/shared-data-in-new-app.png)
 
 Congratulations, you have successfully used the Data Hub Catalog functionality to share data between Mendix apps! 
 

@@ -19,25 +19,30 @@ A custom developer app helps you by serving as a replacement for the Make It Nat
 
 ## 3 Build Your Developer App
 
-1. Run Mendix Native Mobile Builder from your project: 
-![Start Mendix Native Mobiler Builder](attachments/nbui/start-nbui.png)
+1.  Run Mendix Native Mobile Builder from your project: 
 
-1. When Mendix Native Mobile launches you are greeted with the home screen:
-![Mendix Natve Mobile Builder Home Screen](attachments/nbui/home-screen.png) 
+	{{% image_container width="350" %}}![Start Mendix Native Mobiler Builder](attachments/nbui/start-nbui.png){{% /image_container %}}
+
+1.  When Mendix Native Mobile launches you are greeted with the home screen:
+
+	{{% image_container width="350" %}}![Mendix Natve Mobile Builder Home Screen](attachments/nbui/home-screen.png){{% /image_container %}} 
 
 1. Choose *Build app for local development*
 
-1. Given you already went through the initial wizard at least once, you should be greeted with the configuration screen for *Building an app for local development*: 
-![Mendix Natve Mobile Builder Home Screen](attachments/nbui/build-custom-dev-app.png) 
+1.  Given you already went through the initial wizard at least once, you should be greeted with the configuration screen for *Building an app for local development*: 
+
+	{{% image_container width="350" %}}![Mendix Natve Mobile Builder Home Screen](attachments/nbui/build-custom-dev-app.png){{% /image_container %}} 
 
 1. Click the *Build developer app* button
 
-1. The tool will set up your GitHub repository commit your changes, configure App Center if needed with two new projects, one for iOS and one for Android and continue with building the apps.
-![Building](attachments/nbui/build-release-app-build-step1.png)
-![Build release app](attachments/nbui/build-release-app-build-step2.png)
+1.  The tool will set up your GitHub repository commit your changes, configure App Center if needed with two new projects, one for iOS and one for Android and continue with building the apps.
 
-1. When the build completes, you can scan the QR code provided to install the app to your device. Currently the QR code service is only supported for Android devices.
-![Build release app](attachments/nbui/build-release-app-build-done-both.png)
+	{{% image_container width="350" %}}![Building](attachments/nbui/build-release-app-build-step1.png){{% /image_container %}}
+	{{% image_container width="350" %}}![Build release app](attachments/nbui/build-release-app-build-step2.png){{% /image_container %}}
+
+1.  When the build completes, you can scan the QR code provided to install the app to your device. Currently the QR code service is only supported for Android devices.
+
+	{{% image_container width="350" %}}![Build release app](attachments/nbui/build-release-app-build-done-both.png){{% /image_container %}}
 
 
 ## 4 Installing Your Custom Developer App manually
@@ -91,11 +96,11 @@ Builds with the Mendix Native Mobile Builder are stripped of simulator artifacts
 1. Navigate to your GitHub repo.
 2.  Switch to your **developer** branch:
    
-	![Switch branch on Github](attachments/how-to-devapps/github-branch-switching.png)
+	![Switch branch on Github](attachments/how-to-devapps/github-branch-switching.png){{% /image_container %}}
    
 3.  Click **Clone or Download** and then click **Download ZIP**:
 
-	![Download repository](attachments/how-to-devapps/github-download-branch.png)
+	![Download repository](attachments/how-to-devapps/github-download-branch.png){{% /image_container %}}
    
 4. Unzip the downloaded archive.
 5. Open a terminal and change directory into the folder.

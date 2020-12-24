@@ -160,13 +160,21 @@ Your resulting app, which you can also deploy locally, will show the consumed en
 
 ## 7 Consuming from the Data Hub after Offline Modeling
 
-If you now want to connect to the same service that is published??? (currently users have no way of finding this) ???in the Data Hub Catalog then you can change the service metadata URL in the **Consumed_OData_Service** document under the **Metadata** tab and the default value for the **Service URL** for the **Constant** so that the connections can be made to the datasets for the service.
+??? Have to create the whole model again??? 
 
 Alternatively, you can search for the published service in the **Data Hub Catalog** and recreate your model, and the assoicated documents will be automatically created when your drag the entities into your domain model with the relevant information. 
 
 In this way, you can also ensure that when new versions of the published OData services that you have consumed in your project are made available you will be notified and can **Update** or **Switch** to the newer versions.
 
 ## 8 Updating Consumed Services without Using the Data Hub Pane
+
+IF the contract is different - then will get a consistency error. 
+
+Remove this section
+
+Non breaking changes 
+
+Check out the story about the removal of the Update button??? 
 
 As described in [Updating or Switching a Consumed OData Service](/refguide/consumed-odata-service#updating) if a different metadata contract is detected by Studio Pro at the service URL to the one that is currently being consumed by the project, you will be presented with the option to **Update** to the new contract. 
 

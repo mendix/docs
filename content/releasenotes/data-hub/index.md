@@ -21,7 +21,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 
 
-## December 17th, 2020
+### December 17th, 2020
 
 #### New Feature
 

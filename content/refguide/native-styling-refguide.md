@@ -1390,7 +1390,7 @@ The widget consists of the following elements:
 
 The default class to style all line chart widgets is named `com_mendix_widget_native_linechart_LineChart`.
 
-### 11.27 Bar chart
+### 11.27 Bar Chart
 
 The bar chart widget renders a horizontal bar graph based on static and dynamic data sets.
 

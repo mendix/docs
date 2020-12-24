@@ -46,8 +46,3 @@ The documentation of the services is available in the [Open API 2.0](open-api) f
 
 To log detailed information about interaction with your published REST service, [set the log level](logging) of the **REST Publish** log node to **Trace**.
 
-## 6 Example
-
-**How to publish REST in Studio Pro 8**
-
-{{% youtube Ff_P84NOcZk %}}

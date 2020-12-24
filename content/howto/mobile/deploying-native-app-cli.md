@@ -25,9 +25,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Learn how to use Windows' command line interface (CLI) program `cmd`
 * Install [Java JDK 11](https://adoptopenjdk.net/) (if you have Studio Pro installed, you should already have JDK 11 in *C:\Program Files\AdoptOpenJDK*)
 * Download the Native Builder [executable](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) to a folder of your preference and extract all contents
- * Use v1.0.0 with Mendix 8.0
- * Use v2.0.0 with Mendix 8.1.0 and above
- * Use v3.0.0 with Mendix 8.3.0 and above
+ * Use v3.0.0 with Mendix 9.0 and above
 * A [GitHub](https://github.com/) account.
 * An [App Center](https://appcenter.ms/) account. We recommend a paid account if you will be building and deploying regularly.
 

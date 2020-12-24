@@ -29,22 +29,12 @@ To solve this issue and others like it, the apps provided in this document can b
 ### 2.1 Android
 
 To acquire the archive you need, see the [Android Make It Native Archive](https://www.dropbox.com/sh/37s3d4gumhej6j3/AAAdXd97G3s8W0sUE1TQyYW9a?dl=0). To install the APKs, navigate with your device to the link provided, choose the version you would like to install, then download and install it on your device.
-You can also scan one of the QR codes with your device in the [Direct Downloads](#direct-links) section below..
 
 ### 2.2 iOS
 
 iOS archive versions for Make It Native are served via TestFlight links. To join a specific TestFlight version of the Make It Native app and install it, tap the appropriate link using the device with the account you would like to join TestFlight with. Use the TestFlight app to install the version of the app you already joined.
 
-## 3 Direct Download Links {#direct-links}
-
-### 3.1 Make It Native for Studio Pro 8.8 and Below:
-
-|                                  Android                                  |                                iOS                                |
-| :-----------------------------------------------------------------------: | :---------------------------------------------------------------: |
-| ![Android QR Code](attachments/make-it-native-archive/qr-android-8.8.png) | ![iOS QR Code](attachments/make-it-native-archive/qr-ios-8.8.png) |
-|   [Link](https://www.dropbox.com/s/z0255q1gcxpvlwl/MiN%208.8.apk?dl=0)    |        [Link](https://testflight.apple.com/join/ra3QR6iG)         |
-
-## 4 Read More
+## 3 Read More
 
 * [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app)
 * [How to Create a Custom Developer App](/howto/mobile/how-to-devapps)

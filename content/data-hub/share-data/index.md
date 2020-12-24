@@ -64,9 +64,9 @@ Follow these steps to create a simple app in Studio Pro and populate it. You wil
 
 ## 4 Publishing to the Data Hub Catalog {#publishing}
 
-You want to register the **Customer** entity in the Data Hub Catalog which will provide the link to access the dataset that you will input for this entity which can be used in other apps. To do this you have to expose the **Customer** entity in a *published OData service* in Studio Pro. OData v3 is a REST-based protocol and a standard format that is used for registering services and the entities that are exposed in the service in the Data Hub Catalog. 
+You want to register the **Customer** entity in the Data Hub Catalog which will provide the link to access the data that you will input for this entity for use in other apps. To do this you have to expose the **Customer** entity in a *published OData service* in Studio Pro. OData v3 is a REST-based protocol and a standard format that is used for registering services and the entity sets of entities that are exposed in the service in the Data Hub Catalog. 
 
-When the app is deployed to the Mendix Cloud, the service is automatically registered in the Data Hub Catalog along with the exposed entity.
+When the app is deployed to the Mendix Cloud, the service is automatically registered in the Data Hub Catalog along with the exposed entity. The entity set name of the entity will be displayed in the catalog.
 
 The following steps take you through creating an OData service for your app to expose the **Customer** entity and register it in the Data Hub Catalog.
 
@@ -86,23 +86,25 @@ The following steps take you through creating an OData service for your app to e
 
 	![](attachments/share-data/edit-published-resource-box.png)
 	
-4.	For **Entity** click **Select…** to see at the list of **Exposed attributes and associations**. You will see the list of attributes that you defined in the last section. When publishing an entity to an OData service you can select the attributes that you want to expose in the service from here and also associations.
+4. For **Entity** click **Select…** to see at the list of **Exposed attributes and associations**. You will see the list of attributes that you defined in the last section. When publishing an entity to an OData service you can select the attributes that you want to expose in the service from here and also associations.
 
-5.  Click **OK** twice to display the **OData Service** document. You will see the details of the service that will be included in the service metadata files and registered in the Data Hub Catalog. 
+   {{% alert type="info" %}}  Make a note of the the **Exposed entity set name**—by default this is the **Exposed entity name** with an "**s"** added at the end of it. When the service is registered in the Data Hub Catalog, the **Exposed entity set name** will be displayed as the available **Dataset**. {{% /alert %}}
 
-	{{% alert type="info" %}}  The **Version** number that is assigned to a service is important. It is possible to have different versions of the same OData service registered in the Data Hub Catalog. A connection to an entity by a consuming app will be to a specific service and version number. {{% /alert %}}
+5. Click **OK** twice to display the **OData Service** document. You will see the details of the service that will be included in the service metadata files and registered in the Data Hub Catalog. 
 
-	![](attachments/share-data/customer-odata-service-page.png)
+   {{% alert type="info" %}}  The **Version** number that is assigned to a service is important. It is possible to have different versions of the same OData service registered in the Data Hub Catalog. A connection to an entity by a consuming app will be to a specific service and version number. {{% /alert %}}
 
-	Under **Resources**, the **Customer** entity is listed. 
+   ![](attachments/share-data/customer-odata-service-page.png)
 
-	{{% alert type="info" %}} If you want to expose several entities in a service, they can be added and edited in the **OData service** page. {{% /alert %}}
-   
-6.  Click **Run** to deploy the app. When prompted, click **Save and continue** to save any unsaved changes to the app. The app will be deployed, and the OData service will be automatically registered in the Data Hub Catalog.
+   Under **Resources**, the **Customer** entity is listed. 
 
-	{{% image_container width="150" %}}![](attachments/share-data/run.png){{% /image_container %}}
+   {{% alert type="info" %}} If you want to expose several entities or datasets in a service, they can be added and edited in the **OData service** page. {{% /alert %}}
 
-	{{% alert type="info" %}}The app has to be deployed to the Mendix Cloud or to your organization's environment using **Run** for the service to be registered in the Data Hub Catalog.{{% /alert %}}
+6. Click **Run** to deploy the app. When prompted, click **Save and continue** to save any unsaved changes to the app. The app will be deployed, and the OData service will be automatically registered in the Data Hub Catalog.
+
+   {{% image_container width="150" %}}![](attachments/share-data/run.png){{% /image_container %}}
+
+   {{% alert type="info" %}}The app has to be deployed to the Mendix Cloud or to your organization's environment using **Run** for the service to be registered in the Data Hub Catalog.{{% /alert %}}
 
 7. Once the app is deployed, click **View** to open the app in your browser. Your app is now ready to use.
 
@@ -110,21 +112,21 @@ The following steps take you through creating an OData service for your app to e
 
 9. Click **New** to add data for a customer entry.
 
-10. You can now add data to this entity. Go ahead and add several customers. 
+10. You can now add data to your app. Go ahead and add several customers. This will consititute the entity set or dataset for this entity.
 
-	![external entities](attachments/share-data/add-data-in-app.png)
+    ![external entities](attachments/share-data/add-data-in-app.png)
 
-	When this entity is consumed in another app via the Data Hub Catalog, a connection will be made to the data that that you enter here.
+    When this entity set is consumed in another app via the Data Hub Catalog, a connection will be made to the data that you enter here.
 
 ## 5 Using the Data Hub Catalog and Curating your own Service
 
-The **{yourname}CustomerODataService** from your app is now registered in the Data Hub Catalog and can be used in other apps. To explore the Data Hub Catalog and find this service and the exposed **Customer** entity, follow these steps:
+The **{yourname}CustomerODataService** from your app is now registered in the Data Hub Catalog and can be used in other apps. To explore the Data Hub Catalog and find this service and the exposed **Customer** entity set or **Dataset** (as it is referred to in the Catalog), follow these steps:
 
 1.  Go to [Mendix Data Hub](https://hub.mendix.com/):
 
 	![Data Hub screen](attachments/share-data/data-hub-home.png)
 
-2. In the search field, enter the search term *customer*. All services and entities that satisfy this search string will be displayed in the **Search Results** pane in the **Search Details** screen.
+2. In the search field, enter the search term *customer*. All services and datasets that satisfy this search string will be displayed in the **Search Results** pane in the **Search Details** screen.
 
 3. When you look for your app in the search results you will not find it there. This is because there is a **Filter** active which is indicated by the **1**: 
 
@@ -142,6 +144,8 @@ The **{yourname}CustomerODataService** from your app is now registered in the Da
 
 7. Full details for the service is displayed in the search details screen and the service metadata panel on the right. This information was published in the OData service contract.
 
+	{{% alert type="info" %}}  You will note that in the Catalog, the **Exposed entity set name**  or **Dataset** is displayed for the entity that you published in the previous section; it is **Customers**. {{% /alert %}}
+
 8. As you are the owner of the service, the **Curate** bar is also displayed. You have curate permissions to edit the metadata for this service and also additional information to the registered data. The curation bar will state "**You are the owner of the service**":
 
  ![data hub](attachments/share-data/search-details-screen.png)
@@ -153,9 +157,9 @@ Owners of assets registered in the catalog and curators can edit details of the 
 
 For more details on searching in the Data Hub Catalog and the **Search Details** screen, see [How to Search in the Data Hub Catalog](../data-hub-catalog/search). You can also explore registered services in the Data Hub Landscape. For more information, see [How to Use the Data Hub Landscape](../data-landscape/../data-hub-landscape/index).
 
-## 6 Using the Customer Entity in Another App
+## 6 Using the Customer Dataset in Another App
 
-You are now going to create a new app and consume the data you have added to the **Customer** entity through the **{yourname}CustomerODataService** service.
+You are now going to create a new app and consume the data you have added to the **Customer** dataset through the **{yourname}CustomerODataService** service.
 
 To do this follow these steps:
 
@@ -172,7 +176,7 @@ To do this follow these steps:
 
 3. In the [Data Hub](/refguide/data-hub-pane) pane, enter the search string *customer*.
 
-	The search results will be listed in the **Data Hub** pane showing all the registered assets (services, entities, and attributes) satisfying this search string. You will note that the app that you have created previously is not listed.
+	The search results will be listed in the **Data Hub** pane showing all the registered assets (services, datasets, and attributes) satisfying this search string. You will note that the app that you have created previously is not listed.
 	
 	By default, search in the **Data Hub** pane will only show services in production environments. The app that you have deployed in this how-to was deployed to the Mendix Cloud for Free Apps, **Sandbox**. 
 
@@ -251,11 +255,11 @@ You can view the two apps that you have created in the Data Hub Landscape and se
 
 	![](attachments/share-data/landscape-full-screen.png)
 	
-	In the Data Hub Landscape registered services are shown as circles with the number of entities that have been exposed in the service.
+	In the Data Hub Landscape registered services are shown as circles with the number of entity sets or datasets that have been exposed in the service.
 	
 	The service **{yourname}CustomerODataAPI** is linked by a solid line to the runtime instance of **{yourname}CustomerCustomerServiceApp** (shown as a square icon), which is deployed as a Free App.
 	
-	The service is also linked by a dotted grey line to **{yourname}CustomerActionsApp** with an arrow that indicates that it is making a call to the service for data (or consuming data from it). If you click the entity icon on this consume line, the entities that are being consumed will be listed in the metadata panel.
+	The service is also linked by a dotted grey line to **{yourname}CustomerActionsApp** with an arrow that indicates that it is making a call to the service for data (or consuming data from it). If you click the entity icon on this consume line, the datasets that are being consumed will be listed in the metadata panel.
 
 4. Click a node to see details of the selected item in the Data Hub Catalog metadata panel on the right. You can also click the **Search** tab to see full details in the **Search Details** screen.
 

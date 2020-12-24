@@ -9,6 +9,37 @@ description: "Mendix Native Mobile Builder release notes."
 
 The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Studio Pro, which helps you build your Mendix native mobile app. After the Mendix Native Mobile Builder simplifies your build process, you can do what you want most: test and publish your app. The Mendix Native Mobile Builder uses MxBuild, GitHub, and App Center to simplify the app building process and is directly accessible via Mendix Studio Pro. 
 
+### Release v1.0.71
+
+**Release date: December 23th, 2020**
+
+#### Multiple configurations 
+While you are developing your app you may want to test new features, reconfigure your app or test against different [environments](https://docs.mendix.com/developerportal/deploy/environments) while keeping your default configuration in place.
+
+Configurations are here to do exactly that. Initially, any change is saved under the default configuration.   
+
+Say you would like a new configuration to target your staging environment. You can now simply create a new configuration, based on any previously created configuration, change the runtime URL, save and build. 
+
+Now every time you need to build against your staging environment it is as simple as selecting your staging configuration from the configuration drop-down.
+
+#### Breaking changes
+
+The new support for multiple configurations will convert your Mendix Native Mobile Builder config file, which is unsupported by previous version. 
+
+The projects converted to the new version of the Native Mobile Builder UI when opened in the older builder versions will be seen as not configured.
+
+If you are working with multiple people on the same project please make sure they are updated to the latest version either via the background update feature
+or by simply downloading the latest one-click installer from [here](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe) and installing the new version.
+
+#### Improvements
+
+- Multiple configurations are now supported and can be easily created and removed.
+- We added support for Push Notifications for Mendix Studio Pro 9.
+
+#### Fixes
+
+- We fixed an issue with iOS certificates not being saved correctly.
+
 ## 1.0.51 
 
 **Release date: December 10th, 2020**

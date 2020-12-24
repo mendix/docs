@@ -12,7 +12,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 ### December 24th, 2020
 
 #### New Features
-* The [search details](/data-hub/data-hub-catalog/search#search-details) for registered assets in the Data Hub Catalog now display the exposed **Datasets** (the entity set names of an entity) in place of the **entity** names. This means that for [published services](/data-hub/data-hub-catalog/register#odata-service-reg) of Mendix apps, the name shown as the **Dataset** will be the Mendix **Exposed Entity set** name.
+* The [search details](/data-hub/data-hub-catalog/search#search-details) for in the Data Hub Catalog now display the exposed **Datasets** (the entity set names of an entity) in place of the **entity** names. This means that for [published services](/data-hub/data-hub-catalog/register#odata-service-reg) of Mendix apps, the name shown as the **Dataset** will be the Mendix **Exposed Entity set** name.
 
 * In the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis), the Search API (`GET` data) returns items that specify the entity sets instead of entity types. The response structure has been expanded by adding the fields `EntitySetName` `EntityTypeName` and `Namespace` at the `Item` and `ItemAssociation` level.
 

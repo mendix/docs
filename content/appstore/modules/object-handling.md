@@ -14,7 +14,7 @@ This is a module from the Mendix Community Commons, which is a series of modules
 
 ### 1.1 Dependencies
 
-* *org.apache.commons.lang3.jar*
+* *commons-lang3-3.7.jar*
 
 ## 2 Configuration
 
@@ -46,8 +46,4 @@ These are Java actions exposed as object activities available to use in your mic
 
 This helper Java class can be used in Java actions:
 
-* `Xpath.jar`
-
-## 3 Read More
-
-* [How to Test Microflows Using the Unit Testing Module](https://docs.mendix.com/howto/testing/testing-microflows-using-the-unittesting-module)
+* `Xpath.java`

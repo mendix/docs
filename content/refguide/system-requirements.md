@@ -13,7 +13,7 @@ This document presents the system requirements for the various parts of the Mend
 
 ## 2 Mendix Studio Pro {#sp}
 
-Mendix [Studio Pro](modeling) version 9 is supported on 64-bit versions of Windows 10 from release 1803.
+Mendix [Studio Pro](modeling) version 9 is supported on 64-bit versions of Windows 10 from Windows 10 release 1803.
 
 The following frameworks are automatically installed (if necessary):
 

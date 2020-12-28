@@ -15,9 +15,9 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 #### Multiple Configurations 
 
-While you are developing your app you may want to test new features, reconfigure your app, or test against different [environments](/developerportal/deploy/environments) while keeping your default configuration in place. Configurations help achieve those goals.   
+While you are developing your app you may want to test new features, reconfigure your app, or test against different [environments](/developerportal/deploy/environments) while keeping your default configuration in place. Configurations help achieve those goals. Initially, any change is saved under the default configuration.   
 
-Imagine you would like a new configuration to target your staging environment. You can now simply create a new configuration (based on any previously created configuration), change the runtime URL, save, and build. Initially, any change is saved under the default configuration. 
+Imagine you would like a new configuration to target your staging environment. You can now simply create a new configuration (based on any previously created configuration), change the runtime URL, save, and build.
 
 Now every time you need to build against your staging environment it is as simple as selecting your staging configuration from the configuration drop-down menu.
 

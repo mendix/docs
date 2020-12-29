@@ -13,6 +13,13 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2020
 
+### December 29th, 2020
+
+#### Fixes
+
+* We fixed an error where opening the feedback widget on a Mendix for Private Cloud page in the Developer Portal resulted in an error.
+* We upgraded the Mendix version used for Mendix for Private Cloud in the Developer Portal to apply the latest security fix.
+
 ### December 14th, 2020
 
 #### Portal Improvements

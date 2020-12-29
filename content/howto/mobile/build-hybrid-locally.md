@@ -1,7 +1,7 @@
 ---
 title: "Build a Mendix Hybrid App Locally"
 parent: "build-hybrid-apps"
-menu_order: 25
+menu_order: 9
 tags: ["mobile", "deploy", "hybrid", "local"]
 ---
 

@@ -10,7 +10,7 @@ tags: ["offline", "native", "mobile", "studio pro"]
 Offline-first applications work regardless of the connection in order to provide a continuous experience. Pages and logic interact with an offline database on the device itself, and data is synchronized with the server. This results in a snappier UI, increased reliability, and improved device battery life.
 
 {{% alert type="info" %}}
-It is important to understand that offline-first is an architectural concept and not an approach based on the network state of the device. Offline-first apps do not rely on a connection, but they can use connections (for example, you can use a Google Maps widget or push notifications).
+It is important to understand that offline-first is an architectural concept and not an approach based on the network state of the device. Offline-first apps do not rely on a connection, but they can use connections (for example, you can call microflows, use a Google Maps widget or push notifications).
 {{% /alert %}}
 
 Mendix supports building offline-first applications for [native mobile](native-mobile) and [hybrid mobile](hybrid-mobile) apps. Both native and hybrid apps share the same core, and this gives them the same offline-first capabilities. Native mobile apps are always offline-first, but for hybrid mobile apps, it depends on the navigation profile that is configured. The data is stored on the device in a local database, and the files are stored on the file storage of the device.
@@ -28,7 +28,7 @@ Synchronization is automatically triggered during the following scenarios:
 * The initial startup of your mobile app
 * The first startup of your mobile app after your Mendix app is redeployed when the following conditions are matched:
  * There is a network connection
- * You are using a new Mendix version or the domain model has changed
+ * You are using a new Mendix version or the domain model used in the offline app has changed
 
 Synchronization can also be configured via different places in your Mendix app, for example:
 
@@ -36,27 +36,52 @@ Synchronization can also be configured via different places in your Mendix app, 
 * As an action in a nanoflow
 * As a pull-down action on a list view (for native mobile only)
 
+You can perform synchronization on two levels.
+1. Full synchronization. This mode synchronizes updates both the server database and the local database with latest values for all objects.
+2. Selecive synchronization. This mode allows you to select specific objects to synchronize.
+
+Synchronization for specific objects can only be done through a "Synchronize" action inside a nanoflow.  Synchronization performed via UI (button, an onchange action etc) performs synchronization for all objects.
+
+Synchronization is performed on the database level. This means if you synchronize while having some uncommitted changes for an object, the attribute values in local database will be synchronized, ignoring the uncommitted changes. Uncommitted changes are still available after a synchronization.
+
 The synchronization process consists of two phases. In the [upload phase](#upload), your app updates the server database with the new or changed objects that are committed. In the [download phase](#download), your app updates its local database using data from the server database.
+
 
 ### 2.1 Upload Phase {#upload}
 
-The upload phase begins with a referential integrity validation of the new or changed objects that should be committed to the server. This validation checks for references to other objects that are not yet committed to the local database. 
+The upload phase begins with a referential integrity validation of the new or changed objects that should be committed to the server. This validation checks each to-be-committed object's references to other objects. 
+
+During synchronizing all objects this validation ensures that all referenced objects are committed to the local database. If a referenced object is created on the device and not yet committed to the local database, synchronization is aborted to prevent an invalid reference value on the server database. (Note that synchronization only works on the database level.)
 
 For example, when a committed `City` object refers to an uncommitted `Country` object, synchronizing the `City` object will yield an invalid `Country` object reference, which will break the app's data integrity. If a synchronization is triggered while data integrity is broken, the following error message will appear (indicating an error in the model to fix): "Sync has failed due to a modeling error. Your database contains objects that reference uncommitted objects: object of type `City` (reference `City_Country`)." To fix this, such objects must also be committed before synchronizing (in this example, `Country`should be committed before synchronizing).
 
+During sychronizing specific objects, an additional referential integrity validation is performed to ensure that all referenced objects are at least synchronized once to the server database, or included in the selection.
+
+For example, synchronizing only a committed `City` object referencing an offline `Country` object (created on the device and committed to the local database but not yet synchronized) would break the integrity of the `City` object on the server database since the `Country` object is not stored in the server database. In this case a similar error message will appear, indicating that it is a modeling error. To fix this, such objects must be selected for synchronization. (in this example, `Country` should either be selected with synchronization or synchronized before attempting to synchronize `City` object)
+
 The upload phase executes the following operations after validation:
 
-1. It detects all the changes made to the local database. The local database can be modified only by committing an object. Such an object can be a new object created (while offline), or it can be an existing object previously sychronized from the server.
+1. The local database can be modified only by committing an object. Such an object can be a new object created (while offline), or it can be an existing object previously sychronized from the server. The upload phase detects which objects have been committed to the local database since the last synchronization. This detection differs per synchronization type:
+* For "Synchronize all", all committed objects in the local database are selected.
+* For "Synchronize objects", all committed objects from the list of selected objects are selected.
 2. <a name="steptwo"></a>If there are changed or new file objects, their contents are uploaded to the server and stored temporarily. Each file is uploaded in a separate network request.
 3. <a name="stepthree"></a>All the changed and new objects are committed to the server, and the content of the files are linked to the objects. This step is performed in a single network request. Any configured before- or after-commit event handlers on these objects will run on the server as usual, after the data has been uploaded and before it is downloaded.
 
 ### 2.2 Download Phase {#download}
 
-If the upload phase was successful, the download phase starts in which the local database is updated with the newest data from the server database. A network request is made to the server per entity.
+If the upload phase was successful, the download phase starts in which the local database is updated with the newest data from the server database. The behavior of download phase differs per synchronization type.
+
+### 2.2.1 All objects (Full synchronization)
+A network request is made to the server per entity to retrieve the newest data from the server database.
 
 You can manage which entities are synchronized to the local database by customizing your app's synchronization behavior. For more details on this procedure, see the [Customizable Synchronization](#customizable-synchronization) section below.
 
 The download process also downloads the file entities' contents and saves that to your device storage. This process is incremental. The app only downloads the contents of a file object if the file has not been downloaded before, or if the file has been changed since it was last downloaded. The changed date attribute of the file entity is used to determine if the contents of a file object have changed.
+
+### 2.2.2 Selected objects (Selective synchronization)
+Only the objects selected for synchronization is synchronized to the local database. There are no extra network requests made to retrieve these objects. The objects are returned in the response of a network request made during the upload phase.
+
+If a file entity is selected for synchronization, its content is also updated on the device storage incrementally. The logic is the same with the "All objects".
 
 After the download process (and thus synchronization) is completed, the widgets on your app's current page will be refreshed to reflect the latest data.
 
@@ -75,19 +100,26 @@ If you have custom widgets or JavaScript actions which use an entity that cannot
 
 {{% image_container width="450" %}}![custom synchronization](attachments/offline-first/custom-sync.png){{% /image_container %}}
 
+
+{{% alert type="warning" %}}
+These settings are not applied when synchronizing specific objects.
+{{% /alert %}}
+
 ### 2.4 Error Handling {#error-handling}
 
 During synchronization, errors might occur. This section describes how Mendix handles these errors and how you can prevent them.
 
 #### 2.4.1 Network-Related Errors {#network-errors}
 
-Synchronization requires a connection to the server, so during synchronization, errors may occur due to failing or poor network connections. Network errors may involve a dropped connection or a timeout. By default, the timeout for synchronization is 30 seconds per network request.
+Synchronization requires a connection to the server, so during synchronization, errors may occur due to failing or poor network connections. Network errors may involve a dropped connection or a timeout. By default, the timeout for synchronization is 30 seconds per network request for Hybrid mobile apps. For native apps, there is no default timeout, and the timeout may differ per platform / OS version.
 
 The synchronization is atomic, which means that either everything or nothing is synchronized. Exceptions are described in the [Model- or Data-Related Errors](#othererrors) section below.
 
 If a network error happens during the file upload (via [step 2 in the upload phase](#steptwo)), Mendix retries to upload the failed files. If there is an error for the second time, the synchronization is aborted. The changes at that moment are kept on the local device, so it can be retried later.
 
 If a network error occurs while uploading the data (via [step 3 in the upload phase](#stepthree)), the data is kept on the local device and no changes are made on the server. Any files uploaded in [step 2](#steptwo) will be uploaded again during the next synchronization.
+
+If a network error occurs (such as timeout) after uploading the data (via [step 3 in the upload phase](#stepthree)), the data is kept on the local device, but since the server has already started working on the request, it will complete the request. The device can not distinguish whether if the server processed the request, so the next syncronization attempt will contain the already-applied changes. In this case, the server will behave differently based on Mendix version. Below 8.18, the server will re-update the server database. From Mendix 8.18 and forward, this process is optimized and the server will not apply the same changes, because they have been applied before.
 
 If a network error occurs during the download phase, no data is updated on the device, so the user can keep working or retry. The effects of the upload phase are not rolled back on the server.
 
@@ -127,6 +159,7 @@ To ensure the best user experience for your Mendix application, follow these bes
 
 * Limit the amount of data that will be synchronized by customizing the synchronization configuration or security access rules
 * Because network connections can be slow and unreliable and mobile devices often have limited storage, avoid synchronizing large files or images (for example, by limiting the size of photos)
+* Synchronize large files or images using selective synchronization.
 * Use an `isDeleted` Boolean attribute for delete functionality so that conflicts can be handled correctly on the server
 * Use before- and after-commit microflows to pre- or post-process data.
 * Use a [microflow call](microflow-call) in your nanoflows to perform additional server-side logic such as retrieving data from a REST service, or accessing and using complex logic such as Java actions.

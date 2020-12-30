@@ -27,3 +27,22 @@ You configure background colors for labels and how the text contrasts with a lab
 * **Label constraint** – the constraint for the labels
 * **After create label** – the microflow to be triggered after a new label is created and committed; this microflow receives the data view object
 * **On change microflow** – the microflow to be triggered for every add and remove
+
+## 3 Implementation
+
+After having downloaded and installed the AppStore app 'Label selector' to your application's project in MxStudio Pro:
+
+* Create a persistable entity named Label
+* Add attributes:
+** Caption
+** Color
+* Associate the entity Label to the entity that you want label, say MyLabeledEntity. Make it *-*, with navigation set to 'Both'.
+* Set the Access rules of entity Label
+* On a page showing a dataview of MyLabeledEntity, add the widget to the dataview
+* Set the properties 'entity' and 'Caption' of the widget to MyLabeledEntity->Label and ->Caption
+* Set property "Behavior->Show labels" to yes.
+
+Now the label functionality is operational. Some next steps are:
+* Create the overview pages for entity Label, so you can maintain the label, modify the colors or delete duplicates etc.
+* Improve interaction by adding microflows to AfterCreate and OnChange to the properties of the widget
+

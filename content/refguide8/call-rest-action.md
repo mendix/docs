@@ -92,6 +92,26 @@ If desired, you can configure whether to use a proxy for the request. These are 
 
 When you select **Override**, you can configure dynamically whether to use a proxy. You then supply the host, port, username, and password settings for the proxy.
 
+### 4.6 Client certificate
+
+{{% alert type="warning" %}}
+This feature is available in Mendix 8.18.0 and later.
+{{% /alert %}}
+
+In almost all cases, you can ignore this setting. **Use project settings** is a good default value.
+
+If desired, you can configure which client certificate to use for the request. These are the choices:
+
+* **Use project settings** – use whatever settings are defined at the project level (default)
+* **Override** – override the project-level settings for this action
+
+When you select **Override**, you can configure which client certificate will be used. Specify the identifier for the client certificate. This identifier can be set in different places, depending on where you deploy the app:
+
+1. When you deploy the app in the Mendix cloud, the identifier is set when [pinning a client certificate](https://docs.mendix.com/developerportal/deploy/certificates#3-outgoing-client-certificates). 
+2. When you deploy the app elsewhere, the identifier is set in the custom setting [ClientCertificateUsages](custom-settings#ca-certificates)
+
+When this identifier is not set (either not pinned or not present in _ClientCertificateUsages_), the default settings will be used (as if **Use project settings** were selected).
+
 ## 5 HTTP Headers Tab {#http-headers}
 
 ![](attachments/integration-activities/http-headers-tab.png)

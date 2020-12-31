@@ -115,10 +115,6 @@ When you select **Override**, you can configure dynamically whether to use a pro
 
 ### 4.8 Client certificate
 
-{{% alert type="warning" %}}
-This feature is available in Mendix 8.18.0 and later.
-{{% /alert %}}
-
 In almost all cases, you can ignore this setting. **Use project settings** is a good default value.
 
 If desired, you can configure which client certificate to use for the request. These are the choices:

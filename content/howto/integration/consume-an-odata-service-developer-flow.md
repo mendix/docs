@@ -32,7 +32,7 @@ Before starting this how-to you will need the following:
 
 * Be familiar with app modeling using [external entities](/refguide/external-entities)
 
-* Have the URL of a valid published OData v3 or v4 metadata contract to consume. For the purposes of this how-to you can use any of the following examples:
+* Have the URL of a valid published OData v3 or v4 metadata contract to consume. If you want to follow this how-to you can use any of the following examples:
 
 	* An example OData service URL is provided in [Sample file from OData.org](#sampleODataservice)
 	
@@ -161,7 +161,7 @@ Your resulting app, which you can also deploy locally, will show the consumed en
 
 ## 7 Consuming from the Data Hub after Offline Modeling
 
-??? Have to create the whole model again??? 
+When you have been developing an app 
 
 Alternatively, you can search for the published service in the **Data Hub Catalog** and recreate your model, and the assoicated documents will be automatically created when your drag the entities into your domain model with the relevant information. 
 

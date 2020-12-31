@@ -161,11 +161,20 @@ Your resulting app, which you can also deploy locally, will show the consumed en
 
 ## 7 Consuming from the Data Hub after Offline Modeling
 
-When you have been developing an app 
 
-Alternatively, you can search for the published service in the **Data Hub Catalog** and recreate your model, and the assoicated documents will be automatically created when your drag the entities into your domain model with the relevant information. 
+
+When you have been developing an app locally and you want to connect the module to the same service registered in the Data Hub Catalog, follow these steps.
+
+{{% alert type="info" %}}This method can only be used if the service that you want to connect to is the same as the one that you specified as a URL or file. This means that there should be no signficant differences in the service that is registered in the Catalog, especially with respect to the entities that you have consumed, otherwise this will result in errors.
+{{% /alert %}}
+
+1. 
+
+
 
 In this way, you can also ensure that when new versions of the published OData services that you have consumed in your project are made available you will be notified and can **Update** or **Switch** to the newer versions.
+
+
 
 ## 8 Updating Consumed Services without Using the Data Hub Pane
 

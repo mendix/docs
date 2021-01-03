@@ -22,6 +22,10 @@ fi
 if ([ "${TRAVIS_BRANCH}" == "master" ])
 then
   cf zero-downtime-push $CF_APP -f ./manifest_prod.yml
+  echo 'Deploying master to AWS'
+  TARGETAWSBUCKET="docs.mendix.com"
+  chmod +x $TRAVIS_BUILD_DIR/_scripts/aws_deploy.sh
+  source $TRAVIS_BUILD_DIR/_scripts/aws_deploy.sh # source ensures that script can read TARGETAWSBUCKET
   exit 0
 fi
 

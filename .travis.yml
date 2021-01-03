@@ -38,6 +38,8 @@ before_deploy:
   - travis_retry curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
   - unzip -q awscliv2.zip
   - sudo ./aws/install
+  - ./_scripts/algolia.sh
+# Algolia must be before deploy as AWS is renaming all the .html files which the script expects#
 script:
   - ./node_modules/.bin/gulp build
 cache:
@@ -58,4 +60,4 @@ deploy:
         - master
         - development
 after_deploy:
-  - ./_scripts/algolia.sh
+# Algolia was here before we deployed to AWS

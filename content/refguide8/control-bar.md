@@ -3,6 +3,17 @@ title: "Control Bar"
 parent: "grids"
 menu_order: 30
 tags: ["studio pro", "control bar", "add button", "deselect all button", "export to csv button", "grid action button", "grid new button", "remove button", "search button", "select button", "select all button", "data grid", "template grid", "reference set selector", "control bar buttons"]
+aliases:
+    - /refguide8/add-button.html
+    - /refguide8/deselect-all-button.html
+    - /refguide8/export-to-csv-button.html
+    - /refguide8/export-to-excel-button.html
+    - /refguide8/grid-action-button.html
+    - /refguide8/grid-new-button.html
+    - /refguide8/remove-button.html
+    - /refguide8/search-button.html
+    - /refguide8/select-all-button.html
+    - /refguide8/select-button.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

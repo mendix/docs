@@ -3,6 +3,8 @@ title: "Validation Feedback"
 parent: "client-activities"
 menu_order: 70
 tags: ["studio pro", "validation feedback", "client activities"]
+aliases:
+    - /refguide/Validation+Feedback.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

@@ -4,6 +4,8 @@ parent: "mendix-cloud-deploy"
 menu_order: 40
 description: "How to use external email providers in Mendix, and how to configure Mendix mail on Cloud v3"
 tags: ["email", "smtp", "sending policy framework", "Cloud v3", "SPF"]
+aliases:
+    - /deployment/mendixcloud/sending-email.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

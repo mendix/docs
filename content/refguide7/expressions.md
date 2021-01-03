@@ -1,6 +1,8 @@
 ---
 title: "Expressions"
 parent: "common-elements"
+aliases:
+    - /refguide7/microflow-expressions.html
 description: "Describes the expressions that can be used in Mendix for a variety of purposes (for example, to change a member of an object based on logic)."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

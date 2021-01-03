@@ -3,6 +3,8 @@ title: "Annotation"
 parent: "application-logic"
 menu_order: 60
 tags: ["studio pro", "annotation", annotation flow]
+aliases:
+    - /refguide/annotation-flow.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

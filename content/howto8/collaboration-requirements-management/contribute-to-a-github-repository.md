@@ -3,6 +3,8 @@ title: "Contribute to a Mendix GitHub Repository"
 category: "Collaboration"
 menu_order: 20
 tags: ["GitHub"]
+aliases:
+    - /howto8/collaboration-project-management/contribute-to-a-github-repository.html
 ---
 
 ## 1 Introduction

@@ -1,18 +1,16 @@
 ---
 title: "New Merge Algorithm with Fine-Grained Conflict Resolution"
-parent: "version-control"
+category: "Version Control"
+menu_order: 30
 tags: ["merge", "algorithm", "conflict", "resolution"]
 ---
 
 ## 1 Introduction
-    
-A new merge algorithm with fine-grained conflict resolution is used when you update your project or merge changes in it. The new merge algorithm has the following features: 
-    
+
+A new merge algorithm with fine-grained conflict resolution is used when you update your project or merge changes in it. The new merge algorithm has the following features:     
 * **Fine-grained conflict resolution** – When there are conflicting changes in a document, you do not have to choose between whole documents: resolving a conflict using your change or using their change. Instead, you can resolve conflicts at the level of individual elements, such as widgets, entities, attributes, or microflow actions. Also, all non-conflicting changes from both sides are accepted automatically.
-    
+  
 * **No conflicts on parallel changes to lists of widgets** – When two developers make changes to widgets in the same document there is no conflict, the changes are combined. However, if the changes are made too close to the same place in the document, a **list order conflict** is reported that reminds the developer who is merging the changes to decide on the final order of the widgets in the list. 
-    
-* **Acceptance of one of the changes automatically in certain cases** – There are some cases where the new algorithm does not give a conflict. For example, one developer has moved an entity and the other has deleted it. The entity will be deleted in this case.
 
 ## 2 Enabling the New Algorithm with Fine-Grained Conflict Resolution
 

@@ -91,6 +91,10 @@ There are two options to ensure that the language is changed:
 
     ![System Domain Model for User and Language](attachments/language/reload-with-state.png)
 
+{{% alert type="info" %}}
+The above only applies to pages _within_ your Mendix application, that is: pages that are created in Studio Pro. The labels for static pages, such as the _index.html_ and _login.html_ pages in the _theme_ folder of your project, are generated when you create a deployment package, using the default language of your project. The labels on those pages will not change for different users, but will always be the same.
+{{% /alert %}}
+
 ## 5 Read More
 
 * [How to Translate Your App Content](/howto8/collaboration-requirements-management/translate-your-app-content) – a worked example of adding a translation 

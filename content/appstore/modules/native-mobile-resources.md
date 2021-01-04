@@ -48,6 +48,7 @@ These are the native widgets included in these resources along with links to the
 | [Feedback](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/feedback-native) | Allows the app end-user to submit feedback directly into the app project. |
 | [Floating Action Button](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/floating-action-button-native) | Displays a circular floating icon button. |
 | [Intro Screen](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/intro-screen-native) | Shows swipeable containers to show contents as introductions. |
+| [Line Chart (beta)](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/line-chart-native) | Renders a scalable line graph based on static and dynamic data sets. |
 | [List View Swipe](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/listview-swipe-native) | Shows controls on swipe for an interactive list view. |
 | [Maps](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/maps-native) | Shows locations on an interactive map. |
 | [Notifications](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/notifications-native) | Triggers actions based on incoming notifications. |

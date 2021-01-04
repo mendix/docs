@@ -1,7 +1,7 @@
 ---
 title: "General Info"
 description: "General information and base definitions for Data Hub"
-tags: ["data hub catalog", "data hub", "virtual entities", "landscape", "published odata service"]
+tags: ["data hub catalog", "data hub", "external entities", "landscape", "published odata service"]
 ---
 
 ## 1 Introduction

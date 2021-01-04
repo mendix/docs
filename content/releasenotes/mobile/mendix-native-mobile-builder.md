@@ -20,9 +20,7 @@ This release focuses mainly on quality of life bug fixes and features.
 ### Features
 
 * We introduced the option to simply commit your changes to your repository without initiating a build. To allow this, the build button is now a combination button that allows you to choose between **build** or **configure**.
-  
 * When a build fails you will now see a button pointing to the application logs. This allows for easy access to application logs.
-  
 * We made the custom developer app push notification configuration optional. Instead, a warning is shown if the configuration is missing for custom developer apps.
   
 ### Fixes

@@ -133,8 +133,6 @@ what is stored in your database, because these characters have been replaced.
 
 Default value: *No*
 
-This property is available in Studio Pro 8.12.0 and later.
-
 ### 4.3 Public Documentation
 
 You can write a *summary* and a *description* intended for people using the service.

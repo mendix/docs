@@ -96,7 +96,7 @@ A service can be curated to specify the owners of the app and also add or edit t
 By default, the **Technical Owner** for a registered service is the user who registered the service when registration is done through the deployment pipeline in Studio Pro or specified during manual registration. Services can be curated to change the owners. The **Technical** and **Business Owners** are displayed as a link in the asset **Metadata** pane so that users can contact them. 
 
 {{% alert type="info" %}}
-If you as a **Technical Owner** curate the service and change the name, then you will no longer have curation rights to the asset. If the discoverability is turned off, then you will not be able to find the asset in the Catalog.
+If you as a **Technical Owner** curate the service and change the name, then you will no longer have curation rights to the asset once you save the changes. If the discoverability is turned off for the asset, then you will not be able to find the asset in the Catalog.
 {{% /alert %}}
 
 {{% alert type="info" %}}
@@ -104,7 +104,7 @@ If you as a **Technical Owner** curate the service and change the name, then you
 {{% /alert %}}
 
 {{% alert type="info" %}}
-Curators and the Data Hub Administrator can manage the custom Owner details in the **Owner Management** screen as an **Administration** function. For further details see the [Managing Custom Owners ](../general/data-hub-admin-functions#customowners) section of *Data Hub Administration*. 
+Curators and the Data Hub Administrator can manage the custom owner details in the **Owner Management** screen as an **Administration** function. For further details see the [Managing Custom Owners ](../general/data-hub-admin-functions#customowners) section of *Data Hub Administration*. 
 {{% /alert %}}
 
 To change the owners of the app for the selected service, follow these steps:

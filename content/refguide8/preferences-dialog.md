@@ -17,15 +17,15 @@ The **Preferences** option opens a dialog box where you can set user-specific pr
 
 When enabled, **Project Explorer** automatically highlights the document that is currently active. When this property is disabled, the selection in **Project Explorer** remains unchanged when the active document changes.
 
-### 2.2 Mendix Assist
+### 2.2 MxAssist Logic Bot
 
-#### 2.2.1 Enable Mendix Assist
+#### 2.2.1 Enable MxAssist Logic Bot
 
-If **Enable Mendix Assist** is checked, then [Mendix Assist](mx-assist-studio-pro) is activated and can offer suggestions for activities in your microflows.
+If **Enable MxAssist Logic Bot** is checked, then [Mx Assist Logic Bot](mx-assist-studio-pro) is activated and can offer suggestions for activities in your microflows.
 
 #### 2.2.2 Show Suggestions for System Variables
 
-When **Show suggestions for system variables** is checked, Mendix Assist will include system objects in its suggestions (for example, it can suggest that you change system objects like currentUser or currentSession).
+When **Show suggestions for system variables** is checked, MxAssist Logic Bot will include system objects in its suggestions (for example, it can suggest that you change system objects like currentUser or currentSession).
 
 ### 2.3 Error List
 

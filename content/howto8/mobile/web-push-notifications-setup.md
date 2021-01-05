@@ -1,5 +1,5 @@
 ---
-title: "Set Up Web Push Notifications"
+title: "Part 1: Set Up Web Push Notifications"
 parent: "web-push-notifications"
 menu_order: 10
 description: Learn how to set up web push notifications for web (responsive) apps.

@@ -13,4 +13,4 @@ Web push notifications do not need a native or hybrid app to work, they work thr
 
 * [Part 1: Web Push Notifications Setup](web-push-notifications-setup) – Installation and setup of web push notifications
 * [Part 2: Sending Web Push Notifications](web-push-notifications-sending) – How to compose and send a web push notification to a user of your Mendix app
-* [Part 3: Actions](web-push-notifications-actions) – Configure notifications to do an action after being tapped (e.g. show a page or run a background microflow)
+* [Part 3: Notification button](web-push-notifications-actions) – Configure notifications to do an action after being tapped (e.g. show a page or run a background microflow)

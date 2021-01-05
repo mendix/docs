@@ -39,6 +39,22 @@ On the **Inactive members** tab, you can see former members of your company who 
 
 On the **External members** tab, you can see the members outside of your company who have access to at least one of your company app projects. When you click an external member's name, a pop-up window will open with their member profile.
 
+When you select a member in the lists on these tabs, a context menu appears with options for exporting member details to an *.xlsx* file, deactivating/activating a member, or removing an external member.
+
+[** Please verify the context button on th External members tab - is it for removing an external member?**]
+
+{{% alert type="info" %}}
+For security reasons, deactivating an employee that is leaving your company is recommended (if the employee returns to your company, they can be activated as a member again). Before deactivating a user, make sure the following points are true for that user: they do not have a Company Contact, App Contact, or Technical Contact role; they are not the only Scrum Master in an App Team; and they are not involved in unsolved support tickets with Mendix Support.    
+{{% /alert %}}
+
+[** Please verify the requirements above**]
+
+{{% alert type="info" %}}
+If a Mendix user moves to another company or comes from another company that is also using Mendix, the user can merge their old Mendix account(s) into the new Mendix account. This action combines all the hard-earned points, certifications, and achievements in the user’s efforts to climb the leaderboards. For more information, see the Merging Your Accounts of Mendix Profile.
+{{% /alert %}}
+
+[** Please verify if you think th information above should go here**]
+
 ## 3 App Projects {#projects}
 
 On the **Active App Projects** tab of this page, you can see a list of the active app projects that belong to your company. The **Inactive App Projects** tab lists your company's deactivated app projects. The following details apply to deactivated app projects:
@@ -47,9 +63,11 @@ On the **Active App Projects** tab of this page, you can see a list of the activ
 * A deactivated app still exists in the company, but it is invisible to regular users 
 * Licensed apps with a node can only be offboarded by Mendix Support – to offboard an app, you must submit an [offboarding request](/developerportal/support/submit-support-request)
 
-[**Please verify these points are still accurate/relevant.**]
+[**Please verify the above points are still accurate/relevant.**]
 
 When you click a **Project** name, a pop-up window opens with the project profile. The **Project Info** tab has the **Description** and **App ID** fields, which are also available on the [General](/developerportal/settings/general-settings) settings page for your app project in the Developer Portal. On the **Members** tab, you can see the active members and external members of the app project. The **Project Roles** tab presents the App Team roles defined via the **Default App Roles** tab and/or customized for a particular app project.
+
+When you select an app project in the lists on these tabs, a context menu appears with options for exporting project details to an *.xlsx* file, deactivating/activating a project, or deleting a project.
 
 The **Default App Roles** tab shows the default  [App Team roles](/developerportal/company-app-roles/manage-roles#edit-app-team-roles) assigned for every new app project created in your company. These can be customized at the app project-level. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/develop/team-server) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) information.
 
@@ -59,7 +77,7 @@ The **Default App Roles** tab shows the default  [App Team roles](/developerport
 
 A Mendix Admin can set up **App Access Groups**, which consist of end-users (who are active members of your company) who will have access to [Mendix SSO](/appstore/modules/mendix-sso)-enabled apps with specific environments and roles. Click **Add Access Group** to create a new group with a **Name** and **Description**.
 
-Click a group to bring up the group details pop-up window, and click **Add Member** to add members to the group. When you add members to an app access group, they will automatically be granted access to the apps listed on **Accessible Apps** tab. After you select an app to be accessible for the group, you also need to select a specific app [environment](/developerportal/deploy/environments) node to be accessible, in addition to specific [user roles](/refguide/user-roles) that should be able to access the app.
+Click a group name to bring up the group details pop-up window, and click **Add Member** to add members to the group. When you add members to an app access group, they will automatically be granted access to the apps listed on **Accessible Apps** tab. After you select an app to be accessible for the group, you also need to select a specific app [environment](/developerportal/deploy/environments) node to be accessible, in addition to specific [user roles](/refguide/user-roles) that should be able to access the app.
 
 ![](attachments/access-group.jpg)
 
@@ -67,7 +85,7 @@ Click a group to bring up the group details pop-up window, and click **Add Membe
 You can only add apps to groups that utilize [Mendix SSO](/appstore/modules/mendix-sso) to App Access Groups.
 {{% /alert %}}
 
-[**How do you delete a group?**]
+When you select a group in the list or a member or accessible app in the group details page, a context menu will appear with options for exporting item details to an *.xlsx* file, deleting an access group, removing a member from an access group, or removing an accessible app.
 
 ## 5 Company Settings {#company}
 
@@ -105,7 +123,7 @@ On the **Security History** tab, you can click **Show Security History** to open
 
 The **Cloud Environments** tab on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy#plans) and **Fallback** (meaning, a standard or premium plan). 
 
-[**Mark: Please verify definitions for resource pack and fallback above. Any cross-reference to implement for "fallback"? Do we need more documentation on fallbacks, especially as users will need to understand that when requesting via App Node below?**]
+[**Mark: Please verify definitions for resource pack and fallback above. Any cross-reference to implement for "fallback"? Do we need more documentation on fallbacks, especially as users will need to understand that when requesting via "App Node" below?**]
 
 ![](attachments/cloud.png)
 
@@ -113,13 +131,11 @@ The **Cloud Environments** tab on this page presents an overview of the licensed
 
 There are three other pages accessible from this tab where you can perform other Mendix Cloud operations:
 
-* **Add Node** – click this to request a new app node for a specific app and environment
-* **Resize Environment** – click this to request a container size change
-* **Offboard Environment** – click this to offboard an app
+* **Add Node** – requests a new app node for a specific app and environment
+* **Resize Environment** – requests a container size change
+* **Offboard Environment** – offboards an app
 
 [**Mark: Please expand definitions of operations above and add useful cross-references for app node, container, offboard**]
 
 [**Mark: Please verify what will happen with this page and Support's involvement when Control Center comes out: https://docs.mendix.com/developerportal/support/new-app-node-request-template#1-requesting-a-new-license**]
-
-
 

@@ -4,6 +4,9 @@ category: "General Info"
 menu_order: 40
 tags: ["app store", "support", "platform support", "community support", "deprecated"]
 description: "Describes the various levels of support available for using App Store content in your Mendix apps."
+aliases:
+    - /community/app-store-content-support.html
+    - /developerportal/app-store/app-store-content-support.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

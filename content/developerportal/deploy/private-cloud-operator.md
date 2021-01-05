@@ -25,7 +25,7 @@ Alternatively, you can create a connected cluster and use the Mendix Developer P
 
 ## 3 Deploying a Mendix App with an Operator
 
-You can deploy multiple Mendix apps to run in the same Kubernetes or OpenShift namespace. This means that they need to have unique and recognizable names; the name is required to identify the app when creating/modifying/deleting it.
+You can deploy multiple Mendix apps to run in the same Kubernetes or OpenShift namespace. Apps will have an **Environment UUID** added when they are  deployed to ensure that they are unique in the project; the name is required to identify the app when creating, modifying, or deleting it.
 
 Follow the instructions below to deploy your app.
 
@@ -105,6 +105,12 @@ spec:
         #    key: java-proxy-secret
       - name: JAVA_TOOL_OPTIONS # name of the environment variable
         value: -Dhttp.proxyHost=10.0.0.100 -Dhttp.proxyPort=8080 -Dhttps.proxyHost=10.0.0.100 -Dhttps.proxyPort=8443 -Dhttp.nonProxyHosts="localhost|host.example.com"
+    clientCertificates: # Optional, can be omitted : set client certificates for TLS authentication
+      - key: Q0VSVElGSUNBVEU= # base64-encoded PKCS12 certificate
+        password: # base64-encoded password for the certificate, cannot be empty
+        pinTo: # Optional, list of web services or domain names where this certificate should be used
+        - "www.example.com"
+        - "service.www.example.com"
     # All custom Mendix Runtime parameters go here, in JSON format; validated and applied by the mx-m2ee-sidecar container
     customConfiguration: |-
       {
@@ -116,7 +122,7 @@ spec:
 
 You need to make the following changes:
 
-* **name**: – You can deploy multiple apps in one project/namespace — the app name in the CR doesn't have to match the app name in the mda but must be unique in the project — see [Reserved Names for Mendix Apps](#reserved-names), below, for restrictions on naming your app
+* **name**: – You can deploy multiple apps in one project/namespace — the app name in the CR doesn't have to match the app name in the mda and will have an **Environment UUID** added when it is deployed to ensure that it is unique in the project — see [Reserved Names for Mendix Apps](#reserved-names), below, for restrictions on naming your app
 * **database/storage** – ensure that these have the correct **servicePlan** — they have to have the same names that you registered in the namespace
 * **mendixRuntimeVersion** – the full runtime version which matches the mda, including the build number
 * **sourceURL** – the location of the deployment package, this must be accessible from your cluster without any authentication
@@ -161,6 +167,7 @@ You need to make the following changes:
 * **logLevels**: – set custom logging levels for specific log nodes in your app — valid values are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
 * **jettyOptions** and **customConfiguration**: – if you have any custom Mendix Runtime parameters, they need to be added to this section — options for the Mendix runtime have to be provided in JSON format — see the examples in the CR for the correct format and the information below for more information on [setting app constants](#set-app-constants) and [configuring scheduled events](#configure-scheduled-events)
 * **environmentVariables**: - set the environment variables for the Mendix app container, and JVM arguments through the `JAVA_TOOL_OPTIONS` environment variable
+* **clientCertificates**: - specify client certificates to be used for TLS calls to Web Services and REST services
 
 #### 3.2.1 Setting App Constants{#set-app-constants}
 

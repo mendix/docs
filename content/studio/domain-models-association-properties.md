@@ -3,6 +3,8 @@ title: "Associations"
 parent: "domain-models"
 description: "Describes the association properties in Mendix Studio."
 tags: ["studio", "domain model"]
+aliases:
+    - /refguide/web-modeler/domain-models-association-properties-wm.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

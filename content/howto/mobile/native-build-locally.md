@@ -8,10 +8,6 @@ tags: ["native", "mobile", "build", "local", "xcode", "android studio"]
 
 ## 1 Introduction
 
-{{% alert type="warning" %}}
-Due to fundamental changes in XCode 12, Mendix native mobile apps cannot be built using XCode 12. Use XCode 11.7 to build instead.
-{{% /alert %}}
-
 By default when building your native mobile app binaries, Mendix uses [Visual Studio App Center](https://appcenter.ms/sign-in?original_url=%2Fapps) as a service so that users can build without having to install tools like XCode or Android Studio. However, there are cases when using App Center is not allowed or possible. In those situations, you can build your apps locally without an internet connection.
 
 Follow the sections below through [Building Your Native App Project](#building-app-project) to complete your builds. To go beyond those instructions, see [Adding Dependencies](#adding-dependencies) and [Removing Dependencies](#removing-dependencies) sections below. These sections will allow you to further customize your local builds.
@@ -32,9 +28,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install [Node and NPM](https://nodejs.org/en/download/)
 * Download the Native Builder [executable](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) to a folder of your preference and extract all contents
-   * Use v1.0.0 with Mendix 8.0
-   * Use v2.0.0 with Mendix 8.1.0 and above
-   * Use v3.0.0 with Mendix 8.3.0 and above
+   * Use v3.0.0 with Mendix 9.0 and above
 
 For iOS builds:
 
@@ -63,7 +57,7 @@ The keys of the dictionary represent the Mendix Studio Pro version. The `min` an
 
 {{% image_container width="200" %}}![iOS output](attachments/native-build-locally/mendix-version.png){{% /image_container %}}
 
-In the case of Mendix Studio Pro 8.9.x, you could choose any Native Template version from 4.0.0 to the latest. Ideally you should choose the most recent supported version
+So like in the example picture shown above, in the case of Mendix Studio Pro 8.9.x, you could choose any Native Template version from 4.0.0 to the latest. Ideally you should choose the most recent supported version.
 
 There is no best way of getting a copy of the Native Template. In the following sections we provide two ways to get the version you need.
 

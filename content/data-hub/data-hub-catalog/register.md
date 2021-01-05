@@ -22,7 +22,7 @@ This section starts with guidelines and best practice for registering services a
 
 The steps for updating a consumed OData service in Studio Pro for which a new version is available are described in the [Updating a Published OData Service in Studio Pro](#updating-service) section below.
 
-## 2 Best Practices for Registering Services and Shared Entities
+## 2 Best Practices for Registering Services and Shared Datasets
 
 This section provides advice and best practices when registering your services in the Data Hub Catalog either from Studio Pro or through manual registration.
 
@@ -30,9 +30,9 @@ This section provides advice and best practices when registering your services i
 
 App owners should refer to their [Data Hub Admin](../index#admin) and [Data Hub Curator](../index#curator) to align with their organization's data registration policy and methods. This can include naming and grouping the entities that define specific data, access and security, and also issuing new versions of services.
 
-Some entities may be published in several OData services as a way of grouping and publishing sets of data. Updating and maintenance has to be managed and maintained by the app owners.
+Some datasets may be published in several OData services as a way of grouping and publishing sets of data. Updating and maintenance has to be managed and maintained by the app owners.
 
-User access rights to the entity and the associated data are published in the OData service and this is applied to the entities that are consumed in an app. For details on security in Studio Pro, see [Security](/refguide/security) in the *Studio Pro Guide*.
+User access rights to the dataset (or entity set) and the associated data are published in the OData service and this is applied to the datasets that are consumed in an app. For details on security in Studio Pro, see [Security](/refguide/security) in the *Studio Pro Guide*.
 
 ### 2.2 OData Services and Versions {#odata-service-version}
 
@@ -62,7 +62,7 @@ When exposing Mendix entities that are generalizations and specializations in th
 The association of a generailsed entity that is exposed in the same service as the specializations is not supported for both entities when consumed. The same association cannot be consumed for the two different entities. In this case, the inherited association should not be included when exposing the specialization.
 {{% /alert %}}
 
-## 3 Publishing an OData Service in Studio Pro to Register Entities {#odata-service-reg}
+## 3 Publishing an OData Service in Studio Pro{#odata-service-reg}
 
 This section describes how to register entities from your Mendix app in the Data Hub Catalog in Studio Pro. For details on publishing an OData resource, see [Published OData Resource](/refguide/published-odata-resource) in the *Studio Pro Guide*.
 
@@ -80,21 +80,24 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 
 3. Enter a meaningful name that indicates the entities and data that are going to be exposed for the published OData service and click **OK**.
 
-4.  The OData service document is added to the module, and the **Edit published resource** dialog box is displayed for the selected entity. The information in this will form the metadata definition for the entity:
+4. The OData service document is added to the module, and the **Edit published resource** dialog box is displayed for the selected entity. The information in this will form the metadata definition for the entity:
 
-	![](attachments/register/edit-published-resource-box.png)
+   ![](attachments/register/edit-published-resource-box.png)
 
-	* **Entity** – the name and module of the entity
-		* **Select** – click to display list of entities available in the module and select another entity to expose
-		* **Show** – click to see the entity in the domain model
-	* **Exposed attributes and associations** – click **select** to view and select the attributes and associations to expose for this entity
-	* **Exposed entity name** – you can customize the name of the entity in the OData service
-	* **Exposed set name** – the name of the dataset associated with the entity that is exposed
-	* **Example of location** – the location of the dataset for the entity
-	* **Use paging** – the maximum number of data objects that are retrieved in a single call (with a link to the next set)
-	* **Public documentation** tab – a summary and a description of the entity can be added here
+   * **Entity** – the name and module of the entity
+   	* **Select** – click to display list of entities available in the module and select another entity to expose
+   	* **Show** – click to see the entity in the domain model
+   * **Exposed attributes and associations** – click **select** to view and select the attributes and associations to expose for this entity
+   * **Exposed entity name** – you can customize the name of the entity in the OData service
+   * **Exposed set name** – the name of the dataset associated with the entity that is exposed
+	{{% alert type="info" %}}
+The **Exposed set name** will be shown in the Data Hub Catalog for the registered service as the [Datasource](/data-hub/data-hub-catalog/search#search-details) for the exposed **Entity**.
+{{% /alert %}}
+   * **Example of location** – the location of the dataset for the entity
+   * **Use paging** – the maximum number of data objects that are retrieved in a single call (with a link to the next set)
+   * **Public documentation** tab – a summary and a description of the entity can be added here
 
-	For further details, see [Published OData Resource](https://docs.mendix.com/refguide/published-odata-resource) in the *Studio Pro Guide*. 
+   For further details, see [Published OData Resource](https://docs.mendix.com/refguide/published-odata-resource) in the *Studio Pro Guide*. 
 
 5. Click **OK** to see the [OData Service](#odata-service-general) page. If you want to publish several entities in the same service, add them here by clicking **Add** for the **Resources**.
 
@@ -244,7 +247,7 @@ New versions of previously registered services also have to be registered manual
 
 ###  7.1 Preparing the v4 OData Service Documents
 
-The files for an OData v4 service contract may comprise the base schema definition and additional associated schema documents to complete the full service definition.  The files formats of the v4 OData Service contracts that are accepted are *.xml* (for a single file) and  *.zip* (when the contract is comprised of several files). 
+The files for an OData v4 service contract may comprise the base schema definition and additional associated schema documents to complete the full service definition.  The files formats of the v4 OData Service contracts that are accepted are *.xml* (for a single file) and  *.zip* (when the contract includes several files). 
 
 ### 7.2 Registering the Service – Application and Environment {#new-service}
 

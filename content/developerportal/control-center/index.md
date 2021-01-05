@@ -4,11 +4,6 @@ description: "Describes the Mendix Control Center, used for the governance of ap
 tags: ["Control Center", "Mendix Admin", "Developer Portal", "role", "permissions"]
 ---
 
-{{% alert type="info" %}}
-Mendix Control Center is currently a Beta release. For details on what this means, see [Mendix Beta Features](
-/releasenotes/beta-features/).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Users that sign up on the Mendix Platform will be able create new app projects, invite others to their app project teams, deploy their apps, and invite end-users to give feedback on apps, among many other activities. Insights into all these company activities are provided to you in the Control Center in one central overview. These insights will help you to be in control and remain aware of everything happening within the Mendix landscape of your company.

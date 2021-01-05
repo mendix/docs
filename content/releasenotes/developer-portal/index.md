@@ -11,6 +11,13 @@ These release notes cover changes to the app project management functionality an
 For release notes on Mendix Cloud and deployment options, see [Deployment](deployment).
 {{% /alert %}}
 
+## 2021
+
+### January 12th, 2020
+
+
+
+
 ## 2020
 
 ### December 2nd, 2020

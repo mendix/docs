@@ -1,5 +1,5 @@
 ---
-title: "Part 3: Actions"
+title: "Part 3: Notification Buttons"
 parent: "web-push-notifications"
 menu_order: 30
 description: Add buttons that the user can click on the notification.
@@ -14,10 +14,10 @@ Web push notifications module supports the following buttons:
 
 | Microflow To Add Button | Description |
 | --- | --- |
-| Backgroun dMicroflow | When the user clicks this button a microflow is triggered in your app. The notification is then closed without requiring further interaction from the user. Usefull to let users take action on a notification without having to open and login to the app, for example to approve a request. |
-| Close | When the user clicks this button the notification is closed without any further interaction. |
+| Background Microflow | When the user clicks this button a microflow is triggered in your app. The notification is then closed without requiring further interaction from the user. Usefull to let users take action on a notification without having to open and login to the app, for example to approve a request. |
 | Open Page Microflow | When the user clicks this button they are redirected to a page in your app. This could be the home page or another specific page. |
 | Open URL | When the user clicks this button they are redirected to this URL. The primary goal is to redirect users to other websites/apps. |
+| Close | When the user clicks this button the notification is closed without any further interaction. |
 
 ## 2 Configuring a button
 

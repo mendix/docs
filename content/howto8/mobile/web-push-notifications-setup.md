@@ -16,7 +16,7 @@ Unlike native push notifications, web push notifications do not need a mobile ap
 In order to setup web push notifications you will have to:
 
 1. Install the web push notifications module
-2. Allow users to subscribe to web push notifications
+3. Allow users to subscribe to web push notifications
 
 Follow the sections below to complete these two tasks and enable web push notifications.
 
@@ -30,6 +30,8 @@ Install the [web push notifications app store module](https://marketplace.mendix
 
 This can be done from StudioPro directly by visiting the app store and searching for "web push notificaiion".
 Alternatively, you can click on the link above, downloading the .mpk file and import that to your project.
+
+After the module is added to your project, add the java action *_WebPushSetup_AddToAfterStartup* to your after startup microflow.
 
 ## 3 Allow users to subscribe to web push notifications
 

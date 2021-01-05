@@ -36,15 +36,13 @@ You can can access the following parts of the Mendix Platform:
 * **Studio Pro** – the [Studio Pro](/refguide/index) download page in the [Mendix App Store](/appstore/index)
 * [Control Center]()
 * [Buzz](#buzz)
-* **Cloud Portal**  – the [Deployment](/developerportal/deploy/) facilities of the Developer Portal [**VERIFY: use of "Cloud Portal" at all - which leads to required change in PNG but enables using it in other docs; whether "Cloud Portal" reflects the destination, and how - this is the bigger issue**]
+* **Cloud Portal**  – the **Nodes** and [Environments](/developerportal/deploy/environments/) pages of the Developer Portal [**Verify destination and cross-reference**]
 * [App Store](/appstore/index)
 * [Data Hub](/data-hub/)
 * [Academy](#academy)
 * [Docs](#docs)
 * [Forum](#forum)
 * [Community](#community)
-
-
 
 ## 2 Apps {#apps}
 

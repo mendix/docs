@@ -13,6 +13,18 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2020
 
+### December 23rd, 2020
+
+#### Improvements
+
+* We tweaked the styling of the **Stories** > [Project History](/developerportal/collaborate/stories#history) page.
+* We made [moving a story](/developerportal/collaborate/stories#move-stories) to another app project more intuitive.
+* We removed the Model page, which contained tips on how to get started creating your apps.
+
+#### Fixes
+
+* We fixed an issue where replies to Buzz notifications were not properly processed into comments on your [app Buzz](/developerportal/collaborate/buzz#app-buzz) page. (Ticket 111076)
+
 ### December 2nd, 2020
 
 #### Improvements
@@ -64,7 +76,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Fixes
 
-* We placed a deprecation warning in a file hosted by the Developer Portal that is used in old versions of the [Mendix Feedback](/appstore/widgets/mendix-feedback#below) widget. As of October 1st, 2020, we will end support for Mendix Feedback widget version 5 or below. Please always keep your Feedback widget up-to-date to ensure the best experience for your users.
+* We placed a deprecation warning in a file hosted by the Developer Portal that is used in old versions of the [Mendix Feedback](/appstore/widgets/mendix-feedback) widget. As of October 1st, 2020, we will end support for Mendix Feedback widget version 5 or below. Please always keep your Feedback widget up-to-date to ensure the best experience for your users.
 * We fixed an issue where you could move a user story to a different Sprint without specifying the target Sprint.
 
 ### July 28th, 2020

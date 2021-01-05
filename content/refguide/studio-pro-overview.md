@@ -4,6 +4,8 @@ category: "App Modeling"
 description: "Describes Studio Pro in general: tabs, menus, shortcut keys."
 menu_order: 10
 tags: ["Studio Pro"]
+aliases:
+    - /refguide/desktop-modeler-overview.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---

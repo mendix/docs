@@ -34,7 +34,9 @@ Depending on your device settings and network characteristics, the Make it Nativ
 
 	{{% image_container width="250" %}}![cannot detect runtime](attachments/common-issues/min-error-firewall.png){{% /image_container %}}
 
-These failures are often caused by the Windows Defender firewall. In such cases, attempts to open the runtime URL from the mobile browser will also fail. To mitigate these issues, please do the following:
+These failures are often caused by a firewall blocking your device from accessing your laptop. In such cases, attempts to open the runtime URL from a mobile browser will also fail. To mitigate these issues, please make sure your firewall allows incoming traffic to your laptop on the runtime and native packing ports (8080 and 8083 by default). Instructions on how to do this differ per firewall. We recommend you consult your firewall administrator.
+
+For the Windows Defender firewall, the most common firewall, do the following:
 
 1. Make sure that your computer and the mobile device are connected to the same network.
 1. Make sure that incoming connections are allowed by doing the following:<br />

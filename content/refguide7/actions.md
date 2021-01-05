@@ -4,7 +4,7 @@ parent: "published-app-services"
 ---
 
 {{% alert type="info" %}}
-App services have been deprecated in version 7.23.4 and are marked for removal in version 8.0.0. Use a [published web service](published-web-services) or a [published REST service](published-rest-services) instead.
+App services have been deprecated in version 7.23.4 and are marked for removal. Use a [published web service](published-web-services) or a [published REST service](published-rest-services) instead.
 {{% /alert %}}
 
 Provides the actual microflow actions of the app service. Note that once an app service version is set to Consumable, its parameters and return type are no longer editable as they are part of the app service contract.

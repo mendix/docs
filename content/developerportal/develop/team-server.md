@@ -4,6 +4,8 @@ category: "Development"
 menu_order: 20
 description: "Describes the overview of Team Server revisions and commits."
 tags: ["Studio Pro", "Team Server", "Developer Portal", "commit", "branch"]
+aliases:
+    - /refguide/team-server.html
 ---
 
 ## 1 Introduction
@@ -38,8 +40,6 @@ For each revision, you can see the following information:
 * The branch to which the revision was committed
 * The Mendix Studio Pro version used
 * The revision number
-
-![](attachments/revision-example.png)
 
 You can also access the revision history in Studio Pro. For more information, see the [History](/refguide/using-version-control-in-studio-pro#history) section in *Using Version Control in Studio Pro*.
 

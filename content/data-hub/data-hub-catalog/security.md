@@ -3,24 +3,24 @@ title: "Data Accessibility and Security"
 category: "Data Hub Catalog"
 menu_order: 50
 description: "Describes how security is implemented in the Mendix Data Hub Catalog."
-tags: ["data hub", "data hub catalog", "security", "entities security", "odata service security"]
+tags: ["data hub", "data hub catalog", "security", "entity security", "dataset security","odata service security"]
 ---
 
 ## 1 Introduction
 
 When sharing data in an organization, access to and security of the data is a primary concern. 
 
-Security for an app can be defined at the app project-level, module-level, and entity-level. Further authentication methods can also be specified to control access to the data associated with published entities.
+Security for an app can be defined at the app project-level, module-level, and entity-level. Further authentication methods can also be specified to control access to the data associated with published datasets.
 
-This security level determines which end-users of the apps will have access to the data represented by the entity. For example, an app developer in Mendix Studio Pro working in an HR department can use the **Employees** entity in the Data Hub Catalog in their application. The developer must have access to representative test datasets that are made available in a test or acceptance environment to properly develop the app. However, at runtime, they may not be able to see all the actual employee data if they do not have the correct access permissions. Similarly, end-users of the consuming app will only be able to see the data for which they have clearance.  HR managers using this app will be able to see more data from the same employee entity database according to their access clearance.
+This security level determines which end-users of the apps will have access to the data represented by the exposed dataset. For example, an app developer in Mendix Studio Pro working in an HR department can use the **Employees** dataset in the Data Hub Catalog in their application. The developer must have access to representative test datasets that are made available in a test or acceptance environment to properly develop the app. However, at runtime, they may not be able to see all the actual employee data if they do not have the correct access permissions. Similarly, end-users of the consuming app will only be able to see the data for which they have clearance.  HR managers using this app will be able to see more data from the same employee entity database according to their access clearance.
 
 For further information, see the [Security](/refguide/published-odata-services#security) section in *Published OData Services*.
 
 Security is determined by the identification protocols of the organization and applied to all access to the data via Mendix apps. This page shows an example of applying [custom HTTP header validation](#http-header-validation).
 
-## 2 OData Security for Shared Data Entities
+## 2 OData Security for Shared Datasets
 
-For Mendix apps that publish entities and those that consume shared entities in their apps as [external entities](/refguide/external-entities), the following details apply:
+For Mendix apps that publish entities and those that consume the shared entities in their apps as [external entities](/refguide/external-entities), the following details apply:
 
 * The security for the OData-based service is defined in the publishing app – at the project, module, and entity level
 *  The security that is defined at the module level will apply to the OData services that are published from the module and enforced when the entities from the service are used in a consuming app when end-users try to access the data
@@ -30,6 +30,7 @@ For Mendix apps that publish entities and those that consume shared entities in 
 
 * Classification of the data associated with the entities is defined in the service metadata and shown in the [Service Metadata](search#metadata) panel of the **Search Details** screen. This is further discussed below.
 * Through the identification protocols used for establishing the user identity, the security rules for the user in the publishing app are applied
+	
 	* On the Mendix Platform, this is [Mendix SSO](/developerportal/deploy/mendix-sso),  but it can also be the organization's identification protocol
 *  In the publishing app in Studio Pro, access can be defined at the entity level as follows:
 	* None
@@ -40,14 +41,14 @@ For further details, see the [Entity Access](/refguide/module-security#entity-ac
 
 ## 3 Classification of Registered OData Services
 
-OData services registered in the Data Hub Catalog have the following classifications that apply to the data associated to the exposed entities:
+OData services registered in the Data Hub Catalog have the following classifications that apply to the data associated with the exposed datasets:
 
 * **Public**  – data is available to all internal and external users
 * **Internal**  – data is restricted to the members of the organization
 
 The classification of the asset indicates the runtime security on the data and defines what users are allowed to see and use when running their application.
 
-The classification for a registered OData service is shown in the **Service Metadata** panel in the Data Hub Catalog. This classification applies to access to the data associated with the service or entity by end-users of the app that consumes the entity. 
+The classification for a registered OData service is shown in the **Service Metadata** panel in the Data Hub Catalog. This classification applies to access to the data associated with the service or dataset by end-users of the app that consumes the entity. 
 
 ## 4 Using Custom HTTP Header Validation for Published Entities {#http-header-validation}
 

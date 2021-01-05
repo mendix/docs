@@ -3,6 +3,10 @@ title: "Search Bar"
 parent: "grids"
 menu_order: 40
 tags: ["studio pro", "search bar", "comparison search field", "drop down search field", "range search field", "grid"]
+aliases:
+    - /refguide/comparison-search-field.html
+    - /refguide/drop-down-search-field.html
+    - /refguide/range-search-field.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -83,13 +87,7 @@ Many input widgets (like text boxes and drop-down widgets) can be connected to t
 
 In the first case, we say the widget is connected to an attribute, and in the second case it is connected to an attribute path.
 
-{{% alert type="warning" %}}
-
-In Mendix 8.0, an input widget connected to an attribute path must be read-only. Studio Pro will check this for you.
-
-In Mendix 8.1 and above, you can edit attributes presented in input widgets over a path.
-
-{{% /alert %}}
+You can edit attributes presented in input widgets over a path.
 
 #### 3.2.2 Comparison
 

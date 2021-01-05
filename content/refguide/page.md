@@ -157,17 +157,21 @@ Both modes allow you to edit your page by doing the following:
 
 In **Structure mode**, the page widgets are laid out so that it is easy to see the logical relationship between them. It has the following features which are not available in Design mode:
 
+* You can zoom a page in or out using the **Zoom** drop-down menu in the top-right corner of a page
+
 * Widgets are shown with additional information easily visible – for example, data sources for data views and the width assigned to columns
 
 	![Frequently-used widgets](attachments/page/structure-mode-info.png)
 
 * Each widget has a drop-zone before/above and after/below it – this makes it easier to place widgets correctly when they appear close together in Design mode
+
 * Right-click a drop-zone allows you to insert a widget into it
+
 * There is a menu at the top of the page of data widgets – these cannot be dragged, but are positioned by clicking a drop-zone after selecting the widget
 
 	![Frequently-used widgets](attachments/page/frequently-used.png)
 
-* Widgets are shown without styling applied to them, but you can see which widgets do have styling applied via the class or style property by clicking the **Show styles** button.
+* Widgets are shown without styling applied to them, but you can see which widgets do have styling applied via the class or style property by clicking the **Show styles** button (available for Web page templates and layouts only).
 
     ![Show styles button](attachments/page/show-styles.png)
 
@@ -175,7 +179,7 @@ In **Structure mode**, the page widgets are laid out so that it is easy to see t
 
 In **Design mode**, the page is laid out as it will appear when published so that it is easy to see the spatial relationship between the elements.
 
-For example, the example page shown in [Structure Mode](#structure-mode), above, will look like this in **Design mode** for a tablet:
+For example, the example page shown in [Structure Mode](#structure-mode), above, will look like this in **Design mode** for a desktop:
 
 ![Design mode page as displayed on a tablet](attachments/page/design-mode-example.png)
 

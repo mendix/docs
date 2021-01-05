@@ -6,6 +6,7 @@ tags: ["studio", "microflow"]
 aliases:
     - /refguide/web-modeler/microflows-wm.html
 #If moving or renaming this doc file or section 5 Toolbox, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#The anchor <microflows-toolbox> below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Introduction 

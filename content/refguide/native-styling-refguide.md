@@ -1357,7 +1357,7 @@ The widget consists of the following elements:
 | `grid` | `paddingHorizontal` | Applies padding to the horizontal sides of the grid (number). Use it to make axis value labels visible. |
 | `grid` | `paddingLeft` | Applies padding to the left side of the grid (number). Use it to make axis value labels visible. |
 | `grid` | `paddingRight` | Applies padding to the right side of the grid (number). Use it to make axis value labels visible. |
-| `grid` | `paddingTop` | Applies padding to the top side of the grid (number). Use itto make axis value labels visible. |
+| `grid` | `paddingTop` | Applies padding to the top side of the grid (number). Use it to make axis value labels visible. |
 | `grid` | `paddingVertical` | Applies padding to the vertical sides of the grid (number). Use it to make axis value labels visible. |
 | `xAxis` | `color` | Applies a color to the axis value labels (string). |
 | `xAxis` | `dashArray` | Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
@@ -1389,6 +1389,91 @@ The widget consists of the following elements:
 | `lines` > `customLineStyles` > `any_custom_line_style_name` > `markers` | `symbol` | Applies a symbol to the markers of the graph line ("circle" or "diamond" or "plus" or "minus" or "square" or "star" or "triangleDown" or "triangleUp"). |
 
 The default class to style all line chart widgets is named `com_mendix_widget_native_linechart_LineChart`.
+
+### 11.27 Bar Chart
+
+The bar chart widget renders a horizontal bar graph based on static and dynamic data sets.
+
+The widget consists of the following elements:
+
+```xml
+<container/>
+<errorMessage/>
+<chart/>
+<grid/>
+<xAxis>
+	<label/>
+</xAxis>
+<yAxis>
+	<label/>
+</yAxis>
+<legend>
+	<container/>
+	<item/>
+	<indicator/>
+	<label/>
+</legend>
+<domain>
+    </padding>
+</domain>
+<bars>
+    </barsOffset>
+    </barColorPalette>
+	<customBarStyles>
+		<any_custom_bar_style_name>
+			</bar>
+			</label>
+		</any_custom_bar_style_name>
+	</customBarStyles>
+</bars>
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `errorMessage` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `chart` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `grid` | `backgroundColor` | Applies a color to the grid background (string). |
+| `grid` | `dashArray` | Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
+| `grid` | `lineColor` | Applies a color to the grid lines (string). |
+| `grid` | `width` | Applies a width to the grid lines (number). |
+| `grid` | `padding` | Applies padding to all sides of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingBottom` | Applies padding to the bottom side of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingHorizontal` | Applies padding to the horizontal sides of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingLeft` | Applies padding to the left side of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingRight` | Applies padding to the right side of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingTop` | Applies padding to the top side of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingVertical` | Applies padding to the vertical sides of the grid (number). This makes axis value labels visible. |
+| `xAxis` | `color` | Applies a color to the axis value labels (string). |
+| `xAxis` | `dashArray` | Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
+| `xAxis` | `fontFamily` | Applies a font type to the axis value labels (string). |
+| `xAxis` | `fontSize` | Applies a size to the axis value labels (number). |
+| `xAxis` | `fontStyle` | Applies a font style to the axis value labels ("normal" or "italic"). |
+| `xAxis` | `fontWeight` | Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
+| `xAxis` | `lineColor` | Applies a color to the axis line (string). |
+| `xAxis` | `lineWidth` | Applies a width to the axis line (number). |
+| `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **bottom** or **right** side of the grid. |
+| `yAxis` | All `xAxis` element styles. | |
+| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. |
+| `yAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **top** or **left** side of the grid. |
+| `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `legend` > `indicator` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `legend` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `domain` > `padding` | `x` | Applies a number of pixels of padding to add the beginning and end of the X axis domain (number). |
+| `domain` > `padding` | `y` | Applies a number of pixels of padding to add the beginning and end of the Y axis domain (number). |
+| `bars` | `barColorPalette` | Provides colors to bars that do not have a bar color configured (string with list of colors separated by ';'). |
+| `bars` | `barsOffset` | Determines the number of pixels each bar in a group should be offset from its original position on the Y axis (number). This is only applicable when presentation mode is **Grouped**. |
+| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `bar` | `ending` | Specifies a radius to apply to each bar. |
+| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `bar` | `color` | Applies a color to the bar (string). If bars are configured to have labels, the labels will be the same color as the bar. |
+| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `bar` | `width` | Applies a width to the bar (number). |
+| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `label` | `fontFamily` | Applies a font type to the bar label (string). |
+| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `label` | `fontSize` | Applies a size to the bar label (number). |
+| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `label` | `fontStyle` | Applies a font style to the bar label (**normal** or **italic**). |
+| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `label` | `fontWeight` | Applies a font weight to the bar label ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
+
+The default class to style all bar chart widgets is named `com_mendix_widget_native_barchart_BarChart`.
 
 ## 12 Read More
 

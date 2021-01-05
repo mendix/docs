@@ -45,4 +45,6 @@ This could be, for example a user profile page or a settings page.
 Next, for users to be able to see the subscription prompt they must have the module role "NotificationReceiver".
 So make sure that all project roles that you want to be able to subscribe have that module role assigned.
 
+![](attachments/web-push-notifications/web-push-notifications-security.png)
+
 With those steps completed you have enabled web push notifications for your Mendix app and allowed users to subscribe.

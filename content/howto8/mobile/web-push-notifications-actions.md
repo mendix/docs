@@ -23,7 +23,7 @@ Web push notifications module supports the following buttons:
 
 Adding a button to the notification is done after the Notification object is created and before the Notification is sent. 
 
-![](attachments/web-push-notifications/web-push-notifications-complete-example.png)
+![](attachments/web-push-notifications-complete-example.png)
 
 Up to two buttons can be added to one notification. Each button has a caption and an icon. Additionally, some buttons accept additional parameters which are described in the action itself.
 

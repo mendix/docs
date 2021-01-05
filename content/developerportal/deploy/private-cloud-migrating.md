@@ -37,9 +37,11 @@ Follow these steps to export the Mendix components and store them on your local 
 
 3. Select the **Main Components** and **Storage Provisioners** you want to export.
 
+4. Enter the version numbers of any Mendix Runtimes which you want to export. You can use wildcards and create a list of versions separated by commas. For example `8.12.*, 7.23.6.*` will export all patch versions of the Mendix 8.12 runtime and the published build of the Mendix 7.23.6 runtime.
+
     ![](attachments/private-cloud-migrating/export.png)
 
-4. Click **Export components**.
+5. Click **Export components**.
 
     The components you selected will be extracted from the Mendix repository and saved on your local machine. This will be in the folder `C:\Users\<User id>\.mx_config_cli\registry-migration` on Windows or `home/<User id>/.mx_config_cli/registry-migration` for Mac and U*ix. This can take some time. Wait for the message *The images for the selected components were exported successfully in tarballs*.
 
@@ -64,7 +66,8 @@ Perform the following steps.
 
 5. Select the **Main Components** and **Storage Provisioners** you want to import into your own registry.
 
-    {{% alert type="info" %}}You can only choose components which you exported in the previous section, [Export Mendix Components](#export).{{% /alert %}}
+    {{% alert type="info" %}}You can only choose components which you exported in the previous section, [Export Mendix Components](#export).<br/><br/>
+    **ALL** runtime versions you exported will be imported – you cannot choose which versions are imported{{% /alert %}}
 
     ![](attachments/private-cloud-migrating/import.png)
 

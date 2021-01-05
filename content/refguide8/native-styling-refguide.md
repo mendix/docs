@@ -1357,7 +1357,7 @@ The widget consists of the following elements:
 | `grid` | `paddingHorizontal` | Applies padding to the horizontal sides of the grid (number). Use it to make axis value labels visible. |
 | `grid` | `paddingLeft` | Applies padding to the left side of the grid (number). Use it to make axis value labels visible. |
 | `grid` | `paddingRight` | Applies padding to the right side of the grid (number). Use it to make axis value labels visible. |
-| `grid` | `paddingTop` | Applies padding to the top side of the grid (number). Use itto make axis value labels visible. |
+| `grid` | `paddingTop` | Applies padding to the top side of the grid (number). Use it to make axis value labels visible. |
 | `grid` | `paddingVertical` | Applies padding to the vertical sides of the grid (number). Use it to make axis value labels visible. |
 | `xAxis` | `color` | Applies a color to the axis value labels (string). |
 | `xAxis` | `dashArray` | Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |

@@ -41,6 +41,7 @@ These are the native widgets included in these resources along with links to the
 | [App Events](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/app-events-native) | Triggers actions based on load, network status, and timer events. |
 | [Background Image](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/background-image-native) | Allows to layer other widgets on top of an image. |
 | [Badge](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/badge-native) | Displays text or a value as a badge. |
+| [Bar Chart (beta)](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/bar-chart-native) | The bar chart widget renders a horizontal bar graph based on static and dynamic data sets. |
 | [Barcode Scanner](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/barcode-scanner-native) | Scans barcode and QR code values. |
 | [Bottom Sheet](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/bottom-sheet-native) | Creates a set of options while blocking interaction with the rest of the screen or a draggable surface anchored to the bottom of the screen. |
 | <a name="carousel"></a>[Carousel](https://github.com/mendix/widgets-resources/tree/master/packages/pluggableWidgets/carousel-native) | Creates a carousel that can be swiped with free modeling. |

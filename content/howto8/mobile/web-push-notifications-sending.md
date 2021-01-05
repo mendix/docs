@@ -2,7 +2,7 @@
 title: "Part 2: Send Web Push Notifications"
 parent: "web-push-notifications"
 menu_order: 20
-description: Learn how to send web push notifications.
+description: Learn how to create, customize and send web push notifications.
 tags: ["web push notification", "web", "notifications", "microflow"]
 ---
 
@@ -29,5 +29,7 @@ You must use the **CreateBasicNotification** microflow to generate this entity. 
 | Lang | Specify the notification language. |
 | RequireInteraction | If true the notification will stay on the screen until the user interacts with it. |
 | Silent | If true no sound will be played when the notification arrives. |
+
+![](attachments/web-push-notifications-create.png)
 
 Sending a web push notifications involves a rest call and is therefore recommended to run it asynchronously (which is the default setting). Also, it is advised to continue on errors (default setting).

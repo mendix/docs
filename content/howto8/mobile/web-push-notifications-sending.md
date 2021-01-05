@@ -2,6 +2,7 @@
 title: "Part 2: Send Web Push Notifications"
 parent: "web-push-notifications"
 menu_order: 20
+description: Learn how to send web push notifications.
 tags: ["web push notification", "web", "notifications", "microflow"]
 ---
 

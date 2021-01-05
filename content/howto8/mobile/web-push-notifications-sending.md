@@ -1,5 +1,5 @@
 ---
-title: "Send Web Push Notifications"
+title: "Part 2: Send Web Push Notifications"
 parent: "web-push-notifications"
 menu_order: 20
 tags: ["web push notification", "web", "notifications", "microflow"]

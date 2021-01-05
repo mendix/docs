@@ -14,7 +14,7 @@ It features both an input box for searching and creating objects and a drop-down
 
 You configure background colors for labels and how the text contrasts with a label background via the `text-normal` or `text-contrast` class.
 
-### 1.1 Typical Usage Scenario
+### 1.1 Typical usage scenario
 
 * Quickly adjust reference sets
 * Easily create new objects to add

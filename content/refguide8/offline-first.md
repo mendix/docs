@@ -144,7 +144,7 @@ During the synchronization, changed and new objects are committed. An object's s
 * An error occurs during the execution of a before- or after-commit event microflow
 * The object is not valid according to domain-level validation rules
 
-{{% alert type="warning" %}}When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server. To prevent data loss, the attribute values for such objects are stored in the **System.SynchronizationError** entity (since Mendix 8.12).  {{% /alert %}}
+{{% alert type="warning" %}}When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server. To prevent data loss, the attribute values for such objects are stored in the `System.SynchronizationError` entity (since Mendix 8.12).  {{% /alert %}}
 
 ### 2.5.3 Preventing Synchronization Issues {#prevent-sync-issues}
 

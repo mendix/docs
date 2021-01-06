@@ -8,7 +8,7 @@ tags: ["data hub", "data hub catalog"]
 
 ## 1 Introduction
 
-Finding the right data to use in your app is made easier by the Data Hub Catalog search functionality. The metadata for a registered service is displayed in the [details](#search-details) screen to help in identifying the correct data source to use in your app development.  You can use the Catalog to find registered data sources to integrate  into your other enterprise applications using the [Copy Data Source URI](#service-details) button.
+Finding the right data to use in your app is made easier by the Data Hub Catalog search functionality. The metadata for a registered service is displayed in the [details](#search-details) screen to help in identifying the correct data source to use in your app development.  You can use the Catalog to find registered data sources to integrate the registered data into your other enterprise applications using the [Copy Data Source URI](#service-details) button.
 
 You can start searching from the [Data Hub](#data-hub-home) page or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Search Details** screen.
 
@@ -157,20 +157,14 @@ When a data source is selected in the search results, the details of the contrac
 
 * The name of the data source
 
-* The **Validated** tag will be displayed for the data source if it has been set upon curation
+* The **Validated** tag will be displayed for the data source if it has been set u
 
 * The **Environment name** to which the app is deployed
-
 * The **Version** number of the service at this endpoint
-
 * The number of **Connections** that are made by apps in a specific environment, in other words, that consume the service
-
 * A description of the data source as included in the metadata contract or curated in the Data Hub Catalog
-
 * Click **Copy Data Source URI** to copy the URI of the data source contract to the clipboard
-
 * Click **Share Data Source** to copy the link to this asset detail page to the clipboard
-
 * Each **Dataset** that is exposed in the data source (you can expand this to see details of the attributes and associations)
 
   {{% alert type="info" %}}

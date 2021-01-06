@@ -28,7 +28,10 @@ For the current release, the interactive features of the OpenAPI interface are n
 
 To access the API, authorization is required. Mendix users must obtain a Personal Access Token (PAT) as described in [Generating your Personal Access Token](#generatepat).
 
-For every request that is made to the Data Hub API, you must add a header called `MxToken` and include the PAT in order to access your organization's Data Hub. 
+For every request that is made to the Data Hub API, you must include the following authorization header:
+ `MxToken <your_token_secret> `
+
+And insert the PAT in place of the  *your_token_secret* string. This line will ensure that you have access your organization’s Data Hub.
 
 For example:
 ```
@@ -59,11 +62,13 @@ Mendix users (with a registered account) can obtain the necessary PAT using the 
 
 7. Copy the **Token secret** to your clipboard by clicking the storage icon below the secret. 
 
-	{{% alert type="info" %}}Make sure that you keep this token in a secure place. You will not get another chance to view this token once you **Close** this dialog box.
+  {{% alert type="info" %}}Make sure that you keep this token in a secure place. You will not get another chance to view this token once you **Close** this dialog box.
   {{% /alert %}}
 
-	{{% alert type="info" %}}You must include this token in an authorization header called `MxToken` for every request to the Data Hub API.
-  {{% /alert %}}
+  {{% alert type="info" %}}For every request that is made to the Data Hub API, you must include the following authorization header:
+   `MxToken <your_token_secret> `
+
+  And insert the **Token secret** that was generated for the *your_token_secret* string. This line will ensure that you have access your organization’s Data Hub{{% /alert %}}
 
 8. Click **Close** to return to the **Personal Access Tokens** home screen. Your generated token will be listed:
 

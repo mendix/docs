@@ -27,9 +27,9 @@ Synchronization is automatically triggered during the following scenarios:
 
 * The initial startup of your mobile app
 * The first startup of your mobile app after your Mendix app is redeployed when the following conditions are matched:
-  * There is a network connection
-  * You are using a new Mendix version or the domain model used in the offline-first app has changed
-* After the app user logs in or logs out.
+ * There is a network connection
+ * You are using a new Mendix version or the domain model used in the offline-first app has changed
+* After the app user logs in or out
 
 Synchronization can also be configured via different places in your Mendix app, for example:
 

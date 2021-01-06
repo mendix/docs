@@ -29,7 +29,7 @@ Follow these steps to create a backup of a licensed app:
 1. Go to the [Developer Portal](http://home.mendix.com) and click **Apps** in the top navigation panel.
 2. Click **My Apps** and select **Nodes**.
 3. Select the node from which you want to download the backup.
-4. Click **Backups** under the **Operate** category.
+4. Click **Backups** in the **Operate** category.
 5. Select the environment from which you want to download the backup.
 
     ![](attachments/create-backup/environment.png)

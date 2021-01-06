@@ -26,17 +26,13 @@ You can access the API at: http://datahub-spec.s3-website.eu-central-1.amazonaws
 For the current release, the interactive features of the OpenAPI interface are not operational and therefore the **Try it out** feature does not work.
 {{% /alert %}}
 
-To access the API, authorization is required. Mendix users must obtain a Personal Access Token (PAT) as described in [Generating your Personal Access Token](#generatepat).
+To access the API, authentication and authorization are required. Mendix users must obtain a Personal Access Token (PAT) as described in [Generating your Personal Access Token](#generatepat).
 
-For every request that is made to the Data Hub API, you must include the following authorization header:
+For every request that is made to the Data Hub API, you must include the following in the `Authorization` header:
+
  `MxToken <your_token_secret> `
 
-And insert the PAT in place of the  *your_token_secret* string. This line will ensure that you have access your organization’s Data Hub.
-
-For example:
-```
-curl -X GET "https://hub.mendix.com/rest/datahubservice/v2/data?contractType=OData_3_0" -H  "accept: application/json" -H  "MxToken: 4XsnkDhNWu1drAugLYTMLstRGa8F9qeTD5DJU2GgERwhpyTZCbJoLWbKy1BYbSUgENr5Gb43cLwXU6Mj3gbB2nwEd5rf6eRfcuLq"
-```
+Where you insert the PAT in place of the *your_token_secret* string. This line will ensure that you have access your organization’s Data Hub.
 
 ## 3. Generating your Personal Access Token {#generatepat}
 
@@ -62,13 +58,14 @@ Mendix users (with a registered account) can obtain the necessary PAT using the 
 
 7. Copy the **Token secret** to your clipboard by clicking the storage icon below the secret. 
 
-  {{% alert type="info" %}}Make sure that you keep this token in a secure place. You will not get another chance to view this token once you **Close** this dialog box.
-  {{% /alert %}}
+	{{% alert type="info" %}}Make sure that you keep this token in a secure place. You will not get another chance to view this token once you **Close** this dialog box.
+   {{% /alert %}}
 
-  {{% alert type="info" %}}For every request that is made to the Data Hub API, you must include the following authorization header:
-   `MxToken <your_token_secret> `
+	{{% alert type="info" %}}For every request that is made to the Data Hub API, you must include the following in the `Authorization` header:
 
-  And insert the **Token secret** that was generated for the *your_token_secret* string. This line will ensure that you have access your organization’s Data Hub{{% /alert %}}
+	`MxToken <your_token_secret>`
+
+	Where you insert the **Token secret** that was generated for the *your_token_secret* string. This line will ensure that you have access your organization’s Data Hub{{% /alert %}}
 
 8. Click **Close** to return to the **Personal Access Tokens** home screen. Your generated token will be listed:
 

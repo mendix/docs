@@ -63,9 +63,9 @@ Mendix users (with a registered account) can obtain the necessary PAT using the 
 
 	{{% alert type="info" %}}For every request that is made to the Data Hub API, you must include the following in the `Authorization` header:
 
-	`MxToken <your_token_secret>`
+`MxToken <your_token_secret>`
 
-	Where you insert the **Token secret** that was generated for the *your_token_secret* string. This line will ensure that you have access your organization’s Data Hub{{% /alert %}}
+Where you insert the **Token secret** that was generated for the *your_token_secret* string. This line will ensure that you have access your organization’s Data Hub{{% /alert %}}
 
 8. Click **Close** to return to the **Personal Access Tokens** home screen. Your generated token will be listed:
 

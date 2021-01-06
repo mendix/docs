@@ -8,7 +8,7 @@ tags: ["data hub", "data hub catalog"]
 
 ## 1 Introduction
 
-Finding the right data to use in your app is made easier by the Data Hub Catalog search functionality. The metadata for a registered service is displayed in the [details](#search-details) screen to help in identifying the correct data source to use in your app development. 
+Finding the right data to use in your app is made easier by the Data Hub Catalog search functionality. The metadata for a registered service is displayed in the [details](#search-details) screen to help in identifying the correct data source to use in your app development.  You can use the Catalog to find registered data sources to integrate  into your other enterprise applications using the [Copy Data Source URI](#service-details) button.
 
 You can start searching from the [Data Hub](#data-hub-home) page or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Search Details** screen.
 
@@ -28,7 +28,7 @@ For details on creating a published OData service in Studio Pro, see [How to Reg
 
 ### 2.2 Versions 
 
-Every published OData service or data source as they are known as in the Data Hub Catalog has a version number, and apps that consume a datasource will consume from a specific version. Updates and changes to a service will be indicated by a change in the version number if good practice is followed by the data source originators. This means that there may be several versions of a registered data source available in the catalog and theywill all be listed as separate items in the search results for the same-named data source.
+Every published OData service or data source as they are known as in the Data Hub Catalog has a version number, and apps that consume a datasource will consume from a specific version. Updates and changes to a service will be indicated by a change in the version number if good practice is followed by the data source originators. This means that there may be several versions of a registered data source available in the catalog and they will all be listed as separate items in the search results for the same-named data source.
 
 The [search details](#search-details) screen in the Data Hub Catalog will include the version of the selected service.
 
@@ -149,19 +149,28 @@ When an item in the search results is selected, the **Catalog** tab will display
 
 When you click on an asset (data source or dataset) in the search results, the details are displayed in this panel. 
 
-#### 4.2.1 Details for a Selected Data Source
+#### 4.2.1 Details for a Selected Data Source {#service-details}
 
 When a data source is selected in the search results, the details of the contract at the selected endpoint that is deployed to the given environment are displayed:
 
 ![](attachments/search/search-details-service.png)
 
 * The name of the data source
+
+* The **Validated** tag will be displayed for the data source if it has been set upon curation
+
 * The **Environment name** to which the app is deployed
+
 * The **Version** number of the service at this endpoint
+
 * The number of **Connections** that are made by apps in a specific environment, in other words, that consume the service
+
 * A description of the data source as included in the metadata contract or curated in the Data Hub Catalog
+
 * Click **Copy Data Source URI** to copy the URI of the data source contract to the clipboard
+
 * Click **Share Data Source** to copy the link to this asset detail page to the clipboard
+
 * Each **Dataset** that is exposed in the data source (you can expand this to see details of the attributes and associations)
 
   {{% alert type="info" %}}

@@ -18,6 +18,8 @@ For details on the security of the data that the shared datasets connect to, and
 
 Shared data which is represented by the exposed datasets registered in the Data Hub Catalog can be added to your app in Studio Pro through the [Data Hub pane](/refguide/data-hub-pane). These datasets are introduced into the domain model as [external entities](/refguide/external-entities).
 
+You can use the Catalog to find registered data sources and use the [Copy Data Source URI](search#service-details) button obtain the OData service URI which can be used in other enterprise applications.
+
 The following sections summarize important points when using OData services and registered datasets in your apps in Studio Pro.
 
 ### 2.1 Services

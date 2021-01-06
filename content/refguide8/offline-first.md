@@ -39,31 +39,30 @@ Synchronization can also be configured via different places in your Mendix app, 
 
 The synchronization process consists of two phases. In the [upload phase](#upload), your app updates the server database with the new or changed objects that are committed. In the [download phase](#download), your app updates its local database using data from the server database.
 
-You can perform synchronization on two levels.
-1. Full synchronization. This mode performs both the upload and the download phases for all entities used in the offline-first app. You can customize the behavior of each entity with [customizable synchronization](#customizable-synchronization}).
-2. Selecive synchronization. This mode allows you to select specific objects to synchronize.
+You can perform synchronization on two levels:
 
-Synchronization for specific objects can only be done through a "Synchronize" action inside a nanoflow. Synchronization performed via UI (button, an onchange action etc) performs the full synchronization.
+* Full synchronization. This mode performs both the upload and the download phases for all entities used in the offline-first app. You can customize the behavior of each entity with [customizable synchronization](#customizable-synchronization}).
+* Selecive synchronization. This mode allows you to select specific objects to synchronize.
+
+Synchronization for specific objects can only be done through a **Synchronize** action inside a nanoflow. Synchronization performed via a UI element (for example a button, an onchange action, or other elements) performs the full synchronization.
 
 Synchronization is performed on the database level. This means if you synchronize while having some uncommitted changes for an object, the attribute values in local database will be synchronized, ignoring the uncommitted changes. Uncommitted changes are still available after a synchronization.
 
 ### 2.1 Upload Phase {#upload}
 
-The upload phase begins with a referential integrity validation of the new or changed objects that should be committed to the server. This validation checks each to-be-committed object's references to other objects. If this validation fails, the synchronization is aborted and an error message is shown (if the error is not caught)"
+The upload phase begins with a referential integrity validation of the new or changed objects that should be committed to the server. This validation checks each to-be-committed object's references to other objects. If this validation fails, the synchronization is aborted and an error message is shown (if the error is not caught).
 
-During synchronizing all objects this validation ensures that all referenced objects are committed to the local database. If a referenced object is created on the device and not yet committed to the local database, synchronization is aborted to prevent an invalid reference value on the server database. (Note that synchronization only works on the database level.)
+During synchronizing all objects, this validation ensures that all referenced objects are committed to the local database. If a referenced object is created on the device and not yet committed to the local database, synchronization is aborted to prevent an invalid reference value on the server database. Note that synchronization only works on the database level.
 
 For example, when a committed `City` object refers to an uncommitted `Country` object, synchronizing the `City` object will yield an invalid `Country` object reference, which will break the app's data integrity. If a synchronization is triggered while data integrity is broken, the following error message will appear (indicating an error in the model to fix): "Sync has failed due to a modeling error. Your database contains objects that reference uncommitted objects: object of type `City` (reference `City_Country`)." To fix this, such objects must also be committed before synchronizing (in this example, `Country`should be committed before synchronizing).
 
-During sychronizing specific objects, an additional referential integrity validation is performed to ensure that all referenced objects are at least synchronized once to the server database, or included in the selection.
+During sychronizing specific objects, an additional referential integrity validation is performed to ensure that all referenced objects are at least synchronized once to the server database or included in the selection.
 
-For example, synchronizing only a committed `City` object referencing an offline `Country` object (created on the device and committed to the local database but not yet synchronized) would break the integrity of the `City` object on the server database since the `Country` object is not stored in the server database. In this case a similar error message will appear, indicating that it is a modeling error. To fix this, such objects must be selected for synchronization. (in this example, `Country` should either be selected with synchronization or synchronized before attempting to synchronize `City` object)
+For example, synchronizing only a committed `City` object referencing an offline `Country` object (created on the device and committed to the local database but not yet synchronized) would break the integrity of the `City` object on the server database since the `Country` object is not stored in the server database. In this case a similar error message will appear, indicating that it is a modeling error. To fix this, such objects must be selected for synchronization. In this example, `Country` should either be selected with synchronization or synchronized before attempting to synchronize `City` object.
 
 The upload phase executes the following operations after validation:
 
-1. The local database can be modified only by committing an object. Such an object can be a new object created (while offline), or it can be an existing object previously sychronized from the server. The upload phase detects which objects have been committed to the local database since the last synchronization. This detection differs per synchronization type:
-* For "Synchronize all", all committed objects in the local database are selected.
-* For "Synchronize objects", all committed objects from the list of selected objects are selected.
+1. The local database can be modified only by committing an object. Such an object can be a new object created (while offline), or it can be an existing object previously sychronized from the server. The upload phase detects which objects have been committed to the local database since the last synchronization. This detection differs per synchronization type. For "Synchronize all", all committed objects in the local database are selected. For "Synchronize objects", all committed objects from the list of selected objects are selected.
 2. <a name="steptwo"></a>If there are changed or new file objects, their contents are uploaded to the server and stored temporarily. Each file is uploaded in a separate network request.
 3. <a name="stepthree"></a>All the changed and new objects are committed to the server, and the content of the files are linked to the objects. This step is performed in a single network request. Any configured before- or after-commit event handlers on these objects will run on the server as usual, after the data has been uploaded and before it is downloaded.
 

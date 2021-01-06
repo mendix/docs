@@ -26,11 +26,11 @@ On the right side of the toolbar with the new navigation, you can search and acc
 
 ![](attachments/new-app.jpg)
 
-On the left side of the toolbar with the new navigation, you can access different parts of the Mendix Platform by clicking this icon:
+On the left side of the toolbar with the new navigation, you open an access menu by clicking this icon:
 
 ![](attachments/dock.jpg)
 
-You can can access the following parts of the Mendix Platform:
+You can then access the following parts of the Mendix Platform:
 
 * **Mendix Home** – the [Apps](#apps) page
 * **Studio Pro** – the [Studio Pro](/refguide/index) download page in the [Mendix App Store](/appstore/index)

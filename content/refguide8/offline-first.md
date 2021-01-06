@@ -49,7 +49,7 @@ Synchronization is performed on the database level. This means if you synchroniz
 
 ### 2.1 Upload Phase {#upload}
 
-The upload phase begins with a referential integrity validation of the new or changed objects that should be committed to the server. This validation checks each to-be-committed object's references to other objects. If this validation fails, the synchronization is aborted and an error message is shown.
+The upload phase begins with a referential integrity validation of the new or changed objects that should be committed to the server. This validation checks each to-be-committed object's references to other objects. If this validation fails, the synchronization is aborted and an error message is shown (if the error is not caught)"
 
 During synchronizing all objects this validation ensures that all referenced objects are committed to the local database. If a referenced object is created on the device and not yet committed to the local database, synchronization is aborted to prevent an invalid reference value on the server database. (Note that synchronization only works on the database level.)
 
@@ -120,7 +120,7 @@ During synchronization, errors might occur. This section describes how Mendix ha
 
 #### 2.5.1 Network-Related Errors {#network-errors}
 
-Synchronization requires a connection to the server, so during synchronization, errors may occur due to failing or poor network connections. Network errors may involve a dropped connection or a timeout. By default, the timeout for synchronization is 30 seconds per network request for Hybrid mobile apps. For native apps, there is no default timeout, and the timeout may be determined by the platform / OS version.
+Synchronization requires a connection to the server, so during synchronization, errors may occur due to failing or poor network connections. Network errors may involve a dropped connection or a timeout. By default, the timeout for synchronization is 30 seconds per network request for Hybrid mobile apps. For native apps, there is no default timeout, and the timeout is determined by the platform / OS version.
 
 The synchronization is atomic, which means that either everything or nothing is synchronized. Exceptions are described in the [Model- or Data-Related Errors](#othererrors) section below.
 
@@ -168,6 +168,7 @@ To ensure the best user experience for your Mendix application, follow these bes
 
 * Limit the amount of data that will be synchronized by customizing the synchronization configuration or security access rules
 * Because network connections can be slow and unreliable and mobile devices often have limited storage, avoid synchronizing large files or images (for example, by limiting the size of photos)
+* Prefer to perform synchronization through a nanoflow instead of UI so you can add  error handling to the synchronization activity to handle the cases when the synchronization fails (connection errors, model/data related errors etc.), This way you can provide a better user experience.
 * Synchronize large files or images using selective synchronization.
 * Use an `isDeleted` Boolean attribute for delete functionality so that conflicts can be handled correctly on the server
 * Use before- and after-commit microflows to pre- or post-process data.

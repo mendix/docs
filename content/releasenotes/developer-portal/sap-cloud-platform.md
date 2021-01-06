@@ -12,6 +12,12 @@ For information on the current status of deployment to SAP Cloud Platform and an
 
 ## 2020
 
+### December 21st, 2020
+
+#### Improvements
+
+* We released the [SAP Fiori 3 UI Resource](https://marketplace.mendix.com/link/component/116359) module in the Mendix App Store. This allows you to create the SAP Fiori 3 user experience in your Mendix apps. SAP Fiori 3 is the new target design system for all SAP products in the *Intelligent Suite*. For more information, see [SAP Fiori 3.0 Styling](/partners/sap/sap-fiori-3-0).
+
 ### December 9th, 2020
 
 #### Improvements

@@ -7,6 +7,16 @@ tags: ["data hub", "data hub catalog", "data hub Landscape"]
 
 These release notes cover changes made to the [Mendix Data Hub](/data-hub/index).
 
+## 2021
+
+### January 7th, 2021
+
+#### New Features
+* The [asset details](/data-hub/data-hub-catalog/search#search-details) in the Data Hub Catalog now have added functionality to copy the URI of the data source or dataset to the clipboard. This functionality means that the Data Hub Catalog can be used to discover registered assets—data sources and datasets—and access the data in other enterprise applications through the metadata URI.
+
+#### Improvements
+* There have been several improvements in the Data Hub user interface. 
+
 ## 2020
 
 ### December 24th, 2020

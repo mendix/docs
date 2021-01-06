@@ -71,6 +71,7 @@ The upload phase executes the following operations after validation:
 If the upload phase was successful, the download phase starts in which the local database is updated with the newest data from the server database. The behavior of download phase differs per synchronization type.
 
 ### 2.2.1 All objects (Full synchronization)
+
 A network request is made to the server per entity to retrieve the newest data from the server database.
 
 You can manage which entities are synchronized to the local database by customizing your app's synchronization behavior. For more details on this procedure, see the [Customizable Synchronization](#customizable-synchronization) section below.
@@ -78,9 +79,10 @@ You can manage which entities are synchronized to the local database by customiz
 The download process also downloads the file entities' contents and saves that to your device storage. This process is incremental. The app only downloads the contents of a file object if the file has not been downloaded before, or if the file has been changed since it was last downloaded. The changed date attribute of the file entity is used to determine if the contents of a file object have changed.
 
 ### 2.2.2 Selected objects (Selective synchronization)
-Only the objects selected for synchronization is synchronized to the local database. There are no extra network requests made to retrieve these objects. The objects are returned in the response of a network request made during the upload phase.
 
-If a file entity is selected for synchronization, its content is also updated on the device storage incrementally. The logic is the same with the "All objects".
+Only the objects selected for synchronization are synchronized to the local database. There are no extra network requests made to retrieve these objects. The objects are returned in the response of a network request made during the upload phase.
+
+If a file entity is selected for synchronization, its content is also updated on the device storage incrementally. The logic is the same with **All objects**.
 
 ### 2.3 After the Synchronization
 
@@ -88,11 +90,11 @@ After synchronization is completed, the widgets on your app's current page will 
 
 Please note that a nanoflow object variable's value might become `empty` after synchronization, if the object is removed from the device during synchronization. This might happen under the following cases:
 
-* The object is deleted on the server.
-* The current user does not have enough access to the object (defined by the security access rules).
-* The entity is configured with an XPath constraint on the [customizable synchronization](#customizable-synchronization}) screen, and the object no longer matches the specified XPath constraint.
-* The entity is configured with "Nothing (clear data)" option on the customizable synchronization screen.
-* The upload phase fails for the object. For example, when before commit event handler returns false, or committing fails due to violation of an unique validation.
+* The object is deleted on the server
+* The current user does not have enough access to the object (defined by the security access rules)
+* The entity is configured with an XPath constraint on the [customizable synchronization](#customizable-synchronization}) screen, and the object no longer matches the specified XPath constraint
+* The entity is configured with **Nothing (clear data)** option on the customizable synchronization screen
+* The upload phase fails for the object, for example when before commit event handler returns false or committing fails due to violation of an unique validation
 
 ### 2.4 Customizable Synchronization {#customizable-synchronization}
 
@@ -105,7 +107,7 @@ By default, Mendix automatically determines which objects need to be synchronize
 Depending on the use-case, more fine-grained synchronization controls might be required. Therefore, it is possible to change the download behaviour for an entity. You can choose between the following options:
 
 * **All Objects** — download all objects applying the regular security constraints
-* **By XPath** — only download the objects which match the [XPath Constraints](xpath-constraints) in addition to the regular security constraints. This means all previously synchronized object which does not match the XPath constraint will be removed.
+* **By XPath** — only download the objects which match the [XPath Constraints](xpath-constraints) in addition to the regular security constraints (this means all previously synchronized object which does not match the XPath constraint will be removed)
 * **Nothing (clear data)** — do not download any objects automatically, but do clear the data stored in the database for this entity when performing a synchronization (this can be useful in cases where the objects should only be uploaded, for example a `Feedback` entity)
 * **Nothing (preserve data)** — do not download any objects automatically, and do not clear the data stored in the database for this entity when performing a synchronization  (this can be useful in cases where you want have full control over the synchronization and should be used in combination with the [Synchronize to device](synchronize-to-device) or [Synchronize](synchronize) activity with specific objects selected)
 
@@ -119,7 +121,7 @@ During synchronization, errors might occur. This section describes how Mendix ha
 
 #### 2.5.1 Network-Related Errors {#network-errors}
 
-Synchronization requires a connection to the server, so during synchronization, errors may occur due to failing or poor network connections. Network errors may involve a dropped connection or a timeout. By default, the timeout for synchronization is 30 seconds per network request for Hybrid mobile apps. For native apps, there is no default timeout, and the timeout is determined by the platform / OS version.
+Synchronization requires a connection to the server, so during synchronization, errors may occur due to failing or poor network connections. Network errors may involve a dropped connection or a timeout. By default, the timeout for synchronization is 30 seconds per network request for hybrid mobile apps. For native apps, there is no default timeout, and the timeout is determined by the platform and OS version.
 
 The synchronization is atomic, which means that either everything or nothing is synchronized. Exceptions are described in the [Model- or Data-Related Errors](#othererrors) section below.
 
@@ -127,7 +129,7 @@ If a network error happens during the file upload (via [step 2 in the upload pha
 
 If a network error occurs while uploading the data (via [step 3 in the upload phase](#stepthree)), the data is kept on the local device and no changes are made on the server. Any files uploaded in [step 2](#steptwo) will be uploaded again during the next synchronization.
 
-If a network error occurs (such as timeout) after uploading the data (via [step 3 in the upload phase](#stepthree)), the data is kept on the local device, but since the server has already started working on the request, it will complete the request. The device can not distinguish whether if the server processed the request, so the next syncronization attempt will contain the already-applied changes. In this case, the server will behave differently based on Mendix version. Before Mendix 8.18, the server will re-update the server database. From Mendix 8.18 and forward, this process is optimized and the server will not apply the same changes, because they have been applied before.
+If a network error occurs (such as a timeout) after uploading data (at [step 3 in the upload phase](#stepthree)), the data is kept on the local device. However, since the server has already started working on the request it will complete the request. The device can not distinguish if the server processed the request or not, so the next synchronization attempt will contain the already-applied changes. In this case, the server will behave differently based on Mendix version. In Mendix Studio Pro v8.17 and below, the server will re-update the server database. From Studio Pro v8.18 and above, this process is optimized and the server will not apply the same changes, because they have been applied before.
 
 If a network error occurs during the download phase, no data is updated on the device, so the user can keep working or retry. The effects of the upload phase are not rolled back on the server.
 
@@ -142,7 +144,7 @@ During the synchronization, changed and new objects are committed. An object's s
 * An error occurs during the execution of a before- or after-commit event microflow
 * The object is not valid according to domain-level validation rules
 
-{{% alert type="warning" %}}When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server. To prevent data-loss, the attribute values for such objects are stored in the `System.SynchronizationError` entity (since Mendix 8.12).  {{% /alert %}}
+{{% alert type="warning" %}}When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server. To prevent data loss, the attribute values for such objects are stored in the **System.SynchronizationError** entity (since Mendix 8.12).  {{% /alert %}}
 
 ### 2.5.3 Preventing Synchronization Issues {#prevent-sync-issues}
 
@@ -167,8 +169,8 @@ To ensure the best user experience for your Mendix application, follow these bes
 
 * Limit the amount of data that will be synchronized by customizing the synchronization configuration or security access rules
 * Because network connections can be slow and unreliable and mobile devices often have limited storage, avoid synchronizing large files or images (for example, by limiting the size of photos)
-* Prefer to perform synchronization through a nanoflow instead of UI so you can add  error handling to the synchronization activity to handle the cases when the synchronization fails (connection errors, model/data related errors etc.), This way you can provide a better user experience.
-* Synchronize large files or images using selective synchronization.
+* Try to synchronize through a nanoflow instead of a UI element so you can add error handling to the synchronization activity which can handle cases when synchronization fails (connection errors, model and data related errors, and more)
+* Synchronize large files or images using selective synchronization
 * Use an `isDeleted` Boolean attribute for delete functionality so that conflicts can be handled correctly on the server
 * Use before- and after-commit microflows to pre- or post-process data.
 * Use a [microflow call](microflow-call) in your nanoflows to perform additional server-side logic such as retrieving data from a REST service, or accessing and using complex logic such as Java actions.

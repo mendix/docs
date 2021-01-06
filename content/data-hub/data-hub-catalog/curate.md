@@ -107,9 +107,9 @@ If you as a **Technical Owner** curate the service and change the name, then you
 Curators and the Data Hub Administrator can manage the custom owner details in the **Owner Management** screen as an **Administration** function. For further details see the [Managing Custom Owners ](../general/data-hub-admin-functions#customowners) section of *Data Hub Administration*. 
 {{% /alert %}}
 
-To change the owners of the app for the selected service, follow these steps:
+To change the owners of the app for the selected service, follow these steps from the service details screen:
 
-1.  In the service details screen for the selected service, in the **Curation Bar** click **Edit Metadata** > **Application Details**:
+1.  In the **Curation Bar** click **Edit Metadata** > **Application Details**:
 
 	![edit application](attachments/curate/edit-application-metadata.png)
 

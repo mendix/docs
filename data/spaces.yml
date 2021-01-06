@@ -87,7 +87,7 @@ howto:
     - "Monitoring & Troubleshooting"
   banner:
     type: 'info'
-    text: 'You are browsing the documentation for Mendix 9, which is currently a <a href="/releasenotes/beta-features/index">beta release</a>. If you are looking for Mendix 8 documentation, see <a href="/howto8/index">Studio Pro 8 How-tos</a>.'
+    text: 'You are browsing the documentation for Mendix 9, which is currently a <a href="/releasenotes/beta-features/index">beta release</a>. If you are looking for Mendix 8 documentation, see <a href="/howto8/index">Studio Pro 8 How-to&#39;s</a>.'
 refguide6:
   space: "Mendix 6 Reference Guide"
   priority: false

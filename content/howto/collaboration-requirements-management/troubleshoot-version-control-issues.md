@@ -26,17 +26,17 @@ Below is a list of known errors and the steps to fix them.
 
 This error means that Studio Pro has problems reaching the version control server because of a proxy server.
 
-The proxy settings can be changed in Studio Pro by selecting **Edit** > **Preferences** and then the **Advanced** tab. In the **Proxy server** section, you can change the proxy authentication settings. Fill in the correct **User name** and **Password** for the proxy server.
+The proxy settings can be changed in Studio Pro by selecting **Edit** > **Preferences** > the **Advanced** tab. In the **Proxy server** section, you can change the proxy authentication settings. Fill in the correct **User name** and **Password** for the proxy server.
 
 ![Proxy settings](attachments/troubleshoot-version-control/proxysettings.png)
 
 ### 2.2 Getting an Error Containing Another `SharpSvn.SvnAuthenticationException`
 
-This should be resolved if you sign out of Studio Pro and then log back in.
+To resolve this issue, sign out of Studio Pro and then log back in.
 
 ### 2.3 Getting an Error with the Message `Connection timed out`
 
-Follow these steps:
+To solve this issue, follow these steps:
 
 1. Open the *\Users\<username>\AppData\Roaming\Subversion\servers* file with any text editor.
 2. Add the text `http-timeout = 5000` under the section `[global]`.
@@ -44,7 +44,7 @@ Follow these steps:
 
 ### 2.4 Getting an Error with the Message `<project folder> is already locked`
 
-Follow these steps:
+To solve this issue, follow these steps:
 
 1.  Install [TortoiseSVN](https://tortoisesvn.net/), as suggested in [System Requirements](/refguide/system-requirements).
 
@@ -57,14 +57,14 @@ Follow these steps:
 
 ### 2.5 Getting an Error with the Message `System.Security.Cryptography.CryptographicException: Key not valid for use in specified state`
 
-Follow these steps to remove your user settings and restart Studio Pro.
+Follow these steps to remove your user settings and restart Studio Pro:
 
 1. Rename *\Users\<username>\AppData\Local\Mendix\Settings.sqlite* to *Settings.sqlite.old*.
 2. Restart Studio Pro.
 
 ### 2.6 Getting an Error with the Message `SharpSvn.SvnRepositoryIOException: At least one property change failed; repository is unchanged` {#error-with-message}
 
-Follow these steps:
+To solve this issue, follow the steps below:
 
 1.  Install [TortoiseSVN](https://tortoisesvn.net/), as suggested in [System Requirements](/refguide/system-requirements).
 
@@ -92,11 +92,11 @@ You can now commit your app project.
 
 When merging or updating branches, a conflict is sometimes reported on the app project folder rather than on an individual file. This usually means there is a conflict on the `svn:ignore` property.
 
-In the `svn:ignore` property, Subversion records which files should be ignored. These are files that are on disk but should not be on  Team Server.
+In the `svn:ignore` property, Subversion records which files should be ignored. These are files that are on disk but should not be on the Team Server.
 
 For example, the `deployment` directory is necessary for running your project, but it should not be on the Team Server. Each user has their own version of the `deployment` folder on their hard disk.
 
-You will need to resolve the conflict before you can commit your app project to Team Server.
+You will need to resolve the conflict before you can commit your app project to the Team Server.
 
 #### 2.7.1 Example
 

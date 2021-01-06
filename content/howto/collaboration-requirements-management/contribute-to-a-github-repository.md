@@ -2,7 +2,7 @@
 title: "Contribute to a Mendix GitHub Repository"
 category: "Collaboration"
 menu_order: 20
-tags: ["GitHub"]
+tags: ["GitHub", "contribute", "community"]
 ---
 
 ## 1 Introduction
@@ -41,7 +41,7 @@ To submit changes, follow these guidelines:
 * Submit a pull request to the appropriate repository in the Mendix organization (for more information, see [About Pull Requests](https://help.github.com/articles/using-pull-requests/))
 * Mention the ID's for any issues that are fixed by the changes (for more information, see [Closing Issues Using Keywords](https://help.github.com/articles/closing-issues-via-commit-messages#closing-issues-with-pull-requests))
 * After feedback has been given, Mendix expects a response within two weeks
-	* After two weeks, we may close the pull request if it isn't showing any activity
+	* After two weeks, we may close the pull request if it is not showing any activity
 
 ## 5 Read More
 

@@ -1,6 +1,6 @@
 ---
 title: "Data Hub Catalog"
-description: "Introduces the processes and properties of the Mendix Data Hub Catalog."
+description: "Introduces the processes and properties of Mendix Data Hub."
 tags: ["data hub", "data hub catalog"]
 ---
 

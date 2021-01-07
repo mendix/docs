@@ -1,6 +1,6 @@
 ---
 title: "General Info"
-description: "General information and base definitions for Data Hub"
+description: "General information for Mendix Data Hub"
 tags: ["data hub catalog", "data hub", "external entities", "landscape", "published odata service"]
 ---
 

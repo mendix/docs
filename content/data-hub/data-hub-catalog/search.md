@@ -2,7 +2,7 @@
 title: "Search for Registered Assets"
 category: "Data Hub Catalog"
 menu_order: 10
-description: "Introduces the processes and properties of the Mendix Data Hub Catalog."
+description: "Describes how to find data sources and datasets in the Data Hub Catalog."
 tags: ["data hub", "data hub catalog"]
 ---
 
@@ -160,16 +160,20 @@ When a data source is selected in the search results, the details of the contrac
 * The **Validated** tag will be displayed for the data source if it has been set u
 
 * The **Environment name** to which the app is deployed
+
 * The **Version** number of the service at this endpoint
+
 * The number of **Connections** that are made by apps in a specific environment, in other words, that consume the service
+
 * A description of the data source as included in the metadata contract or curated in the Data Hub Catalog
+
 * Click **Copy Data Source URI** to copy the URI of the data source contract to the clipboard
+
 * Click **Share Data Source** to copy the link to this asset detail page to the clipboard
+
 * Each **Dataset** that is exposed in the data source (you can expand this to see details of the attributes and associations)
 
-  {{% alert type="info" %}}
-	The **Dataset** is the name of the **Entity set** of a published **Entity**  which in Mendix Studio Pro, by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Datasource** that will be displayed in the **Search Details** will be `Customers`.
-	{{% /alert %}}
+	{{% alert type="info" %}}The **Dataset** is the name of the **Entity set** of a published **Entity**  which in Mendix Studio Pro, by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Datasource** that will be displayed in the **Search Details** will be `Customers`.{{% /alert %}}
 
 #### 4.2.2 Details for a Selected Dataset {#entity-details}
 

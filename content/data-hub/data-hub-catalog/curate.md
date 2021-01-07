@@ -159,8 +159,7 @@ To edit the asset metadata, follow these steps:
 
 5. Click **Save Changes** to save the changes that you have made to the **Edit Service Metadata** screen and return to the **Service Details** screen, which will now display the selected description.
 
-	{{% alert type="info" %}}If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. 
-	{{% /alert %}}
+	{{% alert type="info" %}}If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. {{% /alert %}}
 
 ### 5.3 Adding or Editing Tags to a Service {#tags}
 

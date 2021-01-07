@@ -30,7 +30,7 @@ When you click a company member's name, a pop-up window opens with their member 
 
 On the **Inactive members** tab, you can see former members of your company who have been deactivated.
 
-On the **External members** tab, you can see the members outside of your company who have access to at least one of your company app projects. When you click an external member's name, a pop-up window will open with their member profile.
+On the **External members** tab, you can see the members outside of your company who have access to at least one of your company app projects.
 
 When you select members in the lists on these tabs, a context menu appears with options for exporting member details to an *.xlsx* file and deactivating/activating members.
 

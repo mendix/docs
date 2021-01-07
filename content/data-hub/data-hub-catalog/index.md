@@ -23,8 +23,8 @@ You can navigate to the following tabs:
 * **Curate** – carry out [curate](curate) functions on registered assets to enrich the registered metdata and increase discoverability by relevant users
 * **Administration** – Data Hub Admin can assign curator roles and curators can manage the list of owners
 
-	{{% alert type="info" %}}  This tab will only be shown for those with curate roles (owners of service, curators or the Data Hub Admin). 
-  {{% /alert %}}
+	{{% alert type="info" %}}  This tab will only be shown for those with curate roles (owners of service, curators or the Data Hub Admin.
+	{{% /alert %}}
 
 From the Data Hub screen, you can do the following:
 * **Search** – search in the Data Hub Catalog using the **Search** box or clicking the suggested **Tags**

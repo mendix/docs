@@ -32,9 +32,7 @@ When a new version of the OData service for an external entity is registered in 
 This is not compulsory, and users can continue to use an older version of a service unless the new version was deployed to the same service endpoint as the previous version. In Studio Pro, new versions of a service are indicated and users can choose to **Update** the service, or **Switch** to another version of the service deployed to another endpoint.
 {{% /alert %}}
 
-{{% alert type="info" %}}
 It is good practice that publishers of a service serve a notice of deprecation on a service version that will be replaced with a new service that may contain breaking changes which would cause the consuming app to fail. In this case the updated service should be deployed to a new service endpoint. In this case, in Studio Pro, users will get the option to **Switch** to the new version. 
-{{% /alert %}}
 
 ### 2.2 Consumed (External) Entities
 

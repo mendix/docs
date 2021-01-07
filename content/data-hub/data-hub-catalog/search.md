@@ -173,8 +173,7 @@ When a data source is selected in the search results, the details of the contrac
 
 * Each **Dataset** that is exposed in the data source (you can expand this to see details of the attributes and associations)
 
-	{{% alert type="info" %}}The **Dataset** is the name of the **Entity set** of a published **Entity**  which in Mendix Studio Pro, by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Datasource** that will be displayed in the **Search Details** will be `Customers`.
-	{{% /alert %}}
+	{{% alert type="info" %}}The **Dataset** is the name of the **Entity set** of a published **Entity**  which in Mendix Studio Pro, by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Datasource** that will be displayed in the **Search Details** will be `Customers`.{{% /alert %}}
 
 #### 4.2.2 Details for a Selected Dataset {#entity-details}
 

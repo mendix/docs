@@ -8,7 +8,7 @@ tags: ["data hub", "data hub catalog"]
 
 ## 1 Introduction
 
-Finding the right data to use in your app is made easier by the Data Hub Catalog search functionality. The metadata for a registered service is displayed in the [details](#search-details) screen to help in identifying the correct data source to use in your app development.  You can use the Catalog to find registered data sources to integrate the registered data into your other enterprise applications using the [Copy Data Source URI](#service-details) button.
+Finding the right data to use in your app is made easier by the Data Hub Catalog search functionality. The metadata for a registered service is displayed in the [details](#search-details) screen to help in identifying the correct data source to use in your app development.  You can use the Catalog to find registered data sources to integrate the data of a registered asset into your other enterprise applications using the [Copy Data Source URI](#service-details) button.
 
 You can start searching from the [Data Hub](#data-hub-home) page or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Search Details** screen.
 
@@ -187,7 +187,7 @@ When an **Dataset** is selected in the search results, the details are displayed
 * **Dataset Information**
 	The **Attributes** that are exposed for the dataset for this data source  are listed showing the attribute types and description.
 
-  Under the **Associations** tab for each dataset, the associations are shown:
+	Under the **Associations** tab for each dataset, the associations are shown:
 
 	![](attachments/search/attributes-associations.png)
 

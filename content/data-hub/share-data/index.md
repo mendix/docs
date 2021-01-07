@@ -120,7 +120,7 @@ The following steps take you through creating an OData service for your app to e
 
 ## 5 Using the Data Hub Catalog and Curating your own Service
 
-The **{yourname}CustomerODataService** from your app is now registered in the Data Hub Catalog and can be used in other apps. To explore the Data Hub Catalog and find this service and the exposed **Customer** entity set or **Dataset** (as it is referred to in the Catalog), follow these steps:
+The **{yourname}CustomerODataService** from your app is now registered in the Data Hub and can be used in other apps. To explore the Data Hub Catalog and find this service, which is called a **Data Source** in the Catalog, and the exposed **Customer** entity set or **Dataset** (as it is referred to), follow these steps:
 
 1.  Go to [Mendix Data Hub](https://hub.mendix.com/):
 

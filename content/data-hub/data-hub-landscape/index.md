@@ -1,6 +1,6 @@
 ---
 title: "Data Hub Landscape"
-description: "Describes using Data Hub Landscape to search for and look at registered assets"
+description: "Using the Data Hub Landscape to explore the connections with registered assets"
 tags: ["data hub catalog", "data hub", "external entities", "landscape", "published odata service"]
 ---
 

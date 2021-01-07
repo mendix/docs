@@ -17,11 +17,11 @@ Pluggable widgets can also include a preview component for when they are rendere
 
 ## 2 Differences Between Pluggable and Custom Widgets
 
-Pluggable widgets are the successor to [Custom widgets](/howto/extensibility/widget-development). Pluggable widgets are based on a modern React framework, have access to better APIs in the client, and can use more advanced properties in Studio and Studio Pro. Therefore, pluggable widgets allow you to more easily implement existing front-end libraries, tools, and your own expertise. Pluggable widgets should be used instead of custom widgets whenever possible.
+Pluggable widgets are the successor to [Custom widgets](/howto8/extensibility/widget-development). Pluggable widgets are based on a modern React framework, have access to better APIs in the client, and can use more advanced properties in Studio and Studio Pro. Therefore, pluggable widgets allow you to more easily implement existing front-end libraries, tools, and your own expertise. Pluggable widgets should be used instead of custom widgets whenever possible.
 
 | Concept      | Pluggable widgets                                                                                     | Custom widgets                                                           |
 | ------------ | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| Framework    | [React](#client-component)                                                                          | [Dojo](/howto/extensibility/widget-development#dojo)                 |
+| Framework    | [React](#client-component)                                                                          | [Dojo](/howto8/extensibility/widget-development#dojo)                 |
 | Data access  | Declarative, props-based                                                                              | Imperative, callback-based                                               |
 | Data updates | [Receive updates in props](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#dynamic-value) | [Subscribe](https://apidocs.rnd.mendix.com/8/client/mx.data.html#.subscribe) |
 | API          | [Pluggable widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)                                     | [Mendix client API](https://apidocs.rnd.mendix.com/8/client/index.html)                |

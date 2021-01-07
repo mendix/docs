@@ -42,6 +42,8 @@ After importing the module, connect the **Templates_Overview** or **ExcelImporte
 
 To turn on external entity processing, add the `/ExcelImporter//Export/Import Configuration//EnableExternalEntities` constant to your configuration and set it to `true`. This feature is turned off by default for security reasons.
 
+To turn on the parsing of empty cells when a [parse with](#parse-with) microflow is selected, add `ExcelImporter.ParseEmptyCells` to the [configuration constants](/refguide/constants) and set the value to `true`. This flag is disabled by default for compatibility reasons.
+
 ## 4 Template Properties
 
 The Excel Importer module has many different properties. The sections below present details on all the properties that can be selected and what their impact is on the actual import.
@@ -122,11 +124,13 @@ The following options are available:
 
 This determines whether values in this column should be interpreted as case sensitive. Keep in mind this is only possible if the database you are using is case sensitive as well. For example, if you are using MS SQL, you cannot use case sensitivity, as Microsoft does not search case-sensitive by default.
 
-#### 4.2.6 Parse With
+#### 4.2.6 Parse With {#parse-with}
 
 You can use a custom microflow to parse data for a column. Such a microflow should have one parameter of the same type as the column in the Excel. This will receive the data field from Excel. The microflow should return the value to put in the field you want to map (meaning, a DateTime if you are mapping to a DateTime attribute).
 
 This field also has quicksearch functionality. Type in the box to the left of the reference selector and press <kbd>Tab</kbd> to search for the value you typed.
+
+By default, the selected microflow is not applied to empty cells. The parsing of empty cells can be enabled by setting the `ExcelImporter.ParseEmptyCells` [constant](/refguide/constants) to `true`.
 
 #### 4.2.7 Attribute
 

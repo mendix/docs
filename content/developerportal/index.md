@@ -18,7 +18,7 @@ You can go to any part of the Developer Portal using the menu items in the heade
 
 ## 2 Apps
 
-In [Apps](/developerportal/apps-list/index), you can find your free and licensed apps, nodes, and other apps created by your company:
+In [Apps](apps-list/index), you can find your free and licensed apps, nodes, and other apps created by your company:
 
 ![](attachments/developerportal-apps.jpg)
 
@@ -34,43 +34,49 @@ To start a new app project click **Create App**, which will open a page where yo
 
 ![](attachments/create-app.png)
 
-## 4 People
+## 4 Control Center
+
+In [Control Center](control-center/index), you can gain insight into company activites and perform various tasks as a Mendix Admin:
+
+[**Add screenshot**]
+
+## 5 People
 
 In [People](mendix-profile/index#connections), you can view the other members of the Mendix community and also invite people to the Mendix Platform :
 
 ![](attachments/developerportal-people.jpg)
 
-## 5 Community
+## 6 Community
 
-In [Community](/developerportal/community-tools/index), you can explore various resources for the vibrant Mendix community of users, from blog posts about how Mendix is being used in the wider world of low-code development to the [Mendix job board](/developerportal/community-tools/mendix-job-board) and [Mendix Shop](https://shop.mendix.com/):
+In [Community](community-tools/index), you can explore various resources for the vibrant Mendix community of users, from blog posts about how Mendix is being used in the wider world of low-code development to the [Mendix job board](/developerportal/community-tools/mendix-job-board) and [Mendix Shop](https://shop.mendix.com/):
 
 ![](attachments/developerportal-community.jpg)
 
-## 6 App Store
+## 7 App Store
 
 In the [Mendix App Store](/appstore/general/app-store-overview), you can share Mendix content you have created, check out complete sample apps that can be used right away, and browse connectors, [widgets](https://appstore.home.mendix.com/link/app/48902/), and modules that can be used to build custom apps more quickly:
 
 ![](attachments/developerportal-app-store.jpg)
 
-## 7 Academy 
+## 8 Academy 
 
 The [Mendix Academy](https://academy.mendix.com/link/home) offers both self-paced online training (via learning paths) and classroom instruction from our team of experts:
 
 ![](attachments/developerportal-academy.jpg)
 
-## 8 Forum
+## 9 Forum
 
-In the [Mendix Forum](/developerportal/community-tools/mendix-forum), you can interact with the Mendix community to help out with [questions](https://forum.mendixcloud.com/link/questions/) and answers on the best ways to use Mendix as well as propose [ideas](https://forum.mendixcloud.com/link/ideas/) for improving the Mendix Platform:
+In the [Mendix Forum](community-tools/mendix-forum), you can interact with the Mendix community to help out with [questions](https://forum.mendixcloud.com/link/questions/) and answers on the best ways to use Mendix as well as propose [ideas](https://forum.mendixcloud.com/link/ideas/) for improving the Mendix Platform:
 
 ![](attachments/developerportal-forum.jpg)
 
-## 9 Docs
+## 10 Docs
 
 The [Mendix Documentation](https://docs.mendix.com/) is open to the Mendix community, which means you can [make changes and contribute](/developerportal/community-tools/contribute-to-the-mendix-documentation) to benefit the whole Mendix community:
 
 ![](attachments/developerportal-docs.jpg)
 
-## 10 Getting Assistance
+## 11 Getting Assistance
 
 Clicking the question icon in the Developer Portal brings up the options Mendix provides for getting assistance:
 
@@ -80,7 +86,7 @@ Clicking the question icon in the Developer Portal brings up the options Mendix 
 * **Check the documentation** – click this to go to the [Mendix Documentation](https://docs.mendix.com/)
 * **Contact Mendix Support** – click this to go to [Mendix Support](https://support.mendix.com/hc/en-us)
 
-## 11 Guide Categories
+## 12 Guide Categories
 
 The *Developer Portal Guide* is divided into the following categories:
 

@@ -104,7 +104,7 @@ On the **Password Policy** tab of this page, you can set the password expiration
 If SSO is enabled for your company, you will not be able to change the password expiration date here. For more information, see [Mendix Single Sign-On](/developerportal/deploy/mendix-sso) in the *Developer Portal Guide*.
 {{% /alert %}}
 
-On the **Security History** tab, you can click **Show Security History** to open a page that presents an audit trail of security-related changes in **Project History** and **Member History**. You can search through and view details on these changes as well as export the audit trail to a CSV file.
+On the **Security History** tab, you can click **Show Security History** to open a page (in a new browser tab) that presents an audit trail of security-related changes in **Project History** and **Member History**. You can search through and view details on these changes as well as export the audit trail to a CSV file.
 
 ![](attachments/security.jpg)
 

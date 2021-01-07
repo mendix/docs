@@ -69,7 +69,7 @@ Click a group name to bring up the group details pop-up window, and click **Add 
 ![](attachments/access-group.jpg)
 
 {{% alert type="warning" %}}
-You can only add apps to groups that utilize [Mendix SSO](/appstore/modules/mendix-sso) to App Access Groups.
+You can only add apps that utilize [Mendix SSO](/appstore/modules/mendix-sso) to App Access Groups.
 {{% /alert %}}
 
 When you select groups in the list or members or accessible apps in the group details page, a context menu will appear with options for exporting item details to an *.xlsx* file, deleting access groups, removing members from access groups, and removing accessible apps.

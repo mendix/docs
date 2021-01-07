@@ -10,13 +10,11 @@ Users that sign up on the Mendix Platform will be able create new app projects, 
 
 The [Mendix Control Center](https://controlcenter.mendix.com/) consists of the pages described below, which are for use by [Mendix Admins](#company).
 
-If your company does not already have a Mendix Admin, you will see this landing page, which outlines the usage and goals of Control Center. You can also recommend a colleague for Mendix Admin status by clicking **Suggest a Mendix Admin**:
-
-![](attachments/no-admin-exists.png)
+If your company does not already have a Mendix Admin, you will see a landing page that outlines the usage and goals of Control Center. You can also recommend a colleague for Mendix Admin status by clicking **Suggest a Mendix Admin**.
 
 If your company does already have a Mendix Admin (but you yourself are not a Mendix Admin), you will see this landing page:
 
-![](attachments/admin-exists.png)
+![](attachments/admin-exists.jpg)
 
 If you are a Mendix Admin, you will immediately see the **Members** page and can navigate to the pages described in the sections below.
 
@@ -34,21 +32,13 @@ On the **Inactive members** tab, you can see former members of your company who 
 
 On the **External members** tab, you can see the members outside of your company who have access to at least one of your company app projects. When you click an external member's name, a pop-up window will open with their member profile.
 
-When you select a member in the lists on these tabs, a context menu appears with options for exporting member details to an *.xlsx* file, deactivating/activating a member, or removing an external member.
-
-[** Please verify the context button on th External members tab - is it for removing an external member?**]
+When you select members in the lists on these tabs, a context menu appears with options for exporting member details to an *.xlsx* file and deactivating/activating members.
 
 {{% alert type="info" %}}
 For security reasons, deactivating an employee that is leaving your company is recommended (if the employee returns to your company, they can be activated as a member again). Before deactivating a user, make sure the following points are true for that user: they do not have a Company Contact, App Contact, or Technical Contact role; they are not the only Scrum Master in an App Team; and they are not involved in unsolved support tickets with Mendix Support.    
 {{% /alert %}}
 
 [** Please verify the requirements above**]
-
-{{% alert type="info" %}}
-If a Mendix user moves to another company or comes from another company that is also using Mendix, the user can merge their old Mendix account(s) into the new Mendix account. This action combines all the hard-earned points, certifications, and achievements in the user’s efforts to climb the leaderboards. For more information, see the Merging Your Accounts of Mendix Profile.
-{{% /alert %}}
-
-[** Please verify if you think th information above should go here**]
 
 ## 3 App Projects {#projects}
 
@@ -62,9 +52,11 @@ On the **Active App Projects** tab of this page, you can see a list of the activ
 
 When you click a **Project** name, a pop-up window opens with the project profile. The **Project Info** tab has the **Description** and **App ID** fields, which are also available on the [General](/developerportal/settings/general-settings) settings page for your app project in the Developer Portal. On the **Members** tab, you can see the active members and external members of the app project. The **Project Roles** tab presents the App Team roles defined via the **Default App Roles** tab and/or customized for a particular app project.
 
-When you select an app project in the lists on these tabs, a context menu appears with options for exporting project details to an *.xlsx* file, deactivating/activating a project, or deleting a project.
+When you select app projects in the lists on these tabs, a context menu appears with options for exporting project details to an *.xlsx* file, deactivating/activating projects, and deleting projects.
 
-The **Default App Roles** tab shows the default  [App Team roles](/developerportal/company-app-roles/manage-roles#edit-app-team-roles) assigned for every new app project created in your company. These can be customized at the app project-level. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/develop/team-server) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) information.
+The **Default App Roles** tab shows the default  [App Team roles](/developerportal/company-app-roles/manage-roles#edit-app-team-roles) assigned for every new app project created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. 
+
+Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/develop/team-server) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) information.
 
 ![](attachments/roles.jpg)
 
@@ -80,13 +72,15 @@ Click a group name to bring up the group details pop-up window, and click **Add 
 You can only add apps to groups that utilize [Mendix SSO](/appstore/modules/mendix-sso) to App Access Groups.
 {{% /alert %}}
 
-When you select a group in the list or a member or accessible app in the group details page, a context menu will appear with options for exporting item details to an *.xlsx* file, deleting an access group, removing a member from an access group, or removing an accessible app.
+When you select groups in the list or members or accessible apps in the group details page, a context menu will appear with options for exporting item details to an *.xlsx* file, deleting access groups, removing members from access groups, and removing accessible apps.
 
 ## 5 Company Settings {#company}
 
-On the **Company Details** tab of this page, you can edit your **Company Name** and **Description** as well as the **Company Email Domains**.  When you click **Add Domain**, a request is sent to [Mendix Support](/developerportal/support/). Once a domain is added, every user who signs up to Mendix wth that email domain will be assigned to your company.
+On the **Company Details** tab of this page, you can edit your **Company Name** and **Description**. You can also request new **Company Email Domains** by clicking **Add Domain**, upon which a request is sent to [Mendix Support](/developerportal/support/). Once a domain is added, every user who signs up to Mendix with that email domain will be assigned to your company.
 
-The **Mendix Admins** tab lists all the current Mendix Admins in your company. A Mendix Admin will normally be someone in the IT department of your company, and they will have have one main permission to edit the company's details as well as perform the other tasks in Control Center described here. To add a new admin, click **Add Mendix Admin**. To remove an admin, select their name in the list and click **Remove**.
+The **Mendix Admins** tab lists all the current Mendix Admins in your company. A Mendix Admin will normally be someone in the IT department of your company, and they will have full access to Control Center to perform all available tasks. 
+
+To add a new admin, click **Add Mendix Admin**. To remove an admin, hover over their name in the list and click **Remove**.
 
 ![](attachments/admin.jpg)
 
@@ -124,9 +118,9 @@ The **Cloud Environments** tab on this page presents an overview of the licensed
 
 There are three other pages accessible from this tab where you can perform other Mendix Cloud operations:
 
-* **Add Node** – requests a new app node for a specific app and environment
-* **Resize Environment** – requests a container size change
-* **Offboard Environment** – offboards an app
+* [Add Node](https://newnode.mendix.com/index.html) – requests a new app node for a specific app and environment
+* [Resize Environment](https://resize.mendix.com/index.html) – requests a container size change
+* [Offboard Environment](https://offboard.mendix.com/index.html) – offboards an app
 
 [**Mark: Please expand definitions of operations above as necessary and add useful cross-references for app node, container, offboard**]
 

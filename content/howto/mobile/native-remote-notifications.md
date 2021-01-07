@@ -66,6 +66,8 @@ To set up a notification widget, do the following:
 1. Drag and drop a data view widget onto your home page and set its **Data source** > **Nanoflow** to **DS_Notification**:
 
     {{% image_container width="300" %}}![Dataview](attachments/native-remote-push/modeler/Dataview.png){{% /image_container %}}
+   
+	Make sure to leave the data view **editable**. Siabling the editability will break the notification functionality.
 
 1. Drag and drop a notifications widget inside of this data view.
 1. Set the notifications widget's GUID to **NativeNotification.objectGUID**:

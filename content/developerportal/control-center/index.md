@@ -36,8 +36,13 @@ When you select members in the lists on these tabs, a context menu appears with 
 
 For security reasons, deactivating an employee that is leaving your company is recommended (if the employee returns to your company, they can be activated as a member again). Before deactivating a user, make sure the following points are true for that user:
 
+<<<<<<< HEAD
 * They do not have a [Technical Contact](/developerportal/app-roles#technical-contact) role
 * They are not the only [Scrum Master](/developerportal/app-roles/#app-team-roles) in an App Team
+=======
+* They do not have a [Technical Contact](/developerportal/app-roles/index#technical-contact) role
+* They are not the only [Scrum Master](/developerportal/app-roles/index#app-team-roles) in an App Team
+>>>>>>> 32fbcab005944d2e25c4cf07a1110630a4540887
 * They are not the last member of a company
 
 {{% alert type="info" %}}
@@ -55,7 +60,11 @@ When you click a **Project** name, a pop-up window opens with the project profil
 
 When you select app projects in the lists on these tabs, a context menu appears with options for exporting project details to an *.xlsx* file, deactivating/activating projects, and deleting projects.
 
+<<<<<<< HEAD
 The **Default App Project Roles** tab shows the default [App Team roles](/developerportal/app-roles/index#app-team-roles) assigned for every new app project created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. 
+=======
+The **Default App Project Roles** tab shows the default [App Team roles](/developerportal/app-roles/index#edit-app-team-roles) assigned for every new app project created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. 
+>>>>>>> 32fbcab005944d2e25c4cf07a1110630a4540887
 
 Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/develop/team-server) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) information.
 
@@ -111,20 +120,18 @@ On the **Security History** tab, you can click **Show Security History** to open
 
 ## 8 Cloud {#cloud}
 
-The **Cloud Environments** tab on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy#plans) and **Fallback** (meaning, a standard or premium plan). 
+{{% todo %}}[Document Fallback in https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy#plans and add a link here]{{% /todo %}}
 
-[**Mark: Please verify definitions for resource pack and fallback above. Any cross-reference to implement for "fallback"? Do we need more documentation on fallbacks, especially as users will need to understand that when requesting via "App Node" below?**]
+The **Cloud Environments** tab on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy#plans) and whether the **Fallback** option has been purchased as part of a premium plan.   
 
 ![](attachments/cloud.jpg)
 
-There are three other pages accessible from this tab where you can perform other Mendix Cloud operations:
+There are links to three other pages from this tab to allow you to [make requests to Mendix Support](/developerportal/support/submit-support-request#3-submitting-a-new-request) to do the following:
 
-* [Add Node](https://newnode.mendix.com/index.html) – requests a new app node for a specific app and environment
-* [Resize Environment](https://resize.mendix.com/index.html) – requests a container size change
-* [Offboard Environment](https://offboard.mendix.com/index.html) – offboards an app
+{{% todo %}}[Document all three operations in one piece of support documentation]{{% /todo %}}
 
-[**Mark: Please expand definitions of operations above as necessary and add useful cross-references for app node, container, offboard**]
+* [Add Node](/developerportal/support/new-app-node-request-template) – requests a new app node for a specific app and environment
+* **Resize Environment** – requests a container size change
+* **Offboard Environment** – requests that an app is offboarded
 
-[**Mark: Please verify what will happen with this page and Support's involvement when Control Center comes out: https://docs.mendix.com/developerportal/support/new-app-node-request-template**]
-
-[**Mark: Please verify this as well - will "Off-Board Licensed Node" still be a Support request with the above self-service option?: https://docs.mendix.com/developerportal/support/submit-support-request#3-submitting-a-new-request**]
+These links will open in a new browser tab.

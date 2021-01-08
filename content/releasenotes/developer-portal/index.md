@@ -15,9 +15,12 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ### January 15th, 2020
 
+#### New Features
+
+* We released the Mendix [Control Center](/developerportal/control-center/index), which provides governance and control features for Mendix Admins (former Company Admins).
+
 #### Improvements
 
-* We released the new [Control Center](/developerportal/control-center/index), which provides governance and control features for Mendix Admins (former Company Admins).
 * We moved the existing Company Admin features in the Developer Portal to Control Center.
 
 ## 2020

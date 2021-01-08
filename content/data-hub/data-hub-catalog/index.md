@@ -81,7 +81,7 @@ For details on security and accessibility in the Data Hub Catalog and for regist
 
 ## 4 Information Available in the Data Hub Catalog
 
-In the Data Hub Catalog, all the information for registered assets is displayed in the [Catalog search details](search#search-details) screen. This information comes from the metadata in the OData service contract and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners and [Data Hub curators](../index#curator) and the [Data Hub Admin](./index#admin). 
+In the Data Hub Catalog, all the information for registered assets is displayed in the [Catalog search details](search#search-details) screen. This information comes from the metadata in the OData service contract and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners and [Data Hub curators](../index#curator) and the [Data Hub Admin](../index#admin). 
 
 The information that is registered for services and exposed assets are as follows: 
 

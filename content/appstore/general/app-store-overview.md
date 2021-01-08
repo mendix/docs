@@ -186,7 +186,7 @@ The **Manage** button is available to you if one of the following conditions is 
 
 * The component is not assigned to any [user groups](#user-groups) (in which case it can be managed by anyone in the company)
 * The component is assigned to a user group, and you are a [member](#members) of that group
-* You are a Company Admin of the company that published the component
+* You are a [Mendix Admin](/developerportal/control-center/index#company) of the company that published the component
 
 To manage a component, click **Manage** (for more information, see the [Managing a Component](#manage) section above).
 
@@ -246,13 +246,13 @@ To see the component's [details](#details) page, click **View**.
 
 To remove a component from the user group, click **Remove**.
 
-[Group Admins](#members) and Company Admins can check the **Allow guests to download** box of this component can be downloaded by [guests](#guests).
+[Group Admins](#members) and [Mendix Admins](/developerportal/control-center/index#company) can check the **Allow guests to download** box of this component can be downloaded by [guests](#guests).
 
 #### 5.3.4 Settings Tab
 
 On this tab, you can enter a **Name** and **Description** for the user group.
 
-To delete a group, a Company Admin can click **Delete Group**.
+To delete a group, a Mendix Admin can click **Delete Group**.
 
 ## 6 Read More
 

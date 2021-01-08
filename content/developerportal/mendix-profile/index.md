@@ -309,7 +309,7 @@ Once an old account has been merged to a new account, you will no longer have ac
 {{% /alert %}}
 
 {{% alert type="info" %}}
-With the merge, the accounts are only combined. The old account is not deactivated. That should be done by the Company Admin.
+With the merge, the accounts are only combined. The old account is not deactivated. That should be done by the [Mendix Admins](/developerportal/control-center/index#members).
 {{% /alert %}}
 
 #### 10.6.2 Selecting Your Profile Visibility {#public}

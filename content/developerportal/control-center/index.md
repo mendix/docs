@@ -20,7 +20,7 @@ If you are a Mendix Admin, you will immediately see the **Members** page and can
 
 You can access Control Center via the menu item on the navigation pane.
 
-## 2 Members
+## 2 Members {#members}
 
 Members are users who can view and/or edit an app project. On the **Active members** tab, you can see the active members of your company who can access certain app projects: 
 

@@ -121,12 +121,6 @@ Use "Buzz" on its own, unless you need to specify "Company Buzz" or "App Buzz" f
 Do not use "the Buzz" (unless the context demands it).
 {{% /alert %}}
 
-### Company Admin
-
-{{% alert type="info" %}}
-Capitalize in all instances.
-{{% /alert %}}
-
 ### Company Contact
 
 {{% alert type="info" %}}
@@ -199,6 +193,12 @@ Do not capitalize.
 
 {{% alert type="info" %}}
 Capitalize the name of the app ("Make It Native"), but do not capitalize "app."
+{{% /alert %}}
+
+### Mendix Admin
+
+{{% alert type="info" %}}
+Capitalize in all instances.
 {{% /alert %}}
 
 ### Mendix Assist {#mendix-assist}

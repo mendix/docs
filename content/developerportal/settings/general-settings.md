@@ -80,7 +80,7 @@ To remove an App User from the environment, click **Remove** by their name.
 To edit an App User's roles, click **Edit** by their name. Permissions for these roles (for example, **User** or **Administrator**) correspond to what you have configured for your app project's user roles in [Project Security](/refguide/project-security#user-roles) in Mendix Studio Pro or [Roles and Permissions](/studio/settings-security#roles-and-permissions) in Mendix Studio. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
 
 {{% alert type="info" %}}
-If an App User has been granted access to an app environment through a [Group](../control-center/index#groups), only a Mendix Admin using a  page can remove them from that environment (by removing them from that security group) or edit the roles granted by that security group policy.
+If an App User has been granted access to an app environment through a [Group](../control-center/index#groups), only a Mendix Admin can remove them from that environment (by removing them from that group) or edit the roles granted by that group policy.
 {{% /alert %}}
 
 ### 4.2 Invite Users

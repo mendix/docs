@@ -5,7 +5,7 @@ category: "API Documentation"
 
 ## 1 Introduction
 
-The User Management API allows your company's user management systems to integrate with the Mendix Platform. Through this API, you can create and manage user accounts in your company. Additionally you can create and manage security groups. In the Mendix Platform, you can define group policies for groups which grant access to your company's applications to their members.
+The User Management API allows your company's user management systems to integrate with the Mendix Platform. Through this API, you can create and manage user accounts in your company. Additionally you can create and manage groups. In the Mendix Platform, you can define group policies for groups which grant access to your company's applications to their members.
 
 ## 2 Authentication
 

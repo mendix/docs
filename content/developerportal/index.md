@@ -12,7 +12,7 @@ The [Developer Portal](http://home.mendix.com) is one of the three key component
 
 The Developer Portal also offers open, well-defined APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
 
-You can go to any part of the Developer Portal using the menu items in the header:
+You can navigate the menu items in the header:
 
 ![](attachments/header.jpg)
 
@@ -36,9 +36,9 @@ To start a new app project click **Create App**, which will open a page where yo
 
 ## 4 Control Center
 
-In [Control Center](control-center/index), you can gain insight into company activites and perform various tasks as a Mendix Admin:
+In [Control Center](control-center/index), you can gain insight into company activities and perform various governance tasks as a Mendix Admin:
 
-[**Add screenshot**]
+![](attachments/developerportal-cc-admin.jpg)
 
 ## 5 People
 

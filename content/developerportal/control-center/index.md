@@ -111,20 +111,18 @@ On the **Security History** tab, you can click **Show Security History** to open
 
 ## 8 Cloud {#cloud}
 
-The **Cloud Environments** tab on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy#plans) and **Fallback** (meaning, a standard or premium plan). 
+{{% todo %}}[Document Fallback in https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy#plans and add a link here]{{% /todo %}}
 
-[**Mark: Please verify definitions for resource pack and fallback above. Any cross-reference to implement for "fallback"? Do we need more documentation on fallbacks, especially as users will need to understand that when requesting via "App Node" below?**]
+The **Cloud Environments** tab on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy#plans) and whether the **Fallback** option has been purchased as part of a premium plan.   
 
 ![](attachments/cloud.jpg)
 
-There are three other pages accessible from this tab where you can perform other Mendix Cloud operations:
+There are links to three other pages from this tab to allow you to [make requests to Mendix Support](/developerportal/support/submit-support-request#3-submitting-a-new-request) to do the following:
 
-* [Add Node](https://newnode.mendix.com/index.html) – requests a new app node for a specific app and environment
-* [Resize Environment](https://resize.mendix.com/index.html) – requests a container size change
-* [Offboard Environment](https://offboard.mendix.com/index.html) – offboards an app
+{{% todo %}}[Document all three operations in one piece of support documentation]{{% /todo %}}
 
-[**Mark: Please expand definitions of operations above as necessary and add useful cross-references for app node, container, offboard**]
+* [Add Node](/developerportal/support/new-app-node-request-template) – requests a new app node for a specific app and environment
+* **Resize Environment** – requests a container size change
+* **Offboard Environment** – requests that an app is offboarded
 
-[**Mark: Please verify what will happen with this page and Support's involvement when Control Center comes out: https://docs.mendix.com/developerportal/support/new-app-node-request-template**]
-
-[**Mark: Please verify this as well - will "Off-Board Licensed Node" still be a Support request with the above self-service option?: https://docs.mendix.com/developerportal/support/submit-support-request#3-submitting-a-new-request**]
+These links will open in a new browser tab.

@@ -30,7 +30,7 @@ When you click **Manage Team** in the top-right corner of the screen, you will b
 
 Only the following roles can see the **Manage Team** button:
 
-* [Scrum Master](/developerportal/index#app-team-roles)
+* [Scrum Master](/developerportal/app-roles/index#app-team-roles)
 * [Mendix Admin](/developerportal/control-center)
 * A [custom role](/developerportal/app-roles/index#app-team-roles) with **App Settings** permission
 

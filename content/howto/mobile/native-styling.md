@@ -8,7 +8,7 @@ tags: ["styling", "design", "native"]
 
 ## 1 Introduction
 
-With Mendix 8, you can build native mobile apps with custom styling in Mendix Studio Pro. Styling native mobile apps uses JavaScript style sheets, which are new to Mendix Studio Pro. Consult the guidelines below for information on theme folder structure, classes, and design properties.
+You can build native mobile apps with custom styling in Mendix Studio Pro. Styling native mobile apps uses JavaScript style sheets, which are new to Mendix Studio Pro. Consult the guidelines below for information on theme folder structure, classes, and design properties.
 
 ## 2 Theme Folder Structure
 

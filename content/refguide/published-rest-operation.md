@@ -157,9 +157,3 @@ Provide a short description of what the operation does.
 #### 2.2.2 Description {#description}
 Enter a complete overview of what the operation does. You can use [GitHub-flavored markdown](gfm-syntax) syntax to style the text.
 
-## 3 Example
-
-**How to publish REST in Studio Pro 8**
-
-{{% youtube Ff_P84NOcZk %}}
-

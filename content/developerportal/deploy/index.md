@@ -73,9 +73,7 @@ The Docker buildpack is available at [Mendix Docker Buildpack](https://github.co
 
 ## 10 Azure
 
-Deploying to Azure is possible from the [Azure Marketplace](https://azure.microsoft.com/en-us/marketplace/partners/mendix/mendix-pro/). 
-
-For details on how to deploy, see [Azure](azure-deploy).
+Deploying to Azure is possible from the [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/mendix.mendix-pro). 
 
 ## 11 On-Premises
 
@@ -91,7 +89,6 @@ To learn how to deploy your Mendix application on premises, see [How to Deploy M
 * [Private Cloud](private-cloud) – how to deploy to a supported private cloud through the Developer Portal
 * [Cloud Foundry](cloud-foundry-deploy) – how to deploy to a Cloud Foundry-based platform
 * [Docker](docker-deploy) – how to deploy directly in a Docker container
-* [Azure](azure-deploy) – how to deploy to Azure using the Azure Marketplace
 * [On-Premises](on-premises-design) – how to deploy on premises using Microsoft Windows or Un*x
 * [Mobile App](mobileapp) – how to publish your mobile app
 * [App Services](app-services) – how to publish to the Mendix App Store

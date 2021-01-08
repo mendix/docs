@@ -107,4 +107,3 @@ When using Mendix mail servers and a sender address in a domain that has a restr
 
 *   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
 *   [Mendix Cloud: Deploy](mendix-cloud-deploy)
-*   [Azure: Deploy](azure-deploy)

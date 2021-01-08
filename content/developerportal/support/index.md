@@ -67,8 +67,9 @@ During the start phase, and through part of the scale phase, of your digital tra
 
 ### 5.1 Company Admins
 
-To manage your company account, and the users, projects, and licensed cloud nodes of your company, you can appoint company admins in the [Developer Portal](https://home.mendix.com/).
-Please read more about this in [Company Admin Settings](/developerportal/company-app-roles/companyadmin-settings).
+To manage your company account, and the users, projects, and licensed cloud nodes of your company, you can appoint [Mendix Admins](/developerportal/control-center/index#company).
+
+Please read more about this in [Control Center](/developerportal/control-center/index).
 
 ### 5.2 Technical Contacts
 

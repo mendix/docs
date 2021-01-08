@@ -436,7 +436,7 @@ Capitalize in all instances.
 ### Scrum Master
 
 {{% alert type="info" %}}
-This is the correct capitalization for this [App Team role](/developerportal/company-app-roles#app-team-roles)
+This is the correct capitalization for this [App Team role](/developerportal/app-roles/index#app-team-roles)
 {{% /alert %}}
 
 ### Sprint

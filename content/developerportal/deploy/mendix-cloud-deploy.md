@@ -193,5 +193,4 @@ Mendix licenses are sold in a number of standard plans. The table below shows th
 
 * [Custom Domains](custom-domains)
 * [Licensing Mendix Cloud Apps](licensing-apps)
-* [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
-* [Company & App Roles](/developerportal/company-app-roles/index)
+* [App Roles](/developerportal/app-roles/index)

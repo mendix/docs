@@ -203,7 +203,7 @@ This page contains reviews of **Your company's content** as well as **Your compa
 You can configure user groups for various levels of access to your company's App Store. The available configuration tabs for each user group page are described in the sections below.
 
 {{% alert type="info" %}}
-The **User Groups** menu item and page are visible to all users. However, only [Company Admins](/developerportal/company-app-roles/companyadmin-settings) with the [Can manage Company](/developerportal/company-app-roles/manage-roles#app-store-manager) permission can create and delete user groups. Both [Group Admins](#members) and Company Admins can manage user groups.
+The **User Groups** menu item and page are visible to all users. However, only [Mendix Admins](/developerportal/control-center/index#company) can create and delete user groups. Both [Group Admins](#members) and Mendix Admins can manage user groups.
 {{% /alert %}}
 
 #### 5.3.1 Members Tab {#members}

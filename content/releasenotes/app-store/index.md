@@ -151,7 +151,7 @@ We added a component in the App Store which, when configured in your app, allows
 
 #### Improvements
 
-* We created a new App Store menu structure, so it is now easier to navigate through your created content. If you are a [Company Admin](/developerportal/company-app-roles/manage-roles#app-store-manager) with certain permissions, you will see additional menu items to help you manage private and public company content.
+* We created a new App Store menu structure, so it is now easier to navigate through your created content. If you are a Mendix Admin with certain permissions, you will see additional menu items to help you manage private and public company content.
 * For App Store administrators, you can now set content managers who are allowed to manage your company content by marking it as protected.
 * You can now share private App Store content with external downloaders from other companies.
 

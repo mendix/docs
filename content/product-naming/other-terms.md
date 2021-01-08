@@ -468,7 +468,7 @@ Capitalize in all instances.
 ### Technical Contact
 
 {{% alert type="info" %}}
-Capitalize in all instances of this [role](/developerportal/company-app-roles/technical-contact).
+Capitalize in all instances of this [role](/developerportal/app-roles#technical-contact).
 {{% /alert %}}
 
 ### Theme Customizer

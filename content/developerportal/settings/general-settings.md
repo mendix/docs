@@ -13,7 +13,7 @@ tags: ["Settings", "App", "Developer Portal"]
 The **General** settings page presents an overview of your app project with the following details:
 
 * A **Description** of the app
-* The [App Contact](../company-app-roles/manage-roles#change-app-contact) and [Technical Contact](../company-app-roles/technical-contact) for the app
+* The [App Contact](../app-roles/index#app-contact) and [Technical Contact](../app-roles/index#technical-contact) for the app
 * Whether the app is enabled for Mendix **Studio** (for details, see the [Mendix Studio](#web) section below)
 * The **App ID**
 
@@ -37,7 +37,7 @@ Only Scrum Masters or custom App Team roles with the **App Settings** permission
 Click **Cloud Settings** to select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
 
 {{% alert type="info" %}}
-Only users with the **App Settings** permission can change cloud platforms. For default roles, only the **Scrum Master** has this permission. For more details, see the [App Team Roles](../company-app-roles/index#app-team-roles) section of *Company & App Roles*.
+Only users with the **App Settings** permission can change cloud platforms. For default roles, only the **Scrum Master** has this permission. For more details, see the [App Team Roles](../app-roles/index#app-team-roles) section of *App Roles*.
 {{% /alert %}}
 
 ![](attachments/cloudsettings.png)

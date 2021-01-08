@@ -15,7 +15,7 @@ Your ability to delete and deactivate an app depends on your App Team role:
 * A custom role with the **App Settings** permission is also allowed to deactivate and delete an app
 * A **Company Admin** is allowed to delete, deactivate, and activate all the company's apps (with or without App Team members for the app)
 
-For more information on roles, see [Company & App Roles](/developerportal/company-app-roles/index).
+For more information on roles, see [App Roles](/developerportal/app-roles/index).
 
 **This how-to will teach you how to do the following as a Scrum Master:**
 
@@ -70,8 +70,5 @@ If you are the only team member of an app, you can also delete it directly from 
 ## 5 Read More
 
 * [Apps](../company-app-roles/apps)
-* [How to Deactivate & Activate an App](../company-app-roles/deactivate-activate-app)
-* [Company Admin Settings](../company-app-roles/companyadmin-settings)
 * [How to Manage General Settings](general-settings)
-* [Company & App Roles](../company-app-roles/index)
-* [How to Manage Company & App Roles](../company-app-roles/manage-roles)
+* [App Roles](../company-app-roles/index)

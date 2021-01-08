@@ -31,7 +31,7 @@ These are the predefined App Team roles:
 | Product Owner | The product owner of the Scrum team who is responsible for managing the app's backlog.|
 | Scrum Master | The Scrum Master of the Agile App Team. In addition to contributing to development, the Scrum Master manages all the settings within the app. If you create a new app, you will automatically become the Scrum Master. |
 
-### 2.1 Editing App Team Roles {#edit-app-team-roles}
+### 3.1 Editing App Team Roles {#edit-app-team-roles}
 
 Mendix Admins can edit and create new team roles within the company in [Control Center](../control-center/index).
 

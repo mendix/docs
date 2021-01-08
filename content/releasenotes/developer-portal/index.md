@@ -107,7 +107,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Improvements
 
-* We implemented the second increment in renaming the default **End-user** App Team role to [Guest](/developerportal /app-roles/index#app-team-roles).
+* We implemented the second increment in renaming the default **End-user** App Team role to [Guest](/developerportal/app-roles/index#app-team-roles).
 
 #### Fixes
 

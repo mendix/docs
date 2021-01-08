@@ -10,11 +10,9 @@ These release notes cover changes to the control and governance features used by
 
 ### January 15th, 2021
 
-#### Improvements
+#### New App Announcement
 
-* We made Customer IDP accessible from the control center app.
-* We made some styling improvements for the landing pages in the control center app.
-
-#### Fixes
-
-* We fixed an issue in custom list view for all overview pages where selecting all, then deselecting a few items and then exporting them to excel caused disapperance of the deselected items on the page and yet exported the deselected items to the excel which was undesirable.
+* All the existing Company Admin settings will be now removed from the developer portal.
+* For all control and governance features, we have made a dedicated app called Control Center for all Company/ Mendix admins.
+* We are going live with a GA release of the Control Center app on 15th January 2021 .
+* Please check out our release blog for more information.

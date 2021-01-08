@@ -108,10 +108,6 @@ module.exports = {
       to: "/developerportal/deploy/migrating-to-v4"
     },
     {
-      from: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-azure",
-      to: "/developerportal/deploy/azure-deploy"
-    },
-    {
       from: "/mendixcloud/how-to-link-app-to-node",
       to: "/developerportal/deploy/licensing-apps"
     },

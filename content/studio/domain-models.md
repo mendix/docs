@@ -5,7 +5,7 @@ category: "Working with Data"
 menu_order: 10
 tags: ["studio", "domain model"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#The anchor entity-types below is mapped, so it should not be removed or changed.
+#The anchor <entity-types> below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Introduction

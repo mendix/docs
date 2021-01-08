@@ -2,7 +2,7 @@
 title: "Data Accessibility and Security"
 category: "Data Hub Catalog"
 menu_order: 50
-description: "Describes how security is implemented in the Mendix Data Hub Catalog."
+description: "Security aspects around registered assets and access in Mendix Data Hub."
 tags: ["data hub", "data hub catalog", "security", "entity security", "dataset security","odata service security"]
 ---
 

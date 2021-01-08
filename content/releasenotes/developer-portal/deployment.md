@@ -12,7 +12,7 @@ Follow the links in the table below to see the release notes you want:
 | Type of Deployment | Last Updated |
 | --- | --- |
 | [Mendix Cloud](mendix-cloud) | December 17th, 2020 |
-| [Mendix for Private Cloud](mendix-for-private-cloud) | December 14th, 2020 |
+| [Mendix for Private Cloud](mendix-for-private-cloud) | January 6th, 2021 |
 | [SAP Cloud Platform](sap-cloud-platform) | December 21st, 2020 |
 | [Other Deployment Options](on-premises) | October 26th, 2020 |
 

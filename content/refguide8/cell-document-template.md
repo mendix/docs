@@ -2,6 +2,9 @@
 title: "Cell (Document Template)"
 parent: "row-document-template"
 tags: ["studio pro"]
+aliases:
+    - /refguide8/cell-(document-template).html
+    - /refguide8/Cell+(document+template).html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

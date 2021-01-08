@@ -36,8 +36,8 @@ When you select members in the lists on these tabs, a context menu appears with 
 
 For security reasons, deactivating an employee that is leaving your company is recommended (if the employee returns to your company, they can be activated as a member again). Before deactivating a user, make sure the following points are true for that user:
 
-* They do not have a [Technical Contact](/developerportal/company-app-roles/technical-contact) role
-* They are not the only [Scrum Master](/developerportal/company-app-roles/#app-team-roles) in an App Team
+* They do not have a [Technical Contact](/developerportal/app-roles/index#technical-contact) role
+* They are not the only [Scrum Master](/developerportal/app-roles/index#app-team-roles) in an App Team
 * They are not the last member of a company
 
 {{% alert type="info" %}}
@@ -55,7 +55,7 @@ When you click a **Project** name, a pop-up window opens with the project profil
 
 When you select app projects in the lists on these tabs, a context menu appears with options for exporting project details to an *.xlsx* file, deactivating/activating projects, and deleting projects.
 
-The **Default App Project Roles** tab shows the default [App Team roles](/developerportal/company-app-roles/manage-roles#edit-app-team-roles) assigned for every new app project created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. 
+The **Default App Project Roles** tab shows the default [App Team roles](/developerportal/app-roles/index#edit-app-team-roles) assigned for every new app project created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. 
 
 Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/develop/team-server) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) information.
 

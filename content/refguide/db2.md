@@ -40,7 +40,7 @@ For more detailed information, see [DB2 SQL error: SQLCODE: -964, SQLSTATE: 5701
 
 Sorting on string column values is case sensitive in DB2. To mitigate this, IBM has introduced Locale-aware Unicode collations in DB2 9.5 fixpack 1. These collations can be tailored to ignore case and/or accents.
 
-For more detailed information, see the article [Making DB2 case-insensitive](https://developer.ibm.com/technologies/databases/articles/making-db2-case-insensitive) in *IBM Developer Works*:
+For more detailed information, see the sidenote in the article [Making DB2 case-insensitive](https://developer.ibm.com/technologies/databases/articles/making-db2-case-insensitive#refname) in *IBM Developer Works*:
 
 ### 5.2 Sorting on Very Long Strings
 

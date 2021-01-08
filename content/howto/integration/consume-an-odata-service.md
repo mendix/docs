@@ -12,6 +12,8 @@ Licensed users of Mendix Data Hub can also directly consume published OData Serv
 
 Developers can consume published OData services by specifying the service metadata URL or a (local) metadata file in the [Consumed OData Service](/refguide/consumed-odata-service) document.  A mapping of the service will be  created and listed in  the **Data Hub Project** pane (displayed when no search term is specified) and  the exposed entities can be dragged into the domain model as [External Entities](/refguide/external-entities).  
 
+This document also describes how you can connect to that same service which is published in the Data Hub Catalog.
+
 Follow the steps in this how-to to develop your app by directly consuming published OData Services into your project model. 
 
 **This how-to will teach you how to do the following:**
@@ -19,7 +21,7 @@ Follow the steps in this how-to to develop your app by directly consuming publis
 * Add a consumed OData Service document to your project model
 * Specify a published OData service using the service metadata contract URL or the file path
 * Use the **Data Hub Project** pane to view and use the exposed entities in your app development
-* Connect to the service registered in the Data Hub Catalog
+* Connect to the same service registered in the Data Hub Catalog
 
 {{% alert type="info" %}}
 To consume OData services and use the **Data Hub pane** you must have a Data Hub license.
@@ -35,10 +37,10 @@ Before starting this how-to you will need the following:
 * Have the URL of a valid published OData v3 or v4 metadata contract to consume. If you want to follow this how-to you can use any of the following examples:
 
 	* An example OData service URL is provided in [Sample file from OData.org](#sampleODataservice)
-	
 	* You can use the example service for a simple Mendix app described in the section [Mendix Published OData Service](#how-to-file).
+	* You can also obtain the service or **Data Source URL** of a service that is registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/search#search-details). On the asset details page of the service, there is a **Copy Data Source UR** that will copy the location of the metadata file to your clipboard. 
 
-	In both cases, you can try the steps for [consuming from a URL](#consumeurl), or download the service contract to your computer and follow the steps for [consuming from a file](#consumefile)
+	Use these as the input files for the steps described in  [consuming from a URL](#consumeurl), or download a service contract to your computer and follow the steps for [consuming from a file](#consumefile)
 	
 
 ## 3 Using Published OData Services
@@ -134,7 +136,7 @@ Follow these steps to consume a published Odata service directly using the URL:
 
 14. You can now drag and drop entities from the service into your domain model. 
 
-    {{% alert type="info" %}}As this is a sample public OData Service, there is no associated dataset available that you will be able to use in your app. You can use the example given in [Mendix Published OData Service Deployed Locally](#how-to-file) for which you can create and view the data.
+    {{% alert type="info" %}}As this is a sample public OData Service, there is no associated dataset available that you will be able to use in your app. You can use the example given in [Mendix Published OData Service Deployed Locally](#how-to-file) for which you can create you own set of data and view it in the consuming app.
 
     {{% /alert %}}
 
@@ -161,12 +163,9 @@ Your resulting app, which you can also deploy locally, will show the consumed en
 
 ## 7 Consuming from the Data Hub after Offline Modeling
 
+When you have been developing an app locally and you want to connect to the same service registered in the Data Hub Catalog, follow these steps.
 
-
-When you have been developing an app locally and you want to connect the module to the same service registered in the Data Hub Catalog, follow these steps.
-
-{{% alert type="info" %}}This method can only be used if the service that you want to connect to is the same as the one that you specified as a URL or file. This means that there should be no signficant differences in the service that is registered in the Catalog, especially with respect to the entities that you have consumed, otherwise this will result in errors.
-{{% /alert %}}
+{{% alert type="info" %}}This method can only be used if the service that you want to connect to is the same as the one that you specified as a URL or file. This means that there should be no signficant differences in the exposed entities and associations in the metadata contract that is registered in the Catalog otherwise this will result in errors.{{% /alert %}}
 
 1. 
 

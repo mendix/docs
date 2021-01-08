@@ -36,14 +36,8 @@ When you select members in the lists on these tabs, a context menu appears with 
 
 For security reasons, deactivating an employee that is leaving your company is recommended (if the employee returns to your company, they can be activated as a member again). Before deactivating a user, make sure the following points are true for that user:
 
-<<<<<<< HEAD
-* They do not have a [Technical Contact](/developerportal/app-roles#technical-contact) role
-* They are not the only [Scrum Master](/developerportal/app-roles/#app-team-roles) in an App Team
-=======
 * They do not have a [Technical Contact](/developerportal/app-roles/index#technical-contact) role
 * They are not the only [Scrum Master](/developerportal/app-roles/index#app-team-roles) in an App Team
->>>>>>> 32fbcab005944d2e25c4cf07a1110630a4540887
-* They are not the last member of a company
 
 {{% alert type="info" %}}
 You cannot deactivate yourself.
@@ -60,11 +54,7 @@ When you click a **Project** name, a pop-up window opens with the project profil
 
 When you select app projects in the lists on these tabs, a context menu appears with options for exporting project details to an *.xlsx* file, deactivating/activating projects, and deleting projects.
 
-<<<<<<< HEAD
-The **Default App Project Roles** tab shows the default [App Team roles](/developerportal/app-roles/index#app-team-roles) assigned for every new app project created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. 
-=======
 The **Default App Project Roles** tab shows the default [App Team roles](/developerportal/app-roles/index#edit-app-team-roles) assigned for every new app project created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. 
->>>>>>> 32fbcab005944d2e25c4cf07a1110630a4540887
 
 Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/develop/team-server) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) information.
 

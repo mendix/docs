@@ -67,7 +67,7 @@ To set up a notification widget, do the following:
 
     {{% image_container width="300" %}}![Dataview](attachments/native-remote-push/modeler/Dataview.png){{% /image_container %}}
    
-	Make sure to leave the data view **editable**. Siabling the editability will break the notification functionality.
+	Make sure to leave the data view **editable**. Disabling the editability will break the notification functionality.
 
 1. Drag and drop a notifications widget inside of this data view.
 1. Set the notifications widget's GUID to **NativeNotification.objectGUID**:

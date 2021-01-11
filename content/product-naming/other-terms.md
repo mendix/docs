@@ -195,7 +195,7 @@ Do not capitalize.
 Capitalize the name of the app ("Make It Native"), but do not capitalize "app."
 {{% /alert %}}
 
-### Mendix Admin
+### Mendix Admin {#mendix-admin}
 
 {{% alert type="info" %}}
 Capitalize in all instances.

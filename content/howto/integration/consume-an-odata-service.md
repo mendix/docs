@@ -8,13 +8,11 @@ description: "Describes the development workflow for working with oData and exte
 
 ## 1 Introduction
 
-Licensed users of Mendix Data Hub can also directly consume published OData Services in their projects without using the functionality of the [Data Hub Catalog](/data-hub/data-hub-catalog) through the [Data Hub pane.](/refguide/data-hub-pane) This can save time when, for example, trying out [published OData services](/refguide/published-odata-services) of locally deployed apps that are being developed and are not registered in the Data Hub Catalog.
+Licensed users of Mendix Data Hub can also directly consume published OData Services during app development without using the functionality of the [Data Hub Catalog](/data-hub/data-hub-catalog) through the [Data Hub pane](/refguide/data-hub-pane). This can save time when, for example, developing and testing [published OData services](/refguide/published-odata-services). 
 
-Developers can consume published OData services by specifying the service metadata URL or a (local) metadata file in the [Consumed OData Service](/refguide/consumed-odata-service) document.  A mapping of the service will be  created and listed in  the **Data Hub Project** pane (displayed when no search term is specified) and  the exposed entities can be dragged into the domain model as [External Entities](/refguide/external-entities).  
+A [Consumed OData Service](/refguide/consumed-odata-service)  document can be created in the model and the OData service contract URL or a (local) metadata file can be specified.  A mapping of the service will be  created and listed in  the **Data Hub Project** pane (displayed when no search term is specified) and  the exposed entities can be dragged into the domain model as [External Entities](/refguide/external-entities).  
 
-This document also describes how you can connect to that same service which is published in the Data Hub Catalog.
-
-Follow the steps in this how-to to develop your app by directly consuming published OData Services into your project model. 
+This document also describes how you can connect to the *same service* which is published in the Data Hub Catalog.
 
 **This how-to will teach you how to do the following:**
 
@@ -24,7 +22,7 @@ Follow the steps in this how-to to develop your app by directly consuming publis
 * Connect to the same service registered in the Data Hub Catalog
 
 {{% alert type="info" %}}
-To consume OData services and use the **Data Hub pane** you must have a Data Hub license.
+A Data Hub license is require to consume OData services and use the **Data Hub pane**.
 {{% /alert %}}
 
 
@@ -34,14 +32,16 @@ Before starting this how-to you will need the following:
 
 * Be familiar with app modeling using [external entities](/refguide/external-entities)
 
-* Have the URL of a valid published OData v3 or v4 metadata contract to consume. If you want to follow this how-to you can use any of the following examples:
+* Have the URL of a published OData v3 or v4 metadata contract to consume. To follow this how-to you can use any of the following examples:
 
-	* An example OData service URL is provided in [Sample file from OData.org](#sampleODataservice)
-	* You can use the example service for a simple Mendix app described in the section [Mendix Published OData Service](#how-to-file).
-	* You can also obtain the service or **Data Source URL** of a service that is registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/search#search-details). On the asset details page of the service, there is a **Copy Data Source UR** that will copy the location of the metadata file to your clipboard. 
-
-	Use these as the input files for the steps described in  [consuming from a URL](#consumeurl), or download a service contract to your computer and follow the steps for [consuming from a file](#consumefile)
+	* You can obtain a service or **Data Source URL** (as it is known in the Catalog) that is registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/search#search-details) to try out this functionality. On the asset details page of the service, there is a **Copy Data Source UR** that will copy the location of the metadata file to your clipboard:
 	
+	    ![published Odata service URL](attachments/consume-an-odata-service/dh-copy-url.png)
+
+	* To try a locally stored contract you can use the **Download Contract** functionality in the Data Hub Catalog to download a selected data source.
+	
+	Use these as the input files for the steps described in  [consuming from a URL](#consumeurl), or download a service contract to your computer and follow the steps for [consuming from a file](#consumefile)
+
 
 ## 3 Using Published OData Services
 
@@ -163,9 +163,11 @@ Your resulting app, which you can also deploy locally, will show the consumed en
 
 ## 7 Consuming from the Data Hub after Offline Modeling
 
-When you have been developing an app locally and you want to connect to the same service registered in the Data Hub Catalog, follow these steps.
+When you have been developing an app locally and you want to connect to *the same service* registered in the Data Hub Catalog, follow these steps.
 
-{{% alert type="info" %}}This method can only be used if the service that you want to connect to is the same as the one that you specified as a URL or file. This means that there should be no signficant differences in the exposed entities and associations in the metadata contract that is registered in the Catalog otherwise this will result in errors.{{% /alert %}}
+{{% alert type="warning" %}}This method can only be used if the service contract that you want to connect to is the same as the one that you specified as a URL or file. This means that there should be no signficant differences in the exposed entities and associations in the metadata contract that is registered in the Catalog otherwise this will result in errors.{{% /alert %}}
+
+To connect to a service in the Data Hub Catalog follow these steps: 
 
 1. Delete the consumed service doc in project explorer
 2. Search for the service in the Data Hub pane
@@ -173,11 +175,7 @@ When you have been developing an app locally and you want to connect to the same
 4. Rename the newly consumed doc to the name of the one consumed in your model
 5. Delete the entity that you consumed to create the link to the catalog.
 
-
-
 In this way, you can also ensure that when new versions of the published OData services that you have consumed in your project are made available you will be notified and can **Update** or **Switch** to the newer versions.
-
-
 
 ## 8 Updating Consumed Services without Using the Data Hub Pane
 

@@ -1,6 +1,6 @@
 ---
 title: "Data Hub Landscape"
-description: "Describes using Data Hub Landscape to search for and look at registered assets"
+description: "Using the Data Hub Landscape to explore the connections with registered assets"
 tags: ["data hub catalog", "data hub", "external entities", "landscape", "published odata service"]
 ---
 
@@ -37,15 +37,15 @@ When you click any of the nodes or connections, the metadata pane on the right d
 
 You can pan around the landscape and and zoom using the mouse. You can also collapse both the search pane and the metadata pane so that the full screen area is available for viewing.
 
-When you click the **Catalog** tab this will display the **Search Details** screen of the items selected in the search pane.
+When you click the **Catalog** tab this will display the **Details** screen of the items selected in the search pane.
 
 ![](attachments/use-landscape/landscape.png)
 
 ### 2.3 Nodes
 Registered apps and services are depicted in the Landscape as nodes from the definitions in the registered service metadata. The icons for each of these nodes identifies the the source application, for example, Mendix and Siemens.
 
-#### 2.3.1 Service
-Services are depicted as a round node with the OData icon and the service name and version number, and on the line connecting it to the publishing app, the number of entity sets or datasets exposed in the service.
+#### 2.3.1 Data Sources
+Data sources or the published OData services are depicted as a round node with the OData icon and the service name and version number, and on the line connecting it to the publishing app, the number of entity sets or datasets exposed in the service.
 
 The following is an example of a selected service node exposing three datasets:
 

@@ -11,6 +11,14 @@ These release notes cover changes to deployment to [Mendix for Private Cloud](/d
 For information on the current status of deployment to Mendix for Private Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
 
+## 2021
+
+### January 6th, 2021
+
+#### Improvements
+
+* We added the ability to export Mendix components from the Mendix registry and import them into your own registry. This allows you to use Mendix for Private Cloud behind a firewall. For more information see [Migrating to Your Own Registry](/developerportal/deploy/private-cloud-migrating).
+
 ## 2020
 
 ### December 29th, 2020

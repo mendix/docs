@@ -1,6 +1,6 @@
 ---
 title: "Data Hub Guide"
-description: "This guide describes the Mendix Data Hub Catalog along with the search and landscape features."
+description: "This guide describes Mendix Data Hub for finding and sharing enterprise data assets."
 tags: ["data hub", "data hub catalog", "data hub landscape"]
 aliases:
     - /data-hub/data-catalog/index.html

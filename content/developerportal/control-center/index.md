@@ -118,10 +118,8 @@ The **Cloud Environments** tab on this page presents an overview of the licensed
 
 There are links to three other pages from this tab to allow you to [make requests to Mendix Support](/developerportal/support/submit-support-request#3-submitting-a-new-request) to do the following:
 
-{{% todo %}}[Document all three operations in one piece of support documentation]{{% /todo %}}
-
-* [Add Node](/developerportal/support/new-app-node-request-template) – requests a new app node for a specific app and environment
-* **Resize Environment** – requests a container size change
-* **Offboard Environment** – requests that an app is offboarded
+* [Add Node](/developerportal/support/new-app-node-request-template#new-node) – requests a new app node for a specific app and environment
+* [Resize Environment](/developerportal/support/new-app-node-request-template#resize) – requests a container size change
+* [Offboard Environment](/developerportal/support/new-app-node-request-template#offboard) – requests that an app is offboarded
 
 These links will open in a new browser tab.

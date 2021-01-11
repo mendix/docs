@@ -1,5 +1,5 @@
 ---
-title: "Make a New App Node Request"
+title: "App Node Requests"
 category: "Mendix Support"
 menu_order: 3
 tags: ["Support", "app node", "node", "license", "subscription secret"]

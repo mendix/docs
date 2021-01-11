@@ -42,6 +42,7 @@ Attribute properties consist of the following sections:
 * [Common](#common)
 * [Type](#type)
 * [Value](#value)
+* [Limitations](#limitations)
 
 ### 2.1 Common Section {#common}
 
@@ -189,3 +190,33 @@ The **Default value** property defines the value of this attribute when an objec
 | Integer | 0 |   |
 | Long | 0 |   |
 | String | (empty) |   |
+
+
+### 2.4 Limitations {#limitations}
+
+#### 2.4.1 Limitations
+
+The **Limitations** specifies  whether the attribute can be used for filtering and sorting. 
+
+Non-sortable: The equivalent of ORDER BY <attribute>
+Non-filterable: The equivalent of WHERE <attribute> = <value>
+
+* The value of Limitations is empty for the attribute which are filetrable and sortable. 
+* The value of Limitations is non-filterable and non-sortable for the attribute which is non-filterable and non-sortable.
+* If the value of the attribute is Calculated by a microflow then the value of Limitations is non-filterable and non-sortable.
+
+An attributes has one of the following limitations:
+
+
+| Type of Attribute | Possible values | Additional Comments |
+|--- | --- | --- |
+| AutoNumber | (empty) | Filtering and sorting is possible using AutoNumber attributes. |
+| Binary | Non-filterable,Non-sortable |  |
+| Boolean | (empty) | Filtering and sorting is possible using Boolean attributes. |
+| Date and time | (empty) | Filtering and sorting is possible using Boolean attributes. |
+| Decimal | (empty) | Filtering and sorting is possible using Decimal attributes. |
+| Enumeration | (empty) | Filtering and sorting is possible using Enumeration attributes. |
+| Hashed string | Non-filterable | Filtering is not possible but sorting is possible on Hash string attributes. |
+| Integer | (empty) | Filtering and sorting is possible using Integer attributes. |
+| Long | (empty) | Filtering and sorting is possible using Long attributes. |
+| String | (empty) | Filtering and sorting is possible using String attributes. |

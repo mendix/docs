@@ -167,7 +167,11 @@ When you have been developing an app locally and you want to connect to the same
 
 {{% alert type="info" %}}This method can only be used if the service that you want to connect to is the same as the one that you specified as a URL or file. This means that there should be no signficant differences in the exposed entities and associations in the metadata contract that is registered in the Catalog otherwise this will result in errors.{{% /alert %}}
 
-1. 
+1. Delete the consumed service doc in project explorer
+2. Search for the service in the Data Hub pane
+3. Drag an entity from the service into the domain model
+4. Rename the newly consumed doc to the name of the one consumed in your model
+5. Delete the entity that you consumed to create the link to the catalog.
 
 
 

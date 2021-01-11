@@ -34,13 +34,13 @@ In this case, the size of *LOGPRIMARY* must be increased.
 For more detailed information, see [DB2 SQL error: SQLCODE: -964, SQLSTATE: 57011, SQLERRMC: null](http://www-01.ibm.com/support/docview.wss?uid=swg21298630) on the *IBM Support* pages and 
 [SQL0964C – The transaction log for the database is full](http://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.messages.sql.doc/doc/msql00964c.html) in the *SQL messages* section of the *IBM Knowledge Center*.
 
-## 5 Known Issues
+## 5 Limitations
 
-### 5.1 String Comparison is Case Sensitive {#making}
+### 5.1 String Comparison Is Case-Sensitive {#making}
 
-Sorting on string column values is case sensitive in DB2. To mitigate this, IBM has introduced Locale-aware Unicode collations in DB2 9.5 fixpack 1. These collations can be tailored to ignore case and/or accents.
+Sorting on string column values is case-sensitive in DB2. To mitigate this, IBM has introduced locale-aware Unicode collations in DB2 9.5 fixpack 1. These collations can be tailored to ignore case and/or accents.
 
-For more detailed information, see the sidenote in the article [Making DB2 case-insensitive](https://developer.ibm.com/technologies/databases/articles/making-db2-case-insensitive#refname) in *IBM Developer Works*:
+For more detailed information, see the sidenote in [Making DB2 case-insensitive](https://developer.ibm.com/technologies/databases/articles/making-db2-case-insensitive#refname) in *IBM Developer Works*.
 
 ### 5.2 Sorting on Very Long Strings
 

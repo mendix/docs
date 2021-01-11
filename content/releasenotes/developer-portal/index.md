@@ -62,10 +62,12 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 * We redesigned the [story details](/developerportal/collaborate/stories#story-details) page and made it available for Public Beta usage. You can use the new design when the new story UI is enabled. Please note that it is currently not possible to add or manage [labels](/developerportal/collaborate/stories#label) with the new UI; this functionality will be released in the future.
 * When you add a [task](/developerportal/collaborate/stories#adding-task) to a commit of your app model, we now show the revision in the revision overview of the story details. Clicking the task will bring you to the story details page to which the task belongs.
+* We simplified the **Company Settings** tab of the **Company** page by removing some barely used attributes.
 
 #### Fixes
 
 * We fixed an issue where the default avatar of an App Team member who committed a revision was not properly displayed in the revision overview of the story details.
+* We fixed an issue where a Company Admin was no longer able to open the [General](/developerportal/settings/general-settings) settings of an app project they for an App Team in which they were not a member.
 * We repaired a dead link to the documentation on the [App User Management](/developerportal/settings/general-settings#managing-app-users) page.
 
 ### August 25th, 2020
@@ -387,6 +389,10 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 ### May 23rd, 2018
 
+#### Improvements
+
+* Company Admins can now export three reports to Excel: active users, app permissions of active users, and apps. This enables managing users and their permissions at scale.
+
 #### Fixes
 
 * The **Revisions** tab on the **Story Details** page now shows the avatar of the committer instead of the app's avatar.
@@ -496,6 +502,8 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 ### August 2nd, 2017
 
+* Company Admins can invite users to all the apps within their company. (Ticket 51296)
+* Company Admins can export a list of all company members from the **Members** page. (Ticket 52683)
 * Technical Contacts can access the **Node Permissions** page, even when they don't have app admin rights. (Tickets 51315, 53088, 54081)
 * The Stories API and Feedback API return sprints, stories, and feedback items in the same order as shown in the Platform Portal.
 

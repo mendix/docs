@@ -7,7 +7,7 @@ tags: ["integration", "publish"]
 ---
 
 {{% alert type="info" %}}
-App services are deprecated marked for removal. Use a [published web service](/refguide8/published-web-services) or a [published REST service](/refguide8/published-rest-services) instead.
+App services are deprecated and from Studio Pro [8.18](/releasenotes/studio-pro/8.18), they are no longer supported. They are replaced by [published web services](/refguide/published-web-services) and [published REST services](/refguide/published-rest-services).
 {{% /alert %}}
 
 ## 1 Introduction

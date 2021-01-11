@@ -5,7 +5,7 @@ tags: ["studio pro"]
 ---
 
 {{% alert type="info" %}}
-App services are deprecated and were removed in Studio Pro 9. Use a [published web service](published-web-services) or a [published REST service](published-rest-services) instead.
+App services are deprecated and from Studio Pro [8.18](/releasenotes/studio-pro/8.18), they are no longer supported. They are replaced by [published web services](/refguide/published-web-services) and [published REST services](/refguide/published-rest-services).
 {{% /alert %}}
 
 ## 1 General Tab

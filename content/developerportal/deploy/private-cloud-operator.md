@@ -247,7 +247,7 @@ To build and deploy your app using AWS-EKS or other Kubernetes platform execute 
 kubectl apply -f {File containing the CR} -n {namespace where app is being deployed}
 ```
 
-##### 3.3.1.1 OpenShift CLI
+##### 3.3.1.2 OpenShift CLI
 
 To build and deploy your app using the OpenShift CLI, do the following:
 

@@ -146,6 +146,8 @@ Once you are signed in to your cluster you can run the Configuration Tool.
 
 2. Paste the command into your Bash console and  press <kbd>Enter</kbd>
 
+	{{% alert type="warning" %}}Read the [MinTTY workaround](#mintty-winpty-workaround) before running the Configuration Tool from Git Bash (in Windows).{{% /alert %}}
+
 	You will see the configuration options on the screen and will be guided through filling in the information needed.
 
     ![](attachments/private-cloud-cluster/post-install-landing-page.png)
@@ -878,6 +880,24 @@ For Kubernetes:
 kubectl -n {namespace} scale deployment mendix-operator --replicas=0
 kubectl -n {namespace} scale deployment mendix-operator --replicas=1
 ```
+
+### 7.3 MinTTY terminal limitations {#mintty-winpty-workaround}
+
+{{% alert type="info" %}}
+These limitations only applies when using the Configuration Tool in Git Bash in Windows. 
+{{% /alert %}}
+
+By default, installing Git Bash on Windows will select MinTTY as the terminal emulator, instead of the Windows default console window.
+
+In that case, you will need to run the Configuration Tool from `winpty`:
+
+```shell
+winpty {installation command}
+```
+
+For example:
+
+![](attachments/private-cloud-cluster/git-bash-winpty.png)
 
 ## 8 Troubleshooting
 

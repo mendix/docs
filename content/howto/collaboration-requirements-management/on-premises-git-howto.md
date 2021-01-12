@@ -27,9 +27,9 @@ You will not be able to use Mendix Studio for collaborative development if you u
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Make sure you have the right server provider. We currently only support Git Private Server. For more information, see the [Preparing Your Repository](#preparing-your-repo section). 
+* Make sure you have the right server provider. We currently only support Git Private Server. For more information, see the [Preparing Your Repository](#preparing-your-repo) section. 
 * You have a feature flag enabled. For more information, see the [Enabling a Feature Flag](#enable-feature-flag) section.
-* You have an unversioned Mendix app project. For more information, see the [Creating an App](##create-app) section.
+* You have an unversioned Mendix app project. For more information, see the [Creating an App](#create-app) section.
 
 ## 3 Supported Authentication Mechanisms
 
@@ -198,7 +198,7 @@ For the previous local disk method do the following:
 
 	![Open App Select File](attachments/on-premises-git-howto/open-app-select-file.png)
    
-### 4.6 Uploading to the Private Git Server
+### 4.6 Uploading to the Private Git Server {#upload-to-private-git-server}
 
 Once you have an unversioned app project, you can upload it to your private team server. 
 

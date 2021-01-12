@@ -25,9 +25,9 @@ We currently support deploying to the following Kubernetes cluster types:
 * [minikube](https://minikube.sigs.k8s.io/docs/)
 
 {{% alert type="warning" %}}
-Only Kubernetes versions 1.13 through 1.18 are officially supported.
+Only Kubernetes versions 1.13 through 1.19 are officially supported.
 
-Mendix for Private Cloud has not been evaluated against Kubernetes 1.19 and later versions.
+Mendix for Private Cloud has not been evaluated against Kubernetes 1.20 and later versions.
 {{% /alert %}}
 
 ### 2.2 Cluster Requirements
@@ -44,7 +44,7 @@ In OpenShift, the cluster administrator must have a `system:admin` role.
 
 ### 2.3 Unsupported Cluster Types
 
-It is not possible to use Mendix for Private Cloud in [OpenShift Online](https://www.openshift.com/products/online/) because OpenShift Online doesn't allow the installation of Custom Resource Definitions.
+It is not possible to use Mendix for Private Cloud in [OpenShift Online](https://www.openshift.com/products/online/) or OpenShift Pro because OpenShift Online doesn't allow the installation of Custom Resource Definitions.
 
 ## 3 Container Registries
 
@@ -89,7 +89,7 @@ The push URL should be set to `<registry ip>:5000` where `<registry ip>` can be 
 
 The OpenShift registry must be installed and enabled for use.
 
-### 3.4 Amazon Elastic Container Registry(ECR)
+### 3.4 Amazon Elastic Container Registry (ECR)
 
 [Amazon ECR](https://aws.amazon.com/ecr/) can only be used together with EKS clusters. 
 
@@ -286,6 +286,16 @@ To avoid compromising security, this type of plan should not be used by multiple
 {{% alert type="info" %}}
 DNS, load balancing and the ingress controller should be configured first for the whole Kubernetes cluster.
 Mendix for Private Cloud will use the existing ingress controller.
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+We stongly recomment to use the [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/),
+even in case other Ingress controllers or OpenShift Routes might be available.
+
+NGINX Ingress can be used to deny access to sensitive URLs, add HTTP headers, enable compression and cache static content.
+NGINX Ingress is fully compatible with [cert-manager](https://cert-manager.io/), removing the need to manually manage TLS certificates.
+
+These features will likely be required once your application is ready for production.
 {{% /alert %}}
 
 ### 6.1 OpenShift route

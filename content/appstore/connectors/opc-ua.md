@@ -1,5 +1,5 @@
 ---
-title: "OPC UA"
+title: "OPC UA" 
 category: "Connectors"
 description: "Describes how to use the OPC UA connector, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "OPC UA", "connector", ]

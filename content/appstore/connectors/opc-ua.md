@@ -26,9 +26,9 @@ The OPC UA Client connector supports the following actions
 
 * Browse: – browse a list of nodes
 * Read: – reads the value of a node
-* Subscribe: – to receive data from a node
-* Unsubscribe: – stop receiving updates from a node
 * Write: – write data to a node
+* Subscribe: – to receive data (or events) from a node
+* Unsubscribe: – stop receiving updates for a node
 
 #### 1.1.2 Security 
 
@@ -38,16 +38,17 @@ The OPC UA Client connector supports all three security options offered by OPC U
 * Credentials
 * Client certificates
 
-{{% alert type="warning" %}}
-Only one of these authentication methods should be enabled for each OPC UA server. This method must be matched by the OPC UA Client connector to ensure it can reach the correct endpoint.
-{{% /alert %}}
+Only one of the options can be in use any any time, which one will be determined by the OPC UA server that you are connecting too. The password from both the user and certificate are automatically encrypted when saving the server configuration using the Encryption module.  
 
 #### 1.1.3 Dependencies
 
 The OPC UA Client connector has the following dependencies
 
 * Mendix 8.8.1 or higher
+* Encryption Module
 * An OPC UA server – we assume that you are familiar with OPC UA and your OPC UA server(s), these instructions do not include information on how to set up your servers.
+
+Recommended; Having an external OPC UA Client tool will make setup of the connection a lot easier. A commonly used client is the one from [Unified Automation](https://www.unified-automation.com/downloads/opc-ua-clients.html), with this (non-Mendix) tool you will be able to browse through the server and find the parameters needed to configure your connection. 
 
 ## 2 Installation
 
@@ -58,6 +59,7 @@ You will see the new module in the **App Store modules** section of the **Projec
 {{% image_container width="300" %}}
 ![OPC UA Client connector in Project Explorer](attachments/opc-ua/opc-ua-connector-module.png)
 {{% /image_container %}}
+{{% todo %}}[Update this Image, the folder structure has changed]{{% /todo %}}
 
 When you edit a microflow, you will also see five additional actions in the **Toolbox**.
 
@@ -76,29 +78,21 @@ The module/app is designed for usage with multiple servers if necessary. The sta
 {{% image_container width="300" %}}
 ![OPC UA Server configuration entity](attachments/opc-ua/opcuaservercfg.png)
 {{% /image_container %}}
+{{% todo %}}[Update image, attributes have been removed?]{{% /todo %}}
 
 For each OPC UA server, the following information will need to be stored in a OpcUaServerCfg object.
 
-* ServerID (String) – a name you give to the server so that you can identify it easily
-* URL (String) – the URL of the OPC UA server
+* ServerID (String) – a short nickname that you assign to the server so that you can identify it easily. Primarily used for error and log messages.
+* URL (String) – the full URL of the OPC UA server (e.g.: opc.tcp://localhost:53530/OPCUA/SimulationServer)
 * Username (String) – the username used if the authentication type is `CREDENTIALS`
-* Password (String) – the password for the username used if the authentication type is `CREDENTIALS`
+* Password (String) – the password for the username used if the authentication type is `CREDENTIALS`, only used for data-entry. After saving this field is reset.
+* Password_Encrypted (String) – the encrypted password for the username, automatically takes the 'Password' and encrypts the value
 * AuthenticationType (Enumeration) – the type of authentication required for this server: `NONE`, `CREDENTIALS`, or `CERTIFICATE`
-* CertificatePassword (String) – the certificate password required when using the `CERTIFICATE` type of authentication
-
-{{% todo %}}[Certificate password mechanism to be changed?]{{% /todo %}}
-
-* CertifcatePasswordEncrypted (String) – ???????????????
-* Result (String) – the latest result from an action which makes a call to the OPC UA server
-* ValueToWrite (String) – the value to write to the OPC UA server when using the **Write** action
-* NamespaceIndex (Integer) – the index an OPC UA server uses for a namespace URI
-* Identifier (String) – the identifier for a node in the address space of an OPC UA server — the OPC UA client connector only supports identifiers with *IdentifierType* of `String`
-
-{{% todo %}}[To be removed from entity as it is an implementation detail for the test options]{{% /todo %}}
-
-* EnableTestMode (Boolean) – ?????????????
+* CertificatePassword (String) – the certificate password required when using the `CERTIFICATE` type of authentication, only used for data-entry. After saving this field is reset.
+* CertificatePassword (String) – the encrypted password for the certificate, automatically takes the CertificatePassword and encrypts the value
 
 You can see an example of how this can be set up in the [OPC UA Client example implementation](#example-implementation) section.
+
 
 ### 3.2 Actions
 
@@ -106,34 +100,31 @@ Once you have set up the server configuration, you can perform the following act
 
 #### 3.2.1 **Browse** a List of Nodes
 
-The **Browse** action allows you to browse the nodes within the OPC UA server.
+The **Browse** action allows you to browse the nodes within the OPC UA server. The browse function starts at the specified node and browses 'down' and returns the children of the specified node. 
 
 ![Parameters for the browse action](attachments/opc-ua/browse-action.png)
+{{% todo %}}[Update image, parameters have changed]{{% /todo %}}
 
 * Opc ua server cfg – an object of entity type OpcUaServerCfg containing the configuration of the server to which the request is made
-* Namespace index – the index an OPC UA server uses for a namespace URI
-* Identifier – the identifier for a node in the address space of an OPC UA server 
+* NodeId – The NodeId from where you want to browse to it's children. When requesting the 'Is Root'=true leave this value empty. Expects the full Node Id as referenced by the OPC UA server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
 * Is root – is used by the tree widget in the example implementation module — if you are not using the tree widget you, the value here is not important
-* Use return value – `Yes` creates a variable containing the list of nodes, `No` does not return a variable
-* Variable name – the name assigned to the variable containing the return value
 
 #### 3.2.2 **Read** the Value of a Node
 
 The **Read** action allows you to read the current value of a specific node within the OPC UA server.
 
 ![Parameters for the read action](attachments/opc-ua/read-action.png)
+{{% todo %}}[Update image, parameters have changed]{{% /todo %}}
 
 * Opc ua server cfg – an object of entity type OpcUaServerCfg containing the configuration of the server to which the request is made
-* Namespace index – the index an OPC UA server uses for a namespace URI
-* Identifier – the identifier for a node in the address space of an OPC UA server 
-* Use return value – `Yes` creates a string variable containing the value read from the node, `No` does not return a variable
-* Variable name – the name assigned to the variable containing the return value
+* NodeId – The NodeId of the Node you want to read. Expects the full Node Id as referenced by the OPC UA server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
 
 {{% alert type="info" %}}
-All values are read as strings, you will need to convert them if you need a numeric value.
+All values are read as strings, you will need to convert them if you need a numeric or date value.
 {{% /alert %}}
 
 #### 3.2.3 **Subscribe** to Updates of Data from a Node
+{{% todo %}}[Update chapter, the subscription structure has changed.]{{% /todo %}}
 
 The **Subscribe** action allows you to subscribe to receive a notification every time the value of a node changes. This creates an object of type **Subscription** which is associated with the OPC UA service and contains details of the subscription and the item which is being monitored. You should assign a microflow to process the data each time a notification is received. The frequency of the notifications is controlled by the UPC UA server.
 
@@ -282,3 +273,23 @@ If you are adapting the example implementation, it is recommended that you make 
 ### 4.3 Pages
 
 The **OpcUaServer_View** page adds functionality to the **View server** button on the server overview page. 
+
+
+## Known Limitations ##
+
+1. Limited Value types
+   Currently only Boolean, Int16, UInt16, Int32, Int64, Float, Double, and String are implemented to be written to the Node in the OPC UA Server. Reading has been tested for limited data types, when reading and subscribing all return values are casted to String through a simple toString() method. This implementation works well for Boolean and the Int values but hasn't been tested for all data types. 
+
+1. High-Availability Architecture. 
+    At this point the module is relying completely on storing configuration in the server memory and only supports running on a single Container instance. If you use scaling and run multiple parallel instances of the application the module will likely generate exceptions and loose messages. 
+
+1. Complex Events on Nodes
+    Subscriptions are only possible on value changes of Nodes. At this time Events or aggregates are not implemented yet. The module does support all DataTypes, any OPC UA type is received and passed as a String to the evaluating microflow.
+
+1. Advanced settings on MonitoredItem
+   OPC UA offers fine graned control over how values are shared with [this] client. At this time all MonitoredItems are setup with identical default parameters, and these can not yet be influenced. The default parameters are coming from the Apache Milo library. 
+Some example of the default values are: SamplingInterval: 500ms; RequestedPublishingInterval: 500ms; QueueSize: 10; DiscardOldest: true;    (This will get a guaranteed value every 500ms, and stores a maximum of 10 values in the queue, if the queue fills up it will discared the oldest and keep the latest 10 values only).
+
+
+
+

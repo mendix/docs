@@ -164,11 +164,11 @@ If the Mendix Operator and the Mendix Gateway Agent have not been installed in y
 
 	![](attachments/private-cloud-cluster/installer-options.png)
 
-2. Select the required **Cluster Mode** – *connected* or *standalone.
+2. Select the required **Cluster Mode** – *connected* or *standalone*.
 
     For more information, see [Connected and Standalone Clusters](private-cloud#connected-standalone) in the *Private Cloud* documentation.
 
-3. Select the required **Cluster Type** – *openshift* or *kubernetes*.
+3. Select the required **Cluster Type** – *openshift* or *generic*.
 
 4. Click **Run Installer** to install the Mendix Operator and Mendix Gateway Agent in your cluster.
 

@@ -102,8 +102,8 @@ While using Espresson in combination with Mendix projects, there have been the o
 }
 ```
 
-* Click `Start Session` and wait untill your app starts (this takes a while)
-* Click on the blue `Select Elements` button and then click on an element in th app preview to spy on that element
+1. Click `Start Session` and wait untill your app starts (this takes a while)
+1. Click on the blue `Select Elements` button and then click on an element in th app preview to spy on that element
 
 ## 6 Automatically testing your Mendix native app
 

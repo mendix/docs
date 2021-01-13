@@ -1,5 +1,5 @@
 ---
-title: "Test Mendix Native apps using Appium"
+title: "Test Mendix Native Apps Using Appium"
 category: "Testing"
 menu_order: 50
 #description: "Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed"
@@ -8,27 +8,21 @@ tags: ["test", "testing", "appium", "mobile", "native"]
 
 ## 1 Introduction
 
-Mendix let's you create native mobile apps for both Android and iOS from a single project. To verify that these apps work as expected, you can test them using Appium. The benefits of using Appium:
-
-* It supports both the iOS and Android platform with a single API
-* The API resembles that of Selenium
-
-This allows you to write end-to-end tests once and run them on both platforms, all while using a familiar API.
-This description is for running and testing your apps on emulators.
+Mendix lets you create native mobile apps for both Android and iOS from a single project. To verify that your apps work as expected, you can test them using Appium. Using Appium can help you because it supports both iOS and Android with a single API that resembles Selenium's. This how-to will teach you how to write end-to-end tests once and run them on both platforms, all while using a familiar API. You will also learn how to run and test your apps on emulators.
 
 **This how-to will teach you how to do the following:**
 
-* Understand how Studio (pro) widgets relate to your native app
-* Setup Appium GUI to spy on a Mendix native iOS app
-* Setup Appium GUI to spy on a Mendix native Android app
-* Automatically testing your Mendix native app
+* Understand how Mendix Studio and Studio Pro widgets relate to your native app
+* Set up Appium GUI to spy on a Mendix native iOS app
+* Set up Appium GUI to spy on a Mendix native Android app
+* Set up automatic testing for your Mendix native app
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install [Appium Desktop](https://github.com/appium/appium-desktop)
-* Install, run and fix any issues found by [Appiun-doctor](https://github.com/appium/appium-doctor)
+* Install, run, and fix any issues found by [Appiun-doctor](https://github.com/appium/appium-doctor)
 
 ## 3 Understand how Studio (pro) widgets relate to your native app
 

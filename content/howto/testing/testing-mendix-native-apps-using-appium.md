@@ -22,9 +22,9 @@ Mendix lets you create native mobile apps for both Android and iOS from a single
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install [Appium Desktop](https://github.com/appium/appium-desktop)
-* Install, run, and fix any issues found by [Appiun-doctor](https://github.com/appium/appium-doctor)
+* Install, run, and fix any issues found by [appium-doctor](https://github.com/appium/appium-doctor)
 
-## 3 Understand how Studio (pro) widgets relate to your native app
+## 3 Understand How Widgets Relate to Your Native App
 
 TLDR: For each widget in the page editor of Studio (pro) the value of the name property will map to a property of the corresponding UI element in the native app. For iOS these UI elements will have an `accessibility id` property and for Android there will be a `view-tag` property. `view-tag` properties can only be read with the Espresso Android driver.
 
@@ -35,16 +35,16 @@ The Espresso driver requires you to install instrumentation in your app to work.
 
 FYI: [This](https://github.com/facebook/react-native/pull/29610) PR has been merged to the react-native codebase and will be available from version 0.6.4 on. This means that once Mendix starts using that version (or higher) of react-native to create your native apps, it should also expose the value of a widget's name property as the Android native `resource-id` property. This is readable by the UiAutomator2 driver, eliminating the need for using the Espresso driver. There are pro's and con's to each driver, but the UiAutomator2 driver is the easiest to setup and start with and supports the most functionality.
 
-## 4 Setup Appium Desktop to spy on a Mendix native iOS app
+## 4 Set Up Appium Desktop to Spy on a Mendix Native iOS App
 
-* Build a native iOS app for your Mendix project (See [here](https://docs.mendix.com/howto/mobile/build-native-apps) for more information)
-* Build the WebDriverAgent project that is shipped with your Appium Desktop installation as described [here](http://appium.io/docs/en/advanced-concepts/wda-custom-server/) (For Appium Desktop, the WDA project can be found in: `/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-webdriveragent`)
-* Start Appium Desktop
-* Click `Start Server`
-* On the new screen, click the magnifier image on the top-right `Start Inspector Session`
-* On the new popup, add the following capabilities:
+1. Build a native iOS app for your Mendix project (See [here](https://docs.mendix.com/howto/mobile/build-native-apps) for more information)
+1. Build the WebDriverAgent project that is shipped with your Appium Desktop installation as described [here](http://appium.io/docs/en/advanced-concepts/wda-custom-server/) (For Appium Desktop, the WDA project can be found in: `/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-webdriveragent`)
+1. Start Appium Desktop
+1. Click `Start Server`
+1. On the new screen, click the magnifier image on the top-right `Start Inspector Session`
+1. On the new popup, add the following capabilities:
 
-```json
+    ```json
 {
     "automationName": "XCUITest",
     "deviceName": "desired device here, for instance 'iPhone 11'",
@@ -52,21 +52,21 @@ FYI: [This](https://github.com/facebook/react-native/pull/29610) PR has been mer
     "platformVersion": "desired platform version, for instance '14.3'",
     "app": "location of your .app iOS app file",
 }
-```
+    ```
 
-* Click `Start Session` and wait untill your app starts (this takes a while)
-* Click on the blue `Select Elements` button and then click on an element in th app preview to spy on that element
+1. Click `Start Session` and wait untill your app starts (this takes a while)
+1. Click on the blue `Select Elements` button and then click on an element in th app preview to spy on that element
 
-## 5 Setup Appium Desktop to spy on a Mendix native Android app
+## 5 Set Up Appium Desktop to Spy on a Mendix Native Android App
 
-* Add the Espresso dependencies by following the setup instructions [here](https://developer.android.com/training/testing/espresso/setup)
-* Build a native Android app for your Mendix project (See [here](https://docs.mendix.com/howto/mobile/build-native-apps) for more information)
-* Start Appium Desktop
-* Click `Start Server`
-* On the new screen, click the magnifier logo on the top-right `Start Inspector Session`
-* On the new popup, add the following capabilities:
+1. Add the Espresso dependencies by following the setup instructions [here](https://developer.android.com/training/testing/espresso/setup)
+1. Build a native Android app for your Mendix project (See [here](https://docs.mendix.com/howto/mobile/build-native-apps) for more information)
+1. Start Appium Desktop
+1. Click `Start Server`
+1. On the new screen, click the magnifier logo on the top-right `Start Inspector Session`
+1. On the new popup, add the following capabilities:
 
-```json
+    ```json
 {
   "deviceName": "arbitrary name of your Android device",
   "avd": "snake-cased name of your Android emulator",
@@ -77,9 +77,10 @@ FYI: [This](https://github.com/facebook/react-native/pull/29610) PR has been mer
   "automationName": "Espresso",
   "app": "location of your .apk Android app file",
 }
-```
+    ```
 
 **NOTE 1**
+
 While using Espresson in combination with Mendix projects, we observed a `No static method lifecycleEventObserver` error. More information about this can be found [here](https://github.com/appium/appium-espresso-driver/issues/639). You can fix this by adding the `espressoBuildConfig` property to the capabilities. It should point to a JSON file containing:
 
 ```json
@@ -89,6 +90,7 @@ While using Espresson in combination with Mendix projects, we observed a `No sta
 ```
 
 **NOTE 2**
+
 While using Espresson in combination with Mendix projects, there have been the occoassional package conflicts. You can fix this by adding the `espressoBuildConfig` property to the capabilities. It should point to a JSON file containing your desired tools and versions:
 
 ```json

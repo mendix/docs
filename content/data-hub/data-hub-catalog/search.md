@@ -10,7 +10,7 @@ tags: ["data hub", "data hub catalog"]
 
 Finding the right data is made easier by the Data Hub Catalog search functionality. The details of data assets are displayed in the [asset details](#search-details) screen.  
 
-The [Copy Data Source URI](#service-details) or **Download Contract** buttons enable you to integrate registered data sources into your enterprise applications.
+The [Copy Data Source URI](#service-details) or **Download** contract buttons enable you to integrate registered data sources into your enterprise applications.
 
 Start searching from the [Data Hub](#data-hub-home) page or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Asset Details** screen.
 
@@ -161,7 +161,7 @@ When a data source is selected in the search results, the details of the metadat
 
 * The name of the data source
 
-* The **Validated** tag will be displayed for the data source if it has been set u
+* The **Validated** tag will be displayed for the data source if it has been set for the asset
 
 * The **Environment name** to which the app is deployed
 
@@ -175,7 +175,7 @@ When a data source is selected in the search results, the details of the metadat
 
 * Click **Share Data Source** to copy the link to this asset detail page to the clipboard
 
-* Click [Download Contract](#download-contract) to retrieve and save the metadata contract locally
+* Click [Download](#download-contract) to retrieve and save the metadata contract locally
 	
 * Each **Dataset** that is exposed in the data source (you can expand this to see details of the attributes and associations)
 
@@ -245,11 +245,22 @@ The **Curate Bar** is displayed on the asset detail screen if you are the owner 
 For further details on curating registered assets see [Curation](./curate).
 
 ## 5 Download Metadata Contract {#download-contract}
-For a selected data source you can click **Download Contract** to download the OData service contract for the selected data source as a ***.zip*** file. This file will include the complete service feed and any other associated files to make up the full metadata contract. The resulting  ***.zip*** file will be named as follows:
+For a selected data source you can click **Download** to download the OData service contract as a ***.zip*** file. This will include the all the files that make up the full metadata contract. The resulting  ***.zip*** file will be named as follows:
 
 `DataHub_<service_name>_<service_version>_<technology>.zip`
 
-The name will identify the OData version (v3 or v4).
+The string *technology* identifies the OData version (v3 or v4) in the file name.
+
+For the following example: 
+
+![](attachments/search/download_example.png)
+
+When you click **Download** the following file is downloaded: `DataHub_SAMPLE_EmployeeDirectory_1.1.0_OData3.zip`
+
+This zip file comprise the folder: `DataHub_SAMPLE_EmployeeDirectory_1.1.0_OData3`  which contains the metadata files that define the service:
+
+`metadata.xml`
+`serviceFeed.xml`
 
 ## 6 Viewing Search Results in the Data Hub Landscape
 

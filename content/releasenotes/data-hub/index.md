@@ -9,6 +9,17 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 ## 2021
 
+### January 14th, 2021
+
+#### New Features
+
+* You can download the OData service contract for a registered data source from the [asset details](/data-hub/data-hub-catalog/search#download-contract) in the Data Hub Catalog. The set of files that make up the contract will be downloaded as a ***.zip*** file.
+
+#### Improvements
+
+* Further improvements have been made to security in Data Hub. 
+* All screens in Data Hub are now responsive.
+
 ### January 7th, 2021
 
 #### New Features

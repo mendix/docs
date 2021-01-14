@@ -8,17 +8,21 @@ tags: ["data hub", "data hub catalog"]
 
 ## 1 Introduction
 
-Finding the right data to use in your app is made easier by the Data Hub Catalog search functionality. The metadata for a registered service is displayed in the [details](#search-details) screen to help in identifying the correct data source to use in your app development.  You can use the Catalog to find registered data sources to integrate the data of a registered asset into your other enterprise applications using the [Copy Data Source URI](#service-details) button.
+Finding the right data is made easier by the Data Hub Catalog search functionality. The details of data assets are displayed in the [asset details](#search-details) screen.  
 
-You can start searching from the [Data Hub](#data-hub-home) page or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Search Details** screen.
+The [Copy Data Source URI](#service-details) or **Download Contract** buttons enable you to integrate registered data sources into your enterprise applications.
 
-The [Data Hub pane](/refguide/data-hub-pane) in Studio Pro enables search in the Data Hub Catalog to find and connect to registered datasets (or entity) during app development.
+Start searching from the [Data Hub](#data-hub-home) page or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Asset Details** screen.
+
+The [Data Hub pane](/refguide/data-hub-pane) in Studio Pro connects to the powerful search in the Data Hub Catalog to enable you to use registered datasets as external entities in you app development.
 
 This page describes the search functionality of the Data Hub Catalog and the information that is displayed for registered assets.
 
 ## 2 Details of Registered Assets
 
 The [details](#search-details) screen for a registered data source, dataset, or attribute displays information as provided in the published OData service contract that is used to register assets in the Data Hub Catalog. Registered services and the exposed datasets can be curated to provide additional information such as **Tags** and **Descriptions** to ensure that they can be found by the appropriate users.
+
+{{% alert type="info" %}}The **Dataset** is the name of the **Entity set** of a published **Entity**  in Mendix Studio Pro, which by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
 
 ### 2.1 Published OData Service 
 
@@ -72,7 +76,7 @@ In the Data Hub Catalog, the search details for a service include a **Technical 
 
 When searching in the Data Hub Catalog, the following fields are searched:
 
-* Data source or service Endpoint: Name, Description, Tags
+* Data source or service endpoint: Name, Description, Tags
 * Application: Name
 * Dataset: Name, Description
 * Attribute: Name, Description
@@ -149,9 +153,9 @@ When an item in the search results is selected, the **Catalog** tab will display
 
 When you click on an asset (data source or dataset) in the search results, the details are displayed in this panel. 
 
-#### 4.2.1 Details for a Selected Data Source {#service-details}
+#### 4.2.1 Details of a Selected Data Source {#service-details}
 
-When a data source is selected in the search results, the details of the contract at the selected endpoint that is deployed to the given environment are displayed:
+When a data source is selected in the search results, the details of the metadata contract at the selected endpoint, deployed to the given environment are displayed along with curated information:
 
 ![](attachments/search/search-details-service.png)
 
@@ -171,9 +175,11 @@ When a data source is selected in the search results, the details of the contrac
 
 * Click **Share Data Source** to copy the link to this asset detail page to the clipboard
 
+* Click [Download Contract](#download-contract) to retrieve and save the metadata contract locally
+	
 * Each **Dataset** that is exposed in the data source (you can expand this to see details of the attributes and associations)
 
-	{{% alert type="info" %}}The **Dataset** is the name of the **Entity set** of a published **Entity**  which in Mendix Studio Pro, by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Datasource** that will be displayed in the **Search Details** will be `Customers`.{{% /alert %}}
+	{{% alert type="info" %}}The **Dataset** is the name of the **Entity set** of a published **Entity**  in Mendix Studio Pro, which by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
 
 #### 4.2.2 Details for a Selected Dataset {#entity-details}
 
@@ -238,6 +244,13 @@ The **Curate Bar** is displayed on the asset detail screen if you are the owner 
 
 For further details on curating registered assets see [Curation](./curate).
 
-## 5 Viewing Search Results in the Data Hub Landscape
+## 5 Download Metadata Contract {#download-contract}
+For a selected data source you can click **Download Contract** to download the OData service contract for the selected data source as a ***.zip*** file. This file will include the complete service feed and any other associated files to make up the full metadata contract. The resulting  ***.zip*** file will be named as follows:
+
+`DataHub_<service_name>_<service_version>_<technology>.zip`
+
+The name will identify the OData version (v3 or v4).
+
+## 6 Viewing Search Results in the Data Hub Landscape
 
 When an item is selected in the search results pane, you can click the [Landscape](../data-hub-landscape/index) tab to see the network of connections and dependencies for the selected asset. This enables you to graphically see the context and relevance for a selected item and the data for the exposed datasets.

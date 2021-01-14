@@ -8,11 +8,13 @@ tags: ["data hub", "data hub catalog"]
 
 ## 1 Introduction
 
-Finding the right data is made easier by the Data Hub Catalog search functionality. The details of data assets are displayed in the [asset details](#search-details) screen to help in identifying the correct data source to use in your app development.  The information for the assets is a combination of information from the metadata contract and additional information such as tags and descriptions  that are added as assets are curated after registration. You can use the Catalog to find registered data sources to integrate the data of a registered asset into your other enterprise applications using the [Copy Data Source URI](#service-details) button.
+Finding the right data is made easier by the Data Hub Catalog search functionality. The details of data assets are displayed in the [asset details](#search-details) screen to help in identifying the correct data source to use in your app development.  Full details of selected assets is displayed showing information from the metadata contract of the data sources and tags and descriptions that are added when assets are curated after registration. 
 
-You can start searching from the [Data Hub](#data-hub-home) page or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Search Details** screen.
+You can also use the Catalog to discover registered data sources to integrate into your enterprise applications by using the [Copy Data Source URI](#service-details) or download the metadata contract for the asset.
 
-The [Data Hub pane](/refguide/data-hub-pane) in Studio Pro enables search in the Data Hub Catalog to find and connect to registered datasets (or entity) during app development.
+Start searching from the [Data Hub](#data-hub-home) page or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Asset Details** screen.
+
+The [Data Hub pane](/refguide/data-hub-pane) in Studio Pro connects to the powerful search in the Data Hub Catalog to enable you to use registered datasets as external entities in you app development.
 
 This page describes the search functionality of the Data Hub Catalog and the information that is displayed for registered assets.
 

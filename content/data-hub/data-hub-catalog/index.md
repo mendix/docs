@@ -57,7 +57,7 @@ For further information on consuming from the Data Hub Catalog, see [How to Cons
 
 ### 3.3 Register – Sharing Datasets 
 
-If you want to make the data from your app available to others, you can publish the datasets in an OData service and registering it in the Data Hub Catalog. In a Mendix app, the datasets are the **Entity sets** that define an **Entity**. Using this REST-based protocol, metadata contracts defining the structure and documentation of the datasets that are included are registered. Further details such as the location of the data associated with a registered dataset are captured, for example from the `dependencies.json` for Mendix apps, or during the registration process. 
+If you want to make the data from your apps available for use by others, you can publish the datasets in an OData service and register it in the Data Hub Catalog. In a Mendix app, the datasets are the **Entity sets** for a defined **Entity**. Using this REST-based protocol, metadata contracts defining the structure and documentation of the datasets that are included are registered. Further details such as the location of the data associated with a registered dataset are captured, for example from the `dependencies.json` for Mendix apps, or during the registration process. 
 
 OData services can be registered in the Data Hub in the following ways:
 
@@ -93,7 +93,7 @@ The information that is registered for services and exposed assets are as follow
   You can filter the search results by environment type in the Data Hub Catalog (**Production**, **Non-production**, and the Mendix Free App environment or **Sandbox**). In the [Data Hub pane](/refguide/data-hub-pane) of Studio Pro, you can expand search results to include non-production environments. 
   {{% /alert %}}
 
-* **Published OData service** – At the service endpoint there is an OData service metadata contract. Available data sources are registered in the Data Hub Catalog by exposing  datasets in the [published OData service](/refguide/published-odata-services). This service document or metadata contract also includes the exposed attributes and associations that are relevant for connecting to the data they define. 
+* **Published OData service** – At the service endpoint there are the OData service metadata contract filesthat define the service. Available data sources are registered in the Data Hub Catalog by exposing  datasets in the [published OData service](/refguide/published-odata-services). This service document or metadata contract also includes the exposed attributes and associations that are relevant for connecting to the data they define. 
 
 * **Versions** – The version number of the OData service contracts is also included in the asset registration. The contract exposed at a specific endpoint may be changed over time by the service owner, and if good practice is followed, these changes will be indicated by changing the version number. Every published OData service has a version number. Apps consuming from a service will consume from a specific version of a service deployed to an environment. 
 

@@ -8,9 +8,9 @@ tags: ["data hub", "data hub catalog"]
 
 ## 1 Introduction
 
-Finding the right data is made easier by the Data Hub Catalog search functionality. The details of data assets are displayed in the [asset details](#search-details) screen.  
+Finding the right data is made easier by the Data Hub Catalog search functionality. The details of data assets are displayed in the [asset details](#search-details) screen. 
 
-The [Copy Data Source URI](#service-details) or **Download Contract** buttons enable you to integrate registered data sources into your enterprise applications.
+The [Copy Data Source URI](#service-details) or **Download** contract buttons enable you to integrate registered data sources into your enterprise applications.
 
 Start searching from the [Data Hub](#data-hub-home) page or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Asset Details** screen.
 
@@ -22,11 +22,11 @@ This page describes the search functionality of the Data Hub Catalog and the inf
 
 The [details](#search-details) screen for a registered data source, dataset, or attribute displays information as provided in the published OData service contract that is used to register assets in the Data Hub Catalog. Registered services and the exposed datasets can be curated to provide additional information such as **Tags** and **Descriptions** to ensure that they can be found by the appropriate users.
 
-{{% alert type="info" %}}The **Dataset** is the name of the **Entity set** of a published **Entity**  in Mendix Studio Pro, which by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
+{{% alert type="info" %}}The **Dataset** is the name of the **Entity set** of a published **Entity** in Mendix Studio Pro, which by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
 
 ### 2.1 Published OData Service 
 
-The contract of the published OData service (the *$metadata* document) contains the details of what is exposed in the service. This includes the metadata of the exposed datasets (or entity sets in Mendix Studio Pro) and their exposed attributes, associations, types, and accessibility. This information about the registered  OData service is shown in the search details. 
+The contract of the published OData service (the *$metadata* document) contains the details of what is exposed in the service. This includes the metadata of the exposed datasets (or entity sets in Mendix Studio Pro) and their exposed attributes, associations, types, and accessibility. This information about the registered OData service is shown in the search details. 
 
 For details on creating a published OData service in Studio Pro, see [How to Register Data Assets](register).
 
@@ -109,7 +109,7 @@ The collapsable **Search** pane is used to search for registered assets in the D
 
 Enter a search string in the **Search** area comprising a minimum of 3 alpha-numeric characters.
 
-The wildcard  `*`  can also be used to imply an empty search but it is not necessary as search without specifying any search string will return all registered items. 
+The wildcard `*` can also be used to imply an empty search but it is not necessary as search without specifying any search string will return all registered items. 
 
 {{% alert type="info" %}}
 Punctuation cannot be used as part of the search term. 
@@ -161,7 +161,7 @@ When a data source is selected in the search results, the details of the metadat
 
 * The name of the data source
 
-* The **Validated** tag will be displayed for the data source if it has been set u
+* The **Validated** tag will be displayed for the data source if it has been set for the asset
 
 * The **Environment name** to which the app is deployed
 
@@ -175,11 +175,11 @@ When a data source is selected in the search results, the details of the metadat
 
 * Click **Share Data Source** to copy the link to this asset detail page to the clipboard
 
-* Click [Download Contract](#download-contract) to retrieve and save the metadata contract locally
+* Click [Download](#download-contract) to retrieve and save the metadata contract locally
 	
 * Each **Dataset** that is exposed in the data source (you can expand this to see details of the attributes and associations)
 
-	{{% alert type="info" %}}The **Dataset** is the name of the **Entity set** of a published **Entity**  in Mendix Studio Pro, which by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
+	{{% alert type="info" %}}The **Dataset** is the name of the **Entity set** of a published **Entity** in Mendix Studio Pro, which by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
 
 #### 4.2.2 Details for a Selected Dataset {#entity-details}
 
@@ -195,7 +195,7 @@ When an **Dataset** is selected in the search results, the details are displayed
 * Click **Copy Dataset URI** to copy the URI of the dataset to the clipboard
 * Click **Share Dataset** to copy the link to this dataset detail page to the clipboard
 * **Dataset Information**
-	The **Attributes** that are exposed for the dataset for this data source  are listed showing the attribute types and description.
+	The **Attributes** that are exposed for the dataset for this data source are listed showing the attribute types and description.
 
 	Under the **Associations** tab for each dataset, the associations are shown:
 
@@ -244,12 +244,23 @@ The **Curate Bar** is displayed on the asset detail screen if you are the owner 
 
 For further details on curating registered assets see [Curation](./curate).
 
-## 5 Download Metadata Contract {#download-contract}
-For a selected data source you can click **Download Contract** to download the OData service contract for the selected data source as a ***.zip*** file. This file will include the complete service feed and any other associated files to make up the full metadata contract. The resulting  ***.zip*** file will be named as follows:
+## 5 Download the Metadata Contract of a Data Source {#download-contract}
+For a selected data source you can click **Download** to download the OData service contract as a ***.zip*** file. This will include the all the files that make up the full metadata contract. The resulting ***.zip*** file will be named as follows:
 
 `DataHub_<service_name>_<service_version>_<technology>.zip`
 
-The name will identify the OData version (v3 or v4).
+The string *technology* identifies the OData version (v3 or v4) in the file name.
+
+For the following example: 
+
+![](attachments/search/download_example.png)
+
+When you click **Download** the following file is downloaded: `DataHub_SAMPLE_EmployeeDirectory_1.1.0_OData3.zip`
+
+This zip file comprise the folder: `DataHub_SAMPLE_EmployeeDirectory_1.1.0_OData3` which contains the metadata files that define the service:
+
+`metadata.xml`
+`serviceFeed.xml`
 
 ## 6 Viewing Search Results in the Data Hub Landscape
 

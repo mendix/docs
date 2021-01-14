@@ -11,6 +11,19 @@ These release notes cover changes to the app project management functionality an
 For release notes on Mendix Cloud and deployment options, see [Deployment](deployment).
 {{% /alert %}}
 
+## 2021
+
+### January 15th, 2021
+
+#### Improvements
+
+* We redesigned the My Apps page.
+* We now display labels when editing a Story using the new Stories UI. We will enable editing of Story Labels and Label colors in a future release.
+
+#### Fixes
+
+* We fixed an issue where newly-added Company Admins did not get access to edit User Groups in Marketplace.
+
 ## 2020
 
 ### December 23rd, 2020

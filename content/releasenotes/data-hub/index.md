@@ -17,8 +17,8 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 #### Improvements
 
-  * Further improvements have been made to security in Data Hub. 
-  * All screens in Data Hub are now responsive.
+* Further improvements have been made to security in Data Hub. 
+* All screens in Data Hub are now responsive.
 
 ### January 7th, 2021
 

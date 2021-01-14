@@ -13,7 +13,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 #### New Features
 
-* You can download the OData service contract for a registered data source from the [asset details](/data-hub/data-hub-catalog/search#search-details) in the Data Hub Catalog. The file or set of files will be downloaded as a ***.zip*** file.
+* You can download the OData service contract for a registered data source from the [asset details](/data-hub/data-hub-catalog/search#download-contract) in the Data Hub Catalog. The file or set of files will be downloaded as a ***.zip*** file.
 
 #### Improvements
 

@@ -1,8 +1,8 @@
 ---
 title: "Test Mendix Native Apps Using Appium"
-parent: "build-native-apps"
-menu_order: 80
-#description: "Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed"
+parent: "native-mobile"
+menu_order: 81
+description: "This how-to will teach you how to write end-to-end tests once and run them on both platforms using Appium."
 tags: ["test", "testing", "appium", "mobile", "native"]
 ---
 
@@ -51,57 +51,65 @@ However, the default Appium Android driver (UIAutomator2) is unable to read the 
 }
     ```
 
-1. Click **Start Session** and wait untill your app starts.
+1. Click **Start Session** and wait until your app starts.
 1. Click on the blue **Select Elements** button, and then click on an element in the app preview to spy on that element.
 
 ## 5 Set Up Appium Desktop to Spy on a Mendix Native Android App
 
 1. Add the Espresso dependencies by following the setup instructions [here](https://developer.android.com/training/testing/espresso/setup).
+
 1. Build a native Android app for your Mendix project (See [How to Build Native Apps](/howto/mobile/build-native-apps) for more information).
+
 1. Start Appium Desktop.
+
 1. Click **Start Server**.
+
 1. On the new screen, click the **Start Inspector Session** magnifier image in the top-right.
+
 1. In the new window, add the following capabilities:
 
     ```json
     {
-  "deviceName": "arbitrary name of your Android device",
-  "avd": "snake-cased name of your Android emulator",
-  "platformName": "Android",
-  "udid": "udid of your Android device",
-  "appPackage": "the package name of your app",
-  "appActivity": "the main activity name of your app",
-  "automationName": "Espresso",
-  "app": "location of your .apk Android app file",
+    "deviceName": "arbitrary name of your Android device",
+    "avd": "snake-cased name of your Android emulator",
+    "platformName": "Android",
+    "udid": "udid of your Android device",
+    "appPackage": "the package name of your app",
+    "appActivity": "the main activity name of your app",
+    "automationName": "Espresso",
+    "app": "location of your .apk Android app file",
 }
     ```
 
-    {{% alert type="info" %}}
-While using Espresson in combination with Mendix projects, we observed a `No static method lifecycleEventObserver` error. More information about this can be found [here](https://github.com/appium/appium-espresso-driver/issues/639). You can fix this by adding the `espressoBuildConfig` property to the capabilities. It should point to a JSON file containing:
+1. Click **Start Session** and wait until your app starts.
 
-    ```json
-    {
-    "additionalAndroidTestDependencies": ["androidx.lifecycle:lifecycle-common:2.2.0"]
-}
-    ```
-    {{% /alert %}}
-    
-    {{% alert type="info" %}}
-While using Espresson in combination with Mendix projects, there have been occasional package conflicts. You can fix this by adding the `espressoBuildConfig` property to the capabilities. It should point to a JSON file containing your desired tools and versions:
-
-    ```json
-    {
-    "toolsVersions": {
-        "compileSdk": "30"
-        ...
-    }
-}
-    ```
-    {{% /alert %}}
-    
-1. Click **Start Session** and wait untill your app starts.
 1. Click on the blue **Select Elements** button, and then click on an element in the app preview to spy on that element.
 
-## 6 Automatically Testing Your Mendix Bative App
+{{% alert type="info" %}}
+While using Espresso in combination with Mendix projects, we observed a `No static method lifecycleEventObserver` error. More information about this can be found [here](https://github.com/appium/appium-espresso-driver/issues/639). You can fix this by adding the `espressoBuildConfig` property to the capabilities. It should point to a JSON file containing:
+
+```json
+{
+"additionalAndroidTestDependencies": ["androidx.lifecycle:lifecycle-common:2.2.0"]
+}
+```
+
+{{% /alert %}}
+
+{{% alert type="info" %}}
+While using Espresso in combination with Mendix projects, there have been occasional package conflicts. You can fix this by adding the `espressoBuildConfig` property to the capabilities. It should point to a JSON file containing your desired tools and versions:
+
+```json
+{
+"toolsVersions": {
+    "compileSdk": "30"
+    ...
+}
+}
+```
+
+{{% /alert %}}
+
+## 6 Automatically Testing Your Mendix Native App
 
 Once you have the capabilities you want that work with Appium Desktop, you can also use them with Appium CLI to run automated tests. Everything you need to create your first automated test can be found [here](http://appium.io/docs/en/about-appium/getting-started/?lang=en). You can use the the Appium Desktop Inspector to find the right locators.

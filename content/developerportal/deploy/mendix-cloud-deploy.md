@@ -183,7 +183,7 @@ There are four plans available for Mendix:
 
 More information on these plans is available on the [Pricing](https://www.mendix.com/pricing/) page of the Mendix website.
 
-### 7.2 Cloud Resource Packs
+### 7.2 Cloud Resource Packs{#resource-pack}
 
 Mendix environments are sized according to a number of standard cloud resource packs. The table below shows the current cloud resource packs and those cloud resource packs which are still being used but are not available to new customers (labeled *legacy*).
 
@@ -212,7 +212,7 @@ For **Enterprise** customers, there are additional features available for apps d
 
 The High Availability option ensures that if there is a problem with the current availability zone, new copies of your app will be started in the new availability zone (AZ). All FileDocuments will be replicated in this new zone, but data will still reside in a single database. This means that you may need to restore a backup of your database if it is no longer available to your app.
 
-#### 7.3.2 Fallback
+#### 7.3.2 Fallback{#fallback}
 
 The Fallback option ensures that the data in your database is automatically copied to a database in a second AZ. This, together with the high availability option, ensures that all your data is still available to your app if there is an issue with current availability zone and app instances have to be started in the second AZ.
 

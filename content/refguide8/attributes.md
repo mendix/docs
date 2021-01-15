@@ -193,7 +193,7 @@ The **Default value** property defines the value of this attribute when an objec
 
 ### 2.4 Limitations Section {#limitations}
 
-The **Limitations** property specifies whether the attribute can be used for filtering and sorting.:
+The **Limitations** property specifies whether the attribute can be used for filtering and sorting:
 
 * **Non-sortable** – the attribute cannot be used for sorting (for example, you cannot use this attribute in the sort bar of a data grid or for sorting in a Retrieve action)
 * **Non-filterable** – the attribute cannot be used for filtering (for example, you cannot use this attribute in XPath constraints or for filtering in a list operation)

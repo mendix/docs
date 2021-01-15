@@ -191,19 +191,15 @@ The **Default value** property defines the value of this attribute when an objec
 | Long | 0 |   |
 | String | (empty) |   |
 
-
 ### 2.4 Limitations {#limitations}
 
+The **Limitations** property specifies whether the attribute can be used for filtering and sorting.:
 
-The **Limitations** property specifies whether the attribute can be used for filtering and sorting. 
-
-Non-sortable: An attribute that is non-sortable cannot be used for sorting. This means for example that you cannot use this attribute in the sort bar of a data grid, or that you cannot use this attribute for sorting in a Retrieve Action.
-
-Non-filterable: An attribute that is non-filterable cannot be used for filtering. This means for example that you cannot use this attribute in XPath constraints, or that you cannot use it for filtering in a List Operation.
-
+* **Non-sortable** – the attribute cannot be used for sorting (for example, you cannot use this attribute in the sort bar of a data grid or for sorting in a Retrieve action)
+* **Non-filterable** – the attribute cannot be used for filtering (for example, you cannot use this attribute in XPath constraints or for filtering in a list operation)
 
 Some attribute types in Mendix always have limitations:
 
-* Hashed String attributes are non-filterable.
-* Binary attributes are non-filterable and non-sortable.
-* Calculated attributes are non-filterable and non-sortable.
+* Hashed string attributes are non-filterable
+* Binary attributes are non-sortable and non-filterable
+* Calculated attributes are non-sortable and non-filterable

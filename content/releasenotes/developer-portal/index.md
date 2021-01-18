@@ -22,7 +22,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Fixes
 
-* We fixed an issue where newly-added Company Admins did not get access to edit User Groups in Marketplace.
+* We fixed an issue where newly-added Company Admins did not get access to edit [user groups](/appstore/general/app-store-overview#user-groups) in the App Store.
 
 ## 2020
 

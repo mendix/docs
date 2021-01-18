@@ -146,7 +146,7 @@ Once you are signed in to your cluster you can run the Configuration Tool.
 
 2. Paste the command into your Bash console and  press <kbd>Enter</kbd>
 
-	{{% alert type="warning" %}}Read the [MinTTY workaround](#mintty-winpty-workaround) before running the Configuration Tool from Git Bash (in Windows).{{% /alert %}}
+	{{% alert type="warning" %}}The Configuration Tool needs a CLI terminal with mouse support. Read the [Terminal limitations](#terminal-limitations) before running the Configuration Tool.{{% /alert %}}
 
 	You will see the configuration options on the screen and will be guided through filling in the information needed.
 
@@ -881,23 +881,55 @@ kubectl -n {namespace} scale deployment mendix-operator --replicas=0
 kubectl -n {namespace} scale deployment mendix-operator --replicas=1
 ```
 
-### 7.3 MinTTY terminal limitations {#mintty-winpty-workaround}
+### 7.3 Terminal limitations {#terminal-limitations}
 
-{{% alert type="info" %}}
-These limitations only applies when using the Configuration Tool in Git Bash in Windows. 
-{{% /alert %}}
+#### 7.3.1 Windows
 
-By default, installing Git Bash on Windows will select MinTTY as the terminal emulator, instead of the Windows default console window.
+The Windows version of the Configuration Tool can only run in a terminal that supports the Windows console API and has mouse support.
 
-In that case, you will need to run the Configuration Tool from `winpty`:
+The Configuration Tool needs the Git or MinGW version of `bash` to be available in the system path.
+In many cases, Windows might have multiple versions of `bash` installed: cygwin, WSL and possibly others.
 
-```shell
-winpty {installation command}
+In order to use Git `bash`, ensure that the Git Bash `usr\bin` directory appears in the path first.
+
+When using PowerShell (replace `{arguments}` with the right commandline arguments):
+
+```powershell
+$env:Path = "C:\Program Files\Git\usr\bin;" + $env:Path
+.\mxpc-cli.exe installer {arguments}
 ```
 
-For example:
+Or when using the Windows Command Prompt (replace `{arguments}` with the right commandline arguments):
 
-![](attachments/private-cloud-cluster/git-bash-winpty.png)
+```bat
+set PATH=C:\Program Files\Git\usr\bin;%PATH%
+.\mxpc-cli.exe installer {arguments}
+```
+
+{{% alert type="info" %}}
+Other terminals might work but are not supported.
+For example, the [new Windows Terminal](https://aka.ms/terminal) doesn't support mouse clicks in PowerShell or the Windows Command Prompt.
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+Some previously released documentation for Mendix for Private Cloud suggested to use Git Bash in Windows.
+
+Depending on how Git was originally installed, it might not support all required terminal features.
+
+The Powershell option described above is more reliable than Git Bash.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+These limitations only applies when using Windows version of the Configuration Tool.
+
+The Linux version can run in [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/) without any workarounds.
+{{% /alert %}}
+
+#### 7.3.2 Linux and macOS
+
+When running the installation tool over SSH, make sure that SSH client supports terminal emulation and has mouse support enabled.
+
+`ssh.exe` in Windows doesn't support mouse click forwarding, and another SSH client should be used instead - such as [MobaXterm](https://mobaxterm.mobatek.net/) or [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
 ## 8 Troubleshooting
 

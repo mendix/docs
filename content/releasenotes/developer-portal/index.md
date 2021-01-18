@@ -11,6 +11,19 @@ These release notes cover changes to the app project management functionality an
 For release notes on Mendix Cloud and deployment options, see [Deployment](deployment).
 {{% /alert %}}
 
+## 2021
+
+### January 15th, 2021
+
+#### Improvements
+
+* We redesigned the [My Apps](/developerportal/apps-list/#my-apps) page.
+* You will now see labels when you are editing a [story](/developerportal/collaborate/stories#story-actions) using the new **Stories** UI. We will enable the editing of story labels and label colors in a future release.
+
+#### Fixes
+
+* We fixed an issue where newly-added Company Admins did not get access to edit [user groups](/appstore/general/app-store-overview#user-groups) in the App Store.
+
 ## 2020
 
 ### December 23rd, 2020

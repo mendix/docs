@@ -42,6 +42,7 @@ Attribute properties consist of the following sections:
 * [Common](#common)
 * [Type](#type)
 * [Value](#value)
+* [Limitations](#limitations)
 
 ### 2.1 Common Section {#common}
 
@@ -189,3 +190,16 @@ The **Default value** property defines the value of this attribute when an objec
 | Integer | 0 |   |
 | Long | 0 |   |
 | String | (empty) |   |
+
+### 2.4 Limitations Section {#limitations}
+
+The **Limitations** property specifies whether the attribute can be used for filtering and sorting:
+
+* **Non-sortable** – the attribute cannot be used for sorting (for example, you cannot use this attribute in the sort bar of a data grid or for sorting in a Retrieve action)
+* **Non-filterable** – the attribute cannot be used for filtering (for example, you cannot use this attribute in XPath constraints or for filtering in a list operation)
+
+Some attribute types in Mendix always have limitations:
+
+* Hashed string attributes are non-filterable
+* Binary attributes are non-sortable and non-filterable
+* Calculated attributes are non-sortable and non-filterable

@@ -92,7 +92,7 @@ The **Documentation** pane displays the documentation for the currently selected
 
 The [Errors pane](errors-pane) displays the [errors](consistency-errors), warnings, and deprecations that exist in your app project.
 
-### 3.6 Find Results
+### 3.6 Find Results {#find}
 
 This pane displays the results of the latest find action. You can search for text, usages of an element (for example, an attribute), and unused items.
 

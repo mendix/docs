@@ -8,7 +8,7 @@ tags: ["data hub", "data hub catalog", "curate", "description", "services", "tag
 
 ## 1 Introduction
 
-Curation is the processes of maintaining registered services and enriching the metadata of registered assets in the Data Hub to provide further information about the services as well as the datasets and attributes exposed in the services. You can add catalog descriptions and tags to supplement the registered metadata in order to categorize the asset and the datasets they connect to. Curate functions include setting the [Discoverability](#discoverability) of registered assets, assigning a **Validated** tag and specifying the **Business** and **Technical** owners. 
+Curation is the processes of maintaining registered services and enriching the metadata of registered assets in the Data Hub to provide further information about the services as well as the datasets and attributes exposed in the services. You can add catalog descriptions and tags to supplement the registered metadata as a means of further categorizing the asset and the datasets they connect to. Curate functions in Data Hub include setting the [Discoverability](#discoverability) of registered assets, assigning a **Validated** tag and specifying the **Business** and **Technical** owners. 
 
 Users who can curate assets in Data Hub Catalog are as follows: 
 
@@ -116,7 +116,7 @@ To change the owners of the app for the selected service, follow these steps fro
 2. The **Application Metadata** dialog box is displayed. To change the **Business Owner ** or **Technical Owner** click in the name field and you can start typing or select from the drop-down list of names:
 
 	![](attachments/curate/application-meta-data.png)
-	
+
 3. In this list you will be shown a list of Mendix platform users (who will be displayed with the their avatar), and custom owners will be shown with an initial avatar:
 
 	![](attachments/curate/custom-avatar.png)

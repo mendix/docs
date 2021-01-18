@@ -17,8 +17,8 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Improvements
 
-* We redesigned the My Apps page.
-* We now display labels when editing a Story using the new Stories UI. We will enable editing of Story Labels and Label colors in a future release.
+* We redesigned the [My Apps](/developerportal/apps-list/#my-apps) page.
+* You will now see labels when you are editing a [story](/developerportal/collaborate/stories#story-actions) using the new **Stories** UI. We will enable the editing of story labels and label colors in a future release.
 
 #### Fixes
 

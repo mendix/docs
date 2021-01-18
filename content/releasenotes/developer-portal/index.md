@@ -13,6 +13,16 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2021
 
+### January 19th, 2021
+
+#### New Features
+
+* We released the Mendix [Control Center](/developerportal/control-center/index), which provides governance and control features for Mendix Admins (former Company Admins).
+
+#### Improvements
+
+* We moved the existing Company Admin features in the Developer Portal to Control Center.
+
 ### January 15th, 2021
 
 #### Improvements
@@ -48,7 +58,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Fixes
 
-* We fixed a bug where a change of [company name](/developerportal/company-app-roles/company) was not properly distributed along the platform.
+* We fixed a bug where a change of company name was not properly distributed along the platform.
 * We fixed a bug where drop-down menus were cut off on the [story details](/developerportal/collaborate/stories#story-details) page.
 
 ### October 9th, 2020
@@ -63,12 +73,12 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 * We redesigned the [story details](/developerportal/collaborate/stories#story-details) page and made it available for Public Beta usage. You can use the new design when the new story UI is enabled. Please note that it is currently not possible to add or manage [labels](/developerportal/collaborate/stories#label) with the new UI; this functionality will be released in the future.
 * When you add a [task](/developerportal/collaborate/stories#adding-task) to a commit of your app model, we now show the revision in the revision overview of the story details. Clicking the task will bring you to the story details page to which the task belongs.
-* We simplified the [Company Settings](/developerportal/company-app-roles/company#company-settings) tab of the **Company** page by removing some barely used attributes.
+* We simplified the **Company Settings** tab of the **Company** page by removing some barely used attributes.
 
 #### Fixes
 
 * We fixed an issue where the default avatar of an App Team member who committed a revision was not properly displayed in the revision overview of the story details.
-* We fixed an issue where a [Company Admin](/developerportal/company-app-roles/companyadmin-settings) was no longer able to open the [General](/developerportal/settings/general-settings) settings of an app project they for an App Team in which they were not a member.
+* We fixed an issue where a Company Admin was no longer able to open the [General](/developerportal/settings/general-settings) settings of an app project they for an App Team in which they were not a member.
 * We repaired a dead link to the documentation on the [App User Management](/developerportal/settings/general-settings#managing-app-users) page.
 
 ### August 25th, 2020
@@ -113,7 +123,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Improvements
 
-* We implemented the second increment in renaming the default **End-user** App Team role to [Guest](/developerportal/company-app-roles/index#app-team-roles).
+* We implemented the second increment in renaming the default **End-user** App Team role to [Guest](/developerportal/app-roles/index#app-team-roles).
 
 #### Fixes
 
@@ -125,7 +135,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 * The [new Stories UI](/developerportal/collaborate/stories) has been improved with various sections. The [old Stories UI](/developerportal/collaborate/stories#old) will be made unavailable soon. We encourage you to turn your tasks that are still available in the old Stories UI into new stories before the old UI is inaccessible.
 * We improved performance on story-related actions such as drag-and-drop and status changes on large app projects with many deleted items.
-* We renamed the default **End-User** App Team role to [Guest](/developerportal/company-app-roles/index#app-team-roles) to better distinguish App Team roles from app user roles.
+* We renamed the default **End-User** App Team role to [Guest](/developerportal/app-roles/index#app-team-roles) to better distinguish App Team roles from app user roles.
 * We removed the list appearance of the [My Company's Apps](/developerportal/apps-list/#my-company-apps) page.
 
 #### Fixes 
@@ -322,7 +332,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Fixes
 
-* We fixed an issue that sometimes caused the team member with the [Technical Contact](/developerportal/company-app-roles/technical-contact) role to be hidden on the **Node Permissions** tab of the **Security** pages. (Tickets 69085, 69150, 69419, 69440, 69458, 69585, 69592, 69783, 69884,70131,70228, 70285, 76152)
+* We fixed an issue that sometimes caused the team member with the Technical Contact role to be hidden on the **Node Permissions** tab of the **Security** pages. (Tickets 69085, 69150, 69419, 69440, 69458, 69585, 69592, 69783, 69884,70131,70228, 70285, 76152)
 
 ### November 14th, 2018
 

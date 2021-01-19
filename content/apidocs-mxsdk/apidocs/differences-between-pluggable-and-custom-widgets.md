@@ -1,7 +1,7 @@
 ---
 title: "Differences Between Pluggable and Custom Widgets"
 parent: "pluggable-parent-8"
-description: Differences Between Pluggable and Custom Widgets.
+description: This document explains the differences between pluggable and custom widgets.
 tags: ["Widget", "Pluggable",  "JavaScript"]
 ---
 

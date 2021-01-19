@@ -15,7 +15,7 @@ parent: "model-sdk"
 
 **Release date: November 23rd, 2020**
 
-* We added support for Mendix [8.16.0](../studio-pro/8).
+* We added support for Mendix [8.16.0](../studio-pro/8.16).
 * We added support for Mendix Metamodel [8.16.0](metamodel-8.16).
 
 ## 4.42.0 {#442}

@@ -354,44 +354,23 @@ For react-native Mendix exposes a single version: 0.63.3. Mendix also includes t
 
 |   Library   |   Version   |
 | ---- | ---- |
-|	[@react-native-community/art](https://www.npmjs.com/package/@react-native-community/art)   |   1.2.0   |
 |	[@react-native-community/async-storage](https://www.npmjs.com/package/@react-native-community/async-storage)   |   1.12.0   |
-|	[@react-native-community/cameraroll](https://www.npmjs.com/package/@react-native-community/cameraroll)   |	4.0.1     |
 |	[@react-native-community/datetimepicker](https://www.npmjs.com/package/@react-native-community/datetimepicker)   |  3.0.3  |
-|	[@react-native-community/geolocation](https://www.npmjs.com/package/@react-native-community/geolocation)   |   2.0.2   |
 |	[@react-native-community/masked-view](https://www.npmjs.com/package/@react-native-community/masked-view)   |  0.1.10    |
-|	[@react-native-community/netinfo](https://www.npmjs.com/package/@react-native-community/netinfo)   |	5.9.7     |
-|	[@react-native-community/push-notification-ios](https://www.npmjs.com/package/@react-native-community/push-notification-ios)	| ^1.7.1	|
-|	[@react-native-firebase/analytics](https://www.npmjs.com/package/@react-native-firebase/analytics)	|	^10.0.1	|
-|	[@react-native-firebase/app](https://www.npmjs.com/package/@react-native-firebase/app)	|	^10.0.1	|
-|	[@react-native-firebase/crashlytics](https://www.npmjs.com/package/@react-native-firebase/crashlytics)	|	^10.0.1	|
-|	[@react-native-firebase/messaging](https://www.npmjs.com/package/@react-native-firebase/messaging)	|	^10.0.1	|
-|	[@react-native-firebase/ml](https://www.npmjs.com/package/@react-native-firebase/ml)	|	^10.0.1	|
-|	[react-native-ble-plx](https://www.npmjs.com/package/react-native-ble-plx)   |   2.0.1   |
-|	[react-native-calendar-events](https://www.npmjs.com/package/react-native-calendar-events)   |   2.1.0   |
-|	[react-native-camera](https://www.npmjs.com/package/react-native-camera)   |   3.40.0   |
 |	[react-native-code-push](https://www.npmjs.com/package/react-native-code-push)   |   6.3.0   |
 |	[react-native-device-info](https://www.npmjs.com/package/react-native-device-info)   |   7.0.2   |
 |	[react-native-fast-image](https://www.npmjs.com/package/react-native-fast-image)   |   8.3.2   |
-|	[react-native-geocoder](https://www.npmjs.com/package/react-native-geocoder)   |   0.5.0   |
 |	[react-native-gesture-handler](https://www.npmjs.com/package/react-native-gesture-handler)   |   1.8.0   |
-|	[react-native-image-picker](https://www.npmjs.com/package/react-native-image-picker)   |   2.3.4   |
-|	[react-native-inappbrowser-reborn](https://www.npmjs.com/package/react-native-inappbrowser-reborn)   |  3.4.0    |
 |	[react-native-localize](https://www.npmjs.com/package/react-native-localize)   |   1.4.2   |
-|	[react-native-maps](https://www.npmjs.com/package/react-native-maps)    |   0.27.1   |
-|	[react-native-push-notification](https://www.npmjs.com/package/react-native-push-notification)	| ^6.1.2	|
+|   [react-native-material-menu](https://www.npmjs.com/package/react-native-material-menu)   |     |
 |	[react-native-reanimated](https://www.npmjs.com/package/react-native-reanimated)   |   1.13.1   |
 |	[react-native-safe-area-context](https://www.npmjs.com/package/react-native-safe-area-context)   | 3.1.8     |
-|	[react-native-sound](https://www.npmjs.com/package/react-native-sound)   |   0.11.0   |
+|   [react-native-screens](https://www.npmjs.com/package/react-native-screens)   |    |
 |	[react-native-splash-screen](https://www.npmjs.com/package/react-native-splash-screen)	|	3.2.0	|
 |	[react-native-sqlite-storage](https://www.npmjs.com/package/react-native-sqlite-storage)	|	5.0.0	|
 |	[react-native-svg](https://www.npmjs.com/package/react-native-svg)   |   12.1.0   |
 |	[react-native-tab-view](https://www.npmjs.com/package/react-native-tab-view)   |   ^2.15.1   |
-|	[react-native-touch-id](https://www.npmjs.com/package/react-native-touch-id)   |   4.4.1   |
 |	[react-native-vector-icons](https://www.npmjs.com/package/react-native-vector-icons)   |   7.1.0   |
-|	[react-native-video](https://www.npmjs.com/package/react-native-video)   |   5.0.2   |
-|	[react-native-view-shot](https://www.npmjs.com/package/react-native-view-shot)   |   3.1.2   |
-|	[react-native-webview](https://www.npmjs.com/package/react-native-webview)   |   10.9.1   |
 |	[react-navigation](https://www.npmjs.com/package/react-navigation)    |   4.4.1   |
 |	[react-navigation-drawer](https://www.npmjs.com/package/react-navigation-drawer)   |   2.5.1   |
 |	[react-navigation-stack](https://www.npmjs.com/package/react-navigation-stack)   |   2.7.0   |

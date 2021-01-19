@@ -191,7 +191,7 @@ The **Default value** property defines the value of this attribute when an objec
 | Long | 0 |   |
 | String | (empty) |   |
 
-### 2.4 Limitations Section {#limitations}
+### 2.4 Limitations {#limitations}
 
 The **Limitations** property specifies whether the attribute can be used for filtering and sorting:
 

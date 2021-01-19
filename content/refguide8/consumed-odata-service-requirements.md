@@ -29,7 +29,7 @@ Vocabulary annotations can be used in a service to indicate features that are no
 * **Countable** – marking an entity set as `Countable="false"` prevents the user from adding the entity to the project
 * **Filterable** – marking an entity set as `Filterable="false"` sets all properties as non-filterable
 * **Sortable** – marking an entity set as `Sortable="false"` sets all properties as non-sortable
-* Marking an entity set as `Filterable="false"` and `Sortable="false"` sets all properties as non-filterable and non-sortable;marking properties as non-filterable in the `NonFilterableProperties` and non-sortable in `NonSortableProperties` annotation result in attributes with non-filterable and non-sortable capabilities
+* Marking an entity set as `Filterable="false"` and `Sortable="false"` sets all properties as non-filterable and non-sortable; marking properties with the `NonFilterableProperties` annotation or the `NonSortableProperties` annotation sets specific attributes as non-filterable or non-sortable
 
 An entity can only be used when it is accessible through an entity set.
 

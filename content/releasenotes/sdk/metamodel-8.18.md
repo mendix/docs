@@ -1,17 +1,18 @@
-# Metamodel Release Notes for version 8.18.0
+---
+title: "8.18"
+parent: "metamodel-8"
+---
 
-## Microflows
+## 8.18.0
 
-### HttpConfiguration (Element)
+### Microflows
 
+#### HttpConfiguration (Element)
 
-#### Property 'clientCertificate'
-* Introduced; "An identifier for the client certificate to be used"
+* We introduced the `clientCertificate` property as an identifier for the client certificate to be used.
 
-## Rest
+### Rest
 
-### PublishedODataService (ModelUnit)
+#### PublishedODataService (ModelUnit)
 
-
-#### Property 'useGeneralization'
-* Introduced; "Use OData baseType for generalizations"
+* We introduced the `useGeneralization` property for using the OData baseType for generalizations.

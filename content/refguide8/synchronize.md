@@ -39,7 +39,7 @@ This mode synchronizes objects partially, based on a selection:
 With this mode, only the selected objects or lists are synchronized. The synchronization is bi-directional, 
 meaning both the server database and the local database is updated for the selected objects.
 
-If the selected object is new, and not committed to the local database, it will be ignored during synchronization.
+If the set of objects selected for synchronization contains any objects that have not been committed yet, those objects will be skipped and thus not synchronized.
 
 If the selected object has local changes, the following steps are performed:
 
@@ -48,7 +48,7 @@ If the selected object has local changes, the following steps are performed:
 
 If the selected object originated from the server (not created on the device), and no longer exists on the server (or is inaccessible due to the access rules), the local changes are not applied and the object is removed from the local database. In this case the value of the variable in the nanoflow for that object becomes `empty`. The server stores the discarded changes in the `System.SynchronizationFailure` entity to prevent data loss.
 
-If the selected object does not have any local changes, synchronization updates the local copy from the server database. If the object was deleted or is no longer accessible due to access rules, the object is removed from the local database.
+If the set of objects selected for synchronization contains objects without local changes, synchronization updates the local copy from the server database. If there is an object that has been deleted from the server or is no longer accessible due to access rules, that object will be removed from the local database too.
 
 ## 2 Properties
 

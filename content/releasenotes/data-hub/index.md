@@ -13,7 +13,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 #### New Features
 
-* Custom icons can now be used for registered applications and data sources. Curators and owners can upload their own icons for a registered asset or select from the Data Hub icon library.
+* Custom icons can now be used for applications and data sources. Curators and owners can [upload their own icons](/data-hub/data-hub-catalog/curate#application-icon) or select from the Data Hub icon library.
 
 #### Improvements
 

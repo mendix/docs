@@ -8,11 +8,11 @@ tags: ["data hub", "data hub catalog"]
 
 ## 1 Introduction
 
-Finding the right data is made easier by the Data Hub Catalog search functionality. The details of data assets are displayed in the [asset details](#search-details) screen. 
+Finding the right data is made easier with the Data Hub Catalog search functionality. The details of data assets are displayed in the [asset details](#search-details) screen. 
 
 The [Copy Data Source URI](#service-details) or **Download** contract buttons enable you to integrate registered data sources into your enterprise applications.
 
-Start searching from the [Data Hub](#data-hub-home) page or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Asset Details** screen.
+You can start searching from the [Data Hub](#data-hub-home) page or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Asset Details** screen.
 
 The [Data Hub pane](/refguide/data-hub-pane) in Studio Pro connects to the powerful search in the Data Hub Catalog to enable you to use registered datasets as external entities in you app development.
 
@@ -140,12 +140,12 @@ The **Sandbox** filter refers to apps deployed to the Mendix Free App environmen
 
 #### 4.1.3 Search Results
 
-The number of items satisfying the search criteria (search string plus filters) are shown at the top of the search results. Search results will include all application names, registered services, datasets (or entity sets), attributes, tags, and descriptions satisfying the search string and filters. Th order of the search results will be a combination of the following:
+The number of items satisfying the search criteria (search string plus filters) are shown at the top of the search results. Search results will include assets that match the search string and satisfy the active filters. Items that are included in the search include all application names, data sources, datasets (or entity sets), attributes, tags, and descriptions. The order of the search results will be a combination of the following:
 
 * Closest match to the search string
 * Popularity of the service (number of connections)
 
-If no search string is specified, all registered assets will be listed in the search results in order of popularity (number of connections to the asset).
+If no search string is specified, all registered assets will be listed in the search results pane in order of popularity (number of connections to the asset).
 
 When an item in the search results is selected, the **Catalog** tab will display the **Details** of the asset and the **Landscape** tab will show the network of connections and dependencies of the selected item in the [Data Hub Landscape](../data-hub-landscape/index).
 
@@ -155,9 +155,11 @@ When you click on an asset (data source or dataset) in the search results, the d
 
 #### 4.2.1 Details of a Selected Data Source {#service-details}
 
-When a data source is selected in the search results, the details of the metadata contract at the selected endpoint, deployed to the given environment are displayed along with curated information:
+When a data source is selected in the search results, the details of the metadata contract at the selected endpoint deployed to the given environment are displayed:
 
 ![](attachments/search/search-details-service.png)
+
+* The Icon of the application
 
 * The name of the data source
 
@@ -233,8 +235,8 @@ The data source metadata panel at the right of the asset details screen displays
 
 The **Curate Bar** is displayed on the asset detail screen if you are the owner of the selected asset or a curator. You can perform the following actions:
 * **Edit Metadata** – edit the registered metadata and add Catalog descriptions and tags: 
-  * for a data source you can edit **Application Details**, and **Service Details**
-  *  for a selected dataset you can **Edit Dataset Details**
+  * for a data source you can edit [Application Details](./curate#curate-application) and [Data Source Details](./curate#service-details)
+  *  for a selected dataset you can edit [Dataset Details](/curate#curate-datasets)
 * **Discoverable**/**Validated** – set the discoverability of the service, and validate the dataset
   * **Discoverable** – all users of Data Hub and Studio Pro can see and consume the service in combination with the classification of the data
   * **Non-Discoverable** – the service is not visible and only owners of the service, Data Hub curators, and the Data Hub Admin can access the service

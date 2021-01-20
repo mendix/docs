@@ -147,8 +147,6 @@ For more information, see [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggab
 
 You can also write **Custom widgets**. These are based on Dojo framework and run only in web applications. They have access to a different, more low-level, API than pluggable widgets. Custom widgets should only be used if you cannot create the functionality in a Pluggable widget.
 
-For more information on Custom widgets, see [How To Build Custom Widgets](/howto/extensibility/widget-development).
-
 ## 4 Mendix Client Startup
 
 When an end-user wants to use a Mendix app, they need to start up the client on their device before they can connect to the Runtime Server. The way this works depends on the method used to run the client. This can be one of the following:

@@ -356,8 +356,13 @@ For react-native Mendix exposes a single version: 0.63.3.
 
 The Mendix platform uses [big.js](https://www.npmjs.com/package/big-js) to represent and operate on numbers. Mendix 9.0 re-exports version 6.0.
 
-## 7 Read More
+## 7 Native dependencies
+
+Sometimes for widgets it is necessary to rely on existing community libraries of `react` and `react-native` world. With widgets targeting web platform it is easy to include those libraries as they could be shipped together with a widget by bundling them into the widget's package. That is often not the case with libraries targeting native platform as some of them require a setup of Android and iOS specific code into a Mendix native app or Make It Native (TODO: link ot appstore?) app. For more information see [Declaring Native Dependencies](native-dependencies);
+
+## 8 Read More
 
 * [Pluggable Widgets API Documentation](pluggable-widgets)
 * [Pluggable Widget Property Types Documentation](property-types-pluggable-widgets)
 * [How to Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)
+* [Declaring Native Dependencies](native-dependencies)

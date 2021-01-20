@@ -350,31 +350,7 @@ Mendix platform re-export [react](https://www.npmjs.com/package/react), [react-d
 
 Mendix provides you with React version 17.0.x (in npm terms `~17.0.0`). Patch versions might change from one minor release of Mendix to another. Mendix will always provide a matching version of react-dom.
 
-For react-native Mendix exposes a single version: 0.63.3. Mendix also includes the following libraries:
-
-|   Library   |   Version   |
-| ---- | ---- |
-|	[@react-native-community/async-storage](https://www.npmjs.com/package/@react-native-community/async-storage)   |   1.12.0   |
-|	[@react-native-community/datetimepicker](https://www.npmjs.com/package/@react-native-community/datetimepicker)   |  3.0.3  |
-|	[@react-native-community/masked-view](https://www.npmjs.com/package/@react-native-community/masked-view)   |  0.1.10    |
-|	[react-native-code-push](https://www.npmjs.com/package/react-native-code-push)   |   6.3.0   |
-|	[react-native-device-info](https://www.npmjs.com/package/react-native-device-info)   |   7.0.2   |
-|	[react-native-fast-image](https://www.npmjs.com/package/react-native-fast-image)   |   8.3.2   |
-|	[react-native-gesture-handler](https://www.npmjs.com/package/react-native-gesture-handler)   |   1.8.0   |
-|	[react-native-localize](https://www.npmjs.com/package/react-native-localize)   |   1.4.2   |
-|   [react-native-material-menu](https://www.npmjs.com/package/react-native-material-menu)   |     |
-|	[react-native-reanimated](https://www.npmjs.com/package/react-native-reanimated)   |   1.13.1   |
-|	[react-native-safe-area-context](https://www.npmjs.com/package/react-native-safe-area-context)   | 3.1.8     |
-|   [react-native-screens](https://www.npmjs.com/package/react-native-screens)   |    |
-|	[react-native-splash-screen](https://www.npmjs.com/package/react-native-splash-screen)	|	3.2.0	|
-|	[react-native-sqlite-storage](https://www.npmjs.com/package/react-native-sqlite-storage)	|	5.0.0	|
-|	[react-native-svg](https://www.npmjs.com/package/react-native-svg)   |   12.1.0   |
-|	[react-native-tab-view](https://www.npmjs.com/package/react-native-tab-view)   |   ^2.15.1   |
-|	[react-native-vector-icons](https://www.npmjs.com/package/react-native-vector-icons)   |   7.1.0   |
-|	[react-navigation](https://www.npmjs.com/package/react-navigation)    |   4.4.1   |
-|	[react-navigation-drawer](https://www.npmjs.com/package/react-navigation-drawer)   |   2.5.1   |
-|	[react-navigation-stack](https://www.npmjs.com/package/react-navigation-stack)   |   2.7.0   |
-|	[react-navigation-tabs](https://www.npmjs.com/package/react-navigation-tabs)   |   2.9.1 |
+For react-native Mendix exposes a single version: 0.63.3.
 
 ### 6.2 Big.js
 

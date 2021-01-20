@@ -9,6 +9,16 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 ## 2021
 
+### January 21st, 2021
+
+#### New Features
+
+* Custom icons can now be used for registered applications and data sources. Curators and owners can upload their own icons for a registered asset or select from the Data Hub icon library.
+
+#### Improvements
+
+* Improvements have been made to security. 
+
 ### January 14th, 2021
 
 #### New Features

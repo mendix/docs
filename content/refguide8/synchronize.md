@@ -22,7 +22,7 @@ The **Synchronize** activity can be used to synchronize your data between your d
 
 This mode synchronizes the entire local database. The server database is updated with the changes from the local database. The local database is updated with the latest data from the server, including the file contents.
 
-The behavior of this mode can however be configured through the [**Synchronization configuration**](offline-first#customizable-synchronization).
+The behavior of this mode can be configured through [**Synchronization configuration**](offline-first#customizable-synchronization).
 
 ### 1.2 Synchronize Selected Object(s)
 
@@ -43,8 +43,8 @@ If the set of objects selected for synchronization contains any objects that hav
 
 If the selected object has local changes, the following steps are performed:
 
-1. Update the server database with the changes from local database.
-1. Update the local database from server database. This is useful in case the selected object has calculated attributes or has been modified in a before/after event handler microflow.
+1. The server database is updated with the changes from local database.
+1. The local database is updated from the server database. This is useful in case the selected object has calculated attributes or has been modified in a before/after event handler microflow.
 
 If the selected object originated from the server (not created on the device), and no longer exists on the server (or is inaccessible due to the access rules), the local changes are not applied and the object is removed from the local database. In this case the value of the variable in the nanoflow for that object becomes `empty`. The server stores the discarded changes in the `System.SynchronizationFailure` entity to prevent data loss.
 

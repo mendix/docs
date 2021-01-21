@@ -117,9 +117,7 @@ When you want to upload a custom icon or image, the following apply:
 
 * The maximum accepted file size is 50 KB
 	
-	{{% alert type="info" %}} 
-	You will be able to upload a large file, and crop it to reduce the file size during the operation.
- {{% /alert %}}
+	{{% alert type="info" %}} You will be able to upload a large file, and crop it to reduce the file size during the operation.  {{% /alert %}}
 	
 * The *minimum* recommended size of the image is 64 pixels x 64 pixels. You can crop larger images and select the area you want to display during the upload operation. 
 	
@@ -131,22 +129,24 @@ To **upload a different icon** for the app follow these steps:
 
 1. In the **Application Metadata** screen of the selected data source, click **Upload a different icon** to display the **Upload Application Icon** pop up:
 
-{{% image_container width="250" %}}![upload icon](attachments/curate/icon-upload-dialog.png){{% /image_container %}}
+   {{% image_container width="300" %}}![upload icon](attachments/curate/icon-upload-dialog.png){{% /image_container %}}
 
 2. Drag the image file into the upload area or click **Upload** to browse and select a file from your file system. Click **Step 2: Crop image** to proceed.
 
 3. Move the wire-frame to select an area of the loaded image and change the size of the wire-frame to crop the image to the area that you want to use. When you are satisfied, click **Apply Changes**:
 
-{{% image_container width="250" %}}![upload icon](attachments/curate/icon-crop.png){{% /image_container %}}
-	
+	{{% image_container width="300" %}}![upload icon](attachments/curate/icon-crop.png){{% /image_container %}}
+
 	{{% alert type="info" %}}For high-resolution images, if the selected are exceeds the size limit there will be a warning. Select a smaller area of the image to reduce the file size.{{% /alert %}}
-	
+
 4. A preview of the application icon is shown. Click **Save** to upload the selected icon.
 	
-{{% image_container width="250" %}}![upload icon](attachments/curate/icon-preview.png){{% /image_container %}}
+	{{% image_container width="300" %}}![upload icon](attachments/curate/icon-preview.png){{% /image_container %}}
+		
 	
 5. The **Application Metadata** screen will now show the selected icon for the application:
-	![upload icon](attachments/curate/asset-metadata-new-icon.png)
+
+  ![upload icon](attachments/curate/asset-metadata-new-icon.png)
 
 6. Click **Save Changes** to return to the data source details page. The custom icon will be stored in the **Icon Library**.
 
@@ -209,8 +209,7 @@ Add tags to categorize a registered service and provide additional means for fin
 
 5. When you are finished specifying the tags, click **Save Changes** to register the changes and the tags will be shown in the **Service Metadata** pane.
 
-	{{% alert type="info" %}}
-	If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. {{% /alert %}}
+	{{% alert type="info" %}} If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. {{% /alert %}}
 
 ## 5 Discoverable and Validate {#discoverability}
 
@@ -250,7 +249,7 @@ To change dataset and attribute descriptions, follow these steps:
 
 1. In the **Search Details** screen for the selected dataset, click **Edit Dataset Details** on the **Curate** bar to display the **Dataset Metadata** box:
 
-	![](attachments/curate/curate-entity-metadata.png)
+÷	![](attachments/curate/curate-entity-metadata.png)
 
 2. The service metadata contract description is displayed. To edit and use a **Catalog Description**, click the toggle and enter a description. 
 3. When there are a large number of attributes for a dataset, you can use the search area to find specific attributes.

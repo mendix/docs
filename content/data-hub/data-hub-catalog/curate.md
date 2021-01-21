@@ -81,11 +81,11 @@ If you as a **Technical Owner** curate the asset and change the name, then you w
 
 {{% alert type="info" %}}
 **Business** and **Technical Owners** have curation rights for the registered data source in the Data Hub Catalog if they are registered users on the Mendix Platform. If a custom owner is *created* with the process described in this section, the link to contact them will be displayed for the asset but this does not mean that they are able to curate it. 
-{{% alert type="info" %}}
+ {{% /alert %}}
 
 {{% alert type="info" %}}
 Curators and the Data Hub Admin can manage custom owners as part of **Administration** functions. For further details see the [Managing Custom Owners ](../general/data-hub-admin-functions#customowners) section of *Data Hub Administration*. 
-{{% alert type="info" %}}
+ {{% /alert %}}
 
 To change the **Business Owner ** or **Technical Owner**, follow these steps from the **Application Metadata** screen:
 
@@ -117,8 +117,9 @@ When you want to upload a custom icon or image, the following apply:
 
 * The maximum accepted file size is 50 KB
 	
-	{{% alert type="info" %}}You will be able to upload a large file, and crop it to reduce the file size during the operation.
-{{% /alert %}}
+	{{% alert type="info" %}} 
+	You will be able to upload a large file, and crop it to reduce the file size during the operation.
+ {{% /alert %}}
 	
 * The *minimum* recommended size of the image is 64 pixels x 64 pixels. You can crop larger images and select the area you want to display during the upload operation. 
 	
@@ -130,19 +131,19 @@ To **upload a different icon** for the app follow these steps:
 
 1. In the **Application Metadata** screen of the selected data source, click **Upload a different icon** to display the **Upload Application Icon** pop up:
 
-	{{% image_container width="250" %}}![upload icon](attachments/curate/icon-upload-dialog.png){{% /image_container %}}
+{{% image_container width="250" %}}![upload icon](attachments/curate/icon-upload-dialog.png){{% /image_container %}}
 
 2. Drag the image file into the upload area or click **Upload** to browse and select a file from your file system. Click **Step 2: Crop image** to proceed.
 
 3. Move the wire-frame to select an area of the loaded image and change the size of the wire-frame to crop the image to the area that you want to use. When you are satisfied, click **Apply Changes**:
 
-	{{% image_container width="250" %}}![upload icon](attachments/curate/icon-crop.png){{% /image_container %}}
+{{% image_container width="250" %}}![upload icon](attachments/curate/icon-crop.png){{% /image_container %}}
 	
 	{{% alert type="info" %}}For high-resolution images, if the selected are exceeds the size limit there will be a warning. Select a smaller area of the image to reduce the file size.{{% /alert %}}
 	
 4. A preview of the application icon is shown. Click **Save** to upload the selected icon.
 	
-	{{% image_container width="250" %}}![upload icon](attachments/curate/icon-preview.png){{% /image_container %}}
+{{% image_container width="250" %}}![upload icon](attachments/curate/icon-preview.png){{% /image_container %}}
 	
 5. The **Application Metadata** screen will now show the selected icon for the application:
 	![upload icon](attachments/curate/asset-metadata-new-icon.png)

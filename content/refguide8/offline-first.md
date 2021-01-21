@@ -81,21 +81,11 @@ The upload phase executes the following operations after validation:
 
 If the upload phase was successful, the download phase starts in which the local database is updated with the newest data from the server database. The behavior of download phase differs per synchronization type.
 
-**Full synchronization**
+**Full synchronization** — A network request is made to the server per entity to retrieve the newest data from the server database. You can manage which entities are synchronized to the local database by customizing your app's synchronization behavior. For more details on this procedure, see the [Customizable Synchronization](#customizable-synchronization) section below. The download process also downloads the file entities' contents and saves that to your device storage. This process is incremental. The app only downloads the contents of a file object if the file has not been downloaded before, or if the file has been changed since it was last downloaded. The changed date attribute of the file entity is used to determine if the contents of a file object have changed.
 
-A network request is made to the server per entity to retrieve the newest data from the server database.
+**Selective synchronization** — Only the objects selected for synchronization are synchronized to the local database. There are no extra network requests made to retrieve these objects. The objects are returned in the response of a network request made during the upload phase. If a file entity is selected for synchronization, its content is also updated on the device storage incrementally. The logic is the same with the full synchronization.
 
-You can manage which entities are synchronized to the local database by customizing your app's synchronization behavior. For more details on this procedure, see the [Customizable Synchronization](#customizable-synchronization) section below.
-
-The download process also downloads the file entities' contents and saves that to your device storage. This process is incremental. The app only downloads the contents of a file object if the file has not been downloaded before, or if the file has been changed since it was last downloaded. The changed date attribute of the file entity is used to determine if the contents of a file object have changed.
-
-**Selective synchronization**
-
-Only the objects selected for synchronization are synchronized to the local database. There are no extra network requests made to retrieve these objects. The objects are returned in the response of a network request made during the upload phase.
-
-If a file entity is selected for synchronization, its content is also updated on the device storage incrementally. The logic is the same with the full synchronization.
-
-### 2.3 After the Synchronization
+### 2.3 After Synchronization
 
 After synchronization is completed, the widgets on your app's current page will be refreshed to reflect the latest data. If the synchronization is triggered from a nanoflow, all nanoflow object/list variables are updated (uncommitted changes are still preserved).
 
@@ -140,11 +130,11 @@ If a network error happens during the file upload (via [step 2 in the upload pha
 
 If a network error occurs while uploading the data (via [step 3 in the upload phase](#stepthree)), the data is kept on the local device and no changes are made on the server. Any files uploaded in [step 2](#steptwo) will be uploaded again during the next synchronization.
 
-If a network error occurs (such as a timeout) after uploading the data (at [step 3 in the upload phase](#stepthree)), the data is kept on the local device, but since the server has already started working on the request, it will complete the request and commit the changes to server database. The device can not distinguish whether if the server processed the request, so the next syncronization attempt will contain the already-applied changes. In this case, the server will behave differently based on Mendix version. Before Mendix 8.18, the server will commit the same changes again, which might overwrite potential changes made by other users between the two synchronizations. From Mendix 8.18 and forward, this process is optimized and the server will not commit the same changes, because they have been applied before.
+If a network error occurs (such as a timeout) after uploading the data (at [step 3 in the upload phase](#stepthree)), the data is kept on the local device. However, since the server has already started working on the request it will complete the request and commit the changes to server database. The device can not distinguish whether the server processed the request or not, so the next synchronization attempt will contain the already-applied changes. In this case, the server will behave differently based on Mendix version. In Mendix Studio Pro v8.18 or below, the server will commit the same changes again, which might overwrite potential changes made by other users between the two synchronizations. From Studio Pro v8.18 and above this process is optimized and the server will not commit the same changes because they have been applied before.
 
-If a network error occurs during the download phase, no data is updated on the device, so the user can keep working or retry. The effects of the upload phase are not rolled back on the server.
+If a network error occurs during the download phase, no data is updated on the device. Therefore the user can keep working or retry. The effects of the upload phase are not rolled back on the server.
 
-If the synchronization is called from a nanoflow, the error can be handled using nanoflow error handling. In other cases (for example, synchronization called from a button or at startup), a message will be displayed to the user that the data could not be synchronized.
+If the synchronization is called from a nanoflow, the error can be handled using nanoflow error handling. In other cases (for example, if synchronization is called from a button or at startup), a message will be displayed to the user that the data could not be synchronized.
 
 #### 2.5.2 Model- or Data-Related Errors {#othererrors}
 

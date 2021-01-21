@@ -13,6 +13,15 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2021
 
+### January 25th, 2021
+
+#### Mendix for Private Cloud — Mendix Operator v1.8.0 and Mendix Gateway Agent v1.7.0
+
+* We have improved dependency version management, so upgrading to future versions of the Mendix Operator would be easier.
+* We have added a feature to report installed component versions to the Private Cloud Portal. In the future, this will be used to indicate which Mendix for Private Cloud Operator version is installed and which features it supports.
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+
 ### January 6th, 2021
 
 #### Improvements

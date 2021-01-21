@@ -42,16 +42,18 @@ Synchronization is performed on the database level. This means if you synchroniz
 ### 2.1 Synchronization Types
 
 You can perform synchronization on two levels:
+* [Full synchronization](#full-sync)
+* [Selective synchronization](#selective-sync)
 
-#### 2.1.1 Full synchronization. {#full-sync}
+#### 2.1.1 Full Synchronization {#full-sync}
 
 This mode performs both the upload and the download phases for all entities used in the offline-first app. You can customize the behavior of each entity with [customizable synchronization](#customizable-synchronization}).
 
-#### 2.1.2 Selective synchronization {#selective-sync}
+#### 2.1.2 Selective Synchronization {#selective-sync}
 
 This mode allows you to select specific objects to synchronize.
 
-Selective synchronization can only be done through a **Synchronize** action inside a nanoflow. Synchronization performed via a UI element (for example a button, an onchange action, or other elements) performs the full synchronization.
+Selective synchronization can only be done through a **Synchronize** action inside a nanoflow. Synchronization performed using a UI element (for example a button, an onchange action, or other elements) performs the full synchronization.
 
 ### 2.2 Synchronization Phases
 

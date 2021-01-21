@@ -2,13 +2,13 @@
 title: "Declaring Native Dependencies"
 parent: "pluggable-parent-9"
 menu_order: 10
-description: A guide for understanding the client APIs available to pluggable widgets.
-tags: ["Widget", "Pluggable",  "JavaScript"]
+description: A guide for understanding native dependencies for pluggable widgets and JavaScript actions.
+tags: ["Widget", "Pluggable",  "JavaScript", "Native"]
 ---
 
 ## 1 Introduction
 
-While developing Pluggable Widgets and JavaScript Action it is essential to reuse already existing modules and libraries from JavaScript ecosystem. Mendix empowers widget developers with tooling for creating, developing and shipping pluggable widgets. It does the power lifting of linking and embedding 3rd party dependencies into code of pluggable widgets. The tooling also takes care of providing infomation about Android and iOS specific setup parts of some libraries to Mendix Native apps. Read this page if you want more details on how pluggable widgets communicate native dependencies to Mendix Native ecosystem.
+While developing pluggable widgets and JavaScript actions it is essential to reuse already existing modules and libraries from JavaScript ecosystem. Mendix empowers widget developers with tooling for creating, developing and shipping pluggable widgets. It does the power lifting of linking and embedding 3rd party dependencies into code of pluggable widgets. The tooling also takes care of providing infomation about Android and iOS specific setup parts of some libraries to Mendix Native apps. Read this page if you want more details on how pluggable widgets communicate native dependencies to Mendix Native ecosystem.
 
 While this tooling exists for pluggable widgets some manual work has to be done for JavaScript actions in order to use libraries targeting `react-native` where Andriod and iOS specific setup is required. Read this page if you want to use such libraries in your JavaScript actions.
 
@@ -51,12 +51,15 @@ In order to declare native dependencies needed for a pluggable widget or a JavaS
 }
 ```
 
-Where the key of the entry is a name of the depenendcy and the value is a version of a dependency needed. Note that semver is not supported and an exact version must be specified.
+Where the key of the entry is a name of the dependency and the value is a version of a dependency needed. Note that semver is not supported and an exact version must be specified.
 
 
-## 4 Read More
+## 4 Conflict Checking
 
-## 8 Read More
+It is not possible to include different version of the same native dependency in one project. For that reason when different components in a project use same native dependency the conflict check takes place in Studio Pro. It makes sure there is no mismatch between versions required by different components. In case of version conflict those are reported to the user.
+
+
+## 5 Read More
 
 * [Pluggable Widget API information](pluggable-parent-9)
 * [Build JavaScript Actions for Native Mobile](/howto/extensibility/create-native-javascript-action)

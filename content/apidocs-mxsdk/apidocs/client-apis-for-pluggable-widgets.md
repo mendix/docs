@@ -346,11 +346,11 @@ Mendix platform exposes two versions of an `Icon` react component: `mendix/compo
 
 ### 6.1 React and React Native {#exposed-react}
 
-Mendix platform re-export [react](https://www.npmjs.com/package/react), [react-dom](https://www.npmjs.com/package/react-dom), and [react-native](https://www.npmjs.com/package/react-native) packages to pluggable widgets. React is available to all components. React-dom is available only to components running in web or hybrid mobile apps. React-native is available only to components running in native mobile apps.
+Mendix platform re-export [react](https://www.npmjs.com/package/react), [react-dom](https://www.npmjs.com/package/react-dom), and [react-native](https://www.npmjs.com/package/react-native) packages to pluggable widgets. `react` is available to all components. `react-dom` is available only to components running in web or hybrid mobile apps. `react-native` is available only to components running in native mobile apps.
 
-Mendix provides you with React version 17.0.x (in npm terms `~17.0.0`). Patch versions might change from one minor release of Mendix to another. Mendix will always provide a matching version of react-dom.
+Mendix provides you with `react` version `17.0.x` (in npm terms `~17.0.0`) and a matching version of `react-dom`. For `react-native` Mendix exposes version `0.63.x` (in npm terms `~0.63.3`).
 
-For react-native Mendix exposes a single version: 0.63.3.
+Patch versions might change from one minor release of Mendix to another. 
 
 ### 6.2 Big.js
 

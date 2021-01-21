@@ -233,9 +233,14 @@ The data source metadata panel at the right of the asset details screen displays
 
 ### 4.4 Curate Bar {#curate-bar}
 
-The **Curate Bar** is displayed on the asset detail screen if you are the owner of the selected asset or a curator. You can perform the following actions:
-* **Edit Metadata** – edit the registered metadata and add Catalog descriptions and tags: 
-  * for a data source you can edit [Application Details](./curate#curate-application) and [Data Source Details](./curate#service-details)
+The **Curate Bar** is displayed on the asset detail screen if you are the owner of the selected asset or a curator:
+
+![](attachments/search/curate-bar.png)
+
+You can perform the following actions:
+
+* **Edit Metadata** – edit detals that are displayed in the Catalog: 
+  * for a selected data source you can edit [Application Details](./curate#curate-application) and [Data Source Details](./curate#service-details)
   *  for a selected dataset you can edit [Dataset Details](./curate#curate-datasets)
 * **Discoverable**/**Validated** – set the discoverability of the service, and validate the dataset
   * **Discoverable** – all users of Data Hub and Studio Pro can see and consume the service in combination with the classification of the data

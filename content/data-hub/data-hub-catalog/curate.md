@@ -35,7 +35,7 @@ The list can be also be sorted by any of the columns by clicking on the column h
 
 Click **View** to display the asset details. You can then perform curate actions to add Catalog specific information to the asset metadata.
 
-## 3 The Curation Bar
+## 3 The Curate Bar
 
 Curation is performed from the [asset details screen](search#search-details). If you are an owner of an asset or are a curator, you will see the **Curation Bar** for the selected item. The following shows the curation bar for a selected service: 
 
@@ -79,44 +79,42 @@ By default, the **Technical Owner** for a registered asset is the user who regis
 If you as a **Technical Owner** curate the asset and change the name, then you will no longer have curation rights to the asset once you save the changes. If the **Discoverability** is turned off for the asset, then you will also not be able to find the asset in the Catalog.
 {{% /alert %}}
 
-{{% alert type="info" %}}
-**Business** and **Technical Owners** have curation rights for the registered data source in the Data Hub Catalog if they are registered users on the Mendix Platform. If a custom owner is *created* with the process described in this section, the link to contact them will be displayed for the asset but this does not mean that they are able to curate it. 
-{{% /alert %}}
+{{% alert type="info" %}}**Business** and **Technical Owners** have curation rights for the registered data source in the Data Hub Catalog if they are registered users on the Mendix Platform. If a custom owner is *created* with the process described in this section, the link to contact them will be displayed for the asset but this does not mean that they are able to curate it. {{% alert type="info" %}}
 
-Curators and the Data Hub Admin can manage the custom owner details in the **Owner Management** screen as an **Administration** function. For further details see the [Managing Custom Owners ](../general/data-hub-admin-functions#customowners) section of *Data Hub Administration*. 
+{{% alert type="info" %}}Curators and the Data Hub Admin can manage custom owners as part of **Administration** functions. For further details see the [Managing Custom Owners ](../general/data-hub-admin-functions#customowners) section of *Data Hub Administration*. {{% alert type="info" %}}
 
 To change the **Business Owner ** or **Technical Owner**, follow these steps from the **Application Metadata** screen:
 
-1.  Click in the name field of the **Business** or **Technical** owner. You can start typing or select from the drop-down list of names. The list is an alphabetical list of Mendix platform users (who will be displayed with their avatar) and custom owners whose avatar will show their initials as shown in the following example:
+1. Click in the name field of the **Business** or **Technical** owner. You can start typing or select from the drop-down list of names. Mendix platform users will be displayed with their avatar and custom owners will be shown with an avatar that displays their initials as shown in the following example:
 
-	![](attachments/curate/custom-avatar.png)
+    ![](attachments/curate/custom-avatar.png)
 
-4. If you type a name that is not in the list, you will be asked if you want to **Create** it. Click on the prompt and the **Enter New Custom Owner Details** pop-up is displayed:
+4. If you type a name that is not in the list, you will be asked if you want to **Create** it. Click on the prompt and the **Enter New Custom Owner Details** in the pop-up that is displayed:
 
-	 {{% image_container width="250" %}}![custom contact create](attachments/curate/custom-contact.png){{% /image_container %}}
+	 {{% image_container width="275" %}}![custom contact create](attachments/curate/custom-contact.png){{% /image_container %}}
 
 5. Enter the **Name** and **Email** of the owner and click **Save**. 
 
-	{{% alert type="info" %}}The contact details that you add here will be shown as link for the application in the **Metadata** pane. This does not mean that they are able to curate the asset as an owner; only Mendix users can curate assets they own.
- {{% /alert %}}
+	{{% alert type="info" %}}If you create or select a custom owner for an application, this will only display a link to the email provided in the  **Metadata** pane. This will not give them curate or access rights to the asset; only Mendix users can curate assets they own. {{% /alert %}}
 
 6. Click **Save** to return to the **Application Metadata** screen. Click **Save Changes** to return to the asset details screen where the changes will be displayed in **Metadata** pane.
 
 #### 5.1.2 Changing the Application Icon {#application-icon}
 
-You can change the icon that is displayed for the app and the data source by uploading your own custom application icon or selecting one from Data Hub the icon library. The icon will be displayed for all endpoints of the application and data source such as the Catalog search results and also in the Mendix Studio Pro [Data Hub pane](/refguide/data-hub-pane) and Studio **Data Source** pane. 
+You can change the icon that is displayed for the app and the data source by uploading your own custom application icon or selecting one from Data Hub the icon library. The selected icon will be displayed for all endpoints of the application and data source such as the Catalog search results and also in the Mendix Studio Pro [Data Hub pane](/refguide/data-hub-pane) and Studio **Data Source** pane. 
 
-Currently, by default, the application icon is determined by the application type when the data source is registered. For example, for Mendix apps the Mendix Icon is displayed to identify the technology of the source app. 
+Currently, by default, the application icon is determined by the application type when the data source is registered. For example, for Mendix apps the Mendix Icon is displayed which identifies the technology of the source app. 
 
-When you want to upload a custom icon or image to use for the app, the following apply:
+**Upload Custom Icon Image File**
+When you want to upload a custom icon or image, the following apply:
 
 * The accepted file types are ***.png***, ***.jpg***, and ***.jpeg***
 
 * The maximum accepted file size is 50 KB
 	{{% alert type="info" %}}You will be able to upload a large file, and crop it to reduce the file size during the operation.{{% /alert %}}
 
-* The *minimum* recommended size in pixels of the image is 192 x 192. You can crop larger images and select the area you want to display during upload. 
-	{{% alert type="info" %}}If smaller images are uploaded, they will be expanded to meet the 192 x 192 size which may result in degradation of image quality. Ensure that your original file meets the recommendations.{{% /alert %}}
+* The *minimum* recommended size of the image is 64 pixels x 64 pixels. You can crop larger images and select the area you want to display during the upload operation. 
+	{{% alert type="info" %}}If smaller images are selected, they will be expanded to meet the 64 x 64 size which may result in degradation of image quality. Ensure that your original file meets the recommendations for an optimal display.{{% /alert %}}
 	
 * Custom icons that are uploaded will be saved to the **Icon Library** and can be used for other apps.
 
@@ -125,28 +123,27 @@ To **upload a different icon** for the app follow these steps:
 1. In the **Application Metadata** screen of the selected data source, click **Upload a different icon** to display the **Upload Application Icon** pop up:
     {{% image_container width="250" %}}![upload icon](attachments/curate/icon-upload-dialog.png){{% /image_container %}}
 
-2. Drag the image file into the upload area or click **Upload** to browse and select a file from your file system. Click **Step 2: Crop image** to proceed further.
+2. Drag the image file into the upload area or click **Upload** to browse and select a file from your file system. Click **Step 2: Crop image** to proceed.
 
-3. Crop the image by selecting the area of the image and change the size of the wire-frame to enclose the area that you want to use for you icon. When you are satisfied, click **Apply Changes**:
+3. Move the wire-frame to select an area of the loaded image and change the size of the wire-frame to crop the image to the area that you want to use. When you are satisfied, click **Apply Changes**:
 
 	{{% image_container width="250" %}}![upload icon](attachments/curate/icon-crop.png){{% /image_container %}}
 	
-4. A preview of the application icon is shown. You can click **Save** to upload the selected icon, or click **upload another** to upload another image.
+	{{% alert type="info" %}}For high-resolution images, if the selected are exceeds the size limit there will be a warning. Select a smaller area of the image to reduce the file size.{{% /alert %}}
+	
+4. A preview of the application icon is shown. Click **Save** to upload the selected icon.
 	
 	{{% image_container width="250" %}}![upload icon](attachments/curate/icon-preview.png){{% /image_container %}}
 	
-5. A preview of the application icon is shown. You can click **Save** to upload the selected icon, or click **upload another** to upload another image.
-
-	{{% image_container width="250" %}}![upload icon](attachments/curate/icon-preview.png){{% /image_container %}}
-	
-6. When you have saved the uploaded icon, the **Asset Metadata** screen will now show the selected icon for the application:
+5. The **Application Metadata** screen will now show the selected icon for the application:
 	![upload icon](attachments/curate/asset-metadata-new-icon.png)
 
-7. Click **Save Changes** to return to the data source details page. The custom icon will be stored in **Icon Library**.
+6. Click **Save Changes** to return to the data source details page. The custom icon will be stored in the **Icon Library**.
 
-An alternative to uploading an icon is to use an existing icon by clicking **select one from your library**. The current icons for your Data Hub will be shown and you can select one to use.
+**Select Icon from Library**
+An alternative to uploading an icon is to use an existing icon by clicking **select one from your library**. The icons for your Data Hub will be shown and you can select one and click **Change Icon**.
 
-{{% image_container width="250" %}}![upload icon](attachments/curate/icon-library.png){{% /image_container %}}
+{{% image_container width="300" %}}![upload icon](attachments/curate/icon-library.png){{% /image_container %}}
 
 ### 5.2 Data Source Description{#service-details}
 

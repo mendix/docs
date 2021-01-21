@@ -79,9 +79,13 @@ By default, the **Technical Owner** for a registered asset is the user who regis
 If you as a **Technical Owner** curate the asset and change the name, then you will no longer have curation rights to the asset once you save the changes. If the **Discoverability** is turned off for the asset, then you will also not be able to find the asset in the Catalog.
 {{% /alert %}}
 
-{{% alert type="info" %}}**Business** and **Technical Owners** have curation rights for the registered data source in the Data Hub Catalog if they are registered users on the Mendix Platform. If a custom owner is *created* with the process described in this section, the link to contact them will be displayed for the asset but this does not mean that they are able to curate it. {{% alert type="info" %}}
+{{% alert type="info" %}}
+**Business** and **Technical Owners** have curation rights for the registered data source in the Data Hub Catalog if they are registered users on the Mendix Platform. If a custom owner is *created* with the process described in this section, the link to contact them will be displayed for the asset but this does not mean that they are able to curate it. 
+{{% alert type="info" %}}
 
-{{% alert type="info" %}}Curators and the Data Hub Admin can manage custom owners as part of **Administration** functions. For further details see the [Managing Custom Owners ](../general/data-hub-admin-functions#customowners) section of *Data Hub Administration*. {{% alert type="info" %}}
+{{% alert type="info" %}}
+Curators and the Data Hub Admin can manage custom owners as part of **Administration** functions. For further details see the [Managing Custom Owners ](../general/data-hub-admin-functions#customowners) section of *Data Hub Administration*. 
+{{% alert type="info" %}}
 
 To change the **Business Owner ** or **Technical Owner**, follow these steps from the **Application Metadata** screen:
 
@@ -106,14 +110,18 @@ You can change the icon that is displayed for the app and the data source by upl
 Currently, by default, the application icon is determined by the application type when the data source is registered. For example, for Mendix apps the Mendix Icon is displayed which identifies the technology of the source app. 
 
 **Upload Custom Icon Image File**
+
 When you want to upload a custom icon or image, the following apply:
 
 * The accepted file types are ***.png***, ***.jpg***, and ***.jpeg***
 
 * The maximum accepted file size is 50 KB
-	{{% alert type="info" %}}You will be able to upload a large file, and crop it to reduce the file size during the operation.{{% /alert %}}
-
+	
+	{{% alert type="info" %}}You will be able to upload a large file, and crop it to reduce the file size during the operation.
+{{% /alert %}}
+	
 * The *minimum* recommended size of the image is 64 pixels x 64 pixels. You can crop larger images and select the area you want to display during the upload operation. 
+	
 	{{% alert type="info" %}}If smaller images are selected, they will be expanded to meet the 64 x 64 size which may result in degradation of image quality. Ensure that your original file meets the recommendations for an optimal display.{{% /alert %}}
 	
 * Custom icons that are uploaded will be saved to the **Icon Library** and can be used for other apps.
@@ -121,7 +129,8 @@ When you want to upload a custom icon or image, the following apply:
 To **upload a different icon** for the app follow these steps:
 
 1. In the **Application Metadata** screen of the selected data source, click **Upload a different icon** to display the **Upload Application Icon** pop up:
-    {{% image_container width="250" %}}![upload icon](attachments/curate/icon-upload-dialog.png){{% /image_container %}}
+
+	{{% image_container width="250" %}}![upload icon](attachments/curate/icon-upload-dialog.png){{% /image_container %}}
 
 2. Drag the image file into the upload area or click **Upload** to browse and select a file from your file system. Click **Step 2: Crop image** to proceed.
 
@@ -141,6 +150,7 @@ To **upload a different icon** for the app follow these steps:
 6. Click **Save Changes** to return to the data source details page. The custom icon will be stored in the **Icon Library**.
 
 **Select Icon from Library**
+
 An alternative to uploading an icon is to use an existing icon by clicking **select one from your library**. The icons for your Data Hub will be shown and you can select one and click **Change Icon**.
 
 {{% image_container width="300" %}}![upload icon](attachments/curate/icon-library.png){{% /image_container %}}
@@ -153,9 +163,7 @@ As search in the Data Hub also includes searching the contents of the descriptio
 
 You can also specify if the OData service **Contract Description** or the **Catalog Description** is displayed in the Data Hub Catalog. 
 
-{{% alert type="info" %}}
-If there is a **Catalog Description** for a service, both descriptions will be registered for the service in the Catalog and during curation either the catalog or the contract description can be selected to be displayed. 
-{{% /alert %}}
+{{% alert type="info" %}}If there is a **Catalog Description** for a service, both descriptions will be registered for the service in the Catalog and during curation either the catalog or the contract description can be selected to be displayed. {{% /alert %}}
 
 To edit the asset metadata, follow these steps: 
 

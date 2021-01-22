@@ -23,7 +23,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Fixes
 
-* We fixed several minor issues with the My [Apps page](/developerportal/apps-list/#my-apps)
+* We fixed several minor issues with the [My Apps](/developerportal/apps-list/#my-apps) page
 
 ### January 15th, 2021
 

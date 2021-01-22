@@ -19,7 +19,6 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 * We removed support for the country and skype attributes in your developer profile.
 * You can no longer create new polls on the company or project buzz page. Existing polls can still be answered.
-* We have removed the intercom conversation channel that pops up in the bottom right corner of the Developer Portal.
 
 #### Fixes
 

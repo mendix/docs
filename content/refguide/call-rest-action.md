@@ -94,7 +94,7 @@ When you select **Override**, you can configure dynamically whether to use a pro
 
 ### 4.6 Client certificate
 
-In almost all cases, you can ignore this setting. **Use project settings** is a good default value.
+In most cases, the default **Use project settings** can be used.
 
 If desired, you can configure which client certificate to use for the request. These are the choices:
 

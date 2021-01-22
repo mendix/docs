@@ -102,7 +102,7 @@ Follow the steps below:
 
 10. In the button properties, click **Page**.
 
-11. In the **Select Page** dialog box, click **New Page**.
+11. In the **Select Page** dialog box, click the plus icon in the top right corner.
 
 12. In the **Create new page** dialog box, do the following:
 

@@ -167,7 +167,7 @@ These actions support multi-selection of stories, except for the **Clone** actio
 When you click a story title, the **Story Details** page opens:
 
 {{% image_container width="500" %}}
-![](attachments/stories/story-details.png)
+![](attachments/stories/story-details.jpg)
 {{% /image_container %}}
 
 On this page, you can perform a number of actions:

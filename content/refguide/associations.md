@@ -148,7 +148,7 @@ In XML, instances of these entities and their associations look as follows (note
 
 ```
 
-### 4.4 Many-to-Many Association with Dual Ownership
+### 4.4 Many-to-Many Association with Dual Ownership {#many-to-many-both}
 
 A many-to-many association where both entities are owners is created by setting the owner property to `Both` and the type property to `Reference set`.
 

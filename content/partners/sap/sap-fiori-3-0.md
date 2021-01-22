@@ -14,11 +14,9 @@ Should we have a section on the "Shell Bar"?
 
 ## 1 Introduction
 
-The SAP Fiori user experience creates a consistent UI across the SAP Suite of products. SAP Fiori 3 is SAP’s new target design system for all SAP products in the *Intelligent Suite*. The  [SAP Fiori 3 UI Resource](https://marketplace.mendix.com/link/component/116359) module in the Mendix App Store allows you to create the same user experience in your Mendix apps.
+The SAP Fiori user experience creates a consistent UI across SAP products. SAP Fiori 3 is SAP’s new target design system for all SAP products in the *Intelligent Suite*. The  [SAP Fiori 3 UI Resource](https://marketplace.mendix.com/link/component/116359) module in the Mendix App Store allows you to create the same user experience in your Mendix apps.
 
 The Mendix module gives you access to designing your pages with SAP Fiori-styled widgets and building blocks as part of your layout. You can also allow end-users to select a theme and apply it immediately. The module supports SAP Quartz Light and Dark themes.
-
-{{% todo %}}[Add link to Fiori 3 Starter App when published]{{% /todo %}}
 
 You can experience the SAP Fiori 3 design by using the SAP Fiori 3 Starter App as the basis for a new app, or by including the [SAP Fiori 3 UI Resources](https://marketplace.mendix.com/link/component/116359) module in your app.
 
@@ -131,7 +129,7 @@ You can see examples of the Fiori 3 navigation layouts by going to the **Layout*
 The guidelines for the use of each layout are:
 
 * Use the **PopupLayout** to create a page which appears in front of the existing page.
-* Use the **SAP_Launchpad** layout when you want to create a SAP Fiori Launchpad. See [SAP Fiori Launchpad – Overview](https://experience.sap.com/fiori-design-web/launchpad/) on the *SAP Fiori Design Guidelines* site for more information.
+* Use the **SAP_Launchpad** layout when you want to create a SAP Fiori launchpad. See [SAP Fiori Launchpad – Overview](https://experience.sap.com/fiori-design-web/launchpad/) on the *SAP Fiori Design Guidelines* site for more information.
 * Use a *Default* layout to display information in a single panel.
 * Use a *MasterDetail* layout to display information in two panels side-by-side such as an *Order* with multiple *Order Lines*.
 * Use a *Sliding* layout to display dynamic side content. See [Dynamic Side Content](https://experience.sap.com/fiori-design-web/dynamic-side-content/) on the *SAP Fiori Design Guidelines* site for more information.

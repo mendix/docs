@@ -2,7 +2,7 @@
 title: "Using Installation and Configuration Scripts"
 parent: "private-cloud-cluster"
 description: "How to use the installation and configuration scripts in Kubernetes to configure the Private Cloud namespace"
-menu_order: 10
+menu_order: 20
 tags: ["Installation Script", "Configuration Script", "Private Cloud", "Cluster", "Namespace"]
 ---
 

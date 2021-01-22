@@ -243,7 +243,7 @@ The **Validated** value can be assigned to a data source. When it is turned on, 
 
 ## 6 Curating Datasets and Attributes {#curate-datasets}
 
-Datasets and their exposed attributes can be curated to add **Catalog descriptions**. Catalog descriptions are stored in the Data Hub Catalog and it is possible to specify if the description provided in the service contract metadata or the Data Hub Catalog descriptions are displayed for the item.
+Datasets and their exposed attributes can be curated to add **Catalog descriptions**. Catalog descriptions are stored in the Data Hub Catalog and you can specify which description is displayed: the service contract  or the Catalog.
 
 To change dataset and attribute descriptions, follow these steps:
 

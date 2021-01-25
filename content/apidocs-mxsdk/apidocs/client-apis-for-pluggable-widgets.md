@@ -346,7 +346,7 @@ Mendix platform exposes two versions of an `Icon` react component: `mendix/compo
 
 ### 6.1 React and React Native {#exposed-react}
 
-Mendix platform re-export [react](https://www.npmjs.com/package/react), [react-dom](https://www.npmjs.com/package/react-dom), and [react-native](https://www.npmjs.com/package/react-native) packages to pluggable widgets. `react` is available to all components. `react-dom` is available only to components running in web or hybrid mobile apps. `react-native` is available only to components running in native mobile apps.
+The Mendix Platform re-exports [react](https://www.npmjs.com/package/react), [react-dom](https://www.npmjs.com/package/react-dom), and [react-native](https://www.npmjs.com/package/react-native) packages to pluggable widgets. `react` is available to all components. `react-dom` is available only to components running in web or hybrid mobile apps. `react-native` is available only to components running in native mobile apps.
 
 Mendix provides you with `react` version `17.*.*` (in npm terms `^17.0.1`) and a matching version of `react-dom`. For `react-native` Mendix exposes version `0.63.*` (in npm terms `~0.63.3`).
 
@@ -354,11 +354,11 @@ Patch versions might change from one minor release of Mendix to another.
 
 ### 6.2 Big.js
 
-The Mendix platform uses [big.js](https://www.npmjs.com/package/big-js) to represent and operate on numbers. Mendix 9.0 re-exports version 6.0.
+The Mendix Platform uses [big.js](https://www.npmjs.com/package/big-js) to represent and operate on numbers. Mendix 9.0 re-exports version 6.0.
 
-## 7 Native dependencies
+## 7 Native Dependencies
 
-Sometimes for widgets it is necessary to rely on existing community libraries of `react` and `react-native` world. With widgets targeting web platform it is easy to include those libraries as they could be shipped together with a widget by bundling them into the widget's package. That is often not the case with libraries targeting native platform as some of them require a setup of Android and iOS specific code into a Mendix native app or Make It Native (TODO: link ot appstore?) app. For more information see [Declaring Native Dependencies](native-dependencies);
+Sometimes for widgets it is necessary to rely on the existing community libraries of `react` and `react-native`. With widgets targeting web platform it is easy to include those libraries as they could be shipped together with a widget by bundling them into the widget's package. That is often not the case with libraries targeting a native platform, as some of them require a setup of Android and iOS specific code into a Mendix native app or [Make It Native](/refguide/getting-the-make-it-native-app) app. For more information, see [Declaring Native Dependencies](native-dependencies).
 
 ## 8 Read More
 

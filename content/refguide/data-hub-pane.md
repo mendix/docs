@@ -15,7 +15,7 @@ tags: ["studio Pro", "data hub", "data hub pane", "data hub catalog"]
 You need a license to use Data Hub in Studio Pro. For further information see [Data Hub License](consumed-odata-service-requirements#license-limitations).
 {{% /alert %}}
 
-You can search in the Data Hub Catalog through the **Data Hub** pane to discover data sources that you can use in your project. Via this pane you can add the entities that are exposed in the registered OData services—called **Data Sources** in Data Hub—into your app's domain model. These entities are called [external entities](external-entities) and are different becasue they enable the connection to the data associated with the entities in the originating app.
+You can search in the Data Hub Catalog through the **Data Hub** pane to discover data sources that you can use in your project. Via this pane you can add the entities that are exposed in the registered OData services—called **Data Sources** in Data Hub—into your app's domain model. These entities are called [external entities](/external-entities) and are different because they enable the connection to the data associated with the entities in the originating app.
 
 {{% alert type="info" %}}
 In the Data Hub Catalog, registered published services are referred to as *data sources* and exposed entities will show the **Entity set** name and are called *datasets.*
@@ -39,7 +39,7 @@ The following functionality is available in the pane:
 
 * [Filter](#search) – By default, the search will be performed on assets in the **Production** environment. Click the **Filter** icon to include all other environments such as test, acceptance and also the Mendix free app environment **Sandbox** in the search.
 
-* [Search results](#viewing) – The search results will show all elements in the catalog that satisfy the search string. For each "hit" the information this is displayed includes the service name, service version, environment that the service was deployed to, and the elements matching the search string. If attributes or associations satisfy the search criteria, they will be displayed. You can drag from the search results into your domain model and they are displayed as [external entities](external-entities.md):
+* [Search results](#viewing) – The search results will show all elements in the catalog that satisfy the search string. For each "hit" the information this is displayed includes the service name, service version, environment that the service was deployed to, and the elements matching the search string. If attributes or associations satisfy the search criteria, they will be displayed. You can drag from the search results into your domain model and they are displayed as [external entities](external-entities):
 
   ![](attachments/data-hub-pane/external-entity.png)
 

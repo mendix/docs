@@ -3,7 +3,7 @@ title: "Cloud Foundry"
 category: "Deployment"
 menu_order: 50
 description: "How to deploy a Mendix App on a Cloud Foundry environment which does not have Mendix support in the Developer Portal"
-tags: ["Cloud Foundry", "Pivotal", "Deploy", "Bind"]
+tags: ["Cloud Foundry", "Deploy", "Bind"]
 aliases:
     - /deployment/cloud-foundry/index.html
     - /howto/deploying-a-mendix-app-to-cloud-foundry.html
@@ -51,7 +51,7 @@ Only use the instructions in this document if you have specific requirements whi
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Download the latest version of Studio Pro from the [Mendix App Store](https://appstore.home.mendix.com/link/modelers)
-* Have access to a service account with the rights to create new applications and services. One service which you can use is [Pivotal Web Services](https://run.pivotal.io/) which is free to try for a limited period.
+* Have access to a service account with the rights to create new applications and services.
 
 ## 3 Configuring Cloud Foundry in Studio Pro {#3}
 
@@ -64,7 +64,6 @@ To deploy a Mendix app to Cloud Foundry, you have to configure the settings in S
 2.  Enter the following in the credentials of the **Edit Cloud Foundry Settings** window:
 
 	* **API endpoint** is the endpoint of the platform which you will be able to get from the platform documentation. Examples are:
-		* `https://api.run.pivotal.io` for Pivotal
 		* `https://api.ng.bluemix.net` for IBM region US South
 		* `https://api.cf.eu10.hana.ondemand.com` for SAP Frankfurt
 	* **User name** is the name of your account on the platform
@@ -112,12 +111,11 @@ To configure the Cloud Foundry environment, you will need to go to the console f
 
 All these consoles have similar features which allow you to select services, bind them to your app, and view details of the environment and the app. Some example consoles are:
 
-* [Pivotal](http://console.run.pivotal.io/)
 * [IBM](https://console.bluemix.net/dashboard/apps/)
 * [SAP](https://account.hanatrial.ondemand.com/cockpit#/home/trialhome)
 
 {{% alert type="info" %}}
-The images in this document are mainly taken from the Pivotal console.
+The images in this document are mainly taken from a previous hosting option, the Pivotal Web Services console, which is no longer available.
 {{% /alert %}}
 
 To add a database service to your app, follow these steps:

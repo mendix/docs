@@ -13,7 +13,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2021
 
-### January 19th, 2021
+### January 29th, 2021
 
 #### New Features
 
@@ -22,6 +22,17 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 #### Improvements
 
 * We moved the existing Company Admin features in the Developer Portal to Control Center.
+
+### January 24th, 2021
+
+#### Improvements
+
+* We removed support for the **Country** and **Skype** attributes in your [Mendix Profile](/developerportal/mendix-profile/).
+* You can no longer create new polls on the company or app project[Buzz](/developerportal/collaborate/buzz) page. Existing polls can still be answered.
+
+#### Fixes
+
+* We fixed several minor issues with the [My Apps](/developerportal/apps-list/#my-apps) page.
 
 ### January 15th, 2021
 

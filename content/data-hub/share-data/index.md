@@ -146,7 +146,7 @@ The **{yourname}CustomerODataService** from your app is now registered in the Da
 
 	{{% alert type="info" %}}  You will note that in the Catalog, the **Exposed entity set name**  or **Dataset** is displayed for the entity that you published in the previous section; it is **Customers**. {{% /alert %}}
 
-8. As you are the owner of the service, the **Curate** bar is also displayed. You have curate permissions to edit the metadata for this service and also additional information to the registered data. The curation bar will state "**You are the owner of the service**":
+8. As you are the owner of the service, the **Curate** bar is also displayed. You have curate permissions which means that you can edit the information that is displayed for this service in the Catalog and also add additional information such as the **Business Owner**. The curation bar will state "**You are the owner of the service**":
 
 	![data hub](attachments/share-data/search-details-screen.png)
 

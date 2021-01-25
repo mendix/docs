@@ -107,7 +107,7 @@ Capitalize in all instances (to parallel "Team Server" and "Model Server").
 
 ### Business Engineer
 
-This is an app project role. As such, it differs from the term "business developer," which is used in the [Mendix Platform Evaluation Guide](https://www.mendix.com/evaluation-guide/) as a generic role and persona term.
+This is an app project role. As such, it differs from the term "business developer," which is used in the Mendix Platform Evaluation Guide as a generic role and persona term.
 
 {{% alert type="info" %}}
 Capitalize in all instances.
@@ -259,7 +259,7 @@ Do not capitalize "points."
 
 ### Mendix Platform Evaluation Guide
 
-Published [here](https://www.mendix.com/evaluation-guide/).
+Published [here](https://www.mendix.com/evaluation-guide/welcome).
 
 {{% alert type="info" %}}
 Use the full name when referencing, not just "Evaluation Guide."

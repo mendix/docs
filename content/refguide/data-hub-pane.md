@@ -12,10 +12,14 @@ tags: ["studio Pro", "data hub", "data hub pane", "data hub catalog"]
 [Mendix Data Hub](/data-hub/index) enables integration of available data sources from the different applications in an organization into your Mendix apps. This means that new apps can be created using shared datasets that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/index). In Studio Pro, this is possible using the integrated functionality of Data Hub Catalog through the **Data Hub** pane.
 
 {{% alert type="info" %}}
-You need a license to use Data Hub in Studio Pro. You will not For further information see [Data Hub License](consumed-odata-service-requirements#license-limitations).
+You need a license to use Data Hub in Studio Pro. For further information see [Data Hub License](consumed-odata-service-requirements#license-limitations).
 {{% /alert %}}
 
 The **Data Hub** pane enables you to search the Data Hub Catalog and discover the data sources available for your organization. Via this pane you can add the entities that are exposed in the OData services registered in the Data Hub Catalog into your app's domain model. These external entities provide the connection to the data associated with the entities which can be utilized in your app and they are called [external entities](external-entities).
+
+{{% alert type="info" %}}
+In the Data Hub Catalog, registered published services are referred to as *data sources* and exposed entities will show the **Entity set** name and are called *datasets.*
+{{% /alert %}}
 
 To display the **Data Hub** pane, click **View** > **Data Hub**:
 
@@ -23,7 +27,7 @@ To display the **Data Hub** pane, click **View** > **Data Hub**:
 
 ## 2 Data Hub Pane in the Domain Model
 
-In the domain model, the Data Hub pane is used to search the Data Hub Catalog for services and entities that can be dragged and used in your app project:
+The Data Hub pane is used to search the Data Hub Catalog for services and entities that can be dragged and used in your app project:
 
 {{% image_container width="300" %}}![](attachments/data-hub-pane/data-hub-pane.png){{% /image_container %}}
 

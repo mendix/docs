@@ -263,7 +263,7 @@ In this section, you can tell the Mendix community about yourself and your work 
 
 ### 10.3 Social {#social}
 
-Here you can connect  your social accounts for **GitHub**, **Meetup**, **Twitter**, **LinkedIn**, and **Skype**.
+Here you can connect  your social accounts for **GitHub**, **Meetup**, **Twitter**, and **LinkedIn**.
 
 ### 10.4 Security {#security}
 

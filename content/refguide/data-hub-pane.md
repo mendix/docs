@@ -110,13 +110,13 @@ The search results and Project pane will show the following at a service level:
   
   {{% image_container width="250" %}}![Data Hub Pane Information](attachments/data-hub-pane/data-hub-pane-info.png){{% /image_container %}}
   
-### 4.2 Entities, Attributes, and Associations 
+### 4.2 Entities, Attributes, and Associations {#association-attributes}
 
 Entities, attributes and associations that satisfy the search string are listed in the search results. 
 
 For any service in the list, you can click **:Show details** to see the full list of the exposed entities and the associations and attributes for that service.
 
-{{% alert type="info" %}}The associations and attributes that are not supported in your Mendix project will be shown as non-selectable (gray).{{% /alert %}}
+{{% alert type="info" %}}The associations and attributes that are not supported in your Mendix model are shown as non-selectable (gray) and will not be included when you drag them into the domain model.{{% /alert %}}
 
 {{% image_container width="250" %}}![Data Hub Pane Information](attachments/data-hub-pane/expand-service-list.png){{% /image_container %}}
 

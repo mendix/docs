@@ -15,7 +15,7 @@ tags: ["studio Pro", "data hub", "data hub pane", "data hub catalog"]
 You need a license to use Data Hub in Studio Pro. For further information see [Data Hub License](consumed-odata-service-requirements#license-limitations).
 {{% /alert %}}
 
-You can search in the Data Hub Catalog through the **Data Hub** pane to discover data sources that you can use in your project. Via this pane you can add the entities that are exposed in the registered OData services—called **Data Sources** in Data Hub—into your app's domain model. These entities are called [external entities](/external-entities) and are different because they enable the connection to the data associated with the entities in the originating app.
+You can search in the Data Hub Catalog through the **Data Hub** pane to discover data sources that you can use in your project. Via this pane you can add the entities that are exposed in the registered OData services—called **Data Sources** in Data Hub—into your app's domain model. These entities are called [external entities](external-entities) and are different because they enable the connection to the data associated with the entities in the originating app.
 
 {{% alert type="info" %}}
 In the Data Hub Catalog, registered published services are referred to as *data sources* and exposed entities will show the **Entity set** name and are called *datasets.*

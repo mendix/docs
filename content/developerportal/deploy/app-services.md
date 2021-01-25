@@ -26,7 +26,7 @@ On the **App Service** page, you can see a list of the available app services, w
 
 ![](attachments/app-services/publish-appservice.png)
 
-For more information, see [Published App Services](/refguide/published-app-services) in the *Studio Pro Guide*.
+For more information, see [Published App Services](/refguide8/published-app-services) in the *Studio Pro Guide*.
 
 ### 2.1 Settings
 
@@ -92,4 +92,4 @@ For more information, see [How to Share App Store Content](/appstore/general/sha
 ## 5 Read More
 
 * [Deploy and Manage](/developerportal/deploy)
-* [Published App Service](/refguide/published-app-services)
+* [Published App Service](/refguide8/published-app-services)

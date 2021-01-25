@@ -11,7 +11,32 @@ These release notes cover changes to the app project management functionality an
 For release notes on Mendix Cloud and deployment options, see [Deployment](deployment).
 {{% /alert %}}
 
+## 2021
+
+### January 15th, 2021
+
+#### Improvements
+
+* We redesigned the [My Apps](/developerportal/apps-list/#my-apps) page.
+* You will now see labels when you are editing a [story](/developerportal/collaborate/stories#story-actions) using the new **Stories** UI. We will enable the editing of story labels and label colors in a future release.
+
+#### Fixes
+
+* We fixed an issue where newly-added Company Admins did not get access to edit [user groups](/appstore/general/app-store-overview#user-groups) in the App Store.
+
 ## 2020
+
+### December 23rd, 2020
+
+#### Improvements
+
+* We tweaked the styling of the **Stories** > [Project History](/developerportal/collaborate/stories#history) page.
+* We made [moving a story](/developerportal/collaborate/stories#move-stories) to another app project more intuitive.
+* We removed the Model page, which contained tips on how to get started creating your apps.
+
+#### Fixes
+
+* We fixed an issue where replies to Buzz notifications were not properly processed into comments on your [app Buzz](/developerportal/collaborate/buzz#app-buzz) page. (Ticket 111076)
 
 ### December 2nd, 2020
 
@@ -64,7 +89,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Fixes
 
-* We placed a deprecation warning in a file hosted by the Developer Portal that is used in old versions of the [Mendix Feedback](/appstore/widgets/mendix-feedback#below) widget. As of October 1st, 2020, we will end support for Mendix Feedback widget version 5 or below. Please always keep your Feedback widget up-to-date to ensure the best experience for your users.
+* We placed a deprecation warning in a file hosted by the Developer Portal that is used in old versions of the [Mendix Feedback](/appstore/widgets/mendix-feedback) widget. As of October 1st, 2020, we will end support for Mendix Feedback widget version 5 or below. Please always keep your Feedback widget up-to-date to ensure the best experience for your users.
 * We fixed an issue where you could move a user story to a different Sprint without specifying the target Sprint.
 
 ### July 28th, 2020

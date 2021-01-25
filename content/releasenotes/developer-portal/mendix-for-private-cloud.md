@@ -11,7 +11,44 @@ These release notes cover changes to deployment to [Mendix for Private Cloud](/d
 For information on the current status of deployment to Mendix for Private Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
 
+## 2021
+
+### January 6th, 2021
+
+#### Improvements
+
+* We added the ability to export Mendix components from the Mendix registry and import them into your own registry. This allows you to use Mendix for Private Cloud behind a firewall. For more information see [Migrating to Your Own Registry](/developerportal/deploy/private-cloud-migrating).
+
 ## 2020
+
+### December 29th, 2020
+
+#### Fixes
+
+* We fixed an error where opening the feedback widget on a Mendix for Private Cloud page in the Developer Portal resulted in an error.
+* We upgraded the Mendix version used for Mendix for Private Cloud in the Developer Portal to apply the latest security fix.
+
+### December 14th, 2020
+
+#### Portal Improvements
+
+* We have added support in the Developer Portal to configure custom Certificate Authorities which should be trusted by the Mendix Operator and app environments.
+* We now add an environment UUID to environments deployed to Private Cloud namespaces so environment names no longer need to be unique.
+* As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on Mendix for Private Cloud. The functions of this page are still available via the **Edit in Studio** and **Edit in Studio Pro** buttons on the environments page. 
+
+#### Fixes
+
+* We fixed the bug where you would be taken to a non-existent page and receive a *404 Not Found* message if you didn't select an Operating System when downloading the configuration tool.
+
+### December 10th, 2020
+
+#### Mendix for Private Cloud — Mendix Operator v1.7.0 and Mendix Gateway Agent v1.6.0
+
+* We have added a configuration option to add custom Certificate Authorities which should be trusted by the Mendix Operator and app environments.
+* We have added a Strict TLS mode to PostgreSQL, SQL Server, and Minio, which will only allow connections to the database and file storage if there is a valid and trusted TLS certificate. Together with the custom Certificate Authorities option, this will ensure that Mendix apps are connecting to the database and file storage over a secured connection. Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
+* We have added an option to specify TLS client certificates in Mendix apps. A Mendix app can use a TLS client certificate when communicating with external web services.
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
 
 ### November 16th, 2020
 

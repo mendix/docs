@@ -16,12 +16,6 @@ If you get a **No Development Line Selected** message when opening your app in S
 
 {{% /alert %}}
 
-{{% alert type="warning" %}}
-
-Collaborative development is enabled by default for new apps created via the Developer Portal. If you are upgrading your project from Mendix 7 to 8, make sure you have followed the steps in [Moving from Desktop Modeler Version 7 to Studio Pro 8](moving-from-7-to-8). 
-
-{{% /alert %}}
-
 ## 2 Collaborative Development Overview
 
 Studio Pro users can collaborate with each other through [version control](version-control) via **Commit** and **Update** operations. 

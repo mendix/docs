@@ -156,7 +156,7 @@ To customize your JavaScript actions, consult the sections below.
 
 #### 2.2.1 Understanding the Mendix Client API
 
-Within the JavaScript actions, the full Mendix Client API is available. For reference, see the [Mendix Client API](https://apidocs.rnd.mendix.com/7/client/index.html). Note that some parts of the Mendix Client API were created for widgets, and are less relevant for JavaScript actions.
+Within the JavaScript actions, the full Mendix Client API is available. For reference, see the [Mendix Client API](https://apidocs.rnd.mendix.com/8/client/index.html). Note that some parts of the Mendix Client API were created for widgets, and are less relevant for JavaScript actions.
 
 #### 2.2.2 Using Numeric Parameters in Your JavaScript Actions
 
@@ -468,7 +468,7 @@ After the file is loaded, breakpoints can be set in the code by clicking the inl
 Not all capabilities are recommended for use. Consider the side effects that an action could have on the Mendix Client, DOM, or other widgets:
 
 * Do not assume your user's browser – remember not all browsers have the same capabilities
-* Permanent rendering should be done using pluggable or custom widgets – the new Mendix Client will render the page at will and remove your changes (for example, when you are rendering DOM, work on a DOM node of the `index.html`)
+* Permanent rendering should be done using pluggable widgets – the new Mendix Client will render the page at will and remove your changes (for example, when you are rendering DOM, work on a DOM node of the `index.html`)
 * Changes to the DOM might be lost due to the Mendix Client which can render the DOM at will (for example, when you add a CSS class to another component the Mendix Client will render the page at will and remove your changes) – you can create and change DOM elements that are placed outside `<div id="content"></div>`
 * Avoid using deprecated libraries – do not use Dojo or Dijit as they will be deprecated (jQuery should also no longer be used)
 * Avoid using Boolean actions that return `undefined`– the Boolean variable is the only variable that requires a value, is the only acceptable state is  `true` or `false`(other variables could be set to `undefined` and can be checked in Mendix Studio Pro as `$variable != empty`)

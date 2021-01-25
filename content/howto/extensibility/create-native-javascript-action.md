@@ -20,7 +20,7 @@ Native mobile applications have faster performance and give you the ability to u
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install Mendix 8.6.0 (Build 715) from the [App Store](https://appstore.home.mendix.com/link/modelers/)
+* Install the latest version of Mendix Studio Pro from the [App Store](https://appstore.home.mendix.com/link/modelers/)
 * Install the [Git](https://git-scm.com/downloads) command line tool
 * Install npm's [node js](https://nodejs.org)
 * Install [Native Builder v3.1.0](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) (this tutorial can only be completed using Native Builder v3.1.0 or higher)

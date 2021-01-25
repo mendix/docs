@@ -16,7 +16,7 @@ This document explains how to set up the cluster in Mendix.
 
 Once you have created your namespace, you can invite additional team members who can then create or view environments in which their apps are deployed, depending on the rights you give them. For more information on the relationship between Mendix environments, Kubernetes namespaces, and Kubernetes clusters, see [Containerized Mendix App Architecture](#containerized-architecture), below.
 
-## 2 Prerequisites for Creating a Cluster
+## 2 Prerequisites for Creating a Cluster{#prerequisites}
 
 To create a cluster in your OpenShift context, you need the following:
 
@@ -152,7 +152,7 @@ Once you are signed in to your cluster you can run the Configuration Tool.
 
 If, instead of using the Configuration Tool, you want to run the scripts in your Kubernetes cluster, see the instructions in [Using Installation and Configuration Scripts](private-cloud-config-script).
 
-#### 4.3.1 Base Installation
+#### 4.3.1 Base Installation{#base-installation}
 
 If the Mendix Operator and the Mendix Gateway Agent have not been installed in your cluster, you will need to install them.
 
@@ -178,11 +178,11 @@ If the Mendix Operator and the Mendix Gateway Agent have not been installed in y
 
 The Mendix operator and Mendix Gateway Agent are now installed on your platform.
 
-#### 4.3.2 Configure Namespace
+#### 4.3.2 Configure Namespace{#configure-namespace}
 
 You can now configure the resources required for your namespace.
 
-The first time you configure the namespace, you should select all the items under **Select items to configure** except **Proxy**. Only select **Proxy** if you want to configure a proxy for your namespace.
+The first time you configure the namespace, you should select all the items under **Select items to configure** except **Proxy** and **Custom TLS**. Only select **Proxy** if you want to configure a proxy for your namespace. Select **Custom TLS** only if you want to configure custom CAs for your namespace.
 
 The options do the following:
 
@@ -191,6 +191,7 @@ The options do the following:
 * **Ingress** – will configure the ingress for your namespace — if there is already an ingress, this will replace it with new settings
 * **Registry** – will configure a registry for your namespace — if there is already a registry, this will replace it with new settings
 * **Proxy** – will configure a proxy for your namespace — if there is already a proxy, this will replace it with new settings
+* **Custom TLS** – will configure custom CA trust for your namespace — if there is already a custom CA trust configuration, this will replace it with new settings
 
 1. Select the options you need to configure – the first time you configure your namespace you must check *all the first four options*.  **Proxy** is optional.
 
@@ -211,6 +212,7 @@ The options do the following:
 	* [Ingress](#ingress)
 	* [Registry](#registry)
 	* [Proxy](#proxy)
+	* [Custom TLS](#custom-tls)
 
 ##### 4.3.2.1 Database Plan{#database-plan}
 
@@ -232,11 +234,17 @@ If the plan name already exists, you will receive an error that it cannot be cre
 {{% /alert %}}
 
 {{% alert type="info" %}}
-To connect to an Azure PostgreSQL server, the `Enforce SSL connection` option has to be disabled and the Kubernetes cluster must be added to the list of allowed hosts in the firewall. For the database name, use `postgres`.
+To connect to an Azure PostgreSQL server, the Kubernetes cluster must be added to the list of allowed hosts in the firewall. For the database name, use `postgres`.
 {{% /alert %}}
 
 {{% alert type="info" %}}
 To connect to an Amazon RDS database, the VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+Enabling the **Strict TLS** option will enable full TLS certificate validation and require encryption when connecting to the PostgreSQL server. If the PostgreSQL server has a self-signed certificate, you will also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
+
+Disabling **Strict TLS** will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
 {{% /alert %}}
 
 **Ephemeral** will enable you to quickly set up your environment and deploy your app, but any data you store in the database will be lost when you restart your environment.
@@ -253,6 +261,12 @@ To connect to an Azure PostgreSQL server, the Kubernetes cluster must be added t
 
 {{% alert type="info" %}}
 For Azure SQL databases, additional parameters are required to specify the database elastic pool name, tier, service objective and maximum size.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+Enabling the **Strict TLS** option will enable full TLS certificate validation and require encryption when connecting to SQL Server. If the SQL Server has a self-signed certificate, you will also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
+
+Disabling **Strict TLS** will attempt to connect with TLS, but skip certificate validation. If encryption is not supported, it will fall back to an unencrypted connection.
 {{% /alert %}}
 
 **Dedicated JDBC** will enable you to enter the [database configuration parameters](/refguide/custom-settings) for an existing database directly, as supported by the Mendix Runtime.
@@ -275,7 +289,13 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide)
 
 ##### 4.3.2.2 Storage Plan{#storage-plan}
 
-**Minio** will connect to a [MinIO](https://min.io/product/overview) S3-compatible object storage. You will need to provide all the information about your MinIO storage such as endpoint, access key, and secret key. The MinIO server needs to be a full-featured MinIO server and not a [MinIO Gateway](https://github.com/minio/minio/tree/master/docs/gateway).
+**Minio** will connect to a [MinIO](https://min.io/product/overview) S3-compatible object storage. You will need to provide all the information about your MinIO storage such as endpoint, access key, and secret key. The MinIO server needs to be a full-featured MinIO server, or a [MinIO Gateway](https://github.com/minio/minio/tree/master/docs/gateway) with configured etcd.
+
+{{% alert type="info" %}}
+To use TLS, specify the MinIO URL with an `https` schema, for example `https://minio.local:9000`. If MinIO has a self-signed certificate, you'll also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
+
+If the MinIO URL is specified with an `http` schema, TLS will not be used.
+{{% /alert %}}
 
 **S3 (create on-demand)** will connect to an AWS account to create S3 buckets and associated IAM accounts. Each app will receive a dedicated S3 bucket and an IAM account which only has access to that specific S3 bucket. You will need to provide all the information about your Amazon S3 storage such as plan name, region, access key, and secret key. The associated IAM account needs to have the following IAM policy (replace `<account_id>` with your AWS account number):
 
@@ -411,6 +431,8 @@ You can choose one of the following registry types. OpenShift registries can onl
 
 **Additional Information**
 
+You can host the default Mendix components in your own registry, for example if your cluster is firewalled and cannot open up a route to the Mendix registry. In this case you need to migrate some, or all, of the Mendix components to your cluster. See the instructions in [Migrating to Your Own Registry](private-cloud-migrating) to find out how to do this.
+
 For **OpenShift 3** and **OpenShift 4** registries, the default image pull credentials from the `default` ServiceAccount will be used. No additional configuration steps are required to enable image pulls in OpenShift.
 
 For **Generic registry…** options, the configuration script will ask if the credentials should be added to `imagePullSecrets` in the `default` ServiceAccount. If you answer **Yes**, the configuration script will add image pull credentials to the `default` ServiceAccount - no additional image pull configuration is required. If you want to configure the image pull separately, choose **No**.
@@ -419,11 +441,66 @@ For **Amazon Elastic Container Registry**, you will need to configure registry a
 
 When choosing the **Existing docker-registry secret**, you will need to add this secret to the `default` ServiceAccount manually, or provide registry authentication configuration in another way (depending on which registry authentication options the Kubernetes cluster vendor is offering).
 
-#### 4.3.3 Proxy{#proxy}
+##### 4.3.2.5 Proxy{#proxy}
 
 Choose **Yes** if a proxy is required to access the public internet from the namespace; you will be asked for the proxy configuration details.
 
-#### 4.3.4 Review and Apply
+#### 4.3.3 Custom TLS{#custom-tls}
+
+{{% alert type="info" %}}
+To use this option, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.7.0 or later.
+{{% /alert %}}
+
+To use encryption and avoid [MITM attacks](https://en.wikipedia.org/wiki/Man-in-the-middle_attack), communication with all external services should be done over TLS.
+By default, Mendix Operator trusts Certificate Authorities from the [Mozilla CA root bundle](https://wiki.mozilla.org/CA), as they are provided by default in the container image.
+
+If Mendix for Private Cloud needs to communicate with external services, some of those services might have TLS certificates signed by a custom (private) CA.
+In order for the Mendix Operator to trust such certificates, you need to add their root CAs to the Mendix Operator configuration.
+
+1. In another terminal, prepare the Kubernetes secret containing the custom root CAs list:
+   1. Create a `custom.crt` file, containing the public keys of all custom (private) CAs that Mendix for Private Cloud should trust:
+       ```
+       # Private CA 1
+       -----BEGIN CERTIFICATE-----
+       [...]
+       -----END CERTIFICATE-----
+       # Private CA 2
+       -----BEGIN CERTIFICATE-----
+       [...]
+       -----END CERTIFICATE-----
+       ```
+       (concatenate all the public keys from custom CAs into one `custom.crt` file, separating them with line breaks and optional comments).
+   2. Load the file into a Secret (replace `{namespace}` with the namespace where the Operator is installed, and `{secret}` with the name of the Secret to create, e.g. `mendix-custom-ca`):
+
+        For OpenShift:
+        ```shell
+        oc -n {namespace} create secret generic {secret} --from-file=custom.crt=custom.crt
+        ```
+
+        For Kubernetes:
+        ```shell
+        kubectl -n {namespace} create secret generic {secret} --from-file=custom.crt=custom.crt
+        ```
+
+2. Paste the name of this `custom.crt` secret into the **CA Certificates Secret Name** field (e.g. `mendix-custom-ca`):
+   
+   ![Custom TLS configuration](attachments/private-cloud-cluster/custom-tls-config.png)
+
+These custom CAs will be trusted by:
+
+* The Mendix Operator when communicating with the database and file storage
+* The Mendix Operator when pushing app images to the container registry
+* Mendix apps when communicating with the database, file storage and external web services
+
+{{% alert type="info" %}}
+To prevent MITM attacks, enable **Strict TLS** for the database and use an HTTPS URL for Minio. This will ensure that all communication with data storage is done over TLS, and that certificates are properly validated.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
+{{% /alert %}}
+
+#### 4.3.4 Review and Apply{#review-apply}
 
 When you have configured all the resources, do the following:
 
@@ -816,4 +893,4 @@ Within your cluster you can run one, or several, Mendix apps. Each app runs in a
 
 ![](attachments/private-cloud-cluster/mx4pc-containerized-architecture.png)
 
-Because you can run several Mendix apps in the same namespace, each app must have a unique name. In addition, the app cannot have the same name as the Mendix tools used to deploy the app. See Deploy an app to Private Cloud for more information.
+To ensure that every app deployed to a namespace has a unique name, the environment will have an **Environment UUID** added to the environment name when it is deployed to ensure that it is unique in the project. This also ensures the app cannot have the same name as the Mendix tools used to deploy the app. See [Deploying a Mendix App to a Private Cloud Cluster](private-cloud-deploy) for more information.

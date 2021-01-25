@@ -49,14 +49,16 @@ When you click the **Catalog** tab the **Details** screen of the item selected i
 Registered apps and services are depicted in the Landscape as nodes from the definitions in the registered service metadata. The icons for each of these nodes identifies the the source application, for example, Mendix and Siemens.
 
 #### 2.3.1 Data Sources
-Data sources or the published OData services are depicted as a round node with the OData icon and the service name and version number, and on the line connecting it to the publishing app, the number of entity sets or datasets exposed in the service.
+Data sources or the published OData services are depicted as a round node with the icon that indicates the **Technology** (OData) and the service name and version number on the line connecting it to the publishing app, the number of datasets exposed in the service.
+
+{{% alert type="info" %}}The application icon that is shown for the data source and application in the asset details screen and the search results is not shown for the data source in Landscape. Here the service technology is indicated.{{% /alert %}}
 
 The following is an example of a selected service node exposing three datasets:
 
 ![](attachments/use-landscape/node-service.png)
 
 #### 2.3.2 Apps
-Apps are displayed as square icons in the landscape and the environment that the app is deployed to is given below the app name. The example below shows a non-Mendix app (**TeamcenterMfg**) and a Mendix app (**CompanyCarDemo**). Both are deployed to the Mendix Free App environment, **Sandbox**:
+Apps are displayed as square icons with the application icon and the environment that the app is deployed to is given below the app name. The example below shows a non-Mendix app (**TeamcenterMfg**), a Mendix app (**CompanyCarDemo**) which are deployed to the Mendix Free App environment, **Sandbox**. The third example shows another Mendix app (**HRSample_App**) deployed to the production environment which has a custom icon. For further information on adding a custom icon to your app see [Changing the Application Icon](../data-hub-catalog/curate#application-icon).
 
 ![](attachments/use-landscape/node-apps.png)
 

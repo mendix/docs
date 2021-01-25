@@ -2,7 +2,7 @@
 title: "Clustered Mendix Runtime"
 category: "Mendix Runtime"
 description: "Using the cluster functionality, you can set up your Mendix application to run behind a load balancer to enable a failover and/or high availability architecture."
-tags: ["runtime", "cluster", "load balancer", "failover", "pivotal", "studio pro"]
+tags: ["runtime", "cluster", "load balancer", "failover", "studio pro"]
 ---
 
 ## 1 Introduction
@@ -24,14 +24,6 @@ The Mendix Runtime cluster requires the following infrastructure:
 ![](attachments/16714073/16844074.png)
 
 This means that a Mendix cluster requires a load balancer to distribute the load of the clients over the available Runtime cluster nodes. It also means that all the nodes need to connect to the same Mendix database, and the files need to be stored on S3 (for details, see the [File Storage](#file-storage) section below). The number of nodes in your cluster depends on the application, the high availability requirements, and its usage.
-
-### 3.1 Pivotal Web Services
-
-The infrastructure described above is easily supported in [Pivotal Web Services](https://run.pivotal.io/). Pivotal Web Services allows for easy scaling by increasing the number of running nodes for your app and providing a built-in load balancer for accessing the nodes.
-
-For information on deploying your application into Pivotal Web Services and other Cloud Foundry platforms, see [Cloud Foundry](/developerportal/deploy/cloud-foundry-deploy).
-
-Scaling out can be done using the Pivotal App Manager. For details on using the Pivotal App Manager, see the [Getting Started with Apps Manager](http://docs.run.pivotal.io/console/dev-console.html).
 
 ## 4 Cluster Leader & Cluster Slaves
 

@@ -8,7 +8,7 @@ tags: ["Widget", "Pluggable",  "JavaScript", "Native"]
 
 ## 1 Introduction
 
-While developing pluggable widgets and JavaScript actions it is essential to reuse already existing modules and libraries from JavaScript ecosystem. Mendix empowers widget developers with tooling for creating, developing and shipping pluggable widgets. It does the power lifting of linking and embedding 3rd party dependencies into code of pluggable widgets. The tooling also takes care of providing infomation about Android and iOS specific setup parts of some libraries to Mendix Native apps. Read this page if you want more details on how pluggable widgets communicate native dependencies to Mendix Native ecosystem.
+While developing pluggable widgets and JavaScript actions it is essential to reuse already existing modules and libraries from JavaScript ecosystem. Mendix empowers widget developers with [Pluggable Widgets Tools](https://github.com/mendix/widgets-resources/tree/master/packages/tools/pluggable-widgets-tools) for creating, developing and shipping pluggable widgets. It does the power lifting of linking and embedding 3rd party dependencies into code of pluggable widgets. The tooling also takes care of providing infomation about Android and iOS specific setup parts of some libraries to Mendix Native apps. Read this page if you want more details on how pluggable widgets communicate native dependencies to Mendix Native ecosystem.
 
 While this tooling exists for pluggable widgets some manual work has to be done for JavaScript actions in order to use libraries targeting `react-native` where Andriod and iOS specific setup is required. Read this page if you want to use such libraries in your JavaScript actions.
 

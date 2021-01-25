@@ -17,12 +17,12 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Improvements
 
-* We removed support for the country and skype attributes in your developer profile.
-* You can no longer create new polls on the company or project buzz page. Existing polls can still be answered.
+* We removed support for the **Country** and **Skype** attributes in your [Mendix Profile](/developerportal/mendix-profile/).
+* You can no longer create new polls on the company or app project[Buzz](/developerportal/collaborate/buzz) page. Existing polls can still be answered.
 
 #### Fixes
 
-* We fixed several minor issues with the [My Apps](/developerportal/apps-list/#my-apps) page
+* We fixed several minor issues with the [My Apps](/developerportal/apps-list/#my-apps) page.
 
 ### January 15th, 2021
 

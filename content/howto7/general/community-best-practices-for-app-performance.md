@@ -35,7 +35,7 @@ If you made a simple and sound design of the app's domain models, consider the f
 	* Combine attributes in one entity and add an enum to determine its specialization.
 	* Add separate entities for specializations with a one-to-one relation. Depending on UI needs, this one-to-one relation might be a normal reference from specialization to generalization to save prefetching time.
 	* Add a non-persistent layer with inheritance that is populated by your business logic.
-* Don't use temporary associations on persistent entities. Use a non-persistent entity for your screen/UI logic here.
+* Don't use temporary associations on persistable entities. Use a non-persistable entity for your screen/UI logic here.
 
 {{% alert type="info" %}}
 

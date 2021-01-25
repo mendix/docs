@@ -15,7 +15,7 @@ tags: ["studio Pro", "data hub", "data hub pane", "data hub catalog"]
 You need a license to use Data Hub in Studio Pro. For further information see [Data Hub License](consumed-odata-service-requirements#license-limitations).
 {{% /alert %}}
 
-The **Data Hub** pane enables you to search the Data Hub Catalog and discover the data sources available for your organization. Via this pane you can add the entities that are exposed in the OData services registered in the Data Hub Catalog into your app's domain model. These external entities provide the connection to the data associated with the entities which can be utilized in your app and they are called [external entities](external-entities).
+You can search in the Data Hub Catalog through the **Data Hub** pane to discover data sources that you can use in your project. Via this pane you can add the entities that are exposed in the registered OData services—called **Data Sources** in Data Hub—into your app's domain model. These entities are called [external entities](external-entities) and are different becasue they enable the connection to the data associated with the entities in the originating app.
 
 {{% alert type="info" %}}
 In the Data Hub Catalog, registered published services are referred to as *data sources* and exposed entities will show the **Entity set** name and are called *datasets.*
@@ -27,14 +27,18 @@ To display the **Data Hub** pane, click **View** > **Data Hub**:
 
 ## 2 Data Hub Pane in the Domain Model
 
-The Data Hub pane is used to search the Data Hub Catalog for services and entities that can be dragged and used in your app project:
+The Data Hub pane is used to search the Data Hub Catalog for entities that can be dragged and used in your app project:
 
 {{% image_container width="300" %}}![](attachments/data-hub-pane/data-hub-pane.png){{% /image_container %}}
 
 The following functionality is available in the pane:
 
-* [Search](#search) – Enter a search string of alphanumeric characters to find a service, entity, or attribute in the Data Hub Catalog. Entities can be dragged from the search results into your domain model as external entities.
+* [Search](#search) – Enter a search string of alphanumeric characters to search in the Data Hub Catalog. The search will be performed on services, entities, attributes, associations, and descriptions in the Catalog. Entities can be dragged from the search results into your domain model and are displayed as [external entities](external-entities.md):
+
+	![](attachments/data-hub-pane/external-entity.png)
+
 * [Filter](#search) – By default, the search will search for services in production environments. Click the **Filter** icon to include non-production environments in the search.
+
 * [Search results](#viewing) – The search results satisfying the search string will show the service name, service version, environment that the service was deployed to, and the entities in the service. If attributes satisfy the search criteria, they will be displayed under the expanded entity. Services and the entities that are currently being used in the current domain model are indicated with a green check-mark in the search results. You can drag entities from the search results into the domain model and use them as a data source for your app project.
 
 When no search string has been specified in the **Data Hub** pane, the **Project** pane is displayed. This shows the consumed services and the external entities used in the current project. The attributes for consumed entities are also listed:

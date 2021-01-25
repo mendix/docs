@@ -1,5 +1,5 @@
 ---
- title: "Data Hub Pane"
+title: "Data Hub Pane"
 parent: view-menu
 menu_order: 15
 description: "Describes the Data Hub pane in Mendix Studio Pro."

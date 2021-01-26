@@ -27,7 +27,7 @@ Let's assume that the domain model contains two related entities called Customer
 To show the total order amount, there are two options:
 
 * First option: create a calculated attribute in the Customer entity to compute the total order amount (the downside of this option is that the calculated attributes bring down the performance of overview pages)
-* Second option: create a persistent attribute in the Customer entity that stores the total order amount in the database – this is called denormalization (the downside of this option is that the redundant data needs to be kept in sync, but this is easy with Mendix event handlers)
+* Second option: create a stored attribute in the Customer entity that stores the total order amount in the database – this is called denormalization (the downside of this option is that the redundant data needs to be kept in sync, but this is easy with Mendix event handlers)
 
 To enable denormalization, follow these steps:
 

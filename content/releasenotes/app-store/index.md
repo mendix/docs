@@ -7,6 +7,13 @@ tags: ["app store", "connector", "module", "add on", "widget"]
 
 These release notes cover changes made to the [Mendix App Store](/appstore/index).
 
+## 2021
+
+### January 26th, 2021
+
+* You are now able to download Studio Pro versions marked as [beta](/releasenotes/beta-features/index) from a separate tab on the **Get Studio Pro** page named **Beta Releases**. The default download option (via the **Release Notes** tab) remains the latest stable release of Studio Pro.
+* We fixed some bugs in the [add new App Store content](/appstore/general/share-app-store-content#adding) flow and we made error messages more descriptive.
+
 ## 2020
 
 ### December 15th, 2020

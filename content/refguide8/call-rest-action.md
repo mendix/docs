@@ -100,7 +100,8 @@ This feature is available in Mendix 8.18.0 and later.
 
 In most cases, the default **Use project settings** can be used.
 
-If desired, you can configure which client certificate to use for the request. These are the choices:
+However, you can specify a client certificate to use for the request by clicking **override**.
+Select from one of the following:
 
 * **Use project settings** – use whatever settings are defined at the project level (default)
 * **Override** – override the project-level settings for this action

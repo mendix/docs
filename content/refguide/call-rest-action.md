@@ -218,3 +218,17 @@ You should always add an error handler for a [call REST service](/refguide/call-
 ## 8 Common Section{#common}
 
 {{% snippet file="refguide/microflow-common-section-link.md" %}}
+
+## 9 Troubleshooting{#troubleshooting}
+
+### 9.1 java.net.SocketException – Connection reset
+
+This error is occurs when your app's infrastructure closes the connection because it is inactive. Your app client does not know this and gets this error when it makes a new request.
+
+There are two ways to resolve this:
+
+1. Alter the value of the `http.client.CleanupAfterSeconds` [runtime setting](custom-settings) to be less than the connection timeout. This will ensure that the your app client will create a new HTTP client for the request.
+
+2. Handle the error in your microflow and retry a number of times before returning the error. Your flow might look similar to the one below.
+
+    ![](attachments/integration-activities/retry-rest-connection-timeout.png)

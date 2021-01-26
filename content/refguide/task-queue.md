@@ -8,9 +8,7 @@ tags: ["task queue", "process queue", "parallel", "scheduling", "microflow"]
 
 ## 1 Introduction
 
-The `Task Queue` enables controlling the amount of microflows that are executed at once by assigning them to queues. This allows you to control the maximum load put on your application during peak usage by these microflows while still ensuring all microflows are eventually executed. The `QueueHelpers` module (not yet published) provides examples to set up monitoring on the queue.
-
-Microflows can be scheduled to run in the background when marked as such in Studio Pro, or through the Java API. In a single node scenario, these tasks will simply be executed on the single node. In a clustered setting, the Mendix runtime distributes these tasks transparently throughout the cluster. Should a cluster node be shutdown or fail halfway during executing a task, then the remaining cluster nodes will pick it up (eventually, when the node is detected to be down) and re-execute it. This happens automatically and does not need to be managed.
+Using a **Task Queue** allows you to run microflows asynchronously while controlling the number of microflows that are executed simultaneously by assigning them to a task queue. You can configure the task queue to control the maximum load put on your application by these microflows during peak usage while still ensuring all microflows are eventually executed.
 
 ### 1.1 Replacing the Process Queue module
 
@@ -19,34 +17,45 @@ See the section [Replacing Process Queue](#process-queue), below, for more infor
 
 ## 2 Configuration
 
-The task queue is present from Mendix 9.0.3 onwards.
+Microflows can be scheduled to run in the background when they are initiated using a **Call Microflow** action in Studio Pro, or through the Java API.
 
-### 2.1 The 'Task Queue' concept
+In a single node scenario, these tasks will simply be executed on the single node.
 
-Background execution is done in so called `Task Queue`s. They can be created in Studio Pro as follows:
+In a clustered setting, the Mendix runtime distributes these tasks transparently throughout the cluster. Should a cluster node be shutdown or fail halfway during executing a task, then the remaining cluster nodes will pick it up (eventually, when the node is detected to be down) and re-execute it. This happens automatically and does not need to be managed.
+
+### 2.1 Creating Task Queues
+
+Background execution is done in so called **Task Queues**. They can be created in Studio Pro as follows:
 
 1. Right click on a module or folder.
-1. Select 'Add other'.
-1. Click 'Task Queue'.
+2. Select **Add other**.
+3. Click **Task Queue**.
+4. Enter the value for **Threads** for each cluster node (maximum 40).
 
-`Task Queue`s can be configured to have a number 'threads'. Each of these threads can process one task at a time. That is, a queue will pick up as many concurrent tasks as it has threads. Whenever a task is finished, the next one will be picked up. This will happen on each cluster node. In general, a low number of threads (e.g. 1 or 2) should be enough, unless there is a large number of tasks or tasks take long and need to execute in parallel. Having many threads will put additional load on the database and should not be done if not needed.
+    Task Queues have a number threads. Each of these threads can process one task at a time. That is, a queue will pick up as many concurrent tasks as it has threads. Whenever a task is finished, the next one will be picked up.
+    
+    In general, one or two threads should be enough, unless there is a large number of tasks or tasks take a long time and need to execute in parallel. Having many threads will put additional load on the database and should not be done if not needed.
 
-### 2.2 Scheduling microflow executions
+### 2.2 Scheduling Microflow Executions
 
 #### 2.2.1 In Studio Pro
 
-In Studio Pro, a `Call Microflow` activity can be done 'in a Task Queue'. To that end edit the 'Call Microflow' activity and check the box 'Execute this Microflow in a Task Queue'. Then select the `Task Queue` in which the microflow should be executed.
+In Studio Pro, a **Call Microflow** activity can start a microflow in a Task Queue.
 
-The semantics of the microflow call change slightly:
+1. Edit the 'Call Microflow' activity.
+2. Check the box **Execute this Microflow in a Task Queue**.
+3. Set **Select Task Queue** to the task queue in which the microflow should be executed.
 
- - In `Task Queue`s, tasks are always executed in a sudo context, even when the scheduling microflow has 'check entity access' enabled.
- - Only persisted entities can be passed to background calls. Passing a persistent, but `New` or `Changed` entity produces a runtime error. Basically, this means an entity must have been committed previously or is committed in the same transaction in which the task is created.
- - The execution doesn't happen immediately. Instead, a task is added to a `Task Queue` only when (and if) the transaction in which it has been scheduled ended successfully. At that point any cluster node may pick it up.
+For microflows which are running in a task queue, the context in which the microflow runs changes slightly in the following ways:
+
+ * Microflows are always executed in a *sudo* context, even when the scheduling microflow has **Apply entity access** set to *true* (see [Microflow Properties](microflow) for more information).
+ * Only committed persistable entities can be passed as parameters to the microflow. Passing a persistable *New* or *Changed* entity produces a runtime error. Basically, this means an entity must have been committed previously or is committed in the same transaction in which the task is created.
+ - The microflow is not executed immediately. The task is added only to a task queue when (and if) the transaction from which it has been scheduled ends successfully. At that point any cluster node may pick it up.
  - If the execution fails with an exception, the failure is logged in the `System.ProcessedQueueTask` table.
 
 #### 2.2.2 Through the API
 
-`Core` has been extended with a method `microflowCall`. It can be used to schedule a microflow for background execution as in the following example:
+The `Core` class in `com.mendix.core` has been extended with a method [microflowCall](https://apidocs.rnd.mendix.com/8/runtime/com/mendix/core/Core.html#microflowCall(java.lang.String)). It can be used to schedule a microflow for background execution as in the following example:
 
 ```java
 Core.microflowCall("AModule.SomeMicroflow")
@@ -55,9 +64,7 @@ Core.microflowCall("AModule.SomeMicroflow")
   .executeInBackground(context, "AModule.SomeQueueName");
 ```
 
-The method `excuteInBackground` takes two parameters: a context and a queue name. The context is only used for creating the queue; executing the task will be done with a system context.
-
-In Mendix 9.0.2 and after, the `executeInBackground` method is available in the public API. In earlier versions it has to be called via reflection.
+The method `executeInBackground` takes two parameters: a context and a queue name. The context is only used for creating the queue; executing the task will be done with a system context.
 
 Scheduling a microflow to be executed returns immediately. The microflow will be executed somewhere in the cluster, as soon as possible after the transaction in which it was called completes. Because the microflow is executed in the background there is no return value. The microflow will be executed in a 'sudo' context. The context in which a background task runs is still under discussion and may change in the future.
 

@@ -17,25 +17,25 @@ Progressive web apps have three main characteristics:
 
 ## 2 Enabling PWA Features
 
-As PWAs are basically web apps with additional features, Mendix offers these features as part of the web navigation profiles. Based on the requirements, one can create a fully offline capable PWA or a web application that does require a connection but still uses PWA features.
+As PWAs are basically web apps with additional features, Mendix offers these features as a part of web navigation profiles. Based on what is needed, you can create a fully offline-capable PWA, or a web application that requires an internet connection but still uses PWA features.
 
-To create a full offline-first PWA, one can add one of the following profiles, depending on the form factor needed: Responsive Web Offline, Phone Web Offline, Tablet Web Offline. For more information about offline-first apps, see [Offline-First](https://docs.mendix.com/refguide/offline-first).
+To create a full offline-first PWA, choose and add one of the following profiles (depending on which form factor you need): Responsive Web Offline, Phone Web Offline, or Tablet Web Offline. For more information about offline-first apps, see the [Offline-First Reference Guide](/refguide/offline-first).
 
 Within the navigation profiles the following PWA features can be configured:
 
 ![PWA settings](attachments/progressive-web-app/settings.png)
 
-To be able to fully test the PWA functionalities the app needs to be deployed to the cloud. This is because the service worker is only enabled in the cloud over HTTPS.
+To be able to fully test PWA functionalities, the app needs to be deployed to the cloud. This is because the service worker is only enabled in the cloud over HTTPS.
 
 ### 2.1 Publish as a Progressive Web App
 
 When checked and deployed to the cloud, the app registers a [service worker](https://developers.google.com/web/fundamentals/primers/service-workers) that is the basis for PWA. On offline navigation profiles, this option is always enabled. In online navigation profiles, enabling this option will also give the end-user a custom page when the device has no connection. Where desired, this page can be customized by adding an offline.html page to the theme folder (e.g. theme/offline.html). Note that this page should not load any other resources over the network.
 
-### 2.2 Allow ‘Add to Home screen’ prompt
+### 2.2 Allow "Add to Home Screen" Prompt
 
-When this option is checked, the end-user might be actively asked to add the app to the home screen or desktop of their device. The behavior can differ per browser and over time. When unchecked, the app can still always be added to the home screen, but the user won't be actively asked.
+When this option is selected, the end-user might be actively asked to add the app to the home screen or desktop of their device. The behavior can differ per browser and over time. When unchecked, the app can still always be added to the home screen, but the user won't be actively asked.
 
-### 2.3 Preload static resources
+### 2.3 Preload Static Resources
 
 Enabling this option will make the app preload static resources like pages, images and widgets in the background, which can be beneficial for performance. This preloading happens when a user opens the app for the first time, or when the model has changed. This makes your app feel faster when navigating to new pages. It comes at a cost as it consumes more bandwidth and device storage initially, which is not always desired.
 

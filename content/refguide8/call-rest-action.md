@@ -103,7 +103,7 @@ In most cases, the default **Use project settings** can be used.
 However, you can specify a client certificate to use for the request by clicking **override**.
 Select from one of the following:
 
-* **Use project settings** – use whatever settings are defined at the project level (default)
+* **Use project settings**(default) – use the settings that are defined at the project level 
 * **Override** – override the project-level settings for this action
 
 When you select **Override**, you can configure which client certificate will be used. Specify the identifier for the client certificate. This identifier can be set in different places, depending on where you deploy the app:

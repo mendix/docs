@@ -29,49 +29,50 @@ To be able to fully test PWA functionalities, the app needs to be deployed to th
 
 ### 2.1 Publish as a Progressive Web App
 
-When checked and deployed to the cloud, the app registers a [service worker](https://developers.google.com/web/fundamentals/primers/service-workers) that is the basis for PWA. On offline navigation profiles, this option is always enabled. In online navigation profiles, enabling this option will also give the end-user a custom page when the device has no connection. Where desired, this page can be customized by adding an offline.html page to the theme folder (e.g. theme/offline.html). Note that this page should not load any other resources over the network.
+When checked and deployed to the cloud, the app registers a [service worker](https://developers.google.com/web/fundamentals/primers/service-workers) that is the basis for PWAs. On offline navigation profiles, this option is always enabled. In online navigation profiles, enabling this option will also give the end-user a custom page when the device has no connection. Where desired, this page can be customized by adding an *offline.html* page to the theme folder (e.g. *theme/offline.html*). Note that this page should not load any other resources over the network.
 
 ### 2.2 Allow "Add to Home Screen" Prompt
 
-When this option is selected, the end-user might be actively asked to add the app to the home screen or desktop of their device. The behavior can differ per browser and over time. When unchecked, the app can still always be added to the home screen, but the user won't be actively asked.
+When the **Add to Home Screen** option is selected, the end-user might be actively asked to add the app to their device's home screen or desktop. The behavior can differ per browser and over time. When unselected, the app can still always be added to the home screen, but the user will not be actively asked.
 
 ### 2.3 Preload Static Resources
 
-Enabling this option will make the app preload static resources like pages, images and widgets in the background, which can be beneficial for performance. This preloading happens when a user opens the app for the first time, or when the model has changed. This makes your app feel faster when navigating to new pages. It comes at a cost as it consumes more bandwidth and device storage initially, which is not always desired.
+Enabling this option will make the app pre-load static resources like pages, images, and widgets in the background. This can aid performance. This pre-loading happens when a user opens the app for the first time, or when the model has changed. This makes the app feel faster when navigating to new pages. It comes at a cost, however, as it consumes more bandwidth and device storage initially.
 
-In the offline profiles, this feature is automatically enabled to allow the app to function fully offline.
+In offline profiles, this feature is automatically enabled to allow the app to function fully offline.
 
-Note that all pages and images reachable in the navigation profile are loaded by the browser, which can be undesirable from a security perspective, depending on the use case and requirements.
+Note that all pages and images reachable in the navigation profile are loaded by the browser. This configuration can be undesirable from a security perspective, depending on your use case and requirements.
 
-## 3 Preview/test a PWA
+## 3 Preview or Test a PWA
 
-PWA’s can be directly viewed and tested in the browser on your machine or device. Via the View menu you can directly open the PWA profiles in your browser;
+PWAs can be directly viewed and tested in the browser on your machine or device. Via the **View** menu you can directly open the PWA profiles in your browser:
 
 ![View menu](attachments/progressive-web-app/view-menu.png)
 
-or on your device via the “View on your device...” option.
+You can also open PWA profiles on your device via the **View on your device** option:
 
 ![View menu](attachments/progressive-web-app/view-dialog.png)
 
-Note: If you are running on a Mac with Parallels, make sure that port 8080 (or whichever port you have configured for your app) is forwarded and that you use your Mac IP instead of the Virtual Machine’s IP.
+Note that if you are running on a Mac with Parallels, make sure that port 8080 (or whichever port you have configured for your app) is forwarded and that you use your Mac IP instead of the Virtual Machine’s IP. For more information on Mendix and Parallels, see [How to Configure Parallels](/howto/mobile/using-mendix-studio-pro-on-a-mac).
 
-**Important note when previewing/testing an offline PWA locally.**
+{{% alert type="info" %}}
+When previewing or testing an offline-first PWA locally, an internet connection is always required to load the app. After initial loading, the app behaves fully offline, but it can not be reloaded without a connection. Once the app is deployed to the cloud, end-users can always load it without a connection after the first visit.
+{{% /alert %}}
+    
+### 3.1 PWA Lighthouse Check
 
-When previewing/testing an offline-first PWA locally, a connection is always needed to load it. After initial loading the app behaves fully offline-first, but it can not be reloaded without a connection. Once the app is deployed to the cloud, end-users can always load it without a connection after the first visit.
+To check a PWA's capabilities, you can use [Lighthouse](https://developers.google.com/web/tools/lighthouse) can be used. Lighthouse is an open-source, automated tool for improving the quality of web pages. It can check if your app meets the progressive web app requirements and can offer suggestions for improving your web app.
 
-### 3.1 PWA Lighthouse check
+## 4 Distribute or Share the PWA
 
-To check the PWA capabilities [Lighthouse](https://developers.google.com/web/tools/lighthouse) can be used. Lighthouse is an open-source, automated tool for improving the quality of web pages. It can check if your app meets the Progressive Web App requirements and can offer suggestion for improving your web app.
-
-## 4 Distribute or share the PWA
-
-As PWA’s are web apps, these can be shared easily by sharing the URL of the PWA.
+As PWAs are web apps, these can be shared easily by sharing the URL of the PWA.
 
 When opening the app on a device or browser, Mendix automatically determines the navigation profile based on the user agent and the browser capabilities. If the browser does not support offline functionality, an online profile will be used instead.
 
 Currently Google Chrome and Microsoft Edge (Chromium edition) fully support running offline-first apps.
 
 **Example of profile selection**
+
 For example, when a Phone Web Offline profile is configured and the app is opened in the browser, the following scenarios can occur:
 
 | Device & Browser         | Result                                                                                                                                                         |

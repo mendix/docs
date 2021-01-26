@@ -36,10 +36,6 @@ A user can specify a custom CSS for every widget on a web page by using the [sty
 
 On native pages, the meaning of a `style` prop is very different. First of all, a user cannot specify the aforementioned inline styles for widgets on a native page. So a `style` prop is used to pass styles computed based on configured classes. A client component will receive an array with a single [style object](/refguide/native-styling-refguide#style-objects) with all applicable styles combined.
 
-{{% alert type="info" %}}
-This property was introduced in Mendix 8.0 with an array of style objects. This array was changed to contain a single style object in Mendix 8.6.
-{{% /alert %}}
-
 ### 3.4 TabIndex
 
 If a widget uses a TabIndex prop [system property](property-types-pluggable-widgets#tabindex), then it will receive a configured `Tab index` through a `number` `tabIndex` property, except in the case when a configured tab index is on its default value of 0. Currently, `tabIndex` is not passed to widgets used on native pages. 

@@ -103,7 +103,7 @@ Having unsaved objects (newly created or changed objects) in State is actually c
 
 ![](attachments/16714073/16844072.png)
 
-Reading objects from the Mendix Database and deleting (unchanged) objects from the Mendix Database is still 'Clean State'. Changing an existing object or instantiating a new object will create 'Dirty State'. 'Dirty State' needs to be synchronized (at the end of the request as described above) between the Mendix Runtime instances to allow requests being handled by other instances getting hold of the instantiated objects and changed objects within a session. Committing objects or rolling back will remove them from the 'Dirty State'. The same will happen if an instantiated or changed object is deleted. Non-persistent entities are always part of 'Dirty State'.
+Reading objects from the Mendix Database and deleting (unchanged) objects from the Mendix Database is still 'Clean State'. Changing an existing object or instantiating a new object will create 'Dirty State'. 'Dirty State' needs to be synchronized (at the end of the request as described above) between the Mendix Runtime instances to allow requests being handled by other instances getting hold of the instantiated objects and changed objects within a session. Committing objects or rolling back will remove them from the 'Dirty State'. The same will happen if an instantiated or changed object is deleted. Non-persistable entities are always part of 'Dirty State'.
 
 The more objects being part of 'Dirty State', the more data has to be synchronized between the Mendix Runtime instances. As such it has an impact on performance. In cluster environments it is advised to minimize the amount of 'Dirty State' to minimize the impact of the synchronization on performance.
 
@@ -113,12 +113,12 @@ The more objects being part of 'Dirty State', the more data has to be synchroniz
 
 {{% /alert %}}
 
-Below are the number of scenarios which can generate big amount of non persistent entities and thus, cause memory issues.
+Below are the number of scenarios which can generate big amount of non persistable entities and thus, cause memory issues.
 
 | Scenario |
 | --- |
-| Microflow which creates a large number of Non Persistent Entities and shows them in a page. |
-| Microflow which calls a Webservice/Appservice to retrieve external data and convert them to Non Persistent Entities. |
+| Microflow which creates a large number of Non-persistabe Entities and shows them in a page. |
+| Microflow which calls a Webservice/Appservice to retrieve external data and convert them to Non-persistabe Entities. |
 
 {{% alert type="warning" %}}
 
@@ -157,7 +157,7 @@ Configuring the REDIS host, port and secret is done automatically by binding a R
 
 The Mendix Runtime has an (Java) API to store Java objects into the Session. By using `ISession.getData()` to store those objects, they get a Session scope (lifetime) and could be accessed in the subsequent requests (in combination with `ISession.retain()` and `ISession.release()` calls, depending on if the object has associations with objects which should not be garbage collected). With the introduction of Cluster support for the Mendix Runtime this API is deprecated and not supported in cluster mode. `ISession.getData()` only allows the object to be stored in memory on a particular Mendix Runtime instance, other instances will have no knowledge about this. This API will remain working for non-clustered setups (for backward compatibility reasons, but all of `ISession.getData()`, `ISession.retain()` and `ISession.release() `have been deprecated now).
 
-The alternative solution for this API is to store the data in a Mendix Entity. This can be a persistent entity or non-persistent entity. They can be easily retrieved and stored by associating entities with the `System.Session` entity. When the `IsClustered` configuration option is enabled, `System.Session` instances are stored into the database, so that they are available for every Runtime instance (and hence also the associated objects are stored in the state). The same approach can be used with one instance of the Mendix Runtime (when `isClustered` disabled). In this case `System.Session` instances are automatically added to the state to make sure they are not garbage collected.
+The alternative solution for this API is to store the data in a Mendix Entity. This can be a persistable entity or non-persistable entity. They can be easily retrieved and stored by associating entities with the `System.Session` entity. When the `IsClustered` configuration option is enabled, `System.Session` instances are stored into the database, so that they are available for every Runtime instance (and hence also the associated objects are stored in the state). The same approach can be used with one instance of the Mendix Runtime (when `isClustered` disabled). In this case `System.Session` instances are automatically added to the state to make sure they are not garbage collected.
 
 In microflows the `$currentSession` variable has been introduced, so that a reference to the current session can be easily obtained. When an object needs to be stored its association can be set to `$currentSession` and when the object needs to be retrieved again `$currentSession` can be used as a starting point from which the desired object can be retrieved by association. The associated object can be designed in such a way that it meets the desired needs.
 

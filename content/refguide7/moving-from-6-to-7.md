@@ -80,7 +80,7 @@ We optimized the system to reduce the performance impact of enabling this by def
 
 ### 4.3 NPE Attribute-Level Security
 
-We have prohibited non-persistent entity (NPE) attribute-level security for attributes that do not have at least read access. The reason for this is that non-readable attributes cannot be sent to the client. A separate object (which is not sent to the client at all) should be used for these attributes instead.
+We have prohibited non-persistable entity (NPE) attribute-level security for attributes that do not have at least read access. The reason for this is that non-readable attributes cannot be sent to the client. A separate object (which is not sent to the client at all) should be used for these attributes instead.
 
 ### 4.4 Autocommitted Objects for System Sessions
 

@@ -2,20 +2,20 @@
 title: "Progressive Web Apps"
 category: "Mobile"
 menu_order: 2
-tags: ["mobile", "progressive web app", "studio pro"]
+tags: ["mobile", "progressive web app", "PWA", "studio pro"]
 ---
 
 ## 1 Introduction
 
-Progressive Web Apps (PWA) can be seen as an evolution of traditional web apps. Overall, PWAs tend to behave more like native mobile apps, and their popularity is increasing. A difference and possible advantage of PWA compared to Hybrid/Native mobile is that they do not need to be distributed via an app store but can be accessed directly via the browser.
+Progressive web apps (PWAs) are an evolution of traditional web apps. Overall, PWAs tend to behave more like native mobile apps, and their popularity is increasing. One difference and possible advantage of PWAs compared to hybrid and native mobile apps is that PWAs do not need to be distributed via an app store but can be accessed directly via the browser.
 
-Progressive Web Apps have three main characteristics:
+Progressive web apps have three main characteristics:
 
-- **Installable:** PWA’s offer the option to add the app to the user’s home screen, and start a full screen app. This makes it feel more like a true native app.
-- **Reliable:** Using service workers, PWA’s have the option to work (partially) offline. Mendix PWA’s can work partially offline (resources like styling, pages, and images are cached) or fully offline-first (like hybrid offline and native mobile).
-- **Capable:** PWA’s can leverage several device capabilities like the camera and location, and can offer support for web push notifications. Note that support for features depend and differ per browser.
+* **Installable:** PWAs let you add your app to your user's home screen and start a full screen app. This makes PWAs feel more fully-capable native apps.
+* **Reliable:** Using service workers, PWAs can work offline or partially offline. Mendix PWAs can work partially offline (resources like styling, pages, and images are cached) or fully offline (like hybrid offline and native mobile apps).
+* **Capable:** PWAs can leverage several device capabilities like the camera and location, and can offer support for web push notifications. Note that support for features depend on which browser is used.
 
-## 2 Enabling PWA features
+## 2 Enabling PWA Features
 
 As PWAs are basically web apps with additional features, Mendix offers these features as part of the web navigation profiles. Based on the requirements, one can create a fully offline capable PWA or a web application that does require a connection but still uses PWA features.
 

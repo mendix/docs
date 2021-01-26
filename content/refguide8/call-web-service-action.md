@@ -127,7 +127,7 @@ Select from one of the following:
 * **Use project settings**(default) – use the settings that are defined at the project level 
 * **Override** – override the project-level settings for this action
 
-When you select **Override**, you can configure which client certificate will be used. Specify the identifier for the client certificate. This identifier can be set in different places, depending on where you deploy the app:
+When you select **Override**, you can configure the client certificate that will be used. Click **Edit** to specify the **Client certificate identifier**. This identifier can be set in different places, depending on where you deploy the app:
 
 * When you deploy the app to the Mendix cloud, the identifier is set when [pinning a client certificate](https://docs.mendix.com/developerportal/deploy/certificates#3-outgoing-client-certificates)
 * When you deploy the app elsewhere, the identifier is set in the custom setting [ClientCertificateUsages](custom-settings#ca-certificates)

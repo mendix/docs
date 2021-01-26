@@ -44,7 +44,7 @@ In OpenShift, the cluster administrator must have a `system:admin` role.
 
 ### 2.3 Unsupported Cluster Types
 
-It is not possible to use Mendix for Private Cloud in [OpenShift Online](https://www.openshift.com/products/online/) or OpenShift Pro because OpenShift Online doesn't allow the installation of Custom Resource Definitions.
+It is not possible to use Mendix for Private Cloud in [OpenShift Online](https://www.openshift.com/products/online/) or *OpenShift Pro* because they don't allow the installation of Custom Resource Definitions.
 
 ## 3 Container Registries
 
@@ -289,10 +289,9 @@ Mendix for Private Cloud will use the existing ingress controller.
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-We stongly recomment to use the [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/),
-even in case other Ingress controllers or OpenShift Routes might be available.
+We strongly recommend using the [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/), even if other Ingress controllers or OpenShift Routes are available.
 
-NGINX Ingress can be used to deny access to sensitive URLs, add HTTP headers, enable compression and cache static content.
+NGINX Ingress can be used to deny access to sensitive URLs, add HTTP headers, enable compression, and cache static content.
 NGINX Ingress is fully compatible with [cert-manager](https://cert-manager.io/), removing the need to manually manage TLS certificates.
 
 These features will likely be required once your application is ready for production.

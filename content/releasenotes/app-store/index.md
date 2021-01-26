@@ -7,6 +7,14 @@ tags: ["app store", "connector", "module", "add on", "widget"]
 
 These release notes cover changes made to the [Mendix App Store](/appstore/index).
 
+## 2021
+
+### January 26th, 2021
+
+* You are able to download Studio Pro versions that are marked as beta. Beta releases will now show in a separate tab. The default hero item will be the latest stable release of Studio Pro.
+
+* Fixed some bugs in the Upload Content flow. Error messages are more descriptive.
+
 ## 2020
 
 ### December 15th, 2020

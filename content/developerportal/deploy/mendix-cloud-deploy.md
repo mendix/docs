@@ -8,7 +8,7 @@ aliases:
     - /developerportal/howto/deploying-to-the-cloud.html
     - /mendixcloud/deploying-to-the-cloud.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#The anchor #plan, below, is mapped from the Control Center within the Developer Portal.
+#The anchor #plans, below, is mapped from the Control Center within the Developer Portal.
 ---
 
 ## 1 Introduction

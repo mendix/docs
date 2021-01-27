@@ -13,7 +13,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 #### Improvements
 
-* You can now copy the dataset URI from the  [data source details](/data-hub/data-hub-catalog/search#search-details) in the Data Hub Catalog. This makes it easier to directly select datasets to use in other business applications from the context of the data source.
+* You can now copy the dataset URI from the [data source details](/data-hub/data-hub-catalog/search#search-details) in the Data Hub Catalog. This makes it easier to directly select datasets to use in other business applications from the context of the data source.
 
 ### January 21st, 2021
 

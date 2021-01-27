@@ -179,7 +179,7 @@ When a data source is selected in the search results, the details of the metadat
 
 * Click [Download](#download-contract) to retrieve and save the metadata contract locally
 	
-* Each **Dataset** that is exposed in the data source (you can expand this to see details of the attributes and associations)
+* Each **Dataset** that is exposed in the data source (you can expand this to see details of the attributes and associations) and you can also **Copy Dataset URI** to the clipboard 
 
 	{{% alert type="info" %}}The **Dataset** is the name of the **Entity set** of a published **Entity** in Mendix Studio Pro, which by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
 
@@ -194,7 +194,7 @@ When an **Dataset** is selected in the search results, the details are displayed
 * The **Version** number of the OData service that the dataset is exposed in
 * The number of **Connections** to this dataset, that is, the number of apps that consume this dataset
 * A description of the dataset as given in the metadata contract or curated in the Data Hub Catalog
-* Click **Copy Dataset URI** to copy the URI of the dataset to the clipboard
+* Click **Copy Dataset URI** to copy the URI of the dataset to the clipboard for use in your business apps
 * Click **Share Dataset** to copy the link to this dataset detail page to the clipboard
 * **Dataset Information**
 	The **Attributes** that are exposed for the dataset for this data source are listed showing the attribute types and description.

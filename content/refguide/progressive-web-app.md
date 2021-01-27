@@ -65,13 +65,13 @@ To check a PWA's capabilities, you can use [Lighthouse](https://developers.googl
 
 ## 4 Distribute or Share the PWA
 
-As PWAs are web apps, these can be shared easily by sharing the URL of the PWA.
+As PWAs are web apps, these can be shared easily by sharing the PWA's URL.
 
 When opening the app on a device or browser, Mendix automatically determines the navigation profile based on the user agent and the browser capabilities. If the browser does not support offline functionality, an online profile will be used instead.
 
-Currently Google Chrome and Microsoft Edge (Chromium edition) fully support running offline-first apps.
+Google Chrome and Microsoft Edge (Chromium edition) fully support running offline-first apps.
 
-**Example of profile selection**
+### 4.1 Example of Profile Selection
 
 For example, when a Phone Web Offline profile is configured and the app is opened in the browser, the following scenarios can occur:
 
@@ -81,9 +81,9 @@ For example, when a Phone Web Offline profile is configured and the app is opene
 | Android - Chrome browser | Phone Web Offline profile is loaded                                                                                                                            |
 | iOS - Any browser        | If there is a Phone Web profile, this is loaded; otherwise, the Responsive Web profile is loaded. This is because offline PWAs are not (yet) supported on iOS. |
 
-Next to that, it is possible to force a profile by providing the profile name in the url as a query parameter; e.g. `http://localhost:8080/?profile=PhoneOffline`. Possible profile values are:
+Next to that, it is possible to force a profile by providing the profile name in the URL as a query parameter: for example `http://localhost:8080/?profile=PhoneOffline`. Possible profile values are as follows:
 
-| Profile name           | Value in url      |
+| Profile Name           | Value in URL      |
 | ---------------------- | ----------------- |
 | Responsive web         | Responsive        |
 | Responsive web offline | ResponsiveOffline |
@@ -94,9 +94,9 @@ Next to that, it is possible to force a profile by providing the profile name in
 
 When forcing a specific profile on a cloud deployment, it can be necessary to first clear the browser cache.
 
-## 5 Advanced settings
+## 5 Advanced Settings
 
-PWAs use a web manifest that provides information to the browser about the application. Mendix generates one automatically based on the model. It can be customized for specific needs by changing the `manifest-overrides.webmanifest` json file in the theme folder. The `background_color` and `theme_color` properties will often be useful to customize:
+PWAs use a web manifest that provides information to the browser about the application. Mendix generates one automatically based on the model. It can be customized for specific needs by changing the `manifest-overrides.webmanifest` *.json* file in the **theme** folder. The `background_color` and `theme_color` properties will often be useful to customize:
 
 ```json
 {
@@ -105,18 +105,18 @@ PWAs use a web manifest that provides information to the browser about the appli
 }
 ```
 
-For more information on the available properties in the web app manifest check out [this short introduction](https://web.dev/add-manifest/) or [the full reference at MDN](https://developer.mozilla.org/en-US/docs/Web/Manifest).
+For more information on the available properties in the web app manifest, read this [short introduction](https://web.dev/add-manifest/) or view [the full reference at MDN](https://developer.mozilla.org/en-US/docs/Web/Manifest).
 
-## 6 Accessing device features
+## 6 Accessing Device Features
 
-Browsers offer access to device features through API’s that can be leveraged in PWA’s. These device features can be used by available widgets and Nanoflow actions. It is also possible to leverage additional device features by extending the platform using [JavaScript actions](https://docs.mendix.com/refguide/javascript-actions) or [Pluggable widgets](https://docs.mendix.com/howto/extensibility/pluggable-widgets).
+Browsers offer access to device features through APIs that can be leveraged in PWAs. These device features can be used by available widgets and nanoflow actions. It is also possible to leverage additional device features by extending the platform using [JavaScript Actions](/refguide/javascript-actions) or [Pluggable Widgets](/howto/extensibility/pluggable-widgets).
 
-For more information on browser support for certain device features, check out [Can I Use](https://caniuse.com/).
+For more information on browser support for certain device features, see the third-party website [Can I Use](https://caniuse.com/).
 
-## 7 PWA or a Native Mobile App?
+## 7 Deciding Between a PWA or Native Mobile App
 
-Mendix offers options to build both native mobile apps and PWAs. Depending on the requirements or constraints, one or the other can be a better fit. It is also possible to have both Native Mobile and PWA profiles in a single project, which can run next to each other and share large parts.
+Mendix offers options to build both native mobile apps and PWAs. Depending on your project's requirements or constraints, one or the other can be a better fit. It is also possible to have both native mobile and PWA profiles in a single project, which can run next to each other and overlap significantly.
 
-Use the following diagram to help in making a decision whether to build a PWA and/or a native mobile app.
+Use the following diagram to decide whether to build a PWA, a native mobile app, or both:
 
 ![Native app or PWA](attachments/progressive-web-app/native-or-pwa.png)

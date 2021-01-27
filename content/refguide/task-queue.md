@@ -40,7 +40,7 @@ Background execution is done in so called **Task Queues**. They can be created i
 
 #### 2.2.1 In Studio Pro
 
-In Studio Pro, a **Call Microflow** activity can start a microflow in a Task Queue.
+In Studio Pro, a [Call Microflow](microflow-call) activity can start a microflow in a Task Queue.
 
 1. Edit the **Call Microflow** activity.
 2. Check the box **Execute this Microflow in a Task Queue**.

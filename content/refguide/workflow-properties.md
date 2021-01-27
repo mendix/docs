@@ -28,7 +28,7 @@ Workflow properties consist of the following sections:
 
 #### 2.1.2 Documentation
 
-**Documentation** allows you to describe your microflow to make it easier for people to use and modify it.
+**Documentation** allows you to describe your workflow to make it easier for people to use and modify it.
 
 #### 2.1.3 Allowed Roles
 
@@ -42,17 +42,31 @@ For more information, see [Module Security](module-security).
 
 ### 2.2 Data Section {#data}
 
+**Workflow entity** is a special kind of entity that is used as a workflow context.  
 
+It should be a **Workflow Context** entity from the **System** module or its **specialization**. 
+
+For more information on specializations and generalizations, see [Generalization vs One-to-One Associations](generalization-and-association).
 
 ### 2.3 Display Information Section {#display-info}
 
+#### 2.3.1 Workflow Name
+
+#### 2.3.2 Workflow Description
+
+**Workflow Description** allows you to describe your workflow to make it easier for people to use and modify it.
+
 ### 2.4 Due Date Section {#due-date}
+
+**Due in** allows you to set a deadline for the workflow and keep track of it. 
 
 ### 2.5 General Section {#general}
 
+**Caption** 
+
 ### 2.6 Workflow Page Section {#workflow-page}
 
-
+**Workflow page** is an overview page where you can track the progress of the workflow. 
 
 ## 3 Read More
 

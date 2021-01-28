@@ -52,9 +52,11 @@ For more information on specializations and generalizations, see [Generalization
 
 #### 2.3.1 Workflow Name
 
+**Workflow Name** 
+
 #### 2.3.2 Workflow Description
 
-**Workflow Description** allows you to describe your workflow to make it easier for people to use and modify it.
+**Workflow Description** .
 
 ### 2.4 Due Date Section {#due-date}
 
@@ -62,7 +64,7 @@ For more information on specializations and generalizations, see [Generalization
 
 ### 2.5 General Section {#general}
 
-**Caption** 
+**Caption** defines a a title of the workflow.
 
 ### 2.6 Workflow Page Section {#workflow-page}
 

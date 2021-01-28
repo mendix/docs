@@ -54,7 +54,7 @@ This mode performs both the upload and the download phases for all entities used
 
 This mode allows you to select specific objects to synchronize.
 
-Selective synchronization can only be done through a **Synchronize** action inside a nanoflow. Synchronization performed using a UI element (for example a button, an onchange action, or other elements) performs the full synchronization.
+Selective synchronization can only be done through a **Synchronize** action inside a nanoflow. Synchronization performed using a UI element (for example a button or an onchange action) performs the full synchronization.
 
 ### 2.2 Synchronization Phases
 
@@ -66,7 +66,7 @@ The upload phase begins with a referential integrity validation of the new or ch
 
 During [full synchronization](#full-sync) this validation ensures that all referenced objects are committed to the local database. If a referenced object is created on the device and not yet committed to the local database, synchronization is aborted to prevent an invalid reference value on the server database. Note that synchronization only works on the database level.
 
-For example, when a committed `City` object refers to an uncommitted `Country` object, synchronizing the `City` object will yield an invalid `Country` object reference, which will break the app's data integrity. If a synchronization is triggered while data integrity is broken, the following error message will appear (indicating an error in the model to fix): "Sync has failed due to a modeling error. Your database contains objects that reference uncommitted objects: object of type `City` (reference `City_Country`)." To fix this, such objects must also be committed before synchronizing (in this example, `Country` should be committed before synchronizing).
+For example, when a committed `City` object refers to an uncommitted `Country` object, synchronizing the `City` object will yield an invalid `Country` object reference, which will break the app's data integrity. If a synchronization is triggered while data integrity is broken, the following error message will appear (indicating an error in the model to fix): **Sync has failed due to a modeling error. Your database contains objects that reference uncommitted objects: object of type `City` (reference `City_Country`)**. To fix this, such objects must also be committed before synchronizing (in this example, `Country` should be committed before synchronizing).
 
 During [selective synchronization](#selective), an additional referential integrity validation is performed to ensure that all referenced objects are at least synchronized once to the server database or included in the selection.
 
@@ -84,7 +84,7 @@ If the upload phase was successful, the download phase starts in which the local
 
 **Full synchronization** — A network request is made to the server per entity to retrieve the newest data from the server database. You can manage which entities are synchronized to the local database by customizing your app's synchronization behavior. For more details on this procedure, see the [Customizable Synchronization](#customizable-synchronization) section below. The download process also downloads the file entities' contents and saves that to your device storage. This process is incremental. The app only downloads the contents of a file object if the file has not been downloaded before, or if the file has been changed since it was last downloaded. The changed date attribute of the file entity is used to determine if the contents of a file object have changed.
 
-**Selective synchronization** — Only the objects selected for synchronization are synchronized to the local database. There are no extra network requests made to retrieve these objects. The objects are returned in the response of a network request made during the upload phase. If a file entity is selected for synchronization, its content is also updated on the device storage incrementally. The logic is the same with the full synchronization.
+**Selective synchronization** — Only the objects selected for synchronization are synchronized to the local database. There are no extra network requests made to retrieve these objects. The objects are returned in the response of a network request made during the upload phase. If a file entity is selected for synchronization, its content is also updated on the device storage incrementally. The logic is the same in the full synchronization.
 
 ### 2.3 After Synchronization
 
@@ -96,7 +96,7 @@ Please note that a nanoflow object variable's value might become `empty` after s
 * The current user does not have enough access to the object (defined by the security access rules)
 * The entity is configured with an XPath constraint on the [customizable synchronization](#customizable-synchronization}) screen, and the object no longer matches the specified XPath constraint
 * The entity is configured with **Nothing (clear data)** option on the customizable synchronization screen
-* The upload phase fails for the object, for example when before commit event handler returns false or committing fails due to violation of an unique validation
+* The upload phase fails for the object — for example when a before commit event handler returns false, or committing fails due to violation of a unique validation
 
 ### 2.4 Customizable Synchronization {#customizable-synchronization}
 
@@ -108,10 +108,10 @@ By default, Mendix automatically determines which objects need to be synchronize
 
 Depending on the use-case, more fine-grained synchronization controls might be required. Therefore, it is possible to change the download behavior for an entity. You can choose between the following options:
 
-* **All Objects** — download all objects applying the regular security constraints
-* **By XPath** — only download the objects which match the [XPath Constraints](xpath-constraints) in addition to the regular security constraints. This means all previously synchronized objects that do not match the XPath constraint will be removed.
-* **Nothing (clear data)** — do not download any objects automatically, but do clear the data stored in the database for this entity when performing a synchronization (this can be useful in cases where the objects should only be uploaded, for example a `Feedback` entity)
-* **Nothing (preserve data)** — do not download any objects automatically, and do not clear the data stored in the database for this entity when performing a synchronization  (this can be useful in cases where you want have full control over the synchronization and should be used in combination with the [Synchronize to device](synchronize-to-device) or [Synchronize](synchronize) activity with specific objects selected)
+* **All Objects** — Download all objects applying the regular security constraints.
+* **By XPath** — Only download the objects which match the [XPath Constraints](xpath-constraints) in addition to the regular security constraints. This means all previously synchronized objects that do not match the XPath constraint will be removed.
+* **Nothing (clear data)** — Do not download any objects automatically, but do clear the data stored in the database for this entity when performing a synchronization (this can be useful in cases where the objects should only be uploaded, for example a `Feedback` entity).
+* **Nothing (preserve data)** — Do not download any objects automatically, and do not clear the data stored in the database for this entity when performing a synchronization  (this can be useful in cases where you want have full control over the synchronization and should be used in combination with the [Synchronize to device](synchronize-to-device) or [Synchronize](synchronize) activity with specific objects selected).
 
 If you have custom widgets or JavaScript actions which use an entity that cannot be detected by Studio Pro in your offline-first profile (because its only used in the code), you can use customizable synchronization to include such entities.
 
@@ -131,7 +131,7 @@ If a network error happens during the file upload (via [step 2 in the upload pha
 
 If a network error occurs while uploading the data (via [step 3 in the upload phase](#stepthree)), the data is kept on the local device and no changes are made on the server. Any files uploaded in [step 2](#steptwo) will be uploaded again during the next synchronization.
 
-If a network error occurs (such as a timeout) after uploading the data (at [step 3 in the upload phase](#stepthree)), the data is kept on the local device. However, since the server has already started working on the request it will complete the request and commit the changes to server database. The device cannot distinguish whether the server processed the request or not, so the next synchronization attempt will contain the already-applied changes. In this case, the server will behave differently based on Mendix version. In Mendix Studio Pro v8.18 or below, the server will commit the same changes again, which might overwrite potential changes made by other users between the two synchronizations. From Studio Pro v8.18 and above this process is optimized and the server will not commit the same changes because they have been applied before.
+If a network error (such as a timeout) occurs after uploading the data (at [step 3 in the upload phase](#stepthree)), the data is kept on the local device. However, since the server has already started working on the request it will complete the request and commit the changes to server database. The device cannot distinguish whether the server processed the request or not, so the next synchronization attempt will contain the already-applied changes. In this case, the server will behave differently based on Mendix version. In Mendix Studio Pro v8.18 or below, the server will commit the same changes again, which might overwrite potential changes made by other users between the two synchronizations. From Studio Pro v8.18 and above this process is optimized and the server will not commit the same changes because they have been applied before.
 
 If a network error occurs during the download phase, no data is updated on the device. Therefore the user can keep working or retry. The effects of the upload phase are not rolled back on the server.
 
@@ -174,13 +174,13 @@ To ensure the best user experience for your Mendix application, follow these bes
 * Try to synchronize through a nanoflow instead of a UI element so you can add error handling to the synchronization activity which can handle cases when synchronization fails (connection errors, model and data related errors, and more)
 * Synchronize large files or images using selective synchronization
 * Use an `isDeleted` Boolean attribute for delete functionality so that conflicts can be handled correctly on the server
-* Use before- and after-commit microflows to pre- or post-process data.
-* Use a [microflow call](microflow-call) in your nanoflows to perform additional server-side logic such as retrieving data from a REST service, or accessing and using complex logic such as Java actions.
+* Use before- and after-commit microflows to pre- or post-process data
+* Use a [microflow call](microflow-call) in your nanoflows to perform additional server-side logic such as retrieving data from a REST service, or accessing and using complex logic such as Java actions
 * Help your user remember to synchronize their data so it is processed as soon as possible: you can check for connectivity and automatically synchronize in the nanoflow that commits your object, or remind a user to synchronize while using a notification or before signing out to ensure no data is lost
 
 ## 4 Ensuring Your App Is Offline-First {#limitations}
 
-Mendix helps developers in building rich offline-first apps. However, there are some limitations.
+Mendix helps developers build rich offline-first apps. However, there are some limitations. See the subsections below for details.
 
 ### 4.1 Microflows {#microflows}
 
@@ -188,8 +188,8 @@ Microflows can be called from offline apps by using [microflow call](microflow-c
 
 #### 4.1.1 Microflow Arguments Type
 
-* Passing an object or a list of a persistable entity is not supported.
-* Passing an object or a list of a non-persistable entity that has an association with a persistable entity is not supported (such an association can be an indirect association).
+* Passing an object or a list of a persistable entity is not supported
+* Passing an object or a list of a non-persistable entity that has an association with a persistable entity is not supported (such an association can be an indirect association)
 
 #### 4.1.2 UI Actions
 
@@ -210,8 +210,8 @@ Changes to persistable objects made in a microflow will not be reflected on the 
 
 #### 4.1.4 Microflow Return Value
 
-* Returning an object or a list of persistable entity is not supported.
-* Returning an object or a list of a non-persistable entity that has an association with a persistable entity is not supported (such association can be an indirect association).
+* Returning an object or a list of persistable entity is not supported
+* Returning an object or a list of a non-persistable entity that has an association with a persistable entity is not supported (such association can be an indirect association)
 
 #### 4.1.5 Language Switching
 

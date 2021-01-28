@@ -169,7 +169,7 @@ When a data source is selected in the search results, the following details are 
 
 * **Version** number of the service
 
-* **Connections** –  nuimber of apps that consume the service
+* **Connections** –  number of apps that consume the service
 
 * A description of the data source
 

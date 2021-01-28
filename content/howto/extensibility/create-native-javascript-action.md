@@ -239,9 +239,10 @@ This will create a **node_module** folder inside your **actions** folder. There 
 
 {{% /alert %}}
 
-#### 3.4.1 Declaring Native Dependency
+#### 3.4.1 Declaring Native Dependencies
 
-To make Mendix install and link native dependencies automatically while creating production-like builds of a native app create a JSON files next to your JavaScript actions: `HasNFCSupport.json` and `ReadNFCTag.json`. Define the same Native Dependencies in each of them.
+To make Mendix install and link native dependencies automatically while creating production-like builds of a native app, create JSON files next to your JavaScript actions: `HasNFCSupport.json` and `ReadNFCTag.json`. Define the same native dependencies in each of them:
+
 ```json
 {
     "nativeDependencies": {

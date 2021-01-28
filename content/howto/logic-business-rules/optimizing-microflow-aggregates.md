@@ -16,6 +16,8 @@ The Mendix Platform only creates an optimized SQL query if the list is not used 
 
 If you do want to use the list but you also want the optimized query, do two separate retrieves. This will do the optimized query, and you can use the second retrieve in your microflow.
 
+When an average is calculated using an optimized SQL query, the rounding mode configured in the project settings will not be respected. The result will be rounded by the database in a database specific manner. If the rounding mode is essential for the result, you can retrieve the sum and count separately and perform the division in the microflow.
+
 ![](attachments/18448676/18580944.png)
 
 ## 2 Read More

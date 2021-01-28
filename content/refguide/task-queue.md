@@ -35,6 +35,8 @@ Background execution is done in so called **Task Queues**. They can be created i
     Task Queues have a number threads. Each of these threads can process one task at a time. That is, a queue will pick up as many concurrent tasks as it has threads. Whenever a task is finished, the next one will be picked up.
     
     In general, one or two threads should be enough, unless there is a large number of tasks or tasks take a long time and need to execute in parallel. Having many threads will put additional load on the database and should not be done if not needed.
+    
+    The total number of worker threads is limited to 40 (per cluster node). There is no hard limit on cluster nodes.
 
 ### 2.2 Scheduling Microflow Executions
 
@@ -55,7 +57,9 @@ For microflows which are running in a task queue, the context in which the micro
 
 #### 2.2.2 Through the API
 
-The `Core` class in `com.mendix.core` has been extended with a method [microflowCall](https://apidocs.rnd.mendix.com/8/runtime/com/mendix/core/Core.html#microflowCall(java.lang.String)). It can be used to schedule a microflow for background execution as in the following example:
+{{% todo %}}[Add link to https://apidocs.rnd.mendix.com/9/runtime/com/mendix/core/Core.html#microflowCall(java.lang.String) when it is live]{{% /todo %}}
+
+The `Core` class in `com.mendix.core` has been extended with a method `microflowCall`. It can be used to schedule a microflow for background execution as in the following example:
 
 ```java
 Core.microflowCall("AModule.SomeMicroflow")
@@ -74,13 +78,15 @@ The context in which a background task runs is still under discussion and may ch
 
 ### 2.3 Configuration options{#configuration}
 
-The period for a graceful shutdown of queues can be configured.
+The period for a graceful shutdown of queues can be configured as a [custom runtime](custom-settings) setting in Studio Pro. 
 
 | Configuration option          | Example value | Explanation                                              |
 |-------------------------------|---------------|----------------------------------------------------------|
 | `TaskQueue.ShutdownGracePeriod` |          10000| Time in ms to wait for task to finish when shutting down.|
 
-The total number of worker threads is limited to 40 (per cluster node). There is no hard limit on cluster nodes.
+{{% alert type="info" %}}
+This grace period is applied twice during the [shutdown](#shutdown) (described below) so the maximum time that the runtime will wait for tasks to end is twice this value.
+{{% /alert %}}
 
 ### 2.4 Interfacing the queue
 
@@ -117,7 +123,7 @@ During the startup of the Mendix runtime, there is a check to ensure that schedu
 
 If any of these condition checks fail, tasks are moved to `System.ProcessedQueueTasks` with **Status** `Incompatible`. The Runtime will only start after all scheduled tasks have been checked. This should in general not take very long, even if there are thousands of tasks.
 
-### 2.7 Shutdown
+### 2.7 Shutdown{#shutdown}
 
 During shutdown, the `TaskQueueExecutors` will stop accepting new tasks. Running tasks are allowed a [grace period](#configuration) to finish. After this period, the runtime will send an interrupt to all task threads that are still running and again allow a grace period for them to finish. After the second grace period the runtime just continues shutting down, eventually aborting the execution of the tasks. The aborted tasks will be reset, so that they are re-executed later or on another cluster node.
 
@@ -127,13 +133,9 @@ Interrupting task threads may cause them to fail.
 
 ## 3 Monitoring
 
-To monitor tasks in the Task Queue the `QueueHelpers` module can be used in Mendix 9.
-
-Since this hasn't been released yet, it can be downloaded through [Gitlab](https://gitlab.rnd.mendix.com/runtime/taskqueuehelpers-module) by Mendix employees only.
-
 ### 3.1 Logging
 
-A Logger exists specifically for all actions related to Task Queue, named `Queue`.
+A [Log Node](logging#mendix-nodes) exists specifically for all actions related to Task Queues, named `Queue`.
 
 ## 4 Other
 

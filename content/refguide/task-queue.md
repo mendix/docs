@@ -12,7 +12,7 @@ Using a **Task Queue** allows you to run microflows asynchronously while control
 
 ### 1.1 Replacing the Process Queue module
 
-This way of executing tasks in the background supersedes the earlier [Process Queue](https://docs.mendix.com/appstore/modules/process-queue) App Store module.  
+This way of executing tasks in the background supersedes the earlier [Process Queue](/appstore/modules/process-queue) App Store module.  
 See the section [Replacing Process Queue](#process-queue), below, for more information on the differences between the two mechanisms.
 
 ## 2 Configuration

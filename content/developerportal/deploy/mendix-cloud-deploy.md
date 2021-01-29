@@ -169,7 +169,7 @@ Click the **Publish** button in Studio. For more information see the [Publishing
 The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)) shows the current status of Mendix services. If you have issues with deployment, you can check the Mendix status page to see if deployment is operational (under **Mendix Services**) or if there are other Mendix issues which may be affecting your deployment.
 
 ## 7 Mendix Pricing Plans{#plans}
-
+{{% todo %}}[Add Mendix Basic here]{{% /todo %}}
 Mendix licenses are sold in a number of standard plans. The table below shows the current plans and those plans which are still being used but are not available to new customers (*legacy* plans).
 
 | Plan | App RAM | App CPU | DB RAM | DB CPU | DB Storage | File Storage |

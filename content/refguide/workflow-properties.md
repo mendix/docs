@@ -11,7 +11,7 @@ This document describes workflow properties. For details on what workflows are f
 
 ## 2 Workflow Properties
 
-An example of microflow properties is represented in the image below:
+An example of workflow properties is represented in the image below:
 
 ![Workflow Properties](attachments/workflow-properties/workflow-properties.png)
 
@@ -28,7 +28,9 @@ Workflow properties consist of the following sections:
 
 #### 2.1.1 Name {#name}
 
-**Name** is the internal name of the workflow document. When referring to the workflow in the app project you will use this name. It must be unique within the module, but you can have two workflows with the same name in different modules. When referring to the workflow, you will normally prepend the name of the module to ensure uniqueness and allow you to use workflows in other modules.
+**Name** is the internal name of the workflow document. When referring to the workflow in the app project you will use this name. It must be unique within the module, but you can have two workflows with the same name in different modules. When referring to the workflow, you will normally prepend the name of the module to ensure uniqueness and allow you to use workflows in other modules. 
+
+You cannot change the **Name** of the workflow but you can change the [Caption](#general).
 
 #### 2.1.2 Documentation
 
@@ -46,17 +48,13 @@ For more information, see [Module Security](module-security).
 
 ### 2.2 Data Section {#data}
 
-**Workflow entity** is a special type of entity that is used as a workflow context.  
-
-It should be a **Workflow Context** entity from the **System** module or its **specialization**. 
+**Workflow entity** is an entity that is used as a workflow context. It should be a **Workflow Context** entity from the **System** module or its **specialization**. 
 
 For more information on specializations and generalizations, see [Generalization vs One-to-One Associations](generalization-and-association).
 
 ### 2.3 Display Information Section {#display-info}
 
 #### 2.3.1 Workflow Name
-
-**Workflow Name** 
 
 **Workflow name** is displayed in the running app. The **Workflow name** can contain parameters that are written between braces, e.g. {1}.
 
@@ -97,8 +95,8 @@ To add a parameter to the **Workflow name** or the **Workflow description**, do 
 
 In addition to adding new parameters, you can perform the following actions on parameters:
 
-* **Delete** – to delete a parameter click Delete or press Delete on your keyboard
-* **Edit** – double-click a parameter to edit it or click Edit
+* **Delete** – to delete a parameter click **Delete** or press <kbd>Delete</kbd> on your keyboard
+* **Edit** – double-click a parameter to edit it or click **Edit**
 * **Move up** – to move a parameter up in the list of parameters and also to change its index, click **Move up**
 * **Move down** – to move a parameter down in the list of parameters and also to change its index, click **Move down**
 
@@ -116,4 +114,4 @@ In addition to adding new parameters, you can perform the following actions on p
 
 ## 3 Read More
 
-* 
+* [Workflows](workflows)

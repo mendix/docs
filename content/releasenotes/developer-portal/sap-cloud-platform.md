@@ -1,14 +1,22 @@
 ---
-title: "SAP Cloud Platform"
+title: "SAP BTP"
 category: "Deployment"
 menu_order: 30
-description: "Release notes for deployment to SAP Cloud Platform"
+description: "Release notes for deployment to SAP Business Technology Platform"
 tags: ["release notes", "deployment", "cloud environment", "SAP", "SAP Cloud"]
 ---
 
-These release notes cover changes to deployment to [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform). There are separate release notes for other deployment targets, see [Deployment](deployment) release notes page for further information.
+These release notes cover changes to deployment to [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform) (SAP BTP — formerly SAP Cloud Platform). There are separate release notes for other deployment targets, see [Deployment](deployment) release notes page for further information.
 
-For information on the current status of deployment to SAP Cloud Platform and any planned releases see [Mendix Status](https://status.mendix.com/).
+For information on the current status of deployment to SAP BTP and any planned releases see [Mendix Status](https://status.mendix.com/).
+
+## 2021
+
+### January 27th, 2021
+
+#### Improvements
+
+* SAP Cloud Platform was renamed SAP Business Technology Platform (SAP BTP) and changes were made to the documentation to reflect this.
 
 ## 2020
 
@@ -38,7 +46,7 @@ For information on the current status of deployment to SAP Cloud Platform and an
 
 #### Improvements
 
-* We have added an easy-to-use autoscaler configurator to allow you to easily create JSON configuration files for the **Application Autoscaler** on SAP Cloud Platform. See [Application Autoscaler for SAP Cloud Platform](/partners/sap/sap-autoscaler) for more information.
+* We have added an easy-to-use autoscaler configurator to allow you to easily create JSON configuration files for the **Application Autoscaler** on SAP Cloud Platform. See [Application Autoscaler for SAP Business Technology Platform](/partners/sap/sap-autoscaler) for more information.
     * There is currently an issue with how the JSON is uploaded. We are working on a fix for this but, in the meantime, please check the workaround in the documentation to ensure that the JSON is uploaded.
 
 ### March 26th, 2020

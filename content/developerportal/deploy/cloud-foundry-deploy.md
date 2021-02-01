@@ -41,7 +41,7 @@ For more information on running Mendix apps on Cloud Foundry, see the [Mendix Cl
 
 Cloud Foundry providers like SAP and IBM are made available within the Mendix Developer Portal. It is recommended that you use the Developer Portal for deploying your application to these clouds. See the detailed documentation for the following targets:  
 
-* [SAP Cloud Platform](sap-cloud-platform)
+* [SAP Business Technology Platform](sap-cloud-platform)
 * [IBM Cloud](ibm-cloud)
 
 Only use the instructions in this document if you have specific requirements which the recommended method does not support.
@@ -100,8 +100,8 @@ Apps make use of services (for example, databases, load balancers, and memory to
 In addition to these required services, the following services are optional:
 
 * File Store
-* XSUAA Service (*SAP Cloud Platform only*)
-* Connectivity Service (*SAP Cloud Platform only*)
+* XSUAA Service (*SAP Business Technology Platform (SAP BTP) only*)
+* Connectivity Service (*SAP BTP only*)
 
 This how-to will describe adding the database and file store only. Additional services can be added in the same way. There is usually a limit to how many resources you can add to a trial account so you may only be able to deploy a single app into a trial account without running out of resources.
 

@@ -109,7 +109,7 @@ We renamed all the SAP-related connectors and app templates in the App Store to 
 
  Type | Old Name | New Name |
  ----- | ----- | -----|
- Connector | SAP Cloud Platform XSUAA Connector | XSUAA Connector for SAP Cloud Platform |
+ Connector | SAP Cloud Platform XSUAA Connector | XSUAA Connector for SAP Business Technology Platform |
  Connector | SAP Fiori UI Package | UI Package for SAP Fiori themed apps |
  Connector | SAP Leonardo Machine Learning Foundation Connector | Connector for SAP Leonardo Machine Learning Foundation |
  Connector | SAP OData Connector | OData Connector for SAP solutions |

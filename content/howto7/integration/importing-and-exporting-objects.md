@@ -221,7 +221,6 @@ Mendix module documents can be exported as a Mendix package (*.mpk*) file.
 * [How to Configure Selenium Support](selenium-support)
 * [How to Import XML Documents](importing-xml-documents)
 * [How to Consume a REST Service](consume-a-rest-service)
-* [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
 * [Modules](/refguide7/modules)
 * [Project](/refguide7/project)
 * [Common Widgets](/refguide7/common-widgets)

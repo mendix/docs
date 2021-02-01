@@ -1,6 +1,6 @@
 ---
 title: "Attributes"
-category: "Domain Model"
+parent: "domain-models"
 description: "Describes attribute types in Mendix Studio."
 tags: ["studio", "domain model", "attributes", "attribute types"]
 ---

@@ -58,5 +58,4 @@ All the changes made on this page are directly passed on to the **Stories** page
 
 ## 5 Read More
 
-* [App Modeling Environments](modeling-environments)
 * [Team Server Overview](team-server)

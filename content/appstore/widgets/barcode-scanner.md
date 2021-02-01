@@ -8,7 +8,7 @@ tags: ["app store", "app store component", "widget", "barcode scanner", "phonega
 
 ## 1 Introduction
 
-The [Barcode Scanner](https://appstore.home.mendix.com/link/app/1469/) widget enables the PhoneGap-native barcode scanning functionality within your Mendix mobile application.
+The [Barcode Scanner](https://appstore.home.mendix.com/link/app/1469/) widget enables the native barcode scanning functionality within your Mendix mobile application.
 
 ## 2 Configuration
 
@@ -30,7 +30,7 @@ Place this widget in a data view where you want the button to be placed. Make su
 
 ## 3 Adding the Plugin
 
-When publishing an app to mobile app stores, add in this custom Phonegap/Cordova configuration for the barcode plugin:
+When publishing an app to mobile app stores, add in this custom Cordova configuration for the barcode plugin:
 
 ```
 <plugin name="phonegap-plugin-barcodescanner" />

@@ -4,6 +4,8 @@ category: "Security"
 menu_order: 20
 description: "A set of security aspects and checks to use when developing your Mendix application."
 tags: ["security", "best practices", "access rules", "authentication", "encryption", "password", "ssl", "identity provider", "mendix cloud"]
+aliases:
+    - /howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications.html
 #The anchor request-handlers below is mapped, so it should not be removed or changed.
 ---
 
@@ -146,7 +148,7 @@ HTTP headers can add an additional layer of security and help you detect certain
 
 An example of an attack is when an application is embedded in an iframe. Applications that can be embedded within an iframe can be misused by attackers. By using an overlay, it could trick users into clicking buttons and make them perform actions within the application on their behalf without knowing it. This approach is called [clickjacking](https://www.owasp.org/index.php/Clickjacking).
 
-By sending a header to the user’s browser, it can block the use of the Mendix application within an iframe and avoid this type of attack. The header is set by default to block embedding within an iframe, but can be configured using [HTTP Headers](/developerportal/deploy/environments-details#http-headers) in your node’s environment details within the Mendix Developer Portal.
+By sending a header to the user’s browser, it can block the use of the Mendix application within an iframe and avoid this type of attack. The header is set by default to block embedding within an iframe, but can be configured using [HTTP Headers](/developerportal/deploy/environments-details#http-headers) in your node’s environment details within the Mendix Developer Portal. If you change this value, you will also need to ensure that *SameSite* cookies are set to the correct value. See [Iframes and Running Apps](/developerportal/deploy/running-in-iframe) for more information.
 
 ## 12 Maintaining a High Level of Project Hygiene
 

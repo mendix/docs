@@ -82,4 +82,4 @@ You can do one of the following:
 ## 7 Read More
 
 * [Version Control](version-control) 
-* [Collaborative Development in Studio](/studio/general-collaborative-development)
+* [Collaborative Development in Studio](/studio/collaborative-development)

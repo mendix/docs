@@ -24,5 +24,5 @@ This version is compatible with the following components:
 
 ## 3 Read More
 
-* [How to Use the Excel Exporter](https://docs.mendix.com/howto/integration/using-the-excel-exporter)
+* [How to Export to Excel](https://docs.mendix.com/howto/integration/using-the-excel-exporter)
 

@@ -83,7 +83,7 @@ The number of requests per second is split up by request handlers. The key ones 
 * **xas/** lists general queries for data in data grids, sending changes to the server, and triggering the execution of microflows
 * **ws/** shows the number of web service calls that were done
 * **file** shows the number of file uploads and downloads
-* The **default** should not list any requests, because static content is directly served to the user by the front-facing web server, which is placed between the user and this application process
+* The **default** request handler handles all requests which are *not* handled by the standard request handlers (`/xas/`,`/file`, etc) or request handlers installed by the user application — requests handled by the default handler will usually be for the static resources of application (for example `/login.html` and `/mxui.js`).
 
 These are the commonly used types:
 
@@ -216,6 +216,12 @@ The **Application node CPU usage** graph shows the CPU utilization in percentage
 {{% alert type="info" %}}
 CPU usage of the database is shown in [Database Node CPU Usage](#Trends-dbcpu), below.
 {{% /alert %}}
+
+Because of the way resources are allocated to Mendix apps, your app may be able to burst to use more than the CPU specified for your container. For example, an app running in a container with 2 CPUs might show CPU usage of 250% where you would expect the maximum to be 200%.
+
+If your app consistently uses more CPU than specified for your container your app could suffer from performance issues if there are periods when there are insufficient CPU resources for it to burst above that specified for the container.
+
+Your app will always have access to at least the amount of CPU specified for your container when it needs it.
 
 ### <a name="Trends-appdf"></a>4.10 Application Node Disk Usage in Percentage (%)
 

@@ -83,7 +83,7 @@ You can export these reports by clicking **Export to Excel**. Note that the expo
 
 ## 3 Security Groups Tab{#security-groups}
 
-This tab lists the security groups defined for your company. Users who are assigned to security groups are automatically granted access to specified AppCloud apps.
+This tab lists the security groups defined for your company. Users who are assigned to security groups are automatically granted access to specified apps.
 
 You can perform the following actions on this tab:
 
@@ -95,7 +95,7 @@ You can perform the following actions on this tab:
 
     * Under **Access To**, you can up the security group's access to specific apps (via the **Add** and **Remove** buttons) 
         * Members of this security group will be granted access to these apps automatically
-        * It is only possible to create access policies for licensed AppCloud-enabled apps
+        * It is only possible to create access policies for licensed apps
         * Under **Select Environment**, you can select a specific node environment for the app
         * Under **Select Role(s)**, you can select specific [user roles](/refguide/project-security#user-roles) for the app
 

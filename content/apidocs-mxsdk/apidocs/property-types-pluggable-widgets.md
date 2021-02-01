@@ -1,6 +1,6 @@
 ---
 title: "Pluggable Widget Property Types"
-parent: "pluggable-widgets"
+parent: "pluggable-parent-9"
 menu_order: 20
 description: A guide for understanding pluggable widgets' property types.
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
@@ -230,10 +230,6 @@ Then the Studio Pro UI for the property appears like this:
 
 Properties of type icon allows a user to configure an icon similar to one used by a [button](/refguide/button-properties#icon). It is passed as `DynamicValue<IconValue>` prop to a client component. For more information, see the [IconValue](client-apis-for-pluggable-widgets#icon-value) section of *Client APIs Available to Pluggable Widgets*.
 
-{{% alert type="info" %}}
-This property type was introduced in Mendix 8.1.
-{{% /alert %}}
-
 #### 3.1.1 XML Attributes
 
 | Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
@@ -259,14 +255,6 @@ Then the Studio Pro UI for the component appears like this:
 ### 3.2 Image {#image}
 
 Image allows a user to configure a static image from an [image collection](/refguide/image-collection). It also allows a user to configure an image from an object that is a specialization of **System.Image**. It is passed as an `DynamicValue<ImageValue>` prop to a client component (for more information, see the [ImageValue](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#imagevalue) section of *Client APIs Available to Pluggable Widgets*). See the [Images Reference Guide](/refguide/images) for more information about supported image formats.
-
-{{% alert type="info" %}}
-This property type was introduced in Mendix 8.1. Support for dynamic images was introduced in Mendix [8.4.0](/releasenotes/studio-pro/8.4).
-{{% /alert %}}
-
-{{% alert type="info" %}}
-Support for SVG images in native mobile apps was introduced in Mendix [8.4.0](/releasenotes/studio-pro/8.4).
-{{% /alert %}}
 
 {{% alert type="warning" %}}
 GIF images are not supported in native mobile apps on Android devices.
@@ -297,14 +285,6 @@ Then the Studio Pro UI for the component appears like this:
 ### 3.3 Widgets {#widgets}
 
 The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component if a `dataSource` attribute is not specified or if an attribute is specified, but the data source is not configured by the user. Otherwise it is passed as a [`ListWidgetValue`](client-apis-for-pluggable-widgets#listwidgetvalue). For more information, see the [Datasource](#datasource) section below.
-
-{{% alert type="info" %}}
-This property type was introduced in Mendix 8.3.
-{{% /alert %}}
-
-{{% alert type="info" %}}
-Support for the `dataSource` attribute was introduced in Mendix 8.7.
-{{% /alert %}}
 
 {{% alert type="warning" %}}
 Some widgets are not yet supported inside pluggable widgets. Placing unsupported widgets inside a pluggable widget results in a consistency error in Studio and Studio Pro.
@@ -353,7 +333,11 @@ then the Studio Pro UI for the component appears like this:
 
 ### 4.1 Expression{#expression}
 
-The expression property allows a user to configure an [expression](/refguide/expressions), the result of which will be passed to the client component as a `DynamicValue<T>` where `T` depends on a return type of the expression.
+The expression property allows a user to configure an [expression](/refguide/expressions).
+
+If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the client will receive a `DynamicValue<T>` where `T` depends on the expression's return type.
+
+When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListExpressionValue<T>`](client-apis-for-pluggable-widgets#listexpressionvalue) where `T` depends on the expression's return type. For more information, see the [Datasource](#datasource) section below.
 
 #### 4.1.1 XML Attributes
 
@@ -363,6 +347,7 @@ The expression property allows a user to configure an [expression](/refguide/exp
 | `key`          | Yes      | String              | See [key](#key) |
 | `defaultValue` | No       | String (Expression) | Default value for the property                                                                                                                                      |
 | `required`     | No       | Boolean             | Whether the property must be specified by the user, `true` by default                                                                                                |
+| `dataSource`   | No       | Property Path       | Specifies the path to a [`datasource`](#datasource) property linked to this expression property |
 
 #### 4.1.2 XML Elements
 
@@ -394,16 +379,21 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.2 TextTemplate{#texttemplate}
 
-The TextTemplate property allows a user to configure translatable text template similar to the [Caption](/refguide/text#caption) of a text widget. The interpolated string will be passed to the client component as `DynamicValue<string>`.
+The TextTemplate property allows a user to configure a translatable text template similar to the [Caption](/refguide/text#caption) of a text widget.
+
+If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the interpolated string will be passed to the client component as `DynamicValue<string>`.
+
+When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListExpressionValue<string>`](client-apis-for-pluggable-widgets#listexpressionvalue). For more information, see the [Datasource](#datasource) section below.
 
 #### 4.2.1 XML Attributes
 
-| Attribute   | Required | Attribute Type | Description                                                                                                                                                          |
-| ----------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`      | Yes      | String         | Must be `textTemplate`                                                                                                                                               |
-| `key`       | Yes      | String         | See [key](#key) |
-| `multiline` | No       | Boolean        | `true` to enable multiline input in the Studio, `false` otherwise.                                                                                                   |
-| `required`  | No       | Boolean        | Whether the property must be specified by the user, `true` by default                                                                                                |
+| Attribute    | Required | Attribute Type | Description                                                                                                                                                          |
+| ------------ | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`       | Yes      | String         | Must be `textTemplate`                                                                                                                                               |
+| `key`        | Yes      | String         | See [key](#key) |
+| `multiline`  | No       | Boolean        | `true` to enable multiline input in the Studio, `false` otherwise                                                                                                   |
+| `required`   | No       | Boolean        | Whether the property must be specified by the user, `true` by default                                                                                                |
+| `dataSource` | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this text template property |
 
 
 #### 4.2.2 XML Elements
@@ -436,11 +426,7 @@ The action property type allows a user to configure an action which can do thing
 
 If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the client will receive an `ActionValue` representing the action or `undefined` if the **Do nothing** action was selected.
 
-When a `dataSource` attribute is specified and configured by the user it is passed as a [`ListActionValue`](client-apis-for-pluggable-widgets#listactionvalue). For more information, see the [Datasource](#datasource) section below.
-
-{{% alert type="info" %}}
-Support for the `dataSource` attribute was introduced in Mendix 8.9.
-{{% /alert %}}
+When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListActionValue`](client-apis-for-pluggable-widgets#listactionvalue). For more information, see the [Datasource](#datasource) section below.
 
 #### 4.3.1 XML Attributes
 
@@ -448,7 +434,7 @@ Support for the `dataSource` attribute was introduced in Mendix 8.9.
 | ------------ | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`       | Yes      | String         | Must be `action`                                                                                                                                                     |
 | `key`        | Yes      | String         | See [key](#key) |
-| `dataSource` | No       | Property Path  | Specifies path to a [`datasource`](#datasource) property linked to this action's property |
+| `dataSource` | No       | Property Path  | Specifies path to a [`datasource`](#datasource) property linked to this action property |
 
 #### 4.3.2 Studio Pro UI
 
@@ -471,11 +457,7 @@ The attribute property type allows a widget to work directly with entities' attr
 
 If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the client will receive an `EditableValue<T>` where `T` depends on a configured `<attributeType>`. For more information, see the [EditableValue](client-apis-for-pluggable-widgets#editable-value) section of *Client APIs Available to Pluggable Widgets*.
 
-When a `dataSource` attribute is specified and configured by the user it is passed as a [`ListAttributeValue`](client-apis-for-pluggable-widgets#listattributevalue). For more information, see the [Datasource](#datasource) section below.
-
-{{% alert type="info" %}}
-Support for the `dataSource` attribute was introduced in Mendix 8.12.
-{{% /alert %}}
+When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListAttributeValue`](client-apis-for-pluggable-widgets#listattributevalue). For more information, see the [Datasource](#datasource) section below.
 
 #### 4.4.1 XML 
 
@@ -603,11 +585,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.7 Datasource {#datasource}
 
-The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](client-apis-for-pluggable-widgets#listvalue) and may be used with [`action`](#action), [`attribute`](#attribute) and [`widgets`](#widgets) properties. See [Data Sources](https://docs.mendix.com/refguide/data-sources#list-widgets) for available data source types.
-
-{{% alert type="info" %}}
-Support for the datasource property type was introduced in Mendix 8.7.
-{{% /alert %}}
+The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](client-apis-for-pluggable-widgets#listvalue) and may be used with [`action`](#action), [`attribute`](#attribute), [`expression`](#expression), [`text template`](#texttemplate) and [`widgets`](#widgets) properties. See [Data Sources](https://docs.mendix.com/refguide/data-sources#list-widgets) for available data source types.
 
 {{% alert type="warning" %}}
 Only list datasources are supported, therefore specifying `isList="true"` is required.
@@ -675,10 +653,6 @@ The TabIndex property allows pluggable widgets to implement the **Tab index** se
 
 Every pluggable widget can be [conditionally hidden](/refguide/common-widget-properties#visibility-properties). This property can be used to control a position of the widget visibility inputs.
 
-{{% alert type="info" %}}
-This property type was introduced in Mendix 8.1.
-{{% /alert %}}
-
 ```xml
 <systemProperty key="Visibility"/>
 ```
@@ -686,10 +660,6 @@ This property type was introduced in Mendix 8.1.
 ### 5.5 Editability {#editability}
 
 The editability property allows a pluggable widget to have an editable configuration similar to a [core input widget](/refguide/text-box#editability). When a widget is marked as read-only or conditionally editable with condition being false, all [editable values](client-apis-for-pluggable-widgets#editable-value) its client component receives will have `readOnly` flag.
-
-{{% alert type="info" %}}
-This property type was introduced in Mendix 8.1.
-{{% /alert %}}
 
 ```xml
 <systemProperty key="Editability"/>

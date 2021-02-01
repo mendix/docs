@@ -38,7 +38,13 @@ Properties of the menu items consists of the following sections:
 
 ### 2.1 Events Section {#events-section-navigation}
 
-You can choose the **On Click Action** in the **Events** section. The **On Click Action** defines what action is performed when the user clicks a menu item. The available actions are described in the table below:
+You can choose the **On Click Action** in the **Events** section. The **On Click Action** defines what action is performed when the user clicks a menu item. 
+
+{{% alert type="info" %}}
+If a menu item has a sub-item(s), it cannot have an action configured for it.
+{{% /alert %}}
+
+The available actions are described in the table below:
 
 | Action         | Description                                                  |
 | -------------- | ------------------------------------------------------------ |
@@ -73,9 +79,9 @@ To create a new menu item, do the following:
 
 1. Click the **Navigation Document** icon in the left menu bar to open the **Navigation**.
 
-2.  Click a plus at the end of the navigation tree to create a menu item, or click a plus next to the existing navigation item to create its sub-item
+2. Click a plus at the bottom of the navigation tree to create a menu item, or click a plus next to the existing navigation item to create its sub-item
 
-    ![](attachments/navigation/adding-navigation-items.png)
+   ![](attachments/navigation/adding-navigation-items.png)
 
 3. Specify the properties of the created item if needed (For more information, see [Properties of Menu Items](#properties-of-menu-items)). 
 

@@ -8,7 +8,7 @@ tags: ["app store", "app store component", "widget", "contacats for hybrid", "ph
 
 ## 1 Introduction
 
-The [Contacts for Hybrid](https://appstore.home.mendix.com/link/app/1473/) widget enables the PhoneGap native contacts functionality within your Mendix mobile application. 
+The [Contacts for Hybrid](https://appstore.home.mendix.com/link/app/1473/) widget enables the native contacts functionality within your Mendix mobile application. 
 
 ## 2 Configuration
 

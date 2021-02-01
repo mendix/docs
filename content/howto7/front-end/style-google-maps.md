@@ -79,7 +79,7 @@ Supporting communities is cool. Therefore I will also show you how to upload you
 2.  Now you will see the same sort of handy quick style method that Mendix provides at [https://ux.mendix.com/theme-creator.html](https://ux.mendix.com/theme-creator.html).
     ![](attachments/19202780/19398965.png) 
 
-    Happy modelling!
+    Happy modeling!
 
 ## 4. Read More
 

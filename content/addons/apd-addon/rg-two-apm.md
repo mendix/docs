@@ -2,6 +2,8 @@
 title: "APM 2 Reference Guide"
 parent: "rg-apd"
 menu_order: 1
+aliases:
+    - /apm/reference-guide/rg-2/reference-guide-2.html
 ---
 
 ## 1 Introduction

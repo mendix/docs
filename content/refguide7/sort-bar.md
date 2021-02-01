@@ -1,6 +1,8 @@
 ---
 title: "Sort Bar"
 parent: "data-grid"
+aliases:
+    - /refguide7/Sort+Bar.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

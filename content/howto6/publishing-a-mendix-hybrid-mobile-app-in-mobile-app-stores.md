@@ -21,7 +21,7 @@ You require the following before you can build hybrid mobile packages of your ap
 
 ## 2\. Starting the packaging process
 
-Before starting, make sure you have a Mendix App with mobile support enabled running in the Mendix Cloud, either in a free app or in a licensed cloud node. If you require an app to test with, set up the [Event App](https://appstore.home.mendix.com/link/app/36793/) from the Mendix App Store as a free app to try out its mobile features.
+Before starting, make sure you have a Mendix App with mobile support enabled running in the Mendix Cloud, either in a free app or in a licensed cloud node.
 
 First, open the "Publish for Mobile App Stores" page in the Mendix Developer Portal:
 

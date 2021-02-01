@@ -5,6 +5,10 @@ parent: "mendix-cloud-deploy"
 menu_order: 15
 description: "Licensing apps for production by linking them to a licensed cloud node."
 tags: ["App", "Node", "Developer Portal", "Deploy", "Link", "Unlink", "Licensed", "Free App", "Upgrade", "Mendix Cloud", "v3", "v4"]
+aliases:
+    - /developerportal/howto/how-to-link-a-different-app-to-a-node.html
+    - /developerportal/howto/how-to-link-app-to-node.html
+    - /mendixcloud/how-to-link-app-to-node.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -193,9 +197,13 @@ The app is now connected to the licensed node.
 
 ### 4.4 Restoring Backup{#restoring}
 
-After you have linked your app to a licensed node it will be using the resources currently in that node. For example, the data in the existing database.
+After you have linked your app to a licensed node, it will be using the resources currently in that node. For example, the data in the existing database, if there was an app previously deployed to the node.
 
 If you want to use the data which was originally in your app, you will need to restore the backup from your old node. For more information on restoring a backup, see [Restore a Backup](/developerportal/operate/restore-backup).
+
+{{% alert type="warning" %}}
+You can only restore data to an existing database. This means that there must have been an app deployed to the licensed node before you attempt to restore data.
+{{% /alert %}}
 
 ## 5 Exchanging Linked Apps Between Nodes {#exchange-apps}
 

@@ -1,6 +1,6 @@
 ---
 title: "Themes"
-description: " "
+description: "Describes the Mendix themes available in the App Store."
 tags: [ "app store", "app store component", "theme"]
 ---
 

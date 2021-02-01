@@ -4,7 +4,8 @@ category: "Settings"
 description: "Describes security and roles and permissions in Mendix Studio."
 menu_order: 10
 tags: ["studio", "security", "roles and permissions"]
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.#The anchor <upgrade> below is mapped, so it should not be removed or changed.
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#The anchor <upgrade> below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Introduction 

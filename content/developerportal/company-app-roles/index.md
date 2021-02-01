@@ -46,8 +46,6 @@ Regular users are all company members. Regular users can join the company, start
 
 By selecting **My Company's Apps** in the [Developer Portal](http://home.mendix.com), a regular user can view details about the apps made in their company.
 
-![](attachments/myapps.png)
-
 As a regular user, you cannot join an App Team by yourself. If you want to join an App Team, you have to ask a current App Team member (with the **Invite** permission) to send an invitation. Because App Team members are not visible to users outside that App Team, you can ask the App Contact to send the invite:
 
 ![](attachments/company-app.png)
@@ -94,7 +92,6 @@ Within an App Team, there are six predefined roles that can be provisioned to Ap
 Each App Team role has access to permission areas based on the following factors:
 
 * Who can edit the backlog and current [Sprint](../collaborate/stories)
-* Who can edit the app [model](../develop/modeling-environments)
 * Who has the correct [Node Permissions](../deploy/node-permissions) for access to the node information (please note that node permissions must be provisioned by the [Technical Contact](#technical-contact))
 * Who can change the app's [general settings](../settings/general-settings)
 

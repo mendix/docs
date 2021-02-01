@@ -1,6 +1,6 @@
 ---
 title: "Navigation Consistency Errors"
-category: "Consistency Errors"
+parent: "consistency-errors"
 menu_order: 20
 description: "Describes navigation consistency errors in Mendix Studio and the way to fix them."
 tags: ["studio", "consistency errors", "checks", "errors", "navigation"]

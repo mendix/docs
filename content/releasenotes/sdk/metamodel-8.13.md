@@ -21,7 +21,7 @@ parent: "metamodel-8"
 
 #### Module (StructuralUnit)
 
-* We introduced  the `appStorePackageId` property.
+* We introduced the `appStorePackageId` property.
 
 ### Rest
 

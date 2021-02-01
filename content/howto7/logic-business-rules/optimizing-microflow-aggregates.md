@@ -21,7 +21,6 @@ If you do want to use the list but you also want the optimized query, do two sep
 ## 2 Read More
 
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
-* [How to Extend Your Application with Custom Java](extending-your-application-with-custom-java)
 * [How to Work with Lists in a Microflow](working-with-lists-in-a-microflow)
 * [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)
 * [How to Create a Custom Save Button](create-a-custom-save-button)

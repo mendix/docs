@@ -16,7 +16,11 @@ If you cannot fetch the destination, it could be for one of the following reason
 
 ### 2.1 XSUAA token failed
 
-The XSUAA token is fetched from the database using the current user logged in. Check that the user is a valid SAP Cloud Platform user so that there is a valid token for that user.
+The JWT token for the currently signed-in user is not valid. You can resolve this by getting a valid token for the user.
+
+Firstly, refresh the token to fetch a valid token for the user.
+
+If refreshing the token does not work, check that the user is a valid SAP Cloud Platform user.
 
 ### 2.2 Destination name not found
 
@@ -24,7 +28,7 @@ The destination name is provided in the ‘GetDestination’ Java action. Check 
 
 ### 2.3 Unauthorized error
 
-This might happen if the client id and secret pair is invalid. The client id and secret are fetched from SAP Cloud Portal using the VCAP environment details.
+This might happen if the client ID and secret pair is invalid. The client ID and secret are fetched from SAP Cloud Portal using the VCAP environment details.
 
 ## 3 HTTP 401 Error While Running OData Function 
 
@@ -52,7 +56,7 @@ If you receive a 500 error code from your OData call, check the issue below.
 
 ### 4.1 Database is not running 
 
-The Database exposed using OData might not be running are expected. Check database connection.
+The Database exposed using OData might not be running as expected. Check the database connection.
 
 ## 5 HTTP 503 Error While Running OData Function 
 
@@ -118,7 +122,7 @@ To perform Java debugging, you must do the following:
 
     `cf restart \<application-name\>`
 
-    This needs to be done before you can go over to the actual port forwarding, .
+    This needs to be done before you can go over to the actual port forwarding.
 
 5. Open an SSH tunnel for remote connection using the following command.
 

@@ -124,7 +124,7 @@ This release introduces a number of breaking changes in the SDK's API, so becaus
 | 631960 | None | Added support for checking deployment status. |
 | 623906 | None | Added support for deploying from the SDK. Note that this is currently **not** supported on non-trusted backends! |
 
-The following **breaking** changes are made per 612773 and as a result of new insights on interference between containment and versioning/history of the Mendix modelling language.
+The following **breaking** changes are made per 612773 and as a result of new insights on interference between containment and versioning/history of the Mendix modeling language.
 This interference leads to elements having different kinds of containment throughout their history.
 In turn, this necessitated us to make some fundamental changes to avoid having to have breaking changes in the future.
 

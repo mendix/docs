@@ -3,6 +3,8 @@ title: "Show Page"
 parent: "client-activities"
 menu_order: 50
 tags: ["studio pro", "show page", "client activity"]
+aliases:
+    - /refguide/Show+Page.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -56,6 +58,24 @@ To create a new page that **Show page** activity will show, click the **Select**
 By default the title of the page is determined by the page title property of the page. You can replace this title with a custom title if necessary.
 
 This feature allows you to re-use the same page for the **New** and **Edit** buttons of a [data grid](data-grid). By simply setting the titles to, for example, *New Customer* and *Edit Customer*, you can save yourself the trouble of duplicating pages.
+
+### 3.4 Close Pages
+
+{{% alert type="info" %}}
+This option is only available for native mobile and was introduced with Mendix Studio Pro v8.14.
+{{% /alert %}}
+
+Often you need to have control of page history, for example to show the correct page when a user presses the hardware back button on Android. These types of actions generally will only close a single page in the current stack. **Close Pages** provides more control over this behavior. We define relevant terms as follows:
+
+* **source page**: The page you are navigating _from_
+* **target page**: The page you are navigating _to_
+
+| Value | Description |
+| --- | --- |
+| None | Do not remove any pages from history. This is the default behavior.|
+| Single | After navigating to the **target page**, remove the **source page** from history. |
+| Multiple | After navigating to the **target page**, remove the **source page** and one or more pages before it from history. Configure the total number of pages removed using an expression. |
+| Clear history | Prevent the user from navigating back altogether. This is especially useful when navigating away from a login or tutorial flow. |
 
 ## 4 Common Section{#common}
 

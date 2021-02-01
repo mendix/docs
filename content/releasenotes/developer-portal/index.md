@@ -11,7 +11,76 @@ These release notes cover changes to the app project management functionality an
 For release notes on Mendix Cloud and deployment options, see [Deployment](deployment).
 {{% /alert %}}
 
+## 2021
+
+### January 24th, 2021
+
+#### Improvements
+
+* We removed support for the **Country** and **Skype** attributes in your [Mendix Profile](/developerportal/mendix-profile/).
+* You can no longer create new polls on the company or app project [Buzz](/developerportal/collaborate/buzz) page. Existing polls can still be answered.
+
+#### Fixes
+
+* We fixed several minor issues with the [My Apps](/developerportal/apps-list/#my-apps) page.
+
+### January 15th, 2021
+
+#### Improvements
+
+* We redesigned the [My Apps](/developerportal/apps-list/#my-apps) page.
+* You will now see labels when you are editing a [story](/developerportal/collaborate/stories#story-actions) using the new **Stories** UI. We will enable the editing of story labels and label colors in a future release.
+
+#### Fixes
+
+* We fixed an issue where newly-added Company Admins did not get access to edit [user groups](/appstore/general/app-store-overview#user-groups) in the App Store.
+
 ## 2020
+
+### December 23rd, 2020
+
+#### Improvements
+
+* We tweaked the styling of the **Stories** > [Project History](/developerportal/collaborate/stories#history) page.
+* We made [moving a story](/developerportal/collaborate/stories#move-stories) to another app project more intuitive.
+* We removed the Model page, which contained tips on how to get started creating your apps.
+
+#### Fixes
+
+* We fixed an issue where replies to Buzz notifications were not properly processed into comments on your [app Buzz](/developerportal/collaborate/buzz#app-buzz) page. (Ticket 111076)
+
+### December 2nd, 2020
+
+#### Improvements
+
+* We changed the home page of the Developer Portal to [My Apps](/developerportal/apps-list/#my-apps)
+
+### November 4th, 2020
+
+#### Fixes
+
+* We fixed a bug where a change of [company name](/developerportal/company-app-roles/company) was not properly distributed along the platform.
+* We fixed a bug where drop-down menus were cut off on the [story details](/developerportal/collaborate/stories#story-details) page.
+
+### October 9th, 2020
+
+#### Fixes
+
+* We fixed an issue where team members were not displayed in the [App Team](/developerportal/collaborate/team) overview.
+
+### October 4th, 2020
+
+#### Improvements
+
+* We redesigned the [story details](/developerportal/collaborate/stories#story-details) page and made it available for Public Beta usage. You can use the new design when the new story UI is enabled. Please note that it is currently not possible to add or manage [labels](/developerportal/collaborate/stories#label) with the new UI; this functionality will be released in the future.
+* When you add a [task](/developerportal/collaborate/stories#adding-task) to a commit of your app model, we now show the revision in the revision overview of the story details. Clicking the task will bring you to the story details page to which the task belongs.
+* We simplified the [Company Settings](/developerportal/company-app-roles/company#company-settings) tab of the **Company** page by removing some barely used attributes.
+
+#### Fixes
+
+* We fixed an issue where the default avatar of an App Team member who committed a revision was not properly displayed in the revision overview of the story details.
+* We fixed an issue where a [Company Admin](/developerportal/company-app-roles/companyadmin-settings) was no longer able to open the [General](/developerportal/settings/general-settings) settings of an app project they for an App Team in which they were not a member.
+* We repaired a dead link to the documentation on the [App User Management](/developerportal/settings/general-settings#managing-app-users) page.
 
 ### August 25th, 2020
 
@@ -31,7 +100,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Fixes
 
-* We placed a deprecation warning in a file hosted by the Developer Portal that is used in old versions of the [Mendix Feedback](/appstore/widgets/mendix-feedback#below) widget. As of October 1st, 2020, we will end support for Mendix Feedback widget version 5 or below. Please always keep your Feedback widget up-to-date to ensure the best experience for your users.
+* We placed a deprecation warning in a file hosted by the Developer Portal that is used in old versions of the [Mendix Feedback](/appstore/widgets/mendix-feedback) widget. As of October 1st, 2020, we will end support for Mendix Feedback widget version 5 or below. Please always keep your Feedback widget up-to-date to ensure the best experience for your users.
 * We fixed an issue where you could move a user story to a different Sprint without specifying the target Sprint.
 
 ### July 28th, 2020

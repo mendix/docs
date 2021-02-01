@@ -22,6 +22,14 @@ The typical usage scenario is when a project/module consumes a service where a u
 
 Set the `EncryptionKey` constant located in the **Private - String en/de-cryption** folder. Make sure the key consists of 16 characters.
 
+Set the `EncryptionPrefix` constant located in the **Private - String en/de-cryption** folder. If you are using version 1.4.1 or above of this module, the value of this constant should be set to `{AES2}`.
+
+In version 1.4.1, the AES algorithm used for encrypting/decrypting text was switched from CBC to GCM mode, because CBC mode was vulnerable to Oracle padding attacks. For backward compatibility, the module still supports decrypting texts encrypted using CBC mode in older versions of the module. It does not support encrypting strings using the legacy CBC mode. So, strings encrypted in versions below 1.4.1 in CBC mode have the prefix `{AES}`, while strings encrypted in GCM mode in version 1.4.1 have the prefix `{AES2}`. If the the `EncryptionPrefix` constant is set to `{AES}`, the module in version 1.4.1 or above will still encrypt the string using a new GCM mode. Then, when decrypting the string, the module will detect the prefix `{AES}` and try to decrypt it using the legacy CBC mode, which will fail because the string was encrypted using GCM mode (which is incompatible with CBC). 
+
+{{% alert type="warning" %}}
+If you are updating the module from a version below 1.4.1 to 1.4.1 or above, do not forget to update the `EncryptionPrefix` constant value when deploying your app to the Mendix Cloud. It is also advised to re-encrypt the encrypted data by first decrypting and then encrypting it again, in order to ensure it is encrypted with the new mechanism.
+{{% /alert %}}
+
 ## 3 Read More
 
 * [How to Implement Push Notifications](/howto/mobile/implementation-guide)

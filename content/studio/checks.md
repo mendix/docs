@@ -1,7 +1,7 @@
 ---
 title: "Checks"
 description: "Describes checks during publishing process in Mendix Studio."
-menu_order: 60
+menu_order: 70
 tags: ["studio", "app viewing", "checks", "errors", "consistency errors"]
 ---
 
@@ -61,8 +61,6 @@ The items displayed in the table of the **Checks** panel are described below.
 | Document | Indicates the place of your app where the error is found (for example, a page, a microflow). |
 | Element  | Indicated the exact element that is faulty (button, activity, etcetera ). |
 
-## 4 Read More
+## 4 Main Documents in This Category
 
-* [Consistency Errors](consistency-errors)
-* [Previewing & Publishing Your App](publishing-app)
-* [General Info](general)
+* [Consistency Errors](consistency-errors) – provides information on what consistency errors are and how to fix them

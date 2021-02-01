@@ -4,6 +4,7 @@ category: "Microflows"
 menu_order: 80
 description: "This how to describes the process of configuring a delete object action in a data view and a list view in Mendix Studio."
 tags: ["studio", "page editor", "delete object", "list view", "data view", "how to"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 
@@ -56,7 +57,7 @@ A new blank page is created.
 
 ## 3 Configuring a Delete Object Action in a List View
 
-Now you will configure a list view and will add a button with [**Delete Object** action](/studio/page-editor-widgets-events-section#delete-object-action) that deletes the corresponding customer when a user clicks the button. Do the following:
+Now you will configure a list view and will add a button with [Delete Object action](/studio/page-editor-widgets-events-section#delete-object-action) that deletes the corresponding customer when a user clicks the button. Do the following:
 
 1. Open the page *Customers* that you have created.
 
@@ -98,7 +99,7 @@ You have created the page that lists customers' names. When an end-user clicks *
 
 ## 4 Configuring a Delete Object Action in a Data View
 
-You can also configure the [**Delete Object** action](/studio/page-editor-widgets-events-section#delete-object-action) in a data view. In this case **Delete Object** will delete the connected object. To configure the data view and the **Delete** button on your page, do the following:
+You can also configure the [Delete Object action](/studio/page-editor-widgets-events-section#delete-object-action) in a data view. In this case **Delete Object** will delete the connected object. To configure the data view and the **Delete** button on your page, do the following:
 
 1.  On the page named *Customers*, open the **Layout Grid** properties (use a breadcrumb at the bottom of the screen to select the layout grid).
 

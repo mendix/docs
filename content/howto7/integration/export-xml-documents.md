@@ -193,4 +193,3 @@ To create the export logic, follow these steps:
 * [How to Enable Selenium Support](selenium-support)
 * [How to Import XML Documents](importing-xml-documents)
 * [How to Consume a REST Service](consume-a-rest-service)
-* [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)

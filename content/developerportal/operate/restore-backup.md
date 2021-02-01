@@ -34,6 +34,8 @@ If you want to restore a backup to a different cloud node, or have your backup s
 
 4. Confirm the backup restore by clicking **Restore Backup**.
 
+    ![](attachments/restore-a-backup/restore-backup.png)
+
 {{% alert type="info" %}}
 
 If the app is still running, you have to stop it by clicking **Stop Application**. Then click **Restore Backup** again.
@@ -43,6 +45,12 @@ If the app is still running, you have to stop it by clicking **Stop Application*
 ## 3 Restoring a Backup for a Different Licensed Cloud Node{#restore-local-backup}
 
 To transfer backups between environments, you will need a downloaded backup file (*.db* or *.gz*) stored locally on your computer. This could also be the case if you want to restore a backup which has expired and been deleted from the Mendix Cloud.
+
+{{% alert type="warning" %}}
+You can only restore data to an existing database. This means that there must have been an app deployed to the licensed node before you attempt to restore data. If it is a new node environment, you must deploy an app to it before attempting to restore data to the node.
+
+The app previously deployed to the node does not, however, need to have had the same Domain Model as the data you are restoring.
+{{% /alert %}}
 
 1. Go to the **Backups** page of the *Developer Portal* for your app.
 
@@ -124,7 +132,7 @@ This contains the *db.backup* file. This is a PostgreSQL dump file created using
 {{% alert type="warning" %}}
 If the dump does not use the *custom format* then the restore will fail.
 
-The dump must be created with pg_dump version 9.6.17 or below. If it is created with a later version, then the restore will fail.
+The dump must be created with pg_dump version 9.6.17 or below. If it is created with a later version, then the upload will fail.
 {{% /alert %}}
 
 ### tree folder

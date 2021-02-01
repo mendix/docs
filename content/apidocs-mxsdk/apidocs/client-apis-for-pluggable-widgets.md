@@ -1,6 +1,6 @@
 ---
 title: "Client APIs Available to Pluggable Widgets"
-parent: "pluggable-widgets"
+parent: "pluggable-parent-9"
 menu_order: 10
 description: A guide for understanding the client APIs available to pluggable widgets.
 tags: ["Widget", "Pluggable",  "JavaScript"]
@@ -35,10 +35,6 @@ A user can specify multiple classes for every widget. They can do this either di
 A user can specify a custom CSS for every widget on a web page by using the [style](/refguide/common-widget-properties#style) property. This styling is passed to a client component through an optional `style` prop of the type `CSSProperties`.
 
 On native pages, the meaning of a `style` prop is very different. First of all, a user cannot specify the aforementioned inline styles for widgets on a native page. So a `style` prop is used to pass styles computed based on configured classes. A client component will receive an array with a single [style object](/refguide/native-styling-refguide#style-objects) with all applicable styles combined.
-
-{{% alert type="info" %}}
-This property was introduced in Mendix 8.0 with an array of style objects. This array was changed to contain a single style object in Mendix 8.6.
-{{% /alert %}}
 
 ### 3.4 TabIndex
 
@@ -174,7 +170,7 @@ export interface WebImage {
     readonly name: string;
     readonly altText?: string;
 }
-export type NativeImage = Readonly<ImageURISource | string | number>;
+export type NativeImage = Readonly<ImageURISource & { name?: string; } | string | number>;
 export type ImageValue = WebImage | NativeImage;
 ```
 
@@ -254,28 +250,30 @@ In this code sample, checks of status `myDataSource` and availability of items a
 This allows the client component to access attribute values on individual items from a `ListValue`. `ListAttributeValue` is a function and its definition is as follows:
 
 ```ts
-export type ListAttributeValue = (item: ObjectItem) => EditableValue<AttributeValue>;
+export type ListAttributeValue<T extends AttributeValue> = (item: ObjectItem) => EditableValue<T>;
 ```
+
+The type `<T>` depends on the allowed value types as configured for the attribute property.
 
 In order to work with the attribute value of a particular item of a `ListValue` first an instance of `EditableValue` should be obtained by calling `ListAttributeValue` with the item. See an example below.
 
 
-Assuming widget properties are confgured as follows:
+Assuming widget properties are configured as follows (with an attribute of type `string`):
 
 ```ts
 interface MyListWidgetsProps {
     myDataSource: ListValue;
-    myAttributeOnDatasource: ListAttributeValue;
+    myAttributeOnDatasource: ListAttributeValue<string>;
 }
 ```
 
 The following code sample shows how to get an `EditableValue` that represents a read-only value of an attribute of the first element from the `myDataSource`.
 
 ```ts
-const attributeValue = this.props.myDataSource.myAttributeOnDatasource(this.props.myDataSource.items[0]);
+const attributeValue = this.props.myAttributeOnDatasource(this.props.myDataSource.items[0]);
 ```
 
-Note: in this code sample checks of status of `myDataSource` and availability of items are omited for simplicity. See [EditableValue section](#editable-value) for more information about usage of `EditableValue`.
+Note: in this code sample checks of status of `myDataSource` and availability of items are omitted for simplicity. See [EditableValue section](#editable-value) for more information about usage of `EditableValue`.
 
 
 ### 4.10 ListWidgetValue {#listwidgetvalue}
@@ -305,6 +303,35 @@ this.props.myDataSource.items.map(i => this.props.myWidgets(i));
 ```
 
 
+### 4.11 ListExpressionValue {#listexpressionvalue}
+
+`ListExpressionValue` represents an [expression property](property-types-pluggable-widgets#expression) or [text template property](property-types-pluggable-widgets#texttemplate) that is linked to a data source. This allows the client component to access expression or text template values for individual items from a `ListValue`. `ListExpressionValue` is a function and its definition is as follows:
+
+```ts
+export type ListExpressionValue<T extends AttributeValue> = (item: ObjectItem) => DynamicValue<T>;
+```
+
+The type `<T>` depends on the return type as configured for the expression property. For a text template property, this type is always `string`.
+
+In order to work with the expression or text template value of a particular item of a `ListValue`, first an instance of `DynamicValue` should be obtained by calling `ListExpressionValue` with the item. See an example below.
+
+Assuming widget properties are configured as follows (with an expression of type `boolean`):
+
+```ts
+interface MyListWidgetsProps {
+    myDataSource: ListValue;
+    myExpressionOnDatasource: ListExpressionValue<boolean>;
+    myTextTemplateOnDatasource: ListExpressionValue<string>;
+}
+```
+
+The following code sample shows how to get a `DynamicValue` that represents the value of an expression for the first element from the `myDataSource`.
+
+```ts
+const expressionValue = this.props.myDataSource.myExpressionOnDatasource(this.props.myDataSource.item[0]);
+```
+
+
 ## 5 Exposed Modules
 
 ### 5.1 Icon {#icon}
@@ -313,54 +340,62 @@ Mendix platform exposes two versions of an `Icon` react component: `mendix/compo
 
 ## 6 Exposed Libraries {#exposed-libraries}
 
-### 6.1 React and React Native
+### 6.1 React and React Native {#exposed-react}
 
 Mendix platform re-export [react](https://www.npmjs.com/package/react), [react-dom](https://www.npmjs.com/package/react-dom), and [react-native](https://www.npmjs.com/package/react-native) packages to pluggable widgets. React is available to all components. React-dom is available only to components running in web or hybrid mobile apps. React-native is available only to components running in native mobile apps.
 
-Mendix provides you with React version 16.9.x (in npm terms `~16.9.0`). Patch versions might change from one minor release of Mendix to another. Mendix will always provide a matching version of react-dom.
+Mendix provides you with React version 17.0.x (in npm terms `~17.0.0`). Patch versions might change from one minor release of Mendix to another. Mendix will always provide a matching version of react-dom.
 
-For react-native Mendix exposes a single version: 0.61.5. Mendix also includes the following libraries:
+For react-native Mendix exposes a single version: 0.63.3. Mendix also includes the following libraries:
 
 |   Library   |   Version   |
 | ---- | ---- |
-|   [@react-native-community/art](https://www.npmjs.com/package/@react-native-community/art)   |   1.2.0   |
-|   [@react-native-community/async-storage](https://www.npmjs.com/package/@react-native-community/async-storage)   |   1.8.1   |
-|   [@react-native-community/cameraroll](https://www.npmjs.com/package/@react-native-community/cameraroll)   | 1.4.0     |
-|  [@react-native-community/datetimepicker](https://www.npmjs.com/package/@react-native-community/datetimepicker)   |  2.3.0  |
-|   [@react-native-community/geolocation](https://www.npmjs.com/package/@react-native-community/geolocation)   |   2.0.2   |
-|   [@react-native-community/masked-view](https://www.npmjs.com/package/@react-native-community/masked-view)   |  0.1.7    |
-|   [@react-native-community/netinfo](https://www.npmjs.com/package/@react-native-community/netinfo)   | 5.6.2     |
-|   [react-native-ble-plx](https://www.npmjs.com/package/react-native-ble-plx)   |   1.1.1   |
-|   [react-native-calendar-events](https://www.npmjs.com/package/react-native-calendar-events)   |   1.7.3   |
-|   [react-native-camera](https://www.npmjs.com/package/react-native-camera)   |   3.19.2   |
-|   [react-native-code-push](https://www.npmjs.com/package/react-native-code-push)   |   6.1.1   |
-|   [react-native-device-info](https://www.npmjs.com/package/react-native-device-info)   |   5.5.3   |
-|   [react-native-fast-image](https://www.npmjs.com/package/react-native-fast-image)   |   8.1.5   |
-|   [react-native-firebase](https://www.npmjs.com/package/react-native-firebase)   |   5.6.0   |
-|   [react-native-geocoder](https://www.npmjs.com/package/react-native-geocoder)   |   0.5.0   |
-|   [react-native-gesture-handler](https://www.npmjs.com/package/react-native-gesture-handler)   |   1.6.0   |
-|   [react-native-image-picker](https://www.npmjs.com/package/react-native-image-picker)   |   2.3.1   |
-|   [react-native-inappbrowser-reborn](https://www.npmjs.com/package/react-native-inappbrowser-reborn)   |  3.3.4    |
-|   [react-native-localize](https://www.npmjs.com/package/react-native-localize)   |   1.3.4   |
-|   [react-native-maps](https://www.npmjs.com/package/react-native-maps)    |   0.27.0   |
-|   [react-native-reanimated](https://www.npmjs.com/package/react-native-reanimated)   |   1.7.0   |
-|   [react-native-safe-area-context](https://www.npmjs.com/package/react-native-safe-area-context)   | 0.7.3     |
-|   [react-native-sound](https://www.npmjs.com/package/react-native-sound)   |   0.11.0   |
-|   [react-native-svg](https://www.npmjs.com/package/react-native-svg)   |   12.0.3   |
-|   [react-native-tab-view](https://www.npmjs.com/package/react-native-tab-view)   |   2.13.0   |
-|   [react-native-touch-id](https://www.npmjs.com/package/react-native-touch-id)   |   4.4.1   |
-|   [react-native-vector-icons](https://www.npmjs.com/package/react-native-vector-icons)   |   6.6.0   |
-|   [react-native-video](https://www.npmjs.com/package/react-native-video)   |   5.0.2   |
-|   [react-native-view-shot](https://www.npmjs.com/package/react-native-view-shot)   |   3.1.2   |
-|   [react-native-webview](https://www.npmjs.com/package/react-native-webview)   |   8.1.2   |
-|   [react-navigation](https://www.npmjs.com/package/react-navigation)    |   4.3.1   |
-|   [react-navigation-drawer](https://www.npmjs.com/package/react-navigation-drawer)   |   2.4.4   |
-|   [react-navigation-stack](https://www.npmjs.com/package/react-navigation-stack)   |   2.3.1   |
-|   [react-navigation-tabs](https://www.npmjs.com/package/react-navigation-tabs)   |   2.8.4 |
+|	[@react-native-community/art](https://www.npmjs.com/package/@react-native-community/art)   |   1.2.0   |
+|	[@react-native-community/async-storage](https://www.npmjs.com/package/@react-native-community/async-storage)   |   1.12.0   |
+|	[@react-native-community/cameraroll](https://www.npmjs.com/package/@react-native-community/cameraroll)   |	4.0.1     |
+|	[@react-native-community/datetimepicker](https://www.npmjs.com/package/@react-native-community/datetimepicker)   |  3.0.3  |
+|	[@react-native-community/geolocation](https://www.npmjs.com/package/@react-native-community/geolocation)   |   2.0.2   |
+|	[@react-native-community/masked-view](https://www.npmjs.com/package/@react-native-community/masked-view)   |  0.1.10    |
+|	[@react-native-community/netinfo](https://www.npmjs.com/package/@react-native-community/netinfo)   |	5.9.7     |
+|	[@react-native-community/push-notification-ios](https://www.npmjs.com/package/@react-native-community/push-notification-ios)	| ^1.7.1	|
+|	[@react-native-firebase/analytics](https://www.npmjs.com/package/@react-native-firebase/analytics)	|	^10.0.1	|
+|	[@react-native-firebase/app](https://www.npmjs.com/package/@react-native-firebase/app)	|	^10.0.1	|
+|	[@react-native-firebase/crashlytics](https://www.npmjs.com/package/@react-native-firebase/crashlytics)	|	^10.0.1	|
+|	[@react-native-firebase/messaging](https://www.npmjs.com/package/@react-native-firebase/messaging)	|	^10.0.1	|
+|	[@react-native-firebase/ml](https://www.npmjs.com/package/@react-native-firebase/ml)	|	^10.0.1	|
+|	[react-native-ble-plx](https://www.npmjs.com/package/react-native-ble-plx)   |   2.0.1   |
+|	[react-native-calendar-events](https://www.npmjs.com/package/react-native-calendar-events)   |   2.1.0   |
+|	[react-native-camera](https://www.npmjs.com/package/react-native-camera)   |   3.40.0   |
+|	[react-native-code-push](https://www.npmjs.com/package/react-native-code-push)   |   6.3.0   |
+|	[react-native-device-info](https://www.npmjs.com/package/react-native-device-info)   |   7.0.2   |
+|	[react-native-fast-image](https://www.npmjs.com/package/react-native-fast-image)   |   8.3.2   |
+|	[react-native-geocoder](https://www.npmjs.com/package/react-native-geocoder)   |   0.5.0   |
+|	[react-native-gesture-handler](https://www.npmjs.com/package/react-native-gesture-handler)   |   1.8.0   |
+|	[react-native-image-picker](https://www.npmjs.com/package/react-native-image-picker)   |   2.3.4   |
+|	[react-native-inappbrowser-reborn](https://www.npmjs.com/package/react-native-inappbrowser-reborn)   |  3.4.0    |
+|	[react-native-localize](https://www.npmjs.com/package/react-native-localize)   |   1.4.2   |
+|	[react-native-maps](https://www.npmjs.com/package/react-native-maps)    |   0.27.1   |
+|	[react-native-push-notification](https://www.npmjs.com/package/react-native-push-notification)	| ^6.1.2	|
+|	[react-native-reanimated](https://www.npmjs.com/package/react-native-reanimated)   |   1.13.1   |
+|	[react-native-safe-area-context](https://www.npmjs.com/package/react-native-safe-area-context)   | 3.1.8     |
+|	[react-native-sound](https://www.npmjs.com/package/react-native-sound)   |   0.11.0   |
+|	[react-native-splash-screen](https://www.npmjs.com/package/react-native-splash-screen)	|	3.2.0	|
+|	[react-native-sqlite-storage](https://www.npmjs.com/package/react-native-sqlite-storage)	|	5.0.0	|
+|	[react-native-svg](https://www.npmjs.com/package/react-native-svg)   |   12.1.0   |
+|	[react-native-tab-view](https://www.npmjs.com/package/react-native-tab-view)   |   ^2.15.1   |
+|	[react-native-touch-id](https://www.npmjs.com/package/react-native-touch-id)   |   4.4.1   |
+|	[react-native-vector-icons](https://www.npmjs.com/package/react-native-vector-icons)   |   7.1.0   |
+|	[react-native-video](https://www.npmjs.com/package/react-native-video)   |   5.0.2   |
+|	[react-native-view-shot](https://www.npmjs.com/package/react-native-view-shot)   |   3.1.2   |
+|	[react-native-webview](https://www.npmjs.com/package/react-native-webview)   |   10.9.1   |
+|	[react-navigation](https://www.npmjs.com/package/react-navigation)    |   4.4.1   |
+|	[react-navigation-drawer](https://www.npmjs.com/package/react-navigation-drawer)   |   2.5.1   |
+|	[react-navigation-stack](https://www.npmjs.com/package/react-navigation-stack)   |   2.7.0   |
+|	[react-navigation-tabs](https://www.npmjs.com/package/react-navigation-tabs)   |   2.9.1 |
 
 ### 6.2 Big.js
 
-The Mendix platform uses [big.js](https://www.npmjs.com/package/big-js) to represent and operate on numbers. Mendix 8.0 re-exports version 5.2.
+The Mendix platform uses [big.js](https://www.npmjs.com/package/big-js) to represent and operate on numbers. Mendix 9.0 re-exports version 6.0.
 
 ## 7 Read More
 

@@ -99,7 +99,17 @@ With the Access to Monitoring permission, you can view the application metrics, 
 
 For more information, see [Metrics](/developerportal/operate/metrics), [Logs](/developerportal/operate/logs), and [Alerts](/developerportal/operate/monitoring-application-health).
 
-## 3 Technical Contact
+## 3 Downloading Node Permissions
+
+You may want to have a complete list of node permissions for audit purposes. The Technical Contact can download a list of permissions as a CSV by clicking the **Download to CSV** button.
+
+![](attachments/node-permissions/download-to-csv.png)
+
+The CSV will contain a list of environments, users, and their respective permissions.
+
+![](attachments/node-permissions/permissions-csv.png)
+
+## 4 Technical Contact
 
 A cloud node has a single Technical Contact. They manage the cloud node and can edit the privileges of regular team members.
 

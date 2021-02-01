@@ -33,7 +33,7 @@ The **Monthly Webinar** section of the Mendix Community site presents a link to 
 ![](attachments/the-community-site/Latest_Webinar.png)
 {{% /image_container %}}
 
-Don't worry if you can't make it for the next webinar. You can easily watch all past webinars on our [Webinars](https://gettingstarted.mendixcloud.com/link/webinar) page!
+Don't worry if you can't make it for the next webinar. You can easily watch all past webinars on our [Webinars](https://academy.mendix.com/link/webinar) page!
 
 ## 4 Meetups {#meetups}
 
@@ -49,15 +49,15 @@ Click a meetup of your interest to find out details about the location and agend
 
 ## 5 Academy
 
-The Mendix Academy offers both self-paced online training and classroom instruction from our team of experts. These training opportunities can be used in coordination with the [Mendix Developer Certification Program](https://gettingstarted.mendixcloud.com/link/certification) to develop and validate your Mendix expertise.
+The Mendix Academy offers both self-paced online training and classroom instruction from our team of experts. These training opportunities can be used in coordination with the [Mendix Developer Certification Program](https://academy.mendix.com/link/certification) to develop and validate your Mendix expertise.
 
-In the **Academy** section of the Mendix Community site, you can see links to our beginner, intermediate, and advanced learning paths in the [Mendix Academy](https://gettingstarted.mendixcloud.com/link/home):
+In the **Academy** section of the Mendix Community site, you can see links to our beginner, intermediate, and advanced learning paths in the [Mendix Academy](https://academy.mendix.com/link/home):
 
 {{% image_container width="550" %}}
 ![](attachments/the-community-site/academy1.png)
 {{% /image_container %}}
 
-Below that, you can see sign-up links for upcoming [classroom courses](https://gettingstarted.mendixcloud.com/link/classroom):
+Below that, you can see sign-up links for upcoming [classroom courses](https://academy.mendix.com/link/classroom):
 
 {{% image_container width="550" %}}
 ![](attachments/the-community-site/academy2.png)

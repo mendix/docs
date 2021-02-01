@@ -50,7 +50,7 @@ When finished the wizard will add to your model based on the options selected:
 * The imported service
 * An XML to domain mapping
 * A microflow in which the web service operation is called
-* Domain model entities (by default, the Modeler creates non-persistent entities)
+* Domain model entities (by default, the Modeler creates non-persistable entities)
 
 ![](attachments/18448730/18581781.png)
 

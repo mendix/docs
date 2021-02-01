@@ -86,6 +86,6 @@ Follow these steps to update this homepage microflow:
 ### 2.7 Constants (Optional)
 
 * **IndexPage** – In special cases—for example, when you want to load a specific theme or bypass a certain single sign-on page—you can modify this constant to redirect to another index page like `index3.html` or `index-mytheme.html`.
-* **LoginLocation** – If user credentials are required but are not present in the session, the user will get redirected to this location. This constant's value can either be fully qualified (for example, `https://myapp.xyz.com/mylogin.html`) or relative to the site (for example, `../mylogin.html`). If the constant value is empty, the default built-in Mendix login page is used.
-	* To make sure the end-user gets sent back to original deep link URL after having logged in, append `&f=true&cont=` to the constant (for example, `../mylogin.html&f=true&cont=`)
-	* When the app is using SSO and the end-user should be redirected to the deep link again, use either `https://myapp.xyz.com/SSO/login?a=MyApp&f=true&cont=` or `../SSO/login?f=true&cont=`
+* **LoginLocation** – If user credentials are required but are not present in the session, the user will get redirected to this location. This constant's value can either be fully qualified (for example, `https://myapp.xyz.com/mylogin.html`) or relative to the site (for example, `/mylogin.html`). If the constant value is empty, the default built-in Mendix login page is used.
+	* To make sure the end-user gets sent back to original deep link URL after having logged in, append `&f=true&cont=` to the constant (for example, `/mylogin.html&f=true&cont=`)
+	* When the app is using SAML for SSO and the end-user should be redirected to the deep link again, use either `https://myapp.xyz.com/SSO/login?a=MyApp&f=true&cont=` or `/SSO/login?f=true&cont=` — *note that this construction does not work for other SSO modules, such as XSUAA*

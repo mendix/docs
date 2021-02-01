@@ -76,7 +76,6 @@ To define the access rules on the Order entity using XPath, follow these steps:
 
 ## 4 Read More
 
-* [Trigger Logic Using Microflows](triggering-logic-using-microflows)
 * [Create a Custom Save Button](create-a-custom-save-button)
 * [Extend Your Application with Custom Java](extending-your-application-with-custom-java)
 * [Work with Lists in a Microflow](working-with-lists-in-a-microflow)

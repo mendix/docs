@@ -110,6 +110,10 @@ On the **Security History** tab, you can click **Show Security History** to open
 
 ## 8 Cloud {#cloud}
 
+{{% alert type="warning" %}}
+This feature is not yet publicly available. Please talk to your CSM to enable this page.
+{{% /alert %}}
+
 The **Cloud Environments** tab on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy#resource-pack) and whether the [Fallback](/developerportal/deploy/mendix-cloud-deploy#fallback) option has been purchased as part of a premium plan.   
 
 ![](attachments/cloud.jpg)

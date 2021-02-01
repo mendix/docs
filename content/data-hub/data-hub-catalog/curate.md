@@ -87,7 +87,7 @@ If you as a **Technical Owner** curate the asset and change the name, then you w
 Curators and the Data Hub Admin can manage custom owners as part of **Administration** functions. For further details see the [Managing Custom Owners ](../general/data-hub-admin-functions#customowners) section of *Data Hub Administration*. 
  {{% /alert %}}
 
-To change the **Business Owner ** or **Technical Owner**, follow these steps from the **Application Metadata** screen:
+To change the **Business Owner** or **Technical Owner**, follow these steps from the **Application Metadata** screen:
 
 1. Click in the name field of the **Business** or **Technical** owner. You can start typing or select from the drop-down list of names. Mendix platform users will be displayed with their avatar and custom owners will be shown with an avatar that displays their initials as shown in the following example:
 

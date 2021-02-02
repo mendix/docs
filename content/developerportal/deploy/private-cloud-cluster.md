@@ -299,7 +299,11 @@ To use TLS, specify the MinIO URL with an `https` schema, for example `https://m
 If the MinIO URL is specified with an `http` schema, TLS will not be used.
 {{% /alert %}}
 
-**S3 (create on-demand)** will connect to an AWS account to create S3 buckets and associated IAM accounts. Each app will receive a dedicated S3 bucket and an IAM account which only has access to that specific S3 bucket. You will need to provide all the information about your Amazon S3 storage such as plan name, region, access key, and secret key. The associated IAM account needs to have the following IAM policy (replace `<account_id>` with your AWS account number):
+**S3 (create bucket and user with inline policy)** will connect to an AWS account to create S3 buckets and associated IAM accounts. Each app will receive a dedicated S3 bucket and an IAM account with an inline policy only has access to that specific S3 bucket. You will need to provide all the information about your Amazon S3 storage such as plan name, region, access key, and secret key.
+
+To enable this mode, select the following options: **Create Bucket**, **Create User**, **Create inline policy**.
+
+The management IAM account needs to have the following IAM policy (replace `<account_id>` with your AWS account number):
 
 ```json
 {
@@ -337,7 +341,243 @@ If the MinIO URL is specified with an `http` schema, TLS will not be used.
 If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
 {{% /alert %}}
 
-**S3 (existing bucket)** will connect to an existing S3 bucket with the provided IAM account access key and secret keys. All apps will use the same S3 bucket and an IAM account. You will need to provide all the information about your Amazon S3 storage such as plan name, endpoint, access key, and secret key. The associated IAM account needs to have the following IAM policy (replace `<bucket_name>` with the your S3 bucket name):
+{{% alert type="info" %}}
+To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.8.0 or later.
+{{% /alert %}}
+
+**S3 (create bucket and user with existing policy)** will connect to an AWS account to create S3 buckets and associated IAM accounts. Each app will receive a dedicated S3 bucket and an IAM account. The specified existing policy will be attached to the account. You will need to provide all the information about your Amazon S3 storage such as plan name, region, policy ARN, access key, and secret key.
+
+To enable this mode, select the following options: **Create Bucket**, **Create User**.
+
+Create an IAM policy that will be attached to app users and write down its Policy ARN (specify this value in the **Attach Policy ARN** field):
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowListingOfUserFolder",
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::${aws:username}"
+            ],
+            "Condition": {
+                "StringLike": {
+                    "s3:prefix": [
+                        "${aws:username}/*",
+                        "${aws:username}"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "AllowAllS3ActionsInUserFolder",
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::${aws:username}/${aws:username}/*"
+            ],
+            "Action": [
+                "s3:AbortMultipartUpload",
+                "s3:DeleteObject",
+                "s3:GetObject",
+                "s3:ListMultipartUploadParts",
+                "s3:PutObject"
+            ]
+        }
+    ]
+}
+```
+
+The management IAM account needs to have the following IAM policy (replace `<account_id>` with your AWS account number, and `<policy_arn>` with the Policy ARN):
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "LimitedAttachmentPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "iam:AttachUserPolicy",
+                "iam:DetachUserPolicy"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "ArnEquals": {
+                    "iam:PolicyArn": [
+                        "<policy_arn>"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "iamPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "iam:DeleteAccessKey",
+                "iam:DeleteUser",
+                "iam:CreateUser",
+                "iam:CreateAccessKey"
+            ],
+            "Resource": [
+                "arn:aws:iam::<account_id>:user/mendix-*"
+            ]
+        },
+        {
+            "Sid": "bucketPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "s3:CreateBucket",
+                "s3:DeleteBucket"
+            ],
+            "Resource": "arn:aws:s3:::mendix-*"
+        }
+    ]
+}
+```
+
+{{% alert type="info" %}}
+If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.8.0 or later.
+{{% /alert %}}
+
+**S3 (create user with inline policy)** will connect to an AWS account to create IAM accounts. Each app will receive a dedicated IAM account with an inline policy only has access to a subdirectory in the existing S3 bucket. You will need to provide all the information about your Amazon S3 storage such as plan name, bucket name, region, access key, and secret key.
+
+To enable this mode, select the following options: **Create User**, **Create Inline Policy**.
+
+The management IAM account needs to have the following IAM policy (replace `<account_id>` with your AWS account number):
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "iamPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "iam:DeleteAccessKey",
+                "iam:PutUserPolicy",
+                "iam:DeleteUserPolicy",
+                "iam:DeleteUser",
+                "iam:CreateUser",
+                "iam:CreateAccessKey"
+            ],
+            "Resource": [
+                "arn:aws:iam::<account_id>:user/mendix-*"
+            ]
+        }
+    ]
+}
+```
+
+{{% alert type="info" %}}
+If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.8.0 or later.
+{{% /alert %}}
+
+**S3 (create user with existing policy)** will connect to an AWS account to create IAM accounts. Each app will receive a dedicated IAM account. The specified existing policy will be attached to the account and should restrict the user to only have access to a subdirectory in the S3 bucket. You will need to provide all the information about your Amazon S3 storage such as plan name, bucket name, region, policy ARN, access key, and secret key.
+
+To enable this mode, select the following options: **Create User**.
+
+Create an IAM policy that will be attached to app users (replacing `<bucket_name>` with the name of the existing bucket) and write down its Policy ARN (specify this value in the **Attach Policy ARN** field):
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowListingOfUserFolder",
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::<bucket_name>"
+            ],
+            "Condition": {
+                "StringLike": {
+                    "s3:prefix": [
+                        "${aws:username}/*",
+                        "${aws:username}"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "AllowAllS3ActionsInUserFolder",
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::<bucket_name>/${aws:username}/*"
+            ],
+            "Action": [
+                "s3:AbortMultipartUpload",
+                "s3:DeleteObject",
+                "s3:GetObject",
+                "s3:ListMultipartUploadParts",
+                "s3:PutObject"
+            ]
+        }
+    ]
+}
+```
+
+The management IAM account needs to have the following IAM policy (replace `<account_id>` with your AWS account number, and `<policy_arn>` with the Policy ARN):
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "LimitedAttachmentPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "iam:AttachUserPolicy",
+                "iam:DetachUserPolicy"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "ArnEquals": {
+                    "iam:PolicyArn": [
+                        "<policy_arn>"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "iamPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "iam:DeleteAccessKey",
+                "iam:DeleteUser",
+                "iam:CreateUser",
+                "iam:CreateAccessKey"
+            ],
+            "Resource": [
+                "arn:aws:iam::<account_id>:user/mendix-*"
+            ]
+        }
+    ]
+}
+```
+
+{{% alert type="info" %}}
+If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.8.0 or later.
+{{% /alert %}}
+
+**S3 (existing bucket and user)** will connect to an existing S3 bucket with the provided IAM account access key and secret keys. All apps will use the same S3 bucket and an IAM account. You will need to provide all the information about your Amazon S3 storage such as plan name, endpoint, access key, and secret key. The associated IAM account needs to have the following IAM policy (replace `<bucket_name>` with the your S3 bucket name):
 
 ```json
 {

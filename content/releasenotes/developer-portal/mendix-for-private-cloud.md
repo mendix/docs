@@ -18,9 +18,14 @@ For information on the current status of deployment to Mendix for Private Cloud 
 #### Mendix for Private Cloud — Mendix Operator v1.8.0 and Mendix Gateway Agent v1.7.0
 
 * We have improved dependency version management, so upgrading to future versions of the Mendix Operator would be easier.
+* We have introduced versioning for all components, instead of using the "latest" version. All components are now tested for compatibility, and once the Mendix Operator is installed, its behavior will remain unchanged. Components will only be updated through a manual update process.
 * We have added a feature to report installed component versions to the Private Cloud Portal. In the future, this will be used to indicate which Mendix for Private Cloud Operator version is installed and which features it supports.
+* We have added a new S3 option, allowing to use an existing IAM policy and S3 bucket. Each environment would still get its own user and will not have access to files from other environments.
+* We have improved the S3 storage configuration UI in the Configuration Tool.
+* We have updated the Configuration Tool to run in fullscreen, so that it adapts better to smaller and larger screens.
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+After updrading the Mendix Operator, we recommend downloading the latest version of the Configuration Tool.
 
 ### January 6th, 2021
 

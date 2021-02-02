@@ -71,6 +71,8 @@ Mendix provides logging of various actions within the app. These are sent to Dat
 
 By default, Mendix will only pass request handler activity to Datadog, but you can configure it to provide metrics for microflows and activities as well. You can find how to do this in [Customizing the Metrics Agent](#customizing), below.
 
+There are some additional ways of controlling what is sent to Datadog using environment variables. See [Additional Information](#additional-info), below, for more information.
+
 ### 3.1 What Metrics Can You Get From Your App?
 
 #### 3.1.1 Request Handler Metrics
@@ -360,7 +362,7 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 
 	{{% alert type="warning" %}}Your app must be **redeployed** before it is started as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to Datadog.{{% /alert %}}
 
-## 5 Additional Information
+## 5 Additional Information{#additional-info}
 
 ### 5.1 Log Levels
 
@@ -379,17 +381,37 @@ The valid values for **DD_SITE** are:
 * datadoghq.com
 * datadoghq.eu
 
-### 5.3 Datadog Events Log
+### 5.3 Database Disk Storage Availability
+
+You can decide whether a metric for the disk storage size available to the database is sent to Datadog. To disable this metric, set **DATADOG_DATABASE_DISKSTORAGE_METRIC** to *false*.
+
+*Default value: true*
+
+### 5.4 Email Address Redaction
+
+Email addresses are automatically redacted before log entries are sent to Datadog. To disable this redaction, set **DATADOG_LOGS_READACTION** to *false*.
+
+*Default value: true*
+
+### 5.5. Rate and Count Database Metrics
+
+Datadog sends gauge database metrics to Datadog as a default. Rate and Count metrics are not compatible with the Datadog PostgreSQL integration. You can enable these additional metrics by setting **DATADOG_DATABASE_RATE_COUNT_METRICS** to *true*.
+
+If these additional metrics are enabled, the rate and counter metrics will be sent to Datadog. The metrics will be suffixed by _rate and _count, respectively, to prevent collisions with the official Datadog metrics. You can change the metric types in the Datadog console to reflect this. We also set a helpful `interval` tag (10s) which can be used here. The correct type and unit for submitted metrics can be found in the GitHub repo for [Datadog core integrations](https://github.com/DataDog/integrations-core/blob/master/postgres/metadata.csv).
+
+*Default value: false*
+
+### 5.6 Datadog Events Log
 
 The Datadog Events log contains events which come from your app: those are the same events that would appear in the Mendix Console. It does not contain events from the environment.
 
 ![Example events log](attachments/datadog-metrics/datadog-event-log.png)
 
-### 5.4 Datadog Agent not Started
+### 5.7 Datadog Agent not Started
 
 If you configure your app for Datadog but the Datadog agent is not started, the events will be sent to the app log files.
 
-### 5.5 Datadog Issues
+### 5.8 Datadog Issues
 
 If you have any issues related to accessing Datadog, please contact their support here: [Support | Datadog](https://www.datadoghq.com/support/), or by email at [support@datadoghq.com](mailto:support@datadoghq.com).
 

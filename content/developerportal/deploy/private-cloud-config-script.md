@@ -382,7 +382,7 @@ When choosing the **Existing docker-registry secret**, you will need to add this
 
 Choose **Yes** if a proxy is required to access the public internet from the namespace; you will be asked for the proxy configuration details.
 
-### 4.6 Do you want to enable or disable custom TLS?{#custom-tls}
+### 4.7 Do you want to enable or disable custom TLS?{#custom-tls}
 
 ![](attachments/private-cloud-config-script/custom-tls.png)
 

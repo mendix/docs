@@ -55,11 +55,11 @@ On the **Curation bar**, the following details are displayed:
 * When a dataset is selected in the **Search Results**
 	* **Edit Dataset Details** – to edit the dataset and attribute descriptions 
 
-## 5 Edit the Metadata of a Data Source
+## 4 Edit the Metadata of a Data Source
 
 Curate functions for a selected data source enable you to change the (source) **Application Details** or **Data Source Details** that are displayed in the Catalog.
 
-### 5.1 Curating Application Details {#curate-application}
+### 4.1 Curating Application Details {#curate-application}
 
 You can change the owners of the app and add a custom icon for the application from the curate Application Details screen:
 
@@ -71,7 +71,7 @@ You can change the owners of the app and add a custom icon for the application f
 
    ![](attachments/curate/application-metadata-screen.png)
 
-#### 5.1.1 Changing the Technical and Business Owners of an App {#customowner}
+#### 4.1.1 Changing the Technical and Business Owners of an App {#customowner}
 
 By default, the **Technical Owner** for a registered asset is the user who registered the data source when registration is done through the deployment pipeline in Studio Pro or specified during manual registration or using the Data Hub API. These owners can be changed by curating the application details. The **Technical** and **Business Owners** are displayed as a link in the asset **Metadata** pane so that users can contact them. 
 
@@ -103,9 +103,15 @@ To change the **Business Owner ** or **Technical Owner**, follow these steps fro
 
 6. Click **Save** to return to the **Application Metadata** screen. Click **Save Changes** to return to the asset details screen where the changes will be displayed in **Metadata** pane.
 
-#### 5.1.2 Changing the Application Icon {#application-icon}
+#### 4.1.2 Changing the Application Icon {#application-icon}
 
 You can change the icon that is displayed for the app and the data source by uploading your own custom application icon or selecting one from Data Hub the icon library. The selected icon will be displayed for all endpoints of the application and data source such as the Catalog search results and also in the Mendix Studio Pro [Data Hub pane](/refguide/data-hub-pane) and Studio **Data Source** pane. 
+
+{{% alert type="info" %}} When you change an application icon all data sources (published OData services)  that are registered in the Catalog for that application will show the new icon. For example, the following shows   two data sources that are published from the **HR Sample App** which are listed in the search results pane (**SAMPLE_Employee…**  and **SAP 1.0.0**). They both display the same icon that was set for the app:
+
+![custom contact create](attachments/curate/app-icon-several-services.png)
+
+ {{% /alert %}}
 
 Currently, by default, the application icon is determined by the application type when the data source is registered. For example, for Mendix apps the Mendix Icon is displayed which identifies the technology of the source app. 
 
@@ -156,7 +162,7 @@ An alternative to uploading an icon is to use an existing icon by clicking **sel
 
 {{% image_container width="300" %}}![upload icon](attachments/curate/icon-library.png){{% /image_container %}}
 
-### 5.2 Data Source Description{#service-details}
+### 4.2 Data Source Description{#service-details}
 
 If a description was included in the OData metadata contract, this will be displayed in the asset details screen for the selected data source. You can curate a data source to add a catalog description to include further details on, for example, the data usage and relevancy. 
 
@@ -185,7 +191,7 @@ To edit the asset metadata, follow these steps:
 
 	{{% alert type="info" %}}If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. {{% /alert %}}
 
-### 5.3 Adding or Editing Tags to a Service {#tags}
+### 4.3 Adding or Editing Tags to a Service {#tags}
 
 Add tags to categorize a registered service and provide additional means for finding the service. Tags that are specified for a service also apply to the datasets and attributes that are exposed in the service. Specify tags for the selected service by following these steps:
 

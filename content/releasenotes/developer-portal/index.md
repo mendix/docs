@@ -17,7 +17,6 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Improvements
 
-* We added support for **labels** in the new story details page. It is now possible to add or remove labels in the new [Stories UI](/developerportal/collaborate/stories#story-details).
 * We added a link to your app project’s [environments](/developerportal/deploy/environments) in the app tile on [My Apps](/developerportal/apps-list/#my-apps)
 
 #### Fixes

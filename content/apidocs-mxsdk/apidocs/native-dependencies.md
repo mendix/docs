@@ -12,7 +12,7 @@ While developing pluggable widgets and JavaScript actions it is essential to reu
 
 While this tooling exists for pluggable widgets, some manual work has to be done for JavaScript actions in order to use libraries targeting `react-native` Android- and iOS-specific setups. Read this page if you want to use such libraries in your JavaScript actions.
 
-## 2 Declaration File
+## 2 Declaration File {#declaration-file}
 
 The declaration file is a *.json* file which contains information about the specific setup required by a pluggable widget or a JavaScript action.
 

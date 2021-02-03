@@ -10,6 +10,15 @@ These release notes cover changes to deployment to [SAP Cloud Platform](/develop
 
 For information on the current status of deployment to SAP Cloud Platform and any planned releases see [Mendix Status](https://status.mendix.com/).
 
+## 2021
+
+### February 8th, 2021
+
+* We added the ability to extend the timeout period for the Cloud Foundry health check when transporting an app to a new environment on SAP BTP.
+* We added the ability to enable *Dynatrace* for your app deployed to SAP BTP.
+
+For more information see [SAP Business Technology Platform - deploy](/developerportal/deploy/sap-cloud-platform).
+
 ## 2020
 
 ### December 21st, 2020

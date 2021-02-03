@@ -29,6 +29,8 @@ Mendix provides two types of data to Datadog:
 * Data from the Mendix Runtime, the Java Virtual Machine (JVM), the database, and the SaaS (Software as a Service, for example Cloud Foundry) environment – this is described in [Environment Metrics](#environment), below
 * Data from within the Mendix app itself – this is described in [App Metrics](#app-metrics), below
 
+There are some additional ways of controlling what is sent to Datadog using environment variables. See [Additional Information](#additional-info), below, for more information.
+
 ### 2.1 Environment Metrics{#environment}
 
 Once you have configured Datadog for your app, it will automatically send information about the environment in which your app is running.
@@ -70,8 +72,6 @@ Note that the absolute values are often not useful, but looking at trends over t
 Mendix provides logging of various actions within the app. These are sent to Datadog with the namespace `mx`. Timing values are sent in milliseconds.
 
 By default, Mendix will only pass request handler activity to Datadog, but you can configure it to provide metrics for microflows and activities as well. You can find how to do this in [Customizing the Metrics Agent](#customizing), below.
-
-There are some additional ways of controlling what is sent to Datadog using environment variables. See [Additional Information](#additional-info), below, for more information.
 
 ### 3.1 What Metrics Can You Get From Your App?
 
@@ -387,7 +387,7 @@ You can decide whether a metric for the disk storage size available to the datab
 
 *Default value: true*
 
-### 5.4 Email Address Redaction
+### 5.4 Email Address Redaction{#redact-emails}
 
 Email addresses are automatically redacted before log entries are sent to Datadog. To disable this redaction, set **DATADOG_LOGS_READACTION** to *false*.
 
@@ -406,6 +406,8 @@ If these additional metrics are enabled, the rate and counter metrics will be se
 The Datadog Events log contains events which come from your app: those are the same events that would appear in the Mendix Console. It does not contain events from the environment.
 
 ![Example events log](attachments/datadog-metrics/datadog-event-log.png)
+
+By default all email addresses contained in log events will be redacted. You can change this – see [Email Address Redaction](#redact-emails), above.
 
 ### 5.7 Datadog Agent not Started
 

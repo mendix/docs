@@ -39,7 +39,7 @@ Once you have configured Datadog for your app, it will automatically send inform
 
 The metrics from your app's environment are supplied in the following namespaces:
 
-* database – metrics on the database performance
+* database – metrics on the database performance — by default, these are just *gauge* metrics (see [Rate and Count Database Metrics](#database-metrics), below)
 * datadog  – metrics on datadog usage
 * jmx – metrics from the Mendix runtime
 * jvm – metrics from the Java virtual machine in which the Mendix runtime runs (see the Datadog [Java Runtime Metrics](https://docs.datadoghq.com/tracing/runtime_metrics/java/) documentation)
@@ -393,7 +393,7 @@ Email addresses are automatically redacted before log entries are sent to Datado
 
 *Default value: true*
 
-### 5.5. Rate and Count Database Metrics
+### 5.5. Rate and Count Database Metrics{#database-metrics}
 
 Datadog sends gauge database metrics to Datadog as a default. Rate and Count metrics are not compatible with the Datadog PostgreSQL integration. You can enable these additional metrics by setting **DATADOG_DATABASE_RATE_COUNT_METRICS** to *true*.
 

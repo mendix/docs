@@ -35,11 +35,7 @@ Using the drop-down menu, you can choose to sort the apps in the following ways:
 * **Most Recent** first
 * Alphabetical order of **App Name**
 
-### 2.2 Searching for an App
-
-You can find a specific app by typing the search term by the magnifying glass icon and pressing <kbd>Enter</kbd>.
-
-### 2.3 Selecting Actions
+### 2.2 Selecting Actions
 
 By clicking the ellipsis (…) in the app tile, you can quickly perform a number of actions:
 
@@ -50,6 +46,10 @@ The actions available depend on the app selected:
 * **Edit in Mendix Studio**
 * **Edit in Mendix Studio Pro**
 * **Delete App** – allows you to delete your app, provided you are the only team member (you will be warned of the consequences and asked for confirmation before the app is deleted)
+
+### 2.3 Go to environments {#environments}
+
+To go to the [environments](/developerportal/deploy/environments) of your app, click on the little cloud icon in the bottom right corener of the app tile.
 
 ### 2.4 Favoriting an App {#favoriting}
 

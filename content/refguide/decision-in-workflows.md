@@ -34,12 +34,12 @@ The **Caption** describes what happens in this element. It is displayed in the w
 
 For the expression resulting in a Boolean, two paths are possible: **true** and **false**. For example, you can use the expression resulting in a Boolean if you want to follow different paths if a new employee is working from home (and either send their devices to the home address or set up a workstation in the office).
 
-The number of conditions available for the enumeration type depends on the corresponding enumeration values. There is also the *empty* condition available for enumeration: if the enumeration parameter or an attribute of an object is unassigned, the sequence flow with the caption **(empty)** is followed. For example, there are different trainings in your company depending on the department the new employee is joining and you would like the workflow to follow different paths depending on the department specified for the new employee. If the department is not specified, the path will continue without the training. 
+The number of conditions available for the enumeration type depends on the corresponding enumeration values. There is also the *empty* condition available for enumeration: if the enumeration parameter or an attribute of an object is unassigned, the sequence flow with the caption **(empty)** is followed. For example, you have several requests with low or high priority. The ones having high priority follow one path and should be approved by the Management team. Low priority requests follow a different path and can be approved by the Administration department. The requests that have no priority specified follow an empty path and can have a user task to assign priority first.   
 
 ### 2.2 Outcomes Section {#outcome}
 
-**Outcomes** allows you change the outgoing paths of the decision. 
+**Outcomes** depends on the condition of the decision. For example, for the Boolean, you have **true** and **false** outcomes, and for the enumeration: an outcome per each enumeration value and an empty one when the value is unassigned.  
 
 ## 3 Read More
 
-* 
+* [Parallel Split](parallel-split)

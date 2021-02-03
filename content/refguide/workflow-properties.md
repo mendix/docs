@@ -102,7 +102,7 @@ In addition to adding new parameters, you can perform the following actions on p
 
 ### 2.4 Due Date Section {#due-date}
 
-**Due in** allows you to set a deadline for the workflow and keep track of it. 
+**Due in** allows you to set a deadline for the workflow and keep track of it. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the workflow. 
 
 ### 2.5 General Section {#general}
 

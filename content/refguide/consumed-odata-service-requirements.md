@@ -27,8 +27,9 @@ This section describes the features of a consumed OData service that are support
 Vocabulary annotations can be used in a service to indicate features that are not supported. The following vocabulary annotations are recognized for entity sets:
 
 * **Countable** – marking an entity set as `Countable="false"` prevents the user from adding the entity to the project
-* **Filterable** – marking an entity set as `Filterable="false"` sets all properties as non-filterable; marking properties as non-filterable in the `NonFilterableProperties` annotation prevents the user from adding these as attributes in the project
-* **Sortable** – marking an entity set as `Sortable="false"` sets all properties as non-sortable; marking properties as non-sortable in the `NonSortableProperties` annotation prevents the user from adding these as attributes in the project
+* **Filterable** – marking an entity set as `Filterable="false"` sets all properties as non-filterable
+* **Sortable** – marking an entity set as `Sortable="false"` sets all properties as non-sortable
+* Marking an entity set as `Filterable="false"` and `Sortable="false"` sets all properties as non-filterable and non-sortable; marking properties with the `NonFilterableProperties` annotation or the `NonSortableProperties` annotation sets specific attributes as non-filterable or non-sortable
 
 An entity can only be used when it is accessible through an entity set.
 

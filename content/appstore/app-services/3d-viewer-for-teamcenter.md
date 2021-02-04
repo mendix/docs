@@ -1,7 +1,7 @@
 ---
 title: "3D Viewer for Teamcenter"
 parent: "3d-viewer"
-description: "3D Viewer for Teamcenter is an add-on module for the 3D Viewer app service. It adds additional functionality to enable fetching a JT model from a Teamcenter instance and visualizit it using existing 3D Viewer widgets."
+description: "3D Viewer for Teamcenter is an add-on module for the 3D Viewer app service. It adds additional functionality to enable fetching a JT model from a Teamcenter instance and visualize it using existing 3D Viewer widgets."
 tags: ["3d visualization", "3d viewer", "cad", "app store", "marketplace", "component", "platform support", "teamcenter"]
 ---
 
@@ -82,7 +82,7 @@ To get data from Teamcenter, the end-user needs to be authenticated and authoriz
 Follow these steps to build this login:
 
 1. Add a **Login** [button](/refguide/button-widgets) to a page in your app.
-2. Set the **On click** action to the **TcConnector** > **Published** > **APIs** > **Login** > **ExexuteAdminLogin** microflow.
+2. Set the **On click** action to the **TcConnector** > **Published** > **APIs** > **Login** > **ExecuteAdminLogin** microflow.
 3.  Run your app locally. When you click **Login**, you will be shown the Teamcenter Admin page where you can add, edit, and manage the Teamcenter instance that you want to connect to by providing the **Teamcenter Host Address** and **Teamcenter FMS URL** and set the instance to **Active**:
 
 	![teamcenter-configuration](attachments/3d-viewer-for-teamcenter/teamcenter-configuration.jpg)

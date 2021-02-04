@@ -17,12 +17,12 @@ Here is an overview of what the 3DViewer contains:
 
 | Category                                   | Name                                                                                                                                                                                                                                                                                      |
 | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Predefined Entity](#51-predefined-entity) | ModelDocument, Pagination, Markup, MxChildDocument, MxModelDocument                                                                                                                                                                                                                       |
-| [Constants](#52-constants)                 | HttpEndpoint, ModelSourceType                                                                                                                                                                                                                                                             |
-| [Nanoflow](#54-nanoflow)                   | GetModelListFromMendix, GetMarkupsFromMendix                                                                                                                                                                                                                                              |
-| [Microflow](#53-microflow)                 | DeleteModelFromMendix, DownloadMarkup                                                                                                                                                                                                                                                     |
-| [Java Action](#54-java-action)             | VisServerAction                                                                                                                                                                                                                                                                           |
-| [Widgets](#55-widgets)                     | Container3D, Markup builder, PMI tree, PS Tree,  PS Tree Table, Section view, Toolbar item camera mode,Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer |
+| [Predefined Entity](#41-predefined-entity) | ModelDocument, Pagination, Markup, MxChildDocument, MxModelDocument                                                                                                                                                                                                                       |
+| [Constants](#42-constants)                 | HttpEndpoint, ModelSourceType                                                                                                                                                                                                                                                             |
+| [Nanoflow](#44-nanoflow)                   | GetModelListFromMendix, GetMarkupsFromMendix                                                                                                                                                                                                                                              |
+| [Microflow](#43-microflow)                 | DeleteModelFromMendix, DownloadMarkup                                                                                                                                                                                                                                                     |
+| [Java Action](#44-java-action)             | VisServerAction                                                                                                                                                                                                                                                                           |
+| [Widgets](#55-widgets)                     | Container3D, Markup builder, PMI tree, PS tree,  PS tree table, Section view, Toolbar item camera mode,Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer |
 
 ### 1.1 Typical Use Cases
 
@@ -51,7 +51,7 @@ The 3D Viewer app service includes a few 3D widgets. These are the limitations o
 
 * The **Container3D** widget acts as a context-sharing container for other 3D widgets. Therefore, every other 3D widget (except **Uploader** widget)needs to be put inside the Container3D widget. If 3D widgets are placed outside of the Container3D widget, you will see error in [Design mode](/refguide/page#design-mode).
 * One **Container3D** widget can only contain one **Viewer** widget. If multiple Viewer widgets are placed inside a Container3D widget, you will see error message in [Design mode](/refguide/page#design-mode).
-* **Viewer**widget is used to display a 3D model, all other 3D widgets (except **Uploader** widget and **Container3D** widget) needs a **Viewer** widget present on the page to interact with.
+* **Viewer** widget is used to display a 3D model, all other 3D widgets (except **Uploader** widget and **Container3D** widget) needs a **Viewer** widget present on the page to interact with.
 
 Currently, only JT models with version 9 and above are supported.
 
@@ -198,7 +198,7 @@ The panel widgets can be used in the following ways:
 * **PS Tree Table** – compared to the **PS Tree** widget, this widget adds an additional configurable property **Column**, you can expand the table by adding columns and specifying the property to be displayed in this column. Example predefined properties are: Volume, Mass, Units, HasPMI, Density. If you want to display other properties other than the predefined properties in the list, you can also add other property by specifying valid property defined in the model.
 
 * **PMI tree** - On the **General** tab, the property **Expand all tree nodes** determines if all tree nodes are expanded by default. When set to `yes`, you will see a PMI tree fully expanded by default on this widget load; When set to `no`, PMI tree will not fully expand by default. 
-* **Section view** - Place it inside of a Container3D widget, a Viewer widget should be present in the same Container3D widget so you can add section plane on the model. No specific configuration is needed. With this widget, you can add, delete and clear sections planes to the model on your desired direction axis and clipping mode. 
+* **Section view** - Place it inside of a Container3D widget, a Viewer widget should be present in the same Container3D widget so you can add section plane on the model. No specific configuration is needed. With this widget, you can add, delete and clear sections planes to the model on your desired direction axis and clipping mode. For details on how Section View behaves in an app. Please see [Create 3D Section](#71-create-3d-section)
 * **Markup builder** - 
 	* On **General** tab, by setting property **Enable** to true or false, you can switch on and off the markup mode, when set to `true`, model will be locked to a 2D dimension and won't react to mouse rotate , when set to `false`, model will be unlocked and return to rotatable state;  another property is **Markup color**, it allows you to set color of markup annotation. Valid values are [CSS Legal color value](https://www.w3schools.com/CSSref/css_colors_legal.asp), for example, RGB value, predefined color names, hexadecimal color values.  
 	* On **Event** tab,  by binding a boolean type attribute to **Save** property, you will be able to obtain save status of the markup image after user click the Save button on the markup builder's panel, and add custom actions, such as show pop up message, to it. When the attribute values changes to `true`, it means the markup image associated with model is successfully saved in Mendix file storage; when the attribute value is `false`, it means the save is not successful.
@@ -362,10 +362,47 @@ There are three main types of events that can be picked up on the **Viewer** wid
 * **OnError** – by selecting one attribute to set the **On error** event, you can pick up an error exposed by the **Viewer**
 * **On Progress Change** – by selecting one attribute for the **setProgress** value, you can get the current loading status and the loading percentage of the model, product structure tree, and PMI tree
 
-## 7 Loading & Visualizing a Model from Teamcenter
+## 7 Others
+
+### 7.1 Create 3D Section
+
+When a model is loaded in the viewer, the Section View widget enables you to inspect the interior structure of a model by adding standard section planes, delete a section plane, clear all section planes, position plane, clip away parts.
+
+Here is a list of UI operations within the Section View widget.
+
+**Action**:
+
+Add - Add a section plane. First select an axis along which you would like to section the model, then click Add, you will see a section plane of the desired axis is added to the scene, the default position of the newly added section plane is in the middle of the bounding box of the direction selected.
+
+Delete - Delete a selected section plane. Click on the edge of the section plane to select it, when selected, the section plane edges are highlighted in yellow color, then click Delete, this section plane will be deleted.
+
+Clear -  Clear all the section planes added to the scene.
+
+**Direction**:
+
+X Direction - Sets X axis of the default coordinate system as the reference.  
+Y Direction - Sets Y axis of the default coordinate system as the reference.  
+Z Direction - Sets Z axis of the default coordinate system as the reference.  
+For example, if you have select Y Direction, then the cross section is created on the ZX plane.
+
+**Clipping**:
+
+When a section plane is selected (highlighted in yellow color), you can choose which part of the model you would like to clip away by clicking on 4 clipping options:  
+Off - Don't clip.  
+Both - Clip both sides, shows the 2D intersecting curve on the section plane.  
+Near - Clip away the positive side (toward direction).  
+Far - Clip away the negative side (away from direction).  
+
+**Position**:
+
+You can slide the position sliders to move the position of the section plane along its axis. You can also type in an exact position to place the section plane at an exact position.
+
+You can add multiple section planes to cut the model in different directions. After the section, you can save a snapshot of a section view. You can also add markup annotations on the section view and save them for later review.
+
+## 8 Loading & Visualizing a Model from Teamcenter
 
 JT models from other data sources can also be visualized. Specifically, if you would like to load and visualize models from Teamcenter, you can use a combination of this 3D Viewer app service with the [3D Viewer for Teamcenter](3d-viewer-for-teamcenter) module to achieve this.
 
-## 8 Read More
+## 9 Read More
 
 * [3D Viewer for Teamcenter](3d-viewer-for-teamcenter)

@@ -1,11 +1,11 @@
 ---
 title: "App Roles"
 description: "Describes the App Team, App Contact, and Technical Contact roles and permissions within the Mendix Platform."
-tags: ["app team", "app contact", "technical contact", developer portal", "role", "permissions"]
 aliases:
     - /developerportal/settings/technical-contact.html
     - /developerportal/general/technical-contact.html
 	- /developerportal/company-app-roles/technical-contact.html
+tags: ["app team", "app contact", "technical contact", developer portal", "role", "permissions"]
 ---
 
 ## 1 Introduction

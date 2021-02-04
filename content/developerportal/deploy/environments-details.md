@@ -78,7 +78,7 @@ In Mendix Cloud v3 environments, you have two additional action buttons:
 
 ### 2.2 Naming of Environments – Flexible Environments in Mendix Cloud v4{#naming}
 
-If you are the [Technical Contact](/developerportal/company-app-roles/technical-contact) of the app, you can rename the environments as you wish.
+If you are the [Technical Contact](/developerportal/app-roles#technical-contact) of the app, you can rename the environments as you wish.
 
 Click the **Change** button next to the name of the environment.
 

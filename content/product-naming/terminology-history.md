@@ -36,6 +36,12 @@ The Mendix Community Edition was introduced with Mendix 5.18, which included the
 Replaced by [Free Edition](other-terms#free-edition).
 {{% /alert %}}
 
+## Company Admin
+
+{{% alert type="info" %}}
+Replaced by [Mendix Admin](other-terms#mendix-admin).
+{{% /alert %}}
+
 ## delighter
 
 {{% alert type="info" %}}

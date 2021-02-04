@@ -25,7 +25,7 @@ If you don't know which Mendix Cloud version you are using, you can find out by 
 To view the **Trends**, you must have permission to **Access the Monitoring**.
 
 {{% alert type="info" %}}
-Only the [Technical Contact](../company-app-roles/technical-contact) is allowed to grant node permissions.
+Only the [Technical Contact](../app-roles#technical-contact) is allowed to grant node permissions.
 {{% /alert %}}
 
 Assign permission by following these steps:

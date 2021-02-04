@@ -2745,12 +2745,20 @@ module.exports = {
      ****************************************************/
 	{
       from: "/developerportal/settings/technical-contact",
-      to: "/developerportal/company-app-roles/technical-contact"
+      to: "/developerportal/app-roles/index"
     }, 
     {
       from: "/developerportal/general/technical-contact",
-      to: "/developerportal/company-app-roles/technical-contact"
-    },	 
+      to: "/developerportal/app-roles/index"
+    },
+	{
+      from: "/developerportal/company-app-roles/technical-contact",
+      to: "/developerportal/app-roles/index"
+    },
+	{
+      from: "/developerportal/company-app-roles/users",
+      to: "/developerportal/control-center/index"
+    },
 	{
       from: "/deployment/mendixcloud/certificates",
       to: "/developerportal/deploy/certificates"

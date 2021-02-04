@@ -66,4 +66,4 @@ Mendix adheres to strict security standards and considers you the sole owner of 
 ## 6 Read More
 
 * [Stories](/developerportal/collaborate/stories)
-* [Company & App Roles](/developerportal/company-app-roles/index)
+* [App Roles](/developerportal/app-roles/index)

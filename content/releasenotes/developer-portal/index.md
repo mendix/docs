@@ -17,7 +17,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### New Features
 
-* We released the Mendix [Control Center](/developerportal/control-center/index), which provides governance and control features for Mendix Admins (former Company Admins).
+* We released the Mendix [Control Center](/developerportal/control-center/index), which provides governance and control features for Mendix Admins (formerly known as Company Admins).
 
 #### Improvements
 

@@ -37,7 +37,7 @@ Using the drop-down menu, you can choose to sort the apps in the following ways:
 
 ### 2.2 Selecting Actions
 
-By clicking the ellipsis (…) in the app tile, you can quickly perform a number of actions:
+By clicking the ellipsis (**…**) in the app tile, you can quickly perform a number of actions:
 
 ![Quick actions menu for an app](attachments/quick-action-menu.jpg)
 
@@ -47,7 +47,7 @@ The actions available depend on the app selected:
 * **Edit in Mendix Studio Pro**
 * **Delete App** – allows you to delete your app, provided you are the only team member (you will be warned of the consequences and asked for confirmation before the app is deleted)
 
-### 2.3 Go to environments {#environments}
+### 2.3 Go to Environments {#environments}
 
 To go to the [environments](/developerportal/deploy/environments) of your app, click on the little cloud icon in the bottom right corener of the app tile.
 
@@ -78,7 +78,6 @@ If you click an app for which you are not an App Team member, you will see the a
 {{% image_container width="400" %}}
 ![Example of app details](attachments/app-details.png)
 {{% /image_container %}}
-
 
 ## 4 Nodes {#nodes}
 

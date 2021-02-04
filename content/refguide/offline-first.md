@@ -48,7 +48,7 @@ You can perform synchronization on two levels:
 
 #### 2.1.1 Full Synchronization {#full-sync}
 
-This mode performs both the upload and the download phases for all entities used in the offline-first app. You can customize the behavior of each entity with [customizable synchronization](#customizable-synchronization}).
+This mode performs both the upload and the download phases for all entities used in the offline-first app. You can customize the behavior of each entity with [customizable synchronization](#customizable-synchronization).
 
 #### 2.1.2 Selective Synchronization {#selective-sync}
 
@@ -68,7 +68,7 @@ During [full synchronization](#full-sync) this validation ensures that all refer
 
 For example, when a committed `City` object refers to an uncommitted `Country` object, synchronizing the `City` object will yield an invalid `Country` object reference, which will break the app's data integrity. If a synchronization is triggered while data integrity is broken, the following error message will appear (indicating an error in the model to fix): **Sync has failed due to a modeling error. Your database contains objects that reference uncommitted objects: object of type `City` (reference `City_Country`)**. To fix this, such objects must also be committed before synchronizing (in this example, `Country` should be committed before synchronizing).
 
-During [selective synchronization](#selective), an additional referential integrity validation is performed to ensure that all referenced objects are at least synchronized once to the server database or included in the selection.
+During [selective synchronization](#selective-sync), an additional referential integrity validation is performed to ensure that all referenced objects are at least synchronized once to the server database or included in the selection.
 
 For example, synchronizing only a committed `City` object referencing an offline `Country` object (created on the device and committed to the local database but not yet synchronized) would break the integrity of the `City` object on the server database since the `Country` object is not stored in the server database. In this case a similar error message will appear, indicating that it is a modeling error. To fix this, such objects must be selected for synchronization. In this example, `Country` should either be selected with synchronization or synchronized before attempting to synchronize `City` object.
 
@@ -94,7 +94,7 @@ Please note that a nanoflow object variable's value might become `empty` after s
 
 * The object is deleted on the server
 * The current user does not have enough access to the object (defined by the security access rules)
-* The entity is configured with an XPath constraint on the [customizable synchronization](#customizable-synchronization}) screen, and the object no longer matches the specified XPath constraint
+* The entity is configured with an XPath constraint on the [customizable synchronization](#customizable-synchronization) screen, and the object no longer matches the specified XPath constraint
 * The entity is configured with **Nothing (clear data)** option on the customizable synchronization screen
 * The upload phase fails for the object — for example when a before commit event handler returns false, or committing fails due to violation of a unique validation
 

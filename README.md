@@ -51,7 +51,7 @@ Node.js is a JavaScript runtime. You can install it by downloading the installer
 
 #### Running the Server
 
-Running the server is done by executing the following command: `npm run serve`.
+Running the server is done by executing the following command: `npm run serve-test`.
 
 It takes a few seconds (Windows can take longer) to build the site and setup the server.
 

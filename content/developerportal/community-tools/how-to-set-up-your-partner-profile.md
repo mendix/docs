@@ -179,9 +179,7 @@ To add developers to the Partner Profile, follow these steps:
     Only the certifications and points of the added developers will be counted in the Partner Profile. The highest rank of certification will be added to the overview.
 
 {{% alert type="info" %}}
-
-Make sure you offboard the developers who no longer work at your company through the company administration in the Mendix Platform. These former employees will still be visible in the overview. It is important that you deactivate these developers in the Developers Portal so that they don’t have access to projects.
-
+Make sure you offboard and deactivate the developers who no longer work at your company through [Control Center](/developerportal/control-center/index).
 {{% /alert %}}
 
 ## 8 Editing Testimonials

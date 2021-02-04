@@ -18,7 +18,7 @@ To view and manage your App Team members, follow these steps:
 On the **Team** page, you will see an overview with the following information about the App Team members:
 
 * **Name** – the developer's name
-* **Role** – the developer's App Team role (for details on available roles, see the [App Team Roles](/developerportal/company-app-roles/index#app-team-roles) section of *Company & App Roles*)
+* **Role** – the developer's App Team role (for details on available roles, see the [App Roles](/developerportal/app-roles/index))
 
 ![](attachments/team.png)
 
@@ -30,9 +30,9 @@ When you click **Manage Team** in the top-right corner of the screen, you will b
 
 Only the following roles can see the **Manage Team** button:
 
-* [Scrum Master](/developerportal/company-app-roles/index#app-team-roles)
-* [Company Admin](/developerportal/company-app-roles#company-admin)
-* A [custom role](/developerportal/company-app-roles/manage-roles#edit-app-team-roles) with **App Settings** permission
+* [Scrum Master](/developerportal/app-roles/index#app-team-roles)
+* [Mendix Admin](/developerportal/control-center)
+* A [custom role](/developerportal/app-roles/index#app-team-roles) with **App Settings** permission
 
 {{% /alert %}}
 
@@ -60,8 +60,6 @@ To invite members, click **Invite Member** on the **Team** page, or click the **
 
 ## 4 Read More
 
-* [Company & App Roles](/developerportal/company-app-roles/index)
-* [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
-* [Company Admin Settings](/developerportal/company-app-roles/companyadmin-settings)
+* [App Roles](/developerportal/app-roles/index)
 * [Settings](/developerportal/settings)
 * [Stories](stories)

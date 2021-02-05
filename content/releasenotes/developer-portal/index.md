@@ -22,7 +22,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Fixes
 
-* We fixed an issue where new Mendix Admins did not get access to the [Nodes](/developerportal/company-app-roles/nodes) page. (Ticket 114913)
+* We fixed an issue where new Mendix Admins did not get access to environment nodes. (Ticket 114913)
 
 ### February 4th, 2021
 

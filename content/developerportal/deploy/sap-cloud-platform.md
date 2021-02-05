@@ -226,7 +226,7 @@ When the package is ready to be deployed, a green tick will be shown next to the
 
     ![](attachments/sap-cloud-platform/sap-transport.png)
 
-3.  The **Timeout** value indicates how long (in seconds) Cloud Foundry will wait before deciding that the environment has not started. For some apps, the default (60 seconds) is too short. If your app is failing to start you can try increasing this value using the **Change timeout** option.
+3.  The **Timeout** value indicates how long (in seconds) Cloud Foundry will wait between starting an app and the first healthy response from the app before deciding that the application has failed to start. For some apps, the default (60 seconds) is too short. If your app is failing to start you can try increasing this value using the **Change timeout** option.
 
     {{% image_container width="60%" %}}![](attachments/sap-cloud-platform/sap-change-timeout.png){{% /image_container %}}
 
@@ -274,7 +274,7 @@ When the package is ready to be deployed, a green tick will be shown next to the
 
     ![](attachments/sap-cloud-platform/transport-from-to.png)
 
-3.  The **Timeout** value indicates how long (in seconds) Cloud Foundry will wait before deciding that the environment has not started. For some apps, the default (60 seconds) is too short. If your app is failing to start you can try increasing this value using the **Change timeout** option.
+3.  The **Timeout** value indicates how long (in seconds) Cloud Foundry will wait between starting an app and the first healthy response from the app before deciding that the application has failed to start. For some apps, the default (60 seconds) is too short. If your app is failing to start you can try increasing this value using the **Change timeout** option.
 
     {{% image_container width="60%" %}}![](attachments/sap-cloud-platform/sap-change-timeout.png){{% /image_container %}}
 
@@ -289,7 +289,7 @@ The environment details page contains the following four tabs:
 * [General](#general-tab) – how the application is deployed on SAP Cloud Platform
 * [Model Options](#model-options-tab) – application constants and scheduled events
 * [Services](#binding-services) – Cloud Foundry service management
-* [Runtime](#runtime-tab) – custom environment variables which control the behavior of the Mendix Runtime
+* [Runtime](#runtime-tab) – custom environment variables which define "User-Provided Variables" in SAP cloud foundry environment — pre-defined variables can be used to control the behavior of the Mendix Runtime
 
 Open the environment details by clicking **Details** on an environment on the Environments page of the Development Portal. You will also be taken to this page when you successfully deploy or transport your app.
 

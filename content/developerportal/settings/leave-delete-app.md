@@ -15,7 +15,7 @@ Your ability to delete and deactivate an app depends on your App Team role:
 * A custom role with the **App Settings** permission is also allowed to deactivate and delete an app
 * A [Mendix Admin](/developerportal/control-center/index#projects) is allowed to delete, deactivate, and activate all the company's apps (with or without App Team members for the app)
 
-For more information on roles, see [App Roles](/developerportal/app-roles/index).
+For more information on roles, see [App Roles](/developerportal/collaborate/app-roles).
 
 **This how-to will teach you how to do the following as a Scrum Master:**
 

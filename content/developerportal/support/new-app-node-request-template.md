@@ -24,7 +24,7 @@ If you want to deploy your app to a new licensed node in the Mendix Cloud or on-
 
 Fill in all the required details for this new licensed app node in the [Request New App Node](https://newnode.mendix.com/) app.
 
-Mendix Support will contact the [Technical Contact](/developerportal/app-roles/index#technical-contact) for the app via a ticket in the [Mendix Support Portal](https://support.mendix.com), and provide the app details. Mendix Support will also check if your request matches your entitlement to resources (number of apps, cloud resources).
+Mendix Support will contact the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) for the app via a ticket in the [Mendix Support Portal](https://support.mendix.com), and provide the app details. Mendix Support will also check if your request matches your entitlement to resources (number of apps, cloud resources).
 
 If you have an app deployed to **SAP** and need a *Subscription Secret*, you need to choose the **Hosting type** *Virtual Private Cloud* and then, on the subsequent screen choose **Hosting type** *Cloud Foundry* and **Virtual Private Cloud Name** *SAP Cloud Platform*.  
 
@@ -38,7 +38,7 @@ If your environment is not the right size, for example it has too little databas
 
 Fill in all the required details in the [Resize Environment](https://resize.mendix.com/index.html) app.
 
-Mendix Support will contact the [Technical Contact](/developerportal/app-roles/index#technical-contact) for the app via a ticket in the [Mendix Support Portal](https://support.mendix.com) to discuss priority and timing.
+Mendix Support will contact the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) for the app via a ticket in the [Mendix Support Portal](https://support.mendix.com) to discuss priority and timing.
 
 {{% alert type="warning" %}}
 Resizing operations will require your app to be restarted and it will be offline for a time while it is being resized.
@@ -50,7 +50,7 @@ If you no longer need an environment, you can request Mendix Support to offboard
 
 You can offboard a single environment or an entire node (all three of the test, acceptance, and production environments for example) by filling in all the required details in the [Offboard Environment](https://offboard.mendix.com/index.html) app. If you cannot use the app for any reason, please raise a support ticket with [Mendix Support](https://support.mendix.com).
 
-Mendix Support will contact the [Technical Contact](/developerportal/app-roles/index#technical-contact) for the app via a ticket in the [Mendix Support Portal](https://support.mendix.com) to confirm the details and timing.
+Mendix Support will contact the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) for the app via a ticket in the [Mendix Support Portal](https://support.mendix.com) to confirm the details and timing.
 
 Offboarding will remove access to everything related to the node. If you want to access any data or other information, then you will need to ensure this is backed up outside the Mendix Developer Portal. The following will be removed:
 

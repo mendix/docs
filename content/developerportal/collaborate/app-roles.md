@@ -8,7 +8,7 @@ aliases:
     - /developerportal/settings/technical-contact.html
     - /developerportal/general/technical-contact.html
     - /developerportal/company-app-roles/technical-contact.html
-    - /developerportal/app-roles/index.html
+    - /developerportal/collaborate/app-roles/index.html
 ---
 
 ## 1 Introduction

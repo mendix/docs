@@ -82,5 +82,5 @@ You can reschedule planned maintenance up  to one hour before the beginning of t
 
 ## 4 Read More
 
-* [App Roles](/developerportal/app-roles/index)
+* [App Roles](/developerportal/collaborate/app-roles)
 * [Node Permissions](/developerportal/deploy/node-permissions) 

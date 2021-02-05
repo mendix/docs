@@ -488,7 +488,9 @@ However, the maximum length for the service name is 50 characters. If this limit
 
 Use the Custom Environment Variables to **add**, **Edit**, or **Delete** an environment variable.
 
-The variables you add are chosen from a drop-down list.
+#### 7.4.1 Supported Environment Variables
+
+You can choose to add supported variables by selecting them from a drop-down list.
 
 * **DT_PAAS_TOKEN** – the token for integrating your Dynatrace environment with Cloud Foundry
 * **DT_SAAS_URL** – the monitoring endpoint URL of the Dynatrace service
@@ -497,6 +499,16 @@ The variables you add are chosen from a drop-down list.
 ![List of custom environment variables](attachments/sap-cloud-platform/custom-environment-variables.png)
 
 The variables beginning **DT_** set up Dynatrace. Setting these variables means that the Dynatrace OneAgent is loaded into your environment. You will then receive all J2EE-related metrics from your app. See [Dynatrace OneAgent](https://www.dynatrace.com/support/help/setup-and-configuration/dynatrace-oneagent/) for more information.
+
+#### 7.4.2 Unsupported Environment Variables
+
+You can also enter other environment variables which can be used to support Mendix features which are in beta. In this case, click **No** for **Supported** and enter the name of the variable as well as its value. If you are involved in using a beta feature, you will be told what Name needs to be entered here and what the Value should be.
+
+![List of custom environment variables](attachments/sap-cloud-platform/custom-environment-variables-unsupported.png)
+
+{{% alert type="info" %}}
+The Unsupported environment variables can only be used for controlling Mendix beta features.
+{{% /alert %}}
 
 ## 8 Databases in SAP Cloud Platform{#databases}
 

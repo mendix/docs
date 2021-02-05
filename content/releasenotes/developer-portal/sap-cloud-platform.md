@@ -15,7 +15,7 @@ For information on the current status of deployment to SAP Cloud Platform and an
 ### February 8th, 2021
 
 * We added the ability to extend the timeout period for the Cloud Foundry health check when transporting an app to a new environment on SAP BTP.
-* We added the ability to define custom environment variables for you app deployed on SAP BTP.
+* We added the ability to define custom environment variables for your app deployed on SAP BTP.
 * We added the ability to enable *Dynatrace* for your app deployed to SAP BTP by selecting variables from the supported custom environment variables list.
 
 For more information see [SAP Business Technology Platform - deploy](/developerportal/deploy/sap-cloud-platform).

@@ -1,11 +1,14 @@
 ---
 title: "App Roles"
+category: "Collaboration Tools"
+menu_order: 25
 description: "Describes the App Team, App Contact, and Technical Contact roles and permissions within the Mendix Platform."
 tags: ["app team", "app contact", "technical contact", "developer portal", "role", "permissions"]
 aliases:
     - /developerportal/settings/technical-contact.html
     - /developerportal/general/technical-contact.html
     - /developerportal/company-app-roles/technical-contact.html
+    - /developerportal/app-roles/index.html
 ---
 
 ## 1 Introduction
@@ -41,13 +44,13 @@ Mendix Admins can edit and create new team roles within the company in [Control 
 
 As a Scrum Master, you can edit roles for the specific app of which you are the Scrum Master by selecting **Team** > **Manage Team** (which will take you to the **App Team** tab of the **Settings** > **Security** page), clicking **Role settings,** then making your edits or clicking **New role** to create a custom new App Team role for that app
 
-![](attachments/app-roles-edit.png)
+![](attachments/app-roles/app-roles-edit.png)
 
 ## 4 App Contact {#app-contact}
 
 When you view the [General settings](../settings/general-settings) for a specific app, you will see the two roles responsible for the app: **App contact** and **Technical contact**. These are users you can contact with questions related to the app.
 
-![](attachments/app-roles.png)
+![](attachments/app-roles/app-roles.png)
 
 The App Contact is visible to regular users and is the go-to person for questions on the app. If you build your own app, you will automatically become the App Contact and you will have the **Scrum Master** [App Team role](#app-team-roles). 
 
@@ -61,7 +64,7 @@ Change the App Contact by following these steps:
 2. Click **General** under the **Settings** category.
 3.  Click **Edit App Info** in the top-right corner.
 
-	{{% image_container width="500" %}}![](attachments/change-appcontact.png)
+	{{% image_container width="500" %}}![](attachments/app-roles/change-appcontact.png)
 	{{% /image_container %}}
 
 4. Below **App Contact**, select a new App Contact from the drop-down menu, then click **Save**. 
@@ -110,4 +113,4 @@ If you are the current Technical Contact for an app, make another App Team membe
 3. Select the **Node Permissions** tab.
 4.  Below the name of the new Technical Contact, click **Change to Technical Contact**. The Technical Contact will be changed for all environments, and the change will be automatically saved.
 
-	![](attachments/change-technicalcontact.png)
+	![](attachments/app-roles/change-technicalcontact.png)

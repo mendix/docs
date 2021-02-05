@@ -1,13 +1,17 @@
 ---
 title: "User Task"
 parent: "workflows"
-menu_order: 10
+menu_order: 40
 tags: ["workflow", "workflows", "user task", "task", "Studio Pro"]
 ---
 
 ## 1 Introduction
 
-User task allows you to assign a workflow task to a certain user. For example, you can add filters and assign a task to the user in the IT department. When the workflow reaches this user task, the task will appear in their inbox. 
+User task allows you to assign a workflow task to a certain user. 
+
+For example, you can add filters and assign a task to the user in the IT department. When the workflow reaches this user task, the task will appear in their inbox:
+
+![Task Inbox](attachments/user-task/task-inbox.jpg)
 
 ## 2 Properties
 
@@ -102,7 +106,7 @@ Possible options of this property are described in the table below:
 
 Specifies the expression used to assign the user task. This option is displayed only when the [Assign user task using](#assign-user-task) is set to **XPath**.   
 
-#### 2.6.2 Microflow
+#### 2.6.3 Microflow
 
 Specifies the microflow used to assign the  user task. This option is displayed only when the [Assign user task using](#assign-user-task) is set to **Microflow**.   
 

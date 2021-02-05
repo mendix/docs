@@ -1,13 +1,15 @@
 ---
 title: "Decision in Workflows"
-parent: "general-elements"
+parent: "workflows"
 menu_order: 20
 tags: ["workflow", "workflows", "decision", "Studio Pro"]
 ---
 
 ## 1 Introduction
 
-A decision is an element that makes a choice based on a condition and follows one and only one of the outgoing paths. For example, you need to use a decision to follow different paths when a new hire works remotely or when they work from the office.
+A decision is an element that makes a choice based on a condition and follows one and only one of the outgoing paths. For example, you need to use a decision to follow different paths when a new hire works remotely or when they work from the office:
+
+![Decision Example](attachments/decision-in-workflows/decision-example.jpg)
 
 ## 2 Properties
 

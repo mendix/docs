@@ -65,6 +65,10 @@ When an event is triggered, you can choose what action is triggered. Possible op
 * [Delete](#delete) 
 * [Synchronize](#synchronize) 
 * [Sign out](#sign-out) 
+* [Call workflow](#call-workflow)
+* [Open workflow page](#open-workflow-page)
+* [Open task page](#open-task-page)
+* [Complete task](#complete-task)
 
 ### 3.1 Do Nothing {#do-nothing}
 
@@ -258,6 +262,24 @@ The **Synchronize** event [synchronizes](offline-first#synchronization) the data
 ### 3.12 Sign Out {#sign-out}
 
 The **Sign out** event signs the currently signed-in user out. When no user is signed in, no action is performed.
+
+### 3.13 Call Workflow {#call-workflow}
+
+The **Call workflow** event executes the specified workflow. 
+
+The following properties are specific for this event:
+
+* **Workflow** – a [workflow](workflows) that should be executed.
+* **Close page** – specifies whether the current page should be closed.
+* **Commit** – specifies whether the object should be committed when running a workflow. 
+
+### 3.14 Open Workflow Page
+
+**Open workflow page** opens the overview page set for the **Workflow page** in [workflow properties](workflow-properties). The element calling this event should be placed in a data container connected to the **System.Workflow** entity. 
+
+### 3.15 Open Task Page {#open-task-page}
+
+### 3.16  Complete Task {#complete-task}
 
 ## 4 Read More
 

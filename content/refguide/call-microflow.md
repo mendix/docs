@@ -1,13 +1,15 @@
 ---
 title: "Call Microflow"
 parent: "workflows"
-menu_order: 20
+menu_order: 50
 tags: ["workflow", "workflows", "call microflow", "Studio Pro"]
 ---
 
 ## 1 Introduction
 
 **Call microflow** is used to call a selected [microflow](microflow). Arguments can be passed to the microflow and the result can be stored.
+
+![Call Microflow Example](attachments/call-microflow/call-microflow-example.jpg)
 
 ## 2 Properties
 

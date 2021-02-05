@@ -36,7 +36,7 @@ The **App Team** tab lets you view and delete the team members that are currentl
 * Product Owner
 * Scrum Master
 
-For more information, see [App Roles](../app-roles/index).
+For more information, see [App Roles](../collaborate/app-roles).
 
 ### 3.2 Node Permissions
 

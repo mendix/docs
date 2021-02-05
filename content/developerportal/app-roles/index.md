@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-The roles defined in Developer Portal for an app project and App Team are described below.
+The roles defined in Developer Portal for an [app project](/developerportal/apps-list/) and [App Team](/developerportal/collaborate/team) are described below.
 
 ## 2 App Team Member
 
@@ -18,7 +18,7 @@ If you want to join an App Team, you have to ask a current App Team member (with
 
 ## 3 App Team Roles {#app-team-roles}
 
-Within an [App Team](/developerportal/collaborate/team), there are six predefined roles that can be provisioned to App Team members. Each App Team role has access to permission areas based on the following factors:
+Within an App Team, there are six predefined roles that can be provisioned to App Team members. Each App Team role has access to permission areas based on the following factors:
 
 * Who can edit the backlog and current [Sprint](../collaborate/stories)
 * Who can edit the app model

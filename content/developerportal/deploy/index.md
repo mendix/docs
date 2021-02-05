@@ -41,7 +41,7 @@ If you create your app from an IBM app template, or an IBM Starter Kit on IBM Cl
 
 For more information, see [IBM Cloud](ibm-cloud).
 
-## 5 SAP BTP
+## 5 SAP Business Technology Platform (SAP BTP)
 
 If you create your app from an SAP app template, the Developer Portal will lead you through the creation of an environment on SAP BTP. You can then deploy your app to your SAP BTP environment directly from within Studio Pro.
 

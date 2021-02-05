@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-The roles defined in Developer Portal for an app project and App Team are described below.
+The roles defined in Developer Portal for an [app project](/developerportal/apps-list/) and [App Team](/developerportal/collaborate/team) are described below.
 
 ## 2 App Team Member
 

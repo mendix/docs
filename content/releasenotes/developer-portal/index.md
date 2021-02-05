@@ -13,6 +13,17 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2021
 
+### February 5th, 2021
+
+#### Improvements
+
+* It is now possible to add or remove labels in the [Story Details](/developerportal/collaborate/stories#story-details) page.
+* We added a link to your app project’s [environments](/developerportal/deploy/environments) in the app tile on [My Apps](/developerportal/apps-list/#my-apps)
+
+#### Fixes
+
+* We fixed an issue where new Mendix Admins did not get access to environment nodes. (Ticket 114913)
+
 ### February 4th, 2021
 
 #### New Features

@@ -58,7 +58,7 @@ If your contract does not allow for more licensed nodes, please contact your Cus
 
 ### 3.2 Authorization
 
-You need to be the [Technical Contact](/developerportal/app-roles#technical-contact) of the node, otherwise you will not have the rights to link an app to the node.
+You need to be the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) of the node, otherwise you will not have the rights to link an app to the node.
 
 You need to have enabled two-factor authentication. See [Two-Factor Authentication](two-factor-authentication).
 

@@ -225,4 +225,4 @@ If you want to deploy your Mendix apps to other environments, you can add these 
 
 * [Custom Domains](custom-domains)
 * [Licensing Mendix Cloud Apps](licensing-apps)
-* [App Roles](/developerportal/app-roles/index)
+* [App Roles](/developerportal/collaborate/app-roles)

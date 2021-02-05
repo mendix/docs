@@ -436,7 +436,7 @@ Capitalize in all instances.
 ### Scrum Master
 
 {{% alert type="info" %}}
-This is the correct capitalization for this [App Team role](/developerportal/app-roles/index#app-team-roles)
+This is the correct capitalization for this [App Team role](/developerportal/collaborate/app-roles#app-team-roles)
 {{% /alert %}}
 
 ### Sprint
@@ -468,7 +468,7 @@ Capitalize in all instances.
 ### Technical Contact
 
 {{% alert type="info" %}}
-Capitalize in all instances of this [role](/developerportal/app-roles#technical-contact).
+Capitalize in all instances of this [role](/developerportal/collaborate/app-roles#technical-contact).
 {{% /alert %}}
 
 ### Theme Customizer

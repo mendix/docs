@@ -28,7 +28,7 @@ To select the target environment, do the following:
 
     ![Deploy Tab of Environments Page](attachments/studio-deployment-settings/developer-portal-web-modeler-target.png)
 
-    {{% alert type="info" %}} Only a [Technical Contact](/developerportal/app-roles#technical-contact) can see the **Setup Studios Deployment** button and click it. 
+    {{% alert type="info" %}} Only a [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) can see the **Setup Studios Deployment** button and click it. 
     {{% /alert %}}
 
 3. In the **Select Studio Target** dialog box, click the drop-down menu and select the environment.

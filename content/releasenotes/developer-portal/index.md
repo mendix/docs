@@ -17,9 +17,6 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Improvements
 
-#### New Features:
-MxAdmins now can manually assign company admins in MxNew. These admins are able to decide which public templates are visible.
-
 #### Fixes:
 We improved the speed of the templates page. When you load the page, the templates show up instantly.
 

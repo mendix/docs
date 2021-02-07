@@ -15,8 +15,6 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ### 9th February, 2021
 
-#### Improvements
-
 #### Fixes:
 We improved the speed of the templates page. When you load the page, the templates show up instantly.
 

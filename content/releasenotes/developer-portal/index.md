@@ -13,11 +13,11 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2021
 
-### 9th February, 2021
+### February 9th, 2021
 
-#### Fixes:
-We improved the speed of the templates page. When you load the page, the templates show up instantly.
+#### Improvements
 
+* We improved the speed of the **App Templates** page. After you click **Create App**, the templates appear instantly.
 
 ### February 5th, 2021
 

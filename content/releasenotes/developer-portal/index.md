@@ -17,7 +17,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Improvements
 
-* We improved the speed of the **App Templates** page. After you click **Create App**, the templates appear instantly.
+* We improved the speed of the **App Templates** page. After you click **Create App**, the templates appear instantly now.
 
 ### February 5th, 2021
 

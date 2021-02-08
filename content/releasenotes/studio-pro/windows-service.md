@@ -3,7 +3,19 @@ title: "Windows Service"
 category: "Studio Pro"
 ---
 
-To download the Windows Service, go to the Desktop Modeler page in the [Mendix App Store](https://appstore.home.mendix.com/link/modelers) and open **Related downloads**.
+To download the Windows Service, go to the Studio Pro page in the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/) and open **Other Releases, Related Downloads**.
+
+## 4.6.1{#4_6_1}
+
+**Release date: February 8, 2021**
+
+* We changed the Update-MxApp cmdlet so that it no longer applies file access rights. Normally, you only need to do this once, so the Service Console will do this when you add a new app. If you still wants this on an existing app, you can update the app manually in the Service Console and use the checkbox on the Update App form to apply the user rights again. See also the appropriate release note about this checkbox for version 4.5.1. (Ticket 67514)
+* We now allow to not configure the main location of the files when starting the Service Console for the first time. The application will be closed in that case.
+* We fixed the problem that errors during the download or extraction of the server distribution file were not shown.
+* We fixed the download of the server distribution file which started to fail recently because the current used .NET Framework version doesn't support the server TLS version by default.
+* We made the progress bar of the extraction process of the server distribution file more realistic.
+* We now find a correct AdoptOpenJDK version for Mendix 8 and higher if not configured yet.
+* We now check the Java version when you start an app on Mendix 8 or higher.
 
 ## 4.6{#4_6}
 

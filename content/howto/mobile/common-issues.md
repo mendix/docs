@@ -22,7 +22,7 @@ We recommend keeping the **Runtime port** in **Project Settings** > **Edit** on 
 
 If you are using Windows, make sure your WiFi network is set to **Private**. Windows often sets WiFi to **Public** by default, which blocks incoming connections.
 
-### 2.3 Error: Unable to Load Script
+### 2.3 Error: Unable to Load Script {#unable-load-script}
 
 Depending on your device settings and network characteristics, the Make it Native app can fail to connect to the runtime. If so, the Make it Native app can show the following error messages:
 

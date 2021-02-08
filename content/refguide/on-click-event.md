@@ -237,7 +237,7 @@ The **Create object** event creates a new object. The following properties are s
 The **Save changes** event commits all changes made on the page. The following properties are specific for this event:
 
 * **Close page** – specifies whether the current page should be closed.
-* **Auto-synchronize** –  specifies whether synchronization should happen when the save button is clicked for a Mendix application running in an offline profile. When an object is saved in a Mendix application running in an offline profile it is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](offline-first). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [syncing it](offline-first#synchronization).
+* **Auto-synchronize** – specifies whether synchronization should happen when the save button is clicked for a Mendix application running in an offline profile. When an object is saved in a Mendix application running in an offline profile it is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](offline-first). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [syncing it](offline-first#synchronization).
 
 ### 3.8 Cancel Changes {#cancel-changes}
 
@@ -275,11 +275,25 @@ The following properties are specific for this event:
 
 ### 3.14 Open Workflow Page
 
-**Open workflow page** opens the overview page set for the **Workflow page** in [workflow properties](workflow-properties). The element calling this event should be placed in a data container connected to the **System.Workflow** entity. 
+**Open workflow page** opens an overview page set for the **Workflow page** in [workflow properties](workflow-properties). An element calling this event should be placed in a data container connected to the **System.Workflow** entity. 
 
 ### 3.15 Open Task Page {#open-task-page}
 
+**Open task page** opens an overview page set for the [user task](user-task) in properties. An element calling this event should be placed in a data container connected to the **System.UserTask** entity. 
+
 ### 3.16  Complete Task {#complete-task}
+
+The **Complete task** event marks the specified workflow task as completed.
+
+The following properties are specific for this event:
+
+* **Workflow task** – the [user task](user-task) that should be marked as completed.
+
+* **Outcome** – lists the outcomes of the selected [user task](user-task) that you can choose from. If the user task has only one outcome, the **Default** is set as an outcome and the property cannot be edited. 
+
+* **Close page** – specifies whether the current page should be closed.
+
+* **Commit** – specifies whether the object should be committed when marking the task as completed.
 
 ## 4 Read More
 

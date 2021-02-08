@@ -114,4 +114,5 @@ In addition to adding new parameters, you can perform the following actions on p
 
 ## 3 Read More
 
+* [How to Configure a Workflow for the Employee Onboarding Process](/howto/logic0business-rules/workflow-how-to-configure)
 * [Workflows](workflows)

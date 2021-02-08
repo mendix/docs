@@ -1,7 +1,7 @@
 ---
 title: "User Task"
 parent: "workflows"
-menu_order: 40
+menu_order: 05
 tags: ["workflow", "workflows", "user task", "task", "Studio Pro"]
 ---
 

@@ -281,20 +281,32 @@ Switching from a ZIP file to a UI resources package is straightforward:
 
 3. Lastly, set the **Theme ZIP file** setting to **None**.
 
-## 7 Miscellaneous Tab {#miscellaneous}
+## 7 Workflows {#workflows}
+
+These settings allow you to manage the workflow editor in your app project. 
+
+### 7.1 Enable Workflows
+
+**Enable workflow** allows you to toggle the workflow functionality for your app project. 
+
+### 7.2 User Entity
+
+**User entity** defines the entity which the user targeting is based on. You can use the attributes of this entity in an XPath. 
+
+## 8 Miscellaneous Tab {#miscellaneous}
 
 These settings determine the behavior of Studio Pro for this project. The settings apply to everyone that is working on this project.
 
-### 7.1 Bundle Widgets When Running Locally
+### 8.1 Bundle Widgets When Running Locally
 
 When deploying to the cloud, custom widgets are bundled to optimize client-server communication. When deploying locally, this step is skipped to accelerate startup duration. In some cases, this may obfuscate errors triggered by faulty custom widgets.
 
 If this option is set, custom widgets will also be bundled locally. This mimics the production deployment, eliminating risk at the cost of start-up time.
 
-### 7.2 Suggest Lower-Case Variable Names in Microflows
+### 8.2 Suggest Lower-Case Variable Names in Microflows
 
 When enabled, the names that Studio Pro suggests in microflows will start with a lower-case letter instead of an upper-case letter.
 
-### 7.3 Activity Default Colors
+### 8.3 Activity Default Colors
 
 This table allows you to select a default color for each microflow activity type that is available in your project. The selected color will be used as the background color for all microflow activities of that type in your project. It is possible to override this default value for individual activities in the microflow editor. If you change the default color for an activity type, and there are activities of that type present in the project that have an individual background color specified, a dialog will be shown that allows you to apply the new default color to these activities as well.

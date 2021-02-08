@@ -23,6 +23,7 @@ For more introductory information, see [Studio Pro Overview](studio-pro-overview
 * [Domain Model](domain-model) – contains information on creating and maintaining the data model for your app
 * [Pages](pages) – gives information on creating and configuring pages, as well as various elements on them
 * [Application Logic](application-logic) – gives details on how to use and configure microflows and nanoflows: elements that add logic to your app
+* [Workflows](workflows) – provides information on using and configuring workflows: a visual editor that provides a process solution and drives intelligent automation of a business
 * [Resources](resources) – introduces various individual resources (documents) that you can use in your application, such as [Java actions](java-actions), [enumerations](enumerations), [scheduled events](scheduled-events)
 * [Integration](integration) – details methods for integrating with both Mendix and non-Mendix applications
 * [XPath](xpath) – introduces you to the Mendix query language, including details on [XPath constraints](xpath-constraints), [functions](xpath-query-functions), and [tokens](xpath-tokens)

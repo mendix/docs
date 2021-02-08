@@ -1,7 +1,7 @@
 ---
 title: "Workflows"
 category: "App Modeling"
-menu_order: 35
+menu_order: 45
 tags: ["workflow", "workflows", "Studio Pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -44,4 +44,4 @@ Call microflow
 
 ## Read More
 
-* 
+* [How to Configure a Workflow for the Employee Onboarding Process](/howto/logic0business-rules/workflow-how-to-configure)

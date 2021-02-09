@@ -39,7 +39,7 @@ For example, if the image name is `quay.io/digital_ecosystems/mendix-operator:1.
 This process will take:
 
 * about 15 to 30 minutes when upgrading from Mendix Operator 1.0.\*
-* about 15 minutes when upgrading from Mendix Operator 1.1.\*-1.7.\*.
+* about 15 minutes when upgrading from Mendix Operator 1.1.\* to 1.7.\*.
 
 Some upgrade steps are only required when upgrading from older versions of the Mendix Operator. There is a notice on these steps indicating which upgrade paths they apply to and for which paths the step should be skipped.
 
@@ -57,7 +57,7 @@ kubectl -n $OPERATOR_NAMESPACE scale deployment mendix-operator --replicas=0
 #### 2.2.2 Upgrading the Custom Resource Definitions
 
 {{% alert type="info" %}}
-Follow this step when upgrading from Mendix Operator versions 1.0.\*-1.7.\*  only.
+Follow this step when upgrading from Mendix Operator versions 1.0.\* to 1.7.\*  only.
 {{% /alert %}}
 
 Run the following command to upgrade to the latest version of the Custom Resource Definitions for the Mendix Operator:
@@ -71,7 +71,7 @@ kubectl apply -f https://installergen.private-cloud.api.mendix.com/privatecloud/
 #### 2.2.3 Upgrading the dependency versions
 
 {{% alert type="info" %}}
-Follow this step when upgrading from Mendix Operator versions 1.0.\*-1.7.\*  only.
+Follow this step when upgrading from Mendix Operator versions 1.0.\* to 1.7.\*  only.
 {{% /alert %}}
 
 Run the following command to upgrade to the latest version of the Custom Resource Definitions for the Mendix Operator:
@@ -96,7 +96,7 @@ kubectl -n $OPERATOR_NAMESPACE patch deployment mendix-operator -p \
 ##### 2.2.5.1 Updating the Mendix Operator Configuration (from version 1.0.\*)
 
 {{% alert type="info" %}}
-Follow this step when upgrading from Mendix Operator 1.0.\* only.
+Follow this step when upgrading from Mendix Operator version 1.0.\* only.
 If you're running a later version of the Mendix Operator, proceed [to the next step](#update-configuration-1.1.0).
 {{% /alert %}}
 
@@ -163,12 +163,12 @@ kubectl -n $OPERATOR_NAMESPACE patch operatorconfiguration mendix-operator-confi
 #### 2.2.6.1 Update the Kubernetes Role for OpenShift routes
 
 {{% alert type="info" %}}
-Follow this step when upgrading from Mendix Operator 1.0.\*, 1.1.\* and 1.2.\*.
+Follow this step when upgrading from Mendix Operator versions 1.0.\*, 1.1.\*, and 1.2.\*.
 
 It can be skipped if the Mendix Operator is not configured to use OpenShift Routes for incoming network traffic.
 {{% /alert %}}
 
-To enable changing the App URL in OpenShift Routes, you need to perform this step to add the `update` permission to the `mendix-operator` role.
+To allow you to change the App URL in OpenShift Routes, you need to perform this step to add the `update` permission to the `mendix-operator` role.
 
 Search for the `mendix-operator` Role in the OpenShift web console and open if for editing, or run the following command to start editing the `mendix-operator` Role:
 
@@ -209,12 +209,12 @@ Save the role to apply the changes.
 #### 2.2.6.2 Update the Kubernetes Role for OperatorVersions CRD
 
 {{% alert type="info" %}}
-Follow this step when upgrading from Mendix Operator 1.0.\*-1.7.\*.
+Follow this step when upgrading from Mendix Operator versions 1.0.\* to 1.7.\*.
 {{% /alert %}}
 
 To allow the Operator to manage its dependency versions, add the `operatorversions` resource to the `mendix-operator` role.
 
-Search for the `mendix-operator` Role in the OpenShift web console and open if for editing, or run the following command to start editing the `mendix-operator` Role:
+Search for the `mendix-operator` Role in the OpenShift web console and open it for editing, or run the following command to start editing the `mendix-operator` Role:
 
 ```shell
 kubectl -n $OPERATOR_NAMESPACE edit role mendix-operator
@@ -261,7 +261,7 @@ Save the role to apply the changes.
 #### 2.2.7 Update the Storage Plan provisioners
 
 {{% alert type="info" %}}
-Only follow this step when upgrading from Mendix Operator 1.0.\*-1.7.\*.
+Only follow this step when upgrading from Mendix Operator versions 1.0.\* to 1.7.\*.
 {{% /alert %}}
 
 Run the following command:
@@ -308,7 +308,7 @@ The StatefulSets should be cleaned up manually as documented in the [Cleanup pha
 #### 2.2.9 Cleanup Phase{#cleanup-phase}
 
 {{% alert type="info" %}}
-Follow this step when upgrading from Mendix Operator 1.0.\* only.
+Follow this step when upgrading from Mendix Operator version 1.0.\* only.
 {{% /alert %}}
 
 Delete StatefulSets from the Namespace where the Operator was installed:
@@ -331,7 +331,7 @@ Upgrading the Mendix Gateway Agent is only possible if the cluster was originall
 
 ### 3.1 Preparation
 
-Before upgrading to the Mendix Gateway Agent 1.7.0, first [upgrade](#operator-latest) the Mendix Operator to the latest version
+Before upgrading to Mendix Gateway Agent version 1.7.0, first [upgrade](#operator-latest) the Mendix Operator to the latest version
 and set the `OPERATOR_NAMESPACE` variable in your Bash terminal as described above.
 
 Check the current version of the Agent by running the following command:
@@ -354,7 +354,7 @@ There is a notice on these steps indicating which upgrade paths they apply to an
 #### 3.2.1 Update the Kubernetes Role for OperatorVersions CRD
 
 {{% alert type="info" %}}
-Follow this step when upgrading from Mendix Gateway Agent versions 1.0.\*-1.6.\* only.
+Follow this step when upgrading from Mendix Gateway Agent versions 1.0.\* to 1.6.\* only.
 {{% /alert %}}
 
 To allow the Mendix Gateway Agent to report and manage dependency versions for the Mendix Operator, add the `operatorversions` resource to the `mendix-agent` role.

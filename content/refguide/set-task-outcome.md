@@ -1,8 +1,8 @@
 ---
-title: "Call Workflow"
+title: "Set Task Outcome"
 parent: "workflow-activities"
-menu_order: 10
-tags: ["studio pro", "call workflow", "workflow"]
+menu_order: 50
+tags: ["studio pro", "user task", "workflow", "task outcome", "complete task"]
 ---
 
 {{% alert type="warning" %}}
@@ -11,19 +11,17 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **Call workflow** activity can be used to call a [workflow](workflows). 
+The **Set task outcome** activity can be used to define which outcome the [user task](user-task) should follow. 
 
-![Call Workflow](attachments/call-workflow/call-workflow.jpg)
-
-Arguments can be passed to the microflow and the result can be stored.
+![Set Task Outcome](attachments/set-task-outcome/set-task-outcome.jpg)
 
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-![Call Workflow Properties](attachments/call-workflow/call-workflow-properties.jpg)
+![Set User Task Outcome Properties](attachments/set-task-outcome/set-task-outcome-properties.jpg)
 
-The **Call workflow** properties pane consists of the following sections:
+The **Open user task** properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)
@@ -36,17 +34,17 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Workflow
+### 3.1 Task
 
-The workflow that is called by this activity. 
+The user task entity available from the microflow parameters.
 
-### 3.2 Context Object
+### 3.2 Workflow Task
 
-An object which you want to use as a context.
+The user task for which you want to set an outcome. 
 
-### 3.3 Variable Name, Object Name, or List Name {#name}
+### 3.3 Outcome
 
-The name of the variable, list, or object returned by the activity.
+Gives you a list of available outcomes for the selected user task. The user task will follow the selected outcome.
 
 ## 4 Common Section {#common}
 

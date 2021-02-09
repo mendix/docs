@@ -1,8 +1,8 @@
 ---
-title: "Call Workflow"
+title: "Open Workflow Page"
 parent: "workflow-activities"
-menu_order: 10
-tags: ["studio pro", "call workflow", "workflow"]
+menu_order: 30
+tags: ["studio pro", "workflow page", "workflow"]
 ---
 
 {{% alert type="warning" %}}
@@ -11,19 +11,17 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **Call workflow** activity can be used to call a [workflow](workflows). 
+The **Open workflow page** activity can be used to open a workflow overview page defined in the workflow properties. 
 
-![Call Workflow](attachments/call-workflow/call-workflow.jpg)
-
-Arguments can be passed to the microflow and the result can be stored.
+![Open Workflow Page](attachments/open-workflow-page/open-workflow-page.jpg)
 
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-![Call Workflow Properties](attachments/call-workflow/call-workflow-properties.jpg)
+![Open Workflow Page Properties](attachments/open-workflow-page/open-workflow-page-properties.jpg)
 
-The **Call workflow** properties pane consists of the following sections:
+The **Open user task** properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)
@@ -38,15 +36,7 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.1 Workflow
 
-The workflow that is called by this activity. 
-
-### 3.2 Context Object
-
-An object which you want to use as a context.
-
-### 3.3 Variable Name, Object Name, or List Name {#name}
-
-The name of the variable, list, or object returned by the activity.
+A workflow of which the page you want to open.
 
 ## 4 Common Section {#common}
 

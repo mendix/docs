@@ -1,6 +1,7 @@
 ---
 title: "Open User Task"
 parent: "workflow-activities"
+menu_order: 20
 tags: ["studio pro", "user task", "workflow"]
 ---
 
@@ -10,11 +11,9 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **Open user task** activity can be used to call a [workflow](workflows). 
+The **Open user task** activity can be used to open a user task page defined in the user task properties. 
 
 ![Open User Task](attachments/open-user-task/open-user-task.jpg)
-
-Arguments can be passed to the microflow and the result can be stored.
 
 ## 2 Properties
 
@@ -37,7 +36,7 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.1 User Task
 
-A user task if which the page you want to open.
+A user task of which the page you want to open.
 
 ## 4 Common Section {#common}
 

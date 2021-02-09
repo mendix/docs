@@ -29,7 +29,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 * We updated the [Newtonsoft Json.NET](https://www.newtonsoft.com/json) library from 5.0.3 to 12.0.2.
 * We updated the [DotNetZip](https://archive.codeplex.com/?p=DotNetZip) library from version 1.11.0 to 1.13.3.
 * We replaced an old version of the [Active Directory Common Dialogs .NET](https://archive.codeplex.com/?p=adui) library with [Tulpep.ActiveDirectoryObjectPicker](https://www.nuget.org/packages/Tulpep.ActiveDirectoryObjectPicker/) 2.3.133.
-* Known issue: If an Oracle Java 8 installation is available, this version will be selected by default for Mendix 8 apps. Please make sure you select JRE or JDK 11 from Oracle or OpenJDK (AdoptOpenJDK). This will be fixed in a future release.
+* Known issue: If an Oracle Java 8 installation is available, this version will be selected by default for Mendix 8 apps. Please make sure you select JRE or JDK 11 from Oracle or OpenJDK (AdoptOpenJDK).
    * Fixed in [4.6.1](#46ki).
 
 ## 4.5

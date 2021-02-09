@@ -14,8 +14,6 @@ These release notes cover changes made to the [Mendix App Store](/appstore/index
 * You can now download Server Distribution and Windows Service for the latest Studio Pro version using the Related Downloads button on **Get Studio pro** page.  
 * Adding Beta version for components is not supported anymore. Beta versions of published components and existing drafts have been automatically updated to remove the beta tag.
 
-## 2021
-
 ### January 26th, 2021
 
 * You are now able to download Studio Pro versions marked as [beta](/releasenotes/beta-features/index) from a separate tab on the **Get Studio Pro** page named **Beta Releases**. The default download option (via the **Release Notes** tab) remains the latest stable release of Studio Pro.

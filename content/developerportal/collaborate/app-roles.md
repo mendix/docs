@@ -7,6 +7,7 @@ tags: ["app team", "app contact", "technical contact", "developer portal", "role
 aliases:
     - /developerportal/settings/technical-contact.html
     - /developerportal/general/technical-contact.html
+    - /developerportal/company-app-roles.html
     - /developerportal/company-app-roles/technical-contact.html
     - /developerportal/app-roles/index.html
 ---

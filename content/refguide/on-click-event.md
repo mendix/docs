@@ -283,13 +283,13 @@ The following properties are specific for this event:
 
 ### 3.16  Complete Task {#complete-task}
 
-The **Complete task** event marks the specified workflow task as completed.
+The **Complete task** event marks the specified user task in the workflow as completed.
 
 The following properties are specific for this event:
 
 * **Workflow task** – the [user task](user-task) that should be marked as completed.
 
-* **Outcome** – lists the outcomes of the selected [user task](user-task) that you can choose from. If the user task has only one outcome, the **Default** is set as an outcome and the property cannot be edited. 
+* **Outcome** – lists the outcomes of the selected [user task](user-task) and follows the selected outcome. If the user task has only one outcome, the **Default** is set as an outcome and the property cannot be edited. 
 
 * **Close page** – specifies whether the current page should be closed.
 

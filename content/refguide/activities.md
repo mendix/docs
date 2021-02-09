@@ -97,3 +97,15 @@ Integration activities can be used to integrate with other systems, for example 
 | Graphic | Name | Description |
 | --- | --- | --- |
 | [![generate document](attachments/activities/generate-document.png)](generate-document) | [Generate document](generate-document) *(only in nanoflows)* | Allows you to create a document of a certain type based on a [template](document-templates). |
+
+## 10 Workflow Activities
+
+Workflow activities are used in relation to workflows and their user tasks. 
+
+| Graphic | Name             | Description                                                  |
+| ------- | ---------------- | ------------------------------------------------------------ |
+|         | Call workflow    | Calls a workflow. Arguments can be passed to the workflow and the result can be stored in a variable. |
+|         | Open user task   | Opens a user task page specified in [user task properties](user-task). |
+|         | Open workflow    | Opens an overview page specified in [workflow properties](workflow-properties). |
+|         | Set task outcome | Sets which outcome the [user task](user-task) should follow. |
+

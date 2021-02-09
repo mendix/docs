@@ -1,6 +1,8 @@
 ---
 title: "Windows Service"
 category: "Studio Pro"
+aliases:
+    - /releasenotes/desktop-modeler/windows-service.html
 ---
 
 To download the Windows Service, go to the [Get Studio Pro](https://marketplace.mendix.com/link/studiopro/) page in the Mendix Marketplace and click the **Related Downloads** button.

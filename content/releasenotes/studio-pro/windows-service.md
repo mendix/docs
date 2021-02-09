@@ -5,19 +5,21 @@ category: "Studio Pro"
 
 To download the Windows Service, go to the [Get Studio Pro](https://marketplace.mendix.com/link/studiopro/) page in the Mendix Marketplace and click the **Related Downloads** button.
 
-## 4.6.1 {#4_6_1}
+## 4.6
+
+### 4.6.1 {#4_6_1}
 
 **Release date: February 8th, 2021**
 
+* <a name="46ki"></a>We now find a correct AdoptOpenJDK version for [Studio Pro 8](../studio-pro/8.0) and above if that is not configured yet.
 * We changed the `Update-MxApp` cmdlet so that it no longer applies file access rights. Normally, you only need to do this once, so the Mendix Service Console will do this when you add a new app. If you still want this on an existing app, you can update the app manually in the Service Console and use the check box on the **Update App** form to apply the user rights again. For more information, see the release note about this check box for version [4.5.1](#451) below. (Ticket 67514)
 * We now allow you to not configure the main location of the files when starting the Mendix Service Console for the first time. The application will be closed in that case.
 * We fixed an issue where errors during the download or extraction of the server distribution file were not shown.
 * We fixed an issue with the download of the server distribution file that started to fail recently, because the currently used .NET Framework version does not support the server TLS version by default.
 * We made the progress bar of the extraction process of the server distribution file more realistic.
-* We now find a correct AdoptOpenJDK version for [Studio Pro 8](../studio-pro/8.0) and above if that is not configured yet.
 * We now check the Java version when you start an app on Studio Pro 8 or higher.
 
-## 4.6 {#4_6}
+### 4.6.0 {#4_6}
 
 **Release date: August 8th, 2019**
 
@@ -27,12 +29,12 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 * We updated the [Newtonsoft Json.NET](https://www.newtonsoft.com/json) library from 5.0.3 to 12.0.2.
 * We updated the [DotNetZip](https://archive.codeplex.com/?p=DotNetZip) library from version 1.11.0 to 1.13.3.
 * We replaced an old version of the [Active Directory Common Dialogs .NET](https://archive.codeplex.com/?p=adui) library with [Tulpep.ActiveDirectoryObjectPicker](https://www.nuget.org/packages/Tulpep.ActiveDirectoryObjectPicker/) 2.3.133.
+* Known issue: If an Oracle Java 8 installation is available, this version will be selected by default for Mendix 8 apps. Please make sure you select JRE or JDK 11 from Oracle or OpenJDK (AdoptOpenJDK).
+   * Fixed in [4.6.1](#46ki).
 
-Known issue:
+## 4.5
 
-* If an Oracle Java 8 installation is available, this version will be selected by default for Mendix 8 apps. Please make sure you select JRE or JDK 11 from Oracle or OpenJDK (AdoptOpenJDK). This will be fixed in a future release.
-
-## 4.5.1 {#451}
+### 4.5.1 {#451}
 
 **Release date: June 5th, 2018**
 
@@ -43,7 +45,7 @@ Known issue:
 * We removed our dependency on the Microsoft.VisualBasic.PowerPacks library.
 * We improved the check on whether the correct Mendix Server version is available.
 
-## 4.5
+### 4.5.0
 
 **Release date: February 21st, 2017**
 

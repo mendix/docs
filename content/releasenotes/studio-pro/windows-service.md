@@ -3,11 +3,23 @@ title: "Windows Service"
 category: "Studio Pro"
 ---
 
-To download the Windows Service, go to the Desktop Modeler page in the [Mendix App Store](https://appstore.home.mendix.com/link/modelers) and open **Related downloads**.
+To download the Windows Service, go to the [Get Studio Pro](https://marketplace.mendix.com/link/studiopro/) page in the Mendix Marketplace and click the **Related Downloads** button.
 
-## 4.6{#4_6}
+## 4.6.1 {#4_6_1}
 
-**Release date: August 8, 2019**
+**Release date: February 8th, 2021**
+
+* We changed the `Update-MxApp` cmdlet so that it no longer applies file access rights. Normally, you only need to do this once, so the Mendix Service Console will do this when you add a new app. If you still want this on an existing app, you can update the app manually in the Service Console and use the check box on the **Update App** form to apply the user rights again. For more information, see the release note about this check box for version [4.5.1](#451) below. (Ticket 67514)
+* We now allow you to not configure the main location of the files when starting the Mendix Service Console for the first time. The application will be closed in that case.
+* We fixed an issue where errors during the download or extraction of the server distribution file were not shown.
+* We fixed an issue with the download of the server distribution file that started to fail recently, because the currently used .NET Framework version does not support the server TLS version by default.
+* We made the progress bar of the extraction process of the server distribution file more realistic.
+* We now find a correct AdoptOpenJDK version for [Studio Pro 8](../studio-pro/8.0) and above if that is not configured yet.
+* We now check the Java version when you start an app on Studio Pro 8 or higher.
+
+## 4.6 {#4_6}
+
+**Release date: August 8th, 2019**
 
 * We added support for [Studio Pro 8](../studio-pro/8.0).
 * We added the option to download the applicable server distribution on the form where you add or update an app.
@@ -20,9 +32,9 @@ Known issue:
 
 * If an Oracle Java 8 installation is available, this version will be selected by default for Mendix 8 apps. Please make sure you select JRE or JDK 11 from Oracle or OpenJDK (AdoptOpenJDK). This will be fixed in a future release.
 
-## 4.5.1
+## 4.5.1 {#451}
 
-**Release date: June 5, 2018**
+**Release date: June 5th, 2018**
 
 * We upgraded the target Microsoft .NET Framework version from 4.5 to 4.5.2.
 * We added a check box to the **Update App** form so that you are able to configure whether you want to apply the correct user rights on some deployment folders. This is enabled by default for new apps, but disabled by default when you upgrade an existing app.

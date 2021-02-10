@@ -47,7 +47,7 @@ If you select a non-Mendix cloud platform like SAP, you will be redirected to a 
 Specific steps for configuring different cloud platforms are provided here:
 
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy)
-* [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform)
+* [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform)
 * [IBM Cloud](/developerportal/deploy/ibm-cloud)
 * [On-Premises](/developerportal/deploy/on-premises-design)
 

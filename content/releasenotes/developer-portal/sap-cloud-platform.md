@@ -1,22 +1,25 @@
 ---
-title: "SAP Cloud Platform"
+title: "SAP BTP"
 category: "Deployment"
 menu_order: 30
-description: "Release notes for deployment to SAP Cloud Platform"
+description: "Release notes for deployment to SAP Business Technology Platform"
 tags: ["release notes", "deployment", "cloud environment", "SAP", "SAP Cloud"]
 ---
 
-These release notes cover changes to deployment to [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform). There are separate release notes for other deployment targets, see [Deployment](deployment) release notes page for further information.
+These release notes cover changes to deployment to [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform) (SAP BTP — formerly SAP Cloud Platform). There are separate release notes for other deployment targets, see [Deployment](deployment) release notes page for further information.
 
-For information on the current status of deployment to SAP Cloud Platform and any planned releases see [Mendix Status](https://status.mendix.com/).
+For information on the current status of deployment to SAP BTP and any planned releases see [Mendix Status](https://status.mendix.com/).
 
 ## 2021
 
 ### February 10th, 2021
 
+#### Improvements
+
 * We added the ability to extend the timeout period for the Cloud Foundry health check when transporting an app to a new environment on SAP BTP.
 * We added the ability to define custom environment variables for your app deployed on SAP BTP.
 * We added the ability to enable *Dynatrace* for your app deployed to SAP BTP by selecting variables from the supported custom environment variables list.
+* SAP Cloud Platform was renamed SAP Business Technology Platform (SAP BTP) and changes were made to the documentation to reflect this.
 
 For more information see [SAP Business Technology Platform - deploy](/developerportal/deploy/sap-cloud-platform).
 
@@ -48,7 +51,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 #### Improvements
 
-* We have added an easy-to-use autoscaler configurator to allow you to easily create JSON configuration files for the **Application Autoscaler** on SAP Cloud Platform. See [Application Autoscaler for SAP Cloud Platform](/partners/sap/sap-autoscaler) for more information.
+* We have added an easy-to-use autoscaler configurator to allow you to easily create JSON configuration files for the **Application Autoscaler** on SAP Cloud Platform. See [Application Autoscaler for SAP Business Technology Platform](/partners/sap/sap-autoscaler) for more information.
     * There is currently an issue with how the JSON is uploaded. We are working on a fix for this but, in the meantime, please check the workaround in the documentation to ensure that the JSON is uploaded.
 
 ### March 26th, 2020

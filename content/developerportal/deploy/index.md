@@ -6,12 +6,12 @@ tags: ["Deploy","Manage", "Mendix Cloud", "IBM", "SAP", "Cloud Foundry", "Kubern
 
 ## 1 Introduction
 
-A Mendix application can be deployed in different ways. You can deploy to your local machine for development and testing. You can deploy to the Mendix cloud, which is the default location for both free and licensed apps. You can also deploy to IBM Cloud, SAP Cloud Platform, Cloud Foundry-based platforms, Docker containers, Azure, or to a server you configured yourself.
+A Mendix application can be deployed in different ways. You can deploy to your local machine for development and testing. You can deploy to the Mendix cloud, which is the default location for both free and licensed apps. You can also deploy to IBM Cloud, SAP Business Technology (SAP BTP) Platform, Cloud Foundry-based platforms, Docker containers, Azure, or to a server you configured yourself.
 
 This section of the *Developer Portal Guide* contains step-by-step instructions, and additional reference material, to help you to deploy and manage your Mendix apps in the cloud or on premises. It is split into a number of sections:
 
 * [General](general) – contains information which applies to deployments in many different environments
-* Environment-specific sections – these contain instructions for the deployment and maintenance of apps in specific environments, for example, [Mendix Cloud](mendix-cloud-deploy) and [SAP Cloud Platform](sap-cloud-platform)
+* Environment-specific sections – these contain instructions for the deployment and maintenance of apps in specific environments, for example, [Mendix Cloud](mendix-cloud-deploy) and [SAP Business Technology Platform](sap-cloud-platform)
 * [Mobile App](mobileapp) – contains instructions for publishing your mobile app: to the Apple or Google stores, for example
 * [App Services](app-services) – describes what can be published to the Mendix App Store, and how to do this
 
@@ -41,11 +41,11 @@ If you create your app from an IBM app template, or an IBM Starter Kit on IBM Cl
 
 For more information, see [IBM Cloud](ibm-cloud).
 
-## 5 SAP Cloud Platform
+## 5 SAP Business Technology Platform (SAP BTP)
 
-If you create your app from an SAP app template, the Developer Portal will lead you through the creation of an environment on SAP Cloud Platform. You can then deploy your app to your SAP Cloud Platform environment directly from within Studio Pro.
+If you create your app from an SAP app template, the Developer Portal will lead you through the creation of an environment on SAP BTP. You can then deploy your app to your SAP BTP environment directly from within Studio Pro.
 
-For more information, see [SAP Cloud Platform](sap-cloud-platform).
+For more information, see [SAP Business Technology Platform](sap-cloud-platform).
 
 ## 6 Siemens MindSphere
 
@@ -84,7 +84,7 @@ To learn how to deploy your Mendix application on premises, see [How to Deploy M
 * [General](general) – information which applies to deployments in many different environments
 * [Mendix Cloud](mendix-cloud-deploy) – how to deploy to, and configure, the Mendix Cloud
 * [IBM Cloud](ibm-cloud) – how to deploy to the IBM Cloud
-* [SAP Cloud Platform](sap-cloud-platform) – how to deploy to SAP Cloud Platform
+* [SAP Business Technology Platform](sap-cloud-platform) – how to deploy to SAP BTP
 * [Siemens MindSphere](deploying-to-mindsphere) – how to deploy to Siemens MindSphere
 * [Private Cloud](private-cloud) – how to deploy to a supported private cloud through the Developer Portal
 * [Cloud Foundry](cloud-foundry-deploy) – how to deploy to a Cloud Foundry-based platform

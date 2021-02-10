@@ -1,11 +1,11 @@
 ---
-title: "App Store"
-description: "Release notes for updates to the Mendix App Store"
-tags: ["app store", "connector", "module", "add on", "widget"]
+title: "Marketplace"
+description: "Release notes for updates to the Mendix Marketplace"
+tags: ["marketplace", "app store", "connector", "module", "add on", "widget"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes made to the [Mendix App Store](/appstore/index).
+These release notes cover changes made to the [Mendix Marketplace](/appstore/index).
 
 ## 2021
 

@@ -14,7 +14,7 @@ This module makes it easy for Mendix developers who want to include push notific
 
 ## 2 Development
 
-When using the module in your app project, all dependencies are bundled when downloaded from the App Store. For developers who want to update and publish a newer version, there are some helpful scripts described below.
+When using the module in your app project, all dependencies are bundled when downloaded from the Marketplace. For developers who want to update and publish a newer version, there are some helpful scripts described below.
 
 These are the development prerequisites:
 
@@ -27,7 +27,7 @@ Install the dependency *.jar* files:
 $ gradle prepareDeps
 ```
 
-Note that all project `test/userlib` content is cleared, including the *.jar* files of the other modules. You need to re-download the following  required modules from the App Store:
+Note that all project `test/userlib` content is cleared, including the *.jar* files of the other modules. You need to re-download the following  required modules from the Marketplace:
 
 * [Community Commons Function Library](community-commons-function-library)
 * [Encryption](encryption)
@@ -51,7 +51,7 @@ PNC_VERSION = '4.0.6'
 MXBUILD_VERSION = '7.23.8.58888'
 ```
 
-Export the module for the App Store, including the dependent *userlib* content (the module will be exported to *dist/{version}/module/PushNotifications.mpk*):
+Export the module for the Marketplace, including the dependent *userlib* content (the module will be exported to *dist/{version}/module/PushNotifications.mpk*):
 
 ```bash
 $ gradle extractModule

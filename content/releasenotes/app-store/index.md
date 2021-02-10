@@ -74,7 +74,7 @@ We have updated the single sign-on functionality in the App Store to use the lat
 
 We are invested in maintaining Mendix Marketplace content to make it easier for you to find and use the widgets and modules that you need. To that end, we have cleaned up old Marketplace content where Mendix support is no longer possible and changed the support level from **Platform support** to **Community support**.
 
-For more information on these support levels, see [App Store Content Support](/appstore/general/app-store-content-support).
+For more information on these support levels, see [Marketplace Content Support](/appstore/general/app-store-content-support).
 
 ### November 6th, 2019
 

@@ -138,7 +138,7 @@ You can add large attachments such as project files to the request. Please note 
 * Test project (for details, see [How To Export A Mendix Project Package](/refguide/export-project-package-dialog))
 * Reproducible steps
 
-### 5.5 App Store Content Problems & Module, Widget & Theme Issues
+### 5.5 Marketplace Content Problems & Module, Widget & Theme Issues
 
 * Name of the Marketplace component
 * Mendix version
@@ -146,7 +146,7 @@ You can add large attachments such as project files to the request. Please note 
 * Reproducible steps
 
 {{% alert type="info" %}}
-Not all Marketplace content is compatible with every version of Studio Pro, and not all Marketplace content is supported by Mendix. For more information, see [App Store Content Support](/appstore/general/app-store-content-support).
+Not all Marketplace content is compatible with every version of Studio Pro, and not all Marketplace content is supported by Mendix. For more information, see [Marketplace Content Support](/appstore/general/app-store-content-support).
 {{% /alert %}}
 
 ### 5.6 Mobile Problems

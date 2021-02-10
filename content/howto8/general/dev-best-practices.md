@@ -339,7 +339,7 @@ Assigning default rights to new members when defining entity access is NOT recom
 
 Apps should keep up with new Mendix releases as much as possible.
 
-### 4.7 App Store Content
+### 4.7 Marketplace Content
 
 When introducing a new [Mendix Marketplace](https://appstore.home.mendix.com/index3.html) component to a project, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
 

@@ -57,7 +57,7 @@ Let’s start with creating a new Mendix application in the Mendix Developer Por
 
     ![](attachments/howto/sharing_delete_module.png)
 
-3. Now it’s time to import your company UI resources (if you have not created the UI resources yet, see [How to Create Company UI Resources](create-company-atlas-ui-resources)). Import these resources by clicking **App Store** in the top toolbar of Studio Pro, and then selecting **UI Resources** in the left sidebar **Categories** menu.
+3. Now it’s time to import your company UI resources (if you have not created the UI resources yet, see [How to Create Company UI Resources](create-company-atlas-ui-resources)). Import these resources by clicking **ApMarketplace** in the top toolbar of Studio Pro, and then selecting **UI Resources** in the left sidebar **Categories** menu.
 4. Download the company UI resources module you have created.
 5. When the download is complete, the UI resources will be visible in the **App Store modules** in **Project Explorer**.  Be sure to check if all the errors are resolved before continuing.
 
@@ -90,7 +90,7 @@ To use the UI Resources module from teh Mendix Marketplace, follow these steps:
 
     ![](attachments/howto/sharing.png)
 
-    The available UI resources will appear in the middle section of the App Store. The **Private** label indicates that the UI resources are only available for your company.
+    The available UI resources will appear in the middle section of the Marketplace. The **Private** label indicates that the UI resources are only available for your company.
 
 2. Select the UI resources that have been created by your company:
 

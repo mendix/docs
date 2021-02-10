@@ -58,7 +58,7 @@ Before starting this how-to, make sure you have the following prerequisites:
 
 To download and install the Mendix Service Console, follow these steps:
 
-1. Download the latest version of the Mendix Service Console by following the **Related downloads** link from the [Studio Pro Download Page](https://appstore.home.mendix.com/link/modelers) of the App Store.
+1. Download the latest version of the Mendix Service Console by following the **Related downloads** link from the [Studio Pro Download Page](https://appstore.home.mendix.com/link/modelers) of the Marketplace.
 
     ![](attachments/deploy-mendix-on-windows/service_console_download.png)
 

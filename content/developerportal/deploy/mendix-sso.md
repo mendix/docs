@@ -30,9 +30,9 @@ You can see if your app has the Mendix SSO module, and which version it has, by 
 
 ![](attachments/mendix-sso/mxsso-app-store-module.png)
 
-If your app does not have the Mendix SSO module, it is available from the Mendix Marketplace [here](https://appstore.home.mendix.com/link/app/111349/). Follow the instructions in [How to Use App Store Content in Studio Pro](/appstore/general/app-store-content) to import it into your app and then follow the instructions in [Setting Up Mendix Single Sign-On](#setting-up), below.
+If your app does not have the Mendix SSO module, it is available from the Mendix Marketplace [here](https://appstore.home.mendix.com/link/app/111349/). Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content) to import it into your app and then follow the instructions in [Setting Up Mendix Single Sign-On](#setting-up), below.
 
-If you need a newer version of the Mendix SSO module (for example, to use a new feature), then it is also available from the App Store via the same link.
+If you need a newer version of the Mendix SSO module (for example, to use a new feature), then it is also available from the Marketplace via the same link.
 
 ## 2 Using Mendix SSO
 
@@ -179,7 +179,7 @@ Your app is now configured to use Mendix Single Sign-on when it is deployed to t
 
 The [Mendix SSO module](/appstore/modules/mendix-sso) comes with a default implementation of end-user administration. This default end-user administration is sufficient for most apps. However, you can create your own administration module if you want to do things in a different way.
 
-There are two ways you can modify the Mendix SSO module. You can use snippets from the App Store module Mendix SSO in your pages, or you can modify the Mendix SSO module in any way you like to support your end-user administration requirements.
+There are two ways you can modify the Mendix SSO module. You can use snippets from the Marketplace module Mendix SSO in your pages, or you can modify the Mendix SSO module in any way you like to support your end-user administration requirements.
 
 These two ways are described below.
 

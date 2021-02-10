@@ -7,11 +7,11 @@ aliases:
 
 ## 1 Introduction
 
-Mendix delivers a robust platform for the rapid development of apps. To make your development move even more quickly, you can use content from the App Store. In addition to downloading content from the App Store, you can upload components you have developed to share and help the whole Mendix community.
+Mendix delivers a robust platform for the rapid development of apps. To make your development move even more quickly, you can use content from the Marketplace. In addition to downloading content from the Marketplace, you can upload components you have developed to share and help the whole Mendix community.
 
 ## 2 Main Documents in This Category
 
 * [Marketplace Overview](app-store-overview) – presents an overview of all the details included with the content in the Mendix Marketplace
-* [Use App Store Content in Studio Pro](app-store-content) – describes how to download and install content from the App Store via Studio Pro
+* [Use Marketplace Content in Studio Pro](app-store-content) – describes how to download and install content from the Marketplace via Studio Pro
 * [Share Marketplace Content](share-app-store-content) – shows you how to add new content to share in the Mendix Marketplace as well as edit existing content
-* [App Store Content Support](app-store-content-support) – presents the different levels of Mendix support for Marketplace content
+* [Marketplace Content Support](app-store-content-support) – presents the different levels of Mendix support for Marketplace content

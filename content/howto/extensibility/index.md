@@ -1,6 +1,6 @@
 ---
 title: "Extensibility"
-description: "A selection of how to's that explain how to use connectors and adapters from the App Store."
+description: "A selection of how to's that explain how to use connectors and adapters from the Marketplace."
 tags: ["widget", "app store", "connectors", "adapters"]
 ---
 

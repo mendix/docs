@@ -6,6 +6,7 @@ description: "A reference for the Mendix IBM Watson connectors"
 tags: ["IBM", "Watson", "AI", "Translation", "Image Analysis", "Assistant", "Speech to Text", "Text to Speech", "Tone Analyzer", "Visual Recognition", "Face Detection", "Image Classification"]
 aliases:
   - /partners/ibm/ibm-watson-connector
+#If moving or renaming this doc file, implement a temporary redirect and let the team responsible for IBM Watson connectors and apps in the Marketplace know to change the URL in the documentation.
 ---
 
 ## 1 Introduction

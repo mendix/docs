@@ -80,7 +80,7 @@ To remove an App User from the environment, click **Remove** by their name.
 To edit an App User's roles, click **Edit** by their name. Permissions for these roles (for example, **User** or **Administrator**) correspond to what you have configured for your app project's user roles in [Project Security](/refguide/project-security#user-roles) in Mendix Studio Pro or [Roles and Permissions](/studio/settings-security#roles-and-permissions) in Mendix Studio. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
 
 {{% alert type="info" %}}
-If an App User has been granted access to an app environment through a security group, only a Company Admin using the [Security Groups](/developerportal/company-app-roles/users#security-groups) page can remove them from that environment (by removing them from that security group) or edit the roles granted by that security group policy.
+If an App User has been granted access to an app environment through a [Group](/developerportal/control-center/index#groups), only a Mendix Admin can remove them from that environment (by removing them from that group) or edit the roles granted by that group policy.
 {{% /alert %}}
 
 ### 4.2 Invite Users
@@ -129,7 +129,7 @@ Click **Edit App Info** to edit the following details:
 Click **Manage Webhooks** to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if [Mansystems](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app project, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app project in the Developer Portal are then sent to that URL.
 
 {{% alert type="info" %}}
-Only [Company Admins](/developerportal/company-app-roles/companyadmin-settings) or users with the **App Settings** permission can manage webhooks.
+Only [Mendix Admins](/developerportal/control-center/index#company) or users with the **App Settings** permission can manage webhooks.
 {{% /alert %}}
 
 On the **Webhooks settings** page, you can add a new webhook and edit or delete existing webhooks:

@@ -18,6 +18,16 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 * SAP Cloud Platform was renamed SAP Business Technology Platform (SAP BTP) and changes were made to the documentation to reflect this.
 
+## 2021
+
+### February 10th, 2021
+
+* We added the ability to extend the timeout period for the Cloud Foundry health check when transporting an app to a new environment on SAP BTP.
+* We added the ability to define custom environment variables for your app deployed on SAP BTP.
+* We added the ability to enable *Dynatrace* for your app deployed to SAP BTP by selecting variables from the supported custom environment variables list.
+
+For more information see [SAP Business Technology Platform - deploy](/developerportal/deploy/sap-cloud-platform).
+
 ## 2020
 
 ### December 21st, 2020

@@ -82,7 +82,7 @@ For details, see [Team Server API](team-server-api).
 
 ## 14 User Management API
 
-Use this API to integrate your company's user management systems with the Mendix Platform. You can then create and manage user accounts and security groups as well as define group policies for your applications.
+Use this API to integrate your company's user management systems with the Mendix Platform. You can then create and manage user accounts and groups as well as define group policies for your applications.
 
 For details, see [User Management API](user-management-api).
 

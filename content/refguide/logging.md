@@ -78,6 +78,7 @@ This list is currently incomplete and is being worked on.
 | ObjectManagement | Logs errors relating to attempts to make associations to non-existent object |
 | OData Publish | Log messages related to published OData services. |
 | QueryParser | Logs messages related to the parsing or interpretation of XPath and OQL queries. |
+| Queue | All actions related to Task Queues |
 | REST Publish | Log messages related to published REST services. |
 | RequestStatistics | |
 | Services | |

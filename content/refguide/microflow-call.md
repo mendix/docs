@@ -65,15 +65,24 @@ The **Edit parameter value** button allows you to edit the argument value. For e
 When used inside a nanoflow in an offline profile, only primitives and non-persistable entities that have no associations with persistable entities are allowed as arguments for the call. For more information, see the [Microflows](offline-first#microflows) section of the *Offline-First Reference Guide*.
 {{% /alert %}}
 
-### 3.3 Return Type
+### 3.3 Task Queue
+
+If you want the microflow to run in the background using a task queue, then you need to do the following:
+
+1. Check **Execute this Microflow in a Task Queue**.
+2. Identify which task queue it should run in in **Select Task Queue**.
+
+For more information about task queues, see [Task Queue](task-queue).
+
+### 3.4 Return Type
 
 This read-only property indicates whether you will retrieve a variable, object or list. 
 
-### 3.4 Use Return Value
+### 3.5 Use Return Value
 
 This property determines if the returned value from the called microflow should be available in the rest of the current microflow or nanoflow. If **Use return value** is set to *Yes*, you will need to fill in the [name](#name) of the variable, object, or list returned by the activity.
 
-### 3.5 Variable Name, Object Name, or List Name {#name}
+### 3.6 Variable Name, Object Name, or List Name {#name}
 
 The name of the variable, list, or object returned by the activity.
 

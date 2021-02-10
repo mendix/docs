@@ -121,12 +121,6 @@ Use "Buzz" on its own, unless you need to specify "Company Buzz" or "App Buzz" f
 Do not use "the Buzz" (unless the context demands it).
 {{% /alert %}}
 
-### Company Admin
-
-{{% alert type="info" %}}
-Capitalize in all instances.
-{{% /alert %}}
-
 ### Company Contact
 
 {{% alert type="info" %}}
@@ -199,6 +193,12 @@ Do not capitalize.
 
 {{% alert type="info" %}}
 Capitalize the name of the app ("Make It Native"), but do not capitalize "app."
+{{% /alert %}}
+
+### Mendix Admin {#mendix-admin}
+
+{{% alert type="info" %}}
+Capitalize in all instances.
 {{% /alert %}}
 
 ### Mendix Assist {#mendix-assist}
@@ -436,7 +436,7 @@ Capitalize in all instances.
 ### Scrum Master
 
 {{% alert type="info" %}}
-This is the correct capitalization for this [App Team role](/developerportal/company-app-roles#app-team-roles)
+This is the correct capitalization for this [App Team role](/developerportal/collaborate/app-roles#app-team-roles)
 {{% /alert %}}
 
 ### Sprint
@@ -468,7 +468,7 @@ Capitalize in all instances.
 ### Technical Contact
 
 {{% alert type="info" %}}
-Capitalize in all instances of this [role](/developerportal/company-app-roles/technical-contact).
+Capitalize in all instances of this [role](/developerportal/collaborate/app-roles#technical-contact).
 {{% /alert %}}
 
 ### Theme Customizer

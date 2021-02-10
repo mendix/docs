@@ -3,7 +3,7 @@ title: "SAP Business Technology Platform"
 category: "Deployment"
 menu_order: 40
 description: "Reference documentation on deploying to SAP Business Technology Platform"
-tags: ["SAP", "SAP Cloud Platform", "Deployment", "Environment", "SAP BTP", "SAP Business Technology Platform"]
+tags: ["SAP", "SAP Cloud Platform", "Deployment", "Environment", "SAP BTP", "SAP Business Technology Platform", "Dynatrace"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -226,7 +226,11 @@ When the package is ready to be deployed, a green tick will be shown next to the
 
     ![](attachments/sap-cloud-platform/sap-transport.png)
 
-3.  Click **Transport** to deploy the package to the SAP environment. This will replace any current app deployed to this environment. If the app is already running, you will be asked to stop it so that your new app can be deployed.
+3.  The **Timeout** value indicates how long (in seconds) Cloud Foundry will wait between starting an app and the first healthy response from the app before deciding that the application has failed to start. For some apps, the default (60 seconds) is too short. If your app is failing to start you can try increasing this value using the **Change timeout** option.
+
+    {{% image_container width="60%" %}}![](attachments/sap-cloud-platform/sap-change-timeout.png){{% /image_container %}}
+
+4.  Click **Transport** to deploy the package to the SAP environment. This will replace any current app deployed to this environment. If the app is already running, you will be asked to stop it so that your new app can be deployed.
 
 ### 5.2 Configure the Application{#ConfigureTheApplication}
 
@@ -270,13 +274,24 @@ When the package is ready to be deployed, a green tick will be shown next to the
 
     ![](attachments/sap-cloud-platform/transport-from-to.png)
 
-3.  Click **Transport** to deploy the package to the SAP environment. This will replace any current app deployed to this environment. If the app is already running, you will be asked to stop it so that your new app can be deployed.
+3.  The **Timeout** value indicates how long (in seconds) Cloud Foundry will wait between starting an app and the first healthy response from the app before deciding that the application has failed to start. For some apps, the default (60 seconds) is too short. If your app is failing to start you can try increasing this value using the **Change timeout** option.
+
+    {{% image_container width="60%" %}}![](attachments/sap-cloud-platform/sap-change-timeout.png){{% /image_container %}}
+
+4.  Click **Transport** to deploy the package to the SAP environment. This will replace any current app deployed to this environment. If the app is already running, you will be asked to stop it so that your new app can be deployed.
 
 When the app has been transported you will be on the page **Configure the Application**. This has the same options as the **Deploy** pages which are described above in the [Configure the Application](#ConfigureTheApplication) section.
 
 ## 7 Environment Details{#EnvironmentDetails}
 
-The environment details page contains three tabs: General, Model Options, and Services. Open the environment details by clicking **Details** on an environment on the Environments page of the Development Portal. You will also be taken to this page when you successfully deploy or transport your app.
+The environment details page contains the following four tabs:
+
+* [General](#general-tab) – how the application is deployed on SAP Cloud Platform
+* [Model Options](#model-options-tab) – application constants and scheduled events
+* [Services](#binding-services) – Cloud Foundry service management
+* [Runtime](#runtime-tab) – custom environment variables which define "User-Provided Variables" in SAP cloud foundry environment — pre-defined variables can be used to control the behavior of the Mendix Runtime
+
+Open the environment details by clicking **Details** on an environment on the Environments page of the Development Portal. You will also be taken to this page when you successfully deploy or transport your app.
 
 ![](attachments/sap-cloud-platform/environment-details.png)
 
@@ -284,7 +299,7 @@ The environment details page contains three tabs: General, Model Options, and Se
 
 Changes made to the app in the SAP BTP cockpit are only temporary and can be overwritten by the values in the Mendix Developer Portal next time the app is deployed.{{% /alert %}}
 
-### 7.1 General Tab
+### 7.1 General Tab{#general-tab}
 
 This tab contains information on how the application is deployed on SAP BTP.
 
@@ -352,7 +367,7 @@ You can also make use of the **Application Autoscaler** service on SAP BTP. Mend
 
 Click **Change** to change the subscription secret which is the code which registers your production Mendix license to this environment.
 
-### 7.2 Model Options Tab
+### 7.2 Model Options Tab{#model-options-tab}
 
 This tab displays the application constants and allows you to edit them. It also lets you enable or disable scheduled events.
 
@@ -468,6 +483,32 @@ If you no longer require a service you can unbind it or remove it from your app.
 The services which are created by the Mendix Developer Portal will be named automatically. You will see these names in the SAP BTP cockpit. The name of the service will normally be **App name** + **_** + **Environment Name** + **_** + **a random 6-character suffix**. All spaces will be removed from the app and environment names. For example, `MyApp_Development_c7sd9q`.
 
 However, the maximum length for the service name is 50 characters. If this limit would be exceeded by the name created above, an alternative service name will be used. The format of this is **Environment Name** + **_** + **a random 6-character suffix**. If the Environment name is longer than 43 characters, only the first 43 characters are used.
+
+### 7.4 Runtime Tab{#runtime-tab}
+
+Use the Custom Environment Variables to **add**, **Edit**, or **Delete** an environment variable.
+
+#### 7.4.1 Supported Environment Variables
+
+You can choose to add supported variables by selecting them from a drop-down list.
+
+* **DT_PAAS_TOKEN** – the token for integrating your Dynatrace environment with Cloud Foundry
+* **DT_SAAS_URL** – the monitoring endpoint URL of the Dynatrace service
+* **DT_TENANT** – the unique identifier of your Dynatrace environment
+
+![List of custom environment variables](attachments/sap-cloud-platform/custom-environment-variables.png)
+
+The variables beginning **DT_** set up Dynatrace. Setting these variables means that the Dynatrace OneAgent is loaded into your environment. You will then receive all J2EE-related metrics from your app. See [Dynatrace OneAgent](https://www.dynatrace.com/support/help/setup-and-configuration/dynatrace-oneagent/) for more information.
+
+#### 7.4.2 Unsupported Environment Variables
+
+You can also enter other environment variables which can be used to support Mendix features which are in beta. In this case, click **No** for **Supported** and enter the name of the variable as well as its value.
+
+![List of custom environment variables](attachments/sap-cloud-platform/custom-environment-variables-unsupported.png)
+
+{{% alert type="info" %}}
+Only use unsupported environment variables if you know exactly what you are doing. Incorrect values can prevent Mendix Runtime from starting.
+{{% /alert %}}
 
 ## 8 Databases in SAP BTP{#databases}
 

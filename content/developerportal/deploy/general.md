@@ -38,7 +38,7 @@ For details of the Environments page for **Mendix Cloud** deployments, see [Envi
 
 For details of the Environments page for **IBM** deployments, see [IBM Cloud](ibm-cloud).
 
-For details of the Environments page for **SAP** deployments, see [SAP Cloud Platform](sap-cloud-platform).
+For details of the Environments page for **SAP** deployments, see [SAP Business Technology Platform](sap-cloud-platform).
 
 Other platforms are not currently supported on the Mendix *Environments* page and you will have to go to the relevant platform portal to monitor and configure your environments.
 ​    

@@ -23,7 +23,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Set InputReferenceSelector Value | InputReferenceSelector            | Deprecated in favor of **Set Value**.<br /> Sets the input reference selector to the given value. |
 | Set Row Cell Value               | DataGrid                         | Set the cell value for a particular column in a data grid row. |
 | Set Simple Checkbox Set Selector Value | Simple Checkbox Set Selector | Checks/clears the check box found by a given entity attribute value. |
-| Set Value¹ | Standard widgets: TextBox, TextArea, DropDown, RadioButton, DatePicker², ReferenceSelector, SearchInput Text, SearchInput DropDown.<br /> App Store widgets: OnChange Inputbox, BooleanSlider, Bootstrap Wysiwyg Editor (Bootstrap RTE), CK Editor For Mendix, Input Reference Selector, Radiobutton List, Switch³, AutoComplete. | Sets the value of all supported widgets. |
+| Set Value¹ | Standard widgets: TextBox, TextArea, DropDown, RadioButton, DatePicker², ReferenceSelector, SearchInput Text, SearchInput DropDown.<br /> Marketplace widgets: OnChange Inputbox, BooleanSlider, Bootstrap Wysiwyg Editor (Bootstrap RTE), CK Editor For Mendix, Input Reference Selector, Radiobutton List, Switch³, AutoComplete. | Sets the value of all supported widgets. |
 | Set Value (by index) | Drop-Down, Reference Selector, Search Input Drop-Down | Sets the value of all supported drop-down widgets by index. |
 
 ¹  Since ATS version 2.9.4 the Set Value function will unfocus the widget after setting the value and wait for any on change / on leave microflows to finish before proceeding with the next steps in a test case.<br />
@@ -50,7 +50,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Get Simple Checkbox Set Selector Value | Simple Checkbox Set Selector | Returns the current value of the check box found by the entity attribute value. |
 | Get Total Item/Row Count | DataGrid, TemplateGrid, ListView | Gets the total grid count from the paging status. Does not work if pagination is not shown.|
 | Get Validation Message | All widgets | Returns the validation message of a widget. |
-| Get Value | Standard widgets: TextBox, TextArea, DropDown, RadioButtons, DatePicker, ReferenceSelector, SearchInput Text, SearchInput DropDown, Label, Input Reference Set Selector.<br /> App Store widgets: OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix¹, InputReferenceSelector, RadiobuttonList, Switch², AutoComplete, Format String, Custom String. | Returns the current value of all supported widgets.|
+| Get Value | Standard widgets: TextBox, TextArea, DropDown, RadioButtons, DatePicker, ReferenceSelector, SearchInput Text, SearchInput DropDown, Label, Input Reference Set Selector.<br /> Marketplace widgets: OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix¹, InputReferenceSelector, RadiobuttonList, Switch², AutoComplete, Format String, Custom String. | Returns the current value of all supported widgets.|
 | Get Visible Item/Row Count | DataGrid, TemplateGrid, ListView | Returns the number of currently visible items/rows in a template grid, data grid, or list view. |
 | Groupbox is Collapsed | GroupBox | Gets the group box collapsed state: true if collapsed, otherwise false. |
 
@@ -71,7 +71,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Assert InputReferenceSelector Value | InputReferenceSelector | Deprecated in favor of **Assert Value**.<br /> Asserts that the input reference selector has the given value. |
 | Assert Simple Checkbox Set Selector Value | Simple Checkbox Set Selector | Asserts that the check box found by the given entity attribute value is checked/cleared. |
 | Assert Validation Message | All widgets | Asserts a validation message with a certain text. |
-| Assert Value | Standard widgets: Text Box, Text Area, DropDown, RadioButton, DatePicker, ReferenceSelector, SearchInput Text, SearchInput DropDown, Label input reference set selector.<br /> App Store widgets: OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix, InputReferenceSelector, RadiobuttonList, Switch¹, AutoComplete, Format String, Custom String. | Asserts the current value of all supported widgets. |
+| Assert Value | Standard widgets: Text Box, Text Area, DropDown, RadioButton, DatePicker, ReferenceSelector, SearchInput Text, SearchInput DropDown, Label input reference set selector.<br /> Marketplace widgets: OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix, InputReferenceSelector, RadiobuttonList, Switch¹, AutoComplete, Format String, Custom String. | Asserts the current value of all supported widgets. |
 | Dropdown has Option | DropDown, ReferenceSelector, SearchInput DropDown | Returns true if the value is available in a drop-down menu. |
 
 ¹ Use values `on` and `off` for Switch widget.

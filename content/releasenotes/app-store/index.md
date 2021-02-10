@@ -1,13 +1,18 @@
 ---
-title: "App Store"
-description: "Release notes for updates to the Mendix App Store"
-tags: ["app store", "connector", "module", "add on", "widget"]
+title: "Marketplace"
+description: "Release notes for updates to the Mendix Marketplace"
+tags: ["marketplace", "app store", "connector", "module", "add on", "widget"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes made to the [Mendix App Store](/appstore/index).
+These release notes cover changes made to the [Mendix Marketplace](/appstore/index).
 
 ## 2021
+
+### February 9th, 2021
+
+* You can now download [Windows Service](/releasenotes/studio-pro/windows-service) and **Server Distribution** for the latest Studio Pro version using the **Related Downloads** button on the **Get Studio pro** page.  
+* Adding beta versions for components is no longer supported. Beta versions of published components and existing drafts have been automatically updated to remove the beta tag.
 
 ### January 26th, 2021
 
@@ -158,7 +163,7 @@ We added a component in the App Store which, when configured in your app, allows
 
 #### Improvements
 
-* We created a new App Store menu structure, so it is now easier to navigate through your created content. If you are a [Company Admin](/developerportal/company-app-roles/manage-roles#app-store-manager) with certain permissions, you will see additional menu items to help you manage private and public company content.
+* We created a new App Store menu structure, so it is now easier to navigate through your created content. If you are a Mendix Admin with certain permissions, you will see additional menu items to help you manage private and public company content.
 * For App Store administrators, you can now set content managers who are allowed to manage your company content by marking it as protected.
 * You can now share private App Store content with external downloaders from other companies.
 

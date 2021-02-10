@@ -65,14 +65,15 @@ For more information, see the [Support for Different Deployment Strategies](#sup
 
 During the start phase, and through part of the scale phase, of your digital transformation journey, it might be best to let your development team (DevOps) handle the support of the applications. As the number of applications grows, it is best to let an expert service desk handle the support of your applications. You can involve your existing service desk team or outsource support to one of our support partners, which you can find listed on the [Meet Our Partners](https://developer.mendixcloud.com/link/partneroverview) page.
 
-### 5.1 Company Admins
+### 5.1 Mendix Admins
 
-To manage your company account, and the users, projects, and licensed cloud nodes of your company, you can appoint company admins in the [Developer Portal](https://home.mendix.com/).
-Please read more about this in [Company Admin Settings](/developerportal/company-app-roles/companyadmin-settings).
+To manage your company account, and the users, projects, and licensed cloud nodes of your company, you can appoint [Mendix Admins](/developerportal/control-center/index#company).
+
+Please read more about this in [Control Center](/developerportal/control-center/index).
 
 ### 5.2 Technical Contacts
 
-You need to appoint a [technical contact](/developerportal/company-app-roles/technical-contact) for each of your applications running in the Mendix Public Cloud and Cloud Dedicated. The technical contact checks the performance of the applications in the Developer Portal and receives alerts from the Mendix Developer Portal based on errors and warnings in the application. It is possible to have other team members receive these alerts as well.
+You need to appoint a [technical contact](/developerportal/collaborate/app-roles#technical-contact) for each of your applications running in the Mendix Public Cloud and Cloud Dedicated. The technical contact checks the performance of the applications in the Developer Portal and receives alerts from the Mendix Developer Portal based on errors and warnings in the application. It is possible to have other team members receive these alerts as well.
 Reading these alerts carefully and acting upon them is important, as they can affect the performance of your app. For more information on alerts, see [Alerts](/developerportal/operate/monitoring-application-health).
 
 ### 5.3 Training

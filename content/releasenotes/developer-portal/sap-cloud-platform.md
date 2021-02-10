@@ -12,7 +12,7 @@ For information on the current status of deployment to SAP Cloud Platform and an
 
 ## 2021
 
-### February 8th, 2021
+### February 10th, 2021
 
 * We added the ability to extend the timeout period for the Cloud Foundry health check when transporting an app to a new environment on SAP BTP.
 * We added the ability to define custom environment variables for your app deployed on SAP BTP.

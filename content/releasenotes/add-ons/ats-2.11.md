@@ -42,7 +42,7 @@ For more details, see the [ATS 2 Reference Guide](/addons/ats-addon/rg-two-cicd-
 
 **Release date: June 4th 2019**
 
-### Support for More Mendix App Store Widgets
+### Support for More Mendix Marketplace Widgets
 
 We are constantly on the lookout for popular widgets that we can support with ATS. With this release, we are happy to announce support for recording and testing the following widgets:
 

@@ -6,7 +6,7 @@ tags: []
 
 ## 1 Introduction
 
-With the REST services module from the Mendix App Store, the full power of JSON-based REST APIs is available to Mendix developers. The module serves three goals: to consume services, publish services, and synchronize data between (Mendix) apps by combining consuming and publishing. 
+With the REST services module from the Mendix Marketplace, the full power of JSON-based REST APIs is available to Mendix developers. The module serves three goals: to consume services, publish services, and synchronize data between (Mendix) apps by combining consuming and publishing. 
 
 {{% alert type="info" %}}
 

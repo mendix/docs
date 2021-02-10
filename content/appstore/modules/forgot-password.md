@@ -1,7 +1,7 @@
 ---
 title: "Forgot Password"
 category: "Modules"
-description: "Describes the configuration and usage of the Forgot Password module, which is available in the Mendix App Store."
+description: "Describes the configuration and usage of the Forgot Password module, which is available in the Mendix Marketplace."
 tags: ["app store", "app store component", "forgot password", "password", "login", "credentials", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

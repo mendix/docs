@@ -432,7 +432,7 @@ To upload your app to the iOS App Store, follow these instructions (to continue,
 5. Use Apple's [Choose the build before you submit to review](https://help.apple.com/app-store-connect/#/dev7cbda8c55) to select the build which you will submit to App Review.
 6.  Publish your app by following Apple's [Overview of publishing an app](https://help.apple.com/app-store-connect/#/dev34e9bbb5a) and the subsequent documents in the left menu's **Publish on the App Store** category:
 
-	{{% image_container width="400" %}}!![publish on the app store](attachments/deploying-native-app/ios-publishing-an-app.png){{% /image_container %}}
+	{{% image_container width="400" %}}!![publish to an app store](attachments/deploying-native-app/ios-publishing-an-app.png){{% /image_container %}}
 
 ## 7 Read More
 

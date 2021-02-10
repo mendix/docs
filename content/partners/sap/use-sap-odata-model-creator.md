@@ -40,7 +40,7 @@ OData Model Creator for SAP solutions only supports SAP OData Gateway Services w
 
 ## 3 Generating a Data Model
 
-The OData Model Creator for SAP solutions is an app in the App Store. Search for it in the Mendix App Store, or find it here: [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/). 
+The OData Model Creator for SAP solutions is an app in the App Store. Search for it in the Mendix Marketplace, or find it here: [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/). 
 
 {{% alert type="info" %}}
 The OData Model Creator for SAP solutions is not currently available in the App Store within Studio Pro. It can only be run in a browser.

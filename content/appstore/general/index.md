@@ -1,6 +1,6 @@
 ---
 title: "General Info"
-description: "Presents details on using, sharing, and getting support on Mendix App Store content."
+description: "Presents details on using, sharing, and getting support on Mendix Marketplace content."
 aliases:
     - /community/app-store/index.html
 ---
@@ -11,7 +11,7 @@ Mendix delivers a robust platform for the rapid development of apps. To make you
 
 ## 2 Main Documents in This Category
 
-* [App Store Overview](app-store-overview) – presents an overview of all the details included with the content in the Mendix App Store
+* [Marketplace Overview](app-store-overview) – presents an overview of all the details included with the content in the Mendix Marketplace
 * [Use App Store Content in Studio Pro](app-store-content) – describes how to download and install content from the App Store via Studio Pro
-* [Share App Store Content](share-app-store-content) – shows you how to add new content to share in the Mendix App Store as well as edit existing content
-* [App Store Content Support](app-store-content-support) – presents the different levels of Mendix support for App Store content
+* [Share Marketplace Content](share-app-store-content) – shows you how to add new content to share in the Mendix Marketplace as well as edit existing content
+* [App Store Content Support](app-store-content-support) – presents the different levels of Mendix support for Marketplace content

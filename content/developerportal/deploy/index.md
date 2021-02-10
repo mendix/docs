@@ -13,7 +13,7 @@ This section of the *Developer Portal Guide* contains step-by-step instructions,
 * [General](general) – contains information which applies to deployments in many different environments
 * Environment-specific sections – these contain instructions for the deployment and maintenance of apps in specific environments, for example, [Mendix Cloud](mendix-cloud-deploy) and [SAP Cloud Platform](sap-cloud-platform)
 * [Mobile App](mobileapp) – contains instructions for publishing your mobile app: to the Apple or Google stores, for example
-* [App Services](app-services) – describes what can be published to the Mendix App Store, and how to do this
+* [App Services](app-services) – describes what can be published to the Mendix Marketplace, and how to do this
 
 ## 2 Run Locally or Preview
 
@@ -91,4 +91,4 @@ To learn how to deploy your Mendix application on premises, see [How to Deploy M
 * [Docker](docker-deploy) – how to deploy directly in a Docker container
 * [On-Premises](on-premises-design) – how to deploy on premises using Microsoft Windows or Un*x
 * [Mobile App](mobileapp) – how to publish your mobile app
-* [App Services](app-services) – how to publish to the Mendix App Store
+* [App Services](app-services) – how to publish to the Mendix Marketplace

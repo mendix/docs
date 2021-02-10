@@ -46,7 +46,7 @@ Before starting this how-to, make sure you have the following prerequisites:
 
 * The Mendix Deployment Archive (MDA) of your Mendix project
 
-* The Mendix server distribution corresponding with your Mendix Studio Pro version (see the [Mendix App Store](https://appstore.home.mendix.com/link/modelers))
+* The Mendix server distribution corresponding with your Mendix Studio Pro version (see the [Mendix Marketplace](https://appstore.home.mendix.com/link/modelers))
 
 * A database with sufficient security rights
 

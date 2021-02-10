@@ -20,7 +20,7 @@ Guidelines for usage.
 Example usage.
 {{% /alert %}}
 
-## Mendix App Store {#app-store}
+## Mendix Marketplace {#app-store}
 
 {{% alert type="info" %}}
 Capitalize in all instances, even when just writing "App Store."

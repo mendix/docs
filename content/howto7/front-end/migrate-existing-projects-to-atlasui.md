@@ -29,8 +29,8 @@ To get the full experience of Atlas UI, it’s necessary to import the Atlas UI 
 To replace the UI Framework, follow these steps:
 
 1. Delete the **UI_Resources** module.
-2. Download and import the [Atlas UI Resources](/appstore/modules/atlas-ui-resources) module from the Mendix App Store.
-3.  When the Atlas UI Resources module is downloaded from the Mendix App Store, it will be found in **App Store modules**:
+2. Download and import the [Atlas UI Resources](/appstore/modules/atlas-ui-resources) module from the Mendix Marketplace.
+3.  When the Atlas UI Resources module is downloaded from the Mendix Marketplace, it will be found in **App Store modules**:
 
     ![](attachments/howto/migrate_dm_appstore.png)
 

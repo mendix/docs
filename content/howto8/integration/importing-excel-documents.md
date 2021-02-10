@@ -8,7 +8,7 @@ tags: ["import", "excel", "integration"]
 
 ## 1 Introduction
 
-Adding large amounts of data to your application (for example, reference data or data from an external application) can be very time-consuming. In order to save time and effort, this process can be automated using the [Excel Importer](/appstore/modules/excel-importer) from the Mendix App Store. In this how-to, you will set up import templates and import data into your app using this module.
+Adding large amounts of data to your application (for example, reference data or data from an external application) can be very time-consuming. In order to save time and effort, this process can be automated using the [Excel Importer](/appstore/modules/excel-importer) from the Mendix Marketplace. In this how-to, you will set up import templates and import data into your app using this module.
 
 ## 2 Prerequisites
 
@@ -18,7 +18,7 @@ Before starting this how-to, make sure you know how to do the following:
 * Create overview and detail pages (see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages))
 * Create menu items (see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
 * Create microflows (see [How to Trigger a Microflow From a Menu Item](../logic-business-rules/trigger-microflow-from-menu-item)
-* Add App Store content to your app (see [How to Use App Store Content in Studio Pro](/appstore/general/app-store-content))
+* Add Marketplace content to your app (see [How to Use App Store Content in Studio Pro](/appstore/general/app-store-content))
 * Secure your applications (see [How to Create a Secure App](../security/create-a-secure-app))
 
 ## 3 Preparing the Data Structure, GUI & Modules
@@ -34,7 +34,7 @@ Before you can start importing data into your application, you first need to set
 	Configure the **XLSFile** object to inherit from the **FileDocument** object (for more information, see [How to Work with Images & Files](../data-models/working-with-images-and-files)).
 2. Create **Overview** and **Detail** pages to manage objects of the **Customer** and **Order** types.
 3.  Create menu items to access the **Order** and the **Customer** overview pages.
-4.  Download the **Excel Importer** and **Mx Model Reflection** modules from the Mendix App Store (available by clicking the shopping-cart icon in the upper-right side of Studio Pro).
+4.  Download the **Excel Importer** and **Mx Model Reflection** modules from the Mendix Marketplace (available by clicking the shopping-cart icon in the upper-right side of Studio Pro).
 5.  Create menu items for the **ExcelImportOverview** and the **MxObjects_Overview** pages (these pages already exist in the **_USE_ME** folders of the downloaded modules).
 6.  Configure the **Administrator** user role to have the **Configurator** module role for the **ExcelImporter** module, and the **ModelAdministrator** module role for the **Mx Model Reflection** module.
 

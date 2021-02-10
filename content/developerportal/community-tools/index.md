@@ -67,17 +67,17 @@ To figure out what you will learn next, check out the wealth of resources the Me
 
 ## 6 App Store
 
-The [Mendix App Store](https://appstore.home.mendix.com/index3.html) is where you can find all the free sample apps, widgets, and modules made by Mendix community members. This is all reusable content that can help you speed up your Mendix app development process.
+The [Mendix Marketplace](https://appstore.home.mendix.com/index3.html) is where you can find all the free sample apps, widgets, and modules made by Mendix community members. This is all reusable content that can help you speed up your Mendix app development process.
 
-The **App Store** section of the Mendix community site presents the latest updates to App Store content (for example, an update of the Bootstrap Tooltip widget):
+The **App Store** section of the Mendix community site presents the latest updates to Marketplace content (for example, an update of the Bootstrap Tooltip widget):
 
 {{% image_container width="550" %}}
 ![](attachments/the-community-site/App_Store.png)
 {{% /image_container %}}
 
-Click the item name to go to its page in the App Store, where you can read a detailed description of the content and check out some user reviews. Click **View all Apps** to go to the main Mendix App Store page, where you can see featured and new content, recent updates, reviews, and the top contributors to the Mendix App Store.
+Click the item name to go to its page in the App Store, where you can read a detailed description of the content and check out some user reviews. Click **View all Apps** to go to the main Mendix Marketplace page, where you can see featured and new content, recent updates, reviews, and the top contributors to the Mendix Marketplace.
 
-For more information, see the [App Store Overview](/appstore/general/app-store-overview) in the *App Store Guide*.
+For more information, see the [Marketplace Overview](/appstore/general/app-store-overview) in the *App Store Guide*.
 
 ## 7 Documentation
 

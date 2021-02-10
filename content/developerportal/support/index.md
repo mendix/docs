@@ -59,7 +59,7 @@ Mendix supports the Mendix Platform, and we expect you to support the applicatio
 * Developing code on your behalf
 * Debugging or troubleshooting your applications
 * Analyzing and troubleshooting the health and performance of your applications or your infrastructure, except when we suspect an underlying issue exists in the Mendix Platform
-* Troubleshooting Mendix community-developed components from the Mendix App Store
+* Troubleshooting Mendix community-developed components from the Mendix Marketplace
 
 For more information, see the [Support for Different Deployment Strategies](#support-by-strategy) section below.
 
@@ -102,8 +102,8 @@ The full stack is depicted in the table below. This indicates which components a
 | | Public Cloud | Cloud Dedi&shy;cated | Private Cloud - Con&shy;nected | Private Cloud - Stand&shy;alone | SAP Cloud Platform | Cloud Foundry/ Docker & Kuber&shy;netes | Tradi&shy;tional |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Appli&shy;cation** | | | | | | | |
-| **Platform Support&shy;ed App Store content** | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix |
-| **Commun&shy;ity Support&shy;ed App Store content** | | | | | | | |
+| **Platform Support&shy;ed Marketplace content** | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix |
+| **Commun&shy;ity Support&shy;ed Marketplace content** | | | | | | | |
 | **Runtime** | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix |
 | **Deploy&shy;ment Pipe&shy;line** | Mendix | Mendix | Mendix | | | | |
 | **Logs/ Metrics** | Mendix | Mendix | | | Mendix Partner | | |
@@ -142,7 +142,7 @@ The full stack is depicted in the table below. This indicates which components a
 </tr>
 
 <tr>
-<td><strong>Platform Support­ed App Store content</strong></td>
+<td><strong>Platform Support­ed Marketplace content</strong></td>
 <td>Mendix</td>
 <td>Mendix</td>
 <td>Mendix</td>
@@ -153,7 +153,7 @@ The full stack is depicted in the table below. This indicates which components a
 </tr>
 
 <tr>
-<td><strong>Commun­ity Support­ed App Store content</strong></td>
+<td><strong>Commun­ity Support­ed Marketplace content</strong></td>
 <td></td>
 <td></td>
 <td></td>
@@ -367,11 +367,11 @@ Mendix Support needs application logs to diagnose this component. Because Mendix
 
 ### 10.9 App Store Components
 
-Platform-supported App Store content refers to all App Store content marked as platform-supported in the Mendix App Store. Community-supported App Store content includes all App Store content not marked as platform-supported in the Mendix App Store
+Platform-supported Marketplace content refers to all Marketplace content marked as platform-supported in the Mendix Marketplace. Community-supported Marketplace content includes all Marketplace content not marked as platform-supported in the Mendix Marketplace
 
-Read more about the levels of Support for App Store components in [App Store Content Support](/appstore/general/app-store-content-support).
+Read more about the levels of Support for Marketplace components in [App Store Content Support](/appstore/general/app-store-content-support).
 
-Mendix Support needs application logs to diagnose these component. Because Mendix has no control over the context in which the App Store content is run outside of the Mendix Public Cloud and Cloud Dedicated, you will have to demonstrate that the bug is in the supported component by showing the behavior independently from the context in which you are using it.
+Mendix Support needs application logs to diagnose these component. Because Mendix has no control over the context in which the Marketplace content is run outside of the Mendix Public Cloud and Cloud Dedicated, you will have to demonstrate that the bug is in the supported component by showing the behavior independently from the context in which you are using it.
 
 ### 10.10 Application
 

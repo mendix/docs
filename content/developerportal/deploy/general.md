@@ -52,6 +52,6 @@ For more details, see [Mobile App](mobileapp).
 
 ## 2.3 App Services
 
-The **App Services** page lets you publish your app service, application, or widget to the Mendix App Store.
+The **App Services** page lets you publish your app service, application, or widget to the Mendix Marketplace.
 
 For more details, see [App Services](app-services).  

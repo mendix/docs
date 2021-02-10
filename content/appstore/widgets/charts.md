@@ -1,7 +1,7 @@
 ---
 title: "Charts"
 category: "Widgets"
-description: "Describes the configuration and usage of the Charts widget, which is available in the Mendix App Store."
+description: "Describes the configuration and usage of the Charts widget, which is available in the Mendix Marketplace."
 tags: ["app store", "app store component", "widget", "chart", "line chart", "area chart", "column chart", "bar chart", "heat map", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -197,7 +197,7 @@ Add a *.json* file named *com.mendix.charts* to the **theme** folder. The JSON s
 Use this with caution, as the configs set up here shall be applied to every instance of the charts in your application. Only the advanced configurations set up in the widget itself have a higher precendence.
 {{% /alert %}}
 
-## 4 Developing This App Store Component
+## 4 Developing This Marketplace Component
 
 For details on development, see [Development](https://raw.githubusercontent.com/mendixlabs/charts/v1.4.4/Development.md).
 

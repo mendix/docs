@@ -4,6 +4,8 @@ category: "Connectors"
 #parent: "Enter the parent document filename of this document if necessary (for example, "push-notifications")"
 description: "A reference for the Mendix IBM Watson connectors"
 tags: ["IBM", "Watson", "AI", "Translation", "Image Analysis", "Assistant", "Speech to Text", "Text to Speech", "Tone Analyzer", "Visual Recognition", "Face Detection", "Image Classification"]
+aliases:
+  - /partners/ibm/ibm-watson-connector
 ---
 
 ## 1 Introduction

@@ -13,7 +13,7 @@ tags: ["Settings", "App", "Developer Portal"]
 The **General** settings page presents an overview of your app project with the following details:
 
 * A **Description** of the app
-* The [App Contact](/developerportal/company-app-roles/manage-roles#change-app-contact) and [Technical Contact](/developerportal/company-app-roles/technical-contact) for the app
+* The [App Contact](/developerportal/collaborate/app-roles#app-contact) and [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) for the app
 * Whether the app is enabled for Mendix **Studio** (for details, see the [Mendix Studio](#web) section below)
 * The **App ID**
 

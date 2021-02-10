@@ -37,7 +37,7 @@ Only Scrum Masters or custom App Team roles with the **App Settings** permission
 Click **Cloud Settings** to select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
 
 {{% alert type="info" %}}
-Only users with the **App Settings** permission can change cloud platforms. For default roles, only the **Scrum Master** has this permission. For more details, see the [App Team Roles](/developerportal/company-app-roles/index#app-team-roles) section of *Company & App Roles*.
+Only users with the **App Settings** permission can change cloud platforms. For default roles, only the **Scrum Master** has this permission. For more details, see the [App Team Roles](/developerportal/collaborate/app-roles#app-team-roles) section of *App Roles*.
 {{% /alert %}}
 
 ![](attachments/cloudsettings.png)

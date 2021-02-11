@@ -32,12 +32,12 @@ The Mendix Marketplace is a great way to share UI resources throughout your comp
 
 There are two important options to keep in mind when uploading a UI resources module:
 
-* **Publish to** — this option lets you share the UI resources in a private App Store (company-only) or with the public audience (the entire Mendix community)
+* **Publish to** — this option lets you share the UI resources in a private Marketplace (company-only) or with the public audience (the entire Mendix community)
 * **Category** — choose the **UI Resources** category to make the module available as a UI resources module
 
 ![](attachments/howto/sharing_appstore_addcontent.png)
 
-When you upload new UI resources to the public Mendix Marketplace, the content will need to be reviewed and approved by Mendix. However, when you publish UI resources to the private App Store, the content will not have to be reviewed, and it will be directly available in your company after publishing.
+When you upload new UI resources to the public Mendix Marketplace, the content will need to be reviewed and approved by Mendix. However, when you publish UI resources to the private Marketplace, the content will not have to be reviewed, and it will be directly available in your company after publishing.
 
 ## 4 Using Your Company Atlas UI Resources
 
@@ -65,7 +65,7 @@ Now that you have added your company UI resources to your company app template, 
 
 #### 4.1.1 Sharing and Maintaining Your Company App Template
 
-Now that you have created a company app template, the next step is to share it with your company. The easiest way to do this is by uploading it to the private App Store.
+Now that you have created a company app template, the next step is to share it with your company. The easiest way to do this is by uploading it to the private Marketplace.
 
 There are four important options to keep in mind when uploading your company app template:
 

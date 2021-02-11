@@ -56,7 +56,7 @@ Make sure you have different apps (keys) created for each app and environment (d
 
 ## 3 Configuration
 
-To use this module after importing it from the App Store, follow these steps:
+To use this module after importing it from the Marketplace, follow these steps:
 
 1. Add the **Pusher User** [module role](/refguide/module-security#module-role) to the relevant app project security [user role](/refguide/security#user-role).
 2. Update the constants in the **Configuration** folder with the keys of the app.

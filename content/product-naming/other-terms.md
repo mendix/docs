@@ -54,14 +54,14 @@ Use "app project" where necessary for clarification (for example, for project ma
 Enter the email addresses of all the co-workers you want to invite to your app project.
 {{% /alert %}}
 
-### App Store component
+### Marketplace component
 
-This is the generic name of the individual add-on, widget, module, connector, app template, etc. available in the Mendix App Store.
+This is the generic name of the individual add-on, widget, module, connector, app template, etc. available in the Mendix Marketplace.
 
 {{% alert type="info" %}}
 Do not use "App Store item."<br />
 <br />
-Use "App Store content" (and not "App Store components") to describe in general what is available in the Mendix App Store.
+Use "Marketplace content" (and not "Marketplace components") to describe in general what is available in the Mendix Marketplace.
 {{% /alert %}}
 
 ### App Team
@@ -397,7 +397,7 @@ Capitalize to refer to the collection of [Mendix APIs](/apidocs-mxsdk/apidocs/).
 Capitalize in all instances.
 {{% /alert %}}
 
-### private/public Mendix App Store 
+### private/public Mendix Marketplace 
 
 {{% alert type="info" %}}
 Do not capitalize "private" and "public" as qualifiers.

@@ -1,7 +1,7 @@
 ---
 title: "Box"
 category: "Connectors"
-description: "Describes the configuration and usage of the Box connector, which is available in the Mendix App Store."
+description: "Describes the configuration and usage of the Box connector, which is available in the Mendix Marketplace."
 tags: ["app store", "app store component", "box", "boxdev", "box platform"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
@@ -258,7 +258,7 @@ These actions are available in **Metadata**:
 		* **StrValue/FloatValue/DateValue** – the corresponding value to be set or tested; required for `add`, `replace`, and `test` operations; for `add`, if the value already exists, then the previous value will be overwritten by the new value; for `replace`, the metadata value must exist before replacing; for `test`, the value of the existing metadata instance must match the specified value
 	* **FromBoxMetadata** – the key to the `Metadata` source; this value is required only in case of `move` or `copy` operations
 
-## 4 Developing This App Store Component
+## 4 Developing This Marketplace Component
 
 This connector was built with the Eclipse IDE Neon, and [SemVer](http://semver.org/) is used for versioning.
 

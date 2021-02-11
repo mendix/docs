@@ -24,7 +24,7 @@ None.
 
 ### 3.1 Step 1 – Import the `PushNotifications` Module from the App Store
 
-The `PushNotifications` module is published in the Mendix App Store. To import it into your project, click 'App Store' in the top right of Modeler. This will open the App Store in a new tab. Search for _Push Notifications Connector_ and click the title of the result.
+The `PushNotifications` module is published in the Mendix Marketplace. To import it into your project, click 'App Store' in the top right of Modeler. This will open the App Store in a new tab. Search for _Push Notifications Connector_ and click the title of the result.
 
 ![](attachments/19955732/20218020.png)
 

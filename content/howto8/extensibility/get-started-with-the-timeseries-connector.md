@@ -37,7 +37,7 @@ Follow these steps to get access to the TimeSeries connector and receive an API 
   It can take up to a few hours to generate the key and send it to you. This key is used to activate and access your TimeSeries Analytics instance.
   {{% /alert %}}
 
-2. After you receive the key, import the [TimeSeries](https://appstore.home.mendix.com/link/app/31951/) connector into your app project from the Mendix App Store.
+2. After you receive the key, import the [TimeSeries](https://appstore.home.mendix.com/link/app/31951/) connector into your app project from the Mendix Marketplace.
 
 ## 4 Configure the Module Settings
 

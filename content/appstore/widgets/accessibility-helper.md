@@ -1,7 +1,7 @@
 ---
 title: "Accessibility Helper"
 category: "Widgets"
-description: "Describes the Accessibility Helper widget, which is available in the Mendix App Store."
+description: "Describes the Accessibility Helper widget, which is available in the Mendix Marketplace."
 tags: ["app store", "app store component", "widget", "accessibility helper", "a11y helper", "token", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

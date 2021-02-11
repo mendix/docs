@@ -12,7 +12,8 @@ Using a **Task Queue** allows you to run microflows asynchronously while control
 
 ### 1.1 Replacing the Process Queue module
 
-This way of executing tasks in the background supersedes the earlier [Process Queue](/appstore/modules/process-queue) App Store module.  
+This way of executing tasks in the background supersedes the earlier [Process Queue](/appstore/modules/process-queue) Marketplace module.
+
 See the section [Replacing Process Queue](#process-queue), below, for more information on the differences between the two mechanisms.
 
 ## 2 Configuration
@@ -181,7 +182,7 @@ Under normal circumstances, a task is executed exactly once, but in the face of 
 
 ### 4.3 Replacing Process Queue{#process-queue}
 
-The **Task Queue** supersedes the earlier [Process Queue](https://docs.mendix.com/appstore/modules/process-queue) App Store module, which has been deprecated with the release of Mendix 9. There are several differences between the Process Queue module and the **Task Queue**:
+The **Task Queue** supersedes the earlier [Process Queue](https://docs.mendix.com/appstore/modules/process-queue) Marketplace module, which has been deprecated with the release of Mendix 9. There are several differences between the Process Queue module and the **Task Queue**:
 
 * The **Task Queue** supports a multi-node cluster setup and can therefore be used in a horizontally scaled environment.
 * The **Task Queue** does not require additional entities to be created, since Microflows can simply be marked to execute in the background.

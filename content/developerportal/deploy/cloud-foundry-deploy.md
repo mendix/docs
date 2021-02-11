@@ -50,7 +50,7 @@ Only use the instructions in this document if you have specific requirements whi
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Download the latest version of Studio Pro from the [Mendix App Store](https://appstore.home.mendix.com/link/modelers)
+* Download the latest version of Studio Pro from the [Mendix Marketplace](https://appstore.home.mendix.com/link/modelers)
 * Have access to a service account with the rights to create new applications and services.
 
 ## 3 Configuring Cloud Foundry in Studio Pro {#3}

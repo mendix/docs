@@ -22,13 +22,13 @@ When your custom resources are ready to be shared with multiple developers or ap
 
 You are free to change the name of the module after it has been exported as a UI resource package.
 
-The module can now be imported in other apps or uploaded to the Mendix App Store. It is also possible to make the module available for private use only, so that everybody in your company can benefit from and extend it.
+The module can now be imported in other apps or uploaded to the Mendix Marketplace. It is also possible to make the module available for private use only, so that everybody in your company can benefit from and extend it.
 
 In the next section, the process of sharing UI resources will be made clear.
 
 ## 3 Sharing and Maintaining Your Company Atlas UI Resources
 
-The Mendix App Store is a great way to share UI resources throughout your company. Everybody in your company can benefit from using these UI resources, and you can document and keep track of changes made to the resources. Never worry about losing your UI resources or making errors, because everything is taken care of with the Mendix App Store version control system.
+The Mendix Marketplace is a great way to share UI resources throughout your company. Everybody in your company can benefit from using these UI resources, and you can document and keep track of changes made to the resources. Never worry about losing your UI resources or making errors, because everything is taken care of with the Mendix Marketplace version control system.
 
 There are two important options to keep in mind when uploading a UI resources module:
 
@@ -37,7 +37,7 @@ There are two important options to keep in mind when uploading a UI resources mo
 
 ![](attachments/howto/sharing_appstore_addcontent.png)
 
-When you upload new UI resources to the public Mendix App Store, the content will need to be reviewed and approved by Mendix. However, when you publish UI resources to the private App Store, the content will not have to be reviewed, and it will be directly available in your company after publishing.
+When you upload new UI resources to the public Mendix Marketplace, the content will need to be reviewed and approved by Mendix. However, when you publish UI resources to the private App Store, the content will not have to be reviewed, and it will be directly available in your company after publishing.
 
 ## 4 Using Your Company Atlas UI Resources
 
@@ -61,7 +61,7 @@ Let’s start with creating a new Mendix application in the Mendix Developer Por
 4. Download the company UI resources module you have created.
 5. When the download is complete, the UI resources will be visible in the **App Store modules** in **Project Explorer**.  Be sure to check if all the errors are resolved before continuing.
 
-Now that you have added your company UI resources to your company app template, you can share the app in the Mendix App Store just as you did with the company UI resources (see the next section for details). The company app template will be available for your Mendix developers to use whenever they want to create a new app, allowing them to save time and skip downloading the company UI resources separately.
+Now that you have added your company UI resources to your company app template, you can share the app in the Mendix Marketplace just as you did with the company UI resources (see the next section for details). The company app template will be available for your Mendix developers to use whenever they want to create a new app, allowing them to save time and skip downloading the company UI resources separately.
 
 #### 4.1.1 Sharing and Maintaining Your Company App Template
 
@@ -80,13 +80,13 @@ These are examples of app impression images:
 
 ![](attachments/howto/sharing_createnewapp_detail.png)
 
-### 4.2 Using the UI Resources Module from the Mendix App Store
+### 4.2 Using the UI Resources Module from the Mendix Marketplace
 
-The UI Resources module can be easily downloaded through the Mendix App Store in Studio Pro. By downloading the UI Resources module in existing Mendix apps, developers can benefit from all the new UI resources.
+The UI Resources module can be easily downloaded through the Mendix Marketplace in Studio Pro. By downloading the UI Resources module in existing Mendix apps, developers can benefit from all the new UI resources.
 
-To use the UI Resources module from teh Mendix App Store, follow these steps:
+To use the UI Resources module from teh Mendix Marketplace, follow these steps:
 
-1.  Open the Mendix App Store in Studio Pro and then select **UI Resources** in the left sidebar **Categories** menu:
+1.  Open the Mendix Marketplace in Studio Pro and then select **UI Resources** in the left sidebar **Categories** menu:
 
     ![](attachments/howto/sharing.png)
 
@@ -96,7 +96,7 @@ To use the UI Resources module from teh Mendix App Store, follow these steps:
 
     ![](attachments/howto/sharing_detail.png)
 
-3. To download the UI resources inside your project, click **Download**. After downloading your company's UI Resources module, it will appear under **App Store modules**. The module can always be updated by downloading a new version from the Mendix App Store when new resources are added.
+3. To download the UI resources inside your project, click **Download**. After downloading your company's UI Resources module, it will appear under **App Store modules**. The module can always be updated by downloading a new version from the Mendix Marketplace when new resources are added.
 
 ## 5 Read More
 

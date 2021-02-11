@@ -1,18 +1,18 @@
 ---
-title: "Use the XSUAA Connector for SAP Cloud Platform"
+title: "Use the XSUAA Connector for SAP Business Technology Platform"
 category: "SAP"
 menu_order: 45
-description: "Describes how to set up the XSUAA Connector for SAP Cloud Platform."
+description: "Describes how to set up the XSUAA Connector for SAP Business Technology Platform."
 tags: ["SAP", "integration", "OData", "SSO"]
 ---
 
 ## 1 Introduction
 
-When you deploy an application to SAP Cloud Platform using the SAP deployment features of the Mendix Developer Portal it is bound automatically to the XSUAA service. This service allows you to use an external **Id**entity **P**rovider (IdP) for a Mendix application. This means that the user can sign on to their app using this IdP instead of having their user credentials stored separately in the Mendix app. This means that they can have a single sign-on (SSO) experience with their application.
+When you deploy an application to SAP Business Technology Platform (SAP BTP) using the SAP deployment features of the Mendix Developer Portal it is bound automatically to the XSUAA service. This service allows you to use an external **Id**entity **P**rovider (IdP) for a Mendix application. This means that the user can sign on to their app using this IdP instead of having their user credentials stored separately in the Mendix app. This means that they can have a single sign-on (SSO) experience with their application.
 
-A Mendix application is role-based. Using the SAP Cloud Platform cockpit, you can assign the roles within the app to roles within your SAP subaccount. The roles in the SAP subaccount can then be assigned to individual users via the selected IdP (Trust Configuration).
+A Mendix application is role-based. Using the SAP BTP cockpit, you can assign the roles within the app to roles within your SAP subaccount. The roles in the SAP subaccount can then be assigned to individual users via the selected IdP (Trust Configuration).
 
-In this document, you will see how to use the XSUAA Connector for SAP Cloud Platform to provide SSO in an app which has two roles: Supervisor and Inspector. 
+In this document, you will see how to use the XSUAA Connector for SAP Business Technology Platform to provide SSO in an app which has two roles: Supervisor and Inspector. 
 
 **This how-to will teach you how to do the following:**
 
@@ -33,11 +33,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Ensure the app behaves differently according to the user role, so you can see the effect of setting up the roles in XSUAA. For example, give each role a different starting page as described here: [How To Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure)
 
-## 3 Getting the XSUAA Connector for SAP Cloud Platform Module
+## 3 Getting the XSUAA Connector for SAP Business Technology Platform Module
 
-The SAP app may already have the XSUAA Connector for SAP Cloud Platform installed. Look in **Project... > App Store modules** for the module **SapAuthentication**. This is the XSUAA connector.
+The SAP app may already have the XSUAA Connector for SAP Business Technology Platform installed. Look in **Project... > App Store modules** for the module **SapAuthentication**. This is the XSUAA connector.
 
-If the XSUAA Connector for SAP Cloud Platform is not already in your project, download it from the App Store. It can be found here: [XSUAA Connector for SAP Cloud Platform](https://appstore.home.mendix.com/link/app/78091/).
+If the XSUAA Connector for SAP Business Technology Platform is not already in your project, download it from the App Store. It can be found here: [XSUAA Connector for SAP Business Technology Platform](https://appstore.home.mendix.com/link/app/78091/).
 
 For more information, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).
 
@@ -104,7 +104,7 @@ If login.html does not support XSUAA then you need to add the SSO login button t
 An alternative to adding the SSO login button to the landing page of your app is to redirect your app to XSUAA automatically without showing the login page.
 
 {{% alert type="info" %}}
-Note that this will only work if you are running your app on SAP Cloud Platform.
+Note that this will only work if you are running your app on SAP BTP.
 
 Because users will be automatically redirected to XSUAA after signing out of the application, this could cause them to be signed in again.
 {{% /alert %}}
@@ -125,23 +125,23 @@ To accomplish this, follow these steps:
 	</html>
 	```
 
-## 5 Configuring the SAP Cloud Platform Subaccount
+## 5 Configuring the SAP BTP Subaccount
 
-Your app is configured to use an IdP. Now you need to configure the IdP and allocate users to roles. This is performed in the [SAP Cloud Platform cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts).
+Your app is configured to use an IdP. Now you need to configure the IdP and allocate users to roles. This is performed in the [SAP Business Technology Platform cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts).
 
 {{% alert type="info" %}}
 
-Before configuring the IdP, you must first deploy your app to SAP Cloud Platform. This will expose the user roles in the app to the security configuration tools in the SAP Cloud Platform cockpit.
+Before configuring the IdP, you must first deploy your app to SAP BTP. This will expose the user roles in the app to the security configuration tools in the SAP BTP cockpit.
 {{% /alert %}}
 
 
 {{% alert type="warning" %}}
 
-This section describes actions which are carried out using the SAP Cloud Platform cockpit. This document uses the current navigation through the SAP Cloud Platform cockpit but this is outside the Mendix environment and may be changed. SAP Cloud Platform documentation is in the [SAP Help Portal](https://help.sap.com/viewer/p/CP).
+This section describes actions which are carried out using the SAP BTP cockpit. This document uses the current navigation through the SAP BTP cockpit but this is outside the Mendix environment and may be changed. SAP BTP documentation is in the [SAP Help Portal](https://help.sap.com/viewer/p/CP).
 
 {{% /alert %}}
 
-The diagram below shows the relationship between the security structures in your Mendix app (blue), the SAP Cloud Platform app environment (yellow), SAP User Account and Authentication (orange), and the IdP (green).
+The diagram below shows the relationship between the security structures in your Mendix app (blue), the SAP BTP app environment (yellow), SAP User Account and Authentication (orange), and the IdP (green).
 
 ![](attachments/use-sap-xsuaa-connector/xsuaa-diagram-labeled.png)
 
@@ -149,13 +149,13 @@ Once the user has been authenticated, various attributes (the user's name, for e
 
 ### 5.1 Scope
 
-When your app is deployed to SAP Cloud Platform, each **User Role** (A) in the Mendix app is exposed as a **Scope** (B) in the SAP environment. You can see this mapping by going to your app in the SAP Cloud Platform cockpit. Under **Security** you can view the **Scopes**. You will see that the four **User Roles** in the Mendix app are exposed as scopes in the application space:
+When your app is deployed to SAP BTP, each **User Role** (A) in the Mendix app is exposed as a **Scope** (B) in the SAP environment. You can see this mapping by going to your app in the SAP BTP cockpit. Under **Security** you can view the **Scopes**. You will see that the four **User Roles** in the Mendix app are exposed as scopes in the application space:
 
 ![](attachments/use-sap-xsuaa-connector/app-scopes.png)
 
 ### 5.2 Role Template
 
-Each Scope is mapped to a single **Role Template** &#40;C) during deployment. You can see the Role Templates in the Application details of the SAP Cloud Platform cockpit. These are also defined during the deployment of the app.
+Each Scope is mapped to a single **Role Template** &#40;C) during deployment. You can see the Role Templates in the Application details of the SAP BTP cockpit. These are also defined during the deployment of the app.
 
 ![](attachments/use-sap-xsuaa-connector/app-role-templates.png)
 
@@ -163,17 +163,17 @@ The **Attribute**s of the **Role Template** are not used by Mendix in linking Me
 
 ### 5.3 Role
 
-In the SAP Cloud Platform cockpit, you can view and add additional **Roles** (D) to the Role Template, or you can stay with the generated default role. Note that new roles added here do not have different roles in your Mendix app. However, adding new roles may allow you to obtain additional analytics through the SAP or IdP logs. Here a new *Inspector* role (Inspector 2) has been added to the Inspector Role Template.
+In the SAP BTP cockpit, you can view and add additional **Roles** (D) to the Role Template, or you can stay with the generated default role. Note that new roles added here do not have different roles in your Mendix app. However, adding new roles may allow you to obtain additional analytics through the SAP or IdP logs. Here a new *Inspector* role (Inspector 2) has been added to the Inspector Role Template.
 
 ![](attachments/use-sap-xsuaa-connector/app-roles.png)
 
 ### 5.4 Role Collection
 
-The **Role Collection** (E) is defined not for the app deployed to SAP Cloud Platform, but in your SAP **Subaccount**. It is this Role Collection which will be linked to the IdP.
+The **Role Collection** (E) is defined not for the app deployed to SAP BTP, but in your SAP **Subaccount**. It is this Role Collection which will be linked to the IdP.
 
 There may be other Role Collections which are being used by other apps deployed in this subaccount and you may, or may not, wish to share authentication between apps. You could, for example, use the same authentication for several related apps running in the same subaccount which have the same app User Roles. Or you may wish to use different authentication for development and production environments.
 
-Here, we add a new Role Collection for the Inspector 2 role in the SAP Cloud Platform space roles.
+Here, we add a new Role Collection for the Inspector 2 role in the SAP BTP space roles.
 
 1. Give the new Role Collection a name and, optionally, a description.
 
@@ -187,7 +187,7 @@ Here, we add a new Role Collection for the Inspector 2 role in the SAP Cloud Pla
 
 	![](attachments/use-sap-xsuaa-connector/add-role.png)
 
-The new role collection can now be seen in the SAP Cloud Platform cockpit for this Subaccount, with the Role(s) which it includes.
+The new role collection can now be seen in the SAP BTP cockpit for this Subaccount, with the Role(s) which it includes.
 
 ![](attachments/use-sap-xsuaa-connector/show-role-collection.png)
 
@@ -244,5 +244,5 @@ You can picture the authentication as shown below:
 * [How to Create a Secure App](/howto/security/create-a-secure-app)
 * [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content)
 * [Project Security](/refguide/project-security)
-* [XSUAA Connector for SAP Cloud Platform](/partners/sap/sap-xsuaa-connector) (documentation)
-* [SAP Cloud Platform cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts)
+* [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector) (documentation)
+* [SAP Business Technology Platform cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts)

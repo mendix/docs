@@ -114,7 +114,7 @@ We renamed all the SAP-related connectors and app templates in the App Store to 
 
  Type | Old Name | New Name |
  ----- | ----- | -----|
- Connector | SAP Cloud Platform XSUAA Connector | XSUAA Connector for SAP Cloud Platform |
+ Connector | SAP Cloud Platform XSUAA Connector | XSUAA Connector for SAP Business Technology Platform |
  Connector | SAP Fiori UI Package | UI Package for SAP Fiori themed apps |
  Connector | SAP Leonardo Machine Learning Foundation Connector | Connector for SAP Leonardo Machine Learning Foundation |
  Connector | SAP OData Connector | OData Connector for SAP solutions |
@@ -182,7 +182,7 @@ We added a component in the App Store which, when configured in your app, allows
 * We released an upgraded version of the [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/), which supports IBM Watson SDK version 6.11.0 and adds additional microflow actions.
 * We released an upgraded version of the [IBM Watson Connector Suite Example Project](https://appstore.home.mendix.com/link/app/2880/), which includes the new IBM Watson Connector Suite.
 * We released an upgraded version of the IBM Watson Blank App app template, which includes the new IBM Watson Connector Suite.
-* For more information see [IBM Watson Connector](https://docs.mendix.com/partners/ibm/ibm-watson-connector).
+* For more information see [IBM Watson Connector](/appstore/connectors/ibm-watson-connector).
 
 ### January 21st, 2019
 

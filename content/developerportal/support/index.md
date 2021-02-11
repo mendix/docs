@@ -94,12 +94,12 @@ Mendix supports the current major release and the two prior major releases (and 
 
 ## 9 Support for Different Deployment Strategies {#support-by-strategy}
 
-With our Multi-Cloud strategy, Mendix allows the apps that you build to be deployed in any Cloud. This can be in the [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy), Mendix Dedicated Cloud, [Mendix Private Cloud](/developerportal/deploy/private-cloud), [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform), or in other on-premises and Cloud architectures.
+With our Multi-Cloud strategy, Mendix allows the apps that you build to be deployed in any Cloud. This can be in the [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy), Mendix Dedicated Cloud, [Mendix Private Cloud](/developerportal/deploy/private-cloud), [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform), or in other on-premises and Cloud architectures.
 
 The full stack is depicted in the table below. This indicates which components are **Mendix** supported, or supported by a **Mendix Partner** or 3rd party. If no support is indicated, then you will need to arrange support of this component yourself. Each of the components is described in more detail in [Components of the Mendix Stack](#components), below.
 
 <!-- TABLE BELOW CONVERTED TO HTML SO THAT FIRST COLUMN CAN BE WIDER
-| | Public Cloud | Cloud Dedi&shy;cated | Private Cloud - Con&shy;nected | Private Cloud - Stand&shy;alone | SAP Cloud Platform | Cloud Foundry/ Docker & Kuber&shy;netes | Tradi&shy;tional |
+| | Public Cloud | Cloud Dedi&shy;cated | Private Cloud - Con&shy;nected | Private Cloud - Stand&shy;alone | SAP BTP | Cloud Foundry/ Docker & Kuber&shy;netes | Tradi&shy;tional |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Appli&shy;cation** | | | | | | | |
 | **Platform Support&shy;ed Marketplace content** | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix |
@@ -123,7 +123,7 @@ The full stack is depicted in the table below. This indicates which components a
 <th>Cloud Dedi­cated</th>
 <th>Private Cloud - Con­nected</th>
 <th>Private Cloud - Stand­alone</th>
-<th>SAP Cloud Plat&shy;form</th>
+<th>SAP BTP</th>
 <th>Cloud Foundry/ Docker &amp; Kuber­netes</th>
 <th>Tradi­tional</th>
 </tr>
@@ -279,9 +279,9 @@ Mendix Support does not have access to app health, logs, graphs and monitoring. 
 ![](attachments/index-mendix-support/private-cloud.png)
 {{% /image_container %}}
 
-### 9.3 SAP Cloud Platform
+### 9.3 SAP Business Technology Platform
 
-Mendix provides an integration with the SAP Cloud Foundry environment of SAP Cloud Platform. Mendix applications are built to run on SAP Cloud Platform using the Mendix Cloud Foundry buildpack. Please check out the supported components in [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform).
+Mendix provides an integration with the SAP Cloud Foundry environment of SAP Business Technology Platform (SAP BTP). Mendix applications are built to run on SAP BTP using the Mendix Cloud Foundry buildpack. Please check out the supported components in [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform).
 Mendix Support does not have access to app health, logs, graphs and monitoring. If you run into issues or want to ask a question on these supported components, please always provide relevant logs, data, and your own analysis that explains why you suspect the issue is caused by one of our supported components
 
 {{% image_container width="40%" %}}
@@ -322,7 +322,7 @@ Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Supp
 
 The container runtime platform refers to the platform for managing, creating, destroying and scaling of runtime containers. In the Mendix Public Cloud and Cloud Dedicated Cloud Foundry is used.
 
-Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Support diagnose this component. When running on SAP Cloud Platform or IBM Cloud, the selected third party can diagnose this component.
+Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Support diagnose this component. When running on SAP BTP or IBM Cloud, the selected third party can diagnose this component.
 
 ### 10.4 Buildpack, m2ee & Service Console
 
@@ -342,7 +342,7 @@ If you want additional features or some other change in the Windows Service, you
 
 The application operation component is used for stopping and starting environments and configuring constants, scheduled events, and runtime settings.
 
-Only when running on the Mendix Public Cloud, Cloud Dedicated, Private Cloud Connected or SAP Cloud Platform through the Developer Portal, can Mendix Support diagnose this components.
+Only when running on the Mendix Public Cloud, Cloud Dedicated, Private Cloud Connected or SAP BTP through the Developer Portal, can Mendix Support diagnose this components.
 
 ### 10.6 Logs & Metrics
 
@@ -356,7 +356,7 @@ Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Supp
 The deployment pipeline takes care of creating and deploying deployment packages
 Please read all about the Deployment options in [Deployment](/developerportal/deploy/).
 
-Only when running on the Mendix Public Cloud, Cloud Dedicated, Private Cloud Connected or SAP Cloud Platform through the Developer Portal, can Mendix Support diagnose this component.
+Only when running on the Mendix Public Cloud, Cloud Dedicated, Private Cloud Connected or SAP BTP through the Developer Portal, can Mendix Support diagnose this component.
 
 ### 10.8 Runtime
 

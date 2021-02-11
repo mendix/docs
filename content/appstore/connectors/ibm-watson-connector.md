@@ -23,7 +23,7 @@ IBM Watson™ is a suite of services which gives you access to a range of AI and
 
 You can find out more about IBM Watson on the [IBM Watson website](https://www.ibm.com/watson/products-services/).
 
-The [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/) in the Mendix App Store provides connectors which simplify the use of the Watson services. Including the IBM Watson Connector Suite in your app allows you to add microflow actions which make use of IBM Watson services. The IBM Watson Connector Suite is based on version 6.11.0 of the [IBM Watson SDK](https://github.com/watson-developer-cloud/java-sdk).
+The [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/) in the Mendix Marketplace provides connectors which simplify the use of the Watson services. Including the IBM Watson Connector Suite in your app allows you to add microflow actions which make use of IBM Watson services. The IBM Watson Connector Suite is based on version 6.11.0 of the [IBM Watson SDK](https://github.com/watson-developer-cloud/java-sdk).
 
 ### 1.1 Prerequisites
 

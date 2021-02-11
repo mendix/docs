@@ -81,7 +81,7 @@ This card on your profile presents your points and ranking for the last 30 days:
 
 ![](attachments/leaderboard.png)
 
-Clicking **View all** takes you to the **Leaderboards** page, which presents all the boards available for viewing Mendix Platform user activity: **Top Overall**, **Top Forum**, **Top App Store**, **Top Platform**, **Top Community**, and **Top Learning**.
+Clicking **View all** takes you to the **Leaderboards** page, which presents all the boards available for viewing Mendix Platform user activity.
 
 To earn points and climb the leaderboards, start performing different activities in the Mendix community. For example, let's say you have some time to spare while your app is deploying. You get a cup of coffee and check out the [Mendix Forum](http://forum.mendix.com). One questions pops out because you came across a similar problem a few weeks back. You decide to help the community member and post an answer to their question. Not long after, the author marks your answer as accepted. Boom! 15 points right there.
 
@@ -99,9 +99,9 @@ These are points you can gain through activity on the [Mendix Forum](https://for
 | Downvote someone | -1 | N/A |
 | Receive a downvote | -2 | N/A |
 
-### 7.2 App Store Points {#app-store-points}
+### 7.2 Marketplace Points {#app-store-points}
 
-These are points you can gain through activity in the [Mendix App Store](https://appstore.home.mendix.com/).
+These are points you can gain through activity in the [Mendix Marketplace](https://appstore.home.mendix.com/).
 
 | Activity | Points | Max. Points per Day |
 | --- | --- | --- |
@@ -109,7 +109,7 @@ These are points you can gain through activity in the [Mendix App Store](https:/
 | Publish a new app version | 25 | N/A |
 | Add an app review | 5 | N/A |
 | Download [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/) | 5 | 5 |
-| Download an app from the App Store | 1 | 5 |
+| Download an app from the Marketplace | 1 | 5 |
 
 ### 7.3 Platform Points
 
@@ -340,7 +340,7 @@ Mendix has been tracking these data changes since November, 2018.
 
 ## 11 Point Penalties
 
-Abusing the Mendix Forum, App Store, point system, or other community tools is not allowed. Any such action can result in a point penalty. Mendix reserves the right to penalize a user who bypasses or games the system without informing them.
+Abusing the Mendix Forum, Marketplace, point system, or other community tools is not allowed. Any such action can result in a point penalty. Mendix reserves the right to penalize a user who bypasses or games the system without informing them.
 
 ## 12 Main Document in This Category
 

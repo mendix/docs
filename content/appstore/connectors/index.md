@@ -6,7 +6,7 @@ tags: ["app store", "app store component", "connector"]
 
 ## 1 Introduction
 
-The connectors available in the Mendix App Store can be used to connect your Mendix application with other systems.
+The connectors available in the Mendix Marketplace can be used to connect your Mendix application with other systems.
 
 When you download these connector modules, they will go into the **Project** > **App Store modules** folder.
 

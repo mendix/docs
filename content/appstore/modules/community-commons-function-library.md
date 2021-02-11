@@ -1,7 +1,7 @@
 ---
 title: "Community Commons Function Library"
 category: "Modules"
-description: "Describes the configuration and usage of the Community Commons Function Library module, which is available in the Mendix App Store."
+description: "Describes the configuration and usage of the Community Commons Function Library module, which is available in the Mendix Marketplace."
 tags: ["app store", "app store component", "community commons function library", "community commons", "java action call", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -18,7 +18,7 @@ The module contains one constant: `CommunityCommons.MergeMultiplePdfs_MaxAtOnce`
 
 ## 3 Testing
 
-The Community Commons container project contains a variety of predesigned unit tests. To use these tests, download the [Unit Testing](/appstore/modules/unit-testing) module from the Mendix App Store . This module has a dependency on the [Object Handling](/appstore/modules/object-handling) module, so that module should also be imported to your app project if you want to run the tests.
+The Community Commons container project contains a variety of predesigned unit tests. To use these tests, download the [Unit Testing](/appstore/modules/unit-testing) module from the Mendix Marketplace . This module has a dependency on the [Object Handling](/appstore/modules/object-handling) module, so that module should also be imported to your app project if you want to run the tests.
 
 ## 4 Function List
 

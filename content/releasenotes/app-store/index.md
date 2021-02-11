@@ -17,16 +17,16 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/ind
 ### January 26th, 2021
 
 * You are now able to download Studio Pro versions marked as [beta](/releasenotes/beta-features/index) from a separate tab on the **Get Studio Pro** page named **Beta Releases**. The default download option (via the **Release Notes** tab) remains the latest stable release of Studio Pro.
-* We fixed some bugs in the [add new App Store content](/appstore/general/share-app-store-content#adding) flow and we made error messages more descriptive.
+* We fixed some bugs in the [add new Marketplace content](/appstore/general/share-app-store-content#adding) flow and we made error messages more descriptive.
 
 ## 2020
 
 ### December 15th, 2020
 
-* We have implemented a UX Refresh to provide a fresh new look and feel for the [App Store home](/appstore/general/app-store-overview#home), [catalog](/appstore/general/app-store-overview#catalog), [component details](/appstore/general/app-store-overview#details), and Studio Pro download pages.
 * The Mendix "App Store" has been renamed to the "Marketplace" as part of the continued investment in new capabilities that is underway. This rename (and URL change) is only for the pages rebuilt so far listed above. Further implementation of this renaming is to follow in future releases.
+* We have implemented a UX Refresh to provide a fresh new look and feel for the [Marketplace home](/appstore/general/app-store-overview#home), [catalog](/appstore/general/app-store-overview#catalog), [component details](/appstore/general/app-store-overview#details), and Studio Pro download pages.
 * We have enabled an enhanced navigation and undertaken some curation of published components to help you discover the components you require more easily.
-* We have enabled a more structured wizard-based flow that makes it a lot easier for you to [share new content](/appstore/general/share-app-store-content) to the App Store.
+* We have enabled a more structured wizard-based flow that makes it a lot easier for you to [share new content](/appstore/general/share-app-store-content) to the Marketplace.
 
 ### May 27th, 2020
 
@@ -96,7 +96,7 @@ Content that was marked as **Protected** as well as content marked as **Shared w
 
 #### Improvement
 
-We now display the UUID of an App Store component in the [Usage](/appstore/general/app-store-overview#usage) section of its details page. This allows you to specify the `TemplateUUID` when calling the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*.
+We now display the UUID of a App Store component in the [Usage](/appstore/general/app-store-overview#usage) section of its details page. This allows you to specify the `TemplateUUID` when calling the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*.
 
 ### September 11th, 2019
 

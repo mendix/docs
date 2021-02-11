@@ -1,9 +1,9 @@
 ---
-title: "Share App Store Content"
+title: "Share Marketplace Content"
 category: "General Info"
 menu_order: 30
 tags: ["app store", "public app store", "private app store", widget", "module"]
-description: "Describes how to create and share Mendix App Store content."
+description: "Describes how to create and share Mendix Marketplace content."
 aliases:
     - /developerportal/app-store/share-app-store-content.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -11,40 +11,40 @@ aliases:
 
 ## 1 Introduction
 
-The App Store is driven by contributions from members of the Mendix community who share the connectors, modules, and apps they have built. This how-to shows how to add and update App Store content.
+The Marketplace is driven by contributions from members of the Mendix community who share the connectors, modules, and apps they have built. This how-to shows how to add and update Marketplace content.
 
 **This how-to will teach you how to do the following:**
 
-* Add new content and promotions to share in the App Store
-* Update existing App Store content
+* Add new content and promotions to share in the Marketplace
+* Update existing Marketplace content
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Familiarize yourself with the [App Store Overview](app-store-overview) and [How to Use App Store Content in Studio Pro](app-store-content)
+* Familiarize yourself with the [Marketplace Overview](app-store-overview) and [How to Use Marketplace Content in Studio Pro](app-store-content)
 
-## 3 App Store Content Development Guidelines {#submission}
+## 3 Marketplace Content Development Guidelines {#submission}
 
-This section presents guidelines for developing content that you will submit to the Mendix App Store.
+This section presents guidelines for developing content that you will submit to the Mendix Marketplace.
 
 {{% alert type="info" %}}
-Submitted App Store content will be reviewed within five working days.
+Submitted Marketplace content will be reviewed within five working days.
 {{% /alert %}}
 
 ### 3.1 General Guidelines
 
-These are some general guidelines for creating new App Store content :
+These are some general guidelines for creating new Marketplace content :
 
-* Set up a separate project to build and maintain your App Store component
+* Set up a separate project to build and maintain your Marketplace component
 * Use a relatively recent Mendix version when creating the item, not only the latest Mendix version
-* Create multiple versions of your App Store component (for example, for Studio Pro 8 and Desktop Modeler 7)
+* Create multiple versions of your Marketplace component (for example, for Studio Pro 8 and Desktop Modeler 7)
 
-You can add information the end-user should know about your content to  can be added for the [Documentation](#doc) when you are adding the content to the App Store.
+You can add information the end-user should know about your content to  can be added for the [Documentation](#doc) when you are adding the content to the Marketplace.
 
 ### 3.2 Widget Guidelines
 
-To develop widgets and submit them to the App Store, follow these guidelines:
+To develop widgets and submit them to Marketplace, follow these guidelines:
 
 * The widget must be based on the [AppStoreBoilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate)
 * When writing variable and function names, use lowerCamelCase (for example, *mySecondVariable*)
@@ -60,7 +60,7 @@ To develop widgets and submit them to the App Store, follow these guidelines:
 
 ### 3.3 Module Guidelines
 
-To develop modules and submit them to the App Store, follow these guidelines:
+To develop modules and submit them to the Marketplace, follow these guidelines:
 
 * Create a folder named **USE_ME** and add the microflows and pages that are relevant for the user
 * Create an empty folder with the version number as its name, which will appear in Studio Pro's Project Explorer
@@ -79,15 +79,15 @@ To develop modules and submit them to the App Store, follow these guidelines:
 * Do not rename entities and attributes when creating new versions, as data in these entities will get lost (replacing an existing module is based on the entity names)
 * The module should include the English language
 
-## 4 Adding New App Store Content {#adding}
+## 4 Adding New Marketplace Content {#adding}
 
-To add content to the App Store, follow these steps:
+To add content to the Marketplace, follow these steps:
 
-1.  Click **Add content** in the top-right corner of the App Store home screen:
+1.  Click **Add content** in the top-right corner of the Marketplace home screen:
 
 	![](attachments/share-app-store-content/add-content-button.jpg)
 
-2.  Select the type of content you would like to publish. The available types correspond to the content catalogs available on the [App Store home page](app-store-overview#home).
+2.  Select the type of content you would like to publish. The available types correspond to the content catalogs available on the [Marketplace home page](app-store-overview#home).
 3.  Depending on the category you selected, you may be asked to select a sub-category for your component, for example:
 
 	![](attachments/share-app-store-content/sub-categories.jpg)
@@ -99,7 +99,7 @@ To add content to the App Store, follow these steps:
 	
 	![](attachments/share-app-store-content/public-private.jpg)
 	
-	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change this setting by updating the App Store component later.
+	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change this setting by updating the Marketplace component later.
 	{{% /alert %}}
 
 5.  The **General** page will open, where you need to provide information about your component. The information you entered above is pre-filled on this page. Enter the following details:<br />
@@ -123,7 +123,7 @@ To add content to the App Store, follow these steps:
 6. Click **Upload an Image** to upload an icon for the component
 7.  On each page of the upload flow, click one of the following buttons:
 
-	* **Save Draft** to save the details you have entered so far as a draft to the [Drafts](app-store-overview#drafts) page of your App Store (which you can access via the **My Drafts** button in the top-right of the page and the )
+	* **Save Draft** to save the details you have entered so far as a draft to the [Drafts](app-store-overview#drafts) page of your Marketplace (which you can access via the **My Drafts** button in the top-right of the page and the )
 	* **Save & Continue** to go to the next page of the upload flow
 
 8.  On the **Package** page, select your content source:
@@ -168,27 +168,27 @@ To add content to the App Store, follow these steps:
 
 	![](attachments/share-app-store-content/publish.jpg)
 
-<a name="approval"></a>After you click **Publish Content**, your draft will be reviewed by Mendix within approximately 5 working days before it is visible in the App Store.
+<a name="approval"></a>After you click **Publish Content**, your draft will be reviewed by Mendix within approximately 5 working days before it is visible in the Marketplace.
 
 {{% alert type="info" %}}
 Review and approval by Mendix is required only for the first version of [Public Marketplace](#public-app-store) content. Subsequent versions of public content do not need review or approval by Mendix. [Private Marketplace](#private-app-store) content does not require any review or approval.
 {{% /alert %}}
 
-## 5 Updating Existing App Store Content {#updating}
+## 5 Updating Existing Marketplace Content {#updating}
 
 To update content that has already been published, follow these steps:
 
 1.  Find the component in the correct location by clicking **My Marketplace**and selecting one of the following:
 	* **My Content**
 	* **Company Content**
-	* **User Groups** (note that if an existing App Store component is assigned to a [user group](app-store-overview#user-groups) as specific user group [content](app-store-overview#content), you can only update the component if you are a member of that group)
+	* **User Groups** (note that if an existing Marketplace component is assigned to a [user group](app-store-overview#user-groups) as specific user group [content](app-store-overview#content), you can only update the component if you are a member of that group)
 	
 2.  Click **Manage** next to the component you want to update.
 
 	{{% alert type="info" %}}Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be started. If there is a draft version in progress, click **View draft** on the page where you manage the component in order to see the draft.
 	{{% /alert %}}
 
-3. You can edit all component details, as described in the [Adding New App Store Content](#adding) section above.
+3. You can edit all component details, as described in the [Adding New Marketplace Content](#adding) section above.
 4.  In the **Version** section of the **Package** page, update the **Major**, **Minor**, and **Patch** numbers so that the component is saved as a new version:
 
 	* **Major update** – a large change (which will save the content from version 5.0 to version 6.0, for example)
@@ -199,5 +199,5 @@ To update content that has already been published, follow these steps:
 
 ## 6 Read More
 
-* [App Store Overview](app-store-overview)
-* [How to Use App Store Content in Studio Pro](app-store-content)
+* [Marketplace Overview](app-store-overview)
+* [How to Use Marketplace Content in Studio Pro](app-store-content)

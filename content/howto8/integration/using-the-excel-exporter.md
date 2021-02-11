@@ -7,7 +7,7 @@ tags: ["excel", "excel export", "excel exporter", "integration"]
 
 ## 1 Introduction
 
-Exporting items from a data grid in a Mendix application in Excel format via an **Export to Excel** button, is standard Mendix functionality. However, in instances where more customized Excel documents are required, your app can leverage Mendix App Store content to create custom Excel documents based on configurable templates. To achieve this, your app will require you to download and configure two Mendix App Store modules.
+Exporting items from a data grid in a Mendix application in Excel format via an **Export to Excel** button, is standard Mendix functionality. However, in instances where more customized Excel documents are required, your app can leverage Mendix Marketplace content to create custom Excel documents based on configurable templates. To achieve this, your app will require you to download and configure two Mendix Marketplace modules.
 
 This how-to explains how to do the following:
 
@@ -16,7 +16,7 @@ This how-to explains how to do the following:
 
 ## 2 Downloading the Required App Store Modules
 
-In this section, you will learn how to download the necessary modules from the Mendix App Store. The modules required for this process are [Mx Model Reflection](/appstore/modules/model-reflection) and [Excel Exporter](/appstore/modules/excel-exporter).
+In this section, you will learn how to download the necessary modules from the Mendix Marketplace. The modules required for this process are [Mx Model Reflection](/appstore/modules/model-reflection) and [Excel Exporter](/appstore/modules/excel-exporter).
 
 {{% alert type="info" %}}
 The Mx Model Reflection module enables your app to obtain information about its domain model (entities and attributes) and microflow definitions at runtime.
@@ -24,7 +24,7 @@ The Mx Model Reflection module enables your app to obtain information about its 
 
 To download the modules, follow these steps:
 
-1. Open the **Mendix App Store** from within Studio Pro.
+1. Open the **Mendix Marketplace** from within Studio Pro.
 2.  Search for the keyword *reflection* and select **Mx Model reflection**:
 
 	![](attachments/using-the-excel-exporter/18581166.png)

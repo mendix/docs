@@ -21,11 +21,11 @@ This how-to will walk you through the steps needed to implement push notificatio
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install Mendix Desktop Modeler from the [App Store](https://appstore.home.mendix.com/link/modeler)
+* Install Mendix Desktop Modeler from the [Marketplace](https://appstore.home.mendix.com/link/modeler)
 
 ## 3 Importing the PushNotifications Module from the App Store
 
-The [Push Notifications Connector module](/appstore/modules/push-notifications) is published in the Mendix App Store. To import it into your project, click **App Store** in the top right of Modeler, which will open the App Store in a new tab. Search for "Push Notifications Connector" and click the title of the result:
+The [Push Notifications Connector module](/appstore/modules/push-notifications) is published in the Mendix Marketplace. To import it into your project, click **App Store** in the top right of Modeler, which will open the App Store in a new tab. Search for "Push Notifications Connector" and click the title of the result:
 
 ![](attachments/19955732/20218020.png)
 

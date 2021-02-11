@@ -32,7 +32,7 @@ In [Creating a "Search GitHub User" JavaScript Action](#create-a-search) below, 
 
 This how-to comes paired with an app project package prepared for you by Mendix. To download and import the package, follow the steps below:
 
-1. In Mendix Studio Pro, click the App Store icon.
+1. In Mendix Studio Pro, click the AMarketplace icon.
 2. Search for "JavaScript Actions How-To Advanced".
 3. Click the app, then click **Download** to receive an *.mpk* file. 
 4.  Select **New Mendix Team Server**, name your app *JavaScriptActionsHowToAdvanced*, select a **Project Directory**, and click **OK**:

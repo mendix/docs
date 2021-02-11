@@ -1,7 +1,7 @@
 ---
 title: "Carousel"
 category: "Widgets"
-description: "Describes the configuration and usage of the Carousel widget, which is available in the Mendix App Store."
+description: "Describes the configuration and usage of the Carousel widget, which is available in the Mendix Marketplace."
 tags: ["app store", "app store component", "widget", "carousel", "image", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -54,7 +54,7 @@ When this option is selected, do the following:
 	* For the **Call microflow**, **Call nanoflow**, and **Show page** options, specify the respective microflow, nanoflow, or page
 * Specifying a **URL attribute** will make the value of the URL attribute the priority
 
-## 3 Developing This App Store Component
+## 3 Developing This Marketplace Component
 
 To contribute to the development of this widget, follow these steps:
 

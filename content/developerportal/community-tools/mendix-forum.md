@@ -241,7 +241,7 @@ To submit your own idea to the idea forum, follow these steps:
 
 	* The **Title** of your idea (which is how Mendix Forum users will first see your idea, so make the title descriptive and interesting)
 	* The text of your idea (add all the details about your idea to make it searchable and so other users can vote and comment on it)
-	* The **Category** that reflects your idea (for example, **App Store**, **Connectors**, **Microflows**)
+	* The **Category** that reflects your idea (for example, **Connectors** or **Microflows**)
 	* The **Tag(s)** that reflect your idea (which other users can use to filter their searches)
 
 3. Click **Submit your idea**.

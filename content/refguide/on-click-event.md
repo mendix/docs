@@ -277,9 +277,13 @@ The following properties are specific for this event:
 
 **Open workflow page** opens an overview page set for the **Workflow page** in [workflow properties](workflow-properties). An element calling this event should be placed in a data container connected to the **System.Workflow** entity. 
 
+{{% todo %}}[Check if System.Workflow is still true]{{% /todo %}}
+
 ### 3.15 Open Task Page {#open-task-page}
 
 **Open task page** opens an overview page set for the [user task](user-task) in properties. An element calling this event should be placed in a data container connected to the **System.UserTask** entity. 
+
+{{% todo %}}[Check if System.UserTask is still true]{{% /todo %}}
 
 ### 3.16  Complete Task {#complete-task}
 

@@ -1,7 +1,7 @@
 ---
 title: "Workflows"
-category: "App Modeling"
-menu_order: 45
+parent: "application-logic"
+menu_order: 20
 tags: ["workflow", "workflows", "Studio Pro"]
 ---
 
@@ -41,20 +41,85 @@ The elements of this category are described in the table below:
 
 ![Call Microflow](attachments/workflows/call-microflow.png)
 
-## 3 Workflow Variables
+## 3 Performing Basic Functions
+
+{{% todo %}}[Do we need to describe actions that are so simple or shall I leave them for Studio only?]{{% /todo %}}
+
+You can perform the following basic functions when working on workflows:
+
+* Open a workflow
+* Create a workflow
+* Delete a workflow
+* Add elements to a workflow
+* View element properties 
+
+### 3.1 Opening a Workflow
+
+To open a workflow in Studio Pro, do the following:
+
+1. In the [Project Explorer](project-explorer), open a module where this workflow is located.
+2. Navigate to the workflow’s location inside the module and double-click the workflow.
+
+The selected workflow is opened.
+
+### 3.2 Adding a Workflow
+
+To add a workflow to your app project, do the following:
+
+1. In the [Project Explorer](project-explorer), right-click the module or a folder you want to create a page in and select **Add workflow**:
+
+   ![Add Workflow](attachments/workflows/add-workflow.jpg)
+
+2. In the **Add workflow** dialog box, fill in Name and click **OK**:
+
+   ![Adding Workflow](attachments/workflows/add-workflow-dialog.jpg)
+
+The workflow is created.
+
+### 3.3 Deleting a Workflow
+
+To delete a workflow, do the following:
+
+1. In the [Project Explorer](project-explorer), select a workflow you would like to delete and right-click it.
+2. In the displayed list, select **Delete** and confirm your choice by clicking **Delete** in the pop-up dialog.
+
+The selected workflow is deleted. 
+
+### 3.4 Adding Elements to a Workflow 
+
+To add an element to a workflow, do the following:
+
+1. Open the **Toolbox**.
+2. Select an element you would like to add and drag and drop this element in the working area.
+
+The selected element is added.
+
+### 3.5 Viewing Element Properties 
+
+To view properties of an element, do one of the following:
+
+1. Select an element and open **Properties** pane to view its properties.
+2. Right-click an element and select **Properties** from the list of options that opens.
+3. Double-click an element.
+
+## 4 Workflow Variables
+
+{{% todo %}}[Maria: I need more data on this topic]{{% /todo %}}
 
 Workflows have specific variables that are used in XPath:
 
 * WorkflowData – is an instance of Workflow.Context
 * System.WorkflowInstance – can be used to filter when the workflow has started
 
-## 4 Workflow-Specific Actions in Microflows
+## 5 Workflow-Specific Activities in Microflows
 
-## 5 Workflow-Specific On-Click Events
+{{% todo %}}[Do we need this info? Might be better when searching for the relevant info but we didn't include such info in other visual editor documents]{{% /todo %}}
 
-## 6 Security
+You can add workflow-related activities to your microflows. For more information on these activities, see [Workflow Activities](workflow-activities). 
 
+## 6 Workflow-Specific On-Click Events
 
+You can trigger workflows or user tasks from pages via specific on-click events configured on widgets. For more details, see [On Click Event & Events Section](on-click-event).
 
 ## 7 Read More
 

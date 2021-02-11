@@ -6,6 +6,8 @@ tags: ["studio pro", "microflow", "workflow", "workflow activities"]
 
 ## 1 Introduction
 
+{{% todo %}}[Check images and naming in all child pages]{{% /todo %}}
+
 The activities described in this document are in the **Workflow Activities** section of the **Toolbox**:
 
 ![Workflow Activities](attachments/workflow-activities/workflow-activities.jpg)

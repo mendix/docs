@@ -10,18 +10,12 @@ tags: ["studio pro", "logic", "microflow", "nanoflow"]
 
 While you can create a simple Mendix app using widgets on pages, you can unleash the power of Mendix by adding application logic to your app.
 
-Application logic in Mendix can be implemented via microflows, running on the runtime server, and nanoflows, which run in the Mendix client.
+Application logic in Mendix can be implemented via microflows, nanoflows, and workflows. You can change a value based on a function or combination of functions using expressions. 
 
-Explore the documentation for details on microflow and nanoflow definitions, properties, and usages.
+Explore the documentation for details on microflow, nanoflow, and workflow definitions, properties, and usages.
 
-* [Microflows](microflows)
-* [Nanoflows](nanoflows)
-* [Sequence Flow](sequence-flow)
-* [Activities](activities)
-* [Decisions](decisions)
-* [Annotation](annotation)
-* [Parameter](parameter)
-* [Loop](loop)
-* [Events](events)
+* [Microflows & Nanoflows](microflows-and-nanoflows)
+* [Workflows](workflows)
 * [Expressions](expressions)
-* [Common Properties](microflow-element-common-properties)
+
+{{% todo %}}[Add more info on this page]{{% /todo %}}

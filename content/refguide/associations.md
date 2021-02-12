@@ -72,7 +72,7 @@ You can move the association arrow between two entities without deleting it. Cli
 
 Note: Your curser should not activate a white dot. This indicates the creation of a new association.
 
-![](attachments/associations/association-move-arrow.png)
+<!--![](attachments/associations/association-move-arrow.png)-->
 
 ## 4 Association Examples {#examples}
 

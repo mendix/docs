@@ -102,14 +102,31 @@ To view properties of an element, do one of the following:
 2. Right-click an element and select **Properties** from the list of options that opens.
 3. Double-click an element.
 
-## 4 Workflow Variables
+## 4 Workflow Entities in the System Module
+
+There are several workflow-related entities in the System module of your app project. Some are there as basic entities that you cannot use, and some can be used in XPath and Expressions. 
+
+* WorkflowDefinition – Represents your workflow in the database. It contains two attributes, where Name is a Title of the workflow, and Obsolete is a Boolean that is marked as true when you delete your workflow. The workflow still stays in the database (and you will still be able to create reports with it), but Mendix marks that it does not exist anymore. 
+* WorkflowTaskDefinition – Represents your user tasks and system activities in the database. It contains two attributes, where Name is a Title of the user task or a system activity, and Obsolete is a Boolean that is marked as true when you delete them from your workflow. They still stay in the database (and you will still be able to create reports with them), but Mendix marks that they do not exist anymore.
+* WorkflowVersion – This System entity is used for versioning and for the internal administration in the Runtime. When you add an activity and run your workflow, a new version will be created.
+* WorkflowInstance – A representation of a running workflow, so every time when the workflow is executed, the Runtime creates a new instance.
+* WorkflowTaskInstance –  A representation of a running user task or a system activity, so every time when the user task/system activity is executed, the Runtime creates a new instance.
+* WorkflowUserTask - a specialization of WorkflowTaskInstance. This entity is created when the Runtime executes the user task and an end-user chooses an action (for example, clicks an **Approve** button). This entity can be used for workflow overview pages and in an application logic.
+* WorkflowSystemTask – a specialization of WorkflowTaskInstance. This entity is created when the Runtime executes the system activity (for example, **Call microflow**) and is used to show that the microflow has been executed. 
+* WorkflowContext – a basic entity for the objects that will be used as context for the workflow. The specialization of this entity is used as a Workflow entity in its properties. 
+
+## Workflow Variables
 
 {{% todo %}}[Maria: I need more data on this topic]{{% /todo %}}
 
-Workflows have specific variables that are used in XPath:
+Workflows have dedicated variables that can be used in XPath and Expressions inside the Workflow Editor:
 
-* WorkflowData – is an instance of Workflow.Context
-* System.WorkflowInstance – can be used to filter when the workflow has started
+* `$workflowData` - an instance of a workflow entity (usually a specialization of `System.WorkflowContext`)
+* `$workflow` - an instance of a currently running workflow (`System.WorkflowInstance`)
+
+For example, you can use `$workflow` variable in the **Task name** of the user task and you have the following  following template in the Task name property:
+
+`A task for the process {1} that is due on {2}` , where `{1}` is `$workflow/WorkflowName`and `{2}` is `toString($workflow/DueDate)`
 
 ## 5 Workflow-Specific Activities in Microflows
 

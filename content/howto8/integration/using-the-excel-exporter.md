@@ -11,10 +11,10 @@ Exporting items from a data grid in a Mendix application in Excel format via an 
 
 This how-to explains how to do the following:
 
-* Download the App Store modules
+* Download the Marketplace modules
 * Configure your app to export the required data in the correct format
 
-## 2 Downloading the Required App Store Modules
+## 2 Downloading the Required Marketplace Modules
 
 In this section, you will learn how to download the necessary modules from the Mendix Marketplace. The modules required for this process are [Mx Model Reflection](/appstore/modules/model-reflection) and [Excel Exporter](/appstore/modules/excel-exporter).
 

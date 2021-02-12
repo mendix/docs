@@ -11,6 +11,12 @@ These release notes cover changes to deployment to [Mendix Cloud](/developerport
 For information on the current status of deployment to Mendix Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
 
+## 2021
+
+### February ??th, 2021
+
+* We added the ability to completely clear all the data from your database running in a licensed environment.
+
 ## 2020
 
 ### December 17th, 2020

@@ -30,7 +30,7 @@ The Studio Pro top bar contains the following items:
 
 * [Menus](#menus) 
 * [Buttons to run and view your app](#run-and-view)
-* [Links to the Developer Portal and App Store](#links) 
+* [Links to the Developer Portal and Marketplace](#links) 
 
 ### 2.1 Menus {#menus}
 
@@ -46,7 +46,7 @@ For more information on deployment in Mendix, see [Deployment](/developerportal/
 
 For more information on deploying your app and versioning it, see  the [Versioning a Project Deployed to the Cloud](using-version-control-in-studio-pro#versioning-project) section in *Using Version Control in Studio Pro*. 
 
-### 2.3 Links to Developer Portal & App Store {#links}
+### 2.3 Links to Developer Portal & Marketplace {#links}
 
 You can find links to the [Developer Portal](/developerportal/index) and [Marketplace](/appstore/index) in the top-right corner of Studio Pro.
 

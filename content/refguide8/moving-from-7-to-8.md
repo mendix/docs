@@ -55,7 +55,7 @@ How to update to Atlas 1.2.4:
 
 1. Check if you customized anything in your Studio Pro Atlas UI Resource module, as updating Atlas will override all of that module's content. Move your customized content out of the Atlas UI Module before updating.
 2. Check if you customized anything in the **theme** folder inside your Mendix project. If so, rename the **theme** folder to something else, like *theme_oldest*.
-3. Update Atlas by opening the App Store inside Studio Pro, search for *Atlas UI Resources*, click the **All Versions** pane, and download **Atlas UI Resources v1.2.4**.
+3. Update Atlas by opening the Marketplace inside Studio Pro, search for *Atlas UI Resources*, click the **All Versions** pane, and download **Atlas UI Resources v1.2.4**.
 4. When prompted, choose to replace your existing Atlas module.
 
 {{% alert type="info" %}} You do not have to move any customized files from **theme_oldest** to **theme** yet, as after migrating to Mx8, you will update Atlas again which will create a new **theme folder**.{{% /alert %}}
@@ -108,9 +108,9 @@ If you are using one, or both, of the deprecated data types Currency and Float y
 
 ### 4.7 Upgrade All Widgets
 
-To minimize the chance of problems, you should update all widgets and other App Store models used by your project to the latest version.
+To minimize the chance of problems, you should update all widgets and other Marketplace models used by your project to the latest version.
 
-Check if there is a newer version of your App Store modules available in the App Store. Read the version release notes in the App Store to see whether you need to perform specific actions when upgrading.
+Check if there is a newer version of your Marketplace modules available in the Marketplace. Read the version release notes in the Marketplace to see whether you need to perform specific actions when upgrading.
 
 In general you should not remove and reimport modules, unless this is recommended in the release notes. If you do remove and reimport them, you may lose data or configuration related to the module.
 
@@ -182,7 +182,7 @@ What does that mean in practice? For most app projects, nothing changes and ever
 
 In these few cases you need to make a simple fix before your code will compile again:
 
-* If it is a Java action in a module downloaded from the App Store that is causing errors, just download it again, or update it to the latest version
+* If it is a Java action in a module downloaded from the Marketplace that is causing errors, just download it again, or update it to the latest version
 * If it is your own Java action, then the fix is ever easier – just remove those postfixes from your Java code (in the previous example, `CustomerParameter1` just becomes `Customer` again).
 
 ### 8.1 Example of Differences

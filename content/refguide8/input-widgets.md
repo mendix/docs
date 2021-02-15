@@ -62,7 +62,7 @@ For more information on associations and their properties, see [Associations](as
 
 ## 2 Performing Basic Functions
 
-{{% snippet file="refguide/performing-basic-functions-widgets.md" %}}
+{{% snippet file="refguide8/performing-basic-functions-widgets.md" %}}
 
 ## 3 Read More
 

@@ -42,15 +42,15 @@ File manager properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
-{{% snippet file="refguide/common-section-link.md" %}}
+{{% snippet file="refguide8/common-section-link.md" %}}
 
 ### 2.2 Design Properties Section {#design-properties}
 
-{{% snippet file="refguide/design-section-link.md" %}} 
+{{% snippet file="refguide8/design-section-link.md" %}} 
 
 ### 2.3 Editability Section {#editability}
 
-{{% snippet file="refguide/editability-section-link.md" %}}
+{{% snippet file="refguide8/editability-section-link.md" %}}
 
 ### 2.4 General Section {#general}
 
@@ -84,11 +84,11 @@ Default: *False*
 
 ### 2.5 Label Section {#label}
 
-{{% snippet file="refguide/label-section-link.md" %}}
+{{% snippet file="refguide8/label-section-link.md" %}}
 
 ### 2.6 Visibility Section {#visibility}
 
-{{% snippet file="refguide/visibility-section-link.md" %}}
+{{% snippet file="refguide8/visibility-section-link.md" %}}
 
 ## 3 Read More
 

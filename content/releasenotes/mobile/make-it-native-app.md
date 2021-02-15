@@ -10,14 +10,15 @@ tags: ["Native", "Android", "iOS", "Apple", "Android"]
 For more information on the Make It Native app, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app).
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](/refguide/getting-the-make-it-native-app).
+
 ## Android 2.1.1
 
 **Release date: February 12th, 2021**
 
 ### Fixes
 
-* Fixed a bug with image picker generating duplicated images on the device.
-* Fixed a bug with soft keyboard getting hidden when selecting textfields in list views.
+* We fixed a bug where the image picker generated duplicated images on the device.
+* We fixed a bug where the soft keyboard would become hidden when selecting textfields in list views.
 
 ## Android 2.1.0 / iOS 2.2.0
 

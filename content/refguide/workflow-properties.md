@@ -7,7 +7,7 @@ tags: ["workflow", "workflows", "workflow properties", "Studio Pro"]
 
 ## 1 Introduction
 
-This document describes workflow properties. For details on what workflows are for and what kind of elements they can contain, see [Workflows](workflows).
+This document describes workflow properties. For details on what workflows are for and what kind of elements you can use there, see [Workflows](workflows).
 
 ## 2 Workflow Properties
 
@@ -48,7 +48,7 @@ For more information, see [Module Security](module-security).
 
 ### 2.2 Data Section {#data}
 
-**Workflow entity** is an entity that is used as a workflow context. It should be a **Workflow Context** entity from the **System** module or its **specialization**. 
+**Workflow entity** is an entity that is used as a workflow context. It should be a **Workflow Context** entity from the **System** module or its **specialization**. For more information on workflow-related entities in the System module, see the the [Workflow Entities in the System Module](workflows#workflow-entities) section in *Workflows*. 
 
 For more information on specializations and generalizations, see [Generalization vs One-to-One Associations](generalization-and-association).
 
@@ -85,7 +85,7 @@ To add a parameter to the **Workflow name** or the **Workflow description**, do 
 
     ![Specifying the Attribute](attachments/workflow-properties/specifying-attribute.png)
 
-    {{% alert type="info" %}}Make sure that the attribute you use in the expression is of string type.{{% /alert %}}
+    {{% alert type="info" %}}Make sure that the attribute you use in the expression is of the string type.{{% /alert %}}
 
 4. In the **Template** setting, write the text you would like to display and type **Index** of the parameter you would like to include. In the example below, to include a full name of the new hire being onboarded, you need to use {1} index:
 

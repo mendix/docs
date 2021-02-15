@@ -42,7 +42,7 @@ The workflow that is called by this activity.
 
 ### 3.2 Context Object
 
-An object which you want to use as a context.
+The object which you want to use as a context.
 
 ### 3.3 Variable Name, Object Name, or List Name {#name}
 

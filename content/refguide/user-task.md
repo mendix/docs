@@ -9,7 +9,7 @@ tags: ["workflow", "workflows", "user task", "task", "Studio Pro"]
 
 User task allows you to assign a workflow task to a certain user. 
 
-For example, you can add filters and assign a task to the user in the IT department. When the workflow reaches this user task, the task will appear in their inbox:
+For example, you can add filters and assign a task to a user in the IT department. When the workflow reaches this user task, the task will appear in their inbox:
 
 ![Task Inbox](attachments/user-task/task-inbox.jpg)
 
@@ -42,7 +42,7 @@ For more information on using parameters, see the [Parameters](#parameters) sect
 
 #### 2.1.3 Parameters
 
-Parameters are attributes the value of which will be displayed. To view **Parameters**, click the ellipsis icon next to the **Workflow name** or **Workflow description** in properties depending on where you would like to display these parameters. 
+Parameters are attributes the value of which will be displayed. To view **Parameters**, click the ellipsis icon next to the **Task name** or **Task description** in properties depending on where you would like to display these parameters. 
 
 Parameters have the following settings:
 
@@ -51,17 +51,21 @@ Parameters have the following settings:
 
 ##### 2.1.3.1 Adding New Parameters
 
-To add a parameter to the **Workflow name** or the **Workflow description**, do the following:
+To add a parameter to the **Task name** or the **Task description**, do the following:
 
-1. Click the ellipsis icon next to the **Workflow name** or the **Workflow description**.
+1. Click the ellipsis icon next to the **Task  name** or the **Task description**.
 
-2. In the **Edit workflow name** dialog box > **Parameters** section, click the **New** button. 
+2. In the **Edit task name/description** dialog box > **Parameters** section, click the **New** button. 
 
-3. In the **Template Parameter (String)** dialog box, specify the expression, and confirm your choice. 
+3. In the **Template Parameter (String)** dialog box, specify the expression, and confirm your choice:
 
-    {{% alert type="info" %}}Make sure that the attribute you use in the expression is of string type.{{% /alert %}}
+    ![Parameter Example](attachments/user-task/parameter-example.jpg)
 
-4. In the **Template** setting, write the text you would like to display and type **Index** of the parameter you would like to include. 
+    {{% alert type="info" %}}Make sure that the attribute you use in the expression is of the string type.{{% /alert %}}
+
+4. In the **Template** setting, write the text you would like to display and type **Index** of the parameter you would like to include. For example, you can add a template for the **Task description** specifying the name of the workflow and what the workflow due date is :
+
+    ![Task Description Example](attachments/user-task/task-description-example.jpg) 
 
 
 ##### 2.1.3.2 Performing Other Actions on Parameters
@@ -83,7 +87,7 @@ In addition to adding new parameters, you can perform the following actions on p
 
 ### 2.4 Outcomes Section {#outcomes}
 
-The outcomes property allows you to create new outcomes for the user task. These outcomes can be referred to by other elements, such as a button. For example, you have a process when you need to approve or reject a request. One button can refer to the **Approve** outcome of the user task, while another one can use the **Reject** outcome. 
+The outcomes property allows you to create new outcomes for the user task. These outcomes can be referred to by other elements, such as a button. For example, you have a process when you need to approve or reject a request. One button on a [task page](#task-page) can refer to the **Approve** outcome of the user task, while another one can use the **Reject** outcome. 
 
 ### 2.5 Task Page Section {#task-page}
 
@@ -108,7 +112,7 @@ Specifies the expression used to assign the user task. This option is displayed 
 
 #### 2.6.3 Microflow
 
-Specifies the microflow used to assign the  user task. This option is displayed only when the [Assign user task using](#assign-user-task) is set to **Microflow**.   
+Specifies the microflow used to assign the user task. This option is displayed only when the [Assign user task using](#assign-user-task) is set to **Microflow**.   
 
 ## 3 Read More
 

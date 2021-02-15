@@ -269,21 +269,21 @@ The **Call workflow** event executes the specified workflow.
 
 The following properties are specific for this event:
 
-* **Workflow** – a [workflow](workflows) that should be executed.
-* **Close page** – specifies whether the current page should be closed.
-* **Commit** – specifies whether the object should be committed when running a workflow. 
+* **Workflow** – A [workflow](workflows) that should be executed.
+* **Close page** – Specifies whether the current page should be closed.
+* **Commit** – Specifies whether the object should be committed when running a workflow. 
 
 ### 3.14 Open Workflow Page
 
-**Open workflow page** opens an overview page set for the **Workflow page** in [workflow properties](workflow-properties). An element calling this event should be placed in a data container connected to the **System.Workflow** entity. 
+**Open workflow page** opens an overview page set for the **Workflow page** in [workflow properties](workflow-properties). An element calling this event should be placed in a data container connected to the **System.WorkflowInstance** entity. 
 
-{{% todo %}}[Check if System.Workflow is still true]{{% /todo %}}
+For more information on workflow-related entities in the System module, see the the [Workflow Entities in the System Module](workflows#workflow-entities) section in *Workflows*. 
 
 ### 3.15 Open Task Page {#open-task-page}
 
-**Open task page** opens an overview page set for the [user task](user-task) in properties. An element calling this event should be placed in a data container connected to the **System.UserTask** entity. 
+**Open task page** opens an overview page set for the [user task](user-task) in properties. An element calling this event should be placed in a data container connected to the **System.WorkflowUserTask** entity. 
 
-{{% todo %}}[Check if System.UserTask is still true]{{% /todo %}}
+For more information on workflow-related entities in the System module, see the the [Workflow Entities in the System Module](workflows#workflow-entities) section in *Workflows*. 
 
 ### 3.16  Complete Task {#complete-task}
 
@@ -291,13 +291,13 @@ The **Complete task** event marks the specified user task in the workflow as com
 
 The following properties are specific for this event:
 
-* **Workflow task** – the [user task](user-task) that should be marked as completed.
+* **Workflow task** – The [user task](user-task) that should be marked as completed.
 
-* **Outcome** – lists the outcomes of the selected [user task](user-task) and follows the selected outcome. If the user task has only one outcome, the **Default** is set as an outcome and the property cannot be edited. 
+* **Outcome** – Lists the outcomes of the selected [user task](user-task) and follows the selected outcome. If the user task has only one outcome, the **Default** is set as an outcome and the property cannot be edited. 
 
-* **Close page** – specifies whether the current page should be closed.
+* **Close page** – Specifies whether the current page should be closed.
 
-* **Commit** – specifies whether the object should be committed when marking the task as completed.
+* **Commit** – Specifies whether the object should be committed when marking the task as completed.
 
 ## 4 Read More
 

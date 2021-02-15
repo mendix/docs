@@ -34,9 +34,9 @@ The **Caption** describes what happens in this element. It is displayed in the w
 
 **Condition** is configured based on an [expression](expressions). The expression should result in a Boolean or an enumeration.
 
-For the expression resulting in a Boolean, two paths are possible: **true** and **false**. For example, you can use the expression resulting in a Boolean if you want to follow different paths if a new employee is working from home (and either send their devices to the home address or set up a workstation in the office).
+For the expression resulting in a Boolean, two paths are possible: **true** and **false**. For example, you can use the expression resulting in a Boolean to follow different paths whether a new employee is working from home or from the office (and either send their devices to the home address or set up a workstation in the office).
 
-The number of conditions available for the enumeration type depends on the corresponding enumeration values. There is also the *empty* condition available for enumeration: if the enumeration parameter or an attribute of an object is unassigned, the sequence flow with the caption **(empty)** is followed. For example, you have several requests with low or high priority. The ones having high priority follow one path and should be approved by the Management team. Low priority requests follow a different path and can be approved by the Administration department. The requests that have no priority specified follow an empty path and can have a user task to assign priority first.   
+The number of conditions available for the enumeration type depends on the corresponding enumeration values. There is also the *empty* condition available: if the enumeration parameter or an attribute of an object is unassigned, the path with the caption **Empty** is followed. For example, you have several requests with a low or high priority. The ones with the high priority follow one path and should be approved by the Management team. Low priority requests follow a different path and can be approved by the Administration department. The requests that have no specified priority follow an Empty path where the user needs to assign the priority first.   
 
 ### 2.2 Outcomes Section {#outcome}
 

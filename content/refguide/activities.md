@@ -102,6 +102,8 @@ Integration activities can be used to integrate with other systems, for example 
 
 Workflow activities are used in relation to workflows and their user tasks. 
 
+{{% todo %}}[Add graphics when they are finalized]{{% /todo %}}
+
 | Graphic | Name             | Description                                                  |
 | ------- | ---------------- | ------------------------------------------------------------ |
 |         | Call workflow    | Calls a workflow. Arguments can be passed to the workflow and the result can be stored in a variable. |

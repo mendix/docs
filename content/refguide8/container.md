@@ -41,11 +41,11 @@ This property specifies whether to hide the container from screen readers or not
 
 ### 2.2 Common Section {#common}
 
-{{% snippet file="refguide/common-section-link.md" %}}
+{{% snippet file="refguide8/common-section-link.md" %}}
 
 ### 2.3 Design Properties Section{#design-properties}
 
-{{% snippet file="refguide/design-section-link.md" %}} 
+{{% snippet file="refguide8/design-section-link.md" %}} 
 
 ### 2.4 General Section {#general}
 
@@ -74,11 +74,11 @@ The **Render mode** determines which HTML5 tag will be used to show the containe
 
 The **On-click** property specifies the action that will be executed when the user clicks the container (either with with their mouse cursor or by pressing the <kbd>Enter</kbd> or <kbd>Space</kbd> keys when the container is in focus).
 
-{{% snippet file="refguide/events-section-link.md" %}}
+{{% snippet file="refguide8/events-section-link.md" %}}
 
 ### 2.6 Visibility Section {#visibility}
 
-{{% snippet file="refguide/visibility-section-link.md" %}}
+{{% snippet file="refguide8/visibility-section-link.md" %}}
 
 ## 4 Read More
 

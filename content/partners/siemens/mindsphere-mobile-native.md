@@ -334,7 +334,7 @@ Attention: You have to remove all `/r/n` from the json object before saving the 
 
 To generate the needed file you have to use Android Studio. In the chapter [build your own development app](./mindsphere-mobile-native#buildcustomapp) you have already cloned your github repo locally. Use the developer branch.
 
-1. Open the root folder of this repo in a terminal and if not already done run `npm install`.
+1. Open the **root** folder of this repo in a terminal and if not already done run `npm install`.
 
 1. Start Android Studio and open the **android** folder as a new project. Android Studio automatically starts some build process, for the next step you have to wait till these are done.
 

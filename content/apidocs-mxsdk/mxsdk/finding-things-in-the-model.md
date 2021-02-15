@@ -1,7 +1,7 @@
 ---
 title: "Find Things in the Model"
 parent: "manipulating-existing-models"
-tags: ["app store module", "module"]
+tags: ["marketplace", "app store module", "module"]
 ---
 
 ## 1 Introduction

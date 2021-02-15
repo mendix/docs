@@ -37,7 +37,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 The SAP app may already have the XSUAA Connector for SAP Business Technology Platform installed. Look in **Project... > App Store modules** for the module **SapAuthentication**. This is the XSUAA connector.
 
-If the XSUAA Connector for SAP Business Technology Platform is not already in your project, download it from the App Store. It can be found here: [XSUAA Connector for SAP Business Technology Platform](https://appstore.home.mendix.com/link/app/78091/).
+If the XSUAA Connector for SAP Business Technology Platform is not already in your project, download it from the Marketplace. It can be found here: [XSUAA Connector for SAP Business Technology Platform](https://appstore.home.mendix.com/link/app/78091/).
 
 For more information, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).
 

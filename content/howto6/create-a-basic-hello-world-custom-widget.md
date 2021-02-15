@@ -50,7 +50,7 @@ The following files are required to create a widget:
 ![](attachments/18448564/18579867.png) 
 
 1. Code your widget with Adobe Brackets (using the Widget Development Plugin).
-2. Package and deploy the widget in Adobe Brackets to the **widgets** folder of your test project by pressing F4. Widgets downloaded from the App Store are also placed inside the **widgets** folder.
+2. Package and deploy the widget in Adobe Brackets to the **widgets** folder of your test project by pressing F4. Widgets downloaded from the Marketplace are also placed inside the **widgets** folder.
 3. In the Modeler, press F4 to synchronize the project directory.
 4. In the Modeler, you need to set the properties of your custom widget and the widgets you imported. If you changed the properties of your widget, you have to update your widgets before being able to set the properties again.
 5. In the Modeler, press F5 to start the app locally or rerun the app.
@@ -142,7 +142,7 @@ To create a custom widget with Adobe Brackets, follow these steps:
 
     ![](attachments/18448564/18579877.png)
 3. Go to the **Location** directory that you entered in the widget creation screen.
-4. Open the **test** directory. You will find the Mendix test project for the custom widget called *test.mpr* here. You will also find a folder called **widgets**, which is where the widgets you download from the App Store as well as any custom widget packages go. 
+4. Open the **test** directory. You will find the Mendix test project for the custom widget called *test.mpr* here. You will also find a folder called **widgets**, which is where the widgets you download from the Marketplace as well as any custom widget packages go. 
 
     The *.mpk* package needs a specific folder structure for it to be unpacked properly when deploying. This is an example of the folder structure for the "Hello World" widget that you just created with the Widget Development Plugin:
 

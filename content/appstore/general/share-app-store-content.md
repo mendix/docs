@@ -2,7 +2,7 @@
 title: "Share Marketplace Content"
 category: "General Info"
 menu_order: 30
-tags: ["app store", "public app store", "private app store", widget", "module"]
+tags: ["marketplace", "app store", "public app store", "private app store", widget", "module"]
 description: "Describes how to create and share Mendix Marketplace content."
 aliases:
     - /developerportal/app-store/share-app-store-content.html

@@ -8,7 +8,7 @@ Mendix Apps can be packaged as hybrid mobile apps. You can publish those package
 
 With our Publish functionality in the Mendix Developer Portal, we can automatically package your Mendix App as an Adobe PhoneGap Build package and upload it for you to the PhoneGap Build service. The resulting hybrid mobile apps for Apple's iOS, Android and Windows Phone are then available for you to download from the Mendix Developer Portal.
 
-You require an account for Adobe PhoneGap Build, and for all the App Stores that you want to publish your Mendix App in. Finally, you require [app signing keys](managing-app-signing-keys). If you want to try out the publishing step, visit the Mobile topic in the [How-To](/howto6/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores) section.
+You require an account for Adobe PhoneGap Build, and for all the app stores that you want to publish your Mendix App in. Finally, you require [app signing keys](managing-app-signing-keys). If you want to try out the publishing step, visit the Mobile topic in the [How-To](/howto6/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores) section.
 
 ## Adobe PhoneGap Build
 

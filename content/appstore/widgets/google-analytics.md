@@ -2,7 +2,7 @@
 title: "Google Analytics"
 category: "Widgets"
 description: "Describes the configuration and usage of the Google Analytics widget, which is available in the Mendix Marketplace."
-tags: ["app store", "app store component", "widget", "google analytics", "eventtracker", "webmaster", "platform support"]
+tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "google analytics", "eventtracker", "webmaster", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

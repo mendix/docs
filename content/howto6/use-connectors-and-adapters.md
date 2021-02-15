@@ -6,7 +6,7 @@ tags: []
 
 ## 1 Introduction
 
-One of the strengths of Mendix is that it’s easy to connect your Mendix application with other systems. Our App Store is filled with all kinds of connectors and adapters. This how-to presents an overview of some of our connectors.
+One of the strengths of Mendix is that it’s easy to connect your Mendix application with other systems. Our Marketplace is filled with all kinds of connectors and adapters. This how-to presents an overview of some of our connectors.
 
 **This how-to will teach you how to do the following:**
 

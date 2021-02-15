@@ -2,7 +2,7 @@
 title: "Native Mobile Resources"
 category: "Modules"
 description: "Describes the configuration and usage of the Native Mobile Resources module, which is available in the Mendix Marketplace."
-tags: ["app store", "app store component", "native mobile resources", "native widget", "platform support"]
+tags: ["marketplace", "app store", "marketplace component", "app store component", "native mobile resources", "native widget", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

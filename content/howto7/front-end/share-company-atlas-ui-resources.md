@@ -90,7 +90,7 @@ To use the UI Resources module from teh Mendix Marketplace, follow these steps:
 
     ![](attachments/howto/sharing_appstore_modeler.png)
 
-    The available UI resources will appear in the middle section of the App Store. The **Private** label indicates that the UI resources are only available for your company.
+    The available UI resources will appear in the middle section of the Marketplace. The **Private** label indicates that the UI resources are only available for your company.
 
 2. Select the UI resources that have been created by your company:
 

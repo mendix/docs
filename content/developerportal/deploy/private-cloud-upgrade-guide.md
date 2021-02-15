@@ -139,11 +139,10 @@ kubectl -n $OPERATOR_NAMESPACE get storageplan --no-headers=true -o name | sed -
   xargs -I {} kubectl -n $OPERATOR_NAMESPACE patch storageplan {} --type=merge -p '{"spec":{"type":"on-demand"}}'
 ```
 
-##### 2.2.5.2 Updating the Mendix Operator Configuration (from versions 1.1.\*, 1.2.\*, 1.3.\*, and 1.4.\*){#update-configuration-1.1.0}
+##### 2.2.5.2 Updating the Mendix Operator Configuration (from versions 1.1.\* to 1.7.\*){#update-configuration-1.1.0}
 
 {{% alert type="info" %}}
-Follow this step only when upgrading from Mendix Operator 1.1.\*-1.7.\* only.
-If you're running a later version of the Mendix Operator, proceed [to the next step](#update-configuration-1.5.0).
+Follow this step only when upgrading from Mendix Operator 1.1.\* to 1.7.\* only.
 {{% /alert %}}
 
 Run the following commands to switch to the latest component versions:

@@ -59,7 +59,7 @@ A user role aggregates a number of access rights on data, forms and microflows. 
 
 Every user role has one or more [module roles](module-role), which means that users with that user role have all the access rights that are defined for those module roles. A typical user role has module role System.User and at least one other module role.
 
-The purpose of the distinction between user roles and module roles is to make a module self-contained (independent from the project in which it is defined or used), so that it can be reused in different projects and/or published to the App Store.
+The purpose of the distinction between user roles and module roles is to make a module self-contained (independent from the project in which it is defined or used), so that it can be reused in different projects and/or published to the Marketplace.
 
 End-users of your application only see the user roles and not the module roles.
 

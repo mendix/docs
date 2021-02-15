@@ -39,7 +39,7 @@ Currently you can work around this issue by scheduling 2 events that are running
 
 ### Can you tell me how to do that check in a Microflow?
 
-You can download the DateTimeLibrary App Store module to get an implementation for this.
+You can download the DateTimeLibrary Marketplace module to get an implementation for this.
 
 ### How is a non-localized date supposed to work?
 
@@ -68,7 +68,7 @@ Whether something is a local date or not is irrelevant in this case. Note that t
 
 ### I would like to plan an event at the start of office hours in a different time zone. How would I do this?
 
-You can do this by parsing your time string (for example: 2013-01-01 09:00:00) with a certain format and time zone set, using Java actions. The DateTimeLibrary App Store module also provides this functionality. It works in the same way as parseDateTime at [Parse and format date function calls](parse-and-format-date-function-calls) but has an additional parameter for a time zone.
+You can do this by parsing your time string (for example: 2013-01-01 09:00:00) with a certain format and time zone set, using Java actions. The DateTimeLibrary Marketplace module also provides this functionality. It works in the same way as parseDateTime at [Parse and format date function calls](parse-and-format-date-function-calls) but has an additional parameter for a time zone.
 
 ### What does the setting Scheduled event time zone do?
 

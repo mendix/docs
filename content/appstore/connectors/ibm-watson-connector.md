@@ -51,7 +51,7 @@ If you are running your app on IBM Cloud and the Watson resources have been adde
 
 #### 1.1.2 IBM Watson Connector Suite
 
-Import the [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/) into your project from the App Store. This will give you access to the connector actions within your microflows. IBM app templates for Watson have the suite already included.
+Import the [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/) into your project from the Marketplace. This will give you access to the connector actions within your microflows. IBM app templates for Watson have the suite already included.
 
 ![The list of IBM Watson connector actions available in Mendix microflows](attachments/ibm-watson-connector/connectorlist.png)
 
@@ -236,7 +236,7 @@ Note that the voice chosen should match the language of the **Text**. There is n
 This is an object of type AudioFormats_TextToSpeech which specifies the format of the audio data which is returned as the spoken text.
 
 {{% alert type="info" %}}
-All formats except BASIC and RAW can be played back in a Mendix app using the community-supported [Audio Video Playback](https://appstore.home.mendix.com/link/app/932/) widget available in the App Store.
+All formats except BASIC and RAW can be played back in a Mendix app using the community-supported [Audio Video Playback](https://appstore.home.mendix.com/link/app/932/) widget available in the Marketplace.
 {{% /alert %}}
 
 ### 4.6 Variable (Speech)

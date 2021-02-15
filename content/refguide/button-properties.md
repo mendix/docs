@@ -67,7 +67,7 @@ The **Role type** property determines the `aria-role` attribute value that will 
 
 The **Caption** property defines a text that will be shown on the button. The caption can contain parameters that are written between braces, e.g. {1}.  
 
-For more information on using parameters, see the [Parameters]() section below. 
+For more information on using parameters, see the [Parameters](#parameters) section below. 
 
 #### 2.5.2 Parameters {#parameters}
 
@@ -206,7 +206,7 @@ To add items to a drop-down buttons, do the following:
    3. Select an on-click event to be performed when the end-user clicks this item.
    4. Click **OK**.
 4. In the **Edit Items** dialog box, click **OK** to save your changes and add new item. 
-  
+
 
 
 ### 2.7 Visibility Section {#visibility}

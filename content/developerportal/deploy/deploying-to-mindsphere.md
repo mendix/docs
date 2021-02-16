@@ -365,10 +365,10 @@ If you are on a **Start for Free** tenant, additional MindSphere API roles are a
 If you are on a **Developer** tenant, no additional MindSphere API roles are assigned. The granted access to your app is shown in the registration summary page.
 {{% /alert %}}
 
-Please note, for further configuration of your registration e.g. CSPs or additional roles, please use the Developer Cockpit.
+Please note, for further configuration of your registration, for example, CSPs or additional roles, please use the Developer Cockpit.
 
 {{% alert type="info" %}}
-You can have multiple versions of your app within the Developer Cockpit, for example versions with different configurations or roles and scopes. 
+You can have multiple versions of your app within the Developer Cockpit, for example, versions with different configurations or roles and scopes. 
 
 The deployment registered via the **Auto Registration** process is *always mapped to the version created during the process*. If you want to create additional versions of your app, you can do this by manually creating a new version within the Developer Cockpit.
 {{% /alert %}}

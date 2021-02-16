@@ -416,6 +416,6 @@ Now each app has its own license, even if it runs under the same user account as
 * Now when starting the console and the service already runs, the console connects the service and shows the log.
 * Server and Runtime path combined to Mendix path.
 * Java heap size setting added.
-* Added much default values for settings (e.g. folders, port numbers, service settings).
+* Added much default values for settings (for example, folders, port numbers, service settings).
 * Support for application constants.
 * Now user name and password may be empty (when SQL Server integrated security is used).

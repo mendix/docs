@@ -318,7 +318,7 @@ Child Element | Description
 --- | ---
 `caption` | This element is used to add the name of the property. This is how it will show up in the Properties list in the Modeler. For example: `<caption>Hello World string</caption>`.
 `category` | This element defines in what category this property will be shown in the Properties list in the  Modeler. Common categories are “Behavior,” “Appearance,” and “Data source”. For example: `<category>Data source</category>`.
-`description` | This element is used to add a useful description of the property so that the end-user knows what it’s for. For example: `<description>Add the string you want to print on your screen here (e.g.: Hello World!).</description>`.
+`description` | This element is used to add a useful description of the property so that the end-user knows what it’s for. For example: `<description>Add the string you want to print on your screen here (for example,: Hello World!).</description>`.
 
 ## 6 Exploring the JavaScript File
 

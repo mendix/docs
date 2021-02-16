@@ -61,7 +61,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 * We have added support for deploying to the Azure Netherlands region of SAP Cloud Platform.
     * **Object storage is only supported in the Azure Netherlands region for  Mendix version 8.7.0 and above**
 * We have added a log of all deployment activities which are carried out on your SAP environments to the environments page of apps which are deployed to SAP Cloud Platform.
-* We have added the ability to specify a custom URL (e.g. `appname.subdomain.domain.com`) where the user will be redirected after signing on using XSUAA, instead of being redirected to the generated URL (e.g. `appname.cfapps.eu10.hana.ondemand.com`) of the app.
+* We have added the ability to specify a custom URL (for example, `appname.subdomain.domain.com`) where the user will be redirected after signing on using XSUAA, instead of being redirected to the generated URL (for example, `appname.cfapps.eu10.hana.ondemand.com`) of the app.
 
 ### January 3rd, 2020
 

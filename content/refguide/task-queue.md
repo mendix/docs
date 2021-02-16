@@ -150,7 +150,7 @@ Invocations from Java actions are not found.
 
 Task queues have the following limitations:
 
-* Microflows that are executed in the background execute as soon as possible in the order they were created, but possibly in parallel. They are consumed in FIFO order, but then executed in parallel in case of multiple threads. There is no way to execute only a single microflow at any point in time (i.e. ensure tasks are run sequentially), unless the number of threads is set to 1 and there's only a single runtime node.
+* Microflows that are executed in the background execute as soon as possible in the order they were created, but possibly in parallel. They are consumed in FIFO order, but then executed in parallel in case of multiple threads. There is no way to execute only a single microflow at any point in time (meaning, ensure tasks are run sequentially), unless the number of threads is set to 1 and there's only a single runtime node.
 * Microflows that are executed in the background can *only* use the following types of parameters: Boolean, Integer/Long, Decimal, String, Date and time, Enumeration, committed Persistent Entity.
 * Microflows that are executed in the background use a sudo/system context with all permissions. It is not possible to use a user context with limited permissions.
 * Background microflows will start execution as soon as the transaction in which they are created is completed. This ensures that any data that is needed by the background microflow is committed as well. It is not possible to start a background microflow immediately, halfway during a transaction. Note that if the transaction is rolled back, the task is not executed at all.

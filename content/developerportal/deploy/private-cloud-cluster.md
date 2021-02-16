@@ -301,7 +301,7 @@ If the MinIO URL is specified with an `http` schema, TLS will not be used.
 
 **S3 (create bucket and account with inline policy)** will connect to an AWS account to create S3 buckets and associated IAM user accounts. Each app environment will receive a dedicated S3 bucket and an IAM user account with an inline policy which only has access to that specific S3 bucket. The Mendix Operator will use a **management IAM user account** to create and delete S3 buckets and IAM user accounts. You will need to provide all the information relating to your Amazon S3 storage such as plan name, region, access key, and secret key.
 
-To enable this mode, select the following options: **Create Bucket**, **Create User**, **Create inline policy**.
+To enable this mode, select the following options: **Create S3 Bucket per environment**, **Create account (IAM user) per environment**, **Create inline policy**.
 
 The **management IAM user account** needs to have the following IAM policy (replace `<account_id>` with your AWS account number):
 
@@ -347,7 +347,7 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide)
 
 **S3 (create bucket and account with existing policy)** will connect to an AWS account to create S3 buckets and associated IAM user accounts. Each app environment will receive a dedicated S3 bucket and an IAM user account. An existing policy, which you specify, will be attached to the account. The Mendix Operator will use a **management IAM user account** to create and delete S3 buckets and IAM user accounts. You will need to provide all the information relating to your Amazon S3 storage such as plan name, region, policy ARN, access key, and secret key.
 
-To enable this mode, select the following options: **Create Bucket**, **Create User**.
+To enable this mode, select the following options: **Create S3 Bucket per environment**, **Create account (IAM user) per environment**.
 
 Create an IAM policy that will be attached to app users and copy its Policy ARN (specify this value in the **Attach Policy ARN** field):
 
@@ -449,7 +449,7 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide)
 
 **S3 (create account with inline policy)** will connect to an AWS account to IAM user accounts. Each app environment will receive a dedicated IAM user account with an inline policy. This inline policy only allows access to objects in the existing S3 bucket if the object name prefix matches the environment's account name (IAM user name). The Mendix Operator will use a **management IAM user account** to create and delete IAM user accounts. You will need to provide all the information relating to your Amazon S3 storage such as plan name, bucket name, region, access key, and secret key.
 
-To enable this mode, select the following options: **Create User**, **Create Inline Policy**.
+To enable this mode, select the following options: **Create account (IAM user) per environment**, **Create Inline Policy**.
 
 The **management IAM user account** needs to have the following IAM policy (replace `<account_id>` with your AWS account number):
 
@@ -486,7 +486,7 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide)
 
 **S3 (create account with existing policy)** will connect to an AWS account to IAM user accounts. Each app environment will receive a dedicated IAM user account. The specified existing policy will be attached to the account and should only allow access to objects in the existing S3 bucket if the object name prefix matches the environment's account name (IAM user name). The Mendix Operator will use a **management IAM user account** to create and delete IAM user accounts. You will need to provide all the information relating to your Amazon S3 storage such as plan name, bucket name, region, policy ARN, access key, and secret key.
 
-To enable this mode, select the following options: **Create User**.
+To enable this mode, select the following options: **Create account (IAM user) per environment**.
 
 Create an IAM policy that will be attached to app environment IAM user accounts (replacing `<bucket_name>` with the name of the existing bucket) and copy its Policy ARN (specify this value in the **Attach Policy ARN** field):
 

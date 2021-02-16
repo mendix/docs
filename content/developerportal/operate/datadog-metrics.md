@@ -44,8 +44,10 @@ The metrics from your app's environment are supplied in the following namespaces
 * jmx – metrics from the Mendix runtime
 * jvm – metrics from the Java virtual machine in which the Mendix runtime runs (see the Datadog [Java Runtime Metrics](https://docs.datadoghq.com/tracing/runtime_metrics/java/) documentation)
 * postgresql – database metrics specific to PostgreSQL databases (see the Datadog [Postgres](https://docs.datadoghq.com/integrations/postgres/) documentation)
-* synthetics – metrics specifically labelled as coming from tests (see the Datadog documentation [Synthetics](https://docs.datadoghq.com/synthetics/))
-* system – metrics from the base system running on the platform or PaaS (see the Datadog documentation [System Check](https://docs.datadoghq.com/integrations/system/))
+* system – metrics from the base system running on the platform or PaaS (see the Datadog documentation [System Check](https://docs.datadoghq.com/integrations/system/)) — Mendix only supplies system.proc information as platform limitations render the other information inaccurate
+
+Datadog also has a *synthetics* namespace where you can send metrics specifically labelled as coming from tests (see the Datadog documentation [Synthetics](https://docs.datadoghq.com/synthetics/)), but the Mendix agent does not create metrics for this.
+
 
 #### 2.1.2 Useful Metrics for Mendix Apps
 
@@ -354,7 +356,7 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 	* **Name**: *DD_LOG_LEVEL*
 	* **Value**: *INFO*
 
-	This will ensure that some messages are sent to Datadog. You can change the log level later once you have confirmed that Datadog is receiving them.
+	This will ensure that some messages are sent from the Mendix Datadog agent to Datadog – for example, that the agent has started. You can change the log level later once you have confirmed that Datadog is receiving them. See [Log Levels](#log-levels), below for more information on valid values for this custom environment variable.
 
 8. By default, the Datadog integration defaults to the US region (datadoghq.com). If you want to use a Datadog site which is another region, set the `DD_SITE` environment variable to the required site. For example, for the EU Datadog site, set `DD_SITE` to `datadoghq.eu`.
 
@@ -364,9 +366,9 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 
 ## 5 Additional Information{#additional-info}
 
-### 5.1 Log Levels
+### 5.1 Log Levels{#log-levels}
 
-The valid values for **DD_LOG_LEVEL** are:
+The **DD_LOG_LEVEL** sets the level for which log messages from the *Mendix Datadog agent* will be sent to Datadog. It does not affect the [log level set in your app](/howto/monitoring-troubleshooting/log-levels). Valid values are:
 
 * CRITICAL
 * ERROR

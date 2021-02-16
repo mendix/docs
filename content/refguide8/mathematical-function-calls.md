@@ -308,7 +308,7 @@ Or, use a division for a specific root:
 
 ## 9 abs
 
-Calculates the absolute value of a number (i.e. not negative).
+Calculates the absolute value of a number (meaning, not negative).
 
 ### 9.1 Input Parameters
 

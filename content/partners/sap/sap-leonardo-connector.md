@@ -355,13 +355,13 @@ An object of entity type *LeonardoMachineLearning.Translation*. This must be ass
 |Entity/Attribute|Description|
 |---|---|
 |**Translation**|One object which is associated with target languages and text to be translated, grouped into units|
-|SourceLanguage|The language of the source text, identified by a two character string (e.g. 'en' for English)|
+|SourceLanguage|The language of the source text, identified by a two character string (for example, 'en' for English)|
 |**Units**|A way of grouping text to be translated|
 |**Original Value**|One or more objects containing fragments of text to be translated|
 |Value|A string to be translated|
 |**Target Languages**|A way of grouping the target languages for the translation|
 |**TargetLanguagesValue**|One or more objects containing a target language for the translation|
-|Value|A target language for the translation, identified by a two character string (e.g. 'de' for German)|
+|Value|A target language for the translation, identified by a two character string (for example, 'de' for German)|
 
 For example, to translate the two texts *Hello* and *Goodbye* from English to both Spanish and German, you need to create objects as shown below:
 

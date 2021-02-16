@@ -31,7 +31,7 @@ Before you can start with this how-to, please make sure you have completed the f
 
 ## 3 Preparation
 
-The JDBC driver jars, for the databases you want to connect to, must be placed inside the userlib directory of your Mendix application. So if you want to connect to Amazon RDS PostgreSQL database (For e.g. `jdbc:postgresql://xyz-rds-instance.ccnapcvoeosh.eu-west-1.rds.amazonaws.com:5432/postgres`), you need to place PostgreSQL Jdbc driver jar inside the userlib folder.
+The JDBC driver jars, for the databases you want to connect to, must be placed inside the userlib directory of your Mendix application. So if you want to connect to Amazon RDS PostgreSQL database (For for example, `jdbc:postgresql://xyz-rds-instance.ccnapcvoeosh.eu-west-1.rds.amazonaws.com:5432/postgres`), you need to place PostgreSQL Jdbc driver jar inside the userlib folder.
 
 ## 4 Using Execute Statement Action in a Microflow
 

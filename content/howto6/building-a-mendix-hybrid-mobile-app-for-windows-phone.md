@@ -28,7 +28,7 @@ To create a Phonegap Build package using a provided template, follow these steps
 1. Download the Phonegap Build template [here (55KB)](./attachments/wp8_phonegap_build_template.zip).
 2. Extract the archive so you can change some files within it. <br>
 3. Replace these variables in the `config.xml` file:
-    * {% raw %}{{identifier}}{% endraw %} - The app identifier. Must be unique for your application and must be reverse-domain name style (e.g. com.yourcompany.yourapp)
+    * {% raw %}{{identifier}}{% endraw %} - The app identifier. Must be unique for your application and must be reverse-domain name style (for example, com.yourcompany.yourapp)
     * {% raw %}{{version}}{% endraw %} - A major/minor/patch style version for the app with three numbers. For example 0.0.1
     * {% raw %}{{name}}{% endraw %} - The name of your app
     * {% raw %}{{description}}{% endraw %} - The description of your app

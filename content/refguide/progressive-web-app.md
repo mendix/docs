@@ -29,7 +29,7 @@ To be able to fully test PWA functionalities, the app needs to be deployed to th
 
 ### 2.1 Publish as a Progressive Web App
 
-When checked and deployed to the cloud, the app registers a [service worker](https://developers.google.com/web/fundamentals/primers/service-workers) that is the basis for PWAs. On offline navigation profiles, this option is always enabled. In online navigation profiles, enabling this option will also give the end-user a custom page when the device has no connection. Where desired, this page can be customized by adding an *offline.html* page to the theme folder (e.g. *theme/offline.html*). Note that this page should not load any other resources over the network.
+When checked and deployed to the cloud, the app registers a [service worker](https://developers.google.com/web/fundamentals/primers/service-workers) that is the basis for PWAs. On offline navigation profiles, this option is always enabled. In online navigation profiles, enabling this option will also give the end-user a custom page when the device has no connection. Where desired, this page can be customized by adding an *offline.html* page to the theme folder (for example, *theme/offline.html*). Note that this page should not load any other resources over the network.
 
 ### 2.2 Allow "Add to Home Screen" Prompt
 

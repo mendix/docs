@@ -41,7 +41,7 @@ Button properties consist of the following sections:
 
 #### 2.4.1 Caption {#caption}
 
-The **Caption** property defines a text that will be shown on the button. The caption can contain parameters that are written between braces, e.g. {1}.  
+The **Caption** property defines a text that will be shown on the button. The caption can contain parameters that are written between braces, for example, {1}.  
 
 For more information on using parameters, see the [Parameters]() section below. 
 

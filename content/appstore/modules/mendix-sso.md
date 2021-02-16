@@ -1,8 +1,8 @@
 ---
 title: "Mendix SSO"
 category: "Modules"
-description: "Describes the configuration and usage of the Mendix SSO module, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "sso", "single sign on", "platform support"]
+description: "Describes the configuration and usage of the Mendix SSO module, which is available in the Mendix Marketplace."
+tags: ["marketplace", "app store", "marketplace component", "app store component", "sso", "single sign on", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

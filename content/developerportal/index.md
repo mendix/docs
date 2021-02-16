@@ -1,7 +1,7 @@
 ---
 title: "Developer Portal Guide"
 description: "Describes the sections of the Mendix Developer Portal and links to more detailed documents in the guide."
-tags: ["Mendix", "Developer Portal", "Platform Services", "Buzz", "Apps", "People", "Community", "App Store", "Academy", "Forum", "Docs"]
+tags: ["mendix", "developer portal", "platform services", "buzz", "apps", "community", "app store", "marketplace", "academy", "forum", "docs", "documentation"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
@@ -52,9 +52,9 @@ In [Community](community-tools/index), you can explore various resources for the
 
 ![](attachments/developerportal-community.jpg)
 
-## 7 App Store
+## 7 Marketplace
 
-In the [Mendix App Store](/appstore/general/app-store-overview), you can share Mendix content you have created, check out complete sample apps that can be used right away, and browse connectors, [widgets](https://appstore.home.mendix.com/link/app/48902/), and modules that can be used to build custom apps more quickly:
+In the [Mendix Marketplace](/appstore/general/app-store-overview), you can share Mendix content you have created, check out complete sample apps that can be used right away, and browse connectors, [widgets](https://appstore.home.mendix.com/link/app/48902/), and modules that can be used to build custom apps more quickly:
 
 ![](attachments/developerportal-app-store.jpg)
 

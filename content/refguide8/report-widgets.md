@@ -33,7 +33,7 @@ The **Report widgets** category contains the following widgets:
 
 ## 2 Performing Basic Functions
 
-{{% snippet file="refguide/performing-basic-functions-widgets.md" %}}
+{{% snippet file="refguide8/performing-basic-functions-widgets.md" %}}
 
 ## 3 Read More
 

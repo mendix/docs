@@ -13,6 +13,23 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2021
 
+### February 9th, 2021
+
+#### Improvements
+
+* We improved the speed of the **App Templates** page. After you click **Create App**, the templates appear instantly now.
+
+### February 5th, 2021
+
+#### Improvements
+
+* It is now possible to add or remove labels in the [Story Details](/developerportal/collaborate/stories#story-details) page.
+* We added a link to your app project’s [environments](/developerportal/deploy/environments) in the app tile on [My Apps](/developerportal/apps-list/#my-apps)
+
+#### Fixes
+
+* We fixed an issue where new Mendix Admins did not get access to environment nodes. (Ticket 114913)
+
 ### February 4th, 2021
 
 #### New Features
@@ -134,7 +151,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Improvements
 
-* We implemented the second increment in renaming the default **End-user** App Team role to [Guest](/developerportal/app-roles/index#app-team-roles).
+* We implemented the second increment in renaming the default **End-user** App Team role to [Guest](/developerportal/collaborate/app-roles#app-team-roles).
 
 #### Fixes
 
@@ -146,7 +163,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 * The [new Stories UI](/developerportal/collaborate/stories) has been improved with various sections. The [old Stories UI](/developerportal/collaborate/stories#old) will be made unavailable soon. We encourage you to turn your tasks that are still available in the old Stories UI into new stories before the old UI is inaccessible.
 * We improved performance on story-related actions such as drag-and-drop and status changes on large app projects with many deleted items.
-* We renamed the default **End-User** App Team role to [Guest](/developerportal/app-roles/index#app-team-roles) to better distinguish App Team roles from app user roles.
+* We renamed the default **End-User** App Team role to [Guest](/developerportal/collaborate/app-roles#app-team-roles) to better distinguish App Team roles from app user roles.
 * We removed the list appearance of the [My Company's Apps](/developerportal/apps-list/#my-company-apps) page.
 
 #### Fixes 

@@ -20,7 +20,7 @@ Native mobile applications have faster performance and give you the ability to u
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install the latest version of Mendix Studio Pro from the [App Store](https://appstore.home.mendix.com/link/modelers/)
+* Install the latest version of Mendix Studio Pro from the [Marketplace](https://appstore.home.mendix.com/link/modelers/)
 * Install the [Git](https://git-scm.com/downloads) command line tool
 * Install npm's [node js](https://nodejs.org)
 * Install [Native Builder v3.1.0](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) (this tutorial can only be completed using Native Builder v3.1.0 or higher)
@@ -238,6 +238,20 @@ The dependency is split into two parts: the native device part, and the client J
 This will create a **node_module** folder inside your **actions** folder. There is a known issue that when you try to commit the *node_modules* folder using Apache Subversion, there could be problems if your commit contains a large number of files. To solve this, try removing unnecessary files before committing.
 
 {{% /alert %}}
+
+#### 3.4.1 Declaring Native Dependencies
+
+To make Mendix install and link native dependencies automatically while creating production-like builds of a native app, create JSON files next to your JavaScript actions: `HasNFCSupport.json` and `ReadNFCTag.json`. Define the same native dependencies in each of them:
+
+```json
+{
+    "nativeDependencies": {
+        "react-native-nfc-manager": "1.2.2"
+    }
+}
+```
+
+For more information see [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/native-dependencies).
 
 ### 3.5 Creating NFC JavaScript Actions {#nfc-ja-action}
 
@@ -487,5 +501,6 @@ The Native Builder will locally run MxBuild. The output is a *bundles.js* file w
 * [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app)
 * [JavaScript Actions Reference Guide](/refguide/javascript-actions)
 * [How To Build JavaScript actions](/howto/extensibility/build-javascript-actions)
+* [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/native-dependencies)
 * Google's [Read and write NFC Tags NFC Tools](https://play.google.com/store/apps/details?id=com.wakdev.wdnfc)
 * GitHub's [NFC React Native Library](https://github.com/whitedogg13/react-native-nfc-manager)

@@ -41,7 +41,7 @@ Currently you can work around this issue by scheduling 2 events that are running
 
 ## 9 How Is a Non-Localized Date Supposed to Work?
 
-Per attribute of type **Date and time** you can specify whether you want the date and time to be localized. Both localized and non-localized attributes are stored in UTC but only localized attributes are shown in the time zone of the user when displaying (or picking) their value, for example in the client or in generated documents. Use non-localized attributes if you are not interested in the time component (e.g. birthdays) or if you want a date to look exactly the same all over the world. Otherwise, the date could shift because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the USA.
+Per attribute of type **Date and time** you can specify whether you want the date and time to be localized. Both localized and non-localized attributes are stored in UTC but only localized attributes are shown in the time zone of the user when displaying (or picking) their value, for example in the client or in generated documents. Use non-localized attributes if you are not interested in the time component (for example, birthdays) or if you want a date to look exactly the same all over the world. Otherwise, the date could shift because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the USA.
 
 ## 10 If I Assign a Non-Localized Date the Value of Token `[%CurrentDateTime%]`, What Should I Be Seeing in the Client if I Am in EST?
 

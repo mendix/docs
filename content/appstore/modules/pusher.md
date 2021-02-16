@@ -2,7 +2,7 @@
 title: "Pusher"
 category: "Modules"
 description: " "
-tags: ["app store", "app store component", "pusher", "platform support"]
+tags: ["marketplace", "app store", "marketplace component", "app store component", "pusher", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -56,7 +56,7 @@ Make sure you have different apps (keys) created for each app and environment (d
 
 ## 3 Configuration
 
-To use this module after importing it from the App Store, follow these steps:
+To use this module after importing it from the Marketplace, follow these steps:
 
 1. Add the **Pusher User** [module role](/refguide/module-security#module-role) to the relevant app project security [user role](/refguide/security#user-role).
 2. Update the constants in the **Configuration** folder with the keys of the app.

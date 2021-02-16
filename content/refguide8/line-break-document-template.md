@@ -14,4 +14,4 @@ A new line will be started at the insertion of a line break.
 
 ## 2 Common Properties
 
-{{% snippet file="refguide/name-property.md" %}}
+{{% snippet file="refguide8/name-property.md" %}}

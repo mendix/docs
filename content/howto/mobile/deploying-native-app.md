@@ -184,14 +184,14 @@ Depending on whether you chose to sign your iOS app or not, the output of the bu
 
 To be able to upload your app to App Store Connect, you will have to have set up a new app using the App Store Connect website. While there, use the **app name** and **app id** you used to build your app. For further instruction, see the [App Store Connect Guide to adding a new app](https://help.apple.com/app-store-connect/en.lproj/static.html#devbec4892b7).
 
-When signing your iOS app, an *IPA* file is generated. To upload an *IPA* to the App Store, XCode includes a command line tool. Assuming XCode is installed and the extra command line tool is set up, the command to upload the *IPA* is the following:
+When signing your iOS app, an *IPA* file is generated. To upload an *IPA* to the Apple App Store, XCode includes a command line tool. Assuming XCode is installed and the extra command line tool is set up, the command to upload the *IPA* is the following:
 
 ```
 xcrun altool --upload-app --type ios --file "path/to/application.ipa"
 --username "YOUR_APPSTORE_USER_EMAIL" --password "YOUR_APPSTORE_PASSWORD"
 ```
 
-Replace `file "path/to/application.ipa"` with the absolute path to your IPA file, `username` with your developer app store email address, and `password` with your App Store password.
+Replace `file "path/to/application.ipa"` with the absolute path to your IPA file, `username` with your developer app store email address, and `password` with your Apple App Store password.
 
 The command will first verify your IPA is packaged correctly and ready to be shipped, and then will then upload it to TestFlight for further processing.
 
@@ -199,7 +199,7 @@ The command will first verify your IPA is packaged correctly and ready to be shi
 
 Local signing is useful if you only want to test your app on a device, or you do not have a distribution certificate and have run out of build minutes on App Center when signing with a developer certificate.
 
-In order to deploy the *nativeTemplate.xcarchive* on a device or on the App Store, an Apple developer account and development team is required. If one is available, do the following:
+In order to deploy the *nativeTemplate.xcarchive* on a device or on the Apple App Store, an Apple developer account and development team is required. If one is available, do the following:
 
 1. Using Xcode, double-click the *nativeTemplate.xcarchive* file. It should open with the built-in **Application Loader** software.
 1.  Click the *Distribute App* button to start the local signing flow:

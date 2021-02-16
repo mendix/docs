@@ -59,7 +59,7 @@ Mendix supports the Mendix Platform, and we expect you to support the applicatio
 * Developing code on your behalf
 * Debugging or troubleshooting your applications
 * Analyzing and troubleshooting the health and performance of your applications or your infrastructure, except when we suspect an underlying issue exists in the Mendix Platform
-* Troubleshooting Mendix community-developed components from the Mendix App Store
+* Troubleshooting Mendix community-developed components from the Mendix Marketplace
 
 For more information, see the [Support for Different Deployment Strategies](#support-by-strategy) section below.
 
@@ -73,7 +73,7 @@ Please read more about this in [Control Center](/developerportal/control-center/
 
 ### 5.2 Technical Contacts
 
-You need to appoint a [technical contact](/developerportal/app-roles#technical-contact) for each of your applications running in the Mendix Public Cloud and Cloud Dedicated. The technical contact checks the performance of the applications in the Developer Portal and receives alerts from the Mendix Developer Portal based on errors and warnings in the application. It is possible to have other team members receive these alerts as well.
+You need to appoint a [technical contact](/developerportal/collaborate/app-roles#technical-contact) for each of your applications running in the Mendix Public Cloud and Cloud Dedicated. The technical contact checks the performance of the applications in the Developer Portal and receives alerts from the Mendix Developer Portal based on errors and warnings in the application. It is possible to have other team members receive these alerts as well.
 Reading these alerts carefully and acting upon them is important, as they can affect the performance of your app. For more information on alerts, see [Alerts](/developerportal/operate/monitoring-application-health).
 
 ### 5.3 Training
@@ -94,16 +94,16 @@ Mendix supports the current major release and the two prior major releases (and 
 
 ## 9 Support for Different Deployment Strategies {#support-by-strategy}
 
-With our Multi-Cloud strategy, Mendix allows the apps that you build to be deployed in any Cloud. This can be in the [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy), Mendix Dedicated Cloud, [Mendix Private Cloud](/developerportal/deploy/private-cloud), [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform), or in other on-premises and Cloud architectures.
+With our Multi-Cloud strategy, Mendix allows the apps that you build to be deployed in any Cloud. This can be in the [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy), Mendix Dedicated Cloud, [Mendix Private Cloud](/developerportal/deploy/private-cloud), [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform), or in other on-premises and Cloud architectures.
 
 The full stack is depicted in the table below. This indicates which components are **Mendix** supported, or supported by a **Mendix Partner** or 3rd party. If no support is indicated, then you will need to arrange support of this component yourself. Each of the components is described in more detail in [Components of the Mendix Stack](#components), below.
 
 <!-- TABLE BELOW CONVERTED TO HTML SO THAT FIRST COLUMN CAN BE WIDER
-| | Public Cloud | Cloud Dedi&shy;cated | Private Cloud - Con&shy;nected | Private Cloud - Stand&shy;alone | SAP Cloud Platform | Cloud Foundry/ Docker & Kuber&shy;netes | Tradi&shy;tional |
+| | Public Cloud | Cloud Dedi&shy;cated | Private Cloud - Con&shy;nected | Private Cloud - Stand&shy;alone | SAP BTP | Cloud Foundry/ Docker & Kuber&shy;netes | Tradi&shy;tional |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Appli&shy;cation** | | | | | | | |
-| **Platform Support&shy;ed App Store content** | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix |
-| **Commun&shy;ity Support&shy;ed App Store content** | | | | | | | |
+| **Platform Support&shy;ed Marketplace content** | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix |
+| **Commun&shy;ity Support&shy;ed Marketplace content** | | | | | | | |
 | **Runtime** | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix |
 | **Deploy&shy;ment Pipe&shy;line** | Mendix | Mendix | Mendix | | | | |
 | **Logs/ Metrics** | Mendix | Mendix | | | Mendix Partner | | |
@@ -123,7 +123,7 @@ The full stack is depicted in the table below. This indicates which components a
 <th>Cloud Dedi­cated</th>
 <th>Private Cloud - Con­nected</th>
 <th>Private Cloud - Stand­alone</th>
-<th>SAP Cloud Plat&shy;form</th>
+<th>SAP BTP</th>
 <th>Cloud Foundry/ Docker &amp; Kuber­netes</th>
 <th>Tradi­tional</th>
 </tr>
@@ -142,7 +142,7 @@ The full stack is depicted in the table below. This indicates which components a
 </tr>
 
 <tr>
-<td><strong>Platform Support­ed App Store content</strong></td>
+<td><strong>Platform Support­ed Marketplace content</strong></td>
 <td>Mendix</td>
 <td>Mendix</td>
 <td>Mendix</td>
@@ -153,7 +153,7 @@ The full stack is depicted in the table below. This indicates which components a
 </tr>
 
 <tr>
-<td><strong>Commun­ity Support­ed App Store content</strong></td>
+<td><strong>Commun­ity Support­ed Marketplace content</strong></td>
 <td></td>
 <td></td>
 <td></td>
@@ -279,9 +279,9 @@ Mendix Support does not have access to app health, logs, graphs and monitoring. 
 ![](attachments/index-mendix-support/private-cloud.png)
 {{% /image_container %}}
 
-### 9.3 SAP Cloud Platform
+### 9.3 SAP Business Technology Platform
 
-Mendix provides an integration with the SAP Cloud Foundry environment of SAP Cloud Platform. Mendix applications are built to run on SAP Cloud Platform using the Mendix Cloud Foundry buildpack. Please check out the supported components in [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform).
+Mendix provides an integration with the SAP Cloud Foundry environment of SAP Business Technology Platform (SAP BTP). Mendix applications are built to run on SAP BTP using the Mendix Cloud Foundry buildpack. Please check out the supported components in [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform).
 Mendix Support does not have access to app health, logs, graphs and monitoring. If you run into issues or want to ask a question on these supported components, please always provide relevant logs, data, and your own analysis that explains why you suspect the issue is caused by one of our supported components
 
 {{% image_container width="40%" %}}
@@ -322,7 +322,7 @@ Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Supp
 
 The container runtime platform refers to the platform for managing, creating, destroying and scaling of runtime containers. In the Mendix Public Cloud and Cloud Dedicated Cloud Foundry is used.
 
-Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Support diagnose this component. When running on SAP Cloud Platform or IBM Cloud, the selected third party can diagnose this component.
+Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Support diagnose this component. When running on SAP BTP or IBM Cloud, the selected third party can diagnose this component.
 
 ### 10.4 Buildpack, m2ee & Service Console
 
@@ -342,7 +342,7 @@ If you want additional features or some other change in the Windows Service, you
 
 The application operation component is used for stopping and starting environments and configuring constants, scheduled events, and runtime settings.
 
-Only when running on the Mendix Public Cloud, Cloud Dedicated, Private Cloud Connected or SAP Cloud Platform through the Developer Portal, can Mendix Support diagnose this components.
+Only when running on the Mendix Public Cloud, Cloud Dedicated, Private Cloud Connected or SAP BTP through the Developer Portal, can Mendix Support diagnose this components.
 
 ### 10.6 Logs & Metrics
 
@@ -356,7 +356,7 @@ Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Supp
 The deployment pipeline takes care of creating and deploying deployment packages
 Please read all about the Deployment options in [Deployment](/developerportal/deploy/).
 
-Only when running on the Mendix Public Cloud, Cloud Dedicated, Private Cloud Connected or SAP Cloud Platform through the Developer Portal, can Mendix Support diagnose this component.
+Only when running on the Mendix Public Cloud, Cloud Dedicated, Private Cloud Connected or SAP BTP through the Developer Portal, can Mendix Support diagnose this component.
 
 ### 10.8 Runtime
 
@@ -365,13 +365,13 @@ Please read all about the Mendix Runtime in [Mendix Runtime](/refguide/runtime).
 
 Mendix Support needs application logs to diagnose this component. Because Mendix has no control over the context in which the runtime is run, outside of the Mendix Public Cloud and Cloud Dedicated, you will have to demonstrate that the bug is in the supported component by showing the behavior independently from the context in which you are using it.
 
-### 10.9 App Store Components
+### 10.9 Marketplace Components
 
-Platform-supported App Store content refers to all App Store content marked as platform-supported in the Mendix App Store. Community-supported App Store content includes all App Store content not marked as platform-supported in the Mendix App Store
+Platform-supported Marketplace content refers to all Marketplace content marked as platform-supported in the Mendix Marketplace. Community-supported Marketplace content includes all Marketplace content not marked as platform-supported in the Mendix Marketplace
 
-Read more about the levels of Support for App Store components in [App Store Content Support](/appstore/general/app-store-content-support).
+Read more about the levels of Support for Marketplace components in [Marketplace Content Support](/appstore/general/app-store-content-support).
 
-Mendix Support needs application logs to diagnose these component. Because Mendix has no control over the context in which the App Store content is run outside of the Mendix Public Cloud and Cloud Dedicated, you will have to demonstrate that the bug is in the supported component by showing the behavior independently from the context in which you are using it.
+Mendix Support needs application logs to diagnose these component. Because Mendix has no control over the context in which the Marketplace content is run outside of the Mendix Public Cloud and Cloud Dedicated, you will have to demonstrate that the bug is in the supported component by showing the behavior independently from the context in which you are using it.
 
 ### 10.10 Application
 

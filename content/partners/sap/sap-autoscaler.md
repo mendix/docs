@@ -1,5 +1,5 @@
 ---
-title: "Application Autoscaler for SAP Cloud Platform"
+title: "Application Autoscaler for SAP Business Technology Platform"
 category: "SAP"
 menu_order: 47
 description: "How to set up the SAP Autoscaler"
@@ -8,7 +8,7 @@ tags: ["SAP", "Autoscaler"]
 
 ## 1 Introduction
 
-The **Application Autoscaler** service for SAP Cloud Platform enables applications to automatically increase or decrease the number of instances of your app. This can be based on a schedule, or based on the value of a metric.
+The **Application Autoscaler** service for SAP Business Technology Platform (SAP BTP) enables applications to automatically increase or decrease the number of instances of your app. This can be based on a schedule, or based on the value of a metric.
 
 For more information on the Application AutoScaler see [Application Autoscaler Service](https://help.sap.com/viewer/7472b7d13d5d4862b2b06a730a2df086/Cloud/en-US/4ad999a0be664160a08514ba4ce6430c.html) on the *SAP Help Portal*.
 
@@ -36,7 +36,7 @@ Click **Configurator** to start the **Autoscaler Configurator**.
 The **autoscaler configurator** provide a user friendly interface to create the JSON required to configure the application autoscaler.
 
 {{% alert type="info" %}}
-The configurator will only create a JSON file from scratch. It does not have access to your existing autoscaler settings on SAP Cloud Platform, and you cannot import any existing JSON files.
+The configurator will only create a JSON file from scratch. It does not have access to your existing autoscaler settings on SAP BTP, and you cannot import any existing JSON files.
 {{% /alert %}}
 
 There three options available:

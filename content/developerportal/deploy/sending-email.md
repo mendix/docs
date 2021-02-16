@@ -32,7 +32,7 @@ However, for new applications or applications that send large amounts of e-mail 
 
 In general we recommend external services as these offer specialized tools for sending e-mail, working with spam filters, keeping track of sent e-mail and giving insights into your target reach via analytics tools.
 
-The [Email with Templates](/appstore/modules/email-with-templates) module from the App Store is compatible with all providers that offer an SMTP interface. You can also use other ways of sending e-mail using an external service, such as REST APIs or creating your own Java actions to send e-mail.
+The [Email with Templates](/appstore/modules/email-with-templates) module from the Marketplace is compatible with all providers that offer an SMTP interface. You can also use other ways of sending e-mail using an external service, such as REST APIs or creating your own Java actions to send e-mail.
 
 To use an external provider, you will need to sign up for an account with them and use their SMTP settings which include:
 
@@ -79,7 +79,7 @@ The settings for the Mendix mail servers are as follows:
 * Servername: localhost
 * Port: 25
 
-No authentication information is needed. You can use this same SMTP server from the [Email with Templates](/appstore/modules/email-with-templates) module from the App Store or custom Java actions.
+No authentication information is needed. You can use this same SMTP server from the [Email with Templates](/appstore/modules/email-with-templates) module from the Marketplace or custom Java actions.
 
 ### 3.2 Using Sender Policy Framework (SPF) While Sending Outgoing Mail from Mendix
 

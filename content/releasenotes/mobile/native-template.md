@@ -14,6 +14,15 @@ These are the current versions in active development:
 * Native Template v5.0.x applies to apps built using Studio Pro [8.12.1](../studio-pro/8.12#8121)–[8.14.x](../studio-pro/8.14).
 * Native Template v4.2.x applies to apps built using Studio Pro up to [8.12.0](../studio-pro/8.12#8120).
 
+## 5.1.5, and 5.0.9
+
+**Release date: February 4th, 2020**
+
+### Fixes
+
+* Fixed the keyboard behavior on Android for inputs in scrollable views.
+* Updated the React Native Device Info library to fix security issues.
+
 ## 5.1.4, 5.0.8, and 4.2.6
 
 **Release date: December 22nd, 2020**

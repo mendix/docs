@@ -22,9 +22,9 @@ None.
 
 ## 3 Steps
 
-### 3.1 Step 1 – Import the `PushNotifications` Module from the App Store
+### 3.1 Step 1 – Import the `PushNotifications` Module from the Marketplace
 
-The `PushNotifications` module is published in the Mendix App Store. To import it into your project, click 'App Store' in the top right of Modeler. This will open the App Store in a new tab. Search for _Push Notifications Connector_ and click the title of the result.
+The `PushNotifications` module is published in the Mendix Marketplace. To import it into your project, click the Marketplace icon in the top right of Modeler. This will open the Marketplace in a new tab. Search for _Push Notifications Connector_ and click the title of the result.
 
 ![](attachments/19955732/20218020.png)
 
@@ -34,7 +34,7 @@ On the resulting page, click the green `Download` button. Make sure that 'Add as
 
 ### 3.2 Step 2 – Install Module Dependencies
 
-The `PushNotifications` module has two dependencies; the `Encryption` module and the `Community Commons Function Library` module. Include both dependencies by downloading them from the App Store, similar to how you installed the `PushNotifications` module. While importing you may again get a dialog about overwriting project files, which you can confirm by clicking the `OK` button.
+The `PushNotifications` module has two dependencies; the `Encryption` module and the `Community Commons Function Library` module. Include both dependencies by downloading them from the Marketplace, similar to how you installed the `PushNotifications` module. While importing you may again get a dialog about overwriting project files, which you can confirm by clicking the `OK` button.
 
 If your project is using an older version of the [Encryption](/appstore/modules/encryption) module, it might trigger an error for referencing a non-existent layout. Fix it by assigning the master layout of the `Encryption.ResponsiveLayout_Certificate` layout to another layout (in this specific use case it is not really important which layout is used). This does not apply to version 1.3.1 and higher.
 

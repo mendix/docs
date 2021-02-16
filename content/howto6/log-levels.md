@@ -47,7 +47,7 @@ The log level defines the severity of the log message. In the modeler, this is r
 | Trace | | | More detailed information. These are only written to logs. |
 | Debug | | | Detailed information, typically of interest only when diagnosing problems. |
 | Info  | | | Confirmation that things are working as expected. |
-| Warning | ![](attachments/18448575/18580038.png) | Orange | An indication that something unexpected happened, or indicative of some problem in the near future (e.g. ‘disk space low’). The application is still working as expected. |
+| Warning | ![](attachments/18448575/18580038.png) | Orange | An indication that something unexpected happened, or indicative of some problem in the near future (for example, ‘disk space low’). The application is still working as expected. |
 | Error | ![](attachments/18448575/18580037.png) | Red | Due to a more serious problem, the application has not been able to perform some function. |
 | Critical | ![](attachments/18448575/18580036.png) | White (text), red (background) | A serious error, indicating that the application itself may be unable to continue running. |
 

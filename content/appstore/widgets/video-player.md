@@ -1,8 +1,8 @@
 ---
 title: "Video Player"
 category: "Widgets"
-description: "Describes the configuration and usage of the Video Player widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "platform support", "widget", "video player"]
+description: "Describes the configuration and usage of the Video Player widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "app store", "marketplace component", "app store component", "platform support", "widget", "video player"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

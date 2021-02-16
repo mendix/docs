@@ -49,7 +49,7 @@ This process is shorter than using XCode but might require more work to understa
 
    ![Signing screen correctly configured](attachments/hybrid-local/folder-final.png)
 
-1. The IPA generated can be now uploaded to Testflight for further testing. If you wish to do so, continue with the [Upload tools](https://help.apple.com/app-store-connect/#/dev82a6a9d79) section, on the App Store documenation.
+1. The IPA generated can be now uploaded to Testflight for further testing. If you wish to do so, continue with the [Upload tools](https://help.apple.com/app-store-connect/#/dev82a6a9d79) section in the Apple App Store documenation.
 
 #### 2.2.2 Building iOS using XCode
 

@@ -20,7 +20,7 @@ Open the properties of an Any Chart widget by double-clicking on the widget.
 
 ### 2.1 Data
 
-The data to be plotted is described in an array usually called data, whose elements are trace objects of various types (e.g. scatter, bar etc) as documented in the [Full Reference](https://plot.ly/javascript/reference).
+The data to be plotted is described in an array usually called data, whose elements are trace objects of various types (for example, scatter, bar etc) as documented in the [Full Reference](https://plot.ly/javascript/reference).
 
 #### 2.1.1 Static
 

@@ -20,7 +20,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have improved dependency version management, so upgrading to future versions of the Mendix Operator will be easier.
 * We have introduced versioning for all components, instead of using the "latest" version. All components are now tested for compatibility, and once the Mendix Operator is installed, its behavior will remain unchanged. Components can only be updated through a manual update process.
 * We have added a feature to report installed component versions to the Private Cloud Portal. In the future, this will be used to indicate which Mendix for Private Cloud Operator version is installed and which features it supports.
-* We have added a new S3 option, allowing the use of an existing IAM policy and S3 bucket. Each environment will still get its own user and will not have access to files from other environments.
+* We have added a new S3 option, allowing the use of an existing IAM policy and S3 bucket. Each environment will still get its own account (AWS IAM user) and will not have access to files from other environments.
 * We have improved the S3 storage configuration UI in the Configuration Tool.
 * We have updated the Configuration Tool to run in fullscreen, so that it adapts better to smaller and larger screens.
 
@@ -281,4 +281,3 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 #### Improvements
 
 * On the **General** page of [App Buzz](/developerportal/collaborate/buzz#app-buzz), we added a **Private Cloud** target. This will currently take you to a closed beta test that allows you to connect your private cluster to Mendix. You can ask to join the beta program, but places are currently limited.
-

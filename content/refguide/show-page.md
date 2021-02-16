@@ -59,7 +59,7 @@ By default the title of the page is determined by the page title property of the
 
 This feature allows you to re-use the same page for the **New** and **Edit** buttons of a [data grid](data-grid). By simply setting the titles to, for example, *New Customer* and *Edit Customer*, you can save yourself the trouble of duplicating pages.
 
-### 3.4 Close Pages
+### 3.4 Close Pages {#close-pages}
 
 {{% alert type="info" %}}
 This option is only available for native mobile and was introduced with Mendix Studio Pro v8.14.

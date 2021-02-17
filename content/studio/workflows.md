@@ -15,9 +15,9 @@ To view the workflows of your app project in Studio, click the **Workflows** ico
 
 Workflows is a visual way of expressing application logic. A workflow looks like a flow chart. On a new workflow a *start event* (a starting point of the workflow) and an *end event* (an endpoint of the workflow represented by a *red* dot) are created by default. You can various activities to a flow of a workflow that is called a *path*.
 
-## 2 Performing Basic Functions
+![Workflow Example](attachments/workflows/workflow-example.jpg)
 
-{{% todo %}}[Do we need to describe actions that are so simple or shall I leave them for Studio only?]{{% /todo %}}
+## 2 Performing Basic Functions
 
 You can perform the following basic functions when working on workflows:
 

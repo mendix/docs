@@ -14,7 +14,7 @@ Security is a way of controlling access to your app. For example, you can decide
 
 [Roles and Permissions](#roles-and-permissions) are an important part of security – an instrument which you can use to restrict or grant access to different parts of your app, such as pages and microflows.
 
-## 2 Security Overview 
+## 2 Security Overview {#overview}
 
 Whether security is enabled for your app by default, depends on whether the security has been enabled in Studio Pro and on the way it has been configured there. You can come across the following cases:
 

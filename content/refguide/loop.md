@@ -28,12 +28,13 @@ For example, if you have a list of objects of the *OrderLine* entity and you wan
 ![](attachments/loop/foreach-loop.png)
 
 #### 2.1.2 While (condition is true){#while}
-// todo
 
-A variable that is a list of items you will loop through.
+*While* loop repeats the flow inside the loop many times until some condition evaluates to `false`. This condition is evaluated before each execution of the loop body. Typically, the while loop is used when it is impossible to determine the exact number of loop iterations in advance.
 
-## 3 Action Properties
+You can provide a description for the loop or the condition by setting the *Caption* field, and the loop condition can be entered as an [expression](expressions) in the *Expression* editor, and should result in a boolean value. The *While* keyword is shown in blue and the *Caption* is shown underneath in black.
 
-### 3.1 Loop Object Name
+![](attachments/loop/while-loop-edit-form.png)
 
-**Loop object name** is the name of the list item that is currently being worked on. The flow inside the loop is executed for each object in the list, and the object will always have this name. For example, if the list over which the loop iterates is of type *List of Order*, the iterator object will be of type *Order*.
+For example, if you want to [log](log-message) numbers between 1 and 5, you can use a loop with a condition that checks whether a *Counter* [variable](variable-activities) is less than or equal to 5, and inside the loop you log the *Counter* value and add 1 to *Counter* variable in order for the loop to stop executing when the *Counter* is greater than 5:
+
+![](attachments/loop/while-loop.png)

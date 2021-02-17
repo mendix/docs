@@ -46,7 +46,7 @@ For more information on deployment in Mendix, see [Deployment](/developerportal/
 
 For more information on deploying your app and versioning it, see  the [Versioning a Project Deployed to the Cloud](using-version-control-in-studio-pro#versioning-project) section in *Using Version Control in Studio Pro*. 
 
-### 2.3 Links to Developer Portal & App Store {#links}
+### 2.3 Links to the Developer Portal & Marketplace {#links}
 
 You can find links to the [Developer Portal](/developerportal/index) and [Marketplace](/appstore/index) in the top-right corner of Studio Pro.
 

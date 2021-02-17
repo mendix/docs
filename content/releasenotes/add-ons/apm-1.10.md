@@ -17,7 +17,7 @@ This is the first version that is also fully available for Mendix 7. Due to some
 
 * Package 2
   * This is the same version packaged for Mendix 6
-  * This is available on the **All Versions** tab in the App Store via the Modeler
+  * This is available on the **All Versions** tab in the Marketplace via the Modeler
 
 With the release of Mendix 7, the Mendix documentation changed and the help links in APM pointed to the wrong location. This has been fixed.
 

@@ -19,7 +19,7 @@ This how-to will walk you through the steps needed to implement push notificatio
 
 ## 2 Importing the PushNotifications Module from the Marketplace
 
-The [Push Notifications Connector](/appstore/modules/push-notifications) module is published in the Mendix Marketplace. To import it into your project, click **App Store** in the top right of Mendix Studio Pro. Search for "Push Notifications Connector" and click the title of the result:
+The [Push Notifications Connector](/appstore/modules/push-notifications) module is published in the Mendix Marketplace. To import it into your project, click the Marketplace icon in the top right of Mendix Studio Pro. Search for "Push Notifications Connector" and click the title of the result:
 
 ![](attachments/19955732/20218020.png)
 

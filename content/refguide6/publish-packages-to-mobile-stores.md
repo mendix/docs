@@ -4,7 +4,7 @@ category: "Mobile"
 ---
 
 
-Mendix Apps can be packaged as hybrid mobile apps. You can publish those packages in the Apple App Store, in the Android app stores, e.g. Google Play or the Amazon App Store, and in the Windows Phone Store. These app packages are built with Adobe's PhoneGap Build cloud service. The resulting apps can then access native functionality, such as the geo location service and the camera.
+Mendix Apps can be packaged as hybrid mobile apps. You can publish those packages in the Apple App Store, in the Android app stores, for example, Google Play or the Amazon App Store, and in the Windows Phone Store. These app packages are built with Adobe's PhoneGap Build cloud service. The resulting apps can then access native functionality, such as the geo location service and the camera.
 
 With our Publish functionality in the Mendix Developer Portal, we can automatically package your Mendix App as an Adobe PhoneGap Build package and upload it for you to the PhoneGap Build service. The resulting hybrid mobile apps for Apple's iOS, Android and Windows Phone are then available for you to download from the Mendix Developer Portal.
 

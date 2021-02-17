@@ -92,7 +92,7 @@ For more information on SHA etc. see [SHA hash functions on wikipedia](http://en
 
  The rounding mode is used to select how to round numbers when performing calculations.
 
-The rounding methods "Half away from zero" and "Half to the nearest even number" indicate how rounding is performed in case of a tie (e.g. 2.5).
+The rounding methods "Half away from zero" and "Half to the nearest even number" indicate how rounding is performed in case of a tie (for example, 2.5).
 
 |   | Result of rounding input to one digit with the given rounding mode |
 | --- | --- |
@@ -112,7 +112,7 @@ _Default value_: Half away from zero
 
 ### Multiple sessions per user
 
-If this option is enabled, users can sign in multiple times through different clients (e.g. desktop browser and tablet). Otherwise, an existing session for a user is signed out when the user signs in somewhere else.
+If this option is enabled, users can sign in multiple times through different clients (for example, desktop browser and tablet). Otherwise, an existing session for a user is signed out when the user signs in somewhere else.
 
 {{% alert type="warning" %}}
 

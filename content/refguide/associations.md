@@ -66,6 +66,16 @@ You can edit the associations as members of the entity. In this case you will de
 
 For more information see [Association Tab Properties](association-member-properties).
 
+### 3.3 Move the Association Arrow
+
+You can move the association arrow between two entities without deleting it. Click within the black dot on either side of the association arrow and drag it to the new desired location.
+
+{{% alert type="warning" %}}
+Your mouse pointer should not activate a white dot. This indicates the creation of a new association.
+{{% /alert %}}
+
+![](attachments/associations/association-move-arrow.png)
+
 ## 4 Association Examples {#examples}
 
 ### 4.1 One-to-Many Association {#one-to-many}

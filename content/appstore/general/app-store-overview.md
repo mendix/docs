@@ -21,7 +21,7 @@ The home page of the Mendix Marketplace has three main tabs at the top:
 
 * **Discover** – the home page, where you can browse various component categories and filter what is displayed
 * **My Marketplace** – click this to go to [My App Store](#my-app-store)
-* **{Your company's private App Store page}** – click this to go to your [company's App Store](#company-content)
+* **{Your company's private Marketplace page}** – click this to go to your [company's App Store](#company-content)
 
 ![](attachments/app-store-overview/home-page.jpg)
 

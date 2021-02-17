@@ -43,11 +43,9 @@ This part shows all the operations found in the WSDL. You can expand the list an
 Check **Send binary data as attachment (MTOM)** to enable MTOM (_Message Transmission Optimization Mechanism_): a method of efficiently sending binary data to and from Web services. Read more about it at [w3.org](https://www.w3.org/TR/soap12-mtom/). 
 
 {{% alert type="warning" %}}
-
 Message optimization will only be applied when you use one or more export mappings to create the request body in the call web service action.
-
 {{% /alert %}}
 
-## 6 Calling consumed web services
+## 6 Calling Consumed Web Services
 
 For details on how to call a consumed web service, see [Call Web Service](call-web-service-action).

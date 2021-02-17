@@ -13,9 +13,17 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2021
 
-### February 11th, 2021
+### February 18th, 2021
 
-#### Mendix for Private Cloud — Mendix Operator v1.8.0 and Mendix Gateway Agent v1.7.0
+#### Portal Improvements
+
+* We have improved instructions how to install Mendix for Private Cloud components from a Windows system.
+* For Mendix Operator v1.8.0 and later versions, the Private Cloud Portal will display versions of components currently running in a cluster.
+* The Private Cloud Portal now allows to download a version of the Configuration Tool that's compatible with the Mendix Operator installed in a cluster.
+* We have fixed a UI layout issues that were sometimes visible when an environment failed to build a container image. (Ticket 114548)
+* We have fixed an issue with the feedback widget duplicating itself.
+
+#### Mendix Operator v1.8.0 and Mendix Gateway Agent v1.7.0
 
 * We have improved dependency version management, so upgrading to future versions of the Mendix Operator will be easier.
 * We have introduced versioning for all components, instead of using the "latest" version. All components are now tested for compatibility, and once the Mendix Operator is installed, its behavior will remain unchanged. Components can only be updated through a manual update process.
@@ -23,6 +31,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have added a new S3 option, allowing the use of an existing IAM policy and S3 bucket. Each environment will still get its own account (AWS IAM user) and will not have access to files from other environments.
 * We have improved the S3 storage configuration UI in the Configuration Tool.
 * We have updated the Configuration Tool to run in fullscreen, so that it adapts better to smaller and larger screens.
+* We have fixed an issue with misleading error messages in the container logs if Mendix Runtime is failing to start. If the MxAdmin user has an insecure password, a correct error message will be displayed.
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
 After upgrading the Mendix Operator, we recommend downloading the latest version of the Configuration Tool.

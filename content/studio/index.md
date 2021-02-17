@@ -28,12 +28,11 @@ The *Studio 9 Guide* is divided into the following categories:
 
 * [General Info](general) 
 * [Pages](page-editor)
-* [Domain Model](domain-models)
+* [Working with Data](work-with-data)
 * [Navigation Document](navigation)
 * [Microflows](microflows)
 * [Previewing & Publishing Your App](publishing-app)
 * [Checks](checks)
 * [Theme Customizer](theme-customizer)
 * [Settings](settings)
-* [Working with Data](work-with-data)
 * [Collaboration](collaboration)

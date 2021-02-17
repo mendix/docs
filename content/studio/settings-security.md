@@ -14,38 +14,25 @@ Security is a way of controlling access to your app. For example, you can decide
 
 [Roles and Permissions](#roles-and-permissions) are an important part of security – an instrument which you can use to restrict or grant access to different parts of your app, such as pages and microflows.
 
-## 2 Enabling Security {#enabling-security}
+## 2 Security Overview 
 
-Whether security is enabled for your app by default, depends on app's type and version. You can come across the following cases:
+Whether security is enabled for your app by default, depends on whether the security has been enabled in Studio Pro and on the way it has been configured there. You can come across the following cases:
 
-1. If your app has been created in the Developer Portal with Mendix version 7.23.3 or above, you can enable security in Studio and view and edit [roles and permissions](#roles-and-permissions). For more information on versions, see [Studio Ranges & Mendix Versions](general-versions)
+1. Your app security is **off** in Studio Pro. In this case, you can either enable it via **App Settings**>**Roles and Permissions** >the **Enable Security** button, or you will be prompted to enable security, when you try to [publish the app](publishing-app). 
 
-2. If your app has been created in the Developer Portal with Mendix version below 7.23.3, or has been labelled as private content, or has been customized by your team specifically for your company, the security state depends on Studio Pro:<br/>
-    a.  If security is off in Studio Pro, then you can enable security in Studio. In this case, when you try to [publish the app](publishing-app), you will be prompted to enable security. <br/>
+    {{% image_container width="400" %}}![Secure Your App Pop-up Window](attachments/settings-security/security-pop-up.png) {{% /image_container %}}
+    
+    {{% alert type="info" %}}When you enable security, it is enabled for the whole app, and there are checks and changes applied to the model that are visible in Studio Pro. For more technical information on these checks and changes, see [Model Changes When Security Is Enabled in Studio](/refguide/studio-security-enabled).{{% /alert %}}
 
-	{{% image_container width="400" %}}![Secure Your App Pop-up Window](attachments/settings-security/security-pop-up.png)
-	{{% /image_container %}}<br/>
-
-    b. If security is set to the **Production** level in Studio Pro and settings are compatible with Studio, you can view and edit **Roles and Permissions** in Studio. (For more information on what security settings are compatible with Studio, see the [Studio Compatibility](/refguide/studio-security-enabled#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
+2. Security is set to the **Production** level in Studio Pro and settings are compatible with Studio. In this case, you can view and edit **Roles and Permissions** in Studio. (For more information on what security settings are compatible with Studio, see the [Studio Compatibility](/refguide/studio-security-enabled#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
 
     ![](attachments/settings-security/roles-and-permissions-screen.png)
 
-    c. If security is set to the **Prototype/demo** or **Production** level in Studio Pro and settings are not compatible with Studio, you can view (not edit) **Roles and Permissions** in Studio. (For more information on security settings compatible with Studio, see the [Studio Compatibility](/refguide/studio-security-enabled#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
+3. Security is set to the **Prototype/demo** or **Production** level in Studio Pro and settings are not compatible with Studio. In this case, you can only view, but not edit **Roles and Permissions** in Studio. (For more information on security settings compatible with Studio, see the [Studio Compatibility](/refguide/studio-security-enabled#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
 
     ![](attachments/settings-security/security-read-only.png)
 
 
-If you need to enable security, do one of the following:
-
-* Click **Enable Security** in the above-mentioned pop-up dialog, and security will be set up automatically for you. After that you can restrict or grant access to your app via [Roles and Permissions](#roles-and-permissions).
-
-*  Open **App Settings** > **Roles and Permissions** and click **Enable Security**. 
-
-	![The Roles and Permissions Screen](attachments/settings-security/enabling-security.png)
-
-{{% alert type="info" %}}
-When you enable security, it is enabled for the whole app, and there are checks and changes applied to the model that are visible in Studio Pro. For more technical information on these checks and changes, see [Model Changes When Security Is Enabled in Studio](/refguide/studio-security-enabled).
-{{% /alert %}}
 
 ## 3 Roles and Permissions {#roles-and-permissions}
 

@@ -70,9 +70,11 @@ For more information see [Association Tab Properties](association-member-propert
 
 You can move the association arrow between two entities without deleting it. Click within the black dot on either side of the association arrow and drag it to the new desired location.
 
-Note: Your curser should not activate a white dot. This indicates the creation of a new association.
+{{% alert type="warning" %}}
+Your mouse pointer should not activate a white dot. This indicates the creation of a new association.
+{{% /alert %}}
 
-<!--![](attachments/associations/association-move-arrow.png)-->
+![](attachments/associations/association-move-arrow.png)
 
 ## 4 Association Examples {#examples}
 

@@ -202,17 +202,22 @@ export interface ListValue {
     limit: number;
     setOffset(offset: number): void;
     setLimit(limit: Option<number>): void;
+    requestTotalCount(needTotalCount: boolean): void;
     items?: ObjectItem[];
     hasMoreItems?: boolean;
     totalCount?: number;
 }
 ```
 
+When a `datasource` property with `isList="true"` is configured for a widget, the client component gets a list of objects represented as a `ListValue`. This type allows detailed access and control over the data source.
 
-When a `datasource` property with `isList="true"` is configured for a widget, the client component gets a list of objects represented as a `ListValue`. This type allows detailed access to a data source, and enables control over the limit and offset of items represented in the list.
+The `offset` and `limit` properties specify the range of objects retrieved from the datasource. The `offset` is the starting index and the `limit` is the number of requested items. By default, the `offset` is 0 and the `limit` is `undefined` which means all the items of the datasource are requested. You can control these properties with the `setOffset` and `setLimit` methods. This allows a widget to not show all the data at the data at once, but to only show a single page by setting the proper offset and limit, or load additional data whenever it is needed by increasing the limit.
 
-However it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`attribute`](property-types-pluggable-widgets#attribute), [`action`](property-types-pluggable-widgets#action) or [`widgets`](property-types-pluggable-widgets#widgets).
+The `items` property contains all the requested data items of the datasource. However, it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`attribute`](property-types-pluggable-widgets#attribute), [`action`](property-types-pluggable-widgets#action) or [`widgets`](property-types-pluggable-widgets#widgets).
+  
+The `hasMoreItems` indicates whether there are more objects beyond the limit of the most recent list. When a widget doesn't show all the records immediately by setting a limit with `setLimit` and allows the user to load additional data, this property can be used to make clear in the user interface the user reached the end of the list.
 
+The `totalCount` property is the total number of objects the datasource can return. Calculating a total count might consume significant resources and is only returned when the widget indicated it needs a total count by calling `requestTotalCount(true)` method. When possible use the `hasMoreItems` instead of the `totalCount` property.
 
 ### 4.8 ListActionValue {#listactionvalue}
 

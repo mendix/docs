@@ -1,27 +1,19 @@
-# Metamodel Release Notes for version 9.0.4
+---
+title: "9.0"
+parent: "metamodel-9"
+---
 
-## Microflows
+## 9.0.4
 
-### LoopSource (Element)
-* Introduced; 
+Release date: February 16th, 2021
 
+### Microflows
 
-### LoopedActivity (Element)
+#### LoopedActivity (Element)
 
+* We introduced the `loopSource` property.
+* We deleted the `iteratedListVariableName` and `loopVariableName` properties.
 
-#### Property 'iteratedListVariableName'
-* Deleted; 
+#### LoopSource, IterableList & WhileLoopCondition (Elements)
 
-#### Property 'loopVariableName'
-* Deleted; 
-
-#### Property 'loopSource'
-* Introduced; 
-
-### IterableList (Element)
-* Introduced; 
-
-
-### WhileLoopCondition (Element)
-* Introduced; 
-
+* We introduced these elements.

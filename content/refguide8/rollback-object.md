@@ -74,7 +74,7 @@ When inside a [nanoflow](nanoflows), the rollback object action reloads [data so
 
 ## 4 Common Section{#common}
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+{{% snippet file="refguide8/microflow-common-section-link.md" %}}
 
 ## 5 What Does Rollback Do?
 

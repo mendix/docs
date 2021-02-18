@@ -144,4 +144,4 @@ results in 8 days divided by 7 days in a week:
 ```
 ## yearsBetween
 
-For this function call, you need the Java Action YearsBetween from the Community Commons module from the App Store.
+For this function call, you need the Java Action YearsBetween from the Community Commons module from the Marketplace.

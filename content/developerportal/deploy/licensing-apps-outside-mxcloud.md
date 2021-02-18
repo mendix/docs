@@ -9,7 +9,7 @@ tags: ["App", "Developer Portal", "License", "Subscription Secret", "Upgrade", "
 
 ## 1 Introduction
 
-Mendix allows you to build **Free Apps** which give you the opportunity to try things out and to build and test apps using all the functionality of Mendix. You can deploy these to the Mendix Cloud, or to another public or private cloud of your choice, for example SAP Cloud Platform.
+Mendix allows you to build **Free Apps** which give you the opportunity to try things out and to build and test apps using all the functionality of Mendix. You can deploy these to the Mendix Cloud, or to another public or private cloud of your choice, for example SAP Business Technology Platform (SAP BTP).
 
 However, Free Apps are restricted in how long they run; they will stop running after around 2 hours. If they are run outside the Mendix Cloud, they cannot have more than ten users. There are also restrictions on how they can be configured. A full list of restrictions is available in [Mendix Cloud](mendix-cloud-deploy) – note that some of these restrictions are specific to Free Apps running on Mendix Cloud.
 
@@ -23,7 +23,7 @@ The app will check for a license each time it is started.
 
 You can obtain a Mendix license from Mendix support. 
 
-If you need a *Subscription Secret* to deploy to SAP Cloud Platform, Mendix for Private Cloud, or IBM Cloud, you will need to create a ticket with [Mendix Support](https://support.mendix.com).
+If you need a *Subscription Secret* to deploy to SAP BTP, Mendix for Private Cloud, or IBM Cloud, you will need to create a ticket with [Mendix Support](https://support.mendix.com).
 
 If you want to create a new licensed node in the Mendix Cloud and your contract does not allow for more licensed nodes, please contact your Customer Success Manager (CSM) first.
 
@@ -52,13 +52,13 @@ An example LicenseId is aab8a0a1-1370-467e-918d-3a243b0ae160. LicenseKey is a ve
 
 To run Mendix apps in production on the Mendix Cloud, they must be linked to a licensed node in the Mendix Cloud. This process is described in a separate document: [Licensing Mendix Cloud Apps](licensing-apps).
 
-### 3.2 SAP Cloud Platform & IBM Cloud
+### 3.2 SAP BTP & IBM Cloud
 
-To license a Mendix app on SAP Cloud Platform or IBM Cloud, you need to supply a *Subscription Secret* which is linked to your app.
+To license a Mendix app on SAP BTP or IBM Cloud, you need to supply a *Subscription Secret* which is linked to your app.
 
-You can add this subscription secret as part of creating an environment on SAP Cloud Platform. You can also add, or change, the subscription secret on the *Environment Details* page of the environment you wish to license.
+You can add this subscription secret as part of creating an environment on SAP BTP. You can also add, or change, the subscription secret on the *Environment Details* page of the environment you wish to license.
 
-For more information, see [SAP Cloud Platform - deploy](sap-cloud-platform) or [IBM Cloud](ibm-cloud).
+For more information, see [SAP Business Technology Platform - deploy](sap-cloud-platform) or [IBM Cloud](ibm-cloud).
 
 ### 3.3 Siemens MindSphere
 

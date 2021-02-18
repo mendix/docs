@@ -6,7 +6,7 @@ tags: []
 
 ## 1 Introduction
 
-With the REST services module from the Mendix App Store, the full power of JSON-based REST APIs is available to Mendix developers. The module serves three goals: to consume services, publish services, and synchronize data between (Mendix) apps by combining consuming and publishing. 
+With the REST services module from the Mendix Marketplace, the full power of JSON-based REST APIs is available to Mendix developers. The module serves three goals: to consume services, publish services, and synchronize data between (Mendix) apps by combining consuming and publishing. 
 
 {{% alert type="info" %}}
 
@@ -23,16 +23,16 @@ In this how-to, you will consume a JSON-based REST services by integrating with 
 
 ## 2 Prerequisites
 
-In this section you will download the REST module from the App Store and test your service in the browser. The service tested in this how-to is the API of the Rijksmuseum, used to search for art. You will be consuming this endpoint: `https://www.rijksmuseum.nl/api/en/collection/?key=<key>&format=json&q=<search query>`.
+In this section you will download the REST module from the Marketplace and test your service in the browser. The service tested in this how-to is the API of the Rijksmuseum, used to search for art. You will be consuming this endpoint: `https://www.rijksmuseum.nl/api/en/collection/?key=<key>&format=json&q=<search query>`.
 
 To use this service, you need to create an account at [https://www.rijksmuseum.nl](https://www.rijksmuseum.nl/) in order to obtain an API key at the website. You can also perform the steps of this how-to using your own REST service.
 
 Make sure you have completed these prerequisite steps:
 
-1. Open the Mendix Modeler, and then click **App Store** in the upper-right part of the toolbar to open the App Store.
-2. In the App Store, search for the **Rest Services** module, and download a version of this module that will work with a version 6.x.x of the Desktop Modeler:
+1. Open the Mendix Modeler, and then click the Marketplace in the upper-right part of the toolbar to open the Marketplace.
+2. In the Marketplace, search for the **Rest Services** module, and download a version of this module that will work with a version 6.x.x of the Desktop Modeler:
     ![](attachments/18448729/18581739.png)
-3. Search for and download the latest **Community Commons Function Library** module from the App Store:
+3. Search for and download the latest **Community Commons Function Library** module from the Marketplace:
     ![](attachments/18448729/18581738.png)
 4. Test your service in the browser by filling in the `<key>` and `<search query>` fields in the URL stated above (you can use *Van Gogh* as an example search query). This will result in something similar to the following JSON fragment:
     ![](attachments/18448729/18581773.png)
@@ -126,7 +126,7 @@ To create the search and result pages, follow these steps:
 7. Add the fields as illustrated in the screenshot below to the **ArtObject** template grid:
     ![](attachments/18448729/18581760.png)
 
-    You can download the **Image Viewer** widget from the App Store and add the **url** attribute to the **Image attribute** in the properties section:
+    You can download the **Image Viewer** widget from the Marketplace and add the **url** attribute to the **Image attribute** in the properties section:
 
     ![](attachments/18448729/18581741.png)
 

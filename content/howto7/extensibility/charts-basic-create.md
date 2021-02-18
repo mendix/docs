@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install the latest Mendix desktop modeler
 
-* Download the latest [Charts Widget](/appstore/widgets/charts) from the Mendix App Store
+* Download the latest [Charts Widget](/appstore/widgets/charts) from the Mendix Marketplace
 
 ## 3 Implementing the Charts Widget in an Existing Project
 

@@ -61,9 +61,9 @@ Review all error messages and messages about deprecated items and make changes w
 
 ### 3.6 Upgrade All Widgets and Modules {#upgrade-widgets}
 
-To minimize the chance of problems, you should update all widgets and other App Store modules used by your project to the latest version.
+To minimize the chance of problems, you should update all widgets and other Marketplace modules used by your project to the latest version.
 
-Check if there is a newer version of your App Store modules available in the App Store. Read the version release notes in the App Store to see whether you need to perform specific actions when upgrading.
+Check if there is a newer version of your modules available in the Marketplace. Read the version release notes in the Marketplace to see whether you need to perform specific actions when upgrading.
 
 Be sure to update these key widgets, resources, and actions:
 
@@ -75,7 +75,7 @@ In general you should not remove and reimport modules, unless this is recommende
 
 ### 3.7 Update Atlas Module (Optional)
 
-Mendix 9 comes with a new Atlas theme including new page templates and building blocks. To get this theme, you can download the [Atlas UI 3 (Mx9 Beta)](https://marketplace.mendix.com/link/component/116539) module package from the App Store.
+Mendix 9 comes with a new Atlas theme including new page templates and building blocks. To get this theme, you can download the [Atlas UI 3 (Mx9 Beta)](https://marketplace.mendix.com/link/component/116539) module package from the Marketplace.
 
 ### 3.8 Review and Test Your App
 
@@ -112,6 +112,12 @@ For best results with native apps, make sure you have updated the [Native Mobile
 
 Client APIs that were deprecated and marked for removal in Mendix 9 were indeed removed. Libraries like `big.js`, `react`, `react-native`, and a few others shipped with the Client have been updated to latest version. This might affect your custom and pluggable widgets and to JavaScript actions. Please refer to the [Breaking Changes](/releasenotes/studio-pro/9.0#breaking-changes) section of the *Studio Pro 9.0* release notes for more details.
 
-## 7 Read More
+## 7 Native Dependencies
+
+Mendix 9 native apps no longer include non-essential native libraries like `react-native-maps`, `react-native-ble-plx`, `react-native-geocoder`, and others by default. Instead, new functionality of declaring native dependencies for components has been introduced in Mendix 9. Every pluggable widget or JavaScript action must declare which native libraries it uses. This way, native apps can be bundled with only the libraries they need while unnecessary libraries are not included.
+
+If your pluggable widget or JavaScript action uses libraries that require native linking, please update your widgets and actions in order to define those native libraries as dependencies for your components. Read more about native dependencies in [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/native-dependencies).
+
+## 8 Read More
 
 * [Studio Pro 9 Release Notes](/releasenotes/studio-pro/9.0)

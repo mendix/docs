@@ -52,7 +52,7 @@ For this how-to, we will use the publicly available Google Books API (for detail
 
     ![](attachments/18448737/18582041.png)
 
-5. Create a microflow button and a corresponding microflow that will perform your search. This microflow will use the REST GET Java Action included in the App Store REST module:
+5. Create a microflow button and a corresponding microflow that will perform your search. This microflow will use the REST GET Java Action included in the Marketplace REST module:
 
     ![](attachments/18448737/18582030.png)
 

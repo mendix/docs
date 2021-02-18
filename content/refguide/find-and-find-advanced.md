@@ -65,7 +65,7 @@ Note that deleting any unused items might result in more unused items. For examp
 
 {{% alert type="info" %}}
 
-Modules downloaded from the App Store might contain a lot of unused items. If you remove those items and the module is updated later, those items will be back in your model, so it is advised that you do not remove any unused items from an App Store module.'
+Modules downloaded from the Marketplace might contain a lot of unused items. If you remove those items and the module is updated later, those items will be back in your model, so it is advised that you do not remove any unused items from an Marketplace module.'
 
 {{% /alert %}}
 

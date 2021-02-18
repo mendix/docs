@@ -98,4 +98,4 @@ For a reference set association, it is also possible to add and remove an associ
 
 ## 4 Common Section{#common}
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+{{% snippet file="refguide8/microflow-common-section-link.md" %}}

@@ -1,8 +1,8 @@
 ---
 title: "Auto-Load More"
 category: "Widgets"
-description: "Describes the configuration and usage of the Auto-Load More widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "auto-load more", "load", "platform support"]
+description: "Describes the configuration and usage of the Auto-Load More widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "auto-load more", "load", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -19,7 +19,7 @@ For a demo app project that has been deployed with this widget, see [here](http:
 1. Place the widget in the same page or snippet as the target list view (as in, right below it).
 2. Add the name of the **Target list view** to the widget (which can be found in the **Common** tab of the list view properties in Studio Pro).
 
-## 3 Developing This App Store Component
+## 3 Developing This Marketplace Component
 
 1. Install the following:
 	* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)

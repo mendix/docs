@@ -9,6 +9,38 @@ description: "Mendix Native Mobile Builder release notes."
 
 The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Studio Pro, which helps you build your Mendix native mobile app. After the Mendix Native Mobile Builder simplifies your build process, you can do what you want most: test and publish your app. The Mendix Native Mobile Builder uses MxBuild, GitHub, and App Center to simplify the app building process and is directly accessible via Mendix Studio Pro. 
 
+### Release v1.0.78
+
+**Release date: February 12th, 2021**
+
+#### Native Dependency Management Beta (with Studio Pro v9.0.3 Beta)
+
+With the Mendix Studio Pro 9.0.3 Beta, we introduced native dependency management. Using native dependency management, widgets 
+and JavaScript actions can now define their native dependency requirements and let the Mendix Native Mobile Builder link them in apps.
+The result is a lighter project template that only includes the dependencies it actually needs.
+
+#### Enhanced Native Template Update Mechanism
+
+With this new update, we added support for removing old native template files that should not be part of your project anymore. 
+The Native Mobile Builder is now able to derive which files need to be kept or removed by "diffing" updates against the base version in your repository. This is especially useful when updating older projects to newer Studio Pro versions that might have introduced major changes.
+
+#### Fixes
+
+* We fixed an issue with App Center build configuration not being updated with template upgrades.
+
+### Release v1.0.74
+
+**Release date: December 30th, 2020**
+
+#### Signed iOS Builds Failing
+
+We were made aware of a change in App Center resulting in signed iOS builds failing. We are actively monitoring the issue and would like your feedback if you are still facing issues. Please contact [support](https://support.mendix.com) for further queries.
+
+#### Fixes
+
+* It should once again be possible to sign your apps using the Mendix Native Mobile Builder.
+* We fixed an issue with the **Build** button continuously preserving only the **Only apply configuration to the source code** state.
+
 ### Release v1.0.71
 
 **Release date: December 23rd, 2020**

@@ -31,7 +31,7 @@ To improve security of your app, it is recommended that you delete the MindSpher
 
 ### 2.1 Authorizing MindSphere REST Calls from within Scheduled Events
 
-The access token connector *cannot* be used for calling a MindSphere API in a microflow which is executed *without* a user context - e.g. called from a **scheduled event**. Therefore the MindSphereSingleSignOn module offers a microflow, **DS_GetAccessTokenForScheduledEvents**, that returns a Token for a given Tenant. You can find this microflow here:
+The access token connector *cannot* be used for calling a MindSphere API in a microflow which is executed *without* a user context – for example, called from a **scheduled event**. Therefore the MindSphereSingleSignOn module offers a microflow, **DS_GetAccessTokenForScheduledEvents**, that returns a Token for a given Tenant. You can find this microflow here:
 
 ![DS_GetAccessTokenForScheduledEvents](attachments/mindsphere-development-considerations/DS_GetAccessTokenForScheduledEvents.png)
 

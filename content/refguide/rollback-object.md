@@ -78,12 +78,19 @@ When inside a [nanoflow](nanoflows), the rollback object action reloads [data so
 
 ## 5 What Does Rollback Do?
 
-Pressing a **Cancel** button or triggering a rollback activity will initiate the rollback events. These actions are not triggered in the case of a rollback because of an error.
+{{% alert type="info" %}}
+A rollback action in a microflow or nanoflow is not the same as the rollback option on an [Error Event](error-event#errors-in-microflows) in a microflow.
 
-* Events: all before and after events are executed, and if any before-rollback event returns false, an exception can be thrown
+A rollback from an error event does not trigger any rollback events, and does not reflect whether changes to objects have been committed.
+{{% /alert %}}
+
+Pressing a **Cancel** button or triggering a rollback activity will initiate the rollback events.
+
+* **Events**: all before and after events are executed
+    * If any before-rollback event returns false, an exception can be thrown
 	* If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior
 	* Changes made prior to the rollback will be kept
-* Database: there is no database communication happening during this event unless it is specified in a before- or after-create event
-* Result: an object with the state **Instantiated** will be removed, and an object with any other state will be reverted back to the values it had during the last commit
+* **Database**: there is no database communication happening during this event unless it is specified in a before- or after-create event
+* **Result**: an object with the state **Instantiated** will be removed, and an object with any other state will be reverted back to the values it had during the last commit
 
 ![](attachments/object-activities/18582170.png)

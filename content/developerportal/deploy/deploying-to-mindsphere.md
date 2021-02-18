@@ -5,7 +5,7 @@ menu_order: 45
 description: "Describes how to register a Mendix app at the MindSphere Gateway and integrate it into the MindSphere Launchpad"
 tags: ["MindSphere", "deploy", "cloud foundry", "launchpad", "scopes", "roles", "sso", "XSRF", "limitations", "Gateway"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#The anchor #launchpad below is mapped from the MindSphere themepack in the App Store, so it should not be removed or changed.
+#The anchor #launchpad below is mapped from the MindSphere themepack in the ApMarketplace, so it should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -54,7 +54,7 @@ You must customize your app to allow it to be deployed, registered, and shown in
 
 ### 3.1 Option A: Using the MindSphere App Template
 
-The **MindSphere Starter Application** in the Mendix App Store contains all the modules and styling which you need to create an app you want to deploy to MindSphere.
+The **MindSphere Starter Application** in the Mendix Marketplace contains all the modules and styling which you need to create an app you want to deploy to MindSphere.
 
 {{% alert type="info" %}}
 This is the recommended approach if you are building a new application, as it will provide all the necessary building blocks to get started.
@@ -62,7 +62,7 @@ This is the recommended approach if you are building a new application, as it wi
 
 Open Studio Pro (version 7.22.2 or above) and follow these steps:
 
-1. Click the icon in the top-right of the menu bar to open the Mendix App Store.
+1. Click the icon in the top-right of the menu bar to open the Mendix Marketplace.
 
 	![](attachments/deploying-to-mindsphere/app-store-icon.png)
 
@@ -84,15 +84,15 @@ Open Studio Pro (version 7.22.2 or above) and follow these steps:
 
 If you have an existing app which was not based on the MindSphere app template, you must import the required customization. The three modules which must be imported are:
 
-* MindSphere SSO from the Mendix App Store here: [Siemens MindSphere SSO](https://appstore.home.mendix.com/link/app/108805/)
+* MindSphere SSO from the Mendix Marketplace here: [Siemens MindSphere SSO](https://appstore.home.mendix.com/link/app/108805/)
 
   This module enables users who are logged in to MindSphere to use your app without having to sign in again. It also enables you to test your app locally. For more information, see the [Single Sign-On](/partners/siemens/mindsphere-module-details#mssso) section of *MindSphere Module Details*.
 
-* MindSphere OS Bar Connector from the Mendix App Store here: [Siemens MindSphere OS Bar Connector](https://appstore.home.mendix.com/link/app/108804/)
+* MindSphere OS Bar Connector from the Mendix Marketplace here: [Siemens MindSphere OS Bar Connector](https://appstore.home.mendix.com/link/app/108804/)
 
   This integrates the mandatory MindSphere OS Bar with your app. For more information, see the [MindSphere OS Bar](/partners/siemens/mindsphere-module-details#msosbar) section of *MindSphere Module Details*.
 
-* MindSphere Theme Pack (MindSphere_UI_Resources) from the Mendix App Store here: [Siemens MindSphere Theme Pack](https://appstore.home.mendix.com/link/app/108803/)
+* MindSphere Theme Pack (MindSphere_UI_Resources) from the Mendix Marketplace here: [Siemens MindSphere Theme Pack](https://appstore.home.mendix.com/link/app/108803/)
 
   This applies MindSphere styling to your app and includes some additional custom files which are required for the correct operation of your app. For more information, see the [MindSphere Theme Pack](/partners/siemens/mindsphere-module-details#msthemepack) section of *MindSphere Module Details*.
 
@@ -365,10 +365,10 @@ If you are on a **Start for Free** tenant, additional MindSphere API roles are a
 If you are on a **Developer** tenant, no additional MindSphere API roles are assigned. The granted access to your app is shown in the registration summary page.
 {{% /alert %}}
 
-Please note, for further configuration of your registration e.g. CSPs or additional roles, please use the Developer Cockpit.
+Please note, for further configuration of your registration, for example, CSPs or additional roles, please use the Developer Cockpit.
 
 {{% alert type="info" %}}
-You can have multiple versions of your app within the Developer Cockpit, for example versions with different configurations or roles and scopes. 
+You can have multiple versions of your app within the Developer Cockpit, for example, versions with different configurations or roles and scopes. 
 
 The deployment registered via the **Auto Registration** process is *always mapped to the version created during the process*. If you want to create additional versions of your app, you can do this by manually creating a new version within the Developer Cockpit.
 {{% /alert %}}

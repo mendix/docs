@@ -36,7 +36,7 @@ This document will focus on executing an SQL on relational external databases.
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Download the Database Connector from the Mendix App Store into your app project
+* Download the Database Connector from the Mendix Marketplace into your app project
 * Have a database **URL** address that points to your database
 * Have the **username** and **password** for signing into the database (relative to the database URL address)
 * Have the SQL statement to execute (relative to the database type; note that the SQL dialect differs for different databases)

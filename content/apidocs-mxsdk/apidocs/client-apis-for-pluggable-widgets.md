@@ -119,7 +119,7 @@ A component will receive `EditableValue<X>` where `X` depends on the configured 
 
 `status` is similar to one exposed for `DynamicValue`. It indicates if the value's loading has finished and if loading was successful. Similarly to `DynamicValue`, `EditableValue` keeps returning the previous `value` when `status` changes from `Available` to `Loading` to help a widget avoid flickering.
 
-The flag `readOnly` indicates whether a value can actually be edited. It will be false, for example, when a widget is placed inside a Data view that is not [editable](/refguide/data-view#editable), or when a selected attribute is not editable due to [access rules](/refguide/access-rules). The `readOnly` flag is always false when a `status` is not `ValueStatus.Available`. Any attempt to edit a value set to read-only will have no affect and incur a debug-level warning message.
+The flag `readOnly` indicates whether a value can actually be edited. It will be true, for example, when a widget is placed inside a Data view that is not [editable](/refguide/data-view#editable), or when a selected attribute is not editable due to [access rules](/refguide/access-rules). The `readOnly` flag is always true when a `status` is not `ValueStatus.Available`. Any attempt to edit a value set to read-only will have no affect and incur a debug-level warning message.
 
 The value can be read from the `value` field and modified using `setValue` function. Note that `setValue` returns nothing and does not guarantee that the value is changed synchronously. But when a change is propagated, a component receives a new prop reflecting the change.
 

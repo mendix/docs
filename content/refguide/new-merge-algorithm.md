@@ -7,9 +7,9 @@ tags: ["merge", "algorithm", "conflict", "resolution"]
 
 ## 1 Introduction
 
-A new merge algorithm with fine-grained conflict resolution is used when you update your project or merge changes in it. The new merge algorithm has the following features:     
+A new merge algorithm with fine-grained conflict resolution is used when you update your project or merge changes in it. The new merge algorithm has the following features:
+
 * **Fine-grained conflict resolution** – When there are conflicting changes in a document, you do not have to choose between whole documents: resolving a conflict using your change or using their change. Instead, you can resolve conflicts at the level of individual elements, such as widgets, entities, attributes, or microflow actions. Also, all non-conflicting changes from both sides are accepted automatically.
-  
 * **No conflicts on parallel changes to lists of widgets** – When two developers make changes to widgets in the same document there is no conflict, the changes are combined. However, if the changes are made too close to the same place in the document, a **list order conflict** is reported that reminds the developer who is merging the changes to decide on the final order of the widgets in the list. 
 
 ## 2 Enabling the New Algorithm with Fine-Grained Conflict Resolution
@@ -21,9 +21,7 @@ Make sure that you repository is in a clean state: everything has been committed
 To enable the new algorithm, do the following:
 
 1. In the Studio Pro top bar, go to **Edit** > **Preferences** > **New features**. 
-
 2. In the **Version Control** section, enable the **New merge algorithm with fine-grained conflict resolution** option.
-
 3. Restart Studio Pro.
 
 For more information, see [Preferences](preferences-dialog).
@@ -59,8 +57,7 @@ Your page is now laid out as shown below:
 When you merge changes, the new algorithm shows you the following conflicts:
 
 1. The text that both sides changed. 
-
-2. A **list order conflict**. Both of you added widgets to the bottom layout grid. The merge algorithm cannot guess the right order for the two new widgets and it reports the list order conflict. This is a reminder for you (the developer who is doing the merge) to look at the final layout and confirm the order. 
+2.  A **list order conflict**. Both of you added widgets to the bottom layout grid. The merge algorithm cannot guess the right order for the two new widgets and it reports the list order conflict. This is a reminder for you (the developer who is doing the merge) to look at the final layout and confirm the order. 
 
     ![New algorithm conflicts](attachments/new-merge-algorithm/new-merge-algorithm-conflicts.png)
 

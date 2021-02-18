@@ -13,7 +13,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 #### Improvements
 
-* Two new endpoints have ben added to the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis) to register published and consumed endpoints separately. 
+* Two new endpoints have ben added to the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis) for registering published and consumed endpoints separately. 
 
 ### January 28th, 2021
 

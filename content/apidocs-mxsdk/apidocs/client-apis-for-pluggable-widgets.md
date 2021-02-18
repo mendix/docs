@@ -230,7 +230,7 @@ export type ListActionValue = (item: ObjectItem) => ActionValue;
 In order to call an action on a particular item of a `ListValue` first an instance of `ActionValue` should be obtained by calling `ListActionValue` with the item. See an example below.
 
 
-Assuming widget properties are confgured as follows:
+Assuming widget properties are configured as follows:
 
 ```ts
 interface MyListWidgetsProps {

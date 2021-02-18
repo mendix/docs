@@ -44,7 +44,7 @@ The metrics from your app's environment are supplied in the following namespaces
 * jmx – metrics from the Mendix runtime
 * jvm – metrics from the Java virtual machine in which the Mendix runtime runs (see the Datadog [Java Runtime Metrics](https://docs.datadoghq.com/tracing/runtime_metrics/java/) documentation)
 * postgresql – database metrics specific to PostgreSQL databases (see the Datadog [Postgres](https://docs.datadoghq.com/integrations/postgres/) documentation)
-* system – metrics from the base system running on the platform or PaaS (see the Datadog documentation [System Check](https://docs.datadoghq.com/integrations/system/)) — Mendix only supplies system.proc information as platform limitations render the other information inaccurate
+* system – metrics from the base system running on the platform or PaaS (see the Datadog documentation [System Check](https://docs.datadoghq.com/integrations/system/)) — Mendix only supplies [Processes](https://docs.datadoghq.com/integrations/process/) metrics which are reported in the `system.process` space as platform limitations render other system information inaccurate
 
 Datadog also has a *synthetics* namespace where you can send metrics specifically labelled as coming from tests (see the Datadog documentation [Synthetics](https://docs.datadoghq.com/synthetics/)), but the Mendix agent does not create metrics for this.
 

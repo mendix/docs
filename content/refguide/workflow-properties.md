@@ -64,7 +64,7 @@ For more information on using parameters, see the [Parameters](#parameters) sect
 
 **Workflow Description** is a description of the workflow displayed in the running app. The description can contain parameters that are written between braces, e.g. {1}.
 
-#### 2.3.3 Parameters
+#### 2.3.3 Parameters {#parameters}
 
 Parameters are attributes the value of which will be displayed. To view **Parameters**, click the ellipsis icon next to the **Workflow name** or **Workflow description** in properties depending on where you would like to display these parameters. 
 
@@ -114,5 +114,5 @@ In addition to adding new parameters, you can perform the following actions on p
 
 ## 3 Read More
 
-* [How to Configure a Workflow for the Employee Onboarding Process](/howto/logic0business-rules/workflow-how-to-configure)
+* [How to Configure a Workflow for the Employee Onboarding Process](/howto/logic-business-rules/workflow-how-to-configure)
 * [Workflows](workflows)

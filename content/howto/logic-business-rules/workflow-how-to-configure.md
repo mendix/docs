@@ -214,9 +214,9 @@ To proceed with the onboarding, the Manager needs to indicate whether the new hi
 
 2. Open the **Toolbox**, drag and drop a **User task** activity to the path, and do the following:
 
-    1. Set **Task name** to **Specify_Location** and set **Caption** to **Specify Location** referring to steps 2-4 of the [Selecting a Device for the New Hire](#specify-device) section.
-    2. Set a new page called **SpecifyLocation** for the **Page** property referring to steps 5-7 of the [Selecting a Device for the New Hire](#specify-device) section.
-    3. Restrict the **Specify Location** user task to the Manager role referring to steps 8-9 of the [Selecting a Device for the New Hire](#specify-device) section.
+    1. Set **Task name** to **Specify_Location** and set **Caption** to **Specify Location** referring to steps 2-4 of the [Selecting a Device for the New Hire](#select-device) section.
+    2. Set a new page called **SpecifyLocation** for the **Page** property referring to steps 5-7 of the [Selecting a Device for the New Hire](#select-device) section.
+    3. Restrict the **Specify Location** user task to the Manager role referring to steps 8-9 of the [Selecting a Device for the New Hire](#select-device) section.
 
 3. Now you need to make sure that only the relevant information is displayed on the **SpecifyLocation** page and that only the Manager role has access to it. In the Project Explorer, double-click the **SpecifyLocation** page to open it.
 
@@ -234,7 +234,7 @@ To proceed with the onboarding, the Manager needs to indicate whether the new hi
 
         ![Specify Location Form](attachments/workflow-how-to-configure/specify-location-form.png)
 
-    5. To restrict access of the page to the Manager role only, follow step 12 of the [Selecting a Device for the New Hire](#specify-device) section.
+    5. To restrict access of the page to the Manager role only, follow step 12 of the [Selecting a Device for the New Hire](#select-device) section.
     
 
 You have created the user task for the Manager to specify whether the new employee is working from the office or home.
@@ -263,11 +263,11 @@ Do the following:
 
 4. Now you need to configure what happens in both scenarios: when the new hire works from the office and when the new hire works from home. Open the **Toolbox**, drag and drop a **User task** activity to the **Office** path, and do the following:
 
-    1. Name the user task **Prepare_Desk** and set its title to **Prepare Desk** referring to steps 2-4 of the [Selecting a Device for the New Hire](#specify-device) section.
+    1. Name the user task **Prepare_Desk** and set its title to **Prepare Desk** referring to steps 2-4 of the [Selecting a Device for the New Hire](#select-device) section.
 
-    2. Set a new page called **PrepareDesk** for the **Page** property it referring to steps 5-7 of the [Selecting a Device for the New Hire](#specify-device) section.
+    2. Set a new page called **PrepareDesk** for the **Page** property it referring to steps 5-7 of the [Selecting a Device for the New Hire](#select-device) section.
 
-    3. Restrict the **Prepare Desk** user task to the Facilities role referring to steps 8-9 of the [Selecting a Device for the New Hire](#specify-device) section.
+    3. Restrict the **Prepare Desk** user task to the Facilities role referring to steps 8-9 of the [Selecting a Device for the New Hire](#select-device) section.
 
         ![Prepare Desk](attachments/workflow-how-to-configure/prepare-desk.png)
 
@@ -281,15 +281,15 @@ Do the following:
        
         ![Read-Only Form](attachments/workflow-how-to-configure/read-only-form.png)
    
-7. To restrict access to the page to the Facilities role only, follow the step 12 of the [Selecting a Device for the New Hire](#specify-device) section.
+7. To restrict access to the page to the Facilities role only, follow the step 12 of the [Selecting a Device for the New Hire](#select-device) section.
 
 8. Now you need to create a user task for Facilities when the employee is working from home. Open the workflow editor.
 
 9. Open the **Toolbox**, drag and drop a **User task** activity to the **Home** path, and do the following:
 
-    1. Name the user task **Ship_Devices** and set its title to **Ship Devices** referring to steps 2-4 of the [Selecting a Device for the New Hire](#specify-device) section.
-    2. Set a new page called **ShipDevices** for the **Page** property it referring to steps 5-7 of the [Selecting a Device for the New Hire](#specify-device) section.
-    3. Restrict the **Ship Devices** user task and **ShipDevices** page to the Facilities role referring to steps 8-9 of the [Selecting a Device for the New Hire](#specify-device) section.
+    1. Name the user task **Ship_Devices** and set its title to **Ship Devices** referring to steps 2-4 of the [Selecting a Device for the New Hire](#select-device) section.
+    2. Set a new page called **ShipDevices** for the **Page** property it referring to steps 5-7 of the [Selecting a Device for the New Hire](#select-device) section.
+    3. Restrict the **Ship Devices** user task and **ShipDevices** page to the Facilities role referring to steps 8-9 of the [Selecting a Device for the New Hire](#select-device) section.
 
 10. You need to make sure that only relevant information is displayed on the **ShipDevices** page and that this page can be accessed by the Facilities department only. In the Project Explorer, double-click the **ShipDevices** page to open it.
 

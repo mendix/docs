@@ -273,7 +273,7 @@ The following properties are specific for this event:
 * **Close page** – Specifies whether the current page should be closed.
 * **Commit** – Specifies whether the object should be committed when running a workflow. 
 
-### 3.14 Open Workflow Page
+### 3.14 Open Workflow Page {#open-workflow-page}
 
 **Open workflow page** opens an overview page set for the **Workflow page** in [workflow properties](workflow-properties). An element calling this event should be placed in a data container connected to the **System.WorkflowInstance** entity. 
 

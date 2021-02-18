@@ -26,7 +26,7 @@ User task properties consist of the following sections:
 * [General](#general)
 * [Outcomes](#outcomes)
 * [Task page](#task-page)
-* [User assignment](user-assignment)
+* [User assignment](#user-assignment)
 
 ### 2.1 Display Information Section {#display-info}
 
@@ -40,7 +40,7 @@ For more information on using parameters, see the [Parameters](#parameters) sect
 
 **Task Description** is a description of the workflow displayed in the running app. The description can contain parameters that are written between braces, e.g. {1}.
 
-#### 2.1.3 Parameters
+#### 2.1.3 Parameters {#parameters}
 
 Parameters are attributes the value of which will be displayed. To view **Parameters**, click the ellipsis icon next to the **Task name** or **Task description** in properties depending on where you would like to display these parameters. 
 

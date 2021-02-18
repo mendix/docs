@@ -142,4 +142,4 @@ You can trigger workflows or user tasks from pages via specific on-click events 
 
 ## 8 Read More
 
-* [How to Configure a Workflow for the Employee Onboarding Process](/howto/logic0business-rules/workflow-how-to-configure)
+* [How to Configure a Workflow for the Employee Onboarding Process](/howto/logic-business-rules/workflow-how-to-configure)

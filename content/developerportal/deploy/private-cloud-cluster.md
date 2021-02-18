@@ -349,7 +349,7 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide)
 
 To enable this mode, select the following options: **Create S3 Bucket per environment**, **Create account (IAM user) per environment**.
 
-Create an IAM policy that will be attached to app users and copy its Policy ARN (specify this value in the **Attach Policy ARN** field):
+Create an IAM policy that will be attached to IAM user accounts and copy its Policy ARN (specify this value in the **Attach Policy ARN** field):
 
 ```json
 {

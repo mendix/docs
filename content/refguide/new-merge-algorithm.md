@@ -52,7 +52,7 @@ Your page is now laid out as shown below:
 
 ![Branch line page](attachments/new-merge-algorithm/new-merge-algorithm-branch-page.png)
 
-### 3.1 Resolving Conflicts
+## 4 Resolving Conflicts
 
 When you merge changes, the new algorithm shows you the following conflicts:
 
@@ -72,7 +72,7 @@ The following non-conflicting changes have already been applied to the page:
 * The text widget is added to the bottom layout grid (main line)
 * A data grid is added to the bottom layout grid (branch line)
 
-#### 3.3.1 Resolving the First Conflict
+### 4.1 Resolving the First Conflict
 
 For the first conflict, you can inspect changes and decide which version to apply. Select one of the three lines that represent the conflict and choose **Resolve using Mine** or **Resolve using Theirs**. 
 
@@ -88,7 +88,7 @@ There is a third option to deal with a conflict: **Mark as Resolved**. This mean
 
 Once you have chosen one of the three options to resolve the conflict, green checkmarks will appear to indicate that this conflict has been dealt with.
 
-#### 3.3.2 Resolving the Second Conflict
+### 4.2 Resolving the Second Conflict
 
 The second conflict is a list order conflict. It is a reminder to take a look at the order of the widgets in the 
 layout grid. You can arrange the widgets in the desired order in the page editor and then choose **Mark as Resolved** for the list order conflict.
@@ -99,7 +99,7 @@ Some changes will make it impossible to resolve conflicts using **mine** or **th
 
 ![Conflict cannot be resolved](attachments/new-merge-algorithm/new-merge-algorithm-cannot-resolve.PNG)
 
-#### 3.3.3 Finishing Conflict Resolution
+### 4.3 Finishing Conflict Resolution
 
 Once all conflicts have been resolved, click the **Accept and Exit** button to finalize the results. The document will be saved in its merged form and the conflict for that document will be gone. The result is the document that contains changes from both sides and possibly some manual edits.
 

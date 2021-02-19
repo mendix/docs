@@ -8,11 +8,11 @@ tags: ["data hub", "data hub catalog"]
 
 ## 1 Introduction
 
-Finding the right data is made easier by the Data Hub Catalog search functionality. The details of data assets are displayed in the [asset details](#search-details) screen. 
+Finding the right data is made easier with the Data Hub Catalog search functionality. The details of data assets are displayed in the [asset details](#search-details) screen. 
 
 The [Copy Data Source URI](#service-details) or **Download** contract buttons enable you to integrate registered data sources into your enterprise applications.
 
-Start searching from the [Data Hub](#data-hub-home) page or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Asset Details** screen.
+You can start searching from the [Data Hub](#data-hub-home) page or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Asset Details** screen.
 
 The [Data Hub pane](/refguide/data-hub-pane) in Studio Pro connects to the powerful search in the Data Hub Catalog to enable you to use registered datasets as external entities in you app development.
 
@@ -140,12 +140,12 @@ The **Sandbox** filter refers to apps deployed to the Mendix Free App environmen
 
 #### 4.1.3 Search Results
 
-The number of items satisfying the search criteria (search string plus filters) are shown at the top of the search results. Search results will include all application names, registered services, datasets (or entity sets), attributes, tags, and descriptions satisfying the search string and filters. Th order of the search results will be a combination of the following:
+The number of items satisfying the search criteria (search string plus filters) are shown at the top of the search results. Search results will include assets that match the search string and satisfy the active filters. Items that are included in the search include all application names, data sources, datasets (or entity sets), attributes, tags, and descriptions. The order of the search results will be a combination of the following:
 
 * Closest match to the search string
 * Popularity of the service (number of connections)
 
-If no search string is specified, all registered assets will be listed in the search results in order of popularity (number of connections to the asset).
+If no search string is specified, all registered assets will be listed in the search results pane in order of popularity (number of connections to the asset).
 
 When an item in the search results is selected, the **Catalog** tab will display the **Details** of the asset and the **Landscape** tab will show the network of connections and dependencies of the selected item in the [Data Hub Landscape](../data-hub-landscape/index).
 
@@ -155,45 +155,52 @@ When you click on an asset (data source or dataset) in the search results, the d
 
 #### 4.2.1 Details of a Selected Data Source {#service-details}
 
-When a data source is selected in the search results, the details of the metadata contract at the selected endpoint, deployed to the given environment are displayed along with curated information:
+When a data source is selected in the search results, the following details are displayed:
 
 ![](attachments/search/search-details-service.png)
 
-* The name of the data source
+* Application icon
 
-* The **Validated** tag will be displayed for the data source if it has been set for the asset
+* Name of the data source
 
-* The **Environment name** to which the app is deployed
+* **Validated** tag – if it has been set for the asset
 
-* The **Version** number of the service at this endpoint
+* **Environment Name** – where the app is deployed
 
-* The number of **Connections** that are made by apps in a specific environment, in other words, that consume the service
+* **Version** number of the service
 
-* A description of the data source as included in the metadata contract or curated in the Data Hub Catalog
+* **Connections** –  number of apps that consume the service
 
-* Click **Copy Data Source URI** to copy the URI of the data source contract to the clipboard
+* A description of the data source
 
-* Click **Share Data Source** to copy the link to this asset detail page to the clipboard
-
-* Click [Download](#download-contract) to retrieve and save the metadata contract locally
-	
-* Each **Dataset** that is exposed in the data source (you can expand this to see details of the attributes and associations)
+* Each **Dataset** that is exposed in the data source (you can expand this to see details of the attributes and associations) 
 
 	{{% alert type="info" %}}The **Dataset** is the name of the **Entity set** of a published **Entity** in Mendix Studio Pro, which by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
+	
+
+You can perform the following actions from this screen:
+
+* **Copy Data Source URI** –  click to copy the URI of the data source contract to the clipboard. This URI can be used to integrate the data source in other enterprise applications.
+*  **Share Data Source** –  click to copy the link to this asset detail page to the clipboard so that you can share it with others.
+*  [Download](#download-contract) – retrieve and save the metadata contract locally.
+* **Copy Dataset URI** – click to copy the URI of the dataset to the clipboard for use in other business applications.
 
 #### 4.2.2 Details for a Selected Dataset {#entity-details}
 
-When an **Dataset** is selected in the search results, the details are displayed in the **Search Details** panel:
+When an **Dataset** is selected in the search results, the following details are displayed in the **Search Details** panel:
 
 ![](attachments/search/search-details-entity.png)
 
-* The name of the dataset
-* **Part of** includes a link that will take you to the data source details page that the dataset is exposed in
-* The **Version** number of the OData service that the dataset is exposed in
-* The number of **Connections** to this dataset, that is, the number of apps that consume this dataset
-* A description of the dataset as given in the metadata contract or curated in the Data Hub Catalog
-* Click **Copy Dataset URI** to copy the URI of the dataset to the clipboard
-* Click **Share Dataset** to copy the link to this dataset detail page to the clipboard
+* Dataset name
+
+* **Part of** –  a link to the data source details page that the dataset is exposed in
+
+* **Version** number of the data source that the dataset is exposed in
+
+* **Connections** – the number of apps that consume this dataset
+
+* A description of the dataset
+
 * **Dataset Information**
 	The **Attributes** that are exposed for the dataset for this data source are listed showing the attribute types and description.
 
@@ -204,6 +211,12 @@ When an **Dataset** is selected in the search results, the details are displayed
 	* **Name** – the name of the association that is exposed in the OData service contract
 	* **Navigates to** – the dataset the association is made with. Click the link to see the details of the associated dataset in the Catalog. 
 	* **Multiplicity** – the number of object at the other end of the association (0..1, 1 or *)
+
+You can perform the following actions from this screen:
+
+* **Copy Dataset URI** – click to copy the URI of the dataset to the clipboard for use in other business applications
+* **Share Dataset** – click to copy the link to this dataset detail page to the clipboard so that it can be shared with others
+
 
 ### 4.3 Data Source Metadata Panel {#metadata}
 
@@ -231,10 +244,15 @@ The data source metadata panel at the right of the asset details screen displays
 
 ### 4.4 Curate Bar {#curate-bar}
 
-The **Curate Bar** is displayed on the asset detail screen if you are the owner of the selected asset or a curator. You can perform the following actions:
-* **Edit Metadata** – edit the registered metadata and add Catalog descriptions and tags: 
-  * for a data source you can edit **Application Details**, and **Service Details**
-  *  for a selected dataset you can **Edit Dataset Details**
+The **Curate Bar** is displayed on the asset detail screen if you are the owner of the selected asset or a curator:
+
+![](attachments/search/curate-bar.png)
+
+You can perform the following actions:
+
+* **Edit Metadata** – edit detals that are displayed in the Catalog: 
+  * for a selected data source you can edit [Application Details](./curate#curate-application) and [Data Source Details](./curate#service-details)
+  *  for a selected dataset you can edit [Dataset Details](./curate#curate-datasets)
 * **Discoverable**/**Validated** – set the discoverability of the service, and validate the dataset
   * **Discoverable** – all users of Data Hub and Studio Pro can see and consume the service in combination with the classification of the data
   * **Non-Discoverable** – the service is not visible and only owners of the service, Data Hub curators, and the Data Hub Admin can access the service

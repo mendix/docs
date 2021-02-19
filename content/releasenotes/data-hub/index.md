@@ -9,6 +9,22 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 ## 2021
 
+### January 28th, 2021
+
+#### Improvements
+
+* You can now copy the dataset URI from the [data source details](/data-hub/data-hub-catalog/search#search-details) in the Data Hub Catalog. This makes it easier to directly select datasets to use in other business applications from the context of the data source.
+
+### January 21st, 2021
+
+#### New Features
+
+* Custom icons can now be used for applications and data sources. Curators and owners can [upload their own icons](/data-hub/data-hub-catalog/curate#application-icon) or select from the Data Hub icon library.
+
+#### Improvements
+
+* Improvements have been made to security. 
+
 ### January 14th, 2021
 
 #### New Features

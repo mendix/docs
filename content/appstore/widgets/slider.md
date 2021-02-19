@@ -1,8 +1,8 @@
 ---
 title: "Slider"
 category: "Widgets"
-description: "Describes the configuration and usage of the Slider widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "slider", "bound", "platform support"]
+description: "Describes the configuration and usage of the Slider widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "slider", "bound", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -41,7 +41,7 @@ In Studio Pro, place the widget in the context of an object that has attributes 
 
 When choosing the step value, the difference between the maximum value and the minimum value should be divisible by 2 (meaning, `(maximumValue - minimumValue) % 2 = 0`).
 
-## 4 Developing This App Store Component
+## 4 Developing This Marketplace Component
 
 To contribute to the development of this widget, follow these steps:
 

@@ -105,7 +105,7 @@ Follow the steps below:
 
     7. Click the **Page** property.
 
-    8. In the **Select Page** dialog box that opens, click **New Page**.
+    8. In the **Select Page** dialog box that opens, click the plus icon in the top right corner to add a new page.
 
     9. In the **Create new page** dialog box, do the following:
 

@@ -348,7 +348,7 @@ The Native Template is being continuously developed. This means new versions are
 
 You should update your project's template in the following scenarios:
 
-* You app crashes unexpectively even though all Studio Pro modules and resources are fully updated using the Mendix App Store
+* You app crashes unexpectively even though all Studio Pro modules and resources are fully updated using the Mendix Marketplace
 * You updated your Studio Pro version
 
 The Native Template is tightly tied to the version of Studio Pro you are running. Therefore, every time your project is updated, consider running `regenerate` using the Native Builder to update your template.

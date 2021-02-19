@@ -20,12 +20,6 @@ Guidelines for usage.
 Example usage.
 {{% /alert %}}
 
-## Mendix App Store {#app-store}
-
-{{% alert type="info" %}}
-Capitalize in all instances, even when just writing "App Store."
-{{% /alert %}}
-
 ## Mendix Cloud
 
 {{% alert type="info" %}}
@@ -58,6 +52,12 @@ The Developer Portal includes what is sometimes referred to as the "Cloud Portal
 This term replaces "Sprintr," "Platform Portal," and "Mendix App Platform." These terms are not to be used in the product UI or documentation. For more information, see [Terminology History](terminology-history).<br />
 <br />
 Capitalize in all instances.
+{{% /alert %}}
+
+## Mendix Marketplace {#marketplace}
+
+{{% alert type="info" %}}
+Capitalize in all instances, even when just writing "Marketplace."
 {{% /alert %}}
 
 ## Mendix Platform {#platform}

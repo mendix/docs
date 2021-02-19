@@ -382,7 +382,7 @@ When choosing the **Existing docker-registry secret**, you will need to add this
 
 Choose **Yes** if a proxy is required to access the public internet from the namespace; you will be asked for the proxy configuration details.
 
-### 4.6 Do you want to enable or disable custom TLS?{#custom-tls}
+### 4.7 Do you want to enable or disable custom TLS?{#custom-tls}
 
 ![](attachments/private-cloud-config-script/custom-tls.png)
 
@@ -411,7 +411,7 @@ In order for the Mendix Operator to trust such certificates, you need to add the
        -----END CERTIFICATE-----
        ```
        (concatenate all the public keys from custom CAs into one `custom.crt` file, separating them with line breaks and optional comments).
-   2. Load the file into a Secret (replace `{namespace}` with the namespace where the Operator is installed, and `{secret}` with the name of the Secret to create, e.g. `mendix-custom-ca`):
+   2. Load the file into a Secret (replace `{namespace}` with the namespace where the Operator is installed, and `{secret}` with the name of the Secret to create, for example, `mendix-custom-ca`):
 
         For OpenShift:
         ```shell
@@ -423,7 +423,7 @@ In order for the Mendix Operator to trust such certificates, you need to add the
         kubectl -n {namespace} create secret generic {secret} --from-file=custom.crt=custom.crt
         ```
 
-2. Use the name of this `custom.crt` Secret when asked for **the custom ca-certificates secret name** (e.g. `mendix-custom-ca`).
+2. Use the name of this `custom.crt` Secret when asked for **the custom ca-certificates secret name** (for example, `mendix-custom-ca`).
 
 These custom CAs will be trusted by:
 

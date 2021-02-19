@@ -1,8 +1,8 @@
 ---
 title: "Mendix SSO"
 category: "Modules"
-description: "Describes the configuration and usage of the Mendix SSO module, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "sso", "single sign on", "platform support"]
+description: "Describes the configuration and usage of the Mendix SSO module, which is available in the Mendix Marketplace."
+tags: ["marketplace", "app store", "marketplace component", "app store component", "sso", "single sign on", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -23,7 +23,7 @@ You can use this module when you want your application's end-users to sign in wi
 * App end-user access management that is handled in the [Mendix Developer Portal](/developerportal/index)
 
 {{% alert type="info" %}}
-[Company Admins](/developerportal/company-app-roles/companyadmin-settings) can manage [security groups](/developerportal/company-app-roles/users#security-groups) that grant app permissions to groups of users.
+[Mendix Admins](/developerportal/control-center/index#company) can manage [groups](/developerportal/control-center/index#groups) that grant app permissions to groups of users.
 {{% /alert %}}
 
 ### 1.3 Limitations

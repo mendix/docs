@@ -19,7 +19,7 @@ With the Charts widgets, you can use data from a REST Service to plot graphs.
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Create an app project
-* Import the latest [Charts Widgets](/appstore/widgets/charts) from the Mendix App Store
+* Import the latest [Charts Widgets](/appstore/widgets/charts) from the Mendix Marketplace
 
 ## 3 Setting up Data to be Exposed by a REST Endpoint
 

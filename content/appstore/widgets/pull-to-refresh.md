@@ -1,8 +1,8 @@
 ---
 title: "Pull to Refresh"
 category: "Widgets"
-description: "Describes the configuration and usage of the Pull to Refresh widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "pull to refresh", "platform support"]
+description: "Describes the configuration and usage of the Pull to Refresh widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "pull to refresh", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -41,6 +41,6 @@ To use this widget, follow these steps:
 
 ![](attachments/pull-to-refresh/demo.gif)
 
-## 3 Developing This App Store Component
+## 3 Developing This Marketplace Component
 
 We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/pull-to-referesh](https://github.com/mendixlabs/pull-to-refresh/issues).

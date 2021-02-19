@@ -1,8 +1,8 @@
 ---
 title: "Progress Circle"
 category: "Widgets"
-description: "Describes the configuration and usage of the Progress Circle widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "progress circle", "platform support"]
+description: "Describes the configuration and usage of the Progress Circle widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "progress circle", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -27,7 +27,7 @@ Place the widget in the context of an object that has attributes for **Value att
 * If **Value attribute** is not set, **Value static** will be used to calculate the progress
 * If **Maximum value attribute** is not set, the maximum value defaults to **Maximum value static**
 
-## 3 Developing This App Store Component
+## 3 Developing This Marketplace Component
 
 1. Install the following:
 	* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)

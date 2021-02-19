@@ -1,5 +1,5 @@
 ---
-title: "Secure Outgoing Connections from your App"
+title: "Secure Outgoing Connections from Your App"
 parent: "general"
 menu_order: 10
 description: "Describes which methods are available for securing connections from your app to the outside world."

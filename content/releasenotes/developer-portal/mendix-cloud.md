@@ -13,7 +13,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
-### February 18th, 2021
+### February 22nd, 2021
 
 * We have released a major improvement to the technology underpinning our integration with Datadog. This adds the following features:
     * tracing program flow (see https://docs.datadoghq.com/tracing/setup_overview/setup/java for information on how Datadog does this)

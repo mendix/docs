@@ -50,7 +50,7 @@ The metrics from your app's environment are supplied in the following namespaces
 
 The following metrics are useful when monitoring the performance of your Mendix app:
 
-* database.diskstorage_size
+* mx.database.diskstorage_size
 * jvm.heap_memory
 * jvm.heap_memory_committed
 * jvm.heap_memory_init
@@ -421,7 +421,7 @@ If you have any issues related to accessing Datadog, please contact their suppor
 | Metric | Description |
 | --- | --- |
 | jmx.com.mendix.* | Core runtime metrics |
-| database.diskstorage_size | Disk storage available to the application database (this is a fixed value) |
+| mx.database.diskstorage_size | Disk storage available to the application database (this is a fixed value) |
 | mx.activity.time | How long a microflow activity takes to run |
 | mx.client.time | The time to handle a request to a request handler that is used by the web ui |
 | mx.microflow.time | How long a microflow takes to run |

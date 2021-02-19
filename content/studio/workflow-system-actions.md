@@ -1,0 +1,45 @@
+---
+title: "System Actions"
+category: "Workflows"
+menu_order: 30
+tags: ["workflow", "workflows", "call microflow"]
+---
+
+## 1 Introduction
+
+System actions in workflows consist of a **Call microflow** action that is used to call a selected [microflow](microflow). Arguments can be passed to the microflow and the result can be stored.
+
+## 2 Call Microflow Properties
+
+An example of **Call microflow** properties is represented in the image below:
+
+![Call Microflow Properties](attachments/workflows-system-actions/call-microflow-properties.jpg)
+
+Call microflow properties consist of the following sections:
+
+* [General](#general)
+* [Parameters](#parameters)
+* [Outcomes](#outcomes)
+
+### 2.1 General Section {#general}
+
+The **General** section allows you to define a caption for the action and to select a microflow.  
+
+The **General** section properties are described in the table below:
+
+| Property  | Description                                                  |
+| --------- | ------------------------------------------------------------ |
+| Caption   | The **Caption** describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand without needing to add annotations. |
+| Microflow | The microflow that is called by this element.                |
+
+### 2.3 Parameters Section {#parameters}
+
+Parameters pass data to the element. Currently the parameters can only be selected and configured in Studio Pro. For more information, see [Call Microflow](/refguide/call-microflow).
+
+### 2.2 Outcomes Section {#outcomes}
+
+**Outcomes** depends on the return value of the microflow. For example, for the Boolean, you have **true** and **false** outcomes, and for the enumeration: an outcome per each enumeration value and an empty one when the value is unassigned.  {{% todo %}}[Maybe an example here?]{{% /todo %}}
+
+## 3 Read More
+
+* [General Activities](workflows-general-activities)

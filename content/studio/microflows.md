@@ -125,6 +125,8 @@ The **Toolbox** tab contains the following sections:
 * [General](#microflow-general-section)
 * [Object Activities](#microflow-object-activities)
 * [Client Activities](#microflow-client-activities)
+* [Workflow Activities](#microflow-workflow-activities)
+* [Variable Activities](#microflow-variable-activities)
 
 ### 8.1 General {#microflow-general-section}
 
@@ -181,7 +183,22 @@ The **Client Activities** are described in the table below.
 | Show Message   | With the **Show Message** action you can show a blocking or non-blocking message to an end-user. (Non-blocking message lets users continue their work in the app with the pop-up window open, while the blocking message does not let the user continue work until the pop-up window is closed. ) For more information, see [Show Message](/refguide/show-message) in the *Studio Pro Guide*. |
 | Show Page      | With the **Show Page** action you can show a page to the end-user. For more information, see [Show Page](/refguide/show-page) in the *Studio Pro Guide*. |
 
-### 8.4 Variable Activities
+### 8.4 Workflow Activities {#microflow-workflow-activities}
+
+The **Workflow Activities** section contain activities that interact with workflows:
+
+![Workflow Activities](attachments/microflows/workflow-activities.jpg) 
+
+The **Workflow Activities** are described in the table below:
+
+| Activity            | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| Call Workflow       | Calls a workflow.                                            |
+| Complete Task       | Sets which outcome the specified [user task](workflows-user-task) should follow. |
+| Open User Task Page | Opens a user task page specified in [user task properties](workflows-user-task). |
+| Open Workflow Page  | Opens an overview page specified in [workflow properties](workflow-properties). |
+
+### 8.5 Variable Activities {#microflow-variable-activities}
 
 The **Variable Activities** section contain activities that manipulate variables: 
 

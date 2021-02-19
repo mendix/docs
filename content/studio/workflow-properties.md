@@ -41,7 +41,7 @@ The **Data** section contains information on what data context the workflow is u
 
 ![Data Section](attachments/workflow-properties/data.jpg)
 
-**Workflow entity** is an entity that is used as a workflow context. This entity should be of a workflow entity type. For more information, see the [Workflow Entity](domain-models#workflow-entity) section in the *Domain Model*.
+**Workflow entity** is an entity that is used as a workflow context. This entity should be of a workflow entity type. For more information, see the [Entities and Their Types](domain-models#entity-types) section in the *Domain Model*.
 
 ### 2.3 Workflow Page Section {#workflow-page}
 

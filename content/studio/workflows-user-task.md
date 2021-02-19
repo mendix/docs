@@ -11,7 +11,7 @@ User task allows you to assign a workflow task to a certain user.
 
 For example, you can add filters and assign a task to a user in the IT department. When the workflow reaches this user task, the task will appear in their inbox:
 
-![Task Inbox](attachments/user-task/task-inbox.jpg)
+![Task Inbox](attachments/workflows-user-task/task-inbox.jpg)
 
 ## 2 Properties
 
@@ -28,13 +28,13 @@ User task properties consist of the following sections:
 
 **Caption** defines a title of the user task:
 
-![General Section](attachments/user-task/general.jpg)
+![General Section](attachments/workflows-user-task/general.jpg)
 
 ### 2.2 User Assignment Section {#user-assignment}
 
 **Assign user task using** allows you to manage what users will the task be assigned to. You can filter users or implement a more complicated logic and add several checks using a microflow. 
 
-![User Assignment](attachments/user-task/user-assignment.jpg)
+![User Assignment](attachments/workflows-user-task/user-assignment.jpg)
 
 Possible options of this property are described in the table below:
 
@@ -47,17 +47,17 @@ Possible options of this property are described in the table below:
 
 **Task Page** is an overview page where the allowed roles can track the progress of the user tasks and view its details, such as comments or attachments:
 
-![Task Page](attachments/user-task/task-page.jpg)
+![Task Page](attachments/workflows-user-task/task-page.jpg)
 
 When you create a task page, you can use a user task-specific page templates. 
 
-![User Task Templates](attachments/user-task/user-task-templates.jpg)
+![User Task Templates](attachments/workflows-user-task/user-task-templates.jpg)
 
 ### 2.4 Display Information Section {#display-info}
 
 The **Display Information** section defines the user task name and its description that are displayed in the running (published) app. 
 
-![Display Information](attachments/user-task/display-information.jpg)
+![Display Information](attachments/workflows-user-task/display-information.jpg)
 
 The **Display Information** section properties are described in the table below:
 
@@ -70,7 +70,7 @@ The **Display Information** section properties are described in the table below:
 
 The **Due Date** section allows you to set a deadline for the user task and keep track of it. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the workflow. 
 
-![Due Date Section](attachments/user-task/due-date.jpg)
+![Due Date Section](attachments/workflows-user-task/due-date.jpg)
 
 The **Due Date** section properties are described in the table below:
 
@@ -86,7 +86,7 @@ The **Due Date** section properties are described in the table below:
 
 The outcomes property allows you to create new outcomes for the user task. These outcomes can be referred to by other elements, such as a button. For example, you have a process when you need to approve or reject a request. One button on a [task page](#task-page) can refer to the **Approve** outcome of the user task, while another one can use the **Reject** outcome:
 
-![Outcomes Section](attachments/user-task/outcomes.jpg)
+![Outcomes Section](attachments/workflows-user-task/outcomes.jpg)
 
 ## 3 Read More
 

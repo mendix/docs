@@ -11,7 +11,7 @@ tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis"]
 **Datadog** is a monitoring and analysis tool for cloud applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform. You can link your Mendix Cloud v4 apps to Datadog to provide additional monitoring.
 
 {{% alert type="info" %}}
-Datadog logging is supported in Mendix version 7.15 and above.
+Datadog logging and application metrics are supported in Mendix version 7.15 and above.
 {{% /alert %}}
 
 This document explains what information can be provided to Datadog and how to configure your Mendix Cloud v4 app to send data to Datadog. If you want to know more about the capabilities of Datadog and, in particular, using Datadog with Mendix, have a look at the Mendix blog [Monitor Your Mendix Apps with Datadog](https://www.mendix.com/blog/monitor-your-mendix-apps-with-datadog/).
@@ -45,9 +45,6 @@ The metrics from your app's environment are supplied in the following namespaces
 * jvm – metrics from the Java virtual machine in which the Mendix runtime runs (see the Datadog [Java Runtime Metrics](https://docs.datadoghq.com/tracing/runtime_metrics/java/) documentation)
 * postgresql – database metrics specific to PostgreSQL databases (see the Datadog [Postgres](https://docs.datadoghq.com/integrations/postgres/) documentation)
 * system – metrics from the base system running on the platform or PaaS (see the Datadog documentation [System Check](https://docs.datadoghq.com/integrations/system/)) — Mendix only supplies [Processes](https://docs.datadoghq.com/integrations/process/) metrics which are reported in the `system.process` space as platform limitations render other system information inaccurate
-
-Datadog also has a *synthetics* namespace where you can send metrics specifically labelled as coming from tests (see the Datadog documentation [Synthetics](https://docs.datadoghq.com/synthetics/)), but the Mendix agent does not create metrics for this.
-
 
 #### 2.1.2 Useful Metrics for Mendix Apps
 
@@ -423,14 +420,8 @@ If you have any issues related to accessing Datadog, please contact their suppor
 
 | Metric | Description |
 | --- | --- |
-| database.diskstorage_size | |
-| jmx.com.mendix.anonymous_sessions | |
-| jmx.com.mendix.entities | |
-| jmx.com.mendix.idle_threads | |
-| jmx.com.mendix.max_threads | |
-| jmx.com.mendix.named_users | |
-| jmx.com.mendix.queue_size | |
-| jmx.com.mendix.threads | |
+| jmx.com.mendix.* | Core runtime metrics |
+| database.diskstorage_size | Disk storage available to the application database (this is a fixed value) |
 | mx.activity.time | How long a microflow activity takes to run |
 | mx.client.time | The time to handle a request to a request handler that is used by the web ui |
 | mx.microflow.time | How long a microflow takes to run |

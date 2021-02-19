@@ -41,7 +41,7 @@ For details of the Environments page for **IBM** deployments, see [IBM Cloud](ib
 For details of the Environments page for **SAP** deployments, see [SAP Business Technology Platform](sap-cloud-platform).
 
 Other platforms are not currently supported on the Mendix *Environments* page and you will have to go to the relevant platform portal to monitor and configure your environments.
-​    
+    
 ### 2.2 Mobile App
 
 On this page, you can manage and publish your app in mobile app stores.
@@ -50,7 +50,7 @@ Mendix supports Android and iOS.
 
 For more details, see [Mobile App](mobileapp).  
 
-## 2.3 App Services
+### 2.3 App Services
 
 The **App Services** page lets you publish your app service, application, or widget to the Mendix Marketplace.
 

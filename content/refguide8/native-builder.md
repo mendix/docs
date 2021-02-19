@@ -219,7 +219,7 @@ native-builder.exe release list --project-name "CoolApp"
 
 ### 2.8 Generating Only the App Bundles
 
-When used, the `bundle` command will only run the MXBuild step (skipping the App Center build step). This command outputs *ZIP* archives with the corresponding JavaScript bundle and resources for each platform.
+When used, the `bundle` command **will only run the MXBuild step** (skipping GitHub configuration and the App Center build steps). This command outputs *ZIP* archives with the corresponding JavaScript bundle and resources for each platform.
 
 Here is an example of a command featuring `bundle`:
 

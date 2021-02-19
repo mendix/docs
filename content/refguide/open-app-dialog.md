@@ -40,7 +40,7 @@ For more information about development lines, see [Version Control](version-cont
 
 {{% alert type="info" %}}
 
-The **Private server** option is only available when support for other SVN servers is enabled: **Edit** >**Preferences** > **Advanced** > **Enable private version control**. 
+The **Private server** option is only available when support for other SVN servers is enabled: **Edit** >**Preferences** > **Version Control** > **Enable private version control**. 
 
 {{% /alert %}}
 

@@ -39,7 +39,7 @@ Container widgets provide structure to your page's content.
 
 ## 2 Performing Basic Functions
 
-{{% snippet file="refguide/performing-basic-functions-widgets.md" %}}
+{{% snippet file="refguide8/performing-basic-functions-widgets.md" %}}
 
 ## 3 Read More
 

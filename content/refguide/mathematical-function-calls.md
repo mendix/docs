@@ -9,7 +9,7 @@ tags: ["studio pro", "mathematical function call", "mathematical function", "exp
 
 Mathematical function calls include a limited number of mathematical operations on numbers, such as returning the largest value or rounding a number up. 
 
-If you need more elaborate functions (such as the square root, sin, cos, tan, numberOfPermutations, factorial, or fibonacciNumber), then consider using the community-supported [Math](https://appstore.home.mendix.com/link/app/112522/) module available in the Mendix App Store.
+If you need more elaborate functions (such as the square root, sin, cos, tan, numberOfPermutations, factorial, or fibonacciNumber), then consider using the community-supported [Math](https://appstore.home.mendix.com/link/app/112522/) module available in the Mendix Marketplace.
 
 ## 2 max
 
@@ -308,7 +308,7 @@ Or, use a division for a specific root:
 
 ## 9 abs
 
-Calculates the absolute value of a number (i.e. not negative).
+Calculates the absolute value of a number (meaning, not negative).
 
 ### 9.1 Input Parameters
 

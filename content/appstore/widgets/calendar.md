@@ -1,8 +1,8 @@
 ---
 title: "Calendar"
 category: "Widgets"
-description: "Describes the configuration and usage of the Calendar widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "calendar", "platform support"]
+description: "Describes the configuration and usage of the Calendar widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "calendar", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -41,7 +41,7 @@ For a demo app project that has been deployed with this widget, see [here](https
 
 	![](attachments/calendar/calendar2.gif)
 
-## 3 Developing This App Store Component
+## 3 Developing This Marketplace Component
 
 We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/calendar](https://github.com/mendixlabs/calendar/issues).
 

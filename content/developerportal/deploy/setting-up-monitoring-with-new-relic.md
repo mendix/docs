@@ -46,7 +46,6 @@ After you restart the application, your data should show up in New Relic. This r
 
 ## 5 Read More
 
-* [Setting Up Monitoring with New Relic](setting-up-monitoring-with-new-relic)
 * [Finding the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Clearing Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages)
 * [Testing Web Services Using SoapUI](/howto/testing/testing-web-services-using-soapui)

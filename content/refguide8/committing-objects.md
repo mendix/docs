@@ -92,7 +92,7 @@ When inside a [nanoflow](nanoflows), the object is refreshed across the client a
 
 ## 4 Common Section{#common}
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+{{% snippet file="refguide8/microflow-common-section-link.md" %}}
 
 ## 5 How Commits Work{#how-commits-work}
 

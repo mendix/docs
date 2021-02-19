@@ -1,8 +1,8 @@
 ---
 title: "Image Viewer"
 category: "Widgets"
-description: "Describes the configuration and usage of the Image Viewer widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "image viewer", "platform support"]
+description: "Describes the configuration and usage of the Image Viewer widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "image viewer", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -47,7 +47,7 @@ The widget requires a context via the following available data sources:
 	* Click **Select** to add static images from Studio Pro
 	* Refer to the **Appearance** section for configuring the height and width
 
-## 3 Developing This App Store Component
+## 3 Developing This Marketplace Component
 
 To contribute to the development of this widget, follow these steps:
 

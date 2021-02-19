@@ -38,7 +38,7 @@ For details of the Environments page for **Mendix Cloud** deployments, see [Envi
 
 For details of the Environments page for **IBM** deployments, see [IBM Cloud](ibm-cloud).
 
-For details of the Environments page for **SAP** deployments, see [SAP Cloud Platform](sap-cloud-platform).
+For details of the Environments page for **SAP** deployments, see [SAP Business Technology Platform](sap-cloud-platform).
 
 Other platforms are not currently supported on the Mendix *Environments* page and you will have to go to the relevant platform portal to monitor and configure your environments.
 ​    
@@ -52,6 +52,6 @@ For more details, see [Mobile App](mobileapp).
 
 ## 2.3 App Services
 
-The **App Services** page lets you publish your app service, application, or widget to the Mendix App Store.
+The **App Services** page lets you publish your app service, application, or widget to the Mendix Marketplace.
 
 For more details, see [App Services](app-services).  

@@ -193,8 +193,8 @@ The **Workflow Activities** are described in the table below:
 
 | Activity            | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
-| Call Workflow       | Calls a workflow.                                            |
-| Complete Task       | Sets which outcome the specified [user task](workflows-user-task) should follow. |
+| Call Workflow       | Calls a workflow. You can use the variable, object, or list that the workflow returns. |
+| Complete Task       | Sets which outcome the specified [user task](workflows-user-task) should follow. When a user task has several outcomes, you can choose the one the user task will follow. For example, when end-users select that the employee is working from home, the user task will follow the dedicated path for it. |
 | Open User Task Page | Opens a user task page specified in [user task properties](workflows-user-task). |
 | Open Workflow Page  | Opens an overview page specified in [workflow properties](workflow-properties). |
 

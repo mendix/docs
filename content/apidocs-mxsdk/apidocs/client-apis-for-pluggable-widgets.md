@@ -251,13 +251,15 @@ export default class PagedWidget extends Component<PagedWidgetProps> {
 
 ### 4.8 ListActionValue {#listactionvalue}
 
-`ListActionValue` represents actions that may be applied to items from `ListValue`. The `ListActionValue` is a function and its definition is as follows:
+`ListActionValue` represents actions that may be applied to items from `ListValue`. The `ListActionValue` is an object and its definition is as follows:
 
 ```ts
-export type ListActionValue = (item: ObjectItem) => ActionValue;
+export interface ListActionValue {
+    get: (item: ObjectItem) => ActionValue;
+}
 ```
 
-In order to call an action on a particular item of a `ListValue` first an instance of `ActionValue` should be obtained by calling `ListActionValue` with the item. See an example below.
+In order to call an action on a particular item of a `ListValue` first an instance of `ActionValue` should be obtained by calling `ListActionValue.get` with the item. See an example below.
 
 
 Assuming widget properties are configured as follows:
@@ -272,26 +274,33 @@ interface MyListWidgetsProps {
 The following code sample shows how to call `myListAction` on the first element from the `myDataSource`.
 
 ```ts
-const actionOnFirstItem = this.props.myDataSource.myListAction(this.props.myDataSource.item[0]);
+const actionOnFirstItem = this.props.myDataSource.myListAction.get(this.props.myDataSource.item[0]);
 
 actionOnFirstItem.execute();
 ```
 
 In this code sample, checks of status `myDataSource` and availability of items are omitted for simplicity. See [ActionValue section](#actionvalue) for more information about usage of `ActionValue`.
 
+{{% alert type="info" %}}
+The `get` method was introduced in Mendix 9.0.
+
+You can obtain an instance of `ActionValue` by using the `ListActionValue` as a function and calling it with an item. This is deprecated and will be removed in Mendix 10 and should be replaced by a call to the `get` function as described above.
+{{% /alert %}}
+
 ### 4.9 ListAttributeValue {#listattributevalue}
 
 `ListAttributeValue` represents an [attribute property](property-types-pluggable-widgets#attribute) that is linked to a data source.
-This allows the client component to access attribute values on individual items from a `ListValue`. `ListAttributeValue` is a function and its definition is as follows:
+This allows the client component to access attribute values on individual items from a `ListValue`. `ListAttributeValue` is an object and its definition is as follows:
 
 ```ts
-export type ListAttributeValue<T extends AttributeValue> = (item: ObjectItem) => EditableValue<T>;
+export interface ListAttributeValue<T extends AttributeValue> {
+    get: (item: ObjectItem) => EditableValue<T>;
+}
 ```
 
 The type `<T>` depends on the allowed value types as configured for the attribute property.
 
-In order to work with the attribute value of a particular item of a `ListValue` first an instance of `EditableValue` should be obtained by calling `ListAttributeValue` with the item. See an example below.
-
+In order to work with the attribute value of a particular item of a `ListValue` first an instance of `EditableValue` should be obtained by calling `ListAttributeValue.get` with the item. See an example below.
 
 Assuming widget properties are configured as follows (with an attribute of type `string`):
 
@@ -305,22 +314,29 @@ interface MyListWidgetsProps {
 The following code sample shows how to get an `EditableValue` that represents a read-only value of an attribute of the first element from the `myDataSource`.
 
 ```ts
-const attributeValue = this.props.myAttributeOnDatasource(this.props.myDataSource.items[0]);
+const attributeValue = this.props.myAttributeOnDatasource.get(this.props.myDataSource.items[0]);
 ```
 
 Note: in this code sample checks of status of `myDataSource` and availability of items are omitted for simplicity. See [EditableValue section](#editable-value) for more information about usage of `EditableValue`.
+
+{{% alert type="info" %}}
+The `get` method was introduced in Mendix 9.0.
+
+You can obtain an instance of `EditableValue` by using the `ListAttributeValue` as a function and calling it with an item. This is deprecated and will be removed in Mendix 10 and should be replaced by a call to the `get` function as described above.
+{{% /alert %}}
 
 
 ### 4.10 ListWidgetValue {#listwidgetvalue}
 
 `ListWidgetValue` represents a [widget property](property-types-pluggable-widgets#widgets) that is linked to a data source. 
 This allows the client component to render child widgets with items from a `ListValue`.
-`ListWidgetValue` is a function and its definition is as follows:
+`ListWidgetValue` is an object and its definition is as follows:
 
 ```ts
-export type ListWidgetValue = (item: ObjectItem) => ReactNode;
+export interface ListWidgetValue {
+    get: (item: ObjectItem) => ReactNode;
+}
 ```
-
 
 For clarity, consider the following example using `ListValue` together with the `widgets` property type. When the `widgets` property named `myWidgets` is configured to be tied to a `datasource` named `myDataSource`, the client component props appear as follows:
 
@@ -334,16 +350,24 @@ interface MyListWidgetsProps {
 Because of the above configurations, the client component may render every instance of widgets with a specific item from the list like this:
 
 ```ts
-this.props.myDataSource.items.map(i => this.props.myWidgets(i));
+this.props.myDataSource.items.map(i => this.props.myWidgets.get(i));
 ```
+
+{{% alert type="info" %}}
+The `get` method was introduced in Mendix 9.0.
+
+You can obtain an instance of `EditableValue` by using the `ListAttributeValue` as a function and calling it with an item. This is deprecated and will be removed in Mendix 10 and should be replaced by a call to the `get` function as described above.
+{{% /alert %}}
 
 
 ### 4.11 ListExpressionValue {#listexpressionvalue}
 
-`ListExpressionValue` represents an [expression property](property-types-pluggable-widgets#expression) or [text template property](property-types-pluggable-widgets#texttemplate) that is linked to a data source. This allows the client component to access expression or text template values for individual items from a `ListValue`. `ListExpressionValue` is a function and its definition is as follows:
+`ListExpressionValue` represents an [expression property](property-types-pluggable-widgets#expression) or [text template property](property-types-pluggable-widgets#texttemplate) that is linked to a data source. This allows the client component to access expression or text template values for individual items from a `ListValue`. `ListExpressionValue` is an object and its definition is as follows:
 
 ```ts
-export type ListExpressionValue<T extends AttributeValue> = (item: ObjectItem) => DynamicValue<T>;
+export interface ListExpressionValue<T extends AttributeValue> {
+    get: (item: ObjectItem) => DynamicValue<T>
+};
 ```
 
 The type `<T>` depends on the return type as configured for the expression property. For a text template property, this type is always `string`.
@@ -363,8 +387,14 @@ interface MyListWidgetsProps {
 The following code sample shows how to get a `DynamicValue` that represents the value of an expression for the first element from the `myDataSource`.
 
 ```ts
-const expressionValue = this.props.myDataSource.myExpressionOnDatasource(this.props.myDataSource.item[0]);
+const expressionValue = this.props.myDataSource.myExpressionOnDatasource.get(this.props.myDataSource.item[0]);
 ```
+
+{{% alert type="info" %}}
+The `get` method was introduced in Mendix 9.0.
+
+You can obtain an instance of `DynamicValue` by using the `ListExpressionValue` as a function and calling it with an item. This is deprecated and will be removed in Mendix 10 and should be replaced by a call to the `get` function as described above.
+{{% /alert %}}
 
 
 ## 5 Exposed Modules

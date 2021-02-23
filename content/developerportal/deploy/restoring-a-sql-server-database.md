@@ -3,6 +3,7 @@ title: "Restore Database on SQL Server"
 parent: "mendix-on-windows-microsoft-sql-server"
 menu_order: 70
 ---
+
 ## 1 Introduction
 
 In certain situations (for example, unwanted database updates or data corruption), it might be necessary to restore the Mendix database from a backup. This document describes the actions needed to perform a complete database restore and defines the prerequisites for restoring backups.
@@ -15,13 +16,13 @@ In certain situations (for example, unwanted database updates or data corruption
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have sufficient rights on the DBMS (for details, see [3 Permissions](#Permissions))
+* Have sufficient rights on the DBMS (for details, see the [Permissions](#Permissions) section below)
 * Make sure the following points are true:
     * The Mendix database is maintained using maintenance plans as described in [How to Set Up Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
     * A valid database backup file exists for the Mendix database
     * Valid transaction log files exist for the Mendix database
 
-## 3 Permissions<a name="Permissions"></a>
+## 3 Permissions {#Permissions}
 
 If the database being restored does not exist, the user must have **CREATE DATABASE** permissions to be able to execute **RESTORE**. If the database exists, RESTORE permissions default to members of the `sysadmin` and `dbcreator` fixed server roles and the owner of the database (`dbo`).
 
@@ -73,6 +74,3 @@ To restore the database, follow these steps:
 * [How to Set Up a New SQL Server Database](setting-up-a-new-sql-server-database)
 * [How to Set Up Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
 * [How to Set Up a Security Checklist for Your On-Premises Installation](security-checklist-for-your-on-premises-installation)
-* [How to Use Mendix on Windows - Microsoft SQL Server](mendix-on-windows-microsoft-sql-server)
-* [How to Deploy Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows)
-* [U*ix Deployment](unix-like)

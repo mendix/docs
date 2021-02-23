@@ -10,14 +10,14 @@ tags: ["studio", "page editor", "widgets", "on click action", "events"]
 
 The **Events** section is a section in the **Properties** tab that is common for different widgets in Mendix Studio, for example, for a static image, buttons, list view, and data view. 
 
-In the **Events** section, you can set the **On Click Action** for widgets and specify what action will be performed when users click the widget. For example, you can specify that when a user clicks a profile image, the page with the user's personal account will open. 
+In the **Events** section, you can set the **On Click Action** for widgets and specify what action will be performed when end-users click the widget. For example, you can specify that when a user clicks a profile image, the page with the user's personal account will open. 
 
 {{% image_container width="300" %}}![](attachments/page-editor-widgets-events-section/events-section.png)
 {{% /image_container %}}
 
 ## 2 On Click Actions {#on-click-action}  
 
-You can find the description of possible on click actions below:
+You can find the description of possible on-click actions below:
 
 * [Nothing](#do-nothing) 
 * [Page](#show-page) 
@@ -35,7 +35,7 @@ You can find the description of possible on click actions below:
 
 {{% alert type="info" %}}
 
-The list of available on click actions may differ depending on the widget. For example, **Delete Object** on-click action is unavailable for the list view. 
+The list of available on-click actions may differ depending on the widget. For example, **Delete Object** on-click action is unavailable for the list view. 
 
 {{% /alert %}}
 
@@ -45,7 +45,9 @@ No action is taken. This option is useful for setting up a page without defining
 
 ### 2.2 Page {#show-page}
 
-The **Page** action opens the specified page. Select the page which opens using the options below:
+The **Page** action opens the specified page. 
+
+The following properties are specific for this action:
 
 * **Page** – a [page](page) that should open.
 
@@ -107,7 +109,7 @@ The following properties are specific for this action:
 
 ### 2.8 Save Changes {#save-changes}
 
-Saves (commits) all changes made on the page.
+The **Save Changes** action saves (commits) all changes made on the page.
 
 ### 2.9 Cancel Changes {#cancel-changes}
 
@@ -115,15 +117,15 @@ The **Cancel changes** action rolls back all changes made on the page.
 
 ### 2.10 Close Page {#close-page}
 
-The **Close page** action closes a pop-up window (for pop-up pages) or navigates to the previously visited page (for content pages).
+The **Close page** action closes a pop-up window (for pop-up pages) or navigates to the previously visited page.
 
 ### 2.11 Sign Out {#sign-out}
 
-The **Sign out** action signs the currently signed-in end-user out of the app. When no user is signed in, no action is performed.
+The **Sign out** action signs the currently signed-in end-user out of the app. 
 
 ### 2.12 Open Link Action {#open-link-action}
 
-When you set the **On Click Action** to **Open Link**, several properties are available. 
+The **Open Link** action triggers an action based on the link type:
 
 {{% image_container width="300" %}}![](attachments/page-editor-widgets-events-section/open-link-action.png)
 {{% /image_container %}}

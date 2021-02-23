@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction {#studio-overview}
 
-Mendix Studio is the place where you can create, view and edit your Mendix applications without going into technical details. For this purpose you can use the [Studio Pro](/refguide/modeling) and [develop apps together with Studio Pro users](collaborative-development) anytime. 
+Mendix Studio is the place where you can create, view and edit your Mendix applications without going into technical details. For this purpose you can use [Studio Pro](/refguide/modeling) and [develop apps together with Studio Pro users](collaborative-development) anytime. 
 
 With Studio you can create and edit applications in your browser without installing software on your PC.   
 
@@ -72,12 +72,12 @@ You can change the view of your page to different views by clicking the correspo
 * Tablet
 * Responsive (Desktop) 
 
-    {{% image_container width="350" %}}![Device Modes](attachments/general/view.png)
+    {{% image_container width="300" %}}![Device Modes](attachments/general/view.png)
     {{% /image_container %}}
 
 ## 5 Left Menu Bar
 
-The left menu bar allows you to go back to the Developer Portal, access pages, the domain model, microflows, and the navigation document in Studio, search for different elements in your app project, open settings, and customize the look of your app:
+The left menu bar allows you to access pages, the domain model, microflows, workflows, and the navigation document in Studio, search for different elements in your app project, open settings, and customize the look of your app:
 
 {{% image_container width="250" %}}
 ![Left Menu Bar](attachments/general/left-menu-bar.png)
@@ -112,7 +112,7 @@ The **Toolbox**, **Properties** , and **Buzz** tabs are described in the table b
 
 ## 7 Top Menu Bar
 
-The top menu bar allows to check whether Studio is connected to the internet, undo or redo actions, view your recent documents, preview or publish your app, and view errors in your app project (if any). You can also access help and learning and view various information in the top menu bar. 
+The top menu bar allows to undo or redo actions, view your recent documents, preview or publish your app, and view checks in your app project. You can also access help and learning and view various information in the top menu bar. 
 
 ![Top Menu Bar](attachments/general/top-bar.png)
 
@@ -147,13 +147,13 @@ Mind the following when copying and pasting pages, microflows, and enumerations:
 
 ### 8.2 Cut/Copy/Paste Separate Elements
 
-Cut/copy/paste function is available in all editors of Studio: pages, microflows, domain models, and navigation document. To cut/copy/paste you can use <kbd>Ctrl</kbd> + <kbd>X</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Cmd</kbd> + <kbd>X</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>. 
+Cut/copy/paste function is available in all editors of Studio: pages, microflows, workflows, domain models, and navigation document. To cut/copy/paste you can use <kbd>Ctrl</kbd> + <kbd>X</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Cmd</kbd> + <kbd>X</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>. 
 
 Mind the following characteristics when using cut/copy/paste:
 
-* You can cut/copy/paste elements within one editor; that means that you can cut/copy/paste elements within one page or to other pages in Studio, and copy microflow activities within one microflow or to other microflows
+* You can cut/copy/paste elements within one visual editor; that means that you can cut/copy/paste elements within one page or to other pages in Studio, and copy microflow activities within one microflow or to other microflows
 * You can cut/copy/paste elements to different app projects in Studio if they have the same Mendix version
-* You cannot copy/paste pages or microflows, only elements of a page or a microflow 
+* You cannot copy/paste pages, microflows, or workflows, only elements of a page or a microflow 
 * You cannot cut/copy/paste from Studio to Studio Pro or vice versa
 
 ## 9 Main Documents in This Category

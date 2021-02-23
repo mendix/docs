@@ -78,9 +78,7 @@ The **Due Date** section properties are described in the table below:
 | ---------- | ------------------------------------------------------------ |
 | None       | No due date is set.                                          |
 | Duration   | You can set the deadline for the user task with the **Due In** option, which indicates the number of hours, days, or weeks the task is due in. Possible values of the property are the following ones:<br /><ul><li>Hour(s)</li><li>Day(s)</li><li>Week(s)</li> </ul> |
-| Expression | You can set a due date for the user task writing an expression in Studio Pro. |
-
-{{% todo %}}[Will it be possible to write an expression using the new editor?]{{% /todo %}}
+| Expression | You can set a due date for the user task writing an expression. For example, to set a due date to tomorrow, you can use `addDays([%CurrentDateTime%], 1)`. |
 
 ### 2.6 Outcomes Section {#outcomes}
 

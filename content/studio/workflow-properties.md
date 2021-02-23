@@ -31,7 +31,7 @@ The **General** section properties are described in the table below:
 | Property | Description                                                  |
 | -------- | ------------------------------------------------------------ |
 | Title    | Defines a title of the workflow that you see at the top of the working area. |
-| Name     | The internal name of the workflow. When referring to the workflow in the app project you will use this name. It must be unique within the module, but you can have two workflows with the same name in different modules. When referring to the workflow, you will normally prepend the name of the module to ensure uniqueness and allow you to use workflows in other modules. |
+| Name     | The internal name of the workflow. When referring to the workflow in the app project you will use this name. It must be unique. |
 
 {{% todo %}}[Leave info about modules for Studio?]{{% /todo %}}
 
@@ -84,9 +84,7 @@ The **Due Date** section properties are described in the table below:
 | ---------- | ------------------------------------------------------------ |
 | None       | No due date is set.                                          |
 | Duration   | You can set the deadline for the workflow with the **Due In** option, which indicates the number of hours, days, or weeks the workflow is due in. Possible values of the property are the following ones:<br /><ul><li>Hour(s)</li><li>Day(s)</li><li>Week(s)</li> </ul> |
-| Expression | You can set a due date for the workflow writing an expression in Studio Pro. |
-
-{{% todo %}}[Will it be possible to write an expression using the new editor?]{{% /todo %}}
+| Expression | You can set a due date for the workflow writing an expression. For example, to set a due date to tomorrow, you can use `addDays([%CurrentDateTime%], 1)`. |
 
 ## 3 Read More
 

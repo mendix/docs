@@ -13,7 +13,7 @@ To view the workflows of your app project in Studio, click the **Workflows** ico
 
 ![Workflow Icon](attachments/workflows/workflow-icon.jpg)
 
-Workflows is a visual way of expressing application logic. A workflow looks like a flow chart. On a new workflow a *start event* (a starting point of the workflow) and an *end event* (an endpoint of the workflow represented by a *red* dot) are created by default. You can various activities to a flow of a workflow that is called a *path*.
+Workflows is a visual way of expressing application logic. A workflow looks like a flow chart. On a new workflow a *start event* (a starting point of the workflow) and an *end event* (an endpoint of the workflow) are created by default. You can add various activities to a flow of a workflow that is called a *path*.
 
 ![Workflow Example](attachments/workflows/workflow-example.jpg)
 
@@ -21,38 +21,71 @@ Workflows is a visual way of expressing application logic. A workflow looks like
 
 You can perform the following basic functions when working on workflows:
 
-* Open a workflow
-* Create a workflow
-* Delete a workflow
-* Add elements to a workflow
-* View element properties 
+* [Open a workflow](#open)
+* [Create a workflow](#create)
+* [Duplicate a workflow](#duplicate)
+* [Copy and paste a workflow](#copy-paste)
+* [Delete a workflow](#delete)
+* [Add elements to a workflow](#add-elements)
+* [View element properties](#view-elements) 
 
-### 2.1 Opening a Workflow
+### 2.1 Opening a Workflow {#open}
 
 To open a workflow in Studio, do the following:
 
 1. Click the workflow icon in the left menu bar.
-2. In the displayed list of workflows, select the one you want to open and click it.
+
+2. In the displayed list of workflows, select the one you want to open and click it:
+
+    ![Selecting a Workflow](attachments/workflows/selecting-workflow.jpg)
 
 The selected workflow is opened.
 
-### 2.2 Adding a Workflow
+### 2.2 Adding a Workflow {#create}
 
 To add a workflow to your app project in Studio, do the following:
 
 1. Click the workflow icon in the left menu bar.
 
-2. Click **New** in the top right corner of the displayed side panel.
+2. Click **New** in the top right corner of the displayed side panel:
+
+    ![New Workflow](attachments/workflows/new-workflow.jpg)
 
 3. In the **Create new workflow** dialog box, fill in the name of the workflow and select a workflow entity:  {{% todo %}}[Add a reference to the domain model]{{% /todo %}}
 
-   ![Create New Workflow](attachments/workflows/create-new-workflow.jpg)
+    ![Create New Workflow](attachments/workflows/create-new-workflow.jpg)
 
 4. Click **Create**.
 
 The workflow is created.
 
-### 2.3 Deleting a Workflow
+### 2.3 Duplicating a Workflow {#duplicate}
+
+To duplicate a workflow, do the following:
+
+1. Click the **Workflows** icon in the left menu bar.
+
+2. In the side panel, click the ellipsis icon and select **Duplicate** in the drop-down menu:
+
+    ![Duplicate a Workflow](attachments/workflows/duplicate.jpg)
+
+The workflow is duplicated.
+
+### 2.4 Copying and Pasting a Workflow {#copy-paste}
+
+To copy and paste a workflow, do the following:
+
+1. Click the **Workflows** icon in the left menu bar.
+
+2. In the side panel, click the ellipsis icon and select **Copy to clipboard** in the drop-down menu:
+
+    ![Copy a Workflow](attachments/workflows/copy.jpg)
+
+3. Open the Studio app where you want to paste the microflow and press <kbd>Ctrl</kbd> +<kbd>V</kbd> or <kbd>Cmd</kbd> +<kbd>V</kbd>. 
+
+Your workflow is pasted. For more information on copy/paste function in Studio, see the [Copy/Paste Pages, Microflows, and Enumerations](general#copy-paste-documents) section in *General Info*. 
+
+### 2.5 Deleting a Workflow {#delete}
 
 To delete a workflow in Studio, do one of the following:
 
@@ -64,7 +97,7 @@ To delete a workflow in Studio, do one of the following:
 
 The selected workflow is deleted. 
 
-### 3.4 Adding Elements to a Workflow 
+### 2.6 Adding Elements to a Workflow 
 
 To add an element to a workflow, do the following:
 
@@ -75,7 +108,7 @@ The selected element is added.
 
 ## 3 Toolbox Elements
 
-The **Toolbox** tab contains elements that you can drag and drop on a path. Below is a categorized overview of all elements. The following categories are used:
+The **Toolbox** tab contains elements that you can drag and drop on a path. Below is a categorized overview of all elements. The following sections are used:
 
 * [General](#general)
 * [User actions](#user-actions)
@@ -83,11 +116,11 @@ The **Toolbox** tab contains elements that you can drag and drop on a path. Belo
 
 ### 3.1 General {#general}
 
-Elements in the general category help you control the workflow path, for example, add parallel paths or end them:
+Elements in the **General** section help you control the workflow path, for example, add parallel paths or end them:
 
 ![General Section](attachments/workflows/general.jpg)
 
-The elements of this category are described in the table below:
+The elements of this section are described in the table below:
 
 | Element                           | Description                                                  |
 | --------------------------------- | ------------------------------------------------------------ |

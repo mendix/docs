@@ -18,7 +18,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 #### Improvements
 
 * We have updated the [App Projects](/developerportal/control-center/#projects) tab of Control Center, where you can now do the following:
-	* Open the [App Team](../collaborate/team#managing) page from the project details page in order to manage App Team members and add yourself to an App Team (if you are a Mendix Admin)
+	* Open the [App Team](/developerportal/collaborate/team#managing) page from the project details page in order to manage App Team members and add yourself to an App Team (if you are a Mendix Admin)
 	* Deactivate or delete an app project or an App Team member
 
 ### February 9th, 2021

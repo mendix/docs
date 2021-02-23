@@ -50,13 +50,15 @@ On the **Active App Projects** tab of this page, you can see a list of the activ
 * A deactivated app project still exists in the company, but it is invisible to regular users
 * You can only deactivate Free Apps that are not attached to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) nodes
 
-When you click a **Project** name, a pop-up window opens with the project profile. The **Project Info** tab has the **Description** and **App ID** fields, which are also available on the [General](/developerportal/settings/general-settings) settings page for your app project in the Developer Portal. On the **Members** tab, you can see the active members and external members of the app project. The **Project Roles** tab presents the App Team roles defined via the **Default App Roles** tab and/or customized for a particular app project.
+When you click a **Project** name, a pop-up window opens with the project profile. You have options to directly **Deactivate Project** and **Delete Project** in this window. The window has the following tabs:
 
-When you select app projects in the lists on these tabs, a context menu appears with options for exporting project details to an *.xlsx* file, deactivating/activating projects, and deleting projects.
+* **Project Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General](/developerportal/settings/general-settings) settings page for your app project in the Developer Portal. 
+* **Members** tab – This tab presents the active members and external members of the app project. You can directly deactivate a member from the app project by clicking their name and selecting **Deactivate Member**. For other member management options, click **Manage Members**, which will open the **Security** > [App Team](../collaborate/team#managing) page. If you are a Mendix Admin, you can also add yourself to an App Team via this page.
+* **Project Roles** –  This tab presents the App Team roles defined via the **Default App Roles** tab and/or customized for a particular app project.
 
-The **Default App Project Roles** tab shows the default [App Team roles](/developerportal/collaborate/app-roles#edit-app-team-roles) assigned for every new app project created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. 
+When you select one or more app projects via the check boxes on the **Active App Projects** or **Inactive App Projects** tab, a context menu appears at the bottom of the screen with options for exporting project details to an *.xlsx* file, deactivating/activating projects, and deleting projects.
 
-Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/develop/team-server) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) information.
+The **Default App Project Roles** tab shows the default [App Team roles](/developerportal/collaborate/app-roles#edit-app-team-roles) assigned for every new app project created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/develop/team-server) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) information.
 
 ![](attachments/roles.jpg)
 

@@ -9,7 +9,7 @@ tags: ["workflow", "workflows", "user task", "task"]
 
 User task allows you to assign a workflow task to a certain user. 
 
-For example, you can add filters and assign a task to a user in the IT department. When the workflow reaches this user task, the task will appear in their inbox:
+For example, you can add filters and assign a task to the IT department. When the workflow reaches this user task, the task will appear in their inbox:
 
 ![Task Inbox](attachments/workflows-user-task/task-inbox.jpg)
 
@@ -32,7 +32,7 @@ User task properties consist of the following sections:
 
 ### 2.2 User Assignment Section {#user-assignment}
 
-**Assign user task using** allows you to manage what users will the task be assigned to. You can filter users or implement a more complicated logic and add several checks using a microflow. 
+**Assign user task using** allows you to manage what users the task will be assigned to. You can filter users or implement a more complicated logic and add several checks using a microflow. 
 
 ![User Assignment](attachments/workflows-user-task/user-assignment.jpg)
 
@@ -40,8 +40,8 @@ Possible options of this property are described in the table below:
 
 | Option    | Description                                                  |
 | --------- | ------------------------------------------------------------ |
-| Filter    | Allows you to filter users who should be assigned the user task. For example, you can assign a certain task only to users with the Administrator user role. For more information on how to use filters, see [Data Filters](data-filters). |
-| Microflow | Allows you to assign the user task to certain users. Using microflow you can check, for example, which users have the right to approve user tasks and are currently not on vacation and assign the task only to users who passed the check. For more information on microflows, see [Microflows](microflows). |
+| Filter    | Allows you to filter users who should be assigned to the user task. For example, you can assign a certain task only to users with the Administrator user role. For more information on how to use filters, see [Data Filters](data-filters). |
+| Microflow | Allows you to assign the user task to certain users. Using microflow you can check, for example, what users have the right to approve user tasks and are currently not on vacation and assign the task only to users who passed the check. For more information on microflows, see [Microflows](microflows). |
 
 ### 2.3 Task Page Section {#task-page}
 
@@ -64,9 +64,11 @@ The **Display Information** section properties are described in the table below:
 | Property         | Description                                                  |
 | ---------------- | ------------------------------------------------------------ |
 | Task Name        | **Task Name** is displayed in the running app. The **Task Name** can contain attributes of the [Workflow entity](workflow-properties#data) or of its associated entities, the value of which will be displayed to the end-users. For example, you can select a **FullName** attribute from the **Employee Onboarding** data to display the name of the new employee. |
-| Task Description | **Workflow Description** is a description of the workflow displayed in the running app. The **Workflow name** can contain attributes of the [Workflow entity](#data) {{% todo %}}[or it's generalization, shall I add this info?]{{% /todo %}}, the value of which will be displayed to the end-users. For example, you add a **PhoneModel** attribute from the **Employee Onboarding** data to display what phone needs to be shipped for this employee. |
+| Task Description | **Workflow Description** is a description of the workflow displayed in the running app. The **Workflow name** can contain attributes of the [Workflow entity](#data) {{% todo %}}[or it's generalization, shall I add this info?]{{% /todo %}}, the value of which will be displayed to the end-users. For example, you can add a **PhoneModel** attribute from the **Employee Onboarding** data to display what phone needs to be shipped for this employee. |
 
 ### 2.4 Due Date Section {#due-date}
+
+{{% todo %}}[This one will only be displayed when using WorkflowCommons module, so a specific app template. Do I need to add info about it or will Cit Devs use the app template always?]{{% /todo %}}
 
 The **Due Date** section allows you to set a deadline for the user task and keep track of it. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the workflow. 
 
@@ -82,7 +84,7 @@ The **Due Date** section properties are described in the table below:
 
 ### 2.6 Outcomes Section {#outcomes}
 
-The outcomes property allows you to create new outcomes for the user task. These outcomes can be referred to by other elements, such as a button. For example, you have a process when you need to approve or reject a request. One button on a [task page](#task-page) can refer to the **Approve** outcome of the user task, while another one can use the **Reject** outcome:
+The **Outcomes** property allows you to create new outcomes for the user task. These outcomes can be referred to by other elements, such as buttons. For example, you have a process when you need to approve or reject a request. One button on a [task page](#task-page) can refer to the **Approve** outcome of the user task, while the other one can use the **Reject** outcome:
 
 ![Outcomes Section](attachments/workflows-user-task/outcomes.jpg)
 

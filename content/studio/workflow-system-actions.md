@@ -1,7 +1,7 @@
 ---
 title: "System Actions"
 category: "Workflows"
-menu_order: 30
+menu_order: 40
 tags: ["workflow", "workflows", "call microflow"]
 ---
 
@@ -25,7 +25,7 @@ Call microflow properties consist of the following sections:
 
 The **General** section allows you to define a caption for the action and to select a microflow.  
 
-The **General** section properties are described in the table below:
+The section properties are described in the table below:
 
 | Property  | Description                                                  |
 | --------- | ------------------------------------------------------------ |
@@ -38,7 +38,7 @@ Parameters pass data to the element. Currently the parameters can only be select
 
 ### 2.2 Outcomes Section {#outcomes}
 
-**Outcomes** depends on the return value of the microflow. For example, for the Boolean, you have **true** and **false** outcomes, and for the enumeration: an outcome per each enumeration value and an empty one when the value is unassigned.  {{% todo %}}[Maybe an example here?]{{% /todo %}}
+**Outcomes** depends on the return value of the microflow. For example, for the Boolean, you have **true** and **false** outcomes, while for the enumeration – an outcome per each enumeration value and an empty one when the value is unassigned.  {{% todo %}}[Maybe an example here?]{{% /todo %}}
 
 ## 3 Read More
 

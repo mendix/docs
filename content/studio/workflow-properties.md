@@ -31,7 +31,7 @@ The **General** section properties are described in the table below:
 | Property | Description                                                  |
 | -------- | ------------------------------------------------------------ |
 | Title    | Defines a title of the workflow that you see at the top of the working area. |
-| Name     | The internal name of the workflow. When referring to the workflow in the app project you will use this name. It must be unique. |
+| Name     | The internal name of the workflow that must be unique within one module. When referring to the workflow in the app project you will use this name. |
 
 {{% todo %}}[Leave info about modules for Studio?]{{% /todo %}}
 
@@ -59,8 +59,8 @@ The **Display Information** section properties are described in the table below:
 
 | Property             | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
-| Workflow Name        | **Workflow name** is displayed in the running app. The **Workflow name** can contain attributes of the [Workflow entity](#data) {{% todo %}}[or it's generalization, shall I add this info?]{{% /todo %}}, the value of which will be displayed to the end-users. For example, you can select a **FullName** attribute from the **Employee Onboarding** data to display the name of the new employee. |
-| Workflow Description | **Workflow Description** is a description of the workflow displayed in the running app. The **Workflow name** can contain attributes of the [Workflow entity](#data) {{% todo %}}[or it's generalization, shall I add this info?]{{% /todo %}}, the value of which will be displayed to the end-users. For example, you add a **FirstDay** attribute from the **Employee Onboarding** data to display the start day of the new employee and assign them to a training group. |
+| Workflow Name        | **Workflow name** is displayed in the running app. The **Workflow name** can contain attributes of the [Workflow entity](#data) {{% todo %}}[or it's generalization, shall I add this info?]{{% /todo %}}, the value of which will be displayed to the end-users. For example, you can select the **FullName** attribute from the **Employee Onboarding** data to display the name of the new employee. |
+| Workflow Description | **Workflow Description** is a description of the workflow displayed in the running app. The **Workflow name** can contain attributes of the [Workflow entity](#data) {{% todo %}}[or it's generalization, shall I add this info?]{{% /todo %}}, the value of which will be displayed to the end-users. For example, you can add the **FirstDay** attribute from the **Employee Onboarding** data to display the start date of the new employee and assign them to a training group. |
 
 ### 2.4 Permissions Section {#permissions}
 
@@ -73,6 +73,8 @@ This section is only displayed when the security is on. For more information, se
 {{% /alert %}}
 
 ### 2.4 Due Date Section {#due-date}
+
+{{% todo %}}[This one will only be displayed when using WorkflowCommons module, so a specific app template. Do I need to add info about it or will Cit Devs use the app template always?]{{% /todo %}}
 
 The **Due Date** section allows you to set a deadline for the workflow and keep track of it. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the workflow. 
 

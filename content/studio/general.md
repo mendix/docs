@@ -122,7 +122,7 @@ The top menu bar items are described in the table below:
 
 | Menu item | Description |
 |------|------|
-| App switcher icon | The app switcher icon is the return button to go back to the [Developer Portal](https://home.mendix.com) of the app project. |
+| Switch to menu | The Switch to menu allows you to go back to the [Developer Portal](https://home.mendix.com) of the app project. |
 | Undo/Redo actions | There buttons undo or redo the last action. You can also use <kbd>Ctrl</kbd>+<kbd>Z</kbd> and <kbd>Ctrl</kbd>+<kbd>Y</kbd> shortcuts correspondingly. |
 | Recent documents drop-down menu | A document that you are currently viewing is displayed in this option. When you click the drop-down menu, documents that you have recently viewed are displayed in the list. Click the document to open it. |
 | [Preview button](publishing-app) | Shows you what your app will look like after it is published. |

@@ -48,8 +48,7 @@ On the right side of the screen, you can find the following action buttons:
 
 * **Restart Application** – this stops the running application and starts it again — this is necessary to apply new constant values or scheduled events to the environment
 * **Start/Stop Application**
-* **Clear Environment** *(only visible if your application is stopped)* – this clears, after confirmation, all data from your database and file storage, and removes your app from this environment — you should do this if you want to deploy a different app to this environment, it is not necessary if you are restoring a backup of the same app
-* **Clean Database** *(only visible if your application is started)* – this empties, after confirmation, all data from your database — after delete confirmation, the application will be stopped, the existing database will be deleted, a new database will be created, and the application will be restarted — ensure you have a backup of any data you want to keep
+* **Clear Environment** *(only visible if your application is stopped)* – this allows you to empty all the data from your database and, optionally, remove the app and file storage from the environment as well — see [Clearing an Environment](#clear-environment), below, for more information
 * **Show Logged in Users** 
 * **Change Admin Password** – this changes the password for the inbuilt [administrator](/refguide/administrator) account — the new password is applied immediately, without the need for a restart and will also force the administrator to pick up any new roles assigned in the app deployment package — see the [User Role](/refguide/administrator#user-role) section of *Administrator* for more information
 
@@ -57,7 +56,26 @@ On the right side of the screen, you can find the following action buttons:
 During a [maintenance window](maintenance-windows), you will not be able to start, restart, or stop your app.
 {{% /alert %}}
 
-#### 2.1.1 Logging and Debugging in Mendix Cloud v4
+#### 2.1.1 Clearing an Environment {#clear-environment}
+
+You can use the **Clear Environment** button to clear your environment so that you can use it for another purpose. This option is only available if the environment is stopped.
+
+{{% alert type="info" %}}
+You do not need to clear your environment if you are restoring an existing backup of the currently deployed app, the restore process will handle the existing data automatically.
+{{% /alert %}}
+
+When you click **Clear Environment** you will have two options:
+
+{{% image_container width="400" %}}
+![Clear Environment options and confirmation](attachments/environments-details/clear-environment.png)
+{{% /image_container %}}
+
+* **Only clear the database** – this empties all data from your database — after delete confirmation, the application will be stopped, the existing database will be deleted, a new database will be created, and the application will be restarted — ensure you have a backup of any data you want to keep
+* **Clear the full environment (model and database)** *(default)* – this clears all data from your database and file storage, and removes your app from this environment — you should do this if you want to deploy a different app to this environment
+
+You will need to confirm that you want to clear your environment by typing *clear* and clicking **Clear Environment**.
+
+#### 2.1.2 Logging and Debugging in Mendix Cloud v4
 
 ![](attachments/environments-details/actions-v4.png)
 
@@ -66,7 +84,7 @@ In Mendix Cloud v4 environments, you have two additional action buttons:
 * **View Live Log**
 * **Show debugger information** – shows the settings needed to connect the debugger in Studio Pro to your app — for Mendix Cloud v4, the debugger is *always* enabled — for more information on debugging in the cloud, see [How To Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely)
 
-#### 2.1.2 Logging and Debugging in Mendix Cloud v3
+#### 2.1.3 Logging and Debugging in Mendix Cloud v3
 
 ![](attachments/environments-details/actions-v3.png)
 

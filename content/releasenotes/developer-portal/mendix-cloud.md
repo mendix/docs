@@ -13,9 +13,15 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
-### February 25th, 2021
+### March 3rd, 2021
 
 * We added the ability to completely clear all the data from your database running in a licensed environment.
+* We updated the [deploy API](/apidocs-mxsdk/apidocs/deploy-api) to:
+    * add json validation
+    * add stricter API path validation (for example, a trailing `/` on the API path will result in `API not found`)
+    * return differently formatted error messages for unhandled or unexpected errors
+    * validate request body parameters in multipart requests
+    * make the package name in the [Upload Package](/apidocs-mxsdk/apidocs/deploy-api#upload-package) call of the deploy API as part of the query and remove it from the body of the request
 
 ### February 22nd, 2021
 

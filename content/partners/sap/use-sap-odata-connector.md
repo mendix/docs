@@ -79,11 +79,11 @@ In this example, you will display a list of products from the GWSAMPLE_BASIC ODa
 
 For more information, see [Use the OData Model Creator for SAP Solutions](use-sap-odata-model-creator) and [SAP Data Models](/partners/sap/sap-data-models).
 
-## 3 Using the OData Connector for SAP Solutions
+## 5 Using the OData Connector for SAP Solutions
 
 In this section, you will learn how to implement the data connector in your Mendix app. These steps assume you are using a blank Mendix app with a module called MyFirstModule.
 
-### 3.1 Creating a Microflow{#microflow}
+### 5.1 Creating a Microflow{#microflow}
 
 To create the microflow for this retrieve, follow these steps:
 
@@ -114,7 +114,7 @@ The final result of your microflow should look like this:
 
 ![](attachments/use-sap-odata-connector/get-list.png)
 
-### 3.2 Creating a Page
+### 5.2 Creating a Page
 
 To create a page to show the objects in a list, follow these steps:
 
@@ -134,7 +134,7 @@ To create a page to show the objects in a list, follow these steps:
 Congratulations! You can now run your app and see a list of the products available in the **GWBASIC_SAMPLE** application.
 {{% /alert %}}
 
-## 4 Read More
+## 6 Read More
 
 * [OData Connector for SAP Solutions](/partners/sap/sap-odata-connector)
 * [SAP Data Models](/partners/sap/sap-data-models)

@@ -28,7 +28,7 @@ The *Studio 9 Guide* is divided into the following categories:
 
 * [General Info](general) 
 * [Pages](page-editor)
-* [Domain Model](domain-models)
+* [Working with Data](work-with-data)
 * [Navigation Document](navigation)
 * [Microflows](microflows)
 * [Workflows](workflows)
@@ -36,5 +36,4 @@ The *Studio 9 Guide* is divided into the following categories:
 * [Checks](checks)
 * [Theme Customizer](theme-customizer)
 * [Settings](settings)
-* [Working with Data](work-with-data)
 * [Collaboration](collaboration)

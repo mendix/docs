@@ -13,6 +13,16 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2021
 
+### February 25th, 2021
+
+#### Improvements
+
+
+* The ***App Templates*** page is further optimised for a better experience.
+* Template creation now has better performance and error handeling.
+* Small UI improvements.
+* Search function has been improved.
+
 ### February 23rd, 2021
 
 #### Improvements

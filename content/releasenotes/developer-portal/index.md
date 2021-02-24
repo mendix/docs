@@ -17,11 +17,8 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Improvements
 
-
-* The ***App Templates*** page is further optimised for a better experience.
-* Template creation now has better performance and error handeling.
-* Small UI improvements.
-* Search function has been improved.
+* We optimized the **App Templates** page for a better experience. We also improved the search function on this page.
+* Building your app now has better performance and error handling.
 
 ### February 23rd, 2021
 

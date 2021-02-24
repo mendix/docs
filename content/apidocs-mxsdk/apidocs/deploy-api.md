@@ -547,7 +547,7 @@ Uploads a deployment package from the local system to a specific app. This packa
 
 ```bash
 HTTP Method: POST
-URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/upload/<PackageName>
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/upload?name=<PackageName>
 ```
 
 #### 3.10.2 Request
@@ -555,7 +555,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/upload/<PackageName>
 **Request Parameters**
 
 *   _AppId_ (String): Subdomain name of an app
-*   _PackageName_ (String): the name of the package (mda) being uploaded — if this is omitted, the API will try to upload *default.mda*
+*   _PackageName_ (String): the name given to the package (mda) when it is uploaded — if this is omitted, it will be given the name *default.mda*
 *   _Name_ (String): Name of the deployment package as query parameter
 *   _file_ (File): Deployment package as multipart/form-data (see [IETF RFC 7578: Returning Values from Forms: multipart/form-data](https://tools.ietf.org/html/rfc7578))
 
@@ -564,17 +564,23 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/upload/<PackageName>
 <!--Check this is correct -->
 
 ```bash
-POST /api/1/apps/calc/packages/upload/calc_1.0.0.45.mda
+POST /api/1/apps/calc/packages/upload?name=calc_1.0.0.45.mda
 Host: deploy.mendix.com
 
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
-Content-Type: application/json
+Content-Type: multipart/form-data; boundary=MultipartBoundary
+
+--MultipartBoundary
+Content-Disposition: form-data;
+
+@%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.45.mda
+--MultipartBoundary--
 ```
 
 Curl example:
 ```bash
-curl -v -X POST -H "Mendix-Username: richard.ford51@example.com" -H "Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6" "https://deploy.mendix.com/api/1/apps/calc/packages/upload/calc_1.0.0.45.mda"
+curl -v -F "file=@%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.45.mda"  -X POST -H "Mendix-Username: richard.ford51@example.com" -H "Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6" "https://deploy.mendix.com/api/1/apps/calc/packages/upload?name=calc_1.0.0.45.mda"
 ```
 
 #### 3.10.3 Output

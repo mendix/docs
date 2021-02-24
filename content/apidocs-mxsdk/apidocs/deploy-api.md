@@ -556,7 +556,6 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/upload?name=<PackageN
 
 *   _AppId_ (String): Subdomain name of an app
 *   _PackageName_ (String): the name given to the package (mda) when it is uploaded — if this is omitted, it will be given the name *default.mda*
-*   _Name_ (String): Name of the deployment package as query parameter
 *   _file_ (File): Deployment package as multipart/form-data (see [IETF RFC 7578: Returning Values from Forms: multipart/form-data](https://tools.ietf.org/html/rfc7578))
 
 **Example Request**

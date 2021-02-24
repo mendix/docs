@@ -11,6 +11,10 @@ The parallel split is used to have parallel processes in your workflow. For exam
 
 ![Parallel Split Example](attachments/parallel-split/parallel-split.jpg)
 
+{{% alert type="info" %}}
+The workflow needs to complete all paths of the parallel split before it can continue to the next activity.
+{{% /alert %}}
+
 ## 2 Properties
 
 An example of parallel split properties is represented in the image below:

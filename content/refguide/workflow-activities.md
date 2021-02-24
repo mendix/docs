@@ -19,6 +19,8 @@ The following are the workflow activities you can use in your microflow:
 * **Open workflow page** – opens an overview page specified in [workflow properties](workflow-properties)
 * **Set task outcome** – sets which outcome the specified [user task](user-task) should follow
 
+{{% todo %}}[Double-check names of these activities, they will change.]{{% /todo %}}
+
 ## 2 Read More
 
 * [Activities](activities)

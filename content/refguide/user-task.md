@@ -9,7 +9,11 @@ tags: ["workflow", "workflows", "user task", "task", "Studio Pro"]
 
 User task allows you to assign a workflow task to a certain user. 
 
-For example, you can add filters and assign a task to a user in the IT department. When the workflow reaches this user task, the task will appear in their inbox:
+For example, you can add filters and assign a task to a user with the Manager role:
+
+![User Task Example](attachments/user-task/user-task.jpg)
+
+If you are using the **Workflow Commons** module, when the workflow reaches this user task, the task will appear in the user's inbox:
 
 ![Task Inbox](attachments/user-task/task-inbox.jpg)
 

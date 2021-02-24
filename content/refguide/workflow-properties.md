@@ -48,9 +48,9 @@ For more information, see [Module Security](module-security).
 
 ### 2.2 Data Section {#data}
 
-**Workflow entity** is an entity that is used as a workflow context. It should be a **Workflow Context** entity from the **System** module or its **specialization**. For more information on workflow-related entities in the System module, see the the [Workflow Entities in the System Module](workflows#workflow-entities) section in *Workflows*. 
+**Workflow entity** is an entity that is used as a workflow context. It should be a [specialization](generalization-and-association) of the **Workflow Context** entity from the **System** module. For more information on workflow-related entities in the System module, see the the [Workflow Entities in the System Module](workflows#workflow-entities) section in *Workflows*. 
 
-For more information on specializations and generalizations, see [Generalization vs One-to-One Associations](generalization-and-association).
+We recommend to keep the workflow entity "clean", meaning, to only have attributes on it that are important for the current instance of your workflow and add other data via associations.
 
 ### 2.3 Display Information Section {#display-info}
 

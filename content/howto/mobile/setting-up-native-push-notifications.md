@@ -41,7 +41,7 @@ Google's Firebase service supports both Android and Apple push notifications. Be
 
 To set up the Firebase cloud messaging server, complete [How to Set Up the Google Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server). During that document's *Adding an Android and iOS App* section, be sure to add both an iOS and an Android app to your Firebase configuration. 
 
-If you would like to test push notifications with a custom developer app, please make sure to add one *additional* Android app to your Firebase project, using the app identifier *{your chosen app identifier}-developerapp*. So in this case, you should have a total of two Android apps and one iOS app included in your Firebase project. 
+If you would like to test push notifications with a custom developer app, please make sure to add one *additional* Android app to your Firebase project, using the app identifier *{your chosen app identifier}.developerapp*. So in this case, you should have a total of two Android apps and one iOS app included in your Firebase project. 
 
 After you complete that tutorial, you will have these files:
 

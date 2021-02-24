@@ -116,7 +116,7 @@ All files installed by Mendix SSO are marked with `.MendixSSO.RequiredLib`. Once
 
 ## 4 Setting Up Mendix Single Sign-On{#setting-up}
 
-These instructions are for apps which did not originally have the Mendix SSO module. For example, if you have an existing app which did not have the Mendix SSO App Store module.
+These instructions are for apps which did not originally have the Mendix SSO module. For example, if you have an existing app which did not have the Mendix SSO Marketplace module.
 
 {{% alert type="info" %}}
 You do not have to follow these steps for apps (for example, app templates) which already have Mendix SSO, or if you are upgrading an existing Mendix SSO module to a newer version.
@@ -206,7 +206,7 @@ The default Mendix SSO implementation is based on snippets. You can use these sn
 ### 5.2 Modifying Mendix SSO
 
 {{% alert type="warning" %}}
-We recommend that you do not modify the version of Mendix SSO which is in the App Store modules section of your project. In future, you may wish to import a newer version of the module and this will overwrite any changes you make.
+We recommend that you do not modify the version of Mendix SSO which is in the Marketplace modules section of your project. In future, you may wish to import a newer version of the module and this will overwrite any changes you make.
 {{% /alert %}}
 
 The Mendix SSO module is written so that you can create a user entity in another module and use this entity to store the user information and as the basis of a new administration module.

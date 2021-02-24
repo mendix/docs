@@ -69,7 +69,7 @@ Now that you have created a company app template, the next step is to share it w
 
 There are four important options to keep in mind when uploading your company app template:
 
-* **Publish to** — this option must be set to **Private App Store**
+* **Where can people find your content?** — this option must be set to **Private Marketplace**
 * **Category** — select the **Create New App**
 * **Sub category** — select the **Starter Apps** sub-category to make the app available as a template in the "create new app flow" for the Mendix Platform
 * **Impressions** — impressions contain the images that are shown when creating a new app in the Mendix Platform

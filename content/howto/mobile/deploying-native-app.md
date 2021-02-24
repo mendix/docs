@@ -66,11 +66,11 @@ From Studio Pro:
 
 1.  Click **Project** > **Build Native Mobile App**:
 
-	{{% image_container width="350" %}}![Start Mendix Native Mobiler Builder](attachments/nbui/start-nbui.png){{% /image_container %}}
+	{{% image_container width="350" %}}![Start Mendix Native Mobile Builder](attachments/nbui/start-nbui.png){{% /image_container %}}
 
 1.  When Mendix Native Mobile Builder launches you will see the home screen:
 
-	{{% image_container width="350" %}}![Mendix Natve Mobile Builder Home Screen](attachments/nbui/home-screen.png){{% /image_container %}}
+	{{% image_container width="350" %}}![Mendix Native Mobile Builder Home Screen](attachments/nbui/home-screen.png){{% /image_container %}}
 
 1. Select **Build app for distribution**.
 1.  Fill in your app's name and the app identifier. The wizard provides defaults, but you might want to align the app identifier to use your company's reversed URL, or change the app name to something besides the project name:
@@ -105,7 +105,7 @@ You have completed the mandatory basic app configuration required to build your 
 
 Next, do the following:
 
-1. Fill in an intentional version number. For defaults, we reccomend you use these numbering guidelines:
+1. Fill in an intentional version number. For defaults, we recommend you use these numbering guidelines:
 
 	* Versions lower than 0.5.0 for alpha releases
 	* Versions ranging from 0.5 to 0.9.x for beta releases

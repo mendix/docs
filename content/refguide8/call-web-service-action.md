@@ -254,4 +254,4 @@ The name for the output that will hold the result of the operation.
 
 ## 9 Common Section{#common}
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+{{% snippet file="refguide8/microflow-common-section-link.md" %}}

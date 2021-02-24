@@ -3,7 +3,7 @@ title: "Marketplace Overview"
 category: "General Info"
 menu_order: 10
 description: "Presents an overview of how to find and use content from the Mendix Marketplace."
-tags: ["app store", "widget", "connector", "module", "partner"]
+tags: ["marketplace", "app store", "widget", "connector", "module", "partner"]
 aliases:
     - /community/app-store/app-store-overview.html
     - /developerportal/app-store/app-store-overview.html
@@ -21,7 +21,7 @@ The home page of the Mendix Marketplace has three main tabs at the top:
 
 * **Discover** – the home page, where you can browse various component categories and filter what is displayed
 * **My Marketplace** – click this to go to [My App Store](#my-app-store)
-* **{Your company's private App Store page}** – click this to go to your [company's App Store](#company-content)
+* **{Your company's private Marketplace page}** – click this to go to your [company's App Store](#company-content)
 
 ![](attachments/app-store-overview/home-page.jpg)
 

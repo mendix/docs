@@ -28,7 +28,7 @@ Member defines for which attribute or association the message will be shown. In 
 
 ### 2.3 Template
 
-Template defines the text of the validation message. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2 etcetera.
+Template defines the text of the validation message. The template can contain parameters that are written as a number between braces, for example, {1}. The first parameter has number 1, the second 2 etcetera.
 
 {{% alert type="warning" %}}
 

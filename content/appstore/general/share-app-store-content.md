@@ -2,7 +2,7 @@
 title: "Share Marketplace Content"
 category: "General Info"
 menu_order: 30
-tags: ["app store", "public app store", "private app store", widget", "module"]
+tags: ["marketplace", "app store", "public app store", "private app store", widget", "module"]
 description: "Describes how to create and share Mendix Marketplace content."
 aliases:
     - /developerportal/app-store/share-app-store-content.html
@@ -64,7 +64,10 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 
 * Create a folder named **USE_ME** and add the microflows and pages that are relevant for the user
 * Create an empty folder with the version number as its name, which will appear in Studio Pro's Project Explorer
-* If you add any userlib *jar* files, make sure they are accompanied by a *MyModule.RequiredLib* file so that users know where the *jar* files come from
+*  If you add any userlib *jar* files, make sure they are accompanied by a blank **MyModule.RequiredLib** file so that users know where the *jar* files come from  
+
+	![](attachments/share-app-store-content/userlibBlankFiles_boxed.jpg)
+
 * Verify that the module's Java actions compile correctly (the easiest way to check is to create a deployment package, as it will clean the deployment folder and rebuild the app; for more information, see [Create Deployment Package Dialog](/developerportal/deploy/environments) and [Environments](/developerportal/deploy/environments))
 * Reduce the use of layouts – using snippets will result in fewer module dependencies and will reduce the number of potential errors (for example, missing layouts)
 * User roles and security should be implemented 

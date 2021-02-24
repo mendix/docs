@@ -26,7 +26,7 @@ The Modeler sports quite a number of dockable windows or docks. You can close so
 | Debugger | This can be used to debug your application. |
 | Documentation | Shows the documentation for the currently selected element (if applicable). |
 | Error List | Shows the errors and warning currently in your project. |
-| Find Results | Shows the results of the latest find action. You can search for text, for usages of an element (e.g. attribute) and for unused items. There are two find results docks. If you lock the results of the first dock, the second one will be used for subsequent find operations until you unlock it. |
+| Find Results | Shows the results of the latest find action. You can search for text, for usages of an element (for example, attribute) and for unused items. There are two find results docks. If you lock the results of the first dock, the second one will be used for subsequent find operations until you unlock it. |
 | Get Started | Shows information on how to get started with the Mendix Modeler. Available in version 6.2.0 and higher. |
 | Project Explorer | Shows the complete structure of your project including all documents inside the modules. By default the active document is always selected in the project explorer so you can quickly see where the document you are editing is in the tree. You can change this behavior in the preferences window (menu Edit > Preferences). |
 | Properties | Shows properties of the currently selected element. This is where a lot of editing in the Modeler takes place. |

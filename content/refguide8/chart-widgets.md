@@ -52,7 +52,7 @@ The [Any Chart Cheat Sheet](charts-any-cheat-sheet) lists the most common chart 
 
 ## 4 Performing Basic Functions
 
-{{% snippet file="refguide/performing-basic-functions-widgets.md" %}}
+{{% snippet file="refguide8/performing-basic-functions-widgets.md" %}}
 
 ## 5 Documents in This Section
 

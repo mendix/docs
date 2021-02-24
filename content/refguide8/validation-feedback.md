@@ -53,7 +53,7 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.3 Template
 
-**Template** is the message that will be shown to the end-user. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2, etc.
+**Template** is the message that will be shown to the end-user. The template can contain parameters that are written as a number between braces, for example, {1}. The first parameter has number 1, the second 2, etc.
 
 {{% alert type="warning" %}}
 
@@ -67,7 +67,7 @@ Parameters are attributes the value of which will be displayed. Parameters need 
 
 ## 4 Common Section {#common}
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+{{% snippet file="refguide8/microflow-common-section-link.md" %}}
 
 ## 5 Read More
 

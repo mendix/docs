@@ -18,9 +18,9 @@ Read on to find out how to determine the origin of these errors, and possible wa
 
 These detailed messages tell you:
 
-1.  The module and document in which the error occurred (e.g. the domain model of the module 'Transportation').
-2.  The model element that caused the error (e.g. the entity 'Vehicle').
-3.  What the actual problem is (e.g. there's an index that doesn't contain any attributes, which is not permitted).
+1.  The module and document in which the error occurred (for example, the domain model of the module 'Transportation').
+2.  The model element that caused the error (for example, the entity 'Vehicle').
+3.  What the actual problem is (for example, there's an index that doesn't contain any attributes, which is not permitted).
 
 ## 2\. Determine the origin of your project
 

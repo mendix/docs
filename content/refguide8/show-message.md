@@ -55,7 +55,7 @@ There are three message options:
 
 ### 3.2 Template
 
-**Template** defines the text of the message. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2, etc.
+**Template** defines the text of the message. The template can contain parameters that are written as a number between braces, for example, {1}. The first parameter has number 1, the second 2, etc.
 
 ### 3.3 Parameters
 
@@ -74,7 +74,7 @@ The **Blocking** property defines whether the message shown to the end-user is b
 
 ## 4 Common Section {#common}
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+{{% snippet file="refguide8/microflow-common-section-link.md" %}}
 
 ## 5 Read More
 

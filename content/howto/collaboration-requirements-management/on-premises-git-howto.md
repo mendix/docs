@@ -232,7 +232,7 @@ The project is uploaded successfully. You can check on your private server and s
 If you already have an existing versioned app project (with Subversion) that you would like to upload to your Git private server instead, you can export it, then re-import it, and uploading it to your server. Follow the steps below:
 
 1. Once the app is opened, go to **File > Export Project Package**. 
-2.  In the **Export Project Package** dialog box, browse to the location you would like to save the *.mpk* (Mendix Package) file, or accept the default location, a new **packages** folder in the root of the application folder. Take note of this location, as you will need it later. You can also rename the *.mpk* file (e.g.*MyGitApp.mpk*) and the app will be named that way once you import it and upload it to the Git server:
+2.  In the **Export Project Package** dialog box, browse to the location you would like to save the *.mpk* (Mendix Package) file, or accept the default location, a new **packages** folder in the root of the application folder. Take note of this location, as you will need it later. You can also rename the *.mpk* file (for example,*MyGitApp.mpk*) and the app will be named that way once you import it and upload it to the Git server:
 
     ![Export Project Package dialog](attachments/on-premises-git-howto/export-project-package-dialog.png)
 

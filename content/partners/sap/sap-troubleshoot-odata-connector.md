@@ -8,7 +8,7 @@ tags: ["SAP", "integration", "OData", "Troubleshoot", "destination", "401", "404
 
 ## 1 Introduction
 
-There are some common issues which occur when using the OData Connector for SAP Solutions module from the App Store. This document lists some of these issues and the possible causes.
+There are some common issues which occur when using the OData Connector for SAP Solutions module from the Marketplace. This document lists some of these issues and the possible causes.
 
 ## 2 Getting Destination Failed
 
@@ -84,7 +84,7 @@ The following techniques can help in identifying issues which are causing your O
 
 ### 7.1 Setting Application Log level
 
-You can get more information from your app by setting the log level. For this you will need to have the App Store module [SAP Logging Connector](https://appstore.home.mendix.com/link/app/110219/) set up in your app. For more information see the [SAP Logging Connector](sap-logger) documentation.
+You can get more information from your app by setting the log level. For this you will need to have the Marketplace module [SAP Logging Connector](https://appstore.home.mendix.com/link/app/110219/) set up in your app. For more information see the [SAP Logging Connector](sap-logger) documentation.
 
 To set log level for an application deployed to SAP BTP, go to ‘Model Options’ in the environment and set ‘SapApplicationLogs.SapLogLevel’ to the required level. (Debug, Info, Error, Warn, or Trace).
 

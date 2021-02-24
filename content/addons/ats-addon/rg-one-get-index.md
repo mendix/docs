@@ -5,7 +5,7 @@ parent: "rg-one-input"
 
 ## 1 Description
 
-Gets the index of the selected value in a drop-down, e.g. an EnumSelect or ReferenceSelector.
+Gets the index of the selected value in a drop-down, for example, an EnumSelect or ReferenceSelector.
 
 ## 2 Supported Widgets
 

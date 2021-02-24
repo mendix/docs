@@ -38,7 +38,7 @@ Studio Pro Guide | Model SDK API docs
 
 ### 2.1 Overview
 
-A module consists of a domain model, model security settings and zero or more documents (e.g. microflows, pages).
+A module consists of a domain model, model security settings and zero or more documents (for example, microflows, pages).
 
 #### 2.1.1 Graphical Overview
 
@@ -51,7 +51,7 @@ Studio Pro Guide | Model SDK API docs
 
 ### 2.2 Documents
 
-Modules consist of documents, e.g. microflows, pages or published or consumed services. These documents can be organized with folders.
+Modules consist of documents, for example, microflows, pages or published or consumed services. These documents can be organized with folders.
 
 In this sense, Module and Folder behave in the exact same way, and thus inherit from FolderBase: they both contain documents and folders.
 

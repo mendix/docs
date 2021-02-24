@@ -2,7 +2,7 @@
 title: "HTML/JavaScript Snippet"
 category: "Widgets"
 description: "Describes the configuration and usage of the TML/JavaScript Snippet widget, which is available in the Mendix Marketplace."
-tags: ["app store", "app store component", "widget", "html", "javascript", "snippet", "platform support"]
+tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "html", "javascript", "snippet", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -31,7 +31,7 @@ The [HTML/JavaScript Snippet](https://appstore.home.mendix.com/link/app/56/) wid
 	* **JavaScript with jQuery** – this option will make sure your code can leverage jQuery v3.3.1, for example:
 	
 		```
-		//e.g. this code snippet will set the color of all your paragraph tags on the page to red.
+		//for example, this code snippet will set the color of all your paragraph tags on the page to red.
 		$('p').css('color', 'red')
 		// or
 		jQuery('p').css('color', 'red')

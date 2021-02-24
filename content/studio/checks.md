@@ -26,10 +26,7 @@ If the app does not pass the check, you see the **Checks** button goes red with 
 
 If your app has consistency errors, the **Checks** button will have the red border and the number of errors will be indicated on the button. To display consistency errors for your app and view the impacted elements in it, you can do the following:
 
-1. Click the **Checks** button or press the <kbd>C</kbd> shortcut to open the **Checks** panel:
-
-    ![](attachments/checks/checks-button-red.png)
-
+1. Click the **Checks** button or press the <kbd>C</kbd> shortcut to open the **Checks** panel.
     The panel with the list of consistency errors appears at the bottom of the screen. For more information on the **Checks** panel, see the [Checks Panel Overview](#checks-panel-overview) section below.
 
     ![](attachments/checks/checks-panel.png)

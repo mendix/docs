@@ -9,7 +9,7 @@ tags: ["Developer Portal", "App Services", "Deploy"]
 ## 1 Introduction
 
 {{% alert type="info" %}}
-App services are deprecated and marked for removal. Use a [published web service](/refguide/published-web-services) or a [published REST service](/refguide/published-rest-services) instead.
+App services are deprecated and  were removed in Studio Pro 9. Use a [published web service](/refguide/published-web-services) or a [published REST service](/refguide/published-rest-services) instead.
 {{% /alert %}}
 
 The **App Services** page provides an overview of possible resources that can be published to the [Mendix Marketplace](https://appstore.home.mendix.com/):

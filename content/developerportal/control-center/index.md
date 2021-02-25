@@ -4,6 +4,10 @@ description: "Describes the Mendix Control Center, used for the governance of co
 tags: ["control center", "mendix admin", "developer portal", "role", "permissions", "fallback", "resource pack", "node", "offboard"]
 ---
 
+{{% alert type="info" %}}
+For more information on Control Center, see the [Control Center and Mendix 8.18: The Right Amount of Control](https://www.mendix.com/blog/control-center-and-mendix-8-18-the-right-amount-of-control/) blog post.
+{{% /alert %}}
+
 ## 1 Introduction
 
 Users that sign up on the Mendix Platform are able to create new app projects, invite others to their app project teams, deploy their apps, and invite end-users to give feedback on apps, among many other activities. Insights into these company activities are provided in the Control Center in one central overview. These insights will help you to be in control and remain aware of everything happening within the Mendix landscape of your company.

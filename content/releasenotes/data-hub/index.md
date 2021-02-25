@@ -7,12 +7,55 @@ tags: ["data hub", "data hub catalog", "data hub Landscape"]
 
 These release notes cover changes made to the [Mendix Data Hub](/data-hub/index).
 
+## 2021
+
+### February 19th, 2021
+
+#### Improvements
+
+* Two new endpoints have been added to the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis) for registering published and consumed endpoints separately. 
+
+### January 28th, 2021
+
+#### Improvements
+
+* You can now copy the dataset URI from the [data source details](/data-hub/data-hub-catalog/search#search-details) in the Data Hub Catalog. This makes it easier to directly select datasets to use in other business applications from the context of the data source.
+
+### January 21st, 2021
+
+#### New Features
+
+* Custom icons can now be used for applications and data sources. Curators and owners can [upload their own icons](/data-hub/data-hub-catalog/curate#application-icon) or select from the Data Hub icon library.
+
+#### Improvements
+
+* Improvements have been made to security. 
+
+### January 14th, 2021
+
+#### New Features
+
+* You can download the OData service contract for a registered data source from the [asset details](/data-hub/data-hub-catalog/search#download-contract) in the Data Hub Catalog. The set of files that make up the contract will be downloaded as a ***.zip*** file.
+
+#### Improvements
+
+* Further improvements have been made to security in Data Hub. 
+* All screens in Data Hub are now responsive.
+
+### January 7th, 2021
+
+#### New Features
+* The [asset details](/data-hub/data-hub-catalog/search#search-details) in the Data Hub Catalog now have added functionality to copy the URI of the data source or dataset to the clipboard. This functionality means that the Data Hub Catalog can be used to discover registered assets—data sources and datasets—and access the data in other enterprise applications through the metadata URI.
+
+#### Improvements
+* There have been several improvements in the Data Hub user interface. 
+
 ## 2020
 
 ### December 24th, 2020
 
 #### New Features
-* The [search details](/data-hub/data-hub-catalog/search#search-details) for in the Data Hub Catalog now display the exposed **Datasets** (the entity set names of an entity) in place of the **entity** names. This means that for [published services](/data-hub/data-hub-catalog/register#odata-service-reg) of Mendix apps, the name shown as the **Dataset** will be the Mendix **Exposed Entity set** name.
+* The [search details](/data-hub/data-hub-catalog/search#search-details) in the Data Hub Catalog now display the exposed **Datasets** (the entity set names of an entity) in place of the **entity** names. This means that for [published services](/data-hub/data-hub-catalog/register#odata-service-reg) of Mendix apps, the name shown as the **Dataset** will be the Mendix **Exposed Entity set** name.
 
 * In the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis), the Search API (`GET` data) returns items that specify the entity sets instead of entity types. The response structure has been expanded by adding the fields `EntitySetName` `EntityTypeName` and `Namespace` at the `Item` and `ItemAssociation` level.
 

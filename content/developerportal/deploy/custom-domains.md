@@ -6,6 +6,7 @@ description: "How to configure custom domains as well as generate, upload, and r
 tags: ["Custom Domain","Mendix Cloud","Developer Portal", "certificates"]
 aliases:
     - /mendixcloud/custom-domains.html
+    - /howtogeneral/mendixcloud/custom-domains.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #Linked from Developer Portal > Environments > Custom Domains
 ---
@@ -255,4 +256,5 @@ For certain use cases, it is important for the Mendix runtime to know the public
 * [Environments](environments)
 * [Mendix Cloud: Deploy](mendix-cloud-deploy)
 * [Licensing Mendix Cloud Apps](licensing-apps)
-* [Company & App Roles](/developerportal/company-app-roles/index).
+* [App Roles](/developerportal/collaborate/app-roles)
+* [Control Center](/developerportal/control-center/index)

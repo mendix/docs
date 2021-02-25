@@ -108,10 +108,6 @@ module.exports = {
       to: "/developerportal/deploy/migrating-to-v4"
     },
     {
-      from: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-azure",
-      to: "/developerportal/deploy/azure-deploy"
-    },
-    {
       from: "/mendixcloud/how-to-link-app-to-node",
       to: "/developerportal/deploy/licensing-apps"
     },
@@ -2747,14 +2743,6 @@ module.exports = {
 	/****************************************************
      * From Developer Portal (permanent, mapped) 
      ****************************************************/
-	{
-      from: "/developerportal/settings/technical-contact",
-      to: "/developerportal/company-app-roles/technical-contact"
-    }, 
-    {
-      from: "/developerportal/general/technical-contact",
-      to: "/developerportal/company-app-roles/technical-contact"
-    },	 
 	{
       from: "/deployment/mendixcloud/certificates",
       to: "/developerportal/deploy/certificates"

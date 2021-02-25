@@ -23,4 +23,6 @@ You build Mendix native mobile apps the same way you build web or hybrid apps. Y
 * [Add Fonts to Your Native Mobile App](native-custom-fonts)
 * [Set Up Maps in Native Mobile Apps](how-to-maps)
 * [Troubleshoot Common Native Mobile Issues](common-issues)
+* [Configure Parallels](using-mendix-studio-pro-on-a-mac)
+* [Test Mendix Native Apps Using Appium](testing-mendix-native-apps-using-appium)
 

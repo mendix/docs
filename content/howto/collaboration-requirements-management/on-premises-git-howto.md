@@ -27,9 +27,9 @@ You will not be able to use Mendix Studio for collaborative development if you u
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Make sure you have the right server provider. We currently only support Git Private Server. For more information, see the [Preparing Your Repository](#preparing-your-repo section). 
+* Make sure you have the right server provider. We currently only support Git Private Server. For more information, see the [Preparing Your Repository](#preparing-your-repo) section. 
 * You have a feature flag enabled. For more information, see the [Enabling a Feature Flag](#enable-feature-flag) section.
-* You have an unversioned Mendix app project. For more information, see the [Creating an App](##create-app) section.
+* You have an unversioned Mendix app project. For more information, see the [Creating an App](#create-app) section.
 
 ## 3 Supported Authentication Mechanisms
 
@@ -198,7 +198,7 @@ For the previous local disk method do the following:
 
 	![Open App Select File](attachments/on-premises-git-howto/open-app-select-file.png)
    
-### 4.6 Uploading to the Private Git Server
+### 4.6 Uploading to the Private Git Server {#upload-to-private-git-server}
 
 Once you have an unversioned app project, you can upload it to your private team server. 
 
@@ -232,7 +232,7 @@ The project is uploaded successfully. You can check on your private server and s
 If you already have an existing versioned app project (with Subversion) that you would like to upload to your Git private server instead, you can export it, then re-import it, and uploading it to your server. Follow the steps below:
 
 1. Once the app is opened, go to **File > Export Project Package**. 
-2.  In the **Export Project Package** dialog box, browse to the location you would like to save the *.mpk* (Mendix Package) file, or accept the default location, a new **packages** folder in the root of the application folder. Take note of this location, as you will need it later. You can also rename the *.mpk* file (e.g.*MyGitApp.mpk*) and the app will be named that way once you import it and upload it to the Git server:
+2.  In the **Export Project Package** dialog box, browse to the location you would like to save the *.mpk* (Mendix Package) file, or accept the default location, a new **packages** folder in the root of the application folder. Take note of this location, as you will need it later. You can also rename the *.mpk* file (for example,*MyGitApp.mpk*) and the app will be named that way once you import it and upload it to the Git server:
 
     ![Export Project Package dialog](attachments/on-premises-git-howto/export-project-package-dialog.png)
 

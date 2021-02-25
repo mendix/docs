@@ -2,7 +2,7 @@
 title: "Consume Registered Assets"
 category: "Data Hub Catalog"
 menu_order: 20
-description: "Using entities from the Mendix Data Hub Catalog in general."
+description: "Using shared data sources and datasets through Medix Data Hub."
 tags: ["data hub", "data hub catalog", "consume", "external entities", "asset", "entities", data hub pane", "studio pro"]
 ---
 
@@ -18,6 +18,8 @@ For details on the security of the data that the shared datasets connect to, and
 
 Shared data which is represented by the exposed datasets registered in the Data Hub Catalog can be added to your app in Studio Pro through the [Data Hub pane](/refguide/data-hub-pane). These datasets are introduced into the domain model as [external entities](/refguide/external-entities).
 
+You can use the Catalog to find registered data sources and use the [Copy Data Source URI](search#service-details) button obtain the OData service URI which can be used in other enterprise applications.
+
 The following sections summarize important points when using OData services and registered datasets in your apps in Studio Pro.
 
 ### 2.1 Services
@@ -30,9 +32,7 @@ When a new version of the OData service for an external entity is registered in 
 This is not compulsory, and users can continue to use an older version of a service unless the new version was deployed to the same service endpoint as the previous version. In Studio Pro, new versions of a service are indicated and users can choose to **Update** the service, or **Switch** to another version of the service deployed to another endpoint.
 {{% /alert %}}
 
-{{% alert type="info" %}}
 It is good practice that publishers of a service serve a notice of deprecation on a service version that will be replaced with a new service that may contain breaking changes which would cause the consuming app to fail. In this case the updated service should be deployed to a new service endpoint. In this case, in Studio Pro, users will get the option to **Switch** to the new version. 
-{{% /alert %}}
 
 ### 2.2 Consumed (External) Entities
 

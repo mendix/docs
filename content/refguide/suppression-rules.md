@@ -15,10 +15,10 @@ When you work on a project, Studio Pro performs consistency checks, which may re
 While warnings can be valuable, there are some situations where you might want to disable them, such as the following ones:
 
 * You made a deliberate choice in your project that leads to a warning, and you know this will not lead to problems.
-* You are using an App Store module that contains warnings and you do not want to change the App Store module.
+* You are using an Marketplace module that contains warnings and you do not want to change the Marketplace module.
 * The number of warnings is so large that the **Warnings** tab is not usable anymore, and you want to temporarily disable some of them.
 
-With **Suppression rules** it is possible to disable warnings. You can [suppress warnings](#suppress-warning) from the **Errors** pane and [manage them](#managing-rules) via the **Suppression rules** option. It is also possible to [suppress warnings for all App Store modules](#suppress-appstore-warnings). 
+With **Suppression rules** it is possible to disable warnings. You can [suppress warnings](#suppress-warning) from the **Errors** pane and [manage them](#managing-rules) via the **Suppression rules** option. It is also possible to [suppress warnings for all Marketplace modules](#suppress-appstore-warnings). 
 
 ## 2 Suppression Rule Logic {#suppression-rules-logic}
 
@@ -72,15 +72,15 @@ For more information on how to edit or delete a suppression rule, see the [Manag
 
 ## 4 Managing Suppression Rules {#managing-rules}
 
-You can add, edit, delete, export, or import suppression rules. You can also suppress warnings from the App Store. 
+You can add, edit, delete, export, or import suppression rules. You can also suppress warnings from the Marketplace. 
 
 {{% alert type="info" %}}
 After modifying suppression rules, click **OK** to close the **Manage Suppression Rules** dialog box and apply changes. 
 {{% /alert %}}
 
-### 4.1 Suppressing App Store Warnings {#suppress-appstore-warnings}
+### 4.1 Suppressing Marketplace Warnings {#suppress-appstore-warnings}
 
-To suppress App Store warnings, do the following:
+To suppress Marketplace warnings, do the following:
 
 1.  Click the **Suppression rules** button in the **Errors** pane.
 
@@ -88,11 +88,11 @@ To suppress App Store warnings, do the following:
 
 2. In the **Manage Suppression Rules** dialog box, check the **Suppress warnings from App Store modules** option.
 
-    ![Suppressing App Store warnings](attachments/suppression-rules/rules-dialog-app-store-setting.png)
+    ![Suppressing Marketplace warnings](attachments/suppression-rules/rules-dialog-app-store-setting.png)
 
 3. Click **OK** to apply the new setting.
 
-Warnings from App Store modules are suppressed. 
+Warnings from Marketplace modules are suppressed. 
 
 ### 4.2 Adding a Rule
 

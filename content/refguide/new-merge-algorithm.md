@@ -7,9 +7,9 @@ tags: ["merge", "algorithm", "conflict", "resolution"]
 
 ## 1 Introduction
 
-A new merge algorithm with fine-grained conflict resolution is used when you update your project or merge changes in it. The new merge algorithm has the following features:     
+A new merge algorithm with fine-grained conflict resolution is used when you update your project or merge changes in it. The new merge algorithm has the following features:
+
 * **Fine-grained conflict resolution** – When there are conflicting changes in a document, you do not have to choose between whole documents: resolving a conflict using your change or using their change. Instead, you can resolve conflicts at the level of individual elements, such as widgets, entities, attributes, or microflow actions. Also, all non-conflicting changes from both sides are accepted automatically.
-  
 * **No conflicts on parallel changes to lists of widgets** – When two developers make changes to widgets in the same document there is no conflict, the changes are combined. However, if the changes are made too close to the same place in the document, a **list order conflict** is reported that reminds the developer who is merging the changes to decide on the final order of the widgets in the list. 
 
 ## 2 Enabling the New Algorithm with Fine-Grained Conflict Resolution
@@ -21,9 +21,7 @@ Make sure that you repository is in a clean state: everything has been committed
 To enable the new algorithm, do the following:
 
 1. In the Studio Pro top bar, go to **Edit** > **Preferences** > **New features**. 
-
 2. In the **Version Control** section, enable the **New merge algorithm with fine-grained conflict resolution** option.
-
 3. Restart Studio Pro.
 
 For more information, see [Preferences](preferences-dialog).
@@ -54,13 +52,12 @@ Your page is now laid out as shown below:
 
 ![Branch line page](attachments/new-merge-algorithm/new-merge-algorithm-branch-page.png)
 
-### 3.1 Resolving Conflicts
+## 4 Resolving Conflicts
 
 When you merge changes, the new algorithm shows you the following conflicts:
 
 1. The text that both sides changed. 
-
-2. A **list order conflict**. Both of you added widgets to the bottom layout grid. The merge algorithm cannot guess the right order for the two new widgets and it reports the list order conflict. This is a reminder for you (the developer who is doing the merge) to look at the final layout and confirm the order. 
+2.  A **list order conflict**. Both of you added widgets to the bottom layout grid. The merge algorithm cannot guess the right order for the two new widgets and it reports the list order conflict. This is a reminder for you (the developer who is doing the merge) to look at the final layout and confirm the order. 
 
     ![New algorithm conflicts](attachments/new-merge-algorithm/new-merge-algorithm-conflicts.png)
 
@@ -75,7 +72,7 @@ The following non-conflicting changes have already been applied to the page:
 * The text widget is added to the bottom layout grid (main line)
 * A data grid is added to the bottom layout grid (branch line)
 
-#### 3.3.1 Resolving the First Conflict
+### 4.1 Resolving the First Conflict
 
 For the first conflict, you can inspect changes and decide which version to apply. Select one of the three lines that represent the conflict and choose **Resolve using Mine** or **Resolve using Theirs**. 
 
@@ -91,7 +88,7 @@ There is a third option to deal with a conflict: **Mark as Resolved**. This mean
 
 Once you have chosen one of the three options to resolve the conflict, green checkmarks will appear to indicate that this conflict has been dealt with.
 
-#### 3.3.2 Resolving the Second Conflict
+### 4.2 Resolving the Second Conflict
 
 The second conflict is a list order conflict. It is a reminder to take a look at the order of the widgets in the 
 layout grid. You can arrange the widgets in the desired order in the page editor and then choose **Mark as Resolved** for the list order conflict.
@@ -102,7 +99,7 @@ Some changes will make it impossible to resolve conflicts using **mine** or **th
 
 ![Conflict cannot be resolved](attachments/new-merge-algorithm/new-merge-algorithm-cannot-resolve.PNG)
 
-#### 3.3.3 Finishing Conflict Resolution
+### 4.3 Finishing Conflict Resolution
 
 Once all conflicts have been resolved, click the **Accept and Exit** button to finalize the results. The document will be saved in its merged form and the conflict for that document will be gone. The result is the document that contains changes from both sides and possibly some manual edits.
 

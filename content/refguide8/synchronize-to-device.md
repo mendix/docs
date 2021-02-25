@@ -43,7 +43,7 @@ A variable that refers to an object or a list to be synchronized.
 
 ## 4 Common Section {#common}
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+{{% snippet file="refguide8/microflow-common-section-link.md" %}}
 
 ## 5 Limitations
 

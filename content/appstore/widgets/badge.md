@@ -1,8 +1,8 @@
 ---
 title: "Badge"
 category: "Widgets"
-description: "Describes the configuration and usage of the Badge widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "badge", "color label", "platform support"]
+description: "Describes the configuration and usage of the Badge widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "badge", "color label", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -25,6 +25,6 @@ Place the widget in the context of an object that has a value attribute.
 
 On the **General** tab, specifying the **Value attribute**  is optional. If this is not set, a static **Default value** should be specified. 
 
-## 3 Developing This App Store Component
+## 3 Developing This Marketplace Component
 
 We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/badge](https://github.com/mendixlabs/badge/issues).

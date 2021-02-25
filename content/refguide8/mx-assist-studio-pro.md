@@ -1,70 +1,59 @@
 ---
-title: "Mendix Assist"
+title: "MxAssist Logic Bot"
 parent: "microflows"
-description: "Describes Mendix Assist in Mendix Studio Pro."
-tags: ["studio pro", "mendix assist", "AI", "assistant"]
+description: "Describes MxAssist Logic Bot in Mendix Studio Pro."
+tags: ["studio pro", "mendix assist", "AI", "assistant", "mx assist logic bot", "logic bot"]
 ---
 
 ## 1 Introduction 
 
-Mendix Assist is an artificial intelligence-powered agent that helps you configure microflows in Mendix Studio Pro. It gives you recommendations on configuring the next step of your microflow based on activities, parameters, and events that already exist in the microflow.
+MxAssist Logic Bot is an AI-powered virtual co-developer bot that helps you to model and configure your application logic (microflows) in Mendix Studio Pro. It gives you contextualized recommendations on the next best activity in your microflow based on the already designed activities, parameters, and other context-related information. 
 
-Mendix Assist was built using the machine learning analysis of over twelve million anonymized application flows built with Mendix. Mendix uses deep learning to detect best practice patterns in microflows. Based on these patterns, Mendix Assist predicts the best options for the next activity in a microflow. Moreover, Mendix Assist keeps learning by analyzing new microflows being built.  
+MxAssist Logic Bot is built using machine learning analysis of over twelve million anonymized application logics (microflows)*—*built with Mendix*—*to detect and learn the best practice patterns in microflows.
 
-## 2 Mendix Assist Overview
+The key features of MxAssist Logic Bot are the following: 
 
-Mendix Assist is enabled by default and is displayed as a blue dot in the flow of a [microflow](microflows). A bow-tie appears on the dot when you hover over it. 
+* **Next best action suggestion** – it recommends the top five next best activities out of more than 40 different options with accuracy of 95%. 
+* **Auto-configuration** – it does not only provide next best action, but automates the development further by pre-populating the parameters for such action.
+* **Contextual  suggestions** – it derives context in different ways, including by 'looking' left and right in a microflow when the developer inserts a new activity or decision mid-flow; and by inferring the context using the page where it is called from.  
+* **High accuracy** – continuous improvement and training of the model has elevated the accuracy level from 95%.
 
-{{% image_container width="350" %}}
-![Mendix Assist Icon](attachments/mx-assist-studio-pro/mendix-assist-icon.png)
-{{% /image_container %}}
+## 2 MxAssist Logic Bot Settings
 
-{{% alert type="info" %}}
-It is possible to add activities in the regular way without using Mendix Assist. 
-{{% /alert %}}
+To access settings of MxAssist Logic Bot, open **Edit** > **Preferences** >the **MxAssist Logic Bot** section. For more information, see [Preferences](preferences-dialog).
 
-Click the bow-tie to see Mendix Assist recommendations: 
+In the **MxAssist Logic Bot** section, you can set the following: 
 
-![](attachments/mx-assist-studio-pro/mx-assist-recommendations.png)
+* **Enable MxAssist Logic Bot** – switches MxAssist Logic Bot on and off
 
-Mendix Assist lists the top five recommendations, starting with the most probable, for the current microflow. Click the suggestion to proceed with it and insert it into a microflow. For more information, see the [Adding Activities and Elements with Mendix Assist](#add-activities) section below.
+* **Show suggestions for system variables** – when enabled, MxAssist Logic Bot will make suggestions for system objects (for example, it can suggest that you change such objects as **currentUser** or **currentSession**):
 
-Once you have selected an activity or an event to insert to the microflow using Mendix Assist, the **Properties** dialog box will appear for configuring this activity/event.
+  ![Suggestions for System Variables](attachments/mx-assist-studio-pro/mx-assist-system-variables.png)
 
-## 3 Settings
+For more information on preferences, see [Preferences](preferences-dialog).
 
-To open the settings of Mendix Assist, click **Edit** > **Preference**. In the **General** tab, you can see the Mendix **Assist** section:
+## 3 Using MxAssist Logic Bot to Build Microflows
 
-![](attachments/mx-assist-studio-pro/mx-assist-properties.png)
+MxAssist Logic Bot is enabled by default and is displayed as a blue dot in the flow of a [microflow](https://docs.mendix.com/refguide/microflows). A bow-tie appears on the dot when you hover over it:
 
-Mendix Assist has the following properties:
+{{% image_container width="350" %}}![Logic Bot Icon](attachments/mx-assist-studio-pro/mendix-assist-icon.png){{% /image_container %}}
 
-* **Enable Mendix Assist** – switches Mendix Assist on and off
-* **Show suggestions for system variables** – when enabled, Mendix Assist will make suggestions for system objects as well (for example, it can suggest that you change such objects as **currentUser** or **currentSession**)
+It is possible to add elements to the microflow in a regular way without using MxAssist Logic Bot, however, MxAssist Logic Bot helps you add elements to the microflow faster as it suggests a short list of the most relevant activities. 
 
-  ![](attachments/mx-assist-studio-pro/mx-assist-system-variables.png)
+To use MxAssist Logic Bot, do the following:
 
-## 4 Adding Activities & Elements with Mendix Assist {#add-activities}
+1. Click the bow-tie to see the next best action recommendations:
 
-You can add various activities and elements using Mendix Assist. 
+    {{% image_container width="350" %}}![Logic Bot Recommendations](attachments/mx-assist-studio-pro/mx-assist-recommendations.png){{% /image_container %}}
 
-To add an activity/element do the following:
+2. Click one of the recommended activities to insert it into a microflow.
 
-1. Click the blue Mendix Assist dot in a microflow.
-2. Browse the suggestions and select the activity you need.
-3. Click the selected activity to add it to the flow.
-4. Configure the activity's properties to avoid consistency errors.
+3. In the **Properties** dialog box, configure the selected activity/event.
 
-The activity/element is then added to the flow.
+The activity/event is added to your microflow.
 
-For example, when you select **Add a decision**, a [decision](decision) will be added:
+If you do not see the desired activity or element in the top-five recommendation list, you can click **Add other element** and choose an activity, loop, decision, merge, or object type decision.
 
-![](attachments/mx-assist-studio-pro/mx-assist-add-check.png) 
-
-If you do not see the activity or element you would like to add in the suggestions, click **Add other element** and choose an activity, loop, decision, merge, or object type decision.
-
-![](attachments/mx-assist-studio-pro/mx-assist-add-other-element.png)
-
-## 5 Read More
+## 4 Read More
 
 * [Microflows](microflows)

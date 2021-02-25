@@ -126,8 +126,8 @@ For a description of the Runtime Server, see [Runtime Server](runtime-server).
 Mendix pages are constructed from individual widgets. A widget can be of one of the following types:
 
 * Core widget – part of the Mendix Client
-* Pluggable widget – based on React or React Native, written by the user or downloaded from the App Store
-* Custom widget – based on Dojo, written by the user or downloaded from the App Store
+* Pluggable widget – based on React or React Native, written by the user or downloaded from the Marketplace
+* Custom widget – based on Dojo, written by the user or downloaded from the Marketplace
 
 These are described in the sections below.
 
@@ -139,7 +139,7 @@ In native mobile applications an implementation based on React Native framework 
 
 ### 3.1 Pluggable Widgets
 
-You can also write your own widgets, called **Pluggable widgets**, in cases where Core widgets do not suffice. Pluggable widgets can be downloaded through the App Store. They are based on React (in web applications) or React Native (in native mobile applications) and are the recommended way of writing widgets. They replace Custom widgets, described below.
+You can also write your own widgets, called **Pluggable widgets**, in cases where Core widgets do not suffice. Pluggable widgets can be downloaded through the Marketplace. They are based on React (in web applications) or React Native (in native mobile applications) and are the recommended way of writing widgets. They replace Custom widgets, described below.
 
 For more information, see [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets).
 

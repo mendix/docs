@@ -1,6 +1,6 @@
 ---
 title: "Data Hub Landscape"
-description: "Describes using Data Hub Landscape to search for and look at registered assets"
+description: "Using the Data Hub Landscape to explore the connections with registered assets"
 tags: ["data hub catalog", "data hub", "external entities", "landscape", "published odata service"]
 ---
 
@@ -27,7 +27,11 @@ You can access the Data Hub Landscape from [Mendix Data Hub](https://hub.mendix.
 
 A registered OData service includes the precise definition of the app and the datasets or entity sets—that provide the link to the shared data. The service endpoint and the deployment to a specific environment is shown as a node on the Landscape. 
 
-The Landscape depiction of a service and its network will be such that it will show the "flow" of data from the bottom of the display towards the top. Therefore, services that are consumed by an app will always be shown below it. Other applications that consume a selected service will always be displayed above it. A complex example of a network where this is illustrated is shown in the [example landscape network](#example-landscape) below.
+The Landscape depiction of a service and its network will be such that it will show the "flow" of data from the bottom of the display towards the top according to the following principles:
+
+*  An app publishing a service will be positioned below the service
+* Services that are consumed by an app will always be shown below it
+* Applications that consume a selected service will always be positioned above it
 
 ### 2.2 Navigating the Landscape
 
@@ -37,54 +41,48 @@ When you click any of the nodes or connections, the metadata pane on the right d
 
 You can pan around the landscape and and zoom using the mouse. You can also collapse both the search pane and the metadata pane so that the full screen area is available for viewing.
 
-When you click the **Catalog** tab this will display the **Search Details** screen of the items selected in the search pane.
+When you click the **Catalog** tab the **Details** screen of the item selected is displayed in the search pane.
 
 ![](attachments/use-landscape/landscape.png)
 
 ### 2.3 Nodes
 Registered apps and services are depicted in the Landscape as nodes from the definitions in the registered service metadata. The icons for each of these nodes identifies the the source application, for example, Mendix and Siemens.
 
-#### 2.3.1 Service
-Services are depicted as a round node with the OData icon and the service name and version number, and on the line connecting it to the publishing app, the number of entity sets or datasets exposed in the service.
+#### 2.3.1 Data Sources
+Data sources or the published OData services are depicted as a round node with the icon that indicates the **Technology** (OData) and the service name and version number on the line connecting it to the publishing app, the number of datasets exposed in the service.
+
+{{% alert type="info" %}}The application icon that is shown for the data source and application in the asset details screen and the search results is not shown for the data source in Landscape. Here the service technology is indicated.{{% /alert %}}
 
 The following is an example of a selected service node exposing three datasets:
 
 ![](attachments/use-landscape/node-service.png)
 
 #### 2.3.2 Apps
-Apps are displayed as square icons in the landscape and the environment that the app is deployed to is given below the app name. The example below shows a non-Mendix app (**SAP Concur**) deployed to a production environment and the selected Mendix app (**MxAnniversery**):
+Apps are displayed as square icons with the application icon and the environment that the app is deployed to is given below the app name. The example below shows a non-Mendix app (**TeamcenterMfg**), a Mendix app (**CompanyCarDemo**) which are deployed to the Mendix Free App environment, **Sandbox**. The third example shows another Mendix app (**HRSample_App**) deployed to the production environment which has a custom icon. For further information on adding a custom icon to your app see [Changing the Application Icon](../data-hub-catalog/curate#application-icon).
 
 ![](attachments/use-landscape/node-apps.png)
 
 ### 2.4 Dependencies
-The relationships and dependencies between apps, published services, and consuming apps are represented by connecting lines that also display the datasets that are consumed. These are illustrated and described in the following examples: 
+The relationships and dependencies between apps, published services, and consuming apps are represented by connecting lines that also display the datasets that are publised by a service and consumed by consuming apps. These are illustrated and described in the following examples: 
 
 ![](attachments/use-landscape/dependencies.png)
 
-* **Solid gray line** – This links an app and the services that have been published from the app in the specified environment. In the example, the selected app **MxAnniversery** has a published service, **AnniversaryService1.0.0**. 
-* **Broken gray line with an arrow (consume line)** – This indicates that an app is consuming from a service to which it is linked. The direction of the dependency is indicated by the direction of the arrow, which indicates that the consuming app makes a call to the OData service for data from the publishing app—there is an arrow to the consuming app which is "pulling" the data. The service will "get" the dataset for the endpoint that is consumed from the publishing app.
-	* The app **MxAnniversery** consumes three datasets through **ConcurExpenses 1.0.0**, which is published from **SAP Concur** in production.
-	* **MxAnniversery** consumes two datasets through **BambooDataService 1.1.0**, which is published from the **Bamboo** app in production.
+* **Solid gray line** – This links an app and the services published from the app in the specified environment. In the example, the selected app **LEGO-Machinesafety Data** has 2 published services, which includes**Published_OData_MS 1.0.0**. 
+* **Broken gray line with an arrow (consume line)** – This indicates that an app is consuming from the service it is linked to by the line. The direction of the dependency is indicated by the direction of the arrow: the consuming app makes a call to the OData service for data from the publishing app—the arrow points to the service (or data source) which is "pulling" the data. The service will "get" the data associated with the endpoint of the consumed dataset from the publishing app.
 
-The network of dependencies that is shown will position the selected item at the center of the network. 
+  The app **StudioExperienceMob6ug** consumes one dataset through **Published_OData_MS 1.0.0**, which is published from **LEGO - Machine Safety Data** in the production environment.
+
+The network of dependencies that is shown will position the selected asset at the center of the network. 
 
 {{% alert type="info" %}}
-In the case when an app publishing a service also consumes from the same service, the line for the publishing dependency will be superimposed on the line for the consuming dependency. This will result in only a single dotted-gray line being displayed. Details can be seen in the Metadata panel.
+In the case when an app publishing a service also consumes from the same service, the line for the publishing dependency will be superimposed onto the line for the consuming dependency. This will result in only a single dotted-gray line being displayed. 
 {{% /alert %}}
 
 ### 2.5 Node Details
-Clicking a node will display details of the node in the **Metadata** pane. You can see further details in the **Search Details** screen by clicking the **Catalog** tab. Conversely, in the **Search Details** screen, you can click the **Landscape** tab to see the network of dependencies for the selected item. 
+Clicking a node will display details of the node in the **Metadata** pane. You can see further details for the node in the asset details screen by clicking the **Catalog** tab.
 
-### 2.6 Consumed Entity Sets or Datasets
+### 2.6 Consumed Datasets
 If you click the **Entity** icon on the consume line, the names of the datasets that are being consumed from the service will be shown in the right panel.
 
 ![](attachments/use-landscape/consume-arrow-entitites-list.png)
-
-## 3 Example Landscape Network {#example-landscape}
-
-This example shows a complex network of apps and services from different sources (Mendix, Siemens and other OData sources) that are connected. The example illustrates the "flow of data" principle of the Landscape representation for the individual service and consuming app. However, this example also illustrates a possible exception when viewed over the whole network: The selected app (**SuperCyclingApp**) consumes from a service (**CyclingServicePublishedby…**) that is published by an app (**ConsumpingApp2**) that consumes the selected service (**CyclingService1.0.0**).
-
-In this example, when viewed over the whole network, it appears that the data flow is from the top of the Landscape to the bottom. However, that is because of the circularity of the connections.
-
-![](attachments/use-landscape/complex-example.png)
 

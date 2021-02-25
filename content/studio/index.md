@@ -1,8 +1,6 @@
 ---
 title: "Studio 9 Guide"
 tags: ["studio", "web modeler"]
-aliases:
-    - /refguide/web-modeler.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
@@ -30,12 +28,11 @@ The *Studio 9 Guide* is divided into the following categories:
 
 * [General Info](general) 
 * [Pages](page-editor)
-* [Domain Model](domain-models)
+* [Working with Data](work-with-data)
 * [Navigation Document](navigation)
 * [Microflows](microflows)
 * [Previewing & Publishing Your App](publishing-app)
 * [Checks](checks)
 * [Theme Customizer](theme-customizer)
 * [Settings](settings)
-* [Working with Data](work-with-data)
 * [Collaboration](collaboration)

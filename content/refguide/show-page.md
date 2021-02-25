@@ -59,7 +59,7 @@ By default the title of the page is determined by the page title property of the
 
 This feature allows you to re-use the same page for the **New** and **Edit** buttons of a [data grid](data-grid). By simply setting the titles to, for example, *New Customer* and *Edit Customer*, you can save yourself the trouble of duplicating pages.
 
-### 3.4 Close Pages
+### 3.4 Close Pages {#close-pages}
 
 {{% alert type="info" %}}
 This option is only available for native mobile and was introduced with Mendix Studio Pro v8.14.
@@ -75,7 +75,7 @@ Often you need to have control of page history, for example to show the correct 
 | None | Do not remove any pages from history. This is the default behavior.|
 | Single | After navigating to the **target page**, remove the **source page** from history. |
 | Multiple | After navigating to the **target page**, remove the **source page** and one or more pages before it from history. Configure the total number of pages removed using an expression. |
-| Clear history | Prevent the user from navigating back altogether. This is especially useful when navigating away from a login or tutorial flow. |
+| Clear history | Prevent the user from navigating back altogether. This is especially useful when navigating away from a login or tutorial flow.<br />{{% alert type="warning" %}}In the page editor and in nanoflows as well as in native apps, this option can only be used in combination with target pages that are included in the bottom bar configuration (if the layout has a bottom bar) and that have a default layout type (meaning, not a pop-up).{{% /alert %}} |
 
 ## 4 Common Section{#common}
 

@@ -36,13 +36,15 @@ User task properties consist of the following sections:
 
 #### 2.1.1 Task Name
 
-**Task name** is displayed in the running app. The **Task name** can contain parameters that are written between braces, e.g. {1}.
+**Task name** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Task name** is used in page templates. 
 
 For more information on using parameters, see the [Parameters](#parameters) section below.
 
 #### 2.1.2 Task Description
 
-**Task Description** is a description of the workflow displayed in the running app. The description can contain parameters that are written between braces, e.g. {1}.
+**Task Description** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Task description** is used in page templates. 
+
+The **Task description** can contain parameters that are written between braces, e.g. {1}.
 
 #### 2.1.3 Parameters {#parameters}
 
@@ -83,7 +85,7 @@ In addition to adding new parameters, you can perform the following actions on p
 
 ### 2.2 Due Date Section {#due-date}
 
-**Due in** allows you to set a deadline for the user task and keep track of it. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the user task. 
+**Due in** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. For example, you can use it to set a deadline for the user task and display it in your app. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the user task. If you are using the **Workflow Commons** module, **Due in** is used in page templates. 
 
 ### 2.3 General Section {#general}
 

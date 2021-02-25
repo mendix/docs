@@ -2,7 +2,7 @@
 title: "Parallel Split"
 parent: "workflows"
 menu_order: 30
-tags: ["workflow", "workflows", "decision", "Studio Pro"]
+tags: ["workflow", "workflows", "parallel split", "Studio Pro"]
 ---
 
 ## 1 Introduction

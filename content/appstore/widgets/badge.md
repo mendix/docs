@@ -1,30 +1,49 @@
 ---
 title: "Badge"
 category: "Widgets"
-description: "Describes the configuration and usage of the Badge widget, which is available in the Mendix Marketplace."
+description: "Describes the purpose, features and configuration of the Badge widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "badge", "color label", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Badge](https://appstore.home.mendix.com/link/app/50325/) widget shows a value as a badge or color label.
+The [Badge](https://appstore.home.mendix.com/link/app/50325/) widget shows a value inside colored badge or label.
 
-### 1.1 Features
+The widget:
+
+- displays a value based on a configured text template;
+- becomes a fully accessible button when an "On click" action is configured;
+- offers out-of-the-box brand styling with the "Style" design property.
+
+## 2 Configuration
+
+Steps:
+1. Place the widget in a data container, like a Data view, List view or Template grid widget.
+2. Navigate to the **General** tab.
+3. Configure the value to be displayed. The value may be configured empty as well.
+
+Optional steps:
+3. Select an "On click" action to trigger the action when the button is activated.
+4. Navigate to the **Appearance** tab.
+4. Select a brand style with the "Style" design property to give the badge or label a suitable color.
+
+## 3 Previous versions documentation
+
+### Widgets below v2.0.0
+
+#### 1 Introduction
+
+The [Badge](https://appstore.home.mendix.com/link/app/50325/) widget shows a value inside colored badge or label.
+
+Features:
 
 * Attach an on-click microflow or nanoflow
 * Set static data text when dynamic data is not specified
 
-### 1.1 Demo App Project
 
-For a demo app project that has been deployed with this widget, see [here](https://badge.mxapps.io/).
-
-## 2 Usage
+#### 2 Configuration
 
 Place the widget in the context of an object that has a value attribute.
 
-On the **General** tab, specifying the **Value attribute**  is optional. If this is not set, a static **Default value** should be specified. 
-
-## 3 Developing This Marketplace Component
-
-We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/badge](https://github.com/mendixlabs/badge/issues).
+On the **General** tab, specifying the **Value attribute**  is optional. If this is not set, a static **Default value** should be specified.

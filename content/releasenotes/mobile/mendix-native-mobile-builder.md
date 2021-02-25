@@ -16,8 +16,8 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 #### Local Notifications for Mendix 9 
 
 With Mendix 9 we separated local notifications and push notifications. Local notifications can now be enabled using the Mendix Native Mobile 
-Builder without any extra configuration. They can also be used as they were previously by using JavaScript actions or nanoflows from your app. 
-For Mendix 8 projects, the local notification option will remain non-interactive but local notifications will still be enabled when Firebase 
+Builder without any extra configuration. They can also be used as they were before this update from the JavaScript actions or nanoflows in your app. 
+For Mendix 8 projects, the local notification option will remain non-interactive, but local notifications will still be enabled when Firebase 
 is included in the project.
 
 #### Firebase Crashlytics for Mendix 9 
@@ -34,15 +34,15 @@ By enabling this feature the Native Mobile Builder will stop writing directly to
 shared configuration file that the Native Mobile Toolkit reads from. Your project is then explicitly configured via App 
 Center before the build starts.
 
-With this change we pave the way for enabling multiple paths in configuring a project. As long as your *.config* file complies to 
-the expected format of Native Mobile Toolkit will be able to configure your project.
+With this change we pave the way for enabling multiple paths in configuring a project. As long as your *.config* file complies with 
+the format the Native Mobile Toolkit expects, it will be able to configure your project.
 
 There are a few things to keep in mind when configuring your project this way:
-* Actual changes are not visible in the commit history. Commits now will reflect file uploads, and the configuration 
-  file change.
-* If building locally you will need to run `npm run configure` to apply the changes before building your project. 
+* Actual changes are not visible in the commit history. Commits now will reflect file uploads and changes to the configuration 
+  file.
+* If building locally you will need to run `npm run configure` to apply changes before building your project. 
  Dependency management and auto-linking are not included as part of the Native Mobile Toolkit flow for now. If building 
-  locally, instead use the Native Mobile Builder to configure your project on GitHub first and then checkout and build.
+  locally, instead use the Native Mobile Builder to configure your project on GitHub first and then check out and build.
   
 #### Improvements
 

@@ -14,7 +14,7 @@ tags: ["studio", "settings", "widgets"]
 * [Roles and Permissions](settings-security) – you can manage access to your app and its documents via **Roles and Permissions**
 * [Widget Overview](settings-widget-overview) – contains information on Mendix Marketplace widgets and local widgets in your app
 
-To open the **Settings**, click the gear icon at the left menu bar.
+To open the **Settings**, click the gear icon in the left menu bar.
 
 ![](attachments/settings/settings-icon.png)
 

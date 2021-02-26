@@ -11,6 +11,17 @@ These release notes cover changes to deployment to [Mendix Cloud](/developerport
 For information on the current status of deployment to Mendix Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
 
+## 2021
+
+### February 22nd, 2021
+
+* We have released a major improvement to the technology underpinning our integration with Datadog. This adds the following features:
+    * tracing program flow (see https://docs.datadoghq.com/tracing/setup_overview/setup/java for information on how Datadog does this)
+    * redacting email addresses in Datadog logs
+
+    You need to redeploy of your app to implement these changes. All your existing metrics will continue to be sent to Datadog. There will be some minor changes around how database rate and counter metrics, but this does not affect gauges. See [Datadog for v4 Mendix Cloud](/developerportal/operate/datadog-metrics) for more information.
+
+
 ## 2020
 
 ### December 17th, 2020

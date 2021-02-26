@@ -9,7 +9,48 @@ description: "Mendix Native Mobile Builder release notes."
 
 The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Studio Pro, which helps you build your Mendix native mobile app. After the Mendix Native Mobile Builder simplifies your build process, you can do what you want most: test and publish your app. The Mendix Native Mobile Builder uses MxBuild, GitHub, and App Center to simplify the app building process and is directly accessible via Mendix Studio Pro. 
 
-### Release v1.0.78
+### Release v1.0.80
+
+**Release date: February 25th, 2021**
+
+#### Local Notifications for Mendix 9 
+
+With Mendix 9 we separated local notifications and push notifications. Local notifications can now be enabled using the Mendix Native Mobile 
+Builder without any extra configuration. They can also be used as they were before this update from the JavaScript actions or nanoflows in your app. 
+
+For Mendix 8 projects, the local notification option will remain non-interactive, but local notifications will still be enabled when Firebase 
+is included in the project.
+
+#### Firebase Crashlytics for Mendix 9 
+
+With Mendix 9 we introduced the Firebase Crashlytics capability. When enabled, it allows crash reporting within JavaScript actions and nanoflows.
+
+#### Native Mobile Toolkit Enabled for Mendix 9
+
+The Native Mobile Toolkit is a library introduced with Native Template 6.x that allows you to configure a Mendix Native Template via a configuration file.
+
+By enabling this feature the Native Mobile Builder will stop writing directly to files, but will rather write into the shared configuration file that the Native Mobile Toolkit reads from. Your project is then explicitly configured via App 
+Center before the build starts.
+
+With this change we pave the way for enabling multiple paths in configuring a project. As long as your *.config* file complies with 
+the format the Native Mobile Toolkit expects, it will be able to configure your project.
+
+There are a few things to keep in mind when configuring your project this way:
+
+* Actual changes are not visible in the commit history. Commits now will reflect file uploads and changes to the configuration file.
+* If building locally you will need to run `npm run configure` to apply changes before building your project.
+
+Dependency management and auto-linking are not included as part of the Native Mobile Toolkit flow for now. If building locally, instead use the Native Mobile Builder to configure your project on GitHub first and then check out and build.
+  
+#### Improvements
+
+* We added the **bundle name** field to improve configuration for iOS applications.
+
+#### Fixes
+
+* We fixed an issue with the validity of the fonts configuration, even when it is empty.
+
+### Release v1.0.79
 
 **Release date: February 12th, 2021**
 

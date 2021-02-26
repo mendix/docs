@@ -1,8 +1,8 @@
 ---
 title: "Mx Model Reflection"
 category: "Modules"
-description: "Describes the configuration and usage of the Mx Model Reflection module, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "mx model reflection", "token configuration", "platform support"]
+description: "Describes the configuration and usage of the Mx Model Reflection module, which is available in the Mendix Marketplace."
+tags: ["marketplace", "app store", "marketplace component", "app store component", "mx model reflection", "token configuration", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -53,5 +53,5 @@ All the patterns use the locale from the context. Based on the user's language, 
 
 ## 3 Read More
 
-* [How to Use the Excel Exporter](https://docs.mendix.com/howto/integration/using-the-excel-exporter)
+* [How to Export to Excel](https://docs.mendix.com/howto/integration/using-the-excel-exporter)
 * [How to Import Excel Documents](https://docs.mendix.com/howto/integration/importing-excel-documents)

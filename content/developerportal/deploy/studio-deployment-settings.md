@@ -28,16 +28,14 @@ To select the target environment, do the following:
 
     ![Deploy Tab of Environments Page](attachments/studio-deployment-settings/developer-portal-web-modeler-target.png)
 
-    {{% alert type="info" %}} Only a [Technical Contact](/developerportal/company-app-roles/technical-contact) can see the **Setup Studios Deployment** button and click it. 
+    {{% alert type="info" %}} Only a [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) can see the **Setup Studios Deployment** button and click it. 
     {{% /alert %}}
 
 3. In the **Select Studio Target** dialog box, click the drop-down menu and select the environment.
 
     {{% image_container width="400" %}}![Select Studios Target Dialog](attachments/studio-deployment-settings/setup-studios-deployment.png){{% /image_container %}}
 
-    {{% alert type="info" %}}If you do not want to deploy your app to an environment automatically from Studio Pro, choose the option **Build Only**. This will place your MDA in the **Deployment Package Repository** and you can deploy it from within the Developer Portal.
-    
-    If you choose **Build Only**, you will not be able to publish your app from Studio, but will get an error **No target selected**.{{% /alert %}}
+    {{% alert type="info" %}}If you do not want to deploy your app to an environment automatically from Studio Pro, choose the option **Build Only**. This will place your MDA in the **Deployment Package Repository** and you can deploy it from within the Developer Portal.<br /><br />If you choose **Build Only**, you will not be able to publish your app from Studio, but will get an error **No target selected**.{{% /alert %}}
 
 4. Click **Save**.
 

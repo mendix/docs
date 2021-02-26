@@ -96,7 +96,7 @@ This request returns the current executions of actions known by the Mendix Runti
 *   The "duration" of the execution in milliseconds.
 *   The "type" of execution. Possible types are "CLIENT", "CLIENT_ASYNC", "CLIENT_ASYNC_MONITORED", "CUSTOM", "WEB_SERVICE", "SCHEDULED_EVENT" and "UNKNOWN". "CLIENT_ASYNC" is the asynchronous microflow call triggered from the web client, "CLIENT_ASYNC_MONITORED" is the actual execution of the asynchronous microflow in the Mendix Runtime, which happens in a different thread.
 *   The "user" is the name of the user associated with the session executing the action. In case of a non-user session the name "System" is displayed.
-*   The "action_stack" shows the stack of actions for this execution. For each action in this stack detailed information is displayed, e.g. for a microflow the current activity and the name of the microflow are shown.
+*   The "action_stack" shows the stack of actions for this execution. For each action in this stack detailed information is displayed, for example, for a microflow the current activity and the name of the microflow are shown.
 
 ## 3 Runtime Statistics
 

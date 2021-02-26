@@ -121,13 +121,13 @@ Because all information is sent to the Mendix Client to build pages, everything 
 
 For a description of the Runtime Server, see [Runtime Server](runtime-server).
 
-## 3 Widgets{#widgets}
+## 3 Widget s{#widgets}
 
 Mendix pages are constructed from individual widgets. A widget can be of one of the following types:
 
 * Core widget – part of the Mendix Client
-* Pluggable widget – based on React or React Native, written by the user or downloaded from the App Store
-* Custom widget – based on Dojo, written by the user or downloaded from the App Store
+* Pluggable widget – based on React or React Native, written by the user or downloaded from the Marketplace
+* Custom widget – based on Dojo, written by the user or downloaded from the Marketplace
 
 These are described in the sections below.
 
@@ -139,15 +139,13 @@ In native mobile applications an implementation based on React Native framework 
 
 ### 3.1 Pluggable Widgets
 
-You can also write your own widgets, called **Pluggable widgets**, in cases where Core widgets do not suffice. Pluggable widgets can be downloaded through the App Store. They are based on React (in web applications) or React Native (in native mobile applications) and are the recommended way of writing widgets. They replace Custom widgets, described below.
+You can also write your own widgets, called **Pluggable widgets**, in cases where Core widgets do not suffice. Pluggable widgets can be downloaded through the Marketplace. They are based on React (in web applications) or React Native (in native mobile applications) and are the recommended way of writing widgets. They replace Custom widgets, described below.
 
 For more information, see [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets).
 
 ### 3.2 Custom Widgets
 
 You can also write **Custom widgets**. These are based on Dojo framework and run only in web applications. They have access to a different, more low-level, API than pluggable widgets. Custom widgets should only be used if you cannot create the functionality in a Pluggable widget.
-
-For more information on Custom widgets, see [How To Build Custom Widgets](/howto/extensibility/widget-development).
 
 ## 4 Mendix Client Startup
 

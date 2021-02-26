@@ -51,7 +51,7 @@ After setting up all the prerequisites, you can start writing a first script tha
     main();
     ```
 
-3.  Replace the `username` and `apikey `variables (lines 7 and 8) with the email address of your Mendix account. From your "[Show Profile](https://sprintr.home.mendix.com/link/myprofile)" Page, you can [generate an API Key](../apidocs/authentication).
+3.  Replace the `username` and `apikey `variables (lines 7 and 8) with the email address of your Mendix account. From your "[Show Profile](https://sprintr.home.mendix.com/link/myprofile)" page, you can [generate an API Key](../apidocs/authentication).
 
 ### 2.1 Code Explanation
 
@@ -110,7 +110,7 @@ For more information, see [Async Await](https://basarat.gitbooks.io/typescript/d
     $ tsc
     ```
 
-    A file named `script.js` should appear (or, if you named the original TypeScript file e.g. `app.ts`, then it would be named `app.js`.
+    A file named `script.js` should appear (or, if you named the original TypeScript file for example, `app.ts`, then it would be named `app.js`.
 
     The TypeScript compiler will execute in a single run to compile all files configured in *tsconfig.json*. While developing your script, it can be practical to have the compiler immediately run once you make changes to your code. Use the `--watch` flag for `tsc` to monitor the files configured in the *tsconfig.json* file for changes and immediately run the compiler when you save the file:
 
@@ -139,7 +139,7 @@ Note that the steps for project creation (line 3) and committing to the Team Ser
 
 ## 4 Opening the App in Studio Pro
 
-1.  In the Mendix [Developer Portal](https://sprintr.home.mendix.com/), navigate to your Projects. The app you just created should be visible at the top of the list.
+1.  In the **Apps** page of the [Developer Portal](https://sprintr.home.mendix.com/), the app you just created should be visible at the top of the list.
 2.  Open the new project, and on the right side, click **Edit**.
 3.  If you have the latest [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/), it will start and load the app you just created from the Team Server.
 

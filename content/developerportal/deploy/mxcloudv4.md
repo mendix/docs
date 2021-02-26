@@ -14,7 +14,7 @@ Apps deployed to v4 run in Cloud Foundry clusters that are deployed on highly av
 
 Mendix Cloud v4 is a mature product, launched in Q1 2017, and has a number of improvements over previous versions of Mendix Cloud:
 
-* It is more secure as you can use [HTTP Headers](environments-details#http-headers) and [client certificates](certificates), and have [TLS v1.2 or higher enforced](/releasenotes/developer-portal/deployment#tls)
+* It is more secure as you can use [HTTP Headers](environments-details#http-headers) and [client certificates](certificates), and have [TLS v1.2 or higher enforced](/releasenotes/developer-portal/mendix-cloud#tls)
 * It runs on faster hardware
 * It is still being actively developed and improved, with new features regularly being introduced (for example [flexible environments](mendix-cloud-deploy#flexible-environments))
 * It uses industry-standard techniques for scalability and maintainability
@@ -57,7 +57,7 @@ No, we do not. The Cloud Foundry API does not map one-to-one to our deployment o
 
 Mendix Cloud v4 runs in Mendix's own AWS account and you cannot interact with the AWS APIs directly via our credentials. We do not offer [VPC peering](http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide/Welcome.html) or VPC connections. All access to Mendix-hosted AWS resources (such as EC2, RDS, and S3) is done via our APIs, such as the [Database API](https://apidocs.rnd.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) and [FileDocument API](https://apidocs.rnd.mendix.com/7/runtime/com/mendix/core/Core.html#storeFileDocumentContent-com.mendix.systemwideinterfaces.core.IContext-com.mendix.systemwideinterfaces.core.IMendixObject-java.io.InputStream-) in Runtime, and the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) for cloud resources.
 
-You can, however, launch services on your own AWS account, in the same region to minimize latency, and you can access those services via connectors in your app. The [AWS IoT](/appstore/connectors/aws-iot) connector from the Mendix App Store is a good example.
+You can, however, launch services on your own AWS account, in the same region to minimize latency, and you can access those services via connectors in your app. The [AWS IoT](/appstore/connectors/aws-iot) connector from the Mendix Marketplace is a good example.
 
 ## 6 There Is No Deployment in My Desired AWS Region, When Will Mendix Launch There?
 
@@ -75,7 +75,7 @@ There are a few other considerations to bear in mind when you are running in Men
 * To use the debugger, you need to scale down to one instance
 * Metrics for multi-instance nodes are not reported correctly – the information reported on the app's **Metrics** and **Alerts** pages only represents one instance of a multi-instance node
 * In some circumstances your app can run out of file connections as indicated by the following entry in the logfile: *com.amazonaws.http.AmazonHttpClient executeHelper Unable to execute HTTP request: Timeout waiting for connection from pool* — to resolve this:
-    * Update all App Store modules to the latest version – older versions may not close file connections correctly
+    * Update all Marketplace modules to the latest version – older versions may not close file connections correctly
     * If using Mendix 6, upgrade to version 6.10.16 or above; for Mendix 7, upgrade to version 7.16 or above
     * Increase the number of available file connections (default is 50) by adding the *com.mendix.storage.s3.MaxConnections* setting on the **Environments > Runtime > Custom Runtime Settings** in the Developer Portal – see [Customization – Amazon S3 Storage Service Settings](/refguide/custom-settings#5-amazon-s3-storage-service-settings) for more information
 * The platform automatically restarts application instances due to routine platform updates, which can be up to several times a week. If you review logs for an app that is functioning normally and you see recent messages about a series of instance restarts for no apparent reason, platform updates are probably the reason. This is normal and ok!

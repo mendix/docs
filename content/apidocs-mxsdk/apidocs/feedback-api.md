@@ -1,7 +1,6 @@
 ---
 title: "Feedback API"
 category: "API Documentation"
-menu_order: 6
 description: "API to access Mendix app feedback from within the app"
 tags: ["Feedback", "Developer Portal", "API"]
 ---

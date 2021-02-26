@@ -1,13 +1,32 @@
 ---
-title: "App Store"
-description: "Release notes for updates to the Mendix App Store"
-tags: ["app store", "connector", "module", "add on", "widget"]
+title: "Marketplace"
+description: "Release notes for updates to the Mendix Marketplace"
+tags: ["marketplace", "app store", "connector", "module", "add on", "widget"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes made to the [Mendix App Store](/appstore/index).
+These release notes cover changes made to the [Mendix Marketplace](/appstore/index).
+
+## 2021
+
+### February 9th, 2021
+
+* You can now download [Windows Service](/releasenotes/studio-pro/windows-service) and **Server Distribution** for the latest Studio Pro version using the **Related Downloads** button on the **Get Studio pro** page.  
+* Adding beta versions for components is no longer supported. Beta versions of published components and existing drafts have been automatically updated to remove the beta tag.
+
+### January 26th, 2021
+
+* You are now able to download Studio Pro versions marked as [beta](/releasenotes/beta-features/index) from a separate tab on the **Get Studio Pro** page named **Beta Releases**. The default download option (via the **Release Notes** tab) remains the latest stable release of Studio Pro.
+* We fixed some bugs in the [add new Marketplace content](/appstore/general/share-app-store-content#adding) flow and we made error messages more descriptive.
 
 ## 2020
+
+### December 15th, 2020
+
+* The Mendix "App Store" has been renamed to the "Marketplace" as part of the continued investment in new capabilities that is underway. This rename (and URL change) is only for the pages rebuilt so far listed above. Further implementation of this renaming is to follow in future releases.
+* We have implemented a UX Refresh to provide a fresh new look and feel for the [Marketplace home](/appstore/general/app-store-overview#home), [catalog](/appstore/general/app-store-overview#catalog), [component details](/appstore/general/app-store-overview#details), and Studio Pro download pages.
+* We have enabled an enhanced navigation and undertaken some curation of published components to help you discover the components you require more easily.
+* We have enabled a more structured wizard-based flow that makes it a lot easier for you to [share new content](/appstore/general/share-app-store-content) to the Marketplace.
 
 ### May 27th, 2020
 
@@ -61,7 +80,7 @@ For more information on these support levels, see [App Store Content Support](/a
 
 #### Improvement
 
-You can now subscribe to receive emails when new versions of your [favorite](/appstore/general/app-store-overview#favorites) App Store content are published.
+You can now subscribe to receive emails when new versions of your [favorite](/appstore/general/app-store-overview#saved) App Store content are published.
 
 ### October 23rd, 2019
 
@@ -77,7 +96,7 @@ Content that was marked as **Protected** as well as content marked as **Shared w
 
 #### Improvement
 
-We now display the UUID of an App Store component in the [Additional Info](/appstore/general/app-store-overview#additional-info) section of its details page. This allows you to specify the `TemplateUUID` when calling the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*.
+We now display the UUID of a App Store component in the [Usage](/appstore/general/app-store-overview#usage) section of its details page. This allows you to specify the `TemplateUUID` when calling the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*.
 
 ### September 11th, 2019
 
@@ -95,7 +114,7 @@ We renamed all the SAP-related connectors and app templates in the App Store to 
 
  Type | Old Name | New Name |
  ----- | ----- | -----|
- Connector | SAP Cloud Platform XSUAA Connector | XSUAA Connector for SAP Cloud Platform |
+ Connector | SAP Cloud Platform XSUAA Connector | XSUAA Connector for SAP Business Technology Platform |
  Connector | SAP Fiori UI Package | UI Package for SAP Fiori themed apps |
  Connector | SAP Leonardo Machine Learning Foundation Connector | Connector for SAP Leonardo Machine Learning Foundation |
  Connector | SAP OData Connector | OData Connector for SAP solutions |
@@ -144,7 +163,7 @@ We added a component in the App Store which, when configured in your app, allows
 
 #### Improvements
 
-* We created a new App Store menu structure, so it is now easier to navigate through your created content. If you are a [Company Admin](/developerportal/company-app-roles/manage-roles#app-store-manager) with certain permissions, you will see additional menu items to help you manage private and public company content.
+* We created a new App Store menu structure, so it is now easier to navigate through your created content. If you are a Mendix Admin with certain permissions, you will see additional menu items to help you manage private and public company content.
 * For App Store administrators, you can now set content managers who are allowed to manage your company content by marking it as protected.
 * You can now share private App Store content with external downloaders from other companies.
 
@@ -163,7 +182,7 @@ We added a component in the App Store which, when configured in your app, allows
 * We released an upgraded version of the [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/), which supports IBM Watson SDK version 6.11.0 and adds additional microflow actions.
 * We released an upgraded version of the [IBM Watson Connector Suite Example Project](https://appstore.home.mendix.com/link/app/2880/), which includes the new IBM Watson Connector Suite.
 * We released an upgraded version of the IBM Watson Blank App app template, which includes the new IBM Watson Connector Suite.
-* For more information see [IBM Watson Connector](https://docs.mendix.com/partners/ibm/ibm-watson-connector).
+* For more information see [IBM Watson Connector](/appstore/connectors/ibm-watson-connector).
 
 ### January 21st, 2019
 

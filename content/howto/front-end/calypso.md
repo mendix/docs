@@ -2,7 +2,7 @@
 title: "Customize Styling Using Calypso"
 parent: "customize-styling"
 menu_order: 10
-tags: ["Atlas", "UI", "UX", "Calypso", "styling", "CSS"]
+tags: ["Atlas", "UI", "UX", "Calypso", "styling", "CSS", "low-code"]
 description: "This document will teach you to use Calypso, a tool which improves the way you edit styling."
 ---
 
@@ -16,7 +16,7 @@ Calypso is a tool which makes it easier for you to customize your Mendix apps' s
 * Moves compiled files to your deployment folder
 * Injects the compiled *CSS* files into your browser so you can preview changes instantly 
 
-Calypso is the easiest styling solution for most users. However, if you already use a Gulp service worker in your development workflow please consult [How to Set Up Gulp & Sass](/howto/front-end/sass-eight) for a styling solution which might suit you better.
+Calypso is the easiest styling solution for most users. However, if you already use a Gulp service worker in your development workflow please consult [How to Set Up Gulp & Sass](/howto/front-end/sass-eight) for a styling solution which may suit you better.
 
 ## 2 Prerequisites
 

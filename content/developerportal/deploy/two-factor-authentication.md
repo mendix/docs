@@ -102,4 +102,3 @@ For more information, see [Node Permissions](node-permissions).
 
 * [Deploy and Manage](/developerportal/deploy)
 * [Settings](/developerportal/settings)
-* [Technical Contact](/developerportal/company-app-roles/technical-contact)

@@ -81,7 +81,7 @@ This card on your profile presents your points and ranking for the last 30 days:
 
 ![](attachments/leaderboard.png)
 
-Clicking **View all** takes you to the **Leaderboards** page, which presents all the boards available for viewing Mendix Platform user activity: **Top Overall**, **Top Forum**, **Top App Store**, **Top Platform**, **Top Community**, and **Top Learning**.
+Clicking **View all** takes you to the **Leaderboards** page, which presents all the boards available for viewing Mendix Platform user activity.
 
 To earn points and climb the leaderboards, start performing different activities in the Mendix community. For example, let's say you have some time to spare while your app is deploying. You get a cup of coffee and check out the [Mendix Forum](http://forum.mendix.com). One questions pops out because you came across a similar problem a few weeks back. You decide to help the community member and post an answer to their question. Not long after, the author marks your answer as accepted. Boom! 15 points right there.
 
@@ -99,9 +99,9 @@ These are points you can gain through activity on the [Mendix Forum](https://for
 | Downvote someone | -1 | N/A |
 | Receive a downvote | -2 | N/A |
 
-### 7.2 App Store Points {#app-store-points}
+### 7.2 Marketplace Points {#app-store-points}
 
-These are points you can gain through activity in the [Mendix App Store](https://appstore.home.mendix.com/).
+These are points you can gain through activity in the [Mendix Marketplace](https://appstore.home.mendix.com/).
 
 | Activity | Points | Max. Points per Day |
 | --- | --- | --- |
@@ -109,7 +109,7 @@ These are points you can gain through activity in the [Mendix App Store](https:/
 | Publish a new app version | 25 | N/A |
 | Add an app review | 5 | N/A |
 | Download [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/) | 5 | 5 |
-| Download an app from the App Store | 1 | 5 |
+| Download an app from the Marketplace | 1 | 5 |
 
 ### 7.3 Platform Points
 
@@ -133,7 +133,7 @@ These are points you can gain through activity in the [Mendix App Store](https:/
 | Activity | Points | Max. per Day |
 | --- | --- | --- |
 | Win a Mendix Hackathon! | 300 | N/A |
-| Reach the [Mendix MVP](https://developer.mendixcloud.com/link/mvp) status | 300 | N/A |
+| Reach the [Mendix MVP](https://www.mendix.com/mvp-program/) status | 300 | N/A |
 | Be the runner-up in a Mendix Hackathon | 150 | N/A |
 | Organize a [Mendix Meetup ](https://developers.mendix.com/)  | 100 | N/A |
 | Complete your Mendix Profile | 50 | N/A |
@@ -154,15 +154,15 @@ In order to receive Mendix points for your contributions to Mendix GitHub reposi
 
 | Activity | Points | Max. per Day |
 | --- | --- | --- |
-| Pass the [Expert Developer Certification](https://gettingstarted.mendixcloud.com/link/certification/expert) exam | 100 | N/A |
-| Pass the [Advanced Developer](https://gettingstarted.mendixcloud.com/link/certification/advanced) exam | 50 | N/A |
+| Pass the [Expert Developer Certification](https://academy.mendix.com/link/certification/expert) exam | 100 | N/A |
+| Pass the [Advanced Developer](https://academy.mendix.com/link/certification/advanced) exam | 50 | N/A |
 | Give a presentation on Mendix | 25 | N/A |
 | Write a blog post that is featured on the Mendix [Community Blog](https://developers.mendix.com/community-blog/) | 25 | N/A |
-| Pass the [Rapid Developer Certification](https://gettingstarted.mendixcloud.com/link/certification/rapid) exam | 25 | N/A |
-| Complete a learning path in the [Mendix Academy](https://gettingstarted.mendixcloud.com/link/home) | 25 | N/A |
+| Pass the [Rapid Developer Certification](https://academy.mendix.com/link/certification/rapid) exam | 25 | N/A |
+| Complete a learning path in the [Mendix Academy](https://academy.mendix.com/link/home) | 25 | N/A |
 | Make a large contribution to the [Mendix documentation](https://docs.mendix.com/) | 15 | N/A |
-| Attend the [Advanced Developer Course](https://gettingstarted.mendixcloud.com/link/classroom/5/Advanced/Course) | 10 | N/A |
-| Attend the [Rapid Developer Course](https://gettingstarted.mendixcloud.com/link/classroom/1/Rapid/Course) | 10 | N/A |
+| Attend the [Advanced Developer Course](https://academy.mendix.com/link/classroom/5/Advanced/Course) | 10 | N/A |
+| Attend the [Rapid Developer Course](https://academy.mendix.com/link/classroom/1/Rapid/Course) | 10 | N/A |
 | Make a small contribution to the Mendix documentation | 5 | N/A |
 | Complete a unit in the Mendix Academy | 1 | N/A |
 
@@ -263,11 +263,11 @@ In this section, you can tell the Mendix community about yourself and your work 
 
 ### 10.3 Social {#social}
 
-Here you can connect  your social accounts for **GitHub**, **Meetup**, **Twitter**, **LinkedIn**, and **Skype**.
+Here you can connect  your social accounts for **GitHub**, **Meetup**, **Twitter**, and **LinkedIn**.
 
 ### 10.4 Security {#security}
 
-You can change your password in this section. By default, you are requested to change your password every 90 days. Only a [Company Admin](../company-app-roles/companyadmin-settings) is allowed to change the expiration period.
+You can change your password in this section. By default, you are requested to change your password every 90 days. Only a [Mendix Admin](/developerportal/control-center/index) is allowed to change the expiration period.
 
 ### 10.5 API Keys {#api-key}
 
@@ -309,7 +309,7 @@ Once an old account has been merged to a new account, you will no longer have ac
 {{% /alert %}}
 
 {{% alert type="info" %}}
-With the merge, the accounts are only combined. The old account is not deactivated. That should be done by the Company Admin.
+With the merge, the accounts are only combined. The old account is not deactivated. That should be done by the [Mendix Admins](/developerportal/control-center/index#members).
 {{% /alert %}}
 
 #### 10.6.2 Selecting Your Profile Visibility {#public}
@@ -340,7 +340,7 @@ Mendix has been tracking these data changes since November, 2018.
 
 ## 11 Point Penalties
 
-Abusing the Mendix Forum, App Store, point system, or other community tools is not allowed. Any such action can result in a point penalty. Mendix reserves the right to penalize a user who bypasses or games the system without informing them.
+Abusing the Mendix Forum, Marketplace, point system, or other community tools is not allowed. Any such action can result in a point penalty. Mendix reserves the right to penalize a user who bypasses or games the system without informing them.
 
 ## 12 Main Document in This Category
 

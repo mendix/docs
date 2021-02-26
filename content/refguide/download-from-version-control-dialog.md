@@ -3,6 +3,8 @@ title: "Download from Version Control Server"
 parent: "version-control-menu"
 menu_order: 60
 tags: ["studio pro"]
+aliases:
+    - /refguide/download-from-team-server-dialog.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -18,7 +20,7 @@ You can also use the [Open App Dialog](open-app-dialog) to download and open an 
 
 ![Download from Version Control Server dialog box](attachments/version-control-menu/download-from-version-control-server.png)
 
-## 2 Where is Your App Stored?
+## 2 Where Is Your App Stored?
 
 If **Enable private version control** is set in the project [Preferences](preferences-dialog#enable), you can choose between the **Mendix Team Server** or a **Private server**. If it is not enabled, you will only be able to choose an app from the Mendix Team Server.
 

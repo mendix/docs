@@ -1,8 +1,8 @@
 ---
 title: "Database"
 category: "Connectors"
-description: "Describes the configuration and usage of the Database connector, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "database connector", "jdbc", "hikari", "query" ]
+description: "Describes the configuration and usage of the Database connector, which is available in the Mendix Marketplace."
+tags: ["marketplace", "app store", "marketplace component", "app store component", "database connector", "jdbc", "hikari", "query" ]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -77,7 +77,11 @@ These are the results of the actions:
 * [Presto](https://prestodb.github.io/docs/current/installation/jdbc.html)
 * [SQLite](https://bitbucket.org/xerial/sqlite-jdbc/downloads/)
 
-## 6 Developing This App Store Component
+{{% alert type="info" %}}
+If you intend to connect to SQL Server using integrated security, please be aware that the JDBC driver in the **userlib** folder needs to match the version supplied with the Mendix Platform (via the **runtime/bundles/** folder inside the Mendix installation directory).
+{{% /alert %}}
+
+## 6 Developing This Marketplace Component
 
 1. Clone [https://github.com/mendix/database-connector.git](https://github.com/mendix/database-connector.git).
 2. Open the *DatabaseConnector.mpr* in the Desktop Modeler or Studio Pro.

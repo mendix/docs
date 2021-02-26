@@ -2,7 +2,7 @@
 title: "Register Data Assets"
 category: "Data Hub Catalog"
 menu_order: 30
-description: "Registering data services in the Data Hub Catalog."
+description: "Registering assets in the Data Hub Catalog."
 tags: ["data hub", "data hub catalog", "register", "registration form", "data hub catalog api"]
 ---
 
@@ -22,9 +22,7 @@ This section starts with guidelines and best practice for registering services a
 
 The steps for updating a consumed OData service in Studio Pro for which a new version is available are described in the [Updating a Published OData Service in Studio Pro](#updating-service) section below.
 
-{{% todo %}}[EC: This is removed from the beta-rel include when API is published officially: For non-Mendix apps using OData V3 and V4 contracts, the Data Hub Catalog API can be used to create an API gateway to the Data Hub Catalog to register available services. ]{{% /todo %}}
-
-## 2 Best Practices for Registering Services and Shared Entities
+## 2 Best Practices for Registering Services and Shared Datasets
 
 This section provides advice and best practices when registering your services in the Data Hub Catalog either from Studio Pro or through manual registration.
 
@@ -32,9 +30,9 @@ This section provides advice and best practices when registering your services i
 
 App owners should refer to their [Data Hub Admin](../index#admin) and [Data Hub Curator](../index#curator) to align with their organization's data registration policy and methods. This can include naming and grouping the entities that define specific data, access and security, and also issuing new versions of services.
 
-Some entities may be published in several OData services as a way of grouping and publishing sets of data. Updating and maintenance has to be managed and maintained by the app owners.
+Some datasets may be published in several OData services as a way of grouping and publishing sets of data. Updating and maintenance has to be managed and maintained by the app owners.
 
-User access rights to the entity and the associated data are published in the OData service and this is applied to the entities that are consumed in an app. For details on security in Studio Pro, see [Security](/refguide/security) in the *Studio Pro Guide*.
+User access rights to the dataset (or entity set) and the associated data are published in the OData service and this is applied to the datasets that are consumed in an app. For details on security in Studio Pro, see [Security](/refguide/security) in the *Studio Pro Guide*.
 
 ### 2.2 OData Services and Versions {#odata-service-version}
 
@@ -56,11 +54,15 @@ When apps are being developed, ensure that there is a representative set of data
 
 Currently only [persistable](/refguide/persistability) entities can be exposed for sharing by another app. The data associated with the entity is used in the consuming app.
 
-{{% todo %}}[what are persisitable entties known as in other systems? what is the characteristic of a persistable entity that makes it shareable]{{% /todo %}}
-
 When selecting the entities to expose in a service, consider including associated entities so that the relationship between the data is also registered.
 
-## 3 Publishing an OData Service in Studio Pro to Register Entities {#odata-service-reg}
+When exposing Mendix entities that are generalizations and specializations in the same service the specialized entities will be defined in the published OData servcie as discrete entities which include the inherited attributes and associations. The inheritance relationship will not be present in the metadata contract, and also not when the entities are consumed in Mendix Studio Pro.
+
+{{% alert type="warning" %}}
+The association of a generailsed entity that is exposed in the same service as the specializations is not supported for both entities when consumed. The same association cannot be consumed for the two different entities. In this case, the inherited association should not be included when exposing the specialization.
+{{% /alert %}}
+
+## 3 Publishing an OData Service in Studio Pro{#odata-service-reg}
 
 This section describes how to register entities from your Mendix app in the Data Hub Catalog in Studio Pro. For details on publishing an OData resource, see [Published OData Resource](/refguide/published-odata-resource) in the *Studio Pro Guide*.
 
@@ -77,34 +79,42 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 	![](attachments/register/select-published-odata-service.png)
 
 3. Enter a meaningful name that indicates the entities and data that are going to be exposed for the published OData service and click **OK**.
-4.  The OData service document is added to the module, and the **Edit published resource** dialog box is displayed for the selected entity. The information in this will form the metadata definition for the entity:
 
-	![](attachments/register/edit-published-resource-box.png)
+4. The OData service document is added to the module, and the **Edit published resource** dialog box is displayed for the selected entity. The information in this will form the metadata definition for the entity:
 
-	* **Entity** – the name and module of the entity
-		* **Select** – click to display list of entities available in the module and select another entity to expose
-		* **Show** – click to see the entity in the domain model
-	* **Exposed attributes and associations** – click **select** to view and select the attributes and associations to expose for this entity
-	* **Exposed entity name** – you can customize the name of the entity in the OData service
-	* **Exposed set name** – the name of the dataset associated with the entity that is exposed
-	* **Example of location** – the location of the dataset for the entity
-	* **Use paging** – the maximum number of data objects that are retrieved in a single call (with a link to the next set)
-	* **Public documentation** tab – a summary and a description of the entity can be added here
+   ![](attachments/register/edit-published-resource-box.png)
 
-	For further details, see [Published OData Resource](https://docs.mendix.com/refguide/published-odata-resource) in the *Studio Pro Guide*. 
+   * **Entity** – the name and module of the entity
+   	* **Select** – click to display list of entities available in the module and select another entity to expose
+   	* **Show** – click to see the entity in the domain model
+   * **Exposed attributes and associations** – click **select** to view and select the attributes and associations to expose for this entity
+   * **Exposed entity name** – you can customize the name of the entity in the OData service
+   * **Exposed set name** – the name of the dataset associated with the entity that is exposed
+	{{% alert type="info" %}}
+The **Exposed set name** will be shown in the Data Hub Catalog for the registered service as the [Datasource](/data-hub/data-hub-catalog/search#search-details) for the exposed **Entity**.
+{{% /alert %}}
+   * **Example of location** – the location of the dataset for the entity
+   * **Use paging** – the maximum number of data objects that are retrieved in a single call (with a link to the next set)
+   * **Public documentation** tab – a summary and a description of the entity can be added here
+
+   For further details, see [Published OData Resource](https://docs.mendix.com/refguide/published-odata-resource) in the *Studio Pro Guide*. 
 
 5. Click **OK** to see the [OData Service](#odata-service-general) page. If you want to publish several entities in the same service, add them here by clicking **Add** for the **Resources**.
-6.  If you add an entity that is associated with another entity that is exposed in the same OData service, you will be asked whether you want to include the association in the service definition. Click **Yes** and the association between the two entities will be included under **Attributes and associations**.
 
-	In the example illustrated below, you will see that for **Entity_2** under **Attributes and associations** there is currently **0 association**. 
+6. If you add an entity that is associated with another entity that is exposed in the same OData service, you will be asked whether you want to include the association in the service definition. Click **Yes** and the association between the two entities will be included under **Attributes and associations**.
 
-	When **Entity_3** is added to the service which has an association to **Entity_2**, you will see that **Entity_3** has listed that it has **1 association** and there is a further prompt **Would you like to publish the other side of this association as well** with the name of the association showing the entities being connected.
+   In the example illustrated below, you will see that for **Entity_2** under **Attributes and associations** there is currently **0 association**. 
 
-	![](attachments/register/publish-association.png)
-	
-	Click **Yes** and the association for **Entity-2** is now updated to **1 association**:
+   When **Entity_3** is added to the service which has an association to **Entity_2**, you will see that **Entity_3** has listed that it has **1 association** and there is a further prompt **Would you like to publish the other side of this association as well** with the name of the association showing the entities being connected.
 
-	![](attachments/register/publish-association-2.png)
+   ![](attachments/register/publish-association.png)
+
+   Click **Yes** and the association for **Entity-2** is now updated to **1 association**:
+
+   ![](attachments/register/publish-association-2.png)
+
+   {{% alert type="warning" %}}When a specialized entity is published, in the published OData Service contract this will be a discrete entity that has all the attributes and associations of the gernailzation. Care has to be taken if the generailsed entity (and its association) is also exposed in the same service. In this case,  the association in the specialized entity that is (inherited from the generalization) should not be published as this will result in errors. The same association cannot be exposed for two different entities in the same service. In this case, it is recommended that the inhertited association is not checked in the specialized entity.
+   {{% /alert %}}
 
 7.  Add a **Summary** and **Description** of the service In the **Properties** pane: 
 
@@ -113,11 +123,9 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 	{{% alert type="info" %}}The description will be included in the published service metadata file and displayed for the service in the Data Hub Catalog.  If no description is available, then the **Summary** will be used.
 	{{% /alert %}}
 
-	{{% todo %}}[Will this appear somewhere more logical. Also why have a summary and description field if the summary is not published in the OData metadata??]{{% /todo %}}
-
 	{{% alert type="info" %}}If you are updating a service (with a new service version), you can provide a summary of the changes from the previous version in the description. You can copy and paste the description from the previous version of the service and edit this with the new details. For further details, see the [Updating a Published OData Service in Studio Pro](#updating-service) section below.
-	{{% /alert %}}
-
+{{% /alert %}}
+	
 8. When the app is deployed with **Run**, the OData services defined for the app will automatically be registered in the Data Hub Catalog.
 
 {{% alert type="info" %}}
@@ -239,15 +247,15 @@ New versions of previously registered services also have to be registered manual
 
 ###  7.1 Preparing the v4 OData Service Documents
 
-The files for an OData v4 service contract may comprise the base schema definition and additional associated schema documents to complete the full service definition.  The files formats of the v4 OData Service contracts that are accepted are *.xml* (for a single file) and  *.zip* (when the contract is comprised of several files). 
+The files for an OData v4 service contract may comprise the base schema definition and additional associated schema documents to complete the full service definition.  The files formats of the v4 OData Service contracts that are accepted are *.xml* (for a single file) and  *.zip* (when the contract includes several files). 
 
 ### 7.2 Registering the Service – Application and Environment {#new-service}
 
 To register the service, follow these steps:
 
-1.  On the [Data Hub Home](../index) page, click **Register new service** to display the **Application and Environment Form**.
+1.  On the [Data Hub](../index) screen, click **Register new service** to display the **Application and Environment Form**.
 
-	![](attachments/register/register-form-home-page.png)
+	![Data Hub screen](attachments/register/register-form-home-page.png)
 
 2.  Enter the details of the app from which the OData v4 service was issued. This information will be displayed in the **Service Details** in the Data Hub Catalog and provide the link to the app.
 
@@ -262,9 +270,7 @@ To register the service, follow these steps:
 		* You can copy the UUID of an already registered app from **Settings** > [General](/developerportal/settings/general-settings) in the Developer Porta
 		* For further information on deep links for an app, see [How to Manage Deep Links](/developerportal/settings/manage-deeplinks).
 	* **Name** – enter the name of the application as it should appear in the details page of the service
-	* **Business Owner** – enter the name of the business owner of the data that will be made available through the service
-
-	{{% todo %}}[??should the above be business or technical owner]{{% /todo %}}
+	* **Business Owner** – enter the name of the business owner of the data that is made available through the service
 
 4.  Enter the **Environment** details of the deployed app:
 	
@@ -281,7 +287,7 @@ To register the service, follow these steps:
 
 ### 7.3 Uploading the OData Contract and Selecting Main Schema
 
-{{% todo %}}[**AD: intro content needed**]{{% /todo %}}
+You will now select and upload the OData contract and select the schema.
 
 ![](attachments/register/old-register-service-form-contract.png)
 

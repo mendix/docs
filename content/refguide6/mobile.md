@@ -27,7 +27,7 @@ Mendix apps can simply be viewed in mobile web browsers. However, some features 
 
 ### Hybrid Mobile Widgets
 
-To access native functions of the device, we provide a number of PhoneGap widgets on the App Store. And, of course, you can build your own custom widgets that use native features. PhoneGap widgets can be recognized by their special icon. You can also search for them by using Edit > Find Advanced (Ctrl+Shift+F).
+To access native functions of the device, we provide a number of PhoneGap widgets on the Marketplace. And, of course, you can build your own custom widgets that use native features. PhoneGap widgets can be recognized by their special icon. You can also search for them by using Edit > Find Advanced (Ctrl+Shift+F).
 
 ![](attachments/16714058/16844052.png)
 

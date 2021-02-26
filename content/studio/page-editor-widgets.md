@@ -58,10 +58,10 @@ Widget categories are described in the table below:
 | [Images & Files](page-editor-widgets-images-and-files) | Contains widgets that help you display images, upload or/and download files and images. |
 | [Buttons](page-editor-widgets-buttons)                   | Contains a variety of buttons for placing on a page.         |
 | [Menus](/refguide/menu-widgets)                          | Contains menu creation widgets. Currently, these widgets can be configured only in Studio Pro. |
-| Add-ons                                                  | Contains all custom widgets previously installed in the app. If widgets cannot be matched to the App Store profile they will be shown in the add-ons. |
-| Charts                                                   | Contains different charts. This category consist of the [App Store widgets](#app-store-widgets). |
-| Display                                                  | Contains widgets which display changing elements on a page, for example a map, or a progress bar. This category consists of the [App Store widgets](#app-store-widgets). |
-| List view Controls                                       | Contains controls for the list view. This category consist of the [App Store widgets](#app-store-widgets). |
+| Add-ons                                                  | Contains all custom widgets previously installed in the app. If widgets cannot be matched to the Marketplace profile they will be shown in the add-ons. |
+| Charts                                                   | Contains different charts. This category consist of the [Marketplace widgets](#app-store-widgets). |
+| Display                                                  | Contains widgets which display changing elements on a page, for example a map, or a progress bar. This category consists of the [Marketplace widgets](#app-store-widgets). |
+| List view Controls                                       | Contains controls for the list view. This category consist of the [Marketplace widgets](#app-store-widgets). |
 
 ## 5 Widgets by Origin {#widgets-by-origin}
 
@@ -70,20 +70,20 @@ Widgets in Studio can be divided by origin as shown in the table below:
 | Type                                              | Description                                                  | Origin                                                       |
 | ------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Default widgets                                   | Widgets that are included into your app by default and do not have the information icon in the top-right corner. | Apps created in the Developer Portal (for more information on the Developer Portal, see [Developer Portal](https://docs.mendix.com/developerportal/)) |
-| App Store widgets<a name="app-store-widgets"></a> | Widgets that are you can download to your project directly from Studio. Some App Store widgets are already in your project as a part of the app. Such widgets have the information icon in the top-right corner of widgets in the **Toolbox**. <br />For more information on the App Store, see [App Store Overview](/appstore/general/app-store-overview). | [App Store](/appstore/index)                     |
-| Local widgets                                     | Either widgets that are a part of an app template, or widgets created by your or your team locally via Studio Pro. For more information on developing widgets, see the [Custom Widget Development](/howto/extensibility/widget-development) how-to's. As a rule local widgets will be listed in the **Add-ons** category. For more information on categories, see the [Widgets by Category](#widget-categories) section. | Apps created in the  Developer Portal/Studio Pro             |
+| Marketplace widgets<a name="app-store-widgets"></a> | Widgets that are you can download to your project directly from Studio. Some Marketplace widgets are already in your project as a part of the app. Such widgets have the information icon in the top-right corner of widgets in the **Toolbox**. <br />For more information on the Marketplace, see [Marketplace Overview](/appstore/general/app-store-overview). | [Marketplace](/appstore/index)                     |
+| Local widgets                                     | Either widgets that are a part of an app template, or widgets created by your or your team locally via Studio Pro. For more information on developing widgets, see the [Build pluggable web widgets](/howto/extensibility/pluggable-widgets) how-to's. As a rule local widgets will be listed in the **Add-ons** category. For more information on categories, see the [Widgets by Category](#widget-categories) section. | Apps created in the  Developer Portal/Studio Pro             |
 
-## 6 Adding the App Store Widgets
+## 6 Adding the Marketplace Widgets
 
-You can add the App Store widgets to your app by downloading them directly in the **Widgets** tab in Studio. These widgets are a subset of all widgets available in the app store: you can only download the ones that are approved for use in Studio. You can also update them if an update is available.
+You can add the Marketplace widgets to your app by downloading them directly in the **Widgets** tab in Studio. These widgets are a subset of all widgets available in the app store: you can only download the ones that are approved for use in Studio. You can also update them if an update is available.
 
-To add an App Store widget, do the following:
+To add an Marketplace widget, do the following:
 
 1. Open the **Widgets** tab.
 
 2.  Do one of the following: <br />
 
-    a. Find a category with the **View App Store widgets** option and click it.  <br />
+    a. Find a category with the **View Marketplace widgets** option and click it.  <br />
 
     {{% image_container width="300" %}}![](attachments/page-editor-widgets/view-app-store-widgets.png)
     {{% /image_container %}}<br />
@@ -108,4 +108,4 @@ Some similar widgets are packaged together: downloading one of these widgets wil
 
 * [Pages](page-editor)
 * [Settings](settings)
-* [App Store Overview](/appstore/general/app-store-overview)
+* [Marketplace Overview](/appstore/general/app-store-overview)

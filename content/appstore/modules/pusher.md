@@ -2,7 +2,7 @@
 title: "Pusher"
 category: "Modules"
 description: " "
-tags: ["app store", "app store component", "pusher", "platform support"]
+tags: ["marketplace", "app store", "marketplace component", "app store component", "pusher", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -56,7 +56,7 @@ Make sure you have different apps (keys) created for each app and environment (d
 
 ## 3 Configuration
 
-To use this module after importing it from the App Store, follow these steps:
+To use this module after importing it from the Marketplace, follow these steps:
 
 1. Add the **Pusher User** [module role](/refguide/module-security#module-role) to the relevant app project security [user role](/refguide/security#user-role).
 2. Update the constants in the **Configuration** folder with the keys of the app.
@@ -86,4 +86,4 @@ The notify messages are sent to anybody who is listening.
 
 A message will contain limited data (entity name, ID, changed date, notifier user name). To send a notify message, it is required to have the private key that is stored on the server in the `NotifyListen.secret` constant. This secret should not be shared with anybody. The listening widget will use the public `NotifyListen.key` to receive a signal and perform the action as the logged-in user.
 
-An addition authentication request is made to the Mendix REST server vua `<host>/rest/pusher/key` and `<host>/rest/pusher/auth`. Only when successful is the user allowed to access the lists. The service will only allow a logged-in user with the **NotifyListen.User** module role to listen when the user has entity access to the object of the data in which the the widget is placed.
+An addition authentication request is made to the Mendix REST server via `<host>/rest/pusher/key` and `<host>/rest/pusher/auth`. Only when successful is the user allowed to access the lists. The service will only allow a logged-in user with the **NotifyListen.User** module role to listen when the user has entity access to the object of the data in which the the widget is placed.

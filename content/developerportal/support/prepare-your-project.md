@@ -4,6 +4,8 @@ category: "Mendix Support"
 menu_order: 1
 description: "Describes what you need to do with an on-premises app project to prepare it for Mendix Support."
 tags: ["on-premises", "support"]
+aliases:
+    - /developerportal/support/change-affected-apps.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -48,7 +50,7 @@ To give existing project members access to submit tickets, follow these steps:
 	* **Product Owner**
 	* **Scrum Master**
 
-	You can also click **Role settings** to create your own roles and customize the permissions for existing roles. For more information, see the [Editing App Team Roles](../company-app-roles/manage-roles#edit-app-team-roles) section of *How to Manage Company & App Roles*.
+	You can also click **Role settings** to create your own roles and customize the permissions for existing roles. For more information, see the [App Team Roles](../collaborate/app-roles#app-team-roles) section of *App Roles*.
 
 3. To finalize the setup, email [support@mendix.com](http://support.mendix.com/) with the **App name** and **App ID**.
 

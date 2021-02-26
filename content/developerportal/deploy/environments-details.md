@@ -54,6 +54,10 @@ On the right side of the screen, you can find the following action buttons:
 * **Show Logged in Users** 
 * **Change Admin Password** – this changes the password for the inbuilt [administrator](/refguide/administrator) account — the new password is applied immediately, without the need for a restart and will also force the administrator to pick up any new roles assigned in the app deployment package — see the [User Role](/refguide/administrator#user-role) section of *Administrator* for more information
 
+{{% alert type="info" %}}
+During a [maintenance window](maintenance-windows), you will not be able to start, restart, or stop your app.
+{{% /alert %}}
+
 #### 2.1.1 Logging and Debugging in Mendix Cloud v4
 
 ![](attachments/environments-details/actions-v4.png)
@@ -61,7 +65,7 @@ On the right side of the screen, you can find the following action buttons:
 In Mendix Cloud v4 environments, you have two additional action buttons:
 
 * **View Live Log**
-* **Show debugger information** – shows the settings needed to connect the debugger in Studio Pro to your app — for Mendix Cloud v4, the debugger is *always* enabled
+* **Show debugger information** – shows the settings needed to connect the debugger in Studio Pro to your app — for Mendix Cloud v4, the debugger is *always* enabled — for more information on debugging in the cloud, see [How To Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely)
 
 #### 2.1.2 Logging and Debugging in Mendix Cloud v3
 
@@ -74,7 +78,7 @@ In Mendix Cloud v3 environments, you have two additional action buttons:
 
 ### 2.2 Naming of Environments – Flexible Environments in Mendix Cloud v4{#naming}
 
-If you are the [Technical Contact](/developerportal/company-app-roles/technical-contact) of the app, you can rename the environments as you wish.
+If you are the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) of the app, you can rename the environments as you wish.
 
 Click the **Change** button next to the name of the environment.
 
@@ -217,7 +221,7 @@ For Mendix Cloud v3, only *X-Frame-Options* is supported. For Mendix Cloud v4 th
 | Header | Description | Additional Information |
 | --- | --- | --- |
 | Access-Control-Allow-Origin | indicates whether the response can be shared with requesting code from the given origin | |
-| Content-Security-Policy | allows web site administrators to control resources the user agent is allowed to load for a given page | a string value<br/>*for more information see the W3C recommendation [Content Security Policy Level 2](https://www.w3.org/TR/CSP2/)* |
+| Content-Security-Policy | allows web site administrators to control resources the user agent is allowed to load for a given page | a string value<br/>*see [Content Security Policy](#csp), below, for more information* |
 | Referrer-Policy | governs which referrer information should be included with requests made | |
 | X-Content-Type-Options | indicate that the MIME types advertised in the Content-Type headers should not be changed and be followed | |
 | X-Frame-Options | indicates whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>` or `<object>` | The default is not to allow apps to be rendered inside frames. <br/> This was the value set previously to prevent embedding in an iframe <br/> See [Running Your App in an Iframe](#iframe), below, for information about running your app inside an iframe. |
@@ -280,6 +284,18 @@ If you use a custom sign in page, your **index.html** will probably set the `ori
 
 To do this, find all the places in your theme folder where this cookie is set. It will look like `document.cookie = "originURI=/login.html"`.
 Change this to add the required attributes. For example, `document.cookie = "originURI=/login.html" + (window.location.protocol === "https:" ? ";SameSite=None;Secure" : "")`.
+
+#### 4.2.3 Content Security Policy{#csp}
+
+A Content Security Policy informs the client (browser) where your page will load resources from. Setting this can make your app more secure by declaring trusted sources for your resources. For more information see the W3C recommendation [Content Security Policy Level 2](https://www.w3.org/TR/CSP2/).
+
+Setting a full content security policy is dependent on what your app does. However, a starting point which declares the content security policy which works with a basic Mendix app is given below:
+
+```code
+default-src 'self' ; script-src 'self' 'unsafe-inline' 'unsafe-eval' ; connect-src 'self' ; font-src 'self' https://fonts.gstatic.com data: ; img-src 'self' data: ; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com ; base-uri 'self' ; form-action 'self' ; object-src 'none' ; frame-ancestors 'self' ;
+```
+
+If you have issues which appear to be related to a content security policy, you can use the console of your browser to investigate them.
 
 ### 4.3 Outgoing Connections Whitelisting (Mendix Cloud Dedicated){#connection-whitelist}
 
@@ -358,6 +374,22 @@ On this tab, you can perform the following actions:
 * Change the log level type by clicking the specific level
 * Click **Set all to INFO** to revert all the changes
 
+{{% alert type="info" %}}
+If you change the log level, this level will continue to be used even if you later restart your app.
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+For an application running a **single instance**, any changes will be applied immediately to the application.
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+For an application running **more than one instance**, the changes can only be applied after a restart of the app. This is because it is not possible to instruct the load balancer to set the log level for a specific running instance. 
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+Log levels may not persist across restarts if you change them outside the Developer Portal (for example, using an app module).
+{{% /alert %}}
+
 ![](attachments/environments-details/loglevels.png)
 
 The log level types are the following:
@@ -420,13 +452,25 @@ The Mendix Cloud uses runtime settings to configure the included systems for log
 
 Use the Custom Environment Variables to **add**, **Edit**, or **Delete** an environment variable.
 
-Unlike the Custom Runtime Settings, the variables you add have to be chosen from a drop-down list. The variables are:
+Unlike the Custom Runtime Settings, most of the variables you add are chosen from a drop-down list.
 
+Select **Supported** and you can choose from the following variables:
+
+* **APPMETRICS_TARGET** – setting this enables business events to be sent to a different monitoring solution from the technical events
 * **DD_API_KEY** – the API key used with Datadog
 * **DD_LOG_LEVEL** – the log level of logging sent to Datadog
+* **DD_SITE** – directs metrics to a specific Datadog region
 * **DATABASE_CONNECTION_PARAMS** – Additional JDBC parameters for PostgreSQL databases, see the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack) for more information
-* **APPMETRICS_TARGET** – setting this enables business events to be sent to a different monitoring solution from the technical events
+* **METRICS_AGENT_CONFIG** – passes a configuration JSON to control the metrics passed to Datadog
 * **SAMESITE_COOKIE_PRE_MX812** – set `SameSite=None;Secure` for all cookies coming from the Mendix runtime, as described in the [Running Your App in an Iframe](#iframe) section
+
+In addition, to support features which are in beta, you can add **Unsupported** environment variables. If you are involved in using a beta feature, you will be told what **Name** needs to be entered here and what the **Value** should be.
+
+![](attachments/environments-details/environment-variable.png)
+
+{{% alert type="info" %}}
+The *Unsupported* environment variables can only be used for controlling Mendix beta features.
+{{% /alert %}}
 
 ## 7 Maintenance Tab
 

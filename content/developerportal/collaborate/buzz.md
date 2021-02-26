@@ -70,15 +70,7 @@ In App Buzz, a comment can come from Mendix Studio and refer to a specific docum
 
 ![](attachments/show-document.png)
 
-For more information on making comments in Studio, see [Buzz](/studio/buzz).  
-
-### 2.2 Starting a Poll
-
-If you want to hear from various people in your company or on your App Team, click **Start a poll** to design and implement a quick poll on a relevant question:
-
-![](attachments/poll.png)
-
-In the **Add poll answer** box, you can add various answer choices. This is a great way to collaborate with and get feedback from your App Team!
+For more information on making comments in Studio, see [Buzz](/studio/collaboration-buzz).  
 
 ## 3 Read More
 

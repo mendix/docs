@@ -189,7 +189,6 @@ For integrations, you have the following types of microflow:
 |-------------------------------------------|--------|
 | Consumed web service operation microflow  | CWS\_  |
 | Published web service operation microflow | PWS\_  |
-| Published app service operation microflow | PAS\_  |
 | Published REST service operation microflow | PRS\_  |
 
 ### 3.5 Other Document Types
@@ -339,13 +338,13 @@ Assigning default rights to new members when defining entity access is NOT recom
 
 Apps should keep up with new Mendix releases as much as possible.
 
-### 4.7 App Store Content
+### 4.7 Marketplace Content
 
-When introducing a new [Mendix App Store](https://appstore.home.mendix.com/index3.html) component to a project, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
+When introducing a new [Mendix Marketplace](https://appstore.home.mendix.com/index3.html) component to a project, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
 
-App Store modules should NOT be modified. If an App Store module is modified, updating to a new version becomes much harder, because the changes will be overwritten when a new version is downloaded from the App Store. If changing an App Store module is unavoidable, you have two options:
+Marketplace modules should NOT be modified. If an ApMarketplace module is modified, updating to a new version becomes much harder, because the changes will be overwritten when a new version is downloaded from the Marketplace. If changing an Marketplace module is unavoidable, you have two options:
 
 * Mark any changes you make explicitly and clearly, and perform them again when the module is updated
-* Copy the contents of the App Store module to another module in your app and use that module instead (remember that your app will no longer reflect updates to the original App Store module)
+* Copy the contents of the Marketplace module to another module in your app and use that module instead (remember that your app will no longer reflect updates to the original Marketplace module)
 
-To minimize the number of changes in the actual App Store module, it is advisable to combine them in a separate extension module wherever possible.
+To minimize the number of changes in the actual Marketplace module, it is advisable to combine them in a separate extension module wherever possible.

@@ -1,8 +1,8 @@
 ---
 title: "SAML"
 category: "Modules"
-description: "Describes the configuration and usage of the SAML module, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "saml", "idp", "identity provider", "platform support"]
+description: "Describes the configuration and usage of the SAML module, which is available in the Mendix Marketplace."
+tags: ["marketplace", "app store", "marketplace component", "app store component", "saml", "idp", "identity provider", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -53,6 +53,10 @@ You can choose what you want to enter for the entity ID, organization, and conta
 Accessing the metadata can be done by downloading the XML file or by opening `http://www.app.com/SSO/metadata`.
 
 ### 3.1 Creating a New IdP Configuration
+
+{{% alert type="warning" %}}
+If you have multiple IdPs, please make sure each IdP has a unique **Entity descriptor**. If you add multiple IdPs with the same entity descriptor, you might experience unexepected behavior where a different SSO configuration is selected than the alias provided.
+{{% /alert %}}
 
 When creating a new IdP configuration, you are guided through a workflow to help you configure everything required for the IdP configuration. Each option in the workflow is explained below.
 
@@ -152,7 +156,7 @@ The resources folder contains the *SAMLConfig.properties* file, and through this
 
 ## 9 Read More
 
-*  [SSO Using SAML](https://gettingstarted.mendixcloud.com/link/module/115/lecture/938)
+*  [SSO Using SAML](https://academy.mendix.com/link/module/115/lecture/938)
 
 	{{% alert type="info" %}}You must be signed in to the Mendix Platform to see the above lecture.
 	{{% /alert %}}

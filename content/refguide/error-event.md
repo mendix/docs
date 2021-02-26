@@ -44,7 +44,10 @@ On an activity or decision, you have three options:
 *   **Custom without rollback**
 
 For the latter two options you can draw an additional flow from the block and mark this flow as the error handler flow. When selecting 'Custom with rollback' it will trigger this path when the error occurs and still rollback your objects afterwards. The 'Custom without rollback' option does not rollback the objects. After you selected a flow as the error handler it will show this as in the following image.
-Error handling is only specified for an individual action. The "without rollback" in the **Custom without rollback** option is only targeted at the action itself, not the error handling. There is thus a slight difference between **Custom with rollback** and **Custom without rollback** throwing the same exception or another one in the error handler. In the latter case, you will still have access to the database objects you have created until the end of error handler.
+
+Unlike the [Rollback object](rollback-object) action, the rollback option of an error event does not take into account whether an object has been committed. This means that even committed objects will be rolled back to the value they had when the microflow (or the microflow it was called from) began. The rollback also applies to any changes you made in [Event Handlers](event-handlers) such as *after commit*.
+
+The **Custom without rollback** option is only invoked when the action itself causes an error event, meaning you will still have access to any database objects you created or modified before the action which caused the error handler event. If you want to keep changes to objects of a persistable entity, you still need to commit them explicitly after a **Custom without rollback** error if they weren't committed before the error occurred.
 
 ![](attachments/events/custom-without-rollback-microflows.png)
 

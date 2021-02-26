@@ -21,8 +21,8 @@ You can use the `height` and `width` properties to set a widget component’s di
 A widget is composed of various elements, and each can be styled individually. You can customize your widgets using style objects. A style object is a JavaScript object with a set of attributes specific for each widget. Some of the attributes reuse properties of other elements, such as React Native’s ViewStyle, TextStyle, ImageStyle, and Colors elements. You can consult the following property sets for more information on styling properties as you customize your app:
 
 * **ViewStyle** – React Native’s [View Style](https://reactnative.dev/docs/view-style-props) property set helps you alter borders, opacity, and other general aspects of your app (the view style property set also contains layout, shadow, and transform properties)
-* **TextStyle** – React Native’s [Text](https://reactnative.dev/docs/text#style) property set will allow you to style text – using these props you can control text’s font, selection status, and more (the text property set also contains layout properties)
-* **ImageStyle** – React Native’s [Image](https://reactnative.dev/docs/image#style) property set will allow you to style images from network sources, a local library, and temporary local images – using these properties you can alter an image’s size, border, and more, while the image property set also contains layout properties (the `resizeMode` value `repeat` is not supported)
+* **TextStyle** – React Native’s [Text](https://reactnative.dev/docs/text-style-props) property set will allow you to style text – using these props you can control text’s font, selection status, and more (the text property set also contains layout properties)
+* **ImageStyle** – React Native’s [Image](https://reactnative.dev/docs/image-style-props) property set will allow you to style images from network sources, a local library, and temporary local images – using these properties you can alter an image’s size, border, and more, while the image property set also contains layout properties (the `resizeMode` value `repeat` is not supported)
 * **Colors** – React Native’s [Color Reference](https://reactnative.dev/docs/colors) property set will allow you to alter colors – you can customize colors using red-green-blue notation, change hue or saturation, and more 
 
 ### 2.1  Class Names
@@ -328,6 +328,7 @@ The widget’s style properties are structured as follows:
 | `input` | `placeholderTextColor` | This is the text color of the placeholder string. |
 | `input` | `selectionColor` | This is the highlight and cursor color of the text input. |
 | `input` | `underlineColorAndroid` | This is the color of the `input` underline. |
+| `inputFocused` | Same properties as `input` | Overrides `input` styles if the text box is focused (with Studio Pro v8.15). |
 | `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
 | `inputDisabled` | Same properties as `input` | Overrides `input` styles if the text box is non-editable. |
 | `label` | This has all TextStyle properties |   |
@@ -349,7 +350,7 @@ The default class to style all text areas is named `TextArea`.
 
 A drop-down is an input widget that can be used to display and edit enumeration attributes.
 
-Since Studio version 8.11, the drop-down widget has a new style property called `useUniformDesign: boolean` which enables the uniform design in both platforms.
+Since Studio Pro v8.11, the drop-down widget has a new style property called `useUniformDesign: boolean` which enables the uniform design in both platforms.
 
 The widget’s render hierarchy is as follows for non-uniform:
 
@@ -377,6 +378,7 @@ The widget’s render hierarchy is as follows for uniform:
 	<label>Drop down enumeration</label>
     <valueContainer>
         <value>First</value>
+	<icon/>
     </valueContainer>
 	<validationMessage>Validation feedback enumeration</validationMessage>
 </container>
@@ -403,23 +405,19 @@ The widget’s render hierarchy is as follows for uniform:
 | `pickerIOS` | This has all ViewStyle properties. |  |
 | `pickerBackdropIOS` | This has all ViewStyle properties. |   |
 | `pickerTopIOS` | This has all ViewStyle properties. |   |
-| `validationMessage` | This has all TextStyle properties. | Styles the validation message (with Studio version 8.11)|
+| `validationMessage` | This has all TextStyle properties. | Styles the validation message (with Studio Pro v8.11).|
 | `value`  | This has all TextStyle properties  | Styles the value button which toggle's dropdown and PickerIOS items. If placeholder is selected, placeholderTextColor will be applied |
-| `useUniformDesign` | `boolean` | Enables new uniformDesign (with Studio version 8.11) |
-| `value`  | `placeholderTextColor: string` | If placeholder is selected, placeholderTextColor will be applied (with Studio version 8.11)|
-| `value` | `rippleColor` | This is the color of the ripple on Android, and will be applied only when the drop-down is pressed (defaults to `rgba(0, 0, 0, 0.2)`). |
-| `value`  | `underlayColor` | This is the color while pressing the drop-down on iOS, if not set it will be defaulted to opacity only. |
-| `valueDisabled` | Same properties as `value` | Overrides `value` styles if the drop-down is non-editable |
-| `valueContainer` | This has all ViewStyle properties & rippleColor | Styles the value button's container (with Studio version 8.11)|
-| `valueContainerDisabled` | Same properties as `valueContainer` | Overrides `valueContainer` styles if the drop-down is non-editable |
-| `menuWrapper` | This has all ViewStyle properties | Styles the wrapper view surrounding all the menu items (with Studio version 8.11)|
-| `itemContainer` | This has all ViewStyle properties | Styles all the item containers in dropdown menu including selected item container (with Studio version 8.11)|
-| `itemContainer` | `rippleColor` | This is the color of the ripple on Android, and will be applied only when the drop-down item is pressed (defaults to `rgba(0, 0, 0, 0.2)`). |
-| `itemContainer`  | `underlayColor` | This is the color while pressing the drop-down item on iOS, if not set it will be defaulted to opacity only. |
-| `item` | This has all TextStlye properties | Styles all the items in dropdown menu including selected item (with Studio version 8.11)|
-| `selectedItem` | This has all TextStlye properties | Styles the selected item in dropdown menu (with Studio version 8.11)|
-| `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio version 8.11)|
-
+| `useUniformDesign` | `boolean` | Enables new uniformDesign (with Studio Pro v8.11). |
+| `iconStyle`  | This has all TextStyle properties | Styles the arrow down icon next to the value (with Studio Pro v8.15).|
+| `value`  | `placeholderTextColor: string` | If placeholder is selected, placeholderTextColor will be applied (with Studio Pro v8.11).|
+| `valueFocused`  | Same properties as `value` | Overrides `value` styles if the dropdown box is focused. (with Studio Pro v8.15).|
+| `valueContainer` | This has all ViewStyle properties & rippleColor | Styles the value button's container (with Studio Pro v8.11).|
+| `valueContainerFocused` | Same properties as `valueContainer` | Overrides `valueContainer` styles if the dropdown box is focused (with Studio Pro v8.15).|
+| `menuWrapper` | This has all ViewStyle properties | Styles the wrapper view surrounding all the menu items (with Studio Pro v8.11).|
+| `itemContainer` | This has all ViewStyle properties | Styles all the item containers in dropdown menu including selected item container (with Studio Pro v8.11).|
+| `item` | This has all TextStlye properties | Styles all the items in dropdown menu including selected item (with Studio Pro v8.11).|
+| `selectedItem` | This has all TextStyle properties | Styles the selected item in dropdown menu (with Studio Pro v8.11).|
+| `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio Pro v8.11).|
 
 ### 6.4 Check Box 
 
@@ -1310,6 +1308,212 @@ export myCarouselStyle = {
 | text | This has all TextStyle properties.                                                                   | Will be applied when there are more than five elements in carousel, in which case pagination buttons become text like **1/5**. |
 
 The default class to style all popup menus is named `com_mendix_widget_native_carousel_Carousel`.
+
+### 11.26 Signature {#signature}
+
+The signature widget allows you to draw and save a signature. The signature widget looks like this: 
+
+{{% image_container width="350" %}}![signature](attachments/native-styling-refguide/signature.png){{% /image_container %}}
+
+The widget’s style properties are structured as follows:
+
+```xml
+<container>
+    <signature/>
+    <buttonWrapper>
+        <Button>
+            <Caption>Clear</Caption>
+        </Button>
+        <Button>
+            <Caption>Save</Caption>
+        </Button>
+    </buttonWrapper>
+</container>
+```
+
+| Element | Style Properties    | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties.   |   |
+| `container` | `penColor` | This will change the color of the stroke. |
+| `buttonWrapper` | This has all ViewStyle properties. |
+| `buttonClearContainer` | This has all ViewStyle properties. |
+| `buttonClearContainer` | `rippleColor` | This will change the color of the ripple on Android.  |
+| `buttonClearContainer` | `activeOpacity` | This will change the opacity when touch is active on iOS.  |
+| `buttonClearContainer` | `underlayColor` | This will change the underlay color when touch is active on iOS.  |
+| `buttonClearCaption` | This has all TextStyle properties. |
+| `buttonSaveContainer` | This has all ViewStyle properties. |
+| `buttonSaveContainer` | `rippleColor` | This will change the color of the ripple on Android.  |
+| `buttonSaveContainer` | `activeOpacity` | This will change the opacity when touch is active on iOS.  |
+| `buttonSaveContainer` | `underlayColor` | This will change the underlay color when touch is active on iOS.  |
+| `buttonSaveCaption` | This has all TextStyle properties. |
+
+The default class to style all text boxes is named `com_mendix_widget_native_signature_Signature`.
+
+### 11.27 Line Chart
+
+The [line chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/line-chart-native) widget renders a scalable line graph based on static and dynamic data sets.
+
+The widget consists of the following elements:
+
+```xml
+<container/>
+<errorMessage/>
+<chart/>
+<grid/>
+<xAxis>
+	<label/>
+</xAxis>
+<yAxis>
+	<label/>
+</yAxis>
+<legend>
+	<container/>
+	<item/>
+	<indicator/>
+	<label/>
+</legend>
+<lines>
+	<customLineStyles>
+		<any_custom_line_style_name>
+			<line/>
+			<markers/>
+		</any_custom_line_style_name>
+	</customLineStyles>
+</lines>
+<lineColorPalette/>
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `errorMessage` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `chart` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `grid` | `backgroundColor` | Applies a color to the grid background (string). |
+| `grid` | `dashArray` | Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
+| `grid` | `lineColor` | Applies a color to the grid lines (string). |
+| `grid` | `lineWidth` | Applies a width to the grid lines (number). |
+| `grid` | `padding` | Applies padding to all sides of the grid (number). Use it to make axis value labels visible. |
+| `grid` | `paddingBottom` | Applies padding to the bottom side of the grid (number). Use it to make axis value labels visible. |
+| `grid` | `paddingHorizontal` | Applies padding to the horizontal sides of the grid (number). Use it to make axis value labels visible. |
+| `grid` | `paddingLeft` | Applies padding to the left side of the grid (number). Use it to make axis value labels visible. |
+| `grid` | `paddingRight` | Applies padding to the right side of the grid (number). Use it to make axis value labels visible. |
+| `grid` | `paddingTop` | Applies padding to the top side of the grid (number). Use it to make axis value labels visible. |
+| `grid` | `paddingVertical` | Applies padding to the vertical sides of the grid (number). Use it to make axis value labels visible. |
+| `xAxis` | `color` | Applies a color to the axis value labels (string). |
+| `xAxis` | `dashArray` | Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
+| `xAxis` | `fontFamily` | Applies fonts to the axis value labels (string). |
+| `xAxis` | `fontSize` | Applies a size to the axis value labels (number). |
+| `xAxis` | `fontStyle` | Applies a font style to the axis value labels ("normal" or "italic"). |
+| `xAxis` | `fontWeight` | Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
+| `xAxis` | `lineColor` | Applies a color to the axis line (string). |
+| `xAxis` | `lineWidth` | Applies a width to the axis line (number). |
+| `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the bottom or right side of the grid ("bottom" or "right"). |
+| `yAxis` | All `xAxis` element styles. | |
+| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. |
+| `yAxis` > `label` | `relativePositionGrid` | Positions the axis label at the top or left side of the grid ("top" or "left"). |
+| `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `legend` > `indicator` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `legend` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `lines` | `lineColorPalette` | Provides colors to lines that do not have a line color configured (string with list of colors separated by ';'). |
+| `lines` > `customLineStyles` > `any_custom_line_style_name` > `line` | `dashArray` | Applies a pattern of dashes and gaps to the graph line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
+| `lines` > `customLineStyles` > `any_custom_line_style_name` > `line` | `ending` | Applies a flat or rounded line end to the graph line ("flat" or "round"). |
+| `lines` > `customLineStyles` > `any_custom_line_style_name` > `line` | `lineColor` | Applies a color to the graph line (string). |
+| `lines` > `customLineStyles` > `any_custom_line_style_name` > `line` | `lineWidth` | Applies a width to the graph line (number). |
+| `lines` > `customLineStyles` > `any_custom_line_style_name` > `markers` | `backgroundColor` | Applies a background color to the markers of the graph line (string). |
+| `lines` > `customLineStyles` > `any_custom_line_style_name` > `markers` | `borderColor` | Applies a border color to the markers of the graph line (string). |
+| `lines` > `customLineStyles` > `any_custom_line_style_name` > `markers` | `borderWidth` | Applies a border width to the markers of the graph line (string). |
+| `lines` > `customLineStyles` > `any_custom_line_style_name` > `markers` | `display` | Influences whether markers are displayed. When displayed, it positions the markers of the graph line on top or underneath the line ("false" or "underneath" or "onTop"). |
+| `lines` > `customLineStyles` > `any_custom_line_style_name` > `markers` | `size` | Applies a size to the markers of the graph line (number). |
+| `lines` > `customLineStyles` > `any_custom_line_style_name` > `markers` | `symbol` | Applies a symbol to the markers of the graph line ("circle" or "diamond" or "plus" or "minus" or "square" or "star" or "triangleDown" or "triangleUp"). |
+
+The default class to style all line chart widgets is named `com_mendix_widget_native_linechart_LineChart`.
+
+### 11.28 Bar Chart
+
+The bar chart widget renders a horizontal bar graph based on static and dynamic data sets.
+
+The widget consists of the following elements:
+
+```xml
+<container/>
+<errorMessage/>
+<chart/>
+<grid/>
+<xAxis>
+	<label/>
+</xAxis>
+<yAxis>
+	<label/>
+</yAxis>
+<legend>
+	<container/>
+	<item/>
+	<indicator/>
+	<label/>
+</legend>
+<domain>
+    </padding>
+</domain>
+<bars>
+    </barsOffset>
+    </barColorPalette>
+	<customBarStyles>
+		<any_custom_bar_style_name>
+			</bar>
+			</label>
+		</any_custom_bar_style_name>
+	</customBarStyles>
+</bars>
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `errorMessage` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `chart` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `grid` | `backgroundColor` | Applies a color to the grid background (string). |
+| `grid` | `dashArray` | Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
+| `grid` | `lineColor` | Applies a color to the grid lines (string). |
+| `grid` | `width` | Applies a width to the grid lines (number). |
+| `grid` | `padding` | Applies padding to all sides of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingBottom` | Applies padding to the bottom side of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingHorizontal` | Applies padding to the horizontal sides of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingLeft` | Applies padding to the left side of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingRight` | Applies padding to the right side of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingTop` | Applies padding to the top side of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingVertical` | Applies padding to the vertical sides of the grid (number). This makes axis value labels visible. |
+| `xAxis` | `color` | Applies a color to the axis value labels (string). |
+| `xAxis` | `dashArray` | Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
+| `xAxis` | `fontFamily` | Applies a font type to the axis value labels (string). |
+| `xAxis` | `fontSize` | Applies a size to the axis value labels (number). |
+| `xAxis` | `fontStyle` | Applies a font style to the axis value labels ("normal" or "italic"). |
+| `xAxis` | `fontWeight` | Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
+| `xAxis` | `lineColor` | Applies a color to the axis line (string). |
+| `xAxis` | `lineWidth` | Applies a width to the axis line (number). |
+| `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **bottom** or **right** side of the grid. |
+| `yAxis` | All `xAxis` element styles. | |
+| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. |
+| `yAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **top** or **left** side of the grid. |
+| `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `legend` > `indicator` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `legend` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `domain` > `padding` | `x` | Applies a number of pixels of padding to add the beginning and end of the X axis domain (number). |
+| `domain` > `padding` | `y` | Applies a number of pixels of padding to add the beginning and end of the Y axis domain (number). |
+| `bars` | `barColorPalette` | Provides colors to bars that do not have a bar color configured (string with list of colors separated by ';'). |
+| `bars` | `barsOffset` | Determines the number of pixels each bar in a group should be offset from its original position on the Y axis (number). This is only applicable when presentation mode is **Grouped**. |
+| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `bar` | `ending` | Specifies a radius to apply to each bar. |
+| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `bar` | `color` | Applies a color to the bar (string). If bars are configured to have labels, the labels will be the same color as the bar. |
+| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `bar` | `width` | Applies a width to the bar (number). |
+| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `label` | `fontFamily` | Applies a font type to the bar label (string). |
+| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `label` | `fontSize` | Applies a size to the bar label (number). |
+| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `label` | `fontStyle` | Applies a font style to the bar label (**normal** or **italic**). |
+| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `label` | `fontWeight` | Applies a font weight to the bar label ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
+
+The default class to style all bar chart widgets is named `com_mendix_widget_native_barchart_BarChart`.
 
 ## 12 Read More
 

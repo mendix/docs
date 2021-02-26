@@ -4,6 +4,7 @@ category: "Pages"
 description: "Describes how to filter and sort items in a list in Mendix Studio."
 menu_order: 50
 tags: ["studio", "pages", "list", "how to", "filter", "sort"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 
@@ -42,7 +43,7 @@ Domain model is configured the following way in this use-case:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Pages](/studio/page-editor). 
-* Familiarize yourself with terms on data filters. For more information, see [Data Filters](/studio/filters).
+* Familiarize yourself with terms on data filters. For more information, see [Data Filters](/studio/data-filters).
 * Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/studio/domain-models).
 
 ## 3 Filtering Information 

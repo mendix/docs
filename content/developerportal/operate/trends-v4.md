@@ -24,7 +24,7 @@ To view the **Trends**, you must have permission to **Access the Monitoring**.
 
 {{% alert type="info" %}}
 
-Only the [Technical Contact](../company-app-roles/technical-contact) is allowed to grant node permissions.
+Only the [Technical Contact](../collaborate/app-roles#technical-contact) is allowed to grant node permissions.
 
 {{% /alert %}}
 
@@ -216,6 +216,12 @@ The **Application node CPU usage** graph shows the CPU utilization in percentage
 {{% alert type="info" %}}
 CPU usage of the database is shown in [Database Node CPU Usage](#Trends-dbcpu), below.
 {{% /alert %}}
+
+Because of the way resources are allocated to Mendix apps, your app may be able to burst to use more than the CPU specified for your container. For example, an app running in a container with 2 CPUs might show CPU usage of 250% where you would expect the maximum to be 200%.
+
+If your app consistently uses more CPU than specified for your container your app could suffer from performance issues if there are periods when there are insufficient CPU resources for it to burst above that specified for the container.
+
+Your app will always have access to at least the amount of CPU specified for your container when it needs it.
 
 ### <a name="Trends-appdf"></a>4.10 Application Node Disk Usage in Percentage (%)
 

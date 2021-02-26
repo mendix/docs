@@ -1,8 +1,8 @@
 ---
 title: "Label Selector"
 category: "Widgets"
-description: "Describes the configuration and usage of the Label Selector widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "label selector", "platform support"]
+description: "Describes the configuration and usage of the Label Selector widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "label selector", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -27,3 +27,21 @@ You configure background colors for labels and how the text contrasts with a lab
 * **Label constraint** – the constraint for the labels
 * **After create label** – the microflow to be triggered after a new label is created and committed; this microflow receives the data view object
 * **On change microflow** – the microflow to be triggered for every add and remove
+
+## 3 Implementation
+
+To implement this widget, follow these steps:
+
+1. Download the Label Selector widget into your app project via the Marketplace in Studio Pro.
+2. Create a [persistable](/refguide/persistability) entity named **Label**.
+3. Add two [attributes](/refguide/attributes) to the entity named **Caption** and **Color**.
+4. Add a [many-to-many association with dual ownership](/refguide/associations#many-to-many-both) between this new entity and the entity that you want to label. 
+5. Add any necessary [access rules](/refguide/access-rules) to the new entity.
+6. On a page with a data view of the entity that you want to label, add the widget to this data view.
+7. On the widget properties **Data Source** tab, set **Label object** to the **Label** entity, **Caption attribute** to the **Caption** attribute, and **Color Attribute** to the **Color** attribute.
+8. On the **Behavior** tab, set **Show Labels** to **Yes**.
+
+The label functionality is now operational. To more fully use the widget, do the following:
+
+* Create overview pages for the **Label** entity so that you can maintain the label, modify the colors, delete duplicates, and perform other tasks
+* Improve the interaction by creating microflows for the **After create label** and **On change microflow** widget properties

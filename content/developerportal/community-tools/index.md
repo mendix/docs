@@ -33,7 +33,7 @@ The **Monthly Webinar** section of the Mendix Community site presents a link to 
 ![](attachments/the-community-site/Latest_Webinar.png)
 {{% /image_container %}}
 
-Don't worry if you can't make it for the next webinar. You can easily watch all past webinars on our [Webinars](https://gettingstarted.mendixcloud.com/link/webinar) page!
+Don't worry if you can't make it for the next webinar. You can easily watch all past webinars on our [Webinars](https://academy.mendix.com/link/webinar) page!
 
 ## 4 Meetups {#meetups}
 
@@ -49,15 +49,15 @@ Click a meetup of your interest to find out details about the location and agend
 
 ## 5 Academy
 
-The Mendix Academy offers both self-paced online training and classroom instruction from our team of experts. These training opportunities can be used in coordination with the [Mendix Developer Certification Program](https://gettingstarted.mendixcloud.com/link/certification) to develop and validate your Mendix expertise.
+The Mendix Academy offers both self-paced online training and classroom instruction from our team of experts. These training opportunities can be used in coordination with the [Mendix Developer Certification Program](https://academy.mendix.com/link/certification) to develop and validate your Mendix expertise.
 
-In the **Academy** section of the Mendix Community site, you can see links to our beginner, intermediate, and advanced learning paths in the [Mendix Academy](https://gettingstarted.mendixcloud.com/link/home):
+In the **Academy** section of the Mendix Community site, you can see links to our beginner, intermediate, and advanced learning paths in the [Mendix Academy](https://academy.mendix.com/link/home):
 
 {{% image_container width="550" %}}
 ![](attachments/the-community-site/academy1.png)
 {{% /image_container %}}
 
-Below that, you can see sign-up links for upcoming [classroom courses](https://gettingstarted.mendixcloud.com/link/classroom):
+Below that, you can see sign-up links for upcoming [classroom courses](https://academy.mendix.com/link/classroom):
 
 {{% image_container width="550" %}}
 ![](attachments/the-community-site/academy2.png)
@@ -65,19 +65,19 @@ Below that, you can see sign-up links for upcoming [classroom courses](https://g
 
 To figure out what you will learn next, check out the wealth of resources the Mendix Academy offers.
 
-## 6 App Store
+## 6 Marketplace
 
-The [Mendix App Store](https://appstore.home.mendix.com/index3.html) is where you can find all the free sample apps, widgets, and modules made by Mendix community members. This is all reusable content that can help you speed up your Mendix app development process.
+The [Mendix Marketplace](https://appstore.home.mendix.com/index3.html) is where you can find all the free sample apps, widgets, and modules made by Mendix community members. This is all reusable content that can help you speed up your Mendix app development process.
 
-The **App Store** section of the Mendix community site presents the latest updates to App Store content (for example, an update of the Bootstrap Tooltip widget):
+The **Marketplace** section of the Mendix community site presents the latest updates to Marketplace content (for example, an update of the Bootstrap Tooltip widget):
 
 {{% image_container width="550" %}}
 ![](attachments/the-community-site/App_Store.png)
 {{% /image_container %}}
 
-Click the item name to go to its page in the App Store, where you can read a detailed description of the content and check out some user reviews. Click **View all Apps** to go to the main Mendix App Store page, where you can see featured and new content, recent updates, reviews, and the top contributors to the Mendix App Store.
+Click the item name to go to its page in the Marketplace, where you can read a detailed description of the content and check out some user reviews. Click **View all Apps** to go to the main Mendix Marketplace page, where you can see featured and new content, recent updates, reviews, and the top contributors to the Mendix Marketplace.
 
-For more information, see the [App Store Overview](/appstore/general/app-store-overview) in the *App Store Guide*.
+For more information, see the [Marketplace Overview](/appstore/general/app-store-overview) in the *Marketplace Guide*.
 
 ## 7 Documentation
 

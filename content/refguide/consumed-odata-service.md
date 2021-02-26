@@ -5,8 +5,6 @@ menu_order: 10
 tags: ["studio pro", "data hub", "odata service", "consumed odata service"]
 ---
 
-{{% todo %}}[edit further and add x-refs, and notify https://gitlab.rnd.mendix.com/integration/integration.wiki/-/blob/master/refguide/consumed-odata-services.md that this version is now the latest]{{% /todo %}}
-
 ## 1 Introduction
 
 When an external entity is used in a project module through the [Data Hub pane](data-hub-pane), a consumed OData service document is added specifying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.
@@ -21,14 +19,15 @@ The **Consumed OData Service** document that is added to the project displays th
 * Version number of the consumed service
 * **View in Data Hub Catalog** link to the **Service Details** where you can see the full service details that are registered
 * **Update/Switch** – you can update the consumed service contract to another version that has been detected in [Mendix Data Hub](/data-hub/index) for the same app and service; the button will show the following, depending on what has been returned for the consumed contract in Data Hub:
-	* **Update** – this button is displayed if a new service contract has been detected at the same service endpoint that is different to the one that is currently used in the app project (and shown in the **Consumed OData Service** document); this may be a new service version that has minor non-breaking changes to the previous version and therefore deployed by the publisher to the same service endpoint
+	* **Update** – this button is displayed so that you can **Update** the contract that is currently consumed (and shown in the **Consumed OData Service** document). You will be presented with the contract that is currently at the service end-point. It is good practice that only minor, non-breaking changes are deployed to the same end-point. 
 	*  **Switch** – this button is shown if other registered instances of the same service (with the same name, from the same app) are available in Data Hub and are deployed to different endpoints (for example, to another environment or because of changes that would break existing apps consuming the previous version)
 
-	{{% alert type="info" %}}Studio Pro will show the most relevant option (**Switch** or **Update**) after examining the service name, app, and endpoint in the Data Hub Catalog. This will also be indicated in the Data Hub search pane for the consumed service with an update arrow. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document.
+	{{% alert type="info" %}}
+	Studio Pro will always show the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Data Hub search and **Project**  pane, when a different contract is detected at the service end-point, this will be indicated with an update arrow for the service. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document.
 	{{% /alert %}} 
 
 	{{% alert type="info" %}}In the **Data Hub** pane consumed services that have an available **Update** will have an update arrow to indicate this:<br />
-	![update service dhpane](attachments/consumed-odata-service/data-hub-pane-update-available.png)
+	![update service data hub pane](attachments/consumed-odata-service/data-hub-pane-update-available.png)
 	{{% /alert %}} 
 
 ### 2.1 Connection Tab
@@ -42,9 +41,7 @@ The **Service URL** displays the URL of the service endpoint:
 * Click **Select** to select another [constant](/refguide/constants) for the service
 *  Click **Show** to display the **Constant** dialog box displaying the service URL or endpoint: 
 
-	{{% todo %}}[what does this do for the current consumed entities from the service - describe further]{{% /todo %}}
-
-	![Connection Tab](attachments/consumed-odata-service/consumed-service-constant.jpg)
+	![Connection Tab](attachments/consumed-odata-service/consumed-service-constant.png)
 
 ### 2.3 Timeout
 
@@ -63,8 +60,6 @@ Default value: *300 seconds*
 {{% alert type="info" %}}
 In most cases, this setting can be ignored, and the default **Use project settings** can be used.
 {{% /alert %}}
-
-{{% todo %}}[which project the current or the publishing??]{{% /todo %}}
 
 ### 2.5 Authentication
 
@@ -93,8 +88,6 @@ Custom authentication can be done with the microflow where the authentication va
 
 In the **Metadata** tab, you can select a metadata file or use metadata obtained through a URL:
 
-{{% todo %}}[add a warning??? and verify below for 8.14 - why import metadata file this way when you can do it in the DHC ]{{% /todo %}}
-
 ![Metadata Tab](attachments/consumed-odata-service/metadata-tab.jpg)
 
 ### 3.1 Metadata Editor 
@@ -110,6 +103,12 @@ The following settings are available:
 * **Import from** – select **URL** or **File** for the location of the metadata:
 	* **URL** – click **Edit** to specify the URL for the metadata
 	* **File** – click **Browse** to select an XML metadata file
+
+Support for basic authentication was added from [version 8.16.0](/releasenotes/studio-pro/8.16). When downloading the metadata from a URL, the server may request a username and password (basic authentication). In that case, a dialog box will prompt you to enter your username and password. If the metadata file refers to other metadata files on the same server within the same realm, the username and password are re-used. 
+
+{{% alert type="info" %}}
+This information is not stored, so if you download the metadata from the same server again, you will have to enter your username and password again. 
+{{% /alert %}}
 
 When you import the metadata, you can add external entities from the consumed OData service in the [Data Hub Pane](data-hub-pane).
 
@@ -128,8 +127,6 @@ Click the **Properties** tab for the consumed OData service which displays the p
 * **Metadata** – the contents of the metadata file defining the service
 *  **OData version** – the OData version: can be OData 3 or OData 4
 
-{{% todo %}}[ec-consumed OData Service requirements document  what are the differences between this and the virtual entities doc?]{{% /todo %}}
-
 ## 4 Updating or Switching a Consumed OData Service {#updating}
 
 ### 4.1 Consuming from Service Endpoints{#consume-service-endpoints}
@@ -138,13 +135,13 @@ When you add an external entity to your project, you are consuming the entity fr
 
 The same service, deployed to a different environment will be to a different service endpoint and this will be registered as a different asset in the Data Hub Catalog. In the following example, there are two endpoints for the **CustomerApi service version 1.1.0** which is deployed to the production environment and the **Acceptance** environment: 
 
-![2 endpoints](attachments/consumed-odata-service/same-service-different-endpoints.png)
+{{% image_container width="250" %}}![2 endpoints](attachments/consumed-odata-service/same-service-different-endpoints.png){{% /image_container %}}
 
 When you drag the **Customer** entity from **CustomerApi version 1.0.0** deployed to the **Acceptance** environment into your project, Studio Pro will retrieve the information it requires from the contract that is at the endpoint. 
 
-### 4.2 Major and Minor Service Versions
+### 4.2 Semantic Numbering for Service Versions {#semantic}
 
-It is important that the publishers of the services adopt a strict revision process for any changes they make to their published Odata services that are consumed by other users. 
+It is important that the publishers of the services adopt a strict revision process for any changes they make to their published OData services that are consumed by other users. 
 
 We recommend that a strict versioning system, for example semantic numbering, is used when issuing updates to services. The service version should clearly indicate the level and severity of the changes that have been made when a service is updated and deployed according to the following guidelines.
 
@@ -164,9 +161,13 @@ When a major change has been made to a published service we recommend that the s
 
 In this case the new service will be registered in the Data Hub Catalog as a different service, and show up in the catalog as a separate asset. In the following example, there are 4 registered occurrences of the **OrderManagementService**: 
 
-![4 endpoints](attachments/consumed-odata-service/consume-major-service-update-version.png)
+{{% image_container width="250" %}}![4 endpoints](attachments/consumed-odata-service/consume-major-service-update-version.png){{% /image_container %}}
 
 There is a major service update indicated by the change in the version number from **1.0.0** to **2.0.0**. Further, both versions have also been deployed to the **Acceptance** which also results in separately registered assets in the Data Hub Catalog.
+
+{{% alert type="info" %}} 
+Entities of non-Mendix OData services are identified with a key of one or more fields. If the key fields are changed in an update of the service, this will also be seen as a breaking change. 
+{{% /alert %}}
 
 ### 4.3 Update or Switch
 
@@ -175,10 +176,6 @@ When minor and major updates to a consumed service are detected in Data Hub the 
 ####  4.3.1. Update
 
 The **Update** option is available when a new version of a published OData service is issued, and deployed to the same endpoint as the previous version. Studio Pro will recognize that the contract at the endpoint is different to the one currently consumed in the project. After updating Studio Pro will have the same contract as the one that is available on the endpoint.
-
-{{% alert type="info" %}}
-You can only **Update** services that are deployed to *production* environments. All services version changes and deployments to the same endpoint for non-production environments will have to be updated using  **Switch**.
-{{% /alert %}}
 
 #####  4.3.1.1 Project Pane
 
@@ -202,17 +199,13 @@ In the **Data Hub** pane the search results for the same consumed service will s
 
 - The list of entities in this new version in the Data Hub are shown, including the locally consumed entities which are marked with a green check-mark. These entities are, however, greyed out to indicate that they cannot be dragged into the domain model as the contract for the previous version is currently being consumed. The only option is to click **Update** to retrieve the updated OData Service. 
 
-{{% todo %}}[what is shown in the search results for a non-prod service which has a minor service update?? check with Paul/Faried after release and document further]{{% /todo %}}
-
 #####  4.3.1.3 Update Service Dialog Box
 
 When you click **Update** on the **Consumed OData Service** document or the update icon in the **Data Hub** and **Project** panes, the **Update** dialog box is displayed.
 
-{{% todo %}}[standard colour screenshot to replace this after release]{{% /todo %}}
-
 ![update service dhpane](attachments/consumed-odata-service/update-service-dialog-box.png)
 
-The consumed Odata service that is currently consumed in the project (**1.0.11**) is shown on the left, and you can click **Update** to retrieve the new contract from the Data Hub (**1.0.12**).
+The consumed OData service that is currently consumed in the project (**1.0.0**) is shown on the left, and you can click **Update** to retrieve the new contract from the Data Hub (**2.0.0**).
 
 #### 4.3.2. Switch
 
@@ -220,13 +213,7 @@ When an OData service is published to a different endpoint or to a different env
 
 In the example given in the [Consuming from Service Endpoints](#consume-service-endpoints) section above, if you are consuming the service from the **Acceptance** environment, the Consumed OData service screen will display the **Switch** button to enable you to consume the same service from the **Production**. 
 
-{{% alert type="info" %}}
-You can only **Update** services that are deployed to *production* environments. All services version changes and deployments to the same endpoint for non-production environments will have to be updated using  **Switch**.
-{{% /alert %}}
-
 #### 4.3.3 Switching Consumed Services
-
-{{% todo %}}[change the example to changing to a major version rather than environment]{{% /todo %}}
 
 A published OData services that is deployed to multiple environments or is published with major service updates (and therefore deployed to a different endpoint) will be shown as separate items in the search results of the **Data Hub** pane. 
 
@@ -246,9 +233,7 @@ To consume the service deployed to the **Acceptance environment**, follow these 
 
 3. The consumed service will now be consumed from the new selected environment. The information on the **Consumed OData Service** screen will display the changed service details and the **Data Hub** pane will now show that you are consuming from the selected environment: 
 
-	![major change environment dh pane](attachments/consumed-odata-service/switch-new-environment.png)
-
-{{% todo %}}[this is a bad example because the drop-down box should have shown version 2.0.0]{{% /todo %}}
+	{{% image_container width="300" %}}![major change environment dh pane](attachments/consumed-odata-service/switch-new-environment.png){{% /image_container %}}
 
 ## 5 Read More
 

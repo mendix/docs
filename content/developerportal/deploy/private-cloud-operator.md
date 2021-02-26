@@ -25,7 +25,7 @@ Alternatively, you can create a connected cluster and use the Mendix Developer P
 
 ## 3 Deploying a Mendix App with an Operator
 
-You can deploy multiple Mendix apps to run in the same Kubernetes or OpenShift namespace. This means that they need to have unique and recognizable names; the name is required to identify the app when creating/modifying/deleting it.
+You can deploy multiple Mendix apps to run in the same Kubernetes or OpenShift namespace. Apps will have an **Environment UUID** added when they are  deployed to ensure that they are unique in the project; the name is required to identify the app when creating, modifying, or deleting it.
 
 Follow the instructions below to deploy your app.
 
@@ -84,6 +84,7 @@ spec:
   runtime: # Configuration of the Mendix Runtime
     logAutosubscribeLevel: INFO # Default logging level
     mxAdminPassword: V2VsYzBtZSE= # base64 encoded password for MendixAdmin user. In this example, 'Welc0me!'; can be left empty keep password unchanged
+    debuggerPassword: V2VsYzBtZSE= # base64 encoded password for debuggerPassword. In this example, 'Welc0me!';
     dtapMode: P # Security & runtime mode: P for production, D for development
     logLevels: # Optional, can be omitted : set custom log levels for specific nodes
       NodeOne: CRITICAL
@@ -104,6 +105,12 @@ spec:
         #    key: java-proxy-secret
       - name: JAVA_TOOL_OPTIONS # name of the environment variable
         value: -Dhttp.proxyHost=10.0.0.100 -Dhttp.proxyPort=8080 -Dhttps.proxyHost=10.0.0.100 -Dhttps.proxyPort=8443 -Dhttp.nonProxyHosts="localhost|host.example.com"
+    clientCertificates: # Optional, can be omitted : set client certificates for TLS authentication
+      - key: Q0VSVElGSUNBVEU= # base64-encoded PKCS12 certificate
+        password: # base64-encoded password for the certificate, cannot be empty
+        pinTo: # Optional, list of web services or domain names where this certificate should be used
+        - "www.example.com"
+        - "service.www.example.com"
     # All custom Mendix Runtime parameters go here, in JSON format; validated and applied by the mx-m2ee-sidecar container
     customConfiguration: |-
       {
@@ -115,7 +122,7 @@ spec:
 
 You need to make the following changes:
 
-* **name**: – You can deploy multiple apps in one project/namespace — the app name in the CR doesn't have to match the app name in the mda but must be unique in the project — see [Reserved Names for Mendix Apps](#reserved-names), below, for restrictions on naming your app
+* **name**: – You can deploy multiple apps in one project/namespace — the app name in the CR doesn't have to match the app name in the mda and will have an **Environment UUID** added when it is deployed to ensure that it is unique in the project — see [Reserved Names for Mendix Apps](#reserved-names), below, for restrictions on naming your app
 * **database/storage** – ensure that these have the correct **servicePlan** — they have to have the same names that you registered in the namespace
 * **mendixRuntimeVersion** – the full runtime version which matches the mda, including the build number
 * **sourceURL** – the location of the deployment package, this must be accessible from your cluster without any authentication
@@ -128,10 +135,10 @@ You need to make the following changes:
 * **resources** – change the minimum and maximum container resources your app requires
 * **logAutosubscribeLevel** – change the default logging level for your app, the standard level is INFO — possibilities are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
 * **mxAdminPassword** – here you can change the password for the MxAdmin user — if you leave this empty, the password will be the one set in the Mendix model
+* **debuggerPassword** - here you can provide the password for the debugger — this is optional. Setting an empty `debuggerPassword` will disable the debugging features. In order to connect to the debugger in Studio Pro, enter the debugger URL as `<AppURL>/debugger/`. You can find further information in [How to Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely)
 * **dtapmode** – for development of the app, for example acceptance testing, choose **D**, for production deployment, select **P**
 
     If you select production, then you will need to provide a **Subscription Secret** to ensure that your app runs as a licensed app — see [Free Apps](mendix-cloud-deploy#free-app) in *Mendix Cloud* for the differences between free/test apps and licensed apps
-    
     the subscription secret needs to be supplied via the **customConfiguration** using the following values:
 
     * `"License.SubscriptionSecret":"{subscription secret}"`
@@ -160,6 +167,7 @@ You need to make the following changes:
 * **logLevels**: – set custom logging levels for specific log nodes in your app — valid values are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
 * **jettyOptions** and **customConfiguration**: – if you have any custom Mendix Runtime parameters, they need to be added to this section — options for the Mendix runtime have to be provided in JSON format — see the examples in the CR for the correct format and the information below for more information on [setting app constants](#set-app-constants) and [configuring scheduled events](#configure-scheduled-events)
 * **environmentVariables**: - set the environment variables for the Mendix app container, and JVM arguments through the `JAVA_TOOL_OPTIONS` environment variable
+* **clientCertificates**: - specify client certificates to be used for TLS calls to Web Services and REST services
 
 #### 3.2.1 Setting App Constants{#set-app-constants}
 
@@ -239,7 +247,7 @@ To build and deploy your app using AWS-EKS or other Kubernetes platform execute 
 kubectl apply -f {File containing the CR} -n {namespace where app is being deployed}
 ```
 
-##### 3.3.1.1 OpenShift CLI
+##### 3.3.1.2 OpenShift CLI
 
 To build and deploy your app using the OpenShift CLI, do the following:
 

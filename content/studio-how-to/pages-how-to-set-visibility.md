@@ -4,6 +4,7 @@ category: "Pages"
 description: "Describes how to set conditional visibility in Mendix Studio."
 menu_order: 30
 tags: ["studio", "pages", "how to", "visibility", "visible"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 

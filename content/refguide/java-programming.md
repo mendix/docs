@@ -37,7 +37,7 @@ The executeAction method throws all exceptions that occur. This means you can do
 In the Java code that you write for your Java actions, you can use the Mendix Java library.
 
 {{% alert type="info" %}}
-You can find the Javadoc at [apidocs.rnd.mendix.com](http://apidocs.rnd.mendix.com/7/runtime/index.html) or in the directory you in which installed Mendix (for example, *C:\Program Files\Mendix\8.0.0\runtime\javadoc*).
+You can find the Javadoc at [apidocs.rnd.mendix.com](http://apidocs.rnd.mendix.com/8/runtime/index.html) or in the directory you in which installed Mendix (for example, *C:\Program Files\Mendix\8.0.0\runtime\javadoc*).
 {{% /alert %}}
 
 This library is automatically added to your libraries when you imported your project into Eclipse, and it is called *mxruntime.jar*.

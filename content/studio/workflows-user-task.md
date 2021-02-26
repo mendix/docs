@@ -63,12 +63,10 @@ The **Display Information** section properties are described in the table below:
 
 | Property         | Description                                                  |
 | ---------------- | ------------------------------------------------------------ |
-| Task Name        | **Task Name** is displayed in the running app. The **Task Name** can contain attributes of the [Workflow entity](workflow-properties#data) or of its associated entities, the value of which will be displayed to the end-users. For example, you can select a **FullName** attribute from the **Employee Onboarding** data to display the name of the new employee. |
-| Task Description | **Workflow Description** is a description of the workflow displayed in the running app. The **Workflow name** can contain attributes of the [Workflow entity](#data) {{% todo %}}[or it's generalization, shall I add this info?]{{% /todo %}}, the value of which will be displayed to the end-users. For example, you can add a **PhoneModel** attribute from the **Employee Onboarding** data to display what phone needs to be shipped for this employee. |
+| Task Name        | **Task Name** is displayed in the running app. The **Task Name** can contain attributes of the [Workflow entity](workflow-properties#data), the value of which will be displayed to the end-users. For example, you can select a **FullName** attribute from the **Employee Onboarding** data to display the name of the new employee. |
+| Task Description | **Workflow Description** is a description of the workflow displayed in the running app. The **Workflow name** can contain attributes of the [Workflow entity](#data), the value of which will be displayed to the end-users. For example, you can add a **PhoneModel** attribute from the **Employee Onboarding** data to display what phone needs to be shipped for this employee. |
 
 ### 2.4 Due Date Section {#due-date}
-
-{{% todo %}}[This one will only be displayed when using WorkflowCommons module, so a specific app template. Do I need to add info about it or will Cit Devs use the app template always?]{{% /todo %}}
 
 The **Due Date** section allows you to set a deadline for the user task and keep track of it. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the workflow. 
 

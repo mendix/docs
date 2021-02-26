@@ -51,7 +51,7 @@ To add a workflow to your app project in Studio, do the following:
 
     ![New Workflow](attachments/workflows/new-workflow.jpg)
 
-3. In the **Create new workflow** dialog box, fill in the name of the workflow and select a workflow entity:  {{% todo %}}[Add a reference to the domain model]{{% /todo %}}
+3. In the **Create new workflow** dialog box, fill in the name of the workflow and select a workflow entity (for more information on type of entities, see the [Entities and Their Types](domain-models#entity-types) section in *Domain Model*):  
 
     ![Create New Workflow](attachments/workflows/create-new-workflow.jpg)
 

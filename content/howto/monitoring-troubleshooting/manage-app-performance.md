@@ -15,14 +15,12 @@ For apps deployed to the **Mendix Cloud** you can use the standard metrics as de
 
 ### 1.2 Other Deployment Options
 
-Outside the Mendix Cloud, there are alternatives you can use.
+Outside the Mendix Cloud, you can use Datadog, or there are alternative monitoring tools you can use. You can see these under [Monitoring Tools](https://github.com/mendix/cf-mendix-buildpack#monitoring-tools) in the Mendix *Cloud Foundry Buildback*.
 
 {{% alert type="warning" %}}
-These solutions are not supported for apps deployed to the Mendix Cloud.
+Only Datadog is supported for apps deployed to the Mendix Cloud.
 {{% /alert %}}
 
-For more information see:
-
-* [Manage App Performance with AppDynamics](manage-app-performance-with-appdynamics)
-* [Manage App Performance with New Relic](manage-app-performance-with-new-relic)
-* For apps deployed to SAP, you can also enable **Dynatrace** – see [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform#runtime-tab)
+* **AppDynamics** – see [Manage App Performance with AppDynamics](manage-app-performance-with-appdynamics)
+* **New Relic** – see [Manage App Performance with New Relic](manage-app-performance-with-new-relic)
+* **Dynatrace** – for apps deployed to SAP BTP, see [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform#runtime-tab), for other platforms see [Monitoring Tools](https://github.com/mendix/cf-mendix-buildpack#monitoring-tools) in the Mendix *Cloud Foundry Buildback*.

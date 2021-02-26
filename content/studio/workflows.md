@@ -122,11 +122,12 @@ Elements in the **General** section help you control the workflow path, for exam
 
 The elements of this section are described in the table below:
 
-| Element                           | Description                                                  |
-| --------------------------------- | ------------------------------------------------------------ |
-| [Decision](decision-in-workflows) | Makes a choice based on a condition and follows one and only one of the outgoing paths. |
-| [Parallel split](parallel-split)  | Adds two parallel paths to your workflow.                    |
-| End activity                      | Ends the path of the workflow                                |
+| Element                                                      | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [Decision](workflows-general-activities#decision)            | Makes a choice based on a condition and follows one and only one of the outgoing paths. |
+| [Jump activity](workflows-general-activities#jump)           |                                                              |
+| [Parallel split](workflows-general-activities#parallel-split) | Adds two parallel paths to your workflow.                    |
+| [End activity](workflows-general-activities#end)             | Ends the path of the workflow                                |
 
 ### 3.2 User Actions {#user-actions}
 

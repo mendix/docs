@@ -43,7 +43,31 @@ The **General** section properties are described in the table below:
 
 **Outcomes** depends on the condition of the decision. For example, for the Boolean, you have **true** and **false** outcomes, and for the enumeration: an outcome per each enumeration value and an empty one when the value is unassigned.  
 
-## 3 Parallel Split {#parallel-split}
+## 3 Jump Activity {#jump}
+
+The **Jump** activity allows you to jump to other activities in the workflow. This is useful when, for example, you are approving a request and need more details that are provided in one of the previous user tasks:
+
+{{% todo %}}[Add screenshots]{{% /todo %}}
+
+{{% alert type="warning" %}}
+You cannot use the **Jump** activity in a Parallel split or in a path where it would end the workflow without any other path continuing it. 
+{{% /alert %}}
+
+### 3.1 Jump Activity Properties
+
+An example of Jump activity properties is represented in the image below:
+
+{{% todo %}}[Add screenshots]{{% /todo %}}
+
+The Jump activity properties consist of the **General** section.
+
+| Property | Description                                                  |
+| -------- | ------------------------------------------------------------ |
+| Name     | The internal name of the element. When referring to the element in the app project you will use this name. It must be unique. |
+| Caption  | Describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand without needing to add annotations. |
+| Target   | **Target** is the activity the **Jump** goes to. You can select the activity you would like to go to from the drop-down menu. |
+
+## 4 Parallel Split {#parallel-split}
 
 The parallel split is used to have parallel processes in your workflow. For example, when onboarding a new employee, you can have several processes running in parallel: the HR preparing necessary documents, the IT department preparing a workstation, and the Administration department scheduling a training for the employee:
 
@@ -55,7 +79,7 @@ All paths of the parallel split need to be completed before the workflow can con
 
 {{% /alert %}}
 
-### 3.1 Parallel Split Properties
+### 4.1 Parallel Split Properties
 
 An example of parallel split properties is represented in the image below:
 
@@ -66,18 +90,18 @@ Parallel split properties consist of the following sections:
 * [General](#general)
 * [Paths](#paths)
 
-#### 3.1.1 General Section {#general}
+#### 4.1.1 General Section {#general}
 
 The **Caption** describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand without needing to add annotations.
 
-#### 3.1.2 Paths Section {#paths}
+#### 4.1.2 Paths Section {#paths}
 
 The **Paths** property allows you to add as many paths as there are parallel processes. 
 
-## 4 End Activity
+## 5 End Activity {#end}
 
 The **End** activity ends the path of the workflow.
 
-## 5 Read More
+## 6 Read More
 
 * [User Task](workflows-user-task)

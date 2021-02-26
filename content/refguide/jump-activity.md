@@ -1,7 +1,7 @@
 ---
 title: "Jump"
 parent: "workflows"
-menu_order: 30
+menu_order: 35
 tags: ["workflow", "workflows", "jump", "Studio Pro"]
 ---
 
@@ -13,13 +13,13 @@ The **Jump** activity allows you to jump to another activities in the workflow. 
 
 ## 2 Properties
 
-An example of jump activity properties is represented in the image below:
+An example of Jump activity properties is represented in the image below:
 
 ![Jump Properties](attachments/jump-activity/jump-properties.jpg)
 
 
 
-The **Jump** activity properties consist of the **General** section.
+The Jump activity properties consist of the **General** section.
 
 ### 2.1 Name
 
@@ -34,7 +34,7 @@ The **Caption** describes what happens in this element. It is displayed in the w
 **Target** is the activity the **Jump** goes to. You can select the activity you would like to go to from the drop-down menu. 
 
 {{% alert type="warning" %}}
-You cannot use the **Jump** activity in a Parallel split or to a path where it would end the workflow without any other path continuing it. 
+You cannot use the **Jump** activity in a Parallel split or in a path where it would end the workflow without any other path continuing it. 
 {{% /alert %}}
 
 ## 3 Read More

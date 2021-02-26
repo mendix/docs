@@ -7,7 +7,7 @@ tags: ["workflow", "workflows", "jump", "Studio Pro"]
 
 ## 1 Introduction
 
-The **Jump** activity allows you to jump to another activities in the workflow. This is useful when, for example, you are approving a request and need more details that are provided in one of the previous user tasks:
+The **Jump** activity allows you to jump to other activities in the workflow. This is useful when, for example, you are approving a request and need more details that are provided in one of the previous user tasks:
 
 ![Jump Example](attachments/jump-activity/jump-activity.jpg)
 

@@ -17,7 +17,7 @@ A scheduled event is added to your module as a document (right-click your module
 Scheduled events can be tested locally, but they will not be run if your app is deployed as a Free App. See the Free App section of [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy#free-app) for more information on Free App limitations.
 {{% /alert %}}
 
-A `ScheduledEventInformation` object is created every time the scheduled event is run. This records the following:
+A `ScheduledEventInformation` object is created every time the scheduled event defined in your app model is run. This records the following:
 
 * **Name** – the **Name** of the scheduled event as entered in [Common Properties](#common-properties)
 * **Description** – the **Documentation** of the scheduled event as entered in [Common Properties](#common-properties)
@@ -27,7 +27,7 @@ A `ScheduledEventInformation` object is created every time the scheduled event i
     * **Running** – the event is current running and has not yet ended
     * **Completed** – the event has completed successfully
     * **Error** – the event completed with an error — you can find the error on the error log using the *StartTime* and *EndTime* to locate it if necessary
-    * **Stopped** – the scheduled event was stopped before completion, for example by the app being stopped
+    * **Stopped** – the scheduled event was stopped before completion, for example by the app being stopped or a cluster node becoming unhealthy
 
 {{% alert type="warning" %}}
 The `ScheduledEventInformation` objects are not cleared automatically. If you have a large number of scheduled events you will need to decide how long you need to keep this information and remove stale records when they are no longer required.

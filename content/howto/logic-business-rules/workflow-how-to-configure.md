@@ -32,6 +32,8 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Your project has the Workflow Commons and Mendix SSO modules.
 
+* Make sure that the **User entity** is configured in your **Project Settings** > **Workflows** tab. {{% todo %}}[Verify what entity to select]{{% /todo %}}
+
 * Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows). 
 
 * Make sure that the domain model of the module you are working in looks the following way:
@@ -180,7 +182,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
 10. Now you need to make sure that only the relevant information is displayed on the **SpecifyDevice** page. In the Project Explorer, double-click the **SpecifyDevice** page to open it.
 
-11. By default, all attributes are added to the data view with the employee details. You need to leave only the attributes related to the task. You also need to make sure that the manager can change only a specific field in the form. For example, the name of the employee has been entered by the HR department, so the manager does not need to change it and should have this field as read-only.
+11. By default, all attributes are added to the data view with the employee details. You need to leave only the attributes related to the task. You also need to make sure that the manager can change only a specific field in the form. For example, the name of the employee has been entered by the HR department, so the manager does not need to change it and should have this field as read-only. {{% todo %}}Change the domain model and dependencies with this best practice: ideally, you would have the `Employee` entity separately with all the attributes for the employee on it. You would then associate that with the `EmployeeOnboarding` entity which would only have attributes that are relevant for the onboarding itself.{{% /todo %}}
 
     Do the following:
 

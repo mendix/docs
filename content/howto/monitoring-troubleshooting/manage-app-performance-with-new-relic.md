@@ -18,6 +18,10 @@ New Relic is a flexible application performance management tool that provides in
 
 * Set up application performance management for your Mendix application on New Relic
 
+{{% alert type="warning" %}}
+New Relic is not supported for apps deployed to the Mendix Cloud.
+{{% /alert %}}
+
 ## 2 Prerequisite
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
@@ -101,3 +105,4 @@ For more information on New Relic, see the New Relic documentation here: [https:
 * [Debug Java Actions](debug-java-actions)
 * [Solve Load & Import Errors](solving-load-and-import-errors)
 * [Debug Microflows Remotely](debug-microflows-remotely)
+* [Monitoring Tools](https://github.com/mendix/cf-mendix-buildpack#monitoring-tools) in the *cf-mendix-buildpack* repo on GitHub

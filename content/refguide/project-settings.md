@@ -281,15 +281,9 @@ Switching from a ZIP file to a UI resources package is straightforward:
 
 3. Lastly, set the **Theme ZIP file** setting to **None**.
 
-## 7 Workflows {#workflows}
+## 7 Workflows Tab {#workflows}
 
-These settings allow you to manage the workflow editor in your app project. 
-
-### 7.1 Enable Workflows
-
-**Enable workflow** allows you to toggle the workflow functionality for your app project. 
-
-### 7.2 User Entity
+### 7.1 User Entity
 
 **User entity** defines the entity which the user targeting is based on. You can use the attributes of this entity in an XPath. 
 

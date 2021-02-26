@@ -48,21 +48,25 @@ For more information, see [Module Security](module-security).
 
 ### 2.2 Data Section {#data}
 
-**Workflow entity** is an entity that is used as a workflow context. It should be a **Workflow Context** entity from the **System** module or its **specialization**. For more information on workflow-related entities in the System module, see the the [Workflow Entities in the System Module](workflows#workflow-entities) section in *Workflows*. 
+**Workflow entity** is an entity that is used as a workflow context. It should be a [specialization](generalization-and-association) of the **Workflow Context** entity from the **System** module. For more information on workflow-related entities in the System module, see the the [Workflow Entities in the System Module](workflows#workflow-entities) section in *Workflows*. 
 
-For more information on specializations and generalizations, see [Generalization vs One-to-One Associations](generalization-and-association).
+We recommend to keep the workflow entity "clean", meaning, to only have attributes on it that are important for the current instance of your workflow and add other data via associations.
 
 ### 2.3 Display Information Section {#display-info}
 
 #### 2.3.1 Workflow Name
 
-**Workflow name** is displayed in the running app. The **Workflow name** can contain parameters that are written between braces, e.g. {1}.
+**Workflow name** is stored in the System module on the **Workflow** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Workflow name** is used in page templates. 
+
+The **Workflow name** can contain parameters that are written between braces, e.g. {1}.
 
 For more information on using parameters, see the [Parameters](#parameters) section below.
 
 #### 2.3.2 Workflow Description
 
-**Workflow Description** is a description of the workflow displayed in the running app. The description can contain parameters that are written between braces, e.g. {1}.
+**Workflow description** is stored in the System module on the **Workflow** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Workflow description** is used in page templates. 
+
+The **Workflow description** can contain parameters that are written between braces, e.g. {1}.
 
 #### 2.3.3 Parameters {#parameters}
 
@@ -102,7 +106,7 @@ In addition to adding new parameters, you can perform the following actions on p
 
 ### 2.4 Due Date Section {#due-date}
 
-**Due in** allows you to set a deadline for the workflow and keep track of it. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the workflow. 
+**Due in** is stored in the System module on the **Workflow** entity as an attribute and its data can be dynamically displayed in the running app. For example, you can use it to set a deadline for the workflow and display it in your app. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the workflow. If you are using the **Workflow Commons** module, **Due in** is used in page templates. 
 
 ### 2.5 General Section {#general}
 

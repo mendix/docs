@@ -9,7 +9,11 @@ tags: ["workflow", "workflows", "user task", "task", "Studio Pro"]
 
 User task allows you to assign a workflow task to a certain user. 
 
-For example, you can add filters and assign a task to a user in the IT department. When the workflow reaches this user task, the task will appear in their inbox:
+For example, you can add filters and assign a task to a user with the Manager role:
+
+![User Task Example](attachments/user-task/user-task.jpg)
+
+If you are using the **Workflow Commons** module, when the workflow reaches this user task, the task will appear in the user's inbox:
 
 ![Task Inbox](attachments/user-task/task-inbox.jpg)
 
@@ -32,13 +36,15 @@ User task properties consist of the following sections:
 
 #### 2.1.1 Task Name
 
-**Task name** is displayed in the running app. The **Task name** can contain parameters that are written between braces, e.g. {1}.
+**Task name** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Task name** is used in page templates. 
 
 For more information on using parameters, see the [Parameters](#parameters) section below.
 
 #### 2.1.2 Task Description
 
-**Task Description** is a description of the workflow displayed in the running app. The description can contain parameters that are written between braces, e.g. {1}.
+**Task Description** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Task description** is used in page templates. 
+
+The **Task description** can contain parameters that are written between braces, e.g. {1}.
 
 #### 2.1.3 Parameters {#parameters}
 
@@ -79,7 +85,7 @@ In addition to adding new parameters, you can perform the following actions on p
 
 ### 2.2 Due Date Section {#due-date}
 
-**Due in** allows you to set a deadline for the user task and keep track of it. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the user task. 
+**Due in** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. For example, you can use it to set a deadline for the user task and display it in your app. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the user task. If you are using the **Workflow Commons** module, **Due in** is used in page templates. 
 
 ### 2.3 General Section {#general}
 
@@ -103,7 +109,7 @@ Possible options of this property are described in the table below:
 
 | Option    | Description                                                  |
 | --------- | ------------------------------------------------------------ |
-| XPath     | Allows you to filters users who should be assigned the user task. For example, you can assign a certain task only to users with the Manager user role. |
+| XPath     | Allows you to filter users who should be assigned the user task. For example, you can assign a certain task only to users with the Manager user role. |
 | Microflow | Allows you to assign the user task to certain users. Using microflow you can check, for example, which users have the right to approve user tasks and are currently not on vacation and assign the task only to users who passed the check. |
 
 #### 2.6.2 XPath Constraint

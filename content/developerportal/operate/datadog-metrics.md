@@ -365,7 +365,7 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 
 ### 5.1 Log Levels{#log-levels}
 
-The **DD_LOG_LEVEL** sets the level for which log messages from the *Mendix Datadog agent* will be sent to Datadog. It does not affect the [log level set in your app](/howto/monitoring-troubleshooting/log-levels). Valid values are:
+The **DD_LOG_LEVEL** sets the level for which log messages *from the Mendix Datadog agent* will be sent to the Mendix application logs. It does not affect the [log level set in your app](/howto/monitoring-troubleshooting/log-levels). Valid values are:
 
 * CRITICAL
 * ERROR

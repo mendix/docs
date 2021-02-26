@@ -11,6 +11,8 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
+{{% todo %}}[Name of this activity will change.]{{% /todo %}}
+
 The **Open workflow page** activity can be used to open a workflow overview page defined in the workflow properties. 
 
 ![Open Workflow Page](attachments/open-workflow-page/open-workflow-page.jpg)

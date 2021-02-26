@@ -26,7 +26,7 @@ Steps:
 Optional steps:
 
 - Choose whether the badge should display itself like a badge or label by setting the "Type" configuration property.
-- Select an "On click" action to convert the badge into a button which will execute this action when clicked or activated with an Enter or Space key press.
+- Select an "On click" action to convert the badge into a button which will execute this action when clicked on or activated with an Enter or Space key press.
 - Navigate to the **Appearance** tab and select a brand style with the "Style" design property to give the badge or label a suitable color.
 
 ## 3 Previous versions documentation

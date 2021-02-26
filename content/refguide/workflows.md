@@ -27,6 +27,7 @@ The elements of this category are described in the table below:
 | ----------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------ |
 | ![Decision](attachments/workflows/decision.png)             | [Decision](decision-in-workflows) | Makes a choice based on a condition and follows one and only one of the outgoing paths. |
 | ![Parallel Split](attachments/workflows/parallel-split.png) | [Parallel split](parallel-split)  | Adds two parallel paths to your workflow.                    |
+| ![Jump Activity](attachments/workflows/jump.png)            | [Jump](jump-activity)             | Allows you to jump to other activities in the workflow.      |
 | ![End Activity](attachments/workflows/end-event.png)        | End activity                      | Ends the path of the workflow                                |
 
 ### 2.2 User Tasks {#user-tasks}

@@ -12,6 +12,26 @@ aliases:
 
 Expressions changes a value based on a function or combination of functions. 
 
+You can use expressions for microflows and workflows. The expressions are usually used to configure a condition for a certain activity or property, for example, a condition for a decision in a microflow or a workflow. 
+
+Expressions can be used for the following activities in a microflow: 
+
+*  End Event
+*  [Decision](microflows-decision)
+*  Create Object
+*  Change Object
+*  Create Variable 
+*  Change Variable
+
+For more information on setting and changing values for microflow activities, see [Set & Change a Value for Different Activities in the Microflows](microflows-setting-and-changing-value).
+
+You can use expression for the following elements in a workflow:
+
+* [Decision](workflows-general-activities)
+* **Due date** property of a [workflow](workflow-properties) and a [user task](user-task)
+
+## 2 Writing an Expression
+
 Named items in microflows and workflows (for example, objects, lists, or variables) can be called in an expression by inserting the name of the item and adding a dollar sign (for example,  `$customer` could refer to an object named `customer`).
 
 Attributes and associations of objects are accessed using a slash (for example, the **Name** attribute of the customer object is referred to as `$customer/Name`).
@@ -23,24 +43,6 @@ $CurrentPrice/Price - (($CurrentPrice/Price **div** 100) * $OrderLine/Discount)
 ```
 
 Arithmetic functions (subtraction, dividing, and multiplying) are being combined here.
-
-You can use expressions for microflows and workflows and are usually used to configure a condition for a certain activity. Expressions can be used for the following activities in a microflow: 
-
-*  End Event
-*  [Decision](microflows-decision)
-*  Create Object
-*  Change Object
-*  Create Variable 
-*  Change Variable
-
-You can use expression for the following elements in a workflow:
-
-* [Decision](workflows-general-activities)
-* **Due date** property of a [workflow](workflow-properties) and a [user task](user-task)
-
-For more information on setting and changing values for microflow activities, see [Set & Change a Value for Different Activities in the Microflows](microflows-setting-and-changing-value).
-
-## 2 Writing an Expression
 
 You can use a list of suggestions to help you write an expression. Use <kbd>Ctrl</kbd> + <kbd>Space</kbd> shortcut to display this list. Suggestions can be divided into the following categories:
 
@@ -62,7 +64,7 @@ Below are two examples that illustrate how expressions can be used.
 
 #### 2.3.1 Example 1
 
-You have a [Decision](microflows-decision) and you want to write an expression that checks whether the customer grade is gold and the price of the order is more than 100 (you can configure a discount after the **Decision** that is allowed if this expression is true):
+You have a [Decision](microflows-decision) in a microflow and you would like to write an expression that checks whether the customer grade is gold and the price of the order is more than 100 (you can configure a discount after the **Decision** that is allowed if this expression is true):
 
 ![](attachments/expressions/example-decision.png) 
 
@@ -72,9 +74,15 @@ The expression will look the following way:
 
 #### 2.3.2 Example 2
 
-You add a [Decision](microflows-decision) to check if an object (in the example below the object is *Customer*) exists. And you also check if the Customer's name matches a particular one (in the example below Customer's name is *Mendix*). The expression will look the following way:
+You add a [Decision](microflows-decision) to a microflow to check if an object (in the example below the object is *Customer*) exists. And you also check if the Customer's name matches a particular one (in the example below Customer's name is *Mendix*). The expression will look the following way:
 
 ![](attachments/expressions/customer-empty-and-name-example.png)
+
+#### 2.3.3 Example 3
+
+You have a [user task](workflows-user-task) in a workflow and would like to add a **Due Date** as a reminder that the user task should be done by the day after tomorrow. You can write the following expression for it:
+
+![User Task Expression](attachments/expressions/user-task-due-date.png)
 
 ## 3 Expression Types {#expression-types}
 

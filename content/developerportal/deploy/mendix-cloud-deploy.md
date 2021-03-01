@@ -171,10 +171,12 @@ Mendix licenses are sold in a number of standard plans. The table below shows th
 
 | Plan | App RAM | App CPU | DB RAM | DB CPU | DB Storage | File Storage |
 | --- | --- | --- | --- | --- | --- | --- |
+| XS20 | 1GB | 0.5-1 core | 1GB | 1 core | 5GB | 10GB |
 | S20 | 2GB | 0.5-1 core | 2GB | 1 core | 10GB | 20GB |
 | M20 | 4GB | 1-2 cores | 4GB | 1 core | 20GB | 40GB |
 | L20 | 8GB | 2-4 cores | 8GB | 1 core | 40GB | 80GB |
 | XL20 | 16GB | 4-8 cores | 16GB | 2 cores | 80GB | 160GB |
+| XXL20 | 32GB | 8-16 cores | 32GB | 2 cores | 160GB | 320GB |
 ||||||||
 | Strato *(legacy)* | 2GB | 0.5-1 core | 1GB | 0.5 core | 5GB | 20GB |
 | Meso *(legacy)* | 2GB | 0.5-1 core | 8GB | 2 cores | 20GB | 20GB |

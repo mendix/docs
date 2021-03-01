@@ -49,7 +49,7 @@ The **Page** action opens the specified page.
 
 The following properties are specific for this action:
 
-* **Page** – a [page](page) that should open.
+* **Page** – a [page](page-editor) that should open.
 
 * **Create Object** – creates a new object and passed it to the selected page (disabled by default). For more information, see the [Create Object Option](#create-object-option) section below
 
@@ -71,7 +71,7 @@ If you enable **Create Object** option, you need to set the following:
 * **Page** – Specifies which page with the new created object should be shown. The page should contain a data view that expects this object.
 * **Entity** – Specifies the object of which entity will be created and passed to the selected page as a context.    
 
-### 2.3 Microflow {#call-microflow}
+### 2.3 Microflow {#microflow}
 
 The **Microflow** action executes the selected microflow. The **Microflow** property, which allows you to select a microflow, is specific for this action.
 
@@ -93,7 +93,7 @@ The following properties are specific for this action:
 
 ### 2.6 Open Task Page {#open-task-page}
 
-**Open task page** opens an overview page set for the [user task](user-task) in properties. An element with this on-click action should be placed in a data container connected to the **System.WorkflowUserTask** entity. {{% todo %}}[The warning in properties gives a simpler explanation, but is confusing, because it appears even when I select a workflow entity]{{% /todo %}}
+**Open task page** opens an overview page set for the [user task](workflows-user-task) in properties. An element with this on-click action should be placed in a data container connected to the **System.WorkflowUserTask** entity. {{% todo %}}[The warning in properties gives a simpler explanation, but is confusing, because it appears even when I select a workflow entity]{{% /todo %}}
 
 ### 2.7 Complete Task {#complete-task}
 
@@ -101,9 +101,9 @@ The **Complete task** action marks the specified user task in the workflow as co
 
 The following properties are specific for this action:
 
-* **Workflow task** – The [user task](user-task) that should be marked as completed.
+* **Workflow task** – The [user task](workflows-user-task) that should be marked as completed.
 
-* **Outcome** – Lists the outcomes of the selected [user task](user-task) and follows the selected outcome. If the user task has only one outcome, the **Default** is set as an outcome and the property cannot be edited. 
+* **Outcome** – Lists the outcomes of the selected [user task](workflows-user-task) and follows the selected outcome. If the user task has only one outcome, the **Default** is set as an outcome and the property cannot be edited. 
 
 * **Close page** – Specifies whether the current page should be closed.
 

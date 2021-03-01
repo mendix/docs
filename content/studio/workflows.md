@@ -17,7 +17,13 @@ Workflows is a visual way of expressing application logic. A workflow looks like
 
 ![Workflow Example](attachments/workflows/workflow-example.jpg)
 
-## 2 Performing Basic Functions
+## 2 Workflow App Template
+
+{{% todo %}}[Add information on the workflow-specific app template.]{{% /todo %}}
+
+You can use a workflow-specific app template **Approval App**. 
+
+## 3 Performing Basic Functions
 
 You can perform the following basic functions when working on workflows:
 
@@ -29,7 +35,7 @@ You can perform the following basic functions when working on workflows:
 * [Add elements to a workflow](#add-elements)
 * [View element properties](#view-elements) 
 
-### 2.1 Opening a Workflow {#open}
+### 3.1 Opening a Workflow {#open}
 
 To open a workflow in Studio, do the following:
 
@@ -41,7 +47,7 @@ To open a workflow in Studio, do the following:
 
 The selected workflow is opened.
 
-### 2.2 Adding a Workflow {#create}
+### 3.2 Adding a Workflow {#create}
 
 To add a workflow to your app project in Studio, do the following:
 
@@ -59,7 +65,7 @@ To add a workflow to your app project in Studio, do the following:
 
 The workflow is created.
 
-### 2.3 Duplicating a Workflow {#duplicate}
+### 3.3 Duplicating a Workflow {#duplicate}
 
 To duplicate a workflow, do the following:
 
@@ -71,7 +77,7 @@ To duplicate a workflow, do the following:
 
 The workflow is duplicated.
 
-### 2.4 Copying and Pasting a Workflow {#copy-paste}
+### 3.4 Copying and Pasting a Workflow {#copy-paste}
 
 To copy and paste a workflow, do the following:
 
@@ -85,7 +91,7 @@ To copy and paste a workflow, do the following:
 
 Your workflow is pasted. For more information on copy/paste function in Studio, see the [Copy/Paste Pages, Microflows, and Enumerations](general#copy-paste-documents) section in *General Info*. 
 
-### 2.5 Deleting a Workflow {#delete}
+### 3.5 Deleting a Workflow {#delete}
 
 To delete a workflow in Studio, do one of the following:
 
@@ -97,7 +103,7 @@ To delete a workflow in Studio, do one of the following:
 
 The selected workflow is deleted. 
 
-### 2.6 Adding Elements to a Workflow 
+### 3.6 Adding Elements to a Workflow 
 
 To add an element to a workflow, do the following:
 
@@ -106,7 +112,7 @@ To add an element to a workflow, do the following:
 
 The selected element is added.
 
-## 3 Toolbox Elements
+## 4 Toolbox Elements
 
 The **Toolbox** tab contains elements that you can drag and drop on a path. Below is a categorized overview of all elements. The following sections are used:
 
@@ -114,7 +120,7 @@ The **Toolbox** tab contains elements that you can drag and drop on a path. Belo
 * [User actions](#user-actions)
 * [System actions](#system)
 
-### 3.1 General {#general}
+### 4.1 General {#general}
 
 Elements in the **General** section help you control the workflow path, for example, add parallel paths or end them:
 
@@ -131,18 +137,18 @@ The elements of this section are described in the table below:
 | [Parallel split](workflows-general-activities#parallel-split) | Adds two parallel paths to your workflow.                    |
 | [End activity](workflows-general-activities#end)             | Ends the path of the workflow                                |
 
-### 3.2 User Actions {#user-actions}
+### 4.2 User Actions {#user-actions}
 
-[User task](user-task) – a central element in a workflow that allows you to assign a task to a certain user using filters or microflows. 
+[User task](workflows-user-task) – a central element in a workflow that allows you to assign a task to a certain user using filters or microflows. 
 
 ![User Actions](attachments/workflows/user-actions.jpg)
 
-### 3.3 System Actions {#system}
+### 4.3 System Actions {#system}
 
-[Call microflow](call-microflow) activity calls a selected microflow. 
+[Call microflow](workflow-system-actions) activity calls a selected microflow. 
 
 ![System Actions](attachments/workflows/system-actions.jpg)
 
-## 4 Read More
+## 5 Read More
 
 * [Workflow Properties](workflow-properties)

@@ -18,7 +18,7 @@ For example, you can add filters and assign a task to the IT department. When th
 User task properties consist of the following sections:
 
 * [General](#general)
-* [User Assignment](user-assignment)
+* [User Assignment](#user-assignment)
 * [Task Page](#task-page)
 * [Display Information](#display-info)
 * [Due Date](#due-date)

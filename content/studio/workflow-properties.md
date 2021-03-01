@@ -16,7 +16,7 @@ Workflow properties consist of the following sections:
 * [General](#general)
 * [Data](#data)
 * [Workflow Page](#workflow-page)
-* [Display Information](display-information)
+* [Display Information](#display-info)
 * [Permissions](#permissions)
 * [Due Date](#due-date)
 
@@ -62,7 +62,7 @@ The **Display Information** section properties are described in the table below:
 
 ### 2.4 Permissions Section {#permissions}
 
-**Allowed roles** defines the [user role](settings-security##roles-and-permissions) that can execute the workflow.
+**Allowed roles** defines the [user role](settings-security#roles-and-permissions) that can execute the workflow.
 
 ![Permissions Section](attachments/workflow-properties/permissions.jpg)
 

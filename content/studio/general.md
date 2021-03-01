@@ -64,7 +64,7 @@ If you are working in a team with others, it is wise to check with your team mem
 
 ## 4 Switching App Modes
 
-After opening Studio, the home page of the app opens. 
+After opening Studio, the home page of the app project opens. 
 
 You can change the view of your page to different views by clicking the corresponding icons:
 
@@ -115,8 +115,6 @@ The **Toolbox**, **Properties** , and **Buzz** tabs are described in the table b
 The top menu bar allows to undo or redo actions, view your recent documents, preview or publish your app, and view checks in your app project. You can also access help and learning and view various information in the top menu bar. 
 
 ![Top Menu Bar](attachments/general/top-bar.png)
-
-
 
 The top menu bar items are described in the table below: 
 

@@ -218,6 +218,8 @@ The **Workflow Activities** are described in the table below:
 | Open User Task Page | The **Open User Task Page** activity opens a user task page specified in [user task properties](workflows-user-task). |
 | Open Workflow Page  | The **Open Workflow Page** activity opens an overview page specified in [workflow properties](workflow-properties). |
 
+{{% todo %}}[Double-check the names of these activities.]{{% /todo %}}
+
 ### 3.5 Variable Activities {#microflow-variable-activities}
 
 The **Variable Activities** section contain activities that manipulate variables: 

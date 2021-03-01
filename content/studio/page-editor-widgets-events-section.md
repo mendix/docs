@@ -77,6 +77,8 @@ The **Microflow** action executes the selected microflow. The **Microflow** prop
 
 ### 2.4 Call Workflow {#call-workflow}
 
+{{% todo %}}[Double-check the names of workflow on-click events, they might change.]{{% /todo %}}
+
 The **Call workflow** action executes the specified workflow. 
 
 The following properties are specific for this action:

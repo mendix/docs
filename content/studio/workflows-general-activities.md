@@ -11,6 +11,8 @@ tags: ["workflow", "workflows", "decision", "parallel split", "end activity"]
 
 ![General Activities](attachments/workflows/general.jpg)
 
+{{% todo %}}[Retake the screenshot above.]{{% /todo %}}
+
 ## 2 Decision {#decision}
 
 A decision is an element that makes a choice based on a condition and follows one and only one of the outgoing paths. For example, you can use it to follow different processes when a new hire works remotely or when they work from the office:
@@ -36,7 +38,7 @@ The **General** section properties are described in the table below:
 
 | Property  | Description                                                  |
 | --------- | ------------------------------------------------------------ |
-| Caption   | Describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand without needing to add annotations. |
+| Caption   | Describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand. |
 | Condition | **Condition** is configured based on an [expression](expressions). The expression should result in a Boolean or an enumeration.<br />For the expression resulting in a Boolean, two paths are possible: **true** and **false**. For example, you can use the expression resulting in a Boolean to follow different processes whether a new employee is working from home or from the office (and either send their devices to the home address or set up a workstation in the office).<br /> |
 
 #### 2.1.2 Outcomes Section {#outcome}
@@ -59,12 +61,12 @@ An example of Jump activity properties is represented in the image below:
 
 {{% todo %}}[Add screenshots]{{% /todo %}}
 
-The Jump activity properties consist of the **General** section.
+The Jump activity properties consist of the **General** section and are described in the table below:
 
 | Property | Description                                                  |
 | -------- | ------------------------------------------------------------ |
 | Name     | The internal name of the element. When referring to the element in the app project you will use this name. It must be unique. |
-| Caption  | Describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand without needing to add annotations. |
+| Caption  | Describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand. |
 | Target   | **Target** is the activity the **Jump** goes to. You can select the activity you would like to go to from the drop-down menu. |
 
 ## 4 Parallel Split {#parallel-split}
@@ -92,7 +94,7 @@ Parallel split properties consist of the following sections:
 
 #### 4.1.1 General Section {#general}
 
-The **Caption** describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand without needing to add annotations.
+The **Caption** describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand.
 
 #### 4.1.2 Paths Section {#paths}
 

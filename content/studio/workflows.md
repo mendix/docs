@@ -81,7 +81,7 @@ To copy and paste a workflow, do the following:
 
     ![Copy a Workflow](attachments/workflows/copy.jpg)
 
-3. Open the Studio app where you want to paste the microflow and press <kbd>Ctrl</kbd> +<kbd>V</kbd> or <kbd>Cmd</kbd> +<kbd>V</kbd>. 
+3. Open the Studio app where you want to paste the workflow and press <kbd>Ctrl</kbd> +<kbd>V</kbd> or <kbd>Cmd</kbd> +<kbd>V</kbd>. 
 
 Your workflow is pasted. For more information on copy/paste function in Studio, see the [Copy/Paste Pages, Microflows, and Enumerations](general#copy-paste-documents) section in *General Info*. 
 
@@ -120,12 +120,14 @@ Elements in the **General** section help you control the workflow path, for exam
 
 ![General Section](attachments/workflows/general.jpg)
 
+{{% todo %}}[Retake the screenshot above.]{{% /todo %}}
+
 The elements of this section are described in the table below:
 
 | Element                                                      | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Decision](workflows-general-activities#decision)            | Makes a choice based on a condition and follows one and only one of the outgoing paths. |
-| [Jump activity](workflows-general-activities#jump)           |                                                              |
+| [Jump activity](workflows-general-activities#jump)           | Allows you to jump to other activities in the workflow.      |
 | [Parallel split](workflows-general-activities#parallel-split) | Adds two parallel paths to your workflow.                    |
 | [End activity](workflows-general-activities#end)             | Ends the path of the workflow                                |
 

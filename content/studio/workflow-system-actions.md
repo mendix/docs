@@ -29,7 +29,7 @@ The section properties are described in the table below:
 
 | Property  | Description                                                  |
 | --------- | ------------------------------------------------------------ |
-| Caption   | The **Caption** describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand without needing to add annotations. |
+| Caption   | The **Caption** describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand. |
 | Microflow | The microflow that is called by this element.                |
 
 ### 2.3 Parameters Section {#parameters}
@@ -38,7 +38,7 @@ Parameters pass data to the element. Currently the parameters can only be select
 
 ### 2.2 Outcomes Section {#outcomes}
 
-**Outcomes** depends on the return value of the microflow. For example, for the Boolean, you have **true** and **false** outcomes, while for the enumeration – an outcome per each enumeration value and an empty one when the value is unassigned.  {{% todo %}}[Maybe an example here?]{{% /todo %}}
+**Outcomes** depends on the return value of the microflow. For example, for the Boolean, you have **true** and **false** outcomes, while for the enumeration – an outcome per each enumeration value and an empty one when the value is unassigned. 
 
 ## 3 Read More
 

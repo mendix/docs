@@ -49,7 +49,7 @@ Possible options of this property are described in the table below:
 
 ![Task Page](attachments/workflows-user-task/task-page.jpg)
 
-When you create a task page, you can use a user task-specific page templates. 
+When you create a task page, you can use a user task-specific page templates: 
 
 ![User Task Templates](attachments/workflows-user-task/user-task-templates.jpg)
 

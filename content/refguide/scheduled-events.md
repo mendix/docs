@@ -38,7 +38,7 @@ The `ScheduledEventInformation` objects are not cleared automatically. If you ha
 | Property | Description |
 | --- | --- |
 | Name | The name of the scheduled event. This name is stored in the `ScheduledEventInformation` objects at runtime, so that runs of the scheduled event are recognizable. |
-| Documentation | This field is for documentation purposes only. Its value is not visible to end-users and doesn't influence the behavior of your application. |
+| Documentation | This field is for documentation purposes in the app model only. Its value is not visible to end-users, is not displayed in the Developer Portal, and doesn't influence the behavior of your application. |
 
 
 ## 3 Execution Properties

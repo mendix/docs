@@ -253,7 +253,7 @@ The full stack is depicted in the table below. This indicates which components a
 </tbody>
 </table>
 
-¹Support will go through SAP Support
+¹Support will go through [SAP Support](https://launchpad.support.sap.com/#/incident/create/prefilled/comp_name=XX-PART-MDX-RAD). 
 
 In the diagrams below, the following colors are used:
 

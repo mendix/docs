@@ -43,7 +43,7 @@ These are the predefined App Team roles:
 
 Mendix Admins can edit and create new team roles within the company in [Control Center](../control-center/index).
 
-As a Scrum Master, you can edit roles for the specific app of which you are the Scrum Master by selecting **Team** > **Manage Team** (which will take you to the **App Team** tab of the **Settings** > **Security** page), clicking **Role settings,** then making your edits or clicking **New role** to create a custom new App Team role for that app
+As a Scrum Master, you can edit roles for the specific app of which you are the Scrum Master by selecting **Team** > **Manage Team** (which will take you to the **App Team** tab of the **Settings** > **Security** page), clicking **Role settings,** then making your edits by clicking **Edit** or clicking **New role** to create a custom new App Team role for that app.
 
 ![](attachments/app-roles/app-roles-edit.png)
 

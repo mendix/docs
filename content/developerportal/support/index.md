@@ -253,7 +253,7 @@ The full stack is depicted in the table below. This indicates which components a
 </tbody>
 </table>
 
-¹Support will go through SAP Support
+¹Support will go through [SAP Support](https://launchpad.support.sap.com/#/incident/create/prefilled/comp_name=XX-PART-MDX-RAD). 
 
 In the diagrams below, the following colors are used:
 
@@ -282,7 +282,7 @@ Mendix Support does not have access to app health, logs, graphs and monitoring. 
 ### 9.3 SAP Business Technology Platform
 
 Mendix provides an integration with the SAP Cloud Foundry environment of SAP Business Technology Platform (SAP BTP). Mendix applications are built to run on SAP BTP using the Mendix Cloud Foundry buildpack. Please check out the supported components in [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform).
-Mendix Support does not have access to app health, logs, graphs and monitoring. If you run into issues or want to ask a question on these supported components, please always provide relevant logs, data, and your own analysis that explains why you suspect the issue is caused by one of our supported components
+Mendix Support does not have access to app health, logs, graphs and monitoring – for support on these components, please contact [SAP Support](https://launchpad.support.sap.com/#/incident/create/prefilled/comp_name=XX-PART-MDX-RAD). If you run into issues or want to ask a question on the supported components, please always provide relevant logs, data, and your own analysis that explains why you suspect the issue is caused by one of our supported components
 
 {{% image_container width="40%" %}}
 ![](attachments/index-mendix-support/sap-cloud-platform.png)

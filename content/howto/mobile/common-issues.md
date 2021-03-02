@@ -50,11 +50,11 @@ For the Windows Defender firewall, the most common firewall, do the following:
 
 1. Windows distinguishes between two types of networks: private and public. Windows Defender Firewall applies stricter regulations for public networks. If, and only if, you are connected to a trusted network, configure the network as **Private** on your computer.
 
-## 4 Configure Parallels
+## 3 Configure Parallels
 
 To use Studio Pro on a Mac device, you will first need to install and configure Parallels. For more information, see [How to Configure Parallels](using-mendix-studio-pro-on-a-mac).
 
-## 3 Read More
+## 4 Read More
 
 * [How to Debug Native Mobile Apps (Advanced)](native-debug)
 * [Native Builder Reference Guide](/refguide/native-builder)

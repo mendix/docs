@@ -42,7 +42,7 @@ On the  **App Team** tab of the **Security** page, you can do the following:
 
 * Select a new **Role** for a team member
 * Click **Remove member** to remove that person from the App Team
-* Click **Add member** to add a new person to the App Team (see the [Inviting Team Members](#inviting) section below for more details)
+* Click **Invite member** to invite a new person to the App Team (see the [Inviting Team Members](#inviting) section below for more details)
 *  Click **Role settings** to view and edit the permissions for the App Team roles
 
 	{{% image_container width="400" %}}![](attachments/role-settings.png)

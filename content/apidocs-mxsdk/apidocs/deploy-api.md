@@ -1071,7 +1071,7 @@ Downloads archived logs for a specific date.
 
 ```bash
 HTTP Method: GET
-URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/logs/<Date>(YYYY-MM-DD)
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/logs/<Date>
 ```
 
 #### 3.19.2 Request
@@ -1080,7 +1080,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/logs/<Date
 
 - _AppId_ (String): Subdomain name of an app.
 - _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
-- _Date_ (String): Date of the desired log (YYYY-MM-DD).
+- _Date_ (String): Date of the desired log in the format `YYYY-MM-DD`.
 
 * If *Date* is tomorrow or after, or before the date the app was created, the log will contain the response `[No data found in file and no logging heartbeat detected]`
 
@@ -1113,7 +1113,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 {
     "Environment": "38471410-861f-47e5-8efc-2f4b16f04005",
-    "Date": 1536451200000,
+    "Date": "2018-08-10T00:00:00.000Z",
     "DownloadUrl": "https://boobafina.test.mendix.com/v1/logs/38471410-861f-47e5-8efc-2f4b16f04005?endDate=2018-09-09&expire=20180810153345&startDate=2018-08-10&signature=893DC8D3EAB0372FF49DB0E2D6973C701D32B567B67E97A41FD9E53E4D957991F80E3AC83B29452AF205FC306C51EAE8D81BA19F82147E5147B72EE15A8AC11FD3BE0306C3SDADAF478CCC9B98B9CBE70F99C99EDFB4DC77020F44FE540847FBABED34ACE856878F908EB38AC35D03125E7EFC9AE5CC2A67B871FA36C9F48A022BC7905838DE67046B5E57E82C0FBDCDFF67456DD66A2C2B4642B7B34C2829730257818B53113B620057777496EBA6D823EAA58378357A7F6ADA4956B6D86C100D61C8AD3483961A2C5EBEFF35A27BDE230478186F9F4ABC6207684781F"
 }
 ```

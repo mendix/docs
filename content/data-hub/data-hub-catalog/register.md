@@ -239,10 +239,10 @@ To update a published OData service, follow these steps:
 
 ## 7 Registering Data Sources from Enterprise Applications {#registration-form}
 
-You can connect data sources from other apps in your organization by registering them in Data Hub. The datasets have to be exposed in an OData v4 service. You can manually register the services for the different applications from the Data Hub Home. There is also the option to register a generic OData v4 service. 
+You can connect data sources from other apps in your organization by registering them in Data Hub. The datasets have to be exposed in an OData v4 service. You can manually register the services for several business applications from the Data Hub Home. There is also the option to register a generic OData v4 service. 
 
 {{% alert type="info" %}}
-Each new version of previously registered data sources (services) have to be registered.
+Each new version of previously registered data sources (services) have to be individually registered.
 {{% /alert %}}
 
 ###  7.1 OData v4 Service Contracts
@@ -251,7 +251,11 @@ The files for an OData v4 service contract may comprise the base schema definiti
 
 ### 7.2 Manually Registering a Data Source for an Enterprise Application
 
-This section describes the manual registration of data sources. There are options available for many enterprise applications. The steps that are described in this section can be followed for registration of a datasource for any of the application.  
+This section describes how to manually register data sources that are defined as OData v4 services. On the Data Hub **Home** page you will see buttons for registering specific enterprise applications. The steps that are described in this section can be followed for these applications.  
+
+{{% alert type="info" %}}
+If the application for the data source you would like to register is not shown, you can select the **OData v4** button.
+{{% /alert %}}
 
 #### 7.2.1 Selecting the Enterprise Application {#application}
 

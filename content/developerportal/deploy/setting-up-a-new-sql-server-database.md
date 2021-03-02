@@ -2,6 +2,7 @@
 title: "New Database Setup on SQL Server"
 parent: "mendix-on-windows-microsoft-sql-server"
 menu_order: 10
+tags: ["SQL Server", "Snapshot Isolation", "Transaction Isolation", "Database", "Extensions", "Role"]
 ---
 
 ## 1 Introduction

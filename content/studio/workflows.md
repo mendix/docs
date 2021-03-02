@@ -5,6 +5,10 @@ menu_order: 55
 tags: ["workflow", "workflows", "Studio"]
 ---
 
+{{% alert type="info" %}}
+This functionality is in Beta. For more information on Beta products, see  [Mendix Beta Features](/releasenotes/beta-features/).
+{{% /alert %}}
+
 ## 1 Introduction
 
 Workflow is a visual language in Mendix Studios that allows you to build extendable processes. It is fully integrated with other visual languages, such as the microflow editor and page editor. 

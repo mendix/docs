@@ -32,9 +32,9 @@ You can use expression for the following elements in a workflow:
 
 ## 2 Writing an Expression
 
-Named items in microflows and workflows (for example, objects, lists, or variables) can be called in an expression by inserting the name of the item and adding a dollar sign (for example,  `$customer` could refer to an object named `customer`).
+Named items in microflows and workflows (for example, objects, lists, or variables) can be called in an expression by inserting the name of the item and adding a dollar sign (for example,  `$Customer` could refer to an object named `Customer`).
 
-Attributes and associations of objects are accessed using a slash (for example, the **Name** attribute of the customer object is referred to as `$customer/Name`).
+Attributes and associations of objects are accessed using a slash (for example, the **Name** attribute of the customer object is referred to as `$Customer/Name`).
 
 You can combine functions in an expression. In this case, you can use brackets to determine the priority and associativity of calculations. For example, the **SellingPrice** is being calculated based on the default **Price** and **Discount** attributes:
 
@@ -86,7 +86,7 @@ You have a [user task](workflows-user-task) in a workflow and would like to add 
 
 ## 3 Expression Types {#expression-types}
 
-A list of the operators you can use in expressions in Studio can be found below:
+The list of expressions that are used in Studio the most is represented below. For the full list of available expressions, see [Expressions](/refguide/expressions) in the *Studio Pro Guide*.
 
 ### 3.1 Unary Expressions
 
@@ -109,23 +109,13 @@ A list of the operators you can use in expressions in Studio can be found below:
 * [Is equal to ( = )](/refguide/relational-expressions)
 * [Is not equal to ( != )](/refguide/relational-expressions)
 
-### 3.4 Special Checks
-
-* [Checking for an empty object](/refguide/special-checks)
-* [Checking for an empty object member](/refguide/special-checks)
-* [`isNew`](/refguide/special-checks) – checks whether an object is new
-
 ### 3.5 Boolean Expressions
 
 * [and](/refguide/boolean-expressions)
 * [or](/refguide/boolean-expressions)
 * [not](/refguide/boolean-expressions)
 
-### 3.6 If Expressions
-
-* [if](/refguide/if-expressions) – performs a conditional action
-
-### 3.7 Mathematical Function Calls
+### 3.6 Mathematical Function Calls
 
 * [`max`](/refguide/mathematical-function-calls) – the maximum of a list of numbers
 * [`min`](/refguide/mathematical-function-calls) – the minimum of a list of numbers
@@ -136,7 +126,7 @@ A list of the operators you can use in expressions in Studio can be found below:
 * [`pow`](/refguide/mathematical-function-calls) – the exponentiation
 * [`abs`](/refguide/mathematical-function-calls) – the absolute value
 
-### 3.8 String Function Calls
+### 3.7 String Function Calls
 
 * [`toUpperCase`](/refguide/string-function-calls) – converts the string to upper-case
 * [`toLowerCase`](/refguide/string-function-calls) – converts the string to lower-case
@@ -152,15 +142,12 @@ A list of the operators you can use in expressions in Studio can be found below:
 * [`replaceAll`](/refguide/string-function-calls) – replaces the occurrences of a sub-string
 * [`replaceFirst`](/refguide/string-function-calls) – replaces the first occurrence of a sub-string
 * [`String concatenation ( + )`](/refguide/string-function-calls) – concatenates strings
-* [`urlEncode`](/refguide/string-function-calls) – converts a string to be used in a URL
-* [`urlDecode`](/refguide/string-function-calls) – converts a string back from a URL
 
-### 3.9 Date Creation
+### 3.8 Date Creation
 
 * [`dateTime`](/refguide/date-creation) – creating a date value using the server's calendar
-* [`dateTimeUTC`](/refguide/date-creation) – creating a date value using the UTC calendar
 
-### 3.10 Between Date Function Calls
+### 3.9 Between Date Function Calls
 
 * [`millisecondsBetween`](/refguide/between-date-function-calls) – the milliseconds between two dates
 * [`secondsBetween`](/refguide/between-date-function-calls) – the seconds between two dates
@@ -171,60 +158,16 @@ A list of the operators you can use in expressions in Studio can be found below:
 * [`calendarMonthsBetween`](/refguide/between-date-function-calls) - the months between two dates
 * [`calendarYearsBetween`](/refguide/between-date-function-calls) - the years between two dates
 
-### 3.11 Add Date Function Calls
+### 3.10 Add Date Function Calls
 
 * [`addMilliseconds`](/refguide/add-date-function-calls) – adds milliseconds to a date
 * [`addSeconds`](/refguide/add-date-function-calls) – adds seconds to a date
 * [`addMinutes`](/refguide/add-date-function-calls) – adds minutes to a date
 * [`addHours`](/refguide/add-date-function-calls) – adds hours to a date
 * [`addDays`](/refguide/add-date-function-calls) – adds days to a date
-* [`addDaysUTC`](/refguide/add-date-function-calls) – adds days to a date using the UTC calendar
 * [`addWeeks`](/refguide/add-date-function-calls) – adds weeks to a date
-* [`addWeeksUTC`](/refguide/add-date-function-calls) – adds weeks to a date using the UTC calendar
 * [`addMonths`](/refguide/add-date-function-calls) – adds months to a date
-* [`addMonthsUTC`](/refguide/add-date-function-calls) – adds months to a date using the UTC calendar
 * [`addYears`](/refguide/add-date-function-calls) – adds years to a date
-* [`addYearsUTC`](/refguide/add-date-function-calls) – adds years to a date using the UTC calendar
-
-### 3.12 Trim to Date
-
-* [`trimToSeconds`](/refguide/trim-to-date) – trims to seconds
-* [`trimToMinutes`](/refguide/trim-to-date) – trims to minutes
-* [`trimToHours`](/refguide/trim-to-date) – trims to hours
-* [`trimToHoursUTC`](/refguide/trim-to-date) – trims to hours using the UTC calendar
-* [`trimToDays`](/refguide/trim-to-date) – trims to days
-* [`trimToDaysUTC`](/refguide/trim-to-date) – trims to days using the UTC calendar
-* [`trimToMonths`](/refguide/trim-to-date) – trims to months
-* [`trimToMonthsUTC`](/refguide/trim-to-date) – trims to months using the UTC calendar
-* [`trimToYears`](/refguide/trim-to-date) – trims to years
-* [`trimToYearsUTC`](/refguide/trim-to-date) – trims to years using the UTC calendar
-
-### 3.13 To String
-
-See [To String](/refguide/to-string) for details.
-
-### 3.14 Parse Integer
-
-See [Parse Integer](/refguide/parse-integer) for details.
-
-### 3.15 Parse & Format Decimal Function Calls
-
-* [`parseDecimal`](/refguide/parse-and-format-decimal-function-calls) – converts a string to a decimal
-* [`formatDecimal`](/refguide/parse-and-format-decimal-function-calls) – converts a decimal to a string
-
-### 3.16 Parse & Format Date Function Calls
-
-* [`parseDateTime[UTC]`](/refguide/parse-and-format-date-function-calls) – converts a string to a date value
-* [`formatDateTime[UTC]`](/refguide/parse-and-format-date-function-calls) – converts a date value to a string
-* [`formatTime[UTC]`](/refguide/parse-and-format-date-function-calls) – converts the time part of a date value to a string
-* [`formatDate[UTC]`](/refguide/parse-and-format-date-function-calls) – converts the date part of a date value to a string
-* [`dateTimeToEpoch`](/refguide/parse-and-format-date-function-calls) – converts a date to a long
-* [`epochToDateTime`](/refguide/parse-and-format-date-function-calls) – converts a long to a date
-
-### 3.17 Enumerations in Expressions
-
-* [`getCaption`](/refguide/enumerations-in-expressions) – gets the caption of an enumeration value in current language
-* [`getKey`](/refguide/enumerations-in-expressions) – gets the technical name of an enumeration value
 
 ## 4 Read More
 

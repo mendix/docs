@@ -34,11 +34,11 @@ These are the current LTS versions of Studio Pro:
 * [8.18](8.18) (started in January 2021)
 * [7.23](7.23) (started in February 2019)
 
-If you value version stability and security, then moving only between LTS versions is the happy path.
+We advise using LTS versions for all production apps, as LTS versions of Studio Pro enjoy the highest security and stability. LTS versions also have the longest support duration compared to other versions.
 
 ### 2.1 Support Duration
 
-The support duration for an LTS is a minimum of 3 years, which is the longest of these options. The maximum support duration for an LTS is 6 years.
+The support duration for an LTS is a minimum of 3 years, which is the longest of these options. Support for an LTS is discontinued once a third consecutive major version is released (for example, support on version 6 has been dropped with the release of version 9).
 
 ### 2.2 Release Cycle
 
@@ -50,7 +50,7 @@ For the support duration, the LTS will receive [patch](#patch) releases only.
 
 ### 2.4 Upgrading Impact
 
-The impact of upgrading from an LTS to an LTS is the lowest of these options. That is because an LTS has the longest support duration and only gets critical fixes, which results in high stability over time. In addition, the upgrade only has to be done only once, as opposed to multiple times between MTS versions or monthly release versions.
+The impact of upgrading from an LTS to an LTS is the lowest of these options. That is because an LTS has the longest support duration and only gets critical fixes, which results in high stability over time. In addition, the upgrade only has to be done once, as opposed to multiple times between MTS versions or monthly release versions.
 
 ## 3 Mid-Term Support Version (MTS)
 

@@ -239,7 +239,7 @@ To update a published OData service, follow these steps:
 
 ## 7 Registering Data Sources from Enterprise Applications {#registration-form}
 
-You can connect data sources from other apps in your organization by registering them in Data Hub. The datasets have to be exposed in an OData v4 service. You can manually register the services for several business applications from the Data Hub Home. There is also the option to register a generic OData v4 service. 
+You can register data sources from other business application in your organization, such as SAP and Mindsphere, in Data Hub. The available datasets have to be exposed in an OData v4 service which can be manually registered from the Data Hub Home through the connector of the business application. There is also the option to register a generic OData v4 service for applications that are not presented. 
 
 {{% alert type="info" %}}
 Each new version of previously registered data sources (services) have to be individually registered.
@@ -247,41 +247,46 @@ Each new version of previously registered data sources (services) have to be ind
 
 ###  7.1 OData v4 Service Contracts
 
-The files for an OData v4 service contract may comprise the base schema definition and additional associated schema documents to complete the full service definition.  The files formats of the OData v4 Service contracts that are accepted for the registration are *.xml* (for a single file) and  *.zip* (when the contract includes several files). 
+To register datasets in Data Hub from they must be published as OData v4 services. An OData v4 service contract may be a single file, or comprise multiple files, for example, the base schema definition and additional associated schema documents to complete the full service definition. The files formats of the OData v4 Service contracts that are accepted for the registration are *.xml* (for a single file) and  *.zip* (when the contract includes several files). 
 
 ### 7.2 Manually Registering a Data Source for an Enterprise Application
 
-This section describes how to manually register data sources that are defined as OData v4 services. On the Data Hub **Home** page you will see buttons for registering specific enterprise applications. The steps that are described in this section can be followed for these applications.  
+This section describes how to manually register data sources that are published as OData v4 services. On the Data Hub **Home** page you will see buttons for registering specific enterprise applications. The steps that are described in this section can be followed for these applications.  
 
 {{% alert type="info" %}}
-If the application for the data source you would like to register is not shown, you can select the **OData v4** button.
+If the application for the data source you would like to register is not shown, you can register it using the **OData** button.
 {{% /alert %}}
 
 #### 7.2.1 Selecting the Enterprise Application {#application}
 
-1. On the [Data Hub Home](../index) screen, click the button for the source application of the data source that you want to register.  
+On the [Data Hub Home](../index) screen, click the button for the source application of the data source that you want to register.  If the application is not listed, you register your OData v4 service by clicking **OData**.
+
+{{% alert type="info" %}}
+Datasets from other business application must be published as OData v4 services. 
+{{% /alert %}}
 
 ![Data Hub screen](attachments/register/register-form-home-page.png)
 
 #### 7.2.2 Upload Contract File of Data Source {#contract}
 
-1. In the **Contract** screen you can upload the contract file of the data source that you want to register. 
+In the **Contract** screen you can upload the contract file of the data source that you want to register. 
 
-   {{% alert type="info" %}}
-   Note about multiple files and single files.
-   {{% /alert %}}
+{{% alert type="info" %}}
+The OData v4 metadata contract file must be in *.xml* for single files and *.zip* when the contract is made up of multiple files.
+{{% /alert %}}
 
-![img](file:///Users/Ila.Gordhan/Desktop/Github Mendix User Documentation/content/data-hub/data-hub-catalog/attachments/register/old-register-service-form-contract.png?lastModify=1614001664)
+![upload contract](attachments/register/register-service-form-contract.png)
 
-1. Browse and upload the *.xml* or *.zip* file of the OData v4 service you want to register and click **Validate zip file**.
+1. Drag or browse the the *.xml* or *.zip* file of the OData v4 service you want to register. The selected file will be uploaded and verified:
 
-2. Validate???Is it automatically validated or do you have to click validate???
+![upload contract](attachments/register/register-service-form-validate.png)
 
-   
+1. Click **Go to next step** to proceed with the registration.
 
-3. Upload
 
 #### 7.2.3 Details of the Data Source {#data-source}
+
+You can specify the details of the data source that will be registerd and displayed in the Catalog.
 
 #### {#data-source}
 

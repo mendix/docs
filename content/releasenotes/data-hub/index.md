@@ -13,7 +13,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 #### New Features
 
-* Data sources from different enterprise business applications can now be registered more easily in Data Hub to enable users to connect to those datasets during app development. The new [Registration functionality](/data-hub/data-hub-catalog/register#registration-form) can be used to register data sources published as OData v4 contracts. This functionality replaces the previous manual registration form.
+* Data sources from different enterprise business applications can now be registered more easily in Data Hub using new [Registration functionality](/data-hub/data-hub-catalog/register#registration-form). This will enable users to use those datasets when developing apps without having to worry about connectivity to the application. This functionality replaces the previous manual registration form.
 
 ### February 19th, 2021
 

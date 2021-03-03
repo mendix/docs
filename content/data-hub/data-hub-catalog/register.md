@@ -243,7 +243,7 @@ To update a published OData service, follow these steps:
 
 ## 7 Registering Data Sources from Enterprise Applications {#registration-form}
 
-You can register data sources from other business application in your organization, such as SAP and Mindsphere, in Data Hub. The available datasets have to be exposed in an OData v4 service which can be manually registered from the Data Hub Home through the connector of the business application. There is also the option to register a generic OData v4 service for applications that are not presented. 
+You can register data sources from other business application, such as SAP and Mindsphere, in Data Hub. The available datasets have to be exposed in an OData v4 service which can be manually registered from the Data Hub **Home** by clicking on the connector of the business application. The registration process will take you through registering a data source for the selected application. There is also an option to register a generic OData v4 service. 
 
 {{% alert type="info" %}}
 Each new version of previously registered data sources (services) have to be individually registered.
@@ -251,11 +251,11 @@ Each new version of previously registered data sources (services) have to be ind
 
 ###  7.1 OData v4 Service Contracts
 
-Data sources and datasets must be published as OData v4 services for registration in the Catalog. An OData v4 service metadata contract may be a single file, or comprise multiple files, for example, the base schema definition and additional associated schema documents to complete the full service definition. The file formats of the OData v4 Service contracts that are accepted for the registration are *.xml* (for single files) and  *.zip* (when the contract includes several files). 
+Data sources and datasets must be published as OData v4 services for registration in the Catalog. An OData v4 service metadata contract may be a single file, or comprise multiple files, for example, the base schema definition and additional associated schema documents to complete the full service definition. The file formats of the OData v4 Service contracts that are accepted in the registration are *.xml* (for single files) and  *.zip* (when the contract includes several files). 
 
 ### 7.2 Manually Registering a Data Source for an Enterprise Application
 
-This section describes how to manually register data sources that are published as OData v4 services. On the Data Hub **Home** page you will see buttons for registering specific enterprise applications. The steps that are described in this section can be followed for these applications.  
+This section describes how to manually register data sources that are published as OData v4 services from several business application. The registration process is tailored for each application. On the Data Hub **Home** page you will see buttons for registering specific enterprise applications. The steps that are described in this section can be followed for these applications.  
 
 {{% alert type="info" %}}
 If the application for the data source you would like to register is not shown, you can register it using the **OData** button.
@@ -281,37 +281,31 @@ The OData v4 metadata contract file must be in *.xml* or *.zip*  format. when th
 
 ![upload contract](attachments/register/register-service-form-contract.png)
 
-1. Drag or browse the the *.xml* or *.zip* file of the OData v4 service you want to register. The selected file is  uploaded and verified:
+1. Upload the *.xml* or *.zip* file of the OData v4 service contract you want to register. The selected file is uploaded and verified. You can click the **x** if you want to upload an alternative file.
 
 ![upload contract](attachments/register/register-service-form-validate.png)
-
-1. Click **Go to next step** to proceed with the registration.
 
 
 #### 7.2.3 Details of the Data Source {#data-source}
 
-You can specify the details of the data source that will be registerd and displayed in the Catalog.
+In the **Details of Data Source** screen enter the following details; this information will be displayed in the data source details screen: 
 
-#### {#data-source}
+![](attachments/register/register-data-source-details.png)
 
-1. The **Details of Data Source** screen tothe  details that will be displayed in **Service metadata** pane: 
+* **Service Name** – the name of the data source as it should appear in the Catalog
 
-   ![](attachments/register/old-register-service-form-end-details.png)
+* **Service Version** – the version number of the service
 
-   1. In **Service Name**, enter the name of the OData service.
+  {{% alert type="info" %}}When registering another version of an already registered service, ensure that the version numbering indicates the degree of change between versions.
+  {{% /alert %}}
 
-   2. In **Service Version**, enter the version number for the service.
+3. In **Relative service location**, enter the relative URL for the service.
 
-      {{% alert type="info" %}}When registering another version of a registered service, ensure that the version numbering indicates the degree of change between versions.
-      {{% /alert %}}
+4. In **Service Description**, enter a description of the service that will be displayed in the **Search Details** and also used in the catalog search.
 
-   3. In **Relative service location**, enter the relative URL for the service.
+5. In **Tags**, enter tags that can be used to categorize registered services and thus make them discoverable for specific uses. Add tags by entering alphanumeric strings separated by spaces. To remove a tag, click the **x**. 
 
-   4. In **Service Description**, enter a description of the service that will be displayed in the **Search Details** and also used in the catalog search.
-
-   5. In **Tags**, enter tags that can be used to categorize registered services and thus make them discoverable for specific uses. Add tags by entering alphanumeric strings separated by spaces. To remove a tag, click the **x**. 
-
-   6. When all the information has been completed, click **Save your service**. 
+6. When all the information has been completed, click **Save your service**. 
 
 #### 7.2.x Details of the Application {#application}
 

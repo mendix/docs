@@ -1,7 +1,7 @@
 ---
 title: "Progress Bar"
 category: "Widgets"
-description: "Describes the configuration and usage of the Progress Bar widget, which is available in the Mendix Marketplace."
+description: "Describes the purpose, features and configuration of the Progress Bar widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "progress bar", "bootstrap", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -10,17 +10,53 @@ tags: ["marketplace", "app store", "marketplace component", "app store component
 
 The [Progress Bar](https://appstore.home.mendix.com/link/app/48910/) widget displays a progress bar.
 
-### 1.1 Features
+The widget:
+
+- visually displays the percentual progress based on a configurable range;
+- offers out-of-the-box brand styling for the bar and background color with "Appearance" design properties;
+- offers out-of-the-box options for different types of bars and support for animation.
+
+## 2 Usage
+
+The Progress Bar widget requires 3 values: a **Minimum** and **Maximum value** to describe the full range of the progress, and a **Current value** to indicate the progression on that range. These values can be provided in 3 different ways: as a **Static** integer value, a **Dynamic** integer value, or an **Expression**. An "On click" action can be set onto the progress bar to trigger custom logic on click interaction.
+
+### 2.1 Label
+
+Configuring the label on the progress bar can be done on the **Progress Label** tab and has the following options:
+
+1. Whether to show a label.
+1. The type of the label:
+   1. Text: A custom text.
+   1. Percentage: The **Current value** converted onto the configured range as a percentage. 
+   1. Custom: A custom widget.
+
+### 2.2 Styling
+
+Under the **Appearance** tab, the following styling properties can be adjusted to the progress bar:
+
+- Bar type. Can be plain, striped, or animated.
+- Bar and background color based on brand styling.
+- Size. Small, medium, and large. _Please note that when the size is configured to small, no label will be shown due to limited space and textual labels will be included as a tooltip that shows on hover._
+
+## 3 Previous versions documentation
+
+### Widgets below v2.0.0
+
+#### 1 Introduction
+
+The [Progress Bar](https://appstore.home.mendix.com/link/app/48910/) widget displays a progress bar.
+
+##### 1.1 Features
 
 * Show percentage of progress based on value
 * Render bar types: plain, striped, or animated stripes
 * Use bar Bootstrap colors: success, info, warning, or danger
 
-### 1.2 Demo App Project
+##### 1.2 Demo App Project
 
 For a demo app project that has been deployed with this widget, see [here](https://progressbar-demo.mxapps.io/).
 
-## 2 Usage
+#### 2 Usage
 
 Place the widget in the context of an object that has attributes for **Progress attribute** and **Maximum value attribute**:
 * If **Progress attribute** is not set, **Value static** will be used to calculate the progress
@@ -32,7 +68,7 @@ Depending on the specified Bootstrap style (primary, success, info, warning, dan
 
 For negative progress values, the bar is drawn from right to left.
 
-## 3 Developing This Marketplace Component
+#### 3 Developing This Marketplace Component
 
 1. Install the following:
 	* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)

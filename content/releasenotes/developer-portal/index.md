@@ -13,6 +13,20 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2021
 
+### March 4th, 2021
+
+#### Improvements
+
+* We made some minor changes to the look and feel over several pages on the Developper Portal, most natbly [General App Settings](/developerportal/settings/general-settings/)
+* We removed the old company admin cockpit. But you were already using the [Control Center](/developerportal/control-center/), right?
+* We made some preparations for git support
+* We implemented a way that makes sharing data across the Developer Portal more stable and secure
+
+#### Fixes
+
+* We fixed an issue where the “Add image” icon was missing when posting a comment on the buzz page (Ticket 109481)
+* We fixed an issue where creating an api-user would pop up in the audit trail (Ticket 116182)
+
 ### February 25th, 2021
 
 #### Improvements

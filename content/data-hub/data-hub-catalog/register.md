@@ -288,7 +288,7 @@ Upload the *.xml* or *.zip* file of the OData v4 service contract you want to re
 
 #### 7.2.3 Details of the Data Source {#data-source}
 
-In the **Details of Data Source** screen enter the following details: 
+In the **Details of Data Source** screen specify the following details: 
 
 ![](attachments/register/register-data-source-details.png)
 
@@ -313,28 +313,47 @@ In the **Details of Data Source** screen enter the following details:
 	* 2-100 characters long
 	
 	* no spaces
+	
 	Press **Enter** or select from the tags that match the characters that you have typed. You can enter multiple tags. To remove a tag, click the **x**. 
 	
-	  {{% alert type="info" %}}You also can specify tags when you [curate the data source](/data-hub/data-hub-catalog/curate#tags) in the Catalog. {{% /alert %}}
+	{{% alert type="info" %}}You also can specify tags when you [curate the data source](/data-hub/data-hub-catalog/curate#tags) in the Catalog. {{% /alert %}}
 
 When all the required information has been specified click **Go to next step**. 
 
 #### 7.2.4 Details of the Application {#application}
 
-In this screen, enter the details of the application from which the OData v4 service was published. This information will be displayed in the **Service Details** in the Data Hub Catalog and provide the link to the app.
+Specify the details of the source application of the data source (from which the OData v4 service was published). This information will be displayed in the **Data Source Details**  and provide the link to the app.
 
-![](attachments/register/old-register-service-form-details.png)
+If the application is already registered in the Catalog – for example, as the source application for previously registered services – you can select this from the **Select an existing application** list, or you can **Register a new application**.
 
-3. Specify the details of the **Application**:
+##### 7.2.4.1 Select an Existing Application
 
-   * **Use Existing Application**
-     * **Yes** – click this if the app is already registered in the Data Hub Catalog (for example, when you are registering a new service for a previously registered app, or when you are registering a new version of an existing service)
-     * **No** – click this when registering a new app that is not currently registered in the Catalog
-   * **UUID** – paste the UUID here for an existing app registered in the Data Hub Catalog (for a new app, the UUID is automatically generated)
-     * You can copy the UUID of an already registered app from **Settings** > [General](/developerportal/settings/general-settings) in the Developer Porta
-     * For further information on deep links for an app, see [How to Manage Deep Links](/developerportal/settings/manage-deeplinks).
-   * **Name** – enter the name of the application as it should appear in the details page of the service
-   * **Business Owner** – enter the name of the business owner of the data that is made available through the service
+Click  **Select application** and select from a list of all the currently registered apps originating from the *same business application*. For each app the **Technical Owner** will be shown in parentheses. In the example shown below when registering a SAP data source, the list of registered SAP applications currently registered is displayed:
+
+![](attachments/register/register-data-source-exist-app.png)
+
+
+
+##### 7.2.4.1 Register a New Application
+
+If the application for your data source is not registered in the catalog, click **Register a new application** and specify the following details:
+
+![](attachments/register/register-data-source-new-app.png)
+
+* **Application Name** – the name of the application as it should appear in the details page of the service.
+
+* **Technical Owner** – the name of the technical owner of the application and data source. The technical owner must be a registered Mendix User who will be able to [curate](/data-hub/data-hub-catalog/curate) the data source. By default this is the person registering the data source. 
+
+	{{% alert type="info" %}}If you change the **Technical Owner** you will not be able to  curate the data source in the Catalog unless you are also a curator or Data Hub Admin. {{% /alert %}}
+
+* **Business Owner** – the owner of the datas that is made available through the service. Select from the dropdown list.
+
+	{{% alert type="info" %}}You also can specify the business owner and technical owners when you [curate the data source](/data-hub/data-hub-catalog/curate#customowner) in the Catalog. {{% /alert %}}
+	
+* **Application Icon** – the icon that will be used for the data source and application is displayed. To specify another icon you can **Upload a different icon** or **select one from the library**.
+	{{% alert type="info" %}}You also can change the icon when you [curate the data source](/data-hub/data-hub-catalog/curate#application-icon) in the Catalog. {{% /alert %}}
+	
+
 
 #### 7.2.x Environment {#environment}
 

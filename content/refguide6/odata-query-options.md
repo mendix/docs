@@ -37,9 +37,9 @@ How to pass values for different attribute types
 
 | Type | How to pass |
 | --- | --- |
-| String and Enumeration | Surrounded with apostrophes, e.g. 'John' |
-| Datetime | Surrounded with datetime and apostrophes, e.g. datetime'2015-01-01' or datetime'<epoch value here>' |
-| Other | Plain value, e.g. 15 |
+| String and Enumeration | Surrounded with apostrophes, for example, 'John' |
+| Datetime | Surrounded with datetime and apostrophes, for example, datetime'2015-01-01' or datetime'<epoch value here>' |
+| Other | Plain value, for example, 15 |
 
 ### Combining filters
 

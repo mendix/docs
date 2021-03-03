@@ -77,7 +77,7 @@ After the **After startup** microflow is set up, Studio checks if the *Administr
 
 If Administrator and User roles already exist and are [compatible with Studio](#studio-compatible), they will get access to all microflows, nanoflows, pages, and entities (including entities' attributes and associations).
 
-All newly created roles get access to all pages, microflows, nanoflows, and entities (including their attributes and associations) that are in Studio, except for App Store pages, microflows, and entities (with their attributes and associations).
+All newly created roles get access to all pages, microflows, nanoflows, and entities (including their attributes and associations) that are in Studio, except for Marketplace pages, microflows, and entities (with their attributes and associations).
 
 Also, all new pages, microflows, and entities (with their attributes and associations) that are created in Studio will be accessible for all existing app roles by default.
 
@@ -142,7 +142,7 @@ Studio Pro security settings are compatible with Studio (that means that roles a
 * Demo users must have the correct name: identical to the project role name, but with the *demo_* prefix (for example, demo_user)
 * Demo users must have exactly one user role connected to them
 * User roles must have a demo user connected to them
-* User roles must have exactly one module role per module connected to them (Studio does not check System or App Store modules)
+* User roles must have exactly one module role per module connected to them (Studio does not check System or Marketplace modules)
 * Module roles do not have more than one user role connected to them
 
 ## 9 Read More

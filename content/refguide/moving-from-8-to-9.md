@@ -61,9 +61,9 @@ Review all error messages and messages about deprecated items and make changes w
 
 ### 3.6 Upgrade All Widgets and Modules {#upgrade-widgets}
 
-To minimize the chance of problems, you should update all widgets and other App Store modules used by your project to the latest version.
+To minimize the chance of problems, you should update all widgets and other Marketplace modules used by your project to the latest version.
 
-Check if there is a newer version of your App Store modules available in the App Store. Read the version release notes in the App Store to see whether you need to perform specific actions when upgrading.
+Check if there is a newer version of your modules available in the Marketplace. Read the version release notes in the Marketplace to see whether you need to perform specific actions when upgrading.
 
 Be sure to update these key widgets, resources, and actions:
 
@@ -75,7 +75,7 @@ In general you should not remove and reimport modules, unless this is recommende
 
 ### 3.7 Update Atlas Module (Optional)
 
-Mendix 9 comes with a new Atlas theme including new page templates and building blocks. To get this theme, you can download the [Atlas UI 3 (Mx9 Beta)](https://marketplace.mendix.com/link/component/116539) module package from the App Store.
+Mendix 9 comes with a new Atlas theme including new page templates and building blocks. To get this theme, you can download the [Atlas UI 3 (Mx9 Beta)](https://marketplace.mendix.com/link/component/116539) module package from the Marketplace.
 
 ### 3.8 Review and Test Your App
 

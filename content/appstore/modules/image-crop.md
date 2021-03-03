@@ -1,8 +1,8 @@
 ---
 title: "Image Crop"
 category: "Modules"
-description: "Describes the configuration and usage of the Image Crop module, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "image crop", "cropper", "image", "platform support"]
+description: "Describes the configuration and usage of the Image Crop module, which is available in the Mendix Marketplace."
+tags: ["marketplace", "app store", "marketplace component", "app store component", "image crop", "cropper", "image", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -70,6 +70,6 @@ These are the **Cropper** widget properties:
 	* If both **Max width** and **Max height** are set to *0*, the width and height set by the end-user with the widget will be used
 * **thumbnailWidth** and **thumbnailHeight** – this is the size of the thumbnail, which is editable so that you can keep this in or near the same aspect ratio as the new image; the default implementation uses the tumbnail size as configured in **Configuration/ThumbnailSize** unless the image is smaller than the thumbnail
 
-## 5 Developing This App Store Component
+## 5 Developing This Marketplace Component
 
 We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/ImageCropModule](https://github.com/mendix/ImageCropModule).

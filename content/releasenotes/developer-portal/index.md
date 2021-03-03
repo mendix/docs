@@ -13,6 +13,27 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2021
 
+### February 25th, 2021
+
+#### Improvements
+
+* We optimized the **App Templates** page for a better experience. We also improved the search function on this page.
+* There is now better performance for building your app after you select a template.
+
+### February 23rd, 2021
+
+#### Improvements
+
+* We have updated the [App Projects](/developerportal/control-center/#projects) tab of Control Center, where you can now do the following:
+	* Open the [App Team](/developerportal/collaborate/team#managing) page from the project details page in order to manage App Team members and add yourself to an App Team (if you are a Mendix Admin)
+	* Deactivate or delete an app project or an App Team member
+
+### February 9th, 2021
+
+#### Improvements
+
+* We improved the speed of the **App Templates** page. After you click **Create App**, the templates appear instantly now.
+
 ### February 5th, 2021
 
 #### Improvements
@@ -145,7 +166,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Improvements
 
-* We implemented the second increment in renaming the default **End-user** App Team role to [Guest](/developerportal/app-roles/index#app-team-roles).
+* We implemented the second increment in renaming the default **End-user** App Team role to [Guest](/developerportal/collaborate/app-roles#app-team-roles).
 
 #### Fixes
 
@@ -157,7 +178,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 * The [new Stories UI](/developerportal/collaborate/stories) has been improved with various sections. The [old Stories UI](/developerportal/collaborate/stories#old) will be made unavailable soon. We encourage you to turn your tasks that are still available in the old Stories UI into new stories before the old UI is inaccessible.
 * We improved performance on story-related actions such as drag-and-drop and status changes on large app projects with many deleted items.
-* We renamed the default **End-User** App Team role to [Guest](/developerportal/app-roles/index#app-team-roles) to better distinguish App Team roles from app user roles.
+* We renamed the default **End-User** App Team role to [Guest](/developerportal/collaborate/app-roles#app-team-roles) to better distinguish App Team roles from app user roles.
 * We removed the list appearance of the [My Company's Apps](/developerportal/apps-list/#my-company-apps) page.
 
 #### Fixes 

@@ -76,7 +76,7 @@ Studio Pro Guide | Model SDK API docs
 
 ## 5 Validation Rules
 
-For each attribute of an entity, it is possible to define a validation rule. The validation rule is applied to a single attribute, will show some error message, and it is a certain type of rule, e.g. the attribute needs to be equal to a certain value, or has a maximum length, or needs to be unique.
+For each attribute of an entity, it is possible to define a validation rule. The validation rule is applied to a single attribute, will show some error message, and it is a certain type of rule, for example, the attribute needs to be equal to a certain value, or has a maximum length, or needs to be unique.
 
 ### 5.1 Graphical Overview
 

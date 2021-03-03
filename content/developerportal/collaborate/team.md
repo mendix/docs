@@ -18,7 +18,7 @@ To view and manage your App Team members, follow these steps:
 On the **Team** page, you will see an overview with the following information about the App Team members:
 
 * **Name** – the developer's name
-* **Role** – the developer's App Team role (for details on available roles, see the [App Roles](/developerportal/app-roles/index))
+* **Role** – the developer's App Team role (for details on available roles, see the [App Roles](/developerportal/collaborate/app-roles))
 
 ![](attachments/team.png)
 
@@ -30,9 +30,9 @@ When you click **Manage Team** in the top-right corner of the screen, you will b
 
 Only the following roles can see the **Manage Team** button:
 
-* [Scrum Master](/developerportal/app-roles/index#app-team-roles)
+* [Scrum Master](/developerportal/collaborate/app-roles#app-team-roles)
 * [Mendix Admin](/developerportal/control-center)
-* A [custom role](/developerportal/app-roles/index#app-team-roles) with **App Settings** permission
+* A [custom role](/developerportal/collaborate/app-roles#app-team-roles) with **App Settings** permission
 
 {{% /alert %}}
 
@@ -42,7 +42,7 @@ On the  **App Team** tab of the **Security** page, you can do the following:
 
 * Select a new **Role** for a team member
 * Click **Remove member** to remove that person from the App Team
-* Click **Add member** to add a new person to the App Team (see the [Inviting Team Members](#inviting) section below for more details)
+* Click **Invite member** to invite a new person to the App Team (see the [Inviting Team Members](#inviting) section below for more details)
 *  Click **Role settings** to view and edit the permissions for the App Team roles
 
 	{{% image_container width="400" %}}![](attachments/role-settings.png)
@@ -60,6 +60,6 @@ To invite members, click **Invite Member** on the **Team** page, or click the **
 
 ## 4 Read More
 
-* [App Roles](/developerportal/app-roles/index)
+* [App Roles](/developerportal/collaborate/app-roles)
 * [Settings](/developerportal/settings)
 * [Stories](stories)

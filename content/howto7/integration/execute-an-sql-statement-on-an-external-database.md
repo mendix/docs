@@ -22,7 +22,7 @@ JDBC (_Java Database Connectivity_) API, a standard Java API, is used when this 
 
 Before you can start with this how-to, please make sure you have completed the following prerequisites.
 
-*   The **Database Connector** from the App Store
+*   The **Database Connector** from the Marketplace
 *   A database **URL** address that points to your database.
 *   The **username** for logging into the database, relative to the database URL address.
 *   The **password** for logging into the database, relative to the database URL address.
@@ -31,7 +31,7 @@ Before you can start with this how-to, please make sure you have completed the f
 
 ## 3 Preparation
 
-The JDBC driver jars, for the databases you want to connect to, must be placed inside the userlib directory of your Mendix application. So if you want to connect to Amazon RDS PostgreSQL database (For e.g. `jdbc:postgresql://xyz-rds-instance.ccnapcvoeosh.eu-west-1.rds.amazonaws.com:5432/postgres`), you need to place PostgreSQL Jdbc driver jar inside the userlib folder.
+The JDBC driver jars, for the databases you want to connect to, must be placed inside the userlib directory of your Mendix application. So if you want to connect to Amazon RDS PostgreSQL database (For for example, `jdbc:postgresql://xyz-rds-instance.ccnapcvoeosh.eu-west-1.rds.amazonaws.com:5432/postgres`), you need to place PostgreSQL Jdbc driver jar inside the userlib folder.
 
 ## 4 Using Execute Statement Action in a Microflow
 

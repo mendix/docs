@@ -1,5 +1,5 @@
 ---
-title: "Generate a Published REST Resource"
+title: "Generating a Published REST Resource"
 parent: "published-rest-services"
 menu_order: 20
 description: "Generate a published REST resource from an entity"

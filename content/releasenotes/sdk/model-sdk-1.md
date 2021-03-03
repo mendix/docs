@@ -62,7 +62,7 @@ Please run `npm update mendixmodelsdk --save`.
 | 553639 | Low | The Model API and SDK observe the same rules for setting properties to `null` as the Modeler does: (1) list properties cannot receive `null` at all, (2) non-list properties can only be set to `null` if they are are object-typed (as in, not primitive or enum) and not required (see documentation). |
 | 561972 | Low | It is no longer possible to move a model element from one model to another. In other words: model elements can only exist within the model they were created in. |
 | 562069, 561977, 568908 | None | The SDK is now versioned in the sense that structures and properties can have lifecycles, moving from `not yet introduced` to `introduced` to `deprecated` to `deleted` depending on which version of the Mendix Modeler was used to create (the MPK for) the working copy. The SDK provides suitable warnings or errors (once per structure/property per connection) on the console whenever a structure or property is used that is either not yet introduced, deprecated or deleted. |
-| 463511* | Low | Finding images by qualified name now works, so e.g. `pages.StaticImageViewer.image` isn't always `null`. |
+| 463511* | Low | Finding images by qualified name now works, so for example, `pages.StaticImageViewer.image` isn't always `null`. |
 | 585563 | Low | Stability improvements when uploading large files. |
 | 583025 | Low | `Structure#traverse` now checks whether the structure has been loaded and fails if not. You have to pre-load traversed structures first if not done already. |
 | 585492 | Low | Updated the Model SDK for latest (RC-)version of the Modeler, as in, |

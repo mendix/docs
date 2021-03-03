@@ -9,7 +9,7 @@ title: "Enter the title of the document"
 
 ## 1 Introduction
 
-{Provide a basic description of what this platform-supported Mendix App Store component does.}
+{Provide a basic description of what this platform-supported Mendix Marketplace component does.}
 
 ### 1.1 Typical Use Cases
 
@@ -21,7 +21,7 @@ title: "Enter the title of the document"
 
 ### 1.5  Dependencies
 
-{List important dependencies, especially when they are other App Store components.}
+{List important dependencies, especially when they are other Marketplace components.}
 
 ### 1.6 Demo App Project
 
@@ -43,9 +43,9 @@ title: "Enter the title of the document"
 
 {Optional: Provide basic troubleshooting info for configuration here if necessary. You should provide this info in a reference guide page or how-to for more specific use cases.}
 
-## 6 Developing This App Store Component
+## 6 Developing This Marketplace Component
 
-{If the community is able to contribute to this App Store component via a GitHub repo, describe that process here.}
+{If the community is able to contribute to this Marketplace component via a GitHub repo, describe that process here.}
 
 ## 7 Read More
 

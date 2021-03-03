@@ -66,11 +66,11 @@ From Studio Pro:
 
 1.  Click **Project** > **Build Native Mobile App**:
 
-	{{% image_container width="350" %}}![Start Mendix Native Mobiler Builder](attachments/nbui/start-nbui.png){{% /image_container %}}
+	{{% image_container width="350" %}}![Start Mendix Native Mobile Builder](attachments/nbui/start-nbui.png){{% /image_container %}}
 
 1.  When Mendix Native Mobile Builder launches you will see the home screen:
 
-	{{% image_container width="350" %}}![Mendix Natve Mobile Builder Home Screen](attachments/nbui/home-screen.png){{% /image_container %}}
+	{{% image_container width="350" %}}![Mendix Native Mobile Builder Home Screen](attachments/nbui/home-screen.png){{% /image_container %}}
 
 1. Select **Build app for distribution**.
 1.  Fill in your app's name and the app identifier. The wizard provides defaults, but you might want to align the app identifier to use your company's reversed URL, or change the app name to something besides the project name:
@@ -105,7 +105,7 @@ You have completed the mandatory basic app configuration required to build your 
 
 Next, do the following:
 
-1. Fill in an intentional version number. For defaults, we reccomend you use these numbering guidelines:
+1. Fill in an intentional version number. For defaults, we recommend you use these numbering guidelines:
 
 	* Versions lower than 0.5.0 for alpha releases
 	* Versions ranging from 0.5 to 0.9.x for beta releases
@@ -184,14 +184,14 @@ Depending on whether you chose to sign your iOS app or not, the output of the bu
 
 To be able to upload your app to App Store Connect, you will have to have set up a new app using the App Store Connect website. While there, use the **app name** and **app id** you used to build your app. For further instruction, see the [App Store Connect Guide to adding a new app](https://help.apple.com/app-store-connect/en.lproj/static.html#devbec4892b7).
 
-When signing your iOS app, an *IPA* file is generated. To upload an *IPA* to the App Store, XCode includes a command line tool. Assuming XCode is installed and the extra command line tool is set up, the command to upload the *IPA* is the following:
+When signing your iOS app, an *IPA* file is generated. To upload an *IPA* to the Apple App Store, XCode includes a command line tool. Assuming XCode is installed and the extra command line tool is set up, the command to upload the *IPA* is the following:
 
 ```
 xcrun altool --upload-app --type ios --file "path/to/application.ipa"
 --username "YOUR_APPSTORE_USER_EMAIL" --password "YOUR_APPSTORE_PASSWORD"
 ```
 
-Replace `file "path/to/application.ipa"` with the absolute path to your IPA file, `username` with your developer app store email address, and `password` with your App Store password.
+Replace `file "path/to/application.ipa"` with the absolute path to your IPA file, `username` with your developer app store email address, and `password` with your Apple App Store password.
 
 The command will first verify your IPA is packaged correctly and ready to be shipped, and then will then upload it to TestFlight for further processing.
 
@@ -199,7 +199,7 @@ The command will first verify your IPA is packaged correctly and ready to be shi
 
 Local signing is useful if you only want to test your app on a device, or you do not have a distribution certificate and have run out of build minutes on App Center when signing with a developer certificate.
 
-In order to deploy the *nativeTemplate.xcarchive* on a device or on the App Store, an Apple developer account and development team is required. If one is available, do the following:
+In order to deploy the *nativeTemplate.xcarchive* on a device or on the Apple App Store, an Apple developer account and development team is required. If one is available, do the following:
 
 1. Using Xcode, double-click the *nativeTemplate.xcarchive* file. It should open with the built-in **Application Loader** software.
 1.  Click the *Distribute App* button to start the local signing flow:

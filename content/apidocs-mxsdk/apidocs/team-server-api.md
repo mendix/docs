@@ -25,7 +25,7 @@ The Developer Portal Management API requires its users to authenticate themselve
 
 ```http
 HTTP Method: GET
- URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches/
+ URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches
 ```
 
 #### 3.1.1 Request
@@ -37,7 +37,7 @@ HTTP Method: GET
 ##### 3.1.1.2 Example
 
 ```http
-GET /api/1/apps/calc/branches/ HTTP/1.1
+GET /api/1/apps/calc/branches HTTP/1.1
 Host: deploy.mendix.com
 
 Accept: */*
@@ -138,7 +138,7 @@ Retrieves all revisions of a specific branch that belongs to the team server pro
 
 ```http
 HTTP Method: GET
- URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches/<Name>/revisions/
+ URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches/<Name>/revisions
 ```
 
 #### 3.3.1 Request
@@ -151,7 +151,7 @@ HTTP Method: GET
 ##### 3.3.1.2 Example
 
 ```http
-GET /api/1/apps/calc/branches/trunk/revisions/ HTTP/1.1
+GET /api/1/apps/calc/branches/trunk/revisions HTTP/1.1
 Host: deploy.mendix.com
 
 Accept: */*

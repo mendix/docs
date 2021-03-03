@@ -40,6 +40,8 @@ We advise using LTS versions for all production apps, as LTS versions of Studio 
 
 The support duration for an LTS is a minimum of 3 years, which is the longest of these options. Support for an LTS is discontinued once a third consecutive major version is released (for example, support on version 6 has been dropped with the release of version 9).
 
+[**3 years rather than 2 years contradicts SLA?**]
+
 ### 2.2 Release Cycle
 
 There are no regular releases for an LTS, as they only start with the release of a new higher major version. There will only be [patch](#patch) releases for an LTS on an as-needed basis.

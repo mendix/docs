@@ -42,7 +42,7 @@ The workflow that is called by this activity.
 
 ### 3.2 Context Object
 
-The object which you want to use as a context.
+The object which you want to use as a context. It should be a [specialization](generalization-and-association) of the **Workflow Context** entity from the **System** module.
 
 ### 3.3 Variable Name, Object Name, or List Name {#name}
 

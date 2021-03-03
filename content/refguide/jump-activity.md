@@ -31,7 +31,7 @@ The **Caption** describes what happens in this element. It is displayed in the w
 
 ### 2.3 Target
 
-**Target** is the activity the **Jump** goes to. You can select the activity you would like to go to from the drop-down menu. 
+**Target** is the activity that the workflow process will jump to during execution. You can select the activity you would like to go to from the drop-down menu. 
 
 {{% alert type="warning" %}}
 You cannot use the **Jump** activity in a Parallel split or in a path where it would end the workflow without any other path continuing it. 

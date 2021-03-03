@@ -21,7 +21,7 @@ There are two sets of properties for this activity, those in the dialog box on t
 
 ![Set User Task Outcome Properties](attachments/set-task-outcome/set-task-outcome-properties.jpg)
 
-The **Open user task** properties pane consists of the following sections:
+The **Set task outcome** properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)

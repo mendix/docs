@@ -23,7 +23,7 @@ There are two sets of properties for this activity, those in the dialog box on t
 
 ![Open Workflow Page Properties](attachments/open-workflow-page/open-workflow-page-properties.jpg)
 
-The **Open user task** properties pane consists of the following sections:
+The **Open workflow page** properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)

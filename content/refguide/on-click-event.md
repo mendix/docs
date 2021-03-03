@@ -273,11 +273,13 @@ The following properties are specific for this event:
 
 * **Workflow** – A [workflow](workflows) that should be executed.
 * **Close page** – Specifies whether the current page should be closed.
-* **Commit** – Specifies whether the object should be committed when running a workflow. 
+* **Commit** – Specifies whether the object should be committed when running a workflow. The object should be a [specialization](generalization-and-association) of the **Workflow Context** entity from the **System** module.
 
 ### 3.14 Open Workflow Page {#open-workflow-page}
 
-**Open workflow page** opens an overview page set for the **Workflow page** in [workflow properties](workflow-properties). An element calling this event should be placed in a data container connected to the **System.WorkflowInstance** entity. 
+**Open workflow page** opens an overview page set for the **Workflow page** in [workflow properties](workflow-properties). This page is typically used by a process administrator role to inspect status of a workflow instance and to manage the instance, e.g. abort a workflow if required.
+
+An element calling this event should be placed in a data container connected to the **System.WorkflowInstance** entity. 
 
 For more information on workflow-related entities in the System module, see the the [Workflow Entities in the System Module](workflows#workflow-entities) section in *Workflows*. 
 

@@ -13,12 +13,12 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 **Release date: March 2nd, 2021**
 
-### Improvements 
+#### Improvements 
 
 * Android keystore validation is now non-blocking if the tool cannot verify the validity of the key. The build will 
 still fail if the keystore values are invalid.
   
-### Fixes
+#### Fixes
 
 * We fixed an issue with Android certificates not being verified correctly.
 

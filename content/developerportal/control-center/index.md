@@ -38,10 +38,7 @@ On the **External members** tab, you can see the members outside of your company
 
 When you select members in the lists on these tabs, a context menu appears with options for exporting member details to an *.xlsx* file and deactivating/activating members.
 
-For security reasons, deactivating an employee that is leaving your company is recommended (if the employee returns to your company, they can be activated as a member again). Before deactivating a user, make sure the following points are true for that user:
-
-* They do not have a [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) role
-* They are not the only [Scrum Master](/developerportal/collaborate/app-roles#app-team-roles) in an App Team
+For security reasons, deactivating an employee that is leaving your company is recommended (if the employee returns to your company, they can be activated as a member again).
 
 {{% alert type="info" %}}
 You cannot deactivate yourself.

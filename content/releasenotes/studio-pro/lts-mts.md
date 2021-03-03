@@ -40,7 +40,7 @@ We advise using LTS versions for all production apps, as LTS versions of Studio 
 
 The support duration for an LTS is a minimum of 3 years, which is the longest of these options. Support for an LTS is discontinued once a third consecutive major version is released (for example, support on version 6 has been dropped with the release of version 9).
 
-[**3 years rather than 2 years contradicts SLA?**]
+[**3 years rather than 2 years contradicts SLA? Will the SLA be updated?**]
 
 ### 2.2 Release Cycle
 
@@ -51,6 +51,8 @@ There are no regular releases for an LTS, as they only start with the release of
 For the support duration, the LTS will receive [patch](#patch) releases only. 
 
 ### 2.4 Upgrading Impact
+
+[**Is it accurate that it is the lowest impact, or this is mostly encouragement for happy LTS path?**]
 
 The impact of upgrading from an LTS to an LTS is the lowest of these options. That is because an LTS has the longest support duration and only gets critical fixes, which results in high stability over time. In addition, the upgrade only has to be done once, as opposed to multiple times between MTS versions or monthly release versions.
 
@@ -84,7 +86,9 @@ A monthly release is a a non-MTS/LTS minor release that has no support with patc
 
 ### 4.1 Support Duration
 
-The support duration for a monthly release is limited, as all bugs found on a monthly release will only be fixed rolling forward to the next minor version. 
+[**"limited" usage below - from Support: "give people the impression that only MTS and LTS versions are supported, which is not the case" ?**]
+
+The support duration for a monthly release is limited, as all bugs found on a monthly release will only be fixed rolling forward to a subsequent minor version. 
 
 For example, if a bug is found in version 9.1, it will only be fixed in the next monthly release, which would be version 9.2.
 

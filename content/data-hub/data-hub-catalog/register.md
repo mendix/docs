@@ -15,7 +15,9 @@ All shareable datasets can be registered in the Data Hub Catalog by exposing the
 * Descriptive metadata – information that indicates the applicability of using the asset for a particular app
 * Further information – additional informaiton added to registered assets (datasets and data sources) in the Catalog when they are curated
 
-For Mendix apps, there is a deployment pipeline that registers the published OData v3 services that have been set-up to expose entities that can be shared. This means that in Studio Pro, upon deployment of an app (via **Run**), the services are automatically registered in the Data Hub Catalog. For further information on deployment on the Mendix Platform, see [Deployment](/developerportal/deploy/) in the *Developer Portal Guide*.
+For Mendix apps deploying to the Mendix cloud, there is a deployment pipeline that registers the published OData v3 services that have been set-up to expose entities that can be shared. This means that in Studio Pro, upon deployment of an app (via **Run**), the services are automatically registered in the Data Hub Catalog. For further information on deployment on the Mendix Platform, see [Deployment](/developerportal/deploy/) in the *Developer Portal Guide*.
+
+{{% alert type="info" %}}Mendix apps that are not hosted in the Mendix Cloud should use the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis) to register their OData v3 services. {{% /alert %}}
 
 To register datasets from other enterprise applications in the Catalog they must be exposed in an OData v4 service using the [manual registration process.](#registration-form) 
 
@@ -68,6 +70,8 @@ The association of a generailsed entity that is exposed in the same service as t
 ## 3 Publishing an OData Service in Studio Pro{#odata-service-reg}
 
 This section describes how to register entities from your Mendix app in the Data Hub Catalog in Studio Pro. For details on publishing an OData resource, see [Published OData Resource](/refguide/published-odata-resource) in the *Studio Pro Guide*.
+
+{{% alert type="info" %}}Mendix apps that are not  hosted in the Mendix Cloud are not automatically registered in the Data  Hub Catalog through the deployment pipeline. For example, if you have an app running on-premises or anywhere else outside the Mendix Cloud,  there will not be any auto-registration. These services have to be registered using the  [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis). {{% /alert %}}
 
 {{% alert type="info" %}}
 A published OData service is an API to your Mendix app. Some apps may have several published services exposing different combinations of entities. In Studio Pro, it is good practice to group them in a separate folder under each [module](/refguide/modules) to make location and maintenance easier.
@@ -247,7 +251,7 @@ Each new version of previously registered data sources (services) have to be ind
 
 ###  7.1 OData v4 Service Contracts
 
-To register datasets in Data Hub from they must be published as OData v4 services. An OData v4 service contract may be a single file, or comprise multiple files, for example, the base schema definition and additional associated schema documents to complete the full service definition. The files formats of the OData v4 Service contracts that are accepted for the registration are *.xml* (for a single file) and  *.zip* (when the contract includes several files). 
+Data sources and datasets must be published as OData v4 services for registration in the Catalog. An OData v4 service metadata contract may be a single file, or comprise multiple files, for example, the base schema definition and additional associated schema documents to complete the full service definition. The file formats of the OData v4 Service contracts that are accepted for the registration are *.xml* (for single files) and  *.zip* (when the contract includes several files). 
 
 ### 7.2 Manually Registering a Data Source for an Enterprise Application
 
@@ -272,12 +276,12 @@ Datasets from other business application must be published as OData v4 services.
 In the **Contract** screen you can upload the contract file of the data source that you want to register. 
 
 {{% alert type="info" %}}
-The OData v4 metadata contract file must be in *.xml* for single files and *.zip* when the contract is made up of multiple files.
+The OData v4 metadata contract file must be in *.xml* or *.zip*  format. when the contract is made up of multiple files.
 {{% /alert %}}
 
 ![upload contract](attachments/register/register-service-form-contract.png)
 
-1. Drag or browse the the *.xml* or *.zip* file of the OData v4 service you want to register. The selected file will be uploaded and verified:
+1. Drag or browse the the *.xml* or *.zip* file of the OData v4 service you want to register. The selected file is  uploaded and verified:
 
 ![upload contract](attachments/register/register-service-form-validate.png)
 

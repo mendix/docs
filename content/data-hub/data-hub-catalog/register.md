@@ -105,7 +105,7 @@ The **Exposed set name** will be shown in the Data Hub Catalog for the registere
    * **Use paging** – the maximum number of data objects that are retrieved in a single call (with a link to the next set)
    * **Public documentation** tab – a summary and a description of the entity can be added here
 
-   For further details, see [Published OData Resource](https://docs.mendix.com/refguide/published-odata-resource) in the *Studio Pro Guide*. 
+   For further details, see [Published OData Resource](/refguide/published-odata-resource) in the *Studio Pro Guide*. 
 
 5. Click **OK** to see the [OData Service](#odata-service-general) page. If you want to publish several entities in the same service, add them here by clicking **Add** for the **Resources**.
 
@@ -273,7 +273,7 @@ Datasets from other business application must be published as OData v4 services.
 
 #### 7.2.2 Upload Contract File of Data Source {#contract}
 
-In the **Contract** screen you can upload the contract file of the data source that you want to register. 
+In the **Contract** screen upload the file of the data source (the OData v4 service metadata contract) that you want to register. 
 
 {{% alert type="info" %}}
 The OData v4 metadata contract file must be in *.xml* or *.zip*  format. when the contract is made up of multiple files.
@@ -281,37 +281,49 @@ The OData v4 metadata contract file must be in *.xml* or *.zip*  format. when th
 
 ![upload contract](attachments/register/register-service-form-contract.png)
 
-1. Upload the *.xml* or *.zip* file of the OData v4 service contract you want to register. The selected file is uploaded and verified. You can click the **x** if you want to upload an alternative file.
+Upload the *.xml* or *.zip* file of the OData v4 service contract you want to register. The selected file is uploaded and verified. When successfully uploaded, you can click the **x** if you want to upload an alternative file or click **Go to next step**.
 
 ![upload contract](attachments/register/register-service-form-validate.png)
 
 
 #### 7.2.3 Details of the Data Source {#data-source}
 
-In the **Details of Data Source** screen enter the following details; this information will be displayed in the data source details screen: 
+In the **Details of Data Source** screen enter the following details: 
 
 ![](attachments/register/register-data-source-details.png)
 
-* **Service Name** – the name of the data source as it should appear in the Catalog
+* **Service Name** – the name of the data source as it should appear in the Catalog.
 
-* **Service Version** – the version number of the service
+* **Service Version** – the version number of the service.
 
-  {{% alert type="info" %}}When registering another version of an already registered service, ensure that the version numbering indicates the degree of change between versions.
-  {{% /alert %}}
+  {{% alert type="info" %}}When registering another version of an already registered service, make sure that the version numbering indicates the degree of change between versions. For more information see [Semantic numbering](/refguide/consumed-odata-service#semantic).{{% /alert %}}
+  
+* **Relative service location**, the relative URL of the OData service contract.
 
-3. In **Relative service location**, enter the relative URL for the service.
+* **Service Description**  –  a description of the service that will be displayed for the data source. 
 
-4. In **Service Description**, enter a description of the service that will be displayed in the **Search Details** and also used in the catalog search.
+  {{% alert type="info" %}}You can do this when you [curate the data source](/data-hub/data-hub-catalog/curate#service-details) in the Catalog.{{% /alert %}}
 
-5. In **Tags**, enter tags that can be used to categorize registered services and thus make them discoverable for specific uses. Add tags by entering alphanumeric strings separated by spaces. To remove a tag, click the **x**. 
+* **Tags** – tags can be used to categorize the datasets and data sources to enable users to find relevant groups of datasets. Tags strings must satisfy the following: 
+	
+	* alphanumeric characters
+	
+	* lowercase
+	
+	* 2-100 characters long
+	
+	* no spaces
+	Press **Enter** or select from the tags that match the characters that you have typed. You can enter multiple tags. To remove a tag, click the **x**. 
+	
+	  {{% alert type="info" %}}You also can specify tags when you [curate the data source](/data-hub/data-hub-catalog/curate#tags) in the Catalog. {{% /alert %}}
 
-6. When all the information has been completed, click **Save your service**. 
+When all the required information has been specified click **Go to next step**. 
 
-#### 7.2.x Details of the Application {#application}
+#### 7.2.4 Details of the Application {#application}
 
-2. The CEnter the details of the app from which the OData v4 service was issued. This information will be displayed in the **Service Details** in the Data Hub Catalog and provide the link to the app.
+In this screen, enter the details of the application from which the OData v4 service was published. This information will be displayed in the **Service Details** in the Data Hub Catalog and provide the link to the app.
 
-   ![](attachments/register/old-register-service-form-details.png)
+![](attachments/register/old-register-service-form-details.png)
 
 3. Specify the details of the **Application**:
 

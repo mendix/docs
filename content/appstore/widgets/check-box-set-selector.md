@@ -43,7 +43,7 @@ The [Check Box Set Selector](https://appstore.home.mendix.com/link/app/121/) wid
 * **Width** – the width of the column for this display attribute in pixels or percentage
 * **Currency type** – lets you display the attribute as a currency (leave on **None** if not applicable)
 
-You must designate at least one **Display Attribute** (with **Header text**, **Attribute**, or otherwise), or else the widget might block the page or pop-up window from loading.
+You must designate at least one **Display Attribute** (with **Header text** and **Attribute** included), or else the widget might block the page or pop-up window from loading.
 
 ## 3 Read More
 

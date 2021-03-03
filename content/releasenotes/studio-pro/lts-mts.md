@@ -76,7 +76,7 @@ For the support duration, the MTS will receive [patch](#patch) releases only.
 
 ### 3.4 Upgrading Impact
 
-The impact of upgrading betwen MTS versions is higher than upgrading between LTS versions. That is because an MTS has a shorter support duration than an LTS, which means it has less time to become as stable as an LTS verison. In addition, the upgrade has to be done approximately every six months.
+The impact of upgrading between MTS versions is higher than upgrading between LTS versions. That is because an MTS has a shorter support duration than an LTS, which means it has less time to become as stable as an LTS verison. In addition, the upgrade has to be done approximately every six months.
 
 ## 4 Monthly Release Version
 

@@ -13,8 +13,7 @@ A **Navigation Document** in Mendix Studio shows a configured menu of your app i
 
 To open the **Navigation Document**, click the corresponding icon in the left menu bar.
 
-{{% image_container width="300" %}}![Navigation Document Icon](attachments/navigation/navigation-icon.png)
-{{% /image_container %}}
+![Navigation Document Icon](attachments/navigation/navigation-icon.png)
 
 The **Navigation Document** consists of menu items that allow end-users navigate your app or that perform certain actions. For example, you can configure a menu item to open a specific page or to log an end-user out of their profile. For more information on actions you can assign to menu items, see the [Events Section](#events-section-navigation).
 

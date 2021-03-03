@@ -56,10 +56,10 @@ Currently only [persistable](/refguide/persistability) entities can be exposed f
 
 When selecting the entities to expose in a service, consider including associated entities so that the relationship between the data is also registered.
 
-When exposing Mendix entities that are generalizations and specializations in the same service the specialized entities will be defined in the published OData servcie as discrete entities which include the inherited attributes and associations. The inheritance relationship will not be present in the metadata contract, and also not when the entities are consumed in Mendix Studio Pro.
+When exposing Mendix entities that are generalizations and specializations in the same service the specialized entities will be defined in the published OData service as discrete entities which include the inherited attributes and associations. The inheritance relationship will not be present in the metadata contract, and also not when the entities are consumed in Mendix Studio Pro.
 
 {{% alert type="warning" %}}
-The association of a generailsed entity that is exposed in the same service as the specializations is not supported for both entities when consumed. The same association cannot be consumed for the two different entities. In this case, the inherited association should not be included when exposing the specialization.
+The association of a generalized entity that is exposed in the same service as the specializations is not supported for both entities when consumed. The same association cannot be consumed for the two different entities. In this case, the inherited association should not be included when exposing the specialization.
 {{% /alert %}}
 
 ## 3 Publishing an OData Service in Studio Pro{#odata-service-reg}
@@ -113,7 +113,7 @@ The **Exposed set name** will be shown in the Data Hub Catalog for the registere
 
    ![](attachments/register/publish-association-2.png)
 
-   {{% alert type="warning" %}}When a specialized entity is published, in the published OData Service contract this will be a discrete entity that has all the attributes and associations of the gernailzation. Care has to be taken if the generailsed entity (and its association) is also exposed in the same service. In this case,  the association in the specialized entity that is (inherited from the generalization) should not be published as this will result in errors. The same association cannot be exposed for two different entities in the same service. In this case, it is recommended that the inhertited association is not checked in the specialized entity.
+   {{% alert type="warning" %}}When a specialized entity is published, in the published OData Service contract this will be a discrete entity that has all the attributes and associations of the generalization. Care has to be taken if the generalized entity (and its association) is also exposed in the same service. In this case,  the association in the specialized entity that is (inherited from the generalization) should not be published as this will result in errors. The same association cannot be exposed for two different entities in the same service. In this case, it is recommended that the inherited association is not checked in the specialized entity.
    {{% /alert %}}
 
 7.  Add a **Summary** and **Description** of the service In the **Properties** pane: 
@@ -144,7 +144,7 @@ The **Version** number that is assigned to a service is significant – it forms
 
 ![](attachments/register/odata-service-page-general.png)
 
-The **General** tab contains all the details for the published metadata and the details of the entitites that will be exposed in the service as follows:
+The **General** tab contains all the details for the published metadata and the details of the entities that will be exposed in the service as follows:
 
 * **Service Name** – the name of the service
 * **Version** – the version of the service
@@ -279,7 +279,7 @@ To register the service, follow these steps:
 		* **No** – click this for a new deployment to an environment
 	* **UUID**
 		* For an existing app registered in the Data Hub Catalog to this environment, paste the UUID here
-		* If you clicked **No** above for **Use Existing Environment**, the enviroment UUID is automatically generated
+		* If you clicked **No** above for **Use Existing Environment**, the environment UUID is automatically generated
 	* **Name** –  enter the name of the environment as it will be rendered in the catalog
 	* **Location** – enter the URL of the environment location
    

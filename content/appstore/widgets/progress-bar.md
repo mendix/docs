@@ -32,7 +32,7 @@ Configuring the label on the progress bar can be done on the **Progress Label** 
 
 ### 2.2 Styling
 
-Under the **Appearance** tab, the following styling properties can be adjusted to the progress bar:
+Under the **Appearance** tab, the following styling properties can be adjusted for the progress bar:
 
 - Bar type. Can be plain, striped, or animated.
 - Bar and background color based on brand styling.

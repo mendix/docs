@@ -213,9 +213,9 @@ This section contains the following properties:
 
 ## 5 Deployment Environments
 
-The OData service that is created when an app is deployed will be associated with the environment that the app is deployed to. This will also be the link to the data set associated with the exposed entities. 
+The OData service that is published when an app is deployed is associated with the environment that the app is deployed to. The service endpoint will therefore be a combination of the application environement URL and the relative path of service contract. This will also be the link to the exposed datasets. 
 
-When sharing entities through an OData service for use in other apps, it is important that the app is deployed to a stable environment so that the data for the app is maintained in this environment. Usually this will be a production environment. 
+When exposing datasets through an OData service for use in other apps, it is important to inform users of the quality and reliability of the datasets that are available from that deployment. The deployment environment of the app (and the published data sources) provides a good indication of the data quality in combination with the **Environment Type**: **Production**, **Non-production**, and **Sandbox** (the Mendix free app environment).   These should be clearly defined for the organization to ensure that users consume datasets from the correct environment. 
 
 ## 6 Updating a Published OData Service in Studio Pro {#updating-service}
 
@@ -292,15 +292,15 @@ In the **Details of Data Source** screen specify the following details:
 
 ![](attachments/register/register-data-source-details.png)
 
-* **Service Name** – the name of the data source as it should appear in the Catalog.
+* **Data Source Name** – the name of the data source as it should appear in the Catalog.
 
-* **Service Version** – the version number of the service.
+* **Data Source Version** – the version number of the service.
 
   {{% alert type="info" %}}When registering another version of an already registered service, make sure that the version numbering indicates the degree of change between versions. For more information see [Semantic numbering](/refguide/consumed-odata-service#semantic).{{% /alert %}}
   
-* **Relative service location**, the relative URL of the OData service contract.
+* **Data Source Releative Path** – the path of the OData service contract relative to the environment URL of the application that is specified at the [Enviroment](#environment) stage.
 
-* **Service Description** – a description of the service that will be displayed for the data source. 
+* **Catalog Description** – a description of the service that is displayed for the data source. 
 
   {{% alert type="info" %}}You can do this when you [curate the data source](/data-hub/data-hub-catalog/curate#service-details) in the Catalog.{{% /alert %}}
 
@@ -346,7 +346,7 @@ If the application for your data source is not registered in the catalog, click 
 
 	{{% alert type="info" %}}If you change the **Technical Owner** you will not be able to curate the data source in the Catalog unless you are also a curator or Data Hub Admin. {{% /alert %}}
 
-* **Business Owner** – the owner of the datas that is made available through the service. Select from the dropdown list.
+* **Business Owner** – the owner of the datasets that are made available through the service. Select from the dropdown list. The dropdown list will also
 
 	{{% alert type="info" %}}You also can specify the business owner and technical owners when you [curate the data source](/data-hub/data-hub-catalog/curate#customowner) in the Catalog. {{% /alert %}}
 	

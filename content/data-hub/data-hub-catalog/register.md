@@ -70,9 +70,7 @@ When selecting the entities to expose in a service, consider including associate
 
 When exposing Mendix entities that are generalizations and specializations in the same service the specialized entities will be defined in the published OData service as discrete entities which include the inherited attributes and associations. The inheritance relationship will not be present in the metadata contract, and also not when the entities are consumed in Mendix Studio Pro.
 
-{{% alert type="warning" %}}
-The association of a generailsed entity that is exposed in the same service as the specializations is not supported for both entities when consumed. The same association cannot be consumed for the two different entities. In this case, the inherited association should not be included when exposing the specialization.
-{{% /alert %}}
+{{% alert type="note" %}}The association of a generailsed entity that is exposed in the same service as the specializations is not supported for both entities when consumed. The same association cannot be consumed for the two different entities. In this case, the inherited association should not be included when exposing the specialization.{{% /alert %}}
 
 ## 3 Publishing an OData Service in Studio Pro{#odata-service-reg}
 
@@ -252,7 +250,7 @@ This section will take you through the steps to upload the metadata contract and
 
 If the connector for your business application is not shown, you can use the  option to register a **generic OData v4 service**:
 
- {{% image_container width="750" %}}![upload contract](attachments/register/register-data-source-odata-connector.png){{% /image_container %}}
+ {{% image_container width="500" %}}![upload contract](attachments/register/register-data-source-odata-connector.png){{% /image_container %}}
 
 {{% alert type="info" %}}
 Each new version of previously registered data sources (services) deployed to a different endpoint have to be individually registered.

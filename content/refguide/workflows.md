@@ -5,7 +5,7 @@ menu_order: 20
 tags: ["workflow", "workflows", "Studio Pro"]
 ---
 
-{{% alert type="info" %}}
+{{% alert type="warning" %}}
 This functionality is in Beta. For more information on Beta products, see [Mendix Beta Features](/releasenotes/beta-features/).
 {{% /alert %}}
 

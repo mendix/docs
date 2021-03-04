@@ -12,14 +12,14 @@ The [Progress Bar](https://appstore.home.mendix.com/link/app/48910/) widget disp
 
 The widget does the following:
 
-* Displays the percentual progress in the form of a bar based on a configurable range
+* Displays a progress percentage in the form of a bar based on a configurable range
 * Offers brand styling for the bar and background color through the **Appearance** design properties
 * Offers options for different types of bars 
 * Supports animation options
 
 ## 2 Usage
 
-The Progress Bar widget requires three values: a **Minimum** and **Maximum value** to describe the full range of  progress as well as a **Current value** to indicate the progression on that range. 
+The Progress Bar widget requires three values: a **Minimum value** and **Maximum value** to describe the full range of  progress as well as a **Current value** to indicate the progression on that range. 
 
 These values can be provided in three different ways: as a **Static** integer value, a **Dynamic** integer value, or an **Expression**. An On Click Action can be set onto the progress bar to trigger custom logic during click interactions.
 
@@ -27,11 +27,11 @@ These values can be provided in three different ways: as a **Static** integer va
 
 Configuring the label on the progress bar can be done on the **Progress Label** tab and has the following options:
 
-* Whether to show a label
+* Whether to show a label or not
 * The type of the label:
-	* Text: a custom text
-	* Percentage: the **Current value** converted onto the configured range as a percentage. 
-	* Custom: a custom widget
+	* **Text**: a custom text
+	* **Percentage**: the **Current value** converted onto the configured range as a percentage. 
+	* **Custom**: a custom widget
 
 ### 2.2 Styling
 

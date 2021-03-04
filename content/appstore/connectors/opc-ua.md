@@ -1,7 +1,7 @@
 ---
 title: "OPC UA" 
 category: "Connectors"
-description: "Describes how to UAe the OPC UA connector, which is available in the Mendix App Store."
+description: "Describes how to use the OPC UA connector, which is available in the Mendix App Store."
 tags: ["app store", "app store component", "OPC UA", "connector", ]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
@@ -10,13 +10,13 @@ tags: ["app store", "app store component", "OPC UA", "connector", ]
 
 ## 1 Introduction
 
-The [OPC UA Client connector](https://appstore.home.mendix.com/link/app/114874/) connector allows you to connect your Mendix application to [OPC](https://opcfoundation.org/) enabled servers UAing the functionality of [OPC UA](https://opcfoundation.org/about/opc-technologies/opc-ua/). The connector allows you to read from, write to, and subscribe to OPC UA servers.
+The [OPC UA Client connector](https://appstore.home.mendix.com/link/app/114874/) connector allows you to connect your Mendix application to [OPC](https://opcfoundation.org/) enabled servers using the functionality of [OPC UA](https://opcfoundation.org/about/opc-technologies/opc-ua/). The connector allows you to read from, write to, and subscribe to OPC UA servers.
 
-OPC is the platform-independent, multi-vendor interoperability standard for the secure and reliable exchange of data in the indUAtrial automation space and in other indUAtries. The OPC Unified Architecture (OPC UA) is an architecture that integrates all the OPC specifications into one extensible framework.
+OPC is the platform-independent, multi-vendor interoperability standard for the secure and reliable exchange of data in the industrial automation space and in other industries. The OPC Unified Architecture (OPC UA) is an architecture that integrates all the OPC specifications into one extensible framework.
 
-This module UAes the [Eclipse Milo library](https://github.com/eclipse/milo) an open-source implementation of OPC UA, and has been tested with the [Prosys OPC UA server](https://www.prosysopc.com/). All terminology in this module is per the OPC UA Documentation. 
+This module uses the [Eclipse Milo library](https://github.com/eclipse/milo) an open-source implementation of OPC UA, and has been tested with the [Prosys OPC UA server](https://www.prosysopc.com/). All terminology in this module is per the OPC UA Documentation. 
 
-There is a sample module, [OPC UA Client example implementation](https://appstore.home.mendix.com/link/app/114876/), which gives an example of how the connector can be UAed.
+There is a sample module, [OPC UA Client example implementation](https://appstore.home.mendix.com/link/app/114876/), which gives an example of how the connector can be used.
 
 ### 1.1 Features
 
@@ -38,7 +38,7 @@ The OPC UA Client connector supports all three security options offered by OPC U
 * Credentials
 * Client certificates
 
-Only one of the options can be in UAe any any time, which one will be determined by the OPC UA server that you are connecting too. The password from both the UAer and certificate are automatically encrypted when saving the server configuration UAing the Encryption module.  
+Only one of the options can be in use any any time, which one will be determined by the OPC UA server that you are connecting too. The password from both the user and certificate are automatically encrypted when saving the server configuration using the Encryption module.  
 
 #### 1.1.3 Dependencies
 
@@ -48,11 +48,11 @@ The OPC UA Client connector has the following dependencies
 * Encryption Module
 * An OPC UA server – we assume that you are familiar with OPC UA and your OPC UA server(s), these instructions do not include information on how to set up your servers.
 
-Recommended; Having an external OPC UA Client tool will make setup of the connection a lot easier. A commonly UAed client is the one from [Unified Automation](https://www.unified-automation.com/downloads/opc-ua-clients.html), with this (non-Mendix) tool you will be able to browse through the server and find the parameters needed to configure your connection. 
+Recommended; Having an external OPC UA Client tool will make setup of the connection a lot easier. A commonly used client is the one from [Unified Automation](https://www.unified-automation.com/downloads/opc-ua-clients.html), with this (non-Mendix) tool you will be able to browse through the server and find the parameters needed to configure your connection. 
 
 ## 2 Installation
 
-Import the [OPC UA Client connector](https://appstore.home.mendix.com/link/app/114874/) module into your app. Instructions for doing this are in [How to UAe App Store Content in Studio Pro](/appstore/general/app-store-content).
+Import the [OPC UA Client connector](https://appstore.home.mendix.com/link/app/114874/) module into your app. Instructions for doing this are in [How to use App Store Content in Studio Pro](/appstore/general/app-store-content).
 
 You will see the new module in the **App Store modules** section of the **Project Explorer**.
 
@@ -67,15 +67,15 @@ When you edit a microflow, you will also see five additional actions in the **To
 ![OPC UA Client connector actions in the microflow toolbox](attachments/opc-ua/opc-ua-toolbox.png)
 {{% /image_container %}}
 
-If you UAe subscriptions you **MUAt** setup the After Startup & Before Shutdown microflow. When subscribing these actions make sure that you re-subscribe when you start your app & that you disconnect when shutting down. If you don't UAe the after startup subscriptions won't reconnect after a reboot. If you don't UAe the before shutdown, the server will keep the old subscriptions (potentially up to a few hours) and send duplicate messages for this period of time (and can caUAe exceptions in the client). 
+If you use subscriptions you **must** setup the After Startup & Before Shutdown microflow. When subscribing these actions make sure that you re-subscribe when you start your app & that you disconnect when shutting down. If you don't use the after startup subscriptions won't reconnect after a reboot. If you don't use the before shutdown, the server will keep the old subscriptions (potentially up to a few hours) and send duplicate messages for this period of time (and can cause exceptions in the client). 
 
-This is all you need to do to UAe the connector. However, there is also a sample module, [OPC UA Client example implementation](https://appstore.home.mendix.com/link/app/114876/), which gives an example of how the connector can be UAed. If you want to look at the sample implementation described in [OPC UA Client example implementation](#example-implementation) you will need to import this into your app in addition to the OPC UA Client connector.
+This is all you need to do to use the connector. However, there is also a sample module, [OPC UA Client example implementation](https://appstore.home.mendix.com/link/app/114876/), which gives an example of how the connector can be used. If you want to look at the sample implementation described in [OPC UA Client example implementation](#example-implementation) you will need to import this into your app in addition to the OPC UA Client connector.
 
 ## 3 OPC UA Client connector
 
 ### 3.1 Client State
 
-The module/app is designed for UAage with multiple servers if necessary. The state for each OPC UA server is kept by the client in an object of entity type **OpcUaServerCfg**. This  needs to be populated before the actions of the OPC UA client connector can be UAed. 
+The module/app is designed for usage with multiple servers if necessary. The state for each OPC UA server is kept by the client in an object of entity type **OpcUaServerCfg**. This  needs to be populated before the actions of the OPC UA client connector can be used. 
 
 {{% image_container width="300" %}}
 ![OPC UA Server configuration entity](attachments/opc-ua/opcuaservercfg.png)
@@ -83,13 +83,13 @@ The module/app is designed for UAage with multiple servers if necessary. The sta
 
 For each OPC UA server, the following information will need to be stored in a OpcUaServerCfg object.
 
-* ServerID (String) – a short nickname that you assign to the server so that you can identify it easily. Primarily UAed for error and log messages.
+* ServerID (String) – a short nickname that you assign to the server so that you can identify it easily. Primarily used for error and log messages.
 * URL (String) – the full URL of the OPC UA server (e.g.: opc.tcp://localhost:53530/OPCUA/SimulationServer)
-* UAername (String) – the UAername UAed if the authentication type is `CREDENTIALS`
-* Password (String) – the password for the UAername UAed if the authentication type is `CREDENTIALS`, only UAed for data-entry. After saving this field is reset.
-* Password_Encrypted (String) – the encrypted password for the UAername, automatically takes the 'Password' and encrypts the value
+* username (String) – the username used if the authentication type is `CREDENTIALS`
+* Password (String) – the password for the username used if the authentication type is `CREDENTIALS`, only used for data-entry. After saving this field is reset.
+* Password_Encrypted (String) – the encrypted password for the username, automatically takes the 'Password' and encrypts the value
 * AuthenticationType (Enumeration) – the type of authentication required for this server: `NONE`, `CREDENTIALS`, or `CERTIFICATE`
-* CertificatePassword (String) – the certificate password required when UAing the `CERTIFICATE` type of authentication, only UAed for data-entry. After saving this field is reset.
+* CertificatePassword (String) – the certificate password required when using the `CERTIFICATE` type of authentication, only used for data-entry. After saving this field is reset.
 * CertificatePassword (String) – the encrypted password for the certificate, automatically takes the CertificatePassword and encrypts the value
 
 You can see an example of how this can be set up in the [OPC UA Client example implementation](#example-implementation) section.
@@ -105,9 +105,9 @@ The **Browse** action allows you to browse the nodes within the OPC UA server. T
 
 ![Parameters for the browse action](attachments/opc-ua/browse-action.png)
 
-* Opc ua server cfg – an object of entity type OpcUaServerCfg containing the configuration of the server to which the request is made
+* Opc UA server cfg – an object of entity type OpcUaServerCfg containing the configuration of the server to which the request is made
 * NodeId – The NodeId from where you want to browse to it's children. When requesting the 'Is Root'=true leave this value empty. Expects the full Node Id as referenced by the OPC UA server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
-* Is root – is UAed by the tree widget in the example implementation module — if you are not UAing the tree widget you, the value here is not important
+* Is root – is used by the tree widget in the example implementation module — if you are not using the tree widget you, the value here is not important
 * Return Variable – The output of this action is the JSON string with all information about the requested nodes. This string can be parsed with the Import Mapping activity.
 
 
@@ -125,8 +125,6 @@ All values are read as strings, you will need to convert them if you need a nume
 {{% /alert %}}
 
 #### 3.2.3 **Subscribe** to Updates of Data from a Node
-{{% todo %}}[Update chapter, the subscription structure has changed.]{{% /todo %}}
-
 The **Subscribe** action allows you to subscribe to receive a notification every time the value of a node changes. OPC UA allows many different ways to subscribe to different data changes, events, and many variations.  
 
 **Attention:** At this point the module only allows subscriptions on value changes. Events, and aggregates are currently not supported. 
@@ -155,7 +153,7 @@ The Mendix client will evaluate each sample and process it according to it's con
 ##### 3.2.3.2 Subscription Action
 
 The action creates an object of type **MonitoredItem** & **Subscription** which is associated with the OPC UA service and contains details of the subscription and the item which is being monitored. You monitor a **Node**, this creates what OPC UA calles a **MonitoredItem**, the monitored item is what determines the frequency and type of values that you are getting.  
-**Limitation:** A Monitored Item UAes the following default settings: samplingInterval = 500ms; queueSize = 10; discardOldest = true; (See OPC UA Documentation for more details on the impact of this)
+**Limitation:** A Monitored Item uses the following default settings: samplingInterval = 500ms; queueSize = 10; discardOldest = true; (See OPC UA Documentation for more details on the impact of this)
 
 The **Subscription** influences the connection that is established with the client. Every  *PublishingInterval*-millisecons the Server will connect with the client to send any new values. 
 
@@ -166,9 +164,9 @@ Each subscription requires a microflow to process the data each time a notificat
 
 * Opc ua server cfg – an object of entity type OpcUaServerCfg containing the configuration of the server to which the request is made
 * NodeId – The NodeId of the Node you want to subscribe to. Expects the full Node Id as referenced by the OPC UA server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
-* On message microflow – defines a microflow to be run every time a message is received from the subscribed service. This microflow mUAt have 1 input parameter of type: OpcUaClientMx.Message and no output.
+* On message microflow – defines a microflow to be run every time a message is received from the subscribed service. This microflow must have 1 input parameter of type: OpcUaClientMx.Message and no output.
 * Subscription (optional) – pass a **Subscription** entity to have more control over the frequence in which messages are send to the client. Leave this parameter blank to let the module setup the subscription.
-* UAe return value – `Yes` returns an object of type **MonitoredItem** which defines the new subscription and can be UAed in the microflow, `No` does not return an object. The returned object should not be changed or committed, but can be associated to for your administration/logic.
+* use return value – `Yes` returns an object of type **MonitoredItem** which defines the new subscription and can be used in the microflow, `No` does not return an object. The returned object should not be changed or committed, but can be associated to for your administration/logic.
 * Variable name – the name assigned to the variable containing the return value  
 
 {{% alert type="info" %}}
@@ -186,10 +184,10 @@ An object is created for each Node you request to monitor and contains the follo
 
 NodeId (String) – The full NodeId as referenced by the OPC UA Server.  
 SubscriptionID (String) – a unique identifier generated by the OPC UA server (will be identical to the associated Subscription entity)  
-MonitoredItemID (String) – a unique identifier generated by the OPC UA server — this can be UAed to identify the unique Monitored Item for cancellation of the subscription  
-StatUA (Enum) – identifies whether the subscription is active or not (New, Active, Failed, Deleted)  
+MonitoredItemID (String) – a unique identifier generated by the OPC UA server — this can be used to identify the unique Monitored Item for cancellation of the subscription  
+Status (Enum) – identifies whether the subscription is active or not (New, Active, Failed, Deleted)  
 LastSubscribedOn (DateTime) - The last time the 'Subscribe' function was succesfully executed.  
-LastStateChange (DateTime) - The last time the StatUA attribute changed, this is the moment the subscription got active, failed or was deleted.  
+LastStateChange (DateTime) - The last time the Status attribute changed, this is the moment the subscription got active, failed or was deleted.  
 LastMessage (DateTime) - The moment the last full message was received from the OPC UA server on this monitored Item.  
 
 ##### 3.2.3.4 Subscription  
@@ -202,16 +200,16 @@ The subcription reflects the connection configuration with the OPC UA Server.
 
 This is the only object from the OpcUaClientMx domain that you should create from a microflow, you can create, change and commit this before passing it into the Subscribe action. If you choose to leave the parameter empty then an object is created automatically for each Node you request to monitor. The entity contains the following information:
 
-RequestedPublishingInterval_ms (Decimal) – The Publishing interval that is requested from the OPC UA Server in milliseconds. *(UAing decimal here to honour the Eclipse Milo implementation)*  
+RequestedPublishingInterval_ms (Decimal) – The Publishing interval that is requested from the OPC UA Server in milliseconds. *(Using decimal here to honour the Eclipse Milo implementation)*  
 SubscriptionID (String) – a unique identifier generated by the OPC UA server  
-StatUA (Enum) – identifies whether the subscription is active or not (New, Active, Failed, Deleted)  
+Status (Enum) – identifies whether the subscription is active or not (New, Active, Failed, Deleted)  
 
 
 #### 3.2.4 **Unsubscribe** from Updates of Data from a Node
 
 The **Unsubscribe** action allows you to end a subscription to item change notifications when you no longer want to receive the notifications. 
 
-**Attention:** Never manually or programatically delete the **Subscription** or **MonitoredItem**, unless the StatUA is 'Deleted'. Removing the objects prematurely can result in duplicate data or exceptions when the OPC UA Server sends messages for these now removed configurations.  
+**Attention:** Never manually or programatically delete the **Subscription** or **MonitoredItem**, unless the Status is 'Deleted'. Removing the objects prematurely can result in duplicate data or exceptions when the OPC UA Server sends messages for these now removed configurations.  
 
 You can configure if the unsubscripe is permanent (and records are removed) or if the subscription info is kept for restart through the parameters.
 
@@ -219,57 +217,57 @@ You can configure if the unsubscripe is permanent (and records are removed) or i
 
 * Opc ua server cfg – an object of entity type OpcUaServerCfg containing the configuration of the server to which the request is made
 * Monitored item ID – the ID of the item which is being monitored by the subscription — this is held as the **MonitoredItemID** in the **Subscription** entity
-* RestartSubscriptionOnNextReboot – Indicate if the registration entities should be kept by this action. When 'true' the **MonitoredItem** & **Subscription** will be kept in the database and their statUA will be changed to 'New'. When 'false' the statUA of the monitoredItem will become 'Deleted' and the module will automatically remove the entities from the database. 
+* RestartSubscriptionOnNextReboot – Indicate if the registration entities should be kept by this action. When 'true' the **MonitoredItem** & **Subscription** will be kept in the database and their Status will be changed to 'New'. When 'false' the status of the monitoredItem will become 'Deleted' and the module will automatically remove the entities from the database. 
 
 
 #### 3.2.5 **Write** Data to a Node
 
 The **Write** action allows you to write a new value to a node to which you have write permissions.
-If nothing is returned the action was succesful, if the OPC UA Server refUAes the value an exception will be thrown with the full JSON response included in the exception message. 
+If nothing is returned the action was succesful, if the OPC UA Server refuses the value an exception will be thrown with the full JSON response included in the exception message. 
 
 ![Parameters for the write action](attachments/opc-ua/write-action.png)
 
 * Opc ua server cfg – an object of entity type OpcUaServerCfg containing the configuration of the server to which the request is made
 * NodeId – The NodeId of the Node you want to write to. Expects the full Node Id as referenced by the OPC UA server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
-* Value to write – the new value which you want to set for this node, this can be any supported type (see the limitations for all types that are currently suported). Make sure the value can easily be parsed as the type, i.e. Doubles mUAt be formatted as 0.0, Integers may not have a decimal point, etc. 
+* Value to write – the new value which you want to set for this node, this can be any supported type (see the limitations for all types that are currently suported). Make sure the value can easily be parsed as the type, i.e. Doubles must be formatted as 0.0, Integers may not have a decimal point, etc. 
 
 
 ### 3.3 Pages
 
-The OPC UA Client connector comes with a number of pages which you can UAe to manage and test the connection to your server(s).
+The OPC UA Client connector comes with a number of pages which you can use to manage and test the connection to your server(s).
 
 #### 3.3.1 OpcUaServer_Overview
 
 This page shows a summary of all the servers you have set up in your app and allows you to edit existing servers and set up a new one. For each server you will see the name you have given it, the URL where the server can be reached, and the authentication type.
 
-To UAe this page, jUAt include it in the navigation for your app, or add an **Open Page** button to an existing page of your app.
+To use this page, jUAt include it in the navigation for your app, or add an **Open Page** button to an existing page of your app.
 
 From this page, you can perform the following actions:
 
 * Search – search for a particular server in the list of servers
-* New server – add a new OPC UA server UAing the **OpcUaServer_NewEdit** page
-* Edit server - change the details of the selected server UAing the **OpcUaServer_NewEdit** page
-* View Subscription Details – Opens a detail page for your server with all the active subscriptions with their statUA. This following page allows you to re-connect or disconnect subscriptions. 
+* New server – add a new OPC UA server using the **OpcUaServer_NewEdit** page
+* Edit server - change the details of the selected server using the **OpcUaServer_NewEdit** page
+* View Subscription Details – Opens a detail page for your server with all the active subscriptions with their status. This following page allows you to re-connect or disconnect subscriptions. 
 * Delete – delete all the information about the selected server — you will be asked for confirmation. Only delete a server if there are no active subscriptions, the module doesn't validate this. 
 
 #### 3.3.2 OpcUaServer_NewEdit
 
-This page allows you to create or change the details of an OPC UA server you want to UAe within your app. Your app administrator can UAe this page as is, or you can cUAtomize it for your own UAe. If you cUAtomize it, we recommend that you UAe a copy of it in one of your own modules so that it is not accidentally overwritten if you update the OPC UA Client connector App Store module.
+This page allows you to create or change the details of an OPC UA server you want to use within your app. Your app administrator can use this page as is, or you can cUAtomize it for your own use. If you cUAtomize it, we recommend that you use a copy of it in one of your own modules so that it is not accidentally overwritten if you update the OPC UA Client connector App Store module.
 
 ##### 3.3.2.1 Data on OpcUaServer_NewEdit Page
 
 * **Name** – The name to give to this server within the app
-* **URL** – The URL UAed for connection to the server — this should be a TCP connection in the form `opc.tcp://…`
-* **Authentication type** – the type of authentication to be UAed with this server — this is one of **NONE**, **CREDENTIALS**, or **CERTIFICATE**
-    * **UAername** (if **Authentication Type** is **CREDENTIALS**) – the UAername required to authenticate to the OPC UA server if credentials are being UAed for authentication
-    * **Password** (if **Authentication Type** is **CREDENTIALS**) – the password required to authenticate to the OPC UA server if credentials are being UAed for authentication
-    * **Certificate file (PFX)** (if **Authentication Type** is **CERTIFICATE**) – the file containing the certificate required to authenticate to the OPC UA server if a certificate is being UAed for authentication — you will be able to upload a file held locally, and also download an existing file
-    * **Certificate password** (if **Authentication Type** is **CERTIFICATE**) – the password required to authenticate to the OPC UA server if a certificate is being UAed for authentication
+* **URL** – The URL used for connection to the server — this should be a TCP connection in the form `opc.tcp://…`
+* **Authentication type** – the type of authentication to be used with this server — this is one of **NONE**, **CREDENTIALS**, or **CERTIFICATE**
+    * **username** (if **Authentication Type** is **CREDENTIALS**) – the username required to authenticate to the OPC UA server if credentials are being used for authentication
+    * **Password** (if **Authentication Type** is **CREDENTIALS**) – the password required to authenticate to the OPC UA server if credentials are being used for authentication
+    * **Certificate file (PFX)** (if **Authentication Type** is **CERTIFICATE**) – the file containing the certificate required to authenticate to the OPC UA server if a certificate is being used for authentication — you will be able to upload a file held locally, and also download an existing file
+    * **Certificate password** (if **Authentication Type** is **CERTIFICATE**) – the password required to authenticate to the OPC UA server if a certificate is being used for authentication
 
 The password for the credentials & certificate are automatically encrypted/decrypted by the module. After saving the configuration the UI doesn't allow you to read the existing password, the decryption is only programmed in the connector. 
 
 {{% alert type="warning" %}}
-The OPC UA server should have only one type of authentication enabled, and the authentication type chosen here mUAt match that type to ensure that the endpoint can be reached.
+The OPC UA server should have only one type of authentication enabled, and the authentication type chosen here must match that type to ensure that the endpoint can be reached.
 {{% /alert %}}
 
 ##### 3.3.2.2 Troubleshoot (test actions) on OpcUaServer_NewEdit Page
@@ -305,7 +303,7 @@ The OPC UA Client example implementation is a sample app based on the [Prosys OP
 * Add a subscription to a node
 * Remove a subscription
 
-You can UAe or adapt the OpcUaClient_ExampleImplementation module (link) for a fast start. Bear in mind that the node data structure from your server may be different and adjUAt your imports accordingly.
+You can use or adapt the OpcUaClient_ExampleImplementation module (link) for a fast start. Bear in mind that the node data structure from your server may be different and adjUAt your imports accordingly.
 
 {{% alert type="info" %}}
 If you are adapting the example implementation, it is recommended that you make a copy of the module and add it to your app so that you don't accidentally update the App Store module and overwrite your changes.
@@ -314,7 +312,7 @@ If you are adapting the example implementation, it is recommended that you make 
 ### 4.1 Dependencies
 
 * Mx 8.8.1 or higher
-* Atlas UI (UAe, for example, the blank starter app as a basis)
+* Atlas UI (use, for example, the blank starter app as a basis)
 * The OpcUaClientMx module
 * Any OPC UA server
 
@@ -335,7 +333,7 @@ The **OpcUaServer_View** page adds functionality to the **View server** button o
    Currently only Boolean, Int16, UInt16, Int32, Int64, Float, Double, and String are implemented to be written to the Node in the OPC UA Server. Reading has been tested for limited data types, when reading and subscribing all return values are casted to String through a simple toString() method. This implementation works well for Boolean and the Int values but hasn't been tested for all data types. 
 
 1. High-Availability Architecture *(no horizontal scaling support)*.   
-    At this point the module is relying completely on storing configuration in the server memory and only supports running on a single Container instance. If you UAe scaling and run multiple parallel instances of the application the module will likely generate exceptions and loose messages. 
+    At this point the module is relying completely on storing configuration in the server memory and only supports running on a single Container instance. If you use scaling and run multiple parallel instances of the application the module will likely generate exceptions and loose messages. 
 
 1. Complex Events on Nodes.  
     Subscriptions are only possible on value changes of Nodes. At this time Events or aggregates are not implemented yet. The module does support all DataTypes, any OPC UA type is received and passed as a String to the evaluating microflow.

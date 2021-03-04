@@ -16,9 +16,9 @@ The [Badge Button](https://appstore.home.mendix.com/link/app/52705/) widget can 
 * Attach an on-click microflow or nanoflow
 * Set static data when the persisted data is not specified
 
-### 1.2 Demo App Project
+### 1.2 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](https://badgebutton.mxapps.io/).
+For a demo app that has been deployed with this widget, see [here](https://badgebutton.mxapps.io/).
 
 ## 2 Usage
 

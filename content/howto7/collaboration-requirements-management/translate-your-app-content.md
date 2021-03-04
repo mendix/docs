@@ -16,7 +16,7 @@ Delivering your Mendix app in multiple languages is an important capability for 
 * Configure language operations
 * Perform batch replacement and batch translation
 
-## 2 Adding app Project Languages
+## 2 Adding App Languages
 
 The app project language is the main language of the app when it is run. There must be a default app project language, and **English, United States** is the app project language set automatically by default. You can add as many languages as you like by following these steps:
 

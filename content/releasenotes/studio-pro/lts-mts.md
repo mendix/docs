@@ -84,9 +84,7 @@ A monthly release is a a non-MTS/LTS minor release that has no support with patc
 
 ### 4.1 Support Duration
 
-[**"limited" usage below - from Support: "give people the impression that only MTS and LTS versions are supported, which is not the case" ?**]
-
-The support duration for a monthly release is limited, as all bugs found on a monthly release will only be fixed rolling forward to a subsequent minor version. 
+Monthly release versions do not enjoy patch releases like MTS and LTS versions do. However, bugs found in monthly release versions are directly resolved in the subsequent monthly release. 
 
 For example, if a bug is found in version 9.1, it will only be fixed in the next monthly release, which would be version 9.2.
 

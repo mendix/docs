@@ -14,6 +14,11 @@ Expressions changes a value based on a function or combination of functions.
 
 You can use expressions for microflows and workflows. The expressions are usually used to configure a condition for a certain activity or property, for example, a condition for a decision in a microflow or a workflow. 
 
+You can use expression for the following elements in a workflow:
+
+* [Decision](workflows-general-activities)
+* **Due date** property of a [workflow](workflow-properties) and a [user task](workflows-user-task)
+
 Expressions can be used for the following activities in a microflow: 
 
 *  End Event
@@ -25,18 +30,13 @@ Expressions can be used for the following activities in a microflow:
 
 For more information on setting and changing values for microflow activities, see [Set & Change a Value for Different Activities in the Microflows](microflows-setting-and-changing-value).
 
-You can use expression for the following elements in a workflow:
-
-* [Decision](workflows-general-activities)
-* **Due date** property of a [workflow](workflow-properties) and a [user task](user-task)
-
 ## 2 Writing an Expression
 
 Named items in microflows and workflows (for example, objects, lists, or variables) can be called in an expression by inserting the name of the item and adding a dollar sign (for example,  `$Customer` could refer to an object named `Customer`).
 
 Attributes and associations of objects are accessed using a slash (for example, the **Name** attribute of the customer object is referred to as `$Customer/Name`).
 
-You can combine functions in an expression. In this case, you can use brackets to determine the priority and associativity of calculations. For example, the **SellingPrice** is being calculated based on the default **Price** and **Discount** attributes:
+You can use brackets to determine the priority and associativity of calculations. For example, the **SellingPrice** is being calculated based on the default **Price** and **Discount** attributes:
 
 ```
 $CurrentPrice/Price - (($CurrentPrice/Price **div** 100) * $OrderLine/Discount)
@@ -48,10 +48,10 @@ You can use a list of suggestions to help you write an expression. Use <kbd>Ctrl
 
 * **Suggestions from your microflow** – variables or attributes that you have created or retrieved in your microflow
 * **Enumeration values** – values of [enumeration type of attributes](domain-models-enumeration) that can be used in an expression
-* **Keywords** – key phrases or words that you can use in an expression
+* **Functions** – operations you can use in an expression (for more information, see the [Expression Types](#expression-types) section below)
+* **Keywords** – key phrases or words that you can use in an expression (for example, **Empty** – a value that can be used to check if a variable is empty)
 * **Booleans** – true or false expressions
 * **Operators** – code elements that perform logical or mathematical operations. You can use Boolean or relational expressions (for more information, see the [Expression Types](#expression-types) section below)
-* **Empty** – a value that can be used to check if a variable is empty
 
 If an error appears in the expression, error messages with explanations will be displayed. 
 
@@ -64,6 +64,12 @@ Below are two examples that illustrate how expressions can be used.
 
 #### 2.3.1 Example 1
 
+You have a [user task](workflows-user-task) in a workflow and would like to add a **Due Date** as a reminder that the user task should be done by the day after tomorrow. You can write the following expression for it:
+
+![User Task Expression](attachments/expressions/user-task-due-date.png)
+
+#### 2.3.2 Example 2
+
 You have a [Decision](microflows-decision) in a microflow and you would like to write an expression that checks whether the customer grade is gold and the price of the order is more than 100 (you can configure a discount after the **Decision** that is allowed if this expression is true):
 
 ![](attachments/expressions/example-decision.png) 
@@ -72,17 +78,11 @@ The expression will look the following way:
 
 ![](attachments/expressions/expression-decision.png)
 
-#### 2.3.2 Example 2
+#### 2.3.2 Example 3
 
 You add a [Decision](microflows-decision) to a microflow to check if an object (in the example below the object is *Customer*) exists. And you also check if the Customer's name matches a particular one (in the example below Customer's name is *Mendix*). The expression will look the following way:
 
 ![](attachments/expressions/customer-empty-and-name-example.png)
-
-#### 2.3.3 Example 3
-
-You have a [user task](workflows-user-task) in a workflow and would like to add a **Due Date** as a reminder that the user task should be done by the day after tomorrow. You can write the following expression for it:
-
-![User Task Expression](attachments/expressions/user-task-due-date.png)
 
 ## 3 Expression Types {#expression-types}
 
@@ -119,7 +119,7 @@ The list of expressions that are used in Studio the most is represented below. F
 
 * [`max`](/refguide/mathematical-function-calls) – the maximum of a list of numbers
 * [`min`](/refguide/mathematical-function-calls) – the minimum of a list of numbers
-* [`round`](/refguide/mathematical-function-calls) – the rounding of a floating-point number, optionally to a specified precision
+* [`round`](/refguide/mathematical-function-calls) – rounds a number to a certain precision
 * [`random`](/refguide/mathematical-function-calls) – random number generation
 * [`floor`](/refguide/mathematical-function-calls) – the rounding of a floating-point number down
 * [`ceil`](/refguide/mathematical-function-calls) – the rounding of a floating-point number up
@@ -138,7 +138,6 @@ The list of expressions that are used in Studio the most is represented below. F
 * [`startsWith`](/refguide/string-function-calls)  – determines whether a string starts with the specified sub-string
 * [`endsWith`](/refguide/string-function-calls) – determines whether a string ends with the specified sub-string
 * [`trim`](/refguide/string-function-calls) – removes the leading and trailing whitespace
-* [`isMatch`](/refguide/string-function-calls) – matches a regular expression
 * [`replaceAll`](/refguide/string-function-calls) – replaces the occurrences of a sub-string
 * [`replaceFirst`](/refguide/string-function-calls) – replaces the first occurrence of a sub-string
 * [`String concatenation ( + )`](/refguide/string-function-calls) – concatenates strings

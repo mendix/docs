@@ -12,7 +12,7 @@ The [Progress Bar](https://appstore.home.mendix.com/link/app/48910/) widget disp
 
 The widget:
 
-- visually displays the percentual progress based on a configurable range;
+- visually displays the percentual progress in the form of a bar based on a configurable range;
 - offers out-of-the-box brand styling for the bar and background color with "Appearance" design properties;
 - offers out-of-the-box options for different types of bars and support for animation.
 

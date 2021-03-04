@@ -67,7 +67,17 @@ When you edit a microflow, you will also see five additional actions in the **To
 ![OPC UA Client connector actions in the microflow toolbox](attachments/opc-ua/opc-ua-toolbox.png)
 {{% /image_container %}}
 
-If you use subscriptions you **must** setup the After Startup & Before Shutdown microflow. When subscribing these actions make sure that you re-subscribe when you start your app & that you disconnect when shutting down. If you don't use the after startup subscriptions won't reconnect after a reboot. If you don't use the before shutdown, the server will keep the old subscriptions (potentially up to a few hours) and send duplicate messages for this period of time (and can cause exceptions in the client). 
+
+### 2.1 Configuration:  
+1. Add the **OpcUaServer_Overview** page to the navigation of the app, either through the **Navigation** settings, or by adding an **Open Page** button to a page which is already in the navigation (for example the home page). 
+
+2. Looup the Constant: **UA_ApplicationName** in the **_USE_ME** folder and update these with the information specific to your Client. The application name must be unique to the OPC UA Server, the connector has no requirements to the contents of this constant. If you have a single Mendix application connecting to the server you could choose to leave the default value, if you have multiple Mendix applications connecting to the same server you **must** alter the name to be unique (as per the OPC UA spec).   
+*See the OPC UA Specification for more details, this setting is only used by the OPC UA Server.*
+
+3. Looup the Constant: **UA_ApplicationURI** in the **_USE_ME** folder and update these with the information specific to your Client. The application URI must be unique to the OPC UA Server, the connector has no requirements to the contents of this constant. If you have a single Mendix application connecting to the server you could choose to leave the default value, if you have multiple Mendix applications connecting to the same server you **must** alter the name to be unique (as per the OPC UA spec).   
+*If you are using client certificates for authentication, the URI should match the certificate. See the OPC UA Specification for more details, this setting is only used by the OPC UA Server.*
+
+4. If you use subscriptions you **must** setup the After Startup & Before Shutdown microflow. When subscribing these actions make sure that you re-subscribe when you start your app & that you disconnect when shutting down. If you don't use the after startup subscriptions won't reconnect after a reboot. If you don't use the before shutdown, the server will keep the old subscriptions (potentially up to a few hours) and send duplicate messages for this period of time (and can cause exceptions in the client). 
 
 This is all you need to do to use the connector. However, there is also a sample module, [OPC UA Client example implementation](https://appstore.home.mendix.com/link/app/114876/), which gives an example of how the connector can be used. If you want to look at the sample implementation described in [OPC UA Client example implementation](#example-implementation) you will need to import this into your app in addition to the OPC UA Client connector.
 
@@ -310,19 +320,14 @@ The purpose of this tab is to show the Subscriptions with their current Publishi
 
 ## 4 OPC UA Client Example Implementation{#example-implementation}
 
-The OPC UA Client example implementation is a sample app based on the [Prosys OPC UA server](https://www.prosysopc.com/). It implements the following functionality:
+The OPC UA Client example implementation is a sample app based on the [Prosys OPC UA server](https://www.prosysopc.com/) and provides basic browsing functionality, this is not intended to replace a UA Client. It implements the following functionality:
 
-* Configure one or more OPC UA server connections
-* View the nodes on the server
-* ?????? 
-* Add a subscription to a node
-* Remove a subscription
+* Configure one or more OPC UA server connections (using the client)
+* View & browse nodes on the server
+* Example Consumer implementation
 
-You can use or adapt the OpcUaClient_ExampleImplementation module (link) for a fast start. Bear in mind that the node data structure from your server may be different and adjust your imports accordingly.
+You can use the OpcUaClient_ExampleImplementation module (link) as template to start the consumption of your OPC UA Server information. Bear in mind that the node data structure from all servers will be different and it could be that the JSON to browse the Nodes is different in your server, so adjust your imports accordingly if needed.
 
-{{% alert type="info" %}}
-If you are adapting the example implementation, it is recommended that you make a copy of the module and add it to your app so that you don't accidentally update the App Store module and overwrite your changes.
-{{% /alert %}}
 
 ### 4.1 Dependencies
 
@@ -332,14 +337,28 @@ If you are adapting the example implementation, it is recommended that you make 
 * Any OPC UA server
 
 ### 4.2 Initial Configuration
+1. Install the **OpcUaClientMx** module according to the instructions
+1. Add the **OpcUaServer_Overview** page to the navigation of the app, either through the **Navigation** settings, or by adding an **Open Page** button to a page which is already in the navigation (for example the home page). The page in this module contains the same functionality as the **OpcUaClientMx** module and can be used as a replacement. 
 
-1. Add the **OpcUaServer_Overview** page in the **OpcUaClientMx** module to the navigation of the app, either through the **Navigation** settings, or by adding an **Open Page** button to a page which is already in the navigation (for example the home page).
-
-2. Connect the **OpcUaServer_View** page in the **OpcUaClient_ExampleImplementation** to the **View server** button on the **OpcUaServer_Overview** page in the **OpcUaClientMx** module.
 
 ### 4.3 Pages
 
-The **OpcUaServer_View** page adds functionality to the **View server** button on the server overview page. 
+The **OpcUaServer_View** page adds functionality through the **View server** button on the server overview page. By opening this page you are able to browse and search through the OPC UA nodes. The Tree view and Node View are different ways to interact with the nodes and open the node structure. For a full detailed view of all node properties either use an actual OPC UA browser or extend the module to parse the additional properties.
+
+
+
+### 4.4 Example Consumption
+The module contains a folder '_Example Consumer' which shows the best way to structure the integration with an OPC UA Server.
+
+In this example you can see how to interact with a fysical gate through a PLC. The dashboard shows an example of the runtime configuration of the Subscriptions, for an actual implementation you'd move this to an admin management page. The left side of the page shows the interaction with the OPC UA Server.  
+As you can see it shows the current status of the PLC, when clicking on the 'Open' or 'Close' button the microflow will perform the required validations before writing an instruction to the OPC UA Server.  
+
+In this use-case the OPC UA Server will recieve the instruction through the write action, this will trigger the fysical gate to move. When the gate state changes, the OPC UA Server will update the 'State'-node accordingly.  
+
+The application is subscribing on the 3 different nodes, IsUp, IsDown, IsMoving. When either of these nodes changes values, a message is send to the Mendix client and the values are parse by the respective microflows: UA_ProcessEvent_GateUp, UA_ProcessEvent_GateDown, UA_ProcessEvent_GateMoving.    
+All three subscription microflows lookup the MonitoredItem record, and through the MonitoredItem find the actual PLC that's changing (you need to follow this pattern when interacting with multiple devices through OPC UA). After retrieving the PLC it will update the state according to the Message. You can extend this microflow with as many complex evaluation and validations as you want. 
+
+Alternatives: It is possible for the OPC UA Node to hold a complex JSON structure as value instead of a simple integer in this example. If that is the case you'd implement the same microflow logic, but in addition you'd call an Import Mapping activity before processing the results. 
 
 
 ## Known Limitations ##

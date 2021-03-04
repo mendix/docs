@@ -26,7 +26,7 @@ On the right side of the toolbar with the new navigation, you can search and acc
 
 ![](attachments/new-app.jpg)
 
-On the left side of the toolbar with the new navigation, you open an access menu by clicking this icon:
+On the left side of the toolbar with the new navigation, you open an access menu by clicking the **Switch-to** menu:
 
 ![](attachments/dock.jpg)
 

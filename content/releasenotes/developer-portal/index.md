@@ -25,7 +25,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 #### Fixes
 
 * We fixed an issue where the **Add image** icon was missing when posting a comment on the [Buzz](/developerportal/collaborate/buzz). (Ticket 109481)
-* We fixed an issue where creating an api-user appeared in the audit trail. (Ticket 116182)
+* We fixed an issue where creating API keys appeared in the audit trail. (Ticket 116182)
 
 ### February 25th, 2021
 

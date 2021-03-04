@@ -102,10 +102,7 @@ To invite new App Users to your app, click **Invite Users** on the **App User Ma
 
 6. Add a personal message to your invitation, and finally click **Next** then **Send Invitations** to send it.
 
-The invitee will receive an email asking them to authorize access to their Mendix account on this screen:
-
-{{% image_container width="350" %}}![](attachments/authorize.png)
-{{% /image_container %}}
+The invitee will receive an email asking them to authorize access to their Mendix account on this screen.
 
 After they provide authorization, they will be brought to your deployed app.
 

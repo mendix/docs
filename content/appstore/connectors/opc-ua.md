@@ -52,7 +52,7 @@ Recommended; Having an external OPC UA Client tool will make setup of the connec
 
 ## 2 Installation
 
-Import the [OPC UA Client connector](https://appstore.home.mendix.com/link/app/114874/) module into your app. Instructions for doing this are in [How to use App Store Content in Studio Pro](/appstore/general/app-store-content).
+Import the [OPC UA Client connector](https://appstore.home.mendix.com/link/app/114874/) module into your app. Instructions for doing this are in [How to Use App Store Content in Studio Pro](/appstore/general/app-store-content).
 
 You will see the new module in the **App Store modules** section of the **Project Explorer**.
 
@@ -289,9 +289,24 @@ The result of the tests is displayed in the **Result** field. It shows the raw J
 
 ##### 3.3.2.3 Server Subscriptions overview 
 
-{{% todo %}}[Write the chapter on the subscription page]{{% /todo %}}
+The Subscription Detail page provides insight in the MonitoredItems and Subscriptions that are currently active (or have been recently active). You cannot create new subscriptions from here, but you can interact with existing ones.
 
+The **Monitored Item** Tab:  
+Shows a view of all the **MonitoredItem**s that are known to the application. Any object of any status is showing in this view, that is New, Active, Failed, Deleted instances. 
 
+For each MonitoredItem you are able to perform one of the following actions:   
+*If your server is correctly configured there is no need to ever execute these actions, but this can be useful to resolve connectivity problems or recover after a previous failure*
+
+* **Refresh Subscription** Select a MonitoredItem from the list, to re-establishes the connect with the Server. If a previous connection exists it will simply re-negotiate the settings with the server, if the connection was lost it will be re-established. This action can also be executed on 'Deleted' or 'Failed' objects. A succesful refresh will update these objects to the 'Active' status. 
+* **Unsubscribe** Unsubscribe the MonitoredItem from the OPC UA server updates. If the action was succesful the object will receive the status 'Deleted' and will be removed from the database eventually.   
+* **Delete** Remove the selected MonitoredItem from the database. There are no validations on this action, make sure you know that you can delete the record from the database before executing this action. If you remove a MonitoredItem that still has an active subscription at the OPC UA Server the connector could generate duplicate or untraceble messages, or throw exceptions (until the connection expires at the server).     
+* **Re-connect All New/Active Subscriptions** Refresh all the MonitoredItems that have the status New or Active. Re-establishes the connect with the Server. If a previous connection exists it will simply re-negotiate the settings with the server, if the connection was lost it will be re-established.  
+
+The **Subscription (connection)** Tab:  
+Shows a list of all the active Subscriptions with the server, and all MonitoredItems that are grouped in that same connection. 
+The Subscription objects are managed by the connector, you cannot directly interact with this data. All Subscriptions are automatically created or removed along with MonitoredItems.
+
+The purpose of this tab is to show the Subscriptions with their current Publishing Interval to gain insight in the frequency messages being send by the server.  
 
 ## 4 OPC UA Client Example Implementation{#example-implementation}
 

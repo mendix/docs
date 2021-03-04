@@ -85,7 +85,7 @@ For each OPC UA server, the following information will need to be stored in a Op
 
 * ServerID (String) – a short nickname that you assign to the server so that you can identify it easily. Primarily used for error and log messages.
 * URL (String) – the full URL of the OPC UA server (e.g.: opc.tcp://localhost:53530/OPCUA/SimulationServer)
-* username (String) – the username used if the authentication type is `CREDENTIALS`
+* Username (String) – the username used if the authentication type is `CREDENTIALS`
 * Password (String) – the password for the username used if the authentication type is `CREDENTIALS`, only used for data-entry. After saving this field is reset.
 * Password_Encrypted (String) – the encrypted password for the username, automatically takes the 'Password' and encrypts the value
 * AuthenticationType (Enumeration) – the type of authentication required for this server: `NONE`, `CREDENTIALS`, or `CERTIFICATE`
@@ -166,7 +166,7 @@ Each subscription requires a microflow to process the data each time a notificat
 * NodeId – The NodeId of the Node you want to subscribe to. Expects the full Node Id as referenced by the OPC UA server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
 * On message microflow – defines a microflow to be run every time a message is received from the subscribed service. This microflow must have 1 input parameter of type: OpcUaClientMx.Message and no output.
 * Subscription (optional) – pass a **Subscription** entity to have more control over the frequence in which messages are send to the client. Leave this parameter blank to let the module setup the subscription.
-* use return value – `Yes` returns an object of type **MonitoredItem** which defines the new subscription and can be used in the microflow, `No` does not return an object. The returned object should not be changed or committed, but can be associated to for your administration/logic.
+* Use return value – `Yes` returns an object of type **MonitoredItem** which defines the new subscription and can be used in the microflow, `No` does not return an object. The returned object should not be changed or committed, but can be associated to for your administration/logic.
 * Variable name – the name assigned to the variable containing the return value  
 
 {{% alert type="info" %}}
@@ -240,7 +240,7 @@ The OPC UA Client connector comes with a number of pages which you can use to ma
 
 This page shows a summary of all the servers you have set up in your app and allows you to edit existing servers and set up a new one. For each server you will see the name you have given it, the URL where the server can be reached, and the authentication type.
 
-To use this page, jUAt include it in the navigation for your app, or add an **Open Page** button to an existing page of your app.
+To use this page, just include it in the navigation for your app, or add an **Open Page** button to an existing page of your app.
 
 From this page, you can perform the following actions:
 
@@ -252,7 +252,7 @@ From this page, you can perform the following actions:
 
 #### 3.3.2 OpcUaServer_NewEdit
 
-This page allows you to create or change the details of an OPC UA server you want to use within your app. Your app administrator can use this page as is, or you can cUAtomize it for your own use. If you cUAtomize it, we recommend that you use a copy of it in one of your own modules so that it is not accidentally overwritten if you update the OPC UA Client connector App Store module.
+This page allows you to create or change the details of an OPC UA server you want to use within your app. Your app administrator can use this page as is, or you can customize it for your own use. If you customize it, we recommend that you use a copy of it in one of your own modules so that it is not accidentally overwritten if you update the OPC UA Client connector App Store module.
 
 ##### 3.3.2.1 Data on OpcUaServer_NewEdit Page
 
@@ -272,7 +272,7 @@ The OPC UA server should have only one type of authentication enabled, and the a
 
 ##### 3.3.2.2 Troubleshoot (test actions) on OpcUaServer_NewEdit Page
 
-In addition to the UAual **Save** and **Cancel** buttons which allow you to save the server settings or cancel the create or edit operation, there are additional options to validate your configuration. If you click the 'Advanced Troubleshooting' button a new page is opened where you can still edit your configuration, but also test by reading/writing/browsing the OPC UA Server. This allows you to test your configuration and run actions directly on the OPC UA Server.
+In addition to the usual **Save** and **Cancel** buttons which allow you to save the server settings or cancel the create or edit operation, there are additional options to validate your configuration. If you click the 'Advanced Troubleshooting' button a new page is opened where you can still edit your configuration, but also test by reading/writing/browsing the OPC UA Server. This allows you to test your configuration and run actions directly on the OPC UA Server.
 
 **Test Messaging:**  
 * **NodeId** – The NodeId of the Node you want to use. Expects the full Node Id as referenced by the OPC UA server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
@@ -303,7 +303,7 @@ The OPC UA Client example implementation is a sample app based on the [Prosys OP
 * Add a subscription to a node
 * Remove a subscription
 
-You can use or adapt the OpcUaClient_ExampleImplementation module (link) for a fast start. Bear in mind that the node data structure from your server may be different and adjUAt your imports accordingly.
+You can use or adapt the OpcUaClient_ExampleImplementation module (link) for a fast start. Bear in mind that the node data structure from your server may be different and adjust your imports accordingly.
 
 {{% alert type="info" %}}
 If you are adapting the example implementation, it is recommended that you make a copy of the module and add it to your app so that you don't accidentally update the App Store module and overwrite your changes.

@@ -24,9 +24,9 @@ The [Video Player](https://appstore.home.mendix.com/link/app/110700/) widget ena
 
 * File hosted in Mendix Server cannot be played in the Safari browser
 
-### 1.3 Demo App Project
+### 1.3 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](https://videoplayer-sandbox.mxapps.io/).
+For a demo app that has been deployed with this widget, see [here](https://videoplayer-sandbox.mxapps.io/).
 
 ## 2 Configuration
 

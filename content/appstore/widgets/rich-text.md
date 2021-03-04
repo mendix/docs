@@ -18,9 +18,9 @@ The [Rich Text](https://appstore.home.mendix.com/link/app/74889/) widget enables
 * Use the custom option to select which editing options you want to show
 * Input and display text is sanitized
 
-### 1.2 Demo App Project
+### 1.2 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](http://texteditorwidget.mxapps.io).
+For a demo app that has been deployed with this widget, see [here](http://texteditorwidget.mxapps.io).
 
 ## 2 Configuration
 

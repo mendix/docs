@@ -22,9 +22,9 @@ The [Image Viewer](https://appstore.home.mendix.com/link/app/65122/) widget disp
 	* Open page
 	* Call a microflow or nanoflow
 
-### 1.2 Demo App Project
+### 1.2 Demo App
 
-For a demo app project that has been deployed with these widgets, see [here](https://imageviewer.mxapps.io/).
+For a demo app that has been deployed with these widgets, see [here](https://imageviewer.mxapps.io/).
 
 ## 2 Usage
 

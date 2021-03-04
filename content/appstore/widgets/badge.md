@@ -15,9 +15,9 @@ The [Badge](https://appstore.home.mendix.com/link/app/50325/) widget shows a val
 * Attach an on-click microflow or nanoflow
 * Set static data text when dynamic data is not specified
 
-### 1.1 Demo App Project
+### 1.1 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](https://badge.mxapps.io/).
+For a demo app that has been deployed with this widget, see [here](https://badge.mxapps.io/).
 
 ## 2 Usage
 

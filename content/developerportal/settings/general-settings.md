@@ -129,12 +129,12 @@ Click **Manage Webhooks** to manage your app's webhooks. A webhook enables the D
 Only [Mendix Admins](/developerportal/control-center/index#company) or users with the **App Settings** permission can manage webhooks.
 {{% /alert %}}
 
-On the **Webhooks settings** page, you can add a new webhook and edit or delete existing webhooks:
+On the **Webhooks** page, you can add a new webhook and edit or delete existing webhooks:
 
 {{% image_container width="550" %}}![](attachments/webhooks-list.png)
 {{% /image_container %}}
 
-After clicking **New** to create a new webhook, fill in the following details:
+After clicking **New Webhook** to create a new webhook, fill in the following details:
 
 * **Name** – the name of the webhook
 * <a name="url"></a>**URL** – the URL to which the webhook will connect 

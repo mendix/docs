@@ -23,9 +23,9 @@ title: "Enter the title of the document"
 
 {List important dependencies, especially when they are other Marketplace components.}
 
-### 1.6 Demo App Project
+### 1.6 Demo App
 
-{Provide a link to a maintained demo app project where the component is used if available.}
+{Provide a link to a maintained demo app where the component is used if available.}
 
 ## 2 Installation
 

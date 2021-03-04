@@ -19,9 +19,9 @@ The [Switch](https://appstore.home.mendix.com/link/app/50324/) widget enables to
 * Display in either iOS style or android(material design)
 * Display in various bootstrap styles
 
-### 1.2 Demo App Project
+### 1.2 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](http://booleansliderwidge.mxapps.io).
+For a demo app that has been deployed with this widget, see [here](http://booleansliderwidge.mxapps.io).
 
 ## 2 Usage
 

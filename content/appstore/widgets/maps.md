@@ -32,9 +32,9 @@ The [Maps](https://appstore.home.mendix.com/link/app/108261/) widget enables sho
 * For all map types except OpenStreetMap, you need to have a token in order to view the map – you can get the tokens via the links to the map types listed in the [Introduction](#intro) section above
 * Google maps uses [Google Maps API v3](https://cloud.google.com/maps-platform/), so the limitations from Google [Premium Plan Usage Rates and Limits](https://developers.google.com/maps/premium/usage-limits) apply
 
-### 1.3 Demo App Project
+### 1.3 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](https://leafletmaps.mxapps.io/).
+For a demo app that has been deployed with this widget, see [here](https://leafletmaps.mxapps.io/).
 
 ## 2 How the Widget Works
 

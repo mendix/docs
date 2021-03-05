@@ -69,7 +69,7 @@ You can upload a PKCS12 file by following these steps:
     ![](attachments/certificates/certificate-details.png)
 
 {{% alert type="info" %}}
-Certificates require an app restart before they become active.
+Changes made to certificate settings will only become effective after restarting the app.
 {{% /alert %}}
 
 ## 4 Outgoing – Certificate Authorities

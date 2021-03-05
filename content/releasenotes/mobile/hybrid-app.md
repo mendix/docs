@@ -12,9 +12,29 @@ If you are using the advanced flow, you can get the latest version of the Hybrid
 
 For more information on hybrid mobile app development in Mendix, see the [Hybrid Mobile](/refguide/hybrid-mobile) section of the *Studio Pro 8 Guide* and the [Hybrid Mobile](/howto/mobile/hybrid-mobile) section of the *Studio Pro 8 How-to's*.
 
+## 2021
+
+### Hybrid App Base 5.0.3
+
+**Release date: March 5th, 2021**
+
+* We fixed an issue where the database might close at the wrong moment
+
 ## 2020
 
-### Hybrid App Base 5.0.0
+### Hybrid App Base 5.0.2
+
+**Release date: September 3rd, 2020**
+
+* We fixed the version number of the Hybrid App Base
+
+### Hybrid App Base 5.0.1
+
+**Release date: September 3rd, 2020**
+
+* Android builds now target Android SDK level 29 by default. This version of the Native Template complies with the Google Play requirements. More info: https://support.google.com/googleplay/android-developer/answer/113469#targetsdk
+
+### Hybrid App Base 5.0.0 / Hybrid App Template 5.0.0
 
 **Release date: April 15th, 2020**
 

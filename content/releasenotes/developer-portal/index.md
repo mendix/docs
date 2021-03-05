@@ -13,6 +13,13 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2021
 
+### March 9th, 2021
+
+#### Improvements
+
+* In [Mendix Control Center](/developerportal/control-center/), now Mendix Admins can edit name or description of an app access group once it has been created.
+* Also, we now show a confirmation text to the Mendix Admin when trying to deactivate a member to properly inform the consequences of that action.
+
 ### March 4th, 2021
 
 #### Improvements

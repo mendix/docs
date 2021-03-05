@@ -36,13 +36,13 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Workflow
+### 3.1 Workflow {#workflow}
 
 The workflow that is called by this activity. 
 
 ### 3.2 Context Object
 
-The object which you want to use as a context. It should be a [specialization](generalization-and-association) of the **Workflow Context** entity from the **System** module.
+The object which you want to use as a context. It should be of the entity type set in the [Workflow](#workflow) property.
 
 ### 3.3 Variable Name, Object Name, or List Name {#name}
 

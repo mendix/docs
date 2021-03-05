@@ -285,7 +285,7 @@ Switching from a ZIP file to a UI resources package is straightforward:
 
 ### 7.1 User Entity
 
-**User entity** defines the entity which the user targeting is based on. You can use the attributes of this entity in an XPath. 
+**User entity** defines the entity which is used in [assigning a user task](user-task#user-assignment). If you assign a user task using an Xpath, you can use attributes of this entity. If you are using a microflow, the entity defines the return type the microflows expects. For more information, see the [User Task Assignment](user-task#user-assignment) section in *User Task*.
 
 ## 8 Miscellaneous Tab {#miscellaneous}
 

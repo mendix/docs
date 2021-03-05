@@ -13,7 +13,7 @@ For example, you can add filters and assign a task to users with the Manager rol
 
 ![User Task Example](attachments/user-task/user-task.jpg)
 
-If you are using the **Workflow Commons** module, when the workflow reaches this user task, the task will appear in the user's inbox:
+When the workflow reaches the user task activity, the task is created and will be displayed in the Task inbox if you're using the **Workflow Commons** module:
 
 ![Task Inbox](attachments/user-task/task-inbox.jpg)
 
@@ -36,7 +36,7 @@ User task properties consist of the following sections:
 
 #### 2.1.1 Task Name
 
-**Task name** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Task name** is used in page templates and preconfigured pages. 
+**Task name** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Task name** is used in page templates and on preconfigured pages to identify the task. 
 
 For more information on using parameters, see the [Parameters](#parameters) section below.
 
@@ -48,7 +48,9 @@ The **Task description** can contain parameters that are written between braces,
 
 #### 2.1.3 Parameters {#parameters}
 
-Parameters are attributes the value of which will be displayed. To view **Parameters**, click the ellipsis icon next to the **Task name** or **Task description** in properties depending on where you would like to display these parameters. 
+Parameters are attributes the value of which will be displayed. For example, you can display when the task is due using the **DueDate** parameter.
+
+To view **Parameters**, click the ellipsis icon next to the **Task name** or **Task description** in properties depending on where you would like to display these parameters. 
 
 Parameters have the following settings:
 

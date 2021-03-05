@@ -72,7 +72,9 @@ The **Workflow description** can contain parameters that are written between bra
 
 #### 2.3.3 Parameters {#parameters}
 
-Parameters are attributes the value of which will be displayed. To view **Parameters**, click the ellipsis icon next to the **Workflow name** or **Workflow description** in properties depending on where you would like to display these parameters. 
+Parameters are attributes the value of which will be displayed. For example, you can display the name of the new employee who is being onboarded using the **FullName**  parameter.
+
+To view **Parameters**, click the ellipsis icon next to the **Workflow name** or **Workflow description** in properties depending on where you would like to display these parameters. 
 
 Parameters have the following settings:
 
@@ -116,7 +118,7 @@ In addition to adding new parameters, you can perform the following actions on p
 
 ### 2.6 Workflow Page Section {#workflow-page}
 
-**Workflow page** is an overview page where the allowed roles (e.g. the Process Administrator) can track the progress of the workflow and its tasks. 
+**Workflow page** is an overview page where the allowed roles (e.g. the Workflow Administrator) can track the progress of the workflow and its tasks. 
 
 ## 3 Read More
 

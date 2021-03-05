@@ -35,7 +35,7 @@ The microflow that is called by this element.
 
 ### 2.2 Outcomes Section {#outcomes}
 
-**Outcomes** depends on the return type and values of the microflow. For example, for the Boolean, you have **true** and **false** outcomes, and for the enumeration: an outcome per each enumeration value and an empty one when the value is unassigned. 
+**Outcomes** depends on the return type and values of the microflow. For example, when there is not return type, you have a single outcome; for the Boolean, you have **true** and **false** outcomes; and for the enumeration – an outcome per each enumeration value and an empty one when the value is unassigned. 
 
 ### 2.3 Parameters Section {#parameters}
 

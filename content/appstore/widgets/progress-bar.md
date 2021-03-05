@@ -13,9 +13,8 @@ The [Progress Bar](https://appstore.home.mendix.com/link/app/48910/) widget disp
 The widget does the following:
 
 * Displays a progress percentage in the form of a bar based on a configurable range
-* Offers brand styling for the bar and background color through the **Appearance** design properties
-* Offers options for different types of bars 
-* Supports animation options
+* Offers brand styling for the bar through the **Appearance** design properties
+* Offers option for a striped bar
 
 ## 2 Usage
 
@@ -37,8 +36,8 @@ Configuring the label on the progress bar can be done on the **Progress Label** 
 
 Under the **Appearance** tab, the following styling properties can be adjusted for the progress bar:
 
-* Bar type: can be plain, striped, or animated
-* Bar and background color based on brand styling
+* Striped  bar: whether the bar should be striped or plain
+* Bar color based on brand styling
 * Size (small, medium, and large)
 	* *Note that when the size is configured to small no label will be shown due to limited space, and text labels will be included as a tooltip that shows on hover*
 

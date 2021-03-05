@@ -63,14 +63,14 @@ Apps are displayed as square icons with the application icon and the environment
 ![](attachments/use-landscape/node-apps.png)
 
 ### 2.4 Dependencies
-The relationships and dependencies between apps, published services, and consuming apps are represented by connecting lines that also display the datasets that are publised by a service and consumed by consuming apps. These are illustrated and described in the following examples: 
+The relationships and dependencies between apps, published services, and consuming apps are represented by connecting lines that also display the datasets that are published by a service and consumed by consuming apps. These are illustrated and described in the following examples: 
 
 ![](attachments/use-landscape/dependencies.png)
 
 * **Solid gray line** – This links an app and the services published from the app in the specified environment. In the example, the selected app **LEGO-Machinesafety Data** has 2 published services, which includes**Published_OData_MS 1.0.0**. 
 * **Broken gray line with an arrow (consume line)** – This indicates that an app is consuming from the service it is linked to by the line. The direction of the dependency is indicated by the direction of the arrow: the consuming app makes a call to the OData service for data from the publishing app—the arrow points to the service (or data source) which is "pulling" the data. The service will "get" the data associated with the endpoint of the consumed dataset from the publishing app.
 
-  The app **StudioExperienceMob6ug** consumes one dataset through **Published_OData_MS 1.0.0**, which is published from **LEGO - Machine Safety Data** in the production environment.
+  The app **StudioExperienceMob6Aug** consumes one dataset through **Published_OData_MS 1.0.0**, which is published from **LEGO - Machine Safety Data** in the production environment.
 
 The network of dependencies that is shown will position the selected asset at the center of the network. 
 

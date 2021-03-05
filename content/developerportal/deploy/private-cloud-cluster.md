@@ -262,7 +262,7 @@ To connect to an Azure PostgreSQL server, the Kubernetes cluster must be added t
 {{% /alert %}}
 
 {{% alert type="info" %}}
-For Azure SQL databases, additional parameters are required to specify the database elastic pool name, tier, service objective and maximum size.
+For Azure SQL databases, the additional parameters `elastic pool name`, `tier`, `service objective`, and `maximum size` are required to specify the database. You can find information about these in the [Create Database](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&tabs=sqlpool#create-a-database) documentation for the Azure SQL Database on the Microsoft documentation site.
 {{% /alert %}}
 
 {{% alert type="info" %}}

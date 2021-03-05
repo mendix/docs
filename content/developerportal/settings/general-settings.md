@@ -102,10 +102,7 @@ To invite new App Users to your app, click **Invite Users** on the **App User Ma
 
 6. Add a personal message to your invitation, and finally click **Next** then **Send Invitations** to send it.
 
-The invitee will receive an email asking them to authorize access to their Mendix account on this screen:
-
-{{% image_container width="350" %}}![](attachments/authorize.png)
-{{% /image_container %}}
+The invitee will receive an email asking them to authorize access to their Mendix account on this screen.
 
 After they provide authorization, they will be brought to your deployed app.
 
@@ -132,12 +129,12 @@ Click **Manage Webhooks** to manage your app's webhooks. A webhook enables the D
 Only [Mendix Admins](/developerportal/control-center/index#company) or users with the **App Settings** permission can manage webhooks.
 {{% /alert %}}
 
-On the **Webhooks settings** page, you can add a new webhook and edit or delete existing webhooks:
+On the **Webhooks** page, you can add a new webhook and edit or delete existing webhooks:
 
 {{% image_container width="550" %}}![](attachments/webhooks-list.png)
 {{% /image_container %}}
 
-After clicking **New** to create a new webhook, fill in the following details:
+After clicking **New Webhook** to create a new webhook, fill in the following details:
 
 * **Name** – the name of the webhook
 * <a name="url"></a>**URL** – the URL to which the webhook will connect 

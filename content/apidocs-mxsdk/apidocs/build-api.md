@@ -27,7 +27,7 @@ Retrieves all deployment packages that are available for a specific app that the
 
 ```http
 HTTP Method: GET
-URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/ 
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 ```
 
 #### 2.1.2 Request
@@ -39,7 +39,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/
 ##### 2.1.2.2 Example
 
 ```http
-GET /api/1/apps/calc/packages/ HTTP/1.1
+GET /api/1/apps/calc/packages HTTP/1.1
 Host: deploy.mendix.com
 Accept: */*
 Mendix-Username: richard.ford51@example.com
@@ -130,7 +130,7 @@ An object with the following key-value pairs:
 *   _Creator_ (String) : Uploader or creator of this package
 *   _CreationDate_ (Date) : Date that the package became available in the portal. This can be the
     upload date or the date that a build was created in the portal
-*   _Status_ (String) : Status of the package. A package is ready to use if the status is 'Succeeded'. Possible values: 
+*   _Status_ (String) : Status of the package. A package is ready to use if the status is 'Succeeded'. Possible values:
      * Succeeded
      * Queued
      * Building
@@ -235,7 +235,7 @@ Start the process to build a deployment package, based on the team server projec
 
 ```http
 HTTP Method: POST
-URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 ```
 
 #### 2.5.1 Request
@@ -256,7 +256,7 @@ An object with the following key-value pairs:
 ##### 2.5.1.3 Example
 
 ```http
-POST /api/1/apps/calc/packages/ HTTP/1.1
+POST /api/1/apps/calc/packages HTTP/1.1
 Host: deploy.mendix.com
 Accept: */*
 Mendix-Username: richard.ford51@example.com

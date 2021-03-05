@@ -17,9 +17,9 @@ The [Progress Circle](https://appstore.home.mendix.com/link/app/47783/) widget d
 * Open a page or run a microflow on click
 * Show the progress circle with different colors
 
-### 1.2 Demo App Project
+### 1.2 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](https://progresscircle.mxapps.io).
+For a demo app that has been deployed with this widget, see [here](https://progresscircle.mxapps.io).
 
 ## 2 Usage
 

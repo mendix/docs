@@ -17,9 +17,9 @@ The [Range Slider](https://appstore.home.mendix.com/link/app/52704/) widget can 
 * Show or hide a tooltip upon hover
 * Render range slider with different Bootstrap colors
 
-### 1.2 Demo App Project
+### 1.2 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](https://rangeslider.mxapps.io/).
+For a demo app that has been deployed with this widget, see [here](https://rangeslider.mxapps.io/).
 
 ## 2 Configuration
 

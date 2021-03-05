@@ -15,7 +15,6 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ### March 3rd, 2021
 
-* We added the ability to completely clear all the data from your database running in a licensed environment.
 * We updated the [deploy API](/apidocs-mxsdk/apidocs/deploy-api), [Build API](/apidocs-mxsdk/apidocs/build-api), [Team Server API](/apidocs-mxsdk/apidocs/team-server-api), [Backups API V2](/apidocs-mxsdk/apidocs/backups-api), and [Backups API V1](/apidocs-mxsdk/apidocs/backups-api-v1) to:
     * add json validation
     * add stricter API path validation (for example, a trailing `/` on the API path will result in `API not found`)

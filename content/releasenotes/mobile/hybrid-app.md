@@ -12,7 +12,24 @@ If you are using the advanced flow, you can get the latest version of the Hybrid
 
 For more information on hybrid mobile app development in Mendix, see the [Hybrid Mobile](/refguide/hybrid-mobile) section of the *Studio Pro 8 Guide* and the [Hybrid Mobile](/howto/mobile/hybrid-mobile) section of the *Studio Pro 8 How-to's*.
 
+### Hybrid App Base 5.0.3
+
+**Release date: March 4th, 2021**
+
+### Fixes
+
+* We fixed an issue where the database might close at the wrong moment.
+
+
 ## 2020
+
+### Hybrid App Base 5.0.1, 5.0.2
+
+**Release date: September 3rd, 2020**
+
+### Fixes
+
+* We updated targetSdkVersion for Android to 29.
 
 ### Hybrid App Base 5.0.0
 

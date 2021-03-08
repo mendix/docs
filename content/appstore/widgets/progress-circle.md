@@ -13,7 +13,7 @@ The [Progress Circle](https://appstore.home.mendix.com/link/app/47783/) widget d
 The widget does the following:
 
 * Displays a progress percentage in the form of a circle based on a configurable range
-* Offers brand styling for the circle and background color through the **Appearance** design properties
+* Offers brand styling for the circle color through the **Appearance** design properties
 
 ## 2 Usage
 

@@ -54,7 +54,7 @@ The classification for a registered OData service is shown in the **Service Meta
 
 For an example of how to implement authentication using security assertion markup language (SAML) and Active Directory Federation Services (ADFS),  the following procedure illustrates how to use a custom HTTP headers microflow and a custom HTTP validation microflow to generate, set, and validate authentication tokens.
 
-The following steps describe how the security proposal is set with [ADFS](https://docs.microsoft.com/en-us/windows-server/identity/active-directory-federation-services) and the [SAML](/appstore/modules/saml) Mendix App Store module:
+The following steps describe how the security proposal is set with [ADFS](https://docs.microsoft.com/en-us/windows-server/identity/active-directory-federation-services) and the [SAML](/appstore/modules/saml) Mendix Marketplace module:
 
 ![](attachments/security/federation-with-ADFS-SAML-schematic.png)
 

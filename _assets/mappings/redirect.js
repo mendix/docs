@@ -2744,14 +2744,6 @@ module.exports = {
      * From Developer Portal (permanent, mapped) 
      ****************************************************/
 	{
-      from: "/developerportal/settings/technical-contact",
-      to: "/developerportal/company-app-roles/technical-contact"
-    }, 
-    {
-      from: "/developerportal/general/technical-contact",
-      to: "/developerportal/company-app-roles/technical-contact"
-    },	 
-	{
       from: "/deployment/mendixcloud/certificates",
       to: "/developerportal/deploy/certificates"
     },

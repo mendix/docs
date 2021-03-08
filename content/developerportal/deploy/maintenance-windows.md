@@ -82,7 +82,5 @@ You can reschedule planned maintenance up  to one hour before the beginning of t
 
 ## 4 Read More
 
-* [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
-* [Company & App Roles](/developerportal/company-app-roles/index)
+* [App Roles](/developerportal/collaborate/app-roles)
 * [Node Permissions](/developerportal/deploy/node-permissions) 
-* [Technical Contact](/developerportal/company-app-roles/technical-contact)

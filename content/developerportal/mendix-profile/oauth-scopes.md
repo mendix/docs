@@ -67,11 +67,9 @@ This scope is an extension of the [profile scope](#profile). With this scope, a 
 * Mendix internal identifier of their company
 * Department (in their company)
 * Location (via their company)
-* Country (via their company)
 * URL of the user's personal website or blog
 * LinkedIn profile
 * Twitter account
-* Skype account
 
 ### 4.5 Create a Mendix Application Scope {#mx:app:create}
 

@@ -1,8 +1,8 @@
 ---
 title: "Email with Templates"
 category: "Modules"
-description: "Describes the configuration and usage of the Email with Templates module, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "email with templates", "token", "platform support"]
+description: "Describes the configuration and usage of the Email with Templates module, which is available in the Mendix Marketplace."
+tags: ["marketplace", "app store", "marketplace component", "app store component", "email with templates", "token", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -31,8 +31,8 @@ The typical usage scenario is sending emails with a template system and using to
 
 To configure this module, follow these steps:
 
-1. Download the [Mx Model Reflection](/appstore/modules/model-reflection) module from the Mendix App Store.
-2. Download and configure the [Encryption](/appstore/modules/encryption) module from the Mendix App Store.
+1. Download the [Mx Model Reflection](/appstore/modules/model-reflection) module from the Mendix Marketplace.
+2. Download and configure the [Encryption](/appstore/modules/encryption) module from the Mendix Marketplace.
 3. Add the **Administration** snippet to a custom page in a different module.
 4. View the example in the **USE_ME** > **Examples** folder.
 5. Create a duplicate of this example in your own module and customize it to make it fit your needs:

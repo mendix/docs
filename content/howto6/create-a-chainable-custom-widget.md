@@ -65,7 +65,7 @@ If you take a look at the GitHub repository, you will see the following director
 
 Directory | Description
 ---| ---
-asset | Contains icons for use within the App Store and an icon for the chainable widget.
+asset | Contains icons for use within the Marketplace and an icon for the chainable widget.
 muse | An Adobe Muse project to output the login page that is inside the Mendix app. The project also contains two reusable MUCOW extensions for Adobe Muse projects to insert a Mendix login and Bootstrap.
 src | Contains the source files of the Mendix custom widget.
 test | The Mendix app where the widget end-result can be found.

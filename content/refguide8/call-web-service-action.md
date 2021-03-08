@@ -113,6 +113,27 @@ If desired, you can configure whether to use a proxy for the request. These are 
 
 When you select **Override**, you can configure dynamically whether to use a proxy. You then supply the host, port, username, and password settings for the proxy.
 
+### 4.8 Client certificate
+
+{{% alert type="warning" %}}
+This feature is available in Mendix 8.18.0 and later.
+{{% /alert %}}
+
+In most cases, the default **Use project settings** can be used.
+
+However, you can specify a client certificate to use for the request by clicking **override**.
+Select from one of the following:
+
+* **Use project settings**(default) – use the settings that are defined at the project level 
+* **Override** – override the project-level settings for this action
+
+When you select **Override**, you can configure the client certificate that will be used. Click **Edit** to specify the **Client certificate identifier**. This identifier can be set in different places, depending on where you deploy the app:
+
+* When you deploy the app to the Mendix cloud, the identifier is set when [pinning a client certificate](https://docs.mendix.com/developerportal/deploy/certificates#3-outgoing-client-certificates)
+* When you deploy the app elsewhere, the identifier is set in the custom setting [ClientCertificateUsages](custom-settings#ca-certificates)
+
+When this identifier is not set (either not pinned or not present in _ClientCertificateUsages_), the default settings will be used (as if **Use project settings** were selected).
+
 ## 5 HTTP Headers Tab{#http-headers}
 
 ![](attachments/integration-activities/http-headers-tab-call-web-service.png)
@@ -233,4 +254,4 @@ The name for the output that will hold the result of the operation.
 
 ## 9 Common Section{#common}
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+{{% snippet file="refguide8/microflow-common-section-link.md" %}}

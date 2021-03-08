@@ -1,5 +1,5 @@
 ---
-title: "User Set Up on SQL Server"
+title: "User Setup on SQL Server"
 parent: "mendix-on-windows-microsoft-sql-server"
 menu_order: 20
 ---

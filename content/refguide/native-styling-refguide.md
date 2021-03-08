@@ -1309,7 +1309,47 @@ export myCarouselStyle = {
 
 The default class to style all popup menus is named `com_mendix_widget_native_carousel_Carousel`.
 
-### 11.26 Line Chart
+### 11.26 Signature {#signature}
+
+The signature widget allows you to draw and save a signature. The signature widget looks like this: 
+
+{{% image_container width="350" %}}![signature](attachments/native-styling-refguide/signature.png){{% /image_container %}}
+
+The widget’s style properties are structured as follows:
+
+```xml
+<container>
+    <signature/>
+    <buttonWrapper>
+        <Button>
+            <Caption>Clear</Caption>
+        </Button>
+        <Button>
+            <Caption>Save</Caption>
+        </Button>
+    </buttonWrapper>
+</container>
+```
+
+| Element | Style Properties    | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties.   |   |
+| `container` | `penColor` | This will change the color of the stroke. |
+| `buttonWrapper` | This has all ViewStyle properties. |
+| `buttonClearContainer` | This has all ViewStyle properties. |
+| `buttonClearContainer` | `rippleColor` | This will change the color of the ripple on Android.  |
+| `buttonClearContainer` | `activeOpacity` | This will change the opacity when touch is active on iOS.  |
+| `buttonClearContainer` | `underlayColor` | This will change the underlay color when touch is active on iOS.  |
+| `buttonClearCaption` | This has all TextStyle properties. |
+| `buttonSaveContainer` | This has all ViewStyle properties. |
+| `buttonSaveContainer` | `rippleColor` | This will change the color of the ripple on Android.  |
+| `buttonSaveContainer` | `activeOpacity` | This will change the opacity when touch is active on iOS.  |
+| `buttonSaveContainer` | `underlayColor` | This will change the underlay color when touch is active on iOS.  |
+| `buttonSaveCaption` | This has all TextStyle properties. |
+
+The default class to style all text boxes is named `com_mendix_widget_native_signature_Signature`.
+
+### 11.27 Line Chart
 
 The [line chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/line-chart-native) widget renders a scalable line graph based on static and dynamic data sets.
 
@@ -1390,7 +1430,7 @@ The widget consists of the following elements:
 
 The default class to style all line chart widgets is named `com_mendix_widget_native_linechart_LineChart`.
 
-### 11.27 Bar Chart
+### 11.28 Bar Chart
 
 The bar chart widget renders a horizontal bar graph based on static and dynamic data sets.
 

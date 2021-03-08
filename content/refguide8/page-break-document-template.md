@@ -22,5 +22,5 @@ A page break.
 
 ## 2 Common Properties
 
-{{% snippet file="refguide/name-property.md" %}}
+{{% snippet file="refguide8/name-property.md" %}}
 

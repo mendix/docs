@@ -21,11 +21,11 @@ This how-to will walk you through the steps needed to implement push notificatio
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install Mendix Desktop Modeler from the [App Store](https://appstore.home.mendix.com/link/modeler)
+* Install Mendix Desktop Modeler from the [Marketplace](https://appstore.home.mendix.com/link/modeler)
 
-## 3 Importing the PushNotifications Module from the App Store
+## 3 Importing the PushNotifications Module from the Marketplace
 
-The [Push Notifications Connector module](/appstore/modules/push-notifications) is published in the Mendix App Store. To import it into your project, click **App Store** in the top right of Modeler, which will open the App Store in a new tab. Search for "Push Notifications Connector" and click the title of the result:
+The [Push Notifications Connector module](/appstore/modules/push-notifications) is published in the Mendix Marketplace. To import it into your project, click the Marketplace icon in the top right of Modeler, which will open the Marketplace in a new tab. Search for "Push Notifications Connector" and click the title of the result:
 
 ![](attachments/19955732/20218020.png)
 
@@ -44,7 +44,7 @@ The PushNotifications module has two dependencies:
  * [Encryption](/appstore/modules/encryption) module
  * [Community Commons Function Library](/appstore/modules/community-commons-function-library)
 
-To include these dependencies, download them from the App Store in a way similar to how you installed the PushNotifications module. While importing, you may get a pop-up window with information about overwriting project files, which you can confirm by clicking **OK**.
+To include these dependencies, download them from the Marketplace in a way similar to how you installed the PushNotifications module. While importing, you may get a pop-up window with information about overwriting project files, which you can confirm by clicking **OK**.
 
 {{% alert type="info" %}}
 

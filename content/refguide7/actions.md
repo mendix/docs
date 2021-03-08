@@ -57,7 +57,7 @@ Defines the name of the parameter in the app service action call. This is initia
 
 ![](attachments/16713720/16843922.png)
 
-A button is available for complex types (e.g. an entity from your domain model), to define whether to include or exclude the attribute in an entity, as well as to define whether an attribute can be empty as input.
+A button is available for complex types (for example, an entity from your domain model), to define whether to include or exclude the attribute in an entity, as well as to define whether an attribute can be empty as input.
 
 ## Return Type
 

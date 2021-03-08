@@ -1,8 +1,8 @@
 ---
 title: "Star Rating"
 category: "Widgets"
-description: "Describes the configuration and usage of the Star Rating widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "star rating", "star", "glyphicon", "platform support"]
+description: "Describes the configuration and usage of the Star Rating widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "star rating", "star", "glyphicon", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -58,7 +58,7 @@ To calculate the average rate, add a microflow like the one in the example below
 
 ![Calculate Average Rate](attachments/star-rating/calculate-average-rate.png)
 
-## 3 Developing This App Store Component
+## 3 Developing This Marketplace Component
 
 To contribute to the development of this widget, follow these steps:
 

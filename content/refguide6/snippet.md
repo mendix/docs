@@ -8,7 +8,7 @@ Snippets define reusable interface parts. They can be used on [pages](page) and 
 
 A snippet can optionally define an [entity](entities) that serves as a context for the widgets placed on it. For example, if you would select a Customer entity for a snippet, you could place a text box that shows the customer's name on the snippet without having to define a data view first.
 
-When an entity is defined on a snippet, any usages of the snippet need to be placed inside a context for that entity or a specialization, e.g. a data view.
+When an entity is defined on a snippet, any usages of the snippet need to be placed inside a context for that entity or a specialization, for example, a data view.
 
 ## Common Properties
 

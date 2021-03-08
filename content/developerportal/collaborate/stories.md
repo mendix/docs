@@ -173,6 +173,7 @@ When you click a story title, the **Story Details** page opens:
 On this page, you can perform a number of actions:
 
 * Change the **Title** or **Description** by clicking it
+* Add or remove **Labels**
 * See the story's **Status** and click to update it (available statuses are **To-do**, **Running**, and **Done**)
 * Change the **Story points**
 * See, add, and manage the **Tasks** of the story (you can mark them as **Done** by checking the box in front of the task)

@@ -26,8 +26,7 @@ Examples of using microflows can be the following:
 
 To view the microflows of your app in Studio, click the **Microflows** icon in the left menu bar:
 
-{{% image_container width="250" %}}![Microflow Icon](attachments/microflows/micflows-icon.png)
-{{% /image_container %}}
+![Microflow Icon](attachments/microflows/micflows-icon.png)
 
 ## 2 Concepts and Definitions 
 

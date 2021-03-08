@@ -41,7 +41,7 @@ This how-to uses the Company Expenses app template for an example scenario. Howe
 Follow these steps to install and run the Company Expenses app:
 
 1. Open Mendix Studio Pro.
-2.  Click the App Store icon in the top toolbar:
+2.  Click the Marketplace icon in the top toolbar:
 
 	![](attachments/selenium/app-store.png)
 

@@ -1,8 +1,8 @@
 ---
 title: "List View Controls"
 category: "Widgets"
-description: "Describes the configuration and usage of the List View Controls widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "list view control", "check box filter", "platform support"]
+description: "Describes the configuration and usage of the List View Controls widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "list view control", "check box filter", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -19,9 +19,9 @@ These are the available list view widgets:
 * [Pagination](#pagination) – Adds bootstrap like paging to a list view and page numbers similar to in-built data grid
 * [Text box search](#text-box-search) – Adds an interactive search box to all of your list view
 
-### 1.1 Demo App Project
+### 1.1 Demo App
 
-For a demo app project that has been deployed with these widgets, see [here](https://listviewcontrols.mxapps.io).
+For a demo app that has been deployed with these widgets, see [here](https://listviewcontrols.mxapps.io).
 
 ## 2 Check Box Filter Widget {#check-box-filter}
 
@@ -154,7 +154,7 @@ Add an interactive search box to all of your list views with this widget. This s
 
 ![](attachments/list-view-controls/text-box-search.gif)	
 
-## 8 Developing This App Store Component
+## 8 Developing This Marketplace Component
 
 ### 8.1 Prerequisites
 

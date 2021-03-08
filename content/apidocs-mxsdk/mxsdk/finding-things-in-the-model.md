@@ -1,7 +1,7 @@
 ---
 title: "Find Things in the Model"
 parent: "manipulating-existing-models"
-tags: ["app store module", "module"]
+tags: ["marketplace", "app store module", "module"]
 ---
 
 ## 1 Introduction
@@ -48,7 +48,7 @@ For more information, see [How to Load Units and Elements](loading-units-and-ele
 
 ## 5 The model.allModules Function
 
-Implement this snippet to fetch information on all the App Store modules used in your app project:
+Implement this snippet to fetch information on all the Marketplace modules used in your app project:
 
 ```js
 const model = workingCopy.model();

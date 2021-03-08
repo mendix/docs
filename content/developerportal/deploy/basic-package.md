@@ -25,6 +25,8 @@ The basic package has the following features.
 * Supports between five and a hundred (5-100) users
 * Can be paid for via invoice only
 * Has a limited amount of resources and only a single environment - see the [Mendix Pricing Plans](mendix-cloud-deploy#plans) section of *Mendix Cloud* for more information.
+* You cannot get telephone support: access to support is via the [Mendix support website](https://support.mendix.com) only.
+* Support is only available for general platform issues – Mendix support cannot give help on problems with individual apps.
 
 ## 3 Purchasing a Basic Package
 

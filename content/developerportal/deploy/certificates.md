@@ -64,7 +64,7 @@ You can upload a PKCS12 file by following these steps:
 
 5. Enter the password to unlock the certificate container.
 
-6. If you are using a specific custom certificate when setting your Client certificate in your [Call REST Service](/refguide/call-rest-action#client-certificate) or [Call Web Service](/refguide/call-web-service-action#client-certificate) action, pin the certificate using the REST call's **Client certificate identifier** as the **WEB SERVICE CALL NAME**.
+6. If you are using a specific custom certificate when setting your Client certificate in your [Call REST Service](/refguide/call-rest-action#client-certificate) or [Call Web Service](/refguide/call-web-service-action#client-certificate) action, set a **WEB SERVICE CALL NAME** which you can use to pin the certificate by setting the call's **Client certificate identifier** to the **WEB SERVICE CALL NAME**.
 
     ![](attachments/certificates/certificate-details.png)
 

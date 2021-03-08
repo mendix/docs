@@ -26,7 +26,7 @@ Visualize all the possible options in your user interface, instead of just forci
 
 ## 2 Installation
 
-Download the widget into your app project and add either **Association Radio Button List** or **Attribute Radio Button List** to a data view on a page. Configure the properties dscribed below to determine how the widget will behave in your application.
+Download the widget into your app and add either **Association Radio Button List** or **Attribute Radio Button List** to a data view on a page. Configure the properties dscribed below to determine how the widget will behave in your application.
 
 ## 3 Properties
 

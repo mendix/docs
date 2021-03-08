@@ -48,4 +48,4 @@ The properties on this tab are used to configure how the map responsively looks 
 
 ### 3.3 Markers Tab
 
-This is used to configure how the marker icon should look. The markers are created based on enumerations. An enumeration containing the name and caption of the markers should be created within your app project, and that enumeration is then assigned to the **Location** entity. From the **Markers** tab, the enumeration key and image is then specified in **Images**.
+This is used to configure how the marker icon should look. The markers are created based on enumerations. An enumeration containing the name and caption of the markers should be created within your app, and that enumeration is then assigned to the **Location** entity. From the **Markers** tab, the enumeration key and image is then specified in **Images**.

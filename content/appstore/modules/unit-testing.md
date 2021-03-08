@@ -8,7 +8,7 @@ tags: ["marketplace", "app store", "marketplace component", "app store component
 
 ## 1 Introduction
 
-Use the [Unit Testing](https://appstore.home.mendix.com/link/app/390/) module to run Mendix and JUnit unit tests inside your app project.
+Use the [Unit Testing](https://appstore.home.mendix.com/link/app/390/) module to run Mendix and JUnit unit tests inside your app.
 
 ### 1.1 Dependencies
 
@@ -21,12 +21,12 @@ Use the [Unit Testing](https://appstore.home.mendix.com/link/app/390/) module to
 
 ## 2 Installation
 
-1. Import the Unit Testing module into your app project.
-2. Download the latest Object Handling module into your app project.
+1. Import the Unit Testing module into your app.
+2. Download the latest Object Handling module into your app.
 3. Map the module role **TestRunner** to the applicable user roles in your app.
 4. Add the **UnitTestOverview** microflow to your navigation structure, or include the **UnitTestOverview** snippet on a custom page.
 5. The following steps are optional:
-	* For including JUnit tests – set the **UnitTesting.FindJUnitTests** constant to true (take the the app project settings regarding cloud security into consideration)
+	* For including JUnit tests – set the **UnitTesting.FindJUnitTests** constant to true (take the the app settings regarding cloud security into consideration)
 	* For running remote unit tests via API:
 		* Add the **Startup** flow to your app model's startup sequence
 		* Set the **UnitTesting.RemoteApiEnabled** constant to true and provide a password for **UnitTesting.RemoteApiPassword**

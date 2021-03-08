@@ -12,7 +12,7 @@ The [Box](https://appstore.home.mendix.com/link/app/40977/) connector provides a
 
 ## 2 Installation
 
-1. Download this connector as well as the [Community Commons Function Library](../modules/community-commons-function-library) and [Deep Link](../modules/deep-link) modules into your app project.
+1. Download this connector as well as the [Community Commons Function Library](../modules/community-commons-function-library) and [Deep Link](../modules/deep-link) modules into your app.
 2. In order to use this connector, you must have an account on the Box developer site of box, so go to [BoxDEV](https://developer.box.com/) and click **Log in** > **Sign up** in the upper-right corner of the page.
 3. Fill in the form with your credentials and submit.
 4. Validate your account via an email, which will then give you access to the dashboard of your Box account.
@@ -32,7 +32,7 @@ The [Box](https://appstore.home.mendix.com/link/app/40977/) connector provides a
 	For more information on generating an RSA keypair, see [JWT Auth](https://docs.box.com/docs/app-auth#section-1-generating-an-rsa-keypair).
 
 9. Click **Add Public key** and then copy the contents of *boxmendixappdes.pub*.
-10. Run your app project to access the Box connector.
+10. Run your app to access the Box connector.
 11. To connect your Box app to the connector, click **Box Applications** in the navigation bar on the left side of the connector: 
 
 	![](attachments/box/navigation.jpg)
@@ -51,7 +51,7 @@ The [Box](https://appstore.home.mendix.com/link/app/40977/) connector provides a
 
 	![](attachments/box/box-account.jpg)
 
-17. In the **BoxConnector** module in your app project, use the **BoxApplication_Overview** page as an admin user to configure the Box connector for your application.
+17. In the **BoxConnector** module in your app, use the **BoxApplication_Overview** page as an admin user to configure the Box connector for your application.
 18. Use the **BoxAccounts_Overview** page to associate Box accounts to Mendix accounts via the  token provided by the corresponding type of Box account (user or service).
 19. Make sure the **BoxApplication** entity is set with the same **redirect_URL** as you set above for your Box app.
 20. Configure the Deep Link module as follows:

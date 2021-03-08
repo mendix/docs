@@ -144,7 +144,7 @@ For the full Plotly API reference, see [JavaScript Figure Reference](https://plo
 
 ### 3.5 Theme-Based Advanced Configuration
 
-The settings above can also be added in a global context via the **theme** folder of your Mendix app project root directory.
+The settings above can also be added in a global context via the **theme** folder of your Mendix app root directory.
 
 Add a *.json* file named *com.mendix.charts* to the **theme** folder. The JSON should be in the following format:
 

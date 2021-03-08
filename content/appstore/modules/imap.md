@@ -8,7 +8,7 @@ tags: ["marketplace", "app store", "marketplace component", "app store component
 
 ## 1 Introduction
 
-The [IMAP/POP3 Incoming Email](https://appstore.home.mendix.com/link/app/1042/) module enables your app project to retrieve emails from POP3, POP3S, IMAP, and IMAPS servers. In order for Mendix to act on incoming email, you can implement this module and model all the actions around it.
+The [IMAP/POP3 Incoming Email](https://appstore.home.mendix.com/link/app/1042/) module enables your app to retrieve emails from POP3, POP3S, IMAP, and IMAPS servers. In order for Mendix to act on incoming email, you can implement this module and model all the actions around it.
 
 ### 1.1 Typical Usage Scenario
 

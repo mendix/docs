@@ -17,8 +17,8 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Improvements
 
-* In [Mendix Control Center](/developerportal/control-center/), now Mendix Admins can edit name or description of an app access group once it has been created.
-* Also, we now show a confirmation text to the Mendix Admin when trying to deactivate a member to properly inform the consequences of that action.
+* In Control Center, Mendix Admins can now edit the name and description of an [App Access Group](/developerportal/control-center/index#groups) once it has been created.
+* Mendix Admins can now [deactivate](/developerportal/control-center/index#members) Technical Contacts and the last Scrum Master in an App Team.
 
 ### March 4th, 2021
 

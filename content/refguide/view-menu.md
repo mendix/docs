@@ -12,8 +12,7 @@ Studio Pro supports a number of dockable window panes, such as the **Changes** a
 
 Via this menu you can also enable or disable the [full screen mode](#full-screen) or [reset the layout](#reset-layout) of your project to the default.  
 
-{{% image_container width="300" %}}![View Menu](attachments/view-menu/view-menu.png)
-{{% /image_container %}}
+![View Menu](attachments/view-menu/view-menu.png)
 
 ## 2 Layout of Panes {#layout-of-panes}
 
@@ -58,6 +57,7 @@ When you drag a pane, you can see arrows that indicate where you can position th
 The video below shows examples of how to position a pane:
 
 <video width="640" height="360" controls src="attachments/view-menu/positioning-panes.mp4">VIDEO</video>
+
 If you have several panes grouped together in tabs, you can change the position of all the tabs at once by dragging the top-bar. To change the position of an individual tab, drag the tab itself. 
 
 ## 3 Menu Items
@@ -70,7 +70,7 @@ For version control enabled projects (projects with [Team Server](/developerport
 
 This pane has two levels, so when you zoom into a changed document, you can review all the changes within that document without going back and forth between levels. The zoomed-in level of the pane is split into two grids, with elements on the left and properties on the right. Selecting an element on the left presents the changed properties on the right:
 
-![](attachments/view-menu/changes.gif)
+<video width="640" height="360" controls src="attachments/view-menu/changes.mp4">VIDEO</video>
 
 ### 3.2 Connector {#connector}
 

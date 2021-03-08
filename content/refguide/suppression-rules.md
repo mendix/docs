@@ -84,8 +84,6 @@ To suppress Marketplace warnings, do the following:
 
 1.  Click the **Suppression rules** button in the **Errors** pane.
 
-	![Viewing the suppress warnings rules](attachments/suppression-rules/errors-pane-suppress-warnings-button.png)
-
 2. In the **Manage Suppression Rules** dialog box, check the **Suppress warnings from App Store modules** option.
 
     ![Suppressing Marketplace warnings](attachments/suppression-rules/rules-dialog-app-store-setting.png)

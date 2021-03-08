@@ -83,7 +83,6 @@ Some pages and microflows are only used from Java code and will be listed as an 
 
 2. Navigate to properties and change the **Mark as used** property from **No** to **Yes**.
 
-   ![](attachments/find-and-find-advanced/mark-as-used-property.png)
 
 ## 4 Find Usages Option
 

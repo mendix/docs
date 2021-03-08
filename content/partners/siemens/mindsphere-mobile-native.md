@@ -335,6 +335,12 @@ Attention: You have to remove all `/r/n` from the json object before saving the 
 To generate the needed file you have to use Android Studio. In the chapter [build your own development app](./mindsphere-mobile-native#buildcustomapp) you have already cloned your github repo locally. Use the developer branch.
 
 1. Open the **root** folder of this repo in a terminal and if not already done run `npm install`.
+ 
+    Note: during our tests we faced issues when one of the patches should be applied
+
+    ![build your own development app](./attachments/mindsphere-mobile-native/Problem_npm_install.png)
+
+    This can be fixed by changing the line feed from the file **patches/react-native-image-picker+2.3.4.patch** from **CR LF** to **LF**. This can be done with editors like Visual Studio Code easily.
 
 1. Start Android Studio and open the **android** folder as a new project. Android Studio automatically starts some build process, for the next step you have to wait till these are done.
 

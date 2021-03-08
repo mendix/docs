@@ -15,11 +15,11 @@ Details about native mobile app development with Mendix can be found [here.](htt
 
 The **Siemens MindSphere Mobile Starter Application** is an app template which is based on the **Native Mobile Quickstart** from Mendix and includes all you need to start developing a native mobile app for your MindSphere tenant.
 
-On a phone there is no MindSphere launchpad - therefore the app as to implement the login to MindSphere itself. The template contains a login page which is shown at startup to the user.
+On a phone there is no MindSphere launchpad - therefore the app has to implement the login to MindSphere itself. The template contains a login page which is shown at startup to the user.
 The login itself to MindSphere on your device is done outside of our native application in a browser and your app is started after successful login via a "Deep Link". Details about this process can be found [here](https://developer.mindsphere.io/howto/howto-develop-mobile-app-with-mdsp.html) - but do not worry - the implementation is already part of the app template - just use it.
 To support deep links with your app, you have to create your own [Custom Development App](https://docs.mendix.com/howto/mobile/how-to-devapps) and register a deep link corresponding to your app registration.
 
-As prerequisite we recommend to do the [build a native mobile inspection-app](https://academy.mendix.com/link/path/66/Build-a-Native-Mobile-Inspection-App) tutorial from the academy to get yourself familiar with mobile app development.
+As prerequisite we recommend to do the [build a native mobile inspection-app](https://academy.mendix.com/link/path/66/Build-a-Native-Mobile-Inspection-App) tutorial from the academy to get yourself familiar with mobile app development. Also you should be familiar with the basics of the source code management system [git](https://git-scm.com/) as we have to update the standard [Custom Development App](https://docs.mendix.com/howto/mobile/how-to-devapps).
 
 This documentation is structured in two main parts:
 
@@ -359,7 +359,6 @@ To generate the needed file you have to use Android Studio. In the chapter [buil
 
    Attention: You have to remove all `/r/n` from the json object before saving the constant in Mendix Studio Pro. This could be done for example [here](http://jsoneditoronline.org/)
 
-
 #### Make your .well-known files public available
 
 The **Siemens MindSphere Mobile Starter Application** implements a rest endpoint which serves the .well-known files for you. Press the **Run** button to deploy your app to the Mendix cloud.
@@ -404,6 +403,47 @@ The default browser of your phone will open and show you the MindSphere credenti
 ![Mobile](./attachments/mindsphere-mobile-native/MobileCredentialPage.png)
 
 After a successful login, your app will be started again and create your session. At the end your native home page comes up.
+
+Note: if you ever have trouble by signing in to your application it is a good idea to clear the cookies of your mobile browser. Please see documentation of your browser for further information.
+
+### 2.6 Next steps
+
+You now have a blank application which is supporting the authentication for your specific MindSphere application, which is an excellent starting point for your further app development. We recommend also to visit the basic tutorial for MindSphere web applications [Build a MindSphere app with Mendix](https://gettingstarted.mendixcloud.com/link/path/80/Build-a-MindSphere-app-with-Mendix) to learn more about MindSphere application development in general.
+
+Most important will be to enhance your application with MindSphere API calls to use the IoT capabilities of MindSphere. For this you have to consider the following two steps:
+
+* Authorize your MindSphere API calls.
+* Add MindSphere API roles to your existing MindSphere gateway registration.
+
+#### 2.6.1 Authorize your MindSphere API calls
+
+With each MindSphere API call you have to assure that the corresponding user token has to be forwarded to the MindSphere API call. You can achieve this by adding a **MindSphere Access Token** node before your REST calls and to set the **Authorization** header of your http header.
+
+![Mobile](attachments/mindsphere-development-considerations/delete-mindspheretoken.png)
+
+#### 2.6.2 Extend your application registration with MindSphere API roles
+
+As of now your application has the user roles **admin** and **user**, but none of those roles has the rights to access MindSphere APIs. Do the following steps to achieve this.
+
+1. Open the *Developer Cockpit* via the Launchpad of your *Developer Tenant*.
+
+    ![DeveloperCockpit](./attachments/mindsphere-mobile-native/DeveloperCockpit_Launchpad.png)
+
+1. Select your application.
+
+1. Click the **Configure** button to open the roles tab.
+
+    ![DeveloperCockpit](./attachments/mindsphere-mobile-native/DC_Configure.png)
+
+1. Open the **MindSphere API Roles section** and press the **Add MindSphere API Role** button.
+
+    ![DeveloperCockpit](./attachments/mindsphere-mobile-native/DC_AddAPIRole.png)
+
+1. Select the corresponding role you need for your particular API call and assign it to your user roles e.g.
+
+    ![DeveloperCockpit](./attachments/mindsphere-mobile-native/DC_ChooseAPIRole.png)
+
+Note: your application has now been updated to be allowed for the API calls, to get this active for your local test session you have to make sure to enforce a logout of your user. For this please press the logout button within your mobile application and clear the cookies within your mobile browser. Afterwards sign in again and the provided token should include now the new API roles.
 
 ## 3 Module Details{#moduledetails}
 

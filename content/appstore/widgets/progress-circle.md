@@ -40,7 +40,7 @@ Under the **Appearance** tab, the following styling properties can be adjusted f
 
 ## 3 Previous Versions' Documentation
 
-### Widgets below v2.0.0
+### Widgets Below v2.0.0
 
 #### 1 Introduction
 

@@ -29,8 +29,7 @@ Before starting this how-to, make sure you have the following prerequisites:
 
 * MS Windows 2008 SP2 or higher
 
-* .NET 4.5 or higher with the following feature enabled:
-    * ASP.NET
+* .NET Framework 4.5 or higher
 
 * IIS 7 or higher with the following service roles enabled:
 
@@ -44,13 +43,7 @@ Before starting this how-to, make sure you have the following prerequisites:
 
 * MS IIS URL Rewrite installed (for more information, see [URL Rewrite](https://www.iis.net/downloads/microsoft/url-rewrite))
 
-* Java Runtime 8, or other version depending on your Mendix Server Distribution. For example:
-
-    * Mendix Server Distribution 4 requires Java 6
-
-    * Mendix Server Distribution 5 requires Java 7
-
-    * Mendix Server Distribution 8 requires Java 11
+* Java Runtime, version depending on your Mendix Server Distribution. See [System Requirements](https://docs.mendix.com)/refguide/system-requirements#7-3-java) for more information. 
 
 * The Mendix Deployment Archive (MDA) of your Mendix project
 

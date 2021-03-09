@@ -18,22 +18,28 @@ From the Data Hub [Home](https://hub.mendix.com) screen, you can carry out the m
 
 You can navigate to the following tabs:
 * **Home** – search in the Data Hub Catalog, manually register a service from different applications, select from the most popular services
-* **Catalog** – [search](search) for registered assets in the search pane and see details of the metadata of selected asset
+
+* Catalog** – [search](search) for registered assets in the search pane and see details of the metadata of selected asset
+
 * **Landscape** – gain a graphical view of the organization's available services and exposed datasets showing consuming and publishing dependencies (for further details, see [Data Hub Landscape](../data-hub-landscape/index)
+
 * **Curate** – carry out [curate](curate) functions on registered assets to enrich the registered metdata and increase discoverability by relevant users
+
 * **Administration** – Data Hub Admin can assign curator roles and curators can manage the list of owners
 
-	{{% alert type="info" %}}  The **Administration** tab will only be shown for those with curate roles (owners of a data source, curators or the Data Hub Admin.
-	{{% /alert %}}
+	{{% alert type="info" %}}  The **Administration** tab will only be shown for those with curate roles (owners of a data source, curators or the Data Hub Admin.	{{% /alert %}}
 
 From the **Home** screen, you can do the following:
 * **Search** – search in the Data Hub Catalog using the **Search** box or clicking the suggested **Tags**
 
-* **Register a new data source** – manually register non-Mendix OData v4 services to the Data Hub  (for further details, see the [Manually Registering OData V4 Services](register#registration-form) section of *How to Register Data Assets*)
+* **Register a new data source** – manually register an OData service from your enterprise business application to the Data Hub  (for further details, see the [Manually Registering OData V4 Services](register#registration-form) section of *How to Register Data Assets*)
 
 * **Popular Data Sources** – click on the most popular data sources 
 
 Data Hub is also integrated in Mendix Studio Pro to find and connect to shared data sources in your apps. For further details on using Data Hub in Studio Pro, see [Data Hub Pane](/refguide/data-hub-pane) in the *Studio Pro Guide*.
+
+{{% alert type="info" %}}
+The Data Hub integration is available in Studio Pro version 8.14 and above. Users wanting to use the full functionality should download the latest version. {{% /alert %}}
 
 ## 3 Using the Data Hub
 

@@ -13,11 +13,25 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 ## 2021
 
+### March 10th, 2021
+
+#### Improvements
+
+* A chatbot is added to the **Create App** flow. Mendix support employees and Bots are now able to interact with you and help you via this new functionality. It is only visibile when someone from Mendix is sending a message to the user. 
+
+#### Fixes
+
+* We fixed the bug where creating an IBM template or SAP template in the **Create App** does not direct you to the right page. 
+
 ### February 9th, 2021
 
 #### Improvements
 
 * We improved the speed of the **App Templates** page. After you click **Create App**, the templates appear instantly now.
+
+#### Fixes
+
+* We fixed the issue where creating a SAP template or IBM template doesn't redirect you to the right page (Ticket 114913).
 
 ### February 5th, 2021
 

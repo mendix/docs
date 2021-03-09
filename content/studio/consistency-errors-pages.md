@@ -181,7 +181,7 @@ Now the *Customer* object is available on the page and it matches the microflow 
 
 When you set a microflow as an on-click action for a widget, and this microflow expects a certain data (for example, an object), but a different object is available to the widget, this will result in an error. 
 
-For example, on a page called *Customers* you have a button that calls a microflow (i.e. an **On Click Action** of the button is set to *Microflow*):
+For example, on a page called *Customers* you have a button that calls a microflow (meaning, an **On Click Action** of the button is set to *Microflow*):
 
 ![](attachments/consistency-errors-pages/button-on-click-action.png)
 

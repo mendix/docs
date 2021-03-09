@@ -9,6 +9,18 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 ## 2021
 
+### March 4th, 2021
+
+#### New Features
+
+* Data sources from different enterprise business applications can now be registered more easily in Data Hub using the new [Registration functionality](/data-hub/data-hub-catalog/register#registration-form). This will enable users to use those datasets when developing apps without having to worry about connectivity to the application. This functionality replaces the previous manual registration form.
+
+### February 19th, 2021
+
+#### Improvements
+
+* Two new endpoints have been added to the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis) for registering published and consumed endpoints separately. 
+
 ### January 28th, 2021
 
 #### Improvements

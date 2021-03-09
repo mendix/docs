@@ -81,7 +81,7 @@ This card on your profile presents your points and ranking for the last 30 days:
 
 ![](attachments/leaderboard.png)
 
-Clicking **View all** takes you to the **Leaderboards** page, which presents all the boards available for viewing Mendix Platform user activity: **Top Overall**, **Top Forum**, **Top App Store**, **Top Platform**, **Top Community**, and **Top Learning**.
+Clicking **View all** takes you to the **Leaderboards** page, which presents all the boards available for viewing Mendix Platform user activity.
 
 To earn points and climb the leaderboards, start performing different activities in the Mendix community. For example, let's say you have some time to spare while your app is deploying. You get a cup of coffee and check out the [Mendix Forum](http://forum.mendix.com). One questions pops out because you came across a similar problem a few weeks back. You decide to help the community member and post an answer to their question. Not long after, the author marks your answer as accepted. Boom! 15 points right there.
 
@@ -99,9 +99,9 @@ These are points you can gain through activity on the [Mendix Forum](https://for
 | Downvote someone | -1 | N/A |
 | Receive a downvote | -2 | N/A |
 
-### 7.2 App Store Points {#app-store-points}
+### 7.2 Marketplace Points {#app-store-points}
 
-These are points you can gain through activity in the [Mendix App Store](https://appstore.home.mendix.com/).
+These are points you can gain through activity in the [Mendix Marketplace](https://appstore.home.mendix.com/).
 
 | Activity | Points | Max. Points per Day |
 | --- | --- | --- |
@@ -109,7 +109,7 @@ These are points you can gain through activity in the [Mendix App Store](https:/
 | Publish a new app version | 25 | N/A |
 | Add an app review | 5 | N/A |
 | Download [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/) | 5 | 5 |
-| Download an app from the App Store | 1 | 5 |
+| Download an app from the Marketplace | 1 | 5 |
 
 ### 7.3 Platform Points
 
@@ -118,7 +118,7 @@ These are points you can gain through activity in the [Mendix App Store](https:/
 | Be the first member of your company to sign up for Mendix | 25 | N/A |
 | Send an app invite | 10 | 50 |
 | Send a Mendix Platform invite | 5 | 50 |
-| Create an app project | 5 | 5 |
+| Create an app | 5 | 5 |
 | Submit a feedback item | 2 | 10 |
 | Have your feedback item marked as accepted | 2 | 10 |
 | Commit to the Team Server | 2 | 10 |
@@ -189,7 +189,7 @@ When you earn enough points, you gain a level:
 
 ## 8 Portfolio
 
-The **Portfolio** card presents a selection of Mendix app projects you have worked on. Click the project name to see more details about it (including a description of the app, business need, solution, results, and collaborators), or click **View all projects** to be taken to the  **Portfolio** tab, which presents a complete view of all your projects. 
+The **Portfolio** card presents a selection of Mendix apps you have worked on. Click the app name to see more details about it (including a description of the app, business need, solution, results, and collaborators), or click **View all projects** to be taken to the  **Portfolio** tab, which presents a complete view of all your projects. 
 
 ![](attachments/portfolio.png)
 
@@ -236,8 +236,8 @@ Changes made through Studio Pro are stored in the Mendix Team Server. This secti
 
 In this section, you can view the invitations you have sent and received. There are two types of invitations:
 
-* Project invitation – an invitation to join an App Team to work on an app project
-* App invitation – an invitation to join an app project as a user
+* Project invitation – an invitation to join an App Team to work on an app
+* App invitation – an invitation to join an app as a user
 
 ## 10 Settings {#settings}
 
@@ -305,7 +305,7 @@ All you have to do is make your profile public (for details, see the [Selecting 
 We’ll take things from there!
 
 {{% alert type="info" %}}
-Once an old account has been merged to a new account, you will no longer have access to the app projects you were invited to via your old account. With your new account, you will need to be invited to those app projects again in order to gain access. Adding your new account to the relevant app projects prior to the merge is recommended.
+Once an old account has been merged to a new account, you will no longer have access to the apps you were invited to via your old account. With your new account, you will need to be invited to those apps again in order to gain access. Adding your new account to the relevant apps prior to the merge is recommended.
 {{% /alert %}}
 
 {{% alert type="info" %}}
@@ -340,7 +340,7 @@ Mendix has been tracking these data changes since November, 2018.
 
 ## 11 Point Penalties
 
-Abusing the Mendix Forum, App Store, point system, or other community tools is not allowed. Any such action can result in a point penalty. Mendix reserves the right to penalize a user who bypasses or games the system without informing them.
+Abusing the Mendix Forum, Marketplace, point system, or other community tools is not allowed. Any such action can result in a point penalty. Mendix reserves the right to penalize a user who bypasses or games the system without informing them.
 
 ## 12 Main Document in This Category
 

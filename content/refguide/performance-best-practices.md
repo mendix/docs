@@ -18,8 +18,8 @@ This document outlines performance issues and Mendix best practices for optimizi
 In most cases, the logic behind a calculated attribute is always executed when the object is used. It is executed whenever there is no retrieval schema for a Retrieve activity (which is the case with data grids). The logic behind calculated attributes is executed in the following elements:
 
 - Retrieve and change object activities in microflows
-- In UI widgets (e.g. data views, custom widgets)
-- When an object is passed from the UI as a parameter to a microflow (e.g. a button triggering a microflow).
+- In UI widgets (for example, data views, custom widgets)
+- When an object is passed from the UI as a parameter to a microflow (for example, a button triggering a microflow).
 
 There are two different performance issues with calculated attributes that you can easily fix:
 

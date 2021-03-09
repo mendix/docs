@@ -6,7 +6,7 @@ Once you finish implementing the steps described previously, you will want to te
 
 ### Step 1 - Log in as administrator to the web (desktop) application
 
-Open your application in the browser and log in as administrator (e.g. `MxAdmin`).
+Open your application in the browser and log in as administrator (for example, `MxAdmin`).
 
 ### Step 2 - Create a user account for a mobile user
 

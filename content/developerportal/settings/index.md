@@ -1,6 +1,6 @@
 ---
 title: "App Settings"
-description: "Describes where you can configure various settings for your Mendix app project."
+description: "Describes where you can configure various settings for your Mendix app."
 ---
 
 ## 1 Introduction
@@ -56,5 +56,5 @@ For more information, see [How to Manage App API Keys](/developerportal/settings
 
 ## 5 Main Documents in This Category
 
-* [Manage General App Settings](general-settings) – describes the various actions you can perform to configure general settings for your app project
+* [Manage General App Settings](general-settings) – describes the various actions you can perform to configure general settings for your app
 * [Manage App API Keys](api-key) – explains what is included in the overview of API keys and how to create an API key

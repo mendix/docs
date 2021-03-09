@@ -1,7 +1,7 @@
 ---
 title: "Developer Portal Guide"
 description: "Describes the sections of the Mendix Developer Portal and links to more detailed documents in the guide."
-tags: ["Mendix", "Developer Portal", "Platform Services", "Buzz", "Apps", "People", "Community", "App Store", "Academy", "Forum", "Docs"]
+tags: ["mendix", "developer portal", "platform services", "buzz", "apps", "community", "app store", "marketplace", "academy", "forum", "docs", "documentation"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
@@ -24,15 +24,15 @@ In [Apps](apps-list/index), you can find your free and licensed apps, nodes, and
 
 If you are an App Team member, you can go to the app [Buzz](collaborate/buzz). Here you can  manage not only the deployment of the app itself but the entire development process via user stories which can be refined and allocated to Sprints.
 
+To start a new app project click **Create App**, which will open a page where you can choose a starting pointing for your new app:
+
+![](attachments/create-app.png)
+
 ## 3 Buzz {#buzz}
 
 In the company [Buzz](collaborate/buzz), you can communicate with colleagues, App Team members, stakeholders, and any other Mendix users in your company:
 
 ![](attachments/developerportal-buzz.jpg)
-
-To start a new app project click **Create App**, which will open a page where you can choose a starting pointing for your new app:
-
-![](attachments/create-app.png)
 
 ## 4 Control Center
 

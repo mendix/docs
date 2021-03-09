@@ -27,7 +27,7 @@ There are three types of feedback item:
 | Type         | Description                                                |
 | ------------ | ---------------------------------------------------------- |
 | Idea     | An idea for a change or new feature.                       |
-| Question | A question about the app project.                             |
+| Question | A question about the app.                             |
 | Issue    | An issue or a bug that needs to be investigated for a fix. |
 
 ### 2.2 Feedback Stages {#stages}
@@ -47,7 +47,7 @@ Feedback in each stage is shown in a separate tab on the **Feedback** page.
 
 These are the general feedback actions available on all the tabs of the **Feedback** page:
 
-* **Add feedback** will add a new feedback item to the **Open** tab of the app project
+* **Add feedback** will add a new feedback item to the **Open** tab of the app
 * **Export to Excel** will export the listed feedback items to an *.xls* file
 	* For the export, you can filter on the **Submitted after** date, **Label**, **Status** of feedback, and **Type** of feedback
 * **Show filters** allows you to filter on the types of feedback being listed: **Ideas**, **Questions**, and/or **Issues**

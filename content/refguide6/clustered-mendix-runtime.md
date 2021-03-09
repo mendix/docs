@@ -40,7 +40,7 @@ To use HSQLDB in the clustered mode, it should be started as a service and have 
 
 {{% /alert %}}{{% alert type="info" %}}
 
-Monitoring information such as runtime statistics (e.g. number of sessions, memory usage), running microflows, logged in users are gathered for only one instance at the moment.
+Monitoring information such as runtime statistics (for example, number of sessions, memory usage), running microflows, logged in users are gathered for only one instance at the moment.
 
 {{% /alert %}}
 

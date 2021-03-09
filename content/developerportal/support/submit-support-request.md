@@ -35,7 +35,7 @@ This is the basic information required for a ticket:
 * A detailed description of the exact error
 * A detailed description of the action that was performed when the error was received
 * A description of the desired goal (optional)
-* The affected app (for more information, see [How to Prepare Your App Project for Support](prepare-your-project))
+* The affected app (for more information, see [How to Prepare Your App for Support](prepare-your-project))
 
 To submit a request with Mendix Support, follow these steps:
 
@@ -138,15 +138,15 @@ You can add large attachments such as project files to the request. Please note 
 * Test project (for details, see [How To Export A Mendix Project Package](/refguide/export-project-package-dialog))
 * Reproducible steps
 
-### 5.5 App Store Content Problems & Module, Widget & Theme Issues
+### 5.5 Marketplace Content Problems & Module, Widget & Theme Issues
 
-* Name of the App Store component
+* Name of the Marketplace component
 * Mendix version
 * Test project (for details, see [How To Export A Mendix Project Package](/refguide/export-project-package-dialog))
 * Reproducible steps
 
 {{% alert type="info" %}}
-Not all App Store content is compatible with every version of Studio Pro, and not all App Store content is supported by Mendix. For more information, see [App Store Content Support](/appstore/general/app-store-content-support).
+Not all Marketplace content is compatible with every version of Studio Pro, and not all Marketplace content is supported by Mendix. For more information, see [Marketplace Content Support](/appstore/general/app-store-content-support).
 {{% /alert %}}
 
 ### 5.6 Mobile Problems

@@ -1,9 +1,9 @@
 ---
-title: "App Store Overview"
+title: "Marketplace Overview"
 category: "General Info"
 menu_order: 10
-description: "Presents an overview of how to find and use content from the Mendix App Store."
-tags: ["app store", "widget", "connector", "module", "partner"]
+description: "Presents an overview of how to find and use content from the Mendix Marketplace."
+tags: ["marketplace", "app store", "widget", "connector", "module", "partner"]
 aliases:
     - /community/app-store/app-store-overview.html
     - /developerportal/app-store/app-store-overview.html
@@ -11,21 +11,17 @@ aliases:
 
 ## 1 Introduction
 
-{{% alert type="info" %}}
-As the Mendix App Store is being updated into a dynamic and fully functioning Mendix Marketplace, some documentation pages will refer to "App Store" and some to "Marketplace." The URLs will also be updated during this conversion.
-{{% /alert %}}
+The [Mendix Marketplace](https://appstore.home.mendix.com/index3.html) is a vibrant marketplace containing complete sample apps that can be used right away as well as various components (connectors, widgets, and modules) that can be used to build custom apps more quickly. In the Mendix Marketplace, you can browse all the content, get what you need, and share the content you have created.
 
-The [Mendix App Store](https://appstore.home.mendix.com/index3.html) is a vibrant marketplace containing complete sample apps that can be used right away as well as various components (connectors, widgets, and modules) that can be used to build custom apps more quickly. In the Mendix App Store, you can browse all the content, get what you need, and share the content you have created.
+This document describes the different sections of the Mendix Marketplace.
 
-This document describes the different sections of the Mendix App Store.
+## 2 Marketplace Home Page {#home}
 
-## 2 App Store Home Page {#home}
-
-The home page of the Mendix App Store has three main tabs at the top:
+The home page of the Mendix Marketplace has three main tabs at the top:
 
 * **Discover** – the home page, where you can browse various component categories and filter what is displayed
 * **My Marketplace** – click this to go to [My App Store](#my-app-store)
-* **{Your company's private App Store page}** – click this to go to your [company's App Store](#company-content)
+* **{Your company's private Marketplace page}** – click this to go to your [company's App Store](#company-content)
 
 ![](attachments/app-store-overview/home-page.jpg)
 
@@ -47,7 +43,7 @@ The following filter options are also available:
 
 ## 3 Component Details Page {#details}
 
-Clicking the tile of an App Store component will bring you to its details page with the sections described below.
+Clicking the tile of a Marketplace component will bring you to its details page with the sections described below.
 
 ![](attachments/app-store-overview/component-details.jpg)
 
@@ -62,7 +58,7 @@ The header for each component presents the following details:
 * The **Share** button, which allows you to copy the URL of the component and share it to your networks
 * **Download** – click this to download the component
 	* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
-	* The best practice is to download a component from the App Store that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded App Store content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
+	* The best practice is to download a component from the Marketplace that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
 	
 
 <a name="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
@@ -75,7 +71,7 @@ The **Publisher** section presents the name of the company who created the compo
 
 The **Developers** section presents the names of the developers who most recently updated the component, with links to their [Mendix Profile](/developerportal/mendix-profile/).
 
-The **Support** section presents the category of support Mendix offers for the component (for more details, see [App Store Content Support](app-store-content-support)).
+The **Support** section presents the category of support Mendix offers for the component (for more details, see [Marketplace Content Support](app-store-content-support)).
 
 * A **GitHub** link, which will take you to the GitHub source files of the component
 
@@ -88,8 +84,8 @@ The details page for a component presents the following item information tabs:
 	* **Screenshots** – screenshots of the component
 	* **User Reviews** – user reviews of the component; to leave a review for the component, click **Add Review** – a section will open where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page)
 *  **Documentation** – can include details on typical use cases, features and limitations, dependencies, installation and configuration, and frequently asked questions
-	* [Platform-supported](app-store-content-support#category) components are documented in the various categories of this *App Store Guide*
-	* Click **Edit documentation** to open a text editor where you can edit the App Store component's documentation
+	* [Platform-supported](app-store-content-support#category) components are documented in the various categories of this *Marketplace Guide*
+	* Click **Edit documentation** to open a text editor where you can edit the Marketplace component's documentation
 * **Pricing**  – lists the pricing options (only for paid components)
 * **Releases** – lists all the versions of the component (any of which can be downloaded by clicking **Download**) along with details like the **Framework version** and the **UUID** (which can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*): 
 
@@ -97,7 +93,7 @@ The details page for a component presents the following item information tabs:
 
 ### 4.1 Dashboard {#dashboard}
 
-The **Dashboard** page presents your App Store activity:
+The **Dashboard** page presents your Marketplace activity:
 
 * Your numbers for [Published Content](#content) and [Submitted Reviews](#my-reviews)
 * [Notifications](#notifications) on components you created and favorited
@@ -108,11 +104,11 @@ The **Dashboard** page presents your App Store activity:
 
 ### 4.2 My Content {#content}
 
-On this page, you can see the App Store content for which you have created at least one version:
+On this page, you can see the Marketplace content for which you have created at least one version:
 
 ![](attachments/app-store-overview/my-content.png)
 
-You may see the **Company only** label on a component, which means it is your company's private App Store content (for details on how this is configured, see the [Adding New App Store Content](share-app-store-content#private-app-store) section of *How to Share App Store Content*). This content can be shared with [guests](#guests).
+You may see the **Company only** label on a component, which means it is your company's private Marketplace content (for details on how this is configured, see the [Adding New Marketplace Content](share-app-store-content#private-app-store) section of *How to Share Marketplace Content*). This content can be shared with [guests](#guests).
 
 In addition, you may see a label on a component name for the [user group](#user-groups) to which the component is assigned as user group [content](#content).
 
@@ -128,19 +124,19 @@ On this page, you will see the following buttons:
 
 * **Create new draft version** – click this to create a new draft version of the component
 	* Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated – if there is a draft version in progress, click **View draft** to see it
-	* For more information on creating a draft version, see the [Updating Existing App Store Content](share-app-store-content#updating) section of *How to Share App Store Content*
+	* For more information on creating a draft version, see the [Updating Existing Marketplace Content](share-app-store-content#updating) section of *How to Share Marketplace Content*
 * **Unpublish** – click this to remove that version from the component
 	* If the component is not the protected content of a [user group](#user-groups), you can only unpublish a version that you have published yourself
 	* If the component is protected [content](#content) from a user group, a group [member](#members) can unpublish any version
-* **Edit** – click this to edit the component (for details on editing, see the [Adding New App Store Content](share-app-store-content#adding) section of *How to Share App Store Content*)
+* **Edit** – click this to edit the component (for details on editing, see the [Adding New Marketplace Content](share-app-store-content#adding) section of *How to Share Marketplace Content*)
 
 ### 4.3 Drafts {#drafts}
 
-This page contains drafts of App Store content you have started:
+This page contains drafts of Marketplace content you have started:
 
 ![](attachments/app-store-overview/drafts.png)
 
-Click the name of an App Store component to be taken to the [DRAFT](share-app-store-content#adding) page, where you can continue editing the component details.
+Click the name of a Marketplace component to be taken to the [DRAFT](share-app-store-content#adding) page, where you can continue editing the component details.
 
 Click **Delete** to delete a draft.
 
@@ -168,7 +164,7 @@ This page presents a history of notifications on content you have contributed to
 
 ### 4.7 Favorites {#saved-components}
 
-This page presents the App Store content you have [favorited](#saved):
+This page presents the Marketplace content you have [favorited](#saved):
 
 ![](attachments/app-store-overview/favorites.png)
 
@@ -200,7 +196,7 @@ This page contains reviews of **Your company's content** as well as **Your compa
 
 ### 5.3 User Groups {#user-groups}
 
-You can configure user groups for various levels of access to your company's App Store. The available configuration tabs for each user group page are described in the sections below.
+You can configure user groups for various levels of access to your company's Marketplace. The available configuration tabs for each user group page are described in the sections below.
 
 {{% alert type="info" %}}
 The **User Groups** menu item and page are visible to all users. However, only [Mendix Admins](/developerportal/control-center/index#company) can create and delete user groups. Both [Group Admins](#members) and Mendix Admins can manage user groups.
@@ -222,7 +218,7 @@ A guest is a Mendix Platform user from outside your organization who can downloa
 
 ![](attachments/app-store-overview/guests.png)
 
-The guest will receive an email notifying them of access to the private content. They can then see all the private App Store content shared with them in their [Shared with Me](#shared-with-me) page.
+The guest will receive an email notifying them of access to the private content. They can then see all the private Marketplace content shared with them in their [Shared with Me](#shared-with-me) page.
 
 {{% alert type="info" %}}
 The guest must be a registered Mendix Platform user; otherwise, they will not be able to access the shared content.
@@ -232,12 +228,12 @@ To remove a guest, click **Remove**.
 
 #### 5.3.3 Content Tab {#content}
 
-On this tab, you can assign content to this user group that can only be managed by members of this group. To assign a component to a user group, click **Assign Content** and select a company App Store component from the dialog box:
+On this tab, you can assign content to this user group that can only be managed by members of this group. To assign a component to a user group, click **Assign Content** and select a company Marketplace component from the dialog box:
 
 ![](attachments/app-store-overview/group-content.png)
 
 {{% alert type="info" %}}
-A Mendix App Store component can only be assigned to one user group at a time. If a component is already assigned to another user group, it will not appear in this dialog box.
+A Mendix Marketplace component can only be assigned to one user group at a time. If a component is already assigned to another user group, it will not appear in this dialog box.
 {{% /alert %}}
 
 To manage a component assigned to the user group, click **Manage** (for more information, see the [Managing a Component](#manage) section above).
@@ -256,6 +252,6 @@ To delete a group, a Mendix Admin can click **Delete Group**.
 
 ## 6 Read More
 
-* [How to Use App Store Content in Studio Pro](app-store-content)
-* [How to Share App Store Content](share-app-store-content)
-* [App Store Content Support](app-store-content-support)
+* [How to Use Marketplace Content in Studio Pro](app-store-content)
+* [How to Share Marketplace Content](share-app-store-content)
+* [Marketplace Content Support](app-store-content-support)

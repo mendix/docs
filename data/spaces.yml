@@ -150,7 +150,7 @@ releasenotes:
     - "Developer Portal"
     - "Deployment"
     - "Data Hub"
-    - "App Store"
+    - "Marketplace"
     - "SDKs"
     - "Quality Add-ons"
     - "Mendix Beta Features"
@@ -246,7 +246,7 @@ partners:
     - "SAP"
     - "IBM"
 appstore:
-  space: "App Store Guide"
+  space: "Marketplace Guide"
   priority: false
   menu_categories:
     - "General Info"

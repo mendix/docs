@@ -57,7 +57,7 @@ If you have made any changes directly to your iOS or Android project, you will h
 
 * The initial release of your app
 * A Mendix Studio Pro version upgrade that requires a new Native Template version
-* You fundamentally changed your app's functionality (this is a App Store limitation, and will require a re-release and re-review of your app by Apple—your app might be removed if you do not comply)
+* You fundamentally changed your app's functionality (this is an Apple App Store limitation, and will require a re-release and re-review of your app by Apple — your app might be removed if you do not comply)
 * A new native module has been added
 * The app has been renamed
 * The app's launcher icons have been changed

@@ -66,7 +66,7 @@ Cross-module association makes an association between entities of different modu
 
 {{% alert type="info" %}}
 
-You cannot create separate modules in Studio. But if you have different modules in Studio Pro, you can see the list of different domain models (except the System module and App Store modules) and make cross-module associations in Studio. 
+You cannot create separate modules in Studio. But if you have different modules in Studio Pro, you can see the list of different domain models (except the System module and Marketplace modules) and make cross-module associations in Studio. 
 
 {{% /alert %}}
 

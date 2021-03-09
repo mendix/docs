@@ -1,7 +1,7 @@
 ---
 title: "Import a Large Excel File"
 parent: "importing-excel-documents"
-tags: ["excel", "excel  importer", "app store", "sheet"]
+tags: ["excel", "excel  importer", "marketplace", "app store", "sheet"]
 ---
 
 ## 1 Introduction
@@ -22,7 +22,7 @@ We will use XML-to-domain mapping to create a new import entity from an Excel sh
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Have an app project with the [MxModel Reflection](/appstore/modules/model-reflection) and [Excel Importer](/appstore/modules/excel-importer) modules installed and configured from the Mendix App Store
+* Have an app project with the [MxModel Reflection](/appstore/modules/model-reflection) and [Excel Importer](/appstore/modules/excel-importer) modules installed and configured from the Mendix Marketplace
 
 ## 3 Modifying Your Excel Sheet
 

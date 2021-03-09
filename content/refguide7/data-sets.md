@@ -45,7 +45,7 @@ A parameter has the following configurable properties:
 
 *   _Name_: The name of the parameter
 
-*   _Type_: The type of the parameter: Object, Enumeration or a primitive (e.g. DateTime, Float, Integer, Boolean, etc). See [Data Types](data-types) for the possible parameter types.
+*   _Type_: The type of the parameter: Object, Enumeration or a primitive (for example, DateTime, Float, Integer, Boolean, etc). See [Data Types](data-types) for the possible parameter types.
 
 *   _Constraints_: The constraints on a parameter. These constraints influence which values can be selected for parameter input values by the end user. Constraints can be associated with user roles in the dataset security. There are two type of constraints: ranges which apply to numeric and date parameters and XPath constraints which apply to object parameters.
 

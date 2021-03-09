@@ -11,6 +11,8 @@ These release notes cover changes to the app project management functionality an
 For release notes on Mendix Cloud and deployment options, see [Deployment](deployment).
 {{% /alert %}}
 
+To see the current status of the Mendix Developer Portal and Control Center, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
+
 ## 2021
 
 ### March 10th, 2021
@@ -22,6 +24,42 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 #### Fixes
 
 * We fixed the bug where creating an IBM template or SAP template in the **Create App** does not direct you to the right page. 
+
+### March 9th, 2021
+
+#### Improvements
+
+* In Control Center, Mendix Admins can now edit the name and description of an [App Access Group](/developerportal/control-center/index#groups) once it has been created.
+* Mendix Admins can now [deactivate](/developerportal/control-center/index#members) Technical Contacts and the last Scrum Master in an App Team.
+
+### March 4th, 2021
+
+#### Improvements
+
+* We made some minor changes to the look and feel over several pages, most notably the [General app settings](/developerportal/settings/general-settings) page.
+* We removed the old Company Admin pages. But you are already using the [Mendix Control Center](/developerportal/control-center/) as a Mendix Admin, right?
+* We made some preparations for Git support.
+* We improved the sharing of data across the Developer Portal so that it is more stable and secure.
+
+#### Fixes
+
+* We fixed an issue where the **Add image** icon was missing when posting a comment on the [Buzz](/developerportal/collaborate/buzz). (Ticket 109481)
+* We fixed an issue where creating API keys appeared in the audit trail. (Ticket 116182)
+
+### February 25th, 2021
+
+#### Improvements
+
+* We optimized the **App Templates** page for a better experience. We also improved the search function on this page.
+* There is now better performance for building your app after you select a template.
+
+### February 23rd, 2021
+
+#### Improvements
+
+* We have updated the [App Projects](/developerportal/control-center/#projects) tab of Control Center, where you can now do the following:
+	* Open the [App Team](/developerportal/collaborate/team#managing) page from the project details page in order to manage App Team members and add yourself to an App Team (if you are a Mendix Admin)
+	* Deactivate or delete an app project or an App Team member
 
 ### February 9th, 2021
 

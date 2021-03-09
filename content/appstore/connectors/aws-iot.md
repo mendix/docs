@@ -1,8 +1,8 @@
 ---
 title: "AWS IoT"
 category: "Connectors"
-description: "Describes the configuration and usage of the AWS IoT connector, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "aws", "iot"]
+description: "Describes the configuration and usage of the AWS IoT connector, which is available in the Mendix Marketplace."
+tags: ["marketplace", "app store", "marketplace component", "app store component", "aws", "iot"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -29,7 +29,7 @@ This connector uses source code from the following projects:
 The microflow actions need AWS credentials. Most use an AWS access key ID and an AWS secret access key.
 
 For the MQTT actions you need to provide the certificates as provided by AWS IoT. These should be stored
-in the resources folder of your Mendix app project:
+in the resources folder of your Mendix app:
 
 {{% image_container width="400" %}}
 ![](attachments/aws-iot/certificates.jpg)
@@ -90,7 +90,7 @@ When configuring this action, you also need the certificates provided by AWS IoT
 
 ![](attachments/aws-iot/data-publish-mqtt-message-properties.png)
 
-## 3 Developing This App Store Component
+## 3 Developing This Marketplace Component
 
 To contribute to the development of this connector, follow these steps:
 

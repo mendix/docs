@@ -29,7 +29,7 @@ To be able to fully test PWA functionalities, the app needs to be deployed to th
 
 ### 2.1 Publish as a Progressive Web App
 
-When checked and deployed to the cloud, the app registers a [service worker](https://developers.google.com/web/fundamentals/primers/service-workers) that is the basis for PWAs. On offline navigation profiles, this option is always enabled. In online navigation profiles, enabling this option will also give the end-user a custom page when the device has no connection. Where desired, this page can be customized by adding an *offline.html* page to the theme folder (e.g. *theme/offline.html*). Note that this page should not load any other resources over the network.
+When checked and deployed to the cloud, the app registers a [service worker](https://developers.google.com/web/fundamentals/primers/service-workers) that is the basis for PWAs. On offline navigation profiles, this option is always enabled. In online navigation profiles, enabling this option will also give the end-user a custom page when the device has no connection. Where desired, this page can be customized by adding an *offline.html* page to the theme folder (for example, *theme/offline.html*). Note that this page should not load any other resources over the network.
 
 ### 2.2 Allow "Add to Home Screen" Prompt
 
@@ -116,6 +116,10 @@ For more information on browser support for certain device features, see the thi
 ## 7 Deciding Between a PWA or Native Mobile App
 
 Mendix offers options to build both native mobile apps and PWAs. Depending on your project's requirements or constraints, one or the other can be a better fit. It is also possible to have both native mobile and PWA profiles in a single project, which can run next to each other and overlap significantly.
+
+{{% alert type="info" %}}
+Important limitation: Apple does not support push notifications for PWAs on iOS. Currently it is not possible to create a fully offline-first PWA for iOS. Support for that is planned later in 2021.
+{{% /alert %}}
 
 Use the following diagram to decide whether to build a PWA, a native mobile app, or both:
 

@@ -13,7 +13,7 @@ This activity can only be used in **Microflows**.
 
 The **Workflow call** activity can be used to call a [workflow](workflows). 
 
-![Call Workflow](attachments/call-workflow/call-workflow.jpg)
+![](attachments/call-workflow/workflow-call.jpg)
 
 ## 2 Properties
 

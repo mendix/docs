@@ -13,7 +13,7 @@ This activity can only be used in **Microflows**.
 
 The **Open task page** activity can be used to open a user task page defined in the user task properties. 
 
-![Open Task Page](attachments/open-task-page/open-task-page.jpg)
+![Open Task Page](attachments/open-user-task/open-task-page.jpg)
 
 ## 2 Properties
 

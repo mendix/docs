@@ -30,7 +30,8 @@ You can navigate to the following tabs:
 	{{% alert type="info" %}}  The **Administration** tab will only be shown for those with curate roles (owners of a data source, curators or the Data Hub Admin.	{{% /alert %}}
 
 From the **Home** screen, you can do the following:
-* **Search** – search in the Data Hub Catalog using the **Search** box or clicking the suggested **Tags**
+
+- **Search** – search in the Data Hub Catalog using the **Search** box or clicking the suggested **Tags**
 
 * **Register a new data source** – manually register an OData service from your enterprise business application to the Data Hub  (for further details, see the [Manually Registering OData V4 Services](register#registration-form) section of *How to Register Data Assets*)
 
@@ -39,7 +40,7 @@ From the **Home** screen, you can do the following:
 Data Hub is also integrated in Mendix Studio Pro to find and connect to shared data sources in your apps. For further details on using Data Hub in Studio Pro, see [Data Hub Pane](/refguide/data-hub-pane) in the *Studio Pro Guide*.
 
 {{% alert type="info" %}}
-The Data Hub integration is available in Studio Pro version 8.14 and above. Users wanting to use the full functionality should download the latest version. {{% /alert %}}
+The Data Hub integration is available in Studio Pro version 8.14 and above. To use the latest functionality of Data Hub download the latest version of Studio Pro. {{% /alert %}}
 
 ## 3 Using the Data Hub
 

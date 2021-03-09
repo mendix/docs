@@ -80,15 +80,13 @@ The impact of upgrading between MTS versions is higher than upgrading between LT
 
 ## 4 Monthly Release Version
 
-A monthly release is a a non-MTS/LTS minor release that has no support with patch releases.
+A monthly release is a a non-MTS/LTS minor release that only receives patches for critical/security issues if they can be released earlier and faster than the next minor version release.
 
 ### 4.1 Support Duration
 
-Monthly release versions do not enjoy patch releases like MTS and LTS versions do. However, bugs found in monthly release versions are directly resolved in the subsequent monthly release. 
+Monthly release versions do not enjoy regular patch releases like MTS and LTS versions do. Bugs found in monthly release versions are directly resolved in the subsequent monthly release. 
 
 For example, if a bug is found in version 9.1, it will only be fixed in the next monthly release, which would be version 9.2.
-
-For another example, if you are using version 9.1 after 9.2 has been released and you find a critical bug in 9.1, that fix will only be released in the next monthly release, which would be 9.3.
 
 ### 4.2 Release Cycle
 
@@ -96,7 +94,9 @@ This is a monthly release that includes new features as well as security patches
 
 ### 4.3 Support with Patch Releases
 
-A monthly release receives no patches. Bugs found in a monthly release will only be fixed rolling forward to the next minor version. 
+A monthly release only receives patches for critical/security issues if they can be released earlier and faster than the next minor version release. Otherwise, bugs found in a monthly release will only be fixed rolling forward to the next minor version. 
+
+For example, if you are using version 9.1 after 9.2 has been released and you find a critical issue in 9.1, that fix will only be released in the next monthly release, which would be 9.3.
 
 If a bug is found in a monthly-release version for an older major version, it will only be fixed as a patch on the existing LTS (for example, a bug found in [8.16](8.16#8160) will only be fixed for a patch release on the LTS version [8.18](8.18)). 
 

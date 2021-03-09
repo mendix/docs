@@ -32,7 +32,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Your project has the Workflow Commons and Mendix SSO modules.
 
-* Make sure that the **User entity** is configured in your [Project Settings](project-settings#workflows) > **Workflows** tab. 
+* Make sure that the **User entity** is configured in your [Project Settings](/refguide/project-settings#workflows) > **Workflows** tab. 
 
 * Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows). 
 
@@ -91,7 +91,7 @@ You have configured new project roles for Facilities, manager, and HR.
 
 ### 3.2 Configuring Demo Users
 
-You need to create demo users for the newly created project roles to be able to test your app later. For more information, see the [Testing Workflow](#_9_Testing_the) section. Follow the steps below: 
+You need to create demo users for the newly created project roles to be able to test your app later. For more information, see the [Testing Workflow](#test-workflow) section. Follow the steps below: 
 
 1. Open the **Demo users** tab and click **New**.
 
@@ -361,7 +361,7 @@ Now if the Manager indicates that the new employee works from home, the desk pre
 
 Congratulations! The onboarding workflow is completed, and you can test it with different roles by running your application locally. 
 
-## 10 Testing the Workflow
+## 10 Testing the Workflow {#test-workflow}
 
 Now you can test your workflow from the perspective of different users. 
 

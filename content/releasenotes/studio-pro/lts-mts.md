@@ -11,7 +11,7 @@ The goal of this document is to clarify Mendix Studio Pro version options and he
 To define different types of versions and releases, consider the example of [8.18.1](8.18#8181):
 
 * **8** – the first number in a release indicates the major version
-	* A major version is generally released every year (please note we reserve the right to change this timeline with a minimum of 12 months for each major release and a maximum of 24 months)
+	* A major version is generally released every 18 months (please note we reserve the right to change this timeline with a minimum of 12 months for each major release and a maximum of 24 months)
 	* Includes new features and fixes
 	* Can include breaking changes
 	* In relation to our SLA and to clarify our current offering, today Mendix supports major versions 7, 8, and 9

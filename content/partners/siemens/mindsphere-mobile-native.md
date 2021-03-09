@@ -335,7 +335,7 @@ Attention: You have to remove all `/r/n` from the json object before saving the 
 To generate the needed file you have to use Android Studio. In the chapter [build your own development app](./mindsphere-mobile-native#buildcustomapp) you have already cloned your github repo locally. Use the developer branch.
 
 1. Open the **root** folder of this repo in a terminal and if not already done run `npm install`.
- 
+
     Note: during our tests we faced issues when one of the patches should be applied
 
     ![build your own development app](./attachments/mindsphere-mobile-native/Problem_npm_install.png)
@@ -423,7 +423,7 @@ Most important will be to enhance your application with MindSphere API calls to 
 
 #### 2.6.1 Authorize your MindSphere API calls
 
-With each MindSphere API call you have to assure that the corresponding user token has to be forwarded to the MindSphere API call. You can achieve this by adding a **MindSphere Access Token** node before your REST calls and to set the **Authorization** header of your http header.
+With each MindSphere API call you have to assure that the corresponding user token is part of the request. Do this by adding the **MindSphere Access Token** node before your REST calls and set the **Authorization** header accordingly.
 
 ![Mobile](attachments/mindsphere-development-considerations/delete-mindspheretoken.png)
 
@@ -449,7 +449,7 @@ As of now your application has the user roles **admin** and **user**, but none o
 
     ![DeveloperCockpit](./attachments/mindsphere-mobile-native/DC_ChooseAPIRole.png)
 
-Note: your application has now been updated to be allowed for the API calls, to get this active for your local test session you have to make sure to enforce a logout of your user. For this please press the logout button within your mobile application and clear the cookies within your mobile browser. Afterwards sign in again and the provided token should include now the new API roles.
+Note: your application has now been updated to be allowed for the API calls, to get this active for your local test session you have to enforce a logout of the user. For this please press the logout button within your mobile application and clear the cookies within your mobile browser. Afterwards sign in again. The provided token includes the added API roles now.
 
 ## 3 Module Details{#moduledetails}
 

@@ -25,6 +25,8 @@ To define different types of versions and releases, consider the example of [8.1
 	* Includes security fixes and critical bug fixes
 	* Does not include new features or breaking changes
 
+This diagram illustrate the LTS and MTS concepts with timelines:
+
 ## 2 Long-Term Support Version (LTS)
 
 An LTS version is the latest minor version before a new major version is released. Once a minor version becomes an LTS, it will not have new features added to it. 
@@ -50,15 +52,13 @@ For the support duration, the LTS will receive [patch](#patch) releases only.
 
 ### 2.4 Upgrading Impact
 
-[**Verify**]
-
 The impact of upgrading from an LTS to an LTS is often the lowest of these options. That is because an LTS has the longest support duration and only gets critical fixes, which results in high stability over time. In addition, depending on how rigorous your application update/release process is, the upgrade would only have to be done once, as opposed to multiple times between MTS versions or monthly release versions.
 
 ## 3 Mid-Term Support Version (MTS)
 
 An MTS is a minor version released approximately every 6 months after a new major version release.
 
-In the past, MTS versions have been [8.6](8.6), [8.12](8.12), and [8.18](8.18). However, with the release of version 9, [8.18](8.18) is now an LTS, so there are no longer any MTS versions for version 8. Furthermore, there are no current MTS versions for Studio Pro. There will only be upcoming MTS versions for version 9.
+In the past, MTS versions have been [8.6](8.6), [8.12](8.12), and [8.18](8.18). However, with the release of version 9, [8.18](8.18) is now an LTS, so there are no longer any MTS versions for version 8. Furthermore, there are no current MTS versions for Studio Pro. There will only be upcoming MTS versions for version 9 starting with 9.6.
 
 If you are on an innovation track with your development and need to get the latest and greatest Mendix has to offer every month, then upgrade to an MTS and stay on that version with its patch releases until the next MTS version is released.
 
@@ -76,7 +76,7 @@ For the support duration, the MTS will receive [patch](#patch) releases only.
 
 ### 3.4 Upgrading Impact
 
-The impact of upgrading between MTS versions is higher than upgrading between LTS versions. That is because an MTS has a shorter support duration than an LTS, which means it has less time to become as stable as an LTS verison. In addition, the upgrade has to be done approximately every six months.
+The impact of upgrading between MTS versions is higher than upgrading between LTS versions. That is because an MTS has a shorter support duration than an LTS, which means it has less time to become as stable as an LTS version. In addition, the upgrade has to be done approximately every six months.
 
 ## 4 Monthly Release Version
 

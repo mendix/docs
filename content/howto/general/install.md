@@ -98,6 +98,7 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
 5. Rename the following dependencies:
 	* The `.NET Framework 4.7.2` executable to `dotnetfx472.exe`
 	* The `Java Development Kit 11 (x64)` *msi* to `adoptopenjdk_11_x64.msi`
+
  	* The `Visual C++ 2010 SP1 Redistributable (x64)` executable to `vcredist2010_x64.exe`
  	* The `Visual C++ Redistributable for Visual Studio 2015 (x64)` executable to `vcredist2015_x64.exe`
  	* The `latest` executable to `mendix_native_mobile_builder.exe`

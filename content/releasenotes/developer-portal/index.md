@@ -19,11 +19,11 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* A chatbot is added to the **Create App** flow. Mendix support employees and Bots are now able to interact with you and help you via this new functionality. It is only visibile when someone from Mendix is sending a message to the user. 
+* A chatbot has been added to the **Create App** flow. [Mendix Support](/developerportal/support/) and other Mendix bots are now able to interact with you and help you with this flow. This is only visibile when someone from Mendix is sending you a message. 
 
 #### Fixes
 
-* We fixed the bug where creating an IBM template or SAP template in the **Create App** does not direct you to the right page. 
+* We fixed a bug where selecting an IBM or SAP template in the **Create App** flow did not direct you to the right page. 
 
 ### March 9th, 2021
 

@@ -29,10 +29,6 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 * We improved the speed of the **App Templates** page. After you click **Create App**, the templates appear instantly now.
 
-#### Fixes
-
-* We fixed the issue where creating a SAP template or IBM template doesn't redirect you to the right page (Ticket 114913).
-
 ### February 5th, 2021
 
 #### Improvements

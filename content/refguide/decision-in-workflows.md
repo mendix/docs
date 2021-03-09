@@ -13,12 +13,6 @@ A decision is an element that makes a choice based on a condition and follows on
 
 ## 2 Properties
 
-An example of decision properties is represented in the image below:
-
-![Decision Properties](attachments/decision-in-workflows/decision-properties.jpg)
-
-
-
 Decision properties consist of the following sections:
 
 * [General](#general)
@@ -26,11 +20,15 @@ Decision properties consist of the following sections:
 
 ### 2.1 General Section {#general}
 
-#### 2.1.1 Caption
+#### 2.1.1 Name
+
+**Name** is the internal name of the element. When referring to the element in the app project you will use this name. It must be unique within the workflow, but you can have two elements with the same name in different workflows. {{% todo %}}[Is this correct?]{{% /todo %}}
+
+#### 2.1.2 Caption
 
 The **Caption** describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand without needing to add annotations.
 
-#### 2.1.2 Condition
+#### 2.1.3 Condition
 
 **Condition** is configured based on an [expression](expressions). The expression should result in a Boolean or an enumeration.
 

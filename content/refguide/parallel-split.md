@@ -17,18 +17,18 @@ The workflow needs to complete all paths of the parallel split before it can con
 
 ## 2 Properties
 
-An example of parallel split properties is represented in the image below:
-
-![Parallel Split Properties](attachments/parallel-split/parallel-split-properties.jpg)
-
-
-
 Parallel split properties consist of the following sections:
 
 * [General](#general)
 * [Paths](#paths)
 
 ### 2.1 General Section {#general}
+
+#### 2.1.1 Name
+
+**Name** is the internal name of the element. When referring to the element in the app project you will use this name. It must be unique within the workflow, but you can have two elements with the same name in different workflows. {{% todo %}}[Is this correct?]{{% /todo %}}
+
+#### 2.1.2 Caption
 
 The **Caption** describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand without needing to add annotations.
 

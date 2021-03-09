@@ -13,10 +13,6 @@ tags: ["workflow", "workflows", "call microflow", "Studio Pro"]
 
 ## 2 Properties
 
-An example of **Call microflow** properties is represented in the image below:
-
-![Call Microflow Properties](attachments/call-microflow/call-microflow.jpg)
-
 Call microflow properties consist of the following sections:
 
 * [General](#general)
@@ -25,7 +21,11 @@ Call microflow properties consist of the following sections:
 
 ### 2.1 General Section {#general}
 
-#### 2.1.1 Caption
+#### 2.1.1 Name
+
+**Name** is the internal name of the element. When referring to the element in the app project you will use this name. It must be unique within the workflow, but you can have two elements with the same name in different workflows. {{% todo %}}[Is this correct?]{{% /todo %}}
+
+#### 2.1.2 Caption
 
 The **Caption** describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand without needing to add annotations.
 

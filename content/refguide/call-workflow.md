@@ -1,8 +1,8 @@
 ---
-title: "Call Workflow"
+title: "Workflow Call"
 parent: "workflow-activities"
-menu_order: 10
-tags: ["studio pro", "call workflow", "workflow"]
+menu_order: 40
+tags: ["studio pro", "call workflow", "workflow call"]
 ---
 
 {{% alert type="warning" %}}
@@ -11,19 +11,17 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **Call workflow** activity can be used to call a [workflow](workflows). 
+The **Workflow call** activity can be used to call a [workflow](workflows). 
 
-![Call Workflow](attachments/call-workflow/call-workflow.jpg)
-
-Arguments can be passed to the microflow and the result can be stored.
+![Call Workflow](attachments/workflow-call/workflow-call.jpg)
 
 ## 2 Properties
 
-There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
+There are two sets of properties for this activity: in the properties pane and in a dialog box. You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
 
-![Call Workflow Properties](attachments/call-workflow/call-workflow-properties.jpg)
+You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-The **Call workflow** properties pane consists of the following sections:
+The **Workflow call** properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)
@@ -31,10 +29,6 @@ The **Call workflow** properties pane consists of the following sections:
 ## 3 Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
-
-You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
-
-You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
 ### 3.1 Workflow {#workflow}
 

@@ -19,16 +19,14 @@ When the workflow reaches the user task activity, the task is created and will b
 
 ## 2 Properties
 
-An example of user task properties is represented in the image below:
-
-![User Task Properties](attachments/user-task/user-task-properties.jpg)
-
 User task properties consist of the following sections:
 
 * [Display information](#display-info)
 * [Due date](#due-date)
+* [Events](#events)
 * [General](#general)
 * [Outcomes](#outcomes)
+* [Security](#security)
 * [Task page](#task-page)
 * [User assignment](#user-assignment)
 
@@ -89,21 +87,35 @@ In addition to adding new parameters, you can perform the following actions on p
 
 **Due in** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. For example, you can use it to set a deadline for the user task and display it in your app. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the user task. If you are using the **Workflow Commons** module, **Due in** is used in page templates and preconfigured dashboards. 
 
-### 2.3 General Section {#general}
+### 2.3 Events Section {#events}
+
+**On Created** event allows you to select a microflow that is executed immediately after a user role has been determined for a newly created task instance.
+
+### 2.4 General Section {#general}
+
+#### 2.4.1 Name
+
+**Name** is the internal name of the user task. When referring to the user task in the app project you will use this name. It must be unique within the workflow, but you can have two user tasks with the same name in different workflows. {{% todo %}}[Is this correct?]{{% /todo %}}
+
+#### 2.4.2 Caption
 
 **Caption** defines a title of the user task. 
 
-### 2.4 Outcomes Section {#outcomes}
+### 2.5 Outcomes Section {#outcomes}
 
 The outcomes property allows you to create new outcomes for the user task. Outcomes are translated into different outgoing paths of the user task and can be referred to by other elements, such as a button. For example, you have a process when you need to approve or reject a request. One button on a [task page](#task-page) can refer to the **Approve** outcome of the user task, while another one can use the **Reject** outcome. 
 
-### 2.5 Task Page Section {#task-page}
+### 2.6 Security Section {#security}
+
+**Allowed roles** defines which [module role](module-security#module-role) the user must have to be able to execute the user task.
+
+### 2.7 Task Page Section {#task-page}
 
 **Task page** is the page that an assigned user will use to inspect their task and complete it. You can also allow users to add comments or attachments on this page. There should be a dedicated page per each user task.
 
-### 2.6 User Assignment Section {#user-assignment}
+### 2.8 User Assignment Section {#user-assignment}
 
-#### 2.6.1 Assign User Task Using {#assign-user-task}
+#### 2.8.1 Assign User Task Using {#assign-user-task}
 
 **Assign user task using** allows you to manage what users will the task be assigned to. You can filter users using XPath or implement more flexible logic and add several checks using a microflow. 
 
@@ -114,11 +126,11 @@ Possible options of this property are described in the table below:
 | XPath     | Allows you to filter users who should be assigned the user task. For example, you can assign a certain task only to users with the Manager user role. You can use attributes of the of the **User Entity** set in [Project Settings](project-settings#workflows). |
 | Microflow | Allows you to assign the user task to certain users. Using microflow you can check, for example, which users have the right to approve user tasks and are currently not on vacation and assign the task only to users who passed the check.<br />The return type of the microflow should be the **User Entity** set in [Project Settings](project-settings#workflows). |
 
-#### 2.6.2 XPath Constraint
+#### 2.8.2 XPath Constraint
 
 Specifies the expression used to assign the user task. This option is displayed only when the [Assign user task using](#assign-user-task) is set to **XPath**.   
 
-#### 2.6.3 Microflow
+#### 2.8.3 Microflow
 
 Specifies the microflow used to assign the user task. This option is displayed only when the [Assign user task using](#assign-user-task) is set to **Microflow**.   
 

@@ -11,10 +11,6 @@ This document describes workflow properties. For details on what workflows are f
 
 ## 2 Workflow Properties
 
-An example of workflow properties is represented in the image below:
-
-![Workflow Properties](attachments/workflow-properties/workflow-properties.png)
-
 Workflow properties consist of the following sections:
 
 * [Common](#common)
@@ -22,7 +18,8 @@ Workflow properties consist of the following sections:
 * [Display information](#display-info)
 * [Due date](#due-date)
 * [General](#general)
-* [Workflow page](#workflow-page)
+* [Security](#security)
+* [Admin page](#admin-page)
 
 ### 2.1 Common Section {#common}
 
@@ -110,15 +107,21 @@ In addition to adding new parameters, you can perform the following actions on p
 
 ### 2.4 Due Date Section {#due-date}
 
-**Due in** is stored in the System module on the **Workflow** entity as an attribute and its data can be dynamically displayed in the running app. For example, you can use it to set a deadline for the workflow and display it in your app. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the workflow. If you are using the **Workflow Commons** module, **Due in** is used in page templates. 
+**Due by** is stored in the System module on the **Workflow** entity as an attribute and its data can be dynamically displayed in the running app. For example, you can use it to set a deadline for the workflow and display it in your app. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the workflow. If you are using the **Workflow Commons** module, **Due by** is used in page templates. 
 
 ### 2.5 General Section {#general}
 
 **Caption** defines a title of the workflow. You cannot change the [Name](#name) of the workflow but you can change the **Caption**.
 
-### 2.6 Workflow Page Section {#workflow-page}
+### 2.6 Security Section {#security}
 
-**Workflow page** is an overview page where the allowed roles (e.g. the Workflow Administrator) can track the progress of the workflow and its tasks. 
+**Allowed roles** defines which [module role](module-security#module-role) the user must have to be able to execute the workflow.
+
+### 2.7 Admin Page Section {#admin-page} 
+
+{{% todo %}}[Please verify that the name was updated.]{{% /todo %}}
+
+**Override admin page** is an optional page used for displaying an instance of the workflow to the workflow admin. This overrides a generic page used to display all workflows in the app. 
 
 ## 3 Read More
 

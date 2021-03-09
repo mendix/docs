@@ -13,17 +13,11 @@ The **Jump** activity allows you to jump to other activities in the workflow. Th
 
 ## 2 Properties
 
-An example of Jump activity properties is represented in the image below:
-
-![Jump Properties](attachments/jump-activity/jump-properties.jpg)
-
-
-
 The Jump activity properties consist of the **General** section.
 
 ### 2.1 Name
 
-**Name** is the internal name of the element. When referring to the element in the app project you will use this name. It must be unique within the module, but you can have two elements with the same name in different modules. When referring to the element, you will normally prepend the name of the module to ensure uniqueness. 
+**Name** is the internal name of the element. When referring to the element in the app project you will use this name. It must be unique within the workflow, but you can have two elements with the same name in different workflows. {{% todo %}}[Is this correct?]{{% /todo %}}
 
 ### 2.2 Caption
 

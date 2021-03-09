@@ -15,11 +15,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
-### March 10th, 2021
-
-#### Improvements
-
-* A chatbot has been added to the **Create App** flow. [Mendix Support](/developerportal/support/) and other Mendix bots are now able to interact with you and help you with this flow. This is only visibile when someone from Mendix is sending you a message. 
+### March ____, 2021
 
 #### Fixes
 

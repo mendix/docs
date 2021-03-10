@@ -4,6 +4,7 @@ description: "Describes the microflows in Mendix Studio."
 menu_order: 50
 tags: ["studio", "microflow"]
 #If moving or renaming this doc file or section 5 Toolbox, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#The anchor <microflows-toolbox> below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Introduction 
@@ -25,8 +26,7 @@ Examples of using microflows can be the following:
 
 To view the microflows of your app in Studio, click the **Microflows** icon in the left menu bar:
 
-{{% image_container width="250" %}}![Microflow Icon](attachments/microflows/micflows-icon.png)
-{{% /image_container %}}
+![Microflow Icon](attachments/microflows/micflows-icon.png)
 
 ## 2 Concepts and Definitions 
 

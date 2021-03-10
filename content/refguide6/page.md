@@ -65,7 +65,7 @@ Added in Mendix 6.7.0
 
 {{% /alert %}}
 
-The URL of the page can be used to directly navigate to the page, e.g. from external links or bookmarks. It will be shown in the address bar of the browser when you visit the page. When navigating to a page without a URL configured, the last visited URL is shown. Note that the full URL of the page will be the base URL of your application followed by `/p` and then by the configured URL of the page, e.g. `http://example.mendixcloud.com/p/home_page`. Only pages that do not need an object can have a URL.
+The URL of the page can be used to directly navigate to the page, for example, from external links or bookmarks. It will be shown in the address bar of the browser when you visit the page. When navigating to a page without a URL configured, the last visited URL is shown. Note that the full URL of the page will be the base URL of your application followed by `/p` and then by the configured URL of the page, for example, `http://example.mendixcloud.com/p/home_page`. Only pages that do not need an object can have a URL.
 
 ## Navigation Properties
 

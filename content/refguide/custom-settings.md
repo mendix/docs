@@ -19,7 +19,11 @@ Each custom setting consists of a name and a value. For example, to enable persi
 
 If you are running your app on the Mendix Cloud, you can access these settings in the Developer Portal via **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see the [Runtime Tab](/developerportal/deploy/environments-details#runtime-tab) section of *Environment Details*.
 
-If you are running on SAP Cloud, you can add custom settings as User-Provided Variables prefixed with `MXRUNTIME_`. If the setting contains a dot `.` you can use an underscore `_` in the variable. [Reference](https://github.com/mendix/cf-mendix-buildpack#configuring-custom-runtime-settings)
+If you are running on SAP Cloud, you can add custom settings as User-Provided Variables prefixed with `MXRUNTIME_`. If the setting contains a dot `.` you can use an underscore `_` in the variable.
+
+When you are running your app locally, you can set these values in a [Configuration](configuration#custom).
+
+There is more information on how this is done in the Cloud Foundry buildpack in [Configuring Custom Runtime Settings](https://github.com/mendix/cf-mendix-buildpack#configuring-custom-runtime-settings) in the GitHub repo.
 
 ## 2 General Settings
 
@@ -44,11 +48,12 @@ The following custom settings can be configured:
 | **SessionTimeout** | Defines after how much time session becomes invalid (in milliseconds). After that timeout a session becomes applicable for removal. The session will not be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 |
 | **http.client.MaxConnectionsPerRoute** | The [maximum number of connections for a route](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnPerRoute(int)) for call REST service and call web service activities. | 2 |
 | **http.client.MaxConnectionsTotal** | The [maximum number of connections allowed across all routes](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnTotal(int)) for the call REST service and call web service activities. | 20 |
-| **http.client.CleanupAfterSeconds** | For the call REST service and call web service activities, the first request to a new host will create an HTTP client that will handle subsequent requests. When there are no new requests to the host for the specified time, the HTTP client will be cleaned up. Default Value: `12 * 60 * 60` (12 hours). A value of `0` means no cleanup. ||
+| **http.client.CleanupAfterSeconds** | For the call REST service and call web service activities, the first request to a new host will create an HTTP client that will handle subsequent requests. When there are no new requests to the host for the specified time, the HTTP client will be cleaned up. A value of `0` means no cleanup.<br/>{{% alert type="warning" %}}If the infrastructure provider closes this connection before this cleanup time, you can receive a `java.net.SocketException: Connection reset` error. You can reduce this value to prevent this, or handle the error in your [REST call](call-rest-action#troubleshooting).{{% /alert %}} | 355 |
 | **ClusterManagerActionInterval** | The interval (in milliseconds) used for performing all cluster manager actions. These actions include, unblocking users, and removing invalid sessions. If nothing is specified the interval is half the `SessionTimeout`. | 300000 |
 | **com.mendix.core.StorageService** | Defines which storage service module will be used. The storage service module takes care of storing the actual files associated with `System.FileDocument` objects, such as uploaded files. Possible values are `com.mendix.storage.localfilesystem`, `com.mendix.storage.s3`, `com.mendix.storage.azure`, and `com.mendix.storage.swift`. | com.mendix.storage.localfilesystem |
 | **com.mendix.storage.PerformDeleteFromStorage** | Defines whether a delete of a Mendix file document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it is also used as a backup service. | true |
-| **com.mendix.core.SessionIdCookieName** | Defines the name of the cookie value which represents the session id. Can be useful to change when running in a container which assumes a certain name for the session cookie (for example, Pivotal assumes `JSESSIONID` as a session cookie name). | XASSESSIONID |
+| **com.mendix.core.SessionIdCookieName** | Defines the name of the cookie value which represents the session id. Can be useful to change when running in a container which assumes a certain name for the session cookie. | XASSESSIONID |
+| **TaskQueue.ShutdownGracePeriod** | Time in ms to wait for task in a task queue to finish when shutting down. |          10000 |
 
 ## 3 Log File Settings
 
@@ -115,7 +120,7 @@ Before the data copy process starts, the source database will also be brought in
 
 ## 5 S3 Storage Service Settings {#5-amazon-s3-storage-service-settings}
 
-The settings described below influence the behavior of the Amazon S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage. Using these settings manually in Mendix Cloud is strongly discouraged, as files stored in external systems will not be included in backup creation and restoration.
+The settings described below influence the behavior of the Amazon S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage. For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you.
 
 | Name | Description | Default Value |
 | --- | --- | --- |
@@ -138,7 +143,7 @@ The settings described below influence the behavior of the Amazon S3 Storage Ser
 
 ## 6 Microsoft Azure SQL
 
-These settings can be changed to use a Microsoft Azure SQL database for your Mendix application.
+These settings can be changed to use a Microsoft Azure SQL database for your Mendix application. For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you.
 
 First, you need to create an Azure SQL database (for information on how to do this, see this [SQL Database Tutorial](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/)). Make sure your Azure firewall settings allow your Mendix application to reach the Azure SQL database (by default, the Azure firewall does not allow external connections).
 
@@ -152,7 +157,7 @@ First, you need to create an Azure SQL database (for information on how to do th
 
 ## 7 Microsoft Azure Blob Storage Settings
 
-These settings can be used to store files using the Microsoft Azure blob storage service. Server-side encryption can be configured through the Azure Portal (for more information, see [Azure Storage encryption for data at rest](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)).
+These settings can be used to store files using the Microsoft Azure blob storage service. Server-side encryption can be configured through the Azure Portal (for more information, see [Azure Storage encryption for data at rest](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)). For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you.
 
 | Name | Description | Default Value |
 | --- | --- | --- |
@@ -174,7 +179,7 @@ Azure blob storage's default connection protocol is HTTPS in order to encourage 
 
 ## 8 IBM Cloud (Bluemix) Object Storage Settings
 
-These settings can be used to store files using the IBM Cloud object storage service.
+These settings can be used to store files using the IBM Cloud object storage service. For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you.
 
 Mendix supports unscoped authentication of OpenStack Identity (Keystone) v3. The credentials related settings must be filled with the corresponding values which can be found in the Service Credentials section of your object storage service.
 

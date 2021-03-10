@@ -2,7 +2,7 @@
 title: "Buzz"
 category: "Collaboration Tools"
 menu_order: 10
-description: "Describes the Mendix Buzz, which is the landing page for a Mendix app project."
+description: "Describes the Mendix Buzz, which is the landing page for working on a Mendix app."
 tags: ["Buzz","Developer Portal"]
 ---
 
@@ -26,7 +26,7 @@ Below the company name is a list of apps for which you are a team member. Clicki
 
 ### 1.2 App Buzz {#app-buzz}
 
-App Buzz is Buzz for a specific app. It is the landing page when you open that app project:
+App Buzz is Buzz for a specific app:
 
 ![](attachments/app-buzz.jpg)
 
@@ -36,9 +36,9 @@ Click the **+** icon to invite new members to your App Team directly from this p
 
 Click **Show all** to go to the [Team](team) page for the app.
 
-**Latest Stories** shows the last few stories created for this app project. Click **Show all** to see all the [Stories](stories).
+**Latest Stories** shows the last few stories created for this app. Click **Show all** to see all the [Stories](stories).
 
-**App Feedback** shows the last few items of feedback for this app project. Click **Show all** to see all the [Feedback](feedback).
+**App Feedback** shows the last few items of feedback for this app. Click **Show all** to see all the [Feedback](feedback).
 
 In App Buzz, you can manage your app by clicking the options to the left of the Buzz feed. These are grouped into the following categories:
 
@@ -71,14 +71,6 @@ In App Buzz, a comment can come from Mendix Studio and refer to a specific docum
 ![](attachments/show-document.png)
 
 For more information on making comments in Studio, see [Buzz](/studio/collaboration-buzz).  
-
-### 2.2 Starting a Poll
-
-If you want to hear from various people in your company or on your App Team, click **Start a poll** to design and implement a quick poll on a relevant question:
-
-![](attachments/poll.png)
-
-In the **Add poll answer** box, you can add various answer choices. This is a great way to collaborate with and get feedback from your App Team!
 
 ## 3 Read More
 

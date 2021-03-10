@@ -7,7 +7,11 @@ tags: ["Kubernetes", "cloud", "deployment"]
 
 ## 1 Introduction
 
-This how-to describes what is needed to deploy your Mendix app to [Kubernetes](https://kubernetes.io/) following Mendix best practices. Kubernetes is the standard Docker orchestration platform supported by Mendix. For details on supported version of Kubernetes see [Mendix System Requirements](/refguide/system-requirements). 
+This how-to describes what is needed to deploy your Mendix app to [Kubernetes](https://kubernetes.io/). Kubernetes is the standard Docker orchestration platform supported by Mendix. If possible, we suggest you use [Mendix for Private Cloud](private-cloud) to deploy Mendix apps to Kubernetes as this provides you with integration with the Developer Portal and takes away some of the heavy lifting. For details on supported version of Kubernetes see [Mendix System Requirements](/refguide/system-requirements).
+
+{{% alert type="warning" %}}
+Do not use these instructions if you are using Mendix for Private Cloud — many of the steps here are not needed. For deploying using Mendix for Private Cloud, follow the instructions in the [Mendix for Private Cloud](private-cloud) documentation.
+{{% /alert %}}
 
 A Mendix application needs, as a minimum, a database to run. In this example you provision a PostgreSQL database within the Kubernetes cluster. In production scenarios, the database is usually provided as a service by the cloud provider, like AWS RDS or Azure SQL. For supported databases see [Mendix System Requirements](/refguide/system-requirements). 
 
@@ -273,7 +277,7 @@ spec:
           name: mendix-data
 ```
 
-Replace `<hub-user>/<repo-name>:<tag>` with the Docker image of your app, for example, `mendix/sample-app-kubernetes:v2`.
+Replace `<hub-user>/<repo-name>:<tag>` with the Docker image of your app, for example, `mendix/sample-app-kubernetes:v3`.
 
 Create a Docker image of your Mendix app using the instructions in the [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack) on GitHub.
 
@@ -283,7 +287,7 @@ Once you have created the Docker image, push it to the Docker hub using the foll
 docker push <hub-user>/<repo-name>:<tag>
 ```
 
-Where `<hub-user>/<repo-name>:<tag>` is the Docker image of your app identified in *mendix-app.yaml*. For the example above, this is again `mendix/sample-app-kubernetes:v2`.
+Where `<hub-user>/<repo-name>:<tag>` is the Docker image of your app identified in *mendix-app.yaml*. For the example above, this is again `mendix/sample-app-kubernetes:v3`.
 
 {{% alert type="info" %}}
 In this example, we use a local storage folder on the node to show how to externalize the data stored for your app from the Docker container. For production systems, we recommend using the storage provided on the selected cloud platform.

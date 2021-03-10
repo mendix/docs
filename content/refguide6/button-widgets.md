@@ -1,6 +1,11 @@
 ---
 title: "Button Widgets"
 parent: "pages"
+aliases:
+    - /refguide8/action-button.html
+    - /refguide8/drop-down-button.html
+    - /refguide8/link-button.html
+    - /refguide8/sign-out-button.html
 ---
 
 

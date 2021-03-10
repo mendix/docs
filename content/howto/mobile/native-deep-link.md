@@ -176,7 +176,7 @@ Now your app is ready to use links, so you will set up the additional path and q
 
 ### 4.1 Native Deep Link Nanoflow Actions 
 
-Now you have to handle the incoming URL in your Mendix application. To do this, you will use the Nanoflow Actions **Register Deep Link** and **Parse Url To Object** found in the [Native Mobile Resources](/appstore/modules/native-mobile-resources) module. This module is automatically included in your app if it began as an up-to-date Starter App. If you do not see these actions available in your app, please update the module through the App Store.
+Now you have to handle the incoming URL in your Mendix application. To do this, you will use the Nanoflow Actions **Register Deep Link** and **Parse Url To Object** found in the [Native Mobile Resources](/appstore/modules/native-mobile-resources) module. This module is automatically included in your app if it began as an up-to-date Starter App. If you do not see these actions available in your app, please update the module through the Marketplace.
 
 #### 4.1.1 Registering Deep Link
 
@@ -228,7 +228,7 @@ Now that the **Native Deep Link** nanoflow actions are available in Studio Pro, 
    
 	This nanoflow will be called every time the app is opened using a URL.
 
-1. To parse the URL into an object, you will use a non-persistent entity named **DeepLinkParameter** from the **NativeMobileResources** module in the next step. For now, go to **NativeMobileResources** > **Domain Model** and examine this entity. If you use query strings or more, you can copy this entity to your own module. The attributes are all optional and you should only add the attributes your implementation requires. Besides the standard list of possible URL parts, you can also add the query string's keys (for example `?name=Jhon&title=sir`). The attributes are not case sensitive. You can add attributes for path segments of the URL which will be split into `Path0` , `Path1`, and more:
+1. To parse the URL into an object, you will use a non-persistable entity named **DeepLinkParameter** from the **NativeMobileResources** module in the next step. For now, go to **NativeMobileResources** > **Domain Model** and examine this entity. If you use query strings or more, you can copy this entity to your own module. The attributes are all optional and you should only add the attributes your implementation requires. Besides the standard list of possible URL parts, you can also add the query string's keys (for example `?name=Jhon&title=sir`). The attributes are not case sensitive. You can add attributes for path segments of the URL which will be split into `Path0` , `Path1`, and more:
 
     ![parameter entity](attachments/native-deep-link/entity-parameter.png)
 
@@ -239,7 +239,7 @@ Next you will implement the deep link handler nanoflow **DL_ShowUrlDetails** so 
 1. Add a **Parse URL to Object** activity to your nanoflow. Double-click it and configure it like this:
 
 	![parse url](attachments/native-deep-link/parse-url.png)
-   
+
 1. Add a **Show message** activity to the right of your **Parse URL to Object** activity.
 1. Double-click the **Show message** activity.
 1. In **Template** write *Your deep link callback URL {1} host = {2}*.

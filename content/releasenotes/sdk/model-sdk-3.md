@@ -60,7 +60,7 @@ Note: impact = low means "some code might work now".
 
 Note: impact = low means "some code might work now".
 
-Add "deleting model units": You do this by using `splice` on the container of a model unit; e.g.:
+Add "deleting model units": You do this by using `splice` on the container of a model unit; for example,:
 
 ```
 const deleteIndex = page.container.documents.indexOf(page);

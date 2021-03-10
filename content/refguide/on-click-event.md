@@ -3,6 +3,9 @@ title: "On Click Event & Events Section"
 parent: "pages"
 menu_order: 130
 tags: ["studio pro", "events section", "properties", "widget", "on click", "action", "on click event"]
+aliases:
+    - /refguide/opening-pages.html
+    - /refguide/starting-microflows.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -87,7 +90,7 @@ The **Call a microflow** event executes the specified microflow.
 
 {{%alert type="info" %}}
 
-When setting **Call a microflow** as an action for the **On change**, **On enter**, or **On leave** event of a widget, note that microflows require some time to complete. Any changes to the current form made in the meantime (e.g. changing values in input widgets) will be overwritten by the results of the microflow.
+When setting **Call a microflow** as an action for the **On change**, **On enter**, or **On leave** event of a widget, note that microflows require some time to complete. Any changes to the current form made in the meantime (for example, changing values in input widgets) will be overwritten by the results of the microflow.
 Therefore, it is not recommended to change entities/attributes on the current page in a microflow triggered by an **On change**, **On enter**, or **On leave** event.
 
 {{%/alert %}}

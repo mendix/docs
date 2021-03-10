@@ -32,7 +32,7 @@ First, open the "Publish for Mobile App Stores" page in the Mendix Developer Por
 
     You are shown the "Publish App for Mobile App Stores" page. Here, you need to set up some options for your hybrid mobile app:
 5. Use the **Edit** button on the **App Info** tab to set up the correct settings for your app:
-    * Fill in the name that your app will have in the App Stores and on the device
+    * Fill in the name that your app will have in the app stores and on the device
     * Set the unique "App Identifier" for your app, (for example, "com.example.{YourAppName}")
 
     Both the name and the app identifier should correspond to the ones you have set up in your Apple certificate.

@@ -2,7 +2,7 @@
 title: "Data Hub Administration"
 category: "General Info"
 menu_order: 20
-description: "This guide describes how to assign the Mendix Data Hub Roles as a Data Hub Admin."
+description: "Describes the Mendix Admin functions for Data Hub Admin and curators."
 tags: ["data hub", "Data Hub Admin", "curator", "custom owner", "administration"]
 ---
 

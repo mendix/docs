@@ -226,8 +226,7 @@ By default, when an asset is registered in the Data Hub catalog, it is set to **
 When the **Discoverable** setting is turned off, it will only be visible to the owners of the service and curators. All other users of Data Hub (also through the Data Hub integrations in Studio Pro and Studio) will not be able to see an asset whose discvorabilty is turned off.
 
 {{% alert type="info" %}}
-When a data source is set to non-**Discoverable**, neither the data source nor the datasets that are exposed in the service can be found by other users (except for curators who can see all assets). However, there may be instances of the same datasets, from the same apps, being available through other services that are also published in the Data Hub Catalog.
-{{% /alert %}}
+When a data source is set to non-**Discoverable**, the data source, and the datasets that are exposed cannot be found by other users (except for owners and curators). However, there may be instances of the same datasets in the Catalog, from the same apps, that are available through other services that are also published in the Data Hub Catalog. {{% /alert %}}
 
 To change the discoverability of a service, follow these steps:
 
@@ -243,7 +242,7 @@ To change the discoverability of a service, follow these steps:
 
 ### 5.2 Validated {#validated}
 
-The **Validated** value can be assigned to a data source. When it is turned on, by clicking the **Validated** toggle, this will be indicated in the asset details screen and also in the search results pane for the service. 
+The **Validated** value can be assigned to a data source by owners and curators. When it is turned on, by clicking the **Validated** toggle, this is indicated in the data source details screen and also in the search results pane for the service. 
 
 ![validated](attachments/curate/curate-validated.png)
 

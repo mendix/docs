@@ -226,6 +226,8 @@ When the **Discoverable** setting is turned off, it will only be visible to the 
 {{% alert type="info" %}}
 When a data source is set to non-**Discoverable**, the data source, and the datasets that are exposed cannot be found by other users (except by owners and curators). However, there may be instances of the same datasets in the Catalog, from the same apps, that are available through other services that are also published in the Data Hub Catalog. {{% /alert %}}
 
+{{% alert type="info" %}}To enable users of Mendix Studio and Studio Pro (and any Data Hub API clients) to consume datasets from registered data sources, owners must ensure that Discoverability is turned on. Data sources that are set to **not Discoverable** in the Catalog will not be included in the search results for *any* user for these clients. {{% /alert %}}
+
 To change the discoverability of a service, follow these steps:
 
 1. In the Data Hub Catalog, select the service to display the **Search Details**.

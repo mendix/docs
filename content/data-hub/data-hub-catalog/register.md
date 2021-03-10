@@ -99,19 +99,14 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 	* **Entity** – the name and module of the entity
 		* **Select** – click to display list of entities available in the module and select another entity to expose
 		* **Show** – click to see the entity in the domain model
-
-	* **Exposed attributes and associations** – click **select** to view and select the attributes and associations to expose for this entity
-
+* **Exposed attributes and associations** – click **select** to view and select the attributes and associations to expose for this entity
 	* **Exposed entity name** – you can customize the name of the entity in the OData service
+* **Exposed set name** – the name of the dataset associated with the entity that is exposed
 
-	* **Exposed set name** – the name of the dataset associated with the entity that is exposed
-	{{% alert type="info" %}}
-	 The **Exposed set name** will be shown in the Data Hub Catalog for the registered service as the [Datasource](/data-hub/data-hub-catalog/search#search-details) for the exposed **Entity**. {{% /alert %}}
+	{{% alert type="info" %}} The **Exposed set name** will be shown in the Data Hub Catalog for the registered service as the [Datasource](/data-hub/data-hub-catalog/search#search-details) for the exposed **Entity**. {{% /alert %}}
 
 	* **Example of location** – the location of the dataset for the entity
-
 	* **Use paging** – the maximum number of data objects that are retrieved in a single call (with a link to the next set)
-   
 	* **Public documentation** tab – a summary and a description of the entity can be added here
 
 	For further details, see [Published OData Resource](/refguide/published-odata-resource) in the *Studio Pro Guide*. 

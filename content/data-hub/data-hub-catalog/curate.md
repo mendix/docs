@@ -8,12 +8,12 @@ tags: ["data hub", "data hub catalog", "curate", "description", "services", "tag
 
 ## 1 Introduction
 
-Owners of data assets, curators and the Data Hub Admin can curate registered assets. Curation in Data Hub is the process of enriching the metadata and providing further information about the data sources, datasets and exposed attributes. This includes adding custom icons and specifying Catalog descriptions and tags to supplement the registered metadata, and further categorize the assets and the data they connect to. Curate functions in Data Hub include setting the [Discoverability](#discoverability) of registered assets, assigning a [Validated](#validated) tag and specifying the [Business and Technical](#customowner) owners. 
+Owners of data assets, curators and the Data Hub Admin can curate registered assets. Curation in Data Hub is the process of enriching the metadata and providing further information about the data sources, datasets and exposed attributes. This includes adding custom icons and specifying Catalog descriptions and tags to supplement the registered metadata, and further categorize the assets and the data they connect to. Curate functions in Data Hub include setting the [Discoverability](#discoverability) of data sources, indicating that the datasource is [Validated](#validated) and specifying the [Business and Technical](#customowner) owners. 
 
 Users who can curate assets in Data Hub Catalog are as follows: 
 
-* Owners of a registered service – can curate their own services and find those that are set to non-**Discoverable**
-* [Data Hub Curators](../index#curator) and [Data Hub Admins](../index#admin) – can curate and find all registered assets, discoverable and non-discoverable
+* Owners of a registered service – can curate their own services which includes those that have been set to non-**Discoverable**
+* [Data Hub Curators](../index#curator) and [Data Hub Admins](../index#admin) – can curate and find all registered assets in the Catalog, discoverable and non-discoverable
 
 Owners and Curators can also get an overview of the registered assets they own and curate from the [Curate](#curatelist) tab of Data Hub.
 
@@ -76,7 +76,7 @@ You can change the owners of the app and add a custom icon for the application f
 By default, the **Technical Owner** for a registered asset is the user who registered the data source when registration is done through the deployment pipeline in Studio Pro or specified during manual registration or using the Data Hub API. These owners can be changed by curating the application details. The **Technical** and **Business Owners** are displayed as a link in the asset **Metadata** pane so that users can contact them. 
 
 {{% alert type="warning" %}}
-If you as a **Technical Owner** curate the asset and change the name, then you will no longer have curation rights to the asset once you save the changes. If the **Discoverability** is turned off for the asset, then you will also not be able to find the asset in the Catalog.
+If you as a **Technical Owner** curate the asset and change the technical owner to a different user, then you will no longer have curation rights to the asset once you save the changes. If the **Discoverability** is turned off for the asset, then you will also not be able to find the asset in the Catalog.
 {{% /alert %}}
 
 {{% alert type="info" %}}
@@ -223,7 +223,7 @@ Add tags to categorize a registered service and provide additional means for fin
 
 By default, when an asset is registered in the Data Hub catalog, it is set to **Discoverable**, which means that all users can find, consume, and see details of it. 
 
-When the **Discoverable** setting is turned off, it will only be visible to the owners of the service and curators and not be visible to other users of the Data Hub. This means that it cannot be found, either in the Data Hub Catalog or by users of the Data Hub integrations in Studio Pro and Studio.
+When the **Discoverable** setting is turned off, it will only be visible to the owners of the service and curators. All other users of Data Hub (also through the Data Hub integrations in Studio Pro and Studio) will not be able to see an asset whose discvorabilty is turned off.
 
 {{% alert type="info" %}}
 When a data source is set to non-**Discoverable**, neither the data source nor the datasets that are exposed in the service can be found by other users (except for curators who can see all assets). However, there may be instances of the same datasets, from the same apps, being available through other services that are also published in the Data Hub Catalog.

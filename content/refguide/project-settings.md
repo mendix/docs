@@ -285,7 +285,19 @@ Switching from a ZIP file to a UI resources package is straightforward:
 
 ### 7.1 User Entity
 
-**User entity** defines the entity which the user targeting is based on. You can use the attributes of this entity in an XPath. 
+**User entity** defines the entity which is used in [assigning a user task](user-task#user-assignment). If you assign a user task using an XPath, you can use attributes of this entity. If you are using a microflow, the entity defines the return type the microflows expects. For more information, see the [User Task Assignment](user-task#user-assignment) section in *User Task*.
+
+## 7.2 Execution
+
+Allows you to set a maximum number of workflows/user tasks that can be executed simultaneously.
+
+### 7.2.1 Parallel Workflow Executions
+
+Defines the maximum number of workflows that can be executed simultaneously. The limit is 40. 
+
+### 7.2.2 Parallel Task Executions
+
+Defines the maximum number of user tasks that can be executed simultaneously. The limit is 40.
 
 ## 8 Miscellaneous Tab {#miscellaneous}
 

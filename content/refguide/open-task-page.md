@@ -1,5 +1,5 @@
 ---
-title: "Open User Task"
+title: "Open Task Page"
 parent: "workflow-activities"
 menu_order: 20
 tags: ["studio pro", "user task", "workflow"]
@@ -11,17 +11,19 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **Open user task** activity can be used to open a user task page defined in the user task properties. 
+The **Open task page** activity can be used to open a user task page defined in the user task properties. 
 
-![Open User Task](attachments/open-user-task/open-user-task.jpg)
+![Open Task Page](attachments/open-user-task/open-task-page.jpg)
 
 ## 2 Properties
 
-There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
+An example of complete task properties is represented in the image below:
 
-![Open User Task Properties](attachments/open-user-task/open-user-task=properties.jpg)
+![Open Task Page Properties](attachments/open-workflow-page/open-workflow-page-properties.jpg)
 
-The **Open user task** properties pane consists of the following sections:
+There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
+
+The **Open task page** properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)

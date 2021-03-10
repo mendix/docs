@@ -5,13 +5,13 @@ menu_order: 20
 tags: ["workflow", "workflows", "Studio Pro"]
 ---
 
-{{% alert type="info" %}}
+{{% alert type="warning" %}}
 This functionality is in Beta. For more information on Beta products, see [Mendix Beta Features](/releasenotes/beta-features/).
 {{% /alert %}}
 
 ## 1 Introduction
 
-Workflow is a visual language in Mendix Studios that allows you to build extendable processes. It is fully integrated with other visual languages, such as the microflow editor and page editor. 
+Workflow is a visual language in Mendix Studio and Studio Pro that allows you to build extendable processes. It is fully integrated with other visual languages, such as the microflow editor and page editor. 
 
 ## 2 Workflow Elements
 
@@ -29,14 +29,19 @@ The elements of this category are described in the table below:
 
 | Graphic                                                     | Element                           | Description                                                  |
 | ----------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------ |
+| ![Start Activity](attachments/workflows/start-event.png)    | Start activity                    | The starting point of a workflow. Workflows are triggered either by the [Call workflow](on-click-event#call-workflow) on-click event on pages or by the [Workflow call](workflow-call) action in microflows. <br />Click the start event to open [workflow properties](workflow-properties). |
 | ![Decision](attachments/workflows/decision.png)             | [Decision](decision-in-workflows) | Makes a choice based on a condition and follows one and only one of the outgoing paths. |
 | ![Parallel Split](attachments/workflows/parallel-split.png) | [Parallel split](parallel-split)  | Adds two parallel paths to your workflow.                    |
 | ![Jump Activity](attachments/workflows/jump.png)            | [Jump](jump-activity)             | Allows you to jump to other activities in the workflow.      |
 | ![End Activity](attachments/workflows/end-event.png)        | End activity                      | Ends the path of the workflow                                |
 
+{{% alert type="info" %}}
+You can add customized activities to this section if you use the **Expose as a workflow action** setting in microflows. For more information see the [Expose as Workflow Action](microflow#expose-as-workflow-action) section in *Microflow Properties*.
+{{% /alert %}}
+
 ### 2.2 User Tasks {#user-tasks}
 
-[User task](user-task) – a central element in a workflow that allows you to assign a task to a certain user using filters or microflows. 
+[User task](user-task) – a central element in a workflow that allows you to assign a task to a certain user or a group of users using filters or microflows. 
 
 ![User Task](attachments/workflows/user-task.png)
 
@@ -47,8 +52,6 @@ The elements of this category are described in the table below:
 ![Call Microflow](attachments/workflows/call-microflow.png)
 
 ## 3 Performing Basic Functions
-
-{{% todo %}}[Do we need to describe actions that are so simple or shall I leave them for Studio only?]{{% /todo %}}
 
 You can perform the following basic functions when working on workflows:
 
@@ -115,12 +118,12 @@ You can find the following workflow-related entities in the System module:
 
 * **WorkflowDefinition** – Represents your workflow in the database. It contains two attributes, where **Name** and **Title** are **Name** and **Title** properties of the workflow and **Obsolete** is a Boolean that is marked as true when you delete your workflow. In this case, the workflow still stays in the database (and you will still be able to create reports with it), but Mendix marks that it does not exist anymore. For more information on properties, see [Workflow Properties](workflow-properties). 
 * **WorkflowTaskDefinition** – Represents your [user tasks](user-task) and [system activities](call-microflow) in the database. It contains two attributes, where **Name** is a **Name** property of the user task or a system activity, and **Obsolete** is a Boolean that is marked as true when you delete a user task/system activity from your workflow. They still stay in the database (and you will still be able to create reports with them), but Mendix marks that they do not exist anymore. 
-* **WorkflowVersion** – This System entity is used for versioning and for the internal administration in the Runtime. When you add an activity and run your workflow, a new version will be created.
 * **WorkflowInstance** – A representation of a running workflow, so every time when the new workflow is started, the Runtime creates a new instance.
 * **WorkflowTaskInstance** –  A representation of a running user task or a system activity, so every time when the new user task/system activity is started, the Runtime creates a new instance.
 * **WorkflowUserTask** - a specialization of **WorkflowTaskInstance**. This entity is created when the Runtime executes the user task and an end-user chooses an action (for example, clicks an **Approve** button to approve a request). This entity can be used for workflow overview pages and in an application logic.
 * **WorkflowSystemTask** – a specialization of **WorkflowTaskInstance**. This entity is created when the Runtime executes the system activity (**Call microflow**) and is used to show that the microflow has been executed. 
 * **WorkflowContext** – a basic entity for the objects that will be used as context for the workflow. The specialization of this entity is used as a **Workflow entity** in its properties. For more information on properties, see [Workflow Properties](workflow-properties). 
+* **WorkflowVersion** – This System entity is used for versioning and for the internal administration in the Runtime. When you add an activity and run your workflow, a new version will be created.
 
 ## 5 Workflow Variables
 
@@ -128,7 +131,7 @@ Workflows have dedicated variables that can be used in an XPath and Expressions 
 
 The list of variables is described below: 
 
-* `$workflowData` – an instance of a Workflow entity (usually a specialization of **System.WorkflowContext**)
+* `$workflowData` – an instance of the workflow entity that is configured for a specific workflow (usually a specialization of **System.WorkflowContext**)
 * `$workflow` – an instance of a currently running workflow (**System.WorkflowInstance**)
 
 For more information on workflow-related entities in the System module, see the [Workflow Entities in the System Module](#workflow-entities) section above. 
@@ -137,14 +140,19 @@ For example, you can use these variables as parameters in the **Task name** and 
 
 ## 6 Workflow-Specific Activities in Microflows
 
-{{% todo %}}[Do we need this info? Might be better when searching for the relevant info but we didn't include such info in other visual editor documents]{{% /todo %}}
-
 You can add workflow-related activities to your microflows. For more information on these activities, see [Workflow Activities](workflow-activities). 
 
-## 7 Workflow-Specific On-Click Events
+## 7 Workflow-Specific On-Click Events on Pages
 
 You can trigger workflows or user tasks from pages via specific on-click events configured on widgets. For more details, see [On Click Event & Events Section](on-click-event).
 
-## 8 Read More
+## 8 Workflow Commons Module
+
+The **Workflow Commons** module is a workflow specific module that has preconfigured page templates, pages, dashboards, etc. It can save you a lot of time during development. You can either download it from the Marketplace or use the **Approval app** template in the Developer Portal that already contains the **Workflows Commons**. 
+
+For more information on how to configure the **Workflow Commons** in an existing app, see [Using Workflow Commons in an Existing App](workflow-in-existing-app). 
+
+## 9 Read More
 
 * [How to Configure a Workflow for the Employee Onboarding Process](/howto/logic-business-rules/workflow-how-to-configure)
+* [Using Workflow Commons in an Existing App](workflow-in-existing-app)

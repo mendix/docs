@@ -11,10 +11,6 @@ This document describes workflow properties. For details on what workflows are f
 
 ## 2 Workflow Properties
 
-An example of workflow properties is represented in the image below:
-
-![Workflow Properties](attachments/workflow-properties/workflow-properties.png)
-
 Workflow properties consist of the following sections:
 
 * [Common](#common)
@@ -22,7 +18,8 @@ Workflow properties consist of the following sections:
 * [Display information](#display-info)
 * [Due date](#due-date)
 * [General](#general)
-* [Workflow page](#workflow-page)
+* [Security](#security)
+* [Admin page](#admin-page)
 
 ### 2.1 Common Section {#common}
 
@@ -36,27 +33,19 @@ You cannot change the **Name** of the workflow but you can change the [Caption](
 
 **Documentation** allows you to describe your workflow to make it easier for people to use and modify it.
 
-#### 2.1.3 Allowed Roles
-
-**Allowed roles** defines which [module role](module-security#module-role) the user must have to be able to execute the workflow.
-
-{{% alert type="warning" %}}
-These roles are only checked when the workflow is executed from the client. 
-{{% /alert %}}
-
-For more information, see [Module Security](module-security).
-
 ### 2.2 Data Section {#data}
 
 **Workflow entity** is an entity that is used as a workflow context. It should be a [specialization](generalization-and-association) of the **Workflow Context** entity from the **System** module. For more information on workflow-related entities in the System module, see the the [Workflow Entities in the System Module](workflows#workflow-entities) section in *Workflows*. 
 
-We recommend to keep the workflow entity "clean", meaning, to only have attributes on it that are important for the current instance of your workflow and add other data via associations.
+We recommend to keep the workflow entity "clean", meaning, to only have attributes on it that are important for the current instance of your workflow and add other data via associations:
+
+![Domain Model Example](attachments/workflow-properties/domain-model-example.png)
 
 ### 2.3 Display Information Section {#display-info}
 
 #### 2.3.1 Workflow Name
 
-**Workflow name** is stored in the System module on the **Workflow** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Workflow name** is used in page templates. 
+**Workflow name** is stored in the System module on the **Workflow** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Workflow name** is used on preconfigured pages: the Admin Center and Workflow Admin page. 
 
 The **Workflow name** can contain parameters that are written between braces, e.g. {1}.
 
@@ -70,7 +59,9 @@ The **Workflow description** can contain parameters that are written between bra
 
 #### 2.3.3 Parameters {#parameters}
 
-Parameters are attributes the value of which will be displayed. To view **Parameters**, click the ellipsis icon next to the **Workflow name** or **Workflow description** in properties depending on where you would like to display these parameters. 
+Parameters are attributes the value of which will be displayed. For example, you can display the name of the new employee who is being onboarded using the **FullName**  parameter.
+
+To view **Parameters**, click the ellipsis icon next to the **Workflow name** or **Workflow description** in properties depending on where you would like to display these parameters. 
 
 Parameters have the following settings:
 
@@ -106,15 +97,27 @@ In addition to adding new parameters, you can perform the following actions on p
 
 ### 2.4 Due Date Section {#due-date}
 
-**Due in** is stored in the System module on the **Workflow** entity as an attribute and its data can be dynamically displayed in the running app. For example, you can use it to set a deadline for the workflow and display it in your app. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the workflow. If you are using the **Workflow Commons** module, **Due in** is used in page templates. 
+**Due by** is stored in the System module on the **Workflow** entity as an attribute and its data can be dynamically displayed in the running app. For example, you can use it to set a deadline for the workflow and display it in your app. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the workflow. If you are using the **Workflow Commons** module, **Due by** is used in page templates. 
 
 ### 2.5 General Section {#general}
 
 **Caption** defines a title of the workflow. You cannot change the [Name](#name) of the workflow but you can change the **Caption**.
 
-### 2.6 Workflow Page Section {#workflow-page}
+### 2.6 Security Section {#security}
 
-**Workflow page** is an overview page where the allowed roles can track the progress of the workflow and its tasks. 
+**Allowed roles** defines which [module role](module-security#module-role) the user must have to be able to execute the workflow.
+
+{{% alert type="warning" %}}
+These roles are only checked when the workflow is executed from the client. 
+{{% /alert %}}
+
+For more information, see [Module Security](module-security).
+
+### 2.7 Admin Page Section {#admin-page} 
+
+**Override admin page** is an optional page used for displaying an instance of the workflow to the workflow admin. This overrides a generic page used to display any workflow instances in the app, for example, when you have a **Show workflow page** set as an [on-click event](on-click-event#show-workflow-page) or as a [microflow action](show-workflow-page) and would like to override the page selected for this event/action. 
+
+If you generate the page using the templates in **Workflows Commons** module, these templates contain necessary data containers and associated context entity.
 
 ## 3 Read More
 

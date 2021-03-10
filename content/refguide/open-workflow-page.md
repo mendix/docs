@@ -11,19 +11,19 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-{{% todo %}}[Name of this activity will change.]{{% /todo %}}
-
-The **Open workflow page** activity can be used to open a workflow overview page defined in the workflow properties. 
+The **Open workflow page** activity can be used to open a workflow overview page. 
 
 ![Open Workflow Page](attachments/open-workflow-page/open-workflow-page.jpg)
 
 ## 2 Properties
 
-There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
+An example of create object properties is represented in the image below:
 
-![Open Workflow Page Properties](attachments/open-workflow-page/open-workflow-page-properties.jpg)
+![Open Workflow Page](attachments/open-workflow-page/open-workflow-page-properties.jpg)
 
-The **Open user task** properties pane consists of the following sections:
+There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
+
+The **Open workflow page** properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)
@@ -38,7 +38,7 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.1 Workflow
 
-A workflow of which the page you want to open.
+A variable of the workflow instance. {{% todo %}}[Is this correct?]{{% /todo %}}
 
 ## 4 Common Section {#common}
 

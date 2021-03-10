@@ -7,28 +7,26 @@ tags: ["workflow", "workflows", "user task", "task", "Studio Pro"]
 
 ## 1 Introduction
 
-User task allows you to assign a workflow task to a certain user. 
+User task allows you to assign a workflow task to a certain user or a group of users. 
 
-For example, you can add filters and assign a task to a user with the Manager role:
+For example, you can add filters and assign a task to users with the Manager role:
 
 ![User Task Example](attachments/user-task/user-task.jpg)
 
-If you are using the **Workflow Commons** module, when the workflow reaches this user task, the task will appear in the user's inbox:
+When the workflow reaches the user task activity, the task is created and will be displayed in the Task inbox if you are using the **Workflow Commons** module:
 
 ![Task Inbox](attachments/user-task/task-inbox.jpg)
 
 ## 2 Properties
 
-An example of user task properties is represented in the image below:
-
-![User Task Properties](attachments/user-task/user-task-properties.jpg)
-
 User task properties consist of the following sections:
 
 * [Display information](#display-info)
 * [Due date](#due-date)
+* [Events](#events)
 * [General](#general)
 * [Outcomes](#outcomes)
+* [Security](#security)
 * [Task page](#task-page)
 * [User assignment](#user-assignment)
 
@@ -36,7 +34,7 @@ User task properties consist of the following sections:
 
 #### 2.1.1 Task Name
 
-**Task name** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Task name** is used in page templates. 
+**Task name** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Task name** is used in page templates and on preconfigured pages to identify the task. 
 
 For more information on using parameters, see the [Parameters](#parameters) section below.
 
@@ -48,7 +46,9 @@ The **Task description** can contain parameters that are written between braces,
 
 #### 2.1.3 Parameters {#parameters}
 
-Parameters are attributes the value of which will be displayed. To view **Parameters**, click the ellipsis icon next to the **Task name** or **Task description** in properties depending on where you would like to display these parameters. 
+Parameters are attributes the value of which will be displayed. For example, you can display when the task is due using the **DueDate** parameter.
+
+To view **Parameters**, click the ellipsis icon next to the **Task name** or **Task description** in properties depending on where you would like to display these parameters. 
 
 Parameters have the following settings:
 
@@ -85,38 +85,60 @@ In addition to adding new parameters, you can perform the following actions on p
 
 ### 2.2 Due Date Section {#due-date}
 
-**Due in** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. For example, you can use it to set a deadline for the user task and display it in your app. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the user task. If you are using the **Workflow Commons** module, **Due in** is used in page templates. 
+**Due by** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. For example, you can use it to set a deadline for the user task and display it in your app. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the user task. If you are using the **Workflow Commons** module, **Due by** is used in page templates and preconfigured dashboards. 
 
-### 2.3 General Section {#general}
+### 2.3 Events Section {#events}
+
+**On Created** event allows you to select a microflow that is executed immediately after users have been determined for a newly created task instance. You can use this setting for a microflow that will send an email notification about the user task to the assigned users.
+
+### 2.4 General Section {#general}
+
+#### 2.4.1 Name
+
+**Name** is the internal name of the user task. When referring to the user task in the app project you will use this name. It must be unique within the workflow, but you can have two user tasks with the same name in different workflows. {{% todo %}}[Is this correct?]{{% /todo %}}
+
+#### 2.4.2 Caption
 
 **Caption** defines a title of the user task. 
 
-### 2.4 Outcomes Section {#outcomes}
+### 2.5 Outcomes Section {#outcomes}
 
-The outcomes property allows you to create new outcomes for the user task. These outcomes can be referred to by other elements, such as a button. For example, you have a process when you need to approve or reject a request. One button on a [task page](#task-page) can refer to the **Approve** outcome of the user task, while another one can use the **Reject** outcome. 
+The outcomes property allows you to create new outcomes for the user task. Outcomes are translated into different outgoing paths of the user task and can be referred to by other elements, such as a button. For example, you have a process when you need to approve or reject a request. One button on a [task page](#task-page) can refer to the **Approve** outcome of the user task, while another one can use the **Reject** outcome. 
 
-### 2.5 Task Page Section {#task-page}
+### 2.6 Security Section {#security}
 
-**Task page** is an overview page where the allowed roles can track the progress of the use tasks and view its details, such as its comments or attachments. When you create a page, you can use a user task-specific page templates. 
+**Allowed roles** defines which [module role](module-security#module-role) the user must have to be able to execute the user task. 
 
-### 2.6 User Assignment Section {#user-assignment}
+{{% alert type="info" %}}
 
-#### 2.6.1 Assign User Task Using {#assign-user-task}
+Only assigned users, which are defined in the [User Assignment Section](#user-assignment) below, will be able to see the user task and interact with it.
 
-**Assign user task using** allows you to manage what users will the task be assigned to. You can filter users using XPath or implement a more complicated logic and add several checks using a microflow. 
+{{% /alert %}}
+
+### 2.7 Task Page Section {#task-page}
+
+**Task page** is the page that an assigned user will use to inspect their task and complete it. You can also allow users to add comments or attachments on this page. 
+
+If you generate the page using the templates in the **Workflows Commons** module, these templates contain necessary data containers and associated context entity.
+
+### 2.8 User Assignment Section {#user-assignment}
+
+#### 2.8.1 Assign User Task Using {#assign-user-task}
+
+**Assign user task using** allows you to manage what users will the task be assigned to. You can filter users using XPath or implement more flexible logic and add several checks using a microflow. 
 
 Possible options of this property are described in the table below:
 
 | Option    | Description                                                  |
 | --------- | ------------------------------------------------------------ |
-| XPath     | Allows you to filter users who should be assigned the user task. For example, you can assign a certain task only to users with the Manager user role. |
-| Microflow | Allows you to assign the user task to certain users. Using microflow you can check, for example, which users have the right to approve user tasks and are currently not on vacation and assign the task only to users who passed the check. |
+| XPath     | Allows you to filter users who should be assigned the user task. For example, you can assign a certain task only to users with the Manager user role. You can use attributes of the of the **User Entity** set in [Project Settings](project-settings#workflows). |
+| Microflow | Allows you to assign the user task to certain users. Using microflow you can check, for example, which users have the right to approve user tasks and are currently not on vacation and assign the task only to users who passed the check.<br />The return type of the microflow should be the **User Entity** set in [Project Settings](project-settings#workflows). |
 
-#### 2.6.2 XPath Constraint
+#### 2.8.2 XPath Constraint
 
 Specifies the expression used to assign the user task. This option is displayed only when the [Assign user task using](#assign-user-task) is set to **XPath**.   
 
-#### 2.6.3 Microflow
+#### 2.8.3 Microflow
 
 Specifies the microflow used to assign the user task. This option is displayed only when the [Assign user task using](#assign-user-task) is set to **Microflow**.   
 

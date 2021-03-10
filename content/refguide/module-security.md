@@ -55,7 +55,7 @@ Note that these roles are only checked when the microflow is executed from the c
 
 ## 4 Workflow Access {#workflow-access}
 
-**Workflow access** defines which workflows can be accessed by users with a certain module role. 
+**Workflow access** defines which workflows can be triggered by users with a certain module role. 
 
 The **Workflow access** tab is displayed as a matrix showing microflows and modules roles:
 

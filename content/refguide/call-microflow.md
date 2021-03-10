@@ -7,15 +7,11 @@ tags: ["workflow", "workflows", "call microflow", "Studio Pro"]
 
 ## 1 Introduction
 
-**Call microflow** is used to call a selected [microflow](microflow). Arguments can be passed to the microflow and the result can be stored.
+**Call microflow** is used to call a selected [microflow](microflow). 
 
 ![Call Microflow Example](attachments/call-microflow/call-microflow-example.jpg)
 
 ## 2 Properties
-
-An example of **Call microflow** properties is represented in the image below:
-
-![Call Microflow Properties](attachments/call-microflow/call-microflow.jpg)
 
 Call microflow properties consist of the following sections:
 
@@ -25,7 +21,11 @@ Call microflow properties consist of the following sections:
 
 ### 2.1 General Section {#general}
 
-#### 2.1.1 Caption
+#### 2.1.1 Name
+
+**Name** is the internal name of the element. When referring to the element in the app project you will use this name. It must be unique within the workflow, but you can have two elements with the same name in different workflows. 
+
+#### 2.1.2 Caption
 
 The **Caption** describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand without needing to add annotations.
 
@@ -35,7 +35,7 @@ The microflow that is called by this element.
 
 ### 2.2 Outcomes Section {#outcomes}
 
-**Outcomes** depends on the return value of the microflow. For example, for the Boolean, you have **true** and **false** outcomes, and for the enumeration: an outcome per each enumeration value and an empty one when the value is unassigned.  
+**Outcomes** depends on the return type and values of the microflow. For example, when there is not return type, you have a single outcome; for the Boolean, you have **true** and **false** outcomes; and for the enumeration – an outcome per each enumeration value and an empty one when the value is unassigned. 
 
 ### 2.3 Parameters Section {#parameters}
 

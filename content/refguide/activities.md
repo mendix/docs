@@ -106,8 +106,8 @@ Workflow activities are used in relation to workflows and their user tasks.
 
 | Graphic | Name             | Description                                                  |
 | ------- | ---------------- | ------------------------------------------------------------ |
-|         | Call workflow    | Calls a workflow. Arguments can be passed to the workflow and the result can be stored in a variable. |
+|         | Call workflow    | Calls a workflow.                                            |
 |         | Open user task   | Opens a user task page specified in [user task properties](user-task). |
 |         | Open workflow    | Opens an overview page specified in [workflow properties](workflow-properties). |
-|         | Set task outcome | Sets which outcome the [user task](user-task) should follow. |
+|         | Set task outcome | Sets which outcome the [user task](user-task) should follow. For example, this activity can be used to complete a user task using a microflow with custom validations. |
 

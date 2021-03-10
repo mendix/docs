@@ -1,7 +1,7 @@
 ---
-title: "Set Task Outcome"
+title: "Complete Task"
 parent: "workflow-activities"
-menu_order: 50
+menu_order: 10
 tags: ["studio pro", "user task", "workflow", "task outcome", "complete task"]
 ---
 
@@ -11,17 +11,19 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **Set task outcome** activity can be used to define which outcome the [user task](user-task) should follow. 
+The **Complete task** activity can be used to define which outcome the [user task](user-task) should follow. 
 
-![Set Task Outcome](attachments/set-task-outcome/set-task-outcome.jpg)
+![Complete Task](attachments/set-task-outcome/complete-task.jpg)
 
 ## 2 Properties
 
-There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
+An example of complete task properties is represented in the image below:
 
-![Set User Task Outcome Properties](attachments/set-task-outcome/set-task-outcome-properties.jpg)
+![Complete Task Properties](attachments/set-task-outcome/complete-task-properties.jpg)
 
-The **Open user task** properties pane consists of the following sections:
+There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
+
+The **Complete task** properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)
@@ -34,7 +36,7 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Task
+### 3.1 User Task
 
 The user task entity available from the microflow parameters.
 
@@ -44,7 +46,7 @@ The user task for which you want to set an outcome.
 
 ### 3.3 Outcome
 
-Gives you a list of available outcomes for the selected user task. The user task will follow the selected outcome.
+Gives you a list of available outcomes for the selected user task. The user task will follow the selected outcome. If there is only one outcome available, the value is set to *Default* and is not editable.
 
 ## 4 Common Section {#common}
 

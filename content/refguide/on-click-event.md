@@ -35,7 +35,7 @@ The **On click** property specifies what [action](#actions) is executed when a u
 
 This property is only shown when **Call a microflow** or **Call a nanoflow** is selected as the on-click event. Selecting **Disabled during action** disables the button until the action is completed or failed.
 
-### 2.2 On Change{#on-change}
+### 2.2 On Change {#on-change}
 
 The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
@@ -267,17 +267,21 @@ The **Sign out** event signs the currently signed-in user out. When no user is s
 
 ### 3.13 Call Workflow {#call-workflow}
 
-The **Call workflow** event executes the specified workflow. 
+The **Call workflow** event triggers the specified workflow. 
+
+An element calling this event should be placed in a data container connected to the [workflow entity](workflow-properties#data) defined in the workflow properties. 
 
 The following properties are specific for this event:
 
 * **Workflow** – A [workflow](workflows) that should be executed.
 * **Close page** – Specifies whether the current page should be closed.
-* **Commit** – Specifies whether the object should be committed when running a workflow. 
+* **Commit** – Specifies whether the data container object should be committed when running a workflow. 
 
 ### 3.14 Open Workflow Page {#open-workflow-page}
 
-**Open workflow page** opens an overview page set for the **Workflow page** in [workflow properties](workflow-properties). An element calling this event should be placed in a data container connected to the **System.WorkflowInstance** entity. 
+**Open Workflow page** opens a workflow overview page. This page is typically used by a workflow administrator role to inspect status of a workflow instance and to manage the instance, e.g. abort a workflow if required.
+
+An element calling this event should be placed in a data container connected to the **System.WorkflowInstance** entity. 
 
 For more information on workflow-related entities in the System module, see the the [Workflow Entities in the System Module](workflows#workflow-entities) section in *Workflows*. 
 
@@ -291,6 +295,8 @@ For more information on workflow-related entities in the System module, see the 
 
 The **Complete task** event marks the specified user task in the workflow as completed.
 
+An element calling this event should be placed in a data container connected to the **System.WorkflowUserTask** entity. 
+
 The following properties are specific for this event:
 
 * **Workflow task** – The [user task](user-task) that should be marked as completed.
@@ -299,7 +305,7 @@ The following properties are specific for this event:
 
 * **Close page** – Specifies whether the current page should be closed.
 
-* **Commit** – Specifies whether the object should be committed when marking the task as completed.
+* **Commit** – Specifies whether the data container object should be committed when marking the task as completed.
 
 ## 4 Read More
 

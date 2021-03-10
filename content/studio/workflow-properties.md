@@ -15,14 +15,14 @@ Workflow properties consist of the following sections:
 
 * [General](#general)
 * [Data](#data)
-* [Workflow Page](#workflow-page)
 * [Display Information](#display-info)
 * [Permissions](#permissions)
 * [Due Date](#due-date)
+* [Admin Page](#admin-page)
 
 ### 2.1 General Section {#general}
 
-The **General** section contains information on the title and name of the workflow.
+The **General** section contains information on the title and name of the workflow. {{% todo %}}[Please update the screenshot below]{{% /todo %}}
 
 ![General Section](attachments/workflow-properties/general.jpg)
 
@@ -30,8 +30,8 @@ The **General** section properties are described in the table below:
 
 | Property | Description                                                  |
 | -------- | ------------------------------------------------------------ |
-| Title    | Defines a title of the workflow that you see at the top of the working area. |
-| Name     | The internal name of the workflow that must be unique. When referring to the workflow in the app project you will use this name. |
+| Caption  | Defines a title of the workflow that you see at the top of the working area. |
+| Name     | The internal name of the workflow that must be unique. When referring to the workflow in the app you will use this name. |
 
 ### 2.2 Data Section {#data}
 
@@ -40,12 +40,6 @@ The **Data** section contains information on what data context the workflow is u
 ![Data Section](attachments/workflow-properties/data.jpg)
 
 **Workflow entity** is an entity that is used as a workflow context. This entity should be of a workflow entity type. For more information, see the [Entities and Their Types](domain-models#entity-types) section in the *Domain Model*.
-
-### 2.3 Workflow Page Section {#workflow-page}
-
-**Workflow page** is an overview page where the allowed roles can track the progress of the workflow and its tasks. 
-
-![Workflow Page Section](attachments/workflow-properties/workflow-page.jpg)
 
 ### 2.3 Display Information Section {#display-info}
 
@@ -62,7 +56,7 @@ The **Display Information** section properties are described in the table below:
 
 ### 2.4 Permissions Section {#permissions}
 
-**Allowed roles** defines the [user role](settings-security#roles-and-permissions) that can execute the workflow.
+**Allowed roles** defines the [user role](settings-security#roles-and-permissions) that can trigger the workflow.
 
 ![Permissions Section](attachments/workflow-properties/permissions.jpg)
 
@@ -83,6 +77,12 @@ The **Due Date** section properties are described in the table below:
 | None       | No due date is set.                                          |
 | Duration   | You can set the deadline for the workflow with the **Due In** option, which indicates the number of hours, days, or weeks the workflow is due in. Possible values of the property are the following ones:<br /><ul><li>Hour(s)</li><li>Day(s)</li><li>Week(s)</li> </ul> |
 | Expression | You can set a due date for the workflow writing an expression. For example, to set a due date to tomorrow, you can use `addDays([%CurrentDateTime%], 1)`. |
+
+### 2.5 Admin Page Section {#admin-page}
+
+**Override Admin Page** is an optional page used for displaying all running workflows to the workflow admin. This overrides a generic page used to display any running workflow in the app, for example, when you have a **Show workflow page** set as an [on-click action](page-editor-widgets-events-section#show-workflow-page) or as a [microflow activity](microflows#microflow-workflow-activities) and would like to override the page selected for this event/activity. {{% todo %}}[Please update the screenshot below]{{% /todo %}}
+
+![Workflow Page Section](attachments/workflow-properties/workflow-page.jpg)
 
 ## 3 Read More
 

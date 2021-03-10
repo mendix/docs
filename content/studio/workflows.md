@@ -7,7 +7,7 @@ tags: ["workflow", "workflows", "Studio"]
 ---
 
 {{% alert type="warning" %}}
-This functionality is in Beta. For more information on Beta products, see  [Mendix Beta Features](/releasenotes/beta-features/).
+This functionality is in Beta. For more information on Beta products, see [Mendix Beta Features](/releasenotes/beta-features/).
 {{% /alert %}}
 
 ## 1 Introduction
@@ -18,15 +18,13 @@ To view the workflows of your app project in Studio, click the **Workflows** ico
 
 ![Workflow Icon](attachments/workflows/workflow-icon.jpg)
 
-Workflows is a visual way of expressing application logic. A workflow looks like a flow chart. On a new workflow a *start event* (a starting point of the workflow) and an *end event* (an endpoint of the workflow) are created by default. You can add various activities to a flow of a workflow that is called a *path*.
+Workflows is a visual way of expressing application logic. A workflow looks like a flow chart. On a new workflow a *start activity* (a starting point of the workflow) and an *end activity* (an endpoint of the workflow) are created by default. You can add various activities to a flow of a workflow that is called a *path*.
 
 ![Workflow Example](attachments/workflows/workflow-example.jpg)
 
 ## 2 Workflow App Template
 
-{{% todo %}}[Add information on the workflow-specific app template.]{{% /todo %}}
-
-You can use a workflow-specific app template **Approval App**. 
+You can use a workflow-specific app template **Approval App** that is a starting point for using workflows. You can configure an approval request form for end-users based on which the app is be created. It contains preconfigured elements, such as dashboards, admin pages, dashboards, and a workflow that you can afterwards customize even more. 
 
 ## 3 Performing Basic Functions
 
@@ -131,12 +129,13 @@ Elements in the **General** section help you control the workflow path, for exam
 
 ![General Section](attachments/workflows/general.jpg)
 
-{{% todo %}}[Retake the screenshot above.]{{% /todo %}}
+{{% todo %}}[Retake the screenshot above with Jump to activity.]{{% /todo %}}
 
 The elements of this section are described in the table below:
 
 | Element                                                      | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Start activity                                               | The starting point of a workflow. Workflows are triggered either by the [Call workflow](on-click-event#call-workflow) on-click event on pages or by the [Workflow call](workflow-call) action in microflows. <br />Click the start event to open [workflow properties](workflow-properties). |
 | [Decision](workflows-general-activities#decision)            | Makes a choice based on a condition and follows one and only one of the outgoing paths. |
 | [Jump activity](workflows-general-activities#jump)           | Allows you to jump to other activities in the workflow.      |
 | [Parallel split](workflows-general-activities#parallel-split) | Adds two parallel paths to your workflow.                    |

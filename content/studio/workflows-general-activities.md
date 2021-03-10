@@ -7,11 +7,11 @@ tags: ["workflow", "workflows", "decision", "parallel split", "end activity"]
 
 ## 1 Introduction
 
-**General** activities allow you to manage paths in your workflow. A **Decision** allows you to add a condition and the workflow will follow one of the paths depending on this condition. **Parallel Split** adds several parallel paths (processes) to the workflow, and the **End** activity ends a path. 
+**General** activities allow you to manage paths in your workflow. A **Decision** allows you to add a condition and the workflow will follow one of the paths depending on this condition. With the help of the **Jump** activity you can jump to another activity in the workflow. **Parallel Split** adds several parallel paths (processes) to the workflow, and the **End** activity ends a path. 
 
 ![General Activities](attachments/workflows/general.jpg)
 
-{{% todo %}}[Retake the screenshot above.]{{% /todo %}}
+{{% todo %}}[Retake the screenshot above with the Jump activity.]{{% /todo %}}
 
 ## 2 Decision {#decision}
 

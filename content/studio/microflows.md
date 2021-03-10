@@ -210,12 +210,12 @@ The **Workflow Activities** section contain activities that interact with workfl
 
 The **Workflow Activities** are described in the table below:
 
-| Activity            | Description                                                  |
-| ------------------- | ------------------------------------------------------------ |
-| Call Workflow       | The **Call Workflow** activity calls the selected workflow. You can use the variable, object, or list that the workflow returns. {{% todo %}}[Is this correct?]{{% /todo %}} |
-| Complete Task       | The **Complete Task** activity sets an outcome the specified [user task](workflows-user-task) should follow. When a user task has several outcomes, you can choose the one the user task will follow. For example, when end-users select that an employee is working from home, the user task will follow the dedicated path for it. |
-| Open User Task Page | The **Open User Task Page** activity opens a user task page specified in [user task properties](workflows-user-task). |
-| Open Workflow Page  | The **Open Workflow Page** activity opens an overview page specified in [workflow properties](workflow-properties). |
+| Activity           | Description                                                  |
+| ------------------ | ------------------------------------------------------------ |
+| Call Workflow      | The **Call Workflow** activity starts the selected workflow. |
+| Complete Task      | The **Complete Task** activity sets an outcome the specified [user task](workflows-user-task) should follow. When a user task has several outcomes, you can choose the one the user task will follow. For example, when end-users select that an employee is working from home, the user task will follow the dedicated path for it. |
+| Open  Task Page    | The **Open Task Page** activity opens a user task page specified in [user task properties](workflows-user-task). |
+| Open Workflow Page | The **Open Workflow Page** activity opens an overview page specified in [workflow properties](workflow-properties). |
 
 {{% todo %}}[Double-check the names of these activities.]{{% /todo %}}
 

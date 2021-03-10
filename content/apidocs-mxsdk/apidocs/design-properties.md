@@ -220,7 +220,7 @@ Example of a **Toggle** property that was renamed from a **Dropdown** option:
 ```js
 {
 	"name": "Styling 3",
-	"oldNames": "My Dropdown Property::Styling option 3",
+	"oldNames": ["My Dropdown Property::Styling option 3"],
 	"type: "Toggle",
 	"description": "Description of Styling 3 toggle property",
 	"class": "stylingClassThree"

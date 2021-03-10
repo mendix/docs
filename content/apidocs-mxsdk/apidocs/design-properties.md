@@ -227,7 +227,7 @@ Example of a **Toggle** property that was renamed from a **Dropdown** option:
 }
 ```
 
-The design property above is a replacement for the removed option **Styling option 3** of **My Dropdown Property** and will be set to **Yes** if that option was selected.
+The design property above is a replacement for the removed option **Styling option 3** of **My Dropdown Property** and will be set to **Yes** if that option was selected. The value of **My Dropdown Property** will then be set to empty (if that design property still exists).
 
 ## 7 Read More
 

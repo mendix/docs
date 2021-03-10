@@ -49,8 +49,8 @@ On the **Curation bar**, the following details are displayed:
 * Information about the role of the current user: **Owner** or **Curator**
 * When a data source is selected in the **Search Results**: 
 	* **Edit Metadata** – edit the description of the data source and datasets, add tags or specify business and technical owners and add change the application icon
-	* **Discoverable/Validated** – set the service as **Discoverable** and **Validate** from the drop-down menu. 
-		* **Discoverable** defines whether the service can be found (and consumed) by users of the Data Hub; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) can find the registered data source. 
+	* **Discoverable/Validated** – set the the **Discoverable** and **Validated** settings for the data source from the drop-down menu. 
+		* **Discoverable** defines whether the service is visible and can be found (and consumed) by users of the Data Hub; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source. 
 		* **Validate** indicates that the data source and dataset have been validated.
 * When a dataset is selected in the **Search Results**
 	* **Edit Dataset Details** – to edit the dataset and attribute descriptions 
@@ -76,12 +76,10 @@ You can change the owners of the app and add a custom icon for the application f
 By default, the **Technical Owner** for a registered asset is the user who registered the data source when registration is done through the deployment pipeline in Studio Pro or specified during manual registration or using the Data Hub API. These owners can be changed by curating the application details. The **Technical** and **Business Owners** are displayed as a link in the asset **Metadata** pane so that users can contact them. 
 
 {{% alert type="warning" %}}
-If you as a **Technical Owner** curate the asset and change the technical owner to a different user, then you will no longer have curation rights to the asset once you save the changes. If the **Discoverability** is turned off for the asset, then you will also not be able to find the asset in the Catalog.
-{{% /alert %}}
+If you as a **Technical Owner** curate the asset and change the technical owner to a different user, then you will no longer have curation rights to the asset once you save the changes. If the **Discoverability** is turned off for the asset, then you will also not be able to find the asset in the Catalog.{{% /alert %}}
 
 {{% alert type="info" %}}
-**Business** and **Technical Owners** have curation rights for the registered data source in the Data Hub Catalog if they are registered users on the Mendix Platform. If a custom owner is *created* with the process described in this section, the link to contact them will be displayed for the asset but this does not mean that they are able to curate it. 
- {{% /alert %}}
+**Business** and **Technical Owners** have curation rights for the registered data source in the Data Hub Catalog if they are registered users on the Mendix Platform. If a custom owner is *created* with the process described in this section, the link to contact them will be displayed for the asset but this does not mean that they are able to curate it.  {{% /alert %}}
 
 {{% alert type="info" %}}
 Curators and the Data Hub Admin can manage custom owners as part of **Administration** functions. For further details see the [Managing Custom Owners ](../general/data-hub-admin-functions#customowners) section of *Data Hub Administration*. 
@@ -221,22 +219,22 @@ Add tags to categorize a registered service and provide additional means for fin
 
 ### 5.1 Discoverable
 
-By default, when an asset is registered in the Data Hub catalog, it is set to **Discoverable**, which means that all users can find, consume, and see details of it. 
+By default, when an asset is registered in the Data Hub catalog, it is set to **Discoverable**, which means that all users can find the asset and see details of it. 
 
-When the **Discoverable** setting is turned off, it will only be visible to the owners of the service and curators. All other users of Data Hub (also through the Data Hub integrations in Studio Pro and Studio) will not be able to see an asset whose discvorabilty is turned off.
+When the **Discoverable** setting is turned off, it will only be visible to the owners of the service and curators and the Data Hub Admin. All other users of Data Hub (also through the Data Hub integrations in Studio Pro and Studio) will not be able to see an asset whose discvorabilty is turned off.
 
 {{% alert type="info" %}}
-When a data source is set to non-**Discoverable**, the data source, and the datasets that are exposed cannot be found by other users (except for owners and curators). However, there may be instances of the same datasets in the Catalog, from the same apps, that are available through other services that are also published in the Data Hub Catalog. {{% /alert %}}
+When a data source is set to non-**Discoverable**, the data source, and the datasets that are exposed cannot be found by other users (except by owners and curators). However, there may be instances of the same datasets in the Catalog, from the same apps, that are available through other services that are also published in the Data Hub Catalog. {{% /alert %}}
 
 To change the discoverability of a service, follow these steps:
 
 1. In the Data Hub Catalog, select the service to display the **Search Details**.
 
-2. If you have curation rights, the **Curation Bar** will be displayed. Click **Discoverability** to display the **Discoverable** toggle:
+2. If you have curation rights, the **Curation Bar** is displayed. Click the drop-down **Discoverabile/Validated** menu:
 
    ![discoverable](attachments/curate/curate-discoverable.png)
 
-3. Click the **Discoverable** toggle to turn it on or off. A message will be displayed to indicate the discoverability of the asset.
+3. Click the **Discoverable** toggle to turn it on or off. A message is displayed to indicate the discoverability of the asset.
 
    ![non-discoverable](attachments/curate/curate-non-discoverable.png) 
 

@@ -7,7 +7,7 @@ tags: ["workflow", "workflows", "versions", "update"]
 
 ## 1 Introduction
 
-Workflows are long running processes. This may result in an issue when the **WorkflowDefinition** entity, which represents your workflow in the database, gets changed while the workflow is running, the existing workflow instances can remain running successfully. This means that when workflow constructs are added, you need to evaluate the impact of changes on versioning. For more information on the workflow entities, see [Workflow Entities in the System Module](workflows#workflow-entities) section in *Workflows*.
+Workflows are long running processes. This may result in an issue when the **WorkflowDefinition** entity gets changed while the workflow is running, the existing workflow instances can remain running successfully. This means that when workflow constructs are added, you need to evaluate the impact of changes on versioning. For more information on the workflow entities, see [Workflow Entities in the System Module](workflows#workflow-entities) section in *Workflows*.
 
 ## 2 Version Conflicts
 

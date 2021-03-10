@@ -113,7 +113,7 @@ By selecting the **Expose as microflow action**  option, you can expose the micr
 
 The caption and category of the microflow action are required, but the icon is optional. When no icon is selected, the default microflow call action icon is used. The recommended size for the icon is 16x16 pixels.
 
-## 4 Expose as Workflow Action
+## 4 Expose as Workflow Action {#expose-as-workflow-action}
 
 This property is accessible by right-clicking in the microflow and selecting **Properties**.
 

@@ -33,16 +33,6 @@ You cannot change the **Name** of the workflow but you can change the [Caption](
 
 **Documentation** allows you to describe your workflow to make it easier for people to use and modify it.
 
-#### 2.1.3 Allowed Roles
-
-**Allowed roles** defines which [module role](module-security#module-role) the user must have to be able to execute the workflow.
-
-{{% alert type="warning" %}}
-These roles are only checked when the workflow is executed from the client. 
-{{% /alert %}}
-
-For more information, see [Module Security](module-security).
-
 ### 2.2 Data Section {#data}
 
 **Workflow entity** is an entity that is used as a workflow context. It should be a [specialization](generalization-and-association) of the **Workflow Context** entity from the **System** module. For more information on workflow-related entities in the System module, see the the [Workflow Entities in the System Module](workflows#workflow-entities) section in *Workflows*. 
@@ -117,11 +107,17 @@ In addition to adding new parameters, you can perform the following actions on p
 
 **Allowed roles** defines which [module role](module-security#module-role) the user must have to be able to execute the workflow.
 
+{{% alert type="warning" %}}
+These roles are only checked when the workflow is executed from the client. 
+{{% /alert %}}
+
+For more information, see [Module Security](module-security).
+
 ### 2.7 Admin Page Section {#admin-page} 
 
-{{% todo %}}[Please verify that the name was updated.]{{% /todo %}}
+**Override admin page** is an optional page used for displaying an instance of the workflow to the workflow admin. This overrides a generic page used to display any workflow instances in the app, for example, when you have a **Show Admin page** set as an [on-click event](on-click-event#show-admin-page) or as a [microflow action](show-admin-page) and would like to override the page selected for this event/action. 
 
-**Override admin page** is an optional page used for displaying an instance of the workflow to the workflow admin. This overrides a generic page used to display all workflows in the app. 
+If you generate the page using the templates in **Workflows Commons** module, these templates contain necessary data containers and associated context entity.
 
 ## 3 Read More
 

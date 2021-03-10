@@ -171,7 +171,7 @@ To add a button that will initiate the workflow, do the following:
 
 2. Drag and drop the button inside the list view.
 
-3. Open the button properties and set the **On-click** property to **Call workflow**:
+3. Open the button properties and set the **On-click** property to **Call workflow**: {{% todo %}}[This screenshot needs to be updated, the name of the **Open workflow page** event will change to **Open admin page**]{{% /todo %}}
 
     ![Call Workflow](attachments/workflow-how-to-configure/call-workflow-on-click.png)
 
@@ -403,5 +403,3 @@ To test your workflow, you need to switch between different user roles. Follow t
     4. Open the Workflow Dashboard.
 
 Great job! You have deployed your app locally and tested your workflow from the perspective of different users. You can now work on adding more functionality to your app. 
-
-

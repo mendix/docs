@@ -22,7 +22,7 @@ Decision properties consist of the following sections:
 
 #### 2.1.1 Name
 
-**Name** is the internal name of the element. When referring to the element in the app project you will use this name. It must be unique within the workflow, but you can have two elements with the same name in different workflows. {{% todo %}}[Is this correct?]{{% /todo %}}
+**Name** is the internal name of the element. When referring to the element in the app project you will use this name. It must be unique within the workflow, but you can have two elements with the same name in different workflows. 
 
 #### 2.1.2 Caption
 

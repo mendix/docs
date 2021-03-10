@@ -267,9 +267,9 @@ The **Sign out** event signs the currently signed-in user out. When no user is s
 
 ### 3.13 Call Workflow {#call-workflow}
 
-The **Call workflow** event executes the specified workflow. 
+The **Call workflow** event triggers the specified workflow. 
 
-An element calling this event should be placed in a data container connected to the [workflow entity](workflow-properties#data-section) defined in its properties. 
+An element calling this event should be placed in a data container connected to the [workflow entity](workflow-properties#data-section) defined in the workflow properties. 
 
 The following properties are specific for this event:
 
@@ -279,7 +279,7 @@ The following properties are specific for this event:
 
 ### 3.14 Open Workflow Page {#open-workflow-page}
 
-**Open workflow page** opens a workflow overview page. This page is typically used by a workflow administrator role to inspect status of a workflow instance and to manage the instance, e.g. abort a workflow if required.
+**Open Workflow page** opens a workflow overview page. This page is typically used by a workflow administrator role to inspect status of a workflow instance and to manage the instance, e.g. abort a workflow if required.
 
 An element calling this event should be placed in a data container connected to the **System.WorkflowInstance** entity. 
 

@@ -11,15 +11,17 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **Workflow call** activity can be used to call a [workflow](workflows). 
+The **Workflow call** activity can be used to call and trigger a [workflow](workflows). 
 
 ![](attachments/call-workflow/workflow-call.jpg)
 
 ## 2 Properties
 
-There are two sets of properties for this activity: in the properties pane and in a dialog box. You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
+An example of Workflow call properties is represented in the image below:
 
-You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+![](attachments/call-workflow/workflow-call-properties.jpg)
+
+There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
 The **Workflow call** properties pane consists of the following sections:
 
@@ -29,6 +31,10 @@ The **Workflow call** properties pane consists of the following sections:
 ## 3 Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
+
+You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
+
+You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
 ### 3.1 Workflow {#workflow}
 

@@ -8,13 +8,13 @@ tags: ["studio pro", "find advanced", "find usages", "find", "edit menu"]
 
 ## 1 Introduction
 
-You can search for changes or usages of different elements, documents, Xpaths, changes to various elements, in your app project.  You do it via **Find**, **Find Advanced**, and **Find Usages** options under the **Edit** menu. 
+You can search for changes or usages of different elements, documents, Xpaths, changes to various elements, in your app.  You do it via **Find**, **Find Advanced**, and **Find Usages** options under the **Edit** menu. 
 
 ![Find Options](attachments/find-and-find-advanced/find-options.jpg)
 
 ## 2 Find Option
 
-You can find various elements in your app project via the **Find** option. For example, you would like to find elements in the domain model, page editor, and microflow editor where the word "Employee" is used: pages, entities, associations, expressions with it, etc. Do the following:
+You can find various elements in your app via the **Find** option. For example, you would like to find elements in the domain model, page editor, and microflow editor where the word "Employee" is used: pages, entities, associations, expressions with it, etc. Do the following:
 
 1. Click **Edit** > **Find** in the top-bar or press <kbd>Ctrl</kbd>+<kbd>F</kbd>.
 
@@ -47,7 +47,7 @@ You can see search results in the **Find Results** pane.
 
 ### 3.2 Finding Unused Elements {#find-unused-elements}
 
-While you develop your app, it might occur that specific functionality (for example, pages or microflows) is not applicable anymore in the final version of your application. To keep your app project clear and easy to maintain, it is advised to clean any unused items up. 
+While you develop your app, it might occur that specific functionality (for example, pages or microflows) is not applicable anymore in the final version of your application. To keep your app clear and easy to maintain, it is advised to clean any unused items up. 
 
 To find the unused items, do the following:
 
@@ -61,7 +61,7 @@ To find the unused items, do the following:
 
 The results will show up in the **Find Results** pane. To filter the results click the **Show all** button in the top-right corner of the pane. 
 
-Note that deleting any unused items might result in more unused items. For example, if you delete an unused page, a microflow which is only used on that page will become an unused item itself. If you are cleaning up your app project regularly refresh the unused items list.
+Note that deleting any unused items might result in more unused items. For example, if you delete an unused page, a microflow which is only used on that page will become an unused item itself. If you are cleaning up your app regularly refresh the unused items list.
 
 {{% alert type="info" %}}
 

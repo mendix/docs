@@ -28,7 +28,7 @@ To use your own images, they must first be added to an [image collection](image-
 
 You should not add custom images to the existing image collections in imported modules, for example in the Atlas UI module. If you do this, there is a risk that they may be overwritten if you import a new version of the module at a later date.
 
-Once you have added images to an image collection, you can use them in any module in your app project.
+Once you have added images to an image collection, you can use them in any module in your app.
 
 {{% alert type="info" %}}
 If you need to refer to an image in an image collection from CSS or custom widgets, the name of the image will be `/img/{module_name}${image_collection_name}${image_name}`.

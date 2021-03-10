@@ -29,7 +29,7 @@ The elements of this category are described in the table below:
 
 | Graphic                                                     | Element                           | Description                                                  |
 | ----------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------ |
-| ![Start Activity](attachments/workflows/start-event.png)    | Start activity                    | The starting point of a workflow. Workflows are triggered either by the [Call workflow](on-click-event#call-workflow) on-click event on pages or by the [Workflow call](call-workflow) action in microflows. <br />Click the start event to open [workflow properties](workflow-properties). |
+| ![Start Activity](attachments/workflows/start-event.png)    | Start activity                    | The starting point of a workflow. Workflows are triggered either by the [Call workflow](on-click-event#call-workflow) on-click event on pages or by the [Workflow call](workflow-call) action in microflows. <br />Click the start event to open [workflow properties](workflow-properties). |
 | ![Decision](attachments/workflows/decision.png)             | [Decision](decision-in-workflows) | Makes a choice based on a condition and follows one and only one of the outgoing paths. |
 | ![Parallel Split](attachments/workflows/parallel-split.png) | [Parallel split](parallel-split)  | Adds two parallel paths to your workflow.                    |
 | ![Jump Activity](attachments/workflows/jump.png)            | [Jump](jump-activity)             | Allows you to jump to other activities in the workflow.      |
@@ -146,6 +146,13 @@ You can add workflow-related activities to your microflows. For more information
 
 You can trigger workflows or user tasks from pages via specific on-click events configured on widgets. For more details, see [On Click Event & Events Section](on-click-event).
 
-## 8 Read More
+## 8 Workflow Commons Module
+
+The **Workflow Commons** module is a workflow specific module that has preconfigured page templates, pages, dashboards, etc. It can save you a lot of time during development. You can either download it from the Marketplace or use the **Approval app** template in the Developer Portal that already contains the **Workflows Commons**. 
+
+For more information on how to configure the **Workflow Commons** in an existing app, see [Using Workflow Commons in an Existing App](workflow-in-existing-app). 
+
+## 9 Read More
 
 * [How to Configure a Workflow for the Employee Onboarding Process](/howto/logic-business-rules/workflow-how-to-configure)
+* [Using Workflow Commons in an Existing App](workflow-in-existing-app)

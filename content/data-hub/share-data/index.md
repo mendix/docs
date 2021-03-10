@@ -34,7 +34,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 Follow these steps to create a simple app in Studio Pro and populate it. You will you will use this data in another app through the Data Hub: 
 
-1. In Studio Pro, click **New App** to create a new app project using the **Blank App** template. Call this app *{yourname}CustomerServiceApp*.
+1. In Studio Pro, click **New App** to create a new app using the **Blank App** template. Call this app *{yourname}CustomerServiceApp*.
 2. In the project explorer, double click the **Domain Model** for **MyFirstModule** and click **Entity** in the toolbar above the main window to add an entity to the domain model.
 3. Double-click the entity to open its properties and change its **Name** to *Customer*.
 4.  In the **Attributes** tab, click **New** to create the following attributes for the entity:

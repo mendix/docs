@@ -15,6 +15,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### March 10th, 2021
+
+#### Fixes
+
+* We fixed a bug where selecting an IBM or SAP template in the **Create App** flow did not direct you to the right page. 
+
 ### March 9th, 2021
 
 #### Improvements

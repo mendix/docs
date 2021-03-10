@@ -37,7 +37,7 @@ You can then access the following parts of the Mendix Platform:
 * [Control Center]()
 * [Buzz](#buzz)
 * **Cloud Portal**  – the **Nodes** and [Environments](/developerportal/deploy/environments/) pages of the Developer Portal [**Verify destination and cross-reference**]
-* [App Store](/appstore/index)
+* [Marketplace](/appstore/index)
 * [Data Hub](/data-hub/)
 * [Academy](#academy)
 * [Docs](#docs)

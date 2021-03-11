@@ -53,7 +53,7 @@ For details on how to see all the feedback you have submitted, see the [Feedback
 
 ### 2.2 Editing the App
 
-Clicking the **Edit** icon opens the app page in [Mendix Studio](/studio/index). If you have permissions to edit the app, you can start editing and collaborating right away.
+Clicking the **Edit** icon opens the app page in [Mendix Studio](/studio/). If you have permissions to edit the app, you can start editing and collaborating right away.
 
 ### 2. Viewing the App
 

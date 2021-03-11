@@ -31,11 +31,11 @@ On the left side of the toolbar with the new navigation, you open an access menu
 You can then access the following parts of the Mendix Platform:
 
 * **Mendix Home** – the [Apps](#apps) page
-* **Studio Pro** – the [Studio Pro](/refguide/index) download page in the [Mendix App Store](/appstore/index)
+* **Studio Pro** – the [Studio Pro](/refguide/) download page in the [Mendix App Store](/appstore/)
 * [Control Center]()
 * [Buzz](#buzz)
-* **Cloud Portal**  – the **Nodes** and [Environments](/developerportal/deploy/environments/) pages of the Developer Portal [**Verify destination and cross-reference**]
-* [Marketplace](/appstore/index)
+* **Cloud Portal**  – the **Nodes** and [Environments](/developerportal/deploy/environments) pages of the Developer Portal [**Verify destination and cross-reference**]
+* [Marketplace](/appstore/)
 * [Data Hub](/data-hub/)
 * [Academy](#academy)
 * [Docs](#docs)
@@ -44,7 +44,7 @@ You can then access the following parts of the Mendix Platform:
 
 ## 2 Apps {#apps}
 
-In [Apps](apps-list/index), you can find your free and licensed apps, nodes, and other apps created by your company:
+In [Apps](apps-list), you can find your free and licensed apps, nodes, and other apps created by your company:
 
 ![](attachments/developerportal-apps.jpg)
 
@@ -62,7 +62,7 @@ In the company [Buzz](collaborate/buzz), you can communicate with colleagues, Ap
 
 ## 4 Control Center
 
-In [Control Center](control-center/index), you can gain insight into company activities and perform various governance tasks as a Mendix Admin:
+In [Control Center](control-center), you can gain insight into company activities and perform various governance tasks as a Mendix Admin:
 
 ![](attachments/developerportal-cc-admin.jpg)
 
@@ -74,7 +74,7 @@ In [People](mendix-profile/index#connections), you can view the other members of
 
 ## 6 Community {#community}
 
-In [Community](community-tools/index), you can explore various resources for the vibrant Mendix community of users, from blog posts about how Mendix is being used in the wider world of low-code development to the [Mendix job board](/developerportal/community-tools/mendix-job-board) and [Mendix Shop](https://shop.mendix.com/):
+In [Community](community-tools), you can explore various resources for the vibrant Mendix community of users, from blog posts about how Mendix is being used in the wider world of low-code development to the [Mendix job board](/developerportal/community-tools/mendix-job-board) and [Mendix Shop](https://shop.mendix.com/):
 
 ![](attachments/developerportal-community.jpg)
 

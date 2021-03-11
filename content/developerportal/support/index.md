@@ -22,7 +22,7 @@ We are available for all users of the Mendix Platform, and we are bound by servi
 * Recovery time objective (RTO)
 * Recovery point objective (RPO)
 
-The SLA for your company is available upon request. Please contact [Mendix Support](https://support.mendix.com/) or your Customer Success Manager if you want to check the details.
+You can check our SLA [here](https://mendix.com/sla).
 
 ### 1.2 Premier Support
 

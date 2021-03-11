@@ -27,7 +27,7 @@ To define different types of versions and releases, consider the example of [8.1
 
 This diagram illustrate the LTS and MTS concepts with timelines:
 
-## 2 Long-Term Support Version (LTS)
+## 2 Long-Term Support Version (LTS) {#lts}
 
 An LTS version is the latest minor version before a new major version is released. Once a minor version becomes an LTS, it will not have new features added to it. 
 

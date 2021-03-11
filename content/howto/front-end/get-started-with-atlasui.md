@@ -24,7 +24,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 2 Choosing Your App Template
 
-In the [Developer Portal](https://sprintr.home.mendix.com/index.html), click **Create App**.You will see a number of apps marked with **ATLAS UI**, which are Atlas UI-based app templates. You can select one to get started.
+In the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html), click **Create App**.You will see a number of apps marked with **ATLAS UI**, which are Atlas UI-based app templates. You can select one to get started.
 
 ![App template in Developer Portal](attachments/get-started-with-atlasui/start_choose_your_starter_app.png)
 

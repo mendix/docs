@@ -202,12 +202,6 @@ To add the error handling for those situations when the OrderID parameter is fil
 
 3. Test your new error responses as you did with the app in section [4.3 Viewing the App](#viewing).
 
-## 6 Example
-
-**How to publish REST in Studio Pro 8**
-
-{{% youtube Ff_P84NOcZk %}}
-
-## 7 Read More
+## 6 Read More
 
 * For more information on creating published REST services in Mendix (including GET, POST, and DELETE operations), see [Published REST Services](/refguide/published-rest-services)

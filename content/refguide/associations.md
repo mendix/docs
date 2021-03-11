@@ -66,6 +66,16 @@ You can edit the associations as members of the entity. In this case you will de
 
 For more information see [Association Tab Properties](association-member-properties).
 
+### 3.3 Move the Association Arrow
+
+You can move the association arrow between two entities without deleting it. Click within the black dot on either side of the association arrow and drag it to the new desired location.
+
+{{% alert type="warning" %}}
+Your mouse pointer should not activate a white dot. This indicates the creation of a new association.
+{{% /alert %}}
+
+![](attachments/associations/association-move-arrow.png)
+
 ## 4 Association Examples {#examples}
 
 ### 4.1 One-to-Many Association {#one-to-many}
@@ -148,7 +158,7 @@ In XML, instances of these entities and their associations look as follows (note
 
 ```
 
-### 4.4 Many-to-Many Association with Dual Ownership
+### 4.4 Many-to-Many Association with Dual Ownership {#many-to-many-both}
 
 A many-to-many association where both entities are owners is created by setting the owner property to `Both` and the type property to `Reference set`.
 

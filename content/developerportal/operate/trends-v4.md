@@ -24,7 +24,7 @@ To view the **Trends**, you must have permission to **Access the Monitoring**.
 
 {{% alert type="info" %}}
 
-Only the [Technical Contact](../company-app-roles/technical-contact) is allowed to grant node permissions.
+Only the [Technical Contact](../collaborate/app-roles#technical-contact) is allowed to grant node permissions.
 
 {{% /alert %}}
 
@@ -331,7 +331,7 @@ If you see large values here which do not immediately drop back again, it may in
 The **Database node disk usage (in bytes)** graph displays both used storage (the absolute amount of data that is stored on disk), and free space (the remaining space on the database node). When hovering over the graph, you will also see the total size of your database.
 
 {{% alert type="info" %}}
-The units on the graph are mebibtyes. One gibibyte is 1024 mebibytes, so if the total storage of your database is 10 GiB, it is 10240 MiB, and will appear like this on the graph.
+The units on the graph are mebibytes. One gibibyte is 1024 mebibytes, so if the total storage of your database is 10 GiB, it is 10240 MiB, and will appear like this on the graph.
 {{% /alert %}}
 
 {{% alert type="info" %}}

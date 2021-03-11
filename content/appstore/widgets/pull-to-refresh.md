@@ -1,8 +1,8 @@
 ---
 title: "Pull to Refresh"
 category: "Widgets"
-description: "Describes the configuration and usage of the Pull to Refresh widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "pull to refresh", "platform support"]
+description: "Describes the configuration and usage of the Pull to Refresh widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "pull to refresh", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -24,9 +24,9 @@ The [Pull to Refresh](https://appstore.home.mendix.com/link/app/47782/) widget e
 * When refreshing a page, the list view does not keep **Load more** items
 * Only works when app is scrolled to top
 
-### 1.3 Demo App Project
+### 1.3 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](https://pulltorefresh.mxapps.io).
+For a demo app that has been deployed with this widget, see [here](https://pulltorefresh.mxapps.io).
 
 ## 2 Usage
 
@@ -41,6 +41,6 @@ To use this widget, follow these steps:
 
 ![](attachments/pull-to-refresh/demo.gif)
 
-## 3 Developing This App Store Component
+## 3 Developing This Marketplace Component
 
 We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/pull-to-referesh](https://github.com/mendixlabs/pull-to-refresh/issues).

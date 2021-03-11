@@ -7,7 +7,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-Data can be published from an app for use by other apps through [published OData services](published-odata-services). Consumed OData services can be used to integrate external data sources in apps through [Mendix Data Hub](/data-hub/index). 
+Data can be published from an app for use by other apps through [published OData services](published-odata-services). Consumed OData services can be used to integrate external data sources in apps through [Mendix Data Hub](/data-hub/). 
 
 Mendix Data Hub enables integration of available data sources from different sources in an organization into your Mendix apps.  OData services that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/index) expose entities that can be dragged and dropped into your domain model through the [Data Hub pane](data-hub-pane) as external entities. The OData service document that is added to your project provides the information for retrieving the metadata for the service and exposed entities.
 
@@ -21,7 +21,7 @@ For details on the features that a published OData service must support and how 
 
 ## 2 OData Services and External Entities
 
-When an external entity is used in an app project, the associated dataset for the entity is retrieved through the information in the consumed OData service contract and returned. 
+When an external entity is used in an app, the associated dataset for the entity is retrieved through the information in the consumed OData service contract and returned. 
 
 ### 2.1 External Entities
 

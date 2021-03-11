@@ -1,8 +1,8 @@
 ---
 title: "Signature"
 category: "Widgets"
-description: "Describes the configuration and usage of the Signature widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "signature", "platform support"]
+description: "Describes the configuration and usage of the Signature widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "signature", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -24,9 +24,9 @@ Previous signatures can not be edited. When the signature is captured and stored
 
 A resized signature is captured. If the canvas is resized, the strokes outside the visible canvas are not shown, but they are stored.
 
-### 1.3 Demo App Project
+### 1.3 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](https://signature101.mxapps.io).
+For a demo app that has been deployed with this widget, see [here](https://signature101.mxapps.io).
 
 ## 2 Configuration
 

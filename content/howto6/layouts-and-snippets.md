@@ -134,7 +134,7 @@ At the heart of the navigation model in Mendix are three device types: Desktop, 
 
 ### 4.7 Menu Document
 
-A menu document defines a navigation menu that can be used by a menu widget. Typically the main menus for your application are defined in device types, while you use menu documents for auxiliary menus, e.g. a side bar. A menu consists of a list of menu items, which optionally contain sub-items. Depending on the widget a number of levels are allowed.
+A menu document defines a navigation menu that can be used by a menu widget. Typically the main menus for your application are defined in device types, while you use menu documents for auxiliary menus, for example, a side bar. A menu consists of a list of menu items, which optionally contain sub-items. Depending on the widget a number of levels are allowed.
 
 ![](attachments/18448710/18581453.png)
 
@@ -156,7 +156,7 @@ It is also possible to force the client to use a specific device type by adding 
 
 Snippets are reusable interface parts that can be used on pages and layouts. Using snippets allows Mendix business engineers to modify fewer places in the interface and allows for a smoother transition and user friendly experience. For example, you can have a snippet that is used both in the contents area of a template grid and in a data view. Changes you make to the snippet, will be applied in all places where the snippet is used.
 
-Additionally, a snippet can define an entity that serves as a context for the widgets placed in it. For example, if you set the Course entity for a snippet, you could place a text box that shows the Course Title on the snippet without having to define a data view first. When an entity is defined on a snippet, everywhere where you uses the snippet, it needs to be placed inside a context for that entity, e.g. a data view.
+Additionally, a snippet can define an entity that serves as a context for the widgets placed in it. For example, if you set the Course entity for a snippet, you could place a text box that shows the Course Title on the snippet without having to define a data view first. When an entity is defined on a snippet, everywhere where you uses the snippet, it needs to be placed inside a context for that entity, for example, a data view.
 
 ### 5.1 Example
 

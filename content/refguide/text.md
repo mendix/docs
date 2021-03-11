@@ -40,9 +40,9 @@ Text properties consist of the following sections:
 
 #### 2.3.1 Caption {#caption}
 
-**Caption** defines a text that will be shown. The caption can contain parameters that are written between braces, e.g. {1}.  
+**Caption** defines a text that will be shown. The caption can contain parameters that are written between braces, for example, {1}.  
 
-For more information on using parameters, see the [Parameters]() section below. 
+For more information on using parameters, see the [Parameters](#parameters) section below. 
 
 #### 2.3.2 Parameters {#parameters}
 

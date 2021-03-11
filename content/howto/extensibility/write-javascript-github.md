@@ -8,7 +8,7 @@ tags: ["widget", "search", "GitHub", "JavaScript", "API", "JavaScript-API"]
 
 ## 1 Introduction
 
-Mendix has made nanoflows even more powerful with pluggable nanoflow actions — called JavaScript actions — in Mendix 8. [How to Build JavaScript Actions: Part 1 (Basic)](write-javascript-actions) shows you how to create a JavaScript TextToSpeech action, expose it as a nanoflow action, and then use it in a demo. In this advanced how-to you will learn to call a REST service, use a generic return type, and make an API to enhance the power of your JavaScript actions.
+Nanoflows are even more powerful with pluggable nanoflow actions — called JavaScript actions. [How to Build JavaScript Actions: Part 1 (Basic)](write-javascript-actions) shows you how to create a JavaScript TextToSpeech action, expose it as a nanoflow action, and then use it in a demo. In this advanced how-to you will learn to call a REST service, use a generic return type, and make an API to enhance the power of your JavaScript actions.
 
 **This how-to will teach you how to do the following:**
 
@@ -32,7 +32,7 @@ In [Creating a "Search GitHub User" JavaScript Action](#create-a-search) below, 
 
 This how-to comes paired with an app project package prepared for you by Mendix. To download and import the package, follow the steps below:
 
-1. In Mendix Studio Pro, click the App Store icon.
+1. In Mendix Studio Pro, click the AMarketplace icon.
 2. Search for "JavaScript Actions How-To Advanced".
 3. Click the app, then click **Download** to receive an *.mpk* file. 
 4.  Select **New Mendix Team Server**, name your app *JavaScriptActionsHowToAdvanced*, select a **Project Directory**, and click **OK**:

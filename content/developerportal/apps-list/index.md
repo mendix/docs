@@ -8,25 +8,23 @@ tags: ["My Apps", "My Company's Apps", "Nodes"]
 
 The **Apps** menu item shows you a summary of your apps and, additionally, allows you to see all the apps for your company and all the licensed nodes to which you have access.
 
-You get to the apps list by clicking **Apps** in the top menu bar of the Developer Portal:
+You get to the apps list by clicking **Apps** in the top menu bar of the Developer Portal and choosing between the following options:
 
-![Apps Menu Item in the top bar](attachments/apps-menu-item.png)
+![Page menu with My Apps, My Company's Apps, Nodes](attachments/apps-page-menu.jpg)
 
-You can choose between the following options:
-
-![Page menu with My Apps, My Company's Apps, Nodes](attachments/apps-page-menu.png)
-
-The sections describe these options:
+The sections below describe these options:
 
 * [My Apps](#my-apps)
 * [My Company's Apps](#my-company-apps)
 * [Nodes](#nodes)
 
+For details on the **Cluster Manager** option, see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster).
+
 ## 2 My Apps {#my-apps}
 
 You will see all the apps of which you are an [App Team](../collaborate/team) member:
 
-![Apps tiles](attachments/apps-tiles.png)
+![Apps tiles](attachments/apps-tiles.jpg)
 
 Click an app tile to see the app [Buzz](/developerportal/collaborate/buzz).
 
@@ -34,45 +32,38 @@ Click an app tile to see the app [Buzz](/developerportal/collaborate/buzz).
 
 Using the drop-down menu, you can choose to sort the apps in the following ways:
 
-* Most **Recent** first
+* **Most Recent** first
 * Alphabetical order of **App Name**
-* Alphabetical order of **Company**
 
-![Drop-down menu for order of apps](attachments/sort-drop-down.png)
+### 2.2 Selecting Actions
 
-### 2.2 Searching for an App
+By clicking the ellipsis (**…**) in the app tile, you can quickly perform a number of actions:
 
-You can find a specific app by typing the search term by the magnifying glass icon and pressing <kbd>Enter</kbd>:
-
-![Example of a search for the word "First"](attachments/search-apps.png)
-
-### 2.3 Selecting Actions
-
-By clicking the ellipsis (…) in the app tile, you can quickly perform a number of actions:
-
-![Quick actions menu for an app](attachments/quick-action-menu.png)
+![Quick actions menu for an app](attachments/quick-action-menu.jpg)
 
 The actions available depend on the app selected:
 
 * **Edit in Mendix Studio**
-* **Edit in Mendix Studio Pro** – for apps where Mendix Studio is not enabled
-* **Project Management** – opens the app [Buzz](/developerportal/collaborate/buzz)
-* **App Info** – opens the [general settings](/developerportal/settings/general-settings) of the app
+* **Edit in Mendix Studio Pro**
 * **Delete App** – allows you to delete your app, provided you are the only team member (you will be warned of the consequences and asked for confirmation before the app is deleted)
+
+### 2.3 Go to Environments {#environments}
+
+To go to the [environments](/developerportal/deploy/environments) of your app, click the cloud icon in the bottom-right corner of the app tile.
 
 ### 2.4 Favoriting an App {#favoriting}
 
 To favorite an app, click the star so that it turns yellow in the top-left corner of the app's tile:
 
-![](attachments/favoriting.png)
+![](attachments/favoriting.jpg)
 
 To see all your favorite apps, click the star toggle to the right of the [view drop-down menu](#view):
 
-![](attachments/favorites-toggle.png)
+![](attachments/favorites-toggle.jpg)
 
 ## 3 My Company's Apps {#my-company-apps}
 
-On the **My Company's Apps** page, you will see all the apps created by people in your [company](/developerportal/company-app-roles/index):
+On the **My Company's Apps** page, you will see all the apps created by members of your [company](/developerportal/control-center/index#company):
 
 {{% image_container width="400" %}}
 ![Apps for my company](attachments/company-apps-list.png)
@@ -87,7 +78,6 @@ If you click an app for which you are not an App Team member, you will see the a
 {{% image_container width="400" %}}
 ![Example of app details](attachments/app-details.png)
 {{% /image_container %}}
-
 
 ## 4 Nodes {#nodes}
 

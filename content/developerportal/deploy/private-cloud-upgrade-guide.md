@@ -12,7 +12,7 @@ This document describes how an existing installation of Mendix for Private Cloud
 
 Both the Mendix Operator and Mendix Agent should be upgraded at the same time.
 
-## 2 Upgrading to Mendix Operator 1.7.0{#operator-latest}
+## 2 Upgrading to Mendix Operator 1.8.0{#operator-latest}
 
 ### 2.1 Preparation
 
@@ -39,7 +39,7 @@ For example, if the image name is `quay.io/digital_ecosystems/mendix-operator:1.
 This process will take:
 
 * about 15 to 30 minutes when upgrading from Mendix Operator 1.0.\*
-* about 10 minutes when upgrading from Mendix Operator 1.1.\*, 1.2.\* , 1.3.\*, 1.4.\*, 1.5.\*, and 1.6.\*
+* about 15 minutes when upgrading from Mendix Operator 1.1.\* to 1.7.\*.
 
 Some upgrade steps are only required when upgrading from older versions of the Mendix Operator. There is a notice on these steps indicating which upgrade paths they apply to and for which paths the step should be skipped.
 
@@ -57,7 +57,7 @@ kubectl -n $OPERATOR_NAMESPACE scale deployment mendix-operator --replicas=0
 #### 2.2.2 Upgrading the Custom Resource Definitions
 
 {{% alert type="info" %}}
-Follow this step when upgrading from Mendix Operator versions 1.0.\*, 1.1.\*, 1.2.\*, 1.3.\*, 1.4.\*, 1.5.\*, and 1.6.\*
+Follow this step when upgrading from Mendix Operator versions 1.0.\* to 1.7.\*  only.
 {{% /alert %}}
 
 Run the following command to upgrade to the latest version of the Custom Resource Definitions for the Mendix Operator:
@@ -68,21 +68,35 @@ kubectl apply -f https://installergen.private-cloud.api.mendix.com/privatecloud/
 
 [Custom Resource Definitions](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) allow Mendix applications to be managed with Kubernetes APIs and tools such as `kubectl` and `oc`.
 
-#### 2.2.3 Upgrading the Mendix Operator Deployment
+#### 2.2.3 Upgrading the dependency versions
 
-Run the following command to switch to Mendix Operator version 1.7.0:
+{{% alert type="info" %}}
+Follow this step when upgrading from Mendix Operator versions 1.0.\* to 1.7.\*  only.
+{{% /alert %}}
+
+Run the following command to upgrade to the latest version of the Custom Resource Definitions for the Mendix Operator:
+
+```shell
+kubectl -n $OPERATOR_NAMESPACE apply -f https://installergen.private-cloud.api.mendix.com/privatecloud/ocf/v1/versions
+```
+
+[Custom Resource Definitions](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) allow Mendix applications to be managed with Kubernetes APIs and tools such as `kubectl` and `oc`.
+
+#### 2.2.4 Upgrading the Mendix Operator Deployment
+
+Run the following command to switch to Mendix Operator version 1.8.0:
 
 ```shell
 kubectl -n $OPERATOR_NAMESPACE patch deployment mendix-operator -p \
-  '{"spec":{"template":{"spec":{"containers":[{"name":"mendix-operator","image":"private-cloud.registry.mendix.com/mendix-operator:1.7.0"}]}}}}'
+  '{"spec":{"template":{"spec":{"containers":[{"name":"mendix-operator","image":"private-cloud.registry.mendix.com/mendix-operator:1.8.0"}]}}}}'
 ```
 
-#### 2.2.4 Updating the Mendix Operator Configuration
+#### 2.2.5 Updating the Mendix Operator Configuration
 
-##### 2.2.4.1 Updating the Mendix Operator Configuration (from version 1.0.\*)
+##### 2.2.5.1 Updating the Mendix Operator Configuration (from version 1.0.\*)
 
 {{% alert type="info" %}}
-Follow this step when upgrading from Mendix Operator 1.0.\* only.
+Follow this step when upgrading from Mendix Operator version 1.0.\* only.
 If you're running a later version of the Mendix Operator, proceed [to the next step](#update-configuration-1.1.0).
 {{% /alert %}}
 
@@ -91,9 +105,9 @@ Run the following commands to switch to the latest component versions:
 ```shell
 kubectl -n $OPERATOR_NAMESPACE patch operatorconfiguration mendix-operator-configuration --type merge -p \
 '{"spec":{
-    "sidecarImage":"private-cloud.registry.mendix.com/mx-m2ee-sidecar:1.5.0",
-    "metricsSidecarImage":"private-cloud.registry.mendix.com/mx-m2ee-metrics:1.1.1",
-    "builderImage":"private-cloud.registry.mendix.com/image-builder:ingvar-rhel",
+    "sidecarImage":null,
+    "metricsSidecarImage":null,
+    "builderImage":null,
     "buildRuntimeBaseImage":"private-cloud.registry.mendix.com/runtime-base:{{.MxRuntimeVersion}}-rhel",
     "dockerfile":null
 }}'
@@ -125,12 +139,10 @@ kubectl -n $OPERATOR_NAMESPACE get storageplan --no-headers=true -o name | sed -
   xargs -I {} kubectl -n $OPERATOR_NAMESPACE patch storageplan {} --type=merge -p '{"spec":{"type":"on-demand"}}'
 ```
 
-##### 2.2.4.2 Updating the Mendix Operator Configuration (from versions 1.1.\*, 1.2.\*, 1.3.\*, and 1.4.\*){#update-configuration-1.1.0}
+##### 2.2.5.2 Updating the Mendix Operator Configuration (from versions 1.1.\* to 1.7.\*){#update-configuration-1.1.0}
 
 {{% alert type="info" %}}
-Follow this step only when upgrading from Mendix Operator 1.1.\*, 1.2.\*, 1.3.\*, and 1.4.\*.
-
-If you're running a later version of the Mendix Operator, proceed [to the next step](#update-configuration-1.5.0).
+Follow this step only when upgrading from Mendix Operator 1.1.\* to 1.7.\* only.
 {{% /alert %}}
 
 Run the following commands to switch to the latest component versions:
@@ -138,38 +150,24 @@ Run the following commands to switch to the latest component versions:
 ```shell
 kubectl -n $OPERATOR_NAMESPACE patch operatorconfiguration mendix-operator-configuration --type merge -p \
 '{"spec":{
-    "sidecarImage":"private-cloud.registry.mendix.com/mx-m2ee-sidecar:1.5.0",
-    "metricsSidecarImage":"private-cloud.registry.mendix.com/mx-m2ee-metrics:1.1.1",
-    "builderImage":"private-cloud.registry.mendix.com/image-builder:ingvar-rhel",
+    "sidecarImage":null,
+    "metricsSidecarImage":null,
+    "builderImage":null,
     "buildRuntimeBaseImage":"private-cloud.registry.mendix.com/runtime-base:{{.MxRuntimeVersion}}-rhel"
 }}'
 ```
 
-##### 2.2.4.3 Updating the Mendix Operator Configuration (from versions 1.5.\* and 1.6.\*){#update-configuration-1.5.0}
+#### 2.2.6 Update the Kubernetes Role
+
+#### 2.2.6.1 Update the Kubernetes Role for OpenShift routes
 
 {{% alert type="info" %}}
-Follow this step only when upgrading from Mendix Operator 1.5.\* and 1.6.\*.
-{{% /alert %}}
-
-Run the following commands to switch to the latest component versions:
-
-```shell
-kubectl -n $OPERATOR_NAMESPACE patch operatorconfiguration mendix-operator-configuration --type merge -p \
-'{"spec":{
-    "sidecarImage":"private-cloud.registry.mendix.com/mx-m2ee-sidecar:1.5.0",
-    "metricsSidecarImage":"private-cloud.registry.mendix.com/mx-m2ee-metrics:1.1.1"
-}}'
-```
-
-#### 2.2.5 Update the Kubernetes Role
-
-{{% alert type="info" %}}
-Follow this step when upgrading from Mendix Operator 1.2.\*, 1.1.\*, and 1.0.\*.
+Follow this step when upgrading from Mendix Operator versions 1.0.\*, 1.1.\*, and 1.2.\*.
 
 It can be skipped if the Mendix Operator is not configured to use OpenShift Routes for incoming network traffic.
 {{% /alert %}}
 
-To enable changing the App URL in OpenShift Routes, you need to perform this step to add the `update` permission to the `mendix-operator` role.
+To allow you to change the App URL in OpenShift Routes, you need to perform this step to add the `update` permission to the `mendix-operator` role.
 
 Search for the `mendix-operator` Role in the OpenShift web console and open if for editing, or run the following command to start editing the `mendix-operator` Role:
 
@@ -207,29 +205,82 @@ and add an `update` verb to the list of verbs:
 
 Save the role to apply the changes.
 
-#### 2.2.6 Update the Storage Plan image repository
+#### 2.2.6.2 Update the Kubernetes Role for OperatorVersions CRD
 
 {{% alert type="info" %}}
-Only follow this step when upgrading from Mendix Operator 1.1.\*, 1.2.\*, 1.3.\*, and 1.4.\*.
+Follow this step when upgrading from Mendix Operator versions 1.0.\* to 1.7.\*.
 {{% /alert %}}
 
-To switch from the `quay.io/digital_ecosystems` image repository to the new `private-cloud.registry.mendix.com` repository, run the following command:
+To allow the Operator to manage its dependency versions, add the `operatorversions` resource to the `mendix-operator` role.
+
+Search for the `mendix-operator` Role in the OpenShift web console and open it for editing, or run the following command to start editing the `mendix-operator` Role:
 
 ```shell
-kubectl -n $OPERATOR_NAMESPACE get storageplan -o yaml | \
-    sed "s#image: quay.io/digital_ecosystems/storage-provisioner#image: private-cloud.registry.mendix.com/storage-provisioner#" | \
-    kubectl -n $OPERATOR_NAMESPACE apply -f -
+kubectl -n $OPERATOR_NAMESPACE edit role mendix-operator
 ```
 
-Alternatively, you can manually replace the image in all Storage Plans by running:
+Find the following resource (containing `apiGroups`: `privatecloud.mendix.com`):
+```yaml
+- apiGroups:
+  - privatecloud.mendix.com
+  resources:
+  - '*'
+  - builds
+  - runtimes
+  - mendixapps
+  - operatorconfigurations
+  - endpoints
+  - storageplans
+  - storageinstances
+  verbs:
+  - '*'
+```
+
+and add an `operatorversions` resource to the list of resources:
+
+```yaml
+- apiGroups:
+  - privatecloud.mendix.com
+  resources:
+  - '*'
+  - builds
+  - runtimes
+  - mendixapps
+  - operatorconfigurations
+  - endpoints
+  - storageplans
+  - storageinstances
+  - operatorversions # add this line
+  verbs:
+  - '*'
+```
+
+Save the role to apply the changes.
+
+#### 2.2.7 Update the Storage Plan provisioners
+
+{{% alert type="info" %}}
+Only follow this step when upgrading from Mendix Operator versions 1.0.\* to 1.7.\*.
+{{% /alert %}}
+
+Run the following command:
 
 ```shell
-kubectl -n $OPERATOR_NAMESPACE edit storageplan
+for PROVISIONER in basic postgres96 minio s3 sqlserver2017 cos
+do
+   echo "Upgrading $PROVISIONER Storage Plans..."
+   kubectl -n $OPERATOR_NAMESPACE get storageplan -o=jsonpath="{range .items[*]}{.metadata.name}{' '}{.spec.create.image}{'\n'}{end}" | \
+       grep ":${PROVISIONER}-rhel" | while read -r STORAGEPLAN
+   do
+       UPGRADE_STORAGEPLAN=$(echo $STORAGEPLAN | cut -d " " -f1)
+       echo "Upgrading $UPGRADE_STORAGEPLAN Storage Plan"
+       kubectl -n $OPERATOR_NAMESPACE patch storageplan $UPGRADE_STORAGEPLAN --type=merge -p \
+           "{\"spec\":{\"provisioner\":\"$PROVISIONER\",\"create\":{\"image\":\"\"},\"delete\":{\"image\":\"\"}}}"
+   done
+done
 ```
 
-and replacing `quay.io/digital_ecosystems` with `private-cloud.registry.mendix.com`.
-
-#### 2.2.7 Start the Mendix Operator
+#### 2.2.8 Start the Mendix Operator
 
 To start the updated version of the Mendix Operator, run:
 
@@ -253,10 +304,10 @@ The StatefulSets should be cleaned up manually as documented in the [Cleanup pha
 
 {{% /alert %}}
 
-#### 2.2.8 Cleanup Phase{#cleanup-phase}
+#### 2.2.9 Cleanup Phase{#cleanup-phase}
 
 {{% alert type="info" %}}
-Follow this step when upgrading from Mendix Operator 1.0.\* only.
+Follow this step when upgrading from Mendix Operator version 1.0.\* only.
 {{% /alert %}}
 
 Delete StatefulSets from the Namespace where the Operator was installed:
@@ -267,7 +318,7 @@ kubectl -n $OPERATOR_NAMESPACE delete --all statefulsets
 
 These StatefulSets were replaced with deployments when the new version of the Operator was started.
 
-## 3 Upgrading to Mendix Gateway Agent 1.6.0{#agent-latest}
+## 3 Upgrading to Mendix Gateway Agent 1.7.0{#agent-latest}
 
 {{% alert type="info" %}}
 
@@ -277,11 +328,70 @@ Upgrading the Mendix Gateway Agent is only possible if the cluster was originall
 
 {{% /alert %}}
 
-Before upgrading to the Mendix Gateway Agent 1.6.0, first [upgrade](#operator-latest) the Mendix Operator to the latest version
+### 3.1 Preparation
+
+Before upgrading to Mendix Gateway Agent version 1.7.0, first [upgrade](#operator-latest) the Mendix Operator to the latest version
 and set the `OPERATOR_NAMESPACE` variable in your Bash terminal as described above.
 
-Run the following command to switch to the Mendix Agent version 1.6.0:
+Check the current version of the Agent by running the following command:
+
+```shell
+kubectl -n $OPERATOR_NAMESPACE get deployment mendix-agent -o=jsonpath='{.spec.template.spec.containers[].image}' 
+```
+
+The image name will look similar to `private-cloud.registry.mendix.com/mendix-agent:{VERSION}` or `quay.io/digital_ecosystems/mendix-agent:{VERSION}`.
+
+Only follow the steps applicable to your currently installed version of the Mendix Agent.
+
+For example, if the image name is `quay.io/digital_ecosystems/mendix-agent:1.6.0`, follow only the steps for upgrading from Mendix Agent 1.6.\*.
+
+Some upgrade steps are only required when upgrading from older versions of the Mendix Gateway Agent.
+There is a notice on these steps indicating which upgrade paths they apply to and for which paths the step should be skipped.
+
+#### 3.2 Update the Kubernetes Role
+
+#### 3.2.1 Update the Kubernetes Role for OperatorVersions CRD
+
+{{% alert type="info" %}}
+Follow this step when upgrading from Mendix Gateway Agent versions 1.0.\* to 1.6.\* only.
+{{% /alert %}}
+
+To allow the Mendix Gateway Agent to report and manage dependency versions for the Mendix Operator, add the `operatorversions` resource to the `mendix-agent` role.
+
+Search for the `mendix-agent` Role in the OpenShift web console and open if for editing, or run the following command to start editing the `mendix-agent` Role:
+
+```shell
+kubectl -n $OPERATOR_NAMESPACE edit role mendix-agent
+```
+
+Find the following resource (containing `apiGroups`: `privatecloud.mendix.com`):
+```yaml
+- apiGroups:
+  - privatecloud.mendix.com
+  resources:
+  - mendixapps
+  verbs:
+  - '*'
+```
+
+and add an `operatorversions` resource to the list of resources:
+
+```yaml
+- apiGroups:
+  - privatecloud.mendix.com
+  resources:
+  - mendixapps
+  - operatorversions # add this line
+  verbs:
+  - '*'
+```
+
+Save the role to apply the changes.
+
+#### 3.3 Upgrading the Mendix Gateway Agent Deployment
+
+Run the following command to switch to the Mendix Agent version 1.7.0:
 ```shell
 kubectl -n $OPERATOR_NAMESPACE patch deployment mendix-agent -p \
-  '{"spec":{"template":{"spec":{"containers":[{"name":"mendix-agent","image":"private-cloud.registry.mendix.com/kubernetes-agent:1.6.0"}]}}}}'
+  '{"spec":{"template":{"spec":{"containers":[{"name":"mendix-agent","image":"private-cloud.registry.mendix.com/kubernetes-agent:1.7.0"}]}}}}'
 ```

@@ -21,7 +21,7 @@ You can switch the alerts on and off for each environment to which you are entit
 Before starting this how-to, make sure you have completed the prerequisites described below:
 
 * You need an **Application Operator**, **Business Engineer**, or **Scrum Master** role
-* In the case that a Company Admin has defined a new App Team role, that role must have the App Team **Edit** permission for **Monitor**    
+* In the case that a [Mendix Admin](/developerportal/control-center/index#members) has defined a new App Team role, that role must have the App Team **Edit** permission for **Monitor**    
     
 ## 3 Receive Alerts
 
@@ -70,9 +70,8 @@ You can manage the alerts by yourself, follow these steps:
 * [Alerts](monitoring-application-health)
 * [Application Trends in Mendix Cloud v3](trends)
 * [Application Trends in Mendix Cloud v4](trends-v4)
-* [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy)
 * [Mendix Cloud v4](/developerportal/deploy/mxcloudv4)
-* [Company & App Roles](/developerportal/company-app-roles/index)
+* [App Roles](/developerportal/collaborate/app-roles)
 * [Node Permissions](/developerportal/deploy/node-permissions) 
-* [Technical Contact](/developerportal/company-app-roles/technical-contact)
+* [Technical Contact](/developerportal/collaborate/app-roles#technical-contact)

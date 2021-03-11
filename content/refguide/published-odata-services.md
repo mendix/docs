@@ -2,6 +2,8 @@
 title: "Published OData Services"
 parent: "integration"
 tags: ["studio pro"]
+aliases:
+    - /refguide/consumed-odata-services.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -132,8 +134,6 @@ not get an error. However, the data that the client receives will not be exactly
 what is stored in your database, because these characters have been replaced.
 
 Default value: *No*
-
-This property is available in Studio Pro 8.12.0 and later.
 
 ### 4.3 Public Documentation
 

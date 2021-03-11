@@ -11,6 +11,27 @@ These release notes cover changes to deployment to [Mendix Cloud](/developerport
 For information on the current status of deployment to Mendix Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
 
+## 2021
+
+### March 3rd, 2021
+
+* We updated the [deploy API](/apidocs-mxsdk/apidocs/deploy-api), [Build API](/apidocs-mxsdk/apidocs/build-api), [Team Server API](/apidocs-mxsdk/apidocs/team-server-api), [Backups API V2](/apidocs-mxsdk/apidocs/backups-api), and [Backups API V1](/apidocs-mxsdk/apidocs/backups-api-v1) to:
+    * add json validation
+    * add stricter API path validation (for example, a trailing `/` on the API path will result in `API not found`)
+    * return differently formatted error messages for unhandled or unexpected errors
+    * the package name in the [Upload Package](/apidocs-mxsdk/apidocs/deploy-api#upload-package) call of the deploy API must be part of the query — it can no longer be passed in the body of the request
+
+If you encounter errors using APIs, please ensure that the format matches the documentation exactly before contacting Mendix Support. Additional or amended headers or request bodies may cause the API to fail.
+
+### February 22nd, 2021
+
+* We have released a major improvement to the technology underpinning our integration with Datadog. This adds the following features:
+    * tracing program flow (see https://docs.datadoghq.com/tracing/setup_overview/setup/java for information on how Datadog does this)
+    * redacting email addresses in Datadog logs
+
+    You need to redeploy of your app to implement these changes. All your existing metrics will continue to be sent to Datadog. There will be some minor changes around how database rate and counter metrics, but this does not affect gauges. See [Datadog for v4 Mendix Cloud](/developerportal/operate/datadog-metrics) for more information.
+
+
 ## 2020
 
 ### December 17th, 2020

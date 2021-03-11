@@ -5,7 +5,7 @@ category: "Working with Data"
 menu_order: 10
 tags: ["studio", "domain model"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#The anchor entity-types below is mapped, so it should not be removed or changed.
+#The anchor <entity-types> below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -30,8 +30,7 @@ The rows in the table are CDs. So, a *CD* is an *entity*. A specific CD like "Ho
 
 To view the **Domain Models** of your app in Studio, click the **Domain Models** icon in the left menu bar of Studio.
 
-{{% image_container width="350" %}}![](attachments/domain-models/domain-model.png)
-{{% /image_container %}}
+![](attachments/domain-models/domain-model.png)
 
 After opening a domain model, you will see an overview of all entities, attributes, and associations. The complexity of your domain model depends on the complexity of your app.
 

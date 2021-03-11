@@ -22,7 +22,7 @@ We recommend keeping the **Runtime port** in **Project Settings** > **Edit** on 
 
 If you are using Windows, make sure your WiFi network is set to **Private**. Windows often sets WiFi to **Public** by default, which blocks incoming connections.
 
-### 2.3 Error: Unable to Load Script
+### 2.3 Error: Unable to Load Script {#unable-load-script}
 
 Depending on your device settings and network characteristics, the Make it Native app can fail to connect to the runtime. If so, the Make it Native app can show the following error messages:
 
@@ -50,7 +50,11 @@ For the Windows Defender firewall, the most common firewall, do the following:
 
 1. Windows distinguishes between two types of networks: private and public. Windows Defender Firewall applies stricter regulations for public networks. If, and only if, you are connected to a trusted network, configure the network as **Private** on your computer.
 
-## 3 Read More
+## 3 Configure Parallels
+
+To use Studio Pro on a Mac device, you will first need to install and configure Parallels. For more information, see [How to Configure Parallels](using-mendix-studio-pro-on-a-mac).
+
+## 4 Read More
 
 * [How to Debug Native Mobile Apps (Advanced)](native-debug)
 * [Native Builder Reference Guide](/refguide/native-builder)

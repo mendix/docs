@@ -35,7 +35,7 @@ Use "app" or "application" when referring to apps in general. Do not capitalize 
 <br />
 The full word "application" has a more well-rounded meaning to it (as in, web and mobile apps), whereas "app" may suggest just mobile apps to the reader. Accordingly, it can be better to use "application" at the beginning of documents and then switch to "app" later on. We want to make it clear that Mendix is not just for building mobile apps, but all kinds of applications.<br />
 <br />
-It is useful to differentiate "app" from "app project" when referring to what the user works on for project management. For more information, see [app project](#app-project).
+It is sometimes useful to differentiate "app" from "app project" when referring to what the user works on for project management, especially when **Project** is still used in some UI text. However, "app" is prioritized for usage over "app project" (and "project" should not be used at all except when describing UI text). For more information, see [app project](#app-project).
 {{% /alert %}}
 
 ### App ID
@@ -46,22 +46,10 @@ Always capitalize.
 
 ### app project {#app-project}
 
-"App" should be used instead of "project" as much as possible (despite the fact that "project" is still used throughout Studio Pro). 
-
-Use "app project" where necessary for clarification (for example, for project management-related tasks in the Developer Portal).
+Use "app project" where necessary for clarification (for example, for project management-related tasks in the Developer Portal). However, "app" is prioritized for usage over "app project" (and "project" should not be used at all except when describing UI text).
 
 {{% alert type="success" %}}
 Enter the email addresses of all the co-workers you want to invite to your app project.
-{{% /alert %}}
-
-### App Store component
-
-This is the generic name of the individual add-on, widget, module, connector, app template, etc. available in the Mendix App Store.
-
-{{% alert type="info" %}}
-Do not use "App Store item."<br />
-<br />
-Use "App Store content" (and not "App Store components") to describe in general what is available in the Mendix App Store.
 {{% /alert %}}
 
 ### App Team
@@ -75,9 +63,6 @@ Capitalize, because **Team** is capitalized in the Developer Portal UI.
 This is the term to use to reflect the create-new-app flow UI in the Developer Portal.
 
 There are two inconsistencies in other areas of the platform UI:
-
-* When creating a new company app template to add to the App Store as a component, you have to select **Starter Apps** as the **Sub category**
-* In the App Store, "sample apps" continues to be the menu item for app templates
 
 {{% alert type="info" %}}
 Do not use "starter app."
@@ -107,7 +92,7 @@ Capitalize in all instances (to parallel "Team Server" and "Model Server").
 
 ### Business Engineer
 
-This is an app project role. As such, it differs from the term "business developer," which is used in the [Mendix Platform Evaluation Guide](https://www.mendix.com/evaluation-guide/) as a generic role and persona term.
+This is an app project role. As such, it differs from the term "business developer," which is used in the Mendix Platform Evaluation Guide as a generic role and persona term.
 
 {{% alert type="info" %}}
 Capitalize in all instances.
@@ -119,12 +104,6 @@ Capitalize in all instances.
 Use "Buzz" on its own, unless you need to specify "Company Buzz" or "App Buzz" for context.<br />
 <br />
 Do not use "the Buzz" (unless the context demands it).
-{{% /alert %}}
-
-### Company Admin
-
-{{% alert type="info" %}}
-Capitalize in all instances.
 {{% /alert %}}
 
 ### Company Contact
@@ -201,6 +180,20 @@ Do not capitalize.
 Capitalize the name of the app ("Make It Native"), but do not capitalize "app."
 {{% /alert %}}
 
+### Marketplace component
+
+This is the generic name of the individual add-on, widget, module, connector, app template, etc. available in the Mendix Marketplace.
+
+{{% alert type="info" %}}
+Do not use "Marketplace item."
+{{% /alert %}}
+
+### Mendix Admin {#mendix-admin}
+
+{{% alert type="info" %}}
+Capitalize in all instances.
+{{% /alert %}}
+
 ### Mendix Assist {#mendix-assist}
 
 {{% alert type="info" %}}
@@ -259,7 +252,7 @@ Do not capitalize "points."
 
 ### Mendix Platform Evaluation Guide
 
-Published [here](https://www.mendix.com/evaluation-guide/).
+Published [here](https://www.mendix.com/evaluation-guide/welcome).
 
 {{% alert type="info" %}}
 Use the full name when referencing, not just "Evaluation Guide."
@@ -397,7 +390,7 @@ Capitalize to refer to the collection of [Mendix APIs](/apidocs-mxsdk/apidocs/).
 Capitalize in all instances.
 {{% /alert %}}
 
-### private/public Mendix App Store 
+### private/public Mendix Marketplace 
 
 {{% alert type="info" %}}
 Do not capitalize "private" and "public" as qualifiers.
@@ -436,7 +429,7 @@ Capitalize in all instances.
 ### Scrum Master
 
 {{% alert type="info" %}}
-This is the correct capitalization for this [App Team role](/developerportal/company-app-roles#app-team-roles)
+This is the correct capitalization for this [App Team role](/developerportal/collaborate/app-roles#app-team-roles)
 {{% /alert %}}
 
 ### Sprint
@@ -447,7 +440,7 @@ Capitalize in all instances.
 
 ### Studio Pro landing page
 
-The Studio Pro landing page refers to the page that contains **My Apps**, **App Store**, and **Developer Portal** tabs. 
+The Studio Pro landing page refers to the page that contains **My Apps**, **Marketplace**, and **Developer Portal** tabs. 
 
 {{% alert type="info" %}}
 Capitalize "Studio Pro".
@@ -468,7 +461,7 @@ Capitalize in all instances.
 ### Technical Contact
 
 {{% alert type="info" %}}
-Capitalize in all instances of this [role](/developerportal/company-app-roles/technical-contact).
+Capitalize in all instances of this [role](/developerportal/collaborate/app-roles#technical-contact).
 {{% /alert %}}
 
 ### Theme Customizer

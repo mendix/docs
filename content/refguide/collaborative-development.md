@@ -12,13 +12,7 @@ Collaborative development is the process of sharing app model changes when a tea
 
 {{% alert type="info" %}}
 
-If you get a **No Development Line Selected** message when opening your app in Studio, make sure you enable a development line for it. For more information, see [Enabling Studio for a Development Line](#active-branch).
-
-{{% /alert %}}
-
-{{% alert type="warning" %}}
-
-Collaborative development is enabled by default for new apps created via the Developer Portal. If you are upgrading your project from Mendix 7 to 8, make sure you have followed the steps in [Moving from Desktop Modeler Version 7 to Studio Pro 8](moving-from-7-to-8). 
+If you get a **Mendix Studio is not enabled for this app project yet** message when opening your app in Studio, make sure you enable a development line for it. For more information, see [Enabling Studio for a Development Line](#active-branch).
 
 {{% /alert %}}
 
@@ -90,11 +84,9 @@ You can see all the changes committed to the current development line via **Vers
 
 ![History Dialog Box](attachments/history-dialog/history-dialog.png)
 
-## 5 Managing Development Lines in Studio Pro {#managing-branches}
+## 5 Managing Studio on Development Lines {#managing-studio}
 
-In Studio Pro, you can enable or disable Studio for a development line (the main line or a branch line). You can also create and delete branch lines. 
-
-For collaborative development you need to enable Studio for one of development lines. 
+In Studio Pro, you can enable or disable Studio for a development line (the main line or a branch line). For collaborative development you need to enable Studio for one of development lines. 
 
 ### 5.1 Enabling Studio for a Development Line {#active-branch}
 
@@ -143,7 +135,11 @@ To disable Studio, do the following:
 
 Studio is disabled for your project.
 
-### 5.2 Creating a New Branch Line
+## 6 Managing Development Lines {#managing-branches}
+
+You can create and delete branch lines. 
+
+### 6.2 Creating a New Branch Line
 
 To create a new branch line, do the following: 
 
@@ -165,7 +161,7 @@ To create a new branch line, do the following:
 
 You have created a new branch line.   
 
-### 5.3 Deleting a Branch Line
+### 6.3 Deleting a Branch Line
 
 To delete a branch line, do the following:
 

@@ -4,6 +4,8 @@ parent: "mxcloudv4"
 menu_order: 10
 description: "How to migrate your app from a Mendix Cloud v3 node to a Mendix Cloud v4 node."
 tags: ["App","Migrate","Developer Portal","v3","v4","Node"]
+aliases:
+    - /developerportal/howto/migrating-to-v4.html
 ---
 
 ## 1 Introduction
@@ -20,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Ensure that your app is on a supported version of Mendix, that is **Mendix version 6.0 or above**, otherwise the migration will fail – see [Moving from Modeler Version 5 to 6](/refguide6/moving-from-5-to-6) for help if your app is on a version of Mendix below 6.0
 * Have a [Mendix Cloud](mendix-cloud-deploy) v4 node available (to request a licensed v4 Cloud Node, contact your Customer Success Manager (CSM))
-* Have the [Technical Contact](/developerportal/company-app-roles/technical-contact) role for both your existing v3 and available v4 Cloud Nodes
+* Have the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) role for both your existing v3 and available v4 Cloud Nodes
 * Create two new temporary Free Apps without Free App environments – instructions for unlinking a Free App from its environment are here: [Licensing Mendix Cloud Apps](licensing-apps#unlink)
 
 ## 3 Migration considerations

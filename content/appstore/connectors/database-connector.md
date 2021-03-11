@@ -1,8 +1,8 @@
 ---
 title: "Database"
 category: "Connectors"
-description: "Describes the configuration and usage of the Database connector, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "database connector", "jdbc", "hikari", "query" ]
+description: "Describes the configuration and usage of the Database connector, which is available in the Mendix Marketplace."
+tags: ["marketplace", "app store", "marketplace component", "app store component", "database connector", "jdbc", "hikari", "query" ]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -37,7 +37,7 @@ These are the prerequisites for using this connector:
 
 ### 3.1 Usage
 
-Once you have imported the Database Connector into your app project, you will have the **Database Connector** available in the **Toolbox**. The connector supports four actions: **Execute query**, **Execute statement**, **Execute parameterized query**, and **Execute parameterized statement**. To use any of these in your Mendix application, drag them into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
+Once you have imported the Database Connector into your app, you will have the **Database Connector** available in the **Toolbox**. The connector supports four actions: **Execute query**, **Execute statement**, **Execute parameterized query**, and **Execute parameterized statement**. To use any of these in your Mendix application, drag them into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
 
 The **Execute query** and **Execute parameterized query** actions should be used for querying objects with a `SELECT` SQL command. The **Execute statement** and **Execute parameterized statement** actions should be used for all other commands (for instance, `INSERT`, `UPDATE`, or `DELETE`).
 
@@ -81,7 +81,7 @@ These are the results of the actions:
 If you intend to connect to SQL Server using integrated security, please be aware that the JDBC driver in the **userlib** folder needs to match the version supplied with the Mendix Platform (via the **runtime/bundles/** folder inside the Mendix installation directory).
 {{% /alert %}}
 
-## 6 Developing This App Store Component
+## 6 Developing This Marketplace Component
 
 1. Clone [https://github.com/mendix/database-connector.git](https://github.com/mendix/database-connector.git).
 2. Open the *DatabaseConnector.mpr* in the Desktop Modeler or Studio Pro.

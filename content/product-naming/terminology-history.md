@@ -22,6 +22,12 @@ This was used to described a large part of the functionality of the Developer Po
 
 This is now replaced by the [Mendix SSO](/appstore/modules/mendix-sso) module.
 
+## App Store
+
+{{% alert type="info" %}}
+Replaced by [Mendix Marketplace](main-product-names#marketplace).
+{{% /alert %}}
+
 ## Cloud Portal {#cloud-portal}
 
 This is an internal term and should not be used in the documentation or publicly, as it has not been agreed on or branded. It no longer appears in the Mendix Documentation or *Mendix Platform Evaluation Guide*.
@@ -34,6 +40,12 @@ The Mendix Community Edition was introduced with Mendix 5.18, which included the
 
 {{% alert type="info" %}}
 Replaced by [Free Edition](other-terms#free-edition).
+{{% /alert %}}
+
+## Company Admin
+
+{{% alert type="info" %}}
+Replaced by [Mendix Admin](other-terms#mendix-admin).
 {{% /alert %}}
 
 ## delighter

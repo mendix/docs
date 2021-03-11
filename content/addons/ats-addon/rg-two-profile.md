@@ -29,7 +29,7 @@ To change your **Full name** from the **Edit Profile** page, type a new one in a
 
 {{% alert type="info" %}}
 
-Full name is displayed in various places in the app, e.g. in the test run history. This is not the user name which is used to log in.
+Full name is displayed in various places in the app, for example, in the test run history. This is not the user name which is used to log in.
 
 {{% /alert %}} 
 

@@ -66,7 +66,7 @@ The [Mendix Academy](https://academy.mendix.com/link/home) offers both self-pace
 
 ## 9 Forum
 
-In the [Mendix Forum](community-tools/mendix-forum), you can interact with the Mendix community to help out with [questions](https://forum.mendixcloud.com/link/questions/) and answers on the best ways to use Mendix as well as propose [ideas](https://forum.mendixcloud.com/link/ideas/) for improving the Mendix Platform:
+In the [Mendix Forum](community-tools/mendix-forum), you can interact with the Mendix community to help out with [questions](https://forum.mendixcloud.com/link/questions) and answers on the best ways to use Mendix as well as propose [ideas](https://forum.mendixcloud.com/link/ideas) for improving the Mendix Platform:
 
 ![](attachments/developerportal-forum.jpg)
 

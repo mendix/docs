@@ -459,7 +459,19 @@ Afterwards, the contents of the *web.config* file will be similar to the followi
 
 To make sure the correct application root URL is used within your web services, you must make sure the host header contains the original host header from the client request. To make sure the host header is preserved, follow either of these steps.
 
-1. Via command prompt:
+1. Via IIS Manager:
+
+    1. Select the **Server** in the **Connections** pane.
+
+    2. Double-click the **Configuration editor** feature.
+
+    3. In the **Section** drop-down menu, select *system.webServer/proxy*.
+
+    4. Set the **preserveHostHeader** option to *True*.
+
+    5. In the **Actions** pane, click **Apply**.
+
+2. Via command prompt:
 
     1. Click **Start**, and then click **All Programs**.
 
@@ -476,19 +488,6 @@ To make sure the correct application root URL is used within your web services, 
         ```batchfile
         appcmd.exe set config -section:system.webServer/proxy /preserveHostHeader:"True" /commit:apphost
         ```
-
-2. Via IIS Manager:
-
-    1. Select the **Server** in the **Connections** pane.
-
-    2. Double-click the **Configuration editor** feature.
-
-    3. In the **Section** drop-down menu, select *system.webServer/proxy*.
-
-    4. Set the **preserveHostHeader** option to *True*.
-
-    5. In the **Actions** pane, click **Apply**.
-
 
 ## 7 Troubleshooting
 

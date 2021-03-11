@@ -22,9 +22,7 @@ Or, you can turn on the **New Navigation** option via the menu beneath your prof
 
 ![](attachments/new-navigation.jpg)
 
-On the right side of the toolbar with the new navigation, you can search and access your [Mendix Profile](/developerportal/mendix-profile/). You can also click this icon to create a new app:
-
-![](attachments/new-app.jpg)
+On the right side of the toolbar with the new navigation, you can search and access your [Mendix Profile](/developerportal/mendix-profile/). You can also click the **+** icon to create a new app.
 
 On the left side of the toolbar with the new navigation, you open an access menu by clicking the **Switch-to** menu:
 

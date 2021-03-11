@@ -11,7 +11,7 @@ These are important terms used by Mendix's strategic partners.
 For more information on strategic partners, see:
 
 * [Strategic Partners](https://www.mendix.com/evaluation-guide/strategic-partners/) in the *Mendix Platform Evaluation Guide*
-* [Strategic Partners Guide](/partners/index)
+* [Strategic Partners Guide](/partners/)
 * [Quality Add-ons Guide](/addons/index)
 
 ### Under Each Term

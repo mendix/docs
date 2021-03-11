@@ -31,7 +31,7 @@ Mendix Data Hub has components to enable the flexible sharing of datasets. The f
 4. Consume registered datasets in Studio Pro to create new apps. 
 5. Upon deployment of an app in Studio Pro, registered services are updated in the Data Hub Catalog to show published dependencies and consumed dependencies, and a connection is established to the shared data sources.
 6. The consuming application directly connects to the source system (as defined in the published service metadata) to use the data associated with the consumed dataset.
-7. The [Data Hub Landscape](data-hub-landscape/index) enables users to see the dependencies between components and the relevance of data and to ascertain data lineage.
+7. The [Data Hub Landscape](data-hub-landscape/) enables users to see the dependencies between components and the relevance of data and to ascertain data lineage.
 
 ## 3 Roles in Data Hub{#data-hub-roles}
 

@@ -5,7 +5,7 @@ tags: ["marketplace", "app store", "connector", "module", "add on", "widget"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes made to the [Mendix Marketplace](/appstore/index).
+These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2021
 

@@ -42,7 +42,7 @@ The collaborative development process between Studio Pro and Studio consists of 
 
 {{% alert type="info" %}}
 
-When the Studio Pro user wants to deploy the app to the cloud, they click the **Run** button. The commit is done automatically during this process and step five is executed. 
+When the Studio Pro user wants to deploy the app to the cloud, they click the **Publish** button. The commit is done automatically during this process and step five is executed. 
 
 {{% /alert %}}
 
@@ -66,7 +66,7 @@ To merge the latest changes stored in the Team Server (from both Studio users an
 
 ### 4.2 Committing Latest Changes
 
-To commit your latest project changes and make them available to other users, open **Changes** and click **Commit**. The process of deploying your app (when you click the **Run** button) will also trigger a commit. 
+To commit your latest project changes and make them available to other users, open **Changes** and click **Commit**. The process of deploying your app (when you click the **Publish** button) will also trigger a commit. 
 
 {{% alert type="info" %}}
 

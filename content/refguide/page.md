@@ -47,8 +47,8 @@ To create a new page, do the following:
 
 1.  In the [Project Explorer](project-explorer), right-click the module or a folder you want to create a page in and select **Add page**:
 
-    {{% image_container width="350" %}}![](attachments/page/add-page.png)
-    {{% /image_container %}}
+    ![](attachments/page/add-page.png)
+    
 
 2.  In the **Create Page** dialog box, fill in the **Page name** and select a **Navigation layout**.
 

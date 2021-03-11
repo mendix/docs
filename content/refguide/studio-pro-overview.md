@@ -40,7 +40,7 @@ For more information on menus, see [Menus](menus).
 
 ### 2.2 Run & View App {#run-and-view}
 
-You can deploy your app by clicking the **Run** or **Run locally** buttons. To view your deployed app, click the **View** button. 
+You can deploy your app by clicking the **Publish* or play (**Run locally**) buttons. To view your deployed app, click the **View** button. 
 
 For more information on deployment in Mendix, see [Deployment](/developerportal/deploy).
 

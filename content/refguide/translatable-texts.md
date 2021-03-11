@@ -23,7 +23,11 @@ These *translatable texts* include the following:
 
 You can see the language you are currently working in at the bottom right of the screen.
 
+{{% image_container width="350" %}}
+
 ![Language Status](attachments/language/language-status.png)
+
+{{% /image_container %}}
 
 When you have multiple languages set up in your app, you can choose a language to work in by doing one of the following:
 
@@ -45,8 +49,8 @@ If there is no text in the default language, the end-user will see `[no translat
 
 The **Language** menu allows you to manage additional languages and translations for your app. This includes features to help you to translate a text in all places where it appears with a single change instead of having to change each occurrence individually:
 
-{{% image_container width="300" %}}![Language Menu](attachments/language/language-menu.png)
-{{% /image_container %}}
+![Language Menu](attachments/language/language-menu.png)
+
 
 ### 3.1 Menu Items Overview
 

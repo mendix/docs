@@ -10,8 +10,8 @@ tags: ["Studio Pro", "view menu", "top bar"]
 
 Via the **Edit** menu you can perform various actions, such cut/copy/paste or search where a particular document is used. You can also open the [Preferences](preferences-dialog) dialog that contains user-specific settings. 
 
-{{% image_container width="300" %}}![Edit Menu](attachments/edit-menu/edit-menu.png)
-{{% /image_container %}}
+![Edit Menu](attachments/edit-menu/edit-menu.png)
+
 
 ## 2 Menu Item Overview
 

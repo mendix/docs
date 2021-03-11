@@ -23,7 +23,7 @@ You can use this module when you want your application's end-users to sign in wi
 * App end-user access management that is handled in the [Mendix Developer Portal](/developerportal/)
 
 {{% alert type="info" %}}
-[Mendix Admins](/developerportal/control-center/index#company) can manage [groups](/developerportal/control-center/index#groups) that grant app permissions to groups of users.
+[Mendix Admins](/developerportal/control-center/#company) can manage [groups](/developerportal/control-center/#groups) that grant app permissions to groups of users.
 {{% /alert %}}
 
 ### 1.3 Limitations

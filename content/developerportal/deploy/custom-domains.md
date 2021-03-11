@@ -257,4 +257,4 @@ For certain use cases, it is important for the Mendix runtime to know the public
 * [Mendix Cloud: Deploy](mendix-cloud-deploy)
 * [Licensing Mendix Cloud Apps](licensing-apps)
 * [App Roles](/developerportal/collaborate/app-roles)
-* [Control Center](/developerportal/control-center/index)
+* [Control Center](/developerportal/control-center/)

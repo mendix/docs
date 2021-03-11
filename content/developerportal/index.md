@@ -48,7 +48,7 @@ In [People](mendix-profile/index#connections), you can view the other members of
 
 ## 6 Community
 
-In [Community](community-tools/index), you can explore various resources for the vibrant Mendix community of users, from blog posts about how Mendix is being used in the wider world of low-code development to the [Mendix job board](/developerportal/community-tools/mendix-job-board) and [Mendix Shop](https://shop.mendix.com/):
+In [Community](community-tools), you can explore various resources for the vibrant Mendix community of users, from blog posts about how Mendix is being used in the wider world of low-code development to the [Mendix job board](/developerportal/community-tools/mendix-job-board) and [Mendix Shop](https://shop.mendix.com/):
 
 ![](attachments/developerportal-community.jpg)
 

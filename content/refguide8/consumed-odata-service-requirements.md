@@ -100,6 +100,8 @@ There are two types of licenses currently available:
 
 The number of consumed objects per day is reset at midnight in the timezone of the Mendix Runtime scheduler (which can be defined in the app [Project Settings](project-settings#scheduled)).
 
+[Free apps](/developerportal/deploy/licensing-apps-outside-mxcloud) in Mendix 8.12.3 and later do not have this limitation. This also means that you can run your app from the Studios without Data Hub license limitations.
+
 {{% alert type="warning" %}}
 Contact your [Mendix Admin](/developerportal/control-center/index#company) or Data Hub Admin to find out what type of license your organization has.
 {{% /alert %}}

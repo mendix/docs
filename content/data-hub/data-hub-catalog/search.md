@@ -147,7 +147,7 @@ The number of items satisfying the search criteria (search string plus filters) 
 
 If no search string is specified, all registered assets will be listed in the search results pane in order of popularity (number of connections to the asset).
 
-When an item in the search results is selected, the **Catalog** tab will display the **Details** of the asset and the **Landscape** tab will show the network of connections and dependencies of the selected item in the [Data Hub Landscape](../data-hub-landscape/index).
+When an item in the search results is selected, the **Catalog** tab will display the **Details** of the asset and the **Landscape** tab will show the network of connections and dependencies of the selected item in the [Data Hub Landscape](/data-hub/data-hub-landscape/).
 
 ### 4.2 Selected Asset Details {#search-details}
 
@@ -282,4 +282,4 @@ This zip file comprise the folder: `DataHub_SAMPLE_EmployeeDirectory_1.1.0_OData
 
 ## 6 Viewing Search Results in the Data Hub Landscape
 
-When an item is selected in the search results pane, you can click the [Landscape](../data-hub-landscape/index) tab to see the network of connections and dependencies for the selected asset. This enables you to graphically see the context and relevance for a selected item and the data for the exposed datasets.
+When an item is selected in the search results pane, you can click the [Landscape](/data-hub/data-hub-landscape/) tab to see the network of connections and dependencies for the selected asset. This enables you to graphically see the context and relevance for a selected item and the data for the exposed datasets.

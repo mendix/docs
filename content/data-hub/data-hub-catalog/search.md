@@ -52,7 +52,7 @@ By default, search results in the Data Hub Catalog are filtered to show only hit
 The service URLs provide the locations of the service contract. In turn, these define the endpoints for exposed datasets (or entity sets) and attributes and thereby access to the associated datasets by the consuming apps. You obtain data source and dataset URI's from the search details for integration of the resource in other BI applications. 
 
 ### 2.5 Discoverability 
-When a data source is registered, by default, it is "published" for public use with the **Discoverable** setting in the Data Hub Catalog. When this is set, all users can find it and the view details and consume it. Owners and curators of a registered service can set a service to be non-discoverable, which means that it can only be found and consumed by the owners and is not visible to other users of the Catalog.
+When a data source is registered, by default, it is made available to other users with the **Discoverable** setting active in the Data Hub Catalog. When this is set, all users can find it and the view details and consume it. Owners of a registered service and curators can set a data source as non-discoverable, which means it is not visible to users unless they are the owner or a curator.
 
 ### 2.6 Tags 
 Tags help you to group services and datasets and categorize them (for example, by department, process, or use). You can use tags to refine the search and filter search results in the Data Hub Catalog by doing the following:
@@ -228,10 +228,10 @@ The data source metadata panel at the right of the asset details screen displays
 	{{% alert type="info" %}}Tags assigned at a data source level propagate down to the datasets and attributes exposed in the service.{{% /alert %}}
 * **Business Owner** – links to the business owner of the data fr the data source; this is added as a curation task
 * **Technical Owner** – technical contact of the app; by default this is the owner who registered the OData service. For apps hosted in the Mendix Cloud, the **Technical Owner** is the **Technical Contact** of the app in the Mendix Cloud
-* **Discoverability** – the discoverability of the asset so that other users can find it:
+* **Discoverability** – the discoverability of the asset by users:
 	* **Discoverable** – all users of the Data Hub Catalog and Studio Pro can see and consume the asset provided they meet the requirements of the **Classification**
 	* **Non-Discoverable** – the asset is not visible in the Catalog and only owners, Data Hub curators, and the Data Hub Admin can find, use, and curate the service. See [Curate Bar](#curate-bar) for changing **Discoverability** as an owner or curator.
-	  {{% alert type="info" %}}If an asset is set to **Non-discoverable** it will not appear in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Data Hub API.{{% /alert %}}
+	  {{% alert type="info" %}}A **Non-discoverable** asset is also not included in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Data Hub API.{{% /alert %}}
 * **Access Level** – shows the access classification of the service; end-users of the data associated with the datasets exposed in the service must have the appropriate [user role](/refguide/user-roles) to access the data:
 	* **Public** – classified as public and available to all users	
 	* **Internal** – restricted to the members of the organization

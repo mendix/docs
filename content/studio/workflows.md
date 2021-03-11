@@ -14,6 +14,8 @@ This functionality is in Beta. For more information on Beta products, see [Mendi
 
 Workflow is a visual language in Mendix Studios that allows you to build extendable processes. It is fully integrated with other visual languages, such as the microflow editor and page editor. 
 
+The main difference of workflows from [microflows](microflows) is a waiting aspect – the workflow is paused until it gets an input from an end-user. For example, an employee sends a travel request (triggering the start of the workflow) and then the workflow is paused until a manager approves the request by clicking a button. 
+
 To view the workflows of your app project in Studio, click the **Workflows** icon in the left menu bar:
 
 ![Workflow Icon](attachments/workflows/workflow-icon.jpg)
@@ -129,7 +131,7 @@ Elements in the **General** section help you control the workflow path, for exam
 
 ![General Section](attachments/workflows/general.jpg)
 
-{{% todo %}}[Retake the screenshot above with Jump to activity.]{{% /todo %}}
+{{% todo %}}[Retake the screenshot above with the Jump to activity.]{{% /todo %}}
 
 The elements of this section are described in the table below:
 

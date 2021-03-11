@@ -43,7 +43,7 @@ Before starting this how-to, make sure you have the following prerequisites:
 
 * MS IIS URL Rewrite installed (for more information, see [URL Rewrite](https://www.iis.net/downloads/microsoft/url-rewrite))
 
-* Java Runtime, version depending on your Mendix Server Distribution. See [System Requirements](https://docs.mendix.com)/refguide/system-requirements#7-3-java) for more information. 
+* Java Runtime, version depending on your Mendix Server Distribution. See [System Requirements](/refguide/system-requirements#7-3-java) for more information. 
 
 * The Mendix Deployment Archive (MDA) of your Mendix project
 

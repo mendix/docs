@@ -247,7 +247,7 @@ Rule | Name | Pattern | Rewrite URL
 1 | xas | `^(xas/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 2 | ws | `^(ws/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 3 | ws-doc | `^(ws-doc/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
-4 | ws-file | `^(file)(.*)` | `http://localhost:8080/{R:1}{R:2}`
+4 | file | `^(file)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 5 | link | `^(link/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 6 | rest | `^(rest/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 7 | rest-doc | `^(rest-doc/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
@@ -424,12 +424,24 @@ Afterwards, the contents of the *web.config* file will be similar to the followi
                     <match url="^(ws-doc/)(.*)" />
                     <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
                 </rule>
-                <rule name="ws-file" stopProcessing="true">
+                <rule name="file" stopProcessing="true">
                     <match url="^(file)(.*)" />
                     <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
                 </rule>
                 <rule name="link" stopProcessing="true">
                     <match url="^(link/)(.*)" />
+                    <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
+                </rule>
+                <rule name="rest" stopProcessing="true">
+                    <match url="^(rest/)(.*)" />
+                    <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
+                </rule>
+                <rule name="rest-doc" stopProcessing="true">
+                    <match url="^(rest-doc/)(.*)" />
+                    <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
+                </rule>
+                <rule name="debugger" stopProcessing="true">
+                    <match url="^(debugger/)(.*)" />
                     <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
                 </rule>
             </rules>

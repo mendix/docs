@@ -27,7 +27,7 @@ To display the **Data Hub** pane, click **View** > **Data Hub**:
 
 ## 2 Data Hub Pane in the Domain Model
 
-The Data Hub pane is used to search the Data Hub Catalog for entities that can be dragged and used in your app project and also display the external entities and the associated services that are consumed in your current model
+The Data Hub pane is used to search the Data Hub Catalog for entities that can be dragged and used in your app and also display the external entities and the associated services that are consumed in your current model
 
 ### 2.1 Data Hub Search
 

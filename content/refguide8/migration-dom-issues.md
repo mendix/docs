@@ -2,7 +2,7 @@
 title: "Troubleshooting DOM Changes"
 parent: "moving-from-7-to-8"
 menu_order: 10
-description: "This document explains the updated DOM structure for Mendix 8, and what that means for app projects' CSS."
+description: "This document explains the updated DOM structure for Mendix 8, and what that means for app's CSS."
 tags: ["DOM", "Widgets", "Themes", "Classes"]
 ---
 
@@ -18,7 +18,7 @@ When you upgrade to Mendix 8, DOM structure changes will also alter the correlat
 
 ## 3 Streamlined Custom Themes
 
-Before Mendix 8, the client provided a large amount of default styling if your app project lacked a theme. This made building your own theme difficult, as you needed to override the default styling. As of Mendix 8, all styling has been moved to AtlasUI. Now, building your own theme from scratch requires significantly less work.
+Before Mendix 8, the client provided a large amount of default styling if your app lacked a theme. This made building your own theme difficult, as you needed to override the default styling. As of Mendix 8, all styling has been moved to AtlasUI. Now, building your own theme from scratch requires significantly less work.
 
 If you have already built your own theme from scratch in an earlier version of Mendix, you might depend on the default styling (specifically the Bootstrap files and the **mxui.css** file) not included in Mendix 8 applications by default. For this case, Mendix provides legacy **mxui.css** and Bootstrap files with defaults in this [GitHub repository](https://github.com/mendix/legacy-mxui-css). Download files from this repository to enable your custom theme.
 

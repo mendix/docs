@@ -119,7 +119,7 @@ Click the **Properties** tab for the consumed OData service which displays the p
 ![](attachments/consumed-odata-service/consumed-odata-service-doc-properties.png)
 
 * **Entities** – the URL of the metadata defining the entities and associated datasets
-* **Documentation** – an additional description about this service for the current app project
+* **Documentation** – an additional description about this service for the current app
 * **Service name** – the name of the published OData service that is consumed
 * **Service version** – the version of the service that is consumed
 * **Service ID** – the unique identifier of the service in the Data Hub Catalog

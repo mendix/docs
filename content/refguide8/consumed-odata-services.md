@@ -21,7 +21,7 @@ For details on the features that a published OData service must support and how 
 
 ## 2 OData Services and External Entities
 
-When an external entity is used in an app project, the associated dataset for the entity is retrieved through the information in the consumed OData service contract and returned. 
+When an external entity is used in an app, the associated dataset for the entity is retrieved through the information in the consumed OData service contract and returned. 
 
 ### 2.1 External Entities
 

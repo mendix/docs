@@ -2,15 +2,15 @@
 title: "Stories"
 category: "Collaboration Tools"
 menu_order: 30
-description: "Describes how to manage the Sprints and stories for your app project."
+description: "Describes how to manage the Sprints and stories for your apps."
 tags: ["Stories", "Sprint", "Developer Portal"]
 ---
 
 ## 1 Introduction
 
-In **Stories**, you are able to manage Sprints, stories, and labels for your app project. These components are often used in an Agile development environment, in which teams work in short development cycles (Sprints) of 2–4 weeks.
+In **Stories**, you are able to manage Sprints, stories, and labels for your app. These components are often used in an Agile development environment, in which teams work in short development cycles (Sprints) of 2–4 weeks.
 
-By adding your Sprints to Mendix, you will have a clear overview of your tasks and can easily view the status of the development of your app project. You can create, refine, and prioritize user stories collaboratively using the stories' conversation threads. User stories can be estimated and organized into Sprints which can be monitored using Scrum boards and burndown charts.
+By adding your Sprints to Mendix, you will have a clear overview of your tasks and can easily view the status of the development of your app. You can create, refine, and prioritize user stories collaboratively using the stories' conversation threads. User stories can be estimated and organized into Sprints which can be monitored using Scrum boards and burndown charts.
 
 {{% alert type="info" %}}
 You can also manage the progress of tasks and Sprints from within Mendix Studio Pro via the [Stories pane](/refguide/stories-pane).
@@ -69,7 +69,7 @@ For more information on stories, see the [Story Actions](#story-actions) section
 Click **More** to access the following options::
 
 * **Import / Export to Excel** – opens the **Import / Export to Excel** page; for details, see the [Importing & Exporting to Excel](#import-export) section below
-* **Manage Labels** – opens a page where you can manage labels at the app project level; for details, see the [Managing Labels](#managing-labels) section below
+* **Manage Labels** – opens a page where you can manage labels at the app level; for details, see the [Managing Labels](#managing-labels) section below
 * **Completed Sprints** – opens a page where completed sprints are archived; for details, see the [Completed Sprints](#completed-sprints) section below
 * **History** – opens the **Project History** page; for details, see the [History](#history) section below
 
@@ -81,11 +81,11 @@ After you click **Import / Export**, you will be asked what you want to do:
 ![](attachments/stories/import-export.png)
 {{% /image_container %}}
 
-In Mendix, you can export stories from your app project at any time. If you select **Export a single sprint to Excel**, you can select just the stories in one Sprint and export these to Excel to work on.
+In Mendix, you can export stories from your app at any time. If you select **Export a single sprint to Excel**, you can select just the stories in one Sprint and export these to Excel to work on.
 
 You can also **Export all stories to Excel** and even **Export all stories to Excel (including completed sprints)**.
 
-If you select **Updates stories from Excel**, you can use an an Excel sheet from a previous export as a template for the import. The Developer Portal recognizes existing items by using the **ID** column. The imported content will become stories for your app project.
+If you select **Updates stories from Excel**, you can use an an Excel sheet from a previous export as a template for the import. The Developer Portal recognizes existing items by using the **ID** column. The imported content will become stories for your app.
 
 When editing stories in Excel, follow these guidelines:
 
@@ -126,7 +126,7 @@ The following buttons are available:
 
 #### 2.3.4 History {#history}
 
-The **Project History** page presents the collaboration actions for the app project. On this page, you can see what change was made, who performed it, and when it occurred:
+The **Project History** page presents the collaboration actions for the app. On this page, you can see what change was made, who performed it, and when it occurred:
 
 {{% image_container width="550" %}}
 ![](attachments/stories/history.jpg)
@@ -181,7 +181,7 @@ On this page, you can perform a number of actions:
 
 You can also do this following on this page:
 
-* **Move** a story to a different app project or Sprint (for details, see the [Moving Stories](#move-stories) section below)
+* **Move** a story to a different app or Sprint (for details, see the [Moving Stories](#move-stories) section below)
 * **Duplicate** a story and its tasks, story points, status, and labels into a new user story
 * See the **Feedback** on which this story is based (if applicable; for details, see the [Adding a Feedback Item to Your Backlog](feedback#adding) section of *Feedback Management*)
 * See the committed **Revisions** linked to the story (which are configured in the [Related stories](/refguide/commit-dialog#stories) tab of the **Commit** dialog box in Studio Pro)
@@ -236,7 +236,7 @@ In addition to managing your sprints in the Developer Portal, you can view them 
 
 To manage stories in Studio Pro, follow these steps:
 
-1. Open your app project in Studio Pro by clicking **Edit in Studio Pro** in the top-right corner of the page:
+1. Open your app in Studio Pro by clicking **Edit in Studio Pro** in the top-right corner of the page:
 
 	{{% image_container width="300" %}}![](attachments/edit-app.jpg)
 	{{% /image_container %}}
@@ -253,7 +253,7 @@ To change the status of a story in Studio Pro, click the current status. For exa
 
 ![](attachments/stories/stories-to-do.png)
 
-When you return to your app project in the Developer Portal, you will see the new story status:
+When you return to your app in the Developer Portal, you will see the new story status:
 
 ![](attachments/stories/status-update.png)
 

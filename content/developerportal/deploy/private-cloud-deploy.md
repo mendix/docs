@@ -93,7 +93,7 @@ First you need to create an environment:
     | Large | 4 | 4 | 2 | 2 |
     | Custom | own choice | own choice | own choice | own choice |
 
-    Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**. Ensure that these values are the same or greater than the values for a *Small* enviroment, otherwise you may run into problems running your app.
+    Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**. Ensure that these values are the same or greater than the values for a *Small* environment, otherwise you may run into problems running your app.
 
 8. Select a **Database plan** from the list of plans set up in the namespace.
 

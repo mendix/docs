@@ -8,7 +8,7 @@ tags: ["data hub", "data hub catalog", "curate", "description", "services", "tag
 
 ## 1 Introduction
 
-You can curate registered assets to enrich the metadata in the Data Hub and provide further information about the data sources, datasets and exposed attributes. You can add custom icons for the app and specify Catalog descriptions and tags to supplement the registered metadata and further categorize the asset and the data they connect to. Curate functions in Data Hub include setting the [Discoverability](#discoverability) of registered assets, assigning a [Validated](#validated) tag and specifying the [Business and Technical](#customowner) owners. 
+Owners of data assets, curators and the Data Hub Admin can curate registered assets. Curation in Data Hub is the process of enriching the metadata and providing further information about the data sources, datasets and exposed attributes. This includes adding custom icons and specifying Catalog descriptions and tags to supplement the registered metadata, and further categorize the assets and the data they connect to. Curate functions in Data Hub include setting the [Discoverability](#discoverability) of registered assets, assigning a [Validated](#validated) tag and specifying the [Business and Technical](#customowner) owners. 
 
 Users who can curate assets in Data Hub Catalog are as follows: 
 

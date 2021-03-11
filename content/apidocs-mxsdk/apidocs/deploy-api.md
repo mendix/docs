@@ -39,7 +39,7 @@ The [Nodes](/developerportal/apps-list/#nodes) screen in the Developer Portal sh
 
 ```bash
 HTTP Method: GET
-URL: https://deploy.mendix.com/api/1/apps/
+URL: https://deploy.mendix.com/api/1/apps
 ```
 
 #### 3.1.2 Request
@@ -47,7 +47,7 @@ URL: https://deploy.mendix.com/api/1/apps/
 **Example Request**
 
 ```bash
-GET /api/1/apps/ 
+GET /api/1/apps
 Host: deploy.mendix.com
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
@@ -87,7 +87,7 @@ Creates a Free App for a requested project id.
 
 ```bash
 HTTP Method: POST
-URL: https://deploy.mendix.com/api/1/apps/
+URL: https://deploy.mendix.com/api/1/apps
 ```
 
 #### 3.2.2 Request
@@ -101,7 +101,7 @@ An object with the following key-value pair:
 **Example Request**
 
 ```bash
-POST /api/1/apps/ 
+POST /api/1/apps
 Host: deploy.mendix.com
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
@@ -159,7 +159,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/ 
+GET /api/1/apps/calc
 Host: deploy.mendix.com
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
@@ -201,7 +201,7 @@ Retrieves all environments that are connected to a specific app to which the aut
 
 ```bash
 HTTP Method: GET
-URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments
 ```
 
 #### 3.4.2 Request
@@ -213,7 +213,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/environments/ 
+GET /api/1/apps/calc/environments
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -280,7 +280,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/environments/Acceptance 
+GET /api/1/apps/calc/environments/Acceptance
 Host: deploy.mendix.com
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
@@ -344,7 +344,7 @@ An object with the following key-value pair:
 **Example Request**
 
 ```bash
-POST /api/1/apps/calc/environments/Acceptance/start 
+POST /api/1/apps/calc/environments/Acceptance/start
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -396,7 +396,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/start/<Job
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/environments/Acceptance/start/02df2e50-0e79-11e4-9191-0800200c9a66 
+GET /api/1/apps/calc/environments/Acceptance/start/02df2e50-0e79-11e4-9191-0800200c9a66
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -452,7 +452,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/stop
 **Example Request**
 
 ```bash
-POST /api/1/apps/calc/environments/Acceptance/stop 
+POST /api/1/apps/calc/environments/Acceptance/stop
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -492,7 +492,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/package
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/environments/Acceptance/package 
+GET /api/1/apps/calc/environments/Acceptance/package
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -539,7 +539,7 @@ An object with the following key-value pairs:
 }
 ```
 
-### 3.10 Upload Package
+### 3.10 Upload Package{#upload-package}
 
 #### 3.10.1 Description
 
@@ -547,15 +547,15 @@ Uploads a deployment package from the local system to a specific app. This packa
 
 ```bash
 HTTP Method: POST
-URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/upload
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/upload?name=<PackageName>
 ```
 
 #### 3.10.2 Request
 
 **Request Parameters**
 
-*   _AppId_ (String): Subdomain name of an app.
-*   _Name_ (String): Name of the deployment package as query parameter
+*   _AppId_ (String): Subdomain name of an app
+*   _PackageName_ (String): the name given to the package (mda) when it is uploaded — if this is omitted, it will be given the name *default.mda*
 *   _file_ (File): Deployment package as multipart/form-data (see [IETF RFC 7578: Returning Values from Forms: multipart/form-data](https://tools.ietf.org/html/rfc7578))
 
 **Example Request**
@@ -563,7 +563,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/upload
 <!--Check this is correct -->
 
 ```bash
-POST /api/1/apps/calc/packages/upload 
+POST /api/1/apps/calc/packages/upload?name=calc_1.0.0.45.mda
 Host: deploy.mendix.com
 
 Mendix-Username: richard.ford51@example.com
@@ -571,7 +571,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 Content-Type: multipart/form-data; boundary=MultipartBoundary
 
 --MultipartBoundary
-Content-Disposition: form-data; name="calc_1.0.0.45.mda"
+Content-Disposition: form-data;
 
 @%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.45.mda
 --MultipartBoundary--
@@ -579,7 +579,7 @@ Content-Disposition: form-data; name="calc_1.0.0.45.mda"
 
 Curl example:
 ```bash
-curl -v -F "file=@%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.45.mda"  -X POST -H "Mendix-Username: richard.ford51@example.com" -H "Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6" "https://deploy.mendix.com/api/1/apps/calc/packages/upload"
+curl -v -F "file=@%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.45.mda"  -X POST -H "Mendix-Username: richard.ford51@example.com" -H "Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6" "https://deploy.mendix.com/api/1/apps/calc/packages/upload?name=calc_1.0.0.45.mda"
 ```
 
 #### 3.10.3 Output
@@ -617,7 +617,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/transport
 **Example Request**
 
 ```bash
-POST /api/1/apps/calc/environments/acceptance/transport 
+POST /api/1/apps/calc/environments/acceptance/transport
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -625,7 +625,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 {
-     'PackageId' :  'b3d14e53-2654-4534-b374-9179a69ef3cf'
+     "PackageId" :  "b3d14e53-2654-4534-b374-9179a69ef3cf"
 }
 ```
 
@@ -666,7 +666,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/clean
 **Example Request**
 
 ```bash
-POST /api/1/apps/calc/environments/acceptance/clean 
+POST /api/1/apps/calc/environments/acceptance/clean
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -719,7 +719,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/environments/acceptance/settings/ 
+GET /api/1/apps/calc/environments/acceptance/settings
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -769,7 +769,7 @@ Changes the values of existing environment settings like custom settings, consta
 
 ```bash
 HTTP Method: POST
-URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings/
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings
 ```
 
 #### 3.14.2 Request
@@ -783,7 +783,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings/
 **Example Request**
 
 ```json
-POST /api/1/apps/calc/environments/acceptance/settings/ 
+POST /api/1/apps/calc/environments/acceptance/settings
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -872,7 +872,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/scale
 **Example Request**
 
 ```bash
-POST /api/1/apps/calc/environments/acceptance/scale/0c982ca3-621f-40e9-9c6e-96492934170a 
+POST /api/1/apps/calc/environments/acceptance/scale/0c982ca3-621f-40e9-9c6e-96492934170a
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -1071,7 +1071,7 @@ Downloads archived logs for a specific date.
 
 ```bash
 HTTP Method: GET
-URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/logs/<Date>(YYYY-MM-DD)
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/logs/<Date>
 ```
 
 #### 3.19.2 Request
@@ -1080,7 +1080,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/logs/<Date
 
 - _AppId_ (String): Subdomain name of an app.
 - _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
-- _Date_ (String): Date of the desired log (YYYY-MM-DD).
+- _Date_ (String): Date of the desired log in the format `YYYY-MM-DD`.
 
 * If *Date* is tomorrow or after, or before the date the app was created, the log will contain the response `[No data found in file and no logging heartbeat detected]`
 
@@ -1092,7 +1092,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/logs/<Date
 
 ```bash
 GET /api/1/apps/calc/environments/acceptance/logs/2018-08-10
-Host: deploy.mendix.com 
+Host: deploy.mendix.com
 
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com

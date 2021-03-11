@@ -13,6 +13,16 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### March 3rd, 2021
+
+* We updated the [deploy API](/apidocs-mxsdk/apidocs/deploy-api), [Build API](/apidocs-mxsdk/apidocs/build-api), [Team Server API](/apidocs-mxsdk/apidocs/team-server-api), [Backups API V2](/apidocs-mxsdk/apidocs/backups-api), and [Backups API V1](/apidocs-mxsdk/apidocs/backups-api-v1) to:
+    * add json validation
+    * add stricter API path validation (for example, a trailing `/` on the API path will result in `API not found`)
+    * return differently formatted error messages for unhandled or unexpected errors
+    * the package name in the [Upload Package](/apidocs-mxsdk/apidocs/deploy-api#upload-package) call of the deploy API must be part of the query — it can no longer be passed in the body of the request
+
+If you encounter errors using APIs, please ensure that the format matches the documentation exactly before contacting Mendix Support. Additional or amended headers or request bodies may cause the API to fail.
+
 ### February 22nd, 2021
 
 * We have released a major improvement to the technology underpinning our integration with Datadog. This adds the following features:

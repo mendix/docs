@@ -23,7 +23,7 @@ Disclaimer: Before using this module, be sure to read the [Google Maps Platform 
 
 To configure this module, follow these steps:
 
-1. Load the module into your app project.
+1. Load the module into your app.
 2. Connect the **Location** entity to the entity that needs to be displayed on a Google Map:
 	* Option 1: Use a reference and have the widget load the attributes over it
 	* Option 2: Inherit/generalize from **Location** (for more information, see [Generalization vs One-to-One Associations](/refguide/generalization-and-association))

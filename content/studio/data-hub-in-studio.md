@@ -9,7 +9,7 @@ tags: ["studio", "data hub", "data hub catalog", "external entities"]
 
 ## 1 Introduction
 
-Every organization has apps containing valuable data that can be used in other applications too. [Mendix Data Hub](/data-hub/index) enables you to use data from other apps without having to deal with complex far-from-ideal solutions, such as exporting data, duplicating it, or building complex technical integrations. With Data Hub, all you need to do is just search for the data, select it, and use it. 
+Every organization has apps containing valuable data that can be used in other applications too. [Mendix Data Hub](/data-hub/) enables you to use data from other apps without having to deal with complex far-from-ideal solutions, such as exporting data, duplicating it, or building complex technical integrations. With Data Hub, all you need to do is just search for the data, select it, and use it. 
 
 Mendix Data Hub is the central hub in the organization that enables you to discover, connect to, and use shared data from different apps in your organization. It also ensures that data is used consistently throughout your organization. 
 
@@ -138,5 +138,5 @@ You cannot change or delete this association. It is also not possible to create 
 
 ## 4 Read More
 
-* [Data Hub](/data-hub/index)
+* [Data Hub](/data-hub/)
 * [Data Hub Catalog](/data-hub/data-hub-catalog/index)

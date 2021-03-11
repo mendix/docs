@@ -8,7 +8,7 @@ tags: ["marketplace", "app store", "marketplace component", "app store component
 
 ## 1 Introduction
 
-The [Community Commons Function Library](https://appstore.home.mendix.com/link/app/170/) module adds a number of reusable Java methods to your app project, which can be called from microflows or custom Java actions. The module also adds functionality for working with dates, batches, strings, internet, files, and configuration.
+The [Community Commons Function Library](https://appstore.home.mendix.com/link/app/170/) module adds a number of reusable Java methods to your app, which can be called from microflows or custom Java actions. The module also adds functionality for working with dates, batches, strings, internet, files, and configuration.
 
 ## 2 Usage
 
@@ -18,7 +18,7 @@ The module contains one constant: `CommunityCommons.MergeMultiplePdfs_MaxAtOnce`
 
 ## 3 Testing
 
-The Community Commons container project contains a variety of predesigned unit tests. To use these tests, download the [Unit Testing](/appstore/modules/unit-testing) module from the Mendix Marketplace . This module has a dependency on the [Object Handling](/appstore/modules/object-handling) module, so that module should also be imported to your app project if you want to run the tests.
+The Community Commons container project contains a variety of predesigned unit tests. To use these tests, download the [Unit Testing](/appstore/modules/unit-testing) module from the Mendix Marketplace . This module has a dependency on the [Object Handling](/appstore/modules/object-handling) module, so that module should also be imported to your app if you want to run the tests.
 
 ## 4 Function List
 

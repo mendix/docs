@@ -4,6 +4,8 @@ parent: "on-premises-design"
 description: "How to install and configure Mendix on a system running Microsoft Windows"
 menu_order: 50
 tags: ["deploy", "Windows", "On Premises", "Microsoft", "Mendix Service Console", "IIS", "URL Rewrite", "Client Cache", "Reverse Inbound Proxy", "Host Header"]
+aliases:
+    - /deployment/on-premises/deploy-mendix-on-microsoft-windows.html
 ---
 
 ## 1 Introduction
@@ -44,7 +46,7 @@ Before starting this how-to, make sure you have the following prerequisites:
 
 * The Mendix Deployment Archive (MDA) of your Mendix project
 
-* The Mendix server distribution corresponding with your Mendix Studio Pro version (see the [Mendix App Store](https://appstore.home.mendix.com/link/modelers))
+* The Mendix server distribution corresponding with your Mendix Studio Pro version (see the [Mendix Marketplace](https://appstore.home.mendix.com/link/modelers))
 
 * A database with sufficient security rights
 
@@ -56,7 +58,7 @@ Before starting this how-to, make sure you have the following prerequisites:
 
 To download and install the Mendix Service Console, follow these steps:
 
-1. Download the latest version of the Mendix Service Console by following the **Related downloads** link from the [Studio Pro Download Page](https://appstore.home.mendix.com/link/modelers) of the App Store.
+1. Download the latest version of the Mendix Service Console by following the **Related downloads** link from the [Studio Pro Download Page](https://appstore.home.mendix.com/link/modelers) of the Marketplace.
 
     ![](attachments/deploy-mendix-on-windows/service_console_download.png)
 
@@ -207,6 +209,7 @@ Rule | Name | Pattern | Rewrite URL
 5 | link | `^(link/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 6 | rest | `^(rest/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 7 | rest-doc | `^(rest-doc/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
+8 | debugger | `^(debugger/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 
 Follow the instructions below and replace *[Name]* with the name of the rule in the table above, *[Pattern]* with the regular expression pattern, and *[Rewrite URL]* with the Rewrite URL. Note that some patterns contain a trailing slash, `/`, when they need to point to an exact path (for example, `/ws-doc/mydoc/1234`).
 

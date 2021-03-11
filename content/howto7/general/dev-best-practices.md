@@ -322,7 +322,7 @@ When an XPath needs multiple constraints, each constraint must be put in bracket
 
 ### 4.5 Security
 
-The [security](/howto7/security/index) overview in the Modeler must not show any incomplete (yellow) parts. All entity, microflow, and page access must be configured completely.
+The [security](/howto7/security/) overview in the Modeler must not show any incomplete (yellow) parts. All entity, microflow, and page access must be configured completely.
 
 It is recommended **not** to assign default rights to new members when defining entity access. This will ensure that access is only granted after a conscious decision.
 
@@ -330,8 +330,8 @@ It is recommended **not** to assign default rights to new members when defining 
 
 Apps should keep up with new Mendix releases as much as possible.
 
-### 4.7 App Store Content
+### 4.7 Marketplace Content
 
-When introducing a new [Mendix App Store](https://appstore.home.mendix.com/index3.html) component to a project, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
+When introducing a new [Mendix Marketplace](https://appstore.home.mendix.com/index3.html) component to a project, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
 
-App Store modules should **not** be modified. This is because, if an App Store module is modified, updating to a new version becomes much harder because the changes will be overwritten when a new version is downloaded from the App Store. If changing an App Store module is unavoidable, changes should be marked explicitly and clearly, and performed again when the module is updated. To minimize the number of changes in the actual App Store module, it is advisable to combine them in a separate extension module wherever possible.
+Marketplace modules should **not** be modified. This is because, if a Marketplace module is modified, updating to a new version becomes much harder because the changes will be overwritten when a new version is downloaded from the Marketplace. If changing a Marketplace module is unavoidable, changes should be marked explicitly and clearly, and performed again when the module is updated. To minimize the number of changes in the actual Marketplace module, it is advisable to combine them in a separate extension module wherever possible.

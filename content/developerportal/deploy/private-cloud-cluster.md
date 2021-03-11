@@ -16,7 +16,7 @@ This document explains how to set up the cluster in Mendix.
 
 Once you have created your namespace, you can invite additional team members who can then create or view environments in which their apps are deployed, depending on the rights you give them. For more information on the relationship between Mendix environments, Kubernetes namespaces, and Kubernetes clusters, see [Containerized Mendix App Architecture](#containerized-architecture), below.
 
-## 2 Prerequisites for Creating a Cluster
+## 2 Prerequisites for Creating a Cluster{#prerequisites}
 
 To create a cluster in your OpenShift context, you need the following:
 
@@ -24,7 +24,7 @@ To create a cluster in your OpenShift context, you need the following:
 * An administration account for your platform
 * **OpenShift CLI** installed (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the Red Hat OpenShift website for more information) if you are creating clusters on OpenShift
 * **Kubectl** installed if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
-* **Bash** (Bourne-again shell) for your machine. If you are running on Windows, you can use something like [**Windows Subsystem for Linux (WSL)**](https://docs.microsoft.com/en-us/windows/wsl/faq) or the **Git Bash emulator** that comes with [git for windows](https://gitforwindows.org/).
+* **Bash** (Bourne-again shell) for your machine. On Windows, this must support the Windows console API and mouse interactions. See [Terminal limitations](#terminal-limitations), below, for a more detailed explanation.
 
 ## 3 Creating a Cluster & Namespace
 
@@ -146,13 +146,15 @@ Once you are signed in to your cluster you can run the Configuration Tool.
 
 2. Paste the command into your Bash console and  press <kbd>Enter</kbd>
 
+	{{% alert type="warning" %}}The Configuration Tool needs a CLI terminal with mouse support. Read the [Terminal limitations](#terminal-limitations) section before running the Configuration Tool.{{% /alert %}}
+
 	You will see the configuration options on the screen and will be guided through filling in the information needed.
 
     ![](attachments/private-cloud-cluster/post-install-landing-page.png)
 
 If, instead of using the Configuration Tool, you want to run the scripts in your Kubernetes cluster, see the instructions in [Using Installation and Configuration Scripts](private-cloud-config-script).
 
-#### 4.3.1 Base Installation
+#### 4.3.1 Base Installation{#base-installation}
 
 If the Mendix Operator and the Mendix Gateway Agent have not been installed in your cluster, you will need to install them.
 
@@ -162,11 +164,11 @@ If the Mendix Operator and the Mendix Gateway Agent have not been installed in y
 
 	![](attachments/private-cloud-cluster/installer-options.png)
 
-2. Select the required **Cluster Mode** – *connected* or *standalone.
+2. Select the required **Cluster Mode** – *connected* or *standalone*.
 
     For more information, see [Connected and Standalone Clusters](private-cloud#connected-standalone) in the *Private Cloud* documentation.
 
-3. Select the required **Cluster Type** – *openshift* or *kubernetes*.
+3. Select the required **Cluster Type** – *openshift* or *generic*.
 
 4. Click **Run Installer** to install the Mendix Operator and Mendix Gateway Agent in your cluster.
 
@@ -178,7 +180,7 @@ If the Mendix Operator and the Mendix Gateway Agent have not been installed in y
 
 The Mendix operator and Mendix Gateway Agent are now installed on your platform.
 
-#### 4.3.2 Configure Namespace
+#### 4.3.2 Configure Namespace{#configure-namespace}
 
 You can now configure the resources required for your namespace.
 
@@ -260,7 +262,7 @@ To connect to an Azure PostgreSQL server, the Kubernetes cluster must be added t
 {{% /alert %}}
 
 {{% alert type="info" %}}
-For Azure SQL databases, additional parameters are required to specify the database elastic pool name, tier, service objective and maximum size.
+For Azure SQL databases, the additional parameters `elastic pool name`, `tier`, `service objective`, and `maximum size` are required to specify the database. You can find information about these in the [Create Database](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&tabs=sqlpool#create-a-database) documentation for the Azure SQL Database on the Microsoft documentation site.
 {{% /alert %}}
 
 {{% alert type="info" %}}
@@ -297,7 +299,11 @@ To use TLS, specify the MinIO URL with an `https` schema, for example `https://m
 If the MinIO URL is specified with an `http` schema, TLS will not be used.
 {{% /alert %}}
 
-**S3 (create on-demand)** will connect to an AWS account to create S3 buckets and associated IAM accounts. Each app will receive a dedicated S3 bucket and an IAM account which only has access to that specific S3 bucket. You will need to provide all the information about your Amazon S3 storage such as plan name, region, access key, and secret key. The associated IAM account needs to have the following IAM policy (replace `<account_id>` with your AWS account number):
+**S3 (create bucket and account with inline policy)** will connect to an AWS account to create S3 buckets and associated IAM user accounts. Each app environment will receive a dedicated S3 bucket and an IAM user account with an inline policy which only has access to that specific S3 bucket. The Mendix Operator will use a **management IAM user account** to create and delete S3 buckets and IAM user accounts. You will need to provide all the information relating to your Amazon S3 storage such as plan name, region, access key, and secret key.
+
+To enable this mode, select the following options: **Create S3 Bucket per environment**, **Create account (IAM user) per environment**, **Create inline policy**.
+
+The **management IAM user account** needs to have the following IAM policy (replace `<account_id>` with your AWS account number):
 
 ```json
 {
@@ -335,7 +341,243 @@ If the MinIO URL is specified with an `http` schema, TLS will not be used.
 If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
 {{% /alert %}}
 
-**S3 (existing bucket)** will connect to an existing S3 bucket with the provided IAM account access key and secret keys. All apps will use the same S3 bucket and an IAM account. You will need to provide all the information about your Amazon S3 storage such as plan name, endpoint, access key, and secret key. The associated IAM account needs to have the following IAM policy (replace `<bucket_name>` with the your S3 bucket name):
+{{% alert type="info" %}}
+To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.8.0 or later.
+{{% /alert %}}
+
+**S3 (create bucket and account with existing policy)** will connect to an AWS account to create S3 buckets and associated IAM user accounts. Each app environment will receive a dedicated S3 bucket and an IAM user account. An existing policy, which you specify, will be attached to the account. The Mendix Operator will use a **management IAM user account** to create and delete S3 buckets and IAM user accounts. You will need to provide all the information relating to your Amazon S3 storage such as plan name, region, policy ARN, access key, and secret key.
+
+To enable this mode, select the following options: **Create S3 Bucket per environment**, **Create account (IAM user) per environment**.
+
+Create an IAM policy that will be attached to IAM user accounts and copy its Policy ARN (specify this value in the **Attach Policy ARN** field):
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowListingOfUserFolder",
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::${aws:username}"
+            ],
+            "Condition": {
+                "StringLike": {
+                    "s3:prefix": [
+                        "${aws:username}/*",
+                        "${aws:username}"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "AllowAllS3ActionsInUserFolder",
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::${aws:username}/${aws:username}/*"
+            ],
+            "Action": [
+                "s3:AbortMultipartUpload",
+                "s3:DeleteObject",
+                "s3:GetObject",
+                "s3:ListMultipartUploadParts",
+                "s3:PutObject"
+            ]
+        }
+    ]
+}
+```
+
+The **management IAM user account** needs to have the following IAM policy (replace `<account_id>` with your AWS account number, and `<policy_arn>` with the Policy ARN):
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "LimitedAttachmentPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "iam:AttachUserPolicy",
+                "iam:DetachUserPolicy"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "ArnEquals": {
+                    "iam:PolicyArn": [
+                        "<policy_arn>"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "iamPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "iam:DeleteAccessKey",
+                "iam:DeleteUser",
+                "iam:CreateUser",
+                "iam:CreateAccessKey"
+            ],
+            "Resource": [
+                "arn:aws:iam::<account_id>:user/mendix-*"
+            ]
+        },
+        {
+            "Sid": "bucketPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "s3:CreateBucket",
+                "s3:DeleteBucket"
+            ],
+            "Resource": "arn:aws:s3:::mendix-*"
+        }
+    ]
+}
+```
+
+{{% alert type="info" %}}
+If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.8.0 or later.
+{{% /alert %}}
+
+**S3 (create account with inline policy)** will connect to an AWS account to IAM user accounts. Each app environment will receive a dedicated IAM user account with an inline policy. This inline policy only allows access to objects in the existing S3 bucket if the object name prefix matches the environment's account name (IAM user name). The Mendix Operator will use a **management IAM user account** to create and delete IAM user accounts. You will need to provide all the information relating to your Amazon S3 storage such as plan name, bucket name, region, access key, and secret key.
+
+To enable this mode, select the following options: **Create account (IAM user) per environment**, **Create Inline Policy**.
+
+The **management IAM user account** needs to have the following IAM policy (replace `<account_id>` with your AWS account number):
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "iamPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "iam:DeleteAccessKey",
+                "iam:PutUserPolicy",
+                "iam:DeleteUserPolicy",
+                "iam:DeleteUser",
+                "iam:CreateUser",
+                "iam:CreateAccessKey"
+            ],
+            "Resource": [
+                "arn:aws:iam::<account_id>:user/mendix-*"
+            ]
+        }
+    ]
+}
+```
+
+{{% alert type="info" %}}
+If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.8.0 or later.
+{{% /alert %}}
+
+**S3 (create account with existing policy)** will connect to an AWS account to IAM user accounts. Each app environment will receive a dedicated IAM user account. The specified existing policy will be attached to the account and should only allow access to objects in the existing S3 bucket if the object name prefix matches the environment's account name (IAM user name). The Mendix Operator will use a **management IAM user account** to create and delete IAM user accounts. You will need to provide all the information relating to your Amazon S3 storage such as plan name, bucket name, region, policy ARN, access key, and secret key.
+
+To enable this mode, select the following options: **Create account (IAM user) per environment**.
+
+Create an IAM policy that will be attached to app environment IAM user accounts (replacing `<bucket_name>` with the name of the existing bucket) and copy its Policy ARN (specify this value in the **Attach Policy ARN** field):
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowListingOfUserFolder",
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::<bucket_name>"
+            ],
+            "Condition": {
+                "StringLike": {
+                    "s3:prefix": [
+                        "${aws:username}/*",
+                        "${aws:username}"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "AllowAllS3ActionsInUserFolder",
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::<bucket_name>/${aws:username}/*"
+            ],
+            "Action": [
+                "s3:AbortMultipartUpload",
+                "s3:DeleteObject",
+                "s3:GetObject",
+                "s3:ListMultipartUploadParts",
+                "s3:PutObject"
+            ]
+        }
+    ]
+}
+```
+
+The **management IAM user account** needs to have the following IAM policy (replace `<account_id>` with your AWS account number, and `<policy_arn>` with the Policy ARN):
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "LimitedAttachmentPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "iam:AttachUserPolicy",
+                "iam:DetachUserPolicy"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "ArnEquals": {
+                    "iam:PolicyArn": [
+                        "<policy_arn>"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "iamPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "iam:DeleteAccessKey",
+                "iam:DeleteUser",
+                "iam:CreateUser",
+                "iam:CreateAccessKey"
+            ],
+            "Resource": [
+                "arn:aws:iam::<account_id>:user/mendix-*"
+            ]
+        }
+    ]
+}
+```
+
+{{% alert type="info" %}}
+If the plan name already exists you will receive an error that it cannot be created. This is not a problem, you can continue to use the plan, and it will now have the new configuration.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.8.0 or later.
+{{% /alert %}}
+
+**S3 (existing bucket and account)** will connect to an existing S3 bucket with the provided IAM user access key and secret keys. All apps (environments) will use the same S3 bucket and an IAM user account. You will need to provide all the information relating to your Amazon S3 storage such as plan name, endpoint, access key, and secret key. The associated IAM user account needs to have the following IAM policy (replace `<bucket_name>` with the your S3 bucket name):
 
 ```json
 {
@@ -431,6 +673,8 @@ You can choose one of the following registry types. OpenShift registries can onl
 
 **Additional Information**
 
+You can host the default Mendix components in your own registry, for example if your cluster is firewalled and cannot open up a route to the Mendix registry. In this case you need to migrate some, or all, of the Mendix components to your cluster. See the instructions in [Migrating to Your Own Registry](private-cloud-migrating) to find out how to do this.
+
 For **OpenShift 3** and **OpenShift 4** registries, the default image pull credentials from the `default` ServiceAccount will be used. No additional configuration steps are required to enable image pulls in OpenShift.
 
 For **Generic registry…** options, the configuration script will ask if the credentials should be added to `imagePullSecrets` in the `default` ServiceAccount. If you answer **Yes**, the configuration script will add image pull credentials to the `default` ServiceAccount - no additional image pull configuration is required. If you want to configure the image pull separately, choose **No**.
@@ -439,11 +683,11 @@ For **Amazon Elastic Container Registry**, you will need to configure registry a
 
 When choosing the **Existing docker-registry secret**, you will need to add this secret to the `default` ServiceAccount manually, or provide registry authentication configuration in another way (depending on which registry authentication options the Kubernetes cluster vendor is offering).
 
-#### 4.3.3 Proxy{#proxy}
+##### 4.3.2.5 Proxy{#proxy}
 
 Choose **Yes** if a proxy is required to access the public internet from the namespace; you will be asked for the proxy configuration details.
 
-#### 4.3.4 Custom TLS{#custom-tls}
+#### 4.3.3 Custom TLS{#custom-tls}
 
 {{% alert type="info" %}}
 To use this option, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.7.0 or later.
@@ -468,7 +712,7 @@ In order for the Mendix Operator to trust such certificates, you need to add the
        -----END CERTIFICATE-----
        ```
        (concatenate all the public keys from custom CAs into one `custom.crt` file, separating them with line breaks and optional comments).
-   2. Load the file into a Secret (replace `{namespace}` with the namespace where the Operator is installed, and `{secret}` with the name of the Secret to create, e.g. `mendix-custom-ca`):
+   2. Load the file into a Secret (replace `{namespace}` with the namespace where the Operator is installed, and `{secret}` with the name of the Secret to create, for example, `mendix-custom-ca`):
 
         For OpenShift:
         ```shell
@@ -480,7 +724,7 @@ In order for the Mendix Operator to trust such certificates, you need to add the
         kubectl -n {namespace} create secret generic {secret} --from-file=custom.crt=custom.crt
         ```
 
-2. Paste the name of this `custom.crt` secret into the **CA Certificates Secret Name** field (e.g. `mendix-custom-ca`):
+2. Paste the name of this `custom.crt` secret into the **CA Certificates Secret Name** field (for example, `mendix-custom-ca`):
    
    ![Custom TLS configuration](attachments/private-cloud-cluster/custom-tls-config.png)
 
@@ -498,7 +742,7 @@ To prevent MITM attacks, enable **Strict TLS** for the database and use an HTTPS
 Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 {{% /alert %}}
 
-#### 4.3.5 Review and Apply
+#### 4.3.4 Review and Apply{#review-apply}
 
 When you have configured all the resources, do the following:
 
@@ -876,6 +1120,53 @@ For Kubernetes:
 kubectl -n {namespace} scale deployment mendix-operator --replicas=0
 kubectl -n {namespace} scale deployment mendix-operator --replicas=1
 ```
+
+### 7.3 Terminal limitations {#terminal-limitations}
+
+#### 7.3.1 Windows
+
+The Windows version of the Configuration Tool can only run in a terminal that supports the Windows console API and has mouse support.
+
+The Configuration Tool needs the Git or MinGW version of `bash` to be available in the system path.
+
+In many cases, Windows might have multiple versions of `bash` installed: cygwin, WSL and possibly others. In order to use Git `bash`, ensure that the Git Bash `usr\bin` directory appears in the path first.
+
+When using PowerShell (replace `{arguments}` with the correct command line arguments):
+
+```powershell
+$env:Path = "C:\Program Files\Git\usr\bin;" + $env:Path
+.\mxpc-cli.exe installer {arguments}
+```
+
+Or when using the Windows Command Prompt (replace `{arguments}` with the correct command line arguments):
+
+```bat
+set PATH=C:\Program Files\Git\usr\bin;%PATH%
+.\mxpc-cli.exe installer {arguments}
+```
+
+{{% alert type="info" %}}
+Other terminals might work but are not supported.
+For example, the [new Windows Terminal](https://aka.ms/terminal) doesn't support mouse clicks in PowerShell or the Windows Command Prompt.
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+Some previously released documentation for Mendix for Private Cloud suggested using Git Bash in Windows. Depending on how Git was originally installed, it might not support all required terminal features.
+
+The Powershell option described above is more reliable than Git Bash.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+These limitations only apply when using the Windows version of the Configuration Tool.
+
+The Linux version can run in [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/) without any workarounds.
+{{% /alert %}}
+
+#### 7.3.2 Linux and macOS
+
+When running the installation tool over SSH, make sure that the SSH client supports terminal emulation and has mouse support enabled.
+
+`ssh.exe` in Windows doesn't support mouse click forwarding and another SSH client should be used instead, such as [MobaXterm](https://mobaxterm.mobatek.net/) or [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
 ## 8 Troubleshooting
 

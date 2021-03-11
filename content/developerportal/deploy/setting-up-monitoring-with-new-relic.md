@@ -10,6 +10,10 @@ tags: ["new relic", "on-premises", "monitoring", "setup"]
 
 When setting up a Mendix application on premises, you can set up advanced monitoring with New Relic. This works with both Windows and Linux deployments.
 
+{{% alert type="warning" %}}
+New Relic is not supported for apps deployed to the Mendix Cloud.
+{{% /alert %}}
+
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
@@ -46,7 +50,7 @@ After you restart the application, your data should show up in New Relic. This r
 
 ## 5 Read More
 
-* [Setting Up Monitoring with New Relic](setting-up-monitoring-with-new-relic)
 * [Finding the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Clearing Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages)
 * [Testing Web Services Using SoapUI](/howto/testing/testing-web-services-using-soapui)
+* [Monitoring Tools](https://github.com/mendix/cf-mendix-buildpack#monitoring-tools) in the *cf-mendix-buildpack* repo on GitHub

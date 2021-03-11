@@ -1,8 +1,8 @@
 ---
 title: "Switch"
 category: "Widgets"
-description: "Describes the configuration and usage of the Switch widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "switch", "platform support"]
+description: "Describes the configuration and usage of the Switch widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "switch", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -19,15 +19,15 @@ The [Switch](https://appstore.home.mendix.com/link/app/50324/) widget enables to
 * Display in either iOS style or android(material design)
 * Display in various bootstrap styles
 
-### 1.2 Demo App Project
+### 1.2 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](http://booleansliderwidge.mxapps.io).
+For a demo app that has been deployed with this widget, see [here](http://booleansliderwidge.mxapps.io).
 
 ## 2 Usage
 
 To use this widget, place it in the context of an object that has a Boolean attribute.
 
-## 3 Developing This App Store Component
+## 3 Developing This Marketplace Component
 
 To contribute to the development of this widget, follow these steps:
 

@@ -40,6 +40,8 @@ Mendix uses the following static IP addresses. If you need further information, 
 | Mendix Cloud V4 Asia Pacific | Tokyo (ap-northeast-1) |  `52.198.238.110` <br /> ` 13.113.58.15` <br /> ` 52.193.228.1` |
 | Mendix Cloud V4 UK | London (eu-west-2) | `35.177.185.47` <br /> ` 52.56.174.215` <br /> ` 18.130.169.15` |
 | Mendix Cloud V4 IE | Ireland (eu-west-1) | `52.18.10.62` <br /> ` 52.208.39.99` <br /> `99.80.177.69` |
+| Mendix Cloud V4 Asia Pacific | Singapore (ap-southeast-1) | `52.77.0.52` <br /> ` 122.248.194.24` <br /> `54.179.212.86` |
+| Mendix Cloud V4 US | Oregon (us-west-2) | `35.160.4.29` <br /> ` 54.190.172.197` <br /> `44.236.131.88` |
 
 #### 2.2.2 Mendix Cloud v3 (XS4/BIT)
 

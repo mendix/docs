@@ -3,12 +3,15 @@ title: "General Info"
 description: "Describes various features of Mendix Studio."
 menu_order: 10
 tags: ["studio", "studio pro"]
+aliases:
+    - /howto/tutorials/index.html
+    - /howto/tutorials/mendix-tutorials.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction {#studio-overview}
 
-Mendix Studio is the place where you can create, view and edit your Mendix applications without going into technical details. For this purpose you can use the [Studio Pro](/refguide/modeling) and [develop apps together with Studio Pro users](collaborative-development) anytime. 
+Mendix Studio is the place where you can create, view and edit your Mendix applications without going into technical details. For this purpose you can use [Studio Pro](/refguide/modeling) and [develop apps together with Studio Pro users](collaborative-development) anytime. 
 
 With Studio you can create and edit applications in your browser without installing software on your PC.   
 
@@ -32,23 +35,23 @@ If you do not see **Edit in Studio**, go to [General Settings](/developerportal/
 
 ### 2.2 Opening Studio via Studio Pro {#opening-via-studio-pro}
 
-You can also open your app in Studio via Studio Pro. Do the following:
+You can also open your app project in Studio via Studio Pro. Do the following:
 
-1. In Studio Pro, open the project in that you want to view in Studio.
+1. In Studio Pro, open the app project in that you want to view in Studio.
 2.  Click the globe icon in the top right corner (only available if Studio is enabled).
 
 	![Globe Icon](attachments/general/globe-icon.png)
 
-The app opens in Studio.
+The app project opens in Studio.
 
 ## 3 Upgrading Studio
 
-After clicking **Edit in Studio** you may need to upgrade your app to the latest version.
+After clicking **Edit in Studio** you may need to upgrade your app project to the latest version.
 
 {{% image_container width="350" %}}![Upgrade](attachments/general/upgrade.png)
 {{% /image_container %}}
 
-You may also see an orange top bar suggesting an upgrade to the next Mendix version. For more information on Studio upgrades and Mendix versions, see [Studio Ranges & Mendix Versions](general-versions).
+You may also see a top bar suggesting an upgrade to the next Mendix version. For more information on Studio upgrades and Mendix versions, see [Studio Ranges & Mendix Versions](general-versions).
 
 {{% alert type="info" %}}
 When you upgrade your app in Studio to the latest  Mendix version, you will need to upgrade your app in the Studio Pro to the same version as well. 
@@ -72,7 +75,7 @@ You can change the view of your page to different views by clicking the correspo
 
 ## 5 Left Menu Bar
 
-The left menu bar allows you to go back to the Developer Portal, access pages, the domain model, microflows, and the navigation document in Studio, search for different elements in your app, open settings, and customize the look of your app:
+The left menu bar allows you to access pages, the domain model, microflows, and the navigation document in Studio, search for different elements in your app project, open settings, and customize the look of your app:
 
 {{% image_container width="250" %}}
 ![Left Menu Bar](attachments/general/left-menu-bar.png)
@@ -82,7 +85,6 @@ All items of the left menu bar are described in the table below:
 
 | Menu item                            | Shortcut     | Description                                                  |
 | ------------------------------------ | ------------ | ------------------------------------------------------------ |
-| Mx Logo                              | None         | The Mx logo is the return button to return to the [Developer Portal](https://home.mendix.com) of the app. |
 | [Pages](page-editor)                 | 1            | Shows a list of all pages in the app. After you select a page, it opens in Studio. |
 | [Domain Models](domain-models)       | 2            | Shows the domain models of the app.                          |
 | [Microflows](microflows)             | 3            | Shows a list of all microflows in the app.  After clicking a microflow, it will open in Studio. |
@@ -107,7 +109,7 @@ The **Toolbox**, **Properties** , and **Buzz** tabs are described in the table b
 
 ## 7 Top Menu Bar
 
-The top menu bar allows to check whether Studio is connected to the internet, undo or redo actions, view your recent documents, preview or publish your app, and view errors in your app (if any). You can also access help and learning and view various information in the top menu bar. 
+The top menu bar allows to undo or redo actions, view your recent documents, preview or publish your app, and view errors in your app (if any). You can also access help and learning and view various information in the top menu bar. 
 
 ![Top Menu Bar](attachments/general/top-bar.png)
 
@@ -115,14 +117,14 @@ The top menu bar items are described in the table below:
 
 | Menu item | Description |
 |------|------|
-| Status icon | Indicates the internet connection status of Studio. If the icon is green, Studio is connected. When grey, Studio is offline. |
+| **Switch To** menu | The **Switch To** menu allows you to go back to the [Developer Portal](https://home.mendix.com) of the app project. |
 | Undo/Redo actions | There buttons undo or redo the last action. You can also use <kbd>Ctrl</kbd>+<kbd>Z</kbd> and <kbd>Ctrl</kbd>+<kbd>Y</kbd> shortcuts correspondingly. |
 | Recent documents drop-down menu | A document that you are currently viewing is displayed in this option. When you click the drop-down menu, documents that you have recently viewed are displayed in the list. Click the document to open it. |
 | [Preview button](publishing-app) | Shows you what your app will look like after it is published |
 | [Publish button](publishing-app) | You can publish your app with this button. Click **Publish** > **Update** to publish the latest changes you made in Studio. For more information, see [Previewing & Publishing Your App](publishing-app) |
 | [Checks button](checks) | Displays consistency errors (if any) that prevent your app from being previewed and published. For more information on errors, see [Consistency Errors](consistency-errors).<br />You can also use <kbd>C</kbd> shortcut to view the **Checks** panel. |
 | Help icon | Opens the **Help & Learning** side menu, where you can find just-in-time help – videos and how-to's that will provide you explanations and instructions in the context of your current task. For example, when working in the domain model, you will see videos and how-to's on the domain model, entities, and attributes as a recommended topic for you. However, you can also browse through the categories and other topics that cover all the main features in Studio. |
-| Ellipsis icon | Provides additional information. You will find the following:<ul><li>**About** – shows the information on the [Studio version and Mendix version](general-versions) </li><li>**Keyboard Shortcuts** – opens the list of shortcuts in Studio</li><li>**Take a Product Tour** – starts a  the guided product introduction tour and shows you around Studio</li><li>**Ask the Community** – a link to the [Mendix Forum](https://forum.mendixcloud.com/index4.html) where you can ask questions and explore the knowledge offered by the entire Mendix community<li>**Check the  Documentation** – a link to the [Studio Guide](index)</li><li>**Contact Mendix Support** – a link to the [Mendix Support Portal](https://support.mendix.com/hc/en-us)<li>**Learn more at the Mendix Academy** – a link to the [Mendix Academy](https://gettingstarted.mendixcloud.com)</li><li>**Mendix Assist Is ON** – a setting that enables/disables [Mendix Assist](mx-assist)</li><li>**Edit in Studio Pro** – opens your app in Studio Pro</li></ul> |
+| **More Options** icon | Provides additional information. You will find the following:<ul><li>**About** – shows the information on the [Studio version and Mendix version](general-versions) </li><li>**Keyboard Shortcuts** – opens the list of shortcuts in Studio</li><li>**Take a Product Tour** – starts a  the guided product introduction tour and shows you around Studio</li><li>**Contact Mendix Support** – a link to the [Mendix Support Portal](https://support.mendix.com/hc/en-us)</li><li>**Mendix Assist Is ON** – a setting that enables/disables [Mendix Assist](mx-assist)</li><li>**Edit in Studio Pro** – opens your app in Studio Pro</li></ul> |
 
 ## 8 Cut/Copy/Paste Function 
 

@@ -7,7 +7,7 @@ tags: ["Developer Portal", "deep link"]
 
 ## 1 Introduction
 
-To go directly to the desired element of your app project in the Developer Portal, you can use deep links.
+To go directly to the desired element of your app in the Developer Portal, you can use deep links.
 
 **This how-to will teach you how to do the following:**
 
@@ -32,7 +32,7 @@ To create a deep link, you need the App ID, Story ID, or Feedback Item Nr for th
 
 ## 3 Creating a Developer Portal Deep Link
 
-If you want to provide links directly to a specific element in your app project in the Developer Portal, follow these steps:
+If you want to provide links directly to a specific element in your app in the Developer Portal, follow these steps:
 
 1. Paste the URL to the Developer in your browser's address bar (as in, `https://sprintr.home.mendix.com/` or `https://cloud.home.mendix.com/`).
 2. Paste the desired App ID, Environment ID, Story ID, or Feedback Item Number after the final slash.

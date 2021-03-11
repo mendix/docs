@@ -4,6 +4,9 @@ parent: "mendix-cloud-deploy"
 menu_order: 30
 #description: "Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed"
 tags: ["client certificate", "certification authority", "PKCS12", "connections"]
+aliases:
+    - /deployment/mendixcloud/certificates.html
+    - /refguide/certificates.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -34,7 +37,7 @@ Do not pin these certificates in your solutions.
 
 For situations where pinning is required, you can set up a custom domain where you are in full control of updating the certificate.
 
-## 3 Outgoing – Client Certificates
+## 3 Outgoing – Client Certificates{#client-certificates}
 
 For client certificates, only the Public-Key Cryptography Standard #12 (PKCS12) format is supported. Certificates are uploaded as a PKCS container which includes:
 
@@ -61,11 +64,13 @@ You can upload a PKCS12 file by following these steps:
 
 5. Enter the password to unlock the certificate container.
 
-{{% alert type="info" %}}
-Certificates require an app restart before they become active.
-{{% /alert %}}
+6. If you are using a specific custom certificate when setting your Client certificate in your [Call REST Service](/refguide/call-rest-action#client-certificate) or [Call Web Service](/refguide/call-web-service-action#client-certificate) action, set a **WEB SERVICE CALL NAME** which you can use to pin the certificate by setting the call's **Client certificate identifier** to the **WEB SERVICE CALL NAME**.
 
-![](attachments/certificates/certificate-details.png)
+    ![](attachments/certificates/certificate-details.png)
+
+{{% alert type="info" %}}
+Changes made to certificate settings will only become effective after restarting the app.
+{{% /alert %}}
 
 ## 4 Outgoing – Certificate Authorities
 

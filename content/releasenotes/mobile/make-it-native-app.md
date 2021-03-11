@@ -9,7 +9,16 @@ tags: ["Native", "Android", "iOS", "Apple", "Android"]
 
 For more information on the Make It Native app, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app).
 
-You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](/refguide/getting-the-make-it-native-app#direct-links).
+You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](/refguide/getting-the-make-it-native-app).
+
+## Android 2.1.1
+
+**Release date: February 12th, 2021**
+
+### Fixes
+
+* We fixed a bug where the image picker generated duplicated images on the device.
+* We fixed a bug where the soft keyboard would become hidden when selecting textfields in list views.
 
 ## Android 2.1.0 / iOS 2.2.0
 
@@ -44,7 +53,7 @@ From Mendix Studio Pro 8.10 and above, the responsibility of deciding when to sy
 **Release date: April 28th, 2020**
 
 {{% alert type="info" %}}
-Due to upgrades to our dependencies, neither version of Make It Native 2.0.0 is backwards compatible with versions older than Studio Pro 8.9. To keep working with older versions of Studio Pro, install a version from [the archive](/refguide/getting-the-make-it-native-app#direct-links). 
+Due to upgrades to our dependencies, neither version of Make It Native 2.0.0 is backwards compatible with versions older than Studio Pro 8.9. To keep working with older versions of Studio Pro, install a version from [the archive](/refguide8/getting-the-make-it-native-app#direct-links). 
 {{% /alert %}}
 
 ### New Features
@@ -59,7 +68,7 @@ Due to upgrades to our dependencies, neither version of Make It Native 2.0.0 is 
 {{% alert type="info" %}}
 If you are working in Mendix Studio Pro 8.8 or higher, you must update your Make It Native app to this version. 
 
-For older versions of Studio Pro please install the appropriate legacy app [here](/refguide/getting-the-make-it-native-app#direct-links).
+For older versions of Studio Pro please install the appropriate legacy app [here](/refguide/getting-the-make-it-native-app).
 {{% /alert %}}
 	
 ### New Features

@@ -19,10 +19,8 @@ For a [call web service](call-web-service-action) activity and support for SOAP 
 
 ## 2 Other Documents in This Section
 
-* [Consumed App Services](consumed-app-services)
 * [HttpRequest & HttpResponse System Entities](http-request-and-response-entities)
 * [JSON Structures](json-structures)
 * [Message Definitions](message-definitions)
-* [Published App Services](published-app-services)
 * [Published OData Services](published-odata-services)
 * [XML Schemas](xml-schemas)

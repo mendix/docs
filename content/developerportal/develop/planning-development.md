@@ -8,7 +8,7 @@ tags: ["Developer Portal", "Planning", "Develop"]
 
 ## 1 Introduction
 
-The **Planning** page of the Developer Portal provides an overview of the progression of the [stories](../collaborate/stories) for the app project.
+The **Planning** page of the Developer Portal provides an overview of the progression of the [stories](../collaborate/stories) for the app.
 
 ![](attachments/planning.png)
 
@@ -58,5 +58,4 @@ All the changes made on this page are directly passed on to the **Stories** page
 
 ## 5 Read More
 
-* [App Modeling Environments](modeling-environments)
 * [Team Server Overview](team-server)

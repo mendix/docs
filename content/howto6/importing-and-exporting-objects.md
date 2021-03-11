@@ -3,7 +3,7 @@ title: "Importing and Exporting Objects"
 category: "Integration"
 tags: []
 ---
-Don't re-invent the wheel. Save time by importing modules others have already created, and exporting new modules for others to use. The App Store provides this functionality on a macro-level, but you can use the modeler's built-in import and export functions to share content between your own apps, import unofficial modules, and share entire projects.
+Don't re-invent the wheel. Save time by importing modules others have already created, and exporting new modules for others to use. The Marketplace provides this functionality on a macro-level, but you can use the modeler's built-in import and export functions to share content between your own apps, import unofficial modules, and share entire projects.
 
 This How-to covers the basics of how to import and export modeler objects: packages, modules, widgets, and module objects. Module objects include pages, microflows, image collections, event, document templates, constants, web services, layouts, menus, and loads more.
 
@@ -100,9 +100,9 @@ Mendix module packages are stored as Mendix Package (.mpk) files. However, you n
 4.  Add your newly imported widget from the **Toolbox** or **Add Widget** context menu:
     ![](attachments/18448739/18582105.png)
 
-### Importing Content from the App Store
+### Importing Content from the Marketplace
 
-To learn more about importing content from the App Store, see [How to Use App Store Content in Studio Pro](/appstore/general/app-store-content).
+To learn more about importing content from the Marketplace, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).
 
 ## Exporting Objects
 

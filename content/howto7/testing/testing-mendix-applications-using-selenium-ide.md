@@ -39,7 +39,7 @@ All images, names, and steps in this how-to are based on these versions. When us
 Follow these steps to install and run the Company Expenses app:
 
 1. Open the Mendix Destkop Modeler.
-2.  Click the App Store icon in the top toolbar:
+2.  Click the Marketplace icon in the top toolbar:
 
 	![](attachments/18448631/18580298.png)
 

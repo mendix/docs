@@ -9,7 +9,7 @@ To mitigate the risk of unnecessary high memory usage version 4 of the Mendix Pl
 
 {{% alert type="warning" %}}
 
-The garbage collector will check if there are no running requests before starting a garbage collect cycle. If you create your own threads in custom Java code in which objects are created and/or changed, make sure these actions are performed using the async-methods in the `com.mendix.core.Core` class (e.g. `instantiateAsync`, `commitAsync`, `executeAsync`) such that the garbage collector is informed when logic is performed that could interfere with garbage collection. If you would not do this, it could lead to unpredictable results.
+The garbage collector will check if there are no running requests before starting a garbage collect cycle. If you create your own threads in custom Java code in which objects are created and/or changed, make sure these actions are performed using the async-methods in the `com.mendix.core.Core` class (for example, `instantiateAsync`, `commitAsync`, `executeAsync`) such that the garbage collector is informed when logic is performed that could interfere with garbage collection. If you would not do this, it could lead to unpredictable results.
 
 {{% /alert %}}
 

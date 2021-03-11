@@ -15,7 +15,7 @@ This documents version 1 of the backups API. A new [V2 API](backups-api) is avai
 
 ## 2 Authentication
 
-The Backups API requires authentication via API keys that are bound to your Mendix account (for more information, see [Deploy Authentication](deploy-api#authentication)). In addition to the **API Access** permission, the **Backups** permission is also required to manage backups. 
+The Backups API requires authentication via API keys that are bound to your Mendix account (for more information, see [Deploy Authentication](deploy-api#authentication)). In addition to the **API Access** permission, the **Backups** permission is also required to manage backups.
 
 ## 3 API Calls
 
@@ -40,7 +40,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/environments/acceptance/snapshots 
+GET /api/1/apps/calc/environments/acceptance/snapshots
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -105,7 +105,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots/
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/environments/acceptance/snapshots/201703221355 
+GET /api/1/apps/calc/environments/acceptance/snapshots/201703221355
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -163,7 +163,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots
 **Example Request**
 
 ```bash
-POST /api/1/apps/calc/environments/acceptance/snapshots/ 
+POST /api/1/apps/calc/environments/acceptance/snapshots
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -220,7 +220,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/restore/<S
 **Example Request**
 
 ```bash
-POST /api/1/apps/calc/environments/acceptance/restore/0c982ca3-621f-40e9-9c6e-96492934170a 
+POST /api/1/apps/calc/environments/acceptance/restore/0c982ca3-621f-40e9-9c6e-96492934170a
 Host: deploy.mendix.com
 
 Content-Type: application/json

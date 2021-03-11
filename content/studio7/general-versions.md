@@ -72,7 +72,7 @@ This means the following:
 * Existing apps built in Studio will remain on the latest release of Mendix version 7.23 
 * Newly created apps in Studio will have Mendix version 8 from the start
 
-Automatic upgrade will not be offered in Studio when moving from Mendix 7 to Mendix 8. So, developers wanting to upgrade their Studio apps to Mendix version 8 can only do so in Studio Pro or by involving developers familiar with Studio Pro. For more information on upgrading apps using Studio Pro, see [Moving from Desktop Modeler Version 7 to Studio Pro 8](/refguide/moving-from-7-to-8). 
+Automatic upgrade will not be offered in Studio when moving from Mendix 7 to Mendix 8. So, developers wanting to upgrade their Studio apps to Mendix version 8 can only do so in Studio Pro or by involving developers familiar with Studio Pro. For more information on upgrading apps using Studio Pro, see [Moving from Desktop Modeler Version 7 to Studio Pro 8](/refguide8/moving-from-7-to-8). 
 
 ### 3.2 Postponing the Immediate Upgrade to the Next Version 
 

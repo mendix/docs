@@ -46,7 +46,9 @@ There are three pages provided with the Workflow Commons module to get you and y
 
 Workflow Commons contains some excellent templates to easily get you started with building workflow related pages. These templates will automatically be suggested to you when you make a new page from either the user task or workflow properties, so you can not miss them.
 
-{list templates here with short explanation}
+-   **UserTask_Basic** is a simple template that shows a header with the task name and description, a sidebar with details about the assignee and status of the task, and a main view where input widgets and buttons to complete the task are generated.
+-   **UserTask_Extended** does exactly the same as the basic user task template, but extends it by adding attachments and comments sections, as well as an activity timeline to see what has previously happened in this workflow.
+-   **Workflow_Overview** can be used to easily generate an overview page for a specific workflow. It contains a header with the name of the workflow, as well as an actions menu for administrators. There are three tabs, _General information_, _Task details_, and _Notes and attachments_. In the _General information_ tab you will see the current state of the workflow, when it started and ended, as well as the due date and potential reasons for failure. The activity timeline is displayed on the right side, and there is a section with generated input widgets that allows administrators to make changes to the data in the workflow. For more information about the individual tasks, like who worked on them and who would have been able to pick them up, you can go to the _Task details_ tab. Finally, the _Notes and attachments_ tab provides a nice overview of all the notes and attachments that were added for this workflow.
 
 ### 4.3 Snippets
 

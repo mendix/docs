@@ -271,7 +271,7 @@ If the application for the data source you would like to register is not shown, 
 
 #### 6.2.1 Selecting the Enterprise Application {#application}
 
-On the [Data Hub Home](../index) screen, click the button for the source application of the data source that you want to register:
+On the [Data Hub Home](/data-hub/) screen, click the button for the source application of the data source that you want to register:
 
 ![upload contract](attachments/register/register-data-source-home.png)
 

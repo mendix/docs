@@ -18,7 +18,7 @@ You can navigate the menu items in the header:
 
 ## 2 Apps
 
-In [Apps](apps-list/index), you can find your free and licensed apps, nodes, and other apps created by your company:
+In [Apps](apps-list/), you can find your free and licensed apps, nodes, and other apps created by your company:
 
 ![](attachments/developerportal-apps.jpg)
 
@@ -36,13 +36,13 @@ In the company [Buzz](collaborate/buzz), you can communicate with colleagues, Ap
 
 ## 4 Control Center
 
-In [Control Center](control-center/index), you can gain insight into company activities and perform various governance tasks as a Mendix Admin:
+In [Control Center](control-center/), you can gain insight into company activities and perform various governance tasks as a Mendix Admin:
 
 ![](attachments/developerportal-cc-admin.jpg)
 
 ## 5 People
 
-In [People](mendix-profile/index#connections), you can view the other members of the Mendix community and also invite people to the Mendix Platform :
+In [People](mendix-profile/#connections), you can view the other members of the Mendix community and also invite people to the Mendix Platform :
 
 ![](attachments/developerportal-people.jpg)
 

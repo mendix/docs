@@ -150,7 +150,7 @@ The **{yourname}CustomerODataService** from your app is now registered in the Da
 
 	![data hub](attachments/share-data/search-details-screen.png)
 
-	{{% alert type="info" %}}For more information about the user and curator roles in Data Hub see [Roles in Data Hub](../index#data-hub-roles).{{% /alert %}}
+	{{% alert type="info" %}}For more information about the user and curator roles in Data Hub see [Roles in Data Hub](/data-hub/#data-hub-roles).{{% /alert %}}
 
 Owners of assets registered in the catalog and curators can edit details of the registered service and also set the **Discoverability** to other users. By default, services registered through a Studio Pro deployment will be set to **Discoverable** meaning that it is visible to all users. For further details about curating functions, see [How to Curate Registered Assets](../data-hub-catalog/curate).
 

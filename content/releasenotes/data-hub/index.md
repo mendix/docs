@@ -5,7 +5,7 @@ tags: ["data hub", "data hub catalog", "data hub Landscape"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes made to the [Mendix Data Hub](/data-hub/index).
+These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
@@ -150,4 +150,4 @@ Every organization has valuable data in different applications. With Mendix Data
 
 Want to know how it can help you? Check out the launch blog post: [Data Hub: The Low-Code Approach to Data Integration](http://www.mendix.com/blogs/data-hub-the-low-code-approach-to-data-integration).
 
-For even more information, please consult the [Data Hub Guide](/data-hub/index).
+For even more information, please consult the [Data Hub Guide](/data-hub/).

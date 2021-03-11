@@ -72,7 +72,7 @@ In [People](mendix-profile/index#connections), you can view the other members of
 
 ![](attachments/developerportal-people.jpg)
 
-## 6 Community 
+## 6 Community {#community}
 
 In [Community](community-tools/index), you can explore various resources for the vibrant Mendix community of users, from blog posts about how Mendix is being used in the wider world of low-code development to the [Mendix job board](/developerportal/community-tools/mendix-job-board) and [Mendix Shop](https://shop.mendix.com/):
 
@@ -84,19 +84,19 @@ In the [Mendix Marketplace](/appstore/general/app-store-overview), you can share
 
 ![](attachments/developerportal-app-store.jpg)
 
-## 8 Academy 
+## 8 Academy {#academy}
 
 The [Mendix Academy](https://academy.mendix.com/link/home) offers both self-paced online training (via learning paths) and classroom instruction from our team of experts:
 
 ![](attachments/developerportal-academy.jpg)
 
-## 9 Forum 
+## 9 Forum {#forum}
 
 In the [Mendix Forum](community-tools/mendix-forum), you can interact with the Mendix community to help out with [questions](https://forum.mendixcloud.com/link/questions) and answers on the best ways to use Mendix as well as propose [ideas](https://forum.mendixcloud.com/link/ideas) for improving the Mendix Platform:
 
 ![](attachments/developerportal-forum.jpg)
 
-## 10 Docs 
+## 10 Docs {#docs}
 
 The [Mendix Documentation](https://docs.mendix.com/) is open to the Mendix community, which means you can [make changes and contribute](/developerportal/community-tools/contribute-to-the-mendix-documentation) to benefit the whole Mendix community:
 

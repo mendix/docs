@@ -89,10 +89,14 @@ Some pages and microflows are only used from Java code and will be listed as an 
 
 The **Find Usages** option allows you to find where a certain element is used, for example, to find all buttons that open a certain page.
 
+{{% alert type="info" %}}
+This option only finds places where the selected entity/attribute is selected itself. This means that it will not find instances where the entity/attribute is derived implicitly (for example, by following an association).
+{{% /alert %}}
+
 To find where a certain element is used, do the following:
 
 1. Open the document which contains the element. For example, open the domain model. 
-2. Select an element (for example, an entity) and click **Edit **> **Find usages** in the top-bar or right-click an element and select **Find usages**:
+2. Select an element (for example, an entity) and click **Edit** > **Find usages** in the top-bar or right-click an element and select **Find usages**:
    ![Find Usages](attachments/find-and-find-advanced/find-usages.png)
 
 Studio Pro shows all usages of this entity in the **Find Results** pane. 

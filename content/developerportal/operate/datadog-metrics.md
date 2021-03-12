@@ -215,6 +215,10 @@ You can specify which request handlers, microflows, and activities are reported 
 | `"name": "<microflow>"` | Each time this microflow is run | The format is `<module>.<microflow>`<br />For example, `TrainingManagement.ACT_CancelScheduledCourse` |
 | `"name": "<activity>"` | All activities of this type | click **Activities<sup><small>2</small></sup>** below to see the list of options |
 
+{{% alert type="warning" %}}
+Microflow names are case-sensitive. If the case is not exactly matched, metrics will not be properly submitted.
+{{% /alert %}}
+
 **<details><summary><sup><small>[1]</small></sup>Request Handlers (click to see list)</summary>**
 
 The following Mendix *request handler* calls will be passed to Datadog:

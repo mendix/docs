@@ -28,9 +28,9 @@ The [List View Swipe](https://appstore.home.mendix.com/link/app/47781/) widget m
 * The opened page should contain a data view of the **Item entity** type, but this is not checked for the widget in runtime.
 * Swiping should be horizontal – when the swiping involves too much movement, the swipe is canceled
 
-### 1.3 Demo App Project
+### 1.3 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](http://listviewswipeout.mxapps.io).
+For a demo app that has been deployed with this widget, see [here](http://listviewswipeout.mxapps.io).
 
 ## 2 Configuration
 

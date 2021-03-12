@@ -12,7 +12,7 @@ Use the [Database](https://appstore.home.mendix.com/link/app/2888/) connector to
 
 This document focuses on executing an SQL `SELECT` query and SQL statements on external relational databases.
 
-The **Execute query** action (which is present in the connector) provides a consistent environment for Mendix app projects to perform an arbitrary `SELECT` SQL query on relational external databases.  A Java database connectivity (JDBC) API (which is a standard Java API) is used when the Java action attempts to connect with a relational database for which a JDBC driver exists.
+The **Execute query** action (which is present in the connector) provides a consistent environment for Mendix apps to perform an arbitrary `SELECT` SQL query on relational external databases.  A Java database connectivity (JDBC) API (which is a standard Java API) is used when the Java action attempts to connect with a relational database for which a JDBC driver exists.
 
 The **Execute statement** action works internally in the same manner as the **Execute query** action. However, it is used for `INSERT`, `UPDATE`, `DELETE`, `STORED PROCEDURE`, or `DDL` statements.
 
@@ -37,7 +37,7 @@ These are the prerequisites for using this connector:
 
 ### 3.1 Usage
 
-Once you have imported the Database Connector into your app project, you will have the **Database Connector** available in the **Toolbox**. The connector supports four actions: **Execute query**, **Execute statement**, **Execute parameterized query**, and **Execute parameterized statement**. To use any of these in your Mendix application, drag them into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
+Once you have imported the Database Connector into your app, you will have the **Database Connector** available in the **Toolbox**. The connector supports four actions: **Execute query**, **Execute statement**, **Execute parameterized query**, and **Execute parameterized statement**. To use any of these in your Mendix application, drag them into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
 
 The **Execute query** and **Execute parameterized query** actions should be used for querying objects with a `SELECT` SQL command. The **Execute statement** and **Execute parameterized statement** actions should be used for all other commands (for instance, `INSERT`, `UPDATE`, or `DELETE`).
 

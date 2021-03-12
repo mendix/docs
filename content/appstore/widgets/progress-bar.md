@@ -16,9 +16,9 @@ The [Progress Bar](https://appstore.home.mendix.com/link/app/48910/) widget disp
 * Render bar types: plain, striped, or animated stripes
 * Use bar Bootstrap colors: success, info, warning, or danger
 
-### 1.2 Demo App Project
+### 1.2 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](https://progressbar-demo.mxapps.io/).
+For a demo app that has been deployed with this widget, see [here](https://progressbar-demo.mxapps.io/).
 
 ## 2 Usage
 

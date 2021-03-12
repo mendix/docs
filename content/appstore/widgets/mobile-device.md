@@ -47,9 +47,9 @@ In some cases, it is important that end-users have downloaded the latest and cor
 
 * Add the [cordova-plugin-app-version](https://github.com/whiteoctober/cordova-plugin-app-version) to your [locally built](/howto/mobile/customizing-phonegap-build-packages) app with this: `<plugin name="cordova-plugin-app-version" source="npm" spec="0.1.8" />`
 
-### 1.4 Demo App Project
+### 1.4 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](http://deviceidwidget.mxapps.io).
+For a demo app that has been deployed with this widget, see [here](http://deviceidwidget.mxapps.io).
 
 ## 2 Configuration
 

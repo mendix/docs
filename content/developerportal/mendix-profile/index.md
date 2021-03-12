@@ -118,7 +118,7 @@ These are points you can gain through activity in the [Mendix Marketplace](https
 | Be the first member of your company to sign up for Mendix | 25 | N/A |
 | Send an app invite | 10 | 50 |
 | Send a Mendix Platform invite | 5 | 50 |
-| Create an app project | 5 | 5 |
+| Create an app | 5 | 5 |
 | Submit a feedback item | 2 | 10 |
 | Have your feedback item marked as accepted | 2 | 10 |
 | Commit to the Team Server | 2 | 10 |
@@ -189,7 +189,7 @@ When you earn enough points, you gain a level:
 
 ## 8 Portfolio
 
-The **Portfolio** card presents a selection of Mendix app projects you have worked on. Click the project name to see more details about it (including a description of the app, business need, solution, results, and collaborators), or click **View all projects** to be taken to the  **Portfolio** tab, which presents a complete view of all your projects. 
+The **Portfolio** card presents a selection of Mendix apps you have worked on. Click the app name to see more details about it (including a description of the app, business need, solution, results, and collaborators), or click **View all projects** to be taken to the  **Portfolio** tab, which presents a complete view of all your projects. 
 
 ![](attachments/portfolio.png)
 
@@ -236,8 +236,8 @@ Changes made through Studio Pro are stored in the Mendix Team Server. This secti
 
 In this section, you can view the invitations you have sent and received. There are two types of invitations:
 
-* Project invitation – an invitation to join an App Team to work on an app project
-* App invitation – an invitation to join an app project as a user
+* Project invitation – an invitation to join an App Team to work on an app
+* App invitation – an invitation to join an app as a user
 
 ## 10 Settings {#settings}
 
@@ -267,7 +267,7 @@ Here you can connect  your social accounts for **GitHub**, **Meetup**, **Twitter
 
 ### 10.4 Security {#security}
 
-You can change your password in this section. By default, you are requested to change your password every 90 days. Only a [Mendix Admin](/developerportal/control-center/index) is allowed to change the expiration period.
+You can change your password in this section. By default, you are requested to change your password every 90 days. Only a [Mendix Admin](/developerportal/control-center/) is allowed to change the expiration period.
 
 ### 10.5 API Keys {#api-key}
 
@@ -305,11 +305,11 @@ All you have to do is make your profile public (for details, see the [Selecting 
 We’ll take things from there!
 
 {{% alert type="info" %}}
-Once an old account has been merged to a new account, you will no longer have access to the app projects you were invited to via your old account. With your new account, you will need to be invited to those app projects again in order to gain access. Adding your new account to the relevant app projects prior to the merge is recommended.
+Once an old account has been merged to a new account, you will no longer have access to the apps you were invited to via your old account. With your new account, you will need to be invited to those apps again in order to gain access. Adding your new account to the relevant apps prior to the merge is recommended.
 {{% /alert %}}
 
 {{% alert type="info" %}}
-With the merge, the accounts are only combined. The old account is not deactivated. That should be done by the [Mendix Admins](/developerportal/control-center/index#members).
+With the merge, the accounts are only combined. The old account is not deactivated. That should be done by the [Mendix Admins](/developerportal/control-center/#members).
 {{% /alert %}}
 
 #### 10.6.2 Selecting Your Profile Visibility {#public}

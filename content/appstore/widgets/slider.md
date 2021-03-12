@@ -17,9 +17,9 @@ The [Slider](https://appstore.home.mendix.com/link/app/48786/) widget can be use
 * Show a tooltip on hover
 * Render slider with different bootstrap colors
 
-### 1.2 Demo App Project
+### 1.2 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](https://slider.mxapps.io/).
+For a demo app that has been deployed with this widget, see [here](https://slider.mxapps.io/).
 
 ## 2 Configuration
 

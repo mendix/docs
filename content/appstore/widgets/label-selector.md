@@ -32,7 +32,7 @@ You configure background colors for labels and how the text contrasts with a lab
 
 To implement this widget, follow these steps:
 
-1. Download the Label Selector widget into your app project via the Marketplace in Studio Pro.
+1. Download the Label Selector widget into your app via the Marketplace in Studio Pro.
 2. Create a [persistable](/refguide/persistability) entity named **Label**.
 3. Add two [attributes](/refguide/attributes) to the entity named **Caption** and **Color**.
 4. Add a [many-to-many association with dual ownership](/refguide/associations#many-to-many-both) between this new entity and the entity that you want to label. 

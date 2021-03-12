@@ -48,7 +48,7 @@ Before you start configuring microflows, familiarize yourself with the concepts 
 
 ## 3 Performing Basic Functions
 
-You can perform the following basic functions when working on workflows:
+You can perform the following basic functions when working on microflows:
 
 * [Open a microflow](#open)
 * [Create a microflow](#create)

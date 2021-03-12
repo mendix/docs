@@ -7,7 +7,9 @@ tags: ["workflow", "workflows", "call microflow"]
 
 ## 1 Introduction
 
-System actions in workflows consist of a **Call microflow** action that is used to call a selected [microflow](microflows). Arguments can be passed to the microflow and the result can be stored.
+System actions in workflows consist of a **Call microflow** action that is used to call a selected [microflow](microflows). 
+
+![](attachments/workflows-system-actions/call-microflow-example.jpg)
 
 ## 2 Call Microflow Properties
 

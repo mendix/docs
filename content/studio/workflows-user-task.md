@@ -10,6 +10,7 @@ tags: ["workflow", "workflows", "user task", "task"]
 User task allows you to assign a workflow task to a certain user. 
 
 For example, you can add filters and assign a task to the IT department. When the workflow reaches this user task, the task will appear in their inbox:
+{{% todo %}}[This page in a running up will look different with Atlas 3 changes. Update the screenshot.]{{% /todo %}}
 
 ![Task Inbox](attachments/workflows-user-task/task-inbox.jpg)
 
@@ -45,13 +46,9 @@ Possible options of this property are described in the table below:
 
 ### 2.3 Task Page Section {#task-page}
 
-**Task Page** is an overview page where the allowed roles can track the progress of the user tasks and view its details, such as comments or attachments:
+**Task Page** is an overview page where the allowed roles can track the progress of the user tasks and view its details, such as open tasks, comments to them or attachments:
 
 ![Task Page](attachments/workflows-user-task/task-page.jpg)
-
-When you create a task page, you can use a user task-specific page templates: 
-
-![User Task Templates](attachments/workflows-user-task/user-task-templates.jpg)
 
 ### 2.4 Display Information Section {#display-info}
 
@@ -83,6 +80,8 @@ The **Due Date** section properties are described in the table below:
 ### 2.6 Outcomes Section {#outcomes}
 
 The **Outcomes** property allows you to create new outcomes for the user task. These outcomes can be referred to by other elements, such as buttons. For example, you have a process when you need to approve or reject a request. One button on a [task page](#task-page) can refer to the **Approve** outcome of the user task, while the other one can use the **Reject** outcome:
+
+{{% todo %}}[Make fields read only on the image to the right]{{% /todo %}}
 
 ![Outcomes Section](attachments/workflows-user-task/outcomes.jpg)
 

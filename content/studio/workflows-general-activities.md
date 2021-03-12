@@ -11,8 +11,6 @@ tags: ["workflow", "workflows", "decision", "parallel split", "end activity"]
 
 ![General Activities](attachments/workflows/general.jpg)
 
-{{% todo %}}[Retake the screenshot above with the Jump activity.]{{% /todo %}}
-
 ## 2 Decision {#decision}
 
 A decision is an element that makes a choice based on a condition and follows one and only one of the outgoing paths. For example, you can use it to follow different processes when a new hire works remotely or when they work from the office:
@@ -49,7 +47,7 @@ The **General** section properties are described in the table below:
 
 The **Jump** activity allows you to jump to other activities in the workflow. This is useful when, for example, you are approving a request and need more details that are provided in one of the previous user tasks:
 
-{{% todo %}}[Add screenshots]{{% /todo %}}
+![Jump Activity Example](attachments/workflows-general-activities/jump-example.jpg)
 
 {{% alert type="warning" %}}
 You cannot use the **Jump** activity in a Parallel split or in a path where it would end the workflow without any other path continuing it. 
@@ -59,7 +57,7 @@ You cannot use the **Jump** activity in a Parallel split or in a path where it w
 
 An example of Jump activity properties is represented in the image below:
 
-{{% todo %}}[Add screenshots]{{% /todo %}}
+![](attachments/workflows-general-activities/jump-properties.jpg)
 
 The Jump activity properties consist of the **General** section and are described in the table below:
 
@@ -102,7 +100,11 @@ The **Paths** property allows you to add as many paths as there are parallel pro
 
 ## 5 End Activity {#end}
 
-The **End** activity ends the path of the workflow.
+The **End** activity ends the path of the workflow. 
+
+{{% alert type="warning" %}}
+You cannot use the **End** activity in a Parallel split or in a path where it would end the workflow without any other path continuing it. 
+{{% /alert %}}
 
 ## 6 Read More
 

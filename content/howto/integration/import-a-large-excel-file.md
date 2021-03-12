@@ -22,7 +22,7 @@ We will use XML-to-domain mapping to create a new import entity from an Excel sh
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Have an app project with the [MxModel Reflection](/appstore/modules/model-reflection) and [Excel Importer](/appstore/modules/excel-importer) modules installed and configured from the Mendix Marketplace
+* Have an app with the [MxModel Reflection](/appstore/modules/model-reflection) and [Excel Importer](/appstore/modules/excel-importer) modules installed and configured from the Mendix Marketplace
 
 ## 3 Modifying Your Excel Sheet
 
@@ -110,7 +110,7 @@ To prepare your XSD file, follow these steps:
 
 The XSD file is ready to be imported into . To import it, follow these steps:
 
-1. Open your app project and create a new XSD schema:
+1. Open your app and create a new XSD schema:
 
     ![](attachments/import-large/19398893.png)
 

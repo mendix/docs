@@ -21,7 +21,7 @@ You can switch the alerts on and off for each environment to which you are entit
 Before starting this how-to, make sure you have completed the prerequisites described below:
 
 * You need an **Application Operator**, **Business Engineer**, or **Scrum Master** role
-* In the case that a [Mendix Admin](/developerportal/control-center/index#members) has defined a new App Team role, that role must have the App Team **Edit** permission for **Monitor**    
+* In the case that a [Mendix Admin](/developerportal/control-center/#members) has defined a new App Team role, that role must have the App Team **Edit** permission for **Monitor**    
     
 ## 3 Receive Alerts
 

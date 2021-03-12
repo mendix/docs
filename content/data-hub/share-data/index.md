@@ -34,7 +34,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 Follow these steps to create a simple app in Studio Pro and populate it. You will you will use this data in another app through the Data Hub: 
 
-1. In Studio Pro, click **New App** to create a new app project using the **Blank App** template. Call this app *{yourname}CustomerServiceApp*.
+1. In Studio Pro, click **New App** to create a new app using the **Blank App** template. Call this app *{yourname}CustomerServiceApp*.
 2. In the project explorer, double click the **Domain Model** for **MyFirstModule** and click **Entity** in the toolbar above the main window to add an entity to the domain model.
 3. Double-click the entity to open its properties and change its **Name** to *Customer*.
 4.  In the **Attributes** tab, click **New** to create the following attributes for the entity:
@@ -150,11 +150,11 @@ The **{yourname}CustomerODataService** from your app is now registered in the Da
 
 	![data hub](attachments/share-data/search-details-screen.png)
 
-	{{% alert type="info" %}}For more information about the user and curator roles in Data Hub see [Roles in Data Hub](../index#data-hub-roles).{{% /alert %}}
+	{{% alert type="info" %}}For more information about the user and curator roles in Data Hub see [Roles in Data Hub](/data-hub/#data-hub-roles).{{% /alert %}}
 
 Owners of assets registered in the catalog and curators can edit details of the registered service and also set the **Discoverability** to other users. By default, services registered through a Studio Pro deployment will be set to **Discoverable** meaning that it is visible to all users. For further details about curating functions, see [How to Curate Registered Assets](../data-hub-catalog/curate).
 
-For more details on searching in the Data Hub Catalog and the **Search Details** screen, see [How to Search in the Data Hub Catalog](../data-hub-catalog/search). You can also explore registered services in the Data Hub Landscape. For more information, see [How to Use the Data Hub Landscape](../data-landscape/../data-hub-landscape/index).
+For more details on searching in the Data Hub Catalog and the **Search Details** screen, see [How to Search in the Data Hub Catalog](../data-hub-catalog/search). You can also explore registered services in the Data Hub Landscape. For more information, see [How to Use the Data Hub Landscape](/data-hub/data-hub-landscape/).
 
 ## 6 Using the Customer Dataset in Another App
 
@@ -239,7 +239,7 @@ You can now see your new apps in your organization's Data Hub Landscape.
 
 You will now learn how to do the following:
 
-* Use and understand the [Data Hub Landscape](../data-hub-landscape/index) for locating sources of data
+* Use and understand the [Data Hub Landscape](/data-hub/data-hub-landscape/) for locating sources of data
 * View the dependencies between deployed apps and the direction of the dependencies in your Data Hub Landscape 
 
 You can view the two apps that you have created in the Data Hub Landscape and see the associations by following these steps:

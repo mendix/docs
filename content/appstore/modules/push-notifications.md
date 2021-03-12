@@ -14,7 +14,7 @@ This module makes it easy for Mendix developers who want to include push notific
 
 ## 2 Development
 
-When using the module in your app project, all dependencies are bundled when downloaded from the Marketplace. For developers who want to update and publish a newer version, there are some helpful scripts described below.
+When using the module in your app, all dependencies are bundled when downloaded from the Marketplace. For developers who want to update and publish a newer version, there are some helpful scripts described below.
 
 These are the development prerequisites:
 

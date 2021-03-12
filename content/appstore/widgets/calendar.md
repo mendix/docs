@@ -17,9 +17,9 @@ The [Calendar](https://appstore.home.mendix.com/link/app/107954/) widget can be 
 * Change calendar event colors
 * Retrieve events based on selected date ranges
 
-### 1.2 Demo App Project
+### 1.2 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](https://reactcalendar.mxapps.io).
+For a demo app that has been deployed with this widget, see [here](https://reactcalendar.mxapps.io).
 
 ## 2 Basic Configuration
 

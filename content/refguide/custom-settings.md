@@ -120,7 +120,7 @@ Before the data copy process starts, the source database will also be brought in
 
 ## 5 S3 Storage Service Settings {#5-amazon-s3-storage-service-settings}
 
-The settings described below influence the behavior of the Amazon S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage. Using these settings manually in Mendix Cloud is strongly discouraged, as files stored in external systems will not be included in backup creation and restoration.
+The settings described below influence the behavior of the Amazon S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage. For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you.
 
 | Name | Description | Default Value |
 | --- | --- | --- |
@@ -143,7 +143,7 @@ The settings described below influence the behavior of the Amazon S3 Storage Ser
 
 ## 6 Microsoft Azure SQL
 
-These settings can be changed to use a Microsoft Azure SQL database for your Mendix application.
+These settings can be changed to use a Microsoft Azure SQL database for your Mendix application. For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you.
 
 First, you need to create an Azure SQL database (for information on how to do this, see this [SQL Database Tutorial](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/)). Make sure your Azure firewall settings allow your Mendix application to reach the Azure SQL database (by default, the Azure firewall does not allow external connections).
 
@@ -157,7 +157,7 @@ First, you need to create an Azure SQL database (for information on how to do th
 
 ## 7 Microsoft Azure Blob Storage Settings
 
-These settings can be used to store files using the Microsoft Azure blob storage service. Server-side encryption can be configured through the Azure Portal (for more information, see [Azure Storage encryption for data at rest](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)).
+These settings can be used to store files using the Microsoft Azure blob storage service. Server-side encryption can be configured through the Azure Portal (for more information, see [Azure Storage encryption for data at rest](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)). For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you.
 
 | Name | Description | Default Value |
 | --- | --- | --- |
@@ -179,7 +179,7 @@ Azure blob storage's default connection protocol is HTTPS in order to encourage 
 
 ## 8 IBM Cloud (Bluemix) Object Storage Settings
 
-These settings can be used to store files using the IBM Cloud object storage service.
+These settings can be used to store files using the IBM Cloud object storage service. For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you.
 
 Mendix supports unscoped authentication of OpenStack Identity (Keystone) v3. The credentials related settings must be filled with the corresponding values which can be found in the Service Credentials section of your object storage service.
 

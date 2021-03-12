@@ -1,5 +1,5 @@
 ---
-title: "Export an App Project Package"
+title: "Export an App Package"
 parent: "dialogs"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -46,7 +46,7 @@ There are two snapshot options in the export dialog box:
 
 To export with a snapshot, follow these steps:
 
-1. In your app project in the Modeler, select **File** > **Export Project Package**:
+1. In your app in the Modeler, select **File** > **Export Project Package**:
 2. Select the **Package destination**.
 3. Select **New snapshot from current database**.
 4. Click **Export**.

@@ -25,7 +25,7 @@ To install APD 3, follow these steps:
 1. Arrange a license for the app to use APD 3.
 2. In a browser, log in using your Mendix account to the [APD Manager](https://apd.mendix.com/). (For backward compatibility with APM 1, APM 2 you are forwarded to [https://apmmanager100.mendixcloud.com](https://apmmanager100.mendixcloud.com)).
 3. Select your app in the dashboard.
-4. In the **Environments** dashboard, select the **New Environment** tile. If you are a [Scrum Master](/developerportal/collaborate/app-roles) of the Mendix app project, you can add test, acceptance, and production environments. If you are not, you can only add Mendix Studio Pro environments. For more details, see [Environments](rg-three-environments).
+4. In the **Environments** dashboard, select the **New Environment** tile. If you are a [Scrum Master](/developerportal/collaborate/app-roles) of the Mendix app, you can add test, acceptance, and production environments. If you are not, you can only add Mendix Studio Pro environments. For more details, see [Environments](rg-three-environments).
 5. Choose an environment name.
 6. Click **Save and generate API key**, then use this key as the value for the **APDAgent.APIKey** constant in step 10 below.
 7. In Studio Pro with your app, import the [Mendix Application Performance Monitor](https://appstore.home.mendix.com/link/app/6127/) module from the Mendix Marketplace.

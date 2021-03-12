@@ -71,4 +71,4 @@ By participating in the MVP program, each MVP agrees to release, indemnify, defe
 
 ## 6 Read More
 
-* [Mendix Profile](../mendix-profile/index)
+* [Mendix Profile](/developerportal/mendix-profile/)

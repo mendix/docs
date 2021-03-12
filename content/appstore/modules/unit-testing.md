@@ -50,7 +50,7 @@ To create a new microflow test in a module, just add a microflow with a name tha
 
 In addition, it is possible to create a **Setup** and **TearDown** microflow per module. Those microflows are invoked once before and after eacht test run (regardless of whether the test run consists of one or multiple unit tests).
 
-The Unit Testing module publishes a **reportStep** microflow that can be used inside your test microflow to track the progress inside a test. The last step successfully reached in a unit test is reported back in the test result. This makes it easier to inspect where things go wrong (althought using the [microflow debugger](/howto/monitoring-troubleshooting/debug-microflows) is usually more insightful).
+The Unit Testing module publishes a **reportStep** microflow that can be used inside your test microflow to track the progress inside a test. The last step successfully reached in a unit test is reported back in the test result. This makes it easier to inspect where things go wrong (althought using the [microflow/nanoflow debugger](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows) is usually more insightful).
 
 ### 4.2 Creating a Java Unit Tests (with JUNit)
 

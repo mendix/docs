@@ -174,7 +174,7 @@ Variable ‘Variable’ is never used.
 * [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
 * [Debug Java Actions Remotely](debug-java-actions-remotely)
 * [Configure Log Levels](log-levels)
-* [Debug Microflows and Nanoflows](debug-microflows)
+* [Debug Microflows and Nanoflows](debug-microflows-and-nanoflows)
 * [Debug Java Actions](debug-java-actions)
 * [Debug Microflows Remotely](debug-microflows-remotely)
 

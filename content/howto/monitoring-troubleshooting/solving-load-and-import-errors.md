@@ -62,7 +62,7 @@ Finally, in the unlikely event that you encounter this error while working on yo
 *   [Debug a Hybrid Mobile Application](debug-a-hybrid-mobile-application)
 *   [Debugging Java Actions](debug-java-actions)
 *   [Debugging Java actions remotely](debug-java-actions-remotely)
-*   [Debugging Microflows and Nanoflows](debug-microflows)
+*   [Debugging Microflows and Nanoflows](debug-microflows-and-nanoflows)
 *   [Debugging Microflows Remotely](debug-microflows-remotely)
 *   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 *   [Log Levels](log-levels)

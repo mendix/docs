@@ -62,7 +62,7 @@ The following steps will teach you to build a pluggable input widget, and show y
 
 The Pluggable Widget Generator is the quickest way to start developing a widget. It creates a widget’s recommended folder structure and files.
 
-Using a terminal or command line, navigate to your new Mendix app project’s folder, create a new folder named *CustomWidgets*, and start the generator using:
+Using a terminal or command line, navigate to your new Mendix app's folder, create a new folder named *CustomWidgets*, and start the generator using:
 
 ```
 $ mkdir CustomWidgets

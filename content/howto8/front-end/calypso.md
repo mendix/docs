@@ -88,5 +88,5 @@ Good job! You've installed Calypso and used it to customize your styling quickly
 ## 5 Read More
 
 * [Get Started with Atlas UI](get-started-with-atlasui)
-* [Migrate Existing App Projects to Atlas UI](migrate-existing-projects-to-atlasui)
+* [Migrate Existing Apps to Atlas UI](migrate-existing-projects-to-atlasui)
 * [How to Set Up Gulp & Sass](/howto/front-end/sass-eight)

@@ -80,7 +80,7 @@ The **Due Date** section properties are described in the table below:
 
 ### 2.5 Admin Page Section {#admin-page}
 
-**Override Admin Page** is an optional page used for displaying all running workflows to the workflow admin. This overrides a generic page used to display any running workflow in the app, for example, when you have a **Show workflow page** set as an [on-click action](page-editor-widgets-events-section#show-workflow-page) or as a [microflow activity](microflows#microflow-workflow-activities) and would like to override the page selected for this event/activity. {{% todo %}}[Please update the screenshot below]{{% /todo %}}
+**Override Admin Page** is an optional page used for displaying all running workflows to the workflow admin. This overrides a generic page used to display any running workflow in the app, for example, when you have a **Open workflow page** set as an [on-click action](page-editor-widgets-events-section#open-workflow-page) or as a [microflow activity](microflows#microflow-workflow-activities) and would like to override the page selected for this event/activity. {{% todo %}}[Please update the screenshot below]{{% /todo %}}
 
 ![Workflow Page Section](attachments/workflow-properties/workflow-page.jpg)
 

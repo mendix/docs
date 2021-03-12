@@ -38,7 +38,6 @@ You can perform the following basic functions when working on workflows:
 * [Copy and paste a workflow](#copy-paste)
 * [Delete a workflow](#delete)
 * [Add elements to a workflow](#add-elements)
-* [View element properties](#view-elements) 
 
 ### 3.1 Opening a Workflow {#open}
 
@@ -108,7 +107,7 @@ To delete a workflow in Studio, do one of the following:
 
 The selected workflow is deleted. 
 
-### 3.6 Adding Elements to a Workflow 
+### 3.6 Adding Elements to a Workflow {#add-elements}
 
 To add an element to a workflow, do the following:
 
@@ -137,7 +136,7 @@ The elements of this section are described in the table below:
 
 | Element                                                      | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Start activity                                               | The starting point of a workflow. Workflows are triggered either by the [Call workflow](on-click-event#call-workflow) on-click event on pages or by the [Workflow call](workflow-call) action in microflows. <br />Click the start event to open [workflow properties](workflow-properties). |
+| Start activity                                               | The starting point of a workflow. Workflows are triggered either by the [Call workflow](page-editor-widgets-events-section#call-workflow) on-click event on pages or by the [Workflow call](microflows#microflow-workflow-activities) action in microflows. <br />Click the start event to open [workflow properties](workflow-properties). |
 | [Decision](workflows-general-activities#decision)            | Makes a choice based on a condition and follows one and only one of the outgoing paths. |
 | [Jump activity](workflows-general-activities#jump)           | Allows you to jump to other activities in the workflow.      |
 | [Parallel split](workflows-general-activities#parallel-split) | Adds two parallel paths to your workflow.                    |

@@ -1,5 +1,5 @@
 ---
-title: "Adding a Workflow to an Existing app: Setting Up the Basics in Studio Pro"
+title: "Adding a Workflow to an Existing App: Setting Up the Basics in Studio Pro"
 category: "Logic & Business Rules"
 description: "Describes how to use Workflow Commons in an existing app in Mendix Studio Pro."
 menu_order: 1
@@ -70,6 +70,7 @@ Finally, go to the Workflows tab in your [project settings](project-settings#wor
 ## 5 Customizing Workflow Commons
 
 While Workflow Commons does provide useful documents out-of-the-box, you might have the need to change the content and, for example, make pages company-specific. When doing so, we recommend that you make a copy of the document that you will be changing to a local module called **WorkflowCommonsCustomizations**, so that you do not accidentally overwrite your changes in the future when upgrading to a newer version. Feel free to also browse around in the **Private** folder of the module to discover the snippets and sub-microflows.
+For more information on how to configure a workflow and set up pages and other elements for it, see [How to Configure a Workflow for the Employee Onboarding Process](/howto/logic-business-rules/workflow-how-to-configure).
 
 ## 6 Workflow Best Practices
 

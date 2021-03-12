@@ -95,7 +95,7 @@ In addition to adding new parameters, you can perform the following actions on p
 
 #### 2.4.1 Name
 
-**Name** is the internal name of the user task. When referring to the user task in the app project you will use this name. It must be unique within the workflow, but you can have two user tasks with the same name in different workflows. {{% todo %}}[Is this correct?]{{% /todo %}}
+**Name** is the internal name of the user task. When referring to the user task in the app project you will use this name. It must be unique within the workflow, but you can have two user tasks with the same name in different workflows. 
 
 #### 2.4.2 Caption
 

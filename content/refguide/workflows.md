@@ -3,6 +3,7 @@ title: "Workflows"
 parent: "application-logic"
 menu_order: 20
 tags: ["workflow", "workflows", "Studio Pro"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 {{% alert type="warning" %}}
@@ -150,9 +151,9 @@ You can trigger workflows or user tasks from pages via specific on-click events 
 
 The **Workflow Commons** module is a workflow specific module that has preconfigured page templates, pages, dashboards, etc. It can save you a lot of time during development. You can either download it from the Marketplace or use the **Approval app** template in the Developer Portal that already contains the **Workflows Commons**. 
 
-For more information on how to configure the **Workflow Commons** in an existing app, see [Using Workflow Commons in an Existing App](workflow-in-existing-app). 
+For more information on how to configure the **Workflow Commons** in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app).
 
 ## 9 Read More
 
 * [How to Configure a Workflow for the Employee Onboarding Process](/howto/logic-business-rules/workflow-how-to-configure)
-* [Using Workflow Commons in an Existing App](workflow-in-existing-app)
+* [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app)

@@ -1,9 +1,10 @@
 ---
-title: "Adding a Workflow to an Existing App: Setting Up the Basics in Studio Pro"
-category: "Logic & Business Rules"
+title: "Adding a Workflow to an Existing App: Setting Up the Basics"
+parent: "workflows"
 description: "Describes how to use Workflow Commons in an existing app in Mendix Studio Pro."
-menu_order: 1
+menu_order: 55
 tags: ["studio pro", "workflow", "task", "onboarding"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -12,8 +13,8 @@ tags: ["studio pro", "workflow", "task", "onboarding"]
 
 Before adding the Workflow Commons module to your app, make sure you have completed the following:
 
--   Upgrade your application to Mendix 9
--   Install Atlas 3 from the Mendix Marketplace, as Workflow Commons depends on it 
+* Upgrade your application to Mendix 9
+* Install Atlas 3 from the Mendix Marketplace, as Workflow Commons depends on it 
 
 ## 2 Preparing Your App
 
@@ -28,18 +29,18 @@ The purpose of Workflow Commons is to provide you with useful pages, page templa
 There are three pages provided with the Workflow Commons module to get you and your users started with workflows. The functionality contained in these pages works out-of-the-box. Simply add these pages to the [navigation](navigation) of your app to start using them. 
 You can find the following pages in Workflow Commons:
 
--   **MyTaskDashboard** -- Gives end-users an overview of their performance in your app's workflows. It contains such information as how many tasks your users have completed, how long they take on average to complete a task, and what percentage of their tasks they complete within the deadline.
--   **MyTaskInbox** -- Contains a handy list of all tasks that a user can interact with. _My open tasks_ shows the tasks assigned to current users, _All open tasks_ is a list of tasks they could pick up, _Unassigned tasks_ shows all unassigned tasks, and _Completed tasks_ gives an overview of all tasks that were finished.
--   **WorkflowAdminCenter** -- A navigational page for workflow administrators. From here, a workflow administrator can go the the _Workflow dashboard_, which gives them general statistics of workflows, much like the _MyTaskDashboard_ does for users. Workflow administrators also gain access to the _Workflow Admin Center_, where they can see all the instances of specific workflows and make changes to their data or even abort them.
+*   **MyTaskDashboard** -- Gives end-users an overview of their performance in your app's workflows. It contains such information as how many tasks your users have completed, how long they take on average to complete a task, and what percentage of their tasks they complete within the deadline.
+*   **MyTaskInbox** -- Contains a handy list of all tasks that a user can interact with. _My open tasks_ shows the tasks assigned to current users, _All open tasks_ is a list of tasks they could pick up, _Unassigned tasks_ shows all unassigned tasks, and _Completed tasks_ gives an overview of all tasks that were finished.
+*   **WorkflowAdminCenter** -- A navigational page for workflow administrators. From here, a workflow administrator can go the the _Workflow dashboard_, which gives them general statistics of workflows, much like the _MyTaskDashboard_ does for users. Workflow administrators also gain access to the _Workflow Admin Center_, where they can see all the instances of specific workflows and make changes to their data or even abort them.
 
 ### 3.2 Page Templates
 
 Workflow Commons contains page templates to easily get you started with building workflow-related pages. These templates are automatically suggested to you when you make a new page from either the user task or workflow properties. 
 You can find the following page templates in Workflow Commons:
 
--   **UserTask_Basic** -- A simple template that shows a header with the task name and description, a sidebar with details about the assignee and status of the task, and a main view where input widgets and buttons to complete the task are generated.
--   **UserTask_Extended** -- Does exactly the same as the basic user task template, but extends it by adding attachments and comments sections, as well as an activity timeline to see what has previously happened in this workflow.
--   **Workflow_Overview** -- Can be used to easily generate an overview page for a specific workflow. It contains a header with the name of the workflow, as well as an action menu for administrators. There are three tabs, _General information_, _Task details_, and _Notes and attachments_. In the _General information_ tab, you will see the current state of the workflow, when it has started and ended, as well as the due date and potential reasons for failure. The activity timeline is displayed, and there is a section with generated input widgets that allows administrators to make changes to the data in the workflow. For more information about the individual tasks: who worked on them and who would have been able to pick them up, go to the _Task details_ tab. Finally, the _Notes and attachments_ tab provides an overview of all the notes and attachments that were added for this workflow.
+*   **UserTask_Basic** -- A simple template that shows a header with the task name and description, a sidebar with details about the assignee and status of the task, and a main view where input widgets and buttons to complete the task are generated.
+*   **UserTask_Extended** -- Does exactly the same as the basic user task template, but extends it by adding attachments and comments sections, as well as an activity timeline to see what has previously happened in this workflow.
+*   **Workflow_Overview** -- Can be used to easily generate an overview page for a specific workflow. It contains a header with the name of the workflow, as well as an action menu for administrators. There are three tabs, _General information_, _Task details_, and _Notes and attachments_. In the _General information_ tab, you will see the current state of the workflow, when it has started and ended, as well as the due date and potential reasons for failure. The activity timeline is displayed, and there is a section with generated input widgets that allows administrators to make changes to the data in the workflow. For more information about the individual tasks: who worked on them and who would have been able to pick them up, go to the _Task details_ tab. Finally, the _Notes and attachments_ tab provides an overview of all the notes and attachments that were added for this workflow.
 
 ### 3.3 Snippets
 
@@ -50,10 +51,10 @@ If you would like to customize page templates, you can do that with the help of 
 Preconfigured microflows help you assigning user tasks, and one allows you to abort workflows.
 You can find the following microflows in Workflow Commons:
 
--   **ACT_UserTask_AssignToMe** -- Assigns a user task, which is passed as a parameter, and assigns it to the current user.
--   **ACT_UserTask_AssignToUser** -- Assigns a user task to a specified user, both passed as parameters.
--   **ACT_UserTask_Unassign** -- Removes the assignee from a user task, which is passed as a parameter.
--   **ACT_Workflow_Abort** -- Aborts a workflow instance and all of its currently running user tasks. The workflow instance is passed in as a parameter.
+*   **ACT_UserTask_AssignToMe** -- Assigns a user task, which is passed as a parameter, and assigns it to the current user.
+*   **ACT_UserTask_AssignToUser** -- Assigns a user task to a specified user, both passed as parameters.
+*   **ACT_UserTask_Unassign** -- Removes the assignee from a user task, which is passed as a parameter.
+*   **ACT_Workflow_Abort** -- Aborts a workflow instance and all of its currently running user tasks. The workflow instance is passed in as a parameter.
 
 ## 4 Setting Up User Assignment and Security
 
@@ -76,13 +77,13 @@ For more information on how to configure a workflow and set up pages and other e
 
 We recommend the following best practices when working with workflows:
 
--   When creating your workflow entity, use associations to connect to relevant information and only create attributes that are related to the current workflow instance. An example could be an **Expense** entity containing a description and amount, associated with an **ExpenseApproval** entity which has attributes for the approval state and a reason for rejection.
--   When creating a user task, add a short description of the target users to the caption of the task. An example could be **HR: Schedule onboarding training** in an employee onboarding workflow.
--   When creating a microflow for a system task, prefix it with **WF\_**, so everyone knows it is being used in a workflow.
+*   When creating your workflow entity, use associations to connect to relevant information and only create attributes that are related to the current workflow instance. An example could be an **Expense** entity containing a description and amount, associated with an **ExpenseApproval** entity which has attributes for the approval state and a reason for rejection.
+*   When creating a user task, add a short description of the target users to the caption of the task. An example could be **HR: Schedule onboarding training** in an employee onboarding workflow.
+*   When creating a microflow for a system task, prefix it with **WF\_**, so everyone knows it is being used in a workflow.
 
 ## 7 Read More
 
--   [Workflows](workflows)
--   [How to Configure a Workflow for the Employee Onboarding Process](/howto/logic-business-rules/workflow-how-to-configure)
+*   [Workflows](workflows)
+*   [How to Configure a Workflow for the Employee Onboarding Process](/howto/logic-business-rules/workflow-how-to-configure)
 
 

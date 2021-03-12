@@ -63,8 +63,6 @@ The **Workflow access** tab is displayed as a matrix showing microflows and modu
 
 For each combination you can indicate whether or not the module role has access to the workflow. You can also edit this information in a [workflow](workflow-properties) using the **Allowed roles** property.
 
-The **Workflow access** tab is visible only when workflows are enabled in [Project Settings](project-settings#workflows).
-
 ## 5 Entity Access {#entity-access}
 
 **Entity Access** defines for each module role whether users with this role are authorized to **Create**, **Read**, **Write** and/or **Delete** objects of the entity. You can also write an XPath constraint to restrict the set of objects to which the access rule applies.

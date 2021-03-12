@@ -70,8 +70,6 @@ When an event is triggered, you can choose what action is triggered. Possible op
 * [Open task page](#open-task-page)
 * [Complete task](#complete-task)
 
-{{% todo %}}[Name of workflow on-click events will change.]{{% /todo %}}
-
 ### 3.1 Do Nothing {#do-nothing}
 
 No action is taken. This option is useful for setting up a page without defining the underlying functionality yet.

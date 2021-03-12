@@ -102,12 +102,9 @@ Integration activities can be used to integrate with other systems, for example 
 
 Workflow activities are used in relation to workflows and their user tasks. 
 
-{{% todo %}}[Add graphics when they are finalized]{{% /todo %}}
-
-| Graphic | Name             | Description                                                  |
-| ------- | ---------------- | ------------------------------------------------------------ |
-|         | Call workflow    | Calls a workflow.                                            |
-|         | Open user task   | Opens a user task page specified in [user task properties](user-task). |
-|         | Open workflow    | Opens an overview page specified in [workflow properties](workflow-properties). |
-|         | Set task outcome | Sets which outcome the [user task](user-task) should follow. For example, this activity can be used to complete a user task using a microflow with custom validations. |
-
+| Graphic                                                      | Name                                     | Description                                                  |
+| ------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------ |
+| [![](attachments/activities/complete-task.png)](complete-task) | [Complete task](complete-task)           | Sets which outcome the [user task](user-task) should follow. For example, this activity can be used to complete a user task using a microflow with custom validations. |
+| [![](attachments/activities/open-task-page.png)](open-task-page)               | [Open task page](open-task-page)         | Opens a user task page specified in [user task properties](user-task). |
+| [![](attachments/activities/open-workflow-page.png)](open-workflow-page)           | [Open workflow page](open-workflow-page) | Opens a workflow overview page.                              |
+| [![](attachments/activities/workflow-call.png)](workflow-call)                | [Workflow call](workflow-call)           | Triggers the selected workflow.                              |

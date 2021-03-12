@@ -30,7 +30,7 @@ You would like to build an employee onboarding process. At first, an HR speciali
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Your project has the Workflow Commons and Mendix SSO modules.
+* Your project has the Workflow Commons and Mendix SSO modules. Fore more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app).
 
 * Make sure that the **User entity** is configured in your [Project Settings](/refguide/project-settings#workflows) > **Workflows** tab. 
 
@@ -117,11 +117,11 @@ You need to create a workflow that you will add activities to and create pages f
 
 2.  In the **Add workflow** dialog box, set the **Name** to *Employee_Onboarding* and click **OK**.
 
-3. To open the workflow properties, make sure that no activity is selected in the workflow editor and navigate to the **Properties** pane. 
+3. To open the workflow properties, click the start activity or make sure that no activity is selected in the workflow editor and navigate to the **Properties** pane. 
 
 4. Click the **Allowed roles** property to set security for the workflow.
 
-5. In the **Select Module Roles** dialog box, select the **Workflow Administrator** role and click **OK**. {{% todo %}}[Is this correct?]{{% /todo %}}
+5. In the **Select Module Roles** dialog box, select the **Workflow Administrator** and the **HR** role and click **OK**. These roles are now able to start the workflow. 
 
 6. Click the **Workflow entity** property:
 
@@ -171,7 +171,7 @@ To add a button that will initiate the workflow, do the following:
 
 2. Drag and drop the button inside the list view.
 
-3. Open the button properties and set the **On-click** property to **Call workflow**: {{% todo %}}[This screenshot needs to be updated, the name of the **Open workflow page** event will change to **Open admin page**]{{% /todo %}}
+3. Open the button properties and set the **On-click** property to **Call workflow**: 
 
     ![Call Workflow](attachments/workflow-how-to-configure/call-workflow-on-click.png)
 
@@ -403,3 +403,7 @@ To test your workflow, you need to switch between different user roles. Follow t
     4. Open the Workflow Dashboard.
 
 Great job! You have deployed your app locally and tested your workflow from the perspective of different users. You can now work on adding more functionality to your app. 
+
+## 11 Read More
+
+* [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app)

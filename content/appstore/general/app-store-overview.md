@@ -125,9 +125,10 @@ On this page, you will see the following buttons:
 * **Create new draft version** – click this to create a new draft version of the component
 	* Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated – if there is a draft version in progress, click **View draft** to see it
 	* For more information on creating a draft version, see the [Updating Existing Marketplace Content](share-app-store-content#updating) section of *How to Share Marketplace Content*
-* **Unpublish** – click this to remove that version from the component
+* **Unpublish** – click this to remove one version or all versions of the component
 	* If the component is not the protected content of a [user group](#user-groups), you can only unpublish a version that you have published yourself
 	* If the component is protected [content](#content) from a user group, a group [member](#members) can unpublish any version
+	* Select **Unpublish all versions** to remove all versions of the component
 * **Edit** – click this to edit the component (for details on editing, see the [Adding New Marketplace Content](share-app-store-content#adding) section of *How to Share Marketplace Content*)
 
 ### 4.3 Drafts {#drafts}

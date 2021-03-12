@@ -97,7 +97,7 @@ The only limitations are that:
 
 The **Activity** tab shows all the activity for this cluster. It shows the same information as for the activities in the [Cluster Overview](#overview) but only for the currently displayed cluster.
 
-### 3.2 Namespace Management
+### 3.3 Namespace Management
 
 If you are a member of a namespace, you can also manage a namespace in the cluster.
 
@@ -140,7 +140,7 @@ You can also see an activity log containing the following information for all na
 
 **==================================================**
 
-#### 3.2.1 Apps
+#### 3.3.1 Apps
 
 The **Apps** tab of namespace details lists all the apps which are deployed to this namespace.
 
@@ -152,7 +152,7 @@ If you are a team member of the app, click **Details** to go to the *Environment
 You can only see the environment details of an app if you are a member of the app team with the appropriate authorization.
 {{% /alert %}}
 
-#### 3.2.2 Members
+#### 3.3.2 Members
 
 By default, the cluster manager, who created the cluster in Mendix, and anyone added as a cluster manager can invite and manage users of the cluster and its namespaces.
 
@@ -179,7 +179,7 @@ The following actions require the appropriate access to the namespace **and** ac
 
 The **Members** tab allows you to manage the list of members of the namespace and control what rights they have.
 
-##### 3.2.2.1 Adding Members
+##### 3.3.2.1 Adding Members
 
 You can invite additional members to the namespace, and configure their role depending on what they should be allowed to do.
 
@@ -205,7 +205,7 @@ You can invite additional members to the namespace, and configure their role dep
 
 6. The user will receive an email and will be required to follow a link to confirm that they want to join this namespace. They will need to be logged in to Mendix when they follow the confirmation link.
 
-##### 3.2.2.2 Editing & Removing Members
+##### 3.3.2.2 Editing & Removing Members
 
 **CAN YOU CHANGE THE ACCESS RIGHTS OF AN EXISTING MEMBER?**
 
@@ -215,7 +215,7 @@ You can remove existing members.
         
     ![](attachments/tencent-deploy/namespace-member-remove.png)
 
-#### 3.2.3 Operate {#operate}
+#### 3.3.3 Operate {#operate}
 
 **DO USERS NEED TO DO THIS, OR ARE THEY AUTOMATICALLY PROVIDED BY THE TENCENT CONFIGURATION?**
 

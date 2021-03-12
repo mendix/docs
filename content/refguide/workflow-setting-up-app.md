@@ -18,7 +18,7 @@ Before adding the Workflow Commons module to your app, make sure you have comple
 
 ## 2 Preparing Your App
 
-By default, Workflow Commons will integrate with [Mendix SSO](/appstore/modules/mendix-sso) that allows you to invite and manage users and roles in the [Manage App Users page](/developerportal/settings/general-setting) in the Developer Portal. You can download Mendix SSO from the Mendix Marketplace. If you do not have Mendix SSO installed, you will see some consistency errors after installing Workflow Commons. After adding the Mendix SSO module, the consistency errors caused by the installation of Workflow Commons will be gone. If you want to implement a different user authentication and user management method, you can replace the references made to Mendix SSO in Workflow Commons with the user entity of your preference.
+By default, Workflow Commons will integrate with [Mendix SSO](/appstore/modules/mendix-sso) that allows you to invite and manage users and roles in the [Manage App Users page](/developerportal/settings/general-settings) in the Developer Portal. You can download Mendix SSO from the Mendix Marketplace. If you do not have Mendix SSO installed, you will see some consistency errors after installing Workflow Commons. After adding the Mendix SSO module, the consistency errors caused by the installation of Workflow Commons will be gone. If you want to implement a different user authentication and user management method, you can replace the references made to Mendix SSO in Workflow Commons with the user entity of your preference.
 
 ## 3 Workflow Commons Components
 

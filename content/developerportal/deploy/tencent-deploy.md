@@ -16,13 +16,15 @@ This document explains how to use the Mendix Developer Portal to manage your clu
 
 ## 2 Prerequisites for Deploying an App
 
-To deploy an app to your private cloud platform, you need the following:
+To deploy an app to Tencent, you need the following:
 
 * A Mendix account set up with your Tencent ID
+
 * A cluster and namespace purchased from Tencent (see [Cluster and Namespace Management](#cluster-namespace), below)
+
 * Mendix Studio Pro version 8.18 (China edition)
 
-    You will be able to download Mendix Studio Pro, as part of your initial sign up  
+    You will be able to download Mendix Studio Pro, as part of your initial sign up:
     ![](attachments/tencent-deploy/download-studio-pro.png)
     **WHERE ELSE CAN THEY GO TO GET TO STUDIO PRO?**
 
@@ -68,7 +70,7 @@ In the first tab you can see the **Namespaces** in the cluster and their current
 There are two other tabs:
 
 * **Cluster Managers** – where you can see other people who have access to the cluster and can manage them
-* **Activity** – where you can see perform the following actions on the entire cluster:
+* **Activity** – where you can see perform the following actions on the entire cluster
 
 #### 3.2.1 Cluster Managers
 
@@ -83,7 +85,7 @@ Click **Invite** to confirm the invitation
 ![](attachments/tencent-deploy/cluster-manager-invite.png)
 
 {{% alert type="info" %}}
-When you invite a cluster manager, the user will have most of the access which the original cluster manager had, such as the abilities to add a namespace, add a member, change the permissions of the cluster member, and delete another cluster manager. 
+When you invite a cluster manager, the user will have most of the access which the original cluster manager had, such as the abilities to add a member, change the permissions of the cluster member, and delete another cluster manager. 
 
 The only limitations are that:
 
@@ -199,7 +201,7 @@ You can invite additional members to the namespace, and configure their role dep
     
     ![](attachments/tencent-deploy/namespace-member-invite.png)
 
-**HOW DOES A TENCENT USER GET THIS? I UNDERSTAND THERE IS NO EMAIL REQUIRED**
+    **HOW DOES A TENCENT USER GET THIS? I UNDERSTAND THERE IS NO EMAIL REQUIRED**
 
 6. The user will receive an email and will be required to follow a link to confirm that they want to join this namespace. They will need to be logged in to Mendix when they follow the confirmation link.
 
@@ -238,7 +240,7 @@ Open the **Operate** tab, enter the URLs relevant to your namespace, and click *
 
 ## 4 Deploying an App for the First Time
 
-### 4.2 Creating an Environment{#create-environment}
+### 4.1 Creating an Environment{#create-environment}
 When deploying your app for the first time, there will be no environments and no deployment packages available. The **Environments** page for your app in the Developer Portal will show you the current status.
 
 ![](attachments/tencent-deploy/environments-none.png)
@@ -252,6 +254,8 @@ First you need to create an environment:
     {{% alert type="info" %}}You can change the UUID if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.{{% /alert %}}
 
 3. Enter **Environment Name**, the name for the environment. The environment name can only contain lowercase letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production.
+
+    **ARE THESE LIMITATIONS FOR NAME THE SAME IN TENCENT, OR CAN THEY USE CHINESE CHARACTERS?**
 
 4. Use the drop-down **Select Namespace** to select an existing namespace. You will see all namespaces of which you are a member.
 
@@ -296,11 +300,11 @@ First you need to create an environment:
 
 11. You will see your new environment listed. An *in-progress* icon will be shows next to the resource plans until they have been provisioned.
 
-    ![](attachments/tencent-deploy/image8.png)
+    ![](attachments/tencent-deploy/environments-new.png)
 
 You will not be able to deploy to this environment until it has been fully prepared. This means that all the resource plans have been confirmed and that the placeholder app has been successfully deployed. See [Deploying the Deployment Package](#deploy-package), below, for instructions on how to check that the environment has been created successfully.
 
-### 4.3 Creating a Deployment Package {#create-deployment-package}
+### 4.2 Creating a Deployment Package {#create-deployment-package}
 
 Before you can deploy your app, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.
 
@@ -330,15 +334,17 @@ Before you can deploy your app, you will need to create a deployment package. En
 Alternatively, you can upload an existing MDA by clicking **Upload Package**.
 {{% /alert %}}
 
-### 4.4 Deploying the Deployment Package{#deploy-package}
+### 4.3 Deploying the Deployment Package{#deploy-package}
 
 You can also deploy an existing deployment package to an environment without having to create a new one. This also allows you to specify constant values and control scheduled events before the app is started.
+
+**IS THIS WARNING STILL NEEDED?**
 
 {{% alert type="warning" %}}
 Currently, deployment packages are only valid for two weeks. Older deployment packages will still be visible, but if you try to deploy a package that was created more than two weeks ago, the deployment will fail and return a 403 error. The solution is to [recreate the deployment package](#create-deployment-package).
 {{% /alert %}}
 
-After creating an environment and deployment package (see [Creating an Environment](#create-environment) and [Creating a Deployment Package](#create-deployment-package), above) you will now have a deployment package and an environment. Check that there is a green tick next to the deployment package and the resources of the environment. If any of these have failed, try to create the environment or the deployment package again, and contact your cluster manager. If neither of these solves the problem. contact Mendix support for help.
+After creating an environment and deployment package (see [Creating an Environment](#create-environment) and [Creating a Deployment Package](#create-deployment-package), above) you will now have a deployment package and an environment. Check that there is a green tick next to the deployment package and the resources of the environment. If any of these have failed, try to create the environment or the deployment package again, and contact your cluster manager. If neither of these solves the problem. contact Tencent support for help.
 
 ![](attachments/tencent-deploy/image13.png)
 
@@ -482,20 +488,6 @@ The word changes to **Production** if the environment is set up for production.
 
 See [Creating an Environment](#create-environment), above, for more information.
 
-##### 5.2.1.5 Trial
-
-The word **Trial** indicates that the Operator managing that environment is unlicensed.
-
-When the Operator is running in trial mode, it will stop managing an environment thirty days after the environment was created and the word changes to **Expired**. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment. 
-
-The word **Licensed** shows that the Operator managing that environment is licensed.
-
-{{% alert type="info" %}}
-The Operator license is independent from a Mendix Runtime license. The Operator license allows you to manage Mendix apps in your cluster, while the Mendix Runtime license (configured through a [Subscription Secret](#change-subscription-secret)) removes trial restrictions from a Mendix App itself.
-
-You can get an Operator license from [Mendix Support](https://support.mendix.com), together with instructions on how to configure it.
-{{% /alert %}}
-
 #### 5.2.2 Add Environment
 
 This adds a new environment as described in [Creating an Environment](#create-environment), above.
@@ -530,6 +522,8 @@ If you have any outstanding changes to your environment the page will display a 
 ![](attachments/tencent-deploy/image21.png)
 
 The environment details page consists of seven tabs:
+
+**IS THIS THE SAME IN THE TENCENT ENVIRONMENT?**
 
 * General
 * Model Options
@@ -611,9 +605,9 @@ Your app can only be deployed to a production environment if security is set on.
 
 If you select Production as the **purpose** of the app environment, then you will need to use a Subscription Secret which ensures that your app runs as a licensed app. If you need to enter or change the subscription secret, then you can do that here.
 
-Subscription secrets are obtained from [Mendix support](https://support.mendix.com/).
+Subscription secrets are obtained from Tencent.
 
-###  5.2 Model Options Tab
+### 6.2 Model Options Tab
 
 The **Model Options** tab allows you to change the configuration of scheduled events and constants in your app.
 
@@ -634,10 +628,6 @@ On the Network tab, you add client certificates (in the PKCS12 format) or certif
 On the Runtime tab, you can change various runtime settings for your app environment. For more details of these, see the [Runtime Tab](environments-details#runtime-tab) section of *Environment Details*.
 
 ![](attachments/tencent-deploy/runtime-tab.png)
-
-{{% alert type="info" %}}
-When you use some settings on the Runtime tab for Mendix for Private Cloud they may work differently from how they work in the Mendix Cloud.
-{{% /alert %}}
 
 ### 6.5 Log Levels Tab
 
@@ -679,67 +669,23 @@ You will receive a warning that you have made some changes. Click **Apply Change
 
 ### 6.7 Debugger
 
-On the Debugger tab you can set up and view the credentials you need to debug your app when it is running in your private cloud. For more information see [How To Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely#private-cloud).
+On the Debugger tab you can set up and view the credentials you need to debug your app when it is running on Tencent.
 
 ## 7 Current Limitations{#limitations}
 
 ### 7.1 Reserved Names for Mendix Apps{#reserved-names}
 
-All names beginning **mendix-** are reserved for use by the Mendix Operator.
-
-All names beginning **openshift-** are reserved for use by OpenShift if you are deploying to an OpenShift cluster.
+All names beginning **mendix-** are reserved for use by the Tencent cluster.
 
 ### 7.2 Deleting Your App
 
-Delete all environments before you delete an app. If you delete an app which has existing private cloud environments, you will not be able to reach the environments through the Developer Portal.
+Delete all environments before you delete an app. If you delete an app which has environments on Tencent, you will not be able to reach the environments through the Developer Portal.
 
-### 7.3 Deleting the Cluster
-
-If the cluster is running in standalone mode, you need to delete all `MendixApp` CRs.
-
-To confirm that environments and their associated storage have been successfully deleted, run:
-
-For OpenShift:
-```bash
-oc get mendixapp -n {namespace}
-oc get storageinstance -n {namespace}
-```
-
-For Kubernetes:
-```bash
-kubectl get mendixapp -n {namespace}
-kubectl get storageinstance -n {namespace}
-```
-
-Both commands should return an empty list.
-
-### 7.3.1 Deleting StorageInstance CRs
-
-If the Operator fails to deprovision an app's database or file storage, the `*-database` or `*-file` Pod will fail with an Error state:
-
-![](attachments/tencent-deploy/deprovision-failed.png)
-
-To force removal of a StorageInstance `{name}`, run:
-
-For OpenShift:
-```bash
-oc patch -n {namespace} storageinstance {name} --type json -p='[{"op": "remove", "path": "/metadata/finalizers"}]'
-```
-
-For Kubernetes:
-```bash
-kubectl patch -n {namespace} storageinstance {name} --type json -p='[{"op": "remove", "path": "/metadata/finalizers"}]'
-```
-
-This will also delete the failed Pod.
-
-After manually removing the StorageInstance, you'll need to manually clean up any resources associated with it, such as the database, S3 bucket or associated AWS IAM account.
-
-### 7.4 App Security and Production
+### 7.3 App Security and Production
 
 If you attempt to deploy an app with security not set to production into a production environment you will not get an error, however the deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
 
-### 7.5 ApplicationRootUrl Needs to be Set Manually
+### 7.4 ApplicationRootUrl Needs to be Set Manually
 
 In some cases, your Mendix app will need to know its own URL - for example when using SSO or sending emails.
 
@@ -763,20 +709,3 @@ This section covers an issue which can arise where Mendix cannot recover automat
 
 Under some circumstances changes in the status of the environment and its apps will not be updated automatically. To ensure you are seeing the current status, you may need to click the **Refresh** button on the screen (not the browser page refresh button).
 
-## 9 How the Operator Deploys Your App {#how-operator-deploys}
-
-The Mendix Operator is another app within your private cloud namespace. It is triggered when you provide a CR file. The process looks like this:
-
-![](attachments/tencent-deploy/mx4pc-operator-deploy.png)
-
-The Mendix Operator CR is processed by the Mendix Operator into four steps:
-
-1. The Build CR is created – this creates a Docker image from the app deployment package, pushes it into the Image Registry, and provides the correct information to the Runtime CR
-
-2. The StorageInstance CR is created for the database – this causes the Operator to provision database database, according to the plan selected, and pass information about the database to the Runtime CR
-
-3. The StorageInstance CR is created for the file storage – this causes the Operator to provision an file storage bucket for the app and pass information about the storage to the Runtime CR
-
-4. The OpenShift Route CR is created – this sets up a route to the app.
-
-The Runtime CR is now complete, and the Runtime Controller uses the CR to pull the Docker image from the Image Registry and deploy it to an App Container in the OpenShift namespace.

@@ -178,9 +178,7 @@ Now the *Customer* object is available on the page and it matches the microflow 
 
 When you set a microflow or nanoflow as an on-click event for a widget, and this microflow/nanoflow expects a certain argument, but a different argument is available to the widget, this will result in an error. 
 
-For example, on a page named *Customers* you have a button that calls a microflow (that is an [On click event](on-click-event) of the button is set to *Microflow*):
-
- ![](attachments/consistency-errors-pages/on-click-event-button.png)
+For example, on a page named *Customers* you have a button that calls a microflow (that is an [On click event](on-click-event) of the button is set to *Microflow*).
 
 The microflow contains a parameter *Customer*:
 

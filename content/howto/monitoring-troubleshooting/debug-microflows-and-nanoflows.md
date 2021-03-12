@@ -82,6 +82,8 @@ Breakpoints are points in a microflow/nanoflow where the application will halt e
         * **Step over** moves the debugger to the next step in the same microflow/nanoflow
     * Click **Step out** to instruct the debugger to leave the sub microflow/nanoflow or loop (this is basically the opposite of **Step Into**)
     * Click **Continue** to instruct the debugger to continue until it reaches another breakpoint
+
+To debug a microflow from a nanoflow you need to add a separate breakpoint to the microflow. Stepping into the microflow won't work in this situation.
     
 For details on available shortcut keys, see the [Debugger Shortcut Keys](/refguide/studio-pro-overview#debugger-shortcuts) section of *Studio Pro Overview*.
 

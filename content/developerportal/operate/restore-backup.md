@@ -137,7 +137,11 @@ The dump must be created with pg_dump version 9.6.17 or below. If it is created 
 
 ### tree folder
 
-This contains the files which are stored in external file storage. Each file is stored in a second level location:
+This contains the files which are stored in external file storage. The file has the name of the uuid used within Mendix to identify the resource.
+
+#### Cloud v3
+
+The situation for Cloud v3 is slightly different. Each file is stored in a second level location:
 
 ```
 /tree

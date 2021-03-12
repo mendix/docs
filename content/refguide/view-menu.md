@@ -116,7 +116,7 @@ The **Toolbox** pane displays the tools that can be used in the current editor. 
 
 ### 3.11 Debug Windows
 
-For more information on debugging, see [How to Debug Microflows](/howto/monitoring-troubleshooting/debug-microflows).
+For more information on debugging, see [How to Debug Microflows and Nanoflows](/howto/monitoring-troubleshooting/debug-microflows).
 
 #### 3.11.1 Breakpoints
 

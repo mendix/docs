@@ -412,7 +412,7 @@ For more help with Android remote debugging, check out [Get Started with Remote 
 
 ## 6 Read More
 
-* [Debug Microflows](/howto/monitoring-troubleshooting/debug-microflows)
+* [Debug Microflows and Nanoflows](/howto/monitoring-troubleshooting/debug-microflows)
 * [Debug Java Actions](/howto/monitoring-troubleshooting/debug-java-actions)
 * [Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 

@@ -121,6 +121,6 @@ To set the level of custom log messages that you have created via a microflow, f
 * [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [Clear Warning Messages in Mendix](clear-warning-messages)
 * [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
-* [Debug Microflows](debug-microflows)
+* [Debug Microflows and Nanoflows](debug-microflows)
 * [Debug Java Actions](debug-java-actions)
 * [A Script to Set the Log Node Levels in Mendix](http://www.mxblog.eu/p/post/2533274790397906)

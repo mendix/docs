@@ -19,7 +19,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed a bug where under certain circumstances you could not open modelers of Mendix 6.x.
+* We fixed a bug where it was not possible to open a version 6 Desktop Modeler from the Developer Portal.
 
 ### March 10th, 2021
 

@@ -99,19 +99,14 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 	* **Entity** – the name and module of the entity
 		* **Select** – click to display list of entities available in the module and select another entity to expose
 		* **Show** – click to see the entity in the domain model
-
-	* **Exposed attributes and associations** – click **select** to view and select the attributes and associations to expose for this entity
-
+* **Exposed attributes and associations** – click **select** to view and select the attributes and associations to expose for this entity
 	* **Exposed entity name** – you can customize the name of the entity in the OData service
+* **Exposed set name** – the name of the dataset associated with the entity that is exposed
 
-	* **Exposed set name** – the name of the dataset associated with the entity that is exposed
-	{{% alert type="info" %}}
-	 The **Exposed set name** will be shown in the Data Hub Catalog for the registered service as the [Datasource](/data-hub/data-hub-catalog/search#search-details) for the exposed **Entity**. {{% /alert %}}
+	{{% alert type="info" %}} The **Exposed set name** will be shown in the Data Hub Catalog for the registered service as the [Datasource](/data-hub/data-hub-catalog/search#search-details) for the exposed **Entity**. {{% /alert %}}
 
 	* **Example of location** – the location of the dataset for the entity
-
 	* **Use paging** – the maximum number of data objects that are retrieved in a single call (with a link to the next set)
-   
 	* **Public documentation** tab – a summary and a description of the entity can be added here
 
 	For further details, see [Published OData Resource](/refguide/published-odata-resource) in the *Studio Pro Guide*. 
@@ -238,7 +233,7 @@ To update a published OData service, follow these steps:
 6. Make the changes to the service, taking care when removing entities, attributes, and associations. The guideline is removing exposed entities, attributes and association from a published service, this would have to be a major service update that is deployed to a different endpoint.
 7. Deploy the app to register the services in the Data Hub Catalog. If you have specified a different endpoint for the new service version, both versions of the service will now be registered.
 8. In the Data Hub Catalog, curate the new service and add tags and further descriptions as necessary. 
-9. Inform consuming apps of the changes. You can see all apps that are consuming previous versions of the service in the Data Hub Catalog and also the visual network of dependencies in the [Data Hub Landscape](../data-hub-landscape/index). Use the **Business Owner** and **Technical Owner** links to make contact with the users.
+9. Inform consuming apps of the changes. You can see all apps that are consuming previous versions of the service in the Data Hub Catalog and also the visual network of dependencies in the [Data Hub Landscape](/data-hub/data-hub-landscape/). Use the **Business Owner** and **Technical Owner** links to make contact with the users.
 10. For major changes, and when a new service is published that will replace an existing one, provide deprecation notices to all consuming apps if they have to change to the new version within a certain length of time if the previous version is going to become inactive.
 11. It is good practice to remove old (unused services) from your app by deleting them in the **Project Explorer** only when you are sure that they are no longer being consumed by any other apps. You can verify this by looking in [Mendix Data Hub](https://hub.mendix.com/) and searching for the service in the **Catalog** or checking out the network of dependencies in Data Hub **Landscape**. 
 
@@ -276,7 +271,7 @@ If the application for the data source you would like to register is not shown, 
 
 #### 6.2.1 Selecting the Enterprise Application {#application}
 
-On the [Data Hub Home](../index) screen, click the button for the source application of the data source that you want to register:
+On the [Data Hub Home](/data-hub/) screen, click the button for the source application of the data source that you want to register:
 
 ![upload contract](attachments/register/register-data-source-home.png)
 

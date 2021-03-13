@@ -35,7 +35,7 @@ Use "app" or "application" when referring to apps in general. Do not capitalize 
 <br />
 The full word "application" has a more well-rounded meaning to it (as in, web and mobile apps), whereas "app" may suggest just mobile apps to the reader. Accordingly, it can be better to use "application" at the beginning of documents and then switch to "app" later on. We want to make it clear that Mendix is not just for building mobile apps, but all kinds of applications.<br />
 <br />
-It is useful to differentiate "app" from "app project" when referring to what the user works on for project management. For more information, see [app project](#app-project).
+It is sometimes useful to differentiate "app" from "app project" when referring to what the user works on for project management, especially when **Project** is still used in some UI text. However, "app" is prioritized for usage over "app project" (and "project" should not be used at all except when describing UI text). For more information, see [app project](#app-project).
 {{% /alert %}}
 
 ### App ID
@@ -46,9 +46,7 @@ Always capitalize.
 
 ### app project {#app-project}
 
-"App" should be used instead of "project" as much as possible (despite the fact that "project" is still used throughout Studio Pro). 
-
-Use "app project" where necessary for clarification (for example, for project management-related tasks in the Developer Portal).
+Use "app project" where necessary for clarification (for example, for project management-related tasks in the Developer Portal). However, "app" is prioritized for usage over "app project" (and "project" should not be used at all except when describing UI text).
 
 {{% alert type="success" %}}
 Enter the email addresses of all the co-workers you want to invite to your app project.

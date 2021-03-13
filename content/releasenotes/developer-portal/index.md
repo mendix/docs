@@ -5,13 +5,28 @@ tags: ["developer portal", "buzz", "mendix profile"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes to the app project management functionality and other features of the [Mendix Developer Portal](/developerportal/index).
+These release notes cover changes to the app project management functionality and other features of the [Mendix Developer Portal](/developerportal/).
 
 {{% alert type="info" %}}
 For release notes on Mendix Cloud and deployment options, see [Deployment](deployment).
 {{% /alert %}}
 
+To see the current status of the Mendix Developer Portal and Control Center, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
+
 ## 2021
+
+### March 10th, 2021
+
+#### Fixes
+
+* We fixed a bug where selecting an IBM or SAP template in the **Create App** flow did not direct you to the right page. 
+
+### March 9th, 2021
+
+#### Improvements
+
+* In Control Center, Mendix Admins can now edit the name and description of an [App Access Group](/developerportal/control-center/#groups) once it has been created.
+* Mendix Admins can now [deactivate](/developerportal/control-center/#members) Technical Contacts and the last Scrum Master in an App Team.
 
 ### March 4th, 2021
 
@@ -63,7 +78,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### New Features
 
-* We released the Mendix [Control Center](/developerportal/control-center/index), which provides governance and control features for Mendix Admins (formerly known as Company Admins).
+* We released the Mendix [Control Center](/developerportal/control-center/), which provides governance and control features for Mendix Admins (formerly known as Company Admins).
 
 #### Improvements
 
@@ -284,7 +299,7 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Improvements
 
-* We introduced the ability to [favorite](/developerportal/apps-list/index#favoriting) app projects from the **My Apps** page and to filter on favorite apps. This is helpful when you have a large number of Mendix apps.
+* We introduced the ability to [favorite](/developerportal/apps-list/#favoriting) app projects from the **My Apps** page and to filter on favorite apps. This is helpful when you have a large number of Mendix apps.
 
 ### September 24th, 2019
 
@@ -417,17 +432,17 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 #### Fixes
 
-* It is now possible to go to a Mendix community member's new [Mendix Profile](/developerportal/mendix-profile/index) directly from the [Buzz](/developerportal/collaborate/buzz) and [People](https://sprintr.home.mendix.com/link/people) pages. (Ticket 69702)
+* It is now possible to go to a Mendix community member's new [Mendix Profile](/developerportal/mendix-profile/) directly from the [Buzz](/developerportal/collaborate/buzz) and [People](https://sprintr.home.mendix.com/link/people) pages. (Ticket 69702)
 
 ### October 11th, 2018
 
 #### Improvements
 
-* The Mendix Profile in the Developer Portal has been merged with the Community Profile. For more information, see [Mendix Profile](/developerportal/mendix-profile/index).
+* The Mendix Profile in the Developer Portal has been merged with the Community Profile. For more information, see [Mendix Profile](/developerportal/mendix-profile/).
 * Several UX updates were made to Developer Portal pages:
   * The [My Apps](https://sprintr.home.mendix.com/link/myapps) page has been redesigned, and you can now toggle your app list views.
   * The **App** > **General** page has been redesigned.
-  * The [People](https://developer.mendixcloud.com/link/people) overview has been redesigned. The same view on Mendix community members is available in the [Connections tab](/developerportal/mendix-profile/index#connections) of your Mendix Profile.
+  * The [People](https://developer.mendixcloud.com/link/people) overview has been redesigned. The same view on Mendix community members is available in the [Connections tab](/developerportal/mendix-profile/#connections) of your Mendix Profile.
 
 ### October 1st, 2018
 

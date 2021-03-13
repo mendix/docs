@@ -28,7 +28,7 @@ For more information, see [Preferences](preferences-dialog).
 
 ## 3 Resolving Conflict Example
 
-A page document in your app project is designed as shown below:
+A page document in your app is designed as shown below:
 
 ![Original page](attachments/new-merge-algorithm/new-merge-algorithm-base-page.png)
 

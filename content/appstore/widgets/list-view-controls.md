@@ -187,7 +187,7 @@ While developing, you will probably rely mostly on `npm start`. However, there a
 | test:unit | Runs unit tests with Karma and generates a coverage report. |
 | test:e2e  | Runs end-to-end tests with remote. |
 | test:e2e:dev | Runs end-to-end tests locally on localhost:8080. |
-| deploy | Uses the latest widget build to update the Mendix app project and updates the application to the Mendix node. |
+| deploy | Uses the latest widget build to update the Mendix app and updates the application to the Mendix node. |
 | build:prod | Builds a widget optimized for production. |
 | build:dev | Builds a widget optimized for debugging. |
 | lint | Lints all *.js* files. |

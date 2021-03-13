@@ -8,7 +8,7 @@ tags: ["domain model", "entity", "association", "annotation", "studio pro"]
 
 ## 1 Introduction
 
-The **domain model** is a model that describes the information (or *data*) used by your application in an abstract way. It is central to the architecture of your application. Each [module](modules) has its own domain model which describes the data used in that module. All modules within a app project can use data from all the domain models within the app.
+The **domain model** is a model that describes the information (or *data*) used by your application in an abstract way. It is central to the architecture of your application. Each [module](modules) has its own domain model which describes the data used in that module. All modules in an app can use data from all the domain models within the app.
 
 A domain model consists of [entities](entities) with their relationships to other entities represented by [associations](associations). You can also add [annotations](annotations) to your domain model to explain how it is to be used.
 

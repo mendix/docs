@@ -71,7 +71,7 @@ The **Deeplink.CreateDeeplinkConfig** microflow requires the following parameter
 
 ### 2.6 Handling Deep Link Requests
 
-After handling a request, this module will redirect to the homepage of your application. The homepage is configured in the app project's [Navigation](/refguide/navigation).
+After handling a request, this module will redirect to the homepage of your application. The homepage is configured in the app's [Navigation](/refguide/navigation).
 
 To open another page, the module needs to figure out what microflow is associated with the requested deep link. For this, you need to change the default homepage in your navigation to a custom microflow. If the default homepage is already a microflow, you need to modify it.
 

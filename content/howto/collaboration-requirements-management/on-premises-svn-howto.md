@@ -68,7 +68,7 @@ To create a new app to store in your on-premises SVN server, you must create the
 
 ## 6 Moving an App from Mendix Team Server to an SVN Server
 
-To look at moving an app from Mendix Team Server to a private SVN server, we will use the scenario of creating a new app in the [Developer Portal](/developerportal/index), wherein a Team Server project is created automatically.
+To look at moving an app from Mendix Team Server to a private SVN server, we will use the scenario of creating a new app in the [Developer Portal](/developerportal/), wherein a Team Server project is created automatically.
 
 {{% alert type="warning" %}}
 For the purpose of creating an app to store in your on-premises SVN server, this is a deprecated workflow.

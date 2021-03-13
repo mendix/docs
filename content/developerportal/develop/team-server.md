@@ -10,13 +10,13 @@ aliases:
 
 ## 1 Introduction
 
-Written on top of Subversion and delivered via the Developer Portal, Mendix Team Server is designed to make the life of a Mendix developer easier. Mendix Studio Pro and Studio are tightly integrated with Team Server, and actions like creating a new app project (including a versioned model repository), updating an app project, committing changes, and merging model versions are all available from within Mendix Studio Pro as single-click actions.
+Written on top of Subversion and delivered via the Developer Portal, Mendix Team Server is designed to make the life of a Mendix developer easier. Mendix Studio Pro and Studio are tightly integrated with Team Server, and actions like creating a new app (including a versioned model repository), updating an app, committing changes, and merging model versions are all available from within Mendix Studio Pro as single-click actions.
 
 You can manage Team Server access from the Developer Portal, which allows you to combine requirements, implementation, and feedback. When you commit your app model changes to Team Server from within Studio Pro, you can select the user stories (reflecting the requirements) that you have been working on. Team Server automatically creates links between these user stories and the model changes you made, providing you with a way to navigate from commits to the associated requirements. Furthermore, the Mendix Platform creates links between feedback, forms, changesets, and user stories.
 
 Team Server also connects the capture-and-develop phase of the Agile application lifecycle. When you start working on the next version of your application, you just open Studio Pro to see the user stories planned for the current Sprint and start working on them. If a user story is based on user feedback, you can directly jump to the form mentioned in the metadata of the feedback and start implementing the requested change. 
 
-On the **Team Server** page of the Developer Portal, an overview is presented of the changes and revisions made to the app project in Mendix Studio Pro:
+On the **Team Server** page of the Developer Portal, an overview is presented of the changes and revisions made to the app in Mendix Studio Pro:
 
 ![](attachments/team-server.png)
 
@@ -57,7 +57,7 @@ Related stories will only appear if you select them in the **Commit** dialog box
 
 ### 5.1 How Much Storage Space Is Provided with Team Server?
 
-Storage space is unlimited for app projects connected to a commercial license. 1 GB of free storage is provided for your company account for app projects not (yet) connected to a commercial license.
+Storage space is unlimited for apps connected to a commercial license. 1 GB of free storage is provided for your company account for apps not (yet) connected to a commercial license.
 
 ### 5.2 What Happens with My Valuable & Confidential Data?
 

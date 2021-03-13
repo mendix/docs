@@ -88,6 +88,6 @@ For details, see [User Management API](user-management-api).
 
 ## 15 Webhooks
 
-Webhooks allow you to build or set up Mendix Platform connectors that subscribe to certain events on the [Developer Portal](/developerportal/index).
+Webhooks allow you to build or set up Mendix Platform connectors that subscribe to certain events on the [Developer Portal](/developerportal/).
 
 Continue reading in [Webhooks](webhooks-sprints).

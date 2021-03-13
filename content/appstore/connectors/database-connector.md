@@ -37,7 +37,7 @@ These are the prerequisites for using this connector:
 
 ### 3.1 Usage
 
-Once you have imported the Database Connector into your app project, you will have the **Database Connector** available in the **Toolbox**. The connector supports four actions: **Execute query**, **Execute statement**, **Execute parameterized query**, and **Execute parameterized statement**. To use any of these in your Mendix application, drag them into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
+Once you have imported the Database Connector into your app, you will have the **Database Connector** available in the **Toolbox**. The connector supports four actions: **Execute query**, **Execute statement**, **Execute parameterized query**, and **Execute parameterized statement**. To use any of these in your Mendix application, drag them into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
 
 The **Execute query** and **Execute parameterized query** actions should be used for querying objects with a `SELECT` SQL command. The **Execute statement** and **Execute parameterized statement** actions should be used for all other commands (for instance, `INSERT`, `UPDATE`, or `DELETE`).
 

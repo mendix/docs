@@ -103,6 +103,10 @@ The following base features of DataHub:
 
 - Information on number of consumers of an API, understand when you can resign an API and who to inform 
 
+
+
+------------------------
+
 **Developers/Users**:  Data Hub - the new way to develop apps using shared data. 
 
     - Integrating apps and re-using data

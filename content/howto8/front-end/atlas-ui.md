@@ -34,13 +34,13 @@ Create familiarity and consistency throughout your apps landscape, regardless of
 
 Design apps that look good and scale in all situations without losing an intuitive and consistent experience.
 
-![](attachments/howto/atlas_ui_preview.png)
+![](attachments/howto8/atlas_ui_preview.png)
 
 ## 2 Design Elements
 
 Our UI library is fully integrated into Mendix Studio. After choosing a navigation layout in Mendix Studio, you can find page templates, building blocks, and widgets directly in your **Toolbox**. These UI elements form the foundation of your app.
 
-![](attachments/howto/designelements.png)
+![](attachments/howto8/designelements.png)
 
 **1** **Navigation Layouts**
 

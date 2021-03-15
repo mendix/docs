@@ -117,7 +117,7 @@ Slow retrieves can occur for a number of different reasons, such as:
 * Complex calculated attributes
 * Large number of objects retrieved (see the [Batches](#batches) section below)
 
-Additionally, for details on how denormalization can improve your app performance in some cases, review [How to Denormalize Data to Improve Performance](/howto/data-models/denormalize-data-to-improve-performance).
+Additionally, for details on how denormalization can improve your app performance in some cases, review [How to Denormalize Data to Improve Performance](/howto8/data-models/denormalize-data-to-improve-performance).
 
 ### 5.2 Slow Database Commits
 

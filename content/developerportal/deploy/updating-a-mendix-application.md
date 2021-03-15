@@ -10,34 +10,36 @@ The service console creates a backup of the project files, this allows you to re
 
 ## 1 Using the Update app button
 
-1.  You can update the application by clicking on the button ‘Update app’.
+1.  If the app is currently running, make sure you stop it first, otherwise you will be unable to update.
 
-    ![Step 1, Start the update process](attachments/updating-a-mendix-app/18580701.png)
+    ![Step 1, Stop the app](attachments/updating-a-mendix-app/1_stop_service.png)
 
-2.  The 'Update App' popup that appears shows you the information of the current active software version. The number of the App version shows the release number of the versioned deployment package. This is the release that is currently running on this server.
+2.  You can update the application by clicking on the button ‘Update app’.
 
-    ![Step 2, Release details and overview of all server versions](attachments/updating-a-mendix-app/18580702.png)
+    ![Step 2, Start the update process](attachments/updating-a-mendix-app/2_click_update.png)
 
-To update the application press the button ‘Update app’ and select the new deployment archive (.mda)
+3.  The 'Update App' popup that appears shows you the information of the current active software version. The number of the App version shows the release number of the versioned deployment package. This is the release that is currently running on this server.
 
-![Step 3, Choose the latest .mda package](attachments/updating-a-mendix-app/18580700.png)
+    ![Step 3, Release details and overview of all server versions](attachments/updating-a-mendix-app/3_update_app.png)
+
+4.  To update the application press the ‘Update app’ button. Select the new deployment archive (.mda) and click **Open**. The update process will start immediately.
+
+    ![Step 4, Choose the latest .mda package](attachments/updating-a-mendix-app/4_browse_mda.png)
 
 This process will copy the new version of the project software into the configured location. All models will be extracted, and a symbolic link to the ‘mxclientsystem’ folder is automatically created so the JavaScript libraries can be easily included without any additional configuration in IIS.
-
-You’ll see an progress bar appear after clicking the ‘OK’ button once the process has been completed the project software version has been updated. 
-![](attachments/updating-a-mendix-app/18580699.png)
 
 ## 2 Update The Mendix Runtime version
 
 1.  After updating the Mendix application version it could happen that the Service Console shows the message `(missing)`. This would mean that the required server distribution is not installed on the server.
-    ![Step 4, a missing Runtime version](attachments/updating-a-mendix-app/18580697.png)
+    ![Step 5, a missing Runtime version](attachments/updating-a-mendix-app/update_server_missing.png)
 2.  There are two ways to install the required server distribution:
 
-    1. If you are online and have access to the Mendix Marketplace, click **Download server** and the correct server distribution will be fetched and installed.
+    1. If you are online and have access to the Mendix Marketplace, click **Download server** and the correct server distribution will be fetched and installed. You will then see the following 
+    ![](attachments/updating-a-mendix-app/update_server_download.png)
     2. If you are offline or automatic downloading fails click **Add Server** and select the required server distribution (*.tar.gz*).  The server distribution can be found under the related downloads from the specific Mendix Studio Pro version on [home.mendix.com](http://home.mendix.com/). The server distribution is a *tar.gz* file. The Service Console will extract the server distribution to the same folder as the other server distributions.
 
     After the server distribution is updated you’ll be able to start the Service using the new project and Mendix Runtime version. 
-    ![Step 5, Choose the correct server distribution (.tar.gz)](attachments/updating-a-mendix-app/18580696.png)
+    ![Step 6, Choose the correct server distribution (.tar.gz)](attachments/updating-a-mendix-app/update_server_select.png)
 
 ### 2.1 Location of the Mendix server distributions
 
@@ -50,13 +52,18 @@ This should be something like:
 ```bash
 D:\Mendix\MyApplications\Servers
 ```
+
 {{% alert type="info" %}}
 
-The user that is configured as the Service Account should have Read&Execute privileges on this entire server folder. You could suffice with just granting access to the specific server distribution but that would mean that you’d have to update the folder access after every platform version update. 
+The user that is configured as the Service Account should have Read&Execute privileges on this entire server folder. You could suffice with just granting access to the specific server distribution but that would mean that you’d have to update the folder access after every platform version update.
 
 {{% /alert %}}
 
-## 3 Read More
+## 3 Start application
+
+After updating, don't forget to start your app service again!
+
+## 4 Read More
 
 *   [Restoring a SQL Server database](restoring-a-sql-server-database)
 *   [Troubleshooting SQL Server](troubleshooting-sql-server)

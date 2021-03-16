@@ -253,4 +253,4 @@ Congratulations! You have harnessed the power of data to enhance your push notif
 ## 4 Read More
 
 * [Implement Push Notifications](implementation-guide)
-* [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)
+* [Build JavaScript Actions](/howto8/extensibility/build-javascript-actions)

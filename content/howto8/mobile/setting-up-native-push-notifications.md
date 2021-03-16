@@ -16,7 +16,7 @@ Native remote push notifications have more capabilities than hybrid push notific
 1. Configure your Firebase setup.
 1. Customize your native template.
 
-Follow the sections below to complete these three tasks and enable native remote push notifications. After you have completed this document, see [How To Use Native Push Notifications](/howto/mobile/native-remote-notifications) for instructions on implementing native push notifications.
+Follow the sections below to complete these three tasks and enable native remote push notifications. After you have completed this document, see [How To Use Native Push Notifications](/howto8/mobile/native-remote-notifications) for instructions on implementing native push notifications.
 
 {{% alert type="info" %}}
 

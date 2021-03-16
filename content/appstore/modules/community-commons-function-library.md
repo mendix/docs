@@ -144,7 +144,7 @@ In order to mitigate some security vulnerabilities in dependent libraries, in ve
 
 ### 5.5 Gradle
 
-In version 7.2.0 of this module, we introduced a new way of dependency management using a Gradle build file. Unfortunately, this does not mean that obsolete JARs are automatically deleted from your app projects' **userlib** folders when you import this module into your app model.
+In version 7.2.0 of this module, we introduced a new way of dependency management using a Gradle build file. Unfortunately, this does not mean that obsolete JARs are automatically deleted from your apps' **userlib** folders when you import this module into your app model.
 
 To download the dependencies and copy them to the **userlib** folder of the Community Commons container project, execute `gradle prepareDeps` from the command line. Afterwards, you will be able to export a *CommunityCommons.mpk* module from the Community Commons main project. Select only the dependencies listed below in the [Dependencies](#dependencies) section as dependencies in **userlib** for the exported module.
 

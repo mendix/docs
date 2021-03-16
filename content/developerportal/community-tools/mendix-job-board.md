@@ -93,4 +93,4 @@ The [Mendix job dashboard](https://developers.mendix.com/jobs/job-dashboard/) li
 
 ## 5 Read More
 
-* [Mendix Profile](../mendix-profile/index)
+* [Mendix Profile](/developerportal/mendix-profile/)

@@ -14,9 +14,25 @@ These are the current versions in active development:
 * Native Template v5.0.x applies to apps built using Studio Pro [8.12.1](../studio-pro/8.12#8121)–[8.14.x](../studio-pro/8.14).
 * Native Template v4.2.x applies to apps built using Studio Pro up to [8.12.0](../studio-pro/8.12#8120).
 
+## 5.1.7, and 5.0.11
+**Release date: March 12th, 2021**
+
+### Fixes
+
+* We fixed an issue that could crash a custom developer app when JS debugging was enabled.
+
+## 5.1.6, and 5.0.10
+**Release date: February 15th, 2021**
+
+### Fixes
+ 
+* We updated react-native-image-picker dependency.
+* The react-native-image-picker patch should now apply correctly on windows.
+* On iOS the PRODUCT_NAME variable is now settable via the XCConfig file of each target.
+
 ## 5.1.5, and 5.0.9
 
-**Release date: February 4th, 2020**
+**Release date: February 4th, 2021**
 
 ### Fixes
 

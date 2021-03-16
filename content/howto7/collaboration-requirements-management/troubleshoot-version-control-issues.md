@@ -79,7 +79,7 @@ Remove your user settings and restart the Modeler.
 
 Restart the Desktop Modeler.
 
-You can now commit your app project.
+You can now commit your app.
 
 ### 2.7 Resolving Conflicts on the 'svn:ignore' Property {#svn-ignore}
 
@@ -89,7 +89,7 @@ In the 'svn:ignore' property, Subversion records which files should be ignored. 
 
 For example, the `deployment` directory is necessary for running your project but it should not be on the Team Server. Everyone has their own version of the `deployment` folder on their hard disk.
 
-You will need to resolve the conflict before you can commit your app project to the Team Server.
+You will need to resolve the conflict before you can commit your app to the Team Server.
 
 #### 2.7.1 Example
 

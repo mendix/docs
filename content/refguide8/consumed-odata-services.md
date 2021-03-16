@@ -9,7 +9,7 @@ tags: ["studio pro"]
 
 Data can be published from an app for use by other apps through [published OData services](published-odata-services). Consumed OData services can be used to integrate external data sources in apps through [Mendix Data Hub](/data-hub/). 
 
-Mendix Data Hub enables integration of available data sources from different sources in an organization into your Mendix apps.  OData services that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/index) expose entities that can be dragged and dropped into your domain model through the [Data Hub pane](data-hub-pane) as external entities. The OData service document that is added to your project provides the information for retrieving the metadata for the service and exposed entities.
+Mendix Data Hub enables integration of available data sources from different sources in an organization into your Mendix apps.  OData services that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/) expose entities that can be dragged and dropped into your domain model through the [Data Hub pane](data-hub-pane) as external entities. The OData service document that is added to your project provides the information for retrieving the metadata for the service and exposed entities.
 
 For further details on the consumed OData service document and updating consumed OData services in your project, see [Consumed OData Service](consumed-odata-service).
 
@@ -21,7 +21,7 @@ For details on the features that a published OData service must support and how 
 
 ## 2 OData Services and External Entities
 
-When an external entity is used in an app project, the associated dataset for the entity is retrieved through the information in the consumed OData service contract and returned. 
+When an external entity is used in an app, the associated dataset for the entity is retrieved through the information in the consumed OData service contract and returned. 
 
 ### 2.1 External Entities
 
@@ -31,7 +31,7 @@ External entities have some limitations compared to persistable entities:
 * The aggregate functions (average, sum, maximum, minimum) cannot be used on external entities
 * There are certain limitations on XPath constraints for external entities (for instance, you cannot filter on an association between a persistable entity and an external entity)
 * External entities cannot be used in datasets
-* [XPath constraints](/refguide/xpath-constraints) in the access rules of external entities cannot be set
+* [XPath constraints](/refguide8/xpath-constraints) in the access rules of external entities cannot be set
 
 Associations between external entities (as defined in the originating app) will be shown in the domain model. You can only use the associations where both sides are exposed.
 

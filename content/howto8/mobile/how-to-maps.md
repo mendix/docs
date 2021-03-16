@@ -12,7 +12,7 @@ The Maps module allows you to work with maps. Consult the instructions below to 
 
 ## 2 Prerequisites
 
-* Complete the [Prerequisites](/howto/mobile/deploying-native-app#prerequisites) section of *How to Deploy Your First Mendix Native Mobile App*
+* Complete the [Prerequisites](/howto8/mobile/deploying-native-app#prerequisites) section of *How to Deploy Your First Mendix Native Mobile App*
 * Create an app on the [Google Cloud Console](https://console.cloud.google.com/google/maps-apis/overview) and have Google Maps enabled for Android (and iOS, if you wish to use Google Maps on iOS as well) and also posses an [API key](https://developers.google.com/maps/documentation/android-sdk/get-api-key). 
 * Before you can start using the Google Maps Platform APIs and SDKs, you must sign up and create a [billing account] (https://developers.google.com/maps/gmp-get-started#create-billing-account).
 * Install Mendix Studio Pro v8.15.0 and above to use the Native Mobile App Builder
@@ -32,7 +32,7 @@ Next you will configure the **Maps** widget provider. You will have two choices:
 
 ### 3.2 Configuring Maps Capability 
 
-1. Set up a native template with the **Native Mobile App Builder**. This can be launched from the Project menu as shown in [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app). Complete the wizard and configure the project's details and tokens:
+1. Set up a native template with the **Native Mobile App Builder**. This can be launched from the Project menu as shown in [How to Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app). Complete the wizard and configure the project's details and tokens:
 
 	{{% image_container width="400" %}}![launch native mobile builder](attachments/how-to-maps/launch-native-mobile-app-builder.png){{% /image_container %}}
 
@@ -58,5 +58,5 @@ When running locally from source, on iOS you have to run `pod install` once more
 
 ## 4 Read More
 
-* [How to Deploy Your First Mendix Native Mobile App](https://docs.mendix.com/howto/mobile/deploying-native-app)
-* [How to Get Started with Native Mobile](https://docs.mendix.com/howto/mobile/getting-started-with-native-mobile)
+* [How to Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app)
+* [How to Get Started with Native Mobile](/howto8/mobile/getting-started-with-native-mobile)

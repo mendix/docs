@@ -57,7 +57,7 @@ When a data source is registered, by default, it is made available to other user
 ### 2.6 Tags 
 Tags help you to group services and datasets and categorize them (for example, by department, process, or use). You can use tags to refine the search and filter search results in the Data Hub Catalog by doing the following:
 
-* Add tags to the service as a curate function in the Data Hub Catalog after a service is registered by service owners and [Data Hub Curators](../index#curator)
+* Add tags to the service as a curate function in the Data Hub Catalog after a service is registered by service owners and [Data Hub Curators](/data-hub/#curator)
 * Add different tags to the different versions of the same service, as they will be two separately registered assets in the catalog (this is also a way to make different version identifiable)
 * Add tags to the datasets exposed in the service
 * Add tags in the [manual registration of OData v4 services](register#registration-form)
@@ -147,7 +147,7 @@ The number of items satisfying the search criteria (search string plus filters) 
 
 If no search string is specified, all registered assets will be listed in the search results pane in order of popularity (number of connections to the asset).
 
-When an item in the search results is selected, the **Catalog** tab will display the **Details** of the asset and the **Landscape** tab will show the network of connections and dependencies of the selected item in the [Data Hub Landscape](../data-hub-landscape/index).
+When an item in the search results is selected, the **Catalog** tab will display the **Details** of the asset and the **Landscape** tab will show the network of connections and dependencies of the selected item in the [Data Hub Landscape](/data-hub/data-hub-landscape/).
 
 ### 4.2 Selected Asset Details {#search-details}
 
@@ -282,4 +282,4 @@ This zip file comprise the folder: `DataHub_SAMPLE_EmployeeDirectory_1.1.0_OData
 
 ## 6 Viewing Search Results in the Data Hub Landscape
 
-When an item is selected in the search results pane, you can click the [Landscape](../data-hub-landscape/index) tab to see the network of connections and dependencies for the selected asset. This enables you to graphically see the context and relevance for a selected item and the data for the exposed datasets.
+When an item is selected in the search results pane, you can click the [Landscape](/data-hub/data-hub-landscape/) tab to see the network of connections and dependencies for the selected asset. This enables you to graphically see the context and relevance for a selected item and the data for the exposed datasets.

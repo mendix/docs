@@ -267,7 +267,7 @@ Here you can connect  your social accounts for **GitHub**, **Meetup**, **Twitter
 
 ### 10.4 Security {#security}
 
-You can change your password in this section. By default, you are requested to change your password every 90 days. Only a [Mendix Admin](/developerportal/control-center/index) is allowed to change the expiration period.
+You can change your password in this section. By default, you are requested to change your password every 90 days. Only a [Mendix Admin](/developerportal/control-center/) is allowed to change the expiration period.
 
 ### 10.5 API Keys {#api-key}
 
@@ -309,7 +309,7 @@ Once an old account has been merged to a new account, you will no longer have ac
 {{% /alert %}}
 
 {{% alert type="info" %}}
-With the merge, the accounts are only combined. The old account is not deactivated. That should be done by the [Mendix Admins](/developerportal/control-center/index#members).
+With the merge, the accounts are only combined. The old account is not deactivated. That should be done by the [Mendix Admins](/developerportal/control-center/#members).
 {{% /alert %}}
 
 #### 10.6.2 Selecting Your Profile Visibility {#public}

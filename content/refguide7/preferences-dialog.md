@@ -64,7 +64,7 @@ The pattern from which the arguments are derived that are passed to the file com
 
 #### Enable private version control
 
-Select this option when you want to work on an app that’s not stored in the Team Server, but in another SVN server to which you have access. This will allow you to specify the location of the app in the SVN server when, for example, opening or downloading an app, managing branch lines, or importing an app project package.
+Select this option when you want to work on an app that’s not stored in the Team Server, but in another SVN server to which you have access. This will allow you to specify the location of the app in the SVN server when, for example, opening or downloading an app, managing branch lines, or importing an app package.
 
 ### Proxy server
 

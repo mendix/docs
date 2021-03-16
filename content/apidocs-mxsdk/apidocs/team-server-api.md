@@ -52,7 +52,7 @@ List of objects with the following key-value pairs:
 *   _Name_ (String) : Name of the branch. This is 'trunk' for the main line or a specific branch name.
 *   _DisplayName_ (String) : Visible name in the Developer Portal. For the trunk, this is 'Main line'.
 *   _LatestRevisionNumber_ (Long) : Number of the latest revision.
-*   _LatestRevisionMendixVersion_ (String) : Version string of the Mendix version of the app project in this revision.
+*   _LatestRevisionMendixVersion_ (String) : Version string of the Mendix version of the app in this revision.
 
 ##### 3.1.2.1 Error Codes
 
@@ -111,7 +111,7 @@ An object with the following key-value pairs:
 *   _Name_ (String) : Name of the branch. This is 'trunk' for the main line or a specific branch name.
 *   _DisplayName_ (String) : Visible name in the Developer Portal. For the trunk, this is 'Main line'.
 *   _LatestRevisionNumber_ (Long) : Number of the latest revision.
-*   _LatestRevisionMendixVersion_ (String) : Version string of the Mendix version of the app project in the latest revision.
+*   _LatestRevisionMendixVersion_ (String) : Version string of the Mendix version of the app in the latest revision.
 
 ##### 3.2.2.1 Error Codes
 
@@ -167,7 +167,7 @@ List of objects with the following key-value pairs:
 *   _CommitMessage_ (String) : Commit message of the revision.
 *   _Date_ (Date) : Date when the revision is created (or the commit is done).
 *   _Author_ (String) : Creator of the revision (committer).
-*   _MendixVersion_ (String) : Version string of the Mendix version of the app project in this revision.
+*   _MendixVersion_ (String) : Version string of the Mendix version of the app in this revision.
 
 ##### 3.3.2.1 Error Codes
 

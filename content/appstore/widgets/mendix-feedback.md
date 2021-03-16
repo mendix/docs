@@ -23,7 +23,7 @@ The Mendix Feedback widget is easy to set up and automatically attaches addition
   
 ### 1.3 Limitations
 
-* Only usable in combination with Mendix app projects
+* Only usable in combination with Mendix apps
 
 ## 2 Using the Widget
 

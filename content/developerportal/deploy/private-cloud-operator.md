@@ -20,7 +20,7 @@ Alternatively, you can create a connected cluster and use the Mendix Developer P
 * Platform administration account
 * **OpenShift CLI** installation if you are deploying on OpenShift (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the Red Hat OpenShift website for more information)
 * **Kubectl** installation if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
-* **Bash** (Bourne-again shell) for your machine. If you are running on Windows, you can use something like [**Windows Subsystem for Linux (WSL)**](https://docs.microsoft.com/en-us/windows/wsl/faq) or the **Git Bash emulator** that comes with [git for windows](https://gitforwindows.org/).
+* A commandline terminal. In Windows, this could be PowerShell or the Windows Command Prompt.
 * The **deployment package** of a Mendix app made with version 7.23.3 (build 48173) or above
 
 ## 3 Deploying a Mendix App with an Operator
@@ -243,7 +243,7 @@ You can do this in one of two ways:
 
 To build and deploy your app using AWS-EKS or other Kubernetes platform execute the following command:
 
-```bash
+```shell
 kubectl apply -f {File containing the CR} -n {namespace where app is being deployed}
 ```
 
@@ -251,11 +251,11 @@ kubectl apply -f {File containing the CR} -n {namespace where app is being deplo
 
 To build and deploy your app using the OpenShift CLI, do the following:
 
-1.  Paste the OpenShift login command into Bash as described in the first few steps of the [Signing in to Open Shift](private-cloud-cluster#openshift-signin) section of *Creating a Private Cloud Cluster*.
+1.  Paste the OpenShift login command into your commandline terminal as described in the first few steps of the [Signing in to Open Shift](private-cloud-cluster#openshift-signin) section of *Creating a Private Cloud Cluster*.
 2.  Switch to the project where you've deployed the Mendix Operator using the command`oc project {my-project}` where {my-project} is the name of the project where the Mendix Operator is deployed.
-3.  Paste the following command into Bash:
+3.  Paste the following command into your commandline terminal:
 
-```bash
+```shell
 oc apply -f {File containing the CR}
 ```
 

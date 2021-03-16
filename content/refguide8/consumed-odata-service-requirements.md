@@ -96,7 +96,7 @@ There are two types of Data Hub licenses currently available:
 The number of consumed objects per day is reset at midnight in the timezone of the Mendix Runtime scheduler (which can be defined in the app [Project Settings](project-settings#scheduled)).
 
   {{% alert type="info" %}}The Freemium Data Hub license is issued on an invitation-only basis. {{% /alert %}}
-  {{% alert type="info" %}}For Mendix 8.12.3 and later, apps running without a [Mendix license](/developerportal/deploy/licensing-apps-outside-mxcloud#1-introduction) (and also when running from the Studios) do not have this limitation. This also means that you can run your app from the Studios without the Data Hub license limitations. {{% /alert %}}
+  {{% alert type="info" %}}For Mendix 8.12.3 and later, apps running without a [Mendix license](/developerportal/deploy/licensing-apps-outside-mxcloud) (and also when running from the Studios) do not have this limitation. This also means that you can run your app from the Studios without the Data Hub license limitations. {{% /alert %}}
 
 Contact your [Mendix Admin](/developerportal/control-center/index#company) or Data Hub Admin to find out what type of Data Hub license your organization has.
 

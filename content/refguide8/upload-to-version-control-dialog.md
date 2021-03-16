@@ -38,13 +38,13 @@ You can only upload to an existing repository if the repository is currently emp
 
 	![Select existing mendix Team Server](attachments/upload-to-version-control/existing-team-server-app.png)
 
-### 2.3 Private Server {#private-server}
+### 2.3 Private Server
 
 This option is only available when support for other servers is enabled in **Edit** > **Preferences** > **Advanced** > [Enable private version control](preferences-dialog#enable)).
 
 ![Enable private version control in advanced preferences](attachments/upload-to-version-control/enable-private-version-control.png)
 
-If you select **Private server**, enter the address of the repository to which you want to upload your app in the **App repository address** field.
+<a name="private-server"></a>If you select **Private server**, enter the address of the repository to which you want to upload your app in the **App repository address** field.
 
 ![Enable private version control in advanced preferences](attachments/upload-to-version-control/private-server-app.png)
 

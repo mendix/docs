@@ -263,7 +263,7 @@ If the plan name already exists you will receive an error that it cannot be crea
 {{% /alert %}}
 
 {{% alert type="info" %}}
-To connect to an Azure PostgreSQL server, the Kubernetes cluster must be added to the list of allowed hosts in the firewall.
+To connect to an Azure SQL Server, the Kubernetes cluster must be added to the list of allowed hosts in the firewall.
 {{% /alert %}}
 
 {{% alert type="info" %}}

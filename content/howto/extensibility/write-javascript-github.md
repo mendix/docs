@@ -30,7 +30,7 @@ In [Creating a "Search GitHub User" JavaScript Action](#create-a-search) below, 
 
 ## 3 Downloading the Project Package
 
-This how-to comes paired with an app project package prepared for you by Mendix. To download and import the package, follow the steps below:
+This how-to comes paired with an app package prepared for you by Mendix. To download and import the package, follow the steps below:
 
 1. In Mendix Studio Pro, click the AMarketplace icon.
 2. Search for "JavaScript Actions How-To Advanced".

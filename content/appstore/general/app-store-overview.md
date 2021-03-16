@@ -125,9 +125,10 @@ On this page, you will see the following buttons:
 * **Create new draft version** – click this to create a new draft version of the component
 	* Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated – if there is a draft version in progress, click **View draft** to see it
 	* For more information on creating a draft version, see the [Updating Existing Marketplace Content](share-app-store-content#updating) section of *How to Share Marketplace Content*
-* **Unpublish** – click this to remove that version from the component
-	* If the component is not the protected content of a [user group](#user-groups), you can only unpublish a version that you have published yourself
-	* If the component is protected [content](#content) from a user group, a group [member](#members) can unpublish any version
+* **Unpublish** – click this to remove one version or all versions of the component
+	* If the component is protected [content](#content) from a [user group](#user-groups), a group [member](#members) can unpublish any version
+	* If the component is not the protected content of a user group, you can only unpublish a version that you have published yourself
+	* Select **Unpublish all versions** to remove all versions of the component
 * **Edit** – click this to edit the component (for details on editing, see the [Adding New Marketplace Content](share-app-store-content#adding) section of *How to Share Marketplace Content*)
 
 ### 4.3 Drafts {#drafts}
@@ -182,7 +183,7 @@ The **Manage** button is available to you if one of the following conditions is 
 
 * The component is not assigned to any [user groups](#user-groups) (in which case it can be managed by anyone in the company)
 * The component is assigned to a user group, and you are a [member](#members) of that group
-* You are a [Mendix Admin](/developerportal/control-center/index#company) of the company that published the component
+* You are a [Mendix Admin](/developerportal/control-center/#company) of the company that published the component
 
 To manage a component, click **Manage** (for more information, see the [Managing a Component](#manage) section above).
 
@@ -199,7 +200,7 @@ This page contains reviews of **Your company's content** as well as **Your compa
 You can configure user groups for various levels of access to your company's Marketplace. The available configuration tabs for each user group page are described in the sections below.
 
 {{% alert type="info" %}}
-The **User Groups** menu item and page are visible to all users. However, only [Mendix Admins](/developerportal/control-center/index#company) can create and delete user groups. Both [Group Admins](#members) and Mendix Admins can manage user groups.
+The **User Groups** menu item and page are visible to all users. However, only [Mendix Admins](/developerportal/control-center/#company) can create and delete user groups. Both [Group Admins](#members) and Mendix Admins can manage user groups.
 {{% /alert %}}
 
 #### 5.3.1 Members Tab {#members}
@@ -242,7 +243,7 @@ To see the component's [details](#details) page, click **View**.
 
 To remove a component from the user group, click **Remove**.
 
-[Group Admins](#members) and [Mendix Admins](/developerportal/control-center/index#company) can check the **Allow guests to download** box of this component can be downloaded by [guests](#guests).
+[Group Admins](#members) and [Mendix Admins](/developerportal/control-center/#company) can check the **Allow guests to download** box of this component can be downloaded by [guests](#guests).
 
 #### 5.3.4 Settings Tab
 

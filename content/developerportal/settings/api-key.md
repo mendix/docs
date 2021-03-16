@@ -31,4 +31,4 @@ To create a new app API key, click **Create API Key**  and follow these steps:
 ## 3 Read More
 
 * [API Documentation](/apidocs-mxsdk/apidocs)
-* [Mendix Profile](../mendix-profile/index)
+* [Mendix Profile](/developerportal/mendix-profile/)

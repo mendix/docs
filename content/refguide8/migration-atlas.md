@@ -10,11 +10,11 @@ tags: [ "Widgets", "Themes", "Classes", "Atlas", "Atlas UI", "Styling", "SASS", 
 
 When you upgrade to Mendix 8, your widgets' DOM structure will be changed. This means that the correlating Sass styling will not work as expected anymore. This document will allow you to make your theming compatible with Mendix 8.
 
-Each section in this document could apply to your app project, but some sections may *not* apply. If a section does not apply to your case, you may skip it.
+Each section in this document could apply to your app, but some sections may *not* apply. If a section does not apply to your case, you may skip it.
 
 {{% alert type="warning" %}}If you have added any content in the **Atlas_UI_Resource module**, you have to move that content out of the module. If you do not, it will be overwritten.{{% /alert %}}
 
-When your app project is using unmodified Atlas UI resources, upgrading your app project to Mendix 8 will automatically update your Atlas UI resources to version 2.1. If you did not make any changes in the custom folder, you are good to go and you can skip the rest of this guide. 
+When your app is using unmodified Atlas UI resources, upgrading your app to Mendix 8 will automatically update your Atlas UI resources to version 2.1. If you did not make any changes in the custom folder, you are good to go and you can skip the rest of this guide. 
 
 If you are using unmodified Atlas UI resources but you made changes to the custom folder, these changes are preserved and will be used by the new Atlas UI version. You will see a consistency error in this case. Proceed to the steps described in the [Working with a Modified Custom Folder](#modified) section below to resolve this error.
 
@@ -142,12 +142,12 @@ If you added a file to the *lib/layouts* folder, copy that file from *theme_old/
 
 Make sure any custom or added Sass files are all imported in either *styles/web/sass/main.scss* or *styles/web/sass/app/_custom.scss*.
 
-After troubleshooting your issues with the guidance above, complete the following steps to test your migrated app project:
+After troubleshooting your issues with the guidance above, complete the following steps to test your migrated app:
 
 ### 2.5 Working with a Modified Custom Folder {#modified}
 
 1. Recompile your Sass to CSS.
-2. Test your app project to see if everything works as expected.
+2. Test your app to see if everything works as expected.
 3. Delete *theme_old*.
 
 ## 3 Read More

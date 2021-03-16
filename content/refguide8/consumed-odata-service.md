@@ -38,7 +38,7 @@ The **Connection** tab displays the connection values for the consumed OData ser
 
 The **Service URL** displays the URL of the service endpoint: 
 
-* Click **Select** to select another [constant](/refguide/constants) for the service
+* Click **Select** to select another [constant](/refguide8/constants) for the service
 *  Click **Show** to display the **Constant** dialog box displaying the service URL or endpoint: 
 
 	![Connection Tab](attachments/consumed-odata-service/consumed-service-constant.png)
@@ -119,7 +119,7 @@ Click the **Properties** tab for the consumed OData service which displays the p
 ![](attachments/consumed-odata-service/consumed-odata-service-doc-properties.png)
 
 * **Entities** – the URL of the metadata defining the entities and associated datasets
-* **Documentation** – an additional description about this service for the current app project
+* **Documentation** – an additional description about this service for the current app
 * **Service name** – the name of the published OData service that is consumed
 * **Service version** – the version of the service that is consumed
 * **Service ID** – the unique identifier of the service in the Data Hub Catalog

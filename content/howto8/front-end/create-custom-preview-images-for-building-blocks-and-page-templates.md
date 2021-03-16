@@ -16,7 +16,7 @@ To make your custom UI resources easy to browse, you can create custom preview i
 
 ## 2 Creating Building Block Preview Images
 
-![](attachments/howto/create_custom_image_bb.png)
+![](attachments/app-building/create_custom_image_bb.png)
 
 ### 2.1 Creating a Building Block Preview Image in Sketch
 
@@ -30,7 +30,7 @@ To create a building block preview image in Sketch, follow these steps:
     * **Size**: 1x
     * **Format**: PNG
 
-    ![](attachments/howto/create_custom_image_bb_sketch.png)
+    ![](attachments/app-building/create_custom_image_bb_sketch.png)
 
 6. Export your image.
 
@@ -42,7 +42,7 @@ To create a building block preview image in Photoshop, follow these steps:
 2. Open the Photoshop file named **BB_previewimage.psd**.
 3.  Double-click the smart object in the **Layers** panel.
 
-    ![](attachments/howto/create_custom_image_bb_photoshop.png)
+    ![](attachments/app-building/create_custom_image_bb_photoshop.png)
 
 4. Replace the contents of the folder with your building block preview image.
 5. Save your changes and navigate back to your template file.
@@ -61,7 +61,7 @@ To create a building block preview image in Illustrator, follow these steps:
     * **Scale**: 1x
     * **Format**: PNG
 
-    ![](attachments/howto/create_custom_image_bb_illustrator.png)
+    ![](attachments/app-building/create_custom_image_bb_illustrator.png)
 
 7. Export your image.
 
@@ -71,7 +71,7 @@ You can also create your building block preview image in a different image edito
 
 ## 3 Creating Page Template Preview Images
 
-![](attachments/howto/create_custom_image_pt.png)
+![](attachments/app-building/create_custom_image_pt.png)
 
 ### 3.1 Creating a Page Template Preview Image in Sketch
 
@@ -85,7 +85,7 @@ To create a page template preview image in Sketch, follow these steps:
     * **Size**: 1x
     * **Format**: PNG
 
-    ![](attachments/howto/create_custom_image_pt_sketch.png)
+    ![](attachments/app-building/create_custom_image_pt_sketch.png)
 
 6. Export your image.
 
@@ -97,7 +97,7 @@ To create a page template preview image in Photoshop, follow these steps:
 2. Open the Photoshop file named **PT_previewimage.psd**.
 3.  Double-click the smart object in the **Layers** panel.
 
-    ![](attachments/howto/create_custom_image_pt_photoshop.png)
+    ![](attachments/app-building/create_custom_image_pt_photoshop.png)
 
 4. Replace the contents of the folder with your page template preview image.
 5. Save your changes and navigate back to your template file. If you are happy with your image, export your file as a *.png* file.
@@ -115,7 +115,7 @@ To create a page template preview image in Illustrator, follow these steps:
     * **Scale**: 1x
     * **Format**: PNG
 
-    ![](attachments/howto/create_custom_image_bb_illustrator.png)
+    ![](attachments/app-building/create_custom_image_bb_illustrator.png)
 
 7. Export your image.
 
@@ -128,5 +128,5 @@ You can also create your page template preview image in a different image editor
 * [Get Started with Atlas UI](get-started-with-atlasui)
 * [Create Company Atlas UI Resources](create-company-atlas-ui-resources)
 * [Extend Design Properties to Customize Your Studio Experience](extend-design-properties-to-customize)
-* [Migrate Existing App Projects to Atlas UI](migrate-existing-projects-to-atlasui)
+* [Migrate Existing Apps to Atlas UI](migrate-existing-projects-to-atlasui)
 * [Share Company Atlas UI Resources](share-company-atlas-ui-resources)

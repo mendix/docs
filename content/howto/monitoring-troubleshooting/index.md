@@ -17,7 +17,7 @@ Stay updated on the health of your app and reference these documents troubleshoo
 * [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors) – describes finding the root cause of runtime errors via Studio Pro and via the application logs
 * [Set Log Levels](log-levels) – teaches you how to configure the log levels for the various occurrence of logging within your app
 * [Monitor Mendix Using JMX](monitoring-mendix-using-jmx) – explains how to start Mendix Runtime with JMX as well as expose management information and app-specific statistics with an MBean
-* [Solve Load & Import Errors](solving-load-and-import-errors) – helps you to solve problems that may occur when opening an app project
+* [Solve Load & Import Errors](solving-load-and-import-errors) – helps you to solve problems that may occur when opening an app
 * [Manage App Performance](manage-app-performance) – teaches you how to manage app performance for apps which are not deployed to the Mendix Cloud by using AppDynamics and New Relic
 * [Detect & Resolve Performance Issues](detect-and-resolve-performance-issues) – gives you an overview of possible performance issues with root causes and resolutions
 

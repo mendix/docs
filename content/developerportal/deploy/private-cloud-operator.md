@@ -89,6 +89,12 @@ spec:
     logLevels: # Optional, can be omitted : set custom log levels for specific nodes
       NodeOne: CRITICAL
       NodeTwo: DEBUG
+    microflowConstants: # Optional, can be omitted : set values for microflow constants
+      MyFirstModule.Constant: "1234"
+      Atlas_UI_Resources.Atlas_UI_Resources_Version: "2.5.4"
+    scheduledEventExecution: SPECIFIED # Optional, can be omitted: specify which scheduled events should be enabled: ALL/NONE/SPECIFIED
+    myScheduledEvents: # List which scheduled events should be enabled; should only be used if scheduledEventExecution is set to SPECIFIED
+      - MyFirstModule.MyScheduledEvent
     # Mendix Runtime Jetty options, in JSON format; validated and applied by the mx-m2ee-sidecar container
     jettyOptions: |-
       {
@@ -114,9 +120,7 @@ spec:
     # All custom Mendix Runtime parameters go here, in JSON format; validated and applied by the mx-m2ee-sidecar container
     customConfiguration: |-
       {
-        "ScheduledEventExecution": "SPECIFIED",
-        "MyScheduledEvents": "MyFirstModule.MyScheduledEvent",
-        "MicroflowConstants":"{\"MyFirstModule.Constant\":\"1234\",\"Atlas_UI_Resources.Atlas_UI_Resources_Version\":\"2.5.4\"}"
+        "ApplicationRootUrl": "https://myapp1-dev.mendix.example.com"
       }
 ```
 
@@ -165,25 +169,21 @@ You need to make the following changes:
     ```
 
 * **logLevels**: – set custom logging levels for specific log nodes in your app — valid values are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
+* **microflowConstants**: – set values for microflow constants
+* **scheduledEventExecution**: – choose which scheduled events should be enabled - valid values are: `ALL`, `NONE` and `SPECIFIED`
+* **myScheduledEvents**: – list scheduled events which should be enabled - can only be used when **scheduledEventExecution** is set to `SPECIFIED`
 * **jettyOptions** and **customConfiguration**: – if you have any custom Mendix Runtime parameters, they need to be added to this section — options for the Mendix runtime have to be provided in JSON format — see the examples in the CR for the correct format and the information below for more information on [setting app constants](#set-app-constants) and [configuring scheduled events](#configure-scheduled-events)
 * **environmentVariables**: - set the environment variables for the Mendix app container, and JVM arguments through the `JAVA_TOOL_OPTIONS` environment variable
 * **clientCertificates**: - specify client certificates to be used for TLS calls to Web Services and REST services
 
 #### 3.2.1 Setting App Constants{#set-app-constants}
 
-To set constant values, first create a key-value JSON with values for each constant.
-
 The constant name is equal to `{module-name}.{constant-name}` where {module-name} is the name of the Mendix app module containing the constant,
 and {constant-name} is the name of the constant. The constant name will also be visible in the constant properties (UnitTesting.RemoteApiEnabled in this example):
 
 ![](attachments/private-cloud-operator/constant-name.png)
 
-For example, to set the `MyFirstModule.Constant` constant to `1234` and `MyModule.AnotherConstant` to `MyValue`, create the following JSON:
-```json
-{"MyFirstModule.Constant":"1234","MyModule.AnotherConstant":"true"}
-```
-
-Next, convert this JSON into a string by escaping it (in particular, replacing all `"` characters with `\"`) and use it as the **MicroflowConstants** value in **customConfiguration**. For example:
+Set the constant values in **microflowConstants** value in **runtime**. For example:
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
 kind: MendixApp
@@ -191,24 +191,22 @@ metadata:
   name: example-mendixapp
 spec:
   runtime:
-    # Add the MicroflowConstants value here
-    customConfiguration: |-
-      {
-        "MicroflowConstants":"{\"MyFirstModule.Constant\":\"1234\",\"MyModule.AnotherConstant\":\"true\"}"
-      }
+    microflowConstants:
+      MyFirstModule.Constant: "1234"
+      MyModule.AnotherConstant: "true"
 ```
 
 #### 3.2.2 Configuring Scheduled Events{#configure-scheduled-events}
 
-To disable execution of all scheduled events, set the **ScheduledEventExecution** value to `NONE` in **customConfiguration**.
+To disable execution of all scheduled events, set the **scheduledEventExecution** value to `NONE` in **runtime**.
 
-To enable execution of all scheduled events, set the **ScheduledEventExecution** value to `ALL` in **customConfiguration**.
+To enable execution of all scheduled events, set the **scheduledEventExecution** value to `ALL` in **runtime**.
 
-To enable execution for specific scheduled events, set the **ScheduledEventExecution** value to `SPECIFIED` in **customConfiguration**.
-Specify which events should be enabled by listing their full names in the **MyScheduledEvents** value in **customConfiguration**.
+To enable execution for specific scheduled events, set the **scheduledEventExecution** value to `SPECIFIED` in **runtime**.
+Specify which events should be enabled by listing their full names in the **myScheduledEvents** value in **runtime**.
 
 For example, to enable the execution of event `EventOne` in module `MyFirstModule` and event `EventTwo` in `MySecondModule`,
-set the **MyScheduledEvents** value to `MyFirstModule.EventOne,MySecondModule.EventTwo`:
+set the **myScheduledEvents** list to `MyFirstModule.EventOne`, `MySecondModule.EventTwo`:
 
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
@@ -217,11 +215,10 @@ metadata:
   name: example-mendixapp
 spec:
   runtime:
-    customConfiguration: |-
-      {
-        "ScheduledEventExecution":"SPECIFIED",
-        "MyScheduledEvents":"MyFirstModule.EventOne,MySecondModule.EventTwo"
-      }
+    scheduledEventExecution: SPECIFIED
+    myScheduledEvents:
+      - MyFirstModule.EventOne
+      - MySecondModule.EventTwo
 ```
 
 The **MyScheduledEvents** value should be removed from **customConfiguration** if **ScheduledEventExecution** is set to `ALL` or `NONE`.

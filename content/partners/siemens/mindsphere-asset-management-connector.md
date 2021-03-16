@@ -8,6 +8,10 @@ tags: ["MindSphere", "Asset", "Asset Type", "Connector"]
 
 ## 1 Introduction
 
+{{% alert type="warning" %}}
+This information is for apps which are deployed to MindSphere. The MindSphere Asset Management Connector cannot be used with the MindSphere IoT App Service.
+{{% /alert %}}
+
 The MindSphereAssetManagementConnector module is the standard connector for managing assets within MindSphere. It is also available as a stand-alone module in the Marketplace: [MindSphere Asset Management Connector](https://appstore.home.mendix.com/link/app/108806/). It is also used in the [Siemens MindSphere Pump Asset Example](https://appstore.home.mendix.com/link/app/108810/). 
 
 This module contains a Mendix domain model which maps the data structure of MindSphere assets. It also provides two microflow actions which can be used to retrieve assets and asset types from MindSphere:

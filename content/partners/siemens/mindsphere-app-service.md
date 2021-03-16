@@ -1,30 +1,70 @@
 ---
-title: "MindSphere Development Considerations"
+title: "MindSphere App Service"
 parent: "mindsphere"
-menu_order: 10
+menu_order: 5
 description: "A description of some extra considerations to be taken into account when developing for deployment to MindSphere"
 tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Local", "Styling", "UI", "Icons", "Limitations", "Licensing", "Validation"]
 ---
 
 ## 1 Introduction
 
-{{% alert type="warning" %}}
-This information is for apps which are deployed to MindSphere. It does not apply to the MindSphere IoT App Service.
-{{% /alert %}}
+The MindSphere App Service is the ideal solution if you want to add MindSphere information to an existing app which runs in the Mendix Cloud or another platform, especially when you are combining MindSphere data with information from other sources.
 
-When developing a Mendix app which will be deployed to MindSphere, there are a number of extra things you need to take into consideration. The following subjects are discussed below:
+### 1.1 Limitations
 
-* [Authorizing MindSphere REST Calls](#mstoken)
-* [Cloud Foundry Environment Variables](#cfenvvars)
-* [Licensing Your App](#licensing)
-* [Local Testing](#localtesting)
-* [MindSphere Icons](#atlasui)
-* [Multi-Tenancy](#multitenancy)
-* [Validation](#validation)
+The MindSphere App Service is easy to add to your app but has the following limitations:
 
-Finally, there is a section on some [Limitations](#limitations) which apply to Mendix apps deployed to MindSphere.
+* You cannot make your app multi-tenant – see [Multi-tenancy](mindsphere-development-considerations#multitenancy) in *MindSphere Development Considerations* for more information on multi-tenancy
+* Your app cannot be deployed to the MindSphere platform and cannot be added to the MindSphere Developer Cockpit
+* You cannot use MindSphere credentials to sign in to your app, you must handle app security yourself within your app
 
-## 2 Authorizing MindSphere REST Calls{#mstoken}
+App Service packages come in various sizes. Depending on the App Service package you purchase, you will be able to have up to:
+
+* 100 users
+* 50 asset types
+* 2000 assets
+* 100 event types
+* 2,500,000 events
+* 100 connected agents
+* 10,000 notifications per month
+* 1500 calls to the analytics services API
+* 100KB/s ingestion of time series data
+* 3TB of time series data
+* 500GB of files storage
+* 600GB outbound traffic per month
+* 1,500,000 calls to the token manager API
+
+## 2 Setting Up MindSphere App Service
+
+### 2.1 Requesting MindSphere App Service
+
+Contact your Customer Success Manager (CSM) or the Mendix Sales organization to request the MindSphere App Service.
+
+Once your order is processed, your entitlement to the MindSphere App Service will be confirmed.
+
+### 2.2 Provisioning a MindSphere Tenant
+
+On receipt of your confirmation, a [Mendix Administrator](/developerportal/control-center/index#company) for your company will need to initiate a tenant needs to be created within MindSphere.
+
+{{% todo %}}[How is this triggered]{{% /todo %}}
+
+Once all the resources have been provisioned, the the Mendix Administrator will receive credentials to the MindSphere Tenant consisting of the following:
+
+* Client ID
+* Client Secret
+* Client URL
+
+### 2.3 Linking to Asset Manager
+
+{{% todo %}}[This section to be completed by MindSphere Documentation Team]{{% /todo %}}
+
+## 3 Using the MindSphere App Service
+
+### 3.1 Importing the IoT Authenticator Module
+
+### 3.2 Obtaining 
+
+## 2 Authorizing MindSphere REST Calls
 
 The **MindSphereToken** entity contains the *Access_token* attribute which needs to be passed as the Authorization header in REST calls to MindSphere APIs.
 

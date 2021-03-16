@@ -22,6 +22,7 @@ The MindSphere App Service is the ideal solution if you want to add MindSphere i
 
 The MindSphere App Service is easy to add to your app but has the following limitations:
 
+* You can only communicate with [MindSphere Services](https://developer.mindsphere.io/apis/index.html) using *REST APIs*
 * You cannot make your app multi-tenant – see [Multi-tenancy](mindsphere-development-considerations#multitenancy) in *MindSphere Development Considerations* for more information on multi-tenancy
 * Your app cannot be deployed to the MindSphere platform and cannot be added to the MindSphere Developer Cockpit
 * You cannot use MindSphere credentials to sign in to your app, you must handle app security yourself within your app

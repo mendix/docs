@@ -13,7 +13,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
-### March 15th, 2021
+### March 16th, 2021
 
 * We updated the Mendix runtime to send back usage information to Mendix for your apps deployed to the Mendix Cloud. See below for more information about this change.
 

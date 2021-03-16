@@ -100,6 +100,6 @@ Click **Apply Configuration** to apply the configuration to your namespace, as n
 ### 6.3 Upgrade cluster{#upgrade-cluster}
 
 If you have already installed and configured a namespace, but would like to upgrade it to the current Mendix for Private Cloud version, 
-follow the instructions in the [Upgrade cluster](upgrade-cluster#upgrade-cluster) section of *Upgrading Private Cloud*.
+follow the instructions in the [Upgrade cluster](private-cloud-upgrade-guide#upgrade-cluster) section of *Upgrading Private Cloud*.
 
 To use images from your private registry, set the `--registry` flag when running the Mendix Configuration Tool.

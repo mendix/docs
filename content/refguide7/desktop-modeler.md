@@ -13,9 +13,9 @@ For more introductory information, see [Desktop Modeler Overview](desktop-modele
 
 ## 2 Main Documents in This Category
 
-Your Mendix app is called a project in the Modeler. An app project consists of different types of items, such as pages and microflows. These are generically referred to as documents, and they are stored in modules and folders.
+Your Mendix app is called a project in the Modeler. An app consists of different types of items, such as pages and microflows. These are generically referred to as documents, and they are stored in modules and folders.
 
-To add a document to your app project, right-click the destination module or folder in the Modeler's **Project Explorer**:
+To add a document to your app, right-click the destination module or folder in the Modeler's **Project Explorer**:
 
 ![Right-click menu in Project Explorer](attachments/desktop-modeler/add-document.png)
 

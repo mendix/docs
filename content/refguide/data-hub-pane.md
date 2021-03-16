@@ -9,7 +9,7 @@ tags: ["studio Pro", "data hub", "data hub pane", "data hub catalog"]
 
 ## 1 Introduction 
 
-[Mendix Data Hub](/data-hub/index) enables integration of available data sources from the different applications in an organization into your Mendix apps. This means that new apps can be created using shared datasets that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/index). In Studio Pro, this is possible using the integrated functionality of Data Hub Catalog through the **Data Hub** pane.
+[Mendix Data Hub](/data-hub/) enables integration of available data sources from the different applications in an organization into your Mendix apps. This means that new apps can be created using shared datasets that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/). In Studio Pro, this is possible using the integrated functionality of Data Hub Catalog through the **Data Hub** pane.
 
 {{% alert type="info" %}}
 You need a license to use Data Hub in Studio Pro. For further information see [Data Hub License](consumed-odata-service-requirements#license-limitations).
@@ -27,7 +27,7 @@ To display the **Data Hub** pane, click **View** > **Data Hub**:
 
 ## 2 Data Hub Pane in the Domain Model
 
-The Data Hub pane is used to search the Data Hub Catalog for entities that can be dragged and used in your app project and also display the external entities and the associated services that are consumed in your current model
+The Data Hub pane is used to search the Data Hub Catalog for entities that can be dragged and used in your app and also display the external entities and the associated services that are consumed in your current model
 
 ### 2.1 Data Hub Search
 
@@ -56,6 +56,8 @@ To add entities to your project model, see [Adding an External Entity to a Proje
 ## 3 Searching the Data Hub Catalog {#search}
 
 As you enter a search term, all the items in the Data Hub Catalog satisfying the search string are listed in the search results. This will include words in the service, entity and attribute descriptions which are not displayed in the the Data Hub pane. Further information see the [Data Hub Catalog asset details](/data-hub/data-hub-catalog/search#search-details).
+
+{{% alert type="info" %}}Services that are set to **not Discoverable** in the Catalog will not be included in the search results for *any* user including owners of the service. To consume entities from services owners must ensure that [Discoverability](/data-hub/data-hub-catalog/curate#discoverability) is turned on for them.{{% /alert %}}
 
 ### 3.1 Wildcard Search
 You can perform a wildcard search by entering `*` in the search area.
@@ -103,7 +105,7 @@ The search results and Project pane will show the following at a service level:
 	![Data Hub Pane update](attachments/data-hub-pane/data-hub-pane-update.png)
 
 	{{% alert type="info" %}}If there is an OData Service update available, then the entities that are listed are those that are available in that version of the OData service. These entities will be "grayed-out" to indicate that they cannot be dragged into the domain model as the *current* contract that is consumed in the project does not have these entities. You will have to update the contract to the version shown in the search results by clicking the **Update**. arrow. {{% /alert %}}
-  
+
   {{% alert type="info" %}}The version number that is shown for the OData service is the latest one that is available in the Data Hub Catalog at the service endpoint—in the example above version 1.0.11 of **Theatre_service** is currently consumed in the project, but version **1.0.12** is now available in the Data Hub Catalog. The search results display the entities available in the new service (also showing one that is locally consumed) however they are greyed-out and cannot be selected until the local service is **Updated** to this one.{{% /alert %}}
   
 * **Information icon** to view further details for the service and a link to go directly to the [Service Details](/data-hub/data-hub-catalog/search#search-details) screen in the Data Hub Catalog: 
@@ -121,7 +123,7 @@ For any service in the list, you can click **:Show details** to see the full lis
 {{% image_container width="250" %}}![Data Hub Pane Information](attachments/data-hub-pane/expand-service-list.png){{% /image_container %}}
 
 ### 4.2.1 Entity
-If you right-click an entity and select **View in Data Hub Catalog**, it will take you to the entity details page in the [Data Hub Catalog](/data-hub/data-hub-catalog/index).
+If you right-click an entity and select **View in Data Hub Catalog**, it will take you to the entity details page in the [Data Hub Catalog](/data-hub/data-hub-catalog/).
 
 If you right-click a consumed entity and **Go to entity**, it will take you to the entity in the domain model.
 

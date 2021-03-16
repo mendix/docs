@@ -8,7 +8,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-These are the [Mendix Studio Pro](/refguide/index) major version release notes:
+These are the [Mendix Studio Pro](/refguide/) major version release notes:
 
 * [9](9)
 * [8](8)

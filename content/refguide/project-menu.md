@@ -28,11 +28,11 @@ The **Batch Update Layouts** option allows you to update the layouts of many pag
 
 ### 2.3 Update Widgets {#update-widgets}
 
-The **Update Widgets** option presents the current versions of the widgets you are using in your app project, what the latest versions of the widgets are, and an update option.
+The **Update Widgets** option presents the current versions of the widgets you are using in your app, what the latest versions of the widgets are, and an update option.
 
 ### 2.4 Check Widgets
 
-The **Check Widgets** option checks that the widgets you have implemented in the app project have been built correctly.
+The **Check Widgets** option checks that the widgets you have implemented in the app have been built correctly.
 
 ### 2.5 Convert Classes to Design Properties
 

@@ -22,7 +22,7 @@ We are available for all users of the Mendix Platform, and we are bound by servi
 * Recovery time objective (RTO)
 * Recovery point objective (RPO)
 
-The SLA for your company is available upon request. Please contact [Mendix Support](https://support.mendix.com/) or your Customer Success Manager if you want to check the details.
+You can check the Mendix SLA [here](https://mendix.com/sla).
 
 ### 1.2 Premier Support
 
@@ -67,9 +67,9 @@ During the start phase, and through part of the scale phase, of your digital tra
 
 ### 5.1 Mendix Admins
 
-To manage your company account, and the users, projects, and licensed cloud nodes of your company, you can appoint [Mendix Admins](/developerportal/control-center/index#company).
+To manage your company account, and the users, projects, and licensed cloud nodes of your company, you can appoint [Mendix Admins](/developerportal/control-center/#company).
 
-Please read more about this in [Control Center](/developerportal/control-center/index).
+Please read more about this in [Control Center](/developerportal/control-center/).
 
 ### 5.2 Technical Contacts
 
@@ -380,7 +380,7 @@ These components are not accessible for Mendix Support and issues in the applica
 
 ## 11 Main Documents in This Category
 
-* [Prepare Your App Project for Support](https://docs.mendix.com/developerportal/support/prepare-your-project) – shows you how to configure project authorization to select the affected app(s) in the Mendix Support Portal
+* [Prepare Your App for Support](https://docs.mendix.com/developerportal/support/prepare-your-project) – shows you how to configure project authorization to select the affected app(s) in the Mendix Support Portal
 * [Submit a Support Request](https://docs.mendix.com/developerportal/support/submit-support-request) – presents the details necessary for Mendix Support to process your request
 * [Make a New App Node Request](https://docs.mendix.com/developerportal/support/new-app-node-request-template) – describes how to deploy a new licensed node in the Mendix Cloud or on-premises/virtual private cloud
 * [Support Ticket Priority](https://docs.mendix.com/developerportal/support/ticket-priority) – describes how priority levels are determined for Mendix Support

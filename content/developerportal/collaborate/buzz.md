@@ -2,7 +2,7 @@
 title: "Buzz"
 category: "Collaboration Tools"
 menu_order: 10
-description: "Describes the Mendix Buzz, which is the landing page for a Mendix app project."
+description: "Describes the Mendix Buzz, which is the landing page for working on a Mendix app."
 tags: ["Buzz","Developer Portal"]
 ---
 
@@ -26,7 +26,7 @@ Below the company name is a list of apps for which you are a team member. Clicki
 
 ### 1.2 App Buzz {#app-buzz}
 
-App Buzz is Buzz for a specific app. It is the landing page when you open that app project:
+App Buzz is Buzz for a specific app:
 
 ![](attachments/app-buzz.jpg)
 
@@ -36,17 +36,17 @@ Click the **+** icon to invite new members to your App Team directly from this p
 
 Click **Show all** to go to the [Team](team) page for the app.
 
-**Latest Stories** shows the last few stories created for this app project. Click **Show all** to see all the [Stories](stories).
+**Latest Stories** shows the last few stories created for this app. Click **Show all** to see all the [Stories](stories).
 
-**App Feedback** shows the last few items of feedback for this app project. Click **Show all** to see all the [Feedback](feedback).
+**App Feedback** shows the last few items of feedback for this app. Click **Show all** to see all the [Feedback](feedback).
 
 In App Buzz, you can manage your app by clicking the options to the left of the Buzz feed. These are grouped into the following categories:
 
 * [Collaborate](index)
-* [Develop](/developerportal/develop/index)
-* [Deploy](/developerportal/deploy/index)
-* [Operate](/developerportal/operate/index)
-* [Settings](/developerportal/settings/index)
+* [Develop](/developerportal/develop/)
+* [Deploy](/developerportal/deploy/)
+* [Operate](/developerportal/operate/)
+* [Settings](/developerportal/settings/)
 
 ## 2 Communicating on Buzz
 

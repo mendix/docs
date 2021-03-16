@@ -13,7 +13,7 @@ A message definition can be used for both JSON and XML, and it can be used for b
 
 ## 2 Adding a Message Definitions Document
 
-Message Definitions is a type of document you can add to modules in your app project.
+Message Definitions is a type of document you can add to modules in your app.
 
 To add a message definitions document do the following:
 
@@ -69,7 +69,7 @@ The name of the message definition.
 
 #### 4.1.2 Entity
 
-An entity in your app project domain model(s) on which to base the message definition. Using this message definition, you will be able to export and import individual objects and lists of objects of this entity type.
+An entity in your app domain model(s) on which to base the message definition. Using this message definition, you will be able to export and import individual objects and lists of objects of this entity type.
 
 #### 4.1.3 Structure
 

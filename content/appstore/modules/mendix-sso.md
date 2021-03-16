@@ -20,15 +20,15 @@ You can use this module when you want your application's end-users to sign in wi
 
 * Simple steps for adding the module to your app, no more configuration required
 * Single sign-on with your Mendix account for any application that implements this module
-* App end-user access management that is handled in the [Mendix Developer Portal](/developerportal/index)
+* App end-user access management that is handled in the [Mendix Developer Portal](/developerportal/)
 
 {{% alert type="info" %}}
-[Mendix Admins](/developerportal/control-center/index#company) can manage [groups](/developerportal/control-center/index#groups) that grant app permissions to groups of users.
+[Mendix Admins](/developerportal/control-center/#company) can manage [groups](/developerportal/control-center/#groups) that grant app permissions to groups of users.
 {{% /alert %}}
 
 ### 1.3 Limitations
 
-* Due to the large number of app creations, synchronizing newly created app projects might take some time. When an app project is not yet synchronized, the deployment will not work when you attempt to deploy your app to the Mendix Developer Portal, as it will not recognize your app project. In these cases, please be patient and try again later or contact [Mendix Support](https://support.mendix.com/hc/en-us) if the problem persists. Mendix is working on resolving the volume throughput issues.
+* Due to the large number of app creations, synchronizing newly created apps might take some time. When an app is not yet synchronized, the deployment will not work when you attempt to deploy your app to the Mendix Developer Portal, as it will not recognize your app. In these cases, please be patient and try again later or contact [Mendix Support](https://support.mendix.com/hc/en-us) if the problem persists. Mendix is working on resolving the volume throughput issues.
 * This module does not work for [native mobile](/refguide/native-mobile) apps.
 * The default app `Logout` action resolves to the origin location found in a session cookie, which (re)triggers the `/openid/login/` endpoint, which logs the end-user in again. 
 

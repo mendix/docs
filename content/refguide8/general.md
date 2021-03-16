@@ -17,6 +17,6 @@ If you have been using Desktop Modeler version 7, we advise reading [Moving from
 	* [Team Server](system-requirements#ts)
 	* [Browsers](system-requirements#browsers)
 
-* [Moving from Desktop Modeler Version 7 to Studio Pro Version 8](moving-from-7-to-8) – presents important information on converting your app projects to use in Studio Pro 8
-* [MxBuild](mxbuild) – presents information for building a Mendix deployment package from an app project
+* [Moving from Desktop Modeler Version 7 to Studio Pro Version 8](moving-from-7-to-8) – presents important information on converting your app to use in Studio Pro 8
+* [MxBuild](mxbuild) – presents information for building a Mendix deployment package from an app
 * [Third-Party Licenses](third-party-licenses) – lists locations for third-party libraries that have their own licenses

@@ -52,12 +52,12 @@ By default, search results in the Data Hub Catalog are filtered to show only hit
 The service URLs provide the locations of the service contract. In turn, these define the endpoints for exposed datasets (or entity sets) and attributes and thereby access to the associated datasets by the consuming apps. You obtain data source and dataset URI's from the search details for integration of the resource in other BI applications. 
 
 ### 2.5 Discoverability 
-When a data source is registered, by default, it is "published" for public use with the **Discoverable** setting in the Data Hub Catalog. When this is set, all users can find it and the view details and consume it. Owners and curators of a registered service can set a service to be non-discoverable, which means that it can only be found and consumed by the owners and is not visible to other users of the Catalog.
+When a data source is registered, by default, it is made available to other users with the **Discoverable** setting active in the Data Hub Catalog. When this is set, all users can find it and the view details and consume it. Owners of a registered service and curators can set a data source as non-discoverable, which means it is not visible to users unless they are the owner or a curator.
 
 ### 2.6 Tags 
 Tags help you to group services and datasets and categorize them (for example, by department, process, or use). You can use tags to refine the search and filter search results in the Data Hub Catalog by doing the following:
 
-* Add tags to the service as a curate function in the Data Hub Catalog after a service is registered by service owners and [Data Hub Curators](../index#curator)
+* Add tags to the service as a curate function in the Data Hub Catalog after a service is registered by service owners and [Data Hub Curators](/data-hub/#curator)
 * Add different tags to the different versions of the same service, as they will be two separately registered assets in the catalog (this is also a way to make different version identifiable)
 * Add tags to the datasets exposed in the service
 * Add tags in the [manual registration of OData v4 services](register#registration-form)
@@ -147,7 +147,7 @@ The number of items satisfying the search criteria (search string plus filters) 
 
 If no search string is specified, all registered assets will be listed in the search results pane in order of popularity (number of connections to the asset).
 
-When an item in the search results is selected, the **Catalog** tab will display the **Details** of the asset and the **Landscape** tab will show the network of connections and dependencies of the selected item in the [Data Hub Landscape](../data-hub-landscape/index).
+When an item in the search results is selected, the **Catalog** tab will display the **Details** of the asset and the **Landscape** tab will show the network of connections and dependencies of the selected item in the [Data Hub Landscape](/data-hub/data-hub-landscape/).
 
 ### 4.2 Selected Asset Details {#search-details}
 
@@ -228,10 +228,10 @@ The data source metadata panel at the right of the asset details screen displays
 	{{% alert type="info" %}}Tags assigned at a data source level propagate down to the datasets and attributes exposed in the service.{{% /alert %}}
 * **Business Owner** – links to the business owner of the data fr the data source; this is added as a curation task
 * **Technical Owner** – technical contact of the app; by default this is the owner who registered the OData service. For apps hosted in the Mendix Cloud, the **Technical Owner** is the **Technical Contact** of the app in the Mendix Cloud
-* **Discoverability** – the discoverability of the asset so that other users can find it:
+* **Discoverability** – the discoverability of the asset by users:
 	* **Discoverable** – all users of the Data Hub Catalog and Studio Pro can see and consume the asset provided they meet the requirements of the **Classification**
 	* **Non-Discoverable** – the asset is not visible in the Catalog and only owners, Data Hub curators, and the Data Hub Admin can find, use, and curate the service. See [Curate Bar](#curate-bar) for changing **Discoverability** as an owner or curator.
-	  {{% alert type="info" %}}If an asset is set to **Non-discoverable** it will not appear in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Data Hub API.{{% /alert %}}
+	  {{% alert type="info" %}}A **Non-discoverable** asset is also not included in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Data Hub API.{{% /alert %}}
 * **Access Level** – shows the access classification of the service; end-users of the data associated with the datasets exposed in the service must have the appropriate [user role](/refguide/user-roles) to access the data:
 	* **Public** – classified as public and available to all users	
 	* **Internal** – restricted to the members of the organization
@@ -282,4 +282,4 @@ This zip file comprise the folder: `DataHub_SAMPLE_EmployeeDirectory_1.1.0_OData
 
 ## 6 Viewing Search Results in the Data Hub Landscape
 
-When an item is selected in the search results pane, you can click the [Landscape](../data-hub-landscape/index) tab to see the network of connections and dependencies for the selected asset. This enables you to graphically see the context and relevance for a selected item and the data for the exposed datasets.
+When an item is selected in the search results pane, you can click the [Landscape](/data-hub/data-hub-landscape/) tab to see the network of connections and dependencies for the selected asset. This enables you to graphically see the context and relevance for a selected item and the data for the exposed datasets.

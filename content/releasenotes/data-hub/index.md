@@ -5,9 +5,16 @@ tags: ["data hub", "data hub catalog", "data hub Landscape"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes made to the [Mendix Data Hub](/data-hub/index).
+These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
+
+### March 11th, 2021
+
+#### Improvements
+
+* Improvements have been made on the [discoverability](/data-hub/data-hub-catalog/curate#discoverability) of registered assets.
+* The functionality for [registering data sources from enterprise applications](/data-hub/data-hub-catalog/register#registration-form) is now responsive.
 
 ### March 4th, 2021
 
@@ -124,7 +131,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/index)
 
 #### Improvements
 
-* In [Landscape](/data-hub/data-hub-landscape/index) nodes are now static and cannot be dragged around the display. To see other parts of of the selected assets network, you can pan and zoom using the mouse.
+* In [Landscape](/data-hub/data-hub-landscape/) nodes are now static and cannot be dragged around the display. To see other parts of of the selected assets network, you can pan and zoom using the mouse.
 * In Data Hub **Catalog** by default, the [search filter](/data-hub/data-hub-catalog/search#filter) is set to show results in the **Production** environment only. To include hits in **Non-production** or **Sandbox** environments you have to check these boxes in the **Add Filters** dialog box.
 * The [entity details](/data-hub/data-hub-catalog/search#entity-details) screen now displays the number of connections to the individual entity. The service details continue to show the total number of connections to the service.
 
@@ -150,4 +157,4 @@ Every organization has valuable data in different applications. With Mendix Data
 
 Want to know how it can help you? Check out the launch blog post: [Data Hub: The Low-Code Approach to Data Integration](http://www.mendix.com/blogs/data-hub-the-low-code-approach-to-data-integration).
 
-For even more information, please consult the [Data Hub Guide](/data-hub/index).
+For even more information, please consult the [Data Hub Guide](/data-hub/).

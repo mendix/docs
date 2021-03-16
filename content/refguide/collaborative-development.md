@@ -12,7 +12,7 @@ Collaborative development is the process of sharing app model changes when a tea
 
 {{% alert type="info" %}}
 
-If you get a **Mendix Studio is not enabled for this app project yet** message when opening your app project in Studio, make sure you enable a development line for it. For more information, see [Enabling Studio for a Development Line](#active-branch).
+If you get a **Mendix Studio is not enabled for this app project yet** message when opening your app in Studio, make sure you enable a development line for it. For more information, see [Enabling Studio for a Development Line](#active-branch).
 
 {{% /alert %}}
 

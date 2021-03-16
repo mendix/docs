@@ -16,10 +16,10 @@ For details on the Studio Pro version required for use and when the component wa
 
 The *Marketplace Guide* is divided into the following categories:
 
-* [General Info](general/index)
-* [Connectors](connectors/index)
-* [Modules](modules/index)
-* [Themes](themes/index)
-* [Widgets](widgets/index)
+* [General Info](general/)
+* [Connectors](connectors/)
+* [Modules](modules/)
+* [Themes](themes/)
+* [Widgets](widgets/)
 
 

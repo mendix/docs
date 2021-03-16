@@ -13,9 +13,33 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### March 16th, 2021
+
+* We updated the Mendix runtime to send back usage information to Mendix for your apps deployed to the Mendix Cloud. See below for more information about this change.
+
+    This will be enabled the next time you redeploy your app. 
+
+**What happens to this information?**
+
+The sole purpose of retrieving this information is to check compliance against your license subscription. The information sent to Mendix allows us to provide you with clear insights into the exact usage of your apps and the number of active users in a given time-period. This can also help you in determining an optimum user plan in the long run.
+
+This information is eventually stored within Mendix and gives us an aggregated view of usage of your apps. 
+
+**What is the information sent back?**
+
+Usage information in this context is the username, project id, app environment name, and date & time of logon. 
+Note that **the username is scrambled using a hashing algorithm**, ensuring that the actual username cannot be discovered. 
+
+**Who is a user?**
+
+Everyone who logs onto the app with a username and password is considered an app user. All anonymous users are treated as a single user for this purpose.
+
+**When and how does this happen?**
+
+In connected environments, this usage information will be sent back to Mendix automatically, at regular intervals — by default this is set to once every day. This transmission will take place at around(randomized) midnight. Data will also be sent when the app is restarted. 
+
 ### March 3rd, 2021
 
-* We added the ability to completely clear all the data from your database running in a licensed environment.
 * We updated the [deploy API](/apidocs-mxsdk/apidocs/deploy-api), [Build API](/apidocs-mxsdk/apidocs/build-api), [Team Server API](/apidocs-mxsdk/apidocs/team-server-api), [Backups API V2](/apidocs-mxsdk/apidocs/backups-api), and [Backups API V1](/apidocs-mxsdk/apidocs/backups-api-v1) to:
     * add json validation
     * add stricter API path validation (for example, a trailing `/` on the API path will result in `API not found`)

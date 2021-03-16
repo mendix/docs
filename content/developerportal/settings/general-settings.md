@@ -10,7 +10,7 @@ tags: ["Settings", "App", "Developer Portal"]
 
 ## 1 Introduction
 
-The **General** settings page presents an overview of your app project with the following details:
+The **General** settings page presents an overview of your app with the following details:
 
 * A **Description** of the app
 * The [App Contact](/developerportal/collaborate/app-roles#app-contact) and [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) for the app
@@ -62,7 +62,7 @@ You can also manage app users from Studio, by clicking **Manage Users** on the *
 After clicking **Manage App Users**, you will see a list of environments for your app on the **App User Management** page. You will only be able to see environments that satisfy these requirements:
 
 * [Mendix Single Sign-On](/developerportal/deploy/mendix-sso) is implemented:
-	* In Studio, SSO is automatically implemented for your app project by enabling security for your app – for details, see the [Security Overview](/studio/settings-security#overview) section of *Security, Roles & Permissions*
+	* In Studio, SSO is automatically implemented for your app by enabling security for your app – for details, see the [Security Overview](/studio/settings-security#overview) section of *Security, Roles & Permissions*
 	* In Studio Pro, SSO can be implemented via the [Mendix SSO](/appstore/modules/mendix-sso) module (for more information, see [Mendix Single Sign-On](/developerportal/deploy/mendix-sso))
 * If you manage user roles from Studio, your app should be published (for more information see the [Managing App Users](/studio/settings-security#managing-app-users) section of *Security, Roles & Permissions* )
 * Your user role allows you to manage other users (for more information, see the [User Management Properties](/refguide/user-roles#user-management) section of *User Roles*)
@@ -77,10 +77,10 @@ When you click **Manage Uses** on for your environment, you will see a page with
 
 To remove an App User from the environment, click **Remove** by their name.
 
-To edit an App User's roles, click **Edit** by their name. Permissions for these roles (for example, **User** or **Administrator**) correspond to what you have configured for your app project's user roles in [Project Security](/refguide/project-security#user-roles) in Mendix Studio Pro or [Roles and Permissions](/studio/settings-security#roles-and-permissions) in Mendix Studio. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
+To edit an App User's roles, click **Edit** by their name. Permissions for these roles (for example, **User** or **Administrator**) correspond to what you have configured for your app's user roles in [Project Security](/refguide/project-security#user-roles) in Mendix Studio Pro or [Roles and Permissions](/studio/settings-security#roles-and-permissions) in Mendix Studio. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
 
 {{% alert type="info" %}}
-If an App User has been granted access to an app environment through a [Group](/developerportal/control-center/index#groups), only a Mendix Admin can remove them from that environment (by removing them from that group) or edit the roles granted by that group policy.
+If an App User has been granted access to an app environment through a [Group](/developerportal/control-center/#groups), only a Mendix Admin can remove them from that environment (by removing them from that group) or edit the roles granted by that group policy.
 {{% /alert %}}
 
 ### 4.2 Invite Users
@@ -96,7 +96,7 @@ To invite new App Users to your app, click **Invite Users** on the **App User Ma
 	
 3. Click **Add to invitee list**.
 
-4. Select the role for the App User (for example, **User** or **Administrator**). Permissions for these roles correspond to what you have configured for your app project's user roles in [Project Security](/refguide/project-security#user-roles) in Mendix Studio Pro or [Roles and Permissions](/studio/settings-security#roles-and-permissions) in Mendix Studio. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
+4. Select the role for the App User (for example, **User** or **Administrator**). Permissions for these roles correspond to what you have configured for your app's user roles in [Project Security](/refguide/project-security#user-roles) in Mendix Studio Pro or [Roles and Permissions](/studio/settings-security#roles-and-permissions) in Mendix Studio. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
 
 5. Click **Next**.
 
@@ -123,10 +123,10 @@ Click **Edit App Info** to edit the following details:
 
 ## 6 Managing Webhooks {#webhooks}
 
-Click **Manage Webhooks** to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if [Mansystems](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app project, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app project in the Developer Portal are then sent to that URL.
+Click **Manage Webhooks** to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if [Mansystems](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app in the Developer Portal are then sent to that URL.
 
 {{% alert type="info" %}}
-Only [Mendix Admins](/developerportal/control-center/index#company) or users with the **App Settings** permission can manage webhooks.
+Only [Mendix Admins](/developerportal/control-center/#company) or users with the **App Settings** permission can manage webhooks.
 {{% /alert %}}
 
 On the **Webhooks** page, you can add a new webhook and edit or delete existing webhooks:

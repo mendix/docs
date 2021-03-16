@@ -46,7 +46,7 @@ These are the native widgets included in these resources along with links to the
 | [Bottom Sheet](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/bottom-sheet-native) | Creates a set of options while blocking interaction with the rest of the screen or a draggable surface anchored to the bottom of the screen. |
 | <a name="carousel"></a>[Carousel](https://github.com/mendix/widgets-resources/tree/master/packages/pluggableWidgets/carousel-native) | Creates a carousel that can be swiped with free modeling. |
 | [Color Picker](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/color-picker-native) | Allows the app end-user to select colors. |
-| [Feedback](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/feedback-native) | Allows the app end-user to submit feedback directly into the app project. |
+| [Feedback](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/feedback-native) | Allows the app end-user to submit feedback directly into the app. |
 | [Floating Action Button](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/floating-action-button-native) | Displays a circular floating icon button. |
 | [Intro Screen](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/intro-screen-native) | Shows swipeable containers to show contents as introductions. |
 | [Line Chart (beta)](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/line-chart-native) | Renders a scalable line graph based on static and dynamic data sets. |

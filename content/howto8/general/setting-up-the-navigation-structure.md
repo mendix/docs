@@ -128,7 +128,7 @@ To avoid adding the menu widget on every page in your project,  you can use a la
 
 ## 7 Read More
 
-* [Atlas UI](/howto/front-end/atlas-ui)
+* [Atlas UI](/howto8/front-end/atlas-ui)
 * [Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages)
 * [Use Layouts and Snippets](../front-end/layouts-and-snippets)
 * [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

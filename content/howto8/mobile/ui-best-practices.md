@@ -70,7 +70,7 @@ The design properties are located in *theme/settings-native.json*, and more info
 
 #### 3.2.3 Create the App Layouts
 
-The default Atlas theme comes pre-bundled with a set of layouts. If these do not fit your app’s design, you can create or customize the layouts and name them accordingly. Do not change the supplied layouts. Either create a separate module with the custom layouts, page templates, and building blocks or create your own [UI resources module](/howto/front-end/create-company-atlas-ui-resources#4-moving-from-local-to-atlas-ui-resources).
+The default Atlas theme comes pre-bundled with a set of layouts. If these do not fit your app’s design, you can create or customize the layouts and name them accordingly. Do not change the supplied layouts. Either create a separate module with the custom layouts, page templates, and building blocks or create your own [UI resources module](/howto8/front-end/create-company-atlas-ui-resources#4-moving-from-local-to-atlas-ui-resources).
 
 #### 3.2.4 Create Building Blocks for Common UI Structures
 
@@ -108,7 +108,7 @@ Try to avoid very specific class names. Very specific class names are often only
 
 By changing styling in the **core** folder you risk incurring errors the next time you update Atlas. Updating Atlas might also be more difficult. 
 
-A large part of your app's overall styling can be changed in `theme/styles/native/app/custom-variables.js`. However, if more changes are needed you could extend a widget’s default styling or define the default styling yourself. For more information, see [How to Extend Design Properties to Customize Your Studio Experience](/howto/front-end/extend-design-properties-to-customize).
+A large part of your app's overall styling can be changed in `theme/styles/native/app/custom-variables.js`. However, if more changes are needed you could extend a widget’s default styling or define the default styling yourself. For more information, see [How to Extend Design Properties to Customize Your Studio Experience](/howto8/front-end/extend-design-properties-to-customize).
 
 ### 4.4 Favor Design Properties Over Including Properties
 
@@ -135,4 +135,4 @@ It is a common pitfall to keep adding classes to a single file. However, this wi
 ## 5 Read More
 
 * [Native Mobile Styling Reference Guide](/refguide8/native-styling-refguide)
-* [How to Style Your Mendix Native Mobile App](/howto/mobile/how-to-use-native-styling)
+* [How to Style Your Mendix Native Mobile App](/howto8/mobile/how-to-use-native-styling)

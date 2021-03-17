@@ -63,7 +63,7 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 
     {{% image_container width="400" %}}![Selecting the root element](attachments/hybrid-local/root-element.png){{% /image_container %}}
 
-1.  The screen should change to the following view. If it does not, select the item under **Targets** on the left panel not the item under **Project** and select the tab **Signing & Certificates**:
+1.  The screen should change to the following view. If it does not, select the item under **Targets** on the left panel not the item under **App** and select the tab **Signing & Certificates**:
 
     {{% image_container width="400" %}}![Signing screen with errors](attachments/hybrid-local/setup-signing-wrong.png){{% /image_container %}}
 

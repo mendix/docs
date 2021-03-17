@@ -33,11 +33,11 @@ A Mendix package (*.mpk*) file can store a complete Mendix project.
 
 To import a complete Mendix project package, follow these steps:
 
-1. Click the **File** menu in  and select **Import Project Package...**:
+1. Click the **File** menu in  and select **Import App Package**:
 
     ![](attachments/18448739/18582103.png)
 
-2. Select your Mendix project package file and click **Open**. The **Import Project Package** dialog box will appear:
+2. Select your Mendix project package file and click **Open**. The **Import App Package** dialog box will appear:
 
     ![](attachments/18448739/18582101.png)
 
@@ -55,7 +55,7 @@ A Mendix package (*.mpk*) file can store a Mendix project module.
 
 To import module packages, follow these steps:
 
-1. Right-click your project in the **Project Explorer** and select **Import Module Package**.
+1. Right-click your project in the **App Explorer** and select **Import Module Package**.
 
     ![](attachments/18448739/import-package.png)
 
@@ -72,7 +72,7 @@ To import module packages, follow these steps:
 
 4. Click **Import**. You may see a **Warning** pop-up window that will inform you of any included module dependencies that will be overwritten in your project.
 
-5. Click **OK**. You will see your new or replaced module in the **Project Explorer**.
+5. Click **OK**. You will see your new or replaced module in the **App Explorer**.
 
     You will also see your changes in the **Changes** section of . In this example, the existing module has been deleted and replaced by the newly imported module:
 
@@ -113,7 +113,7 @@ The package can contain a single example of one of the following:
 
 To import module objects, follow these steps:
 
-1. Right-click a module in the **Project Explorer** and select **Import document from file...**:
+1. Right-click a module in the **App Explorer** and select **Import document from file...**:
 
     ![](attachments/18448739/18582100.png)
 
@@ -131,17 +131,17 @@ To import module objects, follow these steps:
 
 ### 2.4 Importing Widgets
 
-A Mendix package (*.mpk*) file can store one or more widgets. You need to place the Mendix package file in your project directory to import it.
+A Mendix package (*.mpk*) file can store one or more widgets. You need to place the Mendix package file in your app directory to import it.
 
 To import widgets, follow these steps:
 
-1. Click the **Project** menu and select **Show Project Directory in Explorer**:
+1. Click the **App** menu and select **Show App Directory in Explorer**:
 
     ![](attachments/18448739/18582108.png)
 
 2. Open the **widgets** folder in your project directory and put your Mendix package file there.
 
-3. Open the **Project** menu and select **Synchronize Project Directory** to synchronize the changes in the project directory:
+3. Open the **App** menu and select **Synchronize Project Directory** to synchronize the changes in the app directory:
 
     ![](attachments/18448739/18582106.png)
 
@@ -160,11 +160,11 @@ To learn more about importing content from the Marketplace, see [How to Use Mark
 
 To export a project, follow these steps:
 
-1. Click the **File** menu in  and select **Export Project Package...**
+1. Click the **File** menu in  and select **Export App Package**.
 
     ![](attachments/18448739/18582091.png)
 
-2. The **Export Project Package** dialog box will appear, which enables you to set the export location and select data to export (if required):
+2. The **Export App Package** dialog box will appear, which enables you to set the export location and select data to export (if required):
 
     ![](attachments/18448739/18582090.png)
 
@@ -176,7 +176,7 @@ To export a project, follow these steps:
 
 To export a module, follow these steps:
 
-1. Right-click a module in the **Project Explorer**, and select **Export module package...**:
+1. Right-click a module in the **App Explorer**, and select **Export module package...**:
 
     ![](attachments/18448739/18582095.png)
 

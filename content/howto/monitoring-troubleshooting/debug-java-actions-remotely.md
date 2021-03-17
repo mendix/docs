@@ -46,7 +46,7 @@ To configure Eclipse, follow these steps:
 3. Select **Debug Configurations**.
 4. In the left menu bar, select **Remote Java Application**.
 5. Right-click **New**.
-6. Be sure your current project is under **Project**, and change the port to 5005 (view the JVM parameters).
+6. Be sure your current project is under **App**, and change the port to 5005 (view the JVM parameters).
 7. Click **Debug**.
 
 ## 4 Read More

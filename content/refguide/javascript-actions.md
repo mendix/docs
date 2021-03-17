@@ -27,7 +27,7 @@ To learn how to create, configure, and use a JavaScript action, see these [Build
 
 ## 2 General Settings
 
-After double-clicking a JavaScript action in your **Project Explorer** you will see the JavaScript action's settings: 
+After double-clicking a JavaScript action in your **App Explorer** you will see the JavaScript action's settings: 
 
 {{% image_container width="400" %}}![javascript settings](attachments/javascript-actions/javascript-action-settings-no-para.png){{% /image_container %}}
 

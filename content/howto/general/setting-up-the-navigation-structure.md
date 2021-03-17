@@ -27,7 +27,7 @@ Note that the **Default home page** setting is overridden by a **Role-based home
 
 Do the following:
 
-1.  Open **Project** > **Navigation**.
+1.  Open **App** > **Navigation**.
 
     ![](attachments/setting-up-the-navigation-structure/open-navigation.jpg)
 

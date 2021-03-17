@@ -35,7 +35,7 @@ The **View** menu allows you to view dockable panes, to enable the full screen m
 
 ## 5 Project Menu {#project}
 
-In the **Project** menu, you can view and/or manipulate settings that are connected to your project and deployment. For more information on the **Project** menu, see [Project Menu](project-menu).
+In the **App** menu, you can view and/or manipulate settings that are connected to your project and deployment. For more information on the **App** menu, see [Project Menu](project-menu).
 
 ## 6 Run Menu {#run}
 

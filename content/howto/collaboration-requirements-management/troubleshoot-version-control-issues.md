@@ -72,7 +72,7 @@ Follow these steps:
 	
 	Always use the version of TortoiseSVN that matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN, you will no longer be able to open it in Mendix.{{% /alert %}}
 
-2. Open the project folder via Studio Pro by selecting **Project** > **Show Project Directory in Explorer**.
+2. Open the app folder via Studio Pro by selecting **App** > **Show App Directory in Explorer**.
 3. Right-click the white background of the project folder.
 4. Select **TortoiseSVN** > **Properties**.
 5. Double-click the `svn:ignore` property.

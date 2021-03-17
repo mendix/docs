@@ -18,7 +18,7 @@ Atlas UI and Mendix Studio bring a lot of features to the process of building an
 
 ## 2 Replace the UI Framework Module
 
-To get the full experience of Atlas UI, it’s necessary to import the Atlas UI Resources module. Every app includes a module called **UI_Resources** that can be found under **Project** > **App Store modules** in Studio Pro. This module contains all the layouts, page templates, and building blocks. The **UI Framework** folder in this module contains the old Mendix UI Framework content, which we will be upgrading to Atlas UI.
+To get the full experience of Atlas UI, it’s necessary to import the Atlas UI Resources module. Every app includes a module called **UI_Resources** that can be found under **App** > **App Store modules** in Studio Pro. This module contains all the layouts, page templates, and building blocks. The **UI Framework** folder in this module contains the old Mendix UI Framework content, which we will be upgrading to Atlas UI.
 
 To replace the UI Framework, follow these steps:
 
@@ -48,7 +48,7 @@ But before your app can run in Studio, it is necessary to enable the Mendix Stud
 
 ## 5 Reusing Parts of Your Old Theme (Optional)
 
-A lot of Mendix projects have a custom theme. If this is the case for your project, your old theme can be found in the Project Explorer folder named **theme_old**. The Atlas UI framework is similar to the Mendix UI Framework, so it is possible to reuse parts of your custom variables file.
+A lot of Mendix projects have a custom theme. If this is the case for your project, your old theme can be found in the App Explorer folder named **theme_old**. The Atlas UI framework is similar to the Mendix UI Framework, so it is possible to reuse parts of your custom variables file.
 
 ![Image of Mendix Atlas UI](attachments/howto/migrate_old_theme.png)
 

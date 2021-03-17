@@ -93,7 +93,7 @@ Do not add the administration pages to the navigation layout of offline devices.
 
 ## 7 Setting Up the Project Security for Your Module
 
-On the **User roles** tab of the **Project Security** dialog box, include the following:
+On the **User roles** tab of the **App Security** dialog box, include the following:
 * The **PushNotifications.Administrator** role as part of the main **Administrator** role
 * The **PushNotifications.User** role as part of the main **User** role
 * The **PushNotifications.Anonymous** role role as part of the main **Anonymous** role (if your application allows anonymous users)

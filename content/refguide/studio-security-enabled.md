@@ -50,7 +50,7 @@ The Mendix SSO module also adds user management to your app. With user managemen
 
 After the **After startup** microflow is set up, Studio checks if the *Administrator* role, the *User* role, and *demo users* exist and creates them when necessary:
 
-1.  Studio checks if the Administrator role and the User role exist at the **Project** level. If they do not exist, they will be created.
+1.  Studio checks if the Administrator role and the User role exist at the **App** level. If they do not exist, they will be created.
 
 	![](attachments/studio-security-enabled/project-security-user-roles.png)
 
@@ -120,11 +120,11 @@ This procedure enables single sign-on and allows existing users to automatically
 
 ## 7 Project Security Level Set Up {#project-security-level}
 
-On the **Project** level, Studio does the following:
+On the **App** level, Studio does the following:
 
-1. The **Project Security** is set to **Production**. 
+1. The **App Security** is set to **Production**. 
 
-2.  Studio checks if the **After startup** microflow exists in **Project** > **Settings** > **Runtime**. 
+2.  Studio checks if the **After startup** microflow exists in **App** > **Settings** > **Runtime**. 
 
     ![](attachments/studio-security-enabled/start-up-microflow.png)
 

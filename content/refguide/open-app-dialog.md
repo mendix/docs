@@ -52,4 +52,4 @@ For opening an app you already have on disk, simply point to the project file.
 
 ## 3 Read More
 
-* [Import Project Package](import-project-package-dialog)
+* [Import App Package](import-project-package-dialog)

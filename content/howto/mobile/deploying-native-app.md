@@ -64,7 +64,7 @@ The Mendix Native Mobile Builder needs to communicate with GitHub and App Center
 
 From Studio Pro:
 
-1.  Click **Project** > **Build Native Mobile App**:
+1.  Click **App** > **Build Native Mobile App**:
 
 	{{% image_container width="350" %}}![Start Mendix Native Mobile Builder](attachments/nbui/start-nbui.png){{% /image_container %}}
 

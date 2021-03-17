@@ -169,14 +169,14 @@ Use XCode to manually add fonts to an iOS project:
     * TimesNewRomanPS-BoldMT, for bold
 
 1. Open XCode and select the workspace at **ios\NativeTemplate.xcworkspace**.
-1. Drag and drop the renamed fonts to the **Resources/Fonts** folder in Project Explorer. 
+1. Drag and drop the renamed fonts to the **Resources/Fonts** folder in App Explorer. 
 1.  Select both targets from the dialog box that shows up:
 
      {{% image_container width="350" %}}![XCode option dialog for adding files](attachments/nbui/custom-fonts-xcode-dialog.png){{% /image_container %}}
 
 1.  Your folder structure should look like this:
 
-     {{% image_container width="350" %}}![Project explorer with fonts](attachments/nbui/custom-fonts-project-explorer-filled.png){{% /image_container %}}
+     {{% image_container width="350" %}}![App Explorer with fonts](attachments/nbui/custom-fonts-project-explorer-filled.png){{% /image_container %}}
 
 1. Open the *Info.plist* file by pressing <kbd>{⌘}</kbd> + <kbd>{Shift}</kbd> + <kbd>{0}</kbd>` and searching for the file. Press <kbd>{Enter}</kbd> to open it:
 

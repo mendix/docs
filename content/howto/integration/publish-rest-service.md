@@ -45,7 +45,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 ### 4.1 Creating the Mapping
 
-1.  In the **Project Explorer**, right-click the **RESTExample** module and select **Add** > **Mappings** > **Message Definitions**:
+1.  In the **App Explorer**, right-click the **RESTExample** module and select **Add** > **Mappings** > **Message Definitions**:
 
 	![](attachments/publish-rest-service/message_definition.png)
 
@@ -65,7 +65,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 ### 4.2 Configuring the REST Service
 
-1.  In the **Project Explorer**, right-click the **RESTExample** module and select **Add** > **Published Services** > **Published REST Service**:
+1.  In the **App Explorer**, right-click the **RESTExample** module and select **Add** > **Published Services** > **Published REST Service**:
 
 	![](attachments/publish-rest-service/AddRestService.png)
 
@@ -95,7 +95,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 	![](attachments/publish-rest-service/RetrieveOrder.png)
 
-11. <a name="eleven"></a>From the Project Explorer, right-click the RESTExample module and select **Add** > **Mappings** > **Export Mapping** to add a new mapping named **EM_ExportOrder**:
+11. <a name="eleven"></a>From the App Explorer, right-click the RESTExample module and select **Add** > **Mappings** > **Export Mapping** to add a new mapping named **EM_ExportOrder**:
 
 	![](attachments/publish-rest-service/AddExportMapping.png)
 

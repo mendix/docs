@@ -27,7 +27,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Create an SAP app using an SAP app template
 * Select and deploy the app to an SAP account and subaccount where you have authority to configure security
 * Set the security level for the project to at least Prototype/demo to use SAP Authentication; for more information see [Project Security](/refguide/project-security) and for instructions on setting security levels, see [How To Create a Secure App](/howto/security/create-a-secure-app)
-* Setup the app with the following two **User roles** in **Project ... > Security**: Supervisor and Inspector
+* Set up the app with the following two **User roles** in **App** > **Security**: Supervisor and Inspector
 
 	![](attachments/use-sap-xsuaa-connector/add-roles-to-app.png)
 
@@ -35,7 +35,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Getting the XSUAA Connector for SAP Business Technology Platform Module
 
-The SAP app may already have the XSUAA Connector for SAP Business Technology Platform installed. Look in **Project... > App Store modules** for the module **SapAuthentication**. This is the XSUAA connector.
+The SAP app may already have the XSUAA Connector for SAP Business Technology Platform installed. Look in **App** > **App Store modules** for the module **SapAuthentication**. This is the XSUAA connector.
 
 If the XSUAA Connector for SAP Business Technology Platform is not already in your project, download it from the Marketplace. It can be found here: [XSUAA Connector for SAP Business Technology Platform](https://appstore.home.mendix.com/link/app/78091/).
 
@@ -55,7 +55,7 @@ The app needs to be bound to the SAP XSUAA service. This is achieved by executin
 
 To add the After Startup microflow to your application, follow these steps:
 
-1. In the **Project Explorer**, select **Project ... > Settings** and open the **Runtime** tab.
+1. In the **App Explorer**, select **App** > **Settings** and open the **Runtime** tab.
 2. For the **After Startup** microflow, select the microflow **App Store Modules > SapAuthentication > USE_ME > ASu_StartXSUAA**.
 
 ![](attachments/use-sap-xsuaa-connector/runtime-settings.png)
@@ -75,7 +75,7 @@ If your app already had XSUAA included, your login.html file may have been modif
 
 If login.html does not support XSUAA then you need to add the SSO login button to the landing page. Do this by following these steps:
 
-1. In the top menu of , select **Project** > **Show Project Directory in Explorer**.
+1. In the top menu of , select **App** > **Show App Directory in Explorer**.
 2. Open the **theme** folder.
 3. Copy the content of **login-with-sso.html** to **login.html**.
 3. Open **login.html** for editing.

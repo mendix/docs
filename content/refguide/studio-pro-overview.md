@@ -54,7 +54,7 @@ Your account is displayed next to these buttons if you are signed in. Click the 
 
 ## 3 Project Structure
 
-A project consists of individual files (*documents*) and settings that are grouped in folders and [modules](modules). The complete structure of your project can be viewed in the [Project Explorer](project-explorer). 
+A project consists of individual files (*documents*) and settings that are grouped in folders and [modules](modules). The complete structure of your project can be viewed in the [App Explorer](project-explorer). 
 
 ## 4 Working Area
 
@@ -167,7 +167,7 @@ The following shortcut keys control the currently selected language:
 
 ## 8 Read More
 
-* [Project Explorer](project-explorer)
+* [App Explorer](project-explorer)
 * [Menus](menus)
 
   

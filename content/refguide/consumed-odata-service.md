@@ -23,7 +23,7 @@ The **Consumed OData Service** document that is added to the project displays th
 	*  **Switch** – this button is shown if other registered instances of the same service (with the same name, from the same app) are available in Data Hub and are deployed to different endpoints (for example, to another environment or because of changes that would break existing apps consuming the previous version)
 
 	{{% alert type="info" %}}
-	Studio Pro will always show the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Data Hub search and **Project**  pane, when a different contract is detected at the service end-point, this will be indicated with an update arrow for the service. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document.
+	Studio Pro will always show the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Data Hub search and **App**  pane, when a different contract is detected at the service end-point, this will be indicated with an update arrow for the service. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document.
 	{{% /alert %}} 
 
 	{{% alert type="info" %}}In the **Data Hub** pane consumed services that have an available **Update** will have an update arrow to indicate this:<br />
@@ -179,7 +179,7 @@ The **Update** option is available when a new version of a published OData servi
 
 #####  4.3.1.1 Project Pane
 
-In the **Project** pane this will be shown as follows: 
+In the **App** pane this will be shown as follows: 
 
 ![update service project-pane](attachments/consumed-odata-service/project-pane-update-available.png)
 

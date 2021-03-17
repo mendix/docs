@@ -36,7 +36,7 @@ For more information on the full list of available settings, see [Runtime Custom
 
 These settings can be configured as follows:
 
-*  Studio Pro – in **Project Explorer**, expand **Project**, double-click **Settings**, edit a configuration, and go to the **Custom** tab:
+*  Studio Pro – in **App Explorer**, expand **App**, double-click **Settings**, edit a configuration, and go to the **Custom** tab:
 
 	![](attachments/migrating/19398970.png) 
 
@@ -64,7 +64,7 @@ You can configure Studio Pro to use a PostgreSQL database instead of the inbuilt
 
 To do this, perform the following steps:
 
-1. Open your **Project '…'** > **Settings**.
+1. Open your **App** > **Settings**.
 
 2. Click **New** to add a new configuration from the **Configurations** tab.
 

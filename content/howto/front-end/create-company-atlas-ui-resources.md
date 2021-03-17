@@ -23,7 +23,7 @@ In the example below, we’ll go through the steps of creating a new page templa
 
 ### 2.1 Example Scenario
 
-In Studio Pro, go to the **Project Explorer** of your app and right-click the page you want to use as the page template. In this example, we are using a dashboard page.
+In Studio Pro, go to the **App Explorer** of your app and right-click the page you want to use as the page template. In this example, we are using a dashboard page.
 
 ![](attachments/howto/creating_page_templates.png)
 
@@ -90,7 +90,7 @@ Adding an underscore to the folder name in Studio Pro (for example, **_Layouts**
 
 ## 5 Export Company Atlas UI Resources
 
-When the resources are ready to be shared with multiple developers or apps, the module can be exported from the Project Explorer. You are free to change the name of a module as long as the module has been exported as a UI resource package.
+When the resources are ready to be shared with multiple developers or apps, the module can be exported from the App Explorer. You are free to change the name of a module as long as the module has been exported as a UI resource package.
 
 ![](attachments/howto/export_ui_module.png)
 

@@ -6,7 +6,7 @@ tags: ["studio pro", "ui resources"]
 
 ## 1 Introduction
 
-The UI resources package is a specific [module](modules) marked by a green icon in the Project Explorer, that determines the projects look and feel. It does this in two distinct ways. First, the package supplies the project with all the page documents required to create well-designed, consistent pages, such as [page templates](page-templates) and [building blocks](building-block). Second, the package contains theme information, which allows users to easily switch out themes that complement the accompanying page documents. 
+The UI resources package is a specific [module](modules) marked by a green icon in the App Explorer, that determines the projects look and feel. It does this in two distinct ways. First, the package supplies the project with all the page documents required to create well-designed, consistent pages, such as [page templates](page-templates) and [building blocks](building-block). Second, the package contains theme information, which allows users to easily switch out themes that complement the accompanying page documents. 
 
 Which module is set as the UI resources package is governed by the **UI resources package** setting in the **Theme** tab of the [project settings](project-settings). This setting will automatically be updated if a new UI resources package is imported. 
 
@@ -32,6 +32,6 @@ Additionally, adding page templates and building blocks to the UI resources pack
 
 ## 4 Importing and Exporting
 
-UI resources packages can be exported in the same manner as a normal module: right-click the package in the **Project Explorer** and select **Export UI resources package**. Along with the rest of the module's documents, the **theme** folder in the project directory will automatically be exported along with the package. This folder will be ready to be inserted into any projects the package is imported into in the future. This function is only available for the green module marked as the **UI resources package**. To export a different module as a UI resources package, the **UI resources package** setting must be manually set to that module in the project settings before export. 
+UI resources packages can be exported in the same manner as a normal module: right-click the package in the **App Explorer** and select **Export UI resources package**. Along with the rest of the module's documents, the **theme** folder in the project directory will automatically be exported along with the package. This folder will be ready to be inserted into any projects the package is imported into in the future. This function is only available for the green module marked as the **UI resources package**. To export a different module as a UI resources package, the **UI resources package** setting must be manually set to that module in the project settings before export. 
 
 When a UI resources packages is imported as a module, it will automatically update the project with a new theme folder and designate itself the project's new UI resources package.

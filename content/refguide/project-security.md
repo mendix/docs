@@ -1,5 +1,5 @@
 ---
-title: "Project Security"
+title: "App Security"
 parent: "security"
 menu_order: 10
 tags: ["studio pro", "security", "project security"]
@@ -9,9 +9,9 @@ tags: ["studio pro", "security", "project security"]
 
 ## 1 Introduction
 
-In the **Project Security**, you can switch security on or off for the whole project. You can also configure security settings related to the project, such as user roles, administrator credentials, demo users, anonymous users, and password policy. To be able to configure, for example, [security per module](module-security) or [access rule for entities](access-rules), you need to switch the project security on first. 
+In **App Security**, you can switch security on or off for the whole project. You can also configure security settings related to the project, such as user roles, administrator credentials, demo users, anonymous users, and password policy. To be able to configure, for example, [security per module](module-security) or [access rule for entities](access-rules), you need to switch the project security on first. 
 
-To configure the project security, open **Project Explorer** > **Project** > **Security**, and the dialog box will open:
+To configure the project security, open **App Explorer** > **App** > **Security**, and the dialog box will open:
 
 ![](attachments/project-security/project-security-dialog.png)
 
@@ -77,7 +77,7 @@ A user role aggregates a number of access rights on data, pages, and microflows.
 
 ## 5 Administrator {#administrator}
 
-In the **Administrator** tab of **Project Security**, you can change the default credentials and a user role for the Administrator user. For more information, see [Administrator](administrator). 
+In the **Administrator** tab of **App Security**, you can change the default credentials and a user role for the Administrator user. For more information, see [Administrator](administrator). 
 
 ## 6 Demo Users {#demo-users}
 

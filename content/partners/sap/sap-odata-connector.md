@@ -31,7 +31,7 @@ The SAP Destination Service replaces the SAP Cloud Connector flag which was used
 
 ## 2 Using the OData Connector for SAP Solutions{#UsingtheSAPODataConnector}
 
-Once you have downloaded the OData Connector for SAP solutions from the Marketplace, it will be imported into your app. You will find it in the Project Explorer under project **{Project name}** > **App Store modules** > **SAPODataConnector**.
+Once you have downloaded the OData Connector for SAP solutions from the Marketplace, it will be imported into your app. You will find it in the App Explorer under project **{Project name}** > **App Store modules** > **SAPODataConnector**.
 
 ### 2.1 Microflow Actions
 
@@ -108,7 +108,7 @@ Here is the domain model of the OData Connector for SAP solutions:
 
 ![](attachments/sap-odata-connector/domainmodel-sapodataconnector.png)
 
-This domain model is part of the OData Connector for SAP solutions module and can be found in **Project … > App Store module > SAPODataConnector**. Each [entity](/refguide/entities) contains one or more [attributes](/refguide/attributes):
+This domain model is part of the OData Connector for SAP solutions module and can be found in **App** > **App Store module** > **SAPODataConnector**. Each [entity](/refguide/entities) contains one or more [attributes](/refguide/attributes):
 
 * **ODataObject** – represents the generic OData object; all entities which can be manipulated directly in the SAP OData service domain model are specializations of this
   * **meta objectURI** – the address given by the OData service to the OData object

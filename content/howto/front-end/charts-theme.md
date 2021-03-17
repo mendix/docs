@@ -76,7 +76,7 @@ To create the required custom configuration easily, follow these steps:
 
 To add a theme file which will apply to all charts in the app, follow these steps:
 
-1. From Studio Pro, go to the menu **Project > Show Project Directory in Explorer**.
+1. From Studio Pro, go to the menu **App** > **Show App Directory in Explorer**.
 
 1. Open the **theme** folder.
 

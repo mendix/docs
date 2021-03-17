@@ -22,7 +22,7 @@ You can add the following page resources:
 
 To add a resource document, do the following:
 
-1.  In the [Project Explorer](project-explorer), right-click the module or a folder you want to add a resource to and select **Add other**:
+1.  In the [App Explorer](project-explorer), right-click the module or a folder you want to add a resource to and select **Add other**:
 
     ![](attachments/page-resources/project-explorer-page-resources.png)
 

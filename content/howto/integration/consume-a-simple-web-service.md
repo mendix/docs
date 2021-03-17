@@ -22,7 +22,7 @@ A WSDL describes the operations of a web service and can be imported in Studio P
 
 To import a WSDL, follow these steps:
 
-1. Right-click your module in the **Project Explorer** and select **Add other** > **Consumed web service**:
+1. Right-click your module in the **App Explorer** and select **Add other** > **Consumed web service**:
 
 2. Enter a name for the new consumed web service (for example, *TemperatureConverter*):
 
@@ -44,7 +44,7 @@ To import a WSDL, follow these steps:
 
 To create logic to call the web service, follow these steps:
 
-1.  Right-click your module in the **Project Explorer** and select **Add microflow** from the menu:
+1.  Right-click your module in the **App Explorer** and select **Add microflow** from the menu:
 
 2.  Enter a name for the new microflow (for example, *ConvertCelsiusToFahrenheit*) and click **OK**.
 

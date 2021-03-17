@@ -1,15 +1,15 @@
 ---
-title: "Project Settings"
+title: "App Settings"
 parent: "project"
 menu_order: 10
-description: "Settings which apply to the project app as a whole."
-tags: ["project", "app", "configuration", "runtime", "Studio Pro", "languages", "certificate", "theme", "hashing", "hashing algorithm"]
+description: "Settings which apply to the app as a whole."
+tags: ["app", "configuration", "runtime", "Studio Pro", "languages", "certificate", "theme", "hashing", "hashing algorithm"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-In the **Project Settings** dialog box, you can alter the settings that are applicable to the whole project:
+In the **App Settings** dialog box, you can alter the settings that are applicable to the whole project:
 
 ![](attachments/project-settings/project-settings-configuration.png)
 

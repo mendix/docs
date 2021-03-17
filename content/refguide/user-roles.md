@@ -18,7 +18,7 @@ The purpose of the distinction between user roles and module roles is to make a 
 
 End-users of your application only see the user roles and not the module roles.
 
-To access user roles, open **Project Security** > **User roles** tab:
+To access user roles, open **App Security** > **User roles** tab:
 
 ![](attachments/user-roles/user-roles-example.png)
 

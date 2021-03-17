@@ -49,7 +49,7 @@ Whether you plan to import or export documents, working with XML means that your
 
 To add an XML schema (XSD), follow these steps:
 
-1.  Right-click a module in the **Project Explorer** and select **Add Other** > **XML schema** from the menu.
+1.  Right-click a module in the **App Explorer** and select **Add Other** > **XML schema** from the menu.
 2.  Enter **CustomersXSD** as the **Name** and click **OK**:
 
     ![](attachments/18448727/18581696.png)
@@ -66,7 +66,7 @@ The XML schema describes what the possible contents of an XML file are, but we n
 
 To create the XML-to-domain mapping, follow these steps:
 
-1. Right-click a module in the **Project Explorer** and select **Add Other** > **Import mapping**.
+1. Right-click a module in the **App Explorer** and select **Add Other** > **Import mapping**.
 2.  Enter **ImportCustomersMapping** as the **Name** and click **OK.**  The new mapping will open automatically and the elements will be shown.
 
 	![](attachments/18448727/18581689.png)

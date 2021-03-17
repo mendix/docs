@@ -37,9 +37,9 @@ To add an external entity to your project, do the following:
 If you drag an entity that is associated with an entity from the same service already in your domain model, the association will be established between the entities. For more information on associations between external entities, see [Associations](#properties).
 {{% /alert %}}
 
-When an external entity is added to the domain model, two documents will be added in the **Project Explorer**: the **Consumed OData Service** document containing the metadata for the consumed entity, and the **OData Location** of the dataset. For more information, see [Consumed OData Service](consumed-odata-service). 
+When an external entity is added to the domain model, two documents will be added in the **App Explorer**: the **Consumed OData Service** document containing the metadata for the consumed entity, and the **OData Location** of the dataset. For more information, see [Consumed OData Service](consumed-odata-service). 
 
-In the **Project Section** of the **Data hub** pane the consumed entities that are in the current project will be listed. 
+In the **Project** section of the **Data hub** pane the consumed entities that are in the current project will be listed. 
 
 {{% alert type="info" %}}
 If there is a newer version of a consumed service becomes available in the Data Hub Catlog, this will be indicated in the **Data Hub** pane by an update arrow against the service name. For more information, see the [Updating or Switching a Consumed OData Service](consumed-odata-service#updating) section in *Consumed OData Service*.

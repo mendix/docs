@@ -1,9 +1,9 @@
 ---
-title: "Import Project Package"
+title: "Import App Package"
 parent: "file-menu"
 menu_order: 40
-description: "Describes the Import Project Package process and Import Project Package dialog box."
-tags: ["studio pro", "import project package"]
+description: "Describes the Import App Package process and Import App Package dialog box."
+tags: ["studio pro", "import app package"]
 ---
 ## 1 Introduction
 
@@ -11,15 +11,15 @@ To create a new app from a Mendix project package (*.mpk*) file, you need to imp
 
 To import a project package, do the following:
 
-1. Select the **File** menu in the top bar > **Import Project Package** 
+1. Select the **File** menu in the top bar > **Import App Package** 
 
 2. Browse to the *.mpk* file you would like to import.
 
-3.  Select the relevant options in the **Import Project Package** dialog box and click **OK**. For more information on what options you can select, see the sections below. 
+3.  Select the relevant options in the **Import App Package** dialog box and click **OK**. For more information on what options you can select, see the sections below. 
 
-    ![Import Project Package Dialog Window](attachments/file-menu/import-project-package.png)
+    ![Import App Package Dialog Window](attachments/file-menu/import-project-package.png)
 
-Project packages can be created using [Export Project Package](export-project-package-dialog).
+Project packages can be created using [Export App Package](export-project-package-dialog).
 
 ## 2 Where Should We Store Your App?
 
@@ -60,4 +60,4 @@ Use this field to choose the directory where the project files of the app will b
 ## 4 Read More
 
 * [Team Server Overview](/developerportal/develop/team-server)
-* [Export Project Package](export-project-package-dialog)
+* [Export App Package](export-project-package-dialog)

@@ -11,7 +11,7 @@ You can specify a number of requirements for passwords. These requirements will 
 
 ## 2 Password Policy Properties
 
-To set password policy properties, open **Project Security** > the **Password policy** tab:
+To set password policy properties, open **App Security** > the **Password policy** tab:
 
 ![](attachments/password-policy/password-policy-tab.png)
 

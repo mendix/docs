@@ -16,7 +16,7 @@ Creating company UI resources is a great way to let Mendix developers quickly cr
 
 ## 2 Exporting Your Company Atlas UI Resources
 
-When your custom resources are ready to be shared with multiple developers or apps, you can export the module from the **Project Explorer** in Studio Pro. To do this, right-click the **UI Resources** module, export it, and save it:
+When your custom resources are ready to be shared with multiple developers or apps, you can export the module from the **App Explorer** in Studio Pro. To do this, right-click the **UI Resources** module, export it, and save it:
 
 ![](attachments/howto/sharing_export_uiresources.png)
 
@@ -53,13 +53,13 @@ Let’s start with creating a new Mendix application in the Mendix Developer Por
 
     ![](attachments/howto/sharing_createnewapp.png)
 
-2. Expand at the **App Store modules** at the Mendix **Project** level and find the default **Atlas_UI_Resources** module. Right-click this module and delete it:
+2. Expand at the **App Store modules** at the Mendix **App** level and find the default **Atlas_UI_Resources** module. Right-click this module and delete it:
 
     ![](attachments/howto/sharing_delete_module.png)
 
 3. Now it’s time to import your company UI resources (if you have not created the UI resources yet, see [How to Create Company UI Resources](create-company-atlas-ui-resources)). Import these resources by clicking **ApMarketplace** in the top toolbar of Studio Pro, and then selecting **UI Resources** in the left sidebar **Categories** menu.
 4. Download the company UI resources module you have created.
-5. When the download is complete, the UI resources will be visible in the **App Store modules** in **Project Explorer**.  Be sure to check if all the errors are resolved before continuing.
+5. When the download is complete, the UI resources will be visible in the **App Store modules** in **App Explorer**.  Be sure to check if all the errors are resolved before continuing.
 
 Now that you have added your company UI resources to your company app template, you can share the app in the Mendix Marketplace just as you did with the company UI resources (see the next section for details). The company app template will be available for your Mendix developers to use whenever they want to create a new app, allowing them to save time and skip downloading the company UI resources separately.
 

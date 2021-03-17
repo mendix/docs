@@ -118,13 +118,13 @@ In order to test your group box widget, you will a Mendix application that uses 
 
 Optionally, you can remove all unused widgets to optimize the debugging process. To do so, follow these steps:
 
-1. Click **Project** > **Show Project Directory in Explorer**.
+1. Click **App** > **Show App Directory in Explorer**.
 2. Open the **widgets** folder.
 3. Delete all files in this folder.
 
 Follow these steps to add the Mendix project as a test project to your widget project, so that you can start modeling with the new widget:
 
-1. Close the project in Mendix Studio Pro by clicking **File** > **Close Project**.
+1. Close the project in Mendix Studio Pro by clicking **File** > **Close App**.
 2. Move the contents of the Mendix project folder into **test/MxTestProject**, which is located inside your group box widget project folder.
 
 Create a test case by following these steps:
@@ -473,7 +473,7 @@ Next you will allow the Mendix developer to alter the header caption of your wid
 
 Do these final steps to sync and run your app:
 
-1. In Studio Pro press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to sync your app with the changes you made to **src/GroupBox.xml**. 
+1. In Studio Pro press <kbd>F4</kbd> or select **App** > **Synchronize Project Directory** to sync your app with the changes you made to **src/GroupBox.xml**. 
 2. An error will tell you to update your widget. Right-click the Group Box widget and select **Update widget**. 
 3. Double-click the same widget and you will now see your new property. 
 4. Fill in some caption text, click **OK**, and rerun your app locally to see your caption text in the app:
@@ -556,7 +556,7 @@ You will also want Mendix developers to be able to fill content in the group box
 Verify that the new content property works:
 
 1. Go back to Studio Pro.
-2. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to bring your application in sync with the changes to the **src/GroupBox.xml** file.
+2. Press <kbd>F4</kbd> or select **App** > **Synchronize Project Directory** to bring your application in sync with the changes to the **src/GroupBox.xml** file.
 3. Update the group box widget again. A content area will appear in the page editor:
 
 	![content area](attachments/build-native-widget/content-area.png)
@@ -917,7 +917,7 @@ Next you have to pass the icons configured by the Mendix developer to your displ
 	```
 
 6. Navigate to Studio Pro.
-7. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to bring your application in sync with the changes you made to the **src/GroupBox.xml** file.
+7. Press <kbd>F4</kbd> or select **App** > **Synchronize Project Directory** to bring your application in sync with the changes you made to the **src/GroupBox.xml** file.
 8. Update the group box widget.
 9. Double-click your widget.
 10. In the **Icon** described as **Icon used to indicate that the group box can be expanded** click **Edit**.
@@ -1305,7 +1305,7 @@ The last thing to do is change the container component so that the properties ge
 	```
 
 3. Navigate to Studio Pro.
-4. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to bring your application in sync with the changes you made to the **src/GroupBox.xml** file.
+4. Press <kbd>F4</kbd> or select **App** > **Synchronize Project Directory** to bring your application in sync with the changes you made to the **src/GroupBox.xml** file.
 5. Update the group box widget. Notice that now your widget has the icon you loaded into its *xml*:
 
 	![groupbox 64](attachments/build-native-widget/groupbox-64-icon.png)
@@ -1441,7 +1441,7 @@ The developer needs to have the class names memorized to apply a certain group b
 
 	Note that the property name must be the same as the widget ID. This will ensure this design property can be configured for your group box widget in Studio Pro.
 
-3. In Studio Pro click <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to bring your application in sync with the changes you made to the previous two files.
+3. In Studio Pro click <kbd>F4</kbd> or select **App** > **Synchronize Project Directory** to bring your application in sync with the changes you made to the previous two files.
 
 4. Double-click the group box widget and navigate to the **Appearance** tab.
 

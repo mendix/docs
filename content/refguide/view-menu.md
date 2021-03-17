@@ -98,9 +98,9 @@ This pane displays the results of the latest find action. You can search for tex
 
 There are two **Find Results** panes. If you lock the results of the first pane, the second one is used for subsequent find operations until you unlock the first one.
 
-### 3.7 Project Explorer
+### 3.7 App Explorer
 
-The [Project Explorer](project-explorer) pane displays the complete structure of your app, including all the documents inside the modules. By default, the active document is always selected, so you can quickly see where the document you are editing is in the tree. You can change this behavior in **Edit** > [Preferences](preferences-dialog).
+The [App Explorer](project-explorer) pane displays the complete structure of your app, including all the documents inside the modules. By default, the active document is always selected, so you can quickly see where the document you are editing is in the tree. You can change this behavior in **Edit** > [Preferences](preferences-dialog).
 
 ### 3.8 Properties
 
@@ -149,5 +149,5 @@ Resets the layout of dockable window panes to factory defaults.
 
 * [Changes Pane](changes-pane)
 * [Errors Pane](errors-pane)
-* [Project Explorer](project-explorer)
+* [App Explorer](project-explorer)
 * [Studio Pro Overview](studio-pro-overview)

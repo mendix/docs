@@ -14,20 +14,22 @@ These are the current versions in active development:
 * Native Template v5.0.x applies to apps built using Studio Pro [8.12.1](../studio-pro/8.12#8121)–[8.14.x](../studio-pro/8.14).
 * Native Template v4.2.x applies to apps built using Studio Pro up to [8.12.0](../studio-pro/8.12#8120).
 
-## 5.1.8 and 5.0.12
+## 5.1.8 and 5.0.12 {#518and5012}
 
 **Release date: March 17th, 2021**
 
 ### Fixes
-* We fixed an issue that could crash apps due to the fix released with v5.1.7 of Native Template
+
+* We fixed an issue that could crash apps due to the fix released with Native Template v5.1.7.
 * We fixed an issue that could crash a custom developer app when JavaScript debugging was enabled.
 
-
-## [Retracted] 5.1.7 and 5.0.11
+## 5.1.7 and 5.0.11
 
 **Release date: March 12th, 2021**
 
-We got reports that apps would crash when using Firebase after the patch. Please update to 5.1.8 or 5.0.12 respectively. 
+{{% alert type="warning" %}}
+We have decided to retract versions 5.1.7 and 5.0.11 because got reports that apps would crash when using Firebase after the patch. Please update to [5.1.8 or 5.0.12](#518and5012) respectively. 
+{{% /alert %}}
 
 ### Fixes
 

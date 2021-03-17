@@ -9,6 +9,14 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### March 18th, 2021
+
+#### Improvements
+
+* A Mendix connector has been added to the business applications on the Data Hub Home to enable users to [manually register](/data-hub/data-hub-catalog/register#registration-form)  Mendix OData v3 contracts.
+* Data sources that are [validated](/data-hub/data-hub-catalog/curate#discoverability)  are now clearly indicated in the search results list and in the selected asset details with a validated shield. The validation status of the data source is  displayed in the Metadata panel. 
+* The [discoverability](/data-hub/data-hub-catalog/curate#discoverability) of a data source is displayed in the search results pane, the asset details screen and the the Metadata panel. 
+
 ### March 11th, 2021
 
 #### Improvements

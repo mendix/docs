@@ -24,6 +24,8 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We fixed an issue where deployments failed if there were too many log nodes. (Ticket 115140)
 
+    As a consequence of this, you will no longer be able to see the log levels of all your [log nodes](/developerportal/deploy/environments-details#log-levels) if your app is not running. Only log nodes which are not set to `Info` will be visible until you restart your app.
+
 ### March 16th, 2021
 
 * We updated the Mendix runtime to send back usage information to Mendix for your apps deployed to the Mendix Cloud. See below for more information about this change.

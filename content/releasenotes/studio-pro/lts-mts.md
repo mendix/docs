@@ -66,7 +66,7 @@ If you are on an innovation track with your development and need to get the late
 
 ### 3.1 Support Duration
 
-The support duration for an MTS depends on when a new higher major version is released, which thus creates a new LTS and discontinues all MTS versions for that respective major version.
+The support duration for an MTS depends on when a new higher major version is released, which thus creates a new LTS and ends support for all MTS versions for that respective major version.
 
 This diagram illustrates the MTS concept with version and [end of support](#end) examples:
 

@@ -15,7 +15,7 @@ To define different types of versions and releases, consider the example of [8.1
 	* Includes new features and fixes
 	* Can include breaking changes
 	* In relation to our SLA and to clarify our current offering, today Mendix supports major versions 7, 8, and 9
-		* Once version 10 has been released, the support on version 7 will be dropped
+		* Once version 10 has been released, suppport on version 7 will end
 * **18** – the second number in a release indicates the minor version 
 	* A minor version is generally released every month
 	* Includes new features and fixes
@@ -25,7 +25,9 @@ To define different types of versions and releases, consider the example of [8.1
 	* Includes security fixes and critical bug fixes
 	* Does not include new features or breaking changes
 
-This diagram illustrate the LTS and MTS concepts with timelines:
+This diagram illustrate the LTS concept with version examples:
+
+![](attachments/lts.png)
 
 ## 2 Long-Term Support Version (LTS) {#lts}
 
@@ -40,7 +42,7 @@ We advise using LTS versions for all production apps, as LTS versions of Studio 
 
 ### 2.1 Support Duration
 
-The support duration for an LTS is an average of 3 years and a minimum of 2 years, which is the longest of these options. Support for an LTS is discontinued once a third consecutive major version is released (for example, support on version 6 has been dropped with the release of version 9).
+The support duration for an LTS is an average of 3 years and a minimum of 2 years, which is the longest of these options. Support for an LTS is discontinued once a third consecutive major version is released (for example, support on version 6 has ended with the release of version 9).
 
 ### 2.2 Release Cycle
 
@@ -103,3 +105,11 @@ If a bug is found in a monthly-release version for an older major version, it wi
 ### 4.4 Upgrading Impact
 
 The impact of upgrading between monthly releases is the highest of these options. That is because every month, all new features are shipped in such minor versions, including all bug fixes and security patches. In addition, the upgrade has to be done monthly, which can be a significant drain on resources.
+
+## 5 End of Support
+
+The "end of support" for a version means that fixes, updates, Mendix Support ticket responses, and other forms of assistance are no longer provided.
+
+If a new major version is nearing release, that means an older major version is nearing its end of support. If you are still using a major version for which support will end, Mendix recommends that you reduce or stop using that version and move to a newer [LTS](#lts) version. 
+
+Furthermore, you should uninstall old versions for which support has ended. If you continue to use versions for which support has ended, you do so at your own risk for your applications, data, and security. Mendix does not recommend using versions for which support has ended.

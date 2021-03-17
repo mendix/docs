@@ -211,15 +211,16 @@ export interface ListValue {
 
 When a `datasource` property with `isList="true"` is configured for a widget, the client component gets a list of objects represented as a `ListValue`. This type allows detailed access and control over the data source.
 
-The `offset` and `limit` properties specify the range of objects retrieved from the datasource. The `offset` is the starting index and the `limit` is the number of requested items. By default, the `offset` is 0 and the `limit` is `undefined` which means all the items of the datasource are requested. You can control these properties with the `setOffset` and `setLimit` methods. This allows a widget to not show all the data at the data at once, but to only show a single page by setting the proper offset and limit, or load additional data whenever it is needed by increasing the limit.
+The `offset` and `limit` properties specify the range of objects retrieved from the datasource. The `offset` is the starting index and the `limit` is the number of requested items. By default, the `offset` is *0* and the `limit` is `undefined` which means all the datasource's items are requested. You can control these properties with the `setOffset` and `setLimit` methods. This allows a widget to not show all data at the data at once. Instead it can show only a single page when you set the proper offset and limit, or the widget will load additional data whenever it is needed if you increase the limit.
 
-The following code sample set the offset and limit to load the datasource items for a specific range:
+The following code sample sets the offset and limit to load datasource items for a specific range:
+
 ```ts
 this.props.myDataSource.setOffset(20);
 this.props.myDataSource.setLimit(10);
 ```
 
-You can use the `setOffset` and `setLimit` methods to create a widget with pagination support. Assuming widget properties are configured as follows:
+You can use the `setOffset` and `setLimit` methods to create a widget with pagination support (assuming widget properties are configured as follows):
 
 ```ts
 interface MyListWidgetsProps {
@@ -228,7 +229,8 @@ interface MyListWidgetsProps {
 }
 ```
 
-To set the number of items requested by the datasource you can use the `setLimit` in the constructor of the widget as the following code snippet is showing:
+To set the number of items requested by the datasource you can use the `setLimit` in the constructor of the widget:
+
 ```ts
 export default class PagedWidget extends Component<PagedWidgetProps> {
     constructor(props: PagedWidgetProps) {
@@ -239,7 +241,7 @@ export default class PagedWidget extends Component<PagedWidgetProps> {
 }
 ```
 
-To switch to a different page you can change the offset with the `setOffset` method as shown below:
+To switch to a different page you can change the offset with the `setOffset` method:
 
 ```tsx
 const ds = this.props.myDataSource;
@@ -252,7 +254,7 @@ const current = this.props.myDataSource.offset;
 </button>
 ```
 
-The `hasMoreItems` indicates whether there are more objects beyond the limit of the most recent list. When a widget doesn't show all the records immediately by setting a limit with `setLimit` and allows the user to load additional data, this property can be used to make clear in the user interface the user reached the end of the list.
+The `hasMoreItems` property indicates whether there are more objects beyond the limit of the most recent list. When a widget does not show all the records immediately by setting a limit with `setLimit` and allows the user to load additional data, you can use this property to make it clear in the user interface that the user has reached the end of the list.
 
 The following code sample shows a 'load more' button only when there is more data available, and loads additional data when the user clicks the button:
 
@@ -266,9 +268,10 @@ this.props.myDataSource.hasMoreItems &&
 </button>
 ```
 
-The `totalCount` property is the total number of objects the datasource can return. Calculating a total count might consume significant resources and is only returned when the widget indicated it needs a total count by calling `requestTotalCount(true)` method. When possible use the `hasMoreItems` instead of the `totalCount` property.
+The `totalCount` property is the total number of objects the datasource can return. Calculating a total count might consume significant resources and is only returned when the widget indicated needs a total count by calling the `requestTotalCount(true)` method. When possible, please use the `hasMoreItems` instead of the `totalCount` property.
 
 The following code sample shows how to request the total count to be returned:
+
 ```ts
 export default class PagedWidget extends Component<PagedWidgetProps> {
     constructor(props: PagedWidget) {
@@ -279,7 +282,7 @@ export default class PagedWidget extends Component<PagedWidgetProps> {
 }
 ```
 
-The `items` property contains all the requested data items of the datasource. However, it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`attribute`](property-types-pluggable-widgets#attribute), [`action`](property-types-pluggable-widgets#action) or [`widgets`](property-types-pluggable-widgets#widgets).
+The `items` property contains all the requested data items of the datasource. However, it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`attribute`](property-types-pluggable-widgets#attribute), [`action`](property-types-pluggable-widgets#action), or [`widgets`](property-types-pluggable-widgets#widgets).
  
 
 ### 4.8 ListActionValue {#listactionvalue}

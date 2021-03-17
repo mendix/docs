@@ -295,10 +295,7 @@ export interface ListActionValue {
 }
 ```
 
-In order to call an action on a particular item of a `ListValue` first an instance of `ActionValue` should be obtained by calling `ListActionValue.get` with the item. See an example below.
-
-
-Assuming widget properties are configured as follows:
+In order to call an action on a particular item of a `ListValue` first an instance of `ActionValue` should be obtained by calling `ListActionValue.get` with the item (assuming widget properties are configured as follows):
 
 ```ts
 interface MyListWidgetsProps {
@@ -315,12 +312,12 @@ const actionOnFirstItem = this.props.myDataSource.myListAction.get(this.props.my
 actionOnFirstItem.execute();
 ```
 
-In this code sample, checks of status `myDataSource` and availability of items are omitted for simplicity. See [ActionValue section](#actionvalue) for more information about usage of `ActionValue`.
+In this code sample, checks of status `myDataSource` and availability of items are omitted for simplicity. See the [ActionValue section](#actionvalue) for more information about the usage of `ActionValue`.
 
 {{% alert type="info" %}}
 The `get` method was introduced in Mendix 9.0.
 
-You can obtain an instance of `ActionValue` by using the `ListActionValue` as a function and calling it with an item. This is deprecated and will be removed in Mendix 10 and should be replaced by a call to the `get` function as described above.
+You can obtain an instance of `ActionValue` by using the `ListActionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function as described above.
 {{% /alert %}}
 
 ### 4.9 ListAttributeValue {#listattributevalue}
@@ -336,9 +333,7 @@ export interface ListAttributeValue<T extends AttributeValue> {
 
 The type `<T>` depends on the allowed value types as configured for the attribute property.
 
-In order to work with the attribute value of a particular item of a `ListValue` first an instance of `EditableValue` should be obtained by calling `ListAttributeValue.get` with the item. See an example below.
-
-Assuming widget properties are configured as follows (with an attribute of type `string`):
+In order to work with the attribute value of a particular item of a `ListValue` first an instance of `EditableValue` should be obtained by calling `ListAttributeValue.get` with the item (assuming widget properties are configured as follows with an attribute of type `string`):
 
 ```ts
 interface MyListWidgetsProps {
@@ -358,7 +353,7 @@ Note: in this code sample checks of status of `myDataSource` and availability of
 {{% alert type="info" %}}
 The `get` method was introduced in Mendix 9.0.
 
-You can obtain an instance of `EditableValue` by using the `ListAttributeValue` as a function and calling it with an item. This is deprecated and will be removed in Mendix 10 and should be replaced by a call to the `get` function as described above.
+You can obtain an instance of `ActionValue` by using the `ListActionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function as described above.
 {{% /alert %}}
 
 
@@ -392,7 +387,7 @@ this.props.myDataSource.items.map(i => this.props.myWidgets.get(i));
 {{% alert type="info" %}}
 The `get` method was introduced in Mendix 9.0.
 
-You can obtain an instance of `EditableValue` by using the `ListAttributeValue` as a function and calling it with an item. This is deprecated and will be removed in Mendix 10 and should be replaced by a call to the `get` function as described above.
+You can obtain an instance of `ActionValue` by using the `ListActionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function as described above.
 {{% /alert %}}
 
 
@@ -408,9 +403,7 @@ export interface ListExpressionValue<T extends AttributeValue> {
 
 The type `<T>` depends on the return type as configured for the expression property. For a text template property, this type is always `string`.
 
-In order to work with the expression or text template value of a particular item of a `ListValue`, first an instance of `DynamicValue` should be obtained by calling `ListExpressionValue` with the item. See an example below.
-
-Assuming widget properties are configured as follows (with an expression of type `boolean`):
+In order to work with the expression or text template value of a particular item of a `ListValue`, first an instance of `DynamicValue` should be obtained by calling `ListExpressionValue` with the item (assuming widget properties are configured as follows with an expression of type `boolean`):
 
 ```ts
 interface MyListWidgetsProps {
@@ -429,7 +422,7 @@ const expressionValue = this.props.myDataSource.myExpressionOnDatasource.get(thi
 {{% alert type="info" %}}
 The `get` method was introduced in Mendix 9.0.
 
-You can obtain an instance of `DynamicValue` by using the `ListExpressionValue` as a function and calling it with an item. This is deprecated and will be removed in Mendix 10 and should be replaced by a call to the `get` function as described above.
+You can obtain an instance of `ActionValue` by using the `ListActionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function as described above.
 {{% /alert %}}
 
 

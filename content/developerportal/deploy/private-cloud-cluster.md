@@ -24,7 +24,7 @@ To create a cluster in your OpenShift context, you need the following:
 * An administration account for your platform
 * **OpenShift CLI** installed (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the Red Hat OpenShift website for more information) if you are creating clusters on OpenShift
 * **Kubectl** installed if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
-* A commandline terminal that support the console API and mouse interactions. In Windows, this could be PowerShell or the Windows Command Prompt. See [Terminal limitations](#terminal-limitations), below, for a more detailed explanation.
+* A command line terminal that supports the console API and mouse interactions. In Windows, this could be PowerShell or the Windows Command Prompt. See [Terminal limitations](#terminal-limitations), below, for a more detailed explanation.
 
 ## 3 Creating a Cluster & Namespace
 
@@ -109,11 +109,11 @@ Now you can download the Configuration Tool by doing the following:
 2. Choose the **Mendix Operator Version** that you would like to install.
     {{% alert type="warning" %}}Once you've installed a certain version of the Mendix Operator into any namespace in the cluster, you should not install older versions of the Mendix Operator into the same cluster, even into other namespaces.{{% /alert %}}
 
-	{{% alert type="info" %}}Choose the latest version, or at least version 1.9.0 and later. Versions earlier than 1.9.0 are only available to allow _configuration_ of previously installed Mendix Operator versions.{{% /alert %}}
+	{{% alert type="info" %}}Choose the latest version, or at least version 1.9.0. Versions earlier than 1.9.0 are only available to allow _configuration_ of previously installed Mendix Operator versions.{{% /alert %}}
 
 
 3. Click **Download Executable** and make sure that it is stored somewhere on your path.
-	{{% alert type="info" %}}The installation and configuration tool only supports a limited number of Mendix Operator versions. If the Mendix Operator version in your namespace is too new or too old, the configuration tool will not be able to configure it. Download the Configuration tool that's compatible with the Mendix Operator you have installed.{{% /alert %}}
+	{{% alert type="info" %}}The installation and configuration tool only supports a limited range of Mendix Operator versions. If the Mendix Operator version in your namespace is too new or too old, the configuration tool will not be able to configure it. Download a version of the Configuration tool that is compatible with the Mendix Operator you have installed.{{% /alert %}}
 
     ![](attachments/private-cloud-cluster/download-executable.png)
 
@@ -141,7 +141,7 @@ You can do this as follows:
     
     ![](attachments/private-cloud-cluster/image11.png)
 
-6. Paste the command into your commandline terminal and press Enter.
+6. Paste the command into your command line terminal and press Enter.
 
 ### 4.3 Running the Configuration Tool{#running-the-tool}
 
@@ -151,7 +151,7 @@ Once you are signed in to your cluster you can run the Configuration Tool.
 
     ![](attachments/private-cloud-cluster/installation-command.png)
 
-2. Paste the command into your commandline terminal and press <kbd>Enter</kbd>
+2. Paste the command into your command line terminal and press <kbd>Enter</kbd>
 
 	{{% alert type="warning" %}}The Configuration Tool needs a CLI terminal with mouse support. Read the [Terminal limitations](#terminal-limitations) section before running the Configuration Tool.{{% /alert %}}
 
@@ -1092,7 +1092,7 @@ Click **Activate** next to the name of the plan you wish to activate. The plan c
 
 The **Installation** tab shows you the Configuration Tool which you used to create the namespace, together with the parameters which are used to configure the agent.
 
-You can use the Configuration Tool again to change the configuration of your namespace by pasting the command into a commandline terminal as described in [Running the Configuration Tool](#running-the-tool), above.
+You can use the Configuration Tool again to change the configuration of your namespace by pasting the command into a command line terminal as described in [Running the Configuration Tool](#running-the-tool), above.
 
 You can also download the Configuration Tool again, if you wish.
 
@@ -1130,7 +1130,7 @@ kubectl -n {namespace} scale deployment mendix-operator --replicas=1
 
 #### 7.3.1 Windows
 
-The Windows version of the Configuration Tool can only run in a terminal that supports the Windows console API and has mouse support. PowerShell and the Windows Command Prompt are supported.
+The Windows version of the Configuration Tool must be run in a terminal that supports the Windows console API and has mouse support. PowerShell and the Windows Command Prompt are supported.
 
 {{% alert type="info" %}}
 When running PowerShell or the Windows Command Prompt from the [new Windows Terminal](https://aka.ms/terminal), mouse clicks are [not supported](https://github.com/microsoft/terminal/issues/376).

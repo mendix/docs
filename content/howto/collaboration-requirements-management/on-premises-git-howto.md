@@ -177,7 +177,7 @@ Under **File > Recent Projects** you can select the app and open it.
 
 The **Open App** form is accessible from two different places:
 * **Open App** button on the **My Apps** tab
-* Under menu **File > Open Project**
+* Under menu **File > Open App**
 
 In a form, there are two ways to open a Git app, by opening it from a previous checkout or by opening it locally on disk:
 

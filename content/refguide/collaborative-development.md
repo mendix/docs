@@ -95,10 +95,10 @@ To share your model changes between Studio and Studio Pro, you need to enable St
 Whether Studio is enabled for a development line by default, depends on your project:
 
 * Studio is enabled for the main line by default in the following cases:
-  * For a new project created via the Developer Portal
+  * For a new app created via the Developer Portal
   * For an existing project that has Studio enabled
 * Studio is not enabled for any development line in the following cases:
-  * For a new project created via Studio Pro
+  * For a new app created via Studio Pro
   * For an existing project that does not have Studio enabled
 
 To enable Studio for a development line or switch it to another development line, do the following: 

@@ -19,7 +19,7 @@ The Maps module allows you to work with maps. Consult the instructions below to 
 
 ## 3 Setting Up App Deep Linking {#set-up}
 
-Make sure you have app containing the Maps module. This is a core module, so it is available in the **Widgets** panel. You can either add it to an existing project or make a new project from scratch. 
+Make sure you have app containing the Maps module. This is a core module, so it is available in the **Widgets** panel. You can either add it to an existing project or make a new app from scratch. 
 
 ### 3.1 Configuring Map Provider
 

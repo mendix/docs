@@ -30,9 +30,9 @@ To format all the log messages, the SAP Logging Connector needs to be initialize
 
 To initialize the connector, do the following:
 
-1. Open **Project … > Settings** in the **Project Explorer**:
+1. Open **App** > **Settings** in the **App Explorer**:
 
-    ![Open project settings](attachments/sap-logger/logger_open_project_settings.png)
+    ![Open app settings](attachments/sap-logger/logger_open_project_settings.png)
 
 2. Switch to the **Runtime** tab.
 

@@ -184,7 +184,7 @@ You can test this by changing the color of `.pageheader-subtitle` from green to 
 Practice the routine above a few times and you will master it in no time. In addition, keep the following summary in mind:
 
 * Make sure Powershell is working properly, or else your code will not be registered Studio Pro
-* Use the following to install gulp for each new project:
+* Use the following to install gulp for each new app:
 	* `npm install`
 	* `npm install gulp-cli -g`
 	* If the commands above do not work, you can also use `npm run dev`, though keep in mind you are not installing the gulp

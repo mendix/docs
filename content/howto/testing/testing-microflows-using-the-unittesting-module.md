@@ -34,7 +34,7 @@ Before you can start with this how-to, make sure you have completed the followin
 
 In this chapter you will set up the unit testing module and run the example tests.
 
-1. Create a new project.
+1. Create a new app.
 2. Download the [Unit Testing](/appstore/modules/unit-testing) module.
 3. Download the [Community Commons Function Library](/appstore/modules/community-commons-function-library) module.
 4. Download the [Object Handling](/appstore/modules/object-handling) module.

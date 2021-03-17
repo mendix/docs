@@ -91,7 +91,7 @@ To scaffold your project folder for the group box widget, follow these steps:
 	* License: {*Apache-2.0*}
 	* Initial version: {*1.0.0*}
 	* Author: {*Mendix*}
-	* Mendix Project path: {*./test/MxTestProject/*}
+	* Mendix app path: {*./test/MxTestProject/*}
 	* Programming language: {**TypeScript**}
 	* Widget type: {**For native mobile apps**}
 	* Widget template: {**Empty widget (recommended for more experienced developers)**}
@@ -108,7 +108,7 @@ To scaffold your project folder for the group box widget, follow these steps:
 In order to test your group box widget, you will a Mendix application that uses this widget in various ways. Create a Mendix project for this application by following these steps:
 
 1. Open Studio Pro.
-2. Create a new project by clicking **File** > **New Project**.
+2. Create a new app by clicking **File** > **New App**.
 3. Select the **Blank** app (do not select **Blank App**).
 4. Click the **Use this starting point** button
 5. Fill in the following details in the **App Settings** dialog box:
@@ -129,7 +129,7 @@ Follow these steps to add the Mendix project as a test project to your widget pr
 
 Create a test case by following these steps:
 
-1. Open the Mendix test project in **test/MxTestProject** by selecting **File** > **Open Project**.
+1. Open the Mendix test project in **test/MxTestProject** by selecting **File** > **Open App**.
 2. In the **Open App** dialog box, select **Locally on disk**.
 3. Open the *GroupBoxTestProject.mpr* file inside your group box widget project folder.
 4. Open **Home_Native** page.

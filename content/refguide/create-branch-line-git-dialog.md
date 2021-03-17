@@ -1,13 +1,13 @@
 ---
 title: "Create Branch Line (Git)"
 parent: "branch-line-manager-dialog"
-menu_order: 90
+menu_order: 20
 tags: ["studio pro", "create branch line"]
 ---
 
 ## 1 Introduction
 
-Use the **Create Branch Line** dialog box to create a new [branch line](version-control#branches) via the **Branch Line Manager**:
+For Git, use the **Create Branch Line** dialog box to create a new [branch line](version-control#branches) via the **Branch Line Manager**:
 
 ![](attachments/version-control-menu/create-git-branch-line.png)
 
@@ -22,17 +22,17 @@ For more information on how to manage branch lines, see the [Managing Developmen
 
 ## 2 Base Branch Line
 
-**Base branch line** allows you to choose the development line you want to create the branch line from. 
+**Base branch line** allows you to choose the development line from which you want to create the branch line. 
 
 ## 3 Branch Name
 
-Enter a name of the new branch line.
+Enter a name for the new branch line.
 
 {{% alert type="warning" %}}
 Branch names cannot include special characters (for example, `@`, `$`, `#`). 
 {{% /alert %}}
 
-## 8 Read More
+## 4 Read More
 
 * [Version Control](version-control)
 * [Collaborative Development](collaborative-development)

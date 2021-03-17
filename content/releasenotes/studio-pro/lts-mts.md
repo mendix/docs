@@ -38,7 +38,7 @@ These are the current LTS versions of Studio Pro:
 * [8.18](8.18) (started in January 2021)
 * [7.23](7.23) (started in February 2019)
 
-We advise using LTS versions for all production apps, as LTS versions of Studio Pro enjoy the highest security and stability. LTS versions also have the longest support duration compared to other versions.
+Mendix advises advise using LTS versions for all production apps, as LTS versions of Studio Pro enjoy the highest security and stability. LTS versions also have the longest support duration compared to other versions.
 
 ### 2.1 Support Duration
 
@@ -110,6 +110,6 @@ The impact of upgrading between monthly releases is the highest of these options
 
 The "end of support" for a version means that fixes, updates, Mendix Support ticket responses, and other forms of assistance are no longer provided.
 
-If a new major version is nearing release, that means an older major version is nearing its end of support. If you are still using a major version for which support will end, Mendix recommends that you reduce or stop using that version and move to a newer [LTS](#lts) version. 
+If a new major version is nearing release, that means an older major version is nearing its end of support. If you are still using a major version for which support will end, Mendix recommends that you stop using that version and move to a newer [LTS](#lts) version that is supported. 
 
 Furthermore, you should uninstall old versions for which support has ended. If you continue to use versions for which support has ended, you do so at your own risk for your applications, data, and security. Mendix does not recommend using versions for which support has ended.

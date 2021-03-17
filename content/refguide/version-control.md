@@ -13,7 +13,7 @@ Version Control allows you to manage your app development in two ways:
 * Firstly, it allows you to store ([commit](#commit)) the current revision of your model and all its resources. You give it an identifier so that you can get that revision again and share it with other team members.
 * Secondly, it allows work to take place on multiple [development lines](#development-line) so that several different features can be worked on at once. These development lines can then be [merged](#merge) back together so that your [Main Line](#main-line) contains all the completed features that have been worked on separately.
 
-Version control in Mendix is built on top of either [Apache Subversion](https://subversion.apache.org/) or [Git] (https://git-scm.com) and the concepts will be familiar to seasoned users of those version control systems (VCS). Mendix simplifies the VCS commands by building them into Studio Pro (SVN & Git), Studio and the Developer Portal (SVN only).
+Version control in Mendix is built on top of either [Apache Subversion](https://subversion.apache.org/) or [Git] (https://git-scm.com). The concepts will be familiar to seasoned users of these version control systems (VCS). Mendix simplifies the VCS commands by building them into Studio Pro (SVN and Git), Studio, and the Developer Portal (SVN only).
 
 ## 2 Concepts {#concepts}
 
@@ -101,7 +101,7 @@ A Tag is a way of identifying a commit in addition to the [revision](#revision) 
 * Revision: this is added automatically and is the revision number of the commit
 
 {{% alert type="info" %}}
-Tags are not supported by Studio Pro Git (BYO and Team Server) at the moment 
+Tags are not supported by Studio Pro Git ([BYO](branch-line-manager-dialog#byo-server-app) and Team Server) at the moment 
 {{% /alert %}}
 
 ### 2.12 Repository Service

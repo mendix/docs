@@ -10,7 +10,7 @@ tags: ["Private Cloud", "Registry", "Migrate", "Image", "Export", "Import"]
 
 When you have an OpenShift or Kubernetes cluster which is firewalled, you will need to host Mendix components in your own custom registry.
 
-Storing images in your custom registry can also help in case you would like to cache images locally and save network bandwidth.
+Storing images in your custom registry can also help as it caches images locally and saves network bandwidth.
 
 This document explains how to export the components from the Mendix registry and import them into your own registry. It also explains how to tell the Mendix Configuration Tool to use your own registry when configuring the namespace.
 
@@ -78,7 +78,7 @@ Perform the following steps.
 You can now create a new Mendix for Private Cloud cluster and namespace. To tell the Configuration Tool that you want to use your own registry, you will use the configuration tool with the argument `--registry {registry_url}/{repository}` (use the **Registry URL** value specified in the previous step as the `{registry_url}` value, and **Repository** as the value for `{repository}`).
 
 {{% alert type="info" %}}
-If you have already installed and configured a namespace, you can skip directly to the [Upgrade cluster](#upgrade-cluster) section.
+If you have already installed and configured a namespace, skip directly to the [Upgrade cluster](#upgrade-cluster) section.
 {{% /alert %}}
 
 Continue following the instructions in [Creating a Private Cloud Cluster](private-cloud-cluster) from [Running the Configuration Tool](private-cloud-cluster#running-the-tool).
@@ -97,7 +97,7 @@ When you get to the stage [Review and Apply](private-cloud-cluster#review-apply)
 
 Click **Apply Configuration** to apply the configuration to your namespace, as normal.
 
-### 6.3 Upgrade cluster{#upgrade-cluster}
+### 6.3 Upgrade Cluster{#upgrade-cluster}
 
 If you have already installed and configured a namespace, but would like to upgrade it to the current Mendix for Private Cloud version, 
 follow the instructions in the [Upgrade cluster](private-cloud-upgrade-guide#upgrade-cluster) section of *Upgrading Private Cloud*.

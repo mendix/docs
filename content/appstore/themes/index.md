@@ -1,7 +1,7 @@
 ---
 title: "Themes"
 description: "Describes the Mendix themes available in the Marketplace."
-tags: [ "marketplace", "marketplace component", "app store component", "theme"]
+tags: [ "marketplace", "marketplace component", "theme"]
 ---
 
 ## 1 Introduction

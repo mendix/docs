@@ -2,7 +2,7 @@
 title: "IMAP/POP3 Incoming Email"
 category: "Modules"
 description: "Describes the configuration and usage of the IMAP/POP3 Incoming Email module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "app store component", "imap", "pop3", "incoming email", "encryption", "platform support"]
+tags: ["marketplace", "marketplace component", "imap", "pop3", "incoming email", "encryption", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

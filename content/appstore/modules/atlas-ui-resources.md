@@ -2,7 +2,7 @@
 title: "Atlas UI Resources"
 category: "Modules"
 description: "Describes the configuration and usage of the Atlas UI Resources module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "app store component", "atlas ui", "atlas ui resources", "brand", "page template", "building block", "custom widget", "platform support"]
+tags: ["marketplace", "marketplace component", "atlas ui", "atlas ui resources", "brand", "page template", "building block", "custom widget", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

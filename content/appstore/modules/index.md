@@ -1,7 +1,7 @@
 ---
 title: "Modules"
 description: " "
-tags: ["marketplace", "marketplace component", "app store component", "module"]
+tags: ["marketplace", "marketplace component", "module"]
 ---
 
 ## 1 Introduction

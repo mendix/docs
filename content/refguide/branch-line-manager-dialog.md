@@ -7,9 +7,16 @@ tags: ["studio pro", "manage branch lines", "branch line manager"]
 
 ## 1 Introduction
 
-The **Branch Line Manager** is used to manage [branch lines](version-control#branches) of an app that is stored on a version control server:
+The **Branch Line Manager** is used to manage [branch lines](version-control#branches) of an app that is stored on a version control server.The dialog looks almost the same for both SVN and Git VCS except a few minor visual elements only:
 
-![Branch Line Manager](attachments/version-control-menu/branch-line-manager.png)
+- Branch Line Manager dialog for SVN:
+
+![SVN Branch Line Manager](attachments/version-control-menu/branch-line-manager.png)
+
+
+- Branch Line Manager dialog for Git:
+
+![Git Branch Line Manager](attachments/version-control-menu/git-branch-line-manager.png)
 
 To view the **Branch Line Manager** dialog box, open **Version Control** > **Manage Branch Lines**.
 
@@ -19,11 +26,11 @@ A branch line allows independent development from other development lines. There
 
 ## 2 Location
 
-Use this setting to select the location where your app is stored. This can be either the [Team Server](#team-server-app) or [another SVN server](#other-svn-server-app).
+Use this setting to select the location where your app is stored. This can be either the [Team Server](#team-server-app) or [private SVN or Git repository](#byo-server-app).
 
 {{% alert type="warning" %}}
 
-This option is only available when support for other SVN servers is enabled in the Preferences dialog.
+This option is only available when support for private SVN or Git servers is enabled in the Preferences dialog.
 
 {{% /alert %}}
 
@@ -33,9 +40,9 @@ Select the Team Server app of which you want to manage the branch lines. If you 
 
 For more information about the Mendix Team Server, see [Team Server](/developerportal/develop/team-server).
 
-### 2.2 Other SVN Server App {#other-svn-server-app}
+### 2.2 Bring your own (BYO) SVN or Git Server App {#byo-server-app}
 
-In the **SVN repository address field**, enter the address of the app you want to manage and click **Connect** to load the available branches from the repository.
+In the **App repository address** field, enter the address of the app you want to manage and click **Connect** to load the available branches from the repository.
 
 ## 3 Managing Branch Lines
 

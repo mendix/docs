@@ -86,7 +86,7 @@ You can see all the changes committed to the current development line via **Vers
 
 ## 5 Managing Studio on Development Lines {#managing-studio}
 
-In Studio Pro, you can enable or disable Studio for a development line (the main line or a branch line). For collaborative development you need to enable Studio for one of development lines. 
+In Studio Pro, you can enable or disable Studio for a development line (the main line or a branch line). For collaborative development you need to enable Studio for one of development lines (available for Team Server projects only). 
 
 ### 5.1 Enabling Studio for a Development Line {#active-branch}
 
@@ -157,7 +157,12 @@ To create a new branch line, do the following:
 
 4.  After you have configured all the settings, click **OK**.
 
-    ![Create Branch Line Dialog](attachments/collaborative-development/create-branch-dialog.png) 
+    Create Branch Line dialog for SVN
+    ![Create SVN Branch Line Dialog](attachments/collaborative-development/create-branch-dialog.png) 
+    Create Branch Line dialog [for Git](create-branch-line-git-dialog)
+    ![Create Git Branch Line Dialog](attachments/collaborative-development/create-git-branch-dialog.png) 
+
+
 
 You have created a new branch line.   
 

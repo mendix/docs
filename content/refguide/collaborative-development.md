@@ -119,7 +119,7 @@ To disable Studio, do the following:
 1. Select the branch that is enabled for Studio.
 2.  Click the **Disable for Mendix Studio** button:
 
-   ![Disable for Mendix Studio](attachments/collaborative-development/disable-for-studio.png)
+	![Disable for Mendix Studio](attachments/collaborative-development/disable-for-studio.png)
 
 Studio is disabled for your app.
 
@@ -127,7 +127,7 @@ Studio is disabled for your app.
 
 You can create and delete branch lines. 
 
-### 6.2 Creating a New Branch Line
+### 6.1 Creating a New Branch Line
 
 To create a new branch line, do the following: 
 
@@ -139,19 +139,19 @@ To create a new branch line, do the following:
 3.  In the **Create Branch Line** dialog box, set the following: <br/>
 
     a. What line you are creating a new line from: the main line, a branch line, or a tagged version. For more information on these concepts, see the [Concepts](version-control#concepts) section in *Version Control*. <br/> 
-    b. Select the revision, if needed. <br/>
-    c. Type the name of the new line. 
+    b. Select the **Revision**, if needed. <br/>
+    c. Type the name of the new line.<br/>
+
+    *  This is the dialog box for SVN:
+    	![Create SVN Branch Line Dialog](attachments/collaborative-development/create-branch-dialog.png) 
+    *  This is the dialog box for [Git](create-branch-line-git-dialog):
+  	![Create Git Branch Line Dialog](attachments/collaborative-development/create-git-branch-dialog.png) 
 
 4.  After you have configured all the settings, click **OK**.
 
-	*  This is the dialog box for SVN:
-    		![Create SVN Branch Line Dialog](attachments/collaborative-development/create-branch-dialog.png) 
-	*  This is the dialog box for [Git](create-branch-line-git-dialog):
-  	 	![Create Git Branch Line Dialog](attachments/collaborative-development/create-git-branch-dialog.png) 
-
 You have created a new branch line.   
 
-### 6.3 Deleting a Branch Line
+### 6.2 Deleting a Branch Line
 
 To delete a branch line, do the following:
 
@@ -166,7 +166,7 @@ You have deleted the branch.
 You cannot delete a Studio enabled branch. If you need to delete this branch, enable Studio for another line, and only then delete the branch. 
 {{% /alert %}}
 
-## 6 Read More
+## 7 Read More
 
 * [Version Control](version-control)
 * [Troubleshooting Collaborative Development](collaborative-development-troubleshooting)

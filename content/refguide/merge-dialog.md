@@ -10,12 +10,12 @@ tags: ["studio pro", "merge-dialog", "merge", "version control"]
 With the **Merge** dialog you can [merge](version-control#merge) changes from a branch line to the main line. For example, a fix that you applied in a maintenance branch line can be merged back to the main line so that you do not have to apply the fix by hand again. Also if you completed developing a large feature in a separate branch line you can use merge to incorporate that feature into the main line.
 
 {{% alert type="warning" %}}
-Before continuing with the merge action, please make sure that you are currently working in the development line that you want to merge to.
+Before continuing with the merge action, make sure you are currently working in the development line to which you want to merge.
 {{% /alert %}} 
 
 ## 2 Merging SVN Branches
 
-To access the **Merge** dialog, open [Version Control menu](version-control-menu) > **Merge Changes Here**:
+To access the **Merge** dialog box, open [Version Control](version-control-menu) > **Merge Changes Here**:
 
 ![Merge Dialog](attachments/merge-dialog/merge-dialog.png)
 
@@ -57,6 +57,6 @@ Select the start revision (revision with the lowest number) and the end revision
 
 ## 3 Merging Git Branches
 
-![Merge Dialog for Git](attachments/merge-dialog/merge-dialog-git.png)
+There is a simple branch merge scenario that is supported for Git only. Here, you have to specify which changes from the branch line you want to merge into the current one. 
 
-There's a simple branch merge scenario is supported for Git only. Here you have to specify the branch line which changes you want to merge into the current one. 
+![Merge Dialog for Git](attachments/merge-dialog/merge-dialog-git.png)

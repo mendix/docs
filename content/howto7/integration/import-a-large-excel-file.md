@@ -1,7 +1,7 @@
 ---
 title: "Import a Large Excel File"
 parent: "importing-excel-documents"
-tags: ["excel", "excel  importer", "marketplace", "app store", "sheet"]
+tags: ["excel", "excel  importer", "marketplace", "sheet"]
 ---
 
 ## 1 Introduction

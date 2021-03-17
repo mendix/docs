@@ -1,7 +1,7 @@
 ---
 title: "Marketplace"
 description: "Release notes for updates to the Mendix Marketplace"
-tags: ["marketplace", "app store", "connector", "module", "add on", "widget"]
+tags: ["marketplace", "connector", "module", "add on", "widget"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 

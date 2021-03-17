@@ -18,8 +18,8 @@ For information on the current status of deployment to Mendix for Private Cloud 
 #### Mendix Operator v1.9.0 and Mendix Gateway Agent v1.8.0
 
 * We have significantly improved the Configuration Tool:
-  * Bash (or Git Bash) is no longer required to install and configure a cluster. This allows to use the tool in most Windows terminals such as PowerShell and Windows Command prompt with no workarounds.
-  * The installation process no longer needs to communicate to an external service to download installation resources, and only needs access to the Kubernetes cluster API.
+  * Bash (or Git Bash) is no longer required to install and configure a cluster. This allows you to use the tool in most Windows terminals such as PowerShell and Windows Command prompt with no workarounds.
+  * The installation process no longer needs to communicate with an external service to download installation resources, and only needs access to the Kubernetes cluster API.
   * Migration of Mendix components to a Private Cloud registry no longer requires downloading and patching the installation script.
   * The process for upgrading to the next version of Mendix for Private Cloud has been complely automated. Instead of a manual process using a Bash terminal, an upgrade can be done with a click of the mouse.
   * It's now possible to install or upgrade to a specific version of Mendix Operator (1.9.0 and later). Previously, it was only possible to install the latest version of the Operator.

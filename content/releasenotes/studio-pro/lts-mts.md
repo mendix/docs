@@ -36,13 +36,13 @@ These are the current LTS versions of Studio Pro:
 
 Mendix advises advise using LTS versions for all production apps, as LTS versions of Studio Pro enjoy the highest security and stability. LTS versions also have the longest support duration compared to other versions.
 
+### 2.1 Support Duration
+
+The support duration for an LTS is an average of 3 years and a minimum of 2 years, which is the longest of these options. Support for an LTS ends when a third consecutive major version is released (for example, support on version 6 has ended with the release of version 9).
+
 This diagram illustrates the LTS concept with version and [end of support](#end) examples:
 
 ![](attachments/lts.png)
-
-### 2.1 Support Duration
-
-The support duration for an LTS is an average of 3 years and a minimum of 2 years, which is the longest of these options. Support for an LTS is discontinued once a third consecutive major version is released (for example, support on version 6 has ended with the release of version 9).
 
 ### 2.2 Release Cycle
 
@@ -67,6 +67,10 @@ If you are on an innovation track with your development and need to get the late
 ### 3.1 Support Duration
 
 The support duration for an MTS depends on when a new higher major version is released, which thus creates a new LTS and discontinues all MTS versions for that respective major version.
+
+This diagram illustrates the MTS concept with version and [end of support](#end) examples:
+
+![](attachments/mts.png)
 
 ### 3.2 Release Cycle
 

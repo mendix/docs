@@ -1,7 +1,7 @@
 ---
 title: "Create Branch Line"
 parent: "branch-line-manager-dialog"
-menu_order: 90
+menu_order: 10
 tags: ["studio pro", "create branch line"]
 ---
 

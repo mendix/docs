@@ -25,10 +25,6 @@ To define different types of versions and releases, consider the example of [8.1
 	* Includes security fixes and critical bug fixes
 	* Does not include new features or breaking changes
 
-This diagram illustrate the LTS concept with version examples:
-
-![](attachments/lts.png)
-
 ## 2 Long-Term Support Version (LTS) {#lts}
 
 An LTS version is the latest minor version before a new major version is released. Once a minor version becomes an LTS, it will not have new features added to it. 
@@ -39,6 +35,10 @@ These are the current LTS versions of Studio Pro:
 * [7.23](7.23) (started in February 2019)
 
 Mendix advises advise using LTS versions for all production apps, as LTS versions of Studio Pro enjoy the highest security and stability. LTS versions also have the longest support duration compared to other versions.
+
+This diagram illustrates the LTS concept with version and [end of support](#end) examples:
+
+![](attachments/lts.png)
 
 ### 2.1 Support Duration
 
@@ -106,7 +106,7 @@ If a bug is found in a monthly-release version for an older major version, it wi
 
 The impact of upgrading between monthly releases is the highest of these options. That is because every month, all new features are shipped in such minor versions, including all bug fixes and security patches. In addition, the upgrade has to be done monthly, which can be a significant drain on resources.
 
-## 5 End of Support
+## 5 End of Support {#end}
 
 The "end of support" for a version means that fixes, updates, Mendix Support ticket responses, and other forms of assistance are no longer provided.
 

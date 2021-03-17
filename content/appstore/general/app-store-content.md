@@ -2,7 +2,7 @@
 title: "Use Marketplace Content in Studio Pro"
 category: "General Info"
 menu_order: 20
-tags: ["marketplace", "app store", "Studio Pro"]
+tags: ["marketplace", "Studio Pro"]
 description: "Covers the basics of how to access the Marketplace from Studio Pro and provides examples of how to add a widget and module to your app."
 aliases:
     - /community/app-store/use-app-store-content-in-the-modeler.html

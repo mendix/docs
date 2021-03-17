@@ -2,7 +2,7 @@
 title: "Auto-Load More"
 category: "Widgets"
 description: "Describes the configuration and usage of the Auto-Load More widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "auto-load more", "load", "platform support"]
+tags: ["marketplace", "marketplace component", "app store component", "widget", "auto-load more", "load", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

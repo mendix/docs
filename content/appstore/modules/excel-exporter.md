@@ -2,7 +2,7 @@
 title: "Excel Exporter"
 category: "Modules"
 description: "Describes the configuration and usage of the Excel Exporter module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "excel exporter", "excel", "filedocument", "platform support"]
+tags: ["marketplace", "marketplace component", "app store component", "excel exporter", "excel", "filedocument", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

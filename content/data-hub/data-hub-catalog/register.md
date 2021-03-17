@@ -100,6 +100,7 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 		* **Select** – click to display list of entities available in the module and select another entity to expose
 		* **Show** – click to see the entity in the domain model
 * **Exposed attributes and associations** – click **select** to view and select the attributes and associations to expose for this entity
+	
 	* **Exposed entity name** – you can customize the name of the entity in the OData service
 * **Exposed set name** – the name of the dataset associated with the entity that is exposed
 
@@ -239,7 +240,7 @@ To update a published OData service, follow these steps:
 
 ## 6 Registering Data Sources from Enterprise Applications {#registration-form}
 
-You can register data sources from other business application, such as SAP and Mindsphere, in Data Hub. The available datasets have to be exposed in an OData v4 service in the business application and manually registered from the Data Hub **Home** using the connector of your business application. 
+You can register data sources from other business application, such as SAP and Mindsphere, in Data Hub. The available datasets must be exposed in an OData service in the business application and manually registered from the Data Hub **Home** using the connector of your business application. 
 
 This section will take you through the steps to upload the metadata contract and specify all the information that is necessary for a successful registration. 
 
@@ -255,15 +256,19 @@ Each new version of previously registered data sources (services) deployed to a 
 This process is for indivually registering data sources. You can also set up a deployment pipeline to register your data sources using the  [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis).
 {{% /alert %}}
 
-###  6.1 OData v4 Service Contracts
+###  6.1 OData Service Contracts
 
-Data sources and datasets must be published as OData v4 services for registration in the Catalog. An OData v4 service metadata file may be a single file, or comprise multiple files, for example, the base schema definition and additional associated schema documents to complete the full service definition. 
+For all business applications except for Mendix apps, data sources and datasets must be published as OData v4 services for registration in the Catalog. An OData service metadata file may be a single file, or comprise multiple files, for example, the base schema definition and additional associated schema documents to complete the full service definition. 
+
+{{% alert type="warning" %}}
+When registering data sources from Mendix apps using the **Mendix** connector, only OData v3 contracts are accepted. For all other business applications that are currently available including the generic **OData connector**, only OData v4 contracts are accepted.
+{{% /alert %}}
 
 The file formats of the OData v4 Service contracts that are accepted in this registration process are *.xml* (for single files) and *.zip* (when the contract includes several files). 
 
 ### 6.2 Manually Registering a Data Source for an Enterprise Application
 
-The registration process is tailored for each application. On the Data Hub **Home** page you will see buttons for registering specific enterprise applications. The steps that are described in this section can be followed for these applications. 
+The registration process is tailored for each application type. On the Data Hub **Home** page you will see buttons for registering specific enterprise applications. The steps that are described in this section can be followed for any of these applications. 
 
 {{% alert type="info" %}}
 If the application for the data source you would like to register is not shown, you can register it using the **OData** button.
@@ -271,13 +276,13 @@ If the application for the data source you would like to register is not shown, 
 
 #### 6.2.1 Selecting the Enterprise Application {#application}
 
-On the [Data Hub Home](/data-hub/) screen, click the button for the source application of the data source that you want to register:
+On the [Data Hub Home](/data-hub/data-hub-catalog/#data-hub-home) screen, click the button for the source application of the data source that you want to register:
 
 ![upload contract](attachments/register/register-data-source-home.png)
 
 If the source application is not displayed, you can register your OData v4 service by clicking **OData**.
 
-{{% alert type="info" %}}Datasets from other business application must be published as OData v4 services. {{% /alert %}}
+{{% alert type="info" %}}Datasets from all business applications except for Mendix apps must be published as OData v4 services. When registering Mendix apps using the **Mendix**  connector only OData v3 services are accepted. {{% /alert %}}
 
 #### 6.2.2 Upload Contract File of Data Source {#contract}
 

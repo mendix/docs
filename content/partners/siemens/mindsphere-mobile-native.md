@@ -147,15 +147,21 @@ Set the `android:launchMode` in the main activity to `singleTask`
     android:launchMode="singleTask">
 ```
 
-Add the following `<intent-filter>` to the main activity:
+Add the following `<activity>` to the `<application>` tag:
 
 ```xml
-<intent-filter android:label="@string/app_name">
-    <action android:name="android.intent.action.VIEW" />
-    <category android:name="android.intent.category.DEFAULT" />
-    <category android:name="android.intent.category.BROWSABLE" />
-    <data android:scheme="https" android:host="TENANT-INTERNAL_NAME-TENANT.eu1.mindsphere.io" />
-</intent-filter>
+...
+<activity android:name="com.mendix.mendixnative.activity.MendixReactActivity">
+    <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data
+            android:scheme="https"
+            android:host="TENANT-INTERNAL_NAME-TENANT.eu1.mindsphere.io"
+            android:path="/login" />
+    </intent-filter>
+</activity>
 ```
 
 Replace the placeholders `TENANT` and `INTERNAL_NAME` in the `android:host` attribute with your tenant name (2x) and the **internal_name** of your application registration. Example given:
@@ -164,63 +170,8 @@ Replace the placeholders `TENANT` and `INTERNAL_NAME` in the `android:host` attr
     <data android:scheme="https" android:host="demo-mmna-demo.eu1.mindsphere.io" />
 ```
 
-##### MainActivity.java
 
-Open the file `./android/app/src/dev/java/com/mendix/nativetemplate/MainActivity.java`
-
-Add the following import:
-
-```java
-import android.net.Uri;
-```
-
-Add the following method to the class `MainActivity`
-
-```java
-@Override
-protected void onNewIntent (Intent intent){
-    setIntent(intent);
-}
-```
-
-Replace the existing method `private void launchApp(String url)` in `MainActivity` with the following code:
-
-```java
-private void launchApp(String url) {
-    disableUIInteraction(true);
-    isPackagerRunning(url, (res) -> {
-        if (!res) {
-            disableUIInteraction(false);
-            return;
-        }
-
-        boolean clearData = clearDataCheckBox.isChecked();
-        Intent intent = new Intent(this, MendixReactActivity.class);
-        boolean devModeEnabled = devModeCheckBox.isChecked();
-        MxConfiguration.WarningsFilter warningsFilter = devModeEnabled ?
-            MxConfiguration.WarningsFilter.partial : MxConfiguration.WarningsFilter.none;
-        MendixApp mendixApp = new MendixApp(AppUrl.forRuntime(url), warningsFilter, devModeEnabled);
-        // MindSphere enhancement
-        // Copy current intent data if available
-        Intent appLinkIntent = getIntent();
-        String appLinkAction = appLinkIntent.getAction();
-        Uri appLinkData = appLinkIntent.getData();
-        if (appLinkAction != null) {
-            intent.setAction(appLinkAction);
-        }
-        if (appLinkData != null) {
-            intent.setData(appLinkData);
-        }
-        // end MindSphere enhancement
-        intent.putExtra(MendixReactActivity.MENDIX_APP_INTENT_KEY, mendixApp);
-        intent.putExtra(MendixReactActivity.CLEAR_DATA, clearData);
-        startActivity(intent);
-        disableUIInteraction(false);
-    });
-}
-```
-
-That's it - commit the two changed files to your developer branch and push the change to the github repo and build your developer app again. You can do this with the "Build Native App" application from Mendix Studio Pro - or build it [locally](https://docs.mendix.com/howto/mobile/native-build-locally#5-1-building-an-android-app-with-android-studio) with [Android Studio](https://developer.android.com/studio)
+That's it - commit the changed file to your developer branch, push the change to the github repo and build your developer app again. You can do this with the "Build Native App" application from Mendix Studio Pro - or build it [locally](https://docs.mendix.com/howto/mobile/native-build-locally#5-1-building-an-android-app-with-android-studio) with [Android Studio](https://developer.android.com/studio)
 
 #### 2.3.2 iOS
 

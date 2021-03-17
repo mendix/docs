@@ -28,7 +28,7 @@ These are the current versions in active development:
 **Release date: March 12th, 2021**
 
 {{% alert type="warning" %}}
-We have decided to retract versions 5.1.7 and 5.0.11 because got reports that apps would crash when using Firebase after the patch. Please update to [5.1.8 or 5.0.12](#518and5012) respectively. 
+We have decided to retract versions 5.1.7 and 5.0.11 after we received reports that apps would crash when using Firebase after the patch. Please update to [5.1.8 or 5.0.12](#518and5012) respectively. 
 {{% /alert %}}
 
 ### Fixes

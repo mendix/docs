@@ -52,7 +52,7 @@ After you have released an OTA-capable app, do the following to release a new OT
     {{% image_container width="350" %}}![OTA configuration screen](attachments/nbui/advanced-ota-configuration.png){{% /image_container %}}
 
 1. Click **Release an OTA update via CodePush**.
-1.  The Mendix Native Mobile Builder will compile your project and resources and release the OTA updates:
+1.  The Mendix Native Mobile Builder will compile your app and resources and release the OTA updates:
 
     {{% image_container width="350" %}}![OTA build step](attachments/nbui/advanced-ota-building.png){{% /image_container %}}
 
@@ -69,7 +69,7 @@ The transition from the CLI to Mendix Native Mobile Builder for OTA supporting a
 ### 4.1 Gather the Required Information 
 
 1. Navigate to App Center: https://appcenter.ms
-1. Find the Android and iOS apps used for building your project
+1. Find the Android and iOS apps used for building your app.
 1. Check the URL and note down the application id as seen in the URL. For example, in **https://appcenter.ms/users/user.name/apps/App-Android/distribute/code-push**, **App-Android** is the Android app's id. 
 
 ### 4.2 Move Your App to the Mendix Native Mobile Builder

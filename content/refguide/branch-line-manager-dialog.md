@@ -7,7 +7,7 @@ tags: ["studio pro", "manage branch lines", "branch line manager"]
 
 ## 1 Introduction
 
-The **Branch Line Manager** is used to manage [branch lines](version-control#branches) of an app that is stored on a version control server:
+The **Branch Line Manager** is used to manage the [branch lines](version-control#branches) of an app that is stored on a version control server:
 
 ![Branch Line Manager](attachments/version-control-menu/branch-line-manager.png)
 

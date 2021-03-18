@@ -160,9 +160,9 @@ Add the *RegisterSingleSignOn* microflow as the **After startup** microflow or a
 If you are using the MindSphere Starter Application, this will already be set up as the *After startup* microflow.
 {{% /alert %}}
 
-If you are are modifying an existing app, you can do this on the *Runtime* tab of the *Project > Settings* dialog, accessed through the *Project Explorer*.
+If you are are modifying an existing app, you can do this on the *Runtime* tab of the **App** > **Settings* dialog box accessed through the **App Explorer**.
 
-![Project settings dialog](attachments/deploying-to-mindsphere/image4.png)
+![App settings dialog](attachments/deploying-to-mindsphere/image4.png)
 
 ### 4.2 Configuring the MindSphere OS Bar (MindSphereOSBarConfig)
 
@@ -210,7 +210,7 @@ Before you continue, ensure you have fulfilled the prerequisites described in th
 To create a Mendix deployment package from your app, do the following:
 
 1.  Open your app in Studio Pro.
-2.  Select **Project** > **Create Deployment Package...**.
+2.  Select **App** > **Create Deployment Package**.
 
     {{% image_container width="355" %}}![](attachments/deploying-to-mindsphere/image13.png){{% /image_container %}}
 

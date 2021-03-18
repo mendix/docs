@@ -35,7 +35,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 Follow these steps to create a simple app in Studio Pro and populate it. You will you will use this data in another app through the Data Hub: 
 
 1. In Studio Pro, click **New App** to create a new app using the **Blank App** template. Call this app *{yourname}CustomerServiceApp*.
-2. In the project explorer, double click the **Domain Model** for **MyFirstModule** and click **Entity** in the toolbar above the main window to add an entity to the domain model.
+2. In the App Explorer, double click the **Domain Model** for **MyFirstModule** and click **Entity** in the toolbar above the main window to add an entity to the domain model.
 3. Double-click the entity to open its properties and change its **Name** to *Customer*.
 4.  In the **Attributes** tab, click **New** to create the following attributes for the entity:
 
@@ -55,8 +55,8 @@ Follow these steps to create a simple app in Studio Pro and populate it. You wil
 
 	![](attachments/share-data/overview-pages-for-customer-entity.png)
 
-7.  In the **Project Explorer**, double-click **Home_Web** to open the **Home_Web** page.
-8. From the **Project Explorer** drag **Customer_Overview** into the **Auto-fill** container under the "Welcome" banner.
+7.  In the **App Explorer**, double-click **Home_Web** to open the **Home_Web** page.
+8. From the **App Explorer** drag **Customer_Overview** into the **Auto-fill** container under the "Welcome" banner.
 
 	You have now created a simple app with the entity **Customer** and a web page where you can add data and view and edit details for this entity. Go ahead and customize your Home page further by changing the banner text.
 	
@@ -196,7 +196,7 @@ To do this follow these steps:
 
 	![external entities](attachments/share-data/external-entities-in-domain-model.png)
 
-11. In the **Project Explorer**, the service and location documents for the external entity that you have just included in your domain model are now listed. These documents specify the metadata for the service and provide the links for connecting to the shared data.
+11. In the **App Explorer**, the service and location documents for the external entity that you have just included in your domain model are now listed. These documents specify the metadata for the service and provide the links for connecting to the shared data.
 
 	![external entities](attachments/share-data/external-entity-metadata-docs.png)
 
@@ -204,7 +204,7 @@ To do this follow these steps:
 
 13. In the **Generate pages** dialog box, for **Content layout** select **Atlas_Default(Atlas_UI_Resources)** and click **OK**. Overview pages for the new entity will be added to the **MyFirstModule** module. Confirm **OK** to accept the message that informs you of this.
 
-14. Open the **Home_Web** page and, from **Project Explorer**, drag **Customers_Overview** into the **Auto-fill** container under the "Welcome" banner. Go ahead and add a new banner and welcome text.
+14. Open the **Home_Web** page and, from **App Explorer**, drag **Customers_Overview** into the **Auto-fill** container under the "Welcome" banner. Go ahead and add a new banner and welcome text.
 
 15. Click **Run** to deploy the app. The app will be deployed and a link established to the data associated with the **Customer** entity in the publishing app (**{yourname)CustomerServiceApp**) through the **{yourname)CustomerODataService**.
 

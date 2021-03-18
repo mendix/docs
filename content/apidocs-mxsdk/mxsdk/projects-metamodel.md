@@ -21,7 +21,7 @@ Studio Pro Guide | Model SDK API docs
 
 ### 1.2 Project Documents
 
-Project-level documents describe project security, project settings, app navigation (for the different modes of navigation) and translations of the texts in your app.
+Project-level documents describe project security, app settings, app navigation (for the different modes of navigation) and translations of the texts in your app.
 
 #### 1.2.1 Graphical Overview
 
@@ -29,7 +29,7 @@ Project-level documents describe project security, project settings, app navigat
 
 Studio Pro Guide | Model SDK API docs
 -|-
-[Project Settings](/refguide/project-settings) |[ProjectDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) and its inheritance hierarchy
+[App Settings](/refguide/project-settings) |[ProjectDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) and its inheritance hierarchy
 [Project Security](/refguide/project-security) |
 [Navigation](/refguide/navigation) |
 [System Texts](/refguide/system-texts) |

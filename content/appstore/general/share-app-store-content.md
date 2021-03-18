@@ -63,7 +63,7 @@ To develop widgets and submit them to Marketplace, follow these guidelines:
 To develop modules and submit them to the Marketplace, follow these guidelines:
 
 * Create a folder named **USE_ME** and add the microflows and pages that are relevant for the user
-* Create an empty folder with the version number as its name, which will appear in Studio Pro's Project Explorer
+* Create an empty folder with the version number as its name, which will appear in Studio Pro's App Explorer
 *  If you add any userlib *jar* files, make sure they are accompanied by a blank **MyModule.RequiredLib** file so that users know where the *jar* files come from  
 
 	![](attachments/share-app-store-content/userlibBlankFiles_boxed.jpg)

@@ -8,8 +8,7 @@ tags: ["mobile", "native", "react", "ios", "android", "ota", "appcenter"]
 
 ## 1 Introduction
 
-Mendix Native apps support OTA updates using App Center's CodePush. The Mendix Native Mobile Builder allows you to build your app
-so it includes support for OTA updates using App Center's CodePush. The Mendix Native Mobile Builder can also push your OTA updates. 
+Mendix Native apps support OTA updates using App Center's CodePush. The Mendix Native Mobile Builder allows you to build your app so it includes support for OTA updates using App Center's CodePush. The Mendix Native Mobile Builder can also push your OTA updates. 
 
 ## 2 Prerequisites {#prerequisites}
 

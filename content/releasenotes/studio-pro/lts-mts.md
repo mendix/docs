@@ -68,10 +68,6 @@ If you are on an innovation track with your development and need to get the late
 
 The support duration for an MTS depends on when a new higher major version is released, which thus creates a new LTS and ends support for all MTS versions for that respective major version.
 
-This diagram illustrates the MTS concept with version and [end of support](#end) examples:
-
-![](attachments/mts.png)
-
 ### 3.2 Release Cycle
 
 MTS versions are introduced as minor versions approximately every 6 months after a new major version release. There will only be [patch](#patch) releases for an MTS on an as-needed basis.

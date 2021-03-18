@@ -13,6 +13,19 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### March 18th, 2021
+
+#### Improvements
+
+* We added the ability to completely clear all the data from your database running in a licensed environment.
+* We removed the ability to publish **App Services**. These have been deprecated for some time. You should use a [Published Web Service](/refguide/published-web-services) or a [Published REST Service](/refguide/published-rest-service) instead.
+
+#### Fix
+
+* We fixed an issue where deployments failed if there were too many log nodes. (Ticket 115140)
+
+    As a consequence of this, you will no longer be able to see the log levels of all your [log nodes](/developerportal/deploy/environments-details#log-levels) if your app is not running. Only log nodes which are not set to `Info` will be visible until you restart your app.
+
 ### March 16th, 2021
 
 * We updated the Mendix runtime to send back usage information to Mendix for your apps deployed to the Mendix Cloud. See below for more information about this change.

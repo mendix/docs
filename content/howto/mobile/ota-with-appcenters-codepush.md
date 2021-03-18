@@ -28,7 +28,7 @@ To make OTA updates via App Center's CodePush available to your app's users, you
 
     {{% image_container width="350" %}}![Start Mendix Native Mobile Builder](attachments/nbui/advanced-capabilities.png){{% /image_container %}}
 
-1.  Toggle App Center's **CodePush OTA Support** on: 
+1.  Toggle **App Center CodePush OTA Support** on: 
 
     {{% image_container width="350" %}}![OTA capability enabled](attachments/nbui/advanced-capabilities-ota.png){{% /image_container %}}
 
@@ -43,7 +43,7 @@ To make OTA updates via App Center's CodePush available to your app's users, you
 
 After you have released an OTA-capable app, do the following to release a new OTA update:
 
-1.  Select **Deploy an OTA update via CodePush**:
+1.  Under **Build app for distribution**, select **Deploy OTA update via CodePush**:
 
     {{% image_container width="350" %}}![Menu entry Deploy OTA update via CodePush](attachments/nbui/advanced-ota-menu.png){{% /image_container %}}
 
@@ -62,7 +62,7 @@ After you have released an OTA-capable app, do the following to release a new OT
 
     {{% image_container width="350" %}}![OTA App Center page](attachments/nbui/advanced-ota-appcenter-page.png){{% /image_container %}}
 
-## 4 How to Transfer a CLI OTA-Compatible app to the Mendix Native Mobile Builder {#from-cli-to-ui}
+## 4 Transfer a CLI OTA-Compatible App to the Mendix Native Mobile Builder {#from-cli-to-ui}
 
 The transition from the CLI to Mendix Native Mobile Builder for OTA supporting apps requires a few manual steps. These steps ensure you do not have to release your apps to the app stores again. 
 

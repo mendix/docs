@@ -47,7 +47,7 @@ The following functionality is available in the pane:
 
 ### 2.2 Data Hub Project Pane
 
-When no search string has been specified in the **Data Hub** pane, the **Project** pane is displayed. This shows the consumed services and the external entities used in the current project. The list of entities, associations and attributes for the consumed services are shown as for the search results:
+When no search string has been specified in the **Data Hub** pane, the **Project** section is displayed. This shows the consumed services and the external entities used in the current project. The list of entities, associations and attributes for the consumed services are shown as for the search results:
 
 {{% image_container width="300" %}}![Project Section](attachments/data-hub-pane/project-section.png){{% /image_container %}}
 

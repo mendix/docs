@@ -73,7 +73,7 @@ From Studio Pro:
 	{{% image_container width="350" %}}![Mendix Native Mobile Builder Home Screen](attachments/nbui/home-screen.png){{% /image_container %}}
 
 1. Select **Build app for distribution**.
-1.  Fill in your app's name and the app identifier. The wizard provides defaults, but you might want to align the app identifier to use your company's reversed URL, or change the app name to something besides the project name:
+1.  Fill in your app's name and the app identifier. The wizard provides defaults, but you might want to align the app identifier to use your company's reversed URL, or change the app name in some other way:
 
 	{{% image_container width="350" %}}![Wizard App Details](attachments/nbui/wizard-app-details.png){{% /image_container %}}
 

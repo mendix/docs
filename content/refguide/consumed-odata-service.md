@@ -201,7 +201,7 @@ In the **Data Hub** pane the search results for the same consumed service will s
 
 #####  4.3.1.3 Update Service Dialog Box
 
-When you click **Update** on the **Consumed OData Service** document or the update icon in the **Data Hub** and **Project** panes, the **Update** dialog box is displayed.
+When you click **Update** on the **Consumed OData Service** document or the update icon in the **Data Hub** and **Project** sections, the **Update** dialog box is displayed.
 
 ![update service dhpane](attachments/consumed-odata-service/update-service-dialog-box.png)
 

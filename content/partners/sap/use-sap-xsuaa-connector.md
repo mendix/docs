@@ -16,7 +16,7 @@ In this document, you will see how to use the XSUAA Connector for SAP Business T
 
 **This how-to will teach you how to do the following:**
 
-* Add the XSUAA Connector to your project
+* Add the XSUAA Connector to your app
 * Configure the XSUAA connector within your app
 * Configure security in your SAP subaccount and space to allow users to access the app using SSO
 
@@ -26,7 +26,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Create an SAP app using an SAP app template
 * Select and deploy the app to an SAP account and subaccount where you have authority to configure security
-* Set the security level for the project to at least Prototype/demo to use SAP Authentication; for more information see [Project Security](/refguide/project-security) and for instructions on setting security levels, see [How To Create a Secure App](/howto/security/create-a-secure-app)
+* Set the security level for the app to at least Prototype/demo to use SAP Authentication; for more information see [App Security](/refguide/project-security) and for instructions on setting security levels, see [How To Create a Secure App](/howto/security/create-a-secure-app)
 * Set up the app with the following two **User roles** in **App** > **Security**: Supervisor and Inspector
 
 	![](attachments/use-sap-xsuaa-connector/add-roles-to-app.png)
@@ -37,7 +37,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 The SAP app may already have the XSUAA Connector for SAP Business Technology Platform installed. Look in **App** > **App Store modules** for the module **SapAuthentication**. This is the XSUAA connector.
 
-If the XSUAA Connector for SAP Business Technology Platform is not already in your project, download it from the Marketplace. It can be found here: [XSUAA Connector for SAP Business Technology Platform](https://appstore.home.mendix.com/link/app/78091/).
+If the XSUAA Connector for SAP Business Technology Platform is not already in your app, download it from the Marketplace. It can be found here: [XSUAA Connector for SAP Business Technology Platform](https://appstore.home.mendix.com/link/app/78091/).
 
 For more information, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).
 
@@ -46,7 +46,7 @@ For more information, see [How to Use Marketplace Content in Studio Pro](/appsto
 In this section, you will learn how to implement the XSUAA connector in your Mendix app.
 
 {{% alert type="warning" %}}
-SAP Authentication will not work if the Project Security is off. See the prerequisites above.
+SAP Authentication will not work if the App Security is off. See the prerequisites above.
 {{% /alert %}}
 
 ### 4.1 Adding the OnStartup Microflow to the Application Settings
@@ -111,7 +111,7 @@ Because users will be automatically redirected to XSUAA after signing out of the
 
 To accomplish this, follow these steps:
 
-1. Open the project directory of your project and then open the **theme** folder.
+1. Open the app directory of your app and then open the **theme** folder.
 2. Change the contents of **login.html** to the following:
 
 	```html
@@ -243,6 +243,6 @@ You can picture the authentication as shown below:
 
 * [How to Create a Secure App](/howto/security/create-a-secure-app)
 * [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content)
-* [Project Security](/refguide/project-security)
+* [App Security](/refguide/project-security)
 * [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector) (documentation)
 * [SAP Business Technology Platform cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts)

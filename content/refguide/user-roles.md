@@ -2,7 +2,7 @@
 title: "User Roles"
 parent: "project-security"
 menu_order: 10
-tags: ["studio pro", "user role", "project security", "security"]
+tags: ["studio pro", "user role", "app security", "security"]
 aliases:
     - /refguide/user-role.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -42,7 +42,7 @@ General properties of user roles are described in the table below:
 | Name           | The name property defines the name of the user role. This name is shown to end-users who can create or edit user accounts in the application. |
 | Documentation  | In this property you can document additional information about the user role. This information is shown to end-users who can create or edit user accounts in the application. |
 | Module roles   | A list of module roles of which the access rights are accumulated in the user role. An end-user that is assigned a user role gets all access rights of the module roles of that user role. |
-| Check security | This specifies whether the consistency of security settings is checked for this user role. You can choose to not check security for a user role. For example, user roles that are used only for web service users do not need to be checked because they never sign in to the client. For more information on the security check, see [Project Security](project-security). |
+| Check security | This specifies whether the consistency of security settings is checked for this user role. You can choose to not check security for a user role. For example, user roles that are used only for web service users do not need to be checked because they never sign in to the client. For more information on the security check, see [App Security](project-security). |
 
 ### 2.2 User Management Properties {#user-management}
 
@@ -57,7 +57,7 @@ Internally, user manangement properties are translated into entity access rules 
 
 ## 3 Read More
 
-* [Project Security](project-security)
+* [App Security](project-security)
 * [Administrator](administrator)
 * [Demo Users](demo-users)
 * [Anonymous Users](anonymous-users)

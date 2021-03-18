@@ -2,7 +2,7 @@
 title: "Administrator"
 parent: "project-security"
 menu_order: 20
-tags: ["studio pro", "administrator", "project security", "security"]
+tags: ["studio pro", "administrator", "app security", "security"]
 ---
 
 ## 1 Introduction
@@ -63,7 +63,7 @@ When your app is not deployed locally, for example to the Mendix Cloud, changes 
 
 ## 3 Read More
 
-* [Project Security](project-security)
+* [App Security](project-security)
 * [User Roles](user-roles)
 * [Demo Users](demo-users)
 * [Anonymous Users](anonymous-users)

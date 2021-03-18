@@ -120,7 +120,7 @@ In MindSphere, these roles will look like this:
 
 And in the Mendix example app they will be mapped to these roles:
 
-![Mendix Project Security dialog](attachments/mindsphere-module-details/image9.png)
+![Mendix App Security dialog](attachments/mindsphere-module-details/image9.png)
 
 ## 3 MindSphere OS Bar {#msosbar}
 

@@ -13,13 +13,13 @@ This how-to will walk you through the steps needed to implement push notificatio
 
 * Import the PushNotifications module
 * Add the push notification widget and administrator pages
-* Update several project files with the necessary dependencies
+* Update several app files with the necessary dependencies
 * Obtain FCM/APNs access/credentials and configure them with your application
 * Build the hybrid mobile package
 
 ## 2 Importing the PushNotifications Module from the Marketplace
 
-The [Push Notifications Connector](/appstore/modules/push-notifications) module is published in the Mendix Marketplace. To import it into your project, click **Marketplace** in the top right of Mendix Studio Pro, which will open the Marketplace in a new tab. Search for "Push Notifications Connector" and click the title of the result:
+The [Push Notifications Connector](/appstore/modules/push-notifications) module is published in the Mendix Marketplace. To import it into your app, click **Marketplace** in the top right of Mendix Studio Pro, which will open the Marketplace in a new tab. Search for "Push Notifications Connector" and click the title of the result:
 
 ![](attachments/19955732/20218020.png)
 
@@ -28,7 +28,7 @@ On the resulting page, click the green **Download** button. Make sure that **Add
 ![](attachments/19955732/20217885.jpg)
 
 {{% alert type="warning" %}}
-The Push Notifications Connector assumes that the mobile app and the "back-end" part will reside in the same app project.
+The Push Notifications Connector assumes that the mobile app and the "back-end" part will reside in the same app.
 {{% /alert %}}
 
 ## 3 Installing Module Dependencies
@@ -40,11 +40,11 @@ The PushNotifications module has the following dependencies:
  * [Nanoflow Commons](https://appstore.home.mendix.com/link/app/109515/)
  * [Native Mobile Resources](/appstore/modules/native-mobile-resources)
 
-To include these dependencies, download them from the Marketplace in a way similar to how you installed the PushNotifications module. While importing, you may get a pop-up window with information about overwriting project files, which you can confirm by clicking **OK**.
+To include these dependencies, download them from the Marketplace in a way similar to how you installed the PushNotifications module. While importing, you may get a pop-up window with information about overwriting app files, which you can confirm by clicking **OK**.
 
 {{% alert type="info" %}}
 
-If your project is using an older version of the [Encryption](/appstore/modules/encryption) module, it might trigger an error for referencing a non-existent layout. You can fix this by assigning the master layout of the **Encryption.ResponsiveLayout_Certificate** layout to another layout (please note that in this specific use case, it is not important which layout is used). This does not apply to version 1.3.1 and above.
+If your app is using an older version of the [Encryption](/appstore/modules/encryption) module, it might trigger an error for referencing a non-existent layout. You can fix this by assigning the master layout of the **Encryption.ResponsiveLayout_Certificate** layout to another layout (please note that in this specific use case, it is not important which layout is used). This does not apply to version 1.3.1 and above.
 
 ![](attachments/19955732/20217886.jpg)
 
@@ -70,7 +70,7 @@ Please do not remove the button with the caption **Device Registration reference
 
 The PushNotifications module contains a microflow named **AfterStartup_PushNotifications** that will start the APNs connector for you. Call this microflow from your **AfterStartup** microflow.
 
-If your project already has an AfterStartup microflow configured, it is recommended that you either: 
+If your app already has an AfterStartup microflow configured, it is recommended that you either: 
 
 * create a new microflow, from which you will call both the existing AfterStartup microflow and the AfterStartup_PushNotifications microflow, and then set this as the AfterStartup microflow for your app
 * add a new action to the existing AfterStartup microflow to run the AfterStartup_PushNotifications microflow
@@ -79,7 +79,7 @@ If your project already has an AfterStartup microflow configured, it is recommen
 
 ## 6 Setting Up the Administration Pages {#setting}
 
-Add the **PushNotifications_Administration** page to the project navigation, so it can be reached after you deploy your app. This page contains three tabs:
+Add the **PushNotifications_Administration** page to the app navigation, so it can be reached after you deploy your app. This page contains three tabs:
 
 * **Pending Messages** – shows all the messages that are queued either because they were sent using the QueueMessage action or because previous attempts to send them failed
 * **Devices** – contains a list of all the devices registered with the application and is useful for testing purposes
@@ -91,7 +91,7 @@ Do not add the administration pages to the navigation layout of offline devices.
 
 {{% /alert %}}
 
-## 7 Setting Up the Project Security for Your Module
+## 7 Setting Up the App Security for Your Module
 
 On the **User roles** tab of the **App Security** dialog box, include the following:
 * The **PushNotifications.Administrator** role as part of the main **Administrator** role

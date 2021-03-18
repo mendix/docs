@@ -2,7 +2,7 @@
 title: "Demo Users"
 parent: "project-security"
 menu_order: 30
-tags: ["studio pro", "demo users", "demo-users", "project security"]
+tags: ["studio pro", "demo users", "demo-users", "app security"]
 ---
 
 ## 1 Introduction
@@ -59,7 +59,7 @@ You can use demo user to test what your application looks like to different user
 
 ## 5 Read More
 
-* [Project Security](project-security)
+* [App Security](project-security)
 * [User Roles](user-roles)
 * [Administrator](administrator)
 * [Anonymous Users](anonymous-users)

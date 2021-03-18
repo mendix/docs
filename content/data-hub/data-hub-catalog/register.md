@@ -258,7 +258,7 @@ This process is for indivually registering data sources. You can also set up a d
 
 ###  6.1 OData Service Contracts
 
-For all business applications except for Mendix apps, data sources and datasets must be published as OData v4 services for registration in the Catalog. An OData service metadata file may be a single file, or comprise multiple files, for example, the base schema definition and additional associated schema documents to complete the full service definition. 
+For all business applications except for Mendix apps, data sources that comprise datasets must be published as OData v4 services for registration in the Catalog. An OData service metadata file may be a single file, or comprise multiple files, for example, the base schema definition and additional associated schema documents to complete the full service definition. 
 
 {{% alert type="warning" %}}
 When registering data sources from Mendix apps using the **Mendix** connector, only OData v3 contracts are accepted. For all other business applications that are currently available including the generic **OData connector**, only OData v4 contracts are accepted.

@@ -53,7 +53,7 @@ To prepare your app, follow these steps:
 
 	![](attachments/set-up-sass/powershell.png)
 
-4.  Copy the address as text from your main project folder and paste it into Powershell (your project folder cannot contain spaces and should not be too long):
+4.  Copy the address as text from your main project folder and paste it into Powershell (your app folder cannot contain spaces and should not be too long):
 
 	![](attachments/set-up-sass/copy.png)
 
@@ -74,7 +74,7 @@ To prepare your app, follow these steps:
 
 	At this point, you are ready to start working with Sass.
 
-9.  You also need to add the following selected items into the ignore list of TortoiseSVN for each new app (or else your app will take too long to commit a change). You will only have to do this *once* when you set it up for your project:
+9.  You also need to add the following selected items into the ignore list of TortoiseSVN for each new app (or else your app will take too long to commit a change). You will only have to do this *once* when you set it up for your app:
 
 	![](attachments/set-up-sass/selected-ignore.png)
 

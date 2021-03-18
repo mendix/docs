@@ -9,9 +9,9 @@ tags: ["studio pro"]
 
 Data can be published from an app for use by other apps through [published OData services](published-odata-services). Consumed OData services can be used to integrate external data sources in apps through [Mendix Data Hub](/data-hub/). 
 
-Mendix Data Hub enables integration of available data sources from different sources in an organization into your Mendix apps.  OData services that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/) expose entities that can be dragged and dropped into your domain model through the [Data Hub pane](data-hub-pane) as external entities. The OData service document that is added to your project provides the information for retrieving the metadata for the service and exposed entities.
+Mendix Data Hub enables integration of available data sources from different sources in an organization into your Mendix apps.  OData services that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/) expose entities that can be dragged and dropped into your domain model through the [Data Hub pane](data-hub-pane) as external entities. The OData service document that is added to your app provides the information for retrieving the metadata for the service and exposed entities.
 
-For further details on the consumed OData service document and updating consumed OData services in your project, see [Consumed OData Service](consumed-odata-service).
+For further details on the consumed OData service document and updating consumed OData services in your app, see [Consumed OData Service](consumed-odata-service).
 
 {{% alert type="info" %}}
 Mendix Data Hub is a licensed product. Using external entities to consume OData services requires a license, and the type of license you have will define how many data records can be consumed.  For further details, see the [Data Hub License Limitations](consumed-odata-service-requirements#license-limitations) section of *Consumed OData Service Requirements*. To find out more about your Data Hub license, contact [Mendix Support](https://support.mendix.com).
@@ -43,7 +43,7 @@ When an external entity is dragged into the domain model, the  **Consumed Odata*
 
 In the **Data Hub** pane the service and the entity will be shown as consumed both in the search results pane and also in the **Project** section. 
 
-If the metadata contract at the specified service endpoint is different to the contract in the current project model, this will be indicated in the **Data Hub** pane search results and  **Properties** pane for the service with a blue **Update** arrow: 
+If the metadata contract at the specified service endpoint is different to the contract in the current app model, this will be indicated in the **Data Hub** pane search results and  **Properties** pane for the service with a blue **Update** arrow: 
 
 ![Data Hub Pane update](attachments/data-hub-pane/data-hub-pane-update.png)
 

@@ -9,7 +9,7 @@ tags: ["app", "configuration", "runtime", "Studio Pro", "languages", "certificat
 
 ## 1 Introduction
 
-In the **App Settings** dialog box, you can alter the settings that are applicable to the whole project:
+In the **App Settings** dialog box, you can alter the settings that are applicable to the whole app:
 
 ![](attachments/project-settings/project-settings-configuration.png)
 
@@ -86,7 +86,7 @@ The default time zone determines the time zone for newly created users. If your 
 
 ### 3.8 Scheduled Event Time Zone {#scheduled}
 
-The scheduled event time zone defines under which timezone scheduled events run. The default is UTC and this has been the case since 3.0. If you would like to run scheduled events under another time zone (such as the time zone of the company office or the project default timezone), you can select it here.
+The scheduled event time zone defines under which timezone scheduled events run. The default is UTC and this has been the case since 3.0. If you would like to run scheduled events under another time zone (such as the time zone of the company office or the app default timezone), you can select it here.
 
 This affects time zone-related operations, such as parsing and formatting dates from/to strings and obtaining the beginning of the current day.
 
@@ -261,29 +261,29 @@ For background information, see [Transport Layer Security (TLS) Renegotiation Is
 
 ### 6.1 UI Resources Package
 
-The look and feel of a Mendix application is governed by the [UI resources package](ui-resources-package). This package supplies the project with all the required theme information accompanied by matching page templates and building blocks. The module which is designated as the UI resources package is governed by the **UI resources package** setting. Generally, this is automatically updated when a new UI resources package is imported. However, with this setting, the desired module can also be set manually.
+The look and feel of a Mendix application is governed by the [UI resources package](ui-resources-package). This package supplies the app with all the required theme information accompanied by matching page templates and building blocks. The module which is designated as the UI resources package is governed by the **UI resources package** setting. Generally, this is automatically updated when a new UI resources package is imported. However, with this setting, the desired module can also be set manually.
 
 ### 6.2 Theme ZIP File
 
 {{% alert type="warning" %}}
 
-[Deprecated] The use of a ZIP file to configure a project's theme is deprecated. A [UI resources package](ui-resources-package) is the preferred method of sharing themes.
+[Deprecated] The use of a ZIP file to configure a app's theme is deprecated. A [UI resources package](ui-resources-package) is the preferred method of sharing themes.
 
 {{% /alert %}}
 
-Older projects may still use a theme ZIP file as the basis for their theme. In this situation, the **Theme ZIP file** setting can be used to switch between any ZIP files found in the **theme** folder. Note that this practice is deprecated and will be removed in a future version.
+Older apps may still use a theme ZIP file as the basis for their theme. In this situation, the **Theme ZIP file** setting can be used to switch between any ZIP files found in the **theme** folder. Note that this practice is deprecated and will be removed in a future version.
 
 Switching from a ZIP file to a UI resources package is straightforward:
 
 1. Firstly, replace the contents of the theme folder with the contents of the desired ZIP file.
 
-2. Then, use the **UI resources package** setting described above to select a module. Ideally, this module should only contain UI documents, such as page templates and building blocks. This will allow you to export and import the module to other projects without worrying about reference errors.
+2. Then, use the **UI resources package** setting described above to select a module. Ideally, this module should only contain UI documents, such as page templates and building blocks. This will allow you to export and import the module to other apps without worrying about reference errors.
 
 3. Lastly, set the **Theme ZIP file** setting to **None**.
 
 ## 7 Miscellaneous Tab {#miscellaneous}
 
-These settings determine the behavior of Studio Pro for this project. The settings apply to everyone that is working on this project.
+These settings determine the behavior of Studio Pro for this app. The settings apply to everyone that is working on this app.
 
 ### 7.1 Bundle Widgets When Running Locally
 
@@ -297,4 +297,4 @@ When enabled, the names that Studio Pro suggests in microflows will start with a
 
 ### 7.3 Activity Default Colors
 
-This table allows you to select a default color for each microflow activity type that is available in your project. The selected color will be used as the background color for all microflow activities of that type in your project. It is possible to override this default value for individual activities in the microflow editor. If you change the default color for an activity type, and there are activities of that type present in the project that have an individual background color specified, a dialog will be shown that allows you to apply the new default color to these activities as well.
+This table allows you to select a default color for each microflow activity type that is available in your app. The selected color will be used as the background color for all microflow activities of that type in your app. It is possible to override this default value for individual activities in the microflow editor. If you change the default color for an activity type, and there are activities of that type present in the app that have an individual background color specified, a dialog will be shown that allows you to apply the new default color to these activities as well.

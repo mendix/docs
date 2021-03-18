@@ -8,7 +8,7 @@ tags: ["studio pro", "studio", "collaborative development", "sync"]
 
 ## 1 Introduction 
 
-Collaborative development is the process of sharing app model changes when a team of more than one person is working on the app. Collaborative development allows the team members to work together on one project in Mendix Studio Pro and Mendix Studio, and easily synchronize changes using [version control](version-control). Studio Pro can be used to work on different branches of an app, while Studio can be enabled for one of these branches. 
+Collaborative development is the process of sharing app model changes when a team of more than one person is working on the app. Collaborative development allows the team members to work together on one app in Mendix Studio Pro and Mendix Studio, and easily synchronize changes using [version control](version-control). Studio Pro can be used to work on different branches of an app, while Studio can be enabled for one of these branches. 
 
 {{% alert type="info" %}}
 
@@ -22,9 +22,9 @@ Studio Pro users can collaborate with each other through [version control](versi
 
 The collaborative development process between Studio Pro and Studio consists of the following steps:
 
-1. Every change made in Studio is automatically saved to the Studio working copy. Multiple users can view the project in Studio at the same time: one user can edit it and the others are in read-only mode. 
+1. Every change made in Studio is automatically saved to the Studio working copy. Multiple users can view the app in Studio at the same time: one user can edit it and the others are in read-only mode. 
 
-2.  When Studio Pro users open a project, they are notified if Studio is enabled for this development line. 
+2.  When Studio Pro users open a app, they are notified if Studio is enabled for this development line. 
 
     ![Collaborative Development Enabled Notification](attachments/collaborative-development/collaborative-development-enabled-notification.png)
 
@@ -32,7 +32,7 @@ The collaborative development process between Studio Pro and Studio consists of 
 
 4. To get changes from the Team Server the user needs to click **Update**. When the Studio Pro user clicks **Update**, the latest changes from *Studio* are committed automatically to the Team Server before Studio Pro receives the update from it. The latest revision from the Team Server containing the latest *Studio* changes is merged into Studio Pro's local working copy. 
 
-5. The Studio Pro user works on the project and, once the user finishes some functionality (for example, fixes a bug or creates a new feature), they click **Commit**. The user enters a commit message and confirms it. This triggers the same process as during an update (described in step 4), and the Studio Pro working copy is updated with the latest revision from the Team Server.
+5. The Studio Pro user works on the app and, once the user finishes some functionality (for example, fixes a bug or creates a new feature), they click **Commit**. The user enters a commit message and confirms it. This triggers the same process as during an update (described in step 4), and the Studio Pro working copy is updated with the latest revision from the Team Server.
 
    There are two possible outcomes of this merge:<br/>
 
@@ -52,7 +52,7 @@ For information on collaborative development from the Studio perspective, see [C
 
 ## 4 Studio Pro Perspective
 
-When you connect to a project which has collaborative development turned on, you see which development line (the main line or a branch line) Studio is enabled for. 
+When you connect to a app which has collaborative development turned on, you see which development line (the main line or a branch line) Studio is enabled for. 
 
 Click the drop-down to select another line or click **OK** to open the currently selected line. 
 
@@ -66,15 +66,15 @@ To merge the latest changes stored in the Team Server (from both Studio users an
 
 ### 4.2 Committing Latest Changes
 
-To commit your latest project changes and make them available to other users, open **Changes** and click **Commit**. The process of deploying your app (when you click the **Publish** button) will also trigger a commit. 
+To commit your latest app changes and make them available to other users, open **Changes** and click **Commit**. The process of deploying your app (when you click the **Publish** button) will also trigger a commit. 
 
 {{% alert type="info" %}}
 
-We recommend you update your project and commit changes often to avoid multiple conflicts in your project.  
+We recommend you update your app and commit changes often to avoid multiple conflicts in your app.  
 
 {{% /alert %}}
 
-If your project has conflicts, Studio will be unlocked without receiving your changes. You need to resolve the conflicts in Studio Pro first to be able to complete the merge and commit again. 
+If your app has conflicts, Studio will be unlocked without receiving your changes. You need to resolve the conflicts in Studio Pro first to be able to complete the merge and commit again. 
 
 Your changes will be sent to Studio automatically if there are no conflicts. For more information on the collaborative development process in Studio, see [Collaborative Development in Studio](/studio/collaborative-development).
 
@@ -92,14 +92,14 @@ In Studio Pro, you can enable or disable Studio for a development line (the main
 
 To share your model changes between Studio and Studio Pro, you need to enable Studio for one of development lines. 
 
-Whether Studio is enabled for a development line by default, depends on your project:
+Whether Studio is enabled for a development line by default, depends on your app:
 
 * Studio is enabled for the main line by default in the following cases:
   * For a new app created via the Developer Portal
-  * For an existing project that has Studio enabled
+  * For an existing app that has Studio enabled
 * Studio is not enabled for any development line in the following cases:
   * For a new app created via Studio Pro
-  * For an existing project that does not have Studio enabled
+  * For an existing app that does not have Studio enabled
 
 To enable Studio for a development line or switch it to another development line, do the following: 
 
@@ -133,7 +133,7 @@ To disable Studio, do the following:
 
    ![Disable for Mendix Studio](attachments/collaborative-development/disable-for-studio.png)
 
-Studio is disabled for your project.
+Studio is disabled for your app.
 
 ## 6 Managing Development Lines {#managing-branches}
 

@@ -115,7 +115,7 @@ For more information on browser support for certain device features, see the thi
 
 ## 7 Deciding Between a PWA or Native Mobile App
 
-Mendix offers options to build both native mobile apps and PWAs. Depending on your project's requirements or constraints, one or the other can be a better fit. It is also possible to have both native mobile and PWA profiles in a single project, which can run next to each other and overlap significantly.
+Mendix offers options to build both native mobile apps and PWAs. Depending on your app's requirements or constraints, one or the other can be a better fit. It is also possible to have both native mobile and PWA profiles in a single app, which can run next to each other and overlap significantly.
 
 {{% alert type="info" %}}
 Important limitation: Apple does not support push notifications for PWAs on iOS. Currently it is not possible to create a fully offline-first PWA for iOS. Support for that is planned later in 2021.

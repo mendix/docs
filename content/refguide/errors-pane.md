@@ -43,7 +43,7 @@ For more information on types of messages, see the [Types of Messages](#message-
 
 ### 3.2 Check Now Option
 
-The **Check now** option initiates the check of your project on consistency failures. This is useful if you have set an auto-check delay in **Edit** > **Preferences**. If the auto-delay is not specified, the check is done immediately after each change. 
+The **Check now** option initiates the check of your app on consistency failures. This is useful if you have set an auto-check delay in **Edit** > **Preferences**. If the auto-delay is not specified, the check is done immediately after each change. 
 
 ### 3.3 Limit to Current Tab Option
 

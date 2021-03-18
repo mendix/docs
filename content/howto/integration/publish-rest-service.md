@@ -37,7 +37,7 @@ Your page should now look like this:
 
 ![](attachments/publish-rest-service/order_NewEdit_Page.png)
 
-Add the overview page to your project navigation and run the application. Create a couple of orders and order lines by filling in the appropriate fields.
+Add the overview page to your app navigation and run the application. Create a couple of orders and order lines by filling in the appropriate fields.
 
 ## 4 Publishing the Service
 

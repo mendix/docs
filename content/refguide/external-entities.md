@@ -7,9 +7,9 @@ tags: ["domain model", "entity", "entities", "attribute", "external entities", "
 ---
 ## 1 Introduction
 
-External entities connect to the data for shared data sources that are available through [Mendix Data Hub](/data-hub/). These external entities represent the link to the datasets that are maintained and stored in the external applications. You can integrate or *consume* external entities in your project and use them with local entities to create an app that uses the shared datasets. This dataset that the external entity connects to will be updated as it is changed in the source application. 
+External entities connect to the data for shared data sources that are available through [Mendix Data Hub](/data-hub/). These external entities represent the link to the datasets that are maintained and stored in the external applications. You can integrate or *consume* external entities in your app and use them with local entities to create an app that uses the shared datasets. This dataset that the external entity connects to will be updated as it is changed in the source application. 
 
-This means that several properties of the external entities are determined in their originating app and cannot be changed in your project. 
+This means that several properties of the external entities are determined in their originating app and cannot be changed in your app. 
 
 External entities are added to the domain model through the [Data Hub pane](data-hub-pane) and are displayed as *purple* entity containers in the domain model. 
 
@@ -19,15 +19,15 @@ A license is required to use Mendix Data Hub and connect to external data source
 
 For more information on adding external entites from the **Data Hub** pane see [Adding External Entities](#adding-external-entities).
 
-## 2 Adding an External Entity to a Project {#adding-external-entities}
+## 2 Adding an External Entity to an App {#adding-external-entities}
 
-To add an external entity to your project, do the following:
+To add an external entity to your app, do the following:
 
 1. Go to the domain model.
 
 2. In the **Data Hub** pane, search for the entity that you would like to use in your app.
 
-   {{% alert type="info" %}}In the Data Hub Catalog, an OData service may be registered several times with different versions or deployed to different environments all exposing the entity that you may want to use. Search the Data Hub Catalog first and find the one most relevant to the requirements for your project.{{% /alert %}}
+   {{% alert type="info" %}}In the Data Hub Catalog, an OData service may be registered several times with different versions or deployed to different environments all exposing the entity that you may want to use. Search the Data Hub Catalog first and find the one most relevant to the requirements for your app.{{% /alert %}}
 
 3.  Drag and drop the entity in the domain model. The entity and its attributes are then added to your app:
 

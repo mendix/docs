@@ -154,7 +154,7 @@ Implement the action in Java as follows:
 
 When developing connector modules, you can use the unit test module to test the actions you are implementing.
 
-If you want to publish your module with custom microflow actions to the Mendix Marketplace for easy reuse, it's best to have a module containing only the reusable parts. Add another module to your project with all the test microflows and anything else you need
+If you want to publish your module with custom microflow actions to the Mendix Marketplace for easy reuse, it's best to have a module containing only the reusable parts. Add another module to your app with all the test microflows and anything else you need
 while developing your application.
 
 In the screenshot below, observe two important points. First, the **ConnectorKitDemo** module only contains the actions you want to publish to the Marketplace. To do this, right-click the module and select **Export module package...**. Second, the **ConnectorKitDemoTests** module contains all the functionality you need while developing the reusable module: a small domain model with some sample data and some test pages. It also contains the unit test microflow **Test_InitProduct**, which will be called by the unit test module.

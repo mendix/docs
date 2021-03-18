@@ -44,7 +44,7 @@ You can deploy your app by clicking the **Publish* or play (**Run locally**) but
 
 For more information on deployment in Mendix, see [Deployment](/developerportal/deploy).
 
-For more information on deploying your app and versioning it, see  the [Versioning a Project Deployed to the Cloud](using-version-control-in-studio-pro#versioning-project) section in *Using Version Control in Studio Pro*. 
+For more information on deploying your app and versioning it, see  the [Versioning an App Deployed to the Cloud](using-version-control-in-studio-pro#versioning-project) section in *Using Version Control in Studio Pro*. 
 
 ### 2.3 Links to the Developer Portal & Marketplace {#links}
 
@@ -52,9 +52,9 @@ You can find links to the [Developer Portal](/developerportal/) and [Marketplace
 
 Your account is displayed next to these buttons if you are signed in. Click the account name to navigate to your apps, the Developer Portal, your profile, or to sign out. 
 
-## 3 Project Structure
+## 3 App Structure
 
-A project consists of individual files (*documents*) and settings that are grouped in folders and [modules](modules). The complete structure of your project can be viewed in the [App Explorer](project-explorer). 
+An app consists of individual files (*documents*) and settings that are grouped in folders and [modules](modules). The complete structure of your app can be viewed in the [App Explorer](project-explorer). 
 
 ## 4 Working Area
 

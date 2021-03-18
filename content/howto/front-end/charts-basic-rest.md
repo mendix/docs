@@ -33,7 +33,7 @@ For more information on publishing a REST API refer to this Mendix document: [Pu
 
 {{% /alert %}}
 
-1. Create a new Module in your project.
+1. Create a new Module in your app.
 1. Rename the module to *ChartsREST*.
 1. Open the Domain model.
 1. Create **Value** and **Series** entities with the attributes and association shown in the picture below.
@@ -71,7 +71,7 @@ To configure the REST service, follow these steps:
 
 To use the REST Data source endpoint in your chart, follow these steps:
 
-1. Create a page in your project containing an **Area chart** widget.
+1. Create a page in your app containing an **Area chart** widget.
 
 1. Double click the **Area chart** widget.
 

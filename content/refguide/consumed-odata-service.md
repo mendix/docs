@@ -131,13 +131,13 @@ Click the **Properties** tab for the consumed OData service which displays the p
 
 ### 4.1 Consuming from Service Endpoints{#consume-service-endpoints}
 
-When you add an external entity to your project, you are consuming the entity from a specific version of a service (the *service endpoint*), deployed to a given environment. The metadata file or contract for the service is located at this endpoint. 
+When you add an external entity to your app, you are consuming the entity from a specific version of a service (the *service endpoint*), deployed to a given environment. The metadata file or contract for the service is located at this endpoint. 
 
 The same service, deployed to a different environment will be to a different service endpoint and this will be registered as a different asset in the Data Hub Catalog. In the following example, there are two endpoints for the **CustomerApi service version 1.1.0** which is deployed to the production environment and the **Acceptance** environment: 
 
 {{% image_container width="250" %}}![2 endpoints](attachments/consumed-odata-service/same-service-different-endpoints.png){{% /image_container %}}
 
-When you drag the **Customer** entity from **CustomerApi version 1.0.0** deployed to the **Acceptance** environment into your project, Studio Pro will retrieve the information it requires from the contract that is at the endpoint. 
+When you drag the **Customer** entity from **CustomerApi version 1.0.0** deployed to the **Acceptance** environment into your app, Studio Pro will retrieve the information it requires from the contract that is at the endpoint. 
 
 ### 4.2 Semantic Numbering for Service Versions {#semantic}
 
@@ -175,9 +175,9 @@ When minor and major updates to a consumed service are detected in Data Hub the 
 
 ####  4.3.1. Update
 
-The **Update** option is available when a new version of a published OData service is issued, and deployed to the same endpoint as the previous version. Studio Pro will recognize that the contract at the endpoint is different to the one currently consumed in the project. After updating Studio Pro will have the same contract as the one that is available on the endpoint.
+The **Update** option is available when a new version of a published OData service is issued, and deployed to the same endpoint as the previous version. Studio Pro will recognize that the contract at the endpoint is different to the one currently consumed in the app. After updating Studio Pro will have the same contract as the one that is available on the endpoint.
 
-#####  4.3.1.1 Project Pane
+#####  4.3.1.1 App Pane
 
 In the **App** pane this will be shown as follows: 
 

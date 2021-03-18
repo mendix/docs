@@ -106,7 +106,7 @@ To set up actions which will occur after tapping or receiving a notification, do
 
 ### 3.5 Adding Firebase Configurations
 
-Deploy your project and open your administration page in a web browser. Then, do the following:
+Deploy your app and open your administration page in a web browser. Then, do the following:
 
 1. Add a new FCM configuration.
 1. Select **Enabled**.

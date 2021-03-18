@@ -10,7 +10,7 @@ tags: ["studio pro", "resources"]
 
 Resources are helping documents in a module that cannot function on their own but can be used in other documents. For example, a microflow or a page can function on its own, but a Java action can only function in a microflow.  
 
-Resources can be reused in different modules of your project. 
+Resources can be reused in different modules of your app. 
 
 ## 2 Adding Resources
 
@@ -20,7 +20,7 @@ To add a resource document, do the following:
 
     ![](attachments/resources/project-explorer-resources.png)
 
-2. In the **Resources** category, select the document you would like to add to your project.
+2. In the **Resources** category, select the document you would like to add to your app.
 
 ## 3 Resources Overview
 

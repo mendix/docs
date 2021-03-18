@@ -10,7 +10,7 @@ tags: ["Studio Pro", "view menu", "top bar"]
 
 Studio Pro supports a number of dockable window panes, such as the **Changes** and **Errors** panes. You can close some panes to just show the ones you need at the moment, but you can always reopen them via the **View** menu. 
 
-Via this menu you can also enable or disable the [full screen mode](#full-screen) or [reset the layout](#reset-layout) of your project to the default.  
+Via this menu you can also enable or disable the [full screen mode](#full-screen) or [reset the layout](#reset-layout) of your app to the default.  
 
 ![View Menu](attachments/view-menu/view-menu.png)
 
@@ -66,7 +66,7 @@ Menu items of the **View** menu are described in sections below.
 
 ### 3.1 Changes
 
-For version control enabled projects (projects with [Team Server](/developerportal/develop/team-server) or other SVN servers), the [Changes pane](changes-pane) shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
+For version control-enabled apps (meaning, those with [Team Server](/developerportal/develop/team-server) or other SVN servers), the [Changes pane](changes-pane) shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
 
 This pane has two levels, so when you zoom into a changed document, you can review all the changes within that document without going back and forth between levels. The zoomed-in level of the pane is split into two grids, with elements on the left and properties on the right. Selecting an element on the left presents the changed properties on the right:
 

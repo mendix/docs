@@ -99,7 +99,7 @@ From Studio Pro:
 
 1. Click **Next Step** when ready.
 
-You have completed the mandatory basic app configuration required to build your project. Now you see the **Build app for distribution** screen: 
+You have completed the mandatory basic app configuration required to build your app. Now you see the **Build app for distribution** screen: 
 
 {{% image_container width="350" %}}![Build release app](attachments/nbui/build-release-app.png){{% /image_container %}}
 

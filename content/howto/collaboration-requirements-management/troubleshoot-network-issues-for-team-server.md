@@ -8,7 +8,7 @@ tags: ["Team Server", "network", "troubleshoot", "firewall"]
 
 ## 1 Introduction
 
-Mendix Studio Pro needs to connect to Team Server, which is where all your projects are stored.
+Mendix Studio Pro needs to connect to Team Server, which is where all your apps are stored.
 
 **This how-to explains the following:**
 

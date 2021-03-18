@@ -20,7 +20,7 @@ You can find various elements in your app via the **Find** option. For example, 
 
 2. In the **Find** dialog box, leave **Match case** and **Match the whole word** unselected. This way you will search for all instances of the word "Employee" including such instances as "employee", Employees", or "Department_Employee":
 
-3. In the **Look in** section unselect items in your project where you do not want to search in:  
+3. In the **Look in** section unselect items in your app where you do not want to search in:  
 
    ![Look in Section](attachments/find-and-find-advanced/look-in.jpg)
 
@@ -30,7 +30,7 @@ You can see search results in the **Find Results** pane:
 
 ## 3 Find Advanced Option
 
-With the **Find Advanced** option you can set advanced criteria and find specific elements in your project, such as all [object activities](#find-object-activities), or [unused elements](#find-unused-elements). 
+With the **Find Advanced** option you can set advanced criteria and find specific elements in your app, such as all [object activities](#find-object-activities), or [unused elements](#find-unused-elements). 
 
 ### 3.1 Finding Object Activities {#find-object-activities}
 
@@ -71,7 +71,7 @@ Modules downloaded from the Marketplace might contain a lot of unused items. If 
 
 {{% alert type="info" %}}
 
-Any objects which are excluded from the project will not show up in the unused items list.
+Any objects which are excluded from the app will not show up in the unused items list.
 
 {{% /alert %}}
 

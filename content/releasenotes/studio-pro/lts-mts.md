@@ -38,7 +38,7 @@ Mendix advises advise using LTS versions for all production apps, as LTS version
 
 ### 2.1 Support Duration
 
-The support duration for an LTS is an average of 3 years and a minimum of 2 years, which is the longest of these options. Support for an LTS ends when a third consecutive major version is released (for example, support on version 6 has ended with the release of version 9).
+The support duration for an LTS is an average of 3 years. Support for an LTS ends when a third consecutive major version is released (for example, support on version 6 has ended with the release of version 9).
 
 This diagram illustrates the LTS concept with version and [end of support](#end) examples:
 
@@ -108,7 +108,7 @@ The impact of upgrading between monthly releases is the highest of these options
 
 ## 5 End of Support {#end}
 
-The "end of support" for a version means that fixes, updates, Mendix Support ticket responses, and other forms of assistance are no longer provided.
+The "end of support" for a version means that fixes, updates, investigating, troubleshooting, and other forms of assistance are no longer provided.
 
 If a new major version is nearing release, that means an older major version is nearing its end of support. If you are still using a major version for which support will end, Mendix recommends that you stop using that version and move to a newer [LTS](#lts) version that is supported. 
 

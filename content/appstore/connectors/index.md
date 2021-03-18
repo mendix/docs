@@ -1,7 +1,7 @@
 ---
 title: "Connectors"
 description: " "
-tags: ["marketplace", "app store", "marketplace component", "app store component", "connector"]
+tags: ["marketplace",  "marketplace component", "connector"]
 ---
 
 ## 1 Introduction

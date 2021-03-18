@@ -2,7 +2,7 @@
 title: "Google Maps"
 category: "Widgets"
 description: "Describes the configuration and usage of the Google Maps widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "google maps", "platform support"]
+tags: ["marketplace", "marketplace component", "widget", "google maps", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

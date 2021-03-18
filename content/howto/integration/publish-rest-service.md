@@ -24,7 +24,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To create the example project you will use in the next sections for publishing your REST service, follow these steps:
 
-1. Create a new app project and rename the **MyFirstModule** module to **RESTExample**.
+1. Create a new app and rename the **MyFirstModule** module to **RESTExample**.
 2. Open the domain model of the RESTExample module.
 3.  Create entities with an association like this:
 

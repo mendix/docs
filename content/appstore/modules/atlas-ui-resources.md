@@ -2,7 +2,7 @@
 title: "Atlas UI Resources"
 category: "Modules"
 description: "Describes the configuration and usage of the Atlas UI Resources module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "atlas ui", "atlas ui resources", "brand", "page template", "building block", "custom widget", "platform support"]
+tags: ["marketplace", "marketplace component", "atlas ui", "atlas ui resources", "brand", "page template", "building block", "custom widget", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -33,6 +33,6 @@ When using this module in an existing app with a custom theme, the custom theme 
     
 ## 3 Read More
 
-* [How to Migrate Existing App Projects to Atlas UI](https://docs.mendix.com/howto/front-end/migrate-existing-projects-to-atlasui)
+* [How to Migrate Existing Apps to Atlas UI](https://docs.mendix.com/howto/front-end/migrate-existing-projects-to-atlasui)
 * [Atlas UI How-to's](https://docs.mendix.com/howto/front-end/atlas-ui)
 * [Troubleshooting Atlas UI Changes](https://docs.mendix.com/refguide/migration-atlas)

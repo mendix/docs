@@ -46,7 +46,7 @@ To create your app, do the following:
 
 You now have an app with some translatable texts.
 
-## 3 Adding App Project Languages
+## 3 Adding App Languages
 
 You can now add an additional language to your app.
 

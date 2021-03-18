@@ -2,7 +2,7 @@
 title: "Mendix Feedback"
 category: "Widgets"
 description: "Describes the configuration and usage of the Mendix Feedback widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "feedback", "platform support"]
+tags: ["marketplace", "marketplace component", "widget", "feedback", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -23,7 +23,7 @@ The Mendix Feedback widget is easy to set up and automatically attaches addition
   
 ### 1.3 Limitations
 
-* Only usable in combination with Mendix app projects
+* Only usable in combination with Mendix apps
 
 ## 2 Using the Widget
 
@@ -53,7 +53,7 @@ For details on how to see all the feedback you have submitted, see the [Feedback
 
 ### 2.2 Editing the App
 
-Clicking the **Edit** icon opens the app page in [Mendix Studio](/studio/index). If you have permissions to edit the app, you can start editing and collaborating right away.
+Clicking the **Edit** icon opens the app page in [Mendix Studio](/studio/). If you have permissions to edit the app, you can start editing and collaborating right away.
 
 ### 2. Viewing the App
 
@@ -146,7 +146,7 @@ You can also configure the widget for certain actions in your app, for example:
 
 ### 4.1 Upgrading the Widget from Studio Pro Version 7 to 8
 
-If you are trying to upgrade your Mendix Feedback widget from version 7 to version 8, [Studio Pro](/refguide/index) will not recognize the current configuration of this widget. Add the Mendix Feedback widget into your page again and configure it accordingly. Then delete the old one.
+If you are trying to upgrade your Mendix Feedback widget from version 7 to version 8, [Studio Pro](/refguide/) will not recognize the current configuration of this widget. Add the Mendix Feedback widget into your page again and configure it accordingly. Then delete the old one.
 
 ![](attachments/feedback/cannot-recognize-the-old-version.png)
 

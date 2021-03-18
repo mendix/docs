@@ -43,10 +43,10 @@ Click **Show all** to go to the [Team](team) page for the app.
 In App Buzz, you can manage your app by clicking the options to the left of the Buzz feed. These are grouped into the following categories:
 
 * [Collaborate](index)
-* [Develop](/developerportal/develop/index)
-* [Deploy](/developerportal/deploy/index)
-* [Operate](/developerportal/operate/index)
-* [Settings](/developerportal/settings/index)
+* [Develop](/developerportal/develop/)
+* [Deploy](/developerportal/deploy/)
+* [Operate](/developerportal/operate/)
+* [Settings](/developerportal/settings/)
 
 ## 2 Communicating on Buzz
 

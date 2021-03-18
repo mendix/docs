@@ -19,7 +19,7 @@ tags: ["studio", "settings", "widgets"]
 
 The following types of widgets are included into the widget overview of the App Settings:
 
-* Marketplace widgets that are Studio approved, which are either, widgets that have been added by default when you created your app, or widgets you can download from the [Marketplace](/appstore/index) to your project directly from Studio (for more information on widgets, see [Widgets](page-editor-widgets))
+* Marketplace widgets that are Studio approved, which are either, widgets that have been added by default when you created your app, or widgets you can download from the [Marketplace](/appstore/) to your project directly from Studio (for more information on widgets, see [Widgets](page-editor-widgets))
 * Local widgets – widgets created by users in Studio Pro (you can create local widgets yourself via Studio Pro, for more information, see [Custom Widget Development](/howto8/extensibility/widget-development))
 
 In the App Settings the following columns are displayed:

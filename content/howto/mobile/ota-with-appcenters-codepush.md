@@ -1,37 +1,45 @@
 ---
-title: "Release OTA update with App Center's CodePush"
+title: "Release OTA Update with App Center's CodePush"
 parent: "native-mobile"
 menu_order: 8
-description: Tutorial for releasing an OTA update with App Center's CodePush
+description: Learn to release releasing an OTA update with App Center's CodePush.
 tags: ["mobile", "native", "react", "ios", "android", "ota", "appcenter"]
 ---
 
 ## 1 Introduction
 
-Mendix Native apps support OTA using App Center's CodePush. Mendix Native Mobile Builder can assist with the process of building your app
-with support for OTA using App Center's CodePush and also push your OTA updates. 
+Mendix Native apps support OTA updates using App Center's CodePush. The Mendix Native Mobile Builder allows you to build your app
+so it includes support for OTA updates using App Center's CodePush. The Mendix Native Mobile Builder can also push your OTA updates. 
 
 ## 2 Prerequisites {#prerequisites}
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Mendix Studio Pro v8.15 and above installed using the online installer. The offline installer does not include the Mendix Native Mobile Builder dependency.
-* [Having configured and deployed your app](deploying-native-app)
-* Having App Center service configured for Mendix Native Mobile Builder
+* Install Mendix Studio Pro v8.15 or above using the online installer. The offline installer does not include the Mendix Native Mobile Builder dependency.
+* Deploy your app by completing [How to Deploy Your First Mendix Native Mobile App](deploying-native-app).
+* Configure the App Center service for the Mendix Native Mobile Builder.
 
-## 3 Build an OTA update capable app {#build-with-ota-support}
+## 3 Build an App That Can Use CodePush OTA Updates {#build-with-ota-support}
 
-For OTA update via App Center's CodePush to be available to your app's users, you will have to toggle the **App Center OTA Support** capability on, build new binaries with the new capability and release them to the respective app stores. Only users with the new apps will be able to receive OTA updates.
+To make OTA updates via App Center's CodePush available to your app's users, you must toggle the **App Center OTA Support** capability on. Next you must build new binaries with this capability on, and then release the apps to their respective app stores. Only users with the new apps will be able to receive OTA updates.
 
-1. Click Project > Build Native Mobile App
-2. Navigate to Capabilities: 
-{{% image_container width="350" %}}![Start Mendix Native Mobile Builder](attachments/nbui/advanced-capabilities.png){{% /image_container %}}
-3. Toggle App Center's CodePush OTA Support on: 
-{{% image_container width="350" %}}![OTA capability enabled](attachments/nbui/advanced-capabilities-ota.png){{% /image_container %}}
-4. Click Save
-5. Now build an application for distribution and make a note of the version number used: 
-{{% image_container width="350" %}}![Build release app page](attachments/nbui/build-release-app-for-ota.png){{% /image_container %}}
-6. If the OTA update functionality is to be made available to your users, please release a new update via the respective stores. 
+Complete the following steps:
+
+1. Click **Project** > **Build Native Mobile App**.
+2.  Navigate to **Capabilities**: 
+
+    {{% image_container width="350" %}}![Start Mendix Native Mobile Builder](attachments/nbui/advanced-capabilities.png){{% /image_container %}}
+
+3.  Toggle App Center's CodePush OTA Support on: 
+
+    {{% image_container width="350" %}}![OTA capability enabled](attachments/nbui/advanced-capabilities-ota.png){{% /image_container %}}
+
+4. Click **Save**.
+5.  Now build an application for distribution and make a note of the version number used: 
+
+    {{% image_container width="350" %}}![Build release app page](attachments/nbui/build-release-app-for-ota.png){{% /image_container %}}
+
+6. To make the OTA update functionality available to your users, please release a new update via the appropriate app stores. 
 
 ## 4 Release an OTA update for your app {#release-ota-update} 
 

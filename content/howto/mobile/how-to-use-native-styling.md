@@ -14,7 +14,7 @@ You have the capacity to alter design properties with Mendix Studio Pro. Further
 ## 2 Prerequisites 
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
-* Create a Mendix app based on the Native Mobile Quickstarter App template by following the [Creating a New App Project Based on the Quickstart App](getting-started-with-native-mobile#quickstartapp) section of *Get Started with Native Mobile*
+* Create a Mendix app based on the Native Mobile Quickstarter App template by following the [Creating a New App Based on the Quickstart App](getting-started-with-native-mobile#quickstartapp) section of *Get Started with Native Mobile*
 * Download the Make It Native app on your mobile device via either the [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp) store or the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181) so you can text your app and see your styling changes
 
 ### 3 Customizing the Quickstart App
@@ -161,7 +161,7 @@ In this section you will learn to turn the class you made into a design property
 		"class": "btnBordered"
 	},
 	```
-4. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.
+4. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
 5.  Select the fifth button. In **Properties** > **Design Properties**, your **Bordered** design property should now be visible:
 
 	![bordered design property](attachments/how-to-use-native-styling/bordered-design-property.png)

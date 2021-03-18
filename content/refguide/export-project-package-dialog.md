@@ -7,9 +7,9 @@ tags: ["studio pro", "export app", "export app package"]
 ---
 
 ## 1 Introduction
-You can export a project package (*.mpk*) from Mendix Studio Pro for backup purposes or to share it with other Mendix developers. This is useful if you want to give someone the entire app, or if you need to provide a test app when submitting a ticket.
+You can export a app package (*.mpk*) from Mendix Studio Pro for backup purposes or to share it with other Mendix developers. This is useful if you want to give someone the entire app, or if you need to provide a test app when submitting a ticket.
 
-Project packages can be imported again into a new app using the [Import App Package](import-project-package-dialog).
+App packages can be imported again into a new app using the [Import App Package](import-project-package-dialog).
 
 To export the package, open the **File** menu > **Export App Package** and select the relevant options in the **Export App Package** dialog box:
 
@@ -19,11 +19,11 @@ To export the package, open the **File** menu > **Export App Package** and selec
 
 ## 2 Destination
 
-You can specify the folder to export the package to. The default location is a folder named *packages* inside the project directory.
+You can specify the folder to export the package to. The default location is a folder named *packages* inside the app directory.
 
 ## 3 Export Data
 
-Mendix project packages can be exported to a Mendix package file (*.mpk*).  You can choose to export the built-in deployment database and uploaded files as well, or export with no data. You can choose one of the following options:
+Mendix app packages can be exported to a Mendix package file (*.mpk*).  You can choose to export the built-in deployment database and uploaded files as well, or export with no data. You can choose one of the following options:
 
 * **No data** – the package will be exported without data.
 

@@ -17,10 +17,10 @@ To start a new app with version control do the following:
 
 1. Select **File** > **New App**.
 2. In the **App Settings** dialog, set **Enable online services** to *Yes*. This option creates a Team Server repository and a Developer Portal app.
-3. Change the **Project directory**, or leave the default suggested by Studio Pro.
+3. Change the **App directory**, or leave the default suggested by Studio Pro.
 4. Click **Create app**.
 
-The app is created on the Team Server, and a working copy is created in the **Project directory**. This is opened in Studio Pro so that you can start working immediately.
+The app is created on the Team Server, and a working copy is created in the **App directory**. This is opened in Studio Pro so that you can start working immediately.
 
 ![](attachments/using-version-control-in-studio-pro/2018-03-02_11-11-18.png)
 
@@ -33,7 +33,7 @@ Once you are a team member, providing you have been given a role with sufficient
 1. Choose **Open App** in Studio Pro.
 2. Select **Mendix Team Server** for **Where is your app stored?**.
 3. Choose your app from the **Team Server App** drop-down.
-4. Change the **Project directory**, or leave the default suggested by Studio Pro.
+4. Change the **App directory**, or leave the default suggested by Studio Pro.
 5. Click **Create app**.
 
 The app will be downloaded from the Team Server and opened in Studio Pro.

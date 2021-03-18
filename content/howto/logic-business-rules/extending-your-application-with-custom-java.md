@@ -56,12 +56,12 @@ To edit the Java action in Eclipse, follow these steps:
 	{{% image_container width="400" %}}![](attachments/extend-custom-java/import2.png)
 	{{% /image_container %}}
 
-4.  Set the project directory as the root directory for this project and click **Finish**:
+4.  Set the app directory as the root directory for this app and click **Finish**:
 
 	{{% image_container width="400" %}}![](attachments/extend-custom-java/import3.png)
 	{{% /image_container %}}
 
-	{{% alert type="info" %}}If you don't know what the project directory is, select **App** > **Show App Directory in Explorer** in Studio Pro.
+	{{% alert type="info" %}}If you don't know what the app directory is, select **App** > **Show App Directory in Explorer** in Studio Pro.
 	{{% /alert %}}
 
 5.  Double-click **ReverseAssetName.java** in the **Package Explorer** of Eclipse:

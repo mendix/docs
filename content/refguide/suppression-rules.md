@@ -8,13 +8,13 @@ tags: ["Studio Pro", "consistency errors", "checks", "warnings"]
 
 ## 1 Introduction  {#intro}
 
-When you work on a project, Studio Pro performs consistency checks, which may result in warnings. Warnings identify issues that are not critical, but point to something that might be a problem. These warnings are shown in the **Errors** pane.
+When you work on an app, Studio Pro performs consistency checks, which may result in warnings. Warnings identify issues that are not critical, but point to something that might be a problem. These warnings are shown in the **Errors** pane.
 
 ![Warnings in the Errors pane](attachments/suppression-rules/errors-pane-with-warnings.png)
 
 While warnings can be valuable, there are some situations where you might want to disable them, such as the following ones:
 
-* You made a deliberate choice in your project that leads to a warning, and you know this will not lead to problems.
+* You made a deliberate choice in your app that leads to a warning, and you know this will not lead to problems.
 * You are using an Marketplace module that contains warnings and you do not want to change the Marketplace module.
 * The number of warnings is so large that the **Warnings** tab is not usable anymore, and you want to temporarily disable some of them.
 
@@ -22,9 +22,9 @@ With **Suppression rules** it is possible to disable warnings. You can [suppress
 
 ## 2 Suppression Rule Logic {#suppression-rules-logic}
 
-Suppression rules are for one user and for one instance of a project. The warnings that you suppress are not shared between users or projects, so warnings will not be suppressed for your team members working on the same project. 
+Suppression rules are for one user and for one instance of an app. The warnings that you suppress are not shared between users or apps, so warnings will not be suppressed for your team members working on the same app. 
 
-Suppression rules are stored locally in the project directory, in a file called *project-settings.user.json*. When committing your changes to the Team Server, Studio Pro will ignore this file. 
+Suppression rules are stored locally in the app directory, in a file called *project-settings.user.json*. When committing your changes to the Team Server, Studio Pro will ignore this file. 
 
 ![The settings file shown in Windows Explorer](attachments/suppression-rules/windows-explorer-showing-settings-files.png)
 
@@ -32,7 +32,8 @@ However, it is possible to export and import suppression rules manually. For mor
 
 ## 3 Suppressing a Warning in the Errors Pane {#suppress-warning}
 
-From the **Errors** pane, you can suppress a warning for a document, a module, or the entire project:
+From the **Errors** pane, you can suppress a warning for a document, a module, or the entire app:
+
 ![Suppressing a Warning](attachments/suppression-rules/suppressing-warning.png)
 
 ### 3.1 Suppressing a Warning for a Specific Document
@@ -57,16 +58,16 @@ To suppress a warning for a specific module, do the following:
 
 The warning is suppressed for the whole module. If the same warning appears in another module, it will still be displayed for that module.
 
-### 3.3 Suppress a Warning for the Entire Project
+### 3.3 Suppress a Warning for the Entire App
 
-To suppress a warning for the entire project, do the following:
+To suppress a warning for the entire app, do the following:
 
 1. Right-click the warning you would like to suppress.
 
 2. Select **Suppress this warning** > **For the entire project**.
 
 
-The warning is suppressed for the whole project and the list of warnings is updated in the **Errors** pane.
+The warning is suppressed for the whole app and the list of warnings is updated in the **Errors** pane.
 
 For more information on how to edit or delete a suppression rule, see the [Managing Suppression Rules](#managing-rules) section.
 

@@ -75,4 +75,4 @@ For settings overview, see [Runtime Customization](custom-settings).
 
 ## 3 Read More
 
-* [Project Settings](project-settings)
+* [App Settings](project-settings)

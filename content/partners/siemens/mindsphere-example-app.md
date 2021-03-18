@@ -216,7 +216,7 @@ To use the app:
 
 ### 6.1 Single Sign-On
 
-The app uses Single Sign-on (SSO) to identify the user. This is initiated in the *Runtime* tab of the Project Settings, where the microflow *MindSphereSingleSignOn.RegisterSingleSignOn* is called on startup. This microflow sets up two configurations for the user.
+The app uses Single Sign-on (SSO) to identify the user. This is initiated in the **Runtime** tab of the **App Settings**, where the microflow **MindSphereSingleSignOn.RegisterSingleSignOn** is called on startup. This microflow sets up two configurations for the user.
 
 #### 6.1.1 User Role
 

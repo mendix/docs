@@ -53,8 +53,8 @@ Default value: *300 seconds*
 
 **Proxy configuration** allows you to configure whether to use a proxy for the request:
 
-* **Use project settings** – use settings which are defined at the project level (default)
-* **Override** – override the project-level settings for this action by specifying the host, port, user name, and password settings for the proxy
+* **Use project settings** – use settings which are defined at the app level (default)
+* **Override** – override the app-level settings for this action by specifying the host, port, user name, and password settings for the proxy
 *  **No proxy** – do not use a proxy for this service, even if there is a proxy configured at the project level
 
 {{% alert type="info" %}}

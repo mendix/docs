@@ -98,7 +98,7 @@ There are two types of licenses currently available:
 
  After that limit is exceeded, an error will occur when users try to retrieve more data.
 
-The number of consumed objects per day is reset at midnight in the timezone of the Mendix Runtime scheduler (which can be defined in the app [Project Settings](project-settings#scheduled)).
+The number of consumed objects per day is reset at midnight in the timezone of the Mendix Runtime scheduler (which can be defined in the [App Settings](project-settings#scheduled)).
 
 {{% alert type="warning" %}}
 Contact your [Mendix Admin](/developerportal/control-center/#company) or Data Hub Admin to find out what type of license your organization has.

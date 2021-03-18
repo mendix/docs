@@ -86,7 +86,7 @@ In almost all cases, you can ignore this setting. **Use project settings** is a 
 
 If desired, you can configure whether to use a proxy for the request. These are the choices:
 
-* **Use project settings** – use whatever settings are defined at the project level (default)
+* **Use project settings** – use whatever settings are defined at the app level (default)
 * **Override** – override the project-level settings for this action
 * **No proxy** – do not use a proxy for this action, even if there is a proxy configured at the project level
 
@@ -100,8 +100,8 @@ However, you can specify a client certificate to use for the request by selectin
 
 The options are:
 
-* **Use project settings**(default) – use the settings that are defined at the project level 
-* **Override** – override the project-level settings for this action
+* **Use project settings**(default) – use the settings that are defined at the app level 
+* **Override** – override the app-level settings for this action
 
 When you select **Override**, you can configure which client certificate will be used. Click **Edit** to specify the **Client certificate identifier**. This identifier can be set in different places, depending on where you deploy the app:
 

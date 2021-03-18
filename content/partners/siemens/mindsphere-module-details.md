@@ -59,7 +59,7 @@ The MindSphereSingleSignOn module also provides three microflows which are used 
 
 This microflow must be added as the *After startup* microflow or added as a sub-microflow to an existing after startup microflow. You can do this on the *Runtime* tab of the *Project > Settings* dialog, accessed through the *App Explorer* dock.
 
-![Project settings dialog](attachments/mindsphere-module-details/image4.png)
+![App settings dialog](attachments/mindsphere-module-details/image4.png)
 
 #### 2.2.2 DS_MindSphereAccessToken
 

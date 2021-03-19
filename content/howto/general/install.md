@@ -40,7 +40,7 @@ Mendix Studio Pro can be installed on your machine with a Windows executable fil
 
 Mendix Studio Pro needs to be installed on your computer before you can start building apps. Follow these steps to install Mendix Studio Pro:
 
-1.  Open the downloaded Mendix Studio Pro executable. It is named like this: *Mendix-8.X.X-Setup*. Then click **Next**:
+1.  Open the downloaded Mendix Studio Pro executable. It is named like this: *Mendix-9.X.X-Setup*. Then click **Next**:
 
 	{{% image_container width="400" %}}![](attachments/install/setup-wizard.png)
 	{{% /image_container %}}

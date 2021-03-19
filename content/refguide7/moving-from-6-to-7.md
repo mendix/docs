@@ -3,6 +3,8 @@ title: "Moving from Modeler Version 6 to 7"
 category: "General"
 menu_order: 20
 description: "Provides details on updating your project from Mendix 6 to Mendix 7, including sections on converting your project and deprecated features."
+aliases:
+    - /refguide/moving-from-6-to-7.html
 ---
 
 ## 1 Introduction
@@ -46,11 +48,11 @@ For details on the removed and deprecated APIs, see the **Breaking changes** sec
 
 Now you are ready to convert, so simply open your project in the new Desktop Modeler. There are no explicit actions required after opening your Mendix 6 project in Mendix 7. When you deloy your app from the Modeler, double check all the domain model changes in the synchronization dialog box in order to avoid unexpected modifications. 
 
-### 3.1 Upgrading App Store Modules
+### 3.1 Upgrading Marketplace Modules
 
-After the conversion, verify if there is a newer version available of your App Store modules. Some modules need to be upgraded to make them Mendix 7-compatible. Reading the version release notes to see whether specific actions are required is recommended.
+After the conversion, verify if there is a newer version available of your Marketplace modules. Some modules need to be upgraded to make them Mendix 7-compatible. Reading the version release notes to see whether specific actions are required is recommended.
 
-In Mendix 7, the App Store modules used in your projects are grouped together in the Modeler. They can be found in **Project Explorer** under **Project** > **App store modules**.
+In Mendix 7, the Marketplace modules used in your projects are grouped together in the Modeler. They can be found in **Project Explorer** under **Project** > **App store modules**.
 
 ### 3.2 Double Checking Project Changes
 
@@ -78,7 +80,7 @@ We optimized the system to reduce the performance impact of enabling this by def
 
 ### 4.3 NPE Attribute-Level Security
 
-We have prohibited non-persistent entity (NPE) attribute-level security for attributes that do not have at least read access. The reason for this is that non-readable attributes cannot be sent to the client. A separate object (which is not sent to the client at all) should be used for these attributes instead.
+We have prohibited non-persistable entity (NPE) attribute-level security for attributes that do not have at least read access. The reason for this is that non-readable attributes cannot be sent to the client. A separate object (which is not sent to the client at all) should be used for these attributes instead.
 
 ### 4.4 Autocommitted Objects for System Sessions
 

@@ -11,7 +11,87 @@ These release notes cover changes to deployment to [Mendix Cloud](/developerport
 For information on the current status of deployment to Mendix Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
 
+## 2021
+
+### March 18th, 2021
+
+#### Improvements
+
+* We added the ability to completely clear all the data from your database running in a licensed environment.
+* We removed the ability to publish **App Services**. These have been deprecated for some time. You should use a [Published Web Service](/refguide/published-web-services) or a [Published REST Service](/refguide/published-rest-service) instead.
+
+#### Fix
+
+* We fixed an issue where deployments failed if there were too many log nodes. (Ticket 115140)
+
+    As a consequence of this, you will no longer be able to see the log levels of all your [log nodes](/developerportal/deploy/environments-details#log-levels) if your app is not running. Only log nodes which are not set to `Info` will be visible until you restart your app.
+
+### March 16th, 2021
+
+* We updated the Mendix runtime to send back usage information to Mendix for your apps deployed to the Mendix Cloud. See below for more information about this change.
+
+    This will be enabled the next time you redeploy your app. 
+
+**What happens to this information?**
+
+The sole purpose of retrieving this information is to check compliance against your license subscription. The information sent to Mendix allows us to provide you with clear insights into the exact usage of your apps and the number of active users in a given time-period. This can also help you in determining an optimum user plan in the long run.
+
+This information is eventually stored within Mendix and gives us an aggregated view of usage of your apps. 
+
+**What is the information sent back?**
+
+Usage information in this context is the username, project id, app environment name, and date & time of logon. 
+Note that **the username is scrambled using a hashing algorithm**, ensuring that the actual username cannot be discovered. 
+
+**Who is a user?**
+
+Everyone who logs onto the app with a username and password is considered an app user. All anonymous users are treated as a single user for this purpose.
+
+**When and how does this happen?**
+
+In connected environments, this usage information will be sent back to Mendix automatically, at regular intervals — by default this is set to once every day. This transmission will take place at around(randomized) midnight. Data will also be sent when the app is restarted. 
+
+### March 3rd, 2021
+
+* We updated the [deploy API](/apidocs-mxsdk/apidocs/deploy-api), [Build API](/apidocs-mxsdk/apidocs/build-api), [Team Server API](/apidocs-mxsdk/apidocs/team-server-api), [Backups API V2](/apidocs-mxsdk/apidocs/backups-api), and [Backups API V1](/apidocs-mxsdk/apidocs/backups-api-v1) to:
+    * add json validation
+    * add stricter API path validation (for example, a trailing `/` on the API path will result in `API not found`)
+    * return differently formatted error messages for unhandled or unexpected errors
+    * the package name in the [Upload Package](/apidocs-mxsdk/apidocs/deploy-api#upload-package) call of the deploy API must be part of the query — it can no longer be passed in the body of the request
+
+If you encounter errors using APIs, please ensure that the format matches the documentation exactly before contacting Mendix Support. Additional or amended headers or request bodies may cause the API to fail.
+
+### February 22nd, 2021
+
+* We have released a major improvement to the technology underpinning our integration with Datadog. This adds the following features:
+    * tracing program flow (see https://docs.datadoghq.com/tracing/setup_overview/setup/java for information on how Datadog does this)
+    * redacting email addresses in Datadog logs
+
+    You need to redeploy of your app to implement these changes. All your existing metrics will continue to be sent to Datadog. There will be some minor changes around how database rate and counter metrics, but this does not affect gauges. See [Datadog for v4 Mendix Cloud](/developerportal/operate/datadog-metrics) for more information.
+
+
 ## 2020
+
+### December 17th, 2020
+
+* We added the ability to allow customers to test beta features by adding certain allowed Custom Environment Variables. These can be added like Custom Environment Variables in Mendix Cloud v4 environment, using a text field beside the current dropdown.
+
+	For more information on custom environment variables, see [Runtime Tab](https://docs.mendix.com/developerportal/deploy/environments-details#custom-environment-variables) in the *Environment Details* documentation.
+
+* As part of a Developer Portal clean up, we removed the Model option from the DEVELOP section of the Developer Portal menu when you are looking at environments on Mendix Cloud. The functions of this page are still available via the Edit in Studio and Edit in Studio Pro buttons on the environments page.
+
+### December 8th, 2020
+
+* We changed the way Log Levels can be set in Mendix Cloud v4.
+    * For single-instance apps, the log level can be changed while the app is running.
+    * For a multi-instance app, the new log level will only be applied after a restart.
+
+    This is a requested improvement after the release of [December 3rd](#20201203). Note that changes to the log levels are still permanent as announced on December 3rd.
+
+### December 3rd, 2020{#20201203}
+
+* We added the ability to permanently change the Log Levels in Mendix Cloud v4 for an app so that they persist between restarts. This was in response to customer requests. (Ticket 101413)<br/>Log Levels will only become persistent after the next restart of your app, so you may have to set them one more time.<br/>For more information on log levels, see [Log Levels Tab](https://docs.mendix.com/developerportal/deploy/environments-details#log-levels) in the *Environment Details* documentation.
+* You can now retrieve the version of the buildpack used in deployment via the Deploy API [Retrieve Environment](/apidocs-mxsdk/apidocs/deploy-api#retrieve-environment) call. The version is returned as `RuntimeLayer`. You will need to redeploy your app to ensure it returns this in the API response.
 
 ### November 26th, 2020
 
@@ -25,6 +105,9 @@ For information on the current status of deployment to Mendix Cloud and any plan
 #### Improvements
 
 * We added support to generate 1024x1024 App Store icons for iOS.
+
+#### Fixes
+
 * We resolved an issue where an incorrect debugger password was sometimes shown for Mendix Cloud v4 apps in the Developer Portal. This meant that customers were not able to connect to the debugger. (Ticket 105317)
 
 ### October 26th, 2020

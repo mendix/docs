@@ -33,8 +33,8 @@ You’ll see an progress bar appear after clicking the ‘OK’ button once the 
     ![Step 4, a missing Runtime version](attachments/updating-a-mendix-app/18580697.png)
 2.  There are two ways to install the required server distribution:
 
-    1. If you are online and have access to the Mendix App Store, click **Download server** and the correct server distribution will be fetched and installed.
-    2. If you are offline or automatic downloading fails click **Add Server** and select the required server distribution (*.tar.gz*).  The server distribution can be found under the related downloads from the specific Mendix Studio Pro version on [home.mendix.com](http://home.mendix.com/). The server distribution is a *tar.gz* file. The Service Console will extract the server distribution to the same folder as the other server distributions.
+    1. If you are online and have access to the Mendix Marketplace, click **Download server** and the correct server distribution will be fetched and installed.
+    2. If you are offline or automatic downloading fails click **Add Server** and select the required server distribution (*.tar.gz*).  The server distribution can be found under the related downloads from the specific Mendix Studio Pro version on [home.mendix.com](http://sprintr.home.mendix.com/). The server distribution is a *tar.gz* file. The Service Console will extract the server distribution to the same folder as the other server distributions.
 
     After the server distribution is updated you’ll be able to start the Service using the new project and Mendix Runtime version. 
     ![Step 5, Choose the correct server distribution (.tar.gz)](attachments/updating-a-mendix-app/18580696.png)

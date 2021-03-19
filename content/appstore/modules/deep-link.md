@@ -1,8 +1,8 @@
 ---
 title: "Deep Link"
 category: "Modules"
-description: "Describes the configuration and usage of the Deep Link module, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "deep link", "platform support"]
+description: "Describes the configuration and usage of the Deep Link module, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "deep link", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -71,7 +71,7 @@ The **Deeplink.CreateDeeplinkConfig** microflow requires the following parameter
 
 ### 2.6 Handling Deep Link Requests
 
-After handling a request, this module will redirect to the homepage of your application. The homepage is configured in the app project's [Navigation](/refguide/navigation).
+After handling a request, this module will redirect to the homepage of your application. The homepage is configured in the app's [Navigation](/refguide/navigation).
 
 To open another page, the module needs to figure out what microflow is associated with the requested deep link. For this, you need to change the default homepage in your navigation to a custom microflow. If the default homepage is already a microflow, you need to modify it.
 

@@ -4,6 +4,8 @@ parent: "metrics"
 menu_order: 10
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v3."
 tags: ["Trends","v3","Mendix Cloud","Developer Portal"]
+aliases:
+    - /howtogeneral/mendixcloud/trends.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #Please do not rename the anchors in this document as they are used in links from the Developer Portal
 ---
@@ -23,12 +25,12 @@ If you don't know which Mendix Cloud version you are using, you can find out by 
 To view the **Trends**, you must have permission to **Access the Monitoring**.
 
 {{% alert type="info" %}}
-Only the [Technical Contact](../company-app-roles/technical-contact) is allowed to grant node permissions.
+Only the [Technical Contact](../collaborate/app-roles#technical-contact) is allowed to grant node permissions.
 {{% /alert %}}
 
 Assign permission by following these steps:
 
-1. Open your app in the [Developer Portal](http://home.mendix.com).
+1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
 2. Click **Security** under the **Settings** category on the left.
 3. Go to the **Node Permissions** tab.
 4. Choose the environment for which you want to grant access.
@@ -42,7 +44,7 @@ Assign permission by following these steps:
 
 You can find the trends by following these steps:
 
-1. Open your app in the [Developer Portal](http://home.mendix.com).
+1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
 2. Click **Metrics** under the **Operate** category.
 3. Select the environment you want to monitor under the tab **Trends**.
 

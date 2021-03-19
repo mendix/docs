@@ -16,7 +16,7 @@ The Call Rest activity can be used to call a Rest endpoint. You can specify the 
 
 ### Location
 
-This property defines the REST endpoint to be called. The location needs to be entered using a string template. The string template should result in a valid URL string. Parameters can be used by writing a number between braces, e.g. '{1}'. For each parameter in the template you can specify its value using a [microflow expression](microflow-expressions) resulting in a String value. To escape opening brace '{' double opening brace should be used, e.g. '&#123;&#123;'.
+This property defines the REST endpoint to be called. The location needs to be entered using a string template. The string template should result in a valid URL string. Parameters can be used by writing a number between braces, for example, '{1}'. For each parameter in the template you can specify its value using a [microflow expression](microflow-expressions) resulting in a String value. To escape opening brace '{' double opening brace should be used, for example, '&#123;&#123;'.
 
 ### HTTP method
 
@@ -62,7 +62,7 @@ The 'Binary for the entire request' option is available from Mendix 6.9.0.
 
 ### Custom request template
 
-This option allows you to generate the request using a string template. The template defines the structure of the request in plain text. Parameters can be used by writing a number between braces, e.g. '{1}'. For each parameter in the template you can specify its value using a [microflow expression](microflow-expressions) resulting in a String value. To escape opening brace '{' double opening brace should be used, e.g. '&#123;&#123;'.
+This option allows you to generate the request using a string template. The template defines the structure of the request in plain text. Parameters can be used by writing a number between braces, for example, '{1}'. For each parameter in the template you can specify its value using a [microflow expression](microflow-expressions) resulting in a String value. To escape opening brace '{' double opening brace should be used, for example, '&#123;&#123;'.
 
 ![](attachments/19203256/19399084.png)
 

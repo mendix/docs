@@ -22,7 +22,7 @@ This how-to is focused on implementing and understanding the TimeSeries Connecto
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have the Mendix Desktop Modeler 6.6 or higher installed ([download](https://appstore.home.mendix.com/link/modeler/))
-* Have the [Community Commons Function Library](/appstore/modules/community-commons-function-library) in your app project
+* Have the [Community Commons Function Library](/appstore/modules/community-commons-function-library) in your app
 
 ## 3 Sign Up for the TimeSeries Connector
 
@@ -34,7 +34,7 @@ Follow these steps to get access to the TimeSeries connector and receive an API 
   It can take up to a few hours to generate the key and send it to you. This key is used to activate and access your TimeSeries Analytics instance.
   {{% /alert %}}
 
-2. After you receive the key, import the TimeSeries Connector module from the [Mendix App Store](https://appstore.home.mendix.com/link/app/31951/TimeSeries/TimeSeries-Connector "Click here for awesomeness") into your project.
+2. After you receive the key, import the TimeSeries Connector module from the [Mendix Marketplace](https://appstore.home.mendix.com/link/app/31951/TimeSeries/TimeSeries-Connector "Click here for awesomeness") into your project.
 
 ## 4 Configure the Module Settings
 

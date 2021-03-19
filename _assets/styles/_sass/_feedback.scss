@@ -1,7 +1,3 @@
-body.feedback-lock div#content div {
-    -webkit-overflow-scrolling: auto!important;
-}
-
 .sprintrFeedbackNode {
 	color: white;
 	cursor: pointer;
@@ -19,68 +15,6 @@ body.feedback-lock div#content div {
   	-webkit-box-shadow: -1px 0 5px rgba(28, 59, 86, 0.2);
   	background: #1b3149 url('/public/images/feedback-new.png') center center no-repeat;
 }
-.sprintrFeedback {
-	position : absolute;
-	margin : auto auto;
-	border : none;
-	padding: 15px 0 0 0;
-	background-color: #F9F9FA;
-    box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.30);
-}
-.sprintrFeedback.feedbackMessageShowing {
-    padding: 0;
-    background-color: transparent;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-.sprintrFeedbackFormBg.sprintrIEonly {
-	filter : alpha(opacity=35) !important;
-	background : #000;
-}
-.sprintrFeedbackFormBg {
-	background-color: rgba(0, 0, 0, 0.35);
-}
-.sprintrFeedbackFormBg {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	z-index: 10000;
-	top: 0;
-	left: 0;
-}
-.sprintrFeedbackContainer {
-	position: absolute !important;
-	z-index: 10001 !important;
-	top : 0;
-    left : 0;
-    cursor: move;
-}
-.sprintrImagePreview {
-	position: absolute;
-	top:0px;
-	left:0px;
-	width:100%;
-	text-align:center;
-	height:100%;
-}
-.sprintrImage {
-	background-color : white;
-	position : absolute;
-	margin : auto auto;
-	z-index : 10002;
-	border: 5px solid #666;
-}
-.snapshot-notification { 
-    background-color: #000; 
-    color: white; 
-    height: 40px; 
-    line-height: 40px; 
-    padding: 0px 15px; 
-    z-index: 10002;
-    font-weight: bold; 
-    font-size: 13px; 
-}
 
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -95,70 +29,5 @@ body.feedback-lock div#content div {
         width: 35px;
         z-index: 9999;
         top: 25%;
-    }
-    
-    .sprintrFeedback {
-        position : absolute;
-        margin : auto auto;
-        border : none;
-        padding-top: 23px;
-        cursor: move;
-        background: #FFF;
-        border-radius: 8px;
-        box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-    }
-    
-    .sprintrFeedback.feedbackMessageShowing {
-        background-color: transparent;
-        box-shadow: none;
-    }
-    
-    .sprintrFeedbackFormBg {
-        filter : alpha(opacity=35) !important;
-        background : #000;
-    }
-    .sprintrFeedbackFormBg {
-        background-color: rgba(0, 0, 0, 0.35);
-    }
-    .sprintrFeedbackFormBg {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 10000;
-        top: 0;
-        left: 0;
-    }
-    .sprintrFeedbackContainer {
-        position: absolute !important;
-        text-align: center;
-        z-index: 10001;
-    }
-    .sprintrImagePreview {
-        position: absolute;
-        top:0px;
-        left:0px;
-        width:100%;
-        text-align:center;
-        height:100%;
-    }
-    .sprintrImage {
-        background-color : white;
-        position : absolute;
-        margin : auto auto;
-        z-index : 10002;
-    }
-    
-    .dj_ie8 .sprintrFeedback { /* dj_ie8 only in mendix client */
-        border: 1px solid #666;
-    }
-    .snapshot-notification { 
-        background-color: #000; 
-        color: white; 
-        height: 40px; 
-        line-height: 40px; 
-        padding: 0px 15px; 
-        z-index: 10002;
-        font-weight: bold; 
-        font-size: 13px; 
     }
 }

@@ -3,6 +3,8 @@ title: "Validation Feedback"
 parent: "client-activities"
 menu_order: 70
 tags: ["studio pro", "validation feedback", "client activities"]
+aliases:
+    - /refguide/Validation+Feedback.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -51,7 +53,7 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.3 Template
 
-**Template** is the message that will be shown to the end-user. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2, etc.
+**Template** is the message that will be shown to the end-user. The template can contain parameters that are written as a number between braces, for example, {1}. The first parameter has number 1, the second 2, etc.
 
 {{% alert type="warning" %}}
 

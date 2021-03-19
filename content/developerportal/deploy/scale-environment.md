@@ -43,7 +43,7 @@ Details of your plan are also displayed on the environment details page.
 
 If you want to scale your licensed app in Mendix Cloud v4, follow these steps:
 
-1. Go to the [Developer Portal](http://home.mendix.com) and select your licensed app.
+1. Go to the [Developer Portal](http://sprintr.home.mendix.com) and select your licensed app.
 
 2. Click **Environments** to go to the environments page.
 
@@ -82,10 +82,8 @@ For example, you can use one instance with 4GiB RAM. The remaining 12GiB in your
 * [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
 * [Deployment](index)
 * [Environment Details](environments-details)
-* [Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
 * [Mendix Cloud](mendix-cloud-deploy)
 * [Mendix Cloud v4](mxcloudv4)
 * [Migrate to Mendix Cloud v4](migrating-to-v4)
-* [Company & App Roles](/developerportal/company-app-roles/index)
+* [App Roles](/developerportal/collaborate/app-roles)
 * [Node Permissions](/developerportal/deploy/node-permissions)
-* [Technical Contact](/developerportal/company-app-roles/technical-contact)

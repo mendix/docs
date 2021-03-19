@@ -10,7 +10,7 @@ tags: ["runtime", "web socket", "endpoint", "java"]
 
 The Mendix Runtime supports registering custom web socket endpoints using the `javax.websocket` API.
 
-All you need to do is to use the method `Core.addWebSocketEndpoint(String path, Endpoint endpoint)` to register an instance of `javax.websocket.Endpoint` to respond to web socket requests on the given path.
+All you need to do is to use the method `Core.addWebSocketEndpoint(String path, Endpoint endpoint)` to register an instance of `javax.websocket.Endpoint` to respond to web socket requests on the given path. The Session ID of the client can be obtained from the `EndpointConfig` given in the `onOpen` method of the `Endpoint`.
 
 {{% alert type="info" %}}
 As with `Core#addRequestHandler`, adding a web socket end point only happens on the current cluster node. It is therefore a good practice to call it in an **After Startup** microflow.
@@ -31,19 +31,25 @@ import javax.websocket.Session;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
+
+import com.mendix.core.Core;
 
 public class TestEndpoint extends Endpoint {
   Set<Session> sessions = new HashSet<>();
 
   @Override
   public void onOpen(Session session, EndpointConfig config) {
+    String sessionId = (String) config.getUserProperties().get("mxSessionId");
+    ISession mxSession = Core.getSessionById(UUID.fromString(sessionId));
+    String username = mxSession.getUserName();
     sessions.add(session);
     session.addMessageHandler(new MessageHandler.Whole<String>() {
       @Override
       public void onMessage(String message) {
         if ("test message".equals(message)) {
           try {
-            session.getBasicRemote().sendText("test response");
+            session.getBasicRemote().sendText("test response:" + username);
             session.close();
           } catch (IOException e) {
             e.printStackTrace();
@@ -70,4 +76,4 @@ public class TestEndpoint extends Endpoint {
 If this endpoint is registered by calling `Core.addWebSocketEndpoint("/my-endpoint", new websockets.TestEndpoint());` then the following functionality is available at `ws://.../my-endpoint`:
 
 * When a connection is established, the server will send the message `socket opened`
-* If the client sends the message `test message`, the server responds with `test response` and closes the web socket
+* If the client sends the message `test message`, the server responds with `test response: USERNAME` and closes the web socket

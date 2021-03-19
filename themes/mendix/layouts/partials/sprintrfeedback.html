@@ -1,4 +1,0 @@
-{{- $env := getenv "HUGO_ENV" -}} 
-{{- if eq $env "production" -}}
-{{ partial "asset" (dict "page" . "type" "js" "filename" "sprintrfeedback.js") }}
-{{- end -}}

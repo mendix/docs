@@ -54,4 +54,4 @@ Some of the possibilities are:
 
 *   Batch updating page elements and labels
 *   Reorganizing the layout of your app model in the blink of an eye
-*   Exposing your microflows as Web Service/App Service and your entities as OData resources
+*   Exposing your microflows as web services and your entities as OData resources

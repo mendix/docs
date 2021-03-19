@@ -1,8 +1,8 @@
 ---
 title: "Simple Check Box Set Selector"
 category: "Widgets"
-description: "Describes the configuration and usage of the Simple Check Box Set Selector widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "simple check box set selector", "check box", "platform support"]
+description: "Describes the configuration and usage of the Simple Check Box Set Selector widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "widget", "simple check box set selector", "check box", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -22,7 +22,7 @@ The [Simple Check Box Set Selector](https://appstore.home.mendix.com/link/app/23
 
 ## 2 Installation
 
-After importing the widget into your app project, add it to a [data view](/refguide/data-view) on a page. Then, configure the properties to determine how the widget will behave in your application.
+After importing the widget into your app, add it to a [data view](/refguide/data-view) on a page. Then, configure the properties to determine how the widget will behave in your application.
 
 ## 3 Read More
 

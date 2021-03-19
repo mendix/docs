@@ -2,6 +2,10 @@
 title: "App Modeling"
 description: "Describes the various features used for modeling in Mendix Studio Pro, including document templates, the domain model, microflows, modules, pages, and security."
 tags: ["Mendix", "Studio Pro", "Documents"]
+aliases:
+    - /refguide/desktop-modeler.html
+    - /refguide/modeler.html
+    - /refguide/Modeler.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.1 Introduction
 ---
 
@@ -9,7 +13,7 @@ tags: ["Mendix", "Studio Pro", "Documents"]
 
 Mendix Studio Pro allows you to create, view, and edit your Mendix applications. This category of documentation describes the functionality used for modeling your app in Studio Pro. 
 
-*App modeling* is a process of creating and configuring an app, such as creating pages, adding data and logic, configuring security, and integrating with other applications. As well as Studio Pro, you can also model apps in [Mendix Studio](/studio/index).
+*App modeling* is a process of creating and configuring an app, such as creating pages, adding data and logic, configuring security, and integrating with other applications. As well as Studio Pro, you can also model apps in [Mendix Studio](/studio/).
 
 For more introductory information, see [Studio Pro Overview](studio-pro-overview).
 

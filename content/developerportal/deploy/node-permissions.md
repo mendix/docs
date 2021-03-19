@@ -10,11 +10,11 @@ tags: ["Node","Permission","Developer Portal"]
 
 Fine-grained access management for your Mendix Cloud environments is handled in the **Node Permissions** tab of the **Security** page for your app. See [App Settings](/developerportal/settings).
 
-Here, the [Technical Contact](/developerportal/company-app-roles/technical-contact) can manage various permissions to the environments for each team member.
+Here, the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) can manage various permissions to the environments for each team member.
 
 Each team member can subscribe to, or unsubscribe from, the alerts,
 
-See [Company & App Roles](/developerportal/company-app-roles/index) to learn more about the roles of app team members.
+See [App Roles](/developerportal/collaborate/app-roles) to learn more about the roles of app team members.
 
 ## 2 Node Permissions
 
@@ -95,7 +95,7 @@ For example, to access backups via the API you need *Access to Backups* in addit
 
 #### 2.3.5 Access to Monitoring
 
-With the Access to Monitoring permission, you can view the application metrics, logs, and alerts under the **Operate** category in the [Developer Portal](http://home.mendix.com). This allows you to successfully operate your Mendix Cloud environments.
+With the Access to Monitoring permission, you can view the application metrics, logs, and alerts under the **Operate** category in the [Developer Portal](http://sprintr.home.mendix.com). This allows you to successfully operate your Mendix Cloud environments.
 
 For more information, see [Metrics](/developerportal/operate/metrics), [Logs](/developerportal/operate/logs), and [Alerts](/developerportal/operate/monitoring-application-health).
 
@@ -115,4 +115,4 @@ A cloud node has a single Technical Contact. They manage the cloud node and can 
 
 The Technical Contact can give the technical contact role to another team member. Click **Change to Technical Contact** under the user who should be the new Technical Contact. After this, the new user has the Technical Contact role, the old user does not.
 
-For full details of the role of the Technical Contact, see [Technical Contact](/developerportal/company-app-roles/technical-contact).
+For full details of the role of the Technical Contact, see [Technical Contact](/developerportal/collaborate/app-roles#technical-contact).

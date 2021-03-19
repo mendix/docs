@@ -8,7 +8,7 @@ tags: ["Authenticator","Developer Portal","Cloud","Permissions", "Google", "2FA"
 
 ## 1 Introduction
 
-In the **Deploy** and **Operate** categories of the [Developer Portal](http://home.mendix.com), there are several operations that require **Two-Factor Authentication** (2FA). In addition, Technical Contacts are required to use 2FA with their Mendix account when they access licensed cloud node details, specifically for transporting MDA files (deployment archives) to the production environment.
+In the **Deploy** and **Operate** categories of the [Developer Portal](http://sprintr.home.mendix.com), there are several operations that require **Two-Factor Authentication** (2FA). In addition, Technical Contacts are required to use 2FA with their Mendix account when they access licensed cloud node details, specifically for transporting MDA files (deployment archives) to the production environment.
 
 This document describes the purpose and the functionality of two-factor authentication.
 
@@ -102,4 +102,3 @@ For more information, see [Node Permissions](node-permissions).
 
 * [Deploy and Manage](/developerportal/deploy)
 * [Settings](/developerportal/settings)
-* [Technical Contact](/developerportal/company-app-roles/technical-contact)

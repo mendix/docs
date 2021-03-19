@@ -88,6 +88,6 @@ A JSON array is contained in square brackets (between `[` and `]`). It contains 
 
 {{% alert type="info" %}}
 
-The first item of the array will be used to determine the type of the items in the array. Mixed arrays are unsupported. A mixed array is an array with entries of different data types (e.g. string and integer). In the tree structure, a error will appear that you cannot use mixed arrays in your mappings.
+The first item of the array will be used to determine the type of the items in the array. Mixed arrays are unsupported. A mixed array is an array with entries of different data types (for example, string and integer). In the tree structure, a error will appear that you cannot use mixed arrays in your mappings.
 
 {{% /alert %}}

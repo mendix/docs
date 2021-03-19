@@ -24,7 +24,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 2 Choosing Your App Template
 
-In the [Developer Portal](https://sprintr.home.mendix.com/index.html), click **Create App**.You will see a number of apps marked with **ATLAS UI**, which are Atlas UI-based app templates. You can select one to get started.
+In the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html), click **Create App**.You will see a number of apps marked with **ATLAS UI**, which are Atlas UI-based app templates. You can select one to get started.
 
 ![App template in Developer Portal](attachments/get-started-with-atlasui/start_choose_your_starter_app.png)
 
@@ -70,7 +70,7 @@ The [Theme Customizer](/studio/theme-customizer) allows you to customize your ap
 
 * [How to Create Custom Preview Images for Building Blocks & Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
 * [How to Extend Design Properties to Customize Your Studio Experience](extend-design-properties-to-customize)
-* [How to Migrate Existing App Projects to Atlas UI](migrate-existing-projects-to-atlasui)
+* [How to Migrate Existing Apps to Atlas UI](migrate-existing-projects-to-atlasui)
 * [How to Share Company Atlas UI Resources](share-company-atlas-ui-resources)
 * [General Info](/studio/general) 
 * [Page Editor](/studio/page-editor)

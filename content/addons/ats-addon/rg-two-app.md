@@ -63,7 +63,7 @@ The **Tester** role is assigned to a user when they have at least one Team Serve
 
 ### 2.2 App Admin
 
-The **App Admin** role is assigned to a user when they have the app settings permission of the Team Server project in the Developer Portal. The app settings permission is by default part of the SCRUM Master role in the Developer Portal. An App Admin also has access to the app settings page described in the next section.
+The **App Admin** role is assigned to a user when they have the app settings permission of the Team Server project in the Developer Portal. The app settings permission is by default part of the Scrum Master role in the Developer Portal. An App Admin also has access to the app settings page described in the next section.
 
 ## 3 Settings
 
@@ -116,7 +116,7 @@ Starting with ATS verson 2.0, ATS capabilites override custom capabilities.
 
 Under **App Team**, you can specify which app members have what type of access rights for an app.
 
-By default, app members with the SCRUM Master app project role in the Developer Portal will have administrative rights. All other members of the app will get the default role configured for that app. Please keep in mind that users still need to be a member of an app project in the Developer Portal for them to be eligible to be app administrators for the corresponding app in ATS.
+By default, app members with the Scrum Master role in the Developer Portal will have administrative rights. All other members of the app will get the default role configured for that app. Please keep in mind that users still need to be a member of an app in the Developer Portal for them to be eligible to be app administrators for the corresponding app in ATS.
 
 App member that the have a No access role will not see the app in their **My apps** page and will not be able to open or edit or run any test cases for this app.
 
@@ -129,7 +129,7 @@ In order to make sure that the administration rights granted to users are not ov
 Finally, note that a user who has an administrative project role in the Developer Portal will always have administrative rights in ATS.
 
 {{% alert type="info" %}}
-If an app project lacks a Mendix app ID, the app roles will not be synced with the Developer Portal.
+If an app lacks a Mendix app ID, the app roles will not be synced with the Developer Portal.
 {{% /alert %}}
 
 ### 3.4 Execution Log Cleanup

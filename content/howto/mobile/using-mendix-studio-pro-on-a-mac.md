@@ -1,7 +1,7 @@
 ---
-title: "Build Native Mobile Apps with Parallels"
-parent: "build-native-apps"
-menu_order: 20
+title: "Configure Parallels"
+parent: "native-mobile"
+menu_order: 78
 description: "This how-to will allow you to start making Mendix native mobile apps on your Mac device."
 tags: ["Native", "Parallels", "Mac", "Mobile"]
 ---
@@ -62,6 +62,10 @@ Congratulations! You have successfully configured port forwarding to enable test
 
 {{% alert type="warning" %}}
 Whenever you create or open a Mendix app in Mendix Studio Pro, be sure to do so from a mapped drive instead of a network drive.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+If you experience issues connecting with the Make It Native app, make sure your firewall is not preventing a connection. For information resolving Windows Defender and other firewall-related issues, see the [Error: Unable to Load Script](/howto/mobile/common-issues#unable-load-script) section of *Troubleshoot Common Native Mobile Issues*
 {{% /alert %}}
 
 Read the tips and steps below to view your app on your testing device:

@@ -30,9 +30,9 @@ You can see if your app has the Mendix SSO module, and which version it has, by 
 
 ![](attachments/mendix-sso/mxsso-app-store-module.png)
 
-If your app does not have the Mendix SSO module, it is available from the Mendix App Store [here](https://appstore.home.mendix.com/link/app/111349/). Follow the instructions in [How to Use App Store Content in Studio Pro](/appstore/general/app-store-content) to import it into your app and then follow the instructions in [Setting Up Mendix Single Sign-On](#setting-up), below.
+If your app does not have the Mendix SSO module, it is available from the Mendix Marketplace [here](https://appstore.home.mendix.com/link/app/111349/). Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content) to import it into your app and then follow the instructions in [Setting Up Mendix Single Sign-On](#setting-up), below.
 
-If you need a newer version of the Mendix SSO module (for example, to use a new feature), then it is also available from the App Store via the same link.
+If you need a newer version of the Mendix SSO module (for example, to use a new feature), then it is also available from the Marketplace via the same link.
 
 ## 2 Using Mendix SSO
 
@@ -116,7 +116,7 @@ All files installed by Mendix SSO are marked with `.MendixSSO.RequiredLib`. Once
 
 ## 4 Setting Up Mendix Single Sign-On{#setting-up}
 
-These instructions are for apps which did not originally have the Mendix SSO module. For example, if you have an existing app which did not have the Mendix SSO App Store module.
+These instructions are for apps which did not originally have the Mendix SSO module. For example, if you have an existing app which did not have the Mendix SSO Marketplace module.
 
 {{% alert type="info" %}}
 You do not have to follow these steps for apps (for example, app templates) which already have Mendix SSO, or if you are upgrading an existing Mendix SSO module to a newer version.
@@ -124,7 +124,7 @@ You do not have to follow these steps for apps (for example, app templates) whic
 
 To enable Mendix SSO in your app, follow these steps:
 
-1. Import the [Mendix SSO module](https://appstore.home.mendix.com/link/app/111349/) from the Mendix App Store.
+1. Import the [Mendix SSO module](https://appstore.home.mendix.com/link/app/111349/) from the Mendix Marketplace.
 
 2. Add the microflow **MendixSSO_AfterStartup** to the **After startup** microflow by performing the following steps:
     1. Open **Project Settings** from the **Project Explorer**.
@@ -179,7 +179,7 @@ Your app is now configured to use Mendix Single Sign-on when it is deployed to t
 
 The [Mendix SSO module](/appstore/modules/mendix-sso) comes with a default implementation of end-user administration. This default end-user administration is sufficient for most apps. However, you can create your own administration module if you want to do things in a different way.
 
-There are two ways you can modify the Mendix SSO module. You can use snippets from the App Store module Mendix SSO in your pages, or you can modify the Mendix SSO module in any way you like to support your end-user administration requirements.
+There are two ways you can modify the Mendix SSO module. You can use snippets from the Marketplace module Mendix SSO in your pages, or you can modify the Mendix SSO module in any way you like to support your end-user administration requirements.
 
 These two ways are described below.
 
@@ -206,7 +206,7 @@ The default Mendix SSO implementation is based on snippets. You can use these sn
 ### 5.2 Modifying Mendix SSO
 
 {{% alert type="warning" %}}
-We recommend that you do not modify the version of Mendix SSO which is in the App Store modules section of your project. In future, you may wish to import a newer version of the module and this will overwrite any changes you make.
+We recommend that you do not modify the version of Mendix SSO which is in the Marketplace modules section of your project. In future, you may wish to import a newer version of the module and this will overwrite any changes you make.
 {{% /alert %}}
 
 The Mendix SSO module is written so that you can create a user entity in another module and use this entity to store the user information and as the basis of a new administration module.

@@ -1,8 +1,8 @@
 ---
 title: "Progress Bar"
 category: "Widgets"
-description: "Describes the configuration and usage of the Progress Bar widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "progress bar", "bootstrap", "platform support"]
+description: "Describes the configuration and usage of the Progress Bar widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "widget", "progress bar", "bootstrap", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -16,9 +16,9 @@ The [Progress Bar](https://appstore.home.mendix.com/link/app/48910/) widget disp
 * Render bar types: plain, striped, or animated stripes
 * Use bar Bootstrap colors: success, info, warning, or danger
 
-### 1.2 Demo App Project
+### 1.2 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](https://progressbar-demo.mxapps.io/).
+For a demo app that has been deployed with this widget, see [here](https://progressbar-demo.mxapps.io/).
 
 ## 2 Usage
 
@@ -32,7 +32,7 @@ Depending on the specified Bootstrap style (primary, success, info, warning, dan
 
 For negative progress values, the bar is drawn from right to left.
 
-## 3 Developing This App Store Component
+## 3 Developing This Marketplace Component
 
 1. Install the following:
 	* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)

@@ -94,12 +94,12 @@ When the resources are ready to be shared with multiple developers or apps, the 
 
 ![](attachments/howto/export_ui_module.png)
 
-The module can now be imported in other apps or uploaded to the [Mendix App Store](https://appstore.home.mendix.com/index3.html). There is an option to make the resource module available for private use only so that everybody in your company can benefit from and extend the module.
+The module can now be imported in other apps or uploaded to the [Mendix Marketplace](https://appstore.home.mendix.com/index3.html). There is an option to make the resource module available for private use only so that everybody in your company can benefit from and extend the module.
 
 ## 6 Read More
 
 * [Get Started with Atlas UI](get-started-with-atlasui)
 * [Create Custom Preview Images for Building Blocks & Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
 * [Extend Design Properties to Customize Your Studio Experience](extend-design-properties-to-customize)
-* [Migrate Existing App Projects to Atlas UI](migrate-existing-projects-to-atlasui)
+* [Migrate Existing Apps to Atlas UI](migrate-existing-projects-to-atlasui)
 * [Share Company Atlas UI Resources](share-company-atlas-ui-resources)

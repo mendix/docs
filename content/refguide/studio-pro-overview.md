@@ -4,6 +4,8 @@ category: "App Modeling"
 description: "Describes Studio Pro in general: tabs, menus, shortcut keys."
 menu_order: 10
 tags: ["Studio Pro"]
+aliases:
+    - /refguide/desktop-modeler-overview.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
@@ -28,7 +30,7 @@ The Studio Pro top bar contains the following items:
 
 * [Menus](#menus) 
 * [Buttons to run and view your app](#run-and-view)
-* [Links to the Developer Portal and App Store](#links) 
+* [Links to the Developer Portal and Marketplace](#links) 
 
 ### 2.1 Menus {#menus}
 
@@ -44,9 +46,9 @@ For more information on deployment in Mendix, see [Deployment](/developerportal/
 
 For more information on deploying your app and versioning it, see  the [Versioning a Project Deployed to the Cloud](using-version-control-in-studio-pro#versioning-project) section in *Using Version Control in Studio Pro*. 
 
-### 2.3 Links to Developer Portal & App Store {#links}
+### 2.3 Links to the Developer Portal & Marketplace {#links}
 
-You can find links to the [Developer Portal](/developerportal/index) and [App Store](/appstore/index) in the top-right corner of Studio Pro.
+You can find links to the [Developer Portal](/developerportal/) and [Marketplace](/appstore/) in the top-right corner of Studio Pro.
 
 Your account is displayed next to these buttons if you are signed in. Click the account name to navigate to your apps, the Developer Portal, your profile, or to sign out. 
 
@@ -147,7 +149,7 @@ The following shortcut keys are available in the microflow editor:
 
 ### 7.5 Microflow Debugger Shortcut Keys {#debugger-shortcuts}
 
-The following shortcut keys are available for the the microflow debugger:
+The following shortcut keys are available for the microflow debugger:
 
 | Key | Description |
 | --- | --- |

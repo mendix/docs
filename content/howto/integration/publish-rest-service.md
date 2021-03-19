@@ -24,7 +24,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To create the example project you will use in the next sections for publishing your REST service, follow these steps:
 
-1. Create a new app project and rename the **MyFirstModule** module to **RESTExample**.
+1. Create a new app and rename the **MyFirstModule** module to **RESTExample**.
 2. Open the domain model of the RESTExample module.
 3.  Create entities with an association like this:
 
@@ -202,12 +202,6 @@ To add the error handling for those situations when the OrderID parameter is fil
 
 3. Test your new error responses as you did with the app in section [4.3 Viewing the App](#viewing).
 
-## 6 Example
-
-**How to publish REST in Studio Pro 8**
-
-{{% youtube Ff_P84NOcZk %}}
-
-## 7 Read More
+## 6 Read More
 
 * For more information on creating published REST services in Mendix (including GET, POST, and DELETE operations), see [Published REST Services](/refguide/published-rest-services)

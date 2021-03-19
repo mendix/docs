@@ -58,9 +58,9 @@ There is no clear way to identify this, so to ensure you have the latest version
 
 This behavior impacts microflows in a similar way. Therefore, the best practice here is to reload an object as soon as you have committed changes to another reference of (potentially) the same object.
 
-### 6.3 Impact of Using Non-Persistent Entities & Changed Entities in Microflows and Java Actions
+### 6.3 Impact of Using Non-persistable entities & Changed Entities in Microflows and Java Actions
 When a user calls a microflow from the client, a copy of the state is sent with the request to the runtime. This copy stays at the runtime and is updated by the runtime during processing of this request. After the request has finished processing, it will return to the client, which will update its client state with the information returned by the response.
 
-On the server side, this state can only be accessed by that request handling action. This means that it is no longer possible to query the state of a non-persistent entity when it is updated by another request, other than via the client (as the other request needed to return this non-persistent entity to the client, which in turn sends this with a subsequent request to the server). 
+On the server side, this state can only be accessed by that request handling action. This means that it is no longer possible to query the state of a non-persistable entity when it is updated by another request, other than via the client (as the other request needed to return this non-persistable entity to the client, which in turn sends this with a subsequent request to the server). 
 
 When a request triggers an asynchronous action on the runtime, it gets the state as it was from the moment it was initiated. You can only track the action by the client and get its updated state when the asynchronous action is finished if this action was asynchronously executed by the client. When the asynchronous action is triggered on the runtime using a Java Action, the state updates can not be tracked by the client (similar to refresh, datavalidation and other instructions).

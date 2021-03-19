@@ -4,7 +4,6 @@ parent: "consistency-errors"
 menu_order: 10
 description: "Describes consistency errors in the page editor in Mendix Studio and the way to fix them."
 tags: ["studio", "consistency errors", "checks", "errors", "page editor"]
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 
@@ -182,7 +181,7 @@ Now the *Customer* object is available on the page and it matches the microflow 
 
 When you set a microflow as an on-click action for a widget, and this microflow expects a certain data (for example, an object), but a different object is available to the widget, this will result in an error. 
 
-For example, on a page called *Customers* you have a button that calls a microflow (i.e. an **On Click Action** of the button is set to *Microflow*):
+For example, on a page called *Customers* you have a button that calls a microflow (meaning, an **On Click Action** of the button is set to *Microflow*):
 
 ![](attachments/consistency-errors-pages/button-on-click-action.png)
 

@@ -1,8 +1,8 @@
 ---
 title: "Web Actions"
 category: "Modules"
-description: "Describes the configuration and usage of the Web Actions module, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "platform support", "web actions"]
+description: "Describes the configuration and usage of the Web Actions module, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "platform support", "web actions"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

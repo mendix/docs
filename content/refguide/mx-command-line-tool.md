@@ -3,7 +3,7 @@ title: "mx Command-Line Tool"
 category: "General Info"
 menu_order: 50
 description: "Describes the options of the mx command-line tool"
-tags: ["mx", "project", "project package", "command-line", "tool", "mx", "studio pro", "windows", "linux"]
+tags: ["mx", "project", "command-line", "tool", "mx", "studio pro", "windows", "linux"]
 ---
 
 ## 1 Introduction

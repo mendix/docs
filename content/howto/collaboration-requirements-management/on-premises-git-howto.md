@@ -240,7 +240,7 @@ If you already have an existing versioned app (with Subversion) that you would l
 
     ![Progress dialog](attachments/on-premises-git-howto/progress-dialog.png)
 
-4.  Now you can import the project package again, and from there you can choose to upload it to your Git private server. Go to **File** > **Import App Package**:
+4.  Now you can import the package again, and from there you can choose to upload it to your Git private server. Go to **File** > **Import App Package**:
 
     {{% image_container width="250" %}}![Import App Package menu](attachments/on-premises-git-howto/import-project-package-menu.png){{% /image_container %}}
 
@@ -249,7 +249,7 @@ If you already have an existing versioned app (with Subversion) that you would l
 7. In the **Private Server Type** option, select **Git** (if you have both **Subversion** and **Git** enabled in the **Preferences** form). 
 8.  Enter the link to the private repository in the address textbox and click **OK**. Remember, the repository **must be completely empty**, or **Studio Pro** will not be able to upload a project to it:
 
-    ![Import Git Project Package menu](attachments/on-premises-git-howto/import-project-package-git-dialog.png)
+    ![Import Git Package menu](attachments/on-premises-git-howto/import-project-package-git-dialog.png)
 
 9. Click **OK**. 
 

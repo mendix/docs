@@ -2,7 +2,7 @@
 title: "Import & Export Objects"
 category: "Integration"
 menu_order: 2
-tags: ["mpk", "project package", "import", "export", "document", "project", "module", "widget"]
+tags: ["mpk", "import", "export", "document", "project", "module", "widget"]
 ---
 
 ## 1 Introduction

@@ -2,7 +2,7 @@
 title: "Charts"
 category: "Widgets"
 description: "Describes the configuration and usage of the Charts widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "chart", "line chart", "area chart", "column chart", "bar chart", "heat map", "platform support"]
+tags: ["marketplace", "marketplace component", "widget", "chart", "line chart", "area chart", "column chart", "bar chart", "heat map", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -144,7 +144,7 @@ For the full Plotly API reference, see [JavaScript Figure Reference](https://plo
 
 ### 3.5 Theme-Based Advanced Configuration
 
-The settings above can also be added in a global context via the **theme** folder of your Mendix app project root directory.
+The settings above can also be added in a global context via the **theme** folder of your Mendix app root directory.
 
 Add a *.json* file named *com.mendix.charts* to the **theme** folder. The JSON should be in the following format:
 

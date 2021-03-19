@@ -2,7 +2,7 @@
 title: "Maps"
 category: "Widgets"
 description: "Describes the configuration and usage of the Maps widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "maps", "google maps", "openstreetmap", "mapbox", "here maps", "platform support"]
+tags: ["marketplace", "marketplace component", "widget", "maps", "google maps", "openstreetmap", "mapbox", "here maps", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -53,7 +53,7 @@ To add a basic map to your application, follow these steps:
 	* **Default** – displays the widget-bundled marker
 	* **Static** – upload a static **Image** (for best results, use a PNG file at 32px width and 32px height where the bottom pin is at the center of the image)
 	* **System image** – add a **System image path** that is a reference to the locations enity (the entity selected should inherit from **System.Image**, because an error will be displayed otherwise); upload an image into the database to view the system image marker at runtime
-	* **Marker list** – add an enumeration containing the name and caption of the markers to your app project and assign that enumeration to the locations entity; then, on the **Marker image list** tab back on the **Edit Maps** dialog box, click **New** for **Images** to specify the enumeration key **Value** and the **Image**
+	* **Marker list** – add an enumeration containing the name and caption of the markers to your app and assign that enumeration to the locations entity; then, on the **Marker image list** tab back on the **Edit Maps** dialog box, click **New** for **Images** to specify the enumeration key **Value** and the **Image**
 5. Back on the **Map properties** tab, select a **Map provider**.
 6. Fill in the **Access token** field according to the following scenarios;
 	* For **Mapbox** and **Google Maps**, add an access token

@@ -26,7 +26,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 Follow these steps to create a backup of a licensed app:
 
-1. Go to the [Developer Portal](http://home.mendix.com) and click **Apps** in the top navigation panel.
+1. Go to the [Developer Portal](http://sprintr.home.mendix.com) and click **Apps** in the top navigation panel.
 2. Click **My Apps** and select **Nodes**.
 3. Select the node from which you want to download the backup.
 4. Click **Backups** under the **Operate** category.

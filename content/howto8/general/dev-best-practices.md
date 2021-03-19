@@ -24,7 +24,7 @@ The language that will be used to develop the application should be determined u
 
 There are some reasons why certain parts of an application may use another language. The main reason to make an exception would be within the domain model of an integration module. For example, when the source data model is in another language already.
 
-For more information, see [How to Translate Your App Content](/howto/collaboration-requirements-management/translate-your-app-content).
+For more information, see [How to Translate Your App Content](/howto8/collaboration-requirements-management/translate-your-app-content).
 
 ### 2.2 Project Name
 
@@ -149,7 +149,7 @@ For attributes, you can choose to store the value in the database or to calculat
 
 #### 3.4.4 Validation Microflows
 
-Microflows that are used for [data validation](/howto/data-models/setting-up-data-validation) use the prefix **Val_**.
+Microflows that are used for [data validation](/howto8/data-models/setting-up-data-validation) use the prefix **Val_**.
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|
@@ -175,7 +175,7 @@ Your [project settings](/refguide8/project-settings) provide three events that c
 
 #### 3.4.7 Unit Test Microflows
 
-Microflows containing [unit tests](/howto/testing/testing-microflows-using-the-unittesting-module) should have the prefix **Test_**.
+Microflows containing [unit tests](/howto8/testing/testing-microflows-using-the-unittesting-module) should have the prefix **Test_**.
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|
@@ -215,7 +215,7 @@ For integrations, you have the following types of microflow:
 
 Pages use a **suffix** to indicate their use.
 
-Pages that show an [overview](/howto/front-end/create-your-first-two-overview-and-detail-pages) of a single entity should have a suffix of **_Overview**.
+Pages that show an [overview](/howto8/front-end/create-your-first-two-overview-and-detail-pages) of a single entity should have a suffix of **_Overview**.
 
 Pages that are to create, edit, or view entity data, and that are not part of a process, should have the suffix **_New**, **_Edit**, **_NewEdit**, or **_View**.
 
@@ -273,7 +273,7 @@ When using inheritance (specialization/generalization), it is recommended to use
 
 #### 4.1.3 Delete Behavior
 
-[Delete behavior](/howto/data-models/create-a-basic-data-layer#delete-behavior) must be specified where possible. Delete behavior must, however, never be relied upon when deleting large amounts of data. For performance reasons it is better to explicitly delete dependent objects when doing batch deletes.
+[Delete behavior](/howto8/data-models/create-a-basic-data-layer#delete-behavior) must be specified where possible. Delete behavior must, however, never be relied upon when deleting large amounts of data. For performance reasons it is better to explicitly delete dependent objects when doing batch deletes.
 
 #### 4.1.4 Event Handlers
 
@@ -313,7 +313,7 @@ The number of parameters for a microflow should be kept to a minimum to facilita
 
 #### 4.2.5 Error Handling & Logging
 
-Use microflow [error handling](/howto/logic-business-rules/set-up-error-handling) for all integration and Java calls. Make sure to determine the correct rollback behavior. Always log the error that occurred, even if the process can continue, this is essential for later analysis of the error.
+Use microflow [error handling](/howto8/logic-business-rules/set-up-error-handling) for all integration and Java calls. Make sure to determine the correct rollback behavior. Always log the error that occurred, even if the process can continue, this is essential for later analysis of the error.
 
 Complex processes and important business logic (like workflow processing or validations) must include debug and trace [logging](/refguide8/logging). Logging actions must write the current state and progress of the process and must include a request ID or other identifying information. The log node should be the name of the module. This will greatly assist error analysis.
 
@@ -331,7 +331,7 @@ When an XPath needs multiple constraints, each constraint must be put in bracket
 
 ### 4.5 Security
 
-The [security](/howto/security/index) overview in Studio Pro must not show any incomplete (yellow) parts. All entity, microflow, and page access must be configured completely.
+The [security](/howto8/security/) overview in Studio Pro must not show any incomplete (yellow) parts. All entity, microflow, and page access must be configured completely.
 
 Assigning default rights to new members when defining entity access is NOT recommended. This will ensure that access is only granted after a conscious decision.
 

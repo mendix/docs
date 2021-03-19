@@ -509,13 +509,13 @@ If the cluster is running in standalone mode, you need to delete all `MendixApp`
 To confirm that environments and their associated storage have been successfully deleted, run:
 
 For OpenShift:
-```bash
+```shell
 oc get mendixapp -n {namespace}
 oc get storageinstance -n {namespace}
 ```
 
 For Kubernetes:
-```bash
+```shell
 kubectl get mendixapp -n {namespace}
 kubectl get storageinstance -n {namespace}
 ```
@@ -531,12 +531,12 @@ If the Operator fails to deprovision an app's database or file storage, the `*-d
 To force removal of a StorageInstance `{name}`, run:
 
 For OpenShift:
-```bash
+```shell
 oc patch -n {namespace} storageinstance {name} --type json -p='[{"op": "remove", "path": "/metadata/finalizers"}]'
 ```
 
 For Kubernetes:
-```bash
+```shell
 kubectl patch -n {namespace} storageinstance {name} --type json -p='[{"op": "remove", "path": "/metadata/finalizers"}]'
 ```
 

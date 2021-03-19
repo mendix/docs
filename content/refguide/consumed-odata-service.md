@@ -18,16 +18,14 @@ The **Consumed OData Service** document that is added to the project displays th
 * Service name and the icon for the source application of the originating app
 * Version number of the consumed service
 * **View in Data Hub Catalog** link to the **Service Details** where you can see the full service details that are registered
-* **Update/Switch** – you can update the consumed service contract to another version that has been detected in [Mendix Data Hub](/data-hub/index) for the same app and service; the button will show the following, depending on what has been returned for the consumed contract in Data Hub:
+* **Update/Switch** – you can update the consumed service contract to another version that has been detected in [Mendix Data Hub](/data-hub/) for the same app and service; the button will show the following, depending on what has been returned for the consumed contract in Data Hub:
 	* **Update** – this button is displayed so that you can **Update** the contract that is currently consumed (and shown in the **Consumed OData Service** document). You will be presented with the contract that is currently at the service end-point. It is good practice that only minor, non-breaking changes are deployed to the same end-point. 
 	*  **Switch** – this button is shown if other registered instances of the same service (with the same name, from the same app) are available in Data Hub and are deployed to different endpoints (for example, to another environment or because of changes that would break existing apps consuming the previous version)
 
-	{{% alert type="info" %}}
-	Studio Pro will always show the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Data Hub search and **Project**  pane, when a different contract is detected at the service end-point, this will be indicated with an update arrow for the service. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document.
-	{{% /alert %}} 
+	{{% alert type="info" %}} Studio Pro will always show the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Data Hub search and **Project**  pane, when a different contract is detected at the service end-point, this will be indicated with an update arrow for the service. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document. {{% /alert %}} 
 
 	{{% alert type="info" %}}In the **Data Hub** pane consumed services that have an available **Update** will have an update arrow to indicate this:<br />
-	![update service data hub pane](attachments/consumed-odata-service/data-hub-pane-update-available.png)
+	![update data hub pane](./attachments/data-hub-pane/data-hub-pane-update.png)
 	{{% /alert %}} 
 
 ### 2.1 Connection Tab
@@ -119,7 +117,7 @@ Click the **Properties** tab for the consumed OData service which displays the p
 ![](attachments/consumed-odata-service/consumed-odata-service-doc-properties.png)
 
 * **Entities** – the URL of the metadata defining the entities and associated datasets
-* **Documentation** – an additional description about this service for the current app project
+* **Documentation** – an additional description about this service for the current app
 * **Service name** – the name of the published OData service that is consumed
 * **Service version** – the version of the service that is consumed
 * **Service ID** – the unique identifier of the service in the Data Hub Catalog

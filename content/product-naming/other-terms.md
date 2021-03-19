@@ -22,7 +22,7 @@ Example usage.
 
 ## A-K
 
-### application & app
+### application & app {#app}
 
 An "application" or "app" can be one of the following:
 
@@ -31,27 +31,17 @@ An "application" or "app" can be one of the following:
 * A licensed application hosted on the Mendix Cloud; another cloud such as AWS, SAP Cloud, or IBM Cloud Portal; or on the user's own server
 
 {{% alert type="info" %}}
-Use "app" or "application" when referring to apps in general. Do not capitalize (meaning, do not write "Mendix App").<br />
+Do not capitalize (meaning, do not write "Mendix App").<br />
 <br />
-The full word "application" has a more well-rounded meaning to it (as in, web and mobile apps), whereas "app" may suggest just mobile apps to the reader. Accordingly, it can be better to use "application" at the beginning of documents and then switch to "app" later on. We want to make it clear that Mendix is not just for building mobile apps, but all kinds of applications.<br />
+Do not replace with "app project" (or "project") generically, even when referring to project management-like tasks. **Project** is still used in some UI text, but that usage is being phased out. Using  "app" in all instances is prioritized.<br />
 <br />
-It is useful to differentiate "app" from "app project" when referring to what the user works on for project management. For more information, see [app project](#app-project).
+The full word "application" has a more well-rounded meaning to it (as in, web and mobile apps), whereas "app" may suggest just mobile apps to the reader. Accordingly, it can be better to use "application" at the beginning of documents and then switch to "app" later on. We want to make it clear that Mendix is not just for building mobile apps, but all kinds of applications.
 {{% /alert %}}
 
 ### App ID
 
 {{% alert type="info" %}}
 Always capitalize.
-{{% /alert %}}
-
-### app project {#app-project}
-
-"App" should be used instead of "project" as much as possible (despite the fact that "project" is still used throughout Studio Pro). 
-
-Use "app project" where necessary for clarification (for example, for project management-related tasks in the Developer Portal).
-
-{{% alert type="success" %}}
-Enter the email addresses of all the co-workers you want to invite to your app project.
 {{% /alert %}}
 
 ### App Team
@@ -94,7 +84,7 @@ Capitalize in all instances (to parallel "Team Server" and "Model Server").
 
 ### Business Engineer
 
-This is an app project role. As such, it differs from the term "business developer," which is used in the Mendix Platform Evaluation Guide as a generic role and persona term.
+This is an App Team role. As such, it differs from the term "business developer," which is used in the Mendix Platform Evaluation Guide as a generic role and persona term.
 
 {{% alert type="info" %}}
 Capitalize in all instances.

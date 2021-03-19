@@ -1,5 +1,5 @@
 ---
-title: "Find Unused App Project Items"
+title: "Find Unused App Items"
 category: "General"
 menu_order: 7
 tags: ["unused", "item", "usage"]

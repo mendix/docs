@@ -183,4 +183,4 @@ Congratulations! You can now see local notifications on your device. Next, in [H
 ## 4 Read More
 
 * [Implement Push Notifications](implementation-guide)
-* [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)
+* [Build JavaScript Actions](/howto8/extensibility/build-javascript-actions)

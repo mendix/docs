@@ -83,6 +83,7 @@ The details page for a component presents the following item information tabs:
 	* **Description** – a description of the component
 	* **Screenshots** – screenshots of the component
 	* **User Reviews** – user reviews of the component; to leave a review for the component, click **Add Review** – a section will open where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page)
+	* If you are a developer of a component, you may **Reply** to a review.
 *  **Documentation** – can include details on typical use cases, features and limitations, dependencies, installation and configuration, and frequently asked questions
 	* [Platform-supported](app-store-content-support#category) components are documented in the various categories of this *Marketplace Guide*
 	* Click **Edit documentation** to open a text editor where you can edit the Marketplace component's documentation
@@ -113,6 +114,8 @@ You may see the **Company only** label on a component, which means it is your co
 In addition, you may see a label on a component name for the [user group](#user-groups) to which the component is assigned as user group [content](#content).
 
 To see the component's [details](#details) page, click **View**.
+
+At the top of the page, there is a toggle for notification of status changes of your component (for example, new version published, component unpublished). When turned on, you will receive email notifications if the component status has changed. Turn off to stop receiving emails for component status changes.
 
 #### 4.2.1 Managing a Component {#manage}
 
@@ -156,6 +159,8 @@ This page contains private content shared with you by other companies who have m
 This page contains reviews of [Your content](#content) by other users as well as **Your reviews** that you have written of other content:
 
 ![](attachments/app-store-overview/your-reviews.png)
+
+At the top of the page, there is a toggle for notification of reviews on your components, and for replies to your reviews. When turned on, you will receive an email when one of these things happen. Turn off to stop receiving emails.
 
 ### 4.6 Notifications {#notifications}
 

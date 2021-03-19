@@ -110,7 +110,7 @@ There are two methods for deploying your app to the Mendix Cloud. The first opti
 
     ![](attachments/mendix-cloud-deploy/deployment-started.png)
 
-### 3.2 Creating a Package from Team Server in the Developer Portal
+### 3.2 Creating a Package from Team Server in the Developer Portal{#package-from-team-server}
 
 An app can also be deployed without using Studio Pro. To do this, follow these steps:
 
@@ -171,6 +171,7 @@ The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)
 
 ## 7 Mendix Pricing Plans{#plans}
 
+{{% todo %}}[Add Mendix Basic here]{{% /todo %}}
 Mendix licenses are sold as part of plans. These consist of a subscription to a plan, a standard **Cloud Resource Pack** which specifies the resources available to your app environment, plus additional resources such as fallback environments.
 
 ### 7.1 Plans

@@ -50,11 +50,15 @@ In a **licensed node** you have everything you need to stage and deploy your app
 
 To license an app, you need to have a licensed cloud node available:
 
-If your contract allows for more licensed nodes, use the [Request New App Node](https://newnode.mendix.com) app to request a new node from Mendix Support. For more information, see [Licensing Apps](licensing-apps-outside-mxcloud).
+If you want to license a single app for between five and a hundred users, you can order the Mendix Basic package online. See [Mendix Basic Package](basic-package) for more details.
+
+If you have an existing contract which allows for more licensed nodes, use the [Request New App Node](https://newnode.mendix.com) app to request a new node from Mendix Support. For more information, see [Licensing Apps](licensing-apps-outside-mxcloud).
 
 {{% alert type="info" %}}
 If your contract does not allow for more licensed nodes, please contact your Customer Success Manager (CSM).
 {{% /alert %}}
+
+If you do not fall into any of the categories above, please contact [Mendix Support](https://support.mendix.com).
 
 ### 3.2 Authorization
 
@@ -63,6 +67,8 @@ You need to be the [Technical Contact](/developerportal/collaborate/app-roles#te
 You need to have enabled two-factor authentication. See [Two-Factor Authentication](two-factor-authentication).
 
 ## 4 Linking Your App to a Licensed Node {#licensed-node}
+
+{{% todo %}}[Add video from Tom here?]{{% /todo %}}
 
 You have deployed an app: either as a Free App, or to a licensed node. You now want to link it to a licensed node, or to a different licensed node. There are several steps you need to carry out:
 
@@ -95,7 +101,7 @@ Before you can link an app to a new environment, you need to unlink it from its 
 
 To unlink a Free App, do the following:
 
-1.  Go to the [Developer Portal](http://home.mendix.com).
+1.  Go to the [Developer Portal](http://sprintr.home.mendix.com).
 
 2.  Select the app which you want to unlink.
 
@@ -147,7 +153,7 @@ Apart from the app, the rest of the environment(s) in the target node will remai
 
 To connect your app to a licensed node, do the following:
 
-1.  Go to the [Developer Portal](http://home.mendix.com).
+1.  Go to the [Developer Portal](http://sprintr.home.mendix.com).
 
 2.  Select the app you want to link to the node.
 
@@ -177,7 +183,7 @@ The method described below will only work if there is currently no app linked to
 
 To connect your app to a licensed node, do the following: 
 
-1.  Go to the [Developer Portal](http://home.mendix.com).
+1.  Go to the [Developer Portal](http://sprintr.home.mendix.com).
 
 2.  Click **Apps** in the top navigation panel.
 

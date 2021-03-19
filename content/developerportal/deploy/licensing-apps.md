@@ -95,7 +95,7 @@ Before you can link an app to a new environment, you need to unlink it from its 
 
 To unlink a Free App, do the following:
 
-1.  Go to the [Developer Portal](http://home.mendix.com).
+1.  Go to the [Developer Portal](http://sprintr.home.mendix.com).
 
 2.  Select the app which you want to unlink.
 
@@ -147,7 +147,7 @@ Apart from the app, the rest of the environment(s) in the target node will remai
 
 To connect your app to a licensed node, do the following:
 
-1.  Go to the [Developer Portal](http://home.mendix.com).
+1.  Go to the [Developer Portal](http://sprintr.home.mendix.com).
 
 2.  Select the app you want to link to the node.
 
@@ -177,7 +177,7 @@ The method described below will only work if there is currently no app linked to
 
 To connect your app to a licensed node, do the following: 
 
-1.  Go to the [Developer Portal](http://home.mendix.com).
+1.  Go to the [Developer Portal](http://sprintr.home.mendix.com).
 
 2.  Click **Apps** in the top navigation panel.
 

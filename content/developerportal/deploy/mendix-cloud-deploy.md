@@ -114,7 +114,7 @@ There are two methods for deploying your app to the Mendix Cloud. The first opti
 
 An app can also be deployed without using Studio Pro. To do this, follow these steps:
 
-1. Go to the [Developer Portal](http://home.mendix.com).
+1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 2. Click **Apps** in the top navigation panel.
 3. Select your app.
 4. Go to **Environments**.
@@ -128,7 +128,7 @@ The package will now be deployed to the cloud.
 
 The previous steps explained how to deploy a deployment package to the Mendix Cloud, but the actual app is not running yet! To deploy a deployment package to a node environment, follow these steps:
 
-1. Open the [Developer Portal](http://home.mendix.com).
+1. Open the [Developer Portal](http://sprintr.home.mendix.com).
 2. Open your app.
 3. Go to **Environments**.
 4. In the **Deployment Package Repository**, choose the preferred deployment package and click **Deploy**.

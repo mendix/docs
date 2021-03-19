@@ -128,7 +128,7 @@ The endpoints which are the data sources (services) that are returned in the `Se
 | LastId       | string   |                           | UUID of the last item returned in the `Data` array. Example: 69db538d-35d4-4a9f-825a-93db0eb8130f |
 | TotalResults | integer  | always                    | Total number of results matching the search query. Example: 87 |
 
- ### 5.3.2  `Data` Objects
+### 5.3.2  `Data` Objects
 The objects that are returned in the response  for  `Data`. For full details of objects that define the arrays and collections, refer to the  [Open API spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
 
 | **Name**               | **Type** | I**ncluded in response?** | **Description**                                              |
@@ -402,7 +402,7 @@ The 200 OK response returned the following results:
 
 }
 
-### 5.4.2 Search Results for the Same Search When Viewed in the Catalog
+### 5.4.3 Search Results for the Same Search When Viewed in the Catalog
 
 Viewed in the Data Hub the search shows the following with the total list in the search results pane on the left and the details of the selected **SAMPLE_EmployeeDirectory** :
 
@@ -433,10 +433,10 @@ The first step is to register the application that the service originates from.
 
 **Note**: If the application is already registered in the Catalog (for previously registered services for example), you can proceed to 3.3 using the `AppUUID` and `EnvUUID` for the registered service.
 
-6**.1.1 Method and Endpoint**
+### 6.1.1 Method and Endpoint
 `POST /applications`
 
-6**.1.2 Request Body** 
+### 6.1.2 Request Body
 There are no parameters to this request only a payload that specifies the details of the application to be registered:
 
 | **Name**           | **Type** | **Required/Optional** | **DefaultValue** | **Description**                                              |
@@ -450,16 +450,16 @@ There are no parameters to this request only a payload that specifies the detail
 |                    |          |                       |                  |                                                              |
 
 
-**6.1.3 POST Response**
+### 6.1.3 POST Response
 The successful 201 response will indicate that the application has been registered in the Catalog and return an application `UUID`, which is the Catalog identifier for the registered app that must be used  when referring to the application in the next steps of the registration.
 
-**6.1.4 Example: Registering the SampleDH-App**
+### 6.1.4 Example: Registering the SampleDH-App
 For this example, you are going to register an app called **SampleDH-App**. The details of the app are included in the JSON format request body given below.
 
-**6.1.4.1 Base request URL:**
+#### 6.1.4.1 Base request URL:
 `POST {{baseUrl}}/applications`
 
-**6.1.4.2.  JSON Format Request Body:**
+#### 6.1.4.2.  JSON Format Request Body:
 {
   "Name": "SampleDH-App",
   "Description": "This application is used to show how the DH API is used",
@@ -477,7 +477,7 @@ For this example, you are going to register an app called **SampleDH-App**. The 
   }
 }
 
-**6****.1.4.3 The Example Curl Command:**
+#### 6.1.4.3 The Example Curl Command:
 The curl command specifies the format of the body content and the body data. 
 
 curl --location --request POST '*{{BaseURL}}*' \
@@ -500,7 +500,7 @@ curl --location --request POST '*{{BaseURL}}*' \
   }
 }'
 
-**6.1.4.4 Response 201 Created**
+#### 6.1.4.4 Response 201 Created
 The 201 Response is given below. 
 Note that the response returned   `"UUID": "a9e428ba-f84b-4f8d-a4e6-2350ee4177bc"`, which is the Catalog identifier for the application which will be used in subsequent steps of the registration of the data source.
 
@@ -523,11 +523,11 @@ Note that the response returned   `"UUID": "a9e428ba-f84b-4f8d-a4e6-2350ee4177bc
 }
 }
 
-## 6.2 Registering the Environment using POST
+## 6.2 Registering an Environment using POST
 
 The next step is to register the environment in which the app and the service is deployed. 
 
-6**.2.1 Method and Endpoint**
+### 6.2.1 Method and Endpoint
 `POST /applications/{``*AppUUID*``}/environments`
 
 6**.2.2 Request Parameters and body**
@@ -547,20 +547,21 @@ The Request must be accompanied by the following body:
 | CustomLocations |          |                       |                  | An array of custom locations at which this environment can also be reached. |
 
 
-6**.2.3 POST Response**
+### 6.2.3 POST Response
 A 201 response indicates that the environment has been registered in the Catalog for the given application and returns the environment UUID for the environment. 
 
 The combination of the App UUID and the environment UUID is the identifier that is used to register the published endpoints (data sources/services) for the application that are deployed to this environment. 
-**Note: You will also need these UUIDs**  registering apps that consume the data sources at these endpoints.
+**Note:** You will also need these UUIDs  registering apps that consume the data sources at these endpoints.
 
-6**.2.4 Example: Registering the Environment** `**Production**`  **for the** `SampleDH-App`  ****
+### 6.2.4 Example: Registering the Environment `Production`  for the `SampleDH-App` 
 
 For the app registered in 6.1.4.4 the following steps take you through registering the environment **Production** that the app and the service are deployed to.
 
-**3.2.4.1 Base request URL:**
+#### 6.2.4.1 Base request URL:
 `POST *{{baseUrl}}*`/applications/a9e428ba-f84b-4f8d-a4e6-2350ee4177bc`/environments`
 [](https://hub.mendix.com/rest/datahubservice/v2/applications/:AppUUID/environments) 
-6**.2.4.2.  JSON format request body for :**
+
+#### 6.2.4.2.  JSON format request body for the Environment
    {
     "Name": "Production",
     "Location": "https://dhcorp1.com",
@@ -570,7 +571,8 @@ For the app registered in 6.1.4.4 the following steps take you through registeri
     ]
 }
 
-6**.2.4.3 Example Curl Command:**
+#### 6.2.4.2 Example Curl Command
+
 curl --location --request POST '{{BaseURL}}/applications/a9e428ba-f84b-4f8d-a4e6-2350ee4177bc/environments' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken *<your MX Token>*' \
@@ -583,7 +585,7 @@ curl --location --request POST '{{BaseURL}}/applications/a9e428ba-f84b-4f8d-a4e6
     ]
 }'
 
-6**.2.4.4 Response 201 Created**
+#### 6.2.4.4 Response 201 Created
 Note that the response returns the Catalog-generated identifier for the registered `Production` environment:  `"UUID": "d79988dc-1ac3-4ba8-9674-341f98364204"`.
 
 {
@@ -606,10 +608,10 @@ Note that the response returns the Catalog-generated identifier for the register
 
 After registering the published services for the app registered as in 3.1 in the environment registered in 3.2 you can specify the services (endpoints) that are published by the app in the given environment using the application and environment UUIDs that were returned.   When there are multiple services for a given app, you can include them in a single request.
 
-**6.3.1 Method and Endpoint**
-`PUT /applications/``*{AppUUID}*``/environments/``*{EnvironmentUUID}*``/published-endpoints`
+### 6.3.1 Method and Endpoint
+`PUT /applications/*{AppUUID}*/environments/*{EnvironmentUUID}*/published-endpoints`
 
-**6.3.2 Request Parameters and Body**
+### 6.3.2 Request Parameters and Body
 
 The parameters `AppUUID` and `EnvironmentUUID` that were returned in 3.1. and 3.2 are required as input parameters.
 
@@ -625,11 +627,11 @@ The service contracts that are included as part of the `Contracts` object must b
 
 **Notes:** 
 
-- For Odata contracts that are made up of several files, all the files must be included for each service.
+* For Odata contracts that are made up of several files, all the files must be included for each service.
 - If an empty array is sent for `ServiceVersion`, then it will be interpreted that the application in the environment does not publish any services. **Note:** This does not affect any services that are already registered for the application/environment.
-- When there are updates to a services, care must be taken when deciding if you will register the new contract at the same endpoint which means that the previous contract will be replaced or do a different endpoint. It is recommended that you use semantic numbering to indicate the severity of changes and follow a strict protocol when deciding on endpoints to ensure that apps consuming previous versions do not experience disruptions.
+* When there are updates to a services, care must be taken when deciding if you will register the new contract at the same endpoint which means that the previous contract will be replaced or do a different endpoint. It is recommended that you use semantic numbering to indicate the severity of changes and follow a strict protocol when deciding on endpoints to ensure that apps consuming previous versions do not experience disruptions.
 
-**6.3.3 PUT Response**
+### 6.3.3 PUT Response
 A successful 200 response will return the array of endpoints that are registered for the given environment and application.
 For each endpoint a unique  `UUID` for is returned for each service.  
 For each endpoint, `Links` will provide the URL of the details page in the Catalog, and also the URI of the service.
@@ -637,7 +639,7 @@ For each endpoint, `Links` will provide the URL of the details page in the Catal
 The response will also include the number of environment/applications-  `Connections` - that consume this endpoint.
 
 
-**6.3.4** **Example: Registering the ODatav3-sample-service**
+### 6.3.4 Example: Registering the ODatav3-sample-service
 In this example, the service **ODatav3-sample-service** is registered for the application registered in ??? and deployed to the environment registered in ???.
 
 Two tags, `odata` and `sample` are also defined as part of the registration.
@@ -649,11 +651,11 @@ For the `Contracts` object you can use the service that is made up of two files 
 
 Each of these files is provided in escaped JSON format and replace the<*insert service feed from*[+Using the Data Hub API: 6.1-Service-Feed](https://paper.dropbox.com/doc/Using-the-Data-Hub-API-6.1-Service-Feed-bPBYadNIdEkr2rwXEjwVK#:uid=743818443434385856503942&amp;h2=6.1-Service-Feed) > *and<Insert example metadata from*[+Using the Data Hub API: 6.2-Metadata](https://paper.dropbox.com/doc/Using-the-Data-Hub-API-6.2-Metadata-bPBYadNIdEkr2rwXEjwVK#:uid=362078091944697159682892&amp;h2=6.2-Metadata) > strings given in the following example.
 
-**6.3.4.1 Example Base request URL**
+#### 6.3.4.1 Example Base request URL
 
-`PUT` `*{{baseUrl}}*``/applications/{appUUID}/environments/{envUUID}/published-endpoints`
+`PUT` `*{{baseUrl}}*/applications/{appUUID}/environments/{envUUID}/published-endpoints`
 
-**6.3.4.2.  JSON format request body for the** `**Endpoints**` **Object**
+#### 6.3.4.2.  JSON format request body for the** `**Endpoints**` **Object**
 **Note:** for conciseness the two contract files are not included: you must insert the example contract files provided in Section 7: `<``*insert service feed from*`[+Using the Data Hub API: 6.1-Service-Feed](https://paper.dropbox.com/doc/Using-the-Data-Hub-API-6.1-Service-Feed-bPBYadNIdEkr2rwXEjwVK#:uid=743818443434385856503942&amp;h2=6.1-Service-Feed) `>` and `*<Insert example metadata from*`[+Using the Data Hub API: 6.2-Metadata](https://paper.dropbox.com/doc/Using-the-Data-Hub-API-6.2-Metadata-bPBYadNIdEkr2rwXEjwVK#:uid=362078091944697159682892&amp;h2=6.2-Metadata) `>` .
 
 {
@@ -707,7 +709,7 @@ Each of these files is provided in escaped JSON format and replace the<*insert s
     ]
 }
 
-**6.3.4.3 Sample Response 200 OK**
+#### 6.3.4.3 Sample Response 200 OK
 For the above request the following 200 OK response is received:
 
 {
@@ -781,7 +783,6 @@ This will be shown in the Landscape as:
 For the app  registered in [6.1](https://paper.dropbox.com/doc/bPBYadNIdEkr2rwXEjwVK#:uid=323899919797247672112224&h2=6.1-Registering-an-Application),  you can register any services that it consumes by providing the endpoint details and the entities (datasets) that it consumes. This is registered in the Catalog and indicated for the consumed service by the **Connections.**  Consumed services are shown in the Data Hub Landscape for the app.
 **Note:** The PUT call for registering consumed entities will *update* the currently registered datasets for an app/environment. This means that when you want to *add* consumed endpoints to an app (indicating the services the app is consuming), all previously registered consumed endpoints must be included in the request payload of the new request. If the previously registered consumed endpoints are not included, the result will be that they will be *removed*.
 
-
 ## 7.1 Method and Endpoint
 
 `PUT /applications/{``*AppUUID*``}/environments/{``*EnvironmentUUID*``}/consumed-endpoints`
@@ -806,16 +807,17 @@ The 200 OK response returns the full details of the registered endpoint showing 
 To register that the **Howto5-App** is consuming 2 datasets: **Employees** and **Offices** from the service **SAMPLE_EmployeeDirectory**. 
 **Note**: For this example, the `Namespace` object for the `consumedItems` is called `DefaultNamespace` which is the default namespace for Mendix services.
 
-**7.4.1 Example Base Request URL**
+### 7.4.1 Example Base Request URL
 
 `PUT {{baseUrl}}/applications/c602513c-0d33-4ab4-a0de-3ba0f7f9cf75/environments/c08a0a07-9517-48e0-b0ab-beda44a43110/consumed-endpoints`
 
-7**.4.2.  JSON Format Request Body to Register Consuming from SampleDH-App**
+### 7.4.2.  JSON Format Request Body to Register Consuming from SampleDH-App
+
 To register the two consumed entities **Employees** and **Offices** from the HR Sample service at https://hrsampleapp.mendixcloud.com/odata/PubOdataEmployeeDirectory/v1
 
 
 
-7.4.3 **Example** **Response 200 Created**
+### 7.4.3 Example Response 200 Created
 The response that is returned shows the full details of the consumed service as part of the `Endpoints` object. The total number of connections to the service is 43: 
 
 
@@ -853,7 +855,7 @@ You can perform a search to find a particular service with the dataset that you 
 - All the versions and their endpoints for a particular service
 - Identify and retrieve the contract of the service that you want to consume 
 
-5**.1.1 Method and Endpoint**
+### 5.1.1 Method and Endpoint
 `GET /applications/{AppUUID}/services/{ServiceName}`
 
 5**.1.2 Request Parameters and body**

@@ -410,7 +410,7 @@ Viewed in the Data Hub the search shows the following with the total list in the
 
 # 6 Registering a Sample OData v3 Contract 
 
-This section describes the steps required for registering a data source. 
+This section describes the steps required for registering a data source - this can be an OData v4 or OData v3 contract
 To register a data source to Data Hub you must register the following in the given sequence:
 
 

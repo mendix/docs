@@ -146,7 +146,7 @@ The objects that are returned in the response  for  `Data`. For full details of 
 | Environment            |          | always                    | A collection of the objects specifying the deployment environment |
 | Application            |          | always                    | A collection of objects specifying the application details of the service. |
 | Tags                   |          | always                    | Tags on this endpoint.<br>example: List [ OrderedMap { "Name": "HR" }, OrderedMap { "Name": "Salary" }, OrderedMap { "Name": "PeopleManagement" } ]<br>An array of `Tag` objects |
-| TotalItems             | integer  | always                    | The total number of items (such as daa sources ) existing at this level.<br>Example: 17 |
+| TotalItems             | integer  | always                    | The total number of items (such as data sources ) existing at this level.<br>Example: 17 |
 | Items                  |          |                           | List of items (such as data sources) at this endpoint relevant to the search query<br>Example: List [ OrderedMap { "Name": "Employee", "Type": "DataSource", "EntitySetName": "NewEmployees", "EntityTypeName": "Employee", "Namespace": "AcmeHR", "TotalItems": 3, "Validated": true, "Items": List [ OrderedMap { "Name": "Name", "Type": "Attribute", "EdmxType": "String" }, OrderedMap { "Name": "Salary", "Type": "Attribute", "EdmxType": "Decimal" }, OrderedMap { "Name": "Employee_Car", "Type": "Association", "ReferencedDataSource": "Car", "Multiplicity": "0..1", "EntitySetName": "CompanyCars", "EntityTypeName": "Car", "Namespace": "AcmeHR" } ], "Links": OrderedMap { "Rel": "Catalog", "Href": "https://hub.mendix.com/link/entity?EndpointUUID=9e26c386-9316-4a33-9963-8fe9f69a5117&EntityUUID=130b6d98-bb60-4920-8262-a0adfbe0ade8" } } ] |
 | Links                  |          | always                    | Catalog is a deeplink to the endpoint details page in the Catalog. Self is the URL with the endpoint details, including contracts. |
 
@@ -480,7 +480,7 @@ For this example, you are going to register an app called **SampleDH-App**. The 
 #### 6.1.4.3 The Example Curl Command:
 The curl command specifies the format of the body content and the body data. 
 
-curl --location --request POST '*{{BaseURL}}*' \
+curl --location --request POST '{{BaseURL}}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <*yourMxToken>*' \
 --data-raw '{
@@ -528,7 +528,7 @@ Note that the response returned   `"UUID": "a9e428ba-f84b-4f8d-a4e6-2350ee4177bc
 The next step is to register the environment in which the app and the service is deployed. 
 
 ### 6.2.1 Method and Endpoint
-`POST /applications/{``*AppUUID*``}/environments`
+`POST /applications/{*AppUUID*}/environments`
 
 6**.2.2 Request Parameters and body**
 
@@ -558,7 +558,7 @@ The combination of the App UUID and the environment UUID is the identifier that 
 For the app registered in 6.1.4.4 the following steps take you through registering the environment **Production** that the app and the service are deployed to.
 
 #### 6.2.4.1 Base request URL:
-`POST *{{baseUrl}}*`/applications/a9e428ba-f84b-4f8d-a4e6-2350ee4177bc`/environments`
+`POST {{baseUrl}}`/applications/a9e428ba-f84b-4f8d-a4e6-2350ee4177bc`/environments`
 [](https://hub.mendix.com/rest/datahubservice/v2/applications/:AppUUID/environments) 
 
 #### 6.2.4.2.  JSON format request body for the Environment
@@ -653,10 +653,10 @@ Each of these files is provided in escaped JSON format. Just replace the <*inser
 
 #### 6.3.4.1 Example Base request URL
 
-`PUT` `*{{baseUrl}}*/applications/{appUUID}/environments/{envUUID}/published-endpoints`
+`PUT` `{{baseUrl}}/applications/{appUUID}/environments/{envUUID}/published-endpoints`
 
 #### 6.3.4.2.  JSON format request body for the** `**Endpoints**` **Object**
-**Note:** for conciseness the two contract files are not included: you must insert the example contract files provided in Section 7: `<``*insert service feed from*`[+Using the Data Hub API: 6.1-Service-Feed](https://paper.dropbox.com/doc/Using-the-Data-Hub-API-6.1-Service-Feed-bPBYadNIdEkr2rwXEjwVK#:uid=743818443434385856503942&amp;h2=6.1-Service-Feed) `>` and `*<Insert example metadata from*`[+Using the Data Hub API: 6.2-Metadata](https://paper.dropbox.com/doc/Using-the-Data-Hub-API-6.2-Metadata-bPBYadNIdEkr2rwXEjwVK#:uid=362078091944697159682892&amp;h2=6.2-Metadata) `>` .
+**Note:** for conciseness the two contract files are not included: you must insert the example contract files provided in Section 7: `<*insert service feed from*`[+Using the Data Hub API: 6.1-Service-Feed](https://paper.dropbox.com/doc/Using-the-Data-Hub-API-6.1-Service-Feed-bPBYadNIdEkr2rwXEjwVK#:uid=743818443434385856503942&amp;h2=6.1-Service-Feed) `>` and `*<Insert example metadata from*`[+Using the Data Hub API: 6.2-Metadata](https://paper.dropbox.com/doc/Using-the-Data-Hub-API-6.2-Metadata-bPBYadNIdEkr2rwXEjwVK#:uid=362078091944697159682892&amp;h2=6.2-Metadata) `>` .
 
 {
     "Endpoints": [
@@ -771,14 +771,15 @@ For the above request the following 200 OK response is received:
 
 The resulting entry in the Catalog for the registered service the entry in the Catalog is the following: 
 
-![published endpoints mindmap](attachments/data-hub-api-how-to/registered-service.png)
+![registered service](attachments/data-hub-api-how-to/registered-service.png)
 
-![](https://paper-attachments.dropbox.com/s_5110D0F8658FA1B6296437C16E0C83965FFDB37EE0B69FD3C06E5B34A72DC3E6_1616087887956_Screenshot+2021-03-18+at+18.18.00.png)
 
 
 This will be shown in the Landscape as:
 
-![](https://paper-attachments.dropbox.com/s_5110D0F8658FA1B6296437C16E0C83965FFDB37EE0B69FD3C06E5B34A72DC3E6_1616088009554_Screenshot+2021-03-18+at+18.19.55.png)
+![registered service-landscape](attachments/data-hub-api-how-to/registered-service-landscape.png)
+
+
 
 # 7 Registering Consumed Endpoints by an App using PUT
 
@@ -787,7 +788,7 @@ For the app  registered in [6.1](https://paper.dropbox.com/doc/bPBYadNIdEkr2rwXE
 
 ## 7.1 Method and Endpoint
 
-`PUT /applications/{``*AppUUID*``}/environments/{``*EnvironmentUUID*``}/consumed-endpoints`
+`PUT /applications/{*AppUUID*}/environments/{*EnvironmentUUID*}/consumed-endpoints`
 
 
 ## 7.2 Request Parameters and body
@@ -827,7 +828,7 @@ The response that is returned shows the full details of the consumed service as 
 
 This is shown in the Data Hub Landscape for the **SampleDHApp.** It consumes 2 datasets from the **SAMPLE_EmployeeDirectory** service which is deployed from the **HR Sample App.**
 
-![](https://paper-attachments.dropbox.com/s_5110D0F8658FA1B6296437C16E0C83965FFDB37EE0B69FD3C06E5B34A72DC3E6_1616099275601_image.png)
+![registered service](attachments/data-hub-api-how-to/consume1service.png)
 
 
 When the**SAMPLE_EmployeeDirectory** is viewed in the Data Hub Landscape, **Howto5-App** is one of the network of apps consuming it:
@@ -971,7 +972,7 @@ Retrieve contract or contract files (for OData v3, two contract files JIRA CAT-6
 The consumed entitysets should then be registered in the Catalog as described in 5.3
 
 ### 5.2.1 Method and Endpoint
-`GET /applications/``*{AppUUID}*``/environments/``*{EnvironmentUUID}*``/services/{ServiceName}/{ServiceVersion}`
+`GET /applications/*{AppUUID}*/environments/*{EnvironmentUUID}*/services/{ServiceName}/{ServiceVersion}`
 
 ### 5.2.2 Request Parameters and body
 All parameters are required in order to retrieve the contract that you want to consume from.  These are returned from the first GET call performed in 5.1 You can upload the contract and consume exposed entities from this. 

@@ -176,7 +176,7 @@ Now you can run your app and see if your notification works.
 
 	{{% image_container width="400" %}}![app settings](attachments/native-push/basic-notif.png){{% /image_container %}}
 
-	If you did not see a notification, try clicking **Run Locally** to reload your app. Then, tap the **Send Notification** button again.
+	If you did not see a notification, try clicking the play button (**Run Locally**) to reload your app. Then, tap the **Send Notification** button again.
 
 Congratulations! You can now see local notifications on your device. Next, in [How to Use Local Notifications Part 2: Badges](local-notif-badges), you will learn how to configure notification badges.
 

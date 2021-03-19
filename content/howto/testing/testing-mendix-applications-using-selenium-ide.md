@@ -53,7 +53,7 @@ Follow these steps to install and run the Company Expenses app:
 
 	![](attachments/selenium/download.png)
 
-5. Click **Run Locally**, then **View**.
+5. Click the play button (**Run Locally**), then **View**.
 
 ## 4 Create Your First Automated Test
 

@@ -150,7 +150,7 @@ In the sections below you can see the basic steps to get an app up and running o
 
 	{{% image_container width="350" %}}![Android Build Varients](attachments/native-build-locally/as-build-variants.png){{% /image_container %}}
    
-1. After a short time the app should be synchronized and the play button should be selectable. Select a device or create a device from the drop-down menu and click the play button to build and install your app on the device:
+1. After a short time the app should be synchronized and the play button (**Run Locally**) should be selectable. Select a device or create a device from the drop-down menu and click the play button (**Run Locally**) to build and install your app on the device:
 
 	{{% image_container width="250" %}}![Android Build Toolbar](attachments/native-build-locally/as-start-build.png){{% /image_container %}}
 
@@ -168,7 +168,7 @@ In the sections below you can see the basic steps to get an app up and running o
 
 	As with the Android **Build Variants** the iOS app makes use of **Build Targets** to switch between building a custom developer app or a release app.
 
-1. From the drop-down menu choose **nativeTemplate** and the device you would like to run the app on, then click the play button to start a build for your app:
+1. From the drop-down menu choose **nativeTemplate** and the device you would like to run the app on, then click the play button (**Run Locally**) to start a build for your app:
 
 	{{% image_container width="250" %}}![XCode Build Toolbar](attachments/native-build-locally/xc-start-build.png){{% /image_container %}}
 

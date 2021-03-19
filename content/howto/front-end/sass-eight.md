@@ -88,7 +88,7 @@ To prepare your app, follow these steps:
 
 	If you need to remove an item from the ignore list, right-click it and select **TortoiseSVN** > **Remove from ignore list**.
 
-10.  Open your app in Studio Pro, then click **Run Locally** and **View**.
+10.  Open your app in Studio Pro, then click the play button (**Run Locally**) and **View**.
 
 ## 4  Setting Up Your Sass Files
 
@@ -165,7 +165,7 @@ The inline styling is used in this example. That is because the inline styling w
 
 When you add, remove, or change something in Studio Pro, you need to save your changes and run the app locally to see your styling changes in the browser.
 
-For example, when you set a color for your title and subtitle, click **Run Locally** then **View**. When browser automatically opens, you will see the following URL:
+For example, when you set a color for your title and subtitle, click the play button (**Run Locally**) then **View**. When browser automatically opens, you will see the following URL:
 
 `http://localhost:8080/index.html?profile=Responsive`
 

@@ -44,7 +44,7 @@ Now you need to enter data for the chart.
 
 4. Connect the **Series_Overview** page to the navigation.
 
-5. **Run** the app (locally).
+5. Click the play button (**Run Locally**) to run the app locally.
 
 6. Enter some sample data.
 

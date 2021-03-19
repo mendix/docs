@@ -52,7 +52,7 @@ Calypso is the easiest styling solution for most users. However, if you already 
 
 	![dark mode](attachments/calypso/dark-mode.png)
 
-10. Click **Run Locally** in Mendix Studio Pro to use Calypso.
+10. Click the play button (**Run Locally**) in Mendix Studio Pro to use Calypso.
 
 11. Click the **Start** button in Calypso. This will start a browser page which will let you view your running app. The browser address will match the address in Calypso's **Console**:
 
@@ -72,7 +72,7 @@ With your Mendix app and Calypso running, complete the steps below to see how Ca
 
 	![drop a button](attachments/calypso/drop-a-button.png)
 	
-2.  Run your app again by clicking **Run Locally** to see your new button in your browser:
+2.  Run your app again by clicking the play button (**Run Locally**) to see your new button in your browser:
 	
 	![blue text button](attachments/calypso/blue-button.png)
 

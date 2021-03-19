@@ -33,7 +33,7 @@ These resources let you style your app with a wide variety of interface parts. H
 
 	![button](attachments/how-to-use-native-styling/button-one.png)
 
-2.  Click **Run Locally** and then click **View** to see your app. The button will be blue with white text, which is its default styling.
+2.  Click the play button (**Run Locally**) and then click **View** to see your app. The button will be blue with white text, which is its default styling.
 3. Open *theme/styles/native/app/custom-variables.js* using your IDE of choice.
 4. Change the `brand.primary` from **#0595DB** to *rosybrown*:
 
@@ -48,7 +48,7 @@ These resources let you style your app with a wide variety of interface parts. H
 	```
 
 5. Save your file.
-6.  Click **Run Locally** to apply your changes:
+6.  Click the play button (**Run Locally**) to apply your changes:
 
 	![rosybrown button](attachments/how-to-use-native-styling/brand-primary-rosybrown.png)
 
@@ -65,7 +65,7 @@ Classes are groups of styling properties which define how certain elements of yo
 
 	![class field](attachments/how-to-use-native-styling/btn-success.png)
 
-5.  Click **Run Locally** to save and refresh your app. Notice the button turned green:
+5.  Click the play button (**Run Locally**) to save and refresh your app. Notice the button turned green:
 
 	![green button](attachments/how-to-use-native-styling/green-button.png)
 	
@@ -138,7 +138,7 @@ When you have specific design requirements, you will need to build custom classe
 
 8. Save your work.
 9. In Mendix Studio Pro, select your fourth button. In the **Properties** panel, type *btnBordered* into the **Class** field.
-10.  Click **Run Locally** to see that your button's background color is transparent:
+10.  Click the play button (**Run Locally**) to see that your button's background color is transparent:
 
 	![bordered button](attachments/how-to-use-native-styling/bordered-button.png)
 	
@@ -168,7 +168,7 @@ In this section you will learn to turn the class you made into a design property
 
 6.  Enable the **Bordered** design property by clicking its drop-down menu and selecting **Yes**.
 
-7.  Click **Run Locally** again and view your app:
+7.  Click the play button (**Run Locally**) again and view your app:
 
 	![design properties border](attachments/how-to-use-native-styling/design-property-border-button.png)
 

@@ -151,7 +151,7 @@ color: green;
 }
 ```
 
-To implement this in your app, open the project in Mendix Studio Pro. You can find the defined class names in almost every element (for example, titles and subtitles). In this example, double-click the title **Event App** in Studio Pro, and you can see that the name has the standard class name for Studio Pro.
+To implement this in your app, open the app in Mendix Studio Pro. You can find the defined class names in almost every element (for example, titles and subtitles). In this example, double-click the title **Event App** in Studio Pro, and you can see that the name has the standard class name for Studio Pro.
 
 ![](attachments/set-up-sass/class-name.png)
 
@@ -223,7 +223,7 @@ var deploymentStyleFolder = 'styles/web';
 Other issues might occur with SVN and possible rewriting of *Gulpfile.js*. To fix these issues, try the following solutions:
 
 * Remove *node_modules*, *package.json*, *package-lock.json* and *Gulpfile.js*, then replace them with a fresh copy downloaded from Mendix's [ux-theming repository](https://github.com/mendix/ux-theming/)
-* Ignore not only *node_modules* but also *Gulpfile.js* — this means you will have to add the *Gulpfile* to the project if you download it again or someone in your team is working on it
+* Ignore not only *node_modules* but also *Gulpfile.js* — this means you will have to add the *Gulpfile* to the app if you download it again or someone in your team is working on it
 * Make sure you are using the most recent LTS version of [NodeJS](https://nodejs.org/en/)
 
 ## 8 Read More

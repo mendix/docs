@@ -31,7 +31,7 @@ To prepare your app for building, follow these instructions:
 
 ### 2.2 Building Your Prepared Project
 
-There are two possible ways to build your apps: the Cordova CLI or XCode. The Cordova CLI is faster and allows Cordova to fully control the your app's configuration. XCode is more involved, but XCode's UI makes it easier to detect problems in the project. You can use whichever works best for your case.
+There are two possible ways to build your apps: the Cordova CLI or XCode. The Cordova CLI is faster and allows Cordova to fully control the your app's configuration. XCode is more involved, but XCode's UI makes it easier to detect problems in the app. You can use whichever works best for your case.
 
 #### 2.2.1 Building iOS Using the Cordova CLI
 
@@ -55,7 +55,7 @@ This process is shorter than using XCode but might require more work to understa
 
 Using XCode can be easier than the Cordova CLI due to XCode's friendly visual interface. To build your app using XCode do the following:
 
-1.  Under **/build/platforms/ios/** open the `.xcworkspace` file by double-clicking it. Xcode should open with the project loaded:
+1.  Under **/build/platforms/ios/** open the `.xcworkspace` file by double-clicking it. Xcode should open with the app loaded:
 
     {{% image_container width="400" %}}![Opening XCWorkspace](attachments/hybrid-local/xc-workspace.png){{% /image_container %}}
 
@@ -122,7 +122,7 @@ During this guide you will set the commands to temporary for each of the command
 
 ### 3.3 Building Your Prepared Project
 
-There are two possible ways to build your apps: the Cordova CLI or Android Studio. The Cordova CLI is faster and allows Cordova to fully control the your app's configuration. Android Studio is more involved, but Android Studio's UI makes it easier to detect problems in the project. You can use whichever works best for your case.
+There are two possible ways to build your apps: the Cordova CLI or Android Studio. The Cordova CLI is faster and allows Cordova to fully control the your app's configuration. Android Studio is more involved, but Android Studio's UI makes it easier to detect problems in the app. You can use whichever works best for your case.
 
 #### 3.3.1 Building Android Using the Cordova CLI
 

@@ -38,7 +38,7 @@ In this chapter you will set up the unit testing module and run the example test
 2. Download the [Unit Testing](/appstore/modules/unit-testing) module.
 3. Download the [Community Commons Function Library](/appstore/modules/community-commons-function-library) module.
 4. Download the [Object Handling](/appstore/modules/object-handling) module.
-5.  Open the **Settings** of the project:
+5.  Open the **Settings** of the app:
 
 	![](attachments/18448633/18580371.png)
 
@@ -52,7 +52,7 @@ In this chapter you will set up the unit testing module and run the example test
 	![](attachments/18448633/18580369.png)
 
 9. Click **OK**.
-10. Open the **Navigation** of the project.
+10. Open the **Navigation** of the app.
 11. Click **New item** to add a new item to the menu.
 12. Enter _UnitTestOverview_ in the **Caption** field.
 13. Select **Call a microflow** for the **On click** action, and then select the **UnitTestOverview** microflow:
@@ -63,7 +63,7 @@ In this chapter you will set up the unit testing module and run the example test
 
 	![](attachments/18448633/18580362.png)
 
-15. Run the project locally.
+15. Run the app locally.
 16. Go to `http://localhost:8080/index.html`.
 17. Click **UnitTestOverview** in the navigation.
 

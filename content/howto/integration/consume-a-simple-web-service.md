@@ -36,7 +36,7 @@ To import a WSDL, follow these steps:
 
     ![](attachments/18448738/18582065.png)
 
-5. Click **OK** to select the default, and click **OK** to close the **WSDL Source** dialog. The operations **CelsiusToFahrenheit** and **FahrenheitToCelsius** will now be imported into the project.
+5. Click **OK** to select the default, and click **OK** to close the **WSDL Source** dialog. The operations **CelsiusToFahrenheit** and **FahrenheitToCelsius** will now be imported into the app.
 
     ![](attachments/18448738/18582084.png)
 

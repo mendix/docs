@@ -9,7 +9,7 @@ tags: ["studio pro", "security", "app security"]
 
 ## 1 Introduction
 
-In **App Security**, you can switch security on or off for the whole project. You can also configure security settings related to the project, such as user roles, administrator credentials, demo users, anonymous users, and password policy. To be able to configure, for example, [security per module](module-security) or [access rule for entities](access-rules), you need to switch the app security on first. 
+In **App Security**, you can switch security on or off for the whole project. You can also configure security settings related to the app, such as user roles, administrator credentials, demo users, anonymous users, and password policy. To be able to configure, for example, [security per module](module-security) or [access rule for entities](access-rules), you need to switch the app security on first. 
 
 To configure the app security, open **App Explorer** > **App** > **Security**, and the dialog box will open:
 
@@ -21,7 +21,7 @@ For more general information on security, see [Security](security).
 
 ## 2 Security Level {#security-level}
 
-The security level defines if security is switched off or on for the project and which security settings need to be configured.
+The security level defines if security is switched off or on for the app and which security settings need to be configured.
 
 | Security level | The way security is applied | Security settings to be configured |
 | --- | --- | --- |
@@ -56,7 +56,7 @@ When **Check Security** is enabled, for each user role Studio Pro checks which f
 
 ### 2.3 Project Status {#project-status}
 
-The project status indicates the security status for the current app security level.
+The app status indicates the security status for the current app security level.
 
 | Project status | Description |
 | --- | --- |

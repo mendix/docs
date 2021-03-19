@@ -87,8 +87,8 @@ In almost all cases, you can ignore this setting. **Use project settings** is a 
 If desired, you can configure whether to use a proxy for the request. These are the choices:
 
 * **Use project settings** – use whatever settings are defined at the app level (default)
-* **Override** – override the project-level settings for this action
-* **No proxy** – do not use a proxy for this action, even if there is a proxy configured at the project level
+* **Override** – override the app-level settings for this action
+* **No proxy** – do not use a proxy for this action, even if there is a proxy configured at the app level
 
 When you select **Override**, you can configure dynamically whether to use a proxy. You then supply the host, port, username, and password settings for the proxy.
 

@@ -73,7 +73,7 @@ The following actions are available in the drop-down menu:
 
 * **Go to {the name of the element}** – does the same as double-clicking the message, takes you to the element causing the check failure.
 * **View documentation about {an error code or the name of the element}** – opens the corresponding document that describes this check failure and gives instructions on how to fix it; if there is no documentation on the current message, the option is greyed-out
-* Message-specific actions – actions that depend on the message, in the example above, you can remove the microflow parameter that is not used in the project
+* Message-specific actions – actions that depend on the message, in the example above, you can remove the microflow parameter that is not used in the app
 
 ##  4 Read More
 

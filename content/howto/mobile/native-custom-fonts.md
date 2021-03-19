@@ -22,7 +22,7 @@ Android and iOS each take a different approach to fonts. Where Android requires 
 
 Furthermore, both platforms resolve available fonts differently. While iOS fully supports Open Type fonts and can select fonts based on their metadata, Android requires explicit linking of the font file to the weight and style.
 
-React Native, the underlying framework of Mendix native mobile apps, unifies the process of adding fonts. For example, fonts added under **assets/fonts** on Android are explicitly linked in the project. These fonts are then exposed directly in the framework for styling your widgets using the common CSS properties you use routinely.
+React Native, the underlying framework of Mendix native mobile apps, unifies the process of adding fonts. For example, fonts added under **assets/fonts** on Android are explicitly linked in the app. These fonts are then exposed directly in the framework for styling your widgets using the common CSS properties you use routinely.
 
 There are limitations to mobile font capabilities. For example, Android supports a very limited set of font types: regular, bold, italic, and bold italic.
 

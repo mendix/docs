@@ -48,7 +48,7 @@ In the **App repository address** field, enter the address of the app you want t
 
 ### 2.3 Locally on Disk {#local}
 
-For opening an app you already have on disk, simply point to the project file. 
+For opening an app you already have on disk, simply point to the app file. 
 
 ## 3 Read More
 

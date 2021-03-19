@@ -1,7 +1,7 @@
 ---
 title: "Model Changes When Security Is Enabled in Studio"
 parent: "security"
-description: "Describes checks and changes in the project when security is enabled in Mendix Studio."
+description: "Describes checks and changes in the app when security is enabled in Mendix Studio."
 tags: ["studio pro", "security", "studio"]
 ---
 
@@ -9,14 +9,14 @@ tags: ["studio pro", "security", "studio"]
 
 This document describes the process of model changes that are applied automatically when security is enabled in Mendix Studio. For more information on security settings in Studio, see [Security, Roles & Permissions](/studio/settings-security) in the *Studio Guide*. 
 
-Users can enable security from Studio. While the Studio user simply clicks the **Enable Security** button, as a result, security is set to **Production** for the project and a number of checks and changes (if necessary) are performed automatically. 
+Users can enable security from Studio. While the Studio user simply clicks the **Enable Security** button, as a result, security is set to **Production** for the app and a number of checks and changes (if necessary) are performed automatically. 
 
 ## 2 Process Overview
 
 When security is enabled, a number of checks and changes are done at several levels.
 
 1. Studio checks if security is enabled. If security is set to **Prototype/demo** or **Production**, the process stops. If security is off, steps described below are executed. 
-2. The [Mendix SSO](/appstore/modules/mendix-sso) module is set up if the project does not have it yet (for more information on this process, see the [Modules Set Up](#module-set-up) section). If the Mendix SSO module has been already installed for this project, the process stops. 
+2. The [Mendix SSO](/appstore/modules/mendix-sso) module is set up if the app does not have it yet (for more information on this process, see the [Modules Set Up](#module-set-up) section). If the Mendix SSO module has been already installed for this project, the process stops. 
 3. Studio does checks and changes (if necessary) to [demo users](demo-users) , [module roles](module-security) , and [user roles](user-roles) (for more information on this process, see the [Module Roles and Demo Users Set Up](#module-roles-and-demo-users) section).
 4. Studio sets access rules for entities (and their attributes and associations), if entities do not have access rules yet (for more information on this process, see the [Entity Access Set Up](#entity-access) section).
 5. Studio checks if the *login.html* file exists, backs it up, and replaces it with a new version (for more information on this process, see the [File Set Up](#file-set-up) section).

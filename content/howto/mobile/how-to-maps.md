@@ -32,7 +32,7 @@ Next you will configure the **Maps** widget provider. You will have two choices:
 
 ### 3.2 Configuring Maps Capability 
 
-1. Set up a native template with the **Native Mobile App Builder**. This can be launched from the Project menu as shown in [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app). Complete the wizard and configure the project's details and tokens:
+1. Set up a native template with the **Native Mobile App Builder**. This can be launched from the **App** menu as shown in [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app). Complete the wizard and configure the app's details and tokens:
 
 	{{% image_container width="400" %}}![launch native mobile builder](attachments/how-to-maps/launch-native-mobile-app-builder.png){{% /image_container %}}
 

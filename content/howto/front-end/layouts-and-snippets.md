@@ -136,7 +136,7 @@ The items that are shown in the menu widget are determined by the menu source. A
 * **App** > **Navigation** — when selected, the menu items are taken from one of the menus defined in this document; use this for the main menu of your application
 * **Add Other** > **Menu ** — when selected, the menu items are taken from this page resource; use this menu for auxiliary menus
 
-When you have selected the project navigation as source, the device profile must be determined for the correct navigation menu:
+When you have selected the app navigation as source, the device profile must be determined for the correct navigation menu:
 
 ![](attachments/18448710/edit-menu-bar.png)
 

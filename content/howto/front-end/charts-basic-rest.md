@@ -41,7 +41,7 @@ For more information on publishing a REST API refer to this Mendix document: [Pu
 1. Right-click **Value** and select **Generate overview pages...**.
     ![Chart Rest Enter Data](attachments/charts/charts-rest-generate-overview-pages.png)
 1. Add the **Value_NewEdit** page generated to your navigation.
-1. Run the project.
+1. Run the app.
 1. In your browser, open the NewEdit page.
 1. Add values and series by entering data in the appropriate fields.
 

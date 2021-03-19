@@ -36,7 +36,7 @@ To download the modules, follow these steps:
 	
 
 {{% alert type="warning" %}}
-Depending on the layout selected when the project was created, errors in Studio Pro may arise due to the new module's default layouts. To correct this, open each page that has an error and update the layout to the desired layout within the app.
+Depending on the layout selected when the app was created, errors in Studio Pro may arise due to the new module's default layouts. To correct this, open each page that has an error and update the layout to the desired layout within the app.
 {{% /alert %}}
 
 ## 3 Adding Navigation Items to Allow Users to Configure Settings

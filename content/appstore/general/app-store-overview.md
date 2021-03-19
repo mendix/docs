@@ -114,7 +114,7 @@ In addition, you may see a label on a component name for the [user group](#user-
 
 To see the component's [details](#details) page, click **View**.
 
-At the top of this page, there is a check box to **Receive notification** when there is a change made to your content (for example, a new version is published, or a component is unpublished). When checked, you will receive email notifications if a component status has changed. Clear this box to stop receiving these emails.
+At the top of this page, there is a check box to **Receive notification** when there is a change made to your components (for example, a new version is published, or a component is unpublished). When checked, you will receive email notifications if a component status has changed. Clear this box to stop receiving these emails.
 
 #### 4.2.1 Managing a Component {#manage}
 
@@ -159,7 +159,7 @@ This page contains reviews of [Your content](#content) by other users as well as
 
 ![](attachments/app-store-overview/your-reviews.png)
 
-At the top of this page, there are check boxes to **Receive notification** of reviews added to your content and of replies to your reviews. When checked, you will receive a relevant email about the review and/or reply. Clear these check boxes to stop receiving emails.
+At the top of this page, there are check boxes to **Receive notification** of reviews added to your components and of replies to your reviews. When checked, you will receive a relevant email about the review and/or reply. Clear these check boxes to stop receiving emails.
 
 ### 4.6 Notifications {#notifications}
 

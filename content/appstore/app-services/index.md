@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "app service"]
 
 An app service is a domain-focused and packaged business capability delivered in the form of an API or an API and associated UI. App services are flexible building blocks that include out-of-the-box integration into the Mendix development experience, enabling users to imagie new apps, extend the capability of existing apps, and significantly increase time-to-value.
 
-When you download an app service, it will go into the **App** > **App Store modules** folder.
+When you download an app service, it will go into the **App** > **Marketplace modules** folder.
 
 ## 2 Main Documents in This Category
 

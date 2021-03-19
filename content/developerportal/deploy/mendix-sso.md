@@ -26,7 +26,7 @@ In addition, the Mendix SSO module has a default implementation for user adminis
 
 We are in the process of adding the Mendix SSO module to the Mendix app templates. Where it has been added, all you have to do is to set your security level to **Production** and your end-users will be able to sign in.
 
-You can see if your app has the Mendix SSO module, and which version it has, by looking in the **App Store modules** section in the **App Explorer** for your app project. The version number is recorded in the **Version** constant within the module.
+You can see if your app has the Mendix SSO module, and which version it has, by looking in the **Marketplace modules** section in the **App Explorer** for your app project. The version number is recorded in the **Version** constant within the module.
 
 ![](attachments/mendix-sso/mxsso-app-store-module.png)
 
@@ -104,7 +104,7 @@ To completely remove Mendix SSO. do the following:
 
 2. Remove any references to the Mendix SSO module in the navigation profiles, accessed through the **Navigation** page of the **App Explorer**.
 
-3. Delete the **MendixSSO** module from **App Store modules**.
+3. Delete the **MendixSSO** module from **Marketplace modules**.
 
 4. Review the **Errors** pane for any other references to **MendixSSO**—there will only be additional errors if the Mendix SSO module been modified.
 
@@ -130,7 +130,7 @@ To enable Mendix SSO in your app, follow these steps:
     1. Open **App Settings** from the **App Explorer**.
     2. Click the **Runtime** tab.
     3. Click **Select…** for the **After startup** microflow.
-    4. Choose the microflow **App Store modules** > **MendixSSO** > **MOVE_THIS** > **CustomizableMendixSSOMicroflows** > **MendixSSO_AfterStartup** (you can use the filter to find it quickly) and click **Select**.
+    4. Choose the microflow **Marketplace modules** > **MendixSSO** > **MOVE_THIS** > **CustomizableMendixSSOMicroflows** > **MendixSSO_AfterStartup** (you can use the filter to find it quickly) and click **Select**.
         ![](attachments/mendix-sso/after-startup.png)
     5. Click **OK** to close the **App Settings**.
 
@@ -142,11 +142,11 @@ To enable Mendix SSO in your app, follow these steps:
     3. Enter the following values and click **OK**.
         * **Caption** – *My Account*
         * **Icon** – *Glyphicon 'user'* (click **Select…** and search for `user`)
-        * **On click** – *Show a page* **App Store modules** > **MendixSSO** > **Default Implementation** > **Pages** > **User** > **MyAccountViewEdit**
+        * **On click** – *Show a page* **Marketplace modules** > **MendixSSO** > **Default Implementation** > **Pages** > **User** > **MyAccountViewEdit**
     4. Repeat the above to add another **New item** with the values.
         * **Caption** – *User Overview*
         * **Icon** – *Glyphicon 'lock'*
-        * **On click** – *Show a page* **App Store modules** > **MendixSSO** > **Default Implementation** > **Pages** > **Admin** > **UserOverview**
+        * **On click** – *Show a page* **Marketplace modules** > **MendixSSO** > **Default Implementation** > **Pages** > **Admin** > **UserOverview**
 
     {{% alert type="info" %}}If you want to implement your own administration pages, see [Customizing Mendix SSO](#customizing), below, for more information.{{% /alert %}}
 
@@ -156,7 +156,7 @@ To enable Mendix SSO in your app, follow these steps:
     3. Switch to the **User roles** tab.
     4. Select the **Administrator** user role and click **Edit**.
     5. Click **Edit** next to **Module roles**.
-    6. Select the **Administrator** module role for **App Store modules** > **MendixSSO**.
+    6. Select the **Administrator** module role for **Marketplace modules** > **MendixSSO**.
         ![Set Administrator module role](attachments/mendix-sso/set-module-role.png)
     7. Click **OK** twice to return to **Project Security**.
     8. Repeat the steps above to add the MendixSSO.User module role to the **User** user role.

@@ -76,7 +76,7 @@ The building block is now available in the **Toolbox**, where users can drag it 
 
 Now that it’s clear how to create page templates and building blocks, we need to discuss how to get our resources from the **Local** category into a module that can be shared with our apps and users.
 
-Let’s begin by placing our page template inside the **UI_Resources** module under **App Store modules**:
+Let’s begin by placing our page template inside the **UI_Resources** module under **Marketplace modules**:
 
 ![](attachments/howto/creating_moving_local.png)
 

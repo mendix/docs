@@ -29,7 +29,7 @@ To download the modules, follow these steps:
 
 	![](attachments/using-the-excel-exporter/18581166.png)
 
-3. Click **Download** to include the module in your app. It will be imported into **App** > **App Store modules** in the **App Explorer**.
+3. Click **Download** to include the module in your app. It will be imported into **App** > **Marketplace modules** in the **App Explorer**.
 4.  Search for the keyword *Excel*, select **Excel exporter**, and download that module into your app:
 
 	![](attachments/using-the-excel-exporter/exporter.png)

@@ -35,7 +35,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Getting the XSUAA Connector for SAP Business Technology Platform Module
 
-The SAP app may already have the XSUAA Connector for SAP Business Technology Platform installed. Look in **App** > **App Store modules** for the module **SapAuthentication**. This is the XSUAA connector.
+The SAP app may already have the XSUAA Connector for SAP Business Technology Platform installed. Look in **App** > **Marketplace modules** for the module **SapAuthentication**. This is the XSUAA connector.
 
 If the XSUAA Connector for SAP Business Technology Platform is not already in your app, download it from the Marketplace. It can be found here: [XSUAA Connector for SAP Business Technology Platform](https://appstore.home.mendix.com/link/app/78091/).
 
@@ -56,7 +56,7 @@ The app needs to be bound to the SAP XSUAA service. This is achieved by executin
 To add the After Startup microflow to your application, follow these steps:
 
 1. In the **App Explorer**, select **App** > **Settings** and open the **Runtime** tab.
-2. For the **After Startup** microflow, select the microflow **App Store Modules > SapAuthentication > USE_ME > ASu_StartXSUAA**.
+2. For the **After Startup** microflow, select the microflow **Marketplace modules** > **SapAuthentication** > **USE_ME** > **ASu_StartXSUAA**.
 
 ![](attachments/use-sap-xsuaa-connector/runtime-settings.png)
 

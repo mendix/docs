@@ -53,13 +53,13 @@ Let’s start with creating a new Mendix application in the Mendix Developer Por
 
     ![](attachments/howto/sharing_createnewapp.png)
 
-2. Expand at the **App Store modules** at the Mendix **App** level and find the default **Atlas_UI_Resources** module. Right-click this module and delete it:
+2. Expand at the **Marketplace modules** at the Mendix **App** level and find the default **Atlas_UI_Resources** module. Right-click this module and delete it:
 
     ![](attachments/howto/sharing_delete_module.png)
 
 3. Now it’s time to import your company UI resources (if you have not created the UI resources yet, see [How to Create Company UI Resources](create-company-atlas-ui-resources)). Import these resources by clicking **ApMarketplace** in the top toolbar of Studio Pro, and then selecting **UI Resources** in the left sidebar **Categories** menu.
 4. Download the company UI resources module you have created.
-5. When the download is complete, the UI resources will be visible in the **App Store modules** in **App Explorer**.  Be sure to check if all the errors are resolved before continuing.
+5. When the download is complete, the UI resources will be visible in the **Marketplace modules** in **App Explorer**.  Be sure to check if all the errors are resolved before continuing.
 
 Now that you have added your company UI resources to your company app template, you can share the app in the Mendix Marketplace just as you did with the company UI resources (see the next section for details). The company app template will be available for your Mendix developers to use whenever they want to create a new app, allowing them to save time and skip downloading the company UI resources separately.
 
@@ -96,7 +96,7 @@ To use the UI Resources module from teh Mendix Marketplace, follow these steps:
 
     ![](attachments/howto/sharing_detail.png)
 
-3. To download the UI resources inside your app, click **Download**. After downloading your company's UI Resources module, it will appear under **App Store modules**. The module can always be updated by downloading a new version from the Mendix Marketplace when new resources are added.
+3. To download the UI resources inside your app, click **Download**. After downloading your company's UI Resources module, it will appear under **Marketplace modules**. The module can always be updated by downloading a new version from the Mendix Marketplace when new resources are added.
 
 ## 5 Read More
 

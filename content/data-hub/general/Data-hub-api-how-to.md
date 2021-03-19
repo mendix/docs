@@ -615,12 +615,12 @@ After registering the published services for the app registered as in 3.1 in the
 
 The parameters `AppUUID` and `EnvironmentUUID` that were returned in 3.1. and 3.2 are required as input parameters.
 
-The request body is made up of the collection of objects for the `PutPublishedEndpointsRequest`. They include an array of the objects that define each service deployed by the app in the given environment -  `Endpoints` – which are represented below. 
-(The blue objects indicate that the constituent objects are a collection, the red an array, and the solid outline indicates if the object is required.)
+The request body is made up of the collection of objects for the `PutPublishedEndpointsRequest`. They include an array of the objects that define each service deployed by the app in the given environment –  `Endpoints` – which are represented below. 
+
+(The blue indicate that the constituent objects are a collection, the red an array, and the solid outline indicates if the object is required.)
 
 
-![](https://paper-attachments.dropbox.com/s_5110D0F8658FA1B6296437C16E0C83965FFDB37EE0B69FD3C06E5B34A72DC3E6_1615912367292_Screenshot+2021-03-16+at+17.32.17.png)
-
+![published endpoints mindmap](attachments/data-hub-api-how-to/putpublishedendpointsrequest.png)
 
 When defining each service in the `ServiceVersion` object specify all the details of the endpoints or service which includes the name, version number. 
 The service contracts that are included as part of the `Contracts` object must be in an escaped JSON string format.
@@ -644,12 +644,12 @@ In this example, the service **ODatav3-sample-service** is registered for the ap
 
 Two tags, `odata` and `sample` are also defined as part of the registration.
 
-For the `Contracts` object you can use the service that is made up of two files supplied with this how-to in Section 6: 
+For the `Contracts` object you can use the OData v3 contract that is made up of two files supplied with this how-to in Section 8 [Sample Contract](#sample-contract): 
 
     - “Type”: “ServiceFeed” 
     - “Type”: “Metadata”
 
-Each of these files is provided in escaped JSON format and replace the<*insert service feed from*[+Using the Data Hub API: 6.1-Service-Feed](https://paper.dropbox.com/doc/Using-the-Data-Hub-API-6.1-Service-Feed-bPBYadNIdEkr2rwXEjwVK#:uid=743818443434385856503942&amp;h2=6.1-Service-Feed) > *and<Insert example metadata from*[+Using the Data Hub API: 6.2-Metadata](https://paper.dropbox.com/doc/Using-the-Data-Hub-API-6.2-Metadata-bPBYadNIdEkr2rwXEjwVK#:uid=362078091944697159682892&amp;h2=6.2-Metadata) > strings given in the following example.
+Each of these files is provided in escaped JSON format. Just replace the <*insert service feed from*[Sample Contract](#sample-contract):> *and<Insert example metadata from*[Sample Contract](#sample-contract): > strings given in the following example.
 
 #### 6.3.4.1 Example Base request URL
 
@@ -697,11 +697,11 @@ Each of these files is provided in escaped JSON format and replace the<*insert s
                 "Contracts": [
                     {
                         "Type": "ServiceFeed",
-                        "Value": "<*insert service feed from*[+Using the Data Hub API: 6.1-Service-Feed](https://paper.dropbox.com/doc/Using-the-Data-Hub-API-6.1-Service-Feed-bPBYadNIdEkr2rwXEjwVK#:uid=743818443434385856503942&amp;h2=6.1-Service-Feed) >"
+                        "Value": "<*insert service feed from*[Sample Contract](#sample-contract): >"
                     },
                     {
                         "Type": "Metadata",
-                        "Value": "*<Insert example metadata from*[+Using the Data Hub API: 6.2-Metadata](https://paper.dropbox.com/doc/Using-the-Data-Hub-API-6.2-Metadata-bPBYadNIdEkr2rwXEjwVK#:uid=362078091944697159682892&amp;h2=6.2-Metadata) >"
+                        "Value": "*<Insert example metadata from*[Sample Contract](#sample-contract): >"
                     }
                 ]
             }
@@ -770,6 +770,8 @@ For the above request the following 200 OK response is received:
 }
 
 The resulting entry in the Catalog for the registered service the entry in the Catalog is the following: 
+
+![published endpoints mindmap](attachments/data-hub-api-how-to/registered-service.png)
 
 ![](https://paper-attachments.dropbox.com/s_5110D0F8658FA1B6296437C16E0C83965FFDB37EE0B69FD3C06E5B34A72DC3E6_1616087887956_Screenshot+2021-03-18+at+18.18.00.png)
 
@@ -858,14 +860,14 @@ You can perform a search to find a particular service with the dataset that you 
 ### 5.1.1 Method and Endpoint
 `GET /applications/{AppUUID}/services/{ServiceName}`
 
-5**.1.2 Request Parameters and body**
+### 5.1.2 Request Parameters and body
 
 | **Name**    | **Type** | **Required/Optional** | **DefaultValue** | **Description**                 |
 | ----------- | -------- | --------------------- | ---------------- | ------------------------------- |
 | AppUUID     | string   | Required              |                  | Catalog UUID for registered app |
 | ServiceName | string   | Required              |                  | Name of Service                 |
 
-5**.1.3 GET Response**
+### 5.1.3 GET Response
 
 | **Name**     | **Type** | **Required/Optional** | **DefaultValue** | **Description**                                              |
 | ------------ | -------- | --------------------- | ---------------- | ------------------------------------------------------------ |
@@ -874,16 +876,16 @@ You can perform a search to find a particular service with the dataset that you 
 | Application  |          | required              |                  | Will return a collection of objects describing the application |
 | Versions     |          |                       |                  | For the specified endpoint, the details of the version numbers, the environments they are deployed to and links to the each version number |
 
-5**.1.4 Example:** 
+### 5.1.4 Example:
 To get all services for the service `SAMPLE_EmployeeDirectory`
 
-5**.4.4.1 Base request URL:**
+#### 5.4.4.1 Base request URL:
 `GET /applications/30aaf7ca-415f-306d-bd6e-458e6f821f06/services/SAMPLE_EmployeeDirectory'`
 
 curl --location --request GET 'https://hub.mendix.com/rest/datahubservice/v2/applications/30aaf7ca-415f-306d-bd6e-458e6f821f06/services/SAMPLE_EmployeeDirectory' \
 --header 'Authorization: MxToken <*yourMxToken>*'
 
-**5.1.5 Example response**
+#### 5.1.5 Example response
 For the above response there was only a single instance of the service found: 
 {
     "Name": "SAMPLE_EmployeeDirectory",
@@ -968,13 +970,13 @@ In the Catalog the following is shown when searching for the same service:
 Retrieve contract or contract files (for OData v3, two contract files JIRA CAT-645..) that are registered in the Catalog. This contract can then be retrieved in order to parse it and consume specific entities your app modelling.
 The consumed entitysets should then be registered in the Catalog as described in 5.3
 
-5**.2.1 Method and Endpoint**
+### 5.2.1 Method and Endpoint
 `GET /applications/``*{AppUUID}*``/environments/``*{EnvironmentUUID}*``/services/{ServiceName}/{ServiceVersion}`
 
-5**.2.2 Request Parameters and body**
+### 5.2.2 Request Parameters and body
 All parameters are required in order to retrieve the contract that you want to consume from.  These are returned from the first GET call performed in 5.1 You can upload the contract and consume exposed entities from this. 
 
-5**.2.3 Response**
+### 5.2.3 Response
 The response will return a collection of the specific details of the service:
 
 | **Name**    | **Type** | **Required/Optional** | **DefaultValue** | **Description**                                              |
@@ -986,25 +988,17 @@ The response will return a collection of the specific details of the service:
 | Services    |          | Required              |                  | For the specified endpoint (application/environment/version) the details of the contract and the links to the Data Hub details. |
 | Contracts   |          | Required              |                  | Collection of objects specifying the contract and the JSON-encoded contents of the contract. <br>Note that for `Type` the type of contract is provided: for OData V3, the accepted types are "ServiceFeed" and "Metadata". For OData V4, the primary contract should be called "Metadata". |
 
-5**.2.4 Example:** 
+### 5.2.4 Example:*
 give the example of retrieving HR Sample app
 
-**5.2.5 Example response**
+### 5.2.5 Example response
 …
 
 
 
-# ~~5~~ ~~How to Delete Data Sources from the Catalog~~
+# 8 Sample Contract{#sample-contract}
 
-~~~~
-~~The Data Hub provides a description of the organizations landscape: the apps, the services published by the apps.~~ 
-~~The action of removing or “deleting” a service from an app is achieved by registering the application and environment  as described in 3.2.1 and 3.2.1?? and then registering all the services deployed by the app without the service that is no longer available.~~ 
-
-
-
-# 8 Sample Contract
-
-The following are the files that make up an example OData v3 contract that you can use for the registration service request. The full contract definition is made up of the **service feed** and the **metadata**. The format provided below is in escaped JSON format contract which you can copy and directly insert in the request body.
+The following are the files that make up an example OData v3 contract that you can use for the PUT registration service request in this how-to. The full contract definition is made up of the **service feed** and the **metadata** files. The format provided below is in escaped JSON format contract which you can copy and directly insert in the PUT request body.
 
 
 ## 8.1 Service Feed
@@ -1020,8 +1014,3 @@ The following are the files that make up an example OData v3 contract that you c
 - Publishing Data Sources
 ----------
 
-Ref source material:
-[+Using the DH API - Source Material](https://paper.dropbox.com/doc/Using-the-DH-API-Source-Material-NVMGGdPu2YcTn5LnCzWXv) 
-
-
-~~~~

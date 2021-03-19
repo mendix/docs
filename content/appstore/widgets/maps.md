@@ -8,6 +8,52 @@ tags: ["marketplace", "marketplace component", "widget", "maps", "google maps", 
 
 ## 1 Introduction {#intro}
 
+The [Maps](https://appstore.home.mendix.com/link/app/108261/) widget enables showing locations on maps. It supports the following different map providers:
+
+* [Google Maps](https://www.google.com/maps/)
+* [OpenStreetMap](https://www.openstreetmap.org)
+* [Mapbox](https://www.mapbox.com)
+* [HERE maps](https://www.here.com/)
+
+## 2 Usage
+
+### Map Provider
+
+By default, the Maps widget will use Google Maps.
+To change the map provider, go to the **General** properties of the map and enable the **Advanced > Show advanced** setting.
+This will introduce a new **Advanced** tab in the setting window.
+In there, all the above mentioned map providers are available to pick from.
+
+### Access Token
+
+For all map types except OpenStreetMap, you need to have a token in order to view the map.
+The appropriate tokens can be retrieved via the links to the map types listed in the [Introduction](#intro) section above.
+After obtaining the access token, it can be provided to the widget in the **General > Configurations** widget settings section.
+For Google Maps the **Google maps API Key** property should be used, while for the other map providers the **API key** property should be used.
+
+### Current Location
+
+If you want to show the user's location on the map, this can be enabled under **General > Configurations > Show current location marker**.
+
+### Markers
+
+
+### Controls
+
+Under the **Controls** properties tab, the following settings can be adjusted that are related to how the users interacts with the map:
+* **Drag**: When enabled, the map will move along when dragging the map.
+* **Scroll to zoom**: When enabled, the user can change the zoom level of the map by mouse scrolling.
+* **Zoom**: When enabled, additional control buttons will be showed on the map
+* **Attribution**: When enabled, attributions will be shown at the bottom of the map (credits).
+
+### Dimensions
+
+## 3 Previous Versions' Documentation
+
+### Widgets below v2.0.0
+
+#### 1 Introduction {#intro}
+
 The [Maps](https://appstore.home.mendix.com/link/app/108261/) widget enables showing locations on maps. These are the available map types:
 
 * [Google Maps](https://www.google.com/maps/)
@@ -15,7 +61,7 @@ The [Maps](https://appstore.home.mendix.com/link/app/108261/) widget enables sho
 * [Mapbox](https://www.mapbox.com)
 * [HERE maps](https://www.here.com/)
 
-### 1.1 Features
+##### 1.1 Features
 
 * Show a location on a map based on coordinates
 * Show a list of coordinates on the map
@@ -25,24 +71,24 @@ The [Maps](https://appstore.home.mendix.com/link/app/108261/) widget enables sho
 	* Call a microflow or nanoflow
 * Customize the display of the marker – if the marker cannot be found from the custom markers, the widget uses the specified custom markers; otherwise, it uses the widget-bundled marker
 
-### 1.2 Limitations
+##### 1.2 Limitations
 
 * Addresses are not supported
 * Context and static data sources are offline-capable with Mendix data, but you still need to be online to view the map
 * For all map types except OpenStreetMap, you need to have a token in order to view the map – you can get the tokens via the links to the map types listed in the [Introduction](#intro) section above
 * Google maps uses [Google Maps API v3](https://cloud.google.com/maps-platform/), so the limitations from Google [Premium Plan Usage Rates and Limits](https://developers.google.com/maps/premium/usage-limits) apply
 
-### 1.3 Demo App
+##### 1.3 Demo App
 
 For a demo app that has been deployed with this widget, see [here](https://leafletmaps.mxapps.io/).
 
-## 2 How the Widget Works
+#### 2 How the Widget Works
 
 Locations are displayed based on coordinates. If there is one location, the map will center to that location. If there are multiple locations, the map will center to a position in which all markers are visible. If no location is available, a default center location of the Mendix offices is provided (in case default center coordinates are not specified).
 
 If auto-zoom is enabled, the map uses bounds zoom; otherwise, it uses the custom zoom level specified. The minimum zoom level is 2, and the maximum is 20.
 
-## 3 Usage
+#### 3 Usage
 
 To add a basic map to your application, follow these steps:
 
@@ -59,6 +105,6 @@ To add a basic map to your application, follow these steps:
 	* For **Mapbox** and **Google Maps**, add an access token
 	* For **HERE maps**, add an app ID and app code
 
-## 4 Developing This Marketplace Component
+#### 4 Developing This Marketplace Component
 
 We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendix/maps](https://github.com/mendix/maps/issues).

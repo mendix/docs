@@ -256,15 +256,15 @@ Ensure that you have cloned the github repo locally and have checked out the **d
 
     After the build succeeds the app should be starting on the selected device.
 
-### 2.4 Well Known Files / Associate website{#wellknownfiles}
+### 2.4 Well Known Files / Associate Website{#wellknownfiles}
 
-The configuration of the .well-known files is a prerequisite (for ios) to work.
-On Android this is optional. If provided the phone will not ask which app should be opened for the deep link.
+For your deep link to work in iOS, you must configure the .well-known files.
+On Android this is optional. If provided, the phone will not ask which app should be opened for the deep link.
 
 #### For iOS
 
-In Mendix Studio Pro open the *NativeMobile* folder in the **MindSphereSSO** module and adopt the constant
-**AppleAppSiteAssociation**  with
+In Mendix Studio Pro, open the *NativeMobile* folder in the **MindSphereSSO** module and modify the constant
+**AppleAppSiteAssociation** to be:
 
 ```json
 {
@@ -280,66 +280,66 @@ In Mendix Studio Pro open the *NativeMobile* folder in the **MindSphereSSO** mod
 }
 ```
 
-replace the value of the **appID** property with your **TEAM_ID** and your **BUNDLE_IDENTIFIER**.
+Replace the value of the **appID** property with your **TEAM_ID** and your **BUNDLE_IDENTIFIER**.
 Do not remove the "." between the two parts.
 
-Info: You can find the **TEAM_ID** in the [Apple developer center](https://developer.apple.com/membercenter). Log into the web site, click on Membership, then look for Team ID in the Membership Information section.
+{{% alert type="info" %}}
+You can find the **TEAM_ID** in the [Apple developer center](https://developer.apple.com/membercenter). Log into the web site, click on Membership, then look for Team ID in the Membership Information section.
+{{% /alert %}}
 
-Attention: You have to remove all `/r/n` from the json object before saving the constant in Mendix Studio Pro. This could be done for example [here](http://jsoneditoronline.org/)
+{{% alert type="warning" %}}
+You must remove all `/r/n` from the json object before saving the constant in Mendix Studio Pro. This can be done in a tool like, for example, the [JSON Editor Online](https://jsoneditoronline.org).
+{{% /alert %}}
 
 #### For Android
 
-To generate the needed file you have to use Android Studio. In the chapter [build your own development app](./mindsphere-mobile-native#buildcustomapp) you have already cloned your github repo locally. Use the developer branch.
+To generate the .well-known files you must use Android Studio. In the section [build your own development app](#buildcustomapp), above, you have already cloned your github repo locally. Use the developer branch.
 
-1. Open the **root** folder of this repo in a terminal and if not already done run `npm install`.
+1. Open the **root** folder of this repo in a terminal and, if not already done, run `npm install`.
 
-    Note: during our tests we faced issues when one of the patches should be applied
+    {{% alert type="info" %}}During our tests we faced issues when we tried to apply one of the patches:<br /><br />![build your own development app](attachments/mindsphere-mobile-native/Problem_npm_install.png)<br /><br />This can be fixed by changing the end of each line in the file **patches/react-native-image-picker+2.3.4.patch** from **CR LF** to **LF**. This can easily be done with editors like Visual Studio Code.{{% /alert %}}
 
-    ![build your own development app](./attachments/mindsphere-mobile-native/Problem_npm_install.png)
+1. Start Android Studio and open the **android** folder as a new project. Android Studio automatically starts some build process, wiat for these to finish before going to the next step.
 
-    This can be fixed by changing the line feed from the file **patches/react-native-image-picker+2.3.4.patch** from **CR LF** to **LF**. This can be done with editors like Visual Studio Code easily.
+1. Ensure you use the build variant **devDebug**.
 
-1. Start Android Studio and open the **android** folder as a new project. Android Studio automatically starts some build process, for the next step you have to wait till these are done.
+1. Open the **File** menu and click the **Sync Project with Gradle Files**.
 
-1. Ensure to use the build variant **devDebug**
+   ![SyncGradleBuild](attachments/mindsphere-mobile-native/AndroidStudio_SyncGradle.png)
 
-1. Open the **File** menu and hit the **Sync Project with Gradle Files**.
-
-   ![SyncGradleBuild](./attachments/mindsphere-mobile-native/AndroidStudio_SyncGradle.png)
-
-1. Wait till the Gradle sync is ready and Android Studio is activating the **App Links Assistant** in the **Tools** menu.
+1. Wait till the Gradle sync is ready and Android Studio activates the **App Links Assistant** in the **Tools** menu.
 
 1. Open the **App Links Assistant** from the **Tools** menu.
 
-   ![AndroidStudioAppLinks](./attachments/mindsphere-mobile-native/AndroidStudio_AppLinks.png)
+   ![AndroidStudioAppLinks](attachments/mindsphere-mobile-native/AndroidStudio_AppLinks.png)
 
-1. To generate your **assetlinks.json** file, hit the **Generate Digital Asset Links file** button at step 3 in the **App Links Assistant**.
+1. Generate your **assetlinks.json** file by clicking the **Generate Digital Asset Links file** button at step 3 in the **App Links Assistant**.
 
-   ![AndroidStudioGenerateAssetLinks](./attachments/mindsphere-mobile-native/AndroidStudio_GenerateAssetLinks.png)
+   ![AndroidStudioGenerateAssetLinks](attachments/mindsphere-mobile-native/AndroidStudio_GenerateAssetLinks.png)
 
 1. Copy the content from the preview window and use it as the value for the constant **AssetLinks**.
-   You find this constant in Mendix Studio Pro in the **MindSphereSSO** module.
+   This constant is in the **MindSphereSSO** module in Mendix Studio Pro.
 
-   Attention: You have to remove all `/r/n` from the json object before saving the constant in Mendix Studio Pro. This could be done for example [here](http://jsoneditoronline.org/)
+   {{% alert type="warning" %}}You must remove all `/r/n` from the json object before saving the constant in Mendix Studio Pro. This can be done in a tool like, for example, the [JSON Editor Online](https://jsoneditoronline.org).{{% /alert %}}
 
-#### Make your .well-known files public available
+#### Make your .well-known Files Publicly Available
 
-The **Siemens MindSphere Mobile Starter Application** implements a rest endpoint which serves the .well-known files for you. Press the **Run** button to deploy your app to the Mendix cloud.
+The **Siemens MindSphere Mobile Starter Application** implements a REST endpoint which serves the .well-known files for you. Click the **Run** button to deploy your app to the Mendix cloud.
 
-Once it is deployed adopt the app registration in the developer cockpit for the .well-known files.
+Once it is deployed, change the app registration in the Developer Cockpit for the .well-known files.
 
-* Open your app in the developer cockpit and press **Deregister**.
+1. Open your app in the Developer Cockpit and click **Deregister**.
 
-* Click on the tab **Configuration** and fill in the values for android and ios:
+2. Select the tab **Configuration** and fill in the values for android and ios:
 
     * android = `https://SANDBOXURL/.well-known/assetlinks.json`
     * ios = `https://SANDBOXURL/.well-known/apple-app-site-association`
 
-* Replace **SANDBOXURL** with your deployment URL.
+3. Replace **SANDBOXURL** with your deployment URL.
 
-* Click on **Register** again to save the changes to MindSphere.
+4. Click **Register** again to save the changes to MindSphere.
 
-* Try out if the files are served correctly by open a browser at the following URL:
+5. Test if the files are served correctly by opening a browser at the following URL:
 
     ``` bash
     https://TENANT-INTERNAL_NAME-TENANT.eu1.mindsphere.io/.well-known/assetlinks.json
@@ -351,7 +351,7 @@ Once it is deployed adopt the app registration in the developer cockpit for the 
     https://TENANT-INTERNAL_NAME-TENANT.eu1.mindsphere.io/.well-known/apple-app-site-association
     ```
 
-    Replace **TENANT** (2x) and **INTERNAL_NAME** with your values.
+    Replace **TENANT** (twice!) and **INTERNAL_NAME** with your values.
 
 ### 2.5 Try out your application
 

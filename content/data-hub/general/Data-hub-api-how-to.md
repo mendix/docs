@@ -56,7 +56,6 @@ Before starting this how-to, make sure you have completed the following:
 
 	- Register consumed services (data source)
 
-    
 
 # 4 Making the API Calls and Authentication
 
@@ -109,7 +108,7 @@ The following parameters can be specified for `data` :
 | ----------------------- | -------- | --------------------- | --------------------- | ------------------------------------------------------------ |
 | query                   | string   | optional              |                       | Search string                                                |
 | productionEndpointsOnly | boolean  | optional              | false                 | Boolean filter to only return endpoints in a Production environment. False will return endpoints in Production, Non-production and Sandbox environments. |
-| contractType            | string   | optional              | all                   | Protocol used by the service. Currently supported values: OData_3_0, OData_4_0_Xml, <br>Kafka_1_0. `Default: all` |
+| contractType            | string   | optional              | all                   | Protocol used by the service. Currently supported values: OData_3_0, OData_4_0_Xml, <br>Kafka_1_0. |
 | afterId                 | string   | optional              | first page of results | UUID of the last endpoint on the previous page               |
 | limit                   | integer  | optional              | 20                    | The maximum number of items that could be returned. Default is 20, Maximum value = 100. |
 
@@ -403,9 +402,9 @@ The 200 OK response returned the following results:
 
 }
 
-### 5.4.2 The Response when viewed in the Catalog
+### 5.4.2 Search Results for the Same Search When Viewed in the Catalog
 
-Viewed in the Data Hub the search results shows the following results (in the search results pane on the left:
+Viewed in the Data Hub the search shows the following with the total list in the search results pane on the left and the details of the selected **SAMPLE_EmployeeDirectory** :
 
 ![search results](attachments/data-hub-api-how-to/dh-search-sample.png)
 

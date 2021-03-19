@@ -82,8 +82,7 @@ The details page for a component presents the following item information tabs:
 *  **Overview** – contains the following sections:
 	* **Description** – a description of the component
 	* **Screenshots** – screenshots of the component
-	* **User Reviews** – user reviews of the component; to leave a review for the component, click **Add Review** – a section will open where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page)
-	* If you are a developer of a component, you may **Reply** to a review.
+	* **User Reviews** – user reviews of the component; to leave a review for the component, click **Add Review**, which will open a section where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page); if you are a developer of the component, you can **Reply** to a review
 *  **Documentation** – can include details on typical use cases, features and limitations, dependencies, installation and configuration, and frequently asked questions
 	* [Platform-supported](app-store-content-support#category) components are documented in the various categories of this *Marketplace Guide*
 	* Click **Edit documentation** to open a text editor where you can edit the Marketplace component's documentation
@@ -115,7 +114,7 @@ In addition, you may see a label on a component name for the [user group](#user-
 
 To see the component's [details](#details) page, click **View**.
 
-At the top of the page, there is a toggle for notification of status changes of your component (for example, new version published, component unpublished). When turned on, you will receive email notifications if the component status has changed. Turn off to stop receiving emails for component status changes.
+At the top of this page, there is a check box to **Receive notification** when there is a change made to your content (for example, a new version is published, or a component is unpublished). When checked, you will receive email notifications if a component status has changed. Clear this box to stop receiving these emails.
 
 #### 4.2.1 Managing a Component {#manage}
 
@@ -160,7 +159,7 @@ This page contains reviews of [Your content](#content) by other users as well as
 
 ![](attachments/app-store-overview/your-reviews.png)
 
-At the top of the page, there is a toggle for notification of reviews on your components, and for replies to your reviews. When turned on, you will receive an email when one of these things happen. Turn off to stop receiving emails.
+At the top of this page, there are check boxes to **Receive notification** of reviews added to your content and of replies to your reviews. When checked, you will receive a relevant email about the review and/or reply. Clear these check boxes to stop receiving emails.
 
 ### 4.6 Notifications {#notifications}
 

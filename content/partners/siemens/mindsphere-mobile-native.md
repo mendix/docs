@@ -10,41 +10,41 @@ tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Lo
 
 ## 1 Introduction
 
-This documentation describes the adoptions needed to develop native mobile apps for MindSphere with Mendix. Native mobile apps do not render inside a web view - they use native UI elements. This enables fast performance, smooth animations and allow access to all native device capabilities.
-Details about native mobile app development with Mendix can be found [here.](https://docs.mendix.com/howto/mobile/native-mobile)
+This documentation describes the adaptations needed to develop Mendix native mobile apps for MindSphere. Native mobile apps do not render inside a web view - they use native UI elements. This enables fast performance, smooth animations, and allows access to all native device capabilities.
+Details about building native mobile apps with Mendix can be found [here](https://docs.mendix.com/howto/mobile/native-mobile).
 
 The **Siemens MindSphere Mobile Starter Application** is an app template which is based on the **Native Mobile Quickstart** from Mendix and includes all you need to start developing a native mobile app for your MindSphere tenant.
 
-On a phone there is no MindSphere launchpad - therefore the app has to implement the login to MindSphere itself. The template contains a login page which is shown at startup to the user.
-The login itself to MindSphere on your device is done outside of our native application in a browser and your app is started after successful login via a "Deep Link". Details about this process can be found [here](https://developer.mindsphere.io/howto/howto-develop-mobile-app-with-mdsp.html) - but do not worry - the implementation is already part of the app template - just use it.
-To support deep links with your app, you have to create your own [Custom Development App](https://docs.mendix.com/howto/mobile/how-to-devapps) and register a deep link corresponding to your app registration.
+On a phone there is no MindSphere launchpad - therefore the app has to implement the login to MindSphere itself. The template contains a login page which is shown to the user at startup.
+The end-user signs in to MindSphere outside the native application, in a browser, and your app is started after a successful login via a "Deep Link". Details about this process can be found [here](https://developer.mindsphere.io/howto/howto-develop-mobile-app-with-mdsp.html). But do not worry - the implementation is already part of the app template - just use it.
+To support deep links in your app, you have to create your own [Custom Development App](https://docs.mendix.com/howto/mobile/how-to-devapps) and register a deep link corresponding to your app registration.
 
-As prerequisite we recommend to do the [build a native mobile inspection-app](https://academy.mendix.com/link/path/66/Build-a-Native-Mobile-Inspection-App) tutorial from the academy to get yourself familiar with mobile app development. Also you should be familiar with the basics of the source code management system [git](https://git-scm.com/) as we have to update the standard [Custom Development App](https://docs.mendix.com/howto/mobile/how-to-devapps).
+As a prerequisite, we recommend that you follow the [build a native mobile inspection-app](https://academy.mendix.com/link/path/66/Build-a-Native-Mobile-Inspection-App) tutorial from the Mendix Academy to get yourself familiar with mobile app development. You should also be familiar with the basics of the source code management system [git](https://git-scm.com/) as you will have to update the standard [Custom Development App](https://docs.mendix.com/howto/mobile/how-to-devapps).
 
-This documentation is structured in two main parts:
+This documentation is structured into two main parts:
 
-* [Setup development environment](./mindsphere-mobile-native#setupdevenv) - explains everything to get you started
-* [Module Details](./mindsphere-mobile-native#moduledetails) - describes the solution and what should be considered during development
+* [Setup Development Environment](#setupdevenv) - explains everything to get you started
+* [Module Details](#moduledetails) - describes the solution and what should be considered during development
 
-## 2 Setup development environment{#setupdevenv}
+## 2 Setup Development Environment{#setupdevenv}
 
-The setup of your development environment contains the following steps:
+The setup of your development environment consists of the following steps:
 
-* Registration of a new mobile app in Developer Cockpit
-* Create project based on "Siemens MindSphere Mobile Starter Application"
-* Build your own development app
-* .well-known files
-* Try it out
+1. Register a new mobile app in Developer Cockpit
+2. Create a project based on "Siemens MindSphere Mobile Starter Application"
+3. Build your own development app
+4. Configure `.well-known` files
+5. Try it out
 
 ### 2.1 Registration of your mobile app in Developer Cockpit
 
-The **Siemens MindSphere Mobile Starter Application** template provides the functionality that a user can sign in to MindSphere from within a mobile application. To get the mobile authentication running it is necessary that the application itself is registered within MindSphere. This registration can be done with the MindSphere Developer Cockpit in some easy steps.
+The **Siemens MindSphere Mobile Starter Application** template provides the ability for a user to sign in to MindSphere from within a mobile application. To get the mobile authentication running it is necessary that the application itself is registered within MindSphere. This registration can be done with the MindSphere Developer Cockpit by following the steps below.
 
 1. Open the *Developer Cockpit* via the Launchpad of your *Developer Tenant*.
 
     ![DeveloperCockpit](./attachments/mindsphere-mobile-native/DeveloperCockpit_Launchpad.png)
 
-1. Hit **Add application** and fill in the following:
+1. Click **Add application** and fill in the following:
 
     * ```Type = Mobile```
     * ```Infrastructure = none```
@@ -54,27 +54,27 @@ The **Siemens MindSphere Mobile Starter Application** template provides the func
 
     ![DeveloperCockpit](./attachments/mindsphere-mobile-native/DC_CreateApp.png)
 
-1. Hit **Save** to save your new app.
+1. Click **Save** to save your new app.
 
-You have to map Mendix user roles with MindSphere user roles (see more detailed discussion of MindSphere and Mendix roles and scopes in the [Roles & Scopes](https://docs.mendix.com/partners/siemens/mindsphere-module-details#rolesscopes) section of *MindSphere Module Details*). The standard template will be delivered with the roles **Admin** and **User** therefore we will create corresponding MindSphere scopes as well. If this is not matching your application please adapt accordingly.
+    You have to map Mendix user roles to MindSphere user roles (see a more detailed discussion of MindSphere and Mendix roles and scopes in the [Roles & Scopes](https://docs.mendix.com/partners/siemens/mindsphere-module-details#rolesscopes) section of *MindSphere Module Details*). The standard template will be delivered with the roles **Admin** and **User** therefore we will create the corresponding MindSphere scopes. If this does not match the roles in your application, please adapt these instructions accordingly.
 
-Note: The standard template also includes the role **Anonymous** which will be used for the authentication process. Please do not register this role in the Developer Cockpit.
+    {{% alert type="info" %}}The standard template also includes the role **Anonymous** which will be used for the authentication process. You should not register this role in the Developer Cockpit.{{% /alert %}}
 
-1. Hit **Configure** to open the **Roles and Scopes Management**.
+1. Click **Configure** to open the **Roles and Scopes Management**.
 
     ![DeveloperCockpit](./attachments/mindsphere-mobile-native/DC_Configure.png)
 
-1. Extend the **Application Scopes** section and hit the **Create Scope** button.
+1. Extend the **Application Scopes** section and click the **Create Scope** button.
 
 1. Add a scope with name **admin** and assign it the role **admin**.
 
-1. Hit the **Create Scope** button again and enter **user** as scope name and assign it to the **admin** and **user** role.
+1. Click the **Create Scope** button again and enter **user** as the scope name and assign it to the **admin** and **user** role.
 
-1. The final result should look similar to
+1. The final result should look similar to:
 
     ![DeveloperCockpit](./attachments/mindsphere-mobile-native/DC_ScopesRoles.png)
 
-1. Hit **Back to App** and **Register** to finalize the registration at MindSphere
+1. Click **Back to App** and **Register** to finalize the registration at MindSphere:
 
      ![DeveloperCockpit](./attachments/mindsphere-mobile-native/DC_Register.png)
 
@@ -84,60 +84,65 @@ Note: The standard template also includes the role **Anonymous** which will be u
 
     We will need the **Client ID** and the **Client Secret** later - so copy them somewhere - we will call these constants **client_id** and **client_secret**.
 
-1. Last step is to grant yourself the *user* or *admin* role in the **Settings** app.
+1. The last step is to grant yourself the *user* or *admin* role in the app **Settings**.
 
     ![DeveloperCockpit](./attachments/mindsphere-mobile-native/Settings_AppRole.png)
 
-Very good, you now have successfully registered your application within the Developer Cockpit.
+You now have successfully registered your application within the Developer Cockpit.
 
-Note: With the **MindSphere Mobile Starter Application** you can build applications for native mobile apps as well as for 'normal' Web applications. Right now the MindSphere Developer Cockpit supports either the registration of a mobile or a Web app but not for both together. But don't worry, this can be achieved. You only have to setup another registration in the Developer Cockpit for your Web application. With this application you also will achieve to get your application on the MindSphere Launchpad. If you have a Web part than do this registration as described in [Setting up MindSphere Launchpad](https://docs.mendix.com/developerportal/deploy/deploying-to-mindsphere#launchpad), otherwise you can skip this.
+{{% alert type="info" %}}
+The **MindSphere Mobile Starter Application** can be used to build applications for both native mobile apps and 'normal' web applications.
 
-### 2.2 Start developing your app with Mendix Studio Pro
+Currently you can register either a mobile app or a web app in the MindSphere Developer Cockpit but both together. If you need access in a web browser, set up another registration in the Developer Cockpit for your web application as described in [Setting up MindSphere Launchpad](https://docs.mendix.com/developerportal/deploy/deploying-to-mindsphere#launchpad). This app can then be added to the MindSphere Launchpad.
+{{% /alert %}}
 
-First you have to create a new Mendix Team server project based on the **Siemens MindSphere Mobile Starter Application** template.
+### 2.2 Start Developing your App with Mendix Studio Pro
 
-There are some configurations need to be done in the project itself.
-In the project explorer open the configuration of the app store module **MindsphereSingleSignOn**
+Firstly, you have to create a new Mendix Team Server project based on the **Siemens MindSphere Mobile Starter Application** template.
+
+Now, you need to make some configuration changes in the app itself.
+
+In the project explorer open the configuration of the app store module **MindsphereSingleSignOn**:
 
 ![Studio SSO configuration](./attachments/mindsphere-mobile-native/StudioPro_SSO_configuration.png)
 
-At the moment you have to adopt these constants:
+Change these constants:
 
 * **HostTenant** = name of your tenant
 
-optional, in case you are not working on *eu1.mindsphere.io*
+    if you are not working on *eu1.mindsphere.io*:
 
 * **MindSphereGatewayURL**
 
 * **PublicKeyURL**
 
-and in the NativeMobile folder
+    in the **NativeMobile** folder:
 
 * **ClientID** = **client_id** from app registration in developer cockpit
 
 * **ClientSecret** = **client_secret** from app registration in developer cockpit
 
-That's it for now. In the chapter [well known files](./mindsphere-mobile-native#wellknownfiles) we will also provide some values for the **AppleAppSiteAssociation** and **AssetLinks** constants.
+Later on, in the section [Well Known Files / Associate Website](#wellknownfiles), you will also provide some values for the **AppleAppSiteAssociation** and **AssetLinks** constants.
 
-### 2.3 Build your own development app{#buildcustomapp}
+### 2.3 Build your Own Development App{#buildcustomapp}
 
-In this chapter you will create your own custom development app and register a deep link.
+In this section you will create your own custom development app and register a deep link.
 
-1. Follow the description on how to create a [Custom Development App](https://docs.mendix.com/howto/mobile/how-to-devapps) and install it on your device or emulator as described there.
+1. Follow the description on how to create a [Custom Development App](/howto/mobile/how-to-devapps), and install it on your device or emulator as described there.
 
 1. Configure the DeepLink.
 
-    The configuration of the deep links has to be done (at the moment) on the native part for Android and iOS separately. Currently the "Native Builder App" has limited configuration possibilities for deep links so we will enable them manually.
+    Currently, the configuration of the deep links has to be done separately for Android and iOS. The "Native Builder App" has limited configuration possibilities for deep links so we will create them manually.
 
 If not already done in step 2 clone your github repo locally in order to make the needed changes and checkout the **developer** branch.
 
 #### 2.3.1 Android
 
-On the the **developer** branch two files needs to be adopted:
+On the the **developer** branch two files needs to be modified:
 
-##### AndroidMainfest.xml
+##### AndroidManifest.xml
 
-Open the file `./android/app/src/main/AndroidManifest.xml` with an editor of your choice e.g. [Visual Studio Code](https://code.visualstudio.com/)
+Open the file `./android/app/src/main/AndroidManifest.xml` with an editor of your choice, for example [Visual Studio Code](https://code.visualstudio.com/).
 
 Set the `android:launchMode` in the main activity to `singleTask`
 
@@ -164,50 +169,51 @@ Add the following `<activity>` to the `<application>` tag:
 </activity>
 ```
 
-Replace the placeholders `TENANT` and `INTERNAL_NAME` in the `android:host` attribute with your tenant name (2x) and the **internal_name** of your application registration. Example given:
+Replace the placeholders `TENANT` and `INTERNAL_NAME` in the `android:host` attribute with your tenant name (twice!) and the **internal_name** of your application registration. For example, for tenant `demo` and internal_name `mmna`:
 
 ```xml
     <data android:scheme="https" android:host="demo-mmna-demo.eu1.mindsphere.io" />
 ```
 
-
-That's it - commit the changed file to your developer branch, push the change to the github repo and build your developer app again. You can do this with the "Build Native App" application from Mendix Studio Pro - or build it [locally](https://docs.mendix.com/howto/mobile/native-build-locally#5-1-building-an-android-app-with-android-studio) with [Android Studio](https://developer.android.com/studio)
+Commit the changed file to your developer branch, push the change to the github repo, and build your developer app again. You can do this with the "Build Native App" application from Mendix Studio Pro, or build it [locally](/howto/mobile/native-build-locally#5-1-building-an-android-app-with-android-studio) with [Android Studio](https://developer.android.com/studio).
 
 #### 2.3.2 iOS
 
-We recommend to make the required changes with the help of Xcode and build your developer app locally. Details about this process can be found [here](https://docs.mendix.com/howto/mobile/native-build-locally#5-2-building-an-ios-app-with-xcode).
+We recommend you to make the required changes with the help of Xcode and build your developer app locally. Details about this process can be found [here](/howto/mobile/native-build-locally#5-2-building-an-ios-app-with-xcode).
 
 Ensure that you have cloned the github repo locally and have checked out the **developer** branch.
 
-* Open a terminal at the project root directory (the folder where you have cloned the github repo) and run
+* Open a terminal in the project root directory (the folder where you have cloned the github repo) and run the following:
 
     ```bash
     npm install
     ```
 
-    to install the required dependencies.
+    this installs the required dependencies.
 
-* Change directory by running `cd ios` and run
+* Change to the ios directory by running `cd ios`
+
+* Install the iOS dependencies by running the following:
 
     ```bash
     pod install
     ```
 
-    to install the iOS dependencies. The iOS project is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see CocoaPods documentation.
+    The iOS project uses CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see CocoaPods documentation.
 
 * Open the .xcodeworkspace in the ios folder using Xcode.
 
-    Navigate to **Signing and Capabilities**, select as target `dev` and choose your **Team** from the drop-down menu:
+    Navigate to **Signing and Capabilities**, select the target `dev`, and choose your **Team** from the drop-down menu:
 
-    ![Xcode Team](./attachments/mindsphere-mobile-native/Xcode_Team.png)
+    ![Xcode Team](attachments/mindsphere-mobile-native/Xcode_Team.png)
 
-    As with the Android Build Variants the iOS app makes use of Build Targets to switch between building a custom developer app (target *dev*) or a release app (target *nativeTemplate*).
+    As with the Android Build Variants, the iOS app makes use of Build Targets to switch between building a custom developer app (target *dev*) or a release app (target *nativeTemplate*).
 
-    Adopt also the `Bundle Identifier` as it has to be unique.
+    Change the `Bundle Identifier` to something unique.
 
-    Click on `Capability` and add `Associated Domains`.
+    Click *Capability* and select **Associated Domains**.
 
-    ![Associated Domain](./attachments/mindsphere-mobile-native/Xcode_enable_associated_domain.png)
+    ![Associated Domain](attachments/mindsphere-mobile-native/Xcode_enable_associated_domain.png)
 
     Add the following domain:
 
@@ -215,7 +221,7 @@ Ensure that you have cloned the github repo locally and have checked out the **d
     applinks:TENANT-INTERNAL_NAME-TENANT.eu1.mindsphere.io
     ```
 
-    Replace the placeholders `TENANT` and `INTERNAL_NAME` with your tenant name (2x) and with the **internal_name** of your application registration in the developer cockpit e.g.
+    Replace the placeholders `TENANT` and `INTERNAL_NAME` with your tenant name (twice!) and with the **internal_name** of your application registration in the developer cockpit. For example:
 
     ```bash
     applinks:demo-mmna-demo.eu1.mindsphere.io
@@ -225,13 +231,13 @@ Ensure that you have cloned the github repo locally and have checked out the **d
 
 * In the `project navigator` open the file `nativeTemplate/NativeTemplate/AppDelegate.m`
 
-  Add the following import
+  Add the following import instruction:
 
   ```objc
   #import "React/RCTLinkingManager.h"
   ```
 
-  and the method `continueUserActivity`
+  and the method `continueUserActivity` with the following definition:
 
   ```objc
   - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity
@@ -243,7 +249,7 @@ Ensure that you have cloned the github repo locally and have checked out the **d
   }
   ```
 
-* From the drop-down menu choose `dev` and the device you would like to run the app on, then click the play button to
+* From the drop-down menu choose `dev` and the device you would like to run the app on, then click the play button (►) to
     start a build for your app:
 
     ![Build ios dev app](./attachments/mindsphere-mobile-native/Xcode_build_ios_dev_app.png)

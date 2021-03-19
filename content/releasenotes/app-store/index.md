@@ -10,8 +10,9 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 ## 2021
 
 ### March 23rd, 2021
-* We added email notifications for several actions in the Marketplace. You can receive emails if one of your components have changed, when you receive a review to a published component, or when you receive a reply to your reviews. You can unsubscribe from any of these types of notifications in the [My Appstore section](/app-store-overview#my-app-store) of Marketplace.
-* Developers of components can now write replies to reviews on their components. This functionality has been re-added in the new UI.
+
+* We added email notifications for several actions in the Marketplace. You can now receive emails if one of your components has changed, when a published component has received a review, and when you receive a reply to one of your reviews. You can unsubscribe from any of notifications in the [My App Store](/app-store-overview#my-app-store) section of the of Marketplace.
+* Developers can now reply to reviews of their components.
 
 ### February 9th, 2021
 

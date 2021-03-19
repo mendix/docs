@@ -218,10 +218,7 @@ To upload your app, do the following:
 
     ![Upload to Version Control Server dialog](attachments/on-premises-git-howto/upload-to-vc-server.png)
     It might ask you to sign into the server, depending on whether you have previously signed in and choose to stay logged in.
-5.  You can see the upload process in the **Upload Project to Team Server** pop-up window:
-
-    ![Upload Project to Team Server progress window](attachments/on-premises-git-howto/upload-project-to-team-server.png)
-    
+5.  You can see the upload process in the **Upload Project to Team Server** pop-up window.
 
 The project is uploaded successfully. You can check on your private server and see that the app is now on the selected repository:
 

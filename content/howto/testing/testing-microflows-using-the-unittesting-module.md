@@ -38,10 +38,7 @@ In this chapter you will set up the unit testing module and run the example test
 2. Download the [Unit Testing](/appstore/modules/unit-testing) module.
 3. Download the [Community Commons Function Library](/appstore/modules/community-commons-function-library) module.
 4. Download the [Object Handling](/appstore/modules/object-handling) module.
-5.  Open the **Settings** of the app:
-
-	![](attachments/18448633/18580371.png)
-
+5.  Open the **Settings** of the app.
 6. Click the **Runtime** tab.
 7. Click the **Select** button to select an **After startup** microflow:
 

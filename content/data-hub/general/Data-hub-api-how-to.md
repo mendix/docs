@@ -108,7 +108,7 @@ The following parameters can be specified for `data` :
 | ----------------------- | -------- | --------------------- | --------------------- | ------------------------------------------------------------ |
 | query                   | string   | optional              |                       | Search string                                                |
 | productionEndpointsOnly | boolean  | optional              | false                 | Boolean filter to only return endpoints in a Production environment. False will return endpoints in Production, Non-production and Sandbox environments. |
-| contractType            | string   | optional              | all                   | Protocol used by the service. Currently supported values: OData_3_0, OData_4_0_Xml, <br>Kafka_1_0. |
+| contractType            | string   | optional              | all                   | Protocol used by the service. Currently supported values: OData_3_0, OData_4_0_Xml, Kafka_1_0. |
 | afterId                 | string   | optional              | first page of results | UUID of the last endpoint on the previous page               |
 | limit                   | integer  | optional              | 20                    | The maximum number of items that could be returned. Default is 20, Maximum value = 100. |
 
@@ -129,7 +129,14 @@ The endpoints which are the data sources (services) that are returned in the `Se
 | TotalResults | integer  | always                    | Total number of results matching the search query. Example: 87 |
 
 ### 5.3.2  `Data` Objects
-The objects that are returned in the response  for  `Data`. For full details of objects that define the arrays and collections, refer to the  [Open API spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
+The objects that are returned in the response  for  `Data` are shown in the representation below. (The blue indicates that the constituent objects are a collection, the red an array, and the solid outline indicates if the object is always returned.) For full details of objects that define the arrays and collections, refer to the  [Open API spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/). 
+
+- [ ]  the table is not really necessary here as users can see the full details in the spec, however it does show at a glance what default values are etc.  The mindmap below shows the essence of the calls - can it be made clearer by adding the default values??? should it go down to a deeper level?
+- [ ] Which is the more useful for users?
+
+
+
+![search results](attachments/data-hub-api-how-to/data-object-schematic.png)
 
 | **Name**               | **Type** | I**ncluded in response?** | **Description**                                              |
 | ---------------------- | -------- | ------------------------- | ------------------------------------------------------------ |
@@ -147,10 +154,8 @@ The objects that are returned in the response  for  `Data`. For full details of 
 | Application            |          | always                    | A collection of objects specifying the application details of the service. |
 | Tags                   |          | always                    | Tags on this endpoint.<br>example: List [ OrderedMap { "Name": "HR" }, OrderedMap { "Name": "Salary" }, OrderedMap { "Name": "PeopleManagement" } ]<br>An array of `Tag` objects |
 | TotalItems             | integer  | always                    | The total number of items (such as data sources ) existing at this level.<br>Example: 17 |
-| Items                  |          |                           | List of items (such as data sources) at this endpoint relevant to the search query<br>Example: List [ OrderedMap { "Name": "Employee", "Type": "DataSource", "EntitySetName": "NewEmployees", "EntityTypeName": "Employee", "Namespace": "AcmeHR", "TotalItems": 3, "Validated": true, "Items": List [ OrderedMap { "Name": "Name", "Type": "Attribute", "EdmxType": "String" }, OrderedMap { "Name": "Salary", "Type": "Attribute", "EdmxType": "Decimal" }, OrderedMap { "Name": "Employee_Car", "Type": "Association", "ReferencedDataSource": "Car", "Multiplicity": "0..1", "EntitySetName": "CompanyCars", "EntityTypeName": "Car", "Namespace": "AcmeHR" } ], "Links": OrderedMap { "Rel": "Catalog", "Href": "https://hub.mendix.com/link/entity?EndpointUUID=9e26c386-9316-4a33-9963-8fe9f69a5117&EntityUUID=130b6d98-bb60-4920-8262-a0adfbe0ade8" } } ] |
+| Items                  |          | Always                    | List of items (such as data sources) at this endpoint relevant to the search query. For example see [Open API spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) |
 | Links                  |          | always                    | Catalog is a deeplink to the endpoint details page in the Catalog. Self is the URL with the endpoint details, including contracts. |
-
-
 
 
 
@@ -163,14 +168,12 @@ This example shows you how to search for assets that satisfy the following:
 - in the production environments only (value `true`)
 - for all registered contract types 
 
-The GET request URL is as follows:
+**The GET request URL is as follows**:
 
 
     GET {{baseUrl}}/data?query=sample&productionEndpointsOnly=true
 
-
-
-The example Curl command for the above search is:
+**The  Curl command for the above search is**:
 
 curl --location --request GET 'https://hub.mendix.com/rest/datahubservice/v2/data?query=sample&productionEndpointsOnly=true' \
 
@@ -182,7 +185,7 @@ curl --location --request GET 'https://hub.mendix.com/rest/datahubservice/v2/dat
 The 200 OK response returned the following results:
 
 - `TotalResults` that are returned are 11
-- For conciseness of the 7 objects that are returned for the  `Data`  object only the second data source, **SAMPLE_EmployeeDirectory**, is shown fully in the response payload below, the other data sources have been concatenated as { …}.
+- For conciseness, of the 7 objects that are returned for the  `Data`  object only the second data source, **SAMPLE_EmployeeDirectory**, is shown fully in the response payload below, the other data sources have been represented as { …}.
 
  The Response body that is returned is the following:
 
@@ -402,7 +405,7 @@ The 200 OK response returned the following results:
 
 }
 
-### 5.4.3 Search Results for the Same Search When Viewed in the Catalog
+### 5.4.3 Example Search Results  When Viewed in the Catalog
 
 Viewed in the Data Hub the search shows the following with the total list in the search results pane on the left and the details of the selected **SAMPLE_EmployeeDirectory** :
 
@@ -410,17 +413,17 @@ Viewed in the Data Hub the search shows the following with the total list in the
 
 # 6 Registering a Sample OData v3 Contract 
 
-This section describes the steps required for registering a data source - this can be an OData v4 or OData v3 contract
+This section describes the steps for registering a data source - this can be an OData v4 or OData v3 contract.
 To register a data source to Data Hub you must register the following in the given sequence:
 
 
-        1. Application that the data source originates from: POST application
-        2. Environment that the data source is deployed to: POST environment
-        3. All the published services from the application (data source) of the application: PUT published-endpoints
+1. Application that the data source originates from: POST application
+2. Environment that the data source is deployed to: POST environment
+3. All the published services from the application (data source) of the application: PUT published-endpoints
 
-An additional step that is described in section: ??? is to register the applications that consume the registered data source.
+[Section 7](#consumed-ep) decribes is to register the applications that consume the registered data source.
 
-An example Odata v3 services called  **DataHub_Sample_1.0.0_OData3** is provided at the end of this how to in Section ?? which you can use. **** The service is defined by the two files:
+An example Odata v3 service called  **DataHub_Sample_1.0.0_OData3**  that you can use is provided in [Section 8](#consumed-ep) which you can use for registering a service.  The service is defined by the two files:
 
 - metadata.xml
 - serviceFeed.xml
@@ -781,7 +784,7 @@ This will be shown in the Landscape as:
 
 
 
-# 7 Registering Consumed Endpoints by an App using PUT
+# 7 Registering Consumed Endpoints by an App using PUT {#consumed-ep}
 
 For the app  registered in [6.1](https://paper.dropbox.com/doc/bPBYadNIdEkr2rwXEjwVK#:uid=323899919797247672112224&h2=6.1-Registering-an-Application),  you can register any services that it consumes by providing the endpoint details and the entities (datasets) that it consumes. This is registered in the Catalog and indicated for the consumed service by the **Connections.**  Consumed services are shown in the Data Hub Landscape for the app.
 **Note:** The PUT call for registering consumed entities will *update* the currently registered datasets for an app/environment. This means that when you want to *add* consumed endpoints to an app (indicating the services the app is consuming), all previously registered consumed endpoints must be included in the request payload of the new request. If the previously registered consumed endpoints are not included, the result will be that they will be *removed*.

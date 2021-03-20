@@ -502,7 +502,7 @@ curl --location --request POST '{{BaseURL}}' \
   }
 }'
 
-#### 6.1.4.4 Example Response:  201 Created
+#### 6.1.4.4 Example 201 Response Application Created {#app-registered}
 The 201 response that is returned to indicate that the application is registered is given below: 
 
 **Note**: that the response returned the  `"UUID": "2ab1410e-06d4-4e07-a82d-cc04b21d2622"`, which is the Catalog identifier for the application that must be used to identify it in subsequent steps of the registration of the data source.
@@ -549,7 +549,7 @@ The Request must be accompanied by the following body:
 | CustomLocations |          |                       |                  | An array of custom locations at which this environment can also be reached. |
 
 
-### 6.2.3 POST Response
+### 6.2.3 Successful POST Response
 A 201 response indicates that the environment has been registered in the Catalog for the given application and returns the environment UUID for the environment. 
 
 The unique combination of the App UUID and the environment UUID is the identifier used to register any published endpoints (data sources/services) for the application that are deployed to this environment. 
@@ -582,8 +582,8 @@ For the app registered in 6.1.4.4 the following steps describe how to register t
 
 
 
-#### 6.2.4.4 Response 201 Created
-The 201 Created response returns the Catalog-generated identifier for the registered `Production` environment:  `"UUID": "57535822-547e-41c4-849c-77ddc9714373"`.
+#### 6.2.4.4 Example Response 201 Created {#env-registerd}
+The 201 Created response returns the Catalog-generated identifier   `"UUID": "57535822-547e-41c4-849c-77ddc9714373"` for the for the registered environment  `Production`.
 
 {
 
@@ -619,70 +619,81 @@ The 201 Created response returns the Catalog-generated identifier for the regist
 
 ## 6.3 Registering the Published Services using PUT
 
-After registering the published services for the app registered as in previous sections you can specify the services (endpoints) that are published by the app to the same environment using the application and environment UUIDs that were returned.   Where are are multiple services for a given app each endpoint can be included in a single request as a collection of `Endpoints`.
+This step describes the register service call for registering the services (endpoints) that are published by the app that are deployed to the same environment. 
+
+The PUT endpcWhere are are multiple services for a given app each endpoint can be included in a single request as a collection of `Endpoints`.
 
 ### 6.3.1 Method and Endpoint
 `PUT /applications/*{AppUUID}*/environments/*{EnvironmentUUID}*/published-endpoints`
 
 ### 6.3.2 Request Parameters and Body
 
-The parameters `AppUUID` and `EnvironmentUUID` that were returned in 3.1. and 3.2 are required as input parameters.
+The parameters `AppUUID` and `EnvironmentUUID` of the deployed app are required as input parameters.
 
-The request body is made up of the collection of objects for the `PutPublishedEndpointsRequest`. They include an array of the objects that define each service deployed by the app in the given environment –  `Endpoints` – which are represented below. 
+The request body is made up of the collection of objects for the `PutPublishedEndpointsRequest`. They include an array of the objects that define each service deployed by the app in the given environment –  `Endpoints` .
 
-(The blue indicate that the constituent objects are a collection, the red an array, and the solid outline indicates if the object is required.)
+When defining each service in the `ServiceVersion` object specify all the details of the endpoints or service which includes the name, version number and the relative path `Path` of the contract definition files. The contract files that make up the service which can be found at the relative path must also be included as part of the `Contracts` object; they must be in an escaped JSON string format.
+
+The objects that can be specified for the request body is shown in the following represenation. Not all the the lower levels are shown, for full schema definition refer to the [Open API spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
+
+(Blue indicates that the constituent objects are a collection, the red an array, and the solid outline indicates if the object is required.)
 
 
 ![published endpoints mindmap](attachments/data-hub-api-how-to/putpublishedendpointsrequest.png)
 
-When defining each service in the `ServiceVersion` object specify all the details of the endpoints or service which includes the name, version number. 
-The service contracts that are included as part of the `Contracts` object must be in an escaped JSON string format.
+
+
+
 
 **Notes:** 
 
 * For Odata contracts that are made up of several files, all the files must be included for each service.
-- If an empty array is sent for `ServiceVersion`, then it will be interpreted that the application in the environment does not publish any services. **Note:** This does not affect any services that are already registered for the application/environment.
-* When there are updates to a services, care must be taken when deciding if you will register the new contract at the same endpoint which means that the previous contract will be replaced or do a different endpoint. It is recommended that you use semantic numbering to indicate the severity of changes and follow a strict protocol when deciding on endpoints to ensure that apps consuming previous versions do not experience disruptions.
+- If an empty array is sent for `ServiceVersion`, then it will be interpreted that the application in the environment does not publish any services. 
+- Previously registered services for the application/environment are not not affected by a PUT endpoints request. Any services that are already registered for the application/environment will still continue to be registered. Therefore it has the affect of "adding" services.
+* When there are updates to a services, care must be taken when deciding to register the new contract at the same endpoint which means that the previous contract will be replaced or do a different endpoint. It is recommended that you use semantic numbering to indicate the severity of changes in the contract and that you follow a strict protocol when deciding on endpoints to ensure that apps consuming previous versions do not experience disruptions.
+* If you want to "remove" services for an app, we recommend that you create a new version of the app, deployed to a different environment without the service you do not want included. In this way, you can maintain a historical version of the the assets, and ensure that consumers are notified of the new version, without affecting those that are consuming the previous version. 
 
-### 6.3.3 PUT Response
-A successful 200 response will return the array of endpoints that are registered for the given environment and application.
+### 6.3.3  Success 200 PUT Response
+A successful 200 response returns the array of endpoints that are registered for the given environment and application.
 For each endpoint a unique  `UUID` for is returned for each service.  
-For each endpoint, `Links` will provide the URL of the details page in the Catalog, and also the URI of the service.
+For each endpoint, the object  `Links`  provides the URL of the details page in the Catalog, and also the URI of the service.
 
-The response will also include the number of environment/applications-  `Connections` - that consume this endpoint.
+The responsealso includes the number of environment/applications –  `Connections` - that consume this endpoint.
 
 
-### 6.3.4 Example: Registering the ODatav3-sample-service
-In this example, the service **ODatav3-sample-service** is registered for the application registered in ??? and deployed to the environment registered in ???.
+### 6.3.4 Example: Registering the 5how-toODatav3-sample-service
+In this example call, the service **5how-toODatav3-sample-service** is registered for the application registered in [6.1.4.4](#app-registered) and deployed to the environment registered in [6.2.4.4](#app-registered).
 
-Two tags, `odata` and `sample` are also defined as part of the registration.
+Two tags, `odata` and `sample` are defined as part of the registration.
 
-For the `Contracts` object you can use the OData v3 contract that is made up of two files supplied with this how-to in Section 8 [Sample Contract](#sample-contract): 
+For the `Contracts` object you can use the example OData v3 contract that is made up of two files supplied with this how-to in Section 8 [Sample Contract](#sample-contract): 
 
     - “Type”: “ServiceFeed” 
     - “Type”: “Metadata”
 
-Each of these files is provided in escaped JSON format. Just replace the <*insert service feed from*[Sample Contract](#sample-contract):> *and<Insert example metadata from*[Sample Contract](#sample-contract): > strings given in the following example.
+
 
 #### 6.3.4.1 Example Base request URL
 
 `PUT` `{{baseURL}}/applications/{appUUID}/environments/{envUUID}/published-endpoints`
 
-#### 6.3.4.2.  JSON format request body for the** `**Endpoints**` **Object**
-**Note:** for conciseness the two contract files are not included: you must insert the example contract files provided in Section 7: `<*insert service feed from*`[+Using the Data Hub API: 6.1-Service-Feed](https://paper.dropbox.com/doc/Using-the-Data-Hub-API-6.1-Service-Feed-bPBYadNIdEkr2rwXEjwVK#:uid=743818443434385856503942&amp;h2=6.1-Service-Feed) `>` and `*<Insert example metadata from*`[+Using the Data Hub API: 6.2-Metadata](https://paper.dropbox.com/doc/Using-the-Data-Hub-API-6.2-Metadata-bPBYadNIdEkr2rwXEjwVK#:uid=362078091944697159682892&amp;h2=6.2-Metadata) `>` .
+#### 6.3.4.2.  JSON format request body for the `Endpoints` **Object**
+Each of the files that are used in this example have been provided in escaped JSON format in [Section 8: Sample Contract](#sample-contract). 
+
+**Note:**  For conciseness the contents of the two contract files are not included in the following payload - they are respresented as  <*insert service feed from:[service feed](#ex-service)>* and *<Insert example metadata from [metadata](#ex-metadata) >*.  You must insert the example contract files provided in Section 8 for the strings for these strings, or alternatively use your own contract files - in escaped JSON format.
 
 {
     "Endpoints": [
         {
-            "Path": "/dhservice/v1",
+            "Path": "/5howto/v1",
             "SecurityClassification": "Public",
-            "Discoverable": **true**,
-            "Validated": **false**,
+            "Discoverable": true,
+            "Validated": false,
             "ServiceVersion": {
                 "Version": "1.0",
                 "Description": "A Sample OData v3 service",
                 "Service": {
-                    "Name": "ODatav3-sample-service",
+                    "Name": "5how-toODatav3-sample-service",
                     "ContractType": "OData_3_0"
                 },
                 "Tags": [
@@ -710,11 +721,11 @@ Each of these files is provided in escaped JSON format. Just replace the <*inser
                 "Contracts": [
                     {
                         "Type": "ServiceFeed",
-                        "Value": "<*insert service feed from*[Sample Contract](#sample-contract): >"
+                        "Value": "<*insert service feed from:[service feed](#ex-service)>*"
                     },
                     {
                         "Type": "Metadata",
-                        "Value": "*<Insert example metadata from*[Sample Contract](#sample-contract): >"
+                        "Value": "<Insert example metadata from [metadata](#ex-metadata) >"
                     }
                 ]
             }
@@ -723,6 +734,7 @@ Each of these files is provided in escaped JSON format. Just replace the <*inser
 }
 
 #### 6.3.4.3 Sample Response 200 OK
+
 For the above request the following 200 OK response is received:
 
 {
@@ -1015,11 +1027,11 @@ give the example of retrieving HR Sample app
 The following are the files that make up an example OData v3 contract that you can use for the PUT registration service request in this how-to. The full contract definition is made up of the **service feed** and the **metadata** files. The format provided below is in escaped JSON format contract which you can copy and directly insert in the PUT request body.
 
 
-## 8.1 Service Feed
+## 8.1 Service Feed {#ex-service}
 
 <?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<service xmlns:atom=\"http:\/\/www.w3.org\/2005\/Atom\" xml:base=\"{applicationRootUrl}\/odata\/SAP\/v1\/\" xmlns=\"http:\/\/www.w3.org\/2007\/app\">\r\n  <workspace>\r\n    <atom:title>Default<\/atom:title>\r\n    <collection href=\"Departments\">\r\n      <atom:title>Departments<\/atom:title>\r\n    <\/collection>\r\n    <collection href=\"Employees\">\r\n      <atom:title>Employees<\/atom:title>\r\n    <\/collection>\r\n    <collection href=\"Offices\">\r\n      <atom:title>Offices<\/atom:title>\r\n    <\/collection>\r\n  <\/workspace>\r\n<\/service>
 
-## 8.2 Metadata 
+## 8.2 Metadata {#ex-metadata}
 
 <?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<edmx:Edmx Version=\"1.0\" xmlns:edmx=\"http:\/\/schemas.microsoft.com\/ado\/2007\/06\/edmx\" xmlns:mx=\"http:\/\/www.mendix.com\/Protocols\/MendixData\">\r\n  <edmx:DataServices m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\" xmlns:m=\"http:\/\/schemas.microsoft.com\/ado\/2007\/08\/dataservices\/metadata\">\r\n    <Schema Namespace=\"DefaultNamespace\" xmlns=\"http:\/\/schemas.microsoft.com\/ado\/2009\/11\/edm\">\r\n      <EntityType Name=\"Department\">\r\n        <Key>\r\n          <PropertyRef Name=\"ID\" \/>\r\n        <\/Key>\r\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" \/>\r\n        <Property Name=\"Number\" Type=\"Edm.Int64\" \/>\r\n        <Property Name=\"Name\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"Color\" Type=\"Edm.String\" \/>\r\n        <NavigationProperty Name=\"Employees\" Relationship=\"DefaultNamespace.Employee_Department\" FromRole=\"Department\" ToRole=\"Employees\" \/>\r\n      <\/EntityType>\r\n      <EntityType Name=\"Employee\">\r\n        <Key>\r\n          <PropertyRef Name=\"ID\" \/>\r\n        <\/Key>\r\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" \/>\r\n        <Property Name=\"firstName\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"lastName\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"email\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"phone\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"street\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"city\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"zip\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"country\" Type=\"Edm.String\" \/>\r\n        <NavigationProperty Name=\"Department\" Relationship=\"DefaultNamespace.Employee_Department\" FromRole=\"Employees\" ToRole=\"Department\" \/>\r\n        <NavigationProperty Name=\"Office\" Relationship=\"DefaultNamespace.Employee_Office\" FromRole=\"Employees\" ToRole=\"Office\" \/>\r\n      <\/EntityType>\r\n      <EntityType Name=\"Office\">\r\n        <Key>\r\n          <PropertyRef Name=\"ID\" \/>\r\n        <\/Key>\r\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" \/>\r\n        <Property Name=\"Number\" Type=\"Edm.Int64\" \/>\r\n        <Property Name=\"Name\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"Street\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"StreetNumber\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"ZIP\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"City\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"Country\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"CountryCode\" Type=\"Edm.String\" \/>\r\n        <NavigationProperty Name=\"Employees\" Relationship=\"DefaultNamespace.Employee_Office\" FromRole=\"Office\" ToRole=\"Employees\" \/>\r\n      <\/EntityType>\r\n      <Association Name=\"Employee_Department\">\r\n        <End Type=\"DefaultNamespace.Employee\" Multiplicity=\"*\" Role=\"Employees\" \/>\r\n        <End Type=\"DefaultNamespace.Department\" Multiplicity=\"0..1\" Role=\"Department\" \/>\r\n      <\/Association>\r\n      <Association Name=\"Employee_Office\">\r\n        <End Type=\"DefaultNamespace.Employee\" Multiplicity=\"*\" Role=\"Employees\" \/>\r\n        <End Type=\"DefaultNamespace.Office\" Multiplicity=\"0..1\" Role=\"Office\" \/>\r\n      <\/Association>\r\n      <EntityContainer Name=\"SAP\/v1Entities\" m:IsDefaultEntityContainer=\"true\">\r\n        <EntitySet Name=\"Departments\" EntityType=\"DefaultNamespace.Department\" \/>\r\n        <EntitySet Name=\"Employees\" EntityType=\"DefaultNamespace.Employee\" \/>\r\n        <EntitySet Name=\"Offices\" EntityType=\"DefaultNamespace.Office\" \/>\r\n        <AssociationSet Name=\"Employee_Department\" Association=\"DefaultNamespace.Employee_Department\">\r\n          <End Role=\"Employees\" EntitySet=\"Employees\" \/>\r\n          <End Role=\"Department\" EntitySet=\"Departments\" \/>\r\n        <\/AssociationSet>\r\n        <AssociationSet Name=\"Employee_Office\" Association=\"DefaultNamespace.Employee_Office\">\r\n          <End Role=\"Employees\" EntitySet=\"Employees\" \/>\r\n          <End Role=\"Office\" EntitySet=\"Offices\" \/>\r\n        <\/AssociationSet>\r\n      <\/EntityContainer>\r\n    <\/Schema>\r\n  <\/edmx:DataServices>\r\n<\/edmx:Edmx>
 

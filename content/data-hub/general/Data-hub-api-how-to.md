@@ -583,27 +583,43 @@ For the app registered in 6.1.4.4 the following steps describe how to register t
 
 
 #### 6.2.4.4 Response 201 Created
-Note that the response returns the Catalog-generated identifier for the registered `Production` environment:  `"UUID": "d79988dc-1ac3-4ba8-9674-341f98364204"`.
+The 201 Created response returns the Catalog-generated identifier for the registered `Production` environment:  `"UUID": "57535822-547e-41c4-849c-77ddc9714373"`.
 
 {
-    "Name": "Production",
-    "Location": "https://dhcorp1.com",
-    "Type": "Production",
-    "CustomLocations": [
-        "https://dh.corp1.com"
-    ],
-    "UUID": "d79988dc-1ac3-4ba8-9674-341f98364204",
-    "Application": {
-        "Name": "SampleDH-App",
-        "Description": "This application is used to show how the DH API is used",
-        "RepositoryLocation": "https://dhcorp.com",
-        "Type": "Teamcenter",
-        "UUID": "a9e428ba-f84b-4f8d-a4e6-2350ee4177bc"
-    }
+
+​    "Name": "Production",
+
+​    "Location": "https://howtoenv555.com",
+
+​    "Type": "Production",
+
+​    "CustomLocations": [
+
+​        "https://api.howto555.com"
+
+​    ],
+
+​    "UUID": "57535822-547e-41c4-849c-77ddc9714373",
+
+​    "Application": {
+
+​        "Name": "Howto5-App",
+
+​        "Description": "This application is used to show how the DH API is used",
+
+​        "RepositoryLocation": "https://dhcorp5.com",
+
+​        "Type": "Other",
+
+​        "UUID": "2ab1410e-06d4-4e07-a82d-cc04b21d2622"
+
+​    }
+
+}
 
 ## 6.3 Registering the Published Services using PUT
 
-After registering the published services for the app registered as in 3.1 in the environment registered in 3.2 you can specify the services (endpoints) that are published by the app in the given environment using the application and environment UUIDs that were returned.   When there are multiple services for a given app, you can include them in a single request.
+After registering the published services for the app registered as in previous sections you can specify the services (endpoints) that are published by the app to the same environment using the application and environment UUIDs that were returned.   Where are are multiple services for a given app each endpoint can be included in a single request as a collection of `Endpoints`.
 
 ### 6.3.1 Method and Endpoint
 `PUT /applications/*{AppUUID}*/environments/*{EnvironmentUUID}*/published-endpoints`

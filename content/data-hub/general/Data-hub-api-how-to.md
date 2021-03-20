@@ -456,7 +456,7 @@ There are no parameters to this request only a payload that specifies the detail
 ### 6.1.3 POST Response
 The successful 201 response will indicate that the application has been registered in the Catalog and return an application `UUID`, which is the Catalog identifier for the registered app that must be used  when referring to the application in the next steps of the registration.
 
-### 6.1.4 Example: Registering the Howto5-App
+### 6.1.4 Example: Registering the Howto5-App {#ex-reg-app}
 In this example, you are going to register an app called **Howto5-App**. The details of the app are included in the JSON format request body given below.
 
 #### 6.1.4.1 Base request URL:
@@ -735,64 +735,123 @@ Each of the files that are used in this example have been provided in escaped JS
 
 #### 6.3.4.3 Sample Response 200 OK
 
-For the above request the following 200 OK response is received:
+- [ ]  I  managed to register the application several times, therefore it had a different UUID, for the app and to the same name environment, but to a different location. Since location of env. is not shown, there were 2 identical entries in the catalog which had the same env. service. This is a problem - ref team. 
+
+For the above request the following 200 OK response is received to provide the registration details of the service which includes the link to the URI of the service location, the URL to the catalog details page of the service and the service UUID. The Catalog entry for the service is also shown in [6.3.4.4](#ex-service-reg).
 
 {
-    "Endpoints": [
-        {
-            "Path": "dhservice/v1",
-            "SecurityClassification": "Public",
-            "UUID": "fd9975a4-7c46-41e2-acb2-0d16bc28309a",
-            "Links": [
-                {
-                    "Href": "https://hub.mendix.com/rest/datahubservice/v2/applications/a9e428ba-f84b-4f8d-a4e6-2350ee4177bc/environments/d79988dc-1ac3-4ba8-9674-341f98364204/services/ODatav3-sample-service/1.0",
-                    "Rel": "Self"
-                },
-                {
-                    "Href": "https://hub.mendix.com/link/endpoint?EndpointUUID=fd9975a4-7c46-41e2-acb2-0d16bc28309a",
-                    "Rel": "Catalog"
-                }
-            ],
-            "Connections": 0,
-            "LastUpdated": "2021-03-18T11:32:02.409Z",
-            "ServiceVersion": {
-                "Version": "1.0",
-                "Description": "A Sample OData v3 service",
-                "PublishDate": "2021-03-18T11:32:02.367Z",
-                "UUID": "07f0b455-992b-463c-99e2-31175cc5987f",
-                "Service": {
-                    "Name": "ODatav3-sample-service",
-                    "ContractType": "OData_3_0",
-                    "UUID": "f3045344-6229-4d6e-8bf4-a8497c0a61d8"
-                },
-                "SecurityScheme": {
-                    "SecurityTypes": [
-                        {
-                            "Name": "MxID",
-                            "AppStoreModuleId": "a4f7847b-9562-4b5a-adc2-4a0bf41cc534"
-                        }
-                    ],
-                    "MxAllowedRoles": [
-                        {
-                            "UUID": "91ca220e-9498-4d23-9d2e-90b9c19aca37",
-                            "Name": "User"
-                        }
-                    ]
-                },
-                "Tags": [
-                    {
-                        "Name": "odata"
-                    },
-                    {
-                        "Name": "sample"
-                    }
-                ]
-            },
-            "Validated": **false**,
-            "Discoverable": **true**
-        }
-    ]
+
+​    "Endpoints": [
+
+​        {
+
+​            "Path": "5howto/v1",
+
+​            "SecurityClassification": "Public",
+
+​            "UUID": "6786c1bb-e66e-4e02-bf6a-e72f90ec288f",
+
+​            "Links": [
+
+​                {
+
+​                    "Href": "https://hub.mendix.com/rest/datahubservice/v2/applications/2ab1410e-06d4-4e07-a82d-cc04b21d2622/environments/57535822-547e-41c4-849c-77ddc9714373/services/5how-toODatav3-sample-service/1.0",
+
+​                    "Rel": "Self"
+
+​                },
+
+​                {
+
+​                    "Href": "https://hub.mendix.com/link/endpoint?EndpointUUID=6786c1bb-e66e-4e02-bf6a-e72f90ec288f",
+
+​                    "Rel": "Catalog"
+
+​                }
+
+​            ],
+
+​            "Connections": 0,
+
+​            "LastUpdated": "2021-03-20T14:30:00.997Z",
+
+​            "ServiceVersion": {
+
+​                "Version": "1.0",
+
+​                "Description": "A Sample OData v3 service",
+
+​                "PublishDate": "2021-03-20T14:30:00.953Z",
+
+​                "UUID": "6f643036-4d4f-48e1-bb90-7a2e289e3faf",
+
+​                "Service": {
+
+​                    "Name": "5how-toODatav3-sample-service",
+
+​                    "ContractType": "OData_3_0",
+
+​                    "UUID": "b6859a4a-b926-4506-b93f-063993c07681"
+
+​                },
+
+​                "SecurityScheme": {
+
+​                    "SecurityTypes": [
+
+​                        {
+
+​                            "Name": "MxID",
+
+​                            "AppStoreModuleId": "a4f7847b-9562-4b5a-adc2-4a0bf41cc534"
+
+​                        }
+
+​                    ],
+
+​                    "MxAllowedRoles": [
+
+​                        {
+
+​                            "UUID": "91ca220e-9498-4d23-9d2e-90b9c19aca37",
+
+​                            "Name": "User"
+
+​                        }
+
+​                    ]
+
+​                },
+
+​                "Tags": [
+
+​                    {
+
+​                        "Name": "odata"
+
+​                    },
+
+​                    {
+
+​                        "Name": "sample"
+
+​                    }
+
+​                ]
+
+​            },
+
+​            "Validated": **false**,
+
+​            "Discoverable": **true**
+
+​        }
+
+​    ]
+
 }
+
+#### 6.3.4.4 Registered Service in the the Data Hub Catalog and Landscape {#ex-service-reg}
 
 The resulting entry in the Catalog for the registered service the entry in the Catalog is the following: 
 
@@ -800,7 +859,7 @@ The resulting entry in the Catalog for the registered service the entry in the C
 
 
 
-This will be shown in the Landscape as:
+This is shown in the Landscape as:
 
 ![registered service-landscape](attachments/data-hub-api-how-to/registered-service-landscape.png)
 
@@ -808,7 +867,8 @@ This will be shown in the Landscape as:
 
 # 7 Registering Consumed Endpoints by an App using PUT {#consumed-ep}
 
-For the app  registered in [6.1](https://paper.dropbox.com/doc/bPBYadNIdEkr2rwXEjwVK#:uid=323899919797247672112224&h2=6.1-Registering-an-Application),  you can register any services that it consumes by providing the endpoint details and the entities (datasets) that it consumes. This is registered in the Catalog and indicated for the consumed service by the **Connections.**  Consumed services are shown in the Data Hub Landscape for the app.
+For the app  registered in [6.1.4](#ex-reg-app),  you can register any datasets that it consumes by providing the endpoint details and the entities (datasets) that it consumes. This is registered in the Catalog and added to the number of **Connections** for the consumed service and also shown in the Data Hub Landscape which will show the network of publishing and consuming app and associated data sources.
+
 **Note:** The PUT call for registering consumed entities will *update* the currently registered datasets for an app/environment. This means that when you want to *add* consumed endpoints to an app (indicating the services the app is consuming), all previously registered consumed endpoints must be included in the request payload of the new request. If the previously registered consumed endpoints are not included, the result will be that they will be *removed*.
 
 ## 7.1 Method and Endpoint

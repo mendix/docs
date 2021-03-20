@@ -29,7 +29,7 @@ You can see the process of search and registration to Data Hub in the [Share Dat
 
 Before starting this how-to, make sure you have completed the following:
 
-- Have a registered Mendix Data Hub Account
+- Have a registered Mendix Data Hub account
 - To access the API you must obtain a Personal Access Token (PAT) as described in [Generating your Personal Access Token](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) to authenticate your integration’s API requests
 
 # 3 Overview of the Data Hub API
@@ -88,11 +88,11 @@ Insert your `MxToken` for the the string <*your token*> for every request that y
 For convenience and conciseness, throughout this how-to the following variables are used and should be substituted by the relevant values or those that are returned in the response:
 
 
-- {{baseUrl}} – the base URL for the Data Hub API:  https://hub.mendix.com/rest/datahubservice/v2/data
+- {{baseURL}} – the base URL for the Data Hub API:  https://hub.mendix.com/rest/datahubservice/v2/data
 - {*AppUUID}* – insert the value returned in the API response for the UUID of the application
 - {*EnvironmentUUID} -* insert the value returned in the API response for the UUID of the application
 
-# 5 Searching in the Catalog
+# 5 Searching in the Catalog {#api-search}
 
 Search in the Catalog returns the registered assets that satisfy the search string and filters. The search is carried out on all registered assets in the catalog (data sources, data sets, attributes and descriptions of the registered items).
 
@@ -102,7 +102,7 @@ Search in the Catalog returns the registered assets that satisfy the search stri
 
 ## 5.2 Request Parameters
 
-The following parameters can be specified for `data` :
+The following parameters can be specified for the `data` call:
 
 | **Name**                | **Type** | **Required/Optional** | **DefaultValue**      | **Description**                                              |
 | ----------------------- | -------- | --------------------- | --------------------- | ------------------------------------------------------------ |
@@ -116,9 +116,9 @@ The following parameters can be specified for `data` :
 
 A successful 200 response returns the assets from the Data Hub that satisfies the search string and specified filters. This means that all the objects in the the returned `Data` array will have the string `sample` in the names and descriptions. 
 
-### 5.3.1 `SearchResults` objects
+### 5.3.1 `SearchResults` objects {#api-search-results}
 
-The endpoints which are the data sources (services) that are returned in the `SearchResults` object comprise the following.  For a full specification of the lower level objects and arrays refer to the [Open API spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
+The endpoints (which are the data sources (services)) that are returned in the `SearchResults` object comprise the following.  For a full specification of the lower level objects and arrays refer to the [Open API spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
 
 | **Name**     | **Type** | I**ncluded in response?** | **Description**                                              |
 | ------------ | -------- | ------------------------- | ------------------------------------------------------------ |
@@ -171,9 +171,9 @@ This example shows you how to search for assets that satisfy the following:
 **The GET request URL is as follows**:
 
 
-    GET {{baseUrl}}/data?query=sample&productionEndpointsOnly=true
+    GET {{baseURl}}/data?query=sample&productionEndpointsOnly=true
 
-**The  Curl command for the above search is**:
+**The  curl command for the above search is**:
 
 curl --location --request GET 'https://hub.mendix.com/rest/datahubservice/v2/data?query=sample&productionEndpointsOnly=true' \
 
@@ -182,12 +182,11 @@ curl --location --request GET 'https://hub.mendix.com/rest/datahubservice/v2/dat
 
 
 ### 5.4.2 The Response
-The 200 OK response returned the following results:
+The 200 OK response returned that the `TotalResults` are 11 assets were found that statisfy the search string and parameters.
 
-- `TotalResults` that are returned are 11
-- For conciseness, of the 7 objects that are returned for the  `Data`  object only the second data source, **SAMPLE_EmployeeDirectory**, is shown fully in the response payload below, the other data sources have been represented as { …}.
+The response payload is shown below:
 
- The Response body that is returned is the following:
+**Note:**  For conciseness in this how-to, of the 11 objects that are returned for the  `Data`  object only the second data source, **SAMPLE_EmployeeDirectory**, is shown fully in the response payload below, the other data sources have been represented as { …}.
 
 {
 
@@ -387,15 +386,15 @@ The 200 OK response returned the following results:
 
 ​        { ... },
 
-​        {... },
+​        { ... },
 
-​        {... },
+​        { ... },
 
-​        {... },
+​        { ... },
 
-​        {... },
+​        { ... },
 
-​        { ...}
+​        { … }
 
 ​    ],
 
@@ -405,9 +404,9 @@ The 200 OK response returned the following results:
 
 }
 
-### 5.4.3 Example Search Results  When Viewed in the Catalog
+### 5.4.3 Example Search Results Viewed in the Catalog
 
-Viewed in the Data Hub the search shows the following with the total list in the search results pane on the left and the details of the selected **SAMPLE_EmployeeDirectory** :
+The same search in the Data Hub returns the following showing the total list in the search results pane on the left and the details of the selected **SAMPLE_EmployeeDirectory** :
 
 ![search results](attachments/data-hub-api-how-to/dh-search-sample.png)
 
@@ -417,24 +416,25 @@ This section describes the steps for registering a data source - this can be an 
 To register a data source to Data Hub you must register the following in the given sequence:
 
 
-1. Application that the data source originates from: POST application
-2. Environment that the data source is deployed to: POST environment
-3. All the published services from the application (data source) of the application: PUT published-endpoints
+1. Application that the data source originates from: `POST application`
+2. Environment that the data source is deployed to: `POST environment`
+3. The published services from the application (data sources) : `PUT published-endpoints`
 
-[Section 7](#consumed-ep) decribes is to register the applications that consume the registered data source.
+[Section 7](#consumed-ep) decribes how to register applications that consume a registered data source.
 
-An example Odata v3 service called  **DataHub_Sample_1.0.0_OData3**  that you can use is provided in [Section 8](#consumed-ep) which you can use for registering a service.  The service is defined by the two files:
+An example Odata v3 service called  **DataHub_Sample_1.0.0_OData3**  is provided in [Section 8](#consumed-ep) which you can use for thi how-to.  The service is defined by the two files:
 
 - metadata.xml
 - serviceFeed.xml
+Both files are necessary to provide the full service defintion and must be provided when registering the service.
 
-**Note** that the OData service contract files must be in escaped JSON format. There are several online converters available for converting your *.xml* files into this format such as one available from [Freeform.com](https://www.freeformatter.com/json-escape.html#ad-output). Just paste the contents of your files and convert them to the escaped format.  
+**Note:** OData service contract files must be included in the request body in escaped JSON format. There are several online converters available for converting your *.xml* files into this format such as one available from [Freeform.com](https://www.freeformatter.com/json-escape.html#ad-output). Just paste the contents of your files and convert them to the escaped format.  
 
 ## 6.1 Registering an Application in the Catalog using POST
 
 The first step is to register the application that the service originates from. 
 
-**Note**: If the application is already registered in the Catalog (for previously registered services for example), you can proceed to 3.3 using the `AppUUID` and `EnvUUID` for the registered service.
+**Note**: If the application deployed to the same requirement as the service you want to register is already registered in the Catalog (for previously registered services, for example), you can proceed to 6.3 using the `AppUUID` and `EnvUUID` for the registered service.  These objects can be obtained from search results as described in [Search request response](#api-search-results). 
 
 ### 6.1.1 Method and Endpoint
 `POST /applications`
@@ -456,18 +456,18 @@ There are no parameters to this request only a payload that specifies the detail
 ### 6.1.3 POST Response
 The successful 201 response will indicate that the application has been registered in the Catalog and return an application `UUID`, which is the Catalog identifier for the registered app that must be used  when referring to the application in the next steps of the registration.
 
-### 6.1.4 Example: Registering the SampleDH-App
-For this example, you are going to register an app called **SampleDH-App**. The details of the app are included in the JSON format request body given below.
+### 6.1.4 Example: Registering the Howto5-App
+In this example, you are going to register an app called **Howto5-App**. The details of the app are included in the JSON format request body given below.
 
 #### 6.1.4.1 Base request URL:
-`POST {{baseUrl}}/applications`
+`POST {{baseURL}}/applications`
 
 #### 6.1.4.2.  JSON Format Request Body:
 {
-  "Name": "SampleDH-App",
+  "Name": "Howto5-App",
   "Description": "This application is used to show how the DH API is used",
-  "RepositoryLocation": "https://dhcorp.com/",
-  "Type": "Teamcenter",
+  "RepositoryLocation": "https://dhcorp5.com/",
+  "Type": "Other",
   "BusinessOwner": {
     "FirstName": "Bill",
     "LastName": "Raine",
@@ -485,55 +485,54 @@ The curl command specifies the format of the body content and the body data.
 
 curl --location --request POST '{{BaseURL}}' \
 --header 'Content-Type: application/json' \
---header 'Authorization: MxToken <*yourMxToken>*' \
---data-raw '{
-  "Name": "SampleDH-App",
+--header 'Authorization: MxToken <*yourMxToken>*' \--data-raw '{
+  "Name": "Howto5-App",
   "Description": "This application is used to show how the DH API is used",
-  "RepositoryLocation": "https://dhcorp.com/",
-  "Type": "Teamcenter",
+  "RepositoryLocation": "https://dhcorp5.com/",
+  "Type": "Other",
   "BusinessOwner": {
-    "FirstName": "Bill",
-    "LastName": "Raine",
-    "Email": "bill.raine@dh.co"
+​    "FirstName": "Bill",
+​    "LastName": "Raine",
+​    "Email": "bill.raine@dh.co"
   },
   "TechnicalOwner": {
-    "FirstName": "Bob",
-    "LastName": "Raine",
-    "Email": "bill.raine@dh.co"
+​    "FirstName": "Bob",
+​    "LastName": "Raine",
+​    "Email": "bill.raine@dh.co"
   }
 }'
 
-#### 6.1.4.4 Response 201 Created
-The 201 Response is given below. 
-Note that the response returned   `"UUID": "a9e428ba-f84b-4f8d-a4e6-2350ee4177bc"`, which is the Catalog identifier for the application which will be used in subsequent steps of the registration of the data source.
+#### 6.1.4.4 Example Response:  201 Created
+The 201 response that is returned to indicate that the application is registered is given below: 
+
+**Note**: that the response returned the  `"UUID": "2ab1410e-06d4-4e07-a82d-cc04b21d2622"`, which is the Catalog identifier for the application that must be used to identify it in subsequent steps of the registration of the data source.
 
 {
-    "Name": "SampleDH-App",
-    "Description": "This application is used to show how the DH API is used",
-    "UUID": "a9e428ba-f84b-4f8d-a4e6-2350ee4177bc",
-    "RepositoryLocation": "https://dhcorp.com/",
-    "Type": "Teamcenter",
-    "TechnicalOwner": {
-        "FirstName": "Bob",
-        "LastName": "Raine",
-        "Email": "bill.raine@dh.co"
-    },
-    "BusinessOwner": {
-        "FirstName": "Bill",
-        "LastName": "Raine",
-        "Email": "bill.raine@dh.co"
-    }
-}
+​    "Name": "Howto5-App",
+​    "Description": "This application is used to show how the DH API is used",
+​    "UUID": "2ab1410e-06d4-4e07-a82d-cc04b21d2622",
+​    "RepositoryLocation": "https://dhcorp5.com/",
+​    "Type": "Other",
+​    "TechnicalOwner": {
+​        "FirstName": "Bob",
+​        "LastName": "Raine",
+​        "Email": "bill.raine@dh.co"
+​    },
+​    "BusinessOwner": {
+​        "FirstName": "Bill",
+​        "LastName": "Raine",
+​        "Email": "bill.raine@dh.co"
+​    }
 }
 
 ## 6.2 Registering an Environment using POST
 
-The next step is to register the environment in which the app and the service is deployed. 
+The next step is to register the environment where the app and the service is deployed. 
 
 ### 6.2.1 Method and Endpoint
-`POST /applications/{*AppUUID*}/environments`
+`POST /applications/{AppUUID}/environments`
 
-6**.2.2 Request Parameters and body**
+### 6.2.2 Request Parameters and body
 
 | **Name** | **Type** | **Required/Optional** | **DefaultValue** | **Description**                 |
 | -------- | -------- | --------------------- | ---------------- | ------------------------------- |
@@ -553,40 +552,35 @@ The Request must be accompanied by the following body:
 ### 6.2.3 POST Response
 A 201 response indicates that the environment has been registered in the Catalog for the given application and returns the environment UUID for the environment. 
 
-The combination of the App UUID and the environment UUID is the identifier that is used to register the published endpoints (data sources/services) for the application that are deployed to this environment. 
-**Note:** You will also need these UUIDs  registering apps that consume the data sources at these endpoints.
+The unique combination of the App UUID and the environment UUID is the identifier used to register any published endpoints (data sources/services) for the application that are deployed to this environment. 
 
-### 6.2.4 Example: Registering the Environment `Production`  for the `SampleDH-App` 
+**Note:** You will also need these UUIDs registering if the apps consume data sources as described in [registering consumed endpoints](#consumed-ep).
 
-For the app registered in 6.1.4.4 the following steps take you through registering the environment **Production** that the app and the service are deployed to.
+### 6.2.4 Example: Registering the Environment `Production`  for the Howto5-App 
+
+For the app registered in 6.1.4.4 the following steps describe how to register the environment **Production** that the app and the service are deployed to.
 
 #### 6.2.4.1 Base request URL:
-`POST {{baseUrl}}`/applications/a9e428ba-f84b-4f8d-a4e6-2350ee4177bc`/environments`
-[](https://hub.mendix.com/rest/datahubservice/v2/applications/:AppUUID/environments) 
+`POST {{baseURL}} /applications/{appUUID}/environments`
 
 #### 6.2.4.2.  JSON format request body for the Environment
-   {
-    "Name": "Production",
-    "Location": "https://dhcorp1.com",
-    "Type": "Production",
-    "CustomLocations": [
-        "https://dh.corp1.com"
-    ]
-}
+  --data-raw '{
 
-#### 6.2.4.2 Example Curl Command
+​    "Name": "Production",
 
-curl --location --request POST '{{BaseURL}}/applications/a9e428ba-f84b-4f8d-a4e6-2350ee4177bc/environments' \
---header 'Content-Type: application/json' \
---header 'Authorization: MxToken *<your MX Token>*' \
---data-raw '{
-    "Name": "Production",
-    "Location": "https://dhcorp1.com",
-    "Type": "Production",
-    "CustomLocations": [
-        "https://dh.corp1.com"
-    ]
+​    "Location": "https://howtoenv555.com",
+
+​    "Type": "Production",
+
+​    "CustomLocations": [
+
+​        "https://api.howto555.com"
+
+​    ]
+
 }'
+
+
 
 #### 6.2.4.4 Response 201 Created
 Note that the response returns the Catalog-generated identifier for the registered `Production` environment:  `"UUID": "d79988dc-1ac3-4ba8-9674-341f98364204"`.
@@ -656,7 +650,7 @@ Each of these files is provided in escaped JSON format. Just replace the <*inser
 
 #### 6.3.4.1 Example Base request URL
 
-`PUT` `{{baseUrl}}/applications/{appUUID}/environments/{envUUID}/published-endpoints`
+`PUT` `{{baseURL}}/applications/{appUUID}/environments/{envUUID}/published-endpoints`
 
 #### 6.3.4.2.  JSON format request body for the** `**Endpoints**` **Object**
 **Note:** for conciseness the two contract files are not included: you must insert the example contract files provided in Section 7: `<*insert service feed from*`[+Using the Data Hub API: 6.1-Service-Feed](https://paper.dropbox.com/doc/Using-the-Data-Hub-API-6.1-Service-Feed-bPBYadNIdEkr2rwXEjwVK#:uid=743818443434385856503942&amp;h2=6.1-Service-Feed) `>` and `*<Insert example metadata from*`[+Using the Data Hub API: 6.2-Metadata](https://paper.dropbox.com/doc/Using-the-Data-Hub-API-6.2-Metadata-bPBYadNIdEkr2rwXEjwVK#:uid=362078091944697159682892&amp;h2=6.2-Metadata) `>` .
@@ -815,7 +809,7 @@ To register that the **Howto5-App** is consuming 2 datasets: **Employees** and *
 
 ### 7.4.1 Example Base Request URL
 
-`PUT {{baseUrl}}/applications/c602513c-0d33-4ab4-a0de-3ba0f7f9cf75/environments/c08a0a07-9517-48e0-b0ab-beda44a43110/consumed-endpoints`
+`PUT {{baseURL}}/applications/c602513c-0d33-4ab4-a0de-3ba0f7f9cf75/environments/c08a0a07-9517-48e0-b0ab-beda44a43110/consumed-endpoints`
 
 ### 7.4.2.  JSON Format Request Body to Register Consuming from SampleDH-App
 

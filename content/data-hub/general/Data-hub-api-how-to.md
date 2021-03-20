@@ -881,37 +881,260 @@ For the app  registered in [6.1.4](#ex-reg-app),  you can register any datasets 
 The body of the request must include an array of the objects consumed by the application.
 
 Both parameters `AppUUID` and `EnvironmnetUUID` are required for the app that is consuming the service.
+
 The Request body is comprised of the array of consumed endpoints `ConsumedEndpointRequestDetails`. 
+
 For every consumed endpoint the unique identifier of the absolute URL of the endpoint must be provided for the  `EndpointLocation`. 
 The `ConsumedItems` includes the name of the `EntitySet` that is consumed and the `Namespace` of the entity set to ensure that the correct consumed dataset can be registered.
+
 **NOTE:**  Some apps may have the same named  `Entityset` which appears in several different `Namespaces` therefore,  while `Namespace` is not required, it is recommended that you include it.
+
+The following is a representation of the request body. (Blue indicates that the constituent objects are a collection, the red an array, and the solid outline indicates if the object is required.)
+
+![published endpoints mindmap](attachments/data-hub-api-how-to/putconsumedendpointsrequest.png)
 
 ## 7.3 POST Response
 
-The 200 OK response returns the full details of the registered endpoint showing the consumed endpoints and the total number of connections to this endpoint and the full details of the service as registered in the Catalog. 
+The 200 OK response returns an array of the consumed endpoints. It will provide the full details of each registered consumed endpoint,  the catalog UUID, and displays the and the total number of connections to it as registered in the Catalog. 
 
-## 7.4 Example: Registering Consumed Endpoints 
+## 7.4 Example: Registering Consumed Endpoints to the Howto5-App
 
-To register that the **Howto5-App** is consuming 2 datasets: **Employees** and **Offices** from the service **SAMPLE_EmployeeDirectory**. 
+This example shows how to register that the **Howto5-App** consumes 2 datasets: **Employees** and **Offices** from the service **SAMPLE_EmployeeDirectory**. 
+
 **Note**: For this example, the `Namespace` object for the `consumedItems` is called `DefaultNamespace` which is the default namespace for Mendix services.
 
 ### 7.4.1 Example Base Request URL
 
-`PUT {{baseURL}}/applications/c602513c-0d33-4ab4-a0de-3ba0f7f9cf75/environments/c08a0a07-9517-48e0-b0ab-beda44a43110/consumed-endpoints`
+`{{baseUrl}}/applications/{AppUUID}/environments/{EnvironmentUUID}/consumed-endpoints`
 
 ### 7.4.2.  JSON Format Request Body to Register Consuming from SampleDH-App
 
 To register the two consumed entities **Employees** and **Offices** from the HR Sample service at https://hrsampleapp.mendixcloud.com/odata/PubOdataEmployeeDirectory/v1
 
-
+{
+    "Endpoints": [
+        {
+            "EndpointLocation": "https://hrsampleapp.mendixcloud.com/odata/PubOdataEmployeeDirectory/v1",
+            "ConsumedItems": [
+                {
+                    "Type": "EntitySet",
+                    "Name": "Employees",
+                    "Namespace": "DefaultNamespace"
+                },
+                {
+                    "Type": "EntitySet",
+                    "Name": "Offices",
+                    "Namespace": "DefaultNamespace"
+                }
+            ]
+        }
+    ]
+}
 
 ### 7.4.3 Example Response 200 Created
 The response that is returned shows the full details of the consumed service as part of the `Endpoints` object. The total number of connections to the service is 43: 
 
+{
 
+​    "Endpoints": [
 
+​        {
 
-This is shown in the Data Hub Landscape for the **SampleDHApp.** It consumes 2 datasets from the **SAMPLE_EmployeeDirectory** service which is deployed from the **HR Sample App.**
+​            "Path": "odata/PubOdataEmployeeDirectory/v1",
+
+​            "SecurityClassification": "Internal",
+
+​            "UUID": "d4369ff2-cb61-4db0-b77c-b0ba35b052e1",
+
+​            "Links": [
+
+​                {
+
+​                    "Href": "https://hub.mendix.com/rest/datahubservice/v2/applications/30aaf7ca-415f-306d-bd6e-458e6f821f06/environments/c2fee2c5-00da-4b8b-b3b3-71433b02f064/services/SAMPLE_EmployeeDirectory/1.1.0",
+
+​                    "Rel": "Self"
+
+​                },
+
+​                {
+
+​                    "Href": "https://hub.mendix.com/link/endpoint?EndpointUUID=d4369ff2-cb61-4db0-b77c-b0ba35b052e1",
+
+​                    "Rel": "Catalog"
+
+​                }
+
+​            ],
+
+​            "ConsumedItems": [
+
+​                {
+
+​                    "Name": "Employees",
+
+​                    "Namespace": "DefaultNamespace",
+
+​                    "Type": "EntitySet"
+
+​                },
+
+​                {
+
+​                    "Name": "Offices",
+
+​                    "Namespace": "DefaultNamespace",
+
+​                    "Type": "EntitySet"
+
+​                }
+
+​            ],
+
+​            "Environment": {
+
+​                "Name": "Production",
+
+​                "UUID": "c2fee2c5-00da-4b8b-b3b3-71433b02f064",
+
+​                "Location": "https://hrsampleapp.mendixcloud.com",
+
+​                "Type": "Production",
+
+​                "Application": {
+
+​                    "Name": "HR Sample App",
+
+​                    "UUID": "30aaf7ca-415f-306d-bd6e-458e6f821f06",
+
+​                    "RepositoryLocation": "https://sprintr.home.mendix.com/link/project/98c8f370-7bbe-4df5-8289-031c10383ece",
+
+​                    "Type": "Mendix",
+
+​                    "Icon": "https://hub.mendix.com/rest/documents/v1/images/944a6477-e83c-4236-a6b8-3374c6551657",
+
+​                    "TechnicalOwner": {
+
+​                        "Email": "nam.nguyen@mendix.com",
+
+​                        "DisplayName": "Nam Nguyen",
+
+​                        "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=81b8f360-0e75-4195-b1b7-30aed6018eae"
+
+​                    },
+
+​                    "BusinessOwner": {
+
+​                        "Email": "georg.maureder@mendix.com",
+
+​                        "DisplayName": "Georg Maureder",
+
+​                        "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=283b4e98-cee5-4181-88e9-3c87624944bb"
+
+​                    }
+
+​                }
+
+​            },
+
+​            "Connections": 43,
+
+​            "LastUpdated": "2021-03-09T13:47:04.482Z",
+
+​            "ServiceVersion": {
+
+​                "Version": "1.1.0",
+
+​                "PublishDate": "2020-06-11T15:17:46.129Z",
+
+​                "UUID": "bff79cf3-4652-44f6-9da2-3d96e1684cfd",
+
+​                "Service": {
+
+​                    "Name": "SAMPLE_EmployeeDirectory",
+
+​                    "ContractType": "OData_3_0",
+
+​                    "UUID": "64114e44-7b75-47a5-a727-8e4ddb3b2614"
+
+​                },
+
+​                "SecurityScheme": {
+
+​                    "SecurityTypes": [
+
+​                        {
+
+​                            "Name": "Anonymous"
+
+​                        }
+
+​                    ],
+
+​                    "MxAllowedRoles": [
+
+​                        {
+
+​                            "UUID": "8dd52bfa-6d7e-453b-b506-303c0a3d9567",
+
+​                            "Name": "Administrator"
+
+​                        },
+
+​                        {
+
+​                            "UUID": "53f5d6fa-6da9-4a71-b011-454ec052cce8",
+
+​                            "Name": "User"
+
+​                        }
+
+​                    ]
+
+​                },
+
+​                "Tags": [
+
+​                    {
+
+​                        "Name": "sample"
+
+​                    },
+
+​                    {
+
+​                        "Name": "hr"
+
+​                    },
+
+​                    {
+
+​                        "Name": "employee"
+
+​                    },
+
+​                    {
+
+​                        "Name": "mockup"
+
+​                    }
+
+​                ]
+
+​            },
+
+​            "Validated": **true**,
+
+​            "Discoverable": **true**
+
+​        }
+
+​    ]
+
+}
+
+### 7.4.4 Registered service in the Catalog and Data Hub Landscape
+
+This registration is shown in the Data Hub Landscape for the **SampleDHApp.** It consumes 2 datasets from the **SAMPLE_EmployeeDirectory** service which is deployed from the **HR Sample App.**
 
 ![registered service](attachments/data-hub-api-how-to/consume1service.png)
 
@@ -919,16 +1142,17 @@ This is shown in the Data Hub Landscape for the **SampleDHApp.** It consumes 2 d
 When the**SAMPLE_EmployeeDirectory** is viewed in the Data Hub Landscape, **Howto5-App** is one of the network of apps consuming it:
 
 
-![](https://paper-attachments.dropbox.com/s_5110D0F8658FA1B6296437C16E0C83965FFDB37EE0B69FD3C06E5B34A72DC3E6_1616100598264_image.png)
+![HRapp 43 connections](attachments/data-hub-api-how-to/SAMPLEHR-app43connections.png)
 
 
 
  
 
-# 5 ~~Consuming data through Data Hub~~
+# 8 Consuming data through Data Hub
 
-The Process is to 
-Search for a service and then for a particular service the following requests should be made:
+When you want to consume a dataset that is registerd in the Data Hub the following calls must be made:
+
+Search for a specific service using the generic GET call as described in [Searching in the Catalog](#api-search). Once a suitable dataset has been located the following sequence of requests should be made:  
 
 - GET all different versions of a service /applications/{AppUUID}/services/{ServiceName}
 - GET detailed information about a specific contract
@@ -936,149 +1160,301 @@ Search for a service and then for a particular service the following requests sh
 
 
 
-## 5.1 Get all versions and endpoints of a service
+## 8.1 Get all versions and endpoints of a service
 
 You can perform a search to find a particular service with the dataset that you want to use. Before you can do that you must use the GET /applications request to retrieve the UUID of a particular application:
 
 - All the versions and their endpoints for a particular service
 - Identify and retrieve the contract of the service that you want to consume 
 
-### 5.1.1 Method and Endpoint
+### 8.1.1 Method and Endpoint
 `GET /applications/{AppUUID}/services/{ServiceName}`
 
-### 5.1.2 Request Parameters and body
+### 8.1.2 Request Parameters and body
 
 | **Name**    | **Type** | **Required/Optional** | **DefaultValue** | **Description**                 |
 | ----------- | -------- | --------------------- | ---------------- | ------------------------------- |
 | AppUUID     | string   | Required              |                  | Catalog UUID for registered app |
 | ServiceName | string   | Required              |                  | Name of Service                 |
 
-### 5.1.3 GET Response
+### 8.1.3 GET 200 Response
 
-| **Name**     | **Type** | **Required/Optional** | **DefaultValue** | **Description**                                              |
-| ------------ | -------- | --------------------- | ---------------- | ------------------------------------------------------------ |
-| Name         | string   | Required              |                  | Name of Service                                              |
-| ContractType | string   | Required              |                  | Protocol used by the service. Currently supported values: OData_3_0, OData_4_0_Xml |
-| Application  |          | required              |                  | Will return a collection of objects describing the application |
-| Versions     |          |                       |                  | For the specified endpoint, the details of the version numbers, the environments they are deployed to and links to the each version number |
+| **Name**     | **Type** | **always returned?** |  **Description**                                              |
+| ------------ | -------- | -------------------- | ------------------------------------------------------------ |
+| Name         | string   | Always               |  Name of Service                                              |
+| ContractType | string   | Always               | Protocol used by the service. Currently supported values: OData_3_0, OData_4_0_Xml |
+| Application  |          | Always               | Will return a collection of objects describing the application |
+| Versions     |          |                      |  For the specified endpoint, the details of the version numbers, the environments they are deployed to and links to the each version number |
 
-### 5.1.4 Example:
-To get all services for the service `SAMPLE_EmployeeDirectory`
+### 8.1.4 Example
+This request will get all the available services for the service `SAMPLE_EmployeeDirectory` with the appID 30aaf7ca-415f-306d-bd6e-458e6f821f06 that are registered in all environements.
 
-#### 5.4.4.1 Base request URL:
+#### 8.1.4.1 Base request URL:
 `GET /applications/30aaf7ca-415f-306d-bd6e-458e6f821f06/services/SAMPLE_EmployeeDirectory'`
 
-curl --location --request GET 'https://hub.mendix.com/rest/datahubservice/v2/applications/30aaf7ca-415f-306d-bd6e-458e6f821f06/services/SAMPLE_EmployeeDirectory' \
---header 'Authorization: MxToken <*yourMxToken>*'
+#### 8.1.4.2 Example response
+For the above response there was a single instance of the service found. However, the 1.1.0 version service is deployed to two different environements as defined in the array of `Versions`: the one in the `Production` environment which has 43 connections and a second in the `acceptance` environment which has 0 connections.
 
-#### 5.1.5 Example response
-For the above response there was only a single instance of the service found: 
 {
-    "Name": "SAMPLE_EmployeeDirectory",
-    "ContractType": "OData_3_0",
-    "Application": {
-        "Name": "HR Sample App",
-        "UUID": "30aaf7ca-415f-306d-bd6e-458e6f821f06",
-        "RepositoryLocation": "https://sprintr.home.mendix.com/link/project/98c8f370-7bbe-4df5-8289-031c10383ece",
-        "Type": "Mendix",
-        "Icon": "https://hub.mendix.com/rest/documents/v1/images/944a6477-e83c-4236-a6b8-3374c6551657",
-        "TechnicalOwner": {
-            "Email": "nam.nguyen@mendix.com",
-            "Name": "Nam Nguyen"
-        },
-        "BusinessOwner": {
-            "Email": "georg.maureder@mendix.com",
-            "Name": "Georg Maureder"
-        }
-    },
-    "Versions": [
-        {
-            "Version": "1.1.0",
-            "PublishDate": "2020-06-11T15:17:46.129Z",
-            "Endpoints": [
-                {
-                    "Connections": 37,
-                    "LastUpdated": "2020-09-18T09:22:15.765Z",
-                    "SecurityClassification": "Public",
-                    "UUID": "d4369ff2-cb61-4db0-b77c-b0ba35b052e1",
-                    "Links": [
-                        {
-                            "Href": "https://hub.mendix.com/rest/datahubservice/v2/applications/30aaf7ca-415f-306d-bd6e-458e6f821f06/environments/c2fee2c5-00da-4b8b-b3b3-71433b02f064/services/SAMPLE_EmployeeDirectory/1.1.0",
-                            "Rel": "Self"
-                        },
-                        {
-                            "Href": "https://hub.mendix.com/link/endpoint?EndpointUUID=d4369ff2-cb61-4db0-b77c-b0ba35b052e1",
-                            "Rel": "Catalog"
-                        }
-                    ],
-                    "Environment": {
-                        "Name": "Production",
-                        "UUID": "c2fee2c5-00da-4b8b-b3b3-71433b02f064",
-                        "Location": "https://hrsampleapp.mendixcloud.com",
-                        "Type": "Production"
-                    }
-                },
-                {
-                    "Connections": 0,
-                    "LastUpdated": "2021-01-26T17:02:05.826Z",
-                    "SecurityClassification": "Public",
-                    "UUID": "31f68737-9b2a-4aa2-85ee-ca5ad8378cb5",
-                    "Links": [
-                        {
-                            "Href": "https://hub.mendix.com/rest/datahubservice/v2/applications/30aaf7ca-415f-306d-bd6e-458e6f821f06/environments/58b206d6-dfa9-459d-852a-11c0e8a92db0/services/SAMPLE_EmployeeDirectory/1.1.0",
-                            "Rel": "Self"
-                        },
-                        {
-                            "Href": "https://hub.mendix.com/link/endpoint?EndpointUUID=31f68737-9b2a-4aa2-85ee-ca5ad8378cb5",
-                            "Rel": "Catalog"
-                        }
-                    ],
-                    "Environment": {
-                        "Name": "Acceptance",
-                        "UUID": "58b206d6-dfa9-459d-852a-11c0e8a92db0",
-                        "Location": "https://hrsampleapp-accp.mendixcloud.com",
-                        "Type": "Non-Production"
-                    }
-                }
-            ]
-        }
-    ]
+
+​    "Name": "SAMPLE_EmployeeDirectory",
+
+​    "ContractType": "OData_3_0",
+
+​    "Application": {
+
+​        "Name": "HR Sample App",
+
+​        "UUID": "30aaf7ca-415f-306d-bd6e-458e6f821f06",
+
+​        "RepositoryLocation": "https://sprintr.home.mendix.com/link/project/98c8f370-7bbe-4df5-8289-031c10383ece",
+
+​        "Type": "Mendix",
+
+​        "Icon": "https://hub.mendix.com/rest/documents/v1/images/944a6477-e83c-4236-a6b8-3374c6551657",
+
+​        "TechnicalOwner": {
+
+​            "Email": "nam.nguyen@mendix.com",
+
+​            "Name": "Nam Nguyen",
+
+​            "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=81b8f360-0e75-4195-b1b7-30aed6018eae"
+
+​        },
+
+​        "BusinessOwner": {
+
+​            "Email": "georg.maureder@mendix.com",
+
+​            "Name": "Georg Maureder",
+
+​            "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=283b4e98-cee5-4181-88e9-3c87624944bb"
+
+​        }
+
+​    },
+
+​    "Versions": [
+
+​        {
+
+​            "Version": "1.1.0",
+
+​            "PublishDate": "2020-06-11T15:17:46.129Z",
+
+​            "Endpoints": [
+
+​                {
+
+​                    "Connections": 43,
+
+​                    "LastUpdated": "2021-03-09T13:47:04.482Z",
+
+​                    "SecurityClassification": "Internal",
+
+​                    "UUID": "d4369ff2-cb61-4db0-b77c-b0ba35b052e1",
+
+​                    "Links": [
+
+​                        {
+
+​                            "Href": "https://hub.mendix.com/rest/datahubservice/v2/applications/30aaf7ca-415f-306d-bd6e-458e6f821f06/environments/c2fee2c5-00da-4b8b-b3b3-71433b02f064/services/SAMPLE_EmployeeDirectory/1.1.0",
+
+​                            "Rel": "Self"
+
+​                        },
+
+​                        {
+
+​                            "Href": "https://hub.mendix.com/link/endpoint?EndpointUUID=d4369ff2-cb61-4db0-b77c-b0ba35b052e1",
+
+​                            "Rel": "Catalog"
+
+​                        }
+
+​                    ],
+
+​                    "Environment": {
+
+​                        "Name": "Production",
+
+​                        "UUID": "c2fee2c5-00da-4b8b-b3b3-71433b02f064",
+
+​                        "Location": "https://hrsampleapp.mendixcloud.com",
+
+​                        "Type": "Production"
+
+​                    }
+
+​                },
+
+​                {
+
+​                    "Connections": 0,
+
+​                    "LastUpdated": "2021-01-26T17:02:05.826Z",
+
+​                    "SecurityClassification": "Public",
+
+​                    "UUID": "31f68737-9b2a-4aa2-85ee-ca5ad8378cb5",
+
+​                    "Links": [
+
+​                        {
+
+​                            "Href": "https://hub.mendix.com/rest/datahubservice/v2/applications/30aaf7ca-415f-306d-bd6e-458e6f821f06/environments/58b206d6-dfa9-459d-852a-11c0e8a92db0/services/SAMPLE_EmployeeDirectory/1.1.0",
+
+​                            "Rel": "Self"
+
+​                        },
+
+​                        {
+
+​                            "Href": "https://hub.mendix.com/link/endpoint?EndpointUUID=31f68737-9b2a-4aa2-85ee-ca5ad8378cb5",
+
+​                            "Rel": "Catalog"
+
+​                        }
+
+​                    ],
+
+​                    "Environment": {
+
+​                        "Name": "Acceptance",
+
+​                        "UUID": "58b206d6-dfa9-459d-852a-11c0e8a92db0",
+
+​                        "Location": "https://hrsampleapp-accp.mendixcloud.com",
+
+​                        "Type": "Non-Production"
+
+​                    }
+
+​                }
+
+​            ]
+
+​        }
+
+​    ]
+
 }
 
 In the Catalog the following is shown when searching for the same service: 
 
-![](https://paper-attachments.dropbox.com/s_5110D0F8658FA1B6296437C16E0C83965FFDB37EE0B69FD3C06E5B34A72DC3E6_1615294296033_Screenshot+2021-03-09+at+13.51.30.png)
+![HR service](attachments/data-hub-api-how-to/hr-sample-service-consume.png)
 
 
 
-## 5.2 Retrieve Contract of a specific Service
+## 8.2 Retrieve Contract of a specific Service
 
-Retrieve contract or contract files (for OData v3, two contract files JIRA CAT-645..) that are registered in the Catalog. This contract can then be retrieved in order to parse it and consume specific entities your app modelling.
-The consumed entitysets should then be registered in the Catalog as described in 5.3
+In order to consume datasets from a service, the contract files must be retrieved from the details registered in the Catalog. This contract can then be loaded in your business application, parsed, and the datasets consumed to create a new application. 
 
-### 5.2.1 Method and Endpoint
+The consumed entitysets should then be registered in the Catalog as described in [Section 7](#consumed-ep).
+
+- [ ] Note about the number of contract files - (for OData v3, two contract files JIRA CAT-645..)
+
+### 8.2.1 Method and Endpoint
 `GET /applications/*{AppUUID}*/environments/*{EnvironmentUUID}*/services/{ServiceName}/{ServiceVersion}`
 
-### 5.2.2 Request Parameters and body
-All parameters are required in order to retrieve the contract that you want to consume from.  These are returned from the first GET call performed in 5.1 You can upload the contract and consume exposed entities from this. 
 
-### 5.2.3 Response
-The response will return a collection of the specific details of the service:
 
-| **Name**    | **Type** | **Required/Optional** | **DefaultValue** | **Description**                                              |
-| ----------- | -------- | --------------------- | ---------------- | ------------------------------------------------------------ |
-| VersionText | string   | Required              |                  | The version number of the downloaded service                 |
-| PublishedOn | string   | Required              |                  | Date of publication of the service                           |
-| Location*   | string   | Required              |                  | Location at which the service version has been published.    |
-| Description | string   |                       |                  | Description of the service                                   |
-| Services    |          | Required              |                  | For the specified endpoint (application/environment/version) the details of the contract and the links to the Data Hub details. |
-| Contracts   |          | Required              |                  | Collection of objects specifying the contract and the JSON-encoded contents of the contract. <br>Note that for `Type` the type of contract is provided: for OData V3, the accepted types are "ServiceFeed" and "Metadata". For OData V4, the primary contract should be called "Metadata". |
+### 8.2.2 Request Parameters and body
+All the parameters that are required in order to retrieve the contract that you want to consume from.  These are returned from the first GET call performed in 8.1 
 
-### 5.2.4 Example:*
-give the example of retrieving HR Sample app
+The `services` parameter requires that the `ServiceName` and the `ServiceVersion` is given.
 
-### 5.2.5 Example response
-…
+`ServiceVersion` is thethe version number of the service that you want to consume.
+
+- [ ] ??that is what the response includes the response in the above example shows 1.1.0 in production and acceptance environements. - verify that only the version number is required.
+
+### 8.2.3 Response
+The response will return a collection of objects definining the service and also the contracts that make up the specific service:
+
+| **Name**    | **Type** | Always returned? | **DefaultValue** | **Description**                                              |
+| ----------- | -------- | ---------------- | ---------------- | ------------------------------------------------------------ |
+| VersionText | string   | Always           |                  | The version number of the downloaded service                 |
+| PublishedOn | string   | Always           |                  | Date of publication of the service                           |
+| Location*   | string   | Always           |                  | Location at which the service version has been published.    |
+| Description | string   |                  |                  | Description of the service                                   |
+| Services    |          | Always           |                  | For the specified endpoint (application/environment/version) the details of the contract and the links to the Data Hub details. |
+| Contracts   |          | Always           |                  | Collection of objects specifying the contract and the JSON-encoded contents of the contract. <br>Note that for `Type` the type of contract is provided: for OData V3, the accepted types are "ServiceFeed" and "Metadata". For OData V4, the primary contract should be called "Metadata". |
+
+### 8.2.4 Example: Retrieve the SAMPLE_EmployeeDirectory in the Production Environment
+In 8.1.4.2 two deployments of the SAMPLE_EmployeeDirectory were retrieved by the GET request. From that we want to retrieve the contract that is deployed to the **Production** environment with the UUID
+
+#### 8.2.4.1 Example Base Request URL
+
+`GET '{{baseUrl}}/applications/{{hr-app-uuid}}/environments/{{hr-ser-uuid}}/services/{{hr-ser-name}}/1.1.0'`
+
+#### 8.2.4.2 Example response
+
+The response returns the full details of the service and includes the two files that make up this OData v3 service. They are given  the  `Type: "ServiceFeed"`  and  the `"Type": "Metadata"`  values.
+
+{
+
+​    "VersionText": "1.1.0",
+
+​    "PublishedOn": "2020-06-11T15:17:46.129Z",
+
+​    "Location": "https://hrsampleapp-accp.mendixcloud.com/odata/PubOdataEmployeeDirectory/v1",
+
+​    "Description": "Service provided by Mendix for testing and sandbox scenarios. Contains mockup HR data to play around with.",
+
+​    "Service": {
+
+​        "Name": "SAMPLE_EmployeeDirectory",
+
+​        "ContractType": "OData_3_0",
+
+​        "Links": [
+
+​            {
+
+​                "Rel": "Self",
+
+​                "Href": "https://hub.mendix.com/rest/datahubservice/v1/applications/30aaf7ca-415f-306d-bd6e-458e6f821f06/environments/58b206d6-dfa9-459d-852a-11c0e8a92db0/services/SAMPLE_EmployeeDirectory"
+
+​            },
+
+​            {
+
+​                "Rel": "DataHubLocation",
+
+​                "Href": "https://hub.mendix.com/link/endpoint?EndpointUUID=31f68737-9b2a-4aa2-85ee-ca5ad8378cb5"
+
+​            }
+
+​        ]
+
+​    },
+
+​    "Contracts": [
+
+​        {
+
+​            "Type": "ServiceFeed",
+
+​            "Value": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<service xmlns:atom=\"http://www.w3.org/2005/Atom\" xml:base=\"{applicationRootUrl}/odata/PubOdataEmployeeDirectory/v1/\" xmlns=\"http://www.w3.org/2007/app\">\n  <workspace>\n    <atom:title>Default</atom:title>\n    <collection href=\"Employees\">\n      <atom:title>Employees</atom:title>\n    </collection>\n    <collection href=\"Departments\">\n      <atom:title>Departments</atom:title>\n    </collection>\n    <collection href=\"Offices\">\n      <atom:title>Offices</atom:title>\n    </collection>\n  </workspace>\n</service>",
+
+​            "Includes": []
+
+​        },
+
+​        {
+
+​            "Type": "Metadata",
+
+​            "Value": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<edmx:Edmx Version=\"1.0\" xmlns:edmx=\"http://schemas.microsoft.com/ado/2007/06/edmx\" xmlns:mx=\"http://www.mendix.com/Protocols/MendixData\">\n  <edmx:DataServices m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\" xmlns:m=\"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata\">\n    <Schema Namespace=\"DefaultNamespace\" xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm\">\n      <EntityType Name=\"Employee\">\n        <Key>\n          <PropertyRef Name=\"ID\" />\n        </Key>\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" />\n        <Property Name=\"firstName\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"lastName\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"email\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"phone\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"street\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"city\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"zip\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"country\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <NavigationProperty Name=\"Department\" Relationship=\"DefaultNamespace.Employee_Department\" FromRole=\"Employees\" ToRole=\"Department\" />\n        <NavigationProperty Name=\"Office\" Relationship=\"DefaultNamespace.Employee_Office\" FromRole=\"Employees\" ToRole=\"Office\" />\n      </EntityType>\n      <EntityType Name=\"Department\">\n        <Key>\n          <PropertyRef Name=\"ID\" />\n        </Key>\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" />\n        <Property Name=\"Name\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"Color\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <NavigationProperty Name=\"Employees\" Relationship=\"DefaultNamespace.Employee_Department\" FromRole=\"Department\" ToRole=\"Employees\" />\n        <Property Name=\"Number\" Type=\"Edm.Int64\" />\n      </EntityType>\n      <EntityType Name=\"Office\">\n        <Key>\n          <PropertyRef Name=\"ID\" />\n        </Key>\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" />\n        <Property Name=\"Name\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"Street\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"StreetNumber\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"ZIP\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"City\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"Country\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"CountryCode\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <NavigationProperty Name=\"Employees\" Relationship=\"DefaultNamespace.Employee_Office\" FromRole=\"Office\" ToRole=\"Employees\" />\n        <Property Name=\"Number\" Type=\"Edm.Int64\" />\n      </EntityType>\n      <Association Name=\"Employee_Department\">\n        <End Type=\"DefaultNamespace.Employee\" Multiplicity=\"*\" Role=\"Employees\" />\n        <End Type=\"DefaultNamespace.Department\" Multiplicity=\"0..1\" Role=\"Department\" />\n      </Association>\n      <Association Name=\"Employee_Office\">\n        <End Type=\"DefaultNamespace.Employee\" Multiplicity=\"*\" Role=\"Employees\" />\n        <End Type=\"DefaultNamespace.Office\" Multiplicity=\"0..1\" Role=\"Office\" />\n      </Association>\n      <EntityContainer Name=\"PubOdataEmployeeDirectory/v1Entities\" m:IsDefaultEntityContainer=\"true\">\n        <EntitySet Name=\"Employees\" EntityType=\"DefaultNamespace.Employee\" />\n        <EntitySet Name=\"Departments\" EntityType=\"DefaultNamespace.Department\" />\n        <EntitySet Name=\"Offices\" EntityType=\"DefaultNamespace.Office\" />\n        <AssociationSet Name=\"Employee_Department\" Association=\"DefaultNamespace.Employee_Department\">\n          <End Role=\"Employees\" EntitySet=\"Employees\" />\n          <End Role=\"Department\" EntitySet=\"Departments\" />\n        </AssociationSet>\n        <AssociationSet Name=\"Employee_Office\" Association=\"DefaultNamespace.Employee_Office\">\n          <End Role=\"Employees\" EntitySet=\"Employees\" />\n          <End Role=\"Office\" EntitySet=\"Offices\" />\n        </AssociationSet>\n      </EntityContainer>\n    </Schema>\n  </edmx:DataServices>\n</edmx:Edmx>",
+
+​            "Includes": []
+
+​        }
+
+​    ]
+
+}
 
 
 

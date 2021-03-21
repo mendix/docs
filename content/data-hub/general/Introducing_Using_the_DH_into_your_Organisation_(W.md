@@ -27,7 +27,7 @@ this is a guide it provides a a checklist  on the journey to implement DH and al
 
 
 
-## X.1 Getting Started with Mendix Data Hub
+## 1.1 Getting Started with Mendix Data Hub
 
 
 
@@ -35,7 +35,7 @@ Follow the journey for building an app in Mendix Studio Pro and use available da
 
 Explore the [Data Hub](https://hub.mendix.com) for your organization.
 
-## X.2 A brief overview of what is involved
+## 1.2 A brief overview of what is involved
 
 getting Started Video -** used in the Academy workshop and introduced here.
 
@@ -43,7 +43,7 @@ getting Started Video -** used in the Academy workshop and introduced here.
 
 
 
-#  X Data Hub Concepts and Terminology
+#  2 Data Hub Concepts and Terminology
 
 ## X.1 Overview of using Data Hub to share data sources 
 
@@ -60,7 +60,7 @@ A visual example:
 
 
 
-## X.2 Using Data Hub to Share Data - an example
+## 2.2 Using Data Hub to Share Data - an example
 
 1. Developer of **Sales APP** has Customer data in his App which he wants share with the rest of the company.  Publishes useful groups of entities (datasets) that would be useful in an **OData REST service**. 
    1. The developer organizes the published services to group the **datasets** into relevant services oriented towards specific use cases. Not all of the information is necessary, or should be shared, so only entities and attributes of these entities are published.
@@ -73,7 +73,7 @@ A visual example:
 
 This makes it simpler to use data between Apps, and the Catalog allows governance of which data is used by whom, and life cycle management informing people of changes, and with good versioning of OData contracts.
 
-##  X.3 The Role of Data Hub
+##  2.3 The Role of Data Hub
 
 ·The Catalog is the hub in the collaboration, discovery and connection of an organizations data source.   It catalogs microservices from the organization's business applications systems using OData contracts. The Data Hub can already import OData contracts from 3rd party systems such as Teamcenter, SAP & Microsoft and OData v4services from other business applications.
 
@@ -81,7 +81,7 @@ The Data Hub facilitates an integration mechanism, where architects and lead dev
 
 In the current format OData is supported, but ??soon also e.g. REST Swagger files can be imported??, 
 
-## X.4 DataHub Features
+## 2.4 DataHub Features
 
 The following base features of DataHub:
 
@@ -107,9 +107,7 @@ The following base features of DataHub:
 
 ------------------------
 
-# 2 Developers/Users  - the new way to develop apps using shared data
-
-
+# 3 Developers/Users  - the new way to develop apps using shared data
 
 Data Hub is used by developers - low code and no code - to cretate apps in two way:
 
@@ -132,11 +130,10 @@ the following table shows the difference for developers to use external data thr
 
 * - [ ] 
 
-## 2.3Guidelines for Publishing Data Sources to Data Hub
+## 3.1Guidelines for Publishing Data Sources to Data Hub
 
 - [ ] What is a micro service??
 
-  
 
 Model the app as a collection of micro services 
 
@@ -150,7 +147,7 @@ It is good practice in Microservices Landscapes to publish meaningful datasets a
 
 A basic use-case is that a datatype like *Customer* is owned and created in one App. Some of this data is needed in another App, where additional information around the same object is also added and used locally.
 
-### 2.x.1 Mendix Studio Pro
+### 3.1.1 Mendix Studio Pro
 
 DataHub also makes it very simple for a Citizen Developer to publish data from an App, to be used in other Apps. Just select the object in the Domain Model and select “Publish” and select the fields that should be available to other Apps.
 
@@ -160,15 +157,15 @@ The Image below illustrates how a published dataset can be used.
 
 ![](/Users/Ila.Gordhan/Desktop/Github Mendix User Documentation/content/data-hub/attachments/collaboratingSP.png)
 
-## 2.3 Connecting to Other Systems
+## 3.3 Connecting to Other Systems
 
 Publshing services from other business apps which can be consumed through DH
 
 Also use DH to access data sources and data sets to use in other business apps.
 
-# 3 A**rchitecht Planning** 
+# 4 A**rchitecht Planning** 
 
-# Microservice Strategy
+## 4.1 Microservice Strategy
 
 The Mendix DataHub makes it easier to break larger components or “Monoliths” up in smaller more manageable parts, so called Microservices. Therefore, when using the DataHub it’s important to know more on what Microservices are, and how to split things in a good way.
 
@@ -186,7 +183,7 @@ Building things in this way is also advantageous for the Development teams, that
 
 If in addition using Low Code on the cloud, with fully automated deployments, logging and monitoring, these small teams can own the entire Application Life Cycle of critical systems
 
-## Organizational Benefits of Microservices
+## 4.2 Organizational Benefits of Microservices
 
 There can be many reasons to break up something in Microservices, but the most important one is the organizational reason. By having different business units own their Apps, the iterations towards higher and higher level of digitization can be much faster.
 
@@ -196,7 +193,7 @@ When Apps are independent from each other, the DevOps teams are also more indepe
 
 Sometimes scope is divided in parts based on business function, but the remaining App is still quite large. Then there can be technical reasons to break large things up, or reasons not to break them up. It is important to know ***Why\*** something is split in two parts, in order to split it in the ***Right way\***.
 
-## Technical Reasons to Split Microservices
+## 4.3Technical Reasons for Splitting Microservices
 
 Some technical reasons to break off a microservice:
 
@@ -216,7 +213,7 @@ Microservices should also not be too small, because that will also add to integr
 
 ![image-20210314134517577](/Users/Ila.Gordhan/Library/Application Support/typora-user-images/image-20210314134517577.png)
 
-## 3.2 Business apps - Microservices Architecture
+## 4.3 Business apps - Microservices Architecture
 
 DH facilitates a microservice architecture to build apps for specific business functions.
 
@@ -226,7 +223,7 @@ all integration creates a dependency, and dependencies should be minimized by go
 
 The autonomy of Apps, and autonomy of the teams that build the Apps, is essential to generate the full benefits of a Microservice Architecture. So even when it is now much easier to use data directly from other Apps with OData and DataHub, there should be some moderation in how dependent a set of Apps are from each other. 
 
-## Mendix and Low-Code for Microservices
+## 4.4 Mendix and Low-Code for Microservices
 
 Microservice strategy, if done in the right way, will show benefits independently of technology. But if using Mendix Low Code and the DataHub and especially on a managed Cloud infrastructure, the advantages in productivity and business satisfaction can be enormous.
 
@@ -236,7 +233,7 @@ This is because Low-Code and Cloud augments the level of automation to a point w
 
 - [ ]  ref Mendix is Ideal for Microservices….
 
-### 3.2.1 Guidelines for good Microservices Architecture Design
+### 4.4.1 Guidelines for good Microservices Architecture Design
 
 * Data sharing should be efficient for the overall maintainability, and the run-time stability of the overall solution and updating of publshing apps. The easier it will be to change the solution later, re-test it and re-deploy the different Apps independently.
 * Splitting functionality along the lines of “Business Functions” that have clear and intuitive integration similar to how Business units would communicate
@@ -260,11 +257,13 @@ This is because Low-Code and Cloud augments the level of automation to a point w
     - User/team/department
 - Future planning
 
-# 4  **Head of Development/Implementation**
+# 5  **Head of Development/Implementation**
 
 Mendix DataHub current version focuses on Data retrieval using OData.
 
-## 4.1 How is OData different from a REST call
+- [ ] Do developers need this kind of overview - or is it useful to provide context and introduce additional services and formats as they become integrated in DH?
+
+## 5.1 How is OData different from a REST call
 
 DataHub’s OData offers a simpler way to share and discover data in Design-time, and with optimized retrieve in Run-time.
 
@@ -272,40 +271,7 @@ DataHub’s OData offers a simpler way to share and discover data in Design-time
 
 Figure 5: An important benefit is the full stack implementation of OData which makes it seamless and easy to integrate.
 
-### 4.2 OData Retrieval of Data in SP using DataHub
-
-##  4.2.1 ???
-
-The OData protocol uses REST as a transport, but it allows a direct integration from data objects in one system to data objects in the other system. Using it is very simple:
-
-1. Search the ***DataHub Catalog\*** for a data object
-
-2. Drag and drop the object to the Domain Model and the data is available as a *Remote Entity*
-
-3. If showing data in e.g. a Data grid, then paging and filtering is directly out of the box
-
-As data is used for different App functions, the Mendix App automatically initiates OData calls to get the correct data at the right time, and it only retrieves the required data which means that it is more efficient (faster) than REST services in most instances.
-
-### 4.2.2 REST Service Retrieval of Data
-
-If using REST to do the same thing, the Developer has to:
-
-1. Ask other App Owners for information about which services to use
-
-2. Load the JSON definition into the project
-3. Create a microflow with an action related to a REST endpoint
-
-4. Do the Object mapping
-
-5. Field level Data manipulation and validation
-
-6. Set up the domain model to receive the data (if using persistent or non-persistent data)
-
-7. If showing data in e.g. a Data grid where we search and/or do filtering this has to be done in the microflow. *This usually requires skill and quite some time from the Developer and avoiding this is a significant value provided by the first versions of DataHub**.***
-
-??? When to use REST - While DataHub OData is a much more efficient way to retrieve data directly from source objects as shown above, there are still a number of cases when a REST service is required or preferred, for example for updates, deletes and other actions, and mostly also for business event management.
-
-## OData or REST?
+## 5.3 OData or REST?
 
 REST returns a complex tree structure that is a specific combination of data related to a service. The data structure can be very different from the data-model in the source system since a Microflow will gather the information using logic. But it is generally a fixed format, which means that filtering, paging and optionality of fields has to be designed and implemented by the source App team.
 
@@ -333,7 +299,21 @@ With the OData contracts two Apps will be much closer to each other and using th
 | ***Advantages\***         | Much easier to filter on data and select what  is required to retrieve  Navigation between Remote Objects from the  Client side  Allows to split Apps easier while maintaining  the same data model | More formal way to communicate which is  better for remote systems and/or teams.  Allows a *Method* to be used as part of  the service call, which is required for update / create and a benefit for some  retrieves and can help compensating for data-model changes without changing  the service |
 | ***Disadvantages\***      | Dependency between data-models of Apps, gives  a closer coupling  Only retrieve, no create or updates | Fixed format of services.  Requires mapping and development skills to do  filtering, paging etcetera |
 
-### Using Associations in Remote Entities
+### 5.3 OData Retrieval of Data in SP using DataHub
+
+###  5.3.1 How to use OData Services in Studio Pro
+
+The OData protocol uses REST as a transport, but it allows a direct integration from data objects in one system to data objects in the other system. Using it is very simple:
+
+1. Search the ***DataHub Catalog\*** for a data object
+
+2. Drag and drop the object to the Domain Model and the data is available as a *Remote Entity*
+
+3. If showing data in e.g. a Data grid, then paging and filtering is directly out of the box
+
+As data is used for different App functions, the Mendix App automatically initiates OData calls to get the correct data at the right time, and it only retrieves the required data which means that it is more efficient (faster) than REST services in most instances.
+
+### 5.3.2 Using Associations in Remote Entities
 
 The big difference is that with OData the client is in 'control' of navigating the objects and finding the data, while in REST the server is in control. In REST the source App pre-defines exactly what data can be retrieved and how, using the fixed format REST services.
 
@@ -349,7 +329,24 @@ To avoid this risk there are some possibilities:
 
 4. For high volume of retrievals, it often makes sense to Cache the required data in the destination (see section later), in a format that is more optimal for retrieval locally.
 
-### Managing Changes in OData and REST
+## 5.4 REST Service Retrieval of Data
+
+If using REST to do the same thing, the Developer has to:
+
+1. Ask other App Owners for information about which services to use
+
+2. Load the JSON definition into the project
+3. Create a microflow with an action related to a REST endpoint
+
+4. Do the Object mapping
+
+5. Field level Data manipulation and validation
+
+6. Set up the domain model to receive the data (if using persistent or non-persistent data)
+
+7. If showing data in e.g. a Data grid where we search and/or do filtering this has to be done in the microflow. *This usually requires skill and quite some time from the Developer and avoiding this is a significant value provided by the first versions of DataHub**.***
+
+??? When to use REST - While DataHub OData is a much more efficient way to retrieve data directly from source objects as shown above, there are still a number of cases when a REST service is required or preferred, for example for updates, deletes and other actions, and mostly also for business event management.Managing Changes in OData and REST
 
    Preferably associations between objects that is published in DataHub should be relatively stable. When clients navigate relation between two Remote Entities it means that the Source App needs to maintain this association – or if broken – both systems will have to change at the same time. 
 
@@ -357,7 +354,7 @@ To avoid this risk there are some possibilities:
 
    For additions and other small changes to services and published entities, there’s good service version management in the Mendix platform. Some advantage to REST here since compensating changes can be done in the Microflow layer, but also DataHub OData contracts are versioned and managed.
 
-### Autonomy of Teams? Remoteness of Teams?
+## 5.5. Autonomy of Teams? Remoteness of Teams?
 
 ??for Apps that are related to each other or owned by the same Department, OData makes a lot of sense, while for Apps in very different departments, more formal REST services are good practice:
 
@@ -369,7 +366,7 @@ o  Replacing a Monolith or building in SOA layers are good examples of where one
 
 
 
-## When to Pull Data Real-Time? When to Cache Data?
+## 5.6 When to Pull Data Real-Time? When to Cache Data?
 
 A Developer that integrates between systems has to answer the question:
 
@@ -407,9 +404,9 @@ The access to the entire detailed object is greatly helped by DataHub OData serv
 | ***Advantages\***    | Always get the latest record  Simpler to implement, especially with DataHub  Good for large datasets and detailed  information accessed rarely | Data is always available  No run-time dependency on App 1  Better response times  Easier for the test cycle |
 | ***Disadvantages\*** | Run-time dependency for deployments and down  time           | Polling can be heavy if many systems poll the  same source (consider Pub-sub or File) |
 
-## Retrieving Data in Real-time
+## 5.7 Retrieving Data in Real-time
 
-### Real-time Retrieve with Data-Hub OData
+### 5.7.1 Real-time Retrieve with Data-Hub OData
 
 As of the first release of DataHub, retrieval of data with filtering, paging and selection of specific fields is now completely out of the box with visual development. This is a huge improvement that will make Citizen developers more able to build a set of Mendix Apps that share data efficiently between each other. The Low Code paradigm is extended to integration between Apps.
 
@@ -425,7 +422,7 @@ REST it a more formal for the user. It has specific services for specific purpos
 
 This makes DataHub OData extremely powerful for Developers of close-knit applications that cooperate closely in e.g. a cluster of Microservices that replaces a Monolith and the DataHub Catalog organizes the dependencies to manage Life Cycle of changes. 
 
-### Real Time Retrieve with REST
+### 5.7.2 Real Time Retrieve with REST
 
 REST is more formal than OData. Building a Service contract that hides the data model of the source App is good practice in many situations because it allows the source App to evolve the data-model freely without impacting the other Apps that use the information.
 
@@ -436,7 +433,7 @@ This becomes more important the further away from each other Apps are in organiz
 | ***Advantages\***    | Default option when using DataHub because  it’s superior ease of filtering and paging etcetera.  More efficient retrieve since only getting  data requested (~30% faster) | Retrieving specific complex objects like  Order with Items and other things.   Can be better with many subscribers to data  since it’s slightly more decoupled |
 | ***Disadvantages\*** | Direct link between data-models, see previous  section. Less preferred if remote teams or changing data-model | If the source is not able to change REST  services, they are fixed format and can sometimes be un-optimal for  retrieving |
 
-## Caching Data
+## 5.8 Caching Data
 
 Caching is done for two main reasons:
 
@@ -454,13 +451,13 @@ o  Some close-to-real-time caching is done with Pub-sub, using a message broker 
 
 There will always be some delay in caching, due to poll-frequency or file uploads being done daily or pub-sub taking some time in the middle. The requirement for having the latest data will be weighed against the non-functional requirements. E.g. having 100 Apps poll a source App every second for new data will use quite some resources from the source system.
 
-### Caching in the Background or Caching retrieved Data
+### 5.8.1 Caching in the Background or Caching retrieved Data
 
 The first question to consider is if I should cache only the data that a user or process retrieved already, and then potentially purge data not used after a certain time.
 
 Or if I want to cache data as a background process when nobody is looking, in which case it is important to create a functionally robust mechanism that always works. What is robust depends strongly on the type of data and the business use case.
 
-### Polling data using OData based on the DataHub retrieve
+### 5.8.2 Polling data using OData based on the DataHub retrieve
 
 A scheduled Microflow in App 2 can simply request data from a *Remote Entity* with a filter on 
 
@@ -472,7 +469,7 @@ This makes sense for caching individual records, which is the most common situat
 
 DataHub will make this type of caching even more easy in the future.
 
-### Polling data using REST retrieve
+### 5.8.3 Polling data using REST retrieve
 
 Caching data using a REST services and some sort of flag or (*change date >= timestamp of last update)* is currently the by far most used option to Cache data between Mendix Apps and from external systems. It works very well, but with DataHub chances are OData will grab a fair share of this scope, since it will be more efficient and simpler for single table caching. 
 
@@ -491,21 +488,21 @@ If the target is to cache a structure of data with relations a REST call that ca
 | ***Advantages\***    | Can retrieve a complex object in once service  call | Easier to implement via Microflow and easier  to filter |
 | ***Disadvantages\*** | Takes experience to do in the right way             | Only for simple entities                                |
 
-### Difficulties with Caching in Real-time
+### 5.8.4 Difficulties with Caching in Real-time
 
 Caching data in real-time is not always trivial so one should use this with care and when really required, and one should try to make a simple robust design.
 
-#### Real time Caching Data for Deleted of Records
+#### 5.8.4.1 Real time Caching Data for Deleted of Records
 
 For Deleting records when the data is replicated with, is to always use an active/inactive flag so that the record still exists and can be retrieved with a new status – and treated as deleted – while still existing in the data-base. 
 
 This has to be considered when displaying objects in a list, since we in most cases do not want the user to see in-active objects.
 
-#### Complex Objects
+#### 5.8.4.2 Complex Objects
 
 Sometimes one needs a more advanced trigger, e.g. if an Item on an Order changed, we may want to retrieve the entire Order in a REST call and update that in order to be sure we have the correct situation. We need to update objects rather than re-create them to maintain associations.
 
-### Caching data with File import
+### 5.8.5 Caching data with File import
 
 This is probably the most commonly used way to cache data still in the general IT situation, since many processes are still batch driven, and because there are no strong requirements for real-time updates for many types of data that is commonly cached. 
 
@@ -516,7 +513,7 @@ It could be countries or currencies, or it could be drivers of vehicles that hav
 | ***Advantages\***    | Easy to create and manage interface and  operationally stable.  Can be same interface for initial load if  getting e.g. “next 100” records | Easy to implement – and robust – clean sleet  of data every time.  Same interface for initial load. |
 | ***Disadvantages\*** | Has to manage deletions and/or active or  in-active records. | Slow delivery of data – only valid for slow  changing data  Large datasets may use file of “changed  records” which is slightly more complex |
 
-### Caching data using Pub-Sub / Change Data Capture / Event Driven
+### 5.8.6 Caching data using Pub-Sub / Change Data Capture / Event Driven
 
 There are certain situations when a Pub-Sub patterns is preferred. Or when an Event driven architecture is desired. Event driven means that a publisher sends information without worrying if the message arrives. The subscriber gets the information without direct interaction with the publisher. This requires a message broker in the middle, because the source publishes to a broker, and the destination subscribes to certain types of updates from this broker. 
 
@@ -557,7 +554,7 @@ o  If guaranteed delivery is required one should monitor successful delivery, us
 
 ·    Dependency between source and consuming system is 'hidden' in the message (structure).
 
-## Chaining of Requests for Data
+## 5.9 Chaining of Requests for Data
 
 *Remote Entities*, can be re-published from the consuming App in it’s own OData contract, which would mean tat the same entity is available in two formats, but the source is still the same. However this is a chained dependency and we warn strongly against this pattern since it will create an extra hop and an extra dependency that is almost all cases is undesirable.
 
@@ -582,7 +579,7 @@ Integrating all systems - what do I need?
     - Owners
 - Governance
 
-# 5 **Data Steward - Data Policy**
+# 6 **Data Steward - Data Policy**
 
 - Establish Organization’s Data-sharing policy
     - Company

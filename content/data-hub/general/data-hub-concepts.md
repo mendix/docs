@@ -97,11 +97,28 @@ Data curation is a necessary endeavor for any organization attempting to enable 
 
 Curation activities are carried out by the Data Hub Administrator and assigned Data Hub Curators. In addition, data source owners also have curation rights over the datasets that they own. 
 
+## Curating Assets
+
+Users who can curate assets in Data Hub Catalog are as follows: 
+
+* Owners of a registered service – can curate their own services which includes those that have been set to non-**Discoverable**
+* [Data Hub Curators](/data-hub/#curator) and [Data Hub Admins](/data-hub/#admin) – can curate and find all registered assets in the Catalog, discoverable and non-discoverable
+
+Owners and Curators can also get an overview of the registered assets they own and curate from the [Curate](#curatelist) tab of Data Hub.
+
+{{% alert type="info" %}}
+Information that is added or changed during curation is stored in the Data Hub Catalog for that item. It will not be added to the OData service contract or metadata files or affect any of the values in the metadata files associated with the service or the data associated with the exposed datasets. 
+{{% /alert %}}
+
 # Owners
 
 Business Owners and Technical Owners.
 
 n the Data Hub Catalog, the search details for a service include a **Technical Owner** (for technical inquiries) and the **Business Owner** who is responsible for the data sets. Owners who are registered Mendix platform users can curate their assets.
+
+By default, the **Technical Owner** for a registered asset is the user who registered the data source when registration is done through the deployment pipeline in Studio Pro or specified during manual registration or using the Data Hub API. These owners can be changed by curating the application details. The **Technical** and **Business Owners** are displayed as a link in the asset **Metadata** pane so that users can contact them. 
+
+{{% alert type="info" %}}**Business** and **Technical Owners** have curation rights for the registered data source in the Data Hub Catalog if they are registered users on the Mendix Platform. If a custom owner is *created* with the process described in this section, the link to contact them will be displayed for the asset but this does not mean that they are able to curate it.  {{% /alert %}}
 
 ## 
 
@@ -111,11 +128,71 @@ These data sets are the sets of data that are shared.
 
 Being able to present the data  in an effective manner is also extremely important. 
 
+###  Services
 
+The published OData service document (the API) is included in the module definition (in Studio Pro) and contains the metadata for linking to the data for the datasets exposed in the service.
+
+When a new version of the OData service for an external entity is registered in the Data Hub Catalog, the consumed OData service will have to be updated in the consuming app to make use of the new features that the new version brings. For more details on updating a consumed service see the [Updating or Switching a Consumed OData Service](/refguide/consumed-odata-service#updating) section of *Consumed OData Service*.
+
+{{% alert type="info" %}}
+This is not compulsory, and users can continue to use an older version of a service unless the new version was deployed to the same service endpoint as the previous version. In Studio Pro, new versions of a service are indicated and users can choose to **Update** the service, or **Switch** to another version of the service deployed to another endpoint.
+{{% /alert %}}
+
+It is good practice that publishers of a service serve a notice of deprecation on a service version that will be replaced with a new service that may contain breaking changes which would cause the consuming app to fail. In this case the updated service should be deployed to a new service endpoint. In this case, in Studio Pro, users will get the option to **Switch** to the new version. 
 
 # Consume
 
 Registered assets in the Data Hub Catalog can be accessed in Mendix Studio Pro to [build apps](/refguide/modeling). These external data sources are represented in the domain model as *external entities* which can be used with local entities with the difference that external entities connect to data that is maintained in the source application and therefore can only be read or consumed. Changes to this data is done in the originating apps.
+
+Data can be published from an app for use by other apps through [published OData services](published-odata-services). Consumed OData services can be used to integrate external data sources in apps through [Mendix Data Hub](/data-hub/). 
+
+Mendix Data Hub enables integration of available data sources from different sources in an organization into your Mendix apps.  OData services that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/) expose entities that can be dragged and dropped into your domain model through the [Data Hub pane](data-hub-pane) as external entities. The OData service document that is added to your project provides the information for retrieving the metadata for the service and exposed entities.
+
+For further details on the consumed OData service document and updating consumed OData services in your project, see [Consumed OData Service](consumed-odata-service).
+
+When you add an external entity to your project, you are consuming the entity from a specific version of a service (the *service endpoint*), deployed to a given environment. The metadata file or contract for the service is located at this endpoint. 
+
+The same service, deployed to a different environment will be to a different service endpoint and this will be registered as a different asset in the Data Hub Catalog. In the following example, there are two endpoints for the **CustomerApi service version 1.1.0** which is deployed to the production environment and the **Acceptance** environment: 
+
+ge_container width="250" %}}![2 endpoints](/Users/Ila.Gordhan/Desktop/Github Mendix User Documentation/content/refguide/attachments/consumed-odata-service/same-service-different-endpoints.png){{% /image_container %}}
+
+When you drag the **Customer** entity from **CustomerApi version 1.0.0** deployed to the **Acceptance** environment into your project, Studio Pro will retrieve the information it requires from the contract that is at the endpoint. 
+
+### Consumed (External) Entities
+
+When you use an external entity from a published OData service through the **Data Hub** pane in Studio Pro, you are consuming the dataset from the service (which is published from the app deployed in a specific environment). The OData endpoint for the dataset is used in the consuming app.
+
+External entities are read-only, so it is not possible to change te structural values of attributes or associations between two external entities.
+
+When security is enabled for your app, you can define access rules for external entities just as you would for [persistable](/refguide/persistability#persistable) and [non-persistable](/refguide/persistability#non-persistable) entities. You can only define read access, and also access rules based on user roles (for more details, see [Security and Controlling Access to Information](security)).
+
+You can associate external entities with local entities (both [persistable and non-persistable](/refguide/persistability). However, the external entity cannot be the owner of an association, which means that the association has to be from a local entity to the external entity in the domain model, and the value for the association [owner](/refguide/associations#ownership) must be set to **Default**.
+
+Mendix entities that are specializations in the the originating app will be published and consumed as discrete entities that include the inherited attributes and associations. When the generalized entity is also exposed in the same service as the specialized entities the inheritance relationship will not be present in the metadata contract or when both are consumed. 
+
+{{% alert type="warning" %}}
+Associations that are inherited from a generalization will be exposed and shown when the specialization is consumed. However the same association of the generalized entity is not supported for the specialization in the same domain model The same association cannot be exposed and consumed for two different external entities in the same domain model.
+{{% /alert %}}
+
+## Datasets, Entities and Associations
+
+Currently datsets (in Mendix entity sets) of [persistable](/refguide/persistability) entities can be exposed for sharing by another app. The dataset associated with the entity is used in the consuming app.
+
+When selecting the entities to expose in a service, consider including associated entities so that the relationship between the data is also maintained.
+
+When exposing Mendix entities that are generalizations and specializations in the same service the specialized entities will be defined in the published OData service as discrete entities which include the inherited attributes and associations. The inheritance relationship will not be present in the metadata contract, and also not when the entities are consumed in Mendix Studio Pro.
+
+{{% alert type="note" %}}The association of a generailsed entity that is exposed in the same service as the specializations is not supported for both entities when consumed. The same association cannot be consumed for the two different entities. In this case, the inherited association should not be included when exposing the specialization.{{% /alert %}}
+
+Data for external entities is not in the consuming app's database but in the database of the app that publishes the OData service.
+
+The data set that is associated with the consumed entity is maintained in the publishing app.
+
+Access  to the data is through the published REST OData service, with "reading" and "querying" of the data by the consuming app.
+
+{{% alert type="info" %}}
+This means that there are currently no "writes" or requests to the originating app to change data by the consuming app. 
+{{% /alert %}}
 
 ## Entitysets
 
@@ -155,6 +232,18 @@ The environment is therefore a major component of the definition and forms part 
 By default, search results in the Data Hub Catalog are filtered to show only hits in the Production environment. You can extend the search to **Non-production** or **Mendix Free App (Sandbox)** environments by checking them in the search pane **Add Filter** list. For more details, see [Filters](#filter).
 {{% /alert %}}
 
+Deployment [environments](/developerportal/deploy/environments) should be clearly defined for the organization. The environment that an app is deployed to is important and indicates the quality and reliability of the app and data. 
+
+The OData service that is published when an app is deployed is associated with the environment that the app is deployed to. The service endpoint is therefore a combination of the application environement URL and the relative path of service contract. This provides the link to the exposed datasets. 
+
+When exposing datasets through an OData service for use in other apps, it is important to inform users of the quality and reliability of the datasets that are available from that deployment. The deployment environment of the app (and the published data sources) provides a good indication of the data quality in combination with the **Environment Type**: **Production**, **Non-production**, and **Sandbox** (the Mendix free app environment).  
+
+We recommend that apps sharing data should to be deployed to a reliable *production* environment where the data for the apps is valid, stable and reliably maintained. When apps are being developed, ensure that there is a representative set of data available in the test or development environments so that the services can be properly tested in the consuming apps. For example, in the case of an app for Human Resources, the developer should have representative test data with the different access levels to ensure that in consuming apps the correct data is available to users of differing access levels.
+
+## Deployment
+
+
+
 ## Published OData Service
 
 At the service endpoint are the OData service metadata contract files that define the service. Available data sources are registered in the Data Hub Catalog by exposing  datasets in the [published OData service](/refguide/published-odata-services). These metadata contracts define the exposed attributes and associations and the links for connecting to the data they define. 
@@ -175,6 +264,44 @@ The contract exposed at a specific endpoint may be changed over time by the serv
 If significant changes are made in the service which would break any consuming apps, then good practice dictates that the service is published with a major update in the version number and also deployed to a different endpoint. In this case the service will be listed twice for the two different endpoints. For more information see [Semantic numbering](/refguide/consumed-odata-service#semantic) in *Consumed OData Service*.
 {{% /alert %}}
 
+Services that are updated should be clearly documented and version numbers maintained and registered.
+
+It is a good practice to adopt a strict convention for versioning. For example, any revisions or changes made to a service that is deployed to the same location can be indicated using a semantic numbering convention and communicated to all apps consuming the service. This means that major version numbers are assigned for significant changes to the service (for example, removing entities or attributes, or requiring input parameters that would be incompatible for the consuming apps and  result in a break or failure). You can assign minor version numbers for revisions that will "not break" consuming apps (for example, when adding new fields to the service or adding new operations), for which the clients will continue to work.
+
+It is also good practice to expose major revisions to a data source to a new service at a different endpoint. If the publisher wants to drop support for the old service, it can be deprecated, with a grace period for consumers to transfer to the superseded service and eventually remove it when there are no more connections to the old service. The consequences of signficant changes to a service deployed to the same endpoint as the previous version may cause apps consuming from the endpoint to break.
+
+Notify the **Business Owner** and **Technical Owners** of apps that consume datasets when there is a change to a service or entity.
+
+### Semantic Numbering for Service Versions {#semantic}
+
+It is important that the publishers of the services adopt a strict revision process for any changes they make to their published OData services that are consumed by other users. 
+
+We recommend that a strict versioning system, for example semantic numbering, is used when issuing updates to services. The service version should clearly indicate the level and severity of the changes that have been made when a service is updated and deployed according to the following guidelines.
+
+#### 4.2.1 Minor Service Updates
+
+*Minor* service updates are, for example,  additional fields added to the service or new operations included which would not break any apps that consume the previous versions. 
+
+If semantic numbering is used then a minor/non-breaking change to a service can be indicated by an increase in the decimal part of the version number. For example, 1.0.11, 1.0.12, 1.1, 1.2. 
+
+Minor service updates can be deployed to the same service endpoints, thereby ensuring that all consuming apps consume the latest version of the service. 
+
+#### 4.2.2 Major Service Updates
+
+*Major* service updates are for example, when entities or attributes are removed, or input parameters are required, which would be incompatible for the consuming apps and result in the consuming app "breaking". 
+
+When a major change has been made to a published service we recommend that the service is deployed to a *different endpoint* with the new service version number clearly indicating that there has been a major change—with semantic numbering this would be an incremental increase  of a whole number. 
+
+In this case the new service will be registered in the Data Hub Catalog as a different service, and show up in the catalog as a separate asset. In the following example, there are 4 registered occurrences of the **OrderManagementService**: 
+
+{{% image_container width="250" %}}![4 endpoints](/Users/Ila.Gordhan/Desktop/Github Mendix User Documentation/content/refguide/attachments/consumed-odata-service/consume-major-service-update-version.png){{% /image_container %}}
+
+There is a major service update indicated by the change in the version number from **1.0.0** to **2.0.0**. Further, both versions have also been deployed to the **Acceptance** which also results in separately registered assets in the Data Hub Catalog.
+
+{{% alert type="info" %}} 
+Entities of non-Mendix OData services are identified with a key of one or more fields. If the key fields are changed in an update of the service, this will also be seen as a breaking change. 
+{{% /alert %}}
+
 ## Metadata
 
 Metadata is information that defines and describes the data that is shared. The OData contract files for shared datasets are the metadata contracts of the published service.  In the Data Hub Catalog, the metadata is shown in the asset details pages and in the Metadata Panels. Search in the Catalog is performed on the metadata of the assets.
@@ -183,11 +310,70 @@ Metadata is information that defines and describes the data that is shared. The 
 
 When a data source is registered, by default, it is made available to other users with the **Discoverable** setting active in the Data Hub Catalog. When this is set, all users can find it and the view details and consume it. Owners of a registered service and curators can set a data source as non-discoverable, which means it is not visible to users unless they are the owner or a curator.
 
+###  Discoverable
+
+By default, when an asset is registered in the Data Hub catalog, it is set to **Discoverable**, which means that all users can find the asset and see details of it. 
+
+When the **Discoverable** setting is turned off, it will only be visible to the owners of the service and curators and the Data Hub Admin. All other users of Data Hub (also through the Data Hub integrations in Studio Pro and Studio) will not be able to see an asset whose discvorabilty is turned off.
+
+{{% alert type="info" %}}Services that are set to **not Discoverable** in the Catalog will not be included in the search results for *any* user including owners of the service. To consume entities from services owners must ensure that [Discoverability](/data-hub/data-hub-catalog/curate#discoverability) is turned on for them.{{% /alert %}}
+
 ###  Tags 
 
-Tags help you to group services and datasets and categorize them (for example, by department, process, or use). You can use tags to refine the search and filter search results in the Data Hub Catalog by doing the following:
+Tags help you to group services and datasets and categorize them (for example, by department, process, or use). You can use tags to refine the search and filter search results in the Data Hub Catalog.
 
-* Add tags to the service as a curate function in the Data Hub Catalog after a service is registered by service owners and [Data Hub Curators](/data-hub/#curator)
-* Add different tags to the different versions of the same service, as they will be two separately registered assets in the catalog (this is also a way to make different version identifiable)
-* Add tags to the datasets exposed in the service
-* Add tags in the [manual registration of OData v4 services](
+###  Validated {#validated}
+
+The **Validated** value can be assigned to a data source by owners and curators to indicate, for example that it has been qualified and is a reliable data source. It can turned on and off by clicking the **Validated** toggle. A validated data source is indicated by the validation shield on the data source details screen and also in the search results pane. 
+
+## OData Security for Shared Datasets
+
+For Mendix apps that publish entities and those that consume the shared entities in their apps as [external entities](/refguide/external-entities), the following details apply:
+
+* The security for the OData-based service is defined in the publishing app – at the project, module, and entity level
+
+* The security that is defined at the module level will apply to the OData services that are published from the module and enforced when the entities from the service are used in a consuming app when end-users try to access the data
+
+  {{% alert type="info" %}}The security for an OData service can only be set if the [project security](/refguide/project-security) is enabled.
+  {{% /alert %}}
+
+* Classification of the data associated with the entities is defined in the service metadata and shown in the [Service Metadata](search#metadata) panel of the **Search Details** screen. This is further discussed below.
+
+* Through the identification protocols used for establishing the user identity, the security rules for the user in the publishing app are applied
+
+  * On the Mendix Platform, this is [Mendix SSO](/developerportal/deploy/mendix-sso),  but it can also be the organization's identification protocol
+
+* In the publishing app in Studio Pro, access can be defined at the entity level as follows:
+
+  * None
+  * Basic authentication on the user name and password
+  * Customized where the publisher builds their own microflow which gets the header from the request to determine the user and what the user wants to do
+
+For further details, see the [Entity Access](/refguide/module-security#entity-access) section of *Module Security*.
+
+## Data Classification of Registered OData Services
+
+OData services registered in the Data Hub Catalog have the following classifications that apply to the data associated with the exposed datasets:
+
+* **Public**  – data is available to all internal and external users
+* **Internal**  – data is restricted to the members of the organization
+
+The classification of the asset indicates the runtime security on the data and defines what users are allowed to see and use when running their application.
+
+The classification for a registered OData service is shown in the **Service Metadata** panel in the Data Hub Catalog. This classification applies to access to the data associated with the service or dataset by end-users of the app that consumes the entity. 
+
+# Search in the Data Hub
+
+[Search] – Enter a search string of alphanumeric characters to search in the Data Hub Catalog. The search will be performed on services, entities, attributes, associations, and descriptions in the Catalog. 
+
+[Filter] – By default, the search will be performed on assets in the **Production** environment. Click the **Filter** icon to include all other environments such as test, acceptance and also the Mendix free app environment **Sandbox** in the search.
+
+You can perform a wildcard search by entering `*` in the search area.
+
+{{% alert type="info" %}}
+The search strings must be a minimum of 3 alphanumeric characters. Punctuation cannot be used as part of the search term except for the wildcard character `*` to perform an "empty" search in the Data Hub Catalog. You cannot use the wildcard in combination with other characters. For further details, see [How to Search for Registered Assets](/data-hub/data-hub-catalog/search).
+{{% /alert %}}
+
+# Landscape
+
+The Data Hub Landscape presents a graphical view of the registered OData services in your Data Hub. It provides a landscape visualization of items registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/) and their relationships with apps that consume the datasets that they connect to. In the Data Hub Landscape, the nodes are the runtime instances of applications (or, more specifically, the deployments of apps in specific environments) and the published OData services from the apps. All public services that are issued with Data Hub are also shown in the Landscape.

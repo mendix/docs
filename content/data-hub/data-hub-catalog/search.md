@@ -69,7 +69,7 @@ The description that is included as part of the published service metadata. This
 In Studio Pro, when publishing an OData service, it is possible to specify a summary of the service and a description. Only the description is included in the OData service contract document and displayed in the Data Hub Catalog.
 {{% /alert %}}
 
-### 2.8 Contacts for Registered Apps and Services 
+### 2.8 Owners for Registered Apps and Services 
 In the Data Hub Catalog, the search details for a service include a **Technical Owner** (for technical inquiries) and the **Business Owner** who is responsible for the data sets. Owners who are registered Mendix platform users can curate their assets.
 
 ## 3 Searching in the Data Hub Catalog {#data-hub-home}

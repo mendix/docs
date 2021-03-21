@@ -101,6 +101,10 @@ Curation activities are carried out by the Data Hub Administrator and assigned D
 
 Business Owners and Technical Owners.
 
+n the Data Hub Catalog, the search details for a service include a **Technical Owner** (for technical inquiries) and the **Business Owner** who is responsible for the data sets. Owners who are registered Mendix platform users can curate their assets.
+
+## 
+
 # Data Sources and Data Sets
 
 These data sets are the sets of data that are shared.  
@@ -117,19 +121,19 @@ Registered assets in the Data Hub Catalog can be accessed in Mendix Studio Pro t
 
 To make data from your apps available to others, you can publish the datasets in an **OData service** and register it in the Data Hub. In a Mendix app, the datasets are the **Entity sets** for a defined **Entity**. Using this REST-based protocol, metadata contracts defining the structure and documentation of the datasets that are included are registered. Further details such as the location of the data associated with a registered dataset are also captured: for Mendix app deploying to the Mendix cloud this information is taken during the deployment process. This information is also obtained during the process of [manually registering data sources from an enterprise application](/data-hub/data-hub-catalog/register#registration-form). 
 
-# Publish 
-
 ## Information Available in the Data Hub Catalog
 
-In the Data Hub Catalog, all the information for registered assets is displayed in the [Catalog search details](search#search-details) screen. This information comes from the metadata in the OData service contract and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners and [Data Hub curators](/data-hub/#curator) and the [Data Hub Admin](/data-hub/#admin). 
+## Assets
 
-The information that is registered for data sources and exposed datasets are as follows: 
+Assets is the collective term for all items that are registered in the Catalog - apps, data sources, data sets, registered attributes and their associations. 
 
-##  Endpoints
+##  Endpoints and URLS
 
 All registered assets (apps, data sources, datasets) are defined by their endpoints (URLs) in the Catalog. 
 
 The endpoint of the service is accessed by the consuming app. 
+
+The service URLs provide the locations of the service contract. In turn, these define the endpoints for exposed datasets (or entity sets) and attributes and thereby access to the associated datasets by the consuming apps. You obtain data source and dataset URI's from the search details for integration of the resource in other BI applications. 
 
 ## Environment
 
@@ -141,11 +145,27 @@ The location of the OData service must also include the environment where the pu
 You can filter the search results by environment type in the Data Hub Catalog (**Production**, **Non-production**, and the Mendix Free App environment or **Sandbox**). In the [Data Hub pane](/refguide/data-hub-pane) of Studio Pro, you can expand search results to include non-production environments. 
 {{% /alert %}}
 
+The Data Hub Catalog is a register of apps that are deployed to a particular environment and the services (or data sources as they are known in Data Hub) published from the apps deployed to the environment. This means that the Catalog registers the version of a service running in a specific environment. The environment also indicates the quality of the dataset that is available. Shared datasets that are available from a *production environment* will have production-level data, while those in non-production environments (*acceptance*, *development*) could be populated with data that may not be reliable for building stable apps and be useful for doing development work.
+
+The search results will show these data source endpoints (which is the combination of the OData service version deployed on a specific environment). Therefore, if a version of a service is deployed on both a test and acceptance environment, a search on the service name in the Data Hub Catalog will have two hits. 
+
+The environment is therefore a major component of the definition and forms part of the URL for the endpoint being consumed. This, in combination with the OData version number, provides the link to the correct data for the datasets that are exposed.
+
+{{% alert type="info" %}}
+By default, search results in the Data Hub Catalog are filtered to show only hits in the Production environment. You can extend the search to **Non-production** or **Mendix Free App (Sandbox)** environments by checking them in the search pane **Add Filter** list. For more details, see [Filters](#filter).
+{{% /alert %}}
+
 ## Published OData Service
 
 At the service endpoint are the OData service metadata contract files that define the service. Available data sources are registered in the Data Hub Catalog by exposing  datasets in the [published OData service](/refguide/published-odata-services). These metadata contracts define the exposed attributes and associations and the links for connecting to the data they define. 
 
+The contract of the published OData service (the *$metadata* document) contains the details of what is exposed in the service. This includes the metadata of the exposed datasets (or entity sets in Mendix Studio Pro) and their exposed attributes, associations, types, and accessibility. This information about the registered OData service is shown in the search details. 
+
+OData Protocol
+
 ## Service Versions
+
+Every published OData service or data source as they are known as in the Data Hub Catalog has a version number, and apps that consume a datasource will consume from a specific version. Updates and changes to a service will be indicated by a change in the version number if good practice is followed by the data source originators. This means that there may be several versions of a registered data source available in the catalog and they will all be listed as separate items in the search results for the same-named data source.
 
 The version number of the OData service contracts is also included to uniquely identify the asset and must be specificed in the registration and more importantly when consuming the resource. 
 
@@ -154,3 +174,20 @@ The contract exposed at a specific endpoint may be changed over time by the serv
 {{% alert type="info" %}}
 If significant changes are made in the service which would break any consuming apps, then good practice dictates that the service is published with a major update in the version number and also deployed to a different endpoint. In this case the service will be listed twice for the two different endpoints. For more information see [Semantic numbering](/refguide/consumed-odata-service#semantic) in *Consumed OData Service*.
 {{% /alert %}}
+
+## Metadata
+
+Metadata is information that defines and describes the data that is shared. The OData contract files for shared datasets are the metadata contracts of the published service.  In the Data Hub Catalog, the metadata is shown in the asset details pages and in the Metadata Panels. Search in the Catalog is performed on the metadata of the assets.
+
+### Discoverability 
+
+When a data source is registered, by default, it is made available to other users with the **Discoverable** setting active in the Data Hub Catalog. When this is set, all users can find it and the view details and consume it. Owners of a registered service and curators can set a data source as non-discoverable, which means it is not visible to users unless they are the owner or a curator.
+
+###  Tags 
+
+Tags help you to group services and datasets and categorize them (for example, by department, process, or use). You can use tags to refine the search and filter search results in the Data Hub Catalog by doing the following:
+
+* Add tags to the service as a curate function in the Data Hub Catalog after a service is registered by service owners and [Data Hub Curators](/data-hub/#curator)
+* Add different tags to the different versions of the same service, as they will be two separately registered assets in the catalog (this is also a way to make different version identifiable)
+* Add tags to the datasets exposed in the service
+* Add tags in the [manual registration of OData v4 services](

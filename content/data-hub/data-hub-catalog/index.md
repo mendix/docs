@@ -90,7 +90,7 @@ For details on security and accessibility in the Data Hub Catalog and for regist
 
 In the Data Hub Catalog, all the information for registered assets is displayed in the [Catalog search details](search#search-details) screen. This information comes from the metadata in the OData service contract and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners and [Data Hub curators](/data-hub/#curator) and the [Data Hub Admin](/data-hub/#admin). 
 
-The information that is registered for data sources and exposed datasets are as follows: 
+The following information is registered for data sources and exposed datasets: 
 
 * **Endpoints** – All registered assets are defined as endpoints (URLs) in the Catalog. The endpoint of the service is accessed by the consuming app. 
 

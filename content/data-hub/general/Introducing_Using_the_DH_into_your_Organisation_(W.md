@@ -581,8 +581,21 @@ Integrating all systems - what do I need?
 
 # 6 **Data Steward - Data Policy**
 
-- Establish Organization’s Data-sharing policy
-    - Company
+Data curation can also be described as the process of adding value to data. A data-driven organization will naturally want to maximize the  value of that data. Therefore, establishing people, processes and tools  for data curation should be a part of any technical manager’s plans.  This may mean establishing strict rules about which data can and should  be used, as well as putting [business rules](https://vimeo.com/197560663/b61ef781f7) or other metrics in place that apply to all data sets no matter where they physically reside.
+
+[Data curation](http://go.alation.com/datacuration.wp-a)  was much more manageable when enterprises only had a few data sources to extract data from. Today though, with the proliferation of big data and need to integrate an organizations business applications, enterprises have many more disparate data sources to extract data from,  making it much more difficult to maintain a consistent method for curating data. Further complicating the problem is the fact that much of today’s data  is created in an ad hoc way that can’t be anticipated by the people  intended to use data for analysis.
+
+The role of a Data Steward is to define the data sharing policy of the organisation. Data curators carry out the policy in practice for the data sources that they manage.
+
+In practice, data curation is about maintaining and  managing the metadata.  The process of data curation revolves around ingesting  metadata.  Data curators not only create, manage, and  maintain data, but may also be involved in determining best practices for working with that data. 
+
+Defining which data sources and data sets are the most useful is the job of the data curator who keeps an overview of the data sharing landscape of the organization. While some rules of  thumb and best practices apply, the data curator must make an educated  decision about which data assets are appropriate to use.
+
+## Data Hub Catalog
+
+In a modern data catalog, all of this [metadata](https://www.alation.com/metadata/) is collected along with information about the assets themselves and  organized within a catalog interface that can be more readily searched and  browsed than locating the sources across the different applications. Establish Organization’s Data-sharing policy
+
+- - Company
     - Departmental
     - External
 - Data Access and Metadata Access

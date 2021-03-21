@@ -8,7 +8,7 @@ tags: ["data hub", "Data Hub Admin", "curator", "custom owner", "administration"
 
 ## 1 Introduction
 
-Every organization has one Mendix Data Hub Administrator. The Data Hub Admin can assign any number of curators who can manage the day to day administration and perform curate functions on the the registered assets in the Data Hub Catalog. 
+For every organization there is one Mendix Data Hub Administrator. The Data Hub Admin can assign any number of curators who can manage the day to day administration and perform curate functions on the the registered assets in the Data Hub Catalog. 
 
 In the **Administration** tab of **Data Hub**, the operations that can be performed by these two types of users are as follows:  
 

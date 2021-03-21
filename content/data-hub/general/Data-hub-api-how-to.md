@@ -1,5 +1,5 @@
 ---
-title: "Using the Data Hub API"
+title: "Using the Data Hub API - DRAFT"
 category: "General Info"
 menu_order: 50
 description: "How to use the Dat Hub API a guide with examples."
@@ -21,9 +21,10 @@ You can see the process of search and registration to Data Hub in the [Share Dat
 
 **This how-to will teach you how to do use the API to do the following:**
 
-- Search the catalog for a string
-- Register the service in the Catalog
-- Register consumed datasets by an App
+- Search the catalog for a string – [Section 5](#api-search)
+- Register the service in the Catalog –  [Section 6](#api-search)
+- Register consumed datasets by an App – [Section 7](#consumed-ep)
+- Search for data sets and data sources to consume by your business application for new app development [Section 9](#consume-data)
 
 # 2 Prerequisites
 
@@ -38,26 +39,25 @@ Before starting this how-to, make sure you have completed the following:
 
 - The base URL for all calls to the API is: https://hub.mendix.com/rest/datahubservice/v2/
 
-- All requests that are made to the Data Hub API must include the access to the organization’s Data Hub. This is accomplished by including the PAT ( [Generating your Personal Access Token](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat)) in the header of the request: `Authorization`:  `MxToken <your_PAT_Token>.` For more details see: [+Using the Data Hub API: 2-Making-the-API-Calls-and-Aut](https://paper.dropbox.com/doc/Using-the-Data-Hub-API-2-Making-the-API-Calls-and-Aut-bPBYadNIdEkr2rwXEjwVK#:uid=774113068974419150188919&amp;h2=2-Making-the-API-Calls-and-Aut) 
+- All requests that are made to the Data Hub API must include the access to the organization’s Data Hub. This is accomplished by including the PAT ( [Generating your Personal Access Token](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat)) in the header of the request: `Authorization`:  `MxToken <your_PAT_Token>.` For more details see: [API calls and authentication](#authentication).
 
 - For the full specifications of the parameters and schemas and the response status codes refer to the  [Open API spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/). 
 
 - The requests that can be made through the Data Hub API:
 
   - Search for registered assets (data sources, datasets, attributes and associations) in the Catalog using GET
-
-  - Registering datasets:
+- Registering datasets:
     Registering datasets involves registering the data source (OData services) that the dataset is exposed in. The following requests in the given order:
-
-    1. Application that the dataset originates from: POST application
+  
+  1. Application that the dataset originates from: POST application
     2. Environment that the dataset is deployed to: POST environment
     3. Register the published services (data source) of the application: PUT
     4. Register the all the published services (data source) of the application
+  - Register consumed services (data source)
+- Find specific data sources and retrieve contract to consume
 
-	- Register consumed services (data source)
 
-
-# 4 Making the API Calls and Authentication
+# 4 Making the API Calls and Authentication {#authentication}
 
 This how-to guides users in using the Data Hub API, for full details of all the objects and schemas that define the collections and arrays that are required refer to the [Data Hub Open API spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com).
 
@@ -131,7 +131,7 @@ The endpoints (which are the data sources (services)) that are returned in the `
 ### 5.3.2  `Data` Objects
 The objects that are returned in the response  for  `Data` are shown in the representation below. (The blue indicates that the constituent objects are a collection, the red an array, and the solid outline indicates if the object is always returned.) For full details of objects that define the arrays and collections, refer to the  [Open API spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/). 
 
-- [ ]  the table is not really necessary here as users can see the full details in the spec, however it does show at a glance what default values are etc.  The mindmap below shows the essence of the calls - can it be made clearer by adding the default values??? should it go down to a deeper level?
+- [ ]  the table is not really necessary here as users can see the full details in the spec, however it does show at a glance what default values are etc.  The mind-map below shows the essence of the calls - can it be made clearer by adding the default values??? should it go down to a deeper level?
 - [ ] Which is the more useful for users?
 
 
@@ -181,7 +181,7 @@ curl --location --request GET 'https://hub.mendix.com/rest/datahubservice/v2/dat
 
 
 
-### 5.4.2 The Response
+### 5.4.2 Successful 200 Response
 The 200 OK response returned that the `TotalResults` are 11 assets were found that statisfy the search string and parameters.
 
 The response payload is shown below:
@@ -189,219 +189,112 @@ The response payload is shown below:
 **Note:**  For conciseness in this how-to, of the 11 objects that are returned for the  `Data`  object only the second data source, **SAMPLE_EmployeeDirectory**, is shown fully in the response payload below, the other data sources have been represented as { … }.
 
 {
-
 ​    "TotalResults": 11,
-
 ​    "Links": [
-
 ​        {
-
 ​            "Href": "https://hub.mendix.com/rest/datahubservice/v2/data?query=sample&productionEndpointsOnly=true",
-
 ​            "Rel": "First"
-
 ​        },
-
 ​        {
-
 ​            "Href": "https://hub.mendix.com/rest/datahubservice/v2/data?query=sample&productionEndpointsOnly=true",
-
 ​            "Rel": "Current"
-
 ​        },
-
 ​        {
-
 ​            "Href": "https://hub.mendix.com/rest/datahubservice/v2/data?query=sample&afterId=c6afa18d-4b3d-49b2-a945-5a93b9a0868e&productionEndpointsOnly=true",
-
 ​            "Rel": "Next"
-
 ​        }
-
 ​    ],
-
 ​    "Data": [
-
 ​        {...   },
-
 ​        {
-
 ​            "Connections": 43,
-
 ​            "Validated": **true**,
-
 ​            "Description": "Service provided by Mendix for testing and sandbox scenarios. Contains mockup HR data to play around with.",
-
 ​            "SecurityClassification": "Internal",
-
 ​            "TotalItems": 3,
-
 ​            "Name": "SAMPLE_EmployeeDirectory",
-
 ​            "Version": "1.1.0",
-
 ​            "ContractType": "OData_3_0",
-
 ​            "Environment": {
-
 ​                "Type": "Production",
-
 ​                "UUID": "c2fee2c5-00da-4b8b-b3b3-71433b02f064",
-
 ​                "Name": "Production",
-
 ​                "Location": "https://hrsampleapp.mendixcloud.com"
-
 ​            },
-
 ​            "Links": [
-
 ​                {
-
 ​                    "Rel": "Self",
-
 ​                    "Href": "https://hub.mendix.com/rest/datahubservice/v2/applications/30aaf7ca-415f-306d-bd6e-458e6f821f06/environments/c2fee2c5-00da-4b8b-b3b3-71433b02f064/services/SAMPLE_EmployeeDirectory/1.1.0"
-
 ​                },
-
 ​                {
-
 ​                    "Rel": "Catalog",
-
 ​                    "Href": "https://hub.mendix.com/link/endpoint?EndpointUUID=d4369ff2-cb61-4db0-b77c-b0ba35b052e1"
-
 ​                }
-
 ​            ],
-
 ​            "Items": [],
-
 ​            "LastUpdated": "2021-03-09T13:47:04.482Z",
-
 ​            "UUID": "d4369ff2-cb61-4db0-b77c-b0ba35b052e1",
-
 ​            "SecurityScheme": {
-
 ​                "Types": [
-
 ​                    {
-
 ​                        "Name": "Anonymous"
-
 ​                    }
-
 ​                ],
-
 ​                "MxAllowedRoles": [
-
 ​                    {
-
 ​                        "ID": "8dd52bfa-6d7e-453b-b506-303c0a3d9567",
-
 ​                        "Name": "Administrator"
-
 ​                    },
-
 ​                    {
-
 ​                        "ID": "53f5d6fa-6da9-4a71-b011-454ec052cce8",
-
 ​                        "Name": "User"
-
 ​                    }
-
 ​                ]
-
 ​            },
-
 ​            "Application": {
-
 ​                "Type": "Mendix",
-
 ​                "TechnicalOwner": {
-
 ​                    "Email": "nam.nguyen@mendix.com",
-
 ​                    "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=81b8f360-0e75-4195-b1b7-30aed6018eae",
-
 ​                    "Name": "Nam Nguyen"
-
 ​                },
-
 ​                "Icon": "https://hub.mendix.com/rest/documents/v1/images/944a6477-e83c-4236-a6b8-3374c6551657",
-
 ​                "UUID": "30aaf7ca-415f-306d-bd6e-458e6f821f06",
-
 ​                "RepositoryLocation": "https://sprintr.home.mendix.com/link/project/98c8f370-7bbe-4df5-8289-031c10383ece",
-
 ​                "BusinessOwner": {
-
 ​                    "Email": "georg.maureder@mendix.com",
-
 ​                    "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=283b4e98-cee5-4181-88e9-3c87624944bb",
-
 ​                    "Name": "Georg Maureder"
-
 ​                },
-
 ​                "Name": "HR Sample App"
-
 ​            },
-
 ​            "Tags": [
-
 ​                {
-
 ​                    "Name": "sample"
-
 ​                },
-
 ​                {
-
 ​                    "Name": "hr"
-
 ​                },
-
 ​                {
-
 ​                    "Name": "employee"
-
 ​                },
-
 ​                {
-
 ​                    "Name": "mockup"
-
 ​                }
-
 ​            ]
-
 ​        },
-
 ​        { ... },
-
 ​        { ... },
-
 ​        { ... },
-
 ​        { ... },
-
 ​        { ... },
-
 ​        { ... },
-
 ​        { ... },
-
 ​        { ... },
-
 ​        { … }
-
 ​    ],
-
 ​    "Limit": 20,
-
 ​    "LastId": "c6afa18d-4b3d-49b2-a945-5a93b9a0868e"
-
 }
 
 ### 5.4.3 Example Search Results Viewed in the Catalog
@@ -410,7 +303,7 @@ The same search in the Data Hub returns the following showing the total list in 
 
 ![search results](attachments/data-hub-api-how-to/dh-search-sample.png)
 
-# 6 Registering a Sample OData v3 Contract 
+# 6 Registering a Sample OData v3 Contract {#reg-contract}
 
 This section describes the steps for registering a data source - this can be an OData v4 or OData v3 contract.
 To register a data source to Data Hub you must register the following in the given sequence:
@@ -422,10 +315,11 @@ To register a data source to Data Hub you must register the following in the giv
 
 [Section 7](#consumed-ep) decribes how to register applications that consume a registered data source.
 
-An example Odata v3 service called  **DataHub_Sample_1.0.0_OData3**  is provided in [Section 8](#consumed-ep) which you can use for thi how-to.  The service is defined by the two files:
+An example Odata v3 service called  **DataHub_Sample_1.0.0_OData3**  is provided in [Section 9](#consumed-ep) which you can use for this how-to.  The service is defined by the two files:
 
 - metadata.xml
 - serviceFeed.xml
+
 Both files are necessary to provide the full service defintion and must be provided when registering the service.
 
 **Note:** OData service contract files must be included in the request body in escaped JSON format. There are several online converters available for converting your *.xml* files into this format such as one available from [Freeform.com](https://www.freeformatter.com/json-escape.html#ad-output). Just paste the contents of your files and convert them to the escaped format.  
@@ -450,7 +344,7 @@ There are no parameters to this request only a payload that specifies the detail
 | Type               | string   |                       | Other            | Type of the application. Possible values are "Mendix", "Teamcenter", "Mindsphere", "Microsoft", "SAP" and "Other" (Default)<br>Enum:<br>[ Mendix, Teamcenter, Mindsphere, Microsoft, SAP, Other ] |
 | BusinessOwner      |          |                       |                  | Business owner of the application comprising objects defining name and email. |
 | TechnicalOwner     |          |                       |                  | Technical owner of the application comprising objects that define the name and email. |
-|                    |          |                       |                  |                                                              |
+
 
 
 ### 6.1.3 POST Response
@@ -459,10 +353,10 @@ The successful 201 response will indicate that the application has been register
 ### 6.1.4 Example: Registering the Howto5-App {#ex-reg-app}
 In this example, you are going to register an app called **Howto5-App**. The details of the app are included in the JSON format request body given below.
 
-#### 6.1.4.1 Base request URL:
+#### 6.1.4.1 Base request URL
 `POST {{baseURL}}/applications`
 
-#### 6.1.4.2.  JSON Format Request Body:
+#### 6.1.4.2.  JSON Format Request Body
 {
   "Name": "Howto5-App",
   "Description": "This application is used to show how the DH API is used",
@@ -480,7 +374,7 @@ In this example, you are going to register an app called **Howto5-App**. The det
   }
 }
 
-#### 6.1.4.3 The Example Curl Command:
+#### 6.1.4.3 The Example Curl Command
 The curl command specifies the format of the body content and the body data. 
 
 curl --location --request POST '{{BaseURL}}' \
@@ -502,7 +396,7 @@ curl --location --request POST '{{BaseURL}}' \
   }
 }'
 
-#### 6.1.4.4 Example 201 Response Application Created {#app-registered}
+#### 6.1.4.4 Successful 201 Response Application Created {#app-registered}
 The 201 response that is returned to indicate that the application is registered is given below: 
 
 **Note**: that the response returned the  `"UUID": "2ab1410e-06d4-4e07-a82d-cc04b21d2622"`, which is the Catalog identifier for the application that must be used to identify it in subsequent steps of the registration of the data source.
@@ -573,9 +467,7 @@ For the app registered in 6.1.4.4 the following steps describe how to register t
 ​    ]
 }'
 
-
-
-#### 6.2.4.4 Example Response 201 Created {#env-registerd}
+#### 6.2.4.4 Successful 201 Created Successful 200 {#env-registerd}
 The 201 Created response returns the Catalog-generated identifier   `"UUID": "57535822-547e-41c4-849c-77ddc9714373"` for the for the registered environment  `Production`.
 
 {
@@ -619,10 +511,6 @@ The objects that can be specified for the request body is shown in the following
 
 ![published endpoints mindmap](attachments/data-hub-api-how-to/putpublishedendpointsrequest.png)
 
-
-
-
-
 **Notes:** 
 
 * For Odata contracts that are made up of several files, all the files must be included for each service.
@@ -631,12 +519,13 @@ The objects that can be specified for the request body is shown in the following
 * When there are updates to a services, care must be taken when deciding to register the new contract at the same endpoint which means that the previous contract will be replaced or do a different endpoint. It is recommended that you use semantic numbering to indicate the severity of changes in the contract and that you follow a strict protocol when deciding on endpoints to ensure that apps consuming previous versions do not experience disruptions.
 * If you want to "remove" services for an app, we recommend that you create a new version of the app, deployed to a different environment without the service you do not want included. In this way, you can maintain a historical version of the the assets, and ensure that consumers are notified of the new version, without affecting those that are consuming the previous version. 
 
-### 6.3.3  Success 200 PUT Response
+### 6.3.3  Successful 200 PUT Response
 A successful 200 response returns the array of endpoints that are registered for the given environment and application.
 For each endpoint a unique  `UUID` for is returned for each service.  
+
 For each endpoint, the object  `Links`  provides the URL of the details page in the Catalog, and also the URI of the service.
 
-The responsealso includes the number of environment/applications –  `Connections` - that consume this endpoint.
+The response also includes the number of applications/environments –  `Connections` – that consume this endpoint.
 
 
 ### 6.3.4 Example: Registering the 5how-toODatav3-sample-service
@@ -649,9 +538,7 @@ For the `Contracts` object you can use the example OData v3 contract that is mad
     - “Type”: “ServiceFeed” 
     - “Type”: “Metadata”
 
-
-
-#### 6.3.4.1 Example Base request URL
+#### 6.3.4.1 Base Request URL
 
 `PUT` `{{baseURL}}/applications/{appUUID}/environments/{envUUID}/published-endpoints`
 
@@ -711,7 +598,7 @@ Each of the files that are used in this example have been provided in escaped JS
     ]
 }
 
-#### 6.3.4.3 Sample Response 200 OK
+#### 6.3.4.3 Successful 200 OK Response
 
 - [ ]  I  managed to register the application several times, therefore it had a different UUID, for the app and to the same name environment, but to a different location. Since location of env. is not shown, there were 2 identical entries in the catalog which had the same env. service. This is a problem - ref team. 
 
@@ -808,7 +695,7 @@ In all cases, you are advised to notify all consumers of changes and also new ve
 
 # 7 Registering Consumed Endpoints by an App using PUT {#consumed-ep}
 
-For the app  registered in [6.1.4](#ex-reg-app),  you can register any datasets that it consumes by providing the endpoint details and the entities (datasets) that it consumes. This is registered in the Catalog and added to the number of **Connections** for the consumed service and also shown in the Data Hub Landscape which will show the network of publishing and consuming app and associated data sources.
+For the app registered in [Section 6](#ex-reg-app),  you can register any datasets that it consumes by providing the endpoint details and the entities (datasets) that it consumes. This is registered in the Catalog and added to the number of **Connections** for the consumed service and also shown in the Data Hub Landscape which will show the network of publishing and consuming app and associated data sources.
 
 **Note:** The PUT call for registering consumed entities will *update* the currently registered datasets for an app/environment. This means that when you want to *add* consumed endpoints to an app (indicating the services the app is consuming), all previously registered consumed endpoints must be included in the request payload of the new request. If the previously registered consumed endpoints are not included, the result will be that they will be *removed*.
 
@@ -838,13 +725,13 @@ The following is a representation of the request body. (Blue indicates that the 
 
 The 200 OK response returns an array of the consumed endpoints. It will provide the full details of each registered consumed endpoint,  the catalog UUID, and displays the and the total number of connections to it as registered in the Catalog. 
 
-## 7.4 Example: Registering Consumed Endpoints to the Howto5-App
+## 7.4 Example: Registering Consumed Endpoints by the Howto5-App
 
 This example shows how to register that the **Howto5-App** consumes 2 datasets: **Employees** and **Offices** from the service **SAMPLE_EmployeeDirectory**. 
 
 **Note**: For this example, the `Namespace` object for the `consumedItems` is called `DefaultNamespace` which is the default namespace for Mendix services.
 
-### 7.4.1 Example Base Request URL
+### 7.4.1 Base Request URL
 
 `{{baseUrl}}/applications/{AppUUID}/environments/{EnvironmentUUID}/consumed-endpoints`
 
@@ -872,205 +759,107 @@ To register the two consumed entities **Employees** and **Offices** from the HR 
     ]
 }
 
-### 7.4.3 Example Response 200 Created
+### 7.4.3 Successful 200 Created Response
 The response that is returned shows the full details of the consumed service as part of the `Endpoints` object. The total number of connections to the service is 43: 
 
 {
-
 ​    "Endpoints": [
-
 ​        {
-
 ​            "Path": "odata/PubOdataEmployeeDirectory/v1",
-
 ​            "SecurityClassification": "Internal",
-
 ​            "UUID": "d4369ff2-cb61-4db0-b77c-b0ba35b052e1",
-
 ​            "Links": [
-
 ​                {
-
 ​                    "Href": "https://hub.mendix.com/rest/datahubservice/v2/applications/30aaf7ca-415f-306d-bd6e-458e6f821f06/environments/c2fee2c5-00da-4b8b-b3b3-71433b02f064/services/SAMPLE_EmployeeDirectory/1.1.0",
-
 ​                    "Rel": "Self"
-
 ​                },
-
 ​                {
-
 ​                    "Href": "https://hub.mendix.com/link/endpoint?EndpointUUID=d4369ff2-cb61-4db0-b77c-b0ba35b052e1",
-
 ​                    "Rel": "Catalog"
-
 ​                }
-
 ​            ],
-
 ​            "ConsumedItems": [
-
 ​                {
-
 ​                    "Name": "Employees",
-
 ​                    "Namespace": "DefaultNamespace",
-
 ​                    "Type": "EntitySet"
-
 ​                },
-
 ​                {
-
 ​                    "Name": "Offices",
-
 ​                    "Namespace": "DefaultNamespace",
-
 ​                    "Type": "EntitySet"
-
 ​                }
-
 ​            ],
-
 ​            "Environment": {
-
 ​                "Name": "Production",
-
 ​                "UUID": "c2fee2c5-00da-4b8b-b3b3-71433b02f064",
-
 ​                "Location": "https://hrsampleapp.mendixcloud.com",
-
 ​                "Type": "Production",
-
 ​                "Application": {
-
 ​                    "Name": "HR Sample App",
-
 ​                    "UUID": "30aaf7ca-415f-306d-bd6e-458e6f821f06",
-
 ​                    "RepositoryLocation": "https://sprintr.home.mendix.com/link/project/98c8f370-7bbe-4df5-8289-031c10383ece",
-
 ​                    "Type": "Mendix",
-
 ​                    "Icon": "https://hub.mendix.com/rest/documents/v1/images/944a6477-e83c-4236-a6b8-3374c6551657",
-
 ​                    "TechnicalOwner": {
-
 ​                        "Email": "nam.nguyen@mendix.com",
-
 ​                        "DisplayName": "Nam Nguyen",
-
 ​                        "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=81b8f360-0e75-4195-b1b7-30aed6018eae"
-
 ​                    },
-
 ​                    "BusinessOwner": {
-
 ​                        "Email": "georg.maureder@mendix.com",
-
 ​                        "DisplayName": "Georg Maureder",
-
 ​                        "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=283b4e98-cee5-4181-88e9-3c87624944bb"
-
 ​                    }
-
 ​                }
-
 ​            },
-
 ​            "Connections": 43,
-
 ​            "LastUpdated": "2021-03-09T13:47:04.482Z",
-
 ​            "ServiceVersion": {
-
 ​                "Version": "1.1.0",
-
 ​                "PublishDate": "2020-06-11T15:17:46.129Z",
-
 ​                "UUID": "bff79cf3-4652-44f6-9da2-3d96e1684cfd",
-
 ​                "Service": {
-
 ​                    "Name": "SAMPLE_EmployeeDirectory",
-
 ​                    "ContractType": "OData_3_0",
-
 ​                    "UUID": "64114e44-7b75-47a5-a727-8e4ddb3b2614"
-
 ​                },
-
 ​                "SecurityScheme": {
-
 ​                    "SecurityTypes": [
-
 ​                        {
-
 ​                            "Name": "Anonymous"
-
 ​                        }
-
 ​                    ],
-
 ​                    "MxAllowedRoles": [
-
 ​                        {
-
 ​                            "UUID": "8dd52bfa-6d7e-453b-b506-303c0a3d9567",
-
 ​                            "Name": "Administrator"
-
 ​                        },
-
 ​                        {
-
 ​                            "UUID": "53f5d6fa-6da9-4a71-b011-454ec052cce8",
-
 ​                            "Name": "User"
-
 ​                        }
-
 ​                    ]
-
 ​                },
-
 ​                "Tags": [
-
 ​                    {
-
 ​                        "Name": "sample"
-
 ​                    },
-
 ​                    {
-
 ​                        "Name": "hr"
-
 ​                    },
-
 ​                    {
-
 ​                        "Name": "employee"
-
 ​                    },
-
 ​                    {
-
 ​                        "Name": "mockup"
-
 ​                    }
-
 ​                ]
-
 ​            },
-
 ​            "Validated": **true**,
-
 ​            "Discoverable": **true**
-
 ​        }
-
 ​    ]
-
 }
 
 ### 7.4.4 Registered service in the Catalog and Data Hub Landscape
@@ -1089,7 +878,7 @@ When the**SAMPLE_EmployeeDirectory** is viewed in the Data Hub Landscape, **Howt
 
  
 
-# 8 Consuming data through Data Hub
+# 8 Consuming data through Data Hub {#consume-data}
 
 When you want to consume a dataset that is registered in the Data Hub the sequence of steps are as follows:
 
@@ -1132,13 +921,13 @@ You can perform a search to find a particular service with the dataset that you 
 | Application  |          | Always               | Will return a collection of objects describing the application |
 | Versions     |          |                      |  For the specified endpoint, the details of the version numbers, the environments they are deployed to and links to the each version number |
 
-### 8.1.4 Example
+### 8.1.4 Example: All Available Services for  `SAMPLE_EmployeeDirectory`
 This request will get all the available services for the service `SAMPLE_EmployeeDirectory` with the appID 30aaf7ca-415f-306d-bd6e-458e6f821f06 that are registered in all environements.
 
 #### 8.1.4.1 Base request URL:
 `GET /applications/30aaf7ca-415f-306d-bd6e-458e6f821f06/services/SAMPLE_EmployeeDirectory'`
 
-#### 8.1.4.2 Example response
+#### 8.1.4.2 Successful 200 OK Response
 For the above response there was a single instance of the service found. However, the 1.1.0 version service is deployed to two different environements as defined in the array of `Versions`: the one in the `Production` environment which has 43 connections and a second in the `acceptance` environment which has 0 connections.
 
 {
@@ -1338,9 +1127,9 @@ Inserting the **Production** environment UUID values, the call becomes
 
 `GET applications/30aaf7ca-415f-306d-bd6e-458e6f821f06/environments/c2fee2c5-00da-4b8b-b3b3-71433b02f064/services/SAMPLE_EmployeeDirectory/1.1.0`
 
-#### 8.2.4.2 Example response
+#### 8.2.4.2 Successful 200 Response
 
-The response returns the full details of the service and includes the two files that make up this OData v3 service. They are given  the  `Type: "ServiceFeed"`  and  the `"Type": "Metadata"`  values.
+The 200 OK response returns the full details of the service and includes the two files that make up this OData v3 service. They are given  the  `Type: "ServiceFeed"`  and  the `"Type": "Metadata"`  values.
 
 {
 
@@ -1408,9 +1197,9 @@ The response returns the full details of the service and includes the two files 
 
 
 
-# 9 Sample Contract{#sample-contract}
+# 9 Sample Contract Files {#sample-contract}
 
-The following are the files that make up an example OData v3 contract that you can use for the PUT registration service request in this how-to. The full contract definition is made up of the **service feed** and the **metadata** files. The format provided below is in escaped JSON format contract which you can copy and directly insert in the PUT request body.
+The following files make up an example OData v3 contract that you can use for in this how-to for the PUT registration service request. The full contract definition is made up of the **service feed** and the **metadata** files. The format provided below is in escaped JSON format contract and you can copy them and directly insert them in the PUT request body.
 
 
 ## 9.1 Service Feed {#ex-service}
@@ -1425,5 +1214,3 @@ The following are the files that make up an example OData v3 contract that you c
 - [The Data Hub AP](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis)I 
 
   
-----------
-

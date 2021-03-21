@@ -186,7 +186,7 @@ The 200 OK response returned that the `TotalResults` are 11 assets were found th
 
 The response payload is shown below:
 
-**Note:**  For conciseness in this how-to, of the 11 objects that are returned for the  `Data`  object only the second data source, **SAMPLE_EmployeeDirectory**, is shown fully in the response payload below, the other data sources have been represented as { …}.
+**Note:**  For conciseness in this how-to, of the 11 objects that are returned for the  `Data`  object only the second data source, **SAMPLE_EmployeeDirectory**, is shown fully in the response payload below, the other data sources have been represented as { … }.
 
 {
 
@@ -565,19 +565,12 @@ For the app registered in 6.1.4.4 the following steps describe how to register t
 
 #### 6.2.4.2.  JSON format request body for the Environment
   --data-raw '{
-
 ​    "Name": "Production",
-
 ​    "Location": "https://howtoenv555.com",
-
 ​    "Type": "Production",
-
 ​    "CustomLocations": [
-
 ​        "https://api.howto555.com"
-
 ​    ]
-
 }'
 
 
@@ -586,35 +579,20 @@ For the app registered in 6.1.4.4 the following steps describe how to register t
 The 201 Created response returns the Catalog-generated identifier   `"UUID": "57535822-547e-41c4-849c-77ddc9714373"` for the for the registered environment  `Production`.
 
 {
-
 ​    "Name": "Production",
-
 ​    "Location": "https://howtoenv555.com",
-
 ​    "Type": "Production",
-
 ​    "CustomLocations": [
-
 ​        "https://api.howto555.com"
-
 ​    ],
-
 ​    "UUID": "57535822-547e-41c4-849c-77ddc9714373",
-
 ​    "Application": {
-
 ​        "Name": "Howto5-App",
-
 ​        "Description": "This application is used to show how the DH API is used",
-
 ​        "RepositoryLocation": "https://dhcorp5.com",
-
 ​        "Type": "Other",
-
 ​        "UUID": "2ab1410e-06d4-4e07-a82d-cc04b21d2622"
-
 ​    }
-
 }
 
 ## 6.3 Registering the Published Services using PUT
@@ -648,8 +626,8 @@ The objects that can be specified for the request body is shown in the following
 **Notes:** 
 
 * For Odata contracts that are made up of several files, all the files must be included for each service.
-- If an empty array is sent for `ServiceVersion`, then it will be interpreted that the application in the environment does not publish any services. 
-- Previously registered services for the application/environment are not not affected by a PUT endpoints request. Any services that are already registered for the application/environment will still continue to be registered. Therefore it has the affect of "adding" services.
+- If an empty array is sent for `ServiceVersion`, then it will be interpreted that the application in the environment does not publish any services with this request. However, this will not affect any previously registered services.
+- Previously registered services for the application/environment are not not affected by a PUT endpoints request. Any services that are already registered for the application/environment will still continue to be registered. Therefore the PUT call has the affect of "adding" services.
 * When there are updates to a services, care must be taken when deciding to register the new contract at the same endpoint which means that the previous contract will be replaced or do a different endpoint. It is recommended that you use semantic numbering to indicate the severity of changes in the contract and that you follow a strict protocol when deciding on endpoints to ensure that apps consuming previous versions do not experience disruptions.
 * If you want to "remove" services for an app, we recommend that you create a new version of the app, deployed to a different environment without the service you do not want included. In this way, you can maintain a historical version of the the assets, and ensure that consumers are notified of the new version, without affecting those that are consuming the previous version. 
 
@@ -740,115 +718,60 @@ Each of the files that are used in this example have been provided in escaped JS
 For the above request the following 200 OK response is received to provide the registration details of the service which includes the link to the URI of the service location, the URL to the catalog details page of the service and the service UUID. The Catalog entry for the service is also shown in [6.3.4.4](#ex-service-reg).
 
 {
-
 ​    "Endpoints": [
-
 ​        {
-
 ​            "Path": "5howto/v1",
-
 ​            "SecurityClassification": "Public",
-
 ​            "UUID": "6786c1bb-e66e-4e02-bf6a-e72f90ec288f",
-
 ​            "Links": [
-
 ​                {
-
 ​                    "Href": "https://hub.mendix.com/rest/datahubservice/v2/applications/2ab1410e-06d4-4e07-a82d-cc04b21d2622/environments/57535822-547e-41c4-849c-77ddc9714373/services/5how-toODatav3-sample-service/1.0",
-
 ​                    "Rel": "Self"
-
 ​                },
-
 ​                {
-
 ​                    "Href": "https://hub.mendix.com/link/endpoint?EndpointUUID=6786c1bb-e66e-4e02-bf6a-e72f90ec288f",
-
 ​                    "Rel": "Catalog"
-
 ​                }
-
 ​            ],
-
 ​            "Connections": 0,
-
 ​            "LastUpdated": "2021-03-20T14:30:00.997Z",
-
 ​            "ServiceVersion": {
-
 ​                "Version": "1.0",
-
 ​                "Description": "A Sample OData v3 service",
-
 ​                "PublishDate": "2021-03-20T14:30:00.953Z",
-
 ​                "UUID": "6f643036-4d4f-48e1-bb90-7a2e289e3faf",
-
 ​                "Service": {
-
 ​                    "Name": "5how-toODatav3-sample-service",
-
 ​                    "ContractType": "OData_3_0",
-
 ​                    "UUID": "b6859a4a-b926-4506-b93f-063993c07681"
-
 ​                },
-
 ​                "SecurityScheme": {
-
 ​                    "SecurityTypes": [
-
 ​                        {
-
 ​                            "Name": "MxID",
-
 ​                            "AppStoreModuleId": "a4f7847b-9562-4b5a-adc2-4a0bf41cc534"
-
 ​                        }
-
 ​                    ],
-
 ​                    "MxAllowedRoles": [
-
 ​                        {
-
 ​                            "UUID": "91ca220e-9498-4d23-9d2e-90b9c19aca37",
-
 ​                            "Name": "User"
-
 ​                        }
-
 ​                    ]
-
 ​                },
-
 ​                "Tags": [
-
 ​                    {
-
 ​                        "Name": "odata"
-
 ​                    },
-
 ​                    {
-
 ​                        "Name": "sample"
-
 ​                    }
-
 ​                ]
-
 ​            },
-
 ​            "Validated": **false**,
-
 ​            "Discoverable": **true**
-
 ​        }
-
 ​    ]
-
 }
 
 #### 6.3.4.4 Registered Service in the the Data Hub Catalog and Landscape {#ex-service-reg}
@@ -863,7 +786,25 @@ This is shown in the Landscape as:
 
 ![registered service-landscape](attachments/data-hub-api-how-to/registered-service-landscape.png)
 
+## 6.4 Removing Published Services for a Registered App
 
+The PUT endpoints request does not affect any previously registered services for the application/environment.  Sending an empty PUT endpoints request will not remove previously registrations. Therefore PUT endpoints has the affect of "adding" services.
+
+### 6.4.1 Removing Services Deployed to an App/Environment
+
+When you have a situation where you want to remove a published service for an app we recommend that you create a new version of the app, deployed to a different environment without the service you do not want included. 
+
+In this way, you can maintain a historical version of the the registered assets, and ensure that consumers are notified of the new version, without affecting those that are consuming the previous version. 
+
+### 6.4.1 Services Versions and Endpoints
+
+When there are updates to a services, care must be taken when deciding whether to deploy the new contract at the same endpoint or to a different endpoint as the changes may affect consuming apps.
+
+Contract files deployed to the same endpoint of a registered service will mean that consuming apps must reload the changed contract.   
+
+We recommend that you use semantic numbering for service versions to maintain a historical record and indicate the severity of changes. Further you should implement a strict protocol when updates are deployed to previoulsy registered endpoints. 
+
+In all cases, you are advised to notify all consumers of changes and also new versions deployed to new endpoints. 
 
 # 7 Registering Consumed Endpoints by an App using PUT {#consumed-ep}
 
@@ -1150,11 +1091,16 @@ When the**SAMPLE_EmployeeDirectory** is viewed in the Data Hub Landscape, **Howt
 
 # 8 Consuming data through Data Hub
 
-When you want to consume a dataset that is registerd in the Data Hub the following calls must be made:
+When you want to consume a dataset that is registered in the Data Hub the sequence of steps are as follows:
+
+1.  Find a suitable service  – `GET /data`
+2. discover all the instances of the service that are registered to identify the service you want consume datasets  –   GET service /applications/{AppUUID}/services/{ServiceName}/{ServiceVersion}
+3. retrieve the specific service and the contract files that make up the service
+4.  Register the consumed endpoints for the consuming app and the service.
 
 Search for a specific service using the generic GET call as described in [Searching in the Catalog](#api-search). Once a suitable dataset has been located the following sequence of requests should be made:  
 
-- GET all different versions of a service /applications/{AppUUID}/services/{ServiceName}
+- 
 - GET detailed information about a specific contract
 - PUT the consumed entities registered in the catalog by the application
 
@@ -1347,7 +1293,7 @@ In the Catalog the following is shown when searching for the same service:
 
 
 
-## 8.2 Retrieve Contract of a specific Service
+## 8.2 Retrieve Contract of a Specific Service
 
 In order to consume datasets from a service, the contract files must be retrieved from the details registered in the Catalog. This contract can then be loaded in your business application, parsed, and the datasets consumed to create a new application. 
 

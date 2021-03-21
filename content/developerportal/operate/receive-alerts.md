@@ -34,7 +34,7 @@ There are two ways to start receiving alerts:
 
 The Technical Contact can grant you the **Receive Alerts** permission by following these steps:
 
-1. Go to the [Developer Portal](http://home.mendix.com).
+1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 2. Click **Apps** in the top navigation panel.
 3.  Click **My Apps** and select **Nodes**.
 
@@ -53,7 +53,7 @@ The Technical Contact can grant you the **Receive Alerts** permission by followi
 
 You can manage the alerts by yourself, follow these steps:
 
-1. Go to the [Developer Portal](http://home.mendix.com).
+1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 2. Click **Apps** in the top navigation panel.
 3. Click **My Apps** and select **Nodes**.
 4. Open the node by clicking **Details**.

@@ -38,7 +38,7 @@ The **Connection** tab displays the connection values for the consumed OData ser
 
 The **Service URL** displays the URL of the service endpoint: 
 
-* Click **Select** to select another [constant](/refguide/constants) for the service
+* Click **Select** to select another [constant](/refguide8/constants) for the service
 *  Click **Show** to display the **Constant** dialog box displaying the service URL or endpoint: 
 
 	![Connection Tab](attachments/consumed-odata-service/consumed-service-constant.png)

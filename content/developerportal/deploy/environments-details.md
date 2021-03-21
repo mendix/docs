@@ -9,7 +9,7 @@ tags: ["Deploy","App","Environment","Developer Portal"]
 
 ## 1 Introduction
 
-To enter the **Environment details** page, go to the [Developer Portal](http://home.mendix.com), select your licensed app, click **Environments**, and then click **Details** on the specific environment. 
+To enter the **Environment details** page, go to the [Developer Portal](http://sprintr.home.mendix.com), select your licensed app, click **Environments**, and then click **Details** on the specific environment. 
 
 ![](attachments/environments-details/environment-details.png)   
 
@@ -390,6 +390,10 @@ On this tab, you can perform the following actions:
 
 * Change the log level type by clicking the specific level
 * Click **Set all to INFO** to revert all the changes
+
+{{% alert type="info" %}}
+If your app is not running, you will only see log nodes which are not set to the `Info` level. You will see these log nodes again when your app is restarted and, for custom nodes, messages have been logged to them.
+{{% /alert %}}
 
 {{% alert type="info" %}}
 If you change the log level, this level will continue to be used even if you later restart your app.

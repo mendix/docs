@@ -3,7 +3,7 @@ title: "Marketplace Overview"
 category: "General Info"
 menu_order: 10
 description: "Presents an overview of how to find and use content from the Mendix Marketplace."
-tags: ["marketplace", "app store", "widget", "connector", "module", "partner"]
+tags: ["marketplace",  "widget", "connector", "module", "partner"]
 aliases:
     - /community/app-store/app-store-overview.html
     - /developerportal/app-store/app-store-overview.html
@@ -125,9 +125,10 @@ On this page, you will see the following buttons:
 * **Create new draft version** – click this to create a new draft version of the component
 	* Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated – if there is a draft version in progress, click **View draft** to see it
 	* For more information on creating a draft version, see the [Updating Existing Marketplace Content](share-app-store-content#updating) section of *How to Share Marketplace Content*
-* **Unpublish** – click this to remove that version from the component
-	* If the component is not the protected content of a [user group](#user-groups), you can only unpublish a version that you have published yourself
-	* If the component is protected [content](#content) from a user group, a group [member](#members) can unpublish any version
+* **Unpublish** – click this to remove one version or all versions of the component
+	* If the component is protected [content](#content) from a [user group](#user-groups), a group [member](#members) can unpublish any version
+	* If the component is not the protected content of a user group, you can only unpublish a version that you have published yourself
+	* Select **Unpublish all versions** to remove all versions of the component
 * **Edit** – click this to edit the component (for details on editing, see the [Adding New Marketplace Content](share-app-store-content#adding) section of *How to Share Marketplace Content*)
 
 ### 4.3 Drafts {#drafts}

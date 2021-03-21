@@ -1,14 +1,14 @@
 ---
 title: "Developer Portal Guide"
 description: "Describes the sections of the Mendix Developer Portal and links to more detailed documents in the guide."
-tags: ["mendix", "developer portal", "platform services", "buzz", "apps", "community", "app store", "marketplace", "academy", "forum", "docs", "documentation"]
+tags: ["mendix", "developer portal", "platform services", "buzz", "apps", "community", "marketplace", "academy", "forum", "docs", "documentation"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
 ## 1 What Is the Developer Portal?
 
-The [Developer Portal](http://home.mendix.com) is one of the three key components of the Mendix Platform. The other two are [Mendix Studio Pro](/refguide/modeling) and [Mendix Studio](/studio/). In the Developer Portal, Mendix developers can collaborate, deploy, and manage their apps, and manage their company and users. 
+The [Developer Portal](http://sprintr.home.mendix.com) is one of the three key components of the Mendix Platform. The other two are [Mendix Studio Pro](/refguide/modeling) and [Mendix Studio](/studio/). In the Developer Portal, Mendix developers can collaborate, deploy, and manage their apps, and manage their company and users. 
 
 The Developer Portal also offers open, well-defined APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
 
@@ -24,7 +24,7 @@ In [Apps](apps-list/), you can find your free and licensed apps, nodes, and othe
 
 If you are an App Team member, you can go to the app [Buzz](collaborate/buzz). Here you can  manage not only the deployment of the app itself but the entire development process via user stories which can be refined and allocated to Sprints.
 
-To start a new app project click **Create App**, which will open a page where you can choose a starting pointing for your new app:
+To start a new app, click **Create App**, which will open a page where you can choose a starting pointing for your new app:
 
 ![](attachments/create-app.png)
 

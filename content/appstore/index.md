@@ -1,7 +1,7 @@
 ---
 title: "Marketplace Guide"
 description: "Presents documentation on configuring and using the latest versions of platform-supported components."
-tags: ["marketplace", "app store", "component", "platform support"]
+tags: ["marketplace",  "component", "platform support"]
 ---
 
 ## 1 Introduction

@@ -1393,67 +1393,36 @@ In 8.1.4.2 two deployments of the SAMPLE_EmployeeDirectory were retrieved by the
 The response returns the full details of the service and includes the two files that make up this OData v3 service. They are given  the  `Type: "ServiceFeed"`  and  the `"Type": "Metadata"`  values.
 
 {
-
 ​    "VersionText": "1.1.0",
-
 ​    "PublishedOn": "2020-06-11T15:17:46.129Z",
-
 ​    "Location": "https://hrsampleapp-accp.mendixcloud.com/odata/PubOdataEmployeeDirectory/v1",
-
 ​    "Description": "Service provided by Mendix for testing and sandbox scenarios. Contains mockup HR data to play around with.",
-
 ​    "Service": {
-
 ​        "Name": "SAMPLE_EmployeeDirectory",
-
 ​        "ContractType": "OData_3_0",
-
 ​        "Links": [
-
 ​            {
-
 ​                "Rel": "Self",
-
 ​                "Href": "https://hub.mendix.com/rest/datahubservice/v1/applications/30aaf7ca-415f-306d-bd6e-458e6f821f06/environments/58b206d6-dfa9-459d-852a-11c0e8a92db0/services/SAMPLE_EmployeeDirectory"
-
 ​            },
-
 ​            {
-
 ​                "Rel": "DataHubLocation",
-
 ​                "Href": "https://hub.mendix.com/link/endpoint?EndpointUUID=31f68737-9b2a-4aa2-85ee-ca5ad8378cb5"
-
 ​            }
-
 ​        ]
-
 ​    },
-
 ​    "Contracts": [
-
 ​        {
-
 ​            "Type": "ServiceFeed",
-
 ​            "Value": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<service xmlns:atom=\"http://www.w3.org/2005/Atom\" xml:base=\"{applicationRootUrl}/odata/PubOdataEmployeeDirectory/v1/\" xmlns=\"http://www.w3.org/2007/app\">\n  <workspace>\n    <atom:title>Default</atom:title>\n    <collection href=\"Employees\">\n      <atom:title>Employees</atom:title>\n    </collection>\n    <collection href=\"Departments\">\n      <atom:title>Departments</atom:title>\n    </collection>\n    <collection href=\"Offices\">\n      <atom:title>Offices</atom:title>\n    </collection>\n  </workspace>\n</service>",
-
 ​            "Includes": []
-
 ​        },
-
 ​        {
-
 ​            "Type": "Metadata",
-
 ​            "Value": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<edmx:Edmx Version=\"1.0\" xmlns:edmx=\"http://schemas.microsoft.com/ado/2007/06/edmx\" xmlns:mx=\"http://www.mendix.com/Protocols/MendixData\">\n  <edmx:DataServices m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\" xmlns:m=\"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata\">\n    <Schema Namespace=\"DefaultNamespace\" xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm\">\n      <EntityType Name=\"Employee\">\n        <Key>\n          <PropertyRef Name=\"ID\" />\n        </Key>\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" />\n        <Property Name=\"firstName\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"lastName\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"email\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"phone\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"street\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"city\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"zip\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"country\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <NavigationProperty Name=\"Department\" Relationship=\"DefaultNamespace.Employee_Department\" FromRole=\"Employees\" ToRole=\"Department\" />\n        <NavigationProperty Name=\"Office\" Relationship=\"DefaultNamespace.Employee_Office\" FromRole=\"Employees\" ToRole=\"Office\" />\n      </EntityType>\n      <EntityType Name=\"Department\">\n        <Key>\n          <PropertyRef Name=\"ID\" />\n        </Key>\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" />\n        <Property Name=\"Name\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"Color\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <NavigationProperty Name=\"Employees\" Relationship=\"DefaultNamespace.Employee_Department\" FromRole=\"Department\" ToRole=\"Employees\" />\n        <Property Name=\"Number\" Type=\"Edm.Int64\" />\n      </EntityType>\n      <EntityType Name=\"Office\">\n        <Key>\n          <PropertyRef Name=\"ID\" />\n        </Key>\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" />\n        <Property Name=\"Name\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"Street\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"StreetNumber\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"ZIP\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"City\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"Country\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <Property Name=\"CountryCode\" Type=\"Edm.String\" MaxLength=\"200\" />\n        <NavigationProperty Name=\"Employees\" Relationship=\"DefaultNamespace.Employee_Office\" FromRole=\"Office\" ToRole=\"Employees\" />\n        <Property Name=\"Number\" Type=\"Edm.Int64\" />\n      </EntityType>\n      <Association Name=\"Employee_Department\">\n        <End Type=\"DefaultNamespace.Employee\" Multiplicity=\"*\" Role=\"Employees\" />\n        <End Type=\"DefaultNamespace.Department\" Multiplicity=\"0..1\" Role=\"Department\" />\n      </Association>\n      <Association Name=\"Employee_Office\">\n        <End Type=\"DefaultNamespace.Employee\" Multiplicity=\"*\" Role=\"Employees\" />\n        <End Type=\"DefaultNamespace.Office\" Multiplicity=\"0..1\" Role=\"Office\" />\n      </Association>\n      <EntityContainer Name=\"PubOdataEmployeeDirectory/v1Entities\" m:IsDefaultEntityContainer=\"true\">\n        <EntitySet Name=\"Employees\" EntityType=\"DefaultNamespace.Employee\" />\n        <EntitySet Name=\"Departments\" EntityType=\"DefaultNamespace.Department\" />\n        <EntitySet Name=\"Offices\" EntityType=\"DefaultNamespace.Office\" />\n        <AssociationSet Name=\"Employee_Department\" Association=\"DefaultNamespace.Employee_Department\">\n          <End Role=\"Employees\" EntitySet=\"Employees\" />\n          <End Role=\"Department\" EntitySet=\"Departments\" />\n        </AssociationSet>\n        <AssociationSet Name=\"Employee_Office\" Association=\"DefaultNamespace.Employee_Office\">\n          <End Role=\"Employees\" EntitySet=\"Employees\" />\n          <End Role=\"Office\" EntitySet=\"Offices\" />\n        </AssociationSet>\n      </EntityContainer>\n    </Schema>\n  </edmx:DataServices>\n</edmx:Edmx>",
-
 ​            "Includes": []
-
 ​        }
-
 ​    ]
-
 }
 
 

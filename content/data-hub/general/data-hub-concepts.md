@@ -30,17 +30,20 @@ A visual example:
 - Each app builds around the shared data with their own Customer information relevant to their particular scope of functionality
 - Changes to the shared dataset from **Sales APP** will be reflected in the other apps.  
 
-
-
 ## 2.2 Using Data Hub to Share Data - an example
 
-1. Developer of **Sales APP** has Customer data in his App which he wants share with the rest of the company.  Publishes useful groups of entities (datasets) that would be useful in an **OData REST service**. 
-   1. The developer organizes the published services to group the **datasets** into relevant services oriented towards specific use cases. Not all of the information is necessary, or should be shared, so only entities and attributes of these entities are published.
-   2. Developers of **Delivery APP** and **Invoicing APP** discover the **Customer* datasets in the organizations Data Hub. 
-      1. They qualify the datasets by examining the originating app and the *quality* of the data.  
-      2. In Mendix Studio Pro each developer drags the required entities from the published services into the Domain Model and can immediately start using them in their app modeling. The service contract is consumed, but only the required entities are accessed.
-      3. The consumed entities can be edited to only include attributes and associations that are required for the consuming app. Other fields that can be removed. 
-      4. The consumed entities are available in all Microflows and UX components as if they were part of his own Domain Model (practically removing the need to build a dedicated integration when accessing objects in other Apps that would be required when if Data Hub was not used).
+1. Developer of **Sales APP** has Customer data in his App which he wants share with the rest of the company.  The developer publishes useful groups of entities (datasets) in an **OData v3 service**. 
+   
+2. The developer organizes the **datasets** into groups which are published services in different services oriented towards specific use cases. Not all of the information is necessary, or should be shared, so only the **entitysets**,  **attributes** and also the **associations**  entities are published in the services.
+
+3. In Data Hub, the developer who is the **technical owner** or the **curator** of the department curates the registered assets to add **tags** that also indicate the relevancy of the data to different users. They may also indicate that this is the "official", "reliable" datasets by setting the sources as **validated**.
+
+4. Developers of the **Delivery APP** and **Invoicing APP** discover the the customer datasets for their specific requirements.  
+   1. They qualify the datasets by examining the originating app and the *quality* of the data.  
+   2. In Mendix Studio Pro each developer drags the required entities from the published services into the Domain Model and can immediately start using them in their app modeling. The service contract is consumed, but only the required entities are accessed.
+   3. The consumed entities can be edited to only include attributes and associations that are required for the consuming app. Other fields that can be removed. 
+   4. The consumed entities are available in all Microflows and UX components as if they were part of his own Domain Model (practically removing the need to build a dedicated integration when accessing objects in other Apps that would be required when if Data Hub was not used).
+
    3. During run-time, when the end of **Delivery APP** and **Invoicing APP** do something that requires the **Customer** data, it is automatically retrieved from **Sales APP** in real-time. Filtering, paging and selecting in the protocol itself and only the requested fields and records are retrieved. 
 
 This makes it simpler to use data between Apps, and the Catalog allows governance of which data is used by whom, and life cycle management informing people of changes, and with good versioning of OData contracts.

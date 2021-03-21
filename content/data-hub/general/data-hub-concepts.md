@@ -45,7 +45,7 @@ A visual example:
 
 This makes it simpler to use data between Apps, and the Catalog allows governance of which data is used by whom, and life cycle management informing people of changes, and with good versioning of OData contracts.
 
-##  2.3 The Role of Data Hub
+##  2.3 The Role of a Data Hub in an Organization
 
 ·The Catalog is the hub in the collaboration, discovery and connection of an organizations data source.   It catalogs microservices from the organization's business applications systems using OData contracts. The Data Hub can already import OData contracts from 3rd party systems such as Teamcenter, SAP & Microsoft and OData v4services from other business applications.
 
@@ -78,6 +78,14 @@ top joins/filters/queries.
 ------------------------
 
 # Data Hub Administration
+
+The Data Hub Administrator manages the Data Hub implementation of the organization.
+
+Carries out the data sharing policy
+
+assigns curators
+
+
 
 # Curation
 

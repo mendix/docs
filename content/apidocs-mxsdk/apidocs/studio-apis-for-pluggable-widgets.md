@@ -1,5 +1,5 @@
 ---
-title: "Preview Appearance APIs for Pluggable Widgets"
+title: "Preview Appearance AP; for Pluggable Widgets"
 parent: "pluggable-widgets"
 menu_order: 30
 description: A guide for understanding the APIs which influence pluggable widget preview appearances.
@@ -85,7 +85,7 @@ This property appears as follows:
 ```
 type WidgetsProperty = {
     widgetCount: number;
-    renderer: { widgetCount: number; renderer: ComponentType<{caption?: string}> }
+    renderer: ComponentType<{caption?: string}>;
 }
 ```
 

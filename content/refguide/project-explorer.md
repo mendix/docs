@@ -9,7 +9,7 @@ tags: ["studio pro", "App Explorer"]
 
 The **App Explorer** shows the complete structure of your app including all documents inside the modules:
 
-{{% image_container width="250" %}}![](attachments/project-explorer/project-explorer.png)
+{{% image_container width="250" %}}![](attachments/app-explorer/app-explorer.png)
 {{% /image_container %}}
 
 The **App Explorer** consists of the following:

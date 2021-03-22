@@ -6,16 +6,14 @@ description: "How to use the Dat Hub API a guide with examples."
 tags: ["data hub", "Data Hub API", "registration", "api", "api-requests"]
 ---
 
-# Using the Data Hub API
 
-
-# 1 Introduction
+## 1 Introduction
 
 This guide takes you through how to use and the [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) for searching and registering your data sources from your business applications to Data Hub and consuming them. 
 
-The [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) is published as an Open API (formerly Swagger) specification which enables you to visualize the API. It has the latest documentation on the implemented calls which you can try out.  For full definitions of the objects and schemas used in this how-to refer to the specification.
+The [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) is published as an OpenAPI 3.0 (formerly Swagger) specification which enables you to visualize the API. It has the latest documentation on the implemented calls which you can try out.  For full definitions of the objects and schemas used in this how-to refer to the specification.
 
-You can see the process of search and registration to Data Hub in the [Share Data Between Apps](https://d25bt5g8n19u8d.cloudfront.net/data-hub/share-data/) how-to. This demonstrates the integrated functionality of Data Hub in Mendix Studio Pro for registering data sources. Using the Data Hub API you can create a deployment process for your apps to register the OData v3 and OData v4 services from these apps and make them available for use in another app through the Data Hub Catalog. 
+You can see the process of search and registration to Data Hub in the [Share Data Between Apps](/data-hub/share-data) how-to. This demonstrates the integrated functionality of Data Hub in Mendix Studio Pro for registering data sources. Using the Data Hub API you can create a deployment process for your apps to register the OData v3 and OData v4 services from these apps and make them available for use in another app through the Data Hub Catalog. 
 
 **Note**: To use the Mendix Data Hub a license is required.
 
@@ -26,26 +24,26 @@ You can see the process of search and registration to Data Hub in the [Share Dat
 - Register consumed datasets by an App – [Section 7](#consumed-ep)
 - Search for data sets and data sources to consume by your business application for new app development [Section 9](#consume-data)
 
-# 2 Prerequisites
+## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following:
 
 - Have a registered Mendix Data Hub account
-- To access the API you must obtain a Personal Access Token (PAT) as described in [Generating your Personal Access Token](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) to authenticate your integration’s API requests
+- To access the API you must obtain a Personal Access Token (PAT) as described in [Generating your Personal Access Token](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) to authenticate your integration’s API requests
 
-# 3 Overview of the Data Hub API
+## 3 Overview of the Data Hub API
 
 - You can access the latest Data Hub API at: [http://datahub-spec.s3-website.eu-central-1.amazonaws.com](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
 
 - The base URL for all calls to the API is: https://hub.mendix.com/rest/datahubservice/v2/
 
-- All requests that are made to the Data Hub API must include the access to the organization’s Data Hub. This is accomplished by including the PAT ( [Generating your Personal Access Token](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat)) in the header of the request: `Authorization`:  `MxToken <your_PAT_Token>.` For more details see: [API calls and authentication](#authentication).
+- All requests that are made to the Data Hub API must include the access to the organization’s Data Hub. This is accomplished by including the PAT ( [Generating your Personal Access Token](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat)) in the header of the request: `Authorization`:  `MxToken <your_PAT_Token>.` For more details see: [API calls and authentication](#authentication).
 
-- For the full specifications of the parameters and schemas and the response status codes refer to the  [Open API spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/). 
+- For the full specifications of the parameters and schemas and the response status codes refer to the  [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/). 
 
 - The requests that can be made through the Data Hub API:
 
-  - Search for registered assets (data sources, datasets, attributes and associations) in the Catalog using GET
+  - Search for registered assets (data sources, datasets, attributes and associations) in the Catalog using GET /data
 - Registering datasets:
     Registering datasets involves registering the data source (OData services) that the dataset is exposed in. The following requests in the given order:
   
@@ -57,9 +55,9 @@ Before starting this how-to, make sure you have completed the following:
 - Find specific data sources and retrieve contract to consume
 
 
-# 4 Making the API Calls and Authentication {#authentication}
+## 4 Making the API Calls and Authentication {#authentication}
 
-This how-to guides users in using the Data Hub API, for full details of all the objects and schemas that define the collections and arrays that are required refer to the [Data Hub Open API spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com).
+This how-to guides users in using the Data Hub API, for full details of all the objects and schemas that define the collections and arrays that are required refer to the [Data Hub OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com).
 
 For each request described in this document, the method and URL is given for the base call with a description of the parameters and body. An example is given that you follow to try out the calls. 
 
@@ -68,14 +66,14 @@ For some examples, the [curl](http://curl.haxx.se/) command is also given. You w
 **Note:** curl is an open-source tool curl that is pre-installed on many Linux and macOS systems. Windows users can download a version at curl.haxx.se. When using HTTPS on Windows, ensure that your system meets the curl requirements for SSL.
 
 
-## 4.1 Authentication
+### 4.1 Authentication
 
-Authorization in the Data Hub API is established by defining the access to your organization’s Data Hub using the [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepa). You do not specify any authorization for your request but must include the following key:value pair as part of the header for *each* request:  `Authorization`:  `MxToken <your_PAT_Token>`
+Authentication in the Data Hub API is established by defining the access to your organization’s Data Hub using the [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepa). You do not specify any *authorization* for your request but must include the following key:value pair as part of the header for *each* request:  `Authorization`:  `MxToken <your_PAT_Token>`
 
-### 4.1.1 Using Postman
-If you prefer to use a tool with a user interface when working with APIs, you can use a REST API client of your choice, for example, [Postman](https://www.getpostman.com/).  Using Postman, for each request, provide the request URI, the HTTP method, and, if required, the request parameters and body.  Authentication is specified in the request **Header**.  You can set your PAT token as a variable which can be conveniently called for each request.
+#### 4.1.1 Using Postman
+If you prefer to use a tool with a graphical user interface when working with APIs, you can use a REST API client of your choice, for example, [Postman](https://www.getpostman.com/).  Using Postman, for each request, provide the request URI, the HTTP method, and, if required, the request parameters and body.  Authentication is specified in the request **Header**.  You can set your PAT token as a variable which can be conveniently called for each request.
 
-###  4.1.2 Using a Command Line Tool such as Curl
+####  4.1.2 Using a Command Line Tool such as Curl
 If you are using the [curl](http://curl.haxx.se/) command to send your HTTP requests to the API  then you must include the authentication header as given in this example of a GET call: 
 
 `curl --location --request GET 'https://hub.mendix.com/rest/datahubservice/v2/data' \
@@ -83,7 +81,7 @@ If you are using the [curl](http://curl.haxx.se/) command to send your HTTP requ
 
 Insert your `MxToken` for the the string <*your token*> for every request that you make.
 
-## 4.2 Base Variables used in this How-to
+### 4.2 Base Variables used in this How-to
 
 For convenience and conciseness, throughout this how-to the following variables are used and should be substituted by the relevant values or those that are returned in the response:
 
@@ -92,15 +90,15 @@ For convenience and conciseness, throughout this how-to the following variables 
 - {*AppUUID}* – insert the value returned in the API response for the UUID of the application
 - {*EnvironmentUUID} -* insert the value returned in the API response for the UUID of the application
 
-# 5 Searching in the Catalog {#api-search}
+## 5 Searching in the Catalog {#api-search}
 
 Search in the Catalog returns the registered assets that satisfy the search string and filters. The search is carried out on all registered assets in the catalog (data sources, data sets, attributes and descriptions of the registered items).
 
-## 5.1 Method and Endpoint
+### 5.1 Method and Endpoint
 
 `GET /data` 
 
-## 5.2 Request Parameters
+### 5.2 Request Parameters
 
 The following parameters can be specified for the `data` call:
 
@@ -112,13 +110,13 @@ The following parameters can be specified for the `data` call:
 | afterId                 | string   | optional              | first page of results | UUID of the last endpoint on the previous page               |
 | limit                   | integer  | optional              | 20                    | The maximum number of items that could be returned. Default is 20, Maximum value = 100. |
 
-## 5.3 200 OK Response
+### 5.3 200 OK Response
 
 A successful 200 response returns the assets from the Data Hub that satisfies the search string and specified filters. This means that all the objects in the the returned `Data` array will have the string `sample` in the names and descriptions. 
 
-### 5.3.1 `SearchResults` objects {#api-search-results}
+#### 5.3.1 `SearchResults` objects {#api-search-results}
 
-The endpoints (which are the data sources (services)) that are returned in the `SearchResults` object comprise the following.  For a full specification of the lower level objects and arrays refer to the [Open API spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
+The endpoints (which are the data sources (services)) that are returned in the `SearchResults` object comprise the following.  For a full specification of the lower level objects and arrays refer to the [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
 
 | **Name**     | **Type** | I**ncluded in response?** | **Description**                                              |
 | ------------ | -------- | ------------------------- | ------------------------------------------------------------ |
@@ -128,8 +126,8 @@ The endpoints (which are the data sources (services)) that are returned in the `
 | LastId       | string   |                           | UUID of the last item returned in the `Data` array. Example: 69db538d-35d4-4a9f-825a-93db0eb8130f |
 | TotalResults | integer  | always                    | Total number of results matching the search query. Example: 87 |
 
-### 5.3.2  `Data` Objects
-The objects that are returned in the response  for  `Data` are shown in the representation below. (The blue indicates that the constituent objects are a collection, the red an array, and the solid outline indicates if the object is always returned.) For full details of objects that define the arrays and collections, refer to the  [Open API spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/). 
+#### 5.3.2  `Data` Objects
+The objects that are returned in the response  for  `Data` are shown in the representation below. (The blue indicates that the constituent objects are a collection, the red an array, and the solid outline indicates if the object is always returned.) For full details of objects that define the arrays and collections, refer to the  [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/). 
 
 - [ ]  the table is not really necessary here as users can see the full details in the spec, however it does show at a glance what default values are etc.  The mind-map below shows the essence of the calls - can it be made clearer by adding the default values??? should it go down to a deeper level?
 - [ ] Which is the more useful for users?
@@ -154,14 +152,14 @@ The objects that are returned in the response  for  `Data` are shown in the repr
 | Application            |          | always                    | A collection of objects specifying the application details of the service. |
 | Tags                   |          | always                    | Tags on this endpoint.<br>example: List [ OrderedMap { "Name": "HR" }, OrderedMap { "Name": "Salary" }, OrderedMap { "Name": "PeopleManagement" } ]<br>An array of `Tag` objects |
 | TotalItems             | integer  | always                    | The total number of items (such as data sources ) existing at this level.<br>Example: 17 |
-| Items                  |          | Always                    | List of items (such as data sources) at this endpoint relevant to the search query. For example see [Open API spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) |
+| Items                  |          | Always                    | List of items (such as data sources) at this endpoint relevant to the search query. For example see [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) |
 | Links                  |          | always                    | Catalog is a deeplink to the endpoint details page in the Catalog. Self is the URL with the endpoint details, including contracts. |
 
 
 
-## 5.4 Example: Searching for Registered Assets in the Catalog that have the string:  `sample`
+### 5.4 Example: Searching for Registered Assets in the Catalog that have the string:  `sample`
 
-### 5.4.1 Base Request URL
+#### 5.4.1 Base Request URL
 This example shows you how to search for assets that satisfy the following:
 
 - the search string `sample` 
@@ -180,8 +178,7 @@ curl --location --request GET 'https://hub.mendix.com/rest/datahubservice/v2/dat
 --header 'Authorization: MxToken <*your MxToken>*' \`
 
 
-
-### 5.4.2 Successful 200 Response
+#### 5.4.2 Successful 200 Response
 The 200 OK response returned that the `TotalResults` are 11 assets were found that statisfy the search string and parameters.
 
 The response payload is shown below:
@@ -297,13 +294,13 @@ The response payload is shown below:
 ​    "LastId": "c6afa18d-4b3d-49b2-a945-5a93b9a0868e"
 }
 
-### 5.4.3 Example Search Results Viewed in the Catalog
+#### 5.4.3 Example Search Results Viewed in the Catalog
 
 The same search in the Data Hub returns the following showing the total list in the search results pane on the left and the details of the selected **SAMPLE_EmployeeDirectory** :
 
 ![search results](attachments/data-hub-api-how-to/dh-search-sample.png)
 
-# 6 Registering a Sample OData v3 Contract {#reg-contract}
+## 6 Registering a Sample OData v3 Contract {#reg-contract}
 
 This section describes the steps for registering a data source - this can be an OData v4 or OData v3 contract.
 To register a data source to Data Hub you must register the following in the given sequence:
@@ -322,18 +319,18 @@ An example Odata v3 service called  **DataHub_Sample_1.0.0_OData3**  is provided
 
 Both files are necessary to provide the full service defintion and must be provided when registering the service.
 
-**Note:** OData service contract files must be included in the request body in escaped JSON format. There are several online converters available for converting your *.xml* files into this format such as one available from [Freeform.com](https://www.freeformatter.com/json-escape.html#ad-output). Just paste the contents of your files and convert them to the escaped format.  
+**Note:** OData service contract files must be included in the request body in escaped JSON format. There are several online converters available for converting your *.xml* files into this format such as one available from [Freeformatter.com](https://www.freeformatter.com/json-escape.html#ad-output). Just paste the contents of your files and convert them to the escaped format.  
 
-## 6.1 Registering an Application in the Catalog using POST
+### 6.1 Registering an Application in the Catalog using POST
 
 The first step is to register the application that the service originates from. 
 
 **Note**: If the application deployed to the same requirement as the service you want to register is already registered in the Catalog (for previously registered services, for example), you can proceed to 6.3 using the `AppUUID` and `EnvUUID` for the registered service.  These objects can be obtained from search results as described in [Search request response](#api-search-results). 
 
-### 6.1.1 Method and Endpoint
+#### 6.1.1 Method and Endpoint
 `POST /applications`
 
-### 6.1.2 Request Body
+#### 6.1.2 Request Body
 There are no parameters to this request only a payload that specifies the details of the application to be registered:
 
 | **Name**           | **Type** | **Required/Optional** | **DefaultValue** | **Description**                                              |
@@ -347,16 +344,16 @@ There are no parameters to this request only a payload that specifies the detail
 
 
 
-### 6.1.3 POST Response
+#### 6.1.3 POST Response
 The successful 201 response will indicate that the application has been registered in the Catalog and return an application `UUID`, which is the Catalog identifier for the registered app that must be used  when referring to the application in the next steps of the registration.
 
-### 6.1.4 Example: Registering the Howto5-App {#ex-reg-app}
+#### 6.1.4 Example: Registering the Howto5-App {#ex-reg-app}
 In this example, you are going to register an app called **Howto5-App**. The details of the app are included in the JSON format request body given below.
 
-#### 6.1.4.1 Base request URL
+##### 6.1.4.1 Base request URL
 `POST {{baseURL}}/applications`
 
-#### 6.1.4.2.  JSON Format Request Body
+##### 6.1.4.2.  JSON Format Request Body
 {
   "Name": "Howto5-App",
   "Description": "This application is used to show how the DH API is used",
@@ -374,7 +371,7 @@ In this example, you are going to register an app called **Howto5-App**. The det
   }
 }
 
-#### 6.1.4.3 The Example Curl Command
+##### 6.1.4.3 The Example Curl Command
 The curl command specifies the format of the body content and the body data. 
 
 curl --location --request POST '{{BaseURL}}' \
@@ -387,16 +384,16 @@ curl --location --request POST '{{BaseURL}}' \
   "BusinessOwner": {
 ​    "FirstName": "Bill",
 ​    "LastName": "Raine",
-​    "Email": "bill.raine@dh.co"
+​    "Email": "bill.raine@dh123.co"
   },
   "TechnicalOwner": {
 ​    "FirstName": "Bob",
 ​    "LastName": "Raine",
-​    "Email": "bill.raine@dh.co"
+​    "Email": "bill.raine@dh123.co"
   }
 }'
 
-#### 6.1.4.4 Successful 201 Response Application Created {#app-registered}
+##### 6.1.4.4 Successful 201 Response Application Created {#app-registered}
 The 201 response that is returned to indicate that the application is registered is given below: 
 
 **Note**: that the response returned the  `"UUID": "2ab1410e-06d4-4e07-a82d-cc04b21d2622"`, which is the Catalog identifier for the application that must be used to identify it in subsequent steps of the registration of the data source.
@@ -410,23 +407,23 @@ The 201 response that is returned to indicate that the application is registered
 ​    "TechnicalOwner": {
 ​        "FirstName": "Bob",
 ​        "LastName": "Raine",
-​        "Email": "bill.raine@dh.co"
+​        "Email": "bill.raine@dh123.co"
 ​    },
 ​    "BusinessOwner": {
 ​        "FirstName": "Bill",
 ​        "LastName": "Raine",
-​        "Email": "bill.raine@dh.co"
+​        "Email": "bill.raine@dh123.co"
 ​    }
 }
 
-## 6.2 Registering an Environment using POST
+### 6.2 Registering an Environment using POST
 
 The next step is to register the environment where the app and the service is deployed. 
 
-### 6.2.1 Method and Endpoint
+#### 6.2.1 Method and Endpoint
 `POST /applications/{AppUUID}/environments`
 
-### 6.2.2 Request Parameters and body
+#### 6.2.2 Request Parameters and body
 
 | **Name** | **Type** | **Required/Optional** | **DefaultValue** | **Description**                 |
 | -------- | -------- | --------------------- | ---------------- | ------------------------------- |
@@ -443,21 +440,21 @@ The Request must be accompanied by the following body:
 | CustomLocations |          |                       |                  | An array of custom locations at which this environment can also be reached. |
 
 
-### 6.2.3 Successful POST Response
+#### 6.2.3 Successful POST Response
 A 201 response indicates that the environment has been registered in the Catalog for the given application and returns the environment UUID for the environment. 
 
 The unique combination of the App UUID and the environment UUID is the identifier used to register any published endpoints (data sources/services) for the application that are deployed to this environment. 
 
 **Note:** You will also need these UUIDs registering if the apps consume data sources as described in [registering consumed endpoints](#consumed-ep).
 
-### 6.2.4 Example: Registering the Environment `Production`  for the Howto5-App 
+#### 6.2.4 Example: Registering the Environment `Production`  for the Howto5-App 
 
 For the app registered in 6.1.4.4 the following steps describe how to register the environment **Production** that the app and the service are deployed to.
 
-#### 6.2.4.1 Base request URL:
+##### 6.2.4.1 Base request URL:
 `POST {{baseURL}} /applications/{appUUID}/environments`
 
-#### 6.2.4.2.  JSON format request body for the Environment
+##### 6.2.4.2.  JSON format request body for the Environment
   --data-raw '{
 ​    "Name": "Production",
 ​    "Location": "https://howtoenv555.com",
@@ -467,7 +464,7 @@ For the app registered in 6.1.4.4 the following steps describe how to register t
 ​    ]
 }'
 
-#### 6.2.4.4 Successful 201 Created Successful 200 {#env-registerd}
+##### 6.2.4.4 Successful 201 Created Successful 200 {#env-registerd}
 The 201 Created response returns the Catalog-generated identifier   `"UUID": "57535822-547e-41c4-849c-77ddc9714373"` for the for the registered environment  `Production`.
 
 {
@@ -487,16 +484,16 @@ The 201 Created response returns the Catalog-generated identifier   `"UUID": "57
 ​    }
 }
 
-## 6.3 Registering the Published Services using PUT
+### 6.3 Registering the Published Services using PUT
 
 This step describes the register service call for registering the services (endpoints) that are published by the app that are deployed to the same environment. 
 
-The PUT endpcWhere are are multiple services for a given app each endpoint can be included in a single request as a collection of `Endpoints`.
+When there are are multiple services for a given app each endpoint can be included in a single request as a part of the collection of `Endpoints`.
 
-### 6.3.1 Method and Endpoint
+#### 6.3.1 Method and Endpoint
 `PUT /applications/*{AppUUID}*/environments/*{EnvironmentUUID}*/published-endpoints`
 
-### 6.3.2 Request Parameters and Body
+#### 6.3.2 Request Parameters and Body
 
 The parameters `AppUUID` and `EnvironmentUUID` of the deployed app are required as input parameters.
 
@@ -504,7 +501,7 @@ The request body is made up of the collection of objects for the `PutPublishedEn
 
 When defining each service in the `ServiceVersion` object specify all the details of the endpoints or service which includes the name, version number and the relative path `Path` of the contract definition files. The contract files that make up the service which can be found at the relative path must also be included as part of the `Contracts` object; they must be in an escaped JSON string format.
 
-The objects that can be specified for the request body is shown in the following represenation. Not all the the lower levels are shown, for full schema definition refer to the [Open API spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
+The objects that can be specified for the request body is shown in the following represenation. Not all the the lower levels are shown, for full schema definition refer to the [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
 
 (Blue indicates that the constituent objects are a collection, the red an array, and the solid outline indicates if the object is required.)
 
@@ -519,7 +516,7 @@ The objects that can be specified for the request body is shown in the following
 * When there are updates to a services, care must be taken when deciding to register the new contract at the same endpoint which means that the previous contract will be replaced or do a different endpoint. It is recommended that you use semantic numbering to indicate the severity of changes in the contract and that you follow a strict protocol when deciding on endpoints to ensure that apps consuming previous versions do not experience disruptions.
 * If you want to "remove" services for an app, we recommend that you create a new version of the app, deployed to a different environment without the service you do not want included. In this way, you can maintain a historical version of the the assets, and ensure that consumers are notified of the new version, without affecting those that are consuming the previous version. 
 
-### 6.3.3  Successful 200 PUT Response
+#### 6.3.3  Successful 200 PUT Response
 A successful 200 response returns the array of endpoints that are registered for the given environment and application.
 For each endpoint a unique  `UUID` for is returned for each service.  
 
@@ -528,7 +525,7 @@ For each endpoint, the object  `Links`  provides the URL of the details page in 
 The response also includes the number of applications/environments –  `Connections` – that consume this endpoint.
 
 
-### 6.3.4 Example: Registering the 5how-toODatav3-sample-service
+#### 6.3.4 Example: Registering the 5how-toODatav3-sample-service
 In this example call, the service **5how-toODatav3-sample-service** is registered for the application registered in [6.1.4.4](#app-registered) and deployed to the environment registered in [6.2.4.4](#app-registered).
 
 Two tags, `odata` and `sample` are defined as part of the registration.
@@ -538,11 +535,11 @@ For the `Contracts` object you can use the example OData v3 contract that is mad
     - “Type”: “ServiceFeed” 
     - “Type”: “Metadata”
 
-#### 6.3.4.1 Base Request URL
+##### 6.3.4.1 Base Request URL
 
 `PUT` `{{baseURL}}/applications/{appUUID}/environments/{envUUID}/published-endpoints`
 
-#### 6.3.4.2.  JSON format request body for the `Endpoints` **Object**
+##### 6.3.4.2.  JSON format request body for the `Endpoints` **Object**
 Each of the files that are used in this example have been provided in escaped JSON format in [Section 8: Sample Contract](#sample-contract). 
 
 **Note:**  For conciseness the contents of the two contract files are not included in the following payload - they are respresented as  <*insert service feed from:[service feed](#ex-service)>* and *<Insert example metadata from [metadata](#ex-metadata) >*.  You must insert the example contract files provided in Section 8 for the strings for these strings, or alternatively use your own contract files - in escaped JSON format.
@@ -598,7 +595,7 @@ Each of the files that are used in this example have been provided in escaped JS
     ]
 }
 
-#### 6.3.4.3 Successful 200 OK Response
+##### 6.3.4.3 Successful 200 OK Response
 
 - [ ]  I  managed to register the application several times, therefore it had a different UUID, for the app and to the same name environment, but to a different location. Since location of env. is not shown, there were 2 identical entries in the catalog which had the same env. service. This is a problem - ref team. 
 
@@ -661,7 +658,7 @@ For the above request the following 200 OK response is received to provide the r
 ​    ]
 }
 
-#### 6.3.4.4 Registered Service in the the Data Hub Catalog and Landscape {#ex-service-reg}
+##### 6.3.4.4 Registered Service in the the Data Hub Catalog and Landscape {#ex-service-reg}
 
 The resulting entry in the Catalog for the registered service the entry in the Catalog is the following: 
 
@@ -673,17 +670,17 @@ This is shown in the Landscape as:
 
 ![registered service-landscape](attachments/data-hub-api-how-to/registered-service-landscape.png)
 
-## 6.4 Removing Published Services for a Registered App
+### 6.4 Removing Published Services for a Registered App
 
 The PUT endpoints request does not affect any previously registered services for the application/environment.  Sending an empty PUT endpoints request will not remove previously registrations. Therefore PUT endpoints has the affect of "adding" services.
 
-### 6.4.1 Removing Services Deployed to an App/Environment
+#### 6.4.1 Removing Services Deployed to an App/Environment
 
 When you have a situation where you want to remove a published service for an app we recommend that you create a new version of the app, deployed to a different environment without the service you do not want included. 
 
 In this way, you can maintain a historical version of the the registered assets, and ensure that consumers are notified of the new version, without affecting those that are consuming the previous version. 
 
-### 6.4.1 Services Versions and Endpoints
+#### 6.4.1 Services Versions and Endpoints
 
 When there are updates to a services, care must be taken when deciding whether to deploy the new contract at the same endpoint or to a different endpoint as the changes may affect consuming apps.
 
@@ -693,18 +690,18 @@ We recommend that you use semantic numbering for service versions to maintain a 
 
 In all cases, you are advised to notify all consumers of changes and also new versions deployed to new endpoints. 
 
-# 7 Registering Consumed Endpoints by an App using PUT {#consumed-ep}
+## 7 Registering Consumed Endpoints by an App using PUT {#consumed-ep}
 
 For the app registered in [Section 6](#ex-reg-app),  you can register any datasets that it consumes by providing the endpoint details and the entities (datasets) that it consumes. This is registered in the Catalog and added to the number of **Connections** for the consumed service and also shown in the Data Hub Landscape which will show the network of publishing and consuming app and associated data sources.
 
 **Note:** The PUT call for registering consumed entities will *update* the currently registered datasets for an app/environment. This means that when you want to *add* consumed endpoints to an app (indicating the services the app is consuming), all previously registered consumed endpoints must be included in the request payload of the new request. If the previously registered consumed endpoints are not included, the result will be that they will be *removed*.
 
-## 7.1 Method and Endpoint
+### 7.1 Method and Endpoint
 
 `PUT /applications/{*AppUUID*}/environments/{*EnvironmentUUID*}/consumed-endpoints`
 
 
-## 7.2 Request Parameters and body
+### 7.2 Request Parameters and body
 
 The body of the request must include an array of the objects consumed by the application.
 
@@ -721,21 +718,21 @@ The following is a representation of the request body. (Blue indicates that the 
 
 ![published endpoints mindmap](attachments/data-hub-api-how-to/putconsumedendpointsrequest.png)
 
-## 7.3 POST Response
+### 7.3 POST Response
 
 The 200 OK response returns an array of the consumed endpoints. It will provide the full details of each registered consumed endpoint,  the catalog UUID, and displays the and the total number of connections to it as registered in the Catalog. 
 
-## 7.4 Example: Registering Consumed Endpoints by the Howto5-App
+### 7.4 Example: Registering Consumed Endpoints by the Howto5-App
 
 This example shows how to register that the **Howto5-App** consumes 2 datasets: **Employees** and **Offices** from the service **SAMPLE_EmployeeDirectory**. 
 
 **Note**: For this example, the `Namespace` object for the `consumedItems` is called `DefaultNamespace` which is the default namespace for Mendix services.
 
-### 7.4.1 Base Request URL
+#### 7.4.1 Base Request URL
 
 `{{baseUrl}}/applications/{AppUUID}/environments/{EnvironmentUUID}/consumed-endpoints`
 
-### 7.4.2.  JSON Format Request Body to Register Consuming from SampleDH-App
+#### 7.4.2.  JSON Format Request Body to Register Consuming from SampleDH-App
 
 To register the two consumed entities **Employees** and **Offices** from the HR Sample service at https://hrsampleapp.mendixcloud.com/odata/PubOdataEmployeeDirectory/v1
 
@@ -759,7 +756,7 @@ To register the two consumed entities **Employees** and **Offices** from the HR 
     ]
 }
 
-### 7.4.3 Successful 200 Created Response
+#### 7.4.3 Successful 200 Created Response
 The response that is returned shows the full details of the consumed service as part of the `Endpoints` object. The total number of connections to the service is 43: 
 
 {
@@ -862,7 +859,7 @@ The response that is returned shows the full details of the consumed service as 
 ​    ]
 }
 
-### 7.4.4 Registered service in the Catalog and Data Hub Landscape
+#### 7.4.4 Registered service in the Catalog and Data Hub Landscape
 
 This registration is shown in the Data Hub Landscape for the **SampleDHApp.** It consumes 2 datasets from the **SAMPLE_EmployeeDirectory** service which is deployed from the **HR Sample App.**
 
@@ -876,9 +873,7 @@ When the**SAMPLE_EmployeeDirectory** is viewed in the Data Hub Landscape, **Howt
 
 
 
- 
-
-# 8 Consuming data through Data Hub {#consume-data}
+## 8 Consuming data through Data Hub {#consume-data}
 
 When you want to consume a dataset that is registered in the Data Hub the sequence of steps are as follows:
 
@@ -894,25 +889,24 @@ Search for a specific service using the generic GET call as described in [Search
 - PUT the consumed entities registered in the catalog by the application
 
 
-
-## 8.1 Get all versions and endpoints of a service
+### 8.1 Get all versions and endpoints of a service
 
 You can perform a search to find a particular service with the dataset that you want to use. Before you can do that you must use the GET /applications request to retrieve the UUID of a particular application:
 
 - All the versions and their endpoints for a particular service
 - Identify and retrieve the contract of the service that you want to consume 
 
-### 8.1.1 Method and Endpoint
+#### 8.1.1 Method and Endpoint
 `GET /applications/{AppUUID}/services/{ServiceName}`
 
-### 8.1.2 Request Parameters and body
+#### 8.1.2 Request Parameters and body
 
 | **Name**    | **Type** | **Required/Optional** | **DefaultValue** | **Description**                 |
 | ----------- | -------- | --------------------- | ---------------- | ------------------------------- |
 | AppUUID     | string   | Required              |                  | Catalog UUID for registered app |
 | ServiceName | string   | Required              |                  | Name of Service                 |
 
-### 8.1.3 GET 200 Response
+#### 8.1.3 GET 200 Response
 
 | **Name**     | **Type** | **always returned?** |  **Description**                                              |
 | ------------ | -------- | -------------------- | ------------------------------------------------------------ |
@@ -921,13 +915,13 @@ You can perform a search to find a particular service with the dataset that you 
 | Application  |          | Always               | Will return a collection of objects describing the application |
 | Versions     |          |                      |  For the specified endpoint, the details of the version numbers, the environments they are deployed to and links to the each version number |
 
-### 8.1.4 Example: All Available Services for  `SAMPLE_EmployeeDirectory`
+#### 8.1.4 Example: All Available Services for  `SAMPLE_EmployeeDirectory`
 This request will get all the available services for the service `SAMPLE_EmployeeDirectory` with the appID 30aaf7ca-415f-306d-bd6e-458e6f821f06 that are registered in all environements.
 
-#### 8.1.4.1 Base request URL:
+##### 8.1.4.1 Base request URL:
 `GET /applications/30aaf7ca-415f-306d-bd6e-458e6f821f06/services/SAMPLE_EmployeeDirectory'`
 
-#### 8.1.4.2 Successful 200 OK Response
+##### 8.1.4.2 Successful 200 OK Response
 For the above response there was a single instance of the service found. However, the 1.1.0 version service is deployed to two different environements as defined in the array of `Versions`: the one in the `Production` environment which has 43 connections and a second in the `acceptance` environment which has 0 connections.
 
 {
@@ -1081,8 +1075,7 @@ In the Catalog the following is shown when searching for the same service:
 ![HR service](attachments/data-hub-api-how-to/hr-sample-service-consume.png)
 
 
-
-## 8.2 Retrieve Contract of a Specific Service
+### 8.2 Retrieve Contract of a Specific Service
 
 In order to consume datasets from a service, the contract files must be retrieved from the details registered in the Catalog. This contract can then be loaded in your business application, parsed, and the datasets consumed to create a new application. 
 
@@ -1090,12 +1083,10 @@ The consumed entitysets should then be registered in the Catalog as described in
 
 - [ ] Note about the number of contract files - (for OData v3, two contract files JIRA CAT-645..)
 
-### 8.2.1 Method and Endpoint
+#### 8.2.1 Method and Endpoint
 `GET /applications/{AppUUID}/environments/{EnvironmentUUID}/services/{ServiceName}/{ServiceVersion}`
 
-
-
-### 8.2.2 Request Parameters and body
+#### 8.2.2 Request Parameters and body
 All the parameters that are required in order to retrieve the contract that you want to consume from.  These are returned from the first GET call performed in 8.1 
 
 The `services` parameter requires that the `ServiceName` and the `ServiceVersion` is given.
@@ -1104,7 +1095,7 @@ The `services` parameter requires that the `ServiceName` and the `ServiceVersion
 
 - [ ] ??that is what the response includes the response in the above example shows 1.1.0 in production and acceptance environements. - verify that only the version number is required.
 
-### 8.2.3 Response
+#### 8.2.3 Response
 The response will return a collection of objects definining the service and also the contracts that make up the specific service:
 
 | **Name**    | **Type** | Always returned? | **DefaultValue** | **Description**                                              |
@@ -1116,10 +1107,10 @@ The response will return a collection of objects definining the service and also
 | Services    |          | Always           |                  | For the specified endpoint (application/environment/version) the details of the contract and the links to the Data Hub details. |
 | Contracts   |          | Always           |                  | Collection of objects specifying the contract and the JSON-encoded contents of the contract. <br>Note that for `Type` the type of contract is provided: for OData V3, the accepted types are "ServiceFeed" and "Metadata". For OData V4, the primary contract should be called "Metadata". |
 
-### 8.2.4 Example: Retrieve the SAMPLE_EmployeeDirectory in the Production Environment
+#### 8.2.4 Example: Retrieve the SAMPLE_EmployeeDirectory in the Production Environment
 In 8.1.4.2 two deployments of the **SAMPLE_EmployeeDirectory** (UUID: `30aaf7ca-415f-306d-bd6e-458e6f821f06`) were retrieved by the GET request. From that we want to retrieve the contract that is deployed to the **Production** environment with the UUID `c2fee2c5-00da-4b8b-b3b3-71433b02f064`.
 
-#### 8.2.4.1 Example Base Request URL
+##### 8.2.4.1 Example Base Request URL
 
 `GET '{{baseUrl}}/applications/{{hr-app-uuid}}/environments/{{hr-ser-uuid}}/services/{{hr-ser-name}}/1.1.0'`
 
@@ -1127,7 +1118,7 @@ Inserting the **Production** environment UUID values, the call becomes
 
 `GET applications/30aaf7ca-415f-306d-bd6e-458e6f821f06/environments/c2fee2c5-00da-4b8b-b3b3-71433b02f064/services/SAMPLE_EmployeeDirectory/1.1.0`
 
-#### 8.2.4.2 Successful 200 Response
+##### 8.2.4.2 Successful 200 Response
 
 The 200 OK response returns the full details of the service and includes the two files that make up this OData v3 service. They are given  the  `Type: "ServiceFeed"`  and  the `"Type": "Metadata"`  values.
 
@@ -1195,22 +1186,20 @@ The 200 OK response returns the full details of the service and includes the two
 
 }
 
-
-
-# 9 Sample Contract Files {#sample-contract}
+## 9 Sample Contract Files {#sample-contract}
 
 The following files make up an example OData v3 contract that you can use for in this how-to for the PUT registration service request. The full contract definition is made up of the **service feed** and the **metadata** files. The format provided below is in escaped JSON format contract and you can copy them and directly insert them in the PUT request body.
 
 
-## 9.1 Service Feed {#ex-service}
+### 9.1 Service Feed {#ex-service}
 
 <?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<service xmlns:atom=\"http:\/\/www.w3.org\/2005\/Atom\" xml:base=\"{applicationRootUrl}\/odata\/SAP\/v1\/\" xmlns=\"http:\/\/www.w3.org\/2007\/app\">\r\n  <workspace>\r\n    <atom:title>Default<\/atom:title>\r\n    <collection href=\"Departments\">\r\n      <atom:title>Departments<\/atom:title>\r\n    <\/collection>\r\n    <collection href=\"Employees\">\r\n      <atom:title>Employees<\/atom:title>\r\n    <\/collection>\r\n    <collection href=\"Offices\">\r\n      <atom:title>Offices<\/atom:title>\r\n    <\/collection>\r\n  <\/workspace>\r\n<\/service>
 
-## 9.2 Metadata {#ex-metadata}
+### 9.2 Metadata {#ex-metadata}
 
 <?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<edmx:Edmx Version=\"1.0\" xmlns:edmx=\"http:\/\/schemas.microsoft.com\/ado\/2007\/06\/edmx\" xmlns:mx=\"http:\/\/www.mendix.com\/Protocols\/MendixData\">\r\n  <edmx:DataServices m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\" xmlns:m=\"http:\/\/schemas.microsoft.com\/ado\/2007\/08\/dataservices\/metadata\">\r\n    <Schema Namespace=\"DefaultNamespace\" xmlns=\"http:\/\/schemas.microsoft.com\/ado\/2009\/11\/edm\">\r\n      <EntityType Name=\"Department\">\r\n        <Key>\r\n          <PropertyRef Name=\"ID\" \/>\r\n        <\/Key>\r\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" \/>\r\n        <Property Name=\"Number\" Type=\"Edm.Int64\" \/>\r\n        <Property Name=\"Name\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"Color\" Type=\"Edm.String\" \/>\r\n        <NavigationProperty Name=\"Employees\" Relationship=\"DefaultNamespace.Employee_Department\" FromRole=\"Department\" ToRole=\"Employees\" \/>\r\n      <\/EntityType>\r\n      <EntityType Name=\"Employee\">\r\n        <Key>\r\n          <PropertyRef Name=\"ID\" \/>\r\n        <\/Key>\r\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" \/>\r\n        <Property Name=\"firstName\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"lastName\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"email\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"phone\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"street\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"city\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"zip\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"country\" Type=\"Edm.String\" \/>\r\n        <NavigationProperty Name=\"Department\" Relationship=\"DefaultNamespace.Employee_Department\" FromRole=\"Employees\" ToRole=\"Department\" \/>\r\n        <NavigationProperty Name=\"Office\" Relationship=\"DefaultNamespace.Employee_Office\" FromRole=\"Employees\" ToRole=\"Office\" \/>\r\n      <\/EntityType>\r\n      <EntityType Name=\"Office\">\r\n        <Key>\r\n          <PropertyRef Name=\"ID\" \/>\r\n        <\/Key>\r\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" \/>\r\n        <Property Name=\"Number\" Type=\"Edm.Int64\" \/>\r\n        <Property Name=\"Name\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"Street\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"StreetNumber\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"ZIP\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"City\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"Country\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"CountryCode\" Type=\"Edm.String\" \/>\r\n        <NavigationProperty Name=\"Employees\" Relationship=\"DefaultNamespace.Employee_Office\" FromRole=\"Office\" ToRole=\"Employees\" \/>\r\n      <\/EntityType>\r\n      <Association Name=\"Employee_Department\">\r\n        <End Type=\"DefaultNamespace.Employee\" Multiplicity=\"*\" Role=\"Employees\" \/>\r\n        <End Type=\"DefaultNamespace.Department\" Multiplicity=\"0..1\" Role=\"Department\" \/>\r\n      <\/Association>\r\n      <Association Name=\"Employee_Office\">\r\n        <End Type=\"DefaultNamespace.Employee\" Multiplicity=\"*\" Role=\"Employees\" \/>\r\n        <End Type=\"DefaultNamespace.Office\" Multiplicity=\"0..1\" Role=\"Office\" \/>\r\n      <\/Association>\r\n      <EntityContainer Name=\"SAP\/v1Entities\" m:IsDefaultEntityContainer=\"true\">\r\n        <EntitySet Name=\"Departments\" EntityType=\"DefaultNamespace.Department\" \/>\r\n        <EntitySet Name=\"Employees\" EntityType=\"DefaultNamespace.Employee\" \/>\r\n        <EntitySet Name=\"Offices\" EntityType=\"DefaultNamespace.Office\" \/>\r\n        <AssociationSet Name=\"Employee_Department\" Association=\"DefaultNamespace.Employee_Department\">\r\n          <End Role=\"Employees\" EntitySet=\"Employees\" \/>\r\n          <End Role=\"Department\" EntitySet=\"Departments\" \/>\r\n        <\/AssociationSet>\r\n        <AssociationSet Name=\"Employee_Office\" Association=\"DefaultNamespace.Employee_Office\">\r\n          <End Role=\"Employees\" EntitySet=\"Employees\" \/>\r\n          <End Role=\"Office\" EntitySet=\"Offices\" \/>\r\n        <\/AssociationSet>\r\n      <\/EntityContainer>\r\n    <\/Schema>\r\n  <\/edmx:DataServices>\r\n<\/edmx:Edmx>
 
-# 10 Read More
+## 10 Read More
 - [The Data Hub AP](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis)I 
 
   

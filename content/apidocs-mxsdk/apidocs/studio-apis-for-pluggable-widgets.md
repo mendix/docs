@@ -85,7 +85,7 @@ This property appears as follows:
 ```
 type WidgetsProperty = {
     widgetCount: number;
-    renderer: ComponentType<{caption?: string}>;
+    renderer: React.ComponentType<{caption?: string}>;
 }
 ```
 

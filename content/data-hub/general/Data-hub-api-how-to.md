@@ -45,7 +45,7 @@ Before starting this how-to, make sure you have completed the following:
 
   - Search for registered assets (data sources, datasets, attributes and associations) in the Catalog using GET /data
   - Registering datasets:
-	Registering datasets involves registering the data source (OData services) that the dataset is exposed in. The following requests in the given order:
+	Registering datasets involves registering the data source (OData services) that the dataset is exposed in. The following requests must be made in the given order using the returned UUID values for the subsequent requests:
 		1. Application that the dataset originates from: POST application
 		2. Environment that the dataset is deployed to: POST environment
 		3. Register the published services (data source) of the application: PUT
@@ -130,7 +130,7 @@ The endpoints (which are the data sources (services)) that are returned in the `
 The objects that are returned in the response  for  `Data` are shown in the representation below. (The blue indicates that the constituent objects are a collection, the red an array, and the solid outline indicates if the object is always returned.) For full details of objects that define the arrays and collections, refer to the  [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/). 
 
 - [ ]  the table is not really necessary here as users can see the full details in the spec, however it does show at a glance what default values are etc.  The mind-map below shows the essence of the calls - can it be made clearer by adding the default values??? should it go down to a deeper level?
-- [ ] Which is the more useful for users?
+- [ ] Which is the more useful representation of objects are hierarchy for users? Should the tree rep. contain further info such as type and default??
 
 
 
@@ -312,12 +312,7 @@ To register a data source to Data Hub you must register the following in the giv
 
 [Section 7](#consumed-ep) decribes how to register applications that consume a registered data source.
 
-An example Odata v3 service called  **DataHub_Sample_1.0.0_OData3**  is provided in [Section 9](#consumed-ep) which you can use for this how-to.  The service is defined by the two files:
-
-- metadata.xml
-- serviceFeed.xml
-
-Both files are necessary to provide the full service defintion and must be provided when registering the service.
+An example Odata v3 service called  **DataHub_Sample_1.0.0_OData3**  is provided in [Section 9](#consumed-ep) which you can use for this how-to.  The service is defined by the metadata.xml file.
 
 **Note:** OData service contract files must be included in the request body in escaped JSON format. There are several online converters available for converting your *.xml* files into this format such as one available from [Freeformatter.com](https://www.freeformatter.com/json-escape.html#ad-output). Just paste the contents of your files and convert them to the escaped format.  
 
@@ -546,10 +541,7 @@ In this example call, the service **5how-toODatav3-sample-service** is registere
 
 Two tags, `odata` and `sample` are defined as part of the registration.
 
-For the `Contracts` object you can use the example OData v3 contract that is made up of two files supplied with this how-to in Section 8 [Sample Contract](#sample-contract): 
-
-    - “Type”: “ServiceFeed” 
-    - “Type”: “Metadata”
+For the `Contracts` object you can use the example OData v3 contract in Section 8 [Sample Contract](#sample-contract):  ` “Type”: “Metadata”`
 
 ##### 6.3.4.1 Base Request URL
 
@@ -558,7 +550,7 @@ For the `Contracts` object you can use the example OData v3 contract that is mad
 ##### 6.3.4.2.  JSON format request body for the `Endpoints` **Object**
 Each of the files that are used in this example have been provided in escaped JSON format in [Section 8: Sample Contract](#sample-contract). 
 
-**Note:**  For conciseness the contents of the two contract files are not included in the following payload - they are respresented as  <*insert service feed from:[service feed](#ex-service)>* and *<Insert example metadata from [metadata](#ex-metadata) >*.  You must insert the example contract files provided in Section 8 for the strings for these strings, or alternatively use your own contract files - in escaped JSON format.
+**Note:**  For conciseness the contents of the contract files not included in the following payload - it is respresented as  *<Insert example metadata from [metadata](#ex-metadata) >*.  You must insert the example contract file provided in Section 8 for the strings for this string, or alternatively use your own contract files - in escaped JSON format.
 
 {
     "Endpoints": [
@@ -598,12 +590,8 @@ Each of the files that are used in this example have been provided in escaped JS
                 },
                 "Contracts": [
                     {
-                        "Type": "ServiceFeed",
-                        "Value": "<*insert service feed from:[service feed](#ex-service)>*"
-                    },
-                    {
                         "Type": "Metadata",
-                        "Value": "<Insert example metadata from [metadata](#ex-metadata) >"
+                        "Value": "<Insert example metadata from [metadata](#ex-metadata) >
                     }
                 ]
             }
@@ -651,7 +639,7 @@ For the above request the following 200 OK response is received to provide the r
 
 ​            "Connections": 0,
 
-​            "LastUpdated": "2021-03-22T12:59:59.385Z",
+​            "LastUpdated": "2021-03-22T13:19:53.306Z",
 
 ​            "ServiceVersion": {
 
@@ -726,6 +714,8 @@ For the above request the following 200 OK response is received to provide the r
 ​        }
 
 ​    ]
+
+}
 
 }6.3.4.4 Registered Service in the the Data Hub Catalog and Landscape {#ex-service-reg}
 
@@ -1272,16 +1262,11 @@ The 200 OK response returns the full details of the service and includes the two
 
 }
 
-## 9 Sample Contract Files {#sample-contract}
+## 9 Sample Contract File {#sample-contract}
 
-The following files make up an example OData v3 contract that you can use for in this how-to for the PUT registration service request. The full contract definition is made up of the **service feed** and the **metadata** files. The format provided below is in escaped JSON format contract and you can copy them and directly insert them in the PUT request body.
+The following file is an example OData v3 contract that you can use for in this how-to for the PUT registration service request. The format provided below is in escaped JSON format contract and you can copy it and directly insert it in the PUT request body.
 
-
-### 9.1 Service Feed {#ex-service}
-
-<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<service xmlns:atom=\"http:\/\/www.w3.org\/2005\/Atom\" xml:base=\"{applicationRootUrl}\/odata\/SAP\/v1\/\" xmlns=\"http:\/\/www.w3.org\/2007\/app\">\r\n  <workspace>\r\n    <atom:title>Default<\/atom:title>\r\n    <collection href=\"Departments\">\r\n      <atom:title>Departments<\/atom:title>\r\n    <\/collection>\r\n    <collection href=\"Employees\">\r\n      <atom:title>Employees<\/atom:title>\r\n    <\/collection>\r\n    <collection href=\"Offices\">\r\n      <atom:title>Offices<\/atom:title>\r\n    <\/collection>\r\n  <\/workspace>\r\n<\/service>
-
-### 9.2 Metadata {#ex-metadata}
+### Metadata {#ex-metadata}
 
 <?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<edmx:Edmx Version=\"1.0\" xmlns:edmx=\"http:\/\/schemas.microsoft.com\/ado\/2007\/06\/edmx\" xmlns:mx=\"http:\/\/www.mendix.com\/Protocols\/MendixData\">\r\n  <edmx:DataServices m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\" xmlns:m=\"http:\/\/schemas.microsoft.com\/ado\/2007\/08\/dataservices\/metadata\">\r\n    <Schema Namespace=\"DefaultNamespace\" xmlns=\"http:\/\/schemas.microsoft.com\/ado\/2009\/11\/edm\">\r\n      <EntityType Name=\"Department\">\r\n        <Key>\r\n          <PropertyRef Name=\"ID\" \/>\r\n        <\/Key>\r\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" \/>\r\n        <Property Name=\"Number\" Type=\"Edm.Int64\" \/>\r\n        <Property Name=\"Name\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"Color\" Type=\"Edm.String\" \/>\r\n        <NavigationProperty Name=\"Employees\" Relationship=\"DefaultNamespace.Employee_Department\" FromRole=\"Department\" ToRole=\"Employees\" \/>\r\n      <\/EntityType>\r\n      <EntityType Name=\"Employee\">\r\n        <Key>\r\n          <PropertyRef Name=\"ID\" \/>\r\n        <\/Key>\r\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" \/>\r\n        <Property Name=\"firstName\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"lastName\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"email\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"phone\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"street\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"city\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"zip\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"country\" Type=\"Edm.String\" \/>\r\n        <NavigationProperty Name=\"Department\" Relationship=\"DefaultNamespace.Employee_Department\" FromRole=\"Employees\" ToRole=\"Department\" \/>\r\n        <NavigationProperty Name=\"Office\" Relationship=\"DefaultNamespace.Employee_Office\" FromRole=\"Employees\" ToRole=\"Office\" \/>\r\n      <\/EntityType>\r\n      <EntityType Name=\"Office\">\r\n        <Key>\r\n          <PropertyRef Name=\"ID\" \/>\r\n        <\/Key>\r\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" \/>\r\n        <Property Name=\"Number\" Type=\"Edm.Int64\" \/>\r\n        <Property Name=\"Name\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"Street\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"StreetNumber\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"ZIP\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"City\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"Country\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"CountryCode\" Type=\"Edm.String\" \/>\r\n        <NavigationProperty Name=\"Employees\" Relationship=\"DefaultNamespace.Employee_Office\" FromRole=\"Office\" ToRole=\"Employees\" \/>\r\n      <\/EntityType>\r\n      <Association Name=\"Employee_Department\">\r\n        <End Type=\"DefaultNamespace.Employee\" Multiplicity=\"*\" Role=\"Employees\" \/>\r\n        <End Type=\"DefaultNamespace.Department\" Multiplicity=\"0..1\" Role=\"Department\" \/>\r\n      <\/Association>\r\n      <Association Name=\"Employee_Office\">\r\n        <End Type=\"DefaultNamespace.Employee\" Multiplicity=\"*\" Role=\"Employees\" \/>\r\n        <End Type=\"DefaultNamespace.Office\" Multiplicity=\"0..1\" Role=\"Office\" \/>\r\n      <\/Association>\r\n      <EntityContainer Name=\"SAP\/v1Entities\" m:IsDefaultEntityContainer=\"true\">\r\n        <EntitySet Name=\"Departments\" EntityType=\"DefaultNamespace.Department\" \/>\r\n        <EntitySet Name=\"Employees\" EntityType=\"DefaultNamespace.Employee\" \/>\r\n        <EntitySet Name=\"Offices\" EntityType=\"DefaultNamespace.Office\" \/>\r\n        <AssociationSet Name=\"Employee_Department\" Association=\"DefaultNamespace.Employee_Department\">\r\n          <End Role=\"Employees\" EntitySet=\"Employees\" \/>\r\n          <End Role=\"Department\" EntitySet=\"Departments\" \/>\r\n        <\/AssociationSet>\r\n        <AssociationSet Name=\"Employee_Office\" Association=\"DefaultNamespace.Employee_Office\">\r\n          <End Role=\"Employees\" EntitySet=\"Employees\" \/>\r\n          <End Role=\"Office\" EntitySet=\"Offices\" \/>\r\n        <\/AssociationSet>\r\n      <\/EntityContainer>\r\n    <\/Schema>\r\n  <\/edmx:DataServices>\r\n<\/edmx:Edmx>
 

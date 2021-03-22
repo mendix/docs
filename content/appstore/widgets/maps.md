@@ -42,11 +42,23 @@ If you want to show the user's location on the map, this can be enabled under **
 
 Under the **Controls** properties tab, the following settings can be adjusted that are related to how the users interacts with the map:
 * **Drag**: When enabled, the map will move along when dragging the map.
-* **Scroll to zoom**: When enabled, the user can change the zoom level of the map by mouse scrolling.
+* **Scroll to zoom**: When enabled, the user can change the zoom level of the map by mouse scrolling.*
 * **Zoom**: When enabled, additional control buttons will be showed on the map
 * **Attribution**: When enabled, attributions will be shown at the bottom of the map (credits).
 
+If you're using Google Maps provider, there will be some additional controls available:
+* **Street view**: When enabled, the user will have an icon button available in the bottom right corner to view the map in Google's street view mode.
+* **Map type**: When enabled, the user will be provided control buttons in the top left corner to change the type of the map. Options available are **Map**, with or without a **Terrain** layer, and **Satellite**, with or without a **Labels** layer. By default this is set to **Map** without the **Terrain** layer.
+* **Full screen**: When enabled, the user will have an icon button available in the top right corner to view the map in full screen.
+
+_\* - When using the Google Maps provider, the **scroll to zoom** setting requires the **drag** setting to be enabled in order to work._
+
 ### Dimensions
+
+Under the **Dimensions** properties tab, the following settings can be adjusted that are related to dimensional aspects of the map widgets:
+* **Width unit** and **Width**: The width of the widget in relation to the rest of the elements on the page. The available options for unit are _Percentage_ and _Pixels_. The width can then be set as an appropriate CSS value. These two properties need to be used together to work.
+* **Height unit** and **Height**: The height of the widget in relation to the rest of the elements on the page. The available options for unit are _Percentage of width_, _Pixels_, and _Percentage of parent_. The height can then be set as an appropriate CSS value. These two properties need to be used together to work.
+* **Zoom level**: The starting zoom level of the map. Options are: Automatic, World, Continent, City, Street, and Buildings.
 
 ## 3 Previous Versions' Documentation
 

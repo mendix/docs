@@ -581,19 +581,56 @@ Integrating all systems - what do I need?
 
 # 6 **Data Steward - Data Policy**
 
-Data curation can also be described as the process of adding value to data. A data-driven organization will naturally want to maximize the  value of that data. Therefore, establishing people, processes and tools  for data curation should be a part of any technical manager’s plans.  This may mean establishing strict rules about which data can and should  be used, as well as putting [business rules](https://vimeo.com/197560663/b61ef781f7) or other metrics in place that apply to all data sets no matter where they physically reside.
+## 6.1 Governance
 
-[Data curation](http://go.alation.com/datacuration.wp-a)  was much more manageable when enterprises only had a few data sources to extract data from. Today though, with the proliferation of big data and need to integrate an organizations business applications, enterprises have many more disparate data sources to extract data from,  making it much more difficult to maintain a consistent method for curating data. Further complicating the problem is the fact that much of today’s data  is created in an ad hoc way that can’t be anticipated by the people  intended to use data for analysis.
+In a Data Hub, **data governance** principles should be applied. 
+
+Governance in an organization is to ensure that the data quality and reliability of shared data sources exists throughout the complete lifecycle of the data, and that data controls are implemented that support the business objectives.  
+
+Data governance includes:
+
+*  availability, 
+*  usability, 
+*  consistency,
+*  data integrity
+*  data security
+
+Governance also encompasses establishing processes to ensure effective data management throughout the enterprise such as accountability for the adverse  effects of poor data quality and ensuring that the data which an  enterprise has can be used by the entire organization.
+
+ It provides data management practices with the necessary  foundation, strategy, and structure to ensure that data is  managed as an **asset** and transformed into **meaningful information**
+
+The goals of data governance include:
+
+- Increasing consistency and confidence in decision making
+- Improving data security 
+- Defining and verifying the requirements for data distribution policies
+- Maximizing the income generation potential of data
+- Designating accountability for information quality
+- Minimizing or eliminating re-work
+
+By applying controlled data goverance process, an organization can gain control of their data and better harness the potential of the techology they use.
+
+A data steward is a role that ensures that data governance processes are followed and  that guidelines enforced, as well as recommending improvements to data  governance processes.
+
+## 6.2 Data Curation
+
+Data curation is a term used for managing data and collections of that to makes it more useful for users to find the correct data discovery and to categorize and analyze it.  Traditional librarians (yes physical books) curate their collections by organizing them into different categories and indexing them so that they can be found depending on a users search requirements. Museam curators, do the same with the artifacts that they have to manage. Indexing, categorizing, and ensuring that the correct item is properly labelled, described and can be found. 
+
+The work of a Data Hub curator is the same, managing data that originates from many sources. The role of a curator can be as extensive as the on-going management of data through its life-cycle and level of interest and usefulness to (potential) user. Curation activities include enabling data discovery and retrieval, maintaining  quality, adding value, and maintenance for re-use over a period of  time.
+
+Data curation can also be described as the process of adding value to data. A data-driven organization will naturally want to maximize the  value of that data. Therefore, establishing people, processes and tools  for data curation should be a part of any technical manager’s plans.  This may mean establishing strict rules about which data can and should  be used, as well as putting business rulesor other metrics in place that apply to all data sets no matter where they physically reside.
+
+Data curation is a necessary  for any organization that wants to provides data consumers with a faster on-ramp to the data..
 
 The role of a Data Steward is to define the data sharing policy of the organisation. Data curators carry out the policy in practice for the data sources that they manage.
 
-In practice, data curation is about maintaining and  managing the metadata.  The process of data curation revolves around ingesting  metadata.  Data curators not only create, manage, and  maintain data, but may also be involved in determining best practices for working with that data. 
+In practice, data curation is about maintaining and  managing the metadata.  The process of data curation revolves around ingesting metadata.  Data curators not only create, manage, and  maintain data, but may also be involved in determining best practices for working with that data. 
 
 Defining which data sources and data sets are the most useful is the job of the data curator who keeps an overview of the data sharing landscape of the organization. While some rules of  thumb and best practices apply, the data curator must make an educated  decision about which data assets are appropriate to use.
 
 ## Data Hub Catalog
 
-In a modern data catalog, all of this [metadata](https://www.alation.com/metadata/) is collected along with information about the assets themselves and  organized within a catalog interface that can be more readily searched and  browsed than locating the sources across the different applications. Establish Organization’s Data-sharing policy
+In a modern data catalog, all of this metadata is collected along with information about the assets themselves and  organized within a catalog interface that can be more readily searched and  browsed than locating the sources across the different applications. Establish Organization’s Data-sharing policy
 
 - - Company
     - Departmental

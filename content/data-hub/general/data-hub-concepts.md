@@ -13,50 +13,17 @@ tags: ["data hub catalog", "data hub", "virtual entities", "landscape", "publish
 
 Describes concepts behind using the Mendix Data Hub and sharing datasets.
 
-R
+Data Hub makes it simpler to use data between Apps. Catalog allows governance of which data is used by whom, and life cycle management informing people of changes, and with good versioning of OData contracts.
 
+##  1.1 The Role of a Data Hub in an Organization
 
-
-#  2 Overview of using Data Hub to share data sources 
-
-A visual example:
-
-![image-20210313122809029](./attachments/introducingDH/overview-processes.png)
-
-* Customer information is created in the Sales App. 
-
-* Different parts of that information needs to be used in other Apps -**Delivery App** and **Invoicing APP**.
-
-- Each app builds around the shared data with their own Customer information relevant to their particular scope of functionality
-- Changes to the shared dataset from **Sales APP** will be reflected in the other apps.  
-
-## 2.2 Using Data Hub to Share Data - an example
-
-1. Developer of **Sales APP** has Customer data in his App which he wants share with the rest of the company.  The developer publishes useful groups of entities (datasets) in an **OData v3 service**. 
-   
-2. The developer organizes the **datasets** into groups which are published services in different services oriented towards specific use cases. Not all of the information is necessary, or should be shared, so only the **entitysets**,  **attributes** and also the **associations**  entities are published in the services.
-
-3. In Data Hub, the developer who is the **technical owner** or the **curator** of the department curates the registered assets to add **tags** that also indicate the relevancy of the data to different users. They may also indicate that this is the "official", "reliable" datasets by setting the sources as **validated**.
-
-4. Developers of the **Delivery APP** and **Invoicing APP** discover the the customer datasets for their specific requirements.  
-   1. They qualify the datasets by examining the originating app and the *quality* of the data.  
-   2. In Mendix Studio Pro each developer drags the required entities from the published services into the Domain Model and can immediately start using them in their app modeling. The service contract is consumed, but only the required entities are accessed.
-   3. The consumed entities can be edited to only include attributes and associations that are required for the consuming app. Other fields that can be removed. 
-   4. The consumed entities are available in all Microflows and UX components as if they were part of his own Domain Model (practically removing the need to build a dedicated integration when accessing objects in other Apps that would be required when if Data Hub was not used).
-
-   3. During run-time, when the end of **Delivery APP** and **Invoicing APP** do something that requires the **Customer** data, it is automatically retrieved from **Sales APP** in real-time. Filtering, paging and selecting in the protocol itself and only the requested fields and records are retrieved. 
-
-This makes it simpler to use data between Apps, and the Catalog allows governance of which data is used by whom, and life cycle management informing people of changes, and with good versioning of OData contracts.
-
-##  2.3 The Role of a Data Hub in an Organization
-
-·The Catalog is the hub in the collaboration, discovery and connection of an organizations data source.   It catalogs microservices from the organization's business applications systems using OData contracts. The Data Hub can already import OData contracts from 3rd party systems such as Teamcenter, SAP & Microsoft and OData v4services from other business applications.
+The Catalog is the hub in the collaboration, discovery and connection of an organizations data source.   It catalogs microservices from the organization's business applications systems using OData contracts. The Data Hub can already import OData contracts from 3rd party systems such as Teamcenter, SAP & Microsoft and OData v4services from other business applications.
 
 The Data Hub facilitates an integration mechanism, where architects and lead developers can define data that is available and what the data means. Citizen Developers?? can use the data easily, ??and where impact analysis for who uses which data is out of the box??.
 
 In the current format OData is supported, but ??soon also e.g. REST Swagger files can be imported??, 
 
-## 2.4 DataHub Features
+## 1.2 DataHub Features
 
 The following base features of DataHub:
 
@@ -71,6 +38,58 @@ The following base features of DataHub:
 - Information on number of consumers of an API, understand when you can resign an API and who to inform 
 
 Data hub presents the data in a  visual format in Landscape and also shows the popularity of datarouces on it home page. dashboard or report.
+
+#  2 Overview of using Data Hub to share data sources 
+
+A visual example:
+
+![image-20210313122809029](./attachments/introducingDH/overview-processes.png)
+
+* Customer information is created in the Sales App. 
+
+* Different parts of that information needs to be used in other Apps -**Delivery App** and **Invoicing APP**.
+
+- Each app builds around the shared data with their own Customer information relevant to their particular scope of functionality
+- Changes to the shared dataset from **Sales APP** will be reflected in the other apps.  
+
+## 2.2 Using Data Hub to Share Data - An Example
+
+### 2.2.1 Creating and App and Sharing Datasets
+
+1. Developer of **Sales APP** has Customer data in his App which he wants share with the rest of the company.  The developer publishes useful groups of entities (datasets) in an **OData v3 service**. 
+2. The developer organizes the **datasets** into groups which are in different services oriented towards specific use cases. Not all of the information is necessary, or should be shared, so only the **entitysets**,  **attributes** and also the **associations**  entities are published in the services.
+3. The developer assigns a **version number** to each service that is deployed in each **environment** that the app is deployed to.
+4. Upon **deployment**, the services are automatically **registered** in Data Hub
+5. In Data Hub, the developer who is the **technical owner** or the **curator** of the department **curates** the registered assets to enhance the **metadata** and add  **tags** that also indicate the relevancy of the data to different users. They may also indicate, for example, that datasets are the "official", "reliable" datasets by setting the sources as **validated**.
+6. Developers of the **Delivery APP** and **Invoicing APP** discover the the customer datasets for their specific requirements in the Data Hub Catalog.
+7. They qualify the datasets by examining the originating app and the *quality* of the data from the **Metadata** that is displayed.
+8. In Mendix Studio Pro the developers, using the **Data Hub Pane**, drag the required entities from the published services into the domain model and can immediately start using them in their app modeling. The **OData service contract** is consumed, but only the required entities are accessed and displayed as **external entities** in the domain model. 
+9. Depending on the stage of development, the consuming developers will data sources deployed to **non-production** environments to fully test out their modeling, and for the final deployed app, they will consume services in the  **production** environments.
+10. During the app modelling, the **external entities** entities can be edited to only include attributes and associations that are required by the consuming app. Other fields that can be removed. 
+11. The **consumed entities** are available in all microflows and UX components as part of the consuming apps Domain Model.
+12. During run-time, when the end users of the **Delivery APP** and **Invoicing APP** do something that requires the **Customer** data, it is automatically retrieved from **Sales APP** in **real-time**. Filtering, paging and selecting in the protocol itself and only the requested fields and records are retrieved. 
+
+### 2.2.1 Updating the Publishing App
+
+1. When the developer of **SalesAPP** makes changes in the app such as adding attributes to entities, changing associations, deleteing entities, he must decide if the services that are currently published should be updated.
+
+2. Using **semantic numbering** the severity of the changes are indicated to ensure that consuming apps will not "break". 
+
+3. For **minor** version changes the developer must also decide if he deploys an updated service to the same **endpoint**, and thereby overwrite the current contracts, or if he deploys to a different endpoint.  While *every* change to consumed services should be indicated by a version change, and deployed to a different endpoint (for traceability). The following rule of thumb can also be considered:
+
+   1.  If there if are minor *additions* which will not break any consuming apps, the new contract  *could* be deployed to the same endpoint. This will automatically update consuming apps.
+   2. Any major changes and *deletions* should always be located at a different endpoint.
+	In both cases, consumers should be notified. 
+
+4. **Major** version changes should alway be indicated by a new service, deployed to a different endpoint. In this case the registration in the Catalog will show all the available versions at the different endpoints.
+
+5. All deployments of data sources to the different endpoints must be curated to ensure that the right users can find it.
+
+6. In Mendix Studio Pro, consumers of the data sources can then **update** the contracts of consumed when a different contract is detected at the same endpoint. When there are several versions of the same service deployed to different endpoints, the Studio Pro user can **Switch** to a different endpoint.    
+
+   
+
+
 
 ## Popularity of Data Sources
 
@@ -90,23 +109,21 @@ assigns curators
 
 
 
-# Curation
+
+
+# Curation  and Governance
 
 ## What is Data Curation?
 
-Data curation is a term used for managing data and collections of that to makes it more useful for users to find the correct data discovery and to categorize and analyze it.  Traditional librarians (yes physical books) curate their collections by organizing them into different categories and indexing them so that they can be found depending on a users search requirements. Museam curators, do the same with the artifacts that they have to manage. Indexing, categorizing, and ensuring that the correct item is properly labelled, described and can be found. 
+In practice, data curation is about maintaining and  managing the metadata.  The process of data curation revolves around ingesting metadata.  Data curators not only create, manage, and  maintain data, but may also be involved in determining best practices for working with that data. 
 
-The work of a Data Hub curator is the same, managing data that originates from many sources. The role of a curator can be as extensive as the on-going management of data through its life-cycle and level of interest and usefulness to (potential) user. Curation activities include enabling data discovery and retrieval, maintaining  quality, adding value, and maintenance for re-use over a period of  time.
+Defining which data sources and data sets are the most useful is the job of the data curator who keeps an overview of the data sharing landscape of the organization. While some rules of  thumb and best practices apply, the data curator must make an educated  decision about which data assets are appropriate to use.
 
-Data curation can also be described as the process of adding value to data. A data-driven organization will naturally want to maximize the  value of that data. Therefore, establishing people, processes and tools  for data curation should be a part of any technical manager’s plans.  This may mean establishing strict rules about which data can and should  be used, as well as putting [business rules](https://vimeo.com/197560663/b61ef781f7) or other metrics in place that apply to all data sets no matter where they physically reside.
-
-Data curation is a necessary endeavor for any organization attempting to enable [self-service analytics](http://go.alation.com/eckerson-group-data-marketplaces-feb-2017) because it provides data consumers with a faster on-ramp to the data  that they need to make intelligent business decisions that impact the  enterprise.
-
-## 
+ 
 
 ## What is the Role of a Data Curator?
 
-Curation activities are carried out by the Data Hub Administrator and assigned Data Hub Curators. In addition, data source owners also have curation rights over the datasets that they own. 
+The curator, maintains the assets in Data Hub. Depending on the organization, curators can be assigned to oversee registered assets for a department, by category, by function. Curation activities are carried out by the Data Hub Administrator and assigned Data Hub Curators. In addition, data source owners also have curation rights over the datasets that they own. 
 
 ## Curating Assets
 

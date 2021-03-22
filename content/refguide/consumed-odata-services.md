@@ -41,13 +41,11 @@ You can create associations between local [persistable entities](persistability#
 
 When an external entity is dragged into the domain model, the  **Consumed Odata** document that is added to the model will display the values of the metadata contract from the service endpoint.
 
-In the **Data Hub** pane the service and the entity will be shown as consumed both in the search results pane and also in the **Project** panels. 
+In the **Data Hub** pane the service and the entity will be shown as consumed both in the search results pane and also in the **Project** pane. 
 
-If the metadata contract at the specified service endpoint is different to the contract in the current project model, this will be indicated in the **Data Hub** pane search results and  **Properties** pane for the service with a blue **Update** arrow: 
+If the metadata contract at the specified service endpoint is different to the contract in the current project model, this will be indicated in the **Data Hub** pane search results and  **Project** pane for the service with a blue **Update** arrow: 
 
 ![Data Hub Pane update](attachments/data-hub-pane/data-hub-pane-update.png)
-
-![update service project-pane](attachments/consumed-odata-service/project-pane-update-available.png)
 
 This means that the consumed service will have to be **Updated** to the new contract. If this is not done, then this will result in errors when data has to be retrieved from the endpoint based on an outdated contract. Changes in consumed OData service contracts is further described in [Updating or Switching a Consumed OData Service](consumed-odata-service#updating).
 

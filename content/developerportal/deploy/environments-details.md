@@ -9,7 +9,7 @@ tags: ["Deploy","App","Environment","Developer Portal"]
 
 ## 1 Introduction
 
-To enter the **Environment details** page, go to the [Developer Portal](http://home.mendix.com), select your licensed app, click **Environments**, and then click **Details** on the specific environment. 
+To enter the **Environment details** page, go to the [Developer Portal](http://sprintr.home.mendix.com), select your licensed app, click **Environments**, and then click **Details** on the specific environment. 
 
 ![](attachments/environments-details/environment-details.png)   
 

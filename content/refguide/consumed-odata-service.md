@@ -25,7 +25,7 @@ The **Consumed OData Service** document that is added to the project displays th
 	{{% alert type="info" %}} Studio Pro will always show the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Data Hub search and **Project**  pane, when a different contract is detected at the service end-point, this will be indicated with an update arrow for the service. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document. {{% /alert %}} 
 
 	{{% alert type="info" %}}In the **Data Hub** pane consumed services that have an available **Update** will have an update arrow to indicate this:<br />
-	![update service data hub pane](attachments/consumed-odata-service/data-hub-pane-update-available.png)
+	![update data hub pane](./attachments/data-hub-pane/data-hub-pane-update.png)
 	{{% /alert %}} 
 
 ### 2.1 Connection Tab

@@ -80,7 +80,7 @@ kubectl -n {namespace} scale deployment mendix-operator --replicas=0
 If you have installed the cluster in Connected mode, stop the deployed `mendix-agent` (replace `{namespace}` with the namespace where the Mendix Agent is deployed):
 
 ```shell
-kubectl -n {namespace} scale deployment mendix-agenr --replicas=0
+kubectl -n {namespace} scale deployment mendix-agent --replicas=0
 ```
 
 #### 3.2.3 Apply the Upgrade Patches
@@ -88,7 +88,7 @@ kubectl -n {namespace} scale deployment mendix-agenr --replicas=0
 Run the following command to upgrade Custom Resource Definitions for the Mendix Operator:
 
 ```shell
-kubectl apply -f crds_manifest.yaml
+kubectl apply -f crds.manifest.yaml
 ```
 
 [Custom Resource Definitions](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) allow Mendix applications to be managed with Kubernetes APIs and tools such as `kubectl` and `oc`.

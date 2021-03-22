@@ -64,7 +64,7 @@ To migrate your app from a v3 node to a v4 node in the Mendix Cloud, follow the 
 
 First, link one of the new temporary apps to the cloud v4 node.
 
-1.  In the [Developer Portal](http://home.mendix.com), go to **Apps** and select one of your temporary apps.
+1.  In the [Developer Portal](http://sprintr.home.mendix.com), go to **Apps** and select one of your temporary apps.
 
 2.  Once you are in the app, go to the **Environments** tab in the left menu.
 
@@ -134,7 +134,7 @@ To learn how to do this, see [How to Deploy the App to an Environment](mendix-cl
 
 It is not possible to explicitly unlink an app from a licensed node. The only way to do this is to connect another app to the licensed node; this will unlink the existing app automatically. To do this, perform the following steps.
 
-1. In the [Developer Portal](http://home.mendix.com), go to **Apps** and select the second blank app you created (not the one you have linked to the v4 node).
+1. In the [Developer Portal](http://sprintr.home.mendix.com), go to **Apps** and select the second blank app you created (not the one you have linked to the v4 node).
 
 2.  Once you are in the app, go to the **Environments** tab in the left menu.
 
@@ -152,7 +152,7 @@ Follow these steps to link the app you detached from the v3 node, above, to the 
 Make sure you have downloaded the latest backup and deployment package before linking your app to the v4 node.
 {{% /alert %}}
 
-1.  In the [Developer Portal](http://home.mendix.com), go to **Apps** and select the app that has been detached from the v3 node.
+1.  In the [Developer Portal](http://sprintr.home.mendix.com), go to **Apps** and select the app that has been detached from the v3 node.
 
 2.  Once you are in the app, go to the **Environments** tab in the left menu.
 

@@ -22,7 +22,6 @@ You can see the process of search and registration to Data Hub in the [Share Dat
 - Search the catalog for a string – [Section 5](#api-search)
 - Register the service in the Catalog –  [Section 6](#api-search)
 - Register consumed datasets by an App – [Section 7](#consumed-ep)
-- Search for data sets and data sources to consume by your business application for new app development [Section 9](#consume-data)
 
 ## 2 Prerequisites
 

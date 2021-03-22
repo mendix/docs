@@ -4,13 +4,12 @@ parent: "deploy-mendix-on-microsoft-windows"
 description: "How to install and configure Mendix in an HA setup on servers running Windows in Microsoft Azure"
 menu_order: 10
 tags: ["deploy", "Windows", "Azure", "HA", "High Availability", "Microsoft", "Mendix Service Console", "IIS"]
-aliases:
-    - /deployment/on-premises/deploy-mendix-ha-on-windows-in-microsoft-azure.html
 ---
 
 ## 1 Introduction
 
-This document describes the installation and configuration of the Mendix software on multiple systems running Microsoft Windows on the Microsoft Azure cloud platform. It covers:
+This document has been created as an example for setting up a high available Mendix Runtime Server environment on Windows, using the Microsoft Azure cloud platform. This will probably require some adaptation to your situation as it is not a complete guide or a supported 'best practice' for deploying a Mendix hosting environment.
+It describes the installation and configuration of the Mendix software on multiple systems running Microsoft Windows on the Microsoft Azure cloud platform and covers:
 
 * Setting up an Azure Load Balancer
 
@@ -21,9 +20,11 @@ This document describes the installation and configuration of the Mendix softwar
 
 ## 2 Prerequisites {#Prerequisites}
 
+* Basic knowledge of administering Microsoft Azure and Windows servers
+
 * An active Azure subscription
 
-* Two or more servers configured as described in the [Deploy Mendix on Microsoft Windows](/deploy/deploy-mendix-on-microsoft-windows) guide. Make sure these servers have an extra data disk added to store the Mendix application files!
+* Two or more servers, configured as described in the [Deploy Mendix on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows) guide. Make sure these servers have an extra data disk added to store the Mendix application files!
 
 * An Azure admin account with sufficient permissions to create or modify:
 
@@ -36,7 +37,7 @@ This document describes the installation and configuration of the Mendix softwar
 
 ## 3 Configure cluster slave nodes
 
-In a clustered environment there are some tasks (for example, cleaning up expired user sessions from the database) that can only be handled by one of the cluster members. By default, each Mendix app server will execute these tasks, which can lead to issues. Disable executing these tasks on all servers **except one** by adding the Custom Mendix setting _com.mendix.core.isClusterSlave_ to _true_. So if you have a two server cluster, add this on one server and if you have five servers in your cluster, add it on four of them.
+In a clustered environment there are some tasks (for example, cleaning up expired user sessions from the database) that can only be handled by one of the cluster members. By default, each Mendix app server will execute these tasks, which can lead to issues. Disable executing these tasks on all servers **except one** by adding the Custom Mendix setting _com.mendix.core.isClusterSlave_ to _true_. So if you have a two server cluster, add this setting on one server and if you have five servers in your cluster, add it on four of them.
 
 1. Select your app and click **Configuration**.
 
@@ -82,4 +83,4 @@ By default, the container will be created in the blob storage if it does not yet
 
 ## 6 Read More
 
-* [Mendix deployment on Microsoft Windows](/deploy/deploy-mendix-on-microsoft-windows)
+* [Mendix deployment on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows)

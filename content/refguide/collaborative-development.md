@@ -23,17 +23,17 @@ The collaborative development process between Studio Pro and Studio consists of 
 1. Every change made in Studio is automatically saved to the Studio working copy. Multiple users can view the app in Studio at the same time: one user can edit it and the others are in read-only mode. 
 2.  When Studio Pro users open an app, they are notified if Studio is enabled for this development line. 
 
-    ![Collaborative Development Enabled Notification](attachments/collaborative-development/collaborative-development-enabled-notification.png)
+	![Collaborative Development Enabled Notification](attachments/collaborative-development/collaborative-development-enabled-notification.png)
 
 3. Studio Pro creates a local working copy that the Studio Pro user works on. 
 4. To get changes from the Team Server the user needs to click **Update**. When the Studio Pro user clicks **Update**, the latest changes from *Studio* are committed automatically to the Team Server before Studio Pro receives the update from it. The latest revision from the Team Server containing the latest *Studio* changes is merged into Studio Pro's local working copy. 
-5. The Studio Pro user works on the app and, once the user finishes some functionality (for example, fixes a bug or creates a new feature), they click **Commit**. The user enters a commit message and confirms it. This triggers the same process as during an update (described in step 4), and the Studio Pro working copy is updated with the latest revision from the Team Server.
+5.  The Studio Pro user works on the app and, once the user finishes some functionality (for example, fixes a bug or creates a new feature), they click **Commit**. The user enters a commit message and confirms it. This triggers the same process as during an update (described in step 4), and the Studio Pro working copy is updated with the latest revision from the Team Server.<br/>
 
-   There are two possible outcomes of this merge:<br/>
+	There are two possible outcomes of this merge:<br/>
 
-   a.   There are no conflicts, the Studio Pro user changes are committed to the Team  Server. Afterwards Studio gets the latest revision from the Team Server and is unlocked; the Studio Pro user changes are visible to Studio users. Other Studio Pro users will get the changes once they do an update. <br/>
+	a.   There are no conflicts, the Studio Pro user changes are committed to the Team  Server. Afterwards Studio gets the latest revision from the Team Server and is unlocked; the Studio Pro user changes are visible to Studio users. Other Studio Pro users will get the changes once they do an update. <br/>
 
-   b. There are conflicts, the Studio Pro commit process is stopped. Studio is unlocked without getting changes from the Studio Pro user. The Studio Pro user needs to resolve the merge conflicts first to before being able to do a commit again.
+	b. There are conflicts, the Studio Pro commit process is stopped. Studio is unlocked without getting changes from the Studio Pro user. The Studio Pro user needs to resolve the merge conflicts first to before being able to do a commit again.
 
 {{% alert type="info" %}}
 When the Studio Pro user wants to deploy the app to the cloud, they click the **Run** button. The commit is done automatically during this process and step five is executed. 
@@ -86,19 +86,19 @@ To share your model changes between Studio and Studio Pro, you need to enable St
 Whether Studio is enabled for a development line by default, depends on your app:
 
 * Studio is enabled for the main line by default in the following cases:
-  * For a new app created via the Developer Portal
-  * For an app that has Studio enabled
+	* For a new app created via the Developer Portal
+	* For an app that has Studio enabled
 * Studio is not enabled for any development line in the following cases:
-  * For a new app created via Studio Pro
-  * For an existing app that does not have Studio enabled
+	* For a new app created via Studio Pro
+	* For an existing app that does not have Studio enabled
 
 To enable Studio for a development line or switch it to another development line, do the following: 
 
-1.  Click **Version Control** > **Manage Branch Lines**. In the **Branch Line Manager** dialog box, you can see that the development line that Studio is enabled for (if any) is marked with a globe icon in the first column.<br/> 
+1.  Click **Version Control** > **Manage Branch Lines**. In the **Branch Line Manager** dialog box, you can see that the development line that Studio is enabled for (if any) is marked with a globe icon in the first column.
 
-	![Globe Icon in the Branch Line Manager](attachments/collaborative-development/globe-icon.png)<br/>
+	![Globe Icon in the Branch Line Manager](attachments/collaborative-development/globe-icon.png)
 
-2.  Select the line you want to enable Studio for and click **Enable for Studio**. <br/>
+2.  Select the line you want to enable Studio for and click **Enable for Studio**.
 
 	![Branch Line Manager - Enabling Another Branch](attachments/collaborative-development/enable-another-branch.png) 
 
@@ -134,22 +134,25 @@ To create a new branch line, do the following:
 1. Click **Version Control** > **Manage Branch Lines**. 
 2.  In the **Branch Line Manager** dialog box, you see the list of existing development lines. Click **New** to create a branch line. <br/>
 
-    ![Creating New Branch](attachments/collaborative-development/creating-new-branch.png)<br/>
+	![Creating New Branch](attachments/collaborative-development/creating-new-branch.png)<br/>
 
 3.  In the **Create Branch Line** dialog box, set the following: <br/>
 
-    a. What line you are creating a new line from: the main line, a branch line, or a tagged version. For more information on these concepts, see the [Concepts](version-control#concepts) section in *Version Control*. <br/> 
-    b. Select the **Revision**, if needed. <br/>
-    c. Type the name of the new line.<br/>
+	a. What line you are creating a new line from: the main line, a branch line, or a tagged version. For more information on these concepts, see the [Concepts](version-control#concepts) section in *Version Control*. <br/> 
+	b. Select the **Revision**, if needed. <br/>
+	c. Type the name of the new line.<br/>
 
-    *  This is the dialog box for SVN:
-    	![Create SVN Branch Line Dialog](attachments/collaborative-development/create-branch-dialog.png) 
-    *  This is the dialog box for [Git](create-branch-line-git-dialog):
-  	![Create Git Branch Line Dialog](attachments/collaborative-development/create-git-branch-dialog.png) 
+	*  This is the dialog box for SVN:
+		
+		![Create SVN Branch Line Dialog](attachments/collaborative-development/create-branch-dialog.png) 
+    
+	*  This is the dialog box for [Git](create-branch-line-git-dialog):
+
+		![Create Git Branch Line Dialog](attachments/collaborative-development/create-git-branch-dialog.png) 
 
 4.  After you have configured all the settings, click **OK**.
 
-You have created a new branch line.   
+You have created a new branch line.
 
 ### 6.2 Deleting a Branch Line
 

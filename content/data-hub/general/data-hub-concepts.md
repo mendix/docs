@@ -86,15 +86,26 @@ A visual example:
 
 # 3. Service Versions and Endpoints
 
-The Data Hub Catalog is a catalog of reigstered endpoints and the data at these endpoints.  
+The Data Hub Catalog is a catalog of reigstered endpoints and the data at these endpoints.   
 
-The schematic below shows the endpoints that results from a service that is deployed by an app, and consumed by other apps. 
+The schematic below shows the endpoints that result from a service that is deployed by an app, and consumed by other apps. 
 
-- [ ] Simplify and breakdown into different parts.
+
 
 ![service versions and endpoints](./attachments/dh-concepts/service-versions-endpoints.png)
 
 
+
+
+
+The app **Mendix Model 1.0**  publishes two services: 
+
+* Customer Service 1.0
+* Test Service 1.0
+
+When this app is deployed to the **Production** environment this defines the **root URL** of the app and the services that are deployed by the app.
+
+e relative URL of:  then the two endpoints for the two services are: 
 
 
 

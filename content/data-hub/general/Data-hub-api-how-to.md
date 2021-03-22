@@ -168,14 +168,14 @@ This example shows you how to search for assets that satisfy the following:
 
 **The GET request URL is as follows**:
 
-
-    GET {{baseURl}}/data?query=sample&productionEndpointsOnly=true
+`GET {{baseURl}}/data?query=sample&productionEndpointsOnly=true`
 
 **The  curl command for the above search is**:
 
+```curl
 curl --location --request GET 'https://hub.mendix.com/rest/datahubservice/v2/data?query=sample&productionEndpointsOnly=true' \
-
---header 'Authorization: MxToken <*your MxToken>*' \`
+--header 'Authorization: MxToken <*your MxToken>*'
+```
 
 
 #### 5.4.2 Successful 200 Response
@@ -185,6 +185,7 @@ The response payload is shown below:
 
 **Note:**  For conciseness in this how-to, of the 11 objects that are returned for the  `Data`  object only the second data source, **SAMPLE_EmployeeDirectory**, is shown fully in the response payload below, the other data sources have been represented as { … }.
 
+```json
 {
 ​    "TotalResults": 11,
 ​    "Links": [
@@ -293,6 +294,7 @@ The response payload is shown below:
 ​    "Limit": 20,
 ​    "LastId": "c6afa18d-4b3d-49b2-a945-5a93b9a0868e"
 }
+```
 
 #### 5.4.3 Example Search Results Viewed in the Catalog
 
@@ -352,6 +354,7 @@ The Example Curl Command
 
 The curl command specifies the format of the the body content and the body data that is given in 6.1.4.2. 
 
+```curl
 curl --location --request POST '{{BaseURL}}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <*yourMxToken>*' \--data-raw '{
@@ -369,9 +372,12 @@ curl --location --request POST '{{BaseURL}}' \
 ​    "LastName": "Raine",
 ​    "Email": "bill.raine@dh123.co"
   }
-}'
+}
+```
 
 ##### 6.1.4.2.  JSON Format Request Body
+
+```json
 {
   "Name": "Howto5-App",
   "Description": "This application is used to show how the DH API is used",
@@ -388,12 +394,14 @@ curl --location --request POST '{{BaseURL}}' \
     "Email": "bill.raine@dh123.co"
   }
 }
+```
 
 ##### 6.1.4.3 Successful 201 Response Application Created {#app-registered}
 The 201 response that is returned to indicate that the application is registered is given below: 
 
 **Note**: that the response returned the  `"UUID": "2ab1410e-06d4-4e07-a82d-cc04b21d2622"`, which is the Catalog identifier for the application that must be used to identify it in subsequent steps of the registration of the data source.
 
+```json
 {
 ​    "Name": "Howto5-App",
 ​    "Description": "This application is used to show how the DH API is used",
@@ -411,6 +419,7 @@ The 201 response that is returned to indicate that the application is registered
 ​        "Email": "bill.raine@dh123.co"
 ​    }
 }
+```
 
 ### 6.2 Registering an Environment using POST
 
@@ -463,6 +472,7 @@ For the app registered in 6.1.4.4 the following steps describe how to register t
 ##### 6.2.4.4 Successful 201 Created Successful 200 {#env-registerd}
 The 201 Created response returns the Catalog-generated identifier   `"UUID": "236c9acc-830c-48d9-a0ef-e1104a15d26d"` for the for the registered environment  `Production`.
 
+```json
 {
 
 ​    "Name": "Production",
@@ -494,6 +504,7 @@ The 201 Created response returns the Catalog-generated identifier   `"UUID": "23
 ​    }
 
 }
+```
 
 ### 6.3 Registering the Published Services using PUT
 
@@ -552,6 +563,7 @@ Each of the files that are used in this example have been provided in escaped JS
 
 **Note:**  For conciseness the contents of the contract files not included in the following payload - it is respresented as  *<Insert example metadata from [metadata](#ex-metadata) >*.  You must insert the example contract file provided in Section 8 for the strings for this string, or alternatively use your own contract files - in escaped JSON format.
 
+```json
 {
     "Endpoints": [
         {
@@ -598,6 +610,7 @@ Each of the files that are used in this example have been provided in escaped JS
         }
     ]
 }
+```
 
 ##### 6.3.4.3 Successful 200 OK Response
 
@@ -605,6 +618,7 @@ Each of the files that are used in this example have been provided in escaped JS
 
 For the above request the following 200 OK response is received to provide the registration details of the service which includes the link to the URI of the service location, the URL to the catalog details page of the service and the service UUID. The Catalog entry for the service is also shown in [6.3.4.4](#ex-service-reg).
 
+```json
 {
 
 ​    "Endpoints": [
@@ -716,8 +730,9 @@ For the above request the following 200 OK response is received to provide the r
 ​    ]
 
 }
+```
 
-}6.3.4.4 Registered Service in the the Data Hub Catalog and Landscape {#ex-service-reg}
+##### 6.3.4.4 Registered Service in the the Data Hub Catalog and Landscape {#ex-service-reg}
 
 The resulting entry in the Catalog for the registered service the entry in the Catalog is the following: 
 
@@ -812,6 +827,7 @@ This example shows how to register that the **Howto5-App** consumes 2 datasets: 
 
 To register the two consumed entities **Employees** and **Offices** from the HR Sample service at https://hrsampleapp.mendixcloud.com/odata/PubOdataEmployeeDirectory/v1
 
+```json
 {
     "Endpoints": [
         {
@@ -831,10 +847,12 @@ To register the two consumed entities **Employees** and **Offices** from the HR 
         }
     ]
 }
+```
 
 #### 7.4.3 Successful 200 Created Response
 The response that is returned shows the full details of the consumed service as part of the `Endpoints` object. The total number of connections to the service is 43: 
 
+```json
 {
 ​    "Endpoints": [
 ​        {
@@ -934,6 +952,7 @@ The response that is returned shows the full details of the consumed service as 
 ​        }
 ​    ]
 }
+```
 
 #### 7.4.4 Registered service in the Catalog and Data Hub Landscape
 
@@ -992,14 +1011,15 @@ You can perform a search to find a particular service with the dataset that you 
 | Versions     |          |                      |  For the specified endpoint, the details of the version numbers, the environments they are deployed to and links to the each version number |
 
 #### 8.1.4 Example: All Available Services for  `SAMPLE_EmployeeDirectory`
-This request will get all the available services for the service `SAMPLE_EmployeeDirectory` with the appID 30aaf7ca-415f-306d-bd6e-458e6f821f06 that are registered in all environements.
+This request will get all the available services for the service `SAMPLE_EmployeeDirectory` with the appID 30aaf7ca-415f-306d-bd6e-458e6f821f06 that are registered in all environments.
 
 ##### 8.1.4.1 Base request URL:
 `GET /applications/30aaf7ca-415f-306d-bd6e-458e6f821f06/services/SAMPLE_EmployeeDirectory'`
 
 ##### 8.1.4.2 Successful 200 OK Response
-For the above response there was a single instance of the service found. However, the 1.1.0 version service is deployed to two different environements as defined in the array of `Versions`: the one in the `Production` environment which has 43 connections and a second in the `acceptance` environment which has 0 connections.
+For the above response there was a single instance of the service found. However, the 1.1.0 version service is deployed to two different environments as defined in the array of `Versions`: the one in the `Production` environment which has 43 connections and a second in the `acceptance` environment which has 0 connections.
 
+```json
 {
 
 ​    "Name": "SAMPLE_EmployeeDirectory",
@@ -1145,6 +1165,7 @@ For the above response there was a single instance of the service found. However
 ​    ]
 
 }
+```
 
 In the Catalog the following is shown when searching for the same service: 
 
@@ -1197,6 +1218,8 @@ Inserting the **Production** environment UUID values, the call becomes
 ##### 8.2.4.2 Successful 200 Response
 
 The 200 OK response returns the full details of the service and includes the two files that make up this OData v3 service. They are given  the  `Type: "ServiceFeed"`  and  the `"Type": "Metadata"`  values.
+
+```json
 
 {
 
@@ -1261,6 +1284,7 @@ The 200 OK response returns the full details of the service and includes the two
 ​    ]
 
 }
+```
 
 ## 9 Sample Contract File {#sample-contract}
 
@@ -1268,7 +1292,9 @@ The following file is an example OData v3 contract that you can use for in this 
 
 ### Metadata {#ex-metadata}
 
+```json
 <?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<edmx:Edmx Version=\"1.0\" xmlns:edmx=\"http:\/\/schemas.microsoft.com\/ado\/2007\/06\/edmx\" xmlns:mx=\"http:\/\/www.mendix.com\/Protocols\/MendixData\">\r\n  <edmx:DataServices m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\" xmlns:m=\"http:\/\/schemas.microsoft.com\/ado\/2007\/08\/dataservices\/metadata\">\r\n    <Schema Namespace=\"DefaultNamespace\" xmlns=\"http:\/\/schemas.microsoft.com\/ado\/2009\/11\/edm\">\r\n      <EntityType Name=\"Department\">\r\n        <Key>\r\n          <PropertyRef Name=\"ID\" \/>\r\n        <\/Key>\r\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" \/>\r\n        <Property Name=\"Number\" Type=\"Edm.Int64\" \/>\r\n        <Property Name=\"Name\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"Color\" Type=\"Edm.String\" \/>\r\n        <NavigationProperty Name=\"Employees\" Relationship=\"DefaultNamespace.Employee_Department\" FromRole=\"Department\" ToRole=\"Employees\" \/>\r\n      <\/EntityType>\r\n      <EntityType Name=\"Employee\">\r\n        <Key>\r\n          <PropertyRef Name=\"ID\" \/>\r\n        <\/Key>\r\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" \/>\r\n        <Property Name=\"firstName\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"lastName\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"email\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"phone\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"street\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"city\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"zip\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"country\" Type=\"Edm.String\" \/>\r\n        <NavigationProperty Name=\"Department\" Relationship=\"DefaultNamespace.Employee_Department\" FromRole=\"Employees\" ToRole=\"Department\" \/>\r\n        <NavigationProperty Name=\"Office\" Relationship=\"DefaultNamespace.Employee_Office\" FromRole=\"Employees\" ToRole=\"Office\" \/>\r\n      <\/EntityType>\r\n      <EntityType Name=\"Office\">\r\n        <Key>\r\n          <PropertyRef Name=\"ID\" \/>\r\n        <\/Key>\r\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" \/>\r\n        <Property Name=\"Number\" Type=\"Edm.Int64\" \/>\r\n        <Property Name=\"Name\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"Street\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"StreetNumber\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"ZIP\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"City\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"Country\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"CountryCode\" Type=\"Edm.String\" \/>\r\n        <NavigationProperty Name=\"Employees\" Relationship=\"DefaultNamespace.Employee_Office\" FromRole=\"Office\" ToRole=\"Employees\" \/>\r\n      <\/EntityType>\r\n      <Association Name=\"Employee_Department\">\r\n        <End Type=\"DefaultNamespace.Employee\" Multiplicity=\"*\" Role=\"Employees\" \/>\r\n        <End Type=\"DefaultNamespace.Department\" Multiplicity=\"0..1\" Role=\"Department\" \/>\r\n      <\/Association>\r\n      <Association Name=\"Employee_Office\">\r\n        <End Type=\"DefaultNamespace.Employee\" Multiplicity=\"*\" Role=\"Employees\" \/>\r\n        <End Type=\"DefaultNamespace.Office\" Multiplicity=\"0..1\" Role=\"Office\" \/>\r\n      <\/Association>\r\n      <EntityContainer Name=\"SAP\/v1Entities\" m:IsDefaultEntityContainer=\"true\">\r\n        <EntitySet Name=\"Departments\" EntityType=\"DefaultNamespace.Department\" \/>\r\n        <EntitySet Name=\"Employees\" EntityType=\"DefaultNamespace.Employee\" \/>\r\n        <EntitySet Name=\"Offices\" EntityType=\"DefaultNamespace.Office\" \/>\r\n        <AssociationSet Name=\"Employee_Department\" Association=\"DefaultNamespace.Employee_Department\">\r\n          <End Role=\"Employees\" EntitySet=\"Employees\" \/>\r\n          <End Role=\"Department\" EntitySet=\"Departments\" \/>\r\n        <\/AssociationSet>\r\n        <AssociationSet Name=\"Employee_Office\" Association=\"DefaultNamespace.Employee_Office\">\r\n          <End Role=\"Employees\" EntitySet=\"Employees\" \/>\r\n          <End Role=\"Office\" EntitySet=\"Offices\" \/>\r\n        <\/AssociationSet>\r\n      <\/EntityContainer>\r\n    <\/Schema>\r\n  <\/edmx:DataServices>\r\n<\/edmx:Edmx>
+```
 
 ## 10 Read More
 - [The Data Hub AP](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis)I 

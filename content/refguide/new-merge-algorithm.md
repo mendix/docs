@@ -18,7 +18,7 @@ A new merge algorithm with fine-grained conflict resolution is used when you upd
 Make sure that you repository is in a clean state: everything has been committed and there are no outstanding changes or conflicts. 
 {{% /alert %}}
 
-The new algorithm is enabled by default in Mendix 9. If you encounter issues, you can revert back to the old algorithm with the following steps:
+The new algorithm is enabled by default in Studio Pro 9. If you encounter issues, you can revert back to the old algorithm with the following steps:
 
 1. In the Studio Pro top bar, go to **Edit** > **Preferences** > **New features**. 
 2. In the **New features** section, disable the **New merge algorithm with fine-grained conflict resolution** option.
@@ -90,8 +90,7 @@ Once you have chosen one of the three options to resolve the conflict, green che
 
 ### 4.2 Resolving the Second Conflict
 
-The second conflict is a list order conflict. It is a reminder to take a look at the order of the widgets in the 
-layout grid. You can arrange the widgets in the desired order in the page editor and then choose **Mark as Resolved** for the list order conflict. 
+The second conflict is a list order conflict. It is a reminder to take a look at the order of the widgets in the layout grid. You can arrange the widgets in the desired order in the page editor and then choose **Mark as Resolved** for the list order conflict. 
 
 You can also decide to delete one of the widgets or add a new one. The document is fully editable while resolving conflicts. 
 

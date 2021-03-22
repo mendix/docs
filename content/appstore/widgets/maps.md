@@ -6,7 +6,7 @@ tags: ["marketplace", "marketplace component", "widget", "maps", "google maps", 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction {#intro}
+## 1 Introduction
 
 The [Maps](https://appstore.home.mendix.com/link/app/108261/) widget enables showing locations on maps. It supports the following different map providers:
 
@@ -16,6 +16,14 @@ The [Maps](https://appstore.home.mendix.com/link/app/108261/) widget enables sho
 * [HERE maps](https://www.here.com/)
 
 ## 2 Basic Usage
+
+For the easiest way to get started with a basic map in your application, follow these steps:
+1. Drag a **Maps** widget onto your page.
+2. Go to the widget properties and add a Google Maps access token under **General > Configurations > Google maps API Key**
+3. Under the **General > Markers** properties section, select **New** for **Markers**.
+4. Create a new location marker based on either **latitude and longitude** or an **address**.
+
+If you want to configure more of your map, like how users can interact, the styling, or use a different map provider, please refer to next section for a detailed overview of all the settings and their possibilities.
 
 ## 3 Settings
 
@@ -32,6 +40,11 @@ For all map types except OpenStreetMap, you need to have a token in order to vie
 The appropriate tokens can be retrieved via the links to the map types listed in the [Introduction](#intro) section above.
 After obtaining the access token, it can be provided to the widget in the **General > Configurations** widget settings section.
 For Google Maps the **Google maps API Key** property should be used, while for the other map providers the **API key** property should be used.
+
+_Please note that placing markers based on addresses does not work without an access token set for **General > Configurations > Google maps API key**.
+This is especially relevant if you're opting into one of the non-Google maps providers, since you should still provide a Google maps API access token if you want to specify markers through their address.
+The token is necessary for converting addresses to their corresponding latitude and longitude values, which in turn are used to place the markers.
+If no Google maps API token is provided, the map is still usable but markers based on addresses will not be shown._
 
 ### Current Location
 

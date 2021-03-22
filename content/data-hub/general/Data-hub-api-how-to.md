@@ -44,15 +44,15 @@ Before starting this how-to, make sure you have completed the following:
 - The requests that can be made through the Data Hub API:
 
   - Search for registered assets (data sources, datasets, attributes and associations) in the Catalog using GET /data
-- Registering datasets:
-    Registering datasets involves registering the data source (OData services) that the dataset is exposed in. The following requests in the given order:
-  
-  1. Application that the dataset originates from: POST application
-    2. Environment that the dataset is deployed to: POST environment
-    3. Register the published services (data source) of the application: PUT
-    4. Register the all the published services (data source) of the application
-  - Register consumed services (data source)
-- Find specific data sources and retrieve contract to consume
+  - Registering datasets:
+	Registering datasets involves registering the data source (OData services) that the dataset is exposed in. The following requests in the given order:
+		1. Application that the dataset originates from: POST application
+		2. Environment that the dataset is deployed to: POST environment
+		3. Register the published services (data source) of the application: PUT
+		4. Register the all the published services (data source) of the application
+		5. Register consumed services (data source)
+
+  - Find specific data sources and retrieve contracts to consume
 
 
 ## 4 Making the API Calls and Authentication {#authentication}
@@ -90,7 +90,7 @@ For convenience and conciseness, throughout this how-to the following variables 
 - {*AppUUID}* – insert the value returned in the API response for the UUID of the application
 - {*EnvironmentUUID} -* insert the value returned in the API response for the UUID of the application
 
-## 5 Searching in the Catalog {#api-search}
+## 5 Searching in the Catalog{#api-search}
 
 Search in the Catalog returns the registered assets that satisfy the search string and filters. The search is carried out on all registered assets in the catalog (data sources, data sets, attributes and descriptions of the registered items).
 
@@ -302,7 +302,7 @@ The same search in the Data Hub returns the following showing the total list in 
 
 ## 6 Registering a Sample OData v3 Contract {#reg-contract}
 
-This section describes the steps for registering a data source - this can be an OData v4 or OData v3 contract.
+This section describes the steps for registering a data source – this can be an OData v3  or a OData v4 contract.
 To register a data source to Data Hub you must register the following in the given sequence:
 
 
@@ -353,33 +353,16 @@ In this example, you are going to register an app called **Howto5-App**. The det
 ##### 6.1.4.1 Base request URL
 `POST {{baseURL}}/applications`
 
-##### 6.1.4.2.  JSON Format Request Body
-{
-  "Name": "Howto5-App",
-  "Description": "This application is used to show how the DH API is used",
-  "RepositoryLocation": "https://dhcorp5.com/",
-  "Type": "Other",
-  "BusinessOwner": {
-    "FirstName": "Bill",
-    "LastName": "Raine",
-    "Email": "bill.raine@dh.co"
-  },
-  "TechnicalOwner": {
-    "FirstName": "Bob",
-    "LastName": "Raine",
-    "Email": "bill.raine@dh.co"
-  }
-}
+The Example Curl Command
 
-##### 6.1.4.3 The Example Curl Command
-The curl command specifies the format of the body content and the body data. 
+The curl command specifies the format of the the body content and the body data that is given in 6.1.4.2. 
 
 curl --location --request POST '{{BaseURL}}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <*yourMxToken>*' \--data-raw '{
   "Name": "Howto5-App",
   "Description": "This application is used to show how the DH API is used",
-  "RepositoryLocation": "https://dhcorp5.com/",
+  "RepositoryLocation": "https://dhcorp5.test/",
   "Type": "Other",
   "BusinessOwner": {
 ​    "FirstName": "Bill",
@@ -393,7 +376,25 @@ curl --location --request POST '{{BaseURL}}' \
   }
 }'
 
-##### 6.1.4.4 Successful 201 Response Application Created {#app-registered}
+##### 6.1.4.2.  JSON Format Request Body
+{
+  "Name": "Howto5-App",
+  "Description": "This application is used to show how the DH API is used",
+  "RepositoryLocation": "https://dhcorp5.test/",
+  "Type": "Other",
+  "BusinessOwner": {
+    "FirstName": "Bill",
+    "LastName": "Raine",
+    "Email": "bill.raine@dh123.co"
+  },
+  "TechnicalOwner": {
+    "FirstName": "Bob",
+    "LastName": "Raine",
+    "Email": "bill.raine@dh123.co"
+  }
+}
+
+##### 6.1.4.3 Successful 201 Response Application Created {#app-registered}
 The 201 response that is returned to indicate that the application is registered is given below: 
 
 **Note**: that the response returned the  `"UUID": "2ab1410e-06d4-4e07-a82d-cc04b21d2622"`, which is the Catalog identifier for the application that must be used to identify it in subsequent steps of the registration of the data source.
@@ -402,7 +403,7 @@ The 201 response that is returned to indicate that the application is registered
 ​    "Name": "Howto5-App",
 ​    "Description": "This application is used to show how the DH API is used",
 ​    "UUID": "2ab1410e-06d4-4e07-a82d-cc04b21d2622",
-​    "RepositoryLocation": "https://dhcorp5.com/",
+​    "RepositoryLocation": "https://dhcorp5.test/",
 ​    "Type": "Other",
 ​    "TechnicalOwner": {
 ​        "FirstName": "Bob",
@@ -455,33 +456,48 @@ For the app registered in 6.1.4.4 the following steps describe how to register t
 `POST {{baseURL}} /applications/{appUUID}/environments`
 
 ##### 6.2.4.2.  JSON format request body for the Environment
-  --data-raw '{
-​    "Name": "Production",
-​    "Location": "https://howtoenv555.com",
-​    "Type": "Production",
-​    "CustomLocations": [
-​        "https://api.howto555.com"
-​    ]
-}'
+ {
+    "Name": "Production",
+    "Location": "https://howtoenv5555.test",
+    "Type": "Production",
+    "CustomLocations": [
+        "https://api.howto5555.test"
+    ]
+}
 
 ##### 6.2.4.4 Successful 201 Created Successful 200 {#env-registerd}
-The 201 Created response returns the Catalog-generated identifier   `"UUID": "57535822-547e-41c4-849c-77ddc9714373"` for the for the registered environment  `Production`.
+The 201 Created response returns the Catalog-generated identifier   `"UUID": "236c9acc-830c-48d9-a0ef-e1104a15d26d"` for the for the registered environment  `Production`.
 
 {
+
 ​    "Name": "Production",
-​    "Location": "https://howtoenv555.com",
+
+​    "Location": "https://howtoenv5555.test",
+
 ​    "Type": "Production",
+
 ​    "CustomLocations": [
-​        "https://api.howto555.com"
+
+​        "https://api.howto5555.test"
+
 ​    ],
-​    "UUID": "57535822-547e-41c4-849c-77ddc9714373",
+
+​    "UUID": "68005eaa-f652-438f-b71c-f76f0d52e372",
+
 ​    "Application": {
+
 ​        "Name": "Howto5-App",
+
 ​        "Description": "This application is used to show how the DH API is used",
-​        "RepositoryLocation": "https://dhcorp5.com",
+
+​        "RepositoryLocation": "https://dhcorp5.test",
+
 ​        "Type": "Other",
-​        "UUID": "2ab1410e-06d4-4e07-a82d-cc04b21d2622"
+
+​        "UUID": "32112bd7-6c87-4ff8-9542-36256df66259"
+
 ​    }
+
 }
 
 ### 6.3 Registering the Published Services using PUT
@@ -602,63 +618,116 @@ Each of the files that are used in this example have been provided in escaped JS
 For the above request the following 200 OK response is received to provide the registration details of the service which includes the link to the URI of the service location, the URL to the catalog details page of the service and the service UUID. The Catalog entry for the service is also shown in [6.3.4.4](#ex-service-reg).
 
 {
-​    "Endpoints": [
-​        {
-​            "Path": "5howto/v1",
-​            "SecurityClassification": "Public",
-​            "UUID": "6786c1bb-e66e-4e02-bf6a-e72f90ec288f",
-​            "Links": [
-​                {
-​                    "Href": "https://hub.mendix.com/rest/datahubservice/v2/applications/2ab1410e-06d4-4e07-a82d-cc04b21d2622/environments/57535822-547e-41c4-849c-77ddc9714373/services/5how-toODatav3-sample-service/1.0",
-​                    "Rel": "Self"
-​                },
-​                {
-​                    "Href": "https://hub.mendix.com/link/endpoint?EndpointUUID=6786c1bb-e66e-4e02-bf6a-e72f90ec288f",
-​                    "Rel": "Catalog"
-​                }
-​            ],
-​            "Connections": 0,
-​            "LastUpdated": "2021-03-20T14:30:00.997Z",
-​            "ServiceVersion": {
-​                "Version": "1.0",
-​                "Description": "A Sample OData v3 service",
-​                "PublishDate": "2021-03-20T14:30:00.953Z",
-​                "UUID": "6f643036-4d4f-48e1-bb90-7a2e289e3faf",
-​                "Service": {
-​                    "Name": "5how-toODatav3-sample-service",
-​                    "ContractType": "OData_3_0",
-​                    "UUID": "b6859a4a-b926-4506-b93f-063993c07681"
-​                },
-​                "SecurityScheme": {
-​                    "SecurityTypes": [
-​                        {
-​                            "Name": "MxID",
-​                            "AppStoreModuleId": "a4f7847b-9562-4b5a-adc2-4a0bf41cc534"
-​                        }
-​                    ],
-​                    "MxAllowedRoles": [
-​                        {
-​                            "UUID": "91ca220e-9498-4d23-9d2e-90b9c19aca37",
-​                            "Name": "User"
-​                        }
-​                    ]
-​                },
-​                "Tags": [
-​                    {
-​                        "Name": "odata"
-​                    },
-​                    {
-​                        "Name": "sample"
-​                    }
-​                ]
-​            },
-​            "Validated": **false**,
-​            "Discoverable": **true**
-​        }
-​    ]
-}
 
-##### 6.3.4.4 Registered Service in the the Data Hub Catalog and Landscape {#ex-service-reg}
+​    "Endpoints": [
+
+​        {
+
+​            "Path": "5howto/v1",
+
+​            "SecurityClassification": "Public",
+
+​            "UUID": "ce825833-87b7-4f0f-8d8f-0fcfd40ccc57",
+
+​            "Links": [
+
+​                {
+
+​                    "Href": "https://hub.mendix.com/rest/datahubservice/v2/applications/32112bd7-6c87-4ff8-9542-36256df66259/environments/68005eaa-f652-438f-b71c-f76f0d52e372/services/5how-toODatav3-sample-service/1.0",
+
+​                    "Rel": "Self"
+
+​                },
+
+​                {
+
+​                    "Href": "https://hub.mendix.com/link/endpoint?EndpointUUID=ce825833-87b7-4f0f-8d8f-0fcfd40ccc57",
+
+​                    "Rel": "Catalog"
+
+​                }
+
+​            ],
+
+​            "Connections": 0,
+
+​            "LastUpdated": "2021-03-22T12:59:59.385Z",
+
+​            "ServiceVersion": {
+
+​                "Version": "1.0",
+
+​                "Description": "A Sample OData v3 service",
+
+​                "PublishDate": "2021-03-22T12:59:59.359Z",
+
+​                "UUID": "9b813ec8-2725-446a-a189-b5337f5b9c9d",
+
+​                "Service": {
+
+​                    "Name": "5how-toODatav3-sample-service",
+
+​                    "ContractType": "OData_3_0",
+
+​                    "UUID": "3fba1292-0db2-4d68-9865-d5f30f5daa9e"
+
+​                },
+
+​                "SecurityScheme": {
+
+​                    "SecurityTypes": [
+
+​                        {
+
+​                            "Name": "MxID",
+
+​                            "AppStoreModuleId": "a4f7847b-9562-4b5a-adc2-4a0bf41cc534"
+
+​                        }
+
+​                    ],
+
+​                    "MxAllowedRoles": [
+
+​                        {
+
+​                            "UUID": "91ca220e-9498-4d23-9d2e-90b9c19aca37",
+
+​                            "Name": "User"
+
+​                        }
+
+​                    ]
+
+​                },
+
+​                "Tags": [
+
+​                    {
+
+​                        "Name": "odata"
+
+​                    },
+
+​                    {
+
+​                        "Name": "sample"
+
+​                    }
+
+​                ]
+
+​            },
+
+​            "Validated": **false**,
+
+​            "Discoverable": **true**
+
+​        }
+
+​    ]
+
+}6.3.4.4 Registered Service in the the Data Hub Catalog and Landscape {#ex-service-reg}
 
 The resulting entry in the Catalog for the registered service the entry in the Catalog is the following: 
 
@@ -677,6 +746,23 @@ The PUT endpoints request does not affect any previously registered services for
 #### 6.4.1 Removing Services Deployed to an App/Environment
 
 When you have a situation where you want to remove a published service for an app we recommend that you create a new version of the app, deployed to a different environment without the service you do not want included. 
+
+For example:
+
+**App1.0** publishes the following services
+
+* App-1-premierservice1.0
+* App-1-secondaryservice1.0
+* App-1-tertiaryservice1.0
+
+If you now want to remove **App-1-secondaryservice1.0** api to **App1.0** then a copy of App 1.0 can be made called **App1.1** and the secondary deleted from the published services.
+
+**App 1.1** publishes the following services:
+
+* App-1-premierservice1.0
+* App-1-tertiaryservice1.0
+
+In this example, the services in the two apps, must now be maintained in both apps and people consuming from the first app notified about the latest version of the app that is available.
 
 In this way, you can maintain a historical version of the the registered assets, and ensure that consumers are notified of the new version, without affecting those that are consuming the previous version. 
 

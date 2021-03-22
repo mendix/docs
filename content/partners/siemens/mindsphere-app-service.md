@@ -131,6 +131,11 @@ For the Mendix Cloud, this can be done by setting the value of the constants on 
 
 ## 4 MindSphere Widgets
 
-If you want to use the [Siemens MindSphere Web Components Widgets](https://marketplace.mendix.com/link/component/110119) in your app, these will need to use the *MindSphere API Revers Proxy*. Ensure that the constant **EnableMindSphereApiReverseProxy** is set to *true* to ensure this can happen.
+If you want to use the [Siemens MindSphere Web Components Widgets](https://marketplace.mendix.com/link/component/110119) in your app, these will need to use the *MindSphere API Reverse Proxy*.
+
+To enable this, you will have to do two things:
+
+1. Ensure that the constant **EnableMindSphereApiReverseProxy** is set to *true* to ensure this can happen.
+2. Add the microflow **Register ApiReverseProxy** to the [After Startup](/refguide/project-settings#after-startup) microflow(s) which are run when the app is started.
 
 

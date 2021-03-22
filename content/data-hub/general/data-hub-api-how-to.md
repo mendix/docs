@@ -352,81 +352,7 @@ The 200 OK response returns an array of the consumed endpoints. It will return t
 
 
 
-## 8 Consuming data through Data Hub {#consume-data}
-
-When you want to consume a dataset that is registered in the Data Hub the sequence of steps are as follows:
-
-1.  Find a suitable service  – `GET /data`
-2. discover all the instances of the service that are registered to identify the service you want consume datasets  –   GET service /applications/{AppUUID}/services/{ServiceName}/{ServiceVersion}
-3. retrieve the specific service and the contract files that make up the service
-4.  Register the consumed endpoints for the consuming app and the service.
-
-Search for a specific service using the generic GET call as described in [Searching in the Catalog](#api-search). Once a suitable dataset has been located the following sequence of requests should be made:  
-
-- GET detailed information about a specific contract
-- PUT the consumed entities registered in the catalog by the application
-
-
-### 8.1 Get all versions and endpoints of a service
-
-You can perform a search to find a particular service with the dataset that you want to use. Before you can do that you must use the GET /applications request to retrieve the UUID of a particular application:
-
-- All the versions and their endpoints for a particular service
-- Identify and retrieve the contract of the service that you want to consume 
-
-#### 8.1.1 Method and Endpoint
-`GET /applications/{AppUUID}/services/{ServiceName}`
-
-#### 8.1.2 Request Parameters and body
-
-| **Name**    | **Type** | **Required/Optional** | **DefaultValue** | **Description**                 |
-| ----------- | -------- | --------------------- | ---------------- | ------------------------------- |
-| AppUUID     | string   | Required              |                  | Catalog UUID for registered app |
-| ServiceName | string   | Required              |                  | Name of Service                 |
-
-#### 8.1.3 GET 200 Response
-
-| **Name**     | **Type** | **always returned?** |  **Description**                                              |
-| ------------ | -------- | -------------------- | ------------------------------------------------------------ |
-| Name         | string   | Always               |  Name of Service                                              |
-| ContractType | string   | Always               | Protocol used by the service. Currently supported values: OData_3_0, OData_4_0_Xml |
-| Application  |          | Always               | Will return a collection of objects describing the application |
-| Versions     |          |                      |  For the specified endpoint, the details of the version numbers, the environments they are deployed to and links to the each version number |
-
-
-### 8.2 Retrieve Contract of a Specific Service
-
-In order to consume datasets from a service, the contract files must be retrieved from the details registered in the Catalog. This contract can then be loaded in your business application, parsed, and the datasets consumed to create a new application. 
-
-The consumed entitysets should then be registered in the Catalog as described in [Section 7](#consumed-ep).
-
-- [ ] Note about the number of contract files - (for OData v3, two contract files JIRA CAT-645..)
-
-#### 8.2.1 Method and Endpoint
-`GET /applications/{AppUUID}/environments/{EnvironmentUUID}/services/{ServiceName}/{ServiceVersion}`
-
-#### 8.2.2 Request Parameters and body
-All the parameters that are required in order to retrieve the contract that you want to consume from.  These are returned from the first GET call performed in 8.1 
-
-The `services` parameter requires that the `ServiceName` and the `ServiceVersion` is given.
-
-`ServiceVersion` is thethe version number of the service that you want to consume.
-
-- [ ] ??that is what the response includes the response in the above example shows 1.1.0 in production and acceptance environements. - verify that only the version number is required.
-
-#### 8.2.3 Response
-The response will return a collection of objects definining the service and also the contracts that make up the specific service:
-
-| **Name**    | **Type** | Always returned? | **DefaultValue** | **Description**                                              |
-| ----------- | -------- | ---------------- | ---------------- | ------------------------------------------------------------ |
-| VersionText | string   | Always           |                  | The version number of the downloaded service                 |
-| PublishedOn | string   | Always           |                  | Date of publication of the service                           |
-| Location*   | string   | Always           |                  | Location at which the service version has been published.    |
-| Description | string   |                  |                  | Description of the service                                   |
-| Services    |          | Always           |                  | For the specified endpoint (application/environment/version) the details of the contract and the links to the Data Hub details. |
-| Contracts   |          | Always           |                  | Collection of objects specifying the contract and the JSON-encoded contents of the contract. <br>Note that for `Type` the type of contract is provided: for OData V3, the accepted types are "ServiceFeed" and "Metadata". For OData V4, the primary contract should be called "Metadata". |
-
-## 9 Sample Contract File {#sample-contract}
+## 8 Sample Contract File {#sample-contract}
 
 The following file is an example OData v3 contract that you can use for in this how-to for the PUT registration service request. The format provided below is in escaped JSON format contract and you can copy it and directly insert it in the PUT request body.
 
@@ -436,7 +362,7 @@ The following file is an example OData v3 contract that you can use for in this 
 <?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<edmx:Edmx Version=\"1.0\" xmlns:edmx=\"http:\/\/schemas.microsoft.com\/ado\/2007\/06\/edmx\" xmlns:mx=\"http:\/\/www.mendix.com\/Protocols\/MendixData\">\r\n  <edmx:DataServices m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\" xmlns:m=\"http:\/\/schemas.microsoft.com\/ado\/2007\/08\/dataservices\/metadata\">\r\n    <Schema Namespace=\"DefaultNamespace\" xmlns=\"http:\/\/schemas.microsoft.com\/ado\/2009\/11\/edm\">\r\n      <EntityType Name=\"Department\">\r\n        <Key>\r\n          <PropertyRef Name=\"ID\" \/>\r\n        <\/Key>\r\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" \/>\r\n        <Property Name=\"Number\" Type=\"Edm.Int64\" \/>\r\n        <Property Name=\"Name\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"Color\" Type=\"Edm.String\" \/>\r\n        <NavigationProperty Name=\"Employees\" Relationship=\"DefaultNamespace.Employee_Department\" FromRole=\"Department\" ToRole=\"Employees\" \/>\r\n      <\/EntityType>\r\n      <EntityType Name=\"Employee\">\r\n        <Key>\r\n          <PropertyRef Name=\"ID\" \/>\r\n        <\/Key>\r\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" \/>\r\n        <Property Name=\"firstName\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"lastName\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"email\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"phone\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"street\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"city\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"zip\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"country\" Type=\"Edm.String\" \/>\r\n        <NavigationProperty Name=\"Department\" Relationship=\"DefaultNamespace.Employee_Department\" FromRole=\"Employees\" ToRole=\"Department\" \/>\r\n        <NavigationProperty Name=\"Office\" Relationship=\"DefaultNamespace.Employee_Office\" FromRole=\"Employees\" ToRole=\"Office\" \/>\r\n      <\/EntityType>\r\n      <EntityType Name=\"Office\">\r\n        <Key>\r\n          <PropertyRef Name=\"ID\" \/>\r\n        <\/Key>\r\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" \/>\r\n        <Property Name=\"Number\" Type=\"Edm.Int64\" \/>\r\n        <Property Name=\"Name\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"Street\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"StreetNumber\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"ZIP\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"City\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"Country\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"CountryCode\" Type=\"Edm.String\" \/>\r\n        <NavigationProperty Name=\"Employees\" Relationship=\"DefaultNamespace.Employee_Office\" FromRole=\"Office\" ToRole=\"Employees\" \/>\r\n      <\/EntityType>\r\n      <Association Name=\"Employee_Department\">\r\n        <End Type=\"DefaultNamespace.Employee\" Multiplicity=\"*\" Role=\"Employees\" \/>\r\n        <End Type=\"DefaultNamespace.Department\" Multiplicity=\"0..1\" Role=\"Department\" \/>\r\n      <\/Association>\r\n      <Association Name=\"Employee_Office\">\r\n        <End Type=\"DefaultNamespace.Employee\" Multiplicity=\"*\" Role=\"Employees\" \/>\r\n        <End Type=\"DefaultNamespace.Office\" Multiplicity=\"0..1\" Role=\"Office\" \/>\r\n      <\/Association>\r\n      <EntityContainer Name=\"SAP\/v1Entities\" m:IsDefaultEntityContainer=\"true\">\r\n        <EntitySet Name=\"Departments\" EntityType=\"DefaultNamespace.Department\" \/>\r\n        <EntitySet Name=\"Employees\" EntityType=\"DefaultNamespace.Employee\" \/>\r\n        <EntitySet Name=\"Offices\" EntityType=\"DefaultNamespace.Office\" \/>\r\n        <AssociationSet Name=\"Employee_Department\" Association=\"DefaultNamespace.Employee_Department\">\r\n          <End Role=\"Employees\" EntitySet=\"Employees\" \/>\r\n          <End Role=\"Department\" EntitySet=\"Departments\" \/>\r\n        <\/AssociationSet>\r\n        <AssociationSet Name=\"Employee_Office\" Association=\"DefaultNamespace.Employee_Office\">\r\n          <End Role=\"Employees\" EntitySet=\"Employees\" \/>\r\n          <End Role=\"Office\" EntitySet=\"Offices\" \/>\r\n        <\/AssociationSet>\r\n      <\/EntityContainer>\r\n    <\/Schema>\r\n  <\/edmx:DataServices>\r\n<\/edmx:Edmx>
 ```
 
-## 10 Read More
+## 9 Read More
 - [The Data Hub AP](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis)I 
 
   

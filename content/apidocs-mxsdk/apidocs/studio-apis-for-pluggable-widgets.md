@@ -1,5 +1,5 @@
 ---
-title: "Preview Appearance AP; for Pluggable Widgets"
+title: "Preview Appearance APIs for Pluggable Widgets"
 parent: "pluggable-widgets"
 menu_order: 30
 description: A guide for understanding the APIs which influence pluggable widget preview appearances.

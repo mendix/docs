@@ -15,7 +15,9 @@ The [Maps](https://appstore.home.mendix.com/link/app/108261/) widget enables sho
 * [Mapbox](https://www.mapbox.com)
 * [HERE maps](https://www.here.com/)
 
-## 2 Usage
+## 2 Basic Usage
+
+## 3 Settings
 
 ### Map Provider
 
@@ -37,6 +39,21 @@ If you want to show the user's location on the map, this can be enabled under **
 
 ### Markers
 
+To enhance the map widget, locations can be marked on the map by providing them in the widget through **General > Markers**.
+If exactly one location is provided, the map will center to that location.
+If multiple locations are provided, the map will center to a position in which all markers are visible.
+If no location is provided, a default center location of the Mendix offices is provided.
+
+There are two ways to specify locations to be marked, either **based on latitude and longitude** or **based on address**. 
+Providing either of them is also the only requirement for creating a marker.
+Each individual marker can be customized in the following way:
+* Each marker can be provided a title that will be displayed when clicking on the marker as a popup through the **Location > Title** setting.
+* The icon of the location marker is also customizable through the individual marker's setting **Visualization > Marker style**. Setting it to _Image_ allows you to customize it with either a static resource or dynamic entity.
+* An event handler can be attached to the marker to trigger when an user clicks on it through the **Events > On click** setting.
+
+To make the process of marking batches of locations easier, there's also the possibility to specify entire lists of markers at once.
+This can be done through the **General > Markers > Marker list** setting and requires a data source.
+All the usual Mendix data source settings apply here, as well as the same marker requirements and customizability as the individual markers. 
 
 ### Controls
 

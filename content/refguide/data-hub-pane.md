@@ -102,7 +102,7 @@ The search results and **Project** pane will show the following at a service lev
 
 *  **Blue** **Update Service** icon to indicate that there is another version of the consumed service available in the Data Hub. Click to update the service that is consumed in the app to the contract that is now available:
 
-	![Data Hub Pane update](attachments/data-hub-pane/data-hub-pane-update.png)
+	{{% image_container width="250" %}}![Data Hub Pane update](attachments/data-hub-pane/data-hub-pane-update.png){{% /image_container %}}
 
 	{{% alert type="info" %}}If there is an OData Service update available, then the entities that are listed are those that are available in that version of the OData service. These entities will be "grayed-out" to indicate that they cannot be dragged into the domain model, as the *current* contract that is consumed in the app does not have these entities. You must update the contract to the version shown in the search results by clicking the **Update** arrow. {{% /alert %}}
 

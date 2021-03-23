@@ -309,7 +309,7 @@ Now each app has its own license, even if it runs under the same user account as
 * Improved handling configuration settings which are not set.
 * Messages about start exceptions now will be contain more info, when started via Console and as service.
 * Fixed a special case that the Java process is not stopped when an exception occur while starting (via Console and as service).
-* When an error occurs, now the Java process is killed after 1 second.
+* When an error occurs, now the Java process is stopped after 1 second.
 * New dialog to change administrator passwords, showed when starting from Console and there are administrators with password '1'.
 * New dialog to create or update the Administrator user from menu Advanced. Now the Administrator user password setting will no longer be used.
 * Removed setting for Administrator user password.

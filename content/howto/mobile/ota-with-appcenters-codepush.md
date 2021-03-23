@@ -16,7 +16,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install Mendix Studio Pro v8.15 or above using the online installer. The offline installer does not include the Mendix Native Mobile Builder dependency.
 * Deploy your app by completing [How to Deploy Your First Mendix Native Mobile App](deploying-native-app).
-* Ensure you have set up and configured App Center for your app. For information on setting up App Center, see X. If you previously opted out of configuring App Center while building your app, you must do Y.
+* Ensure you have set up and configured App Center for your app. For information on setting up App Center, see [the how-to documentation](deploying-native-app#appcenter-token). If you previously opted out of configuring App Center while building your app, you must do navigate tot the *Tokens* screen and swithc on the "I want to use App Center" option.
 
 ## 3 Build an App That Can Use CodePush OTA Updates {#build-with-ota-support}
 

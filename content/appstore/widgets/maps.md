@@ -72,7 +72,7 @@ All the usual Mendix data source settings apply here, as well as the same marker
 
 Under the **Controls** properties tab, the following settings can be adjusted that are related to how the users interacts with the map:
 * **Drag**: When enabled, the map will move along when dragging the map.
-* **Scroll to zoom**: When enabled, the user can change the zoom level of the map by mouse scrolling.*
+* **Scroll to zoom**: When enabled, the user can change the zoom level of the map by mouse scrolling on desktop or using pinch gestures on mobile.*
 * **Zoom**: When enabled, additional control buttons will be shown on the map
 * **Attribution**: When enabled, attributions will be shown at the bottom of the map (credits).
 

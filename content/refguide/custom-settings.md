@@ -214,9 +214,11 @@ The settings below influence the behavior of the Mendix web client.
 
 ## 10 Proxy Settings
 
-The settings below allow you to use a proxy.
+The settings below allow you to use a proxy. **These settings have to be set as JVM properties, NOT as Custom Runtime settings.**
 
 | Name | Description | Default Value |
 | --- | --- | --- |
-| **http.proxyHost** | Defines the hostname of the proxy server. |  |
-| **http.proxyPort** | Defines the port number of the proxy server. |  |
+| **http.proxyHost** | Defines the hostname of the HTTP proxy server. |  |
+| **http.proxyPort** | Defines the port number of the HTTP proxy server. |  |
+| **https.proxyHost** | Defines the hostname of the HTTPS proxy server. |  |
+| **https.proxyPort** | Defines the port number of the HTTPS proxy server. |  |

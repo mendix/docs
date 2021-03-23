@@ -82,9 +82,7 @@ A visual example:
 5. All deployments of data sources to the different endpoints must be curated to ensure that the right users can find it.
 6. In Mendix Studio Pro, consumers of the data sources can then **update** the contracts of consumed when a different contract is detected at the same endpoint. When there are several versions of the same service deployed to different endpoints, the Studio Pro user can **Switch** to a different endpoint.    
 
-
-
-# 3. Service Versions and Endpoints
+# 3 OData Services, Versions and Endpoints
 
 The Data Hub Catalog is a catalog of reigstered endpoints and the data at these endpoints.   
 
@@ -96,16 +94,23 @@ The schematic below shows the endpoints that result from a service that is deplo
 
 
 
+Looking at the the process in Detail:
 
+![service versions1.0](./attachments/dh-concepts/service-versions-endpoints-1.png)
 
 The app **Mendix Model 1.0**  publishes two services: 
 
 * Customer Service 1.0
 * Test Service 1.0
 
-When this app is deployed to the **Production** environment this defines the **root URL** of the app and the services that are deployed by the app.
+When this app is deployed to the **Production** environment this defines the **root URL** of the app and the services that are deployed by the app:
 
-e relative URL of:  then the two endpoints for the two services are: 
+* **Customer Service 1.0** is published at the endpoint **pub.mendix.com/api/customer/v1**
+* **Test Service 1.0** is published at the endpoint **pub.mendix.com/api/test/v1**
+
+The app consuming these services consumes from these endpoints.
+
+
 
 
 

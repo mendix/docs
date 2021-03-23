@@ -86,9 +86,11 @@ A visual example:
 
 The Data Hub Catalog is a catalog of reigstered endpoints and the data at these endpoints.   
 
-The schematic below shows the endpoints that result from a service that is deployed by an app, and consumed by other apps. 
+An **Endpoint** is the complete and unique identifier of data souce or service defined by the location of the app *in* the environment it is deployed to with the relative path of the service.  For an OData service, the relative path of the service that should include the major version number.  This is the **endpoint** that is registered and this is where the *contract* files of the service is defined. 
 
+The schematic below shows the different endpoints that result from a service that is deployed by an app, and consumed by other apps. 
 
+- [ ]  to be re-drawn according to design guidelines, and so that it is clear and parts can be extracted for the rest of the section.
 
 ![service versions and endpoints](./attachments/dh-concepts/service-versions-endpoints.png)
 
@@ -102,8 +104,8 @@ Looking at the the process in Detail:
 
 The app **Mendix Model 1.0**  publishes two services: 
 
-* Customer Service 1.0
-* Test Service 1.0
+* **Customer Service 1.0**
+* **Test Service 1.0**
 
 When this app is deployed to the **Production** environment this defines the **root URL** of the app and the services that are deployed by the app:
 
@@ -128,26 +130,24 @@ The app **Mendix Model 1.1**  publishes two services:
 When this app is deployed to the **Accp** environment which defines the **root URL** of the app and the services that are deployed:
 
 * **Customer Service 1.1** is published at the endpoint **pub-acccp.mendix.com/api/customer/v1**
-
 * **Test Service 1.0** is published at the endpoint **pub-accp.mendix.com/api/test/v1**
 
-**Note** There is now a **Test Service 1.0** deployed to the accp environment in addition to the same version service in the production environement. They both have two different endpoints.
+Apps can consume from the service, deployed to the endpoints in this environment while being aware that there is a version available in the production environment.
 
-## 3.3 Mendix Model 1.1 Deployed to   Services Deployed to Accp
+**Note** There is now a **Test Service 1.0** deployed to the Accp environment in addition to the same version service in the production environement. They both have two different endpoints.
+
+### 3.3 Mendix Model 1.1 Deployed to Production  
 
 
+
+![service versions1.0](./attachments/dh-concepts/service-versions-endpoints-3.png)
 
 ------------------------
 
-# Data Hub Administrator
+ When **Mendix Model 1.1** is deployed to the production environment, the service endpoints will now have the contract files for version 1.1 of the App. Assuming proper dev practices, no breaking changes  consumers will continue to function with the  new services:
 
-The Data Hub Administrator manages the Data Hub implementation of the organization.
-
-Carries out the data sharing policy
-
-assigns curators
-
-
+* **Customer Service 1.1** is now published at the endpoint **pub.mendix.com/api/customer/v1**
+* **Test Service 1.0** – this is unchanged from the previous version –  is now published at **pub.mendix.com/api/test/v1**.
 
 
 
@@ -158,8 +158,6 @@ assigns curators
 In practice, data curation is about maintaining and  managing the metadata.  The process of data curation revolves around ingesting metadata.  Data curators not only create, manage, and  maintain data, but may also be involved in determining best practices for working with that data. 
 
 Defining which data sources and data sets are the most useful is the job of the data curator who keeps an overview of the data sharing landscape of the organization. While some rules of  thumb and best practices apply, the data curator must make an educated  decision about which data assets are appropriate to use.
-
- 
 
 ## What is the Role of a Data Curator?
 
@@ -226,7 +224,7 @@ ge_container width="250" %}}![2 endpoints](/Users/Ila.Gordhan/Desktop/Github Men
 
 When you drag the **Customer** entity from **CustomerApi version 1.0.0** deployed to the **Acceptance** environment into your project, Studio Pro will retrieve the information it requires from the contract that is at the endpoint. 
 
-### Consumed (External) Entities
+## Consumed (External) Entities
 
 When you use an external entity from a published OData service through the **Data Hub** pane in Studio Pro, you are consuming the dataset from the service (which is published from the app deployed in a specific environment). The OData endpoint for the dataset is used in the consuming app.
 

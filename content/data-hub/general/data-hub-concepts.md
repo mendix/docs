@@ -54,6 +54,8 @@ A visual example:
 
 ## 2.2 Using Data Hub to Share Data - An Example
 
+- [ ]  ??change the tone
+
 ### 2.2.1 Creating and App and Sharing Datasets
 
 1. Developer of **Sales APP** has Customer data in his App which he wants share with the rest of the company.  The developer publishes useful groups of entities (datasets) in an **OData v3 service**. 
@@ -88,7 +90,9 @@ The Data Hub Catalog is a catalog of reigstered endpoints and the data at these 
 
 An **Endpoint** is the complete and unique identifier of data souce or service defined by the location of the app *in* the environment it is deployed to with the relative path of the service.  For an OData service, the relative path of the service that should include the major version number.  This is the **endpoint** that is registered and this is where the *contract* files of the service is defined. 
 
-The schematic below shows the different endpoints that result from a service that is deployed by an app, and consumed by other apps. 
+The schematic below shows the different endpoints that result from a service that is deployed by an app at different stages of life-cycle and the resulting endpoints and contracts. The effect on consuming apps can also be seen. 
+
+The schematic provides a guideline and recommendations for managing your own app production cycles when dealing with shared data resources. 
 
 - [ ]  to be re-drawn according to design guidelines, and so that it is clear and parts can be extracted for the rest of the section.
 
@@ -114,7 +118,7 @@ When this app is deployed to the **Production** environment this defines the **r
 
 The app consuming these services consumes from these endpoints.
 
-### 3.2 New Version of the App  Services Deployed to Accp
+### 3.2 New Version of App  Services Deployed to Accp
 
 When the app is revised, a new release **Mendix Model 1.1**  that is deployed to the acceptance environment.
 
@@ -124,17 +128,17 @@ When the app is revised, a new release **Mendix Model 1.1**  that is deployed to
 
 The app **Mendix Model 1.1**  publishes two services: 
 
-* Customer Service 1.1 - minor changes have been made to this service so now the version number has been changed to 1.1
-* Test Service 1.0 - this is unchanged from the version in the **Production** environment.
+* **Customer Service 1.1** - minor changes have been made to this service so now the version number has been changed to 1.1
+* **Test Service 1.0** - this is unchanged from the version in the **Production** environment.
 
-When this app is deployed to the **Accp** environment which defines the **root URL** of the app and the services that are deployed:
+When this app is deployed to the **Accp** environment the following services are deployed:
 
 * **Customer Service 1.1** is published at the endpoint **pub-acccp.mendix.com/api/customer/v1**
 * **Test Service 1.0** is published at the endpoint **pub-accp.mendix.com/api/test/v1**
 
 Apps can consume from the service, deployed to the endpoints in this environment while being aware that there is a version available in the production environment.
 
-**Note** There is now a **Test Service 1.0** deployed to the Accp environment in addition to the same version service in the production environement. They both have two different endpoints.
+**Note** There is now a **Test Service 1.0** deployed to the **Accp** environment in addition to the same version service in the **production** environement. They both have two different endpoints.
 
 ### 3.3 Mendix Model 1.1 Deployed to Production  
 
@@ -144,12 +148,22 @@ Apps can consume from the service, deployed to the endpoints in this environment
 
 ------------------------
 
- When **Mendix Model 1.1** is deployed to the production environment, the service endpoints will now have the contract files for version 1.1 of the App. Assuming proper dev practices, no breaking changes  consumers will continue to function with the  new services:
+ When the new version of the app **Mendix Model 1.1** is deployed to the **production** environment, the service endpoints will now have the contract files for version 1.1 of the App.  Assuming proper dev practices, no breaking changes  consumers will continue to function with the new services:
 
 * **Customer Service 1.1** is now published at the endpoint **pub.mendix.com/api/customer/v1**
 * **Test Service 1.0** – this is unchanged from the previous version –  is now published at **pub.mendix.com/api/test/v1**.
 
+Consumers will now find these contracts at the endpoints. They will have to **Update** their consumed services in Studio Pro.
 
+### 3.4 Mendix Model 1.2 Deployed to Test Environment
+
+![service versions1.0](./attachments/dh-concepts/service-versions-endpoints-4.png)
+
+For the version of **Mendix Model 1.2** which is in the test phase and deployed to the **Test** environment the following services are published:
+
+- **Customer Service 2.0** published at endpoint **pub-test.mendix.com/api/customer/v2**
+- **Customer Service 1.2** published at endpoint **pub-test.mendix.com/api/customer/v1**
+- **Test Service 1.0** published at endpoint  **pub-test.mendix.com/api/test/v1**
 
 # Curation  and Governance
 

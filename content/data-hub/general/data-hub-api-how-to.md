@@ -9,11 +9,13 @@ tags: ["data hub", "Data Hub API", "registration", "api", "api-requests"]
 
 ## 1 Introduction
 
-This guide takes you through how to use and the [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) for searching and registering your data sources from your business applications to Data Hub and consuming them. 
+This guide describes how to use and the [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) for searching and registering your data sources from your business applications to Data Hub and consuming them. 
 
-The [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) is published as an OpenAPI 3.0 (formerly Swagger) specification which enables you to visualize the API. It has the latest documentation on the implemented calls which you can try out.  For full definitions of the objects and schemas used in this how-to refer to the specification.
+The [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) is published as an OpenAPI 3.0 (formerly Swagger) specification which enables you to visualize the API. It has the latest documentation on the calls that can be made which you can try out.  For full definitions of the data, objects and schemas used in this how-to refer to the specification.
 
-You can see the process of search and registration to Data Hub in the [Share Data Between Apps](/data-hub/share-data) how-to. This demonstrates the integrated functionality of Data Hub in Mendix Studio Pro for registering data sources. Using the Data Hub API you can create a deployment process for your apps to register the OData v3 and OData v4 services from these apps and make them available for use in another app through the Data Hub Catalog. 
+You can see the process of search, registration and consume using Data Hub by working throught the how-to [Share Data Between Apps](/data-hub/share-data) . This also demonstrates the integrated functionality of Data Hub in Mendix Studio Pro for registering and consuming data sources. 
+
+Using the Data Hub API you can create a deployment process for your apps to register the OData v3 and OData v4 services from these apps and make them available for use in another app through the Data Hub Catalog. 
 
 **Note**: To use the Mendix Data Hub a license is required.
 
@@ -32,14 +34,12 @@ Before starting this how-to, make sure you have completed the following:
 
 ## 3 Overview of the Data Hub API
 
+The following points provide an overview of the Data Hub API and using it:
+
 - You can access the latest Data Hub API at: [http://datahub-spec.s3-website.eu-central-1.amazonaws.com](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
-
 - The base URL for all calls to the API is: https://hub.mendix.com/rest/datahubservice/v2/
-
 - All requests that are made to the Data Hub API must include the access to the organization’s Data Hub. This is accomplished by including the PAT ( [Generating your Personal Access Token](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat)) in the header of the request: `Authorization`:  `MxToken <your_PAT_Token>.` For more details see: [API calls and authentication](#authentication).
-
 - For the full specifications of the parameters and schemas and the response status codes refer to the  [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/). 
-
 - The requests that can be made through the Data Hub API:
 
   - Search for registered assets (data sources, datasets, attributes and associations) in the Catalog using GET /data
@@ -115,9 +115,9 @@ The following parameters can be specified for the `data` call:
 
 A successful 200 response returns the assets from the Data Hub that satisfies the search string and specified filters. This means that all the objects in the the returned `Data` array will have the string `sample` in the names and descriptions. 
 
-#### 5.3.1 Objects Returned  for the `SearchResults`  {#api-search-results}
+#### 5.3.1 Data Returned  for the `SearchResults` Object {#api-search-results}
 
-The endpoints (which are the data sources (services)) that are returned in the `SearchResults` object comprise the following.  For a full specification of the lower level objects and arrays refer to the [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
+The endpoints (which are the data sources (services)) that are returned as part of the `SearchResults` object comprise the following.  For a full specification of the lower level objects and arrays refer to the [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
 
 | **Name**     | **Type** | I**ncluded in response?** | **Description**                                              |
 | ------------ | -------- | ------------------------- | ------------------------------------------------------------ |
@@ -128,7 +128,7 @@ The endpoints (which are the data sources (services)) that are returned in the `
 | TotalResults | integer  | always                    | Total number of results matching the search query. Example: 87 |
 
 #### 5.3.2  `Data` Objects
-The objects that are returned in the response  for  `Data`  which are the search results are shown in the representation below. (The blue indicates that the constituent objects are a collection (of further sub-objects which may not be shown here), the red an array, and the solid outline indicates if the object is always returned.) For full details of objects that define the arrays and collections, refer to the  [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/). 
+The objects and data that are returned in the response  for  `Data`   which formthe search results are shown in the representation below. (The blue indicates an objects that is made up of a collection (of further sub-objects, data and arrays – not all sub-levels are shown in the representation), the red an array of data, and the solid outline indicates if the item is always returned in the response.) For full details of objects that define the arrays and collections, refer to the  [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/). 
 
 - [ ]  the schema table is not really necessary here as users can see the full details in the spec, however it does show at a glance what default values are etc.  The mind-map below shows the essence of the calls - can it be made clearer by adding the default values??? should it go down to a deeper level?
 

@@ -62,7 +62,7 @@ This how-to guides users in using the Data Hub API, for full details of all the 
 
 For each request described in this document, the method and URL is given for the base call with a description of the parameters and body. An example is given that you follow to try out the calls. 
 
-For some examples, the [curl](http://curl.haxx.se/) command is also given. You will be required to enter the specifics for your own registration such as the returned values for your requests. 
+For some examples, the [curl](http://curl.haxx.se/) command is also given. You must enter the specifics for your own registration such as the returned values for your requests. 
 
 **Note:** curl is an open-source tool curl that is pre-installed on many Linux and macOS systems. Windows users can download a version at curl.haxx.se. When using HTTPS on Windows, ensure that your system meets the curl requirements for SSL.
 

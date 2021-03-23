@@ -18,7 +18,7 @@ The service console creates a backup of the project files, this allows you to re
 
     ![Step 2, Start the update process](attachments/updating-a-mendix-app/2_click_update.png)
 
-3.  The 'Update App' popup that appears shows you the information of the current active software version. The number of the App version shows the release number of the versioned deployment package. This is the release that is currently running on this server.
+3.  The 'Update App' popup that appears shows you information about the current active app. The App version shows the release number of the deployment package that is currently running on this server. The Mendix server version shows the used version of the server distribution, which is the same as the Studio Pro version where the deployment package has been created with.
 
     ![Step 3, Release details and overview of all server versions](attachments/updating-a-mendix-app/3_update_app.png)
 

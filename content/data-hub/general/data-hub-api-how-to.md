@@ -25,6 +25,8 @@ Using the Data Hub API you can create a deployment process for your apps to regi
 - Register the service in the Catalog –  [Section 6](#api-search)
 - Register consumed datasets by an App – [Section 7](#consumed-ep)
 
+Examples are provided for all the calls described in this how-to in the [Data Hub API how-to examples](/general/data-hub-api-how-to-examples) that accompanies this how-to.
+
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following:

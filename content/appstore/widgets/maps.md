@@ -88,7 +88,7 @@ _\* - When using the Google Maps provider, the **scroll to zoom** setting requir
 Under the **Dimensions** properties tab, the following settings can be adjusted that are related to dimensional aspects of the map widgets:
 * **Width unit** and **Width**: The width of the widget in relation to the rest of the elements on the page. The available options for unit are _Percentage_ and _Pixels_. The width can then be set as an appropriate CSS value. These two properties need to be used together to work.
 * **Height unit** and **Height**: The height of the widget in relation to the rest of the elements on the page. The available options for unit are _Percentage of width_, _Pixels_, and _Percentage of parent_. The height can then be set as an appropriate CSS value. These two properties need to be used together to work.
-* **Zoom level**: The starting zoom level of the map. Options are: Automatic, World, Continent, City, Street, and Buildings.
+* **Zoom level**: The starting zoom level of the map. Options are: Automatic, World, Continent, City, Street, and Buildings. Please keep in mind when using this feature with multiple marked locations, the level of zoom chosen here will be applied after the map has centered to a position in which all markers are visible. 
 
 ## 3 Previous Versions' Documentation
 

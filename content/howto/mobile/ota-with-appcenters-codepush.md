@@ -1,6 +1,6 @@
 ---
 title: "Release OTA Update with App Center's CodePush"
-parent: "native-mobile"
+parent: "how-to-ota"
 menu_order: 8
 description: Learn to release releasing an OTA update with App Center's CodePush.
 tags: ["mobile", "native", "react", "ios", "android", "ota", "appcenter"]
@@ -16,7 +16,6 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install Mendix Studio Pro v8.15 or above using the online installer. The offline installer does not include the Mendix Native Mobile Builder dependency.
 * Deploy your app by completing [How to Deploy Your First Mendix Native Mobile App](deploying-native-app).
-* Configure the App Center service for the Mendix Native Mobile Builder.
 
 ## 3 Build an App That Can Use CodePush OTA Updates {#build-with-ota-support}
 

@@ -92,7 +92,7 @@ For convenience and conciseness, throughout this how-to the following variables 
 
 ## 5 Searching in the Catalog{#api-search}
 
-Search in the Catalog returns the registered assets that satisfy the search string and filters. The search is carried out on all registered assets in the catalog (data sources, data sets, attributes and descriptions of the registered items).
+Search in the Catalog returns the registered assets that satisfy the search string and filters you have specified. The search is carried out on all registered assets in the catalog (data sources, data sets, attributes and descriptions of the registered items).
 
 ### 5.1 Method and Endpoint
 

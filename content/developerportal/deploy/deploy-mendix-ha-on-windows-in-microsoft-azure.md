@@ -24,7 +24,7 @@ It describes the installation and configuration of the Mendix software on multip
 
 * An active Azure subscription
 
-* Two or more servers, configured as described in the [Deploy Mendix on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows) guide. Make sure these servers have an extra data disk added to store the Mendix application files!
+* Two or more servers, configured as described in the [Deploy Mendix on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows) guide. Make sure these servers have an extra data disk added which you configure to use as the location of apps and server files in the Mendix Service Console preferences.
 
 * An Azure admin account with sufficient permissions to create or modify:
 
@@ -53,6 +53,8 @@ In a clustered environment there are some tasks (for example, cleaning up expire
 
 4. Click **Close** on both screens to return to the Service Console.
 
+More information on the cluster leader and slave roles can be found in [this article](/refguide/clustered-mendix-runtime#4-cluster-leader-cluster-slaves).
+
 
 ## 4 Configuring the Azure Load Balancer
 
@@ -80,7 +82,20 @@ Then select your application, click **Configuration** and then **Advanced...**. 
 
 By default, the container will be created in the blob storage if it does not yet exist. More information about the configuration options for Azure Blob Storage in the Mendix Runtime is available here: [Microsoft Azure Blob Storage settings](/refguide/custom-settings#7-microsoft-azure-blob-storage-settings)
 
+It's also strongly recommended to add the setting _com.mendix.storage.PerformDeleteFromStorage_ with value `False`. This prevents the runtime from deleting files from the underlying storage when it's deleted in the app, which can result in missing files when restoring a database back-up.
+If you do not want to enable this setting, make sure have a restore strategy configured for your storage backend.
 
-## 6 Read More
+These settings have to be configured on _all servers in the cluster_.
+
+
+## 6 Database
+
+Please note that, when using an Azure SQL database for your deployment, it is recommended to use either Premium (DTU-based model) or Business Critical (vCore-based model). Otherwise, the latency of the database could result in subpar performance of your application.
+Also, keep in mind that each published application needs its own database! More information on database requirements can be found here: [Databases](/refguide/system-requirements#databases)
+
+
+## 7 Read More
 
 * [Mendix deployment on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows)
+* [Clustered Mendix Runtime](/refguide/clustered-mendix-runtime)
+* [System requirements](/refguide/system-requirements)

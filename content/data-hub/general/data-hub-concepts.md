@@ -94,6 +94,8 @@ The schematic below shows the endpoints that result from a service that is deplo
 
 
 
+###  3.1 The Intial Situation
+
 Looking at the the process in Detail:
 
 ![service versions1.0](./attachments/dh-concepts/service-versions-endpoints-1.png)
@@ -110,7 +112,28 @@ When this app is deployed to the **Production** environment this defines the **r
 
 The app consuming these services consumes from these endpoints.
 
+### 3.2 New Version of the App  Services Deployed to Accp
 
+When the app is revised, a new release **Mendix Model 1.1**  that is deployed to the acceptance environment.
+
+![service versions1.0](./attachments/dh-concepts/service-versions-endpoints-2.png) 
+
+
+
+The app **Mendix Model 1.1**  publishes two services: 
+
+* Customer Service 1.1 - minor changes have been made to this service so now the version number has been changed to 1.1
+* Test Service 1.0 - this is unchanged from the version in the **Production** environment.
+
+When this app is deployed to the **Accp** environment which defines the **root URL** of the app and the services that are deployed:
+
+* **Customer Service 1.1** is published at the endpoint **pub-acccp.mendix.com/api/customer/v1**
+
+* **Test Service 1.0** is published at the endpoint **pub-accp.mendix.com/api/test/v1**
+
+**Note** There is now a **Test Service 1.0** deployed to the accp environment in addition to the same version service in the production environement. They both have two different endpoints.
+
+## 3.3 Mendix Model 1.1 Deployed to   Services Deployed to Accp
 
 
 

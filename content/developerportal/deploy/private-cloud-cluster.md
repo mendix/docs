@@ -189,10 +189,6 @@ The Mendix operator and Mendix Gateway Agent are now installed on your platform.
 
 You can now configure the resources required for your namespace.
 
-{{% alert type="info" %}}
-Your Agent must be running and have a status of "connected" before you configure your namespace.
-{{% /alert %}}
-
 The first time you configure the namespace, you should select all the items under **Select items to configure** except **Proxy** and **Custom TLS**. Only select **Proxy** if you want to configure a proxy for your namespace. Select **Custom TLS** only if you want to configure custom CAs for your namespace.
 
 The options do the following:

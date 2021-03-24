@@ -71,7 +71,7 @@ For some examples, the [curl](http://curl.haxx.se/) command is also given. You m
 Authentication in the Data Hub API is established by defining the access to your organization’s Data Hub using the [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepa). You do not specify any *authorization* for your request but must include the following key:value pair as part of the header for *each* request:  `Authorization`:  `MxToken <your_PAT_Token>`
 
 #### 4.1.1 Using Postman
-If you prefer to use a tool with a graphical user interface when working with APIs, you can use a REST API client of your choice, for example, [Postman](https://www.getpostman.com/).  Using Postman, for each request, provide the request URI, the HTTP method, and, if required, the request parameters and body.  Authentication is specified in the request **Header**.  You can set your PAT token as a variable which can be conveniently called for each request.
+If you prefer to use a tool with a graphical user interface when working with APIs, you can use a REST API client of your choice, for example, [Postman](https://www.getpostman.com/).  Using Postman, for each request, provide the request URI, the HTTP method, and, if required, the request parameters and body.  Authentication is specified in the request **Header** using the key:  `Authorization` and setting the value to this key as  `MxToken <your_PAT_Token>`.  You can set your PAT token as a variable that can be conveniently called for each request.
 
 ####  4.1.2 Using a Command Line Tool such as Curl
 If you are using the [curl](http://curl.haxx.se/) command to send your HTTP requests to the API  then you must include the authentication header as given in this example of a GET call: 

@@ -214,7 +214,11 @@ The settings below influence the behavior of the Mendix web client.
 
 ## 10 Proxy Settings
 
-The settings below allow you to use a proxy. **These settings have to be set as JVM properties, NOT as Custom Runtime settings.**
+The settings below allow you to use a proxy. 
+
+{{% alert type="warning" %}}
+These settings have to be set as JVM properties, not as custom Runtime settings.
+{{% /alert %}}
 
 | Name | Description | Default Value |
 | --- | --- | --- |

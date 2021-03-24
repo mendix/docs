@@ -70,7 +70,7 @@ The transition from the CLI to Mendix Native Mobile Builder for OTA supporting a
 1. Navigate to [App Center](https://appcenter.ms).
 1. While logged in, find the Android and iOS apps used for building your app.
 1. Check the URLs and note down the application ID as seen in the URLs. For example, in **https://appcenter.ms/users/user.name/apps/App-Android/distribute/code-push**, **App-Android** is the Android app's ID. 
-
+1. If your app is build under an organization the URL might look like **https://appcenter.ms/orgs/org-name/apps/App-Android/distribute/code-push**. In that case note down the **org-name** as seen in the URL too.
 ### 4.2 Move Your App to the Mendix Native Mobile Builder
 
 1. Launch the Mendix Native Mobile Builder for your project.
@@ -86,12 +86,23 @@ The transition from the CLI to Mendix Native Mobile Builder for OTA supporting a
         "androidAppName": "App-Android"
     },
     ```
+    Optionally if your apps are build in an App Center organization add the organization name, for example: 
+    
+    ```  
+    "appcenter": {
+        "iosAppName": "App-iOS",
+        "androidAppName": "App-Android"
+        "organization": "your-organization-here"
+    },
+    ```
     
     If the file does not exist add it manually. Either way, **make sure to change the names to reflect the IDs of your App Center apps**. Then make sure the newly changed file is still a valid JSON.
     
 1. Restart the Mendix Native Mobile Builder for your project. If the tool does not start, verify once more that the **.config** file is a valid JSON.
 
 Try to push an OTA update for an unreleased version of your app, for example v0.1.0. If the OTA update shows up on your App Center app's CodePush administration page, congratulations! You successfully transferred your project over to the Mendix Native Mobile Builder.
+
+If the OTA release button remains disabled. Verify that the app names added in the configuration are correct and make sure to add the organization property if your apps are under an organization. After you corrected the mistakes, restart the Mendix Native Mobile Builder and try again.
 
 ## 5 Read More
 

@@ -19,7 +19,7 @@ The following settings influence the behavior of the Mendix web client:
 
 | Name | Description | Default value |
 | --- | --- | --- |
-| `EnableKeepAlive` | Defines whether the web client sends a keep alive request every `SessionTimeout`/2 milliseconds in order to prevent a session timeout. Each click in the browser also acts as `KeepAlive`. Disabling this property will result in the user being logged out automatically after 10 minutes of inactivity, even if the browser remains open. | true |
+| `EnableKeepAlive` | Defines whether the web client sends a keep alive request every `SessionTimeout`/2 milliseconds in order to prevent a session timeout. Each click in the browser also acts as `KeepAlive`. Disabling this property will result in the user being logged out automatically after `SessionTimeout` milliseconds of inactivity (default 10 minutes), even if the browser remains open. See `SessionTimeout` in the next section for more information. | true |
 
 ### 2.2 General Settings
 

@@ -68,8 +68,6 @@ You need to have enabled two-factor authentication. See [Two-Factor Authenticati
 
 ## 4 Linking Your App to a Licensed Node {#licensed-node}
 
-{{% todo %}}[Add video from Tom here?]{{% /todo %}}
-
 You have deployed an app: either as a Free App, or to a licensed node. You now want to link it to a licensed node, or to a different licensed node. There are several steps you need to carry out:
 
 * [Back up your data](#backing-up)

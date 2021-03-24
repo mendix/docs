@@ -9,6 +9,11 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2021
 
+### March 23rd, 2021
+
+* We added email notifications for several actions in the Marketplace. You can now receive emails if one of your components has changed, when a published component has received a review, and when you receive a reply to one of your reviews. You can unsubscribe from any of notifications in the [My App Store](/appstore/general/app-store-overview#my-app-store) section of the of Marketplace.
+* Developers can now reply to reviews of their components.
+
 ### February 9th, 2021
 
 * You can now download [Windows Service](/releasenotes/studio-pro/windows-service) and **Server Distribution** for the latest Studio Pro version using the **Related Downloads** button on the **Get Studio pro** page.  

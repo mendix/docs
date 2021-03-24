@@ -38,7 +38,7 @@ Mendix advises using LTS versions for all production apps, as LTS versions of St
 
 ### 2.1 Support Duration
 
-The support duration for an LTS is an average of 3 years. Support for an LTS ends when a third consecutive major version is released (for example, support on version 6 has ended with the release of version 9).
+Support for an LTS version ends when a third consecutive major version is released (for example, support on version 6 has ended with the GA release of version 9).
 
 This diagram illustrates the LTS concept with version and [end of support](#end) examples:
 

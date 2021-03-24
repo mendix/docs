@@ -42,6 +42,6 @@ Choose the **Development line** you want to download.
 
 For more information about development lines, see [Version Control](version-control).
 
-## 4 Project Directory
+## 4 App Directory
 
-Choose the **Project directory** to which want to download the app. The suggested name includes the name of the development line (*main* or the name of the branch line), but you can change this if you want.
+Choose the **App directory** to which want to download the app. The suggested name includes the name of the development line (*main* or the name of the branch line), but you can change this if you want.

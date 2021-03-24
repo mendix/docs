@@ -11,11 +11,11 @@ The **Branch Line Manager** is used to manage the [branch lines](version-control
 
 *  Dialog box for SVN:
 
-  ![SVN Branch Line Manager](attachments/version-control-menu/branch-line-manager.png)
+	![SVN Branch Line Manager](attachments/version-control-menu/branch-line-manager.png)
 
 *  Dialog box for Git:
 
-  ![Git Branch Line Manager](attachments/version-control-menu/git-branch-line-manager.png)
+	![Git Branch Line Manager](attachments/version-control-menu/git-branch-line-manager.png)
 
 To view the **Branch Line Manager** dialog box, open **Version Control** > **Manage Branch Lines**.
 

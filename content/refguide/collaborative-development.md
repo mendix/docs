@@ -20,7 +20,7 @@ Studio Pro users can collaborate with each other through [version control](versi
 
 The collaborative development process between Studio Pro and Studio consists of the following steps:
 
-1. Every change made in Studio is automatically saved to the Studio working copy. Multiple users can view the app in Studio at the same time: one user can edit it and the others are in read-only mode. 
+1. Every change made in Studio is automatically saved to the Studio working copy. Multiple users can view the app in Studio at the same time: One user can edit it and the others are in read-only mode. 
 2.  When Studio Pro users open an app, they are notified if Studio is enabled for this development line. 
 
 	![Collaborative Development Enabled Notification](attachments/collaborative-development/collaborative-development-enabled-notification.png)
@@ -32,11 +32,10 @@ The collaborative development process between Studio Pro and Studio consists of 
 	There are two possible outcomes of this merge:<br/>
 
 	a.   There are no conflicts, the Studio Pro user changes are committed to the Team  Server. Afterwards Studio gets the latest revision from the Team Server and is unlocked; the Studio Pro user changes are visible to Studio users. Other Studio Pro users will get the changes once they do an update. <br/>
-
-	b. There are conflicts, the Studio Pro commit process is stopped. Studio is unlocked without getting changes from the Studio Pro user. The Studio Pro user needs to resolve the merge conflicts first to before being able to do a commit again.
+	b. There are conflicts, the Studio Pro commit process is stopped. Studio is unlocked without getting changes from the Studio Pro user. The Studio Pro user needs to resolve the merge conflicts first to before being able to do a commit again.<br/>
 
 {{% alert type="info" %}}
-When the Studio Pro user wants to deploy the app to the cloud, they click the **Run** button. The commit is done automatically during this process and step five is executed. 
+When the Studio Pro user wants to deploy the app to the cloud, they click the **Publish** button. The commit is done automatically during this process and step five is executed. 
 {{% /alert %}}
 
 ## 3 Studio Perspective
@@ -59,7 +58,7 @@ To merge the latest changes stored in the Team Server (from both Studio users an
 
 ### 4.2 Committing Latest Changes
 
-To commit your latest app changes and make them available to other users, open **Changes** and click **Commit**. The process of deploying your app (when you click the **Run** button) will also trigger a commit. 
+To commit your latest app changes and make them available to other users, open **Changes** and click **Commit**. The process of deploying your app (when you click the **Publish** button) will also trigger a commit. 
 
 {{% alert type="info" %}}
 We recommend you update your app and commit changes often to avoid multiple conflicts in your app.  
@@ -87,7 +86,7 @@ Whether Studio is enabled for a development line by default, depends on your app
 
 * Studio is enabled for the main line by default in the following cases:
 	* For a new app created via the Developer Portal
-	* For an app that has Studio enabled
+	* For an existing app that has Studio enabled
 * Studio is not enabled for any development line in the following cases:
 	* For a new app created via Studio Pro
 	* For an existing app that does not have Studio enabled

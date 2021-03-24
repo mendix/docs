@@ -13,7 +13,6 @@ In the **Version Control** menu, you can view and/or manipulate settings that ar
 {{% image_container width="300" %}}![Version Control Menu](attachments/version-control-menu/version-control-menu.png)
 {{% /image_container %}}
 
-
 ## 2 Update
 
 The **Update** option updates the local app to the latest revision that was committed to the version control server.

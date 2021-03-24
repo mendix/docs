@@ -1,7 +1,7 @@
 ---
 title: "Examples for Data Hub API Calls - DRAFT"
 parent: "data-hub-api-how-to"
-description: "Examples of the how to use the Dat Hub API ."
+description: "Examples of the how to use the Data Hub API."
 tags: ["data hub", "Data Hub API", "registration", "api", "api-requests"]
 ---
 

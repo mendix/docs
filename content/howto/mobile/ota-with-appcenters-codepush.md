@@ -61,18 +61,18 @@ After you have released an OTA-capable app, do the following to release a new OT
 
     {{% image_container width="350" %}}![OTA App Center page](attachments/nbui/advanced-ota-appcenter-page.png){{% /image_container %}}
 
-## 4 Transfer a CLI OTA-Compatible App to the Mendix Native Mobile Builder {#from-cli-to-ui}
+## 5 Transfer a CLI OTA-Compatible App to the Mendix Native Mobile Builder {#from-cli-to-ui}
 
 The transition from the CLI to Mendix Native Mobile Builder for OTA supporting apps requires a few manual steps. These steps ensure you do not have to release your apps to the app stores again. 
 
-### 4.1 Gather the Required Information 
+### 5.1 Gather the Required Information 
 
 1. Navigate to [App Center](https://appcenter.ms).
 1. While logged in, find the Android and iOS apps used for building your app.
 1. Check the URLs and note down the application ID as seen in the URLs. For example, in **https://appcenter.ms/users/user.name/apps/App-Android/distribute/code-push**, **App-Android** is the Android app's ID. 
 1. If your app is built under an organization the URL might look like this: **https://appcenter.ms/orgs/org-name/apps/App-Android/distribute/code-push**. In this case, note the **org-name** as seen in the URL too.
 
-### 4.2 Move Your App to the Mendix Native Mobile Builder
+### 5.2 Move Your App to the Mendix Native Mobile Builder
 
 1. Launch the Mendix Native Mobile Builder for your project.
 1. If you have not yet completed the setup wizard, please complete it now.
@@ -106,6 +106,6 @@ Try to push an OTA update for an unreleased version of your app, for example v0.
 
 If the OTA release button remains disabled. Verify that the app names added in the configuration are correct and make sure to add the organization property if your apps are under an organization. After you corrected the mistakes, restart the Mendix Native Mobile Builder and try again.
 
-## 5 Read More
+## 6 Read More
 
 * [How To Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile)

@@ -92,7 +92,7 @@ To migrate your free app and its database to your Mendix Basic environment, foll
 
 ### 3.5 Configure Your Environment
 
-The final step before your app can be deployed live, is to configure your environment details. This is only needed if you have some special configurations or you have to specify settings in order for your functionality to work. For example, if your app makes use of scheduled events or application constants, you can configure them here. See [Environment Details](environments-details) for more information about configuring your environment.
+Before your app can be deployed live, You might need to configure your environment details. This is only required if you have some special configurations or you have to specify settings in order for your functionality to work. For example, if your app makes use of scheduled events or application constants, you can configure them here. See [Environment Details](environments-details) for more information about configuring your environment.
 
 ### 3.6 Deploy your app
 

@@ -185,6 +185,7 @@ It allows users to match date attributes based on predefined criterias. The crit
 - Smaller than or equal
 
 You can select your filter criteria in the settings of Date Filter.
+
 ![Date filter settings](attachments/data-grid-2/date-filter-settings.png)
 
 When “_Adjustable by user_” is defined as **No** it will not render the option to choose the filter type in the widget.

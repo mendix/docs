@@ -29,7 +29,7 @@ You can see the process of search and registration to Data Hub in the [Share Dat
 Before starting this how-to, make sure you have completed the following:
 
 - Have a registered Mendix Data Hub account
-- To access the API you must obtain a Personal Access Token (PAT) as described in [Generating your Personal Access Token](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) to authenticate your integration’s API requests
+- Have a Personal Access Token (PAT) as described in [Generating your Personal Access Token](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) to authenticate your API requests
 
 ## 3 Overview of the Data Hub API
 

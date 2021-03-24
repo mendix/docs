@@ -115,7 +115,7 @@ The following parameters can be specified for the `data` call:
 
 ### 5.3 200 OK Response
 
-A successful 200 response returns the assets from the Data Hub that satisfies the search string and specified filters. This means that all the objects in the the returned `Data` array will have the string `sample` in the names and descriptions. 
+A successful 200 response returns the assets from the Data Hub that satisfy the search string and specified filters. The search results are returned in the `Data` array.
 
 #### 5.3.1 Data Returned  for the `SearchResults` Object {#api-search-results}
 

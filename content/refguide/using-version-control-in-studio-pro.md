@@ -166,21 +166,7 @@ There are two different sorts of conflict:
 
 Two changes in the same *document* that are really close to each other can cause a document conflict. For example, two people both change the properties of the same element on the page. The document will be marked as conflicted in the **Changes** pane. Conflicts have to be resolved before you can commit again.
 
-Double-click a document to see which elements have conflicts. You can also see all the changes which have been made by you, and all the changes which were made by other people.
-
-![Detailed document conflicts](attachments/using-version-control-in-studio-pro/document-changes.png)
-
-For each *document* you can decide whether to accept the conflicted elements which are **mine** and discard the changes to those by the other person, or to accept the conflicted elements which are **theirs**, if their changes are more relevant. 
-
-This decision applies to all the conflicts in the document; you cannot choose your version for some conflicted changes but their changes for others. Non-conflicting changes will be merged as normal.
-
-Ensure you are viewing changes for the whole app in the **Changes** pane, select the document which is conflicted, and use the required option from the **Tasks** drop-down.
-
-![Resolving a conflict using the changes pane](attachments/using-version-control-in-studio-pro/resolve-document-conflict.png)
-
-For example, if you deleted a data view in a page and another person changes something inside that data view, you may choose to discard the changes of the other by clicking 'Use mine'.
-
-Resolving a conflict will make the conflict go away but the document may, of course, still be marked as changed if there are changes to commit.
+For more information on resolving document conflicts see [New Merge Algorithm with Fine-Grained Conflict Resolution](new-merge-algorithm) and [Changes Pane](changes-pane).
 
 ### 6.2 Resolving an App Conflict
 

@@ -2,7 +2,7 @@
 title: "Using the Data Hub API - DRAFT"
 category: "General Info"
 menu_order: 50
-description: "How to use the Dat Hub API a guide with examples."
+description: "How to use the Data Hub API: a guide with examples."
 tags: ["data hub", "Data Hub API", "registration", "api", "api-requests"]
 ---
 

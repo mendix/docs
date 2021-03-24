@@ -78,7 +78,7 @@ Each submitted job listing is reviewed and proofread by Mendix. If there is any 
 
 With a Mendix job dashboard account, you can post job listings regularly on the Mendix job board as well as manage these listings. To manage the job listings, click **Access job dashboard** on the main page of the Mendix jobs board.
 
-The [Mendix job dashboard](https://developers.mendix.com/jobs/job-dashboard/) lists the jobs you have posted. Hovering your mouse pointer over a job listing will enable the following action buttons:
+The [Mendix job dashboard](https://developers.mendix.com/jobs/) lists the jobs you have posted. Hovering your mouse pointer over a job listing will enable the following action buttons:
 
 * **Edit** — click this to edit any detail of the listing 
     * You can edit jobs you have already submitted as well as jobs that are still pending approval

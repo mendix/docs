@@ -88,7 +88,7 @@ For convenience and conciseness, throughout this how-to the following variables 
 
 - {{baseURL}} – the base URL for the Data Hub API:  https://hub.mendix.com/rest/datahubservice/v2/data
 - {*AppUUID}* – insert the value returned in the API response for the UUID of the application
-- {*EnvironmentUUID} -* insert the value returned in the API response for the UUID of the application
+- {*EnvironmentUUID} -* insert the value returned in the API response for the UUID of the environment
 
 ## 5 Searching in the Catalog{#api-search}
 

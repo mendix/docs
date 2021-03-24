@@ -33,7 +33,7 @@ Before starting this how-to, make sure you have completed the following:
 
 ## 3 Overview of the Data Hub API
 
-- You can access the latest Data Hub API at: [http://datahub-spec.s3-website.eu-central-1.amazonaws.com](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
+- You can access the latest Data Hub API specification at: [http://datahub-spec.s3-website.eu-central-1.amazonaws.com](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
 
 - The base URL for all calls to the API is: https://hub.mendix.com/rest/datahubservice/v2/
 

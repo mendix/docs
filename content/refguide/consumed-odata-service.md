@@ -7,11 +7,11 @@ tags: ["studio pro", "data hub", "odata service", "consumed odata service"]
 
 ## 1 Introduction
 
-When an external entity is used in a project module through the [Data Hub pane](data-hub-pane), a consumed OData service document is added specifying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.
+When an external entity is used in an app module through the [Data Hub pane](data-hub-pane), a consumed OData service document is added specifying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.
 
 ## 2 Consume OData Service screen
 
-The **Consumed OData Service** document that is added to the project displays the following information:
+The **Consumed OData Service** document that is added to the app displays the following information:
 
 ![Connection Tab](attachments/consumed-odata-service/consumed-odata-doc-connection-tab.png)
 
@@ -53,9 +53,9 @@ Default value: *300 seconds*
 
 **Proxy configuration** allows you to configure whether to use a proxy for the request:
 
-* **Use project settings** – use settings which are defined at the project level (default)
-* **Override** – override the project-level settings for this action by specifying the host, port, user name, and password settings for the proxy
-*  **No proxy** – do not use a proxy for this service, even if there is a proxy configured at the project level
+* **Use project settings** – use settings which are defined at the app level (default)
+* **Override** – override the app-level settings for this action by specifying the host, port, user name, and password settings for the proxy
+*  **No proxy** – do not use a proxy for this service, even if there is a proxy configured at the app level
 
 {{% alert type="info" %}}
 In most cases, this setting can be ignored, and the default **Use project settings** can be used.
@@ -131,13 +131,13 @@ Click the **Properties** tab for the consumed OData service which displays the p
 
 ### 4.1 Consuming from Service Endpoints{#consume-service-endpoints}
 
-When you add an external entity to your project, you are consuming the entity from a specific version of a service (the *service endpoint*), deployed to a given environment. The metadata file or contract for the service is located at this endpoint. 
+When you add an external entity to your app, you are consuming the entity from a specific version of a service (the *service endpoint*), deployed to a given environment. The metadata file or contract for the service is located at this endpoint. 
 
 The same service, deployed to a different environment will be to a different service endpoint and this will be registered as a different asset in the Data Hub Catalog. In the following example, there are two endpoints for the **CustomerApi service version 1.1.0** which is deployed to the production environment and the **Acceptance** environment: 
 
 {{% image_container width="250" %}}![2 endpoints](attachments/consumed-odata-service/same-service-different-endpoints.png){{% /image_container %}}
 
-When you drag the **Customer** entity from **CustomerApi version 1.0.0** deployed to the **Acceptance** environment into your project, Studio Pro will retrieve the information it requires from the contract that is at the endpoint. 
+When you drag the **Customer** entity from **CustomerApi version 1.0.0** deployed to the **Acceptance** environment into your app, Studio Pro will retrieve the information it requires from the contract that is at the endpoint. 
 
 ### 4.2 Semantic Numbering for Service Versions {#semantic}
 
@@ -175,16 +175,16 @@ When minor and major updates to a consumed service are detected in Data Hub the 
 
 ####  4.3.1. Update
 
-The **Update** option is available when a new version of a published OData service is issued, and deployed to the same endpoint as the previous version. Studio Pro will recognize that the contract at the endpoint is different to the one currently consumed in the project. After updating Studio Pro will have the same contract as the one that is available on the endpoint.
+The **Update** option is available when a new version of a published OData service is issued, and deployed to the same endpoint as the previous version. Studio Pro will recognize that the contract at the endpoint is different to the one currently consumed in the app. After updating Studio Pro will have the same contract as the one that is available on the endpoint.
 
-#####  4.3.1.1 Project Pane
+#####  4.3.1.1 App Pane
 
-In the **Project** pane this will be shown as follows: 
+In the **App** pane this will be shown as follows: 
 
 ![update service project-pane](attachments/consumed-odata-service/project-pane-update-available.png)
 
 - The service version that is *currently consumed* is shown (in this example **1.0.11**)
-- Blue **Update** - click to open the **Update Service** box and update the contract to the new one. Studio Pro will retrieve the new contract from Data Hub and this will be loaded for the project.
+- Blue **Update** - click to open the **Update Service** box and update the contract to the new one. Studio Pro will retrieve the new contract from Data Hub and this will be loaded for the app.
 - The list of entities that are consumed from the current service version which are shown by the green check-mark
 
 #####  4.3.1.2 Data Hub Search Results
@@ -195,17 +195,17 @@ In the **Data Hub** pane the search results for the same consumed service will s
 
 - The version of the service that is now at the endpoint, **1.0.12**
 
-- Blue **Update** - click to open the **Update Service** box and update the contract to the new one. Studio Pro will retrieve the new contract from Data Hub and this will be loaded for the project.
+- Blue **Update** - click to open the **Update Service** box and update the contract to the new one. Studio Pro will retrieve the new contract from Data Hub and this will be loaded for the app.
 
 - The list of entities in this new version in the Data Hub are shown, including the locally consumed entities which are marked with a green check-mark. These entities are, however, greyed out to indicate that they cannot be dragged into the domain model as the contract for the previous version is currently being consumed. The only option is to click **Update** to retrieve the updated OData Service. 
 
 #####  4.3.1.3 Update Service Dialog Box
 
-When you click **Update** on the **Consumed OData Service** document or the update icon in the **Data Hub** and **Project** panes, the **Update** dialog box is displayed.
+When you click **Update** on the **Consumed OData Service** document or the update icon in the **Data Hub** and **Project** sections, the **Update** dialog box is displayed.
 
 ![update service dhpane](attachments/consumed-odata-service/update-service-dialog-box.png)
 
-The consumed OData service that is currently consumed in the project (**1.0.0**) is shown on the left, and you can click **Update** to retrieve the new contract from the Data Hub (**2.0.0**).
+The consumed OData service that is currently consumed in the app (**1.0.0**) is shown on the left, and you can click **Update** to retrieve the new contract from the Data Hub (**2.0.0**).
 
 #### 4.3.2. Switch
 

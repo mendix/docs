@@ -16,7 +16,7 @@ Restoring a backup locally can be useful if you want to test your cloud environm
 
 * Download a backup from your cloud environment
 * Create a new database
-* Configure the project settings of the app
+* Configure the settings of the app
 * Download and restore FileDocument (binary) objects in your Domain Model
 
 ## 2 Prerequisites
@@ -71,7 +71,7 @@ If you have downloaded a full backup, this will also have been archived as a *.t
 After the backup has been restored as a local Postgres database, you have to link the database to Studio Pro. This tells Studio Pro to use the database that you have just created in PostgreSQL, rather than the database that was originally created with the app.
 
 1. Open your app in **Studio Pro**.
-2. Open **Project... > Settings** from the **Project Explorer**.
+2. Open **Project... > Settings** from the **App Explorer**.
 
     ![](attachments/restore-backup-locally/modeler-settings.png)
 
@@ -104,7 +104,7 @@ If you also want to restore the **FileDocuments**, you need to follow the follow
 
     ![](attachments/restore-backup-locally/backup-choice.png)
 
-2. Select **Project > Show Project Directory in Explorer** from the Studio Pro menu
+2. Select **Project > Show App Directory in Explorer** from the Studio Pro menu
 
     ![](attachments/restore-backup-locally/project-directory.png)
 

@@ -169,15 +169,15 @@ There are a few ways to open a Git Mendix app, as long as you have Studio Pro st
 
 In your **Recent Apps** list, you can click the app name and the app will open.
 
-#### 4.5.2 Recent Projects Menu
+#### 4.5.2 Recent Apps Menu
 
-Under **File > Recent Projects** you can select the app and open it.
+Under **File** > **Recent Apps**, you can select the app and open it.
 
 #### 4.5.3 Open App Form
 
 The **Open App** form is accessible from two different places:
 * **Open App** button on the **My Apps** tab
-* Under menu **File > Open Project**
+* Under menu **File > Open App**
 
 In a form, there are two ways to open a Git app, by opening it from a previous checkout or by opening it locally on disk:
 
@@ -218,10 +218,7 @@ To upload your app, do the following:
 
     ![Upload to Version Control Server dialog](attachments/on-premises-git-howto/upload-to-vc-server.png)
     It might ask you to sign into the server, depending on whether you have previously signed in and choose to stay logged in.
-5.  You can see the upload process in the **Upload Project to Team Server** pop-up window:
-
-    ![Upload Project to Team Server progress window](attachments/on-premises-git-howto/upload-project-to-team-server.png)
-    
+5.  You can see the upload process in the **Upload Project to Team Server** pop-up window.
 
 The project is uploaded successfully. You can check on your private server and see that the app is now on the selected repository:
 
@@ -231,25 +228,25 @@ The project is uploaded successfully. You can check on your private server and s
 
 If you already have an existing versioned app (with Subversion) that you would like to upload to your Git private server instead, you can export it, then re-import it, and uploading it to your server. Follow the steps below:
 
-1. Once the app is opened, go to **File > Export Project Package**. 
-2.  In the **Export Project Package** dialog box, browse to the location you would like to save the *.mpk* (Mendix Package) file, or accept the default location, a new **packages** folder in the root of the application folder. Take note of this location, as you will need it later. You can also rename the *.mpk* file (for example,*MyGitApp.mpk*) and the app will be named that way once you import it and upload it to the Git server:
+1. Once the app is opened, go to **File > Export App Package**. 
+2.  In the **Export App Package** dialog box, browse to the location you would like to save the *.mpk* (Mendix Package) file, or accept the default location, a new **packages** folder in the root of the application folder. Take note of this location, as you will need it later. You can also rename the *.mpk* file (for example,*MyGitApp.mpk*) and the app will be named that way once you import it and upload it to the Git server:
 
-    ![Export Project Package dialog](attachments/on-premises-git-howto/export-project-package-dialog.png)
+    ![Export App Package dialog](attachments/on-premises-git-howto/export-project-package-dialog.png)
 
 3.  The **Progress** pop-up window appears, and once it is completed, you can close the project in **Studio Pro**:
 
     ![Progress dialog](attachments/on-premises-git-howto/progress-dialog.png)
 
-4.  Now you can import the project package again, and from there you can choose to upload it to your Git private server. Go to **File > Import Project Package**:
+4.  Now you can import the package again, and from there you can choose to upload it to your Git private server. Go to **File** > **Import App Package**:
 
-    {{% image_container width="250" %}}![Import Project Package menu](attachments/on-premises-git-howto/import-project-package-menu.png){{% /image_container %}}
+    {{% image_container width="250" %}}![Import App Package menu](attachments/on-premises-git-howto/import-project-package-menu.png){{% /image_container %}}
 
 5. Once the file browser dialog box is open, navigate to the location you save the *.mpk* file during the export process.
-6. In the **Import Project Package** dialog box, select **Private server** option in the **Where should we store your App?** section. 
+6. In the **Import App Package** dialog box, select **Private server** option in the **Where should we store your App?** section. 
 7. In the **Private Server Type** option, select **Git** (if you have both **Subversion** and **Git** enabled in the **Preferences** form). 
 8.  Enter the link to the private repository in the address textbox and click **OK**. Remember, the repository **must be completely empty**, or **Studio Pro** will not be able to upload a project to it:
 
-    ![Import Git Project Package menu](attachments/on-premises-git-howto/import-project-package-git-dialog.png)
+    ![Import Git Package menu](attachments/on-premises-git-howto/import-project-package-git-dialog.png)
 
 9. Click **OK**. 
 

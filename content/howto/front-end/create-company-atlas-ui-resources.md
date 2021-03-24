@@ -23,7 +23,7 @@ In the example below, we’ll go through the steps of creating a new page templa
 
 ### 2.1 Example Scenario
 
-In Studio Pro, go to the **Project Explorer** of your app and right-click the page you want to use as the page template. In this example, we are using a dashboard page.
+In Studio Pro, go to the **App Explorer** of your app and right-click the page you want to use as the page template. In this example, we are using a dashboard page.
 
 ![](attachments/howto/creating_page_templates.png)
 
@@ -76,7 +76,7 @@ The building block is now available in the **Toolbox**, where users can drag it 
 
 Now that it’s clear how to create page templates and building blocks, we need to discuss how to get our resources from the **Local** category into a module that can be shared with our apps and users.
 
-Let’s begin by placing our page template inside the **UI_Resources** module under **App Store modules**:
+Let’s begin by placing our page template inside the **UI_Resources** module under **Marketplace modules**:
 
 ![](attachments/howto/creating_moving_local.png)
 
@@ -90,7 +90,7 @@ Adding an underscore to the folder name in Studio Pro (for example, **_Layouts**
 
 ## 5 Export Company Atlas UI Resources
 
-When the resources are ready to be shared with multiple developers or apps, the module can be exported from the Project Explorer. You are free to change the name of a module as long as the module has been exported as a UI resource package.
+When the resources are ready to be shared with multiple developers or apps, the module can be exported from the App Explorer. You are free to change the name of a module as long as the module has been exported as a UI resource package.
 
 ![](attachments/howto/export_ui_module.png)
 

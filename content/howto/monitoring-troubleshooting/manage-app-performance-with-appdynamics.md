@@ -68,7 +68,7 @@ To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaag
 
 ### 3.2.3 Mendix Studio Pro (Development Mode Only)
 
-1. Open your Mendix application, and then select **Settings** in the **Project Explorer**:
+1. Open your Mendix application, and then select **Settings** in the **App Explorer**:
 2. Open a configuration:
 
      ![](attachments/19202618/19398903.png)

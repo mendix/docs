@@ -98,7 +98,7 @@ There are two methods for deploying your app to the Mendix Cloud. The first opti
 
 1. Open [Studio Pro](http://appstore.home.mendix.com/link/modeler/).
 2. Open the licensed app.
-3. Click **Project** in the top menu bar and select **Deploy to licensed cloud node**:
+3. Click **App** in the top menu bar and select **Deploy to licensed cloud node**:
 
     ![](attachments/mendix-cloud-deploy/deploy-to-cloud-node.png)
 

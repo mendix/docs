@@ -113,8 +113,8 @@ To add these restrictions, follow the instructions below:
 
 	After altering this code, do the following to see your changes:<br/>
 		a. Run `npm run build` to update the widget.<br/>
-		b. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.<br/>
-		c. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally**.<br/>
+		b. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.<br/>
+		c. Right-click your TextBox widget and select **Update widget**. Then click the play button (**Run Locally**).<br/>
 		d. Click **View** to see your changes.
 
 	Explaining the code:
@@ -204,8 +204,8 @@ This section will teach you to add validation to your TextBox widget. Using micr
 
 	After altering this code, do the following to see your changes:<br/>
 		a. Run `npm run build` to update the widget.<br/>
-		b. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.<br/>
-		c. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally**.<br/>
+		b. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.<br/>
+		c. Right-click your TextBox widget and select **Update widget**. Then click the play button (**Run Locally**).<br/>
 		d. Click **View** to see your changes.
 
 	Explaining the code:
@@ -257,8 +257,8 @@ Validation can come from a modeled microflow or nanoflow, but can also be widget
 
 	After altering this code, do the following to see your changes:<br/>
 		a. Run `npm run build` to update the widget.<br/>
-		b. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.<br/>
-		c. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally**.<br/>
+		b. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.<br/>
+		c. Right-click your TextBox widget and select **Update widget**. Then click the play button (**Run Locally**).<br/>
 		d. Click **View** to see your changes.
 
 	Explaining the code:
@@ -298,8 +298,8 @@ Until now the components did not keep any state. Each keystroke passed through t
 
 	After altering this code, do the following to see your changes:<br/>
 		a. Run `npm run build` to update the widget.<br/>
-		b. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.<br/>
-		c. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally**.<br/>
+		b. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.<br/>
+		c. Right-click your TextBox widget and select **Update widget**. Then click the play button (**Run Locally**).<br/>
 		d. Click **View** to see your changes.
 
 	Adding this code will allow you to select various actions:
@@ -508,8 +508,8 @@ To make the input widget more accessible for people using screen readers, you wi
 
 	After altering this code, do the following to see your changes:<br/>
 		a. Run `npm run build` to update the widget.<br/>
-		b. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.<br/>
-		c. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally**.<br/>
+		b. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.<br/>
+		c. Right-click your TextBox widget and select **Update widget**. Then click the play button (**Run Locally**).<br/>
 		d. Click **View** to see your changes.
 
 	Explaining the code:

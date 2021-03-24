@@ -41,7 +41,7 @@ You can choose how you want to represent associations. For more information, see
 
 ### 3.2 Security {#security}
 
-You can configure security for the OData service when [Project Security](project-security) is enabled.
+You can configure security for the OData service when [App Security](project-security) is enabled.
 
 #### 3.2.1 Requires Authentication {#authentication}
 

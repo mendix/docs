@@ -15,9 +15,9 @@ The **Preferences** option in the menu opens a dialog box where you can set user
 
 ### 2.1 Interface
 
-#### 2.1.1 Keep Active Document Selected in Project Explorer
+#### 2.1.1 Keep Active Document Selected in App Explorer
 
-When enabled, **Project Explorer** automatically highlights the document that is currently active. When this property is disabled, the selection in **Project Explorer** remains unchanged when the active document changes.
+When enabled, **App Explorer** automatically highlights the document that is currently active. When this property is disabled, the selection in **App Explorer** remains unchanged when the active document changes.
 
 ### 2.2 Mendix Assist
 
@@ -111,9 +111,9 @@ With this option, you can enable the new version of the [Connector](view-menu#co
 
 Default: *disabled*
 
-### 6.2 New Version of the Project Explorer {#new-project-explorer}
+### 6.2 New Version of the App Explorer {#new-project-explorer}
 
-With this option, you can enable the new version of the [Project Explorer](project-explorer). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
+With this option, you can enable the new version of the [App Explorer](project-explorer). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
 
 Default: *enabled*
 

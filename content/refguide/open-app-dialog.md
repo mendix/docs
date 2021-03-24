@@ -1,9 +1,9 @@
 ---
-title: "Open Project"
+title: "Open App"
 parent: "file-menu"
 menu_order: 20
-description: "Describes the Open Project (app) flow and the Open App dialog box"
-tags: ["studio pro", "open app", "open project"]
+description: "Describes the Open App flow and the Open App dialog box"
+tags: ["studio pro", "open app"]
 aliases:
     - /refguide/open-project-dialog.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -13,8 +13,8 @@ aliases:
 
 To open a project in Mendix Studio Pro, do one of the following:
 
-* Open the **File** menu in the top bar > **Open Project**
-*  Click **Open App** on the Studio Pro landing page
+* Select **File** > **Open App**
+* Click **Open App** on the Studio Pro landing page
 
 The **Open App** dialog box will open, where you can select the app location:
 
@@ -48,8 +48,8 @@ In the **App repository address** field, enter the address of the app you want t
 
 ### 2.3 Locally on Disk {#local}
 
-For opening an app you already have on disk, simply point to the project file. 
+For opening an app you already have on disk, simply point to the app file. 
 
 ## 3 Read More
 
-* [Import Project Package](import-project-package-dialog)
+* [Import App Package](import-project-package-dialog)

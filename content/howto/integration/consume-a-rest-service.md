@@ -26,7 +26,7 @@ We will start by providing Studio Pro as an example of what the REST service ret
     ![Screenshot of the result of the rest call](attachments/consume-a-rest-service/get-call-result.png)
 
 3. Copy the whole JSON snippet. Make sure that you select the **Raw Data** tab to copy the whole code structure.
-4. Create a module and name it *RESTconsume*. To add a new [JSON structure](../../refguide/json-structures) to your module with the sample JSON that you can use in the app, right-click the module in the **Project Explorer** and select **Add other** > **JSON structure**.
+4. Create a module and name it *RESTconsume*. To add a new [JSON structure](../../refguide/json-structures) to your module with the sample JSON that you can use in the app, right-click the module in the **App Explorer** and select **Add other** > **JSON structure**.
 5. Enter a **Name** for the structure: *JSON_structure* and click **OK**.
 6. In the **JSON Structure** dialog box, paste the JSON snippet in the **General** tab and click **Refresh**. This analyzes the structure of the JSON snippet that we can use later.
 
@@ -38,7 +38,7 @@ We will start by providing Studio Pro as an example of what the REST service ret
 
 An [import mapping](../../refguide/import-mappings) specifies how the JSON relates to [entities](../../refguide/entities). You can map the the JSON to any entity you like. The following steps describe how to generate the entities and create an import mapping:
 
-1. Right-click the module in the **Project Explorer** and select **Add other** > **Import Mapping**.
+1. Right-click the module in the **App Explorer** and select **Add other** > **Import Mapping**.
 2. Enter a **Name** for the import mapping: *Import_mapping* and click **OK**.
 3. In the **Select schema elements for import mapping** dialog box, click the radio button for **JSON structure** and then click **Select**.
 4. Double-click **JSON_structure** in the **Select JSON Structure** dialog box.
@@ -59,7 +59,7 @@ In this section, you will create an entity that represents this input and associ
 
 To add an input entity to the domain model, follow these steps:
 
-1. In the **Project Explorer**, double-click the **Domain Model**.
+1. In the **App Explorer**, double-click the **Domain Model**.
 
 2. Rename **Root** to **Summary**.
 
@@ -138,7 +138,7 @@ To create a page for this app, follow these steps:
 5. Click **OK**.
 6. From **Container widgets**, add a new **Table** with one row and two columns.
 7. Drag the **Title** field onto the left column.
-8. From the **Project Explorer**, drag **Microflow** into the right column.
+8. From the **App Explorer**, drag **Microflow** into the right column.
 9. Double-click the **Microflow** button and in the **Edit Action Button** dialog box, enter *Get summary* for the caption of the button.
 10. Add a **Data view** below the table (inside the other data view).
 11. From the **Connector**, drag the **Summary** entity onto the **[Unknown]** bar.
@@ -157,7 +157,7 @@ Now all that is left is to have the **CreateInput** microflow create a new **Inp
 
 To fill in the CreateInput microflow, follow these steps:
 
-1. In the **Project Explorer**, double-click **CreateInput**. 
+1. In the **App Explorer**, double-click **CreateInput**. 
 2. From the **Toolbox**, drag a **Create object** activity to the microflow.
 3. Double-click the activity.
 4. For **Entity**, click** **Select** and double-click **Input**.

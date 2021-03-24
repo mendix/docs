@@ -12,10 +12,10 @@ The top-bar of Studio Pro contains the following menus:
 
 ![Menu-bar](attachments/menus/menu-bar.png)
 
-* [File](#file) – allows you to manage documents and projects
+* [File](#file) – allows you to manage documents and apps
 * [Edit](#edit) – allows you to perform editing functions such as search or copy within Studio Pro
 * [View](#view) – allows you to choose how Studio Pro and dockable panes within Studio Pro are displayed
-* [Project](#project) – contains project-wide settings
+* [App](#project) – contains app-wide settings
 * [Run](#run) – contains actions for deploying and monitoring your app 
 * [Version Control](#version-control) – contains setting for version control
 * [Language](#language) – contains language and translation settings
@@ -23,7 +23,7 @@ The top-bar of Studio Pro contains the following menus:
 
 ## 2 File Menu {#file}
 
-Via the **File** menu you can manage documents and projects. For more information on the **File** menu, see [File Menu](file-menu).
+Via the **File** menu you can manage documents and apps. For more information on the **File** menu, see [File Menu](file-menu).
 
 ## 3 Edit Menu {#edit}
 
@@ -31,15 +31,15 @@ The **Edit** menu allows you to perform editing functions, such as cut/copy/past
 
 ## 4 View Menu {#view}
 
-The **View** menu allows you to view dockable panes, to enable the full screen mode, and reset the project layout. For more information on the **View** menu and its items, see [View Menu](view-menu).
+The **View** menu allows you to view dockable panes, to enable the full screen mode, and reset the projappect layout. For more information on the **View** menu and its items, see [View Menu](view-menu).
 
-## 5 Project Menu {#project}
+## 5 App Menu {#project}
 
-In the **Project** menu, you can view and/or manipulate settings that are connected to your project and deployment. For more information on the **Project** menu, see [Project Menu](project-menu).
+In the **App** menu, you can view and/or manipulate settings that are connected to your app and deployment. For more information on the **App** menu, see [App Menu](project-menu).
 
 ## 6 Run Menu {#run}
 
-The **Run** menu contains actions for deploying and monitoring your app, such as **Run**, **Run locally**, or **Debugger**. For more information on the **Run** menu, see [Run Menu](run-menu). 
+The **Run** menu contains actions for deploying and monitoring your app, such as **Publish*, **Run locally**, or **Debugger**. For more information on the **Run** menu, see [Run Menu](run-menu). 
 
 ## 7 Version Control Menu {#version-control}
 

@@ -40,33 +40,33 @@ Mendix Studio Pro can be installed on your machine with a Windows executable fil
 
 Mendix Studio Pro needs to be installed on your computer before you can start building apps. Follow these steps to install Mendix Studio Pro:
 
-1.  Open the downloaded Mendix Studio Pro executable. It is named like this: *Mendix-8.X.X-Setup*. Then click **Next**:
+1.  Open the downloaded Mendix Studio Pro executable. It is named like this: *Mendix-9.X.X-Setup*. Then click **Next**:
 
-	![](attachments/install/setup-wizard.png)
+	{{% image_container width="400" %}}![](attachments/install/setup-wizard.png)
+	{{% /image_container %}}
 
 2.  Select **I accept the terms in the License Agreement** and click **Next**:
 
-	![](attachments/install/terms-of-use.png)
+	{{% image_container width="400" %}}![](attachments/install/terms-of-use.png)
+	{{% /image_container %}}
 
 3.  Select the folder in which you want to install Studio Pro and click **Next**:
 
-	![](attachments/install/select-folder.png)
+	{{% image_container width="400" %}}![](attachments/install/select-folder.png)
+	{{% /image_container %}}
 
 4.  Enter the start menu shortcuts folder you want to use and click **Next**:
 
-	![](attachments/install/shortcut-folder.png)
+	{{% image_container width="400" %}}![](attachments/install/shortcut-folder.png)
+	{{% /image_container %}}
 
-5.  Check the **Desktop** option to create a shortcut to Studio Pro on your desktop and click **Next**:
-
-	![](attachments/install/location.png)
-
+5.  Check the desktop option to create a shortcut to Studio Pro on your desktop and click **Next**.
 6.  Click **Install** to install Studio Pro on your computer:
 
-	![](attachments/install/ready-to-install.png)
+	{{% image_container width="400" %}}![](attachments/install/ready-to-install.png)
+	{{% /image_container %}}
 
-7.  Check **Launch Mendix 9.X.X** and click **Finish** to finish the installation and launch Studio Pro:
-
-	![](attachments/install/completing-setup.png)
+7.  If you are asked to restart your computer, make a selection. Otherwise, check **Launch Mendix 9.X.X** and click **Finish** to finish the installation and launch Studio Pro.
 
 ## 5 Troubleshooting {#troubleshooting}
 
@@ -98,6 +98,7 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
 5. Rename the following dependencies:
 	* The `.NET Framework 4.7.2` executable to `dotnetfx472.exe`
 	* The `Java Development Kit 11 (x64)` *msi* to `adoptopenjdk_11_x64.msi`
+
  	* The `Visual C++ 2010 SP1 Redistributable (x64)` executable to `vcredist2010_x64.exe`
  	* The `Visual C++ Redistributable for Visual Studio 2015 (x64)` executable to `vcredist2015_x64.exe`
  	* The `latest` executable to `mendix_native_mobile_builder.exe`

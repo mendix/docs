@@ -26,17 +26,17 @@ The entity TimeZone has been added to the System module along with an associatio
 
 In the Administration module the Account_NewEdit page adds a time zone selector to set the time zone of the user. By default, the MyAccount page does not have this selector. It is the administrator's task to correctly set the time zone. You can add it yourself if you want your end-users to be able to set their time zone.
 
-Studio Pro adds a setting to the project Settings dialog. On the 'Model' tab you can specify a default time zone. This time zone is used for new users, but it is also applied to all users that do not have a time zone yet when starting your application.
+Studio Pro adds a setting to the **App Settings** dialog box. On the 'Model' tab you can specify a default time zone. This time zone is used for new users, but it is also applied to all users that do not have a time zone yet when starting your application.
 
-## 4 Existing Projects
+## 4 Existing App
 
-To make use of the new date/time handling you have to take some action after converting your existing project. Those actions depend on the type of the project: single time zone or multiple time zone. In a single time zone project all users are in the time zone or they are at least willing to use the same time zone. The time zone of the server is not important, so a project is still single time zone if all users are in the Netherlands but the server is in England. Multiple time zone projects have users in different time zones. Let us see what you need to do in each case.
+To make use of the new date/time handling you have to take some action after converting your existing project. Those actions depend on the type of the app: single time zone or multiple time zone. In a single time zone project all users are in the time zone or they are at least willing to use the same time zone. The time zone of the server is not important, so a project is still single time zone if all users are in the Netherlands but the server is in England. Multiple time zone projects have users in different time zones. Let us see what you need to do in each case.
 
-### 4.1 Single Time Zone Project
+### 4.1 Single Time Zone App
 
 If you do nothing in a single time zone project where the server is also in that time zone the situation for server operations is actually slightly worse than before. Users will not have a time zone and if that is the case the server uses the current offset from UTC sent by the web browser. This offset is not enough to determine the exact time zone and this means that daylight saving time (DST) will not be taken into account. In practice this means that dates and times in the future and past - past DST changes - are one hour off.
 
-To make sure that all users have their time zone set, you have to set the default time zone in the project settings in Studio Pro. When the application is started again all existing users will get this default time zone. Also, when new users are created they will also get this default time zone automatically.
+To make sure that all users have their time zone set, you have to set the default time zone in the app settings in Studio Pro. When the application is started again all existing users will get this default time zone. Also, when new users are created they will also get this default time zone automatically.
 
 In summary, in a single time zone project all you have to do is to set the default time zone in Studio Pro and you are done.
 

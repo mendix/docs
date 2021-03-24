@@ -43,7 +43,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To prepare your app, follow these steps:
 
-1. Open the app directory (via **Project** > **Show Project Directory in Explorer** in Studio Pro).
+1. Open the app directory (via **App** > **Show App Directory in Explorer** in Studio Pro).
 2.  Unpack the *Gulp.zip* file into your main app folder. You will then see a *Gulpfile* and *package* file that look like this:
 
 	![](attachments/set-up-sass/unpack.png)
@@ -53,7 +53,7 @@ To prepare your app, follow these steps:
 
 	![](attachments/set-up-sass/powershell.png)
 
-4.  Copy the address as text from your main project folder and paste it into Powershell (your project folder cannot contain spaces and should not be too long):
+4.  Copy the address as text from your main project folder and paste it into Powershell (your app folder cannot contain spaces and should not be too long):
 
 	![](attachments/set-up-sass/copy.png)
 
@@ -74,7 +74,7 @@ To prepare your app, follow these steps:
 
 	At this point, you are ready to start working with Sass.
 
-9.  You also need to add the following selected items into the ignore list of TortoiseSVN for each new app (or else your app will take too long to commit a change). You will only have to do this *once* when you set it up for your project:
+9.  You also need to add the following selected items into the ignore list of TortoiseSVN for each new app (or else your app will take too long to commit a change). You will only have to do this *once* when you set it up for your app:
 
 	![](attachments/set-up-sass/selected-ignore.png)
 
@@ -88,7 +88,7 @@ To prepare your app, follow these steps:
 
 	If you need to remove an item from the ignore list, right-click it and select **TortoiseSVN** > **Remove from ignore list**.
 
-10.  Open your app in Studio Pro, then click **Run Locally** and **View**.
+10.  Open your app in Studio Pro, then click the play button (**Run Locally**) and **View**.
 
 ## 4  Setting Up Your Sass Files
 
@@ -151,7 +151,7 @@ color: green;
 }
 ```
 
-To implement this in your app, open the project in Mendix Studio Pro. You can find the defined class names in almost every element (for example, titles and subtitles). In this example, double-click the title **Event App** in Studio Pro, and you can see that the name has the standard class name for Studio Pro.
+To implement this in your app, open the app in Mendix Studio Pro. You can find the defined class names in almost every element (for example, titles and subtitles). In this example, double-click the title **Event App** in Studio Pro, and you can see that the name has the standard class name for Studio Pro.
 
 ![](attachments/set-up-sass/class-name.png)
 
@@ -165,7 +165,7 @@ The inline styling is used in this example. That is because the inline styling w
 
 When you add, remove, or change something in Studio Pro, you need to save your changes and run the app locally to see your styling changes in the browser.
 
-For example, when you set a color for your title and subtitle, click **Run Locally** then **View**. When browser automatically opens, you will see the following URL:
+For example, when you set a color for your title and subtitle, click the play button (**Run Locally**) then **View**. When browser automatically opens, you will see the following URL:
 
 `http://localhost:8080/index.html?profile=Responsive`
 
@@ -184,7 +184,7 @@ You can test this by changing the color of `.pageheader-subtitle` from green to 
 Practice the routine above a few times and you will master it in no time. In addition, keep the following summary in mind:
 
 * Make sure Powershell is working properly, or else your code will not be registered Studio Pro
-* Use the following to install gulp for each new project:
+* Use the following to install gulp for each new app:
 	* `npm install`
 	* `npm install gulp-cli -g`
 	* If the commands above do not work, you can also use `npm run dev`, though keep in mind you are not installing the gulp
@@ -223,7 +223,7 @@ var deploymentStyleFolder = 'styles/web';
 Other issues might occur with SVN and possible rewriting of *Gulpfile.js*. To fix these issues, try the following solutions:
 
 * Remove *node_modules*, *package.json*, *package-lock.json* and *Gulpfile.js*, then replace them with a fresh copy downloaded from Mendix's [ux-theming repository](https://github.com/mendix/ux-theming/)
-* Ignore not only *node_modules* but also *Gulpfile.js* — this means you will have to add the *Gulpfile* to the project if you download it again or someone in your team is working on it
+* Ignore not only *node_modules* but also *Gulpfile.js* — this means you will have to add the *Gulpfile* to the app if you download it again or someone in your team is working on it
 * Make sure you are using the most recent LTS version of [NodeJS](https://nodejs.org/en/)
 
 ## 8 Read More

@@ -67,7 +67,7 @@ In this example, you will display a list of products from the GWSAMPLE_BASIC ODa
 
 13. Open your app in Mendix Studio Pro.
 
-14. Right-click the project in the **Project Explorer** and select **Import module package…**.
+14. Right-click the project in the **App Explorer** and select **Import module package…**.
 
     ![](attachments/use-sap-odata-connector/import-module.png)
 

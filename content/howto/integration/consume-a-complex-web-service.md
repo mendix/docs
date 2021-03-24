@@ -12,7 +12,7 @@ This how-to explains how to consume a (third-party) web service with which you c
 **This how-to will teach you how to do the following:**
 
 * Import a web service using the **Import Web Service** wizard
-* Directly import a web service document into your project
+* Directly import a web service document into your app
 * Configure a web service call
 
 ## 2 Importing a Web Service Using the Wizard
@@ -72,7 +72,7 @@ When finished the wizard will add the following to your model based on the optio
 
 ## 3 Importing a Web Service Directly
 
-An alternative to using the wizard described above is to import a web service document directly into your project. For further information, see [Consumed Web Services](/refguide/consumed-web-services) in the *Studio Pro Guide*.
+An alternative to using the wizard described above is to import a web service document directly into your app. For further information, see [Consumed Web Services](/refguide/consumed-web-services) in the *Studio Pro Guide*.
 
 To import a web service directly, follow these steps:
 

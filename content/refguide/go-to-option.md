@@ -14,7 +14,7 @@ In Studio Pro editors, such as navigation, page, or microflow editor, you can ac
 
 The examples of using the **Go to** option are described below:
 
-* **Opening a target of a menu item** – in **Project** > **Navigation**, you can right-click a menu item and select **Go to target**. Studio Pro will open the corresponding target of the menu item,for example, a page.
+* **Opening a target of a menu item** – in **App** > **Navigation**, you can right-click a menu item and select **Go to target**. Studio Pro will open the corresponding target of the menu item,for example, a page.
   ![Go to Target](attachments/go-to-option/go-to-target.png)
 * **Opening a data source of an element** – on pages, you can navigate to the data source of a widget. For example, you can right-click a button in the data grid and select **Go to microflow**. Mendix Studio Pro will open the corresponding microflow:
   ![Go to Microflow](attachments/go-to-option/go-to-microflow.png)

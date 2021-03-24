@@ -11,7 +11,7 @@ tags: ["data hub", "Data Hub API", "registration", "api", "api-requests"]
 
 This guide takes you through how to use and the [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) for searching and registering your data sources from your business applications to Data Hub and consuming them. 
 
-The [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) is published as an OpenAPI 3.0 (formerly Swagger) specification which enables you to visualize the API. It has the latest documentation on the implemented calls which you can try out.  For full definitions of the objects and schemas used in this how-to refer to the specification.
+The [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) is published as an OpenAPI 3.0 (formerly Swagger) specification which enables you to visualize the API. It has the latest documentation on the implemented calls.  For full definitions of the objects and schemas used in this how-to, refer to the specification.
 
 You can see the process of search and registration to Data Hub in the [Share Data Between Apps](/data-hub/share-data) how-to. This demonstrates the integrated functionality of Data Hub in Mendix Studio Pro for registering data sources. Using the Data Hub API you can create a deployment process for your apps to register the OData v3 and OData v4 services from these apps and make them available for use in another app through the Data Hub Catalog. 
 

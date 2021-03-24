@@ -148,7 +148,7 @@ To edit the Java action in Eclipse, follow these steps:
 
 ## 6 Deploying & Seeing the Results
 
-1. Click the play button (**Run Locally**) to deploy the application locally and click **View** to open the application in your browser.
+1. Click the play button (**Run Locally**) to deploy the application locally and click **View App** to open the application in your browser.
 2. To test the new feature, select **Asset** from the app's **Dashboard**.
 3.  On the **Assets** page, click **Asset reverse name** for the asset that has been loaded:
 

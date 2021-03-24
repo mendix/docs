@@ -39,7 +39,6 @@ Before starting this how-to, make sure you have completed the following:
 
 - All requests that are made to the Data Hub API must include the access to the organization’s Data Hub. This is accomplished by including the PAT ( [Generating your Personal Access Token](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat)) in the header of the request: `Authorization`:  `MxToken <your_PAT_Token>.` For more details see: [API calls and authentication](#authentication).
 
-- For the full specifications of the parameters and schemas and the response status codes refer to the  [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/). 
 
 - The requests that can be made through the Data Hub API:
 

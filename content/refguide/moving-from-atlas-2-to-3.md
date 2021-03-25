@@ -274,3 +274,35 @@ TODO: insert file
 
 ## 8 High Level Summary of Changes
 
+Atlas 3 includes many changes around style and branding. It has a different, more modern look and feel. The differences are best expressed through comparison, using our Reference Apps. Atlas 2 can be seen here [REPLACEME] and Atlas 3 here [REPLACEME]. todo: get these
+
+On both web and native, improvements have been made to layouts, widgets, building blocks, and page templates. These changes include but are not limited to layout and spacing, colors and aesthetics, and user experience.
+
+### 8.1 New Theme
+
+Our new theme has the following advantages:
+* Updated color palette
+* Values changed in variables
+* Introduced exclusion variables for widget default styling
+* Changed from Mendix blue to Ultramarine
+* MxDock added to template to create one unified platform experience
+
+### 8.2 Grid System
+
+Our new grid system has the following advantages:
+* Moved to an 8 pixel grid system
+* This new system provides good basic unit to work with (the numbers 4 and 8 are easily multiplied)
+* Created more uniformity in design
+
+### 8.3 Float Removal
+
+Our removal of float has the following advantages:
+* Removal of the use of “float: left” and “float:right” throughout Atlas core
+* Migration of float to flex layout
+* Removal of the reliance on floats for layout (flex is more a modern option compared to float)
+
+### 8.4 Design Properties 
+
+Consult the table below for a summary of the changes to existing design properties.
+
+Consult the table below for a summary of additional design properties.

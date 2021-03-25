@@ -13,7 +13,7 @@ Atlas 3 brings a new degree of power and sophisticaiton to styling in Mendix. To
 
 Before upgrading, please note that in Atlas 3 all hybrid content is removed because hybrid profiles are deprecated in Mendix 9. If your project requires hybrid content, we recommend not upgrading to Atlas 3 unless you have created all your own hybrid content separate from Atlas’.
 
-Before you start the upgrading process, it may help if you consult the folder structure changes introduced in Atlas 3 by reading [LINK GOES HERE]().
+Before you start the upgrading process, it may help if you consult the folder structure changes introduced in Atlas 3 by reading [TODO: LINK GOES HERE]().
 
 ### 2.1 Modify Existing Files
 

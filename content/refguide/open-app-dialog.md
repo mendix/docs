@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-To open a project in Mendix Studio Pro, do one of the following:
+To open an app in Mendix Studio Pro, do one of the following:
 
 * Select **File** > **Open App**
 * Click **Open App** on the Studio Pro landing page

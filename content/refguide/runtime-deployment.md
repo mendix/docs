@@ -45,7 +45,7 @@ This is the command line interpreter which allows Cloud Foundry environments to 
 The buildpack is the Mendix script which controls the deployment of Mendix models to a cloud environment. it performs the following tasks:
 
 * identifies the target environment and bound services such as database and file storage
-* if it receives a project in mpk format it initiates Mxbuild to convert it into mda format
+* if it receives an app in mpk format it initiates Mxbuild to convert it into mda format
 * it identifies the correct version of the Java Runtime Environment and pushes it to the environment
 * it identifies the correct version of the Mendix Runtime and uses m2ee to push the Runtime Server to the environment, with a link to the app *.mda* which defines the app
 

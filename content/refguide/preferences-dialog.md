@@ -36,7 +36,7 @@ The **Performance Bot** tab contains the **Show recommendation in editors** sett
 
 #### 2.3.1 Auto-Check Delay
 
-The **Auto-check delay** is the number of milliseconds that Studio Pro waits after a change, before starting the consistency checks. Increase this setting for large projects if Studio Pro responses slowly after changes.
+The **Auto-check delay** is the number of milliseconds that Studio Pro waits after a change, before starting the consistency checks. Increase this setting for large apps if Studio Pro responses slowly after changes.
 
 #### 2.3.2 Highlight Shown Errors and Warnings in the Editor
 
@@ -125,7 +125,7 @@ Default: *enabled*
 
 ### 6.4 New Merge Algorithm with Fine-Grained Conflict Resolution
 
-With this option, you can enable the new merge algorithm that is used when you update your project or merge changes in it. For more information on the algorithm, see [New Merge Algorithm with Fine-Grained Conflict Resolution](new-merge-algorithm).
+With this option, you can enable the new merge algorithm that is used when you update your app or merge changes in it. For more information on the algorithm, see [New Merge Algorithm with Fine-Grained Conflict Resolution](new-merge-algorithm).
 
 Default: *disabled*
 

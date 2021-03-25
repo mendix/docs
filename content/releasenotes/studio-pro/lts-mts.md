@@ -27,18 +27,18 @@ To define different types of versions and releases, consider the example of [8.1
 
 ## 2 Long-Term Support Version (LTS) {#lts}
 
-An LTS version is the latest minor version before a new major version is released. Once a minor version becomes an LTS, it will not have new features added to it. 
+An LTS version is the latest minor version before a new major version is released for General Availability. Once a minor version becomes an LTS, it will not have new features added to it. 
 
 These are the current LTS versions of Studio Pro:
 
-* [8.18](8.18) (started in January 2021)
+* [8.18](8.18) (started in March 2021)
 * [7.23](7.23) (started in February 2019)
 
 Mendix advises using LTS versions for all production apps, as LTS versions of Studio Pro enjoy the highest security and stability. LTS versions also have the longest support duration compared to other versions.
 
 ### 2.1 Support Duration
 
-Support for an LTS version ends when a third consecutive major version is released (for example, support on version 6 has ended with the GA release of version 9).
+Support for an LTS version ends when a third consecutive major version is released for General Availability (for example, support on version 6 has ended with the GA release of version 9).
 
 This diagram illustrates the LTS concept with version and [end of support](#end) examples:
 
@@ -46,7 +46,7 @@ This diagram illustrates the LTS concept with version and [end of support](#end)
 
 ### 2.2 Release Cycle
 
-There are no regular releases for an LTS, as they only start with the release of a new higher major version. There will only be [patch](#patch) releases for an LTS on an as-needed basis.
+There are no regular releases for an LTS, as they only start with the release of a new higher major version for General Availability. There will only be [patch](#patch) releases for an LTS on an as-needed basis.
 
 ### 2.3 Support with Patch Releases
 
@@ -58,19 +58,19 @@ The impact of upgrading from an LTS to an LTS is often the lowest of these optio
 
 ## 3 Medium-Term Support Version (MTS)
 
-An MTS is a minor version released approximately every 6 months after a new major version release.
+An MTS is a minor version released approximately every 6 months after a new major version release for General Availability.
 
-In the past, MTS versions have been [8.6](8.6), [8.12](8.12), and [8.18](8.18). However, with the release of version 9, [8.18](8.18) is now an LTS, so there are no longer any MTS versions for version 8. Furthermore, there are no current MTS versions for Studio Pro. There will only be upcoming MTS versions for version 9 starting with 9.6.
+In the past, MTS versions have been [8.6](8.6), [8.12](8.12), and [8.18](8.18). However, with the release of version 9 for General Availability, [8.18](8.18) is now an LTS, so there are no longer any MTS versions for version 8. Furthermore, there are no current MTS versions for Studio Pro. There will only be upcoming MTS versions for version 9 starting with 9.6.
 
 If you are on an innovation track with your development and need to get the latest and greatest Mendix has to offer every month, then upgrade to an MTS and stay on that version with its patch releases until the next MTS version is released.
 
 ### 3.1 Support Duration
 
-The support duration for an MTS depends on when a new higher major version is released, which thus creates a new LTS and ends support for all MTS versions for that respective major version.
+The support duration for an MTS depends on when a new higher major version is released for General Availability, which thus creates a new LTS and ends support for all MTS versions for that respective major version.
 
 ### 3.2 Release Cycle
 
-MTS versions are introduced as minor versions approximately every 6 months after a new major version release. There will only be [patch](#patch) releases for an MTS on an as-needed basis.
+MTS versions are introduced as minor versions approximately every 6 months after a new major version release for General Availability. There will only be [patch](#patch) releases for an MTS on an as-needed basis.
 
 ### 3.3 Support with Patch Releases
 

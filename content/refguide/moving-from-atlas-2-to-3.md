@@ -176,32 +176,101 @@ When you have completed the sections above, you may have errors in your error li
 
 	![](attachments/atlas-mig/5-nav.png)
 
-* If you are using Hybrid phone profiles, please make sure you change them to their equivalent web profiles by clicking **Change profile type** in your navigation profile:
+*  If you are using Hybrid phone profiles, please make sure you change them to their equivalent web profiles by clicking **Change profile type** in your navigation profile:
 	* Hybrid tablet app offline → Tablet web offline
 	* Hybrid tablet app online → Tablet web
 	* Hybrid phone app offline → Phone web offline
 	* Hybrid phone app online → Phone web
 
 	![](attachments/atlas-mig/6-hybrid-phone.png)
-	
-* If you are using Badge, Progress Circle, Progress Bar, or Maps widgets, please make sure you update the definitions of the widgets and reconfigure following the new properties added for each widget:
+
+*  If you are using Badge, Progress Circle, Progress Bar, or Maps widgets, please make sure you update the definitions of the widgets and reconfigure following the new properties added for each widget:
 
 	![](attachments/atlas-mig/7-errors.png)
 
-* If you have **Design property X is not supported by your theme** errors, it either means a design property has been removed in Atlas 3 or you need to add your own design properties to the new file structure as instructed in the [Fixing User-Defined Design Properties](#user-design-props) section above. To suppress the error, right-click the error, then select **Remove property**.  To check how to extend your design properties, please follow [How to Extend Design Properties](TODO:ADD LINK).
+*  If you have **Design property X is not supported by your theme** errors, it either means a design property has been removed in Atlas 3 or you need to add your own design properties to the new file structure as instructed in the [Fixing User-Defined Design Properties](#user-design-props) section above. To suppress the error, right-click the error, then select **Remove property**. To check how to extend your design properties, please follow [How to Extend Design Properties](TODO:ADD LINK).
 
 	![](attachments/atlas-mig/8-errors-background.png)
-	
+
 * If you have errors saying **Nanoflow commons/Native mobile resources are not compatible** get the new major versions from **Marketplace**.
 
 ## 4 Edge Case Issues After Upgrading to Atlas 3
 
 In Mendix 9 the Hybrid profile is deprecated. In Atlas 3 all hybrid content is removed. When upgrading from Atlas 2 to Atlas 3, you may have errors about pages used as the default home page for a hybrid profile which no longer exists:
 
-	![](attachments/atlas-mig/9-set-prop.png)
+![](attachments/atlas-mig/9-set-prop.png)
 
 To fix this, right-click the error then select **Go to Navigation profile ‘HybridPhone’** and change the default home page:
 	
-	![](attachments/atlas-mig/10-edge.png)
-	
+![](attachments/atlas-mig/10-edge.png)
+
 ## 5 Modified Design Properties for Native Mobile
+
+Here are the modified design properties for native mobile:
+
+| Parent                                                       | Property                  | Removed                                                      | Added                                                        |
+| ------------------------------------------------------------ | ------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| All                                                          | Background color          | {<br>    "name": "Primary",<br>    "class": "backgroundPrimary"<br>},<br>{<br>    "name": "Gray",<br>    "class": "backgroundGray"<br>}, | {<br>    "name": "Background Primary",<br>    "oldNames": ["Background Default"],<br>    "class": "background-main"<br>},<br>{<br>    "name": "Background Secondary",<br>    "oldNames": ["Background Dashboard"],<br>    "class": "background-secondary"<br>}, |
+| Widget                                                       | Spacing top               |                                                              | {<br>    "name": "Smaller",<br>    "class": "spacingOuterTopSmaller"<br>},<br>{<br>    "name": "Larger",<br>    "class": "spacingOuterTopLarger"<br>}, |
+| Widget                                                       | Spacing bottom            |                                                              | {<br>    "name": "Smaller",<br>    "class": "spacingOuterBottomSmaller"<br>},<br>{<br>    "name": "Larger",<br>    "class": "spacingOuterBottomLarger"<br>}, |
+| Widget                                                       | Spacing right             |                                                              | {<br>    "name": "Smaller",<br>    "class": "spacingOuterRightSmaller"<br>},<br>{<br>    "name": "Larger",<br>    "class": "spacingOuterRightLarger"<br>}, |
+| Widget                                                       | Spacing left              |                                                              | {<br>    "name": "Smaller",<br>    "class": "spacingOuterLeftSmaller"<br>},<br>{<br>    "name": "Larger",<br>    "class": "spacingOuterLeftLarger"<br>}, |
+| DivContainer                                                 | Background color          | {<br>    "name": "Secondary",<br>    "class": "backgroundSecondary"<br>}, | {<br>    "name": "Gray",<br>    "class": "backgroundGray"<br>},<br>{<br>    "name": "Brand Info",<br>    "class": "backgroundBrandInfo"<br>} |
+| ScrollContainer                                              | Background color          | {<br>    "name": "Secondary",<br>    "class": "backgroundSecondary"<br>}, | {<br>    "name": "Gray",<br>    "class": "backgroundGray"<br>},<br>{<br>    "name": "Brand Info",<br>    "class": "backgroundBrandInfo"<br>} |
+| Image                                                        | No longer exists          | No longer exists                                             | No longer exists                                             |
+| StaticImageViewer                                            | Shape                     |                                                              | {<br>    "name": "Square",<br>    "class": "imageSquare"<br>},<br>{<br>    "name": "Circle",<br>    "class": "imageCircle"<br>} |
+| StaticImageViewer                                            | Size                      |                                                              | {<br>    "name": "Icon",<br>    "class": "imageIcon",<br>    "oldNames": ["imageCircleIcon", "imageSquareIcon"]<br>},<br>{<br>    "name": "Small",<br>    "class": "imageSmall",<br>    "oldNames": ["imageCircleSmall", "imageSquareSmall"]<br>},<br>{<br>    "name": "Medium",<br>    "class": "imageMedium",<br>    "oldNames": ["imageCircleMedium", "imageSquareMedium"]<br>},<br>{<br>    "name": "Large",<br>    "class": "imageLarge",<br>    "oldNames": ["imageCircleLarge", "imageSquareLarge"]<br>},<br>{<br>    "name": "Larger",<br>    "class": "imageLarger",<br>    "oldNames": ["imageCircleLarger", "imageSquareLarger"]<br>},<br>{<br>    "name": "FullSize",<br>    "class": "imageFullSize"<br>} |
+| DynamicImage                                                 | No longer exists          | No longer exists                                             | No longer exists                                             |
+| DynamicImageViewer                                           | Same as StaticImageViewer | Same as StaticImageViewer                                    | Same as StaticImageViewer                                    |
+| DynamicText                                                  | Color                     | {<br>    "name": "Contrast lowest",<br>    "class": "textContrastLowest"<br>},<br>{<br>    "name": "Contrast lower",<br>    "class": "textContrastLower"<br>},<br>{<br>    "name": "Contrast low",<br>    "class": "textContrastLow"<br>},<br>{<br>    "name": "Contrast default",<br>    "class": "textContrastDefault"<br>},<br>{<br>    "name": "Contrast high",<br>    "class": "textContrastHigh"<br>},<br>{<br>    "name": "Contrast higher",<br>    "class": "textContrastHigher"<br>},<br>{<br>    "name": "Contrast highest",<br>    "class": "textContrastHighest"<br>} | {<br>    "name": "Paragraph",<br>    "class": "textParagraph"<br>},<br>{<br>    "name": "Disabled",<br>    "class": "textDisabled"<br>},<br>{<br>    "name": "Black",<br>    "class": "textBlack"<br>}, |
+| DynamicText                                                  | Size                      |                                                              | {<br>    "name": "Smallest",<br>    "class": "textSmallest"<br>},<br>{<br>    "name": "Largest",<br>    "class": "textLargest"<br>} |
+| DynamicText                                                  | Weight                    | {<br>    "name": "Light",<br>    "class": "textLight"<br>},<br>{<br>    "name": "Semibold",<br>    "class": "textSemiBold"<br>}, |                                                              |
+|                                                              | Decoration (New)          |                                                              | {<br>    "name": "Underline",<br>    "class": "textUnderline"<br>},<br>{<br>    "name": "Line Through",<br>    "class": "textLineThrough"<br>} |
+| LayoutGrid (New)                                             |                           |                                                              |                                                              |
+| LayoutGridRow (New)                                          |                           |                                                              |                                                              |
+| LayoutGridColumn (New)                                       |                           |                                                              |                                                              |
+| ListView                                                     | Background color (new)    |                                                              | {<br>    "name": "Primary",<br>    "class": "backgroundPrimary"<br>},<br>{<br>    "name": "Gray",<br>    "class": "backgroundGray"<br>},<br>{<br>    "name": "Brand Primary",<br>    "class": "backgroundBrandPrimary"<br>},<br>{<br>    "name": "Brand Success",<br>    "class": "backgroundBrandSuccess"<br>},<br>{<br>    "name": "Brand Warning",<br>    "class": "backgroundBrandWarning"<br>},<br>{<br>    "name": "Brand Danger",<br>    "class": "backgroundBrandDanger"<br>},<br>{<br>    "name": "Brand Info",<br>    "class": "backgroundBrandInfo"<br>} |
+| com.mendix.widget.native.animation.Animation                 | Background color          | {<br>    "name": "Secondary",<br>    "class": "backgroundSecondary"<br>}, | {<br>    "name": "Gray",<br>    "class": "backgroundGray"<br>},<br>{<br>    "name": "Brand Info",<br>    "class": "backgroundBrandInfo"<br>} |
+| com.mendix.widget.native.floatingactionbutton.FloatingActionButton | Style                     |                                                              | {<br>    "name": "Secondary",<br>    "class": "floatingActionButtonSecondary"<br>}, |
+| com.mendix.widget.native.safeareaview.SafeAreaView           | Background color          | {<br>    "name": "Secondary",<br>    "class": "backgroundSecondary"<br>}, | {<br>    "name": "Gray",<br>    "class": "backgroundGray"<br>},<br>{<br>    "name": "Brand Info",<br>    "class": "backgroundBrandInfo"<br>} |
+
+## 6 Modified Design Properties for Web
+
+Here are the modified design properties for web:
+
+| Parent                                                       | Property                     | Removed                                                      | Added                                                        | Renamed                                                      |
+| ------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Widget                                                       | Spacing Top                  |                                                              | {"name": "Inner none","class": "spacing-inner-top-none"},{"name": "Inner small","class": "spacing-inner-top"},{"name": "Inner medium","class": "spacing-inner-top-medium"},{"name": "Inner large","class": "spacing-inner-top-large"} | “None” => "Outer none”“Small” => “Outer small”“Medium” => “Outer medium”“Large” => “Outer large” |
+| Widget                                                       | Spacing bottom               |                                                              | Same as Spacing Top                                          | Same as Spacing Top                                          |
+| Widget                                                       | Spacing right                |                                                              | Same as Spacing Top                                          | Same as Spacing Top                                          |
+| Widget                                                       | Spacing left                 |                                                              | Same as Spacing Top                                          | Same as Spacing Top                                          |
+| DivContainer                                                 | Background color             | {  "name": "Brand Default",  "oldNames": [    "Default"  ],  "class": "background-default"},{  "name": "Brand Inverse",  "oldNames": ["Inverse"],  "class": "background-inverse"},{  "name": "Brand Info",  "oldNames": ["Info"],  "class": "background-info"}, | {  "name": "Background Primary",  "oldNames": ["Background Default"],  "class": "background-main"},{  "name": "Brand Secondary",  “oldNames”: [“Brand Default”, “Default”]  "class": "background-secondary"},{  "name": "Brand Gradient",  "class": "background-brand-gradient"} |                                                              |
+| DivContainer                                                 | Shade (new)                  |                                                              | {"name": "Light","class": "background-light"},{"name": "Dark","class": "background-dark"} |                                                              |
+| GroupBox                                                     | Style                        | {"name": "Brand Default","oldNames": ["Default"],"class": "groupbox-default"},{"name": "Brand Inverse","oldNames": ["Inverse"],"class": "groupbox-inverse"},{"name": "Brand Info","oldNames": ["Info"],"class": "groupbox-info"}, | {"name": "Brand Secondary","oldNames": ["Default", "Brand Default"],"class": "groupbox-secondary"}, |                                                              |
+| StaticImageViewer                                            | Fit (new)                    |                                                              | {"name": "Fill","class": "img-fill"},{"name": "Contain","class": "img-contain"},{"name": "Cover","class": "img-cover"},{"name": "Scale-down","class": "img-scale-down"} |                                                              |
+| DynamicImageViewer                                           | Fit (new)                    |                                                              | Same as StaticImageViewer                                    |                                                              |
+| Label                                                        | Style                        | {"name": "Brand Default","oldNames": ["Default"],"class": "label-default"},{"name": "Brand Inverse","oldNames": ["Inverse"],"class": "label-inverse"},{"name": "Brand Info","oldNames": ["Info"],"class": "label-info"}, | {"name": "Brand Secondary","oldNames": ["Default", "Brand Default"],"class": "label-secondary"}, |                                                              |
+| TabContainer (new)                                           |                              |                                                              |                                                              |                                                              |
+| DynamicText                                                  | FontWeight renamed to Weight |                                                              |                                                              |                                                              |
+| DynamicText                                                  | Size (new)                   |                                                              | {"name": "Small","class": "text-small"},{"name": "Large","class": "text-large"} |                                                              |
+| DynamicText                                                  | Color                        | {"name": "Brand Default","oldNames": ["Default"],"class": "text-default"},{"name": "Brand Inverse","oldNames": ["Inverse"],"class": "text-inverse"},{"name": "Brand Info","oldNames": ["Info"],"class": "text-info"}, | {"name": "White","class": "text-white"},{  "name": "Brand Secondary",  "oldNames": ["Default", "Brand Default"],  "class": "text-secondary"}, |                                                              |
+| Table (new )                                                 |                              |                                                              |                                                              |                                                              |
+| com.mendix.widget.custom.badge.Badge (new)                   |                              |                                                              |                                                              |                                                              |
+| com.mendix.widget.custom.progressbar.ProgressBar (new)       |                              |                                                              |                                                              |                                                              |
+| com.mendix.widget.custom.badgebutton.BadgeButton (new)       |                              |                                                              |                                                              |                                                              |
+| com.mendix.widget.custom.progresscircle.ProgressCircle (new) |                              |                                                              |                                                              |                                                              |
+
+## 7 Building Blocks and Page Templates
+
+If you are using building blocks or page templates, please make sure you download the corresponding modules from **Marketplace**.
+
+For the web platform, download Atlas Web Content:
+
+TODO: insert file
+
+For native platform, download Atlas Native Mobile Content:
+
+TODO: insert file
+
+## 8 High Level Summary of Changes
+

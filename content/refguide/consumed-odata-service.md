@@ -205,21 +205,21 @@ In the example given in the [Consuming from Service Endpoints](#consume-service-
 
 A published OData services that is deployed to multiple environments or is published with major service updates (and therefore deployed to a different endpoint) will be shown as separate items in the search results of the **Data Hub** pane. 
 
-In the following example, the consumed **OrderManagementService** version **1.0.0** deployed to a production environment is consumed in the app. However,  the same service is deployed to the **Acceptance** environment:
+In the following example, the consumed **Orders** version **1.0.0** deployed to **Test** environment is consumed in the app. However,  the same service is deployed to the **Acceptance** environment:
 
 ![major change environment](attachments/consumed-odata-service/consume-major-service-update.png)
 
 To consume the service deployed to the **Acceptance environment**, follow these steps: 
 
-1. Click  **Update** > **Switch** on the **Consumed OData Service** screen: 
+1. Click  **Update** > **Switch** on the **Consumed OData Service** document: 
 
 	![major change environment](attachments/consumed-odata-service/update-switch.png)
 
-2. On the **Switch** dialog box, from the drop-down list, select the service that you want to consume from and click **Switch**: 
+2. On the **Switch** dialog box, from the drop-down list, select the service that you want to consume from (note that an endpoint is also detected that is deployed to **Production**) and click **Switch**: 
 
 	![major change environment](attachments/consumed-odata-service/switch-environment.png)
 
-3. The consumed service will now be consumed from the new selected environment. The information on the **Consumed OData Service** screen will display the changed service details and the **Data Hub** pane will now show that you are consuming from the selected environment: 
+3. The consumed service is be consumed from the new selected environment. The information on the **Consumed OData Service** document will display the changed service details and the **Data Hub** pane now displays that you are consuming from the selected environment: 
 
 	{{% image_container width="300" %}}![major change environment dh pane](attachments/consumed-odata-service/switch-new-environment.png){{% /image_container %}}
 

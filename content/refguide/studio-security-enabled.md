@@ -16,7 +16,7 @@ Users can enable security from Studio. While the Studio user simply clicks the *
 When security is enabled, a number of checks and changes are done at several levels.
 
 1. Studio checks if security is enabled. If security is set to **Prototype/demo** or **Production**, the process stops. If security is off, steps described below are executed. 
-2. The [Mendix SSO](/appstore/modules/mendix-sso) module is set up if the app does not have it yet (for more information on this process, see the [Modules Set Up](#module-set-up) section). If the Mendix SSO module has been already installed for this project, the process stops. 
+2. The [Mendix SSO](/appstore/modules/mendix-sso) module is set up if the app does not have it yet (for more information on this process, see the [Modules Set Up](#module-set-up) section). If the Mendix SSO module has been already installed for this app, the process stops. 
 3. Studio does checks and changes (if necessary) to [demo users](demo-users) , [module roles](module-security) , and [user roles](user-roles) (for more information on this process, see the [Module Roles and Demo Users Set Up](#module-roles-and-demo-users) section).
 4. Studio sets access rules for entities (and their attributes and associations), if entities do not have access rules yet (for more information on this process, see the [Entity Access Set Up](#entity-access) section).
 5. Studio checks if the *login.html* file exists, backs it up, and replaces it with a new version (for more information on this process, see the [File Set Up](#file-set-up) section).
@@ -64,7 +64,7 @@ After the **After startup** microflow is set up, Studio checks if the *Administr
     c. If the model has no module roles connected to the Administrator app role or the User app role, Studio creates these roles. <br/>
     d. If the module role exists, its name is identical to the app role, but it is not linked to this app role, Studio creates a new module role, names it *Administrator_1* or *User_1*, and links it to the corresponding app role.<br/>
   
-    {{% alert type="info" %}}Studio links the Administrator role from the System module to the Administrator role on the app level. *Every other project role* created from Studio, including the original User app role, will be linked to the User module role for the System module.
+    {{% alert type="info" %}}Studio links the Administrator role from the System module to the Administrator role on the app level. *Every other app role* created from Studio, including the original User app role, will be linked to the User module role for the System module.
     {{% /alert %}}
 
 3. Studio links the Administrator role at the app level to MendixSSO.Administrator and Administration.Administrator (if they exist, if not, Studio will not do any linking). The User role at the app level is linked to MendixSSO.User, and Administration.User (if they exist, if not, Studio will not do any linking). All other AppStore modules will remain unchanged. 

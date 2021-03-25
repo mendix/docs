@@ -3,12 +3,12 @@ title: "Go to Option"
 parent: "edit-menu"
 description: "Describes the Go to option in Mendix Studio Pro."
 menu_order: 40
-tags: ["project", "go to", "navigation", "usage"]
+tags: ["app", "go to", "navigation", "usage"]
 ---
 
 ## 1 Introduction
 
-In Studio Pro editors, such as navigation, page, or microflow editor, you can access a handy menu by right-clicking items. A **Go to** option is commonly used to find your way in a project. It allows you to navigate from one element to another: for example, to navigate to the target of a button or to the source of a data grid.
+In Studio Pro editors, such as navigation, page, or microflow editor, you can access a handy menu by right-clicking items. A **Go to** option is commonly used to find your way in an app. It allows you to navigate from one element to another: for example, to navigate to the target of a button or to the source of a data grid.
 
 ## 2 Go To Option
 

@@ -7,7 +7,7 @@ tags: ["3d visualization", "cad", "app store", "marketplace", "component", "plat
 
 ## 1 Introduction
 
-The 3D Viewer app service lets you upload, visualize, and operate on 3D JT files in your web applications, using Mendix File Storage to store models. The app service contains Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of 3D widgets that enable you build apps to work with 3D models via the JT format. The app service includes whole functionalities and integrations that can be very helpful when you are building your own 3D applications. All you need to do is drag and drop items and configure them.
+The 3D Viewer app service lets you upload, visualize, and operate on 3D JT files in your web applications, using Mendix File Storage to store models. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of 3D widgets that enable you to build apps to work with 3D models via the JT format. The app service includes whole functionalities and integrations that can be very helpful when you are building your own 3D applications. All you need to do is drag and drop items and configure them.
 
 {{% todo %}}[Add link to component]{{% /todo %}}
 
@@ -23,6 +23,8 @@ Here is an overview of what the 3DViewer contains:
 | [Microflow](#43-microflow)                 | DeleteModelFromMendix, DownloadMarkup                                                                                                                                                                                                                                                     |
 | [Java Action](#44-java-action)             | VisServerAction                                                                                                                                                                                                                                                                           |
 | [Widgets](#55-widgets)                     | Container3D, Markup builder, PMI tree, PS tree,  PS tree table, Section view, Toolbar item camera mode,Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer |
+
+In most cases, you will only need what are contained in **USE_ME** folder.The  content in the **Internal** folder is for internal use only and you will not need them.
 
 ### 1.1 Typical Use Cases
 
@@ -57,13 +59,13 @@ Currently, only JT models with version 9 and above are supported.
 
 ## 2 Installation
 
-Follow the instructions in [How to Use App Store Content in Studio Pro](../general/app-store-content) to import the app service into your app.
+Follow the instructions in [How to Use App Store Content in Studio Pro](../general/app-store-content) to import the app service module into your app.
 
 After importing, you need to map the **Administrator** and **User** [module roles](/refguide/module-security#module-role) of the installed modules to the applicable [user roles](/refguide/user-roles) in your app.
 
 ## 3 Initializing the 3D Viewer App Service on App Startup
 
-To automatically start this app service, create a **Startup** microflow, add the **Viewer3D/USE_ME/VisServerAction** Java action to the microflow, make sure the java action parameter **Http endpoint** is set to `Expression:@Viewer3D.HttpEndpoint`,  then set the return type of this microflow as **Boolean** with a **Value** of **true**.
+To automatically start this app service, create a **Startup** microflow, add the **Viewer3D/USE_ME/VisServerAction** Java action to the microflow, make sure the java action parameter **Http endpoint** is set to `Expression:@Viewer3D.HttpEndpoint`,  then set the return type of this microflow as **Boolean** with a **Value** of **true**. As the microflow which is set as the Afterstartup microflow needs a Boolean return value.
 
 ![startupmicroflow](attachments/3d-viewer/startupmicroflow.jpg)
 

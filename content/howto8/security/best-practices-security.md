@@ -21,7 +21,7 @@ The Mendix architecture includes the Mendix Client, which can compose its own qu
 ![Mendix Runtime Architecture](attachments/best-practices-security/mendix-runtime-architecture.png)
 {{% /image_container %}}
 
-When designing an application, a developer can specify access rules on an entity (for more information, see [How to Create A Secure App](/howto/security/create-a-secure-app)). These access rules are applied whenever a query (received from a client) should be executed, thus they constrain the data returned to the client. For example, users with the "Customer" role can only view orders that are associated to the customer of which this user is part.
+When designing an application, a developer can specify access rules on an entity (for more information, see [How to Create A Secure App](/howto8/security/create-a-secure-app)). These access rules are applied whenever a query (received from a client) should be executed, thus they constrain the data returned to the client. For example, users with the "Customer" role can only view orders that are associated to the customer of which this user is part.
 
 While the data that should be viewable and editable in which role is application-specific, the following best practices are key:
 

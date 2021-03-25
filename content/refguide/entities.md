@@ -34,9 +34,6 @@ The entity type defines how the data is handled and there are two types:
 
 ![](attachments/domain-model/type-of-entities.jpg)
 
-### 2.1 Persistable Entity {#persistable-entity}
-
-When an entity is declared persistable, a database table is created for the entity. These type of entities are colored *blue* in the domain model. For more information on persistable entities, see [Persistability](persistability).
 
 {{% alert type="info" %}}
 You can also use data sources from other applications in your app  through the [Data Hub](data-hub-pane) pane. These data sources are represented in the domain model as *external entities* which are displayed as purple entity containers in the domain model:
@@ -44,6 +41,13 @@ You can also use data sources from other applications in your app  through the [
 
 For further information see [External Entities](external-entities).
 {{% /alert %}}
+
+
+### 2.1 Persistable Entity {#persistable-entity}
+
+When an entity is declared persistable, a database table is created for the entity. These type of entities are colored *blue* in the domain model. For more information on persistable entities, see [Persistability](persistability).
+
+
 
 ### 2.2 Non-Persistable Entity {#non-persistable-entity}
 

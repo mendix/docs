@@ -241,7 +241,7 @@ You can also define the empty option caption, which will be rendered as the firs
 
 ![Example of default number filter](attachments/data-grid-2/number-filter.png)
 
-The **Number filter** allows users to match date attributes based on these predefined criteria:
+The **Number filter** allows users to match decimal, integer, and long attributes based on these predefined criteria:
 
 * Greater than
 * Greater than or equal

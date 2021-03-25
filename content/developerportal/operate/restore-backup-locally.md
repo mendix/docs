@@ -88,7 +88,7 @@ After the backup has been restored as a local Postgres database, you have to lin
     * **Password**: *{password for database owner} (by default the password you provided for postgres when first setting up PostgreSQL)*
 
 5. Click **OK**.
-6. Run the app by clicking **Run Locally**.
+6. Run the app by clicking the play button (▶) or choosing the menu option **Run > Run Locally**.
 
 ## 5 Restoring Files
 
@@ -111,7 +111,7 @@ If you also want to restore the **FileDocuments**, you need to follow the follow
 3. Navigate to the **deployment/data/files** folder within your project.
 4. Extract the *{backup name}.tar* file from the *.gz* archive using a program like **7-zip**.
 5. Extract the entire **tree** folder from the backup archive to the  **deployment/data/files** folder within your project.
-6. Run the app by clicking **Run Locally**.
+6. Run the app by clicking the play button (▶) or choosing the menu option **Run > Run Locally**.
 
 ## 6 Read More
 

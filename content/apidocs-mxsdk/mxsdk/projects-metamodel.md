@@ -14,7 +14,7 @@ A Mendix app model starts with a project. A project contains several top-level o
 
 Studio Pro Guide | Model SDK API docs
 -|-
-[Project](/refguide/project) |TypeScript module [projects](https://apidocs.rnd.mendix.com/modelsdk/latest/modules/projects.html)
+[App](/refguide/project) |TypeScript module [projects](https://apidocs.rnd.mendix.com/modelsdk/latest/modules/projects.html)
 [Modules](/refguide/modules) |[Project](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.project.html)
 |[Module](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.module.html)
 |[ProjectDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.projectdocument.html)

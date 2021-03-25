@@ -12,9 +12,9 @@ aliases:
 
 ## 1 Introduction
 
-Mendix Studio Pro is a tool for creating, viewing, and editing your Mendix applications. A Mendix app is called a [project](project) in Studio Pro.  
+Mendix Studio Pro is a tool for creating, viewing, and editing your Mendix applications.
 
-One Studio Pro instance can have only one project open at a time, but you can open two Studio Pro instances when necessary.
+One Studio Pro instance can have only one app open at a time, but you can open two Studio Pro instances when necessary.
 
 {{% alert type="info" %}}
 When Studio Pro is open, press <kbd>F1</kbd> to quickly jump to documentation.

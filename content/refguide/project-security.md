@@ -9,7 +9,7 @@ tags: ["studio pro", "security", "app security"]
 
 ## 1 Introduction
 
-In **App Security**, you can switch security on or off for the whole project. You can also configure security settings related to the app, such as user roles, administrator credentials, demo users, anonymous users, and password policy. To be able to configure, for example, [security per module](module-security) or [access rule for entities](access-rules), you need to switch the app security on first. 
+In **App Security**, you can switch security on or off for the whole app. You can also configure security settings related to the app, such as user roles, administrator credentials, demo users, anonymous users, and password policy. To be able to configure, for example, [security per module](module-security) or [access rule for entities](access-rules), you need to switch the app security on first. 
 
 To configure the app security, open **App Explorer** > **App** > **Security**, and the dialog box will open:
 
@@ -40,7 +40,7 @@ For different security levels different settings are available. Find the list of
 | Setting Name                        | Security Off | Prototype/Demo Security                                      | Production Security                                          |
 | ----------------------------------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Check security](#check-security)   | N/A          | N/A                                                          | Available, see the [Check Security](#check-security) section. |
-| [Project status](#project-status)   | N/A          | Available, see the [Project Status](#project-status) section. | Available, see the [Project Status](#project-status) section. |
+| [App status](#app-status)   | N/A          | Available, see the [App Status](#app-status) section. | Available, see the [App Status](#app-status) section. |
 | [Module status](#module-status)     | N/A          | Available, see the [Module Status](#module-status) section.  | Available, see the [Module Status](#module-status) section.  |
 | [User roles](#user-roles)           | N/A          | Available, see the [User roles](#user-roles) section.        | Available, see the [User roles](#user-roles) section.        |
 | [Administrator](#administrator)     | N/A          | Available, see the [Administrator](#administrator) section.  | Available, see the [Administrator](#administrator) section.  |
@@ -54,11 +54,11 @@ If the security level is set to **Production**, you can specify whether the cons
 
 When **Check Security** is enabled, for each user role Studio Pro checks which forms are accessible, either directly in the menu bar or indirectly by following forms and microflows. For each of those forms, Studio Pro checks whether referred attributes and associations are accessible for the current user role. If not, an error is added to the error list. These errors are only shown if there are no other consistency errors.
 
-### 2.3 Project Status {#project-status}
+### 2.3 App Status {#app-status}
 
 The app status indicates the security status for the current app security level.
 
-| Project status | Description |
+| App status | Description |
 | --- | --- |
 | Complete | All security settings for the current security level have been configured. |
 | Incomplete | Some security settings for the current security level need to be configured. For more information, see the [Module Status](#module-status) section. |

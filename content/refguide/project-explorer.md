@@ -14,7 +14,7 @@ The **App Explorer** shows the complete structure of your app including all docu
 
 The **App Explorer** consists of the following:
 
-* **App** folder – contains settings and documents that apply to your app as a whole (for more information, see [Projects](project))
+* **App** folder – contains settings and documents that apply to your app as a whole (for more information, see [Apps](project))
 * **Modules**  – contain settings, a domain model, and *documents* that apply to this module (for more information, see [Modules](modules)) 
   * **Domain model** – a model that describes the information (or *data*) used by your application in an abstract way; one module can have one domain model only 
   * **Document** – an individual file, for example, a [page](pages), [microflow](microflows), or a [scheduled event](scheduled-events). 

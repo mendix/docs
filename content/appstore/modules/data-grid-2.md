@@ -272,7 +272,7 @@ To have better control of when the filter will be applied, we offer a **Apply af
 
 ![Example of default text filter](attachments/data-grid-2/text-filter.png)
 
-**Text filter** allows users to match date attributes based on these predefined criteria:
+**Text filter** allows users to match string attributes based on these predefined criteria:
 
 * Contains
 * Starts with

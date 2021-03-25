@@ -2,7 +2,7 @@
 title: "Badge"
 category: "Widgets"
 description: "Describes the configuration and usage of the Badge widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "badge", "color label", "platform support"]
+tags: ["marketplace", "marketplace component", "widget", "badge", "color label", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -15,9 +15,9 @@ The [Badge](https://appstore.home.mendix.com/link/app/50325/) widget shows a val
 * Attach an on-click microflow or nanoflow
 * Set static data text when dynamic data is not specified
 
-### 1.1 Demo App Project
+### 1.1 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](https://badge.mxapps.io/).
+For a demo app that has been deployed with this widget, see [here](https://badge.mxapps.io/).
 
 ## 2 Usage
 

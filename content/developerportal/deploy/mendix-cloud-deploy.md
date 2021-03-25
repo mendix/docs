@@ -110,11 +110,11 @@ There are two methods for deploying your app to the Mendix Cloud. The first opti
 
     ![](attachments/mendix-cloud-deploy/deployment-started.png)
 
-### 3.2 Creating a Package from Team Server in the Developer Portal
+### 3.2 Creating a Package from Team Server in the Developer Portal{#package-from-team-server}
 
 An app can also be deployed without using Studio Pro. To do this, follow these steps:
 
-1. Go to the [Developer Portal](http://home.mendix.com).
+1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 2. Click **Apps** in the top navigation panel.
 3. Select your app.
 4. Go to **Environments**.
@@ -128,7 +128,7 @@ The package will now be deployed to the cloud.
 
 The previous steps explained how to deploy a deployment package to the Mendix Cloud, but the actual app is not running yet! To deploy a deployment package to a node environment, follow these steps:
 
-1. Open the [Developer Portal](http://home.mendix.com).
+1. Open the [Developer Portal](http://sprintr.home.mendix.com).
 2. Open your app.
 3. Go to **Environments**.
 4. In the **Deployment Package Repository**, choose the preferred deployment package and click **Deploy**.
@@ -171,6 +171,7 @@ The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)
 
 ## 7 Mendix Pricing Plans{#plans}
 
+{{% todo %}}[Add Mendix Basic here]{{% /todo %}}
 Mendix licenses are sold as part of plans. These consist of a subscription to a plan, a standard **Cloud Resource Pack** which specifies the resources available to your app environment, plus additional resources such as fallback environments.
 
 ### 7.1 Plans
@@ -190,10 +191,12 @@ Mendix environments are sized according to a number of standard cloud resource p
 
 | Pack | App RAM | App CPU | DB RAM | DB CPU | DB Storage | File Storage |
 | --- | --- | --- | --- | --- | --- | --- |
+| XS20 | 1GB | 0.5-1 core | 1GB | 1 core | 5GB | 10GB |
 | S20 | 2GB | 0.5-1 core | 2GB | 1 core | 10GB | 20GB |
 | M20 | 4GB | 1-2 cores | 4GB | 1 core | 20GB | 40GB |
 | L20 | 8GB | 2-4 cores | 8GB | 1 core | 40GB | 80GB |
 | XL20 | 16GB | 4-8 cores | 16GB | 2 cores | 80GB | 160GB |
+| XXL20 | 32GB | 8-16 cores | 32GB | 2 cores | 160GB | 320GB |
 ||||||||
 | Strato *(legacy)* | 2GB | 0.5-1 core | 1GB | 0.5 core | 5GB | 20GB |
 | Meso *(legacy)* | 2GB | 0.5-1 core | 8GB | 2 cores | 20GB | 20GB |

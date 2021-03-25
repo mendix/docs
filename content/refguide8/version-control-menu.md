@@ -13,7 +13,6 @@ In the **Version Control** menu you can view and/or manipulate settings that are
 {{% image_container width="300" %}}![Version Control Menu](attachments/version-control-menu/version-control-menu.png)
 {{% /image_container %}}
 
-
 ## 2 Update
 
 The **Update** option updates the local app to the latest revision that was committed to the version control server.
@@ -50,7 +49,7 @@ The **Merge Changes Here** option allows you to merge changes that were committe
 
 The **Reverse Merge Changes** option allows locally rolling back changes that were committed to the version control repository. These local changes can then be committed as a new revision.
 
-## 11 Revert All Changes
+## 11 Revert All Changes {#revert-all}
 
 The **Revert All Changes** option allows rolling back all local changes, both in the project and in files on disk, that have been introduced since the last commit.
 

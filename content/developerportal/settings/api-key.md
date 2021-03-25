@@ -22,13 +22,8 @@ Click **Revoke** to delete an app API key.
 
 To create a new app API key, click **Create API Key**  and follow these steps:
 
-1.  Fill in the **API key name**:
-
-	![](attachments/create-key-1.png)
-	
-2.  Click **Generate API Key** to be able to use the app API key:
-
-	![](attachments/create-key-2.png)
+1.  Fill in the **API key name**.	
+2.  Click **Generate API Key** to be able to use the app API key.
 
 	{{% alert type="warning" %}}For security reasons, the app API key will only be displayed once, during **Step 2 of 2**. It will not be displayed again.
 	{{% /alert %}}
@@ -36,4 +31,4 @@ To create a new app API key, click **Create API Key**  and follow these steps:
 ## 3 Read More
 
 * [API Documentation](/apidocs-mxsdk/apidocs)
-* [Mendix Profile](../mendix-profile/index)
+* [Mendix Profile](/developerportal/mendix-profile/)

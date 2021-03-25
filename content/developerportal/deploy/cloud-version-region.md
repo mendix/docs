@@ -18,7 +18,7 @@ This information is only available if you have a licensed app running in the Men
 
 To view the Mendix Cloud region and version in which your app is hosted, follow these steps:
 
-1. Go to the [Developer Portal](http://home.mendix.com).
+1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 
 2. Open the **Environments** page for your app.
 

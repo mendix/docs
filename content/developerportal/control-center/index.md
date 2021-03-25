@@ -10,7 +10,7 @@ For more information on Control Center, see the [Control Center and Mendix 8.18:
 
 ## 1 Introduction
 
-Users that sign up on the Mendix Platform are able to create new app projects, invite others to their app project teams, deploy their apps, and invite end-users to give feedback on apps, among many other activities. Insights into these company activities are provided in the Control Center in one central overview. These insights will help you to be in control and remain aware of everything happening within the Mendix landscape of your company.
+Users that sign up on the Mendix Platform are able to create new apps, invite others to their App Teams, deploy their apps, and invite end-users to give feedback on apps, among many other activities. Insights into these company activities are provided in the Control Center in one central overview. These insights will help you to be in control and remain aware of everything happening within the Mendix landscape of your company.
 
 The [Mendix Control Center](https://controlcenter.mendix.com/) consists of the pages described below, which are for use by [Mendix Admins](#company).
 
@@ -26,7 +26,7 @@ You can access Control Center via the menu item on the navigation pane.
 
 ## 2 Members {#members}
 
-Members are users who can view and/or edit an app project. On the **Active members** tab, you can see the active members of your company who can access certain app projects: 
+Members are users who can view and/or edit an app. On the **Active members** tab, you can see the active members of your company who can access certain apps: 
 
 ![](attachments/members.jpg)
 
@@ -34,35 +34,32 @@ When you click a company member's name, a pop-up window opens with their member 
 
 On the **Inactive members** tab, you can see former members of your company who have been deactivated.
 
-On the **External members** tab, you can see the members outside of your company who have access to at least one of your company app projects.
+On the **External members** tab, you can see the members outside of your company who have access to at least one of your company apps.
 
 When you select members in the lists on these tabs, a context menu appears with options for exporting member details to an *.xlsx* file and deactivating/activating members.
 
-For security reasons, deactivating an employee that is leaving your company is recommended (if the employee returns to your company, they can be activated as a member again). Before deactivating a user, make sure the following points are true for that user:
-
-* They do not have a [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) role
-* They are not the only [Scrum Master](/developerportal/collaborate/app-roles#app-team-roles) in an App Team
+For security reasons, deactivating an employee that is leaving your company is recommended (if the employee returns to your company, they can be activated as a member again).
 
 {{% alert type="info" %}}
 You cannot deactivate yourself.
 {{% /alert %}}
 
-## 3 App Projects {#projects}
+## 3 Apps {#projects}
 
-On the **Active App Projects** tab of this page, you can see a list of the active app projects that belong to your company. The **Inactive App Projects** tab lists your company's deactivated app projects. The following details apply to deactivated app projects:
+On the **Active App Projects** tab of this page, you can see a list of the active apps that belong to your company. The **Inactive App Projects** tab lists your company's deactivated apps. The following details apply to deactivated apps:
 
-* A deactivated app project still exists in the company, but it is invisible to regular users
+* A deactivated app still exists in the company, but it is invisible to regular users
 * You can only deactivate Free Apps that are not attached to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) nodes
 
 When you click a **Project** name, a pop-up window opens with the project profile. You have options to directly **Deactivate Project** and **Delete Project** in this window. The window has the following tabs:
 
-* **Project Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General](/developerportal/settings/general-settings) settings page for your app project in the Developer Portal. 
-* **Members** tab – This tab presents the active members and external members of the app project. You can directly deactivate a member from the app project by clicking their name and selecting **Deactivate Member**. For other member management options, click **Manage Members**, which will open the **Security** > [App Team](../collaborate/team#managing) page. If you are a Mendix Admin, you can also add yourself to an App Team via this page.
-* **Project Roles** –  This tab presents the App Team roles defined via the **Default App Roles** tab and/or customized for a particular app project.
+* **Project Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General](/developerportal/settings/general-settings) settings page for your app in the Developer Portal. 
+* **Members** tab – This tab presents the active members and external members of the app. You can directly deactivate a member from the app by clicking their name and selecting **Deactivate Member**. For other member management options, click **Manage Members**, which will open the **Security** > [App Team](../collaborate/team#managing) page. If you are a Mendix Admin, you can also add yourself to an App Team via this page.
+* **Project Roles** –  This tab presents the App Team roles defined via the **Default App Roles** tab and/or customized for a particular app.
 
-When you select one or more app projects via the check boxes on the **Active App Projects** or **Inactive App Projects** tab, a context menu appears at the bottom of the screen with options for exporting project details to an *.xlsx* file, deactivating/activating projects, and deleting projects.
+When you select one or more apps via the check boxes on the **Active App Projects** or **Inactive App Projects** tab, a context menu appears at the bottom of the screen with options for exporting project details to an *.xlsx* file, deactivating/activating projects, and deleting projects.
 
-The **Default App Project Roles** tab shows the default [App Team roles](/developerportal/collaborate/app-roles#edit-app-team-roles) assigned for every new app project created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/develop/team-server) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) information.
+The **Default App Project Roles** tab shows the default [App Team roles](/developerportal/collaborate/app-roles#edit-app-team-roles) assigned for every new app created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/develop/team-server) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) information.
 
 ![](attachments/roles.jpg)
 

@@ -1,5 +1,5 @@
 ---
-title: "Migrate Existing App Projects to Atlas UI"
+title: "Migrate Existing Apps to Atlas UI"
 parent: "atlas-ui"
 menu_order: 20
 tags: ["Atlas", "UI", "UX", "user experience"]

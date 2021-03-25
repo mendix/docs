@@ -20,11 +20,11 @@ The [Maps](https://appstore.home.mendix.com/link/app/108261/) widget enables sho
 For the easiest way to get started with a basic map in your application, follow these steps:
 
 1. Drag the **Maps** widget onto your page.
-2. Open the widget properties and add a Google Maps access token under **General** > **Configurations** > **Google Maps API Key**.
-3. Under the **General** > **Markers** properties section, select **New** for **Markers**.
+2. Open the widget properties and add a Google Maps access token in **General** > **Configurations** > **Google Maps API Key**.
+3. In the **General** > **Markers** properties section, select **New** for **Markers**.
 4. Create a new location marker based on either **Latitude and longitude** or an **Address**.
 
-If you want to configure more of your map (for example, user interactions and styling) or use a different map provider, see the [Settings](#settings) section below.
+If you want to configure more of your map (for example, end-user interactions and styling) or use a different map provider, see the [Settings](#settings) section below.
 
 ## 3 Settings {#settings}
 
@@ -47,47 +47,59 @@ The token is necessary for converting addresses to their corresponding latitude 
 
 ### 3.3 Current Location
 
-If you want to show the user's location on the map, this can be enabled under **General > Configurations > Show current location marker**.
+To show the user's location on the map, enable this in **General** > **Configurations** > **Show current location marker**.
 
 ### 3.4 Markers
 
-To enhance the map widget, locations can be marked on the map by providing them in the widget through **General > Markers**.
-If exactly one location is provided, the map will center to that location.
-If multiple locations are provided, the map will center to a position in which all markers are visible.
-If no location is provided, a default center location of the Mendix offices is provided.
+To enhance the map widget, you can mark locations on the map by providing them in the widget through **General** > **Markers**. The following conditions apply:
 
-There are two ways to specify locations to be marked, either **based on latitude and longitude** or **based on address**. 
-Providing either of them is also the only requirement for creating a marker.
-Each individual marker can be customized in the following way:
-* Each marker can be provided a title that will be displayed when clicking on the marker as a popup through the **Location > Title** setting.
-* The icon of the location marker is also customizable through the individual marker's setting **Visualization > Marker style**. Setting it to _Image_ allows you to customize it with either a static resource or dynamic entity.
-* An event handler can be attached to the marker to trigger when an user clicks on it through the **Events > On click** setting.
+* If exactly one location is provided, the map will center to that location
+* If multiple locations are provided, the map will center to a position in which all markers are visible
+* If no location is provided, a default center location of the Mendix offices is provided
 
-To make the process of marking batches of locations easier, there's also the possibility to specify entire lists of markers at once.
-This can be done through the **General > Markers > Marker list** setting and requires a data source.
-All the usual Mendix data source settings apply here, as well as the same marker requirements and customizability as the individual markers. 
+There are two ways to specify locations to be marked, either **Based on latitude and longitude** or **Based on address**. Providing either of these is also the only requirement for creating a marker.
+
+You can customize each individual marker in the following ways:
+
+* You can provide each marker with a title that will be displayed in a pop-up window when the marker is clicked via the **Location** > **Title** setting
+* You can customize the icon of the location marker via the individual marker's setting in **Visualization** > **Marker style** (setting it to *Image* allows you to customize it with either a static resource or dynamic entity)
+* You can attach an event handler to the marker to trigger when an end-user clicks it via the **Events** > **On click** setting
+
+To make the process of marking batches of locations easier, it is also possible to specify entire lists of markers at once. You can do this through the **General** > **Markers** > **Marker list** setting, which requires a data source. All the usual Mendix data-source settings apply here, as well as the same marker requirements and customizability as the individual markers. 
 
 ### 3.5 Controls
 
-Under the **Controls** properties tab, the following settings can be adjusted that are related to how the users interacts with the map:
-* **Drag**: When enabled, the map will move along when dragging the map.
-* **Scroll to zoom**: When enabled, the user can change the zoom level of the map by mouse scrolling on desktop or using pinch gestures on mobile.*
-* **Zoom**: When enabled, additional control buttons will be shown on the map
-* **Attribution**: When enabled, attributions will be shown at the bottom of the map (credits).
+Under the **Controls** properties tab, you can adjust the following settings related to how an end-user interacts with the map:
 
-If you're using Google Maps provider, there will be some additional controls available:
-* **Street view**: When enabled, the user will have an icon button available in the bottom right corner to view the map in Google's street view mode.
-* **Map type**: When enabled, the user will be provided control buttons in the top left corner to change the type of the map. Options available are **Map**, with or without a **Terrain** layer, and **Satellite**, with or without a **Labels** layer. By default this is set to **Map** without the **Terrain** layer.
-* **Full screen**: When enabled, the user will have an icon button available in the top right corner to view the map in full screen.
+* **Drag** – when enabled, the map will move along when dragging the map
+* **Scroll to zoom** – when enabled, the end-user can change the zoom level of the map by mouse-scrolling on a desktop machine or using pinch gestures on mobile
+	* Note that when using the Google Maps provider, this setting requires the **Drag** setting to be enabled in order to work
+* **Zoom** – when enabled, additional control buttons are shown on the map
+* **Attribution** – when enabled, attributions (credits) are shown at the bottom of the map 
 
-_\* - When using the Google Maps provider, the **scroll to zoom** setting requires the **drag** setting to be enabled in order to work._
+If you are using the Google Maps provider, these additional controls are available:
+
+* **Street view** – when enabled, there is a button available in the bottom-right corner of the map to view the map in Google's Street View mode
+* **Map type** – when enabled, there are control buttons in the top-left corner of the map to change the type of the map
+	* The available options are **Map**, with or without a **Terrain** layer, and **Satellite**, with or without a **Labels** layer
+	* By default, this is set to **Map** without the **Terrain** layer
+* **Full screen** – when enabled, there is a button available in the top-right corner of the map to view the map in full screen
 
 ### 3.6 Dimensions
 
-Under the **Dimensions** properties tab, the following settings can be adjusted that are related to dimensional aspects of the map widgets:
-* **Width unit** and **Width**: The width of the widget in relation to the rest of the elements on the page. The available options for unit are _Percentage_ and _Pixels_. The width can then be set as an appropriate CSS value. These two properties need to be used together to work.
-* **Height unit** and **Height**: The height of the widget in relation to the rest of the elements on the page. The available options for unit are _Percentage of width_, _Pixels_, and _Percentage of parent_. The height can then be set as an appropriate CSS value. These two properties need to be used together to work.
-* **Zoom level**: The starting zoom level of the map. Options are: Automatic, World, Continent, City, Street, and Buildings. Please keep in mind when using this feature with multiple marked locations, the level of zoom chosen here will be applied after the map has centered to a position in which all markers are visible. 
+Under the **Dimensions** properties tab, you can adjust the following settings that are related to dimensional aspects:
+
+* **Width unit** and **Width** – the width of the widget in relation to the rest of the elements on the page
+	* The available **Width unit** options are **Percentage** and **Pixels**
+	* The **Width** can be set as an appropriate CSS value
+	* These two properties need to be used together to work
+* **Height unit** and **Height** – the height of the widget in relation to the rest of the elements on the page
+	* The available **Height unit** options **Percentage of width**, **Pixels**, and **Percentage of parent**
+	* The **Height** can be set as an appropriate CSS value
+	* These two properties need to be used together to work
+* **Zoom level** – the starting zoom level of the map
+	* The available options are: **Automatic**, **World**, **Continent**, **City**, **Street**, and **Buildings**
+	* Note that when using this setting with multiple marked locations, the level of zoom chosen here will be applied after the map has centered to a position in which all markers are visible
 
 ## 4 Widgets Below Version 2.0.0
 

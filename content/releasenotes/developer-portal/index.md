@@ -15,6 +15,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### March 26th, 2021
+
+#### Improvements
+
+* Small improvements to the **App Templates** page.
+
 ### March 15th, 2021
 
 #### Fixes

@@ -305,4 +305,58 @@ Our removal of float has the following advantages:
 
 Consult the table below for a summary of the changes to existing design properties.
 
+| Spacing options - <br>added spacing-inner, spacing-inner-medium, spacing-inner-large | Introduction of options for inner spacing to all components. Align design properties with that with of native. Design in the two mediums of native and web should be the same experience.                                              |
+| ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Spacing outer options                                                                | Previous spacing options are renamed to outer to be more explicit and to refer to “margin”, while inner refers to “padding”. Aligning design implementation between native and web.                                                    |
+| Streamlined style options                                                            | Across a number of widgets we have streamlined the options available for style to primary, secondary, success, warning and danger. The options of “brand-inverse” and “brand-info” are still actionable classes in the sass framework. |
+
 Consult the table below for a summary of additional design properties.
+
+| Tab Container                    | Addition of design properties for tab styling and positioning.                                                                                    |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Datagrid 2                       | Addition of design properties for styling and layout of the datagrid 2.                                                                           |
+| Badge                            | Addition of style design property for styling the new updated badge.                                                                              |
+| Badge Button                     | Addition of design properties for design of the badge button, same properties as that of the standard button: style, size, full-width and border. |
+| Progress Circle                  | Addition of design properties for styling the new updated progress circle. Properties including bar color and bar thickness.                      |
+| Progress Bar                     | Addition of design properties for the styling the new updated progress bar. Properties including bar color and bar thickness.                     |
+| Additional background variants   | Dark and light variations can be added to your background colors via design properties.                                                           |
+| Responsive images with image-fit | Options can now be added for images to be resized to fit its container. options include fill, contain, cover and scale-down.                      |
+
+### 8.5 Web Environment Changes
+
+Here is a list of key changes pertaining to the web environment:
+
+* The color palette has been improved which influences all aspects of design and user-experience, from widgets to page templates
+* Layout and spacing now relies on a “8px” system, creating more uniformity in design
+* Display type “flex” has been used instead of “float” where possible
+* Many design properties have been introduced or options added:
+    * “Inner” spacing options allowing users to configure “padding” for widgets. This applies to all widgets
+        * Previous spacing options are now renamed to “Outer” to be more explicit and apply to “margin” for widgets
+    * Container widgets get a new “gradient” option for background color
+    * Container widgets get a “shade” design property with options to apply shades to background colors
+    * List View widgets get a “style” option to add horizontal borders at the top and bottom of each list item
+    * Static and Dynamic images each get a new design property to assist with fitting images (for example fill, contain, cover, or scale-down)
+    * Tab Container widgets get new design properties to style and space tabs
+    * Text widgets get a new “color” option to color text white
+    * Table widgets get new design properties for styling and layout
+* Helper classes have been added to assist with (in *core/base/_spacing.scss*):
+    * Spacing
+    * Shadows
+    * Widget height
+    * Widget width
+    * Widget borders
+* Some design properties have been removed:
+    * Info and Inverse brand styles for all widgets
+* Some design properties have been deprecated:
+    * List View widgets’ “styleless” option
+* Design Properties such as Style, Color, and Background color that had a “Brand Default” option are now called “Brand Secondary”
+
+## 9 Troubleshoot
+
+To troubleshoot common Atlas problems, do the following:
+
+* If you have **Layout <name> no longer exists** errors, right-click the error then go to the page on which the error occurs. In the page’s properties, select a new, appropriate layout.
+* If you have **The selected image <name> no longer exists** errors, right-click the error and go to the page on which it occurs and choose a new image. Depending on your project you may want to download the **Atlas_NativeMobile_Content** module and use an image from the module.
+* If you have **The selected placeholder <name> no longer exists** errors, right-click the error and go to the page on which it occurs, thereafter you have alternative options to correct the error:
+	*  Adjust the layout the page uses to include a placeholder with matching name.
+	* On the page, move the content out of the placeholder.

@@ -166,4 +166,42 @@ When you have completed the sections above, you may have errors in your error li
 
 	![](attachments/atlas-mig/4-errors.png)
 	
-* For errors about the **Phone** or **Tablet** navigation profile no longer existing.
+* For errors about the **Phone** or **Tablet** navigation profile no longer existing, right-click the error and select **Go to** which will navigate you to the widget that points to a missing Phone or Tablet profile — use one of these methods to solve the error:
+	* Delete the layout
+	* Delete the widget in the layout
+	* Add the **Phone web** or **Tablet web** navigation profile to your Mendix application
+	* In the widget's properties pane change the **Profile** to an already existed profile, like **Responsive web**
+
+	Note that navigation profiles have changed in Mendix 9, see these [release notes](TODO: INSERT LINK) for more information.
+
+	![](attachments/atlas-mig/5-nav.png)
+
+* If you are using Hybrid phone profiles, please make sure you change them to their equivalent web profiles by clicking **Change profile type** in your navigation profile:
+	* Hybrid tablet app offline → Tablet web offline
+	* Hybrid tablet app online → Tablet web
+	* Hybrid phone app offline → Phone web offline
+	* Hybrid phone app online → Phone web
+
+	![](attachments/atlas-mig/6-hybrid-phone.png)
+	
+* If you are using Badge, Progress Circle, Progress Bar, or Maps widgets, please make sure you update the definitions of the widgets and reconfigure following the new properties added for each widget:
+
+	![](attachments/atlas-mig/7-errors.png)
+
+* If you have **Design property X is not supported by your theme** errors, it either means a design property has been removed in Atlas 3 or you need to add your own design properties to the new file structure as instructed in the [Fixing User-Defined Design Properties](#user-design-props) section above. To suppress the error, right-click the error, then select **Remove property**.  To check how to extend your design properties, please follow [How to Extend Design Properties](TODO:ADD LINK).
+
+	![](attachments/atlas-mig/8-errors-background.png)
+	
+* If you have errors saying **Nanoflow commons/Native mobile resources are not compatible** get the new major versions from **Marketplace**.
+
+## 4 Edge Case Issues After Upgrading to Atlas 3
+
+In Mendix 9 the Hybrid profile is deprecated. In Atlas 3 all hybrid content is removed. When upgrading from Atlas 2 to Atlas 3, you may have errors about pages used as the default home page for a hybrid profile which no longer exists:
+
+	![](attachments/atlas-mig/9-set-prop.png)
+
+To fix this, right-click the error then select **Go to Navigation profile ‘HybridPhone’** and change the default home page:
+	
+	![](attachments/atlas-mig/10-edge.png)
+	
+## 5 Modified Design Properties for Native Mobile

@@ -17,7 +17,7 @@ This also means there is NO timezone information stored in a DateTime itself. It
 
 ## 3 What Is the Purpose of the Default Time Zone Setting in App Settings?
 
-The default time zone determines the time zone for newly created users and also sets a time zone for users that do not have a time zone when the server starts. If your application is only used in one time zone, setting this as the default will make sure that the users of your application never have to worry about setting their time zone. You should probably not use the default time zone setting for projects where people log in from multiple time zones because it will rarely be correct.
+The default time zone determines the time zone for newly created users and also sets a time zone for users that do not have a time zone when the server starts. If your application is only used in one time zone, setting this as the default will make sure that the users of your application never have to worry about setting their time zone. You should probably not use the default time zone setting for apps where people log in from multiple time zones because it will rarely be correct.
 
 ## 4 What Is the Purpose of Setting a Time Zone for a User?
 

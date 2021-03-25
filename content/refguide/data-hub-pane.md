@@ -39,7 +39,7 @@ The following functionality is available in the pane:
 
 * [Filter](#search) – By default, the search will be performed on assets in the **Production** environment. Click the **Filter** icon to include all other environments such as test, acceptance and also the Mendix free app environment **Sandbox** in the search.
 
-* [Search results](#viewing) – The search results will show all elements in the catalog that satisfy the search string. For each "hit" the information this is displayed includes the service name, service version, environment that the service was deployed to, and the elements matching the search string. If attributes or associations satisfy the search criteria, they will be displayed. You can drag from the search results into your domain model and they are displayed as [external entities](external-entities):
+* [Search results](#viewing) – The search results will show all the assets in the catalog that satisfy the search string. For each "hit" the information this is displayed includes the service name, service version, environment that the service was deployed to, and the assets matching the search string. If attributes or associations satisfy the search criteria, they will be displayed. You can drag the entity from the search results into your domain model and it will be displayed as an [external entityM](external-entities):
 
   ![](attachments/data-hub-pane/external-entities-in-domain-model.png)
 

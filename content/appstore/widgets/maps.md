@@ -27,14 +27,14 @@ If you want to configure more of your map, like how users can interact, the styl
 
 ## 3 Settings
 
-### Map Provider
+### 3.1 Map Provider
 
 By default, the Maps widget will use Google Maps.
 To change the map provider, go to the **General** properties of the map and enable the **Advanced > Show advanced** setting.
 This will introduce a new **Advanced** tab in the setting window.
 In there, all the above mentioned map providers are available to pick from.
 
-### Access Token
+### 3.2 Access Token
 
 For all map types except OpenStreetMap, you need to have a token in order to view the map.
 The appropriate tokens can be retrieved via the links to the map types listed in the [Introduction](#intro) section above.
@@ -46,11 +46,11 @@ This is especially relevant if you're opting into one of the non-Google maps pro
 The token is necessary for converting addresses to their corresponding latitude and longitude values, which in turn are used to place the markers.
 If no Google maps API token is provided, the map is still usable but markers based on addresses will not be shown._
 
-### Current Location
+### 3.3 Current Location
 
 If you want to show the user's location on the map, this can be enabled under **General > Configurations > Show current location marker**.
 
-### Markers
+### 3.4 Markers
 
 To enhance the map widget, locations can be marked on the map by providing them in the widget through **General > Markers**.
 If exactly one location is provided, the map will center to that location.
@@ -68,7 +68,7 @@ To make the process of marking batches of locations easier, there's also the pos
 This can be done through the **General > Markers > Marker list** setting and requires a data source.
 All the usual Mendix data source settings apply here, as well as the same marker requirements and customizability as the individual markers. 
 
-### Controls
+### 3.5 Controls
 
 Under the **Controls** properties tab, the following settings can be adjusted that are related to how the users interacts with the map:
 * **Drag**: When enabled, the map will move along when dragging the map.
@@ -83,18 +83,16 @@ If you're using Google Maps provider, there will be some additional controls ava
 
 _\* - When using the Google Maps provider, the **scroll to zoom** setting requires the **drag** setting to be enabled in order to work._
 
-### Dimensions
+### 3.6 Dimensions
 
 Under the **Dimensions** properties tab, the following settings can be adjusted that are related to dimensional aspects of the map widgets:
 * **Width unit** and **Width**: The width of the widget in relation to the rest of the elements on the page. The available options for unit are _Percentage_ and _Pixels_. The width can then be set as an appropriate CSS value. These two properties need to be used together to work.
 * **Height unit** and **Height**: The height of the widget in relation to the rest of the elements on the page. The available options for unit are _Percentage of width_, _Pixels_, and _Percentage of parent_. The height can then be set as an appropriate CSS value. These two properties need to be used together to work.
 * **Zoom level**: The starting zoom level of the map. Options are: Automatic, World, Continent, City, Street, and Buildings. Please keep in mind when using this feature with multiple marked locations, the level of zoom chosen here will be applied after the map has centered to a position in which all markers are visible. 
 
-## 3 Previous Versions' Documentation
+## 4 Widgets Below Version 2.0.0
 
-### Widgets below v2.0.0
-
-#### 1 Introduction {#intro}
+### 4.1 Introduction {#intro}
 
 The [Maps](https://appstore.home.mendix.com/link/app/108261/) widget enables showing locations on maps. These are the available map types:
 
@@ -103,7 +101,7 @@ The [Maps](https://appstore.home.mendix.com/link/app/108261/) widget enables sho
 * [Mapbox](https://www.mapbox.com)
 * [HERE maps](https://www.here.com/)
 
-##### 1.1 Features
+#### 4.1.1 Features
 
 * Show a location on a map based on coordinates
 * Show a list of coordinates on the map
@@ -113,24 +111,24 @@ The [Maps](https://appstore.home.mendix.com/link/app/108261/) widget enables sho
 	* Call a microflow or nanoflow
 * Customize the display of the marker – if the marker cannot be found from the custom markers, the widget uses the specified custom markers; otherwise, it uses the widget-bundled marker
 
-##### 1.2 Limitations
+#### 4.1.2 Limitations
 
 * Addresses are not supported
 * Context and static data sources are offline-capable with Mendix data, but you still need to be online to view the map
 * For all map types except OpenStreetMap, you need to have a token in order to view the map – you can get the tokens via the links to the map types listed in the [Introduction](#intro) section above
 * Google maps uses [Google Maps API v3](https://cloud.google.com/maps-platform/), so the limitations from Google [Premium Plan Usage Rates and Limits](https://developers.google.com/maps/premium/usage-limits) apply
 
-##### 1.3 Demo App
+#### 4.1.3 Demo App
 
 For a demo app that has been deployed with this widget, see [here](https://leafletmaps.mxapps.io/).
 
-#### 2 How the Widget Works
+### 4.2 How the Widget Works
 
 Locations are displayed based on coordinates. If there is one location, the map will center to that location. If there are multiple locations, the map will center to a position in which all markers are visible. If no location is available, a default center location of the Mendix offices is provided (in case default center coordinates are not specified).
 
 If auto-zoom is enabled, the map uses bounds zoom; otherwise, it uses the custom zoom level specified. The minimum zoom level is 2, and the maximum is 20.
 
-#### 3 Usage
+### 4.3 Usage
 
 To add a basic map to your application, follow these steps:
 
@@ -147,6 +145,6 @@ To add a basic map to your application, follow these steps:
 	* For **Mapbox** and **Google Maps**, add an access token
 	* For **HERE maps**, add an app ID and app code
 
-#### 4 Developing This Marketplace Component
+### 5 Developing This Marketplace Component
 
 We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendix/maps](https://github.com/mendix/maps/issues).

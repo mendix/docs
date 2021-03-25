@@ -33,9 +33,7 @@ The **Close page** activity properties consists of the following sections:
 
 * [Common](#common)  
 
-    {{% image_container width="300" %}}
 ![Close Page Properties](attachments/client-activities/close-page-properties.png)
-{{% /image_container %}}
 
 ## 3 Action Section {#action}
 

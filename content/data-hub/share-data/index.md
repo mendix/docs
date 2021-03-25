@@ -51,7 +51,7 @@ Follow these steps to create a simple app in Studio Pro and populate it. You wil
 	
 5. Click **OK** to see the entity and attributes in the domain model.
 6. Right-click the entity and from the menu, select **Generate overview pages**.
-7. In the **Generate pages** dialog box, select **Atlas_Default(Atlas_UI_Resources)** as the **Content layout** and click **OK**. Click **OK** to accept the informational box. Overview pages for the new entity will be added in the **OverviewPages** folder of **MyFirstModule**.
+7. In the **Generate pages** dialog box, select **Atlas_Default (Atlas_UI_Resources)** as the **Content layout** and click **OK**. Click **OK** to accept the informational box. Overview pages for the new entity are added in the **OverviewPages** folder of **MyFirstModule**.
 
 	![](attachments/share-data/overview-pages-for-customer-entity.png)
 
@@ -76,11 +76,11 @@ The following steps take you through creating an OData service for your app to e
 
 2.  In the domain model, right-click the **Customer** entity and select **Expose as OData resource…**.
 
-	![](attachments/share-data/expose-as-odata-resource.png)
+	 {{% image_container width="300" %}}![](attachments/share-data/expose-as-odata-resource.png){{% /image_container %}}
 
 3.  In the **Select Published OData Service** dialog box, select the **MyFirstModule** > **APIs** folder and click **New** to add a new OData service into this folder. Call this published OData service *{yourname}CustomerODataService* and press **OK**. 
 
-	![](attachments/share-data/select-published-odata-service.png)
+	 {{% image_container width="300" %}}![](attachments/share-data/select-published-odata-service.png){{% /image_container %}}
 
 	The new **{yourname}CustomerODataService** is added to the module and the **Edit published resource** dialog box is displayed for the entity **Customer**. 
 
@@ -96,17 +96,17 @@ The following steps take you through creating an OData service for your app to e
 
 	![](attachments/share-data/customer-odata-service-page.png)
 
-	Under **Resources**, the **Customer** entity is listed. 
+	Under **Entities**, the **Customer** entity is listed and details of the entity are displayed on the right where you select the attributes that you would like to expose in the OData service.
 
-	{{% alert type="info" %}} If you want to expose several entities or datasets in a service, they can be added and edited in the **OData service** page. {{% /alert %}}
+	{{% alert type="info" %}} If you want to expose several entities or datasets in a service, they can be added and edited on this page. {{% /alert %}}
 
-6. Click **Run** to deploy the app. When prompted, click **Save and continue** to save any unsaved changes to the app. The app will be deployed, and the OData service will be automatically registered in the Data Hub Catalog.
+6. Click **Publish** in the toolbar to deploy the app and publish it. When prompted, click **Save and continue** to save any unsaved changes to the app. The app will be deployed, and the OData service will be automatically registered in the Data Hub Catalog.
 
-	{{% image_container width="150" %}}![](attachments/share-data/run.png){{% /image_container %}}
+	{{% image_container width="150" %}}![](attachments/share-data/publish.png){{% /image_container %}}
 
-	{{% alert type="info" %}}The app has to be deployed to the Mendix Cloud or to your organization's environment using **Run** for the service to be registered in the Data Hub Catalog.{{% /alert %}}
+	{{% alert type="info" %}}The app has to be deployed to the Mendix Cloud or to your organization's environment using **Publish** for the service to be registered in the Data Hub Catalog.{{% /alert %}}
 
-7. Once the app is deployed, click **View** to open the app in your browser. Your app is now ready to use.
+7. Once the app is deployed, click **View App** to open the app in your browser. Your app is now ready to use.
 
 8. On the app's home page, click **Customers Overview**.
 
@@ -206,13 +206,13 @@ To do this follow these steps:
 
 14. Open the **Home_Web** page and, from **App Explorer**, drag **Customers_Overview** into the **Auto-fill** container under the "Welcome" banner. Go ahead and add a new banner and welcome text.
 
-15. Click **Run** to deploy the app. The app will be deployed and a link established to the data associated with the **Customer** entity in the publishing app (**{yourname)CustomerServiceApp**) through the **{yourname)CustomerODataService**.
+15. Click **Publish** to deploy the app. The app will be deployed and a link established to the data associated with the **Customer** entity in the publishing app (**{yourname)CustomerServiceApp**) through the **{yourname)CustomerODataService**.
 
 ## 7 Viewing the Shared Data in Your New App 
 
 To view the consumed data in your new app, follow these steps:
 
-1. When the app has successfully been deployed, click **View** to open the app in the browser.
+1. When the app has successfully been deployed, click **View App** to open the app in the browser.
 2. Click **Customer Overview**.
 
 	The overview page displays the list of the customers that you entered in the **{yourname}CustomerServiceApp** app. 

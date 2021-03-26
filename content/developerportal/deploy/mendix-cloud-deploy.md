@@ -98,7 +98,7 @@ There are two methods for deploying your app to the Mendix Cloud. The first opti
 
 1. Open [Studio Pro](http://appstore.home.mendix.com/link/modeler/).
 2. Open the licensed app.
-3. Click **App** in the top menu bar and select **Deploy to licensed cloud node**:
+3. Click **App** in the top menu bar and select **Deploy to Licensed Cloud Node**:
 
     ![](attachments/mendix-cloud-deploy/deploy-to-cloud-node.png)
 
@@ -153,13 +153,13 @@ With a Free App, it's only possible to deploy your app to the Mendix cloud using
 
 Once you have created and worked on your App, you will want to share it with others in the Free App. You can deploy your Free App to an environment by clicking **Run > Run** at the top of Studio Pro. This will automatically deploy your app to a Free App environment.
 
-![](attachments/mendix-cloud-deploy/runapp2.jpg)
+![](attachments/mendix-cloud-deploy/runapp2.png)
 
 ### 5.2 From Studio Pro – Method 2
 
-If you want to choose whether you want to run your app locally or in a Free App environment in the Mendix cloud, you can enable the Free App environment option by clicking **Run** or **Publish**:
+If you want to run your app in a Free App environment in the Mendix cloud, you can deploy to the Free App environment by clicking **Run** or **Publish**:
 
-![](attachments/mendix-cloud-deploy/runapp.jpg)
+![](attachments/mendix-cloud-deploy/runapp.png)
 
 ### 5.3 From Studio
 

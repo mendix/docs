@@ -1,5 +1,5 @@
 ---
-title: "Using the Data Hub API - DRAFT"
+accesstitle: "Using the Data Hub API - DRAFT"
 category: "General Info"
 menu_order: 50
 description: "How to use the Dat Hub API a guide with examples."
@@ -22,40 +22,45 @@ Using the Data Hub API you can create a deployment process for your apps to regi
 **This how-to will teach you how to do use the API to do the following:**
 
 - Search the catalog for a string – [Section 5](#api-search)
-- Register the service in the Catalog –  [Section 6](#api-search)
+- Register the service in the Catalog –  [Section 6](#reg-contract)
 - Register consumed datasets by an App – [Section 7](#consumed-ep)
 
-Examples are provided for all the calls described in this how-to in the [Data Hub API how-to examples](/general/data-hub-api-how-to-examples) that accompanies this how-to.
+Examples are provided for all the calls described in this how-to in the [Data Hub API how-to examples](/data-hub-api-how-to-examples) that accompanies this how-to.
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following:
 
 - Have a registered Mendix Data Hub account
-- Obtain a Personal Access Token (PAT) as described in [Generating your Personal Access Token](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) to authenticate your integration’s API requests
+- Obtain you own Personal Access Token (PAT) as described in [Generating your Personal Access Token](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) to authenticate your API requests
 
 ## 3 Overview of the Data Hub API
 
-The following points provide an overview of the Data Hub API and using it:
+The following provides an overview of the Data Hub API:
 
-- You can access the latest Data Hub API at: [http://datahub-spec.s3-website.eu-central-1.amazonaws.com](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
+- The latest Data Hub API is available at: [http://datahub-spec.s3-website.eu-central-1.amazonaws.com](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
 - The base URL for all calls to the API is: https://hub.mendix.com/rest/datahubservice/v2/
-- All requests that are made to the Data Hub API must include the access to the organization’s Data Hub. This is accomplished by including the PAT ( [Generating your Personal Access Token](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat)) in the header of the request: `Authorization`:  `MxToken <your_PAT_Token>.` For more details see: [API calls and authentication](#authentication).
-- For the full specifications of the parameters and schemas and the response status codes refer to the  [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/). 
-- The requests that can be made through the Data Hub API:
+- All requests to the Data Hub API must include the access token ([PAT](#pat)) to gain access to the organization’s Data Hub. For more details see: [API calls and Access to Data Hub](#access).
+- Refer to [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) for the full specification details. 
+- The following operations can be carried out through the Data Hub API:
 
-  - Search for registered assets (data sources, datasets, attributes and associations) in the Catalog using GET /data
-  - Registering datasets:
-	Registering datasets involves registering the data source (OData service) that the dataset is exposed in. The following requests must be made in the given order using the returned UUID values for the subsequent requests:
-		1. Application that the dataset originates from: [POST applications](#api-search)
-		2. Environment that the dataset is deployed to: [POST environment](#api-search)
-		3. Register the published services (data source) of the application: [PUT published endpoints](#put-service)
-		5. Register consumed services (data source): [PUT consumed endpoints](#consumed-ep)
-		
-- Find specific data sources and retrieve contracts to consume
+  - Search for registered assets (data sources, datasets, attributes and associations) in the Catalog using [GET /data](#api-search)
+
+  - Register data sources (OData services):
+  	The following requests must be made in the given order using the returned UUID values for the subsequent step:
+
+    1. Register the application that the dataset originates from: [POST applications](#api-search)
+
+    2. Register the environment that the dataset is deployed to: [POST environment](#api-search)
+
+    3. Register the published services (data source) of the application: [PUT published endpoints](#put-service)
+    
+  - Register consumed services (data sources) and entities by an application: [PUT consumed endpoints](#consumed-ep)
 
 
-## 4 Making the API Calls and Authentication {#authentication}
+
+
+## 4 Making the API Calls and Access to Data Hub {#access}
 
 This how-to guides users in using the Data Hub API, for full details of all the objects and schemas that define the collections and arrays that are required refer to the [Data Hub OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com).
 
@@ -65,20 +70,22 @@ For some examples, the [curl](http://curl.haxx.se/) command is also given. You m
 
 **Note:** curl is an open-source tool curl that is pre-installed on many Linux and macOS systems. Windows users can download a version at curl.haxx.se. When using HTTPS on Windows, ensure that your system meets the curl requirements for SSL.
 
-### 4.1 Authentication
+### 4.1 Access {#pat}
 
-Authentication in the Data Hub API is established by defining the access to your organization’s Data Hub using the [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepa). You do not specify any *authorization* for your request but must include the following key:value pair as part of the header for *each* request:  `Authorization`:  `MxToken <your_PAT_Token>`
+Access to your organization’s Data Hub is done by including your personal access token ([PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat)). You do not include any *authorization* with requests but must include the following key:value pair as part of the header for *each* request:  `Authorization`:  `MxToken <your_PAT_Token>`.  Insert the value of your PAT token for the  string <*your token*>.
 
 #### 4.1.1 Using Postman
-If you prefer to use a tool with a graphical user interface when working with APIs, you can use a REST API client of your choice, for example, [Postman](https://www.getpostman.com/).  Using Postman, for each request, provide the request URI, the HTTP method, and, if required, the request parameters and body.  Authentication is specified in the request **Header** using the key:  `Authorization` and setting the value to this key as  `MxToken <your_PAT_Token>`.  You can set your PAT token as a variable that can be conveniently called for each request.
+If you prefer to use a tool with a graphical user interface when working with APIs, you can use a REST API client, for example, [Postman](https://www.getpostman.com/) or [Insomnia](https://insomnia.rest/).  When using Postman, for each request, provide the request URI, the HTTP method, and, if required, the request parameters and body.  Access is specified in the request **Header** using the key:  `Authorization` and setting the value to this key as  `MxToken <your_PAT_Token>` (inserting the value of your PAT token for the string `<your_PAT_Token>. 
+
+You can set your PAT token as a variable that can be conveniently called for each request.
 
 ####  4.1.2 Using a Command Line Tool such as Curl
-If you are using the [curl](http://curl.haxx.se/) command to send your HTTP requests to the API  then you must include the authentication header as given in this example of a GET call: 
+If you are using the [curl](http://curl.haxx.se/) command to send your HTTP requests to the API  then you must include the access header as given in this example of a GET call: 
 
 `curl --location --request GET 'https://hub.mendix.com/rest/datahubservice/v2/data' \
---header 'Authorization: MxToken <*yourMxToken>*' \`
+--header 'Authorization: MxToken <yourMxToken>' \`
 
-Insert your the value of your PAT token for the the string <*your token*> for every request that you make.
+Insert the value of your PAT token for the the string <*your token*> for every request that you make.
 
 ### 4.2 Base Variables used in this How-to
 
@@ -102,62 +109,39 @@ To try out an example search request using the call described in this section, s
 
 ### 5.2 Request Parameters
 
-The following parameters can be specified for the `data` call:
+The complete list of request parameters for the call are provided at [Data Hub OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com).
 
-| **Name**                | **Type** | **Required/Optional** | **DefaultValue**      | **Description**                                              |
-| ----------------------- | -------- | --------------------- | --------------------- | ------------------------------------------------------------ |
-| query                   | string   | optional              |                       | Search string                                                |
-| productionEndpointsOnly | boolean  | optional              | false                 | Boolean filter to only return endpoints in a Production environment. False will return endpoints in Production, Non-production and Sandbox environments. |
-| contractType            | string   | optional              | all                   | Protocol used by the service. Currently supported values: OData_3_0, OData_4_0_Xml, Kafka_1_0. |
-| afterId                 | string   | optional              | first page of results | UUID of the last endpoint on the previous page               |
-| limit                   | integer  | optional              | 20                    | The maximum number of items that could be returned. Default is 20, Maximum value = 100. |
+The `query` parameter is used to specify the string that you want to search for. The string must be a minimum of 3 characters, and can include alphanumeric characters only. All other characters are not allowed for the search string. 
+
+The `productionEndpointsOnly` parameter is a Boolean, which when set to `true`  will only search for assets in **Production** environments. `false` will search in all environments. 
 
 ### 5.3 200 OK Response
 
-A successful 200 response returns the assets from the Data Hub that satisfy the search string and specified filters. The search results are returned in the `Data` array.
+A successful 200 response returns the all assets from the Data Hub that satisfy the search string and the specified filters in the JSON object ``SearchResults`.
+
+The assets in the Catalog that will be searched, and therefore be included in the search results are the following:
+
+- - Endpoint (data source, service): Name, Description, Tags
+  - Application: Name
+  - Entity (dataset): Name, Description
+  - Attribute: Name, Description
+  - Association: Name
 
 #### 5.3.1 Data Returned  for the `SearchResults` Object {#api-search-results}
 
-The endpoints (which are the data sources (services)) that are returned as part of the `SearchResults` object comprise the following.  For a full specification of the lower level objects and arrays refer to the [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
+The `SearchResults` object includes the total number of items, `TotalResults`,  that satisfy the search request and the  `Data`  object is the array of the endpoints of the objects that satisfy the search string. 
 
-| **Name**     | **Type** | I**ncluded in response?** | **Description**                                              |
-| ------------ | -------- | ------------------------- | ------------------------------------------------------------ |
-| Data         |          | always                    | An array of `Data` objects (5.3.2)                           |
-| Links        |          | always                    | Array of `Link` objects.  Pagination links. 'First' provides the URL to the first page of results, 'Current' provides a URL to the current page of results, 'Next' provides URL to the next page of results. |
-| Limit        | integer  | always                    | Limit for this request. Example: 1                           |
-| LastId       | string   |                           | UUID of the last item returned in the `Data` array. Example: 69db538d-35d4-4a9f-825a-93db0eb8130f |
-| TotalResults | integer  | always                    | Total number of results matching the search query. Example: 87 |
+The For the full specification refer to the [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
 
 #### 5.3.2  `Data` Objects
-The objects and data that are returned in the response  for  `Data`   which form the search results are shown in the representation below. 
+The representation of what is returned in the response  for   `Data`   is shown below. 
 
 The blue indicates an object that is made up of a collection (of further sub-objects, data and arrays – not all sub-levels of the schema are shown in the representation below); the red an array of data; and the solid outline indicates if the item is always returned in the response. 
 
 For the full specification, refer to the  [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/). 
 
-- [ ]  the schema table is not really necessary here as users can see the full details in the spec, however it does show at a glance what default values are etc.  The mind-map below shows the essence of the calls - can it be made clearer by adding the default values??? should it go down to a deeper level?
-
 
 ![search results](attachments/data-hub-api-how-to/data-object-schematic.png)
-
-| **Name**               | **Type** | I**ncluded in response?** | **Description**                                              |
-| ---------------------- | -------- | ------------------------- | ------------------------------------------------------------ |
-| UUID                   | string   | always                    | UUID of the endpoint.<br>Example: 69db538d-35d4-4a9f-825a-93db0eb8130f |
-| Name                   |          | always                    | Name of the service published at the endpoint. Example: test.acme.employeeinformation |
-| Version                | integer  | always                    | Version of the service published by the endpoint. Example: 2.1 |
-| ContractType           | string   | always                    | Protocol used by the service. Currently supported values: OData_3_0, OData_4_0_Xml, Kafka_1_0 Example: OData_3_0 |
-| Description            | string   |                           | Description of the service published by the endpoint. Only returned if present. Example: Information about the employees of AcmeCorp |
-| Connections            | integer  | always                    | Number of environments consuming this endpoint.  Example 42  |
-| LastUpdated            | string   | always                    | UTC timestamp of the most recent update to the service. Example: 2019-01-01T15:22:58.981Z |
-| SecurityClassification | string   | always                    | The classification of data for this service. Allowed string values (rather than enum): Public, Internal (restricted to company), or Confidential (restricted within company). Example: Internal |
-| Validated              | boolean  | always                    | Indicates if the service is validated during curation. Example: true |
-| SecurityScheme         |          | always                    | An array of objects defining the security scheme for the item. |
-| Environment            |          | always                    | A collection of the objects specifying the deployment environment |
-| Application            |          | always                    | A collection of objects specifying the application details of the service. |
-| Tags                   |          | always                    | Tags on this endpoint.<br>example: List [ OrderedMap { "Name": "HR" }, OrderedMap { "Name": "Salary" }, OrderedMap { "Name": "PeopleManagement" } ]<br>An array of `Tag` objects |
-| TotalItems             | integer  | always                    | The total number of items (such as data sources ) existing at this level.<br>Example: 17 |
-| Items                  |          | Always                    | List of items (such as data sources) at this endpoint relevant to the search query. For example see [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) |
-| Links                  |          | always                    | Catalog is a deeplink to the endpoint details page in the Catalog. Self is the URL with the endpoint details, including contracts. |
 
 ## 6 Registering an OData Contract {#reg-contract}
 
@@ -277,7 +261,7 @@ The objects that can be specified for the request body is shown in the following
 #### 6.3.3  Successful 200 PUT Response
 A successful 200 response returns the array of endpoints that are registered for the given environment and application.
 
-For each service endpoint a unique  `UUID`  is returned.  
+A unique  `UUID`  is returned for each for each service endpoint.  
 
 For each endpoint, the object  `Links`  provides the URL of the details page in the Catalog, and also the URI of the service.
 
@@ -367,6 +351,10 @@ The following file is an example OData v3 contract that you can use for in this 
 ```
 
 ## 9 Read More
-- [The Data Hub AP](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis)I 
+- [The Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis)
+
+- [The Data Hub](/data-hub)
+
+- [Using the Data Hub Examples](./data-hub-api-how-to-examples)
 
   

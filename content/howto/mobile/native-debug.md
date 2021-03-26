@@ -17,7 +17,7 @@ To start a debugging session, do the following:
 1. Run your Mendix app project locally on your desktop.
 2. Start the Make It Native app.
 3. Select **Enable dev mode** in the Make It Native app.
-4. Start your app project on your mobile device in Mendix Studio Pro by clicking **View App** > **View in the Mendix App**.
+4. Start your app project on your mobile device in Mendix Studio Pro by clicking **View App** > **View on your device**.
 5. With your mobile device, tap **Scan QR code**, then scan the QR code on your desktop.
 
 When the Make It Native app finishes loading your app project, do the following:

@@ -152,12 +152,13 @@ The **Navigation** document defines the main navigation structure of the applica
 
 At the heart of the navigation model in Mendix, are three device types: Desktop, Tablet, and Phone. You can define separate home pages and menus for each of these three devices. The Desktop device type is always enabled, while the following Tablet and Phone profiles can be enabled or disabled:
 
-* **Hybrid tablet app online**
-* **Hybrid tablet app offline**
-* **Hybrid phone app online**
-* **Hybrid phone app offline**
-* **Tablet browser**
-* **Phone browser**
+* **Responsive web**
+* **Responsive web offline**
+* **Tablet web**
+* **Tablet web offline**
+* **Phone web**
+* **Phone web**
+* **Native mobile (tablet & phone)**
 
 ![](attachments/18448710/device-profiles.png)
 

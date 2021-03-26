@@ -13,7 +13,7 @@ This guide describes how to use and the [DataHubAPI](http://datahub-spec.s3-webs
 
 The [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) is published as an OpenAPI 3.0 (formerly Swagger) specification which enables you to visualize the API. It has the latest documentation on the calls that can be made which you can try out.  For full definitions of the data, objects and schemas used in this how-to refer to the specification.
 
-You can see the process of search, registration and consume using Data Hub by working throught the how-to [Share Data Between Apps](/data-hub/share-data) . This also demonstrates the integrated functionality of Data Hub in Mendix Studio Pro for registering and consuming data sources. 
+You can see the process of search, registration and consume using Data Hub by working through the how-to [Share Data Between Apps](/data-hub/share-data) . This also demonstrates the integrated functionality of Data Hub in Mendix Studio Pro for registering and consuming data sources. 
 
 Using the Data Hub API you can create a deployment process for your apps to register the OData v3 and OData v4 services from these apps and make them available for use in another app through the Data Hub Catalog. 
 
@@ -32,7 +32,7 @@ Examples are provided for all the calls described in this how-to in the [Data Hu
 Before starting this how-to, make sure you have completed the following:
 
 - Have a registered Mendix Data Hub account
-- To access the API you must obtain a Personal Access Token (PAT) as described in [Generating your Personal Access Token](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) to authenticate your integration’s API requests
+- Obtain a Personal Access Token (PAT) as described in [Generating your Personal Access Token](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) to authenticate your integration’s API requests
 
 ## 3 Overview of the Data Hub API
 
@@ -46,14 +46,13 @@ The following points provide an overview of the Data Hub API and using it:
 
   - Search for registered assets (data sources, datasets, attributes and associations) in the Catalog using GET /data
   - Registering datasets:
-	Registering datasets involves registering the data source (OData services) that the dataset is exposed in. The following requests must be made in the given order using the returned UUID values for the subsequent requests:
-		1. Application that the dataset originates from: POST application
-		2. Environment that the dataset is deployed to: POST environment
-		3. Register the published services (data source) of the application: PUT
-		4. Register the all the published services (data source) of the application
-		5. Register consumed services (data source)
-
-  - Find specific data sources and retrieve contracts to consume
+	Registering datasets involves registering the data source (OData service) that the dataset is exposed in. The following requests must be made in the given order using the returned UUID values for the subsequent requests:
+		1. Application that the dataset originates from: [POST applications](#api-search)
+		2. Environment that the dataset is deployed to: [POST environment](#api-search)
+		3. Register the published services (data source) of the application: [PUT published endpoints](#put-service)
+		5. Register consumed services (data source): [PUT consumed endpoints](#consumed-ep)
+		
+- Find specific data sources and retrieve contracts to consume
 
 
 ## 4 Making the API Calls and Authentication {#authentication}
@@ -79,7 +78,7 @@ If you are using the [curl](http://curl.haxx.se/) command to send your HTTP requ
 `curl --location --request GET 'https://hub.mendix.com/rest/datahubservice/v2/data' \
 --header 'Authorization: MxToken <*yourMxToken>*' \`
 
-Insert your `MxToken` for the the string <*your token*> for every request that you make.
+Insert your the value of your PAT token for the the string <*your token*> for every request that you make.
 
 ### 4.2 Base Variables used in this How-to
 
@@ -92,7 +91,7 @@ For convenience and conciseness, throughout this how-to the following variables 
 
 ## 5 Searching in the Catalog{#api-search}
 
-Search in the Catalog returns the registered assets that satisfy the search string and filters. The search is carried out on all registered assets in the catalog (data sources, data sets, attributes and descriptions of the registered items).
+Search in the Catalog returns the registered assets that satisfy the search string and filters. The search is carried out on all discoverable registered assets in the Catalog (data sources, data sets, attributes, and descriptions of the registered items). For more details see [Searching in the Data Hub]( /data-hub/data-hub-catalog/search).
 
 To try out an example search request using the call described in this section, see [Searching for Registered Assets in the Catalog that have the string: ` sample`](data-hub-api-how-to-examples#get-data-ex)
 
@@ -130,7 +129,11 @@ The endpoints (which are the data sources (services)) that are returned as part 
 | TotalResults | integer  | always                    | Total number of results matching the search query. Example: 87 |
 
 #### 5.3.2  `Data` Objects
-The objects and data that are returned in the response  for  `Data`   which formthe search results are shown in the representation below. (The blue indicates an objects that is made up of a collection (of further sub-objects, data and arrays – not all sub-levels are shown in the representation), the red an array of data, and the solid outline indicates if the item is always returned in the response.) For full details of objects that define the arrays and collections, refer to the  [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/). 
+The objects and data that are returned in the response  for  `Data`   which form the search results are shown in the representation below. 
+
+The blue indicates an object that is made up of a collection (of further sub-objects, data and arrays – not all sub-levels of the schema are shown in the representation below); the red an array of data; and the solid outline indicates if the item is always returned in the response. 
+
+For the full specification, refer to the  [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/). 
 
 - [ ]  the schema table is not really necessary here as users can see the full details in the spec, however it does show at a glance what default values are etc.  The mind-map below shows the essence of the calls - can it be made clearer by adding the default values??? should it go down to a deeper level?
 
@@ -178,7 +181,7 @@ An example Odata v3 service  **DataHub_Sample_1.0.0_OData3**  is provided in [Se
 
 The first step is to register the application that the service originates from. 
 
-**Note**: If the application deployed to the same requirement as the service you want to register is already registered in the Catalog (for previously registered services, for example), you can proceed to 6.3 using the `AppUUID` and `EnvUUID` for the registered service.  These objects can be obtained from search results as described in [Search request response](#api-search-results). 
+**Note**: If the application deployed to the same environment as the service you want to register is already registered in the Catalog (for previously registered services, for example), you can proceed to 6.3 using the `AppUUID` and `EnvUUID` for the registered service.  These objects can be obtained from search results as described in [Search request response](#api-search-results). 
 
 You can try this for yourself by following the example given in [Registering the Howto5-App](data-hub-api-how-to-examples#ex-reg-app)
 
@@ -237,7 +240,7 @@ The unique combination of the App UUID and the environment UUID is the identifie
 
 **Note:** You will also need these UUIDs registering if the apps consume data sources as described in [registering consumed endpoints](#consumed-ep).
 
-### 6.3 Registering the Published Services using PUT
+### 6.3 Registering the Published Services {#put-service}
 
 This step describes the register service call for registering the services (endpoints) that are published by the app that are deployed to the same environment. 
 

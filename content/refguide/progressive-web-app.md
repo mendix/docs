@@ -65,7 +65,7 @@ When previewing or testing an offline-first PWA locally, an internet connection 
     
 ### 3.1 PWA Lighthouse Check
 
-To check a PWA's capabilities, you can use [Lighthouse](https://developers.google.com/web/tools/lighthouse) can be used. Lighthouse is an open-source, automated tool for improving the quality of web pages. It can check if your app meets the progressive web app requirements and can offer suggestions for improving your web app.
+To check a PWA's capabilities, you can use [Lighthouse](https://developers.google.com/web/tools/lighthouse). Lighthouse is an open-source, automated tool for improving the quality of web pages. It can check if your app meets the progressive web app requirements and can offer suggestions for improving your web app.
 
 ## 4 Distribute or Share the PWA
 

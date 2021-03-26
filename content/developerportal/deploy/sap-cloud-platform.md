@@ -502,7 +502,7 @@ The variables beginning **DT_** set up Dynatrace. Setting these variables means 
 
 #### 7.4.2 Unsupported Environment Variables
 
-You can also enter other environment variables which can be used to support Mendix features which are in beta. In this case, click **No** for **Supported** and enter the name of the variable as well as its value.
+You can also enter other environment variables which can be used to support Mendix features which are in Beta. In this case, click **No** for **Supported** and enter the name of the variable as well as its value.
 
 ![List of custom environment variables](attachments/sap-cloud-platform/custom-environment-variables-unsupported.png)
 

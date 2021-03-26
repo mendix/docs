@@ -28,7 +28,9 @@ The **Consumed OData Service** document contains the following information:
 	{{% alert type="info" %}} Studio Pro will always show the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Data Hub search and **App**  pane, when a different contract is detected at the service end-point, this will be indicated with an update arrow for the service. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document. {{% /alert %}} 
 
 	{{% alert type="info" %}}In the **Data Hub** pane consumed services that have an available **Update** will have an update arrow to indicate this:
-	{{% image_container width="300" %}}![update data hub pane](./attachments/data-hub-pane/data-hub-pane-update.png){{% /image_container %}}{{% /alert %}} 
+	{{% image_container width="300" %}}![update data hub pane](./attachments/data-hub-pane/data-hub-pane-update.png){{% /image_container %}}
+	
+	{{% /alert %}} 
 
 ### 2.1 Connection Tab
 
@@ -116,7 +118,7 @@ When you import the metadata, you can add external entities from the consumed OD
 
 Click the **Properties** tab for the consumed OData service which displays the properties that were defined for the OData service document and the following additional properties:
 
-{{% image_container width="300" %}}![](attachments/consumed-odata-service/consumed-odata-service-doc-properties.png){{% /image_container %}}{{% /alert %}} 
+{{% image_container width="300" %}}![](attachments/consumed-odata-service/consumed-odata-service-doc-properties.png){{% /image_container %}}
 
 * **Entities** – the URL of the metadata defining the entities and associated datasets
 * **Documentation** – an additional description about this service for the current app

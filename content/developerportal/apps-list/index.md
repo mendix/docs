@@ -37,7 +37,11 @@ The actions available depend on the app selected:
 
 To go to the [environments](/developerportal/deploy/environments) of your deployed app, click the cloud icon in the bottom-right corner of the app tile.
 
-## 3 My Company's Apps {#my-company-apps}
+## 3 My Company's Apps & Buzz{#my-company-apps}
+
+In the header, you can click links to see your **Company Apps** and **Company Buzz**:
+
+![](attachments/company-links.png)
 
 On the **My Company's Apps** page, you will see all the apps created by members of your [company](/developerportal/control-center/index#company).
 
@@ -50,3 +54,5 @@ If you click an app for which you are not an App Team member, you will see the a
 {{% image_container width="400" %}}
 ![Example of app details](attachments/app-details.png)
 {{% /image_container %}}
+
+For details on **Company Buzz**, see the [Company Buzz](/developerportal/collaborate/buzz#company-buzz) section of *Buzz*.

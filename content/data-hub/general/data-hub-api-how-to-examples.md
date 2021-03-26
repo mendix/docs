@@ -8,7 +8,7 @@ tags: ["data hub", "Data Hub API", "registration", "api", "api-requests"]
 
 ## 1 Introduction
 
-This file provides examples of the calls that are descrived in the the [Using the Data Hub API How-to](general/data-hub-api-how-to). The full OpenAPI 3.0 spec is available at http://datahub-spec.s3-website.eu-central-1.amazonaws.com/. 
+This file provides examples of the calls that are described in the the [Using the Data Hub API How-to](./data-hub-api-how-to). The full OpenAPI 3.0 spec is available at http://datahub-spec.s3-website.eu-central-1.amazonaws.com/. 
 
 **Note**: To use the Mendix Data Hub a license is required.
 
@@ -303,7 +303,7 @@ Two tags, `odata` and `sample` are defined as part of the registration.
 
 For the `Contracts` object you can use the example OData v3 contract in Section 8 [Sample Contract](#sample-contract):  ` “Type”: “Metadata”`
 
-#### 4.3.1 Base Request URL
+### 4.3.1 Base Request URL
 
 `PUT` `{{baseURL}}/applications/{appUUID}/environments/{envUUID}/published-endpoints`
 
@@ -446,11 +446,11 @@ This example shows how to register that the **Howto5-App** consumes 2 datasets: 
 
 **Note**: For this example, the `Namespace` object for the `consumedItems` is called `DefaultNamespace` which is the default namespace for Mendix services.
 
-#### 5.1 Base Request URL
+### 5.1 Base Request URL
 
 `{{baseUrl}}/applications/{AppUUID}/environments/{EnvironmentUUID}/consumed-endpoints`
 
-#### 5.2. JSON Format Request Body to Register Consuming from SampleDH-App
+### 5.2. JSON Format Request Body to Register Consuming from SampleDH-App
 
 To register the two consumed entities **Employees** and **Offices** from the HR Sample service at https://hrsampleapp.mendixcloud.com/odata/PubOdataEmployeeDirectory/v1
 
@@ -476,7 +476,7 @@ To register the two consumed entities **Employees** and **Offices** from the HR 
 }
 ```
 
-#### 5.3 Successful 200 Created Response
+### 5.3 Successful 200 Created Response
 The response that is returned shows the full details of the consumed service as part of the `Endpoints` object. The total number of connections to the service is 43: 
 
 ```json
@@ -581,7 +581,7 @@ The response that is returned shows the full details of the consumed service as 
 }
 ```
 
-#### 5.4 Registered service in the Catalog and Data Hub Landscape
+### 5.4 Registered service in the Catalog and Data Hub Landscape
 
 This registration is shown in the Data Hub Landscape for the **SampleDHApp.** It consumes 2 datasets from the **SAMPLE_EmployeeDirectory** service which is deployed from the **HR Sample App.**
 
@@ -608,6 +608,6 @@ The following file is an example OData v3 contract that you can use for in this 
 ## 7 Read More
 - [The Data Hub AP](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis)I 
 
-- [Using the Data Hub API](/data-hub/general/data-hub-api-how-to.md)
+- [Using the Data Hub API](/data-hub/general/data-hub-api-how-to)
 
   

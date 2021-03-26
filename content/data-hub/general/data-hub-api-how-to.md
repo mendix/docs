@@ -181,9 +181,9 @@ An example Odata v3 service  **DataHub_Sample_1.0.0_OData3**  is provided in [Se
 
 The first step is to register the application that the service originates from. 
 
-**Note**: If the application deployed to the same environment as the service you want to register is already registered in the Catalog (for previously registered services, for example), you can proceed to 6.3 using the `AppUUID` and `EnvUUID` for the registered service.  These objects can be obtained from search results as described in [Search request response](#api-search-results). 
+**Note**: If the application and environment of the service is already registered in the Catalog (for previously registered services, for example), you can proceed to [6.3](#put-service) and use the `AppUUID` and `EnvUUID` as the input parameters.  These objects can be obtained from search results as described in [Search request response](#api-search-results). 
 
-You can try this for yourself by following the example given in [Registering the Howto5-App](data-hub-api-how-to-examples#ex-reg-app)
+You can try this call by following the example given in [Registering the Howto5-App](data-hub-api-how-to-examples#ex-reg-app)
 
 #### 6.1.1 Method and Endpoint
 `POST /applications`
@@ -277,7 +277,7 @@ The objects that can be specified for the request body is shown in the following
 #### 6.3.3  Successful 200 PUT Response
 A successful 200 response returns the array of endpoints that are registered for the given environment and application.
 
-For each service endpoint a unique  `UUID` for is returned.  
+For each service endpoint a unique  `UUID`  is returned.  
 
 For each endpoint, the object  `Links`  provides the URL of the details page in the Catalog, and also the URI of the service.
 

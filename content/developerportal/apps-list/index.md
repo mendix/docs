@@ -35,7 +35,7 @@ The actions available depend on the app selected:
 
 ### 2.3 Go to Environments {#environments}
 
-To go to the [environments](/developerportal/deploy/environments) of your app, click the cloud icon in the bottom-right corner of the app tile.
+To go to the [environments](/developerportal/deploy/environments) of your deployed app, click the cloud icon in the bottom-right corner of the app tile.
 
 ## 3 My Company's Apps {#my-company-apps}
 

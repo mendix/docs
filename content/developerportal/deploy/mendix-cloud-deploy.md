@@ -157,7 +157,7 @@ Once you have created and worked on your App, you will want to share it with oth
 
 ### 5.2 From Studio Pro – Method 2
 
-If you want to choose whether you want to run your app locally or in a Free App environment in the Mendix cloud, you can enable the Free App environment option by clicking **Run**:
+If you want to choose whether you want to run your app locally or in a Free App environment in the Mendix cloud, you can enable the Free App environment option by clicking **Run** or **Publish**:
 
 ![](attachments/mendix-cloud-deploy/runapp.jpg)
 

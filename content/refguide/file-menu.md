@@ -8,7 +8,7 @@ tags: ["Studio Pro", "file menu", "file"]
 
 ## 1 Introduction
 
-The **File** menu allows you to manage documents and projects, for example, to create a new app or save changes:
+The **File** menu allows you to manage documents and apps, for example, to create a new app or save changes:
 
 ![File Menu](attachments/file-menu/file-menu.png)
 

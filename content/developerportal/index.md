@@ -14,6 +14,10 @@ The Developer Portal also offers open, well-defined APIs, enabling third-party d
 
 ## 2 Navigation
 
+To create a new app click **Create App**, which will open a page where you can choose a starting pointing for your new app:
+
+![](attachments/create-app.png)
+
 On the right side of the toolbar, you can search and access your [Mendix Profile](/developerportal/mendix-profile/). You can also click the **+** icon to create a new app.
 
 On the left side of the toolbar, you open an access menu by clicking the **Switch-to** menu:
@@ -34,7 +38,7 @@ You can then access the following parts of the Mendix Platform:
 * [Forum](/developerportal/community-tools/mendix-forum)
 * [Community](community-tools)
 
-Click **Company Apps**
+Click [Company Apps](/developerportal/apps-list/#my-company-apps) to see all the apps created by members of your company.
 
 Click [Company Buzz](collaborate/buzz) to communicate with colleagues, App Team members, stakeholders, and any other Mendix users in your company:
 
@@ -55,18 +59,3 @@ Clicking the question icon in the Developer Portal brings up the options Mendix 
 The *Developer Portal Guide* is divided into the following categories:
 
 {{% category_block %}}
-
-# PROBABLY DELETE ALL BELOW
-
-
-## 2 Apps {#apps}
-
-In [Apps](apps-list), you can find your free and licensed apps, nodes, and other apps created by your company:
-
-![](attachments/developerportal-apps.jpg)
-
-If you are an App Team member, you can go to the app [Buzz](collaborate/buzz). Here you can  manage not only the deployment of the app itself but the entire development process via user stories which can be refined and allocated to Sprints.
-
-To start a new app project click **Create App**, which will open a page where you can choose a starting pointing for your new app:
-
-![](attachments/create-app.png)

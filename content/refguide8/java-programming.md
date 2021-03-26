@@ -57,4 +57,4 @@ For details on this topic, see [Using Eclipse](using-eclipse).
 ## 6 Main Documents in This Category
 
 * [Troubleshooting](troubleshooting) – presents problematic JAR files and workarounds
-* [Using Eclipse](using-eclipse) – describes how to use Eclipse to write and debug the Java actions in your Mendix app project
+* [Using Eclipse](using-eclipse) – describes how to use Eclipse to write and debug the Java actions in your Mendix app

@@ -2,7 +2,7 @@
 title: "Mendix Feedback"
 category: "Widgets"
 description: "Describes the configuration and usage of the Mendix Feedback widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "feedback", "platform support"]
+tags: ["marketplace", "marketplace component", "widget", "feedback", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -23,7 +23,7 @@ The Mendix Feedback widget is easy to set up and automatically attaches addition
   
 ### 1.3 Limitations
 
-* Only usable in combination with Mendix app projects
+* Only usable in combination with Mendix apps
 
 ## 2 Using the Widget
 

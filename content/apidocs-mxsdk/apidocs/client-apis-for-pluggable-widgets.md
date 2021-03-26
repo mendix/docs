@@ -211,7 +211,7 @@ export interface ListValue {
 
 When a `datasource` property with `isList="true"` is configured for a widget, the client component gets a list of objects represented as a `ListValue`. This type allows detailed access and control over the data source.
 
-The `offset` and `limit` properties specify the range of objects retrieved from the datasource. The `offset` is the starting index and the `limit` is the number of requested items. By default, the `offset` is *0* and the `limit` is `undefined` which means all the datasource's items are requested. You can control these properties with the `setOffset` and `setLimit` methods. This allows a widget to not show all data at the data at once. Instead it can show only a single page when you set the proper offset and limit, or the widget will load additional data whenever it is needed if you increase the limit.
+The `offset` and `limit` properties specify the range of objects retrieved from the datasource. The `offset` is the starting index and the `limit` is the number of requested items. By default, the `offset` is *0* and the `limit` is `undefined` which means all the datasource's items are requested. You can control these properties with the `setOffset` and `setLimit` methods. This allows a widget to not show all data at once. Instead it can show only a single page when you set the proper offset and limit, or the widget will load additional data whenever it is needed if you increase the limit.
 
 The following code sample sets the offset and limit to load datasource items for a specific range:
 
@@ -350,13 +350,6 @@ const attributeValue = this.props.myAttributeOnDatasource.get(this.props.myDataS
 
 Note: in this code sample checks of status of `myDataSource` and availability of items are omitted for simplicity. See [EditableValue section](#editable-value) for more information about usage of `EditableValue`.
 
-{{% alert type="info" %}}
-The `get` method was introduced in Mendix 9.0.
-
-You can obtain an instance of `ActionValue` by using the `ListActionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function as described above.
-{{% /alert %}}
-
-
 ### 4.10 ListWidgetValue {#listwidgetvalue}
 
 `ListWidgetValue` represents a [widget property](property-types-pluggable-widgets#widgets) that is linked to a data source. 
@@ -387,7 +380,7 @@ this.props.myDataSource.items.map(i => this.props.myWidgets.get(i));
 {{% alert type="info" %}}
 The `get` method was introduced in Mendix 9.0.
 
-You can obtain an instance of `ActionValue` by using the `ListActionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function as described above.
+You can obtain an instance of `ReactNode` by using the `ListWidgetValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function as described above.
 {{% /alert %}}
 
 
@@ -403,7 +396,7 @@ export interface ListExpressionValue<T extends AttributeValue> {
 
 The type `<T>` depends on the return type as configured for the expression property. For a text template property, this type is always `string`.
 
-In order to work with the expression or text template value of a particular item of a `ListValue`, first an instance of `DynamicValue` should be obtained by calling `ListExpressionValue` with the item (assuming widget properties are configured as follows with an expression of type `boolean`):
+In order to work with the expression or text template value of a particular item of a `ListValue`, first an instance of `DynamicValue` should be obtained by calling `ListExpressionValue.get` with the item (assuming widget properties are configured as follows with an expression of type `boolean`):
 
 ```ts
 interface MyListWidgetsProps {
@@ -418,13 +411,6 @@ The following code sample shows how to get a `DynamicValue` that represents the 
 ```ts
 const expressionValue = this.props.myDataSource.myExpressionOnDatasource.get(this.props.myDataSource.item[0]);
 ```
-
-{{% alert type="info" %}}
-The `get` method was introduced in Mendix 9.0.
-
-You can obtain an instance of `ActionValue` by using the `ListActionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function as described above.
-{{% /alert %}}
-
 
 ## 5 Exposed Modules
 

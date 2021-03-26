@@ -144,7 +144,7 @@ For the desktop, use the **Responsive** menu.
 
 For tablet and phone configuration, you need to choose the appropriate profile type. See the section [Device Profiles](#profiles) below for details. 
 
-### 5.5 Project Navigation
+### 5.5 App Navigation
 
 The **Navigation** document defines the main navigation structure of the application for end-users. It allows you to set the home page of your application as well as define menu structures for use in menu widgets. The home page can vary based on the roles a user has. If security is enabled, the menu will only show the items to which the user has access.
 

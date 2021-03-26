@@ -92,7 +92,7 @@ To add a theme file which will apply to all charts in the app, follow these step
 
 To change the font in all charts in the app, follow these steps:
 
-1. Edit the *[project folder]/theme/com.mendix.charts.json* file in a plain text editor.
+1. Edit the *[app folder]/theme/com.mendix.charts.json* file in a plain text editor.
 
 1. Replace or update the content. In the **layout** section, place the style changes that were created in the first section of this how to.
 

@@ -220,9 +220,9 @@ To upload your app, do the following:
     It might ask you to sign into the server, depending on whether you have previously signed in and choose to stay logged in.
 5.  You can see the upload process in the **Upload Project to Team Server** pop-up window.
 
-The project is uploaded successfully. You can check on your private server and see that the app is now on the selected repository:
+The app is uploaded successfully. You can check on your private server and see that the app is now on the selected repository:
 
-![Project Uploaded confirmation window](attachments/on-premises-git-howto/project-uploaded-confirmation.png)
+![App Uploaded confirmation window](attachments/on-premises-git-howto/project-uploaded-confirmation.png)
 
 ### 4.7 Moving a Subversion App to Git
 
@@ -233,7 +233,7 @@ If you already have an existing versioned app (with Subversion) that you would l
 
     ![Export App Package dialog](attachments/on-premises-git-howto/export-project-package-dialog.png)
 
-3.  The **Progress** pop-up window appears, and once it is completed, you can close the project in **Studio Pro**:
+3.  The **Progress** pop-up window appears, and once it is completed, you can close the app in **Studio Pro**:
 
     ![Progress dialog](attachments/on-premises-git-howto/progress-dialog.png)
 
@@ -244,7 +244,7 @@ If you already have an existing versioned app (with Subversion) that you would l
 5. Once the file browser dialog box is open, navigate to the location you save the *.mpk* file during the export process.
 6. In the **Import App Package** dialog box, select **Private server** option in the **Where should we store your App?** section. 
 7. In the **Private Server Type** option, select **Git** (if you have both **Subversion** and **Git** enabled in the **Preferences** form). 
-8.  Enter the link to the private repository in the address textbox and click **OK**. Remember, the repository **must be completely empty**, or **Studio Pro** will not be able to upload a project to it:
+8.  Enter the link to the private repository in the address textbox and click **OK**. Remember, the repository **must be completely empty**, or **Studio Pro** will not be able to upload an app to it:
 
     ![Import Git Package menu](attachments/on-premises-git-howto/import-project-package-git-dialog.png)
 

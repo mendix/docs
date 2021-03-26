@@ -1,7 +1,7 @@
 ---
 title: "Progress Bar"
 category: "Widgets"
-description: "Describes the purpose, features, and configuration of the Progress Bar widget which is available in the Mendix Marketplace."
+description: "Describes the purpose, features, and configurations of the Progress Bar widget which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "progress bar", "bootstrap", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -39,7 +39,7 @@ Under the **Appearance** tab, the following styling properties can be adjusted f
 * Striped  bar: whether the bar should be striped or plain
 * Bar color based on brand styling
 * Size (small, medium, and large)
-	* *Note that when the size is configured to small no label will be shown due to limited space, and text labels will be included as a tooltip that shows on hover*
+	* Note that when the size is configured to small no label will be shown due to limited space, and text labels will be included as a tooltip that shows on hover
 
 ## 3 Previous Versions' Documentation
 

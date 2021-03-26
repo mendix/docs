@@ -15,6 +15,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### March 26th, 2021
+
+#### Improvements
+
+* We made some small improvements to the **App Templates** page.
+
 ### March 15th, 2021
 
 #### Fixes
@@ -241,13 +247,13 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* The [Stories](/developerportal/collaborate/stories) template functionality has been replaced with the **Clone** functionality in the [new UI option (beta)](/developerportal/collaborate/stories#story-actions).
+* The [Stories](/developerportal/collaborate/stories) template functionality has been replaced with the **Clone** functionality in the [new UI option (Beta)](/developerportal/collaborate/stories#story-actions).
 
 ### May 7th, 2020
 
 #### Improvements
 
-* We added a new story action called **Clone** to the new beta UI. For more information, see the [New UI Option (Beta)](/developerportal/collaborate/stories#story-actions) section of *Stories*.
+* We added a new story action called **Clone** to the new Beta UI. For more information, see the [New UI Option (Beta)](/developerportal/collaborate/stories#story-actions) section of *Stories*.
 
 ### February 21st, 2020
 
@@ -281,13 +287,13 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We made some minor improvements to the style of the [Stories](/developerportal/collaborate/stories#story-actions) beta version. This release fixes issues regarding batch actions.
+* We made some minor improvements to the style of the [Stories](/developerportal/collaborate/stories#story-actions) Beta version. This release fixes issues regarding batch actions.
 
 ### December 13th, 2019 
 
 #### Improvements
 
-* We redesigned the [Stories](/developerportal/collaborate/stories#story-actions) page with a brand new UI and improved stability. The new UI can be accessed by clicking **Enable new UI**. This is a [beta version](/releasenotes/beta-features/).
+* We redesigned the [Stories](/developerportal/collaborate/stories#story-actions) page with a brand new UI and improved stability. The new UI can be accessed by clicking **Enable new UI**. This is a [Beta version](/releasenotes/beta-features/).
 
 ### December 5th, 2019
 
@@ -344,7 +350,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### UI Improvements
 
-* With the beta release of Mendix Studio and Mendix Studio Pro (Mendix version 8), we have updated all mentions of *Web Modeler* to *Mendix Studio* and *Desktop Modeler* to *Mendix Studio Pro* across the Developer Portal.
+* With the Beta release of Mendix Studio and Mendix Studio Pro (Mendix version 8), we have updated all mentions of *Web Modeler* to *Mendix Studio* and *Desktop Modeler* to *Mendix Studio Pro* across the Developer Portal.
 
 ### April 8th, 2019
 

@@ -80,7 +80,7 @@ functionality has been added to replace them with constants.
 
 ### JVM Browser
 
-* The 'AllThreadInfo' item has been removed. It took on Mendix 6.10 and Mendix 7 (beta) more than 5 minutes to 
+* The 'AllThreadInfo' item has been removed. It took Mendix 6.10 and Mendix 7 more than 5 minutes to 
 load the JVM Browser.
 
 ### Layout

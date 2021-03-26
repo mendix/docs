@@ -17,11 +17,11 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 ### February 9th, 2021
 
 * You can now download [Windows Service](/releasenotes/studio-pro/windows-service) and **Server Distribution** for the latest Studio Pro version using the **Related Downloads** button on the **Get Studio pro** page.  
-* Adding beta versions for components is no longer supported. Beta versions of published components and existing drafts have been automatically updated to remove the beta tag.
+* Adding beta versions for components is no longer supported. Beta versions of published components and existing drafts have been automatically updated to remove the Beta tag.
 
 ### January 26th, 2021
 
-* You are now able to download Studio Pro versions marked as [beta](/releasenotes/beta-features/) from a separate tab on the **Get Studio Pro** page named **Beta Releases**. The default download option (via the **Release Notes** tab) remains the latest stable release of Studio Pro.
+* You are now able to download Studio Pro versions marked as [Beta](/releasenotes/beta-features/) from a separate tab on the **Get Studio Pro** page named **Beta Releases**. The default download option (via the **Release Notes** tab) remains the latest stable release of Studio Pro.
 * We fixed some bugs in the [add new Marketplace content](/appstore/general/share-app-store-content#adding) flow and we made error messages more descriptive.
 
 ## 2020

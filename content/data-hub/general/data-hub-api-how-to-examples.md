@@ -38,7 +38,7 @@ This example shows you how to search for assets that satisfy the following:
 
 ```curl
 curl --location --request GET 'https://hub.mendix.com/rest/datahubservice/v2/data?query=sample&productionEndpointsOnly=true' \
---header 'Authorization: MxToken <*your MxToken>*'
+--header 'Authorization: MxToken <your MxToken>'
 ```
 
 
@@ -168,11 +168,15 @@ The same search in the Data Hub returns the following showing the total list in 
 
 ## 4 Registering an OData Contract {#reg-contract-ex}
 
-This example takes you through all the steps required to reigster an app and the environment that it is deployed to, and the data source that is published by the app. This registration must done in the following order:
+This example takes you through all the steps required to reigster an app, the environment that it is deployed to, and the data source that is published by the app in this environment. 
+
+This registration must done in the following order:
 
 1. Application that the data source originates from: `POST application`
 2. Environment that the data source is deployed to: `POST environment`
 3. The published services from the application (data sources) : `PUT published-endpoints`
+
+When the application and environment is already registered in the Catalog, then you can proceed to the `PUT published-endpoints`.  
 
 An example Odata v3 service  **DataHub_Sample_1.0.0_OData3**  is provided in [Section 9](#consumed-ep) which you can use for this how-to.  
 

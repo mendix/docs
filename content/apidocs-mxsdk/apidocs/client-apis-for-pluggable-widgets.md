@@ -295,7 +295,7 @@ export interface ListActionValue {
 }
 ```
 
-In order to call an action on a particular item of a `ListValue` first an instance of `ActionValue` should be obtained by calling `ListActionValue.get` with the item (assuming widget properties are configured as follows):
+<a name="get-function"></a>In order to call an action on a particular item of a `ListValue` first an instance of `ActionValue` should be obtained by calling `ListActionValue.get` with the item (assuming widget properties are configured as follows):
 
 ```ts
 interface MyListWidgetsProps {
@@ -317,7 +317,7 @@ In this code sample, checks of status `myDataSource` and availability of items a
 {{% alert type="info" %}}
 The `get` method was introduced in Mendix 9.0.
 
-You can obtain an instance of `ActionValue` by using the `ListActionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function as described above.
+You can obtain an instance of `ActionValue` by using the `ListActionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function as described [above](#get-function).
 {{% /alert %}}
 
 ### 4.9 ListAttributeValue {#listattributevalue}
@@ -380,7 +380,7 @@ this.props.myDataSource.items.map(i => this.props.myWidgets.get(i));
 {{% alert type="info" %}}
 The `get` method was introduced in Mendix 9.0.
 
-You can obtain an instance of `ReactNode` by using the `ListWidgetValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function as described above.
+You can obtain an instance of `ReactNode` by using the `ListWidgetValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function as described [above](#get-function).
 {{% /alert %}}
 
 

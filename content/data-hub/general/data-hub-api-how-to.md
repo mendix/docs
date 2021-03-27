@@ -1,5 +1,5 @@
 ---
-accesstitle: "Using the Data Hub API - DRAFT"
+title: "Using the Data Hub API - DRAFT"
 category: "General Info"
 menu_order: 50
 description: "How to use the Dat Hub API a guide with examples."

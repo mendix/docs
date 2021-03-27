@@ -1,5 +1,5 @@
 ---
-title: "Using the Data Hub API - DRAFT"
+title: "Using the Data Hub API"
 category: "General Info"
 menu_order: 50
 description: "How to use the Data Hub API a guide with examples."
@@ -9,7 +9,7 @@ tags: ["data hub", "Data Hub API", "registration", "api", "api-requests", "PAT"]
 
 ## 1 Introduction
 
-This guide describes how to use and the [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) for searching and registering your data sources from your business applications to Data Hub and consuming them. 
+This guide describes how to use the [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) for searching and registering your data sources from your business applications to Data Hub. 
 
 The [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) is published as an OpenAPI 3.0 (formerly Swagger) specification which enables you to visualize the API. It has the latest documentation on the calls that can be made which you can try out.  For full definitions of the data, objects and schemas used in this how-to refer to the specification.
 

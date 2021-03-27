@@ -310,7 +310,7 @@ For an app you can register any datasets that it consumes by providing the endpo
 
 **Note:** The PUT call for registering consumed entities will *update* the currently registered datasets for an app/environment. This means that when you want to *add* consumed endpoints to an app (indicating the services the app is consuming), all previously registered consumed endpoints must be included in the request payload of the new request. If the previously registered consumed endpoints are not included, the result will be that they will be *removed*.
 
-You can also try this out by following the example given in  [Registering Consumed Endpoints by the Howto5-App](data-hub-api-how-to-examples##consumed-ep-ex)
+You can also try this out by following the example given in  [Registering Consumed Endpoints by the Howto5-App](data-hub-api-how-to-examples#consumed-ep-ex)
 
 ### 7.1 Method and Endpoint
 

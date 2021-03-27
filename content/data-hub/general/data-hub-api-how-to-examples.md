@@ -179,7 +179,7 @@ This registration must done in the following order:
 
 When the application and environment is already registered in the Catalog, then you can proceed to the `PUT published-endpoints`.  
 
-An example Odata v3 service  **DataHub_Sample_1.0.0_OData3**  is provided in [Section 9](#consumed-ep) which you can use for this how-to.  
+An example Odata v3 service –  **DataHub_Sample_1.0.0_OData3** – is provided in [Sample Contract File](#ex-metadata) that you can use in this how-to.  
 
 **Note:** OData service contract files must be included in the request body in escaped JSON format. There are several online converters available for converting your *.xml* files into this format such as one available from [Freeformatter.com](https://www.freeformatter.com/json-escape.html#ad-output). Just paste the contents of your files and convert them to the escaped format.  
 

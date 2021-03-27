@@ -8,21 +8,22 @@ tags: ["data hub", "Data Hub API", "registration", "api", "api-requests", "data 
 
 ## 1 Introduction
 
-This file provides examples of the calls that are described in the the [Using the Data Hub API How-to](data-hub-api-how-to). The full OpenAPI 3.0 spec is available at http://datahub-spec.s3-website.eu-central-1.amazonaws.com/. 
+This file provides examples of the calls that are described in the the [Using the Data Hub API How-to](data-hub-api-how-to). The latest Data Hub OpenAPI 3.0 spec is available at http://datahub-spec.s3-website.eu-central-1.amazonaws.com/. 
 
 **Note**: To use the Mendix Data Hub a license is required.
 
 ## 2 Base Variables used in this How-to
 
-For convenience and conciseness, the following variables are used and should be substituted by the relevant values or those that are returned in the responses that you will get when trying out the commands for yourself:
+For convenience and conciseness, the following variables are used and should be substituted by the values given or those that are returned in your responses when you send the requests:
 
 
 - {{baseURL}} – the base URL for the Data Hub API:  https://hub.mendix.com/rest/datahubservice/v2/data
-- {*AppUUID}* – insert the value returned in the API response for the UUID of the application
-- {*EnvironmentUUID} -* insert the value returned in the API response for the UUID of the application
+- {*AppUUID}* – insert the value the UUID of the application
+- {*EnvironmentUUID} -* insert the value of the UUID of the environment
+- ```<your MxToken>``` - insert the value of your [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) as described in [Using the Data Hub API How-to](data-hub-api-how-to#pat)
 
 ## 3 Searching in the Catalog for the string:  `sample` {#get-data-ex}
-This example shows you how to search for assets that satisfy the following:
+This example provides the GET request to the Data Hub API when you want to search in the Data Hub Catalog for the following:
 
 - the search string `sample` 
 - in the production environments only (value `true`)
@@ -34,7 +35,7 @@ This example shows you how to search for assets that satisfy the following:
 
 `GET {{baseURl}}/data?query=sample&productionEndpointsOnly=true`
 
-**The  curl command for the above search is**:
+**The  example curl command for the above search is**:
 
 ```curl
 curl --location --request GET 'https://hub.mendix.com/rest/datahubservice/v2/data?query=sample&productionEndpointsOnly=true' \

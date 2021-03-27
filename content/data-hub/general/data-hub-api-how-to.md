@@ -72,7 +72,7 @@ For some examples, the [curl](http://curl.haxx.se/) command is also given. You m
 
 ### 4.1 Access {#pat}
 
-Access to your organization’s Data Hub is done by including your personal access token ([PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat)). You do not include any *authorization* with requests but must include the following key:value pair as part of the header for *each* request:  `Authorization`:  `MxToken <your_PAT_Token>`.  Insert the value of your PAT token for the  string <*your token*>.
+Access to your organization’s Data Hub is done by including your personal access token ([PAT](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat)). You do not include any *authorization* with requests but must include the following key:value pair as part of the header for *each* request:  `Authorization`:  `MxToken <your_PAT_Token>`.  Insert the value of your PAT token for the  string <*your token*>.
 
 #### 4.1.1 Using Postman
 If you prefer to use a tool with a graphical user interface when working with APIs, you can use a REST API client, for example, [Postman](https://www.getpostman.com/) or [Insomnia](https://insomnia.rest/).  When using Postman, for each request, provide the request URI, the HTTP method, and, if required, the request parameters and body.  Access is specified in the request **Header** using the key:  `Authorization` and setting the value to this key as  `MxToken <your_PAT_Token>` (inserting the value of your PAT token for the string `<your_PAT_Token>. 
@@ -355,6 +355,6 @@ The following file is an example OData v3 contract that you can use for in this 
 
 - [The Data Hub](/data-hub)
 
-- [Using the Data Hub Examples](./data-hub-api-how-to-examples)
+- [Using the Data Hub Examples](data-hub-api-how-to-examples)
 
   

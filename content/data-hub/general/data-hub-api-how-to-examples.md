@@ -368,8 +368,6 @@ The file tthat is used in this example has been provided in escaped JSON format 
 
 #### 4.3.3 Successful 200 OK Response
 
-- [ ]  I  managed to register the application several times, therefore it had a different UUID, for the app and to the same name environment, but to a different location. Since location of env. is not shown, there were 2 identical entries in the catalog which had the same env. service. This is a problem - ref team. 
-
 For the above request the following 200 OK response is received returning the registration details of the service. This includes the link to the URI of the service contracts, the URL to the catalog details page of the service and the service UUID. The Catalog entry for the service is also shown in [4.3.4](#ex-service-reg).
 
 ```json

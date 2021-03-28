@@ -43,79 +43,77 @@ In the following example a custom style is added to change any matching element'
 
 Steps: 
 
-1. In _theme/web/custom-variables.scss_ add a SCSS variable by adding the following code to the file: 
+1.  In _theme/web/custom-variables.scss_ add a SCSS variable by adding the following code to the file: 
 
-```scss
-$company-header-text-size: 30px;
-```
+	```scss
+	$company-header-text-size: 30px;
+	```
 
-2. Create a new file _theme/web/company-header.scss_. In the new file create a class with a selector name (`.company-header`) and include a CSS property that references the variables created in step 1.
+2.  Create a new file _theme/web/company-header.scss_. In the new file create a class with a selector name (`.company-header`) and include a CSS property that references the variables created in step 1.
 
-```scss
-.company-header { font-size: $company-header-text-size; }
-```
+	```scss
+	.company-header { font-size: $company-header-text-size; }
+	```
 
-3. Import the new file in _theme/web/main.scss_ by adding the following:
+3.  Import the new file in _theme/web/main.scss_ by adding the following:
 
-```scss
-@import “company-header”;
-```
+	```scss
+	@import “company-header”;
+	```
 
 This ensures the SCSS is included in CSS compilation.
 
-#### 2.2.2. Native Environment Example
+#### 2.2.2 Native Environment Example
 
-In this example we will be creating a custom style which will change the font size of text upon use.
+In this example we will be creating a custom style which will change the font size of text upon use:
 
-Steps:
-
-1. Add a JavaScript variable in _theme/native/custom-variables.js_ with the following code: 
+1.  Add a JavaScript variable in _theme/native/custom-variables.js_ with the following code: 
    
-```javascript
-export const companyHeaderTextSize = 30;
-```
+	```javascript
+	export const companyHeaderTextSize = 30;
+	```
 
-2. Create a new file _theme/native/company-header.js_. In the new file, the newly defined variable defined in step needs to be imported. Create a variable with an object value, containing property `fontSize` with the value referencing the newly defined custom-variable, then export the variable. The following code achieves this:
+2.  Create a new file _theme/native/company-header.js_. In the new file, the newly defined variable defined in step needs to be imported. Create a variable with an object value, containing property `fontSize` with the value referencing the newly defined custom-variable, then export the variable. The following code achieves this:
 
-```javascript
-import { companyHeaderTextSize } from “./custom-variables”;
+	```javascript
+	import { companyHeaderTextSize } from “./custom-variables”;
 export const companyHeader = { fontSize: companyHeaderTextSize };
-```
+	```
 
-3. Import the object defined in _company-header.js_ and expose it in _theme/native/main.js_ as follows:
+3.  Import the object defined in _company-header.js_ and expose it in _theme/native/main.js_ as follows:
 
-```javascript
-import {companyHeader} from “./company-header”;
+	```javascript
+	import {companyHeader} from “./company-header”;
 module.exports = {companyHeader};
-```
+	```
 
 ### 2.3 Importing CSS (Web Only)
 
-An app's theme is based on SASS (`.scss` files), but it can be the case you require CSS files from 3rd party libraries. This can be done by adding the 3rd party library file to the cssFiles property in _theme/web/settings.json_.
+An app's theme is based on SASS (`.scss` files), but it can be the case you require CSS files from third-party libraries. This can be done by adding the third-party library file to the `cssFiles` property in _theme/web/settings.json_.
 
-See the following fragment as an example of how additional CSS can be added to your app. Below a 3rd party CSS file _water.css_ is added and will be applied to the app. The 3rd party CSS file should be in **theme/web**.
+See the following fragment as an example of how additional CSS can be added to your app. Below, a third-party CSS file _water.css_ is added and will be applied to the app. The third-party CSS file should be in **theme/web**:
 
-```json
-{
+	```json
+	{
   "cssFiles": ["theme.compiled.css", "water.css"]
 }
-```
+	```
 
 ## 3 Create Re-Usable Styling
 
-The previous section describes how developers can customize the styling of an app. Next to that it is possible to place styling inside modules, which then can be re-used in other apps. This can be used to [create a theme module](TODO) or a [company design system](TODO).
+The previous section describes how developers can customize the styling of an app. Next to that it is possible to place styling inside modules, which then can be re-used in other apps. This can be used to [create a theme module](customize-styling-new) or a [company design system](create-a-custom-design-system).
 
-Adding styling to a module is similar to adding styling to a project, except that styling resources are placed in the **themesource** folder as explained in [Customize styling: File and folder structure](TODO)
+Adding styling to a module is similar to adding styling to a project, except that styling resources are placed in the **themesource** folder as explained in the [File and Folder Structure](#file-and-folder) section below.
 
-For classes that are generic or that should be easily discovered, a developer can consider creating design properties for this. For more information see [Extend design properties](TODO)
+For classes that are generic or that should be easily discovered, a developer can consider creating design properties for this. For more information see [How to Extend design properties](extend-design-properties)
 
 ## 4 Create a Theme Module
 
-A theme module is useful for styling which can be easily re-used through modules across projects. By default, the theme settings like color, font, spacing, etc. are in the **theme** folder, which is per app specific. However, often it is desired to-reuse these settings to create a consistent look and feel across apps.
+A theme module is useful for styling which can be easily re-used through modules across projects. By default, the theme settings like color, font, spacing, and more are in the **theme** folder, which is specific per app. However, often these settings should be re-used to create a consistent look and feel across apps.
 
-This can be done by creating a theme module and making the custom-variables file in the theme folder point to the custom variables file in your theme module. For creating a full design system see [Create a company design system](TODO).
+This can be done by creating a theme module and making the *custom-variables* file in the **theme** folder point to the custom variables file in your theme module. For creating a full design system see [How to Create a Company Design System](create-a-company-design-system).
 
-See the example below on creating a re-usable theme module.
+See the example below for more information on creating a re-usable theme module.
 
 ### 4.1 Web
 
@@ -131,7 +129,7 @@ $brand-warning: #eca51c;
 $brand-danger: #e33f4e;
 ```
 
-Steps:
+To create a re-usable theme module, do the following:
 
 1. Create a new module in Studio Pro. Right-click “Project <name>” in the Project-Explorer, then click “Add new module…”. Give it a name, for this example the module’s name is “mytheme”.
    

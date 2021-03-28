@@ -7,41 +7,37 @@ description: "This describes how developers can change apps styling and create r
 tags: ["build", "app", "studio", "studio pro", "style", "styling"]
 ---
 
-[!!! TODO:  review meta above]
+## 1 Introduction
 
-[!!! TODO:  check how scss renders. in my local preview it is prefixed with "\"]
+This page describes how developers can change the styling of apps and create re-usable styling. For progressive and web apps, SASS (SCSS) is used and for native mobile apps JavaScript is used. Even though the technologies differ, the approach for customizing styling is the same.
 
-[!!! TODO:  there are todo items in this page; missing content, links]
+{{% todo %}}[Review metadata, check if scss renders correctly, review todo itemst]{{% /todo %}}
 
-## 1. Introduction
-
-This page describes how developers can change the styling of apps and create re-usable styling. For (progressive) web apps SASS (SCSS) is used and for native mobile apps JavaScript is used. Note that even though the technologies differ, the approach for customizing styling is the same.
-
-## 2. Changing the app look and feel
+## 2 Changing the App Look and Feel
 
 Developers have several options to change an app's look and feel. Depending on whether you are a Studio or Studio Pro user, there are different options.
 
-### 2.1. Changing the default theme settings
+### 2.1 Change the Default Theme Settings
 
-An often first and simple step is to change theme settings to quickly adjust the theme to a company brand by changing the colors.
+When tailoring your app's look, a simple first step is to change the theme settings. This quickly adjusts the theme to a company's brand by changing the colors.
 
-For Studio users there is the [Theme Customizer](https://docs.mendix.com/studio/theme-customizer) that can be used to change the basic look and feel of an app which will become visible immediately.
+For Studio users, use the [Theme Customizer](/studio/theme-customizer) to change the basic look and feel of your app. The differences will become visible immediately.
 
-For Studio Pro users there are more options to change the default theme settings. In the theme folder there is a custom-variables file (for both web apps and native mobile apps) which can be used to simply change many of the theme settings for the app. Also see [Customize styling: File and folder structure](TODO)
+For Studio Pro users there are more options to change the default theme settings. In the theme folder there is a *custom-variables* file (for both web apps and native mobile apps) which can be used to simply change many of the theme settings for the app. For more information on this topic, see the [File and Folder Structure](#file-and-folder) section below.
 
-Changes can be quickly previewed as discussed in [Customize styling: Previewing a change in Styling](TODO)
+For more information on how changes can be quickly previewed, see the [Preview a Styling Change](#previewing-styling) section below.
 
-### 2.2. Adding custom styling
+### 2.2 Add Custom Styling
 
 Developers can add custom styling for apps in the `theme/web` or `theme/native` folder.
 
 For (progressive) web apps, custom styling should be placed in `theme/web` and linked from (or placed in) `main.scss`. For native mobile apps, custom styling should be placed in `theme/native` and linked from (or placed in) `main.js`.
 
-While custom styling can be added directly in the `main.scss` or `main.js` it is a best practice to separate styling in files and include these files in `main.scss` or `main.js`. See also [Best practices](TODO)
+While custom styling can be added directly in the `main.scss` or `main.js` it is a best practice to separate styling in files and include these files in `main.scss` or `main.js`.
 
 Within custom styling, the theme settings (colors, spacings, etc.) as configured in `custom-variables.scss` or `custom-variables.js`, can be re-used. This is also recommended to provide a consistent user experience.
 
-#### 2.2.1. Web environment example
+#### 2.2.1. Web Environment Example
 
 In the following example a custom style is added to change any matching element's font-size upon use.
 
@@ -51,7 +47,7 @@ Steps:
 
 ```scss
 $company-header-text-size: 30px;
-```   
+```
 
 2. Create a new file _theme/web/company-header.scss_. In the new file create a class with a selector name (`.company-header`) and include a CSS property that references the variables created in step 1.
 
@@ -67,7 +63,7 @@ $company-header-text-size: 30px;
 
 This ensures the SCSS is included in CSS compilation.
 
-#### 2.2.2. Native environment example
+#### 2.2.2. Native Environment Example
 
 In this example we will be creating a custom style which will change the font size of text upon use.
 
@@ -93,7 +89,7 @@ import {companyHeader} from “./company-header”;
 module.exports = {companyHeader};
 ```
 
-### 2.3. Importing CSS (web only)
+### 2.3 Importing CSS (Web Only)
 
 An app's theme is based on SASS (`.scss` files), but it can be the case you require CSS files from 3rd party libraries. This can be done by adding the 3rd party library file to the cssFiles property in _theme/web/settings.json_.
 
@@ -105,7 +101,7 @@ See the following fragment as an example of how additional CSS can be added to y
 }
 ```
 
-## 3. Create re-usable styling
+## 3 Create Re-Usable Styling
 
 The previous section describes how developers can customize the styling of an app. Next to that it is possible to place styling inside modules, which then can be re-used in other apps. This can be used to [create a theme module](TODO) or a [company design system](TODO).
 
@@ -113,7 +109,7 @@ Adding styling to a module is similar to adding styling to a project, except tha
 
 For classes that are generic or that should be easily discovered, a developer can consider creating design properties for this. For more information see [Extend design properties](TODO)
 
-## 4. Create a theme module
+## 4 Create a Theme Module
 
 A theme module is useful for styling which can be easily re-used through modules across projects. By default, the theme settings like color, font, spacing, etc. are in the **theme** folder, which is per app specific. However, often it is desired to-reuse these settings to create a consistent look and feel across apps.
 
@@ -121,7 +117,7 @@ This can be done by creating a theme module and making the custom-variables file
 
 See the example below on creating a re-usable theme module.
 
-### 4.1. Web
+### 4.1 Web
 
 As an example, the following variables in _theme/web/custom-variables.scss_ will be modularised into a re-usable theme module:
 
@@ -245,7 +241,7 @@ If you get errors, double check if the imports point to valid files.
 When this approach is used it is recommended to create a company starter app that out-of-the-box contains the theme module and already contains this change in the theme folder to point to the module.
 {{% /alert %}}
 
-## 5. Preview a styling change
+## 5 Preview a Styling Change {#previewing-styling}
 
 Depending on the type of app you are building, the preview of styling/a theme change is different.
 
@@ -261,7 +257,7 @@ Mendix monitors the file system in the **theme** and **themesource** folder for 
 
 If the developer mode setting is enabled, and changes are made in the JavaScript styling files, the app automatically reloads with the new styling. 
 
-## 6. File and folder structure
+## 6 File and Folder Structure {#file-and-folder}
 
 Mendix offers a modular and flexible approach for styling apps. Styling can be done on an app level, for app specific styling, and styling can be put in modules for re-use.
 
@@ -274,7 +270,7 @@ The table below describes the file structure for the theme folder and for module
 |             | **web**                   |                       |                        | This folder contains app specific styling resources for (progressive)  web apps.                                                                                                                                                                                                                                                                                                                                                                                  |
 |             |                       | _custom-variables.scss_ |                        | This file contains the theme setting which can be configured to easily change colors, font, spacing etc.                                                                                                                                                                                                                                                                                                                                                            |
 |             |                       | _main.scss_             |                        | This file is the starting point for adding custom styling.                                                                                                                                                                                                                                                                                                                                                                                                          |
-|             |                       | _exclusion-variables.scss_ |                     | This file contains variables that can be toggled to optionally exclude Atlas core styling.                                         |                      
+|             |                       | _exclusion-variables.scss_ |                     | This file contains variables that can be toggled to optionally exclude Atlas core styling.                                         |
 |             |                       | _settings.json_         |                        | This file contains the (external) CSS files that should be loaded. This includes the CSS result of the SASS compilation.                                                                                                                                                                                                                                                                                                                                         |
 |             | **native**                |                       |                        | This folder contains app specific styling resources for native mobile apps.                                                                                                                                                                                                                                                                                                                                                                                         |
 |             |                       | _custom-variables.js_   |                        | This file contains the theme setting which can be configured to easily change colors, font, spacing etc.                                                                                                                                                                                                                                                                                                                                                            |
@@ -544,10 +540,10 @@ All supported exclusion variables for native mobile are:
 - excludeHelpers
 ```
 
-## 9. Customizing index.html (Web)
+## 9 Customizing index.html (Web)
 
 By default, Mendix generates the _index.html_ (the page that is loaded to start the app), based on the app configuration. In some cases it may be needed to customize this HTML, which can be done by creating a file called _index.html_ in the **theme/web** folder. To make sure that your file has the right structure, we advise you to copy _index-example.html_ from the **deployment/web** folder to the **theme/web**, rename it to _index.html_, and then use it as a starting point. This file will be created after you have deployed your app locally at least once.
 
-## 10. Customizing Unsupported Browser (Web)
+## 10 Customizing Unsupported Browser (Web)
 
 When an end-user opens a Mendix app in an unsupported browser, a page is shown that the current browser is not supported and explain which other browsers can/should be used. To customize this screen, you can create a custom html file called _unsupported-browser.html_ in the **theme/web** folder. If desired, you can copy _unsupported-browser.html_ from the **deployment/web** folder to the **theme/web** folder and use it as a starting point. This file will be created after you have deployed your app locally at least once.

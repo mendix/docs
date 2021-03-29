@@ -131,7 +131,7 @@ $brand-danger: #e33f4e;
 
 To create a re-usable theme module, do the following:
 
-1. Create a new module in Studio Pro. Right-click “Project <name>” in the Project-Explorer, then click “Add new module…”. Give it a name, for this example the module’s name is “mytheme”.
+1. Create a new module in Studio Pro. Right-click **Project <name>** in the Project Explorer, then click **Add new module…**. Give it a name. For this example the module’s name is "mytheme".
    
 2. In your Mendix project directory, create a new file _themesource/mytheme/web/custom-variables.scss_.
 
@@ -143,7 +143,7 @@ To open your Mendix project directory from Studio Pro, click “Project” in th
    
 4. In _theme/web/custom-variables.scss_ add `@import "../../themesource/mytheme/web/custom-variables.scss` to the top of the file, replacing “mytheme” with your module name.
 
-The result of the two files for this example:
+The two files should end up looking list this:
 
 _theme/web/custom-variables.scss:_
 
@@ -163,15 +163,15 @@ $brand-warning: #eca51c;
 $brand-danger: #e33f4e;
 ```
 
-You can now export the “mytheme” module from Studio Pro to re-use in your apps. Note, you need to add the “@import …” line to _theme/web/custom-variables.scss_ for every app that imports the module. Therefore, it is recommended to create a company starter app containing this change.
+You can now export the **mytheme** module from Studio Pro to re-use in your apps. Note that you need to add the `@import …` line to _theme/web/custom-variables.scss_ for every app that imports the module. Therefore, we recommend you create a company starter app containing this change.
 
-To test the theme for all the widgets, page templates, and building blocks, it can be helpful to use the Atlas Design System app as discussed in [Create a company design system](TODO).
+To test the theme for all the widgets, page templates, and building blocks it can be helpful to use the Atlas Design System app as discussed in [Create a Company Design System](create-a-company-design-system).
 
 {{% alert type="info" %}}
-Note: if this is done, the Theme customizer in Studio will not work anymore as it depends on the custom variables in the **theme** folder.
+Note: if this is done, the Theme customizer in Studio will not work any more as it depends on the custom variables in the **theme** folder.
 {{% /alert %}}
 
-### 4.2. Native mobile
+### 4.2. Native Mobile
 
 As an example, the following variables in _theme/native/custom-variables.js_ will be modularised into a re-usable theme module:
 
@@ -192,23 +192,23 @@ export const brand = {
 
 Steps:
 
-1. Create a new module in Studio Pro. Right-click “Project <name>” in the Project-Explorer, then click “Add new module…”. Give it a name, for this example the module’s name is “mytheme”.
+1. Create a new module in Studio Pro. Right-click “Project <name>” in the Project-Explorer, then click **Add new module…**. Give it a name, for this example the module’s name is “mytheme”.
    
 2. In your Mendix project directory, create a new file _themesource/mytheme/native/custom-variables.js_.
 
 {{% alert type="info" %}}
-Note: To open your Mendix project directory from Studio Pro, click “Project” in the top menu-bar, then click “Show Project Directory in Explorer”.
+Note: To open your Mendix project directory from Studio Pro, click “Project” in the top menu-bar, then click **Show Project Directory in Explorer**.
 {{% /alert %}}
 
 3. Cut the export statement and variables from _theme/native/custom-variables.js_ and paste in _themesource/mytheme/native/custom-variables.js_.
    
-4. In _theme/native/custom-variables.js_ add the following code to the top of the file, replacing “mytheme” with your module name:
+4.  In _theme/native/custom-variables.js_ add the following code to the top of the file, replacing “mytheme” with your module name:
 
-```javascript
-export * from "../../themesource/mytheme/native/custom-variables";
-```
+	```javascript
+	export * from "../../themesource/mytheme/native/custom-variables";
+	```
 
-The result of the two files for this example:
+The two files should end up looking list this:
 
 _theme/native/custom-variables.js:_
 
@@ -236,30 +236,30 @@ export const brand = {
 If you get errors, double check if the imports point to valid files.
 
 {{% alert type="info" %}}
-When this approach is used it is recommended to create a company starter app that out-of-the-box contains the theme module and already contains this change in the theme folder to point to the module.
+When this approach is used we recommend you create a company starter app. Out-of-the-box this app will contain the theme module, and already contains this change in the theme folder that points to the module.
 {{% /alert %}}
 
 ## 5 Preview a Styling Change {#previewing-styling}
 
-Depending on the type of app you are building, the preview of styling/a theme change is different.
+Depending on the type of app you are building, the preview of styling or a theme change is different.
 
 ### 5.1. Web apps
 
-Mendix monitors the file system in the **theme** and **themesource** folder for changes in the `.scss` files. When a change is detected, the `.scss` files are compiled to CSS and the app is automatically reloaded (if it is running), so no additional tooling is needed. For more information on how the SCSS is compiled see [Customize styling: Styling-output](TODO).
+Mendix monitors the file system in the **theme** and **themesource** folder for changes in the `.scss` files. When a change is detected, the `.scss` files are compiled to CSS and the app is automatically reloaded (if it is running), so no additional tooling is needed. For more information on how the SCSS is compiled see the [Styling Output](#styling-output) section below.
 
-### 5.2. Native mobile apps
+### 5.2. Native Mobile Apps
 
-Mendix monitors the file system in the **theme** and **themesource** folder for changes in the `.js` files. When loading a native mobile app in the Make it Native app there is the “Enable developer mode” option. If this setting is not enabled, after making a styling change, you can reload the app with a three-finger tap.
+Mendix monitors the file system in the **theme** and **themesource** folders for changes in the `.js` files. When loading a native mobile app in the Make it Native app there you will see the **Enable developer mode** option. If this setting is not enabled, after making a styling change, you can reload the app with a three-finger tap.
 
-[!!! TODO link to make it native app]
+If **Enable developer mode** is enabled, and changes are made in the JavaScript styling files, the app automatically reloads with the new styling. 
 
-If the developer mode setting is enabled, and changes are made in the JavaScript styling files, the app automatically reloads with the new styling. 
+For more information, see the Getting the [Make It Native App Reference Guide](/refguide/getting-the-make-it-native-app).
 
 ## 6 File and Folder Structure {#file-and-folder}
 
-Mendix offers a modular and flexible approach for styling apps. Styling can be done on an app level, for app specific styling, and styling can be put in modules for re-use.
+Mendix offers a modular and flexible approach for styling apps. Styling can be done on an app level for app-specific styling, and styling can be put in modules for re-use.
 
-To facilitate the app level and module level styling the following file and folder structure is used, where the **theme** folder is used for app specific styling and the **themesource** folder is used for re-usable module styling.
+To facilitate app- and module-level styling, the following file and folder structure is used; the **theme** folder is used for app-specific styling and the **themesource** folder is used for re-usable module styling.
 
 The table below describes the file structure for the theme folder and for modules.
 
@@ -275,7 +275,7 @@ The table below describes the file structure for the theme folder and for module
 |             |                       | _main.js_               |                        | This file is the starting point for adding custom styling.                                                                                                                                                                                                                                                                                                                                                                                                          |
 |             |                       | _exclusionVariables.js_ |                        | This file contains variables that can be toggled to optionally exclude Atlas core styling.      |
 | **themesource** |                       |                       |                        | This folder contains module specific styling. Every module has a folder that can contain styling resources.                                                                                                                                                                                                                                                                                                                                                         |
-|             | **Atlas_core** (required) |                       |                        | This folder from the Atlas core module which is the core for all Mendix apps. This module should always be part of a project as other modules depend on this and it contains all the styling for the Mendix widget. The content of this folder should not be changed as that will cause issues with migrating/updating to newer versions. For information about disabling default styling from this module see [Customize styling: Disabling-default-styling-from](TODO) |
+|             | **Atlas_core** (required) |                       |                        | This folder from the Atlas core module which is the core for all Mendix apps. This module should always be part of a project as other modules depend on this and it contains all the styling for the Mendix widget. The content of this folder should not be changed as that will cause issues with migrating/updating to newer versions. For information about disabling default styling from this module see [Disabling Default Styling](#disable-default) below. |
 |             |                       | **web**                   |                        | This folder (and  subfolders) contain the web resources for the standard Mendix supported widgets                                                                                                                                                                                                                                                                                                                                                                 |
 |             |                       | **native**                |                        | This folder (and  subfolders) contain the native mobile resources for the standard Mendix supported widgets                                                                                                                                                                                                                                                                                                                                                       |
 |             | **MODULE_NAME**           |                       |                        | Per module a folder is created which can contain styling resources for (progressive) web apps and native mobile apps                                                                                                                                                                                                                                                                                                                                             |
@@ -286,20 +286,19 @@ The table below describes the file structure for the theme folder and for module
 |             |                       |                       | _main.js_                | This file is the starting point for the module native mobile based styling,                                                                                                                                                                                                                                                                                                                                                                                         |
 |             |                       |                       | _design-properties.json_ | This file contains additional design properties that are based on the classes defined in this module.                                                                                                                                                                                                                                                                                                                                                               |
 
+## 7. Styling output {#styling-output}
 
-## 7. Styling output
+With the modular structure of the styling of Mendix app, the styling files are placed in different folders. Studio (Pro) automatically combines the files to a single output (stylesheet for web and JavaScript for native) which is used by the app in the browser or on the device. The following sections describe in more detail how this is done.
 
-With the modular structure of the styling of Mendix app, the styling files are placed in different folders. Studio (Pro) automatically combines the files to a single output (stylesheet for web and javascript for native) which is used by the app in the browser or on the device. The following sections describe in more detail how this is done.
+### 7.1. Web Apps
 
-### 7.1. Web apps
-
-Studio (Pro) combines the different `.scss` files in a certain order and compiles the SASS into CSS which is used in the browser. The compiled output and necessary resources are saved in a folder named **theme-cache**.
+Studio and Studio Pro combines the different *.scss* files in a certain order and compiles the SASS into CSS which is used in the browser. The compiled output and necessary resources are saved in a folder named **theme-cache**.
 
 {{% alert type="info" %}}
-The content of this folder is regenerated regularly (e.g. when opening the project or pressing F4) and therefore should not be changed manually. Also note, that the **theme-cache** folder is included when uploading your project to Teamserver. It is required to see the correct styling in Studio, which is why it's strongly recommended to commit any changes when the styling has changed.
+The content of this folder is regenerated regularly (for example when opening the project or pressing <kbd>{F4}</kbd>) and therefore should not be changed manually. Also note, that the **theme-cache** folder is included when uploading your project to Teamserver. It is required to see the correct styling in Studio, which is why it's strongly recommended to commit any changes when the styling has changed.
 {{% /alert %}}
 
-The compilation of the `.scss` files is done in the following order:
+The compilation of the *.scss* files is done in the following order:
 
 1. All _main.css_ files from the **themesource** folders of Market Place modules, in alphabetical order of the names of the modules
 2. All _main.css_ files from the **themesource** folders of user modules, ordered as in Studio Pro
@@ -325,7 +324,7 @@ If there are errors during the bundling, these will be shown in Studio Pro and t
 
 For more details on styling native mobile apps see: [native mobile styling](TODO) 
 
-## 8. Disabling default styling from Atlas Core
+## 8. Disabling default styling from Atlas Core {#disable-default}
 
 Mendix provides styling for the platform supported widgets in the Atlas core module. In general, for every widget there is base styling to provide a default look and feel for the widget and helper styling, which can be seen as additional styling/variations that can be used to fit the widget into its context. Styling can be overridden, but in some cases it can be preferred to disable this default styling. This is possible by excluding styling using variables which can be set in the exclusion variables file.
 

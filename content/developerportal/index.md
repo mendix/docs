@@ -22,7 +22,9 @@ On the right side of the toolbar, you can search and access your [Mendix Profile
 
 On the left side of the toolbar, you open an access menu by clicking the **Switch-to** menu:
 
+{% image_container width="300" %}}
 ![](attachments/switcher.png)
+{{% /image_container %}}
 
 You can then access the following parts of the Mendix Platform:
 
@@ -44,7 +46,7 @@ Click [Company Buzz](collaborate/buzz) to communicate with colleagues, App Team 
 
 Click [Company Apps](/developerportal/apps-list/#my-company-apps) to see all the apps created by members of your company.
 
-If you want to turn on the old navigation/header, click your avatar and toggle **Old Navigation** to **Off**.
+If you want to turn on the old navigation/header, click your avatar and toggle **Old Navigation** to **On**.
 
 ## 3 Getting Assistance
 

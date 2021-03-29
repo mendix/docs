@@ -1,5 +1,5 @@
 ---
-title: "Examples for Data Hub API Calls - DRAFT"
+title: "Examples for the Data Hub API Calls"
 parent: "data-hub-api-how-to"
 description: "Examples of the how to use the Data Hub API."
 tags: ["data hub", "Data Hub API", "registration", "api", "api-requests", "data hub api examples"]
@@ -8,9 +8,15 @@ tags: ["data hub", "Data Hub API", "registration", "api", "api-requests", "data 
 
 ## 1 Introduction
 
-This file provides examples of the calls that are described in the the [Using the Data Hub API How-to](data-hub-api-how-to). The latest Data Hub OpenAPI 3.0 spec is available at http://datahub-spec.s3-website.eu-central-1.amazonaws.com/. 
+This document provides examples of the calls that are described in the the [Using the Data Hub API How-to](data-hub-api-how-to). The latest Data Hub OpenAPI 3.0 spec is available at http://datahub-spec.s3-website.eu-central-1.amazonaws.com/. 
 
-**Note**: To use the Mendix Data Hub a license is required.
+In some cases the example curl command is provided.
+
+{{% alert type="info" %}}
+
+To use the Mendix Data Hub a license is required.
+
+{{% /alert %}}
 
 ## 2 Base Variables used in this How-to
 
@@ -44,11 +50,15 @@ curl --location --request GET 'https://hub.mendix.com/rest/datahubservice/v2/dat
 
 
 ### 3.2 Successful 200 Response
-The 200 OK response returned that the `TotalResults` are 11 assets were found that statisfy the search string and parameters.
+The 200 OK response returned that the `TotalResults` are that **11 assets** were found that statisfy the search string and parameters.
 
 The response payload is shown below:
 
-**Note:**  For conciseness in this how-to, of the 11 objects that are returned for the  `Data`  object only the second data source, **SAMPLE_EmployeeDirectory**, is shown fully in the response payload below, the other data sources have been represented as { … }.
+{{% alert type="info" %}}
+
+For conciseness in this how-to, of the 11 objects that are returned for the  `Data`  object only the second data source, **SAMPLE_EmployeeDirectory**, is shown fully in the response payload below, the other data sources have been represented as { … }.
+
+{{% /alert %}}
 
 ```json
 {
@@ -163,7 +173,7 @@ The response payload is shown below:
 
 ### 3.3 Example Search Results Viewed in the Catalog
 
-The same search in the Data Hub returns the following showing the total list in the search results pane on the left and the details of the selected **SAMPLE_EmployeeDirectory** :
+The same search in the Data Hub would look like the following screenshot showing the total list in the search results pane on the left and the details of the selected **SAMPLE_EmployeeDirectory** :
 
 ![search results](attachments/data-hub-api-how-to/dh-search-sample.png)
 
@@ -177,11 +187,15 @@ This registration must done in the following order:
 2. Environment that the data source is deployed to: `POST environment`
 3. The published services from the application (data sources) : `PUT published-endpoints`
 
-When the application and environment is already registered in the Catalog, then you can proceed to the `PUT published-endpoints`.  
+When the application and environment is already registered in the Catalog, then you can proceed to the [`PUT published-endpoints`](#reg-service-ex).  
 
-An example Odata v3 service –  **DataHub_Sample_1.0.0_OData3** – is provided in [Sample Contract File](#ex-metadata) that you can use in this how-to.  
+An example Odata v3 service –  **DataHub_Sample_1.0.0_OData3** – is provided in [Sample Contract File](#ex-metadata) (in the required escaped JSON format) that you can use whe n you are trying out the API calls.  
 
-**Note:** OData service contract files must be included in the request body in escaped JSON format. There are several online converters available for converting your *.xml* files into this format such as one available from [Freeformatter.com](https://www.freeformatter.com/json-escape.html#ad-output). Just paste the contents of your files and convert them to the escaped format.  
+{{% alert type="info" %}}
+
+OData service contract files must be included in the request body in escaped JSON format. There are several online converters available for converting your *.xml* files into this format such as one available from [Freeformatter.com](https://www.freeformatter.com/json-escape.html#ad-output). Just paste the contents of your files and convert them to the escaped format.  
+
+{{% /alert %}}
 
 ### 4.1 Registering the `Howto5-App` {#ex-reg-app}
 In this example, you are going to register an app called **Howto5-App**. The details of the app are included in the JSON format request body given below.
@@ -191,6 +205,8 @@ In this example, you are going to register an app called **Howto5-App**. The det
 `POST {{baseURL}}/applications`
 
 #### 4.1.2  JSON Format Request Body
+
+Copy the contents of this body, or save it to a file, and include it as part of your API request.
 
 ```json
 {
@@ -239,7 +255,11 @@ curl --location --request POST '{{BaseURL}}' \
 #### 4.1.3 Successful 201 Response Application Created {#app-registered}
 The 201 response that is returned to indicate that the application is registered is given below: 
 
-**Note**: that the response returned the  `"UUID": "2ab1410e-06d4-4e07-a82d-cc04b21d2622"`, which is the Catalog identifier for the application that must be used to identify it in subsequent steps of the registration of the data source. This value for the the app UUID will be represented as {*AppUUID}* in the rest of this document.
+{{% alert type="info" %}}
+
+The response returned the  `"UUID": "2ab1410e-06d4-4e07-a82d-cc04b21d2622"`, which is the Catalog identifier for the application that must be used to identify it in subsequent steps of the registration of the data source. This value for the the app UUID will be represented as {*AppUUID}* in the rest of this document.
+
+{{% /alert %}}
 
 ```json
 {
@@ -263,12 +283,15 @@ The 201 response that is returned to indicate that the application is registered
 
 ### 4.2 Registering the Environment `Production`  for the Howto5-App {#reg-env-ex}
 
-The following steps describe how to register the environment **Production** for the **Howto5-App that was reigstered in the previous section. 
+The following call is to register the environment **Production** for the **Howto5-App** that was reigstered in the previous section. 
 
 #### 4.2.1 Base request URL:
 `POST {{baseURL}} /applications/{appUUID}/environments`
 
 #### 4.2.2  JSON format request body for the Environment
+
+The following request body must be included with the request. 
+
  {
     "Name": "Production",
     "Location": "https://howtoenv5555.test",
@@ -279,7 +302,7 @@ The following steps describe how to register the environment **Production** for 
 }
 
 #### 4.2.3 Successful 201 Created Successful 200 {#env-registerd}
-The 201 Created response returns the Catalog-generated identifier   `"UUID": "236c9acc-830c-48d9-a0ef-e1104a15d26d"` for the for the registered environment  `Production`.
+The following 201 Created response returns the Catalog-generated identifier   `"UUID": "236c9acc-830c-48d9-a0ef-e1104a15d26d"` for the for the registered environment  `Production`.
 
 ```json
 {
@@ -302,20 +325,30 @@ The 201 Created response returns the Catalog-generated identifier   `"UUID": "23
 
 ## 4.3  Registering the 5how-toODatav3-sample-service {#reg-service-ex}
 
-In this example call, the service **5how-toODatav3-sample-service** is registered for the application registered in [4.1](#ex-reg-app) and deployed to the environment registered in [4.2](#reg-env-ex).
+In this example call, the service **5how-toODatav3-sample-service** is registered for the application registered in [Section 4.1](#ex-reg-app) and deployed to the environment registered in [Section 4.2](#reg-env-ex).
 
-Two tags, `odata` and `sample` are defined as part of the registration.
+Two tags, `odata` and `sample` are also included as part of the registration that will be added to the Catalog metadata that is shown for the asset and also used for searching for the asset.
 
-For the `Contracts` object you can use the example OData v3 contract in Section 8 [Sample Contract](#sample-contract):  ` “Type”: “Metadata”`
+For the `Contracts` object you can use the example OData v3 contract given in [Sample Contract](#sample-contract) for the key-value pair:  ` “Type”: “Metadata”`.
+
+{{% alert type="info" %}}
+
+If you are using one of your own contracts then ensure that you include all the files that define the contract.
+
+{{% /alert %}}
 
 ### 4.3.1 Base Request URL
 
 `PUT` `{{baseURL}}/applications/{appUUID}/environments/{envUUID}/published-endpoints`
 
 #### 4.3.2  JSON format request body for the `Endpoints` **Object**
-The file tthat is used in this example has been provided in escaped JSON format in [Sample Contract](#sample-contract). 
+The file tthat is used in this example is provided in escaped JSON format in [Sample Contract](#sample-contract). 
 
-**Note:**  For conciseness the contents of the contract file not included in the following payload – it is respresented as  *<Insert example metadata from [metadata](#ex-metadata) >*.  You must insert the example contract file provided in [Sample Contract](#sample-contract) , or alternatively use your own contract files – in escaped JSON format. 
+{{% alert type="info" %}}
+
+For conciseness the contents of the contract file is not included in the following payload – it is respresented as  *<Insert example metadata from [metadata](#ex-metadata) >*.  You must insert the example contract file provided in [Sample Contract](#sample-contract) , or alternatively use your own contract files – in escaped JSON format. 
+
+{{% /alert %}}
 
 ```json
 {
@@ -445,9 +478,13 @@ This is shown in the Landscape as:
 
 ## 5 Registering Consumed Endpoints by the Howto5-App {#consumed-ep-ex}
 
-This example shows how to register that the **Howto5-App** consumes 2 datasets: **Employees** and **Offices** from the service **SAMPLE_EmployeeDirectory**. 
+This example provides the request to register that the **Howto5-App** consumes 2 datasets: **Employees** and **Offices** from the service **SAMPLE_EmployeeDirectory**. 
 
-**Note**: For this example, the `Namespace` object for the `consumedItems` is called `DefaultNamespace` which is the default namespace for Mendix services.
+{{% alert type="info" %}}
+
+For this example, the `Namespace` object for the `consumedItems` is called `DefaultNamespace` which is the default namespace for Mendix services.
+
+{{% /alert %}}
 
 ### 5.1 Base Request URL
 
@@ -455,7 +492,7 @@ This example shows how to register that the **Howto5-App** consumes 2 datasets: 
 
 ### 5.2. JSON Format Request Body to Register Consuming from SampleDH-App
 
-To register the two consumed entities **Employees** and **Offices** from the HR Sample service at https://hrsampleapp.mendixcloud.com/odata/PubOdataEmployeeDirectory/v1
+To register the two consumed entities **Employees** and **Offices** from the HR Sample service at https://hrsampleapp.mendixcloud.com/odata/PubOdataEmployeeDirectory/v1 the following body must be included as part of the request. 
 
 ```json
 {
@@ -480,7 +517,7 @@ To register the two consumed entities **Employees** and **Offices** from the HR 
 ```
 
 ### 5.3 Successful 200 Created Response
-The response that is returned shows the full details of the consumed service as part of the `Endpoints` object. The total number of connections to the service is 43: 
+The successful 200 response that is returned shows the full details of the consumed service as part of the `Endpoints` object. The total number of connections to the service is **43**: 
 
 ```json
 {
@@ -586,7 +623,7 @@ The response that is returned shows the full details of the consumed service as 
 
 ### 5.4 Registered service in the Catalog and Data Hub Landscape
 
-This registration is shown in the Data Hub Landscape for the **SampleDHApp.** It consumes 2 datasets from the **SAMPLE_EmployeeDirectory** service which is deployed from the **HR Sample App.**
+This registration is shown in the Data Hub Landscape for the **SampleDHApp.** It consumes **2 datasets** from the **SAMPLE_EmployeeDirectory** service which is deployed from the **HR Sample App.**
 
 ![registered service](attachments/data-hub-api-how-to/consume1service.png)
 
@@ -600,7 +637,7 @@ When the **SAMPLE_EmployeeDirectory** is viewed in the Data Hub Landscape, **How
 
 ## 6 Sample Contract File {#sample-contract}
 
-The following file is an example OData v3 contract that you can use for in this how-to for the PUT registration service request. The format provided below is in escaped JSON format contract and you can copy it and directly insert it in the PUT request body.
+The following file is an example OData v3 contract that you can use in this how-to for the PUT registration service request. The format provided below is in escaped JSON format contract and you can copy it and directly insert it in the PUT request body.
 
 ### Metadata {#ex-metadata}
 

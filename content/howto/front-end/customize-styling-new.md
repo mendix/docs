@@ -1,8 +1,8 @@
 ---
 title: "Customize Styling"
 category: "Front-End"
-parent: "ui-design"
-menu_order: 2
+parent: "atlas-ui"
+menu_order: 20
 description: "This describes how developers can change apps styling and create re-usable styling."
 tags: ["build", "app", "studio", "studio pro", "style", "styling"]
 ---
@@ -99,7 +99,7 @@ See the following fragment as an example of how additional CSS can be added to y
 
 ## 3 Create Re-Usable Styling
 
-The previous section describes how developers can customize the styling of an app. Next to that it is possible to place styling inside modules, which then can be re-used in other apps. This can be used to [create a theme module](customize-styling-new) or a [company design system](create-a-custom-design-system).
+The previous section describes how developers can customize the styling of an app. Next to that it is possible to place styling inside modules, which then can be re-used in other apps. This can be used to [create a theme module](customize-styling-new) or a [company design system](create-a-company-design-system).
 
 Adding styling to a module is similar to adding styling to a project, except that styling resources are placed in the **themesource** folder as explained in the [File and Folder Structure](#file-and-folder) section below.
 

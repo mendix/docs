@@ -7,9 +7,9 @@ tags: ["Atlas", "UI", "UX", "user experience", "design"]
 
 ## 1 Introduction
 
-Atlas 3 brings a new degree of power and sophisticaiton to styling in Mendix. To upgrade from Atlas 2 to Atlas 3, see the [Upgrade from Atlas 2 to Atlas 3]() section below. To view a high-level summary of the changes Atlas 3 brings to Mendix, see the [Atlas 3 Changes Summary]() section below.
+Atlas 3 brings a new degree of power and sophistication to styling in Mendix. To upgrade from Atlas 2 to Atlas 3, see the [Upgrade from Atlas 2 to Atlas 3](#upgrade) section below. To view a high-level summary of the changes Atlas 3 brings to Mendix, see the [Atlas 3 Change Summary](#changes) section below.
 
-## 2 Upgrade from Atlas 2 to Atlas 3
+## 2 Upgrade from Atlas 2 to Atlas 3 {#upgrade}
 
 Before upgrading, please note that in Atlas 3 all hybrid content is removed because hybrid profiles are deprecated in Mendix 9. If your project requires hybrid content, we recommend not upgrading to Atlas 3 unless you have created all your own hybrid content separate from Atlas’.
 
@@ -19,7 +19,7 @@ Before you start the upgrading process, it may help if you consult the folder st
 
 To upgrade to Atlas 3, please do the steps below as they apply to your use case. If you have not made any modifications to your `Atlas_UI_Resources` module, you can skip this section. Modifications include changes to pages, layouts, design properties and custom styles added to the `Atlas_UI_Resources` module.
 
-{% todo %}}[add archive doc under step 2 below]{{% /todo %}}
+{{% todo %}}[add archive doc under step 2 below]{{% /todo %}}
 
 If you have made modifications to your `Atlas_UI_Resources` module, you must do the following:
 
@@ -159,7 +159,7 @@ Once you have completed the necessary steps above, finish modifying existing fil
 	![](attachments/atlas-mig/3-import.png)
 	
 
-{% todo %}}[add file here]{{% /todo %}}
+{{% todo %}}[add file here]{{% /todo %}}
 
 ## 3 Expected Issues After Upgrading to Atlas 3
 
@@ -190,7 +190,7 @@ When you have completed the sections above, you may have errors in your error li
 
 	![](attachments/atlas-mig/7-errors.png)
 
-*  If you have **Design property X is not supported by your theme** errors, it either means a design property has been removed in Atlas 3 or you need to add your own design properties to the new file structure as instructed in the [Fixing User-Defined Design Properties](#user-design-props) section above. To suppress the error, right-click the error, then select **Remove property**. To check how to extend your design properties, please follow [How to Extend Design Properties](extend-design-properties).
+*  If you have **Design property X is not supported by your theme** errors, it either means a design property has been removed in Atlas 3 or you need to add your own design properties to the new file structure as instructed in the [Fixing User-Defined Design Properties](#user-design-props) section above. To suppress the error, right-click the error, then select **Remove property**. To check how to extend your design properties, please follow [How to Extend Design Properties](/howto/front-end/extend-design-properties).
 
 	![](attachments/atlas-mig/8-errors-background.png)
 
@@ -268,17 +268,17 @@ If you are using building blocks or page templates, please make sure you downloa
 
 For the web platform, download Atlas Web Content:
 
-{% todo %}}[insert file]{{% /todo %}}
+{{% todo %}}[insert file]{{% /todo %}}
 
 For native platform, download Atlas Native Mobile Content:
 
-{% todo %}}[insert file]{{% /todo %}}
+{{% todo %}}[insert file]{{% /todo %}}
 
-## 8 High Level Summary of Changes
+## 8 Atlas 3 Change Summary {#changes}
 
 Atlas 3 includes many changes around style and branding. It has a different, more modern look and feel. The differences are best expressed through comparison, using our Reference Apps. 
 
-{% todo %}}[show atlas 2 and 3 RA comparison in paragraph above]{{% /todo %}}
+{{% todo %}}[show atlas 2 and 3 RA comparison in paragraph above]{{% /todo %}}
 
 On both web and native, improvements have been made to layouts, widgets, building blocks, and page templates. These changes include but are not limited to layout and spacing, colors and aesthetics, and user experience.
 

@@ -23,7 +23,7 @@ Nanoflows are more powerful with pluggable nanoflow actions — called JavaScrip
 
 To create a JavaScript action that can synthesize text to speech, follow these steps:
 
-1.  Create a new **JavaScript action** in your Mendix project:
+1.  Create a new **JavaScript action** in your Mendix app:
 
 	![add javascript action from drop-down](attachments/write-javascript-actions/createanewjsaction.png)
 
@@ -43,7 +43,7 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 
 	![text to speech code](attachments/write-javascript-actions/code.png)
 
-	You can only add code between `// BEGIN USER CODE` and `// END USER CODE`. Any code outside this block will be lost. The source code is stored in your project folder under **javascriptsource** > **(module name)** > **actions** > **(action name).js**. This JavaScript action will be asynchronous, so you will be using promises to return values (for details about using promises, see Mozilla's [Using promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) guide). 
+	You can only add code between `// BEGIN USER CODE` and `// END USER CODE`. Any code outside this block will be lost. The source code is stored in your app folder under **javascriptsource** > **(module name)** > **actions** > **(action name).js**. This JavaScript action will be asynchronous, so you will be using promises to return values (for details about using promises, see Mozilla's [Using promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) guide). 
 
 5. Now add a check to verify if the required parameter has been set correctly. The action will return `false` if no text was provided:
 

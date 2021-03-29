@@ -22,10 +22,10 @@ At the heart of the navigation model in Mendix, these are the available profiles
 * Responsive
 * Hybrid tablet app online
 * Hybrid tablet app offline
-* Hybrid phone app online
+* Hybrid phone
 * Hybrid phone app offline
-* Tablet browser
-* Phone browser
+* Tablet web
+* Phone web
 * Native phone
 
 Users that access the app via a particular device type are automatically redirected to the homepage of the appropriate profile based on the profile type (for details, see the [Redirection to Profiles](#redirection) section below).
@@ -46,16 +46,16 @@ Four different hybrid profiles are available:
 
 * Hybrid tablet app online
 * Hybrid tablet app offline
-* Hybrid phone app online
+* Hybrid phone
 * Hybrid phone app offline
 
-### 2.3 Tablet Browser
+### 2.3 Tablet Web
 
-All the users accessing a Mendix app from a browser on a tablet will automatically be redirected to a profile of the Tablet browser type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications.
+All the users accessing a Mendix app from a browser on a tablet will automatically be redirected to a profile of the Tablet web type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications.
 
-### 2.4 Phone Browser
+### 2.4 Phone Web
 
-All the users accessing the Mendix app from a browser on a phone will automatically be redirected to a profile of the Phone browser type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications.
+All the users accessing the Mendix app from a browser on a phone will automatically be redirected to a profile of the Phone web type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications.
 
 ### 2.5 Native Phone
 

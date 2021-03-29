@@ -233,7 +233,7 @@ Loading and bundling external libraries are not currently supported. Embedding l
 
 Below is an example of using an external dependency based on [pdf-lib](https://github.com/Hopding/pdf-lib):
 
-1. Open Command Prompt and navigate to the right folder using `cd --your-project-folder--/javascriptsource/--ModuleName--/actions`.
+1. Open Command Prompt and navigate to the right folder using `cd --your-app-folder--/javascriptsource/--ModuleName--/actions`.
 2. Run `npm install pdf-lib`.
 3.  In the JavaScript action, use the following code to import the library:
 	
@@ -445,7 +445,7 @@ Well-documented actions are easier to reuse. Consider the following when documen
 
 ## 4 Testing JavaScript Actions
 
-An extensive test project can help make a JavaScript action more robust. Within a test project, try to create all possible variations of the input, accounting for empty inputs and error cases that should be handled.
+An extensive test app can help make a JavaScript action more robust. Within a test app, try to create all possible variations of the input, accounting for empty inputs and error cases that should be handled.
 
 When testing, make sure you to check all compatible platforms (web, hybrid, and native). The web should handle the Mendix browser compatibility. For further information about compatibility, see the [Browsers](/refguide/system-requirements#browsers) section of *System Requirements*. 
 

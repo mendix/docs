@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Download the latest [Charts Widget](/appstore/widgets/charts) from the Mendix Marketplace
 
-## 3 Implementing the Charts Widget in an Existing Project
+## 3 Implementing the Charts Widget in an Existing App
 
 In this section, you will create a chart with basic sample data.
 

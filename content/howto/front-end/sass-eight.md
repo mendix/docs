@@ -53,11 +53,11 @@ To prepare your app, follow these steps:
 
 	![](attachments/set-up-sass/powershell.png)
 
-4.  Copy the address as text from your main project folder and paste it into Powershell (your app folder cannot contain spaces and should not be too long):
+4.  Copy the address as text from your main app folder and paste it into Powershell (your app folder cannot contain spaces and should not be too long):
 
 	![](attachments/set-up-sass/copy.png)
 
-5.  Provide the directory for your app folder in PowerShell: `cd ‘directory for your app project folder’`
+5.  Provide the directory for your app folder in PowerShell: `cd ‘directory for your app folder’`
 6.  Adjust permissions by writing `Set-ExecutionPolicy -ExecutionPolicy ByPass -Scope CurrentUser` then pressing <kbd>Enter</kbd> .
 7.  Write `npm install` or use `npm install gulp-cli -g` with your app running locally on Studio Pro:
 

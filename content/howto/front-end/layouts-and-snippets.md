@@ -144,7 +144,7 @@ For the desktop, use the **Responsive** menu.
 
 For tablet and phone configuration, you need to choose the appropriate profile type. See the section [Device Profiles](#profiles) below for details. 
 
-### 5.5 Project Navigation
+### 5.5 App Navigation
 
 The **Navigation** document defines the main navigation structure of the application for end-users. It allows you to set the home page of your application as well as define menu structures for use in menu widgets. The home page can vary based on the roles a user has. If security is enabled, the menu will only show the items to which the user has access.
 
@@ -152,12 +152,13 @@ The **Navigation** document defines the main navigation structure of the applica
 
 At the heart of the navigation model in Mendix, are three device types: Desktop, Tablet, and Phone. You can define separate home pages and menus for each of these three devices. The Desktop device type is always enabled, while the following Tablet and Phone profiles can be enabled or disabled:
 
-* **Hybrid tablet app online**
-* **Hybrid tablet app offline**
-* **Hybrid phone app online**
-* **Hybrid phone app offline**
-* **Tablet browser**
-* **Phone browser**
+* **Responsive web**
+* **Responsive web offline**
+* **Tablet web**
+* **Tablet web offline**
+* **Phone web**
+* **Phone web**
+* **Native mobile (tablet & phone)**
 
 ![](attachments/18448710/device-profiles.png)
 

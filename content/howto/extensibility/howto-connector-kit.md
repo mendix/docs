@@ -167,10 +167,10 @@ When you export the module package for publishing in the Marketplace, you only w
 
 The [ConnectorKitDemo](https://github.com/ako/ConnectorKitDemo) project on GitHub contains two examples of how to do this, which are described below.
 
-The first example is [Apache Ivy](http://ant.apache.org/ivy/), which is a Java library specifically created for managing dependencies. Ivy is small enough that you can include it in your Mendix project. You can create two configurations in an *ivy.xml* configuration file: one
-to specify all the *.jar*s needed to run the project and execute the tests, and one to specify the libraries that should be included when publishing the module for reuse in the Marketplace. The demo project contains two configurations called **default** and **export** in the [ivy.xml](https://github.com/ako/ConnectorKitDemo/blob/master/ivy.xml) configuration file.
+The first example is [Apache Ivy](http://ant.apache.org/ivy/), which is a Java library specifically created for managing dependencies. Ivy is small enough that you can include it in your Mendix app. You can create two configurations in an *ivy.xml* configuration file: one
+to specify all the *.jar*s needed to run the app and execute the tests, and one to specify the libraries that should be included when publishing the module for reuse in the Marketplace. The demo app contains two configurations called **default** and **export** in the [ivy.xml](https://github.com/ako/ConnectorKitDemo/blob/master/ivy.xml) configuration file.
 
-The second example is [Gradle](https://gradle.org/), which is a full-fledged build tool where you can define tasks to build your project. The example in the demo project uses Gradle only to manage the dependencies. Again, it defines [two build configurations](https://github.com/ako/ConnectorKitDemo/blob/master/build.gradle): one requiring all the dependencies, and one requiring the libraries needed for exporting the module (in this case, just a library to call Slack).
+The second example is [Gradle](https://gradle.org/), which is a full-fledged build tool where you can define tasks to build your app. The example in the demo app uses Gradle only to manage the dependencies. Again, it defines [two build configurations](https://github.com/ako/ConnectorKitDemo/blob/master/build.gradle): one requiring all the dependencies, and one requiring the libraries needed for exporting the module (in this case, just a library to call Slack).
 
 Before developing custom Java actions, follow these steps:
 

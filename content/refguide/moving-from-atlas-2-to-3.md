@@ -191,6 +191,12 @@ When you have completed the sections above, you may have errors in your error li
 
 	![](attachments/atlas-mig/8-errors-background.png)
 
+* If you have errors saying **Unknown option X for design property**, it means the design property option has been removed in Atlas 3. Use one of the following methods to solve the error: 
+	* Set the design property to its default option: right-click the error, then select **Set property X to default**
+	* Search for the design property option's CSS class in *theme_atlas2/settings.json* for web and *theme_atlas2/settings-native.json* for native, then add it to the applicable [widget's style property](common-widget-properties#style)  
+
+	![](attachments/atlas-mig/9-set-prop.png)
+
 * If you have errors saying **Nanoflow commons/Native mobile resources are not compatible** get the new major versions from **Marketplace**.
 
 ## 4 Edge Case Issues After Upgrading to Atlas 3

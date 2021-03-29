@@ -5,6 +5,8 @@ menu_order: 45
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---
 
+## 1 Introduction
+
 Mendix is all about enabling developers. Within projects developers can be enabled by using a design system that allows them to quickly build consistent and coherent interfaces in line with the company brand. Atlas 3 comes with a default design system which can be used to build your own design system.
 
 {{% todo %}}[add the atlas 3 design system live app url when it's live]{{% /todo %}}
@@ -17,7 +19,7 @@ A design system is the single source of truth and contains all the elements that
 
 Follow the following high level steps in the next paragraphs to create your own design system. Note that based on the needs/requirements, different choices can be made.
 
-## 1 Create a Company Design System App
+## 2 Create a Company Design System App
 
 Create a new app based on the Mendix Design System app. You can give this a name to your liking, for example MyCompany Design System.
 
@@ -25,24 +27,22 @@ Create a new app based on the Mendix Design System app. You can give this a name
 
 The Design System app app contains pages to showcase the components and patterns, as well as the possible design variations and principles of use.
 
-## 2 Add a Company Theme Module
+## 3 Add a Company Theme Module
 
 Add a new company theme module as described in the [Create a Theme Module](customize-styling-new#create-theme-mod) section of *How to Customize Styling*. You can give this a name to your liking, for example MyCompany Theme. This is the module that can be used in the other apps, and/or be part of your company starter apps.
 
-## 3 Customize the Company Theme Module
+## 4 Customize the Company Theme Module
 
 There are several things you can do to customize your company theme module:
 
-* Customize the styling as described in [Customize styling - Create a theme module](customize-styling-new).
-* Based on new styling [add design properties](extend-design-properties).
-* Add your own layouts, page templates, building blocks or change the existing ones.
+* Customize the styling as described in the [Create a Theme Module](customize-styling-new#create-theme-mod) section of *How to Customize Styling*
+* Based on new styling, you can [add design properties](extend-design-properties)
+* Add your own layouts, page templates, building blocks — or change the existing ones 
 
-[!!! TODO: make customize styling link more precise to point to Create a theme module section]
-
-## 4 Extend and Preview
+## 5 Extend and Preview
 
 You can easily test your theme with the already defined pages. For new layouts, page templates, building blocks, and widgets you can add new pages to showcase the functionality and add documentation to describe its design variations, purpose and best practices.
 
-## 5 Share the Theme Module
+## 6 Share the Theme Module
 
-You can publish the theme module as a separate module in the private market place and/or create a new company starter app that contains the theme module as discussed. When there are changes to the theme module it's recommended to update both so that new projects get the latest version and existing project can update their theme.
+You can publish the theme module as a separate module in the private market place or create a new company starter app that contains the theme module as discussed. When there are changes to the theme module, we recommend updating both so that new projects get the latest version and the existing project can update its theme.

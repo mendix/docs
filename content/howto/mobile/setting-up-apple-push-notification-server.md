@@ -1,7 +1,7 @@
 ---
 title: "Set Up the Apple Push Notification Server"
-parent: "push-notifications"
-menu_order: 30
+parent: "notifications"
+menu_order: 96
 tags: ["mobile", "push notification", "apple", "server"]
 ---
 

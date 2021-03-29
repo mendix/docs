@@ -14,15 +14,19 @@ The Developer Portal also offers open, well-defined APIs, enabling third-party d
 
 You can navigate the menu items in the header:
 
-![](attachments/header.jpg)
+![](attachments/developer-portal-navbar.png)
 
 ## 2 Apps
 
 In [Apps](apps-list/), you can find your free and licensed apps, nodes, and other apps created by your company:
 
-![](attachments/developerportal-apps.jpg)
+![](attachments/myapps-view.png)
 
 If you are an App Team member, you can go to the app [Buzz](collaborate/buzz). Here you can  manage not only the deployment of the app itself but the entire development process via user stories which can be refined and allocated to Sprints.
+
+You can pin/unpin your app by clicking on the pin icon at the bottom right of your app card. You will find your pinned apps into the "Pinned" tab.
+
+![](attachments/pin-app.jpg)
 
 To start a new app, click **Create App**, which will open a page where you can choose a starting pointing for your new app:
 
@@ -32,7 +36,7 @@ To start a new app, click **Create App**, which will open a page where you can c
 
 In the company [Buzz](collaborate/buzz), you can communicate with colleagues, App Team members, stakeholders, and any other Mendix users in your company:
 
-![](attachments/developerportal-buzz.jpg)
+![](attachments/developerportal-buzz.png)
 
 ## 4 Control Center
 

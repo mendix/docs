@@ -1,5 +1,5 @@
 ---
-title: "Buzz"
+title: "Project Buzz"
 category: "Collaboration Tools"
 menu_order: 10
 description: "Describes the Mendix Buzz, which is the landing page for working on a Mendix app."
@@ -14,7 +14,7 @@ Located in the Developer Portal, Buzz lets you see Mendix app activity in your c
 
 Company Buzz is the landing page when you first sign in to the Developer Portal:
 
-![](attachments/buzz.png)
+![](attachments/developerportal-buzz.png)
 
 Initially, you will see the Buzz activity for **All** apps for which you are a team member *plus* all Buzz activity for your company.
 
@@ -28,7 +28,7 @@ Below the company name is a list of apps for which you are a team member. Clicki
 
 App Buzz is Buzz for a specific app:
 
-![](attachments/app-buzz.jpg)
+![](attachments/app-buzz.png)
 
 You can see the size of your **Team** and your fellow App Team members on the right side of the page.
 

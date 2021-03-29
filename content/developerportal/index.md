@@ -22,7 +22,7 @@ On the right side of the toolbar, you can search and access your [Mendix Profile
 
 On the left side of the toolbar, you open an access menu by clicking the **Switch-to** menu:
 
-{% image_container width="300" %}}
+{{% image_container width="300" %}}
 ![](attachments/switcher.png)
 {{% /image_container %}}
 

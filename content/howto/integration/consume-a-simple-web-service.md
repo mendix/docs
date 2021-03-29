@@ -24,19 +24,17 @@ To import a WSDL, follow these steps:
 
 1. Right-click your module in the **App Explorer** and select **Add other** > **Consumed web service**:
 
-2. Enter a name for the new consumed web service (for example, *TemperatureConverter*):
+2. Enter a name for the new consumed web service, for example, **TemperatureConverter** and click **OK**. 
 
-    ![](attachments/18448738/18582086.png)
-
-3. Click **OK**. You will now see the **Consumed Web Service** screen. Click **Edit**. Enter `https://www.w3schools.com/xml/tempconvert.asmx?wsdl` as the **URL** and click **Import**.
+3. On the **Consumed Web Service** screen. Click **Edit**. Enter `https://www.w3schools.com/xml/tempconvert.asmx?wsdl` as the **URL** and click **Import**.
 
     ![](attachments/18448738/wsdl-source.png)
 
-4.  The **Select Ports** dialog box is displayed for selecting a web service port:
+4. The **Select Ports** dialog box is displayed for selecting a web service port:
 
     ![](attachments/18448738/18582065.png)
 
-5. Click **OK** to select the default, and click **OK** to close the **WSDL Source** dialog. The operations **CelsiusToFahrenheit** and **FahrenheitToCelsius** will now be imported into the app.
+5. Click **OK** to select the default, and click **OK** to close the **WSDL Source** dialog. The operations **CelsiusToFahrenheit** and **FahrenheitToCelsius** are imported into the app.
 
     ![](attachments/18448738/18582084.png)
 
@@ -46,7 +44,7 @@ To create logic to call the web service, follow these steps:
 
 1.  Right-click your module in the **App Explorer** and select **Add microflow** from the menu:
 
-2.  Enter a name for the new microflow (for example, *ConvertCelsiusToFahrenheit*) and click **OK**.
+2.  Enter a name for the new microflow: *ConvertCelsiusToFahrenheit* and click **OK**.
 
     ![](attachments/18448738/18582083.png)
 

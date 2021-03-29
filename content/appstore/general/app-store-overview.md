@@ -3,7 +3,7 @@ title: "Marketplace Overview"
 category: "General Info"
 menu_order: 10
 description: "Presents an overview of how to find and use content from the Mendix Marketplace."
-tags: ["marketplace", "app store", "widget", "connector", "module", "partner"]
+tags: ["marketplace",  "widget", "connector", "module", "partner"]
 aliases:
     - /community/app-store/app-store-overview.html
     - /developerportal/app-store/app-store-overview.html
@@ -82,7 +82,7 @@ The details page for a component presents the following item information tabs:
 *  **Overview** – contains the following sections:
 	* **Description** – a description of the component
 	* **Screenshots** – screenshots of the component
-	* **User Reviews** – user reviews of the component; to leave a review for the component, click **Add Review** – a section will open where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page)
+	* **User Reviews** – user reviews of the component; to leave a review for the component, click **Add Review**, which will open a section where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page); if you are a developer of the component, you can **Reply** to a review
 *  **Documentation** – can include details on typical use cases, features and limitations, dependencies, installation and configuration, and frequently asked questions
 	* [Platform-supported](app-store-content-support#category) components are documented in the various categories of this *Marketplace Guide*
 	* Click **Edit documentation** to open a text editor where you can edit the Marketplace component's documentation
@@ -114,6 +114,8 @@ In addition, you may see a label on a component name for the [user group](#user-
 
 To see the component's [details](#details) page, click **View**.
 
+At the top of this page, there is a check box to **Receive notification** when there is a change made to your components (for example, a new version is published, or a component is unpublished). When checked, you will receive email notifications if a component status has changed. Clear this box to stop receiving these emails.
+
 #### 4.2.1 Managing a Component {#manage}
 
 Click **Manage** to manage the component:
@@ -125,9 +127,10 @@ On this page, you will see the following buttons:
 * **Create new draft version** – click this to create a new draft version of the component
 	* Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated – if there is a draft version in progress, click **View draft** to see it
 	* For more information on creating a draft version, see the [Updating Existing Marketplace Content](share-app-store-content#updating) section of *How to Share Marketplace Content*
-* **Unpublish** – click this to remove that version from the component
-	* If the component is not the protected content of a [user group](#user-groups), you can only unpublish a version that you have published yourself
-	* If the component is protected [content](#content) from a user group, a group [member](#members) can unpublish any version
+* **Unpublish** – click this to remove one version or all versions of the component
+	* If the component is protected [content](#content) from a [user group](#user-groups), a group [member](#members) can unpublish any version
+	* If the component is not the protected content of a user group, you can only unpublish a version that you have published yourself
+	* Select **Unpublish all versions** to remove all versions of the component
 * **Edit** – click this to edit the component (for details on editing, see the [Adding New Marketplace Content](share-app-store-content#adding) section of *How to Share Marketplace Content*)
 
 ### 4.3 Drafts {#drafts}
@@ -155,6 +158,8 @@ This page contains private content shared with you by other companies who have m
 This page contains reviews of [Your content](#content) by other users as well as **Your reviews** that you have written of other content:
 
 ![](attachments/app-store-overview/your-reviews.png)
+
+At the top of this page, there are check boxes to **Receive notification** of reviews added to your components and of replies to your reviews. When checked, you will receive a relevant email about the review and/or reply. Clear these check boxes to stop receiving emails.
 
 ### 4.6 Notifications {#notifications}
 

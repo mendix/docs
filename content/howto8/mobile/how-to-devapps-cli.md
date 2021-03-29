@@ -14,7 +14,7 @@ A custom developer app helps you by serving as a replacement for the Make It Nat
 
 ## 2 Prerequisites
 
-* Complete [How to Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile)
+* Complete [How to Get Started with Native Mobile](/howto8/mobile/getting-started-with-native-mobile)
 
 ## 3 Build Your Developer App
 

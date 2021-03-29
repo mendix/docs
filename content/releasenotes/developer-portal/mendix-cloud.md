@@ -13,6 +13,44 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### March 18th, 2021
+
+#### Improvements
+
+* We added the ability to completely clear all the data from your database running in a licensed environment.
+* We removed the ability to publish **App Services**. These have been deprecated for some time. You should use a [Published Web Service](/refguide/published-web-services) or a [Published REST Service](/refguide/published-rest-service) instead.
+
+#### Fix
+
+* We fixed an issue where deployments failed if there were too many log nodes. (Ticket 115140)
+
+    As a consequence of this, you will no longer be able to see the log levels of all your [log nodes](/developerportal/deploy/environments-details#log-levels) if your app is not running. Only log nodes which are not set to `Info` will be visible until you restart your app.
+
+### March 16th, 2021
+
+* We updated the Mendix runtime to send back usage information to Mendix for your apps deployed to the Mendix Cloud. See below for more information about this change.
+
+    This will be enabled the next time you redeploy your app. 
+
+**What happens to this information?**
+
+The sole purpose of retrieving this information is to check compliance against your license subscription. The information sent to Mendix allows us to provide you with clear insights into the exact usage of your apps and the number of active users in a given time-period. This can also help you in determining an optimum user plan in the long run.
+
+This information is eventually stored within Mendix and gives us an aggregated view of usage of your apps. 
+
+**What is the information sent back?**
+
+Usage information in this context is the username, project id, app environment name, and date & time of logon. 
+Note that **the username is scrambled using a hashing algorithm**, ensuring that the actual username cannot be discovered. 
+
+**Who is a user?**
+
+Everyone who logs onto the app with a username and password is considered an app user. All anonymous users are treated as a single user for this purpose.
+
+**When and how does this happen?**
+
+In connected environments, this usage information will be sent back to Mendix automatically, at regular intervals — by default this is set to once every day. This transmission will take place at around(randomized) midnight. Data will also be sent when the app is restarted. 
+
 ### March 3rd, 2021
 
 * We updated the [deploy API](/apidocs-mxsdk/apidocs/deploy-api), [Build API](/apidocs-mxsdk/apidocs/build-api), [Team Server API](/apidocs-mxsdk/apidocs/team-server-api), [Backups API V2](/apidocs-mxsdk/apidocs/backups-api), and [Backups API V1](/apidocs-mxsdk/apidocs/backups-api-v1) to:
@@ -36,7 +74,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 ### December 17th, 2020
 
-* We added the ability to allow customers to test beta features by adding certain allowed Custom Environment Variables. These can be added like Custom Environment Variables in Mendix Cloud v4 environment, using a text field beside the current dropdown.
+* We added the ability to allow customers to test Beta features by adding certain allowed Custom Environment Variables. These can be added like Custom Environment Variables in Mendix Cloud v4 environment, using a text field beside the current dropdown.
 
 	For more information on custom environment variables, see [Runtime Tab](https://docs.mendix.com/developerportal/deploy/environments-details#custom-environment-variables) in the *Environment Details* documentation.
 

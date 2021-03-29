@@ -216,7 +216,7 @@ The **Variable** field defines the name for the result of the operation.
 If HTTP response status code is not successful (for example, `[4xx]` or `[5xx]`), the flow will continue in an [error handler](error-event#errorhandlers).
 
 {{% alert type="warning" %}}
-You should always add an error handler for a [call REST service](/refguide/call-rest-action) action.
+You should always add an error handler for a [call REST service](/refguide8/call-rest-action) action.
 {{% /alert %}}
 
 ## 8 Common Section{#common}

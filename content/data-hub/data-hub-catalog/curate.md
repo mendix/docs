@@ -51,7 +51,7 @@ On the **Curation bar**, the following details are displayed:
 	* **Edit Metadata** – edit the description of the data source and datasets, add tags or specify business and technical owners and add change the application icon
 	* **Discoverable/Validated** – set the the **Discoverable** and **Validated** settings for the data source from the drop-down menu. 
 		* **Discoverable** defines whether the service is visible and can be found (and consumed) by users of the Data Hub; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source. 
-		* **Validate** indicates that the data source and dataset have been validated.
+		* **Validate** indicates that the data source and datasets have been validated.
 * When a dataset is selected in the **Search Results**
 	* **Edit Dataset Details** – to edit the dataset and attribute descriptions 
 
@@ -236,13 +236,13 @@ To change the discoverability of a service, follow these steps:
 
    ![discoverable](attachments/curate/curate-discoverable.png)
 
-3. Click the **Discoverable** toggle to turn it on or off. A message is displayed to indicate the discoverability of the asset.
+3. Click the **Discoverable** toggle to turn it on or off. A message is displayed to indicate the discoverability of the asset and the discoverability icon is updated in the search results and the data source details.
 
    ![non-discoverable](attachments/curate/curate-non-discoverable.png) 
 
 ### 5.2 Validated {#validated}
 
-The **Validated** value can be assigned to a data source by owners and curators. When it is turned on, by clicking the **Validated** toggle, this is indicated in the data source details screen and also in the search results pane for the service. 
+The **Validated** value can be assigned to a data source by owners and curators to indicate, for example that it has been qualified and is a reliable data source. It can turned on and off by clicking the **Validated** toggle. A validated data source is indicated by the validation shield on the data source details screen and also in the search results pane. 
 
 ![validated](attachments/curate/curate-validated.png)
 

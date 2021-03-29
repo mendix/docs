@@ -11,38 +11,38 @@ tags: ["data hub", "Data Hub API", "registration", "api", "api-requests", "PAT"]
 
 This guide describes how to use the [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) for searching and registering your data sources from your business applications to Data Hub. 
 
-The [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) is published as an OpenAPI 3.0 (formerly Swagger) specification which enables you to visualize the API. It has the latest documentation on the calls that can be made which you can try out.  For full definitions of the data, objects and schemas used in this how-to refer to the specification.
+The [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) is published as an OpenAPI 3.0 (formerly Swagger) specification which enables you to visualize the API. It has the latest and complete documentation on the calls that can be made which you can try out. This how-to will guide you through the main processess for searching searching the Data Hub and registering your data sources. 
 
-You can see the process of search, registration and consume using Data Hub by working through the how-to [Share Data Between Apps](/data-hub/share-data) . This also demonstrates the integrated functionality of Data Hub in Mendix Studio Pro for registering and consuming data sources. 
+You can see how search, registration and consume using Data Hub works by working through the how-to [Share Data Between Apps](/data-hub/share-data) . This also demonstrates the integrated functionality of Data Hub in Mendix Studio Pro for registering and consuming data sources. 
 
-Using the Data Hub API you can create a deployment process for your apps to register the OData v3 and OData v4 services from these apps and make them available for use in another app through the Data Hub Catalog. 
+Using the Data Hub API you can create a deployment process for your apps to register OData v3 and OData v4 services that define your shared data sources to your organization's Data Hub. Using the API you can also search for suitable data sources that you can use in your app development. 
 
-**Note**: To use the Mendix Data Hub a license is required.
+{{% alert type="info" %}}To use the Mendix Data Hub a license is required.{{% /alert %}}
 
 **This how-to will teach you how to do use the API to do the following:**
 
-- Search the catalog for a string – [Section 5](#api-search)
+- Search the catalog for a string of characters – [Section 5](#api-search)
 - Register the service in the Catalog –  [Section 6](#reg-contract)
 - Register consumed datasets by an App – [Section 7](#consumed-ep)
 
-Examples are provided for all the calls described in this how-to in the [Data Hub API how-to examples](data-hub-api-how-to-examples) that accompanies this how-to.
+You can try out the calls described by following the examples that are provided in the accompanying document: [Data Hub API Examples](data-hub-api-how-to-examples). The values for the call bodys are included and also a sample OData v3 file that you can use to try the registration calls. 
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following:
 
 - Have a registered Mendix Data Hub account
-- Obtain you own Personal Access Token (PAT) as described in [Generating your Personal Access Token](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) to authenticate your API requests
+- Obtain your own Personal Access Token (PAT) as described in [Generating your Personal Access Token](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) to authenticate your API requests
 
 ## 3 Overview of the Data Hub API
 
-The following provides an overview of the Data Hub API:
+The following list provides an overview the Data Hub API:
 
 - The latest Data Hub API is available at: [http://datahub-spec.s3-website.eu-central-1.amazonaws.com](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
-- The base URL for all calls to the API is: https://hub.mendix.com/rest/datahubservice/v2/
+- The base URL for all calls to the API is: https://hub.mendix.com/rest/datahubservice/v2/.
 - All requests to the Data Hub API must include the access token ([PAT](#pat)) to gain access to the organization’s Data Hub. For more details see: [API calls and Access to Data Hub](#access).
 - Refer to [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) for the full specification details. 
-- The following operations can be carried out through the Data Hub API:
+- The following operations can be carried out using the Data Hub API:
 
   - Search for registered assets (data sources, datasets, attributes and associations) in the Catalog using [GET /data](#api-search)
 
@@ -62,20 +62,26 @@ The following provides an overview of the Data Hub API:
 
 ## 4 Making the API Calls and Access to Data Hub {#access}
 
-This how-to guides users in using the Data Hub API, for full details of all the objects and schemas that define the collections and arrays that are required refer to the [Data Hub OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com).
+This how-to guides users in using the Data Hub API. For the complete definitions of all the schemas that make up the API and the parameters and objects that must be provided and are returned, refer to the [Data Hub OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com).
 
-For each request described in this document, the method and URL is given for the base call with a description of the parameters and body. An example is given that you follow to try out the calls. 
+For each request described in this document, the method and URL is given for the base call with a description of the parameters and body that may be required for the request. An example is given for each of the calls described here in [Data Hub API Examples](data-hub-api-how-to-examples) so that you can try out the calls. 
 
-For some examples, the [curl](http://curl.haxx.se/) command is also given. You must enter the specifics for your own registration such as the returned values for your requests. 
+For some examples, an example [curl](http://curl.haxx.se/) command is also given. You must enter the specifics for your own registration such as the returned values for your requests and you PAT token value. 
 
 **Note:** curl is an open-source tool curl that is pre-installed on many Linux and macOS systems. Windows users can download a version at curl.haxx.se. When using HTTPS on Windows, ensure that your system meets the curl requirements for SSL.
 
 ### 4.1 Access {#pat}
 
-Access to your organization’s Data Hub is done by including your personal access token ([PAT](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat)). You do not include any *authorization* with requests but must include the following key:value pair as part of the header for *each* request:  `Authorization`:  `MxToken <your_PAT_Token>`.  Insert the value of your PAT token for the  string <*your token*>.
+To gain access to your organization’s Data Hub you must include your personal access token ([PAT](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat)).  *Authorization* is not required for your API calls, however, you must include the following key:value pair as part of the *header* for *each* request: 
+
+​	 `Authorization`:  `MxToken <your_PAT_Token>`.  
+
+Insert the value of your PAT token for the  string <*your token*>.
 
 #### 4.1.1 Using Postman
-If you prefer to use a tool with a graphical user interface when working with APIs, you can use a REST API client, for example, [Postman](https://www.getpostman.com/) or [Insomnia](https://insomnia.rest/).  When using Postman, for each request, provide the request URI, the HTTP method, and, if required, the request parameters and body.  Access is specified in the request **Header** using the key:  `Authorization` and setting the value to this key as  `MxToken <your_PAT_Token>` (inserting the value of your PAT token for the string `<your_PAT_Token>. 
+If you prefer to use a tool with a graphical user interface when working with APIs, you can use a REST API client, for example, [Postman](https://www.getpostman.com/) or [Insomnia](https://insomnia.rest/).  When using Postman, for each request, provide the request URI, the HTTP method, and, if required, the request parameters and body.  
+
+Access to your Data Hub is specified in the request **Header** using the key:  `Authorization` and setting the value to this key as  `MxToken <your_PAT_Token>`  (inserting the value of your PAT token for the string `<your_PAT_Token>`. 
 
 You can set your PAT token as a variable that can be conveniently called for each request.
 
@@ -89,18 +95,18 @@ Insert the value of your PAT token for the the string <*your token*> for every r
 
 ### 4.2 Base Variables used in this How-to
 
-For convenience and conciseness, throughout this how-to the following variables are used and should be substituted by the relevant values or those that are returned in the response:
+For convenience and conciseness, throughout this how-to the following variables are used and should be substituted by the relevant values or those that are returned in prior responses:
 
 
 - {{baseURL}} – the base URL for the Data Hub API:  https://hub.mendix.com/rest/datahubservice/v2/data
 - {*AppUUID}* – insert the value returned in the API response for the UUID of the application
-- {*EnvironmentUUID} -* insert the value returned in the API response for the UUID of the environment
+- {*EnvironmentUUID} – insert the value returned in the API response for the UUID of the environment
 
 ## 5 Searching in the Catalog{#api-search}
 
-Search in the Catalog returns the registered assets that satisfy the search string and filters. The search is carried out on all discoverable registered assets in the Catalog (data sources, data sets, attributes, and descriptions of the registered items). For more details see [Searching in the Data Hub]( /data-hub/data-hub-catalog/search).
+Search in the Catalog returns the registered assets that satisfy the search string and specified filters. The search is carried out on all discoverable registered assets in the Catalog (data sources, data sets, attributes, and descriptions of the registered items). For more details see [Searching in the Data Hub]( /data-hub/data-hub-catalog/search).
 
-To try out an example search request using the call described in this section, see [Searching for Registered Assets in the Catalog that have the string: ` sample`](data-hub-api-how-to-examples#get-data-ex)
+To try out an example search request using the call described in this section, see [Searching for Registered Assets in the Catalog that have the string: `sample`](data-hub-api-how-to-examples#get-data-ex)
 
 ### 5.1 Method and Endpoint
 
@@ -117,26 +123,26 @@ The `productionEndpointsOnly` parameter is a Boolean, which when set to `true`  
 
 ### 5.3 200 OK Response
 
-A successful 200 response returns the all assets from the Data Hub that satisfy the search string and the specified filters in the JSON object ``SearchResults`.
+A successful 200 response returns the all assets from the Data Hub that satisfy the search string and the specified filters in the JSON object `SearchResults`.
 
-The assets in the Catalog that will be searched, and therefore be included in the search results are the following:
+All the assets (items registered) in the Catalog that will be searched. For each of the assets the items in the metadata that will be searched and therefore included in the search results are the following:
 
-- - Endpoint (data source, service): Name, Description, Tags
-  - Application: Name
-  - Entity (dataset): Name, Description
-  - Attribute: Name, Description
-  - Association: Name
+- - **Endpoint (data sources, services)**: Name, Description, Tags
+  - **Application**: Name
+  - **Entity (dataset)**: Name, Description
+  - **Attribute**: Name, Description
+  - **Association**: Name
 
 #### 5.3.1 Data Returned  for the `SearchResults` Object {#api-search-results}
 
 The `SearchResults` object includes the total number of items, `TotalResults`,  that satisfy the search request and the  `Data`  object is the array of the endpoints of the objects that satisfy the search string. 
 
-The For the full specification refer to the [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
+The For the full specification see the [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
 
 #### 5.3.2  `Data` Objects
-The representation of what is returned in the response  for   `Data`   is shown below. 
+A representation of what is returned in the response  for   `Data`   is shown below. 
 
-The blue indicates an object that is made up of a collection (of further sub-objects, data and arrays – not all sub-levels of the schema are shown in the representation below); the red an array of data; and the solid outline indicates if the item is always returned in the response. 
+The blue indicates that an object that is made up of a collection (of further sub-objects, data and arrays); the red an array of data; and the solid outline indicates if the item is always returned in the response.  Not all sub-levels of the schemas are shown in the representation below.
 
 For the full specification, refer to the  [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/). 
 
@@ -145,7 +151,8 @@ For the full specification, refer to the  [OpenAPI 3.0 spec](http://datahub-spec
 
 ## 6 Registering an OData Contract {#reg-contract}
 
-This section describes the steps for registering a data source – this can be an OData v3  or a OData v4 contract.
+This section describes the steps for registering data sources – this can be OData v3  or OData v4 contracts. All the files that make up the contract must be included in the registration call. 
+
 To register a data source to Data Hub you must register the following in the given sequence:
 
 

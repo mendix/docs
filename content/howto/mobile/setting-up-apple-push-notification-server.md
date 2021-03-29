@@ -38,7 +38,7 @@ Press the download button and store the key in a secure place. Also, copy the **
 
 ### 2.4 Configuring APNs in Your Application
 
-For the last step, you need to configure APNs within your application. This can be done by signing into your application as a user with the Administrator role and navigating to the **PushNotifications_Administration** page that was set up in the [Setting Up the Project Security for Your Module](implementation-guide#setting) section of *How to Implement Push Notifications*.
+For the last step, you need to configure APNs within your application. This can be done by signing into your application as a user with the Administrator role.
 
 For this purpose, do the following:
 
@@ -76,7 +76,7 @@ This certificate needs to be converted into the *.p12* format. If you do not kno
 
 ### 3.5 Configuring APNs in Your Application
 
-For the last step, you need to configure APNs within your application. This can be done by signing into your application as a user with Administrator role and navigating to the **PushNotifications_Administration** page that was set up in the [Setting Up the Project Security for Your Module](implementation-guide#setting) section of *How to Implement Push Notifications*.
+For the last step, you need to configure APNs within your application. This can be done by signing into your application as a user with Administrator role.
 
 To configure your APNs, complete the following steps:
 
@@ -86,7 +86,3 @@ To configure your APNs, complete the following steps:
   *	Choose the **Stage** that corresponds to the type of certificate you have created
 * Add your Apple Push Notification service SSL certificate in the *.p12* format
   *	Enter the password that you used during creation of the certificate
-
-## 4 Read More
-
-* [Implement Push Notifications](implementation-guide)

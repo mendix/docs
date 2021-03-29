@@ -126,5 +126,4 @@ For more detailed steps how to set up ADB, see [Install ADB](https://www.xda-dev
 ## 5 Read More
 
 * [Get Started with Native Mobile](getting-started-with-native-mobile)
-* [Debug a Hybrid Mobile App](debug-a-mobile-app)
 * [Configure Parallels](using-mendix-studio-pro-on-a-mac)

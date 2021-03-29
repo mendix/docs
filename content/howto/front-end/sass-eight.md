@@ -113,7 +113,7 @@ Final steps! Read below to open and work with Sass:
 
 ### 4.1  Keeping Your Sass in the Custom Folder
 
-It is important to keep in mind that you are only working in the **custom** folder. You will not make any changes in the **lib** folder, but you can use that as a reference. You will only use the contents of the *\_variables.scss* file to get the variables you need and copy them in your *\_custom-variables.scss* file. The variables can differ from the default font sizes, colors, background colors, heights, and so on. In the *\_custom-variables.scss* file, you can also make your own variables, for example `$brand-blue: \#48B0F7;`.
+It is important to keep in mind that you are only working in the **custom** folder. You will not make any changes in the **lib** folder, but you can use that as a reference. You will only use the contents of the *\_variables.scss* file to get the variables you need and copy them in your *\_custom-variables.scss* file. The variables can differ from the default font sizes, colors, background colors, heights, and so on. In the *\_custom-variables.scss* file, you can also make your own variables, for example `$brand-blue: #48B0F7;`.
 
 You can now work on the Sass structure and organize everything neatly by creating sub-folders and files in the **custom** folder. You can also look in the **lib** folder to get an idea of which folders and files you will most likely use in your app.
 
@@ -130,9 +130,9 @@ Before you can see any changes in your app with your new Sass, you need to impor
 To import all the sub-folders and files you have created, write this:
 
 ```scss
-\@import "custom-variables";
+@import "custom-variables";
 // base
-\@import "base/login";
+@import "base/login";
 ```
 
 After you import everything, you are finally ready to Sass!
@@ -143,11 +143,11 @@ Here is an example of custom Sass:
 
 ```scss
 .pageheader-title {
-color: red;
+	color: red;
 }
 
 .pageheader-subtitle {
-color: green;
+	color: green;
 }
 ```
 

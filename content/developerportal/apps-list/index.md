@@ -1,7 +1,7 @@
 ---
 title: "Apps List"
 description: "How to manage your apps from the Apps menu item in the Developer Portal"
-tags: ["My Apps", "My Company's Apps", "Nodes"]
+tags: ["My Apps", "My Company's Apps"]
 ---
 
 ## 1 Introduction
@@ -10,13 +10,12 @@ The **Apps** menu item shows you a summary of your apps and, additionally, allow
 
 You get to the apps list by clicking **Apps** in the top menu bar of the Developer Portal and choosing between the following options:
 
-![Page menu with My Apps, My Company's Apps, Nodes](attachments/apps-page-menu.jpg)
+![Page menu with My Apps and My Company's Apps](attachments/apps-page-menu.jpg)
 
 The sections below describe these options:
 
 * [My Apps](#my-apps)
 * [My Company's Apps](#my-company-apps)
-* [Nodes](#nodes)
 
 For details on the **Cluster Manager** option, see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster).
 
@@ -78,11 +77,3 @@ If you click an app for which you are not an App Team member, you will see the a
 {{% image_container width="400" %}}
 ![Example of app details](attachments/app-details.png)
 {{% /image_container %}}
-
-## 4 Nodes {#nodes}
-
-This shows a list of all the licensed Mendix Cloud nodes to which you have access:
-
-![Licensed Mendix Cloud nodes](attachments/nodes-list.png)
-
-Clicking the **Details button** will take you to the [Environments](/developerportal/deploy/environments) page for the app that is deployed to this node.

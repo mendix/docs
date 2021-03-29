@@ -16,11 +16,25 @@ Each team member can subscribe to, or unsubscribe from, the alerts,
 
 See [App Roles](/developerportal/collaborate/app-roles) to learn more about the roles of app team members.
 
-## 2 Node Permissions
+## 2 Viewing Your Nodes{#nodes}
+
+To find a list of all the Mendix Cloud nodes to which you have access, click the menu button in the Developer Portal and choose **Cloud**.
+
+![Licensed Mendix Cloud nodes](attachments/node-permissions/go-to-nodes-page.png)
+
+You will see a list of all your nodes:
+
+{{% todo %}}[Change the node list screen to the latest version]{{% /todo %}}
+
+![Licensed Mendix Cloud nodes](attachments/node-permissions/nodes-list.png)
+
+Clicking the **Details** button will take you to the [Environments](/developerportal/deploy/environments) page for the app that is deployed to this node.
+
+## 3 Node Permissions
 
 Node permissions allow you to give specific access to your nodes to individual members of a team.
 
-### 2.1 User Roles for Managing Permissions
+### 3.1 User Roles for Managing Permissions
 
 Only users with the *Technical Contact* role can manage the permission settings for the cloud node.
 
@@ -36,7 +50,7 @@ You can change permissions for team members in the *App Team* tab: see [App Team
 
 {{% /alert %}}
 
-### 2.3 Accessing Node Permissions
+### 3.3 Accessing Node Permissions
 
 To access the node permissions, do the following:
 
@@ -52,25 +66,25 @@ To access the node permissions, do the following:
 
 4. Complete two-factor authentication, if required for the selected environment.
 
-### 2.3 Node Permissions
+### 3.3 Node Permissions
 
 The Technical Contact can set the following node permissions.
 
 ![](attachments/node-permissions/nodepermission.png)
 
-#### 2.3.1 Transport Rights
+#### 3.3.1 Transport Rights
 
 With Transport Rights you can deploy new versions of the application to the node. You can also create new deployment packages, stop and start the environment, and change configuration settings such as constants and scheduled events.
 
 For more information about deployment, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy).
 
-#### 2.3.2 Access to Backups
+#### 3.3.2 Access to Backups
 
 The Access to Backups permission grants access to the backups of the environment. You can view, [create](/developerportal/operate/create-backup), [download](/developerportal/operate/download-backup), and [restore](/developerportal/operate/restore-backup) backups.
 
 For more information, see [Backups](/developerportal/operate/backups).
 
-#### 2.3.3 Receive Alerts
+#### 3.3.3 Receive Alerts
 
 When Receives Alerts is checked, this user will receive an email when an alert is triggered.
 
@@ -81,7 +95,7 @@ Alerts are triggered by any of the following circumstances:
 * the health check fails
 * one of a number of infrastructure problems occurs
 
-#### 2.3.4 API Rights
+#### 3.3.4 API Rights
 
 With API rights, you can use the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) to get programmatic access to the environment.
 
@@ -93,13 +107,13 @@ Other permissions are needed in addition to *API Rights*.
 For example, to access backups via the API you need *Access to Backups* in addition to *API Rights*.
 {{% /alert %}}
 
-#### 2.3.5 Access to Monitoring
+#### 3.3.5 Access to Monitoring
 
 With the Access to Monitoring permission, you can view the application metrics, logs, and alerts under the **Operate** category in the [Developer Portal](http://sprintr.home.mendix.com). This allows you to successfully operate your Mendix Cloud environments.
 
 For more information, see [Metrics](/developerportal/operate/metrics), [Logs](/developerportal/operate/logs), and [Alerts](/developerportal/operate/monitoring-application-health).
 
-## 3 Downloading Node Permissions
+## 4 Downloading Node Permissions
 
 You may want to have a complete list of node permissions for audit purposes. The Technical Contact can download a list of permissions as a CSV by clicking the **Download to CSV** button.
 
@@ -109,7 +123,7 @@ The CSV will contain a list of environments, users, and their respective permiss
 
 ![](attachments/node-permissions/permissions-csv.png)
 
-## 4 Technical Contact
+## 5 Technical Contact
 
 A cloud node has a single Technical Contact. They manage the cloud node and can edit the privileges of regular team members.
 

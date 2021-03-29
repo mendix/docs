@@ -1,13 +1,13 @@
 ---
-title: "Extend design properties"
+title: "Extend Design Properties"
 parent: "ui-design"
-menu_order: 2
+menu_order: 60
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---
 
-[!!! TODO: Verify menu_order and tags]
+## 1 Introduction
 
-Design properties are a powerful concept to make it simple to change the appearance of widgets, which can include properties like colors, borders, and spacing. Out of the box, the atlas framework comes with a default set of design properties which can be extended.
+Design properties make it simple to change the appearance of widgets. These changes can include properties like colors, borders, and spacing. Out of the box, the Atlas framework comes with a default set of design properties which can be extended.
 
 Design properties are based on the classes in the styling for both web apps and native mobile apps. Basically a design property toggles a class.
 
@@ -17,6 +17,8 @@ In both Studio and Studio Pro, design properties are visible as part of the widg
 
 ![Design Properties in Studio Pro](attachments/extend-design-properties/studio-pro-design-properties.png)
 
-Developers can [add additional design properties as part of a module](customize-styling). Check out the [API documentation on design properties](../../apidocs-mxsdk/apidocs/design-properties.md) to learn how to add design properties.
+## 2 Read More
 
-[!!! TODO: make customize styling link more precise to point to File and folder structure section]
+Developers can add additional design properties as part of a module. For more information, see the [File and Folder](customize-styling-new#file-and-folder) of *How to Customize Styling*.
+
+For more information on learning how to add design properties, see the [Design Properties API Documentation](apidocs-mxsdk/apidocs/design-properties.md) to learn how to add design properties.

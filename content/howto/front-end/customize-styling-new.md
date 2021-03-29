@@ -1,8 +1,8 @@
 ---
 title: "Customize Styling"
 category: "Front-End"
-parent: "ui-design"
-menu_order: 2
+parent: "atlas-ui"
+menu_order: 20
 description: "This describes how developers can change apps styling and create re-usable styling."
 tags: ["build", "app", "studio", "studio pro", "style", "styling"]
 ---

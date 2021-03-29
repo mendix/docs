@@ -1,6 +1,6 @@
 ---
 title: "Extend Design Properties"
-parent: "ui-design"
+parent: "atlas-ui"
 menu_order: 60
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---

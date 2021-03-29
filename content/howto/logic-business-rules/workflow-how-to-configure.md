@@ -80,9 +80,7 @@ Do the following:
 
     ![](attachments/workflow-how-to-configure/edit-module-roles.png)
 
-7.   In the **Select Module Roles** dialog box, tick the User role for all modules where no role is selected and click **OK** {{% todo %}}[This screenshot needs an update]{{% /todo %}}:
-
-    ![](attachments/workflow-how-to-configure/select-module-roles-dialog.png)
+7.   In the **Select Module Roles** dialog box, tick the User role for all modules where no role is selected and click **OK** {{% todo %}}[Add screenshot]{{% /todo %}}.
 
 8.   Confirm your choice by clicking **OK**.
 
@@ -134,22 +132,6 @@ You need to create a workflow that you will add activities to and create pages f
 7. In the **Select Entity** dialog box, select the **EmployeeOnboarding** entity and click **Select**. This entity serves two purposes: it holds input data for executing the workflow and will carry the data that is added during the execution of the workflow.  
 
     ![Select WorkflowContext Entity](attachments/workflow-how-to-configure/select-workflowcontext-entity.png)
-
-8. Open properties and click the ellipsis icon in the **Page** property to create a page that a workflow admin will use to monitor all workflow instances.
-
-9. In the **Select web page** dialog box, click the **New** button.
-
-10. In the **Create web page** dialog box, you can see the templates for workflow pages. Do the following:
-
-    1. Set the **Page name** to **WorkflowOverview**.
-
-    2. Set **Navigation layout** to **Atlas_Default (Atlas_UI_Resources)**.
-
-    3. Select **Workflow Overview** template.
-
-    4. Click **OK**.
-
-        ![Create Workflow Overview Page](attachments/workflow-how-to-configure/create-workflow-overview-page.png)
 
 Good job! You have created a workflow and configured its properties. 
 

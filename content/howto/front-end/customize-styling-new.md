@@ -75,14 +75,14 @@ In this example we will be creating a custom style which will change the font si
 
 	```javascript
 	import { companyHeaderTextSize } from “./custom-variables”;
-export const companyHeader = { fontSize: companyHeaderTextSize };
+	export const companyHeader = { fontSize: companyHeaderTextSize };
 	```
 
 3.  Import the object defined in _company-header.js_ and expose it in _theme/native/main.js_ as follows:
 
 	```javascript
 	import {companyHeader} from “./company-header”;
-module.exports = {companyHeader};
+	module.exports = {companyHeader};
 	```
 
 ### 2.3 Importing CSS (Web Only)
@@ -91,11 +91,11 @@ An app's theme is based on SASS (`.scss` files), but it can be the case you requ
 
 See the following fragment as an example of how additional CSS can be added to your app. Below, a third-party CSS file _water.css_ is added and will be applied to the app. The third-party CSS file should be in **theme/web**:
 
-	```json
-	{
-  "cssFiles": ["theme.compiled.css", "water.css"]
+```json
+{
+	"cssFiles": ["theme.compiled.css", "water.css"]
 }
-	```
+```
 
 ## 3 Create Re-Usable Styling
 

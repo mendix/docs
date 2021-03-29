@@ -19,7 +19,7 @@ Before you start the upgrading process, it may help if you consult the folder st
 
 To upgrade to Atlas 3, please do the steps below as they apply to your use case. If you have not made any modifications to your `Atlas_UI_Resources` module, you can skip this section. Modifications include changes to pages, layouts, design properties and custom styles added to the `Atlas_UI_Resources` module.
 
-{% todo %}}[add archive doc under step 2 below]{{% /todo %}}
+{{% todo %}}[add archive doc under step 2 below]{{% /todo %}}
 
 If you have made modifications to your `Atlas_UI_Resources` module, you must do the following:
 
@@ -159,7 +159,7 @@ Once you have completed the necessary steps above, finish modifying existing fil
 	![](attachments/atlas-mig/3-import.png)
 	
 
-{% todo %}}[add file here]{{% /todo %}}
+{{% todo %}}[add file here]{{% /todo %}}
 
 ## 3 Expected Issues After Upgrading to Atlas 3
 
@@ -268,17 +268,17 @@ If you are using building blocks or page templates, please make sure you downloa
 
 For the web platform, download Atlas Web Content:
 
-{% todo %}}[insert file]{{% /todo %}}
+{{% todo %}}[insert file]{{% /todo %}}
 
 For native platform, download Atlas Native Mobile Content:
 
-{% todo %}}[insert file]{{% /todo %}}
+{{% todo %}}[insert file]{{% /todo %}}
 
 ## 8 Atlas 3 Change Summary {#changes}
 
 Atlas 3 includes many changes around style and branding. It has a different, more modern look and feel. The differences are best expressed through comparison, using our Reference Apps. 
 
-{% todo %}}[show atlas 2 and 3 RA comparison in paragraph above]{{% /todo %}}
+{{% todo %}}[show atlas 2 and 3 RA comparison in paragraph above]{{% /todo %}}
 
 On both web and native, improvements have been made to layouts, widgets, building blocks, and page templates. These changes include but are not limited to layout and spacing, colors and aesthetics, and user experience.
 

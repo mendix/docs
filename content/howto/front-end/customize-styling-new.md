@@ -11,8 +11,6 @@ tags: ["build", "app", "studio", "studio pro", "style", "styling"]
 
 This page describes how developers can change the styling of apps and create re-usable styling. For progressive and web apps, SASS (SCSS) is used and for native mobile apps JavaScript is used. Even though the technologies differ, the approach for customizing styling is the same.
 
-{{% todo %}}[Review metadata, check if scss renders correctly, review todo itemst]{{% /todo %}}
-
 ## 2 Changing the App Look and Feel
 
 Developers have several options to change an app's look and feel. Depending on whether you are a Studio or Studio Pro user, there are different options.
@@ -107,7 +105,7 @@ Adding styling to a module is similar to adding styling to a project, except tha
 
 For classes that are generic or that should be easily discovered, a developer can consider creating design properties for this. For more information see [How to Extend design properties](extend-design-properties)
 
-## 4 Create a Theme Module
+## 4 Create a Theme Module {#create-theme-mod}
 
 A theme module is useful for styling which can be easily re-used through modules across projects. By default, the theme settings like color, font, spacing, and more are in the **theme** folder, which is specific per app. However, often these settings should be re-used to create a consistent look and feel across apps.
 
@@ -300,43 +298,41 @@ The content of this folder is regenerated regularly (for example when opening th
 
 The compilation of the *.scss* files is done in the following order:
 
-1. All _main.css_ files from the **themesource** folders of Market Place modules, in alphabetical order of the names of the modules
-2. All _main.css_ files from the **themesource** folders of user modules, ordered as in Studio Pro
-3. Custom variables from theme folder (_theme/web/custom-variables.scss_)
-4. _main.scss_ from **theme** folder (_theme/web/main.scss_)
+1. All _main.css_ files from the **themesource** folders of Market Place modules, in alphabetical order of the names of the modules.
+2. All _main.css_ files from the **themesource** folders of user modules, ordered as in Studio Pro.
+3. Custom variables from theme folder (_theme/web/custom-variables.scss_).
+4. _main.scss_ from **theme** folder (_theme/web/main.scss_).
 
-If there are errors during the SASS compilation, these will be shown in Studio Pro in a pop-up. This error gives hints on what went wrong and what should be fixed.
-
-[!!! TODO This will no longer be an error but consistency warning... this will need to change at some point.]
+If there are errors during the SASS compilation, these will be shown in Studio Pro in a pop-up. This error gives hints on what went wrong and what should be fixed:
 
 ![theme compilation error](attachments/customize-styling/compilation-error.png)
 
-### 7.2. Native Mobile apps
+### 7.2 Native Mobile Apps
 
-For native mobile apps the React Native framework is used to combine all the JavaScript files into one file, using a so called "bundler" that is responsible for creating the JavaScript bundle used to run the app. The styling of the different modules is combined and made ready to be processed by the bundler in the following order:
+For native mobile apps the React Native framework is used to combine all the JavaScript files into one file, using a "bundler" that is responsible for creating the JavaScript bundle used to run the app. The styling of the different modules is combined and made ready to be processed by the bundler in the following order:
 
-1. All _main.js_ files from the **themesource** folders of Market Place modules, in alphabetical order of the name of the modules
-2. All _main.js_ files from the **themesource** folders of user modules, ordered as in Studio Pro
-3. _main.js_ from theme folder (_theme/native/main.js_)
-4. original _styles.js_ in the **theme** folder if it exists (_theme/styles.js_)
+1. All _main.js_ files from the **themesource** folders of Market Place modules, in alphabetical order of the name of the modules.
+2. All _main.js_ files from the **themesource** folders of user modules, ordered as in Studio Pro.
+3. _main.js_ from theme folder (_theme/native/main.js_).
+4. Original _styles.js_ in the **theme** folder if it exists (_theme/styles.js_).
 
 If there are errors during the bundling, these will be shown in Studio Pro and the Make it Native app. For details on the error, it can be helpful to look at the native packager logs in _<Mendix project directory>/deployment/log/native_packager_log.txt_.
 
-For more details on styling native mobile apps see: [native mobile styling](TODO) 
+For more details on styling native mobile apps see the [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide).
 
 ## 8. Disabling default styling from Atlas Core {#disable-default}
 
-Mendix provides styling for the platform supported widgets in the Atlas core module. In general, for every widget there is base styling to provide a default look and feel for the widget and helper styling, which can be seen as additional styling/variations that can be used to fit the widget into its context. Styling can be overridden, but in some cases it can be preferred to disable this default styling. This is possible by excluding styling using variables which can be set in the exclusion variables file.
+Mendix provides styling for the platform supported widgets in the Atlas core module. In general, for every widget there is base styling to provide a default look and feel for the widget and helper styling, which can be seen as additional styling and variations that can be used to fit the widget into its context. Styling can be overridden, but in some cases it can be preferred to disable this default styling. This is possible by excluding styling using variables which can be set in the exclusion variables file.
 
-### 8.1. Disable default web widget styling
+### 8.1 Disable Default Web Widget Styling
 
-To disable the default styling of a web widget, open the _exclusion-variables.scss_ file located in the folder **<Mendix project>/theme/web**. This file contains supported exclusion variables. Note that these variables can be part of a custom theme module as well, just like the custom variables as described in [Customize styling: Create a theme module](TODO), by making the _exclusion-variables.scss_ file in the app specific theme folder point to the exclusion variables file in your theme module.
+To disable the default styling of a web widget, open the _exclusion-variables.scss_ file located in the folder **<Mendix project>/theme/web**. This file contains supported exclusion variables. Note that these variables can be part of a custom theme module as well, just like the custom variables as described in [Create a Theme Module](#create-theme-mod), by making the _exclusion-variables.scss_ file in the app specific theme folder point to the exclusion variables file in your theme module.
 
-Let’s pick the button widget as an example. The success button is by default styled as in **Figure 1**.
+Pick the button widget as an example. The success button is by default styled as in **Figure 1**:
 
 ![Figure 1](attachments/customize-styling/exclusion-vars-fig1.png)
 
-**Figure 1 - All styles enabled**
+**Figure 1 - All Styles Enabled**
 
 To exclude additional styles, like the success button styles, the button helper styles need to be disabled. This can be achieved by setting the variable `$exclude-button-helpers` to `true`:
 
@@ -344,11 +340,11 @@ To exclude additional styles, like the success button styles, the button helper 
 $exclude-button-helpers: true;
 ```
 
-The resulting success button is visible in **Figure 2**.
+The resulting success button is visible in **Figure 2**:
 
 ![Figure 2](attachments/customize-styling/exclusion-vars-fig2.png)
 
-**Figure 2 - Helper styles disabled**
+**Figure 2 - Helper Styles Disabled**
 
 To remove the complete default look and feel, both base and helper styles need to be disabled. This can be achieved by setting the variable `$exclude-button` to `true` as well:
 
@@ -357,7 +353,7 @@ $exclude-button: true;
 $exclude-button-helpers: true;
 ```
 
-It isn’t necessary to set both variables to `true` to exclude all styles, since Atlas automatically excludes helper styles when the base styles are excluded. Additional styles are useless when base styles are missing. Therefore, the following configuration is equivalent to the previous one:
+It is not necessary to set both variables to `true` to exclude all styles, since Atlas automatically excludes helper styles when the base styles are excluded. Additional styles are useless when base styles are missing. Therefore, the following configuration is equivalent to the previous one:
 
 ```scss
 $exclude-button: true;
@@ -368,7 +364,7 @@ The resulting success button is visible in **Figure 3**. Note that the underlyin
 
 ![Figure 3](attachments/customize-styling/exclusion-vars-fig3.png)
 
-**Figure 3 - All styles disabled (visible Bootstrap styles)**
+**Figure 3 - All Styles Disabled (visible Bootstrap styles)**
 
 All supported exclusion variables for web are:
 
@@ -432,15 +428,15 @@ All supported exclusion variables for web are:
 - $exclude-typography-helpers
 ```
 
-### 8.2. Disable default native mobile widget styling
+### 8.2. Disable Default Native Mobile Widget Styling
 
-To disable the default styling of a native mobile widget, open the _exclusionVariables.js_ file located in the folder **<Mendix project>/theme/native**. This file contains supported exclusion variables. Note that these variables can be part of a custom theme module as well, just like the custom variables as described in [Customize styling: Create a theme module](TODO), by making the _exclusionVariables.js_ file in the app specific theme folder point to the exclusion variables file in your theme module.
+To disable the default styling of a native mobile widget, open the _exclusionVariables.js_ file located in the folder **<Mendix project>/theme/native**. This file contains supported exclusion variables. Note that these variables can be part of a custom theme module as well, just like the custom variables as described in [Create a Theme Module](#create-theme-mod), by making the _exclusionVariables.js_ file in the app specific theme folder point to the exclusion variables file in your theme module.
 
-Let’s pick the button widget as an example again. The success button is by default styled as in **Figure 4**.
+Pick the button widget as an example again. The success button is by default styled as in **Figure 4**.
 
 ![Figure 4](attachments/customize-styling/exclusion-vars-fig4.png)
 
-**Figure 4 - All styles enabled**
+**Figure 4 - All Styles Enabled**
 
 To exclude additional styles, like the success button styles, the button helper styles need to be disabled. This can be achieved by setting the constant variable `excludeButtonsHelpers` to `true`:
 
@@ -452,7 +448,7 @@ The resulting success button is visible in **Figure 5**.
 
 ![Figure 5](attachments/customize-styling/exclusion-vars-fig5.png)
 
-**Figure 5 - Helper styles disabled**
+**Figure 5 - Helper Styles Disabled**
 
 Also for native mobile widgets both base and helper styles need to be disabled, to remove the complete Atlas look and feel. This can be achieved by setting the variable `excludeButtons` to `true` as well:
 
@@ -461,7 +457,7 @@ export const excludeButtons = true;
 export const excludeButtonsHelpers = true;
 ```
 
-It isn’t necessary to set both variables to `true` to exclude all styles, since Atlas automatically excludes helper styles when the base styles are excluded. Additional styles are useless when base styles are missing. Therefore, the following configuration is equivalent to the previous one:
+It is not necessary to set both variables to `true` to exclude all styles, since Atlas automatically excludes helper styles when the base styles are excluded. Additional styles are useless when base styles are missing. Therefore, the following configuration is equivalent to the previous one:
 
 ```javascript
 export const excludeButtons = true;
@@ -472,7 +468,7 @@ The resulting success button is visible in **Figure 6**. Note that the button te
 
 ![Figure 6](attachments/customize-styling/exclusion-vars-fig6.png)
 
-**Figure 6 - All styles disabled (button text is white)**
+**Figure 6 - All Styles Disabled (Button Text is White)**
 
 All supported exclusion variables for native mobile are:
 
@@ -539,8 +535,8 @@ All supported exclusion variables for native mobile are:
 
 ## 9 Customizing index.html (Web)
 
-By default, Mendix generates the _index.html_ (the page that is loaded to start the app), based on the app configuration. In some cases it may be needed to customize this HTML, which can be done by creating a file called _index.html_ in the **theme/web** folder. To make sure that your file has the right structure, we advise you to copy _index-example.html_ from the **deployment/web** folder to the **theme/web**, rename it to _index.html_, and then use it as a starting point. This file will be created after you have deployed your app locally at least once.
+By default, Mendix generates the _index.html_ (the page that is loaded to start the app), based on the app configuration. In some cases it may be needed to customize this HTML, which can be done by creating a file called _index.html_ in the **theme/web** folder. To make sure that your file has the right structure, we recommend you copy _index-example.html_ from the **deployment/web** folder to the **theme/web**, rename it to _index.html_, and then use it as a starting point. This file will be created after you have deployed your app locally at least once.
 
-## 10 Customizing Unsupported Browser (Web)
+## 10 Customizing Unsupported Browsers (Web)
 
-When an end-user opens a Mendix app in an unsupported browser, a page is shown that the current browser is not supported and explain which other browsers can/should be used. To customize this screen, you can create a custom html file called _unsupported-browser.html_ in the **theme/web** folder. If desired, you can copy _unsupported-browser.html_ from the **deployment/web** folder to the **theme/web** folder and use it as a starting point. This file will be created after you have deployed your app locally at least once.
+When an end-user opens a Mendix app in an unsupported browser, a page is shown that the current browser is not supported and explain which other browsers can be used. To customize this screen, you can create a custom html file called _unsupported-browser.html_ in the **theme/web** folder. If desired, you can copy _unsupported-browser.html_ from the **deployment/web** folder to the **theme/web** folder and use it as a starting point. This file will be created after you have deployed your app locally at least once.

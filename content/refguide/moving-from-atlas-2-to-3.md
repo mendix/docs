@@ -30,19 +30,19 @@ If you have made modifications to your `Atlas_UI_Resources` module, you must do 
 | Section    | Atlas 2 Context                                              | Action Required                                              |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | For Web    |                                                              |                                                              |
-| 1          | Modifications to Atlas' variables in:<ul><li>*theme_atlas2/styles/web/sass/app/_custom-variables.scss*</li> | There are two options based on your requirements: <ul><li>If the variables apply to the app level, these should be moved into *theme/web/main.scss*</li><li>If you want to extract the variables into a reusable module, move them to a module you have created in *themesource/<module>/web/main.scss*</li></ul> |
-| 2          | Modifications to Atlas styling in:<ul><li>*theme_atlas2/styles/web/sass/app/_custom.scss*</li> | There are two options based on your requirements: <ul><li>If the variables apply to the app level, these should be moved into *theme/web/custom-variables.scss*</li><li>If you want to extract the variables into a reusable module, move them to a module you have created in *themesource/<module>/web/main.scss*</li></ul> |
-| 3          | Additional styling files in:<ul><li>*theme_atlas2/styles/web/sass/app/</li><li>any custom *.scss* file</li></ul> | There are two options based on your requirements: <ul><li>If the variables apply to the app level, these changes should be moved into *theme/web/*. Remember to include `@import<file name>` in *theme/web/main.scss* to include your additional files in SCSS compilation.</li><li>If you want to extract the variables into a reusable module, move them to a module you have created in *themesource/<module>/web/*. Remember to include `@import<file name>` in *theme/web/main.scss* to include your additional files in SCSS compilation.</li></ul> |
+| 1          | Modifications to Atlas' variables in:<ul><li>*theme_atlas2/styles/web/sass/app/_custom-variables.scss*</li> | There are two options based on your requirements: <ul><li>If the variables apply to the app level, these should be moved into *theme/web/main.scss*</li><li>If you want to extract the variables into a reusable module, move them to a module you have created in *themesource/your-module/web/main.scss*</li></ul> |
+| 2          | Modifications to Atlas styling in:<ul><li>*theme_atlas2/styles/web/sass/app/_custom.scss*</li> | There are two options based on your requirements: <ul><li>If the variables apply to the app level, these should be moved into *theme/web/custom-variables.scss*</li><li>If you want to extract the variables into a reusable module, move them to a module you have created in *themesource/your-module/web/main.scss*</li></ul> |
+| 3          | Additional styling files in:<ul><li>*theme_atlas2/styles/web/sass/app/</li><li>any custom *.scss* file</li></ul> | There are two options based on your requirements: <ul><li>If the variables apply to the app level, these changes should be moved into *theme/web/*. Remember to include `@import<file name>` in *theme/web/main.scss* to include your additional files in SCSS compilation.</li><li>If you want to extract the variables into a reusable module, move them to a module you have created in *themesource/your-module/web/*. Remember to include `@import<file name>` in *theme/web/main.scss* to include your additional files in SCSS compilation.</li></ul> |
 | 4          | Modifications to Atlas HTML in:<ul><li>*theme_atlas2/login.html*</li><li>*theme_atlas2/login-with-sso.html*</li></ul> | <ul><li>Any HTML or document changes in *theme_atlas2/login.html* not included in *theme/web/login.html* should be moved to *theme/web/login.html*.</li><li>Any HTML or document changes in *theme_atlas2/login-with-sso.html* no included in *theme/web/login-with-mendixsso-button.html* should be moved to *theme/web/login-with-mendixsso-button.html*.</li></ul> |
 | 5          | Additional (user-defined) HTML in:<ul><li>*theme_atlas2/<filename>.html*</li> | Move these files into *theme/web*.                           |
 | 6          | Additional static resources (for example, images) in:<ul><li>*theme_atlas2/resources*</li> | Move these files into *theme/web/resources*.                 |
 | 7          | Additional static resources (for example, images) in:<ul><li>*theme_atlas2*</li> | Move these files into *theme/web*.                           |
-| 8          | User-defined design properties in:<ul><li>*theme_atlas2/settings/json*</li> In Atlas 2's *theme_atlas2/settings.json* it is possible to both extend platform-supported widgets with design properties (for these platform widgets: Widget, DivContainer, Button, ListView, DataGrid, TemplateGrid, GroupBox, StaticImageViewer, DynamicImageViewer, Label, DynamicText) as well as define design properties for community-supported widgets. Both scenarios will be addressed in the **Action Required** cell to the right as well as the [Fixing User-Defined Design Properties](#user-design-props) section below. | Generally, the design properties need to be moved into *themesource/<module>/web/design-properties.json* where <module> is a module created by you, **not** *Atlas_Core*, *Atlas_Web_Content*, or *Atlas_NativeMobile_Content*. Follow one or both of the scenarios below in [Fixing User-Defined Design Properties](#user-design-props) for detailed instructions. |
+| 8          | User-defined design properties in:<ul><li>*theme_atlas2/settings/json*</li> In Atlas 2's *theme_atlas2/settings.json* it is possible to both extend platform-supported widgets with design properties (for these platform widgets: Widget, DivContainer, Button, ListView, DataGrid, TemplateGrid, GroupBox, StaticImageViewer, DynamicImageViewer, Label, DynamicText) as well as define design properties for community-supported widgets. Both scenarios will be addressed in the **Action Required** cell to the right as well as the [Fixing User-Defined Design Properties](#user-design-props) section below. | Generally, the design properties need to be moved into *themesource/your-module/web/design-properties.json* where your-module is a module created by you, **not** *Atlas_Core*, *Atlas_Web_Content*, or *Atlas_NativeMobile_Content*. Follow one or both of the scenarios below in [Fixing User-Defined Design Properties](#user-design-props) for detailed instructions. |
 | For Native |                                                              |                                                              |
-| 1          | Modifications to Atlas' variables in:<ul><li>*theme_atlas2/styles/native/sass/app/custom-variables.js*</li> | There are two options based on your requirements: <ul><li>If the variables apply to the app level, these changes should be moved into *theme/native/custom-variables.js*.</li><li>If you want to extract the variables into a reusable module, move them to a module you have created in *themesource/<module>/native/main.js*.</li></ul> |
-| 2          | Modifications to Atlas' styling in:<ul><li>*theme_atlas2/styles/native/sass/app/custom.js*</li> | There are two options based on your requirements: <ul><li>If the changes apply to the app level, these changes should be moved into *theme/native/main/js*.</li><li>If you want to extract the variables into a reusable module, move them to a module you have created in *themesource/<module>/native/main.js*.</li></ul> |
-| 3          | Additional styling files in:<ul><li>*theme_atlas2/styles/native/app/</li><li>any custom *.js* file</li></ul> | There are two options based on your requirements:<ul><li>If the changes are on the app level the changes should be moved into *theme/native*. Remember to import the file using JavaScript's `import` syntax in *theme/native/main.js* and export the variable exposed by the imported file.</li><li>If you want to extract the changes into a reusable module, move the variables to a module you have created in *themesource/<module>/native*. Remember to import the file using JavaScript's `import` syntax in *themesource/<module>/native/main.js* and export the variable exposed by the imported file.</li></ul> |
-| 4          | User-defined design properties in:<ul><li>*theme_atlas2/settings-native.json*</li> | Refer to **Web Cell 8** for this case. However, changes should be moved to *themesource/<module>/native/design-properties.json* where <module> is created by you, **not** *Atlas_Core*, *Atlas_Web_Content*, or *Atlas_NativeMobile_Content*. |
+| 1          | Modifications to Atlas' variables in:<ul><li>*theme_atlas2/styles/native/sass/app/custom-variables.js*</li> | There are two options based on your requirements: <ul><li>If the variables apply to the app level, these changes should be moved into *theme/native/custom-variables.js*.</li><li>If you want to extract the variables into a reusable module, move them to a module you have created in *themesource/your-module/native/main.js*.</li></ul> |
+| 2          | Modifications to Atlas' styling in:<ul><li>*theme_atlas2/styles/native/sass/app/custom.js*</li> | There are two options based on your requirements: <ul><li>If the changes apply to the app level, these changes should be moved into *theme/native/main/js*.</li><li>If you want to extract the variables into a reusable module, move them to a module you have created in *themesource/your-module/native/main.js*.</li></ul> |
+| 3          | Additional styling files in:<ul><li>*theme_atlas2/styles/native/app/</li><li>any custom *.js* file</li></ul> | There are two options based on your requirements:<ul><li>If the changes are on the app level the changes should be moved into *theme/native*. Remember to import the file using JavaScript's `import` syntax in *theme/native/main.js* and export the variable exposed by the imported file.</li><li>If you want to extract the changes into a reusable module, move the variables to a module you have created in *themesource/your-module/native*. Remember to import the file using JavaScript's `import` syntax in *themesource/your-module/native/main.js* and export the variable exposed by the imported file.</li></ul> |
+| 4          | User-defined design properties in:<ul><li>*theme_atlas2/settings-native.json*</li> | Refer to **Web Cell 8** for this case. However, changes should be moved to *themesource/your-module/native/design-properties.json* where your-module is created by you, **not** *Atlas_Core*, *Atlas_Web_Content*, or *Atlas_NativeMobile_Content*. |
 
 #### 2.1.1 Fixing User-Defined Design Properties {#user-design-props}
 
@@ -71,7 +71,7 @@ In this example all container widgets are extended with a toggle type `“Border
 }
 ```
 
-As this was a custom-added design property, this needs to be added to *themesource/<module>/web/design-properties.json* including the widget name, which would result in something similar to this:
+As this was a custom-added design property, this needs to be added to *themesource/your-module/web/design-properties.json* including the widget name, which would result in something similar to this:
 
 ```
 {
@@ -120,7 +120,7 @@ In the following example a design property `“Opacity”` is added for MyCustom
 
 Note that depending on your Atlas 2 project, you may or may not have design properties for platform or community-supported widgets. In the example image above, the design properties for platform supported widgets are folded.
 
-Copy and paste the design property key, array, and design property object from *theme_atlas2/settings.json* into the root object in *themesource/<module>/web/design-properties.json* where <module> is a module of your choosing. 
+Copy and paste the design property key, array, and design property object from *theme_atlas2/settings.json* into the root object in *themesource/your-module/web/design-properties.json* where your-module is a module of your choosing. 
 
 In this example, the result is as follows:
 
@@ -154,12 +154,11 @@ Once you have completed the necessary steps above, finish modifying existing fil
 
 	![](attachments/atlas-mig/2-rename.png)
 
-2.  Download the **Atlas Core** module from the Marketplace and replace the existing *Atlas_UI_Resources* renamed to *Atlas_Core*. For internal testing, download **Atlas_Core** file below this step:
+2.  Download the **Atlas Core** module from the Marketplace and replace the existing *Atlas_UI_Resources* renamed to *Atlas_Core*:
 
 	![](attachments/atlas-mig/3-import.png)
-	
 
-{{% todo %}}[add file here]{{% /todo %}}
+{{% todo %}}[add atlas core link and files later, and add this text to step 2 For internal testing, download **Atlas_Core** file below this step]{{% /todo %}}
 
 ## 3 Expected Issues After Upgrading to Atlas 3
 
@@ -200,11 +199,11 @@ When you have completed the sections above, you may have errors in your error li
 
 In Mendix 9 the Hybrid profile is deprecated. In Atlas 3 all hybrid content is removed. When upgrading from Atlas 2 to Atlas 3, you may have errors about pages used as the default home page for a hybrid profile which no longer exists:
 
-![](attachments/atlas-mig/9-set-prop.png)
+![](attachments/atlas-mig/10-edge.png)
 
 To fix this, right-click the error then select **Go to Navigation profile ‘HybridPhone’** and change the default home page:
 	
-![](attachments/atlas-mig/10-edge.png)
+![](attachments/atlas-mig/set-hybrid-nav.png)
 
 ## 5 Modified Design Properties for Native Mobile
 
@@ -359,8 +358,8 @@ Here is a list of key changes pertaining to the web environment:
 
 To troubleshoot common Atlas problems, do the following:
 
-* If you have **Layout <name> no longer exists** errors, right-click the error then go to the page on which the error occurs. In the page’s properties, select a new, appropriate layout.
-* If you have **The selected image <name> no longer exists** errors, right-click the error and go to the page on which it occurs and choose a new image. Depending on your project you may want to download the **Atlas_NativeMobile_Content** module and use an image from the module.
-* If you have **The selected placeholder <name> no longer exists** errors, right-click the error and go to the page on which it occurs, thereafter you have alternative options to correct the error:
+* If you have **Layout X no longer exists** errors, right-click the error then go to the page on which the error occurs. In the page’s properties, select a new, appropriate layout.
+* If you have **The selected image X no longer exists** errors, right-click the error and go to the page on which it occurs and choose a new image. Depending on your project you may want to download the **Atlas_NativeMobile_Content** module and use an image from the module.
+* If you have **The selected placeholder X no longer exists** errors, right-click the error and go to the page on which it occurs, thereafter you have alternative options to correct the error:
 	*  Adjust the layout the page uses to include a placeholder with matching name.
 	* On the page, move the content out of the placeholder.

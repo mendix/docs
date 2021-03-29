@@ -29,11 +29,11 @@ For more information on how changes can be quickly previewed, see the [Preview a
 
 Developers can add custom styling for apps in the `theme/web` or `theme/native` folder.
 
-For (progressive) web apps, custom styling should be placed in `theme/web` and linked from (or placed in) `main.scss`. For native mobile apps, custom styling should be placed in `theme/native` and linked from (or placed in) `main.js`.
+For (progressive) web apps, custom styling should be placed in `theme/web` and linked from (or placed in) *main.scss*. For native mobile apps, custom styling should be placed in *theme/native* and linked from (or placed in) *main.js*.
 
-While custom styling can be added directly in the `main.scss` or `main.js` it is a best practice to separate styling in files and include these files in `main.scss` or `main.js`.
+While custom styling can be added directly in the *main.scss* or *main.js* it is a best practice to separate styling in files and include these files in *main.scss* or *main.js*.
 
-Within custom styling, the theme settings (colors, spacings, etc.) as configured in `custom-variables.scss` or `custom-variables.js`, can be re-used. This is also recommended to provide a consistent user experience.
+Within custom styling, the theme settings (colors, spacings, etc.) as configured in *custom-variables.scss* or *custom-variables.js*, can be re-used. This is also recommended to provide a consistent user experience.
 
 #### 2.2.1. Web Environment Example
 
@@ -75,14 +75,14 @@ In this example we will be creating a custom style which will change the font si
 
 	```javascript
 	import { companyHeaderTextSize } from “./custom-variables”;
-export const companyHeader = { fontSize: companyHeaderTextSize };
+	export const companyHeader = { fontSize: companyHeaderTextSize };
 	```
 
 3.  Import the object defined in _company-header.js_ and expose it in _theme/native/main.js_ as follows:
 
 	```javascript
 	import {companyHeader} from “./company-header”;
-module.exports = {companyHeader};
+	module.exports = {companyHeader};
 	```
 
 ### 2.3 Importing CSS (Web Only)
@@ -91,11 +91,11 @@ An app's theme is based on SASS (`.scss` files), but it can be the case you requ
 
 See the following fragment as an example of how additional CSS can be added to your app. Below, a third-party CSS file _water.css_ is added and will be applied to the app. The third-party CSS file should be in **theme/web**:
 
-	```json
-	{
-  "cssFiles": ["theme.compiled.css", "water.css"]
+```json
+{
+	"cssFiles": ["theme.compiled.css", "water.css"]
 }
-	```
+```
 
 ## 3 Create Re-Usable Styling
 
@@ -223,7 +223,7 @@ export const brand = {
     warning: "#ECA51C",
     danger: "#E33F4E",
     info: "#0086D9",
-    primaryLight: "redbaby",
+    primaryLight: "#0086D9",
     successLight: "#F1FCF1",
     warningLight: "#FFF9E6",
     dangerLight: "#FFEEF0",

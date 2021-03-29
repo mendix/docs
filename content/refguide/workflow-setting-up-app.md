@@ -30,8 +30,9 @@ The purpose of Workflow Commons is to provide you with useful pages, page templa
 There are three pages provided with the Workflow Commons module to get you and your users started with workflows. The functionality contained in these pages works out-of-the-box. Simply add these pages to the [navigation](navigation) of your app to start using them. 
 You can find the following pages in Workflow Commons:
 
-*   **MyTaskDashboard** -- Gives end-users an overview of their performance in your app's workflows. It contains such information as how many tasks your users have completed, how long they take on average to complete a task, and what percentage of their tasks they complete within the deadline.
-*   **MyTaskInbox** -- Contains a handy list of all tasks that a user can interact with. _My open tasks_ shows the tasks assigned to current users, _All open tasks_ is a list of tasks they could pick up, _Unassigned tasks_ shows all unassigned tasks, and _Completed tasks_ gives an overview of all tasks that were finished.
+*   **DefaultWorkflowAdmin** -- The default admin page that can be used in the _Show workflow admin page_ microflow and client actions.
+*   **TaskDashboard** -- Gives end-users an overview of their performance in your app's workflows. It contains such information as how many tasks your users have completed, how long they take on average to complete a task, and what percentage of their tasks they complete within the deadline.
+*   **TaskInbox** -- Contains a handy list of all tasks that a user can interact with. _My open tasks_ shows the tasks assigned to current users, _All open tasks_ is a list of tasks they could pick up, _Unassigned tasks_ shows all unassigned tasks, and _Completed tasks_ gives an overview of all tasks that were finished.
 *   **WorkflowAdminCenter** -- A navigational page for workflow administrators. From here, a workflow administrator can go the the _Workflow dashboard_, which gives them general statistics of workflows, much like the _MyTaskDashboard_ does for users. Workflow administrators also gain access to the _Workflow Admin Center_, where they can see all the instances of specific workflows and make changes to their data or even abort them.
 
 ### 3.2 Page Templates

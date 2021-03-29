@@ -43,13 +43,13 @@ You can further customize widgets by changing their design properties. Colors, t
 
 ## 4 Default Look and Feel
 
-Mendix apps contain a default look which is part of the Atlas Core module. This offers the default look (styling and design properties) and feel for all the platform supported widgets and is the base for the designs of Mendix app. Check out the look and feel on the [Atlas website](https://atlas.mendix.com/).
+Mendix apps contain a default look which is part of the [Atlas Core](https://marketplace.mendix.com/link/component/104730) module. This offers the default look (styling and design properties) and feel for all the platform supported widgets and is the base for the designs of Mendix app. Check out the look and feel on the Atlas Design System website.
 
-Next to that, for both web and native mobile Mendix offers respectively Atlas Web Content and Atlas Native Mobile Content as out of the box modules with standard page templates and building blocks. These are part of the blank starter apps, but can be removed if users do not want to use the default templates and building blocks.
+{{% todo %}}[Atlas Design System website: https://atlasdesignsystem.mendixcloud.com]{{% /todo %}}
+
+Next to that, for both web and native mobile Mendix offers respectively [Atlas Web Content](https://marketplace.mendix.com/link/component/117176) and [Atlas Native Mobile Content](https://marketplace.mendix.com/link/component/117175) as out of the box modules with standard page templates and building blocks. These are part of the blank starter apps ([Blank Web App](https://marketplace.mendix.com/link/component/51830) & [Blank Native Mobile App](https://marketplace.mendix.com/link/component/109511)), but can be removed if users do not want to use the default templates and building blocks.
 
 When Mendix releases a new version of these modules, these can be updated as regular modules.
-
-{{% todo %}}[add links to modules in the paragraphs in this section]{{% /todo %}}
 
 ## 5 Customize the Default Look and Feel
 

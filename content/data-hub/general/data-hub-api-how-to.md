@@ -153,7 +153,7 @@ For the full specification, refer to the  [OpenAPI 3.0 spec](http://datahub-spec
 
 This section describes the steps for registering data sources – this can be OData v3  or OData v4 contracts. All the files that make up the contract must be included in the registration call. 
 
-To register a data source to Data Hub you must register the following in the given sequence:
+A data source must be registered to an app deployed to a given environment. Therefore the following  sequence of steps must be followed in the given order:
 
 
 1. Application that the data source originates from: `POST application`

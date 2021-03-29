@@ -29,11 +29,11 @@ For more information on how changes can be quickly previewed, see the [Preview a
 
 Developers can add custom styling for apps in the `theme/web` or `theme/native` folder.
 
-For (progressive) web apps, custom styling should be placed in `theme/web` and linked from (or placed in) `main.scss`. For native mobile apps, custom styling should be placed in `theme/native` and linked from (or placed in) `main.js`.
+For (progressive) web apps, custom styling should be placed in `theme/web` and linked from (or placed in) *main.scss*. For native mobile apps, custom styling should be placed in *theme/native* and linked from (or placed in) *main.js*.
 
-While custom styling can be added directly in the `main.scss` or `main.js` it is a best practice to separate styling in files and include these files in `main.scss` or `main.js`.
+While custom styling can be added directly in the *main.scss* or *main.js* it is a best practice to separate styling in files and include these files in *main.scss* or *main.js*.
 
-Within custom styling, the theme settings (colors, spacings, etc.) as configured in `custom-variables.scss` or `custom-variables.js`, can be re-used. This is also recommended to provide a consistent user experience.
+Within custom styling, the theme settings (colors, spacings, etc.) as configured in *custom-variables.scss* or *custom-variables.js*, can be re-used. This is also recommended to provide a consistent user experience.
 
 #### 2.2.1. Web Environment Example
 

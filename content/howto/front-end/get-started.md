@@ -37,9 +37,7 @@ Our UI library is fully integrated into Mendix Studio. After choosing a navigati
 
 4. **Widgets** — Widgets are small user interface elements (alerts, buttons, charts, etc.) used to enhance existing building blocks.
 
-### 3.5 Design Properties
-
-You can further customize widgets by changing their design properties. Colors, text, and many other variables can be altered to make the widget what you need it to be.
+5. **Design Properties** — You can further customize widgets by changing their design properties. Colors, text, and many other variables can be altered to make the widget what you need it to be.
 
 ## 4 Default Look and Feel
 

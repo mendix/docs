@@ -20,7 +20,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 *  Have Eclipse installed (download it [here](https://eclipse.org/))
 	{{% alert type="info" %}}You can use any text editor to create custom Java actions, but we highly recommend using Eclipse. Studio Pro contains a **Deploy for Eclipse** feature verifying that everything that needs to be configured in Eclipse is done automatically. All you have to do is import the project into your Eclipse working environment.
 {{% /alert %}}
-* Have an app project ready using the [Asset Manager](https://appstore.home.mendix.com/link/app/69674/) template
+* Have an app ready using the [Asset Manager](https://appstore.home.mendix.com/link/app/69674/) template
 
 ## 3 Adding a Java Action in Studio Pro
 
@@ -164,7 +164,7 @@ To edit the Java action in Eclipse, follow these steps:
 
 If you get an `UnsupportedClassVersionError` when running your app, follow these steps:
 
-1. Clean your app project's **deployment** folder by selecting **Project** > **Clean Deployment Directory**.
+1. Clean your app's **deployment** folder by selecting **Project** > **Clean Deployment Directory**.
 2. Add the same JDK version to Eclipse as that which you are using in Studio Pro (this is the recommended version correlation). For details on JDK requirements, see the [Mendix Studio Pro](/refguide8/system-requirements#sp) section of *System Requirements*.
 
 ## 8 Read More

@@ -12,7 +12,7 @@ This how-to is based on the blog post [How Do I Start Styling In Mendix (Gulp & 
 {{% /alert %}}
 
 {{% alert type="info" %}}
-For the majority of styling needs, you can use Mendix's styling tool: Calypso. For more information, see [How to Use Calypso](/howto/front-end/calypso). However, certain users who prefer Gulp may find this document useful.
+For the majority of styling needs, you can use Mendix's styling tool: Calypso. For more information, see [How to Use Calypso](/howto8/front-end/calypso). However, certain users who prefer Gulp may find this document useful.
 {{% /alert %}}
 
 You can use [Gulp](https://gulpjs.com/) to watch the files for any changes you make when styling with Sass. Gulp triggers auto-refresh by default so that your changes are immediately visible in the browser.

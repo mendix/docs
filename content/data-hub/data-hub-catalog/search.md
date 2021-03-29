@@ -57,7 +57,7 @@ When a data source is registered, by default, it is made available to other user
 ### 2.6 Tags 
 Tags help you to group services and datasets and categorize them (for example, by department, process, or use). You can use tags to refine the search and filter search results in the Data Hub Catalog by doing the following:
 
-* Add tags to the service as a curate function in the Data Hub Catalog after a service is registered by service owners and [Data Hub Curators](../index#curator)
+* Add tags to the service as a curate function in the Data Hub Catalog after a service is registered by service owners and [Data Hub Curators](/data-hub/#curator)
 * Add different tags to the different versions of the same service, as they will be two separately registered assets in the catalog (this is also a way to make different version identifiable)
 * Add tags to the datasets exposed in the service
 * Add tags in the [manual registration of OData v4 services](register#registration-form)
@@ -147,7 +147,7 @@ The number of items satisfying the search criteria (search string plus filters) 
 
 If no search string is specified, all registered assets will be listed in the search results pane in order of popularity (number of connections to the asset).
 
-When an item in the search results is selected, the **Catalog** tab will display the **Details** of the asset and the **Landscape** tab will show the network of connections and dependencies of the selected item in the [Data Hub Landscape](../data-hub-landscape/index).
+When an item in the search results is selected, the **Catalog** tab will display the **Details** of the asset and the **Landscape** tab will show the network of connections and dependencies of the selected item in the [Data Hub Landscape](/data-hub/data-hub-landscape/).
 
 ### 4.2 Selected Asset Details {#search-details}
 
@@ -163,7 +163,9 @@ When a data source is selected in the search results, the following details are 
 
 * Name of the data source
 
-* **Validated** tag – if it has been set for the asset
+* **Non-discoverable** icon – if the data source has been set to non-discoverable (by default, no icon indicates that it can be seen by all users)
+
+* **Validated** icon – if it has been set for the asset
 
 * **Environment Name** – where the app is deployed
 
@@ -173,9 +175,9 @@ When a data source is selected in the search results, the following details are 
 
 * A description of the data source
 
-* Each **Dataset** that is exposed in the data source (you can expand this to see details of the attributes and associations) 
+* All **Datasets** that are exposed in the data source (you can expand each one to see details of the attributes and associations) 
 
-	{{% alert type="info" %}}The **Dataset** is the name of the **Entity set** of a published **Entity** in Mendix Studio Pro, which by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
+	{{% alert type="info" %}}In Mendix Studio Pro, the **Dataset** is the name of the **Entity set** of a published **Entity**, which by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
 	
 
 You can perform the following actions from this screen:
@@ -230,17 +232,19 @@ The data source metadata panel at the right of the asset details screen displays
 * **Technical Owner** – technical contact of the app; by default this is the owner who registered the OData service. For apps hosted in the Mendix Cloud, the **Technical Owner** is the **Technical Contact** of the app in the Mendix Cloud
 * **Discoverability** – the discoverability of the asset by users:
 	* **Discoverable** – all users of the Data Hub Catalog and Studio Pro can see and consume the asset provided they meet the requirements of the **Classification**
-	* **Non-Discoverable** – the asset is not visible in the Catalog and only owners, Data Hub curators, and the Data Hub Admin can find, use, and curate the service. See [Curate Bar](#curate-bar) for changing **Discoverability** as an owner or curator.
+	* **Non-Discoverable** – the asset is not visible in the Catalog and only owners, Data Hub curators, and the Data Hub Admin can find, use, and curate the service. See [Curate Bar](#curate-bar) for changing **Discoverability** as the owner of the data source or curator.
 	  {{% alert type="info" %}}A **Non-discoverable** asset is also not included in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Data Hub API.{{% /alert %}}
+* **Validated** – indicates if the data source has been **validated**. See [Curate Bar](#curate-bar) for changing **Validated** as an owner of the data source or curator.
 * **Access Level** – shows the access classification of the service; end-users of the data associated with the datasets exposed in the service must have the appropriate [user role](/refguide/user-roles) to access the data:
 	* **Public** – classified as public and available to all users	
 	* **Internal** – restricted to the members of the organization
 	{{% alert type="info" %}}Classifications at a data source level propagate down to the datasets and attributes exposed in the OData service. {{% /alert %}}
+* **Application** – a link to the application from which the data source was published in the given environment 
 * **Environment Type** – indicates the quality and the status of the data associated with the exposed datasets by the environment that the app and service are deployed to. The following are the environment types: 
   * **Production**
   * **Non-Production** 
   * **Sandbox** (the Mendix Free App environment) 
-* **Application** – a link to the app in the given environment from which the OData service was published 
+* 
 
 ### 4.4 Curate Bar {#curate-bar}
 
@@ -248,15 +252,15 @@ The **Curate Bar** is displayed on the asset detail screen if you are the owner 
 
 ![](attachments/search/curate-bar.png)
 
-You can perform the following actions:
+You carry out the following actions:
 
-* **Edit Metadata** – edit detals that are displayed in the Catalog: 
+* **Edit Metadata** – edit information that is displayed in the Catalog for the asset: 
   * for a selected data source you can edit [Application Details](./curate#curate-application) and [Data Source Details](./curate#service-details)
   *  for a selected dataset you can edit [Dataset Details](./curate#curate-datasets)
 * **Discoverable**/**Validated** – set the discoverability of the service, and validate the dataset
   * **Discoverable** – all users of Data Hub and Studio Pro can see and consume the service in combination with the classification of the data
   * **Non-Discoverable** – the service is not visible and only owners of the service, Data Hub curators, and the Data Hub Admin can access the service
-  * **Validated** – indicate if the dataset has been validated
+  * **Validated** – indicates if the dataset has been validated
 
 {{% alert type="info" %}}By default, newly registered services are set to **Discoverable** and visible to all users. {{% /alert %}}
 
@@ -273,13 +277,10 @@ For the following example:
 
 ![](attachments/search/download_example.png)
 
-When you click **Download** the following file is downloaded: `DataHub_SAMPLE_EmployeeDirectory_1.1.0_OData3.zip`
+When you click **Download** the following file is downloaded: `DataHub_SAP_Intelligence_1.0_OData4.zip`
 
-This zip file comprise the folder: `DataHub_SAMPLE_EmployeeDirectory_1.1.0_OData3` which contains the metadata files that define the service:
-
-`metadata.xml`
-`serviceFeed.xml`
+This zip file cotains the folder: `DataHub_SAP_Intelligence_1.0_OData4` which contains the all the metadata files that define the service.
 
 ## 6 Viewing Search Results in the Data Hub Landscape
 
-When an item is selected in the search results pane, you can click the [Landscape](../data-hub-landscape/index) tab to see the network of connections and dependencies for the selected asset. This enables you to graphically see the context and relevance for a selected item and the data for the exposed datasets.
+When an item is selected in the search results pane, you can click the [Landscape](/data-hub/data-hub-landscape/) tab to see the network of connections and dependencies for the selected asset. This enables you to graphically see the context and relevance for a selected item and the data for the exposed datasets.

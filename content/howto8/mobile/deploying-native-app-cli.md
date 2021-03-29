@@ -20,7 +20,7 @@ Every Native Builder project has configurations. These configurations are useful
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Read [How to Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile) to see how to create, style and debug an application with Mendix Studio Pro
+* Read [How to Get Started with Native Mobile](/howto8/mobile/getting-started-with-native-mobile) to see how to create, style and debug an application with Mendix Studio Pro
 * Deploy your native mobile app to the cloud via Studio Pro and have the cloud address of your deployed application available
 * Learn how to use Windows' command line interface (CLI) program `cmd`
 * Install [Java JDK 11](https://adoptopenjdk.net/) (if you have Studio Pro installed, you should already have JDK 11 in *C:\Program Files\AdoptOpenJDK*)
@@ -439,4 +439,4 @@ To upload your app to the iOS App Store, follow these instructions (to continue,
 ## 7 Read More
 
 * [Native Builder Reference Guide](/refguide8/native-builder)
-* [How To Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile)
+* [How To Get Started with Native Mobile](/howto8/mobile/getting-started-with-native-mobile)

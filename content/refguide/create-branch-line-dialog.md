@@ -1,7 +1,7 @@
 ---
 title: "Create Branch Line"
 parent: "branch-line-manager-dialog"
-menu_order: 90
+menu_order: 10
 tags: ["studio pro", "create branch line"]
 ---
 
@@ -48,7 +48,7 @@ Select from which tagged version you want to create a branch line. Every time yo
 
 ## 6 Branch Name
 
-Enter a name of the new branch line.
+Enter a name for the new branch line.
 
 {{% alert type="warning" %}}
 Branch names cannot include special characters (for example, `@`, `$`, `#`). 

@@ -63,7 +63,7 @@ To see all your favorite apps, click the star toggle to the right of the [view d
 
 ## 3 My Company's Apps {#my-company-apps}
 
-On the **My Company's Apps** page, you will see all the apps created by members of your [company](/developerportal/control-center/index#company):
+On the **My Company's Apps** page, you will see all the apps created by members of your [company](/developerportal/control-center/#company):
 
 {{% image_container width="400" %}}
 ![Apps for my company](attachments/company-apps-list.png)

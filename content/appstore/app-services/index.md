@@ -2,7 +2,7 @@
 title: "App Services"
 description: " "
 draft: true 
-tags: ["marketplace", "app store", "marketplace component", "app store component", "app service"]
+tags: ["marketplace", "marketplace component", "app service"]
 ---
 
 ## 1 Introduction

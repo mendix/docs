@@ -42,7 +42,7 @@ For a better understanding of Mendix Studio Pro, this section describes the manu
 
 ### 4.1 Creating the Overview Page
 
-To create a new overview page and add it to your app project, follow these steps:
+To create a new overview page and add it to your app, follow these steps:
 
 1. Right-click the module and select **Add** > **Page**.
 2. Click **Responsive**.

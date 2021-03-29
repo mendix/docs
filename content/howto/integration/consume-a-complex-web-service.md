@@ -116,7 +116,7 @@ To configure the web service call, follow these steps:
 
 6. In the **HTTP Headers** tab, if the Mendix Runtime should use HTTP authentication before calling the web service, check **Use HTTP authentication** and enter the **User name** and **Password** using the **Edit** buttons:
 
-    ![http-authentication](attachments/consume-complex/http- authentication.png)
+    ![http-authentication](attachments/consume-complex/http-authentication.png)
 
 7. In the **SOAP Response** tab, you can configure the handling of the return from the web service call as follows:
     * If the return is a complex XML structure, select **Mapping** and use an XML-to-domain mapping to map the XML elements to the domain model entities:

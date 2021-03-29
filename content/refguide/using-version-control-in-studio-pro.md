@@ -155,8 +155,6 @@ You can revert changes in the **Changes** pane, or from the right-click menu on 
 
 If you update your app and the changes cannot be merged automatically you will receive a message telling you there are conflicts. A conflict arises when two changes cannot be combined.
 
-![Warning about conflicts](attachments/using-version-control-in-studio-pro/contains-conflicts.png)
-
 There are two different sorts of conflict:
 
 * Document conflicts

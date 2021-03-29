@@ -61,7 +61,7 @@ The **Workflow access** tab is displayed as a matrix showing microflows and modu
 
 ![Workflow Access](attachments/module-security/workflow-access.png)
 
-For each combination you can indicate whether or not the module role has access to the workflow. You can also edit this information in a [workflow](workflow-properties) using the **Allowed roles** property.
+For each combination you can indicate whether or not the module role can start the workflow. You can also edit this information in a [workflow](workflow-properties) using the **Allowed roles** property.
 
 ## 5 Entity Access {#entity-access}
 

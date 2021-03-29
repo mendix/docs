@@ -15,6 +15,7 @@ Before adding the Workflow Commons module to your app, make sure you have comple
 
 * Upgrade your application to Mendix 9
 * Install Atlas 3 from the Mendix Marketplace, as Workflow Commons depends on it 
+* Install the following modules that Workflow Commons depend on: Atlas_Core, Atlas_Web_Core_Content, and DataGrid
 
 ## 2 Preparing Your App
 

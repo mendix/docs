@@ -30,7 +30,11 @@ You would like to build an employee onboarding process. At first, an HR speciali
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Your project has the Workflow Commons and Mendix SSO modules. Fore more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app).
+* Your project has the following modules Workflow Commons and Mendix SSO modules. Fore more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app).
+
+* Install Atlas 3 from the Mendix Marketplace, as Workflow Commons depends on it. 
+
+* Install the following modules that Workflow Commons depend on: Atlas_Core, Atlas_Web_Core_Content, and DataGrid.
 
 * Make sure that the **User entity** is configured in your [Project Settings](/refguide/project-settings#workflows) > **Workflows** tab. 
 

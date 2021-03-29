@@ -25,10 +25,10 @@ We will start by providing Studio Pro as an example of what the REST service ret
 
     ![Screenshot of the result of the rest call](attachments/consume-a-rest-service/get-call-result.png)
 
-3. Copy the whole JSON snippet. Make sure that you select the **Raw Data** tab to copy the whole code structure.
-4. Create a module and name it *RESTconsume*. To add a new [JSON structure](../../refguide/json-structures) to your module with the sample JSON that you can use in the app, right-click the module in the **App Explorer** and select **Add other** > **JSON structure**.
+3.  Select the **Raw Data** tab and copy the whole whole JSON snippet.
+4. Create a module and name it *RESTconsume*. Add the new [JSON structure](../../refguide/json-structures) to your module: right-click the module in the **App Explorer** and select **Add other** > **JSON structure**. 
 5. Enter a **Name** for the structure: *JSON_structure* and click **OK**.
-6. In the **JSON Structure** dialog box, paste the JSON snippet in the **General** tab and click **Refresh**. This analyzes the structure of the JSON snippet that we can use later.
+6. In the **JSON Structure** dialog box, paste the JSON snippet in the **General** tab and click **Refresh** in the **Structure** section. This analyzes the structure of the JSON snippet and provides a representation of it.
 
     ![](attachments/consume-a-rest-service/json-structure.png)
 

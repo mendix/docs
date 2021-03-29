@@ -14,7 +14,3 @@ Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Un
 Hybrid apps are built by using Cordova to wrap a web app in a native wrapper. If you want more immersive native experiences, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](build-native-apps).
 
 The documents in this section focus on building and publishing hybrid apps in the Apple and Google app stores. For more details on platform-specific installation packages see [Mobile App](/developerportal/deploy/mobileapp) in the Developer Portal Guide.
-
-## 2 Documents in This Section
-
-* [How to Customize Local Build Packages](customizing-phonegap-build-packages)

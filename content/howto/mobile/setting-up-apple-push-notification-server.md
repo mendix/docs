@@ -9,7 +9,7 @@ tags: ["mobile", "push notification", "apple", "server"]
 
 In order to proceed you need an Apple developer license and a device running Mac OS X.
 
-This how-to assumes that you already have the app signing key with provisioning profile and can freely build and install your mobile app (if not, please refer to [this how-to](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)). Take into account that your App ID should use `Explicit App ID` and have `Push Notifications` turned on so you can receive push notifications with your app.
+This how-to assumes that you already have the app signing key with provisioning profile and can freely build and install your mobile app. Take into account that your App ID should use `Explicit App ID` and have `Push Notifications` turned on so you can receive push notifications with your app.
 
 ![](attachments/19955752/20217895.png)
 
@@ -90,4 +90,3 @@ To configure your APNs, complete the following steps:
 ## 4 Read More
 
 * [Implement Push Notifications](implementation-guide)
-* [Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)

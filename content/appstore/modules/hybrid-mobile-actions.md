@@ -54,5 +54,3 @@ Note that the standard *config.xml* template already includes `cordova-plugin-co
 Please note that the above plugins are not available in the in standard [Mendix](/refguide/getting-the-mendix-app) mobile app and can only be tested with a custom-built mobile app.
 {{% /alert %}}
 
-These configurations can also be set when building a [custom build package](/howto/mobile/customizing-phonegap-build-packages).
-

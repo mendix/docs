@@ -7,9 +7,9 @@ tags: ["Atlas", "UI", "UX", "user experience", "design"]
 
 ## 1 Introduction
 
-Atlas 3 brings a new degree of power and sophisticaiton to styling in Mendix. To upgrade from Atlas 2 to Atlas 3, see the [Upgrade from Atlas 2 to Atlas 3]() section below. To view a high-level summary of the changes Atlas 3 brings to Mendix, see the [Atlas 3 Changes Summary]() section below.
+Atlas 3 brings a new degree of power and sophistication to styling in Mendix. To upgrade from Atlas 2 to Atlas 3, see the [Upgrade from Atlas 2 to Atlas 3](#upgrade) section below. To view a high-level summary of the changes Atlas 3 brings to Mendix, see the [Atlas 3 Change Summary](#changes) section below.
 
-## 2 Upgrade from Atlas 2 to Atlas 3
+## 2 Upgrade from Atlas 2 to Atlas 3 {#upgrade}
 
 Before upgrading, please note that in Atlas 3 all hybrid content is removed because hybrid profiles are deprecated in Mendix 9. If your project requires hybrid content, we recommend not upgrading to Atlas 3 unless you have created all your own hybrid content separate from Atlas’.
 
@@ -274,7 +274,7 @@ For native platform, download Atlas Native Mobile Content:
 
 {% todo %}}[insert file]{{% /todo %}}
 
-## 8 High Level Summary of Changes
+## 8 Atlas 3 Change Summary {#changes}
 
 Atlas 3 includes many changes around style and branding. It has a different, more modern look and feel. The differences are best expressed through comparison, using our Reference Apps. 
 

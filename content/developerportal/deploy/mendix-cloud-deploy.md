@@ -171,17 +171,16 @@ The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)
 
 ## 7 Mendix Pricing Plans{#plans}
 
-{{% todo %}}[Add Mendix Basic here]{{% /todo %}}
 Mendix licenses are sold as part of plans. These consist of a subscription to a plan, a standard **Cloud Resource Pack** which specifies the resources available to your app environment, plus additional resources such as fallback environments.
 
 ### 7.1 Plans
 
 There are four plans available for Mendix:
 
-* Free Edition
-* Single App
-* Professional
-* Enterprise
+* Free
+* Basic
+* Standard
+* Premium
 
 More information on these plans is available on the [Pricing](https://www.mendix.com/pricing/) page of the Mendix website.
 

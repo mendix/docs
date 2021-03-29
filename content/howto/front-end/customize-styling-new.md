@@ -223,7 +223,7 @@ export const brand = {
     warning: "#ECA51C",
     danger: "#E33F4E",
     info: "#0086D9",
-    primaryLight: "redbaby",
+    primaryLight: "#0086D9",
     successLight: "#F1FCF1",
     warningLight: "#FFF9E6",
     dangerLight: "#FFEEF0",

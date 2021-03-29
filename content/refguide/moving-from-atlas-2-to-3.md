@@ -13,17 +13,18 @@ Atlas 3 brings a new degree of power and sophisticaiton to styling in Mendix. To
 
 Before upgrading, please note that in Atlas 3 all hybrid content is removed because hybrid profiles are deprecated in Mendix 9. If your project requires hybrid content, we recommend not upgrading to Atlas 3 unless you have created all your own hybrid content separate from Atlas’.
 
-Before you start the upgrading process, it may help if you consult the folder structure changes introduced in Atlas 3 by reading [TODO: LINK GOES HERE]().
+Before you start the upgrading process, it may help if you consult the folder structure changes introduced in Atlas 3 by reading the [File and Folder Structure](/howto/front-end/customize-styling-new#file-and-folder) section of *How to Customize Styling*. 
 
 ### 2.1 Modify Existing Files
 
 To upgrade to Atlas 3, please do the steps below as they apply to your use case. If you have not made any modifications to your `Atlas_UI_Resources` module, you can skip this section. Modifications include changes to pages, layouts, design properties and custom styles added to the `Atlas_UI_Resources` module.
 
+{% todo %}}[add archive doc under step 2 below]{{% /todo %}}
+
 If you have made modifications to your `Atlas_UI_Resources` module, you must do the following:
 
-1. Rename your **theme** directory. We suggest naming it **theme_atlas2**.
-2. Download this  **theme.zip** and extract it into the root of your Mendix project folder:
-todo: add archive doc
+1. Rename your **theme** directory. We suggest naming it *theme_atlas2*.
+2. Download this  **theme.zip** and extract it into the root of your Mendix project folder.
 3. If you have made any modifications to Atlas 2 in your Mendix project, the following actions need to be taken (otherwise you can skip this step):
 
 | Section    | Atlas 2 Context                                              | Action Required                                              |
@@ -153,11 +154,12 @@ Once you have completed the necessary steps above, finish modifying existing fil
 
 	![](attachments/atlas-mig/2-rename.png)
 
-2.  Download the **Atlas Core** module from the Marketplace and replace the existing *Atlas_UI_Resources* renamed to *Atlas_Core*. For internal testing, download **Atlas_Core** file below tihs step:
+2.  Download the **Atlas Core** module from the Marketplace and replace the existing *Atlas_UI_Resources* renamed to *Atlas_Core*. For internal testing, download **Atlas_Core** file below this step:
 
 	![](attachments/atlas-mig/3-import.png)
+	
 
-TODO: ADD FILE HERE
+{% todo %}}[add file here]{{% /todo %}}
 
 ## 3 Expected Issues After Upgrading to Atlas 3
 
@@ -172,7 +174,7 @@ When you have completed the sections above, you may have errors in your error li
 	* Add the **Phone web** or **Tablet web** navigation profile to your Mendix application
 	* In the widget's properties pane change the **Profile** to an already existed profile, like **Responsive web**
 
-	Note that navigation profiles have changed in Mendix 9, see these [release notes](TODO: INSERT LINK) for more information.
+	Note that navigation profiles have changed in Mendix 9. See the [Mendix 9 Release Notes](/releasenotes/studio-pro/9.0) for more information.
 
 	![](attachments/atlas-mig/5-nav.png)
 
@@ -188,7 +190,7 @@ When you have completed the sections above, you may have errors in your error li
 
 	![](attachments/atlas-mig/7-errors.png)
 
-*  If you have **Design property X is not supported by your theme** errors, it either means a design property has been removed in Atlas 3 or you need to add your own design properties to the new file structure as instructed in the [Fixing User-Defined Design Properties](#user-design-props) section above. To suppress the error, right-click the error, then select **Remove property**. To check how to extend your design properties, please follow [How to Extend Design Properties](TODO:ADD LINK).
+*  If you have **Design property X is not supported by your theme** errors, it either means a design property has been removed in Atlas 3 or you need to add your own design properties to the new file structure as instructed in the [Fixing User-Defined Design Properties](#user-design-props) section above. To suppress the error, right-click the error, then select **Remove property**. To check how to extend your design properties, please follow [How to Extend Design Properties](extend-design-properties).
 
 	![](attachments/atlas-mig/8-errors-background.png)
 
@@ -266,15 +268,17 @@ If you are using building blocks or page templates, please make sure you downloa
 
 For the web platform, download Atlas Web Content:
 
-TODO: insert file
+{% todo %}}[insert file]{{% /todo %}}
 
 For native platform, download Atlas Native Mobile Content:
 
-TODO: insert file
+{% todo %}}[insert file]{{% /todo %}}
 
 ## 8 High Level Summary of Changes
 
-Atlas 3 includes many changes around style and branding. It has a different, more modern look and feel. The differences are best expressed through comparison, using our Reference Apps. Atlas 2 can be seen here [REPLACEME] and Atlas 3 here [REPLACEME]. todo: get these
+Atlas 3 includes many changes around style and branding. It has a different, more modern look and feel. The differences are best expressed through comparison, using our Reference Apps. 
+
+{% todo %}}[show atlas 2 and 3 RA comparison in paragraph above]{{% /todo %}}
 
 On both web and native, improvements have been made to layouts, widgets, building blocks, and page templates. These changes include but are not limited to layout and spacing, colors and aesthetics, and user experience.
 

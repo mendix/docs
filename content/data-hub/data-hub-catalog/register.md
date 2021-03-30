@@ -28,11 +28,7 @@ This section starts with guidelines and best practice for registering data sourc
 
 The steps for updating a consumed OData service in Studio Pro for which a new version is available are described in the [Updating a Published OData Service in Studio Pro](#updating-service) section below.
 
-{{% alert type="info" %}}
-
-Every new version of a data source must be registered separately in the Catalog. 
-
-{{% /alert %}}
+{{% alert type="info" %}} Every new version of a data source must be registered separately in the Catalog. {{% /alert %}}
 
 ## 2 Best Practices for Registering Data Sources and Shared Datasets
 
@@ -82,9 +78,7 @@ This section describes how to register entities from your Mendix app in the Data
 
 {{% alert type="info" %}}Mendix apps that are not hosted in the Mendix Cloud are not automatically registered in the Data Hub Catalog through the deployment pipeline. For example, if you have an app running on-premises or anywhere else outside the Mendix Cloud, there will not be any auto-registration. These services have to be registered using the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis). {{% /alert %}}
 
-{{% alert type="info" %}}
-A published OData service is an API to your Mendix app. Some apps may have several published services exposing different combinations of entities. In Studio Pro, it is good practice to group them in a separate folder under each [module](/refguide/modules) to make location and maintenance easier.
-{{% /alert %}}
+{{% alert type="info" %}} A published OData service is an API to your Mendix app. Some apps may have several published services exposing different combinations of entities. In Studio Pro, it is good practice to group them in a separate folder under each [module](/refguide/modules) to make location and maintenance easier. {{% /alert %}}
 
 1.  In the [domain model](/refguide/domain-model), right-click the entity to be exposed and from the menu select **Expose as OData resource**:
 
@@ -103,7 +97,7 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 		* **Select** – click to display list of entities available in the module and select another entity to expose
 		* **Show** – click to see the entity in the domain model
 * **Exposed attributes and associations** – click **select** to view and select the attributes and associations to expose for this entity
-	
+
 	* **Exposed entity name** – you can customize the name of the entity in the OData service
 * **Exposed set name** – the name of the dataset associated with the entity that is exposed
 
@@ -119,7 +113,6 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 
 6. If you add an entity that is associated with another entity that is exposed in the same OData service, the association between the two entities will be included under **Attributes and associations**.
    
-
 {{% alert type="info" %}}When a specialized entity is published, in the published OData Service contract this will be a discrete entity that has all the attributes and associations of the generalization. Care has to be taken if the generalized entity (and its association) is also exposed in the same service. In this case, the association in the specialized entity that is (inherited from the generalization) should not be published as this will result in errors. The same association cannot be exposed for two different entities in the same service. In this case, it is recommended that the inherited association is not checked in the specialized entity.  {{% /alert %}}
 	
 9. Add a **Summary** and **Description** of the service In the **Properties** pane: 
@@ -127,7 +120,7 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 8. Add a **Summary** and **Description** of the service In the **Properties** pane: 
 
 	![](attachments/register/publish-service-description.png)
-
+	
 	{{% alert type="info" %}}  The description will be included in the published service metadata file and displayed for the service in the Data Hub Catalog. If no description is available, then the **Summary** will be used.  {{% /alert %}}
 	
 	{{% alert type="info" %}}If you are updating a service (with a new service version), you can provide a summary of the changes from the previous version in the description. You can copy and paste the description from the previous version of the service and edit this with the new details. For further details, see the [Updating a Published OData Service in Studio Pro](#updating-service) section below.  {{% /alert %}}
@@ -143,9 +136,7 @@ The app has to be deployed to the Mendix Cloud using **Publish** for the service
 
 The OData service screen contains all the details that will be included in the OData service contract or *$metadata* file that is registered in the Data Hub Catalog. Entities can be added and removed and changes to attributes and associations for included entities can also be made in this document.
 
-{{% alert type="info" %}}
-The **Version** number that is assigned to a service is significant – it forms part of the service endpoint. This enables several versions of the same OData service to be registered in the Data Hub Catalog at the same time. A connection to an entity by a consuming app will be through the unique endpoint URL and therefore to the version of the service accessing the datasets of the app deployed to the specific environment.
-{{% /alert %}}
+{{% alert type="info" %}} The **Version** number that is assigned to a service is significant – it forms part of the service endpoint. This enables several versions of the same OData service to be registered in the Data Hub Catalog at the same time. A connection to an entity by a consuming app will be through the unique endpoint URL and therefore to the version of the service accessing the datasets of the app deployed to the specific environment. {{% /alert %}}
 
 ### 4.1 General Tab
 
@@ -167,8 +158,7 @@ The **General** tab contains all the details for the published metadata and the 
       {{% alert type="info" %}}This will not change the name of the item, only how it will be shown in the published service.
       {{% /alert %}}
 
-	{{% alert type="info" %}}If you do not *explicitly* choose to expose the association of two associated entities, then this association will not be registered for the entities in the service.
-  {{% /alert %}}
+	{{% alert type="info" %}}If you do not *explicitly* choose to expose the association of two associated entities, then this association will not be registered for the entities in the service.  {{% /alert %}}
 
 For more detail, see [Published OData Resource](/refguide/published-odata-resource).
 
@@ -203,8 +193,7 @@ This section contains the following properties:
 	* **Active session** – for access to the data within the current app session
 	* **Custom** – to specify custom authentication using a microflow that is called every time a user wants to access the data to an entity
 
-	{{% alert type="info" %}}If more than one authentication method is specified, the order or authentication is **Custom**, then **Username and password**, and then **Active session**.
-	{{% /alert %}}
+	{{% alert type="info" %}}If more than one authentication method is specified, the order or authentication is **Custom**, then **Username and password**, and then **Active session**. {{% /alert %}}
 
 * **Microflow** – when **Custom** authentication is checked, specify the authentication microflow that will be used
 * **Allowed roles** – refers to the [module roles](/refguide/module-security#module-role) that a user must have to access the consumed entity
@@ -213,9 +202,7 @@ This section contains the following properties:
 
 For guidelines on when to update a published OData service and when to publish a new one, see the [OData Services and Version](#odata-service-version) section above.
 
-{{% alert type="info" %}}
-When a new version of a service is published to replace an existing one, due notice has to be given to users if the preceding version is going to be deleted. A deprecation notice should be given to all apps consuming the service, and the period of time when both services are available. 
-{{% /alert %}}
+{{% alert type="info" %}} When a new version of a service is published to replace an existing one, due notice has to be given to users if the preceding version is going to be deleted. A deprecation notice should be given to all apps consuming the service, and the period of time when both services are available. {{% /alert %}}
 
 Registered OData services for Mendix apps can be updated in Studio Pro in the [OData service](#odata-service-general) document. You can access the **OData Service** page from the **App Explorer** in Studio Pro by double-clicking the published OData service document to be updated. 
 
@@ -275,7 +262,7 @@ If the source application is not displayed, you can register your OData v4 servi
 
 In the **Contract** screen upload the file of the data source (the OData v4 service metadata contract) that you want to register. 
 
-{{% alert type="info" %}}The OData v4 metadata contract file must be in *.xml* or *.zip* format. when the contract is made up of multiple files.{{% /alert %}}
+{{% alert type="info" %}}The OData v4 metadata contract file must be in *.xml* or *.zip* format. when the contract is made up of multiple files. {{% /alert %}}
 
 {{% image_container width="400" %}}![upload contract](attachments/register/register-data-source-contract.png) {{% /image_container %}}
 
@@ -352,6 +339,7 @@ If the application for your data source is not registered in the catalog, click 
 	{{% alert type="info" %}}You can also [specify the business owner and technical owners](/data-hub/data-hub-catalog/curate#customowner) when you curate the data source in the Catalog. {% /alert %}}
 
 * **Application Icon** – the icon that will be used for the data source and application is displayed. To specify another icon you can **Upload a different icon** or **select one from the library**.
+
 	{{% alert type="info" %}}You can also [change the icon](/data-hub/data-hub-catalog/curate#application-icon) when you curate the data source in the Catalog. {{% /alert %}}
 
 #### 6.2.5 Environment {#environment}

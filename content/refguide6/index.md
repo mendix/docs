@@ -4,7 +4,7 @@ description: "The various sections of the reference guide provide details on the
 notoc: true
 ---
 
-You can browse the different sections of the reference guide for the Mendix Platform below. To browse the release notes for the Mendix Platform, see [Release Notes](/releasenotes/index).
+You can browse the different sections of the reference guide for the Mendix Platform below.
 
 Before installing Mendix 6, please read [System Requirements](system-requirements). If you have been using version 5 of the Mendix Platform, we recommend reading [Moving from 5 to 6](moving-from-5-to-6).
 

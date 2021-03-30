@@ -23,11 +23,11 @@ The app will check for a license each time it is started.
 
 You can obtain a Mendix license from Mendix support. 
 
-If you need a *Subscription Secret* to deploy to SAP BTP, Mendix for Private Cloud, or IBM Cloud, you will need to create a ticket with [Mendix Support](https://support.mendix.com).
+If you need a *Subscription Secret* to deploy to IBM Cloud, you will need to create a ticket with [Mendix Support](https://support.mendix.com).
 
 If you want to create a new licensed node in the Mendix Cloud and your contract does not allow for more licensed nodes, please contact your Customer Success Manager (CSM) first.
 
-For all other license requests, do the following:
+For all other license requests and *Subscription Secrets* to deploy to SAP BTP and Mendix for Private Cloud, do the following:
 
 1. Open the [Request New App Node](https://newnode.mendix.com/) app.
 

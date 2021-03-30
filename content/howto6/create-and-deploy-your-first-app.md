@@ -27,7 +27,7 @@ With Mendix, you can manage requirements, build apps with version control, and d
 
 To manage your applications from idea to deployment, we use projects. To create a collaboration project, follow these steps:
 
-1. Go to [http://home.mendix.com/](http://home.mendix.com/).
+1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 2. Click **CREATE APP**.
 3. You should now choose your starting point, so select **Blue Wave Theme** as a theme.
 4. Click **USE THIS THEME**.

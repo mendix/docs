@@ -2,7 +2,7 @@
 title: "Mx Model Reflection"
 category: "Modules"
 description: "Describes the configuration and usage of the Mx Model Reflection module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "mx model reflection", "token configuration", "platform support"]
+tags: ["marketplace", "marketplace component", "mx model reflection", "token configuration", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -19,7 +19,7 @@ The typical usage scenario is selecting and showing entities from your domain mo
 After importing the module, add **USE ME** > **MxObjects_Overview** to the navigation of your app. Run your application for the synchronization. You are able to enable synchronization for each module. For both security and performance purposes, you do not want your entire domain model structure available in your app.
 
 {{% alert type="info" %}}
-If you have a large app project, the synchronization will take much longer.
+If you have a large app, the synchronization will take much longer.
 {{% /alert %}}
 
 ### 2.1 Token Configuration

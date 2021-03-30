@@ -2,7 +2,7 @@
 title: "Label Selector"
 category: "Widgets"
 description: "Describes the configuration and usage of the Label Selector widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "label selector", "platform support"]
+tags: ["marketplace", "marketplace component", "widget", "label selector", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -32,7 +32,7 @@ You configure background colors for labels and how the text contrasts with a lab
 
 To implement this widget, follow these steps:
 
-1. Download the Label Selector widget into your app project via the Marketplace in Studio Pro.
+1. Download the Label Selector widget into your app via the Marketplace in Studio Pro.
 2. Create a [persistable](/refguide/persistability) entity named **Label**.
 3. Add two [attributes](/refguide/attributes) to the entity named **Caption** and **Color**.
 4. Add a [many-to-many association with dual ownership](/refguide/associations#many-to-many-both) between this new entity and the entity that you want to label. 

@@ -2,7 +2,7 @@
 title: "Carousel"
 category: "Widgets"
 description: "Describes the configuration and usage of the Carousel widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "carousel", "image", "platform support"]
+tags: ["marketplace", "marketplace component", "widget", "carousel", "image", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -21,9 +21,9 @@ The [Carousel](https://appstore.home.mendix.com/link/app/47784/) widget displays
 * Execute a microflow or nanoflow or open a page when an image is clicked
 * Swipe through images on mobile devices
 
-### 1.2 Demo App Project
+### 1.2 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](https://carousel.mxapps.io/).
+For a demo app that has been deployed with this widget, see [here](https://carousel.mxapps.io/).
 
 ## 2 Usage
 

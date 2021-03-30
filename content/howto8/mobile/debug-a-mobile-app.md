@@ -15,7 +15,7 @@ Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Be
 
 To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Locally](/howto/mobile/build-hybrid-locally) for information on local building.
 
-To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
+To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto8/mobile/build-native-apps).
 {{% /alert %}}
 
 **This how-to will teach you how to do the following:**
@@ -412,7 +412,7 @@ For more help with Android remote debugging, check out [Get Started with Remote 
 
 ## 6 Read More
 
-* [Debug Microflows](/howto/monitoring-troubleshooting/debug-microflows)
-* [Debug Java Actions](/howto/monitoring-troubleshooting/debug-java-actions)
+* [Debug Microflows](/howto8/monitoring-troubleshooting/debug-microflows)
+* [Debug Java Actions](/howto8/monitoring-troubleshooting/debug-java-actions)
 * [Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 

@@ -2,7 +2,7 @@
 title: "Maps"
 category: "Widgets"
 description: "Describes the configuration and usage of the Maps widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "maps", "google maps", "openstreetmap", "mapbox", "here maps", "platform support"]
+tags: ["marketplace", "marketplace component", "widget", "maps", "google maps", "openstreetmap", "mapbox", "here maps", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -32,9 +32,9 @@ The [Maps](https://appstore.home.mendix.com/link/app/108261/) widget enables sho
 * For all map types except OpenStreetMap, you need to have a token in order to view the map – you can get the tokens via the links to the map types listed in the [Introduction](#intro) section above
 * Google maps uses [Google Maps API v3](https://cloud.google.com/maps-platform/), so the limitations from Google [Premium Plan Usage Rates and Limits](https://developers.google.com/maps/premium/usage-limits) apply
 
-### 1.3 Demo App Project
+### 1.3 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](https://leafletmaps.mxapps.io/).
+For a demo app that has been deployed with this widget, see [here](https://leafletmaps.mxapps.io/).
 
 ## 2 How the Widget Works
 
@@ -53,7 +53,7 @@ To add a basic map to your application, follow these steps:
 	* **Default** – displays the widget-bundled marker
 	* **Static** – upload a static **Image** (for best results, use a PNG file at 32px width and 32px height where the bottom pin is at the center of the image)
 	* **System image** – add a **System image path** that is a reference to the locations enity (the entity selected should inherit from **System.Image**, because an error will be displayed otherwise); upload an image into the database to view the system image marker at runtime
-	* **Marker list** – add an enumeration containing the name and caption of the markers to your app project and assign that enumeration to the locations entity; then, on the **Marker image list** tab back on the **Edit Maps** dialog box, click **New** for **Images** to specify the enumeration key **Value** and the **Image**
+	* **Marker list** – add an enumeration containing the name and caption of the markers to your app and assign that enumeration to the locations entity; then, on the **Marker image list** tab back on the **Edit Maps** dialog box, click **New** for **Images** to specify the enumeration key **Value** and the **Image**
 5. Back on the **Map properties** tab, select a **Map provider**.
 6. Fill in the **Access token** field according to the following scenarios;
 	* For **Mapbox** and **Google Maps**, add an access token

@@ -8,11 +8,11 @@ tags: ["gulp", "sass", "ux", "front end"]
 
 ## 1  Introduction
 
-Styling in a Mendix app project is easy to do once you get the hang of it. But before you can start using Sass for your app project, you first need to install and download a few things.
+Styling in a Mendix app is easy to do once you get the hang of it. But before you can start using Sass for your app, you first need to install and download a few things.
 
 This how-to will teach you how to do the following:
 
-* Prepare your app project
+* Prepare your app
 * Set up your Sass files
 * Work with Sass
 
@@ -35,16 +35,16 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 5. Install version **1.7.15** of [TortoiseSVN](https://osdn.net/projects/tortoisesvn/storage/Archive/1.7.15/Application/).
 
-## 3 Preparing Your App Project
+## 3 Preparing Your App
 
-To prepare your app project, follow these steps:
+To prepare your app, follow these steps:
 
-1. Open the [app project directory](../general/show-project-directory) (via **Project** > **Show Project Directory in Explorer** in Studio Pro).
-2.  Unpack the *Gulp.zip* file into your main app project folder. You will then see a *Gulpfile* and *package* file that look like this:
+1. Open the [app directory](../general/show-project-directory) (via **Project** > **Show Project Directory in Explorer** in Studio Pro).
+2.  Unpack the *Gulp.zip* file into your main app folder. You will then see a *Gulpfile* and *package* file that look like this:
 
 	![](attachments/set-up-sass/unpack.png)
 
-	After you have unpacked the *Gulp.zip* into your app project folder, you can remove the *zip* file.
+	After you have unpacked the *Gulp.zip* into your app folder, you can remove the *zip* file.
 3.  Open **Windows PowerShell**:
 
 	![](attachments/set-up-sass/powershell.png)
@@ -53,7 +53,7 @@ To prepare your app project, follow these steps:
 
 	![](attachments/set-up-sass/copy.png)
 
-5.  Provide the directory for your app project folder in PowerShell: `cd ‘directory for your app project folder’`
+5.  Provide the directory for your app folder in PowerShell: `cd ‘directory for your app project folder’`
 6.  Write `npm install` or use `npm install gulp-cli -g`:
 
 	![](attachments/set-up-sass/write-install.png)

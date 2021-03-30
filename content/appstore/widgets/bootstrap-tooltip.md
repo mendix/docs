@@ -2,7 +2,7 @@
 title: "Bootstrap Tooltip"
 category: "Widgets"
 description: "Describes the configuration and usage of the Bootstrap Tooltip widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "bootstrap tooltip", "platform support"]
+tags: ["marketplace", "marketplace component", "widget", "bootstrap tooltip", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -21,7 +21,7 @@ The [Bootstrap Tooltip](https://appstore.home.mendix.com/link/app/1939/) widget 
 
 ## 2 Installation
 
-To install, import the Bootstrap Tooltip widget into your app project and add the widget on a page. Locate the widget as close to the target element as possible (preferably next to it).     
+To install, import the Bootstrap Tooltip widget into your app and add the widget on a page. Locate the widget as close to the target element as possible (preferably next to it).     
 
 When an element has a tooltip attached to it and needs to be conditionally visible, put both the element and the tooltip together in a container and apply the visibility conditions to the container instead of the element:
 

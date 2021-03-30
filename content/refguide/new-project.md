@@ -34,7 +34,7 @@ When creating a new app, the **App Settings** dialog box is opened where you can
 
 ### 2.1 Name
 
-The name of your new app. This name is used as the name of the project directory and file on disk. If you enable the online services for this app, the name is also used for the Team Server repository and a corresponding app project in **My Apps**.
+The name of your new app. This name is used as the name of the project directory and file on disk. If you enable the online services for this app, the name is also used for the Team Server repository and a corresponding app in **My Apps**.
 
 ### 2.2 Enable Online Services
 

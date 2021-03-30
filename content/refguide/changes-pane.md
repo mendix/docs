@@ -8,7 +8,7 @@ tags: ["Studio Pro", "changes", "changes pane"]
 
 ## 1 Introduction 
 
-For version control enabled projects (projects with Team Server or other SVN servers), the **Changes** pane shows the local changes to the app project since the last commit. You can commit changes, update to the latest revision, and view the history from it. 
+For version control enabled projects (projects with Team Server or other SVN servers), the **Changes** pane shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from it. 
 
 This pane consists of the following:
 

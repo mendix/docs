@@ -73,7 +73,7 @@ You can choose which certificate to use when you configure a custom domain for a
 
 To manage custom domains, follow these steps:
 
-1. Go to the [Developer Portal](http://home.mendix.com).
+1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 
 2. Open the **Environments** page for your app.
 
@@ -257,4 +257,4 @@ For certain use cases, it is important for the Mendix runtime to know the public
 * [Mendix Cloud: Deploy](mendix-cloud-deploy)
 * [Licensing Mendix Cloud Apps](licensing-apps)
 * [App Roles](/developerportal/collaborate/app-roles)
-* [Control Center](/developerportal/control-center/index)
+* [Control Center](/developerportal/control-center/)

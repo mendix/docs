@@ -30,7 +30,7 @@ Only the [Technical Contact](../collaborate/app-roles#technical-contact) is allo
 
 Assign permission by following these steps:
 
-1. Open your app in the [Developer Portal](http://home.mendix.com).
+1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
 2. Click **Security** under the **Settings** category on the left.
 3. Go to the **Node Permissions** tab.
 4. Choose the environment for which you want to grant access.
@@ -44,7 +44,7 @@ Assign permission by following these steps:
 
 You can find the trends by following these steps:
 
-1. Open your app in the [Developer Portal](http://home.mendix.com).
+1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
 2. Click **Metrics** under the **Operate** category.
 3. Select the environment you want to monitor under the tab **Trends**.
 
@@ -331,7 +331,7 @@ If you see large values here which do not immediately drop back again, it may in
 The **Database node disk usage (in bytes)** graph displays both used storage (the absolute amount of data that is stored on disk), and free space (the remaining space on the database node). When hovering over the graph, you will also see the total size of your database.
 
 {{% alert type="info" %}}
-The units on the graph are mebibtyes. One gibibyte is 1024 mebibytes, so if the total storage of your database is 10 GiB, it is 10240 MiB, and will appear like this on the graph.
+The units on the graph are mebibytes. One gibibyte is 1024 mebibytes, so if the total storage of your database is 10 GiB, it is 10240 MiB, and will appear like this on the graph.
 {{% /alert %}}
 
 {{% alert type="info" %}}

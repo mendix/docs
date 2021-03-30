@@ -241,7 +241,7 @@ To manage stories in Studio Pro, follow these steps:
 	{{% image_container width="300" %}}![](attachments/edit-app.jpg)
 	{{% /image_container %}}
 
-2. Open the **Stories** pane.
+2. Open **View** > **Stories**.
 3. You will see your active sprints in the **Stories** pane:
 
 	![](attachments/stories/stories-pane.png)

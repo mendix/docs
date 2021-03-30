@@ -887,7 +887,7 @@ Once it is configured, you can manage your cluster and namespaces through the De
 
 Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
 
-![](attachments/private-cloud-cluster/image23.png)
+![](attachments/private-cloud-cluster/cluster-manager.png)
 
 From this page you can see a summary of your clusters with all their namespaces and an indication of the namespace status and how long it has been running (runtime).
 

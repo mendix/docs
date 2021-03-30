@@ -31,7 +31,7 @@ Only the [Technical Contact](../collaborate/app-roles#technical-contact) is allo
 Assign permission by following these steps:
 
 1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
-2. Click **Security** under the **Settings** category on the left.
+2. Click **Collaborate** > **Security** on the left.
 3. Go to the **Node Permissions** tab.
 4. Choose the environment for which you want to grant access.
 5. Check **Access to Monitoring** next to the name of the person to whom you want to grant this permission.

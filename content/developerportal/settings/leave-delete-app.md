@@ -40,9 +40,7 @@ There are some important points to understand when you want to leave and/or dele
 If you want to leave and delete your app, follow these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com), click **Apps** in the top menu bar, and select the app that you want to leave.
-
-2. In the app's sidebar menu, select **Settings** > **General**.
-
+2. In the app's sidebar menu, select **Collaborate** > **General Settings**.
 3.  In the upper-right corner of that page, click **Leave app**:
 
 	![](attachments/leave-app.png) 

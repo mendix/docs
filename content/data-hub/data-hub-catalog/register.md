@@ -28,7 +28,11 @@ This section starts with guidelines and best practice for registering data sourc
 
 The steps for updating a consumed OData service in Studio Pro for which a new version is available are described in the [Updating a Published OData Service in Studio Pro](#updating-service) section below.
 
-{{% alert type="info" %}}Every new version of a data source must be registered separately in the Catalog. {{% /alert %}}
+{{% alert type="info" %}}
+
+Every new version of a data source must be registered separately in the Catalog. 
+
+{{% /alert %}}
 
 ## 2 Best Practices for Registering Data Sources and Shared Datasets
 
@@ -58,7 +62,7 @@ Deployment [environments](/developerportal/deploy/environments) should be clearl
 
 The OData service that is published when an app is deployed is associated with the environment that the app is deployed to. The service endpoint is therefore a combination of the application environement URL and the relative path of service contract. This provides the link to the exposed datasets. 
 
-When exposing datasets through an OData service for use in other apps, it is important to inform users of the quality and reliability of the datasets that are available from that deployment. The deployment environment of the app (and the published data sources) provides a good indication of the data quality in combination with the **Environment Type**: **Production**, **Non-production**, and **Sandbox** (the Mendix free app environment).  
+When exposing datasets through an OData service for use in other apps, it is important to inform users of the quality and reliability of the datasets that are available from that deployment. The deployment environment of the app (and the published data sources) provides a good indication of the data quality in combination with the **Environment Type**: **Production**, **Non-production**, and **Sandbox** (the Mendix free app environment). 
 
 We recommend that apps sharing data should to be deployed to a reliable *production* environment where the data for the apps is valid, stable and reliably maintained. When apps are being developed, ensure that there is a representative set of data available in the test or development environments so that the services can be properly tested in the consuming apps. For example, in the case of an app for Human Resources, the developer should have representative test data with the different access levels to ensure that in consuming apps the correct data is available to users of differing access levels.
 
@@ -95,7 +99,6 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 4. The OData service document is added to the module, and the **Edit published resource** dialog box is displayed for the selected entity. The information in this will form the metadata definition for the entity:
 
 	![](attachments/register/edit-published-resource-box.png)
-
 	* **Entity** – the name and module of the entity
 		* **Select** – click to display list of entities available in the module and select another entity to expose
 		* **Show** – click to see the entity in the domain model
@@ -121,17 +124,20 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 	
 9. Add a **Summary** and **Description** of the service In the **Properties** pane: 
 
+8. Add a **Summary** and **Description** of the service In the **Properties** pane: 
+
 	![](attachments/register/publish-service-description.png)
 
-	{{% alert type="info" %}}The description will be included in the published service metadata file and displayed for the service in the Data Hub Catalog. If no description is available, then the **Summary** will be used.   {{% /alert %}}
-
-	{{% alert type="info" %}}If you are updating a service (with a new service version), you can provide a summary of the changes from the previous version in the description. You can copy and paste the description from the previous version of the service and edit this with the new details. For further details, see the [Updating a Published OData Service in Studio Pro](#updating-service) section below.   {{% /alert %}}
+	{{% alert type="info" %}}  The description will be included in the published service metadata file and displayed for the service in the Data Hub Catalog. If no description is available, then the **Summary** will be used.  {{% /alert %}}
+	
+	{{% alert type="info" %}}If you are updating a service (with a new service version), you can provide a summary of the changes from the previous version in the description. You can copy and paste the description from the previous version of the service and edit this with the new details. For further details, see the [Updating a Published OData Service in Studio Pro](#updating-service) section below.  {{% /alert %}}
 
 10. When the app is deployed with **Publish**, the OData services defined for the app will automatically be registered in the Data Hub Catalog.
 
 {{% alert type="info" %}}
 The app has to be deployed to the Mendix Cloud using **Publish** for the service to be registered in the Data Hub Catalog. If you are deploying to another environment, then you will have to use the  [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis) to set-up a deployment pipeline.
 {{% /alert %}}
+
 
 ## 4 OData Service Screen {#odata-service-general}
 
@@ -156,8 +162,7 @@ The **General** tab contains all the details for the published metadata and the 
   * **Add**, **Edit**, **Delete** – click to add, edit, or remove an entity from the OData Service, respectively
 
   * **Entity *entity name*** – for the selected entity on the left, the details of attributes and associations is displayed on the right. Click **Add**, **Edit**  or **Delete** to add, edit or remove an attribute or listed association.
-
-    * When you click **Edit** the **Edit published attribute** dialog is displayed that will show information about the item. For **Exposed name** you can specify the name that the attribute or association will be exposed as in the service. 
+  * When you click **Edit** the **Edit published attribute** dialog is displayed that will show information about the item. For **Exposed name** you can specify the name that the attribute or association will be exposed as in the service. 
 
       {{% alert type="info" %}}This will not change the name of the item, only how it will be shown in the published service.
       {{% /alert %}}
@@ -236,23 +241,17 @@ This section will take you through the steps to upload the metadata contract and
 
 If the connector for your business application is not shown, you can use the  option to register a **generic OData v4 service**:
 
- {{% image_container width="500" %}}![upload contract](attachments/register/register-data-source-odata-connector.png){{% /image_container %}}
+![upload contract](attachments/register/register-data-source-odata-connector.png)
 
-{{% alert type="info" %}}
-Each new version of previously registered data sources (services) deployed to a different endpoint have to be individually registered.
-{{% /alert %}}
+{{% alert type="info" %}} Each new version of previously registered data sources (services) deployed to a different endpoint have to be individually registered. {{% /alert %}}
 
-{{% alert type="info" %}}
-This process is for indivually registering data sources. You can also set up a deployment pipeline to register your data sources using the  [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis).
-{{% /alert %}}
+{{% alert type="info" %}} This process is for indivually registering data sources. You can also set up a deployment pipeline to register your data sources using the  [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis). {{% /alert %}}
 
 ###  6.1 OData Service Contracts
 
 For all business applications except for Mendix apps, data sources that comprise datasets must be published as OData v4 services for registration in the Catalog. An OData service metadata file may be a single file, or comprise multiple files, for example, the base schema definition and additional associated schema documents to complete the full service definition. 
 
-{{% alert type="warning" %}}
-When registering data sources from Mendix apps using the **Mendix** connector, only OData v3 contracts are accepted. For all other business applications that are currently available including the generic **OData connector**, only OData v4 contracts are accepted.
-{{% /alert %}}
+{{% alert type="warning" %}} When registering data sources from Mendix apps using the **Mendix** connector, only OData v3 contracts are accepted. For all other business applications that are currently available including the generic **OData connector**, only OData v4 contracts are accepted. {{% /alert %}}
 
 The file formats of the OData v4 Service contracts that are accepted in this registration process are *.xml* (for single files) and *.zip* (when the contract includes several files). 
 
@@ -260,9 +259,7 @@ The file formats of the OData v4 Service contracts that are accepted in this reg
 
 The registration process is tailored for each application type. On the Data Hub **Home** page you will see buttons for registering specific enterprise applications. The steps that are described in this section can be followed for any of these applications. 
 
-{{% alert type="info" %}}
-If the application for the data source you would like to register is not shown, you can register it using the **OData** button.
-{{% /alert %}}
+{{% alert type="info" %}} If the application for the data source you would like to register is not shown, you can register it using the **OData** button. {{% /alert %}}
 
 #### 6.2.1 Selecting the Enterprise Application {#application}
 
@@ -280,11 +277,11 @@ In the **Contract** screen upload the file of the data source (the OData v4 serv
 
 {{% alert type="info" %}}The OData v4 metadata contract file must be in *.xml* or *.zip* format. when the contract is made up of multiple files.{{% /alert %}}
 
- {{% image_container width="400" %}}![upload contract](attachments/register/register-data-source-contract.png){{% /image_container %}}
+{{% image_container width="400" %}}![upload contract](attachments/register/register-data-source-contract.png) {{% /image_container %}}
 
 The selected file is uploaded and verified. When successfully uploaded, you can click the **x** if you want to upload an alternative file or click **Go to next step**.
 
- {{% image_container width="400" %}}![upload contract](attachments/register/register-data-source-validate.png){{% /image_container %}}
+{{% image_container width="400" %}}![upload contract](attachments/register/register-data-source-validate.png){{% /image_container %}}
 
 #### 6.2.3 Details of the Data Source {#data-source}
 
@@ -298,16 +295,16 @@ In the **Details of Data Source** screen specify the following details:
 
 	{{% alert type="info" %}}When registering another version of an already registered service which is deployed to a different endpoint, make sure that the version numbering indicates the degree of change between versions. For more information see [Semantic numbering](/refguide/consumed-odata-service#semantic).{{% /alert %}}
   
-* **Data Source Releative Path** – the path of the OData service contract relative to the *environment URL of the application* that is specified at the [Enviroment](#environment) stage.
+* **Data Source Relative Path** – the path of the OData service contract relative to the *environment URL of the application* that is specified at the  stage.
 
 * **Catalog Description** – a description of the service that is displayed for the data source. 
 
 	{{% alert type="info" %}}You can do this when you [curate the data source](/data-hub/data-hub-catalog/curate#service-details) in the Catalog.{{% /alert %}}
 
 * **Tags** – tags can be used to categorize the datasets and data sources to enable users to find relevant groups of datasets. Click on the currently used tags in the Catalog that are displayed below: 
-	
+
 	![](attachments/register/register-data-source-tag-list.png)
-	
+
 	Alternatively, enter a tag string. Tags strings must satisfy the following: 
 
 	* alphanumeric characters
@@ -319,7 +316,7 @@ In the **Details of Data Source** screen specify the following details:
 	* no spaces
 
 	To remove a tag from the list, click the **x**. 
-	
+
 	{{% alert type="info" %}}You also can specify tags when you [curate the data source](/data-hub/data-hub-catalog/curate#tags) in the Catalog. {{% /alert %}}
 
 When all the required information has been specified click **Go to next step**. 
@@ -334,7 +331,7 @@ If the application is already registered in the Catalog – for example, as the 
 
 Click **Select application** and select from a list of all the currently registered apps originating from the *same business application*. For each app the **Technical Owner** will be shown in parentheses. In the example shown below when registering a SAP data source, the list of registered SAP applications currently registered is displayed:
 
- {{% image_container width="400" %}}![](attachments/register/register-data-source-exist-app.png){{% /image_container %}}
+{{% image_container width="400" %}}![](attachments/register/register-data-source-exist-app.png){{% /image_container %}}
 
 The **Technical Owner** of the app you have selected is displayed.
 
@@ -342,7 +339,7 @@ The **Technical Owner** of the app you have selected is displayed.
 
 If the application for your data source is not registered in the catalog, click **Register a new application** and specify the following information:
 
- {{% image_container width="400" %}}![manual register application](attachments/register/register-data-source-new-app.png){{% /image_container %}}
+{{% image_container width="400" %}}![manual register application](attachments/register/register-data-source-new-app.png){{% /image_container %}}
 
 * **Application Name** – the name of the application as it should appear in the details page of the service.
 
@@ -353,10 +350,9 @@ If the application for your data source is not registered in the catalog, click 
 * **Business Owner** – the owner of the datasets that are made available through the service. Select from the dropdown list. The dropdown list will also
 
 	{{% alert type="info" %}}You can also [specify the business owner and technical owners](/data-hub/data-hub-catalog/curate#customowner) when you curate the data source in the Catalog. {% /alert %}}
-	
+
 * **Application Icon** – the icon that will be used for the data source and application is displayed. To specify another icon you can **Upload a different icon** or **select one from the library**.
 	{{% alert type="info" %}}You can also [change the icon](/data-hub/data-hub-catalog/curate#application-icon) when you curate the data source in the Catalog. {{% /alert %}}
-
 
 #### 6.2.5 Environment {#environment}
 
@@ -372,12 +368,12 @@ Click **Select environment** and select the environment from the drop-down list.
 
 If the environment is not registered in the Catalog click **Register a new environment** and provide the following information: 
 
- {{% image_container width="400" %}}![register new environment](attachments/register/register-data-source-new-env.png){{% /image_container %}}
+{{% image_container width="400" %}}![register new environment](attachments/register/register-data-source-new-env.png){{% /image_container %}}
 
 * **Environment Name** – the name of the environment to be displayed in the Catalog.
 * **Environment Location** – the URL of the environment.
 * **Environment Type** – indicates the type of environment that the app is deployed to and thereby the quality of the data in the dataset. Users can filter their search in the Catalog by selecting a specific environment. Select one of the following:
-	* **Production**: this indicates that the data is of prodiction quality
+	* **Production**: this indicates that the data is of production quality
 	* **Sandbox**: the Mendix Free App environment
 	* **Non-production**: this indicates that the data of this data source is not of production quality
 

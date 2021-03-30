@@ -41,7 +41,7 @@ The Technical Contact can grant you the **Receive Alerts** permission by followi
     ![](attachments/receive-alerts/myapps.png)
 
 4. Open the node by clicking **Details**.
-5.  Click **Security** under the **Settings** category.
+5.  Click **Collaborate** > **Security** under the category.
 
     ![](attachments/receive-alerts/settings.png)
 

@@ -110,7 +110,7 @@ Default: *enabled*
 
 ### 6.4 New Version of the Toolbox {#new-toolbox}
 
-With this option, you can enable the new version of the [Toolbox](/refguide/view-menu#toolbox). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
+With this option, you can enable the new version of the [Toolbox](/refguide8/view-menu#toolbox). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
 
 Default: *enabled*
 

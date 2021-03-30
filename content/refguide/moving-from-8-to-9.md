@@ -32,13 +32,13 @@ Make sure that you have either committed your latest changes to Team Server, or 
 ### 3.2 Upgrade to the Latest Release of Version 8
 
 {{% alert type="warning" %}}
-It is technically required for you to upgrade your app to Mendix 8.12 first to be able to update it to Mendix 9. However, we recommend you update to the latest version of Mendix 8: [8.17](/releasenotes/studio-pro/8.17).
+It is technically required for you to upgrade your app to Mendix 8.12 first to be able to update it to Mendix 9. However, we recommend you update to the latest version of Mendix 8: [8.18](/releasenotes/studio-pro/8.18).
 {{% /alert %}}
 
-To upgrade to Mendix 8.17, follow these steps:
+To upgrade to Mendix 8.18, follow these steps:
 
-1. Download the latest patch release of Studio Pro [v8.17](/releasenotes/studio-pro/8.17).
-1. Open your app in Studio Pro v8.17.
+1. Download the latest patch release of Studio Pro [v8.18](/releasenotes/studio-pro/8.18).
+1. Open your app in Studio Pro v8.18.
 1. Allow it to upgrade the app, if necessary.
 
 ### 3.3 Review Your Mendix 8 App
@@ -118,6 +118,19 @@ Mendix 9 native apps no longer include non-essential native libraries like `reac
 
 If your pluggable widget or JavaScript action uses libraries that require native linking, please update your widgets and actions in order to define those native libraries as dependencies for your components. Read more about native dependencies in [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/native-dependencies).
 
-## 8 Read More
+## 8 XPath Query Engine 9 {#query-engine-9}
+
+Mendix 9 contains a new XPath query engine called *query engine 9* or QE9, replacing the current engine called *query engine 7* or QE7. There are a few changes in functionality between the query engines:
+
+* If an association is [navigable from both sides](/refguide/association-properties#navigability), both entities can have access rules defined which declare the readability of the association. For such associations, QE9 will always use the entity on the left of the current XPath to determine accessibility.
+For example: in the query `//Customer[Customer_Address/Address/City = 'Rotterdam']`, the access rules defined in `Customer` will be used for the association, whereas in `//Address[Customer_Address/Customer/Lastname = 'Doe']`, the rules in `Address` will be used for that same association. In QE7 the behavior was not well defined.
+
+* QE9 has been written to follow the least privilege principle strictly when retrieving data. This might cause less data to be visible to end-users.
+
+* While not allowed by Studio Pro, it was possible to use a non-boolean attribute as a constraint in a Java action, for example `//Address[City]`. QE7 accepts such queries but, depending on the database, it may give unexpected results. QE9 will reject such queries.
+
+* While not supported or documented, it is possible to use a query like `//Customer/Customer_Address/Address` in a Java action. If an instance of `Address` is reachable from multiple `Customer` instances, QE7 would return the instance of `Address` multiple times. QE9 will return each matching instance of `Address` only once.
+
+## 9 Read More
 
 * [Studio Pro 9 Release Notes](/releasenotes/studio-pro/9.0)

@@ -30,7 +30,7 @@ Only the [Technical Contact](../collaborate/app-roles#technical-contact) is allo
 
 Assign permission by following these steps:
 
-1. Open your app in the [Developer Portal](http://home.mendix.com).
+1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
 2. Click **Security** under the **Settings** category on the left.
 3. Go to the **Node Permissions** tab.
 4. Choose the environment for which you want to grant access.
@@ -44,7 +44,7 @@ Assign permission by following these steps:
 
 You can find the trends by following these steps:
 
-1. Open your app in the [Developer Portal](http://home.mendix.com).
+1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
 2. Click **Metrics** under the **Operate** category.
 3. Select the environment you want to monitor under the tab **Trends**.
 

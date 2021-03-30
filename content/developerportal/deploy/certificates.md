@@ -52,7 +52,7 @@ Virtually all certificate formats can be converted to the PKCS12 format. For mor
 
 You can upload a PKCS12 file by following these steps:
 
-1. In the [Developer Portal](http://home.mendix.com), go to the **Deploy** tab of the **Environments** page, and click the **Details** of the desired environment.
+1. In the [Developer Portal](http://sprintr.home.mendix.com), go to the **Deploy** tab of the **Environments** page, and click the **Details** of the desired environment.
 
 2. Select the **Network** tab of an application environment.
 
@@ -78,7 +78,7 @@ Loading certificate authorities works much the same way, although they do not re
 
 To upload a certificate authority, follow these steps:
 
-1. In the [Developer Portal](http://home.mendix.com), go to the **Deploy** tab of the **Environments** page, and click the **Details** of the desired environment.
+1. In the [Developer Portal](http://sprintr.home.mendix.com), go to the **Deploy** tab of the **Environments** page, and click the **Details** of the desired environment.
 
 2. Select the **Network** tab of an application environment.
 

@@ -8,7 +8,7 @@ This feature is not finished completely yet, therefore it starts with an overvie
 
 {{% alert type="warning" %}}
 
-Clustering Support is **beta** feature. This means that it is _not supported_ in production environments. We recommend skipping this clustering implementation because this feature has been redesigned completely in Mendix 7.
+Clustering Support is a [Beta](/releasenotes/beta-features/) feature. This means that it is _not supported_ in production environments. We recommend skipping this clustering implementation because this feature has been redesigned completely in Mendix 7.
 
 {{% /alert %}}
 

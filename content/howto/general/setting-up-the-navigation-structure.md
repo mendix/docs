@@ -29,7 +29,7 @@ Do the following:
 
 1.  Open **App** > **Navigation**.
 
-    ![](attachments/setting-up-the-navigation-structure/open-navigation.jpg)
+    ![](attachments/setting-up-the-navigation-structure/open-navigation.png)
 
 2. Some navigation profiles are open in a tab by default, for example, the **Responsive** one. To open other navigation profiles, do the following:
 
@@ -118,7 +118,7 @@ Now that you have created a menu structure it is time to start using it on pages
 
 5. In **General** > **Menu source**, select **Project navigation**. This is the navigation structure defined in the navigation editor. (You can also add additional menu structures using menu documents.)
 
-    ![](attachments/setting-up-the-navigation-structure/menu-bar-properties.jpg)
+    ![](attachments/setting-up-the-navigation-structure/menu-bar-properties.png)
 
 6. In **Profile**, select the profile type depending on the device type. **Responsive** is selected by default.  
 

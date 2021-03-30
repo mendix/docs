@@ -75,11 +75,7 @@ The XML schema describes what the contents of an XML document should be. We need
 
     ![](attachments/18448731/18581810.png)
 
-5. Open the **Connector** pane, which should be in the bottom-right corner of Studio Pro:
-
-    ![](attachments/18448731/18581817.png)
-
-6. Drag the **XMLDocument** entity from the **Connector** to the placeholder:
+5. Open the **Connector** pane drag the **XMLDocument** entity from the **Connector** to the placeholder:
 
     ![](attachments/18448731/18581809.png)
 

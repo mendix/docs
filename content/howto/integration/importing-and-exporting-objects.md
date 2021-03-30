@@ -35,7 +35,7 @@ To import a complete Mendix app package, follow these steps:
 
 1. Click the **File** menu in  and select **Import App Package**:
 
-    ![](attachments/18448739/18582103.png)
+    ![](attachments/18448739/file-import-app-project.png)
 
 2. Select your Mendix app package file and click **Open**. The **Import App Package** dialog box will appear:
 
@@ -74,7 +74,7 @@ To import module packages, follow these steps:
 
 5. Click **OK**. You will see your new or replaced module in the **App Explorer**.
 
-    You will also see your changes in the **Changes** section of . In this example, the existing module has been deleted and replaced by the newly imported module:
+    You will also see your changes in the **Changes** section. In this example, the existing module has been deleted and replaced by the newly imported module:
 
     ![](attachments/18448739/18582109.png)
 
@@ -162,7 +162,7 @@ To export a app, follow these steps:
 
 1. Click the **File** menu in  and select **Export App Package**.
 
-    ![](attachments/18448739/18582091.png)
+    ![](attachments/18448739/file-export-package.png)
 
 2. The **Export App Package** dialog box will appear, which enables you to set the export location and select data to export (if required):
 

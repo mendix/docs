@@ -24,11 +24,9 @@ To find a list of all the Mendix Cloud nodes to which you have access, click the
 
 You will see a list of all your nodes:
 
-{{% todo %}}[Change the node list screen to the latest version]{{% /todo %}}
-
 ![Licensed Mendix Cloud nodes](attachments/node-permissions/nodes-list.png)
 
-Clicking the **Details** button will take you to the [Environments](/developerportal/deploy/environments) page for the app that is deployed to this node.
+Clicking **Environments** will take you to the [Environments](/developerportal/deploy/environments) page for the app that is deployed to this node.
 
 ## 3 Node Permissions
 

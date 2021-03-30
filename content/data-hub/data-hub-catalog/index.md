@@ -17,6 +17,7 @@ From the Data Hub [Home](https://hub.mendix.com) screen, you can carry out the m
 ![Data Hub screen](../share-data/attachments/share-data/data-hub-home.png)
 
 You can navigate to the following tabs:
+
 * **Home** – search in the Data Hub Catalog, manually register a service from different applications, select from the most popular services
 
 * **Catalog** – [search](search) for registered assets in the search pane and see details of the metadata of selected asset

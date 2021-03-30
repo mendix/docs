@@ -1,5 +1,5 @@
 ---
-title: "Plan App Development"
+title: "Planning"
 category: "Collaboration Tools"
 menu_order: 30
 description: "Describes where you can plan and monitor your app development."

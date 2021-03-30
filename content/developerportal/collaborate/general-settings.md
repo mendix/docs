@@ -1,5 +1,5 @@
 ---
-title: "Manage General App Settings"
+title: "General Settings"
 category: "Collaboration Tools"
 menu_order: 100
 description: "Describes general settings of your app."

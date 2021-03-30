@@ -1,7 +1,7 @@
 ---
 title: "App Roles"
-category: "Collaboration Tools"
-menu_order: 25
+parent: "team"
+menu_order: 10
 description: "Describes the App Team, App Contact, and Technical Contact roles and permissions within the Mendix Platform."
 tags: ["app team", "app contact", "technical contact", "developer portal", "role", "permissions"]
 aliases:

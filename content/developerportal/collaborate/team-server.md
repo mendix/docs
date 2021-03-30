@@ -1,5 +1,5 @@
 ---
-title: "Team Server Overview"
+title: "Team Server"
 category: "Collaboration Tools"
 menu_order: 80
 description: "Describes the overview of Team Server revisions and commits."

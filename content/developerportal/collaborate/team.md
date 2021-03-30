@@ -1,5 +1,5 @@
 ---
-title: "App Team"
+title: "Team"
 category: "Collaboration Tools"
 menu_order: 40
 description: "Describes the Team page of the Developer Portal."

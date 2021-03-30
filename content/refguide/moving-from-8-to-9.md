@@ -118,6 +118,19 @@ Mendix 9 native apps no longer include non-essential native libraries like `reac
 
 If your pluggable widget or JavaScript action uses libraries that require native linking, please update your widgets and actions in order to define those native libraries as dependencies for your components. Read more about native dependencies in [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/native-dependencies).
 
-## 8 Read More
+## 8 XPath Query Engine 9 {#query-engine-9}
+
+Mendix 9 contains a new XPath query engine called *query engine 9* or QE9, replacing the current engine called *query engine 7* or QE7. There are a few changes in functionality between the query engines:
+
+* If an association is [navigable from both sides](/refguide/association-properties#navigability), both entities can have access rules defined which declare the readability of the association. For such associations, QE9 will always use the entity on the left of the current XPath to determine accessibility.
+For example: in the query `//Customer[Customer_Address/Address/City = 'Rotterdam']`, the access rules defined in `Customer` will be used for the association, whereas in `//Address[Customer_Address/Customer/Lastname = 'Doe']`, the rules in `Address` will be used for that same association. In QE7 the behavior was not well defined.
+
+* QE9 has been written to follow the least privilege principle strictly when retrieving data. This might cause less data to be visible to end-users.
+
+* While not allowed by Studio Pro, it was possible to use a non-boolean attribute as a constraint in a Java action, for example `//Address[City]`. QE7 accepts such queries but, depending on the database, it may give unexpected results. QE9 will reject such queries.
+
+* While not supported or documented, it is possible to use a query like `//Customer/Customer_Address/Address` in a Java action. If an instance of `Address` is reachable from multiple `Customer` instances, QE7 would return the instance of `Address` multiple times. QE9 will return each matching instance of `Address` only once.
+
+## 9 Read More
 
 * [Studio Pro 9 Release Notes](/releasenotes/studio-pro/9.0)

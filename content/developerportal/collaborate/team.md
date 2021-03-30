@@ -1,7 +1,7 @@
 ---
 title: "App Team"
 category: "Collaboration Tools"
-menu_order: 20
+menu_order: 3
 description: "Describes the Team page of the Developer Portal."
 tags: ["Team", "Developer Portal"]
 ---

@@ -15,14 +15,14 @@ This app service does the heavy-lifting for you so you do not have to build a 3D
 
 Here is an overview of what the 3DViewer contains:
 
-| Category                                   | Name                                                                                                                                                                                                                                                                                                  |
-| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Predefined Entity](#41-predefined-entity) | ModelDocument, Pagination, Markup, MxChildDocument, MxModelDocument                                                                                                                                                                                                                                   |
-| [Constants](#42-constants)                 | HttpEndpoint, ModelSourceType                                                                                                                                                                                                                                                                         |
-| [Nanoflow](#44-nanoflow)                   | GetModelListFromMendix, GetMarkupsFromMendix                                                                                                                                                                                                                                                          |
-| [Microflow](#43-microflow)                 | DeleteModelFromMendix, DownloadMarkup                                                                                                                                                                                                                                                                 |
-| [Java Action](#44-java-action)             | VisServerAction                                                                                                                                                                                                                                                                                       |
-| [Widgets](#55-widgets)                     | Container3D, Markup builder, PMI tree, PS tree, PS tree table, Section view, Toolbar item camera mode,Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer, Measurement |
+| Category                                   | Name                                                                                                                                                                                                                                                                                                   |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Predefined Entity](#41-predefined-entity) | ModelDocument, Pagination, Markup, MxChildDocument, MxModelDocument                                                                                                                                                                                                                                    |
+| [Constants](#42-constants)                 | HttpEndpoint, ModelSourceType                                                                                                                                                                                                                                                                          |
+| [Microflow](#43-microflow)                 | DeleteModelFromMendix, DownloadMarkup                                                                                                                                                                                                                                                                  |
+| [Nanoflow](#44-nanoflow)                   | GetModelListFromMendix, GetMarkupsFromMendix                                                                                                                                                                                                                                                           |
+| [Java Action](#45-java-action)             | VisServerAction                                                                                                                                                                                                                                                                                        |
+| [Widgets](#46-widgets)                     | Container3D, Markup builder, PMI tree, PS tree, PS tree table, Section view, Toolbar item camera mode, Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer, Measurement |
 
 In most cases, you will only need what are contained in **USE_ME** folder. The content in the **Internal** folder is for internal use only and you will not need them.
 
@@ -110,9 +110,13 @@ Other two entities, **MxModelDocument** and **MxChildDocument** are internal ent
 
 ### 4.2 Constants
 
-The **HttpEndpoint** constant with the value **visualization** is used to restrict value of parameter **HttpEndpoint** of the **Viewer3D/USE_ME/VisServerAction** Java action.
+The **HttpEndpoint** constant with the default value **visualization** is used to restrict value of parameter **HttpEndpoint** of the **Viewer3D/USE_ME/VisServerAction** Java action.
 
 The **ModelSourceType** constant with the value **Mendix** is used to signify the model source, you can use this constant to restrict the value of parameter **Data source** in Uploader widget, the parameter **Model source type** in Viewer widget, or the value of Attribute **Source** in ModelDocument entity.
+
+The **LicenseToken** constant is used to provide valid 3DViewer license token for the app that uses 3DViewer to be successfully deployed to Mendix Cloud. As 3DViewer is a commercial product and subject to a subscription fee, to be able to use 3DViewer functionalities in a deployed app, you will need a license token and set the value of constant **LicenseToken** to the license token in the deployment environment setting. If you build and run an app that uses 3DViewer locally in studio pro, you do not need to provide a value for **LicenseToken** constant, just leave it empty. Making is always free!
+
+For how to obtain a license token, please contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket against 3DViewer development team.
 
 ### 4.3 Microflow
 
@@ -137,7 +141,7 @@ The **GetMarkupsFromMendix** nanoflow takes a **ModelDocument** object as an inp
 
 ### 4.5 Java Action
 
-The **VisServerAction** Java action is used to set up a visualization server infrastructure, which is critical for realizing all the functions that 3D Viewer provides. It is exposed as microflow actions. For 3DViewer to work, it is important to set the app's after-startup microflow to call the VisServerAction. Make sure parameter **Http endpoint** of this java action is set to `Expression:@Viewer3D.HttpEndpoint`. 
+The **VisServerAction** Java action is used to set up a visualization server infrastructure, which is critical for realizing all the functions that 3D Viewer provides. It is exposed as microflow actions. For 3DViewer to work, it is important to set the app's after-startup microflow to call the **VisServerAction** java action. Make sure parameter **Http endpoint** of this java action is set to `Expression:@Viewer3D.HttpEndpoint`. 
 
 ### 4.6 Widgets
 
@@ -155,13 +159,15 @@ The core widgets can be used in the following ways:
 
 * **Container3D** – place this widget in any location of a page
 * **Uploader** – place this widget in any location of a page  
-	* On the **General** tab, **Model ID**, and **Data source** attributes can be used to retrieve the uploading model's upload status, **Model ID**, and **Model source type**:
+	* On the **General** tab, **Model ID**, and **Data source** attributes can be used to retrieve the uploading model's **Model ID**, and **Model source type** values:
 
-	![uploadergeneral](attachments/3d-viewer/uploadergeneral.jpg)
+	![uploadergeneral](attachments/3d-viewer/uploadergeneral.jpg)  
 
 * **Viewer** – place this widget inside a **Container3D** widget; for this widget to visualize a model correctly, following properties need to be set correctly:
-	* On the **Data Source** tab, you must configure correct **Model ID** and **Model source type**. Example valid **Model ID** value are:  value of attribute **ModelId**  of a ModelDocument object, value of attribute **Model ID**  set by Uploader widget property. Valid **Model Source Type** are: `Mendix` or `Teamcenter`, you can also use the constant **Viewer3D/USER_ME/ModelSourceType**.  
+	* On the **Data Source** tab, you must configure correct **Model ID** and **Model source type**. Example valid **Model ID** values are:  value of attribute **ModelId**  of a ModelDocument object, value of attribute **Model ID**  set by Uploader widget property. Valid **Model Source Type** values are: `Mendix` or `Teamcenter`, you can also use the constant **Viewer3D/USER_ME/ModelSourceType**.  
+	![viewer-datasource](attachments/3d-viewer/viewer-datasource.jpg)  
 	* On the **Transport** tab,  make sure the **HttpEndpoint** is set to `@Viewer3D.HttpEndpoint` or `visualization`. 
+    ![viewer-transport](attachments/3d-viewer/viewer-transport.jpg)  
 	* On the **Appearance** tab, make sure the widget has a fixed height (for example, set Style to `height:600px`, or make sure height of its parent is fixed), otherwise this viewer will expand indefinitely.
 
 	In addition, the Viewer widget provides customization options for changing its behavior (configuring these properties is optional)
@@ -170,14 +176,15 @@ The core widgets can be used in the following ways:
 	 **Show navigation cube** determines if a navigation cube will appear at the top-tight corner of the viewer  
 	 **Show tooltip** determines if a tooltip will pop up when you click on the model part; this accepts a Boolean value of **false** or  **true**  
 	 **Automatically load parts** determines if the model part will be loaded into Viewer automatically; if set to **Yes**, the model will be automatically loaded as long as the Viewer receives the **Model ID** and **Model source type** values; if set to **No**, the model will only be loaded into the Viewer when triggered from the PS Tree part toggling, in this use case, you will need to add PS tree widget so you can trigger part loading by clicking on the PS tree.  
-
+    ![viewer-general](attachments/3d-viewer/viewer-general.jpg)  
     * On the **Event** tab:  
      **On selection change** - by binding a String type attribute to the **Selection** property, you can use this attribute as an input parameter to add action to trigger when selection changes on the viewer.  
 	 **On error**- by binding a String type attribute to the **Error** property, you can obtain the error message raised by viewer and add custom actions to trigger when error arises.  
 	 **On progress change** - by binding a String type  attribute to **Progress status** property, you can obtain the current model loading status.  By binding a Decimal type attribute to **Progress percentage** property, you can obtain the current model loading percentage. You can also add custom actions triggered by this change.  
 	 **On load** - by binding a Boolean type attribute to the **Loaded** property, you will be able to know if the product structure is loaded. You can also add custom actions triggered by this change.  
-
-	 3DViewer also exposes some APIs on viewer for you to invoke and implement custom logic that suits your need. For how to use the APIs and other details, please contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket against 3DViewer development team.
+    ![viewer-events](attachments/3d-viewer/viewer-events.jpg)  
+	 
+	 3DViewer also exposes some APIs on viewer for you to invoke and implement custom logic that suits your need. For how to use Viewer APIs and other details, please contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket against 3DViewer development team.
 
 #### 4.6.2 Panel Widgets
 
@@ -190,6 +197,7 @@ These are the widgets that have an operation panel that contains an interactive 
 | PMI tree       | Provides a hierarchical tree display of a model's product manufacturing information, model views, and design groups.                                                   |
 | Section view   | Enables creating a section cut on the model and provides a section view from various angles.                                                                           |
 | Markup builder | Enables creating 2D markup on a model and saving the annotated screenshot. Snapshots that contain 2D markup will be saved along with the model in Mendix file storage. |
+| Measurement    | Enables performing measurements on 3D models including measuring Distance, Angle, Line length, Radius, Area                                                            |
 
 Each panel widget should be placed in a **Container3D** widget. A **Viewer** widget with the right data source should also be in the same **Container3D** widget.
 
@@ -199,13 +207,19 @@ The panel widgets can be used in the following ways:
 	* **Expand all** determines if the model's product structure tree should be fully expanded at the initial load
 	* Use **Show search** to toggle a search bar that enables the end-user to enter a part name and search for the part in the PS Tree
 	* **Show lead structure** determines if the sub-part data should be displayed in the PS Tree
+![pstree-general](attachments/3d-viewer/pstree-general.jpg)  
 * **PS Tree Table** – compared to the **PS Tree** widget, this widget adds an additional configurable property **Column**, you can expand the table by adding columns and specifying the property to be displayed in this column. Example predefined properties are: Volume, Mass, Units, HasPMI, Density. If you want to display other properties other than the predefined properties in the list, you can also add other property by specifying valid property defined in the model.
-
+![pstreetable-generall](attachments/3d-viewer/pstreetable-general.jpg)  
 * **PMI tree** - On the **General** tab, the property **Expand all tree nodes** determines if all tree nodes are expanded by default. When set to `yes`, you will see a PMI tree fully expanded by default on this widget load; When set to `no`, PMI tree will not fully expand by default. 
+![pmitree-general](attachments/3d-viewer/pmitree-general.jpg)
 * **Section view** - Place it inside of a Container3D widget, a Viewer widget should be present in the same Container3D widget so you can add section plane on the model. No specific configuration is needed. With this widget, you can add, delete and clear sections planes to the model on your desired direction axis and clipping mode. For details on how Section View behaves in an app. Please see [Create 3D Section](#71-create-3d-section)
 * **Markup builder** - 
-	* On **General** tab, by setting property **Enable** to true or false, you can switch on and off the markup mode, when set to `true`, model will be locked to a 2D dimension and won't react to mouse rotate , when set to `false`, model will be unlocked and return to rotatable state;  another property is **Markup color**, it allows you to set color of markup annotation. Valid values are [CSS Legal color value](https://www.w3schools.com/CSSref/css_colors_legal.asp), for example, RGB value, predefined color names, hexadecimal color values.  
-	* On **Event** tab,  by binding a boolean type attribute to **Save** property, you will be able to obtain save status of the markup image after user click the Save button on the markup builder's panel, and add custom actions, such as show pop up message, to it. When the attribute values changes to `true`, it means the markup image associated with model is successfully saved in Mendix file storage; when the attribute value is `false`, it means the save is not successful.
+	* On **General** tab, by setting property **Enable** to true or false, you can switch on and off the markup mode, when set to `true`, model will be locked to a 2D dimension and won't react to mouse rotate , when set to `false`, model will be unlocked and return to rotatable state;  another property is **Markup color**, it allows you to set color of markup annotation. Valid values are [CSS Legal color value](https://www.w3schools.com/CSSref/css_colors_legal.asp), for example, RGB value, predefined color names, hexadecimal color values.
+    ![markup-general](attachments/3d-viewer/markup-general.jpg)
+	* On **Event** tab, by binding a boolean type attribute to **Save** property, you will be able to obtain save status of the markup image after user click the Save button on the markup builder's panel, and add custom actions, such as show pop up message, to it. When the attribute values changes to `true`, it means the markup image associated with model is successfully saved in Mendix file storage; when the attribute value is `false`, it means the save is not successful.
+    ![markup-events](attachments/3d-viewer/markup-events.jpg)
+    
+* **Measurement** - Place it inside of a Container3D widget, a Viewer widget should be present in the same Container3D widget so you can use measurement options provided in Measurement widget to perform measurement on the model. No specific configuration is needed. With this widget, you can add, delete and clear sections planes to the model on your desired direction axis and clipping mode. For details on how to perform measurement on a 3D model. Please see [Perform 3D Measurement](#72-perform-3d-measurement)
 
 #### 4.6.3 Toolbar widgets
 

@@ -28,7 +28,11 @@ This section starts with guidelines and best practice for registering data sourc
 
 The steps for updating a consumed OData service in Studio Pro for which a new version is available are described in the [Updating a Published OData Service in Studio Pro](#updating-service) section below.
 
-{{% alert type="info" %}}Every new version of a data source must be registered separately in the Catalog. {{% /alert %}}
+{{% alert type="info" %}}
+
+Every new version of a data source must be registered separately in the Catalog. 
+
+{{% /alert %}}
 
 ## 2 Best Practices for Registering Data Sources and Shared Datasets
 
@@ -58,7 +62,7 @@ Deployment [environments](/developerportal/deploy/environments) should be clearl
 
 The OData service that is published when an app is deployed is associated with the environment that the app is deployed to. The service endpoint is therefore a combination of the application environement URL and the relative path of service contract. This provides the link to the exposed datasets. 
 
-When exposing datasets through an OData service for use in other apps, it is important to inform users of the quality and reliability of the datasets that are available from that deployment. The deployment environment of the app (and the published data sources) provides a good indication of the data quality in combination with the **Environment Type**: **Production**, **Non-production**, and **Sandbox** (the Mendix free app environment).  
+When exposing datasets through an OData service for use in other apps, it is important to inform users of the quality and reliability of the datasets that are available from that deployment. The deployment environment of the app (and the published data sources) provides a good indication of the data quality in combination with the **Environment Type**: **Production**, **Non-production**, and **Sandbox** (the Mendix free app environment). 
 
 We recommend that apps sharing data should to be deployed to a reliable *production* environment where the data for the apps is valid, stable and reliably maintained. When apps are being developed, ensure that there is a representative set of data available in the test or development environments so that the services can be properly tested in the consuming apps. For example, in the case of an app for Human Resources, the developer should have representative test data with the different access levels to ensure that in consuming apps the correct data is available to users of differing access levels.
 
@@ -123,19 +127,31 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 
 	![](attachments/register/publish-association.png)
 
-8. Click **Yes** and the association for **Entity-2** is now updated to **1 association**:
+7. Click **Yes** and the association for **Entity-2** is now updated to **1 association**:
 
-	![](attachments/register/publish-association-2.png)
-	
-	{{% alert type="info" %}}When a specialized entity is published, in the published OData Service contract this will be a discrete entity that has all the attributes and associations of the generalization. Care has to be taken if the generalized entity (and its association) is also exposed in the same service. In this case, the association in the specialized entity that is (inherited from the generalization) should not be published as this will result in errors. The same association cannot be exposed for two different entities in the same service. In this case, it is recommended that the inherited association is not checked in the specialized entity.  {{% /alert %}}
+  ![](attachments/register/publish-association-2.png)
 
-9. Add a **Summary** and **Description** of the service In the **Properties** pane: 
+  {{% alert type="info" %}}
 
-	![](attachments/register/publish-service-description.png)
+  When a specialized entity is published, in the published OData Service contract this will be a discrete entity that has all the attributes and associations of the generalization. Care has to be taken if the generalized entity (and its association) is also exposed in the same service. In this case, the association in the specialized entity that is (inherited from the generalization) should not be published as this will result in errors. The same association cannot be exposed for two different entities in the same service. In this case, it is recommended that the inherited association is not checked in the specialized entity. 
 
-	{{% alert type="info" %}}The description will be included in the published service metadata file and displayed for the service in the Data Hub Catalog. If no description is available, then the **Summary** will be used.   {{% /alert %}}
+   {{% /alert %}}
 
-	{{% alert type="info" %}}If you are updating a service (with a new service version), you can provide a summary of the changes from the previous version in the description. You can copy and paste the description from the previous version of the service and edit this with the new details. For further details, see the [Updating a Published OData Service in Studio Pro](#updating-service) section below.   {{% /alert %}}
+8. Add a **Summary** and **Description** of the service In the **Properties** pane: 
+
+  ![](attachments/register/publish-service-description.png)
+
+  {{% alert type="info" %}}
+
+  The description will be included in the published service metadata file and displayed for the service in the Data Hub Catalog. If no description is available, then the **Summary** will be used.   
+
+  {{% /alert %}}
+
+  {{% alert type="info" %}}
+
+  If you are updating a service (with a new service version), you can provide a summary of the changes from the previous version in the description. You can copy and paste the description from the previous version of the service and edit this with the new details. For further details, see the [Updating a Published OData Service in Studio Pro](#updating-service) section below.   
+
+  {{% /alert %}}
 
 10. When the app is deployed with **Run**, the OData services defined for the app will automatically be registered in the Data Hub Catalog.
 
@@ -246,7 +262,7 @@ This section will take you through the steps to upload the metadata contract and
 
 If the connector for your business application is not shown, you can use the  option to register a **generic OData v4 service**:
 
- {{% image_container width="500" %}}![upload contract](attachments/register/register-data-source-odata-connector.png){{% /image_container %}}
+![upload contract](attachments/register/register-data-source-odata-connector.png)
 
 {{% alert type="info" %}}
 Each new version of previously registered data sources (services) deployed to a different endpoint have to be individually registered.

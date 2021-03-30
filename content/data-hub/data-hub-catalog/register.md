@@ -82,9 +82,7 @@ This section describes how to register entities from your Mendix app in the Data
 
 {{% alert type="info" %}}Mendix apps that are not hosted in the Mendix Cloud are not automatically registered in the Data Hub Catalog through the deployment pipeline. For example, if you have an app running on-premises or anywhere else outside the Mendix Cloud, there will not be any auto-registration. These services have to be registered using the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis). {{% /alert %}}
 
-{{% alert type="info" %}}
-A published OData service is an API to your Mendix app. Some apps may have several published services exposing different combinations of entities. In Studio Pro, it is good practice to group them in a separate folder under each [module](/refguide/modules) to make location and maintenance easier.
-{{% /alert %}}
+{{% alert type="info" %}} A published OData service is an API to your Mendix app. Some apps may have several published services exposing different combinations of entities. In Studio Pro, it is good practice to group them in a separate folder under each [module](/refguide/modules) to make location and maintenance easier. {{% /alert %}}
 
 1.  In the [domain model](/refguide/domain-model), right-click the entity to be exposed and from the menu select **Expose as OData resource**:
 
@@ -103,7 +101,7 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 		* **Select** – click to display list of entities available in the module and select another entity to expose
 		* **Show** – click to see the entity in the domain model
 * **Exposed attributes and associations** – click **select** to view and select the attributes and associations to expose for this entity
-	
+
 	* **Exposed entity name** – you can customize the name of the entity in the OData service
 * **Exposed set name** – the name of the dataset associated with the entity that is exposed
 
@@ -136,7 +134,7 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 	![](attachments/register/publish-service-description.png)
 
 	{{% alert type="info" %}}  The description will be included in the published service metadata file and displayed for the service in the Data Hub Catalog. If no description is available, then the **Summary** will be used.  {{% /alert %}}
-	
+
 	{{% alert type="info" %}}If you are updating a service (with a new service version), you can provide a summary of the changes from the previous version in the description. You can copy and paste the description from the previous version of the service and edit this with the new details. For further details, see the [Updating a Published OData Service in Studio Pro](#updating-service) section below.  {{% /alert %}}
 
 10. When the app is deployed with **Run**, the OData services defined for the app will automatically be registered in the Data Hub Catalog.
@@ -147,9 +145,7 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 
 The OData service screen contains all the details that will be included in the OData service contract or *$metadata* file that is registered in the Data Hub Catalog. Entities can be added and removed and changes to attributes and associations for included entities can also be made in this document.
 
-{{% alert type="info" %}}
-The **Version** number that is assigned to a service is significant – it forms part of the service endpoint. This enables several versions of the same OData service to be registered in the Data Hub Catalog at the same time. A connection to an entity by a consuming app will be through the unique endpoint URL and therefore to the version of the service accessing the datasets of the app deployed to the specific environment.
-{{% /alert %}}
+{{% alert type="info" %}} The **Version** number that is assigned to a service is significant – it forms part of the service endpoint. This enables several versions of the same OData service to be registered in the Data Hub Catalog at the same time. A connection to an entity by a consuming app will be through the unique endpoint URL and therefore to the version of the service accessing the datasets of the app deployed to the specific environment. {{% /alert %}}
 
 ### 4.1 General Tab
 

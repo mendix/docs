@@ -13,7 +13,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
-### March 29th, 2021
+### March 30th, 2021
 
 * We have implemented various visual changes to the user interface of the Developer Portal.
 

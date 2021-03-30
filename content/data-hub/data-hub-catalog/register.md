@@ -99,7 +99,7 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 4. The OData service document is added to the module, and the **Edit published resource** dialog box is displayed for the selected entity. The information in this will form the metadata definition for the entity:
 
 	![](attachments/register/edit-published-resource-box.png)
-
+	
 	* **Entity** – the name and module of the entity
 		* **Select** – click to display list of entities available in the module and select another entity to expose
 		* **Show** – click to see the entity in the domain model
@@ -119,39 +119,28 @@ A published OData service is an API to your Mendix app. Some apps may have sever
 5. Click **OK** to see the [OData Service](#odata-service-general) page. If you want to publish several entities in the same service, add them here by clicking **Add** for the **Resources**.
 
 6. If you add an entity that is associated with another entity that is exposed in the same OData service, you will be asked whether you want to include the association in the service definition. Click **Yes** and the association between the two entities will be included under **Attributes and associations**.
-   
 
 	In the example illustrated below, you will see that for **Entity_2** under **Attributes and associations** there is currently **0 association**. 
 	
 	When **Entity_3** is added to the service which has an association to **Entity_2**, you will see that **Entity_3** has listed that it has **1 association** and there is a further prompt **Would you like to publish the other side of this association as well** with the name of the association showing the entities being connected.
-
+	
 	![](attachments/register/publish-association.png)
 
 7. Click **Yes** and the association for **Entity-2** is now updated to **1 association**:
 
-  ![](attachments/register/publish-association-2.png)
-
-  {{% alert type="info" %}}
-
-  When a specialized entity is published, in the published OData Service contract this will be a discrete entity that has all the attributes and associations of the generalization. Care has to be taken if the generalized entity (and its association) is also exposed in the same service. In this case, the association in the specialized entity that is (inherited from the generalization) should not be published as this will result in errors. The same association cannot be exposed for two different entities in the same service. In this case, it is recommended that the inherited association is not checked in the specialized entity. 
-
-   {{% /alert %}}
+	![](attachments/register/publish-association-2.png)
+	
+	{{% alert type="info" %}} When a specialized entity is published, in the published OData Service contract this will be a discrete entity that has all the attributes and associations of the generalization. Care has to be taken if the generalized entity (and its association) is also exposed in the same service. In this case, the association in the specialized entity that is (inherited from the generalization) should not be published as this will result in errors. The same association cannot be exposed for two different entities in the same service. In this case, it is recommended that the inherited association is not checked in the specialized entity.    {{% /alert %}}
 
 8. Add a **Summary** and **Description** of the service In the **Properties** pane: 
 
-  ![](attachments/register/publish-service-description.png)
+	![](attachments/register/publish-service-description.png)
+	
+	{{% alert type="info" %}}  The description will be included in the published service metadata file and displayed for the service in the Data Hub Catalog. If no description is available, then the **Summary** will be used.  {{% /alert %}}
+	
+	{{% alert type="info" %}}
 
-  {{% alert type="info" %}}
-
-  The description will be included in the published service metadata file and displayed for the service in the Data Hub Catalog. If no description is available, then the **Summary** will be used.   
-
-  {{% /alert %}}
-
-  {{% alert type="info" %}}
-
-  If you are updating a service (with a new service version), you can provide a summary of the changes from the previous version in the description. You can copy and paste the description from the previous version of the service and edit this with the new details. For further details, see the [Updating a Published OData Service in Studio Pro](#updating-service) section below.   
-
-  {{% /alert %}}
+  If you are updating a service (with a new service version), you can provide a summary of the changes from the previous version in the description. You can copy and paste the description from the previous version of the service and edit this with the new details. For further details, see the [Updating a Published OData Service in Studio Pro](#updating-service) section below.  {{% /alert %}}
 
 10. When the app is deployed with **Run**, the OData services defined for the app will automatically be registered in the Data Hub Catalog.
 
@@ -188,7 +177,7 @@ The **General** tab contains all the details for the published metadata and the 
 
 	You can specify which attributes you want to include for the service, customize the **Exposed names** of the attributes and associations for the OData service.
 
-	{{% alert type="info" %}}If you do not *explicitly* choose to expose the association of two associated entities, then this association will not be registered for the entities in the service.
+	{{% alert type="info" %}} If you do not *explicitly* choose to expose the association of two associated entities, then this association will not be registered for the entities in the service.
 {{% /alert %}}
 
 For more detail, see [Published OData Resource](/refguide/published-odata-resource).
@@ -306,11 +295,11 @@ In the **Contract** screen upload the file of the data source (the OData v4 serv
 
 {{% alert type="info" %}}The OData v4 metadata contract file must be in *.xml* or *.zip* format. when the contract is made up of multiple files.{{% /alert %}}
 
- {{% image_container width="400" %}}![upload contract](attachments/register/register-data-source-contract.png){{% /image_container %}}
+{{% image_container width="400" %}}![upload contract](attachments/register/register-data-source-contract.png){{% /image_container %}}
 
 The selected file is uploaded and verified. When successfully uploaded, you can click the **x** if you want to upload an alternative file or click **Go to next step**.
 
- {{% image_container width="400" %}}![upload contract](attachments/register/register-data-source-validate.png){{% /image_container %}}
+{{% image_container width="400" %}}![upload contract](attachments/register/register-data-source-validate.png){{% /image_container %}}
 
 #### 6.2.3 Details of the Data Source {#data-source}
 
@@ -324,7 +313,7 @@ In the **Details of Data Source** screen specify the following details:
 
 	{{% alert type="info" %}}When registering another version of an already registered service which is deployed to a different endpoint, make sure that the version numbering indicates the degree of change between versions. For more information see [Semantic numbering](/refguide/consumed-odata-service#semantic).{{% /alert %}}
   
-* **Data Source Releative Path** – the path of the OData service contract relative to the *environment URL of the application* that is specified at the [Enviroment](#environment) stage.
+* **Data Source Relative Path** – the path of the OData service contract relative to the *environment URL of the application* that is specified at the  stage.
 
 * **Catalog Description** – a description of the service that is displayed for the data source. 
 
@@ -360,7 +349,7 @@ If the application is already registered in the Catalog – for example, as the 
 
 Click **Select application** and select from a list of all the currently registered apps originating from the *same business application*. For each app the **Technical Owner** will be shown in parentheses. In the example shown below when registering a SAP data source, the list of registered SAP applications currently registered is displayed:
 
- {{% image_container width="400" %}}![](attachments/register/register-data-source-exist-app.png){{% /image_container %}}
+{{% image_container width="400" %}}![](attachments/register/register-data-source-exist-app.png){{% /image_container %}}
 
 The **Technical Owner** of the app you have selected is displayed.
 
@@ -368,7 +357,7 @@ The **Technical Owner** of the app you have selected is displayed.
 
 If the application for your data source is not registered in the catalog, click **Register a new application** and specify the following information:
 
- {{% image_container width="400" %}}![manual register application](attachments/register/register-data-source-new-app.png){{% /image_container %}}
+{{% image_container width="400" %}}![manual register application](attachments/register/register-data-source-new-app.png){{% /image_container %}}
 
 * **Application Name** – the name of the application as it should appear in the details page of the service.
 
@@ -398,7 +387,7 @@ Click **Select environment** and select the environment from the drop-down list.
 
 If the environment is not registered in the Catalog click **Register a new environment** and provide the following information: 
 
- {{% image_container width="400" %}}![register new environment](attachments/register/register-data-source-new-env.png){{% /image_container %}}
+{{% image_container width="400" %}}![register new environment](attachments/register/register-data-source-new-env.png){{% /image_container %}}
 
 * **Environment Name** – the name of the environment to be displayed in the Catalog.
 * **Environment Location** – the URL of the environment.

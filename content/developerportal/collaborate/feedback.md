@@ -2,13 +2,12 @@
 title: "Feedback Management"
 category: "Collaboration Tools"
 description: "Describes how to manage feedback on your Mendix app in the Developer Portal."
-menu_order: 40
+menu_order: 60
 tags: ["Feedback","Developer Portal", "feedback widget"]
 ---
 
 ## 1 Introduction
 
-On the **Feedback** page of the Developer Portal, you can view and manage the feedback that has been submitted about an app.
 
 ![](attachments/feedback/feedback.png)
 
@@ -56,7 +55,7 @@ These are the general feedback actions available on all the tabs of the **Feedba
 
 Clicking on the title of a feedback item or on **Details** opens the item's details page:
 
-![](attachments/feedback/feedbacklist.jpg)
+![](attachments/feedback/feedback-details.jpg)
 
 You can perform various actions for reviewing and processing a feedback item on this page. These actions are described below.
 

@@ -1,7 +1,7 @@
 ---
 title: "Team Server Overview"
-category: "Development"
-menu_order: 20
+category: "Collaboration Tools"
+menu_order: 80
 description: "Describes the overview of Team Server revisions and commits."
 tags: ["Studio Pro", "Team Server", "Developer Portal", "commit", "branch"]
 aliases:

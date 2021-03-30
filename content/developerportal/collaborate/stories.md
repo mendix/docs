@@ -1,7 +1,7 @@
 ---
 title: "Stories"
 category: "Collaboration Tools"
-menu_order: 30
+menu_order: 20
 description: "Describes how to manage the Sprints and stories for your apps."
 tags: ["Stories", "Sprint", "Developer Portal"]
 ---
@@ -16,7 +16,7 @@ By adding your Sprints to Mendix, you will have a clear overview of your tasks a
 You can also manage the progress of tasks and Sprints from within Mendix Studio Pro via the [Stories pane](/refguide/stories-pane).
 {{% /alert %}}
 
-![](attachments/stories/stories.jpg)
+![](attachments/stories/stories.png)
 
 ## 2 Main Actions
 

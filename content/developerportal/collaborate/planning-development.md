@@ -1,6 +1,6 @@
 ---
 title: "Plan App Development"
-category: "Development"
+category: "Collaboration Tools"
 menu_order: 30
 description: "Describes where you can plan and monitor your app development."
 tags: ["Developer Portal", "Planning", "Develop"]

@@ -20,7 +20,7 @@ This how-to explains how to migrate your app from a Mendix Cloud v3 node to a Me
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Ensure that your app is on a supported version of Mendix, that is **Mendix version 6.0 or above**, otherwise the migration will fail – see [Moving from Modeler Version 5 to 6](/refguide6/moving-from-5-to-6) for help if your app is on a version of Mendix below 6.0
+* Ensure that your app is on a supported version of Mendix, that is **Mendix version 6.0 or above**, otherwise the migration will fail
 * Have a [Mendix Cloud](mendix-cloud-deploy) v4 node available (to request a licensed v4 Cloud Node, contact your Customer Success Manager (CSM))
 * Have the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) role for both your existing v3 and available v4 Cloud Nodes
 * Create two new temporary Free Apps without Free App environments – instructions for unlinking a Free App from its environment are here: [Licensing Mendix Cloud Apps](licensing-apps#unlink)

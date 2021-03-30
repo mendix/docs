@@ -19,23 +19,23 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We released Mendix Dock, our new platform navigation solution. These are the main changes to the navigation:
-    - The switcher on the top left provides access to different parts of the Developer Portal (MxHome aka My Apps, Studio, Studio Pro, Cloud, Control Center, Marketplace, Data Hub, Academy, Docs, Forum and Community)
-    - Top bar contains subnavigation items. For example in Community those are: Forum, Blogs, Leaderboards, MVP Program, People, Partner and Shop)
-    - In the profile menu, there is an option to switch off the new navigation, which will be available for a limited amount of time
-    - The + button in the top right is there for creating a new app from anywhere in the platform
-* We improved the search experience and added a full page for search results which can be accessed by clicking on View Search Results Page in the search dropdown or pressing ENTER after tying a search query
-* We changed [My Apps](/developerportal/apps-list/#my-apps) and moved your favorite apps to its own tab page. We also renamed them to Pinned apps. Pinned apps will become the default tab, making it easy to quickly access the apps you care about the most.
-* We made some changes to the look and feel of our Developer Portal. The biggest changes are the following:
-    - We removed the grey background with white card content in all pages.
-    - We updated the look of various navigation items (Planning, Feedback, Team Server, General Settings) to our new design.
-    - We replaced the breadcrumbs in the top left corner of the project navigation with the app name and icon
-    - We reshuffled the navigation items in the [App Buzz](/developerportal/collaborate/buzz#app-buzz) to a more logical order, based on our research insights. Now there are two main sections: Collaborate and Deploy.
-* You asked - we listened: we added new label colors for labels in Stories. There are now 15 different colors to choose from, specifically selectedwith accessibility in mind (Royal Blue, Sky Blue, Gold, Green, Violet, Indigo, Red, Navy Blue, Light Blue, Yellow, Pale Green, Pink, Light Grey, Grey and Midnight).
+* We have released our new [platform navigation](/developerportal/index) solution with these main features:
+	* The **Switcher** on the left side of the top bar provides access to different parts of the Mendix Platform.
+	* The top bar contains sub-navigation items (for example, **Company Buzz**).
+	* Clicking the **+** button on the right side of the top bar will create a new app from anywhere in the platform.
+    	* Under your avatar on the right side of the top bar, there is an option to switch off the new navigation, which will be available for a limited amount of time.
+* We improved the search experience and added a full page of search results that can be accessed by clicking **View Search Results Page** at the bottom of the search drop-down menu or by pressing <kbd>Enter</kbd> after typing a search query
+* We changed the [My Apps](/developerportal/apps-list) page and moved your favorite apps to the **Pinned** tab. This is now the default tab, making it easy to quickly access the apps you care about the most.
+* You asked and we listened: We added new label colors for labels in [Stories](/developerportal/collaborate/stories). There are now 15 different colors to choose from, specifically selected with accessibility in mind.
+* We made some big changes to the look and feel of our Developer Portal:
+	* We reshuffled the navigation items in the [App Buzz](/developerportal/collaborate/buzz#app-buzz) to a more logical order, based on our research insights. Now, there are two main sections: **Collaborate** and **Deploy**.
+	* We updated the look of various navigation items (**Feedback**, **Planning**, **Team Server**, **General**) to our new design.
+	* We removed the grey background with white card content in all pages.
+	* We replaced the breadcrumbs in the top left corner of the project navigation with the app name and icon.
 
 #### Fixes
 
-* We fixed an issue where sending feedback from Studio Pro would result in an error (Tickets 113634, 115031)
+* We fixed an issue where sending feedback from Studio Pro resulted in an error. (Tickets 113634, 115031)
 
 ### March 26th, 2021
 

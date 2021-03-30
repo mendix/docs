@@ -48,8 +48,6 @@ The platform can handle a load balancer in front of the platform. The only addit
 
 When updating the application, it is best to stop every instance. If the database structure has changed and a single instance updates the database structure, it can cause some strange behavior on all the running instances, since they are still expecting the old database structure.
 
-For more information, see [How to Configure High Availability](high-availability).
-
 ## 4 Read More
 
 * [How to Use a Security Checklist for Your On-Premises Installation](security-checklist-for-your-on-premises-installation)

@@ -154,11 +154,11 @@ Once you have completed the necessary steps above, finish modifying existing fil
 
 	![](attachments/atlas-mig/2-rename.png)
 
-2.  Download the **Atlas Core** module from the Marketplace and replace the existing *Atlas_UI_Resources* renamed to *Atlas_Core*:
+2.  Download the [Atlas Core module](https://marketplace.mendix.com/link/component/117187) from the Marketplace and replace the existing *Atlas_UI_Resources* renamed to *Atlas_Core*:
 
 	![](attachments/atlas-mig/3-import.png)
 
-{{% todo %}}[add atlas core link and files later, and add this text to step 2 For internal testing, download **Atlas_Core** file below this step]{{% /todo %}}
+{{% todo %}}[add atlas core files later, and add this text to step 2 For internal testing, download **Atlas_Core** file below this step]{{% /todo %}}
 
 ## 3 Expected Issues After Upgrading to Atlas 3
 

@@ -41,7 +41,7 @@ Our UI library is fully integrated into Mendix Studio. After choosing a navigati
 
 ## 4 Default Look and Feel
 
-Mendix apps contain a default look which is part of the [Atlas Core](https://marketplace.mendix.com/link/component/104730) module. This offers the default look (styling and design properties) and feel for all the platform supported widgets and is the base for the designs of Mendix app. Check out the look and feel on the Atlas Design System website.
+Mendix apps contain a default look which is part of the [Atlas Core module](https://marketplace.mendix.com/link/component/117187). This offers the default look (styling and design properties) and feel for all the platform supported widgets and is the base for the designs of Mendix app. Check out the look and feel on the Atlas Design System website.
 
 {{% todo %}}[Atlas Design System website: https://atlasdesignsystem.mendixcloud.com]{{% /todo %}}
 

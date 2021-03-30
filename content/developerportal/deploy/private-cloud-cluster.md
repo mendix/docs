@@ -30,7 +30,7 @@ To create a cluster in your OpenShift context, you need the following:
 
 ### 3.1 Creating a Cluster
 
-1. Click **Cloud Settings** on the **Settings** page of your Mendix app.
+1. Click **Cloud Settings** on the **General Settings** page of your Mendix app.
     
     ![](attachments/private-cloud-cluster/image2.png)
 

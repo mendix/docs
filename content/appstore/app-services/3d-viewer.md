@@ -15,16 +15,16 @@ This app service does the heavy-lifting for you so you do not have to build a 3D
 
 Here is an overview of what the 3DViewer contains:
 
-| Category                                   | Name                                                                                                                                                                                                                                                                                      |
-| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Predefined Entity](#41-predefined-entity) | ModelDocument, Pagination, Markup, MxChildDocument, MxModelDocument                                                                                                                                                                                                                       |
-| [Constants](#42-constants)                 | HttpEndpoint, ModelSourceType                                                                                                                                                                                                                                                             |
-| [Nanoflow](#44-nanoflow)                   | GetModelListFromMendix, GetMarkupsFromMendix                                                                                                                                                                                                                                              |
-| [Microflow](#43-microflow)                 | DeleteModelFromMendix, DownloadMarkup                                                                                                                                                                                                                                                     |
-| [Java Action](#44-java-action)             | VisServerAction                                                                                                                                                                                                                                                                           |
-| [Widgets](#55-widgets)                     | Container3D, Markup builder, PMI tree, PS tree,  PS tree table, Section view, Toolbar item camera mode,Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer |
+| Category                                   | Name                                                                                                                                                                                                                                                                                                  |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Predefined Entity](#41-predefined-entity) | ModelDocument, Pagination, Markup, MxChildDocument, MxModelDocument                                                                                                                                                                                                                                   |
+| [Constants](#42-constants)                 | HttpEndpoint, ModelSourceType                                                                                                                                                                                                                                                                         |
+| [Nanoflow](#44-nanoflow)                   | GetModelListFromMendix, GetMarkupsFromMendix                                                                                                                                                                                                                                                          |
+| [Microflow](#43-microflow)                 | DeleteModelFromMendix, DownloadMarkup                                                                                                                                                                                                                                                                 |
+| [Java Action](#44-java-action)             | VisServerAction                                                                                                                                                                                                                                                                                       |
+| [Widgets](#55-widgets)                     | Container3D, Markup builder, PMI tree, PS tree, PS tree table, Section view, Toolbar item camera mode,Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer, Measurement |
 
-In most cases, you will only need what are contained in **USE_ME** folder.The  content in the **Internal** folder is for internal use only and you will not need them.
+In most cases, you will only need what are contained in **USE_ME** folder. The content in the **Internal** folder is for internal use only and you will not need them.
 
 ### 1.1 Typical Use Cases
 
@@ -46,6 +46,7 @@ This app service enables you to do the following:
 * Create 3D cross-sections
 * Examine your model from preset viewing angles
 * Create 2D markup on model and save snapshot
+* Perform 3D measurement on distance, angle, area, radius and and length
   
 ### 1.3 Limitations {#limitations}
 

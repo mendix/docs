@@ -12,15 +12,15 @@ The [Developer Portal](http://sprintr.home.mendix.com) is one of the three key c
 
 The Developer Portal also offers open, well-defined APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
 
-## 2 Navigation
+## 2 Navigation {#navigation}
 
 To create a new app click **Create App**, which will open a page where you can choose a starting pointing for your new app:
 
 ![](attachments/create-app.png)
 
-On the right side of the toolbar, you can search and access your [Mendix Profile](/developerportal/mendix-profile/). You can also click the **+** icon to create a new app.
+On the right side of the top bar, you can search and access your [Mendix Profile](/developerportal/mendix-profile/). You can also click the **+** icon to create a new app.
 
-On the left side of the toolbar, you open an access menu by clicking the **Switch-to** menu:
+On the left side of the top bar, you open an access menu by clicking the **Switch-to** menu:
 
 {{% image_container width="300" %}}
 ![](attachments/switcher.png)

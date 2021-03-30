@@ -10,13 +10,13 @@ The **Apps** menu item shows you a summary of your apps and, additionally, allow
 
 You get to the apps list by clicking **Apps** in the top menu bar of the Developer Portal and choosing between the following options:
 
-![Page menu with My Apps, My Company's Apps, Nodes](attachments/apps-page-menu.jpg)
+![](attachments/developer-portal-navbar.png)
 
 The sections below describe these options:
 
 * [My Apps](#my-apps)
 * [My Company's Apps](#my-company-apps)
-* [Nodes](#nodes)
+* [My Company's Buzz](#my-company-buzz)
 
 For details on the **Cluster Manager** option, see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster).
 
@@ -24,7 +24,7 @@ For details on the **Cluster Manager** option, see [Creating a Private Cloud Clu
 
 You will see all the apps of which you are an [App Team](../collaborate/team) member:
 
-![Apps tiles](attachments/apps-tiles.jpg)
+![Apps tiles](attachments/myapps-view.png)
 
 Click an app tile to see the app [Buzz](/developerportal/collaborate/buzz).
 
@@ -47,19 +47,15 @@ The actions available depend on the app selected:
 * **Edit in Mendix Studio Pro**
 * **Delete App** – allows you to delete your app, provided you are the only team member (you will be warned of the consequences and asked for confirmation before the app is deleted)
 
-### 2.3 Go to Environments {#environments}
+### 2.4 Pinning an App {#pinning}
 
-To go to the [environments](/developerportal/deploy/environments) of your app, click the cloud icon in the bottom-right corner of the app tile.
+To pin an app, click the pin icon so that it turns black in the bottom-left corner of the app's tile:
 
-### 2.4 Favoriting an App {#favoriting}
+![](attachments/pin.jpg)
 
-To favorite an app, click the star so that it turns yellow in the top-left corner of the app's tile:
+To see all your pinned apps, click the **Pinned** tab at the top of My Apps page.
 
-![](attachments/favoriting.jpg)
-
-To see all your favorite apps, click the star toggle to the right of the [view drop-down menu](#view):
-
-![](attachments/favorites-toggle.jpg)
+![](attachments/pinned-apps.jpg)
 
 ## 3 My Company's Apps {#my-company-apps}
 
@@ -79,7 +75,7 @@ If you click an app for which you are not an App Team member, you will see the a
 ![Example of app details](attachments/app-details.png)
 {{% /image_container %}}
 
-## 4 Nodes {#nodes}
+## 3 My Company's Buzz {#my-company-buzz}
 
 This shows a list of all the licensed Mendix Cloud nodes to which you have access:
 

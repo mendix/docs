@@ -1,7 +1,7 @@
 ---
 title: "General Settings"
 category: "Collaboration Tools"
-menu_order: 100
+menu_order: 110
 description: "Describes general settings of your app."
 tags: ["Settings", "App", "Developer Portal"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

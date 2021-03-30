@@ -22,7 +22,7 @@ To upgrade to Atlas 3, please do the steps below as they apply to your use case.
 If you have made modifications to your `Atlas_UI_Resources` module, you must do the following:
 
 1. Rename your **theme** directory. We suggest naming it *theme_atlas2*.
-2. Download this [theme.zip](https://www.dropbox.com/s/guffms4u5idx3us/theme.zip?dl=1) and extract it into the root of your Mendix project folder.
+2. Download this [theme.zip](https://www.dropbox.com/s/guffms4u5idx3us/theme.zip?dl=1) and extract it into the root of your Mendix project folder. Ensure the folder structure is **Mendix project root**, then **theme**, then **web** and **native**.
 3. If you have made any modifications to Atlas 2 in your Mendix project, the following actions need to be taken (otherwise you can skip this step):
 
 | Section    | Atlas 2 Context                                              | Action Required                                              |

@@ -163,7 +163,7 @@ Once you have completed the necessary steps above, finish modifying existing fil
 ## 3 Expected Issues After Upgrading to Atlas 3
 
 When you have completed the sections above, you may have errors in your error list:
-*  For errors relating to renamed design properties, right-click a related error and click **Updated all renamed design properties in project**:
+*   For errors relating to renamed design properties, right-click a related error and click **Updated all renamed design properties in project**:
 
 	![](attachments/atlas-mig/4-errors.png)
 	

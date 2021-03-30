@@ -118,23 +118,23 @@ This section describes how to register entities from your Mendix app in the Data
 6. If you add an entity that is associated with another entity that is exposed in the same OData service, you will be asked whether you want to include the association in the service definition. Click **Yes** and the association between the two entities will be included under **Attributes and associations**.
 
 	In the example illustrated below, you will see that for **Entity_2** under **Attributes and associations** there is currently **0 association**. 
-
+	
 	When **Entity_3** is added to the service which has an association to **Entity_2**, you will see that **Entity_3** has listed that it has **1 association** and there is a further prompt **Would you like to publish the other side of this association as well** with the name of the association showing the entities being connected.
-
+	
 	![](attachments/register/publish-association.png)
 
 7. Click **Yes** and the association for **Entity-2** is now updated to **1 association**:
 
 	![](attachments/register/publish-association-2.png)
-
+	
 	{{% alert type="info" %}} When a specialized entity is published, in the published OData Service contract this will be a discrete entity that has all the attributes and associations of the generalization. Care has to be taken if the generalized entity (and its association) is also exposed in the same service. In this case, the association in the specialized entity that is (inherited from the generalization) should not be published as this will result in errors. The same association cannot be exposed for two different entities in the same service. In this case, it is recommended that the inherited association is not checked in the specialized entity.    {{% /alert %}}
 
 8. Add a **Summary** and **Description** of the service In the **Properties** pane: 
 
 	![](attachments/register/publish-service-description.png)
-
+	
 	{{% alert type="info" %}}  The description will be included in the published service metadata file and displayed for the service in the Data Hub Catalog. If no description is available, then the **Summary** will be used.  {{% /alert %}}
-
+	
 	{{% alert type="info" %}}If you are updating a service (with a new service version), you can provide a summary of the changes from the previous version in the description. You can copy and paste the description from the previous version of the service and edit this with the new details. For further details, see the [Updating a Published OData Service in Studio Pro](#updating-service) section below.  {{% /alert %}}
 
 10. When the app is deployed with **Run**, the OData services defined for the app will automatically be registered in the Data Hub Catalog.

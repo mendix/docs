@@ -19,12 +19,10 @@ Before you start the upgrading process, it may help if you consult the folder st
 
 To upgrade to Atlas 3, please do the steps below as they apply to your use case. If you have not made any modifications to your `Atlas_UI_Resources` module, you can skip this section. Modifications include changes to pages, layouts, design properties and custom styles added to the `Atlas_UI_Resources` module.
 
-{{% todo %}}[add archive doc under step 2 below]{{% /todo %}}
-
 If you have made modifications to your `Atlas_UI_Resources` module, you must do the following:
 
 1. Rename your **theme** directory. We suggest naming it *theme_atlas2*.
-2. Download this  **theme.zip** and extract it into the root of your Mendix project folder.
+2. Download this [theme.zip](https://www.dropbox.com/s/guffms4u5idx3us/theme.zip?dl=1) and extract it into the root of your Mendix project folder. Ensure the folder structure is **Mendix project root**, then **theme**, then **web** and **native**.
 3. If you have made any modifications to Atlas 2 in your Mendix project, the following actions need to be taken (otherwise you can skip this step):
 
 | Section    | Atlas 2 Context                                              | Action Required                                              |
@@ -192,6 +190,12 @@ When you have completed the sections above, you may have errors in your error li
 *  If you have **Design property X is not supported by your theme** errors, it either means a design property has been removed in Atlas 3 or you need to add your own design properties to the new file structure as instructed in the [Fixing User-Defined Design Properties](#user-design-props) section above. To suppress the error, right-click the error, then select **Remove property**. To check how to extend your design properties, please follow [How to Extend Design Properties](/howto/front-end/extend-design-properties).
 
 	![](attachments/atlas-mig/8-errors-background.png)
+
+* If you have errors saying **Unknown option X for design property**, it means the design property option has been removed in Atlas 3. Use one of the following methods to solve the error: 
+	* Set the design property to its default option: right-click the error, then select **Set property X to default**
+	* Search for the design property option's CSS class in *theme_atlas2/settings.json* for web and *theme_atlas2/settings-native.json* for native, then add it to the applicable [widget's style property](common-widget-properties#style)  
+
+	![](attachments/atlas-mig/9-set-prop.png)
 
 * If you have errors saying **Nanoflow commons/Native mobile resources are not compatible** get the new major versions from **Marketplace**.
 

@@ -42,7 +42,7 @@ To create a cluster in your OpenShift context, you need the following:
     
     ![](attachments/private-cloud-cluster/image4.png)
 
-4. Click the menu button in the Developer Portal and choose **Cloud**
+4. Click the **Switch-to** menu in the Developer Portal and choose **Cloud**.
 
     ![](attachments/private-cloud-cluster/go-to-nodes-page.png)
 

@@ -26,7 +26,7 @@ Workflows is a visual way of expressing application logic. A workflow looks like
 
 ## 2 Workflow App Template
 
-You can use a workflow-specific app template **Approval App** that is a starting point for using workflows. You can configure an approval request form for end-users based on which the app is be created. It contains preconfigured elements, such as dashboards, admin pages, dashboards, and a workflow that you can afterwards customize even more. 
+You can use workflow-specific app templates as a starting point for using workflows. For example, you can configure an approval request form for end-users based on which the app is be created. It contains preconfigured elements, such as dashboards, admin pages, dashboards, and a workflow that you can afterwards customize even more. You can discover these templates when creating a new app.
 
 ## 3 Performing Basic Functions
 

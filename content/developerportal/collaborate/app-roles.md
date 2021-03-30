@@ -43,7 +43,7 @@ These are the predefined App Team roles:
 
 Mendix Admins can edit and create new team roles within the company in [Control Center](../control-center/).
 
-As a Scrum Master, you can edit roles for the specific app of which you are the Scrum Master by selecting **Team** > **Manage Team** (which will take you to the **App Team** tab of the **Settings** > **Security** page), clicking **Role settings,** then making your edits by clicking **Edit** or clicking **New role** to create a custom new App Team role for that app.
+As a Scrum Master, you can edit roles for the specific app of which you are the Scrum Master by selecting **Team** > **Manage Team** (which will take you to the **App Team** tab of the **Security** page), clicking **Role settings,** then making your edits by clicking **Edit** or clicking **New role** to create a custom new App Team role for that app.
 
 ![](attachments/app-roles/app-roles-edit.png)
 
@@ -62,7 +62,7 @@ To change the App Contact, you need to have a **Scrum Master** role or possess t
 Change the App Contact by following these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com), click **Apps** in the top navigation panel, and select the app for which you want to change the App Contact.
-2. Click **General** under the **Settings** category.
+2. Click **General Settings**.
 3.  Click **Edit App Info** in the top-right corner.
 
 	{{% image_container width="500" %}}![](attachments/app-roles/change-appcontact.png)
@@ -110,7 +110,7 @@ It is currently not possible to select more than one Technical Contact in the Me
 If you are the current Technical Contact for an app, make another App Team member the Technical Contact by following these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com), click **Apps** in the top navigation panel, and select the app for which you want to change the Technical Contact.
-2. Click **Security** under the **Settings** category.
+2. Click **Collaborate** > **Security** category.
 3. Select the **Node Permissions** tab.
 4.  Below the name of the new Technical Contact, click **Change to Technical Contact**. The Technical Contact will be changed for all environments, and the change will be automatically saved.
 

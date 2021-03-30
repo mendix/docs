@@ -82,16 +82,17 @@ You need to set this microflow as the after-startup step via **Project Settings*
 
 ![modeldocument](attachments/3d-viewer/modeldocument.jpg)
 
-| Attribute    | Description                                                                                                                   |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| ModelId      | A unique string to identify a model.                                                                                          |
-| ModelName    | The file name.                                                                                                                |
-| Source       | Indicates where the model is stored. 3D Viewer can visualize a model from the **Mendix** source or the **Teamcenter** source. |
-| Author       | Indicates the author of the model.                                                                                            |
-| CreationDate | When the model was uploaded and stored in Mendix file storage.                                                                |
-| FileSize     | The size of the model.                                                                                                        |
-| FileType     | The 3D model format. Currently only the JT format is supported.                                                               |
-| ErrorReason  | Indicates why an error occurs when loading a model.                                                                           |
+| Attribute    | Description                                                                                                                                                                                                                                                               |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ModelId      | A unique string to identify a model.                                                                                                                                                                                                                                      |
+| ModelName    | Name of a model.                                                                                                                                                                                                                                                          |
+| Source       | Indicates where the model is from. Currently it has two values:**Mendix** and **Teamcenter**. When the source is **Mendix**, it indicates the model is from Mendix file storage, when the source is **Teamcenter**, it indicates the model is from a Teamcenter instance. |
+| Author       | Indicates the author of the model.                                                                                                                                                                                                                                        |
+| CreationDate | For models stored in Mendix file storage, the **CreationDate** corresponds to the time the JT model is first uploaded to the file storage. For models stored in Teamcenter, the **CreationDate** indicates the creation date of this model revision.                      |
+| FileSize     | The size of the model in Byte.                                                                                                                                                                                                                                            |
+| FileType     | The 3D model format. Currently only the JT format is supported.                                                                                                                                                                                                           |
+| Status       | Used specifically for models uploaded and stored in Mendix file storage. The **Status** has 3 values: Complete, InProgress,Error, indicating if uploading of a model to Mendix file storage is Complete, or the uploading is still in progress, or the upload fails. is   |  |
+| ErrorReason  | Indicates the reason that causes a model upload error.                                                                                                                                                                                                                    |
 
 The **Pagination** entity serves as an input parameter of the **GetModelListFromMendix** nanoflow. It allows you to paginate the model list returned by the nanoflow. If the values of the **Pagination** attributes are not specifically set, **GetModelListFromMendix** will return a full list of the models.
 

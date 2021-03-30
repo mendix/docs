@@ -12,6 +12,14 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2021
 
+### March 28th, 2021
+
+#### Fix
+
+* We resolved an issue where a change in SAP BTP meant that apps using XSUAA could not be deployed.
+
+    (Tickets 118831 118847 118861 118862 118874 118876 118908 118925 118935 118983 119020)
+
 ### February 10th, 2021
 
 #### Improvements

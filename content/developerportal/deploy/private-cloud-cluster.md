@@ -42,15 +42,19 @@ To create a cluster in your OpenShift context, you need the following:
     
     ![](attachments/private-cloud-cluster/image4.png)
 
-4. Select **Cluster Manager** from the **Apps** menu in the Developer Portal.
+4. Click the menu button in the Developer Portal and choose **Cloud**
 
-    ![](attachments/private-cloud-cluster/image5.png)
+    ![](attachments/private-cloud-cluster/go-to-nodes-page.png)
 
-5. Click **Register Cluster**. 
+5. Select **Cluster Manager** from the top menu bar in the Developer Portal.
+
+    ![](attachments/private-cloud-cluster/cluster-manager.png)
+
+6. Click **Register Cluster**. 
 
     ![](attachments/private-cloud-cluster/image6.png)
 
-6. Enter the following information:
+7. Enter the following information:
     
   1. **Name** – The name you want to give the cluster you are creating.
   
@@ -58,7 +62,7 @@ To create a cluster in your OpenShift context, you need the following:
 
   3. **Description** – an optional description of the cluster which will be displayed under the cluster name in the cluster manager.
 
-7. Click **Create**.
+8. Click **Create**.
 
     ![](attachments/private-cloud-cluster/create-cluster.png)
 
@@ -92,9 +96,9 @@ Before you can use the Mendix Operator in your namespace you need to install it 
 
 If you are not already on the installation tab for your namespace, go to it by following these instructions:
 
-1. Go to the Cluster Manager page by clicking **Cluster Manager** in the **Apps** menu.
+1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
 
-    ![](attachments/private-cloud-cluster/image23.png)
+    ![](attachments/private-cloud-cluster/cluster-manager.png)
 
 2. Click **Details** next to the namespace you want to use.
 
@@ -881,9 +885,9 @@ Once it is configured, you can manage your cluster and namespaces through the De
 
 ### 6.1 Cluster Overview {#overview}
 
-Go to the Cluster Manager page by clicking **Cluster Manager** in the **Apps** menu.
+Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
 
-![](attachments/private-cloud-cluster/image23.png)
+![](attachments/private-cloud-cluster/cluster-manager.png)
 
 From this page you can see a summary of your clusters with all their namespaces and an indication of the namespace status and how long it has been running (runtime).
 

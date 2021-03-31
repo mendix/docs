@@ -336,7 +336,7 @@ If the application for your data source is not registered in the catalog, click 
 
 * **Business Owner** – the owner of the datasets that are made available through the service. Select from the dropdown list. The dropdown list will also
 
-	{{% alert type="info" %}}You can also [specify the business owner and technical owners](/data-hub/data-hub-catalog/curate#customowner) when you curate the data source in the Catalog. {% /alert %}}
+	{{% alert type="info" %}}You can also [specify the business owner and technical owners](/data-hub/data-hub-catalog/curate#customowner) when you curate the data source in the Catalog. {{% /alert %}}
 
 * **Application Icon** – the icon that will be used for the data source and application is displayed. To specify another icon you can **Upload a different icon** or **select one from the library**.
 
@@ -367,7 +367,7 @@ If the environment is not registered in the Catalog click **Register a new envir
 
 Click **Next Step** to proceed to the **Upload contract** form.
 
-### 6.2.6 Completing Registration of your Data Source
+#### 6.2.6 Completing Registration of your Data Source
 
 During the registration process you can always navigate to previous screens by clicking it on the "navigation-line" at the top of the registration window. This enables you to change values you have previously entered.
 

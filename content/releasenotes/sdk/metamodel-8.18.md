@@ -5,6 +5,8 @@ parent: "metamodel-8"
 
 ## 8.18.0
 
+**Release date: January 19th, 2021**
+
 ### Microflows
 
 #### HttpConfiguration (Element)

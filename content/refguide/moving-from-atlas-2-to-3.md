@@ -161,6 +161,7 @@ Once you have completed the necessary steps above, finish modifying existing fil
 ## 3 Expected Issues After Upgrading to Atlas 3
 
 When you have completed the sections above, you may have errors in your error list:
+
 *   For errors relating to renamed design properties, right-click a related error and click **Updated all renamed design properties in project**:
 
 	![](attachments/atlas-mig/4-errors.png)
@@ -269,13 +270,9 @@ Here are the modified design properties for web:
 
 If you are using building blocks or page templates, please make sure you download the corresponding modules from **Marketplace**.
 
-For the web platform, download Atlas Web Content:
+For the web platform, download the [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) module.
 
-{{% todo %}}[insert file]{{% /todo %}}
-
-For native platform, download Atlas Native Mobile Content:
-
-{{% todo %}}[insert file]{{% /todo %}}
+For native platform, download the [Atlas Native Mobile Content](https://marketplace.mendix.com/link/component/117175) module.
 
 ## 8 Atlas 3 Change Summary {#changes}
 
@@ -288,6 +285,7 @@ On both web and native, improvements have been made to layouts, widgets, buildin
 ### 8.1 New Theme
 
 Our new theme has the following advantages:
+
 * Updated color palette
 * Values changed in variables
 * Introduced exclusion variables for widget default styling
@@ -297,6 +295,7 @@ Our new theme has the following advantages:
 ### 8.2 Grid System
 
 Our new grid system has the following advantages:
+
 * Moved to an 8 pixel grid system
 * This new system provides good basic unit to work with (the numbers 4 and 8 are easily multiplied)
 * Created more uniformity in design
@@ -304,6 +303,7 @@ Our new grid system has the following advantages:
 ### 8.3 Float Removal
 
 Our removal of float has the following advantages:
+
 * Removal of the use of “float: left” and “float:right” throughout Atlas core
 * Migration of float to flex layout
 * Removal of the reliance on floats for layout (flex is more a modern option compared to float)

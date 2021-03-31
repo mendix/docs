@@ -1,7 +1,7 @@
 ---
 title: "Security"
 category: "Collaboration Tools"
-menu_order: 90
+menu_order: 100
 description: "Describes where you can configure various settings for your Mendix app."
 ---
 

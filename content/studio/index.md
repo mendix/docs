@@ -31,6 +31,7 @@ The *Studio 9 Guide* is divided into the following categories:
 * [Working with Data](work-with-data)
 * [Navigation Document](navigation)
 * [Microflows](microflows)
+* [Workflows](workflows)
 * [Previewing & Publishing Your App](publishing-app)
 * [Checks](checks)
 * [Theme Customizer](theme-customizer)

@@ -5,7 +5,7 @@ parent: "metamodel-9"
 
 ## 9.0.4
 
-Release date: February 16th, 2021
+**Release date: February 16th, 2021**
 
 ### Microflows
 

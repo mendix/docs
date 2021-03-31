@@ -31,7 +31,8 @@ These are the current versions in active development:
 **Release date: March 31st, 2021**
 
 ### Mobile Toolkit for 5.1.x
-Mobile Toolkit is a new configuration CLI that we introduced to the Native Template. This way we are moving the responsibility of configuring your project to the Template, allowing off-line users a path to auto configuring their project that previously was impossible due to the online requirement of the Native Mobile Builder. The cli supports a single command:
+
+Mobile Toolkit is a new configuration CLI that we introduced to the Native Template. This way we are moving the responsibility of configuring your project to the Template, allowing offline users a path to auto-configuring their project that previously was impossible due to the online requirement of the Native Mobile Builder. The CLI supports this command:
 
 `native-mobile-toolkit configure --config-path='./config.json'`
 
@@ -39,13 +40,11 @@ or
 
 `npm run configure`
 
-Native Mobile Builder writes to the config.json and commits assets to relative locations. The CLI then reads the config and handles, configuring the projects and moving any assets to the right locations for the projects.
-
+The Native Mobile Builder writes to the *config.json* and commits assets to relative locations. The CLI then reads the *config* and handles, configuring the projects and moving any assets to the right locations for the projects.
 
 ### Fixes
 
 * We fixed another case where Firebase might crash the Custom Developer app when enabling debug mode.
-
 
 ## 5.0.12
 

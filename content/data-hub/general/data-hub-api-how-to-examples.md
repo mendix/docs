@@ -307,7 +307,7 @@ The following 201 Created response returns the Catalog-generated identifier  `"U
 }
 ```
 
-## 4.3 Registering the 5how-toODatav3-sample-service {#reg-service-ex}
+### 4.3 Registering the 5how-toODatav3-sample-service {#reg-service-ex}
 
 In this example call, the service **5how-toODatav3-sample-service** is registered for the application registered in [Section 4.1](#ex-reg-app) and deployed to the environment registered in [Section 4.2](#reg-env-ex).
 

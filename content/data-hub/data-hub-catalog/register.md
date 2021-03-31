@@ -82,11 +82,11 @@ This section describes how to register entities from your Mendix app in the Data
 
 1.  In the [domain model](/refguide/domain-model), right-click the entity to be exposed and from the menu select **Expose as OData resource**:
 
-	![](attachments/register/expose-as-odata-resource.png)
+	 {{% image_container width="300" %}}![](attachments/register/expose-as-odata-resource.png){{% /image_container %}}
 
 2.  In the **Select Published OData Service** dialog box, select the folder in the module that you want to use to organize your APIs, and click **New** to add a new OData service to that folder:
 
-	![](attachments/register/select-published-odata-service.png)
+	 {{% image_container width="300" %}}![](attachments/register/select-published-odata-service.png){{% /image_container %}}
 
 3. Enter a meaningful name that indicates the entities and data that are going to be exposed for the published OData service and click **OK**.
 
@@ -111,19 +111,11 @@ This section describes how to register entities from your Mendix app in the Data
 
 5. Click **OK** to see the [OData Service](#odata-service-general) page. If you want to publish several entities in the same service, add them here by clicking **Add** for the **Resources**.
 
-6. If you add an entity that is associated with another entity that is exposed in the same OData service, you will be asked whether you want to include the association in the service definition. Click **Yes** and the association between the two entities will be included under **Attributes and associations**.
-
-	In the example illustrated below, you will see that for **Entity_2** under **Attributes and associations** there is currently **0 association**. 
+6. If you add an entity that is associated with another entity that is exposed in the same OData service, the association between the two entities will be included under **Attributes and associations**.
+   
+{{% alert type="info" %}}When a specialized entity is published, in the published OData Service contract this will be a discrete entity that has all the attributes and associations of the generalization. Care has to be taken if the generalized entity (and its association) is also exposed in the same service. In this case, the association in the specialized entity that is (inherited from the generalization) should not be published as this will result in errors. The same association cannot be exposed for two different entities in the same service. In this case, it is recommended that the inherited association is not checked in the specialized entity.  {{% /alert %}}
 	
-	When **Entity_3** is added to the service which has an association to **Entity_2**, you will see that **Entity_3** has listed that it has **1 association** and there is a further prompt **Would you like to publish the other side of this association as well** with the name of the association showing the entities being connected.
-	
-	![](attachments/register/publish-association.png)
-
-7. Click **Yes** and the association for **Entity-2** is now updated to **1 association**:
-
-	![](attachments/register/publish-association-2.png)
-	
-	{{% alert type="info" %}} When a specialized entity is published, in the published OData Service contract this will be a discrete entity that has all the attributes and associations of the generalization. Care has to be taken if the generalized entity (and its association) is also exposed in the same service. In this case, the association in the specialized entity that is (inherited from the generalization) should not be published as this will result in errors. The same association cannot be exposed for two different entities in the same service. In this case, it is recommended that the inherited association is not checked in the specialized entity.{{% /alert %}}
+9. Add a **Summary** and **Description** of the service In the **Properties** pane: 
 
 8. Add a **Summary** and **Description** of the service In the **Properties** pane: 
 
@@ -133,9 +125,12 @@ This section describes how to register entities from your Mendix app in the Data
 	
 	{{% alert type="info" %}}If you are updating a service (with a new service version), you can provide a summary of the changes from the previous version in the description. You can copy and paste the description from the previous version of the service and edit this with the new details. For further details, see the [Updating a Published OData Service in Studio Pro](#updating-service) section below.  {{% /alert %}}
 
-10. When the app is deployed with **Run**, the OData services defined for the app will automatically be registered in the Data Hub Catalog.
+10. When the app is deployed with **Publish**, the OData services defined for the app will automatically be registered in the Data Hub Catalog.
 
-{{% alert type="info" %}} The app has to be deployed to the Mendix Cloud using **Run** for the service to be registered in the Data Hub Catalog. If you are deploying to another environment, then you will have to use the  [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis) to set-up a deployment pipeline. {{% /alert %}}
+{{% alert type="info" %}}
+The app has to be deployed to the Mendix Cloud using **Publish** for the service to be registered in the Data Hub Catalog. If you are deploying to another environment, then you will have to use the  [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis) to set-up a deployment pipeline.
+{{% /alert %}}
+
 
 ## 4 OData Service Screen {#odata-service-general}
 
@@ -153,18 +148,17 @@ The **General** tab contains all the details for the published metadata and the 
 * **Version** – the version of the service
 * **Location** – the URL of the service metadata 
 * **Namespace** – the namespace or uniform resource identifier (URI) for the service (for further details, see [Namespace](https://en.wikipedia.org/wiki/XML_namespace))
-* **Resources** – the entities that are included in the service: 
-	* **Add**, **Edit**, **Delete** – click to add, edit, or remove an entity from the OData Service, respectively
-	* **Show** – click to see the entity in the domain model
+* **Entities** – the entities that are included in the service: 
 
-	* **Attributes and associations** – this column shows the attributes and association for the selected entity
-* **Change** – click this to display the **Select Attributes and associations** dialog box for the selected entity: 
+  * **Add**, **Edit**, **Delete** – click to add, edit, or remove an entity from the OData Service, respectively
 
-	![](attachments/register/select-attributes-associations.png)
+  * **Entity *entity name*** – for the selected entity on the left, the details of attributes and associations is displayed on the right. Click **Add**, **Edit**  or **Delete** to add, edit or remove an attribute or listed association.
+  * When you click **Edit** the **Edit published attribute** dialog is displayed that will show information about the item. For **Exposed name** you can specify the name that the attribute or association will be exposed as in the service. 
 
-	You can specify which attributes you want to include for the service, customize the **Exposed names** of the attributes and associations for the OData service.
+      {{% alert type="info" %}}This will not change the name of the item, only how it will be shown in the published service.
+      {{% /alert %}}
 
-	{{% alert type="info" %}} If you do not *explicitly* choose to expose the association of two associated entities, then this association will not be registered for the entities in the service.{{% /alert %}}
+	{{% alert type="info" %}}If you do not *explicitly* choose to expose the association of two associated entities, then this association will not be registered for the entities in the service.  {{% /alert %}}
 
 For more detail, see [Published OData Resource](/refguide/published-odata-resource).
 
@@ -187,7 +181,7 @@ This section contains the following properties:
 
 #### 4.2.3 Security
 
-This section will be displayed if [project security](/refguide/project-security) is enabled. For further details, see the [Security](/refguide/published-odata-services#security) section of *Published OData Services*.
+This section is displayed if [project security](/refguide/project-security) is enabled. For further details, see the [Security](/refguide/published-odata-services#security) section of *Published OData Services*.
 
 This section contains the following properties:
 
@@ -210,11 +204,11 @@ For guidelines on when to update a published OData service and when to publish a
 
 {{% alert type="info" %}} When a new version of a service is published to replace an existing one, due notice has to be given to users if the preceding version is going to be deleted. A deprecation notice should be given to all apps consuming the service, and the period of time when both services are available. {{% /alert %}}
 
-Registered OData services for Mendix apps can be updated in Studio Pro in the [OData service](#odata-service-general) document. You can access the **OData Service** page rom the **Project Explorer** in Studio Pro by double-clicking the published OData service document to be updated. 
+Registered OData services for Mendix apps can be updated in Studio Pro in the [OData service](#odata-service-general) document. You can access the **OData Service** page from the **App Explorer** in Studio Pro by double-clicking the published OData service document to be updated. 
 
 To update a published OData service, follow these steps:
 
-1. Create a duplicate of the old service document to make your changes to by right-clicking in **Project Explorer** the OData service that you want to update and then clicking **Duplicate**. A copy of the service will be created. You can rename the new service by right-clicking and selecting **Rename**.
+1. Create a duplicate of the old service document to make your changes to by right-clicking in **App Explorer** the OData service that you want to update and then clicking **Duplicate**. A copy of the service will be created. You can rename the new service by right-clicking and selecting **Rename**.
 3. Double-click this service to open the service document. You can now make the changes to the service.
 4. Indicate the level of the change to the service by changing the version number. We recommend that you follow semantic numbering to indicate the severity of the change. If you are making updates that would not break consuming apps, then the version number can be incremented after the decimal point. A major update that may break consuming apps would be indicated by an incremental increase in the integer.
 4. For a major update to the service, change the **Location** where the service will be deployed to, the *service endpoint*, to ensure that consuming apps will not be affected. Minor updates can be deployed to the same endpoint.
@@ -224,7 +218,7 @@ To update a published OData service, follow these steps:
 8. In the Data Hub Catalog, curate the new service and add tags and further descriptions as necessary. 
 9. Inform consuming apps of the changes. You can see all apps that are consuming previous versions of the service in the Data Hub Catalog and also the visual network of dependencies in the [Data Hub Landscape](/data-hub/data-hub-landscape/). Use the **Business Owner** and **Technical Owner** links to make contact with the users.
 10. For major changes, and when a new service is published that will replace an existing one, provide deprecation notices to all consuming apps if they have to change to the new version within a certain length of time if the previous version is going to become inactive.
-11. It is good practice to remove old (unused services) from your app by deleting them in the **Project Explorer** only when you are sure that they are no longer being consumed by any other apps. You can verify this by looking in [Mendix Data Hub](https://hub.mendix.com/) and searching for the service in the **Catalog** or checking out the network of dependencies in Data Hub **Landscape**. 
+11. It is good practice to remove old (unused services) from your app by deleting them in the **App Explorer** only when you are sure that they are no longer being consumed by any other apps. You can verify this by looking in [Mendix Data Hub](https://hub.mendix.com/) and searching for the service in the **Catalog** or checking out the network of dependencies in Data Hub **Landscape**. 
 
 ## 6 Registering Data Sources from Enterprise Applications {#registration-form}
 

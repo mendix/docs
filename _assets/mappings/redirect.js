@@ -23,7 +23,7 @@ module.exports = {
     },
 	{
       from: "/refguide/customizing-phonegap-build-packages",
-      to: "/howto/mobile/customizing-phonegap-build-packages"
+      to: "/howto8/mobile/customizing-phonegap-build-packages"
     },		
 	/****************************************************
      * Studio Pro Guide version 8 (permanent, mapped)
@@ -244,7 +244,7 @@ module.exports = {
 	},
 	{
       from: "/refguide9/Developing+Hybrid+Mobile+Apps",
-      to: "/refguide/developing-hybrid-mobile-apps"
+      to: "/refguide8/developing-hybrid-mobile-apps"
 	},
 	{
       from: "/refguide9/enumeration-values",
@@ -2773,7 +2773,7 @@ module.exports = {
     },
 	{
       from: "/refguide/publish-packages-to-mobile-stores",
-      to: "/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores"
+      to: "/howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores"
     },
 	{
       from: "/refguide/team-server",

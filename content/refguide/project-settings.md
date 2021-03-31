@@ -281,20 +281,38 @@ Switching from a ZIP file to a UI resources package is straightforward:
 
 3. Lastly, set the **Theme ZIP file** setting to **None**.
 
-## 7 Miscellaneous Tab {#miscellaneous}
+## 7 Workflows Tab {#workflows}
+
+### 7.1 User Entity
+
+**User entity** defines the entity which is used in [assigning a user task](user-task#user-assignment). If you assign a user task using an XPath, you can use attributes of this entity. If you are using a microflow, the entity defines the return type the microflows expects. For more information, see the [User Task Assignment](user-task#user-assignment) section in *User Task*.
+
+## 7.2 Execution
+
+Allows you to set a maximum number of workflows/user tasks that can be executed simultaneously.
+
+### 7.2.1 Parallel Workflow Executions
+
+Defines the maximum number of workflows that can be executed simultaneously. The limit is 40. 
+
+### 7.2.2 Parallel Task Executions
+
+Defines the maximum number of user tasks that can be executed simultaneously. The limit is 40.
+
+## 8 Miscellaneous Tab {#miscellaneous}
 
 These settings determine the behavior of Studio Pro for this app. The settings apply to everyone that is working on this app.
 
-### 7.1 Bundle Widgets When Running Locally
+### 8.1 Bundle Widgets When Running Locally
 
 When deploying to the cloud, custom widgets are bundled to optimize client-server communication. When deploying locally, this step is skipped to accelerate startup duration. In some cases, this may obfuscate errors triggered by faulty custom widgets.
 
 If this option is set, custom widgets will also be bundled locally. This mimics the production deployment, eliminating risk at the cost of start-up time.
 
-### 7.2 Suggest Lower-Case Variable Names in Microflows
+### 8.2 Suggest Lower-Case Variable Names in Microflows
 
 When enabled, the names that Studio Pro suggests in microflows will start with a lower-case letter instead of an upper-case letter.
 
-### 7.3 Activity Default Colors
+### 8.3 Activity Default Colors
 
 This table allows you to select a default color for each microflow activity type that is available in your app. The selected color will be used as the background color for all microflow activities of that type in your app. It is possible to override this default value for individual activities in the microflow editor. If you change the default color for an activity type, and there are activities of that type present in the app that have an individual background color specified, a dialog will be shown that allows you to apply the new default color to these activities as well.

@@ -150,7 +150,7 @@ For server-based installations, the following storage types mounted by the OS ar
 
 ## 11 Mobile Operating Systems {#mobileos}
 
-For Mendix native apps, hybrid apps, and the [Mendix Mobile app](getting-the-mendix-app) the following operating systems are supported:
+For Mendix native apps, hybrid apps, and the Mendix Mobile app the following operating systems are supported:
 
 * Latest two major versions of iOS
 * Android 5.0 and above

@@ -1,7 +1,7 @@
 ---
 title: "Send Push Notifications"
-parent: "push-notifications"
-menu_order: 20
+parent: "notifications"
+menu_order: 95
 tags: ["mobile", "push notification", "mobile", "microflow"]
 ---
 
@@ -58,6 +58,5 @@ The names of the actions can be used as the value of the ActionName attribute of
 
 ## 3 Read More
 
-* [Set Up the Apple Push Notification Server](setting-up-apple-push-notification-server)
 * [Set Up the Google Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server)
 

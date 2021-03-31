@@ -1,6 +1,6 @@
 ---
 title: "Debug Microflows Remotely"
-parent: "debug-microflows"
+parent: "debug-microflows-and-nanoflows"
 tags: ["monitoring", "troubleshooting", "debug", "microflow", "remote"]
 ---
 
@@ -141,6 +141,6 @@ The debugger is now connected to your app running in the cloud.
 * [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
 * [Debug Java Actions Remotely](debug-java-actions-remotely)
 * [Log Levels](log-levels)
-* [Debug Microflows](debug-microflows)
+* [Debug Microflows and Nanoflows](debug-microflows-and-nanoflows)
 * [Debug Java Actions](debug-java-actions)
 * [The Ultimate Debugger](http://www.mendix.com/tech-blog/the-ultimate-debugger/) 

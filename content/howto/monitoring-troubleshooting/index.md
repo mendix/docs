@@ -11,7 +11,7 @@ Stay updated on the health of your app and reference these documents troubleshoo
 ## 2 Main Documents in This Category
 
 * [Clear Warning Messages in Mendix](clear-warning-messages) – explains how to eliminate design time warnings by view and clearing warning messages
-* [Debug Microflows](debug-microflows) – teaches you how to fix functional errors by using breakpoints
+* [Debug Microflows and Nanoflows](debug-microflows-and-nanoflows) – teaches you how to fix functional errors by using breakpoints
 * [Debug Java Actions](debug-java-actions) – describes how to set breakpoints and debug Java actions in Eclipse
 * [Debug a Hybrid Mobile Application](debug-a-hybrid-mobile-application) – explains how to debug a Mendix app that is running in the Mendix Developer App on your mobile phone
 * [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors) – describes finding the root cause of runtime errors via Studio Pro and via the application logs

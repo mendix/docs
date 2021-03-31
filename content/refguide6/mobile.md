@@ -45,5 +45,4 @@ For more information on hybrid mobile apps, see:
 *   [Customizing Hybrid Mobile Apps](customizing-hybrid-mobile-apps)
 *   [Packaging Hybrid Mobile Apps](packaging-hybrid-mobile-apps)
 *   [Publishing Hybrid Mobile Apps](publish-packages-to-mobile-stores)
-*   [Configuring Hybrid Mobile Apps To Run Offline](configuring-hybrid-mobile-apps-to-run-offline)
 *   [Offline](offline)

@@ -30,7 +30,7 @@ The **Run** menu items are described in the table below:
 | **Responsive Web** | Shows the web client for the currently running app in the browser. | <kbd>F9</kbd> |
 | **Tablet Web** | Shows the tablet mobile client for the currently running app in the browser. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F9</kbd> |
 | **Phone Web** | Shows the mobile client for the currently running app in the browser. | <kbd>Ctrl</kbd> + <kbd>F9</kbd> |
-| **View on your device** | Provides a link to allow you to view the app via the [Mendix Mobile app](getting-the-mendix-app). | |
+| **View on your device** | Provides a link to allow you to view the app. | |
 
 ## 3 Read More
 

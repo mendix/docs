@@ -28,5 +28,3 @@ See also:
 
 *   [Mobile](mobile)
 *   [Getting the Mendix Developer App](getting-the-mendix-developer-app)
-*   [Customizing Hybrid Mobile Apps](customizing-hybrid-mobile-apps)
-*   [Packaging Hybrid Mobile Apps](packaging-hybrid-mobile-apps)

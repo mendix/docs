@@ -13,7 +13,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Improvements
 
-*  [Registration](/data-hub/data-hub-catalog/register#registration-form) of data sources using the business application connectors from the **Data Hub Home** is improved. For each connector, users can register data sources by selecting from a list of apps and environments already registered in the Catalog for the business application. When non are registered, the  **Create New...** option will be presented. 
+*  [Registration](/data-hub/data-hub-catalog/register#registration-form) of data sources using the business application connectors from the **Data Hub Home** is improved. For each connector, users can register data sources by selecting from a list of apps and environments already registered in the Catalog for the business application. When none are registered, the  **Create New...** option will be presented. 
 
 ### March 18th, 2021
 

@@ -233,7 +233,7 @@ Loading and bundling external libraries are not currently supported. Embedding l
 
 Below is an example of using an external dependency based on [pdf-lib](https://github.com/Hopding/pdf-lib):
 
-1. Open Command Prompt and navigate to the right folder using `cd --your-project-folder--/javascriptsource/--ModuleName--/actions`.
+1. Open Command Prompt and navigate to the right folder using `cd --your-app-folder--/javascriptsource/--ModuleName--/actions`.
 2. Run `npm install pdf-lib`.
 3.  In the JavaScript action, use the following code to import the library:
 	
@@ -419,9 +419,9 @@ Use **Category** to group actions, and **Icon** to give the exposed nanoflow act
 
 ### 3.3 Publishing JavaScript Actions
 
-You can export a single action by right-clicking a JavaScript action in the Project Explorer then selecting **Export document to file**. Then, the exported file can be shared with other developers. A single nanoflow cannot be published in the Mendix Marketplace. Instead, publish it as a module. 
+You can export a single action by right-clicking a JavaScript action in the App Explorer then selecting **Export document to file**. Then, the exported file can be shared with other developers. A single nanoflow cannot be published in the Mendix Marketplace. Instead, publish it as a module. 
 
-You can import a single action by right-clicking your module in the Project Explorer, and then selecting **Import document from file**. Next, select your JavaScript action file.
+You can import a single action by right-clicking your module in the App Explorer, and then selecting **Import document from file**. Next, select your JavaScript action file.
 
 A single nanoflow action cannot be published in the Mendix Marketplace. You may publish one as a module, but it is recommended to publish related nanoflow actions as a group within a module. For a module containing multiple nanoflow actions, group actions with a relevant data model like "entities" and provide relevant documentation for external dependencies. Export the module as a whole and upload it to the Mendix Marketplace. For further instructions, see [How to Share Marketplace Content](/appstore/general/share-app-store-content).
 
@@ -445,7 +445,7 @@ Well-documented actions are easier to reuse. Consider the following when documen
 
 ## 4 Testing JavaScript Actions
 
-An extensive test project can help make a JavaScript action more robust. Within a test project, try to create all possible variations of the input, accounting for empty inputs and error cases that should be handled.
+An extensive test app can help make a JavaScript action more robust. Within a test app, try to create all possible variations of the input, accounting for empty inputs and error cases that should be handled.
 
 When testing, make sure you to check all compatible platforms (web, hybrid, and native). The web should handle the Mendix browser compatibility. For further information about compatibility, see the [Browsers](/refguide/system-requirements#browsers) section of *System Requirements*. 
 

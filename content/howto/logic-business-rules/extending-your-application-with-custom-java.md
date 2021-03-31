@@ -18,7 +18,7 @@ Most application logic can be developed using microflows. Microflows are very po
 Before starting this how-to, make sure you have completed the following prerequisite:
 
 *  Have Eclipse installed (download it [here](https://eclipse.org/))
-	{{% alert type="info" %}}You can use any text editor to create custom Java actions, but we highly recommend using Eclipse. Studio Pro contains a **Deploy for Eclipse** feature verifying that everything that needs to be configured in Eclipse is done automatically. All you have to do is import the project into your Eclipse working environment.
+	{{% alert type="info" %}}You can use any text editor to create custom Java actions, but we highly recommend using Eclipse. Studio Pro contains a **Deploy for Eclipse** feature verifying that everything that needs to be configured in Eclipse is done automatically. All you have to do is import the app into your Eclipse working environment.
 {{% /alert %}}
 * Have an app ready using the [Asset Manager](https://appstore.home.mendix.com/link/app/69674/) template
 
@@ -40,7 +40,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 	![](attachments/extend-custom-java/return.png)
 
-5. Select **Project** > **Deploy for Eclipse** from the top Studio Pro toolbar.
+5. Select **App** > **Deploy for Eclipse** from the top Studio Pro toolbar.
 
 ## 4 Editing the Java Action in Eclipse
 
@@ -56,12 +56,12 @@ To edit the Java action in Eclipse, follow these steps:
 	{{% image_container width="400" %}}![](attachments/extend-custom-java/import2.png)
 	{{% /image_container %}}
 
-4.  Set the project directory as the root directory for this project and click **Finish**:
+4.  Set the app directory as the root directory for this app and click **Finish**:
 
 	{{% image_container width="400" %}}![](attachments/extend-custom-java/import3.png)
 	{{% /image_container %}}
 
-	{{% alert type="info" %}}If you don't know what the project directory is, select **Project** > **Show Project Directory in Explorer** in Studio Pro.
+	{{% alert type="info" %}}If you don't know what the app directory is, select **App** > **Show App Directory in Explorer** in Studio Pro.
 	{{% /alert %}}
 
 5.  Double-click **ReverseAssetName.java** in the **Package Explorer** of Eclipse:
@@ -87,7 +87,7 @@ To edit the Java action in Eclipse, follow these steps:
 
 ## 5 Calling the Java Action from a Microflow
 
-1. Back in Studio Pro, locate the **Assets** page via **Project Explorer**.
+1. Back in Studio Pro, locate the **Assets** page via **App Explorer**.
 2.  Under **{AssetName}**, right-click and select **Add widget**:
 
 	{{% image_container width="300" %}}![](attachments/extend-custom-java/add-widget.png)
@@ -101,7 +101,7 @@ To edit the Java action in Eclipse, follow these steps:
 	{{% image_container width="500" %}}![](attachments/extend-custom-java/microflow1.png)
 	{{% /image_container %}}
 
-7.  Drag the **ReverseAssetName** Java action from the **Project Explorer** onto the line between the green start event and red end event. This generates a Java action activity:
+7.  Drag the **ReverseAssetName** Java action from the **App Explorer** onto the line between the green start event and red end event. This generates a Java action activity:
 
 	{{% image_container width="500" %}}![](attachments/extend-custom-java/microflow2.png)
 	{{% /image_container %}}
@@ -148,7 +148,7 @@ To edit the Java action in Eclipse, follow these steps:
 
 ## 6 Deploying & Seeing the Results
 
-1. Click **Run Locally** to deploy the application locally and click **View** to open the application in your browser.
+1. Click the play button (**Run Locally**) to deploy the application locally and click **View App** to open the application in your browser.
 2. To test the new feature, select **Asset** from the app's **Dashboard**.
 3.  On the **Assets** page, click **Asset reverse name** for the asset that has been loaded:
 
@@ -164,7 +164,7 @@ To edit the Java action in Eclipse, follow these steps:
 
 If you get an `UnsupportedClassVersionError` when running your app, follow these steps:
 
-1. Clean your app's **deployment** folder by selecting **Project** > **Clean Deployment Directory**.
+1. Clean your app's **deployment** folder by selecting **App** > **Clean Deployment Directory**.
 2. Add the same JDK version to Eclipse as that which you are using in Studio Pro (this is the recommended version correlation). For details on JDK requirements, see the [Mendix Studio Pro](/refguide/system-requirements#sp) section of *System Requirements*.
 
 ## 8 Read More

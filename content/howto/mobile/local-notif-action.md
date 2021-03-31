@@ -67,7 +67,7 @@ In **ACT_CreateAndSendNotification** you will set up the logic for tapping a not
 
 Great job setting up your notification. Now you can test it:
 
-1. Click **Run Locally** to update your app.
+1. Click the play button (**Run Locally**) to update your app.
 2. Start the app on your mobile device.
 3. Tap your **Send notification** button.
 4. Tap the notification to navigate to the page you selected.

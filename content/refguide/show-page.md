@@ -20,7 +20,7 @@ This action is ignored and does not work when a microflow is called from an offl
 
 With this activity, you can show a selected page to an end-user.
 
-You can directly drag a page from the **Project Explorer** into your microflow:
+You can directly drag a page from the **App Explorer** into your microflow:
 
 ![](attachments/client-activities/show-page-from-project-explorer.png)
 

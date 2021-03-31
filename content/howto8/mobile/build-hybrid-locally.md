@@ -19,9 +19,9 @@ This document describes how to build your hybrid apps locally.
 * Register for an [Apple Developer Account](https://developer.apple.com/register/index.action)
 * Install [XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and its command-line tools
 
-### 2.1 Prepare Your Project for Building
+### 2.1 Prepare Your App for Building
 
-To prepare your project for building, follow these instructions:
+To prepare your app for building, follow these instructions:
 
 1. Open a terminal window and change directory into the unzipped package folder, for example **cd /Downloads/localbuild** if it is in your Downloads folder.
 1. Run `npm i && npm run package && npm run platform:ios`. This combination of commands does the following:
@@ -31,7 +31,7 @@ To prepare your project for building, follow these instructions:
 
 ### 2.2 Building Your Prepared Project
 
-There are two possible ways to build your apps: the Cordova CLI or XCode. The Cordova CLI is faster and allows Cordova to fully control the your project's configuration. XCode is more involved, but XCode's UI makes it easier to detect problems in the project. You can use whichever works best for your case.
+There are two possible ways to build your apps: the Cordova CLI or XCode. The Cordova CLI is faster and allows Cordova to fully control the your app's configuration. XCode is more involved, but XCode's UI makes it easier to detect problems in the app. You can use whichever works best for your case.
 
 #### 2.2.1 Building iOS Using the Cordova CLI
 
@@ -55,7 +55,7 @@ This process is shorter than using XCode but might require more work to understa
 
 Using XCode can be easier than the Cordova CLI due to XCode's friendly visual interface. To build your app using XCode do the following:
 
-1.  Under **/build/platforms/ios/** open the `.xcworkspace` file by double-clicking it. Xcode should open with the project loaded:
+1.  Under **/build/platforms/ios/** open the `.xcworkspace` file by double-clicking it. Xcode should open with the app loaded:
 
     {{% image_container width="400" %}}![Opening XCWorkspace](attachments/hybrid-local/xc-workspace.png){{% /image_container %}}
 
@@ -63,7 +63,7 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 
     {{% image_container width="400" %}}![Selecting the root element](attachments/hybrid-local/root-element.png){{% /image_container %}}
 
-1.  The screen should change to the following view. If it does not, select the item under **Targets** on the left panel not the item under **Project** and select the tab **Signing & Certificates**:
+1.  The screen should change to the following view. If it does not, select the item under **Targets** on the left panel not the item under **App** and select the tab **Signing & Certificates**:
 
     {{% image_container width="400" %}}![Signing screen with errors](attachments/hybrid-local/setup-signing-wrong.png){{% /image_container %}}
 
@@ -100,9 +100,9 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 * Create a keystore using [generating-a-keystore](/refguide/managing-app-signing-keys#3-1-generating-a-keystore)
 * Download the [local build package](/howto8/mobile/customizing-phonegap-build-packages#download-local-package) from Cloud Portal and unzip it in a known location
 
-### 3.1 Prepare Your Project for Building
+### 3.1 Prepare Your App for Building
 
-To prepare your project for building, follow these instructions:
+To prepare your app for building, follow these instructions:
 
 1. Open a terminal window and change directory into the unzipped package folder, for example **cd /Downloads/localbuild** if it is in your **Downloads** folder.
 1. Run `npm i && npm run package && npm run platform:android`. This combination of commands does the following:
@@ -122,11 +122,11 @@ During this guide you will set the commands to temporary for each of the command
 
 ### 3.3 Building Your Prepared Project
 
-There are two possible ways to build your apps: the Cordova CLI or Android Studio. The Cordova CLI is faster and allows Cordova to fully control the your project's configuration. Android Studio is more involved, but Android Studio's UI makes it easier to detect problems in the project. You can use whichever works best for your case.
+There are two possible ways to build your apps: the Cordova CLI or Android Studio. The Cordova CLI is faster and allows Cordova to fully control the your app's configuration. Android Studio is more involved, but Android Studio's UI makes it easier to detect problems in the app. You can use whichever works best for your case.
 
 #### 3.3.1 Building Android Using the Cordova CLI
 
-The command to build your project locally for release is `npm run build -- android --release`.
+The command to build your app locally for release is `npm run build -- android --release`.
 
 1.  Run the following command:
    
@@ -160,11 +160,11 @@ Using Android Studio can be easier than the Cordova CLI due to Android Studio's 
 
 	{{% image_container width="400" %}}![Android Studio Welcome Screen](attachments/hybrid-local/android-studio-welcome.png){{% /image_container %}}
 
-1. Open an existing Android Studio project and select your project's Android folder, for example **/Downloads/localbuild/build/platform/android**:
+1. Open an existing Android Studio project and select your app's Android folder, for example **/Downloads/localbuild/build/platform/android**:
 
 	{{% image_container width="400" %}}![Android Studio Open Folder](attachments/hybrid-local/android-studio-open-folder.png){{% /image_container %}}
 
-1. Wait for Android Studio to finish syncing your project.
+1. Wait for Android Studio to finish syncing your app.
 1. Click the **Build** > **Generate Signed Bundle / APK**:
 
 	{{% image_container width="400" %}}![Android Studio Build Menu](attachments/hybrid-local/android-studio-build-menu.png){{% /image_container %}}

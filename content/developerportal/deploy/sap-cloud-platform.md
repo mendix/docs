@@ -179,7 +179,7 @@ At any time, you can create a new deployment package from a committed version of
 {{% alert type="info" %}}
 You can also deploy your app (the steps in sections 4 and 5.1 of this How-To) automatically from Studio Pro. However, you will then have less control over the deployment.
 
-If you click **Run** in Studio Pro, this will automatically do the following:
+If you click **Run** or **Publish** in Studio Pro, this will automatically do the following:
 
 1. Commit the project.
 2. Generate a deployment package.
@@ -667,7 +667,7 @@ If you are trying to bind more than one new service, it is not possible to ident
 
 ### 9.4 An Error Occurs While Deploying App From Studio Pro
 
-If an app is deployed to SAP using the Studio Pro **Run** button before it has been started from the Developer Portal, the deployment will fail. This is because the marketplace services have not been bound.
+If an app is deployed to SAP using the Studio Pro **Run** or **Publish** button before it has been started from the Developer Portal, the deployment will fail. This is because the marketplace services have not been bound.
 
 {{% image_container width="50%" %}}
 ![](attachments/sap-cloud-platform/error-desktop-modeler.png)

@@ -1,21 +1,20 @@
 ---
-title: "Project Menu"
+title: "App Menu"
 parent: "menus"
-description: "Describes the Project Menu in Studio Pro."
+description: "Describes the App Menu in Studio Pro."
 menu_order: 30
-tags: ["Studio Pro", "project menu", "top bar"]
+tags: ["Studio Pro", "app menu", "top bar"]
 ---
 
 ## 1 Introduction
 
-In the **Project** menu, you can view and/or manipulate settings that are connected to your project and deployment. For example, you can create a deployment package.
+In the **App** menu, you can view and/or manipulate settings that are connected to your app and deployment. For example, you can create a deployment package.
 
-{{% image_container width="300" %}}![Project Menu](attachments/project-menu/project-menu.png)
-{{% /image_container %}}
+![App Menu](attachments/project-menu/project-menu.png)
 
 ## 2 Tools
 
-Under **Project** > **Tools**, you can find settings on updating widgets, button icons, and layouts, checking widgets, and converting your classes to **Design** properties.  
+Under **App** > **Tools**, you can find settings on updating widgets, button icons, and layouts, checking widgets, and converting your classes to **Design** properties.
 
 ![Tools](attachments/project-menu/tools.png)
 
@@ -39,17 +38,17 @@ The **Check Widgets** option checks that the widgets you have implemented in the
 
 The **Convert classes to design properties** option allows you to convert classes in widgets into design properties to assist in changing the widget styling. See [How To Implement Native Mobile Styling](/howto/mobile/native-styling) for more information.
 
-## 3 Synchronize Project Directory
+## 3 Synchronize App Directory
 
-The **Synchronize Project Directory** option creates folders inside the project directory (resources, widgets, theme, etc.), if necessary. It also reads the widget packages that are currently inside the widgets folders. For example, if you add widgets to the widgets folder, you needs to synchronize the project directory for them to appear in the **Toolbox**.
+The **Synchronize App Directory** option creates folders inside the app directory (resources, widgets, theme, etc.), if necessary. It also reads the widget packages that are currently inside the widgets folders. For example, if you add widgets to the widgets folder, you needs to synchronize the app directory for them to appear in the **Toolbox**.
 
 Shortcut key: <kbd>F4</kbd>
 
-## 4 Show Project Directory in Explorer
+## 4 Show App Directory in Explorer
 
-The **Show Project Directory in Explorer** option shows the directory that contains the project file (*.mpr*) and other assets such as resources and Java actions in Windows Explorer. By default, the directory is located in the **MyDocuments** section.
+The **Show App Directory in Explorer** option shows the directory that contains the app file (*.mpr*) and other assets such as resources and Java actions in Windows Explorer. By default, the directory is located in the **MyDocuments** section.
 
-The following directories in the project directory are useful for customizing the app style and adding custom widgets and Java actions:
+The following directories in the app directory are useful for customizing the app style and adding custom widgets and Java actions:
 
 * **theme** – stores the *.css* files that can be used to style the application
 * **javasource** – stores the JavaScript actions
@@ -57,13 +56,13 @@ The following directories in the project directory are useful for customizing th
 
 ## 5 Deploy for Eclipse
 
-The **Deploy for Eclipse** option deploys the project to the deployment directory. The Java stubs are generated so that you can start editing them in Eclipse. This action does not compile the Java actions. Use this if you are writing Java actions and you want to compile and debug them through Eclipse.
+The **Deploy for Eclipse** option deploys the app to the deployment directory. The Java stubs are generated so that you can start editing them in Eclipse. This action does not compile the Java actions. Use this if you are writing Java actions and you want to compile and debug them through Eclipse.
 
 Shortcut key: <kbd>F6</kbd>
 
 ## 6 Create Deployment Package
 
-The **Create Deployment Package** option creates a Mendix Deployment Archive package (*.mda*) that contains all necessary files to run the project. This can be used if you want to deploy your project on a Windows server or on a custom Mendix Cloud.
+The **Create Deployment Package** option creates a Mendix Deployment Archive package (*.mda*) that contains all necessary files to run the app. This can be used if you want to deploy your app on a Windows server or on a custom Mendix Cloud.
 
 Shortcut key:  <kbd>F7</kbd>
 
@@ -75,7 +74,7 @@ The **Clean Deployment Directory** option cleans the deployment directory.
 
 ## 8 Deploy to Licensed Cloud Node {#deploy}
 
-The **Deploy to Licensed Cloud Node** option deploys the latest committed revision of a Team Server project to the associated Mendix Cloud node.
+The **Deploy to Licensed Cloud Node** option deploys the latest committed revision of a Team Server app to the associated Mendix Cloud node.
 
 Shortcut key:  <kbd>Ctrl</kbd> + <kbd>F5</kbd>
 

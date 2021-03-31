@@ -1,7 +1,7 @@
 ---
 title: "Buzz"
 category: "Collaboration Tools"
-menu_order: 10
+menu_order: 1
 description: "Describes the Mendix Buzz, which is the landing page for working on a Mendix app."
 tags: ["Buzz","Developer Portal"]
 ---

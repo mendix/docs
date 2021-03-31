@@ -97,7 +97,7 @@ You should use the latest version of the Mendix Feedback widget, as it will prov
 To ensure you have the latest version of the widget included in your app, follow these steps:
 
 1.  Download the latest version of the [Mendix Feedback](https://appstore.home.mendix.com/link/app/199/) widget from the Marketplace. You are strongly encouraged to use version 8.2.1 or above of the widget.
-2.  When the widget is included in your app, ensure that it is added to the homepage of the application. Open the homepage from your app's **Project** > **Navigation**:
+2.  When the widget is included in your app, ensure that it is added to the homepage of the application. Open the homepage from your app's **App** > **Navigation**:
 
 	![](attachments/feedback/show-page.png)
 

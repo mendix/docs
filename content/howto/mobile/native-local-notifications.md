@@ -32,7 +32,7 @@ To use push notifications with apps created with the Native Builder, make sure y
 Follow the instructions below to set up your first local notification:
 
 1. Open Mendix Studio Pro.
-2. Select **File** > **New Project**.
+2. Select **File** > **New App**.
 3.  Select the **Native Mobile Quickstart** app (also available online [here](https://appstore.home.mendix.com/link/app/109511/)):
 
 	![native mobile quickstart app](attachments/native-push/quickstart.png)
@@ -176,7 +176,7 @@ Now you can run your app and see if your notification works.
 
 	{{% image_container width="400" %}}![app settings](attachments/native-push/basic-notif.png){{% /image_container %}}
 
-	If you did not see a notification, try clicking **Run Locally** to reload your app. Then, tap the **Send Notification** button again.
+	If you did not see a notification, try clicking the play button (**Run Locally**) to reload your app. Then, tap the **Send Notification** button again.
 
 Congratulations! You can now see local notifications on your device. Next, in [How to Use Local Notifications Part 2: Badges](local-notif-badges), you will learn how to configure notification badges.
 

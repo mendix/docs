@@ -1,7 +1,6 @@
 ---
 title: "LTS, MTS & Monthly Release Versions"
 category: "Studio Pro"
-menu_order: 1
 ---
 
 ## 1 Introduction

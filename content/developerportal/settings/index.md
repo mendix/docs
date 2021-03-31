@@ -1,17 +1,17 @@
 ---
 title: "App Settings"
-description: "Describes where you can configure various settings for your Mendix app project."
+description: "Describes where you can configure various settings for your Mendix app."
 ---
 
 ## 1 Introduction
 
-The **Settings** category of menu items can be used to manage your app settings. Here, you can find basic app information and edit it. You can also manage your App Team and node permissions as well as create API keys.
+The **General Settings** category of menu items can be used to manage your app settings. Here, you can find basic app information and edit it. You can also manage your App Team and node permissions as well as create API keys.
 
 This category will cover the settings below.
 
 ## 2 General
 
-The **General** tab displays an overview of the app's information: the name and description of the app, the **App Contact** and **Technical Contact**, whether [Mendix Studio](/studio/index) is enabled for the app, and the **App ID**.
+The **General** tab displays an overview of the app's information: the name and description of the app, the **App Contact** and **Technical Contact**, whether [Mendix Studio](/studio/) is enabled for the app, and the **App ID**.
 
 It is also possible to leave and delete an app here as well as manage deep links.
 
@@ -56,5 +56,5 @@ For more information, see [How to Manage App API Keys](/developerportal/settings
 
 ## 5 Main Documents in This Category
 
-* [Manage General App Settings](general-settings) – describes the various actions you can perform to configure general settings for your app project
+* [Manage General App Settings](general-settings) – describes the various actions you can perform to configure general settings for your app
 * [Manage App API Keys](api-key) – explains what is included in the overview of API keys and how to create an API key

@@ -126,10 +126,10 @@ If any of these condition checks fail, tasks are moved to `System.ProcessedQueue
 
 ### 2.7 Shutdown{#shutdown}
 
-During shutdown, the `TaskQueueExecutors` will stop accepting new tasks. Running tasks are allowed a [grace period](#configuration) to finish. After this period, the runtime will send an interrupt to all task threads that are still running and again allow a grace period for them to finish. After the second grace period the runtime just continues shutting down, eventually aborting the execution of the tasks. The aborted tasks will be reset, so that they are re-executed later or on another cluster node.
+During shutdown, the `TaskQueueExecutors` will stop accepting new tasks. Running tasks are allowed a [grace period](#configuration) to finish. After this period, the runtime will send an interrupt to all task threads that are still running and again allow a grace period for them to finish. After the second grace period the runtime just continues shutting down, eventually aborting the execution of the tasks. The aborted tasks will be reset, so that they are re-executed later or on another cluster node. In development mode, the first grace period is shortened to 1 second.
 
 {{% alert type="info" %}}
-Interrupting task threads may cause them to fail. 
+Interrupting task threads may cause them to fail. These tasks will be marked as `Aborted` and retried at a later time.
 {{% /alert %}}
 
 ## 3 Monitoring

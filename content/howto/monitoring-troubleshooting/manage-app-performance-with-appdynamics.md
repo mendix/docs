@@ -18,6 +18,10 @@ AppDynamics is a flexible application performance management tool that provides 
 
 * Set up application performance management for your Mendix application on AppDynamics
 
+{{% alert type="warning" %}}
+AppDynamics is not supported for apps deployed to the Mendix Cloud.
+{{% /alert %}}
+
 ## 2 Prerequisites
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
@@ -27,7 +31,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 ## 3 Setting Up
 
-In this section, we will walk through all the steps to configure AppDynamics so that it can be used for the [application performance diagnostics](/addons/apd-addon/index) of your Mendix application.
+In this section, we will walk through all the steps to configure AppDynamics so that it can be used for the [application performance diagnostics](/addons/apd-addon/) of your Mendix application.
 
 ## 3.1 Setting Up AppDynamics
 
@@ -174,3 +178,4 @@ For more information on AppDynamics, see the AppDynamics documentation here: [ht
 * [Debug Java Actions](debug-java-actions)
 * [Solve Load & Import Errors](solving-load-and-import-errors)
 * [Debug Microflows Remotely](debug-microflows-remotely)
+* [Monitoring Tools](https://github.com/mendix/cf-mendix-buildpack#monitoring-tools) in the *cf-mendix-buildpack* repo on GitHub

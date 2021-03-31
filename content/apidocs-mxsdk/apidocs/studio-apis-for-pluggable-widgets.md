@@ -10,7 +10,7 @@ tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React", "Preview"]
 
 This guide explains the APIs offered by Mendix Studio and Studio Pro so you can build better pluggable widgets. Specifically, you can use these APIs and modules to alter pluggable widgets' preview appearances while working in Mendix Studio or Studio Pro's Design mode.
 
-In contrast, [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets) is meant for pluggable widget development once your app project is running in the client. This guide's APIs are available in Mendix 8.0.0 and higher.
+In contrast, [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets) is meant for pluggable widget development once your app is running in the client. This guide's APIs are available in Mendix 8.0.0 and higher.
 
 ## 2 Values API {#values}
 
@@ -85,7 +85,7 @@ This property appears as follows:
 ```
 type WidgetsProperty = {
     widgetCount: number;
-    renderer: React.Component
+    renderer: React.ComponentType<{caption?: string}>;
 }
 ```
 
@@ -93,6 +93,7 @@ This property is exposed as an object containing the following properties:
 
 * `widgetCount`: The number of immediate child widgets configured
 * `renderer`: A React component allowing rendering of the child widgets in the preview
+    * The renderer component has a extra property called `caption` which will override the text that appears inside a dropzone when it is still empty
 
 ### 2.5 Expression
 

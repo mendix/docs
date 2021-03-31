@@ -43,7 +43,7 @@ The Data Hub Admin can add or remove the curator role by following these steps:
 
 3. To assign a curator role to a Mendix user, click **Add Curator**.
 
-	{{% alert type="info" %}}A user with curator rights will be able to see all assets registered in the Catalog, including those that are set to **Non-discoverable** by asset owners. Curators will also be able to change the information that is registered for the assets they are owned by other users. {{% /alert %}}
+	{{% alert type="info" %}}A user with curator rights can access all assets registered in the Catalog. This also includes those that are set to **Non-discoverable**. Curators can also change the information that is registered for assets that are owned by other users. {{% /alert %}}
 
 4. To search from the list of Mendix users in your organization, start typing in the search box and check the user(s) you want to assign the curator role to.
 

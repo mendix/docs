@@ -52,7 +52,7 @@ Follow these steps:
 	
 	Always use the version of TortoiseSVN that matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN, you will no longer be able to open it in Mendix.{{% /alert %}}
 
-2. Go to the parent directory (folder) of your app project (this is the folder with the **<folder_name>** from the error message).
+2. Go to the parent directory (folder) of your app (this is the folder with the **<folder_name>** from the error message).
 3. Right-click to open the folder's context menu and select **TortoiseSVN** > **Clean up**.
 
 ### 2.5 Getting an Error with the Message `System.Security.Cryptography.CryptographicException: Key not valid for use in specified state`
@@ -86,17 +86,17 @@ Follow these steps:
 13. Click **OK** to close the `properties` dialog box.
 14. Restart Studio Pro.
 
-You can now commit your app project.
+You can now commit your app.
 
 ### 2.7 Resolving Conflicts on the 'svn:ignore' Property {#svn-ignore}
 
-When merging or updating branches, a conflict is sometimes reported on the app project folder rather than on an individual file. This usually means there is a conflict on the `svn:ignore` property.
+When merging or updating branches, a conflict is sometimes reported on the app folder rather than on an individual file. This usually means there is a conflict on the `svn:ignore` property.
 
 In the `svn:ignore` property, Subversion records which files should be ignored. These are files that are on disk but should not be on  Team Server.
 
 For example, the `deployment` directory is necessary for running your project, but it should not be on the Team Server. Each user has their own version of the `deployment` folder on their hard disk.
 
-You will need to resolve the conflict before you can commit your app project to Team Server.
+You will need to resolve the conflict before you can commit your app to Team Server.
 
 #### 2.7.1 Example
 
@@ -172,9 +172,9 @@ You have resolved the conflict and can commit from Studio Pro.
 
 If you get this error, try the following options:
 
-* In the [Developer Portal](/developerportal/collaborate/team), check whether the user has access to the app project:
-	* If they do not have access, invite them to the app project
-	* If they do have access, remove them from the app project and add them back – this will re-sync the access rules
+* In the [Developer Portal](/developerportal/collaborate/team), check whether the user has access to the app:
+	* If they do not have access, invite them to the app
+	* If they do have access, remove them from the app and add them back – this will re-sync the access rules
 * If the above does not work, make sure the [WebDAV protocol](http://www.webdav.org/) is not blocked within your network – this protocol is [required](/refguide/system-requirements) by Studio Pro for [version control](/refguide/version-control) to work, but it might be blocked by your proxy server or other software like a firewall
 
 ## 3 Other Problems

@@ -2,7 +2,7 @@
 title: "Customizing Local Build Packages"
 parent: "build-hybrid-apps"
 menu_order: 30
-tags: ["mobile", "marketplace", "app store", "phonegap"]
+tags: ["mobile", "marketplace", "phonegap"]
 aliases:
     - /refguide8/customizing-phonegap-build-packages.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -15,7 +15,7 @@ Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Be
 
 To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Locally](/howto/mobile/build-hybrid-locally) for information on local building.
 
-To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
+To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto8/mobile/build-native-apps).
 {{% /alert %}}
 
 ## 2 Downloading the Local Build Package {#download-local-package}

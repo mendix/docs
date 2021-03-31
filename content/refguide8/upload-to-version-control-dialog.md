@@ -44,7 +44,7 @@ This option is only available when support for other servers is enabled in **Edi
 
 ![Enable private version control in advanced preferences](attachments/upload-to-version-control/enable-private-version-control.png)
 
-If you select **Private server**, enter the address of the repository to which you want to upload your app in the **App repository address** field.
+<a name="private-server"></a>If you select **Private server**, enter the address of the repository to which you want to upload your app in the **App repository address** field.
 
 ![Enable private version control in advanced preferences](attachments/upload-to-version-control/private-server-app.png)
 

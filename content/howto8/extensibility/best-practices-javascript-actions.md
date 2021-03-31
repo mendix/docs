@@ -255,7 +255,7 @@ Below is an example of using an external dependency based on [pdf-lib](https://g
 
 The Mendix hybrid app ships with a large set of plugins by default. For more details on default plugins, see the [November 20th, 2018 Version Upgrades](/releasenotes/mobile/hybrid-app#upgrades-20) section of the *Hybrid App Base & Template* release notes.
 
-It is also possible to add new plugins during a mobile build. For more information on adding new plugins, see [Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores).
+It is also possible to add new plugins during a mobile build. For more information on adding new plugins, see [Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores).
 
 The actual list of plugins use can be found in *config.xml* inside your deployment package.
 
@@ -475,7 +475,7 @@ Not all capabilities are recommended for use. Consider the side effects that an 
 
 ## 7 Read More
 
-* [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)
+* [Build JavaScript Actions](/howto8/extensibility/build-javascript-actions)
 * [JavaScript Actions](/refguide8/javascript-actions)
 * [Mendix Client API](https://apidocs.rnd.mendix.com/7/client/index.html)
 * JavaScript basics:

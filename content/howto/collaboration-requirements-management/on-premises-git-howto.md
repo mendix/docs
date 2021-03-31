@@ -21,7 +21,7 @@ You will not be able to use Mendix Studio for collaborative development if you u
 
 **This how-to will teach you how to do the following:**	
 
-* Configure your Mendix app projects to work with Git (on-premises) version control system	
+* Configure your Mendix apps to work with Git (on-premises) version control system	
 
 ## 2 Prerequisites
 
@@ -29,7 +29,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Make sure you have the right server provider. We currently only support Git Private Server. For more information, see the [Preparing Your Repository](#preparing-your-repo) section. 
 * You have a feature flag enabled. For more information, see the [Enabling a Feature Flag](#enable-feature-flag) section.
-* You have an unversioned Mendix app project. For more information, see the [Creating an App](#create-app) section.
+* You have an unversioned Mendix app. For more information, see the [Creating an App](#create-app) section.
 
 ## 3 Supported Authentication Mechanisms
 
@@ -85,7 +85,7 @@ We have a known compatibility issue with AWS CodeCommit in Git Technology Previe
 
 ## 4 Setting Up the Environment
 
-This section describes how to configure a Git versioned app in Studio Pro. You need a Git server and an initially unversioned Mendix app project.
+This section describes how to configure a Git versioned app in Studio Pro. You need a Git server and an initially unversioned Mendix app.
 
 ### 4.1 Preparing Your Repository {#preparing-your-repo}
 
@@ -161,9 +161,9 @@ Now that you have a Git app on your server, you can download it to another direc
 
 The app is downloaded and ready to be used with version control.
 
-### 4.5 Opening the Existing Git App Project
+### 4.5 Opening the Existing Git App
 
-There are a few ways to open a Git Mendix app project, as long as you have Studio Pro started up with the [git feature flag](#enable-feature-flag).
+There are a few ways to open a Git Mendix app, as long as you have Studio Pro started up with the [git feature flag](#enable-feature-flag).
 
 #### 4.5.1 Recent Apps List
 
@@ -200,15 +200,15 @@ For the previous local disk method do the following:
    
 ### 4.6 Uploading to the Private Git Server {#upload-to-private-git-server}
 
-Once you have an unversioned app project, you can upload it to your private team server. 
+Once you have an unversioned app, you can upload it to your private team server. 
 
 {{% alert type="warning" %}}
 The repository has to be completely empty (including README.md and. gitignore files), or the upload will fail.
 {{% /alert %}}
 
-To upload your app project, do the following:
+To upload your app, do the following:
 
-1.  Open the app project in Studio Pro and go to **Version Control > Upload to Version Control Server**:
+1.  Open the app in Studio Pro and go to **Version Control > Upload to Version Control Server**:
 
     ![Upload to Version Control Server Menu](attachments/on-premises-git-howto/upload-to-vc-menu.png)
     
@@ -227,9 +227,9 @@ The project is uploaded successfully. You can check on your private server and s
 
 ![Project Uploaded confirmation window](attachments/on-premises-git-howto/project-uploaded-confirmation.png)
 
-### 4.7 Moving a Subversion App Project to Git
+### 4.7 Moving a Subversion App to Git
 
-If you already have an existing versioned app project (with Subversion) that you would like to upload to your Git private server instead, you can export it, then re-import it, and uploading it to your server. Follow the steps below:
+If you already have an existing versioned app (with Subversion) that you would like to upload to your Git private server instead, you can export it, then re-import it, and uploading it to your server. Follow the steps below:
 
 1. Once the app is opened, go to **File > Export Project Package**. 
 2.  In the **Export Project Package** dialog box, browse to the location you would like to save the *.mpk* (Mendix Package) file, or accept the default location, a new **packages** folder in the root of the application folder. Take note of this location, as you will need it later. You can also rename the *.mpk* file (for example,*MyGitApp.mpk*) and the app will be named that way once you import it and upload it to the Git server:

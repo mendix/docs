@@ -26,7 +26,7 @@ This is the name of the action the consumer will see in their toolbox.
 
 ### 2.2 Icon
 
-This is the icon that belongs to the action. An icon can be selected from any image documents in the app project. A new icon can be added to an image document if it is not available yet.
+This is the icon that belongs to the action. An icon can be selected from any image documents in the app. A new icon can be added to an image document if it is not available yet.
 
 ### 2.3 Microflow
 

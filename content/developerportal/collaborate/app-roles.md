@@ -1,7 +1,7 @@
 ---
 title: "App Roles"
 category: "Collaboration Tools"
-menu_order: 25
+menu_order: 4
 description: "Describes the App Team, App Contact, and Technical Contact roles and permissions within the Mendix Platform."
 tags: ["app team", "app contact", "technical contact", "developer portal", "role", "permissions"]
 aliases:
@@ -14,7 +14,7 @@ aliases:
 
 ## 1 Introduction
 
-The roles defined in Developer Portal for an [app project](/developerportal/apps-list/) and [App Team](team) are described below.
+The roles defined in Developer Portal for an [app](/developerportal/apps-list/) and [App Team](team) are described below.
 
 ## 2 App Team Member
 
@@ -41,9 +41,9 @@ These are the predefined App Team roles:
 
 ### 3.1 Editing App Team Roles {#edit-app-team-roles}
 
-Mendix Admins can edit and create new team roles within the company in [Control Center](../control-center/index).
+Mendix Admins can edit and create new team roles within the company in [Control Center](../control-center/).
 
-As a Scrum Master, you can edit roles for the specific app of which you are the Scrum Master by selecting **Team** > **Manage Team** (which will take you to the **App Team** tab of the **Settings** > **Security** page), clicking **Role settings,** then making your edits by clicking **Edit** or clicking **New role** to create a custom new App Team role for that app.
+As a Scrum Master, you can edit roles for the specific app of which you are the Scrum Master by selecting **Team** > **Manage Team** (which will take you to the **App Team** tab of the **Security** page), clicking **Role settings,** then making your edits by clicking **Edit** or clicking **New role** to create a custom new App Team role for that app.
 
 ![](attachments/app-roles/app-roles-edit.png)
 
@@ -61,8 +61,8 @@ To change the App Contact, you need to have a **Scrum Master** role or possess t
 
 Change the App Contact by following these steps:
 
-1. Go to the [Developer Portal](http://home.mendix.com), click **Apps** in the top navigation panel, and select the app for which you want to change the App Contact.
-2. Click **General** under the **Settings** category.
+1. Go to the [Developer Portal](http://sprintr.home.mendix.com), click **Apps** in the top navigation panel, and select the app for which you want to change the App Contact.
+2. Click **General Settings**.
 3.  Click **Edit App Info** in the top-right corner.
 
 	{{% image_container width="500" %}}![](attachments/app-roles/change-appcontact.png)
@@ -91,7 +91,7 @@ For apps in the Mendix Cloud, the Technical Contact is the first point of contac
 * Can receive alerts from the Mendix app when problems arise (for example, CPU load is high, running out of disk space)
 * Make adjustments to environments (for example, resize and add new environments) 
 
-As a Technical Contact, you can perform all the regular operations on the Mendix Cloud node in the [Developer Portal](http://home.mendix.com). Additionally, you can manage the access rights of your team members so that they can deploy, stop and start the app, and perform other actions. For more information, see [Node Permissions](/developerportal/deploy/node-permissions).
+As a Technical Contact, you can perform all the regular operations on the Mendix Cloud node in the [Developer Portal](http://sprintr.home.mendix.com). Additionally, you can manage the access rights of your team members so that they can deploy, stop and start the app, and perform other actions. For more information, see [Node Permissions](/developerportal/deploy/node-permissions).
 
 The Technical Contact is also responsible for managing licenses (as in, renewals, activations, and upgrades) and is the first point of contact for the Mendix Support department. Please note that Mendix is responsible for Mendix Cloud app renewals, and you can contact your Customer Success Manager (CSM) if you want to expand the license.
 
@@ -109,8 +109,8 @@ It is currently not possible to select more than one Technical Contact in the Me
 
 If you are the current Technical Contact for an app, make another App Team member the Technical Contact by following these steps:
 
-1. Go to the [Developer Portal](http://home.mendix.com), click **Apps** in the top navigation panel, and select the app for which you want to change the Technical Contact.
-2. Click **Security** under the **Settings** category.
+1. Go to the [Developer Portal](http://sprintr.home.mendix.com), click **Apps** in the top navigation panel, and select the app for which you want to change the Technical Contact.
+2. Click **Collaborate** > **Security** category.
 3. Select the **Node Permissions** tab.
 4.  Below the name of the new Technical Contact, click **Change to Technical Contact**. The Technical Contact will be changed for all environments, and the change will be automatically saved.
 

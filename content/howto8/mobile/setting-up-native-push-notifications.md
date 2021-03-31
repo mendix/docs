@@ -16,7 +16,7 @@ Native remote push notifications have more capabilities than hybrid push notific
 1. Configure your Firebase setup.
 1. Customize your native template.
 
-Follow the sections below to complete these three tasks and enable native remote push notifications. After you have completed this document, see [How To Use Native Push Notifications](/howto/mobile/native-remote-notifications) for instructions on implementing native push notifications.
+Follow the sections below to complete these three tasks and enable native remote push notifications. After you have completed this document, see [How To Use Native Push Notifications](/howto8/mobile/native-remote-notifications) for instructions on implementing native push notifications.
 
 {{% alert type="info" %}}
 
@@ -74,7 +74,7 @@ The Native Mobile Builder simplifies the process of adding any capabilities to y
 	{{% image_container width="350" %}}![Mendix Natve Mobile Builder Home Screen](attachments/nbui/home-screen.png){{% /image_container %}}
 
 1. Select **Build app for distribution**.
-1.  Click **Capabilities** on the left menu:
+1.  Click **App capabilities** on the left menu:
 
 	{{% image_container width="350" %}}![Mendix Natve Mobile Builder Capabilities Screen](attachments/nbui/advanced-capabilities.png){{% /image_container %}}
 

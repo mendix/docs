@@ -62,7 +62,7 @@ A list operation action can execute any of the following operations. The operati
 
 #### 3.1.1 Binary
 
-These binary operations have as an input a list and either another list or an object. THey return another list or a Boolean, depending on the operation. All lists and objects must relate to the same entity.
+These binary operations have as an input a list and either another list or an object. They return another list or a Boolean, depending on the operation. All lists and objects must relate to the same entity.
 
 | Operation | Description | Result Type |
 | --- | --- | --- |

@@ -61,11 +61,7 @@ To see all your pinned apps, click the **Pinned** tab at the top of My Apps page
 
 On the **My Company's Apps** page, you will see all the apps created by members of your [company](/developerportal/control-center/#company):
 
-{{% image_container width="400" %}}
 ![Apps for my company](attachments/company-apps.png)
-{{% /image_container %}}
-
-You cannot change the sort order of your apps.
 
 If you click an app for which you are a team member, you will be taken to the app [Buzz](/developerportal/collaborate/buzz).
 

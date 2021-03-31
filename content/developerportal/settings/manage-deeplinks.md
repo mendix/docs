@@ -18,7 +18,7 @@ To go directly to the desired element of your app in the Developer Portal, you c
 
 To create a deep link, you need the App ID, Story ID, or Feedback Item Nr for the desired element in the Developer Portal.
 
-*  For the App ID, select **Settings** > **General** – you will find the **App ID** at the bottom of the page:
+*  For the App ID, select **Collaborate** > **General Settings** – you will find the **App ID** at the bottom of the page:
 
 	![](attachments/app-id.png)
 

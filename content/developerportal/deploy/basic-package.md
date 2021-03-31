@@ -3,7 +3,7 @@ title: "Mendix Basic Package"
 parent: "licensing-apps"
 menu_order: 20
 description: "Obtaining a Mendix Basic Package Node"
-tags: ["App", "Node", "Developer Portal", "Licensed", "Free App", "Upgrade", "Basic Package"]
+tags: ["App", "Node", "Developer Portal", "Licensed", "Free App", "Upgrade", "Basic Package", "Basic license"]
 ---
 
 ## 1 Introduction
@@ -23,7 +23,7 @@ The basic package has the following features.
 * Runs in the Mendix Cloud
 * Supports between five and a hundred (5-100) users
 * Can be paid for via invoice only
-* Has a limited amount of resources and only a single environment - see the [Mendix Pricing Plans](mendix-cloud-deploy#plans) section of *Mendix Cloud* for more information.
+* Has a limited amount of resources and a single cloud environment, the XS20 described in the [Mendix Pricing Plans](mendix-cloud-deploy#plans) section of *Mendix Cloud*, together with the ability to preview and test in Studio Pro and Studio.
 * The regular Mendix [Service Level Agreement](https://www.mendix.com/wp-content/uploads/Mx_ServiceLevelAgreement_v2018-01.pdf) applies, but please note the following:
     * You cannot get telephone support: access to support is via the [Mendix support website](https://support.mendix.com) only.
     * Support is only available for general platform issues – Mendix support cannot give help on problems with individual apps.

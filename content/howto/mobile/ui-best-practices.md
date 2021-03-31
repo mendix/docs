@@ -12,7 +12,7 @@ This document discusses how Mendix Platform users can build a native mobile app'
 
 ## 2 Roles
 
-When building a native application, different roles are needed for app development. This does not necessarily mean there must be a different person for every role, as developers can serve multiple roles. Also, depending on your project there should be a difference in the level of expertise among certain roles.
+When building a native application, different roles are needed for app development. This does not necessarily mean there must be a different person for every role, as developers can serve multiple roles. Also, depending on your app, there should be a difference in the level of expertise among certain roles.
 
 ### 2.1 Different Types of Roles
 

@@ -34,7 +34,7 @@ To get more information, double-click or right-click the warning.
 
 {{% /alert %}}
 
-* This will not affect the project in this version of Studio Pro, but it may cause problems when upgrading
+* This will not affect the app in this version of Studio Pro, but it may cause problems when upgrading
 * In this example, the pop-up layout must be adjusted in order to no longer use the main placeholder
 
 {{% alert type="warning" %}}
@@ -178,4 +178,4 @@ Variable ‘Variable’ is never used.
 * [Debug Java Actions](debug-java-actions)
 * [Debug Microflows Remotely](debug-microflows-remotely)
 
-Several warnings relate to improper security. For more information on this, see [Project Security](/refguide/project-security) in the *Studio Pro Guide*.
+Several warnings relate to improper security. For more information on this, see [App Security](/refguide/project-security) in the *Studio Pro Guide*.

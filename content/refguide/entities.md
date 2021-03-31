@@ -25,13 +25,6 @@ For example, you have a collection of CDs like the one in the table below:
 
 The rows in the table are CDs. The type of the two rows is *CD* and this is the entity name. A specific CD like *How to Dismantle an Atomic Bomb* from the band *U2* is called an object of the entity *CD*. Characteristics like the title and artist are called attributes.
 
-{{% alert type="info" %}}
-You can also use data sources from other applications in your project  through the [Data Hub](data-hub-pane) pane. These data sources are represented in the domain model as *external entities* which are displayed as purple entity containers in the domain model:
- ![Virtual Entity Example](attachments/data-hub-pane/virtual-entity-example.png) 
-
-For further information see [External Entities](external-entities).
-{{% /alert %}}
-
 ## 2 Type of Entities {#entity-types}
 
 The entity type defines how the data is handled and there are two types:
@@ -41,9 +34,20 @@ The entity type defines how the data is handled and there are two types:
 
 ![](attachments/domain-model/type-of-entities.jpg)
 
+
+{{% alert type="info" %}}
+You can also use data sources from other applications in your app  through the [Data Hub](data-hub-pane) pane. These data sources are represented in the domain model as *external entities* which are displayed as purple entity containers in the domain model:
+ ![Virtual Entity Example](attachments/data-hub-pane/virtual-entity-example.png) 
+
+For further information see [External Entities](external-entities).
+{{% /alert %}}
+
+
 ### 2.1 Persistable Entity {#persistable-entity}
 
 When an entity is declared persistable, a database table is created for the entity. These type of entities are colored *blue* in the domain model. For more information on persistable entities, see [Persistability](persistability).
+
+
 
 ### 2.2 Non-Persistable Entity {#non-persistable-entity}
 

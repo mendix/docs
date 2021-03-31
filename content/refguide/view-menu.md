@@ -10,10 +10,9 @@ tags: ["Studio Pro", "view menu", "top bar"]
 
 Studio Pro supports a number of dockable window panes, such as the **Changes** and **Errors** panes. You can close some panes to just show the ones you need at the moment, but you can always reopen them via the **View** menu. 
 
-Via this menu you can also enable or disable the [full screen mode](#full-screen) or [reset the layout](#reset-layout) of your project to the default.  
+Via this menu you can also enable or disable the [full screen mode](#full-screen) or [reset the layout](#reset-layout) of your app to the default.  
 
-{{% image_container width="300" %}}![View Menu](attachments/view-menu/view-menu.png)
-{{% /image_container %}}
+![View Menu](attachments/view-menu/view-menu.png)
 
 ## 2 Layout of Panes {#layout-of-panes}
 
@@ -58,6 +57,7 @@ When you drag a pane, you can see arrows that indicate where you can position th
 The video below shows examples of how to position a pane:
 
 <video width="640" height="360" controls src="attachments/view-menu/positioning-panes.mp4">VIDEO</video>
+
 If you have several panes grouped together in tabs, you can change the position of all the tabs at once by dragging the top-bar. To change the position of an individual tab, drag the tab itself. 
 
 ## 3 Menu Items
@@ -66,11 +66,11 @@ Menu items of the **View** menu are described in sections below.
 
 ### 3.1 Changes
 
-For version control enabled projects (projects with [Team Server](/developerportal/develop/team-server) or other SVN servers), the [Changes pane](changes-pane) shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
+For version control-enabled apps (meaning, those with [Team Server](/developerportal/develop/team-server) or other SVN servers), the [Changes pane](changes-pane) shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
 
 This pane has two levels, so when you zoom into a changed document, you can review all the changes within that document without going back and forth between levels. The zoomed-in level of the pane is split into two grids, with elements on the left and properties on the right. Selecting an element on the left presents the changed properties on the right:
 
-![](attachments/view-menu/changes.gif)
+<video width="640" height="360" controls src="attachments/view-menu/changes.mp4">VIDEO</video>
 
 ### 3.2 Connector {#connector}
 
@@ -78,7 +78,7 @@ The **Connector** pane displays elements that can be connected to the currently 
 
 ### 3.3 Data Hub {#data-hub}
 
-The [Data Hub pane](data-hub-pane) allows you to browse the [Data Hub Catalog](/data-hub/data-hub-catalog) and integrate registered data sources that are available for your organization. You can add [external entities](external-entities) to your app via this pane and view entities and services already consumed in your app. 
+The [Data Hub pane](data-hub-pane) enables you to browse the [Data Hub Catalog](/data-hub/data-hub-catalog) and use registered data sources that are available for your organization in your app development. You can add [external entities](external-entities) to your app via this pane and see entities and data sources already consumed in your app. 
 
 ### 3.3 Console {#console}
 
@@ -98,9 +98,9 @@ This pane displays the results of the latest find action. You can search for tex
 
 There are two **Find Results** panes. If you lock the results of the first pane, the second one is used for subsequent find operations until you unlock the first one.
 
-### 3.7 Project Explorer
+### 3.7 App Explorer
 
-The [Project Explorer](project-explorer) pane displays the complete structure of your app, including all the documents inside the modules. By default, the active document is always selected, so you can quickly see where the document you are editing is in the tree. You can change this behavior in **Edit** > [Preferences](preferences-dialog).
+The [App Explorer](project-explorer) pane displays the complete structure of your app, including all the documents inside the modules. By default, the active document is always selected, so you can quickly see where the document you are editing is in the tree. You can change this behavior in **Edit** > [Preferences](preferences-dialog).
 
 ### 3.8 Properties
 
@@ -149,5 +149,5 @@ Resets the layout of dockable window panes to factory defaults.
 
 * [Changes Pane](changes-pane)
 * [Errors Pane](errors-pane)
-* [Project Explorer](project-explorer)
+* [App Explorer](project-explorer)
 * [Studio Pro Overview](studio-pro-overview)

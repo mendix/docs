@@ -1,7 +1,7 @@
 ---
 title: "Version Control Menu"
 parent: "menus"
-description: "Describes the Project Menu in Studio Pro."
+description: "Describes the Version Control Menu in Studio Pro."
 menu_order: 40
 tags: ["Studio Pro", "project menu", "top bar"]
 ---
@@ -52,7 +52,7 @@ The **Reverse Merge Changes** option allows locally rolling back changes that we
 
 ## 11 Revert All Changes
 
-The **Revert All Changes** option allows rolling back all local changes, both in the project and in files on disk, that have been introduced since the last commit.
+The **Revert All Changes** option allows rolling back all local changes, both in the app and in files on disk, that have been introduced since the last commit.
 
 ## 12 Add Snapshot of Data
 

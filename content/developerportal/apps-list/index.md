@@ -1,7 +1,7 @@
 ---
 title: "Apps List"
 description: "How to manage your apps from the Apps menu item in the Developer Portal"
-tags: ["My Apps", "My Company's Apps", "Nodes"]
+tags: ["My Apps", "My Company's Apps"]
 ---
 
 ## 1 Introduction
@@ -10,7 +10,9 @@ The **My Apps** page shows you a summary of your apps:
 
 ![Apps tiles](attachments/apps-tiles.jpg)
 
-The **All** displays all the apps for which you are an [App Team](../collaborate/team) member. Any apps you pin with the pin icon will appear in the **Pinned** tab. 
+**All** displays all the apps for which you are an [App Team](../collaborate/team) member. Any apps you pin with the pin icon will appear in the **Pinned** tab. 
+
+## 2 Viewing Apps
 
 Click an app tile to see the app [Buzz](/developerportal/collaborate/buzz).
 

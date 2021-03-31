@@ -1,7 +1,7 @@
 ---
 title: "App Team"
 category: "Collaboration Tools"
-menu_order: 20
+menu_order: 3
 description: "Describes the Team page of the Developer Portal."
 tags: ["Team", "Developer Portal"]
 ---
@@ -24,7 +24,7 @@ On the **Team** page, you will see an overview with the following information ab
 
 ## 2 Managing the Team {#managing}
 
-When you click **Manage Team** in the top-right corner of the screen, you will be forwarded to the **Settings** > **Security** page. 
+When you click **Manage Team** in the top-right corner of the screen, you will be forwarded to the **Collaborate** > **Security** page. 
 
 {{% alert type="info" %}}
 

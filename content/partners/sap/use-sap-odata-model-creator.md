@@ -256,7 +256,7 @@ Now you have a Mendix module ready to import into your project.
 
 1. Open the project which you created as a prerequisite.
 
-2. Right-click your project in the **Project Explorer** and select **Import module package...**.
+2. Right-click your project in the **App Explorer** and select **Import module package...**.
 
     ![](attachments/use-sap-odata-model-creator/import_module_package.png)
 

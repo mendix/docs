@@ -1,5 +1,5 @@
 ---
-title: "Examples for the Data Hub API Calls"
+title: "Examples of the Data Hub API Calls"
 parent: "data-hub-api-how-to"
 description: "Examples of the how to use the Data Hub API."
 tags: ["data hub", "Data Hub API", "registration", "api", "api-requests", "data hub api examples"]
@@ -24,7 +24,7 @@ For convenience and conciseness, the following variables are used and should be 
 - {EnvironmentUUID} – insert the value of the UUID of the environment
 - `<your MxToken>` – insert the value of your [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) as described in [Using the Data Hub API How-to](data-hub-api-how-to#pat)
 
-## 3 Searching in the Catalog for the string: `sample` {#get-data-ex}
+## 3 Searching in the Catalog for the string: sample {#get-data-ex}
 This example provides the GET request to the Data Hub API when you want to search in the Data Hub Catalog for the following:
 
 - the search string `sample` 
@@ -307,7 +307,7 @@ The following 201 Created response returns the Catalog-generated identifier  `"U
 }
 ```
 
-### 4.3 Registering the 5how-toODatav3-sample-service {#reg-service-ex}
+### 4.3 Registering the Data Source 5how-toODatav3-sample-service {#reg-service-ex}
 
 In this example call, the service **5how-toODatav3-sample-service** is registered for the application registered in [Section 4.1](#ex-reg-app) and deployed to the environment registered in [Section 4.2](#reg-env-ex).
 

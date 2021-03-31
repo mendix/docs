@@ -2,7 +2,7 @@
 title: "Using the Data Hub API"
 category: "General Info"
 menu_order: 50
-description: "How to use the Data Hub API a guide with examples."
+description: "How to use the Data Hub API a guide."
 tags: ["data hub", "Data Hub API", "registration", "api", "api-requests", "PAT"]
 ---
 
@@ -93,7 +93,7 @@ If you are using the [curl](http://curl.haxx.se/) command to send your HTTP requ
 
 Insert the value of your PAT token for the string <*your token*> for every request that you make.
 
-### 4.2 Base Variables used in this How-to
+### 4.2 Base Variables Used in the How-to
 
 For convenience and conciseness, throughout this how-to the following variables are used and should be substituted by the relevant values or those that are returned in prior responses:
 
@@ -101,7 +101,7 @@ For convenience and conciseness, throughout this how-to the following variables 
 - {{baseURL}} — the base URL for the Data Hub API: https://hub.mendix.com/rest/datahubservice/v2/data
 - {*AppUUID}* — insert the value returned in the API response for the UUID of the application
 - {*EnvironmentUUID*} – insert the value returned in the API response for the UUID of the environment
-- ```<your MxToken>``` – insert the value of your [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) as described in [Using the Data Hub API How-to](data-hub-api-how-to#pat)
+- ```<your MxToken>``` – insert the value of your [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) as described in [Access](#pat)
 
 ## 5 Searching in the Catalog{#api-search}
 
@@ -138,7 +138,7 @@ All the assets (items registered) in the Catalog that will be searched. For each
 
 The `SearchResults` object includes the total number of items, `TotalResults`, that satisfy the search request and the `Data` object is the array of the endpoints of the objects that satisfy the search string. 
 
-The For the full specification see the [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
+For the full specification see the [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
 
 #### 5.3.2 `Data` Objects
 A representation of what is returned in the response for `Data` is shown below. 
@@ -347,7 +347,7 @@ The following file is an example OData v3 contract that you can use for in this 
 
 - [The Data Hub](/data-hub)
 
-- [Using the Data Hub Examples](data-hub-api-how-to-examples)
+- [Examples of the Data Hub API Calls](data-hub-api-how-to-examples)
 
   
 

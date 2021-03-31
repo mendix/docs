@@ -92,7 +92,7 @@ If you wish to send push notifications to iOS devices through FCM, you will need
 
 	![](attachments/push_notifications_cloud_messaging.png)
 
-1. On this tab, upload either your APNs key or your APNs certificate(s). For more information on APN SSL certificates, see [How to Set up the Apple Push Notification Server](setting-up-apple-push-notification-server).
+1. On this tab, upload either your APNs key or your APNs certificate(s).
 
 ## 6 Setting Up a Service Account
 

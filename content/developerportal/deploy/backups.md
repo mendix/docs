@@ -1,6 +1,6 @@
 ---
 title: "Backups"
-category: "Operations"
+category: "Deployment"
 menu_order: 40
 description: "The Backups page of the Developer Portal described."
 tags: ["Operate", "App", "Developer Portal", "Backup"]

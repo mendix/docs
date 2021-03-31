@@ -1,6 +1,6 @@
 ---
 title: "Logs"
-category: "Operations"
+category: "Deployment"
 menu_order: 30
 description: "This page describes the Logs page of the Developer Portal."
 tags: ["Operate", "App", "Developer Portal", "SAP", "v3", "v4"]

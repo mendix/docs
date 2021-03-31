@@ -58,7 +58,7 @@ With these three pieces of information, you should be able to find the cause of 
 * [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
 * [Debug Java Actions Remotely](debug-java-actions-remotely)
 * [Log Levels](log-levels)
-* [Debug Microflows](debug-microflows)
+* [Debug Microflows and Nanoflows](debug-microflows-and-nanoflows)
 * [Debug Microflows Remotely](debug-microflows-remotely)
 * [Debug Java Actions](debug-java-actions)
 * [The Root Cause of Runtime Errors and Resolving the 2 Most Common Issues](http://www.mendix.com/blog/the-root-cause-of-runtime-errors-and-resolving-the-2-most-common-issues/)

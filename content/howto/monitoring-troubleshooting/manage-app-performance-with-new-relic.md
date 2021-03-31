@@ -101,7 +101,7 @@ For more information on New Relic, see the New Relic documentation here: [https:
 * [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
 * [Debug Java Actions Remotely](debug-java-actions-remotely)
 * [Set Log Levels](log-levels)
-* [Debug Microflows](debug-microflows)
+* [Debug Microflows and Nanoflows](debug-microflows-and-nanoflows)
 * [Debug Java Actions](debug-java-actions)
 * [Solve Load & Import Errors](solving-load-and-import-errors)
 * [Debug Microflows Remotely](debug-microflows-remotely)

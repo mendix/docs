@@ -212,9 +212,9 @@ The panel widgets can be used in the following ways:
 ![pstreetable-generall](attachments/3d-viewer/pstreetable-general.jpg)  
 * **PMI tree** - On the **General** tab, the property **Expand all tree nodes** determines if all tree nodes are expanded by default. When set to `yes`, you will see a PMI tree fully expanded by default on this widget load; When set to `no`, PMI tree will not fully expand by default. 
 ![pmitree-general](attachments/3d-viewer/pmitree-general.jpg)
-* **Section view** - Place it inside of a Container3D widget, a Viewer widget should be present in the same Container3D widget so you can add section plane on the model. No specific configuration is needed. With this widget, you can add, delete and clear sections planes to the model on your desired direction axis and clipping mode. For details on how Section View behaves in an app. Please see [Create 3D Section](#71-create-3d-section)
+* **Section view** - Place it inside of a Container3D widget, a Viewer widget should be present in the same Container3D widget so you can add section plane on the model. No specific configuration is needed. With this widget, you can add, delete and clear section planes to the model on your desired direction axis and clipping mode. For details on how Section View behaves in an app. Please see [Create 3D Section](#71-create-3d-section)
 * **Markup builder** - 
-	* On **General** tab, by setting property **Enable** to true or false, you can switch on and off the markup mode, when set to `true`, model will be locked to a 2D dimension and won't react to mouse rotate , when set to `false`, model will be unlocked and return to rotatable state;  another property is **Markup color**, it allows you to set color of markup annotation. Valid values are [CSS Legal color value](https://www.w3schools.com/CSSref/css_colors_legal.asp), for example, RGB value, predefined color names, hexadecimal color values.
+	* On **General** tab, by setting property **Enable** to true or false, you can switch on and off the markup mode, when set to `true`, model will be locked to a 2D dimension and won't react to mouse rotate, when set to `false`, model will be unlocked and return to rotatable state; another property is **Markup color**, it allows you to set color of markup annotation. Valid values are [CSS Legal color value](https://www.w3schools.com/CSSref/css_colors_legal.asp), for example, RGB value, predefined color names, hexadecimal color values.
     ![markup-general](attachments/3d-viewer/markup-general.jpg)
 	* On **Event** tab, by binding a boolean type attribute to **Save** property, you will be able to obtain save status of the markup image after user click the Save button on the markup builder's panel, and add custom actions, such as show pop up message, to it. When the attribute values changes to `true`, it means the markup image associated with model is successfully saved in Mendix file storage; when the attribute value is `false`, it means the save is not successful.
     ![markup-events](attachments/3d-viewer/markup-events.jpg)
@@ -416,6 +416,23 @@ Far - Clip away the negative side (away from direction).
 You can slide the position sliders to move the position of the section plane along its axis. You can also type in an exact position to place the section plane at an exact position.
 
 You can add multiple section planes to cut the model in different directions. After the section, you can save a snapshot of a section view. You can also add markup annotations on the section view and save them for later review.
+
+### 7.2 Perform 3D Measurement
+
+When a model is loaded into the viewer, Measurement widget provides a set of tools to measure different geometrical entities.  
+
+![measurement-panel](attachments/3d-viewer/measurement-panel.jpg)
+
+**Measurement Mode**  
+Distance : Measure the distance between two part features.
+Length: Measure length of a line.  
+Radius: Measure the radius of a circular edge or surface.  
+Angle: Measure the angle between two edges or surfaces.  
+Area: Measure the area of a surface.  
+
+**Dimension Controls**  
+Remove: Select one measurement result, click Remove, the selected measurement result will be removed from the scene.  
+Clear: Clear all measurement results in the scene.
 
 ## 8 Loading & Visualizing a Model from Teamcenter
 

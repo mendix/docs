@@ -28,14 +28,14 @@ In [Creating a "Search GitHub User" JavaScript Action](#create-a-search) below, 
 * Learn how the GitHub API works using the [GitHub developer documentation](https://developer.github.com/v3/search/#search-users)
 * Use test tooling to see how the GitHub API in action — an HTTP GET request of the URL `https://api.github.com/search/users?q=test` will result in a JSON response which you should study
 
-## 3 Downloading the Project Package
+## 3 Downloading the App Package
 
 This how-to comes paired with an app package prepared for you by Mendix. To download and import the package, follow the steps below:
 
 1. In Mendix Studio Pro, click the AMarketplace icon.
 2. Search for "JavaScript Actions How-To Advanced".
 3. Click the app, then click **Download** to receive an *.mpk* file. 
-4.  Select **New Mendix Team Server**, name your app *JavaScriptActionsHowToAdvanced*, select a **Project Directory**, and click **OK**:
+4.  Select **New Mendix Team Server**, name your app *JavaScriptActionsHowToAdvanced*, select an **App Directory**, and click **OK**:
 
 	![import package](attachments/jsactions-advanced/import-package.png)
 
@@ -43,7 +43,7 @@ This how-to comes paired with an app package prepared for you by Mendix. To down
 
 To create a JavaScript action that can search for users on GitHub, follow the steps below:
 
-1.  Add a new **JavaScript action** in your Mendix project:
+1.  Add a new **JavaScript action** in your Mendix app:
 
 	![add javascript action](attachments/jsactions-advanced/add-js-action.png)
 
@@ -67,7 +67,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
 	![default code](attachments/jsactions-advanced/default-code.png)
 
-	You can only add code between `// BEGIN USER CODE` and `// END USER CODE`. Any code outside this block will be lost. Source code is stored in your project folder under **javascriptsource/(module name)/actions/(action name).js**. 
+	You can only add code between `// BEGIN USER CODE` and `// END USER CODE`. Any code outside this block will be lost. Source code is stored in your app folder under **javascriptsource/(module name)/actions/(action name).js**. 
 
 6. Now add a check to verify if the required parameter has been set correctly. The action will return an empty list if no `query` was provided:
 
@@ -302,11 +302,11 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 	
 	![change object](attachments/jsactions-advanced/change-object-final.png)
 
-19. Run your project, then use your new search action to find a GitHub user:
+19. Run your app, then use your new search action to find a GitHub user:
 
 	![find user](attachments/jsactions-advanced/find-user.png)
 
-20. If your project did not function correctly, consult the **Solution** folder to see correct versions of the nanoflow and JavaScript action:
+20. If your app did not function correctly, consult the **Solution** folder to see correct versions of the nanoflow and JavaScript action:
 
 	![solution](attachments/jsactions-advanced/solution.png)
 

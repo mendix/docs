@@ -41,7 +41,7 @@ If you do not already have a native template for your app, you can create one by
 
 Set up a native template with the **Native Mobile App Builder** by following these instructions:
 
-1.  Launch the Native Mobile App Builder from the **Project** menu. Walk through the wizard and configure the project's details and tokens (for more information, see [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app)):
+1.  Launch the Native Mobile App Builder from the **App** menu. Walk through the wizard and configure the app's details and tokens (for more information, see [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app)):
 
     {{% image_container width="400" %}}![launch native mobile builder](attachments/native-deep-link/launch-native-mobile-app-builder.png){{% /image_container %}}
 

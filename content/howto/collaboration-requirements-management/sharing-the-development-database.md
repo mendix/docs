@@ -30,7 +30,7 @@ Therefore this type of database is excellent to use while developing and running
 
 One application can make use of many different databases. Take the following steps to select the preferred database (if there is more than one configured)
 
-1.  Double-click **Settings** in the **Project Explorer**.
+1.  Double-click **Settings** in the **App Explorer**.
 2.  Select the preferred database configuration and click **Make active**.
   
     ![](attachments/18448637/18580427.png)

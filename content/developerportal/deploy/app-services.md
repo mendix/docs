@@ -30,7 +30,7 @@ For more information, see [Published App Services](/refguide8/published-app-serv
 
 ### 2.1 Settings
 
-In **Settings** you can manage the following:
+In **General Settings** you can manage the following:
 
 * App service info
 * Documentation

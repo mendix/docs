@@ -18,7 +18,7 @@ This image provides a domain model representation of the concepts discussed belo
 
 The Deploy API requires authentication via API keys that are bound to your Mendix account (for more information, see [Authentication](authentication)).
 
-As APIs are designed for automated systems, the Deploy API does not require the two-factor authentication which is normally required to make changes to production environments. This is a potential security risk. Therefore, the Technical Contact of an application needs to allow API access explicitly for team members that want to use the Deploy API. This can be configured from the **Node Security** screen under **Project Settings**. By default, API access is already enabled for test and acceptance environments for all team members. To perform an action via the Deploy API, such as transporting a new deployment package, both the **Transport** and **API Access** permissions need to be enabled.
+As APIs are designed for automated systems, the Deploy API does not require the two-factor authentication which is normally required to make changes to production environments. This is a potential security risk. Therefore, the Technical Contact of an application needs to allow API access explicitly for team members that want to use the Deploy API. This can be configured from the **Node Security** screen under **App Settings**. By default, API access is already enabled for test and acceptance environments for all team members. To perform an action via the Deploy API, such as transporting a new deployment package, both the **Transport** and **API Access** permissions need to be enabled.
 
 ## 3 API Calls
 
@@ -33,7 +33,7 @@ Only _Retrieve apps_, _Create Free App Environment_ and _Retrieve app_ API calls
 Retrieves all licensed apps and Free Apps to which the authenticated user has access as a regular user.
 
 {{% alert type="info" %}}
-The [Nodes](/developerportal/apps-list/#nodes) screen in the Developer Portal shows all the licensed apps which are returned by this request, but does not show any Free Apps, while the [My Apps](/developerportal/apps-list/#my-apps) screen shows both licensed apps and Free Apps.
+The [Nodes](/developerportal/deploy/node-permissions#nodes) screen in the Developer Portal shows all the licensed apps which are returned by this request, but does not show any Free Apps, while the [My Apps](/developerportal/apps-list/) screen shows both licensed apps and Free Apps.
 {{% /alert %}}
 
 

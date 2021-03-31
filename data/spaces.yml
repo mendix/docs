@@ -85,9 +85,6 @@ howto:
     - "Security"
     - "Testing"
     - "Monitoring & Troubleshooting"
-  banner:
-    type: 'info'
-    text: 'You are browsing the documentation for Mendix 9, which is currently a <a href="/releasenotes/beta-features/index">beta release</a>. If you are looking for Mendix 8 documentation, see <a href="/howto8/index">Studio Pro 8 How-to&#39;s</a>.'
 refguide6:
   space: "Mendix 6 Reference Guide"
   priority: false
@@ -137,9 +134,6 @@ refguide:
     - "Mendix Runtime"
     - "Mobile"
     - "Java Programming"
-  banner:
-    type: 'info'
-    text: 'You are browsing the documentation for Mendix 9, which is currently a <a href="/releasenotes/beta-features/index">beta release</a>. If you are looking for Mendix 8 documentation, see <a href="/refguide8/index">Studio Pro 8 Guide</a>.'
 releasenotes:
   space: "Release Notes"
   priority: false
@@ -177,6 +171,7 @@ studio:
     - "Working with Data"
     - "Navigation Document"
     - "Microflows"
+    - "Workflows"
     - "Previewing & Publishing Your App"
     - "Checks"
     - "Theme Customizer"

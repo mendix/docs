@@ -20,7 +20,7 @@ Calypso is the easiest styling solution for most users. However, if you already 
 
 ## 2 Prerequisites
 
-* Download Calypso [here](https://www.dropbox.com/sh/46hip6pq8s9ipqp/AAAHBwm-8qcv9bQKSR7BrirCa?dl=0)
+* Download Calypso [here](https://www.dropbox.com/sh/r1vx2kig86v5wa6/AABQC8MJfNi8Ff9skinrIf7Ea?dl=0)
 
 ## 3 Setting Up Calypso
 

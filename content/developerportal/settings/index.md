@@ -5,7 +5,7 @@ description: "Describes where you can configure various settings for your Mendix
 
 ## 1 Introduction
 
-The **Settings** category of menu items can be used to manage your app settings. Here, you can find basic app information and edit it. You can also manage your App Team and node permissions as well as create API keys.
+The **General Settings** category of menu items can be used to manage your app settings. Here, you can find basic app information and edit it. You can also manage your App Team and node permissions as well as create API keys.
 
 This category will cover the settings below.
 

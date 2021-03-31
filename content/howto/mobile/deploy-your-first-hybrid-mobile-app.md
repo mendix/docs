@@ -32,11 +32,11 @@ To open a hybrid example app, follow these steps:
 
     ![](attachments/18448692/18581187.png)
 
-3. Click **Run** to deploy this application to the Mendix Cloud:
+3. Click **Publish** to deploy this application to the Mendix Cloud:
 
     ![](attachments/18448692/18581186.png) 
 
-    Studio Pro will notify you as soon as the application is deployed. While you wait, go to **Navigation**, click the **Hybrid phone app online** tab, and make sure your **Default home page** is set to **MyFirstModule.Dashboard**.
+    Studio Pro will notify you as soon as the application is deployed. While you wait, go to **Navigation**, click the **Hybrid phone** tab, and make sure your **Default home page** is set to **MyFirstModule.Dashboard**.
 4. Click the small arrow to open the **View App** menu and select **View Hybrid Mobile App**:
 
     ![](attachments/18448692/18581185.png) 

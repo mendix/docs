@@ -7,14 +7,14 @@ tags: ["studio pro", "translation", "languages", "translatable text", "add langu
 
 ## 1 Introduction
 
-Mendix is designed to be used by users in multiple languages. The **Languages** tab of the **Project Settings** allows you to select which languages your app will support.
+Mendix is designed to be used by users in multiple languages. The **Languages** tab of the **App Settings** allows you to select which languages your app will support.
 
 ![](attachments/language/01_project_settings.png)
 
 You can reach this tab in two ways:
 
 1. Select the menu option **Language > Language Settings…**.
-2. Open the **Project {Name} > Settings** dialog box from the [Project Explorer](project-explorer) and select the **Language** tab.
+2. Open the **App{Name} > Settings** dialog box from the [App Explorer](project-explorer) and select the **Language** tab.
 
 ## 2 Setting Default Language
 

@@ -51,7 +51,7 @@ This tutorial's commands assume your software is installed in the following plac
 Follow these instructions to set up your NFC project:
 
 1. Open Mendix Studio Pro.
-1. Select **File** > **New Project**.
+1. Select **File** > **New App**.
 1. Select the **Native Mobile Quickstart** app (also available online [here](https://appstore.home.mendix.com/link/app/109511/)).
 1. Click **Use this starting point**.
 1. Name your app NativeNFC and click **Create App** to close the dialog box.
@@ -68,9 +68,9 @@ Follow these instructions to set up your NFC project:
 	g. Open **ACT_ReadNFCTag**.<br />
 	h. Drag and drop the **HasNFCSupport** JavaScript action onto this nanoflow.<br />
 	i. Save your nanoflow.
-1. Click **Run** to deploy to the sandbox. 
+1. Click **Publish** to deploy to the sandbox. 
 
-Your Mendix project should looks something like this:
+Your Mendix app should looks something like this:
 
 {{% image_container width="550" %}}
 ![native nfc app home](attachments/create-native-javascript-action/native-nfc-app-home-studio-pro.png)

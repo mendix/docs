@@ -18,13 +18,13 @@ However, it is also possible to do data validation in the runtime and to add uni
 
 This document discusses:
 
-* the impact on your projects of adding a database uniqueness constraint
+* the impact on your app of adding a database uniqueness constraint
 * how you can migrate your existing data when you make changes to your domain model validations
-* how you can ensure your existing data, which may be incompatible with your current validation rules, complies with your existing project model so that you can deploy in Mendix with database constraints
+* how you can ensure your app data, which may be incompatible with your current validation rules, complies with your existing app model so that you can deploy in Mendix with database constraints
 
 A migration toolkit is available to help you fix any inconsistencies between data in your database and validation rules defined in your model.
 
-For more information about the setting for *Uniqueness Validation*, see [Project Settings](project-settings).
+For more information about the setting for *Uniqueness Validation*, see [App Settings](project-settings).
 
 ## 2 Unique Attributes
 

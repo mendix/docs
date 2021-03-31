@@ -64,7 +64,7 @@ The Mendix Native Mobile Builder needs to communicate with GitHub and App Center
 
 From Studio Pro:
 
-1.  Click **Project** > **Build Native Mobile App**:
+1.  Click **App** > **Build Native Mobile App**:
 
 	{{% image_container width="350" %}}![Start Mendix Native Mobile Builder](attachments/nbui/start-nbui.png){{% /image_container %}}
 
@@ -73,7 +73,7 @@ From Studio Pro:
 	{{% image_container width="350" %}}![Mendix Native Mobile Builder Home Screen](attachments/nbui/home-screen.png){{% /image_container %}}
 
 1. Select **Build app for distribution**.
-1.  Fill in your app's name and the app identifier. The wizard provides defaults, but you might want to align the app identifier to use your company's reversed URL, or change the app name to something besides the project name:
+1.  Fill in your app's name and the app identifier. The wizard provides defaults, but you might want to align the app identifier to use your company's reversed URL, or change the app name in some other way:
 
 	{{% image_container width="350" %}}![Wizard App Details](attachments/nbui/wizard-app-details.png){{% /image_container %}}
 
@@ -99,7 +99,7 @@ From Studio Pro:
 
 1. Click **Next Step** when ready.
 
-You have completed the mandatory basic app configuration required to build your project. Now you see the **Build app for distribution** screen: 
+You have completed the mandatory basic app configuration required to build your app. Now you see the **Build app for distribution** screen: 
 
 {{% image_container width="350" %}}![Build release app](attachments/nbui/build-release-app.png){{% /image_container %}}
 

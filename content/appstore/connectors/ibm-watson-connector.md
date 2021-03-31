@@ -648,7 +648,7 @@ If the app is not running on IBM Cloud (for example if you are testing it locall
 
 ### 8.1 Getting Credentials Through VCAP
 
-An example of how to check for the VCAP services and import the configured credentials is in the WatsonServices microflow **USE_ME > OnStartUpWatsonAppOnIBMCloud**. In the sample app, this is configured to run automatically in **Project Settings > Runtime > After startup**.
+An example of how to check for the VCAP services and import the configured credentials is in the WatsonServices microflow **USE_ME > OnStartUpWatsonAppOnIBMCloud**. In the sample app, this is configured to run automatically in **App Settings > Runtime > After startup**.
 
 ![On Startup Microflow](attachments/ibm-watson-connector/onstartupwatsonapponibmcloud.png)
 

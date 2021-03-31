@@ -124,7 +124,7 @@ If you are working with multiple people on the same project please make sure the
 
 * We fixed an issue with iOS certificates not being saved correctly.
 
-### 1.0.51 
+### Release v1.0.51 
 
 **Release date: December 10th, 2020**
 
@@ -148,7 +148,7 @@ This release focuses mainly on quality of life bug fixes and features.
 * Fonts should now correctly be applied throughout the app.
 * Removed the **Skip** buttons from the wizard to avoid confusion.
 
-### 1.0.49
+### Release v1.0.49
 
 **Release date: October 27th, 2020**
 

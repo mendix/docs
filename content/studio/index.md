@@ -7,7 +7,7 @@ tags: ["studio", "web modeler"]
 
 {{% alert type="warning" %}}
 
-The **Studio 9 Guide** describes Mendix Studio functionality that corresponds to Mendix 9 version. It describes the latest Studio functionality and features.
+The **Studio 9 Guide** describes Mendix Studio functionality that corresponds to Mendix version 9. It describes the latest Studio functionality and features.
 
 {{% /alert %}}
 

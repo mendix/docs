@@ -20,11 +20,11 @@ These are the current versions in active development:
 
 ### Improvements
 
-The iOS apps should now use a single window and handle scene switching with view controllers instead. This should result in better compatibility in some edge cases.
+* iOS apps now use a single window, and handle scene switching with view controllers. This results in better compatibility in some cases.
 
 ### Fixes 
 
-* We fixed the App Center scripts to fail early when something is wrong.
+* We fixed the App Center scripts so they fail early when something is wrong.
 
 ## 5.1.9
 

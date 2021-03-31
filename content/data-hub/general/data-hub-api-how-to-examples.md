@@ -8,27 +8,23 @@ tags: ["data hub", "Data Hub API", "registration", "api", "api-requests", "data 
 
 ## 1 Introduction
 
-This document provides examples of the calls that are described in the the [Using the Data Hub API How-to](data-hub-api-how-to). The latest Data Hub OpenAPI 3.0 spec is available at http://datahub-spec.s3-website.eu-central-1.amazonaws.com/. 
+This document provides examples of the calls that are described in the [Using the Data Hub API How-to](data-hub-api-how-to). The latest Data Hub OpenAPI 3.0 spec is available at http://datahub-spec.s3-website.eu-central-1.amazonaws.com/. 
 
 In some cases the example curl command is provided.
 
-{{% alert type="info" %}}
-
-To use the Mendix Data Hub a license is required.
-
-{{% /alert %}}
+{{% alert type="info" %}}To use the Mendix Data Hub a license is required.{{% /alert %}}
 
 ## 2 Base Variables used in this How-to
 
 For convenience and conciseness, the following variables are used and should be substituted by the values given or those that are returned in your responses when you send the requests:
 
 
-- {{baseURL}} – the base URL for the Data Hub API:  https://hub.mendix.com/rest/datahubservice/v2/data
+- {{baseURL}} – the base URL for the Data Hub API: https://hub.mendix.com/rest/datahubservice/v2/data
 - {*AppUUID}* – insert the value the UUID of the application
-- {*EnvironmentUUID} -* insert the value of the UUID of the environment
-- ```<your MxToken>``` - insert the value of your [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) as described in [Using the Data Hub API How-to](data-hub-api-how-to#pat)
+- {EnvironmentUUID} – insert the value of the UUID of the environment
+- `<your MxToken>` – insert the value of your [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) as described in [Using the Data Hub API How-to](data-hub-api-how-to#pat)
 
-## 3 Searching in the Catalog for the string:  `sample` {#get-data-ex}
+## 3 Searching in the Catalog for the string: `sample` {#get-data-ex}
 This example provides the GET request to the Data Hub API when you want to search in the Data Hub Catalog for the following:
 
 - the search string `sample` 
@@ -41,7 +37,7 @@ This example provides the GET request to the Data Hub API when you want to searc
 
 `GET {{baseURl}}/data?query=sample&productionEndpointsOnly=true`
 
-**The  example curl command for the above search is**:
+**The example curl command for the above search is**:
 
 ```curl
 curl --location --request GET 'https://hub.mendix.com/rest/datahubservice/v2/data?query=sample&productionEndpointsOnly=true' \
@@ -54,11 +50,7 @@ The 200 OK response returned that the `TotalResults` are that **11 assets** were
 
 The response payload is shown below:
 
-{{% alert type="info" %}}
-
-For conciseness in this how-to, of the 11 objects that are returned for the  `Data`  object only the second data source, **SAMPLE_EmployeeDirectory**, is shown fully in the response payload below, the other data sources have been represented as { … }.
-
-{{% /alert %}}
+{{% alert type="info" %}}For conciseness in this how-to, of the 11 objects that are returned for the `Data` object only the second data source, **SAMPLE_EmployeeDirectory**, is shown fully in the response payload below, the other data sources have been represented as { … }.{{% /alert %}}
 
 ```json
 {
@@ -187,15 +179,11 @@ This registration must done in the following order:
 2. Environment that the data source is deployed to: `POST environment`
 3. The published services from the application (data sources) : `PUT published-endpoints`
 
-When the application and environment is already registered in the Catalog, then you can proceed to the [`PUT published-endpoints`](#reg-service-ex).  
+When the application and environment is already registered in the Catalog, then you can proceed to the [`PUT published-endpoints`](#reg-service-ex). 
 
-An example Odata v3 service –  **DataHub_Sample_1.0.0_OData3** – is provided in [Sample Contract File](#ex-metadata) (in the required escaped JSON format) that you can use whe n you are trying out the API calls.  
+An example Odata v3 service – **DataHub_Sample_1.0.0_OData3** – is provided in [Sample Contract File](#ex-metadata) (in the required escaped JSON format) that you can use when you are trying out the API calls. 
 
-{{% alert type="info" %}}
-
-OData service contract files must be included in the request body in escaped JSON format. There are several online converters available for converting your *.xml* files into this format such as one available from [Freeformatter.com](https://www.freeformatter.com/json-escape.html#ad-output). Just paste the contents of your files and convert them to the escaped format.  
-
-{{% /alert %}}
+{{% alert type="info" %}}OData service contract files must be included in the request body in escaped JSON format. There are several online converters available for converting your *.xml* files into this format such as one available from [Freeformatter.com](https://www.freeformatter.com/json-escape.html#ad-output). Just paste the contents of your files and convert them to the escaped format. {{% /alert %}}
 
 ### 4.1 Registering the `Howto5-App` {#ex-reg-app}
 In this example, you are going to register an app called **Howto5-App**. The details of the app are included in the JSON format request body given below.
@@ -204,7 +192,7 @@ In this example, you are going to register an app called **Howto5-App**. The det
 
 `POST {{baseURL}}/applications`
 
-#### 4.1.2  JSON Format Request Body
+#### 4.1.2 JSON Format Request Body
 
 Copy the contents of this body, or save it to a file, and include it as part of your API request.
 
@@ -255,11 +243,7 @@ curl --location --request POST '{{BaseURL}}' \
 #### 4.1.3 Successful 201 Response Application Created {#app-registered}
 The 201 response that is returned to indicate that the application is registered is given below: 
 
-{{% alert type="info" %}}
-
-The response returned the  `"UUID": "2ab1410e-06d4-4e07-a82d-cc04b21d2622"`, which is the Catalog identifier for the application that must be used to identify it in subsequent steps of the registration of the data source. This value for the the app UUID will be represented as {*AppUUID}* in the rest of this document.
-
-{{% /alert %}}
+{{% alert type="info" %}}The response returned the `"UUID": "2ab1410e-06d4-4e07-a82d-cc04b21d2622"`, which is the Catalog identifier for the application that must be used to identify it in subsequent steps of the registration of the data source. This value for the app UUID will be represented as {*AppUUID}* in the rest of this document. {{% /alert %}}
 
 ```json
 {
@@ -281,14 +265,14 @@ The response returned the  `"UUID": "2ab1410e-06d4-4e07-a82d-cc04b21d2622"`, whi
 }
 ```
 
-### 4.2 Registering the Environment `Production`  for the Howto5-App {#reg-env-ex}
+### 4.2 Registering the Environment `Production` for the Howto5-App {#reg-env-ex}
 
 The following call is to register the environment **Production** for the **Howto5-App** that was reigstered in the previous section. 
 
 #### 4.2.1 Base request URL:
 `POST {{baseURL}} /applications/{appUUID}/environments`
 
-#### 4.2.2  JSON format request body for the Environment
+#### 4.2.2 JSON format request body for the Environment
 
 The following request body must be included with the request. 
 
@@ -302,7 +286,7 @@ The following request body must be included with the request.
 }
 
 #### 4.2.3 Successful 201 Created Successful 200 {#env-registerd}
-The following 201 Created response returns the Catalog-generated identifier   `"UUID": "236c9acc-830c-48d9-a0ef-e1104a15d26d"` for the for the registered environment  `Production`.
+The following 201 Created response returns the Catalog-generated identifier  `"UUID": "236c9acc-830c-48d9-a0ef-e1104a15d26d"` for the for the registered environment `Production`.
 
 ```json
 {
@@ -323,32 +307,24 @@ The following 201 Created response returns the Catalog-generated identifier   `"
 }
 ```
 
-## 4.3  Registering the 5how-toODatav3-sample-service {#reg-service-ex}
+## 4.3 Registering the 5how-toODatav3-sample-service {#reg-service-ex}
 
 In this example call, the service **5how-toODatav3-sample-service** is registered for the application registered in [Section 4.1](#ex-reg-app) and deployed to the environment registered in [Section 4.2](#reg-env-ex).
 
 Two tags, `odata` and `sample` are also included as part of the registration that will be added to the Catalog metadata that is shown for the asset and also used for searching for the asset.
 
-For the `Contracts` object you can use the example OData v3 contract given in [Sample Contract](#sample-contract) for the key-value pair:  ` “Type”: “Metadata”`.
+For the `Contracts` object you can use the example OData v3 contract given in [Sample Contract](#sample-contract) for the key-value pair: ` “Type”: “Metadata”`.
 
-{{% alert type="info" %}}
-
-If you are using one of your own contracts then ensure that you include all the files that define the contract.
-
-{{% /alert %}}
+{{% alert type="info" %}}If you are using one of your own contracts then ensure that you include all the files that define the contract. {{% /alert %}}
 
 ### 4.3.1 Base Request URL
 
 `PUT` `{{baseURL}}/applications/{appUUID}/environments/{envUUID}/published-endpoints`
 
-#### 4.3.2  JSON format request body for the `Endpoints` **Object**
+#### 4.3.2 JSON format request body for the `Endpoints` **Object**
 The file tthat is used in this example is provided in escaped JSON format in [Sample Contract](#sample-contract). 
 
-{{% alert type="info" %}}
-
-For conciseness the contents of the contract file is not included in the following payload – it is respresented as  *<Insert example metadata from [metadata](#ex-metadata) >*.  You must insert the example contract file provided in [Sample Contract](#sample-contract) , or alternatively use your own contract files – in escaped JSON format. 
-
-{{% /alert %}}
+{{% alert type="info" %}}For conciseness the contents of the contract file is not included in the following payload – it is represented as *<Insert example metadata from [metadata](#ex-metadata) >*. You must insert the example contract file provided in [Sample Contract](#sample-contract) , or alternatively use your own contract files – in escaped JSON format. {{% /alert %}}
 
 ```json
 {
@@ -462,7 +438,7 @@ For the above request the following 200 OK response is received returning the re
 }
 ```
 
-#### 4.3.4 Registered Service in the the Data Hub Catalog and Landscape {#ex-service-reg}
+#### 4.3.4 Registered Service in the Data Hub Catalog and Landscape {#ex-service-reg}
 
 The resulting entry in the Catalog for the registered service the entry in the Catalog is the following: 
 
@@ -480,11 +456,7 @@ This is shown in the Landscape as:
 
 This example provides the request to register that the **Howto5-App** consumes 2 datasets: **Employees** and **Offices** from the service **SAMPLE_EmployeeDirectory**. 
 
-{{% alert type="info" %}}
-
-For this example, the `Namespace` object for the `consumedItems` is called `DefaultNamespace` which is the default namespace for Mendix services.
-
-{{% /alert %}}
+{{% alert type="info" %}}For this example, the `Namespace` object for the `consumedItems` is called `DefaultNamespace` which is the default namespace for Mendix services.{{% /alert %}}
 
 ### 5.1 Base Request URL
 

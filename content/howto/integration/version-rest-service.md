@@ -1,7 +1,7 @@
 ---
 title: "Version a REST Service"
 category: "Integration"
-menu_order: 11
+menu_order: 10
 description: "Describes the best practices for versioning REST services in Mendix"
 tags: ["rest", "rest service", "version", "integration"]
 ---

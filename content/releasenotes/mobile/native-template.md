@@ -10,18 +10,89 @@ For more information on native mobile app development, see the [native-template]
 
 These are the current versions in active development:
 
+* Native Template v6+ applies to apps built using Studio Pro [9.x](../studio-pro/9.0) and above.
 * Native Template v5.1.x applies to apps built using Studio Pro [8.15.x](../studio-pro/8.15) and above.
 * Native Template v5.0.x applies to apps built using Studio Pro [8.12.1](../studio-pro/8.12#8121)–[8.14.x](../studio-pro/8.14).
-* Native Template v4.2.x applies to apps built using Studio Pro up to [8.12.0](../studio-pro/8.12#8120).
 
-## 5.1.5, and 5.0.9
+## 6.1.3
 
-**Release date: February 4th, 2020**
+**Release date: March 31st, 2021**
+
+### Improvements
+
+* iOS apps now use a single window, and handle scene switching with view controllers. This results in better compatibility in some cases.
+
+### Fixes 
+
+* We fixed the App Center scripts so they fail early when something is wrong.
+
+## 5.1.9
+
+**Release date: March 31st, 2021**
+
+### Mobile Toolkit for 5.1.x
+
+Mobile Toolkit is a new configuration CLI that we introduced to the Native Template. This way we are moving the responsibility of configuring your project to the Template, allowing offline users a path to auto-configuring their project that previously was impossible due to the online requirement of the Native Mobile Builder. The CLI supports this command:
+
+`native-mobile-toolkit configure --config-path='./config.json'`
+
+or
+
+`npm run configure`
+
+The Native Mobile Builder writes to the *config.json* and commits assets to relative locations. The CLI then reads the *config* and handles, configuring the projects and moving any assets to the right locations for the projects.
 
 ### Fixes
 
-* Fixed the keyboard behavior on Android for inputs in scrollable views.
-* Updated the React Native Device Info library to fix security issues.
+* We fixed another case where Firebase might crash the Custom Developer app when enabling debug mode.
+
+## 5.0.12
+
+**Release date: March 31st, 2021**
+
+### Fixes
+
+* We fixed another case where Firebase might crash the Custom Developer app when enabling debug mode.
+
+## 5.1.8 and 5.0.12 {#518and5012}
+
+**Release date: March 17th, 2021**
+
+### Fixes
+
+* We fixed an issue that could crash apps due to the fix released with Native Template v5.1.7.
+* We fixed an issue that could crash a custom developer app when JavaScript debugging was enabled.
+
+## 5.1.7 and 5.0.11
+
+**Release date: March 12th, 2021**
+
+{{% alert type="warning" %}}
+We have decided to retract versions 5.1.7 and 5.0.11 after we received reports that apps would crash when using Firebase after the patch. Please update to [5.1.8 or 5.0.12](#518and5012) respectively. 
+{{% /alert %}}
+
+### Fixes
+
+* We fixed an issue that could crash a custom developer app when JavaScript debugging was enabled.
+
+## 5.1.6 and 5.0.10
+
+**Release date: February 15th, 2021**
+
+### Fixes
+ 
+* We updated the **react-native-image-picker** dependency.
+* The **react-native-image-picker** patch now applies correctly on Windows.
+* On iOS, the **PRODUCT_NAME** variable is now settable via the XCConfig file of each target.
+
+## 5.1.5 and 5.0.9
+
+**Release date: February 4th, 2021**
+
+### Fixes
+
+* We fixed the keyboard behavior on Android for inputs in scrollable views.
+* We updated the React Native Device Info library to fix security issues.
 
 ## 5.1.4, 5.0.8, and 4.2.6
 
@@ -53,7 +124,7 @@ We fixed the Native Template for a dependency affecting Mendix Studio Pro 8.8.x.
 
 * We fixed an issue with the npm installation on the Mendix Native Template targeting Mendix Studio Pro 8.8 due to an outdated dependency.
 
-## 5.1.1,  5.0.6, and 4.2.4
+## 5.1.1, 5.0.6, and 4.2.4
 
 **Release date: November 2nd, 2020**
 

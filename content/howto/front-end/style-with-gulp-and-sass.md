@@ -33,8 +33,8 @@ Before starting this how-to, make sure you have completed the following prerequi
 To set up the Gulp project, follow these steps:
 
 1. Download *gulp.zip* from [mendix/ux-theming](https://github.com/mendix/ux-theming/releases).
-2. Unzip the folder into your project's root folder.
-3. In your terminal, go to your project root folder by typing `cd`, then drag your root file into the terminal. Please note that if you do this on Windows and you encounter errors with installing the dependencies, open your CMD or PowerShell as Administrator.
+2. Unzip the folder into your app's root folder.
+3. In your terminal, go to your app's root folder by typing `cd`, then drag your root file into the terminal. Please note that if you do this on Windows and you encounter errors with installing the dependencies, open your CMD or PowerShell as Administrator.
 4.  <a name="34"></a>Install the dependencies by typing `npm install`:
 
 	![](attachments/style-with-gulp-and-sass/cd.png)
@@ -44,13 +44,13 @@ To set up the Gulp project, follow these steps:
 To run Gulp, follow these steps:
 
 1. You should still be in your root if you just finished the installation, so type `gulp dev` in your root.
-2. Make sure your Mendix project is running.
+2. Make sure your Mendix app is running.
 3.  For a quick test to see if everything is working, open *theme/styles/sass/custom/_custom-variables.scss* and type `body{ background-color: red; }`. Your background will then be a beautiful red:
 
 	![](attachments/style-with-gulp-and-sass/red.png)
 
 {{% alert type="info" %}}
-If you are using Parallels on Mac, you can access your Mendix project on your Mac browser by going to your Parallels machine (for example, `http://10.211.55.3:30001` — this is different on each setup).
+If you are using Parallels on Mac, you can access your Mendix app on your Mac browser by going to your Parallels machine (for example, `http://10.211.55.3:30001` — this is different on each setup).
 {{% /alert %}}
 
 And that's it! Now you are ready to start styling your Mendix app with Sass.

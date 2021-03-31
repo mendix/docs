@@ -22,7 +22,7 @@ Android and iOS each take a different approach to fonts. Where Android requires 
 
 Furthermore, both platforms resolve available fonts differently. While iOS fully supports Open Type fonts and can select fonts based on their metadata, Android requires explicit linking of the font file to the weight and style.
 
-React Native, the underlying framework of Mendix native mobile apps, unifies the process of adding fonts. For example, fonts added under **assets/fonts** on Android are explicitly linked in the project. These fonts are then exposed directly in the framework for styling your widgets using the common CSS properties you use routinely.
+React Native, the underlying framework of Mendix native mobile apps, unifies the process of adding fonts. For example, fonts added under **assets/fonts** on Android are explicitly linked in the app. These fonts are then exposed directly in the framework for styling your widgets using the common CSS properties you use routinely.
 
 There are limitations to mobile font capabilities. For example, Android supports a very limited set of font types: regular, bold, italic, and bold italic.
 
@@ -169,14 +169,14 @@ Use XCode to manually add fonts to an iOS project:
     * TimesNewRomanPS-BoldMT, for bold
 
 1. Open XCode and select the workspace at **ios\NativeTemplate.xcworkspace**.
-1. Drag and drop the renamed fonts to the **Resources/Fonts** folder in Project Explorer. 
+1. Drag and drop the renamed fonts to the **Resources/Fonts** folder in App Explorer. 
 1.  Select both targets from the dialog box that shows up:
 
      {{% image_container width="350" %}}![XCode option dialog for adding files](attachments/nbui/custom-fonts-xcode-dialog.png){{% /image_container %}}
 
 1.  Your folder structure should look like this:
 
-     {{% image_container width="350" %}}![Project explorer with fonts](attachments/nbui/custom-fonts-project-explorer-filled.png){{% /image_container %}}
+     {{% image_container width="350" %}}![App Explorer with fonts](attachments/nbui/custom-fonts-project-explorer-filled.png){{% /image_container %}}
 
 1. Open the *Info.plist* file by pressing <kbd>{⌘}</kbd> + <kbd>{Shift}</kbd> + <kbd>{0}</kbd>` and searching for the file. Press <kbd>{Enter}</kbd> to open it:
 

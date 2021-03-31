@@ -24,13 +24,13 @@ To create a cluster in your OpenShift context, you need the following:
 * An administration account for your platform
 * **OpenShift CLI** installed (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the Red Hat OpenShift website for more information) if you are creating clusters on OpenShift
 * **Kubectl** installed if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
-* **Bash** (Bourne-again shell) for your machine. On Windows, this must support the Windows console API and mouse interactions. See [Terminal limitations](#terminal-limitations), below, for a more detailed explanation.
+* A command line terminal that supports the console API and mouse interactions. In Windows, this could be PowerShell or the Windows Command Prompt. See [Terminal limitations](#terminal-limitations), below, for a more detailed explanation.
 
 ## 3 Creating a Cluster & Namespace
 
 ### 3.1 Creating a Cluster
 
-1. Click **Cloud Settings** on the **Settings** page of your Mendix app.
+1. Click **Cloud Settings** on the **General Settings** page of your Mendix app.
     
     ![](attachments/private-cloud-cluster/image2.png)
 
@@ -42,15 +42,19 @@ To create a cluster in your OpenShift context, you need the following:
     
     ![](attachments/private-cloud-cluster/image4.png)
 
-4. Select **Cluster Manager** from the **Apps** menu in the Developer Portal.
+4. Click the **Switch-to** menu in the Developer Portal and choose **Cloud**.
 
-    ![](attachments/private-cloud-cluster/image5.png)
+    ![](attachments/private-cloud-cluster/go-to-nodes-page.png)
 
-5. Click **Register Cluster**. 
+5. Select **Cluster Manager** from the top menu bar in the Developer Portal.
+
+    ![](attachments/private-cloud-cluster/cluster-manager.png)
+
+6. Click **Register Cluster**. 
 
     ![](attachments/private-cloud-cluster/image6.png)
 
-6. Enter the following information:
+7. Enter the following information:
     
   1. **Name** – The name you want to give the cluster you are creating.
   
@@ -58,7 +62,7 @@ To create a cluster in your OpenShift context, you need the following:
 
   3. **Description** – an optional description of the cluster which will be displayed under the cluster name in the cluster manager.
 
-7. Click **Create**.
+8. Click **Create**.
 
     ![](attachments/private-cloud-cluster/create-cluster.png)
 
@@ -88,13 +92,13 @@ To add a namespace, do the following:
 
 Before you can use the Mendix Operator in your namespace you need to install it and configure the services your app will use. Mendix provides you with a **Configuration Tool** which guides you through the process.
 
-### 4.1 Downloaded Configuration Tool{#downloaded-script}
+### 4.1 Download the Configuration Tool{#download-configuration-tool}
 
 If you are not already on the installation tab for your namespace, go to it by following these instructions:
 
-1. Go to the Cluster Manager page by clicking **Cluster Manager** in the **Apps** menu.
+1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
 
-    ![](attachments/private-cloud-cluster/image23.png)
+    ![](attachments/private-cloud-cluster/cluster-manager.png)
 
 2. Click **Details** next to the namespace you want to use.
 
@@ -106,11 +110,18 @@ Now you can download the Configuration Tool by doing the following:
 
 1. Choose the **Operating System** for your local computer.
 
-2. Click **Download Installation Script** and make sure that it is stored somewhere on your path.
+2. Choose the **Mendix Operator Version** that you would like to install.
+    {{% alert type="warning" %}}Once you've installed a certain version of the Mendix Operator into any namespace in the cluster, you should not install older versions of the Mendix Operator into the same cluster, even into other namespaces.{{% /alert %}}
+
+	{{% alert type="info" %}}Choose the latest version, or at least version 1.9.0. Versions earlier than 1.9.0 are only available to allow _configuration_ of previously installed Mendix Operator versions.{{% /alert %}}
+
+
+3. Click **Download Executable** and make sure that it is stored somewhere on your path.
+	{{% alert type="info" %}}The installation and configuration tool only supports a limited range of Mendix Operator versions. If the Mendix Operator version in your namespace is too new or too old, the configuration tool will not be able to configure it. Download a version of the Configuration tool that is compatible with the Mendix Operator you have installed.{{% /alert %}}
 
     ![](attachments/private-cloud-cluster/download-executable.png)
 
-### 4.2 Signing in to OpenShift {#openshift-signin}
+### 4.2 Signing in to OpenShift{#openshift-signin}
 
 You will need to have administrator rights to your private cloud platform. This means you will have to log in before you run the Configuration Tool.
 
@@ -134,7 +145,7 @@ You can do this as follows:
     
     ![](attachments/private-cloud-cluster/image11.png)
 
-6. Paste the command into Bash and press Enter.
+6. Paste the command into your command line terminal and press Enter.
 
 ### 4.3 Running the Configuration Tool{#running-the-tool}
 
@@ -144,15 +155,13 @@ Once you are signed in to your cluster you can run the Configuration Tool.
 
     ![](attachments/private-cloud-cluster/installation-command.png)
 
-2. Paste the command into your Bash console and  press <kbd>Enter</kbd>
+2. Paste the command into your command line terminal and press <kbd>Enter</kbd>
 
 	{{% alert type="warning" %}}The Configuration Tool needs a CLI terminal with mouse support. Read the [Terminal limitations](#terminal-limitations) section before running the Configuration Tool.{{% /alert %}}
 
 	You will see the configuration options on the screen and will be guided through filling in the information needed.
 
     ![](attachments/private-cloud-cluster/post-install-landing-page.png)
-
-If, instead of using the Configuration Tool, you want to run the scripts in your Kubernetes cluster, see the instructions in [Using Installation and Configuration Scripts](private-cloud-config-script).
 
 #### 4.3.1 Base Installation{#base-installation}
 
@@ -172,7 +181,7 @@ If the Mendix Operator and the Mendix Gateway Agent have not been installed in y
 
 4. Click **Run Installer** to install the Mendix Operator and Mendix Gateway Agent in your cluster.
 
-	{{% alert type="info" %}}The installation is successful if the **Installer output** ends with **Installation Successful**.{{% /alert %}}
+	{{% alert type="info" %}}The installation is successful if the **Installer output** ends with **Done**.{{% /alert %}}
 
 5. Click **Save Installer** if you want to save these settings to be used later.
 
@@ -258,7 +267,7 @@ If the plan name already exists you will receive an error that it cannot be crea
 {{% /alert %}}
 
 {{% alert type="info" %}}
-To connect to an Azure PostgreSQL server, the Kubernetes cluster must be added to the list of allowed hosts in the firewall.
+To connect to an Azure SQL Server, the Kubernetes cluster must be added to the list of allowed hosts in the firewall.
 {{% /alert %}}
 
 {{% alert type="info" %}}
@@ -876,9 +885,9 @@ Once it is configured, you can manage your cluster and namespaces through the De
 
 ### 6.1 Cluster Overview {#overview}
 
-Go to the Cluster Manager page by clicking **Cluster Manager** in the **Apps** menu.
+Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
 
-![](attachments/private-cloud-cluster/image23.png)
+![](attachments/private-cloud-cluster/cluster-manager.png)
 
 From this page you can see a summary of your clusters with all their namespaces and an indication of the namespace status and how long it has been running (runtime).
 
@@ -1087,9 +1096,9 @@ Click **Activate** next to the name of the plan you wish to activate. The plan c
 
 The **Installation** tab shows you the Configuration Tool which you used to create the namespace, together with the parameters which are used to configure the agent.
 
-You can use the Configuration Tool again to change the configuration of your namespace by pasting the command into a bash shell as described in [Running the Configuration Tool](#running-the-tool), above.
+You can use the Configuration Tool again to change the configuration of your namespace by pasting the command into a command line terminal as described in [Running the Configuration Tool](#running-the-tool), above.
 
-You can also download the Configuration Tool again, or retrieve the installation and reconfiguration scripts which are described in [Using Installation and Configuration Scripts](private-cloud-config-script) to retain in your own code repository, if you wish.
+You can also download the Configuration Tool again, if you wish.
 
 ## 7 Current Limitations
 
@@ -1125,41 +1134,16 @@ kubectl -n {namespace} scale deployment mendix-operator --replicas=1
 
 #### 7.3.1 Windows
 
-The Windows version of the Configuration Tool can only run in a terminal that supports the Windows console API and has mouse support.
-
-The Configuration Tool needs the Git or MinGW version of `bash` to be available in the system path.
-
-In many cases, Windows might have multiple versions of `bash` installed: cygwin, WSL and possibly others. In order to use Git `bash`, ensure that the Git Bash `usr\bin` directory appears in the path first.
-
-When using PowerShell (replace `{arguments}` with the correct command line arguments):
-
-```powershell
-$env:Path = "C:\Program Files\Git\usr\bin;" + $env:Path
-.\mxpc-cli.exe installer {arguments}
-```
-
-Or when using the Windows Command Prompt (replace `{arguments}` with the correct command line arguments):
-
-```bat
-set PATH=C:\Program Files\Git\usr\bin;%PATH%
-.\mxpc-cli.exe installer {arguments}
-```
+The Windows version of the Configuration Tool must be run in a terminal that supports the Windows console API and has mouse support. PowerShell and the Windows Command Prompt are supported.
 
 {{% alert type="info" %}}
-Other terminals might work but are not supported.
-For example, the [new Windows Terminal](https://aka.ms/terminal) doesn't support mouse clicks in PowerShell or the Windows Command Prompt.
+When running PowerShell or the Windows Command Prompt from the [new Windows Terminal](https://aka.ms/terminal), mouse clicks are [not supported](https://github.com/microsoft/terminal/issues/376).
+Run PowerShell or the Windows Command Prompt terminal as a standalone app.
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-Some previously released documentation for Mendix for Private Cloud suggested using Git Bash in Windows. Depending on how Git was originally installed, it might not support all required terminal features.
-
-The Powershell option described above is more reliable than Git Bash.
-{{% /alert %}}
-
-{{% alert type="info" %}}
-These limitations only apply when using the Windows version of the Configuration Tool.
-
-The Linux version can run in [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/) without any workarounds.
+Some previously released versions of Mendix for Private Cloud required using Git Bash in Windows.
+Starting from Mendix Operator version 1.9.0, Git Bash is no longer required.
 {{% /alert %}}
 
 #### 7.3.2 Linux and macOS

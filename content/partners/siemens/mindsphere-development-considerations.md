@@ -241,7 +241,7 @@ The MindSphere Theme Pack provides a font which contains icons. This means that 
 
 To do this:
 
-1. Find the icon you wish to use. These have the same names as the icons in the MindSphere Theme Pack and are listed in the *Project Explorer* dock under **Project '…' > App Store modules > MindSphere_UI_Resources > Icons**.
+1. Find the icon you wish to use. These have the same names as the icons in the MindSphere Theme Pack and are listed in the *App Explorer* dock under **App** > **Marketplace modules** > **MindSphere_UI_Resources** > **Icons**.
 
     ![List of MindSphere icons](attachments/mindsphere-development-considerations/mindsphere-icons.png)
 

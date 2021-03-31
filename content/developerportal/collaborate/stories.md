@@ -1,7 +1,7 @@
 ---
 title: "Stories"
 category: "Collaboration Tools"
-menu_order: 30
+menu_order: 2
 description: "Describes how to manage the Sprints and stories for your apps."
 tags: ["Stories", "Sprint", "Developer Portal"]
 ---
@@ -241,10 +241,7 @@ To manage stories in Studio Pro, follow these steps:
 	{{% image_container width="300" %}}![](attachments/edit-app.jpg)
 	{{% /image_container %}}
 
-2. Open the **Stories** pane:
-
-	![](attachments/stories/view-stories.png)
-
+2. Open **View** > **Stories**.
 3. You will see your active sprints in the **Stories** pane:
 
 	![](attachments/stories/stories-pane.png)

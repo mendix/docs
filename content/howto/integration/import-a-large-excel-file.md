@@ -1,7 +1,7 @@
 ---
 title: "Import a Large Excel File"
 parent: "importing-excel-documents"
-tags: ["excel", "excel  importer", "marketplace", "app store", "sheet"]
+tags: ["excel", "excel  importer", "marketplace", "sheet"]
 ---
 
 ## 1 Introduction
@@ -136,6 +136,6 @@ The XSD file is ready to be imported into . To import it, follow these steps:
 
     ![](attachments/import-large/19398899.png)
 
-7. To keep your application clean, you can delete the XSD schema and XML-to-domain files from your project.
+7. To keep your application clean, you can delete the XSD schema and XML-to-domain files from your app.
 
 Happy modeling!

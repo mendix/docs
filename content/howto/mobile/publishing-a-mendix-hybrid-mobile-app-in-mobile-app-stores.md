@@ -2,7 +2,7 @@
 title: "Publish a Mendix Hybrid Mobile App in Mobile App Stores"
 parent: "build-hybrid-apps"
 menu_order: 20
-tags: ["mobile", "marketplace", "app store", "phonegap"]
+tags: ["mobile", "marketplace", "phonegap"]
 ---
 ## 1 Introduction
 
@@ -42,13 +42,13 @@ To publish your app in the Google Play store, do the following:
 
 * Have an Android device for testing the APK package that will be produced
 
-## 3 Starting the Packaging Process{#starting-the-packaging-process}
+## 3 Starting the Packaging Process {#starting-the-packaging-process}
 
 To start the packaging process, follow these steps:
 
 1. Open the [Developer Portal](https://sprintr.home.mendix.com/).
-2. Go to the project of the Mendix app that you want to publish.
-3. Go to the **Deploy > Mobile app** entry in the side menu of the project.
+2. Open the Mendix app you want to publish.
+3. Go to the **Deploy** > **Mobile app** menu item.
 4. You will be shown the **Publish App for Mobile App Stores** page, where you need to set up some options for your hybrid mobile app.
 
    ![mobile app page](attachments/publishing-a-hybrid-app/mobile-app-page.png)

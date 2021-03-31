@@ -20,7 +20,7 @@ Calypso is the easiest styling solution for most users. However, if you already 
 
 ## 2 Prerequisites
 
-* Download Calypso [here](https://www.dropbox.com/sh/46hip6pq8s9ipqp/AAAHBwm-8qcv9bQKSR7BrirCa?dl=0)
+* Download Calypso [here](https://www.dropbox.com/sh/r1vx2kig86v5wa6/AABQC8MJfNi8Ff9skinrIf7Ea?dl=0)
 
 ## 3 Setting Up Calypso
 
@@ -38,7 +38,7 @@ Calypso is the easiest styling solution for most users. However, if you already 
 
 5. Configure your **Port**. 
 
-	A Mendix app normally runs on port 8080. However, if you are running multiple Mendix apps, or changed your port configuration, your port number may be different. Find your port information by navigating to **Project {'YourProjectName'}** > **Settings** in your **Project Explorer**, read your port number in **Application root URL** ({host name:port number}), then type that number into Calypso's **Port** field.
+	A Mendix app normally runs on port 8080. However, if you are running multiple Mendix apps, or changed your port configuration, your port number may be different. Find your port information by navigating to **App** > **Settings** in your **App Explorer**, read your port number in **Application root URL** ({host name:port number}), then type that number into Calypso's **Port** field.
 
 6. In **Apps Collection**, click the **Browse** button and then select the folder which contains all your Mendix apps. Configuring this enables you to switch easily between apps. 
 7. Complete **App Folder** by selecting the folder of the Mendix app you want to work on from the drop-down menu.
@@ -52,7 +52,7 @@ Calypso is the easiest styling solution for most users. However, if you already 
 
 	![dark mode](attachments/calypso/dark-mode.png)
 
-10. Click **Run Locally** in Mendix Studio Pro to use Calypso.
+10. Click the play button (**Run Locally**) in Mendix Studio Pro to use Calypso.
 
 11. Click the **Start** button in Calypso. This will start a browser page which will let you view your running app. The browser address will match the address in Calypso's **Console**:
 
@@ -72,11 +72,11 @@ With your Mendix app and Calypso running, complete the steps below to see how Ca
 
 	![drop a button](attachments/calypso/drop-a-button.png)
 	
-2.  Run your app again by clicking **Run Locally** to see your new button in your browser:
+2.  Run your app again by clicking the play button (**Run Locally**) to see your new button in your browser:
 	
 	![blue text button](attachments/calypso/blue-button.png)
 
-2. Click **Project** > **Show Project Directory in Explorer**.
+2. Click **App** > **Show App Directory in Explorer**.
 3. Open `theme\styles\web\sass\app\_custom-variables.scss` .
 4. Change `$brand-primary: #0595DB;` to `$brand-primary: brown`, then save your changes.
 5.  Look at your app in your browser again. The button's text has switched from blue to brown.

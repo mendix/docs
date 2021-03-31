@@ -23,7 +23,7 @@ Nanoflows are more powerful with pluggable nanoflow actions — called JavaScrip
 
 To create a JavaScript action that can synthesize text to speech, follow these steps:
 
-1.  Create a new **JavaScript action** in your Mendix project:
+1.  Create a new **JavaScript action** in your Mendix app:
 
 	![add javascript action from drop-down](attachments/write-javascript-actions/createanewjsaction.png)
 
@@ -43,7 +43,7 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 
 	![text to speech code](attachments/write-javascript-actions/code.png)
 
-	You can only add code between `// BEGIN USER CODE` and `// END USER CODE`. Any code outside this block will be lost. The source code is stored in your project folder under **javascriptsource** > **(module name)** > **actions** > **(action name).js**. This JavaScript action will be asynchronous, so you will be using promises to return values (for details about using promises, see Mozilla's [Using promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) guide). 
+	You can only add code between `// BEGIN USER CODE` and `// END USER CODE`. Any code outside this block will be lost. The source code is stored in your app folder under **javascriptsource** > **(module name)** > **actions** > **(action name).js**. This JavaScript action will be asynchronous, so you will be using promises to return values (for details about using promises, see Mozilla's [Using promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) guide). 
 
 5. Now add a check to verify if the required parameter has been set correctly. The action will return `false` if no text was provided:
 
@@ -139,7 +139,7 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 	
 	![text to speech in nanoflow](attachments/write-javascript-actions/iconintoolbox.png)
 
-10. Now for a JavaScript action test run! First, make a nanoflow which features your new JavaScript action. Right-click your folder in the **Project Explorer** and click **Add nanoflow**. Then, add an action to your nanoflow, select **call a nanoflow action**, and select your JavaScript action. You will see a window which will let you edit the JavaScript action. Click the **Edit** button of the **Input Text** and type *‘Hello world'*. Then, set **Use return value** to *No* radio button.
+10. Now for a JavaScript action test run! First, make a nanoflow which features your new JavaScript action. Right-click your folder in the **App Explorer** and click **Add nanoflow**. Then, add an action to your nanoflow, select **call a nanoflow action**, and select your JavaScript action. You will see a window which will let you edit the JavaScript action. Click the **Edit** button of the **Input Text** and type *‘Hello world'*. Then, set **Use return value** to *No* radio button.
 
 	![edit text in call javascript action dialog](attachments/write-javascript-actions/calljsactionnanoflow.png)
 

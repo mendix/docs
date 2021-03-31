@@ -74,7 +74,7 @@ The Native Mobile Builder simplifies the process of adding any capabilities to y
 	{{% image_container width="350" %}}![Mendix Natve Mobile Builder Home Screen](attachments/nbui/home-screen.png){{% /image_container %}}
 
 1. Select **Build app for distribution**.
-1.  Click **Capabilities** on the left menu:
+1.  Click **App capabilities** on the left menu:
 
 	{{% image_container width="350" %}}![Mendix Natve Mobile Builder Capabilities Screen](attachments/nbui/advanced-capabilities.png){{% /image_container %}}
 

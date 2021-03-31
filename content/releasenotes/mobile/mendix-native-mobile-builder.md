@@ -54,7 +54,7 @@ There are a few things to keep in mind when configuring your project this way:
 * If building locally you will need to run `npm run configure` to apply changes before building your project.
 
 Dependency management and auto-linking are not included as part of the Native Mobile Toolkit flow for now. If building locally, instead use the Native Mobile Builder to configure your project on GitHub first and then check out and build.
-  
+
 #### Improvements
 
 * We added the **bundle name** field to improve configuration for iOS applications.
@@ -124,21 +124,21 @@ If you are working with multiple people on the same project please make sure the
 
 * We fixed an issue with iOS certificates not being saved correctly.
 
-## 1.0.51 
+### Release v1.0.51 
 
 **Release date: December 10th, 2020**
 
-### Improvements
+#### Improvements
 
 This release focuses mainly on quality of life bug fixes and features.
 
-### Features
+#### Features
 
 * We introduced the option to simply commit your changes to your repository without initiating a build. To allow this, the build button is now a combination button that allows you to choose between **build** or **configure**.
 * When a build fails you will now see a button pointing to the application logs. This allows for easy access to application logs.
 * We made the custom developer app push notification configuration optional. Instead, a warning is shown if the configuration is missing for custom developer apps.
   
-### Fixes
+#### Fixes
 
 * Capabilities should be enabled correctly if a compatible Native Template is found.
 * Missing tokens should not crash the Native Builder UI anymore.
@@ -148,13 +148,13 @@ This release focuses mainly on quality of life bug fixes and features.
 * Fonts should now correctly be applied throughout the app.
 * Removed the **Skip** buttons from the wizard to avoid confusion.
 
-## 1.0.49
+### Release v1.0.49
 
 **Release date: October 27th, 2020**
 
 This marks the initial release of the Mendix Native Mobile Builder UI tool. It is included in [Mendix Studio Pro v8.15](/releasenotes/studio-pro/8.15) and higher.
 
-### Features
+#### Features
 
 With a few clicks you can:
 
@@ -168,6 +168,6 @@ With a few clicks you can:
 
 We are working on more features internally, so stay tuned.
 
-### Background Updates
+#### Background Updates
 
 The Mendix Native Mobile Builder supports background updates. That means it needs to be installed once and it will update itself as soon as there is a newer version. This auto-update functionality allows us to push a new version as soon as new features are ready to be shipped.

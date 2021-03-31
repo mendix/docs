@@ -1,7 +1,7 @@
 ---
 title: "Buzz"
 category: "Collaboration Tools"
-menu_order: 10
+menu_order: 1
 description: "Describes the Mendix Buzz, which is the landing page for working on a Mendix app."
 tags: ["Buzz","Developer Portal"]
 ---
@@ -10,7 +10,7 @@ tags: ["Buzz","Developer Portal"]
 
 Located in the Developer Portal, Buzz lets you see Mendix app activity in your company as well as collaborate and share ideas with your App Team. There are two types of **Buzz** pages: Company Buzz and App Buzz.
 
-### 1.1 Company Buzz
+### 1.1 Company Buzz {#company-buzz}
 
 Company Buzz is the landing page when you first sign in to the Developer Portal:
 

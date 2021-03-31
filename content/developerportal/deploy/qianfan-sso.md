@@ -13,7 +13,7 @@ This documentation is only relevant to customers deploying their Mendix app on t
 
 ## 1 Introduction
 
-The Qianfan SSO module enables your app end-users to sign in with their QianFan account when your app is deployed to the Tencent Cloud.
+The Qianfan SSO module enables your app end-users to sign in with single sign-on (SSO) using an iDaaS account when your app is deployed to the Tencent Cloud. This document explains how to integrate the Qianfan SSO module with your Mendix app.
 
 Full documentation in Chinese can be downloaded as a PDF from [千帆玉符 SSO 模块使用手册](https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/qianfansso/QianFanSSO%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.pdf).
 
@@ -21,302 +21,371 @@ Full documentation in Chinese can be downloaded as a PDF from [千帆玉符 SSO 
 QianFan Single Sign-On is only activated when your app is deployed to the Tencent Cloud. When you run your app locally, you will need to use local credentials.
 {{% /alert %}}
 
-**************************
+## 2 Purchasing and Launching the Service
 
-Using Mendix accounts has the following benefits:
+1. Open Qianfan Yufu identity management services
 
-* You do not need a special authorization module to support resetting and changing passwords
-* It is easy to create multiple applications which all use the same sign-on mechanism
+2. Use the following URL to purchase and launch the service:
 
-In addition, the Mendix SSO module has a default implementation for user administration. This can be used in any Mendix app, but if you want to implement customized user administration this is also possible. See [Customizing Mendix SSO](#customizing), below, for more information.
+    [https://cloud.tencent.com/product/cig](https://cloud.tencent.com/product/cig)
 
-We are in the process of adding the Mendix SSO module to the Mendix app templates. Where it has been added, all you have to do is to set your security level to **Production** and your end-users will be able to sign in.
+    After activation, you'll receive the following email:
 
-You can see if your app has the Mendix SSO module, and which version it has, by looking in the **App Store modules** section in the **Project Explorer** for your app project. The version number is recorded in the **Version** constant within the module.
+    ![](attachments/qianfan-sso//image1.png)
 
-![](attachments/qianfan-sso/mxsso-app-store-module.png)
+## 3 Configuring Yufu iDaaS
+    
+1. Log in to Yufu iDaaS using login address provided by the above-mentioned email, log in to Yufu iDaaS control panel
 
-If your app does not have the Mendix SSO module, it is available from the Mendix Marketplace [here](https://appstore.home.mendix.com/link/app/111349/). Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content) to import it into your app and then follow the instructions in [Setting Up Mendix Single Sign-On](#setting-up), below.
+    ![](attachments/qianfan-sso//image2.png)
 
-If you need a newer version of the Mendix SSO module (for example, to use a new feature), then it is also available from the Marketplace via the same link.
+2. Go into administrator mode
 
-## 2 Using Mendix SSO
+    ![](attachments/qianfan-sso//image3.png)
 
-{{% alert type="warning" %}}
-Mendix Single Sign-On is only activated when your app is deployed to the Mendix Cloud. When you run your app locally, or on another cloud, you will need to use local credentials.
-{{% /alert %}}
+### 3.1 User management
+    
+#### 3.1.1 Adding Users
 
-### 2.1 Signing On as an End-User
+1. Select Object Management -\> Department Management -\> Department Data
 
-When you open an app as an end-user, and this is the first time visiting the app environment *or* you have not opened the app recently, you will see the Mendix SSO sign-on screen. You can still choose to sign-on with local user credentials, but to use your Mendix Account with Mendix SSO, click  the **Mendix Account** button.
+    ![](attachments/qianfan-sso//image4.png)
 
-![Mendix SSO sign-on screen](attachments/qianfan-sso/sso-sign-on.png)
+2. Click on the corresponding department and select "department users"
 
-Every app implementing Mendix SSO needs some of your profile information (like your account identifier and your display name) to work. So for each environment (for example, myapp running in acceptance), the first time you sign in as an end-user using Mendix SSO the app will ask you to authorize access. This means that the app can access certain information held in your Mendix profile as specified on the authorization page.
+    ![](attachments/qianfan-sso//image5.png)
 
-![Authorization screen](attachments/qianfan-sso/authorize-access.png)
+3. Click "Add User" - "Create User"
 
-Click **Authorize** to continue using Mendix SSO with this app. After authorizing the app you are automatically signed in to the app.
+    ![](attachments/qianfan-sso//image6.png)
 
-### 2.2 Assigning End-user Roles
+    Or click "Transfer Users"
 
-Give end-users access to your app through the [Manage App Users](/developerportal/settings/general-settings#managing-app-users) page of the Developer Portal. You can get to this page in the Developer Portal from the **General** page of your app.
+4. Enter the user information and click **OK**
 
-![General page for the app in Developer Portal](attachments/qianfan-sso/manage-app-users.png)
+### 3.2 Application Management
+    
+#### 3.2.1 Adding an App
 
-{{% alert type="warning" %}}
-Do not attempt to add or delete Mendix SSO users using administration functions within the app. If user access is not modified through the Developer Portal, then user access to your app will not be changed.
-{{% /alert %}}
+1. Click the "Add App" button on the right side
 
-## 3 Removing Mendix Single Sign-On
+    ![](attachments/qianfan-sso//image7.png)
 
-If you have an app which already has Mendix SSO activated, you can remove it using one of the methods below.
+2. Select **Create Custom App**
 
-### 3.1 Deactivating Mendix Single Sign-On{#deactivating}
+    ![](attachments/qianfan-sso//image8.png)
 
-You can deactivate Mendix SSO in two simple steps. This will remove the end-user's ability to sign in with their Mendix account, but will leave the local user administration functions of the Mendix SSO module intact.
+3. Select OpenID Connect
 
-To deactivate Mendix SSO, follow these two steps:
+    ![](attachments/qianfan-sso//image9.png)
 
-1. Follow the instructions below to rename the original login file (by default *login-without-sso.html*) in the **theme** folder of your project to *login.html* — this removes the single sign-on button from your sign in screen:
-    1. Open your project directory in File Explorer by selecting the menu item **Project** > **Show Project Directory in Explorer**.
+4. Select Web
 
-        ![Show project directory](attachments/qianfan-sso/show-project-directory.png)
+    ![](attachments/qianfan-sso//image10.png)
 
-    2. Go to the **theme** folder.
-    3. Rename *login.html* to *login-with-sso.html*.
-    4. Rename *login-without-sso.html* to *login.html*.
+5. Enter the basic information
 
-    ![File explorer showing two login files](attachments/qianfan-sso/theme-folder-remove.png)
+    ![](attachments/qianfan-sso//image11.png)
 
-2. Follow the instructions below to remove the microflow **MendixSSO_AfterStartup** as the **After startup** microflow.
-    1. Open **Project Settings** from the **Project Explorer**.
-    2. Click the **Runtime** tab.
-    3. Click **Select…** for the **After startup** microflow.
-    4. Click **None**.
-        ![Setting after startup microflow to none](attachments/qianfan-sso/after-startup-remove.png)
-    5. Click **OK** to close the **Project Settings**.
-    {{% alert type="info" %}}If there is a different **After startup** microflow, you should not remove it. Instead remove the MendixSSO_AfterStartup microflow which is an action in the existing microflow{{% /alert %}}
+6. Enter the callback URI.
 
-Mendix SSO will be deactivated the next time you deploy your app. You can still use Mendix SSO for local end-user administration.
+    Since Yufu does not support localhost, please enter this during the local testing phase
 
-### 3.2 Removing Mendix Single Sign-On
+    `http://127.0.0.1:8080/Qianfan/callback`
 
-You can completely remove Mendix Single Sign-On from your app if you want to use a different method for end-user administration. However, in most cases you can just leave the module in your app and deactivate it as described above.
+7. After the app gets an the official domain name, update the URI to the following format
 
-To completely remove Mendix SSO. do the following:
+    `<APP Domain>/Qianfan/callback`
 
-1. Perform the two steps described above in [Deactivating Mendix Single Sign-On](#deactivating).
+8. Save the ClientID & Client Secret values locally
 
-2. Remove any references to the Mendix SSO module in the navigation profiles, accessed through the **Navigation** page of the **Project Explorer**.
+    ![](attachments/qianfan-sso//image12.png)
 
-3. Delete the **MendixSSO** module from **App Store modules**.
+9. Save the 'Well-known interface' address locally, and also save the contents shown when you click the link
 
-4. Review the **Errors** pane for any other references to **MendixSSO**—there will only be additional errors if the Mendix SSO module been modified.
+#### 3.2.2 Configuring the app
 
-### 3.3 Removing Mendix SSO Java Libraries
+1. Click on "Self-Service Request"
 
-The steps above will not remove any of the Java libraries associated with Mendix SSO.
+    ![](attachments/qianfan-sso//image13.png)
 
-All files installed by Mendix SSO are marked with `.MendixSSO.RequiredLib`. Once you have removed Mendix SSO from your app, files marked with `.MendixSSO.RequiredLib` can be removed safely, provided you have not created new dependencies on them by using them in your custom code.
+    The configuration is as follows
 
-## 4 Setting Up Mendix Single Sign-On{#setting-up}
+    ![](attachments/qianfan-sso//image14.png)
 
-These instructions are for apps which did not originally have the Mendix SSO module. For example, if you have an existing app which did not have the Mendix SSO Marketplace module.
+2. Click "Add users".
 
-{{% alert type="info" %}}
-You do not have to follow these steps for apps (for example, app templates) which already have Mendix SSO, or if you are upgrading an existing Mendix SSO module to a newer version.
-{{% /alert %}}
+    If you have already clicked on "Users", click on the plus sign to add users
 
-To enable Mendix SSO in your app, follow these steps:
+    ![](attachments/qianfan-sso//image15.png)
 
-1. Import the [Mendix SSO module](https://appstore.home.mendix.com/link/app/111349/) from the Mendix Marketplace.
+3. Enter the user's name and click OK
 
-2. Add the microflow **MendixSSO_AfterStartup** to the **After startup** microflow by performing the following steps:
-    1. Open **Project Settings** from the **Project Explorer**.
-    2. Click the **Runtime** tab.
-    3. Click **Select…** for the **After startup** microflow.
-    4. Choose the microflow **App Store modules** > **MendixSSO** > **MOVE_THIS** > **CustomizableMendixSSOMicroflows** > **MendixSSO_AfterStartup** (you can use the filter to find it quickly) and click **Select**.
-        ![](attachments/qianfan-sso/after-startup.png)
-    5. Click **OK** to close the **Project Settings**.
+    ![](attachments/qianfan-sso//image16.png)
 
-    {{% alert type="info" %}}If there is already an After startup microflow, you should not replace it, but rather add the MendixSSO_AfterStartup microflow as an action in the existing microflow{{% /alert %}}
+#### 3.2.3 Applying Permissions Management
 
-3. To use the *default* user administration pages, add the pages **MyAccountViewEdit** and **UserOverview** to the app navigation by performing the following steps:
-    1. Open **Navigation** from the **Project Explorer**.
-    2. Click **New item** to add a new navigation item.
-    3. Enter the following values and click **OK**.
-        * **Caption** – *My Account*
-        * **Icon** – *Glyphicon 'user'* (click **Select…** and search for `user`)
-        * **On click** – *Show a page* **App Store modules** > **MendixSSO** > **Default Implementation** > **Pages** > **User** > **MyAccountViewEdit**
-    4. Repeat the above to add another **New item** with the values.
-        * **Caption** – *User Overview*
-        * **Icon** – *Glyphicon 'lock'*
-        * **On click** – *Show a page* **App Store modules** > **MendixSSO** > **Default Implementation** > **Pages** > **Admin** > **UserOverview**
+The permissions in Yufu are equivalent to the roles in Mendix.
 
-    {{% alert type="info" %}}If you want to implement your own administration pages, see [Customizing Mendix SSO](#customizing), below, for more information.{{% /alert %}}
+#### 3.2.4 API Management
 
-4. Turn on **Production** security level and configure **User roles** *User* and *Administrator* to have access to the appropriate **MendixSSO** module roles by performing the following steps:
-    1. Open **Project Security** from the **Project Explorer**.
-    2. Set **Security level** to **Production**.
-    3. Switch to the **User roles** tab.
-    4. Select the **Administrator** user role and click **Edit**.
-    5. Click **Edit** next to **Module roles**.
-    6. Select the **Administrator** module role for **App Store modules** > **MendixSSO**.
-        ![Set Administrator module role](attachments/qianfan-sso/set-module-role.png)
-    7. Click **OK** twice to return to **Project Security**.
-    8. Repeat the steps above to add the MendixSSO.User module role to the **User** user role.
+1. Select "Apps" -\> "API Management" -\> "Create"
 
-        The Project security settings now contains these two additional module roles:
+    ![](attachments/qianfan-sso//image17.png)
 
-        ![Confirmation of user roles](attachments/qianfan-sso/module-user-roles.png)
+2. Enter the basic information click OK. And remember the API unique identifier. For example:
 
-5. Rename the file *login-with-sso.html* in the **theme** folder of your project to *login.html* by performing the following steps — this adds the single sign-on button to your sign in screen:
-    1. Open your project directory in File Explorer by selecting the menu item **Project** > **Show Project Directory in Explorer**.
-        ![Show project directory](attachments/qianfan-sso/show-project-directory.png)
-    2. Go to the **theme** folder.
-    3. Rename *login.html* to  *login-without-sso.html*.
-    4. Rename *login-with-sso.html* to *login.html*.
-        ![file explorer showing two login files](attachments/qianfan-sso/theme-folder.png)
+    ![](attachments/qianfan-sso//image18.png)
 
-Your app is now configured to use Mendix Single Sign-on when it is deployed to the Cloud.
+3. Go to the API management interface and click "Add permissions"
 
-## 5 Customizing Mendix SSO {#customizing}
+    ![](attachments/qianfan-sso//image19.png)
 
-The [Mendix SSO module](/appstore/modules/mendix-sso) comes with a default implementation of end-user administration. This default end-user administration is sufficient for most apps. However, you can create your own administration module if you want to do things in a different way.
+4. Enter the basic information and click OK. If you have multiple roles, please add them separately. For example:
 
-There are two ways you can modify the Mendix SSO module. You can use snippets from the Marketplace module Mendix SSO in your pages, or you can modify the Mendix SSO module in any way you like to support your end-user administration requirements.
+    ![](attachments/qianfan-sso//image20.png)
 
-These two ways are described below.
+    {{% alert type="info" %}}Please set the Display Name as follows: {App name} + underscore “\_” + {App role name}. For example: “TestApp\_Administrator”{{% /alert %}}
 
-### 5.1 Using Snippets
+    Permissions are displayed in the API management interface when successful
 
-The default Mendix SSO implementation is based on snippets. You can use these snippets in your own pages to customize the administration of the end-users. If you look at how they are used in the default implementation, you can see how to use them in your own pages. The snippets are:
+    ![](attachments/qianfan-sso//image21.png)
 
-![List of snippets in Mendix SSO](attachments/qianfan-sso/snippets.png)
+5. Click "Add apps"
 
-* In folder **Admin**
-    * **TokensOverviewSnippet** – an overview of all the tokens issued to end-users of the app
-    * **UserOverviewSnippet** – an overview of all the end-users who have used the app. This will not include end-users who have been given access through the developer portal but have not yet signed in
-    * **UserViewEditSnippet** – a page where details of an end-user can be seen and, where the current end-user has access, edited
-* In folder **Common**
-    * **AccountDetailsNotEditableSnippet** – text explaining that details of SSO end-users come from Mendix and are not editable in the app
-    * **EnvironmentCredentialsSecurityWarningSnippet** – text warning that sharing credentials is a security risk
-    * **TokensAreExpiredPeriodicallySnippet** – text explaining that expired tokens are deleted automatically after a period of time
-    * **TokenSecurityWarningSnippet** – text explaining that tokens give access to the app for SSO end-users, and that local end-users will not have tokens
-    * **TokenViewSnippet** – displays details of a token
-* In folder **User**
-    * **MyAccountDetailsSnippet** – a page where details of an end-user can be seen—similar to **UserViewEditSnippet** but without the additional administration capabilities
-    * **MyTokensOverviewSnippet** – an overview of all the tokens issued to the current end-user of the app
+    ![](attachments/qianfan-sso//image22.png)
 
-### 5.2 Modifying Mendix SSO
+7. Select the app created in Section 1.4 and confirm. For example:
 
-{{% alert type="warning" %}}
-We recommend that you do not modify the version of Mendix SSO which is in the Marketplace modules section of your project. In future, you may wish to import a newer version of the module and this will overwrite any changes you make.
-{{% /alert %}}
+    ![](attachments/qianfan-sso//image23.png)
 
-The Mendix SSO module is written so that you can create a user entity in another module and use this entity to store the user information and as the basis of a new administration module.
+8. Upon completion, check whether the permissions and the trusted SSO application is correct. For example:
 
-#### 5.2.1 Copying the Mendix SSO Module{#copying}
+    ![](attachments/qianfan-sso//image24.png)
 
-To make a copy of the module, do the following:
+#### 3.2.5 Rights Group Management
 
-1. Add a new module to your app project. In these examples it is called **CustomMendixSSO**.
+1. Select Object Management - Rights Group Management
 
-2. Create the **Module roles** *User* and *Administrator* for the new module.
+    ![](attachments/qianfan-sso//image25.png)
 
-3. Copy the **MendixSSOUser** entity from the **MendixSSO** module domain model, to the domain model of your new module. In these examples it is called **CustomMendixSSOUser**.
+2. Click Add permissions group
 
-    {{% alert type="info" %}}You can also create an entity from scratch, provided is uses **System.User** as its generalization.{{% /alert %}}
+    ![](attachments/qianfan-sso//image26.png)
 
-4. Set the entity **Access rules** for the **User** and **Administrator** module roles.
+    ![](attachments/qianfan-sso//image27.png)
 
-5. Move the **MOVE_THIS** folder from **MendixSSO** to existing module containing your customized user administration entity.
+3. Enter the basic information, set the Permission Group Type to Custom, and click OK. For example:
 
-    This will move the following microflows:
+    ![](attachments/qianfan-sso//image28.png)
 
-    * MendixSSO_AfterStartup
-    * MendixSSO_CreateUser
-    * MendixSSO_UpdateUser
+4. Go to the management interface and click "Add users"
 
-#### 5.2.2 Configuring the Copied Mendix SSO Module
+    ![](attachments/qianfan-sso//image29.png)
 
-You need to tell the Mendix SSO Module to use your new entity, instead of the default one. To do this, make the following changes to the microflows in your new Mendix SSO Module:
+5. After selecting the corresponding users, click OK to confirm.
 
-1. Update the **MendixSSO_AfterStartup** microflow in the customized user administration module to use the **MendixSSO_CreateUser** and **MendixSSO_UpdateUser** microflows in the same module. If you moved the folder from the **MendixSSO** module the names should have been updated automatically.
+    ![](attachments/qianfan-sso//image30.png)
 
-    ![Modify custom afterstartup microflow to use custom create and update microflows](attachments/qianfan-sso/custom-afterstartup-microflow.png)
+6. Click "Associate Permissions"
 
-2. Update the **Create** action in the **MendixSSO_CreateUser** microflow in your user administration module to use your custom user entity, not the one in the Mendix SSO module.You will also need to update all the members which are set during the create.
+    ![](attachments/qianfan-sso//image31.png)
 
-    ![Edit custom create microflow to use the new entity](attachments/qianfan-sso/create-new-entity.png)
+7. Select the API created in Section 1.5.1
 
-3. Change the **End event** of the microflow to return an object of the correct type.
+    ![](attachments/qianfan-sso//image32.png)
 
-4.  Change the Parameter of the **MendixSSO_UpdateUser** microflow in the module to be your custom user entity instead of MendixSSOUser
+8. Select permissions and confirm
 
-5. Change the **Change object** action to set the correct members of the object.
+    ![](attachments/qianfan-sso//image33.png)
 
-    ![Edit all the members of the entity to match the attributes and associations](attachments/qianfan-sso/edit-members.png)
+    If you have more than one permission, add each permission group separately and associate them with people and permissions.
 
-6. Change the **End event** of the microflow to return an object of the correct type.
+    At this point, the Yufu end is configured. For example, you have completed:
 
-7. Set the **After startup** microflow in the **Runtime** tab of **Project > Settings** to be the **MendixSSO_AfterStartup** microflow in your user administration module.
+  - *Create Administrator and User permissions and assign the appropriate permissions to the appropriate people*
 
-#### 5.2.3 Using the Copied Mendix SSO Module
+    ![](attachments/qianfan-sso//image34.png)
 
-Mendix SSO will now use your new entity to administer the users. You can edit the domain model and write your own user administration pages and microflows to customize your user administration completely. If you need inspiration or help in designing user administration, you can refer to the default implementation in the Mendix SSO module.
+    ![](attachments/qianfan-sso//image35.png)
 
-{{% alert type="info" %}}
-Remember that data which comes from the end-user's Mendix ID via SSO (for example, **EmailAddress**) will overwrite any changes you make within your app.
-{{% /alert %}}
+    ![](attachments/qianfan-sso//image36.png)
 
-## 6 Tokens
+## 4 Mendix configuration
+    
+### 4.1 QianfanSSO module integration
 
-Mendix SSO works by providing end-users with tokens when they are authenticated. If end-users are having issues with Mendix SSO it can be useful to see the tokens, either for your own debugging or to provide information to Mendix Support.
+#### 4.1.1 Downloading the QianfanSSO module
+        
+1. Download the QianfanSSO module at the following address
 
-The default Mendix SSO administration module has a number of pages set up to enable you to see tokens. Alternatively, you can use snippets from the default module to create your own token display and administration pages.
+    [https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/Qianfansso/QianfanSSO.mpk](https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/qianfansso/QianFanSSO.mpk)
 
-{{% alert type="info" %}}
-Tokens contain personal information, as well as authentication information. They should not be exposed routinely, and should only be shared on a need-to-know basis (for example, if you need help resolving an issue with SSO).
-{{% /alert %}}
+#### 4.1.2 Importing the QianfanSSO module
 
-### 6.1 Displaying Tokens on Pages
+1. Open an existing app project with Studio Pro, if you don't have one, create a new app project first. Right-click on the project to select "Import module package"
 
-Individual end-users can see their tokens on the MendixSSO.MyTokensOverview page of the default implementation. Administrators may want to see all active tokens – these can be seen on the MendixSSO.TokensOverview page.
+    ![](attachments/qianfan-sso//image37.png)
 
-![List of pages which show tokens in Mendix SSO](attachments/qianfan-sso/token-pages.png)
+2. Select the QianfanSSO.mpk file you just downloaded and click on impport
 
-If you want administrators or end-users to be able to see tokens, it is recommended that you add these to the navigation of the app. This avoids them being included in the main process flows of the app.
+    ![](attachments/qianfan-sso//image38.png)
 
-![How to add navigation to the tokens overview pages in Mendix SSO](attachments/qianfan-sso/token-navigation.png)
+#### 4.1.3 Configuring the QianfanSSO module
 
-#### 6.1.1 TokensOverview Page
+1. Click "Settings" - "Runtime" - "After Startup" to select "QianfanSSO.QianfanSSO\_AfterStartup"
 
-The TokensOverview page allows administrators to see all tokens which have been issued to end-users of the app.
+    ![](attachments/qianfan-sso//image39.png)
 
-![List of all Mendix SSO tokens issued to the app](attachments/qianfan-sso/token-administration.png)
+2. For local testing, please click "Configurations" - "Server" to replace the default URL with
 
-The page can be used for troubleshooting – you can see the creation and expiry dates of the tokens and, by clicking **View**, you can view the values held in the tokens.
+    `http://127.0.0.1:8080`
 
-The **ID Token** is held in jwt format, so you can paste it into a [jwt decoder](https://jwt.io) to confirm what information it holds.
+    ![](attachments/qianfan-sso//image40.png)
 
-The page can also be used for administration. You can delete tokens which have expired, and you can also delete current tokens if they are causing unwanted issues.
+3. Expand the QianfanSSO module and enter the Configuration folder
 
-Deleting tokens from the TokensOverview page will cause end-users to lose access to the app. However, they will be able to sign in again if they are still end-users of the app.
+    ![](attachments/qianfan-sso//image41.png)
 
-#### 6.1.2 MyTokensOverview Page 
+4. Assign the Client ID and the Client Secret values saved in section 3.2.1 to the corresponding constants (“ClientID” and “ClientSecret”)
 
-The MyTokensOverview page allows end-users to see their own access tokens.
+5. In the constant “OpenIdConnectProvider”, assign the Well-known URL from section 3.2.1 after removing the segment `.well-known/openid-configuration`.
 
-![List of all my Mendix SSO tokens](attachments/qianfan-sso/my-tokens.png)
+    For example: 'https://xxx.cig.tencentcs.com/sso/tn-a1be8dd15d05/ai-32234954/oidc`
 
-The page can be used for troubleshooting – the end-user can see the creation and expiry dates of the tokens and, by clicking **View**, they can view the values held in the tokens. This can be useful for troubleshooting if the end-user is having difficulty getting proper access to the app.
+6. In the constant “Issuer”, assign the issuer from the Well-known URL from section 3.2.1
 
-### 6.2 Displaying Tokens using Snippets
+For example:
 
-The default tokens pages in the MendixSSO module are created using snippets.
+> https://xxx.cig.tencentcs.com
 
-![List of snippets which manipulate tokens in Mendix SSO](attachments/qianfan-sso/token-snippets.png)
+In the constant “Audience”, assign the API unique identifier:
 
-You can use these snippets to create your own token administration pages. Look at the pages in the **Pages** subfolder of the **Default Implementation** folder in the Mendix SSO module for ideas on how they can be used.
+For example:
+
+> TEST\_Administrator
+
+![](attachments/qianfan-sso//image42.png)
+
+In the constant “Prefix”, assign the first half of the permission name (including the underscore) from in section 1.5.1
+
+For example:
+
+![](attachments/qianfan-sso//image20.png)
+
+With the above example, the “Prefix” should be set to
+
+> TestApp\_
+
+#### Configure the login page
+
+Click on "Project" - "Show Project Directory in Explorer"
+
+![](attachments/qianfan-sso//image43.png)
+
+Go to the theme folder and replace the existing "login.html" file with the following file, which contains the login page with Qianfan Yufu SSO content
+
+> [https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/Qianfansso/login.html](https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/qianfansso/login.html)
+
+Download the Qianfan Yufu logo file “yufu.png”
+
+> [https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/Qianfansso/yufu.png](https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/qianfansso/yufu.png)
+
+Click on "Synchronize Project Directory" in Studio Pro
+
+![](attachments/qianfan-sso//image44.png)
+
+#### Configure the logout page
+
+Add a button ("Button") to the page. Set the "On Click" event to "Call a microflow", select "QianfanSSO.QianfanSSO\_Logout" and set the "Caption" to "Logout"
+
+![](attachments/qianfan-sso//image45.png)
+
+#### Role settings
+
+Open Security and set the "Security Level" to "Production"
+
+Make sure that under "User roles" the role names are consistent with the part of the permission names after the underscore, as set in section 1.5.2. For example:
+
+![](attachments/qianfan-sso//image46.png)
+
+Click on the corresponding role and click "Edit" to make sure that the corresponding permissions in "QianfanSSO" are checked
+
+![](attachments/qianfan-sso//image47.png)
+
+#### Sign in for verification
+
+After saving the configuration, click "Run Locally" and click "View" after success
+
+![](attachments/qianfan-sso//image48.png)
+
+Open the login screen below and click "Qianfan IDaaS Account"
+
+![](attachments/qianfan-sso//image49.png)
+
+Jump to the Yufu login interface and log in using your Yufu account
+
+![](attachments/qianfan-sso//image50.png)
+
+Finally, jumps back to the app page
+
+![](attachments/qianfan-sso//image51.png)
+
+Click "logout" to log out and return to the login screen
+
+![](attachments/qianfan-sso//image52.png)
+
+#### Cloud verification
+
+After the local test passes, go tothe App deployment page via Environment in the Mendix platform
+
+![](attachments/qianfan-sso//image53.png)
+
+Click the Add Environment button
+
+![](attachments/qianfan-sso//image54.png)
+
+For "Purpose" select "Production" and enters the purchased subscription secret, and then select the appropriate plan and click "Create Environment"
+
+![](attachments/qianfan-sso//image55.png)
+
+Click create Package to select the version for Build
+
+![](attachments/qianfan-sso//image56.png)
+
+Select the .mda file that should be deployed, and click "Deploy"
+
+![](attachments/qianfan-sso//image57.png)
+
+Save the Url and click "Transport"![](attachments/qianfan-sso//image58.png)
+
+Click on the "Constant" tab to assign the new Url to the "AppUrl" constant
+
+![](attachments/qianfan-sso//image59.png)
+
+Finally click on "Apply Changes"
+
+Check that Deployment and Environment status are normal
+
+![](attachments/qianfan-sso//image60.png)
+
+Go to the Qianfan Yufu Management page and add a callback URI as following: **{App URL} + "/qianfan/callback"**
+
+For example:
+
+![](attachments/qianfan-sso//image61.png)
+
+Since the App URL is a temporary url, please use the Cluster CLB IP in the email you received when you purchased Mendix and update your local hostfile:
+
+On Windows：C:\\Windows\\System32\\drivers\\etc\\hosts
+
+On Linux：/etc/hosts
+
+And update the IP for the App URL
+
+![](attachments/qianfan-sso//image62.png)
+
+Then visit the "App Url" and click "Qianfan IDaaS Account" to access the app
+
+![](attachments/qianfan-sso//image49.png)
+

@@ -17,10 +17,6 @@ The Qianfan SSO module enables your app end-users to sign in with single sign-on
 
 Full documentation in Chinese can be downloaded as a PDF from [千帆玉符 SSO 模块使用手册](https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/qianfansso/QianFanSSO%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.pdf).
 
-{{% alert type="warning" %}}
-QianFan Single Sign-On is only activated when your app is deployed to the Tencent Cloud. When you run your app locally, you will need to use local credentials.
-{{% /alert %}}
-
 ## 2 Purchasing and Launching the Service
 
 1. Open Qianfan Yufu identity management services
@@ -34,6 +30,8 @@ QianFan Single Sign-On is only activated when your app is deployed to the Tencen
     ![](attachments/qianfan-sso//image1.png)
 
 ## 3 Configuring Yufu iDaaS
+
+### 3.1 Logging in to Yufu iDaaS
     
 1. Log in to Yufu iDaaS using login address provided by the above-mentioned email, log in to Yufu iDaaS control panel
 
@@ -43,9 +41,9 @@ QianFan Single Sign-On is only activated when your app is deployed to the Tencen
 
     ![](attachments/qianfan-sso//image3.png)
 
-### 3.1 User management
+### 3.2 User management
     
-#### 3.1.1 Adding Users
+#### 3.2.1 Adding Users
 
 1. Select Object Management -\> Department Management -\> Department Data
 
@@ -63,9 +61,9 @@ QianFan Single Sign-On is only activated when your app is deployed to the Tencen
 
 4. Enter the user information and click **OK**
 
-### 3.2 Application Management
+### 3.3 Application Management
     
-#### 3.2.1 Adding an App
+#### 3.3.1 Adding an App
 
 1. Click the "Add App" button on the right side
 
@@ -97,13 +95,13 @@ QianFan Single Sign-On is only activated when your app is deployed to the Tencen
 
     `<APP Domain>/Qianfan/callback`
 
-8. Save the ClientID & Client Secret values locally
+8. Save the Client ID & Client Secret values locally
 
     ![](attachments/qianfan-sso//image12.png)
 
 9. Save the 'Well-known interface' address locally, and also save the contents shown when you click the link
 
-#### 3.2.2 Configuring the app
+#### 3.3.2 Configuring the app
 
 1. Click on "Self-Service Request"
 
@@ -123,11 +121,11 @@ QianFan Single Sign-On is only activated when your app is deployed to the Tencen
 
     ![](attachments/qianfan-sso//image16.png)
 
-#### 3.2.3 Applying Permissions Management
+### 3.4 Applying Permissions Management
 
 The permissions in Yufu are equivalent to the roles in Mendix.
 
-#### 3.2.4 API Management
+#### 3.4.1 API Management
 
 1. Select "Apps" -\> "API Management" -\> "Create"
 
@@ -155,7 +153,7 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
     ![](attachments/qianfan-sso//image22.png)
 
-7. Select the app created in Section 1.4 and confirm. For example:
+7. Select the app created in Section 3.3 and confirm. For example:
 
     ![](attachments/qianfan-sso//image23.png)
 
@@ -163,7 +161,7 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
     ![](attachments/qianfan-sso//image24.png)
 
-#### 3.2.5 Rights Group Management
+#### 3.4.2 Rights Group Management
 
 1. Select Object Management - Rights Group Management
 
@@ -191,7 +189,7 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
     ![](attachments/qianfan-sso//image31.png)
 
-7. Select the API created in Section 1.5.1
+7. Select the API created in Section 3.4.1
 
     ![](attachments/qianfan-sso//image32.png)
 
@@ -213,15 +211,13 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
 ## 4 Mendix configuration
     
-### 4.1 QianfanSSO module integration
-
-#### 4.1.1 Downloading the QianfanSSO module
+### 4.1 Downloading the QianfanSSO module
         
 1. Download the QianfanSSO module at the following address
 
     [https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/Qianfansso/QianfanSSO.mpk](https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/qianfansso/QianFanSSO.mpk)
 
-#### 4.1.2 Importing the QianfanSSO module
+### 4.2 Importing the QianfanSSO module
 
 1. Open an existing app project with Studio Pro, if you don't have one, create a new app project first. Right-click on the project to select "Import module package"
 
@@ -231,7 +227,7 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
     ![](attachments/qianfan-sso//image38.png)
 
-#### 4.1.3 Configuring the QianfanSSO module
+### 4.3 Configuring the QianfanSSO module
 
 1. Click "Settings" - "Runtime" - "After Startup" to select "QianfanSSO.QianfanSSO\_AfterStartup"
 
@@ -247,145 +243,143 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
     ![](attachments/qianfan-sso//image41.png)
 
-4. Assign the Client ID and the Client Secret values saved in section 3.2.1 to the corresponding constants (“ClientID” and “ClientSecret”)
+4. Assign the Client ID and the Client Secret values saved in section 3.3.1 to the corresponding constants (“ClientID” and “ClientSecret”)
 
-5. In the constant “OpenIdConnectProvider”, assign the Well-known URL from section 3.2.1 after removing the segment `.well-known/openid-configuration`.
+5. In the constant “OpenIdConnectProvider”, assign the Well-known URL from section 3.3.1 after removing the segment `.well-known/openid-configuration`.
 
     For example: 'https://xxx.cig.tencentcs.com/sso/tn-a1be8dd15d05/ai-32234954/oidc`
 
-6. In the constant “Issuer”, assign the issuer from the Well-known URL from section 3.2.1
+6. In the constant “Issuer”, assign the issuer from the Well-known URL from section 3.3.1
 
-For example:
+    For example: `https://xxx.cig.tencentcs.com`
 
-> https://xxx.cig.tencentcs.com
+7.  In the constant “Audience”, assign the API unique identifier:
 
-In the constant “Audience”, assign the API unique identifier:
+    For example: `TEST_Administrator`
 
-For example:
+    ![](attachments/qianfan-sso//image42.png)
 
-> TEST\_Administrator
+8. In the constant “Prefix”, assign the first half of the permission name (including the underscore) from in section 3.5.1
 
-![](attachments/qianfan-sso//image42.png)
+    For example:
 
-In the constant “Prefix”, assign the first half of the permission name (including the underscore) from in section 1.5.1
+   ![](attachments/qianfan-sso//image20.png)
 
-For example:
+9. With the above example, the “Prefix” should be set to `TestApp_`
 
-![](attachments/qianfan-sso//image20.png)
+### 4.4 Configure the login page
 
-With the above example, the “Prefix” should be set to
+1. Click on "Project" - "Show Project Directory in Explorer"
 
-> TestApp\_
+    ![](attachments/qianfan-sso//image43.png)
 
-#### Configure the login page
+2. Go to the theme folder and replace the existing "login.html" file with the following file, which contains the login page with Qianfan Yufu SSO content
 
-Click on "Project" - "Show Project Directory in Explorer"
+    [https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/Qianfansso/login.html](https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/qianfansso/login.html)
 
-![](attachments/qianfan-sso//image43.png)
+3. Download the Qianfan Yufu logo file “yufu.png”
 
-Go to the theme folder and replace the existing "login.html" file with the following file, which contains the login page with Qianfan Yufu SSO content
+    [https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/Qianfansso/yufu.png](https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/qianfansso/yufu.png)
 
-> [https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/Qianfansso/login.html](https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/qianfansso/login.html)
+4. Click on "Synchronize Project Directory" in Studio Pro
 
-Download the Qianfan Yufu logo file “yufu.png”
+    ![](attachments/qianfan-sso//image44.png)
 
-> [https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/Qianfansso/yufu.png](https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/qianfansso/yufu.png)
+### 4.5 Configure the logout page
 
-Click on "Synchronize Project Directory" in Studio Pro
+1. Add a button ("Button") to the page.
 
-![](attachments/qianfan-sso//image44.png)
+2. Set the "On Click" event to "Call a microflow", select "QianfanSSO.QianfanSSO\_Logout" and set the "Caption" to "Logout"
 
-#### Configure the logout page
+    ![](attachments/qianfan-sso//image45.png)
 
-Add a button ("Button") to the page. Set the "On Click" event to "Call a microflow", select "QianfanSSO.QianfanSSO\_Logout" and set the "Caption" to "Logout"
+### 4.6 Role settings
 
-![](attachments/qianfan-sso//image45.png)
+1. Open Security and set the "Security Level" to "Production"
 
-#### Role settings
+2. Make sure that under "User roles" the role names are consistent with the part of the permission names after the underscore, as set in section 1.5.2. For example:
 
-Open Security and set the "Security Level" to "Production"
+    ![](attachments/qianfan-sso//image46.png)
 
-Make sure that under "User roles" the role names are consistent with the part of the permission names after the underscore, as set in section 1.5.2. For example:
+3. Click on the corresponding role and click "Edit" to make sure that the corresponding permissions in "QianfanSSO" are checked
 
-![](attachments/qianfan-sso//image46.png)
+    ![](attachments/qianfan-sso//image47.png)
 
-Click on the corresponding role and click "Edit" to make sure that the corresponding permissions in "QianfanSSO" are checked
+### 4.7 Sign in for verification
 
-![](attachments/qianfan-sso//image47.png)
+1. After saving the configuration, click "Run Locally" and click "View" after success
 
-#### Sign in for verification
+    ![](attachments/qianfan-sso//image48.png)
 
-After saving the configuration, click "Run Locally" and click "View" after success
+2. Open the login screen below and click "Qianfan IDaaS Account"
 
-![](attachments/qianfan-sso//image48.png)
+    ![](attachments/qianfan-sso//image49.png)
 
-Open the login screen below and click "Qianfan IDaaS Account"
+3. On the Yufu login interface, log in using your Yufu account
 
-![](attachments/qianfan-sso//image49.png)
+    ![](attachments/qianfan-sso//image50.png)
 
-Jump to the Yufu login interface and log in using your Yufu account
+    The app jumps back to the app page
 
-![](attachments/qianfan-sso//image50.png)
+    ![](attachments/qianfan-sso//image51.png)
 
-Finally, jumps back to the app page
+4. Click "logout" to log out and return to the login screen
 
-![](attachments/qianfan-sso//image51.png)
+    ![](attachments/qianfan-sso//image52.png)
 
-Click "logout" to log out and return to the login screen
+### 4.8 Cloud verification
 
-![](attachments/qianfan-sso//image52.png)
-
-#### Cloud verification
-
-After the local test passes, go tothe App deployment page via Environment in the Mendix platform
+1. After the local test passes, go to the App deployment page via Environment in the Mendix platform
 
 ![](attachments/qianfan-sso//image53.png)
 
-Click the Add Environment button
+2. Click the Add Environment button
 
 ![](attachments/qianfan-sso//image54.png)
 
-For "Purpose" select "Production" and enters the purchased subscription secret, and then select the appropriate plan and click "Create Environment"
+3. For "Purpose" select "Production" and enters the purchased subscription secret
 
-![](attachments/qianfan-sso//image55.png)
+4. Select the appropriate plan and click "Create Environment"
 
-Click create Package to select the version for Build
+    ![](attachments/qianfan-sso//image55.png)
 
-![](attachments/qianfan-sso//image56.png)
+5. Click create Package to select the version for Build
 
-Select the .mda file that should be deployed, and click "Deploy"
+    ![](attachments/qianfan-sso//image56.png)
 
-![](attachments/qianfan-sso//image57.png)
+6. Select the .mda file that should be deployed, and click "Deploy"
 
-Save the Url and click "Transport"![](attachments/qianfan-sso//image58.png)
+    ![](attachments/qianfan-sso//image57.png)
 
-Click on the "Constant" tab to assign the new Url to the "AppUrl" constant
+7. Save the Url and click "Transport"![](attachments/qianfan-sso//image58.png)
 
-![](attachments/qianfan-sso//image59.png)
+8. Click on the "Constant" tab to assign the new Url to the "AppUrl" constant
 
-Finally click on "Apply Changes"
+    ![](attachments/qianfan-sso//image59.png)
 
-Check that Deployment and Environment status are normal
+9. Finally click on "Apply Changes"
 
-![](attachments/qianfan-sso//image60.png)
+    Check that Deployment and Environment status are normal
 
-Go to the Qianfan Yufu Management page and add a callback URI as following: **{App URL} + "/qianfan/callback"**
+    ![](attachments/qianfan-sso//image60.png)
 
-For example:
+10. Go to the Qianfan Yufu Management page and add a callback URI as following: **{App URL} + "/qianfan/callback"**
 
-![](attachments/qianfan-sso//image61.png)
+    For example:
 
-Since the App URL is a temporary url, please use the Cluster CLB IP in the email you received when you purchased Mendix and update your local hostfile:
+    ![](attachments/qianfan-sso//image61.png)
 
-On Windows：C:\\Windows\\System32\\drivers\\etc\\hosts
+11. Since the App URL is a temporary url, please use the Cluster CLB IP in the email you received when you purchased Mendix and update your local hostfile:
 
-On Linux：/etc/hosts
+    * On Windows：`C:\Windows\System32\drivers\etc\hosts`
 
-And update the IP for the App URL
+    * On Linux：/etc/hosts
 
-![](attachments/qianfan-sso//image62.png)
+12. Update the IP for the App URL
 
-Then visit the "App Url" and click "Qianfan IDaaS Account" to access the app
+    ![](attachments/qianfan-sso//image62.png)
 
-![](attachments/qianfan-sso//image49.png)
+13. Finally, visit the "App Url" and click "Qianfan IDaaS Account" to access the app
+
+    ![](attachments/qianfan-sso//image49.png)
 

@@ -67,11 +67,11 @@ In this part of the how-to, you will learn how to configure the security at the 
 
 To set the security level to prototype/demo, follow these steps:
 
-1.  Open the project **Security**:
+1.  Open the app **Security**:
   
     ![](attachments/18448715/18581561.png)
     
-    This will open the **Project Security** properties editor.
+    This will open the **App Security** properties editor.
 2.  Switch the **Security level** to **Prototype / demo**:
   
     ![](attachments/18448715/18581559.png)
@@ -106,8 +106,8 @@ To create module roles within a module, follow these steps:
 
 The two module roles that have been created should be assigned to a user role. When an end-user has a specific user role, the end-user has access to the data, forms, and microflows according to the assigned module roles of that user role:
 
-1. Open the project **Security.**
-2.  On the **Project Security** dialog box, go to the **User roles** tab and double-click the **Administrator** user role:
+1. Open the app **Security.**
+2.  On the **App Security** dialog box, go to the **User roles** tab and double-click the **Administrator** user role:
   
     ![](attachments/18448715/18581553.png)
 
@@ -154,11 +154,11 @@ In this section of the how-to, you will configure the security at the production
 
 To set the security level to production, follow these steps:
 
-1.  Open the project **Security**:
+1.  Open the app **Security**:
   
     ![](attachments/18448715/18581561.png)
 
-2.  On the **Project Security** dialog box, switch the security level to **Production**:
+2.  On the **App Security** dialog box, switch the security level to **Production**:
   
     ![](attachments/18448715/18581543.png)
 

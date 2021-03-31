@@ -48,7 +48,7 @@ When filing a Git support issue with Mendix Support, attach the log files doing 
 The properties described below might contain personal information. We advise you to make sure that all the private information is removed before sharing it. 
 {{% /alert %}}
 
-There are properties of the Git repository that provide you with the information useful for troubleshooting different issues. Execute the following in the command line in the project’s folder:
+There are properties of the Git repository that provide you with the information useful for troubleshooting different issues. Execute the following in the command line in the app’s folder:
 
 `git status -b` — provides information on the current state of the repository
 

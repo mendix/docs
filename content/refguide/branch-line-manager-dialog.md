@@ -39,7 +39,7 @@ In the **SVN repository address field**, enter the address of the app you want t
 
 ## 3 Managing Branch Lines
 
-In the **Branch Line Manager**, you can create and delete branch line, enable and disable Mendix Studio for the project. For more information on how to perform these actions, see [Managing Studio on Development Lines](collaborative-development#managing-studio) and [Managing Development Lines](collaborative-development#managing-branches) sections in *Collaborative Development*. 
+In the **Branch Line Manager**, you can create and delete branch line, enable and disable Mendix Studio for the app. For more information on how to perform these actions, see [Managing Studio on Development Lines](collaborative-development#managing-studio) and [Managing Development Lines](collaborative-development#managing-branches) sections in *Collaborative Development*. 
 
 ## 4 Read More
 

@@ -1,5 +1,5 @@
 ---
-title: "LTS, MTS & Monthly Release Versions"
+title: "LTS, MTS & Monthly Releases"
 category: "Studio Pro"
 ---
 

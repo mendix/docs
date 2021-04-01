@@ -189,6 +189,7 @@ Microflows can be called from offline apps by using [microflow call](microflow-c
 
 * Passing an object or a list of a persistable entity is not supported.
 * Passing an object or a list of a non-persistable entity that has an association with a persistable entity is not supported (such an association can be an indirect association).
+* Passing a non-persistable entity that was created in another microflow is not supported
 
 #### 4.1.2 UI Actions
 

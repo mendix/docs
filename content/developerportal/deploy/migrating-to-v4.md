@@ -113,7 +113,7 @@ To upload the deployment package, follow these steps:
 #### 4.2.2 Backing Up
 
 {{% alert type="warning" %}}
-Ensure you have performed the last two steps in the previous section to deploy your deployment package before continuing. making a deployment prepares the environment and ensures your data is restored to the correct locations.
+Ensure you have performed the last two steps in the previous section to deploy your deployment package before continuing. Making a deployment prepares the environment and ensures your data is restored to the correct locations.
 {{% /alert %}}
 
 Transfer the backup data from the app on Mendix Cloud v3 to the app on Mendix Cloud v4 by following these steps:

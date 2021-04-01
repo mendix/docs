@@ -171,7 +171,7 @@ The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)
 
 ## 7 Mendix Pricing Plans{#plans}
 
-Mendix licenses are sold as part of plans. These consist of a subscription to a plan, a standard **Cloud Resource Pack** which specifies the resources available to your app environment, plus additional resources such as fallback environments.
+Mendix licenses are sold as part of plans. These consist of a subscription to a plan, a **Cloud Resource Pack** which specifies the resources available to your app environment, plus additional resources such as fallback environments.
 
 ### 7.1 Plans
 
@@ -186,9 +186,26 @@ More information on these plans is available on the [Pricing](https://www.mendix
 
 ### 7.2 Cloud Resource Packs{#resource-pack}
 
-Mendix environments are sized according to a number of standard cloud resource packs. The table below shows the current cloud resource packs and those cloud resource packs which are still being used but are not available to new customers (labeled *legacy*).
+Mendix environments are sized by reference to cloud resource packs. The table below shows the current cloud resource packs. The *Standard* resource packs can also be used with *all* plans, but *premium* resource packs can only be purchased with a *premium* plan.
 
-| Pack | App RAM | App CPU | DB RAM | DB CPU | DB Storage | File Storage |
+| Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
+| --- | --- | --- | --- | --- | --- | --- |
+|Standard|||||||
+| XS | 1GB | 0.25 | 1GB | 2 | 5GB | 10GB |
+| S | 2GB | 0.5 | 2GB | 2 | 10GB | 20GB |
+| M | 4GB | 1 | 4GB | 2 | 20GB | 40GB |
+| L | 8GB | 2 | 8GB | 2 | 40GB | 80GB |
+| XL | 16GB | 4 | 16GB | 3 | 80GB | 160GB |
+|Premium|||||||
+| S | 2GB | 0.5 | 2GB | 2 | 10GB | 20GB |
+| M | 4GB | 1 | 4GB | 2 | 20GB | 40GB |
+| L | 8GB | 2 | 8GB | 2 | 40GB | 80GB |
+| XL | 16GB | 4 | 16GB | 4 | 80GB | 160GB |
+| XXL | 32GB | 8 | 32GB | 4 | 160GB | 320GB |
+
+ The cloud resource packs below are still being used but are not available to new customers.
+
+| Legacy Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | --- | --- | --- | --- | --- | --- | --- |
 | XS20 | 1GB | 0.5-1 core | 1GB | 1 core | 5GB | 10GB |
 | S20 | 2GB | 0.5-1 core | 2GB | 1 core | 10GB | 20GB |
@@ -197,19 +214,23 @@ Mendix environments are sized according to a number of standard cloud resource p
 | XL20 | 16GB | 4-8 cores | 16GB | 2 cores | 80GB | 160GB |
 | XXL20 | 32GB | 8-16 cores | 32GB | 2 cores | 160GB | 320GB |
 ||||||||
-| Strato *(legacy)* | 2GB | 0.5-1 core | 1GB | 0.5 core | 5GB | 20GB |
-| Meso *(legacy)* | 2GB | 0.5-1 core | 8GB | 2 cores | 20GB | 20GB |
-| Iono *(legacy)* | 8GB | 2-4 cores | 8GB | 2 cores | 20GB | 80GB |
-| Magneto *(legacy)* | 16GB | 4-8 cores | 16GB | 4 cores | 80GB | 320GB |
-| S *(legacy)* | 1GB | 0.5 core | 1GB | 0.5 core | 5GB | 5GB |
-| M *(legacy)* | 2GB | 0.5-1 core | 2GB | 1 core | 10GB | 10GB |
-| L *(legacy)* | 4GB | 1-2 cores | 4GB | 2 cores | 20GB | 20GB |
-| XL *(legacy)* | 8GB | 2-4 cores | 8GB | 2 cores | 40GB | 40GB |
-| XXL *(legacy)* | 16GB | 4-8 cores | 16 GB | 4 cores | 80GB | 80GB |
+| Strato | 2GB | 0.5-1 core | 1GB | 0.5 core | 5GB | 20GB |
+| Meso | 2GB | 0.5-1 core | 8GB | 2 cores | 20GB | 20GB |
+| Iono | 8GB | 2-4 cores | 8GB | 2 cores | 20GB | 80GB |
+| Magneto | 16GB | 4-8 cores | 16GB | 4 cores | 80GB | 320GB |
+| S | 1GB | 0.5 core | 1GB | 0.5 core | 5GB | 5GB |
+| M | 2GB | 0.5-1 core | 2GB | 1 core | 10GB | 10GB |
+| L | 4GB | 1-2 cores | 4GB | 2 cores | 20GB | 20GB |
+| XL | 8GB | 2-4 cores | 8GB | 2 cores | 40GB | 40GB |
+| XXL | 16GB | 4-8 cores | 16 GB | 4 cores | 80GB | 80GB |
+
+{{% alert type="info" %}}
+You can have a pack using a fraction of a vCPU as several environments can run, completely isolated from each other, on a single virtual machine.
+{{% /alert %}}
 
 ### 7.3 Additional Resources
 
-For **Enterprise** customers, there are additional features available for apps deployed to the Mendix Cloud, and additional ways to deploy your Mendix App.
+For **Premium customers using a  Premium resource pack**, there are additional features available for apps deployed to the Mendix Cloud, and additional ways to deploy your Mendix App.
 
 #### 7.3.1 High Availability
 

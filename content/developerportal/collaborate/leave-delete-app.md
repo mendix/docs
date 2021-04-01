@@ -3,6 +3,8 @@ title: "Leave & Delete an App"
 parent: "general-settings"
 description: "Describes how to leave, delete, and deactivate an app in the Developer Portal."
 tags: ["app", "delete", "deactivate", "Developer Portal", "Scrum Master"]
+aliases:
+    - /developerportal/settings/leave-delete-app
 ---
 
 ## 1 Introduction
@@ -35,7 +37,7 @@ There are some important points to understand when you want to leave and/or dele
 
 * You cannot delete or deactivate an app if you are the **Technical Contact** of the app
 * Only Free Apps can be deleted
-* App deletion cannot be undone, which means that ALL DATA WILL BE LOST, including all files on the [Team Server](/developerportal/develop/team-server) and all data in the Free App node
+* App deletion cannot be undone, which means that ALL DATA WILL BE LOST, including all files on the [Team Server](/developerportal/collaborate/team-server) and all data in the Free App node
 
 If you want to leave and delete your app, follow these steps:
 

@@ -1,11 +1,12 @@
 ---
 title: "Team Server Overview"
-category: "Development"
+category: "Collaboration"
 menu_order: 20
 description: "Describes the overview of Team Server revisions and commits."
 tags: ["Studio Pro", "Team Server", "Developer Portal", "commit", "branch"]
 aliases:
     - /refguide/team-server.html
+    - /developerportal/develop/team-server.html
 ---
 
 ## 1 Introduction

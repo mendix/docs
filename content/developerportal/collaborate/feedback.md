@@ -1,6 +1,6 @@
 ---
 title: "Feedback Management"
-category: "Collaboration Tools"
+category: "Collaboration"
 menu_order: 5
 description: "Describes how to manage feedback on your Mendix app in the Developer Portal."
 tags: ["Feedback","Developer Portal", "feedback widget"]

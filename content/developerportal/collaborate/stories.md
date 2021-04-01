@@ -1,6 +1,6 @@
 ---
 title: "Stories"
-category: "Collaboration Tools"
+category: "Collaboration"
 menu_order: 2
 description: "Describes how to manage the Sprints and stories for your apps."
 tags: ["Stories", "Sprint", "Developer Portal"]

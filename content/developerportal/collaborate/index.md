@@ -1,7 +1,10 @@
 ---
-title: "Collaboration Tools"
+title: "Collaboration"
 description: "Describes the collaboration tools available in the Mendix Developer Portal."
 tags: ["Developer Portal", "Sprint", "story", "stories", "buzz"]
+aliases:
+    - /developerportal/develop/
+    - /developerportal/settings/
 ---
 
 ## 1 Introduction

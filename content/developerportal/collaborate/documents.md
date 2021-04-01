@@ -1,6 +1,6 @@
 ---
 title: "Documents"
-category: "Collaboration Tools"
+category: "Collaboration"
 menu_order: 6
 description: "Describes how to manage the documents in your app."
 tags: ["Documents", "Developer Portal"]

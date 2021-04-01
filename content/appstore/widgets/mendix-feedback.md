@@ -115,7 +115,7 @@ You can configure the widget for certain actions in your app (for example, to al
 
 The feedback feature requires the following properties to be set:
 
-* **Project** tab > **App ID** – the unique identifier of your app available in your app's [General](/developerportal/settings/general-settings) settings in the Developer Portal
+* **Project** tab > **App ID** – the unique identifier of your app available in your app's [General Settings](/developerportal/collaborate/general-settings) in the Developer Portal
 * **Advanced** tab > **Feedback server location** – the URL of the Developer Portal server (usually `https://sprintr.home.mendix.com`)
 
 For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the [Mendix SSO](/appstore/modules/mendix-sso) module to version 8.2.1 or above of the Mendix Feedback widget. For version 8.1.0 or above of the widget, you need to set the following:

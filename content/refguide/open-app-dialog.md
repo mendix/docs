@@ -32,7 +32,7 @@ Use this setting to select the location where your app is stored. This can be th
 
 Select the Team Server app you would like to open, then choose the development line.
 
-For more information about the Mendix Team Server, see [Team Server Overview](/developerportal/develop/team-server).
+For more information about the Mendix Team Server, see [Team Server Overview](/developerportal/collaborate/team-server).
 
 For more information about development lines, see [Version Control](version-control).
 

@@ -7,7 +7,7 @@ tags: ["merge", "algorithm", "conflict", "resolution"]
 
 ## 1 Introduction
 
-A new merge algorithm with fine-grained conflict resolution is used when you update your project or merge changes in it. The new merge algorithm has the following features:
+A new merge algorithm with fine-grained conflict resolution is used when you update your app or merge changes in it. The new merge algorithm has the following features:
 
 * **Fine-grained conflict resolution** – When there are conflicting changes in a document, you do not have to choose between whole documents: resolving a conflict using your change or using their change. Instead, you can resolve conflicts at the level of individual elements, such as widgets, entities, attributes, or microflow actions. Also, all non-conflicting changes from both sides are accepted automatically.
 * **No conflicts on parallel changes to lists of widgets** – When two developers make changes to widgets in the same document there is no conflict, the changes are combined. However, if the changes are made too close to the same place in the document, a **list order conflict** is reported that reminds the developer who is merging the changes to decide on the final order of the widgets in the list. 
@@ -18,10 +18,10 @@ A new merge algorithm with fine-grained conflict resolution is used when you upd
 Make sure that you repository is in a clean state: everything has been committed and there are no outstanding changes or conflicts. 
 {{% /alert %}}
 
-To enable the new algorithm, do the following:
+The new algorithm is enabled by default in Studio Pro 9. If you encounter issues, you can revert back to the old algorithm with the following steps:
 
 1. In the Studio Pro top bar, go to **Edit** > **Preferences** > **New features**. 
-2. In the **Version Control** section, enable the **New merge algorithm with fine-grained conflict resolution** option.
+2. In the **New features** section, disable the **New merge algorithm with fine-grained conflict resolution** option.
 3. Restart Studio Pro.
 
 For more information, see [Preferences](preferences-dialog).
@@ -61,9 +61,9 @@ When you merge changes, the new algorithm shows you the following conflicts:
 
     ![New algorithm conflicts](attachments/new-merge-algorithm/new-merge-algorithm-conflicts.png)
 
-To start the resolution process, click the **Resolve...** button. The page is opened in a special mode with an orange tab:
+To start the resolution process, click the **Merge** button. The page is opened in a special mode with an orange bar at the top:
 
-![Document with orange tab](attachments/new-merge-algorithm/new-merge-algorithm-orange-tab.png)
+![Document with orange bar](attachments/new-merge-algorithm/new-merge-algorithm-orange-tab.png)
 
 The following non-conflicting changes have already been applied to the page:
 
@@ -90,10 +90,13 @@ Once you have chosen one of the three options to resolve the conflict, green che
 
 ### 4.2 Resolving the Second Conflict
 
-The second conflict is a list order conflict. It is a reminder to take a look at the order of the widgets in the 
-layout grid. You can arrange the widgets in the desired order in the page editor and then choose **Mark as Resolved** for the list order conflict.
+The second conflict is a list order conflict. It is a reminder to take a look at the order of the widgets in the layout grid. You can arrange the widgets in the desired order in the page editor and then choose **Mark as Resolved** for the list order conflict. 
 
 You can also decide to delete one of the widgets or add a new one. The document is fully editable while resolving conflicts. 
+
+After resolving the second conflict, the bar at the top will turn green to indicate that all conflicts have been resolved:
+
+![All conflicts resolved](attachments/new-merge-algorithm/new-merge-algorithm-all-conflicts-resolved.PNG)
 
 Some changes will make it impossible to resolve conflicts using **mine** or **theirs**. For example, if you have not resolved the first conflict yet and you delete the *Home* text widget, you cannot resolve the first conflict any more, because the widget is simply not there. At that point, you can only mark the conflict as resolved:
 

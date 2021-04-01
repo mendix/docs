@@ -14,9 +14,7 @@ These are the [Mendix Studio Pro](/refguide/) major version release notes:
 * [8](8)
 * [7](7)
 
-{{% alert type="info" %}}
-With Mendix 8, the product was renamed from **Mendix Desktop Modeler** to **Mendix Studio Pro**.
-{{% /alert %}}
+For details on title long-term support, medium-term support, and monthly release versions, see [LTS, MTS & Monthly Release Versions](lts-mts).
 
 The Windows Service release notes can be found in [Windows Service](windows-service).
 

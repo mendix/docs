@@ -62,15 +62,15 @@ Offboarding will remove access to everything related to the node. If you want to
 * Alerts
 * Logs
 
-When your app is offboarded you will still have access to the project information which is in the **COLLABORATE** and **DEVELOP** sections of the app. This consists of the following:
+When your app is offboarded you will still have access to the app information which is in the **COLLABORATE** and **DEPLOY** sections. This consists of the following:
 
 * Buzz
-* Team
 * Stories
+* Planning
+* Team
 * Feedback
 * Documents
-* Team Server containing all committed versions of your app model
-* Planning
+* Team Server (containing all committed versions of your app model)
 
 ## 5 Read More
 

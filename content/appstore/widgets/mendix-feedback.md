@@ -61,7 +61,7 @@ When you click the **Mobile view**  icon, a pop-up window is displayed that enab
 
 ![](attachments/feedback/view-app.png)
 
-You can access this mobile view by installing the [Mendix Mobile app](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile) and then scanning the QR code in the pop-up window. For more information, see [Getting the Mendix Mobile App](/refguide/getting-the-mendix-app).
+You can access this mobile view by installing the [Mendix Mobile app](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile) and then scanning the QR code in the pop-up window. 
 
 ### 2.4 Sharing the App
 
@@ -97,7 +97,7 @@ You should use the latest version of the Mendix Feedback widget, as it will prov
 To ensure you have the latest version of the widget included in your app, follow these steps:
 
 1.  Download the latest version of the [Mendix Feedback](https://appstore.home.mendix.com/link/app/199/) widget from the Marketplace. You are strongly encouraged to use version 8.2.1 or above of the widget.
-2.  When the widget is included in your app, ensure that it is added to the homepage of the application. Open the homepage from your app's **Project** > **Navigation**:
+2.  When the widget is included in your app, ensure that it is added to the homepage of the application. Open the homepage from your app's **App** > **Navigation**:
 
 	![](attachments/feedback/show-page.png)
 
@@ -155,8 +155,4 @@ If you are trying to upgrade your Mendix Feedback widget from version 7 to versi
 If you encounter the following issue, you need to delete the old *.mpk* file in the **/widgets/FeedbackWidget.mpk**  folder of your app:
 
 ![](attachments/feedback/remove-feedbackwidget-mpk.png)
-
-### 4.3 Configuring the Widget for an iOS Hybrid App
-
-For troubleshooting information, see [How to Configure the Mendix Feedback Widget for iOS](/howto/mobile/feedback-widget-ios).
 

@@ -1,6 +1,6 @@
 ---
 title: "Microflows"
-parent: "application-logic"
+parent: "microflows-and-nanoflows"
 menu_order: 10
 description: "Presents an overview of all the elements that can be used in a microflow."
 tags: ["studio pro"]
@@ -121,5 +121,5 @@ The microflow editor offers keyboard support for navigating and manipulating mic
 
 If you want to see what happens while a microflow is executing, you can use the microflow debugger. See the following how-tos:
 
-*   [Debugging Microflows](/howto/monitoring-troubleshooting/debug-microflows)
+*   [Debugging Microflows and Nanoflows](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows)
 *   [Debugging Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely)

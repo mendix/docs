@@ -1,7 +1,7 @@
 ---
 title: "App Team"
 category: "Collaboration Tools"
-menu_order: 20
+menu_order: 3
 description: "Describes the Team page of the Developer Portal."
 tags: ["Team", "Developer Portal"]
 ---
@@ -24,31 +24,21 @@ On the **Team** page, you will see an overview with the following information ab
 
 ## 2 Managing the Team {#managing}
 
-When you click **Manage Team** in the top-right corner of the screen, you will be forwarded to the **Settings** > **Security** page. 
-
-{{% alert type="info" %}}
-
-Only the following roles can see the **Manage Team** button:
-
-* [Scrum Master](/developerportal/collaborate/app-roles#app-team-roles)
-* [Mendix Admin](/developerportal/control-center)
-* A [custom role](/developerportal/collaborate/app-roles#app-team-roles) with **App Settings** permission
-
-{{% /alert %}}
+When you click **Manage Team** in the top-right corner of the screen, you will be forwarded to the **Collaborate** > **Security** page. Note that only the following roles can see the **Manage Team** button: [Scrum Master](/developerportal/collaborate/app-roles#app-team-roles), [Mendix Admin](/developerportal/control-center), or a [custom role](/developerportal/collaborate/app-roles#app-team-roles) with  the **App Settings** permission.
 
 ![](attachments/team-security.png)
 
 On the  **App Team** tab of the **Security** page, you can do the following:
 
 * Select a new **Role** for a team member
-* Click **Remove member** to remove that person from the App Team
+* Click **Remove Member** to remove that person from the App Team
 * Click **Invite member** to invite a new person to the App Team (see the [Inviting Team Members](#inviting) section below for more details)
-*  Click **Role settings** to view and edit the permissions for the App Team roles
+*  Click **Role settings** to view and edit the permissions for the App Team roles (clicking **Security Guide** on this dialog box will present useful information for configuring roles)
 
 	{{% image_container width="400" %}}![](attachments/role-settings.png)
 	{{% /image_container %}}
 
-* Click **Change log** to view the change log for the App Team
+* Click **Change log** to view the change log for the App Team and [node permissions]()
 
 ## 3 Inviting Team Members {#inviting}
 

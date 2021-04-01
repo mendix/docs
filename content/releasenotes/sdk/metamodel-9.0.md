@@ -1,181 +1,76 @@
-# Metamodel Release Notes for version 9.0.5
+---
+title: "9.0"
+parent: "metamodel-9"
+---
 
-## Constants
+## 9.0.5
 
-### Constant (ModelUnit)
+**Release date: March 31st, 2021**
 
+### Constants
 
-#### Property 'type'
-* Added public
+#### Constant (ModelUnit)
 
-## Microflows
+* We added the public `type` property. 
 
-### JavaActionCallAction (Element)
+### Microflows
 
+#### JavaActionCallAction (Element)
 
-#### Property 'queue'
-* Introduced; 
+* We introduced the `queue` property.
 
-### WorkflowCallAction (Element)
-* Removed experimental
+#### WorkflowCallAction, SetTaskOutcomeAction, OpenUserTaskAction & OpenWorkflowAction  (Elements)
 
+* We removed these experimental elements.
 
-### SetTaskOutcomeAction (Element)
-* Removed experimental
+### Settings
 
+#### ModelerSettings (Element)
 
-### OpenUserTaskAction (Element)
-* Removed experimental
+* We added the `actionActivityDefaultColors` property.
 
+#### WorkflowsProjectSettingsPart (Element)
 
-### OpenWorkflowAction (Element)
-* Removed experimental
-
-
-## Settings
-
-### ModelerSettings (Element)
-
-
-#### Property 'actionActivityDefaultColors'
-
-
-### WorkflowsProjectSettingsPart (Element)
-* Removed experimental
-
-#### Property 'enabled'
-* Deleted; 
-
-#### Property 'workflowEngineParallelism'
-* Introduced; 
-
-#### Property 'defaultTaskParallelism'
-* Introduced; 
+* We removed this experimental element.
+* We introduced the `workflowEngineParallelism` and `defaultTaskParallelism` properties.
+* We deleted the `enabled` property.
 
 ## Pages
 
-### CallWorkflowClientAction (Element)
-* Removed experimental
+#### OpenWorkflowClientAction (Element)
 
+* We removed this experimental element.
+* We introduced the `defaultPage` property.
 
-### OpenUserTaskClientAction (Element)
-* Removed experimental
+#### CallWorkflowClientAction, OpenUserTaskClientAction & SetTaskOutcomeClientAction (Elements)
 
+* We removed these experimental elements.
 
-### OpenWorkflowClientAction (Element)
-* Removed experimental
+### Workflows
 
-#### Property 'defaultPage'
-* Introduced; 
+#### JumpToActivity, UserTaskEvent, NoEvent, MicroflowBasedEvent (Elements)
 
-### SetTaskOutcomeClientAction (Element)
-* Removed experimental
+* We introduced these elements.
 
+#### Workflow (ModelUnit)
 
-## Workflows
+* We removed this experimental ModelUnit.
 
-### Workflow (ModelUnit)
-* Removed experimental
+#### WorkflowActivity (Element)
 
+* We removed this experimental element.
+* We introduced the `name` property.
 
-### Flow (Element)
-* Removed experimental
+#### UserTask (Element)
 
+* We removed this experimental element.
+* We introduced the `onCreatedEvent` property.
 
-### WorkflowActivity (Element)
-* Removed experimental
+#### MicroflowBasedUserSource (Element)
 
-#### Property 'name'
-* Introduced; 
+* We removed this experimental element.
+* We introduced the `parameterMappings` property.
 
-### CallWorkflowActivity (Element)
-* Removed experimental
+#### Flow, CallWorkflowActivity, ConditionOutcomeActivity, EndWorkflowActivity, ExclusiveSplitActivity, ParallelSplitActivity, CallMicroflowTask, MicroflowCallParameterMapping, UserSource, XPathBasedUserSource, Outcome, UserTaskOutcome, ParallelSplitOutcome, ConditionOutcome, BooleanConditionOutcome, EnumerationValueConditionOutcome & VoidConditionOutcome (Elements)
 
-
-### ConditionOutcomeActivity (Element)
-* Removed experimental
-
-
-### EndWorkflowActivity (Element)
-* Removed experimental
-
-
-### JumpToActivity (Element)
-* Introduced; 
-
-
-### ExclusiveSplitActivity (Element)
-* Removed experimental
-
-
-### ParallelSplitActivity (Element)
-* Removed experimental
-
-
-### CallMicroflowTask (Element)
-* Removed experimental
-
-
-### MicroflowCallParameterMapping (Element)
-* Removed experimental
-
-
-### UserTaskEvent (Element)
-* Introduced; 
-
-
-### NoEvent (Element)
-* Introduced; 
-
-
-### MicroflowBasedEvent (Element)
-* Introduced; 
-
-
-### UserTask (Element)
-* Removed experimental
-
-#### Property 'onCreatedEvent'
-* Introduced; 
-
-### UserSource (Element)
-* Removed experimental
-
-
-### XPathBasedUserSource (Element)
-* Removed experimental
-
-
-### MicroflowBasedUserSource (Element)
-* Removed experimental
-
-#### Property 'parameterMappings'
-* Introduced; 
-
-### Outcome (Element)
-* Removed experimental
-
-
-### UserTaskOutcome (Element)
-* Removed experimental
-
-
-### ParallelSplitOutcome (Element)
-* Removed experimental
-
-
-### ConditionOutcome (Element)
-* Removed experimental
-
-
-### BooleanConditionOutcome (Element)
-* Removed experimental
-
-
-### EnumerationValueConditionOutcome (Element)
-* Removed experimental
-
-
-### VoidConditionOutcome (Element)
-* Removed experimental
-
+* We removed these experimental elements.

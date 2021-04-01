@@ -3,24 +3,74 @@ title: "9.0"
 parent: "metamodel-9"
 ---
 
-## 9.0.4
+## 9.0.5
 
-**Release date: February 16th, 2021**
+**Release date: March 26th, 2021**
+
+### Constants
+
+#### Constant (ModelUnit)
+
+* We added the public `type` property. 
 
 ### Microflows
 
-#### LoopedActivity (Element) {#loopedactivity}
+#### JavaActionCallAction (Element)
 
-We are extending our `LoopedActivity` to support [While loops](/refguide/loop#while) in addition to [For each loops](/refguide/loop#for-each). To represent this in the metamodel, we removed the `iteratedListVariableName` and `loopVariableName` properties and added a new property `loopSource` of type `LoopSource` (abstract element).
+* We introduced the `queue` property.
 
-There are currently two types of loop sources available:
+#### WorkflowCallAction, SetTaskOutcomeAction, OpenUserTaskAction & OpenWorkflowAction  (Elements)
 
-* `IterableList` – represents the existing behavior where the loop is executed once for each element of the specified list
- * `IterableList.listVariableName` – corresponds to the old property `iteratedListVariableName`
- * `IterableList.variableName` – corresponds to the old property `loopVariableName`
-* `WhileLoopCondition` – represents the new behavior where the loop is executed while an expression evaluates to `true`
- * `WhileLoopCondition.whileExpression` – the expression evaluated at the start of each iteration
+* We removed the experimental status of these elements.
 
-#### LoopSource, IterableList & WhileLoopCondition (Elements)
+### Settings
 
-* We introduced these elements. For details, see the [LoopedActivity](#loopedactivity) section above.
+#### ModelerSettings (Element)
+
+* We added the `actionActivityDefaultColors` property.
+
+#### WorkflowsProjectSettingsPart (Element)
+
+* We removed the experimental status of this element.
+* We introduced the `workflowEngineParallelism` and `defaultTaskParallelism` properties.
+* We deleted the `enabled` property.
+
+### Pages
+
+#### OpenWorkflowClientAction (Element)
+
+* We removed the experimental status of this element.
+* We introduced the `defaultPage` property.
+
+#### CallWorkflowClientAction, OpenUserTaskClientAction & SetTaskOutcomeClientAction (Elements)
+
+* We removed the experimental status of these elements.
+
+### Workflows
+
+#### Workflow (ModelUnit)
+
+* We removed the experimental status of this model unit.
+
+#### JumpToActivity, UserTaskEvent, NoEvent, MicroflowBasedEvent (Elements)
+
+* We introduced these elements.
+
+#### WorkflowActivity (Element)
+
+* We removed the experimental status of this element.
+* We introduced the `name` property.
+
+#### UserTask (Element)
+
+* We removed the experimental status of this element.
+* We introduced the `onCreatedEvent` property.
+
+#### MicroflowBasedUserSource (Element)
+
+* We removed the experimental status of this element.
+* We introduced the `parameterMappings` property.
+
+#### Flow, CallWorkflowActivity, ConditionOutcomeActivity, EndWorkflowActivity, ExclusiveSplitActivity, ParallelSplitActivity, CallMicroflowTask, MicroflowCallParameterMapping, UserSource, XPathBasedUserSource, Outcome, UserTaskOutcome, ParallelSplitOutcome, ConditionOutcome, BooleanConditionOutcome, EnumerationValueConditionOutcome & VoidConditionOutcome (Elements)
+
+* We removed the experimental status of these elements.

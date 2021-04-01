@@ -72,9 +72,9 @@ parent: "metamodel-9"
 
 ## 9.0.4
 
-## Microflows
+### Microflows
 
-### LoopSource, IterableList & WhileLoopCondition (Elements)
+#### LoopSource, IterableList & WhileLoopCondition (Elements)
 
 * We introduced these elements.
 

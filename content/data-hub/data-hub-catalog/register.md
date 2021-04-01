@@ -113,6 +113,7 @@ This section describes how to register entities from your Mendix app in the Data
 
 6. If you add an entity that is associated with another entity that is exposed in the same OData service, the association between the two entities will be included under **Attributes and associations**.
    
+
 {{% alert type="info" %}}When a specialized entity is published, in the published OData Service contract this will be a discrete entity that has all the attributes and associations of the generalization. Care has to be taken if the generalized entity (and its association) is also exposed in the same service. In this case, the association in the specialized entity that is (inherited from the generalization) should not be published as this will result in errors. The same association cannot be exposed for two different entities in the same service. In this case, it is recommended that the inherited association is not checked in the specialized entity.  {{% /alert %}}
 	
 9. Add a **Summary** and **Description** of the service In the **Properties** pane: 
@@ -222,15 +223,15 @@ To update a published OData service, follow these steps:
 
 ## 6 Registering Data Sources from Enterprise Applications {#registration-form}
 
-You can register data sources from other business application, such as SAP and Mindsphere, in Data Hub. The available datasets must be exposed in an OData service in the business application and manually registered from the Data Hub **Home** using the connector of your business application. 
+You can register data sources from other business applications, such as SAP and Mindsphere, to Data Hub. The available datasets must be exposed in an OData service in the business application and manually registered from the Data Hub **Home** using the connector of your business application. 
 
 This section will take you through the steps to upload the metadata contract and specify all the information that is necessary for a successful registration. 
 
-If the connector for your business application is not shown, you can use the  option to register a **generic OData v4 service**:
+If the connector for your business application is not shown, you can use the option to register a **generic OData v4 service**:
 
 ![upload contract](attachments/register/register-data-source-odata-connector.png)
 
-{{% alert type="info" %}} Each new version of previously registered data sources (services) deployed to a different endpoint have to be individually registered. {{% /alert %}}
+{{% alert type="info" %}} Every time a new version of a previously registered data source (services) is deployed to a different endpoint this will have to be individually registered. {{% /alert %}}
 
 {{% alert type="info" %}} This process is for indivually registering data sources. You can also set up a deployment pipeline to register your data sources using the  [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis). {{% /alert %}}
 
@@ -254,7 +255,7 @@ On the [Data Hub Home](/data-hub/data-hub-catalog/#data-hub-home) screen, click 
 
 ![upload contract](attachments/register/register-data-source-home.png)
 
-If the source application is not displayed, you can register your OData v4 service by clicking **OData**.
+If the source application is not displayed, you can register your OData v4 service by clicking the generic **OData** connector.
 
 {{% alert type="info" %}}Datasets from all business applications except for Mendix apps must be published as OData v4 services. When registering Mendix apps using the **Mendix**  connector only OData v3 services are accepted. {{% /alert %}}
 
@@ -314,6 +315,8 @@ Specify the details of the source application of the data source (from which the
 
 If the application is already registered in the Catalog – for example, as the source application for previously registered services – you can **Select an existing application**. If the application is not registered in the catalog click **Register a new application**.
 
+{{% alert type="info" %}}If no applications are registered in the Catalog originating from the selected business application, you will only see **Register a new application**.{{% /alert %}}
+
 ##### 6.2.4.1 Select an Existing Application
 
 Click **Select application** and select from a list of all the currently registered apps originating from the *same business application*. For each app the **Technical Owner** will be shown in parentheses. In the example shown below when registering a SAP data source, the list of registered SAP applications currently registered is displayed:
@@ -324,7 +327,7 @@ The **Technical Owner** of the app you have selected is displayed.
 
 ##### 6.2.4.2 Register a New Application
 
-If the application for your data source is not registered in the catalog, click **Register a new application** and specify the following information:
+If the application for your data source is not registered in the catalog or if there are no applications registered in the Catalog that originate from the business application, click **Register a new application** and specify the following information:
 
 {{% image_container width="400" %}}![manual register application](attachments/register/register-data-source-new-app.png){{% /image_container %}}
 
@@ -344,9 +347,11 @@ If the application for your data source is not registered in the catalog, click 
 
 #### 6.2.5 Environment {#environment}
 
-Specify the environment that the application is deployed to. This information also indicates the quality of the data. 
+Specify the environment that the application is deployed to. The environment that the app is deployed also indicates the quality of the data of the data source. 
 
 If the application is already registered in the Catalog – for example, when you are registering a new service for the app deployed to this environment, or when you are registering a new version of an existing service deployed to this environment – you can **Select an existing environment**. To specify a different environment you can **Register a new environment**. 
+
+{{% alert type="info" %}}If there are no environments registered in the Catalog for the selected business application, you will only see **Register a new environment**.{{% /alert %}}
 
 ##### 6.2.5.1 Use Existing Environment
 
@@ -354,7 +359,7 @@ Click **Select environment** and select the environment from the drop-down list.
 
 ##### 6.2.5.2 Register a New Environment
 
-If the environment is not registered in the Catalog click **Register a new environment** and provide the following information: 
+If the environment is not registered in the Catalog for the business application, click **Register a new environment** and provide the following information: 
 
 {{% image_container width="400" %}}![register new environment](attachments/register/register-data-source-new-env.png){{% /image_container %}}
 

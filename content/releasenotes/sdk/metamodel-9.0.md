@@ -19,7 +19,7 @@ parent: "metamodel-9"
 
 * We intoduced the `queue` property.
 
-#### WorkflowCallAction, SetTaskOutcomeAction, OpenUserTaskAction & OpenWorkflowAction (Element)
+#### WorkflowCallAction, SetTaskOutcomeAction, OpenUserTaskAction & OpenWorkflowAction (Elements)
 
 * We removed the experimental status of these elements.
 
@@ -37,14 +37,14 @@ parent: "metamodel-9"
 
 ### Pages
 
-#### CallWorkflowClientAction, OpenUserTaskClientAction & SetTaskOutcomeClientAction (Element)
-
-* We removed the experimental status of these elements.
-
 #### OpenWorkflowClientAction (Element)
 
 * We removed the experimental status of this element.
 * We introduced the `defaultPage` property.
+
+#### CallWorkflowClientAction, OpenUserTaskClientAction & SetTaskOutcomeClientAction (Element)
+
+* We removed the experimental status of these elements.
 
 ### Workflows
 
@@ -52,13 +52,9 @@ parent: "metamodel-9"
 
 * We removed the experimental status of this model unit.
 
-#### JumpToActivity, UserTaskEvent, NoEvent, MicroflowBasedEvent (Element)
+#### JumpToActivity, UserTaskEvent, NoEvent & MicroflowBasedEvent (Element)
 
 * We introduced these elements.
-
-#### Flow, CallWorkflowActivity, ConditionOutcomeActivity, EndWorkflowActivity, ExclusiveSplitActivity, ParallelSplitActivity, CallMicroflowTask, MicroflowCallParameterMapping, UserSource, XPathBasedUserSource, Outcome, UserTaskOutcome, ParallelSplitOutcome, ConditionOutcome, BooleanConditionOutcome, EnumerationValueConditionOutcome, VoidConditionOutcome (Element)
-
-* We removed the experimental status of these elements.
 
 #### WorkflowActivity (Element)
 
@@ -70,15 +66,15 @@ parent: "metamodel-9"
 * We removed the experimental status of this element.
 * We introduced the `onCreatedEvent` property.
 
-#### MicroflowBasedUserSource (Element)
+#### Flow, CallWorkflowActivity, ConditionOutcomeActivity, EndWorkflowActivity, ExclusiveSplitActivity, ParallelSplitActivity, CallMicroflowTask, MicroflowCallParameterMapping, UserSource, XPathBasedUserSource, Outcome, UserTaskOutcome, ParallelSplitOutcome, ConditionOutcome, BooleanConditionOutcome, EnumerationValueConditionOutcome, VoidConditionOutcome & MicroflowBasedUserSource (Elemenst)
 
-* We removed the experimental status of this element.
+* We removed the experimental status of these elements.
 
 ## 9.0.4
 
 ## Microflows
 
-### LoopSource, IterableList, WhileLoopCondition (Elements)
+### LoopSource, IterableList & WhileLoopCondition (Elements)
 
 * We introduced these elements.
 
@@ -133,13 +129,13 @@ parent: "metamodel-9"
 
 * We introduced the `workflowActionInfo` property.
 
-#### AppServiceCallAction, AppServiceCallParameterMapping (Elements)
-
-* We deleted these elements.
-
-#### WorkflowCallAction, SetTaskOutcomeAction, OpenUserTaskAction, OpenWorkflowAction (Element)
+#### WorkflowCallAction, SetTaskOutcomeAction, OpenUserTaskAction & OpenWorkflowAction (Element)
 
 * We introduced these elements.
+
+#### AppServiceCallAction & AppServiceCallParameterMapping (Elements)
+
+* We deleted these elements.
 
 ### Settings
 
@@ -153,7 +149,7 @@ parent: "metamodel-9"
 
 ### AppServices
 
-#### AppServiceAction, AppServiceActionParameter, Msd, MsdAssociation, MsdAttribute, MsdDomainModel, MsdEntity, MsdEnumeration, MsdEnumerationContainer, MsdEnumerationValue, MsdMetadata, MsdMicroflow, MsdMicroflowParameter, MsdText, MsdVersion (Elements)
+#### AppServiceAction, AppServiceActionParameter, Msd, MsdAssociation, MsdAttribute, MsdDomainModel, MsdEntity, MsdEnumeration, MsdEnumerationContainer, MsdEnumerationValue, MsdMetadata, MsdMicroflow, MsdMicroflowParameter, MsdText & MsdVersion (Elements)
 
 * We deleted these elements.
 

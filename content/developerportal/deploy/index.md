@@ -79,7 +79,45 @@ Deploying to Azure is possible from the [Azure Marketplace](https://azuremarketp
 
 To learn how to deploy your Mendix application on premises, see [How to Deploy Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows) and [Unix Deployment](unix-like).
 
-## 12 Main Documents in This Category
+## 12 Operations Pages
+
+The four operations pages are described below.
+
+### 12.1 Metrics
+
+On this page you can monitor the performance and health of your app in all environments where it is deployed.
+
+For details of the information available for licensed apps running in the Mendix cloud, see [Metrics](metrics).
+
+If your app is deployed to SAP Business Technology Platform (SAP BTP) or IBM Cloud, this page will give you the option to go to the platform where your app is deployed. Here you will be able to find similar information about the performance and health of your app.
+
+You can also use a third-party service, such as Datadog, to assist you in monitoring your app. For more information, see [Datadog for v4 Mendix Cloud](datadog-metrics).
+
+### 12.2 Alerts
+
+On this page you can see the health of your app in all environments where it is deployed. You can also manage which environments will send you alerts.
+
+For details of the information available for licensed apps running in the Mendix cloud, see [Alerts](monitoring-application-health).
+
+If your app is deployed to SAP BTP or IBM Cloud, this page will give you the option to go to the platform where your app is deployed. Here you will be able to find similar information about the health of your app.
+
+### 12.3 Logs
+
+On this page you can see and manage your app logs in all environments where the app is deployed.
+
+For details of the logs for licensed apps running in the Mendix Cloud, see [Logs](logs).
+
+If your app is deployed to SAP BTP or IBM Cloud, this page will give you the option to go to the platform where your app is deployed. Here you will be able to find your app's logs.
+
+### 12.4 Backups
+
+On this page you can see and manage your backups in all environments where your app is deployed.
+
+For details of managing your backups in the Mendix Cloud, see [Backups](backups).
+
+If your app is deployed to SAP BTP or IBM Cloud, this page will give you the option to go to the platform where your app is deployed. Here you will be able to manage your app's backups.
+
+## 13 Main Documents in This Category
 
 * [General](general) – information which applies to deployments in many different environments
 * [Mendix Cloud](mendix-cloud-deploy) – how to deploy to, and configure, the Mendix Cloud
@@ -92,3 +130,7 @@ To learn how to deploy your Mendix application on premises, see [How to Deploy M
 * [On-Premises](on-premises-design) – how to deploy on premises using Microsoft Windows or Un*x
 * [Mobile App](mobileapp) – how to publish your mobile app
 * [App Services](app-services) – how to publish to the Mendix Marketplace
+* [Metrics](metrics)
+* [Alerts](monitoring-application-health)
+* [Logs](logs)
+* [Backups](backups)

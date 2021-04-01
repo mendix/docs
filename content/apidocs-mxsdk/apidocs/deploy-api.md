@@ -855,8 +855,6 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 Scale memory and instances of an environment. Only those environments that run a package that has Mendix Runtime version 7 or above will make it possible to spread the total memory over multiple instances.
 
-Environments with a deployed runtime package below version 7 can only be scaled horizontally: that is, with one fixed instance but an adjustable amount of memory.
-
 ```bash
 HTTP Method: POST
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/scale

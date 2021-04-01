@@ -177,9 +177,6 @@ studio:
     - "Theme Customizer"
     - "Settings"    
     - "Collaboration"
-  banner:
-    type: 'info'
-    text: 'You are browsing the documentation for Mendix 9, which is currently a <a href="/releasenotes/beta-features/index">beta release</a>. If you are looking for Mendix 8 documentation, see <a href="/studio8/index">Studio 8 Guide </a>.'
 studio8:
   space: "Studio 8 Guide"
   priority: false
@@ -220,9 +217,6 @@ studio-how-to:
     - "Secure Your App and Configure Access to Its Functionality"
     - "Microflows"
     - "Customize the Design of Your App"
-  banner:
-    type: 'info'
-    text: 'You are browsing the documentation for Mendix 9, which is currently a <a href="/releasenotes/beta-features/index">beta release</a>. If you are looking for Mendix 8 documentation, see <a href="/studio-how-to8/index">Studio 8 How-to&#39;s</a>.'
 studio-how-to8:
   space: "Studio 8 How-to's"
   priority: false

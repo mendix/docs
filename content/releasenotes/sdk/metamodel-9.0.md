@@ -11,7 +11,6 @@ parent: "metamodel-9"
 
 #### Constant (ModelUnit)
 
-
 ##### Property 'type'
 * Added public
 
@@ -19,33 +18,26 @@ parent: "metamodel-9"
 
 #### JavaActionCallAction (Element)
 
-
 ##### Property 'queue'
 * Introduced; 
 
 #### WorkflowCallAction (Element)
 * Removed experimental
 
-
 #### SetTaskOutcomeAction (Element)
 * Removed experimental
-
 
 #### OpenUserTaskAction (Element)
 * Removed experimental
 
-
 #### OpenWorkflowAction (Element)
 * Removed experimental
-
 
 ### Settings
 
 #### ModelerSettings (Element)
 
-
 ##### Property 'actionActivityDefaultColors'
-
 
 #### WorkflowsProjectSettingsPart (Element)
 * Removed experimental
@@ -64,10 +56,8 @@ parent: "metamodel-9"
 #### CallWorkflowClientAction (Element)
 * Removed experimental
 
-
 #### OpenUserTaskClientAction (Element)
 * Removed experimental
-
 
 #### OpenWorkflowClientAction (Element)
 * Removed experimental
@@ -78,16 +68,13 @@ parent: "metamodel-9"
 #### SetTaskOutcomeClientAction (Element)
 * Removed experimental
 
-
 ### Workflows
 
 #### Workflow (ModelUnit)
 * Removed experimental
 
-
 #### Flow (Element)
 * Removed experimental
-
 
 #### WorkflowActivity (Element)
 * Removed experimental
@@ -98,46 +85,35 @@ parent: "metamodel-9"
 #### CallWorkflowActivity (Element)
 * Removed experimental
 
-
 #### ConditionOutcomeActivity (Element)
 * Removed experimental
-
 
 #### EndWorkflowActivity (Element)
 * Removed experimental
 
-
 #### JumpToActivity (Element)
 * Introduced; 
-
 
 #### ExclusiveSplitActivity (Element)
 * Removed experimental
 
-
 #### ParallelSplitActivity (Element)
 * Removed experimental
-
 
 #### CallMicroflowTask (Element)
 * Removed experimental
 
-
 #### MicroflowCallParameterMapping (Element)
 * Removed experimental
-
 
 #### UserTaskEvent (Element)
 * Introduced; 
 
-
 #### NoEvent (Element)
 * Introduced; 
 
-
 #### MicroflowBasedEvent (Element)
 * Introduced; 
-
 
 #### UserTask (Element)
 * Removed experimental
@@ -148,10 +124,8 @@ parent: "metamodel-9"
 #### UserSource (Element)
 * Removed experimental
 
-
 #### XPathBasedUserSource (Element)
 * Removed experimental
-
 
 #### MicroflowBasedUserSource (Element)
 * Removed experimental
@@ -162,30 +136,23 @@ parent: "metamodel-9"
 #### Outcome (Element)
 * Removed experimental
 
-
 #### UserTaskOutcome (Element)
 * Removed experimental
-
 
 #### ParallelSplitOutcome (Element)
 * Removed experimental
 
-
 #### ConditionOutcome (Element)
 * Removed experimental
-
 
 #### BooleanConditionOutcome (Element)
 * Removed experimental
 
-
 #### EnumerationValueConditionOutcome (Element)
 * Removed experimental
 
-
 #### VoidConditionOutcome (Element)
 * Removed experimental
-
 
 ## 9.0.4
 
@@ -194,9 +161,7 @@ parent: "metamodel-9"
 ### LoopSource (Element)
 * Introduced; 
 
-
 #### LoopedActivity (Element)
-
 
 ##### Property 'iteratedListVariableName'
 * Deleted; 
@@ -210,7 +175,6 @@ parent: "metamodel-9"
 #### IterableList (Element)
 * Introduced; 
 
-
 #### WhileLoopCondition (Element)
 * Introduced; 
 
@@ -220,14 +184,12 @@ parent: "metamodel-9"
 
 #### JavaAction (ModelUnit)
 
-
 ##### Property 'useLegacyCodeGeneration'
 * Deleted; "The option to make Java action parameter names unique in generated code is no longer supported"
 
 ### DataSets
 
 #### JavaDataSetSource (Element)
-
 
 ##### Property 'useLegacyCodeGeneration'
 * Deleted; "The option to make Java action parameter names unique in generated code is no longer supported"
@@ -237,19 +199,15 @@ parent: "metamodel-9"
 #### ExpressionListOperation (Element)
 * Introduced; 
 
-
 #### FilterByExpression (Element)
 * Introduced; 
-
 
 #### FindByExpression (Element)
 * Introduced; 
 
-
 ### Navigation
 
 #### NavigationProfile (Element)
-
 
 ##### Property 'progressiveWebAppSettings'
 * Introduced; 
@@ -257,7 +215,6 @@ parent: "metamodel-9"
 ### Workflows
 
 #### UserTask (Element)
-
 
 ##### Property 'allowedModuleRoles'
 * Introduced; 
@@ -272,11 +229,9 @@ parent: "metamodel-9"
 #### CachedMappedValue (Element)
 * Introduced; 
 
-
 ### Microflows
 
 #### Microflow (ModelUnit)
-
 
 ##### Property 'workflowActionInfo'
 * Introduced; 
@@ -284,31 +239,24 @@ parent: "metamodel-9"
 #### AppServiceCallAction (Element)
 * Deleted; 
 
-
 #### AppServiceCallParameterMapping (Element)
 * Deleted; 
-
 
 #### WorkflowCallAction (Element)
 * Introduced; 
 
-
 #### SetTaskOutcomeAction (Element)
 * Introduced; 
-
 
 #### OpenUserTaskAction (Element)
 * Introduced; 
 
-
 #### OpenWorkflowAction (Element)
 * Introduced; 
-
 
 ### Settings
 
 #### RuntimeSettings (Element)
-
 
 ##### Property 'enforceDataStorageUniqueness'
 * Deleted; 
@@ -318,83 +266,64 @@ parent: "metamodel-9"
 #### AppServiceAction (Element)
 * Deleted; 
 
-
 #### AppServiceActionParameter (Element)
 * Deleted; 
-
 
 #### ConsumedAppService (ModelUnit)
 * Deleted; 
 
-
 #### Msd (Element)
 * Deleted; 
-
 
 #### MsdAssociation (Element)
 * Deleted; 
 
-
 #### MsdAttribute (Element)
 * Deleted; 
-
 
 #### MsdDomainModel (Element)
 * Deleted; 
 
-
 #### MsdEntity (Element)
 * Deleted; 
-
 
 #### MsdEnumeration (Element)
 * Deleted; 
 
-
 #### MsdEnumerationContainer (Element)
 * Deleted; 
-
 
 #### MsdEnumerationValue (Element)
 * Deleted; 
 
-
 #### MsdMetadata (Element)
 * Deleted; 
-
 
 #### MsdMicroflow (Element)
 * Deleted; 
 
-
 #### MsdMicroflowParameter (Element)
 * Deleted; 
-
 
 #### MsdText (Element)
 * Deleted; 
 
-
 #### MsdVersion (Element)
 * Deleted; 
-
 
 ### WebServices
 
 #### DataAssociation (Element)
-
 
 ##### Property 'associationByContract'
 * Deleted; 
 
 #### DataAttribute (Element)
 
-
 ##### Property 'attributeByContract'
 * Deleted; 
 
 #### DataMember (Element)
-
 
 ##### Property 'isLockedByContract'
 * Deleted; 
@@ -408,9 +337,7 @@ parent: "metamodel-9"
 #### PublishedAppService (ModelUnit)
 * Deleted; 
 
-
 #### PublishedOperation (Element)
-
 
 ##### Property 'isLockedByContract'
 * Deleted; 
@@ -426,7 +353,6 @@ parent: "metamodel-9"
 
 #### PublishedParameter (Element)
 
-
 ##### Property 'isLockedByContract'
 * Deleted; 
 
@@ -440,7 +366,6 @@ parent: "metamodel-9"
 * Deleted; 
 
 #### VersionedService (Element)
-
 
 ##### Property 'isLockedByContract'
 * Deleted; 
@@ -458,7 +383,6 @@ parent: "metamodel-9"
 
 #### TemplateFormBase (ModelUnit)
 
-
 ##### Property 'templateCategory'
 * Introduced; 
 
@@ -468,112 +392,85 @@ parent: "metamodel-9"
 #### WorkflowTemplateType (Element)
 * Introduced; 
 
-
 #### UserTaskTemplateType (Element)
 * Introduced; 
-
 
 #### WorkflowOverviewTemplateType (Element)
 * Introduced; 
 
-
 #### CallWorkflowClientAction (Element)
 * Introduced; 
-
 
 #### OpenUserTaskClientAction (Element)
 * Introduced; 
 
-
 #### OpenWorkflowClientAction (Element)
 * Introduced; 
 
-
 #### SetTaskOutcomeClientAction (Element)
 * Introduced; 
-
 
 ### Workflows
 
 #### Workflow (ModelUnit)
 * Introduced; 
 
-
 #### Flow (Element)
 * Introduced; 
-
 
 #### WorkflowActivity (Element)
 * Introduced; 
 
-
 #### CallWorkflowActivity (Element)
 * Introduced; 
-
 
 #### ConditionOutcomeActivity (Element)
 * Introduced; 
 
-
 #### EndWorkflowActivity (Element)
 * Introduced; 
-
 
 #### ExclusiveSplitActivity (Element)
 * Introduced; 
 
-
 #### ParallelSplitActivity (Element)
 * Introduced; 
-
 
 #### CallMicroflowTask (Element)
 * Introduced; 
 
-
 #### MicroflowCallParameterMapping (Element)
 * Introduced; 
-
 
 #### UserTask (Element)
 * Introduced; 
 
-
 #### UserSource (Element)
 * Introduced; 
-
 
 #### XPathBasedUserSource (Element)
 * Introduced; 
 
-
 #### MicroflowBasedUserSource (Element)
 * Introduced; 
-
 
 #### Outcome (Element)
 * Introduced; 
 
-
 #### UserTaskOutcome (Element)
 * Introduced; 
-
 
 #### ParallelSplitOutcome (Element)
 * Introduced; 
 
-
 #### ConditionOutcome (Element)
 * Introduced; 
-
 
 #### BooleanConditionOutcome (Element)
 * Introduced; 
 
-
 #### EnumerationValueConditionOutcome (Element)
 * Introduced; 
-
 
 #### VoidConditionOutcome (Element)
 * Introduced; 
@@ -584,16 +481,13 @@ parent: "metamodel-9"
 
 #### Entity (Element)
 
-
 ##### Property 'capabilities'
 * Deleted; 
 
 #### EntityCapabilities (Element)
 * Deleted; 
 
-
 #### Attribute (Element)
-
 
 ##### Property 'capabilities'
 * Deleted; 
@@ -601,9 +495,7 @@ parent: "metamodel-9"
 #### AttributeCapabilities (Element)
 * Deleted; 
 
-
 #### AssociationBase (Element)
-
 
 ##### Property 'capabilities'
 * Deleted; 
@@ -611,11 +503,9 @@ parent: "metamodel-9"
 #### AssociationCapabilities (Element)
 * Deleted; 
 
-
 ### Settings
 
 #### WebUIProjectSettingsPart (Element)
-
 
 ##### Property 'themeConversionStatus'
 * Deleted; 
@@ -624,12 +514,10 @@ parent: "metamodel-9"
 
 #### ActionButton (Element)
 
-
 ##### Property 'ariaRole'
 * Introduced; 
 
 #### ClientTemplateParameter (Element)
-
 
 ##### Property 'expression'
 * Introduced; 
@@ -638,7 +526,6 @@ parent: "metamodel-9"
 
 #### ReportChart (Element)
 * Deleted; 
-
 
 #### ReportChartSeries (Element)
 * Deleted; 

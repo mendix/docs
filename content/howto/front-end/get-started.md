@@ -27,17 +27,15 @@ Atlas UI has a philosophy based on the core principles described below. These pr
 
 Our UI library is fully integrated into Mendix Studio. After choosing a navigation layout in Mendix Studio, you can find page templates, building blocks, and widgets directly in your Toolbox. These UI elements form the foundation of your app.
 
-![Atlas UI design elements](attachments/howto/designelements.png)
+**Navigation Layouts** — When building a Mendix app, the first thing you do is choose a navigation layout. These layouts are the frame within which your dynamic pages are housed, and they provide consistent structure throughout your app.
 
-1. **Navigation Layouts** — When building a Mendix app, the first thing you do is choose a navigation layout. These layouts are the frame within which your dynamic pages are housed, and they provide consistent structure throughout your app.
+**Page Templates** — Page templates are predesigned collections of building blocks that can be used as-is, or you can enhance them with custom building blocks and widgets.
 
-2. **Page Templates** — Page templates are predesigned collections of building blocks that can be used as-is, or you can enhance them with custom building blocks and widgets.
+**Building Blocks** — Building blocks are single-purpose user interface elements and are comprised of multiple widgets. Multiple building blocks are usually used together on one page.
 
-3. **Building Blocks** — Building blocks are single-purpose user interface elements and are comprised of multiple widgets. Multiple building blocks are usually used together on one page.
+**Widgets** — Widgets are small user interface elements (alerts, buttons, charts, etc.) used to enhance existing building blocks.
 
-4. **Widgets** — Widgets are small user interface elements (alerts, buttons, charts, etc.) used to enhance existing building blocks.
-
-5. **Design Properties** — You can further customize widgets by changing their design properties. Colors, text, and many other variables can be altered to make the widget what you need it to be.
+**Design Properties** — You can further customize widgets by changing their design properties. Colors, text, and many other variables can be altered to make the widget what you need it to be.
 
 ## 4 Default Look and Feel
 

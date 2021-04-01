@@ -174,7 +174,7 @@ An alternative to uploading an icon is to use an existing icon by clicking **sel
 
 You can curate data sources to add a Catalog description and add tags.
 
-#### 5.1 Add or Edit Catalog Description
+### 5.1 Add or Edit Catalog Description
 
 If a description was included in the OData metadata contract, this will be displayed in the asset details screen for the selected data source. You can curate a data source to add a catalog description that could include further details on, for example, the data usage and relevancy. 
 

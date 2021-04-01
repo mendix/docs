@@ -1,6 +1,0 @@
-Value1,Value2
-Smith,345
-Jones,346
-Johnson,463
-Stevens,646
-Brown,999

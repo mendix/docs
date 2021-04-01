@@ -5,7 +5,7 @@ parent: "metamodel-9"
 
 ## 9.0.5
 
-**Release date: March 31st, 2021**
+**Release date: March 26th, 2021**
 
 ### Constants
 

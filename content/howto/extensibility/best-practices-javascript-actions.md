@@ -330,7 +330,7 @@ Explaining the callback code:
 
 #### 2.3.2 Understanding Promise API
 
-This function uses the browser promise API:
+This function uses the Fetch API:
 
 ```javascript
 async function GetUserNameSampleRest(userID) {
@@ -349,12 +349,11 @@ async function GetUserNameSampleRest(userID) {
     // END USER CODE
 }
 ```
-TODO
-Explaining the Promise API code:
+Explaining the Fetch API code:
 
 * The URL refers to a sample API that returns a JSON object `{ id: string, name: string }`, and `fetch` is a browser API for retrieving data which returns a promise (see the [MDI Fetch API documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) — the response is a promise that is converted into data with the `.json()` function (the name is accessed and returned)
 
-* As this is a part of a promise already, it does not need to call a `resolve` function or return a promise itself — this makes error handling on promises easier, as a single error function can be used to catch errors at all three steps: fetch, parse JSON, and accessing the data (for a more detailed explanation, see the [MDN promise documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise))
+* As this is an async function, error handling at all three steps: fetch, parse JSON, and accessing the data can be done inside a single `try...catch` block (for a more detailed explanation, see the [MDN documentation for error handling with async/await](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await#adding_error_handling)).
 
 * For more information on building a JavaScript action rest consume function, see [Build JavaScript Actions: Part 2 (Advanced)](write-javascript-github).
 
@@ -489,4 +488,4 @@ Not all capabilities are recommended for use. Consider the side effects that an 
 * JavaScript basics:
 	* [Mozilla JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
 	* [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-    * [Async functions](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)
+	* [Async functions](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)

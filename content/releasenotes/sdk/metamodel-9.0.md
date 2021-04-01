@@ -11,172 +11,81 @@ parent: "metamodel-9"
 
 #### Constant (ModelUnit)
 
-##### Property 'type'
-* Added public
+* We added the public `type` property.
 
 ### Microflows
 
 #### JavaActionCallAction (Element)
 
-##### Property 'queue'
-* Introduced; 
+* We intoduced the `queue` property.
 
-#### WorkflowCallAction (Element)
-* Removed experimental
+#### WorkflowCallAction, SetTaskOutcomeAction, OpenUserTaskAction & OpenWorkflowAction (Element)
 
-#### SetTaskOutcomeAction (Element)
-* Removed experimental
-
-#### OpenUserTaskAction (Element)
-* Removed experimental
-
-#### OpenWorkflowAction (Element)
-* Removed experimental
+* We removed the experimental status of these elements.
 
 ### Settings
 
 #### ModelerSettings (Element)
 
-##### Property 'actionActivityDefaultColors'
+* We introduced the `actionActivityDefaultColors` property.
 
 #### WorkflowsProjectSettingsPart (Element)
-* Removed experimental
 
-##### Property 'enabled'
-* Deleted; 
-
-##### Property 'workflowEngineParallelism'
-* Introduced; 
-
-##### Property 'defaultTaskParallelism'
-* Introduced; 
+* We removed the experimental status of this element.
+* We introduced the `workflowEngineParallelism` and `defaultTaskParallelism` properties.
+* We deleted the `enabled` property.
 
 ### Pages
 
-#### CallWorkflowClientAction (Element)
-* Removed experimental
+#### CallWorkflowClientAction, OpenUserTaskClientAction & SetTaskOutcomeClientAction (Element)
 
-#### OpenUserTaskClientAction (Element)
-* Removed experimental
+* We removed the experimental status of these elements.
 
 #### OpenWorkflowClientAction (Element)
-* Removed experimental
 
-##### Property 'defaultPage'
-* Introduced; 
-
-#### SetTaskOutcomeClientAction (Element)
-* Removed experimental
+* We removed the experimental status of this element.
+* We introduced the `defaultPage` property.
 
 ### Workflows
 
 #### Workflow (ModelUnit)
-* Removed experimental
 
-#### Flow (Element)
-* Removed experimental
+* We removed the experimental status of this model unit.
+
+#### JumpToActivity, UserTaskEvent, NoEvent, MicroflowBasedEvent (Element)
+
+* We introduced these elements.
+
+#### Flow, CallWorkflowActivity, ConditionOutcomeActivity, EndWorkflowActivity, ExclusiveSplitActivity, ParallelSplitActivity, CallMicroflowTask, MicroflowCallParameterMapping, UserSource, XPathBasedUserSource, Outcome, UserTaskOutcome, ParallelSplitOutcome, ConditionOutcome, BooleanConditionOutcome, EnumerationValueConditionOutcome, VoidConditionOutcome (Element)
+
+* We removed the experimental status of these elements.
 
 #### WorkflowActivity (Element)
-* Removed experimental
 
-##### Property 'name'
-* Introduced; 
-
-#### CallWorkflowActivity (Element)
-* Removed experimental
-
-#### ConditionOutcomeActivity (Element)
-* Removed experimental
-
-#### EndWorkflowActivity (Element)
-* Removed experimental
-
-#### JumpToActivity (Element)
-* Introduced; 
-
-#### ExclusiveSplitActivity (Element)
-* Removed experimental
-
-#### ParallelSplitActivity (Element)
-* Removed experimental
-
-#### CallMicroflowTask (Element)
-* Removed experimental
-
-#### MicroflowCallParameterMapping (Element)
-* Removed experimental
-
-#### UserTaskEvent (Element)
-* Introduced; 
-
-#### NoEvent (Element)
-* Introduced; 
-
-#### MicroflowBasedEvent (Element)
-* Introduced; 
+* We removed the experimental status of this element.
+* We introduced the `name` property.
 
 #### UserTask (Element)
-* Removed experimental
 
-##### Property 'onCreatedEvent'
-* Introduced; 
-
-#### UserSource (Element)
-* Removed experimental
-
-#### XPathBasedUserSource (Element)
-* Removed experimental
+* We removed the experimental status of this element.
+* We introduced the `onCreatedEvent` property.
 
 #### MicroflowBasedUserSource (Element)
-* Removed experimental
 
-##### Property 'parameterMappings'
-* Introduced; 
-
-#### Outcome (Element)
-* Removed experimental
-
-#### UserTaskOutcome (Element)
-* Removed experimental
-
-#### ParallelSplitOutcome (Element)
-* Removed experimental
-
-#### ConditionOutcome (Element)
-* Removed experimental
-
-#### BooleanConditionOutcome (Element)
-* Removed experimental
-
-#### EnumerationValueConditionOutcome (Element)
-* Removed experimental
-
-#### VoidConditionOutcome (Element)
-* Removed experimental
+* We removed the experimental status of this element.
 
 ## 9.0.4
 
 ## Microflows
 
-### LoopSource (Element)
-* Introduced; 
+### LoopSource, IterableList, WhileLoopCondition (Elements)
+
+* We introduced these elements.
 
 #### LoopedActivity (Element)
 
-##### Property 'iteratedListVariableName'
-* Deleted; 
-
-##### Property 'loopVariableName'
-* Deleted; 
-
-##### Property 'loopSource'
-* Introduced; 
-
-#### IterableList (Element)
-* Introduced; 
-
-#### WhileLoopCondition (Element)
-* Introduced; 
+* We introduced the `loopSource` property.
+* We deleted the `iteratedListVariableName` and `loopVariableName` properties.
 
 ## 9.0.3
 
@@ -184,348 +93,150 @@ parent: "metamodel-9"
 
 #### JavaAction (ModelUnit)
 
-##### Property 'useLegacyCodeGeneration'
-* Deleted; "The option to make Java action parameter names unique in generated code is no longer supported"
+* We deleted the `useLegacyCodeGeneration` property. The option to make Java action parameter names unique in generated code is no longer supported.
 
 ### DataSets
 
 #### JavaDataSetSource (Element)
 
-##### Property 'useLegacyCodeGeneration'
-* Deleted; "The option to make Java action parameter names unique in generated code is no longer supported"
+* We deleted the `useLegacyCodeGeneration` property. The option to make Java action parameter names unique in generated code is no longer supported.
 
 ### Microflows
 
-#### ExpressionListOperation (Element)
-* Introduced; 
+#### ExpressionListOperation, FilterByExpression & FindByExpression (Elements)
 
-#### FilterByExpression (Element)
-* Introduced; 
-
-#### FindByExpression (Element)
-* Introduced; 
+* We introduced these elements. 
 
 ### Navigation
 
 #### NavigationProfile (Element)
 
-##### Property 'progressiveWebAppSettings'
-* Introduced; 
+* We introduced the `progressiveWebAppSettings` property.
 
 ### Workflows
 
 #### UserTask (Element)
 
-##### Property 'allowedModuleRoles'
-* Introduced; 
-
-##### Property 'allowedUserRoles'
-* Introduced; 
+* We introduced the `allowedModuleRoles` and `allowedUserRoles` properties.
 
 ## 9.0.2
 
 ### DomainModels
 
 #### CachedMappedValue (Element)
-* Introduced; 
+
+* We introduced this element.
 
 ### Microflows
 
 #### Microflow (ModelUnit)
 
-##### Property 'workflowActionInfo'
-* Introduced; 
+* We introduced the `workflowActionInfo` property.
 
-#### AppServiceCallAction (Element)
-* Deleted; 
+#### AppServiceCallAction, AppServiceCallParameterMapping (Elements)
 
-#### AppServiceCallParameterMapping (Element)
-* Deleted; 
+* We deleted these elements.
 
-#### WorkflowCallAction (Element)
-* Introduced; 
+#### WorkflowCallAction, SetTaskOutcomeAction, OpenUserTaskAction, OpenWorkflowAction (Element)
 
-#### SetTaskOutcomeAction (Element)
-* Introduced; 
-
-#### OpenUserTaskAction (Element)
-* Introduced; 
-
-#### OpenWorkflowAction (Element)
-* Introduced; 
+* We introduced these elements.
 
 ### Settings
 
+#### ConsumedAppService (ModelUnit)
+
+* We deleted this model unit.
+
 #### RuntimeSettings (Element)
 
-##### Property 'enforceDataStorageUniqueness'
-* Deleted; 
+* We deleted the `enforceDataStorageUniqueness` property.
 
 ### AppServices
 
-#### AppServiceAction (Element)
-* Deleted; 
+#### AppServiceAction, AppServiceActionParameter, Msd, MsdAssociation, MsdAttribute, MsdDomainModel, MsdEntity, MsdEnumeration, MsdEnumerationContainer, MsdEnumerationValue, MsdMetadata, MsdMicroflow, MsdMicroflowParameter, MsdText, MsdVersion (Elements)
 
-#### AppServiceActionParameter (Element)
-* Deleted; 
-
-#### ConsumedAppService (ModelUnit)
-* Deleted; 
-
-#### Msd (Element)
-* Deleted; 
-
-#### MsdAssociation (Element)
-* Deleted; 
-
-#### MsdAttribute (Element)
-* Deleted; 
-
-#### MsdDomainModel (Element)
-* Deleted; 
-
-#### MsdEntity (Element)
-* Deleted; 
-
-#### MsdEnumeration (Element)
-* Deleted; 
-
-#### MsdEnumerationContainer (Element)
-* Deleted; 
-
-#### MsdEnumerationValue (Element)
-* Deleted; 
-
-#### MsdMetadata (Element)
-* Deleted; 
-
-#### MsdMicroflow (Element)
-* Deleted; 
-
-#### MsdMicroflowParameter (Element)
-* Deleted; 
-
-#### MsdText (Element)
-* Deleted; 
-
-#### MsdVersion (Element)
-* Deleted; 
+* We deleted these elements.
 
 ### WebServices
 
+#### PublishedAppService (ModelUnit)
+
+* We deleted this model unit.
+
 #### DataAssociation (Element)
 
-##### Property 'associationByContract'
-* Deleted; 
+* We deleted the `associationByContract` property.
 
 #### DataAttribute (Element)
 
-##### Property 'attributeByContract'
-* Deleted; 
+* We deleted the `attributeByContract` property.
 
 #### DataMember (Element)
 
-##### Property 'isLockedByContract'
-* Deleted; 
-
-##### Property 'isOptionalByContract'
-* Deleted; 
-
-##### Property 'isNillableByContract'
-* Deleted; 
-
-#### PublishedAppService (ModelUnit)
-* Deleted; 
+* We deleted the `isLockedByContract`, `isOptionalByContract`, and `isNillableByContract`  properties.
 
 #### PublishedOperation (Element)
 
-##### Property 'isLockedByContract'
-* Deleted; 
-
-##### Property 'returnTypeNameByContract'
-* Deleted; 
-
-##### Property 'returnTypeSpecificationByContract'
-* Deleted; 
-
-##### Property 'entityExposedNameByContract'
-* Deleted; 
+* We deleted the `isLockedByContract`, `returnTypeNameByContract`, `returnTypeSpecificationByContract`, and `entityExposedNameByContract`  properties.
 
 #### PublishedParameter (Element)
 
-##### Property 'isLockedByContract'
-* Deleted; 
-
-##### Property 'parameterByContract'
-* Deleted; 
-
-##### Property 'isOptionalByContract'
-* Deleted; 
-
-##### Property 'entityExposedItemNameByContract'
-* Deleted; 
+* We deleted the `isLockedByContract`, `parameterByContract`, `isOptionalByContract`, and `entityExposedItemNameByContract` properties.
 
 #### VersionedService (Element)
 
-##### Property 'isLockedByContract'
-* Deleted; 
-
-##### Property 'enumerationsByContract'
-* Deleted; 
-
-##### Property 'appServiceState'
-* Deleted; 
-
-##### Property 'msdFileBase64'
-* Deleted; 
+* We deleted the `isLockedByContract`, `enumerationsByContract`, `appServiceState`, and `msdFileBase64` properties.
 
 ### Pages
 
 #### TemplateFormBase (ModelUnit)
 
-##### Property 'templateCategory'
-* Introduced; 
+* We introduced the `templateCategory` and `templateCategoryWeight` properties. 
 
-##### Property 'templateCategoryWeight'
-* Introduced; 
+#### WorkflowTemplateType, UserTaskTemplateType, WorkflowOverviewTemplateType, CallWorkflowClientAction, OpenUserTaskClientAction, OpenWorkflowClientAction & SetTaskOutcomeClientAction (Elements)
 
-#### WorkflowTemplateType (Element)
-* Introduced; 
-
-#### UserTaskTemplateType (Element)
-* Introduced; 
-
-#### WorkflowOverviewTemplateType (Element)
-* Introduced; 
-
-#### CallWorkflowClientAction (Element)
-* Introduced; 
-
-#### OpenUserTaskClientAction (Element)
-* Introduced; 
-
-#### OpenWorkflowClientAction (Element)
-* Introduced; 
-
-#### SetTaskOutcomeClientAction (Element)
-* Introduced; 
+* We introduced these elements.
 
 ### Workflows
 
 #### Workflow (ModelUnit)
-* Introduced; 
 
-#### Flow (Element)
-* Introduced; 
+* We introduced this model unit.
 
-#### WorkflowActivity (Element)
-* Introduced; 
+#### Flow, WorkflowActivity, CallWorkflowActivity, ConditionOutcomeActivity, EndWorkflowActivity, ExclusiveSplitActivity, ParallelSplitActivity, CallMicroflowTask, MicroflowCallParameterMapping, UserTask, UserSource, XPathBasedUserSource, MicroflowBasedUserSource, Outcome, UserTaskOutcome, ParallelSplitOutcome, ConditionOutcome, BooleanConditionOutcome, EnumerationValueConditionOutcome & VoidConditionOutcome (Elements)
 
-#### CallWorkflowActivity (Element)
-* Introduced; 
+* We introduced these elements.
 
-#### ConditionOutcomeActivity (Element)
-* Introduced; 
-
-#### EndWorkflowActivity (Element)
-* Introduced; 
-
-#### ExclusiveSplitActivity (Element)
-* Introduced; 
-
-#### ParallelSplitActivity (Element)
-* Introduced; 
-
-#### CallMicroflowTask (Element)
-* Introduced; 
-
-#### MicroflowCallParameterMapping (Element)
-* Introduced; 
-
-#### UserTask (Element)
-* Introduced; 
-
-#### UserSource (Element)
-* Introduced; 
-
-#### XPathBasedUserSource (Element)
-* Introduced; 
-
-#### MicroflowBasedUserSource (Element)
-* Introduced; 
-
-#### Outcome (Element)
-* Introduced; 
-
-#### UserTaskOutcome (Element)
-* Introduced; 
-
-#### ParallelSplitOutcome (Element)
-* Introduced; 
-
-#### ConditionOutcome (Element)
-* Introduced; 
-
-#### BooleanConditionOutcome (Element)
-* Introduced; 
-
-#### EnumerationValueConditionOutcome (Element)
-* Introduced; 
-
-#### VoidConditionOutcome (Element)
-* Introduced; 
-
-## Metamodel Release Notes for version 9.0.1
+## 9.0.1
 
 ### DomainModels
 
-#### Entity (Element)
+#### EntityCapabilities, AttributeCapabilities & AssociationCapabilities (Elements)
 
-##### Property 'capabilities'
-* Deleted; 
+* We deleted these elements.
 
-#### EntityCapabilities (Element)
-* Deleted; 
+#### Entity, Attribute & AssociationBase (Elements)
 
-#### Attribute (Element)
-
-##### Property 'capabilities'
-* Deleted; 
-
-#### AttributeCapabilities (Element)
-* Deleted; 
-
-#### AssociationBase (Element)
-
-##### Property 'capabilities'
-* Deleted; 
-
-#### AssociationCapabilities (Element)
-* Deleted; 
+* We deleted the `capabilities` property.
 
 ### Settings
 
 #### WebUIProjectSettingsPart (Element)
 
-##### Property 'themeConversionStatus'
-* Deleted; 
+* We deleted the `themeConversionStatus` property.
 
 ### Pages
 
 #### ActionButton (Element)
 
-##### Property 'ariaRole'
-* Introduced; 
+* We introduced the `ariaRole` property.
 
 #### ClientTemplateParameter (Element)
 
-##### Property 'expression'
-* Introduced; 
+* We introduced the `expression` property.
 
 ### Reports
 
-#### ReportChart (Element)
-* Deleted; 
+#### ReportChart & ReportChartSeries (Elements)
 
-#### ReportChartSeries (Element)
-* Deleted; 
+* We deleted these elements.

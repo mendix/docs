@@ -31,6 +31,7 @@ Errors need to be solved before your app can be deployed. A consistency error ca
 * [Pages](consistency-errors-pages) 
 * [Navigation](consistency-errors-navigation) 
 * [Microflows](microflows)
+* [Workflows](workflows)
 * [Domain Model](domain-model)
 * [Integration](integration)
 * [Security](security)
@@ -42,4 +43,5 @@ Errors need to be solved before your app can be deployed. A consistency error ca
 * [Errors Pane](errors-pane)
 * [Pages](pages)
 * [Microflows](microflows) 
+* [Workflows](workflows)
 * [Navigation in Mendix](navigation)

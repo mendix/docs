@@ -13,17 +13,22 @@ The **Jump** activity allows you to jump to other activities in the workflow. Th
 
 ## 2 Properties
 
-The Jump activity properties consist of the **General** section.
+The Jump activity properties consist of the following sections:
 
-### 2.1 Name
+* [Common](#common)
+* [General](#general)
+
+### 2.1 Common Section {#common}
 
 **Name** is the internal name of the element. When referring to the element in the app project you will use this name. It must be unique within the workflow, but you can have two elements with the same name in different workflows. 
 
-### 2.2 Caption
+### 2.2 General Section {#general}
+
+#### 2.2.1 Caption
 
 The **Caption** describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand without needing to add annotations.
 
-### 2.3 Target
+#### 2.2.2 Target
 
 **Target** is the activity that the workflow process will jump to during execution. You can select the activity you would like to go to from the drop-down menu. 
 

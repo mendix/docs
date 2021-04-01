@@ -21,7 +21,7 @@ parent: "metamodel-9"
 
 #### WorkflowCallAction, SetTaskOutcomeAction, OpenUserTaskAction & OpenWorkflowAction  (Elements)
 
-* We removed these experimental elements.
+* We removed the experimental status of these elements.
 
 ### Settings
 
@@ -31,7 +31,7 @@ parent: "metamodel-9"
 
 #### WorkflowsProjectSettingsPart (Element)
 
-* We removed this experimental element.
+* We removed the experimental status of this element.
 * We introduced the `workflowEngineParallelism` and `defaultTaskParallelism` properties.
 * We deleted the `enabled` property.
 
@@ -39,38 +39,38 @@ parent: "metamodel-9"
 
 #### OpenWorkflowClientAction (Element)
 
-* We removed this experimental element.
+* We removed the experimental status of this element.
 * We introduced the `defaultPage` property.
 
 #### CallWorkflowClientAction, OpenUserTaskClientAction & SetTaskOutcomeClientAction (Elements)
 
-* We removed these experimental elements.
+* We removed the experimental status of these elements.
 
 ### Workflows
+
+#### Workflow (ModelUnit)
+
+* We removed the experimental status of this model unit.
 
 #### JumpToActivity, UserTaskEvent, NoEvent, MicroflowBasedEvent (Elements)
 
 * We introduced these elements.
 
-#### Workflow (ModelUnit)
-
-* We removed this experimental ModelUnit.
-
 #### WorkflowActivity (Element)
 
-* We removed this experimental element.
+* We removed the experimental status of this element.
 * We introduced the `name` property.
 
 #### UserTask (Element)
 
-* We removed this experimental element.
+* We removed the experimental status of this element.
 * We introduced the `onCreatedEvent` property.
 
 #### MicroflowBasedUserSource (Element)
 
-* We removed this experimental element.
+* We removed the experimental status of this element.
 * We introduced the `parameterMappings` property.
 
 #### Flow, CallWorkflowActivity, ConditionOutcomeActivity, EndWorkflowActivity, ExclusiveSplitActivity, ParallelSplitActivity, CallMicroflowTask, MicroflowCallParameterMapping, UserSource, XPathBasedUserSource, Outcome, UserTaskOutcome, ParallelSplitOutcome, ConditionOutcome, BooleanConditionOutcome, EnumerationValueConditionOutcome & VoidConditionOutcome (Elements)
 
-* We removed these experimental elements.
+* We removed the experimental status of these elements.

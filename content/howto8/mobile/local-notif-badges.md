@@ -108,4 +108,4 @@ Congratulations! You successfully implemented basic badge clearing. Next, in [Ho
 ## 5 Read More
 
 * [Implement Push Notifications](implementation-guide)
-* [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)
+* [Build JavaScript Actions](/howto8/extensibility/build-javascript-actions)

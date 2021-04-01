@@ -72,11 +72,11 @@ Open Studio Pro (version 7.22.2 or above) and follow these steps:
 
 	![](attachments/deploying-to-mindsphere/app-store-search.png)
 
-4. Click **Download** to create a new app project using this app.
+4. Click **Download** to create a new app using this app as the template.
 
 	![](attachments/deploying-to-mindsphere/app-store-download.png)
 
-5. To start the new app project, confirm where to store the app, the app name, and the project directory, then click **OK**.
+5. To start the new app, confirm where to store the app, the app name, and the project directory, then click **OK**.
 
 	![](attachments/deploying-to-mindsphere/app-store-download-project.png)
 
@@ -160,9 +160,9 @@ Add the *RegisterSingleSignOn* microflow as the **After startup** microflow or a
 If you are using the MindSphere Starter Application, this will already be set up as the *After startup* microflow.
 {{% /alert %}}
 
-If you are are modifying an existing app, you can do this on the *Runtime* tab of the *Project > Settings* dialog, accessed through the *Project Explorer*.
+If you are are modifying an existing app, you can do this on the *Runtime* tab of the **App** > **Settings* dialog box accessed through the **App Explorer**.
 
-![Project settings dialog](attachments/deploying-to-mindsphere/image4.png)
+![App settings dialog](attachments/deploying-to-mindsphere/image4.png)
 
 ### 4.2 Configuring the MindSphere OS Bar (MindSphereOSBarConfig)
 
@@ -193,7 +193,7 @@ A Mendix based application for MindSphere can be deployed to Mendix or to MindSp
 
 ### 5.1 Option A: Deploy with Mendix Studio to the Mendix Cloud
 
-Just click the Run Button in Mendix Studio Pro.
+Just click the Publish Button in Mendix Studio Pro.
 
 ![Deploy to Mendix](attachments/deploying-to-mindsphere/runMendixApp.png)
 
@@ -210,7 +210,7 @@ Before you continue, ensure you have fulfilled the prerequisites described in th
 To create a Mendix deployment package from your app, do the following:
 
 1.  Open your app in Studio Pro.
-2.  Select **Project** > **Create Deployment Package...**.
+2.  Select **App** > **Create Deployment Package**.
 
     {{% image_container width="355" %}}![](attachments/deploying-to-mindsphere/image13.png){{% /image_container %}}
 

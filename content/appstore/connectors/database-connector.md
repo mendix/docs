@@ -2,7 +2,7 @@
 title: "Database"
 category: "Connectors"
 description: "Describes the configuration and usage of the Database connector, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "database connector", "jdbc", "hikari", "query" ]
+tags: ["marketplace",  "marketplace component", "database connector", "jdbc", "hikari", "query" ]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -12,7 +12,7 @@ Use the [Database](https://appstore.home.mendix.com/link/app/2888/) connector to
 
 This document focuses on executing an SQL `SELECT` query and SQL statements on external relational databases.
 
-The **Execute query** action (which is present in the connector) provides a consistent environment for Mendix app projects to perform an arbitrary `SELECT` SQL query on relational external databases.  A Java database connectivity (JDBC) API (which is a standard Java API) is used when the Java action attempts to connect with a relational database for which a JDBC driver exists.
+The **Execute query** action (which is present in the connector) provides a consistent environment for Mendix apps to perform an arbitrary `SELECT` SQL query on relational external databases.  A Java database connectivity (JDBC) API (which is a standard Java API) is used when the Java action attempts to connect with a relational database for which a JDBC driver exists.
 
 The **Execute statement** action works internally in the same manner as the **Execute query** action. However, it is used for `INSERT`, `UPDATE`, `DELETE`, `STORED PROCEDURE`, or `DDL` statements.
 

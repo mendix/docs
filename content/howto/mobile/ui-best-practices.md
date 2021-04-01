@@ -12,7 +12,7 @@ This document discusses how Mendix Platform users can build a native mobile app'
 
 ## 2 Roles
 
-When building a native application, different roles are needed for app development. This does not necessarily mean there must be a different person for every role, as developers can serve multiple roles. Also, depending on your project there should be a difference in the level of expertise among certain roles.
+When building a native application, different roles are needed for app development. This does not necessarily mean there must be a different person for every role, as developers can serve multiple roles. Also, depending on your app, there should be a difference in the level of expertise among certain roles.
 
 ### 2.1 Different Types of Roles
 
@@ -108,7 +108,7 @@ Try to avoid very specific class names. Very specific class names are often only
 
 By changing styling in the **core** folder you risk incurring errors the next time you update Atlas. Updating Atlas might also be more difficult. 
 
-A large part of your app's overall styling can be changed in `theme/styles/native/app/custom-variables.js`. However, if more changes are needed you could extend a widget’s default styling or define the default styling yourself. For more information, see [How to Extend Design Properties to Customize Your Studio Experience](/howto/front-end/extend-design-properties-to-customize).
+A large part of your app's overall styling can be changed in `theme/styles/native/app/custom-variables.js`. However, if more changes are needed you could extend a widget’s default styling or define the default styling yourself. For more information, see [How to Extend Design Properties](/howto/front-end/extend-design-properties).
 
 ### 4.4 Favor Design Properties Over Including Properties
 

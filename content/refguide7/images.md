@@ -21,7 +21,7 @@ To use your own images, they must first be added to an mage collection. To add a
 
 After naming the new image collection, open it and click **Add** in the menu bar to add custom images to your module.
 
-You can now use these custom images in your app project.
+You can now use these custom images in your app.
 
 ## 4 Common Properties
 

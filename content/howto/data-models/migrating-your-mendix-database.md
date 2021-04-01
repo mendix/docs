@@ -36,7 +36,7 @@ For more information on the full list of available settings, see [Runtime Custom
 
 These settings can be configured as follows:
 
-*  Studio Pro – in **Project Explorer**, expand **Project**, double-click **Settings**, edit a configuration, and go to the **Custom** tab:
+*  Studio Pro – in **App Explorer**, expand **App**, double-click **Settings**, edit a configuration, and go to the **Custom** tab:
 
 	![](attachments/migrating/19398970.png) 
 
@@ -64,7 +64,7 @@ You can configure Studio Pro to use a PostgreSQL database instead of the inbuilt
 
 To do this, perform the following steps:
 
-1. Open your **Project '…'** > **Settings**.
+1. Open your **App** > **Settings**.
 
 2. Click **New** to add a new configuration from the **Configurations** tab.
 
@@ -91,9 +91,9 @@ If you already have the database, for example a test database in the cloud, you 
 
 The Mendix cloud environment only uses PostgreSQL as a database server. The recommended way is to migrate your existing on-premises non-PostgreSQL source database to a new on-premises PostgreSQL target database. 
 
-The source database is the database with the data that you would like to migrate to the cloud. The target PostgreSQL database should be completely empty, as in, it should not contain any tables. In the Mendix project the active configuration in Settings should point to the target database, and you should add the Custom configuration settings for the source database as explained above in the overview.
+The source database is the database with the data that you would like to migrate to the cloud. The target PostgreSQL database should be completely empty, as in, it should not contain any tables. In the Mendix app the active configuration in Settings should point to the target database, and you should add the Custom configuration settings for the source database as explained above in the overview.
 
-Having configured the Mendix project, just run the application locally and it will automatically migrate the database schema and all the data from the source database to the target database. Before exporting the target database, you should always validate it first by viewing the application in a browser. 
+Having configured the Mendix app, just run the application locally and it will automatically migrate the database schema and all the data from the source database to the target database. Before exporting the target database, you should always validate it first by viewing the application in a browser. 
 
 ### 4.1 Exporting a PostgreSQL Database
 
@@ -119,9 +119,9 @@ Below is general guidance on how to migrate a PostgreSQL database to a different
 
 #### 5.2.1 General Guidance
 
-The source database is a PostgreSQL database with the downloaded database from the Mendix cloud. The target non-PostgreSQL database should be completely empty, as in, it should not contain any tables. In the Mendix project the active configuration in Settings should point to the target database, and you should add the Custom configuration settings for the source PostgreSQL database as explained above in the overview.
+The source database is a PostgreSQL database with the downloaded database from the Mendix cloud. The target non-PostgreSQL database should be completely empty, as in, it should not contain any tables. In the Mendix app the active configuration in Settings should point to the target database, and you should add the Custom configuration settings for the source PostgreSQL database as explained above in the overview.
 
-Having configured the Mendix project, just run the application locally and it will automatically migrate the database schema and all the data from the source database to the target database. You should always validate it first by viewing the application in a browser.
+Having configured the Mendix app, just run the application locally and it will automatically migrate the database schema and all the data from the source database to the target database. You should always validate it first by viewing the application in a browser.
 
 #### 5.2.2 Migrating to SAP HANA on SAP BTP
 

@@ -19,11 +19,11 @@ Creating Atlas UI resources for your company is a great way to keep your company
 
 The Atlas UI resources include a large variety of page templates to use. When creating an app, a lot of pages you create will be custom-made, and developers may want to reuse these page templates within the app or in other apps without having to start from scratch. This is now possible in Mendix Studio Pro.
 
-In the example below, we’ll go through the steps of creating a new page template and talk about how the page template behaves in a local project and in the **UI Resources** module.
+In the example below, we’ll go through the steps of creating a new page template and talk about how the page template behaves in a local app and in the **UI Resources** module.
 
 ### 2.1 Example Scenario
 
-In Studio Pro, go to the **Project Explorer** of your app and right-click the page you want to use as the page template. In this example, we are using a dashboard page.
+In Studio Pro, go to the **App Explorer** of your app and right-click the page you want to use as the page template. In this example, we are using a dashboard page.
 
 ![](attachments/howto/creating_page_templates.png)
 
@@ -76,7 +76,7 @@ The building block is now available in the **Toolbox**, where users can drag it 
 
 Now that it’s clear how to create page templates and building blocks, we need to discuss how to get our resources from the **Local** category into a module that can be shared with our apps and users.
 
-Let’s begin by placing our page template inside the **UI_Resources** module under **App Store modules**:
+Let’s begin by placing our page template inside the **UI_Resources** module under **Marketplace modules**:
 
 ![](attachments/howto/creating_moving_local.png)
 
@@ -90,16 +90,8 @@ Adding an underscore to the folder name in Studio Pro (for example, **_Layouts**
 
 ## 5 Export Company Atlas UI Resources
 
-When the resources are ready to be shared with multiple developers or apps, the module can be exported from the Project Explorer. You are free to change the name of a module as long as the module has been exported as a UI resource package.
+When the resources are ready to be shared with multiple developers or apps, the module can be exported from the App Explorer. You are free to change the name of a module as long as the module has been exported as a UI resource package.
 
 ![](attachments/howto/export_ui_module.png)
 
 The module can now be imported in other apps or uploaded to the [Mendix Marketplace](https://appstore.home.mendix.com/index3.html). There is an option to make the resource module available for private use only so that everybody in your company can benefit from and extend the module.
-
-## 6 Read More
-
-* [Get Started with Atlas UI](get-started-with-atlasui)
-* [Create Custom Preview Images for Building Blocks & Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
-* [Extend Design Properties to Customize Your Studio Experience](extend-design-properties-to-customize)
-* [Migrate Existing App Projects to Atlas UI](migrate-existing-projects-to-atlasui)
-* [Share Company Atlas UI Resources](share-company-atlas-ui-resources)

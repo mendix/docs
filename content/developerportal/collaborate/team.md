@@ -1,7 +1,7 @@
 ---
 title: "App Team"
 category: "Collaboration Tools"
-menu_order: 20
+menu_order: 3
 description: "Describes the Team page of the Developer Portal."
 tags: ["Team", "Developer Portal"]
 ---
@@ -12,7 +12,7 @@ Your App Team can include all of your colleagues working on an app. As well as d
 
 To view and manage your App Team members, follow these steps:
 
-1. Click **Apps** in the top navigation panel of the [Developer Portal](http://home.mendix.com) and select the app you want to manage.
+1. Click **Apps** in the top navigation panel of the [Developer Portal](http://sprintr.home.mendix.com) and select the app you want to manage.
 2. Click **Team** under the **Collaborate** category.
 
 On the **Team** page, you will see an overview with the following information about the App Team members:
@@ -24,7 +24,7 @@ On the **Team** page, you will see an overview with the following information ab
 
 ## 2 Managing the Team {#managing}
 
-When you click **Manage Team** in the top-right corner of the screen, you will be forwarded to the **Settings** > **Security** page. 
+When you click **Manage Team** in the top-right corner of the screen, you will be forwarded to the **Collaborate** > **Security** page. 
 
 {{% alert type="info" %}}
 

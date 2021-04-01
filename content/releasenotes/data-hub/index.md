@@ -9,6 +9,20 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### April 1st, 2021
+
+#### Improvements
+
+*  [Registration](/data-hub/data-hub-catalog/register#registration-form) of data sources using the business application connectors from the **Data Hub Home** is improved. For each connector, users can register data sources by selecting from a list of apps and environments already registered in the Catalog for the business application. When none are registered, the  "**Create New...**" option will be presented. 
+
+### March 18th, 2021
+
+#### Improvements
+
+* A Mendix connector has been added to the business applications on the Data Hub Home to enable users to [manually register](/data-hub/data-hub-catalog/register#registration-form)  Mendix OData v3 contracts.
+* Data sources that are [validated](/data-hub/data-hub-catalog/curate#discoverability)  are now clearly indicated in the search results list and for the selected asset details with a validated shield icon. The validation status of the data source is now displayed in the metadata panel. 
+* The [discoverability](/data-hub/data-hub-catalog/curate#discoverability) of a data source is displayed in the search results pane, the asset details screen and the the metadata panel. 
+
 ### March 11th, 2021
 
 #### Improvements
@@ -131,7 +145,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Improvements
 
-* In [Landscape](/data-hub/data-hub-landscape/index) nodes are now static and cannot be dragged around the display. To see other parts of of the selected assets network, you can pan and zoom using the mouse.
+* In [Landscape](/data-hub/data-hub-landscape/) nodes are now static and cannot be dragged around the display. To see other parts of of the selected assets network, you can pan and zoom using the mouse.
 * In Data Hub **Catalog** by default, the [search filter](/data-hub/data-hub-catalog/search#filter) is set to show results in the **Production** environment only. To include hits in **Non-production** or **Sandbox** environments you have to check these boxes in the **Add Filters** dialog box.
 * The [entity details](/data-hub/data-hub-catalog/search#entity-details) screen now displays the number of connections to the individual entity. The service details continue to show the total number of connections to the service.
 

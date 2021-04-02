@@ -2,7 +2,7 @@
 title: "Calendar"
 category: "Widgets"
 description: "Describes the configuration and usage of the Calendar widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "calendar", "platform support"]
+tags: ["marketplace", "marketplace component", "widget", "calendar", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -17,9 +17,9 @@ The [Calendar](https://appstore.home.mendix.com/link/app/107954/) widget can be 
 * Change calendar event colors
 * Retrieve events based on selected date ranges
 
-### 1.2 Demo App Project
+### 1.2 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](https://reactcalendar.mxapps.io).
+For a demo app that has been deployed with this widget, see [here](https://reactcalendar.mxapps.io).
 
 ## 2 Basic Configuration
 

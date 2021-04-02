@@ -2,7 +2,7 @@
 title: "Push Notifications Connector"
 category: "Modules"
 description: "Describes the configuration and usage of the Push Notifications module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "push notifications",  "platform support"]
+tags: ["marketplace", "marketplace component", "push notifications", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -14,7 +14,7 @@ This module makes it easy for Mendix developers who want to include push notific
 
 ## 2 Development
 
-When using the module in your app project, all dependencies are bundled when downloaded from the Marketplace. For developers who want to update and publish a newer version, there are some helpful scripts described below.
+When using the module in your app, all dependencies are bundled when downloaded from the Marketplace. For developers who want to update and publish a newer version, there are some helpful scripts described below.
 
 These are the development prerequisites:
 
@@ -56,13 +56,4 @@ Export the module for the Marketplace, including the dependent *userlib* content
 ```bash
 $ gradle extractModule
 ```
-
-## 3 Read More
-
-* [How to Include Push Notifications](/howto/mobile/push-notifications)
-* [How to Implement Push Notifications](/howto/mobile/implementation-guide)
-* [How to Send Push Notifications](/howto/mobile/sending-push-notifications)
-* [How to Set Up the Apple Push Notifcation Server](/howto/mobile/setting-up-apple-push-notification-server)
-* [How to Set Up the Google Firebase Cloud Messaging Server](/howto/mobile/setting-up-google-firebase-cloud-messaging-server)
-* [How to Test the Push Notifications Implementation](/howto/mobile/testing-the-implementation)
 

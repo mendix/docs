@@ -2,7 +2,7 @@
 title: "Use Marketplace Content in Studio Pro"
 category: "General Info"
 menu_order: 20
-tags: ["marketplace", "app store", "Studio Pro"]
+tags: ["marketplace", "Studio Pro"]
 description: "Covers the basics of how to access the Marketplace from Studio Pro and provides examples of how to add a widget and module to your app."
 aliases:
     - /community/app-store/use-app-store-content-in-the-modeler.html
@@ -59,14 +59,14 @@ To download content from the Marketplace via Studio Pro, follow these steps:
 
 ## 4 Using a Widget in Studio Pro {#widget}
 
-In this section, you will learn how to add a widget to your app project. You can follow the same steps to download any Marketplace widget you need.
+In this section, you will learn how to add a widget to your app. You can follow the same steps to download any Marketplace widget you need.
 
 ### 4.1 Adding the Widget
 
 To add the Radio Button List widget from the Marketplace via Studio Pro, follow these steps:
 
 1. Download the [Radio Button List](../widgets/radio-button-list) widget (for reference, follow the steps in the [Downloading Content from the Marketplace](#downloading2) section above).
-2.  A widget downloaded from the Marketplace is placed in your app project structure. You can find the widget and start using it in the following ways:
+2.  A widget downloaded from the Marketplace is placed in your app structure. You can find the widget and start using it in the following ways:
 
 	* Click **Add widget**, then browse the list of **Add-on widgets**:
 
@@ -127,7 +127,7 @@ To add the Google Maps module from the Marketplace via Studio Pro, follow these 
 	{{% /alert %}}
 
 3. Click **Import** on the **Import Module** dialog box, and a pop-up stating that “The app was successfully imported into the project” will appear. Click **OK**.
-4.  Open the **Project Explorer** to view the Google Maps module. Note that unlike a widget, a module will be visible in your Project Explorer and will contain a domain model, pages, and microflow logic. A module downloaded from the Marketplace will store files if the module contains files (for example, userlib or resource files). In addition, a module downloaded from the Marketplace will have a light blue icon to differentiate it from the development modules.
+4.  Open the **App Explorer** to view the Google Maps module. Note that unlike a widget, a module will be visible in your App Explorer and will contain a domain model, pages, and microflow logic. A module downloaded from the Marketplace will store files if the module contains files (for example, userlib or resource files). In addition, a module downloaded from the Marketplace will have a light blue icon to differentiate it from the development modules.
 
 	![](attachments/app-store-content/18580430.png)
 
@@ -161,7 +161,7 @@ You cannot create a new project in an existing repository that is not empty.
 
 ### 6.2 Using a Theme
 
-Downloading a theme is very similar to downloading a widget. Like a widget, a theme is added to the project structure, in the **theme** folder of your app project. A theme downloaded from the Marketplace will immediately be set as the active theme for your project. You can find out which theme is active for your project in the app  project **Settings**.
+Downloading a theme is very similar to downloading a widget. Like a widget, a theme is added to the project structure, in the **theme** folder of your app. A theme downloaded from the Marketplace will immediately be set as the active theme for your project. You can find out which theme is active for your project in the app  project **Settings**.
 
 To delete a theme, remove the ZIP file from your project's **theme** folder.
 

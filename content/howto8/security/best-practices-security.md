@@ -21,7 +21,7 @@ The Mendix architecture includes the Mendix Client, which can compose its own qu
 ![Mendix Runtime Architecture](attachments/best-practices-security/mendix-runtime-architecture.png)
 {{% /image_container %}}
 
-When designing an application, a developer can specify access rules on an entity (for more information, see [How to Create A Secure App](/howto/security/create-a-secure-app)). These access rules are applied whenever a query (received from a client) should be executed, thus they constrain the data returned to the client. For example, users with the "Customer" role can only view orders that are associated to the customer of which this user is part.
+When designing an application, a developer can specify access rules on an entity (for more information, see [How to Create A Secure App](/howto8/security/create-a-secure-app)). These access rules are applied whenever a query (received from a client) should be executed, thus they constrain the data returned to the client. For example, users with the "Customer" role can only view orders that are associated to the customer of which this user is part.
 
 While the data that should be viewable and editable in which role is application-specific, the following best practices are key:
 
@@ -167,7 +167,7 @@ Which users and roles are defined within an application is different per app and
 * Anonymous access should be disabled if it has no function within the application
   * Some applications have anonymous access enabled, solely to serve a custom login form – this can be replaced by modifying the default *login.html* within your theme (which will also help the user experience with an improved loading time)
 * Roles managing other user roles should be as strict as possible (configured via **User management** within the user role options)
-* The role of the app project’s administrator user (default **MxAdmin**) should only be able to create the actual administrative accounts (or configure SSO)
+* The role of the app's administrator user (default **MxAdmin**) should only be able to create the actual administrative accounts (or configure SSO)
 
 ## 14 Scanning Uploaded Files for Malicious Content {#scanning-for-malicious-content}
 

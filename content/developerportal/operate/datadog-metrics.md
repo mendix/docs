@@ -215,6 +215,10 @@ You can specify which request handlers, microflows, and activities are reported 
 | `"name": "<microflow>"` | Each time this microflow is run | The format is `<module>.<microflow>`<br />For example, `TrainingManagement.ACT_CancelScheduledCourse` |
 | `"name": "<activity>"` | All activities of this type | click **Activities<sup><small>2</small></sup>** below to see the list of options |
 
+{{% alert type="warning" %}}
+Microflow names are case-sensitive. If the case is not exactly matched, metrics will not be properly submitted.
+{{% /alert %}}
+
 **<details><summary><sup><small>[1]</small></sup>Request Handlers (click to see list)</summary>**
 
 The following Mendix *request handler* calls will be passed to Datadog:
@@ -365,7 +369,7 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 
 ### 5.1 Log Levels{#log-levels}
 
-The **DD_LOG_LEVEL** sets the level for which log messages from the *Mendix Datadog agent* will be sent to Datadog. It does not affect the [log level set in your app](/howto/monitoring-troubleshooting/log-levels). Valid values are:
+The **DD_LOG_LEVEL** sets the level for which log messages *from the Mendix Datadog agent* will be sent to the Mendix application logs. It does not affect the [log level set in your app](/howto/monitoring-troubleshooting/log-levels). Valid values are:
 
 * CRITICAL
 * ERROR

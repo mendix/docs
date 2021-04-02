@@ -21,6 +21,10 @@ As PWAs are basically web apps with additional features, Mendix offers these fea
 
 To create a full offline-first PWA, choose and add one of the following profiles (depending on which form factor you need): Responsive Web Offline, Phone Web Offline, or Tablet Web Offline. For more information about offline-first apps, see the [Offline-First Reference Guide](/refguide/offline-first).
 
+{{% alert type="info" %}}
+Offline-first progressive web apps have some restrictions to make sure they can fully work offline. For more information, see the [Ensuring Your App Is Offline-First ](offline-first#limitations) section of the *Offline-First Reference Guide*.
+{{% /alert %}}
+
 Within the navigation profiles the following PWA features can be configured:
 
 {{% image_container width="350" %}}![PWA settings](attachments/progressive-web-app/settings.png){{% /image_container %}}
@@ -61,7 +65,7 @@ When previewing or testing an offline-first PWA locally, an internet connection 
     
 ### 3.1 PWA Lighthouse Check
 
-To check a PWA's capabilities, you can use [Lighthouse](https://developers.google.com/web/tools/lighthouse) can be used. Lighthouse is an open-source, automated tool for improving the quality of web pages. It can check if your app meets the progressive web app requirements and can offer suggestions for improving your web app.
+To check a PWA's capabilities, you can use [Lighthouse](https://developers.google.com/web/tools/lighthouse). Lighthouse is an open-source, automated tool for improving the quality of web pages. It can check if your app meets the progressive web app requirements and can offer suggestions for improving your web app.
 
 ## 4 Distribute or Share the PWA
 
@@ -96,7 +100,11 @@ When forcing a specific profile on a cloud deployment, it can be necessary to fi
 
 ## 5 Advanced Settings
 
-PWAs use a web manifest that provides information to the browser about the application. Mendix generates one automatically based on the model. It can be customized for specific needs by changing the `manifest-overrides.webmanifest` *.json* file in the **theme** folder. The `background_color` and `theme_color` properties will often be useful to customize:
+See the sections below for information on advanced settings.
+
+### 5.1 Web App Manifest
+
+PWAs use a web app manifest that provides information to the browser about the application. Mendix generates one automatically based on the model. It can be customized for specific needs by changing the `manifest-overrides.webmanifest` *.json* file in the **theme** folder. The `background_color` and `theme_color` properties will often be useful to customize:
 
 ```json
 {
@@ -107,6 +115,12 @@ PWAs use a web manifest that provides information to the browser about the appli
 
 For more information on the available properties in the web app manifest, read this [short introduction](https://web.dev/add-manifest/) or view [the full reference at MDN](https://developer.mozilla.org/en-US/docs/Web/Manifest).
 
+### 5.2 Sessions
+
+Offline-first PWAs use long-lived sessions, which keep users logged in for a longer period even after their apps are closed. By default, users will be logged out after 7 days of inactivity. This can be customized using the *LongLivedSessionTimeout* runtime setting.
+
+For more information on sessions and how to customize the timeout, see the [Session Duration](/refguide/tricky-custom-runtime-settings#2-session-duration) section of the *Tricky Custom Settings in Mendix Runtime Reference Guide*.
+
 ## 6 Accessing Device Features
 
 Browsers offer access to device features through APIs that can be leveraged in PWAs. These device features can be used by available widgets and nanoflow actions. It is also possible to leverage additional device features by extending the platform using [JavaScript Actions](/refguide/javascript-actions) or [Pluggable Widgets](/howto/extensibility/pluggable-widgets).
@@ -115,10 +129,10 @@ For more information on browser support for certain device features, see the thi
 
 ## 7 Deciding Between a PWA or Native Mobile App
 
-Mendix offers options to build both native mobile apps and PWAs. Depending on your project's requirements or constraints, one or the other can be a better fit. It is also possible to have both native mobile and PWA profiles in a single project, which can run next to each other and overlap significantly.
+Mendix offers options to build both native mobile apps and PWAs. Depending on your app's requirements or constraints, one or the other can be a better fit. It is also possible to have both native mobile and PWA profiles in a single app, which can run next to each other and overlap significantly.
 
 {{% alert type="info" %}}
-Apple does not support push notifications for PWA on iOS. Therefore it is not currently possible to create a fully offline-first PWA for iOS.
+Important limitation: Apple does not support push notifications for PWAs on iOS. Currently it is not possible to create a fully offline-first PWA for iOS. Support for that is planned later in 2021.
 {{% /alert %}}
 
 Use the following diagram to decide whether to build a PWA, a native mobile app, or both:

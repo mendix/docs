@@ -46,7 +46,7 @@ To create your app, do the following:
 
 You now have an app with some translatable texts.
 
-## 3 Adding App Project Languages
+## 3 Adding App Languages
 
 You can now add an additional language to your app.
 
@@ -58,7 +58,7 @@ To add an additional language, do the following:
 2. Click the **Add** button and select a second language. In this example we will be using *Russian, Russia*, but you can use any language you like.
 	{{% alert type="info" %}}It is recommended that you **don't** choose *Dutch, Netherlands* as this already contains translations for many of the translatable texts.{{% /alert %}}
 3. Click **OK** to confirm.
-	![Language settings tab in the project settings dialog](attachments/translate-your-app-content/language-settings.png)
+	![Language settings tab in the app settings dialog](attachments/translate-your-app-content/language-settings.png)
 
 You will see that the default language is still *English, United States* which is what you want the end-user to see if they do not choose Russian as their language.
 

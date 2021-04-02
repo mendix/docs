@@ -25,23 +25,29 @@ The service name is used to create a unique URI for the OData service. Thus, the
 
 Use the **version** field to assign a version number to the service. This number will be shown in the API documentation.
 
+{{% alert type="info" %}}
+
+It is recommended that you adopt semantic numbering for services that you publish.
+
+{{% /alert %}}
+
 ### 2.3 Namespace
 
 In OData, the namespace is used to refer to data types. On the **Settings** tab, you can customize this namespace. You can change it to any value which starts with a letter followed by letters, digits, or dots with a maximum length of 512 characters.
 
 ### 2.4 Resources
 
-A [resource](published-odata-resource) is a network-accessible data object representing an entity, identified by a URI.
+A [resource](published-odata-resource) is a network-accessible data object represented by an entity and identified by a URI.
 
 ## 3 Settings
 
 ### 3.1 Associations
 
-You can choose how you want to represent associations. For more information, see the [Associations](odata-representation#associations) section of *OData Representation*.
+You can select how you want to represent associations. For more information, see the [Associations](odata-representation#associations) section of *OData Representation*.
 
 ### 3.2 Security {#security}
 
-You can configure security for the OData service when [Project Security](project-security) is enabled.
+You can configure security for the OData service when [App Security](project-security) is enabled.
 
 #### 3.2.1 Requires Authentication {#authentication}
 
@@ -116,14 +122,13 @@ Web service users cannot access OData services.
 
 ## 4 Properties
 
-In the properties pane of the published OData service you can edit some of the properties that you can also set in the *General* tab, such as *Service name*, *Version*, and *Namespace*.
+In the properties pane when an OData service document is displayed,  you can edit some of the values that you can also set in the **General** tab, such as **Service name**, **Version**, and **Namespace**.
 
-This section describes the additional properties that you can set.
+This section describes the additional values that you can set.
 
 ### 4.1 Documentation
 
-Here you can describe the purpose of the service. This is intended for other people
-working on this project and is not available to users of the OData service.
+Here you can add a description of the service. This is available to other users working on this app and is not published when the OData service is deployed.
 
 ### 4.2 Replace Illegal XML Characters
 
@@ -143,7 +148,7 @@ You can write a *summary* and a *description* intended for people using the serv
 
 ### 5.1 General
 
-Once your OData-enabled app is running, an overview of exposed OData resources is available on the root URL followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/` You can copy and paste the links into for instance Excel to establish a link between your OData resources and Excel.
+Once your app is published, the published OData services will be is available on the root URL of the app followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/` You can copy and paste the links into for instance Excel to establish a link between your OData resources and Excel.
 
 {{% alert type="warning" %}}
 While the API documentation for OData resources is enabled by default, access to it may be restricted by the administrator for apps running in production.

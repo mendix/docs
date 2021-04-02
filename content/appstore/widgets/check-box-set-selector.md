@@ -2,7 +2,7 @@
 title: "Check Box Set Selector"
 category: "Widgets"
 description: "Describes the configuration and usage of the Check Box Set Selector widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "check box set selector", "check box", "platform support"]
+tags: ["marketplace", "marketplace component", "widget", "check box set selector", "check box", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -42,6 +42,8 @@ The [Check Box Set Selector](https://appstore.home.mendix.com/link/app/121/) wid
 * **Attribute** – the attribute that is to be shown
 * **Width** – the width of the column for this display attribute in pixels or percentage
 * **Currency type** – lets you display the attribute as a currency (leave on **None** if not applicable)
+
+You must designate at least one **Display Attribute** (with **Header text** and **Attribute** included), or else the widget might block the page or pop-up window from loading.
 
 ## 3 Read More
 

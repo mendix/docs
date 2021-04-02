@@ -2,7 +2,7 @@
 title: "Slider"
 category: "Widgets"
 description: "Describes the configuration and usage of the Slider widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "slider", "bound", "platform support"]
+tags: ["marketplace", "marketplace component", "widget", "slider", "bound", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -17,9 +17,9 @@ The [Slider](https://appstore.home.mendix.com/link/app/48786/) widget can be use
 * Show a tooltip on hover
 * Render slider with different bootstrap colors
 
-### 1.2 Demo App Project
+### 1.2 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](https://slider.mxapps.io/).
+For a demo app that has been deployed with this widget, see [here](https://slider.mxapps.io/).
 
 ## 2 Configuration
 

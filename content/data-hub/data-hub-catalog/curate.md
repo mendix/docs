@@ -8,12 +8,12 @@ tags: ["data hub", "data hub catalog", "curate", "description", "services", "tag
 
 ## 1 Introduction
 
-You can curate registered assets to enrich the metadata in the Data Hub and provide further information about the data sources, datasets and exposed attributes. You can add custom icons for the app and specify Catalog descriptions and tags to supplement the registered metadata and further categorize the asset and the data they connect to. Curate functions in Data Hub include setting the [Discoverability](#discoverability) of registered assets, assigning a [Validated](#validated) tag and specifying the [Business and Technical](#customowner) owners. 
+Owners of data assets, curators and the Data Hub Admin can curate registered assets. Curation in Data Hub is the process of enriching the metadata and providing further information about the data sources, datasets and exposed attributes. This includes adding custom icons and specifying Catalog descriptions and tags to supplement the registered metadata, and further categorize the assets and the data they connect to. Curate functions in Data Hub include setting the [Discoverability](#discoverability) of data sources, indicating that the datasource is [Validated](#validated) and specifying the [Business and Technical](#customowner) owners. 
 
 Users who can curate assets in Data Hub Catalog are as follows: 
 
-* Owners of a registered service – can curate their own services and find those that are set to non-**Discoverable**
-* [Data Hub Curators](../index#curator) and [Data Hub Admins](../index#admin) – can curate and find all registered assets, discoverable and non-discoverable
+* Owners of a registered service – can curate their own services which includes those that have been set to non-**Discoverable**
+* [Data Hub Curators](/data-hub/#curator) and [Data Hub Admins](/data-hub/#admin) – can curate and find all registered assets in the Catalog, discoverable and non-discoverable
 
 Owners and Curators can also get an overview of the registered assets they own and curate from the [Curate](#curatelist) tab of Data Hub.
 
@@ -49,19 +49,17 @@ On the **Curation bar**, the following details are displayed:
 * Information about the role of the current user: **Owner** or **Curator**
 * When a data source is selected in the **Search Results**: 
 	* **Edit Metadata** – edit the description of the data source and datasets, add tags or specify business and technical owners and add change the application icon
-	* **Discoverable/Validated** – set the service as **Discoverable** and **Validate** from the drop-down menu. 
-		* **Discoverable** defines whether the service can be found (and consumed) by users of the Data Hub; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) can find the registered data source. 
-		* **Validate** indicates that the data source and dataset have been validated.
+	* **Discoverable/Validated** – set the the **Discoverable** and **Validated** settings for the data source from the drop-down menu. 
+		* **Discoverable** defines whether the service is visible and can be found (and consumed) by users of the Data Hub; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source. 
+		* **Validate** indicates that the data source and datasets have been validated.
 * When a dataset is selected in the **Search Results**
 	* **Edit Dataset Details** – to edit the dataset and attribute descriptions 
 
-## 4 Edit the Metadata of a Data Source
+## 4 Edit the Metadata of an Application{#curate-application}
 
-Curate functions for a selected data source enable you to change the (source) **Application Details** or **Data Source Details** that are displayed in the Catalog.
+The curate functions that are available for a selected data source are to change **Application Details** or **Data Source Details**. This section describes the application details that can be changed: changing owners or changing the application icon.
 
-### 4.1 Curating Application Details {#curate-application}
-
-You can change the owners of the app and add a custom icon for the application from the curate Application Details screen:
+You can curate Application Details from the **Application Details** screen as follows:
 
 1. In the **Curation Bar** click **Edit Metadata** > **Application Details**:
 
@@ -71,39 +69,49 @@ You can change the owners of the app and add a custom icon for the application f
 
    ![](attachments/curate/application-metadata-screen.png)
 
-#### 4.1.1 Changing the Technical and Business Owners of an App {#customowner}
+### 4.1 Changing Owners of an Application 
 
-By default, the **Technical Owner** for a registered asset is the user who registered the data source when registration is done through the deployment pipeline in Studio Pro or specified during manual registration or using the Data Hub API. These owners can be changed by curating the application details. The **Technical** and **Business Owners** are displayed as a link in the asset **Metadata** pane so that users can contact them. 
+The **Technical** and **Business Owners** are displayed as a link in the asset **Metadata** pane so that users can contact them through the email that is provided for them.
+
+By default, the **Technical Owner** for a registered asset is the user who registered the data source when registration is done through the deployment pipeline in Studio Pro. The owners can also be specified during manual registration using one of the connectors in the Data Hub Home and also when registering assets using the Data Hub API. 
+
+{{% alert type="info" %}}
+**Business** and **Technical Owners** have curation rights for the registered data source in the Data Hub Catalog only if they are *registered users* on the Mendix Platform. If a **custom owner** is *created* with the process described in this section, the link to contact them will be displayed for the asset but this does not mean that they are able to access the asset in Data Hub or curate it.  {{% /alert %}}
+
+App owners can be changed by users with curation rights (owners and curators) from the **Application Details** screen. 
 
 {{% alert type="warning" %}}
-If you as a **Technical Owner** curate the asset and change the name, then you will no longer have curation rights to the asset once you save the changes. If the **Discoverability** is turned off for the asset, then you will also not be able to find the asset in the Catalog.
-{{% /alert %}}
+If you as a **Technical Owner** curate the application and change the technical owner to a different user, then you will no longer have curation rights to the asset once you save the changes. If the [Discoverability](#discoverability) is turned off for the asset, then you will also not be able to find the asset in the Catalog.{{% /alert %}}
 
 {{% alert type="info" %}}
-**Business** and **Technical Owners** have curation rights for the registered data source in the Data Hub Catalog if they are registered users on the Mendix Platform. If a custom owner is *created* with the process described in this section, the link to contact them will be displayed for the asset but this does not mean that they are able to curate it. 
+Curators and the Data Hub Admin can manage the lists of custom owners as part of **Administration** functions. For further details see the [Managing Custom Owners ](../general/data-hub-admin-functions#customowners) section of *Data Hub Administration*. 
  {{% /alert %}}
 
-{{% alert type="info" %}}
-Curators and the Data Hub Admin can manage custom owners as part of **Administration** functions. For further details see the [Managing Custom Owners ](../general/data-hub-admin-functions#customowners) section of *Data Hub Administration*. 
- {{% /alert %}}
+#### 4.1.1 Changing the Technical and Business Owners of an App 
 
-To change the **Business Owner ** or **Technical Owner**, follow these steps from the **Application Metadata** screen:
+To change the **Business Owner ** or **Technical Owner**, from the **Application Metadata** screen, click in the name field of the **Business** or **Technical** owner. You can start typing or select from the drop-down list of names. Mendix platform users will be displayed with their avatar and custom owners will be shown with an avatar that displays their initials as shown in the following example:
 
-1. Click in the name field of the **Business** or **Technical** owner. You can start typing or select from the drop-down list of names. Mendix platform users will be displayed with their avatar and custom owners will be shown with an avatar that displays their initials as shown in the following example:
+![](attachments/curate/custom-avatar.png)
 
-    ![](attachments/curate/custom-avatar.png)
+#### 4.1.2 Adding a Custom Owner {#customowner}
 
-4. If you type a name that is not in the list, you will be asked if you want to **Create** it. Click on the prompt and the **Enter New Custom Owner Details** in the pop-up that is displayed:
+When curating the owners of an application, you can specify an owner who is not a registered Mendix user but is the technical contact point for the application, or the owner of the data that is made available in the app – the **Business Owner**. The name and the contact email must be provided.
+
+Curators can manage the lists of custom owners as an **Administration** task. This is described in Data Hub Administration – [Managing Custom Owners](../general/data-hub-admin-functions#customowners).
+
+To add a custom owner follow these steps:
+
+4. From the **Application Metadata screen** if you start typing the name of an owner and it is not in the drop-down list, you will be prompted if you want to **Create** it. Click on the prompt and the **Enter New Custom Owner Details** pop-up is displayed:
 
 	 {{% image_container width="275" %}}![custom contact create](attachments/curate/custom-contact.png){{% /image_container %}}
 
 5. Enter the **Name** and **Email** of the owner and click **Save**. 
 
-	{{% alert type="info" %}}If you create or select a custom owner for an application, this will only display a link to the email provided in the  **Metadata** pane. This will not give them curate or access rights to the asset; only Mendix users can curate assets they own. {{% /alert %}}
+	{{% alert type="info" %}}When you create or select a custom owner for an application, this will be displayed in the  **Asset Metadata** pane as a link to the email specified. Custom owners will have curate or access rights to the Catalog or the asset in the Catalog. Only Mendix users that are added as an owner can curate assets they own. {{% /alert %}}
 
 6. Click **Save** to return to the **Application Metadata** screen. Click **Save Changes** to return to the asset details screen where the changes will be displayed in **Metadata** pane.
 
-#### 4.1.2 Changing the Application Icon {#application-icon}
+### 4.2 Changing the Application Icon {#application-icon}
 
 You can change the icon that is displayed for the app and the data source by uploading your own custom application icon or selecting one from Data Hub the icon library. The selected icon will be displayed for all endpoints of the application and data source such as the Catalog search results and also in the Mendix Studio Pro [Data Hub pane](/refguide/data-hub-pane) and Studio **Data Source** pane. 
 
@@ -162,15 +170,19 @@ An alternative to uploading an icon is to use an existing icon by clicking **sel
 
 {{% image_container width="300" %}}![upload icon](attachments/curate/icon-library.png){{% /image_container %}}
 
-### 4.2 Data Source Description{#service-details}
+## 5 Edit the Metadata of a Data Source {#service-details}
 
-If a description was included in the OData metadata contract, this will be displayed in the asset details screen for the selected data source. You can curate a data source to add a catalog description to include further details on, for example, the data usage and relevancy. 
+You can curate data sources to add a Catalog description and add tags.
 
-As search in the Data Hub also includes searching the contents of the description fields of registered data sources, datasets, and attributes, adding relevant descriptions can help in the right users finding these shared assets.
+#### 5.1 Add or Edit Catalog Description
+
+If a description was included in the OData metadata contract, this will be displayed in the asset details screen for the selected data source. You can curate a data source to add a catalog description that could include further details on, for example, the data usage and relevancy. 
+
+As search in the Data Hub also includes searching the contents of the description fields of registered assets (data sources, datasets, attributes, and associations), adding relevant descriptions can help in the right users finding these shared assets.
 
 You can also specify if the OData service **Contract Description** or the **Catalog Description** is displayed in the Data Hub Catalog. 
 
-{{% alert type="info" %}}If there is a **Catalog Description** for a service, both descriptions will be registered for the service in the Catalog and during curation either the catalog or the contract description can be selected to be displayed. {{% /alert %}}
+{{% alert type="info" %}}If there is a **Catalog Description** for a service, both descriptions will be retained for the service in the Catalog regardless of the one that is selected for display in the **Asset Details** screen. {{% /alert %}}
 
 To edit the asset metadata, follow these steps: 
 
@@ -191,7 +203,7 @@ To edit the asset metadata, follow these steps:
 
 	{{% alert type="info" %}}If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. {{% /alert %}}
 
-### 4.3 Adding or Editing Tags to a Service {#tags}
+### 5.2 Adding or Editing Tags to a Service {#tags}
 
 Add tags to categorize a registered service and provide additional means for finding the service. Tags that are specified for a service also apply to the datasets and attributes that are exposed in the service. Specify tags for the selected service by following these steps:
 
@@ -217,37 +229,38 @@ Add tags to categorize a registered service and provide additional means for fin
 
 	{{% alert type="info" %}} If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. {{% /alert %}}
 
-## 5 Discoverable and Validate {#discoverability}
+## 6 Discoverable and Validate {#discoverability}
 
-### 5.1 Discoverable
+### 6.1 Discoverable
 
-By default, when an asset is registered in the Data Hub catalog, it is set to **Discoverable**, which means that all users can find, consume, and see details of it. 
+By default, when an asset is registered in the Data Hub catalog, it is set to **Discoverable**, which means that all users can find the asset and see details of it. 
 
-When the **Discoverable** setting is turned off, it will only be visible to the owners of the service and curators and not be visible to other users of the Data Hub. This means that it cannot be found, either in the Data Hub Catalog or by users of the Data Hub integrations in Studio Pro and Studio.
+When the **Discoverable** setting is turned off, it will only be visible to the owners of the service and curators and the Data Hub Admin. All other users of Data Hub (also through the Data Hub integrations in Studio Pro and Studio) will not be able to see an asset whose discvorabilty is turned off.
 
 {{% alert type="info" %}}
-When a data source is set to non-**Discoverable**, neither the data source nor the datasets that are exposed in the service can be found by other users (except for curators who can see all assets). However, there may be instances of the same datasets, from the same apps, being available through other services that are also published in the Data Hub Catalog.
-{{% /alert %}}
+When a data source is set to non-**Discoverable**, the data source, and the datasets that are exposed cannot be found by other users (except by owners and curators). However, there may be instances of the same datasets in the Catalog, from the same apps, that are available through other services that are also published in the Data Hub Catalog. {{% /alert %}}
+
+{{% alert type="info" %}}To enable users of Mendix Studio and Studio Pro (and any Data Hub API clients) to consume datasets from registered data sources, owners must ensure that Discoverability is turned on. Data sources that are set to **not Discoverable** in the Catalog will not be included in the search results for *any* user for these clients. {{% /alert %}}
 
 To change the discoverability of a service, follow these steps:
 
 1. In the Data Hub Catalog, select the service to display the **Search Details**.
 
-2. If you have curation rights, the **Curation Bar** will be displayed. Click **Discoverability** to display the **Discoverable** toggle:
+2. If you have curation rights, the **Curation Bar** is displayed. Click the drop-down **Discoverabile/Validated** menu:
 
    ![discoverable](attachments/curate/curate-discoverable.png)
 
-3. Click the **Discoverable** toggle to turn it on or off. A message will be displayed to indicate the discoverability of the asset.
+3. Click the **Discoverable** toggle to turn it on or off. A message is displayed to indicate the discoverability of the asset and the discoverability icon is updated in the search results and the data source details.
 
    ![non-discoverable](attachments/curate/curate-non-discoverable.png) 
 
-### 5.2 Validated {#validated}
+### 6.2 Validated {#validated}
 
-The **Validated** value can be assigned to a data source. When it is turned on, by clicking the **Validated** toggle, this will be indicated in the asset details screen and also in the search results pane for the service. 
+The **Validated** value can be assigned to a data source by owners and curators to indicate, for example that it has been qualified and is a reliable data source. It can turned on and off by clicking the **Validated** toggle. A validated data source is indicated by the validation shield on the data source details screen and also in the search results pane. 
 
 ![validated](attachments/curate/curate-validated.png)
 
-## 6 Curating Datasets and Attributes {#curate-datasets}
+## 7 Curating Datasets and Attributes {#curate-datasets}
 
 Datasets and their exposed attributes can be curated to add **Catalog descriptions**. Catalog descriptions are stored in the Data Hub Catalog and you can specify which description is displayed: the service contract  or the Catalog.
 

@@ -19,7 +19,7 @@ This section of the *Developer Portal Guide* contains step-by-step instructions,
 
 ### 2.1 Studio Pro
 
-In *Studio Pro*, you can click **Run Locally** in the toolbar to run your app locally. Use the **View** button to directly jump to see your app running in your browser at *localhost*.
+In *Studio Pro*, you can click the play button (▶) in the toolbar to run your app locally. Use the **View** button to directly jump to see your app running in your browser at *localhost*.
 
 ### 2.2 Studio
 

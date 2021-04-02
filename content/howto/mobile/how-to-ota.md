@@ -15,6 +15,8 @@ Native apps are separated into two parts: a wrapper that is basically a native i
 
 OTA updates are bound to a specific app version and build number. Therefore, you can target specific updates to specific versions of your app. For example, you can push an update for version 1.0.0 as a legacy version that supports older devices, and also push an update for the 2.0.0 version of your app which includes more features.
 
+For information on using OTA updates using App Center's CodePush, see [How to Release OTA Updates with App Center's CodePush](ota-with-appcenters-codepush).
+
 {{% alert type="info" %}} 
 Currently OTA  does not update your app while the app is open or minimized.
 {{% /alert %}}
@@ -191,7 +193,7 @@ Generally, you should avoid doing destructive changes to offline-synced entities
 
 ### 8.1 Offline Apps and Data Loss
 
-Data loss can occur when OTA updates or new releases coincide with apps being offline. For example, imagine your Mendix developers were hard at work optimizing the data store entity structure by consolidating entities to speed up sync operations. They release that morning. They push a new runtime by pressing the **Run** button in Studio Pro, and then run the Native Builder to push a new update to the apps. All seems to work fine. 
+Data loss can occur when OTA updates or new releases coincide with apps being offline. For example, imagine your Mendix developers were hard at work optimizing the data store entity structure by consolidating entities to speed up sync operations. They release that morning. They push a new runtime by clicking the **Publish** button in Studio Pro, and then run the Native Builder to push a new update to the apps. All seems to work fine. 
 
 That same morning however, your engineers were hard at work gathering field data in a remote area. Later that afternoon the engineers return back to the city and attempt to synchronize their data using the app's built-in synchronize button. Their synchronization fails. They do the only thing they can think of: restart the app. When the app starts they are greeted with the **Update Available** screen. They hit the continue button, get updated, and their data is lost or partially synchronized.
 
@@ -200,6 +202,7 @@ This issue is independent from OTA updates and specific to offline apps. Your of
 ## 9 Read More
 
 * [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app)
+* [How to Release OTA Updates with App Center's CodePush](ota-with-appcenters-codepush)
 * [Native Builder Reference Guide](/refguide/native-builder)
 * [Offline First Reference Guide](/refguide/offline-first)
 * [Codepush Introduction](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/)

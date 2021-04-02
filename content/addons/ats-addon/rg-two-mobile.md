@@ -5,7 +5,7 @@ parent: "rg-two-ats"
 
 ## 1 Introduction
 
-Mobile testing on real devices in ATS is an experimental feature and still in beta.
+Mobile testing on real devices in ATS is an experimental feature and still in Beta.
 
 ### 1.1 Compatibility
 

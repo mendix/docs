@@ -18,7 +18,7 @@ If your company does not already have a Mendix Admin, you will see a landing pag
 
 If your company does already have a Mendix Admin (but you yourself are not a Mendix Admin), you will see this landing page:
 
-![](attachments/admin-exists.jpg)
+![](attachments/control-center.png)
 
 If you are a Mendix Admin, you will immediately see the **Members** page and can navigate to the pages described in the sections below.
 

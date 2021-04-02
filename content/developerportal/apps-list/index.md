@@ -47,6 +47,9 @@ The actions available depend on the app selected:
 * **Edit in Mendix Studio Pro**
 * **Delete App** – allows you to delete your app, provided you are the only team member (you will be warned of the consequences and asked for confirmation before the app is deleted)
 
+### 2.3 Go to Environments {#environments}
+To go to the environments of your deployed app, click the cloud icon in the bottom-right corner of the app tile.
+
 ### 2.4 Pinning an App {#pinning}
 
 To pin an app, click the pin icon so that it turns black in the bottom-left corner of the app's tile:
@@ -75,6 +78,6 @@ If you click an app for which you are not an App Team member, you will see the a
 
 This shows a list of all the licensed Mendix Cloud nodes to which you have access:
 
-![Licensed Mendix Cloud nodes](attachments/nodes-list.png)
+![Licensed Mendix Cloud nodes](attachments/nodes-view.png)
 
 Clicking the **Details button** will take you to the [Environments](/developerportal/deploy/environments) page for the app that is deployed to this node.

@@ -36,7 +36,7 @@ This mode synchronizes objects partially, based on a selection:
 ![Synchronize](attachments/client-activities/synchronize-objects-selection.png)
 {{% /image_container %}}
 
-With this mode, only the selected objects or lists are synchronized. The synchronization is bi-directional, 
+With this mode, only the selected objects or lists are synchronized. The synchronization is bi-directional,
 meaning both the server database and the local database is updated for the selected objects.
 
 If the set of objects selected for synchronization contains any objects that have not been committed yet, those objects will be skipped and thus not synchronized.
@@ -54,9 +54,9 @@ If the set of objects selected for synchronization contains objects without loca
 
 The **Synchronize** activity properties consists of the following sections:
 
-* [Action](#action) 
+* [Action](#action)
 
-* [Common](#common)  
+* [Common](#common)
 
 	{{% image_container width="300" %}}![Synchronize Action Properties](attachments/client-activities/synchronize-properties.png){{% /image_container %}}
 
@@ -68,7 +68,17 @@ The **Action** section of the properties pane shows the action associated with t
 
 {{% snippet file="refguide/microflow-common-section-link.md" %}}
 
-## 5 Read More
+## 5 Limitations
+
+Running multiple synchronization processes at the same time is not supported, regardless the type (full/selective).
+
+If you try to trigger another synchronization process while the synchronization is in progress, the error message will be shown:
+
+"Performing simultaneous synchronizations is not supported. Please try again after the current synchronization is completed."
+
+Such an error can be handled in the nanoflow from which the synchronization attempt was triggered using [error handlers](refguide/error-event#errorhandlers).
+
+## 6 Read More
 
 * [Activities](activities)
 * [Offline-first](offline-first)

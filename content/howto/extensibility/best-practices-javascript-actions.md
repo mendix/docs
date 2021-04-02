@@ -368,7 +368,7 @@ These are the most commonly used promise functions:
 * `Promise.reject(errorMessage)`: returns a `Promise` object that is rejected, and will explain that the rejection will induce an error in the nanoflow
 * `.then()`: enables chaining promises, which will make the code easier to read than nested callback functions
 
-More recent additions to the JavaScript language are **async functions** and the `await` keyword. These features make asynchronous code easier to write and to read afterwards by making async code looking more like synchronous code. There are two parts to using `async/await` in your code:
+More recent additions to the JavaScript language are `async functions` and the `await` keyword. These features make asynchronous code easier to write and to read afterwards by making async code looking more like synchronous code. There are two parts to using `async/await` in your code:
 
 * `async` keyword, which you put in front of function declarations to turn them into async functions (telling them to return a promise rather than directly returning the value)
 * `await` can be put in front of any async promise-based function to pause your code on that line until the promise fulfills, then return the resulting value

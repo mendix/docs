@@ -145,30 +145,29 @@ The **General** tab contains basic properties for configuring position:
 In the **General** tab you can configure **Position**, **Rotation**, and **Scale** (**X** stands for left/right, **Y**
 for up/down, and **Z** for depth):
 
-- **Position** — the position relative to the image tracker. For example, since the position is relative to the
-  tracker size, set **X** to _0.1_ to make your object appear right beside the tracker instead of on top of it:
+*  **Position** — the position relative to the image tracker. For example, since the position is relative to the tracker size, set **X** to _0.1_ to make your object appear right beside the tracker instead of on top of it:
 
-      	Here is a cube in **Position** (0.1,0,0):
-
-      	{{% image_container width="300" %}}![Cube on Position (0.1,0,0)](attachments/how-to-ar-simple-cube/first-position.jpg){{% /image_container %}}
-
-      	Here is a cube in **Position** (0,0.1,0):
-
-      	{{% image_container width="300" %}}![Cube on Position (0,0.1,0)](attachments/how-to-ar-simple-cube/second-position.jpg){{% /image_container %}}
-
-      	Here is a cube in **Position** (0,0,0.1):
-
-      	{{% image_container width="300" %}}![Cube on Position (0,0,0.1)](attachments/how-to-ar-simple-cube/third-position.jpg){{% /image_container %}}
+	Here is a cube in **Position** (0.1,0,0):
+    
+	{{% image_container width="300" %}}![Cube on Position (0.1,0,0)](attachments/how-to-ar-simple-cube/first-position.jpg){{% /image_container %}}
+    
+	Here is a cube in **Position** (0,0.1,0):
+    
+	{{% image_container width="300" %}}![Cube on Position (0,0.1,0)](attachments/how-to-ar-simple-cube/second-position.jpg){{% /image_container %}}
+    
+	Here is a cube in **Position** (0,0,0.1):
+    
+	{{% image_container width="300" %}}![Cube on Position (0,0,0.1)](attachments/how-to-ar-simple-cube/third-position.jpg){{% /image_container %}}
 
 - **Rotation** — the rotation of the cube in 360 degrees. Set **Rotation** **X** to _45_ to see your cube rotated 45
   degrees on its X axis:
 
       	Here is a cube with **Rotation** (0,0,0):
-
+    
       	{{% image_container width="300" %}}![Cube with Rotation (0,0,0)](attachments/how-to-ar-simple-cube/rotation-zero.jpg){{% /image_container %}}
-
+    
       	Here is a cube with **Rotation** (45,0,0):
-
+    
       	{{% image_container width="300" %}}![Cube with Rotation (45,0,0)](attachments/how-to-ar-simple-cube/rotation-forty-five.jpg){{% /image_container %}}
 
 - **Scale** — the size of the object, also relative to the tracker it is embedded in. When the **Scale** is set to
@@ -176,11 +175,11 @@ for up/down, and **Z** for depth):
   and **Z** to _0.05_ to see your cube shrink in the tracker:
 
       	Here is a cube with **Scale** (0.1,0.1,0.1):
-
+    
       	{{% image_container width="300" %}}![Cube with Scale (0.1,0.1,0.1)](attachments/how-to-ar-simple-cube/scale-one.jpg){{% /image_container %}}
-
+    
       	Here is a cube with **Scale** (0.05,0.05,0.05):
-
+    
       	{{% image_container width="300" %}}![Cube with Scale (0.05,0.05,0.05)](attachments/how-to-ar-simple-cube/scale-half.jpg){{% /image_container %}}
 
 For **Position**, **Rotation** and **Scale** an **Attribute** can also be used to set the **Position**, **Rotation** and
@@ -223,11 +222,11 @@ The **Material** tab contains properties for configuring appearance:
   see them in action:
 
       	Here is a cube with **Lighting type** > **Phong**:
-
+    
       	{{% image_container width="300" %}}![Cube with lighting type Phong](attachments/how-to-ar-simple-cube/phong.jpg){{% /image_container %}}
-
+    
       	Here is a cube with **Lighting type** > **Constant**:
-
+    
       	{{% image_container width="300" %}}![Cube with lighting type Constant](attachments/how-to-ar-simple-cube/constant.jpg){{% /image_container %}}
 
 ### 4.3 Interaction

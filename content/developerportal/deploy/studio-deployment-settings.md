@@ -20,9 +20,7 @@ When you deploy to a target environment from Mendix Studio Pro, the deployment w
 
 To select the target environment, do the following:
 
-1.  Open **Deploy** > **Environments** in the left menu bar in the Developer Portal.
-
-    ![Environments in the Developer Portal](attachments/studio-deployment-settings/developer-portal-deploy-environments.png)
+1.  Open **Environments** in the left menu bar in the Developer Portal.
 
 2.  <a name="target"></a>In the **Deploy** tab, click **Setup Studios Deployment**:
 

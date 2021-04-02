@@ -73,7 +73,7 @@ The selected workflow is opened.
 
 ### 3.2 Adding a Workflow
 
-To add a workflow to your app project, do the following:
+To add a workflow to your app, do the following:
 
 1. In the [Project Explorer](project-explorer), right-click the module or a folder you want to create a page in and select **Add workflow**:
 
@@ -113,7 +113,7 @@ To view properties of an element, do one of the following:
 
 ## 4 Workflow Entities in the System Module {#workflow-entities}
 
-There are several workflow-related entities in the System module of your app project, some of which can be used in in an XPath and expressions, and some are there as basic entities that are internally only (for example, by the Runtime). 
+There are several workflow-related entities in the System module of your app, some of which can be used in in an XPath and expressions, and some are there as basic entities that are internally only (for example, by the Runtime). 
 
 You can find the following workflow-related entities in the System module:
 

@@ -31,7 +31,7 @@ If you generate the page using the templates in **Workflows Commons** module, th
 
 #### 2.2.1 Name {#name}
 
-**Name** is the internal name of the workflow document. When referring to the workflow in the app project you will use this name. It must be unique within the module, but you can have two workflows with the same name in different modules. When referring to the workflow, you will normally prepend the name of the module to ensure uniqueness and allow you to use workflows in other modules. 
+**Name** is the internal name of the workflow document. When referring to the workflow in the app you will use this name. It must be unique within the module, but you can have two workflows with the same name in different modules. When referring to the workflow, you will normally prepend the name of the module to ensure uniqueness and allow you to use workflows in other modules. 
 
 You cannot change the **Name** of the workflow but you can change the [Caption](#general).
 

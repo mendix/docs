@@ -9,6 +9,13 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2021
 
+### April 7th, 2021
+
+* We added a section for Studio Pro versions that have Long-Term Support (LTS) and Medium-Term Support (MTS) in the Studio Pro download page. [Read here](/releasenotes/studio-pro/lts-mts#1-introduction) for more information of LTS and MTS versions.
+	{{% alert type="info" %}}This is based on an [upvoted idea from Alexander Keßler](https://forum.mendixcloud.com/link/ideas/2212) submitted to the [Mendix Idea Forum](https://forum.mendixcloud.com/link/ideas). Thanks, Alexander!
+	{{% /alert %}}
+* We fixed some performance issues, where certain sections were not loading properly. This also includes connection issues to Appstore within Studio Pro.
+
 ### March 23rd, 2021
 
 * We added email notifications for several actions in the Marketplace. You can now receive emails if one of your components has changed, when a published component has received a review, and when you receive a reply to one of your reviews. You can unsubscribe from any of notifications in the [My App Store](/appstore/general/app-store-overview#my-app-store) section of the of Marketplace.

@@ -23,7 +23,7 @@ Using the Data Hub API you can create a deployment process for your apps to regi
 
 - Search the catalog for a string of characters – [Searching in the Catalog](#api-search)
 - Register the service in the Catalog – [Registration](#reg-contract)
-- Register consumed datasets by an App – [Registering Consuned Endpoints](#consumed-ep)
+- Register consumed datasets by an App – [Registering Consumed Endpoints](#consumed-ep)
 
 You can try out the calls described by following the examples that are provided in the accompanying document: [Data Hub API Examples](data-hub-api-how-to-examples). The values for the call bodies are included and also a sample OData v3 file that you can use to try the registration calls. 
 

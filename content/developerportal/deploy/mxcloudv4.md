@@ -23,7 +23,7 @@ Mendix Cloud v4 is a mature product, launched in Q1 2017, and has a number of im
 
 ## 2 Can I Upgrade All My Apps?
 
-If you are currently using Mendix Cloud v3, you can to move your app(s) from v3 to v4 using the the instructions in [Migrate to Mendix Cloud v4](migrating-to-v4).
+If you are currently using the deprecated Mendix Cloud v3, you can to move your app(s) from v3 to v4 using the the instructions in [Migrate to Mendix Cloud v4](migrating-to-v4).
 
 The most important thing is that your app needs to be on a supported version of Mendix, that is **Mendix version 6.0 or above**.
 

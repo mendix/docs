@@ -8,7 +8,7 @@ tags: ["Deploy","App","Developer Portal"]
 
 ## 1 Introduction
 
-In the **Environments** section of the **Deploy** category, there is an overview of three tabs:
+On the **Environments** page, there are three tabs:
 
 * **Deploy**
     * Deployment Package Repository
@@ -96,7 +96,7 @@ There are three types of environment statuses:
 The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status.
 {{% /alert %}}
 
-To see the details of the alerts, click **Alerts** under the **Deploy** category. This is documented here: [Alerts](/developerportal/operate/monitoring-application-health).
+To see the details of the alerts, click **Alerts**. This is documented here: [Alerts](/developerportal/operate/monitoring-application-health).
 
 **Actions**
 

@@ -1,12 +1,12 @@
 ---
 title: "Operations"
-description: "The day-to-day operation of an app from the Operate category of the Developer Portal. This is mainly useful for apps running in the Mendix Cloud."
+description: "The day-to-day operation of an app from the the Developer Portal. This is mainly useful for apps running in the Mendix Cloud."
 tags: ["Operate", "App", "Developer Portal", "Metrics", "Alerts", "Logs", "Backups", "Mendix Cloud", "v3", "v4"]
 ---
 
 ## 1 Introduction
 
-When you have created your app, it is important to be able to manage it. The **Operate** section of the Developer Portal allows you to look at the app's performance and to ensure that data is backed up and can be restored under your control.
+When you have created your app, it is important to be able to manage it. There are a number of pages in the Developer Portal which allow you to look at the app's performance and to ensure that data is backed up and can be restored under your control.
 
 Access to operations information is divided into four pages:
 
@@ -18,7 +18,7 @@ Metrics, alerts, and logs are not available for Free Apps running in the Mendix 
 
 ## 2 Operations Pages
 
-The four operations pages are described below.
+The four operations pages which allow you to monitor your operations are described below.
 
 ### 2.1 Metrics
 

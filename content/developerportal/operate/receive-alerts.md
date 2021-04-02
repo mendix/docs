@@ -57,7 +57,7 @@ You can manage the alerts by yourself, follow these steps:
 2. Click **Apps** in the top navigation panel.
 3. Click **My Apps** and select **Nodes**.
 4. Open the node by clicking **Details**.
-5.  Click **Alerts** under the **Operate** category. 
+5.  Click **Alerts**. 
 
     ![](attachments/receive-alerts/operate.png)
 

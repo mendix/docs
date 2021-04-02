@@ -20,7 +20,7 @@ For deployments to the Mendix Cloud, you will not have access to the m2ee admin 
 * [Running Now Metrics](/developerportal/operate/troubleshooting-mxcloud-runningnow)
 {{% /alert %}}
 
-You can change the admin port from Studio Pro by navigating to **Project** > **Settings** > **Configurations** > *your configuration* > **Server** > **Admin port**.
+You can change the admin port from Studio Pro by navigating to **App** > **Settings** > **Configurations** > *your configuration* > **Server** > **Admin port**.
 
 The request needs to be of the **POST** type with **No Authorization** and the following headers:
 

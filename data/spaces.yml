@@ -16,24 +16,6 @@ addons:
     - "ATS"
     - "APD"
     - "AQM"
-howto6:
-  space: "Mendix 6 How-to's"
-  priority: false
-  mendix_version: 6
-  noindex: true
-  menu_categories:
-    - "Getting Started"
-    - "Data Models"
-    - "GUIs"
-    - "Logic & Business Rules"
-    - "Mobile"
-    - "Security"
-    - "Integration"
-    - "Extendability"
-    - "Custom Widget Development"
-    - "Testing"
-    - "Monitoring & Troubleshooting"
-    - "Collaboration & Project Management"
 howto7:
   space: "Mendix 7 How-to's"
   priority: 6
@@ -85,22 +67,6 @@ howto:
     - "Security"
     - "Testing"
     - "Monitoring & Troubleshooting"
-  banner:
-    type: 'info'
-    text: 'You are browsing the documentation for Mendix 9, which is currently a <a href="/releasenotes/beta-features/index">beta release</a>. If you are looking for Mendix 8 documentation, see <a href="/howto8/index">Studio Pro 8 How-to&#39;s</a>.'
-refguide6:
-  space: "Mendix 6 Reference Guide"
-  priority: false
-  mendix_version: 6
-  noindex: true
-  menu_categories:
-    - "General"
-    - "Team Server"
-    - "Modeler"
-    - "Runtime"
-    - "Java Programming"
-    - "Mobile"
-    - "Proactive Maintenance"
 refguide7:
   space: "Mendix 7 Reference Guide"
   priority: 7
@@ -137,9 +103,6 @@ refguide:
     - "Mendix Runtime"
     - "Mobile"
     - "Java Programming"
-  banner:
-    type: 'info'
-    text: 'You are browsing the documentation for Mendix 9, which is currently a <a href="/releasenotes/beta-features/index">beta release</a>. If you are looking for Mendix 8 documentation, see <a href="/refguide8/index">Studio Pro 8 Guide</a>.'
 releasenotes:
   space: "Release Notes"
   priority: false
@@ -177,14 +140,12 @@ studio:
     - "Working with Data"
     - "Navigation Document"
     - "Microflows"
+    - "Workflows"
     - "Previewing & Publishing Your App"
     - "Checks"
     - "Theme Customizer"
     - "Settings"    
     - "Collaboration"
-  banner:
-    type: 'info'
-    text: 'You are browsing the documentation for Mendix 9, which is currently a <a href="/releasenotes/beta-features/index">beta release</a>. If you are looking for Mendix 8 documentation, see <a href="/studio8/index">Studio 8 Guide </a>.'
 studio8:
   space: "Studio 8 Guide"
   priority: false
@@ -225,9 +186,6 @@ studio-how-to:
     - "Secure Your App and Configure Access to Its Functionality"
     - "Microflows"
     - "Customize the Design of Your App"
-  banner:
-    type: 'info'
-    text: 'You are browsing the documentation for Mendix 9, which is currently a <a href="/releasenotes/beta-features/index">beta release</a>. If you are looking for Mendix 8 documentation, see <a href="/studio-how-to8/index">Studio 8 How-to&#39;s</a>.'
 studio-how-to8:
   space: "Studio 8 How-to's"
   priority: false

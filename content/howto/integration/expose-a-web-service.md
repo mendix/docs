@@ -131,7 +131,7 @@ To get a WSDL, follow these steps:
 
 To change the user authentication, follow these steps:
 
-1. Double-click the published web service in the **Project Explorer** to open it.
+1. Double-click the published web service in the **App Explorer** to open it.
 2. In the **Published Web Service** properties window, open the **Settings** tab. Because **No Authentication** is set, currently users of the web service do not need to authenticate:
 
     ![](attachments/18448728/18581702.png)

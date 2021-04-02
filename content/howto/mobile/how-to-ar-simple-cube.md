@@ -159,33 +159,27 @@ for up/down, and **Z** for depth):
     
 	{{% image_container width="300" %}}![Cube on Position (0,0,0.1)](attachments/how-to-ar-simple-cube/third-position.jpg){{% /image_container %}}
 
-- **Rotation** — the rotation of the cube in 360 degrees. Set **Rotation** **X** to _45_ to see your cube rotated 45
-  degrees on its X axis:
+*  **Rotation** — the rotation of the cube in 360 degrees. Set **Rotation** **X** to _45_ to see your cube rotated 45 degrees on its X axis:
 
-      	Here is a cube with **Rotation** (0,0,0):
+	Here is a cube with **Rotation** (0,0,0):
     
-      	{{% image_container width="300" %}}![Cube with Rotation (0,0,0)](attachments/how-to-ar-simple-cube/rotation-zero.jpg){{% /image_container %}}
+	{{% image_container width="300" %}}![Cube with Rotation (0,0,0)](attachments/how-to-ar-simple-cube/rotation-zero.jpg){{% /image_container %}}
     
-      	Here is a cube with **Rotation** (45,0,0):
+	Here is a cube with **Rotation** (45,0,0):
     
-      	{{% image_container width="300" %}}![Cube with Rotation (45,0,0)](attachments/how-to-ar-simple-cube/rotation-forty-five.jpg){{% /image_container %}}
+	{{% image_container width="300" %}}![Cube with Rotation (45,0,0)](attachments/how-to-ar-simple-cube/rotation-forty-five.jpg){{% /image_container %}}
 
-- **Scale** — the size of the object, also relative to the tracker it is embedded in. When the **Scale** is set to
-  _(0,0,0)_ the object will be invisible. Because **0.1** is exactly the size of the tracker, set **Scale X**, **Y**
-  and **Z** to _0.05_ to see your cube shrink in the tracker:
+*  **Scale** — the size of the object, also relative to the tracker it is embedded in. When the **Scale** is set to _(0,0,0)_ the object will be invisible. Because **0.1** is exactly the size of the tracker, set **Scale X**, **Y**  and **Z** to _0.05_ to see your cube shrink in the tracker:
 
-      	Here is a cube with **Scale** (0.1,0.1,0.1):
+	Here is a cube with **Scale** (0.1,0.1,0.1):
     
-      	{{% image_container width="300" %}}![Cube with Scale (0.1,0.1,0.1)](attachments/how-to-ar-simple-cube/scale-one.jpg){{% /image_container %}}
+	{{% image_container width="300" %}}![Cube with Scale (0.1,0.1,0.1)](attachments/how-to-ar-simple-cube/scale-one.jpg){{% /image_container %}}
     
-      	Here is a cube with **Scale** (0.05,0.05,0.05):
+	Here is a cube with **Scale** (0.05,0.05,0.05):
     
-      	{{% image_container width="300" %}}![Cube with Scale (0.05,0.05,0.05)](attachments/how-to-ar-simple-cube/scale-half.jpg){{% /image_container %}}
+	{{% image_container width="300" %}}![Cube with Scale (0.05,0.05,0.05)](attachments/how-to-ar-simple-cube/scale-half.jpg){{% /image_container %}}
 
-For **Position**, **Rotation** and **Scale** an **Attribute** can also be used to set the **Position**, **Rotation** and
-**Scale** **X** **Y** and **Z** values. These values will also get updated for example when the user uses their finger
-to move them. To use the **Attribute** option simply select this instead of **Expression** at **Position type**,
-**Rotation type** or **Scale type**.
+For **Position**, **Rotation** and **Scale** an **Attribute** can also be used to set the **Position**, **Rotation** and **Scale** **X** **Y** and **Z** values. These values will also get updated for example when the user uses their finger to move them. To use the **Attribute** option simply select this instead of **Expression** at **Position type**, **Rotation type** or **Scale type**.
 
 ### 4.2 Material {#material}
 
@@ -193,76 +187,56 @@ The **Material** tab contains properties for configuring appearance:
 
 {{% image_container width="300" %}}![Material](attachments/how-to-ar-simple-cube/material-tab.png){{% /image_container %}}
 
-- **Material type** - can be either **Texture**, **Color** or **Video**. **Material type** determains what will be put
+* **Material type** - can be either **Texture**, **Color** or **Video**. **Material type** determains what will be put
   onto the cube, an image, a color or a looping video.
 
-- **Texture** — an image you can place on the cube by clicking **Edit**. The image will appear on each face of the
-  cube. Put the example tracker here as a texture to end up with this colorful cube (note that the cube now ignores
-  any **Color** value — if you want to make your cube one solid color, make sure the Texture is set to **none**):
+* **Texture** — an image you can place on the cube by clicking **Edit**. The image will appear on each face of the cube. Put the example tracker here as a texture to end up with this colorful cube (note that the cube now ignores  any **Color** value — if you want to make your cube one solid color, make sure the Texture is set to **none**):
 
-      	{{% image_container width="300" %}}![Texture](attachments/how-to-ar-simple-cube/sample-texture.jpg){{% /image_container %}}
+	{{% image_container width="300" %}}![Texture](attachments/how-to-ar-simple-cube/sample-texture.jpg){{% /image_container %}}
 
-- **Color** — the color of the cube. You can have either a **Texture** or **Color**, but not both. _White_ is the
-  standard color. Change the value to _green_ to make your cube appear this way:
+* **Color** — the color of the cube. You can have either a **Texture** or **Color**, but not both. _White_ is the  standard color. Change the value to _green_ to make your cube appear this way:
 
-      	{{% image_container width="300" %}}![Color](attachments/how-to-ar-simple-cube/green-color.jpg){{% /image_container %}}
+	{{% image_container width="300" %}}![Color](attachments/how-to-ar-simple-cube/green-color.jpg){{% /image_container %}}
 
-- **Video** - a link to a .mp4 video. This will play a looping video on the object.
+* **Video** - a link to a .mp4 video. This will play a looping video on the object.
+* **Opacity** — the clarity or opacity of the cube. _1_ is fully opaque, while _0_ is fully transparent. Change the color of your cube back to _white_ and change the opacity value to _0.5_ to see your cube become partly transparent:
 
-- **Opacity** — the clarity or opacity of the cube. _1_ is fully opaque, while _0_ is fully transparent. Change the
-  color of your cube back to _white_ and change the opacity value to _0.5_ to see your cube become partly transparent:
+	{{% image_container width="300" %}}![Opacity](attachments/how-to-ar-simple-cube/opacity.jpg){{% /image_container %}}
 
-      	{{% image_container width="300" %}}![Opacity](attachments/how-to-ar-simple-cube/opacity.jpg){{% /image_container %}}
+*  **Lighting type** — the way light from the scene will fall on your object. 
+	**Phong**, **Blinn**, and **Lambert**  are standard configurations of adding light and shadows to your objects. They are also have relatively slight  processor power requirements. 		**Constant** means no light is added — just pure colors are shown. 
+	**PBR** — (Physically Based Rendering) is the most advanced. PBR takes the entire scene into account when creating its  lighting, the intricacies of which are beyond this how-to. Change between the various **Lighting type** options to  see them in action:
 
-- **Lighting type** — the way light from the scene will fall on your object. _ **Phong**, **Blinn**, and **Lambert**
-  are standard configurations of adding light and shadows to your objects. They are also have relatively slight
-  processor power requirements. _ **Constant** means no light is added — just pure colors are shown. \* **PBR**
-  (Physically Based Rendering) is the most advanced. PBR takes the entire scene into account when creating its
-  lighting, the intricacies of which are beyond this how-to. Change between the various **Lighting type** options to
-  see them in action:
-
-      	Here is a cube with **Lighting type** > **Phong**:
+	Here is a cube with **Lighting type** > **Phong**:
     
-      	{{% image_container width="300" %}}![Cube with lighting type Phong](attachments/how-to-ar-simple-cube/phong.jpg){{% /image_container %}}
+	{{% image_container width="300" %}}![Cube with lighting type Phong](attachments/how-to-ar-simple-cube/phong.jpg){{% /image_container %}}
     
-      	Here is a cube with **Lighting type** > **Constant**:
+	Here is a cube with **Lighting type** > **Constant**:
     
-      	{{% image_container width="300" %}}![Cube with lighting type Constant](attachments/how-to-ar-simple-cube/constant.jpg){{% /image_container %}}
+	{{% image_container width="300" %}}![Cube with lighting type Constant](attachments/how-to-ar-simple-cube/constant.jpg){{% /image_container %}}
 
 ### 4.3 Interaction
 
-**Interaction** is where Mendix AR gets more advanced. These properties dictate every way you can interact with your
-object. Enabling any of these will also allow you to catch the events they generate in the **Events** tab:
+**Interaction** is where Mendix AR gets more advanced. These properties dictate every way you can interact with your object. Enabling any of these will also allow you to catch the events they generate in the **Events** tab:
 
 {{% image_container width="300" %}}![Interaction tab](attachments/how-to-ar-simple-cube/interaction-tab.png){{% /image_container %}}
 
-- **Physics** — dictates how your object interacts with other 3D objects. Enabling it will not show an immediate
-  visible difference, but it will make it possible for other objects to collide with this object. _ **Physics type** —
-  how the object should physically behave. Selecting **Kinematic** will make your object move only when manipulated.
-  **Dynamic** objects will react to everything. **Static** objects will never move. _ **On collision** - an event that
-  is triggered when this objects collides with another 3D object with physics enabled. When this objects **Physics
-  type** is not **Dynamic** but is enabled, it can still collide with objects that are **Dynamic** and vice versa.
-  However, **Kinematic** and **Static** object cannot generate this event with other objects that are **Kinematic** or
-  **Static**. \_ **Use gravity** — sets if the object should be affected by gravity. Setting it to ‘Yes’ will make
-  your object fall until it meets another object with physics enabled. To put this information into practice, select
-  **Enable Physics** > **Yes**, select **Physics Type** > **Dynamic**, and select **Use Gravity** > **Yes** to enable
-  your cube’s physics:
+* **Physics** — dictates how your object interacts with other 3D objects. Enabling it will not show an immediate  visible difference, but it will make it possible for other objects to collide with this object. 
+* **Physics type** —  how the object should physically behave. Selecting **Kinematic** will make your object move only when manipulated.  **Dynamic** objects will react to everything. **Static** objects will never move.
+* **On collision** — an event that  is triggered when this objects collides with another 3D object with physics enabled. When this objects **Physics  type** is not **Dynamic** but is enabled, it can still collide with objects that are **Dynamic** and vice versa. However, **Kinematic** and **Static** object cannot generate this event with other objects that are **Kinematic** or  **Static**. 
+* **Use gravity** — sets if the object should be affected by gravity. Setting it to ‘Yes’ will make your object fall until it meets another object with physics enabled. To put this information into practice, select  **Enable Physics** > **Yes**, select **Physics Type** > **Dynamic**, and select **Use Gravity** > **Yes** to enable  your cube’s physics:
 
-      	{{% image_container width="300" %}}![Physics gif](attachments/how-to-ar-simple-cube/physics.gif){{% /image_container %}}
+	{{% image_container width="300" %}}![Physics gif](attachments/how-to-ar-simple-cube/physics.gif){{% /image_container %}}
 
-- **Dragging** — allows a user to manipulate an object by dragging it with their finger. This property gives users a
-  very instinctive way to move objects. _ **Dragging type** - the type of dragging behaviour you want, **Fixed
-  Distance** will make the object follow you at always the same distance as it started. **Fixed to world** will make
-  the object stick to the world, for example objects like floors, desks, walls etc. _ **On drag** - an event that is
-  triggered when the object is moved through dragging.
+* **Dragging** — allows a user to manipulate an object by dragging it with their finger. This property gives users a very instinctive way to move objects. 
+* **Dragging type** — the type of dragging behaviour you want, **Fixed  Distance** will make the object follow you at always the same distance as it started. **Fixed to world** will make the object stick to the world, for example objects like floors, desks, walls etc.
+*  **On drag** — an event that is triggered when the object is moved through dragging:
 
-      	{{% image_container width="300" %}}![Dragging gif](attachments/how-to-ar-simple-cube/dragging.gif){{% /image_container %}}
+	{{% image_container width="300" %}}![Dragging gif](attachments/how-to-ar-simple-cube/dragging.gif){{% /image_container %}}
 
-- **Pinching** — can be used to scale the object, similar to zooming in and out on a maps widget. Select **Enable
-  Pinching** > **Yes**, select **Enable Pinch to Scale** > **Yes**, and set the **Scale Factor** to 0.5, then pinch
-  out on your object to examine it in detail.
+*  **Pinching** — can be used to scale the object, similar to zooming in and out on a maps widget. Select **Enable  Pinching** > **Yes**, select **Enable Pinch to Scale** > **Yes**, and set the **Scale Factor** to 0.5, then pinch  out on your object to examine it in detail:
 
-      	{{% image_container width="300" %}}![Pinching gif](attachments/how-to-ar-simple-cube/pinching.gif){{% /image_container %}}
+	{{% image_container width="300" %}}![Pinching gif](attachments/how-to-ar-simple-cube/pinching.gif){{% /image_container %}}
 
 ### 4.4 Events
 
@@ -270,8 +244,7 @@ The **Events** tab appears this way:
 
 {{% image_container width="300" %}}![Events tab](attachments/how-to-ar-simple-cube/events-tab.png){{% /image_container %}}
 
-Events on 3D objects work like any other event on a widget. **On click** is called when the object is clicked, and **On
-hover** is called when the object is 'in focus' in the middle of the screen.
+Events on 3D objects work like any other event on a widget. **On click** is called when the object is clicked, and **On hover** is called when the object is 'in focus' in the middle of the screen.
 
 ### 4.5 Common
 
@@ -281,12 +254,10 @@ The **Common** tab appears this way:
 
 The **Common** tab has two important properties:
 
-- **Name** — is used internally in all AR Widgets and must be unique. It can be changed, but we recommend keeping its
-  generated name.
-- **Visible** — is used to dictate the visibility of the AR component. This can be conditional just like most other
-  widgets:
+* **Name** — is used internally in all AR Widgets and must be unique. It can be changed, but we recommend keeping its generated name.
+*  **Visible** — is used to dictate the visibility of the AR component. This can be conditional just like most other widgets:
 
-      	{{% image_container width="300" %}}![Visibility](attachments/how-to-ar-simple-cube/visibility.png){{% /image_container %}}
+	{{% image_container width="300" %}}![Visibility](attachments/how-to-ar-simple-cube/visibility.png){{% /image_container %}}
 
 ### 4.6 Appearance
 

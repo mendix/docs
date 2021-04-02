@@ -22,7 +22,7 @@ Call microflow properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
-**Name** is the internal name of the element. When referring to the element in the app project you will use this name. It must be unique within the workflow, but you can have two elements with the same name in different workflows. 
+**Name** is the internal name of the element. When referring to the element in the app you will use this name. It must be unique within the workflow, but you can have two elements with the same name in different workflows. 
 
 ### 2.2 General Section {#general}
 

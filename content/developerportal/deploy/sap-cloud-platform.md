@@ -26,7 +26,7 @@ Before you can manage your SAP BTP using the Developer Portal, you will need to 
 
 ### 2.1 Change Cloud Settings{#ChangeCloudSettings}
 
-In this scenario, you have an existing app which is running in another environment: for instance, on the Mendix Cloud. To change this, go to the Cloud Settings tab of the General Settings in the Development Portal.
+In this scenario, you have an existing app which is running in another environment: for instance, on the Mendix Cloud. To change this, go to the **Cloud Settings** tab of the **General Settings** in the left-hand menu of the Development Portal.
 
 ![](attachments/sap-cloud-platform/cloud-settings.png)
 

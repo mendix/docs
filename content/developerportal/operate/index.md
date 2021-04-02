@@ -8,9 +8,7 @@ tags: ["Operate", "App", "Developer Portal", "Metrics", "Alerts", "Logs", "Backu
 
 When you have created your app, it is important to be able to manage it. There are a number of pages in the Developer Portal which allow you to look at the app's performance and to ensure that data is backed up and can be restored under your control.
 
-Access to operations information is divided into four pages:
-
-![](attachments/operate.png)
+Access to operations information is divided into four pages: Metrics, Alerts, Logs, and Backups.
 
 {{% alert type="info" %}}
 Metrics, alerts, and logs are not available for Free Apps running in the Mendix Cloud, and you cannot make manual backups of Free Apps.

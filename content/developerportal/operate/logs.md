@@ -10,9 +10,7 @@ tags: ["Operate", "App", "Developer Portal", "SAP", "v3", "v4"]
 
 From this page of the Developer Portal, you can access the logs produced by your app. What you see depends on the environment to which your app is deployed.
 
-The page is accessed through the **Logs** menu item:
-
-![Navigate to Logs](attachments/logs/log-menu.png)
+The page is accessed through the **Logs** menu item in the left-hand menu.
 
 ## 2 Apps Deployed to Mendix Cloud Version 4
 

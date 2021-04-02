@@ -34,8 +34,6 @@ For many of the platforms to which Mendix can be deployed, the following pages i
 * Mobile App
 * App Services
 
-   ![](attachments/general/deploy.png)
-
 ### 3.1 Environments
 
 For supported platforms, the **Environments** page allows you to review and configure different aspects of your app. It also allows you to deploy to your chosen platform, configure individual environments, and transport your app between staging environments.

@@ -1,7 +1,6 @@
 ---
 title: "Windows Service"
 category: "Studio Pro"
-menu_order: 2
 aliases:
     - /releasenotes/desktop-modeler/windows-service.html
 ---

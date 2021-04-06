@@ -66,9 +66,9 @@ When an event is triggered, you can choose what action is triggered. Possible op
 * [Synchronize](#synchronize) 
 * [Sign out](#sign-out) 
 * [Call workflow](#call-workflow)
-* [Open workflow page](#open-workflow-page)
-* [Open task page](#open-task-page)
-* [Complete task](#complete-task)
+* [Show user task page](#show-user-task-page)
+* [Show workflow admin page](#show-workflow-page)
+* [Complete user task](#complete-task)
 
 ### 3.1 Do Nothing {#do-nothing}
 
@@ -275,29 +275,29 @@ The following properties are specific for this event:
 * **Close page** – Specifies whether the current page should be closed.
 * **Commit** – Specifies whether the data container object should be committed when running a workflow. 
 
-### 3.14 Open Workflow Page {#open-workflow-page}
+### 3.14 Show Workflow Admin Page {#show-workflow-page}
 
-**Open Workflow page** opens a workflow overview page. This page is typically used by a workflow administrator role to inspect status of a workflow instance and to manage the instance, e.g. abort a workflow if required.
+**Show workflow admin page** opens a workflow overview page. This page is typically used by a workflow administrator role to inspect status of a workflow instance and to manage the instance, e.g. abort a workflow if required.
 
 An element calling this event should be placed in a data container connected to the **System.WorkflowInstance** entity. 
 
 For more information on workflow-related entities in the System module, see the the [Workflow Entities in the System Module](workflows#workflow-entities) section in *Workflows*. 
 
-### 3.15 Open Task Page {#open-task-page}
+### 3.15 Show User Task Page {#show-user-task-page}
 
-**Open task page** opens an overview page set for the [user task](user-task) in properties. An element calling this event should be placed in a data container connected to the **System.WorkflowUserTask** entity. 
+**Show user task page** opens an overview page set for the [user task](user-task) in properties. An element calling this event should be placed in a data container connected to the **System.WorkflowUserTask** entity. 
 
 For more information on workflow-related entities in the System module, see the the [Workflow Entities in the System Module](workflows#workflow-entities) section in *Workflows*. 
 
-### 3.16  Complete Task {#complete-task}
+### 3.16  Complete User Task {#complete-task}
 
-The **Complete task** event marks the specified user task in the workflow as completed.
+The **Complete user task** event marks the specified user task in the workflow as completed.
 
 An element calling this event should be placed in a data container connected to the **System.WorkflowUserTask** entity. 
 
 The following properties are specific for this event:
 
-* **Workflow task** – The [user task](user-task) that should be marked as completed.
+* **User task** – The [user task](user-task) that should be marked as completed.
 
 * **Outcome** – Lists the outcomes of the selected [user task](user-task) and follows the selected outcome. If the user task has only one outcome, the **Default** is set as an outcome and the property cannot be edited. 
 

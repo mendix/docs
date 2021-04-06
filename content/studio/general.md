@@ -19,8 +19,6 @@ The picture below shows the components of Studio's interface:
 
 ![Studio Diagram](attachments/general/home-page.png)
 
-{{% todo %}}[Update the diagram]{{% /todo %}}
-
 ## 2 Opening Studio
 
 You can open Mendix Studio via [Developer Portal](#opening-studio-via-dev-portal) or [Studio Pro](#opening-via-studio-pro). 

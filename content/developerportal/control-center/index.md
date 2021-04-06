@@ -30,7 +30,7 @@ Members are users who can view and/or edit an app. On the **Active members** tab
 
 ![](attachments/members.jpg)
 
-When you click a company member's name, a pop-up window opens with their member profile. The profile displays the app **Projects** of which they are a member as well as their **Project role** for each project. Click a project name to go to its [project profile](#projects) pop-up window.
+When you click a company member's name, a pop-up window opens with their member profile. The profile displays the **App Projects** of which they are a member as well as their **Project role** for each project. Click a project name to go to its [project profile](#projects) pop-up window.
 
 On the **Inactive members** tab, you can see former members of your company who have been deactivated.
 

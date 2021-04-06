@@ -23,8 +23,8 @@ You can find the description of possible on-click actions below:
 * [Page](#show-page) 
 * [Microflow](#microflow) 
 * [Call Workflow](#call-workflow) 
-* [Open Workflow Page](#open-workflow-page) 
-* [Open Task Page](#open-task-page)
+* [Show Workflow Page](#show-workflow-page) 
+* [Show Task Page](#show-task-page)
 * [Complete Task](#complete-task) 
 * [Save Changes](#save-changes) 
 * [Cancel Changes](#cancel-changes) 
@@ -77,7 +77,7 @@ The **Microflow** action executes the selected microflow. The **Microflow** prop
 
 ### 2.4 Call Workflow {#call-workflow}
 
-The **Call workflow** action executes the specified workflow. 
+The **Call Workflow** action executes the specified workflow. 
 
 The following properties are specific for this action:
 
@@ -85,21 +85,21 @@ The following properties are specific for this action:
 * **Close page** – Specifies whether the current page should be closed.
 * **Commit** – Specifies whether the object should be committed when running a workflow. 
 
-### 2.5 Open Workflow Page {#open-workflow-page}
+### 2.5 Show Workflow Page {#show-workflow-page}
 
-**Open workflow page** opens an overview page set for the **Workflow page** in [workflow properties](workflow-properties). An element with this on-click action should be placed in a data container connected to the **System.WorkflowInstance** entity. {{% todo %}}[The warning in properties gives a simpler explanation, but is confusing, because it appears even when I select a workflow entity]{{% /todo %}}
+**Show Workflow Page** opens an overview (admin) page. An element with this on-click action should be placed in a data container connected to the **System.WorkflowInstance** entity. 
 
-### 2.6 Open Task Page {#open-task-page}
+### 2.6 Show Task Page {#show-task-page}
 
-**Open task page** opens an overview page set for the [user task](workflows-user-task) in properties. An element with this on-click action should be placed in a data container connected to the **System.WorkflowUserTask** entity. {{% todo %}}[The warning in properties gives a simpler explanation, but is confusing, because it appears even when I select a workflow entity]{{% /todo %}}
+**Show Task Page** opens an overview page set for the [user task](workflows-user-task) in properties. An element with this on-click action should be placed in a data container connected to the **System.WorkflowUserTask** entity. 
 
 ### 2.7 Complete Task {#complete-task}
 
-The **Complete task** action marks the specified user task in the workflow as completed.
+The **Complete Task** action marks the specified user task in the workflow as completed.
 
 The following properties are specific for this action:
 
-* **Workflow task** – The [user task](workflows-user-task) that should be marked as completed.
+* **Task** – The [user task](workflows-user-task) that should be marked as completed.
 
 * **Outcome** – Lists the outcomes of the selected [user task](workflows-user-task) and follows the selected outcome. If the user task has only one outcome, the **Default** is set as an outcome and the property cannot be edited. 
 

@@ -102,9 +102,9 @@ Integration activities can be used to integrate with other systems, for example 
 
 Workflow activities are used in relation to workflows and their user tasks. 
 
-| Graphic                                                      | Name                                     | Description                                                  |
-| ------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------ |
-| [![](attachments/activities/complete-task.png)](complete-task) | [Complete task](complete-task)           | Sets which outcome the [user task](user-task) should follow. For example, this activity can be used to complete a user task using a microflow with custom validations. |
-| [![](attachments/activities/open-task-page.png)](open-task-page)               | [Open task page](open-task-page)         | Opens a user task page specified in [user task properties](user-task). |
-| [![](attachments/activities/open-workflow-page.png)](open-workflow-page)           | [Open workflow page](open-workflow-page) | Opens a workflow overview page.                              |
-| [![](attachments/activities/workflow-call.png)](workflow-call)                | [Workflow call](workflow-call)           | Triggers the selected workflow.                              |
+| Graphic                                                      | Name                                           | Description                                                  |
+| ------------------------------------------------------------ | ---------------------------------------------- | ------------------------------------------------------------ |
+| [![](attachments/activities/complete-task.png)](complete-task) | [Complete user task](complete-task)            | Sets which outcome the [user task](user-task) should follow. For example, this activity can be used to complete a user task using a microflow with custom validations. |
+| [![](attachments/activities/open-task-page.png)](show-task-page) | [Show user task page](show-task-page)          | Opens a user task page specified in [user task properties](user-task). |
+| [![](attachments/activities/open-workflow-page.png)](show-workflow-page) | [Show workflow admin page](show-workflow-page) | Opens a workflow overview page.                              |
+| [![](attachments/activities/workflow-call.png)](workflow-call) | [Workflow call](workflow-call)                 | Triggers the selected workflow.                              |

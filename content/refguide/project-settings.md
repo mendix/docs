@@ -293,11 +293,11 @@ Allows you to set a maximum number of workflows/user tasks that can be executed 
 
 ### 7.2.1 Parallel Workflow Executions
 
-Defines the maximum number of workflows that can be executed simultaneously. The limit is 40. 
+Defines the maximum number of workflows that can be executed simultaneously. The limit is 10. 
 
 ### 7.2.2 Parallel Task Executions
 
-Defines the maximum number of user tasks that can be executed simultaneously. The limit is 40.
+Defines the maximum number of user tasks that can be executed simultaneously. The limit is 10.
 
 ## 8 Miscellaneous Tab {#miscellaneous}
 

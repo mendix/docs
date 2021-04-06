@@ -9,10 +9,7 @@ tags: ["workflow", "workflows", "user task", "task"]
 
 User task allows you to assign a workflow task to a certain user. 
 
-For example, you can add filters and assign a task to the IT department. When the workflow reaches this user task, the task will appear in their inbox:
-{{% todo %}}[This page in a running up will look different with Atlas 3 changes. Update the screenshot.]{{% /todo %}}
-
-![Task Inbox](attachments/workflows-user-task/task-inbox.jpg)
+For example, you can add filters and assign a task to the IT department. When the workflow reaches this user task, the task will appear in their inbox.
 
 ## 2 Properties
 

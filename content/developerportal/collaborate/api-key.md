@@ -16,7 +16,7 @@ In **API Keys**, there is an overview of the API keys created for your app with 
 *   Date of **Creation**
 *   Date **Last Used**
 
-{{% image_container width="550" %}}![](attachments/keys.png)
+{{% image_container width="550" %}}![](attachments/api-key/keys.png)
 {{% /image_container %}}
 
 Click **Revoke** to delete an app API key.

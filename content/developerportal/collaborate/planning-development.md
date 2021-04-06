@@ -12,7 +12,7 @@ aliases:
 
 The **Planning** page of the Developer Portal provides an overview of the progression of the [stories](../collaborate/stories) for the app.
 
-![](attachments/planning.png)
+![](attachments/planning/planning.png)
 
 This page has three tabs, which are described below.
 
@@ -22,7 +22,7 @@ On this tab, there is a Kanban overview of the [stories](../collaborate/stories)
 
 There is also a percentage bar of the stories that are done and the deadline date of the current Sprint:
 
-![](attachments/sprint-status.jpg)
+![](attachments/planning/sprint-status.jpg)
 
 You can click **Mark current sprint as completed** only when all stories have the **Done** status.
 
@@ -40,7 +40,7 @@ This tab graphically presents the progress of the current Sprint:
 * **Remaining Effort** – the amount of story points that still have to be completed
 * **New Stories** – the amount of new story points added on a specific day
 
-![](attachments/burndownchart.png)
+![](attachments/planning/burndownchart.png)
 
 Under **Sprint History**, you can view burndown charts for completed sprints.
 
@@ -53,9 +53,7 @@ Click **Edit** to make changes in a specific Sprint or release (for example, to 
 Click **Plan Something** to plan a **Sprint**, **Release**, or **Other**.
 
 {{% alert type="info" %}}
-
 All the changes made on this page are directly passed on to the **Stories** page and vice versa.
-
 {{% /alert %}}
 
 ## 5 Read More

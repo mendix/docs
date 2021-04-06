@@ -20,13 +20,13 @@ On the **Team** page, you will see an overview with the following information ab
 * **Name** – the developer's name
 * **Role** – the developer's App Team role (for details on available roles, see the [App Roles](/developerportal/collaborate/app-roles))
 
-![](attachments/team.png)
+![](attachments/team/team.png)
 
 ## 2 Managing the Team {#managing}
 
 When you click **Manage Team** in the top-right corner of the screen, you will be forwarded to the **Collaborate** > **Security** page. Note that only the following roles can see the **Manage Team** button: [Scrum Master](/developerportal/collaborate/app-roles#app-team-roles), [Mendix Admin](/developerportal/control-center), or a [custom role](/developerportal/collaborate/app-roles#app-team-roles) with  the **App Settings** permission.
 
-![](attachments/team-security.png)
+![](attachments/team/team-security.png)
 
 On the  **App Team** tab of the **Security** page, you can do the following:
 
@@ -35,7 +35,7 @@ On the  **App Team** tab of the **Security** page, you can do the following:
 * Click **Invite member** to invite a new person to the App Team (see the [Inviting Team Members](#inviting) section below for more details)
 *  Click **Role settings** to view and edit the permissions for the App Team roles (clicking **Security Guide** on this dialog box will present useful information for configuring roles)
 
-	{{% image_container width="400" %}}![](attachments/role-settings.png)
+	{{% image_container width="400" %}}![](attachments/team/role-settings.png)
 	{{% /image_container %}}
 
 * Click **Change log** to view the change log for the App Team and [node permissions]()

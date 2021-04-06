@@ -44,10 +44,10 @@ The full word "application" has a more well-rounded meaning to it (as in, web an
 Always capitalize.
 {{% /alert %}}
 
-### App Team
+### app team
 
 {{% alert type="info" %}}
-Capitalize, because **Team** is capitalized in the Developer Portal UI.
+Does not need to be capitalized, and "team" should be used without the qualifier "app" where possible.
 {{% /alert %}}
 
 ### app template {#app-template}

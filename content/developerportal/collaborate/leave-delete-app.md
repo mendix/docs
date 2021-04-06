@@ -45,7 +45,7 @@ If you want to leave and delete your app, follow these steps:
 2. In the app's sidebar menu, select **Collaborate** > **General Settings**.
 3.  In the upper-right corner of that page, click **Leave app**:
 
-	![](attachments/leave-app.png) 
+	![](attachments/general-settings/leave-app.png) 
 
 4.  Confirm leaving the app by clicking **Yes**. The pop-up window states the app will be deactivated if you are the only/last member of the App Team. If you leave an app that still has App Team members, the app will still exist in the company and it will be available for other team members. If you want to return to the App Team, other team members can invite you to the app again.
 5.  If the app will be made inaccessible upon your leaving, a final confirmation is necessary:

@@ -19,7 +19,7 @@ The **General** settings page presents an overview of your app with the followin
 * Whether the app is enabled for Mendix **Studio** (for details, see the [Mendix Studio](#web) section below)
 * The **App ID**
 
-{{% image_container width="550" %}}![](attachments/general-settings.png)
+{{% image_container width="550" %}}![](attachments/general-settings/general-settings.png)
 {{% /image_container %}}
 
 The sections below describe the actions you can perform on this page.
@@ -42,7 +42,7 @@ Click **Cloud Settings** to select the cloud platform on which to deploy your ap
 Only users with the **App Settings** permission can change cloud platforms. For default roles, only the **Scrum Master** has this permission. For more details, see the [App Team Roles](/developerportal/collaborate/app-roles#app-team-roles) section of *App Roles*.
 {{% /alert %}}
 
-![](attachments/cloudsettings.png)
+![](attachments/general-settings/cloudsettings.png)
 
 If you select a non-Mendix cloud platform like SAP, you will be redirected to a page to complete the setup. If you select Mendix Cloud, no additional setup is needed.
 
@@ -69,13 +69,13 @@ After clicking **Manage App Users**, you will see a list of environments for you
 * If you manage user roles from Studio, your app should be published (for more information see the [Managing App Users](/studio/settings-security#managing-app-users) section of *Security, Roles & Permissions* )
 * Your user role allows you to manage other users (for more information, see the [User Management Properties](/refguide/user-roles#user-management) section of *User Roles*)
 
-![](attachments/app-user-management-environments.png)
+![](attachments/general-settings/app-user-management-environments.png)
 
 ### 4.1 Manage Users
 
 When you click **Manage Uses** on for your environment, you will see a page with a list of the current App Users you can remove or edit:
 
-![](attachments/app-user-management-users.png)
+![](attachmentsa/general-settings/app-user-management-users.png)
 
 To remove an App User from the environment, click **Remove** by their name.
 
@@ -93,7 +93,7 @@ To invite new App Users to your app, click **Invite Users** on the **App User Ma
 
 2.  Click **Include your app team** to include invitations to all the members of your [Team](/developerportal/collaborate/team). This may be useful, because people invited to join your App Team are not added as App Users automatically.
 
-	{{% image_container width="450" %}}![](attachments/invite-app-user.png)
+	{{% image_container width="450" %}}![](attachments/general-settings/invite-app-user.png)
 	{{% /image_container %}}
 	
 3. Click **Add to invitee list**.
@@ -120,7 +120,7 @@ Click **Edit App Info** to edit the following details:
 * The **Description** of the app
 * The **App Contact**
 
-{{% image_container width="450" %}}![](attachments/edit.png)
+{{% image_container width="450" %}}![](attachments/general-settings/edit.png)
 {{% /image_container %}}
 
 ## 6 Managing Webhooks {#webhooks}
@@ -133,7 +133,7 @@ Only [Mendix Admins](/developerportal/control-center/#company) or users with the
 
 On the **Webhooks** page, you can add a new webhook and edit or delete existing webhooks:
 
-{{% image_container width="550" %}}![](attachments/webhooks-list.png)
+{{% image_container width="550" %}}![](attachments/general-settings/webhooks-list.png)
 {{% /image_container %}}
 
 After clicking **New Webhook** to create a new webhook, fill in the following details:

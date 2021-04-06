@@ -20,11 +20,43 @@ If your company does already have a Mendix Admin (but you yourself are not a Men
 
 ![](attachments/admin-exists.jpg)
 
-If you are a Mendix Admin, you will immediately see the **Members** page and can navigate to the pages described in the sections below.
+If you are a Mendix Admin, you will immediately see the [App Projects](#projects) page and can navigate to the pages described in the sections below.
 
 You can access Control Center via the menu item on the navigation pane.
 
-## 2 Members {#members}
+## 2 Dashboard
+
+The Control Center dashbaord gives you an overview of various activities for your company on the Mendix Platform.
+
+![](attachments/dashboard.png)
+
+These are some examples of what the dashboard presents:
+
+* **App Projects Created** – you can filter these [app projects](#projects) by date
+* **Member Versions** – describes which Studio Pro/Mendix versions your internal and external [members](#members) are using for app projects, which is especially important as app projects on outdated or [non-MTS/LTS versions](/releasenotes/studio-pro/lts-mts) can lead to security issues
+* **Certification Level** for members – presents the number of different [Mendix certifications](https://academy.mendix.com/link/certification) for members
+* **App Access Groups** – presents the total number of [app access groups](#groups) for the company
+
+## 3 App Projects {#projects}
+
+On the **Active App Projects** tab of this page, you can see a list of the active apps that belong to your company. The **Inactive App Projects** tab lists your company's deactivated apps. The following details apply to deactivated apps:
+
+* A deactivated app still exists in the company, but it is invisible to regular users
+* You can only deactivate Free Apps that are not attached to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) nodes
+
+When you click an app name, a pop-up window opens with the project profile. You have options to directly **Deactivate Project** and **Delete Project** in this window. The window has the following tabs:
+
+* **Project Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General](/developerportal/settings/general-settings) settings page for your app in the Developer Portal. 
+* **Members** tab – This tab presents the active members and external members of the app. You can directly deactivate a member from the app by clicking their name and selecting **Deactivate Member**. For other member management options, click **Manage Members**, which will open the **Security** > [App Team](../collaborate/team#managing) page. If you are a Mendix Admin, you can also add yourself to an App Team via this page.
+* **Project Roles** –  This tab presents the App Team roles defined via the **Default App Roles** tab and/or customized for a particular app.
+
+When you select one or more apps via the check boxes on the **Active App Projects** or **Inactive App Projects** tab, a context menu appears at the bottom of the screen with options for exporting project details to an *.xlsx* file, deactivating/activating projects, and deleting projects.
+
+The **Default App Project Roles** tab shows the default [App Team roles](/developerportal/collaborate/app-roles#edit-app-team-roles) assigned for every new app created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/develop/team-server) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) information.
+
+![](attachments/roles.jpg)
+
+## 4 Members {#members}
 
 Members are users who can view and/or edit an app. On the **Active members** tab, you can see the active members of your company who can access certain apps: 
 
@@ -44,26 +76,7 @@ For security reasons, deactivating an employee that is leaving your company is r
 You cannot deactivate yourself.
 {{% /alert %}}
 
-## 3 Apps {#projects}
-
-On the **Active App Projects** tab of this page, you can see a list of the active apps that belong to your company. The **Inactive App Projects** tab lists your company's deactivated apps. The following details apply to deactivated apps:
-
-* A deactivated app still exists in the company, but it is invisible to regular users
-* You can only deactivate Free Apps that are not attached to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) nodes
-
-When you click a **Project** name, a pop-up window opens with the project profile. You have options to directly **Deactivate Project** and **Delete Project** in this window. The window has the following tabs:
-
-* **Project Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General](/developerportal/settings/general-settings) settings page for your app in the Developer Portal. 
-* **Members** tab – This tab presents the active members and external members of the app. You can directly deactivate a member from the app by clicking their name and selecting **Deactivate Member**. For other member management options, click **Manage Members**, which will open the **Security** > [App Team](../collaborate/team#managing) page. If you are a Mendix Admin, you can also add yourself to an App Team via this page.
-* **Project Roles** –  This tab presents the App Team roles defined via the **Default App Roles** tab and/or customized for a particular app.
-
-When you select one or more apps via the check boxes on the **Active App Projects** or **Inactive App Projects** tab, a context menu appears at the bottom of the screen with options for exporting project details to an *.xlsx* file, deactivating/activating projects, and deleting projects.
-
-The **Default App Project Roles** tab shows the default [App Team roles](/developerportal/collaborate/app-roles#edit-app-team-roles) assigned for every new app created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/develop/team-server) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) information.
-
-![](attachments/roles.jpg)
-
-## 4 Groups {#groups}
+## 5 Groups {#groups}
 
 A Mendix Admin can set up **App Access Groups**, which consist of end-users (who are active members of your company) who will have access to [Mendix SSO](/appstore/modules/mendix-sso)-enabled apps with specific environments and roles. Click **Add Access Group** to create a new group with a **Name** and **Description**.
 
@@ -77,7 +90,7 @@ You can only add apps that utilize [Mendix SSO](/appstore/modules/mendix-sso) to
 
 When you select groups in the list or members or accessible apps in the group details page, a context menu will appear with options for exporting item details to an *.xlsx* file, deleting access groups, removing members from access groups, and removing accessible apps.
 
-## 5 Company Settings {#company}
+## 6 Company Settings {#company}
 
 On the **Company Details** tab of this page, you can edit your **Company Name** and **Description**. You can also request new **Company Email Domains** by clicking **Add Domain**, upon which a request is sent to [Mendix Support](/developerportal/support/). Once a domain is added, every user who signs up to Mendix with that email domain will be assigned to your company.
 
@@ -91,7 +104,7 @@ To add a new admin, click **Add Mendix Admin**. To remove an admin, hover over t
 It is not possible to remove yourself as a Mendix Admin.
 {{% /alert %}}
 
-## 6 Company Brand
+## 7 Company Brand
 
 {{% alert type="warning" %}}
 Features on this page are available to try out, but you will not see changes implemented yet.
@@ -103,7 +116,7 @@ You can set a **Cover image** to be the the background header of your company pa
 
 ![](attachments/brand.jpg)
 
-## 7 Security
+## 8 Security
 
 On the **Password Policy** tab of this page, you can set the password expiration policy for all company members. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.
 
@@ -111,7 +124,7 @@ On the **Security History** tab, you can click **Show Security History** to open
 
 ![](attachments/security.jpg)
 
-## 8 Cloud {#cloud}
+## 9 Cloud {#cloud}
 
 {{% alert type="warning" %}}
 This feature is not yet publicly available. Please talk to your CSM to enable this page.

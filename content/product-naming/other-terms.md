@@ -84,7 +84,7 @@ Capitalize in all instances (to parallel "Team Server" and "Model Server").
 
 ### Business Engineer
 
-This is an App Team role. As such, it differs from the term "business developer," which is used in the Mendix Platform Evaluation Guide as a generic role and persona term.
+This is a team role. As such, it differs from the term "business developer," which is used in the Mendix Platform Evaluation Guide as a generic role and persona term.
 
 {{% alert type="info" %}}
 Capitalize in all instances.
@@ -397,7 +397,7 @@ Do not capitalize.
 ### Product Owner
 
 {{% alert type="info" %}}
-Capitalize in all instances of the [team role](/developerportal/collaborate/app-roles#app-team-roles).
+Capitalize in all instances of the [team role](/developerportal/collaborate/app-roles#team-roles).
 {{% /alert %}}
 
 ### production, acceptance & test environments
@@ -421,7 +421,7 @@ Capitalize in all instances.
 ### Scrum Master
 
 {{% alert type="info" %}}
-This is the correct capitalization for this [App Team role](/developerportal/collaborate/app-roles#app-team-roles)
+This is the correct capitalization for this [team role](/developerportal/collaborate/app-roles#team-roles)
 {{% /alert %}}
 
 ### Sprint

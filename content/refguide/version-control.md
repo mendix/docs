@@ -21,7 +21,7 @@ Version control in Mendix is built on top of either [Apache Subversion](https://
 
 [Team Server](/developerportal/collaborate/team-server) is where all the committed versions of Mendix apps are stored. If you commit a revision of an app, it is stored on the Team Server.
 
-To commit to the Team Server you will need to have a role in the app which allows you to edit the app. For more information, see the [App Team Roles](/developerportal/collaborate/app-roles#app-team-roles) section *App Roles*.
+To commit to the Team Server you will need to have a role in the app which allows you to edit the app. For more information, see the [Team Roles](/developerportal/collaborate/app-roles#team-roles) section *App Roles*.
 
 ### 2.2 Repository {#repository}
 

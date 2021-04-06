@@ -397,7 +397,7 @@ Do not capitalize.
 ### Product Owner
 
 {{% alert type="info" %}}
-Capitalize in all instances of the [App Team role](/developerportal/settings#app-team).
+Capitalize in all instances of the [team role](/developerportal/collaborate/app-roles#app-team-roles).
 {{% /alert %}}
 
 ### production, acceptance & test environments

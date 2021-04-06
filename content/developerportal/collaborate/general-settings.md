@@ -75,7 +75,7 @@ After clicking **Manage App Users**, you will see a list of environments for you
 
 When you click **Manage Uses** on for your environment, you will see a page with a list of the current App Users you can remove or edit:
 
-![](attachmentsa/general-settings/app-user-management-users.png)
+![](attachments/general-settings/app-user-management-users.png)
 
 To remove an App User from the environment, click **Remove** by their name.
 

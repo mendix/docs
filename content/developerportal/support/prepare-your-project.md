@@ -23,11 +23,11 @@ The steps in this how-to should be done for every new app that is created if you
 
 ## 2 Giving Team Members Access to Submit Tickets
 
-There are two ways to give team members access to submit tickets: by assigning the correct role to a user when adding them as an App Team member, or by changing the role of existing App Team members.
+There are two ways to give team members access to submit tickets: by assigning the correct role to a user when adding them as a team member, or by changing the role of existing team members.
 
-### 2.1 Giving a New App Team Member Access
+### 2.1 Giving a New Team Member Access
 
-To add users to a project's App Team and give them access to submit tickets for a specific app, follow these steps:
+To add users to an app's team and give them access to submit tickets for a specific app, follow these steps:
 
 1. Go to the [Team](../collaborate/team) page of your app in the Mendix Developer Portal.
 2. Click **Invite Member** to invite the users who should be able to submit/view Support tickets concerning this app.
@@ -36,11 +36,11 @@ To add users to a project's App Team and give them access to submit tickets for 
 	* **Product Owner**
 	* **Scrum Master**
 	
-	These roles have an **Edit** permission set for **Deploy** or **Capture**, thus they can submit/view Support tickets for the app. For more details on setting permissions, see the [Managing the Team](../collaborate/team#managing) section of *App Team*.
+	These roles have an **Edit** permission set for **Deploy** or **Capture**, thus they can submit/view Support tickets for the app. For more details on setting permissions, see the [Managing the Team](../collaborate/team#managing) section of **Team**.
 
 4. To finalize the setup, email [support@mendix.com](http://support.mendix.com/) with the **App name** and **App ID** (both of which can be found on the [General](../settings/general-settings) page for the app).
 
-### 2.2 Giving Existing App Team Members Access
+### 2.2 Giving Existing Team Members Access
 
 To give existing project members access to submit tickets, follow these steps:
 
@@ -50,7 +50,7 @@ To give existing project members access to submit tickets, follow these steps:
 	* **Product Owner**
 	* **Scrum Master**
 
-	You can also click **Role settings** to create your own roles and customize the permissions for existing roles. For more information, see the [App Team Roles](../collaborate/app-roles#app-team-roles) section of *App Roles*.
+	You can also click **Role settings** to create your own roles and customize the permissions for existing roles. For more information, see the [Team Roles](../collaborate/app-roles#team-roles) section of **App Roles**.
 
 3. To finalize the setup, email [support@mendix.com](http://support.mendix.com/) with the **App name** and **App ID**.
 

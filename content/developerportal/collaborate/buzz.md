@@ -8,7 +8,7 @@ tags: ["Buzz","Developer Portal"]
 
 ## 1 Buzz Locations
 
-Located in the Developer Portal, Buzz lets you see Mendix app activity in your company as well as collaborate and share ideas with your App Team. There are two types of **Buzz** pages: Company Buzz and App Buzz.
+Located in the Developer Portal, Buzz lets you see Mendix app activity in your company as well as collaborate and share ideas with your team. There are two types of **Buzz** pages: Company Buzz and App Buzz.
 
 ### 1.1 Company Buzz {#company-buzz}
 
@@ -26,7 +26,7 @@ App Buzz is Buzz for a specific app:
 
 ![](attachments/buzz/app-buzz.jpg)
 
-You can see the size of your **Team** and your fellow App Team members on the right side of the page. Click the **+** icon to invite new members to your App Team directly. Click **Show all** to go to the [Team](team) page for the app.
+You can see the size of your **Team** and your fellow team members on the right side of the page. Click the **+** icon to invite new members to your team directly. Click **Show all** to go to the [Team](team) page for the app.
 
 **Latest Stories** shows the last few stories created for this app. Click **Show all** to see all the [Stories](stories).
 
@@ -36,11 +36,11 @@ You can see the size of your **Team** and your fellow App Team members on the ri
 
 By default, communication via Company Buzz can be seen by all Mendix users in the company.
 
-You can choose to communicate with a single App Team by selecting the app from the **Share with** drop-down menu:
+You can choose to communicate with a single team by selecting the app from the **Share with** drop-down menu:
 
 ![](attachments/buzz/buzz-share-with.png)
 
-In App Buzz, you will only be communicating with App Team members.
+In App Buzz, you will only be communicating with team members.
 
 ### 2.1 Updating Your Status
 

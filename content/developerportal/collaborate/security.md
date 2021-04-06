@@ -13,7 +13,7 @@ In **Security**, there are two tabs with app and node permissions, as described 
 ### 3.1 App Team {#app-team}
 
 {{% alert type="info" %}}
-To view the App Team, you must have the **App Settings** permission or a default **Scrum Master** role.
+To view the team, you must have the **App Settings** permission or a default **Scrum Master** role.
 {{% /alert %}}
 
 The **App Team** tab lets you view and delete the team members that are currently working on the app. Each member has a **Role**. You can change the role of each team member to the following:
@@ -33,6 +33,6 @@ For more information, see [App Roles](../collaborate/app-roles).
 Node permissions are only available for Licensed Apps.
 {{% /alert %}}
 
-The **Node Permissions** tab lets you view the team members that have the App Team permission to view, deploy, and monitor the node.  A **Technical Contact** can grant those team members certain permissions.
+The **Node Permissions** tab lets you view the team members that have the team permission to view, deploy, and monitor the node.  A **Technical Contact** can grant those team members certain permissions.
 
 For more information, see [Node Permissions](/developerportal/deploy/node-permissions).

@@ -37,7 +37,7 @@ For each revision, you can see the following information:
 
 * The message in the revision commit
 * The date of the revision commit
-* The name of the App Team member who committed the revision
+* The name of the team member who committed the revision
 * The branch to which the revision was committed
 * The Mendix Studio Pro version used
 * The revision number

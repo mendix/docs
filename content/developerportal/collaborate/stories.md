@@ -177,7 +177,7 @@ On this page, you can perform a number of actions:
 * See the story's **Status** and click to update it (available statuses are **To-do**, **Running**, and **Done**)
 * Change the **Story points**
 * See, add, and manage the **Tasks** of the story (you can mark them as **Done** by checking the box in front of the task)
-* Leave a **Comment** on the story to collaborate with your App Team
+* Leave a **Comment** on the story to collaborate with your team
 
 You can also do this following on this page:
 

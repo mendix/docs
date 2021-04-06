@@ -14,7 +14,7 @@ Here, the [Technical Contact](/developerportal/collaborate/app-roles#technical-c
 
 Each team member can subscribe to, or unsubscribe from, the alerts,
 
-See [App Roles](/developerportal/collaborate/app-roles) to learn more about the roles of app team members.
+See [App Roles](/developerportal/collaborate/app-roles) to learn more about the roles of team members.
 
 ## 2 Viewing Your Nodes{#nodes}
 
@@ -38,13 +38,13 @@ Only users with the *Technical Contact* role can manage the permission settings 
 
 The permissions are set independently for each environment. You can choose the environment at the top of the *Node Permissions* tab. Changing the permissions for a *production* environment will require two-factor authentication (see [Two-Factor Authentication](two-factor-authentication)).
 
-Only App Team members who have permission to *Deploy, Publish, and Monitor* can view the node permissions.
+Only team members who have permission to *Deploy, Publish, and Monitor* can view the node permissions.
 
 {{% alert type="info" %}}
 
-Note that only app team members with a *user role* which includes permission to *Deploy, Publish, and Monitor* the app will be listed in the Node Permissions tab.
+Note that only team members with a *user role* which includes permission to *Deploy, Publish, and Monitor* the app will be listed in the Node Permissions tab.
 
-You can change permissions for team members in the *App Team* tab: see [Team](/developerportal/collaborate/team).
+You can change permissions for team members in the **App Team** tab: see [Team](/developerportal/collaborate/team).
 
 {{% /alert %}}
 

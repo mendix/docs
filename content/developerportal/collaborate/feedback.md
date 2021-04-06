@@ -36,10 +36,10 @@ Feedback can go through four different stages:
 
 | Stage        | Description                                                  |
 | ------------ | ------------------------------------------------------------ |
-| Open     | The feedback is awaiting a response from the App Team.       |
-| Handled  | The App Team has looked into the feedback and has requested further information. |
-| Accepted | The App Team has accepted the feedback and added this feedback as a story to the Sprint. For more information, see [Adding a Feedback Story to Your Backlog](#adding), below. |
-| Closed   | The App Team has closed the feedback.                        |
+| Open     | The feedback is awaiting a response from the team.       |
+| Handled  | The team has looked into the feedback and has requested further information. |
+| Accepted | The team has accepted the feedback and added this feedback as a story to the Sprint. For more information, see [Adding a Feedback Story to Your Backlog](#adding), below. |
+| Closed   | The team has closed the feedback.                        |
 
 Feedback in each stage is shown in a separate tab on the **Feedback** page.
 
@@ -76,7 +76,7 @@ You can also click **Details** for technical details of the feedback item:
 
 On the item's details page, you can also **Turn email updates on/off**. This is useful for when you comment on a feedback item and perform further [processing](#processing) actions on it.
 
-In the **Leave a comment** box, you can post a comment and start an exchange with the App User or App Team member who submitted the feedback. This is a good place to ask for clarification. You can also use the **Add:** icons to attach files to your comment.
+In the **Leave a comment** box, you can post a comment and start an exchange with the App User or team member who submitted the feedback. This is a good place to ask for clarification. You can also use the **Add:** icons to attach files to your comment.
 
 ![](attachments/feedback/comment.png)
 
@@ -95,7 +95,7 @@ If the feedback item has not yet been accepted, you can also change the feedback
 
 ![](attachments/feedback/convert-feedback.png)
 
-If the feedback applies to a different app, you can select an app where you are an App Team member from the drop-down menu under **Move to app**.
+If the feedback applies to a different app, you can select an app where you are an team member from the drop-down menu under **Move to app**.
 
 ![](attachments/feedback/move-feedback.png)
 

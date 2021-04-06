@@ -51,7 +51,7 @@ You can also sort the order of the apps here.
 
 If you click an app for which you are a team member, you will be taken to the app [Buzz](/developerportal/collaborate/buzz).
 
-If you click an app for which you are not an App Team member, you will see the app details:
+If you click an app for which you are not an team member, you will see the app details:
 
 {{% image_container width="400" %}}
 ![Example of app details](attachments/app-details.png)

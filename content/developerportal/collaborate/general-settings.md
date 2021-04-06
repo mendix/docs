@@ -31,7 +31,7 @@ In the **Mendix Studio** section, you can see whether Studio is enabled for the 
 You can enable Studio if it has not been enabled yet by clicking **Enable Mendix Studio**.
 
 {{% alert type="info" %}}
-Only Scrum Masters or custom App Team roles with the **App Settings** permission are allowed to enable Studio.
+Only Scrum Masters or custom team roles with the **App Settings** permission are allowed to enable Studio.
 {{% /alert %}}    
 
 ## 3 Editing Cloud Settings
@@ -39,7 +39,7 @@ Only Scrum Masters or custom App Team roles with the **App Settings** permission
 Click **Cloud Settings** to select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
 
 {{% alert type="info" %}}
-Only users with the **App Settings** permission can change cloud platforms. For default roles, only the **Scrum Master** has this permission. For more details, see the [App Team Roles](/developerportal/collaborate/app-roles#app-team-roles) section of *App Roles*.
+Only users with the **App Settings** permission can change cloud platforms. For default roles, only the **Scrum Master** has this permission. For more details, see the [Team Roles](/developerportal/collaborate/app-roles#team-roles) section of *App Roles*.
 {{% /alert %}}
 
 ![](attachments/general-settings/cloudsettings.png)
@@ -91,7 +91,7 @@ To invite new App Users to your app, click **Invite Users** on the **App User Ma
 
 1. Enter the email addresses of the end-users you want to invite.
 
-2.  Click **Include your app team** to include invitations to all the members of your [Team](/developerportal/collaborate/team). This may be useful, because people invited to join your App Team are not added as App Users automatically.
+2.  Click **Include your app team** to include invitations to all the members of your [Team](/developerportal/collaborate/team). This may be useful, because people invited to join your team are not added as App Users automatically.
 
 	{{% image_container width="450" %}}![](attachments/general-settings/invite-app-user.png)
 	{{% /image_container %}}

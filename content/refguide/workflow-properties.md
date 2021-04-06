@@ -23,7 +23,7 @@ Workflow properties consist of the following sections:
 
 ### 2.1 Admin Page Section {#admin-page} 
 
-**Override admin page** is an optional page used for displaying an instance of the workflow to the workflow admin. This overrides a generic page used to display any workflow instances in the app, for example, when you have a **Open workflow page** set as an [on-click event](on-click-event#open-workflow-page) or as a [microflow action](open-workflow-page) and would like to override the page selected for this event/action. 
+**Override admin page** is an optional page used for displaying an instance of the workflow to the workflow admin. This overrides a generic page used to display any workflow instances in the app, for example, when you have a **Show workflow admin page** set as an [on-click event](on-click-event#show-workflow-page) or as a [microflow action](show-workflow-page) and would like to override the page selected for this event/action. 
 
 If you generate the page using the templates in **Workflows Commons** module, these templates contain necessary data containers and associated context entity.
 

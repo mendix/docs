@@ -259,6 +259,6 @@ Note that your previous app still exists, **Studio Pro** will simply make an unv
 ## 5 Read More
 
 * [Version Control Reference Guide](/refguide/version-control)
-* [Team Server Overview](/developerportal/collaborate/team-server)
+* [Team Server](/developerportal/collaborate/team-server)
 * [Upload to Version Control Server Reference Guide](/refguide/upload-to-version-control-dialog)
 

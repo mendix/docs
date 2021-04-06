@@ -56,5 +56,5 @@ To upload a new version of a document directly from the document list, select th
 ## 3 Read More
 
 * [Buzz](buzz)
-* [App Team](team)
+* [Team](team)
 * [Stories](stories)

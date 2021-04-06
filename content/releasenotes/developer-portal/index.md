@@ -88,7 +88,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Improvements
 
 * We have updated the [App Projects](/developerportal/control-center/#projects) tab of Control Center, where you can now do the following:
-	* Open the [App Team](/developerportal/collaborate/team#managing) page from the project details page in order to manage App Team members and add yourself to an App Team (if you are a Mendix Admin)
+	* Open the [Team](/developerportal/collaborate/team#managing) page from the project details page in order to manage App Team members and add yourself to an App Team (if you are a Mendix Admin)
 	* Deactivate or delete an app or an App Team member
 
 ### February 9th, 2021
@@ -171,7 +171,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed an issue where team members were not displayed in the [App Team](/developerportal/collaborate/team) overview.
+* We fixed an issue where team members were not displayed in the [Team](/developerportal/collaborate/team) overview.
 
 ### October 4th, 2020
 

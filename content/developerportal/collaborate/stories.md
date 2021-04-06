@@ -325,5 +325,5 @@ Moving a story will move the tasks as well.
 ## 7 Read More
 
 * [Buzz](buzz)
-* [App Team](team)
+* [Team](team)
 * [Feedback](feedback)

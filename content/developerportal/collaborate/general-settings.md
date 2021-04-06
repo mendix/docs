@@ -1,5 +1,5 @@
 ---
-title: "Manage General App Settings"
+title: "General Settings"
 category: "Collaboration"
 menu_order: 10
 description: "Describes general settings of your app."
@@ -91,7 +91,7 @@ To invite new App Users to your app, click **Invite Users** on the **App User Ma
 
 1. Enter the email addresses of the end-users you want to invite.
 
-2.  Click **Include your app team** to include invitations to all the members of your [App Team](/developerportal/collaborate/team). This may be useful, because people invited to join your App Team are not added as App Users automatically.
+2.  Click **Include your app team** to include invitations to all the members of your [Team](/developerportal/collaborate/team). This may be useful, because people invited to join your App Team are not added as App Users automatically.
 
 	{{% image_container width="450" %}}![](attachments/invite-app-user.png)
 	{{% /image_container %}}

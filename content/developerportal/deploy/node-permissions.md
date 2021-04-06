@@ -44,7 +44,7 @@ Only App Team members who have permission to *Deploy, Publish, and Monitor* can 
 
 Note that only app team members with a *user role* which includes permission to *Deploy, Publish, and Monitor* the app will be listed in the Node Permissions tab.
 
-You can change permissions for team members in the *App Team* tab: see [App Team](/developerportal/collaborate/team).
+You can change permissions for team members in the *App Team* tab: see [Team](/developerportal/collaborate/team).
 
 {{% /alert %}}
 

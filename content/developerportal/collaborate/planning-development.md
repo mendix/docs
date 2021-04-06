@@ -1,7 +1,7 @@
 ---
-title: "Plan App Development"
+title: "Planning"
 category: "Collaboration"
-menu_order: 30
+menu_order: 3
 description: "Describes where you can plan and monitor your app development."
 tags: ["Developer Portal", "Planning", "Develop"]
 aliases:
@@ -60,4 +60,4 @@ All the changes made on this page are directly passed on to the **Stories** page
 
 ## 5 Read More
 
-* [Team Server Overview](team-server)
+* [Team Server](team-server)

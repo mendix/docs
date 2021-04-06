@@ -1,5 +1,5 @@
 ---
-title: "Feedback Management"
+title: "Feedback"
 category: "Collaboration"
 menu_order: 5
 description: "Describes how to manage feedback on your Mendix app in the Developer Portal."

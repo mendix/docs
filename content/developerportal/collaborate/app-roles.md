@@ -1,7 +1,6 @@
 ---
 title: "App Roles"
-category: "Collaboration"
-menu_order: 4
+parent: "team"
 description: "Describes the App Team, App Contact, and Technical Contact roles and permissions within the Mendix Platform."
 tags: ["app team", "app contact", "technical contact", "developer portal", "role", "permissions"]
 aliases:
@@ -14,15 +13,15 @@ aliases:
 
 ## 1 Introduction
 
-The roles defined in Developer Portal for an [app](/developerportal/apps-list/) and [App Team](team) are described below.
+The roles defined in Developer Portal for an [app](/developerportal/apps-list/) and [team](team) are described below.
 
-## 2 App Team Member
+## 2 Team Member
 
-If you want to join an App Team, you have to ask a current App Team member (with the **Invite** permission) to send an invitation. Because App Team members are not visible to users outside that App Team, you can ask the [App Contact](../settings/general-settings) to send the invite. This means it is important the App Contact has the correct permissions to manage the app (for example, the Scrum Master role; for more information on roles and permissions, see the [App Team Roles](#app-team-roles) section below).
+If you want to join an an app team, you have to ask a current App Team member (with the **Invite** permission) to send an invitation. Because App Team members are not visible to users outside that App Team, you can ask the [App Contact](../settings/general-settings) to send the invite. This means it is important the App Contact has the correct permissions to manage the app (for example, the Scrum Master role; for more information on roles and permissions, see the [App Team Roles](#app-team-roles) section below).
 
-## 3 App Team Roles {#app-team-roles}
+## 3 Team Roles {#app-team-roles}
 
-Within an App Team, there are six predefined roles that can be provisioned to App Team members. Each App Team role has access to permission areas based on the following factors:
+Within an app team, there are six predefined roles that can be provisioned to App Team members. Each App Team role has access to permission areas based on the following factors:
 
 * Who can edit the backlog and current [Sprint](../collaborate/stories)
 * Who can edit the app model
@@ -39,7 +38,7 @@ These are the predefined App Team roles:
 | Product Owner | The product owner of the Scrum team who is responsible for managing the app's backlog.|
 | Scrum Master | The Scrum Master of the Agile App Team. In addition to contributing to development, the Scrum Master manages all the settings within the app. If you create a new app, you will automatically become the Scrum Master. |
 
-### 3.1 Editing App Team Roles {#edit-app-team-roles}
+### 3.1 Editing Team Roles {#edit-app-team-roles}
 
 Mendix Admins can edit and create new team roles within the company in [Control Center](../control-center/).
 

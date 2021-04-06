@@ -1,6 +1,7 @@
 ---
-title: "Manage App API Keys"
+title: "API Keys"
 category: "Collaboration"
+menu_order: 8
 description: "Describes creating API keys for your app."
 tags: ["Settings", "App", "API", "Key", "API key", "Developer Portal"]
 aliases:

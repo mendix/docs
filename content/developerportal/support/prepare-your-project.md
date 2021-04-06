@@ -13,7 +13,7 @@ aliases:
 
 In the [Mendix Support Portal](https://support.mendix.com/hc/en-us), users can select an affected app for a submitted request. The apps that can be selected are based on the project authorization of the user (regardless of their organization). Users that have an **Edit** permission for **Deploy** or **Capture** are able to submit and view tickets for the app connected to that project.
 
-Mendix Support needs to know the app identification for on-premises apps so it can show the correct apps. Therefore, Mendix asks that on-premises users provide the **App ID** of their projects. Please invite all the [App Team](../collaborate/team) members who should be able to submit tickets and provide them with the specified role, then contact Mendix Support with the project information.
+Mendix Support needs to know the app identification for on-premises apps so it can show the correct apps. Therefore, Mendix asks that on-premises users provide the **App ID** of their projects. Please invite all the [Team](../collaborate/team) members who should be able to submit tickets and provide them with the specified role, then contact Mendix Support with the project information.
 
 The steps in this how-to should be done for every new app that is created if you want to be able to submit ticket requests in the Mendix Support Portal. Setting this up as a standard process when creating a new Mendix application is recommended.
 
@@ -29,7 +29,7 @@ There are two ways to give team members access to submit tickets: by assigning t
 
 To add users to a project's App Team and give them access to submit tickets for a specific app, follow these steps:
 
-1. Go to the [App Team](../collaborate/team) page of your app in the Mendix Developer Portal.
+1. Go to the [Team](../collaborate/team) page of your app in the Mendix Developer Portal.
 2. Click **Invite Member** to invite the users who should be able to submit/view Support tickets concerning this app.
 3.  Assign one of the following roles to users you want to give access to creating tickets for the app:
 	* **Business Engineer**

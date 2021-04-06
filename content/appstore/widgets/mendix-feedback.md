@@ -90,7 +90,7 @@ This feature is available when the following conditions are met:<br />
 
 ## 3 Adding & Configuring the Widget
 
-You should use the latest version of the Mendix Feedback widget, as it will provide the most up-to-date features for leaving feedback and communicating with the [App Team](/developerportal/collaborate/team).
+You should use the latest version of the Mendix Feedback widget, as it will provide the most up-to-date features for leaving feedback and communicating with the [Team](/developerportal/collaborate/team).
 
 ### 3.1 Adding the Widget to Your app
 

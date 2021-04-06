@@ -56,5 +56,5 @@ For more information on making comments in Studio, see [Buzz](/studio/collaborat
 
 ## 3 Read More
 
-* [App Team](team)
+* [Team](team)
 * [Stories](stories)

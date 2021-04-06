@@ -28,7 +28,7 @@ If **Enable private version control** is set in the project [Preferences](prefer
 
 Use the **Team Server App** dropdown to choose the app you want to download.
 
-For more information about the Mendix Team Server, see [Team Server Overview](/developerportal/collaborate/team-server).
+For more information about the Mendix Team Server, see [Team Server](/developerportal/collaborate/team-server).
 
 ### 2.2 Private Server
 

@@ -1,7 +1,7 @@
 ---
 title: "Security "
 category: "Collaboration"
-menu_order: 10
+menu_order: 9
 description: "Describes the security settings of your app in Mendix Developer Portal."
 tags: ["Settings", "App", "Developer Portal"]
 ---

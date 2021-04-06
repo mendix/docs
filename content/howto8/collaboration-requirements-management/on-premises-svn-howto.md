@@ -90,5 +90,5 @@ For the purpose of creating an app to store in your on-premises SVN server, this
 ## 7 Read More
 
 * [Version Control](/refguide8/version-control)
-* [Team Server Overview](/developerportal/collaborate/team-server)
+* [Team Server](/developerportal/collaborate/team-server)
 * [Upload to Version Control Server](/refguide8/upload-to-version-control-dialog)

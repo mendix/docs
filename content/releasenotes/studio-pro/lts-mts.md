@@ -55,7 +55,7 @@ For the support duration, the LTS will receive [patch](#patch) releases only.
 
 The impact of upgrading from an LTS to an LTS is often the lowest of these options. That is because an LTS has the longest support duration and only gets critical fixes, which results in high stability over time. In addition, depending on how rigorous your application update/release process is, the upgrade would only have to be done once, as opposed to multiple times between MTS versions or monthly release versions.
 
-## 3 Medium-Term Support Version (MTS)
+## 3 Medium-Term Support Version (MTS) {#mts}
 
 An MTS is a minor version released approximately every 6 months after a new major version release for General Availability.
 

@@ -41,6 +41,10 @@ This is the format for the command line:
 
 After creating the deployment package, the MxBuild process quits.
 
+{{% alert type="info" %}}
+The examples used in this document are for Windows.
+{{% /alert %}}
+
 ### 2.1 General Command-Line Options
 
 <!-- Note to editor: the &nbsp; here makes the column wider so that options are not broken at hyphens

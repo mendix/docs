@@ -25,6 +25,11 @@ Any public version of Studio Pro in this  [Studio Pro Releases List](https://app
 You can extract the files using your favorite archival tool, such as [7-Zip](https://www.7-zip.org/).
 
 For details on the system requirements for MxBuild, see [System Requirements](system-requirements#mxbuild).
+
+{{% alert type="info" %}}
+The examples used in this document are for Windows.
+{{% /alert %}}
+
 ## 2 Command Line
 
 To build your package, you specify the Mendix app file (.mpr) for which you want to build the deployment package (.mda) on the command-line. The file name may be preceded by a relative or absolute path. The app file should be located inside a Mendix app directory.

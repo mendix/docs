@@ -36,7 +36,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * As a result of installing Atlas 3, your app should contain the following modules that Workflow Commons depends on: Atlas_Core, Atlas_Web_Core_Content, and DataGrid.
 
-* Make sure that the **User entity** is configured in your [Project Settings](/refguide/project-settings#workflows) > **Workflows** tab. 
+* Make sure that the **User entity** is configured in your [App Settings](/refguide/project-settings#workflows) > **Workflows** tab. 
 
 * Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows). 
 

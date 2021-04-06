@@ -81,7 +81,7 @@ Do the following to add your app to FCM:
 
 	![](attachments/push-server/firebase/android_setup.png)
 
-Bundle id must be matching with your package id. Make sure to repeat this step for IOS aswell.
+Bundle id must be matching with your package id. Make sure to repeat this step for IOS as well.
 
 ## 5 Configuring APNs Credentials (Optional) {#configuring}
 

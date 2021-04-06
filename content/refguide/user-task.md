@@ -33,7 +33,7 @@ User task properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
-**Name** is the internal name of the user task. When referring to the user task in the app project you will use this name. It must be unique within the workflow, but you can have two user tasks with the same name in different workflows. 
+**Name** is the internal name of the user task. When referring to the user task in the app you will use this name. It must be unique within the workflow, but you can have two user tasks with the same name in different workflows. 
 
 ### 2.2 Display Information Section {#display-info}
 

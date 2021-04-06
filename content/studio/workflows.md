@@ -16,7 +16,7 @@ Workflow is a visual language in Mendix Studios that allows you to build extenda
 
 The main difference of workflows from [microflows](microflows) is a waiting aspect – the workflow is paused until it gets an input from an end-user. For example, an employee sends a travel request (triggering the start of the workflow) and then the workflow is paused until a manager approves the request by clicking a button. 
 
-To view the workflows of your app project in Studio, click the **Workflows** icon in the left menu bar:
+To view the workflows of your  in Studio, click the **Workflows** icon in the left menu bar:
 
 ![Workflow Icon](attachments/workflows/workflow-icon.jpg)
 
@@ -53,7 +53,7 @@ The selected workflow is opened.
 
 ### 3.2 Adding a Workflow {#create}
 
-To add a workflow to your app project in Studio, do the following:
+To add a workflow to your  in Studio, do the following:
 
 1. Click the workflow icon in the left menu bar.
 

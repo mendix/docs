@@ -9,7 +9,7 @@ tags: ["Operate","App","Trends","Running now","Cache","Metrics","Developer Porta
 
 ## 1 Introduction
 
-On the **Metrics** page, under the **Operate** category, you can monitor the performance and health of your App. The Metrics page is divided into three tabs, each of which is described below.
+On the **Metrics** page you can monitor the performance and health of your App. The Metrics page is divided into three tabs, each of which is described below.
 
 ## 2 Trends
 

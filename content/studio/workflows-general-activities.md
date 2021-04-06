@@ -63,7 +63,7 @@ The Jump activity properties consist of the **General** section and are describe
 
 | Property | Description                                                  |
 | -------- | ------------------------------------------------------------ |
-| Name     | The internal name of the element. When referring to the element in the app project you will use this name. It must be unique. |
+| Name     | The internal name of the element. When referring to the element in the  you will use this name. It must be unique. |
 | Caption  | Describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand. |
 | Target   | **Target** is the activity the **Jump** goes to. You can select the activity you would like to go to from the drop-down menu. |
 

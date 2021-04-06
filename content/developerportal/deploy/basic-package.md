@@ -30,13 +30,15 @@ The basic package has the following features.
 
 ## 3 Purchasing a Basic Package
 
-When you view your Free App in the Developer Portal, you will see a banner showing that you are using a Free App.
+Select your Free App in the Developer Portal, and click **Environments** in the left-hand menu.
+
+When you view your Free App environment, you will see a banner showing that you are using a Free App.
 
 ![Free App banner](attachments/basic-package/free-app-message.png)
 
 To order your Mendix Basic package, do the following:
 
-1. Click the **Upgrade Now** button.
+1. Click the **Learn More** button.
 
 2. Review the features of Mendix Basic and click **Upgrade Now**.
 

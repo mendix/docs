@@ -16,7 +16,7 @@ This feedback comes from different sources:
 
 * Submitted via the [Mendix Feedback widget](/appstore/widgets/mendix-feedback)
 * Submitted on the **Feedback** page itself (for details, see the [Actions](#actions) section, below)
-* Submitted in Mendix Studio (for more information, see [Buzz](/studio/collaboration-buzz))
+* Submitted in Mendix Studio (for more information, see [Buzz](/studio/collaboration-buzz)) in the *Studio Guide*
 
 ## 2 Feedback Fundamentals
 
@@ -24,22 +24,18 @@ This feedback comes from different sources:
 
 There are three types of feedback item:
 
-| Type         | Description                                                |
-| ------------ | ---------------------------------------------------------- |
-| Idea     | An idea for a change or new feature.                       |
-| Question | A question about the app.                             |
-| Issue    | An issue or a bug that needs to be investigated for a fix. |
+* **Question** – a question about the app
+* **Idea** – an idea for a change or new feature
+* **Issue** – an issue or a bug that needs to be investigated for a fix
 
 ### 2.2 Feedback Stages {#stages}
 
 Feedback can go through four different stages:
 
-| Stage        | Description                                                  |
-| ------------ | ------------------------------------------------------------ |
-| Open     | The feedback is awaiting a response from the team.       |
-| Handled  | The team has looked into the feedback and has requested further information. |
-| Accepted | The team has accepted the feedback and added this feedback as a story to the Sprint. For more information, see [Adding a Feedback Story to Your Backlog](#adding), below. |
-| Closed   | The team has closed the feedback.                        |
+* **Open** – the feedback is awaiting a response from the team
+* ** Handled ** – the team has looked into the feedback and has requested further information
+* **Accepted ** – the team has accepted the feedback and added this feedback as a story to the Sprint (for details, see the [Adding a Feedback Story to Your Backlog](#adding) section below)
+* **Closed ** – the team has closed the feedback
 
 Feedback in each stage is shown in a separate tab on the **Feedback** page.
 
@@ -84,12 +80,10 @@ In the **Leave a comment** box, you can post a comment and start an exchange wit
 
 To process a feedback item, you can select one of the following in the **Actions** menu. The options available depend on the current status of your feedback.
 
-| Action                  | Description                                                  |
-| ----------------------- | ------------------------------------------------------------ |
-| Accept feedback    | Signifies the feedback is valid and that you want to add a story to your backlog on the basis of the feedback item. For more details, see [Adding a Feedback Story to Your Backlog](#adding), below). |
-| Mark 'Under review' | Notifies the user who submitted the feedback as well as your team that the item is under review. |
-| Mark as handled    | Changes the status of the item from Open to Handled. This removes the item from your open items list but does not close it. For more information, see the  [Feedback Stages](#stages) section. |
-| Close feedback      | Closes the feedback item. You can close a feedback item when, for example, you can solve and implement it yourself, or when a duplicate has already been accepted. |
+* **Accept feedback** – signifies the feedback is valid and that you want to add a story to your backlog on the basis of the feedback item (for details, see the [Adding a Feedback Story to Your Backlog](#adding) section below)
+* **Mark 'Under review' ** – notifies the user who submitted the feedback as well as your team that the item is under review
+* **Mark as handled ** – changes the [feedback stage](#stages) of the item from **Open** to **Handled**, which then removes the item from your open items list but does not close it
+* * **Close feedback** – closes the feedback item; you can close a feedback item when, for example, you can solve and implement it yourself, or when a duplicate has already been accepted
 
 If the feedback item has not yet been accepted, you can also change the feedback item's type by clicking **Convert to idea**, **Convert to question**, or **Convert to issue**. For more information, see the [Types of Feedback](#types) section.
 

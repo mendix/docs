@@ -45,31 +45,31 @@ Full documentation in Chinese can be downloaded as a PDF from [千帆玉符 SSO 
     
 #### 3.2.1 Adding Users
 
-1. Select **对象管理** -> **部门管理** -> **部门数据**.
+1. Select **对象管理** -> **部门管理** -> **部门数据** (Object Management -> Department Management -> Department Data).
 
     ![](attachments/qianfan-sso/image4.png)
 
-2. Click on the correct department and select **本部门人员**.
+2. Click on the correct department and select **本部门人员** (Department Users).
 
     ![](attachments/qianfan-sso/image5.png)
 
-3. Click **添加人员** -> **创建人员**
+3. Click **添加人员** -> **创建人员** (Add User -> Create User).
 
     ![](attachments/qianfan-sso/image6.png)
 
-    Or click** 转入人员**.
+    Or click** 转入人员** (Transfer Users).
 
-4. Enter the user information and click **确定**.
+4. Enter the user information and click **确定** (OK).
 
 ### 3.3 Application Management
     
 #### 3.3.1 Adding an App
 
-1. Click the **添加应用** button on the right side.
+1. Click the **添加应用** (Add App) button on the right side.
 
     ![](attachments/qianfan-sso/image7.png)
 
-2. Select **创键自定义应用**.
+2. Select **创键自定义应用** (Create Custom App).
 
     ![](attachments/qianfan-sso/image8.png)
 
@@ -103,7 +103,7 @@ Full documentation in Chinese can be downloaded as a PDF from [千帆玉符 SSO 
 
 #### 3.3.2 Configuring the App
 
-1. Click **自助申请**.
+1. Click **自助申请** (Self-Service Request).
 
     ![](attachments/qianfan-sso/image13.png)
 
@@ -111,13 +111,13 @@ Full documentation in Chinese can be downloaded as a PDF from [千帆玉符 SSO 
 
     ![](attachments/qianfan-sso/image14.png)
 
-2. Click **添加人员**.
+2. Click **添加人员** (Add Users).
 
     If you have already clicked "users" (人员), click on the plus sign (**+**) to add users.
 
     ![](attachments/qianfan-sso/image15.png)
 
-3. Enter the user's name and click **确定**.
+3. Enter the user's name and click **确定** (OK).
 
     ![](attachments/qianfan-sso/image16.png)
 
@@ -127,19 +127,19 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
 #### 3.4.1 API Management
 
-1. Select **应用** -> **API管理** -> **创建**
+1. Select **应用** -> **API管理** -> **创建** (Apps -> API Management -> Create).
 
     ![](attachments/qianfan-sso/image17.png)
 
-2. Enter the basic information click **确定**. And remember the API unique identifier. For example:
+2. Enter the basic information and click **确定** (OK). And remember the API unique identifier. For example:
 
     ![](attachments/qianfan-sso/image18.png)
 
-3. Go to the API management interface and click **添加权限**.
+3. Go to the API management interface and click **添加权限** (Add Permissions).
 
     ![](attachments/qianfan-sso/image19.png)
 
-4. Enter the basic information and click **确定**. If your app has multiple roles, please add them separately. For example:
+4. Enter the basic information and click **确定** (OK). If your app has multiple roles, please add them separately. For example:
 
     ![](attachments/qianfan-sso/image20.png)
 
@@ -149,7 +149,7 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
     ![](attachments/qianfan-sso/image21.png)
 
-5. Click **添加应用**.
+5. Click **添加应用** (Add Apps).
 
     ![](attachments/qianfan-sso/image22.png)
 
@@ -163,29 +163,29 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
 #### 3.4.2 Rights Group Management
 
-1. Select **对象管理** -> **权限组管理**.
+1. Select **对象管理** -> **权限组管理** (Object Management -> Rights Group Management).
 
     ![](attachments/qianfan-sso/image25.png)
 
-2. Click **添加权限组**.
+2. Click **添加权限组** (Add Permissions Group).
 
     ![](attachments/qianfan-sso/image26.png)
 
     ![](attachments/qianfan-sso/image27.png)
 
-3. Enter the basic information, set the Permission Group Type to Custom, and click **确定**. For example:
+3. Enter the basic information, set the Permission Group Type to Custom, and click **确定** (OK). For example:
 
     ![](attachments/qianfan-sso/image28.png)
 
-4. Go to the management interface and click **添加人员**.
+4. Go to the management interface and click **添加人员** (Add Users).
 
     ![](attachments/qianfan-sso/image29.png)
 
-5. After selecting the corresponding users, click **确定** to confirm.
+5. After selecting the corresponding users, click **确定** (OK) to confirm.
 
     ![](attachments/qianfan-sso/image30.png)
 
-6. Click **关联权限**.
+6. Click **关联权限** (Associate Permissions).
 
     ![](attachments/qianfan-sso/image31.png)
 

@@ -109,11 +109,9 @@ For more information on PAT, see the [Supported Git Service Providers](#supporte
 
 ### 4.2 Preparing Studio Pro for Git {#preparing-git-support}
 
-To use Git, you need to activate the Git support in Studio Pro.
-    1. Start Studio Pro.        
-    2. Once Studio Pro is opened, go to **Edit > Preferences > Version Control** and make sure to activate private version control for Git. The name and email values will be used to identify your commit:
+To use Git, you need to activate the Git support in Studio Pro by navigating to **Edit** > **Preferences** > **Version Control** and selecting **Enable private version control with Git**. The name and email values will be used to identify your commit:
 
-        ![Preferences dialog](attachments/on-premises-git-howto/preferences-git.png)
+![Preferences dialog](attachments/on-premises-git-howto/preferences-git.png)
 
 Studio Pro now is set up to support Git.
 

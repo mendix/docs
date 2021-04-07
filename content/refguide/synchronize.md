@@ -68,11 +68,11 @@ The **Action** section of the properties pane shows the action associated with t
 
 {{% snippet file="refguide/microflow-common-section-link.md" %}}
 
-## 5 Limitations
+## 5 Limitations {#limitations}
 
 Running multiple synchronization processes at the same time is not supported, regardless the type (full/selective).
 
-If you try to trigger another synchronization process while the synchronization is in progress, the error message will be shown:
+If you try to trigger another synchronization process while the synchronization is in progress, the error following message will be shown:
 
 "Performing simultaneous synchronizations is not supported. Please try again after the current synchronization is completed."
 

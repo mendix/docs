@@ -119,13 +119,7 @@ If you have custom widgets or JavaScript actions which use an entity that cannot
 
 ### 2.5 Limitations
 
-Running multiple synchronization processes at the same time is not supported, regardless the type (full/selective).
-
-If you try to trigger another synchronization process while the synchronization is in progress, the error message will be shown:
-
-"Performing simultaneous synchronizations is not supported. Please try again after the current synchronization is completed."
-
-Such an error can be handled in the nanoflow from which the synchronization attempt was triggered using [error handlers](refguide/error-event#errorhandlers).
+Running multiple synchronization processes at the same time is not supported, regardless the type (full/selective). Check the [following document](synchronize#limitations) for more details.
 
 ### 2.6 Error Handling {#error-handling}
 

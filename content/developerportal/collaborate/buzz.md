@@ -1,6 +1,6 @@
 ---
 title: "Buzz"
-category: "Collaboration Tools"
+category: "Collaboration"
 menu_order: 1
 description: "Describes the Mendix Buzz, which is the landing page for working on a Mendix app."
 tags: ["Buzz","Developer Portal"]
@@ -8,13 +8,13 @@ tags: ["Buzz","Developer Portal"]
 
 ## 1 Buzz Locations
 
-Located in the Developer Portal, Buzz lets you see Mendix app activity in your company as well as collaborate and share ideas with your App Team. There are two types of **Buzz** pages: Company Buzz and App Buzz.
+Located in the Developer Portal, Buzz lets you see Mendix app activity in your company as well as collaborate and share ideas with your team. There are two types of **Buzz** pages: Company Buzz and App Buzz.
 
 ### 1.1 Company Buzz {#company-buzz}
 
 The **Company Buzz is** is accessible via the top bar in the Developer Portal:
 
-![](attachments/company-buzz.png)
+![](attachments/buzz/company-buzz.png)
 
 Under **Show activity for**, you will initially see the Buzz activity for **All** apps for which you are a team member *plus* all Buzz activity for your company. You can choose to see only activity for your company by selecting the company name (**Mendix** in the example above).
 
@@ -24,9 +24,9 @@ Below the company name is a list of apps for which you are a team member. Clicki
 
 App Buzz is Buzz for a specific app:
 
-![](attachments/app-buzz.jpg)
+![](attachments/buzz/app-buzz.jpg)
 
-You can see the size of your **Team** and your fellow App Team members on the right side of the page. Click the **+** icon to invite new members to your App Team directly. Click **Show all** to go to the [Team](team) page for the app.
+You can see the size of your **Team** and your fellow team members on the right side of the page. Click the **+** icon to invite new members to your team directly. Click **Show all** to go to the [Team](team) page for the app.
 
 **Latest Stories** shows the last few stories created for this app. Click **Show all** to see all the [Stories](stories).
 
@@ -36,11 +36,11 @@ You can see the size of your **Team** and your fellow App Team members on the ri
 
 By default, communication via Company Buzz can be seen by all Mendix users in the company.
 
-You can choose to communicate with a single App Team by selecting the app from the **Share with** drop-down menu:
+You can choose to communicate with a single team by selecting the app from the **Share with** drop-down menu:
 
-![](attachments/buzz-share-with.png)
+![](attachments/buzz/buzz-share-with.png)
 
-In App Buzz, you will only be communicating with App Team members.
+In App Buzz, you will only be communicating with team members.
 
 ### 2.1 Updating Your Status
 
@@ -50,11 +50,11 @@ To continue a conversation, you can also **Comment** on an ongoing discussion an
 
 In App Buzz, a comment can come from Mendix Studio and refer to a specific document (a page, microflow, navigation document, or the domain model). You can navigate to this document in Studio by clicking the corresponding button, such as **Show page** or **Show microflow**:
 
-![](attachments/show-document.png)
+![](attachments/buzz/show-document.png)
 
 For more information on making comments in Studio, see [Buzz](/studio/collaboration-buzz).  
 
 ## 3 Read More
 
-* [App Team](team)
+* [Team](team)
 * [Stories](stories)

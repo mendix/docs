@@ -1,8 +1,11 @@
 ---
-title: "Manage App API Keys"
-category: "App Settings"
+title: "API Keys"
+category: "Collaboration"
+menu_order: 8
 description: "Describes creating API keys for your app."
 tags: ["Settings", "App", "API", "Key", "API key", "Developer Portal"]
+aliases:
+    - /developerportal/settings/api-key
 ---
 
 ## 1 Introduction
@@ -13,7 +16,7 @@ In **API Keys**, there is an overview of the API keys created for your app with 
 *   Date of **Creation**
 *   Date **Last Used**
 
-{{% image_container width="550" %}}![](attachments/keys.png)
+{{% image_container width="550" %}}![](attachments/api-key/keys.png)
 {{% /image_container %}}
 
 Click **Revoke** to delete an app API key.

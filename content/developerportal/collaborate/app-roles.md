@@ -1,9 +1,8 @@
 ---
 title: "App Roles"
-category: "Collaboration Tools"
-menu_order: 4
-description: "Describes the App Team, App Contact, and Technical Contact roles and permissions within the Mendix Platform."
-tags: ["app team", "app contact", "technical contact", "developer portal", "role", "permissions"]
+parent: "team"
+description: "Describes the app team and App/Technical Contact roles and permissions within the Mendix Platform."
+tags: ["team", "app contact", "technical contact", "developer portal", "role", "permissions"]
 aliases:
     - /developerportal/settings/technical-contact.html
     - /developerportal/general/technical-contact.html
@@ -14,36 +13,36 @@ aliases:
 
 ## 1 Introduction
 
-The roles defined in Developer Portal for an [app](/developerportal/apps-list/) and [App Team](team) are described below.
+The roles defined in Developer Portal for an [app](/developerportal/apps-list/) and [team](team) are described below.
 
-## 2 App Team Member
+## 2 Team Member
 
-If you want to join an App Team, you have to ask a current App Team member (with the **Invite** permission) to send an invitation. Because App Team members are not visible to users outside that App Team, you can ask the [App Contact](../settings/general-settings) to send the invite. This means it is important the App Contact has the correct permissions to manage the app (for example, the Scrum Master role; for more information on roles and permissions, see the [App Team Roles](#app-team-roles) section below).
+If you want to join an an team, you have to ask a current team member (with the **Invite** permission) to send an invitation. Because team members are not visible to users outside that team, you can ask the [App Contact](../settings/general-settings) to send the invite. This means it is important the App Contact has the correct permissions to manage the app (for example, the Scrum Master role; for more information on roles and permissions, see the [Team Roles](#team-roles) section below).
 
-## 3 App Team Roles {#app-team-roles}
+## 3 Team Roles {#team-roles}
 
-Within an App Team, there are six predefined roles that can be provisioned to App Team members. Each App Team role has access to permission areas based on the following factors:
+Within a team, there are six predefined roles that can be provisioned to team members. Each team role has access to permission areas based on the following factors:
 
 * Who can edit the backlog and current [Sprint](../collaborate/stories)
 * Who can edit the app model
 * Who has the correct [Node Permissions](../deploy/node-permissions) for access to the node information (please note that node permissions must be provisioned by the [Technical Contact](#technical-contact))
 * Who can change the app's [general settings](../settings/general-settings)
 
-These are the predefined App Team roles:
+These are the predefined team roles:
 
 | Role | Explanation |
 | ------------ | -------------|
-| Application Operator | An App Team member who does not actively develop the app, but is responsible for operations on the app's cloud node. |
-| Business Engineer | An App Team member who contributes to the development of the app. |
+| Application Operator | A team member who does not actively develop the app, but is responsible for operations on the app's cloud node. |
+| Business Engineer | A team member who contributes to the development of the app. |
 | Guest | A user of the app who should have insight into the backlog but does not actively participate in development (for example, a stakeholder). |
 | Product Owner | The product owner of the Scrum team who is responsible for managing the app's backlog.|
-| Scrum Master | The Scrum Master of the Agile App Team. In addition to contributing to development, the Scrum Master manages all the settings within the app. If you create a new app, you will automatically become the Scrum Master. |
+| Scrum Master | The Scrum Master of the Agile team. In addition to contributing to development, the Scrum Master manages all the settings within the app. If you create a new app, you will automatically become the Scrum Master. |
 
-### 3.1 Editing App Team Roles {#edit-app-team-roles}
+### 3.1 Editing Team Roles {#edit-app-team-roles}
 
 Mendix Admins can edit and create new team roles within the company in [Control Center](../control-center/).
 
-As a Scrum Master, you can edit roles for the specific app of which you are the Scrum Master by selecting **Team** > **Manage Team** (which will take you to the **App Team** tab of the **Security** page), clicking **Role settings,** then making your edits by clicking **Edit** or clicking **New role** to create a custom new App Team role for that app.
+As a Scrum Master, you can edit roles for the specific app of which you are the Scrum Master by selecting **Team** > **Manage Team** (which will take you to the **App Team** tab of the **Security** page), clicking **Role settings,** then making your edits by clicking **Edit** or clicking **New role** to create a custom new team role for that app.
 
 ![](attachments/app-roles/app-roles-edit.png)
 
@@ -53,11 +52,11 @@ When you view the [General settings](../settings/general-settings) for a specifi
 
 ![](attachments/app-roles/app-roles.png)
 
-The App Contact is visible to regular users and is the go-to person for questions on the app. If you build your own app, you will automatically become the App Contact and you will have the **Scrum Master** [App Team role](#app-team-roles). 
+The App Contact is visible to regular users and is the go-to person for questions on the app. If you build your own app, you will automatically become the App Contact and you will have the **Scrum Master** [team role](#team-roles). 
 
 ### 4.1 Changing the App Contact {#change-app-contact}
 
-To change the App Contact, you need to have a **Scrum Master** role or possess the App Team **Settings** permission.
+To change the App Contact, you need to have a **Scrum Master** role or possess the team **Settings** permission.
 
 Change the App Contact by following these steps:
 
@@ -107,7 +106,7 @@ To change the Technical Contact, you need to be a **Technical Contact**.
 It is currently not possible to select more than one Technical Contact in the Mendix Cloud. However, for on-premises installations, it is possible to select more than one Technical Contact. Contact [Mendix Support](https://support.mendix.com) with your request.
 {{% /alert %}}
 
-If you are the current Technical Contact for an app, make another App Team member the Technical Contact by following these steps:
+If you are the current Technical Contact for an app, make another team member the Technical Contact by following these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com), click **Apps** in the top navigation panel, and select the app for which you want to change the Technical Contact.
 2. Click **Collaborate** > **Security** category.

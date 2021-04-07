@@ -979,7 +979,7 @@ The **Apps** tab of namespace details in the cluster manager page lists all the 
 If you are a team member of the app, click **Details** to go to the *Environment Details* page for that app.
 
 {{% alert type="info" %}}
-You can only see the environment details of an app if you are a member of the app team with the appropriate authorization.
+You can only see the environment details of an app if you are a member of the team with the appropriate authorization.
 {{% /alert %}}
 
 #### 6.2.2 Members

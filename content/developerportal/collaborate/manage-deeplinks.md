@@ -3,6 +3,8 @@ title: "Manage Deep Links"
 parent: "general-settings"
 description: "Describes how to implement deep links to Developer Portal pages."
 tags: ["Developer Portal", "deep link"]
+aliases:
+    - /developerportal/settings/manage-deeplinks
 ---
 
 ## 1 Introduction
@@ -20,15 +22,15 @@ To create a deep link, you need the App ID, Story ID, or Feedback Item Nr for th
 
 *  For the App ID, select **Collaborate** > **General Settings** – you will find the **App ID** at the bottom of the page:
 
-	![](attachments/app-id.png)
+	![](attachments/general-settings/app-id.png)
 
 *  For the Story ID, select **Collaborate** > **Stories** – the story **ID** is below the title of the story:
 
-	![](attachments/story-id.png)
+	![](attachments/general-settings/story-id.png)
 
 *  For the Feedback Item Number, select **Collaborate** > **Feedback** – the feedback item number is next to the title of the feedback item:
 
-	![](attachments/feedback-nr.png)
+	![](attachments/general-settings/feedback-nr.png)
 
 ## 3 Creating a Developer Portal Deep Link
 

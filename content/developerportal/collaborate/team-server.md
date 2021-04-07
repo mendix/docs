@@ -1,11 +1,12 @@
 ---
-title: "Team Server Overview"
-category: "Development"
-menu_order: 20
+title: "Team Server"
+category: "Collaboration"
+menu_order: 7
 description: "Describes the overview of Team Server revisions and commits."
 tags: ["Studio Pro", "Team Server", "Developer Portal", "commit", "branch"]
 aliases:
     - /refguide/team-server.html
+    - /developerportal/develop/team-server.html
 ---
 
 ## 1 Introduction
@@ -18,7 +19,7 @@ Team Server also connects the capture-and-develop phase of the Agile application
 
 On the **Team Server** page of the Developer Portal, an overview is presented of the changes and revisions made to the app in Mendix Studio Pro:
 
-![](attachments/team-server.png)
+![](attachments/team-server/team-server.png)
 
 ## 2 Team Server URL
 
@@ -36,7 +37,7 @@ For each revision, you can see the following information:
 
 * The message in the revision commit
 * The date of the revision commit
-* The name of the App Team member who committed the revision
+* The name of the team member who committed the revision
 * The branch to which the revision was committed
 * The Mendix Studio Pro version used
 * The revision number
@@ -47,11 +48,11 @@ You can also access the revision history in Studio Pro. For more information, se
 
 When you click **Details** for a revision, you can see the stories related to that revision:
 
-![](attachments/revision-details.png)
+![](attachments/team-server/revision-details.png)
 
 Related stories will only appear if you select them in the **Commit** dialog box of Mendix Studio Pro when committing:
 
-![](attachments/commit-story.png)
+![](attachments/team-server/commit-story.png)
 
 ## 5 Team Server FAQ
 

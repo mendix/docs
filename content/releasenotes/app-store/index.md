@@ -11,7 +11,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ### April 7th, 2021
 
-* We added a section to **Get Studio Pro** for downloading versions that have [long-term support (LTS)](/releasenotes/studio-pro/lts-mts#lts) and (medium-term support (MTS)](/releasenotes/studio-pro/lts-mts#mts).
+* We added a section to **Get Studio Pro** for downloading versions that have [long-term support (LTS)](/releasenotes/studio-pro/lts-mts#lts) and [medium-term support (MTS)](/releasenotes/studio-pro/lts-mts#mts).
 	{{% alert type="info" %}}This is based on an [upvoted idea from Alexander Keßler](https://forum.mendixcloud.com/link/ideas/2212) submitted to the [Mendix Idea Forum](https://forum.mendixcloud.com/link/ideas). Thanks, Alexander!
 	{{% /alert %}}
 * We fixed some performance issues where certain Marketplace sections were not loading properly. This also includes connection issues to the App Store/Marketplace within Studio Pro.

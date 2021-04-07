@@ -164,4 +164,4 @@ Which users and roles are defined within an application is different per app and
 * Anonymous access should be disabled if it has no function within the application
   * Some applications have anonymous access enabled, solely to serve a custom login form – this can be replaced by modifying the default *login.html* within your theme (which will also help the user experience with an improved loading time)
 * Roles managing other user roles should be as strict as possible (configured via **User management** within the user role options)
-* The role of the app project’s administrator user (default **MxAdmin**) should only be able to create the actual administrative accounts (or configure SSO)
+* The role of the app'a administrator user (default **MxAdmin**) should only be able to create the actual administrative accounts (or configure SSO)

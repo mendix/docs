@@ -15,9 +15,9 @@ The **Preferences** option in the menu opens a dialog box where you can set user
 
 ### 2.1 Interface
 
-#### 2.1.1 Keep Active Document Selected in Project Explorer
+#### 2.1.1 Keep Active Document Selected in App Explorer
 
-When enabled, **Project Explorer** automatically highlights the document that is currently active. When this property is disabled, the selection in **Project Explorer** remains unchanged when the active document changes.
+When enabled, **App Explorer** automatically highlights the document that is currently active. When this property is disabled, the selection in **App Explorer** remains unchanged when the active document changes.
 
 ### 2.2 Mendix Assist
 
@@ -36,7 +36,7 @@ The **Performance Bot** tab contains the **Show recommendation in editors** sett
 
 #### 2.3.1 Auto-Check Delay
 
-The **Auto-check delay** is the number of milliseconds that Studio Pro waits after a change, before starting the consistency checks. Increase this setting for large projects if Studio Pro responses slowly after changes.
+The **Auto-check delay** is the number of milliseconds that Studio Pro waits after a change, before starting the consistency checks. Increase this setting for large apps if Studio Pro responses slowly after changes.
 
 #### 2.3.2 Highlight Shown Errors and Warnings in the Editor
 
@@ -79,7 +79,7 @@ This is the pattern from which the arguments are derived that are passed to the 
 
 #### 4.2.1 Enable Private Version Control with Subversion {#enable}
 
-Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/develop/team-server), but in another Subversion server to which you have access. This will allow you to specify the location of the app on the Subversion server when opening, downloading, or uploading the app.
+Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/collaborate/team-server), but in another Subversion server to which you have access. This will allow you to specify the location of the app on the Subversion server when opening, downloading, or uploading the app.
 
 ### 4.3 Git
 
@@ -89,7 +89,7 @@ Select this option when you want to work on an app that is not stored in [Mendix
 Only appears when a feature flag for Git is enabled. For more information on how to enable the feature flag, see the [Enabling Feature Flag](/howto/collaboration-requirements-management/on-premises-git-howto#enable-feature-flag) section in *How to Work with Git On-Premises Version Control Server*.
 {{% /alert %}}
 
-Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/develop/team-server), but in a private Git server to which you have access. This will allow you to specify the location of the app on the Git server when opening, downloading, or uploading the app. In this section, you also need to specify name and email values that will be used to identify your commits with Git.
+Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/collaborate/team-server), but in a private Git server to which you have access. This will allow you to specify the location of the app on the Git server when opening, downloading, or uploading the app. In this section, you also need to specify name and email values that will be used to identify your commits with Git.
 
 ## 5 Advanced Tab
 
@@ -111,9 +111,9 @@ With this option, you can enable the new version of the [Connector](view-menu#co
 
 Default: *disabled*
 
-### 6.2 New Version of the Project Explorer {#new-project-explorer}
+### 6.2 New Version of the App Explorer {#new-project-explorer}
 
-With this option, you can enable the new version of the [Project Explorer](project-explorer). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
+With this option, you can enable the new version of the [App Explorer](project-explorer). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
 
 Default: *enabled*
 
@@ -125,7 +125,7 @@ Default: *enabled*
 
 ### 6.4 New Merge Algorithm with Fine-Grained Conflict Resolution
 
-With this option, you can enable the new merge algorithm that is used when you update your project or merge changes in it. For more information on the algorithm, see [New Merge Algorithm with Fine-Grained Conflict Resolution](new-merge-algorithm).
+With this option, you can enable the new merge algorithm that is used when you update your app or merge changes in it. For more information on the algorithm, see [New Merge Algorithm with Fine-Grained Conflict Resolution](new-merge-algorithm).
 
 Default: *disabled*
 

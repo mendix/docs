@@ -7,7 +7,7 @@ tags: ["on-premises", "git", "version control"]
 
 ## 1 Introduction
 
-When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/develop/team-server) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see the [Version Control Reference Guide](/refguide/version-control).	
+When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/collaborate/team-server) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see the [Version Control Reference Guide](/refguide/version-control).	
 
 While using Team Server is the recommended for most Mendix developers, you may prefer to store your application's files in a system controlled by your own organization. For version control, Mendix uses the [Subversion](https://subversion.apache.org) system (also known as SVN) and [Git](on-premises-git-howto). This how-to describes how to work with Git version control system.	
 
@@ -21,7 +21,7 @@ You will not be able to use Mendix Studio for collaborative development if you u
 
 **This how-to will teach you how to do the following:**	
 
-* Configure your Mendix app projects to work with Git (on-premises) version control system	
+* Configure your Mendix apps to work with Git (on-premises) version control system	
 
 ## 2 Prerequisites
 
@@ -29,7 +29,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Make sure you have the right server provider. We currently only support Git Private Server. For more information, see the [Preparing Your Repository](#preparing-your-repo) section. 
 * You have a feature flag enabled. For more information, see the [Enabling a Feature Flag](#enable-feature-flag) section.
-* You have an unversioned Mendix app project. For more information, see the [Creating an App](#create-app) section.
+* You have an unversioned Mendix app. For more information, see the [Creating an App](#create-app) section.
 
 ## 3 Supported Authentication Mechanisms
 
@@ -85,7 +85,7 @@ We have a known compatibility issue with AWS CodeCommit in Git Technology Previe
 
 ## 4 Setting Up the Environment
 
-This section describes how to configure a Git versioned app in Studio Pro. You need a Git server and an initially unversioned Mendix app project.
+This section describes how to configure a Git versioned app in Studio Pro. You need a Git server and an initially unversioned Mendix app.
 
 ### 4.1 Preparing Your Repository {#preparing-your-repo}
 
@@ -161,23 +161,23 @@ Now that you have a Git app on your server, you can download it to another direc
 
 The app is downloaded and ready to be used with version control.
 
-### 4.5 Opening the Existing Git App Project
+### 4.5 Opening the Existing Git App
 
-There are a few ways to open a Git Mendix app project, as long as you have Studio Pro started up with the [git feature flag](#enable-feature-flag).
+There are a few ways to open a Git Mendix app, as long as you have Studio Pro started up with the [git feature flag](#enable-feature-flag).
 
 #### 4.5.1 Recent Apps List
 
 In your **Recent Apps** list, you can click the app name and the app will open.
 
-#### 4.5.2 Recent Projects Menu
+#### 4.5.2 Recent Apps Menu
 
-Under **File > Recent Projects** you can select the app and open it.
+Under **File** > **Recent Apps**, you can select the app and open it.
 
 #### 4.5.3 Open App Form
 
 The **Open App** form is accessible from two different places:
 * **Open App** button on the **My Apps** tab
-* Under menu **File > Open Project**
+* Under menu **File > Open App**
 
 In a form, there are two ways to open a Git app, by opening it from a previous checkout or by opening it locally on disk:
 
@@ -200,15 +200,15 @@ For the previous local disk method do the following:
    
 ### 4.6 Uploading to the Private Git Server {#upload-to-private-git-server}
 
-Once you have an unversioned app project, you can upload it to your private team server. 
+Once you have an unversioned app, you can upload it to your private team server. 
 
 {{% alert type="warning" %}}
 The repository has to be completely empty (including README.md and. gitignore files), or the upload will fail.
 {{% /alert %}}
 
-To upload your app project, do the following:
+To upload your app, do the following:
 
-1.  Open the app project in Studio Pro and go to **Version Control > Upload to Version Control Server**:
+1.  Open the app in Studio Pro and go to **Version Control > Upload to Version Control Server**:
 
     ![Upload to Version Control Server Menu](attachments/on-premises-git-howto/upload-to-vc-menu.png)
     
@@ -218,38 +218,35 @@ To upload your app project, do the following:
 
     ![Upload to Version Control Server dialog](attachments/on-premises-git-howto/upload-to-vc-server.png)
     It might ask you to sign into the server, depending on whether you have previously signed in and choose to stay logged in.
-5.  You can see the upload process in the **Upload Project to Team Server** pop-up window:
+5.  You can see the upload process in the **Upload Project to Team Server** pop-up window.
 
-    ![Upload Project to Team Server progress window](attachments/on-premises-git-howto/upload-project-to-team-server.png)
-    
+The app is uploaded successfully. You can check on your private server and see that the app is now on the selected repository:
 
-The project is uploaded successfully. You can check on your private server and see that the app is now on the selected repository:
+![App Uploaded confirmation window](attachments/on-premises-git-howto/project-uploaded-confirmation.png)
 
-![Project Uploaded confirmation window](attachments/on-premises-git-howto/project-uploaded-confirmation.png)
+### 4.7 Moving a Subversion App to Git
 
-### 4.7 Moving a Subversion App Project to Git
+If you already have an existing versioned app (with Subversion) that you would like to upload to your Git private server instead, you can export it, then re-import it, and uploading it to your server. Follow the steps below:
 
-If you already have an existing versioned app project (with Subversion) that you would like to upload to your Git private server instead, you can export it, then re-import it, and uploading it to your server. Follow the steps below:
+1. Once the app is opened, go to **File > Export App Package**. 
+2.  In the **Export App Package** dialog box, browse to the location you would like to save the *.mpk* (Mendix Package) file, or accept the default location, a new **packages** folder in the root of the application folder. Take note of this location, as you will need it later. You can also rename the *.mpk* file (for example,*MyGitApp.mpk*) and the app will be named that way once you import it and upload it to the Git server:
 
-1. Once the app is opened, go to **File > Export Project Package**. 
-2.  In the **Export Project Package** dialog box, browse to the location you would like to save the *.mpk* (Mendix Package) file, or accept the default location, a new **packages** folder in the root of the application folder. Take note of this location, as you will need it later. You can also rename the *.mpk* file (for example,*MyGitApp.mpk*) and the app will be named that way once you import it and upload it to the Git server:
+    ![Export App Package dialog](attachments/on-premises-git-howto/export-project-package-dialog.png)
 
-    ![Export Project Package dialog](attachments/on-premises-git-howto/export-project-package-dialog.png)
-
-3.  The **Progress** pop-up window appears, and once it is completed, you can close the project in **Studio Pro**:
+3.  The **Progress** pop-up window appears, and once it is completed, you can close the app in **Studio Pro**:
 
     ![Progress dialog](attachments/on-premises-git-howto/progress-dialog.png)
 
-4.  Now you can import the project package again, and from there you can choose to upload it to your Git private server. Go to **File > Import Project Package**:
+4.  Now you can import the package again, and from there you can choose to upload it to your Git private server. Go to **File** > **Import App Package**:
 
-    {{% image_container width="250" %}}![Import Project Package menu](attachments/on-premises-git-howto/import-project-package-menu.png){{% /image_container %}}
+    {{% image_container width="250" %}}![Import App Package menu](attachments/on-premises-git-howto/import-project-package-menu.png){{% /image_container %}}
 
 5. Once the file browser dialog box is open, navigate to the location you save the *.mpk* file during the export process.
-6. In the **Import Project Package** dialog box, select **Private server** option in the **Where should we store your App?** section. 
+6. In the **Import App Package** dialog box, select **Private server** option in the **Where should we store your App?** section. 
 7. In the **Private Server Type** option, select **Git** (if you have both **Subversion** and **Git** enabled in the **Preferences** form). 
-8.  Enter the link to the private repository in the address textbox and click **OK**. Remember, the repository **must be completely empty**, or **Studio Pro** will not be able to upload a project to it:
+8.  Enter the link to the private repository in the address textbox and click **OK**. Remember, the repository **must be completely empty**, or **Studio Pro** will not be able to upload an app to it:
 
-    ![Import Git Project Package menu](attachments/on-premises-git-howto/import-project-package-git-dialog.png)
+    ![Import Git Package menu](attachments/on-premises-git-howto/import-project-package-git-dialog.png)
 
 9. Click **OK**. 
 
@@ -262,6 +259,6 @@ Note that your previous app still exists, **Studio Pro** will simply make an unv
 ## 5 Read More
 
 * [Version Control Reference Guide](/refguide/version-control)
-* [Team Server Overview](/developerportal/develop/team-server)
+* [Team Server](/developerportal/collaborate/team-server)
 * [Upload to Version Control Server Reference Guide](/refguide/upload-to-version-control-dialog)
 

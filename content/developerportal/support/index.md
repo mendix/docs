@@ -22,7 +22,7 @@ We are available for all users of the Mendix Platform, and we are bound by servi
 * Recovery time objective (RTO)
 * Recovery point objective (RPO)
 
-The SLA for your company is available upon request. Please contact [Mendix Support](https://support.mendix.com/) or your Customer Success Manager if you want to check the details.
+You can check the Mendix SLA [here](https://mendix.com/sla).
 
 ### 1.2 Premier Support
 
@@ -67,9 +67,9 @@ During the start phase, and through part of the scale phase, of your digital tra
 
 ### 5.1 Mendix Admins
 
-To manage your company account, and the users, projects, and licensed cloud nodes of your company, you can appoint [Mendix Admins](/developerportal/control-center/index#company).
+To manage your company account, and the users, projects, and licensed cloud nodes of your company, you can appoint [Mendix Admins](/developerportal/control-center/#company).
 
-Please read more about this in [Control Center](/developerportal/control-center/index).
+Please read more about this in [Control Center](/developerportal/control-center/).
 
 ### 5.2 Technical Contacts
 
@@ -121,9 +121,9 @@ The full stack is depicted in the table below. This indicates which components a
 <th class="has-expand" width=25%><div class="expand-table"><i class="glyphicon glyphicon-fullscreen"></i></div>Stack (see <a href="#components">below</a> for more information)</th>
 <th>Public Cloud</th>
 <th>Cloud Dedi­cated</th>
-<th>Private Cloud - Con­nected</th>
-<th>Private Cloud - Stand­alone</th>
-<th>SAP BTP</th>
+<th>Private Cloud – Con­nected</th>
+<th>Private Cloud – Stand­alone</th>
+<th>SAP BTP<br />or<br />Tencent</th>
 <th>Cloud Foundry/ Docker &amp; Kuber­netes</th>
 <th>Tradi­tional</th>
 </tr>
@@ -253,7 +253,7 @@ The full stack is depicted in the table below. This indicates which components a
 </tbody>
 </table>
 
-¹Support will go through [SAP Support](https://launchpad.support.sap.com/#/incident/create/prefilled/comp_name=XX-PART-MDX-RAD). 
+¹Support will go through [SAP Support](https://launchpad.support.sap.com/#/incident/create/prefilled/comp_name=XX-PART-MDX-RAD) or Tencent Support.
 
 In the diagrams below, the following colors are used:
 
@@ -288,7 +288,17 @@ Mendix Support does not have access to app health, logs, graphs and monitoring �
 ![](attachments/index-mendix-support/sap-cloud-platform.png)
 {{% /image_container %}}
 
-### 9.4 Cloud Foundry / Docker & Kubernetes / Traditional Architectures
+### 9.4 Tencent
+
+Mendix provides an integration with Tencent for customers in China.
+
+Mendix Support does not have access to app health, logs, graphs and monitoring – for support on these components, please contact **Tencent Support**. If you run into issues or want to ask a question on the supported components, please always provide relevant logs, data, and your own analysis that explains why you suspect the issue is caused by one of our supported components
+
+{{% image_container width="40%" %}}
+![](attachments/index-mendix-support/tencent.png)
+{{% /image_container %}}
+
+### 9.5 Cloud Foundry / Docker & Kubernetes / Traditional Architectures
 
 Mendix is compatible with all the well-known cloud providers: IBM Cloud, Microsoft Azure, Amazon Web Services (AWS), Red Hat OpenShift, and Google Cloud Platform.
 Depending on the Cloud architecture a Mendix application is built using the [Mendix Cloud Foundry buildpack](https://github.com/mendix/cf-mendix-buildpack), the [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack) or to a Unix-like or Windows server.

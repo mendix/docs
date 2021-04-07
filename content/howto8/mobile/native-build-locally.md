@@ -10,7 +10,7 @@ tags: ["native", "mobile", "build", "local", "xcode", "android studio"]
 
 By default when building your native mobile app binaries, Mendix uses [Visual Studio App Center](https://appcenter.ms/sign-in?original_url=%2Fapps) as a service so that users can build without having to install tools like XCode or Android Studio. However, there are cases when using App Center is not allowed or possible. In those situations, you can build your apps locally without an internet connection.
 
-Follow the sections below through [Building Your Native App Project](#building-app-project) to complete your builds. To go beyond those instructions, see [Adding Dependencies](#adding-dependencies) and [Removing Dependencies](#removing-dependencies) sections below. These sections will allow you to further customize your local builds.
+Follow the sections below through [Building Your Native App](#building-app-project) to complete your builds. To go beyond those instructions, see [Adding Dependencies](#adding-dependencies) and [Removing Dependencies](#removing-dependencies) sections below. These sections will allow you to further customize your local builds.
 
 To understand the local build process, it is important to grasp a few basic concepts. Mendix native mobile apps are first and foremost React Native (RN) apps which follow the same rules as other RN apps:
 
@@ -93,7 +93,7 @@ This method is useful if you do not have Git installed. To get the Native Templa
 1. Unzip the file.
 1. Run `npm i && cd ios && pod install` to install the required dependencies.
 
-Now that you have a copy of the Native Template checked out and ready, you can bundle your Mendix app project, move it into the Native Template folder, and compile everything together to produce your native app.
+Now that you have a copy of the Native Template checked out and ready, you can bundle your Mendix app, move it into the Native Template folder, and compile everything together to produce your native app.
 
 ## 4 Bundling Your Mendix App
 
@@ -129,9 +129,9 @@ When completed you should have two zipped binaries: one for Android and one for 
 1. Replace the URL with the correct URL for your runtime.
 1. Open *{your Native Template root}/ios/Config/config.xcconfig*, then replace the value of `RUNTIME_URL=` with the correct URL for your runtime.
 
-Congratulations! You have successfully completed the basic setup of a Native Template with the latest bundle and assets of your Mendix app project.
+Congratulations! You have successfully completed the basic setup of a Native Template with the latest bundle and assets of your Mendix app.
 
-## 5 Building your Native Mobile App Project{#building-app-project}
+## 5 Building your Native Mobile App {#building-app-project}
 
 Now that the Native Template is ready and includes the app's bundle, resources, and runtime URL configuration, it can be built into a native app. To build your project you can open the project with Android Studio or XCode for the Android and iOS project respectively, and then build as normal. More advanced use cases, such as apps for continuous integration pipelines, can make use of Gradle or xcodebuild to build the apps using command line.
 

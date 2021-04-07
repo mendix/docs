@@ -20,7 +20,7 @@ This how-to explains how to migrate your app from a Mendix Cloud v3 node to a Me
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Ensure that your app is on a supported version of Mendix, that is **Mendix version 6.0 or above**, otherwise the migration will fail – see [Moving from Modeler Version 5 to 6](/refguide6/moving-from-5-to-6) for help if your app is on a version of Mendix below 6.0
+* Ensure that your app is on at least **Mendix version 6.0**, otherwise the migration will fail – it is preferable to be on a supported version of Mendix: **Mendix version 7.0 and above**
 * Have a [Mendix Cloud](mendix-cloud-deploy) v4 node available (to request a licensed v4 Cloud Node, contact your Customer Success Manager (CSM))
 * Have the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) role for both your existing v3 and available v4 Cloud Nodes
 * Create two new temporary Free Apps without Free App environments – instructions for unlinking a Free App from its environment are here: [Licensing Mendix Cloud Apps](licensing-apps#unlink)
@@ -64,7 +64,7 @@ To migrate your app from a v3 node to a v4 node in the Mendix Cloud, follow the 
 
 First, link one of the new temporary apps to the cloud v4 node.
 
-1.  In the [Developer Portal](http://home.mendix.com), go to **Apps** and select one of your temporary apps.
+1.  In the [Developer Portal](http://sprintr.home.mendix.com), go to **Apps** and select one of your temporary apps.
 
 2.  Once you are in the app, go to the **Environments** tab in the left menu.
 
@@ -112,6 +112,10 @@ To upload the deployment package, follow these steps:
 
 #### 4.2.2 Backing Up
 
+{{% alert type="warning" %}}
+Ensure you have performed the last two steps in the previous section to deploy your deployment package before continuing. Making a deployment prepares the environment and ensures your data is restored to the correct locations.
+{{% /alert %}}
+
 Transfer the backup data from the app on Mendix Cloud v3 to the app on Mendix Cloud v4 by following these steps:
 
 1. Download a backup from your app hosted in Mendix Cloud v3 (for details, see [How to Download a Backup](/developerportal/operate/download-backup)).
@@ -134,7 +138,7 @@ To learn how to do this, see [How to Deploy the App to an Environment](mendix-cl
 
 It is not possible to explicitly unlink an app from a licensed node. The only way to do this is to connect another app to the licensed node; this will unlink the existing app automatically. To do this, perform the following steps.
 
-1. In the [Developer Portal](http://home.mendix.com), go to **Apps** and select the second blank app you created (not the one you have linked to the v4 node).
+1. In the [Developer Portal](http://sprintr.home.mendix.com), go to **Apps** and select the second blank app you created (not the one you have linked to the v4 node).
 
 2.  Once you are in the app, go to the **Environments** tab in the left menu.
 
@@ -152,7 +156,7 @@ Follow these steps to link the app you detached from the v3 node, above, to the 
 Make sure you have downloaded the latest backup and deployment package before linking your app to the v4 node.
 {{% /alert %}}
 
-1.  In the [Developer Portal](http://home.mendix.com), go to **Apps** and select the app that has been detached from the v3 node.
+1.  In the [Developer Portal](http://sprintr.home.mendix.com), go to **Apps** and select the app that has been detached from the v3 node.
 
 2.  Once you are in the app, go to the **Environments** tab in the left menu.
 

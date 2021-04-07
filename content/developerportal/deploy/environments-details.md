@@ -9,7 +9,7 @@ tags: ["Deploy","App","Environment","Developer Portal"]
 
 ## 1 Introduction
 
-To enter the **Environment details** page, go to the [Developer Portal](http://home.mendix.com), select your licensed app, click **Environments**, and then click **Details** on the specific environment. 
+To enter the **Environment details** page, go to the [Developer Portal](http://sprintr.home.mendix.com), select your licensed app, click **Environments**, and then click **Details** on the specific environment. 
 
 ![](attachments/environments-details/environment-details.png)   
 
@@ -85,6 +85,10 @@ In Mendix Cloud v4 environments, you have two additional action buttons:
 * **Show debugger information** – shows the settings needed to connect the debugger in Studio Pro to your app — for Mendix Cloud v4, the debugger is *always* enabled — for more information on debugging in the cloud, see [How To Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely)
 
 #### 2.1.3 Logging and Debugging in Mendix Cloud v3
+
+{{% alert type="warning" %}}
+Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be retired at the beginning of Q3 2021. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4). 
+{{% /alert %}}
 
 ![](attachments/environments-details/actions-v3.png)
 
@@ -233,7 +237,7 @@ HTTP Headers allows you to set the values of selected HTTP response headers. The
 This replaces the option to prevent embedding your app in an iframe with more flexible options to set HTTP Headers.
 {{% /alert %}}
 
-For Mendix Cloud v3, only *X-Frame-Options* is supported. For Mendix Cloud v4 the HTTP headers which are supported in the Developer Portal are:
+For the deprecated Mendix Cloud v3, only *X-Frame-Options* was supported. For Mendix Cloud v4 the HTTP headers which are supported in the Developer Portal are:
 
 | Header | Description | Additional Information |
 | --- | --- | --- |
@@ -390,6 +394,10 @@ On this tab, you can perform the following actions:
 
 * Change the log level type by clicking the specific level
 * Click **Set all to INFO** to revert all the changes
+
+{{% alert type="info" %}}
+If your app is not running, you will only see log nodes which are not set to the `Info` level. You will see these log nodes again when your app is restarted and, for custom nodes, messages have been logged to them.
+{{% /alert %}}
 
 {{% alert type="info" %}}
 If you change the log level, this level will continue to be used even if you later restart your app.

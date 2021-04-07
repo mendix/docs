@@ -7,7 +7,7 @@ When creating a new app, the App Settings dialog lets you specify an app name, w
 
 ## Name
 
-The name of your new app. This name is used as the name of the project directory and file on disk. If you enable the online services for this app, the name is also used for the Team Server repository and a corresponding app project in **My Apps**.
+The name of your new app. This name is used as the name of the project directory and file on disk. If you enable the online services for this app, the name is also used for the Team Server repository and a corresponding app in **My Apps**.
 
 ## Enable Online Services
 

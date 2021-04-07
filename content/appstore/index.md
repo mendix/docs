@@ -1,7 +1,7 @@
 ---
 title: "Marketplace Guide"
 description: "Presents documentation on configuring and using the latest versions of platform-supported components."
-tags: ["marketplace", "app store", "component", "platform support"]
+tags: ["marketplace",  "component", "platform support"]
 ---
 
 ## 1 Introduction
@@ -16,10 +16,10 @@ For details on the Studio Pro version required for use and when the component wa
 
 The *Marketplace Guide* is divided into the following categories:
 
-* [General Info](general/index)
-* [Connectors](connectors/index)
-* [Modules](modules/index)
-* [Themes](themes/index)
-* [Widgets](widgets/index)
+* [General Info](general/)
+* [Connectors](connectors/)
+* [Modules](modules/)
+* [Themes](themes/)
+* [Widgets](widgets/)
 
 

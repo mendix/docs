@@ -1,9 +1,9 @@
 ---
-title: "Use Over the Air Updates"
+title: "Release OTA Updates with App Center's CodePush"
 parent: "native-mobile"
 menu_order: 71
-description: A tutorial for pushing over the air updates (OTA).
-tags: ["native", "mobile", "ota", "native-builder", "over the air", "update"]
+description: Learn to release releasing an OTA update with App Center's CodePush.
+tags: ["native", "mobile", "ota", "over the air", "update", "codepush", "app center"]
 ---
 
 ## 1 Introduction

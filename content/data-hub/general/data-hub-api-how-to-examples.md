@@ -22,7 +22,7 @@ For convenience and conciseness, the following variables are used and should be 
 - {{baseURL}} – the base URL for the Data Hub API: https://hub.mendix.com/rest/datahubservice/v2/data
 - {*AppUUID}* – insert the value the UUID of the application
 - {EnvironmentUUID} – insert the value of the UUID of the environment
-- `<your MxToken>` – insert the value of your [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) as described in [Using the Data Hub API How-to](data-hub-api-how-to#pat)
+- `<your_PAT_Token>` – insert the value of your [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) as described in [Using the Data Hub API How-to](data-hub-api-how-to#pat)
 
 ## 3 Searching in the Catalog for the string: sample {#get-data-ex}
 This example provides the GET request to the Data Hub API when you want to search in the Data Hub Catalog for the following:
@@ -41,7 +41,7 @@ This example provides the GET request to the Data Hub API when you want to searc
 
 ```curl
 curl --location --request GET 'https://hub.mendix.com/rest/datahubservice/v2/data?query=sample&productionEndpointsOnly=true' \
---header 'Authorization: MxToken <your MxToken>'
+--header 'Authorization: MxToken <your_PAT_Token>'
 ```
 
 

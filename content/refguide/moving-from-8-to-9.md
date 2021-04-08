@@ -67,15 +67,15 @@ Check if there is a newer version of your modules available in the Marketplace. 
 
 Be sure to update these key widgets, resources, and actions:
 
-* [Native Mobile Resources (Mx9 Beta)](https://marketplace.mendix.com/link/component/116537)
-* [Nanoflow Commons (Mx9 Beta)](https://marketplace.mendix.com/link/component/116538)
-* [Data Grid 2 (Mx9 Beta)](https://marketplace.mendix.com/link/component/116540)
+* [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513)
+* [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
+* [Data Grid 2](https://marketplace.mendix.com/link/component/116540)
 
 In general you should not remove and reimport modules, unless this is recommended in the release notes. If you do remove and reimport them, you may lose data or configuration related to the module.
 
 ### 3.7 Update Atlas Module (Optional)
 
-Mendix 9 comes with a new Atlas theme including new page templates and building blocks. To get this theme, you can download the [Atlas UI 3 (Mx9 Beta)](https://marketplace.mendix.com/link/component/116539) module package from the Marketplace.
+Mendix 9 comes with a new Atlas theme including new page templates and building blocks. To get this theme, you can download the [Atlas Core](https://marketplace.mendix.com/link/component/117187), [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) and [Atlas Native Content](https://marketplace.mendix.com/link/component/117175) module packages from the Marketplace.
 
 ### 3.8 Review and Test Your App
 
@@ -106,7 +106,7 @@ To test and preview native mobile apps in Mendix 9, you must download the Mendix
 * Download Make It Native 9 for Android in the [Google Play Store](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9)
 * Download Make It Native 9 for iOS in the [Apple App Store](https://apps.apple.com/nl/app/make-it-native/id1542182000)
 
-For best results with native apps, make sure you have updated the [Native Mobile Resources (Mx9 Beta)](https://marketplace.mendix.com/link/component/116537) module as described in the [Upgrade All Widgets and Modules](#upgrade-widgets) section above.
+For best results with native apps, make sure you have updated the [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513) module as described in the [Upgrade All Widgets and Modules](#upgrade-widgets) section above.
 
 ## 6 Client API Changes
 

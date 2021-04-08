@@ -21,6 +21,8 @@ User task properties consist of the following sections:
 * [Display Information](#display-info)
 * [Due Date](#due-date)
 * [Outcomes](#outcomes)
+* [Events](#events)
+* [Permissions](#permissions)
 
 ### 2.1 General Section {#general}
 
@@ -43,7 +45,7 @@ Possible options of this property are described in the table below:
 
 ### 2.3 Task Page Section {#task-page}
 
-**Task Page** is an overview page where the allowed roles can track the progress of the user tasks and view its details, such as open tasks, comments to them or attachments:
+**Page** is an overview page where the allowed roles can track the progress of the user tasks and view its details, such as open tasks, comments to them or attachments:
 
 ![Task Page](attachments/workflows-user-task/task-page.jpg)
 
@@ -78,9 +80,24 @@ The **Due Date** section properties are described in the table below:
 
 The **Outcomes** property allows you to create new outcomes for the user task. These outcomes can be referred to by other elements, such as buttons. For example, you have a process when you need to approve or reject a request. One button on a [task page](#task-page) can refer to the **Approve** outcome of the user task, while the other one can use the **Reject** outcome:
 
-{{% todo %}}[Make fields read only on the image to the right]{{% /todo %}}
-
 ![Outcomes Section](attachments/workflows-user-task/outcomes.jpg)
+
+### 2.7 Events Section {#events}
+
+**On Create** event allows you to select a microflow that is executed immediately after users have been determined for a newly created task instance. You can use this setting for a microflow that will send an email notification about the user task to the assigned users.
+
+![Events Section](attachments/workflows-user-task/events.jpg)
+
+Possible options for this setting are the following:
+
+* **Microflow** – a microflow that is executed when users have been determined for a newly created task 
+* **Nothing** – no event is executed
+
+### 2.8 Permissions Section {#permissions}
+
+**Allowed roles** defines the [user role](settings-security#roles-and-permissions) that can execute the user task.
+
+![Permissions Section](attachments/workflows-user-task/permissions.jpg)
 
 ## 3 Read More
 

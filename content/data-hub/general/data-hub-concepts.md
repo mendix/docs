@@ -9,6 +9,10 @@ tags: ["data hub catalog", "data hub", "virtual entities", "landscape", "publish
 
 
 
+
+
+- [ ]  Add discoverability and validity
+
 # 1 Introduction
 
 Describes concepts behind using the Mendix Data Hub and sharing datasets.

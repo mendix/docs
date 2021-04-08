@@ -18,10 +18,6 @@ These are the current versions in active development:
 
 **Release date: April 6th, 2021**
 
-### Hotfix for v5.1.9
-
-This release fixes a bug with v5.1.9 that could lead to iOS builds failing for no apparent reason.
-
 ### Improvements
  
 * Android custom developer apps now support deep links. 

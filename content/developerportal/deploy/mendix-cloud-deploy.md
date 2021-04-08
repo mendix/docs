@@ -26,7 +26,7 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 | **Number of Users** | Unlimited users. | Depends on your pricing plan.¹ |
 | **Sleep Mode** | Goes into Sleep Mode after an hour or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in Sleep Mode. | Does not have a Sleep Mode. |
 | **Disk Storage** | 0.5Gb Database and 1Gb Files. | Depends on your pricing plan.¹ |
-| **App CPU** | 0.5 Cores. | Depends on your pricing plan.¹ |
+| **App vCPU**s | 0.5 | Depends on your pricing plan.¹ |
 | **Scheduled Events** | Are not run. | Are run and can be configured from the Developer Portal. |
 | **Environments** | Single environment in the Mendix Cloud. | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
 | **Deployment** | Can only be deployed to the cloud from Mendix Studio or Studio Pro. | Can be deployed from the Studios, or from the Developer Portal. |
@@ -207,22 +207,22 @@ Mendix environments are sized by reference to cloud resource packs. The table be
 
 | Legacy Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | --- | --- | --- | --- | --- | --- | --- |
-| XS20 | 1GB | 0.5-1 core | 1GB | 1 core | 5GB | 10GB |
-| S20 | 2GB | 0.5-1 core | 2GB | 1 core | 10GB | 20GB |
-| M20 | 4GB | 1-2 cores | 4GB | 1 core | 20GB | 40GB |
-| L20 | 8GB | 2-4 cores | 8GB | 1 core | 40GB | 80GB |
-| XL20 | 16GB | 4-8 cores | 16GB | 2 cores | 80GB | 160GB |
-| XXL20 | 32GB | 8-16 cores | 32GB | 2 cores | 160GB | 320GB |
+| XS20 | 1GB | 0.5 | 1GB | 1  | 5GB | 10GB |
+| S20 | 2GB | 0.5 | 2GB | 1  | 10GB | 20GB |
+| M20 | 4GB | 1 | 4GB | 1  | 20GB | 40GB |
+| L20 | 8GB | 2 | 8GB | 1  | 40GB | 80GB |
+| XL20 | 16GB | 4 | 16GB | 2  | 80GB | 160GB |
+| XXL20 | 32GB | 8 | 32GB | 2  | 160GB | 320GB |
 ||||||||
-| Strato | 2GB | 0.5-1 core | 1GB | 0.5 core | 5GB | 20GB |
-| Meso | 2GB | 0.5-1 core | 8GB | 2 cores | 20GB | 20GB |
-| Iono | 8GB | 2-4 cores | 8GB | 2 cores | 20GB | 80GB |
-| Magneto | 16GB | 4-8 cores | 16GB | 4 cores | 80GB | 320GB |
-| S | 1GB | 0.5 core | 1GB | 0.5 core | 5GB | 5GB |
-| M | 2GB | 0.5-1 core | 2GB | 1 core | 10GB | 10GB |
-| L | 4GB | 1-2 cores | 4GB | 2 cores | 20GB | 20GB |
-| XL | 8GB | 2-4 cores | 8GB | 2 cores | 40GB | 40GB |
-| XXL | 16GB | 4-8 cores | 16 GB | 4 cores | 80GB | 80GB |
+| Strato | 2GB | 0.5 | 1GB | 0.5  | 5GB | 20GB |
+| Meso | 2GB | 0.5 | 8GB | 2  | 20GB | 20GB |
+| Iono | 8GB | 2 | 8GB | 2  | 20GB | 80GB |
+| Magneto | 16GB | 4  | 16GB | 4  | 80GB | 320GB |
+| S | 1GB | 0.5  | 1GB | 0.5  | 5GB | 5GB |
+| M | 2GB | 0.5  | 2GB | 1  | 10GB | 10GB |
+| L | 4GB | 1  | 4GB | 2  | 20GB | 20GB |
+| XL | 8GB | 2  | 8GB | 2  | 40GB | 40GB |
+| XXL | 16GB | 4  | 16 GB | 4  | 80GB | 80GB |
 
 {{% alert type="info" %}}
 You can have a pack using a fraction of a vCPU as several environments can run, completely isolated from each other, on a single virtual machine.

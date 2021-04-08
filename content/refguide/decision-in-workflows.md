@@ -15,20 +15,21 @@ A decision is an element that makes a choice based on a condition and follows on
 
 Decision properties consist of the following sections:
 
+* [Common](#common)
 * [General](#general)
 * [Outcome](#outcome)
 
-### 2.1 General Section {#general}
+### 2.1 Common Section {#common}
 
-#### 2.1.1 Name
+**Name** is the internal name of the element. When referring to the element in the app you will use this name. It must be unique within the workflow, but you can have two elements with the same name in different workflows. 
 
-**Name** is the internal name of the element. When referring to the element in the app project you will use this name. It must be unique within the workflow, but you can have two elements with the same name in different workflows. 
+### 2.2 General Section {#general}
 
-#### 2.1.2 Caption
+#### 2.2.2 Caption
 
 The **Caption** describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand without needing to add annotations.
 
-#### 2.1.3 Condition
+#### 2.2.3 Condition
 
 **Condition** is configured based on an [expression](expressions). The expression should result in a Boolean or an enumeration.
 
@@ -36,7 +37,7 @@ For the expression resulting in a Boolean, two paths are possible: **true** and 
 
 The number of conditions available for the enumeration type depends on the corresponding enumeration values. There is also the *empty* condition available: if the enumeration parameter or an attribute of an object is unassigned, the path with the caption **Empty** is followed. For example, you have several requests with a low or high priority. The ones with the high priority follow one path and should be approved by the Management team. Low priority requests follow a different path and can be approved by the Administration department. The requests that have no specified priority follow an Empty path where the user needs to assign the priority first.   
 
-### 2.2 Outcomes Section {#outcome}
+### 2.3 Outcomes Section {#outcome}
 
 **Outcomes** depends on the condition of the decision. For example, for the Boolean, you have **true** and **false** outcomes, and for the enumeration: an outcome per each enumeration value and an empty one when the value is unassigned.  
 

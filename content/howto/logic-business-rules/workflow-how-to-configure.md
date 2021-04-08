@@ -30,13 +30,13 @@ You would like to build an employee onboarding process. At first, an HR speciali
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Your project has the following modules Workflow Commons and Mendix SSO modules. Fore more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app).
+* Your project has the following modules [Workflow Commons](https://marketplace.mendix.com/link/component/117066) and [Mendix SSO](https://marketplace.mendix.com/link/component/117212) modules. Fore more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app).
 
 * Install Atlas 3 from the Mendix Marketplace, as Workflow Commons depends on it. 
 
-* Install the following modules that Workflow Commons depend on: Atlas_Core, Atlas_Web_Core_Content, and DataGrid.
+* As a result of installing Atlas 3, your app should contain the following modules that Workflow Commons depends on: Atlas_Core, Atlas_Web_Core_Content, and DataGrid.
 
-* Make sure that the **User entity** is configured in your [Project Settings](/refguide/project-settings#workflows) > **Workflows** tab. 
+* Make sure that the **User entity** is configured in your [App Settings](/refguide/project-settings#workflows) > **Workflows** tab. 
 
 * Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows). 
 
@@ -46,13 +46,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Make sure you have the following enumerations configured:
 
-  * The PhoneModel enumeration:
+    * The PhoneModel enumeration:
   
-    ![](attachments/workflow-how-to-configure/enumeration-phone-model.png)
+        ![](attachments/workflow-how-to-configure/enumeration-phone-model.png)
   
-  * The LaptopModel enumeration:
+    * The LaptopModel enumeration:
   
-    ![](attachments/workflow-how-to-configure/enumeration-laptop-model.png)
+        ![](attachments/workflow-how-to-configure/enumeration-laptop-model.png)
   
 * Make sure you have an **EmployeesToOnboard** page that contains a form and has the **EmployeeOnboarding** entity as the data source:
 
@@ -74,19 +74,22 @@ Do the following:
 3. In the **Add User Role** dialog box, set the **Name** to **Facilities** and untick all modules except MyFirstModule, as you do not need to create a specific Facilities role for all modules. 
 
 4. Click **OK**.
+
 5. You need to assign the **User** user role to Facilities for all other modules. Double-click the newly created Facilities role.
 
 6. In the **User Role** dialog box, click **Edit** in the **Module roles** section {{% todo %}}[Check if this screenshot needs to be updated]{{% /todo %}}.
 
     ![](attachments/workflow-how-to-configure/edit-module-roles.png)
 
-7.   In the **Select Module Roles** dialog box, tick the User role for all modules where no role is selected and click **OK** {{% todo %}}[Add screenshot]{{% /todo %}}.
+7. In the **Select Module Roles** dialog box, tick the User role for all modules where no role is selected and click **OK**:
 
-8.   Confirm your choice by clicking **OK**.
+    ![Module Roles](attachments/workflow-how-to-configure/modules-roles.png)
 
-9.   Repeat steps 2-8 to create and configure the Manager role.
+8. Confirm your choice by clicking **OK**.
 
-10.  Repeat steps 2-8 to create and configure the HR role.
+9. Repeat steps 2-8 to create and configure the Manager role.
+
+10. Repeat steps 2-8 to create and configure the HR role.
 
 You have configured new project roles for Facilities, manager, and HR. 
 
@@ -95,7 +98,7 @@ You have configured new project roles for Facilities, manager, and HR.
 
 You need to create demo users for the newly created project roles to be able to test your app later. For more information, see the [Testing Workflow](#test-workflow) section. Follow the steps below: 
 
-1. Open the **Demo users** tab and click **New**.
+1. In the Project Explorer, open **Project** > **Security** > the **Demo users** tab and click **New**.
 
 2.   In the **Add Demo User** dialog box, set the **User name** to **demo_facilities**.
 

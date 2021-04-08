@@ -1,6 +1,6 @@
 ---
 title: "Stories"
-category: "Collaboration Tools"
+category: "Collaboration"
 menu_order: 2
 description: "Describes how to manage the Sprints and stories for your apps."
 tags: ["Stories", "Sprint", "Developer Portal"]
@@ -177,7 +177,7 @@ On this page, you can perform a number of actions:
 * See the story's **Status** and click to update it (available statuses are **To-do**, **Running**, and **Done**)
 * Change the **Story points**
 * See, add, and manage the **Tasks** of the story (you can mark them as **Done** by checking the box in front of the task)
-* Leave a **Comment** on the story to collaborate with your App Team
+* Leave a **Comment** on the story to collaborate with your team
 
 You can also do this following on this page:
 
@@ -211,24 +211,7 @@ Moving a story will move the tasks as well.
 
 ### 4.3 Adding a Task to a Story {#adding-task}
 
-To add a task to a story, access the [story details](#story-details) page and on the **Tasks** tab, click **Add**. This will open the **Edit Task** dialog box:
-
-{{% image_container width="400" %}}
-![](attachments/stories/edit-task.jpg)
-{{% /image_container %}}
-
-Fill in the following details:
-
-* **Title** – the title of the task
-* **Description** – the description of the task
-
-Once saved, the number of tasks appears under the story on the main **Stories** page:
-
-{{% image_container width="550" %}}
-![](attachments/stories/story-task.jpg)
-{{% /image_container %}}
-
-Clicking the number will bring you back to the **Tasks** tab of the story details.
+To add a task to a story, access the [story details](#story-details) page and under **Tasks**, start typing in the **Add a new task...** box.
 
 ## 5 Managing Stories in Mendix Studio Pro 
 
@@ -236,11 +219,7 @@ In addition to managing your sprints in the Developer Portal, you can view them 
 
 To manage stories in Studio Pro, follow these steps:
 
-1. Open your app in Studio Pro by clicking **Edit in Studio Pro** in the top-right corner of the page:
-
-	{{% image_container width="300" %}}![](attachments/edit-app.jpg)
-	{{% /image_container %}}
-
+1. Open your app in Studio Pro by clicking **Edit in Studio Pro** in the top-right corner of the page.
 2. Open **View** > **Stories**.
 3. You will see your active sprints in the **Stories** pane:
 
@@ -317,16 +296,11 @@ Select a story and click **Details** (below the story title) to open the **Story
 
 Stories of the *Feature* type can be translated into tasks that need to be completed to finish the story. To add a task to the story, follow these steps:
 
-1. Select the story you created and click **Add task**:
-
-	![](attachments/stories/add-task.png)
-
+1. Select the story you created and click **Add task**.
 2.  Add a title and description for your task.
 3. Click **Post task** to save the new task for the story.
 
-After you have completed the task, check the box:
-
-![](attachments/stories/complete-task.png)
+After you have completed the task, check the box.
 
 #### 6.3.3 Deleting a Story or Task{#deleting}
 
@@ -341,9 +315,6 @@ If you delete a story that is linked to a feedback item, you will be asked to ch
 If you need to reorder stories or move a story to a different Sprint, there are three ways to do this:
 
 *  Select the story and drag it to the desired Sprint location:
-
-	![](attachments/stories/move-story-drag.png)
-
 *  Click **Details** for the story you want to move to another Sprint, and on the **Story Details** page, select the Sprint to which you want to move the story from the **Move To Sprint** drop-down menu
 * Select the story and use the **Move to** button to select the new Sprint (for details on this method, see the [Moving a Story](#moving-a-story) section)
 
@@ -354,5 +325,5 @@ Moving a story will move the tasks as well.
 ## 7 Read More
 
 * [Buzz](buzz)
-* [App Team](team)
+* [Team](team)
 * [Feedback](feedback)

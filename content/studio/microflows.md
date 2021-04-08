@@ -73,10 +73,11 @@ The selected microflow is opened.
 To create a new microflow and to start building custom logic, do the following:
 
 1. Click the **Microflow** icon in the left menu bar. 
-2.  Click **New** on the **Microflows** side panel.
+2.  Select the module you would like to add a new microflow to and click the plus icon next to this module. 
 
-    {{% image_container width="300" %}}![Adding New Microflow](attachments/microflows/new-microflow.png)
-    {{% /image_container %}}
+    ![Adding New Microflow](attachments/microflows/new-microflow.png)
+    
+    For more information on what modules are, see [Domain Model](domain-models).
 
 3.  Fill in the name of the microflow in the pop-up dialog and click **Create**.
 
@@ -210,14 +211,12 @@ The **Workflow Activities** section contain activities that interact with workfl
 
 The **Workflow Activities** are described in the table below:
 
-| Activity           | Description                                                  |
-| ------------------ | ------------------------------------------------------------ |
-| Call Workflow      | The **Call Workflow** activity starts the selected workflow. |
-| Complete Task      | The **Complete Task** activity sets an outcome the specified [user task](workflows-user-task) should follow. When a user task has several outcomes, you can choose the one the user task will follow. For example, when end-users select that an employee is working from home, the user task will follow the dedicated path for it. |
-| Open  Task Page    | The **Open Task Page** activity opens a user task page specified in [user task properties](workflows-user-task). |
-| Open Workflow Page | The **Open Workflow Page** activity opens an overview page specified in [workflow properties](workflow-properties). |
-
-{{% todo %}}[Double-check the names of these activities.]{{% /todo %}}
+| Activity            | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| Call Workflow       | The **Call Workflow** activity starts the selected workflow. |
+| Complete Task       | The **Complete Task** activity sets an outcome the specified [user task](workflows-user-task) should follow. When a user task has several outcomes, you can choose the one the user task will follow. For example, when end-users select that an employee is working from home, the user task will follow the dedicated path for it. |
+| Show User Task Page | The **Show User Task Page** activity opens a user task page specified in [user task properties](workflows-user-task). |
+| Show Workflow Page  | The **Show Workflow Page** activity opens a workflow overview page. |
 
 ### 4.5 Variable Activities {#microflow-variable-activities}
 

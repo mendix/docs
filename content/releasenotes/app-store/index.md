@@ -9,6 +9,13 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2021
 
+### April 7th, 2021
+
+* We added a section to **Get Studio Pro** for downloading versions that have [long-term support (LTS)](/releasenotes/studio-pro/lts-mts#lts) and [medium-term support (MTS)](/releasenotes/studio-pro/lts-mts#mts).
+	{{% alert type="info" %}}This is based on an [upvoted idea from Alexander Keßler](https://forum.mendixcloud.com/link/ideas/2212) submitted to the [Mendix Idea Forum](https://forum.mendixcloud.com/link/ideas). Thanks, Alexander!
+	{{% /alert %}}
+* We fixed some performance issues where certain Marketplace sections were not loading properly. This also includes connection issues to the App Store/Marketplace within Studio Pro.
+
 ### March 23rd, 2021
 
 * We added email notifications for several actions in the Marketplace. You can now receive emails if one of your components has changed, when a published component has received a review, and when you receive a reply to one of your reviews. You can unsubscribe from any of notifications in the [My App Store](/appstore/general/app-store-overview#my-app-store) section of the of Marketplace.
@@ -61,7 +68,7 @@ As of Desktop Modeler version [7.23.14](../studio-pro/7.23#private), you are abl
 
 Downloading [private content](/appstore/general/share-app-store-content#private-app-store) from the App Store available in Studio Pro/Desktop Modeler has been temporarily disabled due to a security vulnerability.
 
-You will be able to download private content from the App Store available in Studio Pro/Desktop Modeler again once a fix is released in a future [8.x](../studio-pro/8), [8.6.x](../studio-pro/8.6), and [7.23.x](../studio-pro/7.23) release. This functionality will then only be available in those specific versions with the fix and subsequent versions. This functionality will not be available again for the App Store in Desktop Modeler version [6](../studio-pro/6).
+You will be able to download private content from the App Store available in Studio Pro/Desktop Modeler again once a fix is released in a future [8.x](../studio-pro/8), [8.6.x](../studio-pro/8.6), and [7.23.x](../studio-pro/7.23) release. This functionality will then only be available in those specific versions with the fix and subsequent versions. This functionality will not be available again for the App Store in Desktop Modeler version 6.
 
 You can continue downloading the latest version of private App Store content from the [Company Content](/appstore/general/app-store-overview#company-content) page in the [Mendix App Store](https://appstore.home.mendix.com/) and use it in the respective versions of Studio Pro/Desktop Modeler.
 

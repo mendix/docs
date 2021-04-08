@@ -979,7 +979,7 @@ The **Apps** tab of namespace details in the cluster manager page lists all the 
 If you are a team member of the app, click **Details** to go to the *Environment Details* page for that app.
 
 {{% alert type="info" %}}
-You can only see the environment details of an app if you are a member of the app team with the appropriate authorization.
+You can only see the environment details of an app if you are a member of the team with the appropriate authorization.
 {{% /alert %}}
 
 #### 6.2.2 Members
@@ -1053,10 +1053,7 @@ You can change the access rights for, or completely remove, existing members.
 
 #### 6.2.3 Operate {#operate}
 
-The **Operate** tab allows you to add a set of links which are used when users request a page from the Operate category for their app in the Developer Portal, as shown below.
-
-![](attachments/private-cloud-cluster/image31.png)
-
+The **Operate** tab allows you to add a set of links which are used when users request an operations page for their app in the Developer Portal.
 The following pages can be configured:
 
 * Metrics

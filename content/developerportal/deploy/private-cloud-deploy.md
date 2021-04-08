@@ -27,7 +27,7 @@ Because you can run several Mendix apps in the same namespace, each environment 
 To deploy an app to your private cloud platform, you need the following:
 
 * A Mendix account with **Deploy App** rights to an existing Cluster – see [Registering a Private Cloud Cluster](private-cloud-cluster) for more information on setting up clusters and namespaces and adding members
-* Mendix Studio Pro version 8 and Mendix Studio Pro version 7 from version 7.23.3 (build 48173). There is currently no support for Beta versions of Mendix Studio Pro version 9.0.
+* Mendix Studio Pro version 7.23.3 (build 48173) or above.
 * A Mendix app created with the version of Studio Pro you are using.
 
 ## 3 Deploying an App for the First Time
@@ -36,7 +36,7 @@ To deploy an app to your private cloud platform, you need the following:
 
 When you first create your app, it will be set to deploy to the Mendix Cloud. You need to change the target to be private cloud.
 
-1. Open the **General** page for your app in the Developer Portal.
+1. Open the **General Settings** page for your app in the Developer Portal.
     
       ![](attachments/private-cloud-deploy/image2.png)
 

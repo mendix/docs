@@ -23,20 +23,22 @@ The basic package has the following features.
 * Runs in the Mendix Cloud
 * Supports between five and a hundred (5-100) users
 * Can be paid for via invoice only
-* Has a limited amount of resources and a single cloud environment, the XS20 described in the [Mendix Pricing Plans](mendix-cloud-deploy#plans) section of *Mendix Cloud*, together with the ability to preview and test in Studio Pro and Studio.
+* Has a limited amount of resources and a single cloud environment, the **standard XS* described in the [Mendix Pricing Plans](mendix-cloud-deploy#plans) section of *Mendix Cloud*, together with the ability to preview and test in Studio Pro and Studio.
 * The regular Mendix [Service Level Agreement](https://www.mendix.com/wp-content/uploads/Mx_ServiceLevelAgreement_v2018-01.pdf) applies, but please note the following:
     * You cannot get telephone support: access to support is via the [Mendix support website](https://support.mendix.com) only.
     * Support is only available for general platform issues – Mendix support cannot give help on problems with individual apps.
 
 ## 3 Purchasing a Basic Package
 
-When you view your Free App in the Developer Portal, you will see a banner showing that you are using a Free App.
+Select your Free App in the Developer Portal, and click **Environments** in the left-hand menu.
+
+When you view your Free App environment, you will see a banner showing that you are using a Free App.
 
 ![Free App banner](attachments/basic-package/free-app-message.png)
 
 To order your Mendix Basic package, do the following:
 
-1. Click the **Upgrade Now** button.
+1. Click the **Learn More** button.
 
 2. Review the features of Mendix Basic and click **Upgrade Now**.
 

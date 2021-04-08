@@ -26,7 +26,7 @@ Perform the following steps to replace AppCloudServices with Mendix SSO:
 
 1. Ensure that your app is using Mendix version 7.23.3 or above.
 
-    Mendix SSO apps must be built using Mendix version 7.23.3 or above. If your app is built using Mendix version 7.23.2 or below, you need to upgrade it. Apps in a previous version 7 release of Mendix can be updated automatically by opening them in a new version of Studio Pro. Apps in version 6 of Mendix will need to be updated to version 7 first – see the instructions in [Moving from Modeler Version 6 to 7](/refguide7/moving-from-6-to-7).
+    Mendix SSO apps must be built using Mendix version 7.23.3 or above. If your app is built using Mendix version 7.23.2 or below, you need to upgrade it. Apps in a previous version 7 release of Mendix can be updated automatically by opening them in a new version of Studio Pro.
 
 2. Upgrade your UI to AtlasUI, if you are not currently using Atlas UI. Mendix SSO pages are written using AtlasUI, so to make use of the default Mendix SSO implementation, you need to upgrade your app..
 
@@ -66,7 +66,7 @@ The first steps you need to take are the same as for a non-customized implementa
 
 1. Ensure that your app is using Mendix version 7.23.3 or above.
 
-    Mendix SSO apps must be built using Mendix version 7.23.3 or above. If your app is built using Mendix version 7.23.2 or below, you need to upgrade it. Apps in a previous version 7 release of Mendix can be updated automatically by opening them in a new version of Studio Pro. Apps in version 6 of Mendix will need to be updated to version 7 first – see the instructions in [Moving from Modeler Version 6 to 7](/refguide7/moving-from-6-to-7).
+    Mendix SSO apps must be built using Mendix version 7.23.3 or above. If your app is built using Mendix version 7.23.2 or below, you need to upgrade it. Apps in a previous version 7 release of Mendix can be updated automatically by opening them in a new version of Studio Pro.
 
 2. Upgrade your UI to AtlasUI, if you are not currently using Atlas UI. Mendix SSO pages are written using AtlasUI, so to make use of the default Mendix SSO implementation, you need to upgrade your app.
 

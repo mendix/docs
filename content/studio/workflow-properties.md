@@ -22,7 +22,7 @@ Workflow properties consist of the following sections:
 
 ### 2.1 General Section {#general}
 
-The **General** section contains information on the title and name of the workflow. {{% todo %}}[Please update the screenshot below]{{% /todo %}}
+The **General** section contains information on the title and name of the workflow. 
 
 ![General Section](attachments/workflow-properties/general.jpg)
 
@@ -30,7 +30,7 @@ The **General** section properties are described in the table below:
 
 | Property | Description                                                  |
 | -------- | ------------------------------------------------------------ |
-| Caption  | Defines a title of the workflow that you see at the top of the working area. |
+| Title    | Defines a title of the workflow that you see at the top of the working area. |
 | Name     | The internal name of the workflow that must be unique. When referring to the workflow in the app you will use this name. |
 
 ### 2.2 Data Section {#data}

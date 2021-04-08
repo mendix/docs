@@ -373,7 +373,7 @@ If everything has been created successfully, and the PlaceholderMDA has been bui
     
     ![](attachments/tencent-deploy/image16.png)
 
-8. Click Apply Changes to deploy the application to the selected environment. The app will start automatically once the deployment is successful.
+8. Click **Apply Changes** to deploy the application to the selected environment. The app will start automatically once the deployment is successful.
 
 You can find a description of what this deployment means within the Kubernetes cluster in [How the Operator Deploys Your App](#how-operator-deploys), below.
 

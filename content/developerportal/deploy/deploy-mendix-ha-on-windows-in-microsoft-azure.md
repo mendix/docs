@@ -8,7 +8,7 @@ tags: ["deploy", "Windows", "Azure", "HA", "High Availability", "Microsoft", "Me
 
 ## 1 Introduction
 
-This document has been created as an example for setting up a high available Mendix Runtime Server environment on Windows, using the Microsoft Azure cloud platform. This will probably require some adaptation to your situation as it is not a complete guide or a supported 'best practice' for deploying a Mendix hosting environment.
+This document has been created as an example for setting up a high available Mendix Runtime Server environment on Windows, using the Microsoft Azure cloud platform. This will probably require some adaptation to your situation, as this guide is meant to illustrate what Mendix system and settings to take into account, and not a complete guide or a supported 'best practice' for deploying a Mendix hosting environment.
 It describes the installation and configuration of the Mendix software on multiple systems running Microsoft Windows on the Microsoft Azure cloud platform and covers:
 
 * Setting up an Azure Load Balancer
@@ -37,7 +37,7 @@ It describes the installation and configuration of the Mendix software on multip
 
 ## 3 Configure cluster slave nodes
 
-In a clustered environment there are some tasks (for example, cleaning up expired user sessions from the database) that can only be handled by one of the cluster members. By default, each Mendix app server will execute these tasks, which can lead to issues. Disable executing these tasks on all servers **except one** by adding the Custom Mendix setting _com.mendix.core.isClusterSlave_ to _true_. So if you have a two server cluster, add this setting on one server and if you have five servers in your cluster, add it on four of them.
+In a clustered environment there are some tasks (for example, cleaning up expired user sessions from the database) that should only be handled by one of the cluster members. By default, each Mendix app server will execute these tasks, which can lead to issues. Disable executing these tasks on all servers **except one** by adding the Custom Mendix setting _com.mendix.core.isClusterSlave_ to _true_. So if you have a two server cluster, add this setting on one server and if you have five servers in your cluster, add it on four of them.
 
 1. Select your app and click **Configuration**.
 

@@ -55,6 +55,7 @@ The following custom settings can be configured:
 | **com.mendix.storage.PerformDeleteFromStorage** | Defines whether a delete of a Mendix file document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it is also used as a backup service. | true |
 | **com.mendix.core.SessionIdCookieName** | Defines the name of the cookie value which represents the session id. Can be useful to change when running in a container which assumes a certain name for the session cookie. | XASSESSIONID |
 | **TaskQueue.ShutdownGracePeriod** | Time in ms to wait for task in a task queue to finish when shutting down. |          10000 |
+| **EnableApacheCommonsLogging** | Some libraries used by the Mendix runtime use apache commons for logging. Set this value to `true` to receive the log messages from these libraries in the Mendix logs. The default, `false`, suppresses these log messages. This setting is available in Mendix 9.1.0 and later. | false |
 
 ## 3 Log File Settings
 

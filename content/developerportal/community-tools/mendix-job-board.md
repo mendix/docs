@@ -1,5 +1,5 @@
 ---
-title: "Mendix Jobs Board"
+title: "Jobs Board"
 category: "Community Tools"
 menu_order: 40
 description: "Describes the board where the Mendix community can post and find job opportunities."

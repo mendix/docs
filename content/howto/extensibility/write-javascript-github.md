@@ -199,7 +199,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
 	![select user entity](attachments/jsactions-advanced/select-user-entity.png)
 
-15. Your final step is updating the code. The new `userEntity` parameter has already been added. In the `mx.data.create` function, set `userEntity` as the `entity` to be created. Then, add some documentation for future reference:
+15.  Your final step is updating the code. The new `userEntity` parameter has already been added. In the `mx.data.create` function, set `userEntity` as the `entity` to be created. Then, add some documentation for future reference:
 
 	```javascript
 	/**

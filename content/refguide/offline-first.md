@@ -119,7 +119,7 @@ If you have custom widgets or JavaScript actions which use an entity that cannot
 
 ### 2.5 Limitations
 
-Running multiple synchronization processes at the same time is not supported, regardless the type (full/selective). Check the [following document](synchronize#limitations) for more details.
+Running multiple synchronization processes at the same time is not supported, regardless the of type (**full** or **selective**). For more information, see the [Limitations](synchronize#limitations) section of the *Synchronize Reference Guide* for more details.
 
 ### 2.6 Error Handling {#error-handling}
 

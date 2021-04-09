@@ -76,7 +76,7 @@ If you try to trigger another synchronization process while the synchronization 
 
 "Performing simultaneous synchronizations is not supported. Please try again after the current synchronization is completed."
 
-Such an error can be handled in the nanoflow from which the synchronization attempt was triggered using [error handlers](refguide/error-event#errorhandlers).
+Such an error can be handled in the nanoflow from which the synchronization attempt was triggered using [error handlers](/refguide/error-event#errorhandlers).
 
 ## 6 Read More
 

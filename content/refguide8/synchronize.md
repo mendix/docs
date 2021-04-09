@@ -70,11 +70,11 @@ The **Action** section of the properties pane shows the action associated with t
 
 ## 5 Limitations {#limitations}
 
-Running multiple synchronization processes at the same time is not supported, regardless the type (full/selective).
+Running multiple synchronization processes at the same time is not supported, regardless of the type (**full** or **selective**).
 
 If you try to trigger another synchronization process while the synchronization is in progress, the following error message will be shown:
 
-"Performing simultaneous synchronizations is not supported. Please try again after the current synchronization is completed."
+**Performing simultaneous synchronizations is not supported. Please try again after the current synchronization is completed.**
 
 Such an error can be handled in the nanoflow from which the synchronization attempt was triggered using [error handlers](/refguide8/error-event#errorhandlers).
 

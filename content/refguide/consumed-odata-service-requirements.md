@@ -84,6 +84,12 @@ The binary data format is supported in the form of *media entities*. When a medi
 
 Currently, the binary data can only be accessed by Java actions.
 
+### 3.5 Associations
+
+An OData 3 association can only be used if it has two ends.
+
+An OData 4 navigation property can only be used as an association if it has a partner.
+
 ## 4 Data Hub License Limitations {#license-limitations}
 
 Mendix Data Hub is a separately licensed product. The type of license that you have determines the total number of data objects that can be requested from a consumed OData service *per day* for *each* runtime instance of an app.

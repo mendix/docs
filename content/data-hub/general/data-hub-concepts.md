@@ -15,21 +15,35 @@ tags: ["data hub catalog", "data hub", "virtual entities", "landscape", "publish
 
 # 1 Introduction
 
-Describes concepts behind using the Mendix Data Hub and sharing datasets.
+This document describes the concepts behind using the Mendix Data Hub and sharing datasets in your app development.
 
-Data Hub makes it simpler to use data between Apps. Catalog allows governance of which data is used by whom, and life cycle management informing people of changes, and with good versioning of OData contracts.
+Catalog allows governance of which data is used by whom, and life cycle management informing people of changes, and with good versioning of OData contracts.
 
-##  1.1 The Role of a Data Hub in an Organization
+##  1.1 The Data Hub Components
 
-The Catalog is the hub in the collaboration, discovery and connection of an organizations data source.   It catalogs microservices from the organization's business applications systems using OData contracts. The Data Hub can already import OData contracts from 3rd party systems such as Teamcenter, SAP & Microsoft and OData v4services from other business applications.
+Data Hub is made up of the following components:
 
-The Data Hub facilitates an integration mechanism, where architects and lead developers can define data that is available and what the data means. Citizen Developers?? can use the data easily, ??and where impact analysis for who uses which data is out of the box??.
+- **Home** -  The Data Hub can already import OData contracts from 3rd party systems such as Teamcenter, SAP & Microsoft and OData v4services from other business applications.
 
-In the current format OData is supported, but ??soon also e.g. REST Swagger files can be imported??, 
+  The Data Hub facilitates an integration mechanism, where architects and lead developers can define data that is available and what the data means. Citizen Developers?? can use the data easily, ??and where impact analysis for who uses which data is out of the box??.
+
+  In the current format OData is supported, but ??soon also e.g. REST Swagger files can be imported??, 
+
+- **Catalog** provides information on registered data sources and datasets that can be used in app development.  **Search** for registered assets that satisfy the search criteria and filters.  Information about the data source that is provided with the service contract - the **contract metadata** - is displayed in the **Asset Details**. 
+
+- **Landscape** gives a graphical representation of the network and dependencies between apps, data sources and datasets.
+
+- **Curate** enables governance (management) of registered assets, adding further information such as owners, tags, app logos, to manage the assets and increase discoverability.
+
+- **Administration** is to enable management of Data Hub, curators, owners. 
+
+
+
+
 
 ## 1.2 DataHub Features
 
-The following base features of DataHub:
+The following are base features of DataHub:
 
 - Easy access to datasets in other Apps, with completely seamless filtering and paging 
 - ??Easier caching of data when required, using a Microflow??

@@ -181,7 +181,13 @@ Executing **Find usages** on a task queue only finds the occurrences of that que
 Invocations from Java actions are not found.
 {{% /alert %}}
 
-### 4.1 Limitations
+### 4.1 Tasks Queue Helper
+
+A module with some conviences [has been published](https://appstore.home.mendix.com/link/app/xxx). It contains:
+* Pages that can be used to monitor task queues.
+* Microflows taht can do basic maintenance tasks
+
+### 4.2 Limitations
 
 Task queues have the following limitations:
 
@@ -192,7 +198,7 @@ Task queues have the following limitations:
 * The total amount of parallelism per node is limited to 40. This means that at most 40 queues with parallelism 1 can be defined, or a single queue with parallelism 40, or somewhere in between, as long as the total does not exceed 40.
 * Queued actions that have failed can't be rescheduled out-of-the-box currently. You can set up a scheduled microflow to re-attempt failed tasks. They can be queried from `System.ProcessedQueueTask` table.
 
-### 4.2 High level implementation overview
+### 4.3 High level implementation overview
 
 Tasks are stored in the database in a `System.QueuedTask` table. For each background task a new object is inserted with a `Sequence` number, `Status = Idle`,  `QueueName`, `QueueId`, `MicroflowName` or `UserActionName`, and `Arguments` of the task. This happens as part of the transaction which calls the microflow  or Java action and places it in the task queue, which means that the task will not be visible in the database until that transaction completes successfully.
 
@@ -215,7 +221,7 @@ The task will then automatically be consumed again by one of the remaining nodes
 Under normal circumstances, a task is executed exactly once, but in the face of node failures a task may be (partially) executed multiple times. This is the best guarantee that a distributed system can provide.
 {{% /alert %}}
 
-### 4.3 Replacing Process Queue{#process-queue}
+### 4.4 Replacing Process Queue{#process-queue}
 
 The **Task Queue** supersedes the earlier [Process Queue](https://docs.mendix.com/appstore/modules/process-queue) Marketplace module, which has been deprecated with the release of Mendix 9. There are several differences between the Process Queue module and the **Task Queue**:
 

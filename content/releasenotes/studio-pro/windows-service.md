@@ -5,7 +5,12 @@ aliases:
     - /releasenotes/desktop-modeler/windows-service.html
 ---
 
-To download the Windows Service, go to the [Get Studio Pro](https://marketplace.mendix.com/link/studiopro/) page in the Mendix Marketplaceand click the **Related Downloads** button.
+To download the Windows Service, go to the [Get Studio Pro](https://marketplace.mendix.com/link/studiopro/) page in the Mendix Marketplace and click the **Related Downloads** button.
+
+{{% alert type="warning" %}}
+If you face trouble downloading the Windows Service, try first going to [My Marketplace](https://appstore.home.mendix.com/link/myappstore), then go back to the [Get Studio Pro](https://marketplace.mendix.com/link/studiopro/) and download the Windows Service again. The underlying cause of this error is planned to be fixed soon.
+{{% /alert %}}
+
 
 ## 4.6
 

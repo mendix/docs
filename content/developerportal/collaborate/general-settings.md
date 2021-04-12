@@ -105,7 +105,7 @@ The invitee will receive an email asking them to authorize access to their Mendi
 
 After they provide authorization, they will be brought to your deployed app.
 
-## 5 Editing App Info
+## 5 Editing App Info {#editing}
 
 {{% alert type="info" %}}
 Only users with the **App Settings** permission can edit the application information.

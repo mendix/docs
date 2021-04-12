@@ -15,8 +15,6 @@ Native apps are separated into two parts: a wrapper that is basically a native i
 
 OTA updates are bound to a specific app version and build number. Therefore, you can target specific updates to specific versions of your app. For example, you can push an update for version 1.0.0 as a legacy version that supports older devices, and also push an update for the 2.0.0 version of your app which includes more features.
 
-For information on using OTA updates using App Center's CodePush, see [How to Release OTA Updates with App Center's CodePush](ota-with-appcenters-codepush).
-
 {{% alert type="info" %}}
 Currently OTA  does not update your app while the app is open or minimized.
 {{% /alert %}}
@@ -196,7 +194,6 @@ If the OTA release button remains disabled. Verify that the app names added in t
 ## 8 Read More
 
 * [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app)
-* [How to Release OTA Updates with App Center's CodePush](ota-with-appcenters-codepush)
 * [Native Builder Reference Guide](/refguide/native-builder)
 * [Offline First Reference Guide](/refguide/offline-first)
 * [Codepush Introduction](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/)

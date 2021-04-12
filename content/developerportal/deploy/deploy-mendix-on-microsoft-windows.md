@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-This document describes the installation and configuration of the Mendix software on a system running Microsoft (MS) Windows. It covers:
+This document describes the installation and configuration of Mendix software on a system running Microsoft (MS) Windows. It covers:
 
 * Installing the Mendix Service Console
 
@@ -43,7 +43,7 @@ Before starting this how-to, make sure you have the following prerequisites:
 
 * MS IIS URL Rewrite installed (for more information, see [URL Rewrite](https://www.iis.net/downloads/microsoft/url-rewrite))
 
-* Java Runtime, version depending on your Mendix Server Distribution. See [System Requirements](/refguide/system-requirements#7-3-java) for more information. 
+* Java Runtime, version depending on your Mendix Server Distribution. See [System Requirements](/refguide/system-requirements#java) for more information. 
 
 * The Mendix Deployment Archive (MDA) of your Mendix project
 
@@ -51,7 +51,7 @@ Before starting this how-to, make sure you have the following prerequisites:
 
 * A database with sufficient security rights
 
-    * Suitable database servers are IBM DB2, MariaDB, MS SQL Server, MySQL, Oracle Database and PostgreSQL. See [System Requirements](/refguide/system-requirements) for more information
+    * Suitable database servers are IBM DB2, MariaDB, MS SQL Server, MySQL, Oracle Database and PostgreSQL. See [System Requirements](/refguide/system-requirements#databases) for more information
 
 * A local or domain user with the *“log on as a service”* local security policy set
 
@@ -66,29 +66,29 @@ To download and install the Mendix Service Console, follow these steps:
 
 2. Install the Mendix Service Console by following the installation wizard.
 
-3. Start the Mendix Service Console after the installation; the first time you launch the application, a popup will be shown (it will always be shown if no valid location is configured for the apps and server files):
+3. Start the Mendix Service Console after completing the installation. The first time you launch the application, a popup will be shown (it will always be shown if no valid location is configured for the apps and server files):
 
     ![](attachments/deploy-mendix-on-windows/service_console_first_run.png)
 
-4. After clicking *Yes*,  the **Preferences** dialog box will be shown:
+4. Click **Yes**. The **Preferences** dialog box will be shown:
 
     ![](attachments/deploy-mendix-on-windows/18580730.png)
 
-5. In the **Preferences** dialog box, enter a **Location of apps and server files**. This location is used for storing your app files and Mendix server files. Mendix recommends using a directory that is:
+5. In the **Preferences** dialog box, enter a **Location of apps and server files**. This location is used for storing your app files and Mendix server files. Mendix recommends using a directory:
 
-    *   NOT on the system partition
+    *   that is NOT on the system partition
 
     *   where you can easily control the security rights
 
     The app directory consists of four sub-directories:
 
-    * Backup – this directory stores any database changes due to model upgrades
+    * Backup – stores any database changes due to model upgrades
 
-    * Log – this directory stores all of the application log files
+    * Log – stores all of the application log files
 
-    * Project – this directory contains all of your application files; within this directory you will find the directory data/files that contain all of your uploaded files
+    * Project – contains all of your application files; within this directory you will find the directory data/files that contain all of your uploaded files
 
-    * Service – this directory contains files for configuring the Windows Services
+    * Service – contains files for configuring the Windows Services
 
     In addition, there will be a file called `Settings.yaml` that contains your application configuration.
 
@@ -105,15 +105,15 @@ To deploy a Mendix app using the Mendix Service Console, follow these steps:
 
     * **Service name** – this name must be unique within all existing Windows services
 
-    * **Display name** – this is the description of the app, which is visible as a tooltip for the app in the left bar of the Mendix Service Console or as a column in the list of Windows services
+    * **Display name** – the description of the app which is visible as a tooltip for the app in the left bar of the Mendix Service Console or as a column in the list of Windows services
 
-    * **Description** – enter a description for the application that will be visible in the Mendix Service Console
+    * **Description** – a description of the application that will be visible in the Mendix Service Console
 
     * **Startup type** – select whether you want the app to be started automatically when the server starts, started with a delay, started manually, or disabled altogether
 
     * **User name** and **Password** – the app will always run under the user account given here, and the service will be installed with this user account configured (for more information, see [Prerequisites](#Prerequisites))
 
-4. Click **Next**.
+4. Click **Next >**.
 
     ![](attachments/deploy-mendix-on-windows/18580728.png)
 
@@ -121,7 +121,7 @@ To deploy a Mendix app using the Mendix Service Console, follow these steps:
 
     ![](attachments/deploy-mendix-on-windows/18580727.png)
 
-6. Now select the **MDA** file that was created in Studio Pro and contains your application logic. After the installation of your MDA file, you will see which Mendix server (Mendix Runtime) version is needed.
+6. Now select the **MDA** file that was [created in Studio Pro](/refguide/create-deployment-package-dialog) and contains your application logic. After the installation of your MDA file, you will see which Mendix server (Mendix Runtime) version is needed.
 
 7. Configure the **Database Settings**:
 
@@ -133,7 +133,7 @@ To deploy a Mendix app using the Mendix Service Console, follow these steps:
 
     * **User name** and **Password** – the database user name and password
 
-8. Click **Next**.
+8. Click **Next >**.
 
     ![](attachments/deploy-mendix-on-windows/18580726.png)
 
@@ -178,7 +178,7 @@ To create a website, follow these steps:
 
 6. Select the **Protocol** for the website from the **Type** list.
 
-7. The default value in the IP address box field is **All Unassigned**. If you must specify a static IP address for the website, enter the address in the **IP address** box.
+7. The default value in the IP address box field is **All Unassigned**. If you need to specify a static IP address for the website, enter the address in the **IP address** box.
 
 8. Enter a port number in the **Port** field.
 
@@ -191,19 +191,19 @@ To create a website, follow these steps:
 
 1. Make sure the certificate you want to use for the website has been added to the Windows Certificate Store.
 
-2. Right-click the website you have just created and select **Edit Bindings...**
+2. Right-click the website you have just created and select **Edit Bindings...**.
 
-3. Click **Add...**
+3. Click **Add...**.
 
-4. In the **Type** field, select **https**
+4. In the **Type** field, select **https**.
 
 5. In the **Host name** field, enter the hostname you want to use for this website.
 
 6. If the certificate you are going to use is an SNI certificate, check the **Require Server Name Indication** box.
 
-7. Select the certificate for the website either in the dropdown box or throug the **Select...** dialog.
+7. Select the certificate for the website either in the dropdown box or through the **Select...** dialog.
 
-8.  Click **OK**
+8.  Click **OK**.
 
     ![](attachments/deploy-mendix-on-windows/iis_add_https_binding.png)
 
@@ -234,7 +234,7 @@ To configure the MIME types, follow these steps:
 ### 5.5 Configuring the URL Rewrite
 
 {{% alert type="info" %}}
-These instructions use port 8080, which is the default port. Please use the port your Mendix App is configured for.
+These instructions use port 8080, which is the default port. Please use the port for which your Mendix App is configured.
 {{% /alert %}}
 
 
@@ -275,7 +275,7 @@ Follow the instructions below and replace *[Name]* with the name of the rule in 
 
 10. In the **Rewrite URL** field, enter `[Rewrite URL]` (in the rules above this is always `http://localhost:8080/{R:1}{R:2}`).
 
-11. Ensure the **Append query string** checkbox is set to *true* (checked)
+11. Ensure the **Append query string** checkbox is set to *true* (checked).
 
 12. Click **Apply**.
 
@@ -288,9 +288,13 @@ You can also add additional request handlers in the same way. However you must e
 
 #### 5.5.2 Rule *add x-forwarded-proto header*
 
-This is required to ensure that you can access the Swagger documentation of your published REST services. It has to be the first rule; it is described after the rewrite rules to ensure that it is moved to the top and that additional rules are not placed above it accidentally.
+This is required to ensure that you can access the Swagger documentation of your published REST services. 
 
-1. Click **View Server Variables**
+{{% alert type="info" %}}
+This has to be the first rule; it is described after the rewrite rules to ensure that it is moved to the top and that additional rules are not placed above it accidentally.
+{{% /alert %}}
+
+1. Click **View Server Variables**.
 
 2. Check if server variable **HTTP_X_FORWARDED_PROTO** is listed. If it is, skip to step 7.
 
@@ -300,7 +304,7 @@ This is required to ensure that you can access the Swagger documentation of your
 
 5. Click **OK**.
 
-6. Click **Back to Rules**
+6. Click **Back to Rules**.
 
 7. Click **Add rule(s)…**.
 
@@ -318,7 +322,7 @@ This is required to ensure that you can access the Swagger documentation of your
 
 14.	In the **Server Variables** section, click **Add**.
 
-15.	Select Server variable name **HTTP_X_FORWARDED_PROTO**
+15.	Select Server variable name **HTTP_X_FORWARDED_PROTO**.
 
 16. Set **Value** to *https*.
 
@@ -367,7 +371,7 @@ If HTTPS was configured at step 5.3 it is recommended to redirect all unencrypte
 
 9. In the **Action** section, set **Action type** to *Redirect*.
 
-10. In the **Redirect URL** field, enter *https://{HTTP_HOST}/{R:1}*
+10. In the **Redirect URL** field, enter `https://{HTTP_HOST}/{R:1}`.
 
 11. Set **Append query string** to *true* (checked).
 
@@ -382,15 +386,15 @@ If HTTPS was configured at step 5.3 it is recommended to redirect all unencrypte
 
 ### 5.6 Disabling the Client Cache
 
-1. In the **Features View**, double-click **HTTP Response Headers**
+1. In the **Features View**, double-click **HTTP Response Headers**.
 
-2. In the **Actions** pane, click **Set Common Headers...**
+2. In the **Actions** pane, click **Set Common Headers...**.
 
-3. Set **Expire Web content** to *true* (checked)
+3. Set **Expire Web content** to *true* (checked).
 
-4. Make sure the *Immediately* radio button is selected
+4. Make sure the *Immediately* radio button is selected.
 
-5. Click **OK**
+5. Click **OK**.
 
     ![](attachments/deploy-mendix-on-windows/iis_response_headers.png)
 

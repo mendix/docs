@@ -59,7 +59,7 @@ When you click a **Project** name, a pop-up window opens with the project profil
 
 When you select one or more apps via the check boxes on the **Active App Projects** or **Inactive App Projects** tab, a context menu appears at the bottom of the screen with options for exporting project details to an *.xlsx* file, deactivating/activating projects, and deleting projects.
 
-The **Default App Project Roles** tab shows the default [team roles](/developerportal/collaborate/app-roles#edit-app-team-roles) assigned for every new app created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/collaborate/team-server) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) information.
+The **Default App Project Roles** tab shows the default [team roles](/developerportal/collaborate/app-roles#team-roles) assigned for every new app created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/collaborate/team-server) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) information.
 
 ![](attachments/roles.jpg)
 

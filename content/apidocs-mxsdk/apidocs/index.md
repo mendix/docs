@@ -58,7 +58,7 @@ For details, see [Pluggable Widgets API](pluggable-widgets).
 
 ## 10 Projects API
 
-This API allows you to programmatically create an app project in your company space and move working copies between the [Team Server](/developerportal/develop/team-server) and the Model Server.
+This API allows you to programmatically create an app in your company space and move working copies between the [Team Server](/developerportal/collaborate/team-server) and the Model Server.
 
 For details, see [Project API](projects-api).
 
@@ -70,7 +70,7 @@ Continue on to the [Runtime API](runtime-api).
 
 ## 12 Stories API
 
-Use this API to extend the [requirements and project management](/developerportal/develop/planning-development) capabilities of the Mendix Platform, or connect third-party service management and project management tools.
+Use this API to extend the [requirements and project management](/developerportal/collaborate/planning-development) capabilities of the Mendix Platform, or connect third-party service management and project management tools.
 
 For details, see [Stories API](stories-api).
 
@@ -88,6 +88,6 @@ For details, see [User Management API](user-management-api).
 
 ## 15 Webhooks
 
-Webhooks allow you to build or set up Mendix Platform connectors that subscribe to certain events on the [Developer Portal](/developerportal/index).
+Webhooks allow you to build or set up Mendix Platform connectors that subscribe to certain events on the [Developer Portal](/developerportal/).
 
 Continue reading in [Webhooks](webhooks-sprints).

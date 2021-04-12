@@ -7,12 +7,12 @@ tags: ["java", "connector kit", "microflow action", "parameter type", "aws", "am
 output:
   word_document: default
   html_document: default
-#To update screenshots of these microflows in the Desktop Modeler, use the SlackRekognition-main-master app project, which is saved locally in Other Resources > Documentation Backups (No Update).
+#To update screenshots of these microflows in the Desktop Modeler, use the SlackRekognition-main-master app, which is saved locally in Other Resources > Documentation Backups (No Update).
 ---
 
 ## 1 Introduction
 
-In version 6.6, Mendix introduced the [Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/). The goal of this enhancement was to enable Java developers to easily add powerful and robust new microflow actions to their Mendix toolbox. These microflow actions can be shared in the Mendix Marketplace, so anyone can benefit from them without having to know Java.
+The [Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/) enables Java developers to easily add powerful and robust new microflow actions to their Mendix toolbox. These microflow actions can be shared in the Mendix Marketplace, so anyone can benefit from them without having to know Java.
 
 To illustrate the power of the Connector Kit, here's a high-level design diagram for an application Mendix recently built: a Slack bot that enables users to determine things and people in pictures taken with a mobile Slack app:
 

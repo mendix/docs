@@ -5,7 +5,7 @@ menu_order: 45
 description: "Describes how to register a Mendix app at the MindSphere Gateway and integrate it into the MindSphere Launchpad"
 tags: ["MindSphere", "deploy", "cloud foundry", "launchpad", "scopes", "roles", "sso", "XSRF", "limitations", "Gateway"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#The anchor #launchpad below is mapped from the MindSphere themepack in the ApMarketplace, so it should not be removed or changed.
+#The anchor #launchpad below is mapped from the MindSphere themepack in the Marketplace, so it should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -72,11 +72,11 @@ Open Studio Pro (version 7.22.2 or above) and follow these steps:
 
 	![](attachments/deploying-to-mindsphere/app-store-search.png)
 
-4. Click **Download** to create a new app project using this app.
+4. Click **Download** to create a new app using this app as the template.
 
 	![](attachments/deploying-to-mindsphere/app-store-download.png)
 
-5. To start the new app project, confirm where to store the app, the app name, and the project directory, then click **OK**.
+5. To start the new app, confirm where to store the app, the app name, and the project directory, then click **OK**.
 
 	![](attachments/deploying-to-mindsphere/app-store-download-project.png)
 
@@ -126,7 +126,7 @@ This needs to be changed depending on the `{Region}` your app is running. The de
 https://gateway.eu1.mindsphere.io
 ```
 
-If your app is running on Mindsphere on **Azure** change this constant to:
+If your app is running on MindSphere on **Azure** change this constant to:
 
 ```http
 https://gateway.eu2.mindsphere.io
@@ -146,7 +146,7 @@ This needs to be changed depending on the `{Region}` your app is running. The de
 https://core.piam.eu1.mindsphere.io/token_keys
 ```
 
-If your app is running on Mindsphere on **Azure** change this constant to:
+If your app is running on MindSphere on **Azure** change this constant to:
 
 ```http
 https://core.piam.eu2.mindsphere.io/token_keys
@@ -160,9 +160,9 @@ Add the *RegisterSingleSignOn* microflow as the **After startup** microflow or a
 If you are using the MindSphere Starter Application, this will already be set up as the *After startup* microflow.
 {{% /alert %}}
 
-If you are are modifying an existing app, you can do this on the *Runtime* tab of the *Project > Settings* dialog, accessed through the *Project Explorer*.
+If you are are modifying an existing app, you can do this on the *Runtime* tab of the **App** > **Settings* dialog box accessed through the **App Explorer**.
 
-![Project settings dialog](attachments/deploying-to-mindsphere/image4.png)
+![App settings dialog](attachments/deploying-to-mindsphere/image4.png)
 
 ### 4.2 Configuring the MindSphere OS Bar (MindSphereOSBarConfig)
 
@@ -193,7 +193,7 @@ A Mendix based application for MindSphere can be deployed to Mendix or to MindSp
 
 ### 5.1 Option A: Deploy with Mendix Studio to the Mendix Cloud
 
-Just click the Run Button in Mendix Studio Pro.
+Just click the Publish Button in Mendix Studio Pro.
 
 ![Deploy to Mendix](attachments/deploying-to-mindsphere/runMendixApp.png)
 
@@ -210,7 +210,7 @@ Before you continue, ensure you have fulfilled the prerequisites described in th
 To create a Mendix deployment package from your app, do the following:
 
 1.  Open your app in Studio Pro.
-2.  Select **Project** > **Create Deployment Package...**.
+2.  Select **App** > **Create Deployment Package**.
 
     {{% image_container width="355" %}}![](attachments/deploying-to-mindsphere/image13.png){{% /image_container %}}
 
@@ -340,7 +340,7 @@ Click **Start Auto Registration**. The process now tries to figure out on which 
 ![Login to Siemens Digital Industry Software](attachments/deploying-to-mindsphere/WebKeyLogin.png)
 
 {{% alert type="info" %}}
-If you have more then one tenant on Mindsphere you will get a list of tenants. Choose the tenant where you want to register your app.
+If you have more then one tenant on MindSphere you will get a list of tenants. Choose the tenant where you want to register your app.
 
 If you have only one tenant on MindSphere, the process will automatically select this tenant for you.
 {{% /alert %}}
@@ -417,7 +417,7 @@ To create a new app manually in the MindSphere launchpad, do the following:
       img-src * data:;
       connect-src 'self' 'unsafe-inline'  *;
       ```
-      If your app is running on Mindsphere on **Azure** use Region `eu2`:
+      If your app is running on MindSphere on **Azure** use Region `eu2`:
 
       ```code
       default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;

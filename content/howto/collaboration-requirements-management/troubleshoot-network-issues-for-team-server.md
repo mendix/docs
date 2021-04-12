@@ -8,15 +8,15 @@ tags: ["Team Server", "network", "troubleshoot", "firewall"]
 
 ## 1 Introduction
 
-Mendix Studio Pro needs to connect to Team Server, which is where all your projects are stored.
+Mendix Studio Pro needs to connect to Team Server, which is where all your apps are stored.
 
 **This how-to explains the following:**
 
 * Which permissions and settings are required to connect to Team Server
 
-## 2 Troubleshooting Team Server Project Network Settings
+## 2 Troubleshooting Team Server App Network Settings
 
-Being unable to download the Team Server project can indicate that the security configuration of your company network is blocking access to `https://home.mendix.com` and `https://teamserver.sprintr.com/`.
+Being unable to download the Team Server app can indicate that the security configuration of your company network is blocking access to `https://home.mendix.com` and `https://teamserver.sprintr.com/`.
 
 Team Server is implemented using Subversion and Mendix Studio Pro uses the HTTPS (TCP) protocol to communicate with that server. To access Team Server from within Studio Pro, the network at your location needs the following settings:
 

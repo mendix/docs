@@ -81,7 +81,7 @@ To be valid, the `app-identifier` needs to be lower-case with no special charact
 
 The `prepare` command  does the following:
 
-* Generates a private GitHub repository which will house the project's source code and configurations
+* Generates a private GitHub repository which will house the app's source code and configurations
 * Generates two different projects on App Center for Android and iOS respectively
 * Modifies the default app icons and splash screen if any are provided
 * Modifies the application's name and identifier for both Android and iOS if any are provided

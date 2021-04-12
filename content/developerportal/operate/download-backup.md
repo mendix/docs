@@ -27,9 +27,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To download a backup of a Free App, follow these steps:
 
-1. Go to the [Developer Portal](http://home.mendix.com) and click **Apps** in the top navigation panel.
+1. Go to the [Developer Portal](http://sprintr.home.mendix.com) and click **Apps** in the top navigation panel.
 2. Select the app from which you want to download the backup.
-3. Click **Backups** under the **Operate** category.
+3. Click **Backups**.
 4. Select the backup you want to download and click **Download Backup**.
 
     ![](attachments/download-a-backup/backupoptions-free.png)
@@ -40,10 +40,10 @@ To download a backup of a Free App, follow these steps:
 
 To download a backup of a licensed app, follow these steps:
 
-1. Go to the [Developer Portal](http://home.mendix.com) and click **Apps** in the top navigation panel.
+1. Go to the [Developer Portal](http://sprintr.home.mendix.com) and click **Apps** in the top navigation panel.
 2. Click **My Apps** and select **Nodes**.
 3. Select the node from which you want to download the backup.
-4. Click **Backups** under the **Operate** category.
+4. Click **Backups**.
 5. Select the environment from which you want to download the backup.
 
     ![](attachments/download-a-backup/environment.png)

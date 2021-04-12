@@ -7,7 +7,7 @@ tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 
 ## 1 Introduction
 
-Mendix comes with a wide variety of [Widgets](/refguide/pages#widgets-categories), but sometimes your app requires a widget outside of this set. To support a more  advanced UI pattern or create project-specific interactions, you will need to make your own pluggable widget. Your new pluggable widget can be used while modeling pages alongside standard Mendix components. It can also be shared between multiple projects and distributed through the [Marketplace](https://docs.mendix.com/appstore/index).
+Mendix comes with a wide variety of [Widgets](/refguide/pages#widgets-categories), but sometimes your app requires a widget outside of this set. To support a more  advanced UI pattern or create project-specific interactions, you will need to make your own pluggable widget. Your new pluggable widget can be used while modeling pages alongside standard Mendix components. It can also be shared between multiple projects and distributed through the [Marketplace](/appstore/).
 
 You are in control of a pluggable widget's appearance and behavior. Customize a pluggable widget by implementing a widget as a plain [React](https://reactjs.org/) component written in JavaScript or TypeScript. The component will be rendered in a Mendix app, and will be able to use APIs provided by Mendix to interact with that app.
 
@@ -37,7 +37,7 @@ The above interface could be used this way: a component uses a `canExecute` flag
 
 ## 3 Widget Package
 
-A pluggable widget is distributed as single widget package file with an *.mpk* extension. This file should be placed in your project's `widgets` directory. Mendix Studio Pro discovers all widgets in your project when you open your project, add a widget through the Marketplace, or  click **Project > Synchronize Project Directory**.
+A pluggable widget is distributed as single widget package file with an *.mpk* extension. This file should be placed in your project's `widgets` directory. Mendix Studio Pro discovers all widgets in your project when you open your project, add a widget through the Marketplace, or  click **App** > **Synchronize App Directory**.
 
 Manually building a widget package can be difficult, so Mendix recommends you use scripts provided by the [Mendix Pluggable Widget Generator](https://www.npmjs.com/package/@mendix/generator-widget). For more information on how to use a generator, see [How To Build a Text Box Pluggable Widget: Part 1](/howto/extensibility/create-a-pluggable-widget-one).
 

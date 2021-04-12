@@ -6,7 +6,7 @@ tags: ["studio pro"]
 
 ## JAR Compatibility List
 
-There are some known compatibility issues regarding JAR files in the `<project path>/userlib` directory. This page lists the problematic JAR files and the known workarounds.
+There are some known compatibility issues regarding JAR files in the `<app path>/userlib` directory. This page lists the problematic JAR files and the known workarounds.
 
 | JAR File | Exception in the Log | Workaround |
 | --- | --- | --- |

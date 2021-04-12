@@ -22,6 +22,14 @@ This was used to described a large part of the functionality of the Developer Po
 
 This is now replaced by the [Mendix SSO](/appstore/modules/mendix-sso) module.
 
+## app project
+
+Was used generically instead of "app" to refer to development and project-management work in the project. Was also used to bridge the consistency gap where **Project** is still used in platform UI.
+
+{{% alert type="info" %}}
+Replaced by [app](other-terms#app) generically throughout documentation.
+{{% /alert %}}
+
 ## App Store
 
 {{% alert type="info" %}}
@@ -72,7 +80,7 @@ Replaced by [Mendix Profile](other-terms#profile).
 
 The launchpad was part of the AppCloud release described in this [press release](https://www.mendix.com/press/new-mendix-appcloud/). This was also the only place where Mendix single sign-on users could be managed.
 
-Access to the launchpad has been removed from the Developer Portal. Some of the functionality was replaced by the [App User Management](/developerportal/settings/general-settings#managing-app-users) page.
+Access to the launchpad has been removed from the Developer Portal. Some of the functionality was replaced by the [App User Management](/developerportal/collaborate/general-settings#managing-app-users) page.
 
 {{% alert type="info" %}}
 Do not use.

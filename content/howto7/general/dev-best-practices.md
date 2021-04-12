@@ -322,7 +322,7 @@ When an XPath needs multiple constraints, each constraint must be put in bracket
 
 ### 4.5 Security
 
-The [security](/howto7/security/index) overview in the Modeler must not show any incomplete (yellow) parts. All entity, microflow, and page access must be configured completely.
+The [security](/howto7/security/) overview in the Modeler must not show any incomplete (yellow) parts. All entity, microflow, and page access must be configured completely.
 
 It is recommended **not** to assign default rights to new members when defining entity access. This will ensure that access is only granted after a conscious decision.
 

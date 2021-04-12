@@ -2,7 +2,7 @@
 title: "Auto-Load More"
 category: "Widgets"
 description: "Describes the configuration and usage of the Auto-Load More widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "auto-load more", "load", "platform support"]
+tags: ["marketplace", "marketplace component", "widget", "auto-load more", "load", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,9 +10,9 @@ tags: ["marketplace", "app store", "marketplace component", "app store component
 
 The [Auto-Load More](https://appstore.home.mendix.com/link/app/50323/) widget loads more items on the list view as the end-user scrolls.
 
-### 1.1 Demo App Project
+### 1.1 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](http://autoloadmore.mxapps.io).
+For a demo app that has been deployed with this widget, see [here](http://autoloadmore.mxapps.io).
 
 ## 2 Usage
 

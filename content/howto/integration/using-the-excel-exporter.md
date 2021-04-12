@@ -29,21 +29,21 @@ To download the modules, follow these steps:
 
 	![](attachments/using-the-excel-exporter/18581166.png)
 
-3. Click **Download** to include the module in your app project. It will be imported into **Project** > **App Store modules** in the **Project Explorer**.
-4.  Search for the keyword *Excel*, select **Excel exporter**, and download that module into your app project:
+3. Click **Download** to include the module in your app. It will be imported into **App** > **Marketplace modules** in the **App Explorer**.
+4.  Search for the keyword *Excel*, select **Excel exporter**, and download that module into your app:
 
 	![](attachments/using-the-excel-exporter/exporter.png)
 	
 
 {{% alert type="warning" %}}
-Depending on the layout selected when the project was created, errors in Studio Pro may arise due to the new module's default layouts. To correct this, open each page that has an error and update the layout to the desired layout within the app.
+Depending on the layout selected when the app was created, errors in Studio Pro may arise due to the new module's default layouts. To correct this, open each page that has an error and update the layout to the desired layout within the app.
 {{% /alert %}}
 
 ## 3 Adding Navigation Items to Allow Users to Configure Settings
 
-In this section, you will learn how to add the required pages in the app project's **Navigation** that are needed to configure both the Mx Model Reflection and the Excel Export templates that will be used within the app.
+In this section, you will learn how to add the required pages in the app's **Navigation** that are needed to configure both the Mx Model Reflection and the Excel Export templates that will be used within the app.
 
-1.  In Studio Pro, open **Project** > **Navigation**.
+1.  In Studio Pro, open **App** > **Navigation**.
 2.  Add a new item to the Navigation to open the page **MxModelReflection.MxObjects_Overview**:
 
 	![](attachments/using-the-excel-exporter/18581165.png)
@@ -52,7 +52,7 @@ In this section, you will learn how to add the required pages in the app project
 
 	![](attachments/using-the-excel-exporter/18581909.png)
 
-4.  Open **Project Security** and assign these two modules to the Administrator user role:
+4.  Open **App Security** and assign these two modules to the Administrator user role:
 
 	![](attachments/using-the-excel-exporter/security.png)
 
@@ -60,7 +60,7 @@ In this section, you will learn how to add the required pages in the app project
 
 In this section, you will create an entity which will be used to export the Excel workbook. This will be associated with the entity holding the data with which you want to fill the Excel spreadsheet. This how to will use a **Policy** entity to hold the data.
 
-1.  Open the domain model for your app project and add an entity to serve as a "master export" entity that is a specialization of **FileDocument**.
+1.  Open the domain model for your app and add an entity to serve as a "master export" entity that is a specialization of **FileDocument**.
 2.  Create an association between the newly created entity and the entity (or entities) that you will want to serve as a base for the Excel export.
 
 	![](attachments/using-the-excel-exporter/18581908.png)

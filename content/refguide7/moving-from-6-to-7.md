@@ -32,7 +32,7 @@ Seriously, make a backup!
 
 ### 2.2 Converting to the Latest Mendix 6 Version
 
-Conversion to Mendix 7 will work for projects created with version 6.0.0 or higher. However, we advise converting to the latest Mendix 6 version before converting to the latest Mendix 7 version. For details on the latest Mendix 6 version, see the [Desktop Modeler version 6.10 release notes](/releasenotes/studio-pro/6.10).
+Conversion to Mendix 7 will work for projects created with version 6.0.0 or higher. However, we advise converting to the latest Mendix 6 version before converting to the latest Mendix 7 version.
 
 ### 2.3 Fixing Errors, Warnings & Deprecations
 

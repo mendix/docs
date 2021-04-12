@@ -40,7 +40,7 @@ In the Java code that you write for your Java actions, you can use the Mendix Ja
 You can find the Javadoc at [apidocs.rnd.mendix.com](http://apidocs.rnd.mendix.com/8/runtime/index.html) or in the directory you in which installed Mendix (for example, *C:\Program Files\Mendix\8.0.0\runtime\javadoc*).
 {{% /alert %}}
 
-This library is automatically added to your libraries when you imported your project into Eclipse, and it is called *mxruntime.jar*.
+This library is automatically added to your libraries when you imported your app into Eclipse, and it is called *mxruntime.jar*.
 
 For details on usage and example, see [How to Use the Java API](/howto/logic-business-rules/java-api-tutorial).
 
@@ -57,4 +57,4 @@ For details on this topic, see [Using Eclipse](using-eclipse).
 ## 6 Main Documents in This Category
 
 * [Troubleshooting](troubleshooting) – presents problematic JAR files and workarounds
-* [Using Eclipse](using-eclipse) – describes how to use Eclipse to write and debug the Java actions in your Mendix app project
+* [Using Eclipse](using-eclipse) – describes how to use Eclipse to write and debug the Java actions in your Mendix app

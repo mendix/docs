@@ -19,7 +19,7 @@ This document explains what information can be provided to Datadog and how to co
 A summary of the useful metrics provided by Mendix is in the section [Summary of Mendix Metrics](#summary), below.
 
 {{% alert type="warning" %}}
-Datadog is not supported in Mendix Cloud v3, nor in default deployment buildpacks for other cloud platforms.
+Datadog is not supported in the deprecated Mendix Cloud v3, nor in default deployment buildpacks for other cloud platforms.
 {{% /alert %}}
 
 ## 2 What Information Can Mendix Supply to Datadog?
@@ -214,6 +214,10 @@ You can specify which request handlers, microflows, and activities are reported 
 | `"name": "<requesthandler>"` | All request handler calls of this type | click **Request Handlers<sup><small>1</small></sup>** below to see the list of options |
 | `"name": "<microflow>"` | Each time this microflow is run | The format is `<module>.<microflow>`<br />For example, `TrainingManagement.ACT_CancelScheduledCourse` |
 | `"name": "<activity>"` | All activities of this type | click **Activities<sup><small>2</small></sup>** below to see the list of options |
+
+{{% alert type="warning" %}}
+Microflow names are case-sensitive. If the case is not exactly matched, metrics will not be properly submitted.
+{{% /alert %}}
 
 **<details><summary><sup><small>[1]</small></sup>Request Handlers (click to see list)</summary>**
 

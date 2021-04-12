@@ -30,7 +30,7 @@ Each member has a **Role**. You can change the role of each team member to the f
 
 Click **Role Settings** to see permission details for these roles. For more information, see [App Roles](/developerportal/collaborate/app-roles).
 
-## 3 Node Permissions
+## 3 Node Permissions {#node-permissions}
 
 {{% alert type="info" %}}
 Node permissions are only available for Licensed Apps.

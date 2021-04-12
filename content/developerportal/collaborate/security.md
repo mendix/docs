@@ -8,26 +8,29 @@ tags: ["Settings", "App", "Developer Portal"]
 
 ## 1 Introduction
 
-In **Security**, there are two tabs with app and node permissions, as described below.
+In **Security**, there are two tabs with team and node permissions, as described below.
 
-### 3.1 App Team {#app-team}
+## 2 App Team {#app-team}
 
 {{% alert type="info" %}}
 To view the team, you must have the **App Settings** permission or a default **Scrum Master** role.
 {{% /alert %}}
 
-The **App Team** tab lets you view and delete the team members that are currently working on the app. Each member has a **Role**. You can change the role of each team member to the following:
+The **App Team** tab lets you view and delete the team members that are currently working on the app as well as invite new members to the team.
 
+Each member has a **Role**. You can change the role of each team member to the following:
+
+* Application Director
 * Application Operator
 * Business Engineer
-* Guest
-* Performance Engineer
+* End-user
+* Performance Engineer/Tester
 * Product Owner
 * Scrum Master
 
-For more information, see [App Roles](../collaborate/app-roles).
+Click **Role Settings** to see permission details for these roles. For more information, see [App Roles](/developerportal/collaborate/app-roles).
 
-### 3.2 Node Permissions
+## 3 Node Permissions
 
 {{% alert type="info" %}}
 Node permissions are only available for Licensed Apps.

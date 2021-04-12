@@ -16,6 +16,11 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 	{{% /alert %}}
 * We fixed some performance issues where certain Marketplace sections were not loading properly. This also includes connection issues to the App Store/Marketplace within Studio Pro.
 
+#### Known Issues
+
+* There is an issue with users having trouble downloading Windows Service. This is planned to be fixed soon.
+	* Workaround: First go to [My Marketplace](https://appstore.home.mendix.com/link/myappstore), then go back to the [Get Studio Pro](https://marketplace.mendix.com/link/studiopro/) and download the Windows Service again. 
+
 ### March 23rd, 2021
 
 * We added email notifications for several actions in the Marketplace. You can now receive emails if one of your components has changed, when a published component has received a review, and when you receive a reply to one of your reviews. You can unsubscribe from any of notifications in the [My App Store](/appstore/general/app-store-overview#my-app-store) section of the of Marketplace.

@@ -23,94 +23,48 @@ Catalog allows governance of which data is used by whom, and life cycle manageme
 
 Data Hub is made up of the following components:
 
-- **Home** -  The Data Hub can already import OData contracts from 3rd party systems such as Teamcenter, SAP & Microsoft and OData v4services from other business applications.
-
-  The Data Hub facilitates an integration mechanism, where architects and lead developers can define data that is available and what the data means. Citizen Developers?? can use the data easily, ??and where impact analysis for who uses which data is out of the box??.
-
-  In the current format OData is supported, but ??soon also e.g. REST Swagger files can be imported??, 
-
+- **Home** -  Search the Catalog by entering a search string, by selecting the most popular tags, or view the most popular data sources in your Data Hub. Register new data sources from your business apps. 
 - **Catalog** provides information on registered data sources and datasets that can be used in app development.  **Search** for registered assets that satisfy the search criteria and filters.  Information about the data source that is provided with the service contract - the **contract metadata** - is displayed in the **Asset Details**. 
-
 - **Landscape** gives a graphical representation of the network and dependencies between apps, data sources and datasets.
-
 - **Curate** enables governance (management) of registered assets, adding further information such as owners, tags, app logos, to manage the assets and increase discoverability.
-
 - **Administration** is to enable management of Data Hub, curators, owners. 
 
+ 
 
-
-
-
-## 1.2 DataHub Features
-
-The following are base features of DataHub:
-
-- Easy access to datasets in other Apps, with completely seamless filtering and paging 
-- ??Easier caching of data when required, using a Microflow??
-- Search and discovery of the data that has been published
-- ??Governance on who can accesses what data ?? not DH but defined by the publisher
-- Management of data access rules in the source (e.g. using ID propagation)
-- Versioning and life cycle management of OData contracts?? publishers have to take care of that
-- Automatic update of catalog when deploying an app (published services)
-- Automatic registration of dependencies in catalog, always up to date landscape view
-- Information on number of consumers of an API, understand when you can resign an API and who to inform 
-
-Data hub presents the data in a  visual format in Landscape and also shows the popularity of datarouces on it home page. dashboard or report.
-
-#  2 Overview of using Data Hub to share data sources 
+###  1.2 Overview of using Data Hub to share data sources 
 
 A visual example:
 
+- [ ] Change this diag to show the steps outlined below.
+
 ![image-20210313122809029](./attachments/introducingDH/overview-processes.png)
 
-* Customer information is created in the Sales App. 
-
-* Different parts of that information needs to be used in other Apps -**Delivery App** and **Invoicing APP**.
-
-- Each app builds around the shared data with their own Customer information relevant to their particular scope of functionality
-- Changes to the shared dataset from **Sales APP** will be reflected in the other apps.  
-
-## 2.2 Using Data Hub to Share Data - An Example
-
-- [ ]  ??change the tone
-
-### 2.2.1 Creating and App and Sharing Datasets
-
-1. Developer of **Sales APP** has Customer data in his App which he wants share with the rest of the company.  The developer publishes useful groups of entities (datasets) in an **OData v3 service**. 
-2. The developer organizes the **datasets** into groups which are in different services oriented towards specific use cases. Not all of the information is necessary, or should be shared, so only the **entitysets**,  **attributes** and also the **associations**  entities are published in the services.
-3. The developer assigns a **version number** to each service that is deployed in each **environment** that the app is deployed to.
-4. Upon **deployment**, the services are automatically **registered** in Data Hub
-5. In Data Hub, the developer who is the **technical owner** or the **curator** of the department **curates** the registered assets to enhance the **metadata** and add  **tags** that also indicate the relevancy of the data to different users. They may also indicate, for example, that datasets are the "official", "reliable" datasets by setting the sources as **validated**.
-6. Developers of the **Delivery APP** and **Invoicing APP** discover the the customer datasets for their specific requirements in the Data Hub Catalog.
-7. They qualify the datasets by examining the originating app and the *quality* of the data from the **Metadata** that is displayed.
-8. In Mendix Studio Pro the developers, using the **Data Hub Pane**, drag the required entities from the published services into the domain model and can immediately start using them in their app modeling. The **OData service contract** is consumed, but only the required entities are accessed and displayed as **external entities** in the domain model. 
-9. Depending on the stage of development, the consuming developers will data sources deployed to **non-production** environments to fully test out their modeling, and for the final deployed app, they will consume services in the  **production** environments.
+1. A developer of **Sales APP** has a database of Customer data.  The owners of this data - the sales manager establishes that information of completed sales can be shared with the rest of the company so that they can take this base information and develop their own apps for continued support of the customer, for billing, for post sales activities, etc.
+2. The developer publishes useful groups of the customer information, defined by entities (the datasets) in different **OData v3 services**  or **Data Sources** that are to orient towards specific use cases and levels of access. These services do not include all the information of the dataset only the **entity sets**,  **attributes** and any **associations** that are relevant to consume the datasets for a specific case are published in the services.
+3. The developer assigns a **version number** to each service that is deployed in each **environment** that the app is deployed to. The different environments that the services are deployed to indicate the quality or purpose of the data: **non-production** environments will have test data, **production** environments will have the live data.
+4. There are several ways to register the services in the Catalog:
+   1. Mendix app deployed to the Mendix cloud: upon **deployment**, the services are automatically **registered** in Data Hub. 
+   2. For Mendix apps deployed to a non-Mendix cloud and for other business applications, a registration "pipeline" can be established using the **Data Hub API** to ensure that data sources are registered.
+   3. For business applications: the **Connectors** on the Data Hub **Home** Screen can be used to register data sources.
+5. In Data Hub, the developer who is the **technical owner** or an assigned **curator** **curates** the registered assets. Curation includes adding further information to the **metadata** such as  **tags** that indicate the relevancy of the dataset. They may also indicate, for example, that datasets are the "official", "reliable" datasets for this kind of data by setting the sources as **validated**, and identify the source app that the data sources originated from by adding a customized logo.
+6. Developers of the **Delivery APP** and **Invoicing APP** discover the customer datasets for their specific requirements in the Data Hub Catalog. They searched for suitable data to use in their apps using the search string and tags.
+7. They qualify the originating app, the data owners, and the *quality* of the data from the **Metadata** that is displayed for the data source. Further, they can examine which groups of data sources will be most suited for their use. They see that there are several data sources available from the app.  
+8. In Mendix Studio Pro the consuming developers use the **Data Hub Pane** to find the appropriate data source, for the stage of development that they are in. 
+9. The required datasets, are dragged into the **Domain Model** as **external entities ** which can immediately be used in their app modeling. The **OData service contract** at the service **endpoint** is consumed, but only the required entities are accessed and displayed in the Domain Model. 
 10. During the app modelling, the **external entities** entities can be edited to only include attributes and associations that are required by the consuming app. Other fields that can be removed. 
-11. The **consumed entities** are available in all microflows and UX components as part of the consuming apps Domain Model.
-12. During run-time, when the end users of the **Delivery APP** and **Invoicing APP** do something that requires the **Customer** data, it is automatically retrieved from **Sales APP** in **real-time**. Filtering, paging and selecting in the protocol itself and only the requested fields and records are retrieved. 
+11. The **consumed entities** are available in all micro-flows and UX components as part of the consuming app's Domain Model.
+12. Depending on the stage of development of their apps, in order to fully test out their apps with representative data, services are consumed from the **non-production** environments. For the final deployed app, they will consume the services in the  **production** environments so that that actual data is available.
+13. During run-time, when the end users of the **Delivery APP** and **Invoicing APP** do something that requires the **Customer** data, it is automatically retrieved from **Sales APP** in **real-time**. Filtering, paging and selecting in the protocol itself and only the requested fields and records are retrieved. 
 
-### 2.2.1 Updating the Publishing App
+# 2 OData Services, Versions and Endpoints
 
-1. When the developer of **SalesAPP** makes changes in the app such as adding attributes to entities, changing associations, deleteing entities, he must decide if the services that are currently published should be updated.
-2. Using **semantic numbering** the severity of the changes are indicated to ensure that consuming apps will not "break". 
-3. For **minor** version changes the developer must also decide if he deploys an updated service to the same **endpoint**, and thereby overwrite the current contracts, or if he deploys to a different endpoint.  While *every* change to consumed services should be indicated by a version change, and deployed to a different endpoint (for traceability). The following rule of thumb can also be considered:
+The Data Hub Catalog is a catalog of registered endpoints and the metadata contracts at these endpoints define and describe the datasets that being exposed in the **data sources**.   
 
-   1.  If there if are minor *additions* which will not break any consuming apps, the new contract  *could* be deployed to the same endpoint. This will automatically update consuming apps.
-   2. Any major changes and *deletions* should always be located at a different endpoint.
-	In both cases, consumers should be notified. 
-4. **Major** version changes should alway be indicated by a new service, deployed to a different endpoint. In this case the registration in the Catalog will show all the available versions at the different endpoints.
-5. All deployments of data sources to the different endpoints must be curated to ensure that the right users can find it.
-6. In Mendix Studio Pro, consumers of the data sources can then **update** the contracts of consumed when a different contract is detected at the same endpoint. When there are several versions of the same service deployed to different endpoints, the Studio Pro user can **Switch** to a different endpoint.    
+An **Endpoint** is the complete and unique identifier of data souce or service. It is defined by the location of the app *in* the **environment** it is deployed to with the relative path of the service.  For an OData service, the relative path of the service should include the **major version number**.  This is the **endpoint** that is registered in the catalog and this is where the data source *contract* files of the service is located. Consuming apps will consume from this endpoint. 
 
-# 3 OData Services, Versions and Endpoints
+The schematic below shows the different endpoints that can result from a service that is deployed by an app at different stages of the life-cycle of app (development, testing and acceptance, and production). It gives as an example the resulting endpoints and contracts. The effect of consuming  from these apps is demonstrated. 
 
-The Data Hub Catalog is a catalog of reigstered endpoints and the data at these endpoints.   
-
-An **Endpoint** is the complete and unique identifier of data souce or service defined by the location of the app *in* the environment it is deployed to with the relative path of the service.  For an OData service, the relative path of the service that should include the major version number.  This is the **endpoint** that is registered and this is where the *contract* files of the service is defined. 
-
-The schematic below shows the different endpoints that result from a service that is deployed by an app at different stages of life-cycle and the resulting endpoints and contracts. The effect on consuming apps can also be seen. 
-
-The schematic provides a guideline and recommendations for managing your own app production cycles when dealing with shared data resources. 
+The schematic below provides an overview, and acts as a guideline and recommendation for managing your own app production cycles when dealing with shared data resources. 
 
 - [ ]  to be re-drawn according to design guidelines, and so that it is clear and parts can be extracted for the rest of the section.
 
@@ -120,7 +74,7 @@ The schematic provides a guideline and recommendations for managing your own app
 
 ###  3.1 The Intial Situation
 
-Looking at the the process in Detail:
+When an app has been developed and is populated with live user data in a production environment.
 
 ![service versions1.0](./attachments/dh-concepts/service-versions-endpoints-1.png)
 
@@ -166,9 +120,9 @@ The consuming app consumes the service, **Customer Service 1.1** deployed to the
 * **Customer Service 1.1** is now published at the endpoint **pub.mendix.com/api/customer/v1**
 * **Test Service 1.0** – the unchanged contract the previous version –  is now published at **pub.mendix.com/api/test/v1** (the *same* as relative endpoint as in other environments)
 
-Assuming proper development practices have been followed so that there are no "breaking" changes in the service, the consumer will now find the new **Customer Service 1.1** contract at the same endpoint it is alredy consuming from. 
+Assuming proper development practices have been followed so that there are no "breaking" changes in the service, the consuming app will now find the new **Customer Service 1.1** contract at the same endpoint it is already consuming from. 
 
-**Note:** In Studio Pro, this change in contract is detected  and indicated so that the consumer can **Update** their consumed service and ensure that the latest contract is parsed in the app.
+**Note:** In Studio Pro, this change in contract is detected  and indicated to the user whereby the consumer can **Update** the consumed service and ensure that the latest contract is parsed in the app.
 
 ### 3.4 Mendix Model 1.2 Deployed to Test Environment
 

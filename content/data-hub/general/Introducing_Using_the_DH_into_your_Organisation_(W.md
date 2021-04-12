@@ -191,6 +191,23 @@ This is because Low-Code and Cloud augments the level of automation to a point w
     - User/team/department
 - Future planning
 
+
+
+
+
+### Updating the Publishing App
+
+1. When the developer of **SalesAPP** makes changes in the app such as adding attributes to entities, changing associations, deleteing entities, he must decide if the services that are currently published should be updated.
+2. Using **semantic numbering** the severity of the changes are indicated to ensure that consuming apps will not "break". 
+3. For **minor** version changes the developer must also decide if he deploys an updated service to the same **endpoint**, and thereby overwrite the current contracts, or if he deploys to a different endpoint.  While *every* change to consumed services should be indicated by a version change, and deployed to a different endpoint (for traceability). The following rule of thumb can also be considered:
+
+   1.  If there if are minor *additions* which will not break any consuming apps, the new contract  *could* be deployed to the same endpoint. This will automatically update consuming apps.
+   2.  Any major changes and *deletions* should always be located at a different endpoint.
+       In both cases, consumers should be notified. 
+4. **Major** version changes should alway be indicated by a new service, deployed to a different endpoint. In this case the registration in the Catalog will show all the available versions at the different endpoints.
+5. All deployments of data sources to the different endpoints must be curated to ensure that the right users can find it.
+6. In Mendix Studio Pro, consumers of the data sources can then **update** the contracts of consumed when a different contract is detected at the same endpoint. When there are several versions of the same service deployed to different endpoints, the Studio Pro user can **Switch** to a different endpoint.    
+
 # 5  **Head of Development/Implementation**
 
 Mendix DataHub current version focuses on Data retrieval using OData.

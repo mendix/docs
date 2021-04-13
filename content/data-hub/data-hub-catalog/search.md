@@ -24,35 +24,25 @@ The [details](#search-details) screen for a registered data source, dataset, or 
 
 {{% alert type="info" %}}The **Dataset** is the name of the **Entity set** of a published **Entity** in Mendix Studio Pro, which by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
 
-### 2.1 Published OData Service 
-
-The contract of the published OData service (the *$metadata* document) contains the details of what is exposed in the service. This includes the metadata of the exposed datasets (or entity sets in Mendix Studio Pro) and their exposed attributes, associations, types, and accessibility. This information about the registered OData service is shown in the search details. 
-
-For details on creating a published OData service in Studio Pro, see [How to Register Data Assets](register).
-
 ### 2.2 Versions 
 
-Every published OData service or data source as they are known as in the Data Hub Catalog has a version number, and apps that consume a datasource will consume from a specific version. Updates and changes to a service will be indicated by a change in the version number if good practice is followed by the data source originators. This means that there may be several versions of a registered data source available in the catalog and they will all be listed as separate items in the search results for the same-named data source.
+Every published OData service or data source (as they are known as in the Catalog) has a version number, and apps that consume a datasource will consume from a specific version. Updates and changes to a service will be indicated by a change in the version number if good practice is followed by the data source originators. This means that there may be several versions of a registered data source available in the catalog and they will all be listed as separate items in the search results for the same-named data source.
 
-The [search details](#search-details) screen in the Data Hub Catalog will include the version of the selected service.
+The [search details](#search-details) screen in the Data Hub Catalog displayed the version of the selected service.
 
 ### 2.3 Environments
 
-The Data Hub Catalog is a register of apps that are deployed to a particular environment and the services (or data sources as they are known in Data Hub) published from the apps deployed to the environment. This means that the Catalog registers the version of a service running in a specific environment. The environment also indicates the quality of the dataset that is available. Shared datasets that are available from a *production environment* will have production-level data, while those in non-production environments (*acceptance*, *development*) could be populated with data that may not be reliable for building stable apps and be useful for doing development work.
+The Data Hub Catalog is a register of apps that are deployed to a particular environment and the services or data sources published from the apps are deployed to the same environment. This means that the Catalog registers the version of a service running in a specific environment. 
 
-The search results will show these data source endpoints (which is the combination of the OData service version deployed on a specific environment). Therefore, if a version of a service is deployed on both a test and acceptance environment, a search on the service name in the Data Hub Catalog will have two hits. 
+The environment also provides an indication of the quality of the dataset that is available. Shared datasets that are available from a *production environment* will have production-level data, while those in non-production environments (*acceptance*, *development*) could be populated with data that may not be reliable for building stable apps but be useful for development work.
+
+The search results will show these data source endpoints (which is the combination of the location of the OData service version deployed on a specific environment). Therefore, if a version of a service is deployed on both a test and acceptance environment, a search on the service name in the Data Hub Catalog will have two hits of the two endpoints. 
 
 The environment is therefore a major component of the definition and forms part of the URL for the endpoint being consumed. This, in combination with the OData version number, provides the link to the correct data for the datasets that are exposed.
 
 {{% alert type="info" %}}
 By default, search results in the Data Hub Catalog are filtered to show only hits in the Production environment. You can extend the search to **Non-production** or **Mendix Free App (Sandbox)** environments by checking them in the search pane **Add Filter** list. For more details, see [Filters](#filter).
 {{% /alert %}}
-
-### 2.4 URLs 
-The service URLs provide the locations of the service contract. In turn, these define the endpoints for exposed datasets (or entity sets) and attributes and thereby access to the associated datasets by the consuming apps. You obtain data source and dataset URI's from the search details for integration of the resource in other BI applications. 
-
-### 2.5 Discoverability 
-When a data source is registered, by default, it is made available to other users with the **Discoverable** setting active in the Data Hub Catalog. When this is set, all users can find it and the view details and consume it. Owners of a registered service and curators can set a data source as non-discoverable, which means it is not visible to users unless they are the owner or a curator.
 
 ### 2.6 Tags 
 Tags help you to group services and datasets and categorize them (for example, by department, process, or use). You can use tags to refine the search and filter search results in the Data Hub Catalog by doing the following:
@@ -155,7 +145,9 @@ When you click on an asset (data source or dataset) in the search results, the d
 
 #### 4.2.1 Details of a Selected Data Source {#service-details}
 
-When a data source is selected in the search results, the following details are displayed:
+The contract of the published OData service (the *$metadata* document) contains the definitions details of what is exposed in the service. This includes the metadata of the exposed datasets (or entity sets in Mendix Studio Pro) and their exposed attributes, associations, types, and accessibility. This information is displayed for the Data Source details. 
+
+For details on creating a published OData service in Studio Pro, see [How to Register Data Assets](register).When a data source is selected in the search results, the following details are displayed:
 
 ![](attachments/search/search-details-service.png)
 
@@ -227,30 +219,36 @@ The data source metadata panel at the right of the asset details screen displays
  {{% image_container width="300" %}}![](attachments/search/metadata.png){{% /image_container %}}
 
 #### 4.3.1 Tags
-Tags that have been assigned to the data source when it has been [curated](curate#tags)
+Tags that have been assigned to the data source when it has been [curated.](curate#tags)
 {{% alert type="info" %}}Tags assigned at a data source level propagate down to the datasets and attributes exposed in the service.{{% /alert %}}
+
 #### 4.3.2 Business Owner
 A link to the business owner of the data exposed in the data source. Business owners can be changed as a curation task.
 #### 4.3.3 Technical Owner
-The technical contact of the app; by default this is the owner who registered the OData service. For apps hosted in the Mendix Cloud, the **Technical Owner** is the **Technical Contact** of the app in the Mendix Cloud.
+The technical contact of the app; by default this is the owner who registered the OData service. For apps hosted in the Mendix Cloud, the **Technical Owner** is the contact for technical issues about the app in the Mendix Cloud.
 
 #### 4.3.4 Discoverability {#discoverability-metadata}
+When a data source is registered, by default, it is made available to other users with the **Discoverable** setting active in the Data Hub Catalog. When this is set, all users can find it and the view details and consume it. Owners of a registered service and curators can set a data source as non-discoverable, which means it is not visible to users unless they are the owner or a curator.
+
 The discoverability of the asset by users:
+
 * **Discoverable** – all users of the Data Hub Catalog and Studio Pro can see and consume the asset provided they meet the requirements of the **Classification**
 * **Non-Discoverable** – the asset is not visible in the Catalog and only owners, Data Hub curators, and the Data Hub Admin can find, use, and curate the service. See [Curate Bar](#curate-bar) for changing **Discoverability** as the owner of the data source or curator.
   {{% alert type="info" %}}A **Non-discoverable** asset is also not included in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Data Hub API.{{% /alert %}}
 #### 4.3.5 Validated
-Indicates if the data source has been **validated**. See [Curate Bar](#curate-bar) for changing **Validated** as an owner of the data source or curator.
+Indicates if the data source has been **Validated**. See [Curate Bar](#curate-bar) for changing **Validated** as an owner of the data source or curator.
 #### 4.3.6 Access Level
 Shows the access classification of the service; end-users of the data associated with the datasets exposed in the service must have the appropriate [user role](/refguide/user-roles) to access the data:
+
 * **Public** – classified as public and available to all users	
 * **Internal** – restricted to the members of the organization
-{{% alert type="info" %}}Classifications at a data source level propagate down to the datasets and attributes exposed in the OData service. {{% /alert %}}
+  {{% alert type="info" %}}Classifications at a data source level propagate down to the datasets and attributes exposed in the OData service. {{% /alert %}}
 
 #### 4.3.7 Application
 A link to the application from which the data source was published in the given environment 
 #### 4.3.8 Environment Type
 Indicates the quality and the status of the data associated with the exposed datasets by the environment that the app and service are deployed to. The following are the environment types: 
+
 * **Production**
 * **Non-Production** 
 * **Sandbox** (the Mendix Free App environment) 
@@ -275,7 +273,12 @@ You carry out the following actions:
 
 For further details on curating registered assets see [Curation](./curate).
 
-## 5 Download the Metadata Contract of a Data Source {#download-contract}
+## 5 Data Source and Dataset URIs 
+
+The service URIs is the location of the service contract of the data source. The endpoints of all exposed datasets (entity sets) are defined in the contract. At a data source and dataset level, you can copy the URI's from the Asset Details screen by clicking the **Copy Data Source URI** and **Copy Dataset URI** to your clipboard. These URI can be used for directly accessing the resource in other BI applications. 
+
+## 6 Download the Metadata Contract of a Data Source {#download-contract}
+
 For a selected data source you can click **Download** to download the OData service contract as a ***.zip*** file. This will include the all the files that make up the full metadata contract. The resulting ***.zip*** file will be named as follows:
 
 `DataHub_<service_name>_<service_version>_<technology>.zip`

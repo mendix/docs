@@ -39,10 +39,6 @@ The next chapters give a description of how to take each step and how it increas
 
 When developers create a snippet in Mendix and reuse that snippet on the same page, the ATS Recorder cannot distinguish them. This can also be the case when developers use several snippets on one page. The ATS Recorder cannot distinguish the snippets, as they do not have a unique name. You enable unique snippet names in Mendix Studio Pro by adding a constant to your project with certain properties.
 
-{{% alert type="info" %}}
-This only works for Mendix version 6.10 and above.
-{{% /alert %}}
-
 To add a constant in Mendix Studio Pro follow these steps:
 
 1. Open your project in Mendix Studio Pro and open the project settings.

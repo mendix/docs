@@ -218,4 +218,4 @@ The [Meet Our Partners page](https://developer.mendixcloud.com/openid/login?imme
 
 ## 11 Read More
 
-* [Mendix Jobs Board](mendix-job-board)
+* [Jobs Board](mendix-job-board)

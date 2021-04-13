@@ -3,7 +3,7 @@ title: "mx Command-Line Tool"
 category: "General Info"
 menu_order: 50
 description: "Describes the options of the mx command-line tool"
-tags: ["mx", "project", "project package", "command-line", "tool", "mx", "studio pro", "windows", "linux"]
+tags: ["mx", "project", "command-line", "tool", "mx", "studio pro", "windows", "linux"]
 ---
 
 ## 1 Introduction
@@ -25,7 +25,7 @@ The `mx convert` command converts the app(s) to a specific Studio Pro version. F
 The input can be a single file, directory, or multiple files.
 
 {{% alert type="info" %}}
-The mx tool can only upgrade your project, but you cannot use it to downgrade the version.
+The mx tool can only upgrade your app, but you cannot use it to downgrade the version.
 {{% /alert %}}
 
 #### 3.1.1 Usage

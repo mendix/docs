@@ -2,13 +2,13 @@
 title: "Moving from Mendix Studio Pro 8 to 9"
 category: "General Info"
 menu_order: 20
-description: "Provides details on updating your project from Mendix 8 to Mendix 9, including sections on converting your project and deprecated features."
+description: "Provides details on updating your app from Mendix 8 to Mendix 9, including sections on converting your app and deprecated features."
 tags: ["studio pro", "studio"]
 ---
 
 ## 1 Introduction
 
-Mendix Studio Pro 9 and Mendix Studio 9 give you powerful new tools to enhance your apps. For the full list of changes, see the Studio Pro 9 and Studio 9 release notes. If you want to upgrade an existing Studio Pro 8 or Studio 8 project to its respective 9 version, please check the information below:
+Mendix Studio Pro 9 and Mendix Studio 9 give you powerful new tools to enhance your apps. For the full list of changes, see the Studio Pro 9 and Studio 9 release notes. If you want to upgrade an existing Studio Pro 8 or Studio 8 app to its respective 9 version, please check the information below:
 
 * If you are upgrading your app in Studio from Mendix 8 to 9, see [Upgrading from Mendix 8 to 9 for Studio](#studio-upgrade) below.
 * If you are converting your app from Studio Pro 8 to Studio Pro 9, see [Changing Your App Before Upgrading to Studio Pro 9](#studio-pro-upgrade) below.
@@ -25,9 +25,9 @@ During the synchronization stage, Mendix 9 will perform a check for the RCSI sta
 
 The following sub-sections explain the steps to take in converting your app from Mendix 8 to Mendix 9. We recommend you first review the [Breaking Changes](/releasenotes/studio-pro/9.0#breaking-changes) section of the *Studio Pro 9.0* release notes as well as our updated [System Requirements](/refguide/system-requirements).
 
-### 3.1 Back Up Your Project
+### 3.1 Back Up Your App
 
-Make sure that you have either committed your latest changes to Team Server, or created a backup of your local project before you start the conversion.
+Make sure that you have either committed your latest changes to Team Server, or created a backup of your local app before you start the conversion.
 
 ### 3.2 Upgrade to the Latest Release of Version 8
 
@@ -49,33 +49,33 @@ You should run your app, test all functionality, and ensure it works without err
 
 ### 3.4 Save Your Version 8 App
 
-Backup or commit your project so that you can return to it if necessary.
+Backup or commit your app so that you can return to it if necessary.
 
-Your app is now ready to be upgraded to Mendix 9. You can now close the project in Studio Pro 8.
+Your app is now ready to be upgraded to Mendix 9. You can now close the app in Studio Pro 8.
 
 ### 3.5 Upgrade Your App to Version 9
 
-Open your project in Studio Pro 9 and allow Studio Pro to update your app to version 9. Mendix will upgrade your app for you automatically.
+Open your app in Studio Pro 9 and allow Studio Pro to update your app to version 9. Mendix will upgrade your app for you automatically.
 
 Review all error messages and messages about deprecated items and make changes where necessary.
 
 ### 3.6 Upgrade All Widgets and Modules {#upgrade-widgets}
 
-To minimize the chance of problems, you should update all widgets and other Marketplace modules used by your project to the latest version.
+To minimize the chance of problems, you should update all widgets and other Marketplace modules used by your app to the latest version.
 
 Check if there is a newer version of your modules available in the Marketplace. Read the version release notes in the Marketplace to see whether you need to perform specific actions when upgrading.
 
 Be sure to update these key widgets, resources, and actions:
 
-* [Native Mobile Resources (Mx9 Beta)](https://marketplace.mendix.com/link/component/116537)
-* [Nanoflow Commons (Mx9 Beta)](https://marketplace.mendix.com/link/component/116538)
-* [Data Grid 2 (Mx9 Beta)](https://marketplace.mendix.com/link/component/116540)
+* [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513)
+* [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
+* [Data Grid 2](https://marketplace.mendix.com/link/component/116540)
 
 In general you should not remove and reimport modules, unless this is recommended in the release notes. If you do remove and reimport them, you may lose data or configuration related to the module.
 
 ### 3.7 Update Atlas Module (Optional)
 
-Mendix 9 comes with a new Atlas theme including new page templates and building blocks. To get this theme, you can download the [Atlas UI 3 (Mx9 Beta)](https://marketplace.mendix.com/link/component/116539) module package from the Marketplace.
+Mendix 9 comes with a new Atlas theme including new page templates and building blocks. To get this theme, you can download the [Atlas Core](https://marketplace.mendix.com/link/component/117187), [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) and [Atlas Native Content](https://marketplace.mendix.com/link/component/117175) module packages from the Marketplace.
 
 ### 3.8 Review and Test Your App
 
@@ -95,9 +95,9 @@ Additionally, refer to the Mendix Studio Pro 9.02 Release notes for more Runtime
 
 Before Mendix 9, Mendix could ensure data uniqueness using either the Mendix runtime or by relying on the database engine itself. Starting with Mendix 9, **Database** will be the only option. 
 
-If your project is still using Mendix runtime for uniqueness validation, then you should set the custom runtime setting `DataStorage.EnableDiagnostics` to `true`  to check for potential data redundancy issues that might exist in the database. 
+If your app is still using Mendix runtime for uniqueness validation, then you should set the custom runtime setting `DataStorage.EnableDiagnostics` to `true`  to check for potential data redundancy issues that might exist in the database. 
 
-If any are found, an error like **An error occured while initializing the Runtime: Detected unique constraing violation...** will be logged. To solve this, your project will have to be prepared before moving to Mendix 9. You can obtain the tools you need by [submitting a support request](/developerportal/support/submit-support-request).
+If any are found, an error like **An error occured while initializing the Runtime: Detected unique constraing violation...** will be logged. To solve this, your app will have to be prepared before moving to Mendix 9. You can obtain the tools you need by [submitting a support request](/developerportal/support/submit-support-request).
 
 ## 5 Testing Native Mobile Apps
 
@@ -106,7 +106,7 @@ To test and preview native mobile apps in Mendix 9, you must download the Mendix
 * Download Make It Native 9 for Android in the [Google Play Store](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9)
 * Download Make It Native 9 for iOS in the [Apple App Store](https://apps.apple.com/nl/app/make-it-native/id1542182000)
 
-For best results with native apps, make sure you have updated the [Native Mobile Resources (Mx9 Beta)](https://marketplace.mendix.com/link/component/116537) module as described in the [Upgrade All Widgets and Modules](#upgrade-widgets) section above.
+For best results with native apps, make sure you have updated the [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513) module as described in the [Upgrade All Widgets and Modules](#upgrade-widgets) section above.
 
 ## 6 Client API Changes
 

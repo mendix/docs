@@ -13,7 +13,7 @@ For on-premises and local deployments of Mendix, the Mendix Runtime monitoring a
 {{% alert type="info" %}}
 This is only available for local and on-premises deployments of your app.
 
-For deployments to the Mendix Cloud, you will not have access to the m2ee admin handler. However, you can get the same information from the **Operate** section of the Developer Portal. For more information see:
+For deployments to the Mendix Cloud, you will not have access to the m2ee admin handler. However, you can get the same information from various pages in the Developer Portal. For more information see:
 
 * [Metrics](/developerportal/operate/metrics)
 * [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)

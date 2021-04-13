@@ -19,7 +19,7 @@ In this section, you will learn how to configure the security at the [Prototype 
 
 To edit the server configuration with extra JVM parameters, follow these steps:
 
-1. Open the [Project Settings](/refguide/project-settings).
+1. Open the [App Settings](/refguide/project-settings).
 2. Edit the configuration on the **Configurations** tab.
 3.  Go to the **Server** tab of the configuration, add the following line to the **Extra JVM parameters** field: `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005`
 
@@ -46,7 +46,7 @@ To configure Eclipse, follow these steps:
 3. Select **Debug Configurations**.
 4. In the left menu bar, select **Remote Java Application**.
 5. Right-click **New**.
-6. Be sure your current project is under **Project**, and change the port to 5005 (view the JVM parameters).
+6. Be sure your current project is under **App**, and change the port to 5005 (view the JVM parameters).
 7. Click **Debug**.
 
 ## 4 Read More

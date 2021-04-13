@@ -72,7 +72,7 @@ const project = await client.platform().createNewApp(`NewApp-${Date.now()}`);
 const workingCopy = await project.createWorkingCopy();
 ```
 
-The `createNewApp()` call is where you actually kick off the process that will create a new project in the Mendix Platform which will also create a commit in the Team Server repository. By using `await`, you're waiting for the asynchronous call for creating the app and resuming the code afterwards. The result of this call will be accessible via Studio Pro, but in order to be able to manipulate it using the SDK, you need to expose it as an online working copy. The subsequent call `createWorkingCopy()` will exactly do that.
+The `createNewApp()` call is where you actually kick off the process that will create a new app in the Mendix Platform which will also create a commit in the Team Server repository. By using `await`, you're waiting for the asynchronous call for creating the app and resuming the code afterwards. The result of this call will be accessible via Studio Pro, but in order to be able to manipulate it using the SDK, you need to expose it as an online working copy. The subsequent call `createWorkingCopy()` will exactly do that.
 
 If you create an online working copy from an existing app on the Team Server, be sure your app has been saved using the latest Mendix Studio Pro version. Earlier versions might not be supported!
 
@@ -122,7 +122,7 @@ For more information, see [Async Await](https://basarat.gitbooks.io/typescript/d
 
     ```text
     $ node script.js
-    Creating new project with name NewApp-[...] for user [...]
+    Creating new app with name NewApp-[...] for user [...]
     Project creation for user [...] underway with job id: [...]
     Project created successfully for user [...] with id [...]
     Creating new online working copy for project [...] : NewApp-[...]
@@ -140,7 +140,7 @@ Note that the steps for project creation (line 3) and committing to the Team Ser
 ## 4 Opening the App in Studio Pro
 
 1.  In the **Apps** page of the [Developer Portal](https://sprintr.home.mendix.com/), the app you just created should be visible at the top of the list.
-2.  Open the new project, and on the right side, click **Edit**.
+2.  Open the new app, and on the right side, click **Edit**.
 3.  If you have the latest [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/), it will start and load the app you just created from the Team Server.
 
 ## 5 Next Step

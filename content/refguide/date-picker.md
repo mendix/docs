@@ -8,7 +8,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A **date picker** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](data-types) *Date and Time*. It uses the values set in the **Languages** tab of **Project Settings** to display a correctly localized value to the end-user, using the **Language** object associated with the end-user.
+A **date picker** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](data-types) *Date and Time*. It uses the values set in the **Languages** tab of **App Settings** to display a correctly localized value to the end-user, using the **Language** object associated with the end-user.
 
 A date picker must be placed in a [data widget](data-widgets) and displays an attribute of the object(s) retrieved by that widget. The name of the attribute to be displayed is shown inside the date picker, between square brackets, and colored blue.
 

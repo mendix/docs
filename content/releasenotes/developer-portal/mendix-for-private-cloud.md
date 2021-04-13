@@ -28,6 +28,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have updated Mendix app containers to set  `automountServiceAccountToken=false`, so that Mendix apps would no longer be able to call the Kubernetes API.
 * We have added default resource requests and limits to the Mendix Operator and Gateway Agent. This will limit resource usage and improve support for cluster autoscaling.
 * The Mendix Operator will now automatically set the `ApplicationRootUrl` runtime option based on the app URL.
+* We have improved reliability of detecting the right container image versions when migrating to an air-gapped or private registry.
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
 

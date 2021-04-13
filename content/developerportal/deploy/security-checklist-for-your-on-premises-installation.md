@@ -6,6 +6,10 @@ menu_order: 10
 tags: ["security", "on-premises", "user account", "reverse proxy", "firewall", "file access", "admin port"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 This how-to serves as a checklist for implementing security for your on-premises installation.

@@ -7,6 +7,10 @@ tags: ["App", "Developer Portal", "License", "Subscription Secret", "Upgrade", "
 # NB have left out AWS and Azure Marketplace offerings for now, pending further research.
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 Mendix allows you to build **Free Apps** which give you the opportunity to try things out and to build and test apps using all the functionality of Mendix. You can deploy these to the Mendix Cloud, or to another public or private cloud of your choice, for example SAP Business Technology Platform (SAP BTP).

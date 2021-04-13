@@ -6,6 +6,10 @@ description: "Issues to take into consideration when running apps in an iframe"
 tags: ["iframe", "samesite", "cookies", "x-frame-options"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 By default, a Mendix app is blocked from running inside an iframe. This is to protect the end-user from attacks using *clickjacking*. There is more information on this in the [Adding HTTP Headers](/howto/security/best-practices-security#adding-http-header) section of *How To Implement Best Practices for App Security*.

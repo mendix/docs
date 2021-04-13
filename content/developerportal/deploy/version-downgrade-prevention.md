@@ -6,6 +6,10 @@ description: "What to do if you cannot migrate a Mendix database to an earlier v
 tags: ["downgrade", "migration", "pre-analysis", "version", "database"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Scenario
 
 This issue applies when you are downgrading an app to a lower version of Mendix.

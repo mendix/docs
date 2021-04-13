@@ -376,6 +376,11 @@ When a data source is registered, by default, it is made available to other user
 
 Tags help you to group services and datasets and categorize them (for example, by department, process, or use). You can use tags to refine the search and filter search results in the Data Hub Catalog.
 
+* Add tags to the service as a curate function in the Data Hub Catalog after a service is registered by service owners and [Data Hub Curators](/data-hub/#curator)
+* Add different tags to the different versions of the same service, as they will be two separately registered assets in the catalog (this is also a way to make different version identifiable)
+* Add tags to the datasets exposed in the service
+* Add tags in the [manual registration of OData v4 services](register#registration-form)
+
 ###  Validated {#validated}
 
 The **Validated** value can be assigned to a data source by owners and curators to indicate, for example that it has been qualified and is a reliable data source. It can turned on and off by clicking the **Validated** toggle. A validated data source is indicated by the validation shield on the data source details screen and also in the search results pane. 

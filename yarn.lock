@@ -3703,7 +3703,8 @@ ms@2.1.1:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
   integrity sha512-tgp+dl5cGk28utYktBsrFqA7HKgrhgPsg6Z/EfhWI4gl1Hwq8B/GmY/0oXZ6nF8hDVesS/FpnYaD/kOWhYQvyg==
 
-ms@2.1.2:
+ms@2.1.2, ms@^2.1.1:
+
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
@@ -5070,7 +5071,6 @@ socket.io-parser@~3.4.0:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/socket.io-parser/-/socket.io-parser-3.4.1.tgz#b06af838302975837eab2dc980037da24054d64a"
   integrity sha512-11hMgzL+WCLWf1uFtHSNvliI++tcRUWdoeYuwIl+Axvwy9z2gQM+7nJyN3STj1tLj5JyIUH8/gpDGxzAlDdi0A==
-
   dependencies:
     component-emitter "1.2.1"
     debug "~4.1.0"
@@ -5081,7 +5081,6 @@ socket.io@2.4.0:
   resolved "https://registry.yarnpkg.com/socket.io/-/socket.io-2.4.0.tgz#01030a2727bd8eb2e85ea96d69f03692ee53d47e"
   integrity sha512-9UPJ1UTvKayuQfVv2IQ3k7tCQC/fboDyIK62i99dAQIyHKaBsNdTpwHLgKJ6guRWxRtC9H+138UwpaGuQO9uWQ==
   dependencies:
-
     debug "~4.1.0"
     engine.io "~3.5.0"
     has-binary2 "~1.0.2"

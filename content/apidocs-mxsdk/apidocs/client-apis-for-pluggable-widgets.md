@@ -327,11 +327,15 @@ This allows the client component to access attribute values on individual items 
 
 ```ts
 export interface ListAttributeValue<T extends AttributeValue> {
-    get: (item: ObjectItem) => EditableValue<T>;
+    get: (item: ObjectItem) => EditableValue<T>; // NOTE: EditableValue obtained from ListAttributeValue always readonly
 }
 ```
 
 The type `<T>` depends on the allowed value types as configured for the attribute property.
+
+{{% alert type="warning" %}}
+Due to a technical limitation it is not yet possible to edit attributes obtained via `ListAttributeValue`. `EditableValue`s returned by `ListAttributeValue` are always readonly.
+{{% /alert %}}
 
 In order to work with the attribute value of a particular item of a `ListValue` first an instance of `EditableValue` should be obtained by calling `ListAttributeValue.get` with the item (assuming widget properties are configured as follows with an attribute of type `string`):
 

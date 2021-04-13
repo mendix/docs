@@ -234,7 +234,7 @@ A link to the business owner of the data exposed in the data source. Business ow
 #### 4.3.3 Technical Owner
 The technical contact of the app; by default this is the owner who registered the OData service. For apps hosted in the Mendix Cloud, the **Technical Owner** is the **Technical Contact** of the app in the Mendix Cloud.
 
-#### 4.3.4  Discoverability {#discoverability-metadata}
+#### 4.3.4 Discoverability {#discoverability-metadata}
 The discoverability of the asset by users:
 * **Discoverable** – all users of the Data Hub Catalog and Studio Pro can see and consume the asset provided they meet the requirements of the **Classification**
 * **Non-Discoverable** – the asset is not visible in the Catalog and only owners, Data Hub curators, and the Data Hub Admin can find, use, and curate the service. See [Curate Bar](#curate-bar) for changing **Discoverability** as the owner of the data source or curator.

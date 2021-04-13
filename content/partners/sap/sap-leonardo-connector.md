@@ -50,7 +50,7 @@ The Connector for SAP Leonardo Machine Learning Foundation actions are available
 
 Every call to SAP Leonardo Machine Learning Foundation needs to be authenticated by a valid **API key**. Instructions for obtaining this are in the [Prerequisites](#prerequisites) section above.
 
-The API key needs to be pasted as the value of the constant, **APIKey** which is found in *Project '...' > App Store modules > LeonardoMachineLearning > Constants*.
+The API key needs to be pasted as the value of the constant, **APIKey** which is found in **App** > **Marketplace modules** > **LeonardoMachineLearning** > **Constants**.
 
 ![Paste the API key](attachments/sap-leonardo-connector/paste-api-key.png)
 

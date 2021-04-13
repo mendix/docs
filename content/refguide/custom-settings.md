@@ -45,11 +45,12 @@ The following custom settings can be configured:
 | **ClientCertificateUsages** | Only use this when you have multiple client certificates and you want to configure specific certificates for specific servers.<br/> This setting defines which service must use which client certificate. The value of this setting must be a comma-separated list of key/value items. A key/value item must be specified as `"identifier": "path to certificate"`.<br/>For web services, use the imported web service name as the identifier.<br/>For REST services, use the host name of the remote server as the identifier.<br/>Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces (`{ }`). For example: ![](attachments/Custom+Settings/code_snippet.png) |  |
 | **NoClientCertificateUsages** | Comma-separated list of host names or imported web service names that should never be contacted using a client certificate. |  |
 | **com.mendix.core.SameSiteCookies** | The [SameSite](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) property can be included in all cookies that are returned by the embedded HTTP server. The possible values are `"Strict"`, `"Lax"`, and `"None"`. At present, `"None"` is the default, but this will change to `"Strict"` in the next major Mendix release. Setting it to `"None"` is typically needed only when an application is embedded in an iframe of another application with a different domain. Newer browsers may require the connection to be secure (HTTPS) when set to `"None"`. If the connection is plain HTTP, then this setting must be changed to `"Strict"` (recommended) or `"Lax"`. This setting is available in Studio Pro [8.11.0](/releasenotes/studio-pro/8.11#8110) and above. | |
-| **SessionTimeout** | Defines after how much time session becomes invalid (in milliseconds). After that timeout a session becomes applicable for removal. The session will not be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 |
+| **SessionTimeout** | Defines after how much time session becomes invalid (in milliseconds). After that timeout a session becomes applicable for removal. The session will not be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 (10 minutes) |
+| **LongLivedSessionTimeout** | This setting is the same as `SessionTimeout`, but specific to offline-first progressive web apps. | 604800000 (7 days) |
 | **http.client.MaxConnectionsPerRoute** | The [maximum number of connections for a route](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnPerRoute(int)) for call REST service and call web service activities. | 2 |
 | **http.client.MaxConnectionsTotal** | The [maximum number of connections allowed across all routes](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnTotal(int)) for the call REST service and call web service activities. | 20 |
 | **http.client.CleanupAfterSeconds** | For the call REST service and call web service activities, the first request to a new host will create an HTTP client that will handle subsequent requests. When there are no new requests to the host for the specified time, the HTTP client will be cleaned up. A value of `0` means no cleanup.<br/>{{% alert type="warning" %}}If the infrastructure provider closes this connection before this cleanup time, you can receive a `java.net.SocketException: Connection reset` error. You can reduce this value to prevent this, or handle the error in your [REST call](call-rest-action#troubleshooting).{{% /alert %}} | 355 |
-| **ClusterManagerActionInterval** | The interval (in milliseconds) used for performing all cluster manager actions. These actions include, unblocking users, and removing invalid sessions. If nothing is specified the interval is half the `SessionTimeout`. | 300000 |
+| **ClusterManagerActionInterval** | The interval (in milliseconds) used for performing all cluster manager actions. These actions include, unblocking users, and removing invalid sessions. If nothing is specified the interval is half the `SessionTimeout`. | 300000 (5 minutes) |
 | **com.mendix.core.StorageService** | Defines which storage service module will be used. The storage service module takes care of storing the actual files associated with `System.FileDocument` objects, such as uploaded files. Possible values are `com.mendix.storage.localfilesystem`, `com.mendix.storage.s3`, `com.mendix.storage.azure`, and `com.mendix.storage.swift`. | com.mendix.storage.localfilesystem |
 | **com.mendix.storage.PerformDeleteFromStorage** | Defines whether a delete of a Mendix file document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it is also used as a backup service. | true |
 | **com.mendix.core.SessionIdCookieName** | Defines the name of the cookie value which represents the session id. Can be useful to change when running in a container which assumes a certain name for the session cookie. | XASSESSIONID |
@@ -155,7 +156,7 @@ First, you need to create an Azure SQL database (for information on how to do th
 | **DatabaseUserName** | `your-username` |   |
 | **DatabasePassword** | `your-password` |   |
 
-## 7 Microsoft Azure Blob Storage Settings
+## 7 Microsoft Azure Blob Storage Settings{#azure-blob}
 
 These settings can be used to store files using the Microsoft Azure blob storage service. Server-side encryption can be configured through the Azure Portal (for more information, see [Azure Storage encryption for data at rest](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)). For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you.
 
@@ -214,9 +215,15 @@ The settings below influence the behavior of the Mendix web client.
 
 ## 10 Proxy Settings
 
-The settings below allow you to use a proxy.
+The settings below allow you to use a proxy. 
+
+{{% alert type="warning" %}}
+These settings have to be set as JVM properties, not as custom Runtime settings.
+{{% /alert %}}
 
 | Name | Description | Default Value |
 | --- | --- | --- |
-| **http.proxyHost** | Defines the hostname of the proxy server. |  |
-| **http.proxyPort** | Defines the port number of the proxy server. |  |
+| **http.proxyHost** | Defines the hostname of the HTTP proxy server. |  |
+| **http.proxyPort** | Defines the port number of the HTTP proxy server. |  |
+| **https.proxyHost** | Defines the hostname of the HTTPS proxy server. |  |
+| **https.proxyPort** | Defines the port number of the HTTPS proxy server. |  |

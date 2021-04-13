@@ -90,7 +90,20 @@ To migrate your free app and its database to your Mendix Basic environment, foll
 
     You may have to **confirm** and **authenticate** this with **two-factor authentication** again.
 
-### 3.5 Upload and Restore the Backup
+### 3.5 Configure Your Environment
+
+Before your app can be deployed live, You might need to configure your environment details. This is only required if you have some special configurations or you have to specify settings in order for your functionality to work. For example, if your app makes use of scheduled events or application constants, you can configure them here. See [Environment Details](environments-details) for more information about configuring your environment.
+
+### 3.6 Deploy your app
+
+Now you need to deploy your app! In order to do so, you will need a deployment package.
+
+1. Create a deployment package using Environments methods described on the [deployment package documentation page](mendix-cloud-deploy#package-from-team-server).
+2. Select the deployment package you just created and click **Deploy** to publish your app to production.
+
+### 3.7 Upload and Restore the Backup
+
+The final step is to restore your data. This must be done after you've deployed your app as this ensures that a database has been provisioned ready to accept your data.
 
 1. Go back to the **Backups** page.
 
@@ -108,13 +121,5 @@ Make sure your app is not running before you restore a backup. You can stop your
 
 ![](attachments/basic-package/restore-backup.png)
 
-### 3.6 Configure Your Environment
+Now start your app and it is ready for use.
 
-The final step before your app can be deployed live, is to configure your environment details. This is only needed if you have some special configurations or you have to specify settings in order for your functionality to work. For example, if your app makes use of scheduled events or application constants, you can configure them here. See [Environment Details](environments-details) for more information about configuring your environment.
-
-### 3.7 Deploy your app
-
-All that is left is to deploy your app! In order to do so, you will need a deployment package.
-
-1. Create a deployment package using Environments methods described on the [deployment package documentation page](mendix-cloud-deploy#package-from-team-server).
-2. Select the deployment package you just created and click **Deploy** to publish your app to production.

@@ -10,9 +10,61 @@ For more information on native mobile app development, see the [native-template]
 
 These are the current versions in active development:
 
+* Native Template v6+ applies to apps built using Studio Pro [9.x](../studio-pro/9.0) and above.
 * Native Template v5.1.x applies to apps built using Studio Pro [8.15.x](../studio-pro/8.15) and above.
 * Native Template v5.0.x applies to apps built using Studio Pro [8.12.1](../studio-pro/8.12#8121)–[8.14.x](../studio-pro/8.14).
-* Native Template v4.2.x applies to apps built using Studio Pro up to [8.12.0](../studio-pro/8.12#8120).
+
+## 5.1.10
+
+**Release date: April 6th, 2021**
+
+### Improvements
+ 
+* Android custom developer apps now support deep links. 
+
+### Fixes 
+
+* We fixed an issue that was causing iOS builds to fail with Native Template v5.1.9.
+
+## 6.1.3
+
+**Release date: March 31st, 2021**
+
+### Improvements
+
+* iOS apps now use a single window, and handle scene switching with view controllers. This results in better compatibility in some cases.
+
+### Fixes 
+
+* We fixed the App Center scripts so they fail early when something is wrong.
+
+## 5.1.9
+
+**Release date: March 31st, 2021**
+
+### Mobile Toolkit for 5.1.x
+
+Mobile Toolkit is a new configuration CLI that we introduced to the Native Template. This way we are moving the responsibility of configuring your project to the Template, allowing offline users a path to auto-configuring their project that previously was impossible due to the online requirement of the Native Mobile Builder. The CLI supports this command:
+
+`native-mobile-toolkit configure --config-path='./config.json'`
+
+or
+
+`npm run configure`
+
+The Native Mobile Builder writes to the *config.json* and commits assets to relative locations. The CLI then reads the *config* and handles, configuring the projects and moving any assets to the right locations for the projects.
+
+### Fixes
+
+* We fixed another case where Firebase might crash the Custom Developer app when enabling debug mode.
+
+## 5.0.12
+
+**Release date: March 31st, 2021**
+
+### Fixes
+
+* We fixed another case where Firebase might crash the Custom Developer app when enabling debug mode.
 
 ## 5.1.8 and 5.0.12 {#518and5012}
 

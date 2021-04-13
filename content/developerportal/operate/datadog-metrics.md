@@ -19,7 +19,7 @@ This document explains what information can be provided to Datadog and how to co
 A summary of the useful metrics provided by Mendix is in the section [Summary of Mendix Metrics](#summary), below.
 
 {{% alert type="warning" %}}
-Datadog is not supported in Mendix Cloud v3, nor in default deployment buildpacks for other cloud platforms.
+Datadog is not supported in the deprecated Mendix Cloud v3, nor in default deployment buildpacks for other cloud platforms.
 {{% /alert %}}
 
 ## 2 What Information Can Mendix Supply to Datadog?

@@ -80,7 +80,7 @@ Replaced by [Mendix Profile](other-terms#profile).
 
 The launchpad was part of the AppCloud release described in this [press release](https://www.mendix.com/press/new-mendix-appcloud/). This was also the only place where Mendix single sign-on users could be managed.
 
-Access to the launchpad has been removed from the Developer Portal. Some of the functionality was replaced by the [App User Management](/developerportal/settings/general-settings#managing-app-users) page.
+Access to the launchpad has been removed from the Developer Portal. Some of the functionality was replaced by the [App User Management](/developerportal/collaborate/general-settings#managing-app-users) page.
 
 {{% alert type="info" %}}
 Do not use.

@@ -13,6 +13,10 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### March 30th, 2021
+
+* We have implemented various visual changes to the user interface of the Developer Portal.
+
 ### March 18th, 2021
 
 #### Improvements
@@ -74,7 +78,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 ### December 17th, 2020
 
-* We added the ability to allow customers to test beta features by adding certain allowed Custom Environment Variables. These can be added like Custom Environment Variables in Mendix Cloud v4 environment, using a text field beside the current dropdown.
+* We added the ability to allow customers to test Beta features by adding certain allowed Custom Environment Variables. These can be added like Custom Environment Variables in Mendix Cloud v4 environment, using a text field beside the current dropdown.
 
 	For more information on custom environment variables, see [Runtime Tab](https://docs.mendix.com/developerportal/deploy/environments-details#custom-environment-variables) in the *Environment Details* documentation.
 

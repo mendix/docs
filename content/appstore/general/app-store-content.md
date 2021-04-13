@@ -127,7 +127,7 @@ To add the Google Maps module from the Marketplace via Studio Pro, follow these 
 	{{% /alert %}}
 
 3. Click **Import** on the **Import Module** dialog box, and a pop-up stating that “The app was successfully imported into the project” will appear. Click **OK**.
-4.  Open the **Project Explorer** to view the Google Maps module. Note that unlike a widget, a module will be visible in your Project Explorer and will contain a domain model, pages, and microflow logic. A module downloaded from the Marketplace will store files if the module contains files (for example, userlib or resource files). In addition, a module downloaded from the Marketplace will have a light blue icon to differentiate it from the development modules.
+4.  Open the **App Explorer** to view the Google Maps module. Note that unlike a widget, a module will be visible in your App Explorer and will contain a domain model, pages, and microflow logic. A module downloaded from the Marketplace will store files if the module contains files (for example, userlib or resource files). In addition, a module downloaded from the Marketplace will have a light blue icon to differentiate it from the development modules.
 
 	![](attachments/app-store-content/18580430.png)
 

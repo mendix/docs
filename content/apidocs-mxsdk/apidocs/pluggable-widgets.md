@@ -37,7 +37,7 @@ The above interface could be used this way: a component uses a `canExecute` flag
 
 ## 3 Widget Package
 
-A pluggable widget is distributed as single widget package file with an *.mpk* extension. This file should be placed in your project's `widgets` directory. Mendix Studio Pro discovers all widgets in your project when you open your project, add a widget through the Marketplace, or  click **Project > Synchronize Project Directory**.
+A pluggable widget is distributed as single widget package file with an *.mpk* extension. This file should be placed in your project's `widgets` directory. Mendix Studio Pro discovers all widgets in your project when you open your project, add a widget through the Marketplace, or  click **App** > **Synchronize App Directory**.
 
 Manually building a widget package can be difficult, so Mendix recommends you use scripts provided by the [Mendix Pluggable Widget Generator](https://www.npmjs.com/package/@mendix/generator-widget). For more information on how to use a generator, see [How To Build a Text Box Pluggable Widget: Part 1](/howto/extensibility/create-a-pluggable-widget-one).
 

@@ -78,7 +78,7 @@ The [Mendix Docker buildpack](https://github.com/mendix/docker-mendix-buildpack)
 The Mendix Docker buildpack supports the following Kubernetes versions: 
 
 * Kubernetes version v1.12 and above
-* Redhat Openshift v3.11 and v4.2 and above
+* Red Hat OpenShift v3.11 and v4.2 and above
 
 ## 7 Server
 
@@ -95,7 +95,7 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 * Nginx (tested with versions included in Debian Jessie and Debian Jessie Backports)
 * Apache
 
-### 7.3 Java
+### 7.3 Java{#java}
 
 When running Mendix on a server, you will need Java Runtime Environment (JRE) 11. To download an OpenJDK distribution from AdoptOpenJDK, see [AdoptOpenJDK Installation](https://adoptopenjdk.net/installation.html). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 

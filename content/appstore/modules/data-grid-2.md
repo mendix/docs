@@ -326,8 +326,6 @@ The performance of the new data grid can be affected if sorting or filtering are
 
 ## 10 Troubleshooting
 
-When using Data Grid 2 with XPath as the data source, there will appear to be an error when the data source returns more than 1,000 objects. In this case, please use a microflow with a limit on the number of objects retrieved.
-
 If you are using Atlas v2.x and you cannot upgrade to Atlas 3 at the moment, please replace the line 3 `cssFiles` with the following code in the file `theme/settings.json`:
 
 ```json

@@ -95,12 +95,11 @@ However, you can also solve this error by creating a microflow that will create 
 
 8.  Open the **Show Page** activity properties and do the following:<br />
 
-    a.  Set **Page** to **Home**.<br />
+    a.  Set **Page** to **Customer_Details**, which you have set as homepage in the navigation.<br />
 
     b. Set **Object to pass** to **NewCustomer**.<br />
 
-    {{% image_container width="350" %}}![Show Page Properties](attachments/consistency-errors-navigation/show-page-properties.png)
-    {{% /image_container %}}
+    ![Show Page Properties](attachments/consistency-errors-navigation/show-page-properties.png)
 
 Now the new object of type *Customer* will be created and passed to the home page.
 

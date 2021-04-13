@@ -156,7 +156,7 @@ First, you need to create an Azure SQL database (for information on how to do th
 | **DatabaseUserName** | `your-username` |   |
 | **DatabasePassword** | `your-password` |   |
 
-## 7 Microsoft Azure Blob Storage Settings
+## 7 Microsoft Azure Blob Storage Settings{#azure-blob}
 
 These settings can be used to store files using the Microsoft Azure blob storage service. Server-side encryption can be configured through the Azure Portal (for more information, see [Azure Storage encryption for data at rest](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)). For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you.
 

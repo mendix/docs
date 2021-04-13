@@ -33,7 +33,7 @@ There are three types of feedback item:
 Feedback can go through four different stages:
 
 * **Open** – the feedback is awaiting a response from the team
-* ** Handled ** – the team has looked into the feedback and has requested further information
+* **Handled ** – the team has looked into the feedback and has requested further information
 * **Accepted ** – the team has accepted the feedback and added this feedback as a story to the Sprint (for details, see the [Adding a Feedback Story to Your Backlog](#adding) section below)
 * **Closed ** – the team has closed the feedback
 
@@ -50,11 +50,7 @@ These are the general feedback actions available on all the tabs of the **Feedba
 
 ## 4 Feedback Details
 
-Clicking on the title of a feedback item or on **Details** opens the item's details page:
-
-![](attachments/feedback/feedbacklist.jpg)
-
-You can perform various actions for reviewing and processing a feedback item on this page. These actions are described below.
+Clicking **Details** or the title of a feedback item opens the item's details page, where you can perform various actions for reviewing and processing a feedback item on this page. These actions are described below.
 
 {{% alert type="info" %}}
 If you need to use a link to a specific feedback item (for example, to ask someone else on your team to review it), you can use the URL `https://sprintr.home.mendix.com/link/showfeedback/{FeedbackID}` where `{FeedbackID}` is the feedback number – for example `382647` from the example above.
@@ -108,7 +104,8 @@ After clicking **Accept feedback**, you can create a story on the basis of the f
 5. Select the label(s) (if available ) to be added to the story under **Assign labels**.
 6. Click **Submit** to submit the story.
 
-    ![](attachments/feedback/accept-feedback.png)
+	{{% image_container width="350" %}}![](attachments/feedback/accept-feedback.png)
+	{{% /image_container %}}
 
 Once a feedback item is connected to a user story, the user who submitted the story will automatically be updated on the progress made on that story:
 

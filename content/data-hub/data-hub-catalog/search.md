@@ -226,25 +226,34 @@ The data source metadata panel at the right of the asset details screen displays
 
  {{% image_container width="300" %}}![](attachments/search/metadata.png){{% /image_container %}}
 
-* **Tags** – tags that have been assigned to the data source when it has been [curated](curate#tags)
-	{{% alert type="info" %}}Tags assigned at a data source level propagate down to the datasets and attributes exposed in the service.{{% /alert %}}
-* **Business Owner** – links to the business owner of the data fr the data source; this is added as a curation task
-* **Technical Owner** – technical contact of the app; by default this is the owner who registered the OData service. For apps hosted in the Mendix Cloud, the **Technical Owner** is the **Technical Contact** of the app in the Mendix Cloud
-* **Discoverability** – the discoverability of the asset by users:
-	* **Discoverable** – all users of the Data Hub Catalog and Studio Pro can see and consume the asset provided they meet the requirements of the **Classification**
-	* **Non-Discoverable** – the asset is not visible in the Catalog and only owners, Data Hub curators, and the Data Hub Admin can find, use, and curate the service. See [Curate Bar](#curate-bar) for changing **Discoverability** as the owner of the data source or curator.
-	  {{% alert type="info" %}}A **Non-discoverable** asset is also not included in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Data Hub API.{{% /alert %}}
-* **Validated** – indicates if the data source has been **validated**. See [Curate Bar](#curate-bar) for changing **Validated** as an owner of the data source or curator.
-* **Access Level** – shows the access classification of the service; end-users of the data associated with the datasets exposed in the service must have the appropriate [user role](/refguide/user-roles) to access the data:
-	* **Public** – classified as public and available to all users	
-	* **Internal** – restricted to the members of the organization
-	{{% alert type="info" %}}Classifications at a data source level propagate down to the datasets and attributes exposed in the OData service. {{% /alert %}}
-* **Application** – a link to the application from which the data source was published in the given environment 
-* **Environment Type** – indicates the quality and the status of the data associated with the exposed datasets by the environment that the app and service are deployed to. The following are the environment types: 
-  * **Production**
-  * **Non-Production** 
-  * **Sandbox** (the Mendix Free App environment) 
-* 
+#### 4.3.1 Tags
+Tags that have been assigned to the data source when it has been [curated](curate#tags)
+{{% alert type="info" %}}Tags assigned at a data source level propagate down to the datasets and attributes exposed in the service.{{% /alert %}}
+#### 4.3.2 Business Owner
+A link to the business owner of the data exposed in the data source. Business owners can be changed as a curation task.
+#### 4.3.3 Technical Owner
+The technical contact of the app; by default this is the owner who registered the OData service. For apps hosted in the Mendix Cloud, the **Technical Owner** is the **Technical Contact** of the app in the Mendix Cloud.
+
+#### 4.3.4  Discoverability {#discoverability-metadata}
+The discoverability of the asset by users:
+* **Discoverable** – all users of the Data Hub Catalog and Studio Pro can see and consume the asset provided they meet the requirements of the **Classification**
+* **Non-Discoverable** – the asset is not visible in the Catalog and only owners, Data Hub curators, and the Data Hub Admin can find, use, and curate the service. See [Curate Bar](#curate-bar) for changing **Discoverability** as the owner of the data source or curator.
+  {{% alert type="info" %}}A **Non-discoverable** asset is also not included in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Data Hub API.{{% /alert %}}
+#### 4.3.5 Validated
+Indicates if the data source has been **validated**. See [Curate Bar](#curate-bar) for changing **Validated** as an owner of the data source or curator.
+#### 4.3.6 Access Level
+Shows the access classification of the service; end-users of the data associated with the datasets exposed in the service must have the appropriate [user role](/refguide/user-roles) to access the data:
+* **Public** – classified as public and available to all users	
+* **Internal** – restricted to the members of the organization
+{{% alert type="info" %}}Classifications at a data source level propagate down to the datasets and attributes exposed in the OData service. {{% /alert %}}
+
+#### 4.3.7 Application
+A link to the application from which the data source was published in the given environment 
+#### 4.3.8 Environment Type
+Indicates the quality and the status of the data associated with the exposed datasets by the environment that the app and service are deployed to. The following are the environment types: 
+* **Production**
+* **Non-Production** 
+* **Sandbox** (the Mendix Free App environment) 
 
 ### 4.4 Curate Bar {#curate-bar}
 

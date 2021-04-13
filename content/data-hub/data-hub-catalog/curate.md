@@ -69,7 +69,7 @@ You can curate Application Details from the **Application Details** screen as fo
 
    ![](attachments/curate/application-metadata-screen.png)
 
-### 4.1 Changing Owners of an Application 
+### 4.1 Changing Owners of an Application{#changing-owners} 
 
 The **Technical** and **Business Owners** are displayed as a link in the asset **Metadata** pane so that users can contact them through the email that is provided for them.
 

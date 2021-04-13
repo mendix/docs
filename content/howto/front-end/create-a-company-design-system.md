@@ -13,7 +13,7 @@ Mendix is all about enabling developers. Within projects developers can be enabl
 
 Note that in this document we use the term design system, but one could also consider this a UI Kit, depending on how it is used and implemented.
 
-A design system is the single source of truth and contains all the elements that a team needs to design, realize and develop a product. The design system includes the styling (e.g. colors, fonts, spacing, images), principles, best practices, components and patterns (widgets, page templates, building blocks and design properties). To make it easy to get started, Mendix offers the Mendix Design System app, which can be used as a foundation to create your companies own Mendix design system.
+A design system is the single source of truth and contains all the elements that a team needs to design, realize and develop a product. The design system includes the styling (e.g. colors, fonts, spacing, images), principles, best practices, components and patterns (widgets, page templates, building blocks and design properties).
 
 {{% todo %}}[Mendix Design System app link can be added when released on the market place]{{% /todo %}}
 
@@ -21,11 +21,10 @@ Follow the following high level steps in the next paragraphs to create your own 
 
 ## 2 Create a Company Design System App
 
-Create a new app based on the Mendix Design System app. You can give this a name to your liking, for example MyCompany Design System.
+Create a new app. You can give this a name to your liking, for example MyCompany Design System.
 
-{{% todo %}}[Mendix Design System app link can be added when released on the market place]{{% /todo %}}
-
-The Design System app app contains pages to showcase the components and patterns, as well as the possible design variations and principles of use.
+{{% todo %}}[Mendix Design System app link can be added when released on the market place. Add this text after this todo: The Design System app app contains pages to showcase the components and patterns, as well as the possible design variations and principles of use.
+]{{% /todo %}}
 
 ## 3 Add a Company Theme Module
 

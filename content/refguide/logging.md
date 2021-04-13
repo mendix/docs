@@ -87,6 +87,7 @@ This list is currently incomplete and is being worked on.
 | StorageSwift | |
 | WebServices | Traces SOAP call request and response contents. |
 | WebUI | |
+| Workflow Engine | Logs messages related to workflow executions, for example, lifecycle events, like a start or an end of a workflow, execution of workflow actions and errors that occur during the execution. |
 
 ### 3.2 JSON{#json}
 

@@ -13,6 +13,24 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2021
 
+### April 15th, 2021
+
+#### Portal Improvements
+
+* We have fixed an issue with downloading a custom Mendix Operator version if the Mendix Gateway Agent is disconnected.
+* We have fixed an issue where a cluster admin would see activity logs from other clusters.
+* We have fixed the autodeploy option.
+
+#### Mendix Operator v1.10.0 and Mendix Gateway Agent v1.9.0
+
+* We have updated all containers to set `allowPrivilegeEscalation=false`, so that containers will no longer be able to modify their user id.
+* We have updated all base images to no longer modify `/etc/passwd` on startup.
+* We have updated Mendix app containers to set  `automountServiceAccountToken=false`, so that Mendix apps would no longer be able to call the Kubernetes API.
+* We have added default resource requests and limits to the Mendix Operator and Gateway Agent. This will limit resource usage and improve support for cluster autoscaling.
+* The Mendix Operator will now automatically set the `ApplicationRootUrl` runtime option based on the app URL.
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
+
 ### March 31st, 2021
 
 #### Mendix Operator v1.9.1

@@ -32,10 +32,6 @@ If you're using an OpenShift cluster, follow the [Signing in to OpenShift](priva
 
 ## 3 Upgrade Namespace{#upgrade-cluster}
 
-{{% alert type="info" %}}
-Your Agent must be running and have a status of "connected" before you upgrade your namespace.
-{{% /alert %}}
-
 1. Follow the instructions to [Run the Configuration Tool](private-cloud-cluster#running-the-tool). You will see the initial screen:
 
     ![](attachments/private-cloud-upgrade-guide/mxpc-cli-welcome.png)

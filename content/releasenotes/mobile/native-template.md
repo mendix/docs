@@ -384,7 +384,7 @@ iOS
 ### Improvements
 
 * We added support for Android 10's Dark theme and iOS 13's Dark Mode.
-* We added over the air (OTA) update support (for details, see [How to Use Over the Air Updates](/howto/mobile/how-to-ota)).
+* We added over the air (OTA) update support (for details, see [How to Release Over the Air Updates with App Center's CodePush](/howto/mobile/how-to-ota)).
 * We migrated iOS project to Xcode 11.
 * We switched the App Center build platform to standard ReactNative.
 

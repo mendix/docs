@@ -27,11 +27,11 @@ Currently OTA  does not update your app while the app is open or minimized.
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install Mendix Studio Pro v8.15 or above using the online installer. The offline installer does not include the Mendix Native Mobile Builder dependency.
+* Install Mendix Studio Pro v8.15 or above using the online installer (the offline installer does not include the Mendix Native Mobile Builder dependency)
 * Deploy your app by completing [How to Deploy Your First Mendix Native Mobile App](deploying-native-app).
-* Ensure you have set up and configured App Center for your app. For information on setting up App Center, see [App Center Token Section](deploying-native-app#appcenter-token) of *How to Deploy Your First Mendix Native Mobile App*. If you previously opted out of configuring App Center while building your app, you must navigate to the **Tokens** screen and toggle on the **I want to use App Center** option.
-* Install your app on a test device or emulator
-* Read the [Offline First Reference Guide](/refguide/offline-first)
+* Ensure you have set up and configured App Center for your app. For information on setting up App Center, see the [App Center Token](deploying-native-app#appcenter-token) section of *How to Deploy Your First Mendix Native Mobile App*. If you previously opted out of configuring App Center while building your app, you must navigate to the **Tokens** screen and toggle on the **I want to use App Center** option.
+* Install your app on a test device or emulator.
+* Read the [Offline First Reference Guide](/refguide/offline-first).
 
 ## 3 When to Use OTA Updates
 
@@ -62,23 +62,23 @@ If you have made any changes directly to your iOS or Android project, you will h
 
 ## 4 Build an App That Can Use CodePush OTA Updates {#build-with-ota-support}
 
-Apps built using Mendix Native Mobile Builder have by default OTA with App Center's CodePush disabled.
+Apps built using the Mendix Native Mobile Builder have OTA updates with App Center's CodePush disabled by default. To make OTA updates via App Center's CodePush available to your app's users, you must toggle the **App Center OTA Support** capability on. 
 
-To make OTA updates via App Center's CodePush available to your app's users, you must toggle the **App Center OTA Support** capability on. Next you must build new binaries with this capability on, and then release the apps to their respective app stores (only users with the new apps will be able to receive OTA updates). To do these things, follow these general steps:
+Next you must build new binaries with this capability toggled on, and then release the apps to their respective app stores (only users with the new apps will be able to receive OTA updates). To do these things, follow these general steps:
 
 1. Click **Project** > **Build Native Mobile App**.
 1.  Navigate to **App Capabilities**: 
 
-    {{% image_container width="350" %}}![Start Mendix Native Mobile Builder](attachments/nbui/advanced-capabilities.png){{% /image_container %}}
+	{{% image_container width="350" %}}![Start Mendix Native Mobile Builder](attachments/nbui/advanced-capabilities.png){{% /image_container %}}
 
 1.  Toggle **App Center CodePush OTA Support** on: 
 
-    {{% image_container width="350" %}}![OTA capability enabled](attachments/nbui/advanced-capabilities-ota.png){{% /image_container %}}
+	{{% image_container width="350" %}}![OTA capability enabled](attachments/nbui/advanced-capabilities-ota.png){{% /image_container %}}
 
 1. Click **Save**.
 1.  Now build an application for distribution and make a note of the version number used: 
 
-    {{% image_container width="350" %}}![Build release app page](attachments/nbui/build-release-app-for-ota.png){{% /image_container %}}
+	{{% image_container width="350" %}}![Build release app page](attachments/nbui/build-release-app-for-ota.png){{% /image_container %}}
 
 1. To make the OTA update functionality available to your users, please release the new binaries via the appropriate app stores. If you are testing the functionality you can now install the apps on your test devices.
 
@@ -97,26 +97,26 @@ To release a new version OTA, follow these steps:
 	{{% image_container width="300" %}}![Make some changes](attachments/how-to-ota/modeller-correct.png){{% /image_container %}}
 
 1. Save your changes.
-1. Note the version and build number of the app build you want to update. This how-to assumes an app version of 1.0.0 and a build number of 1.
+1. Note the version and build number of the app build you want to update. This how to assumes an app version of 1.0.0 and a build number of 1.
 1. Click **Project** > **Build Native Mobile App**.
-1. Under **Build app for distribution**, select **Deploy OTA update via CodePush**:
+1.  Under **Build app for distribution**, select **Deploy OTA update via CodePush**:
 
-    {{% image_container width="350" %}}![Menu entry Deploy OTA update via CodePush](attachments/nbui/advanced-ota-menu.png){{% /image_container %}}
+	{{% image_container width="350" %}}![Menu entry Deploy OTA update via CodePush](attachments/nbui/advanced-ota-menu.png){{% /image_container %}}
 
 1.  Type in the target app version you wish to release the OTA update for. This version needs to match exactly with the app version used for building the app binaries in the previous step, or the one released on the app stores:
 
-    {{% image_container width="350" %}}![OTA configuration screen](attachments/nbui/advanced-ota-configuration.png){{% /image_container %}}
+	{{% image_container width="350" %}}![OTA configuration screen](attachments/nbui/advanced-ota-configuration.png){{% /image_container %}}
 
 1. Click **Release an OTA update via CodePush**.
 1.  The Mendix Native Mobile Builder will compile your app and resources and release the OTA updates:
 
-    {{% image_container width="350" %}}![OTA build step](attachments/nbui/advanced-ota-building.png){{% /image_container %}}
+	{{% image_container width="350" %}}![OTA build step](attachments/nbui/advanced-ota-building.png){{% /image_container %}}
 
 1.  On compilation you will receive links to the CodePush OTA update administration pages for your Android and iOS apps:
 
-    {{% image_container width="350" %}}![OTA build step success](attachments/nbui/advanced-ota-success.png){{% /image_container %}}
+	{{% image_container width="350" %}}![OTA build step success](attachments/nbui/advanced-ota-success.png){{% /image_container %}}
 
-    {{% image_container width="350" %}}![OTA App Center page](attachments/nbui/advanced-ota-appcenter-page.png){{% /image_container %}}
+	{{% image_container width="350" %}}![OTA App Center page](attachments/nbui/advanced-ota-appcenter-page.png){{% /image_container %}}
 1. Wait for the Native Builder to complete.
 2. Restart the app on your testing device. You should be greeted with the following message:
 
@@ -155,7 +155,7 @@ The transition from the CLI to Mendix Native Mobile Builder for OTA supporting a
 1. Navigate to [App Center](https://appcenter.ms).
 1. While logged in, find the Android and iOS apps used for building your app.
 1. Check the URLs and note down the application ID as seen in the URLs. For example, in **https://appcenter.ms/users/user.name/apps/App-Android/distribute/code-push**, **App-Android** is the Android app's ID. 
-1. If your app is built under an organization the URL might look like this: **https://appcenter.ms/orgs/org-name/apps/App-Android/distribute/code-push**. In this case, note the **org-name** as seen in the URL too.
+1. If your app is built under an organization the URL might look like this: **https://appcenter.ms/orgs/org-name/apps/App-Android/distribute/code-push**. In this case, note the **org-name** as seen in the URL.
 
 ### 7.2 Move Your App to the Mendix Native Mobile Builder
 

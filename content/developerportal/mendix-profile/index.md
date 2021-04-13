@@ -220,10 +220,10 @@ This section presents all of the documents  you have shared within different app
 
 In this section, you can view feedback submitted on the following:
 
-* Apps of which you are an App Team member
-* Your company’s apps of which you are not an App Team member
+* Apps of which you are an team member
+* Your company’s apps of which you are not an team member
 
-When you click **Details** for feedback on an app of which you are an App Team member, you can manage the feedback. For details on how to do this, see [Feedback Management](/developerportal/collaborate/feedback).
+When you click **Details** for feedback on an app of which you are a team member, you can manage the feedback. For details on how to do this, see [Feedback Management](/developerportal/collaborate/feedback).
 
 ### 9.4 Team Server
 
@@ -236,7 +236,7 @@ Changes made through Studio Pro are stored in the Mendix Team Server. This secti
 
 In this section, you can view the invitations you have sent and received. There are two types of invitations:
 
-* Project invitation – an invitation to join an App Team to work on an app
+* Project invitation – an invitation to join a team to work on an app
 * App invitation – an invitation to join an app as a user
 
 ## 10 Settings {#settings}

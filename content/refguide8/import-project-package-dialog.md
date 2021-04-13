@@ -37,7 +37,7 @@ If you select to store your app in a new Mendix Team Server, a new Team Server p
 
 If you want to use an existing repository, select the app in the **Team Server App** option. Note that this works only when the existing repository is empty.
 
-For more information about the Mendix Team Server, see [Team Server Overview](/developerportal/develop/team-server).
+For more information about the Mendix Team Server, see [Team Server](/developerportal/collaborate/team-server).
 
 ### 2.2 Private Server {#private-server}
 
@@ -59,5 +59,5 @@ Use this field to choose the directory where the project files of the app will b
 
 ## 4 Read More
 
-* [Team Server Overview](/developerportal/develop/team-server)
+* [Team Server](/developerportal/collaborate/team-server)
 * [Export Project Package](export-project-package-dialog)

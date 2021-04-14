@@ -19,7 +19,8 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 * We have fixed an issue with downloading a custom Mendix Operator version if the Mendix Gateway Agent is disconnected.
 * We have fixed an issue where a cluster admin would see activity logs from other clusters.
-* We have fixed the autodeploy option.
+* We have fixed the autodeploy feature.
+* We have resolved an issue when the Run in cloud button was sometimes disabled in Studio Pro.
 
 #### Mendix Operator v1.10.0 and Mendix Gateway Agent v1.9.0
 

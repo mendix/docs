@@ -4,6 +4,7 @@ parent: "backups"
 menu_order: 50
 description: "Describes how to restore physical disk space by creating and restoring a database backup."
 tags: ["Mendix Cloud", "disk space", "disk size", "size reduction", "backup"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction

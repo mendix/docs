@@ -18,7 +18,7 @@ This action is ignored and does not work when a microflow is called from an offl
 
 ## 1 Introduction
 
-With this activity, you can show a selected page to an end-user.
+With this activity, you can show a selected page to an end-user. Mendix apps run as a single page application, so the page will always be shown in the same browser tab/window as the app.
 
 You can directly drag a page from the **App Explorer** into your microflow:
 

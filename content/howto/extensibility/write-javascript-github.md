@@ -199,15 +199,15 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
 	![select user entity](attachments/jsactions-advanced/select-user-entity.png)
 
-15. Your final step is updating the code. The new `userEntity` parameter has already been added. In the `mx.data.create` function, set `userEntity` as the `entity` to be created. Then, add some documentation for future reference:
+15.  Your final step is updating the code. The new `userEntity` parameter has already been added. In the `mx.data.create` function, set `userEntity` as the `entity` to be created. Then, add some documentation for future reference:
 
 	```javascript
 	/**
-	 * Searching users on GitHub.com, it could find users via various criteria. This action returns up to 100 results.
-	 * @param {string} query - The query contains one or more search keywords and qualifiers. Qualifiers allow you to limit your search to specific areas of GitHub.
-	 * @param {string} userEntity - The entity to match the Return type Entity.
-	 * @returns {Promise.<MxObject[]>}
-	 */
+	Searching users on GitHub.com, it could find users via various criteria. This action returns up to 100 results.
+	@param {string} query - The query contains one or more search keywords and qualifiers. Qualifiers allow you to limit your search to specific areas of GitHub.
+	@param {string} userEntity - The entity to match the Return type Entity.
+	@returns {Promise.<MxObject[]>}
+	*/
 	export async function SearchGitHubUsers(query, userEntity) {
 		// BEGIN USER CODE
 		// Documentation: https://developer.github.com/v3/search/#search-users

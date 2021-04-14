@@ -38,7 +38,7 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.1 Workflow Object
 
-A workflow object the page of which you would like to show. 
+A workflow object of which the page you would like to show.
 
 ## 4 Common Section {#common}
 

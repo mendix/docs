@@ -534,7 +534,7 @@ During the creation of the environment, the selected PostgreSQL service will be 
 
 This database service should not be unbound from your environment: see [Services Tab](#binding-services), above, for more information on required services.
 
-##### 8.1.1.2 SAP Hyperscaler PostgreSQL Configurator{#postgresql-configurator}
+##### 8.1.1.1 SAP Hyperscaler PostgreSQL Configurator{#postgresql-configurator}
 
 To get help to create the configuration file, click the **Configurator** button.
 

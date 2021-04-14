@@ -14,6 +14,18 @@ These are the current versions in active development:
 * Native Template v5.1.x applies to apps built using Studio Pro [8.15.x](../studio-pro/8.15) and above.
 * Native Template v5.0.x applies to apps built using Studio Pro [8.12.1](../studio-pro/8.12#8121)–[8.14.x](../studio-pro/8.14).
 
+## 5.1.10
+
+**Release date: April 6th, 2021**
+
+### Improvements
+ 
+* Android custom developer apps now support deep links. 
+
+### Fixes 
+
+* We fixed an issue that was causing iOS builds to fail with Native Template v5.1.9.
+
 ## 6.1.3
 
 **Release date: March 31st, 2021**
@@ -372,7 +384,7 @@ iOS
 ### Improvements
 
 * We added support for Android 10's Dark theme and iOS 13's Dark Mode.
-* We added over the air (OTA) update support (for details, see [How to Use Over the Air Updates](/howto/mobile/how-to-ota)).
+* We added over the air (OTA) update support (for details, see [How to Release Over the Air Updates with App Center's CodePush](/howto/mobile/how-to-ota)).
 * We migrated iOS project to Xcode 11.
 * We switched the App Center build platform to standard ReactNative.
 

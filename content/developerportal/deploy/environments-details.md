@@ -357,7 +357,7 @@ IP Addresses must be within the following ranges:
 | 172.32.0.0 | 192.167.255.255 |
 | 192.169.0.0 | 255.255.255.255 |
 
-### 4.4 Path-Based Access Restrictions
+### 4.4 Path-Based Access Restrictions{#path-based-restrictions}
 
 You can restrict access to your application by means of Client Certificates or IP ranges.
 

@@ -32,7 +32,7 @@ Uploads a deployment package from the local system to a specific app. This packa
 
 ```bash
 HTTP Method: POST
-URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/upload?name=<PackageName>
+URL: https://deploy.mendix.com/api/v2/apps/<AppId>/packages/upload?name=<PackageName>
 ```
 
 #### 3.1.2 Request
@@ -48,7 +48,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/upload?name=<PackageN
 <!--Check this is correct -->
 
 ```bash
-POST /api/1/apps/calc/packages/upload?name=calc_1.0.0.45.mda
+POST /api/v2/apps/calc/packages/upload?name=calc_1.0.0.45.mda
 Host: deploy.mendix.com
 
 Mendix-Username: richard.ford51@example.com
@@ -64,7 +64,7 @@ Content-Disposition: form-data;
 
 Curl example:
 ```bash
-curl -v -F "file=@%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.45.mda"  -X POST -H "Mendix-Username: richard.ford51@example.com" -H "Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6" "https://deploy.mendix.com/api/1/apps/calc/packages/upload?name=calc_1.0.0.45.mda"
+curl -v -F "file=@%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.45.mda"  -X POST -H "Mendix-Username: richard.ford51@example.com" -H "Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6" "https://deploy.mendix.com/api/v2/apps/calc/packages/upload?name=calc_1.0.0.45.mda"
 ```
 
 #### 3.1.3 Output

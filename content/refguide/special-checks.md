@@ -132,3 +132,27 @@ An example of an input can be the following:
 ```java
 isSynced($currentObject)
 ```
+
+## 6 Checking Whether a Synchronization Is In Progress {#is-syncing}
+
+This function is available only in expressions for [conditional visibility or editability](common-widget-properties), as only they are evaluated on client side.
+
+### 6.1 Input Parameters
+
+No input parameter is required for this check.
+
+### 6.1 Output
+
+The output is described in the table below:
+
+| Value                                                        | Type    |
+| ------------------------------------------------------------ | ------- |
+| Returns `true` when there is an in progress [synchronize](synchronize) action running and `false` otherwise. This check can be used to avoid performing [simultaneous synchronizations](synchronize#limitations).| Boolean |
+
+### 6.3 Example
+
+An example of an input can be the following:
+
+```java
+isSyncing()
+```

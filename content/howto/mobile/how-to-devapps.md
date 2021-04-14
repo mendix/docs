@@ -130,4 +130,4 @@ If you want Native Builder to sign your custom developer app, follow the steps i
 ## 5 Read More
 
 * [How to Deploy Your First Mendix Native Mobile App](deploying-native-app)
-* [How to Use Over the Air Updates](how-to-ota)
+* [How to Release Over the Air Updates with App Center's CodePush](how-to-ota)

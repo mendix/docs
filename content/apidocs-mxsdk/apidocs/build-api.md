@@ -5,13 +5,13 @@ description: "An API to allow the triggering of deployment package builds, and t
 tags: ["API", "Build Server", "Team Server", "Deployment package", "Mendix Cloud"]
 ---
 
+{{% alert type="warning" %}}
+The Build API only works for apps which are deployed to the Mendix Cloud.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The Build API allows you to manage deployment packages and create new deployment packages using our build server. You will need the information from the Teamserver API as input for these API calls. You will also need to provide authentication for each call; this is described in [Authentication](authentication).
-
-{{% alert type="info" %}}
-This API is designed for apps which are deployed to the Mendix Cloud.
-{{% /alert %}}
 
 The image below provides a domain model representation of the concepts discussed below and how these are related:
 

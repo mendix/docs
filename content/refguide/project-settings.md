@@ -289,15 +289,15 @@ Switching from a ZIP file to a UI resources package is straightforward:
 
 ## 7.2 Execution
 
-Allows you to set a maximum number of workflows/user tasks that can be executed simultaneously.
+Allows you to set a maximum number of workflow and user task transactions that can be executed simultaneously by the runtime. This is an advanced setting that gives developers control over app performance.
 
 ### 7.2.1 Parallel Workflow Executions
 
-Defines the maximum number of workflows that can be executed simultaneously. The limit is 10. 
+Defines the maximum number of workflow transactions that the runtime will execute simultaneously. The limit is 10. 
 
 ### 7.2.2 Parallel Task Executions
 
-Defines the maximum number of user tasks that can be executed simultaneously. The limit is 10.
+Defines the maximum number of user task transactions that the runtime will execute simultaneously. The limit is 10.
 
 ## 8 Miscellaneous Tab {#miscellaneous}
 

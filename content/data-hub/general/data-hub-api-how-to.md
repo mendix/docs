@@ -88,7 +88,7 @@ You can set your PAT token as a variable that can be conveniently called for eac
 If you are using the [curl](http://curl.haxx.se/) command to send your HTTP requests to the API then you must include the access header as given in this example of a GET call: 
 
 `curl --location --request GET 'https://hub.mendix.com/rest/datahubservice/v2/data' \
---header 'Authorization: MxToken <yourMxToken>' \`
+--header 'Authorization: MxToken <your_PAT_Token>' \`
 
 Insert the value of your PAT token for the string <*your token*> for every request that you make.
 
@@ -99,7 +99,7 @@ For convenience and conciseness, throughout this how-to the following variables 
 * {{baseURL}} — the base URL for the Data Hub API: https://hub.mendix.com/rest/datahubservice/v2/data
 * {*AppUUID}* — insert the value returned in the API response for the UUID of the application
 * {*EnvironmentUUID*} – insert the value returned in the API response for the UUID of the environment
-* ```<your MxToken>``` – insert the value of your [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) as described in [Access](#pat)
+* ```<your_PAT_Token>``` – insert the value of your [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) as described in [Access](#pat)
 
 ## 5 Searching in the Catalog{#api-search}
 
@@ -145,12 +145,11 @@ The blue indicates that an object that is made up of a collection (of further su
 
 For the full specification, refer to the [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
 
-
 ![search results](attachments/data-hub-api-how-to/data-object-schematic.png)
 
 ## 6 Registering Applications, Environments, Data Sources {#reg-contract}
 
-This section describes the steps for registering data sources – this can be OData v3 or OData v4 contracts. All the files that make up the contract must be included in the registration call. 
+This section describes the steps for registering data sources – this can be OData v3 or OData v4 contracts. All the files that make up the contract must be included in the registration call.
 
 A data source must be registered to an app deployed to a given environment. Therefore, registration of the app, environment and service must be done in the following order:
 
@@ -164,7 +163,7 @@ You can try out the example calls for registering a data source as described in 
 
 ### 6.1 Registering an Application in the Catalog using POST
 
-The first step is to register the application that the data source or service originates from. 
+The first step is to register the application that the data source or service originates from.
 
 {{% alert type="info" %}}If the application and environment of the service is already registered in the Catalog (for previously registered services, for example), you can proceed to [Registering the Published Services](#put-service) and use the `AppUUID` and `EnvUUID` as the input parameters. These objects can be obtained from search results as described in [Search request response](#api-search-results). {{% /alert %}}
 
@@ -200,9 +199,9 @@ For this request, the mandatory parameter that must be provided is `AppUUID` tha
 
 The Request must be accompanied by a JSON format body that must include the following:
 
-* Name – Name of the environment 
-* Location – Location of the environment 
-* Type – The environment type (Production, Non-Production, Sandbox, the Mendix Free App environment) 
+* Name – Name of the environment
+* Location – Location of the environment
+* Type – The environment type (Production, Non-Production, Sandbox, the Mendix Free App environment)
 
 #### 6.2.3 Successful 201 POST Response
 

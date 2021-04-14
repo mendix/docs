@@ -28,7 +28,6 @@ You will not be able to use Mendix Studio for collaborative development if you u
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Make sure you have the right server provider. We currently only support Git Private Server. For more information, see the [Preparing Your Repository](#preparing-your-repo) section. 
-* You have a feature flag enabled. For more information, see the [Enabling a Feature Flag](#enable-feature-flag) section.
 * You have an unversioned Mendix app. For more information, see the [Creating an App](#create-app) section.
 
 ## 3 Supported Authentication Mechanisms
@@ -40,48 +39,6 @@ To use PAT (or another equivalent), you need to specify it in the **Password** f
 ![Sign In dialog](attachments/on-premises-git-howto/sign-in-dialog.png)
 
 For instruction on how to set up Personal Access Tokens, see the [Supported Git Service Providers](#supported-providers) section below.
-
-## 3 Supported Git Service Providers {#supported-providers}
-
-### 3.1 Azure Repos and Azure DevOps Server 
-
-We support both Microsoft’s [Azure Repos](https://azure.microsoft.com/en-us/services/devops/repos/) hosted Git service, and Azure DevOps Server (former Team Foundation Server) which is an on-premises solution for hosting your Git repos on private infrastructure.
-
-To get a PAT for your user account, see the [Use personal access tokens](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page) instructions in the Microsoft documentation.
-
-You need `Code (full)` permission for your token.
-
-### 3.2 GitHub 
-
-We support GitHub’s hosting solutions, including the free GitHub.com cloud-hosted service and GitHub Enterprise, both hosted (Enterprise Cloud) and on-premises (Enterprise Server).
-
-To get a PAT for your user account, see the [Creating a personal access token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token) instructions in the GitHub documentation. 
-
-You need `repo` permissions for your token.
-
-### 3.3 GitLab 
-
-We support all tiers of GitLab’s service, including GitLab.com, GitLab Community Edition, and GitLab Enterprise Edition.
-
-To get a PAT for your user account , see the [Personal access tokens](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html) instructions in the GitLab documentation. 
-
-You need `write_repository` permission for the token.
-
-### 3.4 BitBucket 
-
-We support all tiers of Atlassian’s BitBucket service, including BitBucket.org, BitBucket Server, and BitBucket Data Center on-premises solutions.
-
-On BitBucket.org, the Personal Access Tokens are called App Passwords.
-
-To setup an App Password for your BitBucket.org account, see the [App passwords](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/) instructions.
-
-BitBucket Server and BitBucket Data Center, on the other hand, still use the term Personal Access Tokens. To set up a personal access token, see [Personal access tokens](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html) instructions.
-
-In both cases you need `repository write` permission.
-
-### 3.5 AWS CodeCommit 
-
-We have a known compatibility issue with AWS CodeCommit in Git Technology Preview for Studio Pro. We are working to resolve the issue in the next release.
 
 ## 4 Setting Up the Environment
 
@@ -108,26 +65,11 @@ To interact with this private repository from Studio Pro, you need a link to the
 
 For more information on PAT, see the [Supported Git Service Providers](#supported-providers) section above.
 
-### 4.2 Enabling a Feature Flag {#enable-feature-flag}
+### 4.2 Preparing Studio Pro for Git {#preparing-git-support}
 
-To use Git, you need to start Studio Pro with a specific feature flag. Navigate to the directory where Studio Pro is located, specifically where the **studiopro.exe** file is. There are two ways to enable the feature flag: 
+To use Git, you need to activate the Git support in Studio Pro by navigating to **Edit** > **Preferences** > **Version Control** and selecting **Enable private version control with Git**. The name and email values will be used to identify your commit:
 
-1. **The command-line method** – Open the command line at that location (or navigate to it from the command line) and type the following command: `studiopro.exe --enable-git-support`.
-
-2. **The shortcut method** – do the following:
-
-    1. Right-click the file and click **Create shortcut**. If you are asked to save it on the Desktop, click **Yes**. 
-
-    2. Once the shortcut is created, right-click it and select **Properties**.
-    3. At the end of the **Target** field, add the feature flag `--enable-git-support` after a space:
-
-        ![Shortcut Properties dialog](attachments/on-premises-git-howto/shortcut-properties.png)
-
-    1. Click **OK**.
-    2. Start Studio Pro by double-clicking the shortcut.        
-    3. Once Studio Pro is opened, go to **Edit > Preferences > Version Control** and make sure to activate private version control for Git. The name and email values will be used to identify your commit:
-
-        ![Preferences dialog](attachments/on-premises-git-howto/preferences-git.png)
+![Preferences dialog](attachments/on-premises-git-howto/preferences-git.png)
 
 Studio Pro now is set up to support Git.
 
@@ -163,7 +105,7 @@ The app is downloaded and ready to be used with version control.
 
 ### 4.5 Opening the Existing Git App
 
-There are a few ways to open a Git Mendix app, as long as you have Studio Pro started up with the [git feature flag](#enable-feature-flag).
+There are a few ways to open a Git Mendix app, as long as you have Studio Pro [Git support activated](#preparing-git-support).
 
 #### 4.5.1 Recent Apps List
 

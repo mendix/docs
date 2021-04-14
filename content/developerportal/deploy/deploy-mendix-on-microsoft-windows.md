@@ -8,6 +8,10 @@ aliases:
     - /deployment/on-premises/deploy-mendix-on-microsoft-windows.html
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 This document describes the installation and configuration of the Mendix software on a system running Microsoft (MS) Windows. It covers:

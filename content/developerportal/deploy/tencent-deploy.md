@@ -112,10 +112,6 @@ On the namespace management page, there are a number of tabs which allow you to 
 
 See the sections below for more information.
 
-**DO WE HAVE A NAMESPACE ACTIVITY LOG - NOT ON FIGMA**
-
-**==================================================**
-
 You can also see an activity log containing the following information for all namespaces within the cluster:
 
 * When a namespace has been added
@@ -138,8 +134,6 @@ You can also see an activity log containing the following information for all na
 * When user's permission is changed in the namespace
 
 ![](attachments/tencent-deploy/namespace-activity-logs.png)
-
-**==================================================**
 
 #### 3.3.1 Apps
 
@@ -202,13 +196,9 @@ You can invite additional members to the namespace, and configure their role dep
     
     ![](attachments/tencent-deploy/namespace-member-invite.png)
 
-    **HOW DOES A TENCENT USER GET THIS? I UNDERSTAND THERE IS NO EMAIL REQUIRED**
-
 6. The user will receive an email and will be required to follow a link to confirm that they want to join this namespace. They will need to be logged in to Mendix when they follow the confirmation link.
 
 ##### 3.3.2.2 Editing & Removing Members
-
-**CAN YOU CHANGE THE ACCESS RIGHTS OF AN EXISTING MEMBER?**
 
 You can remove existing members.
 
@@ -216,11 +206,9 @@ You can remove existing members.
         
     ![](attachments/tencent-deploy/namespace-member-remove.png)
 
+If you want to change the rights for an existing member, you will have to remove them and then add them again with the updated rights.
+
 #### 3.3.3 Operate {#operate}
-
-**DO USERS NEED TO DO THIS, OR ARE THEY AUTOMATICALLY PROVIDED BY THE TENCENT CONFIGURATION?**
-
-**WHAT DOES THE OPERATE TAB LOOK LIKE IN TENCENT?**
 
 The **Operate** tab allows you to add a set of links which are used when users request a page from the Operate category for their app in the Developer Portal, as shown below.
 
@@ -254,9 +242,7 @@ First you need to create an environment:
 
     {{% alert type="info" %}}You can change the UUID if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.{{% /alert %}}
 
-3. Enter **Environment Name**, the name for the environment. The environment name can only contain lowercase letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production.
-
-    **ARE THESE LIMITATIONS FOR NAME THE SAME IN TENCENT, OR CAN THEY USE CHINESE CHARACTERS?**
+3. Enter **Environment Name**, the name for the environment. The environment name can only contain lowercase (latin) letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production.
 
 4. Use the drop-down **Select Namespace** to select an existing namespace. You will see all namespaces of which you are a member.
 
@@ -276,8 +262,6 @@ First you need to create an environment:
 
     For core resources, there are two sets of values. The **Request** value is the amount of core resources which are initially requested. The **Limit** value is the maximum amount of resource that the environment can use.
 
-    **ARE THESE PLANS THE SAME ON TENCENT AS DOCUMENTED HERE?**
-
     There are three pre-defined sets of resources, **Small**, **Medium**, and **Large**. Choosing these will set the **CPU** and **Memory** values automatically.
 
     | **Name** | **CPU cores**: Limit | **Memory (Gb)**: Limit | **CPU cores**: Request | **Memory (Gb)**: Request |
@@ -289,11 +273,9 @@ First you need to create an environment:
 
     Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**. Ensure that these values are the same or greater than the values for a *Small* environment, otherwise you may run into problems running your app.
 
-    **DO TENCENT CUSTOMERS STILL HAVE TO CHOOSE THE DATABASE PLAN AND STORAGE PLAN?**
+8. Select a **Database plan** from the list of plans in the dropdown. This will have the format `db-plan-…` where the suffix reflects the environment.
 
-8. Select a **Database plan** from the list of plans set up in the namespace.
-
-9. Select a **Storage plan** from the list of plans set up in the namespace.
+9. Select a **Storage plan** from the list of plans in the dropdown. This will have the format `file-plan-…` where the suffix reflects the environment.
     
     ![](attachments/tencent-deploy/image7.png)
 
@@ -338,8 +320,6 @@ Alternatively, you can upload an existing MDA by clicking **Upload Package**.
 ### 4.3 Deploying the Deployment Package{#deploy-package}
 
 You can also deploy an existing deployment package to an environment without having to create a new one. This also allows you to specify constant values and control scheduled events before the app is started.
-
-**IS THIS WARNING STILL NEEDED?**
 
 {{% alert type="warning" %}}
 Currently, deployment packages are only valid for two weeks. Older deployment packages will still be visible, but if you try to deploy a package that was created more than two weeks ago, the deployment will fail and return a 403 error. The solution is to [recreate the deployment package](#create-deployment-package).
@@ -523,8 +503,6 @@ If you have any outstanding changes to your environment the page will display a 
 ![](attachments/tencent-deploy/image21.png)
 
 The environment details page consists of seven tabs:
-
-**IS THIS THE SAME IN THE TENCENT ENVIRONMENT?**
 
 * General
 * Model Options

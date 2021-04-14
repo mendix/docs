@@ -2,13 +2,19 @@
 title: "MS Windows: Update a Mendix App"
 parent: "deploy-mendix-on-microsoft-windows"
 menu_order: 20
-tags: []
 ---
+
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
+## 1 Introduction
+
 A Mendix application on a Windows server can be updated using the Mendix Service Console. Before starting with the server update, you need to make sure that you have a versioned deployment archive (*.mda file) accessible on your server and that the same version of the server distribution is either installed or also available as an installation package on the server.
 
 The service console creates a backup of the project files, this allows you to restore a previous deployment. But before every update it is recommended to create a backup of your data and uploaded files. The Mendix Service Console does not do this for you. 
 
-## 1 Using the Update app button
+## 2 Using the Update App button
 
 1.  You can update the application by clicking on the button ‘Update app’.
 
@@ -27,7 +33,7 @@ This process will copy the new version of the project software into the configur
 You’ll see an progress bar appear after clicking the ‘OK’ button once the process has been completed the project software version has been updated. 
 ![](attachments/updating-a-mendix-app/18580699.png)
 
-## 2 Update The Mendix Runtime version
+## 3 Update the Mendix Runtime version
 
 1.  After updating the Mendix application version it could happen that the Service Console shows the message `(missing)`. This would mean that the required server distribution is not installed on the server.
     ![Step 4, a missing Runtime version](attachments/updating-a-mendix-app/18580697.png)
@@ -39,7 +45,7 @@ You’ll see an progress bar appear after clicking the ‘OK’ button once the 
     After the server distribution is updated you’ll be able to start the Service using the new project and Mendix Runtime version. 
     ![Step 5, Choose the correct server distribution (.tar.gz)](attachments/updating-a-mendix-app/18580696.png)
 
-### 2.1 Location of the Mendix server distributions
+### 3.1 Location of the Mendix server distributions
 
 In the Preferences of the Mendix Service Console you can configure the main directory for all applications and server distributions. You can find the installed platform version in the folder /servers. This folder is located directly in the configured base path from the service console.
 
@@ -50,13 +56,12 @@ This should be something like:
 ```bash
 D:\Mendix\MyApplications\Servers
 ```
+
 {{% alert type="info" %}}
-
 The user that is configured as the Service Account should have Read&Execute privileges on this entire server folder. You could suffice with just granting access to the specific server distribution but that would mean that you’d have to update the folder access after every platform version update. 
-
 {{% /alert %}}
 
-## 3 Read More
+## 4 Read More
 
 *   [Restoring a SQL Server database](restoring-a-sql-server-database)
 *   [Troubleshooting SQL Server](troubleshooting-sql-server)

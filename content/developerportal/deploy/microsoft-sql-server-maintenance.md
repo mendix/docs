@@ -4,6 +4,9 @@ parent: "mendix-on-windows-microsoft-sql-server"
 menu_order: 40
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
 
 When deploying Mendix on-premise using the Microsoft SQL Server platform, several guidelines have to be kept in order to keep your Mendix database(s) in good health. The how-to section on this website contains a step-by-step guide on how to set up your DBMS to Mendix standards by configuring a uniform set of maintenance and backup plans. Best practice dictates the following set of requirements:
 

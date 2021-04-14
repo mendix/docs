@@ -5,6 +5,10 @@ menu_order: 10
 tags: ["SQL Server", "Snapshot Isolation", "Transaction Isolation", "Database", "Extensions", "Role"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 This how-to will teach you how to manually set up a new SQL Server database.

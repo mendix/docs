@@ -4,6 +4,10 @@ parent: "mendix-on-windows-microsoft-sql-server"
 menu_order: 20
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Description
 
 This article describes how to configure the users of a SQL server to create a secure environment for a Mendix based application.

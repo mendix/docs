@@ -5,6 +5,7 @@ description: "Describes how to leave, delete, and deactivate an app in the Devel
 tags: ["app", "delete", "deactivate", "Developer Portal", "Scrum Master"]
 aliases:
     - /developerportal/settings/leave-delete-app
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction

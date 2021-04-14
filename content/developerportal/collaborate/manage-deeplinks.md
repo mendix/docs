@@ -5,6 +5,7 @@ description: "Describes how to implement deep links to Developer Portal pages."
 tags: ["Developer Portal", "deep link"]
 aliases:
     - /developerportal/settings/manage-deeplinks
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction

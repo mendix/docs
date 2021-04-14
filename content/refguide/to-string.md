@@ -5,7 +5,7 @@ menu_order: 130
 tags: ["studio pro", "to string", "expression", "expressions"]
 ---
 
-## 1 Intriduction
+## 1 Introduction
 
 Basic functions to convert values of various data types to string.
 

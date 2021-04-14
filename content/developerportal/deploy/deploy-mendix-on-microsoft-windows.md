@@ -6,6 +6,7 @@ menu_order: 50
 tags: ["deploy", "Windows", "On Premises", "Microsoft", "Mendix Service Console", "IIS", "URL Rewrite", "Client Cache", "Reverse Inbound Proxy", "Host Header"]
 aliases:
     - /deployment/on-premises/deploy-mendix-on-microsoft-windows.html
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction

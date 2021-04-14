@@ -40,48 +40,6 @@ To use PAT (or another equivalent), you need to specify it in the **Password** f
 
 For instruction on how to set up Personal Access Tokens, see the [Supported Git Service Providers](#supported-providers) section below.
 
-## 3 Supported Git Service Providers {#supported-providers}
-
-### 3.1 Azure Repos and Azure DevOps Server 
-
-We support both Microsoft’s [Azure Repos](https://azure.microsoft.com/en-us/services/devops/repos/) hosted Git service, and Azure DevOps Server (former Team Foundation Server) which is an on-premises solution for hosting your Git repos on private infrastructure.
-
-To get a PAT for your user account, see the [Use personal access tokens](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page) instructions in the Microsoft documentation.
-
-You need `Code (full)` permission for your token.
-
-### 3.2 GitHub 
-
-We support GitHub’s hosting solutions, including the free GitHub.com cloud-hosted service and GitHub Enterprise, both hosted (Enterprise Cloud) and on-premises (Enterprise Server).
-
-To get a PAT for your user account, see the [Creating a personal access token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token) instructions in the GitHub documentation. 
-
-You need `repo` permissions for your token.
-
-### 3.3 GitLab 
-
-We support all tiers of GitLab’s service, including GitLab.com, GitLab Community Edition, and GitLab Enterprise Edition.
-
-To get a PAT for your user account , see the [Personal access tokens](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html) instructions in the GitLab documentation. 
-
-You need `write_repository` permission for the token.
-
-### 3.4 BitBucket 
-
-We support all tiers of Atlassian’s BitBucket service, including BitBucket.org, BitBucket Server, and BitBucket Data Center on-premises solutions.
-
-On BitBucket.org, the Personal Access Tokens are called App Passwords.
-
-To setup an App Password for your BitBucket.org account, see the [App passwords](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/) instructions.
-
-BitBucket Server and BitBucket Data Center, on the other hand, still use the term Personal Access Tokens. To set up a personal access token, see [Personal access tokens](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html) instructions.
-
-In both cases you need `repository write` permission.
-
-### 3.5 AWS CodeCommit 
-
-We have a known compatibility issue with AWS CodeCommit in Git Technology Preview for Studio Pro. We are working to resolve the issue in the next release.
-
 ## 4 Setting Up the Environment
 
 This section describes how to configure a Git versioned app in Studio Pro. You need a Git server and an initially unversioned Mendix app.

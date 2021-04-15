@@ -17,7 +17,7 @@ You can start searching from the [Data Hub Home](#data-hub-home) page or click t
 
 {{% alert type="info" %}}The [Data Hub pane](/refguide/data-hub-pane) in Studio Pro integrates the powerful search of the Data Hub Catalog. You can find and use registered datasets as external entities in your app development.{{% /alert %}}
 
-Registered assets can be [curated](#curate-bar) to add and edit **Tags**, **Owners**, and **Descriptions**. You can also set properties to  **Discoverable** and **Validated** to ensure the right people can find them.
+Registered assets can be [curated](#curate-bar) to add and edit **Tags**, **Owners**, and **Descriptions**. Further curate functions include setting properties such as  **Discoverable** and **Validated** . 
 
 
 ## 2 Details of Registered Assets

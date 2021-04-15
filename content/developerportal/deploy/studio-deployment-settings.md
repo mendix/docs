@@ -4,6 +4,7 @@ parent: "mendix-cloud-deploy"
 menu_order: 10
 description: "Describes how to set deployment targets for Mendix Studio and Studio Pro."
 tags: ["node","developer portal","deploy", "Studio", "settings", "target", "Mendix Studios Target"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction

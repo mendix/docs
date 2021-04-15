@@ -5,6 +5,7 @@ menu_order: 70
 description: "Use the Mendix SSO module to add Single Sign-on to your app using the user's Mendix credentials"
 tags: ["SSO", "Single Sign-on", "Mendix credentials", "Mendix SSO"]
 #draft: true
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #Ownership claimed by Identity Services Team.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

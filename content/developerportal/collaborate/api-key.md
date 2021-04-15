@@ -6,6 +6,7 @@ description: "Describes creating API keys for your app."
 tags: ["Settings", "App", "API", "Key", "API key", "Developer Portal"]
 aliases:
     - /developerportal/settings/api-key
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction

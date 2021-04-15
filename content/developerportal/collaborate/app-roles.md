@@ -9,6 +9,7 @@ aliases:
     - /developerportal/company-app-roles.html
     - /developerportal/company-app-roles/technical-contact.html
     - /developerportal/app-roles/index.html
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction

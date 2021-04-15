@@ -4,6 +4,10 @@ parent: "mendix-on-windows-microsoft-sql-server"
 menu_order: 80
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 This document covers various errors you might encounter when using SQL Server, and offers suggestions on how to resolve them.

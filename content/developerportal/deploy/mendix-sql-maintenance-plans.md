@@ -4,6 +4,10 @@ parent: "mendix-on-windows-microsoft-sql-server"
 menu_order: 50
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 This how-to will present guidelines for setting up Mendix SQL maintenance plans.

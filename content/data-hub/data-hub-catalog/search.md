@@ -129,8 +129,6 @@ The number of items satisfying the search criteria (search string plus filters) 
 * Popularity of the service (the number of connections)
 * **Validated** assets before non-validated items
 
-If no search string is specified, all registered assets will be listed in the search results pane in order of popularity (number of connections to the asset) and validated.
-
 {{% alert type="info" %}}Assets that are set to [Non-discoverable](#discoverability-metadata) are not included in the search results unless you are a curator or owner of the asset.{{% /alert %}}
 
 When an item in the search results is selected, the **Catalog** tab displays the **Details** of the asset and the **Landscape** tab will show the network of connections and dependencies of the selected item in the [Data Hub Landscape](/data-hub/data-hub-landscape/).
@@ -237,12 +235,10 @@ The following discoverability values can be set:
 ### 6.5 Validated
 Indicates if the data source has been **Validated**. See [Curate Bar](#curate-bar) for changing **Validated** as an owner of the data source or curator.
 
-{{% alert type="info" %}} **Validated** asset will appear higher in the search results over non-validated assets.{{% /alert %}}
-
 ### 6.6 Access Level
 Displays the access classification of the data exposed by the service: end-users of the app will only be able to see the information must have the appropriate [user role](/refguide/user-roles) to access the data:
 
-* **Public** – classified as public and available to all users, internal and external to the organization	
+* **Public** – classified as public and available to all users, internal and external to the organization
 * **Internal** – restricted to the members of the organization
   {{% alert type="info" %}}Classifications at a data source level propagate down to the datasets and attributes exposed in the OData service. {{% /alert %}}
 

@@ -32,7 +32,7 @@ The following custom settings can be configured:
 | Name | Description | Default Value |
 | --- | --- | --- |
 | **ApplicationRootUrl** | Can be used within Java actions to get the public location of the application. Useful when the HOST header is not available, for example when including a URL to the application when sending e-mails from a scheduled event. | In Mendix Cloud, https://\[domain\].mendixcloud.com |
-| <a name="ca-certificates"></a>**CACertificates** | A comma-separated list of paths to CA certificates. |   |
+| <a name="ca-certificates"></a>**CACertificates** | A comma-separated list of paths to CA certificates. |   |
 | **ClientCertificatePasswords** | Comma-separated list of passwords for Client Certificates (should match the **ClientCertificates** order). Example: `pwd1, pwd2, pwd3, pwd4` |   |
 | **ClientCertificates** | Comma-separated list of paths to Client Certificates. Example: `D:\App\Mx1.pfx, D:\App\Mx2.pfx, D:\App\Mx3.pfx, D:\App\Mx4.pfx` |  |
 | **ClientCertificateUsages** | Only use this when you have multiple client certificates and you want to configure specific certificates for specific servers.<br/> This setting defines which service must use which client certificate. The value of this setting must be a comma-separated list of key/value items. A key/value item must be specified as `"identifier": "path to certificate"`.<br/>For web services, use the imported web service name as the identifier.<br/>For REST services, use the host name of the remote server as the identifier.<br/>Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces (`{ }`). For example: ![](attachments/Custom+Settings/code_snippet.png) |  |

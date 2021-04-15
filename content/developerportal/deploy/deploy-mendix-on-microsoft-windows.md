@@ -6,6 +6,7 @@ menu_order: 50
 tags: ["deploy", "Windows", "On Premises", "Microsoft", "Mendix Service Console", "IIS", "URL Rewrite", "Client Cache", "Reverse Inbound Proxy", "Host Header"]
 aliases:
     - /deployment/on-premises/deploy-mendix-on-microsoft-windows.html
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -397,7 +398,6 @@ If HTTPS was configured at step 5.3 it is recommended to redirect all unencrypte
 5. Click **OK**.
 
     ![](attachments/deploy-mendix-on-windows/iis_response_headers.png)
-
 
 Afterwards, the contents of the *web.config* file will be similar to the following example:
 

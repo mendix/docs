@@ -6,6 +6,7 @@ description: "Describes where you can plan and monitor your app development."
 tags: ["Developer Portal", "Planning", "Develop"]
 aliases:
     - /developerportal/collaborate/planning-development.html
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction

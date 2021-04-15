@@ -4,6 +4,7 @@ parent: "private-cloud-cluster"
 description: "Describes how to migrate Mendix images to a private cloud registry"
 menu_order: 10
 tags: ["Private Cloud", "Registry", "Migrate", "Image", "Export", "Import"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction

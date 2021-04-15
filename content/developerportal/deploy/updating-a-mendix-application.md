@@ -2,7 +2,7 @@
 title: "MS Windows: Update a Mendix App"
 parent: "deploy-mendix-on-microsoft-windows"
 menu_order: 20
-tags: []
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1. Introduction
@@ -33,11 +33,13 @@ Before every update it is recommended that you create a backup of your data and 
 
     ![Step 4, Choose the latest .mda package](attachments/updating-a-mendix-app/4_browse_mda.png)
 
+
 This process will copy the new version of the project software into the configured location. All models will be extracted, and a symbolic link to the `mxclientsystem` folder is automatically created so the JavaScript libraries can be easily included without any additional configuration in IIS.
 
 ## 3 Update the Mendix Runtime Version
 
 1.  After updating the Mendix application version, the Service Console may show the message `(missing)`. This menas that the required server distribution is not installed on the server.
+
     ![Step 5, a missing Runtime version](attachments/updating-a-mendix-app/update_server_missing.png)
 2.  There are two ways to install the required server distribution:
 
@@ -46,6 +48,7 @@ This process will copy the new version of the project software into the configur
     2. If you are offline or automatic downloading fails, click **Add Server** and select the required server distribution (*.tar.gz*).  The server distribution can be found under the **Related Downloads** from the specific Mendix Studio Pro version in the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/). The server distribution is a *tar.gz* file. The Service Console will extract the server distribution to the same folder as the other server distributions.
 
     After the server distribution has been updated you will be able to start the Service using the new project and Mendix Runtime version. 
+
     ![Step 6, Choose the correct server distribution (.tar.gz)](attachments/updating-a-mendix-app/update_server_select.png)
 
 ### 3.1 Location of the Mendix Server Distributions
@@ -71,6 +74,7 @@ The user that is configured as the Service Account should have Read&Execute priv
 After updating, don't forget to start your app service again!
 
 ## 5 Read More
+
 
 *   [Restoring a SQL Server database](restoring-a-sql-server-database)
 *   [Troubleshooting SQL Server](troubleshooting-sql-server)

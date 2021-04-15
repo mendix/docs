@@ -6,6 +6,7 @@ description: "Describes general settings of your app."
 tags: ["Settings", "App", "Developer Portal"]
 aliases:
     - /developerportal/settings/general-settings
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor #managing-app-users below is mapped from App > General > Settings > Manage App Users and the Mendix SSO module, so it should not be removed or changed.
 ---
@@ -19,7 +20,8 @@ The **General** settings page presents an overview of your app with the followin
 * Whether the app is enabled for Mendix **Studio** (for details, see the [Mendix Studio](#web) section below)
 * The **App ID**
 
-{{% image_container width="550" %}}![](attachments/general-settings/general-settings.png)
+{{% image_container width="450" %}}
+![](attachments/general-settings/general-settings.png)
 {{% /image_container %}}
 
 The sections below describe the actions you can perform on this page.
@@ -42,7 +44,9 @@ Click **Cloud Settings** to select the cloud platform on which to deploy your ap
 Only users with the **App Settings** permission can change cloud platforms. For default roles, only the **Scrum Master** has this permission. For more details, see the [Team Roles](/developerportal/collaborate/app-roles#team-roles) section of *App Roles*.
 {{% /alert %}}
 
+{{% image_container width="450" %}}
 ![](attachments/general-settings/cloudsettings.png)
+{{% /image_container %}}
 
 If you select a non-Mendix cloud platform like SAP, you will be redirected to a page to complete the setup. If you select Mendix Cloud, no additional setup is needed.
 
@@ -75,7 +79,9 @@ After clicking **Manage App Users**, you will see a list of environments for you
 
 When you click **Manage Uses** on for your environment, you will see a page with a list of the current App Users you can remove or edit:
 
+{{% image_container width="450" %}}
 ![](attachments/general-settings/app-user-management-users.png)
+{{% /image_container %}}
 
 To remove an App User from the environment, click **Remove** by their name.
 
@@ -90,25 +96,17 @@ If an App User has been granted access to an app environment through a [Group](/
 To invite new App Users to your app, click **Invite Users** on the **App User Management** page or on the page with a list of current App Users and follow these steps:
 
 1. Enter the email addresses of the end-users you want to invite.
-
 2.  Click **Include your app team** to include invitations to all the members of your [Team](/developerportal/collaborate/team). This may be useful, because people invited to join your team are not added as App Users automatically.
-
-	{{% image_container width="450" %}}![](attachments/general-settings/invite-app-user.png)
-	{{% /image_container %}}
-	
 3. Click **Add to invitee list**.
-
 4. Select the role for the App User (for example, **User** or **Administrator**). Permissions for these roles correspond to what you have configured for your app's user roles in [Project Security](/refguide/project-security#user-roles) in Mendix Studio Pro or [Roles and Permissions](/studio/settings-security#roles-and-permissions) in Mendix Studio. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
-
 5. Click **Next**.
-
 6. Add a personal message to your invitation, and finally click **Next** then **Send Invitations** to send it.
 
 The invitee will receive an email asking them to authorize access to their Mendix account on this screen.
 
 After they provide authorization, they will be brought to your deployed app.
 
-## 5 Editing App Info
+## 5 Editing App Info {#editing}
 
 {{% alert type="info" %}}
 Only users with the **App Settings** permission can edit the application information.
@@ -122,6 +120,8 @@ Click **Edit App Info** to edit the following details:
 
 {{% image_container width="450" %}}![](attachments/general-settings/edit.png)
 {{% /image_container %}}
+
+For details on the **Deactivate App**, **Leave App**, and **Delete App** options, see [How to Leave & Delete an App](/developerportal/collaborate/leave-delete-app).
 
 ## 6 Managing Webhooks {#webhooks}
 

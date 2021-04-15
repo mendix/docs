@@ -13,8 +13,8 @@ aliases:
 This how-to will demonstrate how easy it is to build apps using data from different sources using Mendix Data Hub. The steps describe the following: 
 
 * Create a simple app in Studio Pro
-* Publish an entity from the app and register it in the Data Hub Catalog 
-* Use the Data Hub Catalog to explore the data sources from the organization that are registered as assets 
+* Publish an entity from the app and register it in the Data Hub Catalog
+* Use the Data Hub Catalog to explore the data sources from the organization that are registered as assets
 * Connect to the registered asset that you published earlier and use it in a new app
 * Change data in the original app and see it updated in the new or consuming app
 * See the network of shared data in the Data Hub Landscape
@@ -30,9 +30,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install Studio Pro version [8.14.0 or above](https://appstore.home.mendix.com/link/modelers/)
 * Be familiar with app development using Mendix Studio Pro
 
-## 3 Creating an App {#createapp} 
+## 3 Creating an App {#createapp}
 
-Follow these steps to create a simple app in Studio Pro and populate it. You will you will use this data in another app through the Data Hub: 
+Follow these steps to create a simple app in Studio Pro and populate it. You will use this data in another app through the Data Hub: 
 
 1. In Studio Pro, click **New App** to create a new app using the **Blank App** template. Call this app *{yourname}CustomerServiceApp*.
 2. In the App Explorer, double click the **Domain Model** for **MyFirstModule** and click **Entity** in the toolbar above the main window to add an entity to the domain model.

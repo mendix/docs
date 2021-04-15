@@ -4,6 +4,7 @@ category: "Collaboration"
 menu_order: 9
 description: "Describes the security settings of your app in Mendix Developer Portal."
 tags: ["Settings", "App", "Developer Portal"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -30,7 +31,7 @@ Each member has a **Role**. You can change the role of each team member to the f
 
 Click **Role Settings** to see permission details for these roles. For more information, see [App Roles](/developerportal/collaborate/app-roles).
 
-## 3 Node Permissions
+## 3 Node Permissions {#node-permissions}
 
 {{% alert type="info" %}}
 Node permissions are only available for Licensed Apps.

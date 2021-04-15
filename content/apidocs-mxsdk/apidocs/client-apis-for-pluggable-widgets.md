@@ -334,7 +334,7 @@ export interface ListAttributeValue<T extends AttributeValue> {
 The type `<T>` depends on the allowed value types as configured for the attribute property.
 
 {{% alert type="warning" %}}
-Due to a technical limitation it is not yet possible to edit attributes obtained via `ListAttributeValue`. `EditableValue`s returned by `ListAttributeValue` are always readonly.
+Due to a technical limitation it is not yet possible to edit attributes obtained via `ListAttributeValue`. `EditableValue`s returned by `ListAttributeValue` are always **readonly**.
 {{% /alert %}}
 
 In order to work with the attribute value of a particular item of a `ListValue` first an instance of `EditableValue` should be obtained by calling `ListAttributeValue.get` with the item (assuming widget properties are configured as follows with an attribute of type `string`):

@@ -22,7 +22,7 @@ Registered assets can be [curated](#curate-bar) to add and edit **Tags**, **Owne
 
 ## 2 Details of Registered Assets
 
-The Catalog displays the [details](#search-details) of data sources, datasets, and attributes from the published OData service contract. This section describes important properties of registered contracts.
+The Catalog displays the [information](#search-details) about data sources, datasets, and attributes (the metadata). This section describes important properties of registered contracts.
 
 {{% alert type="info" %}}The **Dataset** is the name of the **Entity set** of a published **Entity** in Mendix Studio Pro, which by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
 

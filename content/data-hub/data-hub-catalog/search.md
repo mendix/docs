@@ -13,7 +13,7 @@ The search functionality in the [Data Hub Catalog](#data-hub-home) makes it easy
 - The details of registered data assets can be viewed in the [Asset details](#search-details) screen. 
 - The [Copy Data Source URI](#service-details) and **Download** contract buttons enable you to access the data source endpoints which you can use to integrate registered data sources into your enterprise applications.
 
-You can start searching from the [Data Hub Home](#data-hub-home) page, or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Asset Details** screen.
+You can start searching from the [Data Hub Home](#data-hub-home) page or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Asset Details** screen.
 
 {{% alert type="info" %}}The [Data Hub pane](/refguide/data-hub-pane) in Studio Pro integrates the powerful search of the Data Hub Catalog. You can find and use registered datasets as external entities in your app development.{{% /alert %}}
 

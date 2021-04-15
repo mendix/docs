@@ -38,7 +38,7 @@ Debugging in production is not recommended. However, if you are debugging in the
 <a name="EnablingDebuggingintheCloud"></a>
 ### 3.1 Enabling Debugging in the Cloud
 
-1. Open your browser, go to [http://home.mendix.com](http://home.mendix.com), and log in with your Mendix ID.
+1. Open your browser, go to the [Developer Portal](http://sprintr.home.mendix.com), and log in with your Mendix ID.
 
 2. Click **Apps** and navigate to the project that you want to debug:
 

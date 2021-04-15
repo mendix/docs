@@ -29,7 +29,7 @@ This how-to describes the following:
 
 ## 2 Managing Curators {#curator}
 
-The Data Hub Curator can perform day to day management functions on all registered assets in the Data Hub Catalog and to enrich the information on registered assets. 
+The Data Hub Curator can perform day-to-day management functions on all registered assets in the Data Hub Catalog and also enrich the Catalog information on registered assets that is displayed. 
 
 Curators can see and curate all registered assets in the Data Hub Catalog. Mendix users who own registered assets can curate their own items, but not those that they do not own. 
 
@@ -43,7 +43,7 @@ The Data Hub Admin can add or remove the curator role by following these steps:
 
 3. To assign a curator role to a Mendix user, click **Add Curator**.
 
-	{{% alert type="info" %}}A user with curator rights will be able to see all assets registered in the Catalog, including those that are set to **Non-discoverable** by asset owners. Curators will also be able to change the information that is registered for the assets they are owned by other users. {{% /alert %}}
+	{{% alert type="info" %}}A user with curator rights can access all assets registered in the Catalog. This also includes those that are set to **Non-discoverable**. Curators can also change the information that is registered for assets that are owned by other users. {{% /alert %}}
 
 4. To search from the list of Mendix users in your organization, start typing in the search box and check the user(s) you want to assign the curator role to.
 
@@ -55,7 +55,9 @@ The Data Hub Admin can add or remove the curator role by following these steps:
 
 ## 3 Managing Custom Owners {#customowners} 
 
-Custom owners are those that can be listed as the contact for a registered asset or application. They may be the contacts for regitered assets and not Mendix users. Custom owners are indicated in lists by an avatar that only displays their intitial (Mendix users have their peronalized avatar displayed).   
+Custom owners are owners that have been added as the contact for a registered application. They may be added during the application [curation](../data-hub-catalog/curate#customowner) or have been specified during app registration. 
+
+They are  the contacts for registered assets. Adding a custom owner does not give them access rights to the Catalog. Custom owners are displayed in the drop-down lists by an avatar that only displays their intitial (Mendix users have their peronalized avatar displayed).   
 
 Curators and the Data Hub Admin can manage the custom owner list under the **Owner Management** tab.  
 
@@ -67,11 +69,11 @@ Curators will only see  **Owner Management** under the **Administration** tab.
 
 From this screen, the following functions can be carried out:
 
-* **Add Owners**—click and enter the name and email of the contact and click **OK**. This will be listed for **Business** or **Technical Owners** when registered assets are curated and a link to the name and email that is specified here added to the asset.
+* **Add Owners**—click and enter the name and email of the contact and click **OK**. This will be listed when **Business** or **Technical Owners** are curated for registered assets.
 
 	{{% alert type="info" %}}Custom owners in this list are not Mendix platform users but serve as contact for the registered assets.  They will not be able to login to the Mendix Platform or curate registered assets in the Catalog. {{% /alert %}} 
 
-* Edit the details of the listed owners from this screen by clicking the edit pencil icon.
+* Edit the details of the listed owners by clicking the edit pencil icon.
 * Delete names from the list, click the **x** and confirm the removal of the name from the list. 
 
 	{{% alert type="info" %}}If a custom owner is removed from the list, they will also be removed from any registered assets where they were set as the owner. This means that the asset will not have a contact.{{% /alert %}} 

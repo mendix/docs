@@ -4,6 +4,7 @@ parent: "deploy-mendix-on-microsoft-windows"
 description: "Help on fixing issues with Microsoft IIS, including the use of application logs and other troubleshooting features"
 menu_order: 40
 tags: ["IIS", "Windows", "Internet Information Services", "Mendix Service Console", "errors"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -133,4 +134,4 @@ Make sure that the user account used to run the service has enough rights to the
 *   [Debugging Java actions remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely)
 *   [Log Levels](/howto/monitoring-troubleshooting/log-levels)
 *   [Debugging Java Actions](/howto/monitoring-troubleshooting/debug-java-actions)
-*   [Debugging Microflows](/howto/monitoring-troubleshooting/debug-microflows)
+*   [Debugging Microflows and Nanoflows](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows)

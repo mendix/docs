@@ -13,15 +13,15 @@ Version Control allows you to manage your app development in two ways:
 * Firstly, it allows you to store ([commit](#commit)) the current revision of your model and all its resources. You give it an identifier so that you can get that revision again and share it with other team members.
 * Secondly, it allows work to take place on multiple [development lines](#development-line) so that several different features can be worked on at once. These development lines can then be [merged](#merge) back together so that your [Main Line](#main-line) contains all the completed features that have been worked on separately.
 
-Version control in Mendix is built on top of [Apache Subversion](https://subversion.apache.org/) and the concepts will be familiar to Subversion users. Mendix simplifies Subversion commands by building them into Studio Pro, Studio, and the Developer Portal.
+Version control in Mendix is built on top of either [Apache Subversion](https://subversion.apache.org/) or [Git] (https://git-scm.com). The concepts will be familiar to seasoned users of these version control systems (VCS). Mendix simplifies the VCS commands by building them into Studio Pro (SVN and Git), Studio, and the Developer Portal (SVN only).
 
 ## 2 Concepts {#concepts}
 
 ### 2.1 Team Server {#team-server}
 
-[Team Server](/developerportal/develop/team-server) is where all the committed versions of Mendix apps are stored. If you commit a revision of an app, it is stored on the Team Server.
+[Team Server](/developerportal/collaborate/team-server) is where all the committed versions of Mendix apps are stored. If you commit a revision of an app, it is stored on the Team Server.
 
-To commit to the Team Server you will need to have a role in the project which allows you to edit the app. For more information, see the [App Team Roles](/developerportal/collaborate/app-roles#app-team-roles) section *App Roles*.
+To commit to the Team Server you will need to have a role in the app which allows you to edit the app. For more information, see the [Team Roles](/developerportal/collaborate/app-roles#team-roles) section *App Roles*.
 
 ### 2.2 Repository {#repository}
 
@@ -100,6 +100,10 @@ A Tag is a way of identifying a commit in addition to the [revision](#revision) 
 * Patch: used to identify a fix to an error in a previously-released app
 * Revision: this is added automatically and is the revision number of the commit
 
+{{% alert type="info" %}}
+Tags are not supported by Studio Pro Git ([BYO](branch-line-manager-dialog#byo-server-app) and Team Server) at the moment 
+{{% /alert %}}
+
 ### 2.12 Repository Service
 
 The Repository Service manages communication between Studio or Studio Pro and other supporting services (for example, Team Server). The developer will not generally be aware that they are communicating via the Repository Service.
@@ -170,7 +174,7 @@ This is done using [Branch Lines](#branch-line).
 
 ### 4.1 Main Line
 
-All apps are developed along the main line (also referred to as **trunk**). Here you have all development happening along a single line, with all changes built upon the previous revision:
+All apps are developed along the main line. Here you have all development happening along a single line, with all changes built upon the previous revision:
 
 ![](attachments/version-control/image7.png)
 
@@ -207,4 +211,4 @@ Note that errors can be introduced by the [merge](#merge) process even if no con
 
 * [Using Version Control in Studio Pro](using-version-control-in-studio-pro) – presents technical details for using version control (theoretical concerns are described above)
 * [Collaborative Development](collaborative-development) – describes the process of sharing app model changes when a team of more than one person is working on the app
-* [Team Server Overview](/developerportal/develop/team-server) – presents an overview of viewing Team Server information in the Developer Portal (for example, revision summary and details)
+* [Team Server](/developerportal/collaborate/team-server) – presents an overview of viewing Team Server information in the Developer Portal (for example, revision summary and details)

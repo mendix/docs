@@ -2,6 +2,7 @@
 title: "Design Properties API"
 category: "API Documentation"
 description: "This guide outlines how design properties work and can help you create custom design properties."
+menu_order: 30
 tags: ["styling", "design", "classes", "design properties"]
 ---
 
@@ -207,8 +208,30 @@ Example of a property and options that were renamed:
 
 The design property above was renamed from **my Dropdown Propery** to **My Dropdown Property**. Also **Styling option two** was renamed twice from the old names **Stling option 2** and **Styling option 2**.
 
+### 6.1 Renaming a Dropdown Option to a Toggle Property
+
+{{% alert type="info" %}}
+This feature was introduced in Mendix 9.
+{{% /alert %}}
+
+It is also possible to rename an option of a **Dropdown** property to a separate **Toggle** property. In this case, the old name of the **Toggle** property consists of the **Dropdown** property's name and the option's name separated by two colons. It is not required for the  **Dropdown** property to still exist — it may have been removed entirely.
+
+Here is an example of a **Toggle** property that was renamed from a **Dropdown** option:
+
+```js
+{
+	"name": "Styling 3",
+	"oldNames": ["My Dropdown Property::Styling option 3"],
+	"type: "Toggle",
+	"description": "Description of Styling 3 toggle property",
+	"class": "stylingClassThree"
+}
+```
+
+The design property above is a replacement for the removed option **Styling option 3** of **My Dropdown Property** and will be set to **Yes** if that option was selected. The value of **My Dropdown Property** will then be set to empty if that design property still exists.
+
 ## 7 Read More
 
 * [How to Style Your Mendix App](/howto/mobile/how-to-use-native-styling)
 * [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide)
-* [How to Extend Design Properties to Customize Your Studio Experience](/howto/front-end/extend-design-properties-to-customize)
+* [How to Extend Design Properties](/howto/front-end/extend-design-properties)

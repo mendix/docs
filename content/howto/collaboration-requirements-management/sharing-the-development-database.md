@@ -30,7 +30,7 @@ Therefore this type of database is excellent to use while developing and running
 
 One application can make use of many different databases. Take the following steps to select the preferred database (if there is more than one configured)
 
-1.  Double-click **Settings** in the **Project Explorer**.
+1.  Double-click **Settings** in the **App Explorer**.
 2.  Select the preferred database configuration and click **Make active**.
   
     ![](attachments/18448637/18580427.png)
@@ -85,7 +85,7 @@ The data is now committed to the team server and can be used by other team membe
 
 ## 8 Updating the Data Snapshot
 
-To import a data snapshot into the model, the app project has to be updated since the last database snapshot has been committed by another team member. To get the data from the committed database snapshot the following steps have to be applied:
+To import a data snapshot into the model, the app has to be updated since the last database snapshot has been committed by another team member. To get the data from the committed database snapshot the following steps have to be applied:
 
 1.  First the application has to be updated, so click **Update* on the **Changes** tab:
 

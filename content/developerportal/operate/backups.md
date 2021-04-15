@@ -4,6 +4,7 @@ category: "Operations"
 menu_order: 40
 description: "The Backups page of the Developer Portal described."
 tags: ["Operate", "App", "Developer Portal", "Backup"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -34,7 +35,7 @@ The **Start Time** of nightly backups in UTC is shown below. The **Local Time** 
 
 ## 3 Backups{#backups}
 
-The **Backups** page under the **Operate** category presents options for managing your backups. These are described below.
+The **Backups** page presents options for managing your backups. These are described below.
 
 ### 3.1 Create Backup
 
@@ -59,6 +60,10 @@ Uploading a **Files Only** archive will result in a backup item with an exclamat
 {{% /alert %}}
 
 #### 3.2.2 Uploading Data in Mendix Cloud v3
+
+{{% alert type="warning" %}}
+Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be retired at the beginning of Q3 2021. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4). 
+{{% /alert %}}
 
 {{% alert type="warning" %}}
 In **Mendix Cloud v3**, this will *not* add a backup to the backup list but directly update the application with the newly uploaded data.

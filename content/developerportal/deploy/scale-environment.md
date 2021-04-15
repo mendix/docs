@@ -4,6 +4,7 @@ parent: "mxcloudv4"
 menu_order: 20
 description: "Describes how to scale your environments in Mendix Cloud v4."
 tags: ["Scale","Environments","Mendix Cloud","Developer Portal"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -43,7 +44,7 @@ Details of your plan are also displayed on the environment details page.
 
 If you want to scale your licensed app in Mendix Cloud v4, follow these steps:
 
-1. Go to the [Developer Portal](http://home.mendix.com) and select your licensed app.
+1. Go to the [Developer Portal](http://sprintr.home.mendix.com) and select your licensed app.
 
 2. Click **Environments** to go to the environments page.
 

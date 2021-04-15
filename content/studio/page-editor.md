@@ -37,7 +37,18 @@ All elements described above (layouts, templates, widgets, and building blocks) 
 
 ## 2 Performing Basic Functions {#page-editor-basic-functions}
 
-### 2.1 Opening Pages
+You can perform the following basic functions when working on pages:
+
+* [Open a page](#opening-page)
+* [Create a page](#creating-new-page)
+* [Duplicate a page](#duplicating)
+* [Copy and paste a page](#copy-pasting)
+* [Delete a page](#deleting-page)
+* [Add elements on a page](#adding-elements)
+* [View element properties](#viewing-elements) 
+* [Delete elements](#deleting-elements)
+
+### 2.1 Opening Pages {#opening-page}
 
 After opening Studio, it automatically opens the home page of the app.
 
@@ -47,8 +58,6 @@ To open a page in Studio, do the following:
 
 2.  In the displayed list of app pages, select the one you want to open and click it.
 
-    ![](attachments/page-editor/opening-a-page.png)
-
 The selected page is opened. 
 
 ### 2.2 Creating a New Page {#creating-new-page}
@@ -57,9 +66,11 @@ To create a new page in Studio, do the following:
 
 1. Click the **Pages** icon.
 
-2.  Click **New** in the top right corner of the displayed side panel.
+2.  Select the module you would like to add a new page to and click the plus icon next to this module.
 
     ![](attachments/page-editor/new-page.png)
+    
+    For more information on what modules are, see [Domain Model](domain-models).
 
 3.  In the **Create new page** dialog box, fill out the title of the page, select a layout and a page template.  
 
@@ -69,7 +80,7 @@ To create a new page in Studio, do the following:
 
 A new page is created.
 
-### 2.3 Duplicating a Page
+### 2.3 Duplicating a Page {#duplicating}
 
 To duplicate an existing page, do the following:
 
@@ -81,7 +92,7 @@ To duplicate an existing page, do the following:
 
 The page is duplicated.
 
-### 2.4 Copying and Pasting a Page
+### 2.4 Copying and Pasting a Page {#copy-pasting}
 
 To copy and paste a page, do the following:
 
@@ -95,7 +106,7 @@ To copy and paste a page, do the following:
 
 Your page is pasted. For more information on copy/paste function in Studio, see the [Copy/Paste Pages, Microflows, and Enumerations](general#copy-paste-documents) section in *General Info*.
 
-### 2.5 Deleting a Page
+### 2.5 Deleting a Page {#deleting-page}
 
 To delete a page in Studio, do one of the following:
 
@@ -120,7 +131,7 @@ To add elements on a page, do the following:
 1. In **Toolbox**, open the [Widgets](#widgets) tab or the [Building Blocks](#building-blocks) tab.
 2. Select an element you would like to add, drag and drop this element on a page. 
 
-### 2.7 Viewing Elements On a Page
+### 2.7 Viewing Elements On a Page {#viewing-elements}
 
 There are two ways to view an element and its [properties](#page-editor-properties):
 
@@ -132,7 +143,7 @@ The selected element is indicated with an blue border. Additionally, if the elem
 {{% image_container width="350" %}}![](attachments/page-editor/input-widget-example.png)
 {{% /image_container %}}
 
-### 2.8 Deleting Elements from a Page
+### 2.8 Deleting Elements from a Page {#deleting-elements}
 
 To delete an element from a page, do one of the following:
 
@@ -155,7 +166,7 @@ The breadcrumb serves two functions:
 
 * Allows you to select an element on the page and view its properties. To navigate to an element on a page and view element's properties, click this element in the breadcrumb.
 
-## 5 Toolbox Tab
+## 5 Toolbox Elements
 
 The **Toolbox** shows the tools that can be used on pages. 
 

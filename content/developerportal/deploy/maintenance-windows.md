@@ -6,6 +6,7 @@ description: "How to configure the maintenance windows for your node environment
 tags: ["Deploy","App","Developer Portal", "maintenance"]
 aliases:
     - /mendixcloud/maintenance-windows.html
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -36,7 +37,7 @@ Maintenance windows and planned maintenance are defined in UTC time format. When
 
 Follow the instructions below to configure a maintenance window:
 
-1. Go to the [Developer Portal](http://home.mendix.com).
+1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 
 2. Go to the **Environments** page for your app.
 

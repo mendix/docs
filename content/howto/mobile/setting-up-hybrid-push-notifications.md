@@ -50,8 +50,3 @@ To build the hybrid app package, follow these steps:
 8.  Create an APK or iOS package from the PhoneGap Build package. You can upload the new PhoneGap Build package (in the **dist** folder) to PhoneGap to build the APK or iOS binary.
 
     ![](attachments/implement-sso/build.phonegap.com.png)
-
-## 4 Read More
-
-* [Implement Push Notifications](implementation-guide)
-* [Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)

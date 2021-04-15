@@ -57,9 +57,9 @@ The MindSphereSingleSignOn module also provides three microflows which are used 
 
 #### 2.2.1 RegisterSingleSignOn
 
-This microflow must be added as the *After startup* microflow or added as a sub-microflow to an existing after startup microflow. You can do this on the *Runtime* tab of the *Project > Settings* dialog, accessed through the *Project Explorer* dock.
+This microflow must be added as the *After startup* microflow or added as a sub-microflow to an existing after startup microflow. You can do this on the *Runtime* tab of the *Project > Settings* dialog, accessed through the *App Explorer* dock.
 
-![Project settings dialog](attachments/mindsphere-module-details/image4.png)
+![App settings dialog](attachments/mindsphere-module-details/image4.png)
 
 #### 2.2.2 DS_MindSphereAccessToken
 
@@ -120,7 +120,7 @@ In MindSphere, these roles will look like this:
 
 And in the Mendix example app they will be mapped to these roles:
 
-![Mendix Project Security dialog](attachments/mindsphere-module-details/image9.png)
+![Mendix App Security dialog](attachments/mindsphere-module-details/image9.png)
 
 ## 3 MindSphere OS Bar {#msosbar}
 

@@ -4,12 +4,13 @@ parent: "mendix-cloud-deploy"
 menu_order: 7
 description: "Describes the environmental details of your app and how to manage the environment."
 tags: ["Deploy","App","Environment","Developer Portal"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #The anchor #connection-whitelist below is mapped from the Developer Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
 ---
 
 ## 1 Introduction
 
-To enter the **Environment details** page, go to the [Developer Portal](http://home.mendix.com), select your licensed app, click **Environments**, and then click **Details** on the specific environment. 
+To enter the **Environment details** page, go to the [Developer Portal](http://sprintr.home.mendix.com), select your licensed app, click **Environments**, and then click **Details** on the specific environment. 
 
 ![](attachments/environments-details/environment-details.png)   
 
@@ -24,9 +25,7 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
    * Green – the environment is working correctly
    * Orange – the environment has warnings
    * Red – the environment is not working correctly
-
         ![](attachments/environments-details/environment-status.png)   
-
 * **Running since** date – the date on which the app was started
 * **Name** – the type of environment (Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments)): see [Naming of Environments](#naming) for more information
 * **URL** – the URL of the app
@@ -50,7 +49,7 @@ On the right side of the screen, you can find the following action buttons:
 
 * **Restart Application** – this stops the running application and starts it again — this is necessary to apply new constant values or scheduled events to the environment
 * **Start/Stop Application**
-* **Clear Environment** *(only visible if your application is stopped)* – this clears, after confirmation, all data from your database and file storage, and removes your app from this environment — you should do this if you want to deploy a different app to this environment, it is not necessary if you are restoring a backup of the same app
+* **Clear Environment** *(only visible if your application is stopped)* – this allows you to empty all the data from your database and, optionally, remove the app and file storage from the environment as well — see [Clearing an Environment](#clear-environment), below, for more information
 * **Show Logged in Users** 
 * **Change Admin Password** – this changes the password for the inbuilt [administrator](/refguide/administrator) account — the new password is applied immediately, without the need for a restart and will also force the administrator to pick up any new roles assigned in the app deployment package — see the [User Role](/refguide/administrator#user-role) section of *Administrator* for more information
 
@@ -58,7 +57,26 @@ On the right side of the screen, you can find the following action buttons:
 During a [maintenance window](maintenance-windows), you will not be able to start, restart, or stop your app.
 {{% /alert %}}
 
-#### 2.1.1 Logging and Debugging in Mendix Cloud v4
+#### 2.1.1 Clearing an Environment {#clear-environment}
+
+You can use the **Clear Environment** button to clear your environment so that you can use it for another purpose. This option is only available if the environment is stopped.
+
+{{% alert type="info" %}}
+You do not need to clear your environment if you are restoring an existing backup of the currently deployed app, the restore process will handle the existing data automatically.
+{{% /alert %}}
+
+When you click **Clear Environment** you will have two options:
+
+{{% image_container width="400" %}}
+![Clear Environment options and confirmation](attachments/environments-details/clear-environment.png)
+{{% /image_container %}}
+
+* **Only clear the database** – this empties all data from your database — after delete confirmation, the application will be stopped, the existing database will be deleted, a new database will be created, and the application will be restarted — ensure you have a backup of any data you want to keep
+* **Clear the full environment (model and database)** *(default)* – this clears all data from your database and file storage, and removes your app from this environment — you should do this if you want to deploy a different app to this environment
+
+You will need to confirm that you want to clear your environment by typing *clear* and clicking **Clear Environment**.
+
+#### 2.1.2 Logging and Debugging in Mendix Cloud v4
 
 ![](attachments/environments-details/actions-v4.png)
 
@@ -67,7 +85,11 @@ In Mendix Cloud v4 environments, you have two additional action buttons:
 * **View Live Log**
 * **Show debugger information** – shows the settings needed to connect the debugger in Studio Pro to your app — for Mendix Cloud v4, the debugger is *always* enabled — for more information on debugging in the cloud, see [How To Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely)
 
-#### 2.1.2 Logging and Debugging in Mendix Cloud v3
+#### 2.1.3 Logging and Debugging in Mendix Cloud v3
+
+{{% alert type="warning" %}}
+Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be retired at the beginning of Q3 2021. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4). 
+{{% /alert %}}
 
 ![](attachments/environments-details/actions-v3.png)
 
@@ -216,7 +238,7 @@ HTTP Headers allows you to set the values of selected HTTP response headers. The
 This replaces the option to prevent embedding your app in an iframe with more flexible options to set HTTP Headers.
 {{% /alert %}}
 
-For Mendix Cloud v3, only *X-Frame-Options* is supported. For Mendix Cloud v4 the HTTP headers which are supported in the Developer Portal are:
+For the deprecated Mendix Cloud v3, only *X-Frame-Options* was supported. For Mendix Cloud v4 the HTTP headers which are supported in the Developer Portal are:
 
 | Header | Description | Additional Information |
 | --- | --- | --- |
@@ -336,7 +358,7 @@ IP Addresses must be within the following ranges:
 | 172.32.0.0 | 192.167.255.255 |
 | 192.169.0.0 | 255.255.255.255 |
 
-### 4.4 Path-Based Access Restrictions
+### 4.4 Path-Based Access Restrictions{#path-based-restrictions}
 
 You can restrict access to your application by means of Client Certificates or IP ranges.
 
@@ -373,6 +395,10 @@ On this tab, you can perform the following actions:
 
 * Change the log level type by clicking the specific level
 * Click **Set all to INFO** to revert all the changes
+
+{{% alert type="info" %}}
+If your app is not running, you will only see log nodes which are not set to the `Info` level. You will see these log nodes again when your app is restarted and, for custom nodes, messages have been logged to them.
+{{% /alert %}}
 
 {{% alert type="info" %}}
 If you change the log level, this level will continue to be used even if you later restart your app.

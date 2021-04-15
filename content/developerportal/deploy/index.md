@@ -2,6 +2,7 @@
 title: "Deployment"
 description: "Deployment section of the Developer Portal Guide: How to deploy Mendix apps to different environments and how to manage those deployments."
 tags: ["Deploy","Manage", "Mendix Cloud", "IBM", "SAP", "Cloud Foundry", "Kubernetes", "On-premises", "Environment"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -19,7 +20,7 @@ This section of the *Developer Portal Guide* contains step-by-step instructions,
 
 ### 2.1 Studio Pro
 
-In *Studio Pro*, you can click **Run Locally** in the toolbar to run your app locally. Use the **View** button to directly jump to see your app running in your browser at *localhost*.
+In *Studio Pro*, you can click the play button (▶) in the toolbar to run your app locally. Use the **View** button to directly jump to see your app running in your browser at *localhost*.
 
 ### 2.2 Studio
 

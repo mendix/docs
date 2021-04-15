@@ -4,15 +4,14 @@ category: "Operations"
 menu_order: 30
 description: "This page describes the Logs page of the Developer Portal."
 tags: ["Operate", "App", "Developer Portal", "SAP", "v3", "v4"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
 From this page of the Developer Portal, you can access the logs produced by your app. What you see depends on the environment to which your app is deployed.
 
-The page is accessed through the **Logs** menu item under the **Operate** category:
-
-![Navigate to Logs](attachments/logs/log-menu.png)
+The page is accessed through the **Logs** menu item in the left-hand menu.
 
 ## 2 Apps Deployed to Mendix Cloud Version 4
 
@@ -40,7 +39,7 @@ View Live Log | view today's log on the screen
 
 ## 3 Apps Deployed to Mendix Cloud Version 3
 
-For apps deployed to Mendix Cloud version 3 (v3), you can select which environment you want logs for. Production logs will require two-step authentication.
+For apps deployed to the deprecated Mendix Cloud version 3 (v3), you can select which environment you want logs for. Production logs will require two-step authentication.
 
 You can fetch the current log and download it, or you can view and download an archived log. All timestamps are shown in UTC.
  

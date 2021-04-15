@@ -30,7 +30,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 ## 3 Setting Up
 
-In this section, we will walk through all the steps to configure New Relic so that it can be used for the [application performance diagnostics](/addons/apd-addon/index) of your Mendix application.
+In this section, we will walk through all the steps to configure New Relic so that it can be used for the [application performance diagnostics](/addons/apd-addon/) of your Mendix application.
 
 ## 3.1 Setting up New Relic (On-Premises Only)
 
@@ -69,7 +69,7 @@ To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaag
 
 ### 3.2.3 Mendix Studio Pro (Development Mode Only)
 
-1. Open your Mendix application, and click **Settings** in the **Project Explorer**.
+1. Open your Mendix application, and click **Settings** in the **App Explorer**.
 
 2. Open a configuration:
 
@@ -101,7 +101,7 @@ For more information on New Relic, see the New Relic documentation here: [https:
 * [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
 * [Debug Java Actions Remotely](debug-java-actions-remotely)
 * [Set Log Levels](log-levels)
-* [Debug Microflows](debug-microflows)
+* [Debug Microflows and Nanoflows](debug-microflows-and-nanoflows)
 * [Debug Java Actions](debug-java-actions)
 * [Solve Load & Import Errors](solving-load-and-import-errors)
 * [Debug Microflows Remotely](debug-microflows-remotely)

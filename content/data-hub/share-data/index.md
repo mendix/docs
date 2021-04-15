@@ -13,8 +13,8 @@ aliases:
 This how-to will demonstrate how easy it is to build apps using data from different sources using Mendix Data Hub. The steps describe the following: 
 
 * Create a simple app in Studio Pro
-* Publish an entity from the app and register it in the Data Hub Catalog 
-* Use the Data Hub Catalog to explore the data sources from the organization that are registered as assets 
+* Publish an entity from the app and register it in the Data Hub Catalog
+* Use the Data Hub Catalog to explore the data sources from the organization that are registered as assets
 * Connect to the registered asset that you published earlier and use it in a new app
 * Change data in the original app and see it updated in the new or consuming app
 * See the network of shared data in the Data Hub Landscape
@@ -30,12 +30,12 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install Studio Pro version [8.14.0 or above](https://appstore.home.mendix.com/link/modelers/)
 * Be familiar with app development using Mendix Studio Pro
 
-## 3 Creating an App {#createapp} 
+## 3 Creating an App {#createapp}
 
-Follow these steps to create a simple app in Studio Pro and populate it. You will you will use this data in another app through the Data Hub: 
+Follow these steps to create a simple app in Studio Pro and populate it. You will use this data in another app through the Data Hub: 
 
-1. In Studio Pro, click **New App** to create a new app project using the **Blank App** template. Call this app *{yourname}CustomerServiceApp*.
-2. In the project explorer, double click the **Domain Model** for **MyFirstModule** and click **Entity** in the toolbar above the main window to add an entity to the domain model.
+1. In Studio Pro, click **New App** to create a new app using the **Blank App** template. Call this app *{yourname}CustomerServiceApp*.
+2. In the App Explorer, double click the **Domain Model** for **MyFirstModule** and click **Entity** in the toolbar above the main window to add an entity to the domain model.
 3. Double-click the entity to open its properties and change its **Name** to *Customer*.
 4.  In the **Attributes** tab, click **New** to create the following attributes for the entity:
 
@@ -51,12 +51,12 @@ Follow these steps to create a simple app in Studio Pro and populate it. You wil
 	
 5. Click **OK** to see the entity and attributes in the domain model.
 6. Right-click the entity and from the menu, select **Generate overview pages**.
-7. In the **Generate pages** dialog box, select **Atlas_Default(Atlas_UI_Resources)** as the **Content layout** and click **OK**. Click **OK** to accept the informational box. Overview pages for the new entity will be added in the **OverviewPages** folder of **MyFirstModule**.
+7. In the **Generate pages** dialog box, select **Atlas_Default (Atlas_UI_Resources)** as the **Content layout** and click **OK**. Click **OK** to accept the informational box. Overview pages for the new entity are added in the **OverviewPages** folder of **MyFirstModule**.
 
 	![](attachments/share-data/overview-pages-for-customer-entity.png)
 
-7.  In the **Project Explorer**, double-click **Home_Web** to open the **Home_Web** page.
-8. From the **Project Explorer** drag **Customer_Overview** into the **Auto-fill** container under the "Welcome" banner.
+7.  In the **App Explorer**, double-click **Home_Web** to open the **Home_Web** page.
+8. From the **App Explorer** drag **Customer_Overview** into the **Auto-fill** container under the "Welcome" banner.
 
 	You have now created a simple app with the entity **Customer** and a web page where you can add data and view and edit details for this entity. Go ahead and customize your Home page further by changing the banner text.
 	
@@ -76,11 +76,11 @@ The following steps take you through creating an OData service for your app to e
 
 2.  In the domain model, right-click the **Customer** entity and select **Expose as OData resource…**.
 
-	![](attachments/share-data/expose-as-odata-resource.png)
+	 {{% image_container width="300" %}}![](attachments/share-data/expose-as-odata-resource.png){{% /image_container %}}
 
 3.  In the **Select Published OData Service** dialog box, select the **MyFirstModule** > **APIs** folder and click **New** to add a new OData service into this folder. Call this published OData service *{yourname}CustomerODataService* and press **OK**. 
 
-	![](attachments/share-data/select-published-odata-service.png)
+	 {{% image_container width="300" %}}![](attachments/share-data/select-published-odata-service.png){{% /image_container %}}
 
 	The new **{yourname}CustomerODataService** is added to the module and the **Edit published resource** dialog box is displayed for the entity **Customer**. 
 
@@ -96,17 +96,17 @@ The following steps take you through creating an OData service for your app to e
 
 	![](attachments/share-data/customer-odata-service-page.png)
 
-	Under **Resources**, the **Customer** entity is listed. 
+	Under **Entities**, the **Customer** entity is listed and details of the entity are displayed on the right where you select the attributes that you would like to expose in the OData service.
 
-	{{% alert type="info" %}} If you want to expose several entities or datasets in a service, they can be added and edited in the **OData service** page. {{% /alert %}}
+	{{% alert type="info" %}} If you want to expose several entities or datasets in a service, they can be added and edited on this page. {{% /alert %}}
 
-6. Click **Run** to deploy the app. When prompted, click **Save and continue** to save any unsaved changes to the app. The app will be deployed, and the OData service will be automatically registered in the Data Hub Catalog.
+6. Click **Publish** in the toolbar to deploy the app and publish it. When prompted, click **Save and continue** to save any unsaved changes to the app. The app will be deployed, and the OData service will be automatically registered in the Data Hub Catalog.
 
-	{{% image_container width="150" %}}![](attachments/share-data/run.png){{% /image_container %}}
+	{{% image_container width="150" %}}![](attachments/share-data/publish.png){{% /image_container %}}
 
-	{{% alert type="info" %}}The app has to be deployed to the Mendix Cloud or to your organization's environment using **Run** for the service to be registered in the Data Hub Catalog.{{% /alert %}}
+	{{% alert type="info" %}}The app has to be deployed to the Mendix Cloud or to your organization's environment using **Publish** for the service to be registered in the Data Hub Catalog.{{% /alert %}}
 
-7. Once the app is deployed, click **View** to open the app in your browser. Your app is now ready to use.
+7. Once the app is deployed, click **View App** to open the app in your browser. Your app is now ready to use.
 
 8. On the app's home page, click **Customers Overview**.
 
@@ -150,11 +150,11 @@ The **{yourname}CustomerODataService** from your app is now registered in the Da
 
 	![data hub](attachments/share-data/search-details-screen.png)
 
-	{{% alert type="info" %}}For more information about the user and curator roles in Data Hub see [Roles in Data Hub](../index#data-hub-roles).{{% /alert %}}
+	{{% alert type="info" %}}For more information about the user and curator roles in Data Hub see [Roles in Data Hub](/data-hub/#data-hub-roles).{{% /alert %}}
 
 Owners of assets registered in the catalog and curators can edit details of the registered service and also set the **Discoverability** to other users. By default, services registered through a Studio Pro deployment will be set to **Discoverable** meaning that it is visible to all users. For further details about curating functions, see [How to Curate Registered Assets](../data-hub-catalog/curate).
 
-For more details on searching in the Data Hub Catalog and the **Search Details** screen, see [How to Search in the Data Hub Catalog](../data-hub-catalog/search). You can also explore registered services in the Data Hub Landscape. For more information, see [How to Use the Data Hub Landscape](../data-landscape/../data-hub-landscape/index).
+For more details on searching in the Data Hub Catalog and the **Search Details** screen, see [How to Search in the Data Hub Catalog](../data-hub-catalog/search). You can also explore registered services in the Data Hub Landscape. For more information, see [How to Use the Data Hub Landscape](/data-hub/data-hub-landscape/).
 
 ## 6 Using the Customer Dataset in Another App
 
@@ -196,7 +196,7 @@ To do this follow these steps:
 
 	![external entities](attachments/share-data/external-entities-in-domain-model.png)
 
-11. In the **Project Explorer**, the service and location documents for the external entity that you have just included in your domain model are now listed. These documents specify the metadata for the service and provide the links for connecting to the shared data.
+11. In the **App Explorer**, the service and location documents for the external entity that you have just included in your domain model are now listed. These documents specify the metadata for the service and provide the links for connecting to the shared data.
 
 	![external entities](attachments/share-data/external-entity-metadata-docs.png)
 
@@ -204,15 +204,15 @@ To do this follow these steps:
 
 13. In the **Generate pages** dialog box, for **Content layout** select **Atlas_Default(Atlas_UI_Resources)** and click **OK**. Overview pages for the new entity will be added to the **MyFirstModule** module. Confirm **OK** to accept the message that informs you of this.
 
-14. Open the **Home_Web** page and, from **Project Explorer**, drag **Customers_Overview** into the **Auto-fill** container under the "Welcome" banner. Go ahead and add a new banner and welcome text.
+14. Open the **Home_Web** page and, from **App Explorer**, drag **Customers_Overview** into the **Auto-fill** container under the "Welcome" banner. Go ahead and add a new banner and welcome text.
 
-15. Click **Run** to deploy the app. The app will be deployed and a link established to the data associated with the **Customer** entity in the publishing app (**{yourname)CustomerServiceApp**) through the **{yourname)CustomerODataService**.
+15. Click **Publish** to deploy the app. The app will be deployed and a link established to the data associated with the **Customer** entity in the publishing app (**{yourname)CustomerServiceApp**) through the **{yourname)CustomerODataService**.
 
 ## 7 Viewing the Shared Data in Your New App 
 
 To view the consumed data in your new app, follow these steps:
 
-1. When the app has successfully been deployed, click **View** to open the app in the browser.
+1. When the app has successfully been deployed, click **View App** to open the app in the browser.
 2. Click **Customer Overview**.
 
 	The overview page displays the list of the customers that you entered in the **{yourname}CustomerServiceApp** app. 
@@ -239,7 +239,7 @@ You can now see your new apps in your organization's Data Hub Landscape.
 
 You will now learn how to do the following:
 
-* Use and understand the [Data Hub Landscape](../data-hub-landscape/index) for locating sources of data
+* Use and understand the [Data Hub Landscape](/data-hub/data-hub-landscape/) for locating sources of data
 * View the dependencies between deployed apps and the direction of the dependencies in your Data Hub Landscape 
 
 You can view the two apps that you have created in the Data Hub Landscape and see the associations by following these steps:

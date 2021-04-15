@@ -1,6 +1,7 @@
 ---
 title: "User Management API"
 category: "API Documentation"
+menu_order: 70
 ---
 
 ## 1 Introduction

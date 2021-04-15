@@ -4,6 +4,7 @@ parent: "licensing-apps"
 menu_order: 20
 description: "Obtaining a Mendix Basic Package Node"
 tags: ["App", "Node", "Developer Portal", "Licensed", "Free App", "Upgrade", "Basic Package", "Basic license"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction

@@ -8,7 +8,7 @@ tags: ["data hub", "data hub catalog"]
 
 ## 1 Introduction
 
-The search functionality in the [Data Hub Catalog](#data-hub-home) makes finding the right data to use easy. 
+The search functionality in the [Data Hub Catalog](#data-hub-home) makes it easy to find the right data to use in your app development. 
 
 - The details of registered data assets can be viewed in the [Asset details](#search-details) screen. 
 - The [Copy Data Source URI](#service-details) and **Download** contract buttons enable you to access the data source endpoints which you can use to integrate registered data sources into your enterprise applications.

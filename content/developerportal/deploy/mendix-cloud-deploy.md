@@ -196,7 +196,7 @@ Mendix environments are sized by reference to cloud resource packs. The table be
 | S | 2GB | 0.5 | 2GB | 2 | 10GB | 20GB |
 | M | 4GB | 1 | 4GB | 2 | 20GB | 40GB |
 | L | 8GB | 2 | 8GB | 2 | 40GB | 80GB |
-| XL | 16GB | 4 | 16GB | 3 | 80GB | 160GB |
+| XL | 16GB | 4 | 16GB | 4 | 80GB | 160GB |
 |Premium|||||||
 | S | 2GB | 0.5 | 2GB | 2 | 10GB | 20GB |
 | M | 4GB | 1 | 4GB | 2 | 20GB | 40GB |

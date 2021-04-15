@@ -35,6 +35,7 @@ Create a new app by following these steps:
 1. Click **Use this starting point.**
 1. Name your app _Hello World_ and click **Create app** to close the dialog box.
 1. Open the **Home_Native** page and remove the Intro screen widget and other containers.
+1. Get the AR widgets from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/117209)
 
 You will begin by embedding the following widgets into your Mendix app:
 

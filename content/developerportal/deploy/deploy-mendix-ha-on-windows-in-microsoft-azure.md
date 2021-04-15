@@ -8,7 +8,7 @@ tags: ["deploy", "Windows", "Azure", "HA", "High Availability", "Microsoft", "Me
 
 ## 1 Introduction
 
-This document has been created as an example of setting up a high availability Mendix Runtime Server environment on Windows, using the Microsoft Azure cloud platform. You will probably need to adaptat this to your situation, as this guide is meant to illustrate what Mendix system and settings to take into account, and is not a complete guide or a supported 'best practice' for deploying a Mendix hosting environment.
+This document has been created as an example of setting up a high availability Mendix Runtime Server environment on Windows, using the Microsoft Azure cloud platform. You will probably need to adapt this to your situation, as this guide is meant to illustrate what Mendix system and settings to take into account, and is not a complete guide or a supported 'best practice' for deploying a Mendix hosting environment.
 It describes the installation and configuration of the Mendix software on multiple systems running Microsoft Windows on the Microsoft Azure cloud platform and covers:
 
 * Setting up an Azure Load Balancer
@@ -70,7 +70,7 @@ Go to the Azure Portal to retrieve the Azure Storage account name and an access 
 
 Then select your application, click **Configuration** and then **Advanced...**. In the **Advanced Settings** screen, add the following **Custom Mendix settings**:
 
-* **Name**: _com.mendix.core.StorageService_, **Value**: _com.mendix.storage.azure_
+* **Name**: _com.mendix.core.StorageService_, **Value**:`com.mendix.storage.azure`
 
 * **Name**: _com.mendix.storage.azure.AccountName_, **Value**: `<your Azure Storage account name>`
 
@@ -82,7 +82,7 @@ Then select your application, click **Configuration** and then **Advanced...**. 
 
 By default, the container will be created in the blob storage if it does not yet exist. More information about the configuration options for Azure Blob Storage in the Mendix Runtime is available in the [Microsoft Azure Blob Storage Settings](/refguide/custom-settings#azure-blob) section of *Runtime Customization*.
 
-It is also strongly recommended to add the setting _com.mendix.storage.PerformDeleteFromStorage_ with value `False`. This prevents the runtime from deleting files from the underlying storage when they are deleted in the app, which can result in missing files when restoring a database back-up.
+It is also strongly recommended to add the setting _com.mendix.storage.PerformDeleteFromStorage_ with value `false`. This prevents the runtime from deleting files from the underlying storage when they are deleted in the app, which can result in missing files when restoring a database back-up.
 If you do not want to enable this setting, make sure you have a restore strategy configured for your storage backend.
 
 {{% alert type="info" %}}

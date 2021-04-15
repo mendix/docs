@@ -38,7 +38,7 @@ This process will copy the new version of the project software into the configur
 
 ## 3 Update the Mendix Runtime Version
 
-1.  After updating the Mendix application version, the Service Console may show the message `(missing)`. This menas that the required server distribution is not installed on the server.
+1.  After updating the Mendix application version, the Service Console may show the message `(missing)`. This means that the required server distribution is not installed on the server.
 
     ![Step 5, a missing Runtime version](attachments/updating-a-mendix-app/update_server_missing.png)
 2.  There are two ways to install the required server distribution:

@@ -351,8 +351,6 @@ If everything has been created successfully, and the PlaceholderMDA has been bui
 
 8. Click **Apply Changes** to deploy the application to the selected environment. The app will start automatically once the deployment is successful.
 
-You can find a description of what this deployment means within the Kubernetes cluster in [How the Operator Deploys Your App](#how-operator-deploys), below.
-
 You will be taken to the Environment Details page for the selected environment. You can find information about managing your environment from this page in [Managing Your Environments from the Environment Details Page](#environment-details), below.
 
 ## 5 Environments Page

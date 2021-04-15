@@ -83,16 +83,6 @@ Where:
 * `<packageID>` is the ID of the package which will be created by the API
 * `<JobID>` is the ID of the job which is creating the package — the status of the job can be interrogated with the [Job Status](#job-status) API
 
-
-**Error Codes**
-
-| HTTP Status | Error code | Description |
-| --- | --- | --- |
-| 400 | INVALID_APPID | Invalid AppId. |
-| 404 | APP_NOT_FOUND | App not found. |
-| 500 | UPLOAD_COPY_FAILED | Failed to store the deployment package. |
-| 500 | INVALID_PACKAGE | Failed to process the deployment package. |
-
 ### 3.2 Job Status{#job-status}
 
 #### 3.2.1 Description
@@ -137,10 +127,3 @@ Where `<status>` is one of:
 * Running
 * Completed
 * Failed
-
-**Error Codes**
-
-| HTTP Status | Error code | Description |
-| --- | --- | --- |
-| 400 | INVALID_APPID | Invalid AppId. |
-| 404 | APP_NOT_FOUND | App not found. |

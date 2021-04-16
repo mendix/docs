@@ -219,7 +219,7 @@ A link to the business owner of the data exposed in the data source. Business ow
 
 ### 6.3 Technical Owner
 
-The technical contact of the app; by default this is the owner who registered the OData service. For apps hosted in the Mendix Cloud, by default, the **Technical Owner** is the app developer who deployed the app. For more information, see the [Changing Owners of an Application](curate#changing-owners) section of *How to Curate Registered Assets*.
+The technical contact of the app; by default this is the owner who registered the OData service. For apps hosted in the Mendix Cloud, by default, the **Technical Owner** is the app developer who deployed the app. For more information, see the [Changing Owners of an Application](curate#changing-owners) section in *How to Curate Registered Assets*.
 
 ### 6.4 Discoverability {#discoverability-metadata}
 

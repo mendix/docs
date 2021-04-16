@@ -16,6 +16,17 @@ Even with the powerful navigation and search support in Mendix Studio Pro, adher
 * Anybody should be able to quickly understand an existing app in terms of what is located where and how the different parts are related
 * A clear structure helps in identifying reusable code
 
+For a deep-dive look into implementing such best practices, check out this video:
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/exmmApZY4jMYxqidrzehEQ.jpg"
+  data-uuid="exmmApZY4jMYxqidrzehEQ"
+  data-v="4"
+  data-type="inline"
+/>
+
 ## 2 App Setup
 
 ### 2.1 The Application Development Language

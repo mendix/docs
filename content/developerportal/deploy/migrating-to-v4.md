@@ -11,24 +11,15 @@ aliases:
 
 ## 1 Introduction
 
-This how-to explains how to migrate your app from a Mendix Cloud v3 node to a Mendix Cloud v4 node.
+The Mendix Cloud version 3 has been deprecated and will be turned off shortly. This document explains how to migrate your app from a Mendix Cloud v3 node to a Mendix Cloud v4 node.
 
 **It will teach you how to do the following:**
 
 *   Migrate your licensed app from Mendix Cloud v3 to v4
 
-## 2 Prerequisites
+## 2 Migration considerations
 
-Before starting this how-to, make sure you have completed the following prerequisites:
-
-* Ensure that your app is on at least **Mendix version 6.0**, otherwise the migration will fail – it is preferable to be on a supported version of Mendix: **Mendix version 7.0 and above**
-* Have a [Mendix Cloud](mendix-cloud-deploy) v4 node available (to request a licensed v4 Cloud Node, contact your Customer Success Manager (CSM))
-* Have the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) role for both your existing v3 and available v4 Cloud Nodes
-* Create two new temporary Free Apps without Free App environments – instructions for unlinking a Free App from its environment are here: [Licensing Mendix Cloud Apps](licensing-apps#unlink)
-
-## 3 Migration considerations
-
-You will need to take the following into account when planning to migrate to Mendix Cloud v4:
+You will need to take the following into account when migrating to Mendix Cloud v4:
 
 * If you are using Mendix 7, you might want to split long-running scheduled events into smaller chunks, using a queueing system like the Amazon SQS connector to spread the work out over multiple instances
 * If you use a mail server from your app, you will need to use a third-party email provider – for more information, see [Sending Email](sending-email)
@@ -37,7 +28,7 @@ You will need to take the following into account when planning to migrate to Men
 
 To make the most of the features of Mendix Cloud v4, we recommend that your apps are built as [12-factor apps](https://12factor.net/).
 
-### 3.1 Other Differences Between Mendix Cloud v3 & v4
+### 2.1 Other Differences Between Mendix Cloud v3 & v4
 
 There are a few other differences between the way you develop and deploy apps in Mendix Cloud v4 and Mendix Cloud v3:
 
@@ -55,13 +46,42 @@ There are a few other differences between the way you develop and deploy apps in
 * Mendix Cloud v4 only supports TLS 1.2 or above for incoming requests
     * If you have external clients connecting _to_ your application running in the Mendix Cloud, these clients have to support TLS 1.2 or above to be able to make a successful connection
 
-## 4 Migrating the App
+## 3 Prerequisites
 
-To migrate your app from a v3 node to a v4 node in the Mendix Cloud, follow the steps in the sections below.
+There are two methods of doing the migration. For both of them you first need to ensure that your app is on at least **Mendix version 6.0**, otherwise the migration will fail – it is preferable to be on a supported version of Mendix: **Mendix version 7.0 and above**
+
+For further prerequisites see the sections below.
+
+## 4 Using the Migration Tool
+
+Mendix has written a migration tool to help you transfer your data from your V3 app to a new V4 environment. It also switches to your new environment for you when it is ready to go.
+
+We strongly advise you to use this method to migrate your app to Mendix Cloud V4 as it makes the migration much easier to initiate and monitor.
+
+### 4.1 Prerequisites
+
+* Have a [Mendix Cloud](mendix-cloud-deploy) v4 node available. This **must have the name `<current-app-name>-v4`** (to request a licensed v4 Cloud Node, contact your Customer Success Manager (CSM))
+* Have the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) role for both your existing v3 and available v4 Cloud Nodes
+
+## 5 Migrating the App Manually
+
+{{% alert type="warning" %}}
+These instructions are provided in case you have problems using the migration tool above. We recommend that you use the migration tool whenever possible. Please contact [Mendix Support](https://support.mendix.com) if you are having difficulty with the migration tool and only use these instructions as a last resort.
+{{% /alert %}}
+
+To manually migrate your app from a v3 node to a v4 node in the Mendix Cloud, follow the steps in the sections below.
 
 ![](attachments/migrating-to-v4/migratev4.png)
 
-### 4.1 Linking the New Free App to the v4 Node
+### 5.1 Prerequisites
+
+Before starting a manual migration, make sure you have completed the following prerequisites:
+
+* Have a [Mendix Cloud](mendix-cloud-deploy) v4 node available (to request a licensed v4 Cloud Node, contact your Customer Success Manager (CSM))
+* Have the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) role for both your existing v3 and available v4 Cloud Nodes
+* Create two new temporary Free Apps without Free App environments – instructions for unlinking a Free App from its environment are here: [Licensing Mendix Cloud Apps](licensing-apps#unlink)
+
+### 5.2 Linking the New Free App to the v4 Node
 
 First, link one of the new temporary apps to the cloud v4 node.
 
@@ -77,13 +97,13 @@ First, link one of the new temporary apps to the cloud v4 node.
 
 For more information on how to do this, see [Licensing Mendix Cloud Apps](licensing-apps#licensed-node).
 
-### 4.2 Copying the Deployment Package and Data from the v3 Node to the v4 Node
+### 5.3 Copying the Deployment Package and Data from the v3 Node to the v4 Node
 
 Before migrating, you need to deploy a copy of your app to the v4 node. You can then copy the data from the v3 node to the v4 node. After copying the data, you should test the app, and correct errors if needed. Repeat this until all the errors are solved.
 
 The following steps explain how to do this.
 
-#### 4.2.1 Downloading and Uploading the Deployment Package
+#### 5.3.1 Downloading and Uploading the Deployment Package
 
 Download the deployment package of your app hosted in Mendix cloud v3 and upload the deployment package to the app hosted in Mendix cloud v4.
 
@@ -111,7 +131,7 @@ To upload the deployment package, follow these steps:
 
 5. Stop the app so that you can upload the backup data.
 
-#### 4.2.2 Backing Up
+#### 5.3.2 Backing Up
 
 {{% alert type="warning" %}}
 Ensure you have performed the last two steps in the previous section to deploy your deployment package before continuing. Making a deployment prepares the environment and ensures your data is restored to the correct locations.
@@ -125,17 +145,17 @@ Transfer the backup data from the app on Mendix Cloud v3 to the app on Mendix Cl
 
 2. Upload the downloaded backup to your app hosted in Mendix Cloud v4 (for details, see [How to Restore a Backup](/developerportal/operate/restore-backup)).
 
-#### 4.2.3 Configuring the New App
+#### 5.3.3 Configuring the New App
 
 Before starting your app in Mendix Cloud v4, make sure it has the same configuration as the v3 node. You can find the node settings on the [Environment Details](environments-details) page under **Model Options**, **Network**, **Runtime**, and **Maintenance**.
 
-#### 4.2.4 Testing and Repeating
+#### 5.3.4 Testing and Repeating
 
 Now that the app on Mendix Cloud v4 contains your data and is configured, deploy the deployment package to an environment and start your app.
 
 To learn how to do this, see [How to Deploy the App to an Environment](mendix-cloud-deploy#4-deploy-the-app-to-an-environment).
 
-### 4.3 Unlink the App from the v3 Node
+### 5.4 Unlink the App from the v3 Node
 
 It is not possible to explicitly unlink an app from a licensed node. The only way to do this is to connect another app to the licensed node; this will unlink the existing app automatically. To do this, perform the following steps.
 
@@ -149,7 +169,7 @@ It is not possible to explicitly unlink an app from a licensed node. The only wa
 
 A more detailed example of how this works given in the [Exchanging Linked Apps Between Nodes](licensing-apps#exchange-apps) section of *Licensing Mendix Cloud Apps*.
 
-### 4.4 Linking the App to the v4 Node
+### 5.5 Linking the App to the v4 Node
 
 Follow these steps to link the app you detached from the v3 node, above, to the v4 Node:
 
@@ -167,7 +187,7 @@ Make sure you have downloaded the latest backup and deployment package before li
 
 For more information, see [Licensing Mendix Cloud Apps](licensing-apps).
 
-### 4.5 Changing the App URL
+### 5.6 Changing the App URL
 
 To change the App URL (if you are not using a custom domain) you will need to contact [Mendix Support](https://support.mendix.com). You will need to provide the following information:
 
@@ -176,7 +196,7 @@ To change the App URL (if you are not using a custom domain) you will need to co
 * **App ID** for the new app, which is available from the *General* page for the new (v4) app
 * **App ID** for the old app, which is available from the *General* page for the old (v3) app
 
-### 4.6 Changing a Custom Domain
+### 5.7 Changing a Custom Domain
 
 If you have a custom domain which you want to transfer to your v4 deployment, you will need to bear the following information in mind.
 
@@ -193,7 +213,7 @@ If you have a custom domain which you want to transfer to your v4 deployment, yo
 
 You can find further information about setting up custom domains in [Custom Domains](custom-domains).
 
-### 4.7 Offboarding the v3 Node
+### 5.8 Offboarding the v3 Node
 
 Your app is now running in Mendix Cloud v4. If everything works correctly, submit a request to [Mendix Support](https://support.mendix.com) to offboard the v3 node. This means that your v3 node will no longer be available.
 
@@ -201,7 +221,7 @@ Your app is now running in Mendix Cloud v4. If everything works correctly, submi
 After your node is offboarded, it will no longer be accessible. Ensure that you have downloaded any backups or other information that you need from the node before asking for it to be offboarded.
 {{% /alert %}}
 
-## 5 Read More
+## 6 Read More
 
 *   [Certificates](certificates)
 *   [Custom Domains](custom-domains)

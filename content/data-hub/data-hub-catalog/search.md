@@ -27,7 +27,7 @@ The Catalog displays the [information](#search-details) about data sources, data
 
 ### 2.1 Versions 
 
-Every published OData service/data source has a version number. Apps that consume a data source will consume from a specific version. Updates and changes to a service will be indicated by a change in the version number (if the data source originators follow good practices). This may result in several versions of a registered data source available in the Catalog. Each version be listed as a separate item in the search results.
+Every published OData service (which is referred to as a data source in Data Hub) has a version number and apps that consume a data source will consume a specific version. When the data source owner issues updates and changes to a service, if good practice is followed, this will be indicated by a change in the version number. If the changed Odata services is deployed to a different endpoint this will result in several versions that are available in the Catalog. Each endpoint will be listed as a separate item in the search results.
 
 The version of the selected data source is displayed in the [Asset Details](#search-details).
 

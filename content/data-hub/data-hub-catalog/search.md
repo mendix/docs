@@ -215,7 +215,7 @@ The tags that have been assigned to the data source during [curation.](curate#ta
 
 ### 6.2 Business Owner
 
-A link to the business owner of the data exposed in the data source. Business owners can be added. For more information, see the [Changing Owners of an Application](curate#changing-owners) section of *How to Curate Registered Assets*.
+A link to the business owner of the data exposed in the data source. Business owners can be added by owners and curators. For more information, see the [Changing Owners of an Application](curate#changing-owners) section in *How to Curate Registered Assets*.
 
 ### 6.3 Technical Owner
 

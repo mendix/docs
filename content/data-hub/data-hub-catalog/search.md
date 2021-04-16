@@ -37,7 +37,7 @@ The Data Hub Catalog is a collection of apps that are deployed to a particular e
 
 The environment also provides an indication of the quality of the data that is going to be available. Shared datasets available in *production environments* will have production-level or live data. Shared datasets in non-production environments (*acceptance*, *development*) indicates that it is not live data but includes representative data that is useful for development work.
 
-Search results show the data source endpoints. If a version of a service is deployed on both a test and acceptance environment, a search on the service name will have two hits. 
+Search results show the data source endpoints. Therefore, if a version of a service is deployed on both a test and acceptance environment, a search on the service name will have two hits. 
 
 {{% alert type="info" %}}
 By default, search results in the Data Hub Catalog are filtered to show only hits in the **Production** environments. You can extend the search to **Non-production** or **Mendix Free App (Sandbox)** environments by checking them in the search pane **Add Filter** list. For more details, see the [Filters](#filter) section below.

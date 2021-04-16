@@ -20,7 +20,7 @@ If your company does already have a Mendix Admin (but you yourself are not a Men
 
 ![](attachments/admin-exists.jpg)
 
-If you are a Mendix Admin, you will immediately see the [App Projects](#apps) page and can navigate to the pages described in the sections below.
+If you are a Mendix Admin, you will immediately see the [Dashboard](#dashboard) page and can navigate to the pages described in the sections below.
 
 You can access Control Center via the menu item on the navigation pane.
 
@@ -37,9 +37,9 @@ The Control Center dashboard gives you an overview of various activities for you
 These are some examples of what the dashboard presents:
 
 * **App Projects Created** – you can filter these [apps](#apps) by date
-* **Member Versions** – describes which Studio Pro/Mendix versions your internal and external [members](#members) are using for apps, which is especially important as the development of apps on outdated or [non-MTS/LTS versions](/releasenotes/studio-pro/lts-mts) can lead to security issues
-* **Certification Level** for members – presents the number of different [Mendix certifications](https://academy.mendix.com/link/certification) for members
-* **App Access Groups** – presents the total number of [app access groups](#groups) for the company
+* **Mendix Versions** – describes which Studio Pro/Mendix versions your internal and external [members](#members) are using for apps, which is especially important as the development of apps on outdated or [non-MTS/LTS versions](/releasenotes/studio-pro/lts-mts) can lead to security issues
+* **Certification Level** – presents the number of members per [Mendix certification](https://academy.mendix.com/link/certification)
+* **Company Feed** – presents events in your company, such as members joining the company and the created app projects
 
 ## 3 App Projects {#apps}
 

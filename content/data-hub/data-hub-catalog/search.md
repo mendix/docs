@@ -148,7 +148,7 @@ When a data source is selected in the search results, the following details are 
 
 * Name of the data source
 
-* **Non-discoverable** icon – if the data source has been set to non-discoverable (by default, no icon indicates that it can be seen by all users in your company)
+* **Not discoverable** icon – this is displayed if the data source has been set to not discoverable indicating that it cannot be seen by other users in unless they are owners or curators
 
 * **Validated** icon – if it has been set for the asset
 

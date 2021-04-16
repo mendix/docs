@@ -126,7 +126,7 @@ The number of items satisfying the search criteria (search string plus filters) 
 
 * Closest match to the search string
 * Popularity of the service (the number of connections)
-* **Validated** assets before not validated items
+* **Validated** assets before non-validated items
 
 {{% alert type="info" %}}Assets that are set to [Not Discoverable](#discoverability-metadata) are not included in the search results unless you are a curator or owner of the asset.{{% /alert %}}
 

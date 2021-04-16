@@ -269,7 +269,7 @@ Owners and curators can carry out the following actions:
   * for a selected data source you can edit [Application Details](./curate#curate-application) and [Data Source Details](./curate#service-details)
   *  for a selected dataset you can edit [Dataset Details](./curate#curate-datasets)
 * **Discoverable**/**Validated** – set the discoverability of the service, and validate the dataset
-  * **Discoverable** – all users of the Data Hub Catalog and Mendix Studio Pro can see and consume the service 
+  * **Discoverable**:  **On** - all users can see the service; **Off** the asset is not visible to other users, only the owners, curators, and the Data Hub Admin will have access to the service 
   * **Not Discoverable** – the service is not visible and only owners of the service, Data Hub curators, and the Data Hub Admin can access the service
   * **Validated** – indicates if the dataset has been validated
 

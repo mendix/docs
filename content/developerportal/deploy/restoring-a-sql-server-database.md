@@ -13,6 +13,17 @@ In certain situations (for example, unwanted database updates or data corruption
 
 * Restore the database
 
+For a deep-dive look into this action, check out this video:
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/WZu7QtHZPjtYUTdcV58PKr.jpg"
+  data-uuid="WZu7QtHZPjtYUTdcV58PKr"
+  data-v="4"
+  data-type="inline"
+/>
+
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:

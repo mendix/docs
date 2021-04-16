@@ -6,6 +6,7 @@ description: "How to use external email providers in Mendix, and how to configur
 tags: ["email", "smtp", "sending policy framework", "Cloud v3", "SPF"]
 aliases:
     - /deployment/mendixcloud/sending-email.html
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

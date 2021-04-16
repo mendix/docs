@@ -7,6 +7,7 @@ tags: ["Deploy","Mendix Cloud","Developer Portal", "Free App", "licensed", "limi
 aliases:
     - /developerportal/howto/deploying-to-the-cloud.html
     - /mendixcloud/deploying-to-the-cloud.html
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor #plans, below, is mapped from the Control Center within the Developer Portal.
 ---
@@ -195,7 +196,7 @@ Mendix environments are sized by reference to cloud resource packs. The table be
 | S | 2GB | 0.5 | 2GB | 2 | 10GB | 20GB |
 | M | 4GB | 1 | 4GB | 2 | 20GB | 40GB |
 | L | 8GB | 2 | 8GB | 2 | 40GB | 80GB |
-| XL | 16GB | 4 | 16GB | 3 | 80GB | 160GB |
+| XL | 16GB | 4 | 16GB | 4 | 80GB | 160GB |
 |Premium|||||||
 | S | 2GB | 0.5 | 2GB | 2 | 10GB | 20GB |
 | M | 4GB | 1 | 4GB | 2 | 20GB | 40GB |

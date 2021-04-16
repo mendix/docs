@@ -11,8 +11,8 @@ You can go to the [Mendix Community site](https://community.mendix.com/p/communi
 
 ## 2 Main Documents in This Category
 
-* [Mendix Forum](mendix-forum) – describes how to use the Mendix Forum and the Mendix Idea Forum to ask questions, search for answers, and post ideas
+* [Forum](mendix-forum) – describes how to use the Mendix Forum and the Mendix Idea Forum to ask questions, search for answers, and post ideas
 * [Contribute to the Documentation](contribute-to-the-mendix-documentation) – shows you how to edit and write new documentation to help the Mendix community
-* [Mendix Jobs Board](mendix-job-board) – explains how to post and find Mendix-related jobs
-* [Mendix MVP Program](mendix-mvp-program) – describes how Mendix MVPs are selected and what the benefits are to being an MVP
+* [Jobs Board](mendix-job-board) – explains how to post and find Mendix-related jobs
+* [MVP Program](mendix-mvp-program) – describes how Mendix MVPs are selected and what the benefits are to being an MVP
 * [Set Up Your Partner Profile](how-to-set-up-your-partner-profile) – shows you how to set up the Mendix Partner Profile for your company

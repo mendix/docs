@@ -45,6 +45,7 @@ By default, search results in the Data Hub Catalog are filtered to show only hit
 {{% /alert %}}
 
 ### 2.3 Asset Descriptions
+
 A description is included as part of the published service metadata. This description can be further curated at the data source, dataset, and attribute level by owners and curators to provide further details.
 
 {{% alert type="info" %}}
@@ -67,7 +68,7 @@ From the **Data Hub Home** page, you can you can search the Catalog in the follo
 
 ![](../share-data/attachments/share-data/data-hub-home.png)
 
-* Type a search term in the search box and click **Search** (Use at least three alphanumeric characters.)
+* Type a search term in the search box and click **Search** (use at least three alphanumeric characters)
 * Click one of the *tags* given in the **Search suggestions**
 * Click one of the services under **Most Popular Services**
 * Click the **Catalog** tab
@@ -88,7 +89,7 @@ The collapsible **Search** pane is used to search for registered assets:
 
 ### 4.1 Specifying the Search
 
-Enter a search string in the **Search** area using a minimum of 3 alphanumeric characters.
+Enter a search string in the **Search** area using a minimum of three alphanumeric characters.
 
 The wildcard `*` can also be used to imply an empty search but it is not necessary. Searching without specifying any search string will return all registered items. 
 
@@ -165,7 +166,6 @@ When a data source is selected in the search results, the following details are 
 
 {{% alert type="info" %}}The **Dataset** is the name of the **Entity set** of a published **Entity** in Mendix Studio Pro. By default, the entity name has an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
 	
-
 You can perform the following actions from this screen:
 
 * **Copy Data Source URI** – click to copy the URI of the data source contract to the clipboard. This URI can be used to integrate the data source in other enterprise applications.
@@ -204,7 +204,6 @@ You can perform the following actions from this screen:
 * **Copy Dataset URI** – click to copy the URI of the dataset to the clipboard for use in other business applications
 * **Share Dataset** – click to copy the link to this dataset detail page to the clipboard so that it can be shared with others
 
-
 ## 6 Metadata Panel {#metadata}
 
 The metadata panel at the right of the asset details screen displays details from the OData service metadata contract and values that can be curated in the Data Hub Catalog:
@@ -216,7 +215,7 @@ The tags that have been assigned to the data source during [curation.](curate#ta
 {{% alert type="info" %}}Tags assigned at a data source level propagate down to the datasets and attributes exposed in the service.{{% /alert %}}
 
 ### 6.2 Business Owner
-A link to the business owner of the data exposed in the data source. Business owners can be added, see [Changing owners of an application](curate#changing-owners).
+A link to the business owner of the data exposed in the data source. Business owners can be added. For more information, see [Changing owners of an application](curate#changing-owners).
 
 ### 6.3 Technical Owner
 The technical contact of the app; by default this is the owner who registered the OData service. For apps hosted in the Mendix Cloud, by default, the **Technical Owner** is the app developer who deployed the app. For more information, see [Changing owners of an application](curate#changing-owners).
@@ -229,13 +228,15 @@ See [Curate Bar](#curate-bar) for changing **Discoverability** as the owner of t
 The following discoverability values can be set:
 
 * **Discoverable** – all users of the Data Hub Catalog and Studio Pro can see and consume the asset provided they meet the requirements of the **Classification**
-* **Not Discoverable** – the asset is not visible in the Catalog. Only owners, Data Hub curators, and the Data Hub Admin can find, use, and curate the service. 
+* **Not Discoverable** – the asset is not visible in the Catalog; only owners, Data Hub curators, and the Data Hub Admin can find, use, and curate the service
   {{% alert type="info" %}}A **Not discoverable** asset is also not included in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Data Hub API.{{% /alert %}}
 
 ### 6.5 Validated
+
 Indicates if the data source has been **Validated**. See [Curate Bar](#curate-bar) for changing **Validated** as an owner of the data source or curator.
 
 ### 6.6 Access Level
+
 Displays the access classification of the data exposed by the service: end-users of the app will only be able to see the information must have the appropriate [user role](/refguide/user-roles) to access the data:
 
 * **Public** – classified as public and available to all users, internal and external to the organization
@@ -243,9 +244,11 @@ Displays the access classification of the data exposed by the service: end-users
   {{% alert type="info" %}}Classifications at a data source level propagate down to the datasets and attributes. {{% /alert %}}
 
 ### 6.7 Application
+
 A link to the application from which the data source was published. 
 
 ### 6.8 Environment Type
+
 The environment type indicates the quality and the status of the data. The following environment types can be specified: 
 
 * **Production**

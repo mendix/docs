@@ -108,7 +108,7 @@ To specify the environment type for the search, click **Filter**:
 
 ![](attachments/search/dh-filter-box.png)
 
-In the **Filters** dialog box, check the **Environment Types** that you want to include, and click **Apply Filters**. The search results will only display hits for the specified search string in the checked environments.
+In the **Filters** dialog box, check the **Environment Types** that you want to include in the search, and click **Apply Filters**. The search results will display hits for the specified search string in the checked environments.
 
 {{% alert type="info" %}}
 The **Sandbox** filter refers to apps deployed to the Mendix Free App environment. 

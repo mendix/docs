@@ -11,6 +11,17 @@ tags: ["build", "app", "studio", "studio pro", "style", "styling"]
 
 This page describes how developers can change the styling of apps and create re-usable styling. For progressive and web apps, SASS (SCSS) is used and for native mobile apps JavaScript is used. Even though the technologies differ, the approach for customizing styling is the same.
 
+For a great deep-dive look into styling, check out this video:
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/M2NCccTnfnh7Yx2gjEyBpf.jpg"
+  data-uuid="M2NCccTnfnh7Yx2gjEyBpf"
+  data-v="4"
+  data-type="inline"
+/>
+
 ## 2 Changing the App Look and Feel
 
 Developers have several options to change an app's look and feel. Depending on whether you are a Studio or Studio Pro user, there are different options.

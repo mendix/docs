@@ -35,7 +35,7 @@ The version of the selected data source is displayed in the [Asset Details](#sea
 
 The Data Hub Catalog is a collection of apps that are deployed to a particular environment, and the services/data sources published from the apps that are deployed to the same environment. This means that each registered data source has a unique **endpoint**. This endpoint is the location of the OData service contract where the particular version of the service is running in a specific environment.
 
-The environment also provides an indication of the quality of the dataset. Shared datasets available from *production environments* will have production-level data. Shared datasets in non-production environments (*acceptance*, *development*) could be populated with data that may not be reliable for building stable apps but may be useful for development work.
+The environment also provides an indication of the quality of the data that is going to be available. Shared datasets available in *production environments* will have production-level or live data. Shared datasets in non-production environments (*acceptance*, *development*) indicates that it is not live data but includes representative data that is useful for development work.
 
 Search results show the data source endpoints. If a version of a service is deployed on both a test and acceptance environment, a search on the service name will have two hits. 
 

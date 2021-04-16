@@ -162,7 +162,7 @@ When a data source is selected in the search results, the following details are 
 
 * All **Datasets** that are exposed in the data source (you can expand each one to see details of the attributes and associations) 
 
-{{% alert type="info" %}}The **Dataset** is the name of the **Entity set** of a published **Entity** in Mendix Studio Pro. By default, the entity name has an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
+{{% alert type="info" %}}In Mendix Studio Pro, **Dataset** is the **Entity set** name of a published **Entity**, which by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
 	
 You can perform the following actions from this screen:
 

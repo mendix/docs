@@ -227,7 +227,7 @@ When a data source is registered, by default, it is **Discoverable** in the Data
 
 See [Curate Bar](#curate-bar) for changing **Discoverability** as the owner of the data source or curator.
 
-The following discoverability values can be set:
+A data source can have the one of the following discoverability settings:
 
 * **Discoverable** – all users of the Data Hub Catalog and Studio Pro can see and consume the asset provided they meet the requirements of the **Classification**
 * **Not Discoverable** – the asset is not visible in the Catalog; only owners, Data Hub curators, and the Data Hub Admin can find, use, and curate the service

@@ -15,9 +15,9 @@ Before upgrading, please note that in Atlas 3 all hybrid content is removed beca
 
 Before you start the upgrading process, it may help if you consult the folder structure changes introduced in Atlas 3 by reading the [File and Folder Structure](/howto/front-end/customize-styling-new#file-and-folder) section of *How to Customize Styling*. 
 
-### 2.1 Modify Existing Files
+### 2.1 Modify Existing Module
 
-To upgrade to Atlas 3, please do the steps below as they apply to your use case. If you have not made any modifications to your `Atlas_UI_Resources` module, you can skip this section. Modifications include changes to pages, layouts, design properties and custom styles added to the `Atlas_UI_Resources` module.
+To upgrade to Atlas 3, please do the steps below as they apply to your use case. If you have not made any modifications to your `Atlas_UI_Resources` module, you can skip to the [Expected Issues After Upgrading to Atlas 3](#expected-issues) section below. Modifications include changes to pages, layouts, design properties and custom styles added to the `Atlas_UI_Resources` module.
 
 If you have made modifications to your `Atlas_UI_Resources` module, you must do the following:
 
@@ -144,7 +144,7 @@ In this example, the result is as follows:
 }
 ```
 
-### 2.2 Modify Existing Files (Continued)
+### 2.2 Modify Existing Module (Continued)
 
 Once you have completed the necessary steps above, finish modifying existing files by doing the following: 
 
@@ -158,7 +158,7 @@ Once you have completed the necessary steps above, finish modifying existing fil
 
 {{% todo %}}[add atlas core files later, and add this text to step 2 For internal testing, download **Atlas_Core** file below this step]{{% /todo %}}
 
-## 3 Expected Issues After Upgrading to Atlas 3
+## 3 Expected Issues After Upgrading to Atlas 3 {#expected-issues}
 
 When you have completed the sections above, you may have errors in your error list:
 

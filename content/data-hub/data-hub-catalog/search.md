@@ -204,7 +204,7 @@ You can perform the following actions from this screen:
 
 ## 6 Metadata Panel {#metadata}
 
-The metadata panel at the right of the asset details screen displays details from the OData service metadata contract and values that can be curated in the Data Hub Catalog:
+The metadata panel at the right of the asset details screen displays details from the OData service metadata contract and values that have been added when the asset has been curated (Catalog metadat):
 
  {{% image_container width="300" %}}![](attachments/search/metadata.png){{% /image_container %}}
 

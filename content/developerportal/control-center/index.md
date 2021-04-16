@@ -26,7 +26,11 @@ You can access Control Center via the menu item on the navigation pane.
 
 ## 2 Dashboard
 
-The Control Center dashbaord gives you an overview of various activities for your company on the Mendix Platform.
+{{% alert type="info" %}}
+This new feature is currently in Beta. Please provide feedback via the feedback button at the right of the page. For more information, see [Mendix Beta Features](/releasenotes/beta-features/).
+{{% /alert %}}
+
+The Control Center dashboard gives you an overview of various activities for your company on the Mendix Platform.
 
 ![](attachments/dashboard.png)
 
@@ -39,7 +43,7 @@ These are some examples of what the dashboard presents:
 
 ## 3 App Projects {#apps}
 
-On the **Active App Projects** tab of this page, you can see a list of the active apps that belong to your company. The **Inactive App Projects** tab lists your company's deactivated apps. The following details apply to deactivated apps:
+On the **Active App Projects** tab of this page, you can see a list of the active apps that belong to your company. The **Deactivated App Projects** tab lists your company's deactivated apps. The following details apply to deactivated apps:
 
 * A deactivated app still exists in the company, but it is invisible to regular users
 * You can only deactivate Free Apps that are not attached to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) nodes
@@ -50,7 +54,7 @@ When you click an app name, a pop-up window opens with the app profile. You have
 * **Members** tab – This tab presents the active members and external members of the app. You can directly deactivate a member from the app by clicking their name and selecting **Deactivate Member**. For other member management options, click **Manage Members**, which will open the **Security** > [App Team](../collaborate/team#managing) page. If you are a Mendix Admin, you can also add yourself to an App Team via this page.
 * **Project Roles** –  This tab presents the App Team roles defined via the **Default App Roles** tab and/or customized for a particular app.
 
-When you select one or more apps via the check boxes on the **Active App Projects** or **Inactive App Projects** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating/activating apps, and deleting apps.
+When you select one or more apps via the check boxes on the **Active App Projects** or **Deactivated App Projects** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating/activating apps, and deleting apps.
 
 The **Default App Project Roles** tab shows the default [App Team roles](/developerportal/collaborate/app-roles#edit-app-team-roles) assigned for every new app created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/develop/team-server) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) information.
 
@@ -58,15 +62,15 @@ The **Default App Project Roles** tab shows the default [App Team roles](/develo
 
 ## 4 Members {#members}
 
-Members are users who can view and/or edit an app. On the **Active members** tab, you can see the active members of your company who can access certain apps: 
+Members are users who can view and/or edit an app. On the **Active Members** tab, you can see the active members of your company who can access certain apps: 
 
 ![](attachments/members.jpg)
 
 When you click a company member's name, a pop-up window opens with their member profile. The profile displays the **App Projects** of which they are a member as well as their **Project role** for each app. Click an app name to go to its [app profile](#apps) pop-up window.
 
-On the **Inactive members** tab, you can see former members of your company who have been deactivated.
+On the **Deactivated Members** tab, you can see former members of your company who have been deactivated.
 
-On the **External members** tab, you can see the members outside of your company who have access to at least one of your company apps.
+On the **External Members** tab, you can see the members outside of your company who have access to at least one of your company apps.
 
 When you select members in the lists on these tabs, a context menu appears with options for exporting member details to an *.xlsx* file and deactivating/activating members.
 

@@ -104,7 +104,6 @@ Search is case-insensitive.
 
 You can filter search results by environment type. By default, the **Production** environment filter is active, restricting search to assets in a production environment. 
 
-
 To specify the environment type for the search, click **Filter**:
 
 ![](attachments/search/dh-filter-box.png)
@@ -195,7 +194,7 @@ When a **Dataset** is selected in the search results, the following details are 
 	![](attachments/search/attributes-associations.png)
 
 	* **Name** – the name of the association that is exposed in the OData service contract
-	* **Navigates to** – the dataset the association is made with; click the link to see the details of the associated dataset in the Catalog.
+	* **Navigates to** – the dataset the association is made with; click the link to see the details of the associated dataset in the Catalog
 	* **Multiplicity** – the number of object at the other end of the association (0..1, 1 or *)
 
 You can perform the following actions from this screen:
@@ -216,11 +215,11 @@ The tags that have been assigned to the data source during [curation.](curate#ta
 
 ### 6.2 Business Owner
 
-A link to the business owner of the data exposed in the data source. Business owners can be added. For more information, see the [Changing Owners of an Application](curate#changing-owners) section of *Curate Registered Assets*.
+A link to the business owner of the data exposed in the data source. Business owners can be added. For more information, see the [Changing Owners of an Application](curate#changing-owners) section of *How to Curate Registered Assets*.
 
 ### 6.3 Technical Owner
 
-The technical contact of the app; by default this is the owner who registered the OData service. For apps hosted in the Mendix Cloud, by default, the **Technical Owner** is the app developer who deployed the app. For more information, see the [Changing Owners of an Application](curate#changing-owners) section of *Curate Registered Assets*.
+The technical contact of the app; by default this is the owner who registered the OData service. For apps hosted in the Mendix Cloud, by default, the **Technical Owner** is the app developer who deployed the app. For more information, see the [Changing Owners of an Application](curate#changing-owners) section of *How to Curate Registered Assets*.
 
 ### 6.4 Discoverability {#discoverability-metadata}
 

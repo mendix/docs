@@ -10,15 +10,14 @@ tags: ["data hub", "data hub catalog"]
 
 The search functionality in the [Data Hub Catalog](#data-hub-home) makes it easy to find the right data to use in your app development. 
 
-- The details of registered data assets can be viewed in the [Asset details](#search-details) screen. 
-- The [Copy Data Source URI](#service-details) and **Download** contract buttons enable you to access the data source endpoints which you can use to integrate registered data sources into your enterprise applications.
+* The details of registered data assets can be viewed in the [Asset details](#search-details) screen
+* The [Copy Data Source URI](#service-details) and **Download** contract buttons enable you to access the data source endpoints which you can use to integrate registered data sources into your enterprise applications
 
 You can start searching from the [Data Hub Home](#data-hub-home) page or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Asset Details** screen.
 
 {{% alert type="info" %}}The [Data Hub pane](/refguide/data-hub-pane) in Studio Pro integrates the powerful search of the Data Hub Catalog. You can find and use registered datasets as external entities in your app development.{{% /alert %}}
 
 Registered assets can be [curated](#curate-bar) to add and edit **Tags**, **Owners**, and **Descriptions**. Further curate functions include setting properties such as  **Discoverable** and **Validated** . 
-
 
 ## 2 Details of Registered Assets
 
@@ -41,7 +40,7 @@ The environment also provides an indication of the quality of the dataset. Share
 Search results show the data source endpoints. If a version of a service is deployed on both a test and acceptance environment, a search on the service name will have two hits. 
 
 {{% alert type="info" %}}
-By default, search results in the Data Hub Catalog are filtered to show only hits in the **Production** environments. You can extend the search to **Non-production** or **Mendix Free App (Sandbox)** environments by checking them in the search pane **Add Filter** list. For more details, see [Filters](#filter).
+By default, search results in the Data Hub Catalog are filtered to show only hits in the **Production** environments. You can extend the search to **Non-production** or **Mendix Free App (Sandbox)** environments by checking them in the search pane **Add Filter** list. For more details, see the [Filters](#filter) section below.
 {{% /alert %}}
 
 ### 2.3 Asset Descriptions
@@ -85,7 +84,7 @@ The **Search** screen is divided into the [search](#search-pane) pane on the lef
 
 The collapsible **Search** pane is used to search for registered assets:
 
- {{% image_container width="300" %}}![](attachments/search/search-pane.png){{% /image_container %}}
+{{% image_container width="300" %}}![](attachments/search/search-pane.png){{% /image_container %}}
 
 ### 4.1 Specifying the Search
 
@@ -130,7 +129,7 @@ The number of items satisfying the search criteria (search string plus filters) 
 * Popularity of the service (the number of connections)
 * **Validated** assets before not validated items
 
-{{% alert type="info" %}}Assets that are set to [Non-discoverable](#discoverability-metadata) are not included in the search results unless you are a curator or owner of the asset.{{% /alert %}}
+{{% alert type="info" %}}Assets that are set to [Not Discoverable](#discoverability-metadata) are not included in the search results unless you are a curator or owner of the asset.{{% /alert %}}
 
 When an item in the search results is selected, the **Catalog** tab displays the **Details** of the asset and the **Landscape** tab will show the network of connections and dependencies of the selected item in the [Data Hub Landscape](/data-hub/data-hub-landscape/).
 
@@ -168,9 +167,9 @@ When a data source is selected in the search results, the following details are 
 	
 You can perform the following actions from this screen:
 
-* **Copy Data Source URI** – click to copy the URI of the data source contract to the clipboard. This URI can be used to integrate the data source in other enterprise applications.
-*  **Share Data Source** – click to copy the link to this asset detail page to the clipboard so that you can share it with others.
-*  [Download](#download-contract) – retrieve and save the OData contract from the data source endpoint to your computer.
+* **Copy Data Source URI** – click to copy the URI of the data source contract to the clipboard; this URI can be used to integrate the data source in other enterprise applications
+*  **Share Data Source** – click to copy the link to this asset detail page to the clipboard so that you can share it with others
+*  [Download](#download-contract) – retrieve and save the OData contract from the data source endpoint to your computer
 
 ### 5.2 Details for a Selected Dataset {#entity-details}
 
@@ -196,7 +195,7 @@ When a **Dataset** is selected in the search results, the following details are 
 	![](attachments/search/attributes-associations.png)
 
 	* **Name** – the name of the association that is exposed in the OData service contract
-	* **Navigates to** – the dataset the association is made with. Click the link to see the details of the associated dataset in the Catalog. 
+	* **Navigates to** – the dataset the association is made with; click the link to see the details of the associated dataset in the Catalog.
 	* **Multiplicity** – the number of object at the other end of the association (0..1, 1 or *)
 
 You can perform the following actions from this screen:
@@ -211,16 +210,20 @@ The metadata panel at the right of the asset details screen displays details fro
  {{% image_container width="300" %}}![](attachments/search/metadata.png){{% /image_container %}}
 
 ### 6.1 Tags
+
 The tags that have been assigned to the data source during [curation.](curate#tags)
 {{% alert type="info" %}}Tags assigned at a data source level propagate down to the datasets and attributes exposed in the service.{{% /alert %}}
 
 ### 6.2 Business Owner
-A link to the business owner of the data exposed in the data source. Business owners can be added. For more information, see [Changing owners of an application](curate#changing-owners).
+
+A link to the business owner of the data exposed in the data source. Business owners can be added. For more information, see the [Changing Owners of an Application](curate#changing-owners) section of *Curate Registered Assets*.
 
 ### 6.3 Technical Owner
-The technical contact of the app; by default this is the owner who registered the OData service. For apps hosted in the Mendix Cloud, by default, the **Technical Owner** is the app developer who deployed the app. For more information, see [Changing owners of an application](curate#changing-owners).
+
+The technical contact of the app; by default this is the owner who registered the OData service. For apps hosted in the Mendix Cloud, by default, the **Technical Owner** is the app developer who deployed the app. For more information, see the [Changing Owners of an Application](curate#changing-owners) section of *Curate Registered Assets*.
 
 ### 6.4 Discoverability {#discoverability-metadata}
+
 When a data source is registered, by default, it is **Discoverable** in the Data Hub Catalog. When this is set, all users can find it, view the details, and consume it. The owners of an asset and curators can set a data source as **Not discoverable**, which means it is not visible to users unless they are the owner or a curator.
 
 See [Curate Bar](#curate-bar) for changing **Discoverability** as the owner of the data source or curator.
@@ -273,7 +276,7 @@ Owners and curators can carry out the following actions:
 
 {{% alert type="info" %}}By default, newly registered services are set to **Discoverable** and visible to all users and are set to **Not validated**.{{% /alert %}}
 
-For further details on see [Curation](./curate).
+For further details, see [Curation](/data-hub/data-hub-catalog/curate).
 
 ## 8 Data Source and Dataset URIs 
 

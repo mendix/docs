@@ -169,7 +169,7 @@ To create the export logic, follow these steps:
     ![](attachments/18448731/18581821.png)
 
 19. Drag a **Download file** activity from the **Toolbox** to the line between the start event and end event.
-20. Double-click the actvity to open the **Download File** dialog box and select **NewXMLDocument** as the **File document**:
+20. Double-click the activity to open the **Download File** dialog box and select **NewXMLDocument** as the **File document**:
 
     ![](attachments/18448731/18581818.png)
 

@@ -36,7 +36,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * As a result of installing Atlas 3, your app should contain the following modules that Workflow Commons depends on: Atlas_Core, Atlas_Web_Core_Content, and DataGrid.
 
-* Make sure that the **User entity** is configured in your [Project Settings](/refguide/project-settings#workflows) > **Workflows** tab. 
+* Make sure that the **User entity** is configured in your [App Settings](/refguide/project-settings#workflows) > **Workflows** tab. 
 
 * Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows). 
 
@@ -47,11 +47,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Make sure you have the following enumerations configured:
 
     * The PhoneModel enumeration:
-  
+    
         ![](attachments/workflow-how-to-configure/enumeration-phone-model.png)
-  
+    
     * The LaptopModel enumeration:
-  
+    
         ![](attachments/workflow-how-to-configure/enumeration-laptop-model.png)
   
 * Make sure you have an **EmployeesToOnboard** page that contains a form and has the **EmployeeOnboarding** entity as the data source:
@@ -91,7 +91,7 @@ Do the following:
 
 10. Repeat steps 2-8 to create and configure the HR role.
 
-You have configured new project roles for Facilities, manager, and HR. 
+You have configured new project roles for Facilities, Manager, and HR. 
 
 
 ### 3.2 Configuring Demo Users
@@ -186,11 +186,13 @@ The manager of a new employee will get a task to specify devices for the new hir
 
     ![SpecifyDevice Properties](attachments/workflow-how-to-configure/specify-device-properties.png) 
 
-5. To create a page where the manager will specify devices for the new employee, click the ellipsis icon in the **Page** property.
+5. Set the **Allowed roles** to **Manager** for managers to be able to interact with the user task. 
 
-6. In the **Select web page** dialog box, click the **New** button.
+6. To create a page where the manager will specify devices for the new employee, click the ellipsis icon in the **Page** property.
 
-7. In the **Create web page** dialog box, you can see the templates for workflow pages. Do the following:
+7. In the **Select web page** dialog box, click the **New** button.
+
+8. In the **Create web page** dialog box, you can see the templates for workflow pages. Do the following:
 
     1. Set the **Page name** to **SpecifyDevice**.
 
@@ -200,33 +202,33 @@ The manager of a new employee will get a task to specify devices for the new hir
 
     4. Click **OK**.
 
-8. As only the Manager should specify devices for the new employee, you need to restrict the user task to the Manager role. Click the ellipsis icon in the **Assigned to** property.
+9. As only the Manager should specify devices for the new employee, you need to restrict the user task to the Manager role. Click the ellipsis icon in the **Assigned to** property.
 
-9. In the **Edit assigned to** dialog box, type in the expression: `[System.UserRoles = '[%UserRole_Manager%]']` and click **OK**.
+10. In the **Edit assigned to** dialog box, type in the expression: `[System.UserRoles = '[%UserRole_Manager%]']` and click **OK**.
 
-10. Now you need to make sure that only the relevant information is displayed on the **SpecifyDevice** page. In the Project Explorer, double-click the **SpecifyDevice** page to open it.
+11. Now you need to make sure that only the relevant information is displayed on the **SpecifyDevice** page. In the Project Explorer, double-click the **SpecifyDevice** page to open it.
 
-11. By default, all attributes are added to the data view with the employee details. You need to leave only the attributes related to the task. You also need to make sure that the manager can change only a specific field in the form. For example, the name of the employee has been entered by the HR department, so the manager does not need to change it and should have this field as read-only. 
+12. By default, all attributes are added to the data view with the employee details. You need to leave only the attributes related to the task. You also need to make sure that the manager can change only a specific field in the form. For example, the name of the employee has been entered by the HR department, so the manager does not need to change it and should have this field as read-only. 
 
-    Do the following:
+     Do the following:
 
-    1. Select the text box for the **FullName** attribute and go to its properties.
+     1. Select the text box for the **FullName** attribute and go to its properties.
 
-    2. Set the **Editable** property to *Never* to make the field read-only.
+     2. Set the **Editable** property to *Never* to make the field read-only.
 
-    3. Delete the **Location** radio buttons and **First day** date picker widgets and the **Workflow** reference selector as they are not relevant for this task. 
+     3. Delete the **WFH** radio buttons and **First day** date picker widgets and the **Workflow** reference selector as they are not relevant for this task. 
 
-    4. Leave the **Phone model** and **Laptop model** radio buttons:
+     4. Leave the **Phone model** and **Laptop model** radio buttons:
 
-        ![Form for Specifying Devices](attachments/workflow-how-to-configure/specify-devices-form.png)
+         ![Form for Specifying Devices](attachments/workflow-how-to-configure/specify-devices-form.png)
 
-12. Only the Manager role can access and interact with the **SpecifyDevice** page, restricting the access to this page is the next step. Navigate to the page properties and do the following:
+13. Only the Manager role can access and interact with the **SpecifyDevice** page, restricting the access to this page is the next step. Navigate to the page properties and do the following:
 
-    1. In the **Visible for** property, click the ellipsis icon.
+     1. In the **Visible for** property, click the ellipsis icon.
 
-    2. In the **Select Module Roles** dialog box, select **Manager** and click **OK**:
+     2. In the **Select Module Roles** dialog box, select **Manager** and click **OK**:
 
-        ![Select Module Roles](attachments/workflow-how-to-configure/select-module-roles.png)
+         ![Select Module Roles](attachments/workflow-how-to-configure/select-module-roles.png)
 
 Great job! You have created the user task for the Manager role:
 
@@ -241,8 +243,9 @@ To proceed with the onboarding, the Manager needs to indicate whether the new hi
 2. Open the **Toolbox**, drag and drop a **User task** activity to the path, and do the following:
 
     1. Set **Name** to **Specify_Location** and set **Caption** to **Manager: Specify Location** referring to steps 2-4 of the [Selecting a Device for the New Hire](#select-device) section.
-    2. Set a new page called **SpecifyLocation** for the **Page** property referring to steps 5-7 of the [Selecting a Device for the New Hire](#select-device) section.
-    3. Restrict the **Specify Location** user task to the Manager role referring to steps 8-9 of the [Selecting a Device for the New Hire](#select-device) section.
+    2. Set the **Allowed roles** property to **Manager** for managers to be able to interact with the user task. 
+    3. Set a new page called **SpecifyLocation** for the **Page** property referring to steps 6-8 of the [Selecting a Device for the New Hire](#select-device) section.
+    4. Restrict the **Specify Location** user task to the Manager role referring to steps 7-10 of the [Selecting a Device for the New Hire](#select-device) section.
 
 3. Now you need to make sure that only the relevant information is displayed on the **SpecifyLocation** page and that only the Manager role has access to it. In the Project Explorer, double-click the **SpecifyLocation** page to open it.
 
@@ -260,7 +263,7 @@ To proceed with the onboarding, the Manager needs to indicate whether the new hi
 
         ![Specify Location Form](attachments/workflow-how-to-configure/specify-location-form.png)
 
-    5. To restrict access of the page to the Manager role only, follow step 12 of the [Selecting a Device for the New Hire](#select-device) section.
+    5. To restrict access of the page to the Manager role only, follow step 13 of the [Selecting a Device for the New Hire](#select-device) section.
     
 
 You have created the user task for the Manager to specify whether the new employee is working from home or not.
@@ -291,9 +294,11 @@ Do the following:
 
     1. Name the user task **Prepare_Desk** and set its title to **Facilities: Prepare Desk** referring to steps 2-4 of the [Selecting a Device for the New Hire](#select-device) section.
 
-    2. Set a new page called **PrepareDesk** for the **Page** property it referring to steps 5-7 of the [Selecting a Device for the New Hire](#select-device) section.
+    2. Set the **Allowed roles** property to **Facilities** for managers to be able to interact with the user task. 
 
-    3. Restrict the **Prepare Desk** user task to the Facilities role referring to steps 8-9 of the [Selecting a Device for the New Hire](#select-device) section.
+    3. Set a new page called **PrepareDesk** for the **Page** property it referring to steps 6-8 of the [Selecting a Device for the New Hire](#select-device) section.
+
+    4. Restrict the **Prepare Desk** user task to the Facilities role referring to steps 9-10 of the [Selecting a Device for the New Hire](#select-device) section.
 
         ![Prepare Desk](attachments/workflow-how-to-configure/prepare-desk.png)
 
@@ -309,15 +314,16 @@ Do the following:
       
        ![Read-Only Form](attachments/workflow-how-to-configure/read-only-form.png)
    
-7. To restrict access to the page to the Facilities role only, follow the step 12 of the [Selecting a Device for the New Hire](#select-device) section.
+7. To restrict access to the page to the Facilities role only, follow the step 13 of the [Selecting a Device for the New Hire](#select-device) section.
 
 8. Now you need to create a user task for Facilities when the employee is working from home. Open the workflow editor.
 
 9. Open the **Toolbox**, drag and drop a **User task** activity to the **true** path, and do the following:
 
     1. Name the user task **Ship_Devices** and set its title to **Facilities: Ship Devices** referring to steps 2-4 of the [Selecting a Device for the New Hire](#select-device) section.
-    2. Set a new page called **ShipDevices** for the **Page** property it referring to steps 5-7 of the [Selecting a Device for the New Hire](#select-device) section.
-    3. Restrict the **Ship Devices** user task and **ShipDevices** page to the Facilities role referring to steps 8-9 of the [Selecting a Device for the New Hire](#select-device) section.
+    2. Set the **Allowed roles** property to **Facilities** for managers to be able to interact with the user task. 
+    3. Set a new page called **ShipDevices** for the **Page** property it referring to steps 6-8 of the [Selecting a Device for the New Hire](#select-device) section.
+    4. Restrict the **Ship Devices** user task and **ShipDevices** page to the Facilities role referring to steps 9-10 of the [Selecting a Device for the New Hire](#select-device) section.
 
 10. You need to make sure that only relevant information is displayed on the **ShipDevices** page and that this page can be accessed by the Facilities department only. In the Project Explorer, double-click the **ShipDevices** page to open it.
 

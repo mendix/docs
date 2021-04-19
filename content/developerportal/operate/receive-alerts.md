@@ -4,6 +4,7 @@ parent: "monitoring-application-health"
 #menu_order: 180
 description: "Describes how to receive environment status alerts."
 tags: ["Technical Contact","Settings","Alerts","Developer Portal"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -21,7 +22,7 @@ You can switch the alerts on and off for each environment to which you are entit
 Before starting this how-to, make sure you have completed the prerequisites described below:
 
 * You need an **Application Operator**, **Business Engineer**, or **Scrum Master** role
-* In the case that a [Mendix Admin](/developerportal/control-center/#members) has defined a new App Team role, that role must have the App Team **Edit** permission for **Monitor**    
+* In the case that a [Mendix Admin](/developerportal/control-center/#members) has defined a new team role, that role must have the team **Edit** permission for **Monitor**    
     
 ## 3 Receive Alerts
 

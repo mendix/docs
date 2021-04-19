@@ -210,7 +210,11 @@ To allow you to enter some data, you will need to generate some pages and then e
 
 ### 8.2 Running the microflow
 
-To run the microflow you created above, you will need to create another microflow which is added to the navigation. This microflow should create a **PolicyDoc** object and associate it with existing **Policy** objects, making sure that all the associations are committed, and pass this PolicyDoc as the parameter to the microflow. This will export all the Policy objects you associated with the PolicyDoc.
+To run the microflow you created above, you will need to create another microflow which is added to the navigation. This microflow should create a **PolicyDoc** object and associate it with existing **Policy** objects using a loop, making sure that all the associations are committed after the loop, and pass this PolicyDoc as the parameter to the microflow. This will export all the Policy objects you associated with the PolicyDoc.
+
+Your new microflow should look similar to this:
+
+![](attachments/using-the-excel-exporter/associating-objects.png)
 
 {{% alert type="info" %}}
 If you create a **PolicyDoc** with *no* associations to **Policy** objects, you will export an empty spreadsheet with the structure defined in the template.

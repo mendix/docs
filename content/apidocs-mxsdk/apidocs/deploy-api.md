@@ -2,9 +2,14 @@
 title: "Deploy API"
 category: "API Documentation"
 description: "APIs which can be used to deploy Mendix apps to licensed nodes"
+menu_order: 25
 tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+{{% alert type="warning" %}}
+The Deploy API only works for apps which are deployed to the Mendix Cloud.
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -540,6 +545,10 @@ An object with the following key-value pairs:
 ```
 
 ### 3.10 Upload Package{#upload-package}
+
+{{% alert type="info" %}}
+When uploading large (>300MB) packages, this API can time out. In this case, you should switch to the [V2 version of this API](deploy-api-2#upload-package).
+{{% /alert %}}
 
 #### 3.10.1 Description
 

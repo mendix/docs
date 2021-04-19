@@ -75,21 +75,13 @@ This is the pattern from which the arguments are derived that are passed to the 
 * `{0}` – this is replaced with the name of the original file before the arguments are passed to the file comparison program
 * `{1}` – this is replaced with the name of the changed file before the arguments are passed to the file comparison program
 
-### 4.2 Subversion
+### 4.2 Enable Private Version Control with Subversion{#enable}
 
-#### 4.2.1 Enable Private Version Control with Subversion {#enable}
+Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/collaborate/team-server), but in another Subversion server to which you have access. This will allow you to specify the location of the app on the Subversion server when opening, downloading, or uploading the app.
 
-Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/develop/team-server), but in another Subversion server to which you have access. This will allow you to specify the location of the app on the Subversion server when opening, downloading, or uploading the app.
+### 4.3 Enable Private Version Control with Git
 
-### 4.3 Git
-
-#### 4.3.1 Enable Private Version Control with Git {#enable}
-
-{{% alert type="info" %}}
-Only appears when a feature flag for Git is enabled. For more information on how to enable the feature flag, see the [Enabling Feature Flag](/howto/collaboration-requirements-management/on-premises-git-howto#enable-feature-flag) section in *How to Work with Git On-Premises Version Control Server*.
-{{% /alert %}}
-
-Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/develop/team-server), but in a private Git server to which you have access. This will allow you to specify the location of the app on the Git server when opening, downloading, or uploading the app. In this section, you also need to specify name and email values that will be used to identify your commits with Git.
+Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/collaborate/team-server), but in a private Git server to which you have access. This will allow you to specify the location of the app on the Git server when opening, downloading, or uploading the app. In this section, you also need to specify name and email values that will be used to identify your commits with Git.
 
 ## 5 Advanced Tab
 

@@ -66,13 +66,13 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Improvements
 
 * In Control Center, Mendix Admins can now edit the name and description of an [App Access Group](/developerportal/control-center/#groups) once it has been created.
-* Mendix Admins can now [deactivate](/developerportal/control-center/#members) Technical Contacts and the last Scrum Master in an App Team.
+* Mendix Admins can now [deactivate](/developerportal/control-center/#members) Technical Contacts and the last Scrum Master in a team.
 
 ### March 4th, 2021
 
 #### Improvements
 
-* We made some minor changes to the look and feel over several pages, most notably the [General app settings](/developerportal/settings/general-settings) page.
+* We made some minor changes to the look and feel over several pages, most notably the [General Settings](/developerportal/collaborate/general-settings) page.
 * We removed the old Company Admin pages. But you are already using the [Mendix Control Center](/developerportal/control-center/) as a Mendix Admin, right?
 * We made some preparations for Git support.
 * We improved the sharing of data across the Developer Portal so that it is more stable and secure.
@@ -94,8 +94,8 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Improvements
 
 * We have updated the [App Projects](/developerportal/control-center/#projects) tab of Control Center, where you can now do the following:
-	* Open the [App Team](/developerportal/collaborate/team#managing) page from the project details page in order to manage App Team members and add yourself to an App Team (if you are a Mendix Admin)
-	* Deactivate or delete an app or an App Team member
+	* Open the [Team](/developerportal/collaborate/team#managing) page from the project details page in order to manage team members and add yourself to a team (if you are a Mendix Admin)
+	* Deactivate or delete an app or a team member
 
 ### February 9th, 2021
 
@@ -177,7 +177,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed an issue where team members were not displayed in the [App Team](/developerportal/collaborate/team) overview.
+* We fixed an issue where team members were not displayed in the [Team](/developerportal/collaborate/team) overview.
 
 ### October 4th, 2020
 
@@ -189,9 +189,9 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed an issue where the default avatar of an App Team member who committed a revision was not properly displayed in the revision overview of the story details.
-* We fixed an issue where a Company Admin was no longer able to open the [General](/developerportal/settings/general-settings) settings of an app they for an App Team in which they were not a member.
-* We repaired a dead link to the documentation on the [App User Management](/developerportal/settings/general-settings#managing-app-users) page.
+* We fixed an issue where the default avatar of a team member who committed a revision was not properly displayed in the revision overview of the story details.
+* We fixed an issue where a Company Admin was no longer able to open the [General Settings](/developerportal/collaborate/general-settings) of an app they for a team in which they were not a member.
+* We repaired a dead link to the documentation on the [App User Management](/developerportal/collaborate/general-settings#managing-app-users) page.
 
 ### August 25th, 2020
 
@@ -235,7 +235,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We implemented the second increment in renaming the default **End-user** App Team role to [Guest](/developerportal/collaborate/app-roles#app-team-roles).
+* We implemented the second increment in renaming the default **End-user** team role to [Guest](/developerportal/collaborate/app-roles#team-roles).
 
 #### Fixes
 
@@ -247,7 +247,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * The [new Stories UI](/developerportal/collaborate/stories) has been improved with various sections. The [old Stories UI](/developerportal/collaborate/stories#old) will be made unavailable soon. We encourage you to turn your tasks that are still available in the old Stories UI into new stories before the old UI is inaccessible.
 * We improved performance on story-related actions such as drag-and-drop and status changes on large apps with many deleted items.
-* We renamed the default **End-User** App Team role to [Guest](/developerportal/collaborate/app-roles#app-team-roles) to better distinguish App Team roles from app user roles.
+* We renamed the default **End-User** team role to [Guest](/developerportal/collaborate/app-roles#team-roles) to better distinguish team roles from app user roles.
 * We removed the list appearance of the [My Company's Apps](/developerportal/apps-list/#my-company-apps) page.
 
 #### Fixes 
@@ -354,7 +354,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Launchpad Removal & App User Management Update
 
 * We removed the old launchpad page, as we have moved to a new SSO architecture. The old URL `launchpad.mendix.com` now links to your [My Apps](/developerportal/apps-list/) page.
-* We moved the App User management functionality of the launchpad to the **General** app settings in the Developer Portal. For more information, see the [Managing App Users](/developerportal/settings/general-settings#managing-app-users) section of *How to Manage General App Settings*.
+* We moved the App User management functionality of the launchpad to the **General** app settings in the Developer Portal. For more information, see the [Managing App Users](/developerportal/collaborate/general-settings#managing-app-users) section of *How to Manage General App Settings*.
 
 ### August 9th, 2019
 
@@ -384,7 +384,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Webhooks Available
 
-* We have added the ability to create webhooks for your apps. These webhooks can be configured to send information when sprints change and/or stories change. For more information, see the [Managing Webhooks](/developerportal/settings/general-settings#webhooks) section of *How to Manage General App Settings* as well as [Webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints) in the *API Documentation*.
+* We have added the ability to create webhooks for your apps. These webhooks can be configured to send information when sprints change and/or stories change. For more information, see the [Managing Webhooks](/developerportal/collaborate/general-settings#webhooks) section of *How to Manage General App Settings* as well as [Webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints) in the *API Documentation*.
 
 ### April 5th, 2019
 
@@ -432,7 +432,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We improved the performance of the **My Apps** page for users who are a member of a large number of App Teams.
+* We improved the performance of the **My Apps** page for users who are a member of a large number of teams.
 * We updated the look and feel of the **My Company's Apps** page to be more in line with the **My Apps** page.
 * We improved the look and feel of the emails that are being sent by the Developer Portal.
 

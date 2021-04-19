@@ -4,6 +4,7 @@ parent: "private-cloud"
 description: "Describes the processes for creating a Private Cloud cluster in the Mendix Developer Portal"
 menu_order: 10
 tags: ["Create", "Private Cloud", "Cluster", "Namespace"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -109,17 +110,23 @@ If you are not already on the installation tab for your namespace, go to it by f
 Now you can download the Configuration Tool by doing the following:
 
 1. Choose the **Operating System** for your local computer.
+    ![](attachments/private-cloud-cluster/choose-operating-system.png)
 
-2. Choose the **Mendix Operator Version** that you would like to install.
-    {{% alert type="warning" %}}Once you've installed a certain version of the Mendix Operator into any namespace in the cluster, you should not install older versions of the Mendix Operator into the same cluster, even into other namespaces.{{% /alert %}}
+2. Click **Download Executable**.
+
+    ![](attachments/private-cloud-cluster/download-executable.png)
+
+3. Choose the **Mendix Operator Version** that you would like to install. If you have already installed the Mendix Operator, your currently installed version will be highlighted.
 
 	{{% alert type="info" %}}Choose the latest version, or at least version 1.9.0. Versions earlier than 1.9.0 are only available to allow _configuration_ of previously installed Mendix Operator versions.{{% /alert %}}
 
+    {{% alert type="warning" %}}Once you've installed a certain version of the Mendix Operator into any namespace in the cluster, you should not install older versions of the Mendix Operator into the same cluster, including other namespaces.{{% /alert %}}
 
-3. Click **Download Executable** and make sure that it is stored somewhere on your path.
 	{{% alert type="info" %}}The installation and configuration tool only supports a limited range of Mendix Operator versions. If the Mendix Operator version in your namespace is too new or too old, the configuration tool will not be able to configure it. Download a version of the Configuration tool that is compatible with the Mendix Operator you have installed.{{% /alert %}}
 
-    ![](attachments/private-cloud-cluster/download-executable.png)
+    ![](attachments/private-cloud-cluster/download-operator-version.png)
+
+4. Click the **Download** icon to download the installation and configuration tool. Make sure that it is stored somewhere on your path.
 
 ### 4.2 Signing in to OpenShift{#openshift-signin}
 
@@ -979,7 +986,7 @@ The **Apps** tab of namespace details in the cluster manager page lists all the 
 If you are a team member of the app, click **Details** to go to the *Environment Details* page for that app.
 
 {{% alert type="info" %}}
-You can only see the environment details of an app if you are a member of the app team with the appropriate authorization.
+You can only see the environment details of an app if you are a member of the team with the appropriate authorization.
 {{% /alert %}}
 
 #### 6.2.2 Members

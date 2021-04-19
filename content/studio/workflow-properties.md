@@ -22,7 +22,7 @@ Workflow properties consist of the following sections:
 
 ### 2.1 General Section {#general}
 
-The **General** section contains information on the title and name of the workflow. {{% todo %}}[Please update the screenshot below]{{% /todo %}}
+The **General** section contains information on the title and name of the workflow. 
 
 ![General Section](attachments/workflow-properties/general.jpg)
 
@@ -30,7 +30,7 @@ The **General** section properties are described in the table below:
 
 | Property | Description                                                  |
 | -------- | ------------------------------------------------------------ |
-| Caption  | Defines a title of the workflow that you see at the top of the working area. |
+| Title    | Defines a title of the workflow that you see at the top of the working area. |
 | Name     | The internal name of the workflow that must be unique. When referring to the workflow in the app you will use this name. |
 
 ### 2.2 Data Section {#data}
@@ -80,7 +80,7 @@ The **Due Date** section properties are described in the table below:
 
 ### 2.5 Admin Page Section {#admin-page}
 
-**Override Admin Page** is an optional page used for displaying all running workflows to the workflow admin. This overrides a generic page used to display any running workflow in the app, for example, when you have a **Open workflow page** set as an [on-click action](page-editor-widgets-events-section#open-workflow-page) or as a [microflow activity](microflows#microflow-workflow-activities) and would like to override the page selected for this event/activity. {{% todo %}}[Please update the screenshot below]{{% /todo %}}
+**Override Admin Page** is an optional page used for displaying all running workflows to the workflow admin. This overrides a generic page used to display any running workflow in the app, for example, when you have a **Show Workflow Page** set as an [on-click action](page-editor-widgets-events-section#show-workflow-page) or as a [microflow activity](microflows#microflow-workflow-activities) and would like to override the page selected for this event/activity. 
 
 ![Workflow Page Section](attachments/workflow-properties/workflow-page.jpg)
 

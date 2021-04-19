@@ -27,7 +27,7 @@ You can extract the files using your favorite archival tool, such as [7-Zip](htt
 For details on the system requirements for MxBuild, see [System Requirements](system-requirements#mxbuild).
 
 {{% alert type="info" %}}
-The examples used in this document are for Windows.
+Except where specifically mentioned, the examples used in this document are for Windows.
 {{% /alert %}}
 
 ## 2 Command Line
@@ -39,6 +39,10 @@ MxBuild takes a number of command-line options which control how the Mendix proj
 Use the following format for the command line:
 
 `MxBuild --java-home="JDKDirectory" --java-exe-path="javaExecutable" [options] projectFile`
+
+You can also run MxBuild under Linux using the the following command line format:
+
+`mono mxbuild.exe --java-home="JDKDirectory" --java-exe-path="javaExecutable" [options] projectFile`
 
 After creating the deployment package, the MxBuild process quits.
 

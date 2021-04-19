@@ -1,5 +1,5 @@
 ---
-title: "Mendix MVP Program"
+title: "MVP Program"
 category: "Community Tools"
 menu_order: 50
 description: "Describes how the Mendix Community MVP program works."
@@ -28,7 +28,7 @@ There are a few simple guidelines for the selection process:
 
 ## 3 Profile
 
-The Mendix MVPs represent the spirit of the Mendix community. They are highly engaged (with the [Mendix Forum](mendix-forum), [Marketplace](/appstore/general/app-store-overview), [Meetups](https://community.mendix.com/p/community), etc.), help other developers, and actively share their results. 
+The Mendix MVPs represent the spirit of the Mendix community. They are highly engaged (with the Mendix [Forum](mendix-forum), [Marketplace](/appstore/general/app-store-overview), [Meetups](https://community.mendix.com/p/community), etc.), help other developers, and actively share their results. 
 
 These are the labels we use to describe our MVP recognition requirements:
 

@@ -55,7 +55,6 @@ they will not be synchronized to a device. If the offline database already conta
 * If the object to synchronize to a device is deleted in the same microflow,
 **Synchronize to device** activity will remove it from the offline database, if found.
 * Autocommited and new objects get skipped.
-* Synchronizing files is not allowed.
 * It will only synchronize objects in a microflow that are called from a nanoflow, not from an event microflow.
 
 ## 6 Remarks

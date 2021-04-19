@@ -4,6 +4,7 @@ parent: "metrics"
 menu_order: 25
 description: "Describes calculating disk space on a Mendix Cloud Version 3 environment."
 tags: ["Mendix Cloud", "cloud", "v3", "Disk Space"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 {{% alert type="warning" %}}

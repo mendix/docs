@@ -268,13 +268,28 @@ this.props.myDataSource.hasMoreItems &&
 </button>
 ```
 
+The situation when a `limit` is set to *0* is handled specially. In that case `ListValue` will avoid sending a request to the server to retrieve data and will immediately return empty result. This property can be used to build widgets that load their data lazily - that is, only when and if a specific condition is met.
+
+The following code sample loads the data only if a button is pressed:
+
+```tsx
+export default const LazyWidget = (props: LazyWidgetProps) => {
+    useMemo(() => props.myDataSource.setLimit(0), []);
+    return props.myDataSource.items?.length ? (
+        props.myDataSource.items.map((i) => <div key={i.id}>Item</div>)
+    ) : (
+        <button onClick={() => props.myDataSource.setLimit(undefined)}>Load data</button>
+    );
+}
+```
+
 The `totalCount` property is the total number of objects the datasource can return. Calculating a total count might consume significant resources and is only returned when the widget indicated needs a total count by calling the `requestTotalCount(true)` method. When possible, please use the `hasMoreItems` instead of the `totalCount` property.
 
 The following code sample shows how to request the total count to be returned:
 
 ```ts
 export default class PagedWidget extends Component<PagedWidgetProps> {
-    constructor(props: PagedWidget) {
+    constructor(props: PagedWidgetProps) {
         super(props);
     
         props.myDataSource.requestTotalCount(true);

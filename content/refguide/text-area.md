@@ -41,7 +41,7 @@ Text area properties consist of the following sections:
 
 ### 2.2 Data Source Section{#data-source}
 
-{{% snippet file="refguide/attribute-path-property.md" %}}
+{{% snippet file="refguide/data-source-section-link.md" %}}
 
 ### 2.3 Design Properties Section{#design-properties}
 
@@ -82,13 +82,13 @@ This differs from the [On change](#on-change) property in that the event will al
 
 This property defines whether the text area grows automatically depending on the amount of text in it.
 
-_Default value:_ No
+Default: *No*
 
 #### 2.6.2 Number of Lines
 
 **Number of lines** determines the size of the text area, based on the height of the lines. If the text in the text area contains more lines, a scrollbar will enable the end-user to see it all. This property is only used if **Grow automatically** is set to *No*.
 
-_Default value:_ 5
+Default: *5*
 
 #### 2.6.3 Counter Message
 
@@ -101,8 +101,6 @@ For example, if you use the counter message `You've used {1} characters of the {
 ![](attachments/text-area/counter-message.png)
 
 #### 2.6.4 Text Too Long Message
-
-{{% todo %}}[DOES THIS ACTUALLY DO ANYTHING - HOW CAN IT BE DISPLAYED?]{{% /todo %}}
 
 {{% alert type="info" %}}Text too long message is not supported on native mobile pages.{{% /alert %}}
 
@@ -124,13 +122,20 @@ The placeholder text is shown when no text has been entered yet, or when a displ
 
 It can be used, for example, to give a hint to the end-user what kind of text should be entered.
 
-### 2.8 Label Section{#label}
+#### 2.6.7 Autocomplete
+
+The autocomplete property specifies if a text area should have autocomplete enabled. The autocomplete attribute also improves mobile devices' ability to pre-populate fields.
+
+{{% alert type="info" %}}This option is only available in native pages.{{% /alert %}}
+{{% alert type="info" %}}In Android when autocomplete is turned off it will remove support for new lines.{{% /alert %}}
+
+### 2.7 Label Section{#label}
 
 {{% snippet file="refguide/label-section-link.md" %}}
 
 ### 2.8 Validation Section{#validation}
 
-{{% snippet file="refguide/widget-validation.md" %}}
+{{% snippet file="refguide/widget-validation-link.md" %}}
 
 ### 2.9 Visibility Section{#visibility}
 

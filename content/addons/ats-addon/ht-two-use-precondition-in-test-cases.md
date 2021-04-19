@@ -11,7 +11,7 @@ To create more logic in test cases and more difficult test situations ATS has th
 
 This how-to uses the Mendix Company Expenses app as an example. In this how-to, you create a test case that clicks on a specific expense to view the details. Unfortunately, we do not know on which page of the data grid that expense is present. So, the test case searches for that expense on the first page of the data grid. If the expense is present ATS clicks on it. If the expense is not present ATS clicks on the next button to go to the next page of the data grid. On the next page, ATS checks again if the expense is present and, if so, clicks on it.  
 
-In the Company Expenses app I want to click on the following expense to view the details:
+In the Company Expenses app I want to click the following expense to view the details:
 
 ![](attachments/ht-two-use-precondition-in-test-cases/expense-to-click-on.png)
 
@@ -60,7 +60,7 @@ The following steps explain how to create a test case with preconditions:
 
 	![](attachments/ht-two-use-precondition-in-test-cases/find-datagrid-row-precondition.png)
 
-	Now you want to double-click on the expense, but only if the expense is present on that page.
+	Now you want to double-click the expense, but only if the expense is present on that page.
 
 10. Add the **Click/Doubleclick** action and enter a description. 
 11. Use the output of the previous step in the **Element** input parameter and set **Doubleclick** to true. 
@@ -71,9 +71,9 @@ The following steps explain how to create a test case with preconditions:
 
 	By adding the **Assert not equalTo** action as precondition the underlying action is only executed if the expense is found in the previous step. If step 3 is not executed then the output of step 3 is empty. The **Assert not equalTo** action then asserts empty with empty, which are equal to each other, so the precondition fails and the actual test step is not executed. 
 
-	These two steps are enough to only double-click on the expense in case the expense is present on the page. But if the expense is not present on the page ATS does not execute the double-click. The next step is to make ATS search the next page in the data grid for the expense and click on it if found.
+	These two steps are enough to only double-click the expense in case the expense is present on the page. But if the expense is not present on the page ATS does not execute the double-click. The next step is to make ATS search the next page in the data grid for the expense and click it if found.
 
-13. Record your click on the **Next page** button and add the step:
+13. Record your click the **Next page** button and add the step:
 
 	![](attachments/ht-two-use-precondition-in-test-cases/next-chunk.png)
 
@@ -114,7 +114,7 @@ If the expense is present on the second page the test run results look like:
 
 ![](attachments/ht-two-use-precondition-in-test-cases/expense-on-second-page.png)
 
-If the expense is present on the first page ATS does not click on the next button and does not search for the expense on the second page. So, ATS skips the steps 5, 6 and 7. If the expense is present on the second page ATS skips step 3 and 4. As ATS cannot find the expense in step 3, ATS will not click on the expense in step 4.
+If the expense is present on the first page ATS does not click the next button and does not search for the expense on the second page. So, ATS skips the steps 5, 6 and 7. If the expense is present on the second page ATS skips step 3 and 4. As ATS cannot find the expense in step 3, ATS will not click the expense in step 4.
 
 Congratulations, you created a test case using preconditions. This is an example of what you can do with preconditions. It is a relatively difficult example, as it shows the different possibilities in ATS. There are many more options like a negative test case, which is the next advised read. 
 

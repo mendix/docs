@@ -4,7 +4,7 @@ applications:
   path: ./_site/
   memory: 64M
   buildpack: staticfile_buildpack
-  disk_quota: 512M
+  disk_quota: 1024M
   instances: 1
   stack: cflinuxfs3
   env:

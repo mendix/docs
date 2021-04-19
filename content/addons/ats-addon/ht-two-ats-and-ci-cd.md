@@ -97,7 +97,7 @@ To create a CI/CD template follow these steps:
 
 1. Login to ATS 2.0.
 2. Open up the app in which you find your test case or test suite.
-3. Inside your app click on the **Test Runs** navigation item.
+3. Inside your app click the **Test Runs** navigation item.
 4. Click the **CI/CD Templates** tab.
 5.  Click either **Add Testcase** or **Add Testsuite** depending on what you want to execute.
 

@@ -1,14 +1,14 @@
 ---
-title: "Work with Parallels"
+title: "Configure Parallels"
 parent: "native-mobile"
-menu_order: 20
-description: "This how-to will allow you to start making Mendix native apps on your Mac device."
+menu_order: 78
+description: "This how-to will allow you to start making Mendix native mobile apps on your Mac device."
 tags: ["Native", "Parallels", "Mac", "Mobile"]
 ---
 
 ## 1 Introduction
 
-Using Parallels, you can run Mendix Studio Pro on your Mac device using a Windows virtual machine. To start making Mendix native apps on your Mac, follow this how-to.
+Using Parallels, you can run Mendix Studio Pro on your Mac device using a Windows virtual machine. To start making Mendix native mobile apps on your Mac, follow this how-to.
 
 **This how-to will teach you how to do the following:**
 
@@ -16,11 +16,22 @@ Using Parallels, you can run Mendix Studio Pro on your Mac device using a Window
 * Run a Mendix app on a test device using your Windows virtual machine
 * Make changes to your app, then view those changes on your test device
 
+For a deep-dive look into installing Studio Pro on a Mac, check out this video:
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/nJ9Tz8VnHPPKPrtSBgHv3U.jpg"
+  data-uuid="nJ9Tz8VnHPPKPrtSBgHv3U"
+  data-v="4"
+  data-type="inline"
+/>
+
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install [Parallels](https://www.parallels.com/products/desktop/), install Windows when prompted by Parallels, and create a Windows virtual machine
+* Install [Parallels Desktop Pro Edition](https://www.parallels.com/products/desktop/pro/), install Windows when prompted by Parallels, and create a Windows virtual machine (Parallels Desktop Pro Edition is necessary for Mendix's network features to work)
 * Install Mendix Studio Pro on your Windows virtual machine
 
 ## 3 Configuring Your Windows Virtual Machine for Mendix Studio Pro
@@ -38,6 +49,7 @@ To configure your Windows virtual machine to work with Mendix Studio Pro, follow
 
 4. Make sure **Source** is set to **Shared Network**.
 5. Make sure that both the **Inbound** bandwidth and **Outbound** bandwidth show **unlimited**.
+
 	If this is not the case, either enable **Network Conditioner** and set it to a profile that does not limit bandwidth, or click the **Options** tab then the **Optimization** pane and set **Resource usage** to **No limit**.
 6.  In the Parallels drop-down menu, select **Preferences**:
 
@@ -47,7 +59,7 @@ To configure your Windows virtual machine to work with Mendix Studio Pro, follow
 
 	{{% image_container width="450" %}}![network tab](attachments/using-mendix-studio-pro-on-a-mac/parallels-preferences-no-ports.png){{% /image_container %}}
 
-8.  Click the **+** button and add two ports — one for 8080 and one for 8083, both forwarded to your Windows virtual machine (the 8083 port is only necessary for developing native mobile apps):
+8.  Click the **+** button and add two ports: one for 8080 and one for 8083, both forwarded to your Windows virtual machine (the 8083 port is only necessary for developing native mobile apps):
 
 	{{% image_container width="450" %}}![plus button](attachments/using-mendix-studio-pro-on-a-mac/port-setup.png){{% /image_container %}}
 
@@ -59,7 +71,15 @@ Congratulations! You have successfully configured port forwarding to enable test
 
 ## 4 Viewing Your App on Your Testing Device
 
-Whenever you create or open a Mendix app in Mendix Studio Pro, be sure to do so from a mapped drive instead of a network drive:
+{{% alert type="warning" %}}
+Whenever you create or open a Mendix app in Mendix Studio Pro, be sure to do so from a mapped drive instead of a network drive.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+If you experience issues connecting with the Make It Native app, make sure your firewall is not preventing a connection. For information resolving Windows Defender and other firewall-related issues, see the [Error: Unable to Load Script](/howto/mobile/common-issues#unable-load-script) section of *Troubleshoot Common Native Mobile Issues*
+{{% /alert %}}
+
+Read the tips and steps below to view your app on your testing device:
 
 * Correct mapped drives will always have a letter at the start of their file location:
 
@@ -92,4 +112,4 @@ For information on how to change to your app and then see that change on your de
 ## 6 Read More
 
 * [Get Started with Native Mobile](getting-started-with-native-mobile)
-* [Style Your Mendix Native App](how-to-use-native-styling)
+* [Style Your Mendix Native Mobile App](how-to-use-native-styling)

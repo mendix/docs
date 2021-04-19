@@ -18,18 +18,18 @@ Mendix supports mobile web development, and it is also possible to create and pu
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install the Mendix Modeler (available from the [App Store](https://appstore.home.mendix.com/link/modelers))
-* Install the Mendix Mobile app on you device, which makes it easy to see a hybrid application in action without the need to get it approved in the Mendix App Store (for details and download links, see [Getting the Mendix App](/refguide7/getting-the-mendix-app) in the Mendix Reference Guide)
+* Install the Mendix Modeler (available from the [Marketplace](https://appstore.home.mendix.com/link/modelers))
+* Install the Mendix Mobile app on you device, which makes it easy to see a hybrid application in action without the need to get it approved in the Mendix Marketplace (for details and download links, see [Getting the Mendix App](/refguide7/getting-the-mendix-app) in the Mendix Reference Guide)
 
 ## 3 Opening a Hybrid Example App
 
 To open a hybrid example app, follow these steps:
 
-1.  Open the App Store in your Desktop Modeler by clicking this icon in the upper-right toolbar:
+1.  Open the Marketplace in your Desktop Modeler by clicking this icon in the upper-right toolbar:
 
     ![](attachments/18448692/icon.png)
 
-2. Search for the **Company Expenses** app and click **Download**:
+2. Search for the **Asset Manager** app and click **Download**:
 
     ![](attachments/18448692/18581187.png)
 
@@ -37,7 +37,7 @@ To open a hybrid example app, follow these steps:
 
     ![](attachments/18448692/18581186.png) 
 
-    The Modeler will notify you as soon as the application is deployed.
+    The Modeler will notify you as soon as the application is deployed. While you wait, go to **Navigation**, click the **Hybrid phone app online** tab, and make sure your **Default home page** is set to **MyFirstModule.Dashboard**.
 4. Click the small arrow to open the **View App** menu and select **View Hybrid Mobile App**:
 
     ![](attachments/18448692/18581185.png) 
@@ -64,4 +64,4 @@ If you want to install this application as a native app on your device, you can 
 
 ## 5 Read More
 
-* [Debug a Mobile App with Mendix](debug-a-mobile-app)
+* [Debug a Hybrid Mobile App](debug-a-mobile-app)

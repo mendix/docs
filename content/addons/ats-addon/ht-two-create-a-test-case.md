@@ -71,7 +71,7 @@ The following steps describe how to add test steps manually to your test case. Y
 
     ![](attachments/ht-two-create-a-test-case/test-case-page-add-description.png)
 
-4. Add the URL of the application you want to test by clicking the dropdown of the input parameter **Application URL**. In the dropdown select the **Environment URL** below the **Global constant**. 
+4. Add the URL of the application you want to test by clicking the drop-down of the input parameter **Application URL**. In the dropdown select the **Environment URL** below the **Global constant**. 
 
     ![](attachments/ht-two-create-a-test-case/open-input-value-dropdown.png)
   
@@ -245,7 +245,7 @@ To add test steps using the ATS Recorder, follow these steps:
 15. Click the **Dialog Title** input parameter and add the title of the dialog box:
     ![](attachments/ht-two-create-a-test-case/new-expense-dialog-action-input-parameters-recorder.png)
 
-15.  For the logout, you can choose to keep the recorded click on the **Sign Out** button or replace it with the **Logout** action.
+15.  For the logout, you can choose to keep the recorded click the **Sign Out** button or replace it with the **Logout** action.
 16.  The last thing to do is to clarify to ATS what you are testing. This is done by setting the **Call Type** of your test steps to one of the following:
   
     * **Setup** for all the steps that you must perform to get to the test situation

@@ -4,6 +4,8 @@ category: "SAP"
 menu_order: 35
 description: "Presents the use of the OData Model Creator for SAP solutions."
 tags: ["SAP", "OData", "integration", "SAP services"]
+aliases:
+    - /howto/sap/use-sap-odata-model-creator.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -38,15 +40,13 @@ OData Model Creator for SAP solutions only supports SAP OData Gateway Services w
 
 ## 3 Generating a Data Model
 
-The OData Model Creator for SAP solutions is an app in the App Store. Search for it in the Mendix App Store, or find it here: [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/). 
+The OData Model Creator for SAP solutions is an app in the Marketplace. Search for it in the Mendix Marketplace, or find it here: [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/). 
 
 {{% alert type="info" %}}
-The OData Model Creator for SAP solutions is not currently available in the App Store within Studio Pro. It can only be run in a browser.
+The OData Model Creator for SAP solutions is not currently available in the Marketplace within Studio Pro. It can only be run in a browser.
 {{% /alert %}}
 
-1. Open the [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/).
-
-You will be asked how you want to generate your model.
+Open the [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/), where you will be asked how you want to generate your model:
 
 ![](attachments/use-sap-odata-model-creator/model-creator-wizard-1.png)
 
@@ -256,7 +256,7 @@ Now you have a Mendix module ready to import into your project.
 
 1. Open the project which you created as a prerequisite.
 
-2. Right-click your project in the **Project Explorer** and select **Import module package...**.
+2. Right-click your project in the **App Explorer** and select **Import module package...**.
 
     ![](attachments/use-sap-odata-model-creator/import_module_package.png)
 
@@ -274,7 +274,6 @@ For more information on how to use the imported data model together with the ODa
 
 ## 5 Read More
 
-* [Use App Store Content](/developerportal/app-store/app-store-content)
-* [Use the OData Connector for SAP Solutions](use-sap-odata-connector)
-* [OData Connector for SAP solutions](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector)
+* [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content)
+* [How to Use the OData Connector for SAP Solutions](use-sap-odata-connector)
 * [OData Model Creator for SAP Solutions](https://sapodatamodelcreator.mendixcloud.com/)

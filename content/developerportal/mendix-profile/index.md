@@ -3,12 +3,13 @@ title: "Mendix Profile"
 menu_order: 10
 description: "Describes the personal profile page of the Mendix Developer Portal."
 tags: ["profile", "Developer Portal", "settings", "badge", "point", "connection", "invite", "leaderboard", "edit", "daily digest"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-Your Mendix Profile is your main point of contact with members of the Mendix community, as it displays your activities on the Mendix Platform as well as details about your background. There are plenty of ways to get more involved with the Mendix community, and your profile is the best place to start!
+Your Mendix Profile is your main point of contact with members of the Mendix community, as it displays your activities on the Mendix Platform as well as details about your background and plans for the future. There are plenty of ways to get more involved with the Mendix community, and your profile is the best place to start!
 
 To access your Mendix Profile, hover over your picture on the right side of the Developer Portal navigation bar and select **My Profile** from the context menu.
 
@@ -81,7 +82,7 @@ This card on your profile presents your points and ranking for the last 30 days:
 
 ![](attachments/leaderboard.png)
 
-Clicking **View all** takes you to the **Leaderboards** page, which presents all the boards available for viewing Mendix Platform user activity: **Top Overall**, **Top Forum**, **Top App Store**, **Top Platform**, **Top Community**, and **Top Learning**.
+Clicking **View all** takes you to the **Leaderboards** page, which presents all the boards available for viewing Mendix Platform user activity.
 
 To earn points and climb the leaderboards, start performing different activities in the Mendix community. For example, let's say you have some time to spare while your app is deploying. You get a cup of coffee and check out the [Mendix Forum](http://forum.mendix.com). One questions pops out because you came across a similar problem a few weeks back. You decide to help the community member and post an answer to their question. Not long after, the author marks your answer as accepted. Boom! 15 points right there.
 
@@ -99,9 +100,9 @@ These are points you can gain through activity on the [Mendix Forum](https://for
 | Downvote someone | -1 | N/A |
 | Receive a downvote | -2 | N/A |
 
-### 7.2 App Store Points {#app-store-points}
+### 7.2 Marketplace Points {#app-store-points}
 
-These are points you can gain through activity in the [Mendix App Store](https://appstore.home.mendix.com/).
+These are points you can gain through activity in the [Mendix Marketplace](https://appstore.home.mendix.com/).
 
 | Activity | Points | Max. Points per Day |
 | --- | --- | --- |
@@ -109,18 +110,16 @@ These are points you can gain through activity in the [Mendix App Store](https:/
 | Publish a new app version | 25 | N/A |
 | Add an app review | 5 | N/A |
 | Download [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/) | 5 | 5 |
-| Download an app from the App Store | 1 | 5 |
+| Download an app from the Marketplace | 1 | 5 |
 
 ### 7.3 Platform Points
 
 | Activity | Points | Max. Points per Day |
 | --- | --- | --- |
 | Be the first member of your company to sign up for Mendix | 25 | N/A |
-| Upload to Model Share | 10 | 10 |
 | Send an app invite | 10 | 50 |
-| Download a microflow from [Model Share](https://modelshare.mendix.com/) | 5 | 5 |
 | Send a Mendix Platform invite | 5 | 50 |
-| Create an app project | 5 | 5 |
+| Create an app | 5 | 5 |
 | Submit a feedback item | 2 | 10 |
 | Have your feedback item marked as accepted | 2 | 10 |
 | Commit to the Team Server | 2 | 10 |
@@ -135,7 +134,7 @@ These are points you can gain through activity in the [Mendix App Store](https:/
 | Activity | Points | Max. per Day |
 | --- | --- | --- |
 | Win a Mendix Hackathon! | 300 | N/A |
-| Reach the [Mendix MVP](https://developer.mendixcloud.com/link/mvp) status | 300 | N/A |
+| Reach the [Mendix MVP](https://www.mendix.com/mvp-program/) status | 300 | N/A |
 | Be the runner-up in a Mendix Hackathon | 150 | N/A |
 | Organize a [Mendix Meetup ](https://developers.mendix.com/)  | 100 | N/A |
 | Complete your Mendix Profile | 50 | N/A |
@@ -156,15 +155,15 @@ In order to receive Mendix points for your contributions to Mendix GitHub reposi
 
 | Activity | Points | Max. per Day |
 | --- | --- | --- |
-| Pass the [Expert Developer Certification](https://gettingstarted.mendixcloud.com/link/certification/expert) exam | 100 | N/A |
-| Pass the [Advanced Developer](https://gettingstarted.mendixcloud.com/link/certificatioN/Advanced) exam | 50 | N/A |
+| Pass the [Expert Developer Certification](https://academy.mendix.com/link/certification/expert) exam | 100 | N/A |
+| Pass the [Advanced Developer](https://academy.mendix.com/link/certification/advanced) exam | 50 | N/A |
 | Give a presentation on Mendix | 25 | N/A |
 | Write a blog post that is featured on the Mendix [Community Blog](https://developers.mendix.com/community-blog/) | 25 | N/A |
-| Pass the [Rapid Developer Certification](https://gettingstarted.mendixcloud.com/link/certification/rapid) exam | 25 | N/A |
-| Complete a learning path in the [Mendix Academy](https://gettingstarted.mendixcloud.com/link/home) | 25 | N/A |
+| Pass the [Rapid Developer Certification](https://academy.mendix.com/link/certification/rapid) exam | 25 | N/A |
+| Complete a learning path in the [Mendix Academy](https://academy.mendix.com/link/home) | 25 | N/A |
 | Make a large contribution to the [Mendix documentation](https://docs.mendix.com/) | 15 | N/A |
-| Attend the [Advanced Developer Classroom](https://gettingstarted.mendixcloud.com/link/classroom/advanced) course | 10 | N/A |
-| Attend the [Rapid Developer Classroom](https://gettingstarted.mendixcloud.com/link/classroom/rapid) course | 10 | N/A |
+| Attend the [Advanced Developer Course](https://academy.mendix.com/link/classroom/5/Advanced/Course) | 10 | N/A |
+| Attend the [Rapid Developer Course](https://academy.mendix.com/link/classroom/1/Rapid/Course) | 10 | N/A |
 | Make a small contribution to the Mendix documentation | 5 | N/A |
 | Complete a unit in the Mendix Academy | 1 | N/A |
 
@@ -191,7 +190,7 @@ When you earn enough points, you gain a level:
 
 ## 8 Portfolio
 
-The **Portfolio** card presents a selection of Mendix app projects you have worked on. Click the project name to see more details about it (including a description of the app, business need, solution, results, and collaborators), or click **View all projects** to be taken to the  **Portfolio** tab, which presents a complete view of all your projects. 
+The **Portfolio** card presents a selection of Mendix apps you have worked on. Click the app name to see more details about it (including a description of the app, business need, solution, results, and collaborators), or click **View all projects** to be taken to the  **Portfolio** tab, which presents a complete view of all your projects. 
 
 ![](attachments/portfolio.png)
 
@@ -222,10 +221,10 @@ This section presents all of the documents  you have shared within different app
 
 In this section, you can view feedback submitted on the following:
 
-* Apps of which you are an App Team member
-* Your company’s apps of which you are not an App Team member
+* Apps of which you are an team member
+* Your company’s apps of which you are not an team member
 
-When you click **Details** for feedback on an app of which you are an App Team member, you can manage the feedback. For details on how to do this, see [Feedback](/developerportal/collaborate/feedback).
+When you click **Details** for feedback on an app of which you are a team member, you can manage the feedback. For details on how to do this, see [Feedback Management](/developerportal/collaborate/feedback).
 
 ### 9.4 Team Server
 
@@ -238,8 +237,8 @@ Changes made through Studio Pro are stored in the Mendix Team Server. This secti
 
 In this section, you can view the invitations you have sent and received. There are two types of invitations:
 
-* Project invitation – an invitation to join an App Team to work on an app project
-* App invitation – an invitation to join an app project as a user
+* Project invitation – an invitation to join a team to work on an app
+* App invitation – an invitation to join an app as a user
 
 ## 10 Settings {#settings}
 
@@ -265,11 +264,11 @@ In this section, you can tell the Mendix community about yourself and your work 
 
 ### 10.3 Social {#social}
 
-Here you can connect  your social accounts for **GitHub**, **Meetup**, **Twitter**, **LinkedIn**, and **Skype**.
+Here you can connect  your social accounts for **GitHub**, **Meetup**, **Twitter**, and **LinkedIn**.
 
 ### 10.4 Security {#security}
 
-You can change your password in this section. By default, you are requested to change your password every 90 days. Only a [Company Admin](../company-app-roles/companyadmin-settings) is allowed to change the expiration period.
+You can change your password in this section. By default, you are requested to change your password every 90 days. Only a [Mendix Admin](/developerportal/control-center/) is allowed to change the expiration period.
 
 ### 10.5 API Keys {#api-key}
 
@@ -302,12 +301,16 @@ In this section, you can merge your accounts and select your profile visibility.
 
 With use of the Mendix Profile, you can merge your old Mendix account(s) into your current Mendix account. This action combines all your hard-earned points, certifications, and achievements in your efforts to climb the leaderboards.
 
-All you have to do is make your profile public (see below), enter the email address of the account you want to merge with the account you are currently logged in to, and send a merge request.
+All you have to do is make your profile public (for details, see the [Selecting Your Profile Visibility](#public) section below), enter the email address of the account you want to merge with the account you are currently logged in to, and send a merge request.
 
 We’ll take things from there!
 
 {{% alert type="info" %}}
-With this action, Mendix only combines the accounts. The old account is not deactivated. That should be done by the Company Admin.
+Once an old account has been merged to a new account, you will no longer have access to the apps you were invited to via your old account. With your new account, you will need to be invited to those apps again in order to gain access. Adding your new account to the relevant apps prior to the merge is recommended.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+With the merge, the accounts are only combined. The old account is not deactivated. That should be done by the [Mendix Admins](/developerportal/control-center/#members).
 {{% /alert %}}
 
 #### 10.6.2 Selecting Your Profile Visibility {#public}
@@ -336,6 +339,10 @@ The Mendix Platform stores certain personal information about you. To view this 
 Mendix has been tracking these data changes since November, 2018.
 {{% /alert %}}
 
-## 11 Main Document in This Category
+## 11 Point Penalties
+
+Abusing the Mendix Forum, Marketplace, point system, or other community tools is not allowed. Any such action can result in a point penalty. Mendix reserves the right to penalize a user who bypasses or games the system without informing them.
+
+## 12 Main Document in This Category
 
 * [OAuth & Scopes](oauth-scopes) – provides introductory information on how OAuth and scopes work as well as details on scopes generated in the Developer Portal

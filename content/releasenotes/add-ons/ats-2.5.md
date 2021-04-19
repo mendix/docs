@@ -22,7 +22,7 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 * When you had a data-driven test case, a bug was preventing the usage of dataset fields as input parameters of assert actions. This is now fixed.
 * The PDF report still showed the result category **Unknown**, which was removed from the dashboard some time ago. To keep the reporting consistent between the dashboard and the PDF, we removed the category Unknown from the PDF report as well.
 * Under rare circumstances, the test suite results progress bar (shown on the dashboard) turned green, even though the percentage of passed test cases was below 100%. This is now fixed, and the progress bar will only be green if the percentage of past cases is exactly 100%.
-* When recording the **Click Widget button** action (which is used to click on special list view, template grid, and data grid buttons such as search, clear, reset, etc.), the recorded action did not save the information about which button was clicked in the test step. This is now fixed.
+* When recording the **Click Widget button** action (which is used to click special list view, template grid, and data grid buttons such as search, clear, reset, etc.), the recorded action did not save the information about which button was clicked in the test step. This is now fixed.
 * Moving items from one project to another was not possible if the items' parent folder(s) still existed in another app. This is now possible. Please note that although importing items that already exist in another app is not allowed, you can circumvent this by, for example, copying a test case from app A, exporting the copy from app A, deleting the copy from app A, then importing the copy into app B.
 * In some rare circumstances, importing a complex test set failed due to an internal error. This is now fixed.
 * Exporting items that contained empty test steps (for example, a test step was added but no action was selected for the test step) was not possible. Items with empty test steps can now be exported.
@@ -33,7 +33,7 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 
 ### Other Changes
 
-* When you open ATS, you will now see a new screen that requests your approval to share your Mendix Community Profile information with the ATS application. Every user has to confirm in order to continue using ATS. This needs to be done only once.
+* When you open ATS, you will now see a new screen that requests your approval to share your Mendix Profile information with the ATS application. Every user has to confirm in order to continue using ATS. This needs to be done only once.
 * On the dashboard report, we have changed the way the success rate is displayed. The success rate was previously displayed as percentages (from 0-100), but we replaced this with the exact numbers of **successfully executed test cases/total test cases**. For example, if a test suite has 10 test cases, of which 8 pass, previously this was displayed as "80 %", while now it is displayed as "8/10".
 
 ### Known Issues

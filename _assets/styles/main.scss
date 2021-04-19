@@ -1,6 +1,8 @@
 @import "_sass/core/variables";
 @import "_sass/core/helpers";
 
+@import "_sass/components/header";
+
 @import "_sass/background";
 
 @import "_sass/base";
@@ -31,3 +33,5 @@
 @import "_sass/iframe";
 
 @import "_sass/vendor/prism-codehighlighting";
+
+@import "_sass/feedback";

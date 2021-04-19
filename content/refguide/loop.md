@@ -1,32 +1,38 @@
 ---
 title: "Loop"
-parent: "application-logic"
+parent: "microflows-and-nanoflows"
 menu_order: 80
-tags: ["studio pro", "loop"]
+tags: ["studio pro", "loop", "iterate over", "for each", "while"]
 ---
 
 ## 1 Introduction
 
-A loop is used to iterate over a list of objects. For each object the flow inside the loop is executed. The iterator, which looks the same as a parameter, represents the current object in the list for each iteration. Beneath it the name of the object is shown in black and the entity type of the object in blue.
+A loop is used to execute repeated actions and is visualized as a frame. For each iteration, the flow inside the loop is executed. The loop can be configured to iterate over a list or be based on a Boolean expression. For more information, see the [Loop Type Property](#loop-type) section below.
 
-The flow starts at the element that has no incoming sequence flows. A loop can contain all elements used in flows, with the exception of start and stop events. Additionally, a loop (and only a loop) can contain [break events](break-event) and [continue events](continue-event).
+The loop can contain all types of elements used in microflows, except for [start events](start-event) and [end events](end-event). Only a loop can contain [break events](break-event) and [continue events](continue-event).
 
-{{% alert type="info" %}}
+## 2 Loop Type Property {#loop-type}
 
-If you have a situation where you have a list of objects of the entity 'OrderLine' and you want to set the purchase date for every object, you can use a loop with a change activity in it that sets the purchase date.
+The two loop types are described below.
 
-![](attachments/819203/917942.png)
+### 2.1 For Each (Item in the List) {#for-each}
 
-{{% /alert %}}
+This is the default type when creating a new loop activity, and it can be used to iterate over a list of objects. The list can be configured by setting the **Iterate over** property to a list in your flow scope, and for each object in the list, the flow inside the loop will be executed. The iterator (which looks the same as a parameter) represents the current object in the list for each iteration, and it can be renamed by setting **Loop object name**. This object is shown in black, and the entity type of the object is in blue.
 
-## 2 Input Properties
+![](attachments/loop/foreach-loop-edit-form.png)
 
-### 2.1 Iterate over
+For example, if you have a list of objects of the **OrderLine** entity and you want to set the purchase date for every object, you can use a loop with a change activity in it that sets the purchase date:
 
-The list over which this loop will iterate.
+![](attachments/loop/foreach-loop.png)
 
-## 3 Action Properties
+### 2.1 While (Condition Is True) {#while}
 
-### 3.1 Name
+This loop type repeats the flow inside the loop many times until some condition evaluates to `false`. This condition is evaluated before each execution of the loop body. Typically, a **While** loop is used when it is impossible to determine the exact number of loop iterations in advance.
 
-The name of the current object taken from the list. The flow inside the loop is executed for each object in the list, and the object will always have this name. If the list over which the loop iterates is of type `List of Order`, the iterator object will be of type `Order`.
+You can provide a description for the loop or the condition by setting the **Caption** field. The loop condition can be entered as an [expression](expressions) in the **Expression** editor, and it should result in a Boolean value. The **While** keyword is shown in blue, and the **Caption** is shown underneath in black.
+
+![](attachments/loop/while-loop-edit-form.png)
+
+For example, if you want to [log](log-message) numbers between 1 and 5, you can use a loop with a condition that checks whether a **Counter** [variable](variable-activities) is less than or equal to 5. Inside the loop, you would log the **Counter** value and add 1 to the **Counter** variable in order for the loop to stop executing when the **Counter** is greater than 5:
+
+![](attachments/loop/while-loop.png)

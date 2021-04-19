@@ -9,7 +9,7 @@ In pages, certain elements can be shown, hidden, made editable, or made read-onl
 
 The following elements support conditional visibility:
 
-* All the widgets support
+* All the widgets
 * [Grid control bar buttons](control-bar)
 * [Table rows](table-row), [tab pages](tab-page), and [layout grid rows](layout-grid)
 
@@ -44,7 +44,7 @@ For example, if you have a Boolean indicating whether a user wants to receive em
 
 #### 2.1.1 Attribute
 
-This is the attribute on which the conditions are based. The attribute must be of the Boolean or enumeration type.
+This is the attribute on which the conditions are based. The attribute must be of the Boolean or Enumeration type.
 
 #### 2.1.2 Conditions
 
@@ -52,7 +52,7 @@ For each value of the attribute, you can specify whether the element is editable
 
 ### 2.2 Show/Enable Element Based on Expression
 
-By selecting this option, visibility or editability becomes conditional based on whether the enetered [microflow expression](expressions) evaluates to `true` or `false`.
+By selecting this option, visibility or editability becomes conditional based on whether the entered [microflow expression](expressions) evaluates to `true` or `false`.
 
 The expression result must be of the Boolean type. The expression can use the obejct of the enclosing data container available as a `$currentObject` variable.
 

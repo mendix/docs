@@ -208,7 +208,7 @@ In the previous section you iterated over a list to add the value of single obje
     ![](attachments/18448686/18581059.png)
 
 4.  Click **OK**.
-5.  Double click on the message activity and replace the `$CalculatedTotalPrice` variable in the **Parameters** expression with the `$SumTotalPrice` variable.
+5.  Double click the message activity and replace the `$CalculatedTotalPrice` variable in the **Parameters** expression with the `$SumTotalPrice` variable.
     
     ![](attachments/18448686/18581055.png)
 
@@ -241,7 +241,6 @@ In the previous sections you filtered the list of orders from database on attrib
 ## 7 Read More
 
 *   [Defining access rules using XPath](define-access-rules-using-xpath)
-*   [Extending Your Application with Custom Java](extending-your-application-with-custom-java)
 *   [Working With Lists in a Microflow](working-with-lists-in-a-microflow)
 *   [Triggering Logic using Microflows](triggering-logic-using-microflows)
 *   [Creating a Custom Save Button](create-a-custom-save-button)

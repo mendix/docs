@@ -3,13 +3,20 @@ title: "Navigation Consistency Errors"
 parent: "consistency-errors"
 description: "Describes consistency errors in Mendix Studio Pro and the way to fix them."
 tags: ["Studio Pro", "consistency errors", "checks", "errors", "navigation"]
+#To update screenshots in this document, use the Consistency Errors app.
 ---
 
 ## 1 Introduction 
 
-In this document, we will explain how to solve the most common consistency errors that can occur when configuring navigation in Studio Pro. 
+In this document, we explain how to solve the most common consistency errors that can occur when configuring navigation in Studio Pro. An example of a consistency error is when you set a page that has a data view as a menu item. 
 
-An example of a consistency error is when you set a page that has a data view as a menu item. 
+{{% alert type="info" %}}
+
+This document does not describe *all* the errors, as there are a lot of errors that can occur, some of which are simple and do not need extra explanation, others are rare and/or heavily dependent on a use-case. 
+
+{{% /alert %}}
+
+Some errors have error codes and if these errors are described in documentation, Studio Pro has a clickable link to the corresponding document. Others do not have an error code, in this case, you can manually search whether a particular error is described in documentation (you can search by a message you see in the **Errors** pane).
 
 ## 2 Navigation Consistency Errors 
 
@@ -32,16 +39,11 @@ For example, you have created a menu item called **Program** for a **Responsive*
 To fix the error, you can create an object and pass it to the page. Do the following:
 
 1. Open the navigation for the responsive profile.
+2.  Open properties of the **Program** menu item, and do the following: 
+    1. Change the **On click** property from **Show a page** to **Create object**.
+2. Set **ProgramItem** as **Entity (path)**. 
+    3. Set **Program** as **On click page**. 
 
-2.  Open properties of the **Program** menu item, and do the following: <br/>
-
-    a. Change the **On click** property from **Show a page** to **Create object**. <br/>
-
-    b. Set **ProgramItem** as **Entity (path)**. <br/>
-
-    c. Set **Program** as **On click page**. <br/>
-
-    ![Menu Item Properties](attachments/consistency-errors-navigation/menu-item-properties.png)<br/>
 
 Now when an end-user clicks the menu item, a new *ProgramItem* object will be created and passed to the page.
 
@@ -61,13 +63,13 @@ You can fix this error by creating a microflow that will that will create a new 
 
     ![Default Home Page Setting](attachments/consistency-errors-navigation/default-home-page-field.png)
 
-3. In the **Select Navigation Target** dialog window, click **New**, then select **Create Microflow**.
+3. In the **Select Navigation Target** dialog box, click **New**, then select **Create Microflow**.
 
 4. Name the microflow *ACT_Open_HomePage*.
 
-5. Open the created microflow, add a **Create Object** activity to it 
+5. Open the created microflow, add a **Create object** activity to it 
 
-6.  For the **Create Object** activity, set **Entity** to **Customer**. 
+6.  For the **Create object** activity, set **Entity** to **Customer**. 
 
     ![Create Object Properties](attachments/consistency-errors-navigation/create-object-properties.png)
 

@@ -1,6 +1,6 @@
 ---
 title: "Associations"
-category: "Domain Model"
+parent: "domain-models"
 description: "Describes the association properties in Mendix Studio."
 tags: ["studio", "domain model"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -13,9 +13,7 @@ An association describes a relation between entities. In the domain model, an as
 In Mendix Studio, associations have the following properties:
 
 * [Name](#name)
-
 * [Multiplicity](#multiplicity)
-
 *  [Delete behavior](#delete-behavior)
 
    {{% image_container width="300" %}}![](attachments/domain-models-association-properties/association-properties.png)
@@ -45,7 +43,11 @@ Multiplicity shows the owner and the direction of association if the association
 {{% image_container width="400" %}}![](attachments/domain-models-association-properties/association-domainmodel.png)
 {{% /image_container %}}
 
-You can swap the direction of the multiplicity if its type is one-to-many or many-to-many. In this case you will change the owner of association. 
+You can swap the direction of the multiplicity if its type is one-to-many or many-to-many. In this case you will change the owner of association.
+
+{{% alert type="info" %}}
+For more details on the reasoning underlying associations, ownership, and multiplicity, see the [Introduction](/refguide/associations#intro) section of *Associations* in the *Studio Pro Guide*.
+{{% /alert %}}
 
 ## 4 Delete Behavior {#delete-behavior}
 
@@ -66,7 +68,7 @@ Cross-module association makes an association between entities of different modu
 
 {{% alert type="info" %}}
 
-You cannot create separate modules in Studio. But if you have different modules in Studio Pro, you can see the list of different domain models (except the System module and App Store modules) and make cross-module associations in Studio. 
+You cannot create separate modules in Studio. But if you have different modules in Studio Pro, you can see the list of different domain models (except the System module and Marketplace modules) and make cross-module associations in Studio. 
 
 {{% /alert %}}
 

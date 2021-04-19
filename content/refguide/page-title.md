@@ -22,20 +22,24 @@ The page title widget makes it possible to embed the page title in a [layout](la
 
 An example of page title properties is represented in the image below:
 
-{{% image_container width="350" %}}![Page Title Properties](attachments/common-widgets/page-title-properties.png)
+{{% image_container width="300" %}}![Page Title Properties](attachments/common-widgets/page-title-properties.png)
 {{% /image_container %}}
 
 Page title properties consist of the following sections:
 
 * [Common](#common)
-* Design Properties
+* [Design Properties](#design-properties)
 * [Visibility](#visibility)
 
 ### 2.1 Common Section {#common}
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 2.2 Visibility Section {#visibility}
+### 2.2 Design Properties Section {#design-properties}
+
+{{% snippet file="refguide/design-section-link.md" %}} 
+
+### 2.3 Visibility Section {#visibility}
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 
@@ -43,4 +47,4 @@ Page title properties consist of the following sections:
 
 * [Page](page)
 * [Common Widgets](common-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

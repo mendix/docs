@@ -1,6 +1,6 @@
 ---
 title: "ATS How-to's"
-category: "ATS Guide"
+category: "ATS"
 menu_order: 3
 ---
 

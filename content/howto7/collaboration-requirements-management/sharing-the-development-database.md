@@ -54,7 +54,7 @@ This is the database manager. On the left pane all tables from all modules in th
 
 Queries can be executed in two ways. It can be done directly from the command line (top right pane) in SQL script, or via the explorer on the left pane. For more information about SQL, visit the following page: [http://www.w3schools.com/sql/](http://www.w3schools.com/sql/). To execute queries from the database explorer (left pane), the following steps have to be applied:
 
-1.  Right click on any table and select the preferred action
+1.  Right click any table and select the preferred action
 
     ![](attachments/18448637/18580423.png)
 
@@ -81,7 +81,7 @@ The built-in database can easily be shared with other members of the team. Like 
 
 ## 7\. Update a data snapshot
 
-To import a data snapshot into the model, the app project has to be updated since the last database snapshot has been committed by another team member. To get the data from the committed database snapshot the following steps have to be applied:
+To import a data snapshot into the model, the app has to be updated since the last database snapshot has been committed by another team member. To get the data from the committed database snapshot the following steps have to be applied:
 
 1.  First the application has to be updated. Press update on the changes tab
 
@@ -105,4 +105,3 @@ Make sure the names of the databases aren't the same or make a copy of your own 
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)
 *   [Starting your own repository](starting-your-own-repository)
 *   [Version Control](/refguide7/version-control)
-*   [How to Use the Feedback Widget](/developerportal/collaborate/use-feedback-widget)

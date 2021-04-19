@@ -17,14 +17,14 @@ An image viewer must be placed in a data view or a template grid.
 
 An example of image viewer properties is represented in the image below:
 
-{{% image_container width="350" %}}![Image Viewer Properties](attachments/file-widgets/image-viewer-properties.png)
+{{% image_container width="250" %}}![Image Viewer Properties](attachments/file-widgets/image-viewer-properties.png)
 {{% /image_container %}}
 
 Image viewer properties consist of the following sections:
 
 * [Common](#common) 
 * [Data source](#data-source)
-* Design Properties
+* [Design Properties](#design-properties)
 * [Events](#events)
 * [General](#general)
 * [Visibility](#visibility)
@@ -33,45 +33,47 @@ Image viewer properties consist of the following sections:
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 2.2 Data Source Section {#data-source}
+### 2.2 Design Properties Section {#design-properties}
 
-#### 2.2.1 Entity (Path)
+{{% snippet file="refguide/design-section-link.md" %}} 
+
+### 2.3 Data Source Section {#data-source}
+
+#### 2.3.1 Entity (Path)
 
 The **Entity (path)** property specifies which object will be shown in the image viewer. It must be a System.Image or a specialization thereof. If the object in the data view is (a specialization of) System.Image you can use this object in the image viewer as well.
 
-### 2.3  Events Section {#events}
+### 2.4  Events Section {#events}
 
 {{% snippet file="refguide/events-section-link.md" %}}
 
-### 2.4 General Section{#general}
+### 2.5 General Section{#general}
 
-#### 2.4.1 Default Image
+#### 2.5.1 Default Image
 
 This is the image that is displayed if no image is uploaded.
 
-#### 2.4.2 Width Unit {#width-unit}
+#### 2.5.2 Width Unit {#width-unit}
 
 The table below describes possible ways to specify the width of an image: 
 
 | Value | Definition |
 | --- | --- |
 | Pixels | The width is specified in a number of pixels. If you specify both width and height, the image will be scaled automatically: the proportions will be kept, the picture will not be stretched. |
-| Percentage | The width is specified in a percentage of the original width. It can be larger than its original width in which case the image is stretched. |
+| Percentage  *(default)* | The width is specified in a percentage of the original width. It can be larger than its original width in which case the image is stretched. |
 | Auto | The width of the given image is used. |
-
-*Default value*: Percentage
 
 {{% alert type="info" %}}
 Not supported on native mobile pages.
 {{% /alert %}}
 
-#### 2.4.3 Width 
+#### 2.5.3 Width 
 
-This property is displayed only when the [**Width unit**](#width-unit) property is set to *Pixels* or *Percentage*. This property determines the width of the image, either in pixels or a percentage.
+This property is displayed only when the [Width unit](#width-unit) property is set to *Pixels* or *Percentage*. This property determines the width of the image, either in pixels or a percentage.
 
-*Default value*: 0
+Default: *0*
 
-#### 2.3.4 Height Unit {#height-unit}
+#### 2.5.4 Height Unit {#height-unit}
 
 The table below describes possible ways to specify the height of an image: 
 
@@ -79,31 +81,29 @@ The table below describes possible ways to specify the height of an image:
 | ---------- | ------------------------------------------------------------ |
 | Pixels     | The height is specified in a number of pixels. If you specify both width and height, the image will be scaled automatically: the proportions will be kept, the picture will not be stretched. |
 | Percentage | The height is specified in a percentage of the original height. It can be larger than its original height in which case the image is stretched. |
-| Auto       | The height of the given image is used.                       |
-
-*Default value*: Auto
+| Auto  *(default)*       | The height of the given image is used.                       |
 
 {{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
-#### 2.4.5 Height
+#### 2.5.5 Height
 
-This property is displayed only when the [**Height unit**](#height-unit) property is set to *Pixels* or *Percentage*. This property determines the height of the image, either in pixels or a percentage.
+This property is displayed only when the [Height unit](#height-unit) property is set to *Pixels* or *Percentage*. This property determines the height of the image, either in pixels or a percentage.
 
-*Default value*: 0
+Default: *0*
 
-#### 2.4.6 Responsive
+#### 2.5.6 Responsive
 
 This property determines how the image scales. If the value is set to *Yes*, the image will never get bigger than its original size, but it can become smaller. If the value is set to *No*, the image can become both larger and smaller than its original size.
 
-*Default value*: Yes
+Default: *Yes*
 
-#### 2.4.7 Show
+#### 2.5.7 Show
 
 This property indicates whether the generated thumbnail or the full image is shown.
 
-_Default value:_ Thumbnail
+Default: *Thumbnail*
 
-### 2.5 Visibility Properties{#visibility}
+### 2.6 Visibility Properties{#visibility}
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 
@@ -111,4 +111,4 @@ _Default value:_ Thumbnail
 
 * [Page](page)
 * [File Widgets](file-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

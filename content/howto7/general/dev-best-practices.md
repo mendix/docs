@@ -35,7 +35,7 @@ Every project has at least one configuration, but it may have many. Every projec
 
 ### 2.4 User Roles
 
-The [user roles](/refguide7/user-roles) should have logical names that reflect the different types of users that will use the application. The user roles are singular and use a camel case notation, like **FunctionalAdministrator**. User roles are mostly defined in English, but there is an option to name these in a different language, since the user role is visible in the front-end.
+The [user roles](/refguide7/user-roles) should have logical names that reflect the different types of users that will use the application. The user roles are singular and use a UpperCamelCase notation, like **FunctionalAdministrator**. User roles are mostly defined in English, but there is an option to name these in a different language, since the user role is visible in the front-end.
 
 Each user role should correspond to only one module role per module. In other words, a user role should not map to multiple module roles within the same module. This helps to keep the number of applicable module roles for a user to a minimum, which reduces complexity in understanding the security model and reduces the performance impact of complex security rules.
 
@@ -45,7 +45,7 @@ Each user role should correspond to only one module role per module. In other wo
 
 #### 3.1.1 Module Names
 
-Modules should be treated like standalone replaceable services; for example, the customer module should function as a standalone customer management system as much as possible, replaceable by a different customer management system. Module names should have camel case names that identify the responsibility of the module, for example, **CustomerManagement** or **SharePointIntegration**.
+Modules should be treated like standalone replaceable services; for example, the customer module should function as a standalone customer management system as much as possible, replaceable by a different customer management system. Module names should have UpperCamelCase names that identify the responsibility of the module, for example, **CustomerManagement** or **SharePointIntegration**.
 
 #### 3.1.2 Module Roles
 
@@ -55,11 +55,11 @@ The [module roles](/refguide7/module-role) should have logical names that reflec
 
 #### 3.2.1 Entity Names
 
-Most of the time, an [entity](/refguide7/entities) reflects a real-world object that people can relate to. Therefore, the entity name should also reflect that object and identify its purpose. There are sometimes project-specific exceptions that lead to creating other types of entity, but that is up to you. The name of an entity is singular since an object is a single instance of the entity. A good example is using **Customer** and not **Customers**. Furthermore, we advise avoiding abbreviations, underscores, mathematical characters or any other special characters in the names of entities. Entity names also use camel case, for example, **HousekeepingRecord** or **LogEntry**.
+Most of the time, an [entity](/refguide7/entities) reflects a real-world object that people can relate to. Therefore, the entity name should also reflect that object and identify its purpose. There are sometimes project-specific exceptions that lead to creating other types of entity, but that is up to you. The name of an entity is singular since an object is a single instance of the entity. A good example is using **Customer** and not **Customers**. Furthermore, we advise avoiding abbreviations, underscores, mathematical characters or any other special characters in the names of entities. Entity names also use UpperCamelCase, for example, **HousekeepingRecord** or **LogEntry**.
 
 #### 3.2.2 Entity Attributes
 
-The entity [attribute](/refguide7/attributes) should reflect a property of a real-world object that people can relate to and fits the purpose of that property. We advise avoiding abbreviations, underscores (except in the case described in the next paragraph), mathematical characters or any other special characters in the names. Entity attributes should use camel case, for example, **FirstName** or **TelephoneNumber**.
+The entity [attribute](/refguide7/attributes) should reflect a property of a real-world object that people can relate to and fits the purpose of that property. We advise avoiding abbreviations, underscores (except in the case described in the next paragraph), mathematical characters or any other special characters in the names. Entity attributes should use UpperCamelCase, for example, **FirstName** or **TelephoneNumber**.
 
 Attributes that do not reflect business-related data, but are only necessary for technical reasons, should start with an underscore (`_`).
 
@@ -322,7 +322,7 @@ When an XPath needs multiple constraints, each constraint must be put in bracket
 
 ### 4.5 Security
 
-The [security](/howto7/security/index) overview in the Modeler must not show any incomplete (yellow) parts. All entity, microflow, and page access must be configured completely.
+The [security](/howto7/security/) overview in the Modeler must not show any incomplete (yellow) parts. All entity, microflow, and page access must be configured completely.
 
 It is recommended **not** to assign default rights to new members when defining entity access. This will ensure that access is only granted after a conscious decision.
 
@@ -330,8 +330,8 @@ It is recommended **not** to assign default rights to new members when defining 
 
 Apps should keep up with new Mendix releases as much as possible.
 
-### 4.7 App Store Components
+### 4.7 Marketplace Content
 
-When introducing a new [Mendix App Store](https://appstore.home.mendix.com/index3.html) component to a project, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
+When introducing a new [Mendix Marketplace](https://appstore.home.mendix.com/index3.html) component to a project, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
 
-App Store modules should **not** be modified. This is because, if an App Store module is modified, updating to a new version becomes much harder because the changes will be overwritten when a new version is downloaded from the App Store. If changing an App Store module is unavoidable, changes should be marked explicitly and clearly, and performed again when the module is updated. To minimize the number of changes in the actual App Store module, it is advisable to combine them in a separate extension module wherever possible.
+Marketplace modules should **not** be modified. This is because, if a Marketplace module is modified, updating to a new version becomes much harder because the changes will be overwritten when a new version is downloaded from the Marketplace. If changing a Marketplace module is unavoidable, changes should be marked explicitly and clearly, and performed again when the module is updated. To minimize the number of changes in the actual Marketplace module, it is advisable to combine them in a separate extension module wherever possible.

@@ -11,18 +11,35 @@ tags: ["Scheduled Event", "Execution properties", "Timing", "intervals", "schedu
 
 With scheduled events you can let the runtime execute a microflow at a specific moment in time. The event can also be repeated with a given interval, for example every day.
 
-A scheduled event is added to your module as a document (right-click on your module and you will find it listed under *Add other...*).
+A scheduled event is added to your module as a document (right-click your module and you will find it listed under *Add other...*).
 
 {{% alert type="warning" %}}
 Scheduled events can be tested locally, but they will not be run if your app is deployed as a Free App. See the Free App section of [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy#free-app) for more information on Free App limitations.
 {{% /alert %}}
 
-## 2 Common Properties
+A `ScheduledEventInformation` object is created every time the scheduled event defined in your app model is run. This records the following:
+
+* **Name** – the **Name** of the scheduled event as entered in [Common Properties](#common-properties)
+* **Description** – the **Documentation** of the scheduled event as entered in [Common Properties](#common-properties)
+* **StartTime** – the time this run of the scheduled event started
+* **EndTime** – the time this run of the scheduled event ended
+* **Status** – the current status of this run of the scheduled event:
+    * **Running** – the event is current running and has not yet ended
+    * **Completed** – the event has completed successfully
+    * **Error** – the event completed with an error — you can find the error on the error log using the *StartTime* and *EndTime* to locate it if necessary
+    * **Stopped** – the scheduled event was stopped before completion, for example by the app being stopped or a cluster node becoming unhealthy
+
+{{% alert type="warning" %}}
+The `ScheduledEventInformation` objects are not cleared automatically. If you have a large number of scheduled events you will need to decide how long you need to keep this information and remove stale records when they are no longer required.
+{{% /alert %}}
+
+## 2 Common Properties{#common-properties}
 
 | Property | Description |
 | --- | --- |
-| Name | The name of the scheduled event. This name is stored in the ScheduledEventInformation objects at runtime, so that runs of the scheduled event are recognizable. |
-| Documentation | This field is for documentation purposes only. Its value is not visible to end-users and doesn't influence the behavior of your application. |
+| Name | The name of the scheduled event. This name is stored in the `ScheduledEventInformation` objects at runtime, so that runs of the scheduled event are recognizable. |
+| Documentation | This field is for documentation purposes in the app model only. Its value is not visible to end-users, is not displayed in the Developer Portal, and doesn't influence the behavior of your application. |
+
 
 ## 3 Execution Properties
 
@@ -36,7 +53,7 @@ Scheduled events can be tested locally, but they will not be run if your app is 
 | Property | Description |
 | --- | --- |
 | Start date/time | The date and time when the scheduled event is executed the first time. If the start date/time is UTC time the scheduled event is executed when it is the indicated time in UTC (Universal Coordinated Time). If the start date/time is server time, the scheduled event is executed when it is the indicated time on the server on which your application runs. |
-| Repeat | The scheduled event is repeated with the indicated interval (e.g. every 5 minutes) if repeat is on. |
+| Repeat | The scheduled event is repeated with the indicated interval (for example, every 5 minutes) if repeat is on. |
 | Interval | This number together with the interval type indicates how large the interval is between two events. This number should be greater than zero. |
 | Interval type | The interval type determines the unit of the interval. Together with the interval number it indicates how large the interval between two events is. For example, 1 day or 10 minutes. |
 
@@ -48,7 +65,7 @@ Seconds, Minutes, Hours, Days, and Weeks are scheduled exactly as configured. Ho
 
 If you schedule an event to start at March 1, it will run on April 1, May 2, Jun 2, Jul 3, Aug 3, Sep 3, etc. So be aware when scheduling your events, because it is possible that they will run 1 day of what you have been expecting.
 
-This is a simplified example of the implementation of how the Mendix 5.3.2 release calculates the interval. Later releases might behave slightly different.
+This is a simplified example of the implementation of how the Mendix 5.3.2 release calculated the interval. Later releases might behave slightly different.
 
 ```java
 switch(scheduledEvent.getIntervalType())

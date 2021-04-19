@@ -1,6 +1,7 @@
 ---
 title: "Team Server API"
 category: "API Documentation"
+menu_order: 65
 ---
 
 ## 1 Introduction
@@ -8,6 +9,10 @@ category: "API Documentation"
 The team server API allows you to retrieve the information (branches, revisions) of application models stored in our team server. You always access an application model via the context of an application (see the Deploy API for more information about retrieving applications and application identifiers).
 The image below provides a domain model representation of the concepts discussed below and how these are related:
 ![](attachments/131076/425989.png)
+
+{{% alert type="warning" %}}
+The team server API is only available to *licensed* apps which are running in a Mendix Cloud.
+{{% /alert %}}
 
 ## 2 Authentication
 
@@ -21,7 +26,7 @@ The Developer Portal Management API requires its users to authenticate themselve
 
 ```http
 HTTP Method: GET
- URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches/
+ URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches
 ```
 
 #### 3.1.1 Request
@@ -33,7 +38,7 @@ HTTP Method: GET
 ##### 3.1.1.2 Example
 
 ```http
-GET /api/1/apps/calc/branches/ HTTP/1.1
+GET /api/1/apps/calc/branches HTTP/1.1
 Host: deploy.mendix.com
 
 Accept: */*
@@ -48,7 +53,7 @@ List of objects with the following key-value pairs:
 *   _Name_ (String) : Name of the branch. This is 'trunk' for the main line or a specific branch name.
 *   _DisplayName_ (String) : Visible name in the Developer Portal. For the trunk, this is 'Main line'.
 *   _LatestRevisionNumber_ (Long) : Number of the latest revision.
-*   _LatestRevisionMendixVersion_ (String) : Version string of the Mendix version of the app project in this revision.
+*   _LatestRevisionMendixVersion_ (String) : Version string of the Mendix version of the app in this revision.
 
 ##### 3.1.2.1 Error Codes
 
@@ -107,7 +112,7 @@ An object with the following key-value pairs:
 *   _Name_ (String) : Name of the branch. This is 'trunk' for the main line or a specific branch name.
 *   _DisplayName_ (String) : Visible name in the Developer Portal. For the trunk, this is 'Main line'.
 *   _LatestRevisionNumber_ (Long) : Number of the latest revision.
-*   _LatestRevisionMendixVersion_ (String) : Version string of the Mendix version of the app project in the latest revision.
+*   _LatestRevisionMendixVersion_ (String) : Version string of the Mendix version of the app in the latest revision.
 
 ##### 3.2.2.1 Error Codes
 
@@ -134,7 +139,7 @@ Retrieves all revisions of a specific branch that belongs to the team server pro
 
 ```http
 HTTP Method: GET
- URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches/<Name>/revisions/
+ URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches/<Name>/revisions
 ```
 
 #### 3.3.1 Request
@@ -147,7 +152,7 @@ HTTP Method: GET
 ##### 3.3.1.2 Example
 
 ```http
-GET /api/1/apps/calc/branches/trunk/revisions/ HTTP/1.1
+GET /api/1/apps/calc/branches/trunk/revisions HTTP/1.1
 Host: deploy.mendix.com
 
 Accept: */*
@@ -163,7 +168,7 @@ List of objects with the following key-value pairs:
 *   _CommitMessage_ (String) : Commit message of the revision.
 *   _Date_ (Date) : Date when the revision is created (or the commit is done).
 *   _Author_ (String) : Creator of the revision (committer).
-*   _MendixVersion_ (String) : Version string of the Mendix version of the app project in this revision.
+*   _MendixVersion_ (String) : Version string of the Mendix version of the app in this revision.
 
 ##### 3.3.2.1 Error Codes
 

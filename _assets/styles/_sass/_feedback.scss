@@ -1,0 +1,33 @@
+.sprintrFeedbackNode {
+	color: white;
+	cursor: pointer;
+	position: fixed;
+	right: 0;
+	vertical-align: bottom;
+	width: 35px;
+	z-index: 9999;
+	top: 25%;
+  	height: 104px;
+  	border-top-left-radius: 3px;
+  	border-bottom-left-radius: 3px;
+  	box-shadow: -1px 0 5px rgba(28, 59, 86, 0.2);
+  	-moz-box-shadow: -1px 0 5px rgba(28, 59, 86, 0.2);
+  	-webkit-box-shadow: -1px 0 5px rgba(28, 59, 86, 0.2);
+  	background: #1b3149 url('/public/images/feedback-new.png') center center no-repeat;
+}
+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .sprintrFeedbackNode {
+        background: url("feedback.png") no-repeat scroll 0 0 transparent !important;
+        color: white;
+        cursor: pointer;
+        height: 102px;
+        position: absolute;
+        right: 0;
+        vertical-align: bottom;
+        width: 35px;
+        z-index: 9999;
+        top: 25%;
+    }
+}

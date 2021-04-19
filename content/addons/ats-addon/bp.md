@@ -1,6 +1,6 @@
 ---
 title: "ATS Best Practices"
-category: "ATS Guide"
+category: "ATS"
 menu_order: 4
 ---
 

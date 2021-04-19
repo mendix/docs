@@ -3,9 +3,9 @@ title: "2.16"
 parent: "ats-2"
 ---
 
-## 2.16
+## 2.16.0
 
-**Release date: October 16th 2019**
+**Release date: October 16th, 2019**
 
 ### Mendix 8.2.2 Compatibility
 

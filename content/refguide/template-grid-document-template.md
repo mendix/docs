@@ -2,6 +2,9 @@
 title: "Template Grid (Document Template)"
 parent: "document-templates"
 tags: ["studio pro"]
+aliases:
+    - /refguide/Template+Grid+(document+template).html
+    - /refguide/template-grid-(document-template).html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -11,7 +14,7 @@ The template grid shows a list of objects in a tile view. For example, a templat
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918137.png)
+![](attachments/document-templates/918137.png)
 
 A template grid showing products with name, description, and image.
 

@@ -1,20 +1,20 @@
 ---
-title: "Database Connector"
+title: "Database"
 category: "Connectors"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the Database connector, which is available in the Mendix Marketplace."
+tags: ["marketplace",  "marketplace component", "database connector", "jdbc", "hikari", "query" ]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
 
-Use the [Database Connector](https://appstore.home.mendix.com/link/app/2888/) to incorporate your external data directly in your Mendix application. This connector enables seamlessly connecting to external databases without being limited in your choice of database or SQL dialect.
+Use the [Database](https://appstore.home.mendix.com/link/app/2888/) connector to incorporate your external data directly in your Mendix application. This connector enables seamlessly connecting to external databases without being limited in your choice of database or SQL dialect.
 
-This section of the *App Store Components Guide* focuses on executing an SQL `SELECT` query and SQL statements on external relational databases.
+This document focuses on executing an SQL `SELECT` query and SQL statements on external relational databases.
 
-The `Execute query` action (which is present in the connector) provides a consistent environment for Mendix app projects to perform an arbitrary `SELECT` SQL query on relational external databases.  A Java database connectivity (JDBC) API (which is a standard Java API) is used when the Java action attempts to connect with a relational database for which a JDBC driver exists.
+The **Execute query** action (which is present in the connector) provides a consistent environment for Mendix apps to perform an arbitrary `SELECT` SQL query on relational external databases.  A Java database connectivity (JDBC) API (which is a standard Java API) is used when the Java action attempts to connect with a relational database for which a JDBC driver exists.
 
-The `Execute statement` action works internally in the same manner as the`Execute query` action. However, it is used for `INSERT`, `UPDATE`, `DELETE`, `STORED PROCEDURE`, or `DDL` statements.
+The **Execute statement** action works internally in the same manner as the **Execute query** action. However, it is used for `INSERT`, `UPDATE`, `DELETE`, `STORED PROCEDURE`, or `DDL` statements.
 
 ### 1.1 Dependencies
 
@@ -31,25 +31,33 @@ These are the prerequisites for using this connector:
 	* For example, if you want to connect to Amazon RDS PostgreSQL database (`jdbc:postgresql://xyz-rds-instance.ccnapcvoeosh.eu-west-1.rds.amazonaws.com:5432/postgres`), you need to place the PostgreSQL JDBC driver *.jar* inside the **userlib** folder
 	* For more information, see the [Common JDBC Drivers](#links) section below
 * Specific to the `Execute` query action: an entity in the domain model that can be used for the results of the executed query
-	* For example, a query like `select name, number from stock` has two columns (of the string and integer type, respectively), so in order to use the `Execute` query action, you have to add an entity in the domain model that has the same attributes as the columns in the query
+	* For example, a query like `select name, number from stock` has two columns (of the string and integer type, respectively), so in order to use the **Execute query** action, you have to add an entity in the domain model that has the same attributes as the columns in the query
 
 ## 3 Getting Started
 
 ### 3.1 Usage
 
-Once you have imported the Database Connector into your app project, you will have **Database Connector** available in the **Toolbox**. The connector supports two actions: `Execute query` and `Execute statement`. To use either of these in your Mendix application, drag them into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
+Once you have imported the Database Connector into your app, you will have the **Database Connector** available in the **Toolbox**. The connector supports four actions: **Execute query**, **Execute statement**, **Execute parameterized query**, and **Execute parameterized statement**. To use any of these in your Mendix application, drag them into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
+
+The **Execute query** and **Execute parameterized query** actions should be used for querying objects with a `SELECT` SQL command. The **Execute statement** and **Execute parameterized statement** actions should be used for all other commands (for instance, `INSERT`, `UPDATE`, or `DELETE`).
+
+For both queries and statements, the difference between the parameterized and regular versions are that the parameterized version takes a string template parameter, while the regular version takes a fully formed SQL command string with no placeholders.
+
+{{% alert type="info" %}}
+The parameterized actions are only available with Database Connector versions 3.0.0 and above. For these, it is necessary to use Mendix [8.6.0](/releasenotes/studio-pro/8.6#860).
+{{% /alert %}}
 
 ### 3.2 Results
 
 These are the results of the actions:
 
-* `Execute query` –  a list of objects of the row type, which is also the output of the `SELECT SQL` query
-* `Execute statement` – either an integer or a long value, which usually represents the amount of affected rows
+* **Execute query** and **Execute parameterized query** – a list of objects of the row type, which is also the output of the `SELECT` SQL query
+* **Execute statement** and **Execute parameterized statement** – either an integer or a long value, which usually represents the amount of affected rows
 
 ## 4 Best Practices
 
-* Avoid havinga user input as part of your dynamic SQL queries and statements (in the future, using parameters with queries or statements will be supported)
-* Avoid fetching large amounts of data, which can lead to memory issues (as all the `ResultSet` data is loaded into memory at once)
+* Avoid having a user input as part of your dynamic SQL queries and statements (in the future, using parameters with queries or statements will be supported)
+* Avoid fetching large amounts of data, which can lead to memory issues (as all the **ResultSet** data is loaded into memory at once)
 
 ## 5 Common JDBC Drivers {#links}
 
@@ -65,11 +73,15 @@ These are the results of the actions:
 * [MySQL](https://dev.mysql.com/downloads/connector/j/)
 * [Oracle Database](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html)
 * [OrientDB](https://orientdb.org/)
-* [PostgreSQL](https://orientdb.org/)
+* [PostgreSQL](https://jdbc.postgresql.org/download.html)
 * [Presto](https://prestodb.github.io/docs/current/installation/jdbc.html)
 * [SQLite](https://bitbucket.org/xerial/sqlite-jdbc/downloads/)
 
-## 6 Developing This App Store Component
+{{% alert type="info" %}}
+If you intend to connect to SQL Server using integrated security, please be aware that the JDBC driver in the **userlib** folder needs to match the version supplied with the Mendix Platform (via the **runtime/bundles/** folder inside the Mendix installation directory).
+{{% /alert %}}
+
+## 6 Developing This Marketplace Component
 
 1. Clone [https://github.com/mendix/database-connector.git](https://github.com/mendix/database-connector.git).
 2. Open the *DatabaseConnector.mpr* in the Desktop Modeler or Studio Pro.

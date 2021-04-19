@@ -1,6 +1,8 @@
 ---
 title: "Validation Feedback"
 parent: "client-activities"
+aliases:
+    - /refguide7/Validation+Feedback.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -26,7 +28,7 @@ Member defines for which attribute or association the message will be shown. In 
 
 ### 2.3 Template
 
-Template defines the text of the validation message. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2 etcetera.
+Template defines the text of the validation message. The template can contain parameters that are written as a number between braces, for example, {1}. The first parameter has number 1, the second 2 etcetera.
 
 {{% alert type="warning" %}}
 

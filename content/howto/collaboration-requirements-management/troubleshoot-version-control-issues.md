@@ -16,9 +16,9 @@ For more information and general help on version control, see the following docu
 * [Version Control](/refguide/version-control)
 * [Using Version Control in Studio Pro](/refguide/using-version-control-in-studio-pro)
 
-## 2 Known Problems & Fixes
+## 2 Errors & Fixes
 
-Below is a list of known problems and steps to fix them.
+Below is a list of known errors and the steps to fix them.
 
 ### 2.1 Getting an Error Containing `SharpSvn.SvnAuthenticationException: Proxy authentication failed`
 
@@ -42,7 +42,7 @@ Follow these steps:
 2. Add the text `http-timeout = 5000` under the section `[global]`.
 3. Save the file.
 
-### 2.4 Getting an Error with the Message `<project folder> is already locked`
+### 2.4 Getting an Error with the Message `<app folder> is already locked`
 
 Follow these steps:
 
@@ -52,7 +52,7 @@ Follow these steps:
 	
 	Always use the version of TortoiseSVN that matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN, you will no longer be able to open it in Mendix.{{% /alert %}}
 
-2. Go to the parent directory (folder) of your app project (this is the folder with the **<folder_name>** from the error message).
+2. Go to the parent directory (folder) of your app (this is the folder with the **<folder_name>** from the error message).
 3. Right-click to open the folder's context menu and select **TortoiseSVN** > **Clean up**.
 
 ### 2.5 Getting an Error with the Message `System.Security.Cryptography.CryptographicException: Key not valid for use in specified state`
@@ -72,8 +72,8 @@ Follow these steps:
 	
 	Always use the version of TortoiseSVN that matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN, you will no longer be able to open it in Mendix.{{% /alert %}}
 
-2. Open the project folder via Studio Pro by selecting **Project** > **Show Project Directory in Explorer**.
-3. Right-click the white background of the project folder.
+2. Open the app folder via Studio Pro by selecting **App** > **Show App Directory in Explorer**.
+3. Right-click the white background of the app folder.
 4. Select **TortoiseSVN** > **Properties**.
 5. Double-click the `svn:ignore` property.
 6. Copy all text via <kbd>Ctrl</kbd>+<kbd>A</kbd> followed by <kbd>Ctrl</kbd>+<kbd>C</kbd>.
@@ -86,17 +86,17 @@ Follow these steps:
 13. Click **OK** to close the `properties` dialog box.
 14. Restart Studio Pro.
 
-You can now commit your app project.
+You can now commit your app.
 
 ### 2.7 Resolving Conflicts on the 'svn:ignore' Property {#svn-ignore}
 
-When merging or updating branches, a conflict is sometimes reported on the app project folder rather than on an individual file. This usually means there is a conflict on the `svn:ignore` property.
+When merging or updating branches, a conflict is sometimes reported on the app folder rather than on an individual file. This usually means there is a conflict on the `svn:ignore` property.
 
 In the `svn:ignore` property, Subversion records which files should be ignored. These are files that are on disk but should not be on  Team Server.
 
-For example, the `deployment` directory is necessary for running your project, but it should not be on the Team Server. Each user has their own version of the `deployment` folder on their hard disk.
+For example, the `deployment` directory is necessary for running your app, but it should not be on the Team Server. Each user has their own version of the `deployment` folder on their hard disk.
 
-You will need to resolve the conflict before you can commit your app project to Team Server.
+You will need to resolve the conflict before you can commit your app to Team Server.
 
 #### 2.7.1 Example
 
@@ -135,7 +135,7 @@ Merging the branch to the main line will result in the following information mes
 ![](attachments/troubleshoot-version-control/mergesuccessfuldialog.png)
 
 {{% alert type="info" %}}
-A conflict is reported on the project *folder*. This usually means that there is a conflict on the `svn:ignore` property.
+A conflict is reported on the app *folder*. This usually means that there is a conflict on the `svn:ignore` property.
 {{% /alert %}}
 
 To resolve a conflict on the `svn:ignore` property, perform these steps:
@@ -146,7 +146,7 @@ To resolve a conflict on the `svn:ignore` property, perform these steps:
 	
 	Always use the version of TortoiseSVN that matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN, you will no longer be able to open it in Mendix.{{% /alert %}}
 
-2. Open the project directory in Windows File Explorer
+2. Open the app directory in Windows File Explorer
 3.  Right-click the white background and choose **TortoiseSVN** > **Edit Conflicts**. The following pop-up window will be shown (resize the window to display all the information):
 
 	![](attachments/troubleshoot-version-control/editconflictsdialog.png)
@@ -163,10 +163,19 @@ To resolve a conflict on the `svn:ignore` property, perform these steps:
 	{{% /alert %}}
 
 9. Click **OK** and then **OK** again to confirm the change.
-10. Right-click the white background of the project directory and choose **TortoiseSVN** > **Edit Conflicts** again.
+10. Right-click the white background of the app directory and choose **TortoiseSVN** > **Edit Conflicts** again.
 11. This time click **Resolve using local property**.
 
 You have resolved the conflict and can commit from Studio Pro.
+
+### 2.8 Getting an Error with the Message `SharpSvn.SvnRepositoryIOForbiddenException: Access to '/.../!svn/rvr/1/trunk' forbidden`
+
+If you get this error, try the following options:
+
+* In the [Developer Portal](/developerportal/collaborate/team), check whether the user has access to the app:
+	* If they do not have access, invite them to the app
+	* If they do have access, remove them from the app and add them back – this will re-sync the access rules
+* If the above does not work, make sure the [WebDAV protocol](http://www.webdav.org/) is not blocked within your network – this protocol is [required](/refguide/system-requirements) by Studio Pro for [version control](/refguide/version-control) to work, but it might be blocked by your proxy server or other software like a firewall
 
 ## 3 Other Problems
 

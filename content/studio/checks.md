@@ -1,42 +1,45 @@
 ---
 title: "Checks"
 description: "Describes checks during publishing process in Mendix Studio."
-menu_order: 60
+menu_order: 70
 tags: ["studio", "app viewing", "checks", "errors", "consistency errors"]
 ---
 
 ## 1 Introduction 
 
-When [previewing or publishing your app](publishing-app#publishing-your-app), Mendix Studio checks your app on [consistency errors](consistency-errors). If there are any, the app cannot be published, and you see the **Checks** button goes red with the number of errors indicated.
+Mendix Studio checks your app for consistency in real-time, for example, it checks if any necessary properties of elements are missing. Such checks help you build an app that will function properly. 
+
+If your app passes the check, the **Checks** button will have a green check mark and the app will be ready to be [previewed or published](publishing-app):
+![Passed Check](attachments/checks/passed-check.jpg)
+
+If the app does not pass the check, you see the **Checks** button goes red with the number of failed checks – [consistency errors](consistency-errors). If you click the button, a **Checks** panel with the list of errors will open and the elements that did not pass the check will be highlighted. This list can be seen as a to-do list that you need to complete before your app can be [previewed or published](publishing-app).
 
 ![](attachments/checks/checks-button.png)
 
+{{% alert type="info" %}}
+
+**Preview** and **Publish** become available only when the app is fully consistent and all checks have been solved.
+
+{{% /alert %}}
+
 ## 2 Viewing Checks and Interacting with the Checks Panel {#viewing-checks}
 
-To display checks for your app and view the faulty elements in it, you can do the following:
+If your app has consistency errors, the **Checks** button will have the red border and the number of errors will be indicated on the button. To display consistency errors for your app and view the impacted elements in it, you can do the following:
 
-1. Click **Preview** or **Publish** > **Update** in the top-right of Studio. 
-
-    ![](attachments/checks/publish-update.png)
-
-3.  If your app has consistency errors, the **Checks** button will have red border, the number of the errors will be indicated on the button, and a warning will be displayed. 
-
-    ![](attachments/checks/checks-button-red.png)
-
-4.  Click the **Checks** button, the warning or press <kbd>C</kbd> to view all checks. 
-   The panel with the list of checks appears at the bottom of the screen. For more information on the **Checks** panel, see the [Checks Panel Overview](#checks-panel-overview) section.
+1. Click the **Checks** button or press the <kbd>C</kbd> shortcut to open the **Checks** panel.
+    The panel with the list of consistency errors appears at the bottom of the screen. For more information on the **Checks** panel, see the [Checks Panel Overview](#checks-panel-overview) section below.
 
     ![](attachments/checks/checks-panel.png)
 
-4. To view the exact place and element that the error refers to, click the corresponding row in the **Checks** panel (you can click any place of the row, the whole row is responsive),  and the element that contains faults will be displayed.
+4. To view the exact place and element that the error refers to in the corresponding editor, click the row in the **Checks** panel (you can click any place of the row, the whole row is responsive), and the element that failed a check will be displayed and highlighted.
 
-5. To close the panel, either click the close button in the top-right corner of the panel, or click **Checks** in the top-right corner of Studio. 
+5. To close the panel, either click the close button in the top-right corner of the panel, click **Checks** in the top-right corner of Studio, or press <kbd>C</kbd> . 
 
-You can also sort the order which errors are displayed in by clicking the column header in the panel. Thus, you can sort errors in ascending or descending order by **Message**, **Code**, **Module**, **Document**, or **Element**. For more information on items displayed in the **Checks** panel, see the [Checks Panel Overview](#checks-panel-overview) section. 
+To sort the errors, click the column header in the panel. Thus, you can sort errors in ascending or descending order by **Message**, **Code**, **Module**, **Document**, or **Element**. For more information on items displayed in the **Checks** panel, see the [Checks Panel Overview](#checks-panel-overview) section. 
 
 {{% alert type="info" %}}
 
-If there are no consistency errors, the app will be published, and the **Checks** panel will be empty. 
+If there are no consistency errors, the **Checks** panel will be empty and **Preview** and **Publish** buttons will be clickable. 
 
 {{% /alert %}}
 
@@ -44,25 +47,17 @@ If there are no consistency errors, the app will be published, and the **Checks*
 
 ### {#checks-panel-overview}
 
-The **Checks** panel is represented as a table and shows you a list of consistence errors that prevent your app from functioning in a correct way and being published (for example, if you do not specify an entity for the data view, your app cannot function correctly). For more information on consistency errors, see [Consistency Errors](consistency-errors). 
-
-{{% alert type="info" %}}
-
-The **Checks** panel is only refreshed after a user clicks **Preview** or **Publish**>**Update**, it is not refreshed in real-time.
-
-{{% /alert %}}
+The **Checks** panel is represented as a table and shows you a list of consistence errors. This prevents your app from functioning in an incorrect way and being published (for example, if you do not specify an entity for the data view, your app cannot function correctly). For more information on consistency errors, see [Consistency Errors](consistency-errors). 
 
 The items displayed in the table of the **Checks** panel are described below. 
 
 | Item     | Description                                                  |
 | -------- | ------------------------------------------------------------ |
-| Message  | Contains an explanation of the error and an error code. If an error has documentation and an explanation how to fix it, the error code is clickable, and the corresponding documentation opens. |
+| Message  | Contains an explanation of the error and an error code. If an error has documentation and an explanation how to fix it, the error code is underlined and clickable, and the corresponding documentation opens. |
 | Module   | Indicates the module where the error is found.               |
 | Document | Indicates the place of your app where the error is found (for example, a page, a microflow). |
 | Element  | Indicated the exact element that is faulty (button, activity, etcetera ). |
 
-## 4 Read More
+## 4 Main Documents in This Category
 
-* [Consistency Errors](consistency-errors)
-* [Previewing & Publishing Your App](publishing-app)
-* [General Info](general)
+* [Consistency Errors](consistency-errors) – provides information on what consistency errors are and how to fix them

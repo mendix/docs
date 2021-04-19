@@ -10,7 +10,7 @@ tags: ["studio pro", "constant", "constants"]
 
 Constants are used to define configuration values. These can differ per environment.
 
-When running the application on SAP Cloud Platform or a licensed Mendix Cloud environment, you can configure each environment separately using the [Model Options](/developerportal/deploy/environments-details#model-options) tab of the **Environment Details** page to set your constants.
+When running the application on a licensed Mendix Cloud environment, SAP BTP, or Private Cloud you can configure the constant values for each environment separately using the [Model Options](/developerportal/deploy/environments-details#model-options) tab of the **Environment Details** page to set your constants.
 
 For other cloud environments – for example, [IBM Cloud](/developerportal/deploy/ibm-cloud) or [MindSphere](/partners/siemens/mindsphere) – the constants can be accessed as **Environment Variables** in, for instance, Cloud Foundry. The constant is exposed with the name **module** + **.** + **constant** (for example, `mymodule.myconstant`).
 
@@ -54,10 +54,13 @@ This property defines whether the constant is accessible from client-side expres
 | Option | Description |
 | --- | --- |
 | Yes | The constant will be sent to the client and will be accessible from client-side expressions |
-| No | The constant will not be sent to the client and will be only accessible from [microflow](microflows) expressions |
-
-_Default value:_ No
+| No *(default)* | The constant will not be sent to the client and will be only accessible from [microflow](microflows) expressions |
 
 {{% alert type="warning" %}}
 When a constant is exposed to the client, Mendix Runtime sends its value to the client so that in addition to microflow expressions, it will also be accessible from nanoflows and page expressions. This means that you should not use sensitive data or secrets such as passwords when a constant is exposed to the client.
+
+For a web app, changes to a constant's values are reflected when the end-user refreshes the browser or restarts the app. For an offline-first PWA or native application, the app stores the constants' values for offline use. The app updates the constant's values in the following cases:
+
+* When an end-user logs in or logs out in the app
+* When you deploy a new version of the app that contains domain model changes used in the offline-first app
 {{% /alert %}}

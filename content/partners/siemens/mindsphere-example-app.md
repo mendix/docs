@@ -7,7 +7,7 @@ tags: ["Siemens", "MindSphere", "Example", "Asset Management", "Time Series", "R
 
 ## 1 Introduction
 
-You can write Mendix apps which analyze data held in MindSphere, the open, cloud-based, IoT operating system from Siemens. To help you build your app, the [Siemens MindSphere Pump Asset Example](https://appstore.home.mendix.com/link/app/108810/) app is available in the Mendix App Store and can be used as the starting point for a new Mendix app.
+You can write Mendix apps which analyze data held in MindSphere, the open, cloud-based, IoT operating system from Siemens. To help you build your app, the [Siemens MindSphere Pump Asset Example](https://appstore.home.mendix.com/link/app/108810/) app is available in the Mendix Marketplace and can be used as the starting point for a new Mendix app.
 
 This documentation provides more explanation of the MindSphere example app. Please note that this app is not production-ready. It is designed as an example of how you might begin to build a Mendix/MindSphere app.
 
@@ -91,7 +91,7 @@ More information on creating assets is available in the MindSphere [Asset Manage
 
 Open Studio Pro without opening an app and follow these steps:
 
-1. Click the icon in the top-right of the menu bar to open the Mendix App Store:
+1. Click the icon in the top-right of the menu bar to open the Mendix Marketplace:
 
 	![](attachments/mindsphere-example-app/app-store-icon.png)
 
@@ -101,11 +101,11 @@ Open Studio Pro without opening an app and follow these steps:
 
 	![](attachments/mindsphere-example-app/app-store-search.png)
 
-4. Click **Download** to create a new app project using this app:
+4. Click **Download** to create a new app app using this app:
 
 	![](attachments/mindsphere-example-app/app-store-download.png)
 
-5. To start the new app project, confirm where to store the app, the app name, and the project directory, then click **OK**:
+5. To start the new app, confirm where to store the app, the app name, and the app directory, then click **OK**:
 
 	![](attachments/mindsphere-example-app/app-store-download-project.png)
 
@@ -167,7 +167,7 @@ For more information see the MindSphere documentation [Roles & Scopes for Applic
 
 The **PumpAssetExample** module within the app uses the *MindSphere Asset Management Connector* and MindSphere APIs, via Mendix native REST, to create and view time series information for an asset.
 
-This is based on a standard Mendix starter app. It also has additional modules which are required for integrating with and deploying to MindSphere. These additional modules are:
+This is based on a standard Mendix app template. It also has additional modules which are required for integrating with and deploying to MindSphere. These additional modules are:
 
 * MindSphere SSO
 * MindSphere Theme Pack
@@ -216,7 +216,7 @@ To use the app:
 
 ### 6.1 Single Sign-On
 
-The app uses Single Sign-on (SSO) to identify the user. This is initiated in the *Runtime* tab of the Project Settings, where the microflow *MindSphereSingleSignOn.RegisterSingleSignOn* is called on startup. This microflow sets up two configurations for the user.
+The app uses Single Sign-on (SSO) to identify the user. This is initiated in the **Runtime** tab of the **App Settings**, where the microflow **MindSphereSingleSignOn.RegisterSingleSignOn** is called on startup. This microflow sets up two configurations for the user.
 
 #### 6.1.1 User Role
 

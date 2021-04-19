@@ -54,7 +54,7 @@ To create a published web service, follow these steps:
 
         ![](attachments/18448728/18581713.png)
 
-    * On the **Settings** tab, you can configure the other settings. Do change them before publishing your web service, especially the **Target namespace** (for details on these settings, see [Published Web Service](/refguide/published-web-service) in the *Mendix Studio Pro Guide*):
+    * On the **Settings** tab, you can configure the other settings. Do change them before publishing your web service, especially the **Target namespace** (for details on these settings, see [Published Web Service](/refguide/published-web-service) in the *Studio Pro Guide*):
 
         ![](attachments/18448728/18581712.png)
 
@@ -68,12 +68,14 @@ To create a published web service, follow these steps:
 
 To create the functionality to expose, follow these steps:
 
-1. Create a microflow that retrieves and returns a list of customers from the database (for details on how to create a microflow, see [How to Create Your First Microflow: Hello World!](../logic-business-rules/create-your-first-microflow-hello-world)).
+1. Create a microflow that retrieves and returns a list of customers from the database (for details on how to create a microflow, see [How to Trigger a Microflow From a Menu Item](../logic-business-rules/trigger-microflow-from-menu-item)).
 2. To make the microflow more exciting, add two input parameters to dynamically set the range settings of the retrieve action. Configure the range options of the retrieve action like this:
 
     ![](attachments/18448728/18581709.png)
 
-    <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/083d4d13-b438-4980-b0ba-90d9a3f59f40/getcustomers?embed=true" allowfullscreen=""></iframe>
+	Reference this microflow:
+    
+    ![](attachments/18448728/model.jpg)
 
 ## <a name="6"></a>6 Publishing a Microflow
 
@@ -129,7 +131,7 @@ To get a WSDL, follow these steps:
 
 To change the user authentication, follow these steps:
 
-1. Double-click the published web service in the **Project Explorer** to open it.
+1. Double-click the published web service in the **App Explorer** to open it.
 2. In the **Published Web Service** properties window, open the **Settings** tab. Because **No Authentication** is set, currently users of the web service do not need to authenticate:
 
     ![](attachments/18448728/18581702.png)
@@ -146,7 +148,7 @@ Mendix enables creating your own user management functionality as long as your o
 
 When exposing a web service, consider the following things:
 
-* In Studio Pro some words are reserved for Mendix use (for example, type, enum)
+* In Studio Pro some words are reserved for Mendix use (for example, type, Enumeration)
 * Because you may not want to publish a "_type" attribute with an underscore ("`_`") in front of it, you can change the WSDL name by changing the last column in the selected attribute window
 * If an attribute is renamed after it is published, the name in the WSDL does not automatically change (because that would break the customer's implementation)
 
@@ -157,7 +159,6 @@ When exposing a web service, consider the following things:
 * [Export XML Documents](export-xml-documents)
 * [Import Excel Documents](importing-excel-documents)
 * [Enable Selenium Support](selenium-support)
-* [Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [Import XML Documents](importing-xml-documents)
 * [Consume a REST Service](consume-a-rest-service)
 * [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)

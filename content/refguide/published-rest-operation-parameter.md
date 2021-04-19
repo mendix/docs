@@ -49,7 +49,15 @@ You can use an import mapping that takes a primitive parameter (string, integer,
 
 ### 3.2 If No Object Was Found
 
-You can indicate what should happen **if no object was found** when the import mapping has checked the box **decide this at the place where the mapping gets used**. Typically this is **Create** for **POST** operations and **Error** for **PUT** and **PATCH** operations.
+This sets the behavior of the operation when a find operation does not find an existing object.
+
+If the top-level of an [import mapping](import-mappings) has **Decide this at the place where the mapping gets used** unchecked, then the behavior is set in the import mapping.
+
+If the import mapping has **Decide this at the place where the mapping gets used** checked, then you can define the **If no object was found** action in the REST operation itself. This means you can use the same import mapping in multiple operations, but have a different behavior for each of them. The options are:
+
+* Create – create an object of the correct entity to map to — typically used for **POST** operations
+* Ignore – don't map this element and continue parsing
+* Error – stop parsing the XML and throw an error — typically used for **PUT** and **PATCH** operations
 
 ### 3.3 Commit
 

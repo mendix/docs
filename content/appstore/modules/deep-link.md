@@ -1,18 +1,18 @@
 ---
 title: "Deep Link"
 category: "Modules"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the Deep Link module, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "deep link", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
 Use the [Deep Link](https://appstore.home.mendix.com/link/app/43/) to add request handlers to your app that will trigger microflows.
 
-### 1.1 Typical Usage Scenarios
+### 1.1 Typical Use Cases
 
-The typical usage scenario is configuring a link to trigger a microflow like this: `    https://myapp.com/link/resetpassword/DF6345SDF`. The module is design- and runtime-configurable, it respects security, and it supports links for both logged-in and anonymous users.
+The typical usage scenario is configuring a link to trigger a microflow like this: `https://myapp.com/link/resetpassword/DF6345SDF`. The module is design- and runtime-configurable, it respects security, and it supports links for both logged-in and anonymous users.
 
 ### 1.2 Features
 
@@ -26,7 +26,7 @@ After importing the module into your application you need to configure it.
 
 ### 2.1 Initializing the Deep Link Module on App Startup
 
-To automatically start this  module, the **DeepLink.Startdeeplink** microflow needs to be set as the startup microflow (via **Project** > **Settings** > **Server** > **After startup**). 
+To automatically start this  module, the **DeepLink.Startdeeplink** microflow needs to be set as the startup microflow (via **App** > **Settings** > **Server** > **After startup**). 
 
 If you already have a startup microflow configured in your app, you need to extend it with a [sub-microflow activity](/howto/logic-business-rules/extract-and-use-sub-microflows) that calls the **DeepLink.Startdeeplink** microflow.
 
@@ -34,7 +34,7 @@ The `/link/` path needs to be added as a request handler in your application. Th
 
 ### 2.2 Security
 
-All roles that need to be able to change the configuration of the deeplink module (at runtime) require the **DeepLink.Admin** user role (via **Project** > **Security** > **User roles**).
+All roles that need to be able to change the configuration of the deeplink module (at runtime) require the **DeepLink.Admin** user role (via **App** > **Security** > **User roles**).
 
 All other roles—including your guest roles—should have the **DeepLink.User** user role. Otherwise they will not be able to use any link.
 
@@ -54,7 +54,7 @@ You need a custom microflow with [microflow call](/refguide/microflow-call) acti
 
 Start the application and sign in as a user who has the **Deeplink.Admin** module role associated to one of their user roles. Then, open the page that includes the `DeepLink.DeepLinkConfigurationOverview` snippet (for more information, see [Navigation](#navigation) above). You can manage all the deep link configuration entries on this page.
 
-### 2.5 Deeplink.CreateDeeplinkConfig Microflow Parameters
+### 2.5 Setting the Microflow Parameters
 
 The **Deeplink.CreateDeeplinkConfig** microflow requires the following parameters to be set carefully:
 
@@ -71,19 +71,21 @@ The **Deeplink.CreateDeeplinkConfig** microflow requires the following parameter
 
 ### 2.6 Handling Deep Link Requests
 
-After handling a request, this module will redirect to the homepage of your application. The homepage is configured in the app project's [Navigation](/refguide/navigation).
+After handling a request, this module will redirect to the homepage of your application. The homepage is configured in the app's [Navigation](/refguide/navigation).
 
 To open another page, the module needs to figure out what microflow is associated with the requested deep link. For this, you need to change the default homepage in your navigation to a custom microflow. If the default homepage is already a microflow, you need to modify it.
 
 Follow these steps to update this homepage microflow:
 
-1. Make the first activity in this custom microflow a [call microflow](/refguide/microflow-call) activity that calls `Deeplink.DeeplinkHome`. 
+1. Make the first activity in this custom microflow a [microflow call](/refguide/microflow-call) activity that calls `Deeplink.DeeplinkHome`. 
 2. Configure the microflow to return a Boolean value that indicates if the module will start triggering a microflow. 
 3. Add an exclusive split that handles the result of `Deeplink.DeeplinkHome`:
 	* When the result of `Deeplink.DeeplinkHome` is true, the custom microflow should end, and the module will then call the correct microflow
-	* When the result is false, the microflow should continue with an [show page](/refguide/show-page) activity that opens the page or microflow that is your default home page (as in, the original intended behavior)
+	* When the result is false, the microflow should continue with a [show page](/refguide/show-page) activity that opens the page or microflow that is your default home page (as in, the original intended behavior)
 
 ### 2.7 Constants (Optional)
 
 * **IndexPage** – In special cases—for example, when you want to load a specific theme or bypass a certain single sign-on page—you can modify this constant to redirect to another index page like `index3.html` or `index-mytheme.html`.
-* **LoginLocation** – If a user session is required, this constant defines the login page where the user is supposed to enter the login credentials. This property is useful in single-sign-on environments. If empty, the default Mendix built-in login page is used. If not empty, it is assumed that after login, the user will be redirected to the deep link again. For this reason, the provided URL is appended with the original deep link (for example, `https://mxid.mendix.com/login?a=MyApp&f=true&cont=` or `../sso/login?f=true&cont=`).
+* **LoginLocation** – If user credentials are required but are not present in the session, the user will get redirected to this location. This constant's value can either be fully qualified (for example, `https://myapp.xyz.com/mylogin.html`) or relative to the site (for example, `/mylogin.html`). If the constant value is empty, the default built-in Mendix login page is used.
+	* To make sure the end-user gets sent back to original deep link URL after having logged in, append `&f=true&cont=` to the constant (for example, `/mylogin.html&f=true&cont=`)
+	* When the app is using SAML for SSO and the end-user should be redirected to the deep link again, use either `https://myapp.xyz.com/SSO/login?a=MyApp&f=true&cont=` or `/SSO/login?f=true&cont=` — *note that this construction does not work for other SSO modules, such as XSUAA*

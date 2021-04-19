@@ -25,7 +25,7 @@ You cannot sync your changes with the Web Modeler if your project has Mendix ver
 
 The Team Server is where all the committed versions of Mendix apps are stored. If you commit a revision of an app, it is stored on the Team Server.
 
-To commit to the Team Server you will need to have a role in the project which allows you to edit the app. For more information, see section [App Team Roles](https://docs.mendix.com/developerportal/company-app-roles/#app-team-roles) in *Company & App Roles*.
+To commit to the Team Server you will need to have a role in the project which allows you to edit the app.
 
 ### 2.2 Repository
 
@@ -93,7 +93,7 @@ You may enable the Web Modeler for one of the development lines. This means that
 
 The Web Modeler cannot be used to develop the app if it is not enabled for any development lines.
 
-For starter apps created via the Developer Portal, the main line of a new app will be Web Modeler enabled.
+For app templates created via the Developer Portal, the main line of a new app will be Web Modeler enabled.
 
 ### 2.11 Tag
 

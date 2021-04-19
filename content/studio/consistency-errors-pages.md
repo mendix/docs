@@ -1,16 +1,25 @@
 ---
 title: "Page Consistency Errors"
-category: "Consistency Errors"
+parent: "consistency-errors"
+menu_order: 10
 description: "Describes consistency errors in the page editor in Mendix Studio and the way to fix them."
-menu_order: 
 tags: ["studio", "consistency errors", "checks", "errors", "page editor"]
+#To update screenshots in this document, use the Consistency Errors app.
 ---
 
 ## 1 Introduction 
 
-In this document, we will explain how to solve the most common consistency errors that can occur you  configure pages in Mendix Studio.
+In this document, we explain how to solve the most common consistency errors that can occur you  configure pages in Mendix Studio. For more information on pages, see [Pages](page-editor).
 
 An example of a consistency error is when you do not specify the entity property of a data view on a page. 
+
+{{% alert type="info" %}}
+
+This document does not describe *all* the errors, as there are a lot of errors that can occur, some of which are simple and do not need extra explanation, others are rare and/or heavily dependent on a use-case. 
+
+{{% /alert %}}
+
+Some errors have error codes and if these errors are described in documentation, Studio has a clickable link to the corresponding document. Others do not have an error code, in this case, you can manually search whether a particular error is described in documentation (you can search by a message you see in the **Checks** panel).
 
 ## 2 List View Consistency Errors 
 
@@ -173,7 +182,7 @@ Now the *Customer* object is available on the page and it matches the microflow 
 
 When you set a microflow as an on-click action for a widget, and this microflow expects a certain data (for example, an object), but a different object is available to the widget, this will result in an error. 
 
-For example, on a page called *Customers* you have a button that calls a microflow (i.e. an **On Click Action** of the button is set to *Microflow*):
+For example, on a page called *Customers* you have a button that calls a microflow (meaning, an **On Click Action** of the button is set to *Microflow*):
 
 ![](attachments/consistency-errors-pages/button-on-click-action.png)
 

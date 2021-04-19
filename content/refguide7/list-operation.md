@@ -14,7 +14,7 @@ The List Operation activity can perform various actions on a list. See below for
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (for example, caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 
@@ -46,8 +46,8 @@ These operations take a single list and a member (attribute or association) as i
 
 | Operation | Description | Result Type |
 | --- | --- | --- |
-| Find | Find the first object of which the member has the given value. | Object |
-| Filter | Find all objects of which the member has the given value. | List |
+| Find | Find the first object of which the member has the given value. Return an empty object if no matching object is found. | Object |
+| Filter | Find all objects of which the member has the given value. Return an empty list if no matching object is found. | List |
 
 ### 2.4 Unary
 

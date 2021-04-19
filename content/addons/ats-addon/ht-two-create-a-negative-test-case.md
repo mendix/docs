@@ -7,7 +7,7 @@ tags: ["ATS", "testing"]
 
 ## 1 Introduction
 
-This how-to explains how to create a negative test case in ATS. It uses the [Company Expenses](https://appstore.home.mendix.com/link/app/240/) app as an example.
+This how-to explains how to create a negative test case in ATS. The how-to uses the Company Expenses app template for an example scenario. However, this app template is no longer platform-supported by Mendix. Therefore, sections using this app template can only be used as reference and not as sections that can be completed step-by-step.
 
 ATS is a functional testing tool that asserts, finds, and sets widgets in a Mendix app. For this scenario, you do not want to know that a widget is present, but that a widget is not present.
 

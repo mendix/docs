@@ -3,7 +3,8 @@ $block: 'frontpage';
 .#{$block} {
   @include element('featured') {
     @include element('title'){
-      font-size: 36px;
+      /* font-size was 36px but this wrapped the title */
+      font-size: 32px;
       font-weight: 300;
       line-height: 49px;
       color: $color-darker-grey-2;
@@ -16,9 +17,12 @@ $block: 'frontpage';
     @include element('link'){
       color: $color-darker-grey-2;
     }
+    @include element('container') {
+      padding: 0 20px;
+      @media (min-width: 1200px) {
+      padding-left: 64px;        
+    }
+  }
   }
 }
 
-.mx__page__content ul.frontpage__featured__list {
-  padding-left: 0;
-}

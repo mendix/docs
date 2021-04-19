@@ -1,48 +1,46 @@
 ---
 title: "8.2"
-parent: "metamodel"
+parent: "metamodel-8"
 ---
-
-These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel) version 8.2.
 
 ## 8.2.0
 
 **Release date: September 25th, 2019**
 
-## Constants
+### Constants
 
-### Constant (ModelUnit)
+#### Constant (ModelUnit)
 
-* Introduced the `exposedToClient` property.
+* We introduced the `exposedToClient` property.
 
-## DomainModels
+### DomainModels
 
-### Entity (Element)
+#### Entity (Element)
 
-* Made the `isRemote` property public.
-* Introduced the `remoteSourceDocument` (experimental) property, which indicates the source document of the remote entity.
+* We made the `isRemote` property public.
+* We introduced the `remoteSourceDocument` (experimental) property, which indicates the source document of the remote entity.
 
-### NoGeneralization (Element)
+#### NoGeneralization (Element)
 
-The following properties were made public:
+We made the following properties public:
 
 * `hasChangedDate`
 * `hasCreatedDate`
 * `hasOwner`
 * `hasChangedBy`
 
-### RemoteEntitySourceDocument (ModelUnit)
+#### RemoteEntitySourceDocument (ModelUnit)
 
-* Introduced this experimental property, which indicates a source document of a remote entity.
+* We introduced this experimental property, which indicates a source document of a remote entity.
 
-## CustomWidgets
+### CustomWidgets
 
-### WidgetValue (Element)
+#### WidgetValue (Element)
 
-* Introduced the `widgets` property.
+* We introduced the `widgets` property.
 
-## Pages
+### Pages
 
-### NativeLayoutContent (Element)
+#### NativeLayoutContent (Element)
 
-* Introduced the `showBottomBar` property.
+* We introduced the `showBottomBar` property.

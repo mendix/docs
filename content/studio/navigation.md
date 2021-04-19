@@ -2,23 +2,26 @@
 title: "Navigation Document"
 description: "Describes the navigation menu in Mendix Studio."
 menu_order: 40
-tags: ["studio", "navigation", "app menu"]
+tags: ["studio", "navigation", "menu item", "navigation item", "app menu"]
 ---
 
 ## 1 Introduction 
 
-A navigation document in Mendix Studio shows a configured menu of your app in a form of a tree. You can create items and sub-items in your navigation. 
+A **Navigation Document** in Mendix Studio shows a configured menu of your app in a form of a tree. You can create items and sub-items in your navigation. 
 
-![](attachments/navigation/nagigation-wm-vs-app.png)
+![](attachments/navigation/navigation-vs-app.png)
 
-Open the **Navigation Document** by clicking the corresponding icon in the left menu bar.
+To open the **Navigation Document**, click the corresponding icon in the left menu bar.
 
-{{% image_container width="300" %}}![](attachments/navigation/navigation-icon.png)
-{{% /image_container %}}
+![Navigation Document Icon](attachments/navigation/navigation-icon.png)
+
+The **Navigation Document** consists of menu items that allow end-users navigate your app or that perform certain actions. For example, you can configure a menu item to open a specific page or to log an end-user out of their profile. For more information on actions you can assign to menu items, see the [Events Section](#events-section-navigation).
+
+You can also add a sub-item to a menu item. Mind that you cannot assign an action to the menu item that has the sub-item.  
 
 {{% alert type="info" %}}
 
-In Studio, you are viewing and editing a Responsive type of the navigation profile, while there are more types of profiles in Studio Pro. For more information on profiles in Studio Pro, see the [Profiles](/refguide/navigation#profiles) section in *Navigation in Mendix 7.4 & Above* in the *Mendix Studio Pro Guide*. 
+In Studio, you are viewing and editing a Responsive type of the navigation profile, while there are more types of profiles in Studio Pro. For more information on profiles in Studio Pro, see the [Profiles](/refguide/navigation#profiles) section in *Navigation* in the *Studio Pro Guide*. 
 
 {{% /alert %}}
 
@@ -34,7 +37,13 @@ Properties of the menu items consists of the following sections:
 
 ### 2.1 Events Section {#events-section-navigation}
 
-You can choose the **On Click Action** in the **Events** section. The **On Click Action** defines what action is performed when the user clicks a menu item. The available actions are described in the table below:
+You can choose the **On Click Action** in the **Events** section. The **On Click Action** defines what action is performed when the user clicks a menu item. 
+
+{{% alert type="info" %}}
+If a menu item has a sub-item(s), it cannot have an action configured for it.
+{{% /alert %}}
+
+The available actions are described in the table below:
 
 | Action         | Description                                                  |
 | -------------- | ------------------------------------------------------------ |
@@ -65,16 +74,19 @@ The properties that can be configured in the **General** section, are described 
 
 ## 3 Creating a Menu Item
 
-To create a new navigation item, do the following:
+To create a new menu item, do the following:
 
 1. Click the **Navigation Document** icon in the left menu bar to open the **Navigation**.
 
-2.  Click a plus at the end of the navigation tree to create a menu item, or click a plus next to the existing navigation item to create its sub-item
+2. Click a plus at the bottom of the navigation tree to create a menu item, or click a plus next to the existing navigation item to create its sub-item
 
-    ![](attachments/navigation/adding-navigation-items.png)
+   ![](attachments/navigation/adding-navigation-items.png)
 
 3. Specify the properties of the created item if needed (For more information, see [Properties of Menu Items](#properties-of-menu-items)). 
+
+A new menu item or a sub-item is added to the navigation.
 
 ## 4 Read More
 
 * [General Info](general)
+* [Navigation Consistency Errors](consistency-errors-navigation)

@@ -8,6 +8,7 @@ parent: "ats-1"
 **Release date: December 14th, 2017**
 
 ### Fixes
+
 * We fixed a bug that sometimes caused an error when opening the test error logs. More specifically, if the error log contained HTML characters it caused issues with Mendix. HTML characters in the error messages are now correctly escaped and rendered as a string.
 * We fixed an issue where some images were not displayed in cloud version v4.
 
@@ -16,6 +17,7 @@ parent: "ats-1"
 **Release date: July 3rd, 2017**
 
 ### Fixes
+
 * We fixed a bug where Mendix actions were not shown in the search results if there were more than 25 results.
 * We fixed a bug where the error log was lost due to being too long. 
 * We fixed a bug where the action **Set Value** could set a value on a read only widget.
@@ -126,7 +128,7 @@ ATS now supports testing the recently released Mendix 7.
 
 ### Supporting AppStore Widgets
 
-Everybody uses widgets from the Mendix App Store in their applications. And of course you want them to be tested like all other parts of your application. Now they can be tested.
+Everybody uses widgets from the Mendix Marketplace in their applications. And of course you want them to be tested like all other parts of your application. Now they can be tested.
 
 We've selected the top widgets from the App Store and added support for testing with ATS.
 
@@ -135,8 +137,8 @@ These are the new widgets now supported by ATS:
 * [OnChange Inputbox/Textarea](https://appstore.home.mendix.com/link/app/89/Mendix/OnChange-Inputbox)
 * [Boolean Slider](https://appstore.home.mendix.com/link/app/1798/Mendix/Boolean-Slider)
 * [Simple Checkbox Set Selector](https://appstore.home.mendix.com/link/app/2349/Mendix/Simple-Checkbox-Set-Selector)
-* [Checkbox Set Selector](https://appstore.home.mendix.com/link/app/121/Mendix/Checkbox-set-selector-(Table))
-* [Grid Selector](https://appstore.home.mendix.com/link/app/266/Mendix/Grid-Selector)
+* [Checkbox Set Selector](/appstore/widgets/check-box-set-selector)
+* [Grid Selector](/appstore/widgets/grid-selector)
 * [Input Reference Selector](https://appstore.home.mendix.com/link/app/99/Mendix/Input-Reference-Selector) (not supported in recording yet)
 * [CKEditor](https://appstore.home.mendix.com/link/app/1715/Mendix/CKEditor-For-Mendix) (not supported in recording yet)
 * [Bootstrap Wysiwyg Editor](https://appstore.home.mendix.com/link/app/902/Mendix/Bootstrap-Wysiwyg-Editor) (not supported in recording yet)

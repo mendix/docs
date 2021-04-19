@@ -1,6 +1,9 @@
 ---
 title: "Table (Document Template)"
 parent: "document-templates"
+aliases:
+    - /refguide/table-(document-template).html
+    - /refguide/Table+(document+template.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -12,7 +15,7 @@ Tables can be used both inside and outside the data view or templategrid widgets
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918134.png)
+![](attachments/document-templates/918134.png)
 
 This table has four rows and three columns. The last row contains a data view with another table.
 

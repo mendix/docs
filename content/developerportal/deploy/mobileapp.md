@@ -4,6 +4,7 @@ category: "Deployment"
 menu_order: 90
 description: "Describes the Mobile App page in the Mendix Developer Portal."
 tags: ["Developer Portal", "Mobile", "Mobile App", "Deploy"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -16,6 +17,14 @@ This page is divided into three tabs:
 * **iOS**
 * **Android**
 
+{{% alert type="warning" %}}
+Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible.
+
+To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Locally](/howto8/mobile/build-hybrid-locally) for information on local building.
+
+To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
+{{% /alert %}}
+
 ## 2 App Info
 
 In this tab, you can find the following sections:
@@ -23,7 +32,7 @@ In this tab, you can find the following sections:
 * **General settings**
 * **Profile settings**
 * **Permissions**
-* **Custom Phonegap/Cordova configuration**
+* **Custom Cordova configuration**
 
 ### 2.1 General Settings
 
@@ -60,18 +69,16 @@ The permissions that can be enabled/disabled:
 * **Photo Library**
 
 {{% alert type="info" %}}
-
 Some functionality might not be available when you disable these permissions (for example, your app will not be able to use the camera widget when you disable it).
-
 {{% /alert %}}
 
-### 2.4 Custom Phonegap/Cordova Configuration
+### 2.4 Custom Cordova Configuration {#custom}
 
-You can specify additional Phonegap/Cordova settings and plugins by adding an XML snippet below. This snippet will be inserted at the bottom of the configuration file.
+You can specify additional Cordova settings and plugins by adding an XML snippet below. This snippet will be inserted at the bottom of the configuration file.
 
-For an overview of available elements and settings, refer to [Apache Cordova Phonegap Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/).
+For an overview of available elements and settings, refer to [Apache Cordova Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/).
 
-## 3 iOS and Android
+## 3 iOS & Android
 
 In these tabs, you will see an overview of all the images that will be used in the app store. The images are divided into two categories:
 
@@ -86,54 +93,16 @@ If you do not upload any images, the default Mendix-branded images that are show
 
 Take note of the required resolutions and file types for the image files, as the system will not allow you to upload images with different resolutions (because your app packages will not function properly).
 
-## 4 Publish for Mobile App Stores {#publish}
+## 4 Doing It Yourself {#doing-it-yourself}
 
-On the right side of the screen, you can choose which operating system you want to publish (iOS or Android).
+Once you begin the app buliding wizard and choose the correct environment, click **Download a customizable package**. The package contains all your settings, icons, and splash screens. It allows you to easily make changes, create local builds, and run on emulators.
 
-When you are ready to build, click **Publish for Mobile App Stores**.
+For iOS please follow the instructions in the [Building Your iOS App Locally](/howto8/mobile/build-hybrid-locally#building-ios-locally) section of *How to Build a Mendix Hybrid App Locally*.
 
-This wizard will guide you through the process of creating app packages for the Apple App Store and Google Play Store. These packages can be built using Adobe's PhoneGap Build service. The resulting mobile apps can then access native functionality such as the geo location service and the camera.
+For Android please follow the instructions in the [Building Your Android App Locally](/howto8/mobile/build-hybrid-locally#building-android-locally) section of *How to Build a Mendix Hybrid App Locally*.
 
-You need an account for Adobe PhoneGap Build and for the app stores in which you want to publish your app.
+## 5 Read More
 
-There are two ways that the device can build the packages:
-
-* **Build it in the cloud**
-* **Do it yourself**
-
-### 4.1 Building It in the Cloud
-
-After selecting the **Build in the cloud** option and choosing the correct environment, you are ready to start the PhoneGap build.
-
-When you click **Start PhoneGap Build job**, Mendix will generate an Adobe PhoneGap Build package and send it to the PhoneGap Build service on your behalf. You might be required to authorize this request using an Adobe PhoneGap Build account.
-
-As soon as the build job has completed, the platform-specific packages will be ready for download.
-
-Please note that an Adobe PhoneGap Build account is required to continue. Create [an account](https://build.phonegap.com/plans) if you do not have one already.
-
-### 4.2 Doing It Yourself
-
-After selecting the **Do it yourself** option and choosing the correct environment, click **Download a customizable package**. The package contains all your settings, icons, and splash screens. It allows you to easily make changes, create local builds, run on emulators, and upload to the PhoneGap Build service.
-
-In the `/dist` folder, you'll find a pre-compiled Adobe PhoneGap Build package for your app. You can upload this package directly to the PhoneGap Build service to obtain platform-specific app packages. Those packages can then be published in the app stores.
-
-You can freely customize the generated package to enable, for example, additional PhoneGap/Cordova plugins or add additional resources to your app. For more information, see [Customizing PhoneGap Build Packages](/refguide/customizing-phonegap-build-packages).
-
-For detailed instructions, see the [hybrid-app-template GitHub repository](https://github.com/mendix/hybrid-app-template).
-
-To generate the app store packages, go to [Build.PhoneGap.com](https://build.phonegap.com/).
-
-## 5 Example
-
-**How to build a Phonegap app in the cloud**
-
-{{% youtube 7ic625u2YJE %}}
-
-## 6 Read More
-
-* [Customizing PhoneGap Build Packages](/refguide/customizing-phonegap-build-packages)
-* [Deploy and Manage](/developerportal/deploy)
-* [Offline](/refguide/offline-first)
-* [How to Publish a Mendix Hybrid Mobile App in App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
-* [Adobe PhoneGap Build](https://build.phonegap.com/)
-* [Apache Cordova Phonegap Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)
+* [Deploy and Manage Guide](/developerportal/deploy)
+* [Offline Reference Guide](/refguide/offline-first)
+* [Apache Cordova Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)

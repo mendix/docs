@@ -3,6 +3,8 @@ title: "Solve Load & Import Errors"
 category: "Monitoring & Troubleshooting"
 menu_order: 11
 tags: ["monitoring", "troubleshooting", "load", "import", "error"]
+aliases:
+    - /howto7/solving-load-and-import-errors.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -24,9 +26,9 @@ Click the **Details >>** button to show the actual errors that occurred while lo
 
 These detailed messages tell you the following:
 
-* The module and document in which the error occurred (e.g. the domain model of the module 'Transportation').
-* The model element that caused the error (e.g. the entity 'Vehicle').
-* What the actual problem is (e.g. there's an index that doesn't contain any attributes, which is not permitted).
+* The module and document in which the error occurred (for example, the domain model of the module 'Transportation').
+* The model element that caused the error (for example, the entity 'Vehicle').
+* What the actual problem is (for example, there's an index that doesn't contain any attributes, which is not permitted).
 
 ## 3 Determine the Origin of Your Project
 
@@ -58,7 +60,7 @@ Finally, in the unlikely event that you encounter this error while working on yo
 
 ## 5 Read More
 
-* [Debug a Mobile App with Mendix](../mobile/debug-a-mobile-app)
+* [Debug a Hybrid Mobile App](../mobile/debug-a-mobile-app)
 * [Clearing Warning Messages in Mendix](clear-warning-messages)
 * [Common Mendix SSO Errors](handle-common-mendix-sso-errors)
 * [Debugging Java Actions](debug-java-actions)

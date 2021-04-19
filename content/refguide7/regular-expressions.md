@@ -67,7 +67,7 @@ A regular expression can contain the following types of subexpressions:
 
 * `{n}` – matches the preceding element exactly n times. For example:
 
-    * `[0-9]{4} ?[a-zA-Z]{2}` is an alternative way to write the expression for checking the Dutch postcode in the example above
+    * `[1-9][0-9]{3} ?[A-Za-z]{2}` is an alternative way to write the expression for checking the Dutch postcode in the example above
 
 * `.` – a dot matches any single character. If you want to match a dot, you can escape it by prefixing it with a `\` (backslash)
 

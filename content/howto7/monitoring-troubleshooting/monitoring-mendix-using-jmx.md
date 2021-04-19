@@ -80,7 +80,7 @@ public long getNamedUserCount();
 }
 ```
 
-This is the implementation, `MxStats.java`. The methods call the [Mendix Core](http://apidocs.mendix.com/4/runtime/classcom_1_1mendix_1_1core_1_1_core.html) class and return the value:
+This is the implementation, `MxStats.java`. The methods call the [Mendix Core](http://apidocs.rnd.mendix.com/4/runtime/classcom_1_1mendix_1_1core_1_1_core.html) class and return the value:
 
 ```
 package jmx.actions;

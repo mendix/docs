@@ -9,7 +9,7 @@ tags: ["Scheduled Event", "Execution properties", "Timing", "intervals", "schedu
 
 With scheduled events you can let the runtime execute a microflow at a specific moment in time. The event can also be repeated with a given interval, for example every day.
 
-A scheduled event is added to your module as a document (right-click on your module and you will find it listed under *Add other...*).
+A scheduled event is added to your module as a document (right-click your module and you will find it listed under *Add other...*).
 
 {{% alert type="warning" %}}
 Scheduled events can be tested locally, but they will not be run if your app is deployed as a Free App. See the Free App section of [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy#free-app) for more information on Free App limitations.
@@ -34,7 +34,7 @@ Scheduled events can be tested locally, but they will not be run if your app is 
 | Property | Description |
 | --- | --- |
 | Start date/time | The date and time when the scheduled event is executed the first time. If the start date/time is UTC time the scheduled event is executed when it is the indicated time in UTC (Universal Coordinated Time). If the start date/time is server time, the scheduled event is executed when it is the indicated time on the server on which your application runs. |
-| Repeat | The scheduled event is repeated with the indicated interval (e.g. every 5 minutes) if repeat is on. |
+| Repeat | The scheduled event is repeated with the indicated interval (for example, every 5 minutes) if repeat is on. |
 | Interval | This number together with the interval type indicates how large the interval is between two events. This number should be greater than zero. |
 | Interval type | The interval type determines the unit of the interval. Together with the interval number it indicates how large the interval between two events is. For example, 1 day or 10 minutes. |
 

@@ -1,7 +1,8 @@
 ---
-title: "Import With Mapping"
+title: "Import with Mapping"
 parent: "integration-activities"
-tags: ["studio pro", "import xml", "import mapping action", "integration activity"]
+tags: ["studio pro", "import xml", "import with mapping", "import mapping", "integration activity"]
+menu_order: 30
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -12,41 +13,58 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-With the Import Mapping action, you can import the data stored in an XML or JSON document into [domain model](domain-model) entities.
+The **Import with mapping** activity allows you to import the data stored in an XML or JSON document into [domain model](domain-model) entities.
 
-![](attachments/import-mapping-action/import-mapping-action.png)
+## 2 Properties
 
-## 2 Input
+An example of import with mapping properties is represented in the image below:
 
-### 2.1 Variable
+![import with mapping properties](attachments/integration-activities/import-with-mapping-properties.png)
+
+There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
+
+The import with mapping properties pane consists of the following sections:
+
+* [Action](#action)
+* [Common](#common)
+
+## 3 Action Section{#action}
+
+The **Action** section of the properties pane shows the action associated with this activity.
+
+You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
+
+You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+
+![](attachments/integration-activities/import-mapping-action.png)
+
+### 3.1 Variable
 
 The input variable can be the name of a string variable, a file document, an [HttpRequest](http-request-and-response-entities#http-request), or an [HttpRequest](http-request-and-response-entities#http-response). The content of the file document, HttpRequest, or HttpResponse should be XML or JSON.
 
-## 3 Import Mapping
-
-### 3.1 Mapping
+### 3.2 Mapping
 
 The [import mapping](import-mappings) defines how to transform the XML or JSON into objects.
 
-### 3.2 Input Content Type
+### 3.3 Input Content Type
 
 If the import mapping is based on a [message definitions](message-definitions), it can import both XML and JSON. Select whether the input object contains XML or JSON.
 
-### 3.3 The Input Contains
+### 3.4 The Input Contains
 
 If the import mapping is based on a [message definitions](message-definitions), it can import both single objects and lists. Select whether the input is a single object or a list of objects.
 
-### 3.4 If No Object Was Found
+### 3.5 If No Object Was Found
 
 You can indicate what should happen **if no object was found** when the import mapping has checked the box **decide this at the place where the mapping gets used**.
 
-### 3.5 Parameter
+### 3.6 Parameter
 
 If the selected mapping requires a parameter, you can choose it here.
 
-### 3.6 Range (If the Mapping Returns a List)
+### 3.7 Range
 
-The range determines how many objects are mapped and returned.
+ If the mapping returns a list, you can select a range to determine how many objects are mapped and returned.
 
 | Range | Meaning |
 | --- | --- |
@@ -54,7 +72,7 @@ The range determines how many objects are mapped and returned.
 | First | Map and return only the first object. The result of the action will be a single object instead of a list. |
 | Custom | Map and return a given number of objects (limit). The limit is a microflow expression that should result in a number. |
 
-### 3.7 Commit {#commit}
+### 3.8 Commit {#commit}
 
 Indicates whether the resulting objects should be committed to the database, and whether event handlers should be triggered.
 
@@ -64,7 +82,7 @@ Indicates whether the resulting objects should be committed to the database, and
 | Yes without events | The objects are saved in the database, but the [event handlers](event-handlers) are not triggered (default). |
 | No | The objects are created without being saved in the database. You will need a [commit action](committing-objects) to save them. |
 
-## 4 Validation
+### 3.9 Validate Against Schema
 
 {{% alert type="info" %}}
 
@@ -72,24 +90,24 @@ Validation properties are only applicable if an import mapping is selected that 
 
 {{% /alert %}}
 
-### 4.1 Validate Against Schema
-
 Determines whether the import action should validate the incoming XML against the [XML schema](xml-schemas).
 
-Setting this to _yes_ can greatly decrease performance!
+Setting this to _yes_ can impact performance!
 
-*Default value:* No
+Default: *No*
 
-## 5 Output
-
-### 5.1 Store in Variable
+### 3.10 Store in Variable
 
 Choose whether to store the result of the import.
 
-### 5.2 Type
+### 3.11 Type
 
 The type of the result.
 
-### 5.3 Name
+### 3.12 Name
 
 The name of the result of the import.
+
+## 4 Common Section{#common}
+
+{{% snippet file="refguide/microflow-common-section-link.md" %}}

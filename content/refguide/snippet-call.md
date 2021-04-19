@@ -16,20 +16,24 @@ The **Snippet call** widget allows you to use a [snippet](snippet) on a [page](p
 
 An example of snippet call properties is represented in the image below:
 
-{{% image_container width="350" %}}![Snippet Call Properties](attachments/common-widgets/snippet-call-properties.png)
+{{% image_container width="300" %}}![Snippet Call Properties](attachments/common-widgets/snippet-call-properties.png)
 {{% /image_container %}}
 
 Snippet call properties consist of the following sections:
 
 * [Common](#common)
-* Design Properties
+* [Design Properties](#design-properties)
 * [General](#general)
 
 ### 2.1 Common Section {#common}
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 2.2 General Section {#general}
+### 2.2 Design Properties Section {#design-properties}
+
+{{% snippet file="refguide/design-section-link.md" %}} 
+
+### 2.3 General Section {#general}
 
 This section contains the **Snippet** property, it shows the name of an actual snippet that will be displayed here.
 
@@ -44,4 +48,4 @@ To perform actions on a snippet call, select it on a page and right-click it. Th
 
 * [Page](page)
 * [Common Widgets](common-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

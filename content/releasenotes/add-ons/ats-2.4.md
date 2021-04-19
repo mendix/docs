@@ -41,7 +41,7 @@ parent: "ats-2"
 
 ### Other Changes
 
-* When you open ATS, you will now see a new screen that requests your approval to share your Mendix Community Profile information with the ATS application. Every user has to confirm this once per environment.
+* When you open ATS, you will now see a new screen that requests your approval to share your Mendix Profile information with the ATS application. Every user has to confirm this once per environment.
 
 ### Known Issues
 

@@ -23,7 +23,7 @@ The domain model consists of entities and associations. An entity is the bluepri
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Download and install the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)
-* Create a new app or have an existing app project available
+* Create a new app or have an existing app available
 
 ## 3 Creating Entities and Attributes
 
@@ -41,7 +41,7 @@ To create entities and their attributes, follow these steps:
 
     ![](attachments/18448745/18582190.png) 
 
-    By default, the Modeler creates a persistent entity, which means that the app's database will be able to store objects of this type of entity.
+    By default, the Modeler creates a persistable entity, which means that the app's database will be able to store objects of this type of entity.
 4. Start typing directly to change the name of the entity into **Customer**:
 
     ![](attachments/18448745/18582189.png)

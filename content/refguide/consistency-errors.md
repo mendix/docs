@@ -1,7 +1,7 @@
 ---
 title: "Consistency Errors"
-category: "App Modeling"
-menu_order: 105
+parent: "errors-pane"
+menu_order: 10
 description: "Describes consistency errors in Mendix Studio Pro and the way to fix them."
 tags: ["Studio Pro", "consistency errors", "checks", "errors"]
 ---
@@ -10,9 +10,9 @@ tags: ["Studio Pro", "consistency errors", "checks", "errors"]
 
 To make sure that your app is always consistent and properly built, Studio Pro does consistency checks when you build your app. 
 
-When a consistency check is not met, Studio Pro will notify you about this via consistency errors on the **Errors** pane. 
+When a consistency check is not met, Studio Pro will notify you about this via consistency errors on the [Errors pane](errors-pane). The errors in pages, microflows, domain models, and document templates will be highlighted:
 
-![The Errors tab](attachments/consistency-errors/errors-tab.png)
+![Errors Pane](attachments/errors-pane/errors-pane.png)
 
 If you cannot see the **Errors** pane, you can enable it from the menu option **View > Error list**.
 
@@ -31,6 +31,7 @@ Errors need to be solved before your app can be deployed. A consistency error ca
 * [Pages](consistency-errors-pages) 
 * [Navigation](consistency-errors-navigation) 
 * [Microflows](microflows)
+* [Workflows](workflows)
 * [Domain Model](domain-model)
 * [Integration](integration)
 * [Security](security)
@@ -39,6 +40,8 @@ Errors need to be solved before your app can be deployed. A consistency error ca
 
 * [Page Editor Consistency Errors](consistency-errors-pages)
 * [Navigation Consistency Errors](consistency-errors-navigation)
+* [Errors Pane](errors-pane)
 * [Pages](pages)
 * [Microflows](microflows) 
+* [Workflows](workflows)
 * [Navigation in Mendix](navigation)

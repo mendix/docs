@@ -21,7 +21,7 @@ $ cd my-app-generator
 $ npm init --yes
 $ npm install -g typescript
 $ npm install mendixmodelsdk mendixplatformsdk when @types/when --save
-$ tsc --init --target es6
+$ tsc --init --target es2018
 ```
 
 ## 3 Setting Up Your Development Tools {#setting}
@@ -42,7 +42,7 @@ To set up your development tools, follow these steps:
     In the rest of the how-to's, in blocks such as the above, lines starting with a `$` represent commands to type into a terminal. Sometimes a line follows without a $, represents output of the command.
 
 3.  Install [Visual Studio Code](https://code.visualstudio.com/) - not to be confused with Visual Studio - a text editor/IDE with good support for [TypeScript](http://www.typescriptlang.org/). Make sure you have a recent version (v1.11.0+); check the version you are using through Help > About when you have Code opened.
-4.  Install TypeScript 2.*.* with [`npm`](https://www.npmjs.com/) , Node.js' package manager:
+4.  Install TypeScript 3.6.2 (or higher) with [`npm`](https://www.npmjs.com/) , Node.js' package manager:
 
     ```bash
     $ npm install -g typescript
@@ -52,7 +52,7 @@ To set up your development tools, follow these steps:
 
     ```bash
     $ tsc --version
-    Version 3.6.3 (or higher)
+    Version 3.6.2 (or higher)
     ```
 
     If the version number is much lower, it could be that you also have an outdated TypeScript SDK on your system, left over from a previous installation. You can either uninstall the old TypeScript SDK, or bypass it by removing the old TypeScript SDK from your system's PATH environment variable.
@@ -83,13 +83,13 @@ To set up a working directory for your script, follow these steps:
     ```json
     "dependencies": {
       "@types/when": "^2.4.33",
-      "mendixmodelsdk": "~4.25.0",
-      "mendixplatformsdk": "~4.1.1",
+      "mendixmodelsdk": "^4.35.0",
+      "mendixplatformsdk": "^4.1.1",
       "when": "^3.7.8"
     }
     ```
 
-    When a new major or minor version of the Mendix SDK is released (as in, 1.0.0 to 2.0.0 or 1.0.0 to 1.1.0) and you run `npm update` in your project folder, the `~` in front of the version number makes sure that installed version of the SDK won't be upgraded automatically. Only patch releases (as in, 1.0.1) of the SDK will be automatically upgraded, otherwise your script could inadvertently be broken. You may, of course, edit the dependency by hand yourself.
+    When a new major version of the Mendix SDK is released (as in, 1.0.0 to 2.0.0) and you run `npm update` in your project folder, the `^` in front of the version number makes sure that the installed version of the SDK will not be upgraded automatically. Only minor and patch releases (as in, 1.1.1) of the SDK will be automatically upgraded; otherwise, your script could inadvertently be broken. You may, of course, edit the dependency by hand yourself.
 
 4.  Save your changes and then execute the following to install the dependencies:
 
@@ -104,7 +104,7 @@ To set up a working directory for your script, follow these steps:
     {
     	"compilerOptions" : {
     		"module" : "commonjs",
-    		"target" : "es6",
+    		"target" : "es2018",
             "strict": true
     	},
     	"files" : [
@@ -115,7 +115,7 @@ To set up a working directory for your script, follow these steps:
 
     The compiler options should be left as-is. The `files` directive is an array of strings with path names of all TypeScript files that make up your Node.js script or app. You can change it so that the compiler uses the right files.
 
-    Create new files in your project directory with Visual Studio Code by hovering with the mouse cursor over the name of the working directory in the left side pane. A "new file" icon appears. Click it to create a new file. For more information on basic editing with Visual Studio Code, check the [manual](https://code.visualstudio.com/Docs/editor/codebasics).
+    Create new files in your app directory with Visual Studio Code by hovering with the mouse pointer over the name of the working directory in the left side pane. A "new file" icon appears. Click it to create a new file. For more information on basic editing with Visual Studio Code, check the [manual](https://code.visualstudio.com/Docs/editor/codebasics).
 
 ## 5 Next Step
 

@@ -48,22 +48,18 @@ Before you continue, make sure that you know how to create the following:
 
 In the previous section you set up a basic data structure and created some sample data. In this section you will add search fields to the search bar to allow the user to filter data on your overview page. In the examples you will filter on the order status and on a minimum price.
 
-1.  Open your **orders overview** and right click on the (empty) section above the **Search** button.
+1.  Open your **orders overview** and right click the (empty) section above the **Search** button.
 
-    {{% alert type="warning" %}}
-
-    The search bar section might be already populated if you automatically filled the contents of your data grid.
-
-    {{% /alert %}}
+    {{% alert type="warning" %}} The search bar section might be already populated if you automatically filled the contents of your data grid. {{% /alert %}}
 
     ![](attachments/18448705/18581359.png)
 
-2.  Right click on the search bar section and select **Add search field** > **Drop-down**.
+2.  Right click the search bar section and select **Add search field** > **Drop-down**.
 3.  Add the **OrderStatus** attribute to the search field and define the name.
 
     ![](attachments/18448705/18581355.png)
 
-4.  Redeploy your application and click on the **Search** button on your orders overview. The new search field appears.
+4.  Redeploy your application and click the **Search** button on your orders overview. The new search field appears.
 
     ![](attachments/18448705/18581354.png)
 

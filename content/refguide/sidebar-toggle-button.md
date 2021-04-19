@@ -1,71 +1,88 @@
 ---
 title: "Sidebar Toggle"
-parent: "layout-widgets"
+parent: "layout"
 menu_order: 30
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+## 1 Introduction
 
-The sidebar toggle is a button that when pressed will make a region of a [scroll container](scroll-container) appear or disappear. This makes it possible to create sidebars, for instance a menu on a mobile phone that is hidden by default and can be shown by clicking the button. See the picture for an example layout that used the sidebar toggle. 
+{{% alert type="info" %}}Sidebar toggles are not supported on native mobile pages, as scroll container regions are not supported.{{% /alert %}}
 
-![](attachments/pages/sidebar-toggle-button.png)
-
-## Button properties
-
-{{% snippet file="refguide/caption-property.md" %}}
-
-{{% snippet file="refguide/image-property.md" %}}
-
-{{% snippet file="refguide/render-mode-property.md" %}}
-
-{{% snippet file="refguide/button-style-property.md" %}}
-
-## Common properties
-
-{{% snippet file="refguide/name-property.md" %}}
-
-{{% snippet file="refguide/class-property.md" %}}
-
-{{% snippet file="refguide/style-property.md" %}}
-
-{{% snippet file="refguide/tab-index-property.md" %}}
-
-## General properties
-
-### Region
-
-Choose the region that should be collapsed/expanded by clicking this button.
-
-| Region | Effect |
-| --- | --- |
-| Left | The left region of the layout container will be toggled. |
-| Right | The right region of the layout container will be toggled. |
+A **sidebar toggle** is a button that when pressed will make either a left or a right region of a [scroll container](scroll-container) appear or disappear. This makes it possible to create a sidebar that is hidden by default and can be shown by clicking the button.
 
 {{% alert type="info" %}}
-
-The sidebar toggle is right-to-left-aware (RTL) which means that in RTL languages the sidebar will slide in from the right if you choose 'Left'.}
-
+You can only have one sidebar toggle in a scroll container, and the behavior of the sidebar toggle is configured in the [scroll container region](scroll-container#region) properties.
 {{% /alert %}}
 
-_Default value:_ Left
+For example, the image below shows for an example layout that uses the sidebar toggle to hide and make visible the **Left** region of the **Scroll Container**. 
 
-### Mode
+![](attachments/layout/sidebar-toggle-button.png)
 
-Determines how the region will be toggled.
+## 2 Properties
 
-| Mode | Effect |
-| --- | --- |
-| Push content aside | The sidebar moves the rest of the content off-screen (only available mode in Mendix 5.17 and older). |
-| Slide over content | The sidebar moves over the content. |
-| Shrink content | The content shrinks to make space for the sidebar. |
+An example of sidebar toggle properties is represented in the image below:
 
-### Initially open
+{{% image_container width="250" %}}![](attachments/layout/sidebar-toggle-properties.png)
+{{% /image_container %}}
 
-Only applicable if the mode is "Shrink content".
+Sidebar toggle properties consist of the following sections:
 
-## Visibility properties
+* [Common](#common)
+* [Design Properties](#design-properties)
+* [General](#general)
+* [Visibility](#visibility)
 
-{{% snippet file="refguide/visibility-property.md" %}}
+### 2.1 Common Section{#common}
 
-{{% snippet file="refguide/visibility-property-with-module-roles-extended.md" %}}
+{{% snippet file="refguide/common-section-link.md" %}}
+
+### 2.2 Design Properties Section{#design-properties}
+
+{{% snippet file="refguide/design-section-link.md" %}}
+
+### 2.3 General Section {#general}
+
+#### 2.3.1 Caption {#caption}
+
+The **Caption** property defines a text that will be shown on the sidebar toggle.
+
+#### 2.3.3 Tooltip
+
+The **Tooltip** property determines a text end-users will see in the tooltip that appears when they hover over the sidebar toggle. The tooltip text is translatable. For more information on translatable texts, see [Language Menu](translatable-texts). If the tooltip is not specified, no tooltip will be shown when hovering over the sidebar toggle.
+
+#### 2.3.4 Icon {#icon}
+
+The **Icon** property determines the icon that will be shown in front of the caption of the sidebar toggle. Possible options are: 
+
+* No icon
+* Glyphicon 
+* (Bitmap) image
+
+Glyphicons come from the Bootstrap Halflings collection. The advantages of a glyphicon over a bitmap image are that they are scalable, look sharp on high-resolution screens, and their color can be changed by changing the font color. The advantage of an image icon is that it can have multiple colors.
+
+#### 2.3.5 Render Mode
+
+Defines the way the sidebar toggle will be shown to the end-user. Possible options are the following:
+
+* **Button** – the widget will be rendered as a button
+* **Link** – the widget will be rendered as a hyperlink
+
+*Default render mode:* Button
+
+#### 2.3.6 Button Style
+
+The **Button style** property applies a predefined styling to the sidebar toggle. Possible options are the following:
+
+* Default
+* Inverse
+* Primary
+* Info
+* Success
+* Warning
+* Danger
+
+### 2.4 Visibility Section{#visibility}
+
+{{% snippet file="refguide/visibility-section-link.md" %}}

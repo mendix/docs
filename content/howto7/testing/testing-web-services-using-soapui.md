@@ -41,10 +41,12 @@ In the how-to [Exposing a web service](../integration/expose-a-web-service) you 
 2.  Open the project you created in the how-to [Exposing a web service](../integration/expose-a-web-service).
 3.  Create a **Microflow** that creates a customer and returns a boolean. 
 
-    <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/27dedcb6-38d2-48e4-a77d-68e1d5bde73a/createcustomer?embed=true"></iframe>
+	![](attachments/18448632/model1.jpg)
+
 4.  Create a **Microflow** that deletes a customer and returns a boolean.
 
-    <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/33c17aed-c915-420b-b433-0c22614a0273/deletecustomer?embed=true"></iframe>
+	![](attachments/18448632/model2.jpg)
+
 5.  Publish both microflows as web service operation of the **CustomerWebservice** as described in chapter 4 of the how-to [Exposing a web service](../integration/expose-a-web-service).
 
 ## 4 Creating a new SOAP Project

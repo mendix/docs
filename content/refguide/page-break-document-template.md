@@ -2,6 +2,9 @@
 title: "Page Break (Document Template)"
 parent: "document-templates"
 tags: ["studio pro"]
+aliases:
+    - /refguide/Page+Break+(document+template).html
+    - /refguide/page-break-(document-template).html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -11,7 +14,7 @@ When inserting a page break, the current page will be cut off after the break an
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918135.png)
+![](attachments/document-templates/918135.png)
 
 A page break.
 

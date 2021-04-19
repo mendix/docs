@@ -17,8 +17,8 @@ For a Mendix widget input a selection, checkbox, number, text value or a date.
 | [Set Grid Selector Radiobutton checked](#SetGridSelectorRadiobuttonChecked) | Selects the radio button for a given column and row caption in a grid selector widget. |
 | [Set Row Cell Value](#SetRowCellValue) | Sets the cell value for a particular column in a data grid row. |
 | [Set Simple Checkbox Set Selector Value](#SetSimpleCheckboxSetSelectorValue) | Checks/clears the check box for a given entity attribute value. |
-| [Set Value](#SetValue) | Sets a value to a widget. Supported widgets: text box, text area, drop down, radio button, date picker, reference selector, search input text, search input drop down, OnChange Inputbox, CKEditor For Mendix BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), InputReferenceSelector, RadiobuttonList. |
-| [Set Value (by index)](#SetValueByIndex) | Sets the value of drop down widgets by index. Supported widgets: drop down, reference selector, search input drop down, EnumSelect. |
+| [Set Value](#SetValue) | Sets a value to a widget. Supported widgets: text box, text area, drop-down, radio button, date picker, reference selector, search input text, search input drop-down, OnChange Inputbox, CKEditor For Mendix BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), InputReferenceSelector, RadiobuttonList. |
+| [Set Value (by index)](#SetValueByIndex) | Sets the value of drop-down widgets by index. Supported widgets: drop-down, reference selector, search input drop-down, EnumSelect. |
 
 ### Set Checkbox Set Selector Value {#SetCheckboxSetSelectorValue}
 
@@ -206,8 +206,8 @@ SetValue
 #### Description
 
 Sets a value to a widget.   
-Supported widgets: text box, text area, drop down, radio button, date picker, reference selector,
-search input text, search input drop down, OnChange Inputbox, CKEditor For Mendix
+Supported widgets: text box, text area, drop-down, radio button, date picker, reference selector,
+search input text, search input drop-down, OnChange Inputbox, CKEditor For Mendix
 BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), InputReferenceSelector, RadiobuttonList.
 
 #### Input Parameters
@@ -230,9 +230,9 @@ SetValueByIndex
 
 #### Description
 
-Sets the value of drop down widgets by index.   
+Sets the value of drop-down widgets by index.   
 
-Supported widgets: drop down, reference selector, search input drop down, EnumSelect.
+Supported widgets: drop-down, reference selector, search input drop-down, EnumSelect.
 
 #### Input Parameters
 
@@ -253,14 +253,14 @@ Read text, dates, numbers and selections from Mendix widgets.
 | Function Name | Description |
 | ----------------- | -------------- |
 | [Get Validation Message](#GetValidationMessage) | Returns the validation message of a widget. |
-| [Get Value](#GetValue) | Returns the current value of all supported widgets. Supported widgets: text box, text area, drop down, radio button, date picker, reference selector, search input text, search input drop down, label, input reference set selector, OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix, InputReferenceSelector RadiobuttonList, Switch, AutoComplete, Format String, Custom String. |
+| [Get Value](#GetValue) | Returns the current value of all supported widgets. Supported widgets: text box, text area, drop-down, radio button, date picker, reference selector, search input text, search input drop-down, label, input reference set selector, OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix, InputReferenceSelector RadiobuttonList, Switch, AutoComplete, Format String, Custom String. |
 | [Get Active Tab Name](#GetActiveTabName) | Returns the name of the active tab page as specified in the Studio Pro. This is not the same as the caption of the tab which is shown in the browser. |
 | [Get Item/Row Index](#GetItemRowIndex) | Returns the index of a row in a data grid, or an item in a template grid or list view. Indexing is 0 based, meaning the first row/item has index 0, the second row/item has index 1 etc. |
 | [Get Row Cell Value](#GetRowCellValue) | Gets the cell value of a data grid row for a given column name. |
 | [Get Total Item/Row Count](#GetTotalItemRowCount) | Returns the total grid count from the paging status. Does not work if pagination is not shown. Supported widgets: data grid, template grid, list view. |
 | [Get Visible Item/Row Count](#GetVisibleItemRowCount) | Returns the number of currently visible items/rows in a data grid, template grid or a list view. |
 | [Get Checkbox Value](#GetCheckboxValue) | Returns true if the check box is checked, false otherwise. |
-| [Get Index](#GetIndex) | Gets the index of selected values in a drop-down menu. The returned index is 0 based, meaning the first element has index 0, the second element has index 1 etc. Supported widgets: drop down, reference selector, search input drop down. |
+| [Get Index](#GetIndex) | Gets the index of selected values in a drop-down menu. The returned index is 0 based, meaning the first element has index 0, the second element has index 1 etc. Supported widgets: drop-down, reference selector, search input drop-down. |
 | [Groupbox is Collapsed](#GroupboxIsCollapsed) | Returns true if the group box is collapsed, false otherwise. |
 | [Get Checkbox Set Selector Value](#GetCheckboxSetSelectorValue) | Finds a check box by column caption and cell value and returns its value. The returned value is 'true' when the check box is checked, false otherwise. |
 | [Get Checkbox Set Selector Value (all)](#GetCheckboxSetSelectorValueAll) | Returns the 'select all' check box value. The returned value is 'true' when the check box is checked, false otherwise. |
@@ -299,7 +299,7 @@ GetValue
 
 Returns the current value of all supported widgets.
 
-Supported widgets: text box, text area, drop down, radio button, date picker, reference selector, search input text, search input drop down, label, input reference set selector, OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix, InputReferenceSelector RadiobuttonList, Switch, AutoComplete, Format String, Custom String.
+Supported widgets: text box, text area, drop-down, radio button, date picker, reference selector, search input text, search input drop-down, label, input reference set selector, OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix, InputReferenceSelector RadiobuttonList, Switch, AutoComplete, Format String, Custom String.
 
 #### Input Parameters
 
@@ -459,7 +459,7 @@ Gets the index of selected values in a drop-down menu.
 
 The returned index is 0 based, meaning the first element has index 0, the second element has index 1 etc.
 
-Supported widgets: drop down, reference selector, search input drop down.
+Supported widgets: drop-down, reference selector, search input drop-down.
 
 #### Input Parameters
 
@@ -615,8 +615,8 @@ Check if a Mendix widget value such as text and selection match an expected valu
 | [Assert Validation Message](#AssertValidationMessageNegetable) | Asserts that the validation message for a certain widget contains the specified text. |
 | [Assert Active Tab Name](#AssertActiveTabNameNegetable) | Assert a certain value for the name of the active tab page. |
 | [Assert Checkbox Value](#AssertCheckboxValueNegetable) | Assert the value of a check box. |
-| [Assert Value](#AssertValueNegetable) | Asserts the current value of all supported widgets. Supported widgets: text box, text area, drop down, radio button, date picker, reference selector, search input text, search input drop down, label, input reference set selector, OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix, InputReferenceSelector, RadiobuttonList,  Switch, AutoComplete, Format String, Custom String. |
-| [Dropdown has Option](#DropdownHasOption) | Returns true if the given value is available in a drop down menu. Supported widgets: drop down, reference selector, search input drop down. |
+| [Assert Value](#AssertValueNegetable) | Asserts the current value of all supported widgets. Supported widgets: text box, text area, drop-down, radio button, date picker, reference selector, search input text, search input drop-down, label, input reference set selector, OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix, InputReferenceSelector, RadiobuttonList,  Switch, AutoComplete, Format String, Custom String. |
+| [Dropdown has Option](#DropdownHasOption) | Returns true if the given value is available in a drop-down menu. Supported widgets: drop-down, reference selector, search input drop-down. |
 | [Assert Checkbox Set Selector Value](#AssertCheckboxSetSelectorValue) | Finds a check box by entity attribute value and asserts that the check box is set to a given value. |
 | [Assert Checkbox Set Selector Value](#AssertCheckboxSetSelectorValueNegetable) | Finds a check box by entity attribute value and asserts that the check box is set to a given value. |
 | [Assert Simple Checkbox Set Selector Value](#AssertSimpleCheckboxSetSelectorValueNegetable) | Asserts that the check box found by given entity attribute value is checked/cleared. |
@@ -701,7 +701,7 @@ AssertValueNegetable
 
 Asserts the current value of all supported widgets.   
 
-Supported widgets: text box, text area, drop down, radio button, date picker, reference selector, search input text, search input drop down, label, input reference set selector, OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix, InputReferenceSelector, RadiobuttonList,  Switch, AutoComplete, Format String, Custom String.
+Supported widgets: text box, text area, drop-down, radio button, date picker, reference selector, search input text, search input drop-down, label, input reference set selector, OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix, InputReferenceSelector, RadiobuttonList,  Switch, AutoComplete, Format String, Custom String.
 
 #### Input Parameters
 
@@ -724,21 +724,21 @@ DropdownHasOption
 
 #### Description
 
-Returns true if the given value is available in a drop down menu.   
+Returns true if the given value is available in a drop-down menu.   
 
-Supported widgets: drop down, reference selector, search input drop down.
+Supported widgets: drop-down, reference selector, search input drop-down.
 
 #### Input Parameters
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
 | Widget Name | WidgetName | String | _Required_ The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
-| Value | Value | String | _Required_ The value of the drop down option that you want to assert. This is the text as shown in the browser, not a technical value or id. |
+| Value | Value | String | _Required_ The value of the drop-down option that you want to assert. This is the text as shown in the browser, not a technical value or id. |
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
 #### Return Value
 
-_Boolean_ True if option with specified value is available in dropdown
+_Boolean_ True if option with specified value is available in drop-down
 
 ### Assert Checkbox Set Selector Value {#AssertCheckboxSetSelectorValue}
 
@@ -1023,7 +1023,7 @@ Finds/asserts a Mendix widget by its given name and optionally value.
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
 | Widget Name | WidgetName | String | _Required_ The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
-| Value | Value | String | _Optional_ The value in the widget. Supply this if you want to restrict the result by this value. For example, when there are several instances of a widget with the same name. Supported widgets: text box, text area, date picker, drop down, radio button, referece selector, search input text, search input drop down, label. |
+| Value | Value | String | _Optional_ The value in the widget. Supply this if you want to restrict the result by this value. For example, when there are several instances of a widget with the same name. Supported widgets: text box, text area, date picker, drop-down, radio button, referece selector, search input text, search input drop-down, label. |
 | Visible Only | VisibleOnly | Boolean | _Optional_ If set to true, it will only return widgets that are visible. When false the all widgets are returned, reagardles of visiblity. Defaults to false. |
 | Search Context | SearchContext | WebElement | _Optional_ Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 | Additional Selector | AdditionalSelector | String | _Optional_ Used to additionaly constrain the matching widgets. For example, use \":contains('foo')\" to find all widget that contain the text 'foo'. Check the ATS reference guide for a complete list of available selectors. |
@@ -2476,7 +2476,7 @@ Perform mouse clicks, scrolling and hover, as well as focus on web elements and 
 | [Click Coordinates](#ClickCoordinates) | Clicks on the given point on the page, described by X and Y Offset. If no reference element is given, the upper left corner of the page is used as point of origin for calculating the desired point. Otherwise the upper left corner of the reference element is used. |
 | [Send Enter](#SendEnter) | Simulates pressing Enter in element, after waiting for any mendix activities to finish."). |
 | [Send Keys](#SendKeys) | Simulates typing Text into a web element, after waiting for any mendix activities to finish. |
-| [Doubleclick](#Doubleclick) | Performs a double-click on a web element. |
+| [Doubleclick](#Doubleclick) | Performs a double-click a web element. |
 | [Focus and Clear Element Value](#FocusAndClearElementValue) | Sets an input element to an empty string, after waiting for mendix activities to finish. |
 | [Focus WebElement](#FocusWebElement) | Focuses the web element and then waits for Mendix activities. |
 | [Click/Doubleclick](#ClickDoubleclick) | Performs a click or double-click and waits for Mendix activities. |
@@ -2600,7 +2600,7 @@ Doubleclick
 
 #### Description
 
-Performs a double-click on a web element.
+Performs a double-click a web element.
 
 #### Input Parameters
 

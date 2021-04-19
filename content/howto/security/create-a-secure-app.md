@@ -61,17 +61,17 @@ To see the results of this how-to, you must set up a test project with test data
   
     ![](attachments/18448705/18581373.png)
 
-## 4 Setting the Security Level to Prototype/Demo
+## 4 Setting the Security Level to Prototype/Demo {#prototype}
 
 In this part of the how-to, you will learn how to configure the security at the prototype/demo level. Be aware that this level of security is only applicable for development/demo purposes. This level is available for the quick development of demo applications. It simulates security without the more complex configuration of data access. When deploying to the Mendix cloud, production security is mandatory.
 
 To set the security level to prototype/demo, follow these steps:
 
-1.  Open the project **Security**:
+1.  Open the app **Security**:
   
     ![](attachments/18448715/18581561.png)
     
-    This will open the **Project Security** properties editor.
+    This will open the **App Security** properties editor.
 2.  Switch the **Security level** to **Prototype / demo**:
   
     ![](attachments/18448715/18581559.png)
@@ -106,8 +106,8 @@ To create module roles within a module, follow these steps:
 
 The two module roles that have been created should be assigned to a user role. When an end-user has a specific user role, the end-user has access to the data, forms, and microflows according to the assigned module roles of that user role:
 
-1. Open the project **Security.**
-2.  On the **Project Security** dialog box, go to the **User roles** tab and double-click the **Administrator** user role:
+1. Open the app **Security.**
+2.  On the **App Security** dialog box, go to the **User roles** tab and double-click the **Administrator** user role:
   
     ![](attachments/18448715/18581553.png)
 
@@ -148,17 +148,17 @@ To configure the page and microflow access of a module, follow these steps:
 7. Sign out and back in in with these users (add a **Sign out** button to your app if necessary).
 8. Test the differences in your application.
 
-## 5 Setting the Security Level to Production
+## 5 Setting the Security Level to Production {#production}
 
 In this section of the how-to, you will configure the security at the production level. At this level, all security settings must be configured. In addition to prototype/demo security, you have to configure the entity (data) access. Production security is mandatory when deploying to the Mendix cloud.
 
 To set the security level to production, follow these steps:
 
-1.  Open the project **Security**:
+1.  Open the app **Security**:
   
     ![](attachments/18448715/18581561.png)
 
-2.  On the **Project Security** dialog box, switch the security level to **Production**:
+2.  On the **App Security** dialog box, switch the security level to **Production**:
   
     ![](attachments/18448715/18581543.png)
 
@@ -240,7 +240,7 @@ To create access roles for the User module role, follow these steps:
 
 In the previous section you set some access rules on your domain model. In this section you you will define the access rules on the Order entity so that orders can only be viewed by a user if the payment status of the order is set to open. You will do this by adding an XPath constraint to the Order entity for the User module role. 
 
-An XPath constraint can be used to constrain the set of objects to which the access rule applies. If the XPath constraint is empty, the rule applies to all the objects of the entity. For more information, see [XPath Constraints](/refguide/xpath-constraints) in the *Mendix Studio Pro Guide*.
+An XPath constraint can be used to constrain the set of objects to which the access rule applies. If the XPath constraint is empty, the rule applies to all the objects of the entity. For more information, see [XPath Constraints](/refguide/xpath-constraints) in the *Studio Pro Guide*.
 
 ### 6.1 Adding an Account with the User User Role
 

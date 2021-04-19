@@ -1,14 +1,14 @@
 ---
 title: "List View Controls"
 category: "Widgets"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the List View Controls widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "widget", "list view control", "check box filter", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [List View Controls](https://appstore.home.mendix.com/link/app/87/) enable filtering and searching a list view with the databas and XPath data sources.
+The [List View Controls](https://appstore.home.mendix.com/link/app/105694/) enable filtering and searching a list view with the database and XPath data sources.
 
 These are the available list view widgets:
 
@@ -19,9 +19,9 @@ These are the available list view widgets:
 * [Pagination](#pagination) – Adds bootstrap like paging to a list view and page numbers similar to in-built data grid
 * [Text box search](#text-box-search) – Adds an interactive search box to all of your list view
 
-### 1.1 Demo App Project
+### 1.1 Demo App
 
-For a demo app project that has been deployed with these widgets, see [here](https://listviewcontrols.mxapps.io).
+For a demo app that has been deployed with these widgets, see [here](https://listviewcontrols.mxapps.io).
 
 ## 2 Check Box Filter Widget {#check-box-filter}
 
@@ -154,7 +154,7 @@ Add an interactive search box to all of your list views with this widget. This s
 
 ![](attachments/list-view-controls/text-box-search.gif)	
 
-## 8 Developing This App Store Component
+## 8 Developing This Marketplace Component
 
 ### 8.1 Prerequisites
 
@@ -166,10 +166,10 @@ Add an interactive search box to all of your list views with this widget. This s
 
 ### 8.2 Developing
 
-1. Fork and clone the **mendixlabs / list-view-controls** repo: `git clone https://github.com/mendixlabs/list-view-controls.git`. The code is in typescript. Use a typescript IDE of your choice, like Visual Studio Code or WebStorm.
+1. Fork and clone the [mendixlabs/list-view-controls](https://github.com/mendixlabs/list-view-controls.git) repository. The code is in Typescript.
 2. Set up the development environment by running `npm install`.
 3. Create a folder named *dist* in the project root.
-4. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*. Changes to the widget code shall be automatically pushed to this test project. Or, you can get the test project from [Releases](https://github.com/mendixlabs/list-view-controls/releases/latest).
+4. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*, or get the test project from [mendixlabs/list-view-controls](https://github.com/mendixlabs/list-view-controls/releases/latest). Changes to the widget code will be automatically pushed to this test project.
 5. To automatically compile, bundle, and push code changes to the running test project, run `npm start`.
 6. To run the project unit tests with code coverage (results can be found at `dist/testresults/coverage/index.html`), run: `npm run test:unit`.
 7. Run the unit test continuously during development via `npm run test:dev`.
@@ -179,7 +179,7 @@ Add an interactive search box to all of your list views with this widget. This s
 
 While developing, you will probably rely mostly on `npm start`. However, there are additional scripts at your disposal:
 
-| npm run <script> | Description |
+| npm run `<script>` | Description |
 | --- | --- |
 | start | Builds the project, monitors the source and config for changes, and rebuilds. |
 | test | Runs lint, builds, unit tests with Karma, generates a coverage report, deploys, and runs end-to-end test. |
@@ -187,7 +187,7 @@ While developing, you will probably rely mostly on `npm start`. However, there a
 | test:unit | Runs unit tests with Karma and generates a coverage report. |
 | test:e2e  | Runs end-to-end tests with remote. |
 | test:e2e:dev | Runs end-to-end tests locally on localhost:8080. |
-| deploy | Uses the latest widget build to update the Mendix app project and updates the application to the Mendix node. |
+| deploy | Uses the latest widget build to update the Mendix app and updates the application to the Mendix node. |
 | build:prod | Builds a widget optimized for production. |
 | build:dev | Builds a widget optimized for debugging. |
 | lint | Lints all *.js* files. |

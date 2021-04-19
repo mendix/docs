@@ -1,6 +1,7 @@
 ---
 title: "Projects API"
 category: "API Documentation"
+menu_order: 50
 ---
 
 ## 1 Introduction
@@ -35,7 +36,7 @@ The CreateNewApp operation will create a new app and corresponding project. As p
 | ProjectSummary | String | A brief description of the project. May be set to `empty`. |
 | User | String | The <u>email address</u> you use to log into your Mendix account. |
 | ApiKey | String | An [API Key](authentication) associated to the user account of _User_. |
-| TemplateUUID (can be `empty`) | String | The [UUID](/developerportal/app-store/app-store-overview#additional-info) that identifies the template with which the project will be created. If left empty, a default blank template will be used. |
+| TemplateUUID (can be `empty`) | String | The [UUID](/appstore/general/app-store-overview#usage) that identifies the template with which the project will be created. If left empty, a default blank template will be used. |
 
 #### 3.1.2 Output
 
@@ -43,9 +44,11 @@ The CreateNewApp action returns a String which is the ID of the background job t
 
 #### 3.1.3 Usage from Studio Pro
 
-After you have imported the Projects API App Service, an activity called 'CreateNewApp' is available under the 'ProjectsAPI' node in the Action dialog. See also [Consumed App Services](/refguide/consumed-app-services).
+After you have imported the Projects API app service, an activity called 'CreateNewApp' is available under the 'ProjectsAPI' node in the Action dialog.
 
-<iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/0b935e5b-5b22-4610-9a65-fb46a4c1a493/call-createnewapp?embed=true" allowfullscreen=""></iframe>
+Reference the microflow below:
+
+![](attachments/14778446/call-create-new-app.png)
 
 ### 3.2 RetrieveJobStatus
 
@@ -71,9 +74,9 @@ The `Result` element contains the job result, in case it has completed. For `Cre
 
 #### 3.2.3 Usage From Studio Pro
 
-The following Model Share shows how to use the RetrieveJobStatus call from Studio Pro.
+The microflow below references how to use the RetrieveJobStatus call from Studio Pro.
 
-<iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/7f0be770-bd1a-4fa8-9928-ca89b857d8b2/retrievejobstatus-usage?embed=true" allowfullscreen=""></iframe>
+![](attachments/14778446/call-retrieve-job-status.png)
 
 ### 3.3 DeleteApp
 
@@ -83,7 +86,7 @@ The DeleteApp operation will remove an application, including all resources that
 
 | Name | Type |	Description |
 | --- | --- | --- |
-| ProjectID |	String | ID of the project/app, as can be found under the project settings. |
+| ProjectID |	String | ID of the project/app, as can be found under the app settings. |
 | User | String | The email address you use to log into your Mendix account.|
 | ApiKey | String | An API Key associated to the user account of the User.|
 
@@ -113,7 +116,9 @@ The ExposeTeamServerAsWorkingCopy action returns a String which is the Job ID of
 
 #### 3.4.3 Usage
 
-<iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/be6f108d-a2e5-45e3-8229-4e27a6c810a0/call-exposeteamserverrevisionasonlineworkingcopy?embed=true" allowfullscreen=""></iframe>
+Reference this microflow:
+
+![](attachments/14778446/expose-team-server-revision.png)
 
 ### 3.5 CommitOnlineWorkingCopyChangesToTeamServer
 
@@ -133,12 +138,14 @@ The CommitOnlineWorkingCopyChangesToTeamServer action returns a String which is 
 
 #### 3.5.3 Usage from Studio Pro
 
-<iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/f326c491-f2c0-4bfd-a6f7-ea35658ba80d/commitonlineworkingcopychangestoteamserver-usage?embed=true" allowfullscreen=""></iframe>
+Reference this microflow:
+
+![](attachments/14778446/commit-working-copy.png)
 
 ## 4 Download
 
-Download the Projects API App Service below, so you can import it in your model:
+Download the Projects API app service below, so you can import it in your model:
 
 [ProjectsAPI_11.msd](attachments/14778446/ProjectsAPI_11.msd)
 
-In the consumed Projects API App Service settings, you will have to use a constant with the value `https://sprintr.home.mendix.com/ws/ProjectsAPI/11/soap1` as Location.
+In the consumed Projects API app service settings, you will have to use a constant with the value `https://sprintr.home.mendix.com/ws/ProjectsAPI/11/soap1` as Location.

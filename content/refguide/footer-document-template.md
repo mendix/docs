@@ -2,6 +2,9 @@
 title: "Footer (Document Template)"
 parent: "document-templates"
 tags: ["studio pro"]
+aliases:
+    - /refguide/footer-(document-template).html
+    - /refguide/Footer+(document+template).html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -13,7 +16,7 @@ For inserting page numbers, see [Static Label](static-label-document-template).
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918235.png)
+![](attachments/document-templates/918235.png)
 
 A footer.
 

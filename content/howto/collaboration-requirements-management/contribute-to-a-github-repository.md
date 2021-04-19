@@ -1,16 +1,17 @@
 ---
-title: "Contribute to a GitHub Repository"
+title: "Contribute to a Mendix GitHub Repository"
 category: "Collaboration"
 menu_order: 20
 tags: ["GitHub"]
 ---
+
 ## 1 Introduction
 
 We like to work with our community, and we encourage you to create and contribute using pull requests!
 
 **This how-to will teach you how to do the following:**
 
-* Contribute to a GitHub repository according to Mendix guidelines
+* Contribute to a Mendix GitHub Repository according to Mendix guidelines
 
 ## 2 Prerequisites
 
@@ -26,7 +27,7 @@ To make changes to an existing repository, follow these guidelines:
 
 * Create a new branch from where you want to base your work on your fork (this is usually the repository's master branch)
 * To quickly create a branch based on master, use `git checkout -b fix/master/my_contribution master`
-    * Avoiding working directly on the master branch is advised
+	* Avoiding working directly on the master branch is advised
 * Make commits of logical units
 * Check for unnecessary whitespace with `git diff --check` before committing.
 * Make sure you have added the necessary tests for your changes
@@ -37,15 +38,14 @@ To make changes to an existing repository, follow these guidelines:
 To submit changes, follow these guidelines:
 
 * Push your changes to the branch in your fork of the repository
-* Submit a pull request to the appropriate repository in the Mendix organization (for more information, see: [https://help.github.com/articles/using-pull-requests/](https://help.github.com/articles/using-pull-requests/))
-* Mention the ID's for any issues that are fixed by the changes (for more information, see [https://help.github.com/articles/closing-issues-via-commit-messages#closing-issues-with-pull-requests](https://help.github.com/articles/closing-issues-via-commit-messages#closing-issues-with-pull-requests))
+* Submit a pull request to the appropriate repository in the Mendix organization (for more information, see [About Pull Requests](https://help.github.com/articles/using-pull-requests/))
+* Mention the ID's for any issues that are fixed by the changes (for more information, see [Closing Issues Using Keywords](https://help.github.com/articles/closing-issues-via-commit-messages#closing-issues-with-pull-requests))
 * After feedback has been given, Mendix expects a response within two weeks
-    * After two weeks, we may close the pull request if it isn't showing any activity
+	* After two weeks, we may close the pull request if it isn't showing any activity
 
 ## 5 Read More
 
 * [Stories](/developerportal/collaborate/stories)
-* [How to Start Your Own Repository](starting-your-own-repository)
+* [Start Your Own Repository](starting-your-own-repository)
 * [Version Control](/refguide/version-control)
-* [How to Use the Feedback Widget](/developerportal/collaborate/use-feedback-widget)
-* [How to Share the Development Database](sharing-the-development-database)
+* [Share the Development Database](sharing-the-development-database)

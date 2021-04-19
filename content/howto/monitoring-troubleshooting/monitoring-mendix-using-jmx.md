@@ -80,7 +80,7 @@ public long getNamedUserCount();
 }
 ```
 
-This is the implementation, `MxStats.java`. The methods call the [Mendix Core](http://apidocs.mendix.com/4/runtime/classcom_1_1mendix_1_1core_1_1_core.html) class and return the value:
+This is the implementation, `MxStats.java`. The methods call the [Mendix Core](http://apidocs.rnd.mendix.com/4/runtime/classcom_1_1mendix_1_1core_1_1_core.html) class and return the value:
 
 ```
 package jmx.actions;
@@ -158,7 +158,6 @@ The idea is that you will have a Java Action that you can call in a microflow wh
 * [Debug Java Actions Remotely](debug-java-actions-remotely)
 * [Log Levels](log-levels)
 * [Debug Java Actions](debug-java-actions)
-* [Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
-* [Debug Microflows](debug-microflows)
+* [Debug Microflows and Nanoflows](debug-microflows-and-nanoflows)
 * [Debug Microflows Remotely](debug-microflows-remotely)
 * [Debug Java Actions Remotely](debug-java-actions-remotely)

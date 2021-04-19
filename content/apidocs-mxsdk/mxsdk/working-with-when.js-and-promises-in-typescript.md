@@ -79,7 +79,7 @@ client.platform()
 	});
 ```
 
-Note that `workingCopy.commit()` returns a `Promise<[Revision](https://apidocs.mendix.com/platformsdk/latest/classes/_mendix_platform_sdk_.revision.html)``>`. You ignore this value in our success handler (line 68), but you could have used it for instance to show the revision number to the user.
+Note that `workingCopy.commit()` returns a `Promise<[Revision](https://apidocs.rnd.mendix.com/platformsdk/latest/classes/_mendix_platform_sdk_.revision.html)``>`. You ignore this value in our success handler (line 68), but you could have used it for instance to show the revision number to the user.
 
 {{% alert type="info" %}}
 

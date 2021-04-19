@@ -1,6 +1,7 @@
 ---
 title: "List Operation"
 parent: "list-activities"
+menu_order: 4
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -11,21 +12,57 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 ## 1 Introduction
 
-The List Operation activity can perform various actions on a list. See below for details on these actions.
+The **List operation** activity can perform various actions on a list. The result of the action is returned as a new list in contrast to the [Change list](change-list) activity.
 
-{{% alert type="info" %}}
+The actions which can be performed are:
 
-See [Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+* Union 
+* Intersect 
+* Subtract 
+* Contains 
+* Equals 
+* Sort 
+* Filter 
+* Filter by expression
+* Find 
+* Find by expression 
+* Head 
+* Tail 
 
-{{% /alert %}}
+See below for details on these actions.
 
-## 2 Operation Types
+## 2 Properties
 
-A list operation action can execute any of the following types of operations.
+An example of list operation properties is represented in the image below:
 
-### 2.1 Binary
+![list operation properties](attachments/list-activities/list-operation-properties.png)
 
-These binary operations have as an input a list and either another list or an object. The resulting type depends on the type of the operation. All lists and objects must relate to the same entity.
+There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
+
+The list operation properties pane consists of the following sections:
+
+* [Action](#action)
+* [Common](#common)
+
+## 3 Action Section{#action}
+
+The **Action** section of the properties pane shows the action associated with this activity.
+
+You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
+
+You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+
+### 3.1 Operation
+
+A list operation action can execute any of the following operations. The operations are categorized by the type of operands they have:
+
+* Binary – operations which work with a second list or object
+* Member Inspections – operations which work with specified elements (attributes and associations) of the objects in the list
+* Unary – operations which work on the list with no other operands
+
+#### 3.1.1 Binary
+
+These binary operations have as an input a list and either another list or an object. They return another list or a Boolean, depending on the operation. All lists and objects must relate to the same entity.
 
 | Operation | Description | Result Type |
 | --- | --- | --- |
@@ -35,32 +72,39 @@ These binary operations have as an input a list and either another list or an ob
 | Contains | Checks whether all elements of the second parameter are present in the first parameter. | Boolean |
 | Equals | Checks whether the lists contain the same elements. | Boolean |
 
-### 2.2 Sort
+#### 3.1.2 Member Inspections
+
+These operations takes a list and one or more members (attributes or associations) as input. They return either an object or another list, depending on the operation.
 
 | Operation | Description | Result Type |
 | --- | --- | --- |
-| Sort | Allows you to sort a list based on a number of a attributes. The attributes are ordered to determine their priority while sorting. The input list remains in its original order while the sorted list is stored with the output name. | List |
+| Sort | Allows you to sort a list based on a number of a attributes. The attributes are ordered to determine their priority while sorting. You cannot use associations to sort a list. Sorting attributes from generalized entities is not allowed. | List |
+| Find | Finds the first object of which the member has the given value. | Object |
+| Filter | Finds all objects of which the member has the given value. | List |
 
-### 2.3 Member Inspections
+#### 3.1.3 Unary
 
-These operations take a single list and a member (attribute or association) as input. The resulting type depends on the type of the operation.
-
-| Operation | Description | Result Type |
-| --- | --- | --- |
-| Find | Find the first object of which the member has the given value. | Object |
-| Filter | Find all objects of which the member has the given value. | List |
-
-### 2.4 Unary
-
-These unary operations have a list as input and either an object or another list as a resulting type, depending on the operation.
+These unary operations have a list as the single operand and return either an object or another list, depending on the operation.
 
 | Operation | Description | Result Type |
 | --- | --- | --- |
 | Head | The result is the first element of the list, or empty if the parameter contains zero elements or was initialized as empty. | Object |
 | Tail | The result is a list containing all elements of the parameter except the first, or an empty list if the parameter contains zero elements or was initialized as empty. | List |
 
-## 3 Output Properties
+#### 3.1.4 Expression
 
-### 3.1 Name
+These operations take a list and filter it based on an expression. Inside the expression, `$currentObject` can be used to perform the filtering.
 
-This is the name of the resulting List, Object or Boolean. The result can be used by all activities that follow this activity.
+| Operation | Description | Result Type |
+| --- | --- | --- |
+| Find by expression | Finds the first object that matches the given expression. | Object |
+| Filter by expression | Finds all the objects that match the given expression. | List |
+
+
+### 3.2 List Name, Object Name, or Variable Name
+
+This is the name of the resulting List, Object, or Boolean variable. The result can be used by all activities that follow this activity.
+
+## 4 Common Section{#common}
+
+{{% snippet file="refguide/microflow-common-section-link.md" %}}

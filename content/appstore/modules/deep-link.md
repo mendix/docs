@@ -26,7 +26,7 @@ After importing the module into your application you need to configure it.
 
 ### 2.1 Initializing the Deep Link Module on App Startup
 
-To automatically start this  module, the **DeepLink.Startdeeplink** microflow needs to be set as the startup microflow (via **Project** > **Settings** > **Server** > **After startup**). 
+To automatically start this  module, the **DeepLink.Startdeeplink** microflow needs to be set as the startup microflow (via **Project** > **Settings** > **Server** > **After startup**).
 
 If you already have a startup microflow configured in your app, you need to extend it with a [sub-microflow activity](/howto/logic-business-rules/extract-and-use-sub-microflows) that calls the **DeepLink.Startdeeplink** microflow.
 
@@ -77,8 +77,8 @@ To open another page, the module needs to figure out what microflow is associate
 
 Follow these steps to update this homepage microflow:
 
-1. Make the first activity in this custom microflow a [microflow call](/refguide/microflow-call) activity that calls `Deeplink.DeeplinkHome`. 
-2. Configure the microflow to return a Boolean value that indicates if the module will start triggering a microflow. 
+1. Make the first activity in this custom microflow a [microflow call](/refguide/microflow-call) activity that calls `Deeplink.DeeplinkHome`.
+2. Configure the microflow to return a Boolean value that indicates if the module will start triggering a microflow.
 3. Add an exclusive split that handles the result of `Deeplink.DeeplinkHome`:
 	* When the result of `Deeplink.DeeplinkHome` is true, the custom microflow should end, and the module will then call the correct microflow
 	* When the result is false, the microflow should continue with a [show page](/refguide/show-page) activity that opens the page or microflow that is your default home page (as in, the original intended behavior)
@@ -88,4 +88,6 @@ Follow these steps to update this homepage microflow:
 * **IndexPage** – In special cases—for example, when you want to load a specific theme or bypass a certain single sign-on page—you can modify this constant to redirect to another index page like `index3.html` or `index-mytheme.html`.
 * **LoginLocation** – If user credentials are required but are not present in the session, the user will get redirected to this location. This constant's value can either be fully qualified (for example, `https://myapp.xyz.com/mylogin.html`) or relative to the site (for example, `/mylogin.html`). If the constant value is empty, the default built-in Mendix login page is used.
 	* To make sure the end-user gets sent back to original deep link URL after having logged in, append `&f=true&cont=` to the constant (for example, `/mylogin.html&f=true&cont=`)
-	* When the app is using SAML for SSO and the end-user should be redirected to the deep link again, use either `https://myapp.xyz.com/SSO/login?a=MyApp&f=true&cont=` or `/SSO/login?f=true&cont=` — *note that this construction does not work for other SSO modules, such as XSUAA*
+	* When the app is using SAML for SSO and the end-user should be redirected to the deep link again, use either `https://myapp.xyz.com/SSO/login?a=MyApp&f=true&cont=` or `/SSO/login?f=true&cont=`.
+
+		Use `/mindspherelogin.html?redirect_uri=` as login location when using the module with a MindSphere app. (Requires MindSphere SSO >= V2.0) — *note that this construction does not work for other SSO modules, such as XSUAA* *note

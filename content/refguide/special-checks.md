@@ -133,9 +133,9 @@ An example of an input can be the following:
 isSynced($currentObject)
 ```
 
-## 6 Checking Whether a Synchronization Is In Progress {#is-syncing}
+## 6 Checking Whether a Synchronization Is Running {#is-syncing}
 
-This function is available only in expressions for [conditional visibility or editability](common-widget-properties), as only they are evaluated on client side.
+This function is available only in client-side expressions (expressions in [nanoflows](nanoflows) and [pages](pages)).
 
 ### 6.1 Input Parameters
 
@@ -147,7 +147,7 @@ The output is described in the table below:
 
 | Value                                                        | Type    |
 | ------------------------------------------------------------ | ------- |
-| Returns `true` when there is an in progress [synchronize](synchronize) action running and `false` otherwise. This check can be used to avoid performing [simultaneous synchronizations](synchronize#limitations).| Boolean |
+| Returns `true` when there is a [synchronization](synchronize) process running, otherwise it returns `false`.| Boolean |
 
 ### 6.3 Example
 

@@ -183,8 +183,9 @@ Invocations from Java actions are not found.
 
 ### 4.1 Tasks Queue Helper
 
-A module with some conveniences [has been published](https://marketplace.mendix.com/link/component/117272). It contains:
-* Pages that can be used to monitor task queues.
+You can use the [Task Queue Helpers](https://marketplace.mendix.com/link/component/117272) module in the Mendix Marketplace to help you to implement Task Queues. It contains the following:
+
+* Pages that can be used to monitor task queues
 * Microflows that can do basic maintenance tasks
 
 ### 4.2 Limitations

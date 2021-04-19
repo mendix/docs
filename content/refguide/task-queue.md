@@ -183,9 +183,9 @@ Invocations from Java actions are not found.
 
 ### 4.1 Tasks Queue Helper
 
-A module with some conviences [has been published](https://appstore.home.mendix.com/link/app/xxx). It contains:
+A module with some conveniences [has been published](https://marketplace.mendix.com/link/component/117272). It contains:
 * Pages that can be used to monitor task queues.
-* Microflows taht can do basic maintenance tasks
+* Microflows that can do basic maintenance tasks
 
 ### 4.2 Limitations
 

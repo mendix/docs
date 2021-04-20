@@ -15,6 +15,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### April 21st, 2021
+
+#### New Features
+
+* We released the Control Center [Dashboard](/developerportal/control-center/index#dashboard), which provides an overview of various activities for your company on the Mendix Platform. This feature is currently in [Beta](/releasenotes/beta-features/), and you can provide feedback via the feedback button on the right of the page.
+
 ### March 30th, 2021
 
 #### Improvements

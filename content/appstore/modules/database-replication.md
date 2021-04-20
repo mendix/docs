@@ -271,7 +271,7 @@ Each import action is executed in a single transaction, which means it is able t
 
 ## 10 Importing & Exporting a File
 
-You can import and export table mappings to an XML file using the **Import/export file** tab.
+You can import and export table mappings to an XML file using the **Table mapping** tab.
 
 ## 11 Troubleshooting
 

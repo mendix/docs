@@ -67,7 +67,11 @@ When used inside a nanoflow in an offline profile, only primitives and non-persi
 
 ### 3.3 Task Queue
 
-If you want the microflow to run in the background using a task queue, then you need to do the following:
+{{% alert type="warning" %}}
+You cannot execute microflows in a task queue when calling them from a nanoflow.
+{{% /alert %}}
+
+If you want a microflow to call a microflow to run in the background using a task queue, then you need to do the following:
 
 1. Check **Execute this Microflow in a Task Queue**.
 2. Identify which task queue it should run in in **Select Task Queue**.

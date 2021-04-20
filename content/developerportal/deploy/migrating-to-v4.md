@@ -96,7 +96,7 @@ To deploy your app to your new Mendix Cloud V4 environment, you need to do the f
 
 Now that you have your new Mendix Cloud V4 environment, you can start replicating the data.
 
-1. Open the [Migration Tool](https:/v3-v4-migration.mendixcloud.com/), `https:/v3-v4-migration.mendixcloud.com/`.
+1. Open the [Migration Tool](https://v3-v4-migration.mendixcloud.com/), `https://v3-v4-migration.mendixcloud.com/`.
 
 2. Choose a Mendix Cloud V3 app from the list of apps for which you are the technical contact.
 

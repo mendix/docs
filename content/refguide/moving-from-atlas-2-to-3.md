@@ -2,7 +2,7 @@
 title: "Migrate From Atlas 2 To Atlas 3"
 parent: "moving-from-8-to-9"
 menu_order: 6
-tags: ["Atlas", "UI", "UX", "user experience", "design"]
+tags: ["Atlas", "UI", "UX", "user experience", "design", "styling"]
 ---
 
 ## 1 Introduction

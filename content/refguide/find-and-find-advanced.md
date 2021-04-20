@@ -83,8 +83,7 @@ Some pages and microflows are only used from Java code and will be listed as an 
 
 2. Navigate to properties and change the **Mark as used** property from **No** to **Yes**.
 
-
-## 4 Find Usages Option
+## 4 Find Usages Option {#find-usages}
 
 The **Find Usages** option allows you to find where a certain element is used, for example, to find all buttons that open a certain page.
 

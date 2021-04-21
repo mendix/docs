@@ -15,9 +15,9 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ### April 21st, 2021
 
-#### Announcement - Internet Protocol Version 6 (IPv6) will be supported for applications in Mendix Cloud v4 from **May 10th, 2021**
+#### Announcement - Internet Protocol Version 6 (IPv6) will be supported for applications in Mendix Cloud v4 from **May 24th, 2021**
 
-To improve security and scalability of the connections made to applications in Mendix Cloud v4, **on May 10th, 2021**, we will enable support for **Internet Protocol Version 6 (IPv6)** in **Mendix Cloud v4**. This will happen automatically, there is no need to redeploy your app.
+To improve security and scalability of the connections made to applications in Mendix Cloud v4, **on May 24th, 2021**, we will enable support for **Internet Protocol Version 6 (IPv6)** in **Mendix Cloud v4**. This will happen automatically, there is no need to redeploy your app.
 
 Enabling support for IPv6 means that clients who access your Mendix applications which have configured Access Restriction Profiles may not be able to connect to them when using IPv6.
 
@@ -25,7 +25,7 @@ Enabling support for IPv6 means that clients who access your Mendix applications
 
 We are informing you about this date so that you can plan to update your Access Restriction Profiles and inform users about this change. Technical Contacts of affected apps will also be contacted directly.
 
-You can configure IPv6 ranges before May 10th, but the change will only come into effect on that date. Instructions for setting IP ranges can be found in the [Access Restriction Profiles](/developerportal/deploy/access-restrictions#ip-ranges) documentation.
+You can configure IPv6 ranges before May 24th, but the change will only come into effect on that date. Instructions for setting IP ranges can be found in the [Access Restriction Profiles](/developerportal/deploy/access-restrictions#ip-ranges) documentation.
 
 **Test your clients**
 
@@ -33,7 +33,7 @@ You can test whether your client (browser or integrating client) is using IPv6, 
 
 **Impact**
 
-Any clients that use IPv6 to connect to applications which have configured Access Restriction Profiles may experience connectivity issues from **May 10th, 2021** onwards.
+Any clients that use IPv6 to connect to applications which have configured Access Restriction Profiles may experience connectivity issues from **May 24th, 2021** onwards.
 
 ### April 15th, 2021
 

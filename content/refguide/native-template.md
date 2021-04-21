@@ -1,17 +1,17 @@
 ---
-title: "Native Template Refguide"
+title: "Native Template reference guide"
 parent: "native-mobile"
 menu_order: 11
-tags: ["mobile", "template", "native", "iOS", "Android", "refguide"]
+tags: ["mobile", "template", "native", "iOS", "Android", "reference guide"]
 ---
 
 ## 1 Introduction
 
 To build Mendix Native App a template is needed. This template is conveniently named Native Template. The Native template is essentially describing the native dependencies you project needs and includes two (2) native projects, one for iOS and one for Android that can be independently built to create the apps. 
 
-The template also includes tooling to put everything together. Such are the React Native and Mendix auto linking capabilities, to link the native dependencies to platform specific projects, and the Native Mobile toolkit which handles configuring the platform specific projects with things like the version number, app name, splashscreens and more. 
+The template also includes tooling to put everything together. Such are the React Native and Mendix auto linking capabilities, to link the native dependencies to platform specific projects, and the Native Mobile toolkit which handles configuring the platform specific projects with things like the version number, app name, splash screens and more. 
 
-In addition the Template can facilitates the creation of Custom Developer Apps. Apps that act like the Make It Native app but are tailored to the specific needs of your project. 
+In addition, the Template can facilitate the creation of Custom Developer Apps. Apps that act like the Make It Native app but are tailored to the specific needs of your project. 
 
 Native Template goes hand in hand with the Mendix Native Mobile Builder.
 
@@ -36,11 +36,11 @@ The keys represent the Mendix Studio Pro version. The `min` and `max` values are
 
 So like in the example picture shown above, in the case of Mendix Studio Pro 8.9.x, you could choose any Native Template version from 4.0.0 to the latest. Ideally you should choose the most recent supported version.
 
-## 4 Auto linking depedencies
+## 4 Auto linking dependencies
 
-React Native Native Modules, are npm packages, that include dependencies that need to be linked with the platform specific projects so that they can be compiled with the apps.
+React Native Modules, are npm packages, that include dependencies that need to be linked with the platform specific projects so that they can be compiled with the apps.
 
-As auto linking, we describe the automated process of linking a React Native Native Module with the platform specific projects.
+As auto linking, we describe the automated process of linking a React Native Module with the platform specific projects.
 
 Native Template supports fully the [React Native's CLI auto linking capabilities](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md). Libraries that are auto linkable by default will be correctly linked to the platform specific projects. 
 
@@ -362,7 +362,7 @@ An example of all keys that are required to successfully configure an app:
 
 #### 5.2.2 Android icons
 
-The icons configuration needs to be defined in a versioned json formatted config file under *assets/icons/android.json*.
+The icons' configuration needs to be defined in a versioned json formatted config file under *assets/icons/android.json*.
 
 The actual asset files defined under filename are expected to be available next to the config file.
 

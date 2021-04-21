@@ -311,7 +311,6 @@ The **Database node load** value is a composite value, calculated from a range o
 ## 6 Read More
 
 * [Alerts](monitoring-application-health)
-* [Database Size Reduction](database-size-reduction)
 * [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](calculate-diskspace-of-a-cloud-app-environment)
 * [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows)
 * [Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4)

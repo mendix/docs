@@ -71,5 +71,4 @@ Runtime versions 7 and above are stateless and do not cache Mendix objects on th
 
 ## 5 Read More
 
-* [Database Size Reduction](database-size-reduction)
 * [Environment Details](/developerportal/deploy/environments-details)

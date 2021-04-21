@@ -259,7 +259,7 @@ To change the discoverability of a service, follow these steps:
 
 The **Validated** property can be assigned to a data source or a dataset to indicate, for example that it has been qualified and is a reliable asset. It can turned on and off by clicking the **Validate** toggle. A validated data source or dataset is indicated by the validation shield on the data source details screen and also in the search results pane.
 
-Setting an asset as **Validated** contributes to the search results weighting. This means that **Validated** assets will be listed before not-validated assets in the results. The weigting in the search results is cumulative. For example, if there are datasets that are **Validated** in a **Validated** data source, the weighting will be higher in the search results than for a not **Validated** entity in a **Validated** data source.
+Setting an asset as **Validated** contributes to the weighting of the asset in the search results. This means that **Validated** assets will be listed before not-validated assets in the results. The weigting of the validation property is also cumulative for a data souce and the consituent datasets. For example, if there is a dataset named **Customer** that is **Validated** in a **Validated** data source, the search results will list this higher than a dataset of the same name that is not **Validated** in a **Validated** data source.
 
 ![validated](attachments/curate/curate-validated.png)
 

@@ -120,7 +120,7 @@ The number of filters that are active for the current search is displayed adjace
 
 Click **Clear Filters** to clear all the checked environments and click **Apply Filters** to see search results in all environments.
 
-### 4.3 Search Results
+### 4.3 Search Results {#search-results}
 
 The number of items satisfying the search criteria (search string plus filters) are shown above the search results list. Search results include assets that match the search string and satisfy the active filters. Items in the asset metadata that are searched include all application names, data sources, datasets (or entity sets), attributes, tags, and descriptions. The order of the search results will be a combination of the following:
 
@@ -128,7 +128,7 @@ The number of items satisfying the search criteria (search string plus filters) 
 * Popularity of the service (the number of connections)
 * **Validated** assets before non-validated items
 
- {{% alert type="info" %}}The weigting in the search results is cumulative depending on validated datasets in validated in data sources. For example, if there are datasets that are **Validated** in a **Validated** data source, the weighting will be higher in the search results than for a not **Validated** dataset in a **Validated** data source.{{% /alert %}}
+ {{% alert type="info" %}}The weigting in the search results is cumulative depending on the validate property being set for datasets in a data source. For example, if there is a dataset named **Customer** that is **Validated** in a **Validated** data source, the search results will list this higher in the search results list than a dataset of the same name that is not **Validated** in a **Validated** data source.{{% /alert %}}
 
 {{% alert type="info" %}}Assets that are set to [Non-discoverable](#discoverability-metadata) are not included in the search results unless you are a curator or owner of the asset.{{% /alert %}}
 

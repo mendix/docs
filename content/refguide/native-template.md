@@ -1,8 +1,8 @@
 ---
-title: "Native Template"
+title: "Native Template Refguide"
 parent: "native-mobile"
 menu_order: 11
-tags: ["mobile", "template", "native", "iOS", "Android"]
+tags: ["mobile", "template", "native", "iOS", "Android", "refguide"]
 ---
 
 ## 1 Introduction
@@ -21,16 +21,16 @@ Native Template is hosted on [GitHub](https://github.com/mendix/native-template)
 
 ## 3 Versioning
 
-A Native Template is versioned using semantic versioning. 
-A Native Template version is closely related to the Mendix Studio Pro version of the project that is to be build.
+A Native Template is versioned using [semantic versioning](https://semver.org/). 
+A Native Template version is closely related to the Mendix Studio Pro version of the project that is being build.
+Not using a matching version will lead to unexpected behavior.
 
 To determine which version of the Native Template you should use, do the following:
 
-1. Note which version of Studio Pro you are using.
-1. Navigate to the [Native Template GitHub repository](https://github.com/mendix/native-template).
-1. At the root of your project, open the *mendix_version.json* JSON file.
+1. Note which version of Studio Pro you are using, for example 9.0.0.
+1. Navigate to the [Native Template mendix_version.json file](https://github.com/mendix/native-template/blob/master/mendix_version.json).
 
-The keys of the dictionary represent the Mendix Studio Pro version. The `min` and `max` values are the minimum and maximum Native Template versions supported: 
+The keys represent the Mendix Studio Pro version. The `min` and `max` values are the minimum and maximum Native Template versions supported: 
 
 {{% image_container width="200" %}}![iOS output](attachments/native-template/mendix-version.png){{% /image_container %}}
 
@@ -38,59 +38,85 @@ So like in the example picture shown above, in the case of Mendix Studio Pro 8.9
 
 ## 4 Auto linking depedencies
 
-React Native Native Modules, are libraries in the NPM format, that include dependencies that need to be linked with the platform specific projects.
+React Native Native Modules, are npm packages, that include dependencies that need to be linked with the platform specific projects so that they can be compiled with the apps.
 
-With auto linking we define the automated  process of linking a React Native Native Module dependency with the platform specific projects.
+As auto linking, we describe the automated process of linking a React Native Native Module with the platform specific projects.
 
-Native Template supports fully the [React Native CLI auto linking functionality](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md). Libraries that are auto linkable by default will be correctly linked to the platform specific projects. 
+Native Template supports fully the [React Native's CLI auto linking capabilities](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md). Libraries that are auto linkable by default will be correctly linked to the platform specific projects. 
 
-For libraries that are not fully auto linkable; usually libraries that require special initialisation; we included a Mendix provided soluion in fasciliating their requirements. For now this process is limited to know capabilities. We will expand the documentation when the API becomes public.
+For libraries that are not fully auto linkable, those are usually libraries that require special initialisation, we extended upon the default auto linking capabilities. For now this process is limited to know capabilities. We will expand the documentation when the API becomes public.
 
 
 ## 5 Native Mobile Toolkit
 
-Native Mobile Toolkit is a Mendix developed Node module as a CLI to fascilitate the configuration requirments of the platform specific projects. 
+Native Mobile Toolkit is a Mendix developed NPM module that is used to facilitate the configuration requirements of the platform specific projects. 
 
-It allows for defining platform specific features in a platform agnostic way, decoupling the configuration step from the platform specific requirements. 
+It allows for defining platform specific features, like versioning, package id, splash screens and more, in a platform agnostic way.  
 
-It reads from versioned JSON formatted configurations and is able to configure things like, version/build numbers, splash screens and icons, permissions and other. 
+The configuration is written in JSON. 
+The configuration file is versioned using an incremental number. The version is incremented when breaking changes are introduced.
+
+The mobile toolkit includes conversion logic that allows converting from an older to a newer version of the config. This conversion
+happens in memory so that it does not conflict with custom implementations. The converted config is outputted in the terminal's console
+for further debugging. 
 
 ### 5.1 Mobile Toolkit configuration structure
+Project specific information is defined in a top level config file. 
+The best way to derive the possible config options is to configure a project initially with Mendix Native Mobile Builder
+and note the configuration keys.
 
-Project specific information is defined in a top level config file. The supported properties are :
+The supported properties as of config version 2 are:
 
 ```
 interface NativeTemplateConfig {
-    configVersion: number;
+    configVersion: 2;
     appName: string;
-    deviceTarget: DeviceTarget;
-    orientation: Orientation;
     appIdentifier: string;
-    capabilities: Capabilities;
-    bundleName: BundleName;
     appVersion: string;
-    runtimeUrl: string;
+    bundleName: BundleName;
     buildNumber: number;
+    deviceTarget: DeviceTarget;
+    capabilities: Capabilities;
+    orientation: Orientation;
+    permissions: Permission[];
+    runtimeUrl: string;
 }
 
 interface Capabilities {
+    appCenterOTA: Capability;
+    crashlytics: Capability;
     deepLink: DeepLinkCapability;
+    firebaseAndroid: Capability;
+    firebaseIos: Capability;
+    localNotifications: Capability;
     maps: MapsCapability;
     mapsIos: MapsIosCapability;
     pushNotifications: Capability;
-    crashlytics: Capability;
-    localNotifications: Capability;
-    appCenterOTA: AppCenterOTACapability;
-    firebaseAndroid: Capability;
-    firebaseIos: Capability;
 }
 
 interface Capability {
     enabled: boolean;
 }
 
-interface Capability {
-    enabled: boolean;
+interface IOSPermission extends Permission {
+    purpose: string;
+}
+
+interface Permission {
+    name: string;
+    title: string;
+    platform: OS;
+    required: boolean;
+}
+
+interface DeviceTarget {
+    phone: boolean;
+    tablet: boolean;
+}
+
+export interface Orientation {
+    portrait: boolean;
+    landscape: boolean;
 }
 ```
 
@@ -98,12 +124,15 @@ An example of a configured project:
 
 ```
 {
-    "configVersion": 1,
-    "appIdentifier": "com.app.mobile",
-    "appName": "App",
+    "configVersion": 2,
+    "appIdentifier": "com.mendix.mobile",
+    "appName": "Mendix App",
+    "appVersion": "1.0.0",
+    "buildNumber": 1,
+    "runtimeUrl": "http://localhost:8080"
     "bundleName": {
-        "main": "App",
-        "dev": "AppDev"
+        "main": "MendixApp",
+        "dev": "MendixAppDev"
     },
     "deviceTarget": {
         "phone": true,
@@ -113,19 +142,31 @@ An example of a configured project:
         "portrait": true,
         "landscape": true
     },
+    "permissions": [
+        {
+            "title": "Internet",
+            "name": "android.permission.INTERNET",
+            "platform": "android",
+            "required": true
+        },
+        {
+            "title": "Location - Always Usage",
+            "name": "NSLocationAlwaysUsageDescription",
+            "purpose": "To use that feature, the app needs access to your location.",
+            "platform": "ios",
+            "required": true
+        }
+    ],
     "capabilities": {
         "deepLink": {
             "value": "",
             "enabled": false
         },
         "maps": {
-            "value": "",
-            "enabled": false
+            "value": "a12dkdadhqow12123123radqwe",
+            "enabled": true
         },
         "mapsIos": {
-            "value": {
-                "purpose": "To use that feature the app needs access to your location."
-            },
             "enabled": false
         },
         "pushNotifications": {
@@ -144,10 +185,11 @@ An example of a configured project:
             "enabled": false
         },
         "appCenterOTA": {
-            "enabled": true
+            "enabled": false
         }
     }
 }
+
 ```
 
 ### 5.2 Assets
@@ -163,7 +205,9 @@ Assets are expected to be saved relative to the root of the Native Template in a
 
 #### 5.2.1 iOS icons
 
-The icons configuration needs to be defined in a versioned json formatted config file *assets/icons/ios.json*. 
+The icons' configuration needs to be defined in a versioned json formatted config file under *assets/icons/ios.json*.
+
+The actual asset files defined under filename are expected to be available next to the config file.
 
 The version is used for backwards compatibility purposes to allow the mobile toolkit to upgrade the configuration to newer version, and is required. For now the config is on version 1.
 
@@ -181,7 +225,7 @@ interface IOSIconsConfig {
 }
 ```
 
-An example of all keys that are required: 
+An example of all keys that are required to successfully configure an app: 
 ```
 {
     "images": [
@@ -318,7 +362,9 @@ An example of all keys that are required:
 
 #### 5.2.2 Android icons
 
-The icons configuration needs to be defined in a versioned json formatted config file *assets/icons/android.json*. 
+The icons configuration needs to be defined in a versioned json formatted config file under *assets/icons/android.json*.
+
+The actual asset files defined under filename are expected to be available next to the config file.
 
 The version is used for backwards compatibility purposes to allow the mobile toolkit to upgrade the configuration to newer version, and is required. For now the config is on version 1.
 
@@ -394,7 +440,9 @@ An example of all keys that are required:
 
 #### 5.2.3 iOS splash screens
 
-The splash screen configuration needs to be defined in a versioned json formatted config file *assets/splashScreens/ios.json*. 
+The splash screen configuration needs to be defined in a versioned json formatted config file under *assets/splashScreens/ios.json*.
+
+The actual asset files defined under filename are expected to be available next to the config file.
 
 The version is used for backwards compatibility purposes to allow the mobile toolkit to upgrade the configuration to newer version, and is required. For now the config is on version 1.
 
@@ -442,7 +490,9 @@ An example of the file with all required splash screens defined:
 ```
 
 #### 5.2.4 Android splash screens
-The splash screen configuration needs to be defined in a versioned json formatted config file *assets/splashScreens/android.json*. 
+The splash screen configuration needs to be defined in a versioned json formatted config file *assets/splashScreens/android.json*.
+
+The actual asset files defined under filename are expected to be available next to the config file.
 
 The version is used for backwards compatibility purposes to allow the mobile toolkit to upgrade the configuration to newer version, and is required. For now the config is on version 1.
 
@@ -486,7 +536,7 @@ An example of the file with all required splash screens defined:
 
 ### 5.3 Configuring Firebase
 
-Firebase requires special treatment. When enabling the Firebase capabilities the toolkit will look in the **assets/firebase** folder for the appropriate configuration files.
+Firebase requires special treatment. When enabling the Firebase capabilities via the Native Mobile Toolkit config file, the toolkit will look in the **assets/firebase** folder for the appropriate configuration files.
 
 The files are looked up by name. The expected names per platform are the following: 
 
@@ -499,11 +549,16 @@ Mobile Toolkit does not verify the validity of the provided configuration files.
 
 ## 5.4 Running the Native Mobile Toolkit
 
-Native Mobile Toolkit is a Node Module that is included with Native Template. 
+Native Mobile Toolkit is a Node Module that is included with Native Template. As that it requires to be installed first by
+running `npm install` in the Native Template root directory. 
 
 ### 5.4.1 Using the run script defined in package.json
 
-The script expects that the Native Mobile Toolkit configuration files is at the root of the project and named config.json. 
+The npm script expects that the Native Mobile Toolkit configuration files is at the root of the project and named config.json.
+
+{{% alert type="info" %}}
+  
+{{% /alert %}}
 
 That is always the case when using Mendix Native Mobile Builder to configure a local or a remote project.
 
@@ -513,7 +568,9 @@ npm run configure
 ```
 
 ### 5.4.2 Custom configured project
-For an arbitrary named configuration the toolkit can be executed using the following command:
+Having the configuration file relative to the root directory is not a requirement for the toolkit but is rather done for convenience.
+
+To specify a different configuration file path the toolkit can be executed using the following command:
 
 ```
 native-mobile-toolkit configure --config-path='./<name of the configuration>.json' --verbose
@@ -529,9 +586,55 @@ Using React Native's Metro Bundler, the client code and assets are then compiled
 
 These are finally moved to the correct location in Native Template before compiling the final apps.
 
-This whole process is unified using a tool called MXBuild that is included with every installation of Mendix Studio Pro.
+This whole process is unified using a tool called MXBuild that is included with every installation of Mendix Studio Pro. 
+You can read more about MXBuild in the official reference guide [here](mxbuild.md).
 
-### 6.1 Using mxbuild to build your project
+### 6.1 Using mxbuild to build your native project
 
-If for some reason you cannot use Mendix Native Mobile Builder to configure and build your project, for example when operating in a displayless CI environment. 
+If for some reason you cannot use Mendix Native Mobile Builder to configure and build your project, for example when operating 
+in a display-less CI environment you will have to explicitly have set up the correct Mendix Studio Pro version for the project 
+you are building and manually run MXBuild.
+
+To do so: 
+
+1. Locate the required Studio Pro installation
+1. Find the path to the executable named mxbuild.exe and note it down. 
+1. Open a command line and run: 
+   
+    `<path-to-mxbuild.exe> --java-home=DIRECTORY -java-exe-path=FILENAME --target=deploy --native-packager <path-to-the-projects-mpr>`
+
+This command: 
+
+* Exports the web and native project in the deployment folder as usually.
+* Runs the React Native metro bundler (note flag `--native-packager`) to create the RN bundles and assets for each platform in `/deployment/native/bundle`
+
+The bundle folder structure will look something like this: 
+
+```
+- android
+    - res
+        - drawable-mdpi
+        - drawable-hdpi
+        - drawable-xhdpi
+        - drawable-xxhdpi
+        - drawable-xxxhdpi
+        - raw
+    - assets
+        - index.android.bundle
+- iOS 
+    - assets
+        - List of all images namespaced
+        - index.ios.bundle
+```
+
+### 6.2. Copying the bundle to the right location
+The created bundles need to be copied to the right place in the Native Template to be build.
+
+**Android**
+
+For Android the content of the `bundle/android` reflects the exact folders the assets and bundles need to be copied to.
+
+**iOS**
+
+The content of the `bundle/iOS` folder needs to be simply copied to the `<native-template>/ios/Bundle` directory. 
 

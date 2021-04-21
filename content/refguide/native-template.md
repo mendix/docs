@@ -641,7 +641,7 @@ The content of the `bundle/iOS` folder needs to be simply copied to the `<native
 ### 7 Deriving the projects Native Dependencies
 
 Mendix Studio Pro 9 introduced Native Dependency resolution for pluggable widgets and Javascript actions. 
-[See here](../apidocs-mxsdk/apidocs/native-dependencies.md) for more information. 
+[See here](/apidocs-mxsdk/apidocs/native-dependencies.md) for more information. 
 Prior to that Mendix Studio Pro was shipping with a set of core dependencies which are now are removed. 
 
 Gradually when adding Mendix Studio Pro 9 compatible modules, widgets or actions to your project more and more dependencies 

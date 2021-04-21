@@ -6,7 +6,7 @@ description: "Make It Native apps information."
 ---
 
 Mendix offers two apps for your to view and test your native mobile apps— the Make It Native 9 App and the Make It Native App:
-* [Make It Native 9 App](make-it-native-app-9): Use this app for projects in Mendix Studio Pro v9
+* [Make It Native 9 App](make-it-native-9): Use this app for projects in Mendix Studio Pro v9
 * [Make It Native 8 App](make-it-native-app): Use this app for projects in Mendix Studio Pro v8
 
 For more information on both versions of the Make It Native apps, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app).

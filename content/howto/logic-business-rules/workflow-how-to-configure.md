@@ -286,7 +286,7 @@ Do the following:
 
         ![Decision Properties](attachments/workflow-how-to-configure/decision-properties.png)
 
-3. Since the WFH attribute is a Boolean, it has true (when the new hire works from home) and false (when they work from the office). These outcomes are added to the workflow automatically: 
+3. Since the WFH attribute is a Boolean, it has a true (when the new hire works from home) and a false (when they work from the office) outcome. These outcomes are added to the workflow automatically: 
 
     ![Decision Outcomes](attachments/workflow-how-to-configure/decision-outcomes.png)
 
@@ -294,7 +294,7 @@ Do the following:
 
     1. Name the user task **Prepare_Desk** and set its title to **Facilities: Prepare Desk** referring to steps 2-4 of the [Selecting a Device for the New Hire](#select-device) section.
 
-    2. Set the **Allowed roles** property to **Facilities** for managers to be able to interact with the user task. 
+    2. Set the **Allowed roles** property to **Facilities** for the Facilities department to be able to interact with the user task. 
 
     3. Set a new page called **PrepareDesk** for the **Page** property it referring to steps 6-8 of the [Selecting a Device for the New Hire](#select-device) section.
 
@@ -321,7 +321,7 @@ Do the following:
 9. Open the **Toolbox**, drag and drop a **User task** activity to the **true** path, and do the following:
 
     1. Name the user task **Ship_Devices** and set its title to **Facilities: Ship Devices** referring to steps 2-4 of the [Selecting a Device for the New Hire](#select-device) section.
-    2. Set the **Allowed roles** property to **Facilities** for managers to be able to interact with the user task. 
+    2. Set the **Allowed roles** property to **Facilities** for the Facilities department to be able to interact with the user task. 
     3. Set a new page called **ShipDevices** for the **Page** property it referring to steps 6-8 of the [Selecting a Device for the New Hire](#select-device) section.
     4. Restrict the **Ship Devices** user task and **ShipDevices** page to the Facilities role referring to steps 9-10 of the [Selecting a Device for the New Hire](#select-device) section.
 

@@ -7,11 +7,16 @@ tags: ["mobile", "template", "native", "iOS", "Android", "reference guide"]
 
 ## 1 Introduction
 
-To build Mendix Native App a template is needed. This template is conveniently named Native Template. The Native template is essentially describing the native dependencies you project needs and includes two (2) native projects, one for iOS and one for Android that can be independently built to create the apps. 
+To build Mendix Native App a template is needed. This template is conveniently named Native Template. 
+The Native template is essentially describing the native dependencies you project needs and includes two (2) native projects, 
+one for iOS and one for Android that can be independently built to create the apps. 
 
-The template also includes tooling to put everything together. Such are the React Native and Mendix auto linking capabilities, to link the native dependencies to platform specific projects, and the Native Mobile toolkit which handles configuring the platform specific projects with things like the version number, app name, splash screens and more. 
+The template also includes tooling to put everything together. Such are the React Native and Mendix auto linking capabilities, 
+to link the native dependencies to platform specific projects, and the Native Mobile toolkit which handles configuring the platform 
+specific projects with things like the version number, app name, splash screens and more. 
 
-In addition, the Template can facilitate the creation of Custom Developer Apps. Apps that act like the Make It Native app but are tailored to the specific needs of your project. 
+In addition, the Template can facilitate the creation of Custom Developer Apps. Apps that act like the Make It Native app 
+but are tailored to the specific needs of your project. 
 
 Native Template goes hand in hand with the Mendix Native Mobile Builder.
 
@@ -34,22 +39,26 @@ The keys represent the Mendix Studio Pro version. The `min` and `max` values are
 
 {{% image_container width="200" %}}![iOS output](attachments/native-template/mendix-version.png){{% /image_container %}}
 
-So like in the example picture shown above, in the case of Mendix Studio Pro 8.9.x, you could choose any Native Template version from 4.0.0 to the latest. Ideally you should choose the most recent supported version.
+So like in the example picture shown above, in the case of Mendix Studio Pro 8.9.x, you could choose any Native Template 
+version from 4.0.0 to the latest. Ideally you should choose the most recent supported version.
 
 ## 4 Auto linking dependencies
 
-React Native Modules, are npm packages, that include dependencies that need to be linked with the platform specific projects so that they can be compiled with the apps.
+React Native Modules, are npm packages, that include dependencies that need to be linked with the platform specific 
+projects so that they can be compiled with the apps.
 
 As auto linking, we describe the automated process of linking a React Native Module with the platform specific projects.
 
 Native Template supports fully the [React Native's CLI auto linking capabilities](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md). Libraries that are auto linkable by default will be correctly linked to the platform specific projects. 
 
-For libraries that are not fully auto linkable, those are usually libraries that require special initialisation, we extended upon the default auto linking capabilities. For now this process is limited to know capabilities. We will expand the documentation when the API becomes public.
+For libraries that are not fully auto linkable, those are usually libraries that require special initialisation, 
+we extended upon the default auto linking capabilities. For now this process is limited to know capabilities. We will expand the documentation when the API becomes public.
 
 
 ## 5 Native Mobile Toolkit
 
-Native Mobile Toolkit is a Mendix developed NPM module that is used to facilitate the configuration requirements of the platform specific projects. 
+Native Mobile Toolkit is a Mendix developed NPM module that is used to facilitate the configuration requirements of the 
+platform specific projects. 
 
 It allows for defining platform specific features, like versioning, package id, splash screens and more, in a platform agnostic way.  
 
@@ -209,8 +218,7 @@ The icons' configuration needs to be defined in a versioned json formatted confi
 
 The actual asset files defined under filename are expected to be available next to the config file.
 
-The version is used for backwards compatibility purposes to allow the mobile toolkit to upgrade the configuration to newer version, and is required. For now the config is on version 1.
-
+The version is required and used for backwards compatibility purposes. For now the config is on version 1.
 
 ```
 interface IOSIconsConfig {
@@ -366,7 +374,7 @@ The icons' configuration needs to be defined in a versioned json formatted confi
 
 The actual asset files defined under filename are expected to be available next to the config file.
 
-The version is used for backwards compatibility purposes to allow the mobile toolkit to upgrade the configuration to newer version, and is required. For now the config is on version 1.
+The version is required and used for backwards compatibility purposes. For now the config is on version 1.
 
 ```
 interface AndroidIconsConfig {
@@ -444,7 +452,7 @@ The splash screen configuration needs to be defined in a versioned json formatte
 
 The actual asset files defined under filename are expected to be available next to the config file.
 
-The version is used for backwards compatibility purposes to allow the mobile toolkit to upgrade the configuration to newer version, and is required. For now the config is on version 1.
+The version is required and used for backwards compatibility purposes. For now the config is on version 1.
 
 ```
 interface AndroidSplashScreensConfig {
@@ -494,7 +502,7 @@ The splash screen configuration needs to be defined in a versioned json formatte
 
 The actual asset files defined under filename are expected to be available next to the config file.
 
-The version is used for backwards compatibility purposes to allow the mobile toolkit to upgrade the configuration to newer version, and is required. For now the config is on version 1.
+The version is required and used for backwards compatibility purposes. For now the config is on version 1.
 
 ```
 interface AndroidSplashScreensConfig{
@@ -536,7 +544,8 @@ An example of the file with all required splash screens defined:
 
 ### 5.3 Configuring Firebase
 
-Firebase requires special treatment. When enabling the Firebase capabilities via the Native Mobile Toolkit config file, the toolkit will look in the **assets/firebase** folder for the appropriate configuration files.
+Firebase requires special treatment. When enabling the Firebase capabilities via the Native Mobile Toolkit config file, 
+the toolkit will look in the **assets/firebase** folder for the appropriate configuration files.
 
 The files are looked up by name. The expected names per platform are the following: 
 
@@ -545,7 +554,8 @@ The files are looked up by name. The expected names per platform are the followi
 | Android  | google-services.json     |
 | iOS      | GoogleService-Info.plist | 
 
-Mobile Toolkit does not verify the validity of the provided configuration files. It only makes sure to move them to the right location when configuring the project. 
+Mobile Toolkit does not verify the validity of the provided configuration files. It only makes sure to move them to the right 
+location when configuring the project. 
 
 ## 5.4 Running the Native Mobile Toolkit
 

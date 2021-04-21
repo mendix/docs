@@ -10,6 +10,14 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](/refguide/getting-the-make-it-native-app).
 
+## Android 2.2.2 / iOS 2.2.2
+
+**Release date: March 25th, 2021**
+
+### New features
+* We unified once again the iOS and Android version numbers for better clarity.
+* The app will now correctly identify Mendix Studio Pro 9 and prompt to install the Make It Native 9 version.
+
 ## Android 2.1.1
 
 **Release date: February 12th, 2021**

@@ -17,15 +17,15 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Announcement - Internet Protocol Version 6 (IPv6) will be supported for applications in Mendix Cloud v4 from **May 10th, 2021**
 
-To improve security and scalability of the connections made to applications in Mendix Cloud v4, **on May 10th, 2021**, we will enable support for **Internet Protocol Version 6 (IPv6)** in **Mendix Cloud v4**.
+To improve security and scalability of the connections made to applications in Mendix Cloud v4, **on May 10th, 2021**, we will enable support for **Internet Protocol Version 6 (IPv6)** in **Mendix Cloud v4**. This will happen automatically, there is no need to redeploy your app.
 
 Enabling support for IPv6 means that clients who access your Mendix applications which have configured Access Restriction Profiles may not be able to connect to them when using IPv6.
 
 **What does this mean for you?**
 
-We are informing you about this date so that you can plan to update your Access Restriction Profiles and inform users about this change.
+We are informing you about this date so that you can plan to update your Access Restriction Profiles and inform users about this change. Technical Contacts of affected apps will also be contacted directly.
 
-You can find the required steps in our [Access Restriction Profiles](/developerportal/deploy/access-restrictions#ip-ranges) documentation.
+You can configure IPv6 ranges before May 10th, but the change will only come into effect on that date. Instructions for setting IP ranges can be found in the [Access Restriction Profiles](/developerportal/deploy/access-restrictions#ip-ranges) documentation.
 
 **Test your clients**
 

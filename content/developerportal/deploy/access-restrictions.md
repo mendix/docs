@@ -67,7 +67,7 @@ If you do not select any certificates then all the certificates will be valid.
 
 Click **Save** to save the current certificate profile.
 
-#### 2.1.3 Specifying IP Ranges
+#### 2.1.3 Specifying IP Ranges{#ip-ranges}
 
 You can specify a number of different IP ranges. Click **New** to add a new one, or use the **Edit** or **Delete** button to modify an existing IP range.
 

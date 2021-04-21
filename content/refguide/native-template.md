@@ -627,7 +627,7 @@ The bundle folder structure will look something like this:
         - index.ios.bundle
 ```
 
-### 6.2. Copying the bundle to the right location
+### 6.2 Copying the bundle to the right location
 The created bundles need to be copied to the right place in the Native Template to be build.
 
 **Android**
@@ -637,4 +637,35 @@ For Android the content of the `bundle/android` reflects the exact folders the a
 **iOS**
 
 The content of the `bundle/iOS` folder needs to be simply copied to the `<native-template>/ios/Bundle` directory. 
+
+### 7 Deriving the projects Native Dependencies
+
+Mendix Studio Pro 9 introduced Native Dependency resolution for pluggable widgets and Javascript actions. 
+[See here](../apidocs-mxsdk/apidocs/native-dependencies.md) for more information. 
+Prior to that Mendix Studio Pro was shipping with a set of core dependencies which are now are removed. 
+
+Gradually when adding Mendix Studio Pro 9 compatible modules, widgets or actions to your project more and more dependencies 
+will be added that will also need be declared in the Native Template of your project prior to building the Native Apps. 
+
+As this is mostly required for the initial setup of the project we suggest to use Mendix Native Mobile Builder to configure your project.
+Mendix Native Mobile builder is capable of deriving required dependencies and link them with your project's Native Template. 
+
+### 8 A high level flow for CI
+
+In some more advanced cases you might consider setting up a CI. Say if you have multiple environments and prefer testing
+any nightly changes in acceptance before pushing to production.
+
+We suggest, to initially develop your project using Mendix Native Mobile Builder until the native dependencies are stable. 
+Having a CI in the early stages will lead to frustration and flux dependencies will lead to unexpected crashes. 
+
+An CI environment need to be able to do the following to successfully configure a Native Template for build:   
+* Be able to check out the latest Mendix project from SVN
+* Be able to check out your project's Native Template. This would be the one used when configuring the project
+* Be able to run mxbuild
+* Be able to set up the configuration and move assets as needed.  
+  This can be done with simple shell scripts or any other solution that might fit better. This is open to the implementor.    
+* Be able to run `npm i` && `npm run configure` to configure the project using Mendix Mobile Toolkit before the build.
+
+How to build the apps is open to the implementor. Mendix Native App Builder users App Center for convenience. There are multiple other 
+solutions, on premise or as a service, that can be used for this purpose. We are not endorsing one over the other.
 

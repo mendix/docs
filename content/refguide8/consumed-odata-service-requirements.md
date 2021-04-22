@@ -88,7 +88,7 @@ Currently, the binary data can only be accessed by Java actions.
 
 An OData v3 association can only be used if it has two ends.
 
-An OData 4 navigation property can only be used as an association if it has a partner.
+An OData v4 navigation property can only be used as an association if it has a partner.
 
 ## 4 Data Hub License Limitations {#license-limitations}
 

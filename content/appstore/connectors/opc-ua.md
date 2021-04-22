@@ -38,7 +38,7 @@ The OPC UA Client connector supports all three security options offered by OPC U
 * Credentials
 * Client certificates
 
-Only one of the options can be in use any any time, which one will be determined by the OPC UA server that you are connecting too. The password from both the user and certificate are automatically encrypted when saving the server configuration using the Encryption module.  
+Only one of the options can be in use any any time. Which one will be determined by the OPC UA server that you are connecting to. The password from both the user and certificate are automatically encrypted when saving the server configuration using the Encryption module.  
 
 #### 1.1.3 Dependencies
 
@@ -48,7 +48,7 @@ The OPC UA Client connector has the following dependencies
 * Encryption Module
 * An OPC UA server – we assume that you are familiar with OPC UA and your OPC UA server(s), these instructions do not include information on how to set up your servers.
 
-Recommended; Having an external OPC UA Client tool will make setup of the connection a lot easier. A commonly used client is the one from [Unified Automation](https://www.unified-automation.com/downloads/opc-ua-clients.html), with this (non-Mendix) tool you will be able to browse through the server and find the parameters needed to configure your connection. 
+Recommended; Having an external OPC UA Client tool will make setup of the connection a lot easier. A commonly-used client is the one from [Unified Automation](https://www.unified-automation.com/downloads/opc-ua-clients.html). With this (non-Mendix) tool you will be able to browse through the server and find the parameters needed to configure your connection. 
 
 ## 2 Installation
 
@@ -71,10 +71,10 @@ When you edit a microflow, you will also see five additional actions in the **To
 ### 2.1 Configuration:  
 1. Add the **OpcUaServer_Overview** page to the navigation of the app, either through the **Navigation** settings, or by adding an **Open Page** button to a page which is already in the navigation (for example the home page). 
 
-2. Looup the Constant: **UA_ApplicationName** in the **_USE_ME** folder and update these with the information specific to your Client. The application name must be unique to the OPC UA Server, the connector has no requirements to the contents of this constant. If you have a single Mendix application connecting to the server you could choose to leave the default value, if you have multiple Mendix applications connecting to the same server you **must** alter the name to be unique (as per the OPC UA spec).   
+2. Find the constant: **UA_ApplicationName** in the `_USE_ME` folder and update this with the information specific to your Client. The application name must be unique to the OPC UA Server, the connector has no requirements to the contents of this constant. If you have a single Mendix application connecting to the server you could choose to leave the default value, if you have multiple Mendix applications connecting to the same server you **must** alter the name to be unique (as per the OPC UA spec).   
 *See the OPC UA Specification for more details, this setting is only used by the OPC UA Server.*
 
-3. Looup the Constant: **UA_ApplicationURI** in the **_USE_ME** folder and update these with the information specific to your Client. The application URI must be unique to the OPC UA Server, the connector has no requirements to the contents of this constant. If you have a single Mendix application connecting to the server you could choose to leave the default value, if you have multiple Mendix applications connecting to the same server you **must** alter the name to be unique (as per the OPC UA spec).   
+3. Find the constant: **UA_ApplicationURI** in the `_USE_ME` folder and update this with the information specific to your Client. The application URI must be unique to the OPC UA Server, the connector has no requirements to the contents of this constant. If you have a single Mendix application connecting to the server you could choose to leave the default value, if you have multiple Mendix applications connecting to the same server you **must** alter the name to be unique (as per the OPC UA spec).  
 *If you are using client certificates for authentication, the URI should match the certificate. See the OPC UA Specification for more details, this setting is only used by the OPC UA Server.*
 
 4. If you use subscriptions you **must** setup the After Startup & Before Shutdown microflow. When subscribing these actions make sure that you re-subscribe when you start your app & that you disconnect when shutting down. If you don't use the after startup subscriptions won't reconnect after a reboot. If you don't use the before shutdown, the server will keep the old subscriptions (potentially up to a few hours) and send duplicate messages for this period of time (and can cause exceptions in the client). 
@@ -109,7 +109,7 @@ You can see an example of how this can be set up in the [OPC UA Client example i
 
 Once you have set up the server configuration, you can perform the following actions in your microflows.
 
-#### 3.2.1 **Browse** a List of Nodes
+#### 3.2.1 **Browse** a List of Nodes{#browse}
 
 The **Browse** action allows you to browse the nodes within the OPC UA server. The browse function starts at the specified node and browses 'down' and returns the children of the specified node. 
 
@@ -121,7 +121,7 @@ The **Browse** action allows you to browse the nodes within the OPC UA server. T
 * Return Variable – The output of this action is the JSON string with all information about the requested nodes. This string can be parsed with the Import Mapping activity.
 
 
-#### 3.2.2 **Read** the Value of a Node
+#### 3.2.2 **Read** the Value of a Node{#read}
 
 The **Read** action allows you to read the current value of a specific node within the OPC UA server. The output of the action is a string formatted value of the Node. While the module supports most OPC UA attribute types the action always returns the value as a string as it was showing in the original message received from the OPC UA Server. Example the decimal value 10.59 will be returned as '10.59'   
 
@@ -134,7 +134,7 @@ The **Read** action allows you to read the current value of a specific node with
 All values are read as strings, you will need to convert them if you need a numeric or date value.
 {{% /alert %}}
 
-#### 3.2.3 **Subscribe** to Updates of Data from a Node
+#### 3.2.3 **Subscribe** to Updates of Data from a Node{#subscribe}
 The **Subscribe** action allows you to subscribe to receive a notification every time the value of a node changes. OPC UA allows many different ways to subscribe to different data changes, events, and many variations.  
 
 **Attention:** At this point the module only allows subscriptions on value changes. Events, and aggregates are currently not supported. 
@@ -230,7 +230,7 @@ You can configure if the unsubscripe is permanent (and records are removed) or i
 * RestartSubscriptionOnNextReboot – Indicate if the registration entities should be kept by this action. When 'true' the **MonitoredItem** & **Subscription** will be kept in the database and their Status will be changed to 'New'. When 'false' the status of the monitoredItem will become 'Deleted' and the module will automatically remove the entities from the database. 
 
 
-#### 3.2.5 **Write** Data to a Node
+#### 3.2.5 **Write** Data to a Node{#write}
 
 The **Write** action allows you to write a new value to a node to which you have write permissions.
 If nothing is returned the action was succesful, if the OPC UA Server refuses the value an exception will be thrown with the full JSON response included in the exception message. 
@@ -289,11 +289,11 @@ In addition to the usual **Save** and **Cancel** buttons which allow you to save
 * **Value to write** – the value to write to a node when the **Write** button is clicked. Leave blank if you want to execute any of the other actions.
 * **Result** – the resulting JSON string from performing any of the four test actions. This shows the full response from the OPC UA Server, the connector might at relevant details in case of an error. 
 
-* **Read** executes the Read action {{% todo %}}[Add a link to the read-action chapter]{{% /todo %}}
-* **Write** executes the Write action {{% todo %}}[Add a link to the Write-action chapter]{{% /todo %}}
-* **Browse** executes the Browse action {{% todo %}}[Add a link to the Browse-action chapter]{{% /todo %}}
-* **Subscribe Simple** executes the Subscribe action {{% todo %}}[Add a link to the Subscribe-action chapter]{{% /todo %}}. Process response with microflow: SubscriptionIncomingData_Process_TEST. Check the log or put a breakpoint on this microflow to checkout the response messages.
-* **Subscribe w/ Msg**  executes the Subscribe action {{% todo %}}[Add a link to the Subscribe-action chapter]{{% /todo %}}. Process response with microflow: SubscriptionIncomingData_Process_wMessage_TEST. Check the log or put a breakpoint on this microflow to checkout the response messages.
+* **Read** executes the [Read action](#read)
+* **Write** executes the [Write action](#write)
+* **Browse** executes the [Browse action](#browse)
+* **Subscribe Simple** executes the [Subscribe action](#subscribe). Process response with microflow: `SubscriptionIncomingData_Process_TEST`. Check the log or put a breakpoint on this microflow to checkout the response messages.
+* **Subscribe w/ Msg** executes the [Subscribe action](#subscribe). Process response with microflow: SubscriptionIncomingData_Process_wMessage_TEST. Check the log or put a breakpoint on this microflow to checkout the response messages.
 
 The result of the tests is displayed in the **Result** field. It shows the raw JSON response which the OPC UA server provides.
 

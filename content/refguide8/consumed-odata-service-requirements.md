@@ -86,7 +86,7 @@ Currently, the binary data can only be accessed by Java actions.
 
 ### 3.5 Associations
 
-An OData 3 association can only be used if it has two ends.
+An OData v3 association can only be used if it has two ends.
 
 An OData 4 navigation property can only be used as an association if it has a partner.
 

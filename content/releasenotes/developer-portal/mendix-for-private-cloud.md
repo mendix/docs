@@ -13,6 +13,19 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2021
 
+### April ???th, 2021
+
+#### Mendix Operator v1.11.0 and Mendix Gateway Agent v1.10.0
+
+* We have added features required to support Linkerd [Automatic Proxy Injection](https://linkerd.io/2.10/features/proxy-injection/). [Linkerd](https://linkerd.io/) is a Service Mesh which offers multiple features, such as encrypting HTTP requests between the Ingress Controller and Mendix app Pods.
+  * It's now possible to set the `automountServiceAccountToken` option for Mendix App containers.
+  * It's now possible to set Pod annotations for all Mendix app Pods in a namespace.
+* We have fixed an issue with using additional Azure SQL Server arguments.
+* We have fixed an issue with creating S3 buckets in the `us-east-1` region. (Ticket 119956)
+* We have fixed an *unable to patch Agent with type proxy_agent_patch: resource may not be empty* error when trying to apply proxy settings. (Tickets 119955,120258)
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
+
 ### April 19th, 2021
 
 #### Portal Improvements

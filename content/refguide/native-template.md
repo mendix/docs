@@ -27,7 +27,7 @@ Native Template is hosted on [GitHub](https://github.com/mendix/native-template)
 ## 3 Versioning
 
 A Native Template is versioned using [semantic versioning](https://semver.org/). 
-A Native Template version is closely related to the Mendix Studio Pro version of the project that is being build.
+A Native Template version is closely related to the Mendix Studio Pro version of the project that is being built.
 Not using a matching version will lead to unexpected behavior.
 
 To determine which version of the Native Template you should use, do the following:

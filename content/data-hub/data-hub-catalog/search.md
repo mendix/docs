@@ -128,7 +128,7 @@ The number of items satisfying the search criteria (search string plus filters) 
 * Popularity of the service (the number of connections)
 * **Validated** assets before non-validated items
 
- {{% alert type="info" %}}The weigting in the search results is cumulative depending on the validate property being set for datasets in a data source. For example, if there is a dataset named **Customer** that is **Validated** in a **Validated** data source, the search results will list this higher in the search results list than a dataset of the same name that is not **Validated** in a **Validated** data source.{{% /alert %}}
+ {{% alert type="info" %}}The weigting in the search results is cumulative depending on the validate property being set for datasets in a data source. For example, if there is a dataset named **Customer** that is **Validated** in a **Validated** data source, this is listed higher in the search results list than a dataset of the same name that is not **Validated** in a **Validated** data source.{{% /alert %}}
 
 {{% alert type="info" %}}Assets that are set to [Non-discoverable](#discoverability-metadata) are not included in the search results unless you are a curator or owner of the asset.{{% /alert %}}
 

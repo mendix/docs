@@ -1,12 +1,10 @@
 ---
 title: "OPC UA" 
 category: "Connectors"
-description: "Describes how to use the OPC UA connector, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "OPC UA", "connector", ]
+description: "Describes how to use the OPC UA connector, which is available in the Mendix Marketplace."
+tags: ["Marketplace", "Marketplace component", "OPC UA", "connector", ]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
-
-{{% todo %}}[Check answers to all information with multiple question marks ??????????]{{% /todo %}}
 
 ## 1 Introduction
 
@@ -52,14 +50,13 @@ Recommended; Having an external OPC UA Client tool will make setup of the connec
 
 ## 2 Installation
 
-Import the [OPC UA Client connector](https://appstore.home.mendix.com/link/app/114874/) module into your app. Instructions for doing this are in [How to Use App Store Content in Studio Pro](/appstore/general/app-store-content).
+Import the [OPC UA Client connector](https://appstore.home.mendix.com/link/app/114874/) module into your app. Instructions for doing this are in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).
 
-You will see the new module in the **App Store modules** section of the **Project Explorer**.
+You will see the new module in the **Marketplace modules** section of the **App Explorer**.
 
 {{% image_container width="300" %}}
-![OPC UA Client connector in Project Explorer](attachments/opc-ua/opc-ua-connector-module.png)
+![OPC UA Client connector in App Explorer](attachments/opc-ua/opc-ua-connector-module.png)
 {{% /image_container %}}
-{{% todo %}}[Update this Image, the folder structure has changed]{{% /todo %}}
 
 When you edit a microflow, you will also see five additional actions in the **Toolbox**.
 
@@ -139,7 +136,10 @@ The **Subscribe** action allows you to subscribe to receive a notification every
 
 **Attention:** At this point the module only allows subscriptions on value changes. Events, and aggregates are currently not supported. 
 
-With the subscription function you can configure exactly how you receive the data. There are two parts that you need to configure, 1) the frequence with which the OPC UA Server collects the data points, 2) the frequence with which the OPC UA Server sends updates to your Mendix OPC UA Client. The second option is optional, if you don't specify this all values are requested every 2 seconds.
+With the subscription function you can configure exactly how you receive the data. There are two parts that you need to configure
+
+1. the frequency with which the OPC UA Server collects the data points
+2. the frequency with which the OPC UA Server sends updates to your Mendix OPC UA Client — this is optional, if you don't specify this all values are requested every 2 seconds
 
 
 ##### 3.2.3.1 OPC UA Background
@@ -148,7 +148,7 @@ As mentioned before there are two intervals that influence the behavior of the c
 
 The simplest scenario is 1 MonitoredItem with 1 Subscription, both with an Publishing and Sampling interval of 500ms. As a result the OPC UA Server will take a sample every 500ms, place that in a Queue and transmit that sample every 500ms. 
 
-When the Monitored Item has a sample interval of 500ms, but the subscription has a publishing interval of 2seconds, the OPC UA Server will store all samples in a Queue. Every 2 seconds the OPC UA Server will connect with the Mendix client and will send all (4) samples in a single message. The client will process these 4 message induvidually, in the order that they were send.
+When the Monitored Item has a sample interval of 500ms, but the subscription has a publishing interval of 2seconds, the OPC UA Server will store all samples in a Queue. Every 2 seconds the OPC UA Server will connect with the Mendix client and will send all (4) samples in a single message. The client will process these 4 message individually, in the order that they were send.
 
 OPC UA allows for bundling of MonitoredItems in a single subscription to reduce the amount of messages that are being exchanged. Example:  
 Subscription 1233, is created with a Publishing Interval of 2 seconds  
@@ -162,10 +162,10 @@ The Mendix client will evaluate each sample and process it according to it's con
 
 ##### 3.2.3.2 Subscription Action
 
-The action creates an object of type **MonitoredItem** & **Subscription** which is associated with the OPC UA service and contains details of the subscription and the item which is being monitored. You monitor a **Node**, this creates what OPC UA calles a **MonitoredItem**, the monitored item is what determines the frequency and type of values that you are getting.  
+The action creates an object of type **MonitoredItem** & **Subscription** which is associated with the OPC UA service and contains details of the subscription and the item which is being monitored. You monitor a **Node**, this creates what OPC UA calls a **MonitoredItem**, the monitored item is what determines the frequency and type of values that you are getting.  
 **Limitation:** A Monitored Item uses the following default settings: samplingInterval = 500ms; queueSize = 10; discardOldest = true; (See OPC UA Documentation for more details on the impact of this)
 
-The **Subscription** influences the connection that is established with the client. Every  *PublishingInterval*-millisecons the Server will connect with the client to send any new values. 
+The **Subscription** influences the connection that is established with the client. Every  *PublishingInterval*-milliseconds the Server will connect with the client to send any new values. 
 
 Each subscription requires a microflow to process the data each time a notification is received. 
 
@@ -175,12 +175,12 @@ Each subscription requires a microflow to process the data each time a notificat
 * Opc ua server cfg – an object of entity type OpcUaServerCfg containing the configuration of the server to which the request is made
 * NodeId – The NodeId of the Node you want to subscribe to. Expects the full Node Id as referenced by the OPC UA server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
 * On message microflow – defines a microflow to be run every time a message is received from the subscribed service. This microflow must have 1 input parameter of type: OpcUaClientMx.Message and no output.
-* Subscription (optional) – pass a **Subscription** entity to have more control over the frequence in which messages are send to the client. Leave this parameter blank to let the module setup the subscription.
+* Subscription (optional) – pass a **Subscription** entity to have more control over the frequency in which messages are send to the client. Leave this parameter blank to let the module setup the subscription.
 * Use return value – `Yes` returns an object of type **MonitoredItem** which defines the new subscription and can be used in the microflow, `No` does not return an object. The returned object should not be changed or committed, but can be associated to for your administration/logic.
 * Variable name – the name assigned to the variable containing the return value  
 
 {{% alert type="info" %}}
-Subscriptions * MonitoredItems are automatically kept alive by the app & OPC UA Server and will continue to be sent as long as both the client and server are running. The OPC UA Connector automatically provides values for `requestedMaxKeepAliveCount` and `requestedLifetimeCount`and will keep the subscription alive. If these values are exceeded, then the subscription will lapse. This can happen, for example, if the app is redeployed.
+Subscriptions and MonitoredItems are automatically kept alive by the app & OPC UA Server and will continue to be sent as long as both the client and server are running. The OPC UA Connector automatically provides values for `requestedMaxKeepAliveCount` and `requestedLifetimeCount`and will keep the subscription alive. If these values are exceeded, then the subscription will lapse. This can happen, for example, if the app is redeployed.
 {{% /alert %}}
 
 ##### 3.2.3.3 MonitoredItem  
@@ -192,17 +192,17 @@ Information about nodes which are subscribed to is stored in the **MonitoredItem
 
 An object is created for each Node you request to monitor and contains the following information:
 
-NodeId (String) – The full NodeId as referenced by the OPC UA Server.  
-SubscriptionID (String) – a unique identifier generated by the OPC UA server (will be identical to the associated Subscription entity)  
-MonitoredItemID (String) – a unique identifier generated by the OPC UA server — this can be used to identify the unique Monitored Item for cancellation of the subscription  
-Status (Enum) – identifies whether the subscription is active or not (New, Active, Failed, Deleted)  
-LastSubscribedOn (DateTime) - The last time the 'Subscribe' function was succesfully executed.  
-LastStateChange (DateTime) - The last time the Status attribute changed, this is the moment the subscription got active, failed or was deleted.  
-LastMessage (DateTime) - The moment the last full message was received from the OPC UA server on this monitored Item.  
+* NodeId (String) – The full NodeId as referenced by the OPC UA Server.  
+* SubscriptionID (String) – a unique identifier generated by the OPC UA server (will be identical to the associated Subscription entity)  
+* MonitoredItemID (String) – a unique identifier generated by the OPC UA server — this can be used to identify the unique Monitored Item for cancellation of the subscription  
+* Status (Enum) – identifies whether the subscription is active or not (New, Active, Failed, Deleted)  
+* LastSubscribedOn (DateTime) - The last time the 'Subscribe' function was successfully executed.  
+* LastStateChange (DateTime) - The last time the Status attribute changed, this is the moment the subscription got active, failed or was deleted.  
+* LastMessage (DateTime) - The moment the last full message was received from the OPC UA server on this monitored Item.  
 
 ##### 3.2.3.4 Subscription  
 Information about unique **Subscription**s that are active with the OPC UA Server. The subscription is associated to a **OpcUaServerCfg** server configuration & at least one **Monitored Item**.  
-The subcription reflects the connection configuration with the OPC UA Server. 
+The subscription reflects the connection configuration with the OPC UA Server. 
 
 {{% image_container width="300" %}}
 ![The subscription entity](attachments/opc-ua/subscription.png)
@@ -210,18 +210,17 @@ The subcription reflects the connection configuration with the OPC UA Server.
 
 This is the only object from the OpcUaClientMx domain that you should create from a microflow, you can create, change and commit this before passing it into the Subscribe action. If you choose to leave the parameter empty then an object is created automatically for each Node you request to monitor. The entity contains the following information:
 
-RequestedPublishingInterval_ms (Decimal) – The Publishing interval that is requested from the OPC UA Server in milliseconds. *(Using decimal here to honour the Eclipse Milo implementation)*  
-SubscriptionID (String) – a unique identifier generated by the OPC UA server  
-Status (Enum) – identifies whether the subscription is active or not (New, Active, Failed, Deleted)  
-
+* RequestedPublishingInterval_ms (Decimal) – The Publishing interval that is requested from the OPC UA Server in milliseconds. *(Using decimal here to honor the Eclipse Milo implementation)*  
+* SubscriptionID (String) – a unique identifier generated by the OPC UA server  
+* Status (Enum) – identifies whether the subscription is active or not (New, Active, Failed, Deleted)  
 
 #### 3.2.4 **Unsubscribe** from Updates of Data from a Node
 
 The **Unsubscribe** action allows you to end a subscription to item change notifications when you no longer want to receive the notifications. 
 
-**Attention:** Never manually or programatically delete the **Subscription** or **MonitoredItem**, unless the Status is 'Deleted'. Removing the objects prematurely can result in duplicate data or exceptions when the OPC UA Server sends messages for these now removed configurations.  
+**Attention:** Never manually or programmatically delete the **Subscription** or **MonitoredItem**, unless the Status is 'Deleted'. Removing the objects prematurely can result in duplicate data or exceptions when the OPC UA Server sends messages for these now removed configurations.  
 
-You can configure if the unsubscripe is permanent (and records are removed) or if the subscription info is kept for restart through the parameters.
+You can configure if the unsubscribe is permanent (and records are removed) or if the subscription info is kept for restart through the parameters.
 
 ![Parameters for the unsubscribe action](attachments/opc-ua/unsubscribe-action.png)
 
@@ -233,13 +232,13 @@ You can configure if the unsubscripe is permanent (and records are removed) or i
 #### 3.2.5 **Write** Data to a Node{#write}
 
 The **Write** action allows you to write a new value to a node to which you have write permissions.
-If nothing is returned the action was succesful, if the OPC UA Server refuses the value an exception will be thrown with the full JSON response included in the exception message. 
+If nothing is returned the action was successful, if the OPC UA Server refuses the value an exception will be thrown with the full JSON response included in the exception message. 
 
 ![Parameters for the write action](attachments/opc-ua/write-action.png)
 
 * Opc ua server cfg – an object of entity type OpcUaServerCfg containing the configuration of the server to which the request is made
 * NodeId – The NodeId of the Node you want to write to. Expects the full Node Id as referenced by the OPC UA server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
-* Value to write – the new value which you want to set for this node, this can be any supported type (see the limitations for all types that are currently suported). Make sure the value can easily be parsed as the type, i.e. Doubles must be formatted as 0.0, Integers may not have a decimal point, etc. 
+* Value to write – the new value which you want to set for this node, this can be any supported type (see the limitations for all types that are currently supported). Make sure the value can easily be parsed as the type, i.e. Doubles must be formatted as 0.0, Integers may not have a decimal point, etc. 
 
 
 ### 3.3 Pages
@@ -262,7 +261,7 @@ From this page, you can perform the following actions:
 
 #### 3.3.2 OpcUaServer_NewEdit
 
-This page allows you to create or change the details of an OPC UA server you want to use within your app. Your app administrator can use this page as is, or you can customize it for your own use. If you customize it, we recommend that you use a copy of it in one of your own modules so that it is not accidentally overwritten if you update the OPC UA Client connector App Store module.
+This page allows you to create or change the details of an OPC UA server you want to use within your app. Your app administrator can use this page as is, or you can customize it for your own use. If you customize it, we recommend that you use a copy of it in one of your own modules so that it is not accidentally overwritten if you update the OPC UA Client connector Marketplace module.
 
 ##### 3.3.2.1 Data on OpcUaServer_NewEdit Page
 
@@ -284,11 +283,11 @@ The OPC UA server should have only one type of authentication enabled, and the a
 
 In addition to the usual **Save** and **Cancel** buttons which allow you to save the server settings or cancel the create or edit operation, there are additional options to validate your configuration. If you click the 'Advanced Troubleshooting' button a new page is opened where you can still edit your configuration, but also test by reading/writing/browsing the OPC UA Server. This allows you to test your configuration and run actions directly on the OPC UA Server.
 
-**Test Messaging:**  
+**Test Messaging:**
+
 * **NodeId** – The NodeId of the Node you want to use. Expects the full Node Id as referenced by the OPC UA server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
 * **Value to write** – the value to write to a node when the **Write** button is clicked. Leave blank if you want to execute any of the other actions.
 * **Result** – the resulting JSON string from performing any of the four test actions. This shows the full response from the OPC UA Server, the connector might at relevant details in case of an error. 
-
 * **Read** executes the [Read action](#read)
 * **Write** executes the [Write action](#write)
 * **Browse** executes the [Browse action](#browse)
@@ -307,9 +306,9 @@ Shows a view of all the **MonitoredItem**s that are known to the application. An
 For each MonitoredItem you are able to perform one of the following actions:   
 *If your server is correctly configured there is no need to ever execute these actions, but this can be useful to resolve connectivity problems or recover after a previous failure*
 
-* **Refresh Subscription** Select a MonitoredItem from the list, to re-establishes the connect with the Server. If a previous connection exists it will simply re-negotiate the settings with the server, if the connection was lost it will be re-established. This action can also be executed on 'Deleted' or 'Failed' objects. A succesful refresh will update these objects to the 'Active' status. 
-* **Unsubscribe** Unsubscribe the MonitoredItem from the OPC UA server updates. If the action was succesful the object will receive the status 'Deleted' and will be removed from the database eventually.   
-* **Delete** Remove the selected MonitoredItem from the database. There are no validations on this action, make sure you know that you can delete the record from the database before executing this action. If you remove a MonitoredItem that still has an active subscription at the OPC UA Server the connector could generate duplicate or untraceble messages, or throw exceptions (until the connection expires at the server).     
+* **Refresh Subscription** Select a MonitoredItem from the list, to re-establishes the connect with the Server. If a previous connection exists it will simply re-negotiate the settings with the server, if the connection was lost it will be re-established. This action can also be executed on 'Deleted' or 'Failed' objects. A successful refresh will update these objects to the 'Active' status. 
+* **Unsubscribe** Unsubscribe the MonitoredItem from the OPC UA server updates. If the action was successful the object will receive the status 'Deleted' and will be removed from the database eventually.   
+* **Delete** Remove the selected MonitoredItem from the database. There are no validations on this action, make sure you know that you can delete the record from the database before executing this action. If you remove a MonitoredItem that still has an active subscription at the OPC UA Server the connector could generate duplicate or untraceable messages, or throw exceptions (until the connection expires at the server).     
 * **Re-connect All New/Active Subscriptions** Refresh all the MonitoredItems that have the status New or Active. Re-establishes the connect with the Server. If a previous connection exists it will simply re-negotiate the settings with the server, if the connection was lost it will be re-established.  
 
 The **Subscription (connection)** Tab:  
@@ -350,10 +349,10 @@ The **OpcUaServer_View** page adds functionality through the **View server** but
 ### 4.4 Example Consumption
 The module contains a folder '_Example Consumer' which shows the best way to structure the integration with an OPC UA Server.
 
-In this example you can see how to interact with a fysical gate through a PLC. The dashboard shows an example of the runtime configuration of the Subscriptions, for an actual implementation you'd move this to an admin management page. The left side of the page shows the interaction with the OPC UA Server.  
+In this example you can see how to interact with a physical gate through a PLC. The dashboard shows an example of the runtime configuration of the Subscriptions, for an actual implementation you'd move this to an admin management page. The left side of the page shows the interaction with the OPC UA Server.  
 As you can see it shows the current status of the PLC, when clicking on the 'Open' or 'Close' button the microflow will perform the required validations before writing an instruction to the OPC UA Server.  
 
-In this use-case the OPC UA Server will recieve the instruction through the write action, this will trigger the fysical gate to move. When the gate state changes, the OPC UA Server will update the 'State'-node accordingly.  
+In this use-case the OPC UA Server will receive the instruction through the write action, this will trigger the physical gate to move. When the gate state changes, the OPC UA Server will update the 'State'-node accordingly.  
 
 The application is subscribing on the 3 different nodes, IsUp, IsDown, IsMoving. When either of these nodes changes values, a message is send to the Mendix client and the values are parse by the respective microflows: UA_ProcessEvent_GateUp, UA_ProcessEvent_GateDown, UA_ProcessEvent_GateMoving.    
 All three subscription microflows lookup the MonitoredItem record, and through the MonitoredItem find the actual PLC that's changing (you need to follow this pattern when interacting with multiple devices through OPC UA). After retrieving the PLC it will update the state according to the Message. You can extend this microflow with as many complex evaluation and validations as you want. 
@@ -361,22 +360,22 @@ All three subscription microflows lookup the MonitoredItem record, and through t
 Alternatives: It is possible for the OPC UA Node to hold a complex JSON structure as value instead of a simple integer in this example. If that is the case you'd implement the same microflow logic, but in addition you'd call an Import Mapping activity before processing the results. 
 
 
-## Known Limitations ##
+## 5 Known Limitations
 
-1. Limited Value types.  
-   Currently only Boolean, Int16, UInt16, Int32, Int64, Float, Double, and String are implemented to be written to the Node in the OPC UA Server. Reading has been tested for limited data types, when reading and subscribing all return values are casted to String through a simple toString() method. This implementation works well for Boolean and the Int values but hasn't been tested for all data types. 
+1. Limited Value types.
+
+    Currently only Boolean, Int16, UInt16, Int32, Int64, Float, Double, and String are implemented to be written to the Node in the OPC UA Server. Reading has been tested for limited data types, when reading and subscribing all return values are casted to String through a simple toString() method. This implementation works well for Boolean and the Int values but hasn't been tested for all data types. 
 
 1. High-Availability Architecture *(no horizontal scaling support)*.   
+
     At this point the module is relying completely on storing configuration in the server memory and only supports running on a single Container instance. If you use scaling and run multiple parallel instances of the application the module will likely generate exceptions and loose messages. 
 
 1. Complex Events on Nodes.  
+
     Subscriptions are only possible on value changes of Nodes. At this time Events or aggregates are not implemented yet. The module does support all DataTypes, any OPC UA type is received and passed as a String to the evaluating microflow.
 
 1. Advanced settings on MonitoredItem.  
-   OPC UA offers fine graned control over how values are shared with [this] client. At this time all MonitoredItems are setup with identical default parameters, and these can not yet be influenced. The default parameters are coming from the Apache Milo library. 
+
+    OPC UA offers fine-grained control over how values are shared with [this] client. At this time all MonitoredItems are setup with identical default parameters, and these can not yet be influenced. The default parameters are coming from the Apache Milo library. 
    
-   Some example of the default values are: SamplingInterval: 500ms; RequestedPublishingInterval: 500ms; QueueSize: 10; DiscardOldest: true;    (This will get a guaranteed value every 500ms, and stores a maximum of 10 values in the queue, if the queue fills up it will discared the oldest and keep the latest 10 values only).
-
-
-
-
+    Some examples of the default values are: SamplingInterval: 500ms; RequestedPublishingInterval: 500ms; QueueSize: 10; DiscardOldest: true;    (This will get a guaranteed value every 500ms, and stores a maximum of 10 values in the queue, if the queue fills up it will discard the oldest and keep the latest 10 values only).

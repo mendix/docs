@@ -1,8 +1,7 @@
 ---
 title: "Configure a Workflow for the Employee Onboarding Process"
-menu_order: 5
 description: "Describes how to configure a workflow in Mendix Studio."
-tags: ["studio", "workflow", "task", "onboarding"]
+tags: ["studio", "workflow", "how to", task", "onboarding"]
 ---
 
 ## 1 Introduction 
@@ -13,24 +12,25 @@ This how-to explains how to build an employee onboarding process using the workf
 
 **This how-to will teach you how to do the following:**
 
-* Creating a workflow
+* Enabling and creating workflows
+* Configuring a workflow entity
+* Triggering the workflow from a page
 * Creating user tasks for different user roles
 * Configuring pages for the user tasks
 * Restricting page access to the relevant user roles
 * Creating a decision
+* Configuring navigation
 * Testing your workflow from the perspective of different users
 
 The how-to describes the following use case: 
 
-You would like to build an employee onboarding process. At first, an HR specialist needs to initiate the onboarding process for a new employee. The employee's manager will then step in and select devices for the employee. Afterwards the manager needs to specify whether the new hire is working from the office or home . The Facilities department will then need to prepare a workspace. Depending on where the new hire works from (the office or home), the Facilities department will either prepare a desk or ship the devices to the employee's address. 
+You would like to build an employee onboarding process. At first, an HR specialist needs to initiate the onboarding process for a new employee. The employee's manager will then step in, select devices for the employee and specify whether the new hire is working from the office or home . The Facilities department will then need to prepare a workspace. Depending on where the new hire works from (the office or home), the Facilities department will either prepare a desk or ship the devices to the employee's address. 
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows). 
-
-
 
 ## 3 Enabling Workflows {#enable-workflows}
 
@@ -48,7 +48,7 @@ First, you need to enable workflows for your app. Do the following:
 
     ![Create Workflow](attachments/workflow-how-to-configure/create-workflow.png)
 
-5. In the **Create new workflow** dialog box, set the Title to Employee_Onboarding, and then click the **Workflow Entity** field to create a new workflow entity.
+5. In the **Create new workflow** dialog box, set the **Title** to **Employee_Onboarding**, and then click the **Workflow Entity** field to create a new workflow entity.
 
 6. In the **Select Workflow Entity** dialog box, click **Create Workflow Entity**.
 
@@ -60,14 +60,14 @@ Good job! You have created a workflow and a workflow-specific entity.
 
 ## 4 Configuring a Domain Model
 
-1. Open the domain model. 
+1. Open the [domain model](/studio/domain-models). 
 2. Add the following attributes to the **EmployeeOnboarding** entity that you have created in the section above (for more information on how to create attributes, see [Adding New Attributes](/studio/domain-models#adding-new-attributes) section in the *Domain Model*):
     1. Add the **FullName** attribute and set the type to string.
     2. Add the **FirstDay** attribute and set its type to Date and Time.
     3. Add the **WFH** (Work from home) attribute and set its type to Boolean.
     4. Add the **PhoneModel** enumeration with the following enumeration items: iPhone, iPhone_Pro, Samsung. For more information on enumerations and how to create them, see the [Creating a New Enumeration](/studio/domain-models-enumerations#create-new-enumeration) section in *Enumerations*.
     5. Add the **LaptopModel** enumeration with the following enumeration items: Lenovo, Mac, Dell. For more information on enumerations and how to create them, see the [Creating a New Enumeration](/studio/domain-models-enumerations#create-new-enumeration) section in *Enumerations*.
-   
+
 You have configured the **EmployeeOnboarding** entity:
 ![Domain Model](attachments/workflow-how-to-configure/domain-model.png)
 
@@ -80,13 +80,13 @@ In the [Enabling Workflows](#enable-workflows) section, you have enabled securit
 3. Set the role's name to **HR** and click **Create**.
 4. Repeat steps 2 and 3 to create **Manager** and **Facilities** roles.
 
-Now all necessary roles are created for your app.
+Now all necessary roles are created for your app. For more information about security, see [Security, Roles & Permissions](settings-security). 
 
 ## 6 Triggering the Workflow from a Page
 
 To start you workflow, you need to trigger it. In this use case, the workflow is started by an HR specialist who should fill in the new hire's name, the first day, and then click the **Start Onboarding** button that will trigger the workflow. Do the following:
 
-1. Create an **EmployeesToOnboard** page that contains a list view with the **EmployeeOnboarding** entity as its data source. For more information on how to create a page and add widgets to it, see the [Performing Basic Functions](/studio/page-editor#page-editor-basic-functions) section in *Pages*. 
+1. Create an **EmployeesToOnboard** page that contains a list view with the **EmployeeOnboarding** entity as its data source. (For more information on how to create a page and add widgets to it, see the [Performing Basic Functions](/studio/page-editor#page-editor-basic-functions) section in *Pages*.)
 
     ![Employees to Onboard List](attachments/workflow-how-to-configure/employees-to-onboard-list.png)
 
@@ -94,10 +94,10 @@ To start you workflow, you need to trigger it. In this use case, the workflow is
 
     1. Open the **Toolbox** and search for a **Call Workflow** button.
     2. Drag and drop the button inside the list view.
-    3. Open the button properties and set the Workflow property to **Employee_Onboarding**. 
-    4. Set **Caption** of the button to **Start Onboarding**.
+    3. Open the button properties and set the **Workflow** property to **Employee_Onboarding**. 
+    4. Set the **Caption** of the button to **Start Onboarding**.
 
-3. The HR specialist also needs a page where they can fill in new hire's details. Add a **Create Object** button on the top of the page and set **Entity** to **EmployeeOnboarding**:
+3. The HR specialist also needs a page where they can fill in new hire's details. Add a **Create Object** button on the top of the page (outside the list view) and set **Entity** to **EmployeeOnboarding**:
 
     ![Create Object Button](attachments/workflow-how-to-configure/create-object-button.png)
 
@@ -107,9 +107,9 @@ To start you workflow, you need to trigger it. In this use case, the workflow is
 
 6. In the **Create new page** dialog box, you can see the templates for forms. Do the following:
 
-    1. Set the **Page name** to **Employee_Details**.
+    1. Set the **Title** to **Employee_Details**.
 
-    2. Set the **Navigation layout** to **PopupLayout**.
+    2. Set the **Layout** to **PopupLayout**.
 
     3. Select the **Forms Columns** template.
 
@@ -117,7 +117,7 @@ To start you workflow, you need to trigger it. In this use case, the workflow is
 
         ![Create Employee Details Page](attachments/workflow-how-to-configure/create-employee-details-page.png)
 
-6. The new page opens. By default all attributes are added to the form. However, the HR specialist needs to specify only the Name and the First day of the new hire. Leave the relevant widgets and delete all the other ones from the form:
+6. The new page opens. By default all attributes are added to the form. However, the HR specialist needs to specify only the name and the first day of the new hire. Leave the relevant widgets and delete all the other ones from the form:
 
     ![Employee Details Form](attachments/workflow-how-to-configure/employee-details-form.png)
 
@@ -125,13 +125,13 @@ Good job! Now you have a page where the HR specialist can start the workflow:
 
 ![Employees to Onboard Page](attachments/workflow-how-to-configure/employees-to-onboard-page.png) 
 
-## 6 Specifying Details of the New Hire {#specify-details}
+## 7 Specifying Details of the New Hire {#specify-details}
 
 The manager of a new employee will get a task to specify devices for the new hire. The manager also needs to indicate whether the new hire is working home (WFH) or not. For this functionality you need to add activities to the workflow. Follow the steps below: 
 
 1. Open the **Employee_Onboarding** workflow.
 
-2. In the **Toolbox** tab, find a **User task** activity, and drag and drop it to the workflow editor.
+2. In the **Toolbox** tab, find a **User Task** activity, and drag and drop it to the workflow editor.
 
 3. Open the user task properties. 
 
@@ -145,9 +145,9 @@ The manager of a new employee will get a task to specify devices for the new hir
 
 7. In the **Create new page** dialog box, you can see the templates for workflow pages. Do the following:
 
-    1. Set the **Page name** to **SpecifyDetails**.
+    1. Set the **Title** to **SpecifyDetails**.
 
-    2. Check that **Navigation layout** is set to **Atlas_Default**.
+    2. Check that **Layout** is set to **Atlas_Default**.
 
     3. Select the **UserTask Extended** template.
 
@@ -205,7 +205,7 @@ Do the following:
 
     2. Click the **Condition** property.
 
-    3. In the **Configure condition** dialog box, type in the expression that will split the flow into two depending on the **WFH** attribute: `$workflowData/WFH`.
+    3. In the **Configure condition** dialog box, type in the expression that will split one flow into two depending on the **WFH** attribute: `$workflowData/WFH`.
 
         ![Decision Properties](attachments/workflow-how-to-configure/decision-properties.png)
 
@@ -215,11 +215,11 @@ Do the following:
 
     ![Decision Outcomes](attachments/workflow-how-to-configure/decision-outcomes.png)
 
-4. Now you need to configure what happens in both scenarios: when the new hire works from home (true) and when the new hire works from the office (false). Open the **Toolbox**, drag and drop a **User task** activity to the **false** path, and do the following:
+4. Now you need to configure what happens in both scenarios: when the new hire works from home (true) and when the new hire works from the office (false). Open the **Toolbox**, drag and drop a **User Task** activity to the **false** path, and do the following:
 
     1. Set its caption to **Facilities: Prepare Desk**.
 
-    2. As only the Facilities department should prepare a desk for the new employee, you need to make sure that the user task is assigned to users with the Facilities role only. Refer to steps 11a-11c of the [Specifying Details of the New Hire](#specify-details) section to do so.
+    2. As only the Facilities department should prepare a desk for the new employee, you need to make sure that the user task is assigned to users with the Facilities role only. Refer to steps 11a-11c of the [Specifying Details of the New Hire](#specify-details) section to assign the user task to the Facilities role.
 
     3. In the **Allowed Roles** property deselect all roles except **Facilities**. 
 
@@ -237,7 +237,7 @@ Do the following:
 
 8. Now you need to create a user task for Facilities when the employee is working from home. Open the workflow editor.
 
-6. Open the **Toolbox**, drag and drop a **User task** activity to the **true** path, and do the following:
+6. Open the **Toolbox**, drag and drop a **User Task** activity to the **true** path, and do the following:
 
     1. Set its caption to **Facilities: Ship Devices**.
 
@@ -260,7 +260,51 @@ Great job! You have created the decision and user tasks on whether the new hire 
 
 ![Configured Workflow](attachments/workflow-how-to-configure/worfklow-configured.png)
 
-## 10 Testing the Workflow {#test-workflow}
+## 10 Configuring Navigation
+
+You need to configure navigation otherwise the user roles will not be able to reach any pages and interact with their tasks. Follow the steps below:
+
+1. Open the [Navigation Document](/studio/navigation), where some menu items are already preconfigured for you.
+
+2. The HR roles needs to be able to access the EmployeesToOnboard page. Add a new menu item and do the following (for more information on how to add a new menu item, see the [Creating a Menu Item](/studio/navigation#create-new-menu-items) section in *Navigation Document*):
+
+    1. Set its **On-Click Action** to **Page**.
+
+    2. Click the **Page** property.
+
+    3. In the **Select Page** dialog box, select EmployeesToOnboard page.
+
+    4. In the menu item properties, set Caption to **HR: Employees to onboard**.
+
+    5. Set **Icon** to **User**.
+
+        ![Navigation Item for HRs](attachments/workflow-how-to-configure/navigation-hr.png)
+
+3. You need to add menu items for manager to be able to open their task inbox. Add a new menu item and do the following (for more information on how to add a new menu item, see the [Creating a Menu Item](/studio/navigation#create-new-menu-items) section in *Navigation Document*):
+
+    1. Set its **On-Click Action** to **Page**.
+
+    2. Click the **Page** property.
+
+    3. In the **Select Page** dialog box, switch from the current module to the Workflow Commons one using the drop-down menu in the top-right corner:
+
+        ![Select Page](attachments/workflow-how-to-configure/select-page-for-navigation.png)
+
+    4. Find the **TaskInbox** page in the list and click **Select**.
+
+    5. In the menu item properties, set Caption to **Managers: Task Inbox**.
+
+    6. Set **Icon** to **Envelope**.
+
+4. You also need to add menu items for the Facilities department to be able to open their task inbox. Create a new **Facilities: Task Inbox** menu item referring to steps 2a-2f above.
+
+You have configured the navigation for your app and now you can preview and test it 
+
+![Configured Navigation](attachments/workflow-how-to-configure/configured-navigation.png)
+
+{{% todo %}}[Update this screenshot with preconfigured menu later]{{% /todo %}}
+
+## 11 Testing the Workflow {#test-workflow}
 
 Now you can test your workflow from the perspective of different users. 
 
@@ -268,18 +312,30 @@ For certain user roles, there are default end-user and admin pages.
 
 For example, users who have tasks assigned to them (Manager, Facilities roles) will see their task inbox and dashboards pages where they can manage and monitor tasks assigned to them:
 
-The Workflow Admin role has access to the Workflow Admin Center and can monitor all workflows, can view the progress of workflows, and change the workflow settings:
+![Task Inbox](attachments/workflow-how-to-configure/task-inbox.png)
 
-The Admin role is able to manage users:
+The Workflow Admin role has access to the Workflow Admin Center and can monitor all workflows, can view the progress of workflows, and change the workflow settings.
+
+The Admin role is able to manage users.
 
 To test your workflow, you need to switch between different user roles. Follow the steps below:
 
-1. Click Preview.
-2. Click the user icon on the right to switch to another user role:
-3. Switch between different demo user roles to test the use case. Do can do the following:
+1. Click  the **Preview** button. (For more information on how to preview your app, see [Previewing & Publishing Your App](/studio/publishing-app).)
+
+2. Click the user icon on the right and select a user role:
+
+    ![Demo User Role](attachments/workflow-how-to-configure/user-roles.png)
+
+3. You can switch between different demo user roles to test the use case. Do can do the following:
     1. Start the onboarding process.
     2. Test the process: switch users, view inbox for each user, complete tasks, see how new inbox items are created for the user roles you configured at the next task in the process.
     3. Open the Workflow Admin Center.
     4. Open the Workflow Dashboard.
 
 Great job! You have previewed your app locally and tested your workflow from the perspective of different users. You can now work on adding more functionality to your app. 
+
+## 12 Read More
+
+* [Workflows](/studio/workflows)
+* [How to Configure a Navigation Bar](navigation-how-to-configure) 
+* [How to Set Fields as Read-Only or Required](pages-how-to-set-validation-and-editability)

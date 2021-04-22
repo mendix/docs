@@ -13,7 +13,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Improvements
 
-*  [Search result](/data-hub/data-hub-catalog/search#search-results) listings have been improved to show data sources and datasets that are set as [Validated](/data-hub/data-hub-catalog/curate#validated) above assets that are not validated.
+*  [Search result](/data-hub/data-hub-catalog/search#search-results) listings in Data Hub Catalog have been improved.  Data sources and datasets that are set as [Validated](/data-hub/data-hub-catalog/curate#validated) will appear above assets that are not validated.
 
 ### April 1st, 2021
 

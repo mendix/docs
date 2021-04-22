@@ -11,7 +11,7 @@ To build Mendix Native App a template is needed. This template is conveniently n
 The Native template is essentially describing the native dependencies you project needs and includes two (2) native projects, 
 one for iOS and one for Android that can be independently built to create the apps. 
 
-The template also includes tooling to put everything together. Such are the React Native and Mendix auto linking capabilities, 
+The template also includes tooling to put everything together. Such as the React Native and Mendix auto linking capabilities, 
 to link the native dependencies to platform specific projects, and the Native Mobile toolkit which handles configuring the platform 
 specific projects with things like the version number, app name, splash screens and more. 
 
@@ -678,4 +678,3 @@ An CI environment need to be able to do the following to successfully configure 
 
 How to build the apps is open to the implementor. Mendix Native App Builder users App Center for convenience. There are multiple other 
 solutions, on premise or as a service, that can be used for this purpose. We are not endorsing one over the other.
-
